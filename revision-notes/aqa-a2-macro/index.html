@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      AQA A-Level Macroeconomics Notes | National & International Economy |
+      Economics Academy
+    </title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+      /* Custom Styles - AQA Deep Blue Theme */
+      .notes-header {
+        text-align: center;
+        padding: 2em 0;
+        margin-bottom: 2em;
+        background: #f9f9f9;
+        border-radius: 4px;
+      }
+      .notes-container {
+        background: white;
+        border-radius: 4px;
+        padding: 2em;
+        margin-bottom: 3em;
+      }
+      .topic-list {
+        list-style: none;
+        padding: 0;
+      }
+      .topic-item {
+        padding: 1.5em;
+        margin-bottom: 1em;
+        border-left: 4px solid #1565c0; /* Deep Blue */
+        background: #f5f5f5;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .topic-item:hover {
+        transform: translateX(5px);
+        background: #e3f2fd;
+      }
+      .topic-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .subtopic-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1em;
+        display: none;
+      }
+      .subtopic-item {
+        padding: 0.8em 1em;
+        margin: 0.5em 0;
+        background: white;
+        border-radius: 4px;
+        border-left: 2px solid #42a5f5;
+      }
+      .subtopic-item:hover {
+        background: #bbdefb;
+      }
+      .subtopic-item a {
+        color: #0d47a1;
+        text-decoration: none;
+        display: block;
+      }
+      .breadcrumb {
+        margin-bottom: 2em;
+        font-size: 0.9em;
+      }
+      .breadcrumb a {
+        color: #1565c0;
+      }
+      .update-info {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 2em;
+      }
+      .toggle-icon {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .exam-board-tag {
+        display: inline-block;
+        padding: 0.3em 0.6em;
+        background: #1565c0;
+        color: white;
+        border-radius: 4px;
+        font-size: 0.8em;
+        margin-left: 1em;
+      }
+      .year-tag {
+        display: inline-block;
+        padding: 0.2em 0.5em;
+        background: #1976d2;
+        color: white;
+        border-radius: 3px;
+        font-size: 0.7em;
+        margin-left: 0.5em;
+      }
+    </style>
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+        <h1><a href="/index.html">Economics Academy</a></h1>
+        <p>The Home of A-Level Economics.</p>
+
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/tutoring.html">Tutoring</a></li>
+            <li><a href="/marking.html">Marking</a></li>
+            <li class="current">
+              <a href="/revision-notes/index.html">Revision Notes</a>
+              <ul>
+                <li>
+                  <a>Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/index.html"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/index.html"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/index.html"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/index.html"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-as-micro/index.html"
+                        >AS-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-as-macro/index.html"
+                        >AS-Level Macroeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/index.html"
+                        >A-Level Microeconomics</a
+                      >
+                    </li>
+                    <li class="current">
+                      <a href="/revision-notes/aqa-a2-macro/index.html"
+                        >A-Level Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/past-papers/index.html">Past Papers</a>
+              <ul>
+                <li><a href="/past-papers/aqa/index.html">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/index.html">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/index.html">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/index.html"
+                    >Edexcel B Papers</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Main Content -->
+      <section id="main">
+        <div class="container">
+          <!-- Breadcrumb Navigation -->
+          <div class="breadcrumb">
+            <a href="/revision-notes/index.html">Revision Notes</a> &raquo;
+
+            <span>AQA A-Level Macroeconomics</span>
+          </div>
+
+          <!-- Notes Header -->
+          <section class="notes-header">
+            <header class="major">
+              <h2>AQA A-Level Macroeconomics</h2>
+              <p>Complete revision notes for Papers 2 & 3 (Sections 4.1-4.6)</p>
+              <span class="exam-board-tag">Specification: 7136</span>
+            </header>
+          </section>
+
+          <!-- Notes Content -->
+          <div class="notes-container">
+            <h3>Available Topics</h3>
+            <p>Click on any unit below to view its subtopics:</p>
+
+            <ul class="topic-list">
+              <!-- Year 1 Content -->
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-1')">
+                <div class="topic-header">
+                  <h4>
+                    4.1 Economic Performance
+                    <span class="year-tag">Year 1</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Growth, inflation, unemployment, balance of payments</p>
+
+                <ul class="subtopic-list" id="subtopic-1">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.1.1.html">4.1.1 Economic Growth</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.1.2.html">4.1.2 Inflation</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.1.3.html"
+                      >4.1.3 Employment & Unemployment</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.1.4.html"
+                      >4.1.4 Balance of Payments</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-2')">
+                <div class="topic-header">
+                  <h4>
+                    4.2 Aggregate Demand & Supply
+                    <span class="year-tag">Year 1</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>AD components, AS models, macroeconomic equilibrium</p>
+
+                <ul class="subtopic-list" id="subtopic-2">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.2.1.html">4.2.1 Aggregate Demand</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.2.2.html">4.2.2 Consumption</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.2.3.html">4.2.3 Investment</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.2.4.html">4.2.4 Aggregate Supply</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Year 2 Content -->
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-3')">
+                <div class="topic-header">
+                  <h4>
+                    4.3 Economic Policy <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Fiscal, monetary, supply-side policies</p>
+
+                <ul class="subtopic-list" id="subtopic-3">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.3.1.html">4.3.1 Fiscal Policy</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.3.2.html">4.3.2 Monetary Policy</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.3.3.html"
+                      >4.3.3 Supply-Side Policies</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.3.4.html">4.3.4 Policy Conflicts</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-4')">
+                <div class="topic-header">
+                  <h4>
+                    4.4 Global Economy <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Globalisation, trade, development</p>
+
+                <ul class="subtopic-list" id="subtopic-4">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.4.1.html">4.4.1 Globalisation</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.4.2.html">4.4.2 Trade</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.4.3.html">4.4.3 Exchange Rates</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.4.4.html"
+                      >4.4.4 Economic Development</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-5')">
+                <div class="topic-header">
+                  <h4>
+                    4.5 Financial Markets <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Money, banking, financial sector</p>
+
+                <ul class="subtopic-list" id="subtopic-5">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.5.1.html"
+                      >4.5.1 Role of Financial Markets</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.5.2.html">4.5.2 Banking Sector</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.5.3.html">4.5.3 Central Banks</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-6')">
+                <div class="topic-header">
+                  <h4>
+                    4.6 Public Finance <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Taxation, public spending, fiscal policy</p>
+
+                <ul class="subtopic-list" id="subtopic-6">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.6.1.html"
+                      >4.6.1 Public Expenditure</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.6.2.html">4.6.2 Taxation</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-macro/4.6.3.html"
+                      >4.6.3 Budget Deficits & National Debt</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="update-info">
+              <p>
+                <strong>Last updated:</strong> June 2024 |
+                <strong>Specification version:</strong> AQA A-Level Economics
+                (7136) | <strong>Includes:</strong> 2024 policy changes and
+                global case studies
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Resources -->
+          <section style="margin-top: 3em; text-align: center">
+            <header class="major">
+              <h3>Resources to Use With These Notes</h3>
+            </header>
+            <div class="row">
+              <div class="col-4 col-12-medium">
+                <a
+                  href="/past-papers/index.html"
+                  class="button alt"
+                  style="width: 100%"
+                  >Past Papers</a
+                >
+              </div>
+              <div class="col-4 col-12-medium">
+                <a href="/marking.html" class="button alt" style="width: 100%"
+                  >Paper Marking</a
+                >
+              </div>
+              <div class="col-4 col-12-medium">
+                <a href="/tutoring.html" class="button alt" style="width: 100%"
+                  >1-on-1 Tutoring</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section
+        id="footer"
+        style="padding: 2em 0; background: #2f2f2f; text-align: center"
+      >
+        <div class="container">
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 1em 0;
+              font-size: 0.9em;
+            "
+          >
+            <li style="display: inline; margin: 0 1em">
+              <a href="/about.html" style="color: #ccc">About</a>
+            </li>
+            <li style="display: inline; margin: 0 1em">
+              <a href="/contact.html" style="color: #ccc">Contact</a>
+            </li>
+            <li style="display: inline; margin: 0 1em">
+              <a href="/privacy.html" style="color: #ccc">Privacy</a>
+            </li>
+          </ul>
+          <p style="font-size: 0.8em; color: #999">
+            &copy; 2025 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+      function toggleSubtopic(id) {
+        const subtopic = document.getElementById(id);
+        const icon = subtopic.parentElement.querySelector(".toggle-icon");
+
+        if (subtopic.style.display === "block") {
+          subtopic.style.display = "none";
+          icon.textContent = "+";
+        } else {
+          subtopic.style.display = "block";
+          icon.textContent = "-";
+        }
+      }
+    </script>
+  </body>
+</html>

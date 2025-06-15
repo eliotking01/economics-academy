@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      A-Level Economics Tutoring | 1-on-1 Lessons & Exam Prep | Economics
+      Academy
+    </title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- Calendly link widget -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+      /* Custom Styles */
+      .tutoring-hero {
+        text-align: center;
+        padding: 2em 0;
+        margin-bottom: 2em;
+      }
+      .package-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      .package-card {
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      .package-card:hover {
+        transform: translateY(-5px);
+      }
+      .package-card.popular {
+        border: 2px solid #4caf50;
+        position: relative;
+      }
+      .popular-badge {
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        background: #4caf50;
+        color: white;
+        padding: 0.3em 1em;
+        border-radius: 20px;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+      .package-header {
+        background: #ffffff;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .package-body {
+        background: white;
+        padding: 1.5rem;
+      }
+      .price {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #4caf50;
+        margin: 0.5rem 0;
+      }
+      .per-session {
+        font-size: 0.9em;
+        color: #666;
+      }
+      .features-list {
+        margin: 1.5rem 0;
+      }
+      .booking-container {
+        background: #f9f9f9;
+        padding: 3rem;
+        border-radius: 4px;
+        margin: 3rem 0;
+      }
+      .payment-methods {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .payment-icon {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+        <h1><a href="index.html">Economics Academy</a></h1>
+        <p>The Home of A-Level Economics.</p>
+
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li class="current"><a href="/tutoring.html">Tutoring</a></li>
+            <li><a href="/marking.html">Marking</a></li>
+            <li>
+              <a href="/revision-notes/index.html">Revision Notes</a>
+              <ul>
+                <li>
+                  <a>Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/index.html"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/index.html"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/index.html"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/index.html"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-as-micro/index.html"
+                        >AS-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-as-macro/index.html"
+                        >AS-Level Macroeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/index.html"
+                        >A-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/index.html"
+                        >A-Level Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/past-papers/index.html">Past Papers</a>
+              <ul>
+                <li><a href="/past-papers/aqa/index.html">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/index.html">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/index.html">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/index.html"
+                    >Edexcel B Papers</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Main Content -->
+      <section id="main">
+        <div class="container">
+          <!-- Hero Section -->
+          <section class="tutoring-hero">
+            <header class="major">
+              <h2>A-Level Economics Tutoring</h2>
+              <p>Tailored sessions to boost your understanding and grades</p>
+            </header>
+          </section>
+
+          <!-- Tutor Introduction -->
+          <section>
+            <div
+              class="row"
+              style="align-items: flex-start; margin-bottom: 3em"
+            >
+              <div class="col-4 col-12-medium">
+                <div class="image featured">
+                  <img src="images/eliot_shirt.JPG" alt="Economics Tutor" />
+                </div>
+              </div>
+              <div class="col-8 col-12-medium">
+                <section class="box feature">
+                  <h3>
+                    Eliot King - Expert Tutor and Founder of Economics Academy
+                  </h3>
+                  <ul class="features-list">
+                    <li>
+                      <strong>Exam-Board Expertise:</strong> Edexcel A/B, AQA &
+                      OCR covered
+                    </li>
+                    <li>
+                      <strong>Trusted Experience:</strong> Over 100 students
+                      successfully tutored over 5 years
+                    </li>
+                    <li>
+                      <strong>Top Credentials:</strong> First-Class degree in
+                      BSc Economics (University of Bath) and A* in A-Level
+                      Economics
+                    </li>
+                    <li>
+                      <strong>Essay Technique Focus:</strong> Specialist in
+                      structure & evaluation
+                    </li>
+                  </ul>
+                  <div style="text-align: center; margin-top: 2em">
+                    <a href="/about.html" class="button primary"
+                      >Find out more about the Tutor</a
+                    >
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <!-- Pricing Packages -->
+          <section id="pricing">
+            <header class="major">
+              <h2>Tutoring Packages</h2>
+              <p>Choose the option that works best for you</p>
+            </header>
+
+            <div class="package-grid">
+              <!-- Package of 10 -->
+              <div class="package-card">
+                <div class="package-header">
+                  <h3>Introductory Call</h3>
+                </div>
+                <div class="package-body">
+                  <div class="price">Free</div>
+                  <p class="per-session">Only available once per student</p>
+                  <ul class="features-list">
+                    <li>Free 15-minute introductory call</li>
+                    <li>Clarify the support you're looking for</li>
+                    <li>Allows the tutor to develop a tailored plan</li>
+                    <li>Ask any questions before committing to lessons</li>
+                  </ul>
+                  <button
+                    class="button small stripe-button"
+                    style="width: 100%"
+                    data-sku="SKU_PACKAGE_10"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+              <!-- Single Session -->
+              <div class="package-card">
+                <div class="package-header">
+                  <h3>Single Session</h3>
+                </div>
+                <div class="package-body">
+                  <div class="price">£74.99</div>
+                  <p class="per-session">per 1-hour session</p>
+                  <ul class="features-list">
+                    <li>One 60-minute session</li>
+                    <li>Focused on topic knowledge or exam technique</li>
+                    <li>Personalized feedback</li>
+                    <li>Resource recommendations</li>
+                  </ul>
+                  <a
+                    href="#booking"
+                    class="button alt small"
+                    style="width: 100%"
+                    >Book Now</a
+                  >
+                </div>
+              </div>
+
+              <!-- Package of 5 (Popular) -->
+              <div class="package-card popular">
+                <span class="popular-badge">MOST POPULAR</span>
+                <div class="package-header">
+                  <h3>Regular Session</h3>
+                </div>
+                <div class="package-body">
+                  <div class="price">£69.99</div>
+                  <p class="per-session">Save £5 per session</p>
+                  <ul class="features-list">
+                    <li>
+                      Regular 60-minute sessions (one or more per week
+                      available)
+                    </li>
+                    <li>Progress tracking</li>
+                    <li>Priority scheduling</li>
+                    <li>Access to premium resources</li>
+                  </ul>
+                  <button
+                    class="button alt small"
+                    style="width: 100%"
+                    data-sku="SKU_PACKAGE_5"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Booking Section -->
+          <section id="booking" class="booking-container">
+            <header class="major">
+              <h2>Schedule Your Session</h2>
+              <p>Choose your preferred time below</p>
+            </header>
+            <!-- Calendly inline widget begin -->
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/yourusername"
+              style="min-width: 320px; height: 700px"
+            ></div>
+            <script
+              type="text/javascript"
+              src="https://assets.calendly.com/assets/external/widget.js"
+              async
+            ></script>
+            <!-- Calendly inline widget end -->
+            <div style="text-align: center; margin-top: 2em">
+              <p>
+                Need help choosing a package?
+                <a href="/contact.html">Contact me</a> for advice.
+              </p>
+              <div class="payment-methods">
+                <img
+                  src="images/Stripe_icon_-_square.svg"
+                  alt="Stripe"
+                  class="payment-icon"
+                />
+                <img
+                  src="images/pp-logo-150px.png"
+                  alt="PayPal"
+                  class="payment-icon"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- FAQ Section -->
+          <section style="margin-top: 3em">
+            <header class="major">
+              <h2>Common Questions</h2>
+            </header>
+            <div class="row">
+              <div class="col-6 col-12-medium">
+                <section class="box">
+                  <h3>What happens in a typical session?</h3>
+                  <p>
+                    Sessions are personalised to each student’s needs, focusing
+                    on building understanding, improving essay technique, and
+                    practising exam-style questions with detailed feedback.
+                  </p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section class="box">
+                  <h3>Can I change or cancel sessions?</h3>
+                  <p>
+                    Yes! You can reschedule up to 24 hours before your session.
+                    Lessons cancelled less than 24h in advance will be subject
+                    to a 100% lesson cancellation fee.
+                  </p>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-12-medium">
+                <section class="box">
+                  <h3>Where do lessons take place?</h3>
+                  <p>
+                    Lessons take place on a platform called thelessonspace.com.
+                    Once you have booked a session, you will receive an email
+                    and calendar invite with the details.
+                  </p>
+                </section>
+              </div>
+              <div class="col-6 col-12-medium">
+                <section class="box">
+                  <h3>Other tutoring options?</h3>
+                  <p>
+                    If you have are seeking support that does not match the
+                    options above, we can still help! Please book a free meeting
+                    or use the Contact page to describe the support you are
+                    looking for and we will be in touch shortly.
+                  </p>
+                </section>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: 2em">
+              <a href="faq.html" class="button">View Full FAQ</a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="footer-dark">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+          </ul>
+          <p>&copy; 2025 Economics Academy. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Stripe Integration -->
+    <script>
+      const stripe = Stripe("YOUR_PUBLISHABLE_KEY");
+
+      document.querySelectorAll(".stripe-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          const sku = this.dataset.sku;
+
+          // In a real implementation, you would:
+          // 1. Create a checkout session on your server
+          // 2. Redirect to Stripe checkout
+          // This is just a placeholder:
+          stripe
+            .redirectToCheckout({
+              items: [{ sku: sku, quantity: 1 }],
+              successUrl: "https://yourdomain.com/success",
+              cancelUrl: "https://yourdomain.com/tutoring",
+            })
+            .then(function (result) {
+              if (result.error) {
+                alert(result.error.message);
+              }
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      A-Level Economics Essay Marking Service | Expert Feedback & Grading
+    </title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- Stripe.js for payment processing -->
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+        <!-- Logo -->
+        <h1><a href="/index.html">Economics Academy</a></h1>
+        <p>The Home of A-Level Economics.</p>
+
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/tutoring.html">Tutoring</a></li>
+            <li class="current"><a href="/marking.html">Marking</a></li>
+            <li>
+              <a href="/revision-notes/index.html">Revision Notes</a>
+              <ul>
+                <li>
+                  <a>Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/index.html"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/index.html"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/index.html"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/index.html"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-as-micro/index.html"
+                        >AS-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-as-macro/index.html"
+                        >AS-Level Macroeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/index.html"
+                        >A-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/index.html"
+                        >A-Level Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/past-papers/index.html">Past Papers</a>
+              <ul>
+                <li><a href="/past-papers/aqa/index.html">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/index.html">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/index.html">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/index.html"
+                    >Edexcel B Papers</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Main -->
+      <section id="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!-- Marking Services -->
+              <section>
+                <header class="major">
+                  <h2>Exam Paper Marking Services</h2>
+                  <p>
+                    Get detailed feedback on your practice papers to improve
+                    your grades, straight from an Expert Economics Tutor
+                  </p>
+                </header>
+
+                <div class="row">
+                  <!-- Single Question Option -->
+                  <div class="col-4 col-12-medium">
+                    <section class="box">
+                      <h3>Single 25-Mark Question</h3>
+                      <div class="price">£24.99</div>
+                      <ul class="alt">
+                        <li>
+                          Graded with comprehensive comments on Knowledge,
+                          Application, Analysis and Evaluation
+                        </li>
+                        <li>Essay structure and technique feedback</li>
+                        <li>Turnaround in 48 hours</li>
+                      </ul>
+                      <button
+                        class="button alt stripe-button"
+                        id="singleQuestionBtn"
+                      >
+                        Select
+                      </button>
+                    </section>
+                  </div>
+
+                  <!-- Full Paper Option -->
+                  <div class="col-4 col-12-medium">
+                    <section class="box">
+                      <h3>Three 25-Mark Questions</h3>
+                      <div class="price">
+                        £64.99 <span class="save">(Save £10)</span>
+                      </div>
+                      <ul class="alt">
+                        <li>
+                          Graded with comprehensive comments on Knowledge,
+                          Application, Analysis and Evaluation
+                        </li>
+                        <li>Essay structure and technique feedback</li>
+                        <li>Turnaround in 48 hours</li>
+                      </ul>
+                      <button
+                        class="button alt stripe-button"
+                        id="fullPaperBtn"
+                      >
+                        Select
+                      </button>
+                    </section>
+                  </div>
+
+                  <!-- Bundle Option -->
+                  <div class="col-4 col-12-medium">
+                    <section class="box">
+                      <h3>Full Exam Paper</h3>
+                      <div class="price">£59.99</div>
+                      <ul class="alt">
+                        <li>Complete feedback on Section A, B and C</li>
+                        <li>
+                          Graded with comprehensive comments on Knowledge,
+                          Application, Analysis and Evaluation
+                        </li>
+                        <li>Essay structure and technique feedback</li>
+                        <li>Turnaround in 48 hours</li>
+                      </ul>
+                      <button class="button alt stripe-button" id="bundleBtn">
+                        Select
+                      </button>
+                    </section>
+                  </div>
+                </div>
+
+                <!-- Payment Form (hidden until selection) -->
+                <div
+                  id="payment-form"
+                  class="box"
+                  style="display: none; margin-top: 2em"
+                >
+                  <h3>Complete Your Purchase</h3>
+                  <form id="payment-form-element">
+                    <div class="row gtr-uniform">
+                      <div class="col-6 col-12-xsmall">
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          value=""
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      <div class="col-6 col-12-xsmall">
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          value=""
+                          placeholder="Email Address"
+                          required
+                        />
+                      </div>
+                      <div class="col-12">
+                        <textarea
+                          name="notes"
+                          id="notes"
+                          placeholder="Any special instructions or paper details"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                      <div class="col-12">
+                        <div id="card-element" class="stripe-card"></div>
+                        <div
+                          id="card-errors"
+                          role="alert"
+                          style="color: #fa755a"
+                        ></div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="button primary">
+                          Pay Now
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <!-- FAQ Section -->
+              <section style="margin-top: 3em">
+                <header class="major">
+                  <h2>Common Questions</h2>
+                </header>
+                <div class="row">
+                  <div class="col-6 col-12-medium">
+                    <section class="box">
+                      <h3>Who marks my questions?</h3>
+                      <p>
+                        All questions are marked by Eliot King, an expert
+                        Economics Tutor. For further information, visit our
+                        About page.
+                      </p>
+                    </section>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                    <section class="box">
+                      <h3>Other marking options?</h3>
+                      <p>
+                        If you have a marking request that is not included in
+                        the options above, we can still help! Please share your
+                        request via the Contact page and we will shortly be in
+                        touch.
+                      </p>
+                    </section>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col-12-medium">
+                    <section class="box">
+                      <h3>What do I receive?</h3>
+                      <p>
+                        You will receive a mark for all answers, and a grade if
+                        submitting an entire paper. You will also receive in
+                        depth feedback on every question, helping you identify
+                        what you did well and comprehensive comments on how to
+                        improve Knowledge, Application, Analysis and Evaluation.
+                      </p>
+                    </section>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                    <section class="box">
+                      <h3>How do I submit my work?</h3>
+                      <p>
+                        You can email a scanned copy or Word/PDF file. I’ll
+                        return your work with annotated comments and a summary
+                        of key areas for improvement. You may also send pictures
+                        if you are unable to use Word/PDF.
+                      </p>
+                    </section>
+                  </div>
+                </div>
+                <div style="text-align: center; margin-top: 2em">
+                  <a href="faq.html" class="button">View Full FAQ</a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="footer"
+        style="padding: 2em 0; background: #2f2f2f; text-align: center"
+      >
+        <div class="container">
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 1em 0;
+              font-size: 0.9em;
+            "
+          >
+            <li style="display: inline; margin: 0 1em">
+              <a href="/about.html" style="color: #ccc">About</a>
+            </li>
+            <li style="display: inline; margin: 0 1em">
+              <a href="/contact.html" style="color: #ccc">Contact</a>
+            </li>
+            <li style="display: inline; margin: 0 1em">
+              <a href="/privacy.html" style="color: #ccc">Privacy</a>
+            </li>
+          </ul>
+          <p style="font-size: 0.8em; color: #999">
+            &copy; 2025 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Stripe Integration Script -->
+    <script>
+      const stripe = Stripe("YOUR_PUBLISHABLE_KEY"); // Replace with your actual publishable key
+      const elements = stripe.elements();
+      const cardElement = elements.create("card");
+
+      cardElement.mount("#card-element");
+
+      // Handle service selection
+      document.querySelectorAll(".stripe-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          document.getElementById("payment-form").style.display = "block";
+          // Scroll to payment form
+          document
+            .getElementById("payment-form")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // Handle form submission
+      const form = document.getElementById("payment-form-element");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const { error, paymentMethod } = await stripe.createPaymentMethod({
+          type: "card",
+          card: cardElement,
+          billing_details: {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+          },
+        });
+
+        if (error) {
+          const errorElement = document.getElementById("card-errors");
+          errorElement.textContent = error.message;
+        } else {
+          // Payment method created, submit to your server
+          // You would typically send paymentMethod.id to your server here
+          alert("Payment processed successfully! We will contact you shortly.");
+          form.reset();
+          cardElement.clear();
+        }
+      });
+    </script>
+
+    <style>
+      .price {
+        font-size: 1.75em;
+        font-weight: bold;
+        margin: 0.5em 0;
+        color: #4caf50;
+      }
+      .save {
+        font-size: 0.7em;
+        color: #f56a6a;
+      }
+      .stripe-card {
+        background: white;
+        padding: 1em;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        margin-bottom: 1em;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      AQA A-Level Microeconomics Notes | Individuals, Firms & Markets |
+      Economics Academy
+    </title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+      /* Custom Styles - AQA Deep Purple Theme */
+      .notes-header {
+        text-align: center;
+        padding: 2em 0;
+        margin-bottom: 2em;
+        background: #f9f9f9;
+        border-radius: 4px;
+      }
+      .notes-container {
+        background: white;
+        border-radius: 4px;
+        padding: 2em;
+        margin-bottom: 3em;
+      }
+      .topic-list {
+        list-style: none;
+        padding: 0;
+      }
+      .topic-item {
+        padding: 1.5em;
+        margin-bottom: 1em;
+        border-left: 4px solid #673ab7; /* Deep Purple */
+        background: #f5f5f5;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .topic-item:hover {
+        transform: translateX(5px);
+        background: #f3e5f5;
+      }
+      .topic-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .subtopic-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1em;
+        display: none;
+      }
+      .subtopic-item {
+        padding: 0.8em 1em;
+        margin: 0.5em 0;
+        background: white;
+        border-radius: 4px;
+        border-left: 2px solid #9c27b0;
+      }
+      .subtopic-item:hover {
+        background: #e1bee7;
+      }
+      .subtopic-item a {
+        color: #4a148c;
+        text-decoration: none;
+        display: block;
+      }
+      .breadcrumb {
+        margin-bottom: 2em;
+        font-size: 0.9em;
+      }
+      .breadcrumb a {
+        color: #673ab7;
+      }
+      .update-info {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 2em;
+      }
+      .toggle-icon {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .exam-board-tag {
+        display: inline-block;
+        padding: 0.3em 0.6em;
+        background: #673ab7;
+        color: white;
+        border-radius: 4px;
+        font-size: 0.8em;
+        margin-left: 1em;
+      }
+      .year-tag {
+        display: inline-block;
+        padding: 0.2em 0.5em;
+        background: #9c27b0;
+        color: white;
+        border-radius: 3px;
+        font-size: 0.7em;
+        margin-left: 0.5em;
+      }
+    </style>
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+        <h1><a href="/index.html">Economics Academy</a></h1>
+        <p>The Home of A-Level Economics.</p>
+
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/tutoring.html">Tutoring</a></li>
+            <li><a href="/marking.html">Marking</a></li>
+            <li class="current">
+              <a href="/revision-notes/index.html">Revision Notes</a>
+              <ul>
+                <li>
+                  <a>Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/index.html"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/index.html"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/index.html"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/index.html"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-as-micro/index.html"
+                        >AS-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-as-macro/index.html"
+                        >AS-Level Macroeconomics</a
+                      >
+                    </li>
+                    <li class="current">
+                      <a href="/revision-notes/aqa-a2-micro/index.html"
+                        >A-Level Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/index.html"
+                        >A-Level Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/past-papers/index.html">Past Papers</a>
+              <ul>
+                <li><a href="/past-papers/aqa/index.html">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/index.html">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/index.html">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/index.html"
+                    >Edexcel B Papers</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Main Content -->
+      <section id="main">
+        <div class="container">
+          <!-- Breadcrumb Navigation -->
+          <div class="breadcrumb">
+            <a href="/revision-notes/index.html">Revision Notes</a> &raquo;
+            <span>AQA A-Level Microeconomics</span>
+          </div>
+
+          <!-- Notes Header -->
+          <section class="notes-header">
+            <header class="major">
+              <h2>AQA A-Level Microeconomics</h2>
+              <p>Complete revision notes for Papers 1 & 3 (Sections 4.1-4.6)</p>
+              <span class="exam-board-tag">Specification: 7136</span>
+            </header>
+          </section>
+
+          <!-- Notes Content -->
+          <div class="notes-container">
+            <h3>Available Topics</h3>
+            <p>Click on any unit below to view its subtopics:</p>
+
+            <ul class="topic-list">
+              <!-- Year 1 Content -->
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-1')">
+                <div class="topic-header">
+                  <h4>
+                    4.1 Economic Methodology
+                    <span class="year-tag">Year 1</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Positive vs normative, economic models, assumptions</p>
+
+                <ul class="subtopic-list" id="subtopic-1">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.1.1.html"
+                      >4.1.1 Economic Methodology</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.1.2.html"
+                      >4.1.2 Nature of Economics</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-2')">
+                <div class="topic-header">
+                  <h4>
+                    4.2 Individual Economic Decision Making
+                    <span class="year-tag">Year 1</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Rationality, behavioural economics, demand theory</p>
+
+                <ul class="subtopic-list" id="subtopic-2">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.2.1.html"
+                      >4.2.1 Consumer Behaviour</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.2.2.html"
+                      >4.2.2 Behavioural Economics</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-3')">
+                <div class="topic-header">
+                  <h4>
+                    4.3 Price Determination <span class="year-tag">Year 1</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Demand, supply, equilibrium, elasticities</p>
+
+                <ul class="subtopic-list" id="subtopic-3">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.3.1.html">4.3.1 Demand & Supply</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.3.2.html">4.3.2 Price Elasticity</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.3.3.html"
+                      >4.3.3 Income & Cross Elasticity</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Year 2 Content -->
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-4')">
+                <div class="topic-header">
+                  <h4>
+                    4.4 Production & Efficiency
+                    <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Costs, revenues, economies of scale, efficiency</p>
+
+                <ul class="subtopic-list" id="subtopic-4">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.4.1.html"
+                      >4.4.1 Production & Productivity</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.4.2.html">4.4.2 Costs & Revenues</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.4.3.html"
+                      >4.4.3 Economies of Scale</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.4.4.html"
+                      >4.4.4 Efficiency Concepts</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-5')">
+                <div class="topic-header">
+                  <h4>
+                    4.5 Market Structures <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Perfect competition, monopoly, oligopoly, contestability</p>
+
+                <ul class="subtopic-list" id="subtopic-5">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.5.1.html"
+                      >4.5.1 Perfect Competition</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.5.2.html">4.5.2 Monopoly</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.5.3.html">4.5.3 Oligopoly</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.5.4.html"
+                      >4.5.4 Monopolistic Competition</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.5.5.html"
+                      >4.5.5 Contestable Markets</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-6')">
+                <div class="topic-header">
+                  <h4>
+                    4.6 Labour Market <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Demand, supply, wage determination, discrimination</p>
+
+                <ul class="subtopic-list" id="subtopic-6">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.6.1.html">4.6.1 Labour Demand</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.6.2.html">4.6.2 Labour Supply</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.6.3.html"
+                      >4.6.3 Wage Determination</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.6.4.html"
+                      >4.6.4 Government Intervention</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="topic-item" onclick="toggleSubtopic('subtopic-7')">
+                <div class="topic-header">
+                  <h4>
+                    4.7 Government Intervention
+                    <span class="year-tag">Year 2</span>
+                  </h4>
+                  <span class="toggle-icon">+</span>
+                </div>
+                <p>Regulation, competition policy, public ownership</p>
+
+                <ul class="subtopic-list" id="subtopic-7">
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.7.1.html">4.7.1 Market Failure</a>
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.7.2.html"
+                      >4.7.2 Government Failure</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.7.3.html"
+                      >4.7.3 Competition Policy</a
+                    >
+                  </li>
+                  <li class="subtopic-item">
+                    <a href="aqa-a-micro/4.7.4.html"
+                      >4.7.4 Public Ownership vs Privatisation</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="update-info">
+              <p>
+                <strong>Last updated:</strong> June 2024 |
+                <strong>Specification version:</strong> AQA A-Level Economics
+                (7136) | <strong>Includes:</strong> 2024 case studies and policy
+                changes
+              </p>
+            </div>
+          </div>
+
+          <!-- Related Resources -->
+          <section style="margin-top: 3em; text-align: center">
+            <header class="major">
+              <h3>Resources to Use With These Notes</h3>
+            </header>
+            <div class="row">
+              <div class="col-4 col-12-medium">
+                <a
+                  href="/past-papers/index.html"
+                  class="button alt"
+                  style="width: 100%"
+                  >Past Papers</a
+                >
+              </div>
+              <div class="col-4 col-12-medium">
+                <a href="/marking.html" class="button alt" style="width: 100%"
+                  >Paper Marking</a
+                >
+              </div>
+              <div class="col-4 col-12-medium">
+                <a href="/tutoring.html" class="button alt" style="width: 100%"
+                  >1-on-1 Tutoring</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section
+        id="footer"
+        style="padding: 2em 0; background: #2f2f2f; text-align: center"
+      >
+        <div class="container">
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 1em 0;
+              font-size: 0.9em;
+            "
+          >
+            <li style="display: inline; margin: 0 1em">
+              <a href="/about.html" style="color: #ccc">About</a>
+            </li>
+            <li style="display: inline; margin: 0 1em">
+              <a href="/contact.html" style="color: #ccc">Contact</a>
+            </li>
+            <li style="display: inline; margin: 0 1em">
+              <a href="/privacy.html" style="color: #ccc">Privacy</a>
+            </li>
+          </ul>
+          <p style="font-size: 0.8em; color: #999">
+            &copy; 2025 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+      function toggleSubtopic(id) {
+        const subtopic = document.getElementById(id);
+        const icon = subtopic.parentElement.querySelector(".toggle-icon");
+
+        if (subtopic.style.display === "block") {
+          subtopic.style.display = "none";
+          icon.textContent = "+";
+        } else {
+          subtopic.style.display = "block";
+          icon.textContent = "-";
+        }
+      }
+    </script>
+  </body>
+</html>
