@@ -16,23 +16,26 @@ function injectTemplates() {
     });
 }
 
-// Function to set active page in navigation
+// Updated setActivePage function
 function setActivePage() {
   const path = window.location.pathname;
   const pageMap = {
-    "/index.html": "home",
+    "/revision-notes/": "revision-notes",
+    "/revision-notes/index.html": "revision-notes",
+    "/past-papers/": "past-papers",
+    "/past-papers/index.html": "past-papers",
     "/tutoring.html": "tutoring",
     "/marking.html": "marking",
-    "/revision-notes/": "revision-notes",
-    "/past-papers/": "past-papers",
     "/about.html": "about",
     "/contact.html": "contact",
+    "/index.html": "home",
+    "/": "home", // Add root path
   };
 
-  // Find current page
+  // Find current page - check for most specific matches first
   let currentPage = "";
   for (const [pathMatch, page] of Object.entries(pageMap)) {
-    if (path.includes(pathMatch)) {
+    if (path.endsWith(pathMatch)) {
       currentPage = page;
       break;
     }
