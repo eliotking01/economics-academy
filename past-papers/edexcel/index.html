@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>
-      AQA A-Level Economics Past Papers | 2016-2024 Papers & Mark Schemes
+      Edexcel A-Level Economics Past Papers | 2016-2024 Papers & Mark Schemes
     </title>
     <meta
       name="viewport"
@@ -34,6 +34,50 @@
         margin-bottom: 1.5em;
         border-left: 4px solid #4caf50;
         background: #f5f5f5;
+        cursor: pointer;
+      }
+      .year-item {
+        transition: all 0.3s ease;
+        /* other properties */
+      }
+
+      .year-item:hover {
+        transform: translateX(5px);
+        /* other properties */
+      }
+      .year-item {
+        background: #f5f5f5; /* Original color */
+        /* other properties */
+      }
+
+      .year-item:hover {
+        background: #e8f5e9; /* Hover color */
+        /* other properties */
+      }
+      .year-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .year-header h4 {
+        margin: 0;
+      }
+      .year-toggle {
+        font-size: 1.2em;
+        transition: transform 0.3s ease;
+      }
+      .year-content {
+        margin-top: 1em;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+      }
+      .year-content.collapsed {
+        max-height: 0;
+        opacity: 0;
+      }
+      .year-content.expanded {
+        max-height: 5000px;
+        opacity: 1;
       }
       .paper-list {
         list-style: none;
@@ -49,6 +93,10 @@
         background: white;
         border-radius: 4px;
         border: 1px solid #e0e0e0;
+        pointer-events: none;
+      }
+      .paper-item a {
+        pointer-events: auto;
       }
       .paper-info {
         flex-grow: 1;
@@ -184,505 +232,828 @@
 
           <!-- Papers Content -->
           <div class="papers-container">
-            <h3>Available Papers by Year</h3>
+            <h3>Available Papers</h3>
 
             <ul class="year-list">
-              <li class="year-item">
-                <h4>2023</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - June 2023</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+              <li class="year-item" onclick="toggleYear(this)">
+                <div class="year-header">
+                  <h4>A-Level Paper 1: Markets and Business Behaviour</h4>
+                  <span class="year-toggle">+</span>
+                </div>
+                <div class="year-content collapsed">
+                  <ul class="paper-list">
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2023</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - June 2023</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - June 2023</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2022</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>November 2021</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>October 2020</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2019</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2018</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2017</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1 - Markets and Business Behaviour
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2023/A-level-Paper1-June2023-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="year-item">
-                <h4>2022</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - June 2022</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+              <li class="year-item" onclick="toggleYear(this)">
+                <div class="year-header">
+                  <h4>A-Level Paper 2: National and Global Economy</h4>
+                  <span class="year-toggle">+</span>
+                </div>
+                <div class="year-content collapsed">
+                  <ul class="paper-list">
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2023</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - June 2022</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - June 2022</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2022</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>November 2021</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>October 2020</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2019</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2018</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2017</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: National and Global Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2022/A-level-Paper2-June2022-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="year-item">
-                <h4>2021</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - November 2021</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+              <li class="year-item" onclick="toggleYear(this)">
+                <div class="year-header">
+                  <h4>A-Level Paper 3: Micro and Macro Economics</h4>
+                  <span class="year-toggle">+</span>
+                </div>
+                <div class="year-content collapsed">
+                  <ul class="paper-list">
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2023</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - November 2021</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - November 2021</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2022</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>November 2021</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>October 2020</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2019</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2018</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2017</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 3: Micro and Macro Economics
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2021/A-level-Paper1-Nov2021-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="year-item">
-                <h4>2020</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - October 2020</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+              <li class="year-item" onclick="toggleYear(this)">
+                <div class="year-header">
+                  <h4>AS-Level Paper 1: Markets and Market Failure</h4>
+                  <span class="year-toggle">+</span>
+                </div>
+                <div class="year-content collapsed">
+                  <ul class="paper-list">
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2023</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - October 2020</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - October 2020</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2022</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>October 2020</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2019</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2018</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2017</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2016</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 1: Markets and Market Failure
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2020/A-level-Paper1-Oct2020-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="year-item">
-                <h4>2019</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - June 2019</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+              <li class="year-item" onclick="toggleYear(this)">
+                <div class="year-header">
+                  <h4>AS-Level Paper 2: The UK Economy</h4>
+                  <span class="year-toggle">+</span>
+                </div>
+                <div class="year-content collapsed">
+                  <ul class="paper-list">
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2023</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - June 2019</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - June 2019</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2022</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="year-item">
-                <h4>2018</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - June 2018</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - June 2018</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>October 2020</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - June 2018</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="year-item">
-                <h4>2017</h4>
-                <ul class="paper-list">
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 1 - June 2017</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Markets and Business Behaviour
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2019</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 2 - June 2017</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        National and Global Economy
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                  <li class="paper-item">
-                    <div class="paper-info">
-                      <strong>Paper 3 - June 2017</strong>
-                      <div style="font-size: 0.9em; color: #666">
-                        Micro and Macro Economics
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2018</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
                       </div>
-                    </div>
-                    <div class="paper-actions">
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-QP.pdf"
-                        class="button small"
-                        download
-                        >Question Paper</a
-                      >
-                      <a
-                        href="pdfs/edexcel/2024/AS-micro-summer-2024-MS.pdf"
-                        class="button small"
-                        download
-                        >Mark Scheme</a
-                      >
-                    </div>
-                  </li>
-                </ul>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 2017</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                    <li class="paper-item">
+                      <div class="paper-info">
+                        <strong>June 20216</strong>
+                        <div style="font-size: 0.9em; color: #666">
+                          Paper 2: The UK Economy
+                        </div>
+                      </div>
+                      <div class="paper-actions">
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-QP.pdf"
+                          class="button small"
+                          download
+                          >Question Paper</a
+                        >
+                        <a
+                          href="pdfs/edexcel/2019/A-level-Paper1-June2019-MS.pdf"
+                          class="button small"
+                          download
+                          >Mark Scheme</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
 
@@ -751,5 +1122,36 @@
     <script src="/js/breakpoints.min.js"></script>
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
+
+    <script>
+      function toggleYear(yearElement) {
+        // Prevent toggling when clicking on links inside the papers
+        if (event.target.tagName === "A" || event.target.closest("a")) {
+          return;
+        }
+
+        const content = yearElement.querySelector(".year-content");
+        const toggle = yearElement.querySelector(".year-toggle");
+
+        // Toggle content visibility
+        content.classList.toggle("collapsed");
+        content.classList.toggle("expanded");
+
+        // Update toggle icon
+        if (content.classList.contains("collapsed")) {
+          toggle.textContent = "+";
+        } else {
+          toggle.textContent = "-";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Optional: Collapse all sections by default
+        const allContents = document.querySelectorAll(".year-content");
+        allContents.forEach((content) => {
+          content.classList.add("collapsed");
+        });
+      });
+    </script>
   </body>
 </html>
