@@ -12,6 +12,26 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <style>
+      .notes-container > header.major {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 0 1em 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .notes-container > header.major::before,
+      .notes-container > header.major::after {
+        display: none !important;
+      }
+
+      .notes-container > header.major h2 {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
       .notes-container {
         background: white;
         border-radius: 8px;
@@ -24,7 +44,6 @@
       /* Vibrant header styling */
       .major h2 {
         color: #2a5c8d; /* Deep blue */
-        border-bottom: 3px solid #4ecdc4; /* Teal accent */
         padding-bottom: 0.5em;
         font-size: 2em;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
