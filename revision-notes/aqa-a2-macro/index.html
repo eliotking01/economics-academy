@@ -11,98 +11,7 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="/css/main.css" />
-    <style>
-      /* Custom Styles - AQA Deep Blue Theme */
-      .notes-header {
-        text-align: center;
-        padding: 2em 0;
-        margin-bottom: 2em;
-        background: #f9f9f9;
-        border-radius: 4px;
-      }
-      .notes-container {
-        background: white;
-        border-radius: 4px;
-        padding: 2em;
-        margin-bottom: 3em;
-      }
-      .topic-list {
-        list-style: none;
-        padding: 0;
-      }
-      .topic-item {
-        padding: 1.5em;
-        margin-bottom: 1em;
-        border-left: 4px solid #1565c0; /* Deep Blue */
-        background: #f5f5f5;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-      .topic-item:hover {
-        transform: translateX(5px);
-        background: #e3f2fd;
-      }
-      .topic-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .subtopic-list {
-        list-style: none;
-        padding: 0;
-        margin-top: 1em;
-        display: none;
-      }
-      .subtopic-item {
-        padding: 0.8em 1em;
-        margin: 0.5em 0;
-        background: white;
-        border-radius: 4px;
-        border-left: 2px solid #42a5f5;
-      }
-      .subtopic-item:hover {
-        background: #bbdefb;
-      }
-      .subtopic-item a {
-        color: #0d47a1;
-        text-decoration: none;
-        display: block;
-      }
-      .breadcrumb {
-        margin-bottom: 2em;
-        font-size: 0.9em;
-      }
-      .breadcrumb a {
-        color: #1565c0;
-      }
-      .update-info {
-        font-size: 0.9em;
-        color: #666;
-        margin-top: 2em;
-      }
-      .toggle-icon {
-        font-weight: bold;
-        font-size: 1.2em;
-      }
-      .exam-board-tag {
-        display: inline-block;
-        padding: 0.3em 0.6em;
-        background: #1565c0;
-        color: white;
-        border-radius: 4px;
-        font-size: 0.8em;
-        margin-left: 1em;
-      }
-      .year-tag {
-        display: inline-block;
-        padding: 0.2em 0.5em;
-        background: #1976d2;
-        color: white;
-        border-radius: 3px;
-        font-size: 0.7em;
-        margin-left: 0.5em;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/pages/revision-notes-topics.css" />
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -227,10 +136,7 @@
               <!-- Year 1 Content -->
               <li class="topic-item" onclick="toggleSubtopic('subtopic-1')">
                 <div class="topic-header">
-                  <h4>
-                    2.1 The Measurement of Macroeconomic Performance
-                    <span class="year-tag">Year 1</span>
-                  </h4>
+                  <h4>2.1 The Measurement of Macroeconomic Performance</h4>
                   <span class="toggle-icon">+</span>
                 </div>
                 <p>Growth, inflation, unemployment, balance of payments</p>
@@ -261,10 +167,7 @@
 
               <li class="topic-item" onclick="toggleSubtopic('subtopic-2')">
                 <div class="topic-header">
-                  <h4>
-                    2.2 How the Macroeconomy Works
-                    <span class="year-tag">Year 1</span>
-                  </h4>
+                  <h4>2.2 How the Macroeconomy Works</h4>
                   <span class="toggle-icon">+</span>
                 </div>
                 <p>AD components, AS models, macroeconomic equilibrium</p>
@@ -307,10 +210,7 @@
               <!-- Year 2 Content -->
               <li class="topic-item" onclick="toggleSubtopic('subtopic-3')">
                 <div class="topic-header">
-                  <h4>
-                    2.3 Economic Performance
-                    <span class="year-tag">Year 2</span>
-                  </h4>
+                  <h4>2.3 Economic Performance</h4>
                   <span class="toggle-icon">+</span>
                 </div>
                 <p>Fiscal, monetary, supply-side policies</p>
@@ -342,10 +242,7 @@
 
               <li class="topic-item" onclick="toggleSubtopic('subtopic-4')">
                 <div class="topic-header">
-                  <h4>
-                    2.4 Financial Markets and Monetary Policy
-                    <span class="year-tag">Year 2</span>
-                  </h4>
+                  <h4>2.4 Financial Markets and Monetary Policy</h4>
                   <span class="toggle-icon">+</span>
                 </div>
                 <p>Globalisation, trade, development</p>
@@ -377,10 +274,7 @@
 
               <li class="topic-item" onclick="toggleSubtopic('subtopic-5')">
                 <div class="topic-header">
-                  <h4>
-                    2.5 Fiscal Policy and Supply-Side Policies
-                    <span class="year-tag">Year 2</span>
-                  </h4>
+                  <h4>2.5 Fiscal Policy and Supply-Side Policies</h4>
                   <span class="toggle-icon">+</span>
                 </div>
                 <p>Money, banking, financial sector</p>
@@ -399,10 +293,7 @@
 
               <li class="topic-item" onclick="toggleSubtopic('subtopic-6')">
                 <div class="topic-header">
-                  <h4>
-                    2.6 The International Economy
-                    <span class="year-tag">Year 2</span>
-                  </h4>
+                  <h4>2.6 The International Economy</h4>
                   <span class="toggle-icon">+</span>
                 </div>
                 <p>Taxation, public spending, fiscal policy</p>

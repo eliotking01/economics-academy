@@ -1,0 +1,36 @@
+.notes-hero {
+  text-align: center;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+.exam-board-section {
+  margin-bottom: 3em;
+}
+.year-section {
+  margin: 2em 0;
+}
+.subject-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.subject-button {
+  transition: transform 0.3s ease;
+}
+.subject-button:hover {
+  transform: translateY(-3px);
+}
+.free-badge {
+  background: #4caf50;
+  color: white;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  display: inline-block;
+}
+.notes-description {
+  margin: 2em 0;
+  text-align: center;
+}

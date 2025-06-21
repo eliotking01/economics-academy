@@ -1,0 +1,17 @@
+.exam-board-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+.exam-board-button {
+  padding: 1.5rem 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .exam-board-buttons {
+    grid-template-columns: 1fr;
+  }
+}

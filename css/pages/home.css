@@ -1,0 +1,123 @@
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+.action-card {
+  border-radius: 6px;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: block;
+  color: inherit;
+}
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.action-card.secondary {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #333;
+}
+.action-card.secondary:hover {
+  border-color: #4caf50;
+}
+.action-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: #4caf50;
+}
+.action-card h3 {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+.action-card p {
+  color: #666;
+  margin-bottom: 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel {
+  margin: 4rem 0;
+  position: relative;
+}
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  padding: 0 40px; /* Added padding to prevent overlap */
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.testimonial-slide {
+  min-width: 100%;
+  padding: 0 10px; /* Reduced side padding */
+  box-sizing: border-box;
+}
+.testimonial-slide .row {
+  margin: 0 -10px; /* Adjusted row margins */
+}
+.testimonial-slide .col-6 {
+  padding: 0 10px; /* Adjusted column padding */
+}
+.carousel-nav {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.carousel-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-dot.active {
+  background: #4caf50;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #4caf50;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.carousel-arrow.prev {
+  left: 0;
+}
+.carousel-arrow.next {
+  right: 0;
+}
+.carousel-arrow:hover {
+  background: #4caf50;
+  color: white;
+}
+@media (max-width: 768px) {
+  .carousel-arrow {
+    display: none;
+  }
+  .carousel-container {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,72 @@
+.tutoring-hero {
+  text-align: center;
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+.package-card {
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.package-card:hover {
+  transform: translateY(-5px);
+}
+.package-card.popular {
+  border: 2px solid #4caf50;
+  position: relative;
+}
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 0.3em 1em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.package-header {
+  background: #ffffff;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+.package-body {
+  background: white;
+  padding: 1.5rem;
+}
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4caf50;
+  margin: 0.5rem 0;
+}
+.per-session {
+  font-size: 0.9em;
+  color: #666;
+}
+.features-list {
+  margin: 1.5rem 0;
+}
+.booking-container {
+  background: #f9f9f9;
+  padding: 3rem;
+  border-radius: 4px;
+  margin: 3rem 0;
+}
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.payment-icon {
+  height: 30px;
+}

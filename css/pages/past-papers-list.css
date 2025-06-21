@@ -1,0 +1,109 @@
+.papers-header {
+  text-align: center;
+  padding: 2em 0;
+  margin-bottom: 2em;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+.papers-container {
+  background: white;
+  border-radius: 4px;
+  padding: 2em;
+  margin-bottom: 3em;
+}
+.year-list {
+  list-style: none;
+  padding: 0;
+}
+.year-item {
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border-left: 4px solid #4caf50;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+.year-item {
+  transition: all 0.3s ease;
+  /* other properties */
+}
+
+.year-item:hover {
+  transform: translateX(5px);
+  /* other properties */
+}
+.year-item {
+  background: #f5f5f5; /* Original color */
+  /* other properties */
+}
+
+.year-item:hover {
+  background: #e8f5e9; /* Hover color */
+  /* other properties */
+}
+.year-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.year-header h4 {
+  margin: 0;
+}
+.year-toggle {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+.year-content {
+  margin-top: 1em;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.year-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+.year-content.expanded {
+  max-height: 5000px;
+  opacity: 1;
+}
+.paper-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+.paper-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  pointer-events: none;
+}
+.paper-item a {
+  pointer-events: auto;
+}
+.paper-info {
+  flex-grow: 1;
+}
+.paper-actions {
+  display: flex;
+  gap: 1em;
+}
+.breadcrumb {
+  margin-bottom: 2em;
+  font-size: 0.9em;
+}
+.breadcrumb a {
+  color: #4caf50;
+}
+.exam-board-tag {
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  background: #4caf50;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
