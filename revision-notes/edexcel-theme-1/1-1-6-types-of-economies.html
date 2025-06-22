@@ -11,6 +11,7 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="/css/main.css" />
+
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap"
@@ -19,7 +20,10 @@
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
-      <section id="main">
+      <!-- Header -->
+      <div id="header-placeholder"></div>
+
+      <section id="main" class="revision-notes-content">
         <div class="container">
           <div class="notes-container">
             <header class="major">
@@ -449,11 +453,15 @@
           </div>
         </div>
       </section>
+
+      <!-- Footer -->
+      <div id="footer-placeholder"></div>
     </div>
 
     <!-- Scripts -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/components/inject-templates.js"></script>
     <script src="/js/browser.min.js"></script>
     <script src="/js/breakpoints.min.js"></script>
     <script src="/js/util.js"></script>

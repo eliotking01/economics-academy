@@ -10,13 +10,13 @@
   --border-light: #e2e8f0;
 }
 
-body {
+.revision-notes-content {
   font-family: "Merriweather", serif;
   line-height: 1.7;
   color: #333;
 }
 
-.notes-container {
+.revision-notes-content .notes-container {
   background: white;
   border-radius: 12px;
   padding: 3em;
@@ -28,7 +28,7 @@ body {
   margin-right: auto;
 }
 
-.notes-container > header.major {
+.revision-notes-content .notes-container > header.major {
   background: white !important;
   padding: 0 !important;
   margin: 0 0 2em 0 !important;
@@ -37,7 +37,7 @@ body {
   text-align: center;
 }
 
-.notes-container > header.major h2 {
+.revision-notes-content .notes-container > header.major h2 {
   color: var(--primary-blue);
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -48,7 +48,7 @@ body {
   display: inline-block;
 }
 
-.notes-container > header.major p.subtitle {
+.revision-notes-content .notes-container > header.major p.subtitle {
   color: var(--secondary-blue);
   font-size: 1.3em;
   font-weight: 600;
@@ -56,7 +56,7 @@ body {
 }
 
 /* Typography hierarchy */
-h3 {
+.revision-notes-content h3 {
   color: var(--primary-blue);
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -73,7 +73,7 @@ h3 {
   position: relative;
 }
 
-h3:before {
+.revision-notes-content h3:before {
   content: "";
   position: absolute;
   left: 0;
@@ -83,7 +83,7 @@ h3:before {
   background: linear-gradient(90deg, var(--accent-teal), transparent);
 }
 
-h4 {
+.revision-notes-content h4 {
   color: var(--secondary-blue);
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -93,13 +93,13 @@ h4 {
   border-bottom: 2px dashed var(--border-light);
 }
 
-p {
+.revision-notes-content p {
   margin-bottom: 1.5em;
   font-size: 1.05em;
 }
 
 /* Key definitions - premium treatment */
-.key-definition {
+.revision-notes-content .key-definition {
   position: relative;
   font-weight: 600;
   color: var(--key-term-pink);
@@ -112,7 +112,7 @@ p {
 }
 
 /* Enhanced exam tips */
-.exam-tip {
+.revision-notes-content .exam-tip {
   background: linear-gradient(
     90deg,
     rgba(39, 174, 96, 0.08) 0%,
@@ -126,7 +126,7 @@ p {
   position: relative;
 }
 
-.exam-tip:before {
+.revision-notes-content .exam-tip:before {
   content: "EXAM TIP";
   position: absolute;
   top: -12px;
@@ -142,12 +142,12 @@ p {
   letter-spacing: 1px;
 }
 
-.exam-tip strong {
+.revision-notes-content .exam-tip strong {
   color: var(--exam-green);
 }
 
 /* Specification alerts */
-.spec-alert {
+.revision-notes-content .spec-alert {
   background: linear-gradient(
     90deg,
     rgba(94, 53, 177, 0.08) 0%,
@@ -160,7 +160,7 @@ p {
   position: relative;
 }
 
-.spec-alert:before {
+.revision-notes-content .spec-alert:before {
   content: "SPECIFICATION";
   position: absolute;
   top: -12px;
@@ -176,12 +176,12 @@ p {
   letter-spacing: 1px;
 }
 
-.spec-alert strong {
+.revision-notes-content .spec-alert strong {
   color: var(--spec-purple);
 }
 
 /* Evaluation points */
-.evaluation-point {
+.revision-notes-content .evaluation-point {
   background: linear-gradient(
     90deg,
     rgba(245, 124, 0, 0.08) 0%,
@@ -194,7 +194,7 @@ p {
   position: relative;
 }
 
-.evaluation-point:before {
+.revision-notes-content .evaluation-point:before {
   content: "EVALUATION";
   position: absolute;
   top: -12px;
@@ -210,14 +210,14 @@ p {
   letter-spacing: 1px;
 }
 
-.evaluation-point h4 {
+.revision-notes-content .evaluation-point h4 {
   color: var(--evaluation-orange);
   margin-top: 0;
   padding-top: 0;
 }
 
 /* Case study boxes */
-.case-study {
+.revision-notes-content .case-study {
   background: var(--light-bg);
   border: 1px solid var(--border-light);
   border-radius: 8px;
@@ -226,7 +226,7 @@ p {
   position: relative;
 }
 
-.case-study:before {
+.revision-notes-content .case-study:before {
   content: "CASE STUDY";
   position: absolute;
   top: -12px;
@@ -243,7 +243,7 @@ p {
 }
 
 /* Tables with premium styling */
-.concept-table {
+.revision-notes-content .concept-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -254,7 +254,7 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
-.concept-table th {
+.revision-notes-content .concept-table th {
   background: linear-gradient(
     135deg,
     var(--primary-blue) 0%,
@@ -268,40 +268,40 @@ p {
   letter-spacing: 0.5px;
 }
 
-.concept-table td {
+.revision-notes-content .concept-table td {
   padding: 1em 1.5em;
   border-bottom: 1px solid var(--border-light);
   vertical-align: top;
 }
 
-.concept-table tr:last-child td {
+.revision-notes-content .concept-table tr:last-child td {
   border-bottom: none;
 }
 
-.concept-table tr:nth-child(even) td {
+.revision-notes-content .concept-table tr:nth-child(even) td {
   background-color: var(--light-bg);
 }
 
-.concept-table tr:hover td {
+.revision-notes-content .concept-table tr:hover td {
   background-color: rgba(42, 137, 152, 0.05);
 }
 
 /* Lists with custom styling */
-ol {
+.revision-notes-content ol {
   counter-reset: item;
   padding-left: 0;
   list-style: none;
   margin: 1.5em 0;
 }
 
-ol > li {
+.revision-notes-content ol > li {
   counter-increment: item;
   margin-bottom: 1.2em;
   position: relative;
   padding-left: 3em;
 }
 
-ol > li:before {
+.revision-notes-content ol > li:before {
   content: counter(item) ".";
   color: var(--accent-teal);
   font-weight: bold;
@@ -312,19 +312,19 @@ ol > li:before {
 }
 
 /* Unordered lists */
-ul {
+.revision-notes-content ul {
   padding-left: 0;
   list-style: none;
   margin: 1.5em 0;
 }
 
-ul > li {
+.revision-notes-content ul > li {
   margin-bottom: 0.8em;
   position: relative;
   padding-left: 2.5em;
 }
 
-ul > li:before {
+.revision-notes-content ul > li:before {
   content: "•";
   color: var(--accent-teal);
   font-weight: bold;
@@ -335,46 +335,46 @@ ul > li:before {
 }
 
 /* Interactive elements */
-a {
+.revision-notes-content a {
   color: var(--secondary-blue);
   text-decoration: none;
   border-bottom: 1px dashed var(--secondary-blue);
   transition: all 0.2s ease;
 }
 
-a:hover {
+.revision-notes-content a:hover {
   color: var(--key-term-pink);
   border-bottom: 1px solid var(--key-term-pink);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .notes-container {
+  .revision-notes-content .notes-container {
     padding: 2em 1.5em;
     border-radius: 0;
   }
 
-  h3 {
+  .revision-notes-content h3 {
     font-size: 1.5em;
     padding: 0.5em 0.75em;
   }
 
-  .concept-table {
+  .revision-notes-content .concept-table {
     font-size: 0.9em;
   }
 }
 
 /* Print styles */
 @media print {
-  .notes-container {
+  .revision-notes-content .notes-container {
     box-shadow: none;
     border: none;
     padding: 0;
   }
 
-  .exam-tip,
-  .spec-alert,
-  .evaluation-point {
+  .revision-notes-content .exam-tip,
+  .revision-notes-content .spec-alert,
+  .revision-notes-content .evaluation-point {
     break-inside: avoid;
   }
 }
