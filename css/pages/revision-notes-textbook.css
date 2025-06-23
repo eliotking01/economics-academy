@@ -39,7 +39,7 @@
 
 .revision-notes-content .notes-container > header.major h2 {
   color: var(--primary-blue);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 2.4em;
   margin-bottom: 0.5em;
@@ -58,7 +58,7 @@
 /* Typography hierarchy */
 .revision-notes-content h3 {
   color: var(--primary-blue);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 1.8em;
   margin: 2em 0 1em 0;
@@ -85,7 +85,7 @@
 
 .revision-notes-content h4 {
   color: var(--secondary-blue);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 600;
   font-size: 1.4em;
   margin: 1.8em 0 0.8em 0;
@@ -104,7 +104,7 @@
   font-weight: 600;
   color: var(--key-term-pink);
   background-color: rgba(194, 24, 91, 0.05);
-  padding: 0.8em 0.8em 0.8em 0.8em;
+  padding: 0.4em 0.8em 0.4em 0.8em;
   border-radius: 6px;
   border-left: 4px solid var(--key-term-pink);
   margin: 1.5em 0;
@@ -133,7 +133,7 @@
   left: 20px;
   background: var(--exam-green);
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 0.8em;
   padding: 0.3em 1em;
@@ -167,7 +167,7 @@
   left: 20px;
   background: var(--spec-purple);
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 0.8em;
   padding: 0.3em 1em;
@@ -201,7 +201,7 @@
   left: 20px;
   background: var(--evaluation-orange);
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 0.8em;
   padding: 0.3em 1em;
@@ -233,7 +233,7 @@
   left: 20px;
   background: var(--secondary-blue);
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 0.8em;
   padding: 0.3em 1em;
@@ -251,7 +251,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   overflow: hidden;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
 }
 
 .revision-notes-content .concept-table th {
@@ -308,7 +308,7 @@
   position: absolute;
   left: 0;
   font-size: 1.1em;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
 }
 
 /* Unordered lists */
@@ -385,7 +385,7 @@
   left: 20px;
   background: var(--primary-blue);
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 0.8em;
   padding: 0.3em 1em;
@@ -407,7 +407,7 @@
   border-collapse: separate;
   border-spacing: 0;
   margin: 1em 0 0.5em 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
   background: white;
   border-radius: 6px;
   overflow: hidden;

@@ -1,3 +1,54 @@
+// Global variable for body element
+var $body = $(document.body);
+
+// Function to fully initialize the navigation system
+function initNavigation() {
+  // Remove existing elements to avoid duplicates
+  $("#navPanel").remove();
+  $("#titleBar").remove();
+
+  // Create title bar toggle button
+  var $titleBar = $(
+    '<div id="titleBar"><a href="#navPanel" class="toggle"></a></div>'
+  ).appendTo($body);
+
+  // Create navPanel with current navigation content
+  var $navPanel = $(
+    '<div id="navPanel"><nav>' + $("#nav").navList() + "</nav></div>"
+  ).appendTo($body);
+
+  // Initialize panel with all original settings
+  $navPanel.panel({
+    delay: 500,
+    hideOnClick: true,
+    hideOnSwipe: true,
+    resetScroll: true,
+    resetForms: true,
+    side: "left",
+    target: $body,
+    visibleClass: "navPanel-visible",
+  });
+
+  // Rebind click event to the toggle button
+  $titleBar
+    .find(".toggle")
+    .off("click")
+    .on("click", function (e) {
+      e.preventDefault();
+      $navPanel.toggleClass("visible");
+      $body.toggleClass("navPanel-visible");
+    });
+
+  // Reinitialize Dropotron menus
+  if (typeof $.fn.dropotron !== "undefined") {
+    $("#nav > ul").dropotron({
+      mode: "fade",
+      noOpenerFade: true,
+      alignment: "center",
+    });
+  }
+}
+
 // Function to inject templates and set active page
 function injectTemplates() {
   // Inject header
@@ -6,6 +57,12 @@ function injectTemplates() {
     .then((data) => {
       document.getElementById("header-placeholder").outerHTML = data;
       setActivePage();
+
+      // Initialize navigation after slight delay to ensure DOM is ready
+      setTimeout(initNavigation, 50);
+    })
+    .catch((error) => {
+      console.error("Error loading header:", error);
     });
 
   // Inject footer
@@ -13,6 +70,9 @@ function injectTemplates() {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("footer-placeholder").outerHTML = data;
+    })
+    .catch((error) => {
+      console.error("Error loading footer:", error);
     });
 }
 
@@ -60,5 +120,7 @@ function setActivePage() {
   }
 }
 
-// Run when DOM is loaded
-document.addEventListener("DOMContentLoaded", injectTemplates);
+// Run when DOM is loaded and jQuery is ready
+$(function () {
+  injectTemplates();
+});
