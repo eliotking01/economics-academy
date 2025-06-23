@@ -3094,3 +3094,28 @@ ul.social li a.fa-google-plus:hover {
   font-size: 0.8em;
   color: #999;
 }
+
+/* Breadcrumb - Pure Dopetrope Style */
+.breadcrumb {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  color: #7f888f;
+}
+
+.breadcrumb a {
+  color: #3c78d8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #2e5cad;
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 0.5rem;
+  color: #d3d9df;
+}
