@@ -912,23 +912,59 @@
         const content = yearElement.querySelector(".year-content");
         const toggle = yearElement.querySelector(".year-toggle");
 
-        // Toggle content visibility
-        content.classList.toggle("collapsed");
-        content.classList.toggle("expanded");
+        // First get the height
+        content.style.display = "block";
+        const height = content.scrollHeight + "px";
+        content.style.display = "";
 
-        // Update toggle icon
+        // Start animation
+        content.style.display = "block";
         if (content.classList.contains("collapsed")) {
-          toggle.textContent = "+";
-        } else {
+          content.classList.remove("collapsed");
+          content.style.maxHeight = height;
           toggle.textContent = "-";
+          // Ensure content stays visible after animation
+          setTimeout(() => {
+            content.style.maxHeight = "none";
+          }, 300);
+        } else {
+          content.style.maxHeight = height;
+          // Force repaint
+          content.getBoundingClientRect();
+          content.style.maxHeight = "0";
+          toggle.textContent = "+";
+          // After animation completes
+          setTimeout(() => {
+            content.classList.add("collapsed");
+          }, 300);
         }
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        // Optional: Collapse all sections by default
+        // Collapse all sections by default
         const allContents = document.querySelectorAll(".year-content");
         allContents.forEach((content) => {
           content.classList.add("collapsed");
+          content.style.maxHeight = "0";
+        });
+
+        // Improve mobile touch targets
+        if (window.innerWidth <= 768) {
+          const buttons = document.querySelectorAll(".button-group .button");
+          buttons.forEach((button) => {
+            button.style.padding = "0.8em";
+            button.style.minHeight = "44px"; // Recommended minimum touch target size
+          });
+        }
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", function () {
+        const yearContents = document.querySelectorAll(
+          ".year-content:not(.collapsed)"
+        );
+        yearContents.forEach((content) => {
+          content.style.maxHeight = content.scrollHeight + "px";
         });
       });
     </script>
