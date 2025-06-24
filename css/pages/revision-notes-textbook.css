@@ -470,3 +470,229 @@
     break-inside: avoid;
   }
 }
+
+/* Add these new media queries and mobile-specific styles to your existing CSS */
+
+@media (max-width: 768px) {
+  /* General mobile adjustments */
+  .revision-notes-content .notes-container {
+    padding: 1.5em;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .revision-notes-content .notes-container > header.major h2 {
+    font-size: 1.8em;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.3em;
+  }
+
+  .revision-notes-content .notes-container > header.major p.subtitle {
+    font-size: 1.1em;
+  }
+
+  /* Typography adjustments */
+  .revision-notes-content h3 {
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    margin: 1.5em 0 0.8em 0;
+  }
+
+  .revision-notes-content h4 {
+    font-size: 1.2em;
+    margin: 1.5em 0 0.6em 0;
+  }
+
+  /* Special content boxes */
+  .revision-notes-content .exam-tip,
+  .revision-notes-content .spec-alert,
+  .revision-notes-content .evaluation-point,
+  .revision-notes-content .case-study {
+    margin: 1.8em 0;
+    padding: 1.2em;
+  }
+
+  .revision-notes-content .exam-tip:before,
+  .revision-notes-content .spec-alert:before,
+  .revision-notes-content .evaluation-point:before,
+  .revision-notes-content .case-study:before {
+    font-size: 0.7em;
+    left: 15px;
+    padding: 0.2em 0.8em;
+  }
+
+  /* Replace your existing table styles with this */
+
+  /* Base table styles (unchanged from your original) */
+  .revision-notes-content .concept-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2.5em 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: "Source Sans Pro";
+  }
+
+  .revision-notes-content .concept-table th {
+    background: linear-gradient(
+      135deg,
+      var(--primary-blue) 0%,
+      var(--secondary-blue) 100%
+    );
+    color: white;
+    font-weight: 700;
+    padding: 1.2em 1.5em;
+    text-align: left;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+  }
+
+  .revision-notes-content .concept-table td {
+    padding: 1em 1.5em;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+
+  .revision-notes-content .concept-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .revision-notes-content .concept-table tr:nth-child(even) td {
+    background-color: var(--light-bg);
+  }
+
+  .revision-notes-content .concept-table tr:hover td {
+    background-color: rgba(42, 137, 152, 0.05);
+  }
+
+  /* Mobile-specific table styles */
+  @media (max-width: 768px) {
+    .revision-notes-content .table-container {
+      position: relative;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+      margin: 1.5em 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .revision-notes-content .table-container::after {
+      content: "↔ Scroll to view full table";
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 0.8em;
+      color: #666;
+      background: #f5f5f5;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .revision-notes-content .concept-table {
+      min-width: 600px; /* Minimum width before scrolling */
+      width: 100%;
+      margin: 0;
+    }
+
+    /* Slightly reduce padding on very small screens */
+    @media (max-width: 480px) {
+      .revision-notes-content .concept-table th,
+      .revision-notes-content .concept-table td {
+        padding: 0.8em 1em;
+      }
+    }
+  }
+
+  /* Lists adjustments */
+  .revision-notes-content ol > li {
+    padding-left: 2.2em;
+    margin-bottom: 1em;
+  }
+
+  .revision-notes-content ul > li {
+    padding-left: 2em;
+    margin-bottom: 0.7em;
+  }
+
+  /* Breadcrumb navigation */
+  .breadcrumb {
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .breadcrumb .separator {
+    margin: 0 0.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+  .revision-notes-content .notes-container > header.major h2 {
+    font-size: 1.6em;
+  }
+
+  .revision-notes-content .notes-container > header.major p.subtitle {
+    font-size: 1em;
+  }
+
+  .revision-notes-content h3 {
+    font-size: 1.3em;
+    padding: 0.5em;
+  }
+
+  .revision-notes-content p,
+  .revision-notes-content li,
+  .revision-notes-content td {
+    font-size: 0.95em;
+  }
+
+  /* Special content boxes */
+  .revision-notes-content .exam-tip,
+  .revision-notes-content .spec-alert,
+  .revision-notes-content .evaluation-point,
+  .revision-notes-content .case-study {
+    margin: 1.5em 0;
+    padding: 1em;
+  }
+
+  /* Key definitions */
+  .revision-notes-content .key-definition {
+    padding: 0.3em 0.6em;
+  }
+}
+
+/* Mobile-specific touch improvements */
+@media (hover: none) {
+  .revision-notes-content a {
+    border-bottom: 1px solid var(--secondary-blue);
+  }
+
+  .revision-notes-content .concept-table tr:hover td {
+    background-color: inherit;
+  }
+}
+
+/* Improved table scrolling for iOS */
+@supports (-webkit-touch-callout: none) {
+  .revision-notes-content .concept-table {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Print styles adjustment */
+@media print {
+  .revision-notes-content .notes-container {
+    padding: 0 !important;
+  }
+
+  .revision-notes-content .concept-table {
+    page-break-inside: avoid;
+  }
+}
