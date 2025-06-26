@@ -11,12 +11,39 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="/css/main.css" />
-
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ], // Both $...$ and \(...\)
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+      async
+    ></script>
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -56,17 +83,19 @@
               <h3>Price Elasticity of Demand (PED)</h3>
               <p>
                 <span class="key-definition">Definition:</span> Measures the
-                <strong>responsiveness</strong> of quantity demanded (QD) to a
-                change in price (P), calculated as:
+                <strong>responsiveness</strong> of quantity demanded (\(Q_D\))
+                to a change in price (\(P\)), calculated as:
               </p>
 
-              <div class="formula-box">PED = %ΔQD ÷ %ΔP</div>
+              <div class="formula-box">
+                \[ \text{PED} = \frac{\%\Delta Q_D}{\%\Delta P} \]
+              </div>
 
               <div class="exam-tip">
                 <strong>Calculation Protocol:</strong> Always use the
-                <strong>midpoint method</strong> for accuracy: %Δ = (New - Old)
-                ÷ [(New + Old)/2] × 100. This avoids base-value bias when prices
-                rise/fall from different starting points.
+                <strong>midpoint method</strong> for accuracy: \[ \%\Delta =
+                \frac{\text{New} - \text{Old}}{(\text{New} + \text{Old})/2}
+                \times 100 \]
               </div>
 
               <div class="worked-example">
@@ -74,30 +103,35 @@
                 <table class="calculation-table">
                   <tr>
                     <td><strong>Scenario:</strong></td>
-                    <td>Price ↑ £10 → £15 | QD ↓ 100 → 40 units</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Step 1: %ΔQD</strong></td>
                     <td>
-                      (40-100) ÷ [(40+100)/2] × 100 = <strong>-85.7%</strong>
+                      Price \(\uparrow\) £10 → £15 | \(Q_D\) \(\downarrow\) 100
+                      → 40 units
                     </td>
                   </tr>
                   <tr>
-                    <td><strong>Step 2: %ΔP</strong></td>
-                    <td>(15-10) ÷ [(15+10)/2] × 100 = <strong>+40%</strong></td>
+                    <td><strong>Step 1: \(\%\Delta Q_D\)</strong></td>
+                    <td>
+                      \(\frac{40-100}{(40+100)/2} \times 100 =
+                      \mathbf{-85.7\%}\)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Step 2: \(\%\Delta P\)</strong></td>
+                    <td>
+                      \(\frac{15-10}{(15+10)/2} \times 100 = \mathbf{+40\%}\)
+                    </td>
                   </tr>
                   <tr>
                     <td><strong>Step 3: PED</strong></td>
-                    <td>-85.7 ÷ 40 = <strong>-2.14</strong> (Elastic)</td>
+                    <td>\(\frac{-85.7}{40} = \mathbf{-2.14}\) (Elastic)</td>
                   </tr>
                 </table>
               </div>
 
               <div class="case-study">
                 <strong>Real-World Application:</strong> Netflix's 2022 price
-                hike (Standard plan £9.99 → £10.99) resulted in only 3%
-                subscriber loss (PED = -0.27), demonstrating inelastic demand
-                for streaming services among loyal users.
+                hike resulted in only 3% subscriber loss (\(\text{PED} =
+                -0.27\)).
               </div>
 
               <h4>PED Classification Spectrum</h4>
@@ -113,33 +147,33 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>PED = 0</td>
+                      <td>\(\text{PED} = 0\)</td>
                       <td>Perfectly Inelastic</td>
-                      <td>QD unchanged by price</td>
-                      <td>Insulin (life-saving drugs)</td>
+                      <td>\(Q_D\) unchanged by price</td>
+                      <td>Insulin</td>
                     </tr>
                     <tr>
-                      <td>0 < |PED| < 1</td>
+                      <td>\(0 < |\text{PED}| < 1\)</td>
                       <td>Relatively Inelastic</td>
-                      <td>%ΔQD < %ΔP</td>
-                      <td>Petrol (0.4), Cigarettes (0.5)</td>
+                      <td>\(\%\Delta Q_D < \%\Delta P\)</td>
+                      <td>Petrol (0.4)</td>
                     </tr>
                     <tr>
-                      <td>|PED| = 1</td>
+                      <td>\(|\text{PED}| = 1\)</td>
                       <td>Unitary Elastic</td>
-                      <td>%ΔQD = %ΔP</td>
+                      <td>\(\%\Delta Q_D = \%\Delta P\)</td>
                       <td>Theoretical benchmark</td>
                     </tr>
                     <tr>
-                      <td>1 < |PED| < ∞</td>
+                      <td>\(1 < |\text{PED}| < \infty\)</td>
                       <td>Relatively Elastic</td>
-                      <td>%ΔQD > %ΔP</td>
+                      <td>\(\%\Delta Q_D > \%\Delta P\)</td>
                       <td>Restaurant meals (2.3), Foreign holidays (3.8)</td>
                     </tr>
                     <tr>
-                      <td>PED = ∞</td>
+                      <td>\(\text{PED} = \infty\)</td>
                       <td>Perfectly Elastic</td>
-                      <td>Infinite QD response</td>
+                      <td>Infinite \(Q_D\) response</td>
                       <td>Agricultural commodities at fixed prices</td>
                     </tr>
                   </tbody>
@@ -151,7 +185,7 @@
                 <ol>
                   <li>
                     <strong>Substitutability:</strong> More substitutes → Higher
-                    |PED| (e.g., Coca-Cola vs generic cola)
+                    \(|\text{PED}|\) (e.g., Coca-Cola vs generic cola)
                   </li>
                   <li>
                     <strong>Necessity vs Luxury:</strong> Essentials tend to be
@@ -173,11 +207,13 @@
             <section>
               <h3>Income Elasticity of Demand (YED)</h3>
               <p>
-                <span class="key-definition">Definition:</span> Measures how QD
-                responds to changes in consumer income (Y):
+                <span class="key-definition">Definition:</span> Measures how
+                \(Q_D\) responds to changes in consumer income (\(Y\)):
               </p>
 
-              <div class="formula-box">YED = %ΔQD ÷ %ΔY</div>
+              <div class="formula-box">
+                \[ \text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y} \]
+              </div>
 
               <h4>YED Typology</h4>
               <div class="table-container">
@@ -191,23 +227,27 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>YED < 0</td>
+                      <td>\(\text{YED} < 0\)</td>
                       <td>Inferior Goods</td>
-                      <td>Demand ↓ as income ↑ (Bus travel: -0.4)</td>
-                    </tr>
-                    <tr>
-                      <td>0 < YED < 1</td>
-                      <td>Normal Necessities</td>
                       <td>
-                        Demand ↑ proportionally less than income ↑ (Food: 0.3)
+                        Demand \(\downarrow\) as income \(\uparrow\) (Bus
+                        travel: -0.4)
                       </td>
                     </tr>
                     <tr>
-                      <td>YED > 1</td>
+                      <td>\(0 < \text{YED} < 1\)</td>
+                      <td>Normal Necessities</td>
+                      <td>
+                        Demand \(\uparrow\) proportionally less than income
+                        \(\uparrow\) (Food: 0.3)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>\(\text{YED} > 1\)</td>
                       <td>Normal Luxuries</td>
                       <td>
-                        Demand ↑ proportionally more than income ↑ (Sports cars:
-                        2.5)
+                        Demand \(\uparrow\) proportionally more than income
+                        \(\uparrow\) (Sports cars: 2.5)
                       </td>
                     </tr>
                   </tbody>
@@ -217,8 +257,8 @@
               <div class="case-study">
                 <strong>Business Strategy Insight:</strong> During the 2020
                 pandemic, Lidl reported 12% sales growth as YED data showed
-                consumers switching from Waitrose (YED: 1.2) to discounters
-                (YED: -0.3) during income shocks.
+                consumers switching from Waitrose (\(\text{YED}: 1.2\)) to
+                discounters (\(\text{YED}: -0.3\)) during income shocks.
               </div>
             </section>
 
@@ -226,11 +266,11 @@
               <h3>Cross Elasticity of Demand (XED)</h3>
               <p>
                 <span class="key-definition">Definition:</span> Measures
-                responsiveness of QD for Good A to price changes in Good B:
+                responsiveness of \(Q_D\) for Good A to price changes in Good B:
               </p>
 
               <div class="formula-box">
-                XED = %ΔQD<sub>A</sub> ÷ %ΔP<sub>B</sub>
+                \[ \text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B} \]
               </div>
 
               <h4>XED Interpretation Guide</h4>
@@ -245,17 +285,17 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>XED < 0</td>
+                      <td>\(\text{XED} < 0\)</td>
                       <td>Complements</td>
                       <td>PlayStation consoles (-1.8) & games</td>
                     </tr>
                     <tr>
-                      <td>XED = 0</td>
+                      <td>\(\text{XED} = 0\)</td>
                       <td>Unrelated</td>
                       <td>Butter (0.02) & mobile phones</td>
                     </tr>
                     <tr>
-                      <td>XED > 0</td>
+                      <td>\(\text{XED} > 0\)</td>
                       <td>Substitutes</td>
                       <td>Coca-Cola (+0.8) & Pepsi</td>
                     </tr>
@@ -279,12 +319,12 @@
                   <h5>Pricing Strategy</h5>
                   <ul>
                     <li>
-                      <strong>Inelastic goods:</strong> Price ↑ → Revenue ↑
-                      (Pharmaceuticals)
+                      <strong>Inelastic goods:</strong> Price \(\uparrow\) →
+                      Revenue \(\uparrow\) (Pharmaceuticals)
                     </li>
                     <li>
-                      <strong>Elastic goods:</strong> Price ↓ → Revenue ↑
-                      (Airline seats)
+                      <strong>Elastic goods:</strong> Price \(\downarrow\) →
+                      Revenue \(\uparrow\) (Airline seats)
                     </li>
                   </ul>
                 </div>
@@ -292,11 +332,12 @@
                   <h5>Product Portfolio</h5>
                   <ul>
                     <li>
-                      Balance inferior (YED < 0) & normal goods (YED > 0) for
-                      economic cycles
+                      Balance inferior (\(\text{YED} < 0\)) & normal goods
+                      (\(\text{YED} > 0\)) for economic cycles
                     </li>
                     <li>
-                      Bundle strong complements (XED < -1) to increase sales
+                      Bundle strong complements (\(\text{XED} < -1\)) to
+                      increase sales
                     </li>
                   </ul>
                 </div>
@@ -313,12 +354,18 @@
                   <tr>
                     <td>Reduce smoking</td>
                     <td>Excise tax</td>
-                    <td>PED = -0.4 → 10% price ↑ → 4% QD ↓</td>
+                    <td>
+                      \(\text{PED} = -0.4\) → 10% price \(\uparrow\) → 4%
+                      \(Q_D\) \(\downarrow\)
+                    </td>
                   </tr>
                   <tr>
                     <td>Encourage renewables</td>
                     <td>Subsidies</td>
-                    <td>Solar panels: PED = -1.8 → 10% price ↓ → 18% QD ↑</td>
+                    <td>
+                      Solar panels: \(\text{PED} = -1.8\) → 10% price
+                      \(\downarrow\) → 18% \(Q_D\) \(\uparrow\)
+                    </td>
                   </tr>
                 </table>
               </div>
@@ -376,8 +423,8 @@
                 <strong>Examiner's Report Insight:</strong> In 2023, 68% of
                 students could calculate elasticities correctly, but only 32%
                 effectively applied them to business scenarios. Top scripts
-                referenced Tesla's price cuts (PED = -1.9) and the
-                Netflix/Disney+ substitution effect (XED = +0.6).
+                referenced Tesla's price cuts (\(\text{PED} = -1.9\)) and the
+                Netflix/Disney+ substitution effect (\(\text{XED} = +0.6\)).
               </div>
             </section>
           </div>
