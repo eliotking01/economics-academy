@@ -2226,6 +2226,35 @@ ul.social li a.fa-google-plus:hover {
   font-weight: 700;
 }
 
+/* Mobile-first: hide nav by default, show button */
+#nav {
+  display: none;
+}
+
+/* Show the navigation menu at half-screen sizes and above */
+@media screen and (min-width: 768px) {
+  #nav {
+    display: block !important;
+  }
+
+  /* Hide your mobile nav button (if you have one) */
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* For smaller screens (mobile devices) */
+@media screen and (max-width: 767px) {
+  #nav {
+    display: none;
+  }
+
+  /* Show your mobile nav button */
+  .nav-toggle {
+    display: block;
+  }
+}
+
 .dropotron {
   border-radius: 5px;
   background-color: #252122;
@@ -2579,7 +2608,7 @@ ul.social li a.fa-google-plus:hover {
   display: none;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 767px) {
   /* Basic */
 
   html,
@@ -2606,12 +2635,6 @@ ul.social li a.fa-google-plus:hover {
 
   #header {
     padding: 3.5em 0 3em 0;
-  }
-
-  /* Nav */
-
-  #nav {
-    display: none;
   }
 
   /* Intro */
@@ -3067,9 +3090,6 @@ ul.social li a.fa-google-plus:hover {
   flex-shrink: 0;
   align-self: flex-start;
 }
-.cta-section {
-  margin-top: 2em;
-}
 
 .footer-dark {
   padding: 2em 0;
@@ -3215,4 +3235,261 @@ ul.social li a.fa-google-plus:hover {
   .carousel-arrow {
     background: rgba(255, 255, 255, 0.9);
   }
+}
+
+/* About Page Mobile Responsive Styles */
+
+/* Profile Section */
+.profile-highlight .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.profile-highlight .col-4,
+.profile-highlight .col-8 {
+  padding: 0 15px;
+}
+
+.profile-highlight .col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.profile-highlight .col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.profile-highlight .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.profile-highlight .image.fit {
+  margin-bottom: 1rem;
+}
+
+.profile-highlight .image.fit img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Teaching Methods */
+.teaching-methods .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.teaching-methods .col-6 {
+  padding: 0 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.method-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.method-card h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Credentials Section */
+.credentials-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.credentials-image {
+  flex: 0 0 35%;
+  max-width: 35%;
+}
+
+.credentials-image img {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+}
+
+.credentials-content {
+  flex: 0 0 65%;
+  max-width: 65%;
+}
+
+.credentials-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.credentials-list li {
+  margin-bottom: 1.2rem;
+  padding-left: 1.8rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.credentials-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.credentials-list strong {
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.credentials-note {
+  font-style: italic;
+  color: #6c757d;
+  border-left: 3px solid #e9ecef;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* CTA Section */
+.cta-section-about {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: transparent;
+  border-radius: 8px;
+  margin: 3rem 0;
+}
+
+/* Header Styles */
+.major {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.major h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.actions {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Profile Section */
+  .profile-highlight .col-4,
+  .profile-highlight .col-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .profile-highlight .col-4 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  /* Teaching Methods */
+  .teaching-methods .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Credentials Section */
+  .credentials-container {
+    flex-direction: column;
+  }
+
+  .credentials-image,
+  .credentials-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .credentials-image {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Adjust header underline on mobile */
+  .major h2:after {
+    width: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .method-card {
+    padding: 1.25rem;
+  }
+
+  .cta-section-about {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }
