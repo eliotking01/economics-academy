@@ -3119,3 +3119,100 @@ ul.social li a.fa-google-plus:hover {
   margin: 0 0.5rem;
   color: #d3d9df;
 }
+
+/* Mobile-responsive carousel styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-arrow.prev {
+  left: 10px;
+}
+
+.carousel-arrow.next {
+  right: 10px;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #333;
+}
+
+.carousel-dot:hover {
+  background: #999;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  /* Ensure arrows are always visible on mobile */
+  .carousel-arrow {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Stack testimonials on mobile */
+  .testimonial-slide .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) {
+  .carousel-arrow {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
