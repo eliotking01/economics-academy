@@ -255,7 +255,13 @@
         <div class="modal-content">
           <span class="close-button">&times;</span>
           <h2>Enquire About <span id="package-name"></span></h2>
-          <form class="contact-form" id="enquiryForm">
+          <div id="form-message" class="form-message"></div>
+          <form
+            class="contact-form"
+            id="enquiryForm"
+            action="https://formspree.io/f/mqadgbbw"
+            method="POST"
+          >
             <input type="hidden" id="selectedPackage" name="package" value="" />
             <div>
               <input type="text" name="name" placeholder="Your Name" required />
@@ -300,38 +306,15 @@
       async
     ></script>
 
-    <!-- Stripe Integration -->
+    <!-- Form Submission Script -->
     <script>
-      const stripe = Stripe("YOUR_PUBLISHABLE_KEY");
-
-      document.querySelectorAll(".stripe-button").forEach((button) => {
-        button.addEventListener("click", function () {
-          const sku = this.dataset.sku;
-
-          // In a real implementation, you would:
-          // 1. Create a checkout session on your server
-          // 2. Redirect to Stripe checkout
-          // This is just a placeholder:
-          stripe
-            .redirectToCheckout({
-              items: [{ sku: sku, quantity: 1 }],
-              successUrl: "https://yourdomain.com/success",
-              cancelUrl: "https://yourdomain.com/tutoring",
-            })
-            .then(function (result) {
-              if (result.error) {
-                alert(result.error.message);
-              }
-            });
-        });
-      });
-
       // Modal functionality
       const modal = document.getElementById("contactModal");
       const bookingSection = document.getElementById("booking");
       const packageNameSpan = document.getElementById("package-name");
       const selectedPackageInput = document.getElementById("selectedPackage");
       const enquiryForm = document.getElementById("enquiryForm");
+      const formMessage = document.getElementById("form-message");
 
       // Introductory call button
       document
@@ -361,6 +344,8 @@
           packageNameSpan.textContent = packageName;
           selectedPackageInput.value = packageName;
           modal.style.display = "block";
+          // Reset form message
+          formMessage.style.display = "none";
         });
       });
 
@@ -378,34 +363,44 @@
         }
       });
 
-      // Form submission
+      // Form submission with Formspree
       enquiryForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // In a real implementation, you would send this data to your server
-        // and then send an email from there
+        // Show loading state
+        formMessage.textContent = "Sending your message...";
+        formMessage.className = "form-message";
+        formMessage.style.display = "block";
 
-        // For demonstration purposes, we'll use a mailto link
-        const formData = new FormData(this);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const message = formData.get("message");
-        const package = formData.get("package");
+        // Submit the form using Fetch API
+        fetch(this.action, {
+          method: "POST",
+          body: new FormData(this),
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              // Success message
+              formMessage.textContent =
+                "Thank you for your enquiry! I will get back to you soon.";
+              formMessage.className = "form-message form-success";
+              enquiryForm.reset();
 
-        const subject = `Enquiry about ${package}`;
-        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message.replace(
-          /\n/g,
-          "%0D%0A"
-        )}`;
-
-        window.location.href = `mailto:eliotkingtuition@gmail.com?subject=${encodeURIComponent(
-          subject
-        )}&body=${body}`;
-
-        // Show confirmation and close modal
-        alert("Thank you for your enquiry! I will get back to you soon.");
-        modal.style.display = "none";
-        enquiryForm.reset();
+              // Close modal after 3 seconds
+              setTimeout(function () {
+                modal.style.display = "none";
+              }, 3000);
+            } else {
+              throw new Error("Form submission failed");
+            }
+          })
+          .catch((error) => {
+            formMessage.textContent =
+              "Oops! There was a problem submitting your form. Please try again or email me directly at eliotkingtuition@gmail.com";
+            formMessage.className = "form-message form-error";
+          });
       });
     </script>
   </body>
