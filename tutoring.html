@@ -79,6 +79,11 @@
                     <a href="/about.html" class="button primary"
                       >Find out more about the Tutor</a
                     >
+                    <a
+                      href="https://tutorful.co.uk/tutors/qlorq3vr"
+                      class="button primary"
+                      >Reviews on Tutorful</a
+                    >
                   </div>
                 </section>
               </div>
@@ -107,7 +112,10 @@
                     <li>Allows the tutor to develop a tailored plan</li>
                     <li>Ask any questions before committing to lessons</li>
                   </ul>
-                  <a href="#booking" class="button small" style="width: 100%"
+                  <a
+                    href="#"
+                    class="button small intro-call-button"
+                    style="width: 100%"
                     >Book Now</a
                   >
                 </div>
@@ -115,22 +123,23 @@
               <!-- Single Session -->
               <div class="package-card">
                 <div class="package-header">
-                  <h3>Single Session</h3>
+                  <h3>Single Lesson</h3>
                 </div>
                 <div class="package-body">
-                  <div class="price">£74.99</div>
-                  <p class="per-session">per 1-hour session</p>
+                  <div class="price">£70</div>
+                  <p class="per-session">per 1-hour lesson</p>
                   <ul class="features-list">
-                    <li>One 60-minute session</li>
+                    <li>One 60-minute lesson</li>
                     <li>Focused on topic knowledge or exam technique</li>
                     <li>Personalized feedback</li>
                     <li>Resource recommendations</li>
                   </ul>
                   <a
-                    href="#booking"
-                    class="button alt small"
+                    href="#"
+                    class="button alt small enquire-button"
                     style="width: 100%"
-                    >Book Now</a
+                    data-package="Single Session"
+                    >Enquire Now</a
                   >
                 </div>
               </div>
@@ -139,66 +148,48 @@
               <div class="package-card popular">
                 <span class="popular-badge">MOST POPULAR</span>
                 <div class="package-header">
-                  <h3>Regular Session</h3>
+                  <h3>Regular Lessons</h3>
                 </div>
                 <div class="package-body">
-                  <div class="price">£69.99</div>
-                  <p class="per-session">Save £5 per session</p>
+                  <div class="price">£60</div>
+                  <p class="per-session">Save £10 per lesson</p>
                   <ul class="features-list">
                     <li>
-                      Regular 60-minute sessions (one or more per week
-                      available)
+                      Regular 60-minute lessons (one or more per week available)
                     </li>
                     <li>Progress tracking</li>
                     <li>Priority scheduling</li>
                     <li>Access to premium resources</li>
                   </ul>
                   <a
-                    href="#booking"
-                    class="button alt small"
+                    href="#"
+                    class="button alt small enquire-button"
                     style="width: 100%"
-                    >Book Now</a
+                    data-package="Regular Session"
+                    >Enquire Now</a
                   >
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- Booking Section -->
+          <!-- Booking Section - Initially Hidden -->
           <section id="booking" class="booking-container">
             <header class="major">
-              <h2>Schedule Your Session</h2>
+              <h2>Schedule Your Free Meeting</h2>
               <p>Choose your preferred time below</p>
             </header>
             <!-- Calendly inline widget begin -->
             <div
               class="calendly-inline-widget"
-              data-url="https://calendly.com/yourusername"
+              data-url="https://calendly.com/kingtuition/freeintroduction"
               style="min-width: 320px; height: 700px"
             ></div>
-            <script
-              type="text/javascript"
-              src="https://assets.calendly.com/assets/external/widget.js"
-              async
-            ></script>
-            <!-- Calendly inline widget end -->
             <div style="text-align: center; margin-top: 2em">
               <p>
                 Need help choosing a package?
                 <a href="/contact.html">Contact me</a> for advice.
               </p>
-              <div class="payment-methods">
-                <img
-                  src="images/Stripe_icon_-_square.svg"
-                  alt="Stripe"
-                  class="payment-icon"
-                />
-                <img
-                  src="images/pp-logo-150px.png"
-                  alt="PayPal"
-                  class="payment-icon"
-                />
-              </div>
             </div>
           </section>
 
@@ -212,7 +203,7 @@
                 <section class="box">
                   <h3>What happens in a typical session?</h3>
                   <p>
-                    Sessions are personalised to each student’s needs, focusing
+                    Sessions are personalised to each student's needs, focusing
                     on building understanding, improving essay technique, and
                     practising exam-style questions with detailed feedback.
                   </p>
@@ -259,6 +250,38 @@
         </div>
       </section>
 
+      <!-- Contact Form Modal -->
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Enquire About <span id="package-name"></span></h2>
+          <form class="contact-form" id="enquiryForm">
+            <input type="hidden" id="selectedPackage" name="package" value="" />
+            <div>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Tell me about your tutoring needs and preferred schedule"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="form-submit-button">
+              Send Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+
       <!-- Footer -->
       <div id="footer-placeholder"></div>
     </div>
@@ -271,6 +294,11 @@
     <script src="/js/breakpoints.min.js"></script>
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
 
     <!-- Stripe Integration -->
     <script>
@@ -296,6 +324,88 @@
               }
             });
         });
+      });
+
+      // Modal functionality
+      const modal = document.getElementById("contactModal");
+      const bookingSection = document.getElementById("booking");
+      const packageNameSpan = document.getElementById("package-name");
+      const selectedPackageInput = document.getElementById("selectedPackage");
+      const enquiryForm = document.getElementById("enquiryForm");
+
+      // Introductory call button
+      document
+        .querySelector(".intro-call-button")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          bookingSection.style.display = "block";
+          // Scroll to the booking section
+          bookingSection.scrollIntoView({ behavior: "smooth" });
+          // Initialize Calendly widget if not already initialized
+          if (typeof Calendly !== "undefined") {
+            Calendly.initBadgeWidget({
+              url: "https://calendly.com/kingtuition/freeintroduction",
+              text: "Schedule Free Introduction",
+              color: "#0069ff",
+              textColor: "#ffffff",
+              branding: true,
+            });
+          }
+        });
+
+      // Enquire buttons
+      document.querySelectorAll(".enquire-button").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          const packageName = this.getAttribute("data-package");
+          packageNameSpan.textContent = packageName;
+          selectedPackageInput.value = packageName;
+          modal.style.display = "block";
+        });
+      });
+
+      // Close modal
+      document
+        .querySelector(".close-button")
+        .addEventListener("click", function () {
+          modal.style.display = "none";
+        });
+
+      // Close modal if clicked outside
+      window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      // Form submission
+      enquiryForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // In a real implementation, you would send this data to your server
+        // and then send an email from there
+
+        // For demonstration purposes, we'll use a mailto link
+        const formData = new FormData(this);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
+        const package = formData.get("package");
+
+        const subject = `Enquiry about ${package}`;
+        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message.replace(
+          /\n/g,
+          "%0D%0A"
+        )}`;
+
+        window.location.href = `mailto:eliotkingtuition@gmail.com?subject=${encodeURIComponent(
+          subject
+        )}&body=${body}`;
+
+        // Show confirmation and close modal
+        alert("Thank you for your enquiry! I will get back to you soon.");
+        modal.style.display = "none";
+        enquiryForm.reset();
       });
     </script>
   </body>
