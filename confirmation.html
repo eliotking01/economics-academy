@@ -67,11 +67,34 @@
       .email-button:hover {
         background-color: #3d8b40;
       }
-      .customer-details {
+      .customer-form {
         background-color: #f5f5f5;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 4px;
         margin: 1.5rem 0;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+      .form-error {
+        color: #ff3860;
+        font-size: 0.9em;
+        margin-top: 5px;
+        display: none;
       }
       footer {
         text-align: center;
@@ -101,22 +124,61 @@
       <div class="confirmation-box">
         <h1>Thank You for Your Purchase!</h1>
         <p>
-          Your payment has been successfully processed. Please follow the
-          instructions below to complete your submission.
+          Your payment has been successfully processed. Please provide your
+          details below and follow the instructions to complete your submission.
         </p>
-
-        <div class="customer-details">
-          <h3>Order Details:</h3>
-          <p><strong>Name:</strong> <span id="customer-name"></span></p>
-          <p><strong>Email:</strong> <span id="customer-email"></span></p>
-          <p><strong>Service:</strong> <span id="service-type"></span></p>
-          <p>
-            <strong>Description:</strong> <span id="service-description"></span>
-          </p>
-        </div>
 
         <div class="reference-number">
           Your Reference Number: <span id="reference-number"></span>
+        </div>
+
+        <div class="customer-form">
+          <h3>Please Provide Your Details:</h3>
+          <form id="customer-details-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
+              <div id="name-error" class="form-error">
+                Please enter your name
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Email Address"
+              />
+              <div id="email-error" class="form-error">
+                Please enter a valid email address
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description"
+                >Description of Work to be Marked *</label
+              >
+              <textarea
+                id="description"
+                name="description"
+                rows="3"
+                required
+                placeholder="Please describe what you want marked (e.g., 'Question 3 from 2022 Paper', 'Microeconomics essay on market failure')"
+              ></textarea>
+              <div id="description-error" class="form-error">
+                Please describe what you want marked
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="instructions">
@@ -133,9 +195,10 @@
             </li>
             <li>Your full name</li>
             <li>The service you purchased</li>
+            <li>Description of the work to be marked</li>
           </ul>
 
-          <p>Accepted file formats: PDF, JPG, JPEG, PNG</p>
+          <p>Accepted file formats: PDF, JPG, JPEG, PNG, Word documents</p>
 
           <a href="#" id="email-link" class="email-button">Open Email Client</a>
         </div>
@@ -170,34 +233,103 @@
         return `EKT${timestamp}${random}`;
       }
 
-      // Get URL parameters
-      const urlParams = new URLSearchParams(window.location.search);
-      const name = urlParams.get("name") || "Customer";
-      const email = urlParams.get("email") || "";
-      const description = urlParams.get("description") || "";
-      const serviceType = urlParams.get("service_type") || "";
-      const price = urlParams.get("price") || "";
+      // Form validation
+      function validateForm() {
+        let isValid = true;
+
+        // Validate name
+        const name = document.getElementById("name").value.trim();
+        if (!name) {
+          document.getElementById("name-error").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("name-error").style.display = "none";
+        }
+
+        // Validate email
+        const email = document.getElementById("email").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailPattern.test(email)) {
+          document.getElementById("email-error").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("email-error").style.display = "none";
+        }
+
+        // Validate description
+        const description = document.getElementById("description").value.trim();
+        if (!description) {
+          document.getElementById("description-error").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("description-error").style.display = "none";
+        }
+
+        return isValid;
+      }
+
+      // Update email link with form data
+      function updateEmailLink() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const description = document.getElementById("description").value;
+        const refNumber =
+          document.getElementById("reference-number").textContent;
+
+        const emailSubject = `Paper Submission - Ref: ${refNumber}`;
+        const emailBody = `Reference Number: ${refNumber}%0D%0A%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0ADescription: ${description}`;
+
+        document.getElementById(
+          "email-link"
+        ).href = `mailto:eliotkingtuition@gmail.com?subject=${encodeURIComponent(
+          emailSubject
+        )}&body=${encodeURIComponent(emailBody)}`;
+      }
 
       // Generate reference number
       const refNumber = generateReferenceNumber();
-
-      // Update page content
-      document.getElementById("customer-name").textContent = name;
-      document.getElementById("customer-email").textContent = email;
-      document.getElementById("service-type").textContent =
-        serviceType + (price ? ` (£${price})` : "");
-      document.getElementById("service-description").textContent = description;
       document.getElementById("reference-number").textContent = refNumber;
       document.getElementById("ref-number-text").textContent = refNumber;
 
-      // Set up email link
-      const emailSubject = `Paper Submission - Ref: ${refNumber}`;
-      const emailBody = `Reference Number: ${refNumber}%0D%0A%0D%0AName: ${name}%0D%0A%0D%0AService: ${serviceType}%0D%0A%0D%0ADescription: ${description}`;
-      document.getElementById(
-        "email-link"
-      ).href = `mailto:eliotkingtuition@gmail.com?subject=${encodeURIComponent(
-        emailSubject
-      )}&body=${encodeURIComponent(emailBody)}`;
+      // Set up form event listeners
+      document.getElementById("name").addEventListener("input", function () {
+        if (this.value.trim()) {
+          document.getElementById("name-error").style.display = "none";
+        }
+        updateEmailLink();
+      });
+
+      document.getElementById("email").addEventListener("input", function () {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (this.value.trim() && emailPattern.test(this.value)) {
+          document.getElementById("email-error").style.display = "none";
+        }
+        updateEmailLink();
+      });
+
+      document
+        .getElementById("description")
+        .addEventListener("input", function () {
+          if (this.value.trim()) {
+            document.getElementById("description-error").style.display = "none";
+          }
+          updateEmailLink();
+        });
+
+      // Set up email link click handler
+      document
+        .getElementById("email-link")
+        .addEventListener("click", function (e) {
+          if (!validateForm()) {
+            e.preventDefault();
+            alert(
+              "Please complete all required fields before sending the email."
+            );
+          }
+        });
+
+      // Initialize email link
+      updateEmailLink();
     </script>
   </body>
 </html>

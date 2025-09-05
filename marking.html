@@ -39,11 +39,6 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
-      .form-error {
-        color: #ff3860;
-        font-size: 0.9em;
-        margin-top: 5px;
-      }
       @media (max-width: 768px) {
         .col-4 {
           width: 100%;
@@ -79,7 +74,7 @@
                       class="box service-option"
                       data-product="single"
                       data-price="25"
-                      data-payment-link="https://buy.stripe.com/cNi28tdt079l1Mm5AXdjO00"
+                      data-payment-link="https://buy.stripe.com/test_cNi28tdt079l1Mm5AXdjO00"
                     >
                       <h3>Single 25-Mark Question</h3>
                       <div class="price">£25</div>
@@ -143,9 +138,9 @@
                   </div>
                 </div>
 
-                <!-- Payment Form (hidden until selection) -->
+                <!-- Payment Selection (hidden until selection) -->
                 <div
-                  id="payment-form"
+                  id="payment-selection"
                   class="box"
                   style="display: none; margin-top: 2em"
                 >
@@ -156,69 +151,14 @@
                     ></span
                     >)
                   </h3>
-                  <form id="submission-form" method="POST">
-                    <input
-                      type="hidden"
-                      name="service_type"
-                      id="service-type"
-                      value=""
-                    />
-                    <input
-                      type="hidden"
-                      name="service_price"
-                      id="service-price"
-                      value=""
-                    />
-
-                    <div class="row gtr-uniform">
-                      <div class="col-6 col-12-xsmall">
-                        <label for="name">Full Name *</label>
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          value=""
-                          placeholder="Your Name"
-                          required
-                        />
-                        <div id="name-error" class="form-error"></div>
-                      </div>
-                      <div class="col-6 col-12-xsmall">
-                        <label for="email">Email Address *</label>
-                        <input
-                          type="email"
-                          name="email"
-                          id="email"
-                          value=""
-                          placeholder="Email Address"
-                          required
-                        />
-                        <div id="email-error" class="form-error"></div>
-                      </div>
-                      <div class="col-12">
-                        <label for="description"
-                          >Description of Work to be Marked *</label
-                        >
-                        <textarea
-                          name="description"
-                          id="description"
-                          placeholder="Please describe what you want marked (e.g., 'Question 3 from 2022 Paper', 'Microeconomics essay on market failure')"
-                          rows="3"
-                          required
-                        ></textarea>
-                        <div id="description-error" class="form-error"></div>
-                      </div>
-                      <div class="col-12">
-                        <button
-                          type="button"
-                          id="stripe-payment-btn"
-                          class="button primary"
-                        >
-                          Complete Payment with Stripe
-                        </button>
-                      </div>
-                    </div>
-                  </form>
+                  <p>
+                    You will be redirected to Stripe to complete your payment.
+                    After payment, you'll be asked to provide your details on
+                    the confirmation page.
+                  </p>
+                  <button id="stripe-payment-btn" class="button primary">
+                    Proceed to Payment
+                  </button>
                 </div>
               </section>
 
@@ -299,15 +239,12 @@
 
         // DOM Elements
         const serviceOptions = document.querySelectorAll(".service-option");
-        const paymentForm = document.getElementById("payment-form");
+        const paymentSelection = document.getElementById("payment-selection");
         const selectedServiceName = document.getElementById(
           "selected-service-name"
         );
         const selectedPrice = document.getElementById("selected-price");
-        const serviceType = document.getElementById("service-type");
-        const servicePrice = document.getElementById("service-price");
         const stripePaymentBtn = document.getElementById("stripe-payment-btn");
-        const form = document.getElementById("submission-form");
 
         // Service selection handling
         serviceOptions.forEach((option) => {
@@ -328,91 +265,22 @@
               name: this.querySelector("h3").textContent,
             };
 
-            // Update payment form with selected service
+            // Update payment selection with selected service
             selectedServiceName.textContent = selectedService.name;
             selectedPrice.textContent = "£" + selectedService.price;
-            serviceType.value = selectedService.type;
-            servicePrice.value = selectedService.price;
 
-            // Show payment form
-            paymentForm.style.display = "block";
+            // Show payment selection
+            paymentSelection.style.display = "block";
 
-            // Scroll to payment form
-            paymentForm.scrollIntoView({ behavior: "smooth" });
+            // Scroll to payment selection
+            paymentSelection.scrollIntoView({ behavior: "smooth" });
           });
         });
 
-        // Form validation
-        function validateForm() {
-          let isValid = true;
-
-          // Validate name
-          const name = document.getElementById("name").value.trim();
-          if (!name) {
-            document.getElementById("name-error").textContent =
-              "Please enter your name";
-            isValid = false;
-          } else {
-            document.getElementById("name-error").textContent = "";
-          }
-
-          // Validate email
-          const email = document.getElementById("email").value.trim();
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!email) {
-            document.getElementById("email-error").textContent =
-              "Please enter your email address";
-            isValid = false;
-          } else if (!emailPattern.test(email)) {
-            document.getElementById("email-error").textContent =
-              "Please enter a valid email address";
-            isValid = false;
-          } else {
-            document.getElementById("email-error").textContent = "";
-          }
-
-          // Validate description
-          const description = document
-            .getElementById("description")
-            .value.trim();
-          if (!description) {
-            document.getElementById("description-error").textContent =
-              "Please describe what you want marked";
-            isValid = false;
-          } else {
-            document.getElementById("description-error").textContent = "";
-          }
-
-          return isValid;
-        }
-
         // Handle Stripe payment button click
         stripePaymentBtn.addEventListener("click", function () {
-          // Validate form
-          if (!validateForm()) {
-            return;
-          }
-
-          // Get form data to pass to Stripe
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const description = document.getElementById("description").value;
-          const serviceType = document.getElementById("service-type").value;
-
-          // Encode data as URL parameters
-          const params = new URLSearchParams({
-            name: name,
-            email: email,
-            description: description,
-            service_type: serviceType,
-            price: selectedService.price,
-          });
-
-          // Redirect to Stripe with customer data as URL parameters
-          // Stripe will handle the payment and redirect to confirmation page
-          window.location.href = `${
-            selectedService.paymentLink
-          }?prefilled_data=${encodeURIComponent(params.toString())}`;
+          // Redirect to Stripe payment link
+          window.location.href = selectedService.paymentLink;
         });
       </script>
     </div>
