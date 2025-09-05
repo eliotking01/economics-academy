@@ -39,115 +39,16 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
-      .file-upload-area {
-        border: 2px dashed #ccc;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        cursor: pointer;
-      }
-      .file-upload-area:hover {
-        border-color: #4caf50;
-      }
-      .file-preview {
-        margin-top: 15px;
-      }
-      .file-preview-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #f1f1f1;
-        padding: 8px 12px;
-        border-radius: 4px;
-        margin-bottom: 8px;
-      }
-      .remove-file {
-        color: #ff0000;
-        cursor: pointer;
-        font-weight: bold;
-      }
       .form-error {
         color: #ff3860;
         font-size: 0.9em;
         margin-top: 5px;
-      }
-      .loading-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.8);
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-      }
-      .spinner {
-        border: 5px solid #f3f3f3;
-        border-top: 5px solid #4caf50;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
       }
       @media (max-width: 768px) {
         .col-4 {
           width: 100%;
           margin-bottom: 20px;
         }
-      }
-      .payment-status {
-        margin-top: 15px;
-        padding: 10px;
-        border-radius: 5px;
-        display: none;
-      }
-      .payment-status.success {
-        background-color: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
-      }
-      .payment-status.error {
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-      }
-      .submission-instructions {
-        background-color: #f8f9fa;
-        border-left: 4px solid #4caf50;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 4px;
-      }
-      .reference-number {
-        font-weight: bold;
-        color: #4caf50;
-        font-size: 1.2em;
-        margin: 10px 0;
-      }
-      .email-button {
-        display: inline-block;
-        background-color: #4caf50;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 4px;
-        margin-top: 15px;
-        font-weight: bold;
-      }
-      .email-button:hover {
-        background-color: #3d8b40;
       }
     </style>
   </head>
@@ -178,7 +79,7 @@
                       class="box service-option"
                       data-product="single"
                       data-price="25"
-                      data-payment-link="https://buy.stripe.com/cNi28tdt079l1Mm5AXdjO00"
+                      data-payment-link="https://buy.stripe.com/test_cNi28tdt079l1Mm5AXdjO00"
                     >
                       <h3>Single 25-Mark Question</h3>
                       <div class="price">£25</div>
@@ -315,48 +216,9 @@
                         >
                           Complete Payment with Stripe
                         </button>
-                        <div id="payment-status" class="payment-status"></div>
                       </div>
                     </div>
                   </form>
-                </div>
-
-                <!-- Submission Instructions (shown after payment) -->
-                <div
-                  id="submission-instructions"
-                  class="box"
-                  style="display: none; margin-top: 2em"
-                >
-                  <h3>Next Step: Submit Your Files</h3>
-                  <div class="submission-instructions">
-                    <p>Thank you for your payment! Your reference number is:</p>
-                    <div class="reference-number" id="reference-number"></div>
-                    <p>
-                      To complete your submission, please email your files to:
-                    </p>
-                    <p><strong>eliotkingtuition@gmail.com</strong></p>
-                    <p>Please include the following in your email:</p>
-                    <ul>
-                      <li>
-                        Your reference number:
-                        <strong id="ref-number-text"></strong>
-                      </li>
-                      <li>
-                        Your full name: <strong id="customer-name"></strong>
-                      </li>
-                      <li>
-                        The service you purchased:
-                        <strong id="service-name"></strong>
-                      </li>
-                    </ul>
-                    <p>Accepted file formats: PDF, JPG, JPEG, PNG</p>
-                    <a
-                      href="mailto:eliotkingtuition@gmail.com?subject=Paper Submission - Ref: #XXXXXX&body=Please include your reference number, name, and service details"
-                      class="email-button"
-                      id="email-button"
-                      >Open Email Client</a
-                    >
-                  </div>
                 </div>
               </section>
 
@@ -405,10 +267,10 @@
                     <section class="box">
                       <h3>How do I submit my work?</h3>
                       <p>
-                        After completing your payment, you'll receive
-                        instructions to email your files directly to us. We
-                        accept scanned copies, Word/PDF files, or pictures if
-                        you're unable to use Word/PDF.
+                        After completing your payment, you'll be redirected to a
+                        confirmation page with instructions to email your files
+                        directly to us. We accept scanned copies, Word/PDF
+                        files, or pictures if you're unable to use Word/PDF.
                       </p>
                     </section>
                   </div>
@@ -422,49 +284,6 @@
         </div>
       </section>
 
-      <!-- Success Modal -->
-      <div
-        id="success-modal"
-        style="
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.7);
-          z-index: 1000;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        <div
-          style="
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-          "
-        >
-          <h2 style="margin-bottom: 1rem; color: #2c3e50">
-            Payment Successful!
-          </h2>
-          <p style="margin-bottom: 1.5rem">
-            Thank you for your purchase. Please check the submission
-            instructions below to complete your order by emailing your files to
-            us.
-          </p>
-          <button id="close-modal" class="button">Close</button>
-        </div>
-      </div>
-
-      <!-- Loading Overlay -->
-      <div class="loading-overlay" id="loading-overlay">
-        <div class="spinner"></div>
-      </div>
-
       <!-- Scripts -->
       <script src="/js/jquery.min.js"></script>
       <script src="/js/jquery.dropotron.min.js"></script>
@@ -477,15 +296,10 @@
       <script>
         // Variables to store selected service
         let selectedService = null;
-        let paymentWindow = null;
-        let paymentCheckInterval = null;
 
         // DOM Elements
         const serviceOptions = document.querySelectorAll(".service-option");
         const paymentForm = document.getElementById("payment-form");
-        const submissionInstructions = document.getElementById(
-          "submission-instructions"
-        );
         const selectedServiceName = document.getElementById(
           "selected-service-name"
         );
@@ -494,15 +308,6 @@
         const servicePrice = document.getElementById("service-price");
         const stripePaymentBtn = document.getElementById("stripe-payment-btn");
         const form = document.getElementById("submission-form");
-        const successModal = document.getElementById("success-modal");
-        const closeModalBtn = document.getElementById("close-modal");
-        const loadingOverlay = document.getElementById("loading-overlay");
-        const paymentStatus = document.getElementById("payment-status");
-        const referenceNumber = document.getElementById("reference-number");
-        const refNumberText = document.getElementById("ref-number-text");
-        const customerName = document.getElementById("customer-name");
-        const serviceName = document.getElementById("service-name");
-        const emailButton = document.getElementById("email-button");
 
         // Service selection handling
         serviceOptions.forEach((option) => {
@@ -531,9 +336,6 @@
 
             // Show payment form
             paymentForm.style.display = "block";
-
-            // Hide submission instructions if shown
-            submissionInstructions.style.display = "none";
 
             // Scroll to payment form
             paymentForm.scrollIntoView({ behavior: "smooth" });
@@ -584,15 +386,6 @@
           return isValid;
         }
 
-        // Generate a reference number
-        function generateReferenceNumber() {
-          const timestamp = new Date().getTime().toString().slice(-6);
-          const random = Math.floor(Math.random() * 1000)
-            .toString()
-            .padStart(3, "0");
-          return `EKT${timestamp}${random}`;
-        }
-
         // Handle Stripe payment button click
         stripePaymentBtn.addEventListener("click", function () {
           // Validate form
@@ -600,137 +393,26 @@
             return;
           }
 
-          // Store form data in localStorage to retrieve after payment
-          const formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            description: document.getElementById("description").value,
-            service_type: document.getElementById("service-type").value,
-            service_price: document.getElementById("service-price").value,
-          };
+          // Get form data to pass to Stripe
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const description = document.getElementById("description").value;
+          const serviceType = document.getElementById("service-type").value;
 
-          localStorage.setItem("pendingSubmission", JSON.stringify(formData));
+          // Encode data as URL parameters
+          const params = new URLSearchParams({
+            name: name,
+            email: email,
+            description: description,
+            service_type: serviceType,
+            price: selectedService.price,
+          });
 
-          // Open Stripe payment in a new tab
-          paymentWindow = window.open(selectedService.paymentLink, "_blank");
-
-          // Show payment status message
-          paymentStatus.textContent =
-            "Payment window opened. Please complete your payment in the new tab. Do not close this page.";
-          paymentStatus.className = "payment-status";
-          paymentStatus.style.display = "block";
-
-          // Start checking for payment completion
-          startPaymentStatusCheck();
-        });
-
-        // Check payment status periodically
-        function startPaymentStatusCheck() {
-          paymentCheckInterval = setInterval(function () {
-            // Check if the payment window is closed (user might have completed payment)
-            if (paymentWindow && paymentWindow.closed) {
-              clearInterval(paymentCheckInterval);
-
-              // Ask user if they completed payment
-              const didComplete = confirm("Did you complete the payment?");
-
-              if (didComplete) {
-                // Show loading overlay
-                loadingOverlay.style.display = "flex";
-
-                // Process the successful payment
-                processSuccessfulPayment();
-              } else {
-                paymentStatus.textContent =
-                  "Payment not completed. Please try again.";
-                paymentStatus.className = "payment-status error";
-              }
-            }
-          }, 2000);
-        }
-
-        // Process successful payment
-        function processSuccessfulPayment() {
-          console.log("Processing successful payment...");
-
-          // Get stored form data
-          const storedData = JSON.parse(
-            localStorage.getItem("pendingSubmission") || "{}"
-          );
-
-          // Generate a reference number
-          const refNumber = generateReferenceNumber();
-
-          // Update the submission instructions
-          referenceNumber.textContent = refNumber;
-          refNumberText.textContent = refNumber;
-          customerName.textContent = storedData.name;
-          serviceName.textContent =
-            storedData.service_type + " (£" + storedData.service_price + ")";
-
-          // Set up the email button
-          const emailSubject = `Paper Submission - Ref: ${refNumber}`;
-          const emailBody = `Reference Number: ${refNumber}%0D%0AName: ${storedData.name}%0D%0AService: ${storedData.service_type}%0D%0ADescription: ${storedData.description}`;
-          emailButton.href = `mailto:eliotkingtuition@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-
-          // Hide loading overlay
-          loadingOverlay.style.display = "none";
-
-          // Show success message
-          paymentStatus.textContent =
-            "Payment successful! Please follow the instructions below to complete your submission.";
-          paymentStatus.className = "payment-status success";
-
-          // Hide payment form and show submission instructions
-          paymentForm.style.display = "none";
-          submissionInstructions.style.display = "block";
-
-          // Scroll to instructions
-          submissionInstructions.scrollIntoView({ behavior: "smooth" });
-
-          // Clear stored data
-          localStorage.removeItem("pendingSubmission");
-        }
-
-        // Close modal handler
-        closeModalBtn.addEventListener("click", function () {
-          successModal.style.display = "none";
-        });
-
-        // Check for pending submissions on page load
-        window.addEventListener("load", function () {
-          const pendingSubmission = localStorage.getItem("pendingSubmission");
-
-          if (pendingSubmission) {
-            const data = JSON.parse(pendingSubmission);
-
-            // Ask user if they want to continue with pending submission
-            const shouldContinue = confirm(
-              "We noticed an incomplete submission. Would you like to continue?"
-            );
-
-            if (shouldContinue) {
-              // Pre-fill form
-              document.getElementById("name").value = data.name;
-              document.getElementById("email").value = data.email;
-              document.getElementById("description").value = data.description;
-              document.getElementById("service-type").value = data.service_type;
-              document.getElementById("service-price").value =
-                data.service_price;
-
-              // Show payment form
-              paymentForm.style.display = "block";
-
-              // Show message
-              paymentStatus.textContent =
-                "Please complete the payment to finish your submission.";
-              paymentStatus.className = "payment-status";
-              paymentStatus.style.display = "block";
-            } else {
-              // Clear stored data
-              localStorage.removeItem("pendingSubmission");
-            }
-          }
+          // Redirect to Stripe with customer data as URL parameters
+          // Stripe will handle the payment and redirect to confirmation page
+          window.location.href = `${
+            selectedService.paymentLink
+          }?prefilled_data=${encodeURIComponent(params.toString())}`;
         });
       </script>
     </div>

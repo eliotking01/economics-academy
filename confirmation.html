@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation - Economics Academy</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .confirmation-box {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+      h1 {
+        color: #4caf50;
+        margin-top: 0;
+      }
+      .reference-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4caf50;
+        margin: 1rem 0;
+        padding: 1rem;
+        background-color: #f0f8f0;
+        border-left: 4px solid #4caf50;
+        border-radius: 4px;
+      }
+      .instructions {
+        background-color: #f8f9fa;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 4px;
+        margin: 1.5rem 0;
+      }
+      .email-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 1rem;
+        transition: background-color 0.3s;
+      }
+      .email-button:hover {
+        background-color: #3d8b40;
+      }
+      .customer-details {
+        background-color: #f5f5f5;
+        padding: 1rem;
+        border-radius: 4px;
+        margin: 1.5rem 0;
+      }
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+        .confirmation-box {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Economics Academy</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="confirmation-box">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>
+          Your payment has been successfully processed. Please follow the
+          instructions below to complete your submission.
+        </p>
+
+        <div class="customer-details">
+          <h3>Order Details:</h3>
+          <p><strong>Name:</strong> <span id="customer-name"></span></p>
+          <p><strong>Email:</strong> <span id="customer-email"></span></p>
+          <p><strong>Service:</strong> <span id="service-type"></span></p>
+          <p>
+            <strong>Description:</strong> <span id="service-description"></span>
+          </p>
+        </div>
+
+        <div class="reference-number">
+          Your Reference Number: <span id="reference-number"></span>
+        </div>
+
+        <div class="instructions">
+          <h2>Next Steps: Submit Your Files</h2>
+          <p>To complete your order, please email your files to:</p>
+          <p style="font-size: 1.2rem; font-weight: bold">
+            eliotkingtuition@gmail.com
+          </p>
+
+          <p>Please include the following in your email:</p>
+          <ul>
+            <li>
+              Your reference number: <strong id="ref-number-text"></strong>
+            </li>
+            <li>Your full name</li>
+            <li>The service you purchased</li>
+          </ul>
+
+          <p>Accepted file formats: PDF, JPG, JPEG, PNG</p>
+
+          <a href="#" id="email-link" class="email-button">Open Email Client</a>
+        </div>
+
+        <p>
+          We will process your submission within 48 hours of receiving your
+          files. You'll receive feedback at the email address you provided.
+        </p>
+
+        <p>
+          If you have any questions, please contact us at
+          <a href="mailto:eliotkingtuition@gmail.com"
+            >eliotkingtuition@gmail.com</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Economics Academy. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Function to generate a reference number
+      function generateReferenceNumber() {
+        const timestamp = new Date().getTime().toString().slice(-6);
+        const random = Math.floor(Math.random() * 1000)
+          .toString()
+          .padStart(3, "0");
+        return `EKT${timestamp}${random}`;
+      }
+
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const name = urlParams.get("name") || "Customer";
+      const email = urlParams.get("email") || "";
+      const description = urlParams.get("description") || "";
+      const serviceType = urlParams.get("service_type") || "";
+      const price = urlParams.get("price") || "";
+
+      // Generate reference number
+      const refNumber = generateReferenceNumber();
+
+      // Update page content
+      document.getElementById("customer-name").textContent = name;
+      document.getElementById("customer-email").textContent = email;
+      document.getElementById("service-type").textContent =
+        serviceType + (price ? ` (£${price})` : "");
+      document.getElementById("service-description").textContent = description;
+      document.getElementById("reference-number").textContent = refNumber;
+      document.getElementById("ref-number-text").textContent = refNumber;
+
+      // Set up email link
+      const emailSubject = `Paper Submission - Ref: ${refNumber}`;
+      const emailBody = `Reference Number: ${refNumber}%0D%0A%0D%0AName: ${name}%0D%0A%0D%0AService: ${serviceType}%0D%0A%0D%0ADescription: ${description}`;
+      document.getElementById(
+        "email-link"
+      ).href = `mailto:eliotkingtuition@gmail.com?subject=${encodeURIComponent(
+        emailSubject
+      )}&body=${encodeURIComponent(emailBody)}`;
+    </script>
+  </body>
+</html>
