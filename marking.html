@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -15,10 +15,7 @@
       content="Submit your A-Level Economics practice papers for detailed, examiner-style feedback from an expert tutor. Improve your essay technique and boost your grades with our marking service."
     />
     <link rel="stylesheet" href="/css/main.css" />
-    <!-- Stripe.js for payment processing -->
-    <script src="https://js.stripe.com/v3/"></script>
     <style>
-      /* Additional custom styles */
       .price {
         font-size: 1.75em;
         font-weight: bold;
@@ -28,13 +25,6 @@
       .save {
         font-size: 0.7em;
         color: #f56a6a;
-      }
-      .stripe-card {
-        background: white;
-        padding: 1em;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-        margin-bottom: 1em;
       }
       .selected-service {
         border: 2px solid #4caf50;
@@ -146,7 +136,7 @@
                       class="box service-option"
                       data-product="single"
                       data-price="25"
-                      data-product-id="YOUR_SINGLE_QUESTION_PRODUCT_ID"
+                      data-payment-link="https://buy.stripe.com/cNi28tdt079l1Mm5AXdjO00"
                     >
                       <h3>Single 25-Mark Question</h3>
                       <div class="price">£25</div>
@@ -168,7 +158,7 @@
                       class="box service-option"
                       data-product="three"
                       data-price="60"
-                      data-product-id="YOUR_THREE_QUESTIONS_PRODUCT_ID"
+                      data-payment-link="https://buy.stripe.com/dRmcN760yalxez8gfBdjO01"
                     >
                       <h3>Three 25-Mark Questions</h3>
                       <div class="price">
@@ -192,7 +182,7 @@
                       class="box service-option"
                       data-product="full"
                       data-price="60"
-                      data-product-id="YOUR_FULL_PAPER_PRODUCT_ID"
+                      data-payment-link="https://buy.stripe.com/bJe4gBbkSctF2Qq3sPdjO02"
                     >
                       <h3>Full Exam Paper</h3>
                       <div class="price">£60</div>
@@ -223,17 +213,22 @@
                     ></span
                     >)
                   </h3>
-                  <form id="payment-form-element">
+                  <form
+                    id="submission-form"
+                    action="https://formspree.io/f/xnnbolzl"
+                    method="POST"
+                    enctype="multipart/form-data"
+                  >
                     <input
                       type="hidden"
-                      id="product-type"
-                      name="product-type"
+                      name="service_type"
+                      id="service-type"
                       value=""
                     />
                     <input
                       type="hidden"
-                      id="stripe-product-id"
-                      name="stripe-product-id"
+                      name="service_price"
+                      id="service-price"
                       value=""
                     />
 
@@ -298,21 +293,12 @@
                         <div class="file-preview" id="file-preview"></div>
                       </div>
                       <div class="col-12">
-                        <label for="card-element">Card Details *</label>
-                        <div id="card-element" class="stripe-card"></div>
-                        <div
-                          id="card-errors"
-                          role="alert"
-                          style="color: #fa755a"
-                        ></div>
-                      </div>
-                      <div class="col-12">
                         <button
-                          type="submit"
+                          type="button"
+                          id="stripe-payment-btn"
                           class="button primary"
-                          id="submit-button"
                         >
-                          Pay Now
+                          Complete Payment with Stripe
                         </button>
                       </div>
                     </div>
@@ -386,9 +372,40 @@
       <div id="footer-placeholder"></div>
     </div>
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-      <div class="spinner"></div>
+    <!-- Success Modal -->
+    <div
+      id="success-modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: white;
+          padding: 2rem;
+          border-radius: 12px;
+          text-align: center;
+          max-width: 500px;
+          width: 90%;
+        "
+      >
+        <h2 style="margin-bottom: 1rem; color: #2c3e50">Payment Successful!</h2>
+        <p style="margin-bottom: 1.5rem">
+          Thank you for your purchase. Your form has been submitted
+          successfully. We will be in touch shortly regarding your paper
+          marking.
+        </p>
+        <button id="close-modal" class="button">Close</button>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -400,37 +417,37 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 
-    <!-- Stripe Integration Script -->
     <script>
-      // Initialize Stripe with your publishable key
-      const stripe = Stripe("YOUR_PUBLISHABLE_KEY"); // Replace with your actual publishable key
-      const elements = stripe.elements();
-
-      // Create card element
-      const cardElement = elements.create("card", {
-        style: {
-          base: {
-            fontSize: "16px",
-            color: "#32325d",
-            "::placeholder": {
-              color: "#aab7c4",
-            },
-          },
-        },
-      });
-
-      cardElement.mount("#card-element");
-
       // Variables to store selected service and uploaded files
       let selectedService = null;
       let uploadedFiles = [];
+      const maxFileSize = 10 * 1024 * 1024; // 10MB max file size
+      const maxTotalSize = 25 * 1024 * 1024; // 25MB max total size
+
+      // DOM Elements
+      const serviceOptions = document.querySelectorAll(".service-option");
+      const paymentForm = document.getElementById("payment-form");
+      const selectedServiceName = document.getElementById(
+        "selected-service-name"
+      );
+      const selectedPrice = document.getElementById("selected-price");
+      const serviceType = document.getElementById("service-type");
+      const servicePrice = document.getElementById("service-price");
+      const stripePaymentBtn = document.getElementById("stripe-payment-btn");
+      const form = document.getElementById("submission-form");
+      const dropZone = document.getElementById("drop-zone");
+      const fileInput = document.getElementById("file-input");
+      const browseBtn = document.getElementById("browse-btn");
+      const filePreview = document.getElementById("file-preview");
+      const successModal = document.getElementById("success-modal");
+      const closeModalBtn = document.getElementById("close-modal");
 
       // Service selection handling
-      document.querySelectorAll(".service-option").forEach((service) => {
-        service.addEventListener("click", function () {
+      serviceOptions.forEach((option) => {
+        option.addEventListener("click", function () {
           // Remove selected class from all services
-          document.querySelectorAll(".service-option").forEach((s) => {
-            s.classList.remove("selected-service");
+          serviceOptions.forEach((opt) => {
+            opt.classList.remove("selected-service");
           });
 
           // Add selected class to clicked service
@@ -440,38 +457,25 @@
           selectedService = {
             type: this.dataset.product,
             price: this.dataset.price,
-            productId: this.dataset.productId,
+            paymentLink: this.dataset.paymentLink,
             name: this.querySelector("h3").textContent,
           };
 
           // Update payment form with selected service
-          document.getElementById("selected-service-name").textContent =
-            selectedService.name;
-          document.getElementById("selected-price").textContent =
-            "£" + selectedService.price;
-          document.getElementById("product-type").value = selectedService.type;
-          document.getElementById("stripe-product-id").value =
-            selectedService.productId;
+          selectedServiceName.textContent = selectedService.name;
+          selectedPrice.textContent = "£" + selectedService.price;
+          serviceType.value = selectedService.type;
+          servicePrice.value = selectedService.price;
 
           // Show payment form
-          document.getElementById("payment-form").style.display = "block";
+          paymentForm.style.display = "block";
 
           // Scroll to payment form
-          document
-            .getElementById("payment-form")
-            .scrollIntoView({ behavior: "smooth" });
+          paymentForm.scrollIntoView({ behavior: "smooth" });
         });
       });
 
       // File upload handling
-      const dropZone = document.getElementById("drop-zone");
-      const fileInput = document.getElementById("file-input");
-      const browseBtn = document.getElementById("browse-btn");
-      const filePreview = document.getElementById("file-preview");
-      const maxFileSize = 10 * 1024 * 1024; // 10MB max file size
-      const maxTotalSize = 25 * 1024 * 1024; // 25MB max total size
-
-      // Click on drop zone to trigger file input
       browseBtn.addEventListener("click", function (e) {
         e.stopPropagation();
         fileInput.click();
@@ -675,113 +679,92 @@
         return isValid;
       }
 
-      // Handle form submission
-      const form = document.getElementById("payment-form-element");
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
+      // Handle Stripe payment button click
+      stripePaymentBtn.addEventListener("click", function () {
         // Validate form
         if (!validateForm()) {
           return;
         }
 
-        // Show loading overlay
-        document.getElementById("loading-overlay").style.display = "flex";
+        // Create FormData object to send to Formspree
+        const formData = new FormData(form);
 
-        // Disable submit button
-        document.getElementById("submit-button").disabled = true;
+        // Append files to form data
+        uploadedFiles.forEach((file) => {
+          formData.append("files", file);
+        });
 
-        try {
-          // Create payment method
-          const { error: paymentMethodError, paymentMethod } =
-            await stripe.createPaymentMethod({
-              type: "card",
-              card: cardElement,
-              billing_details: {
-                name: document.getElementById("name").value.trim(),
-                email: document.getElementById("email").value.trim(),
-              },
-            });
-
-          if (paymentMethodError) {
-            const errorElement = document.getElementById("card-errors");
-            errorElement.textContent = paymentMethodError.message;
-            document.getElementById("loading-overlay").style.display = "none";
-            document.getElementById("submit-button").disabled = false;
-            return;
+        // Store form data in sessionStorage to retrieve after payment
+        const formObject = {};
+        for (let [key, value] of formData.entries()) {
+          if (key !== "files") {
+            formObject[key] = value;
           }
-
-          // Create form data to send to server
-          const formData = new FormData();
-          formData.append("paymentMethodId", paymentMethod.id);
-          formData.append("productType", selectedService.type);
-          formData.append("productId", selectedService.productId);
-          formData.append("name", document.getElementById("name").value.trim());
-          formData.append(
-            "email",
-            document.getElementById("email").value.trim()
-          );
-          formData.append(
-            "description",
-            document.getElementById("description").value.trim()
-          );
-          formData.append("amount", selectedService.price * 100); // Convert to cents
-
-          // Append files
-          uploadedFiles.forEach((file) => {
-            formData.append("files", file);
-          });
-
-          // Send data to your server
-          // Replace with your server endpoint
-          const response = await fetch("/create-payment-intent", {
-            method: "POST",
-            body: formData,
-          });
-
-          const responseData = await response.json();
-
-          if (responseData.error) {
-            document.getElementById("card-errors").textContent =
-              responseData.error;
-            document.getElementById("loading-overlay").style.display = "none";
-            document.getElementById("submit-button").disabled = false;
-            return;
-          }
-
-          // Confirm payment on the client
-          const { error: confirmError } = await stripe.confirmCardPayment(
-            responseData.clientSecret
-          );
-
-          if (confirmError) {
-            document.getElementById("card-errors").textContent =
-              confirmError.message;
-            document.getElementById("loading-overlay").style.display = "none";
-            document.getElementById("submit-button").disabled = false;
-          } else {
-            // Payment successful
-            alert(
-              "Payment processed successfully! We will contact you shortly."
-            );
-            form.reset();
-            cardElement.clear();
-            uploadedFiles = [];
-            filePreview.innerHTML = "";
-            document.getElementById("payment-form").style.display = "none";
-            document.querySelectorAll(".service-option").forEach((s) => {
-              s.classList.remove("selected-service");
-            });
-          }
-        } catch (error) {
-          console.error("Error:", error);
-          document.getElementById("card-errors").textContent =
-            "An unexpected error occurred. Please try again.";
-        } finally {
-          document.getElementById("loading-overlay").style.display = "none";
-          document.getElementById("submit-button").disabled = false;
         }
+        sessionStorage.setItem("formData", JSON.stringify(formObject));
+        sessionStorage.setItem("fileCount", uploadedFiles.length);
+
+        // Redirect to Stripe payment
+        window.location.href = selectedService.paymentLink;
       });
+
+      // Check if returning from Stripe payment (simulated here)
+      function checkPaymentStatus() {
+        // This is a simulation - in reality you would check for a success parameter
+        // or use webhooks to confirm payment was successful
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentSuccess = urlParams.get("payment_success");
+
+        if (paymentSuccess === "true") {
+          // Retrieve form data from sessionStorage
+          const formData = JSON.parse(
+            sessionStorage.getItem("formData") || "{}"
+          );
+          const fileCount = parseInt(
+            sessionStorage.getItem("fileCount") || "0"
+          );
+
+          if (Object.keys(formData).length > 0 && fileCount > 0) {
+            // Submit the form to Formspree
+            const submitForm = document.getElementById("submission-form");
+            const formDataObj = new FormData(submitForm);
+
+            // Append files
+            for (let i = 0; i < fileCount; i++) {
+              formDataObj.append("file_" + i, "uploaded");
+            }
+
+            fetch(submitForm.action, {
+              method: "POST",
+              body: formDataObj,
+              headers: {
+                Accept: "application/json",
+              },
+            })
+              .then((response) => {
+                if (response.ok) {
+                  // Show success modal
+                  successModal.style.display = "flex";
+
+                  // Clear stored data
+                  sessionStorage.removeItem("formData");
+                  sessionStorage.removeItem("fileCount");
+                }
+              })
+              .catch((error) => {
+                console.error("Error submitting form:", error);
+              });
+          }
+        }
+      }
+
+      // Close modal handler
+      closeModalBtn.addEventListener("click", function () {
+        successModal.style.display = "none";
+      });
+
+      // Check payment status on page load
+      window.addEventListener("load", checkPaymentStatus);
     </script>
   </body>
 </html>
