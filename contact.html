@@ -32,7 +32,7 @@
                 <h3>Email Us</h3>
                 <p>For general inquiries and support</p>
                 <a href="mailto:contact@economicsacademy.com" class="button alt"
-                  >contact@economicsacademy.com</a
+                  >eliotkingtuition@gmail.com</a
                 >
                 <p class="response-time">Typically responds within 24 hours</p>
               </div>
@@ -57,7 +57,12 @@
             <div class="row">
               <div class="col-8 col-12-medium">
                 <div class="form-container">
-                  <form method="post" action="#">
+                  <div id="form-status" class="form-status"></div>
+                  <form
+                    id="contact-form"
+                    action="https://formspree.io/f/xblapyky"
+                    method="POST"
+                  >
                     <div class="row gtr-uniform">
                       <div class="col-6 col-12-xsmall">
                         <input
@@ -114,6 +119,7 @@
                               type="submit"
                               value="Send Message"
                               class="primary"
+                              id="submit-button"
                             />
                           </li>
                           <li><input type="reset" value="Reset" /></li>
@@ -175,5 +181,63 @@
     <script src="/js/breakpoints.min.js"></script>
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
+
+    <!-- Form Submission Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status");
+        const submitButton = document.getElementById("submit-button");
+
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Show loading state
+          formStatus.textContent = "Sending your message...";
+          formStatus.className = "form-status";
+          formStatus.style.display = "block";
+          submitButton.disabled = true;
+          submitButton.value = "Sending...";
+
+          // Submit to Formspree
+          fetch(this.action, {
+            method: "POST",
+            body: new FormData(this),
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Success message
+                formStatus.textContent =
+                  "Thank you for your message! We will get back to you soon.";
+                formStatus.className = "form-status form-success";
+                contactForm.reset();
+              } else {
+                // Error message
+                formStatus.textContent =
+                  "Oops! There was a problem submitting your form. Please try again or email us directly.";
+                formStatus.className = "form-status form-error";
+              }
+            })
+            .catch((error) => {
+              formStatus.textContent =
+                "Oops! There was a problem submitting your form. Please try again or email us directly.";
+              formStatus.className = "form-status form-error";
+            })
+            .finally(() => {
+              submitButton.disabled = false;
+              submitButton.value = "Send Message";
+
+              // Scroll to form status message
+              formStatus.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            });
+        });
+      });
+    </script>
   </body>
 </html>

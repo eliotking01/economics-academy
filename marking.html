@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -17,6 +17,107 @@
     <link rel="stylesheet" href="/css/main.css" />
     <!-- Stripe.js for payment processing -->
     <script src="https://js.stripe.com/v3/"></script>
+    <style>
+      /* Additional custom styles */
+      .price {
+        font-size: 1.75em;
+        font-weight: bold;
+        margin: 0.5em 0;
+        color: #4caf50;
+      }
+      .save {
+        font-size: 0.7em;
+        color: #f56a6a;
+      }
+      .stripe-card {
+        background: white;
+        padding: 1em;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        margin-bottom: 1em;
+      }
+      .selected-service {
+        border: 2px solid #4caf50;
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+      }
+      .service-option {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .service-option:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .file-upload-area {
+        border: 2px dashed #ccc;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        cursor: pointer;
+      }
+      .file-upload-area:hover {
+        border-color: #4caf50;
+      }
+      .file-preview {
+        margin-top: 15px;
+      }
+      .file-preview-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f1f1f1;
+        padding: 8px 12px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+      .remove-file {
+        color: #ff0000;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .form-error {
+        color: #ff3860;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      .loading-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      }
+      .spinner {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #4caf50;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 768px) {
+        .col-4 {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -41,9 +142,14 @@
                 <div class="row">
                   <!-- Single Question Option -->
                   <div class="col-4 col-12-medium">
-                    <section class="box">
+                    <section
+                      class="box service-option"
+                      data-product="single"
+                      data-price="25"
+                      data-product-id="YOUR_SINGLE_QUESTION_PRODUCT_ID"
+                    >
                       <h3>Single 25-Mark Question</h3>
-                      <div class="price">£24.99</div>
+                      <div class="price">£25</div>
                       <ul class="alt">
                         <li>
                           Graded with comprehensive comments on Knowledge,
@@ -52,21 +158,21 @@
                         <li>Essay structure and technique feedback</li>
                         <li>Turnaround in 48 hours</li>
                       </ul>
-                      <button
-                        class="button alt stripe-button"
-                        id="singleQuestionBtn"
-                      >
-                        Select
-                      </button>
+                      <button class="button alt">Select</button>
                     </section>
                   </div>
 
-                  <!-- Full Paper Option -->
+                  <!-- Three Questions Option -->
                   <div class="col-4 col-12-medium">
-                    <section class="box">
+                    <section
+                      class="box service-option"
+                      data-product="three"
+                      data-price="60"
+                      data-product-id="YOUR_THREE_QUESTIONS_PRODUCT_ID"
+                    >
                       <h3>Three 25-Mark Questions</h3>
                       <div class="price">
-                        £64.99 <span class="save">(Save £10)</span>
+                        £60 <span class="save">(Save £15)</span>
                       </div>
                       <ul class="alt">
                         <li>
@@ -76,22 +182,22 @@
                         <li>Essay structure and technique feedback</li>
                         <li>Turnaround in 48 hours</li>
                       </ul>
-                      <button
-                        class="button alt stripe-button"
-                        id="fullPaperBtn"
-                      >
-                        Select
-                      </button>
+                      <button class="button alt">Select</button>
                     </section>
                   </div>
 
-                  <!-- Bundle Option -->
+                  <!-- Full Paper Option -->
                   <div class="col-4 col-12-medium">
-                    <section class="box">
+                    <section
+                      class="box service-option"
+                      data-product="full"
+                      data-price="60"
+                      data-product-id="YOUR_FULL_PAPER_PRODUCT_ID"
+                    >
                       <h3>Full Exam Paper</h3>
-                      <div class="price">£59.99</div>
+                      <div class="price">£60</div>
                       <ul class="alt">
-                        <li>Complete feedback on Section A, B and C</li>
+                        <li>Complete feedback on all questions</li>
                         <li>
                           Graded with comprehensive comments on Knowledge,
                           Application, Analysis and Evaluation
@@ -99,9 +205,7 @@
                         <li>Essay structure and technique feedback</li>
                         <li>Turnaround in 48 hours</li>
                       </ul>
-                      <button class="button alt stripe-button" id="bundleBtn">
-                        Select
-                      </button>
+                      <button class="button alt">Select</button>
                     </section>
                   </div>
                 </div>
@@ -112,10 +216,30 @@
                   class="box"
                   style="display: none; margin-top: 2em"
                 >
-                  <h3>Complete Your Purchase</h3>
+                  <h3>
+                    Complete Your Purchase:
+                    <span id="selected-service-name"></span> (<span
+                      id="selected-price"
+                    ></span
+                    >)
+                  </h3>
                   <form id="payment-form-element">
+                    <input
+                      type="hidden"
+                      id="product-type"
+                      name="product-type"
+                      value=""
+                    />
+                    <input
+                      type="hidden"
+                      id="stripe-product-id"
+                      name="stripe-product-id"
+                      value=""
+                    />
+
                     <div class="row gtr-uniform">
                       <div class="col-6 col-12-xsmall">
+                        <label for="name">Full Name *</label>
                         <input
                           type="text"
                           name="name"
@@ -124,8 +248,10 @@
                           placeholder="Your Name"
                           required
                         />
+                        <div id="name-error" class="form-error"></div>
                       </div>
                       <div class="col-6 col-12-xsmall">
+                        <label for="email">Email Address *</label>
                         <input
                           type="email"
                           name="email"
@@ -134,16 +260,45 @@
                           placeholder="Email Address"
                           required
                         />
+                        <div id="email-error" class="form-error"></div>
                       </div>
                       <div class="col-12">
+                        <label for="description"
+                          >Description of Work to be Marked *</label
+                        >
                         <textarea
-                          name="notes"
-                          id="notes"
-                          placeholder="Any special instructions or paper details"
+                          name="description"
+                          id="description"
+                          placeholder="Please describe what you want marked (e.g., 'Question 3 from 2022 Paper', 'Microeconomics essay on market failure')"
                           rows="3"
+                          required
                         ></textarea>
+                        <div id="description-error" class="form-error"></div>
                       </div>
                       <div class="col-12">
+                        <label>Upload Your Work (PDF or Images) *</label>
+                        <div class="file-upload-area" id="drop-zone">
+                          <p>Drag & drop files here or click to browse</p>
+                          <input
+                            type="file"
+                            id="file-input"
+                            multiple
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            style="display: none"
+                          />
+                          <button
+                            type="button"
+                            class="button small"
+                            id="browse-btn"
+                          >
+                            Browse Files
+                          </button>
+                        </div>
+                        <div id="file-error" class="form-error"></div>
+                        <div class="file-preview" id="file-preview"></div>
+                      </div>
+                      <div class="col-12">
+                        <label for="card-element">Card Details *</label>
                         <div id="card-element" class="stripe-card"></div>
                         <div
                           id="card-errors"
@@ -152,7 +307,11 @@
                         ></div>
                       </div>
                       <div class="col-12">
-                        <button type="submit" class="button primary">
+                        <button
+                          type="submit"
+                          class="button primary"
+                          id="submit-button"
+                        >
                           Pay Now
                         </button>
                       </div>
@@ -206,7 +365,7 @@
                     <section class="box">
                       <h3>How do I submit my work?</h3>
                       <p>
-                        You can email a scanned copy or Word/PDF file. I’ll
+                        You can email a scanned copy or Word/PDF file. I'll
                         return your work with annotated comments and a summary
                         of key areas for improvement. You may also send pictures
                         if you are unable to use Word/PDF.
@@ -227,6 +386,11 @@
       <div id="footer-placeholder"></div>
     </div>
 
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+
     <!-- Scripts -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
@@ -238,16 +402,60 @@
 
     <!-- Stripe Integration Script -->
     <script>
+      // Initialize Stripe with your publishable key
       const stripe = Stripe("YOUR_PUBLISHABLE_KEY"); // Replace with your actual publishable key
       const elements = stripe.elements();
-      const cardElement = elements.create("card");
+
+      // Create card element
+      const cardElement = elements.create("card", {
+        style: {
+          base: {
+            fontSize: "16px",
+            color: "#32325d",
+            "::placeholder": {
+              color: "#aab7c4",
+            },
+          },
+        },
+      });
 
       cardElement.mount("#card-element");
 
-      // Handle service selection
-      document.querySelectorAll(".stripe-button").forEach((button) => {
-        button.addEventListener("click", function () {
+      // Variables to store selected service and uploaded files
+      let selectedService = null;
+      let uploadedFiles = [];
+
+      // Service selection handling
+      document.querySelectorAll(".service-option").forEach((service) => {
+        service.addEventListener("click", function () {
+          // Remove selected class from all services
+          document.querySelectorAll(".service-option").forEach((s) => {
+            s.classList.remove("selected-service");
+          });
+
+          // Add selected class to clicked service
+          this.classList.add("selected-service");
+
+          // Store selected service details
+          selectedService = {
+            type: this.dataset.product,
+            price: this.dataset.price,
+            productId: this.dataset.productId,
+            name: this.querySelector("h3").textContent,
+          };
+
+          // Update payment form with selected service
+          document.getElementById("selected-service-name").textContent =
+            selectedService.name;
+          document.getElementById("selected-price").textContent =
+            "£" + selectedService.price;
+          document.getElementById("product-type").value = selectedService.type;
+          document.getElementById("stripe-product-id").value =
+            selectedService.productId;
+
+          // Show payment form
           document.getElementById("payment-form").style.display = "block";
+
           // Scroll to payment form
           document
             .getElementById("payment-form")
@@ -255,51 +463,325 @@
         });
       });
 
+      // File upload handling
+      const dropZone = document.getElementById("drop-zone");
+      const fileInput = document.getElementById("file-input");
+      const browseBtn = document.getElementById("browse-btn");
+      const filePreview = document.getElementById("file-preview");
+      const maxFileSize = 10 * 1024 * 1024; // 10MB max file size
+      const maxTotalSize = 25 * 1024 * 1024; // 25MB max total size
+
+      // Click on drop zone to trigger file input
+      browseBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        fileInput.click();
+      });
+
+      // Handle file selection
+      fileInput.addEventListener("change", handleFiles);
+
+      // Drag and drop functionality
+      dropZone.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        dropZone.style.borderColor = "#4caf50";
+        dropZone.style.backgroundColor = "#f0f8f0";
+      });
+
+      dropZone.addEventListener("dragleave", function () {
+        dropZone.style.borderColor = "#ccc";
+        dropZone.style.backgroundColor = "#f9f9f9";
+      });
+
+      dropZone.addEventListener("drop", function (e) {
+        e.preventDefault();
+        dropZone.style.borderColor = "#ccc";
+        dropZone.style.backgroundColor = "#f9f9f9";
+
+        if (e.dataTransfer.files.length) {
+          fileInput.files = e.dataTransfer.files;
+          handleFiles({ target: fileInput });
+        }
+      });
+
+      // Handle file processing
+      function handleFiles(e) {
+        const files = e.target.files;
+        let totalSize = uploadedFiles.reduce(
+          (total, file) => total + file.size,
+          0
+        );
+
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+
+          // Validate file type
+          if (!isValidFileType(file)) {
+            showFileError("Please upload only PDF or image files (JPG, PNG).");
+            continue;
+          }
+
+          // Validate file size
+          if (file.size > maxFileSize) {
+            showFileError(
+              "File " + file.name + " is too large. Maximum size is 10MB."
+            );
+            continue;
+          }
+
+          // Validate total size
+          if (totalSize + file.size > maxTotalSize) {
+            showFileError("Total files size exceeds the 25MB limit.");
+            break;
+          }
+
+          // Add to uploaded files
+          uploadedFiles.push(file);
+          totalSize += file.size;
+
+          // Create preview
+          const previewItem = document.createElement("div");
+          previewItem.className = "file-preview-item";
+          previewItem.innerHTML = `
+            <span>${file.name} (${formatFileSize(file.size)})</span>
+            <span class="remove-file" data-index="${
+              uploadedFiles.length - 1
+            }">×</span>
+          `;
+          filePreview.appendChild(previewItem);
+        }
+
+        // Clear file input
+        fileInput.value = "";
+
+        // Add event listeners to remove buttons
+        document.querySelectorAll(".remove-file").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const index = parseInt(this.dataset.index);
+            uploadedFiles.splice(index, 1);
+            updateFilePreviews();
+          });
+        });
+
+        // Clear any errors
+        clearFileError();
+      }
+
+      // Update file previews
+      function updateFilePreviews() {
+        filePreview.innerHTML = "";
+
+        uploadedFiles.forEach((file, index) => {
+          const previewItem = document.createElement("div");
+          previewItem.className = "file-preview-item";
+          previewItem.innerHTML = `
+            <span>${file.name} (${formatFileSize(file.size)})</span>
+            <span class="remove-file" data-index="${index}">×</span>
+          `;
+          filePreview.appendChild(previewItem);
+        });
+
+        // Add event listeners to remove buttons
+        document.querySelectorAll(".remove-file").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const index = parseInt(this.dataset.index);
+            uploadedFiles.splice(index, 1);
+            updateFilePreviews();
+          });
+        });
+      }
+
+      // Validate file type
+      function isValidFileType(file) {
+        const allowedTypes = [
+          "application/pdf",
+          "image/jpeg",
+          "image/jpg",
+          "image/png",
+        ];
+        return allowedTypes.includes(file.type);
+      }
+
+      // Format file size
+      function formatFileSize(bytes) {
+        if (bytes === 0) return "0 Bytes";
+        const k = 1024;
+        const sizes = ["Bytes", "KB", "MB", "GB"];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+      }
+
+      // Show file error
+      function showFileError(message) {
+        const errorElement = document.getElementById("file-error");
+        errorElement.textContent = message;
+        setTimeout(() => {
+          errorElement.textContent = "";
+        }, 5000);
+      }
+
+      // Clear file error
+      function clearFileError() {
+        document.getElementById("file-error").textContent = "";
+      }
+
+      // Form validation
+      function validateForm() {
+        let isValid = true;
+
+        // Validate name
+        const name = document.getElementById("name").value.trim();
+        if (!name) {
+          document.getElementById("name-error").textContent =
+            "Please enter your name";
+          isValid = false;
+        } else {
+          document.getElementById("name-error").textContent = "";
+        }
+
+        // Validate email
+        const email = document.getElementById("email").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email) {
+          document.getElementById("email-error").textContent =
+            "Please enter your email address";
+          isValid = false;
+        } else if (!emailPattern.test(email)) {
+          document.getElementById("email-error").textContent =
+            "Please enter a valid email address";
+          isValid = false;
+        } else {
+          document.getElementById("email-error").textContent = "";
+        }
+
+        // Validate description
+        const description = document.getElementById("description").value.trim();
+        if (!description) {
+          document.getElementById("description-error").textContent =
+            "Please describe what you want marked";
+          isValid = false;
+        } else {
+          document.getElementById("description-error").textContent = "";
+        }
+
+        // Validate files
+        if (uploadedFiles.length === 0) {
+          document.getElementById("file-error").textContent =
+            "Please upload at least one file";
+          isValid = false;
+        } else {
+          document.getElementById("file-error").textContent = "";
+        }
+
+        return isValid;
+      }
+
       // Handle form submission
       const form = document.getElementById("payment-form-element");
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-          type: "card",
-          card: cardElement,
-          billing_details: {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-          },
-        });
+        // Validate form
+        if (!validateForm()) {
+          return;
+        }
 
-        if (error) {
-          const errorElement = document.getElementById("card-errors");
-          errorElement.textContent = error.message;
-        } else {
-          // Payment method created, submit to your server
-          // You would typically send paymentMethod.id to your server here
-          alert("Payment processed successfully! We will contact you shortly.");
-          form.reset();
-          cardElement.clear();
+        // Show loading overlay
+        document.getElementById("loading-overlay").style.display = "flex";
+
+        // Disable submit button
+        document.getElementById("submit-button").disabled = true;
+
+        try {
+          // Create payment method
+          const { error: paymentMethodError, paymentMethod } =
+            await stripe.createPaymentMethod({
+              type: "card",
+              card: cardElement,
+              billing_details: {
+                name: document.getElementById("name").value.trim(),
+                email: document.getElementById("email").value.trim(),
+              },
+            });
+
+          if (paymentMethodError) {
+            const errorElement = document.getElementById("card-errors");
+            errorElement.textContent = paymentMethodError.message;
+            document.getElementById("loading-overlay").style.display = "none";
+            document.getElementById("submit-button").disabled = false;
+            return;
+          }
+
+          // Create form data to send to server
+          const formData = new FormData();
+          formData.append("paymentMethodId", paymentMethod.id);
+          formData.append("productType", selectedService.type);
+          formData.append("productId", selectedService.productId);
+          formData.append("name", document.getElementById("name").value.trim());
+          formData.append(
+            "email",
+            document.getElementById("email").value.trim()
+          );
+          formData.append(
+            "description",
+            document.getElementById("description").value.trim()
+          );
+          formData.append("amount", selectedService.price * 100); // Convert to cents
+
+          // Append files
+          uploadedFiles.forEach((file) => {
+            formData.append("files", file);
+          });
+
+          // Send data to your server
+          // Replace with your server endpoint
+          const response = await fetch("/create-payment-intent", {
+            method: "POST",
+            body: formData,
+          });
+
+          const responseData = await response.json();
+
+          if (responseData.error) {
+            document.getElementById("card-errors").textContent =
+              responseData.error;
+            document.getElementById("loading-overlay").style.display = "none";
+            document.getElementById("submit-button").disabled = false;
+            return;
+          }
+
+          // Confirm payment on the client
+          const { error: confirmError } = await stripe.confirmCardPayment(
+            responseData.clientSecret
+          );
+
+          if (confirmError) {
+            document.getElementById("card-errors").textContent =
+              confirmError.message;
+            document.getElementById("loading-overlay").style.display = "none";
+            document.getElementById("submit-button").disabled = false;
+          } else {
+            // Payment successful
+            alert(
+              "Payment processed successfully! We will contact you shortly."
+            );
+            form.reset();
+            cardElement.clear();
+            uploadedFiles = [];
+            filePreview.innerHTML = "";
+            document.getElementById("payment-form").style.display = "none";
+            document.querySelectorAll(".service-option").forEach((s) => {
+              s.classList.remove("selected-service");
+            });
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          document.getElementById("card-errors").textContent =
+            "An unexpected error occurred. Please try again.";
+        } finally {
+          document.getElementById("loading-overlay").style.display = "none";
+          document.getElementById("submit-button").disabled = false;
         }
       });
     </script>
-
-    <style>
-      .price {
-        font-size: 1.75em;
-        font-weight: bold;
-        margin: 0.5em 0;
-        color: #4caf50;
-      }
-      .save {
-        font-size: 0.7em;
-        color: #f56a6a;
-      }
-      .stripe-card {
-        background: white;
-        padding: 1em;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-        margin-bottom: 1em;
-      }
-    </style>
   </body>
 </html>
