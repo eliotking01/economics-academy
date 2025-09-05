@@ -777,6 +777,8 @@
 
       // Submit form data to Formspree
       function submitToFormspree() {
+        console.log("Starting Formspree submission...");
+
         // Get stored form data
         const storedData = JSON.parse(
           localStorage.getItem("pendingSubmission") || "{}"
@@ -790,22 +792,21 @@
         formData.append("service_type", storedData.service_type);
         formData.append("service_price", storedData.service_price);
 
-        // Add files - CRITICAL: Use the field name that Formspree expects
-        // Try 'upload' first, as this is a common default for Formspree
+        // Add files - FIXED: Formspree expects the field name to be "upload"
         uploadedFiles.forEach((file) => {
-          formData.append("upload", file); // Try this first
-          // If that doesn't work, also try the other common default:
-          // formData.append("file", file);
+          console.log("Appending file:", file.name);
+          formData.append("upload", file); // This is the correct field name
         });
 
         // Debug: Log what we're about to send
-        console.log("Submitting to Formspree. Field names being used:");
+        console.log("FormData contents:");
         for (let [key, value] of formData.entries()) {
-          // Don't log the file contents, just the metadata
           if (value instanceof File) {
-            console.log(key, value.name, value.type, value.size + " bytes");
+            console.log(
+              `- ${key}: ${value.name} (${value.type}, ${value.size} bytes)`
+            );
           } else {
-            console.log(key, value);
+            console.log(`- ${key}: ${value}`);
           }
         }
 
@@ -813,7 +814,9 @@
         fetch(form.action, {
           method: "POST",
           body: formData,
-          // The 'Accept' header is correct for Formspree
+          headers: {
+            Accept: "application/json",
+          },
         })
           .then((response) => {
             console.log(
@@ -824,16 +827,17 @@
             if (response.ok) {
               return response.json();
             } else {
-              // Get more details from the response if possible
+              // Try to get more error details from the response
               return response.text().then((text) => {
+                console.error("Formspree error response:", text);
                 throw new Error(
-                  `Server error: ${response.status} ${response.statusText}. ${text}`
+                  `Formspree Error: ${response.status} - ${text}`
                 );
               });
             }
           })
           .then((data) => {
-            console.log("Formspree response data:", data);
+            console.log("Formspree success response:", data);
             // Clear stored data
             localStorage.removeItem("pendingSubmission");
             localStorage.removeItem("fileData");
