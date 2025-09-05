@@ -123,6 +123,32 @@
         color: #721c24;
         border: 1px solid #f5c6cb;
       }
+      .submission-instructions {
+        background-color: #f8f9fa;
+        border-left: 4px solid #4caf50;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 4px;
+      }
+      .reference-number {
+        font-weight: bold;
+        color: #4caf50;
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .email-button {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .email-button:hover {
+        background-color: #3d8b40;
+      }
     </style>
   </head>
   <body class="homepage is-preload">
@@ -152,7 +178,7 @@
                       class="box service-option"
                       data-product="single"
                       data-price="25"
-                      data-payment-link="https://buy.stripe.com/test_cNi28tdt079l1Mm5AXdjO00"
+                      data-payment-link="https://buy.stripe.com/cNi28tdt079l1Mm5AXdjO00"
                     >
                       <h3>Single 25-Mark Question</h3>
                       <div class="price">£25</div>
@@ -229,12 +255,7 @@
                     ></span
                     >)
                   </h3>
-                  <form
-                    id="submission-form"
-                    action="https://formspree.io/f/xnnbolzl"
-                    method="POST"
-                    enctype="multipart/form-data"
-                  >
+                  <form id="submission-form" method="POST">
                     <input
                       type="hidden"
                       name="service_type"
@@ -287,28 +308,6 @@
                         <div id="description-error" class="form-error"></div>
                       </div>
                       <div class="col-12">
-                        <label>Upload Your Work (PDF or Images) *</label>
-                        <div class="file-upload-area" id="drop-zone">
-                          <p>Drag & drop files here or click to browse</p>
-                          <input
-                            type="file"
-                            id="file-input"
-                            multiple
-                            accept=".pdf,.jpg,.jpeg,.png"
-                            style="display: none"
-                          />
-                          <button
-                            type="button"
-                            class="button small"
-                            id="browse-btn"
-                          >
-                            Browse Files
-                          </button>
-                        </div>
-                        <div id="file-error" class="form-error"></div>
-                        <div class="file-preview" id="file-preview"></div>
-                      </div>
-                      <div class="col-12">
                         <button
                           type="button"
                           id="stripe-payment-btn"
@@ -320,6 +319,44 @@
                       </div>
                     </div>
                   </form>
+                </div>
+
+                <!-- Submission Instructions (shown after payment) -->
+                <div
+                  id="submission-instructions"
+                  class="box"
+                  style="display: none; margin-top: 2em"
+                >
+                  <h3>Next Step: Submit Your Files</h3>
+                  <div class="submission-instructions">
+                    <p>Thank you for your payment! Your reference number is:</p>
+                    <div class="reference-number" id="reference-number"></div>
+                    <p>
+                      To complete your submission, please email your files to:
+                    </p>
+                    <p><strong>eliotkingtuition@gmail.com</strong></p>
+                    <p>Please include the following in your email:</p>
+                    <ul>
+                      <li>
+                        Your reference number:
+                        <strong id="ref-number-text"></strong>
+                      </li>
+                      <li>
+                        Your full name: <strong id="customer-name"></strong>
+                      </li>
+                      <li>
+                        The service you purchased:
+                        <strong id="service-name"></strong>
+                      </li>
+                    </ul>
+                    <p>Accepted file formats: PDF, JPG, JPEG, PNG</p>
+                    <a
+                      href="mailto:eliotkingtuition@gmail.com?subject=Paper Submission - Ref: #XXXXXX&body=Please include your reference number, name, and service details"
+                      class="email-button"
+                      id="email-button"
+                      >Open Email Client</a
+                    >
+                  </div>
                 </div>
               </section>
 
@@ -368,10 +405,10 @@
                     <section class="box">
                       <h3>How do I submit my work?</h3>
                       <p>
-                        You can email a scanned copy or Word/PDF file. I'll
-                        return your work with annotated comments and a summary
-                        of key areas for improvement. You may also send pictures
-                        if you are unable to use Word/PDF.
+                        After completing your payment, you'll receive
+                        instructions to email your files directly to us. We
+                        accept scanned copies, Word/PDF files, or pictures if
+                        you're unable to use Word/PDF.
                       </p>
                     </section>
                   </div>
@@ -385,533 +422,317 @@
         </div>
       </section>
 
-      <!-- Footer -->
-      <div id="footer-placeholder"></div>
-    </div>
-
-    <!-- Success Modal -->
-    <div
-      id="success-modal"
-      style="
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-      "
-    >
+      <!-- Success Modal -->
       <div
+        id="success-modal"
         style="
-          background: white;
-          padding: 2rem;
-          border-radius: 12px;
-          text-align: center;
-          max-width: 500px;
-          width: 90%;
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 1000;
+          justify-content: center;
+          align-items: center;
         "
       >
-        <h2 style="margin-bottom: 1rem; color: #2c3e50">Payment Successful!</h2>
-        <p style="margin-bottom: 1.5rem">
-          Thank you for your purchase. Your form has been submitted
-          successfully. We will be in touch shortly regarding your paper
-          marking.
-        </p>
-        <button id="close-modal" class="button">Close</button>
+        <div
+          style="
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+          "
+        >
+          <h2 style="margin-bottom: 1rem; color: #2c3e50">
+            Payment Successful!
+          </h2>
+          <p style="margin-bottom: 1.5rem">
+            Thank you for your purchase. Please check the submission
+            instructions below to complete your order by emailing your files to
+            us.
+          </p>
+          <button id="close-modal" class="button">Close</button>
+        </div>
       </div>
-    </div>
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-      <div class="spinner"></div>
-    </div>
+      <!-- Loading Overlay -->
+      <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+      </div>
 
-    <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/components/inject-templates.js"></script>
-    <script src="/js/browser.min.js"></script>
-    <script src="/js/breakpoints.min.js"></script>
-    <script src="/js/util.js"></script>
-    <script src="/js/main.js"></script>
+      <!-- Scripts -->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.dropotron.min.js"></script>
+      <script src="/js/components/inject-templates.js"></script>
+      <script src="/js/browser.min.js"></script>
+      <script src="/js/breakpoints.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
 
-    <script>
-      // Variables to store selected service and uploaded files
-      let selectedService = null;
-      let uploadedFiles = [];
-      let paymentWindow = null;
-      let paymentCheckInterval = null;
-      const maxFileSize = 10 * 1024 * 1024; // 10MB max file size
-      const maxTotalSize = 25 * 1024 * 1024; // 25MB max total size
+      <script>
+        // Variables to store selected service
+        let selectedService = null;
+        let paymentWindow = null;
+        let paymentCheckInterval = null;
 
-      // DOM Elements
-      const serviceOptions = document.querySelectorAll(".service-option");
-      const paymentForm = document.getElementById("payment-form");
-      const selectedServiceName = document.getElementById(
-        "selected-service-name"
-      );
-      const selectedPrice = document.getElementById("selected-price");
-      const serviceType = document.getElementById("service-type");
-      const servicePrice = document.getElementById("service-price");
-      const stripePaymentBtn = document.getElementById("stripe-payment-btn");
-      const form = document.getElementById("submission-form");
-      const dropZone = document.getElementById("drop-zone");
-      const fileInput = document.getElementById("file-input");
-      const browseBtn = document.getElementById("browse-btn");
-      const filePreview = document.getElementById("file-preview");
-      const successModal = document.getElementById("success-modal");
-      const closeModalBtn = document.getElementById("close-modal");
-      const loadingOverlay = document.getElementById("loading-overlay");
-      const paymentStatus = document.getElementById("payment-status");
-
-      // Service selection handling
-      serviceOptions.forEach((option) => {
-        option.addEventListener("click", function () {
-          // Remove selected class from all services
-          serviceOptions.forEach((opt) => {
-            opt.classList.remove("selected-service");
-          });
-
-          // Add selected class to clicked service
-          this.classList.add("selected-service");
-
-          // Store selected service details
-          selectedService = {
-            type: this.dataset.product,
-            price: this.dataset.price,
-            paymentLink: this.dataset.paymentLink,
-            name: this.querySelector("h3").textContent,
-          };
-
-          // Update payment form with selected service
-          selectedServiceName.textContent = selectedService.name;
-          selectedPrice.textContent = "£" + selectedService.price;
-          serviceType.value = selectedService.type;
-          servicePrice.value = selectedService.price;
-
-          // Show payment form
-          paymentForm.style.display = "block";
-
-          // Scroll to payment form
-          paymentForm.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-
-      // File upload handling
-      browseBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        fileInput.click();
-      });
-
-      // Handle file selection
-      fileInput.addEventListener("change", handleFiles);
-
-      // Drag and drop functionality
-      dropZone.addEventListener("dragover", function (e) {
-        e.preventDefault();
-        dropZone.style.borderColor = "#4caf50";
-        dropZone.style.backgroundColor = "#f0f8f0";
-      });
-
-      dropZone.addEventListener("dragleave", function () {
-        dropZone.style.borderColor = "#ccc";
-        dropZone.style.backgroundColor = "#f9f9f9";
-      });
-
-      dropZone.addEventListener("drop", function (e) {
-        e.preventDefault();
-        dropZone.style.borderColor = "#ccc";
-        dropZone.style.backgroundColor = "#f9f9f9";
-
-        if (e.dataTransfer.files.length) {
-          fileInput.files = e.dataTransfer.files;
-          handleFiles({ target: fileInput });
-        }
-      });
-
-      // Handle file processing
-      function handleFiles(e) {
-        const files = e.target.files;
-        let totalSize = uploadedFiles.reduce(
-          (total, file) => total + file.size,
-          0
+        // DOM Elements
+        const serviceOptions = document.querySelectorAll(".service-option");
+        const paymentForm = document.getElementById("payment-form");
+        const submissionInstructions = document.getElementById(
+          "submission-instructions"
         );
-
-        for (let i = 0; i < files.length; i++) {
-          const file = files[i];
-
-          // Validate file type
-          if (!isValidFileType(file)) {
-            showFileError("Please upload only PDF or image files (JPG, PNG).");
-            continue;
-          }
-
-          // Validate file size
-          if (file.size > maxFileSize) {
-            showFileError(
-              "File " + file.name + " is too large. Maximum size is 10MB."
-            );
-            continue;
-          }
-
-          // Validate total size
-          if (totalSize + file.size > maxTotalSize) {
-            showFileError("Total files size exceeds the 25MB limit.");
-            break;
-          }
-
-          // Add to uploaded files
-          uploadedFiles.push(file);
-          totalSize += file.size;
-
-          // Create preview
-          const previewItem = document.createElement("div");
-          previewItem.className = "file-preview-item";
-          previewItem.innerHTML = `
-            <span>${file.name} (${formatFileSize(file.size)})</span>
-            <span class="remove-file" data-index="${
-              uploadedFiles.length - 1
-            }">×</span>
-          `;
-          filePreview.appendChild(previewItem);
-        }
-
-        // Clear file input
-        fileInput.value = "";
-
-        // Add event listeners to remove buttons
-        document.querySelectorAll(".remove-file").forEach((btn) => {
-          btn.addEventListener("click", function () {
-            const index = parseInt(this.dataset.index);
-            uploadedFiles.splice(index, 1);
-            updateFilePreviews();
-          });
-        });
-
-        // Clear any errors
-        clearFileError();
-      }
-
-      // Update file previews
-      function updateFilePreviews() {
-        filePreview.innerHTML = "";
-
-        uploadedFiles.forEach((file, index) => {
-          const previewItem = document.createElement("div");
-          previewItem.className = "file-preview-item";
-          previewItem.innerHTML = `
-            <span>${file.name} (${formatFileSize(file.size)})</span>
-            <span class="remove-file" data-index="${index}">×</span>
-          `;
-          filePreview.appendChild(previewItem);
-        });
-
-        // Add event listeners to remove buttons
-        document.querySelectorAll(".remove-file").forEach((btn) => {
-          btn.addEventListener("click", function () {
-            const index = parseInt(this.dataset.index);
-            uploadedFiles.splice(index, 1);
-            updateFilePreviews();
-          });
-        });
-      }
-
-      // Validate file type
-      function isValidFileType(file) {
-        const allowedTypes = [
-          "application/pdf",
-          "image/jpeg",
-          "image/jpg",
-          "image/png",
-        ];
-        return allowedTypes.includes(file.type);
-      }
-
-      // Format file size
-      function formatFileSize(bytes) {
-        if (bytes === 0) return "0 Bytes";
-        const k = 1024;
-        const sizes = ["Bytes", "KB", "MB", "GB"];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
-      }
-
-      // Show file error
-      function showFileError(message) {
-        const errorElement = document.getElementById("file-error");
-        errorElement.textContent = message;
-        setTimeout(() => {
-          errorElement.textContent = "";
-        }, 5000);
-      }
-
-      // Clear file error
-      function clearFileError() {
-        document.getElementById("file-error").textContent = "";
-      }
-
-      // Form validation
-      function validateForm() {
-        let isValid = true;
-
-        // Validate name
-        const name = document.getElementById("name").value.trim();
-        if (!name) {
-          document.getElementById("name-error").textContent =
-            "Please enter your name";
-          isValid = false;
-        } else {
-          document.getElementById("name-error").textContent = "";
-        }
-
-        // Validate email
-        const email = document.getElementById("email").value.trim();
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email) {
-          document.getElementById("email-error").textContent =
-            "Please enter your email address";
-          isValid = false;
-        } else if (!emailPattern.test(email)) {
-          document.getElementById("email-error").textContent =
-            "Please enter a valid email address";
-          isValid = false;
-        } else {
-          document.getElementById("email-error").textContent = "";
-        }
-
-        // Validate description
-        const description = document.getElementById("description").value.trim();
-        if (!description) {
-          document.getElementById("description-error").textContent =
-            "Please describe what you want marked";
-          isValid = false;
-        } else {
-          document.getElementById("description-error").textContent = "";
-        }
-
-        // Validate files
-        if (uploadedFiles.length === 0) {
-          document.getElementById("file-error").textContent =
-            "Please upload at least one file";
-          isValid = false;
-        } else {
-          document.getElementById("file-error").textContent = "";
-        }
-
-        return isValid;
-      }
-
-      // Handle Stripe payment button click
-      stripePaymentBtn.addEventListener("click", function () {
-        // Validate form
-        if (!validateForm()) {
-          return;
-        }
-
-        // Store form data in localStorage to retrieve after payment
-        const formData = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          description: document.getElementById("description").value,
-          service_type: document.getElementById("service-type").value,
-          service_price: document.getElementById("service-price").value,
-          files_count: uploadedFiles.length,
-        };
-
-        localStorage.setItem("pendingSubmission", JSON.stringify(formData));
-
-        // Store files in a temporary FormData object
-        const tempFormData = new FormData();
-        uploadedFiles.forEach((file, index) => {
-          tempFormData.append(`file_${index}`, file);
-        });
-
-        // Store file data temporarily (this is a simplified approach)
-        // In a production environment, you might want to upload files to a temporary storage first
-        localStorage.setItem("fileData", "pending");
-
-        // Open Stripe payment in a new tab
-        paymentWindow = window.open(selectedService.paymentLink, "_blank");
-
-        // Show payment status message
-        paymentStatus.textContent =
-          "Payment window opened. Please complete your payment in the new tab. Do not close this page.";
-        paymentStatus.className = "payment-status";
-        paymentStatus.style.display = "block";
-
-        // Start checking for payment completion
-        startPaymentStatusCheck();
-      });
-
-      // Check payment status periodically
-      function startPaymentStatusCheck() {
-        // This is a simplified implementation
-        // In a real scenario, you would use webhooks or check against a database
-
-        paymentCheckInterval = setInterval(function () {
-          // Check if the payment window is closed (user might have completed payment)
-          if (paymentWindow && paymentWindow.closed) {
-            clearInterval(paymentCheckInterval);
-
-            // Ask user if they completed payment
-            const didComplete = confirm("Did you complete the payment?");
-
-            if (didComplete) {
-              // Show loading overlay
-              loadingOverlay.style.display = "flex";
-
-              // Submit form to Formspree
-              submitToFormspree();
-            } else {
-              paymentStatus.textContent =
-                "Payment not completed. Please try again.";
-              paymentStatus.className = "payment-status error";
-            }
-          }
-        }, 2000);
-      }
-
-      // Submit form data to Formspree
-      function submitToFormspree() {
-        console.log("Starting Formspree submission...");
-
-        // Get stored form data
-        const storedData = JSON.parse(
-          localStorage.getItem("pendingSubmission") || "{}"
+        const selectedServiceName = document.getElementById(
+          "selected-service-name"
         );
+        const selectedPrice = document.getElementById("selected-price");
+        const serviceType = document.getElementById("service-type");
+        const servicePrice = document.getElementById("service-price");
+        const stripePaymentBtn = document.getElementById("stripe-payment-btn");
+        const form = document.getElementById("submission-form");
+        const successModal = document.getElementById("success-modal");
+        const closeModalBtn = document.getElementById("close-modal");
+        const loadingOverlay = document.getElementById("loading-overlay");
+        const paymentStatus = document.getElementById("payment-status");
+        const referenceNumber = document.getElementById("reference-number");
+        const refNumberText = document.getElementById("ref-number-text");
+        const customerName = document.getElementById("customer-name");
+        const serviceName = document.getElementById("service-name");
+        const emailButton = document.getElementById("email-button");
 
-        // Create FormData object
-        const formData = new FormData();
-        formData.append("name", storedData.name);
-        formData.append("email", storedData.email);
-        formData.append("description", storedData.description);
-        formData.append("service_type", storedData.service_type);
-        formData.append("service_price", storedData.service_price);
+        // Service selection handling
+        serviceOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            // Remove selected class from all services
+            serviceOptions.forEach((opt) => {
+              opt.classList.remove("selected-service");
+            });
 
-        // Add files - FIXED: Formspree expects the field name to be "upload"
-        uploadedFiles.forEach((file) => {
-          console.log("Appending file:", file.name);
-          formData.append("upload", file); // This is the correct field name
-        });
+            // Add selected class to clicked service
+            this.classList.add("selected-service");
 
-        // Debug: Log what we're about to send
-        console.log("FormData contents:");
-        for (let [key, value] of formData.entries()) {
-          if (value instanceof File) {
-            console.log(
-              `- ${key}: ${value.name} (${value.type}, ${value.size} bytes)`
-            );
-          } else {
-            console.log(`- ${key}: ${value}`);
-          }
-        }
+            // Store selected service details
+            selectedService = {
+              type: this.dataset.product,
+              price: this.dataset.price,
+              paymentLink: this.dataset.paymentLink,
+              name: this.querySelector("h3").textContent,
+            };
 
-        // Submit to Formspree
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json",
-          },
-        })
-          .then((response) => {
-            console.log(
-              "Formspree response status:",
-              response.status,
-              response.statusText
-            );
-            if (response.ok) {
-              return response.json();
-            } else {
-              // Try to get more error details from the response
-              return response.text().then((text) => {
-                console.error("Formspree error response:", text);
-                throw new Error(
-                  `Formspree Error: ${response.status} - ${text}`
-                );
-              });
-            }
-          })
-          .then((data) => {
-            console.log("Formspree success response:", data);
-            // Clear stored data
-            localStorage.removeItem("pendingSubmission");
-            localStorage.removeItem("fileData");
-
-            // Hide loading overlay
-            loadingOverlay.style.display = "none";
-
-            // Show success message
-            paymentStatus.textContent =
-              "Payment and submission successful! We will be in touch shortly.";
-            paymentStatus.className = "payment-status success";
-
-            // Show success modal
-            successModal.style.display = "flex";
-
-            // Reset form
-            form.reset();
-            uploadedFiles = [];
-            filePreview.innerHTML = "";
-            paymentForm.style.display = "none";
-            serviceOptions.forEach((opt) =>
-              opt.classList.remove("selected-service")
-            );
-          })
-          .catch((error) => {
-            console.error("Full error details:", error);
-            loadingOverlay.style.display = "none";
-            paymentStatus.textContent =
-              "There was an error submitting your form. Please contact us directly. Error: " +
-              error.message;
-            paymentStatus.className = "payment-status error";
-          });
-      }
-
-      // Close modal handler
-      closeModalBtn.addEventListener("click", function () {
-        successModal.style.display = "none";
-      });
-
-      // Check for pending submissions on page load
-      window.addEventListener("load", function () {
-        const pendingSubmission = localStorage.getItem("pendingSubmission");
-
-        if (pendingSubmission) {
-          const data = JSON.parse(pendingSubmission);
-
-          // Ask user if they want to continue with pending submission
-          const shouldContinue = confirm(
-            "We noticed an incomplete submission. Would you like to continue?"
-          );
-
-          if (shouldContinue) {
-            // Pre-fill form
-            document.getElementById("name").value = data.name;
-            document.getElementById("email").value = data.email;
-            document.getElementById("description").value = data.description;
-            document.getElementById("service-type").value = data.service_type;
-            document.getElementById("service-price").value = data.service_price;
+            // Update payment form with selected service
+            selectedServiceName.textContent = selectedService.name;
+            selectedPrice.textContent = "£" + selectedService.price;
+            serviceType.value = selectedService.type;
+            servicePrice.value = selectedService.price;
 
             // Show payment form
             paymentForm.style.display = "block";
 
-            // Show message about files
-            paymentStatus.textContent =
-              "Please re-upload your files and complete the payment.";
-            paymentStatus.className = "payment-status";
-            paymentStatus.style.display = "block";
+            // Hide submission instructions if shown
+            submissionInstructions.style.display = "none";
+
+            // Scroll to payment form
+            paymentForm.scrollIntoView({ behavior: "smooth" });
+          });
+        });
+
+        // Form validation
+        function validateForm() {
+          let isValid = true;
+
+          // Validate name
+          const name = document.getElementById("name").value.trim();
+          if (!name) {
+            document.getElementById("name-error").textContent =
+              "Please enter your name";
+            isValid = false;
           } else {
-            // Clear stored data
-            localStorage.removeItem("pendingSubmission");
-            localStorage.removeItem("fileData");
+            document.getElementById("name-error").textContent = "";
           }
+
+          // Validate email
+          const email = document.getElementById("email").value.trim();
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email) {
+            document.getElementById("email-error").textContent =
+              "Please enter your email address";
+            isValid = false;
+          } else if (!emailPattern.test(email)) {
+            document.getElementById("email-error").textContent =
+              "Please enter a valid email address";
+            isValid = false;
+          } else {
+            document.getElementById("email-error").textContent = "";
+          }
+
+          // Validate description
+          const description = document
+            .getElementById("description")
+            .value.trim();
+          if (!description) {
+            document.getElementById("description-error").textContent =
+              "Please describe what you want marked";
+            isValid = false;
+          } else {
+            document.getElementById("description-error").textContent = "";
+          }
+
+          return isValid;
         }
-      });
-    </script>
+
+        // Generate a reference number
+        function generateReferenceNumber() {
+          const timestamp = new Date().getTime().toString().slice(-6);
+          const random = Math.floor(Math.random() * 1000)
+            .toString()
+            .padStart(3, "0");
+          return `EKT${timestamp}${random}`;
+        }
+
+        // Handle Stripe payment button click
+        stripePaymentBtn.addEventListener("click", function () {
+          // Validate form
+          if (!validateForm()) {
+            return;
+          }
+
+          // Store form data in localStorage to retrieve after payment
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            description: document.getElementById("description").value,
+            service_type: document.getElementById("service-type").value,
+            service_price: document.getElementById("service-price").value,
+          };
+
+          localStorage.setItem("pendingSubmission", JSON.stringify(formData));
+
+          // Open Stripe payment in a new tab
+          paymentWindow = window.open(selectedService.paymentLink, "_blank");
+
+          // Show payment status message
+          paymentStatus.textContent =
+            "Payment window opened. Please complete your payment in the new tab. Do not close this page.";
+          paymentStatus.className = "payment-status";
+          paymentStatus.style.display = "block";
+
+          // Start checking for payment completion
+          startPaymentStatusCheck();
+        });
+
+        // Check payment status periodically
+        function startPaymentStatusCheck() {
+          paymentCheckInterval = setInterval(function () {
+            // Check if the payment window is closed (user might have completed payment)
+            if (paymentWindow && paymentWindow.closed) {
+              clearInterval(paymentCheckInterval);
+
+              // Ask user if they completed payment
+              const didComplete = confirm("Did you complete the payment?");
+
+              if (didComplete) {
+                // Show loading overlay
+                loadingOverlay.style.display = "flex";
+
+                // Process the successful payment
+                processSuccessfulPayment();
+              } else {
+                paymentStatus.textContent =
+                  "Payment not completed. Please try again.";
+                paymentStatus.className = "payment-status error";
+              }
+            }
+          }, 2000);
+        }
+
+        // Process successful payment
+        function processSuccessfulPayment() {
+          console.log("Processing successful payment...");
+
+          // Get stored form data
+          const storedData = JSON.parse(
+            localStorage.getItem("pendingSubmission") || "{}"
+          );
+
+          // Generate a reference number
+          const refNumber = generateReferenceNumber();
+
+          // Update the submission instructions
+          referenceNumber.textContent = refNumber;
+          refNumberText.textContent = refNumber;
+          customerName.textContent = storedData.name;
+          serviceName.textContent =
+            storedData.service_type + " (£" + storedData.service_price + ")";
+
+          // Set up the email button
+          const emailSubject = `Paper Submission - Ref: ${refNumber}`;
+          const emailBody = `Reference Number: ${refNumber}%0D%0AName: ${storedData.name}%0D%0AService: ${storedData.service_type}%0D%0ADescription: ${storedData.description}`;
+          emailButton.href = `mailto:eliotkingtuition@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+          // Hide loading overlay
+          loadingOverlay.style.display = "none";
+
+          // Show success message
+          paymentStatus.textContent =
+            "Payment successful! Please follow the instructions below to complete your submission.";
+          paymentStatus.className = "payment-status success";
+
+          // Hide payment form and show submission instructions
+          paymentForm.style.display = "none";
+          submissionInstructions.style.display = "block";
+
+          // Scroll to instructions
+          submissionInstructions.scrollIntoView({ behavior: "smooth" });
+
+          // Clear stored data
+          localStorage.removeItem("pendingSubmission");
+        }
+
+        // Close modal handler
+        closeModalBtn.addEventListener("click", function () {
+          successModal.style.display = "none";
+        });
+
+        // Check for pending submissions on page load
+        window.addEventListener("load", function () {
+          const pendingSubmission = localStorage.getItem("pendingSubmission");
+
+          if (pendingSubmission) {
+            const data = JSON.parse(pendingSubmission);
+
+            // Ask user if they want to continue with pending submission
+            const shouldContinue = confirm(
+              "We noticed an incomplete submission. Would you like to continue?"
+            );
+
+            if (shouldContinue) {
+              // Pre-fill form
+              document.getElementById("name").value = data.name;
+              document.getElementById("email").value = data.email;
+              document.getElementById("description").value = data.description;
+              document.getElementById("service-type").value = data.service_type;
+              document.getElementById("service-price").value =
+                data.service_price;
+
+              // Show payment form
+              paymentForm.style.display = "block";
+
+              // Show message
+              paymentStatus.textContent =
+                "Please complete the payment to finish your submission.";
+              paymentStatus.className = "payment-status";
+              paymentStatus.style.display = "block";
+            } else {
+              // Clear stored data
+              localStorage.removeItem("pendingSubmission");
+            }
+          }
+        });
+      </script>
+    </div>
   </body>
 </html>
