@@ -107,6 +107,22 @@
           margin-bottom: 20px;
         }
       }
+      .payment-status {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+      }
+      .payment-status.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      .payment-status.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
     </style>
   </head>
   <body class="homepage is-preload">
@@ -136,7 +152,7 @@
                       class="box service-option"
                       data-product="single"
                       data-price="25"
-                      data-payment-link="https://buy.stripe.com/cNi28tdt079l1Mm5AXdjO00"
+                      data-payment-link="https://buy.stripe.com/test_cNi28tdt079l1Mm5AXdjO00"
                     >
                       <h3>Single 25-Mark Question</h3>
                       <div class="price">£25</div>
@@ -300,6 +316,7 @@
                         >
                           Complete Payment with Stripe
                         </button>
+                        <div id="payment-status" class="payment-status"></div>
                       </div>
                     </div>
                   </form>
@@ -408,6 +425,11 @@
       </div>
     </div>
 
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+
     <!-- Scripts -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.dropotron.min.js"></script>
@@ -421,6 +443,8 @@
       // Variables to store selected service and uploaded files
       let selectedService = null;
       let uploadedFiles = [];
+      let paymentWindow = null;
+      let paymentCheckInterval = null;
       const maxFileSize = 10 * 1024 * 1024; // 10MB max file size
       const maxTotalSize = 25 * 1024 * 1024; // 25MB max total size
 
@@ -441,6 +465,8 @@
       const filePreview = document.getElementById("file-preview");
       const successModal = document.getElementById("success-modal");
       const closeModalBtn = document.getElementById("close-modal");
+      const loadingOverlay = document.getElementById("loading-overlay");
+      const paymentStatus = document.getElementById("payment-status");
 
       // Service selection handling
       serviceOptions.forEach((option) => {
@@ -686,76 +712,133 @@
           return;
         }
 
-        // Create FormData object to send to Formspree
-        const formData = new FormData(form);
+        // Store form data in localStorage to retrieve after payment
+        const formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          description: document.getElementById("description").value,
+          service_type: document.getElementById("service-type").value,
+          service_price: document.getElementById("service-price").value,
+          files_count: uploadedFiles.length,
+        };
 
-        // Append files to form data
-        uploadedFiles.forEach((file) => {
-          formData.append("files", file);
+        localStorage.setItem("pendingSubmission", JSON.stringify(formData));
+
+        // Store files in a temporary FormData object
+        const tempFormData = new FormData();
+        uploadedFiles.forEach((file, index) => {
+          tempFormData.append(`file_${index}`, file);
         });
 
-        // Store form data in sessionStorage to retrieve after payment
-        const formObject = {};
-        for (let [key, value] of formData.entries()) {
-          if (key !== "files") {
-            formObject[key] = value;
-          }
-        }
-        sessionStorage.setItem("formData", JSON.stringify(formObject));
-        sessionStorage.setItem("fileCount", uploadedFiles.length);
+        // Store file data temporarily (this is a simplified approach)
+        // In a production environment, you might want to upload files to a temporary storage first
+        localStorage.setItem("fileData", "pending");
 
-        // Redirect to Stripe payment
-        window.location.href = selectedService.paymentLink;
+        // Open Stripe payment in a new tab
+        paymentWindow = window.open(selectedService.paymentLink, "_blank");
+
+        // Show payment status message
+        paymentStatus.textContent =
+          "Payment window opened. Please complete your payment in the new tab. Do not close this page.";
+        paymentStatus.className = "payment-status";
+        paymentStatus.style.display = "block";
+
+        // Start checking for payment completion
+        startPaymentStatusCheck();
       });
 
-      // Check if returning from Stripe payment (simulated here)
-      function checkPaymentStatus() {
-        // This is a simulation - in reality you would check for a success parameter
-        // or use webhooks to confirm payment was successful
-        const urlParams = new URLSearchParams(window.location.search);
-        const paymentSuccess = urlParams.get("payment_success");
+      // Check payment status periodically
+      function startPaymentStatusCheck() {
+        // This is a simplified implementation
+        // In a real scenario, you would use webhooks or check against a database
 
-        if (paymentSuccess === "true") {
-          // Retrieve form data from sessionStorage
-          const formData = JSON.parse(
-            sessionStorage.getItem("formData") || "{}"
-          );
-          const fileCount = parseInt(
-            sessionStorage.getItem("fileCount") || "0"
-          );
+        paymentCheckInterval = setInterval(function () {
+          // Check if the payment window is closed (user might have completed payment)
+          if (paymentWindow && paymentWindow.closed) {
+            clearInterval(paymentCheckInterval);
 
-          if (Object.keys(formData).length > 0 && fileCount > 0) {
-            // Submit the form to Formspree
-            const submitForm = document.getElementById("submission-form");
-            const formDataObj = new FormData(submitForm);
+            // Ask user if they completed payment
+            const didComplete = confirm("Did you complete the payment?");
 
-            // Append files
-            for (let i = 0; i < fileCount; i++) {
-              formDataObj.append("file_" + i, "uploaded");
+            if (didComplete) {
+              // Show loading overlay
+              loadingOverlay.style.display = "flex";
+
+              // Submit form to Formspree
+              submitToFormspree();
+            } else {
+              paymentStatus.textContent =
+                "Payment not completed. Please try again.";
+              paymentStatus.className = "payment-status error";
             }
-
-            fetch(submitForm.action, {
-              method: "POST",
-              body: formDataObj,
-              headers: {
-                Accept: "application/json",
-              },
-            })
-              .then((response) => {
-                if (response.ok) {
-                  // Show success modal
-                  successModal.style.display = "flex";
-
-                  // Clear stored data
-                  sessionStorage.removeItem("formData");
-                  sessionStorage.removeItem("fileCount");
-                }
-              })
-              .catch((error) => {
-                console.error("Error submitting form:", error);
-              });
           }
-        }
+        }, 2000);
+      }
+
+      // Submit form data to Formspree
+      function submitToFormspree() {
+        // Get stored form data
+        const storedData = JSON.parse(
+          localStorage.getItem("pendingSubmission") || "{}"
+        );
+
+        // Create FormData object
+        const formData = new FormData();
+        formData.append("name", storedData.name);
+        formData.append("email", storedData.email);
+        formData.append("description", storedData.description);
+        formData.append("service_type", storedData.service_type);
+        formData.append("service_price", storedData.service_price);
+
+        // Add files
+        uploadedFiles.forEach((file, index) => {
+          formData.append("file_" + index, file);
+        });
+
+        // Submit to Formspree
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              // Clear stored data
+              localStorage.removeItem("pendingSubmission");
+              localStorage.removeItem("fileData");
+
+              // Hide loading overlay
+              loadingOverlay.style.display = "none";
+
+              // Show success message
+              paymentStatus.textContent =
+                "Payment and submission successful! We will be in touch shortly.";
+              paymentStatus.className = "payment-status success";
+
+              // Show success modal
+              successModal.style.display = "flex";
+
+              // Reset form
+              form.reset();
+              uploadedFiles = [];
+              filePreview.innerHTML = "";
+              paymentForm.style.display = "none";
+              serviceOptions.forEach((opt) =>
+                opt.classList.remove("selected-service")
+              );
+            } else {
+              throw new Error("Form submission failed");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            loadingOverlay.style.display = "none";
+            paymentStatus.textContent =
+              "There was an error submitting your form. Please contact us directly.";
+            paymentStatus.className = "payment-status error";
+          });
       }
 
       // Close modal handler
@@ -763,8 +846,41 @@
         successModal.style.display = "none";
       });
 
-      // Check payment status on page load
-      window.addEventListener("load", checkPaymentStatus);
+      // Check for pending submissions on page load
+      window.addEventListener("load", function () {
+        const pendingSubmission = localStorage.getItem("pendingSubmission");
+
+        if (pendingSubmission) {
+          const data = JSON.parse(pendingSubmission);
+
+          // Ask user if they want to continue with pending submission
+          const shouldContinue = confirm(
+            "We noticed an incomplete submission. Would you like to continue?"
+          );
+
+          if (shouldContinue) {
+            // Pre-fill form
+            document.getElementById("name").value = data.name;
+            document.getElementById("email").value = data.email;
+            document.getElementById("description").value = data.description;
+            document.getElementById("service-type").value = data.service_type;
+            document.getElementById("service-price").value = data.service_price;
+
+            // Show payment form
+            paymentForm.style.display = "block";
+
+            // Show message about files
+            paymentStatus.textContent =
+              "Please re-upload your files and complete the payment.";
+            paymentStatus.className = "payment-status";
+            paymentStatus.style.display = "block";
+          } else {
+            // Clear stored data
+            localStorage.removeItem("pendingSubmission");
+            localStorage.removeItem("fileData");
+          }
+        }
+      });
     </script>
   </body>
 </html>
