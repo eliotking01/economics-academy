@@ -4,6 +4,7 @@
   --accent-teal: #2a8998;
   --exam-green: #27ae60;
   --key-term-pink: #c2185b;
+  --content-example-green: #388e3c;
   --spec-purple: #5e35b1;
   --evaluation-orange: #f57c00;
   --light-bg: #f8fafc;
@@ -39,6 +40,7 @@
 
 .revision-notes-content .notes-container > header.major h2 {
   color: var(--primary-blue);
+  background: white !important;
   font-family: "Source Sans Pro";
   font-weight: 700;
   font-size: 2.4em;
@@ -98,6 +100,13 @@
   font-size: 1.05em;
 }
 
+/* General bold text styling */
+.revision-notes-content strong,
+.revision-notes-content b {
+  font-weight: 800;
+  color: inherit; /* Maintains the current text color */
+}
+
 /* Key definitions - premium treatment */
 .revision-notes-content .key-definition {
   position: relative;
@@ -109,6 +118,18 @@
   border-left: 4px solid var(--key-term-pink);
   margin: 1.5em 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.revision-notes-content .content-example {
+  position: relative;
+  font-weight: 600;
+  color: var(--content-example-green);
+  background-color: rgba(56, 142, 60, 0.05);
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  border-radius: 6px;
+  border-left: 4px solid var(--content-example-green);
+  margin: 1.5em 0;
+  box-shadow: 0 2px 8px rgba(125, 39, 39, 0.04);
 }
 
 /* Enhanced exam tips */
@@ -216,8 +237,8 @@
   padding-top: 0;
 }
 
-/* Case study boxes */
-.revision-notes-content .case-study {
+/* Application boxes */
+.revision-notes-content .application {
   background: var(--light-bg);
   border: 1px solid var(--border-light);
   border-radius: 8px;
@@ -226,8 +247,8 @@
   position: relative;
 }
 
-.revision-notes-content .case-study:before {
-  content: "CASE STUDY";
+.revision-notes-content .application:before {
+  content: "APPLICATION";
   position: absolute;
   top: -12px;
   left: 20px;
@@ -509,7 +530,7 @@
   .revision-notes-content .exam-tip,
   .revision-notes-content .spec-alert,
   .revision-notes-content .evaluation-point,
-  .revision-notes-content .case-study {
+  .revision-notes-content .application {
     margin: 1.8em 0;
     padding: 1.2em;
   }
@@ -517,7 +538,7 @@
   .revision-notes-content .exam-tip:before,
   .revision-notes-content .spec-alert:before,
   .revision-notes-content .evaluation-point:before,
-  .revision-notes-content .case-study:before {
+  .revision-notes-content .application:before {
     font-size: 0.7em;
     left: 15px;
     padding: 0.2em 0.8em;
@@ -657,7 +678,7 @@
   .revision-notes-content .exam-tip,
   .revision-notes-content .spec-alert,
   .revision-notes-content .evaluation-point,
-  .revision-notes-content .case-study {
+  .revision-notes-content .application {
     margin: 1.5em 0;
     padding: 1em;
   }
