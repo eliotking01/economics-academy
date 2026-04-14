@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -26,7 +26,7 @@
     </title>
     <meta
       name="description"
-      content="Comprehensive revision notes for Edexcel A-Level Economics Theme 1.3.4 on Information Gaps. Explore asymmetric information, adverse selection, moral hazard, government interventions, real-world examples, and exam tips to excel in your exams."
+      content="Comprehensive revision notes for Edexcel A-Level Economics Theme 1.3.4 on information gaps. Understand asymmetric information, adverse selection, moral hazard, and how intervention can reduce market failure."
     />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
@@ -34,34 +34,6 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- MathJax Configuration -->
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["$", "$"],
-            ["\\(", "\\)"],
-          ], // Both $...$ and \(...\)
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true, // Allows \_ in text
-          autoload: {
-            color: [],
-            ams: ["boldsymbol"], // For \mathbf{}
-          },
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-        },
-      };
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-      async
-    ></script>
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -83,231 +55,121 @@
           <div class="notes-container">
             <header class="major">
               <h2>1.3.4 Information Gaps</h2>
-              <p class="subtitle">
-                Edexcel A-Level Economics (9EC0) | Theme 1.3.4
-              </p>
             </header>
 
             <div class="spec-alert">
-              <strong>Specification Coverage:</strong> Students must understand
-              how asymmetric information leads to market failure through adverse
-              selection and moral hazard. Analysis should include real-world
-              examples and evaluate government responses like regulation and
-              information provision.
+              <strong>Specification Coverage:</strong> Edexcel unit 1.3.4 -
+              Information gaps. Students should understand how imperfect and
+              asymmetric information can distort market decisions and lead to
+              market failure through adverse selection and moral hazard.
             </div>
 
             <section>
-              <h3>Key Concepts</h3>
-              <div class="table-container">
-                <table class="concept-table">
-                  <thead>
-                    <tr>
-                      <th>Term</th>
-                      <th>Definition</th>
-                      <th>Market Impact</th>
-                      <th>2024 Example</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Symmetric Information</strong></td>
-                      <td>Buyers/sellers have equal knowledge</td>
-                      <td>Theoretical efficient equilibrium</td>
-                      <td>Stock exchange trading (real-time data)</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Asymmetric Information</strong></td>
-                      <td>One party knows more than the other</td>
-                      <td>Price/quantity distortions</td>
-                      <td>AI algorithm patents (developers vs users)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="exam-tip">
-                <strong>Exam Insight:</strong> 88% of 2023 questions required
-                specific examples - memorise 2-3 contemporary cases for each
-                information failure type.
-              </div>
+              <h3>The Problem of Asymmetric Information</h3>
+              <p>
+                A key assumption of perfect market efficiency is
+                <strong>perfect information</strong>, where buyers and sellers
+                have equal, complete knowledge.
+              </p>
+              <p>
+                In reality, <span class="key-definition">information gaps</span>
+                are common.
+              </p>
+              <p>
+                The most significant is
+                <span class="key-definition">asymmetric information</span>,
+                where one party in a transaction has more or better information
+                than the other.
+              </p>
+              <p>
+                This distorts decision-making and leads to market failure.
+              </p>
             </section>
 
             <section>
-              <h3>Types of Information Failure</h3>
-              <div class="strategy-grid">
-                <div class="strategy-box">
-                  <h4>1. Adverse Selection</h4>
-                  <p>
-                    <strong>Definition:</strong> When one party uses private
-                    information before a transaction
-                  </p>
-                  <ul>
-                    <li>
-                      Used car market: Sellers know vehicle history ("lemons
-                      problem")
-                    </li>
-                    <li>
-                      Health insurance: High-risk individuals more likely to buy
-                    </li>
-                  </ul>
-                  <div class="case-study">
-                    <strong>UK Impact:</strong> Private health premiums rose 34%
-                    after COVID as healthier users cancelled policies (Aviva
-                    2023).
-                  </div>
-                </div>
-                <div class="strategy-box">
-                  <h4>2. Moral Hazard</h4>
-                  <p>
-                    <strong>Definition:</strong> When behavior changes after
-                    transaction due to risk transfer
-                  </p>
-                  <ul>
-                    <li>Banking: Risky lending knowing about bailouts</li>
-                    <li>Insurance: Reckless driving when fully covered</li>
-                  </ul>
-                  <div class="case-study">
-                    <strong>Regulatory Response:</strong> UK Senior Managers
-                    Regime (2016) reduced misconduct fines by £4.2bn/year (FCA).
-                  </div>
-                </div>
-              </div>
+              <h3>Consequences of Asymmetric Information</h3>
 
-              <!-- DIAGRAM PLACEHOLDER -->
-              <div class="diagram-placeholder">
-                <strong>Diagram Alert:</strong> Insert demand/supply shift
-                diagram showing:
+              <h4>Adverse Selection</h4>
+              <p>
+                <span class="key-definition">Adverse selection:</span> occurs
+                <strong>before</strong> a transaction.
+              </p>
+              <p>
+                The party with less information cannot judge quality
+                accurately, so they assume the worst. This drives
+                high-quality goods out of the market.
+              </p>
+              <p>
+                <strong>Example:</strong> In the used car market, sellers know
+                the car's history but buyers do not.
+              </p>
+              <p>
+                Buyers assume that all cars may be low-quality
+                <strong>"lemons"</strong>, so they are only willing to pay a
+                low price. This pushes sellers of good cars out of the market,
+                leaving only lemons.
+              </p>
+
+              <h4>Moral Hazard</h4>
+              <p>
+                <span class="key-definition">Moral hazard:</span> occurs
+                <strong>after</strong> a transaction.
+              </p>
+              <p>
+                One party changes their behaviour in a riskier way because they
+                do not bear the full consequences of their actions.
+              </p>
+              <p>
+                <strong>Example:</strong> With comprehensive car insurance, a
+                driver may become less cautious because the insurer bears the
+                cost of an accident.
+              </p>
+            </section>
+
+            <section>
+              <h3>Result: Market Failure</h3>
+              <p>
+                Asymmetric information causes a
+                <strong>misallocation of resources</strong>.
+              </p>
+              <p>
+                Markets may <strong>over-provide</strong> low-quality or harmful
+                goods because buyers are unaware of defects.
+              </p>
+              <p>
+                Markets may also <strong>under-provide</strong> high-quality or
+                beneficial goods because buyers cannot identify them.
+              </p>
+              <p>
+                This results in a loss of
+                <strong>allocative efficiency</strong>.
+              </p>
+            </section>
+
+            <section>
+              <h3>Exam Preparation</h3>
+              <div class="exam-tip">
                 <ul>
                   <li>
-                    Adverse selection: Supply curve shifts left as quality
-                    uncertainty increases
+                    <strong>Key terminology:</strong> Define and distinguish
+                    between symmetric information, asymmetric information,
+                    adverse selection, and moral hazard.
                   </li>
                   <li>
-                    Moral hazard: Demand curve shifts right as risk-taking
-                    increases
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            <section>
-              <h3>Government Solutions</h3>
-              <div class="table-container">
-                <table class="concept-table">
-                  <thead>
-                    <tr>
-                      <th>Policy</th>
-                      <th>Mechanism</th>
-                      <th>UK Example</th>
-                      <th>Effectiveness</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Compulsory Disclosure</strong></td>
-                      <td>Mandate information sharing</td>
-                      <td>NHS food labelling (traffic light system)</td>
-                      <td>
-                        Reduced obesity-related costs by £4.7bn since 2018
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Regulation</strong></td>
-                      <td>Set minimum standards</td>
-                      <td>Financial Services Act (2023) crypto disclosures</td>
-                      <td>Reduced scam losses by 28% in 2024</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Public Provision</strong></td>
-                      <td>Supply neutral information</td>
-                      <td>MoneyHelper.org (free financial advice)</td>
-                      <td>2.3m users prevented bad loans in 2023</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="evaluation-point">
-                <h4>Policy Limitations</h4>
-                <ol>
-                  <li>
-                    <strong>Information overload:</strong> 64% of consumers
-                    ignore complex labels (Which? 2024)
+                    <strong>Apply examples:</strong> Use clear examples such as
+                    used cars for adverse selection and insurance for moral
+                    hazard.
                   </li>
                   <li>
-                    <strong>Regulatory lag:</strong> AI tools evolve faster than
-                    disclosure rules
+                    <strong>Application:</strong> The
+                    <strong>VW emissions scandal</strong> is a strong example of
+                    producers hiding negative information.
                   </li>
                   <li>
-                    <strong>Enforcement costs:</strong> FCA spends £120m/year
-                    monitoring disclosures
-                  </li>
-                </ol>
-              </div>
-            </section>
-
-            <section>
-              <h3>Exam Preparation Toolkit</h3>
-              <div class="exam-tip">
-                <strong>Recent Exam Questions:</strong>
-                <ol>
-                  <li>
-                    "Analyse how information gaps contributed to the 2008
-                    financial crisis" (Edexcel 2023, 15 marks)
-                  </li>
-                  <li>
-                    "Evaluate whether regulation is the most effective solution
-                    to asymmetric information in healthcare markets" (Edexcel
-                    2022, 25 marks)
-                  </li>
-                  <li>
-                    "Discuss the impact of digital platforms on information
-                    failures in consumer markets" (Edexcel 2021, 20 marks)
-                  </li>
-                </ol>
-              </div>
-
-              <div class="evaluation-point">
-                <h4>Advanced Evaluation Framework</h4>
-                <div class="table-container">
-                  <table>
-                    <tr>
-                      <th>Evaluation Angle</th>
-                      <th>Adverse Selection</th>
-                      <th>Moral Hazard</th>
-                    </tr>
-                    <tr>
-                      <td><strong>Technological Impact</strong></td>
-                      <td>
-                        Blockchain verifies used car histories (HPI Check)
-                      </td>
-                      <td>
-                        Telematics insurance reduces reckless driving by 41%
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Behavioural Insights</strong></td>
-                      <td>
-                        Default pension enrolment overcame savings ignorance
-                      </td>
-                      <td>Nudge letters reduced tax evasion by £3.1bn</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-              <div class="case-study">
-                <strong>Examiner's Report Insight:</strong> In 2023, top scripts
-                used:
-                <ul>
-                  <li>
-                    Specific data: "63% of UK consumers don't understand APR"
-                    (FCA)
-                  </li>
-                  <li>Clear links between case studies and theory</li>
-                  <li>
-                    Balanced evaluation of digital solutions (e.g., ChatGPT both
-                    creates and solves information gaps)
+                    <strong>Link to intervention:</strong> Information gaps can
+                    justify government action such as regulation, compulsory
+                    vehicle MOTs, legal requirements like food labelling, or the
+                    provision of independent advice.
                   </li>
                 </ul>
               </div>
