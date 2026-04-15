@@ -19,6 +19,7 @@ DIAGRAM_RE = re.compile(r"^\s*\\?\*?\(?(Hand-draw Diagram[^)]*|Hand-draw Diagram
 WHOLE_BOLD_RE = re.compile(r"^\s*\*\*(.+?)\*\*\s*\\?\s*$")
 STRONG_LABEL_RE = re.compile(r"^\s*\*\*([^*]+?)\*\*:\s*(.+?)\s*$")
 PLAIN_LABEL_RE = re.compile(r"^\s*([A-Z][A-Za-z /&()'-]{1,40}):\s*(.+?)\s*$")
+FLEX_LABEL_RE = re.compile(r"^\s*(?:\*\*)?([^:*]+?)(?:\*\*)?:\s*(.+?)\s*$")
 
 MATHJAX_HINT_RE = re.compile(
     r"Hand-draw Diagram|\\\(|\\\[|\bFormula\b|\bMC\s*=\s*MR\b|\bMR\s*=\s*0\b|\bQm\b|\bQopt\b|\bPmax\b|\bPmin\b|\bMSC\b|\bMPC\b|\bMSB\b|\bMPB\b|½|<sub>|</sub>",
@@ -35,6 +36,39 @@ KEY_DEFINITION_LABELS = {
     "adverse selection",
     "moral hazard",
 }
+
+SPEC_STOP_TERMS = {
+    "definition",
+    "definitions",
+    "example",
+    "examples",
+    "purpose",
+    "purposes",
+    "effect",
+    "effects",
+    "mechanism",
+    "mechanisms",
+    "consequence",
+    "consequences",
+    "result",
+    "results",
+    "rule",
+    "rules",
+    "why",
+    "what it is",
+    "types",
+    "new equilibrium",
+    "diagram analysis",
+    "key takeaways",
+    "exam focus",
+    "exam preparation",
+    "key exam tips",
+}
+
+SPEC_BAD_TERM_RE = re.compile(
+    r"^(?:P\d*|Q\d*|Pe|Qe|Pc|Pp|Pmax|Pmin|Qm|Qopt|MC|MR|AR|AC|MPC|MSC|MPB|MSB|S\d*|D|and|before|after)$",
+    re.IGNORECASE,
+)
 
 
 def slugify(text: str) -> str:
@@ -84,6 +118,296 @@ def get_theme_title(subject: str, theme: str) -> str:
     if not match:
         return f"Edexcel Theme {theme}"
     return " ".join(match.group(1).split())
+
+
+def dedupe_keep_order(items: Iterable[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for item in items:
+        key = item.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(item)
+    return result
+
+
+def normalise_phrase(text: str) -> str:
+    text = clean_line(re.sub(r"<[^>]+>", "", text))
+    text = re.sub(r"\s+", " ", text).strip(" .;,:-")
+    return text
+
+
+def markdown_to_text(text: str) -> str:
+    text = clean_line(text)
+    text = re.sub(r"`([^`]+)`", r"\1", text)
+    text = text.replace("**", "").replace("__", "").replace("*", "").replace("_", "")
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"\\([()[\].*])", r"\1", text)
+    return normalise_phrase(text)
+
+
+def strip_list_prefix(text: str) -> str:
+    text = clean_line(text)
+    text = re.sub(r"^\s*-\s+", "", text)
+    text = re.sub(r"^\s*\d+\s*\\?\.\s+", "", text)
+    return text.strip()
+
+
+def spec_source_lines(lines: list[str]) -> list[str]:
+    source: list[str] = []
+    for line in lines:
+        if DIAGRAM_RE.match(clean_line(line)):
+            break
+        source.append(line)
+    return source
+
+
+def merge_wrapped_spec_lines(lines: list[str]) -> list[str]:
+    merged: list[str] = []
+    buffer: list[str] = []
+
+    def flush() -> None:
+        nonlocal buffer
+        if buffer:
+            merged.append(" ".join(part.strip().rstrip("\\") for part in buffer if part.strip()))
+            buffer = []
+
+    for index, line in enumerate(lines):
+        cleaned = clean_line(line)
+        if not cleaned or is_comment(cleaned):
+            flush()
+            continue
+        if DIAGRAM_RE.match(cleaned) or is_table_start(lines, index) or match_list_item(line):
+            flush()
+            merged.append(line)
+            continue
+        buffer.append(line)
+
+    flush()
+    return merged
+
+
+def extract_spec_terms(lines: list[str]) -> list[str]:
+    terms: list[str] = []
+
+    for line in lines:
+        cleaned = clean_line(line)
+        if not cleaned or is_comment(cleaned):
+            continue
+
+        strong_label = STRONG_LABEL_RE.match(cleaned)
+        if strong_label:
+            label = normalise_phrase(strong_label.group(1))
+            if label and label.lower() not in SPEC_STOP_TERMS and len(label) <= 50:
+                terms.append(label)
+
+        plain_label = PLAIN_LABEL_RE.match(cleaned)
+        if plain_label:
+            label = normalise_phrase(plain_label.group(1))
+            if label and label.lower() not in SPEC_STOP_TERMS and len(label) <= 50:
+                terms.append(label)
+
+        for match in re.finditer(r"\*\*(.+?)\*\*", cleaned):
+            bold = normalise_phrase(match.group(1))
+            if (
+                bold
+                and bold.lower() not in SPEC_STOP_TERMS
+                and 2 <= len(bold) <= 60
+                and len(bold.split()) <= 5
+                and not SPEC_BAD_TERM_RE.match(bold)
+                and not re.fullmatch(r"[A-Z0-9()<>/=+\- ]+", bold)
+            ):
+                terms.append(bold)
+
+    return dedupe_keep_order(terms)
+
+
+def join_list_naturally(items: list[str]) -> str:
+    if not items:
+        return ""
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} and {items[1]}"
+    return f"{', '.join(items[:-1])}, and {items[-1]}"
+
+
+def heading_to_phrase(heading: str) -> str:
+    heading = clean_line(heading)
+    lower = heading.lower()
+
+    replacements = [
+        ("what is ", ""),
+        ("the problem of ", ""),
+        ("the free market problem & ", ""),
+        ("the free market problem and ", ""),
+        ("exam focus: ", ""),
+    ]
+    for old, new in replacements:
+        if lower.startswith(old):
+            heading = heading[len(old) :]
+            lower = heading.lower()
+            break
+
+    return heading[0].lower() + heading[1:] if heading else heading
+
+
+def extract_bullet_leads(lines: list[str], limit: int = 4) -> list[str]:
+    bullets: list[str] = []
+    for line in lines:
+        match = match_list_item(line)
+        if not match:
+            continue
+        text = markdown_to_text(match[2])
+        strong_label = STRONG_LABEL_RE.match(strip_list_prefix(line))
+        if strong_label:
+            label = markdown_to_text(strong_label.group(1))
+            if label and label.lower() not in SPEC_STOP_TERMS:
+                bullets.append(label)
+                continue
+        plain_label = PLAIN_LABEL_RE.match(strip_list_prefix(line))
+        if plain_label:
+            label = markdown_to_text(plain_label.group(1))
+            if label and label.lower() not in SPEC_STOP_TERMS:
+                bullets.append(label)
+                continue
+        if text:
+            lead = text.split(".")[0]
+            lead_key = lead.strip(" :;,-").lower()
+            if lead_key not in SPEC_STOP_TERMS and not SPEC_BAD_TERM_RE.match(lead):
+                bullets.append(lead)
+        if len(bullets) >= limit:
+            break
+    return dedupe_keep_order(bullets[:limit])
+
+
+def extract_meaningful_summary(lines: list[str]) -> str | None:
+    for line in lines:
+        cleaned = clean_line(line)
+        if not cleaned or is_comment(cleaned):
+            continue
+        if DIAGRAM_RE.match(cleaned):
+            continue
+        match = match_list_item(cleaned)
+        if match:
+            text = markdown_to_text(match[2])
+        else:
+            text = markdown_to_text(cleaned)
+
+        label_match = FLEX_LABEL_RE.match(strip_list_prefix(cleaned))
+        if label_match:
+            label = markdown_to_text(label_match.group(1)).lower()
+            value = markdown_to_text(label_match.group(2))
+            if label in {"purpose", "effect", "mechanism", "consequence", "result", "why", "objective"} and value:
+                return value
+            if label == "example":
+                continue
+
+        plain_label = PLAIN_LABEL_RE.match(strip_list_prefix(cleaned))
+        if plain_label:
+            label = markdown_to_text(plain_label.group(1)).lower()
+            value = markdown_to_text(plain_label.group(2))
+            if label in {"purpose", "effect", "mechanism", "consequence", "result", "why", "objective"} and value:
+                return value
+            if label == "example":
+                continue
+
+        if text.lower().startswith("example:"):
+            continue
+        if text and not re.match(r"^(draw|mark|label|show|shade|highlight)\b", text.lower()):
+            return text
+    return None
+
+
+def summarise_section_for_spec(heading: str, lines: list[str]) -> str | None:
+    lines = merge_wrapped_spec_lines(spec_source_lines(lines))
+    heading_phrase = heading_to_phrase(heading)
+    heading_lower = heading_phrase.lower()
+    terms = extract_spec_terms(lines)
+    bullet_leads = extract_bullet_leads(lines)
+    summary = extract_meaningful_summary(lines)
+
+    if summary and summary.endswith("to"):
+        summary = None
+
+    if "definition" in heading_lower:
+        chosen = terms[:4]
+        if chosen:
+            return f"the key definitions and concepts around {join_list_naturally(chosen)}"
+        return f"the key definitions in {heading_phrase}"
+
+    if any(keyword in heading_lower for keyword in ["reason", "cause", "factor", "determinant", "component", "characteristic", "types", "objectives"]):
+        chosen = bullet_leads[:4] or terms[:4]
+        if chosen:
+            return f"{heading_phrase}, including {join_list_naturally(chosen)}"
+        return heading_phrase
+
+    if any(keyword in heading_lower for keyword in ["problem", "consequence", "result"]):
+        chosen = terms[:4] or bullet_leads[:4]
+        if chosen:
+            return f"{heading_phrase}, including {join_list_naturally(chosen)}"
+        if summary:
+            if summary[0].isupper():
+                summary = summary[0].lower() + summary[1:]
+            return f"{heading_phrase}, including {summary}"
+        return heading_phrase
+
+    if any(keyword in heading_lower for keyword in ["intervention", "solution", "strategy", "methods"]):
+        chosen = bullet_leads[:4] or terms[:4]
+        if chosen:
+            return f"{heading_phrase}, including {join_list_naturally(chosen)}"
+        if summary:
+            return f"{heading_phrase}, especially {summary[0].lower() + summary[1:]}"
+        return heading_phrase
+
+    if "government provision" in heading_lower and summary and "taxation" in summary.lower():
+        return f"{heading_phrase}, including public funding through taxation"
+
+    if summary and summary.lower().startswith("to ") and terms:
+        return f"{heading_phrase}, including its purpose and {join_list_naturally(terms[:2])}"
+
+    if terms and summary and len(summary.split()) > 16:
+        return f"{heading_phrase}, including {join_list_naturally(terms[:4])}"
+
+    if summary:
+        if summary[0].isupper():
+            summary = summary[0].lower() + summary[1:]
+        return f"{heading_phrase}, including {summary}"
+
+    chosen = bullet_leads[:4] or terms[:4]
+    if chosen:
+        return f"{heading_phrase}, including {join_list_naturally(chosen)}"
+    return heading_phrase
+
+
+def build_specification_coverage(code: str, title: str, sections: list[tuple[str, list[str]]]) -> str:
+    non_exam_sections = [(heading, lines) for heading, lines in sections if heading != "Exam Preparation"]
+    clauses: list[str] = []
+
+    for heading, lines in non_exam_sections[:4]:
+        clause = summarise_section_for_spec(heading, lines)
+        if clause:
+            clauses.append(clause)
+
+    clauses = dedupe_keep_order(clauses)
+    if clauses:
+        joined = "; ".join(clauses[:-1])
+        if len(clauses) == 1:
+            body = clauses[0]
+        elif len(clauses) == 2:
+            body = f"{clauses[0]}, and {clauses[1]}"
+        else:
+            body = f"{joined}; and {clauses[-1]}"
+        return (
+            f"Edexcel unit {code} - {title}. Students should be able to understand "
+            f"and explain {body}."
+        )
+
+    return (
+        f"Edexcel unit {code} - {title}. Students should be able to understand "
+        f"the key ideas, analysis, and evaluation points needed for this topic."
+    )
 
 
 def match_list_item(line: str):
@@ -407,6 +731,7 @@ def build_html(
     output_title = f"{code} {title}"
     breadcrumb_title = output_title
     theme_title = get_theme_title(subject, theme)
+    specification_coverage = build_specification_coverage(code, title, sections)
 
     section_html: list[str] = []
     for heading, lines in sections:
@@ -517,9 +842,7 @@ def build_html(
             </header>
 
             <div class="spec-alert">
-              <strong>Specification Coverage:</strong> Edexcel unit {code} -
-              {title}. Students should understand the key ideas, analysis, and
-              evaluation points needed for this topic.
+              <strong>Specification Coverage:</strong> {specification_coverage}
             </div>
 
             {"\n\n".join(section_html)}
