@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -37,8 +37,14 @@
     <script>
       window.MathJax = {
         tex: {
-          inlineMath: [["$", "$"], ["\\(", "\\)"]],
-          displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
         },
       };
     </script>
@@ -79,8 +85,8 @@
               Inequality. Students should be able to distinguish between income
               and wealth inequality, measure and interpret inequality using the
               Lorenz curve and Gini coefficient, analyse the causes of
-              inequality, explain the Kuznets curve hypothesis, and evaluate
-              the relationship between capitalism, incentives, and inequality.
+              inequality, explain the Kuznets curve hypothesis, and evaluate the
+              relationship between capitalism, incentives, and inequality.
             </div>
 
             <section>
@@ -94,33 +100,38 @@
               <p>
                 <span class="key-definition">Wealth inequality</span> is the
                 unequal distribution of <strong>assets</strong>, such as
-                property, shares, and savings. It is a
-                <strong>stock</strong>.
+                property, shares, and savings. It is a <strong>stock</strong>.
               </p>
             </section>
 
             <section>
               <h3>Measuring Inequality: Lorenz Curve and Gini Coefficient</h3>
-              <div class="exam-tip">
-                <p>
-                  <strong>Diagram placeholder:</strong> Hand-draw the
-                  <strong>Lorenz Curve and Gini Coefficient</strong>. Use
-                  <strong>Cumulative % of Households</strong> on the horizontal
-                  axis and <strong>Cumulative % of Income</strong> on the
-                  vertical axis. Draw the
-                  <strong>line of perfect equality</strong> as a 45-degree
-                  line, then draw a <strong>Lorenz curve</strong> bowing below
-                  it. Label the area between the two curves as
-                  <strong>A</strong> and the area under the Lorenz curve as
-                  <strong>B</strong>.
-                </p>
+              <div class="chart-container">
+                <figure class="diagram-figure">
+                  <img
+                    src="/images/diagrams/lorenz-curve.png"
+                    alt="Lorenz curve diagram"
+                    class="diagram-image"
+                  />
+                  <figcaption class="diagram-caption">
+                    Figure 1: The Lorenz curve illustrates income or wealth
+                    distribution. The diagonal line represents perfect equality,
+                    while the curved line shows the actual distribution. The
+                    area between the line of perfect equality and the Lorenz
+                    curve (A) compared to the total area under the line of
+                    perfect equality (A + B) is used to calculate the Gini
+                    coefficient, which quantifies inequality.
+                  </figcaption>
+                </figure>
               </div>
 
               <p>
                 The <span class="key-definition">Gini coefficient</span> is a
                 numerical measure of inequality:
               </p>
-              <p><strong>\[ \text{Gini Coefficient} = \frac{A}{A + B} \]</strong></p>
+              <p>
+                <strong>\[ \text{Gini Coefficient} = \frac{A}{A + B} \]</strong>
+              </p>
               <ul>
                 <li><strong>0</strong> means perfect equality.</li>
                 <li><strong>1</strong> means perfect inequality.</li>
@@ -143,7 +154,9 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Differences in education and skills</strong></td>
+                      <td>
+                        <strong>Differences in education and skills</strong>
+                      </td>
                       <td>
                         Higher skills often lead to higher wages, increasing
                         inequality.
@@ -185,16 +198,23 @@
 
             <section>
               <h3>The Impact of Economic Development: The Kuznets Curve</h3>
-              <div class="exam-tip">
-                <p>
-                  <strong>Diagram placeholder:</strong> Hand-draw the
-                  <strong>Kuznets Curve</strong> with
-                  <strong>Economic Development (GDP per capita)</strong> on the
-                  horizontal axis and <strong>Income Inequality</strong> on the
-                  vertical axis. Draw an <strong>inverted U-shaped curve</strong>
-                  to show inequality first rising and then falling as an
-                  economy develops.
-                </p>
+              <div class="chart-container">
+                <figure class="diagram-figure">
+                  <img
+                    src="/images/diagrams/kuznets-curve.png"
+                    alt="Kuznets curve diagram"
+                    class="diagram-image"
+                  />
+                  <figcaption class="diagram-caption">
+                    Figure 2: The Kuznets curve illustrates the hypothesis that
+                    as an economy develops, inequality first increases and then
+                    decreases after a certain level of average income is
+                    reached. The curve shows that in the early stages of
+                    development, inequality rises due to structural changes and
+                    urbanisation, but eventually falls as wealth distribution
+                    improves and government intervention increases.
+                  </figcaption>
+                </figure>
               </div>
 
               <p>
@@ -226,9 +246,10 @@
                   <strong>concentrated wealth</strong>.
                 </li>
                 <li>
-                  This creates a case for <strong>government intervention</strong>,
-                  such as progressive taxation, welfare provision, and better
-                  access to education, while still preserving incentives.
+                  This creates a case for
+                  <strong>government intervention</strong>, such as progressive
+                  taxation, welfare provision, and better access to education,
+                  while still preserving incentives.
                 </li>
               </ul>
             </section>
