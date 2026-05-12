@@ -18,14 +18,14 @@
 .topic-item {
   padding: 1.5em;
   margin-bottom: 1em;
-  border-left: 4px solid #2196f3; /* Blue instead of green for Theme 2 */
+  border-left: 4px solid #4caf50;
   background: #f5f5f5;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 .topic-item:hover {
   transform: translateX(5px);
-  background: #e3f2fd;
+  background: #f0faf0;
 }
 .topic-header {
   display: flex;
@@ -43,13 +43,13 @@
   margin: 0.5em 0;
   background: white;
   border-radius: 4px;
-  border-left: 2px solid #64b5f6;
+  border-left: 2px solid #a5d6a7;
 }
 .subtopic-item:hover {
-  background: #bbdefb;
+  background: #e8f5e9;
 }
 .subtopic-item a {
-  color: #0d47a1;
+  color: inherit;
   text-decoration: none;
   display: block;
 }
@@ -58,7 +58,7 @@
   font-size: 0.9em;
 }
 .breadcrumb a {
-  color: #2196f3;
+  color: #d52349;
 }
 .update-info {
   font-size: 0.9em;
