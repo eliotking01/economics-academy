@@ -82,14 +82,6 @@ function setActivePage() {
 
   // Create a mapping of URL patterns to page identifiers
   const pageMap = [
-    {
-      pattern: /^\/revision-notes\/aqa-a2-macro(\/|$)/,
-      page: "revision-notes-aqa-a2-macro",
-    },
-    {
-      pattern: /^\/revision-notes\/edexcel-as-micro(\/|$)/,
-      page: "revision-notes-edexcel-as-micro",
-    },
     // Add more specific patterns first
     { pattern: /^\/revision-notes(\/|$)/, page: "revision-notes" },
     { pattern: /^\/past-papers(\/|$)/, page: "past-papers" },
