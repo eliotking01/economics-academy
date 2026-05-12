@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -21,48 +21,67 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <title>
-      A-Level Economics Paper Marking Service | Expert Feedback | Economics
-      Academy
+      A-Level Economics Marking Service | Expert Feedback | Economics Academy
     </title>
     <meta
       name="description"
-      content="Submit your A-Level Economics practice papers for detailed, examiner-style feedback from an expert tutor. Improve your essay technique and boost your grades with our marking service."
+      content="Get expert marking on your A-Level Economics practice papers and essays. Detailed KAEA feedback from a First-Class Economics graduate, returned within 48 hours. Edexcel, AQA &amp; OCR."
     />
+    <link rel="canonical" href="https://economicsacademy.co.uk/marking.html" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <style>
-      .price {
-        font-size: 1.75em;
-        font-weight: bold;
-        margin: 0.5em 0;
-        color: #4caf50;
-      }
-      .save {
-        font-size: 0.7em;
-        color: #f56a6a;
-      }
-      .selected-service {
-        border: 2px solid #4caf50;
-        transform: scale(1.02);
-        transition: all 0.3s ease;
-      }
-      .service-option {
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      .service-option:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-      @media (max-width: 768px) {
-        .col-4 {
-          width: 100%;
-          margin-bottom: 20px;
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://economicsacademy.co.uk/marking.html" />
+    <meta property="og:title" content="A-Level Economics Marking Service | Expert Feedback | Economics Academy" />
+    <meta property="og:description" content="Expert marking on A-Level Economics practice papers and essays. Detailed KAEA feedback from a First-Class Economics graduate, returned within 48 hours." />
+    <meta property="og:image" content="https://economicsacademy.co.uk/images/eliot_shirt.JPG" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "A-Level Economics Paper Marking Service",
+      "description": "Expert marking and detailed KAEA feedback on A-Level Economics practice papers and essays. Results returned within 48 hours. Covering Edexcel, AQA, and OCR.",
+      "url": "https://economicsacademy.co.uk/marking.html",
+      "provider": {
+        "@type": "Person",
+        "name": "Eliot King",
+        "jobTitle": "A-Level Economics Tutor",
+        "url": "https://economicsacademy.co.uk/about.html"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Single 25-Mark Question",
+          "price": "25",
+          "priceCurrency": "GBP",
+          "description": "Expert marking of one 25-mark essay question with detailed KAEA feedback"
+        },
+        {
+          "@type": "Offer",
+          "name": "Three 25-Mark Questions",
+          "price": "60",
+          "priceCurrency": "GBP",
+          "description": "Expert marking of three 25-mark essay questions — save £15 vs single rate"
+        },
+        {
+          "@type": "Offer",
+          "name": "Full Exam Paper",
+          "price": "60",
+          "priceCurrency": "GBP",
+          "description": "Complete marking of a full exam paper including all question types, with an overall grade"
         }
-      }
-    </style>
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/marking.css" />
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -72,15 +91,46 @@
       <!-- Main -->
       <section id="main">
         <div class="container">
+
+          <!-- Hero -->
+          <section class="marking-hero">
+            <h1 class="marking-h1">A-Level Economics Marking Service</h1>
+            <p class="marking-subhead">
+              Submit your practice papers or essays and receive detailed,
+              examiner-style feedback — helping you understand exactly where
+              marks are won and lost.
+            </p>
+          </section>
+
+          <!-- Trust Strip -->
+          <div class="marking-trust-strip">
+            <div class="marking-trust-item">
+              <span class="icon solid fa-graduation-cap" aria-hidden="true"></span>
+              <span>First-Class BSc Economics, University of Bath</span>
+            </div>
+            <div class="marking-trust-item">
+              <span class="icon solid fa-clock" aria-hidden="true"></span>
+              <span>48-hour turnaround guaranteed</span>
+            </div>
+            <div class="marking-trust-item">
+              <span class="icon solid fa-users" aria-hidden="true"></span>
+              <span>100+ students tutored over 6 years</span>
+            </div>
+            <div class="marking-trust-item">
+              <span class="icon solid fa-star" aria-hidden="true"></span>
+              <span>Rated 5/5 &middot; Edexcel, AQA &amp; OCR covered</span>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-12">
               <!-- Marking Services -->
               <section>
                 <header class="major">
-                  <h2>Exam Paper Marking Services</h2>
+                  <h2>Choose Your Marking Package</h2>
                   <p>
-                    Get detailed feedback on your practice papers to improve
-                    your grades, straight from an Expert Economics Tutor
+                    Click a package to select it, then proceed to secure payment
+                    via Stripe.
                   </p>
                 </header>
 
@@ -95,13 +145,14 @@
                     >
                       <h3>Single 25-Mark Question</h3>
                       <div class="price">£25</div>
+                      <p class="service-best-for">Best for: targeted essay practice</p>
                       <ul class="alt">
                         <li>
-                          Graded with comprehensive comments on Knowledge,
-                          Application, Analysis and Evaluation
+                          Comprehensive KAEA comments (Knowledge, Application,
+                          Analysis, Evaluation)
                         </li>
                         <li>Essay structure and technique feedback</li>
-                        <li>Turnaround in 48 hours</li>
+                        <li>Returned within 48 hours</li>
                       </ul>
                       <button class="button alt">Select</button>
                     </section>
@@ -110,22 +161,27 @@
                   <!-- Three Questions Option -->
                   <div class="col-4 col-12-medium">
                     <section
-                      class="box service-option"
+                      class="box service-option service-popular"
                       data-product="three"
                       data-price="60"
                       data-payment-link="https://buy.stripe.com/dRmcN760yalxez8gfBdjO01"
                     >
+                      <span class="popular-badge">BEST VALUE</span>
                       <h3>Three 25-Mark Questions</h3>
                       <div class="price">
-                        £60 <span class="save">(Save £15)</span>
+                        £60 <span class="save">Save £15</span>
                       </div>
+                      <p class="service-best-for">Best for: essay practice across multiple topics</p>
                       <ul class="alt">
                         <li>
-                          Graded with comprehensive comments on Knowledge,
-                          Application, Analysis and Evaluation
+                          Submit any 3 essays — from the same paper or
+                          different ones
+                        </li>
+                        <li>
+                          Comprehensive KAEA comments on each question
                         </li>
                         <li>Essay structure and technique feedback</li>
-                        <li>Turnaround in 48 hours</li>
+                        <li>Returned within 48 hours</li>
                       </ul>
                       <button class="button alt">Select</button>
                     </section>
@@ -141,14 +197,17 @@
                     >
                       <h3>Full Exam Paper</h3>
                       <div class="price">£60</div>
+                      <p class="service-best-for">Best for: full paper simulation before exams</p>
                       <ul class="alt">
-                        <li>Complete feedback on all questions</li>
                         <li>
-                          Graded with comprehensive comments on Knowledge,
-                          Application, Analysis and Evaluation
+                          All question types marked — short-answer, data
+                          response, and 25-mark essays
                         </li>
-                        <li>Essay structure and technique feedback</li>
-                        <li>Turnaround in 48 hours</li>
+                        <li>
+                          Comprehensive KAEA comments on every question
+                        </li>
+                        <li>Overall grade assigned for the full paper</li>
+                        <li>Returned within 48 hours</li>
                       </ul>
                       <button class="button alt">Select</button>
                     </section>
@@ -236,10 +295,32 @@
                   <a href="/faq.html" class="button">View Full FAQ</a>
                 </div>
               </section>
+
+              <!-- Cross-sell CTA -->
+              <section class="marking-crosssell">
+                <header class="major">
+                  <h2>Want More Than Marking?</h2>
+                  <p>
+                    Combine marking with 1-on-1 tutoring to work through
+                    feedback together and accelerate your progress.
+                  </p>
+                </header>
+                <div style="text-align: center">
+                  <a href="/tutoring.html" class="button">
+                    Book a Free Intro Call
+                  </a>
+                  <a href="/about.html" class="button alt" style="margin-left: 1em">
+                    About the Tutor
+                  </a>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Footer -->
+      <div id="footer-placeholder"></div>
 
       <!-- Scripts -->
       <script src="/js/jquery.min.js"></script>

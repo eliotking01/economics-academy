@@ -1,0 +1,117 @@
+/* Marking page styles */
+
+/* Hero */
+.marking-hero {
+  text-align: center;
+  padding: 2em 0 1.5em;
+}
+.marking-h1 {
+  font-size: 2.4em;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+}
+.marking-subhead {
+  font-size: 1.05em;
+  color: #5d5d5d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Trust strip */
+.marking-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em 2em;
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 1.2em 2em;
+  margin: 0 0 2.5em;
+}
+.marking-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+  color: #444;
+}
+.marking-trust-item .icon {
+  color: #d52349;
+  font-size: 1em;
+}
+
+/* Service cards */
+.price {
+  font-size: 1.75em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  color: #4caf50;
+}
+.save {
+  font-size: 0.55em;
+  color: #d52349;
+  font-weight: bold;
+  display: inline-block;
+  background: #fdecea;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 0.3em;
+}
+.service-best-for {
+  font-size: 0.82em;
+  color: #888;
+  margin: 0 0 0.8em;
+  font-style: italic;
+}
+.service-option {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+.service-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.selected-service {
+  border: 2px solid #4caf50 !important;
+  transform: scale(1.02);
+}
+.service-popular {
+  border: 2px solid #d52349;
+}
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: #d52349;
+  color: white;
+  font-size: 0.72em;
+  font-weight: bold;
+  padding: 0.25em 0.8em;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* Cross-sell CTA section */
+.marking-crosssell {
+  margin-top: 3em;
+  padding: 2em;
+  background: #f9f9f9;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marking-trust-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8em;
+    padding: 1em 1.5em;
+  }
+  .marking-h1 {
+    font-size: 1.9em;
+  }
+}
