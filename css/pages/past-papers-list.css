@@ -1,9 +1,27 @@
 .papers-header {
   text-align: center;
-  padding: 2em 0;
+  padding: 2em 1em;
   margin-bottom: 2em;
   background: #f9f9f9;
   border-radius: 4px;
+}
+.papers-list-h1 {
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+}
+.papers-list-intro {
+  color: #5d5d5d;
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .papers-list-h1 {
+    font-size: 1.6em;
+  }
 }
 .papers-container {
   background: white;
