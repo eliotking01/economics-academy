@@ -782,3 +782,33 @@
     page-break-inside: avoid;
   }
 }
+
+/* Coming soon placeholder component */
+.revision-notes-content .coming-soon {
+  text-align: center;
+  padding: 4em 2em;
+  background: linear-gradient(135deg, rgba(26, 62, 114, 0.03) 0%, rgba(42, 137, 152, 0.05) 100%);
+  border: 2px dashed var(--border-light);
+  border-radius: 12px;
+  margin: 2em auto;
+  max-width: 620px;
+}
+
+.revision-notes-content .coming-soon h3 {
+  background: none;
+  border-left: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 0 0.75em 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.revision-notes-content .coming-soon h3::before {
+  content: none;
+}
+
+.revision-notes-content .coming-soon p {
+  color: #555;
+  margin-bottom: 2em;
+}
