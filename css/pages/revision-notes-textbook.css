@@ -38,6 +38,7 @@
   text-align: center;
 }
 
+.revision-notes-content .notes-container > header.major h1,
 .revision-notes-content .notes-container > header.major h2 {
   color: var(--primary-blue);
   background: white !important;
@@ -569,6 +570,7 @@
     border: none;
   }
 
+  .revision-notes-content .notes-container > header.major h1,
   .revision-notes-content .notes-container > header.major h2 {
     font-size: 1.8em;
     padding-bottom: 0.3em;
@@ -720,6 +722,7 @@
 
 @media (max-width: 480px) {
   /* Extra small devices */
+  .revision-notes-content .notes-container > header.major h1,
   .revision-notes-content .notes-container > header.major h2 {
     font-size: 1.6em;
   }
