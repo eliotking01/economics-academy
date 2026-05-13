@@ -1,10 +1,3 @@
-/* CSS Reset for consistent styling */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* Hero */
 .contact-hero {
   text-align: center;
@@ -28,12 +21,6 @@
   .contact-h1 {
     font-size: 1.9em;
   }
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 /* Contact Options Styling */
@@ -68,7 +55,7 @@
 
 .contact-card h3 {
   margin-bottom: 15px;
-  color: #1f2c46;
+  color: #252122;
 }
 
 .contact-card p {
@@ -116,7 +103,7 @@
 
 .major h2 {
   font-size: 2.2rem;
-  color: #1f2c46;
+  color: #252122;
   margin-bottom: 15px;
   background: transparent; /* Transparent background for heading */
 }
@@ -231,7 +218,7 @@ input[type="reset"] {
 }
 
 .box h3 {
-  color: #1f2c46;
+  color: #252122;
   font-size: 1.5rem;
 }
 

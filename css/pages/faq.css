@@ -1,0 +1,120 @@
+/* ── Category Navigation ─────────────────────────────── */
+
+.category-nav {
+  margin: 2em 0 3em;
+}
+
+.category-nav .actions.special {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0;
+  margin: 0;
+}
+
+.category-nav .actions.special li {
+  flex: 1 0 auto;
+  min-width: 150px;
+  max-width: 220px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.category-nav .actions.special .button {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 736px) {
+  .category-nav .actions.special li {
+    min-width: calc(50% - 0.5em);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .category-nav .actions.special li {
+    min-width: 100%;
+  }
+}
+
+/* ── Accordion ───────────────────────────────────────── */
+
+.accordion {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.accordion-item {
+  margin-bottom: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 1em 1.5em;
+  background-color: #d52349;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.25s ease;
+}
+
+.accordion-button:hover,
+.accordion-button.active {
+  background-color: #b01c3a;
+}
+
+.accordion-button .icon {
+  margin-left: 1em;
+  color: white;
+  flex-shrink: 0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: white;
+}
+
+.accordion-content p,
+.accordion-content ul,
+.accordion-content ol {
+  padding: 0 1.5em 1em 1.5em;
+  margin: 0;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+  padding-left: 2.5em;
+}
+
+/* ── Section headers inside .major ───────────────────── */
+
+.major h3 {
+  margin-top: 2em;
+  border-bottom: 2px solid #d52349;
+  padding-bottom: 0.5em;
+  color: #252122;
+}
+
+/* ── Category nav actions centering ─────────────────── */
+
+.actions {
+  justify-content: center;
+  margin-bottom: 2em;
+}

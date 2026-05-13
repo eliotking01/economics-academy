@@ -18,7 +18,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
     <title>
       Online A-Level Economics Tutor | Expert 1-on-1 Tutoring | Economics Academy
@@ -28,6 +28,8 @@
       content="Expert online 1-on-1 A-Level Economics tutoring from Eliot King. First-Class Economics graduate, 6+ years experience, 100+ students tutored. Edexcel, AQA &amp; OCR. Book a free intro call."
     />
     <link rel="canonical" href="https://economicsacademy.co.uk/tutoring.html" />
+    <link rel="preconnect" href="https://assets.calendly.com" />
+    <link rel="preconnect" href="https://calendly.com" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -93,7 +95,7 @@
     />
   </head>
 
-  <body class="homepage is-preload">
+  <body class="is-preload">
     <div id="page-wrapper">
       <!-- Header -->
       <div id="header-placeholder"></div>
@@ -163,6 +165,8 @@
                     <a
                       href="https://tutorful.co.uk/tutors/qlorq3vr"
                       class="button primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       >Reviews on Tutorful</a
                     >
                   </div>
@@ -213,7 +217,7 @@
                 href="https://tutorful.co.uk/tutors/qlorq3vr"
                 class="button alt"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 >Read All Reviews on Tutorful</a
               >
             </div>
@@ -315,7 +319,7 @@
             <div
               class="calendly-inline-widget"
               data-url="https://calendly.com/kingtuition/freeintroduction"
-              style="min-width: 320px; height: 700px"
+              style="min-width: 320px; height: 700px; max-width: 100%"
             ></div>
             <div style="text-align: center; margin-top: 2em">
               <p>
@@ -383,37 +387,51 @@
       </section>
 
       <!-- Contact Form Modal -->
-      <div id="contactModal" class="modal">
+      <div
+        id="contactModal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        aria-hidden="true"
+      >
         <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <h2>Enquire About <span id="package-name"></span></h2>
-          <div id="form-message" class="form-message"></div>
+          <button class="close-button" id="modal-close" aria-label="Close enquiry form">&times;</button>
+          <h2 id="modal-title">Enquire About <span id="package-name"></span></h2>
+          <div id="form-message" class="form-message" role="status"></div>
           <form
             class="contact-form"
             id="enquiryForm"
             action="https://formspree.io/f/mqadgbbw"
             method="POST"
+            novalidate
           >
             <input type="hidden" id="selectedPackage" name="package" value="" />
             <div>
-              <input type="text" name="name" placeholder="Your Name" required />
+              <label for="enquiry-name" class="sr-only">Your Name</label>
+              <input type="text" id="enquiry-name" name="name" placeholder="Your Name" required autocomplete="name" />
             </div>
             <div>
+              <label for="enquiry-email" class="sr-only">Your Email</label>
               <input
                 type="email"
+                id="enquiry-email"
                 name="email"
                 placeholder="Your Email"
                 required
+                autocomplete="email"
               />
             </div>
             <div>
+              <label for="enquiry-message" class="sr-only">Message</label>
               <textarea
+                id="enquiry-message"
                 name="message"
                 placeholder="Tell me about your tutoring needs and preferred schedule"
                 required
               ></textarea>
             </div>
-            <button type="submit" class="form-submit-button">
+            <button type="submit" id="enquiry-submit" class="form-submit-button">
               Send Enquiry
             </button>
           </form>
@@ -440,78 +458,109 @@
 
     <!-- Form Submission Script -->
     <script>
-      // Modal functionality
       const modal = document.getElementById("contactModal");
       const packageNameSpan = document.getElementById("package-name");
       const selectedPackageInput = document.getElementById("selectedPackage");
       const enquiryForm = document.getElementById("enquiryForm");
       const formMessage = document.getElementById("form-message");
+      const submitBtn = document.getElementById("enquiry-submit");
+      const closeBtn = document.getElementById("modal-close");
 
-      // Enquire buttons
-      document.querySelectorAll(".enquire-button").forEach((button) => {
-        button.addEventListener("click", function (e) {
-          e.preventDefault();
-          const packageName = this.getAttribute("data-package");
-          packageNameSpan.textContent = packageName;
-          selectedPackageInput.value = packageName;
-          modal.style.display = "block";
-          // Reset form message
-          formMessage.style.display = "none";
-        });
-      });
+      let modalOpener = null;
 
-      // Close modal
-      document
-        .querySelector(".close-button")
-        .addEventListener("click", function () {
-          modal.style.display = "none";
-        });
+      function openModal(packageName, triggerEl) {
+        packageNameSpan.textContent = packageName;
+        selectedPackageInput.value = packageName;
+        formMessage.style.display = "none";
+        modal.style.display = "block";
+        modal.setAttribute("aria-hidden", "false");
+        modalOpener = triggerEl || null;
+        document.getElementById("enquiry-name").focus();
+      }
 
-      // Close modal if clicked outside
-      window.addEventListener("click", function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+      function closeModal() {
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+        if (modalOpener) {
+          modalOpener.focus();
+          modalOpener = null;
+        }
+      }
+
+      // Focus trap within modal
+      modal.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+          return;
+        }
+        if (e.key !== "Tab") return;
+
+        const focusable = modal.querySelectorAll(
+          'button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+        );
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
         }
       });
 
-      // Form submission with Formspree
-      enquiryForm.addEventListener("submit", function (e) {
+      // Enquire buttons
+      document.querySelectorAll(".enquire-button").forEach(function (button) {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          openModal(this.getAttribute("data-package"), this);
+        });
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+
+      window.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
+
+      // Form submission
+      enquiryForm.addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        // Show loading state
         formMessage.textContent = "Sending your message...";
         formMessage.className = "form-message";
         formMessage.style.display = "block";
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
 
-        // Submit the form using Fetch API
-        fetch(this.action, {
-          method: "POST",
-          body: new FormData(this),
-          headers: {
-            Accept: "application/json",
-          },
-        })
-          .then((response) => {
-            if (response.ok) {
-              // Success message
-              formMessage.textContent =
-                "Thank you for your enquiry! I will get back to you soon.";
-              formMessage.className = "form-message form-success";
-              enquiryForm.reset();
-
-              // Close modal after 3 seconds
-              setTimeout(function () {
-                modal.style.display = "none";
-              }, 3000);
-            } else {
-              throw new Error("Form submission failed");
-            }
-          })
-          .catch((error) => {
-            formMessage.textContent =
-              "Oops! There was a problem submitting your form. Please try again or email me directly at eliotkingtuition@gmail.com";
-            formMessage.className = "form-message form-error";
+        try {
+          const res = await fetch(this.action, {
+            method: "POST",
+            body: new FormData(this),
+            headers: { Accept: "application/json" },
           });
+          if (res.ok) {
+            formMessage.textContent =
+              "Thank you for your enquiry! I will get back to you soon.";
+            formMessage.className = "form-message form-success";
+            enquiryForm.reset();
+            setTimeout(closeModal, 3000);
+          } else {
+            throw new Error("failed");
+          }
+        } catch {
+          formMessage.textContent =
+            "Oops! There was a problem submitting your form. Please try again or email me directly at eliotkingtuition@gmail.com";
+          formMessage.className = "form-message form-error";
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Enquiry";
+        }
       });
     </script>
   </body>

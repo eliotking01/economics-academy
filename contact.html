@@ -18,7 +18,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
     <title>
       Contact | A-Level Economics Tutor | Economics Academy
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/contact.css" />
   </head>
-  <body class="homepage is-preload">
+  <body class="is-preload">
     <div id="page-wrapper">
       <!-- Header -->
       <div id="header-placeholder"></div>
@@ -117,6 +117,7 @@
                   >
                     <div class="row gtr-uniform">
                       <div class="col-6 col-12-xsmall">
+                        <label for="first-name" class="sr-only">First Name</label>
                         <input
                           type="text"
                           name="first-name"
@@ -124,9 +125,11 @@
                           value=""
                           placeholder="First Name"
                           required
+                          autocomplete="given-name"
                         />
                       </div>
                       <div class="col-6 col-12-xsmall">
+                        <label for="last-name" class="sr-only">Last Name</label>
                         <input
                           type="text"
                           name="last-name"
@@ -134,9 +137,11 @@
                           value=""
                           placeholder="Last Name"
                           required
+                          autocomplete="family-name"
                         />
                       </div>
                       <div class="col-12">
+                        <label for="email" class="sr-only">Email Address</label>
                         <input
                           type="email"
                           name="email"
@@ -144,9 +149,11 @@
                           value=""
                           placeholder="Email Address"
                           required
+                          autocomplete="email"
                         />
                       </div>
                       <div class="col-12">
+                        <label for="subject" class="sr-only">Subject</label>
                         <select name="subject" id="subject">
                           <option value="">Select Subject</option>
                           <option value="tutoring">Tutoring Inquiry</option>
@@ -156,6 +163,7 @@
                         </select>
                       </div>
                       <div class="col-12">
+                        <label for="message" class="sr-only">Message</label>
                         <textarea
                           name="message"
                           id="message"
@@ -174,7 +182,6 @@
                               id="submit-button"
                             />
                           </li>
-                          <li><input type="reset" value="Reset" /></li>
                         </ul>
                       </div>
                     </div>

@@ -12,341 +12,227 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-YVCNRW4QH6");
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order Confirmation - Economics Academy</title>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      header {
-        background-color: #4caf50;
-        color: white;
-        padding: 1rem 0;
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-      .confirmation-box {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-        margin-bottom: 2rem;
-      }
-      h1 {
-        color: #4caf50;
-        margin-top: 0;
-      }
-      .reference-number {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #4caf50;
-        margin: 1rem 0;
-        padding: 1rem;
-        background-color: #f0f8f0;
-        border-left: 4px solid #4caf50;
-        border-radius: 4px;
-      }
-      .instructions {
-        background-color: #f8f9fa;
-        border-left: 4px solid #4caf50;
-        padding: 1.5rem;
-        border-radius: 4px;
-        margin: 1.5rem 0;
-      }
-      .email-button {
-        display: inline-block;
-        background-color: #4caf50;
-        color: white;
-        padding: 12px 24px;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        margin-top: 1rem;
-        transition: background-color 0.3s;
-      }
-      .email-button:hover {
-        background-color: #3d8b40;
-      }
-      .customer-form {
-        background-color: #f5f5f5;
-        padding: 1.5rem;
-        border-radius: 4px;
-        margin: 1.5rem 0;
-      }
-      .form-group {
-        margin-bottom: 1rem;
-      }
-      label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-family: inherit;
-        font-size: 1rem;
-      }
-      .form-error {
-        color: #ff3860;
-        font-size: 0.9em;
-        margin-top: 5px;
-        display: none;
-      }
-      footer {
-        text-align: center;
-        margin-top: 2rem;
-        padding: 1rem;
-        color: #666;
-        font-size: 0.9rem;
-      }
-      @media (max-width: 768px) {
-        .container {
-          padding: 15px;
-        }
-        .confirmation-box {
-          padding: 1.5rem;
-        }
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Order Confirmation | Economics Academy</title>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/confirmation.css" />
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1>Economics Academy</h1>
-      </div>
-    </header>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <div id="header-placeholder"></div>
 
-    <div class="container">
-      <div class="confirmation-box">
-        <h1>Thank You for Your Purchase!</h1>
-        <p>
-          Your payment has been successfully processed. Please provide your
-          details below and follow the instructions to complete your submission.
-        </p>
+      <section id="main">
+        <div class="container">
 
-        <div class="reference-number">
-          Your Reference Number: <span id="reference-number"></span>
-        </div>
+          <div class="confirmation-header">
+            <span class="checkmark">✓</span>
+            <header class="major">
+              <h1>Thank You for Your Purchase!</h1>
+              <p>
+                Your payment has been successfully processed. Please provide your
+                details below and follow the instructions to complete your submission.
+              </p>
+            </header>
+          </div>
 
-        <div class="customer-form">
-          <h3>Please Provide Your Details:</h3>
-          <form id="customer-details-form">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Your Name"
-              />
-              <div id="name-error" class="form-error">
-                Please enter your name
+          <div class="ref-box">
+            Your Reference Number: <span id="reference-number"></span>
+          </div>
+
+          <div class="row">
+            <div class="col-7 col-12-medium">
+              <!-- Details form -->
+              <div class="confirmation-section">
+                <h2>Please Provide Your Details</h2>
+                <form id="customer-details-form" novalidate>
+                  <input type="hidden" name="_subject" id="form-subject" value="Marking Submission" />
+                  <input type="hidden" name="reference_number" id="ref-hidden" />
+
+                  <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      autocomplete="name"
+                      placeholder="Your Name"
+                    />
+                    <div id="name-error" class="form-error-msg">
+                      Please enter your name
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      autocomplete="email"
+                      placeholder="Email Address"
+                    />
+                    <div id="email-error" class="form-error-msg">
+                      Please enter a valid email address
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="description">Description of Work to be Marked *</label>
+                    <textarea
+                      id="description"
+                      name="description"
+                      rows="3"
+                      required
+                      placeholder="Please describe what you want marked (e.g., 'Question 3 from 2022 Paper', 'Microeconomics essay on market failure')"
+                    ></textarea>
+                    <div id="description-error" class="form-error-msg">
+                      Please describe what you want marked
+                    </div>
+                  </div>
+
+                  <button type="submit" id="submit-btn" class="button">Submit Details</button>
+                </form>
+
+                <div id="form-success" class="confirmation-success">
+                  <strong>Details received — thank you!</strong><br />
+                  Now email your files to <strong>eliotkingtuition@gmail.com</strong>
+                  with your reference number in the subject line.
+                </div>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Email Address"
-              />
-              <div id="email-error" class="form-error">
-                Please enter a valid email address
+            <div class="col-5 col-12-medium">
+              <!-- Next steps -->
+              <div class="next-steps">
+                <h2>Next Steps: Submit Your Files</h2>
+                <p>To complete your order, please email your files to:</p>
+                <span class="email-address">eliotkingtuition@gmail.com</span>
+
+                <p>Please include the following in your email:</p>
+                <ul>
+                  <li>Your reference number: <strong id="ref-number-text"></strong></li>
+                  <li>Your full name</li>
+                  <li>The service you purchased</li>
+                  <li>Description of the work to be marked</li>
+                </ul>
+
+                <p>Accepted file formats: PDF, JPG, JPEG, PNG, Word documents</p>
               </div>
+
+              <p>
+                We will process your submission within 48 hours of receiving your
+                files. You'll receive feedback at the email address you provided.
+              </p>
+
+              <p>
+                If you have any questions, please contact us at
+                <a href="mailto:eliotkingtuition@gmail.com">eliotkingtuition@gmail.com</a>.
+              </p>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="description"
-                >Description of Work to be Marked *</label
-              >
-              <textarea
-                id="description"
-                name="description"
-                rows="3"
-                required
-                placeholder="Please describe what you want marked (e.g., 'Question 3 from 2022 Paper', 'Microeconomics essay on market failure')"
-              ></textarea>
-              <div id="description-error" class="form-error">
-                Please describe what you want marked
-              </div>
-            </div>
-          </form>
         </div>
+      </section>
 
-        <div class="instructions">
-          <h2>Next Steps: Submit Your Files</h2>
-          <p>To complete your order, please email your files to:</p>
-          <p style="font-size: 1.2rem; font-weight: bold">
-            eliotkingtuition@gmail.com
-          </p>
-
-          <p>Please include the following in your email:</p>
-          <ul>
-            <li>
-              Your reference number: <strong id="ref-number-text"></strong>
-            </li>
-            <li>Your full name</li>
-            <li>The service you purchased</li>
-            <li>Description of the work to be marked</li>
-          </ul>
-
-          <p>Accepted file formats: PDF, JPG, JPEG, PNG, Word documents</p>
-
-          <a href="#" id="email-link" class="email-button">Open Email Client</a>
-        </div>
-
-        <p>
-          We will process your submission within 48 hours of receiving your
-          files. You'll receive feedback at the email address you provided.
-        </p>
-
-        <p>
-          If you have any questions, please contact us at
-          <a href="mailto:eliotkingtuition@gmail.com"
-            >eliotkingtuition@gmail.com</a
-          >.
-        </p>
-      </div>
+      <!-- Footer -->
+      <div id="footer-placeholder"></div>
     </div>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2023 Economics Academy. All rights reserved.</p>
-      </div>
-    </footer>
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/components/inject-templates.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
 
     <script>
-      // Function to generate a reference number
       function generateReferenceNumber() {
         const timestamp = new Date().getTime().toString().slice(-6);
-        const random = Math.floor(Math.random() * 1000)
-          .toString()
-          .padStart(3, "0");
-        return `EKT${timestamp}${random}`;
+        const random = Math.floor(Math.random() * 1000).toString().padStart(3, "0");
+        return "EKT" + timestamp + random;
       }
 
-      // Form validation
-      function validateForm() {
-        let isValid = true;
-
-        // Validate name
-        const name = document.getElementById("name").value.trim();
-        if (!name) {
-          document.getElementById("name-error").style.display = "block";
-          isValid = false;
-        } else {
-          document.getElementById("name-error").style.display = "none";
-        }
-
-        // Validate email
-        const email = document.getElementById("email").value.trim();
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email || !emailPattern.test(email)) {
-          document.getElementById("email-error").style.display = "block";
-          isValid = false;
-        } else {
-          document.getElementById("email-error").style.display = "none";
-        }
-
-        // Validate description
-        const description = document.getElementById("description").value.trim();
-        if (!description) {
-          document.getElementById("description-error").style.display = "block";
-          isValid = false;
-        } else {
-          document.getElementById("description-error").style.display = "none";
-        }
-
-        return isValid;
-      }
-
-      // Update email link with form data
-      function updateEmailLink() {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const description = document.getElementById("description").value;
-        const refNumber =
-          document.getElementById("reference-number").textContent;
-
-        const emailSubject = `Paper Submission - Ref: ${refNumber}`;
-        const emailBody = `Reference Number: ${refNumber}%0D%0A%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0ADescription: ${description}`;
-
-        document.getElementById(
-          "email-link"
-        ).href = `mailto:eliotkingtuition@gmail.com?subject=${encodeURIComponent(
-          emailSubject
-        )}&body=${encodeURIComponent(emailBody)}`;
-      }
-
-      // Generate reference number
       const refNumber = generateReferenceNumber();
       document.getElementById("reference-number").textContent = refNumber;
       document.getElementById("ref-number-text").textContent = refNumber;
+      document.getElementById("ref-hidden").value = refNumber;
+      document.getElementById("form-subject").value = "Marking Submission — Ref: " + refNumber;
 
-      // Set up form event listeners
-      document.getElementById("name").addEventListener("input", function () {
-        if (this.value.trim()) {
-          document.getElementById("name-error").style.display = "none";
+      function validateForm() {
+        let valid = true;
+
+        const name = document.getElementById("name").value.trim();
+        const nameErr = document.getElementById("name-error");
+        if (!name) {
+          nameErr.classList.add("visible");
+          valid = false;
+        } else {
+          nameErr.classList.remove("visible");
         }
-        updateEmailLink();
-      });
 
-      document.getElementById("email").addEventListener("input", function () {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (this.value.trim() && emailPattern.test(this.value)) {
-          document.getElementById("email-error").style.display = "none";
+        const email = document.getElementById("email").value.trim();
+        const emailErr = document.getElementById("email-error");
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          emailErr.classList.add("visible");
+          valid = false;
+        } else {
+          emailErr.classList.remove("visible");
         }
-        updateEmailLink();
+
+        const desc = document.getElementById("description").value.trim();
+        const descErr = document.getElementById("description-error");
+        if (!desc) {
+          descErr.classList.add("visible");
+          valid = false;
+        } else {
+          descErr.classList.remove("visible");
+        }
+
+        return valid;
+      }
+
+      document.getElementById("customer-details-form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        if (!validateForm()) return;
+
+        const btn = document.getElementById("submit-btn");
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+
+        const data = new FormData(this);
+
+        try {
+          const res = await fetch("https://formspree.io/f/xblapyky", {
+            method: "POST",
+            body: data,
+            headers: { Accept: "application/json" },
+          });
+          if (res.ok) {
+            this.style.display = "none";
+            document.getElementById("form-success").classList.add("visible");
+          } else {
+            btn.disabled = false;
+            btn.textContent = "Submit Details";
+            alert("There was a problem submitting your details. Please email eliotkingtuition@gmail.com directly with your reference number.");
+          }
+        } catch {
+          btn.disabled = false;
+          btn.textContent = "Submit Details";
+          alert("There was a problem submitting your details. Please email eliotkingtuition@gmail.com directly with your reference number.");
+        }
       });
-
-      document
-        .getElementById("description")
-        .addEventListener("input", function () {
-          if (this.value.trim()) {
-            document.getElementById("description-error").style.display = "none";
-          }
-          updateEmailLink();
-        });
-
-      // Set up email link click handler
-      document
-        .getElementById("email-link")
-        .addEventListener("click", function (e) {
-          if (!validateForm()) {
-            e.preventDefault();
-            alert(
-              "Please complete all required fields before sending the email."
-            );
-          }
-        });
-
-      // Initialize email link
-      updateEmailLink();
     </script>
   </body>
 </html>

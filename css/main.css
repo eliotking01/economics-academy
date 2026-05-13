@@ -1,5 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
 
 /*
 	Dopetrope by HTML5 UP
@@ -164,6 +164,47 @@ textarea {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Skip-to-content link (accessibility) */
+
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background: #d52349;
+  color: #fff !important;
+  padding: 0.5em 1em;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 10010;
+  transition: transform 0.2s;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+/* Screen-reader-only utility */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Reserve header height before JS injection (prevents CLS) */
+
+#header-placeholder {
+  min-height: 240px;
 }
 
 *,
@@ -174,7 +215,6 @@ html {
 
 body {
   background: #252122;
-  background-image: url("images/bg02.png");
 }
 
 body.is-preload *,
@@ -1720,7 +1760,6 @@ button,
   background: #d52349;
   color: #fff !important;
   font-weight: 700;
-  outline: 0;
   font-size: 1.1em;
   padding: 0.65em 1.5em 0.65em 1.5em;
   text-align: center;
@@ -1768,6 +1807,19 @@ input[type="reset"].alt:active,
 button.alt:active,
 .button.alt:active {
   background: #151112;
+}
+
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+button:focus-visible,
+.button:focus-visible {
+  outline: 3px solid #d52349;
+  outline-offset: 3px;
+}
+
+.button.primary {
+  font-weight: 900;
 }
 
 input[type="button"].icon:before,
@@ -2212,7 +2264,11 @@ ul.social li a.fa-google-plus:hover {
   -webkit-transition: background-color 0.25s ease-in-out;
   -ms-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
-  outline: 0;
+}
+
+#nav > ul > li > a:focus-visible {
+  outline: 3px solid #d52349;
+  outline-offset: 2px;
 }
 
 #nav > ul > li:hover > a,
@@ -2305,41 +2361,6 @@ ul.social li a.fa-google-plus:hover {
   border-bottom-color: rgba(34, 30, 31, 0.98);
 }
 
-/* Banner */
-
-#banner {
-  background: #cce8f4 url("../../images/pic01.jpg");
-  background-position: center center;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  text-align: center;
-  position: relative;
-  padding: 8em 0;
-  margin: 4em 0 0 0;
-}
-
-#banner header {
-  background-color: rgba(34, 30, 31, 0.98);
-  display: inline-block;
-  padding: 2.5em 5em;
-  border-radius: 5px;
-}
-
-#banner header h2 {
-  color: #fff;
-  font-weight: 700;
-  font-size: 2.5em;
-  margin: 0 0 0.65em 0;
-}
-
-#banner header p {
-  color: #d52349;
-  padding: 0;
-  font-style: normal;
-  margin: 0;
-  font-size: 1.5em;
-}
-
 /* Intro */
 
 #intro {
@@ -2403,7 +2424,7 @@ ul.social li a.fa-google-plus:hover {
 
 #main {
   position: relative;
-  background: #f7f7f7 url("images/bg02.png");
+  background: #f7f7f7;
   padding: 2em 0 4em 0;
 }
 
@@ -2413,14 +2434,12 @@ ul.social li a.fa-google-plus:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: url("images/bg01.png");
-  background-size: 100% 100%;
   z-index: 0;
   opacity: 0.1;
 }
 
 #main .major h2 {
-  background: #f7f7f7 url("images/bg02.png");
+  background: #f7f7f7;
 }
 
 /* Footer */
@@ -2437,8 +2456,6 @@ ul.social li a.fa-google-plus:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: url("images/bg01.png");
-  background-size: 100% 100%;
   z-index: 0;
   opacity: 0.5;
 }
@@ -2778,7 +2795,7 @@ ul.social li a.fa-google-plus:hover {
     width: 275px;
     z-index: 10002;
     color: #858484;
-    background-image: url("images/bg02.png");
+    background: #252122;
     box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
   }
 

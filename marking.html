@@ -18,7 +18,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
     <title>
       A-Level Economics Marking Service | Expert Feedback | Economics Academy
@@ -83,7 +83,7 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/marking.css" />
   </head>
-  <body class="homepage is-preload">
+  <body class="is-preload">
     <div id="page-wrapper">
       <!-- Header -->
       <div id="header-placeholder"></div>
@@ -232,6 +232,17 @@
                     After payment, you'll be asked to provide your details on
                     the confirmation page.
                   </p>
+                  <div class="marking-email-capture">
+                    <label for="buyer-email">Your email address</label>
+                    <input
+                      type="email"
+                      id="buyer-email"
+                      name="buyer-email"
+                      placeholder="e.g. name@email.com"
+                      autocomplete="email"
+                    />
+                    <span id="email-error" class="marking-email-error" role="alert"></span>
+                  </div>
                   <button id="stripe-payment-btn" class="button primary">
                     Proceed to Payment
                   </button>
@@ -293,6 +304,36 @@
                 </div>
                 <div style="text-align: center; margin-top: 2em">
                   <a href="/faq.html" class="button">View Full FAQ</a>
+                </div>
+              </section>
+
+              <!-- Testimonials -->
+              <section class="marking-testimonials">
+                <header class="major">
+                  <h2>What Students Say</h2>
+                </header>
+                <div class="row">
+                  <div class="col-4 col-12-medium">
+                    <div class="marking-testimonial">
+                      <div class="marking-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                      <p class="marking-quote">"Great tutor, helpful and knowledgeable, helped me improve from a C to an A for A level economics."</p>
+                      <p class="marking-reviewer">Tilla S. &mdash; Student</p>
+                    </div>
+                  </div>
+                  <div class="col-4 col-12-medium">
+                    <div class="marking-testimonial">
+                      <div class="marking-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                      <p class="marking-quote">"Eliot was my tutor for 4 months in the lead up to my A level economics exam. He was excellent in helping me with my essay exam technique and his knowledge was invaluable. He is very personable and I would have no hesitation in recommending him."</p>
+                      <p class="marking-reviewer">William E. &mdash; Student</p>
+                    </div>
+                  </div>
+                  <div class="col-4 col-12-medium">
+                    <div class="marking-testimonial">
+                      <div class="marking-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                      <p class="marking-quote">"Very helpful, I feel much more confident in essay technique. Easy to understand and talk to so I would highly recommend Eliot."</p>
+                      <p class="marking-reviewer">Harry G. &mdash; Student</p>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -377,8 +418,20 @@
 
         // Handle Stripe payment button click
         stripePaymentBtn.addEventListener("click", function () {
-          // Redirect to Stripe payment link
-          window.location.href = selectedService.paymentLink;
+          const emailInput = document.getElementById("buyer-email");
+          const emailError = document.getElementById("email-error");
+          const email = emailInput.value.trim();
+
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            emailError.textContent = "Please enter a valid email address.";
+            emailInput.focus();
+            return;
+          }
+          emailError.textContent = "";
+
+          const url = new URL(selectedService.paymentLink);
+          url.searchParams.set("prefilled_email", email);
+          window.location.href = url.toString();
         });
       </script>
     </div>

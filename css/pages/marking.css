@@ -94,6 +94,63 @@
   letter-spacing: 0.03em;
 }
 
+/* Email capture in payment selection */
+.marking-email-capture {
+  margin: 1em 0 1.25em;
+}
+.marking-email-capture label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  font-size: 0.9em;
+}
+.marking-email-capture input[type="email"] {
+  width: 100%;
+  max-width: 380px;
+  padding: 0.6em 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.95em;
+}
+.marking-email-error {
+  display: block;
+  color: #d52349;
+  font-size: 0.85em;
+  margin-top: 0.35em;
+  min-height: 1.2em;
+}
+
+/* Testimonials */
+.marking-testimonials {
+  margin-top: 3em;
+}
+.marking-testimonial {
+  background: #f9f9f9;
+  border-left: 3px solid #d52349;
+  border-radius: 0 4px 4px 0;
+  padding: 1.5em;
+  height: 100%;
+  box-sizing: border-box;
+}
+.marking-stars {
+  color: #f5a623;
+  font-size: 1.1em;
+  margin-bottom: 0.6em;
+}
+.marking-quote {
+  font-style: italic;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #5d5d5d;
+  margin: 0 0 0.75em;
+}
+.marking-reviewer {
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #252122;
+  margin: 0;
+}
+
 /* Cross-sell CTA section */
 .marking-crosssell {
   margin-top: 3em;
@@ -113,5 +170,8 @@
   }
   .marking-h1 {
     font-size: 1.9em;
+  }
+  .marking-testimonial {
+    margin-bottom: 1em;
   }
 }

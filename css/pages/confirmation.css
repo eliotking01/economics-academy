@@ -1,0 +1,85 @@
+/* ── Confirmation page ───────────────────────────────── */
+
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+
+.confirmation-header .checkmark {
+  font-size: 3em;
+  color: #4caf50;
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.ref-box {
+  background: #f8f8f8;
+  border-left: 4px solid #d52349;
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.ref-box span {
+  color: #d52349;
+}
+
+.confirmation-section {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.confirmation-section h2 {
+  margin-top: 0;
+}
+
+.confirmation-success {
+  display: none;
+  background: #f0f9f0;
+  border: 1px solid #4caf50;
+  border-left: 4px solid #4caf50;
+  border-radius: 4px;
+  padding: 1.5em;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.confirmation-success.visible {
+  display: block;
+}
+
+.next-steps {
+  background: #f8f8f8;
+  border-left: 4px solid #d52349;
+  border-radius: 4px;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+
+.next-steps h2 {
+  margin-top: 0;
+}
+
+.email-address {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #252122;
+  display: block;
+  margin: 0.5em 0 1em;
+}
+
+.form-error-msg {
+  color: #d52349;
+  font-size: 0.9em;
+  margin-top: 0.25em;
+  display: none;
+}
+
+.form-error-msg.visible {
+  display: block;
+}

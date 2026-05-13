@@ -135,7 +135,7 @@
 
 .action-card--paid:hover {
   border-color: #d52349;
-  border-top-color: #d52349;
+  border-top-width: 3px;
   color: inherit;
 }
 
