@@ -76,36 +76,36 @@
   gap: 0.5em;
 }
 
-.filter-country-btn,
-.filter-topic-btn {
+#filter-bar .filter-country-btn,
+#filter-bar .filter-topic-btn {
   padding: 0.4em 1em;
-  border: 1.5px solid var(--border-light) !important;
+  border: 1.5px solid var(--border-light);
   border-radius: 20px;
-  background: #fff !important;
+  background: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 0.875em;
   font-weight: 600;
   cursor: pointer;
-  color: #444 !important;
+  color: #444;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
-.filter-country-btn:hover,
-.filter-topic-btn:hover {
-  background: var(--border-light) !important;
-  color: #333 !important;
+#filter-bar .filter-country-btn:hover,
+#filter-bar .filter-topic-btn:hover {
+  background: var(--border-light);
+  color: #333;
 }
 
-.filter-country-btn.is-active {
-  background: var(--primary-blue) !important;
-  color: #fff !important;
-  border-color: var(--primary-blue) !important;
+#filter-bar .filter-country-btn.is-active {
+  background: var(--primary-blue);
+  color: #fff;
+  border-color: var(--primary-blue);
 }
 
-.filter-topic-btn.is-active {
-  background: var(--accent-teal) !important;
-  color: #fff !important;
-  border-color: var(--accent-teal) !important;
+#filter-bar .filter-topic-btn.is-active {
+  background: var(--accent-teal);
+  color: #fff;
+  border-color: var(--accent-teal);
 }
 
 /* ── Country section headings ───────────────────────────── */
@@ -135,8 +135,8 @@
   #filter-bar {
     padding: 1em;
   }
-  .filter-country-btn,
-  .filter-topic-btn {
+  #filter-bar .filter-country-btn,
+  #filter-bar .filter-topic-btn {
     font-size: 0.8em;
     padding: 0.35em 0.8em;
   }
