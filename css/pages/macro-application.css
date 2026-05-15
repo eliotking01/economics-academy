@@ -86,25 +86,25 @@
   font-size: 0.875em;
   font-weight: 600;
   cursor: pointer;
-  color: #444;
+  color: #444 !important;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
 #filter-bar .filter-country-btn:hover,
 #filter-bar .filter-topic-btn:hover {
   background: var(--border-light);
-  color: #333;
+  color: #333 !important;
 }
 
 #filter-bar .filter-country-btn.is-active {
   background: var(--primary-blue);
-  color: #fff;
+  color: #fff !important;
   border-color: var(--primary-blue);
 }
 
 #filter-bar .filter-topic-btn.is-active {
   background: var(--accent-teal);
-  color: #fff;
+  color: #fff !important;
   border-color: var(--accent-teal);
 }
 
