@@ -1,52 +1,157 @@
-/* ── Category Navigation ─────────────────────────────── */
+/* ── Hero ───────────────────────────────────────────────── */
 
-.category-nav {
-  margin: 2em 0 3em;
-}
-
-.category-nav .actions.special {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5em;
-  padding: 0;
-  margin: 0;
-}
-
-.category-nav .actions.special li {
-  flex: 1 0 auto;
-  min-width: 150px;
-  max-width: 220px;
-  margin: 0;
-  padding: 0;
+.faq-hero {
   text-align: center;
+  padding: 2em 0 0.5em;
+  margin-bottom: 2.5em;
 }
 
-.category-nav .actions.special .button {
+.faq-h1 {
+  font-size: 2.4em;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+  color: #252122;
+  font-weight: 700;
+}
+
+.faq-subhead {
+  font-size: 1.05em;
+  color: #5d5d5d;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Search ─────────────────────────────────────────────── */
+
+.faq-search {
+  margin: 0 0 2em;
+}
+
+.faq-search-wrap {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.faq-search-icon {
+  position: absolute;
+  left: 0.9em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.faq-search-input {
   width: 100%;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 0.75em 1em 0.75em 2.7em;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 300;
+  color: #252122;
+  background: #fff;
+  transition: border-color 0.2s;
 }
 
-@media screen and (max-width: 736px) {
-  .category-nav .actions.special li {
-    min-width: calc(50% - 0.5em);
-  }
+.faq-search-input:focus {
+  border-color: #d52349;
+  outline: none;
 }
 
-@media screen and (max-width: 480px) {
-  .category-nav .actions.special li {
-    min-width: 100%;
-  }
+.faq-no-results {
+  text-align: center;
+  margin: 1.5em 0 0;
+  color: #5d5d5d;
+  font-style: italic;
 }
 
-/* ── Accordion ───────────────────────────────────────── */
+/* ── Layout ─────────────────────────────────────────────── */
+
+.faq-layout {
+  display: flex;
+  gap: 2.5em;
+  align-items: flex-start;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+
+.faq-sidebar {
+  width: 185px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 1.5em;
+}
+
+.faq-sidebar-title {
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #aaa;
+  margin: 0 0 0.75em;
+  padding-left: 1em;
+}
+
+.faq-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid #e0e0e0;
+}
+
+.faq-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-nav-link {
+  display: block;
+  padding: 0.55em 1em;
+  color: #5d5d5d;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-left: -2px;
+  font-size: 0.88em;
+  line-height: 1.4;
+  transition: color 0.2s, border-left-color 0.2s, background 0.2s;
+}
+
+.faq-nav-link:hover,
+.faq-nav-link.is-active {
+  color: #d52349;
+  text-decoration: none;
+  border-left-color: #d52349;
+  background: rgba(213, 35, 73, 0.05);
+}
+
+/* ── FAQ content ────────────────────────────────────────── */
+
+.faq-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Category section ───────────────────────────────────── */
+
+.faq-category {
+  scroll-margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* ── Mobile category pills ──────────────────────────────── */
+
+.faq-mobile-nav {
+  display: none;
+}
+
+/* ── Accordion ──────────────────────────────────────────── */
 
 .accordion {
   width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 .accordion-item {
@@ -54,7 +159,8 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 1.5em;
 }
 
 .accordion-button {
@@ -66,7 +172,9 @@
   border: none;
   cursor: pointer;
   font-size: 1em;
+  font-family: inherit;
   font-weight: bold;
+  line-height: 1.4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,6 +186,11 @@
   background-color: #b01c3a;
 }
 
+.accordion-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -4px;
+}
+
 .accordion-button .icon {
   margin-left: 1em;
   color: white;
@@ -87,7 +200,7 @@
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.35s ease-out;
   background-color: white;
 }
 
@@ -98,23 +211,97 @@
   margin: 0;
 }
 
-.accordion-content ul,
+.accordion-content > p:first-child,
+.accordion-content > ul:first-child,
+.accordion-content > ol:first-child {
+  padding-top: 1em;
+}
+
+.accordion-content ul {
+  list-style: disc;
+  padding-left: 3em;
+}
+
 .accordion-content ol {
-  padding-left: 2.5em;
+  list-style: decimal;
+  padding-left: 3em;
 }
 
-/* ── Section headers inside .major ───────────────────── */
-
-.major h3 {
-  margin-top: 2em;
-  border-bottom: 2px solid #d52349;
-  padding-bottom: 0.5em;
-  color: #252122;
+.accordion-content li {
+  margin-bottom: 0.25em;
 }
 
-/* ── Category nav actions centering ─────────────────── */
+.accordion-content a {
+  color: #d52349;
+}
 
-.actions {
-  justify-content: center;
-  margin-bottom: 2em;
+/* ── CTA ────────────────────────────────────────────────── */
+
+.faq-cta {
+  margin-top: 3em;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+
+@media screen and (max-width: 980px) {
+  .faq-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-sidebar {
+    display: none;
+  }
+
+  .faq-mobile-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em;
+  }
+
+  .faq-mobile-nav-link {
+    display: inline-block;
+    padding: 0.4em 1em;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.88em;
+    color: #5d5d5d;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+
+  .faq-mobile-nav-link:hover,
+  .faq-mobile-nav-link.is-active {
+    background: #d52349;
+    color: #fff;
+    border-color: #d52349;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .faq-h1 {
+    font-size: 1.9em;
+  }
+
+  .accordion-button {
+    font-size: 0.92em;
+    padding: 0.9em 1.2em;
+  }
+
+  .accordion-content p,
+  .accordion-content ul,
+  .accordion-content ol {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+  }
+
+  .accordion-content ul,
+  .accordion-content ol {
+    padding-left: 2.2em;
+  }
 }
