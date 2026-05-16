@@ -138,7 +138,8 @@ table {
 }
 
 body {
-  -webkit-text-size-adjust: none;
+  /* 100% prevents iOS from auto-enlarging text in landscape — "none" is an a11y violation */
+  -webkit-text-size-adjust: 100%;
 }
 
 mark {
@@ -205,6 +206,14 @@ html {
 
 #header-placeholder {
   min-height: 240px;
+}
+
+/* On mobile the injected header is much shorter — reduce reserved space to
+   avoid a large blank area on slow connections */
+@media screen and (max-width: 767px) {
+  #header-placeholder {
+    min-height: 120px;
+  }
 }
 
 *,
@@ -2701,6 +2710,16 @@ ul.social li a.fa-google-plus:hover {
     display: block;
   }
 
+  /* Forms — iOS Safari zooms into any input with font-size < 16px.
+     Override the inherited 11pt body font so tapping a field never triggers zoom. */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form select,
+  form textarea {
+    font-size: 16px;
+  }
+
   /* Nav */
 
   #page-wrapper {
@@ -2713,6 +2732,8 @@ ul.social li a.fa-google-plus:hover {
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
     padding-bottom: 1px;
+    /* Push content below the fixed 44px titleBar so it isn't hidden under it */
+    padding-top: 44px;
   }
 
   #titleBar {
@@ -2735,9 +2756,27 @@ ul.social li a.fa-google-plus:hover {
   }
 
   #titleBar .toggle {
-    text-decoration: none;
+    /* Reset <button> defaults */
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    /* Layout */
+    display: block;
+    position: relative;
     width: 80px;
     height: 60px;
+    text-decoration: none;
+    /* Ensure minimum 44px tap target height (WCAG 2.5.5) */
+    min-height: 44px;
+  }
+
+  #titleBar .toggle:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 2px;
+    border-radius: 3px;
   }
 
   #titleBar .toggle:before {
