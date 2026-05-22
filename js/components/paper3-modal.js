@@ -335,6 +335,7 @@
       name:       document.getElementById('eap-name').value.trim(),
       email:      document.getElementById('eap-email').value.trim(),
       exam_board: document.getElementById('eap-board').value,
+      consent:    'Yes — agreed to be emailed about this session',
       _subject:   'New Paper 3 session interest'
     };
 

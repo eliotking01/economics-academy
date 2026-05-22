@@ -302,6 +302,10 @@
   height: 1rem;
   cursor: pointer;
   accent-color: #d52349;
+  /* main.css strips appearance from all inputs — restore native checkbox */
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: auto;
 }
 
 .eap-modal__consent-label {
