@@ -173,6 +173,15 @@
     ].join('\n');
   }
 
+  // -- Tab HTML -----------------------------------------------
+
+  function buildTabHTML() {
+    return '<button id="eap-tab-btn" class="eap-tab"' +
+      ' aria-label="View Paper 3 group revision sessions">' +
+      'Paper 3 Sessions' +
+      '</button>';
+  }
+
   // -- Validation helpers -------------------------------------
 
   function isValidEmail(val) {
@@ -219,9 +228,9 @@
       setFieldValid(boardField, boardErr);
     }
 
-    var consentField   = document.getElementById('eap-field-consent');
-    var consentInput   = document.getElementById('eap-consent');
-    var consentErr     = document.getElementById('eap-err-consent');
+    var consentField = document.getElementById('eap-field-consent');
+    var consentInput = document.getElementById('eap-consent');
+    var consentErr   = document.getElementById('eap-err-consent');
     if (!consentInput.checked) {
       setFieldInvalid(consentField, consentErr); ok = false;
     } else {
@@ -241,7 +250,6 @@
     var target = document.getElementById('eap-step-' + n);
     if (target) {
       target.classList.add('eap-modal__step--active');
-      // Move focus into the new step
       var firstFocusable = target.querySelector(
         'button,input,select,textarea,a[href],[tabindex]:not([tabindex="-1"])'
       );
@@ -286,12 +294,24 @@
   function openModal() {
     var overlay = document.getElementById('eap-modal-overlay');
     if (!overlay || modalIsOpen) return;
+
+    // Always open at step 1 (whether auto-triggered or via tab)
+    var steps = document.querySelectorAll('.eap-modal__step');
+    for (var i = 0; i < steps.length; i++) {
+      steps[i].classList.remove('eap-modal__step--active');
+    }
+    document.getElementById('eap-step-1').classList.add('eap-modal__step--active');
+
     modalIsOpen = true;
     previouslyFocused = document.activeElement;
     overlay.classList.add('eap-modal__overlay--visible');
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', handleKeydown);
-    // Focus first interactive element
+
+    // Hide tab while modal is open
+    var tab = document.getElementById('eap-tab-btn');
+    if (tab) tab.classList.add('eap-tab--hidden');
+
     var dialog = document.getElementById('eap-modal-dialog');
     var first  = dialog.querySelector(FOCUSABLE_SELECTORS);
     if (first) first.focus();
@@ -304,6 +324,11 @@
     overlay.classList.remove('eap-modal__overlay--visible');
     document.body.style.overflow = '';
     document.removeEventListener('keydown', handleKeydown);
+
+    // Restore tab
+    var tab = document.getElementById('eap-tab-btn');
+    if (tab) tab.classList.remove('eap-tab--hidden');
+
     if (previouslyFocused && previouslyFocused.focus) {
       previouslyFocused.focus();
     }
@@ -324,7 +349,7 @@
     e.preventDefault();
     if (!validateForm()) return;
 
-    var submitBtn  = document.getElementById('eap-submit');
+    var submitBtn   = document.getElementById('eap-submit');
     var errorBanner = document.getElementById('eap-submit-error');
 
     submitBtn.disabled = true;
@@ -390,6 +415,10 @@
     // Step 4 close
     document.getElementById('eap-btn-close-confirm')
       .addEventListener('click', closeModal);
+
+    // Persistent tab reopens at step 1 (not gated by localStorage)
+    document.getElementById('eap-tab-btn')
+      .addEventListener('click', openModal);
   }
 
   // -- Inject CSS ---------------------------------------------
@@ -402,23 +431,25 @@
   }
 
   // -- Init ---------------------------------------------------
+  // The modal + tab are always injected so the tab works for all visitors.
+  // The automatic first-visit open is gated on the localStorage flag.
 
   function init() {
-    if (hasSeenRecently()) return;
-
     injectCSS();
     document.body.insertAdjacentHTML('beforeend', buildModalHTML());
+    document.body.insertAdjacentHTML('beforeend', buildTabHTML());
     bindEvents();
-    markSeen();
 
-    // Show after page settle (is-preload removed at window.load + 100ms)
-    window.addEventListener('load', function () {
-      setTimeout(openModal, 500);
-    });
-
-    // Guard: if load already fired (script loaded late), show shortly
-    if (document.readyState === 'complete') {
-      setTimeout(openModal, 200);
+    if (!hasSeenRecently()) {
+      markSeen();
+      // Show after page settle (is-preload removed at window.load + 100ms)
+      window.addEventListener('load', function () {
+        setTimeout(openModal, 500);
+      });
+      // Guard: if load already fired (script loaded late), show shortly
+      if (document.readyState === 'complete') {
+        setTimeout(openModal, 200);
+      }
     }
   }
 
