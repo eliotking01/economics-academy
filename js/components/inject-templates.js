@@ -179,10 +179,3 @@ function setActivePage() {
 $(function () {
   injectTemplates();
 });
-
-// Load Paper 3 group session modal on every page
-(function () {
-  var s = document.createElement('script');
-  s.src = '/js/components/paper3-modal.js';
-  document.head.appendChild(s);
-}());
