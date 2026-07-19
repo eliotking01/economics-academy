@@ -18,18 +18,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      1.5.1 Market Structures | AQA A-Level Economics Revision Notes |
-      Economics Academy
+      1.5.1 Market Structures | AQA A-Level Economics Revision Notes | Economics
+      Academy
     </title>
     <meta
       name="description"
-      content="Free AQA A-Level Economics revision notes on Market Structures."
+      content="Free AQA A-Level Economics revision notes on Market Structures - learn about the spectrum of competition, characteristics of market structures, and more."
     />
-    <!-- ============================================================ -->
-    <!-- TODO: REMOVE the noindex tag below once the revision notes  -->
-    <!-- for this page have been written, so it can be indexed.      -->
-    <!-- ============================================================ -->
-    <meta name="robots" content="noindex" />
+
     <link
       rel="canonical"
       href="https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-1-market-structures.html"
@@ -45,7 +41,7 @@
     />
     <meta
       property="og:description"
-      content="Free AQA A-Level Economics revision notes on Market Structures."
+      content="Free AQA A-Level Economics revision notes on Market Structures - learn about the spectrum of competition, characteristics of market structures, and more."
     />
     <meta
       property="og:image"
@@ -65,7 +61,7 @@
         "@context": "https://schema.org",
         "@type": "LearningResource",
         "name": "Market Structures",
-        "description": "Free AQA A-Level Economics revision notes on Market Structures.",
+        "description": "Free AQA A-Level Economics revision notes on Market Structures - learn about the spectrum of competition, characteristics of market structures, and more.",
         "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-1-market-structures.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
@@ -87,6 +83,124 @@
     <link rel="stylesheet" href="/css/main.css" />
 
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+
+    <!-- Scoped styles: competition spectrum diagram (1.5.1 only) -->
+    <style>
+      .comp-spectrum {
+        margin: 1.75rem 0 2rem;
+      }
+      .comp-spectrum__track {
+        list-style: none;
+        margin: 0 0 1.25rem;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+      .comp-spectrum__step {
+        position: relative;
+        background: var(--light-bg, #f8fafc);
+        border: 1px solid var(--border-light, #e2e8f0);
+        border-top: 4px solid var(--step-color);
+        border-radius: 8px;
+        padding: 1rem 0.85rem;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      }
+      /* Chevron connector between cards */
+      .comp-spectrum__step::after {
+        content: "\203A";
+        position: absolute;
+        right: -1.1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.6rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #94a3b8;
+      }
+      .comp-spectrum__step:last-child::after {
+        display: none;
+      }
+      .comp-spectrum__name {
+        display: block;
+        font-weight: 700;
+        font-size: 0.98rem;
+        line-height: 1.25;
+        color: var(--primary-blue, #1a3e72);
+      }
+      .comp-spectrum__firms {
+        display: block;
+        margin-top: 0.35rem;
+        font-size: 0.82rem;
+        color: #5d5d5d;
+      }
+      .comp-spectrum__step--1 {
+        --step-color: #27ae60;
+      }
+      .comp-spectrum__step--2 {
+        --step-color: #9acd32;
+      }
+      .comp-spectrum__step--3 {
+        --step-color: #f57c00;
+      }
+      .comp-spectrum__step--4 {
+        --step-color: #c2185b;
+      }
+      /* Override the shared ".revision-notes-content ol > li" counter styling
+         for this component only (removes the "1." "2." numbering + its indent). */
+      .revision-notes-content .comp-spectrum__step {
+        padding-left: 0.85rem;
+        margin-bottom: 0;
+      }
+      .revision-notes-content .comp-spectrum__step::before {
+        content: none;
+      }
+      .comp-spectrum__axis {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+      .comp-spectrum__axis-label {
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #64748b;
+        white-space: nowrap;
+      }
+      .comp-spectrum__rail {
+        flex: 1;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(
+          to right,
+          #27ae60,
+          #9acd32,
+          #f57c00,
+          #c2185b
+        );
+      }
+      @media (max-width: 600px) {
+        .comp-spectrum__track {
+          grid-template-columns: 1fr;
+        }
+        .comp-spectrum__step {
+          border-top: 1px solid var(--border-light, #e2e8f0);
+          border-left: 4px solid var(--step-color);
+        }
+        /* Chevron rotates to point down the stacked column */
+        .comp-spectrum__step::after {
+          top: auto;
+          right: 50%;
+          bottom: -1.3rem;
+          transform: translateX(50%) rotate(90deg);
+        }
+        .comp-spectrum__axis {
+          display: none;
+        }
+      }
+    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -143,6 +257,95 @@
               <h2>1.5.1 Market Structures</h2>
             </header>
 
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> AQA unit 1.5.1 - Market
+              Structures. Students should understand the spectrum of competition
+              ranging from perfect competition to pure monopoly, and the
+              characteristics that enable economists to distinguish between
+              different market structures.
+            </div>
+
+            <section>
+              <h3>The Spectrum of Competition</h3>
+              <p>
+                <span class="key-definition">Competition:</span> refers to the
+                <strong>number of businesses</strong> in a market and the degree
+                of rivalry between them. The spectrum of competition ranges from
+                perfect competition to pure monopoly, with various market
+                structures in between. The main market structures include:
+              </p>
+              <div
+                class="comp-spectrum"
+                role="img"
+                aria-label="Spectrum of competition from perfect competition (most competitive, very many firms) through monopolistic competition and oligopoly to monopoly (least competitive, one firm)."
+              >
+                <ol class="comp-spectrum__track">
+                  <li class="comp-spectrum__step comp-spectrum__step--1">
+                    <span class="comp-spectrum__name">Perfect competition</span>
+                    <span class="comp-spectrum__firms"
+                      >Infinite number of firms</span
+                    >
+                  </li>
+                  <li class="comp-spectrum__step comp-spectrum__step--2">
+                    <span class="comp-spectrum__name"
+                      >Monopolistic competition</span
+                    >
+                    <span class="comp-spectrum__firms">Many firms</span>
+                  </li>
+                  <li class="comp-spectrum__step comp-spectrum__step--3">
+                    <span class="comp-spectrum__name">Oligopoly</span>
+                    <span class="comp-spectrum__firms">3-8 firms</span>
+                  </li>
+                  <li class="comp-spectrum__step comp-spectrum__step--4">
+                    <span class="comp-spectrum__name">Monopoly</span>
+                    <span class="comp-spectrum__firms">One firm</span>
+                  </li>
+                </ol>
+                <div class="comp-spectrum__axis">
+                  <span class="comp-spectrum__axis-label"
+                    >Most competitive</span
+                  >
+                  <span class="comp-spectrum__rail" aria-hidden="true"></span>
+                  <span class="comp-spectrum__axis-label"
+                    >Least competitive</span
+                  >
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h3>Characteristics of Market Structures</h3>
+              <p>
+                The main characteristics that distinguish different market
+                structures include:
+              </p>
+              <ul>
+                <li>
+                  <strong>Number of firms in the market</strong> - more firms
+                  indicates stronger competition.
+                </li>
+                <li>
+                  <strong
+                    >Type of products sold (homogeneous or
+                    differentiated)</strong
+                  >
+                  - homogeneous products are identical, while differentiated
+                  products have unique features that distinguish them from
+                  competitors.
+                </li>
+                <li>
+                  <strong>Barriers to entry and exit</strong> - high barriers to
+                  entry prevent firms joining the market and limit competition.
+                </li>
+                <li>
+                  <strong>Level of information</strong> - if markets have
+                  perfect information, consumers and producers can make fully
+                  informed decisions, which increases competition. Asymmetric
+                  information, where one party has more or better information
+                  than the other, can reduce competition.
+                </li>
+              </ul>
+            </section>
           </div>
         </div>
       </section>
