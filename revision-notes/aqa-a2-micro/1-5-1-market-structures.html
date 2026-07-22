@@ -83,6 +83,34 @@
     <link rel="stylesheet" href="/css/main.css" />
 
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ], // Both $...$ and \(...\)
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
 
     <!-- Scoped styles: competition spectrum diagram (1.5.1 only) -->
     <style>
