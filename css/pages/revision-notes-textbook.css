@@ -133,6 +133,43 @@
   box-shadow: 0 2px 8px rgba(125, 39, 39, 0.04);
 }
 
+/* Flow chains (e.g. the poverty trap cycle) */
+.revision-notes-content .flow-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em 0.65em;
+  margin: 1.5em 0 2em;
+}
+
+.revision-notes-content .flow-node {
+  display: inline-block;
+  padding: 0.5em 0.9em;
+  background: var(--light-bg);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: 8px;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 0.95em;
+  line-height: 1.3;
+  color: var(--primary-blue);
+}
+
+.revision-notes-content .flow-arrow {
+  color: var(--accent-teal);
+  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1;
+  user-select: none;
+}
+
+.revision-notes-content .flow-node--end {
+  background: var(--accent-teal);
+  border-color: var(--accent-teal);
+  color: #fff;
+}
+
 /* Enhanced exam tips */
 .revision-notes-content .exam-tip {
   background: linear-gradient(
