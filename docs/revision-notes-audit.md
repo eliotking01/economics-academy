@@ -25,8 +25,9 @@ macro and labels them "AQA unit 1.5.10". The mapping is a clean shift —
 site `1.x` = AQA `4.1.x`, site `2.x` = AQA `4.2.x` — so the content is organised
 correctly and only the codes are wrong.
 
-**Flagged, not changed.** Renumbering would change filenames, URLs, page titles,
-breadcrumbs and the sitemap. That is a decision, not a cleanup.
+**Decided: leave as-is.** Renumbering would change filenames, URLs, page titles,
+breadcrumbs and the sitemap. The author has reviewed this and chosen to keep the
+existing numbering, so it should not be raised again as a defect.
 
 ---
 
@@ -161,34 +162,46 @@ Decline") escaped to `&amp;`. No visible rendering change.
 
 ---
 
-## Flagged for review — economics content, deliberately not edited
+## Economics content — flagged, and what was decided
 
-### C1 — Supply diagram caption is inverted (highest priority)
+### C1 — Supply diagram caption is inverted — STILL OPEN
 
-`edexcel-theme-1/1-2-4-supply.html` and its AQA twin
-`aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html`:
+**`edexcel-theme-1/1-2-4-supply.html` lines 199–204**, and its AQA twin
+**`aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html`
+lines 210–215.** This is the caption on **Figure 1**, the `supply-curve-movement.png`
+diagram — not Figure 2, the shift diagram directly below it.
 
-> "A movement from point B to A shows a **'Contraction in QS' due to a price rise**.
-> A movement from point A to B shows an **'Extension in QS' due to a price fall**."
+> "Figure 1: … A movement from point B to A shows a **'Contraction in QS' due to a
+> price rise**. A movement from point A to B shows an **'Extension in QS' due to a
+> price fall**."
 
-Fifteen lines below, the same page correctly states _"Extension in QS: A rise in price
-leads to a movement up the curve"_. The caption appears to have been copy-pasted from
-the **demand** page — where "contraction due to a price rise" is correct — without
-flipping the sign. It is wrong, and it contradicts the bullet list within one screen.
+The two causes are transposed. Supply slopes upward, so a price **rise** causes an
+extension and a price **fall** causes a contraction. Fifteen lines below, the bullet
+list states it correctly:
 
-### C2 — Supernormal profit given as `P > C` rather than `P > AC`
+> **Extension in QS:** A rise in price leads to a movement up the curve (A → B).
+> **Contraction in QS:** A fall in price leads to a movement down the curve (A → C).
 
-`edexcel-theme-3/3-4-1-efficiency.html` (twice) and its AQA twin
-`aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html` (twice).
-`C` is undefined on the page and `P > MC` appears two sentences earlier, so a student
-could reasonably read `C` as marginal cost. Looks like a dropped "A".
+So the caption contradicts the bullets beneath it. It reads plausibly because
+"contraction due to a price rise" _is_ correct on the **demand** page — the caption
+appears to have been copy-pasted from there without flipping the sign.
 
-### C3 — `aqa-a2-micro/1-4-7-profit.html` spec block is the wrong topic entirely
+Secondary point: the caption names only points A and B, while the bullets use
+A → B and A → C.
 
-Reads "Edexcel unit 3.3.4 - Normal Profits, Supernormal Profits and Losses" on a page
-whose heading is "1.4.7 Profit". The whole block was pasted from
-`edexcel-theme-3/3-3-4`. Wrong board, wrong code **and** wrong topic — it needs new
-spec wording written, so it was left alone.
+### C2 — Supernormal profit given as `P > C` rather than `P > AC` — FIXED
+
+`edexcel-theme-3/3-4-1-efficiency.html` (figure caption + body) and its AQA twin
+`aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html`.
+`C` was undefined on the page and `P > MC` appears two lines earlier in the same
+caption as the allocative inefficiency condition, so a student could reasonably read
+`C` as marginal cost. Corrected to `P > AC` in all four places.
+
+### C3 — `aqa-a2-micro/1-4-7-profit.html` spec block was the wrong topic — FIXED BY AUTHOR
+
+Read "Edexcel unit 3.3.4 - Normal Profits, Supernormal Profits and Losses" on a page
+headed "1.4.7 Profit" — the block had been pasted wholesale from
+`edexcel-theme-3/3-3-4`. Rewritten by the author as "AQA unit 1.4.7 - Profit".
 
 ### C4 — Two AQA pages cross-reference Edexcel theme numbers
 
@@ -272,7 +285,8 @@ padding: 0 1em 0.5em 1em;
 
 Reported here but **not** actioned, in rough priority order.
 
-1. **Rule on C1 and C2** — the only outright economics errors found.
+1. **C1 — the inverted supply caption is the one economics error still outstanding.**
+   C2 has been corrected and C3 was fixed by the author.
 2. **Titles and meta descriptions.** 163 of 168 titles exceed 70 characters (max 172)
    and 156 of 168 descriptions exceed 160 (max 323), so almost all truncate in search
    results. The boilerplate suffix `| <Board> A-Level Economics Revision Notes |
@@ -297,4 +311,5 @@ Economics Academy` is 55–58 characters on its own. One exact duplicate title p
 8. **Dead CSS.** `chart-container` is used 211 times with no rule anywhere;
    `.coming-soon` has rules but no markup uses it; `.evaluation-point` has 7 rules and
    2 uses.
-9. **AQA spec renumbering** — see "Specifications in use" above.
+   **Not on this list:** AQA spec renumbering. The author has reviewed it and decided to
+   keep the current numbering — see "Specifications in use" above.
