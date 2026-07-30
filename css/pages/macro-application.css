@@ -141,3 +141,101 @@
     padding: 0.35em 0.8em;
   }
 }
+
+/* ── Heading-level compatibility ─────────────────────────────
+   The revision notes gained a proper <h1> page title, so
+   revision-notes-textbook.css moved its body-heading styles up one
+   level (section h3 -> h2, sub-heading h4 -> h3). This page still uses
+   the older h2/h3/h4 structure, so its previous appearance is restored
+   below. This stylesheet is loaded only by this page, and after
+   revision-notes-textbook.css, so nothing else is affected.
+   ──────────────────────────────────────────────────────────── */
+
+/* Section headings here are h3: restore the former h3 treatment. */
+.revision-notes-content h3 {
+  color: var(--primary-blue);
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  font-size: 1.8em;
+  margin: 2em 0 1em 0;
+  padding: 0.75em 1em;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 137, 152, 0.08) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-left: 5px solid var(--accent-teal);
+  border-bottom: none;
+  border-radius: 0 6px 6px 0;
+  position: relative;
+}
+
+.revision-notes-content h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-teal), transparent);
+}
+
+/* Sub-headings here are h4: restore the former h4 treatment. */
+.revision-notes-content h4 {
+  color: var(--secondary-blue);
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 1.4em;
+  margin: 1.8em 0 0.8em 0;
+  padding-bottom: 0.4em;
+  border-bottom: 2px dashed var(--border-light);
+}
+
+/* The page title is still an h2 inside header.major, so it must opt out
+   of the section styling now attached to h2. */
+.revision-notes-content .notes-container > header.major h2 {
+  margin: 0 0 0.5em 0;
+  padding: 0 1em 0.5em 1em;
+  border-left: none;
+  border-radius: 0;
+}
+
+.revision-notes-content .notes-container > header.major h2:before {
+  content: none;
+}
+
+/* Country headings are plain h2s, not note-page section headings, so
+   they must opt out of the section styling now attached to h2. */
+.revision-notes-content h2.country-heading {
+  font-size: 1.5em;
+  margin: 2em 0 0.25em 0;
+  padding: 0 0 0.4em 0;
+  background: none;
+  border-left: none;
+  border-radius: 0;
+  position: static;
+}
+
+.revision-notes-content h2.country-heading:before {
+  content: none;
+}
+
+@media (max-width: 768px) {
+  .revision-notes-content h3 {
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    margin: 1.5em 0 0.8em 0;
+  }
+
+  .revision-notes-content h4 {
+    font-size: 1.2em;
+    margin: 1.5em 0 0.6em 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .revision-notes-content h3 {
+    font-size: 1.3em;
+    padding: 0.5em;
+  }
+}

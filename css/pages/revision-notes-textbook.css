@@ -59,7 +59,7 @@
 }
 
 /* Typography hierarchy */
-.revision-notes-content h3 {
+.revision-notes-content h2 {
   color: var(--primary-blue);
   font-family: "Source Sans Pro";
   font-weight: 700;
@@ -76,7 +76,7 @@
   position: relative;
 }
 
-.revision-notes-content h3:before {
+.revision-notes-content h2:before {
   content: "";
   position: absolute;
   left: 0;
@@ -86,7 +86,7 @@
   background: linear-gradient(90deg, var(--accent-teal), transparent);
 }
 
-.revision-notes-content h4 {
+.revision-notes-content h3 {
   color: var(--secondary-blue);
   font-family: "Source Sans Pro";
   font-weight: 600;
@@ -269,7 +269,7 @@
   letter-spacing: 1px;
 }
 
-.revision-notes-content .evaluation-point h4 {
+.revision-notes-content .evaluation-point h3 {
   color: var(--evaluation-orange);
   margin-top: 0;
   padding-top: 0;
@@ -413,7 +413,7 @@
     border-radius: 0;
   }
 
-  .revision-notes-content h3 {
+  .revision-notes-content h2 {
     font-size: 1.5em;
     padding: 0.5em 0.75em;
   }
@@ -453,7 +453,7 @@
   letter-spacing: 1px;
 }
 
-.revision-notes-content .worked-example h4 {
+.revision-notes-content .worked-example h3 {
   color: var(--primary-blue);
   margin-top: 0;
   padding-top: 0;
@@ -619,13 +619,13 @@
   }
 
   /* Typography adjustments */
-  .revision-notes-content h3 {
+  .revision-notes-content h2 {
     font-size: 1.4em;
     padding: 0.6em 0.8em;
     margin: 1.5em 0 0.8em 0;
   }
 
-  .revision-notes-content h4 {
+  .revision-notes-content h3 {
     font-size: 1.2em;
     margin: 1.5em 0 0.6em 0;
   }
@@ -768,7 +768,7 @@
     font-size: 1em;
   }
 
-  .revision-notes-content h3 {
+  .revision-notes-content h2 {
     font-size: 1.3em;
     padding: 0.5em;
   }
@@ -834,7 +834,7 @@
   max-width: 620px;
 }
 
-.revision-notes-content .coming-soon h3 {
+.revision-notes-content .coming-soon h2 {
   background: none;
   border-left: none;
   border-radius: 0;
@@ -844,7 +844,7 @@
   text-align: center;
 }
 
-.revision-notes-content .coming-soon h3::before {
+.revision-notes-content .coming-soon h2::before {
   content: none;
 }
 
