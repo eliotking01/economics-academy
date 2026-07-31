@@ -843,3 +843,39 @@
 .revision-notes-content .notes-cta .button {
   margin: 0.3em;
 }
+
+/* Link out to the topic's practice questions. Sits directly below the CTA
+   above, so it is deliberately quieter than it: teal rather than the brand
+   red, and no filled background competing for the same attention. */
+.revision-notes-content .notes-questions-link {
+  margin-top: 1.5em;
+  padding: 1.5em;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent-teal);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.revision-notes-content .notes-questions-link h2 {
+  margin: 0 0 0.5em;
+  padding: 0;
+  font-size: 1.3em;
+  color: var(--primary-blue);
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.revision-notes-content .notes-questions-link h2:before {
+  content: none;
+}
+
+.revision-notes-content .notes-questions-link p {
+  margin: 0 0 1.2em;
+  font-size: 0.95em;
+}
+
+.revision-notes-content .notes-questions-link .button {
+  margin: 0;
+}

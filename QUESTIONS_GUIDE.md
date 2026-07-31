@@ -206,8 +206,8 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
     "caption": "Table 1: Own-brand tea price and own-brand coffee sales",
     "head": ["", "Price of a pack of tea", "Packs of coffee sold per week"],
     "rows": [
-      ["Before the price rise", "£2.00", "4 000"],
-      ["After the price rise", "£2.40", "4 400"]
+      ["Before the price rise", "£2.00", "4,000"],
+      ["After the price rise", "£2.40", "4,400"]
     ]
   },
   "options": {
@@ -218,7 +218,7 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
   },
   "answer": "C",
   "model": {
-    "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in quantity of coffee: (4 400 − 4 000) ÷ 4 000 × 100 = <strong>+10%</strong>.<br />Percentage change in the price of tea: (£2.40 − £2.00) ÷ £2.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two goods are <strong>substitutes</strong>, which is what you would expect of tea and coffee: dearer tea pushes buyers towards coffee. A magnitude below 1 says they are weak substitutes — a 20% rise in the price of tea moved coffee sales by only 10%.",
+    "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in quantity of coffee: (4,400 − 4,000) ÷ 4,000 × 100 = <strong>+10%</strong>.<br />Percentage change in the price of tea: (£2.40 − £2.00) ÷ £2.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two goods are <strong>substitutes</strong>, which is what you would expect of tea and coffee: dearer tea pushes buyers towards coffee. A magnitude below 1 says they are weak substitutes — a 20% rise in the price of tea moved coffee sales by only 10%.",
     "distractors": {
       "A": "Both errors at once: the formula has been inverted <em>and</em> a minus sign carried across from PED. 20 ÷ 10 = 2, then negated.",
       "B": "The arithmetic is right but the sign is wrong. PED is negative for a normal demand curve, and that minus sign gets attached to XED out of habit. XED is negative only for <strong>complements</strong>. Here both percentage changes are positive, so the answer must be positive.",
@@ -244,6 +244,11 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
 >
   <h2 class="quiz-stem"><span class="quiz-number">4.</span> A supermarket raises the price of its own-brand tea. …</h2>
 
+  <p class="quiz-tags">
+    <span class="quiz-tag">Calculation</span>
+    <!-- plus <span class="quiz-tag quiz-tag-sketch">Sketch to solve</span> when sketch is true -->
+  </p>
+
   <div class="table-container">
     <table class="quiz-data">
       <caption>Table 1: Own-brand tea price and own-brand coffee sales</caption>
@@ -251,8 +256,8 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
         <tr><th scope="col"></th><th scope="col">Price of a pack of tea</th><th scope="col">Packs of coffee sold per week</th></tr>
       </thead>
       <tbody>
-        <tr><th scope="row">Before the price rise</th><td>£2.00</td><td>4 000</td></tr>
-        <tr><th scope="row">After the price rise</th><td>£2.40</td><td>4 400</td></tr>
+        <tr><th scope="row">Before the price rise</th><td>£2.00</td><td>4,000</td></tr>
+        <tr><th scope="row">After the price rise</th><td>£2.40</td><td>4,400</td></tr>
       </tbody>
     </table>
   </div>
@@ -272,7 +277,7 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
     <summary>Show model answer</summary>
     <div class="quiz-model-body">
       <p><strong>Answer: C (+0.5).</strong> Cross elasticity of demand is …</p>
-      <p class="quiz-why-wrong-heading"><strong>Why the others are wrong</strong></p>
+      <p class="quiz-why-wrong-heading"><strong>Why the other options are wrong</strong></p>
       <ul class="quiz-why-wrong">
         <li><strong>A</strong> — Both errors at once: …</li>
         <li><strong>B</strong> — The arithmetic is right but the sign is wrong. …</li>
@@ -293,8 +298,8 @@ Notes on the markup contract:
   `quiz.js` fills it. `quiz.css` reserves its height, so nothing shifts.
 - `<details>` is the model answer. It works with JavaScript disabled. `quiz.js` may open
   it, never remove it.
-- A `sketch: true` question also renders `<p class="quiz-sketch-tag">Sketch to solve</p>`
-  above the options.
+- `.quiz-tags` always carries the skill label. A `sketch: true` question gains a second
+  chip, `<span class="quiz-tag quiz-tag-sketch">Sketch to solve</span>`.
 
 ### JSON-LD emitted for this question
 

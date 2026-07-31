@@ -1,0 +1,655 @@
+/* Practice questions - shared by every page under /practice-questions/.
+   Every rule is nested under .quiz-page, the wrapper class on <section id="main">,
+   so nothing here can collide with another page's stylesheet.
+
+   Colours are the notes palette, restated locally because the :root tokens in
+   revision-notes-textbook.css belong to the notes pages and are not loaded here. */
+
+.quiz-page {
+  --quiz-primary: #1a3e72;
+  --quiz-secondary: #2a5c8d;
+  --quiz-teal: #2a8998;
+  --quiz-correct: #27ae60;
+  --quiz-wrong: #d52349;
+  --quiz-light-bg: #f8fafc;
+  --quiz-border: #e2e8f0;
+  --quiz-muted: #5b6b7f;
+
+  font-family: "Merriweather", serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ------------------------------------------------------------- page shell */
+
+.quiz-page .breadcrumb {
+  margin-bottom: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.9em;
+  color: var(--quiz-muted);
+}
+
+.quiz-page .breadcrumb a {
+  color: var(--quiz-secondary);
+  border-bottom: none;
+}
+
+.quiz-page .breadcrumb .separator {
+  margin: 0 0.5em;
+  color: #9aa8b8;
+}
+
+.quiz-page .quiz-container {
+  max-width: 1000px;
+  margin: 0 auto 3em;
+  padding: 3em;
+  background: #fff;
+  border: 1px solid var(--quiz-border);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-page .quiz-container > header.major {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  background: #fff !important;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.quiz-page .quiz-container > header.major h1 {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.4em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--quiz-primary);
+  background: #fff !important;
+  border-bottom: 3px solid var(--quiz-teal);
+}
+
+.quiz-page .quiz-intro {
+  margin-bottom: 1.25em;
+  font-size: 1.05em;
+}
+
+.quiz-page .quiz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.75em;
+  margin-bottom: 1.25em;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.85em;
+}
+
+.quiz-page .quiz-meta span {
+  padding: 0.3em 0.8em;
+  color: var(--quiz-secondary);
+  background: var(--quiz-light-bg);
+  border: 1px solid var(--quiz-border);
+  border-radius: 999px;
+}
+
+.quiz-page .quiz-notes-link {
+  margin-bottom: 2em;
+  padding: 0.9em 1.2em;
+  font-size: 0.95em;
+  background: var(--quiz-light-bg);
+  border-left: 4px solid var(--quiz-teal);
+  border-radius: 0 6px 6px 0;
+}
+
+/* --------------------------------------------------------------- dashboard
+
+   Always rendered and always visible, so enhancing the page shifts nothing.
+   quiz.js overwrites the text and reveals the reset button. Elements that
+   only exist once JS is running use visibility rather than display, so they
+   occupy their space from the first paint and stay out of the tab order
+   until they are real. */
+
+.quiz-page .quiz-dashboard {
+  margin-bottom: 2em;
+  padding: 1.2em 1.4em;
+  font-family: "Source Sans Pro", sans-serif;
+  background: var(--quiz-light-bg);
+  border: 1px solid var(--quiz-border);
+  border-radius: 8px;
+}
+
+.quiz-page .quiz-dashboard-reset {
+  margin-top: 1em;
+  padding: 0 1.2em;
+  font-size: 0.75em;
+  line-height: 2.6em;
+  height: 2.6em;
+  visibility: hidden;
+}
+
+.quiz-page .quiz-dashboard-reset.is-available {
+  visibility: visible;
+}
+
+.quiz-page .quiz-score {
+  margin: 0 0 0.2em 0;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--quiz-primary);
+}
+
+.quiz-page .quiz-best {
+  margin: 0 0 0.8em 0;
+  font-size: 0.9em;
+  color: var(--quiz-muted);
+}
+
+.quiz-page .quiz-best:empty {
+  margin-bottom: 0;
+}
+
+.quiz-page .quiz-progress-track {
+  height: 8px;
+  overflow: hidden;
+  background: #dde5ee;
+  border-radius: 999px;
+}
+
+.quiz-page .quiz-progress-bar {
+  width: 0;
+  height: 100%;
+  background: var(--quiz-teal);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+/* --------------------------------------------------------------- questions */
+
+.quiz-page .quiz-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.quiz-page .quiz-item {
+  margin: 0 0 2em 0;
+  padding: 1.6em 1.8em;
+  background: #fff;
+  border: 1px solid var(--quiz-border);
+  border-left: 5px solid var(--quiz-border);
+  border-radius: 8px;
+  transition: border-left-color 0.2s ease;
+}
+
+.quiz-page .quiz-item.is-correct {
+  border-left-color: var(--quiz-correct);
+}
+
+.quiz-page .quiz-item.is-incorrect {
+  border-left-color: var(--quiz-wrong);
+}
+
+.quiz-page .quiz-stem {
+  margin: 0 0 0.6em 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--quiz-primary);
+  background: none;
+  border: none;
+}
+
+.quiz-page .quiz-number {
+  margin-right: 0.15em;
+  color: var(--quiz-teal);
+}
+
+.quiz-page .quiz-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0 0 1.1em 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.quiz-page .quiz-tag {
+  padding: 0.25em 0.7em;
+  color: var(--quiz-muted);
+  background: var(--quiz-light-bg);
+  border: 1px solid var(--quiz-border);
+  border-radius: 999px;
+}
+
+.quiz-page .quiz-tag-sketch {
+  color: #8a5000;
+  background: #fff5e6;
+  border-color: #f2d9b3;
+}
+
+/* ------------------------------------------------------------ data tables */
+
+.quiz-page .table-container {
+  margin: 0 0 1.3em 0;
+  overflow-x: auto;
+}
+
+.quiz-page .quiz-data {
+  width: 100%;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.95em;
+  border-collapse: collapse;
+}
+
+.quiz-page .quiz-data caption {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--quiz-muted);
+  text-align: left;
+}
+
+.quiz-page .quiz-data th,
+.quiz-page .quiz-data td {
+  padding: 0.55em 0.9em;
+  text-align: left;
+  border: 1px solid var(--quiz-border);
+}
+
+.quiz-page .quiz-data thead th {
+  color: #fff;
+  background: var(--quiz-secondary);
+}
+
+.quiz-page .quiz-data tbody th {
+  font-weight: 600;
+  background: var(--quiz-light-bg);
+}
+
+/* ---------------------------------------------------------------- options */
+
+.quiz-page .quiz-options {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  border: none;
+}
+
+/* Visually hidden, still announced. The fieldset needs a legend to group
+   correctly for screen readers, but sighted users have the stem above it. */
+.quiz-page .quiz-options-legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.quiz-page .quiz-option {
+  margin: 0 0 0.55em 0;
+}
+
+.quiz-page .quiz-option input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.quiz-page .quiz-option label {
+  display: flex;
+  gap: 0.85em;
+  align-items: baseline;
+  padding: 0.7em 1em;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--quiz-border);
+  border-radius: 6px;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.quiz-page .quiz-option label:hover {
+  background: var(--quiz-light-bg);
+  border-color: #c3d0de;
+}
+
+.quiz-page .quiz-option input[type="radio"]:focus-visible + label {
+  outline: 3px solid var(--quiz-wrong);
+  outline-offset: 2px;
+}
+
+.quiz-page .quiz-option input[type="radio"]:checked + label {
+  background: var(--quiz-light-bg);
+  border-color: var(--quiz-secondary);
+}
+
+.quiz-page .quiz-letter {
+  flex: 0 0 auto;
+  min-width: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color: var(--quiz-secondary);
+}
+
+.quiz-page .quiz-option-text {
+  flex: 1 1 auto;
+}
+
+/* Answered state, applied by quiz.js. */
+
+.quiz-page .quiz-option.is-correct label {
+  background: #eaf7ef;
+  border-color: var(--quiz-correct);
+}
+
+.quiz-page .quiz-option.is-correct .quiz-letter {
+  color: var(--quiz-correct);
+}
+
+.quiz-page .quiz-option.is-chosen-wrong label {
+  background: #fdecf0;
+  border-color: var(--quiz-wrong);
+}
+
+.quiz-page .quiz-option.is-chosen-wrong .quiz-letter {
+  color: var(--quiz-wrong);
+}
+
+.quiz-page .quiz-item.is-answered .quiz-option label {
+  cursor: default;
+}
+
+.quiz-page .quiz-item.is-answered .quiz-option label:hover {
+  background: #fff;
+  border-color: var(--quiz-border);
+}
+
+.quiz-page .quiz-item.is-answered .quiz-option.is-correct label:hover {
+  background: #eaf7ef;
+  border-color: var(--quiz-correct);
+}
+
+.quiz-page .quiz-item.is-answered .quiz-option.is-chosen-wrong label:hover {
+  background: #fdecf0;
+  border-color: var(--quiz-wrong);
+}
+
+/* --------------------------------------------------------------- feedback
+
+   min-height reserves the line before quiz.js fills it, so revealing the
+   verdict never pushes the model answer down the page. */
+
+.quiz-page .quiz-feedback {
+  min-height: 1.6em;
+  margin: 0.4em 0 0.6em 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+}
+
+.quiz-page .quiz-feedback[hidden] {
+  display: block;
+  visibility: hidden;
+}
+
+.quiz-page .quiz-feedback.is-correct {
+  color: var(--quiz-correct);
+}
+
+.quiz-page .quiz-feedback.is-incorrect {
+  color: var(--quiz-wrong);
+}
+
+/* ----------------------------------------------------------- model answer */
+
+.quiz-page .quiz-model {
+  padding: 0;
+  background: var(--quiz-light-bg);
+  border: 1px solid var(--quiz-border);
+  border-radius: 6px;
+}
+
+.quiz-page .quiz-model summary {
+  padding: 0.7em 1em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--quiz-secondary);
+  cursor: pointer;
+}
+
+.quiz-page .quiz-model summary:focus-visible {
+  outline: 3px solid var(--quiz-wrong);
+  outline-offset: -3px;
+}
+
+.quiz-page .quiz-model-body {
+  padding: 0 1.2em 1em;
+  font-size: 0.95em;
+}
+
+.quiz-page .quiz-model-body > p:first-child {
+  margin-top: 0;
+}
+
+.quiz-page .quiz-why-wrong-heading {
+  margin-bottom: 0.4em;
+  color: var(--quiz-muted);
+}
+
+.quiz-page .quiz-why-wrong {
+  margin: 0;
+  padding-left: 1.3em;
+}
+
+.quiz-page .quiz-why-wrong li {
+  margin-bottom: 0.45em;
+}
+
+/* ---------------------------------------------------------------- summary */
+
+.quiz-page .quiz-summary {
+  margin: 2.5em 0 0;
+  padding: 1.8em;
+  text-align: center;
+  background: var(--quiz-light-bg);
+  border: 1px solid var(--quiz-border);
+  border-radius: 8px;
+}
+
+.quiz-page .quiz-summary[hidden] {
+  display: none;
+}
+
+.quiz-page .quiz-summary h2 {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  color: var(--quiz-primary);
+  background: none;
+  border: none;
+}
+
+.quiz-page .quiz-summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  justify-content: center;
+  margin-top: 1.2em;
+}
+
+/* -------------------------------------------------------------------- cta */
+
+.quiz-page .quiz-cta {
+  margin-top: 3em;
+  padding-top: 2em;
+  text-align: center;
+  border-top: 1px solid var(--quiz-border);
+}
+
+.quiz-page .quiz-cta p {
+  margin-bottom: 1em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--quiz-primary);
+}
+
+.quiz-page .quiz-cta .button {
+  margin: 0 0.4em 0.6em;
+}
+
+/* ------------------------------------------------- hub and board indexes */
+
+.quiz-page.quiz-index h2 {
+  margin: 2em 0 1em;
+  padding: 0.6em 0.9em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--quiz-primary);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 137, 152, 0.08) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-left: 5px solid var(--quiz-teal);
+  border-radius: 0 6px 6px 0;
+}
+
+.quiz-page .quiz-index-list,
+.quiz-page .quiz-board-list {
+  display: grid;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.quiz-page .quiz-index-item,
+.quiz-page .quiz-board-item {
+  padding: 1.1em 1.2em;
+  background: #fff;
+  border: 1px solid var(--quiz-border);
+  border-left: 5px solid var(--quiz-teal);
+  border-radius: 8px;
+}
+
+.quiz-page .quiz-index-link {
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--quiz-primary);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.quiz-page .quiz-index-link:hover .quiz-index-name {
+  text-decoration: underline;
+}
+
+.quiz-page .quiz-index-code {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--quiz-teal);
+}
+
+.quiz-page .quiz-index-name {
+  display: block;
+  font-size: 1.05em;
+}
+
+.quiz-page .quiz-index-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 0.9em;
+  margin: 0.6em 0 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.82em;
+  color: var(--quiz-muted);
+}
+
+.quiz-page .quiz-index-last:empty {
+  display: none;
+}
+
+.quiz-page .quiz-index-last {
+  font-weight: 600;
+  color: var(--quiz-correct);
+}
+
+.quiz-page .quiz-board-item h3 {
+  margin: 0 0 0.3em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2em;
+  color: var(--quiz-primary);
+}
+
+.quiz-page .quiz-board-item h3 a {
+  color: inherit;
+  border-bottom: none;
+}
+
+.quiz-page .quiz-board-blurb {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--quiz-muted);
+}
+
+/* ------------------------------------------------------------- responsive */
+
+@media screen and (max-width: 736px) {
+  .quiz-page .quiz-container {
+    padding: 1.5em 1.2em;
+  }
+
+  .quiz-page .quiz-container > header.major h1 {
+    font-size: 1.6em;
+  }
+
+  .quiz-page .quiz-item {
+    padding: 1.2em 1em;
+  }
+
+  .quiz-page .quiz-stem {
+    font-size: 1.05em;
+  }
+
+  .quiz-page .quiz-option label {
+    padding: 0.75em 0.85em;
+  }
+
+  .quiz-page .quiz-cta .button {
+    display: block;
+    margin: 0 0 0.6em;
+  }
+
+  .quiz-page .quiz-summary-actions .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-page .quiz-progress-bar,
+  .quiz-page .quiz-option label,
+  .quiz-page .quiz-item {
+    transition: none;
+  }
+}
