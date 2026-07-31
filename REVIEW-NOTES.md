@@ -15,10 +15,9 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
-| Phase 1B — enrichment plans | Batches 1–4 applied; batch 5 delivered |
-| Phase 2 commits 8–9 — enrichment, AQA | **Complete** — 12 components, `NEW-CONTENT-LOG.md` |
-| Phase 2, remaining enrichment | Batches 3–6 (Edexcel, 87 pages) not started |
-| Phase 3 — final verification | Partial (run after each commit so far) |
+| Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
+| Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
+| Phase 3 — final verification | **Complete** — see "Phase 3" below |
 
 ---
 
@@ -101,6 +100,28 @@ Corrected on `aqa-a2-micro/1-5-5` on 31 July but not on its Edexcel twin. Fixed
 here on the author's explicit instruction — the **only** wording change made in this
 entire pass, and a single word: "five" to "three". The sentence now matches the AQA
 twin exactly. The held concentration-ratio component was then applied.
+
+**N6 — a formula was removed with an Exam Preparation section, and exists nowhere else.**
+
+`edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html` was the one
+page of the 87 whose Exam Preparation section contained a `formula-box` as well as
+checklist bullets. It held the **midpoint (arc) method** for percentage change:
+
+```
+%Δ = (New − Old) / ((New + Old)/2) × 100
+```
+
+Removing the section removed the formula, and it now appears **nowhere on the site**
+— the AQA twin never carried it. I noted at reconnaissance that one section
+contained a `formula-box`, and recorded it in the removal table, but did not follow
+through on the fact that a *method* rather than a checklist item would go with it.
+Found by the Phase 3 formula-integrity check.
+
+**My recommendation: leave it out.** Edexcel mark schemes calculate percentage
+change from the original value, not the midpoint, and the PED worked example now on
+that page uses the original-value method. Restoring the midpoint formula would put
+two conflicting methods on one page. But it is your content and your call — say the
+word and I will reinstate it as a `formula-box` in the PED section.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
@@ -308,3 +329,72 @@ placed 13 of its 156 contextual note-to-note links inside the checklists that th
 pass deletes, across 11 pages. Checked afterwards: **every affected target still
 has at least 2 inbound links and nothing is orphaned** (range 2–9). Worth knowing
 if inbound-link counts are ever audited again.
+
+---
+
+# Phase 3 — final verification
+
+Run across the whole branch after the last enrichment commit.
+
+## Results
+
+| Check | Result |
+| --- | --- |
+| HTML well-formedness | **176/176 parse, 0 errors** |
+| Internal links and anchors | **3,863 refs, 0 broken hrefs, 0 broken fragments** |
+| Markup integrity since the Exam Prep removal | **0 losses**, 79 additions |
+| Markup integrity vs `main` | 23 losses — all the approved Exam-Prep link removals, verified to orphan nothing |
+| Display formulas vs `main` | **1 lost** — see flag N6 |
+| Prettier 3.9.6 | Clean on every file touched |
+| Rendering | Components verified in headless Chrome: MathJax fractions, `calculation-table` styling and the EXAM TIP pill all render correctly, in the intended position |
+
+## Text integrity — the commits that must not change wording
+
+| Commit | Files whose visible text differs |
+| --- | ---: |
+| `formula-box` protection | **0** |
+| `.notes-cta` extraction | **0** |
+| `chart-container` removal | **0** |
+| Emphasis, both boards | **0** |
+| Escaping reflow | **0** |
+
+The only commits that changed visible text are the ones intended to: the Exam
+Preparation removal (87 files), the AQA CTA addition (79), the enrichment commits,
+and the single authorised one-word fix on `3-4-4-oligopoly`.
+
+## Outcome against the brief
+
+| | |
+| --- | ---: |
+| Exam Preparation sections remaining | **0** (was 87) |
+| Topic pages carrying exactly one `.notes-cta` | **166 / 166** |
+| Inline-styled CTA blocks remaining | **0** (was 89) |
+| Dead `chart-container` wrappers remaining | **0** (was 211) |
+| `formula-box` divs without `prettier-ignore` | **0** (was 28) |
+| Unescaped `<` in note text | **0** (was 32) |
+| `<b>` / `<i>` / `<u>` in notes | **0** (unchanged) |
+| Worked examples added | 32 total on the site |
+| Exam tips added | 14 total on the site |
+| **Pages carrying a component** | **34 of 166 (20%)** |
+| **Pages receiving nothing** | **132 of 166 (80%)** |
+
+184 files changed against `main`.
+
+## Prettier — the two persistent failures
+
+`revision-notes/index.html` and `revision-notes/macro-application/index.html` still
+fail `prettier --check`. Both fail on `main` too and neither was touched by this
+pass. `css/pages/revision-notes-textbook.css` also fails on `main`, at a long
+`linear-gradient` in the dead `.coming-soon` block — the `.notes-cta` rules added
+here are clean.
+
+## Known scope decisions worth remembering
+
+- **Duplication was approved.** The current account worked example appears on three
+  pages (`aqa-a2-macro/2-6-3`, `edexcel-theme-2/2-1-4`, `edexcel-theme-4/4-1-7`)
+  because Edexcel covers the balance of payments in two themes. Several other
+  components appear on two pages, one per board. Each duplicate is hash-verified
+  identical to its source, so they can be updated together.
+- **One wording change was made**, on explicit authorisation: "five" to "three" on
+  `edexcel-theme-3/3-4-4-oligopoly.html`. Nothing else in 166 pages had a word
+  altered.
