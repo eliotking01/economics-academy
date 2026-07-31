@@ -15,6 +15,13 @@
   --quiz-border: #e2e8f0;
   --quiz-muted: #5b6b7f;
 
+  /* The notes palette's teal and green are accent colours: on white they
+     reach only 4.09:1 and 2.87:1, under the 4.5:1 AA floor for body text.
+     These darker pairs clear it (5.69:1 and 4.72:1) and are used wherever
+     the colour carries text rather than a border or a bar. */
+  --quiz-teal-text: #1f7080;
+  --quiz-correct-text: #1e8449;
+
   font-family: "Merriweather", serif;
   line-height: 1.7;
   color: #333;
@@ -29,14 +36,23 @@
   color: var(--quiz-muted);
 }
 
+/* Underlined, unlike the site's other breadcrumbs. Link colour against the
+   surrounding text reaches only 1.9:1, so colour alone does not distinguish
+   them (WCAG 1.4.1) - the underline is what does. */
 .quiz-page .breadcrumb a {
   color: var(--quiz-secondary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
   border-bottom: none;
+}
+
+.quiz-page .breadcrumb a:hover {
+  text-decoration: none;
 }
 
 .quiz-page .breadcrumb .separator {
   margin: 0 0.5em;
-  color: #9aa8b8;
+  color: #64727f;
 }
 
 .quiz-page .quiz-container {
@@ -206,7 +222,7 @@
 
 .quiz-page .quiz-number {
   margin-right: 0.15em;
-  color: var(--quiz-teal);
+  color: var(--quiz-teal-text);
 }
 
 .quiz-page .quiz-tags {
@@ -356,7 +372,7 @@
 }
 
 .quiz-page .quiz-option.is-correct .quiz-letter {
-  color: var(--quiz-correct);
+  color: var(--quiz-correct-text);
 }
 
 .quiz-page .quiz-option.is-chosen-wrong label {
@@ -406,7 +422,7 @@
 }
 
 .quiz-page .quiz-feedback.is-correct {
-  color: var(--quiz-correct);
+  color: var(--quiz-correct-text);
 }
 
 .quiz-page .quiz-feedback.is-incorrect {
@@ -568,7 +584,7 @@
   display: block;
   font-size: 0.8em;
   font-weight: 700;
-  color: var(--quiz-teal);
+  color: var(--quiz-teal-text);
 }
 
 .quiz-page .quiz-index-name {
@@ -592,7 +608,7 @@
 
 .quiz-page .quiz-index-last {
   font-weight: 600;
-  color: var(--quiz-correct);
+  color: var(--quiz-correct-text);
 }
 
 .quiz-page .quiz-board-item h3 {

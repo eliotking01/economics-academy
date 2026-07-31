@@ -18,7 +18,7 @@
       "sketch": false,
       "stem": "Which one of the following would be most likely to make the demand for a good more price elastic?",
       "options": {
-        "A": "A fall in the number of firms supplying the good.",
+        "A": "A fall in the number of firms competing to supply the good.",
         "B": "An increase in the number of close substitutes available.",
         "C": "The good becoming more addictive for consumers.",
         "D": "The good taking up a smaller share of consumer income."
@@ -82,13 +82,13 @@
       "skill": "calculation",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "A supermarket raises the price of its own-brand tea. The price of its own-brand coffee is unchanged. Table 1 shows weekly sales of own-brand coffee before and after the price rise.<br />Measuring each percentage change against its original value, the cross elasticity of demand for own-brand coffee with respect to the price of own-brand tea is",
+      "stem": "A gym raises the price of its monthly membership. The price of its pay-as-you-go day pass is unchanged. Table 1 shows the number of day passes sold before and after the increase.<br />Measuring each percentage change against its original value, the cross elasticity of demand for day passes with respect to the price of a monthly membership is",
       "table": {
-        "caption": "Table 1: Own-brand tea price and own-brand coffee sales",
-        "head": ["", "Price of a pack of tea", "Packs of coffee sold per week"],
+        "caption": "Table 1: Monthly membership price and day passes sold",
+        "head": ["", "Price of a monthly membership", "Day passes sold per month"],
         "rows": [
-          ["Before the price rise", "£2.00", "4,000"],
-          ["After the price rise", "£2.40", "4,400"]
+          ["Before the price rise", "£30.00", "800"],
+          ["After the price rise", "£36.00", "880"]
         ]
       },
       "options": {
@@ -99,11 +99,11 @@
       },
       "answer": "C",
       "model": {
-        "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in quantity of coffee: (4,400 − 4,000) ÷ 4,000 × 100 = <strong>+10%</strong>.<br />Percentage change in the price of tea: (£2.40 − £2.00) ÷ £2.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two goods are <strong>substitutes</strong>, which is what you would expect of tea and coffee: dearer tea pushes buyers towards coffee. A magnitude below 1 says they are weak substitutes — a 20% rise in the price of tea moved coffee sales by only 10%.",
+        "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in day passes sold: (880 − 800) ÷ 800 × 100 = <strong>+10%</strong>.<br />Percentage change in the membership price: (£36.00 − £30.00) ÷ £30.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two are <strong>substitutes</strong>, which is what you would expect here: people priced out of the monthly membership switch to paying for individual visits instead. A magnitude below 1 says they are weak substitutes — a 20% rise in the membership price moved day-pass sales by only 10%.",
         "distractors": {
           "A": "Both errors at once. The formula has been inverted to give 20 ÷ 10 = 2, and a minus sign has been carried across from PED on top of that.",
           "B": "The arithmetic is right but the sign is wrong. PED is negative for a normal demand curve, and that minus sign gets attached to XED out of habit. XED is negative only for <strong>complements</strong>. Here both percentage changes are positive, so the answer must be positive.",
-          "D": "The formula has been inverted: 20 ÷ 10 rather than 10 ÷ 20. That measures how responsive the price of tea is to coffee sales, which is not what XED means. The percentage change in the <strong>quantity demanded of the other good</strong> always goes on top."
+          "D": "The formula has been inverted: 20 ÷ 10 rather than 10 ÷ 20. That measures how responsive the membership price is to day-pass sales, which is not what XED means. The percentage change in the <strong>quantity demanded of the other good</strong> always goes on top."
         }
       }
     },
@@ -191,7 +191,7 @@
       "options": {
         "A": "price elastic, because buyers will switch to untaxed substitutes.",
         "B": "price elastic, because the fall in quantity widens the tax base.",
-        "C": "price inelastic, because quantity demanded changes little when price rises.",
+        "C": "price inelastic, because quantity demanded barely responds to price.",
         "D": "price inelastic, because producers will absorb the whole of the tax."
       },
       "answer": "C",

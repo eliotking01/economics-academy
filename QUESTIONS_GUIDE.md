@@ -169,6 +169,9 @@ drift.
 | `model.working` | HTML fragment | Full worked reasoning for the correct option. For a calculation, every line of arithmetic. |
 | `model.distractors` | object | One entry per **wrong** letter — all three required. Each names the misconception. |
 
+The generator derives the JSON-LD `name` from the stem's first sentence, so write a
+stem whose opening sentence stands alone as a label.
+
 ### HTML fragments
 
 `stem`, `intro`, `notesTeaser`, `model.working`, `model.distractors.*`, option values and
@@ -201,13 +204,25 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
   "skill": "calculation",
   "difficulty": "standard",
   "sketch": false,
-  "stem": "A supermarket raises the price of its own-brand tea. The price of its own-brand coffee is unchanged. Table 1 shows weekly sales of own-brand coffee before and after the price rise.<br />Measuring each percentage change against its original value, the cross elasticity of demand for own-brand coffee with respect to the price of own-brand tea is",
+  "stem": "A gym raises the price of its monthly membership. The price of its pay-as-you-go day pass is unchanged. Table 1 shows the number of day passes sold before and after the increase.<br />Measuring each percentage change against its original value, the cross elasticity of demand for day passes with respect to the price of a monthly membership is",
   "table": {
-    "caption": "Table 1: Own-brand tea price and own-brand coffee sales",
-    "head": ["", "Price of a pack of tea", "Packs of coffee sold per week"],
+    "caption": "Table 1: Monthly membership price and day passes sold",
+    "head": [
+      "",
+      "Price of a monthly membership",
+      "Day passes sold per month"
+    ],
     "rows": [
-      ["Before the price rise", "£2.00", "4,000"],
-      ["After the price rise", "£2.40", "4,400"]
+      [
+        "Before the price rise",
+        "£30.00",
+        "800"
+      ],
+      [
+        "After the price rise",
+        "£36.00",
+        "880"
+      ]
     ]
   },
   "options": {
@@ -218,11 +233,11 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
   },
   "answer": "C",
   "model": {
-    "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in quantity of coffee: (4,400 − 4,000) ÷ 4,000 × 100 = <strong>+10%</strong>.<br />Percentage change in the price of tea: (£2.40 − £2.00) ÷ £2.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two goods are <strong>substitutes</strong>, which is what you would expect of tea and coffee: dearer tea pushes buyers towards coffee. A magnitude below 1 says they are weak substitutes — a 20% rise in the price of tea moved coffee sales by only 10%.",
+    "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in day passes sold: (880 − 800) ÷ 800 × 100 = <strong>+10%</strong>.<br />Percentage change in the membership price: (£36.00 − £30.00) ÷ £30.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two are <strong>substitutes</strong>, which is what you would expect here: people priced out of the monthly membership switch to paying for individual visits instead. A magnitude below 1 says they are weak substitutes — a 20% rise in the membership price moved day-pass sales by only 10%.",
     "distractors": {
-      "A": "Both errors at once: the formula has been inverted <em>and</em> a minus sign carried across from PED. 20 ÷ 10 = 2, then negated.",
+      "A": "Both errors at once. The formula has been inverted to give 20 ÷ 10 = 2, and a minus sign has been carried across from PED on top of that.",
       "B": "The arithmetic is right but the sign is wrong. PED is negative for a normal demand curve, and that minus sign gets attached to XED out of habit. XED is negative only for <strong>complements</strong>. Here both percentage changes are positive, so the answer must be positive.",
-      "D": "The formula has been inverted: 20 ÷ 10 rather than 10 ÷ 20. That measures the responsiveness of the price of tea to coffee sales, which is not what XED means. The percentage change in the <strong>quantity demanded of the other good</strong> always goes on top."
+      "D": "The formula has been inverted: 20 ÷ 10 rather than 10 ÷ 20. That measures how responsive the membership price is to day-pass sales, which is not what XED means. The percentage change in the <strong>quantity demanded of the other good</strong> always goes on top."
     }
   }
 }
@@ -242,7 +257,7 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
   data-sketch="false"
   data-answer="C"
 >
-  <h2 class="quiz-stem"><span class="quiz-number">4.</span> A supermarket raises the price of its own-brand tea. …</h2>
+  <h2 class="quiz-stem"><span class="quiz-number">4.</span> A gym raises the price of its monthly membership. …</h2>
 
   <p class="quiz-tags">
     <span class="quiz-tag">Calculation</span>
@@ -251,13 +266,13 @@ it, and the JSON-LD. This is AQA 1.3.2, question 4.
 
   <div class="table-container">
     <table class="quiz-data">
-      <caption>Table 1: Own-brand tea price and own-brand coffee sales</caption>
+      <caption>Table 1: Monthly membership price and day passes sold</caption>
       <thead>
-        <tr><th scope="col"></th><th scope="col">Price of a pack of tea</th><th scope="col">Packs of coffee sold per week</th></tr>
+        <tr><th scope="col"></th><th scope="col">Price of a monthly membership</th><th scope="col">Day passes sold per month</th></tr>
       </thead>
       <tbody>
-        <tr><th scope="row">Before the price rise</th><td>£2.00</td><td>4,000</td></tr>
-        <tr><th scope="row">After the price rise</th><td>£2.40</td><td>4,400</td></tr>
+        <tr><th scope="row">Before the price rise</th><td>£30.00</td><td>800</td></tr>
+        <tr><th scope="row">After the price rise</th><td>£36.00</td><td>880</td></tr>
       </tbody>
     </table>
   </div>
@@ -308,8 +323,8 @@ Notes on the markup contract:
   "@type": "Question",
   "eduQuestionType": "Multiple choice",
   "learningResourceType": "Practice problem",
-  "name": "Cross elasticity of demand for coffee with respect to the price of tea",
-  "text": "A supermarket raises the price of its own-brand tea. …",
+  "name": "A gym raises the price of its monthly membership",
+  "text": "A gym raises the price of its monthly membership. The price of its pay-as-you-go day pass is unchanged. …",
   "acceptedAnswer": {
     "@type": "Answer",
     "text": "+0.5",

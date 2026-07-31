@@ -530,3 +530,32 @@ found them in.
   that markup has always used `h2`. Noticed while fixing #2; left alone.
 - **`404.html`** has no canonical and no Open Graph tags. Defensible for a 404,
   listed so it is a decision rather than an oversight.
+
+## Found while building the practice questions (2026-07-31)
+
+Site-wide, pre-existing, not touched. All three were measured with Lighthouse 12
+against `revision-notes/aqa-a2-micro/1-3-3-…html`, a page this work did not edit,
+so none of them is caused by the questions feature.
+
+- **`[aria-hidden="true"]` elements contain focusable descendants.** The only
+  accessibility failure left on every page of the site, notes and questions
+  alike. `js/components/inject-templates.js` builds `#navPanel` with
+  `aria-hidden="true"` while its links stay in the tab order, so a keyboard user
+  can tab into a panel screen readers are told to ignore. The fix is to toggle
+  `inert` (or `tabindex="-1"` on the links) alongside `aria-hidden` in
+  `openNav`/`closeNav`. Holds every page at Accessibility 96 rather than 100.
+- **Contrast in the breadcrumb.** `css/main.css:3183` sets
+  `.breadcrumb a { text-decoration: none }`, and the notes breadcrumb pairs a
+  `#2a5c8d` link with `#7f888f` surrounding text — 1.9:1 against each other, and
+  the surrounding text is itself only 3.6:1 on white, under the 4.5:1 AA floor.
+  The separator `#d3d9df` is 1.5:1. axe happens not to flag the notes page, but
+  the numbers fail regardless. `css/pages/quiz.css` deliberately diverges here:
+  its breadcrumb links are underlined and its separator darkened. Worth making
+  the site-wide breadcrumb match.
+- **Layout shift from web fonts.** `css/main.css:2` loads Merriweather, Open Sans
+  and Source Sans Pro through a single Google Fonts `@import` with
+  `display=swap`, plus Font Awesome from `/webfonts/`. The swap shifts text on
+  every page — CLS 0.078 on a notes page, 0.154 on the longer questions page,
+  both above the 0.1 "good" threshold. Self-hosting the three families with
+  `size-adjust`, or preloading the woff2 the fold actually needs, would fix it
+  site-wide. This is the single biggest remaining Performance cost.

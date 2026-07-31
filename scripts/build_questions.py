@@ -279,6 +279,20 @@ def attr(text):
     return html.escape(text, quote=True)
 
 
+def headline(fragment, limit=110):
+    """A short label for schema.org `name`: the stem's first sentence.
+
+    Splitting on '. ' rather than '.' leaves '£2.50' and '4.1' intact. Falls
+    back to a word-boundary cut so the label never ends mid-word.
+    """
+    text = plain(fragment)
+    first = text.split(". ")[0].rstrip(".")
+    if len(first) <= limit:
+        return first
+    cut = first[:limit].rsplit(" ", 1)[0]
+    return cut + "…"
+
+
 def notes_url(topic):
     return f"/revision-notes/{topic['boardDir']}/{topic['slug']}.html"
 
@@ -418,7 +432,7 @@ def render_jsonld_quiz(topic):
                 "@type": "Question",
                 "eduQuestionType": "Multiple choice",
                 "learningResourceType": "Practice problem",
-                "name": plain(q["stem"])[:110],
+                "name": headline(q["stem"]),
                 "text": plain(q["stem"]),
                 "acceptedAnswer": {
                     "@type": "Answer",
