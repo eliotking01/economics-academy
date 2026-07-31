@@ -91,17 +91,16 @@ Escaped to `&lt;` at the author's request (commit "Escape bare < characters in n
 text"). Markup-only: 0 visible text changes, 0 tag or link changes, and pixel-
 identical rendering.
 
-**N5 — the Edexcel twin still carries the concentration-ratio error you fixed on AQA.**
+**N5 — the Edexcel twin carried the concentration-ratio error fixed on AQA. FIXED.**
 `edexcel-theme-3/3-4-4-oligopoly.html`:
 
 > "a **3-firm concentration ratio of 80%** means that the top **five** firms
 > account for 80% of total market sales"
 
-Corrected on `aqa-a2-micro/1-5-5` on 31 July but not on its Edexcel twin, so the
-same sentence is still wrong here. Same one-word fix. Found while preparing
-`PLAN-enrichment-edexcel-theme-3.md`; the concentration-ratio worked example
-proposed for that page would sit directly beneath the sentence, so the component is
-being held until the wording is fixed.
+Corrected on `aqa-a2-micro/1-5-5` on 31 July but not on its Edexcel twin. Fixed
+here on the author's explicit instruction — the **only** wording change made in this
+entire pass, and a single word: "five" to "three". The sentence now matches the AQA
+twin exactly. The held concentration-ratio component was then applied.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
@@ -109,7 +108,7 @@ Not duplicated here; see that document for the full write-up.
 
 | # | Where | Summary |
 | --- | --- | --- |
-| **C1** | `edexcel-theme-1/1-2-4-supply.html` + AQA twin `aqa-a2-micro/1-3-3` | **The one outstanding economics error.** The Figure 1 caption pairs *contraction* with a price rise and *extension* with a price fall. Supply slopes upward, so this is backwards, and the bullet list 15 lines below contradicts it. |
+| **C1** | `edexcel-theme-1/1-2-4-supply.html` + AQA twin `aqa-a2-micro/1-3-3` | **STALE — not an open defect.** Checked directly against the file: the caption reads "point A to B … 'Extension in QS' due to a price rise" and "point B to A … 'Contraction in QS' due to a price fall", which is correct, and the bullets agree. It reads correctly on `main` too, so it was fixed after the audit was written. I carried it as open for several batches on the audit's word rather than checking; noting the error here. |
 | **C4** | `aqa-a2-macro/2-2-3`, `aqa-a2-micro/1-5-6` | Both cross-reference Edexcel theme numbers that do not exist in the AQA specification the reader is following. |
 | **C5** | `aqa-a2-macro/2-1-2` | Confirm the unemployment-rate denominator matches the ONS/ILO "economically active" definition given a few lines above. |
 | **C6** | `aqa-a2-macro/2-1-2` | Real GDP growth stated as an identity; it is an approximation valid at low inflation. Standard at A-Level. |

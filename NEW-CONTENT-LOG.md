@@ -128,9 +128,13 @@ hash-verified identical. Theme 3 maps almost one-to-one onto AQA micro 1.4–1.6
 | `edexcel-theme-3/3-3-4-normal-profits-supernormal-profits-losses.html` | 194 | exam tip | Key Definitions | AQA 1-4-7 |
 | `edexcel-theme-3/3-5-1-demand-for-labour.html` | 228 | worked example | The Marginal Revenue Product Theory | AQA 1-6-1 |
 
-**Held back:** the concentration-ratio worked example for
-`edexcel-theme-3/3-4-4-oligopoly.html`. That page still describes a 3-firm ratio as
-covering "the top five firms" (flag N5) — the error corrected on the AQA twin but
-not here. Placing a correct 3-firm calculation directly beneath an incorrect
-description of the same thing would make the page contradict itself, so the
-component waits on the one-word fix.
+**Sixth component, applied after the N5 fix:**
+
+| File | Line | Type | Sits under | Reused from |
+| --- | ---: | --- | --- | --- |
+| `edexcel-theme-3/3-4-4-oligopoly.html` | 248 | worked example | Concentration Ratios | AQA 1-5-5 |
+
+That page described a 3-firm ratio as covering "the top five firms" (flag N5). The
+author authorised a single explicit exception to the no-wording-changes rule to
+correct it — "five" to "three", one word, the only wording change in this pass —
+after which the component was applied.
