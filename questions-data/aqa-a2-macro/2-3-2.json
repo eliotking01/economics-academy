@@ -1,0 +1,238 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.3.2",
+  "slug": "2-3-2-employment-and-unemployment",
+  "title": "Employment and Unemployment",
+  "shortTitle": "Employment and Unemployment",
+  "pageTitle": "Unemployment Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on employment and unemployment for AQA A-Level Economics: types of unemployment, the natural rate and underemployment.",
+  "intro": "Nine original multiple-choice questions on employment and unemployment, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on the types of unemployment, the natural rate, underemployment and migration, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-3-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "To be counted as unemployed, a person of working age must be",
+      "options": {
+        "A": "In part-time work but wanting more hours.",
+        "B": "Out of work and actively seeking it.",
+        "C": "Out of work and claiming benefits.",
+        "D": "Out of work and economically inactive."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The unemployed are people of working age who are <strong>without work, willing and able to work, and actively seeking it</strong>. The searching is what separates the unemployed from the economically inactive: both are out of work, but only the unemployed are looking.",
+        "distractors": {
+          "A": "Someone in part-time work who wants more hours is in employment. They are <strong>underemployed</strong>, which is a real waste of productive potential but not unemployment.",
+          "C": "Claiming benefits is what the Claimant Count measures. Plenty of unemployed people claim nothing, and they are still unemployed.",
+          "D": "Economically inactive means <em>not</em> seeking work. The two categories are mutually exclusive by definition."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A region's coal mines close permanently, and the miners' skills do not match the jobs available in the industries replacing them. This is best described as",
+      "options": {
+        "A": "Cyclical unemployment.",
+        "B": "Frictional unemployment.",
+        "C": "Seasonal unemployment.",
+        "D": "Structural unemployment."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Structural unemployment</strong> comes from a mismatch between the skills workers have and the skills employers want, usually after a permanent change in the shape of the economy. The jobs exist; the miners cannot do them without retraining, and may be in the wrong place as well.",
+        "distractors": {
+          "A": "Cyclical unemployment is caused by a deficiency of aggregate demand across the whole economy. Here demand has shifted between industries rather than fallen overall.",
+          "B": "Frictional unemployment is short-term, while people move between jobs they are qualified for. A skills mismatch is not resolved by a few weeks of searching.",
+          "C": "Seasonal unemployment follows predictable annual patterns. A permanent closure is not seasonal."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four unemployed people.<br />Using Table 1, the person who is frictionally unemployed is",
+      "table": {
+        "caption": "Table 1: Four unemployed people",
+        "head": [
+          "Person",
+          "Situation"
+        ],
+        "rows": [
+          [
+            "Person 1",
+            "A ski instructor with no work until the winter"
+          ],
+          [
+            "Person 2",
+            "A graduate who left one job last month and is applying for others"
+          ],
+          [
+            "Person 3",
+            "A steelworker made redundant when the plant closed permanently"
+          ],
+          [
+            "Person 4",
+            "A factory worker laid off when demand collapsed in a recession"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Person 1.",
+        "B": "Person 2.",
+        "C": "Person 3.",
+        "D": "Person 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Frictional unemployment</strong> is the short-term joblessness of someone moving between jobs they are qualified to do. Person 2 left one job last month and is applying for another — a normal, brief spell of searching in a working labour market.",
+        "distractors": {
+          "A": "Person 1 is <strong>seasonally</strong> unemployed. The work returns each winter, so the pattern is annual and predictable.",
+          "C": "Person 3 is <strong>structurally</strong> unemployed. The plant has closed permanently and their skills no longer match the jobs on offer.",
+          "D": "Person 4 is <strong>cyclically</strong> unemployed. The cause is a collapse in aggregate demand during a recession, not a mismatch or a job search."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The natural rate of unemployment consists of",
+      "options": {
+        "A": "All unemployment in the economy.",
+        "B": "Cyclical and seasonal unemployment.",
+        "C": "Structural and cyclical unemployment.",
+        "D": "Structural and frictional unemployment."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The natural rate is the unemployment that remains when the economy is at <strong>full employment</strong> — that is, when there is no deficiency of aggregate demand. What is left is people between jobs (<strong>frictional</strong>) and people whose skills do not match the vacancies (<strong>structural</strong>). Neither can be removed entirely, because there will always be job turnover and some mismatch.",
+        "distractors": {
+          "A": "Cyclical unemployment is not part of the natural rate. It is precisely the part that disappears when demand recovers.",
+          "B": "Cyclical unemployment is excluded, and seasonal unemployment is not one of the two components the natural rate is defined by.",
+          "C": "Structural belongs, but cyclical does not. Swapping frictional for cyclical is the most common version of this error."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Labour Force Survey measure of unemployment is usually higher than the Claimant Count because it",
+      "options": {
+        "A": "Counts people who are not seeking work.",
+        "B": "Includes people who are economically inactive.",
+        "C": "Includes unemployed people who claim no benefits.",
+        "D": "Uses benefit records rather than a household survey."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Claimant Count only picks up people <strong>claiming</strong> unemployment-related benefits, so anyone ineligible — or simply not claiming — is invisible to it. The Labour Force Survey asks households directly and counts everyone meeting the ILO criteria, whether they claim or not, so it captures a wider group and comes out higher.",
+        "distractors": {
+          "A": "The LFS requires active job search in the last four weeks. Someone not seeking work is classed as economically inactive by both measures.",
+          "B": "The economically inactive are excluded from unemployment on either measure. Including them would not be a difference between the two, it would be an error in both.",
+          "D": "This has the two the wrong way round. The Claimant Count is the one built on benefit records; the LFS is the household survey."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A qualified engineer working part-time in a shop because no engineering vacancies exist is best described as",
+      "options": {
+        "A": "Economically inactive.",
+        "B": "Frictionally unemployed.",
+        "C": "Structurally unemployed.",
+        "D": "Underemployed."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The engineer <em>is</em> in work, so no measure of unemployment counts them. But their skills are being badly underused and they would work more hours if they could — which is <strong>underemployment</strong>. It is a genuine waste of productive potential, and it hides inside the employment statistics rather than showing up in the unemployment rate.",
+        "distractors": {
+          "A": "The economically inactive are not working and not looking. This person is working.",
+          "B": "Frictional unemployment means being out of work while searching. Again, this person has a job.",
+          "C": "There is a skills mismatch here, which is why the term is tempting — but structural unemployment requires being unemployed, and this person is employed."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy has a labour force of 30 million and 2.1 million people unemployed, of whom 900,000 are cyclically unemployed. To one decimal place, the natural rate of unemployment is",
+      "options": {
+        "A": "3.0%",
+        "B": "4.0%",
+        "C": "4.3%",
+        "D": "7.0%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The natural rate is the unemployment that would remain at full employment, so the <strong>cyclical</strong> component has to be stripped out first.<br />2,100,000 − 900,000 = <strong>1,200,000</strong> frictionally and structurally unemployed.<br />1,200,000 ÷ 30,000,000 × 100 = <strong>4.0%</strong>.<br />The 900,000 cyclically unemployed would find work again once aggregate demand recovered, which is precisely why they are excluded from the natural rate.",
+        "distractors": {
+          "A": "3.0% is 900,000 ÷ 30 million, the rate of <em>cyclical</em> unemployment. That is the part the natural rate leaves out, not the natural rate itself.",
+          "C": "4.3% divides by the 27.9 million in employment rather than by the 30 million labour force. The denominator for any unemployment rate is the labour force, which includes the unemployed.",
+          "D": "7.0% is all 2.1 million unemployed over the labour force. That is the economy's actual unemployment rate, which exceeds the natural rate whenever there is cyclical unemployment."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sharp rise in unemployment affects the government's budget position by",
+      "options": {
+        "A": "Lowering both tax revenue and welfare spending.",
+        "B": "Lowering tax revenue and raising welfare spending.",
+        "C": "Raising both tax revenue and welfare spending.",
+        "D": "Raising tax revenue and lowering welfare spending."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Both sides of the budget move the wrong way at once. People out of work pay no income tax and spend less, so receipts from income tax and VAT <strong>fall</strong>. At the same time more people claim unemployment-related benefits, so spending <strong>rises</strong>.<br />The deficit therefore widens from both directions, which is why unemployment is expensive for the public finances as well as for the people affected.",
+        "distractors": {
+          "A": "Welfare spending rises rather than falls when more people are out of work and claiming.",
+          "C": "Tax revenue falls. Unemployed people pay less income tax and spend less, so VAT receipts drop as well.",
+          "D": "Both halves are backwards — this describes what happens when unemployment <em>falls</em>."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Net migration increases the size of an economy's labour force. Which one of the following best explains why this need not raise unemployment?",
+      "options": {
+        "A": "Migrants also spend, raising the demand for labour.",
+        "B": "Migrants are counted as economically inactive.",
+        "C": "Migrants cannot claim unemployment benefits.",
+        "D": "The labour force is not used to measure unemployment."
+      },
+      "answer": "A",
+      "model": {
+        "working": "It is tempting to treat the number of jobs as fixed, so that more workers must mean more unemployment. But migrants are consumers as well as workers: they rent homes, buy food and use services, which raises aggregate demand.<br />Because the demand for labour is <strong>derived</strong> from the demand for goods and services, that extra spending creates jobs alongside the extra workers. Migration can also fill shortages in occupations employers struggle to recruit for.",
+        "distractors": {
+          "B": "Migrants who are working or seeking work are in the labour force, not economically inactive. If they were inactive they would not affect the labour force at all.",
+          "C": "Eligibility for benefits changes who appears in the Claimant Count. It has no bearing on whether people are actually in work.",
+          "D": "The labour force is exactly the denominator of the unemployment rate, so it certainly is used."
+        }
+      }
+    }
+  ]
+}

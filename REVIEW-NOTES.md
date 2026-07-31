@@ -579,7 +579,17 @@ the internationally comparable series. The paragraph immediately after this
 already says the LFS is the more accurate measure, so the two sentences pull
 against each other.
 
-Unit 2.1.2's question set was written around this: the LFS/Claimant Count
-question (2.1.2 Q4) turns on benefit eligibility, which the notes state
-correctly, and stays off international comparability altogether. If the sentence
-is corrected, that set needs no change.
+**`2-3-2-employment-and-unemployment.html` states the same point correctly**, and
+in as many words:
+
+> ILO or Labour Force Survey (LFS): The internationally comparable measure.
+
+So the site currently contradicts itself between two pages of the same unit.
+2.3.2 is the one that is right.
+
+Both question sets were written around this. The LFS/Claimant Count questions
+(2.1.2 Q4 and 2.3.2 Q5) turn on benefit eligibility and on why the LFS returns a
+higher figure — points both notes pages state correctly and agree on — and stay
+off international comparability altogether. A student who has read 2.1.2 will
+not be penalised by either set. If the sentence in 2.1.2 is corrected, neither
+set needs changing.

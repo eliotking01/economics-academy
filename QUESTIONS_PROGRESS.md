@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 64 topics, 484 questions. AQA Microeconomics is complete; AQA
-Macroeconomics units 2.1 and 2.2 are done.**
+**Live: 68 topics, 520 questions. AQA Microeconomics is complete; AQA
+Macroeconomics units 2.1, 2.2 and 2.3 are done.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -209,7 +209,26 @@ results mean:
   item shared three of its four options with a real question on the same
   archetype while sharing no phrasing at all, so only a set comparison would
   find it. One value in common is coincidence — 2.0, 2.5, 5.0 and 10.0 are the
-  multiplier values every textbook uses. Three is a rewrite.
+  multiplier values every textbook uses. Three is worth investigating.
+
+  Do this by **extracting real option blocks** with a regex over the corpus
+  (`A <num> B <num> C <num> D <num>`) and intersecting sets — not by testing
+  whether each value appears somewhere in the text. A substring test against
+  945 KB of prose reports every number as "found" and tells you nothing. There
+  are about 52 numeric option sets across the 45 papers.
+
+  Three shared values is a **prompt to compare archetypes, not a verdict**. In
+  batch 8 one of our sets shared three values with a real question that turned
+  out to be price elasticity of supply read off a diagram — a different topic
+  entirely, so coincidence. Another shared three with a natural-rate calculation
+  that asked for the same quantity by the same route, which was a rewrite.
+
+- **The highest-risk shape is a stock AQA stem followed by a list of causes.**
+  "Which one of the following is most likely to cause demand-pull inflation?"
+  collided word for word in batch 8. The stems are fixed phrases and the set of
+  textbook causes is small, so the two together collide almost by default.
+  Prefer a scenario the student has to interpret; it is both more original and a
+  better question.
 
 Do **not** try to parse the PDFs with a stdlib script. Their content streams use
 subsetted fonts with custom encodings, so pulling the parenthesised strings out
@@ -287,13 +306,12 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### AQA Macroeconomics — 15 topics, 126 questions still to write
+### AQA Macroeconomics — 11 topics, 90 questions still to write
 
-Units 2.1 and 2.2 are done (batches 6 and 7). What remains:
+Units 2.1, 2.2 and 2.3 are done (batches 6 to 8). What remains:
 
 | Unit | Topics and planned counts |
 | --- | --- |
-| 2.3 | 2.3.1 (9) · 2.3.2 (9) · 2.3.3 (10) · 2.3.4 (8) — 36 |
 | 2.4 | 2.4.1 (8) · 2.4.2 (7) · 2.4.3 (9) · 2.4.4 (6) — 30 |
 | 2.5 | 2.5.1 (9) · 2.5.2 (8) — 17 |
 | 2.6 | 2.6.1 (7) · 2.6.2 (9) · 2.6.3 (9) · 2.6.4 (10) · 2.6.5 (8) — 43 |
@@ -532,9 +550,57 @@ contributed 5 items. `data-table` came in at 10% against ~20%: the unit is
 diagram- and concept-led, and forcing more tables into it would have meant
 inventing data rather than interpreting it.
 
+### Batch 8 — AQA macro 2.3 (2026-07-31)
+
+4 topics, 36 questions. All 36 re-derived from the stem alone with **0
+mismatches**; every output gap, natural rate and quantity theory figure
+recomputed, including all distractor values.
+
+**The originality check earned its keep here — it caught two genuine rewrites
+that reading had passed.**
+
+- **2.3.3 Q2 duplicated a real stem word for word.** The draft opened "Which one
+  of the following is most likely to cause demand-pull inflation?", which is
+  exactly the stem of a real AQA Paper 3 item, and three of the four options
+  matched it in substance (indirect taxation, oil prices, a fall in interest
+  rates). Laid side by side it read as a rewrite. Replaced with a scenario — an
+  income tax cut in an economy near full capacity — where the student has to
+  identify the mechanism rather than pick from a list of causes.
+- **2.3.2 Q7 reproduced a real calculation almost exactly.** AQA June 2020 asks
+  for the natural rate given "2% frictional plus 3% structural" and cyclical
+  unemployment of 4%, with options 3 / 5 / 6 / 9. The draft asked for the same
+  quantity by the same route, reached the same 5% answer, and its components
+  worked out to precisely 2% and 3%. Rebuilt as the inverse operation —
+  subtracting cyclical unemployment from total unemployment — on new figures.
+
+**Lesson worth carrying forward: a stock AQA stem plus a list of causes is the
+highest-risk question shape there is.** Those stems are fixed phrases, the set
+of textbook causes is small, and the two together collide almost by default.
+Prefer a scenario the student has to interpret. See Recurring problems §7.
+
+The site-wide option-set audit was also run retrospectively over all 520
+questions, using option blocks extracted from the papers rather than a substring
+test. Nothing from batches 1 to 7 needed changing; one further set in this batch
+(2.3.3 Q6, Fisher's equation) shared three values with a real *price elasticity
+of supply* question, which is a different topic and archetype entirely — the
+numbers were changed anyway, since it cost nothing.
+
+| | |
+| --- | --- |
+| Answer letters | A 5, B 10, C 12, D 9 (even would be 9) |
+| Skills | applied-reasoning 21, definition-in-context 8, data-table 4, calculation 3 |
+| Difficulty | foundation 5, standard 27, stretch 4 |
+| Sketch to solve | 3 |
+
+`calculation` fell back to 8% here. Unit 2.3 is largely conceptual — types of
+unemployment, causes of inflation, policy trade-offs — and the arithmetic it does
+support (unemployment rates, inflation rates from a CPI series) was already used
+in unit 2.1, so repeating it would have meant near-duplicate questions across two
+topics.
+
 ---
 
-## AQA Macroeconomics — 10 of 25 topics
+## AQA Macroeconomics — 14 of 25 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -548,6 +614,10 @@ inventing data rather than interpreting it.
 | 2.2 | 2.2.4 Aggregate Demand and the Level of Economic Activity | 10 | Done |
 | 2.2 | 2.2.5 Determinants of Short-Run Aggregate Supply | 7 | Done |
 | 2.2 | 2.2.6 Determinants of Long-Run Aggregate Supply | 7 | Done |
+| 2.3 | 2.3.1 Economic Growth and the Economic Cycle | 9 | Done |
+| 2.3 | 2.3.2 Employment and Unemployment | 9 | Done |
+| 2.3 | 2.3.3 Inflation and Deflation | 10 | Done |
+| 2.3 | 2.3.4 Possible Conflicts between Macroeconomic Policy Objectives | 8 | Done |
 
 ---
 
