@@ -1,0 +1,221 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.1.5",
+  "slug": "1-1-5-production-possibility-diagrams",
+  "title": "Production Possibility Diagrams",
+  "shortTitle": "Production Possibility Diagrams",
+  "pageTitle": "Production Possibility Frontier Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on production possibility diagrams for AQA A-Level Economics: opportunity cost, efficiency and shifts, with worked answers.",
+  "intro": "Eight original multiple-choice questions on production possibility diagrams, written to the style and difficulty of AQA Paper 3 Section A. Two of them ask you to sketch the diagram yourself. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on production possibility diagrams, opportunity cost and efficiency, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-1-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An economy is producing at a point inside its production possibility frontier. This shows that",
+      "options": {
+        "A": "It has run out of the resources needed to produce more of either good.",
+        "B": "It is producing the combination of goods that maximises society's welfare.",
+        "C": "It must give up some of one good in order to produce more of the other.",
+        "D": "Some of its resources are unemployed or are being used inefficiently."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The frontier shows the <strong>maximum</strong> combinations obtainable when all resources are fully and efficiently employed. A point inside it therefore means the economy is producing less than it could — resources are idle or badly used. The practical significance is that from such a point the economy could produce <strong>more of both goods at zero opportunity cost</strong>, simply by putting the unused resources to work.",
+        "distractors": {
+          "A": "That describes a point <em>on</em> the frontier, where every resource is already committed. Inside the frontier there is slack.",
+          "B": "Nothing about being inside the frontier tells you about welfare maximisation, and a point inside is in any case wasteful — output could rise for both goods without sacrificing anything.",
+          "C": "This is the trade-off that applies <em>on</em> the frontier. Inside it, more of one good does not require less of the other, because idle resources can be brought into use."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A combination of two goods lying outside an economy's current production possibility frontier is",
+      "options": {
+        "A": "Attainable only by producing less of the other good.",
+        "B": "Attainable only if the economy becomes allocatively efficient.",
+        "C": "Unattainable because such combinations of goods cannot exist.",
+        "D": "Unattainable unless the economy's productive capacity increases."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A point beyond the frontier is <strong>currently unattainable</strong> with the resources and technology the economy has. It is not impossible in principle — it becomes reachable if the frontier itself shifts outwards, through more or better resources, improved technology or a rise in productivity. That is exactly what economic growth means on this diagram.",
+        "distractors": {
+          "A": "Producing less of one good moves the economy <em>along</em> the frontier, not beyond it. No reallocation of existing resources can reach a point outside.",
+          "B": "Allocative efficiency is about producing the combination society most values, which is a question of <em>where</em> on the frontier to sit. It does not push the frontier outwards.",
+          "C": "The combination is perfectly conceivable — a richer economy could produce it. What rules it out today is a shortage of productive capacity, not logic."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four combinations of capital goods and consumer goods that an economy can produce using all of its resources efficiently.<br />Using Table 1, the opportunity cost of moving from combination C to combination D is",
+      "table": {
+        "caption": "Table 1: Production possibilities for an economy (units per year)",
+        "head": [
+          "Combination",
+          "Capital goods",
+          "Consumer goods"
+        ],
+        "rows": [
+          [
+            "A",
+            "0",
+            "50"
+          ],
+          [
+            "B",
+            "10",
+            "45"
+          ],
+          [
+            "C",
+            "20",
+            "35"
+          ],
+          [
+            "D",
+            "30",
+            "20"
+          ]
+        ]
+      },
+      "options": {
+        "A": "10 capital goods, the gain in capital goods.",
+        "B": "15 consumer goods, the fall in consumer goods.",
+        "C": "20 consumer goods, the level of consumer goods at combination D.",
+        "D": "35 consumer goods, the level of consumer goods at combination C."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Opportunity cost is what has to be <strong>given up</strong>, so compare the consumer-goods column at the two combinations.<br />At C the economy makes 35 consumer goods; at D it makes 20.<br />Consumer goods sacrificed: 35 − 20 = <strong>15</strong>.<br />Worth noticing in passing: A to B costs 5 consumer goods, B to C costs 10 and C to D costs 15. Each extra 10 capital goods costs more than the last, which is <strong>increasing opportunity cost</strong> — and it is why the frontier is drawn bowed outwards rather than as a straight line.",
+        "distractors": {
+          "A": "This is the gain rather than the sacrifice. The 10 extra capital goods are what the economy receives; opportunity cost measures what it pays.",
+          "C": "This reads a <em>level</em> from the table instead of a <em>change</em>. 20 is the quantity of consumer goods produced at D, not the amount forgone in getting there.",
+          "D": "The same error at the other end of the move. 35 is the starting level of consumer goods, and the cost is the fall from that level, not the level itself."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's production possibility frontier is bowed outwards from the origin rather than a straight line. This shape shows that",
+      "options": {
+        "A": "As more of one good is produced, the cost of each extra unit rises.",
+        "B": "Opportunity cost stays constant however much of each good is produced.",
+        "C": "Resources are equally well suited to producing either of the two goods.",
+        "D": "The economy is currently operating inside its productive capacity."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The curve bows outwards because resources are <strong>not perfectly adaptable</strong> between uses. When an economy first shifts towards one good it moves the resources best suited to it, so little is sacrificed. To keep expanding it must transfer resources that are progressively less well suited, and each extra unit costs more of the other good than the last. That rising sacrifice is <strong>increasing opportunity cost</strong>, and it is what makes the curve concave to the origin.",
+        "distractors": {
+          "B": "Constant opportunity cost gives a <strong>straight-line</strong> frontier. The bowed shape exists precisely because the trade-off is not constant.",
+          "C": "If resources were equally suited to both goods, transferring them would cost the same at every point — which again produces a straight line, not a curve.",
+          "D": "Operating inside capacity is shown by a <em>point</em> in the interior of the diagram. It says nothing about the shape of the frontier itself."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A country's workforce grows substantially following a large rise in net migration. Its capital stock and technology are unchanged. Sketching the production possibility frontier before and after, the most likely effect is",
+      "options": {
+        "A": "A movement along the existing frontier towards more consumer goods.",
+        "B": "An inward shift of the frontier for both goods.",
+        "C": "An outward shift of the frontier for both goods.",
+        "D": "No change in the frontier, because only labour has increased."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Sketch the frontier, then ask what has changed. Labour is a <strong>factor of production</strong>, and more of it raises the maximum output of <em>both</em> goods, so the whole curve moves outwards. Draw the second curve outside the first at every point. This is economic growth in its purest form on this diagram: an increase in productive capacity, not a reallocation of what already exists.",
+        "distractors": {
+          "A": "A movement along the frontier is a change in the <em>combination</em> produced from unchanged resources. Here the resources themselves have increased, which the existing curve cannot represent.",
+          "B": "An inward shift means the economy can produce less than before — the result of losing resources, not gaining them.",
+          "D": "Labour on its own is enough. The frontier depends on all four factors, so a rise in any one of them expands what the economy is capable of producing, even with capital and technology unchanged."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is true of every point on an economy's production possibility frontier?",
+      "options": {
+        "A": "Each point is allocatively efficient.",
+        "B": "Each point maximises society's welfare.",
+        "C": "Each point is productively efficient.",
+        "D": "Each point uses the same combination of resources."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Every point on the frontier uses all available resources to their fullest and best technical effect, so all of them are <strong>productively efficient</strong> — it is impossible to make more of one good without making less of the other. What the diagram cannot tell you is <em>which</em> of those points society ought to choose. That is <strong>allocative</strong> efficiency, and it depends on what people actually value, which the frontier does not show.",
+        "distractors": {
+          "A": "Only one point on the frontier is allocatively efficient, and the diagram gives no way of identifying it. A country producing nothing but weapons could sit on its frontier and be productively efficient while allocating resources very badly.",
+          "B": "Same error in different words. Welfare depends on preferences, and the frontier plots what is technically possible rather than what is desirable.",
+          "D": "Different points use quite different combinations — that is the whole point of the curve. Moving along it means shifting resources from one use to the other."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "Two economies with identical resources are each producing on the same production possibility frontier, which measures capital goods against consumer goods. Economy X devotes a large share of its output to capital goods; Economy Y devotes almost all of its output to consumer goods. Sketching each economy's frontier several years later, the most likely outcome is that",
+      "options": {
+        "A": "Both frontiers shift outwards by the same amount, because both economies produced at full capacity.",
+        "B": "Economy X's frontier shifts outwards by more, because capital goods add to future productive capacity.",
+        "C": "Economy Y's frontier shifts outwards by more, because higher consumption raises demand.",
+        "D": "Neither frontier shifts, because the two economies started from the same position."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sketch one frontier with both economies on it, then think about what each is producing.<br /><strong>Capital goods</strong> are goods used to produce other goods — machinery, factories, infrastructure. Producing them adds to the stock of resources available in future, so Economy X is building the capacity to produce more of everything later. Draw its later frontier well outside the original.<br />Economy Y consumes almost all of its output. Its citizens enjoy a higher standard of living now, but its capital stock barely grows and is being worn down by depreciation, so its frontier shifts out little if at all.<br />The trade-off is between <strong>present and future consumption</strong>, and it is one of the clearest uses of this diagram.",
+        "distractors": {
+          "A": "Both economies are on their frontier, so both are productively efficient — but efficiency today says nothing about growth tomorrow. What matters for the shift is the <em>composition</em> of output, not whether capacity is fully used.",
+          "C": "Demand does not shift the frontier. The frontier shows what an economy is <em>capable</em> of producing, which depends on its resources and technology, not on how much its citizens want to buy.",
+          "D": "Identical starting points do not imply identical futures. The two economies have made different choices about what to produce, and it is those choices that drive their capacity apart."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A severe earthquake destroys a large share of a country's factories, machinery and transport network. On a production possibility diagram this is best shown as",
+      "options": {
+        "A": "A movement along the frontier towards fewer capital goods.",
+        "B": "A movement from a point on the frontier to a point inside it.",
+        "C": "An inward shift of the whole frontier.",
+        "D": "An outward shift of the whole frontier."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The earthquake has <strong>destroyed capital</strong>, so the economy's productive capacity itself has fallen. The maximum obtainable quantity of <em>both</em> goods is now lower, which is an <strong>inward shift</strong> of the entire frontier. The key test is whether resources still exist: if they do, the economy is inside its frontier; if they have gone, the frontier has moved.",
+        "distractors": {
+          "A": "A movement along the frontier is a deliberate reallocation between two goods using unchanged resources. Nothing has been reallocated here — resources have been lost.",
+          "B": "This is the tempting answer and the distinction is worth being precise about. A point inside the frontier means resources exist but are <em>idle</em>, as in a recession where factories stand empty. Here the factories no longer exist, so capacity itself has shrunk.",
+          "D": "An outward shift represents growth in productive capacity. The earthquake has done the opposite."
+        }
+      }
+    }
+  ]
+}

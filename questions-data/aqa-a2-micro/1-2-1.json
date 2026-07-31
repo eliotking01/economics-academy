@@ -1,0 +1,180 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.2.1",
+  "slug": "1-2-1-consumer-behaviour",
+  "title": "Consumer Behaviour",
+  "shortTitle": "Consumer Behaviour",
+  "pageTitle": "Diminishing Marginal Utility Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on consumer behaviour for AQA A-Level Economics: rational choice, utility and diminishing marginal utility, with worked answers.",
+  "intro": "Seven original multiple-choice questions on rational decision making, utility and the law of diminishing marginal utility, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Seven original multiple-choice questions on rational decision making, utility and diminishing marginal utility, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-2-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In traditional economic theory, a rational consumer is assumed to act so as to",
+      "options": {
+        "A": "Maximise the total utility obtained from a given income.",
+        "B": "Maximise the total quantity of goods bought with a given income.",
+        "C": "Minimise the amount of income spent on goods and services.",
+        "D": "Spend an equal amount of income on every good bought."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Rationality in this model means choosing the option with the highest <strong>net benefit</strong>. For a consumer, the benefit is <strong>utility</strong> — the satisfaction gained from consumption — so a rational consumer allocates a limited income to obtain as much total utility from it as possible. The parallel assumptions elsewhere are that firms maximise profit, workers maximise net welfare from employment, and governments maximise social welfare.",
+        "distractors": {
+          "B": "Quantity is not the objective. Buying forty tins of one cheap food would maximise the number of items bought and leave the consumer far worse off than a smaller, more varied basket.",
+          "C": "Spending as little as possible would mean forgoing the very consumption that generates utility. The income exists to be used; the question is how to use it best.",
+          "D": "Equal spending across goods has no basis in the theory. A rational consumer spends more on what yields more satisfaction per pound, which will rarely mean equal amounts."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the total utility a consumer gains from eating slices of cake, measured in utils.<br />Using Table 1, the marginal utility of the fifth slice is",
+      "table": {
+        "caption": "Table 1: Total utility from slices of cake (utils)",
+        "head": ["Slices consumed", "Total utility"],
+        "rows": [
+          ["1", "20"],
+          ["2", "36"],
+          ["3", "48"],
+          ["4", "56"],
+          ["5", "54"]
+        ]
+      },
+      "options": {
+        "A": "−2",
+        "B": "+2",
+        "C": "+8",
+        "D": "+54"
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Marginal utility</strong> is the change in total utility from consuming one more unit.<br />Total utility at 5 slices: 54. Total utility at 4 slices: 56.<br />Marginal utility of the fifth slice = 54 − 56 = <strong>−2 utils</strong>.<br />A negative marginal utility means the fifth slice actually made the consumer worse off — they had eaten enough. Notice that total utility peaks at <strong>4</strong> slices, which is exactly where marginal utility turns negative. A rational consumer stops there.",
+        "distractors": {
+          "B": "The magnitude is right but the sign has been dropped, most likely by subtracting the smaller figure from the larger without thinking about the direction. Total utility <em>fell</em>, so the marginal utility must be negative.",
+          "C": "This is the marginal utility of the <strong>fourth</strong> slice (56 − 48 = 8), an off-by-one error. The fifth slice is the change from the fourth row to the fifth.",
+          "D": "54 is the <strong>total</strong> utility from all five slices, not the addition made by the last one. Confusing a total with a marginal figure is the single most common mistake in this topic."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The law of diminishing marginal utility helps to explain why",
+      "options": {
+        "A": "A consumer's total utility falls as consumption increases.",
+        "B": "A demand curve slopes downwards from left to right.",
+        "C": "Firms are able to charge different prices to different consumers.",
+        "D": "The supply curve of a good slopes upwards from left to right."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each extra unit of a good gives less additional satisfaction than the one before, so a consumer is only willing to pay <strong>less</strong> for it. To persuade someone to buy a second, third or fourth unit, the price has to fall. Plotting the highest price a consumer will pay against quantity therefore produces a line sloping <strong>downwards</strong> — which is the demand curve.",
+        "distractors": {
+          "A": "This confuses total with marginal utility. While marginal utility is positive, each extra unit still <em>adds</em> something, so total utility keeps rising — just more slowly. Total utility only falls once marginal utility turns negative.",
+          "C": "Price discrimination depends on a firm's ability to separate markets and prevent resale. Diminishing marginal utility applies to every consumer whether or not a firm can charge them different prices.",
+          "D": "The upward-sloping supply curve comes from rising marginal costs of production, which is a completely separate idea on the producer's side of the market."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In traditional economic theory, firms are assumed to behave rationally by",
+      "options": {
+        "A": "Keeping their total costs as low as possible.",
+        "B": "Maximising their profits.",
+        "C": "Maximising their total revenue.",
+        "D": "Maximising the utility of their customers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each type of economic agent is assumed to maximise something different. Consumers maximise <strong>utility</strong>, workers maximise the <strong>net welfare</strong> they get from employment, governments maximise <strong>social welfare</strong>, and firms maximise <strong>profit</strong> — total revenue minus total costs. Profit is the measure of net benefit to the owners of the firm, which is why it is the objective the model assumes.",
+        "distractors": {
+          "A": "Cost minimisation is a means, not the objective, and taken literally it is self-defeating: the cheapest possible option is to produce nothing at all. Firms minimise cost <em>for a given level of output</em> in pursuit of profit.",
+          "C": "Revenue maximisation is a real alternative objective that some firms pursue, but it is not the traditional assumption. A firm can raise revenue by selling more at a lower margin and end up with less profit.",
+          "D": "Satisfied customers are a route to profit rather than the goal itself. A firm that maximised customer utility would give its output away."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cinema ticket costs £5. A consumer values the third cinema visit of the month at £6 of utility and the fourth at £3. Acting rationally, the consumer will",
+      "options": {
+        "A": "Buy both tickets, because together they are worth £9.",
+        "B": "Buy neither ticket, because their average value is below the price.",
+        "C": "Buy the fourth ticket, because it still yields positive utility.",
+        "D": "Buy the third ticket but not the fourth."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A rational consumer buys an extra unit whenever the <strong>marginal utility</strong> of that unit is at least as great as its price, and stops when it is not.<br />Third visit: worth £6, costs £5 → net gain of £1, so <strong>buy</strong>.<br />Fourth visit: worth £3, costs £5 → net loss of £2, so <strong>do not buy</strong>.<br />This is marginal analysis in action: the decision is taken one unit at a time, not on the block as a whole.",
+        "distractors": {
+          "A": "Two tickets cost £10 and are worth £9 in total, so buying both leaves the consumer £1 worse off. The option adds up the benefits and forgets to add up the costs.",
+          "B": "This uses the <strong>average</strong> value of the two visits, (£6 + £3) ÷ 2 = £4.50, and compares it with the £5 price. Averaging hides the fact that the third visit is individually worth more than it costs. Decisions are made at the margin, not on averages.",
+          "C": "Positive utility is not the test. What matters is whether the utility gained exceeds the price paid, and £3 of satisfaction does not justify £5 of spending — that £5 would buy more satisfaction elsewhere."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Marginal analysis is central to economics because rational decisions are made by",
+      "options": {
+        "A": "Choosing the action with the largest total benefit, whatever its cost.",
+        "B": "Comparing the average benefit of an action with its average cost.",
+        "C": "Comparing the extra benefit of an action with its extra cost.",
+        "D": "Comparing the total benefit of an action with its total cost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Almost every economic decision is about <em>how much</em> rather than <em>whether</em>: one more hour of study, one more worker, one more unit of output. The rational rule is to keep going while the <strong>additional</strong> benefit of the next unit exceeds its <strong>additional</strong> cost, and to stop when it no longer does. That comparison at the margin is what identifies the best quantity.",
+        "distractors": {
+          "A": "Ignoring cost is not a decision rule, it is the absence of one. An action can carry a huge total benefit and still be a bad idea if it costs more than it delivers.",
+          "B": "Averages conceal what is happening to the next unit. A firm can have a comfortable average profit per unit while the very next unit it makes loses money.",
+          "D": "Comparing totals tells you whether an activity is worth doing at all, but not the right <em>scale</em> at which to do it. Total benefit may exceed total cost long after the last worthwhile unit has been produced."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A consumer's marginal utility from a good is falling but remains positive. It follows that the consumer's total utility from the good is",
+      "options": {
+        "A": "At a maximum, because marginal utility is still positive.",
+        "B": "Constant, because marginal utility has not yet reached zero.",
+        "C": "Falling, because marginal utility is diminishing.",
+        "D": "Rising, but by a smaller amount with each extra unit."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Marginal utility is the <em>addition</em> to total utility from one more unit. As long as it is <strong>positive</strong>, every extra unit adds something, so total utility must be <strong>rising</strong>. Because marginal utility is also <strong>falling</strong>, each unit adds less than the last, so total utility rises at a decreasing rate — the flattening curve you would sketch for total utility.<br />The three cases are worth holding together: marginal utility positive means total utility rising; marginal utility zero means total utility at its maximum; marginal utility negative means total utility falling.",
+        "distractors": {
+          "A": "Total utility peaks where marginal utility reaches <strong>zero</strong>, not while it is still positive. If the next unit would add satisfaction, the maximum has not been reached.",
+          "B": "Total utility would only be constant if extra units added nothing at all, which is marginal utility of exactly zero. A positive marginal utility means it is still climbing.",
+          "C": "This is the classic confusion between the two measures. Diminishing marginal utility means total utility grows more <em>slowly</em>, not that it shrinks. It shrinks only once marginal utility goes below zero."
+        }
+      }
+    }
+  ]
+}

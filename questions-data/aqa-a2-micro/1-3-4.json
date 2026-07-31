@@ -1,0 +1,199 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.3.4",
+  "slug": "1-3-4-price-elasticity-of-supply",
+  "title": "Price Elasticity of Supply",
+  "shortTitle": "Price Elasticity of Supply",
+  "pageTitle": "Price Elasticity of Supply Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on price elasticity of supply for AQA A-Level Economics: PES calculations, determinants and time, with worked answers.",
+  "intro": "Eight original multiple-choice questions on price elasticity of supply, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on price elasticity of supply, its calculation and its determinants, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-3-4-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The market price of a component rises from £5.00 to £6.00. Over the same period the quantity supplied rises from 800 units to 1,000 units a week. Measuring each percentage change against its original value, the price elasticity of supply and the classification of supply are",
+      "options": {
+        "A": "0.8, and supply is relatively inelastic.",
+        "B": "0.8, and supply is relatively elastic.",
+        "C": "1.25, and supply is relatively inelastic.",
+        "D": "1.25, and supply is relatively elastic."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Percentage change in quantity supplied: (1,000 − 800) ÷ 800 × 100 = <strong>+25%</strong>.<br />Percentage change in price: (£6.00 − £5.00) ÷ £5.00 × 100 = <strong>+20%</strong>.<br />PES = +25 ÷ +20 = <strong>1.25</strong>.<br />A value above 1 means quantity supplied changed by proportionally <em>more</em> than price, so supply is <strong>relatively elastic</strong>. Note that PES is normally positive, because price and quantity supplied move in the same direction — the opposite of PED.",
+        "distractors": {
+          "A": "The formula has been inverted, giving 20 ÷ 25 = 0.8. The classification then follows correctly from that wrong figure, which is what makes this option tempting.",
+          "B": "The formula is inverted <em>and</em> the classification contradicts the value quoted: 0.8 lies between 0 and 1, so it would describe inelastic supply, not elastic.",
+          "C": "The arithmetic is right but the classification is wrong. Any PES greater than 1 is elastic; the boundary is 1, not some larger number."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Supply is described as perfectly inelastic when",
+      "options": {
+        "A": "A change in price causes no change in the quantity supplied.",
+        "B": "A change in price causes an infinitely large change in the quantity supplied.",
+        "C": "The percentage change in quantity supplied equals the percentage change in price.",
+        "D": "The supply curve is horizontal at the ruling market price."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Perfectly inelastic supply</strong> means PES = 0: quantity supplied is completely unresponsive to price. The supply curve is <strong>vertical</strong>, because the same quantity is offered whatever the price. Fixed, unrepeatable quantities behave this way — the seats in a theatre on a given night, or the number of paintings by an artist who has died.",
+        "distractors": {
+          "B": "An infinitely large response is <strong>perfectly elastic</strong> supply, where PES is infinite and the curve is horizontal. This is the exact opposite case.",
+          "C": "Equal percentage changes give PES = 1, which is <strong>unitary</strong> elasticity — the dividing line between elastic and inelastic, not the extreme.",
+          "D": "A horizontal supply curve is perfectly <em>elastic</em>. The perfectly inelastic curve is the vertical one; mixing up which axis each extreme runs along is the most frequent slip here."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The price of a manufactured good rises from £20 to £25 and stays there. Table 1 shows how the quantity supplied responds over two different time periods.<br />Using Table 1 and measuring each percentage change against its original value, the price elasticity of supply in the short run and in the long run respectively is",
+      "table": {
+        "caption": "Table 1: Quantity supplied after a price rise from £20 to £25 (units per month)",
+        "head": ["Time period", "Quantity supplied before", "Quantity supplied after"],
+        "rows": [
+          ["Short run", "2,000", "2,150"],
+          ["Long run", "2,000", "3,250"]
+        ]
+      },
+      "options": {
+        "A": "0.3 in the short run and 2.5 in the long run.",
+        "B": "0.4 in the short run and 3.3 in the long run.",
+        "C": "2.5 in the short run and 0.3 in the long run.",
+        "D": "3.3 in the short run and 0.4 in the long run."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The price change is the same in both rows: (£25 − £20) ÷ £20 × 100 = <strong>+25%</strong>.<br /><strong>Short run:</strong> (2,150 − 2,000) ÷ 2,000 × 100 = +7.5%. PES = 7.5 ÷ 25 = <strong>0.3</strong>.<br /><strong>Long run:</strong> (3,250 − 2,000) ÷ 2,000 × 100 = +62.5%. PES = 62.5 ÷ 25 = <strong>2.5</strong>.<br />Identical price change, very different responses. In the short run at least one factor of production is fixed, so output can only be stretched a little; given time the firm can add machinery, premises and staff. <strong>Time</strong> is the single most important determinant of PES, and it is why the same good can be inelastic and elastic in supply depending on the period discussed.",
+        "distractors": {
+          "B": "Both figures come from inverting the formula — 25 ÷ 62.5 = 0.4 and 25 ÷ 7.5 = 3.3 — and they have then been placed against the wrong periods as well.",
+          "C": "The values are right but assigned the wrong way round. That would mean supply responded strongly when factors were fixed and barely at all once the firm had years to expand, which is the reverse of how production works.",
+          "D": "The formula has been inverted, putting the percentage change in price on top: 25 ÷ 7.5 = 3.3 and 25 ÷ 62.5 = 0.4. PES always has the percentage change in <strong>quantity supplied</strong> as the numerator."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm is operating at full capacity, with no spare machinery, premises or storage. All other things being equal, its price elasticity of supply in the short run is likely to be",
+      "options": {
+        "A": "Elastic, because the firm will want to take advantage of the higher price.",
+        "B": "Inelastic, because the firm cannot easily increase output.",
+        "C": "Perfectly elastic, because supply can always be expanded eventually.",
+        "D": "Unitary, because output rises in proportion to price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Spare capacity</strong> is one of the main determinants of PES. A firm with idle machines and empty warehouse space can lift output quickly and cheaply when the price rises, so its supply is elastic. A firm already running flat out cannot: extra output would need new premises or equipment, which take time to obtain. Quantity supplied therefore responds very little in the short run, and PES is <strong>inelastic</strong>.",
+        "distractors": {
+          "A": "Wanting to supply more is not the same as being able to. PES measures the <em>capability</em> to respond, and willingness without capacity produces no extra output.",
+          "C": "Perfectly elastic supply means unlimited quantity at the going price, which is the furthest thing from a firm at full capacity. The observation that supply expands 'eventually' is about the long run, and PES is being asked about the short run.",
+          "D": "Unitary elasticity would require a proportional response, and the whole point of full capacity is that the proportional response is small."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Why is the supply of most goods more price elastic in the long run than in the short run?",
+      "options": {
+        "A": "Consumers have more time to find substitutes for the good.",
+        "B": "Firms can vary all of their factors of production given enough time.",
+        "C": "Firms face higher fixed costs in the long run than in the short run.",
+        "D": "The demand for the good becomes more price elastic over time."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The short run is defined as the period in which at least one factor of production is <strong>fixed</strong> — typically capital, such as the factory itself. Output can only be varied by working the existing plant harder. In the <strong>long run</strong> every factor becomes variable: firms can build new capacity, buy machinery, train staff, and new firms can enter the industry altogether. With more ways to respond, quantity supplied reacts far more to a given price change, so PES rises.",
+        "distractors": {
+          "A": "This explains why <strong>demand</strong> becomes more price elastic over time. It is a genuine effect, but it concerns buyers, and PES is about the behaviour of sellers.",
+          "C": "In the long run there are no fixed costs at all, because every factor can be varied. The statement inverts the definition of the two periods.",
+          "D": "Even if true, the elasticity of demand does not determine the elasticity of supply. The two are separate measures of two different sides of the market."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "On the night of a concert the number of seats in the venue is fixed and cannot be changed. Sketching the supply curve of seats for that performance, it will be",
+      "options": {
+        "A": "Downward sloping, because unsold seats lose all of their value.",
+        "B": "Horizontal, because every seat is sold at the same price.",
+        "C": "Upward sloping, because a higher price brings more seats onto the market.",
+        "D": "Vertical, because the quantity supplied cannot change whatever the price."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Sketch price on the vertical axis and quantity on the horizontal, then ask what quantity is supplied at each price. However high the price goes, the venue cannot produce a single extra seat that night; however low it goes, the seats still exist. The same quantity is supplied at every price, which draws as a <strong>vertical</strong> line — <strong>perfectly inelastic supply</strong>, PES = 0.<br />This is why any surge in demand for a sold-out event shows up entirely as a higher price rather than as more tickets.",
+        "distractors": {
+          "A": "A downward-sloping supply curve would mean firms offer <em>less</em> as the price rises, which reverses the normal relationship. The fact that unsold seats are worthless after the event affects the seller's pricing strategy, not the number of seats available.",
+          "B": "A horizontal curve is <strong>perfectly elastic</strong> supply — unlimited quantity available at one price. That is the opposite of a fixed venue.",
+          "C": "An upward slope is the usual case, but it requires the quantity supplied to be capable of rising. Here it is physically fixed for that night."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would make the supply of a manufactured good more price elastic?",
+      "options": {
+        "A": "A fall in the number of firms operating in the industry.",
+        "B": "Production requiring highly specialised, immobile equipment.",
+        "C": "The firm holding large stocks of finished goods in a warehouse.",
+        "D": "The good being perishable and impossible to store."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Stocks</strong> are one of the classic determinants of PES. A firm holding finished goods in a warehouse can release them onto the market immediately when the price rises, without waiting for anything to be produced. Quantity supplied therefore responds quickly and strongly to price, which is exactly what elastic supply means.",
+        "distractors": {
+          "A": "Fewer firms means fewer sources able to expand output when the price rises, so supply becomes <em>less</em> responsive, not more.",
+          "B": "Specialised, immobile equipment is hard to obtain, adapt or redeploy, so output cannot be scaled up quickly. Low factor mobility makes supply more inelastic.",
+          "D": "Perishability is the mirror image of holding stocks. A good that cannot be stored must be sold as it is produced, so there is no reserve to release when the price rises."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The supply of an agricultural commodity is price inelastic and the demand for it is also price inelastic. All other things being equal, the most likely consequence of a poor harvest is",
+      "options": {
+        "A": "A large fall in price and a small fall in the quantity traded.",
+        "B": "A large rise in price and a small fall in the quantity traded.",
+        "C": "A small rise in price and a large fall in the quantity traded.",
+        "D": "No change in price, because supply and demand are both inelastic."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A poor harvest shifts the supply curve <strong>left</strong>. What happens next depends on the demand curve it now meets.<br />Because demand is <strong>inelastic</strong>, it is steep: buyers will not cut back much however dear the commodity becomes, since food has few substitutes. Clearing the reduced quantity therefore takes a <strong>large rise in price</strong> and only a <strong>small fall</strong> in the amount traded.<br />This is why agricultural prices are so volatile, and why farm incomes can rise in a bad year — the price gain outweighs the volume loss when demand is inelastic.",
+        "distractors": {
+          "A": "A price <em>fall</em> would follow an increase in supply, such as a bumper harvest. A poor harvest reduces supply.",
+          "C": "This is the pattern you would get with <strong>elastic</strong> demand, where buyers desert the market as soon as the price edges up, so the adjustment happens through quantity instead of price.",
+          "D": "Inelastic does not mean unresponsive to a shift in the other curve. It describes the <em>slope</em> of each curve; a leftward shift of supply against a fixed demand curve must raise the price."
+        }
+      }
+    }
+  ]
+}

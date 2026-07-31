@@ -1,0 +1,212 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.2.3",
+  "slug": "1-2-3-aspects-of-behavioural-economic-theory",
+  "title": "Aspects of Behavioural Economic Theory",
+  "shortTitle": "Behavioural Economic Theory",
+  "pageTitle": "Behavioural Economics Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on behavioural economics for AQA A-Level Economics: bounded rationality, bounded self control, biases and altruism.",
+  "intro": "Eight original multiple-choice questions on behavioural economic theory, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on bounded rationality, bounded self control, biases and altruism, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-2-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Behavioural economics differs from traditional economic theory mainly because it",
+      "options": {
+        "A": "Assumes consumers always have complete information about their choices.",
+        "B": "Assumes firms rather than consumers are the main decision makers.",
+        "C": "Questions whether individuals always act to maximise their utility.",
+        "D": "Rejects the idea that scarcity forces individuals to make choices."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Traditional theory assumes individuals are rational maximisers who know what they want, have time to weigh every option, and decide on the facts. Behavioural economics keeps the subject matter but <strong>relaxes that assumption</strong>: it argues that psychological and social influences frequently lead people to choices that do not maximise their utility. It is a modification of the model of the decision maker, not a rejection of economics.",
+        "distractors": {
+          "A": "This is closer to what <em>traditional</em> theory assumes. Behavioural economics emphasises that information is limited and imperfectly processed.",
+          "B": "Both approaches analyse consumers, firms, workers and governments. Behavioural work has if anything focused most closely on consumers.",
+          "D": "Scarcity and the need to choose are common ground. Behavioural economics is about <em>how</em> those choices are made, not whether they have to be made."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A shopper spends five minutes choosing between twelve broadband contracts and signs one without reading the terms of the other eleven. This is best explained by",
+      "options": {
+        "A": "Altruism.",
+        "B": "Bounded rationality.",
+        "C": "Bounded self control.",
+        "D": "Herding bias."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Bounded rationality</strong> is the idea that people are limited in their ability to decide rationally by a lack of information, a lack of time, or a limited ability to process what they have. The shopper here is short of both time and processing capacity: twelve contracts with different speeds, terms and exit fees is more than can be compared in five minutes, so a decision gets made on partial information.",
+        "distractors": {
+          "A": "Altruism means acting to benefit others at a cost to yourself. Nothing in the shopper's behaviour is directed at anyone else's welfare.",
+          "C": "Bounded self control is about knowing the better option and failing to take it because of temptation. The shopper's difficulty is that they never established which option was better.",
+          "D": "Herding bias means copying the decisions of others. The stem gives no indication that the shopper is following anyone."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A worker intends to save a tenth of each month's pay, but repeatedly spends it on evenings out instead. This is best explained by",
+      "options": {
+        "A": "Altruism.",
+        "B": "Anchoring bias.",
+        "C": "Availability bias.",
+        "D": "Bounded self control."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Bounded self control</strong> describes an individual who knows what is in their long-term interest and still fails to act on it, because short-term temptation wins. The worker is not confused about what they should do — the plan to save is explicit — and that is exactly what separates this from bounded rationality, where the difficulty is working out the right choice in the first place.",
+        "distractors": {
+          "A": "Altruism means sacrificing your own interests for someone else's. Spending on evenings out serves the worker's own immediate enjoyment.",
+          "B": "Anchoring bias is being influenced by the first piece of information encountered, typically a price. No such reference point appears here.",
+          "C": "Availability bias is over-weighting information that comes readily to mind, such as a recent news story. The worker's problem is willpower, not what information they recall."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A jacket is displayed with a label reading 'was £180, now £99'. A shopper buys it immediately without checking what similar jackets cost elsewhere. This is best explained by",
+      "options": {
+        "A": "Anchoring bias.",
+        "B": "Availability bias.",
+        "C": "Bounded self control.",
+        "D": "Herding bias."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Anchoring bias</strong> is the tendency to be influenced by the first piece of information received, even where it is not a reliable guide. The £180 is the anchor. Once it is in the shopper's mind, £99 is judged against it and looks like a saving of £81, rather than against what the jacket is actually worth or what other shops charge. The original price does all the persuading.",
+        "distractors": {
+          "B": "Availability bias is being swayed by information that springs readily to mind, typically because it was recent or vivid. The £180 is not recalled from memory — it is printed on the label in front of the shopper.",
+          "C": "Bounded self control would mean the shopper knew the jacket was a poor purchase and bought it anyway through weakness. Here the shopper believes it is a genuine bargain.",
+          "D": "Herding bias involves copying others. No one else features in the decision."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is the most likely economic consequence of widespread behavioural biases among consumers in a market?",
+      "options": {
+        "A": "Consumers allocate spending in ways that do not maximise their utility.",
+        "B": "Firms become unable to earn any profit from selling to consumers.",
+        "C": "The market reaches an allocatively efficient outcome more quickly than before.",
+        "D": "The price mechanism stops allocating resources altogether."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The efficiency case for markets rests on consumers choosing what genuinely maximises their satisfaction, because that is what makes their spending an accurate signal of what society values. Once biases lead people to buy things they would not have chosen on reflection, spending stops reflecting true preferences, and the resources that follow that spending are <strong>misallocated</strong>. This is why behavioural economics matters for policy rather than being a psychological curiosity.",
+        "distractors": {
+          "B": "Firms remain perfectly able to profit, and biases such as anchoring are routinely used in pricing and marketing precisely because they work. The loss falls on consumer welfare, not on profits.",
+          "C": "This has the effect backwards. Allocative efficiency requires resources to follow genuine preferences, and biases drive a wedge between what people choose and what they actually value.",
+          "D": "Prices continue to be set and to move. The problem is that the demand feeding into them is distorted, not that the mechanism has stopped working."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A yoghurt sells noticeably better when labelled '95% fat free' than when the identical product is labelled 'contains 5% fat'. This is best explained by",
+      "options": {
+        "A": "Anchoring bias.",
+        "B": "Availability bias.",
+        "C": "Bounded rationality.",
+        "D": "Framing bias."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Framing bias</strong> is being influenced by the way information is presented rather than by the information itself. The two labels carry exactly the same fact, so a fully rational consumer would be indifferent between them. That sales differ shows the <em>presentation</em> is doing the work — '95% fat free' invites the shopper to think about the 95% and 'contains 5% fat' draws attention to the fat.",
+        "distractors": {
+          "A": "Anchoring requires a reference figure, usually a previous price, against which the new information is judged. There is no anchor here, just two descriptions of one fact.",
+          "B": "Availability bias concerns which information comes most readily to mind. Both labels are equally in front of the shopper; what differs is how the same content is worded.",
+          "C": "Bounded rationality would explain a shopper failing to work the percentages out. The point here is that there is nothing to work out — the two labels are equivalent and still produce different behaviour."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A consumer described by traditional theory and a consumer described by behavioural economics both buy a coffee on the way to work each morning. The behavioural account differs mainly in allowing that the consumer",
+      "options": {
+        "A": "Faces a budget constraint when making the purchase.",
+        "B": "May be acting on habit rather than fresh comparison.",
+        "C": "Prefers the coffee to the next-best alternative available.",
+        "D": "Receives diminishing marginal utility from each additional cup."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Both accounts agree on most of the picture. What behavioural economics adds is that the decision may not be a fresh calculation at all: the consumer may be following a <strong>rule of thumb</strong> — the same shop, the same order, because it worked last time — rather than weighing today's alternatives. Traditional theory treats every purchase as a deliberate optimisation; the behavioural account allows habit, limited time and limited processing to stand in for it.",
+        "distractors": {
+          "A": "A budget constraint applies in both accounts. Behavioural economics does not suggest people can spend money they do not have.",
+          "C": "Preferring the chosen option to the alternatives is common ground too — it is close to the definition of making a choice. The disagreement is about how carefully those alternatives were considered.",
+          "D": "Diminishing marginal utility is a feature of traditional utility theory and behavioural economics does not deny it. The fourth coffee of the morning satisfies less than the first on either account."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-3-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes the behaviour of three consumers.<br />Using Table 1, which one of the following correctly identifies the main influence on each consumer?",
+      "table": {
+        "caption": "Table 1: The behaviour of three consumers",
+        "head": [
+          "Consumer",
+          "Behaviour"
+        ],
+        "rows": [
+          [
+            "1",
+            "Buys the same supermarket meal deal every week without comparing the alternatives"
+          ],
+          [
+            "2",
+            "Gives a monthly donation to a charity from which she gains nothing herself"
+          ],
+          [
+            "3",
+            "Buys a games console because his friends own it, although he prefers a rival machine"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 uses a rule of thumb, 2 shows altruism, 3 shows herding bias.",
+        "B": "1 uses a rule of thumb, 2 shows herding bias, 3 shows altruism.",
+        "C": "1 shows anchoring bias, 2 shows altruism, 3 shows herding bias.",
+        "D": "1 shows herding bias, 2 shows altruism, 3 uses a rule of thumb."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Take each in turn.<br /><strong>Consumer 1</strong> repeats last week's purchase instead of reassessing. Acting on a general principle drawn from experience rather than fresh calculation is a <strong>rule of thumb</strong>.<br /><strong>Consumer 2</strong> gives up money with no benefit to herself. Acting to benefit others at your own expense is <strong>altruism</strong>.<br /><strong>Consumer 3</strong> follows his friends against his own preference. Copying the decisions of others is <strong>herding bias</strong>, sometimes called social norms.",
+        "distractors": {
+          "B": "This swaps consumers 2 and 3. The donation involves no one being copied, and the console purchase brings no benefit to anybody else — so neither fits the label it has been given.",
+          "C": "Anchoring requires an initial reference point, usually a price, that distorts the judgement. Consumer 1 is not reacting to a figure at all; she is repeating a past decision.",
+          "D": "This swaps consumers 1 and 3. Consumer 1 is influenced by her own past behaviour, not by other people, while consumer 3 is influenced by his friends rather than by his own habit."
+        }
+      }
+    }
+  ]
+}

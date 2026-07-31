@@ -1,0 +1,156 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.2.4",
+  "slug": "1-2-4-behavioural-economics-and-economic-policy",
+  "title": "Behavioural Economics and Economic Policy",
+  "shortTitle": "Behavioural Economics and Policy",
+  "pageTitle": "Nudges and Choice Architecture Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on behavioural economics and policy for AQA A-Level Economics: nudges, choice architecture, default and mandated choice.",
+  "intro": "Six original multiple-choice questions on nudges and choice architecture, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on nudges, choice architecture and government policy, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-2-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A nudge is best described as an intervention that",
+      "options": {
+        "A": "Bans the option the government considers harmful.",
+        "B": "Changes how choices are presented without removing any of them.",
+        "C": "Imposes a tax on the option the government considers harmful.",
+        "D": "Requires individuals by law to make a particular choice."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>nudge</strong> is a subtle change to the choice architecture that steers behaviour in a predictable direction while <strong>leaving every option open</strong>. That last part is what defines it. Putting fruit at eye level in a canteen is a nudge; the chocolate is still on sale, still affordable, and anyone who wants it can reach for it.",
+        "distractors": {
+          "A": "A ban removes an option outright, so it restricts freedom of choice rather than preserving it. That takes it outside the definition of a nudge.",
+          "C": "A tax changes the relative price of an option rather than the way it is presented. It is a conventional intervention working through incentives, not through choice architecture.",
+          "D": "A legal requirement is a mandated choice. Like a ban, it removes the freedom not to comply, which a nudge deliberately keeps intact."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country changes its organ donation system so that every adult is registered as a donor unless they actively opt out. In terms of choice architecture this is an example of",
+      "options": {
+        "A": "Default choice.",
+        "B": "Framing.",
+        "C": "Mandated choice.",
+        "D": "Restricted choice."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>default choice</strong> makes the outcome the policymaker prefers the one that happens automatically if the individual does nothing. Opting out remains available and costs nothing but a moment's effort, so no freedom has been removed. It works because inertia is powerful — most people stay with whatever the default is, which is why switching the default in this way raises donor registration sharply.",
+        "distractors": {
+          "B": "Framing is about the wording or presentation of the same information, such as '95% fat free' against 'contains 5% fat'. Here it is the starting position that has changed, not the description.",
+          "C": "A mandated choice would compel every adult to state a preference one way or the other. This policy allows people to say nothing at all, and assigns them a position if they do.",
+          "D": "Restricted choice narrows the range of options available. Both options — donate or do not — remain fully open here."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government requires every car owner to hold at least third-party insurance. In terms of choice architecture this is best described as",
+      "options": {
+        "A": "Default choice, because most drivers would buy insurance anyway.",
+        "B": "Mandated choice, because the law removes the option of not choosing.",
+        "C": "Nudge, because it steers drivers towards a better outcome.",
+        "D": "Restricted choice, because insurers offer a narrower range of policies."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>mandated choice</strong> uses the law to require the desired decision. Driving uninsured is not an option a motorist may weigh and reject — it is prohibited. The distinction from the softer forms of choice architecture is exactly this loss of the freedom to do otherwise.",
+        "distractors": {
+          "A": "A default applies automatically but can be opted out of. There is no opt-out here; a driver who declines cover is breaking the law rather than exercising a choice.",
+          "C": "The defining feature of a nudge is that it preserves freedom of choice, and this policy removes it. A nudge towards insurance would be something like a pre-ticked cover option when taxing a vehicle.",
+          "D": "Restricted choice would mean fewer types of policy on offer. The requirement concerns whether a driver is insured at all, not how many products insurers sell."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A supermarket cuts the number of breakfast cereals on its shelves from sixty to twenty, in order to make choosing easier for shoppers. In terms of choice architecture this is an example of",
+      "options": {
+        "A": "Default choice.",
+        "B": "Framing.",
+        "C": "Mandated choice.",
+        "D": "Restricted choice."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Restricted choice</strong> means limiting the number of options in order to simplify the decision. The rationale comes straight from <strong>bounded rationality</strong>: sixty near-identical products cannot realistically be compared, so a long list can leave shoppers worse off than a short one. Cutting the range reduces choice overload and makes a considered decision possible.",
+        "distractors": {
+          "A": "A default is what happens when the consumer does nothing. Nothing is being selected automatically here — shoppers still have to pick a cereal.",
+          "B": "Framing concerns how the same option is described. The change here is to the number of options, not the way any of them is worded.",
+          "C": "A mandated choice compels a particular decision by law. Shoppers may still buy any of the twenty cereals, or none at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-4-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes three policies.<br />Using Table 1, which one of the following correctly classifies all three?",
+      "table": {
+        "caption": "Table 1: Three policies affecting consumer choice",
+        "head": ["Policy", "Description"],
+        "rows": [
+          ["1", "Placing fruit at eye level and sweets on a low shelf in a school canteen"],
+          ["2", "Automatically enrolling employees in a workplace pension unless they opt out"],
+          ["3", "Making it illegal to sell high-caffeine energy drinks to under-16s"]
+        ]
+      },
+      "options": {
+        "A": "1 is a nudge, 2 is a default choice, 3 is a restricted choice.",
+        "B": "1 is a default choice, 2 is a nudge, 3 is a restricted choice.",
+        "C": "1 is a nudge, 2 is a restricted choice, 3 is a default choice.",
+        "D": "1 is a restricted choice, 2 is a default choice, 3 is a nudge."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Work through them by asking what happens to the options available.<br /><strong>Policy 1</strong> changes only what is easiest to reach. Every item is still on sale, so this is a <strong>nudge</strong>.<br /><strong>Policy 2</strong> makes enrolment the automatic outcome for anyone who does nothing, with an opt-out preserved. That is a <strong>default choice</strong>.<br /><strong>Policy 3</strong> removes an option entirely for one group of consumers, so it is a <strong>restricted choice</strong>.",
+        "distractors": {
+          "B": "This swaps policies 1 and 2. Shelf position selects nothing on the shopper's behalf, so it cannot be a default; automatic enrolment does, so it cannot be a mere nudge.",
+          "C": "Policy 2 does not narrow the range of options — an employee may still leave the scheme. And policy 3 sets no automatic outcome; it forbids a sale outright.",
+          "D": "Policy 1 restricts nothing, since every product remains available. Policy 3 removes freedom of choice, which is precisely what a nudge is defined not to do."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government wants to reduce sugar consumption while preserving consumers' freedom of choice. All other things being equal, which one of the following is most consistent with that aim?",
+      "options": {
+        "A": "Banning the sale of drinks containing more than 8 g of sugar per 100 ml.",
+        "B": "Making consumers register every sugary drink they purchase.",
+        "C": "Making low-sugar drinks the default option in vending machines.",
+        "D": "Setting a maximum price for low-sugar drinks."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Both halves of the aim have to be met. Changing the vending-machine default steers consumers towards the low-sugar option, because most people accept whatever is presented first — yet the sugary drinks are still stocked, still priced the same, and available to anyone who selects them. Behaviour changes while <strong>every option remains open</strong>, which is exactly what a nudge is designed to achieve.",
+        "distractors": {
+          "A": "A ban would certainly cut consumption, and it fails the second half of the aim completely: the option is removed rather than made less likely.",
+          "B": "A registration requirement imposes a substantial cost in time and privacy on every purchase, which is closer to a deterrent than a nudge, and it does nothing to make the low-sugar option easier to take.",
+          "D": "A maximum price set below the market price causes excess demand and shortages, so low-sugar drinks would become harder to obtain — the opposite of the intended effect. Price controls also work through incentives rather than choice architecture."
+        }
+      }
+    }
+  ]
+}

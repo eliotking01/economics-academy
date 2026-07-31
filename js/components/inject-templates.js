@@ -147,6 +147,7 @@ function setActivePage() {
   const pageMap = [
     // Add more specific patterns first
     { pattern: /^\/revision-notes(\/|$)/, page: "revision-notes" },
+    { pattern: /^\/practice-questions(\/|$)/, page: "practice-questions" },
     { pattern: /^\/past-papers(\/|$)/, page: "past-papers" },
     { pattern: /^\/tutoring\.html$/, page: "tutoring" },
     { pattern: /^\/marking\.html$/, page: "marking" },
