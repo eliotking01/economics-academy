@@ -1,0 +1,220 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.1.4",
+  "slug": "2-1-4-uses-of-national-income-data",
+  "title": "Uses of National Income Data",
+  "shortTitle": "Uses of National Income Data",
+  "pageTitle": "National Income Data Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on national income data for AQA A-Level Economics: GDP and GNI, real GDP per capita, PPP and the limits of the data.",
+  "intro": "Eight original multiple-choice questions on national income data and its limitations, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on GDP and GNI, real GDP per capita and purchasing power parity, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-1-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Gross National Income (GNI) is best defined as",
+      "options": {
+        "A": "GDP adjusted for the rate of inflation.",
+        "B": "GDP divided by the size of the population.",
+        "C": "GDP minus the depreciation of the capital stock.",
+        "D": "GDP plus net income from abroad."
+      },
+      "answer": "D",
+      "model": {
+        "working": "GDP measures output produced <em>within</em> a country's borders. GNI adjusts that for who actually earns the income: it adds what residents earn from assets they own overseas and subtracts what foreign residents earn from assets located domestically. So <strong>GNI = GDP + net income from abroad</strong>.",
+        "distractors": {
+          "A": "Adjusting for inflation turns a nominal figure into a real one. That is a separate adjustment, and it applies to GDP and GNI alike.",
+          "B": "Dividing by the population gives a <em>per capita</em> figure. Again a separate adjustment, and one that can be applied to either measure.",
+          "C": "This describes a net rather than a gross measure. The word 'gross' in both GDP and GNI signals that depreciation has not been deducted."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows spending in an economy over one year.<br />Using Table 1 and the expenditure method, GDP is",
+      "table": {
+        "caption": "Table 1: Annual expenditure",
+        "head": [
+          "Component",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Consumption (C)",
+            "£620bn"
+          ],
+          [
+            "Investment (I)",
+            "£150bn"
+          ],
+          [
+            "Government spending (G)",
+            "£240bn"
+          ],
+          [
+            "Exports (X)",
+            "£190bn"
+          ],
+          [
+            "Imports (M)",
+            "£220bn"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£980bn",
+        "B": "£1,010bn",
+        "C": "£1,200bn",
+        "D": "£1,420bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The expenditure method sums C + I + G + (X − M), so imports are <strong>subtracted</strong>.<br />C + I + G = £620bn + £150bn + £240bn = £1,010bn.<br />Net exports = £190bn − £220bn = <strong>−£30bn</strong>.<br />GDP = £1,010bn − £30bn = <strong>£980bn</strong>.<br />Imports are deducted because they are output produced abroad. Leaving them in would count foreign production as part of this economy's GDP.",
+        "distractors": {
+          "B": "£1,010bn is C + I + G with net exports left out entirely. Trade is part of the expenditure method, and here it reduces GDP.",
+          "C": "£1,200bn adds exports but never subtracts imports: 1,010 + 190. Exports alone are not net exports.",
+          "D": "£1,420bn adds imports as well as exports: 1,010 + 190 + 220. Imports enter the formula with a minus sign, so this moves GDP the wrong way twice."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's GDP is £1,400bn. Its residents earn £60bn from assets held abroad, while foreign residents earn £95bn from assets held in the country. The country's GNI is",
+      "options": {
+        "A": "£1,365bn",
+        "B": "£1,435bn",
+        "C": "£1,460bn",
+        "D": "£1,555bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "GNI = GDP + net income from abroad, and net income is inflows minus outflows.<br />Net income from abroad = £60bn − £95bn = <strong>−£35bn</strong>.<br />GNI = £1,400bn − £35bn = <strong>£1,365bn</strong>.<br />More income leaves the country than comes in, so GNI is below GDP. That is the usual pattern where a large share of domestic capital is foreign-owned.",
+        "distractors": {
+          "B": "£1,435bn adds the £35bn instead of subtracting it. The country pays out more than it receives, so the adjustment must reduce GDP.",
+          "C": "£1,460bn adds only the £60bn inflow and ignores the £95bn paid out. Net income means both directions.",
+          "D": "£1,555bn adds both flows together, treating the £95bn paid to foreign residents as though the country had earned it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's real GDP rose by 3% last year, yet its real GDP per capita fell. It follows that",
+      "options": {
+        "A": "The country's GNI must also have fallen.",
+        "B": "The population fell over the year.",
+        "C": "The population rose by more than 3%.",
+        "D": "The price level rose by more than 3%."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Real GDP per capita is real GDP divided by the population. For the ratio to fall while the numerator rises by 3%, the denominator must have grown by <strong>more than 3%</strong>. Output rose, but there were more people to share it between, so average output per person fell.",
+        "distractors": {
+          "A": "GNI depends on net income from abroad, which the stem says nothing about. It can move in either direction independently of GDP per capita.",
+          "B": "A falling population would <em>raise</em> real GDP per capita, since the same output would be divided between fewer people.",
+          "D": "The figures are already real, so inflation has been stripped out. Prices cannot explain a fall in a real per capita measure."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "National income data understates the true level of output most severely in a country with a large amount of",
+      "options": {
+        "A": "Government spending on defence.",
+        "B": "Investment by foreign-owned firms.",
+        "C": "Output produced for sale by large firms.",
+        "D": "Subsistence farming and unpaid work."
+      },
+      "answer": "D",
+      "model": {
+        "working": "National income statistics capture output that passes through recorded markets. <strong>Subsistence farming, unpaid care and other non-marketed output</strong> never generates a recorded transaction, so it is missing from the figures even though real goods and services are being produced. This is why the measure understates output most in developing economies, and why cross-country comparisons using GDP alone can mislead.",
+        "distractors": {
+          "A": "Defence spending is recorded in full through government accounts. It can be criticised as output that does not raise living standards, but it is not missing from the data.",
+          "B": "Investment by foreign-owned firms is recorded within GDP, because GDP counts production inside the borders regardless of who owns the firm.",
+          "C": "Output sold by large firms is the most thoroughly recorded output there is. It is invoiced, taxed and audited."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's GDP rises because of the money spent cleaning up after a major oil spill. This best illustrates the limitation that GDP",
+      "options": {
+        "A": "Counts output that does not raise living standards.",
+        "B": "Ignores how income is distributed between households.",
+        "C": "Is measured at current rather than constant prices.",
+        "D": "Understates the output produced in the informal economy."
+      },
+      "answer": "A",
+      "model": {
+        "working": "GDP counts all recorded output equally, without asking whether it makes anyone better off. The clean-up is real economic activity and adds to GDP, but it only restores conditions that existed before the spill. <strong>Higher GDP here coincides with no improvement in living standards at all</strong> — the same objection applies to spending on disaster recovery generally.",
+        "distractors": {
+          "B": "Distribution is a genuine limitation of GDP, but the stem is about <em>what</em> the output is, not about who receives the income from it.",
+          "C": "Whether the figure is nominal or real is a separate issue, and it is fixed by using constant prices. The clean-up would add to real GDP too.",
+          "D": "The clean-up is paid for and recorded, so it is inside the measured economy. The informal economy is the output that never gets recorded."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A low-income country's GNI per capita is converted into dollars at the market exchange rate rather than at purchasing power parity. All other things being equal, this will",
+      "options": {
+        "A": "Overstate its living standards, because its currency is overvalued.",
+        "B": "Overstate its living standards, because non-traded goods are cheap there.",
+        "C": "Understate its living standards, because its currency is overvalued.",
+        "D": "Understate its living standards, because non-traded goods are cheap there."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Market exchange rates are set by the demand for and supply of currencies through trade, investment and speculation. They take no account of the many goods and services that are never traded internationally — housing, haircuts, restaurant meals — which are typically much <strong>cheaper</strong> in lower-income countries.<br />So a given income buys far more at home than the market-rate conversion suggests, and the country looks poorer than it is. Converting at <strong>PPP</strong> corrects for this and raises the measured living standards of lower-price countries.",
+        "distractors": {
+          "A": "The direction is wrong and so is the reason. The problem is what incomes can buy domestically, not a mis-valued currency.",
+          "B": "The reason is right but the direction is reversed. Cheap non-traded goods mean the market rate makes the country look poorer, not richer.",
+          "C": "The direction is right but for the wrong reason. Overvaluation would flatter a country's converted income, which is the opposite of the effect described."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-4-q8",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An identical basket of goods costs £80 in the UK and 640 pesos in another country. The market exchange rate is 10 pesos = £1. Converting an income of 8,000 pesos at the market rate rather than at purchasing power parity makes that income appear",
+      "options": {
+        "A": "20% larger than its true purchasing power.",
+        "B": "20% smaller than its true purchasing power.",
+        "C": "25% larger than its true purchasing power.",
+        "D": "25% smaller than its true purchasing power."
+      },
+      "answer": "B",
+      "model": {
+        "working": "First find the PPP rate, which is the rate that makes the two baskets cost the same.<br />640 pesos ÷ £80 = <strong>8 pesos = £1</strong>.<br />At PPP, 8,000 pesos = 8,000 ÷ 8 = <strong>£1,000</strong>.<br />At the market rate, 8,000 pesos = 8,000 ÷ 10 = <strong>£800</strong>.<br />The market conversion understates the income by £200, measured against its true purchasing power of £1,000: 200 ÷ 1,000 × 100 = <strong>20%</strong>.<br />The market rate of 10 undervalues the peso relative to what it actually buys at home, which is why PPP figures are used for international comparisons of living standards.",
+        "distractors": {
+          "A": "The direction is wrong. Since the market rate gives fewer pounds per peso than PPP does, it makes the income look smaller, not larger.",
+          "C": "Both the direction and the denominator are wrong: 200 ÷ 800 measured the wrong way round.",
+          "D": "25% is 200 ÷ 800, dividing by the market-rate figure. The comparison is against true purchasing power of £1,000, which is the value being understated."
+        }
+      }
+    }
+  ]
+}

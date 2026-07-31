@@ -559,3 +559,27 @@ so none of them is caused by the questions feature.
   both above the 0.1 "good" threshold. Self-hosting the three families with
   `size-adjust`, or preloading the woff2 the fold actually needs, would fix it
   site-wide. This is the single biggest remaining Performance cost.
+
+## Economics content found while writing the AQA macro questions (2026-07-31)
+
+Flagged, not changed — content is the author's call, per `CLAUDE.md`.
+
+**N-Q1 — the Claimant Count described as the internationally comparable
+measure.** `aqa-a2-macro/2-1-2-macroeconomic-indicators.html`, in the "Measures
+of Unemployment" section:
+
+> The Claimant Count is easier to compare internationally, as it is based on a
+> standardised definition of unemployment.
+
+This reads the wrong way round. The Claimant Count is defined by each country's
+own benefit rules, which is exactly what makes it hard to compare across
+borders. The Labour Force Survey is the measure built on a standardised
+international definition — the ILO one — and that is why the ONS treats it as
+the internationally comparable series. The paragraph immediately after this
+already says the LFS is the more accurate measure, so the two sentences pull
+against each other.
+
+Unit 2.1.2's question set was written around this: the LFS/Claimant Count
+question (2.1.2 Q4) turns on benefit eligibility, which the notes state
+correctly, and stays off international comparability altogether. If the sentence
+is corrected, that set needs no change.

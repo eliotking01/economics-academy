@@ -5,7 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 54 topics, 401 questions. AQA Microeconomics is complete.**
+**Live: 58 topics, 434 questions. AQA Microeconomics is complete; AQA
+Macroeconomics unit 2.1 is done.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -168,6 +169,47 @@ An early draft of 1.2.3 had seven consecutive "which bias is this?" items. Real
 papers vary the format. Mix identification with consequence questions, data
 tables, and contrasts between two accounts of the same behaviour.
 
+### 7. Check originality mechanically — the past papers are readable
+
+Batches 1–5 checked originality by eye. Batch 6 automated it, and immediately
+caught something reading had missed (see the batch 6 record). Do this from now
+on; it takes about a minute per batch.
+
+There is no `pdftotext` on this machine and no Python PDF library, but macOS
+ships Swift with PDFKit, which extracts the text properly. A four-line script is
+enough:
+
+```swift
+import Foundation
+import PDFKit
+for path in CommandLine.arguments.dropFirst() {
+    guard let doc = PDFDocument(url: URL(fileURLWithPath: path)) else { continue }
+    print("@@@FILE \(path)"); print(doc.string ?? "")
+}
+```
+
+```bash
+swift pdftext.swift past-papers/aqa/*/*/*question-paper.pdf > aqa-all.txt
+```
+
+45 AQA question papers come to about 945 KB of text and take a couple of minutes
+to extract. Then shingle both sides into word n-grams and intersect. What the
+results mean:
+
+- **Hits at N=6–8 are almost all stock AQA scaffolding** — "Which one of the
+  following is", "All other things being equal, the most likely". Those are the
+  calibration target, so leave them alone.
+- **Anything at N=10 is a real problem.** Both batches checked so far were clean
+  at N=10.
+- **Also grep the corpus for each distinctive figure** in a new stem, table or
+  option. This is what caught 2.1.3 Q7: the numbers matched before any phrasing
+  did. Common round numbers (£480, 460) collide harmlessly all the time, so read
+  the surrounding context before rewriting anything.
+
+Do **not** try to parse the PDFs with a stdlib script. Their content streams use
+subsetted fonts with custom encodings, so pulling the parenthesised strings out
+of the decompressed streams returns binary noise, not text.
+
 ---
 
 ## Ratified content decisions
@@ -240,11 +282,12 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### AQA Macroeconomics — 25 topics, 209 questions planned
+### AQA Macroeconomics — 21 topics, 176 questions still to write
+
+Unit 2.1 is done (see batch 6). What remains:
 
 | Unit | Topics and planned counts |
 | --- | --- |
-| 2.1 | 2.1.1 (7) · 2.1.2 (8) · 2.1.3 (10) · 2.1.4 (8) — 33 |
 | 2.2 | 2.2.1 (8) · 2.2.2 (9) · 2.2.3 (9) · 2.2.4 (10) · 2.2.5 (7) · 2.2.6 (7) — 50 |
 | 2.3 | 2.3.1 (9) · 2.3.2 (9) · 2.3.3 (10) · 2.3.4 (8) — 36 |
 | 2.4 | 2.4.1 (8) · 2.4.2 (7) · 2.4.3 (9) · 2.4.4 (6) — 30 |
@@ -252,7 +295,8 @@ Useful things established while building, worth not rediscovering.
 | 2.6 | 2.6.1 (7) · 2.6.2 (9) · 2.6.3 (9) · 2.6.4 (10) · 2.6.5 (8) — 43 |
 
 Expect the **calculation share to recover here**: index numbers, real vs
-nominal, the multiplier and exchange rates are all genuinely arithmetic.
+nominal, the multiplier and exchange rates are all genuinely arithmetic. Unit
+2.1 confirmed this — it came in at 24% `calculation` against a ~15% target.
 
 ### Edexcel — 87 topics, 662 questions planned
 
@@ -283,7 +327,10 @@ if in doubt — the guide's rule is that concision beats coverage.
   ~40% target and `calculation` at 6% against ~15%. This is a property of the
   specification — units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual almost
   throughout. Recorded rather than corrected; watch whether macro and Edexcel
-  bring the site-wide ratio closer to target.
+  bring the site-wide ratio closer to target. Macro 2.1 pulled the right way —
+  24% `calculation` and 15% `data-table` in that batch — but on 33 questions it
+  moves the site-wide figures only to 7% and 7%. Macro should keep correcting
+  this; Edexcel Themes 2 and 4 are where the rest of the arithmetic lives.
 - **Written-response extension.** Proposed in the original brief but **not
   built** and not approved: 1–2 short written questions per topic with
   indicative-content model answers behind `<details>`, plus a marking-service
@@ -401,6 +448,56 @@ Fixed: 23 options rewritten for length. No letter-distribution failures.
 | Skills | applied-reasoning 257, definition-in-context 94, data-table 27, calculation 23 |
 | Difficulty | foundation 55, standard 296, stretch 50 |
 | Sketch to solve | 20 |
+
+### Batch 6 — AQA macro 2.1 (2026-07-31)
+
+4 topics, 33 questions. The first macro batch. All 33 re-derived from the stem
+alone with **0 mismatches**; every figure in every calculation and table
+recomputed, including all distractor values.
+
+Fixed during verification:
+
+- **2.1.3 Q7 was too close to a real question.** The first draft used a CPI
+  table with `2020 = 100` and a value of 118.0. AQA's June 2022 Paper 3 carries
+  an index-table item — copper exports, `2020 = 100`, running 100.0 / 106.0 /
+  112.1 / 118.0 — so the base year and two values coincided with a real stem of
+  the same archetype. Rebuilt on `2017 = 100` with values sharing nothing with
+  it. See Recurring problems §5 and §7.
+- **2.1.3 Q4's swapped-weights distractor landed on 108.85**, an exact rounding
+  boundary, so "to one decimal place" had two defensible answers. Weights
+  re-picked as 400 / 300 / 300 so all four options are exact.
+- 2.1.3 Q2's earnings figures moved off £480, which appears in a real AQA data
+  table.
+- 3 options rewritten for length. No letter-distribution failures.
+- 2.1.2 Q6 dropped a "to one decimal place" instruction that claimed exactness
+  the options ("about 2.5%") did not have.
+
+**No `sketch` items in this batch, by design.** Unit 2.1 is indicators and
+national income data; the AD/AS diagrams start at 2.2, so a sketch item here
+would have been invented rather than earned. Expect the sketch share to return
+from 2.2 onward.
+
+| | |
+| --- | --- |
+| Answer letters | A 9, B 7, C 8, D 9 (even would be 8.25) |
+| Skills | applied-reasoning 15, calculation 8, data-table 5, definition-in-context 5 |
+| Difficulty | foundation 4, standard 24, stretch 5 |
+| Sketch to solve | 0 |
+
+The skill mix landed much closer to target than any micro batch:
+`calculation` 24% against a ~15% target and `data-table` 15% against ~20%,
+against 6% and 7% across the whole of micro.
+
+---
+
+## AQA Macroeconomics — 4 of 25 topics
+
+| Unit | Topic | Questions | State |
+| --- | --- | --- | --- |
+| 2.1 | 2.1.1 The Objectives of Government Economic Policy | 7 | Done |
+| 2.1 | 2.1.2 Macroeconomic Indicators | 8 | Done |
+| 2.1 | 2.1.3 Uses of Index Numbers | 10 | Done |
+| 2.1 | 2.1.4 Uses of National Income Data | 8 | Done |
 
 ---
 
