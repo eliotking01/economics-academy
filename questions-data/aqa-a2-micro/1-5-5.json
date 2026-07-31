@@ -1,0 +1,246 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.5",
+  "slug": "1-5-5-oligopoly",
+  "title": "Oligopoly",
+  "shortTitle": "Oligopoly",
+  "pageTitle": "Oligopoly and Concentration Ratio Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on oligopoly for AQA A-Level Economics: interdependence, concentration ratios, collusion and game theory.",
+  "intro": "Nine original multiple-choice questions on oligopoly, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Nine original multiple-choice questions on interdependence, concentration ratios, collusion and non-collusive behaviour, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The characteristic of oligopoly that most clearly distinguishes it from monopolistic competition is",
+      "options": {
+        "A": "Differentiated products.",
+        "B": "Freedom of entry into the market.",
+        "C": "Interdependence between a few firms.",
+        "D": "The pursuit of profit maximisation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Both structures have differentiated products, but only oligopoly is dominated by a <strong>few large firms</strong>, each big enough for its decisions to matter to the others. That is what creates <strong>interdependence</strong>: before changing a price or launching a campaign, each firm must anticipate how its rivals will respond. Strategic behaviour of this kind is the defining feature of the market structure, and it is why game theory is used to analyse it.",
+        "distractors": {
+          "A": "Products are differentiated in both structures, so this cannot separate them.",
+          "B": "Entry is <em>restricted</em> in oligopoly by high barriers such as economies of scale and brand loyalty. It is monopolistic competition that has free entry.",
+          "D": "Profit maximisation is the assumed objective across every market structure in the traditional theory of the firm."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows annual sales in a market.<br />Using Table 1, the three-firm concentration ratio is",
+      "table": {
+        "caption": "Table 1: Annual sales by firm",
+        "head": [
+          "Firm",
+          "Sales"
+        ],
+        "rows": [
+          [
+            "A",
+            "£180m"
+          ],
+          [
+            "B",
+            "£140m"
+          ],
+          [
+            "C",
+            "£100m"
+          ],
+          [
+            "D",
+            "£60m"
+          ],
+          [
+            "E",
+            "£40m"
+          ],
+          [
+            "All other firms",
+            "£80m"
+          ]
+        ]
+      },
+      "options": {
+        "A": "30%",
+        "B": "70%",
+        "C": "80%",
+        "D": "£420m"
+      },
+      "answer": "B",
+      "model": {
+        "working": "A concentration ratio is the combined share of the largest <em>n</em> firms, expressed as a percentage of total market sales.<br />Top three: £180m + £140m + £100m = <strong>£420m</strong>.<br />Total market: 180 + 140 + 100 + 60 + 40 + 80 = <strong>£600m</strong>.<br />Three-firm concentration ratio = 420 ÷ 600 × 100 = <strong>70%</strong>.<br />A ratio this high indicates a concentrated market, and concentration of that order is typical of oligopoly.",
+        "distractors": {
+          "A": "30% is firm A's share alone (180 ÷ 600). A three-firm ratio needs the top three combined.",
+          "C": "80% is the <strong>four</strong>-firm ratio, adding firm D's £60m. Always check how many firms the question asks for.",
+          "D": "£420m is the combined sales of the top three, which is the numerator only. A concentration ratio is a percentage of the market total, not a money figure."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A five-firm concentration ratio in an industry rises from 45% to 82%. All other things being equal, this indicates that the market has become",
+      "options": {
+        "A": "Less concentrated and more competitive.",
+        "B": "Less concentrated and less competitive.",
+        "C": "More concentrated and more competitive.",
+        "D": "More concentrated and less competitive."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A higher concentration ratio means a larger share of the market is held by the top firms, so the market is <strong>more concentrated</strong>. With sales channelled into fewer hands, each of those firms has more market power and the market is generally <strong>less competitive</strong>. A jump from 45% to 82% is substantial and would typically follow a wave of mergers or the exit of smaller rivals.",
+        "distractors": {
+          "A": "A rising ratio means rising concentration. Both halves are the wrong way round.",
+          "B": "The concentration judgement is inverted: a higher ratio means more concentration, not less.",
+          "C": "Concentration is correctly identified, but more concentration normally means <em>less</em> competition, since fewer firms hold more of the market."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Three airlines dominate a route. One considers cutting its fares but expects the others to match the cut within days, leaving market shares unchanged and all three worse off. This behaviour illustrates",
+      "options": {
+        "A": "Contestability, because entry to the route is easy.",
+        "B": "Creative destruction, because new services replace old ones.",
+        "C": "Interdependence, because each firm must anticipate its rivals' reactions.",
+        "D": "Price discrimination, because different passengers pay different fares."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The airline is not asking what a fare cut would do in isolation — it is asking what its rivals would do in response. That is <strong>interdependence</strong>, and it is the reason oligopolists are often reluctant to compete on price: a cut is matched, nobody gains share, and everyone's revenue falls. It explains why oligopolies frequently compete instead through advertising, loyalty schemes and service quality.",
+        "distractors": {
+          "A": "Contestability concerns how easily <em>new</em> firms could enter. The reasoning here is about the three firms already on the route.",
+          "B": "Creative destruction is innovation displacing older products and firms. Nothing new is being introduced here.",
+          "D": "Price discrimination means charging different groups different prices for the same service. This is about a single fare change and the reaction to it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two firms in an oligopoly secretly agree to raise their prices together and share the market between them. This is best described as",
+      "options": {
+        "A": "Collusive behaviour, forming a cartel.",
+        "B": "Contestable behaviour, deterring new entrants.",
+        "C": "Non-collusive behaviour, driven by interdependence.",
+        "D": "Price discrimination between the two firms' customers."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A secret agreement between rivals to fix prices or divide the market is <strong>collusion</strong>, and a group of firms operating such an agreement is a <strong>cartel</strong>. Colluding firms can behave collectively like a monopolist, restricting output and raising price above the competitive level. It is illegal in the UK and most other jurisdictions precisely because consumers bear the cost.",
+        "distractors": {
+          "B": "Contestability is about the threat of entry disciplining incumbents. Colluding to raise prices works against that discipline rather than expressing it.",
+          "C": "Non-collusive behaviour means firms act independently while still anticipating rivals' reactions. Here they have made an explicit agreement, which is the opposite.",
+          "D": "Price discrimination is one firm charging different prices to different consumers. This is two firms coordinating a single higher price."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would make collusion between firms in an oligopoly harder to sustain?",
+      "options": {
+        "A": "A small number of firms in the market.",
+        "B": "High barriers to entry into the market concerned.",
+        "C": "Similar cost structures across the firms.",
+        "D": "Strong incentives for each firm to undercut."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A cartel is unstable from within. Once a high price has been agreed, each member can gain by quietly <strong>undercutting</strong> it and capturing extra sales while the others hold the line. Because every firm knows the others face the same temptation, agreements tend to break down. The other three options all make collusion <em>easier</em>: it is simpler to coordinate few firms, high barriers keep outsiders from undercutting the cartel, and similar costs mean the firms want a similar price.",
+        "distractors": {
+          "A": "Fewer firms makes an agreement easier to reach and easier to police, so collusion is more likely rather than less.",
+          "B": "High barriers protect a cartel from new entrants who would otherwise be attracted by the high price and undercut it.",
+          "C": "Similar costs mean the firms' preferred prices are close together, so they can agree more readily. Very different costs make agreement harder."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Supermarkets in an oligopoly compete mainly through loyalty schemes, advertising and store quality rather than by cutting prices. This is best described as",
+      "options": {
+        "A": "Allocative efficiency.",
+        "B": "Limit pricing.",
+        "C": "Non-price competition.",
+        "D": "Predatory pricing."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Non-price competition</strong> is rivalry conducted through anything other than the price: advertising, branding, product quality, service, loyalty points, opening hours. It is characteristic of oligopoly because price cuts are so easily matched that they leave everyone worse off, whereas a distinctive brand or a better store is much harder for a rival to copy quickly.",
+        "distractors": {
+          "A": "Allocative efficiency is a condition about resource allocation, where price equals marginal cost. It is not a form of competitive behaviour.",
+          "B": "Limit pricing means setting price <em>low</em> to deter entry. These firms are avoiding price competition rather than using price as a weapon.",
+          "D": "Predatory pricing means pricing below cost to force a rival out of the market. It is an aggressive use of price, not an alternative to it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "A firm in a competitive oligopoly believes that if it raises its price, rivals will hold theirs steady, but if it cuts its price, rivals will match the cut. Sketching the demand curve this belief implies, the firm will most likely",
+      "options": {
+        "A": "Cut its price, because demand is elastic below the current price.",
+        "B": "Keep its price unchanged, because either move reduces its revenue.",
+        "C": "Raise its price, because demand is inelastic above the current price.",
+        "D": "Raise output until marginal revenue reaches zero."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sketch it in two halves, meeting at the current price.<br /><strong>Above</strong> the current price, rivals do not follow, so the firm loses a large share of its customers to them: demand is relatively <strong>elastic</strong>, and raising the price cuts revenue sharply.<br /><strong>Below</strong> it, rivals match immediately, so the firm gains few extra customers: demand is relatively <strong>inelastic</strong>, and cutting the price cuts revenue too.<br />The two segments produce a <strong>kink</strong> at the current price, and since both directions make the firm worse off, the rational move is to leave the price where it is. This is the standard explanation for why prices in some oligopolies are noticeably stable.",
+        "distractors": {
+          "A": "Below the current price demand is <em>inelastic</em>, because rivals match the cut. Quantity rises by proportionally less than price falls, so revenue drops.",
+          "C": "Above the current price demand is <em>elastic</em>, because rivals do not follow. A price rise would lose a disproportionate number of customers.",
+          "D": "MR = 0 is the revenue-maximising rule for a firm choosing output freely. The point of this model is that the firm's best move is not to move at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-5-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A competition authority breaks up a long-standing cartel in an oligopolistic market. All other things being equal, the most likely consequences for consumers are",
+      "options": {
+        "A": "Higher prices and a smaller quantity traded.",
+        "B": "Higher prices and a larger quantity traded.",
+        "C": "Lower prices and a smaller quantity traded.",
+        "D": "Lower prices and a larger quantity traded."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A cartel behaves collectively like a monopolist: it restricts output and holds price above the competitive level. Once it is broken up, the firms compete independently again, so <strong>price falls</strong> and the <strong>quantity traded rises</strong>. Consumer surplus increases and the allocative inefficiency created by the cartel is reduced — which is precisely why competition authorities pursue them.",
+        "distractors": {
+          "A": "This is what happens when a cartel is <em>formed</em>, not dismantled.",
+          "B": "Higher prices and higher quantity cannot occur together along an unchanged demand curve; buyers purchase less as price rises.",
+          "C": "Lower prices and lower quantity is equally inconsistent with the demand curve. As price falls, quantity demanded rises."
+        }
+      }
+    }
+  ]
+}

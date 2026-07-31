@@ -273,11 +273,15 @@ BANNED_OPTION_RE = re.compile(
 
 # UK English is a house rule. Word boundaries keep "laboratory" and
 # "programmer" out of it.
+#
+# Deliberately absent: "practise" and "license". Both are the correct UK
+# *verb* forms ("to practise", "to license"), sitting alongside the UK nouns
+# "practice" and "licence". Listing them flagged correct UK English.
 US_SPELLINGS = [
     "maximize", "maximized", "maximizing", "minimize", "minimized", "minimizing",
     "labor", "behavior", "behaviors", "specialization", "organization",
     "organizations", "center", "centers", "analyze", "analyzed", "favorable",
-    "unfavorable", "utilize", "utilized", "defense", "license", "practise",
+    "unfavorable", "utilize", "utilized", "defense",
     "traveling", "modeling", "labeled", "fulfill", "installment",
 ]
 US_SPELLING_RE = re.compile(r"\b(" + "|".join(US_SPELLINGS) + r")\b", re.IGNORECASE)

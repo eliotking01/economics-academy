@@ -4,7 +4,7 @@ Batch state for the free practice questions. The authoring standard is
 `QUESTIONS_GUIDE.md`; this file records what is done and what is next, so work
 can resume cleanly across sessions.
 
-**Live: 23 topics, 166 questions.** Target: 166 topics, ~1,272 questions.
+**Live: 34 topics, 252 questions.** Target: 166 topics, ~1,272 questions.
 
 ---
 
@@ -29,7 +29,7 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 
 ---
 
-## AQA Microeconomics — 23 of 54 topics
+## AQA Microeconomics — 34 of 54 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -56,7 +56,17 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 | 1.4 | 1.4.6 Marginal, Average and Total Revenue | 9 | Done |
 | 1.4 | 1.4.7 Profit | 8 | Done |
 | 1.4 | 1.4.8 Technological Change | 5 | Done |
-| 1.5 | Market Structures (11 topics) | 86 | Not started |
+| 1.5 | 1.5.1 Market Structures | 7 | Done |
+| 1.5 | 1.5.2 The Objectives of Firms | 7 | Done |
+| 1.5 | 1.5.3 Perfect Competition | 9 | Done |
+| 1.5 | 1.5.4 Monopolistic Competition | 7 | Done |
+| 1.5 | 1.5.5 Oligopoly | 9 | Done |
+| 1.5 | 1.5.6 Monopoly and Monopoly Power | 9 | Done |
+| 1.5 | 1.5.7 Price Discrimination | 8 | Done |
+| 1.5 | 1.5.8 The Dynamics of Competition | 6 | Done |
+| 1.5 | 1.5.9 Contestable and Non-Contestable Markets | 8 | Done |
+| 1.5 | 1.5.10 Market Structure and Efficiency | 8 | Done |
+| 1.5 | 1.5.11 Consumer and Producer Surplus | 8 | Done |
 | 1.6 | The Labour Market (7 topics) | 53 | Not started |
 | 1.7 | Distribution of Income and Wealth (3 topics) | 22 | Not started |
 | 1.8 | Market Failure and Government Intervention (10 topics) | 74 | Not started |
@@ -134,6 +144,35 @@ Site profile after batch 2:
 The `calculation` share recovered as predicted: unit 1.4 contributed 7 of the
 site's 14 calculation items, and its data-table share is higher again, since
 cost, revenue and output schedules are the natural form for this material.
+
+### Batch 3 — AQA micro 1.5 (2026-07-31)
+
+11 topics, 86 questions — the largest unit on the specification. All 86
+re-solved cold from the stem alone with **0 mismatches**; the concentration
+ratio and surplus calculations were recomputed and confirmed, including every
+distractor figure.
+
+Fixed during verification:
+
+- 1.5.3 and 1.5.1 both failed the letter-distribution check. The cause was the
+  same in each: option lists naming market structures sort alphabetically, and
+  alphabetical order kept pushing the correct answer to an early letter. Those
+  sets now order the structures by the competitive spectrum instead.
+- 20 options rewritten where the correct answer ran more than 10% longer than
+  the next longest.
+- **A bug in the generator's own US-spelling blocklist.** It flagged
+  `practise`, which is the correct UK *verb* form — the noun is `practice`.
+  `license` had the same problem, being the UK verb alongside the noun
+  `licence`. Both removed, with a comment recording why.
+
+Site profile after batch 3:
+
+| | |
+| --- | --- |
+| Answer letters | A 65, B 74, C 63, D 50 (even would be 63) |
+| Skills | applied-reasoning 151, definition-in-context 59, data-table 24, calculation 18 |
+| Difficulty | foundation 35, standard 187, stretch 30 |
+| Sketch to solve | 15 |
 
 ---
 

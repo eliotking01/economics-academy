@@ -1,0 +1,212 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.10",
+  "slug": "1-5-10-market-structure-efficiency-resource-allocation",
+  "title": "Market Structure, Static Efficiency, Dynamic Efficiency and Resource Allocation",
+  "shortTitle": "Market Structure and Efficiency",
+  "pageTitle": "Types of Efficiency Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on efficiency for AQA A-Level Economics: allocative, productive, dynamic and X-inefficiency across market structures.",
+  "intro": "Eight original multiple-choice questions on allocative, productive, dynamic and X-inefficiency and how they apply across market structures, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on allocative, productive, dynamic and X-inefficiency across market structures, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-10-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Allocative efficiency is achieved at the level of output where",
+      "options": {
+        "A": "Average cost equals average revenue.",
+        "B": "Average revenue equals marginal cost.",
+        "C": "Marginal cost equals average cost.",
+        "D": "Marginal cost equals marginal revenue."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Allocative efficiency</strong> occurs where <strong>AR = MC</strong>, or equivalently where price equals marginal cost. The logic is that price measures how much consumers value the last unit and marginal cost measures the resources used to make it. When the two are equal, the right quantity is being produced and society's welfare is maximised — no reallocation could make anyone better off without making someone worse off.",
+        "distractors": {
+          "A": "AC = AR is the break-even condition, where the firm earns exactly normal profit. It concerns profitability rather than whether the right quantity is produced.",
+          "C": "MC = AC identifies the minimum of the average cost curve, which is <strong>productive</strong> efficiency.",
+          "D": "MC = MR is the <strong>profit-maximising</strong> rule. A profit maximiser is only allocatively efficient by coincidence — under perfect competition, where AR and MR are the same line."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm is productively efficient when it produces at the output where",
+      "options": {
+        "A": "Average revenue equals marginal cost.",
+        "B": "Marginal revenue equals zero.",
+        "C": "Average cost is at its minimum.",
+        "D": "Supernormal profit is at its maximum."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Productive efficiency</strong> means producing at the <strong>lowest possible average cost</strong> — squeezing the maximum output from the resources used. On a diagram this is the bottom of the average cost curve, which is also the point where <strong>MC = AC</strong>, since marginal cost cuts average cost at its minimum. No resources are being wasted at that output.",
+        "distractors": {
+          "A": "AR = MC is <strong>allocative</strong> efficiency, which concerns producing the right <em>quantity</em> rather than producing at the lowest cost.",
+          "B": "MR = 0 is the revenue-maximising output. It says nothing about the level of costs.",
+          "D": "Maximum profit occurs where MC = MR, which is generally a different output from minimum average cost. A very profitable firm can still be productively inefficient."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes three situations.<br />Using Table 1, which one of the following correctly identifies the type of efficiency or inefficiency in each case?",
+      "table": {
+        "caption": "Table 1: Three situations in different firms",
+        "head": [
+          "Situation",
+          "Description"
+        ],
+        "rows": [
+          [
+            "1",
+            "A firm produces at the lowest point of its average cost curve"
+          ],
+          [
+            "2",
+            "A firm reinvests supernormal profit in research and development"
+          ],
+          [
+            "3",
+            "A firm faces no competition and its average costs drift upwards"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 is productive efficiency, 2 is dynamic efficiency, 3 is X-inefficiency.",
+        "B": "1 is productive efficiency, 2 is X-inefficiency, 3 is dynamic efficiency.",
+        "C": "1 is allocative efficiency, 2 is dynamic efficiency, 3 is X-inefficiency.",
+        "D": "1 is allocative efficiency, 2 is productive efficiency, 3 is dynamic efficiency."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Take each in turn.<br /><strong>Situation 1:</strong> producing at minimum average cost is <strong>productive efficiency</strong>.<br /><strong>Situation 2:</strong> using supernormal profit to fund research and development, improving products and processes over time, is <strong>dynamic efficiency</strong>.<br /><strong>Situation 3:</strong> costs rising because there is no competitive pressure to control them is <strong>X-inefficiency</strong>.",
+        "distractors": {
+          "B": "This swaps situations 2 and 3. Investing in R&amp;D is a positive, forward-looking use of profit, whereas X-inefficiency is organisational slack caused by an absence of pressure.",
+          "C": "Situation 1 concerns costs rather than quantity, so it is productive rather than allocative efficiency. Allocative efficiency would require price to equal marginal cost.",
+          "D": "Only situation 3's label is even close, and it is wrong too. Rising costs from a lack of competition is inefficiency, not dynamic efficiency."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Dynamic efficiency is most likely to be achieved in a market where firms",
+      "options": {
+        "A": "Are unable to earn more than normal profit in the long run.",
+        "B": "Earn supernormal profit that can be reinvested in innovation.",
+        "C": "Face no competitive pressure to control their costs.",
+        "D": "Produce at the minimum point of their average cost curves."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Dynamic efficiency</strong> is improvement over <em>time</em> — better products, better processes, falling costs — and it has to be paid for. Sustained <strong>supernormal profit</strong> provides both the funds for research and development and the confidence that the returns can be captured. This is the strongest economic argument in favour of allowing some market power to persist.",
+        "distractors": {
+          "A": "A firm earning only normal profit has no surplus to invest, which is the standard criticism of perfect competition: it is statically efficient but may be dynamically weak.",
+          "C": "An absence of competitive pressure produces <strong>X-inefficiency</strong>, not innovation. Profit provides the means to innovate; competition supplies much of the motive.",
+          "D": "Minimum average cost is <strong>productive</strong> efficiency, a snapshot at one point in time. Dynamic efficiency is about the cost curve <em>shifting downwards</em> over the years."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Static efficiency is best described as a situation in which",
+      "options": {
+        "A": "Both allocative and productive efficiency hold at once.",
+        "B": "Costs fall steadily over a long period of time.",
+        "C": "Firms invest a fixed share of their profits in research each year.",
+        "D": "Neither the price nor the quantity produced changes over time."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Static efficiency</strong> is efficiency at a <strong>point in time</strong>: resources are both allocated to the right uses and used at the lowest possible cost, so it requires <strong>allocative and productive efficiency together</strong>. It is contrasted with <strong>dynamic</strong> efficiency, which is about improvement over time — and there can be a genuine trade-off, since the supernormal profit that funds innovation is itself a sign of static inefficiency.",
+        "distractors": {
+          "B": "Costs falling over time is <strong>dynamic</strong> efficiency, the opposite member of the pair.",
+          "C": "Spending on research is an input to dynamic efficiency. Static efficiency says nothing about research at all.",
+          "D": "Prices and quantities holding still is stability, not efficiency. A market could be perfectly stable and thoroughly inefficient."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In long-run equilibrium, a perfectly competitive market is usually judged to be",
+      "options": {
+        "A": "Dynamically efficient but not statically efficient.",
+        "B": "Neither statically nor dynamically efficient.",
+        "C": "Statically efficient but perhaps not dynamically.",
+        "D": "Statically and dynamically efficient at the same time."
+      },
+      "answer": "C",
+      "model": {
+        "working": "In long-run equilibrium a perfectly competitive firm produces where <strong>P = MC</strong> (allocative efficiency) and at the <strong>minimum of its average cost curve</strong> (productive efficiency), so it achieves <strong>static efficiency</strong> on both counts.<br />Its weakness is <strong>dynamic</strong>. Free entry competes profit down to the normal level, leaving no surplus to fund research and development, and any innovation would be copied immediately by rivals. This is the trade-off at the heart of the topic — and the reason monopoly is not dismissed out of hand.",
+        "distractors": {
+          "A": "This reverses the position exactly. Static efficiency is perfect competition's strength; dynamic efficiency is its doubt.",
+          "B": "Static efficiency is achieved on both counts in long-run equilibrium, which is why perfect competition serves as the efficiency benchmark.",
+          "D": "Dynamic efficiency is precisely what cannot be taken for granted, because normal profit leaves nothing over to invest."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A profit-maximising monopolist charges a price above marginal cost. It follows that the monopolist is",
+      "options": {
+        "A": "Allocatively efficient, because it maximises its profit.",
+        "B": "Allocatively inefficient, because too little output is produced.",
+        "C": "Productively efficient, because it operates on a large scale.",
+        "D": "X-efficient, because it faces no competitive pressure."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Where <strong>P &gt; MC</strong>, the value consumers place on another unit exceeds the cost of the resources needed to produce it, so society would gain from more being made. The monopolist restricts output to keep the price up, which means <strong>too little is produced</strong> — the definition of <strong>allocative inefficiency</strong>. The gap between the monopoly output and the allocatively efficient one is the welfare loss.",
+        "distractors": {
+          "A": "Maximising profit and achieving allocative efficiency are different things, and they only coincide under perfect competition, where AR and MR are the same line.",
+          "C": "Scale does not guarantee productive efficiency. A monopolist maximising profit produces where MC = MR, which is not usually the minimum of its average cost curve.",
+          "D": "An absence of competitive pressure causes <strong>X-inefficiency</strong> — costs drifting upwards through organisational slack — rather than X-efficiency."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-10-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A regulator is deciding whether to break up a monopoly that invests heavily in research and development. The strongest argument for leaving the firm intact is that",
+      "options": {
+        "A": "Breaking it up would guarantee higher prices for consumers.",
+        "B": "A monopoly always produces at the minimum of its average cost curve.",
+        "C": "Static efficiency matters less to consumers than market share does.",
+        "D": "The static gains may be outweighed by lost dynamic efficiency."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Breaking the monopoly up would deliver <strong>static</strong> gains: a lower price, a larger output, and less allocative inefficiency now. But the supernormal profit that would be competed away is what currently funds the firm's research, so the price of those gains may be slower innovation and higher costs in future. Weighing a certain gain today against an uncertain but potentially larger gain tomorrow is the <strong>static-dynamic trade-off</strong>, and it is exactly the judgement a regulator has to make.",
+        "distractors": {
+          "A": "Breaking up a monopoly normally <em>lowers</em> prices, since competition removes the ability to restrict output. That is an argument for intervention, not against it.",
+          "B": "Monopolies frequently do not reach minimum average cost, and X-inefficiency means their costs may be higher than necessary. The word 'always' makes this indefensible.",
+          "C": "Static efficiency concerns prices and output, which matter to consumers a great deal. Market share is a feature of market structure, not a consumer benefit."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.2",
+  "slug": "1-5-2-the-objectives-of-firms",
+  "title": "The Objectives of Firms",
+  "shortTitle": "The Objectives of Firms",
+  "pageTitle": "Objectives of Firms Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the objectives of firms for AQA A-Level Economics: profit and revenue maximisation, satisficing and principal-agent.",
+  "intro": "Seven original multiple-choice questions on the objectives of firms, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Seven original multiple-choice questions on profit, revenue and sales maximisation, satisficing and the divorce of ownership from control, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm pursuing sales revenue maximisation will produce at the output where",
+      "options": {
+        "A": "Average cost equals average revenue.",
+        "B": "Average cost is at its minimum.",
+        "C": "Marginal cost equals marginal revenue.",
+        "D": "Marginal revenue equals zero."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Total revenue rises while marginal revenue is positive and falls once it turns negative, so revenue peaks where <strong>MR = 0</strong>. It is worth holding the three rules together, because questions frequently test whether you can separate them: profit maximisation at MC = MR, revenue maximisation at MR = 0, and sales maximisation at AC = AR.",
+        "distractors": {
+          "A": "AC = AR is the <strong>sales maximisation</strong> rule — the largest output at which the firm still breaks even, earning normal profit but nothing more.",
+          "B": "Minimum average cost is productive efficiency. It is a cost condition and says nothing about revenue.",
+          "C": "MC = MR is <strong>profit</strong> maximisation, which occurs at a lower output than revenue maximisation because it takes the cost of extra units into account."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm pursuing sales maximisation produces at the output where average cost equals average revenue. At that output the firm earns",
+      "options": {
+        "A": "Its maximum possible profit.",
+        "B": "Normal profit only.",
+        "C": "Supernormal profit.",
+        "D": "The largest possible loss it can sustain."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Where <strong>AC = AR</strong>, revenue per unit exactly equals cost per unit, so total revenue equals total cost. Since normal profit is already counted inside cost, the firm is breaking even in economic terms — earning <strong>normal profit and nothing above it</strong>. That is the most it can sell without actually losing money, which is why sales maximisers push output to this point, often to build market share or to deter entrants through limit pricing.",
+        "distractors": {
+          "A": "Maximum profit occurs at MC = MR, at a considerably lower output. Sales maximisation deliberately sacrifices profit for volume.",
+          "C": "Supernormal profit requires AR to be <em>above</em> AC. Here they are equal.",
+          "D": "The firm is not making a loss at all. AC = AR is precisely the break-even point, which is the limit beyond which losses would begin."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a large public limited company, shareholders employ professional managers to run the business day to day. The economic term for the resulting relationship is",
+      "options": {
+        "A": "Asymmetric information between competing firms.",
+        "B": "Creative destruction.",
+        "C": "The divorce of ownership from control.",
+        "D": "The law of diminishing returns."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The people who <em>own</em> the firm are its shareholders; the people who <em>control</em> it day to day are the managers they employ. That separation is the <strong>divorce of ownership from control</strong>. It matters because the two groups may want different things: shareholders want profit and a rising share price, while managers may prefer growth, prestige or an easier life.",
+        "distractors": {
+          "A": "There is an information problem here, but it is between the shareholders and their own managers rather than between rival firms — the principal-agent problem.",
+          "B": "Creative destruction describes new innovations displacing older products and firms. It concerns competition between businesses, not their internal governance.",
+          "D": "Diminishing returns is a short-run production concept about adding a variable factor to a fixed one."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The managers of a company pursue steady growth and job security rather than the highest possible profit, and shareholders cannot easily observe their day-to-day decisions. This is best described as",
+      "options": {
+        "A": "A principal-agent problem caused by asymmetric information.",
+        "B": "An external economy of scale.",
+        "C": "Corporate social responsibility.",
+        "D": "Price discrimination between the two groups of shareholders."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Shareholders are the <strong>principals</strong> and managers the <strong>agents</strong> acting on their behalf. The agents have far better information about what is really happening inside the business than the principals do, so they can pursue their own objectives without being found out. That combination — divergent interests plus <strong>asymmetric information</strong> — is the principal-agent problem, and it is the main reason firms may not behave as pure profit maximisers.",
+        "distractors": {
+          "B": "External economies of scale are cost savings arising from the growth of a whole industry. Nothing here concerns costs or industry size.",
+          "C": "Corporate social responsibility means pursuing social or environmental goals alongside profit. The managers here are pursuing their own convenience, not a wider social aim.",
+          "D": "Price discrimination is charging different consumers different prices for the same product. It has nothing to do with the relationship between owners and managers."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm aims to achieve profits that are merely acceptable to its shareholders rather than the maximum obtainable. This behaviour is known as",
+      "options": {
+        "A": "Limit pricing.",
+        "B": "Profit maximisation.",
+        "C": "Revenue maximisation.",
+        "D": "Satisficing."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Satisficing</strong> means aiming for an outcome that is good enough to keep the various stakeholders content rather than optimising any one of them. Managers may satisfice because they have to balance shareholders wanting dividends, workers wanting pay, and customers wanting low prices — and because doing so is easier than the relentless effort profit maximisation would demand.",
+        "distractors": {
+          "A": "Limit pricing is setting price low enough to deter new firms from entering. It is a pricing strategy rather than a description of how ambitious the firm's objective is.",
+          "B": "Profit maximisation is exactly what the firm is <em>not</em> doing. It would require producing where MC = MR.",
+          "C": "Revenue maximisation is an alternative objective in its own right, pursued at MR = 0. Satisficing is about settling for adequate performance rather than maximising anything."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm switches from profit maximisation to revenue maximisation. All other things being equal, the most likely consequences are",
+      "options": {
+        "A": "A higher output and a higher price.",
+        "B": "A higher output and a lower price.",
+        "C": "A lower output and a higher price.",
+        "D": "A lower output and a lower price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit maximisation stops at MC = MR, while revenue maximisation continues to MR = 0. Since marginal revenue falls as output rises, MR = 0 always lies at a <strong>higher output</strong> than MC = MR. To sell that extra output the firm must move down its demand curve, so the <strong>price falls</strong>. Consumers gain in the short term; profit is lower than it could have been.",
+        "distractors": {
+          "A": "Selling more requires a lower price, not a higher one — the firm's demand curve slopes downwards.",
+          "C": "Revenue maximisation expands output beyond the profit-maximising level. Restricting output would be the behaviour of a firm with more market power, not a revenue maximiser.",
+          "D": "The price does fall, but output rises rather than falls. Producing less would reduce revenue, which is the opposite of the objective."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A supermarket chain deliberately prices below the level that would maximise its profits, in order to make entry unattractive to potential rivals. This is best described as",
+      "options": {
+        "A": "Corporate social responsibility, because consumers benefit.",
+        "B": "Limit pricing, a form of sales maximisation.",
+        "C": "Price discrimination, because different prices are charged.",
+        "D": "Satisficing, because profit is not being maximised."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Limit pricing</strong> means holding price down deliberately so that the profit available to a newcomer looks too small to be worth the entry cost. The firm accepts lower profit now to protect its market position later, and the low price and high output associated with it are a form of <strong>sales maximisation</strong>. It is a strategic decision, not an absence of ambition.",
+        "distractors": {
+          "A": "Consumers do benefit, but the motive is defensive rather than social. CSR means pursuing genuine social or environmental objectives, not deterring competitors.",
+          "C": "Price discrimination means charging <em>different</em> consumers different prices for the same product. Here one low price is charged to everyone.",
+          "D": "Satisficing means settling for adequate profit because maximising is not worth the effort. This firm is pursuing a clear long-run strategy, which is a different thing from a lack of ambition."
+        }
+      }
+    }
+  ]
+}
