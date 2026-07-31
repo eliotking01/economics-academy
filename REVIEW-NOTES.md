@@ -101,7 +101,7 @@ here on the author's explicit instruction — the **only** wording change made i
 entire pass, and a single word: "five" to "three". The sentence now matches the AQA
 twin exactly. The held concentration-ratio component was then applied.
 
-**N6 — a formula was removed with an Exam Preparation section, and exists nowhere else.**
+**N6 — a formula was removed with an Exam Preparation section. DECIDED: leave it out.**
 
 `edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html` was the one
 page of the 87 whose Exam Preparation section contained a `formula-box` as well as
@@ -117,11 +117,16 @@ contained a `formula-box`, and recorded it in the removal table, but did not fol
 through on the fact that a *method* rather than a checklist item would go with it.
 Found by the Phase 3 formula-integrity check.
 
-**My recommendation: leave it out.** Edexcel mark schemes calculate percentage
-change from the original value, not the midpoint, and the PED worked example now on
-that page uses the original-value method. Restoring the midpoint formula would put
-two conflicting methods on one page. But it is your content and your call — say the
-word and I will reinstate it as a `formula-box` in the PED section.
+**Decision: leave it out** (author, 31 Jul 2026). Edexcel mark schemes calculate
+percentage change from the original value, not the midpoint, and the PED worked
+example now on that page uses the original-value method. On that example's own
+figures the two methods disagree — original-value gives PED −0.50, midpoint gives
+−0.58 — so restoring the formula would put two conflicting answers on one page.
+The page is now aligned with the exam board and the removed formula was the odd one
+out.
+
+No code change. Recorded here so a future session does not "restore" it as an
+oversight: its absence is deliberate.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
