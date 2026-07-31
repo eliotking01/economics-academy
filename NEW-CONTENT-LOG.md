@@ -112,3 +112,25 @@ shares 61 / 14 / 26 / −1%, matching the page's own "around 60%", "around 14%" 
 `2-1-3` is the one component in this pass that introduces a formula rather than
 demonstrating one the page already states — the page defines the Labour Force but
 gives no rate formula. Flagged in the plan and approved on that basis.
+
+## Batch 5 — Edexcel Theme 3
+
+5 of 6 planned components applied across 5 of 20 pages. 15 pages received nothing.
+
+**No new prose.** Every component is an existing AQA component reused verbatim and
+hash-verified identical. Theme 3 maps almost one-to-one onto AQA micro 1.4–1.6.
+
+| File | Line | Type | Sits under | Reused from |
+| --- | ---: | --- | --- | --- |
+| `edexcel-theme-3/3-3-1-revenue.html` | 264 | worked example | Revenue in Imperfect Competition | AQA 1-4-6 |
+| `edexcel-theme-3/3-3-2-costs.html` | 210 | worked example | Key Definitions | AQA 1-4-4 |
+| `edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html` | 358 | exam tip | Diseconomies of Scale | AQA 1-4-5 |
+| `edexcel-theme-3/3-3-4-normal-profits-supernormal-profits-losses.html` | 194 | exam tip | Key Definitions | AQA 1-4-7 |
+| `edexcel-theme-3/3-5-1-demand-for-labour.html` | 228 | worked example | The Marginal Revenue Product Theory | AQA 1-6-1 |
+
+**Held back:** the concentration-ratio worked example for
+`edexcel-theme-3/3-4-4-oligopoly.html`. That page still describes a 3-firm ratio as
+covering "the top five firms" (flag N5) — the error corrected on the AQA twin but
+not here. Placing a correct 3-firm calculation directly beneath an incorrect
+description of the same thing would make the page contradict itself, so the
+component waits on the one-word fix.
