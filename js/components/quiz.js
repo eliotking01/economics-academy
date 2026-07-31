@@ -104,6 +104,37 @@
     });
   }
 
+  /* Unit accordion on a board index. Same behaviour as the inline script on
+     the notes board indexes: the whole card is clickable, the heading is a
+     real <button> so it works from the keyboard, and clicks originating on
+     the button are ignored by the card handler so one tap does not toggle
+     twice. */
+
+  Array.prototype.forEach.call(page.querySelectorAll(".topic-item"), function (item) {
+    var button = item.querySelector(".topic-toggle");
+    var panel = item.querySelector(".subtopic-list");
+    var icon = item.querySelector(".toggle-icon");
+    if (!button || !panel) return;
+
+    function toggle() {
+      var isOpen = panel.style.display === "block";
+      panel.style.display = isOpen ? "none" : "block";
+      button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      if (icon) icon.textContent = isOpen ? "+" : "-";
+    }
+
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      toggle();
+    });
+
+    item.addEventListener("click", function (event) {
+      // Let a topic link navigate without collapsing the panel under it.
+      if (event.target.closest("a")) return;
+      toggle();
+    });
+  });
+
   var list = page.querySelector(".quiz-list");
   var items = list ? Array.prototype.slice.call(list.querySelectorAll(".quiz-item")) : [];
   if (!items.length) return;

@@ -77,16 +77,186 @@ BOARDS = [
     ("aqa-a2-macro", "AQA Macroeconomics", "The National and International Economy"),
 ]
 BOARD_ORDER = {d: i for i, (d, _, _) in enumerate(BOARDS)}
+
+# How revision-notes/index.html groups the boards on its hub: an exam-board
+# section per board, split into year groups.
+HUB_SECTIONS = [
+    (
+        "Edexcel Economics",
+        [
+            ("Year 1 (AS Level)", ["edexcel-theme-1", "edexcel-theme-2"], ""),
+            ("Year 2 (A Level)", ["edexcel-theme-3", "edexcel-theme-4"], "alt "),
+        ],
+    ),
+    (
+        "AQA Economics",
+        [
+            ("Year 1 &amp; 2 (A Level)", ["aqa-a2-micro", "aqa-a2-macro"], "alt "),
+        ],
+    ),
+]
+
+# Button labels on the hub, matching the wording on revision-notes/index.html.
+HUB_LABELS = {
+    "edexcel-theme-1": "Theme 1: Introduction to Markets and Market Failure",
+    "edexcel-theme-2": "Theme 2: The UK Economy",
+    "edexcel-theme-3": "Theme 3: Business Behaviour and the Labour Market",
+    "edexcel-theme-4": "Theme 4: A Global Perspective",
+    "aqa-a2-micro": "Micro: Individuals, Firms, Markets and Market Failure",
+    "aqa-a2-macro": "Macro: The National and International Economy",
+}
 BOARD_BLURB = {d: b for d, _, b in BOARDS}
 
-# Font Awesome 5 solid, already bundled in css/fontawesome-all.min.css.
-BOARD_ICONS = {
-    "edexcel-theme-1": "fa-balance-scale",
-    "edexcel-theme-2": "fa-chart-line",
-    "edexcel-theme-3": "fa-industry",
-    "edexcel-theme-4": "fa-globe-europe",
-    "aqa-a2-micro": "fa-store",
-    "aqa-a2-macro": "fa-landmark",
+# Unit groupings, lifted verbatim from the notes board index pages so the
+# questions index mirrors them exactly. Keyed by (boardDir, unit code),
+# where the unit code is a spec code's first two components: 1.3.2 -> 1.3.
+UNITS = {
+    # edexcel-theme-1
+    ("edexcel-theme-1", "1.1"): (
+        "Nature of Economics",
+        "Economics as a social science, positive and normative statements, the economic problem, production possibility frontiers",
+    ),
+    ("edexcel-theme-1", "1.2"): (
+        "How Markets Work",
+        "Rational decision making, demand, price elasticity, supply, price determination, consumer surplus",
+    ),
+    ("edexcel-theme-1", "1.3"): (
+        "Market Failure",
+        "Types of market failure, externalities, public goods, information gaps",
+    ),
+    ("edexcel-theme-1", "1.4"): (
+        "Government Intervention",
+        "Government intervention in markets, government failure",
+    ),
+    # edexcel-theme-2
+    ("edexcel-theme-2", "2.1"): (
+        "Measures of Economic Performance",
+        "Economic growth, inflation, employment/unemployment, balance of payments",
+    ),
+    ("edexcel-theme-2", "2.2"): (
+        "Aggregate Demand (AD)",
+        "Components of AD, AD curve, shifts in AD",
+    ),
+    ("edexcel-theme-2", "2.3"): (
+        "Aggregate Supply",
+        "Short-run AS, long-run AS, factors influencing AS",
+    ),
+    ("edexcel-theme-2", "2.4"): (
+        "National Income",
+        "Circular flow of income, equilibrium, multiplier effect",
+    ),
+    ("edexcel-theme-2", "2.5"): (
+        "Economic Growth",
+        "Causes, consequences, sustainability",
+    ),
+    ("edexcel-theme-2", "2.6"): (
+        "Macroeconomic Objectives and Policies",
+        "Policy conflicts, demand-side policies, supply-side policies",
+    ),
+    # edexcel-theme-3
+    ("edexcel-theme-3", "3.1"): (
+        "Business Growth",
+        "Forms of growth, mergers and takeovers, constraints on growth",
+    ),
+    ("edexcel-theme-3", "3.2"): (
+        "Business Objectives",
+        "Profit maximisation, revenue maximisation, other objectives",
+    ),
+    ("edexcel-theme-3", "3.3"): (
+        "Revenue, Costs and Profits",
+        "Revenue, costs, economies of scale, normal/supernormal profits",
+    ),
+    ("edexcel-theme-3", "3.4"): (
+        "Market Structures",
+        "Perfect competition, monopolistic competition, oligopoly, monopoly",
+    ),
+    ("edexcel-theme-3", "3.5"): (
+        "Labour Market",
+        "Demand and supply of labour, wage determination, government intervention",
+    ),
+    ("edexcel-theme-3", "3.6"): (
+        "Government Intervention",
+        "Regulation, competition policy, public ownership, privatisation",
+    ),
+    # edexcel-theme-4
+    ("edexcel-theme-4", "4.1"): (
+        "International Economics",
+        "Globalisation, trade, terms of trade, trading blocs, WTO",
+    ),
+    ("edexcel-theme-4", "4.2"): (
+        "Poverty and Inequality",
+        "Absolute/relative poverty, inequality measures, policies",
+    ),
+    ("edexcel-theme-4", "4.3"): (
+        "Emerging and Developing Economies",
+        "Characteristics, growth strategies, role of financial sector",
+    ),
+    ("edexcel-theme-4", "4.4"): (
+        "The Financial Sector",
+        "Role of financial markets, market failure, regulation",
+    ),
+    ("edexcel-theme-4", "4.5"): (
+        "Role of the State in the Macroeconomy",
+        "Public expenditure, taxation, macroeconomic policies",
+    ),
+    # aqa-a2-micro
+    ("aqa-a2-micro", "1.1"): (
+        "Economic Methodology and the Economic Problem",
+        "Positive vs normative, economic models, assumptions",
+    ),
+    ("aqa-a2-micro", "1.2"): (
+        "Individual Economic Decision Making",
+        "Rationality, behavioural economics, demand theory",
+    ),
+    ("aqa-a2-micro", "1.3"): (
+        "Price Determination in a Competitive Market",
+        "Demand, supply, equilibrium, elasticities",
+    ),
+    ("aqa-a2-micro", "1.4"): (
+        "Production, Costs and Revenue",
+        "Costs, revenues, economies of scale, efficiency",
+    ),
+    ("aqa-a2-micro", "1.5"): (
+        "Perfect Competition, Imperfectly Competitive Markets and Monopoly",
+        "Perfect competition, monopoly, oligopoly, contestability",
+    ),
+    ("aqa-a2-micro", "1.6"): (
+        "Labour Market",
+        "Demand, supply, wage determination, discrimination",
+    ),
+    ("aqa-a2-micro", "1.7"): (
+        "The Distribution of Income and Wealth: Poverty and Inequality",
+        "Regulation, competition policy, public ownership",
+    ),
+    ("aqa-a2-micro", "1.8"): (
+        "The Market Mechanism, Market Failure and Government Intervention in Markets",
+        "Regulation, competition policy, public ownership",
+    ),
+    # aqa-a2-macro
+    ("aqa-a2-macro", "2.1"): (
+        "The Measurement of Macroeconomic Performance",
+        "Growth, inflation, unemployment, balance of payments",
+    ),
+    ("aqa-a2-macro", "2.2"): (
+        "How the Macroeconomy Works",
+        "AD components, AS models, macroeconomic equilibrium",
+    ),
+    ("aqa-a2-macro", "2.3"): (
+        "Economic Performance",
+        "Fiscal, monetary, supply-side policies",
+    ),
+    ("aqa-a2-macro", "2.4"): (
+        "Financial Markets and Monetary Policy",
+        "Globalisation, trade, development",
+    ),
+    ("aqa-a2-macro", "2.5"): (
+        "Fiscal Policy and Supply-Side Policies",
+        "Money, banking, financial sector",
+    ),
+    ("aqa-a2-macro", "2.6"): (
+        "The International Economy",
+        "Taxation, public spending, fiscal policy",
+    ),
 }
 
 # Inline markup an author may use inside a fragment. Anything else is a bug
@@ -113,6 +283,26 @@ US_SPELLINGS = [
 US_SPELLING_RE = re.compile(r"\b(" + "|".join(US_SPELLINGS) + r")\b", re.IGNORECASE)
 
 ID_RE = re.compile(r"^(aqa|edexcel)-\d+(?:-\d+)*-q\d+$")
+
+
+NOSCRIPT_ACCORDION = """
+    <noscript>
+      <!-- The accordion collapses its panels in CSS and quiz.js reopens them.
+           With scripting off nothing could open them, so the topic links would
+           be unreachable. Show every panel instead, and drop the +/- affordance
+           that would then be lying. -->
+      <style>
+        .practice-questions-page .subtopic-list {
+          display: block;
+        }
+        .practice-questions-page .toggle-icon {
+          display: none;
+        }
+        .practice-questions-page .topic-item {
+          cursor: auto;
+        }
+      </style>
+    </noscript>"""
 
 SITEMAP_OPEN = "  <!-- Practice Questions -->"
 SITEMAP_CLOSE = "  <!-- /Practice Questions -->"
@@ -631,7 +821,7 @@ def render_page(topic):
 
 def shell(
     *, title, desc, url, css, jsonld, breadcrumb, body, scripts="",
-    og_type="website",
+    og_type="website", head_extra="",
 ):
     """The common page skeleton. Same head order as a notes topic page."""
     return f"""<!doctype html>
@@ -684,7 +874,7 @@ def shell(
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/css/main.css" />
 
-    <link rel="stylesheet" href="{css}" />
+    <link rel="stylesheet" href="{css}" />{head_extra}
 {breadcrumb}
   </head>
   <body class="is-preload">
@@ -728,72 +918,68 @@ def breadcrumb_jsonld(trail):
     )
 
 
-def render_topic_card(topic):
-    count = len(topic["questions"])
-    return f"""              <a class="pq-card pq-card--topic" href="{page_url(topic)}">
-                <span class="pq-card-code">{topic['spec']}</span>
-                <h3>{topic['shortTitle']}</h3>
-                <p class="pq-card-meta">
-                  <span>{count} questions</span>
-                  <span
-                    class="pq-card-last"
-                    data-quiz-last="{topic['board']}:{topic['spec']}"
-                  ></span>
-                </p>
-              </a>"""
+def unit_of(spec):
+    """1.3.2 -> 1.3"""
+    return ".".join(spec.split(".")[:2])
 
 
-def render_board_card(board_dir, topics):
-    name = next(n for d, n, _ in BOARDS if d == board_dir)
-    blurb = BOARD_BLURB[board_dir]
-    count = sum(len(t["questions"]) for t in topics)
-    return f"""              <a class="pq-card" href="/practice-questions/{board_dir}/index.html">
-                <span class="pq-badge">Free</span>
-                <span
-                  class="icon solid {BOARD_ICONS[board_dir]} pq-card-icon"
-                  aria-hidden="true"
-                ></span>
-                <h3>{name}</h3>
-                <p>{blurb}</p>
-                <p class="pq-card-meta">
-                  <span>{len(topics)} {'topic' if len(topics) == 1 else 'topics'}</span>
-                  <span>{count} questions</span>
-                </p>
-              </a>"""
-
-
-def grid_modifier(n):
-    """Few-card grids centre rather than strand cards in the first column."""
-    return f" pq-grid--n{n}" if n in (1, 2) else ""
-
-
-def render_stat_bar(stats, label):
-    cells = "\n".join(
-        f"""              <div class="pq-stat">
-                <span class="pq-stat-number">{value}</span>
-                <span class="pq-stat-label">{caption}</span>
-              </div>"""
-        for value, caption in stats
-    )
-    return f"""          <section class="pq-stats" aria-label="{label}">
-            <div class="pq-stats-grid">
-{cells}
-            </div>
-          </section>"""
-
-
-def render_cta(heading, text, actions):
+def render_cta_strip(text, actions):
+    """The conversion strip from revision-notes/index.html."""
     buttons = "\n".join(
-        f'              <a href="{href}" class="button{cls}">{text_}</a>'
-        for href, cls, text_ in actions
+        f'              <a href="{href}" class="button{cls}">{label}</a>'
+        for href, cls, label in actions
     )
-    return f"""          <section class="pq-cta">
-            <h2>{heading}</h2>
+    return f"""          <section class="pq-cta-strip">
             <p>{text}</p>
             <div class="pq-cta-actions">
 {buttons}
             </div>
           </section>"""
+
+
+def render_unit(board_dir, unit, topics, index):
+    """One collapsible unit on a board index, matching the notes accordion."""
+    title, blurb = UNITS.get(
+        (board_dir, unit), (f"Unit {unit}", "")
+    )
+    count = sum(len(t["questions"]) for t in topics)
+    items = "\n".join(
+        f"""                  <li class="subtopic-item">
+                    <a href="{page_url(t)}">
+                      <span class="subtopic-name"
+                        >{t['spec']} {t['shortTitle']}</span
+                      >
+                      <span class="subtopic-meta"
+                        >{len(t['questions'])} questions</span
+                      >
+                      <span
+                        class="subtopic-last"
+                        data-quiz-last="{t['board']}:{t['spec']}"
+                      ></span>
+                    </a>
+                  </li>"""
+        for t in sorted(topics, key=lambda t: spec_key(t["spec"]))
+    )
+    return f"""              <li class="topic-item">
+                <div class="topic-header">
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-{index}"
+                    >
+                      {unit} {title}
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
+                </div>
+                <p>{blurb} &middot; {count} questions</p>
+
+                <ul class="subtopic-list" id="subtopic-{index}">
+{items}
+                </ul>
+              </li>"""
 
 
 def render_board_index(board_dir, topics):
@@ -812,12 +998,15 @@ def render_board_index(board_dir, topics):
         f"{count} questions across {len(topics)} {topic_word}, each with a worked answer."
     )[:164]
 
-    cards = "\n".join(
-        render_topic_card(t) for t in sorted(topics, key=lambda t: spec_key(t["spec"]))
+    by_unit = {}
+    for t in topics:
+        by_unit.setdefault(unit_of(t["spec"]), []).append(t)
+    units = "\n".join(
+        render_unit(board_dir, u, by_unit[u], i)
+        for i, u in enumerate(sorted(by_unit, key=spec_key), start=1)
     )
-    first = sorted(topics, key=lambda t: spec_key(t["spec"]))[0]
 
-    body = f"""      <main id="main" class="practice-questions-page">
+    body = f"""      <section id="main" class="practice-questions-page">
         <div class="container">
           <nav class="breadcrumb">
             <a href="/">Home</a>
@@ -827,61 +1016,39 @@ def render_board_index(board_dir, topics):
             <span>{name}</span>
           </nav>
 
-          <section class="pq-hero">
-            <h1 class="pq-hero-title">{name} Practice Questions</h1>
-            <p class="pq-hero-subhead">
-              Exam-style multiple-choice questions on {blurb.lower()}, written to
-              the style and difficulty of the real {label} papers. Every question
-              comes with a full worked answer explaining the right option and the
-              mistake behind each wrong one.
-            </p>
-            <ul class="pq-hero-actions">
-              <li>
-                <a href="{page_url(first)}" class="button large"
-                  >Start with {first['spec']} {first['shortTitle']}</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/revision-notes/{board_dir}/index.html"
-                  class="button alt large"
-                  >Read the Notes</a
-                >
-              </li>
-            </ul>
-            <p class="pq-hero-trust">
-              {len(topics)} {topic_word} &middot; {count} questions &middot; Free, no sign-up
-            </p>
-          </section>
-
-          <section>
+          <section class="pq-header">
             <header class="major">
-              <h2>Choose a Topic</h2>
+              <h1>{name} Practice Questions</h1>
+              <p>
+                Free exam-style multiple-choice questions covering
+                {blurb.lower()}, written to the style and difficulty of the real
+                {label} papers. Every question carries a full worked answer.
+                Click any unit to expand its topics.
+              </p>
             </header>
-            <div class="pq-grid pq-grid--topics{grid_modifier(len(topics))}">
-{cards}
-            </div>
           </section>
 
-{render_stat_bar([
-    (count, "Questions"),
-    (len(topics), topic_word.title()),
-    (label, "Exam Board"),
-    ("£0", "Cost to You"),
-], "What is on offer")}
+          <h2>Available Topics</h2>
+          <p class="pq-note">
+            Click any unit below to see its topics &middot; {count} questions across
+            {len(topics)} {topic_word}, free and with no sign-up.
+          </p>
 
-{render_cta(
-    "Stuck on a topic?",
-    "Questions show you where the gaps are. Fill them with one-to-one tutoring, "
-    "or send an essay for examiner-style marking.",
+          <ul class="topic-list">
+{units}
+          </ul>
+
+{render_cta_strip(
+    "<strong>Getting these wrong?</strong> Work through the topic with an expert "
+    "tutor, or send an essay for detailed examiner-style marking.",
     [
+        (f"/revision-notes/{board_dir}/index.html", " alt", "Read the Notes"),
         (papers_href, " alt", papers_label),
-        ("/marking.html", " alt", "Get Your Essays Marked"),
         ("/tutoring.html", "", "Book a Free Intro Call"),
     ],
 )}
         </div>
-      </main>"""
+      </section>"""
 
     return shell(
         title=title,
@@ -913,6 +1080,7 @@ def render_board_index(board_dir, topics):
         ),
         body=body,
         scripts='\n    <script src="/js/components/quiz.js" defer></script>',
+        head_extra=NOSCRIPT_ACCORDION,
     )
 
 
@@ -920,8 +1088,6 @@ def render_hub(by_board):
     total = sum(len(t["questions"]) for ts in by_board.values() for t in ts)
     topic_count = sum(len(ts) for ts in by_board.values())
     topic_word = "topic" if topic_count == 1 else "topics"
-    boards_live = [d for d, _, _ in BOARDS if by_board.get(d)]
-    board_count = len({d.split("-")[0] for d in boards_live})
     url = f"{SITE}/practice-questions/index.html"
 
     title = (
@@ -934,98 +1100,78 @@ def render_hub(by_board):
         f"full worked answer."
     )[:164]
 
-    cards = "\n".join(
-        render_board_card(d, by_board[d]) for d in boards_live
-    )
-    first_board = boards_live[0]
+    sections = []
+    for heading, groups in HUB_SECTIONS:
+        rows = []
+        for group_name, dirs, cls in groups:
+            live = [d for d in dirs if by_board.get(d)]
+            if not live:
+                continue
+            buttons = []
+            for d in live:
+                n = sum(len(t["questions"]) for t in by_board[d])
+                topics_n = len(by_board[d])
+                buttons.append(
+                    f"""                <a
+                  href="/practice-questions/{d}/index.html"
+                  class="button {cls}pq-board-button"
+                >
+                  {HUB_LABELS[d]}
+                  <span class="pq-board-count"
+                    >{topics_n} {'topic' if topics_n == 1 else 'topics'} &middot; {n} questions</span
+                  >
+                </a>"""
+                )
+            rows.append(
+                f"""            <div class="pq-board-group">
+              <h3>{group_name}</h3>
+              <div class="pq-board-buttons">
+{chr(10).join(buttons)}
+              </div>
+            </div>"""
+            )
+        if not rows:
+            continue
+        sections.append(
+            f"""          <div class="pq-board-section">
+            <header class="major">
+              <h2>{heading}</h2>
+            </header>
 
-    body = f"""      <main id="main" class="practice-questions-page">
+{chr(10).join(rows)}
+          </div>"""
+        )
+
+    body = f"""      <section id="main" class="practice-questions-page">
         <div class="container">
           <section class="pq-hero">
-            <h1 class="pq-hero-title">A-Level Economics Practice Questions</h1>
-            <p class="pq-hero-subhead">
-              Free exam-style multiple-choice questions for every topic we cover.
-              Answer one at a time for instant feedback, then read a full worked
-              answer that explains the right option and names the mistake behind
-              each wrong one.
+            <h1 class="pq-h1">Free A-Level Economics Practice Questions</h1>
+            <p class="pq-intro">
+              Exam-style multiple-choice questions for
+              <strong>Edexcel</strong> and <strong>AQA</strong>, written to the
+              style and difficulty of the real papers. Answer one at a time for
+              instant feedback, then read a full worked answer that explains the
+              correct option and names the mistake behind each wrong one.
             </p>
-            <ul class="pq-hero-actions">
-              <li>
-                <a
-                  href="/practice-questions/{first_board}/index.html"
-                  class="button large"
-                  >Start Practising</a
-                >
-              </li>
-              <li>
-                <a href="/revision-notes/index.html" class="button alt large"
-                  >Browse Free Notes</a
-                >
-              </li>
-            </ul>
-            <p class="pq-hero-trust">
-              {total} questions &middot; {topic_count} {topic_word} &middot; No sign-up, no paywall
+            <p class="pq-hero-meta">
+              {total} questions &middot; {topic_count} {topic_word} &middot; free, no sign-up
             </p>
           </section>
 
-          <section>
-            <header class="major">
-              <h2>Choose Your Exam Board</h2>
-            </header>
-            <div class="pq-grid{grid_modifier(len(boards_live))}">
-{cards}
-            </div>
-          </section>
+{chr(10).join(sections)}
 
-{render_stat_bar([
-    (total, "Free Questions"),
-    (topic_count, topic_word.title()),
-    (board_count, "Exam Board" if board_count == 1 else "Exam Boards"),
-    ("£0", "Cost to You"),
-], "What is on offer")}
-
-          <section>
-            <header class="major">
-              <h2>How It Works</h2>
-            </header>
-            <ol class="pq-steps">
-              <li>
-                <h3>Read the notes</h3>
-                <p>
-                  Work through the topic on our free revision notes first, so you
-                  are testing recall rather than guessing.
-                </p>
-              </li>
-              <li>
-                <h3>Answer the questions</h3>
-                <p>
-                  Pick an option and find out straight away whether you were right.
-                  Your score builds as you go.
-                </p>
-              </li>
-              <li>
-                <h3>Read the model answers</h3>
-                <p>
-                  Every question shows the full working for the correct option and
-                  explains exactly why each other option is wrong.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-{render_cta(
-    "Want your written answers marked?",
-    "Multiple choice tests your knowledge, but the marks at A-Level are in the "
-    "essays. Send yours for examiner-style feedback, or work through the tricky "
-    "topics with a specialist tutor.",
+{render_cta_strip(
+    "<strong>Questions show you the gaps &mdash; essays are where the marks are.</strong> "
+    "Send yours for examiner-style marking, or work through the tricky topics "
+    "with a specialist tutor.",
     [
-        ("/past-papers/index.html", " alt", "Past Papers"),
+        ("/revision-notes/index.html", " alt", "Free Revision Notes"),
         ("/marking.html", " alt", "Get Your Essays Marked"),
         ("/tutoring.html", "", "Book a Free Intro Call"),
     ],
 )}
         </div>
-      </main>"""
+      </section>"""
 
     return shell(
         title=title,

@@ -150,9 +150,11 @@ drift.
   the serif body, the notes palette. A student arriving from a notes page should feel
   they have not left it.
 - **The hub and the board indexes** use `css/pages/practice-questions.css` and follow the
-  **home page** look — hero, card grid, dark stat bar, `#252122` and the brand red.
-  Practice Questions is a top-level section with its own nav entry, so its landing pages
-  belong with the other landing pages, not with the notes.
+  **section landing pages** — `revision-notes/index.html`, `past-papers/index.html` and
+  the notes board indexes. Centred hero, `header.major` section headings, board button
+  grid, green-bordered unit accordion, conversion strip. Deliberately *without* the white
+  `.notes-container` card the notes board indexes wrap their list in: the content sits
+  directly on the page background.
 
 Each page loads exactly one of the two stylesheets. Never load both.
 
