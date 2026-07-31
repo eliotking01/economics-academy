@@ -15,8 +15,9 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
-| Phase 1B — enrichment plans | Batch 1 of 6 delivered — `PLAN-enrichment-aqa-micro.md` |
-| Phase 2 commits 8–9 — enrichment | Not started |
+| Phase 1B — enrichment plans | Batch 1 of 6 delivered and applied |
+| Phase 2 commit 8 — enrichment, AQA micro | **Complete** — 9 components, `NEW-CONTENT-LOG.md` |
+| Phase 2, remaining enrichment | Batches 2–6 not started |
 | Phase 3 — final verification | Partial (run after each commit so far) |
 
 ---
@@ -44,7 +45,7 @@ Related: the same formula labels the denominator "Injection" where the numerator
 a change in real GDP. Worth confirming the intended denominator is the *initial*
 injection, since that is what the multiplier ratio needs.
 
-**N2 — a sentence stops mid-clause.**
+**N2 — a sentence stops mid-clause. FIXED.**
 `aqa-a2-micro/1-5-8-the-dynamics-of-competition-and-competitive-market-processes.html`,
 in the "Short-Run and Long-Run Benefits of Competition" table:
 
@@ -59,7 +60,11 @@ so the third row has a single cell rather than a pair. That is a markup asymmetr
 rather than a wording problem, but the two columns no longer line up as a
 comparison.
 
-**N3 — a concentration ratio described as both 3-firm and 5-firm.**
+**N1–N3 were fixed by the author on 31 Jul 2026** (commit "N2 and N3", plus the
+decision to leave the `\text{ Injection}` space as authored). Kept below for the
+record.
+
+**N3 — a concentration ratio described as both 3-firm and 5-firm. FIXED.**
 `aqa-a2-micro/1-5-5-oligopoly.html`, "Concentration Ratios":
 
 > "For example, a **3-firm concentration ratio of 80%** means that the top
@@ -237,3 +242,43 @@ non-deterministically between runs, so formula bands are noise rather than signa
   nit, so this one appears to have been missed.
 - **Remaining inline styles** — audit flag S5 is now partly closed. Roughly 279
   `style` attributes remain, mostly table column widths.
+
+---
+
+## Regression caught and fixed during batch 1
+
+The emphasis commits (6–7) **destroyed two internal links**, and the verification
+in place at the time did not notice.
+
+The scripts that rebuilt emphasised paragraphs worked from the element's flattened
+text, and guarded against damaging links by skipping any element containing
+`<a `— with a trailing space. Prettier wraps long tags, so a link written as
+`<a\n  href="…"` does not contain that string, slipped past the guard, and was
+stripped when the paragraph was rebuilt.
+
+Two contextual links added by the earlier SEO audit were lost:
+
+| File | Lost link |
+| --- | --- |
+| `edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html` | → `edexcel-theme-4/4-1-6-restrictions-on-free-trade.html` |
+| `edexcel-theme-2/2-2-5-net-trade.html` | → `edexcel-theme-4/4-1-6-restrictions-on-free-trade.html` |
+
+Both are restored. `2-2-5` keeps all four of its emphasis marks, none of which
+overlaps the anchor. The `1-2-10` bullet gives its emphasis up, because the phrase
+that had been bolded spanned the link.
+
+**Why nothing caught it.** `verify_text_integrity.py` compares visible text, and
+stripping a tag changes no text at all — so a link can vanish with the check still
+reporting a clean run. `verify_links.py` only resolves the links that are present;
+it cannot know one used to exist. `scripts/verify_markup_integrity.py` was written
+to close the gap: it compares tag counts and link targets between two commits, and
+run against the emphasis commits it reports exactly those four problems. It now
+reports 0 for the whole branch.
+
+### Separately: 13 links removed with the Exam Preparation sections
+
+Not a defect — a consequence of commit 1, which was approved. The earlier audit
+placed 13 of its 156 contextual note-to-note links inside the checklists that this
+pass deletes, across 11 pages. Checked afterwards: **every affected target still
+has at least 2 inbound links and nothing is orphaned** (range 2–9). Worth knowing
+if inbound-link counts are ever audited again.
