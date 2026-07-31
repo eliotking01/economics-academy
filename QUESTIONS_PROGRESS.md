@@ -4,7 +4,7 @@ Batch state for the free practice questions. The authoring standard is
 `QUESTIONS_GUIDE.md`; this file records what is done and what is next, so work
 can resume cleanly across sessions.
 
-**Live: 34 topics, 252 questions.** Target: 166 topics, ~1,272 questions.
+**Live: 44 topics, 327 questions.** Target: 166 topics, ~1,272 questions.
 
 ---
 
@@ -29,7 +29,7 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 
 ---
 
-## AQA Microeconomics — 34 of 54 topics
+## AQA Microeconomics — 44 of 54 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -67,8 +67,16 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 | 1.5 | 1.5.9 Contestable and Non-Contestable Markets | 8 | Done |
 | 1.5 | 1.5.10 Market Structure and Efficiency | 8 | Done |
 | 1.5 | 1.5.11 Consumer and Producer Surplus | 8 | Done |
-| 1.6 | The Labour Market (7 topics) | 53 | Not started |
-| 1.7 | Distribution of Income and Wealth (3 topics) | 22 | Not started |
+| 1.6 | 1.6.1 The Demand for Labour, Marginal Productivity Theory | 9 | Done |
+| 1.6 | 1.6.2 Influences upon the Supply of Labour | 7 | Done |
+| 1.6 | 1.6.3 Wage Determination: Competitive Labour Markets | 8 | Done |
+| 1.6 | 1.6.4 Wage Determination: Imperfect Labour Markets | 8 | Done |
+| 1.6 | 1.6.5 The Influence of Trade Unions | 7 | Done |
+| 1.6 | 1.6.6 The National Minimum Wage | 8 | Done |
+| 1.6 | 1.6.7 Discrimination in the Labour Market | 6 | Done |
+| 1.7 | 1.7.1 The Distribution of Income and Wealth | 8 | Done |
+| 1.7 | 1.7.2 The Problem of Poverty | 7 | Done |
+| 1.7 | 1.7.3 Government Policies on Poverty and Distribution | 7 | Done |
 | 1.8 | Market Failure and Government Intervention (10 topics) | 74 | Not started |
 
 ## Remaining boards — 0 of 112 topics
@@ -173,6 +181,33 @@ Site profile after batch 3:
 | Skills | applied-reasoning 151, definition-in-context 59, data-table 24, calculation 18 |
 | Difficulty | foundation 35, standard 187, stretch 30 |
 | Sketch to solve | 15 |
+
+### Batch 4 — AQA micro 1.6 and 1.7 (2026-07-31)
+
+10 topics, 75 questions. All 75 re-solved cold from the stem alone with **0
+mismatches**; the MRP, union density and relative poverty line calculations
+were recomputed, including every distractor figure.
+
+Fixed during verification:
+
+- 1.6.7 and 1.7.2 both failed the letter-distribution check; option order was
+  regularised in each.
+- 19 options rewritten where the correct answer ran more than 10% longer than
+  the next longest.
+
+The monopsony result — that a union or a minimum wage can raise pay <em>and</em>
+employment where a single dominant employer has been restricting hiring — is
+tested three times from different angles (1.6.4 Q5, 1.6.5 Q6, 1.6.6 Q5),
+because it is the evaluation point these topics turn on.
+
+Site profile after batch 4:
+
+| | |
+| --- | --- |
+| Answer letters | A 83, B 101, C 80, D 63 (even would be 82) |
+| Skills | applied-reasoning 203, definition-in-context 76, data-table 26, calculation 22 |
+| Difficulty | foundation 45, standard 242, stretch 40 |
+| Sketch to solve | 17 |
 
 ---
 

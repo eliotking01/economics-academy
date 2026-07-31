@@ -1,0 +1,147 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.6.7",
+  "slug": "1-6-7-discrimination-in-the-labour-market",
+  "title": "Discrimination in the Labour Market",
+  "shortTitle": "Labour Market Discrimination",
+  "pageTitle": "Labour Market Discrimination Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on discrimination in the labour market for AQA A-Level Economics: the conditions required and the consequences for wages.",
+  "intro": "Six original multiple-choice questions on discrimination in the labour market, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on wage discrimination, the conditions that allow it and its consequences, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-6-7-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Wage discrimination in the labour market occurs when workers are paid differently because of",
+      "options": {
+        "A": "Characteristics unrelated to their job performance.",
+        "B": "Differences in the hours they choose to work.",
+        "C": "Differences in their productivity and qualifications.",
+        "D": "The different industries in which they are employed."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Wage discrimination</strong> means workers with similar skills and qualifications being paid differently on the basis of characteristics that have nothing to do with how well they do the job — gender, ethnicity, age or disability. The test is whether the pay gap can be justified by <em>productivity</em>. If it cannot, it is discrimination.",
+        "distractors": {
+          "B": "Being paid less for working fewer hours is simply payment for the work done, not discrimination.",
+          "C": "Pay differences that genuinely reflect productivity or qualifications are what the competitive model predicts. Discrimination is the residual gap that these do <em>not</em> explain.",
+          "D": "Different industries pay differently because demand and supply differ between them. That is relative wage determination rather than discrimination."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-7-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is not a condition that makes wage discrimination possible?",
+      "options": {
+        "A": "Employers holding biases against particular groups of workers.",
+        "B": "Perfect information among workers about wages and vacancies.",
+        "C": "Weak legislation and enforcement against unequal pay.",
+        "D": "Monopsony power allowing employers to set wages."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Perfect information</strong> makes discrimination very hard to sustain: workers who know exactly what everyone else earns and what other employers pay can challenge unequal treatment or simply move. It is <em>imperfect</em> information that allows a firm to offer certain groups less without being found out. The genuine conditions are monopsony power, information asymmetry, employer prejudice and weak regulation.",
+        "distractors": {
+          "A": "Prejudice supplies the motive. An employer who undervalues a group will offer that group less.",
+          "C": "Without enforceable equal pay law there is little to deter discriminatory pay setting.",
+          "D": "Monopsony power supplies the means: an employer with wage-setting power can pay different groups differently, because workers have few alternative employers."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-7-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An employer pays two groups of equally productive workers different wages. In terms of marginal revenue product theory, the lower-paid group is being paid",
+      "options": {
+        "A": "Exactly their marginal revenue product.",
+        "B": "More than their marginal revenue product.",
+        "C": "More than the higher-paid group's marginal revenue product.",
+        "D": "Less than their marginal revenue product."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The two groups are equally productive, so their <strong>marginal revenue product is the same</strong>. If one group is paid less, that group must be receiving <strong>below</strong> its MRP — the employer is capturing the difference. This is why discrimination is treated as a market failure as well as an equity problem: workers are not being paid what their labour is worth, so labour is misallocated.",
+        "distractors": {
+          "A": "Payment equal to MRP is what a competitive market without discrimination would produce, and it cannot hold for both groups when they are paid differently.",
+          "B": "Being paid above MRP would mean the employer losing money on those workers, which is not what discrimination against them implies.",
+          "C": "Both groups have the <em>same</em> MRP, since the question states they are equally productive."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-7-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is a likely economic consequence of widespread labour market discrimination?",
+      "options": {
+        "A": "An increase in the marginal revenue product of the discriminated group.",
+        "B": "Higher productivity, as employers select only the most able workers.",
+        "C": "A misallocation of labour, as talent is not used where it is most productive.",
+        "D": "Lower costs for firms, with no wider cost to the economy."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Discrimination allocates jobs and pay on grounds other than productivity, so able workers end up in roles below their capability or out of the workforce altogether. The economy produces less than it could — a <strong>misallocation of labour</strong> and a loss of potential output. There are further effects: wider income inequality, weaker incentives for the affected group to invest in education, and higher welfare spending.",
+        "distractors": {
+          "A": "Discrimination does not make anyone more productive. It changes what they are paid relative to what they produce.",
+          "B": "Selecting on gender or ethnicity rather than ability is the opposite of selecting the most able, so average productivity falls.",
+          "D": "The firm may reduce its own wage bill, but the economy loses output, and the government faces lower tax revenue and higher welfare costs."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-7-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government requires large firms to publish the average pay of different groups of their employees. The main economic purpose of this policy is to",
+      "options": {
+        "A": "Guarantee that every worker is paid the same wage.",
+        "B": "Increase the monopsony power held by large employers in the market.",
+        "C": "Raise tax revenue from firms that pay unequally.",
+        "D": "Reduce the information asymmetry that permits discrimination."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Pay gap reporting attacks one of the <strong>conditions</strong> that makes discrimination possible. Publishing the figures gives workers, applicants and the public information they previously lacked, so unequal pay becomes visible and firms face reputational and legal pressure to justify or close the gap. It works by changing what is <em>known</em> rather than by mandating any particular wage.",
+        "distractors": {
+          "A": "Equal average pay across groups is not the aim, and would not be appropriate where roles and experience genuinely differ. The aim is that differences should be explicable.",
+          "B": "Transparency <em>weakens</em> an employer's position, because informed workers can bargain and move more effectively.",
+          "C": "No tax is involved. The policy is a disclosure requirement."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-7-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "It is sometimes argued that competitive markets erode discrimination over time. The reasoning is that a firm which discriminates",
+      "options": {
+        "A": "Attracts more customers who share its prejudices.",
+        "B": "Faces higher costs than rivals who hire on merit alone.",
+        "C": "Gains monopsony power over the group it discriminates against.",
+        "D": "Is protected by barriers to entry from any competitive pressure."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A discriminating firm passes over able workers because of an irrelevant characteristic, so it employs a less productive workforce than it could have done, or pays over the odds for the group it favours. Non-discriminating rivals can hire that overlooked talent more cheaply and undercut it. In a genuinely <strong>competitive</strong> market, discrimination therefore carries a cost and should erode.<br />The evaluation is that real labour markets are frequently <em>not</em> competitive: monopsony power, imperfect information and immobility all let discrimination persist, which is why legislation is generally thought necessary as well.",
+        "distractors": {
+          "A": "Even if some customers shared the prejudice, the argument concerns the firm's costs of production rather than its sales.",
+          "C": "Discrimination does not create monopsony power. If anything the causation runs the other way — monopsony power is one of the conditions that makes discrimination possible.",
+          "D": "The argument depends on competitive pressure being present. Where barriers to entry shield a firm, the erosion mechanism fails, which is exactly why the argument is limited."
+        }
+      }
+    }
+  ]
+}

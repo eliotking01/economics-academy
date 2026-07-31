@@ -1,0 +1,191 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.6.6",
+  "slug": "1-6-6-the-national-minimum-wage",
+  "title": "The National Minimum Wage",
+  "shortTitle": "The National Minimum Wage",
+  "pageTitle": "National Minimum Wage Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the national minimum wage for AQA A-Level Economics: real wage unemployment, elasticity and monopsony, with worked answers.",
+  "intro": "Eight original multiple-choice questions on the national minimum wage, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Eight original multiple-choice questions on the national minimum wage and its effects on workers and employers, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-6-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A national minimum wage set above the market equilibrium wage acts as",
+      "options": {
+        "A": "A legally enforced price ceiling in the labour market.",
+        "B": "A legally enforced price floor in the labour market.",
+        "C": "A subsidy paid to employers of low-paid workers.",
+        "D": "A tax on the employment of low-paid workers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A minimum wage sets a level below which pay may not legally fall, so it is a <strong>price floor</strong> — and like any effective price floor it has to be set <em>above</em> the free market equilibrium to have any effect at all. Below equilibrium it would simply be ignored by the market.",
+        "distractors": {
+          "A": "A price ceiling is a legal <em>maximum</em>, like a rent cap. A minimum wage works in the opposite direction.",
+          "C": "No money is paid to employers. The policy compels them to pay more, which raises their costs rather than lowering them.",
+          "D": "A minimum wage raises the cost of employing low-paid workers and in that sense resembles a tax, but no revenue goes to the government — the extra payment goes to the workers themselves."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a competitive labour market, a minimum wage set above the equilibrium wage will create",
+      "options": {
+        "A": "An excess demand for labour, and a shortage of workers.",
+        "B": "An excess supply of labour, known as real wage unemployment.",
+        "C": "No change in employment, because the wage floor is legally binding.",
+        "D": "A rightward shift of the demand curve for labour."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Above the equilibrium wage, more workers want jobs than firms wish to hire. The gap between the quantity of labour supplied and the quantity demanded is an <strong>excess supply of labour</strong>, and because it is caused by a wage held above the market-clearing level it is called <strong>real wage unemployment</strong>. Those who keep their jobs earn more; those who lose them earn nothing.",
+        "distractors": {
+          "A": "Excess demand is a shortage of workers, which arises when the wage is below equilibrium.",
+          "C": "Being legally binding is precisely why employment changes. Firms cannot pay less, so they employ fewer workers instead.",
+          "D": "Demand does not shift. Firms move <em>along</em> their existing demand curve to a lower level of employment."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The unemployment created by a minimum wage in a competitive labour market will be greatest when the demand for labour is",
+      "options": {
+        "A": "Perfectly inelastic with respect to the wage.",
+        "B": "Wage elastic.",
+        "C": "Wage inelastic.",
+        "D": "Unrelated to the wage rate."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Wage elastic</strong> demand means firms respond strongly to a rise in the cost of labour — by automating, cutting hours or closing sites — so a given minimum wage destroys more jobs. Where demand is inelastic, firms have little choice but to keep their workers and absorb the cost, so employment falls only slightly. This is why the employment effect of a minimum wage is an empirical question rather than a foregone conclusion.",
+        "distractors": {
+          "A": "Perfectly inelastic demand means employment does not change at all when the wage rises, so no unemployment would be created.",
+          "C": "Inelastic demand produces the <em>smallest</em> job losses, which is why minimum wages are most effective in such markets.",
+          "D": "Labour demand always responds to the wage to some degree; that is what gives the demand curve its downward slope."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A minimum wage is set below the equilibrium wage in a labour market. All other things being equal, the effect on wages and employment in that market will be",
+      "options": {
+        "A": "Higher wages and lower employment.",
+        "B": "Higher wages and unchanged employment.",
+        "C": "No effect on either wages or employment.",
+        "D": "Unchanged wages and lower employment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A minimum wage only bites if it sits <strong>above</strong> the market-clearing wage. Set below it, employers are already paying more than the legal floor in order to attract workers, so the law changes nothing. This is why a national minimum wage can be binding in low-paid regions and sectors while having no effect at all in high-paid ones.",
+        "distractors": {
+          "A": "Wages cannot be pushed up by a floor that lies beneath the wage already being paid.",
+          "B": "Same problem: there is nothing for the floor to lift.",
+          "D": "With no change in labour costs, firms have no reason to alter their employment."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching a monopsony labour market, a minimum wage set above the monopsony wage but below the competitive wage will most likely",
+      "options": {
+        "A": "Raise the wage and raise employment.",
+        "B": "Raise the wage and reduce employment.",
+        "C": "Reduce the wage and raise employment.",
+        "D": "Leave both the wage and employment unchanged."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Sketch the monopsony diagram: an upward-sloping labour supply curve, an MCL curve above it, and MRP as labour demand. The monopsonist hires where MCL = MRP and pays the lower wage read off the supply curve.<br />Now impose a minimum wage above that level. The firm can no longer lower the wage by hiring fewer workers, so its <strong>marginal cost of labour becomes flat</strong> at the minimum wage. It hires where that flat MCL meets MRP — which is <strong>more</strong> workers than before.<br />The result is a <strong>higher wage and higher employment</strong>, moving the market towards the competitive outcome. This is the central evaluation point on minimum wages: in a monopsonistic labour market they need not cost jobs at all.",
+        "distractors": {
+          "B": "A higher wage with lower employment is the outcome in a <em>competitive</em> labour market, where the wage was already at equilibrium.",
+          "C": "The whole purpose of the policy is to raise the wage, and the minimum is set above the monopsony wage by construction.",
+          "D": "The monopsonist's cost of labour has changed fundamentally, so its chosen level of employment changes with it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is the strongest argument in favour of a national minimum wage?",
+      "options": {
+        "A": "It guarantees that every worker will keep their job.",
+        "B": "It raises low pay and reduces income inequality.",
+        "C": "It reduces the costs faced by firms employing low-paid workers.",
+        "D": "It removes the need for any welfare payments."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The core case for a minimum wage is <strong>equity</strong>. It lifts the pay of the lowest earners, narrows the gap between them and the rest, and reduces in-work poverty. It can also raise productivity, since better-paid workers tend to be better motivated and stay longer, cutting recruitment and training costs.",
+        "distractors": {
+          "A": "No minimum wage can guarantee employment. In a competitive labour market it is likely to cost some jobs, which is the central objection to it.",
+          "C": "It <em>raises</em> the cost of employing low-paid workers. That is the mechanism by which it can reduce employment.",
+          "D": "Minimum wages help those in work but do nothing for the unemployed, the retired or those unable to work, so welfare payments remain necessary."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises the national minimum wage substantially. Which one of the following is the most likely response by firms facing higher labour costs?",
+      "options": {
+        "A": "Increasing the number of low-paid workers employed.",
+        "B": "Lowering the prices they charge consumers.",
+        "C": "Reducing the profit margin on every unit and changing nothing else.",
+        "D": "Substituting capital for labour where automation is possible."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Faced with dearer labour, firms look for ways to use less of it. <strong>Substituting capital for labour</strong> — self-service checkouts, automated ordering, machinery — is one of the main routes, alongside cutting hours, raising prices, and accepting lower margins. Which response dominates depends on how easily capital can replace labour in that particular industry.",
+        "distractors": {
+          "A": "Employing more workers when each has become more expensive runs against the downward-sloping demand curve for labour.",
+          "B": "Higher costs push prices <em>up</em>, not down, where firms are able to pass them on.",
+          "C": "Absorbing the cost entirely is possible for a highly profitable firm in the short run, but it is rarely the only response and cannot be sustained indefinitely."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-6-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Evidence that a rise in the minimum wage caused little measurable job loss would most support the view that the labour market concerned",
+      "options": {
+        "A": "Had a perfectly elastic demand for labour.",
+        "B": "Had no workers earning close to the minimum wage.",
+        "C": "Was competitive with a wage-elastic demand for labour.",
+        "D": "Was monopsonistic, or had wage-inelastic labour demand."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Two explanations fit the evidence, and both are worth knowing.<br />In a <strong>monopsonistic</strong> labour market the employer was restricting employment to hold the wage down, so a higher minimum can raise pay <em>and</em> employment.<br />In a competitive market with <strong>wage-inelastic</strong> labour demand, firms cannot easily do without their workers, so a wage rise costs few jobs.<br />Either way the finding is consistent with theory rather than a refutation of it — which is exactly how to use such evidence in an essay.",
+        "distractors": {
+          "A": "Perfectly elastic labour demand would mean firms dismissing <em>all</em> their workers rather than pay a penny more, producing the largest possible job losses.",
+          "B": "If nobody earned near the minimum the policy would not bite at all, and the question specifies that the minimum wage rose in that market.",
+          "C": "Wage-elastic demand predicts <em>substantial</em> job losses, so this option contradicts the evidence described."
+        }
+      }
+    }
+  ]
+}

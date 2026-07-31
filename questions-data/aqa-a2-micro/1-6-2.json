@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.6.2",
+  "slug": "1-6-2-influence-upon-the-supply-of-labour-to-different-markets",
+  "title": "Influence upon the Supply of Labour to Different Markets",
+  "shortTitle": "The Supply of Labour",
+  "pageTitle": "Supply of Labour Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the supply of labour for AQA A-Level Economics: the backward-bending curve, immobility and labour market failure.",
+  "intro": "Seven original multiple-choice questions on the supply of labour, including the backward-bending supply curve and labour immobility, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the supply of labour, the backward-bending curve and labour immobility, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-6-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The market supply curve of labour to an occupation usually slopes upwards because",
+      "options": {
+        "A": "Employers demand more workers when wages are low.",
+        "B": "Higher wages attract more workers into the occupation.",
+        "C": "The income effect always outweighs the substitution effect.",
+        "D": "Workers become more productive as their wages rise."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A higher wage makes an occupation more attractive relative to the alternatives, so more people are willing and able to work in it. That is what an upward-sloping supply curve records — the <strong>quantity of labour supplied rises with the wage rate</strong>. Note this is the <em>market</em> supply curve; an individual's supply curve can bend backwards at very high wages.",
+        "distractors": {
+          "A": "This is the demand side of the market, and it describes firms rather than workers.",
+          "C": "Where the income effect outweighs the substitution effect, the individual supply curve bends <em>backwards</em>. For the market as a whole the usual outcome is an upward slope.",
+          "D": "Productivity may improve for other reasons, but the supply curve records how many people are willing to work at each wage, not how good they are at the job."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An individual's supply curve of labour may bend backwards at very high wage rates because",
+      "options": {
+        "A": "The income effect becomes greater than the substitution effect.",
+        "B": "The substitution effect becomes greater than the income effect.",
+        "C": "Employers refuse to offer any more hours of work.",
+        "D": "Higher taxes remove any incentive to work at all."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Two effects pull in opposite directions when the wage rises.<br />The <strong>substitution effect</strong> raises the opportunity cost of an hour of leisure, encouraging more work.<br />The <strong>income effect</strong> means the same standard of living can be reached in fewer hours, encouraging less work.<br />At low wages the substitution effect dominates and the curve slopes up. At very high wages the <strong>income effect</strong> takes over and the worker chooses more leisure, so the curve bends back on itself.",
+        "distractors": {
+          "B": "This is the case that produces the ordinary <em>upward-sloping</em> section of the curve, at lower wage rates.",
+          "C": "The backward bend reflects the <strong>worker's</strong> choice about hours, not a restriction imposed by the employer.",
+          "D": "Taxation affects the net wage and can influence incentives, but the backward bend arises from the income and substitution effects even without any tax."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "All other things being equal, which one of the following would shift the supply of labour to an occupation to the right?",
+      "options": {
+        "A": "A fall in the wage rate paid in that occupation.",
+        "B": "A rise in the qualifications required to enter the occupation.",
+        "C": "A rise in the wage rate paid in a competing occupation.",
+        "D": "An increase in the number of people trained for that occupation."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A shift requires a change in something <em>other</em> than the occupation's own wage. More trained people means more workers willing and able to do the job <strong>at every wage</strong>, so the supply curve moves right. Other rightward shifters include net migration, improved geographical mobility and better information about vacancies.",
+        "distractors": {
+          "A": "A change in the occupation's own wage moves you <em>along</em> the supply curve rather than shifting it.",
+          "B": "Tougher entry requirements reduce the pool of eligible workers, shifting supply <strong>left</strong>.",
+          "C": "A better-paid alternative draws workers away, again shifting this occupation's supply left."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A redundant steelworker cannot take an available job as a software developer because they lack the necessary skills. This is an example of",
+      "options": {
+        "A": "Frictional unemployment.",
+        "B": "Geographical immobility of labour.",
+        "C": "Occupational immobility of labour.",
+        "D": "Voluntary unemployment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Occupational immobility</strong> is the inability to move between <em>types of work</em> because skills are not transferable. It is a major source of labour market failure: vacancies and unemployment coexist because the unemployed cannot do the jobs available. The usual remedies are education, retraining and apprenticeships.",
+        "distractors": {
+          "A": "Frictional unemployment is the short spell between leaving one job and finding another that a worker <em>is</em> qualified to do. Here the barrier is a lasting skills gap.",
+          "B": "Geographical immobility is the inability to move between <em>places</em>, usually because of housing costs or family ties. This worker's obstacle is the skill set, not the location.",
+          "D": "Voluntary unemployment means declining work at the going wage. This worker cannot obtain the job at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "High house prices in one region prevent unemployed workers elsewhere from moving there to fill vacancies. This is best described as",
+      "options": {
+        "A": "Geographical immobility, a cause of labour market failure.",
+        "B": "Occupational immobility, a cause of labour market failure.",
+        "C": "A backward-bending supply curve of labour.",
+        "D": "An increase in the supply of labour to that region."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Geographical immobility</strong> is the inability of workers to move between areas. Housing costs are the most common cause in the UK, alongside family ties and the cost of relocating. The result is a market failure: unfilled vacancies in one region sit alongside unemployment in another, so labour is not allocated where it is most valued.",
+        "distractors": {
+          "B": "Occupational immobility concerns moving between <em>types</em> of job. These workers may be perfectly qualified; they simply cannot afford to live near the work.",
+          "C": "The backward-bending curve describes an individual choosing fewer hours as wages rise. Nothing here concerns hours or high wages.",
+          "D": "Supply to that region is <em>restricted</em> by the housing costs, which is exactly the problem."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government funds retraining programmes for workers made redundant by the decline of an industry. The most likely effect is to",
+      "options": {
+        "A": "Increase geographical mobility and shift labour demand right.",
+        "B": "Increase occupational mobility and shift labour supply right.",
+        "C": "Reduce occupational mobility by tying workers to one industry.",
+        "D": "Reduce the supply of labour by keeping workers in training."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Retraining attacks <strong>occupational immobility</strong> directly by giving workers skills that other industries want. Supply of labour to those expanding industries shifts <strong>right</strong>, vacancies are filled, and structural unemployment falls. It is a supply-side policy: slow to take effect, but it addresses the cause rather than the symptom.",
+        "distractors": {
+          "A": "Retraining changes what workers can <em>do</em>, not where they can afford to live. It also acts on supply rather than demand.",
+          "C": "New transferable skills widen a worker's options rather than narrowing them.",
+          "D": "There may be a short delay while people train, but the purpose and lasting effect is to increase effective labour supply."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Wages in an occupation rise sharply, but the number of qualified workers barely increases in the following year. The supply of labour to this occupation is best described as",
+      "options": {
+        "A": "Backward bending, because workers prefer leisure.",
+        "B": "Perfectly elastic, because the wage can rise without limit.",
+        "C": "Wage elastic, because pay has risen so much.",
+        "D": "Wage inelastic, because training takes a long time."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Elasticity of labour supply measures how far the quantity of workers responds to a wage change. Where an occupation requires <strong>lengthy training or qualifications</strong> — surgeons, airline pilots, electricians — the number available cannot rise quickly however attractive the pay becomes, so supply is <strong>wage inelastic in the short run</strong>. Given several years it becomes far more elastic, which is the same time-based logic as price elasticity of supply.",
+        "distractors": {
+          "A": "A backward bend would mean workers supplying <em>fewer</em> hours as wages rise. Here the quantity has risen slightly, just not by much.",
+          "B": "Perfectly elastic supply would mean an unlimited number of workers at the going wage — the opposite of what has happened.",
+          "C": "Elasticity compares the <em>percentage change in quantity</em> with the percentage change in wage. A large wage rise producing a tiny quantity response is inelastic, however big the pay rise looks."
+        }
+      }
+    }
+  ]
+}

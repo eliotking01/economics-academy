@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.7.3",
+  "slug": "1-7-3-government-policies-poverty-income-distribution",
+  "title": "Government Policies to Alleviate Poverty and to Influence the Distribution of Income and Wealth",
+  "shortTitle": "Policies on Poverty and Inequality",
+  "pageTitle": "Policies to Reduce Poverty Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on government policies to reduce poverty and inequality for AQA A-Level Economics, with full worked answers.",
+  "intro": "Seven original multiple-choice questions on government policies to alleviate poverty and influence the distribution of income and wealth, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on government policies to reduce poverty and inequality, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-7-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A progressive income tax is one in which",
+      "options": {
+        "A": "Everyone pays the same amount of tax in pounds.",
+        "B": "Everyone pays the same proportion of their income in tax.",
+        "C": "Higher earners pay a larger proportion of their income in tax.",
+        "D": "Higher earners pay a smaller proportion of their income in tax."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>progressive</strong> tax takes a rising <em>proportion</em> of income as income rises, so higher earners contribute a larger share of what they earn. This narrows the gap between post-tax incomes and funds the welfare payments and public services that further support lower-income households. It is the main direct instrument governments use to change the distribution of income.",
+        "distractors": {
+          "A": "A fixed cash amount for everyone is a <strong>lump sum</strong> tax, and it is sharply regressive: the same £500 is a far larger share of a small income than a large one.",
+          "B": "An equal proportion for everyone is a <strong>proportional</strong> or flat tax, which leaves relative shares of income unchanged.",
+          "D": "A falling proportion as income rises is a <strong>regressive</strong> tax. VAT works this way in practice, since poorer households spend a larger share of their income."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises welfare payments to low-income households, funded by higher rates of income tax on high earners. All other things being equal, the most likely effect is",
+      "options": {
+        "A": "A fall in both absolute and relative poverty.",
+        "B": "A fall in absolute poverty but a rise in relative poverty.",
+        "C": "A rise in income inequality as measured by the Gini coefficient.",
+        "D": "No change in the distribution of income, since the total is unchanged."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Money is transferred from the top of the distribution to the bottom. Households at the bottom can afford more of the basic necessities, so <strong>absolute poverty</strong> falls; and because their incomes rise relative to the median, fewer of them sit below 60% of it, so <strong>relative poverty</strong> falls too. The Lorenz curve moves closer to the diagonal and the Gini coefficient falls.",
+        "distractors": {
+          "B": "Relative poverty falls as well here, because the transfer lifts incomes at the bottom relative to the middle.",
+          "C": "A progressive transfer reduces measured inequality rather than raising it.",
+          "D": "The <em>total</em> may be unchanged but the <em>distribution</em> has altered, and that is exactly what these measures capture."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following policies is most likely to reduce poverty in the long run rather than only relieving it in the short run?",
+      "options": {
+        "A": "A one-off cost of living payment to low-income households.",
+        "B": "An increase in the rate of unemployment benefit.",
+        "C": "Investment in education and training for low-income groups.",
+        "D": "Subsidies on food and energy for all households."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Education and training raise <strong>human capital</strong>, so workers become more productive, command higher wages and escape poverty through their own earnings. That breaks the human capital <strong>poverty trap</strong> rather than compensating for it. The trade-off is time: the benefits take years to appear, which is why governments use cash transfers alongside supply-side measures rather than instead of them.",
+        "distractors": {
+          "A": "A one-off payment relieves hardship immediately but changes nothing about earning capacity once it is spent.",
+          "B": "Unemployment benefit supports households while they are out of work. It is essential, but it does not by itself make anyone more employable.",
+          "D": "Universal subsidies lower prices for everyone, including households who do not need help, and they leave earning capacity untouched."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A criticism of using very high marginal income tax rates to reduce inequality is that they may",
+      "options": {
+        "A": "Increase the government's tax revenue without limit.",
+        "B": "Make the tax system more progressive than intended.",
+        "C": "Reduce absolute poverty faster than relative poverty.",
+        "D": "Weaken work incentives and encourage tax avoidance."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is the classic <strong>equity-efficiency trade-off</strong>. Very high marginal rates reduce the reward for extra effort, promotion or enterprise, and give high earners a strong incentive to shelter income, avoid tax or leave the country altogether. Revenue can then rise by far less than expected — or even fall — while the intended redistribution fails to materialise.",
+        "distractors": {
+          "A": "Revenue does not rise without limit. Beyond some rate, avoidance and reduced effort mean further increases yield less, which is the point the Laffer curve makes.",
+          "B": "Greater progressivity is the <em>intention</em> of the policy, not a criticism of it.",
+          "C": "Reducing absolute poverty quickly would be a success rather than a drawback."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government introduces a means-tested benefit that is withdrawn as household earnings rise. A likely unintended consequence is",
+      "options": {
+        "A": "A poverty trap, as households gain little from earning more.",
+        "B": "A rise in absolute poverty among the households receiving it.",
+        "C": "An increase in the number of households eligible for the benefit.",
+        "D": "Higher administrative costs than a universal benefit would carry."
+      },
+      "answer": "A",
+      "model": {
+        "working": "If benefit is withdrawn steeply as earnings rise, a household can find that an extra pound earned leaves it barely any better off once the withdrawal and any tax are taken into account. The effective marginal deduction rate can approach or even exceed 100%, so there is little financial reason to work more hours or take a promotion. That disincentive is the <strong>poverty trap</strong> — and it is why withdrawal rates are designed to taper gradually.",
+        "distractors": {
+          "B": "The benefit raises the incomes of the households receiving it, so absolute poverty falls rather than rises.",
+          "C": "Means testing <em>restricts</em> eligibility to those below an income threshold, which is its purpose.",
+          "D": "Means-tested benefits do cost more to administer than universal ones, but this is a known cost of targeting rather than an unintended consequence."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following government policies is most directly aimed at reducing inequality of wealth rather than of income?",
+      "options": {
+        "A": "A higher national minimum wage.",
+        "B": "An increase in inheritance tax.",
+        "C": "An increase in unemployment benefit.",
+        "D": "A more progressive income tax system."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Wealth</strong> is a stock of assets, and it becomes concentrated largely because it is passed between generations. <strong>Inheritance tax</strong> acts directly on that transfer, so it targets the accumulation of wealth rather than the flow of earnings. Capital gains tax and property taxes work on the same stock.",
+        "distractors": {
+          "A": "The minimum wage raises the earnings of low-paid workers, which is a flow of <em>income</em>.",
+          "C": "Unemployment benefit supports household income while people are out of work.",
+          "D": "Income tax operates on the flow of earnings each year, not on assets already held."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government must choose between raising welfare payments and expanding free childcare for working parents. The strongest economic argument for the childcare policy is that it",
+      "options": {
+        "A": "Costs the government less than welfare payments in the first year.",
+        "B": "Guarantees that no household will remain in relative poverty.",
+        "C": "Raises household incomes now, whereas welfare payments take years to work.",
+        "D": "Raises labour supply and earnings capacity, tackling a cause of poverty."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Free childcare removes a barrier that keeps parents — disproportionately mothers — out of paid work or in fewer hours than they would choose. It raises <strong>labour supply</strong>, allows households to earn their own way out of poverty, and adds to the economy's productive capacity. Welfare payments relieve the <em>symptom</em> of low income effectively and immediately; childcare addresses one of its <em>causes</em>.<br />The evaluation is that it helps only households with children who are able to work, so it complements rather than replaces cash support.",
+        "distractors": {
+          "A": "Childcare provision is expensive up front. The case for it rests on long-run returns rather than immediate savings.",
+          "B": "No single policy can guarantee the elimination of relative poverty, which is defined against a moving median.",
+          "C": "This reverses the timing. Welfare payments raise incomes immediately, while supply-side measures such as childcare take longer to show their full effect."
+        }
+      }
+    }
+  ]
+}

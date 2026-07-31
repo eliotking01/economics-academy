@@ -1,0 +1,216 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.7.1",
+  "slug": "1-7-1-the-distribution-of-income-and-wealth",
+  "title": "The Distribution of Income and Wealth",
+  "shortTitle": "Distribution of Income and Wealth",
+  "pageTitle": "Lorenz Curve and Gini Coefficient Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the distribution of income and wealth for AQA A-Level Economics: Lorenz curves, the Gini coefficient and inequality.",
+  "intro": "Eight original multiple-choice questions on the distribution of income and wealth, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on income and wealth inequality, the Lorenz curve and the Gini coefficient, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-7-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The key distinction between income and wealth is that income is",
+      "options": {
+        "A": "A flow of money over a period, while wealth is a stock of assets at a point in time.",
+        "B": "A stock of assets at a point in time, while wealth is a flow of money over a period.",
+        "C": "Always distributed more unequally than wealth in developed economies.",
+        "D": "Earned only from employment, while wealth is earned only from investment."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Income</strong> is a <strong>flow</strong>: wages, rent, interest and profit received over a week, month or year. <strong>Wealth</strong> is a <strong>stock</strong>: the value of assets held at a moment in time — property, shares, savings, pensions. The two are linked, since wealth generates income and saved income accumulates into wealth, but they are measured quite differently.",
+        "distractors": {
+          "B": "This reverses the definitions. The flow-stock distinction is the standard way to keep them apart.",
+          "C": "In practice <strong>wealth</strong> is distributed considerably more unequally than income in the UK and most developed economies.",
+          "D": "Income also comes from rent, interest, profit and benefits, and wealth can be inherited or accumulated from saved earnings."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A Lorenz curve plots the cumulative percentage of total income against the cumulative percentage of the population. The further the curve lies from the line of perfect equality, the",
+      "options": {
+        "A": "Greater the degree of inequality in the distribution.",
+        "B": "Higher the average income in the economy.",
+        "C": "Lower the average income in the economy.",
+        "D": "Smaller the degree of inequality in the distribution."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>line of perfect equality</strong> is the 45° diagonal, along which each 10% of the population receives exactly 10% of total income. A real distribution sags below it, and the further it sags the more unequally income is shared. The <strong>Gini coefficient</strong> puts a number on that gap: the area between the two lines divided by the whole area beneath the diagonal.",
+        "distractors": {
+          "B": "The Lorenz curve says nothing about the <em>level</em> of income, only how it is shared. A rich and a poor country can have identical curves.",
+          "C": "Same point in reverse: average income is not what the diagram measures.",
+          "D": "Less inequality means the curve lies <em>closer</em> to the diagonal, not further from it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A Gini coefficient of 0 would indicate",
+      "options": {
+        "A": "An economy with no income at all.",
+        "B": "Perfect equality, with income shared equally among the population.",
+        "C": "Perfect inequality, with one person receiving all the income.",
+        "D": "That the Lorenz curve lies as far as possible from the diagonal."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The Gini coefficient runs from <strong>0 to 1</strong>. A value of <strong>0</strong> means the Lorenz curve sits exactly on the line of perfect equality, so every share of the population receives an identical share of income. A value of <strong>1</strong> is the theoretical opposite, with one person receiving everything. Real economies fall well between the two — the UK sits around 0.35 for income after tax and benefits.",
+        "distractors": {
+          "A": "The measure describes how income is <em>shared</em>, not how much of it there is. An economy with no income would have no distribution to measure.",
+          "C": "Perfect inequality corresponds to a coefficient of 1.",
+          "D": "The curve lying furthest from the diagonal is maximum inequality, again a coefficient of 1."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the Gini coefficient for four countries.<br />Using Table 1, income is distributed most equally in",
+      "table": {
+        "caption": "Table 1: Gini coefficient for income in four countries",
+        "head": [
+          "Country",
+          "Gini coefficient"
+        ],
+        "rows": [
+          [
+            "W",
+            "0.31"
+          ],
+          [
+            "X",
+            "0.48"
+          ],
+          [
+            "Y",
+            "0.24"
+          ],
+          [
+            "Z",
+            "0.39"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Country W.",
+        "B": "Country X.",
+        "C": "Country Y.",
+        "D": "Country Z."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>lower</strong> Gini coefficient means a <strong>more equal</strong> distribution, because the Lorenz curve lies closer to the line of perfect equality. The lowest figure in the table is <strong>0.24</strong>, so income is shared most equally in <strong>Country Y</strong>.",
+        "distractors": {
+          "A": "Country W's coefficient of 0.31 is higher than Country Y's, so its income is less equally distributed.",
+          "B": "Country X has the <em>highest</em> coefficient at 0.48, making it the most unequal of the four — the opposite of what is asked.",
+          "D": "Country Z at 0.39 is more unequal than both W and Y."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would be most likely to reduce income inequality in an economy?",
+      "options": {
+        "A": "A cut in the higher rate of income tax.",
+        "B": "A fall in the real value of welfare benefits.",
+        "C": "A rise in the returns earned on financial assets.",
+        "D": "An increase in the progressivity of income tax."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>progressive</strong> tax takes a larger proportion of income from higher earners, so making the system more progressive narrows the gap between post-tax incomes. Combined with the spending it funds — welfare payments, public services — it is the main direct route by which governments influence the distribution of income.",
+        "distractors": {
+          "A": "Cutting the higher rate leaves top earners with more after tax, widening the gap.",
+          "B": "Welfare payments make up a large share of the income of the poorest households, so a fall in their real value hits the bottom of the distribution hardest.",
+          "C": "Financial assets are held disproportionately by wealthier households, so higher returns on them tend to widen inequality of both income and wealth."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Wealth is usually distributed more unequally than income in developed economies. The best explanation is that",
+      "options": {
+        "A": "Governments do not tax wealth or the income it generates at all.",
+        "B": "Income is entirely determined by luck rather than by skill.",
+        "C": "Wealth can be inherited and accumulates over time.",
+        "D": "Wealthy households receive no income from their assets."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Wealth is a <strong>stock</strong> built up over a lifetime and passed between generations, so differences compound: assets generate income, some of that income is saved and becomes more assets, and inheritance carries the whole position forward. Income is a <strong>flow</strong> measured over a single period and is compressed by taxes and benefits each year. The result is a substantially more unequal distribution of wealth.",
+        "distractors": {
+          "A": "Wealth is taxed in various ways — inheritance tax, capital gains tax, council tax — although less heavily than income in most systems.",
+          "B": "Income depends on skills, qualifications, occupation and hours as well as circumstance. Luck alone would not produce the persistent patterns observed.",
+          "D": "Assets generate rent, dividends and interest, which is precisely the mechanism by which wealth reinforces income inequality."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is most often advanced as a benefit of some degree of income inequality?",
+      "options": {
+        "A": "It ensures that everyone has access to basic necessities.",
+        "B": "It guarantees that social mobility will increase over time.",
+        "C": "It maximises total welfare, because a pound is worth the same to everyone.",
+        "D": "It provides an incentive to work, train and take entrepreneurial risk."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The standard efficiency argument is about <strong>incentives</strong>. If pay did not differ, there would be little reason to acquire difficult skills, take on demanding responsibility, or risk capital in a new business. Some inequality rewards effort and enterprise and so raises output. The counter-argument is that <em>excessive</em> inequality damages growth by wasting talent and weakening social cohesion — which is why this is an evaluation question rather than a settled one.",
+        "distractors": {
+          "A": "Access to necessities is an argument for <em>reducing</em> inequality, not a benefit of it.",
+          "B": "High inequality is generally associated with <em>lower</em> social mobility, since opportunity depends more heavily on family background.",
+          "C": "The usual argument runs the other way. Diminishing marginal utility of income implies that a pound is worth more to a poor household than a rich one, which is a case for redistribution."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country's Gini coefficient is unchanged over a decade while average real incomes rise substantially. It follows that",
+      "options": {
+        "A": "Absolute poverty has certainly increased over the decade.",
+        "B": "Income inequality has fallen, because everyone is better off.",
+        "C": "Relative shares are unchanged, though all may be better off.",
+        "D": "The Lorenz curve has moved closer to the line of perfect equality."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Gini coefficient measures <strong>relative</strong> shares, not absolute amounts. An unchanged coefficient means each section of the population still receives the same <em>proportion</em> of total income as before — but since the total has grown, every group can be substantially better off in cash terms.<br />This is why absolute and relative measures must be read together. Rising average incomes with a flat Gini would typically reduce <strong>absolute</strong> poverty while leaving <strong>relative</strong> poverty broadly unchanged.",
+        "distractors": {
+          "A": "Rising real incomes would normally <em>reduce</em> absolute poverty, since more households can afford basic necessities.",
+          "B": "An unchanged coefficient means inequality has not fallen. Everyone being better off is entirely compatible with the same relative distribution.",
+          "D": "A movement towards the diagonal would show up as a <em>lower</em> Gini coefficient. The coefficient has not changed."
+        }
+      }
+    }
+  ]
+}

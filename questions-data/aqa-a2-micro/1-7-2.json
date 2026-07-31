@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.7.2",
+  "slug": "1-7-2-the-problem-of-poverty",
+  "title": "The Problem of Poverty",
+  "shortTitle": "The Problem of Poverty",
+  "pageTitle": "Absolute and Relative Poverty Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on poverty for AQA A-Level Economics: absolute and relative poverty, the poverty trap and the consequences of poverty.",
+  "intro": "Seven original multiple-choice questions on absolute and relative poverty and the poverty trap, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on absolute and relative poverty, the poverty trap and the consequences of poverty, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-7-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Absolute poverty is best defined as a situation in which individuals",
+      "options": {
+        "A": "Cannot afford the basic necessities required for survival.",
+        "B": "Earn less than 60% of median household income.",
+        "C": "Earn less than the average income in their own country.",
+        "D": "Have less wealth than the majority of the population."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Absolute poverty</strong> is measured against a <strong>fixed threshold</strong> representing the minimum needed to survive — food, clean water, shelter, healthcare. The World Bank's international line of $2.15 a day at 2022 purchasing power parity is the standard benchmark. Because the threshold is fixed, absolute poverty can fall to zero as an economy develops.",
+        "distractors": {
+          "B": "A share of <em>median</em> income is the definition of <strong>relative</strong> poverty, and 60% of median household income is the measure used in the UK.",
+          "C": "Comparing with the national average is again a relative measure, and it moves as the country gets richer.",
+          "D": "This concerns the distribution of <em>wealth</em> rather than whether basic needs can be met."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the UK, a household is generally counted as being in relative poverty when its income is below",
+      "options": {
+        "A": "$2.15 a day at purchasing power parity.",
+        "B": "60% of mean household income.",
+        "C": "60% of median household income.",
+        "D": "The income of the poorest 10% of households."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The standard UK measure of <strong>relative poverty</strong> is a household income below <strong>60% of median household income</strong>. The <em>median</em> is used rather than the mean because a small number of very high incomes would pull the mean upwards and distort the threshold. Because the line moves with median income, relative poverty is really a measure of inequality at the bottom of the distribution.",
+        "distractors": {
+          "A": "$2.15 a day is the World Bank's <strong>absolute</strong> poverty line, used for international comparison rather than for a developed economy.",
+          "B": "Using the mean would make the threshold sensitive to very high earners, which is exactly why the median is preferred.",
+          "D": "Defining poverty as the bottom 10% would fix the proportion in poverty by construction, so it could never fall."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Every household in an economy sees its real income double, and the distribution of income is unchanged. All other things being equal, this will",
+      "options": {
+        "A": "Increase both absolute and relative poverty.",
+        "B": "Reduce absolute poverty and leave relative poverty unchanged.",
+        "C": "Reduce both absolute and relative poverty.",
+        "D": "Reduce relative poverty and leave absolute poverty unchanged."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two measures behave quite differently here.<br /><strong>Absolute poverty</strong> is judged against a fixed threshold, so doubling real incomes lifts households above it and absolute poverty <strong>falls</strong>.<br /><strong>Relative poverty</strong> is judged against median income, which has also doubled. The 60% threshold rises in step, so the same proportion of households remains below it and relative poverty is <strong>broadly unchanged</strong>.<br />This is why a growing economy can eliminate absolute poverty while relative poverty persists.",
+        "distractors": {
+          "A": "Higher real incomes cannot increase absolute poverty, since more households can afford the fixed basket of necessities.",
+          "C": "Relative poverty does not fall, because the threshold moves upwards with the median.",
+          "D": "This reverses the two effects. It is absolute poverty that responds to income growth and relative poverty that does not."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The poverty trap arising from a lack of human capital development is best described as a cycle in which",
+      "options": {
+        "A": "High welfare payments discourage households from seeking work.",
+        "B": "Low skills mean low incomes, preventing investment in the next generation.",
+        "C": "Rising incomes cause households to save less and consume more.",
+        "D": "Strong economic growth attracts migrants who compete for low-paid jobs."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The cycle is self-reinforcing. Poor education and health mean <strong>low skills</strong>, which mean <strong>low productivity</strong> and therefore <strong>low incomes</strong>. Low incomes leave nothing to save or to invest in the next generation's education and health, so the same lack of human capital is passed on. Breaking the loop is why education and training are central to anti-poverty policy.",
+        "distractors": {
+          "A": "Welfare acting as a disincentive is a separate argument — the unemployment or benefits trap — rather than the human capital cycle described in the specification.",
+          "C": "Rising incomes and lower saving describe consumption behaviour, not a mechanism that keeps households poor.",
+          "D": "Migration affects labour supply in particular markets. It is not the human capital poverty trap."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is a likely economic consequence of widespread poverty for a country as a whole?",
+      "options": {
+        "A": "Higher tax revenue, as more people seek paid work.",
+        "B": "Lower government spending on public services.",
+        "C": "Lower productivity and slower growth of long-run supply.",
+        "D": "Reduced inequality, as incomes converge at a low level."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Poverty damages <strong>human capital</strong>. Poor nutrition, poor health and limited education reduce what people are able to produce, so productivity is lower and the economy's productive capacity — its <strong>long-run aggregate supply</strong> — grows more slowly than it otherwise would. The fiscal consequences compound this: lower tax revenue alongside higher welfare and healthcare spending.",
+        "distractors": {
+          "A": "Poverty is associated with lower earnings and often with unemployment, so tax revenue <em>falls</em>.",
+          "B": "Government spending on welfare, healthcare and support services tends to <em>rise</em> where poverty is widespread.",
+          "D": "Widespread poverty usually accompanies high inequality rather than reducing it, since it describes the position at the bottom of the distribution."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-2-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Median household income in an economy is £32,000 a year. Using the standard UK definition, a household is in relative poverty if its annual income is below",
+      "options": {
+        "A": "£12,800",
+        "B": "£19,200",
+        "C": "£25,600",
+        "D": "£51,200"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The UK relative poverty line is <strong>60% of median household income</strong>.<br />0.60 × £32,000 = <strong>£19,200</strong>.<br />Note that the threshold moves with the median: if median income rose to £36,000, the line would rise to £21,600, and a household on £20,000 would move <em>into</em> relative poverty without its own income changing at all.",
+        "distractors": {
+          "A": "£12,800 is 40% of the median. The threshold is 60%.",
+          "C": "£25,600 is 80% of the median, a considerably more generous line than the standard definition.",
+          "D": "£51,200 is 160% of the median — well above it, so almost every household would be counted as poor."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-7-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country reports that absolute poverty has fallen sharply over twenty years while relative poverty has risen. The most likely explanation is that",
+      "options": {
+        "A": "Incomes have grown, but the gains have been concentrated among higher earners.",
+        "B": "The absolute poverty line has been raised while the relative line has been lowered.",
+        "C": "The economy has shrunk, reducing incomes across the whole distribution.",
+        "D": "The government has stopped paying any welfare benefits at all."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Both figures can move at once because they measure different things.<br /><strong>Absolute poverty</strong> falls when real incomes rise across the board, since more households clear the fixed subsistence threshold.<br /><strong>Relative poverty</strong> rises when incomes at the top grow faster than the median catches up with the bottom, widening the gap and leaving more households below 60% of the median.<br />So the pattern points to <strong>growth that has been unequally shared</strong> — real progress against destitution alongside rising inequality.",
+        "distractors": {
+          "B": "The absolute line is fixed in real terms by construction, and moving definitions in opposite directions would be an accounting artefact rather than an economic explanation.",
+          "C": "A shrinking economy would tend to <em>raise</em> absolute poverty, which is the opposite of what is reported.",
+          "D": "Abolishing welfare would sharply increase absolute poverty as well as relative poverty."
+        }
+      }
+    }
+  ]
+}
