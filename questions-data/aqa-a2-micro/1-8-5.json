@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.5",
+  "slug": "1-8-5-merit-and-demerit-goods",
+  "title": "Merit and Demerit Goods",
+  "shortTitle": "Merit and Demerit Goods",
+  "pageTitle": "Merit and Demerit Goods Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on merit and demerit goods for AQA A-Level Economics: under-provision, over-provision and imperfect information.",
+  "intro": "Seven original multiple-choice questions on merit and demerit goods, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on merit and demerit goods and the role of imperfect information, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A merit good is best defined as a good that",
+      "options": {
+        "A": "Every household is legally required to consume.",
+        "B": "Generates positive externalities and is under-provided.",
+        "C": "Is non-excludable and non-rival in its consumption.",
+        "D": "Is provided free of charge by the government."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>merit good</strong> generates <strong>positive externalities</strong> in consumption, so its social benefit exceeds its private benefit. Because consumers weigh only their own benefit — and often underestimate even that — the market <strong>under-provides</strong> it. Education, healthcare and vaccination are the standard examples.",
+        "distractors": {
+          "A": "Some merit goods are compulsory, such as schooling to a certain age, but compulsion is a <em>policy response</em> rather than part of the definition.",
+          "C": "Non-excludable and non-rival defines a <strong>public good</strong>. Merit goods are excludable and rival — a school place taken is one unavailable to someone else.",
+          "D": "Free provision is again a policy response. A merit good remains one whether the state funds it or not."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-5-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A demerit good is over-provided by the free market because",
+      "options": {
+        "A": "Firms producing it always hold monopoly power.",
+        "B": "It is non-excludable, so consumers can free ride.",
+        "C": "Its marginal social benefit is below its marginal private benefit.",
+        "D": "Its marginal social cost is below its marginal private cost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>demerit good</strong> generates <strong>negative externalities</strong> in consumption, so the benefit to society is <em>less</em> than the benefit to the individual: <strong>MSB lies below MPB</strong>. Consumers buy according to their own benefit, so they buy more than the social optimum. Tobacco, alcohol and sugary food are the usual examples.",
+        "distractors": {
+          "A": "Demerit goods are over-consumed in competitive markets just as readily. Monopoly power is a separate source of market failure.",
+          "B": "Free riding concerns public goods. Cigarettes are perfectly excludable — you have to buy them.",
+          "D": "MSC below MPC would describe a positive externality in <em>production</em>, which is the opposite case."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Imperfect information contributes to the under-consumption of merit goods because consumers",
+      "options": {
+        "A": "Are unable to afford the good at the market price.",
+        "B": "Cannot be prevented from consuming the good without paying.",
+        "C": "Know the full benefits but choose to ignore them.",
+        "D": "Underestimate the long-term private benefits of consuming it."
+      },
+      "answer": "D",
+      "model": {
+        "working": "There are <strong>two</strong> reasons merit goods are under-consumed, and questions often test whether you can separate them. The first is the positive externality — benefits to third parties that the consumer has no reason to weigh. The second is <strong>imperfect information</strong>: consumers underestimate even their <em>own</em> long-term benefit, because the payoff from education, a health check or a pension lies years away and is hard to judge. Both push consumption below the social optimum.",
+        "distractors": {
+          "A": "Affordability is a real barrier and a further argument for subsidy, but it is a question of income rather than of information.",
+          "B": "Non-excludability describes a public good. Merit goods can be charged for.",
+          "C": "If consumers knew and weighed the full benefits they would consume the privately optimal amount. The point is that they do not know them."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The classification of a good as a merit or demerit good is described as subjective because it",
+      "options": {
+        "A": "Cannot be measured using any economic data at all.",
+        "B": "Depends on value judgements and can change over time.",
+        "C": "Depends on whether the good is excludable in consumption.",
+        "D": "Is decided by firms rather than by consumers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Deciding that society <em>ought</em> to consume more of something is a <strong>normative</strong> judgement, and judgements shift. Alcohol was once regarded quite differently from the way it is now; attitudes to sugar, gambling and cannabis have all moved within living memory. The externalities themselves can be measured, but whether they justify calling a good 'merit' or 'demerit' rests on values.",
+        "distractors": {
+          "A": "The associated externalities can often be estimated — the healthcare cost of smoking, for instance. It is the judgement built on top of the evidence that is subjective.",
+          "C": "Excludability determines whether a good is public or private, a separate classification entirely.",
+          "D": "Neither firms nor consumers make the classification. It reflects a society's view of what is beneficial or harmful."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following government policies is most appropriate for correcting the under-consumption of a merit good?",
+      "options": {
+        "A": "An indirect tax on the good.",
+        "B": "A maximum price set below the equilibrium.",
+        "C": "A subsidy paid to producers of the good.",
+        "D": "A minimum price set above the equilibrium."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>subsidy</strong> lowers the price consumers pay and raises the quantity traded, moving consumption <em>towards</em> the social optimum. It works directly against the under-consumption a merit good suffers from. Information campaigns and direct state provision address the same problem, the first by tackling imperfect information and the second by removing the price barrier altogether.",
+        "distractors": {
+          "A": "An indirect tax raises the price and reduces consumption, which is the right tool for a <em>demerit</em> good.",
+          "B": "A maximum price would cut the price but also create excess demand and a shortage, so the extra units simply would not be available.",
+          "D": "A minimum price raises the price and further discourages consumption — precisely the wrong direction."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government funds a campaign publicising the long-term health risks of a demerit good. The intended effect on the market is to",
+      "options": {
+        "A": "Shift the demand curve left, towards the optimum.",
+        "B": "Shift the demand curve right, raising consumption.",
+        "C": "Shift the supply curve left, raising the market price.",
+        "D": "Shift the supply curve right, lowering the market price."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Information campaigns act on <strong>demand</strong>. Better-informed consumers revise downwards their view of the good's benefit, so demand falls at every price and the curve shifts <strong>left</strong>, moving consumption towards the social optimum.<br />The attraction of this approach is that it corrects the underlying problem — imperfect information — rather than overriding consumer choice, and it avoids the black market that taxes and bans can create. Its weakness is that it works slowly and unevenly, which is why it is usually combined with taxation.",
+        "distractors": {
+          "B": "Publicising harm reduces willingness to buy rather than raising it.",
+          "C": "Nothing has changed for producers, so their costs and the supply curve are unaffected.",
+          "D": "Again the policy targets consumers, and a lower price would encourage exactly the consumption the campaign is trying to reduce."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "It is argued that governments should be cautious about labelling goods as merit or demerit goods. The strongest reason is that doing so",
+      "options": {
+        "A": "Involves a value judgement that may not reflect everyone's preferences.",
+        "B": "Is impossible where the good generates any externality at all.",
+        "C": "Prevents the government from raising any tax revenue on the good.",
+        "D": "Requires the good to be non-excludable and non-rival."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Deciding that people consume too little of one thing and too much of another means substituting the government's judgement for the consumer's. That runs against <strong>consumer sovereignty</strong>, and since classifications shift with fashion and evidence, today's confident judgement may look mistaken in twenty years.<br />The counter-argument is strong too: where externalities and imperfect information are demonstrable, leaving the decision entirely to consumers produces a worse outcome. This is a genuine trade-off rather than a settled question, which is what makes it good evaluation material.",
+        "distractors": {
+          "B": "Externalities are the main <em>reason</em> for the classification, not an obstacle to it.",
+          "C": "Governments tax demerit goods heavily, and that revenue is one of the attractions of the policy.",
+          "D": "Non-excludability and non-rivalry define public goods. Merit and demerit goods are ordinary private goods with external effects."
+        }
+      }
+    }
+  ]
+}

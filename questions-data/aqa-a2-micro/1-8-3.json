@@ -1,0 +1,191 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.3",
+  "slug": "1-8-3-public-goods-private-goods-and-quasi-public-goods",
+  "title": "Public Goods, Private Goods and Quasi-Public Goods",
+  "shortTitle": "Public and Private Goods",
+  "pageTitle": "Public Goods Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on public goods for AQA A-Level Economics: non-excludability, non-rivalry, the free rider problem and quasi-public goods.",
+  "intro": "Eight original multiple-choice questions on public, private and quasi-public goods, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on public goods, the free rider problem and quasi-public goods, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The two defining characteristics of a pure public good are that it is",
+      "options": {
+        "A": "Excludable and rival.",
+        "B": "Excludable and non-rival.",
+        "C": "Non-excludable and rival.",
+        "D": "Non-excludable and non-rival."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A pure public good is <strong>non-excludable</strong> — it is impossible or prohibitively costly to stop non-payers consuming it — and <strong>non-rival</strong>, meaning one person's consumption leaves no less available for anyone else. National defence, street lighting and a lighthouse are the standard examples. Both characteristics must hold; a good with only one of them is a quasi-public good.",
+        "distractors": {
+          "A": "Excludable and rival describes a <strong>private</strong> good, such as a sandwich or a pair of shoes.",
+          "B": "Excludable but non-rival describes something like a subscription streaming service — one more viewer costs the provider almost nothing, but non-payers can be shut out.",
+          "C": "Non-excludable but rival is a common resource such as an ocean fishery, where anyone may fish but every fish caught is one fewer for others."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Non-rivalry in consumption means that",
+      "options": {
+        "A": "Firms cannot prevent non-payers from consuming the good.",
+        "B": "One person's consumption leaves no less for others.",
+        "C": "The good is supplied by the government rather than by firms.",
+        "D": "Two firms cannot compete to supply the same good."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Non-rivalry</strong> means the marginal cost of supplying one more user is effectively <strong>zero</strong>. One more person watching a firework display, or benefiting from a lighthouse beam, takes nothing away from anyone else. It is a statement about the nature of consumption, not about who provides the good.",
+        "distractors": {
+          "A": "That is <strong>non-excludability</strong>, the other characteristic. The two are separate and a good can have one without the other.",
+          "C": "Who provides a good is a policy choice. Public goods are usually state-funded <em>because</em> of their characteristics, but that is a consequence, not the definition.",
+          "D": "Rivalry between firms is competition in a market. Rivalry in this sense concerns consumption by individuals."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The free rider problem arises because public goods are",
+      "options": {
+        "A": "Expensive for governments to provide.",
+        "B": "Non-excludable, so consumers can benefit without paying.",
+        "C": "Non-rival, so producing them costs nothing at all.",
+        "D": "Provided by monopolies with substantial market power."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Because a public good is <strong>non-excludable</strong>, anyone can enjoy it once it exists, whether or not they contributed. The rational individual therefore waits for someone else to pay — and since everyone reasons the same way, no one pays and the good is never supplied. Firms cannot use the price mechanism at all, which is why public goods are a case of <strong>complete market failure</strong> and are typically funded from general taxation.",
+        "distractors": {
+          "A": "Cost is a real constraint on any government, but expense is not what stops the <em>market</em> providing the good. Plenty of costly private goods are supplied profitably.",
+          "C": "Non-rivalry means the cost of an extra <em>user</em> is zero. Building the lighthouse or funding the army still costs a great deal.",
+          "D": "Monopoly power is a separate source of market failure and has nothing to do with free riding."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is the best example of a pure public good?",
+      "options": {
+        "A": "A ticketed concert in a large stadium.",
+        "B": "A toll motorway during rush hour.",
+        "C": "A loaf of bread bought in a supermarket.",
+        "D": "Street lighting in a residential area."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Street lighting satisfies both conditions. It is <strong>non-excludable</strong>, since nobody walking down the street can be prevented from benefiting, and <strong>non-rival</strong>, since one person's use of the light leaves it just as bright for everyone else. That is why it is funded through taxation rather than sold.",
+        "distractors": {
+          "A": "A ticketed concert is excludable — you need a ticket — and in a stadium of fixed capacity it is rival too, since every seat taken is one fewer available.",
+          "B": "A toll road is excludable by definition, and during rush hour it is rival: extra vehicles cause congestion that reduces everyone else's benefit.",
+          "C": "A loaf of bread is the textbook <strong>private</strong> good: excludable and entirely rival."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A quasi-public good is best described as a good that",
+      "options": {
+        "A": "Has some but not all public good characteristics.",
+        "B": "Is always provided free of charge by the government.",
+        "C": "Is non-excludable and non-rival in every circumstance.",
+        "D": "Is produced by a private firm under a government contract."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>quasi-public good</strong> is only partly non-excludable or only partly non-rival, and often the classification changes with circumstances. A public beach is non-rival on a quiet weekday but distinctly rival in August; a road is non-rival at midnight and rival in the rush hour. Technology can also shift the boundary, as electronic tolling has made roads far more excludable than they once were.",
+        "distractors": {
+          "B": "Charging is possible for many quasi-public goods, which is precisely what makes them only <em>quasi</em>-public. Toll roads and entry-fee parks are common.",
+          "C": "Meeting both conditions in all circumstances makes a good a <strong>pure</strong> public good.",
+          "D": "Who produces the good is a matter of contracting arrangements, not of its economic characteristics."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A public beach becomes extremely crowded during a summer heatwave. In economic terms the beach has become",
+      "options": {
+        "A": "A pure public good, because entry is still free.",
+        "B": "A private good, because it is now excludable.",
+        "C": "Rival in consumption, so now quasi-public.",
+        "D": "Non-excludable for the first time."
+      },
+      "answer": "C",
+      "model": {
+        "working": "On an empty day the beach is non-rival: one more visitor takes nothing from anyone else. Once it is crowded, each additional person genuinely reduces the space and enjoyment available to everybody else, so consumption has become <strong>rival</strong>. It remains non-excludable, so it now has one characteristic but not the other — the definition of a <strong>quasi-public good</strong>.",
+        "distractors": {
+          "A": "Free entry establishes non-excludability, but a pure public good must be non-rival as well, and crowding has destroyed that.",
+          "B": "Nothing has been done to keep anyone out. The beach is still non-excludable, so it is not a private good.",
+          "D": "The beach was non-excludable before the heatwave too. What has changed is rivalry, not excludability."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Because of the free rider problem, pure public goods are usually",
+      "options": {
+        "A": "Funded through taxation and provided by the state.",
+        "B": "Provided by monopolists charging very high prices.",
+        "C": "Sold at a price equal to their marginal cost of supply.",
+        "D": "Supplied efficiently by competitive private firms."
+      },
+      "answer": "A",
+      "model": {
+        "working": "No firm can charge for a good it cannot withhold, so the market supplies none at all. The usual solution is for the state to fund provision from <strong>general taxation</strong>, which sidesteps free riding by making contribution compulsory. The remaining difficulty is judging <em>how much</em> to provide, since without prices there is no direct signal of how strongly people value it.",
+        "distractors": {
+          "B": "A monopolist still needs to be able to exclude non-payers in order to charge anything. Non-excludability defeats that.",
+          "C": "Marginal cost of supplying one more user is zero for a non-rival good, so a price equal to marginal cost would be zero and would fund nothing.",
+          "D": "Competitive private provision is exactly what fails here, which is why public goods are a case of complete market failure."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Electronic tolling makes it cheap and practical to charge every vehicle using a road. In economic terms this technology has",
+      "options": {
+        "A": "Made the road non-rival as well as non-excludable.",
+        "B": "Made the road excludable, so it can be provided by the market.",
+        "C": "Removed the congestion that made the road rival in consumption.",
+        "D": "Turned the road into a pure public good."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The characteristics of a good are not fixed by nature — technology can change them. Electronic tolling makes it feasible to identify and charge every user, so the road becomes <strong>excludable</strong> and a private firm can supply it profitably. It remains rival at busy times, so it does not become a private good in every sense, but the market failure caused by non-excludability has been solved.<br />The same logic explains encrypted broadcasting and paywalled content: goods that were once effectively public became marketable once exclusion was possible.",
+        "distractors": {
+          "A": "Tolling does nothing to relieve congestion, so the road is no more non-rival than before. It affects excludability only.",
+          "C": "Charging may reduce traffic somewhat, but the technology addresses who can be made to pay rather than the physical rivalry of road space.",
+          "D": "Making a good excludable moves it <em>away</em> from being a public good, not towards it."
+        }
+      }
+    }
+  ]
+}

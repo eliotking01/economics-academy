@@ -1,0 +1,213 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.9",
+  "slug": "1-8-9-government-intervention-in-markets",
+  "title": "Government Intervention in Markets",
+  "shortTitle": "Government Intervention",
+  "pageTitle": "Government Intervention Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on government intervention for AQA A-Level Economics: indirect taxes, subsidies, price controls and tradable permits.",
+  "intro": "Nine original multiple-choice questions on government intervention in markets, written to the style and difficulty of AQA Paper 3 Section A. Two ask you to sketch the diagram yourself.",
+  "notesTeaser": "Nine original multiple-choice questions on indirect taxes, subsidies, price controls and other interventions, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-9-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The main purpose of placing an indirect tax on a demerit good is to",
+      "options": {
+        "A": "Increase the quantity of the good that is consumed.",
+        "B": "Internalise the external cost and reduce consumption.",
+        "C": "Lower the price consumers pay for the good.",
+        "D": "Shift the demand curve for the good to the right."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An indirect tax raises producers' costs, shifting the supply curve <strong>up and left</strong> and raising the price consumers pay. The higher price reduces the quantity demanded towards the social optimum. The economic term for this is <strong>internalising the externality</strong>: the tax makes the buyer face a cost that was previously borne by third parties.",
+        "distractors": {
+          "A": "Reducing consumption is the aim. A tax that raised it would be self-defeating.",
+          "C": "Taxes raise the price paid by consumers rather than lowering it.",
+          "D": "The tax acts on supply. Quantity demanded falls as a movement <em>along</em> the demand curve, which does not shift."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An indirect tax on a demerit good will be least effective at reducing consumption when demand for the good is",
+      "options": {
+        "A": "Perfectly elastic.",
+        "B": "Price elastic.",
+        "C": "Price inelastic.",
+        "D": "Unit elastic."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Where demand is <strong>price inelastic</strong>, a higher price causes only a small fall in the quantity demanded, so consumption barely changes. This is the central weakness of taxing addictive demerit goods such as tobacco: the tax raises a great deal of <em>revenue</em> but achieves little reduction in consumption, and it falls hardest on low-income households, making it <strong>regressive</strong>.",
+        "distractors": {
+          "A": "Perfectly elastic demand would mean consumption collapsing to zero at any price rise — the most effective case imaginable.",
+          "B": "Elastic demand means a large fall in quantity for a given price rise, so the tax works well.",
+          "D": "Unit elasticity gives a proportional response, which is more effective than the inelastic case."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the market for a good with a positive externality in consumption, a subsidy paid to producers will",
+      "options": {
+        "A": "Shift the supply curve right, lowering the price and raising the quantity.",
+        "B": "Shift the supply curve left, raising the price and lowering the quantity.",
+        "C": "Shift the demand curve left, lowering both price and quantity.",
+        "D": "Shift the demand curve right, raising both price and quantity."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Sketch demand and supply, with MSB above MPB by the external benefit. The free market under-consumes.<br />A <strong>subsidy</strong> reduces producers' effective costs, so the supply curve shifts <strong>right</strong> — or read vertically, <strong>down by the amount of the subsidy</strong>. The price consumers pay <strong>falls</strong> and the quantity traded <strong>rises</strong> towards the social optimum where MSB = MSC.<br />Set the subsidy equal to the marginal external benefit and consumption reaches the optimum exactly. The practical difficulties are valuing that benefit and finding the money, since a subsidy has an opportunity cost for the government.",
+        "distractors": {
+          "B": "A leftward shift is the effect of a <em>tax</em>, which raises costs rather than lowering them.",
+          "C": "The subsidy is paid to producers, so it acts on supply. Demand does not move.",
+          "D": "Again a demand-side answer to a supply-side policy, and a subsidy lowers the price consumers pay rather than raising it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government sets a minimum price for alcohol above the market equilibrium. All other things being equal, the most likely consequences are",
+      "options": {
+        "A": "A shortage of alcohol and lower consumption.",
+        "B": "A surplus of alcohol and higher consumption.",
+        "C": "A shortage of alcohol and higher consumption.",
+        "D": "A surplus of alcohol and lower consumption."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>minimum price</strong> above equilibrium is a price floor. At the higher price, quantity supplied exceeds quantity demanded, producing a <strong>surplus</strong>, while consumption <strong>falls</strong> — which is the policy's objective for a demerit good.<br />The evaluation points matter here: the surplus wastes resources, the policy is regressive since it hits low-income drinkers hardest, and where demand is inelastic and addiction strong it may create a <strong>black market</strong> rather than reduce drinking.",
+        "distractors": {
+          "A": "Shortages arise from <em>maximum</em> prices set below equilibrium, not minimum prices above it.",
+          "B": "A higher price reduces the quantity demanded; it cannot raise consumption.",
+          "C": "Both halves are wrong for a price floor."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government sets a maximum price for rented housing below the equilibrium level. A likely unintended consequence is",
+      "options": {
+        "A": "A rise in the quantity of housing supplied to the rental market.",
+        "B": "An increase in the equilibrium rent in the long run.",
+        "C": "The emergence of a black market in rented accommodation.",
+        "D": "The elimination of all excess demand for housing."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A binding <strong>maximum price</strong> creates <strong>excess demand</strong> that the price is not allowed to resolve. With more tenants than properties at the controlled rent, some are willing to pay more than the legal maximum and some landlords are willing to accept it — so an <strong>illegal secondary market</strong> develops, alongside rationing by waiting list, discrimination or informal payments. This is a standard route to <strong>government failure</strong>.",
+        "distractors": {
+          "A": "A lower rent makes letting less profitable, so quantity supplied <em>falls</em>.",
+          "B": "The underlying equilibrium rent is set by demand and supply and is not changed by the control. What the policy does is prevent the market reaching it.",
+          "D": "The control <em>creates</em> excess demand rather than eliminating it, because the price can no longer ration."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government imposes a specific tax of £3 per unit on a good. Before the tax, 40,000 units were sold at £12. After the tax, 34,000 units are sold at £14. The government's tax revenue is",
+      "options": {
+        "A": "£68,000",
+        "B": "£102,000",
+        "C": "£120,000",
+        "D": "£476,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Tax revenue is the tax per unit multiplied by the quantity <strong>actually traded after the tax</strong>.<br />£3 × 34,000 = <strong>£102,000</strong>.<br />Note two things. Revenue uses the <em>new</em> quantity, because the higher price has choked off 6,000 units of sales. And consumers bear only £2 of the £3 tax through the higher price, with producers absorbing the remaining £1 — the incidence depends on the relative elasticities of demand and supply.",
+        "distractors": {
+          "A": "£68,000 uses a tax of £2, the rise in the price consumers pay. The government collects the full £3, not just the part passed on.",
+          "C": "£120,000 uses the <em>original</em> quantity of 40,000. Those extra 6,000 units are no longer sold, so no tax is collected on them.",
+          "D": "£476,000 is £14 × 34,000, the total consumer spending after the tax rather than the tax revenue."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government issues a fixed number of tradable pollution permits and allows firms to buy and sell them. The main economic advantage of this approach is that",
+      "options": {
+        "A": "Firms that pollute most will always be forced to close down.",
+        "B": "It guarantees that pollution will be eliminated entirely.",
+        "C": "It raises more revenue than an equivalent indirect tax.",
+        "D": "Pollution is cut where abatement is cheapest."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A permit scheme fixes the <strong>total quantity</strong> of pollution and lets the market decide who abates. Firms that can cut emissions cheaply do so and sell their spare permits; firms facing high abatement costs buy permits instead. The overall reduction is achieved at the <strong>lowest total cost to society</strong>, which a uniform regulation could not manage.<br />The evaluation is that setting the right number of permits requires information the regulator may not have, and monitoring compliance is costly.",
+        "distractors": {
+          "A": "High polluters buy permits and carry on, paying for the privilege. The scheme prices pollution rather than prohibiting it.",
+          "B": "The cap is deliberately set above zero. Eliminating pollution entirely would mean shutting down most production.",
+          "C": "Permits may be auctioned or given away free. Revenue is not the primary aim, and a tax can raise as much or more."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following interventions is most appropriate for correcting the complete market failure caused by a public good?",
+      "options": {
+        "A": "An indirect tax on the good.",
+        "B": "A maximum price set below the equilibrium.",
+        "C": "Direct state provision funded from taxation.",
+        "D": "A subsidy paid to private producers of the good."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A public good is <strong>non-excludable</strong>, so no firm can charge for it and the market provides none at all. Neither taxes nor price controls can help, because there is no market to adjust. The remedy is <strong>direct provision funded from general taxation</strong>, which overcomes the free rider problem by making contribution compulsory.",
+        "distractors": {
+          "A": "A tax would discourage provision of a good that is already not being provided.",
+          "B": "A price control assumes a functioning market with a price to control. Here there is neither.",
+          "D": "A subsidy helps where a good is under-provided but still traded. With a pure public good the firm still cannot charge anyone, so it has no revenue to subsidise."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-9-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government must choose between an indirect tax and a regulation banning a polluting process outright. The strongest economic argument for the tax is that it",
+      "options": {
+        "A": "Costs the government nothing to design or enforce.",
+        "B": "Guarantees that pollution falls to zero across the industry.",
+        "C": "Is certain to reduce pollution by a known, precise amount.",
+        "D": "Lets firms decide how to cut pollution and raises revenue."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A tax prices the externality and then leaves firms to respond however is cheapest for them — abating, investing in cleaner technology, or paying and continuing. Abatement therefore happens where it costs least, and the tax raises <strong>revenue</strong> that can fund clean-up or offset other taxes. A ban forces every firm down the same path regardless of cost, and raises nothing.<br />The trade-off is real, though: a ban delivers a <strong>certain</strong> outcome, whereas a tax's effect depends on elasticity of demand and on valuing the external cost correctly. Where the harm is severe and irreversible, that certainty may be worth more than the flexibility.",
+        "distractors": {
+          "A": "Taxes must be set, collected and enforced, all of which cost money. Neither policy is free.",
+          "B": "A tax reduces pollution but does not eliminate it; firms may pay and continue. Guaranteed elimination is the <em>ban's</em> advantage.",
+          "C": "Certainty about the quantity is precisely what a tax lacks, since the outcome depends on how firms and consumers respond."
+        }
+      }
+    }
+  ]
+}

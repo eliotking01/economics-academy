@@ -1,0 +1,260 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.4",
+  "slug": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+  "title": "Positive and Negative Externalities in Consumption and Production",
+  "shortTitle": "Externalities",
+  "pageTitle": "Externalities Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on externalities for AQA A-Level Economics: private and social costs and benefits, welfare loss and the socially optimal output.",
+  "intro": "Ten original multiple-choice questions on positive and negative externalities in consumption and production, written to the style and difficulty of AQA Paper 3 Section A. Three ask you to sketch the diagram yourself.",
+  "notesTeaser": "Ten original multiple-choice questions on positive and negative externalities, private and social costs and benefits, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An externality is best defined as a cost or benefit that falls on",
+      "options": {
+        "A": "A third party outside the transaction.",
+        "B": "The consumer who buys the good.",
+        "C": "The government that regulates the market.",
+        "D": "The producer who supplies the good."
+      },
+      "answer": "A",
+      "model": {
+        "working": "An <strong>externality</strong> is a spillover effect on someone <strong>outside</strong> the transaction. Because neither the buyer nor the seller bears it, neither takes it into account when deciding how much to trade, so the market quantity differs from the socially optimal one. That gap is the market failure.",
+        "distractors": {
+          "B": "Costs and benefits falling on the buyer are <strong>private</strong> benefits and private costs, and they are already reflected in the demand curve.",
+          "C": "The government is not a party to an ordinary market transaction, but externalities exist whether or not any government is watching. The definition turns on effects outside the deal, not on regulation.",
+          "D": "The producer's own costs are <strong>private costs</strong>, captured in the supply curve."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Marginal social cost is best defined as",
+      "options": {
+        "A": "Marginal private benefit minus marginal external benefit.",
+        "B": "Marginal private cost minus marginal external cost.",
+        "C": "Marginal private cost plus marginal external cost.",
+        "D": "Total private cost divided by output."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>MSC = MPC + MEC</strong>. The full cost to society of producing one more unit is what the producer pays plus whatever cost is imposed on everyone else. The parallel on the demand side is <strong>MSB = MPB + MEB</strong>. Where there are no externalities the external terms are zero and social and private curves coincide, which is why the free market outcome is efficient in that case.",
+        "distractors": {
+          "A": "This mixes costs with benefits and subtracts where it should add.",
+          "B": "Subtracting the external cost would make society's cost <em>lower</em> than the producer's, which reverses the logic of a negative externality.",
+          "D": "Total cost divided by output is <strong>average</strong> cost. Marginal social cost concerns one more unit."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A factory's production causes air pollution that harms nearby residents. In this market",
+      "options": {
+        "A": "Marginal private benefit exceeds marginal social benefit.",
+        "B": "Marginal private cost equals marginal social cost.",
+        "C": "Marginal social cost exceeds marginal private cost.",
+        "D": "Marginal social cost is below marginal private cost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Pollution is an <strong>external cost of production</strong>. The factory pays for its labour, materials and energy — its <strong>private cost</strong> — but the residents bear the harm from the emissions. Society's total cost is therefore <strong>higher</strong> than the producer's, so <strong>MSC lies above MPC</strong>. Because the firm ignores the gap, it produces more than the socially optimal quantity.",
+        "distractors": {
+          "A": "The externality here is in <em>production</em>, so it affects the cost curves. Benefits are unaffected.",
+          "B": "MSC would equal MPC only if there were no external costs at all — precisely what the pollution rules out.",
+          "D": "MSC below MPC would mean production created an external <em>benefit</em>, which is the opposite of pollution."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A negative externality in production means the free market will produce",
+      "options": {
+        "A": "An output above the socially optimal level, with a welfare loss.",
+        "B": "An output below the socially optimal level, with a welfare loss.",
+        "C": "Exactly the socially optimal level of output.",
+        "D": "No output at all, because the external cost is too high."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Firms decide on the basis of their <strong>private</strong> costs, which are lower than the full social costs. They therefore find it profitable to produce beyond the point where MSC equals MSB — <strong>over-production</strong>. The units produced beyond the social optimum cost society more than they are worth, and the triangle they create between MSC and MSB is the <strong>welfare loss</strong>.",
+        "distractors": {
+          "B": "Under-production is what happens with a <em>positive</em> externality, where the market ignores benefits rather than costs.",
+          "C": "The free market only reaches the social optimum when there are no externalities and private and social curves coincide.",
+          "D": "Firms have no reason to stop producing, since they never pay the external cost. Over-production is exactly the problem."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A household installs solar panels, reducing the emissions that neighbouring households would otherwise breathe. This is best described as",
+      "options": {
+        "A": "A negative externality in consumption.",
+        "B": "A negative externality in production.",
+        "C": "A positive externality in consumption.",
+        "D": "A positive externality in production."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The household is <strong>consuming</strong> the panels, and the benefit — cleaner air — falls on <strong>third parties</strong>. That makes it a <strong>positive externality in consumption</strong>, so <strong>MSB lies above MPB</strong>. Because buyers weigh only their own benefit, too few panels are installed and the good is <strong>under-consumed</strong> relative to the social optimum.",
+        "distractors": {
+          "A": "The spillover is a benefit rather than a cost, so it cannot be a negative externality.",
+          "B": "The externality arises from the household's act of consumption, not from the manufacturing process.",
+          "D": "A positive externality in production would be a benefit arising from how a good is <em>made</em>, such as a firm training workers who later move to other employers."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the market for a good with a positive externality in consumption, the socially optimal output is found where",
+      "options": {
+        "A": "Marginal private benefit equals marginal private cost.",
+        "B": "Marginal private benefit equals marginal social cost.",
+        "C": "Marginal social benefit equals marginal private benefit.",
+        "D": "Marginal social benefit equals marginal social cost."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Sketch an MPC curve as supply and two demand curves: MPB, and <strong>MSB above it</strong> by the size of the external benefit.<br />The <strong>free market</strong> settles where MPB meets MPC, because that is what buyers and sellers each take into account.<br />The <strong>social optimum</strong> is always where <strong>MSB = MSC</strong> — where the full benefit to society of one more unit equals its full cost. That lies to the <em>right</em> of the market outcome here, which is why the good is under-consumed and the welfare loss is a triangle between the two quantities.",
+        "distractors": {
+          "A": "MPB = MPC gives the <strong>free market</strong> equilibrium, which is precisely the outcome the externality makes inefficient.",
+          "B": "This mixes a private benefit with a social cost. The optimum compares like with like: total social benefit against total social cost.",
+          "C": "MSB equals MPB only where the external benefit is zero, meaning no externality exists at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market with a negative externality in consumption, the welfare loss triangle represents",
+      "options": {
+        "A": "The government revenue lost by not taxing the good.",
+        "B": "The private cost borne by producers of the good.",
+        "C": "The profit earned by firms on the units over-consumed.",
+        "D": "The excess of social cost over social benefit."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Beyond the social optimum, each extra unit consumed costs society more than it is worth to society. Summing that shortfall across all the units between the social optimum and the free market quantity gives the <strong>welfare loss</strong> — the shaded triangle between the MSB and MSC curves. It is the loss of allocative efficiency caused by the externality being ignored, and it is what intervention aims to remove.",
+        "distractors": {
+          "A": "Tax revenue is a transfer from consumers to the government, not a loss of welfare. Indeed a well-set tax <em>reduces</em> the welfare loss.",
+          "B": "Producers' private costs are already covered by the price they receive, and they appear as the area under the MPC curve.",
+          "C": "Firms' profit on those units is a private gain. The welfare loss measures the net cost to <em>society</em>, which is a different quantity."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm trains its workers, some of whom later move to other employers who benefit from those skills without paying for the training. This is best described as",
+      "options": {
+        "A": "A negative externality in consumption.",
+        "B": "A negative externality in production.",
+        "C": "A positive externality in consumption.",
+        "D": "A positive externality in production."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The externality arises from the firm's <strong>production</strong> activity, and the spillover is a <strong>benefit</strong> to other employers who are third parties to the training. That makes it a <strong>positive externality in production</strong>: <strong>MSC lies below MPC</strong>, because society's net cost of the firm's activity is lower than the firm's own.<br />The consequence matters: firms that expect to lose trained staff under-invest in training, which is a standard argument for government-funded apprenticeships.",
+        "distractors": {
+          "A": "Nothing here is being consumed, and the spillover is positive rather than negative.",
+          "B": "The spillover is a benefit to other firms rather than a cost imposed on anyone.",
+          "C": "The externality originates in the firm's productive activity, not in an act of consumption."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q9",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the costs and benefits of producing one more unit of a good.<br />Using Table 1, the market is currently",
+      "table": {
+        "caption": "Table 1: Costs and benefits of the last unit produced",
+        "head": [
+          "Measure",
+          "Value per unit"
+        ],
+        "rows": [
+          [
+            "Marginal private cost",
+            "£40"
+          ],
+          [
+            "Marginal external cost",
+            "£15"
+          ],
+          [
+            "Marginal private benefit",
+            "£46"
+          ],
+          [
+            "Marginal external benefit",
+            "£0"
+          ]
+        ]
+      },
+      "options": {
+        "A": "At the socially optimal output.",
+        "B": "Over-producing, because marginal social cost exceeds marginal social benefit.",
+        "C": "Under-producing, because marginal social benefit exceeds marginal social cost.",
+        "D": "Unable to produce the good at all."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Build the two social figures first.<br />MSC = MPC + MEC = £40 + £15 = <strong>£55</strong>.<br />MSB = MPB + MEB = £46 + £0 = <strong>£46</strong>.<br />The last unit costs society £55 and is worth only £46 to it, so it should not be produced: <strong>MSC exceeds MSB</strong> and the market is <strong>over-producing</strong>. That is the signature of a negative externality in production, and it points to an indirect tax as the corrective policy.",
+        "distractors": {
+          "A": "The social optimum requires MSC to equal MSB. Here they differ by £9 per unit.",
+          "C": "Under-production would need MSB above MSC, which is the positive externality case. The figures run the other way.",
+          "D": "The good is being produced — the question is whether too much of it is."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-4-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "Sketching the market for a good with a negative externality in production, a government sets an indirect tax exactly equal to the marginal external cost. The most likely result is that",
+      "options": {
+        "A": "Output falls below the socially optimal level.",
+        "B": "Output falls to the social optimum and the welfare loss goes.",
+        "C": "Output is unchanged, because the tax is paid by producers.",
+        "D": "The welfare loss increases, because the tax raises the price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sketch MPC as supply, with MSC above it by the external cost, and MPB as demand.<br />An indirect tax raises producers' costs, shifting the supply curve <strong>up by the amount of the tax</strong>. Set the tax equal to the marginal external cost and the supply curve the market actually trades on becomes the <strong>MSC</strong> curve. Firms now face the full social cost of what they produce, the externality has been <strong>internalised</strong>, and the market settles at the socially optimal output where MSB = MSC. The welfare loss triangle disappears.<br />In practice the difficulty is <em>valuing</em> the external cost accurately, which is why such taxes rarely achieve the optimum exactly — a key evaluation point.",
+        "distractors": {
+          "A": "A tax larger than the external cost would push output below the optimum. Setting it exactly equal lands on it.",
+          "C": "Producers pass part of the tax on through a higher price, so quantity demanded falls. How the burden splits depends on the relative elasticities.",
+          "D": "The higher price is the mechanism by which over-consumption is corrected. The welfare loss falls rather than rises."
+        }
+      }
+    }
+  ]
+}

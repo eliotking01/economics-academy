@@ -4,7 +4,7 @@ Batch state for the free practice questions. The authoring standard is
 `QUESTIONS_GUIDE.md`; this file records what is done and what is next, so work
 can resume cleanly across sessions.
 
-**Live: 44 topics, 327 questions.** Target: 166 topics, ~1,272 questions.
+**Live: 54 topics, 401 questions. AQA Microeconomics is complete.** Target: 166 topics, ~1,272 questions.
 
 ---
 
@@ -29,7 +29,7 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 
 ---
 
-## AQA Microeconomics — 44 of 54 topics
+## AQA Microeconomics — 54 of 54 topics, complete
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -77,7 +77,16 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 | 1.7 | 1.7.1 The Distribution of Income and Wealth | 8 | Done |
 | 1.7 | 1.7.2 The Problem of Poverty | 7 | Done |
 | 1.7 | 1.7.3 Government Policies on Poverty and Distribution | 7 | Done |
-| 1.8 | Market Failure and Government Intervention (10 topics) | 74 | Not started |
+| 1.8 | 1.8.1 How Markets and Prices Allocate Resources | 7 | Done |
+| 1.8 | 1.8.2 The Meaning of Market Failure | 6 | Done |
+| 1.8 | 1.8.3 Public, Private and Quasi-Public Goods | 8 | Done |
+| 1.8 | 1.8.4 Positive and Negative Externalities | 10 | Done |
+| 1.8 | 1.8.5 Merit and Demerit Goods | 7 | Done |
+| 1.8 | 1.8.6 Market Imperfections | 6 | Done |
+| 1.8 | 1.8.7 Competition Policy | 7 | Done |
+| 1.8 | 1.8.8 Public Ownership, Privatisation, Regulation | 7 | Done |
+| 1.8 | 1.8.9 Government Intervention in Markets | 9 | Done |
+| 1.8 | 1.8.10 Government Failure | 7 | Done |
 
 ## Remaining boards — 0 of 112 topics
 
@@ -208,6 +217,39 @@ Site profile after batch 4:
 | Skills | applied-reasoning 203, definition-in-context 76, data-table 26, calculation 22 |
 | Difficulty | foundation 45, standard 242, stretch 40 |
 | Sketch to solve | 17 |
+
+### Batch 5 — AQA micro 1.8 (2026-07-31)
+
+10 topics, 74 questions. **This completes AQA Microeconomics: 54 of 54 topics
+and 401 questions**, exactly the figure planned.
+
+All 74 re-solved cold from the stem alone with **0 mismatches**. The
+social-cost table in 1.8.4 and the tax revenue calculation in 1.8.9 were
+recomputed, including every distractor figure — 1.8.9 Q6 in particular tests
+whether tax revenue is taken on the post-tax quantity, with the pre-tax
+quantity offered as a distractor.
+
+Fixed during verification: 23 options rewritten where the correct answer ran
+more than 10% longer than the next longest. No letter-distribution failures in
+this batch.
+
+AQA Microeconomics complete — final profile:
+
+| | |
+| --- | --- |
+| Topics | 54 of 54 |
+| Questions | 401 |
+| Answer letters | A 98, B 122, C 102, D 79 (even would be 100) |
+| Skills | applied-reasoning 257, definition-in-context 94, data-table 27, calculation 23 |
+| Difficulty | foundation 55, standard 296, stretch 50 |
+| Sketch to solve | 20 |
+
+Across the whole board, `applied-reasoning` sits well above its ~40% target
+and `calculation` below its ~15%. That is a property of the AQA micro
+specification rather than a drafting choice: units 1.1, 1.2, 1.5, 1.7 and 1.8
+are conceptual throughout, and the calculable material is concentrated in 1.3,
+1.4 and 1.6, where the questions do use it. AQA macro should shift the balance,
+since index numbers, real values and the multiplier are all arithmetic.
 
 ---
 
