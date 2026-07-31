@@ -14,8 +14,8 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 0 — reconnaissance | Complete — `RECON.md` |
 | Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
+| Phase 2 commits 6–7 — emphasis | **Complete** |
 | Phase 1B — enrichment plans | Not started (6 batches, one at a time) |
-| Phase 2 commits 6–7 — emphasis | Not started |
 | Phase 2 commits 8–9 — enrichment | Not started |
 | Phase 3 — final verification | Partial (run after each commit so far) |
 
@@ -43,6 +43,21 @@ space was authored. Cosmetic, and yours to decide.
 Related: the same formula labels the denominator "Injection" where the numerator is
 a change in real GDP. Worth confirming the intended denominator is the *initial*
 injection, since that is what the multiplier ratio needs.
+
+**N2 — a sentence stops mid-clause.**
+`aqa-a2-micro/1-5-8-the-dynamics-of-competition-and-competitive-market-processes.html`,
+in the "Short-Run and Long-Run Benefits of Competition" table:
+
+> **Improved Choice:** competition can lead to a wider variety of products and
+
+The cell ends there. Present on `main`, so not introduced by this pass, and the
+Edexcel side has no equivalent page to borrow the ending from. Needs a few words
+from you.
+
+Also on that page: the short-run column has three rows and the long-run column two,
+so the third row has a single cell rather than a pair. That is a markup asymmetry
+rather than a wording problem, but the two columns no longer line up as a
+comparison.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
@@ -110,6 +125,46 @@ Closes part of audit flag S6. 211 wrappers with no CSS rule anywhere, each wrapp
 exactly one `<figure class="diagram-figure">`. Prettier reflowed 63 files afterwards
 because attributes that had been split now fit on one line.
 
+### 6–7. Emphasis on under-emphasised pages — 16 files
+
+25 pages were flagged as under-emphasised by combined
+(`<strong>` + `key-definition`) density. **16 needed work; 9 did not** and were
+left alone. The metric over-flags pages whose content sits in long explanatory
+text after an already-bolded lead-in, or inside a correctly-emphasised table — this
+was anticipated in `PLAN-mechanical.md`, though the estimate there was 15–20 of 25
+and the AQA half came in lower.
+
+Three patterns applied, each with an existing on-site precedent:
+
+| Pattern | Precedent | Where used |
+| --- | --- | --- |
+| Bold every `concept-table` row label | 76 of 91 tables already do | `1-8-7` (11 rows) |
+| Bold the operative opening phrase of a bullet | `1-2-9`, `1-3-5` — "**Consumer price rises** from P1 to P2" | `2-6-1`, `4-1-1`, `1-5-7`, `1-8-8`, `1-2-10` |
+| Bold direction of change and outcome in prose | `1-2-6`, `1-3-5` | `2-2-2`, `2-2-5`, `4-4-1`, `4-4-3`, `4-3-2`, `4-3-3`, `3-4-4`, `1-3-6`, `1-1-1` |
+
+**AQA (6 changed, 7 left):** `1-8-7`, `2-6-1`, `1-8-8`, `1-5-7`, `1-3-6`, `1-2-3`.
+Left alone: `1-6-4`, `1-5-8`, `2-1-2`, `1-7-3`, `1-4-8`, `1-4-5`, `1-8-6`.
+
+**Edexcel (10 changed, 2 left):** `2-2-2`, `4-1-1`, `2-2-5`, `4-4-1`, `4-4-3`,
+`4-3-2`, `4-3-3`, `3-4-4`, `1-1-1`, `1-2-10`. Left alone: `4-5-4`, `3-3-3`.
+
+`2-2-2-consumption` was the weakest page on the site (1.35) and is now 8.41, above
+the 6.12 median. `4-1-1-globalisation` and its AQA twin `2-6-1` carry the same 18
+bullets word for word and now bold the same 35 phrases, so the twins match.
+
+Deliberately **not** emphasised:
+
+- Two tables on `1-8-8` keep an unbolded first column — both are parallel-content
+  columns (Arguments for / Arguments against), not row labels, the same shape as
+  the Debt vs Equity table on exemplar `2-4-1`.
+- The three ILO survey questions on `2-1-2` — verbatim questions with no anchor.
+- 2–6 word enumerations on `1-8-7` ("Lower prices", "Abuse of monopoly power") —
+  bolding a whole short item is the same as bolding nothing.
+- Illustrative examples on `1-8-8` ("The 2008 financial crisis…") — examples, not
+  concepts.
+- The rationality-assumption list on `1-2-3` — its terms are already carried by
+  `key-definition` chips.
+
 ---
 
 ## Verification so far
@@ -121,7 +176,7 @@ lint or test step:
 - `scripts/verify_text_integrity.py` — extracts visible text at two commits and diffs
 - `scripts/verify_links.py` — resolves every internal href and fragment against disk
 
-### Results at commit 5
+### Results at commit 7
 
 | Check | Result |
 | --- | --- |
@@ -129,6 +184,7 @@ lint or test step:
 | Internal links and fragments | **3,863 refs, 0 broken hrefs, 0 broken fragments** |
 | Display-formula rendering vs `main` | **0 of 176 files changed** (whitespace-collapsed comparison of every `\[…\]`) |
 | Prettier 3.9.6 | Clean on every file touched. 2 files still fail — `revision-notes/index.html` and `macro-application/index.html` — both **pre-existing on `main`** and both untouched here. |
+| Emphasis tags | `<b>`, `<i>`, `<u>`, `<mark>`: still **0 uses**, as before |
 | CTA uniformity | 87 Edexcel blocks identical; 2 gallery blocks identical; 166/166 topic pages carry exactly one |
 
 ### Text integrity, commit by commit
@@ -142,6 +198,8 @@ Only the two commits that are *meant* to change wording do so:
 | `.notes-cta` extraction | **0** |
 | AQA CTA — change expected | 79 |
 | `chart-container` removal | **0** |
+| Emphasis, AQA | **0** |
+| Emphasis, Edexcel | **0** |
 
 ### Visual regression
 
