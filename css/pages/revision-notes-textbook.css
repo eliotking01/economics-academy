@@ -852,3 +852,24 @@
   color: #555;
   margin-bottom: 2em;
 }
+
+/* Bottom-of-page conversion CTA.
+   Replaces the inline styles that were duplicated across every note page. */
+.revision-notes-content .notes-cta {
+  margin-top: 2.5em;
+  padding: 1.5em;
+  background: #f8f8f8;
+  border-left: 4px solid #d52349;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.revision-notes-content .notes-cta p {
+  margin: 0 0 1em;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.revision-notes-content .notes-cta .button {
+  margin: 0.3em;
+}

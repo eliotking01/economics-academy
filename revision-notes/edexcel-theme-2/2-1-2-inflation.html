@@ -237,15 +237,67 @@
                 year, which is set to 100.
               </p>
 
+              <!-- prettier-ignore -->
               <div class="formula-box">
                 <p><strong>Index Calculation:</strong></p>
                 <p>
-                  \[ \text{CPI} = \frac{\text{Price of basket in current year}}
-                  {\text{Price of basket in base year}} \times 100 \]
+                  \[ \text{CPI} = \frac{\text{Price of basket in current year}} {\text{Price of basket in base year}} \times 100 \]
                 </p>
                 <p>
-                  \[ \text{Inflation Rate} = \frac{\text{CPI Year2 - CPI Year1}}
-                  {\text{CPI Year1}} \times 100 \]
+                  \[ \text{Inflation Rate} = \frac{\text{CPI Year2 - CPI Year1}} {\text{CPI Year1}} \times 100 \]
+                </p>
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: From Basket Cost to Inflation Rate</h3>
+                <p>
+                  The cost of a representative basket of goods is recorded for
+                  three years, with <strong>2023 as the base year</strong>:
+                </p>
+                <div class="table-container">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cost of basket</th>
+                        <th>CPI (2023 = 100)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>2023 (base)</strong></td>
+                        <td>£480.00</td>
+                        <td>\( \frac{480}{480} \times 100 = 100 \)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>2024</strong></td>
+                        <td>£504.00</td>
+                        <td>\( \frac{504}{480} \times 100 = 105 \)</td>
+                      </tr>
+                      <tr>
+                        <td><strong>2025</strong></td>
+                        <td>£524.16</td>
+                        <td>\( \frac{524.16}{480} \times 100 = 109.2 \)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <table class="calculation-table">
+                  <tr>
+                    <td>Inflation in 2024</td>
+                    <td>\( \frac{105 - 100}{100} \times 100 = 5\% \)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Inflation in 2025</strong></td>
+                    <td>\( \frac{109.2 - 105}{105} \times 100 = 4\% \)</td>
+                  </tr>
+                </table>
+                <p>
+                  The inflation rate <strong>fell</strong> from 5% to 4%, yet
+                  the basket still costs <strong>more</strong> in 2025 than in
+                  2024. A falling inflation rate means prices are rising more
+                  slowly, not falling. Note too that the 2025 rate is measured
+                  against the 2024 index of 105, not against the base year.
                 </p>
               </div>
             </section>
@@ -310,23 +362,21 @@
                 (C), Investment (I), Government Spending (G) or Net Exports
                 (X-M) can cause demand-pull inflation.
               </p>
-              <div class="chart-container">
-                <figure class="diagram-figure">
-                  <img
-                    src="/images/diagrams/ad-shift-right.png"
-                    alt="AD/AS diagram showing aggregate demand shifting right and pulling the price level up, causing demand-pull inflation"
-                    class="diagram-image"
-                    width="2444"
-                    height="1666"
-                  />
-                  <figcaption class="diagram-caption">
-                    Figure 1: A rightward shift of the aggregate demand curve
-                    (AD1 to AD2) leads to a higher price level (PL1 to PL2) and
-                    increased output (Y1 to Y2), illustrating demand-pull
-                    inflation.
-                  </figcaption>
-                </figure>
-              </div>
+              <figure class="diagram-figure">
+                <img
+                  src="/images/diagrams/ad-shift-right.png"
+                  alt="AD/AS diagram showing aggregate demand shifting right and pulling the price level up, causing demand-pull inflation"
+                  class="diagram-image"
+                  width="2444"
+                  height="1666"
+                />
+                <figcaption class="diagram-caption">
+                  Figure 1: A rightward shift of the aggregate demand curve (AD1
+                  to AD2) leads to a higher price level (PL1 to PL2) and
+                  increased output (Y1 to Y2), illustrating demand-pull
+                  inflation.
+                </figcaption>
+              </figure>
 
               <h3>Cost-Push Inflation</h3>
               <p>
@@ -339,24 +389,22 @@
                 wages, higher indirect taxes, supply chain shocks, and a
                 depreciation of the currency which increases import costs.
               </p>
-              <div class="chart-container">
-                <figure class="diagram-figure">
-                  <img
-                    src="/images/diagrams/sras-shift-left.png"
-                    alt="AD/AS diagram showing short-run aggregate supply shifting left, raising the price level and cutting output: cost-push inflation"
-                    class="diagram-image"
-                    width="2046"
-                    height="1366"
-                    loading="lazy"
-                  />
-                  <figcaption class="diagram-caption">
-                    Figure 2: A leftward shift of the short-run aggregate supply
-                    curve (SRAS1 to SRAS2) leads to a higher price level (PL1 to
-                    PL2) and lower output (Y1 to Y2), illustrating cost-push
-                    inflation.
-                  </figcaption>
-                </figure>
-              </div>
+              <figure class="diagram-figure">
+                <img
+                  src="/images/diagrams/sras-shift-left.png"
+                  alt="AD/AS diagram showing short-run aggregate supply shifting left, raising the price level and cutting output: cost-push inflation"
+                  class="diagram-image"
+                  width="2046"
+                  height="1366"
+                  loading="lazy"
+                />
+                <figcaption class="diagram-caption">
+                  Figure 2: A leftward shift of the short-run aggregate supply
+                  curve (SRAS1 to SRAS2) leads to a higher price level (PL1 to
+                  PL2) and lower output (Y1 to Y2), illustrating cost-push
+                  inflation.
+                </figcaption>
+              </figure>
 
               <h3>Growth of the Money Supply</h3>
               <p>
@@ -479,67 +527,13 @@
               </div>
             </section>
 
-            <section>
-              <h2>Exam Preparation</h2>
-              <div class="exam-tip">
-                <ul>
-                  <li>
-                    Define and distinguish between inflation, deflation, and
-                    disinflation.
-                  </li>
-                  <li>
-                    <strong>Explain</strong> how the CPI is calculated and
-                    <strong>evaluate</strong> its limitations.
-                  </li>
-                  <li>
-                    Draw and analyse <strong>AD/AS diagrams</strong> to
-                    illustrate <strong>demand-pull</strong> and
-                    <strong>cost-push</strong> inflation.
-                  </li>
-                  <li>
-                    <strong>Analyse</strong> the impact of inflation on
-                    different stakeholders, including consumers, firms,
-                    government, and workers.
-                  </li>
-                  <li>
-                    <strong>Evaluate</strong> the severity of inflation, for
-                    example whether it is high or low, and anticipated or
-                    unanticipated.
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <div
-              style="
-                margin-top: 2.5em;
-                padding: 1.5em;
-                background: #f8f8f8;
-                border-left: 4px solid #d52349;
-                border-radius: 4px;
-                text-align: center;
-              "
-            >
-              <p
-                style="
-                  margin: 0 0 1em;
-                  font-weight: 600;
-                  font-family: &quot;Open Sans&quot;, sans-serif;
-                "
-              >
-                Ready to apply these notes?
-              </p>
-              <a
-                href="/past-papers/edexcel/index.html"
-                class="button alt"
-                style="margin: 0.3em"
+            <div class="notes-cta">
+              <p>Ready to apply these notes?</p>
+              <a href="/past-papers/edexcel/index.html" class="button alt"
                 >Edexcel Past Papers</a
               >
-              <a href="/marking.html" class="button alt" style="margin: 0.3em"
-                >Get Essays Marked</a
-              >
-              <a href="/tutoring.html" class="button" style="margin: 0.3em"
-                >Book a Free Intro Call</a
-              >
+              <a href="/marking.html" class="button alt">Get Essays Marked</a>
+              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
             </div>
           </div>
         </div>
