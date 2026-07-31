@@ -15,7 +15,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
-| Phase 1B — enrichment plans | Not started (6 batches, one at a time) |
+| Phase 1B — enrichment plans | Batch 1 of 6 delivered — `PLAN-enrichment-aqa-micro.md` |
 | Phase 2 commits 8–9 — enrichment | Not started |
 | Phase 3 — final verification | Partial (run after each commit so far) |
 
@@ -58,6 +58,18 @@ Also on that page: the short-run column has three rows and the long-run column t
 so the third row has a single cell rather than a pair. That is a markup asymmetry
 rather than a wording problem, but the two columns no longer line up as a
 comparison.
+
+**N3 — a concentration ratio described as both 3-firm and 5-firm.**
+`aqa-a2-micro/1-5-5-oligopoly.html`, "Concentration Ratios":
+
+> "For example, a **3-firm concentration ratio of 80%** means that the top
+> **five** firms account for 80% of total market sales."
+
+One of the two numbers is wrong. This page's `spec-alert` requires students to
+"calculate and interpret concentration ratios", so it is the sentence they will
+read most closely. Found while preparing `PLAN-enrichment-aqa-micro.md`; the worked
+example proposed there sits directly beneath this sentence, which would make the
+inconsistency more conspicuous, so it is worth fixing first.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
