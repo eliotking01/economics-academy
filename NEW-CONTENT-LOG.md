@@ -138,3 +138,28 @@ That page described a 3-firm ratio as covering "the top five firms" (flag N5). T
 author authorised a single explicit exception to the no-wording-changes rule to
 correct it — "five" to "three", one word, the only wording change in this pass —
 after which the component was applied.
+
+## Batch 6 — Edexcel Theme 4
+
+3 worked examples across 3 of 21 pages. 18 pages received nothing.
+
+Smaller than Theme 3 because Theme 4 is largely Edexcel-only content with no AQA
+counterpart, and because the notes already do the arithmetic where it matters —
+`4-1-2` computes opportunity cost for both countries and `4-5-3` already separates
+deficit from debt.
+
+| File | Line | Type | Sits under | What it adds |
+| --- | ---: | --- | --- | --- |
+| `edexcel-theme-4/4-1-4-terms-of-trade.html` | 198 | worked example | Definition and Calculation | ToT index across three years: 100, 94.6, 104.5 — **new** |
+| `edexcel-theme-4/4-1-7-balance-of-payments.html` | 258 | worked example | Current Account Deficits and Surpluses | Current account −£50bn — **reused verbatim from AQA 2-6-3** |
+| `edexcel-theme-4/4-1-9-international-competitiveness.html` | 216 | worked example | Definition and Measures | Unit labour costs £8,000 vs £7,000 across two countries — **new** |
+
+**Figures verified by recomputation**: 106 ÷ 112 × 100 = 94.6 and 115 ÷ 110 × 100 =
+104.5; 4,800,000 ÷ 600 = £8,000 and 7,000,000 ÷ 1,000 = £7,000, so A is 14% higher.
+
+The current account component now appears on **three** pages — `aqa-a2-macro/2-6-3`,
+`edexcel-theme-2/2-1-4` and here — because Edexcel covers the balance of payments in
+both Theme 2 and Theme 4. Flagged in the plan and approved explicitly.
+
+The terms of trade example has no counterpart anywhere on the site: AQA has no terms
+of trade page.
