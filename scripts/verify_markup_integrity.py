@@ -7,7 +7,8 @@ at all, so the text check passes while a link silently disappears. This
 script closes that gap by counting tags and link targets instead.
 
 Reports, per file:
-  - any element type whose count changed
+  - any element type whose count DROPPED (additions are counted but not
+    flagged, since enrichment legitimately adds elements)
   - any href or src that was present before and is gone after
 
 Structural tags that enrichment work legitimately adds (div, table, tr, td,
@@ -74,6 +75,7 @@ def main(argv):
     before, after = args[0], (args[1] if len(args) > 1 else None)
 
     problems = 0
+    gains = 0
     for path in list_files(before):
         old, new = read_at(before, path), read_at(after, path)
         if new is None:
@@ -85,17 +87,23 @@ def main(argv):
                 oc.pop(tag, None)
                 nc.pop(tag, None)
 
+        # Only a DROP is a problem. Enrichment legitimately adds elements, and
+        # flagging those buries the losses that matter.
         for tag in sorted(set(oc) | set(nc)):
-            if oc.get(tag, 0) != nc.get(tag, 0):
+            was, now = oc.get(tag, 0), nc.get(tag, 0)
+            if now < was:
                 problems += 1
-                print(f"TAG   {path}: <{tag}> {oc.get(tag, 0)} -> {nc.get(tag, 0)}")
+                print(f"TAG   {path}: <{tag}> {was} -> {now}")
+            elif now > was:
+                gains += 1
 
         for ref in sorted(orefs):
             if orefs[ref] > nrefs.get(ref, 0):
                 problems += 1
                 print(f"REF   {path}: lost {ref!r}")
 
-    print(f"\ncompared {before} -> {after or 'working tree'}: {problems} problems")
+    print(f"\ncompared {before} -> {after or 'working tree'}: "
+          f"{problems} losses, {gains} additions (additions are not problems)")
     return 1 if problems else 0
 
 
