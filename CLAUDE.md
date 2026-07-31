@@ -138,6 +138,7 @@ House rules:
 ## See also
 
 - `ROADMAP.md` — planned work.
+- `QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
 - `REVIEW-NOTES.md` — problems found but not fixed, including open economics
   content errors. Log new ones there rather than fixing them.
 - `docs/revision-notes-audit.md` — the SEO and accessibility audit already applied.
