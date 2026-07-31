@@ -62,10 +62,10 @@
       "sketch": false,
       "stem": "A commuter rail operator and a budget airline both want to increase their total revenue. Demand for commuter rail travel is price inelastic. Demand for budget air travel is price elastic. All other things being equal, the two firms are most likely to",
       "options": {
-        "A": "cut both rail fares and air fares.",
-        "B": "cut rail fares and raise air fares.",
-        "C": "raise both rail fares and air fares.",
-        "D": "raise rail fares and cut air fares."
+        "A": "Cut both rail fares and air fares.",
+        "B": "Cut rail fares and raise air fares.",
+        "C": "Raise both rail fares and air fares.",
+        "D": "Raise rail fares and cut air fares."
       },
       "answer": "D",
       "model": {
@@ -85,10 +85,22 @@
       "stem": "A gym raises the price of its monthly membership. The price of its pay-as-you-go day pass is unchanged. Table 1 shows the number of day passes sold before and after the increase.<br />Measuring each percentage change against its original value, the cross elasticity of demand for day passes with respect to the price of a monthly membership is",
       "table": {
         "caption": "Table 1: Monthly membership price and day passes sold",
-        "head": ["", "Price of a monthly membership", "Day passes sold per month"],
+        "head": [
+          "",
+          "Price of a monthly membership",
+          "Day passes sold per month"
+        ],
         "rows": [
-          ["Before the price rise", "£30.00", "800"],
-          ["After the price rise", "£36.00", "880"]
+          [
+            "Before the price rise",
+            "£30.00",
+            "800"
+          ],
+          [
+            "After the price rise",
+            "£36.00",
+            "880"
+          ]
         ]
       },
       "options": {
@@ -115,11 +127,23 @@
       "stem": "Table 2 shows how the quantity demanded of three goods responded to a 5% rise in real incomes. All other things were equal.<br />Which one of the following statements is supported by the data in Table 2?",
       "table": {
         "caption": "Table 2: Response of quantity demanded to a 5% rise in real incomes",
-        "head": ["Good", "Change in quantity demanded"],
+        "head": [
+          "Good",
+          "Change in quantity demanded"
+        ],
         "rows": [
-          ["Bus travel within a city", "−4%"],
-          ["Fresh bread", "+2%"],
-          ["Overseas package holidays", "+9%"]
+          [
+            "Bus travel within a city",
+            "−4%"
+          ],
+          [
+            "Fresh bread",
+            "+2%"
+          ],
+          [
+            "Overseas package holidays",
+            "+9%"
+          ]
         ]
       },
       "options": {
@@ -145,10 +169,10 @@
       "sketch": false,
       "stem": "A retail group sells both a budget own-label grocery range and a premium ready-meal range. Forecasters expect real household incomes to fall sharply over the next year. All other things being equal, the group is most likely to",
       "options": {
-        "A": "expand the budget range and cut back the premium range.",
-        "B": "expand the premium range and cut back the budget range.",
-        "C": "expand both ranges, because total spending on food is stable.",
-        "D": "cut back both ranges, because demand for food falls when incomes fall."
+        "A": "Expand the budget range and cut back the premium range.",
+        "B": "Expand the premium range and cut back the budget range.",
+        "C": "Expand both ranges, because total spending on food is stable.",
+        "D": "Cut back both ranges, because demand for food falls when incomes fall."
       },
       "answer": "A",
       "model": {
@@ -189,10 +213,10 @@
       "sketch": false,
       "stem": "A government wants a new indirect tax to raise as much revenue as possible while causing the smallest possible fall in the quantity traded. All other things being equal, it should place the tax on a good for which demand is",
       "options": {
-        "A": "price elastic, because buyers will switch to untaxed substitutes.",
-        "B": "price elastic, because the fall in quantity widens the tax base.",
-        "C": "price inelastic, because quantity demanded barely responds to price.",
-        "D": "price inelastic, because producers will absorb the whole of the tax."
+        "A": "Price elastic, because buyers will switch to untaxed substitutes.",
+        "B": "Price elastic, because the fall in quantity widens the tax base.",
+        "C": "Price inelastic, because quantity demanded barely responds to price.",
+        "D": "Price inelastic, because producers will absorb the whole of the tax."
       },
       "answer": "C",
       "model": {
@@ -211,10 +235,10 @@
       "sketch": false,
       "stem": "A firm finds that when the price of Product Z rises by 10%, the quantity demanded of its own product falls by 6%. All other things being equal, the two products are most likely",
       "options": {
-        "A": "complements, and the cross elasticity of demand is −0.6.",
-        "B": "complements, and the cross elasticity of demand is +0.6.",
-        "C": "substitutes, and the cross elasticity of demand is −0.6.",
-        "D": "substitutes, and the cross elasticity of demand is +0.6."
+        "A": "Complements, and the cross elasticity of demand is −0.6.",
+        "B": "Complements, and the cross elasticity of demand is +0.6.",
+        "C": "Substitutes, and the cross elasticity of demand is −0.6.",
+        "D": "Substitutes, and the cross elasticity of demand is +0.6."
       },
       "answer": "A",
       "model": {
@@ -233,10 +257,10 @@
       "sketch": true,
       "stem": "A government pays producers the same subsidy per unit on two goods. Demand for Good X is price elastic and demand for Good Y is price inelastic. Supply conditions are identical in the two markets. Sketching each market, the subsidy will produce",
       "options": {
-        "A": "a larger fall in price and a larger rise in quantity in the market for Good X.",
-        "B": "a larger fall in price and a larger rise in quantity in the market for Good Y.",
-        "C": "a larger fall in price for Good X and a larger rise in quantity for Good Y.",
-        "D": "a larger fall in price for Good Y and a larger rise in quantity for Good X."
+        "A": "A larger fall in price and a larger rise in quantity in the market for Good X.",
+        "B": "A larger fall in price and a larger rise in quantity in the market for Good Y.",
+        "C": "A larger fall in price for Good X and a larger rise in quantity for Good Y.",
+        "D": "A larger fall in price for Good Y and a larger rise in quantity for Good X."
       },
       "answer": "D",
       "model": {

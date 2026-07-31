@@ -83,6 +83,12 @@ that are true but do not answer the stem.
 
 ### Option hygiene
 
+- **Every option opens with a capital letter**, even where the stem is a sentence
+  completion ("…the two firms are most likely to" → "Cut both rail fares and air
+  fares."). Options are read as standalone statements beside their A–D chip, not as a
+  grammatical continuation of the stem. Options that open with a number or symbol
+  (`−2.0`, `£30`) are unaffected. The generator enforces this, and applies the same rule
+  to stems, model answers and distractor explanations.
 - Correct-answer letters roughly even across a set. The generator refuses a set where
   any letter's count is more than 2 away from even.
 - Options parallel in length, grammar and form. The correct answer must never be the
@@ -136,6 +142,19 @@ questions-data/edexcel-theme-1/1-2-3.json
 `scripts/build_questions.py` reads these and writes the static pages. The JSON is the
 single source of truth for both the visible HTML and the JSON-LD, so the two can never
 drift.
+
+### Two page types, two looks
+
+- **Question pages** (`/practice-questions/<board>/<slug>.html`) use
+  `css/pages/quiz.css` and follow the **revision-notes textbook** look — the white card,
+  the serif body, the notes palette. A student arriving from a notes page should feel
+  they have not left it.
+- **The hub and the board indexes** use `css/pages/practice-questions.css` and follow the
+  **home page** look — hero, card grid, dark stat bar, `#252122` and the brand red.
+  Practice Questions is a top-level section with its own nav entry, so its landing pages
+  belong with the other landing pages, not with the notes.
+
+Each page loads exactly one of the two stylesheets. Never load both.
 
 ### Topic object
 

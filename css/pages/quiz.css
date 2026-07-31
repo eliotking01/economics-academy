@@ -1,3 +1,28 @@
+/* Metric-matched fallback fonts.
+
+   Merriweather renders 8.4% wider than Georgia and 18% wider than the default
+   serif, so a paragraph laid out in the fallback re-wraps the moment the web
+   font swaps in. That reflow, on the intro paragraph, was this page's largest
+   layout shift - everything below it moved down. size-adjust makes the
+   fallback occupy the same advance width, so the swap changes glyph shapes
+   without moving a line. Both ratios were measured in-browser against the
+   real fonts.
+
+   @font-face cannot be scoped to .quiz-page, but these families are named so
+   that nothing else on the site can pick them up. */
+
+@font-face {
+  font-family: "Merriweather Fallback";
+  src: local("Georgia");
+  size-adjust: 108.44%;
+}
+
+@font-face {
+  font-family: "Source Sans Pro Fallback";
+  src: local("Arial");
+  size-adjust: 90.73%;
+}
+
 /* Practice questions - shared by every page under /practice-questions/.
    Every rule is nested under .quiz-page, the wrapper class on <section id="main">,
    so nothing here can collide with another page's stylesheet.
@@ -22,7 +47,7 @@
   --quiz-teal-text: #1f7080;
   --quiz-correct-text: #1e8449;
 
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", Georgia, serif;
   line-height: 1.7;
   color: #333;
 }
@@ -31,7 +56,7 @@
 
 .quiz-page .breadcrumb {
   margin-bottom: 1.5em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.9em;
   color: var(--quiz-muted);
 }
@@ -78,7 +103,7 @@
   display: inline-block;
   margin-bottom: 0.4em;
   padding-bottom: 0.4em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 2.2em;
   font-weight: 700;
   line-height: 1.25;
@@ -98,7 +123,7 @@
   gap: 0.5em 0.75em;
   margin-bottom: 1.25em;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.85em;
 }
 
@@ -130,7 +155,7 @@
 .quiz-page .quiz-dashboard {
   margin-bottom: 2em;
   padding: 1.2em 1.4em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   background: var(--quiz-light-bg);
   border: 1px solid var(--quiz-border);
   border-radius: 8px;
@@ -211,7 +236,7 @@
 .quiz-page .quiz-stem {
   margin: 0 0 0.6em 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 1.15em;
   font-weight: 600;
   line-height: 1.5;
@@ -230,7 +255,7 @@
   flex-wrap: wrap;
   gap: 0.4em;
   margin: 0 0 1.1em 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.75em;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -260,7 +285,7 @@
 .quiz-page .quiz-data {
   width: 100%;
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.95em;
   border-collapse: collapse;
 }
@@ -355,7 +380,7 @@
 .quiz-page .quiz-letter {
   flex: 0 0 auto;
   min-width: 1.5em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-weight: 700;
   color: var(--quiz-secondary);
 }
@@ -411,7 +436,7 @@
 .quiz-page .quiz-feedback {
   min-height: 1.6em;
   margin: 0.4em 0 0.6em 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.95em;
   font-weight: 700;
 }
@@ -440,7 +465,7 @@
 
 .quiz-page .quiz-model summary {
   padding: 0.7em 1em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.95em;
   font-weight: 600;
   color: var(--quiz-secondary);
@@ -493,7 +518,7 @@
 .quiz-page .quiz-summary h2 {
   margin: 0 0 0.5em 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 1.5em;
   color: var(--quiz-primary);
   background: none;
@@ -519,7 +544,7 @@
 
 .quiz-page .quiz-cta p {
   margin-bottom: 1em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 1.1em;
   font-weight: 600;
   color: var(--quiz-primary);
@@ -527,106 +552,6 @@
 
 .quiz-page .quiz-cta .button {
   margin: 0 0.4em 0.6em;
-}
-
-/* ------------------------------------------------- hub and board indexes */
-
-.quiz-page.quiz-index h2 {
-  margin: 2em 0 1em;
-  padding: 0.6em 0.9em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  color: var(--quiz-primary);
-  background: linear-gradient(
-    90deg,
-    rgba(42, 137, 152, 0.08) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  border-left: 5px solid var(--quiz-teal);
-  border-radius: 0 6px 6px 0;
-}
-
-.quiz-page .quiz-index-list,
-.quiz-page .quiz-board-list {
-  display: grid;
-  gap: 1em;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-}
-
-.quiz-page .quiz-index-item,
-.quiz-page .quiz-board-item {
-  padding: 1.1em 1.2em;
-  background: #fff;
-  border: 1px solid var(--quiz-border);
-  border-left: 5px solid var(--quiz-teal);
-  border-radius: 8px;
-}
-
-.quiz-page .quiz-index-link {
-  display: block;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--quiz-primary);
-  text-decoration: none;
-  border-bottom: none;
-}
-
-.quiz-page .quiz-index-link:hover .quiz-index-name {
-  text-decoration: underline;
-}
-
-.quiz-page .quiz-index-code {
-  display: block;
-  font-size: 0.8em;
-  font-weight: 700;
-  color: var(--quiz-teal-text);
-}
-
-.quiz-page .quiz-index-name {
-  display: block;
-  font-size: 1.05em;
-}
-
-.quiz-page .quiz-index-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4em 0.9em;
-  margin: 0.6em 0 0;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.82em;
-  color: var(--quiz-muted);
-}
-
-.quiz-page .quiz-index-last:empty {
-  display: none;
-}
-
-.quiz-page .quiz-index-last {
-  font-weight: 600;
-  color: var(--quiz-correct-text);
-}
-
-.quiz-page .quiz-board-item h3 {
-  margin: 0 0 0.3em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.2em;
-  color: var(--quiz-primary);
-}
-
-.quiz-page .quiz-board-item h3 a {
-  color: inherit;
-  border-bottom: none;
-}
-
-.quiz-page .quiz-board-blurb {
-  margin: 0;
-  font-size: 0.9em;
-  color: var(--quiz-muted);
 }
 
 /* ------------------------------------------------------------- responsive */

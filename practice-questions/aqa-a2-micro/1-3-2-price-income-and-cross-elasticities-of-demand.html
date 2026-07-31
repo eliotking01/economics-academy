@@ -17,6 +17,12 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css/main.css reaches the web fonts through an @import, so the browser
+         cannot discover fonts.gstatic.com until main.css has parsed and the
+         imported sheet has come back. Warming both origins here shortens that
+         chain and cuts the font-swap layout shift. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Elasticity of Demand Questions — AQA A-Level Economics | Economics Academy</title>
     <meta name="description" content="Ten free multiple-choice questions on PED, YED and XED for AQA A-Level Economics, with full worked answers and instant feedback. Test yourself now." />
 
@@ -150,7 +156,7 @@
             "text": "A commuter rail operator and a budget airline both want to increase their total revenue. Demand for commuter rail travel is price inelastic. Demand for budget air travel is price elastic. All other things being equal, the two firms are most likely to",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "raise rail fares and cut air fares.",
+              "text": "Raise rail fares and cut air fares.",
               "comment": {
                 "@type": "Comment",
                 "text": "The revenue test works in both directions. Where demand is inelastic, quantity demanded changes by proportionally less than price, so raising the price increases total revenue — that is the commuter rail operator, whose passengers have few alternatives for getting to work. Where demand is elastic, quantity changes by proportionally more than price, so cutting the price increases total revenue — that is the budget airline, competing against other carriers and other holiday destinations."
@@ -159,7 +165,7 @@
             "suggestedAnswer": [
               {
                 "@type": "Answer",
-                "text": "cut both rail fares and air fares.",
+                "text": "Cut both rail fares and air fares.",
                 "comment": {
                   "@type": "Comment",
                   "text": "Cutting price raises revenue only where demand is elastic. That is right for the airline but wrong for the rail operator, who would give up fare income without winning enough extra passengers to make it back."
@@ -167,7 +173,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "cut rail fares and raise air fares.",
+                "text": "Cut rail fares and raise air fares.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This reverses both firms. It cuts the fare in the market where passengers are least responsive and raises it in the market where they are most responsive, losing revenue twice over."
@@ -175,7 +181,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "raise both rail fares and air fares.",
+                "text": "Raise both rail fares and air fares.",
                 "comment": {
                   "@type": "Comment",
                   "text": "Raising price raises revenue only where demand is inelastic. That is right for the rail operator but wrong for the airline, which would lose a larger proportion of its passengers than the proportion by which it raised the fare."
@@ -273,7 +279,7 @@
             "text": "A retail group sells both a budget own-label grocery range and a premium ready-meal range. Forecasters expect real household incomes to fall sharply over the next year. All other things being equal, the group is most likely to",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "expand the budget range and cut back the premium range.",
+              "text": "Expand the budget range and cut back the premium range.",
               "comment": {
                 "@type": "Comment",
                 "text": "The two ranges have opposite income elasticities. A budget own-label range is an inferior good: its YED is negative, so when real incomes fall, demand for it rises as households trade down. A premium ready-meal range is a normal luxury: its YED is above 1, so when real incomes fall, demand for it falls by proportionally more than income does. Planning for the economic cycle means expanding the range whose demand is about to grow and cutting back the one about to shrink fastest."
@@ -282,7 +288,7 @@
             "suggestedAnswer": [
               {
                 "@type": "Answer",
-                "text": "expand the premium range and cut back the budget range.",
+                "text": "Expand the premium range and cut back the budget range.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This inverts both signs. It expands the range most exposed to a fall in income and cuts the one that is about to benefit from it — the worst possible reading of the two elasticities."
@@ -290,7 +296,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "expand both ranges, because total spending on food is stable.",
+                "text": "Expand both ranges, because total spending on food is stable.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This treats food as a single category with a YED near zero. The whole point of YED is that it varies by product, not by broad sector: within food, budget lines and premium lines move in opposite directions when incomes change."
@@ -298,7 +304,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "cut back both ranges, because demand for food falls when incomes fall.",
+                "text": "Cut back both ranges, because demand for food falls when incomes fall.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This assumes every food product moves with income in the same direction. Inferior goods have a negative YED, so demand for the budget range rises precisely because incomes are falling."
@@ -355,7 +361,7 @@
             "text": "A government wants a new indirect tax to raise as much revenue as possible while causing the smallest possible fall in the quantity traded. All other things being equal, it should place the tax on a good for which demand is",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "price inelastic, because quantity demanded barely responds to price.",
+              "text": "Price inelastic, because quantity demanded barely responds to price.",
               "comment": {
                 "@type": "Comment",
                 "text": "An indirect tax raises the price paid by consumers, and the revenue it raises is the tax per unit multiplied by the quantity still traded. Where demand is inelastic, that price rise causes only a small fall in quantity demanded, so the government keeps a wide tax base and collects a large revenue — which is why duties fall on goods like tobacco, alcohol and fuel. It also meets the second aim, since the quantity traded barely moves."
@@ -364,7 +370,7 @@
             "suggestedAnswer": [
               {
                 "@type": "Answer",
-                "text": "price elastic, because buyers will switch to untaxed substitutes.",
+                "text": "Price elastic, because buyers will switch to untaxed substitutes.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This describes elastic demand correctly and then draws the opposite conclusion. Buyers switching away to untaxed substitutes is exactly what destroys the tax base: the government ends up taxing a much smaller quantity."
@@ -372,7 +378,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "price elastic, because the fall in quantity widens the tax base.",
+                "text": "Price elastic, because the fall in quantity widens the tax base.",
                 "comment": {
                   "@type": "Comment",
                   "text": "A fall in quantity shrinks the tax base, it does not widen it. Revenue is the tax per unit times the quantity still traded, so fewer units sold means less revenue collected."
@@ -380,7 +386,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "price inelastic, because producers will absorb the whole of the tax.",
+                "text": "Price inelastic, because producers will absorb the whole of the tax.",
                 "comment": {
                   "@type": "Comment",
                   "text": "The classification is right but the reason is wrong, and the reason given is the reverse of what happens. Where demand is inelastic relative to supply, the incidence falls mainly on consumers, not producers. Producers never automatically absorb a whole tax."
@@ -396,7 +402,7 @@
             "text": "A firm finds that when the price of Product Z rises by 10%, the quantity demanded of its own product falls by 6%. All other things being equal, the two products are most likely",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "complements, and the cross elasticity of demand is −0.6.",
+              "text": "Complements, and the cross elasticity of demand is −0.6.",
               "comment": {
                 "@type": "Comment",
                 "text": "XED = percentage change in quantity demanded of the firm's product ÷ percentage change in the price of Product Z = −6 ÷ +10 = −0.6. A negative XED means the two goods are complements — they are bought and used together, so when one becomes dearer, demand for the other falls with it. Printers and ink cartridges behave this way. The magnitude of 0.6 says the link is real but not especially strong."
@@ -405,7 +411,7 @@
             "suggestedAnswer": [
               {
                 "@type": "Answer",
-                "text": "complements, and the cross elasticity of demand is +0.6.",
+                "text": "Complements, and the cross elasticity of demand is +0.6.",
                 "comment": {
                   "@type": "Comment",
                   "text": "The relationship is right but the sign contradicts it. A positive XED is the definition of substitutes, so an option cannot call the goods complements and give a positive value at the same time."
@@ -413,7 +419,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "substitutes, and the cross elasticity of demand is −0.6.",
+                "text": "Substitutes, and the cross elasticity of demand is −0.6.",
                 "comment": {
                   "@type": "Comment",
                   "text": "The value is right but the relationship is wrong, for the same reason in reverse. A negative XED means the goods are bought together, not instead of one another."
@@ -421,7 +427,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "substitutes, and the cross elasticity of demand is +0.6.",
+                "text": "Substitutes, and the cross elasticity of demand is +0.6.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This is the substitutes case, which is not what the data show. If the two were substitutes, a 10% rise in the price of Product Z would have increased demand for the firm's product as buyers switched across. Demand fell instead."
@@ -437,7 +443,7 @@
             "text": "A government pays producers the same subsidy per unit on two goods. Demand for Good X is price elastic and demand for Good Y is price inelastic. Supply conditions are identical in the two markets. Sketching each market, the subsidy will produce",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "a larger fall in price for Good Y and a larger rise in quantity for Good X.",
+              "text": "A larger fall in price for Good Y and a larger rise in quantity for Good X.",
               "comment": {
                 "@type": "Comment",
                 "text": "Sketch each market with the same demand-and-supply axes, then shift supply to the right by the same vertical distance — the subsidy per unit — in both. What differs is the slope of the demand curve the new supply curve meets. Against the steep, inelastic demand curve for Good Y, the market clears mainly through a large fall in price, because buyers will not take many extra units however cheap it gets. Against the shallow, elastic demand curve for Good X, it clears mainly through a large rise in quantity, because buyers pour in and hold the price up. So the price effect is concentrated where demand is inelastic and the quantity effect where demand is elastic. This is why a government aiming to increase consumption — of insulation or electric vehicles, say — targets goods with elastic demand."
@@ -446,7 +452,7 @@
             "suggestedAnswer": [
               {
                 "@type": "Answer",
-                "text": "a larger fall in price and a larger rise in quantity in the market for Good X.",
+                "text": "A larger fall in price and a larger rise in quantity in the market for Good X.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This puts both effects in the elastic market. Elastic demand does deliver the larger quantity response, but it produces the smaller price fall: extra buyers arrive as soon as the price dips, and that demand holds the price up."
@@ -454,7 +460,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "a larger fall in price and a larger rise in quantity in the market for Good Y.",
+                "text": "A larger fall in price and a larger rise in quantity in the market for Good Y.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This puts both effects in the inelastic market. Inelastic demand does deliver the larger price fall, but quantity barely moves, which is the whole point of calling demand inelastic."
@@ -462,7 +468,7 @@
               },
               {
                 "@type": "Answer",
-                "text": "a larger fall in price for Good X and a larger rise in quantity for Good Y.",
+                "text": "A larger fall in price for Good X and a larger rise in quantity for Good Y.",
                 "comment": {
                   "@type": "Comment",
                   "text": "This reverses both effects. It is the pattern you would get if the two elasticity labels had been swapped — the answer a sketch drawn with the curves the wrong way round would give."
@@ -781,7 +787,7 @@
                     />
                     <label for="aqa-1-3-2-q3-A">
                       <span class="quiz-letter">A</span>
-                      <span class="quiz-option-text">cut both rail fares and air fares.</span>
+                      <span class="quiz-option-text">Cut both rail fares and air fares.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -793,7 +799,7 @@
                     />
                     <label for="aqa-1-3-2-q3-B">
                       <span class="quiz-letter">B</span>
-                      <span class="quiz-option-text">cut rail fares and raise air fares.</span>
+                      <span class="quiz-option-text">Cut rail fares and raise air fares.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -805,7 +811,7 @@
                     />
                     <label for="aqa-1-3-2-q3-C">
                       <span class="quiz-letter">C</span>
-                      <span class="quiz-option-text">raise both rail fares and air fares.</span>
+                      <span class="quiz-option-text">Raise both rail fares and air fares.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -817,7 +823,7 @@
                     />
                     <label for="aqa-1-3-2-q3-D">
                       <span class="quiz-letter">D</span>
-                      <span class="quiz-option-text">raise rail fares and cut air fares.</span>
+                      <span class="quiz-option-text">Raise rail fares and cut air fares.</span>
                     </label>
                   </div>
                 </fieldset>
@@ -826,7 +832,7 @@
                   <summary>Show model answer</summary>
                   <div class="quiz-model-body">
                     <p>
-                      <strong>Answer: D (raise rail fares and cut air fares.).</strong>
+                      <strong>Answer: D (Raise rail fares and cut air fares.).</strong>
                       The revenue test works in both directions. Where demand is <strong>inelastic</strong>, quantity demanded changes by proportionally less than price, so <strong>raising</strong> the price increases total revenue — that is the commuter rail operator, whose passengers have few alternatives for getting to work. Where demand is <strong>elastic</strong>, quantity changes by proportionally more than price, so <strong>cutting</strong> the price increases total revenue — that is the budget airline, competing against other carriers and other holiday destinations.
                     </p>
                     <p class="quiz-why-wrong-heading">
@@ -1109,7 +1115,7 @@
                     />
                     <label for="aqa-1-3-2-q6-A">
                       <span class="quiz-letter">A</span>
-                      <span class="quiz-option-text">expand the budget range and cut back the premium range.</span>
+                      <span class="quiz-option-text">Expand the budget range and cut back the premium range.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1121,7 +1127,7 @@
                     />
                     <label for="aqa-1-3-2-q6-B">
                       <span class="quiz-letter">B</span>
-                      <span class="quiz-option-text">expand the premium range and cut back the budget range.</span>
+                      <span class="quiz-option-text">Expand the premium range and cut back the budget range.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1133,7 +1139,7 @@
                     />
                     <label for="aqa-1-3-2-q6-C">
                       <span class="quiz-letter">C</span>
-                      <span class="quiz-option-text">expand both ranges, because total spending on food is stable.</span>
+                      <span class="quiz-option-text">Expand both ranges, because total spending on food is stable.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1145,7 +1151,7 @@
                     />
                     <label for="aqa-1-3-2-q6-D">
                       <span class="quiz-letter">D</span>
-                      <span class="quiz-option-text">cut back both ranges, because demand for food falls when incomes fall.</span>
+                      <span class="quiz-option-text">Cut back both ranges, because demand for food falls when incomes fall.</span>
                     </label>
                   </div>
                 </fieldset>
@@ -1154,7 +1160,7 @@
                   <summary>Show model answer</summary>
                   <div class="quiz-model-body">
                     <p>
-                      <strong>Answer: A (expand the budget range and cut back the premium range.).</strong>
+                      <strong>Answer: A (Expand the budget range and cut back the premium range.).</strong>
                       The two ranges have opposite income elasticities. A budget own-label range is an <strong>inferior good</strong>: its YED is negative, so when real incomes fall, demand for it <strong>rises</strong> as households trade down. A premium ready-meal range is a <strong>normal luxury</strong>: its YED is above 1, so when real incomes fall, demand for it falls by proportionally more than income does. Planning for the economic cycle means expanding the range whose demand is about to grow and cutting back the one about to shrink fastest.
                     </p>
                     <p class="quiz-why-wrong-heading">
@@ -1295,7 +1301,7 @@
                     />
                     <label for="aqa-1-3-2-q8-A">
                       <span class="quiz-letter">A</span>
-                      <span class="quiz-option-text">price elastic, because buyers will switch to untaxed substitutes.</span>
+                      <span class="quiz-option-text">Price elastic, because buyers will switch to untaxed substitutes.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1307,7 +1313,7 @@
                     />
                     <label for="aqa-1-3-2-q8-B">
                       <span class="quiz-letter">B</span>
-                      <span class="quiz-option-text">price elastic, because the fall in quantity widens the tax base.</span>
+                      <span class="quiz-option-text">Price elastic, because the fall in quantity widens the tax base.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1319,7 +1325,7 @@
                     />
                     <label for="aqa-1-3-2-q8-C">
                       <span class="quiz-letter">C</span>
-                      <span class="quiz-option-text">price inelastic, because quantity demanded barely responds to price.</span>
+                      <span class="quiz-option-text">Price inelastic, because quantity demanded barely responds to price.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1331,7 +1337,7 @@
                     />
                     <label for="aqa-1-3-2-q8-D">
                       <span class="quiz-letter">D</span>
-                      <span class="quiz-option-text">price inelastic, because producers will absorb the whole of the tax.</span>
+                      <span class="quiz-option-text">Price inelastic, because producers will absorb the whole of the tax.</span>
                     </label>
                   </div>
                 </fieldset>
@@ -1340,7 +1346,7 @@
                   <summary>Show model answer</summary>
                   <div class="quiz-model-body">
                     <p>
-                      <strong>Answer: C (price inelastic, because quantity demanded barely responds to price.).</strong>
+                      <strong>Answer: C (Price inelastic, because quantity demanded barely responds to price.).</strong>
                       An indirect tax raises the price paid by consumers, and the revenue it raises is the tax per unit multiplied by the quantity still traded. Where demand is <strong>inelastic</strong>, that price rise causes only a small fall in quantity demanded, so the government keeps a wide tax base and collects a large revenue — which is why duties fall on goods like tobacco, alcohol and fuel. It also meets the second aim, since the quantity traded barely moves.
                     </p>
                     <p class="quiz-why-wrong-heading">
@@ -1388,7 +1394,7 @@
                     />
                     <label for="aqa-1-3-2-q9-A">
                       <span class="quiz-letter">A</span>
-                      <span class="quiz-option-text">complements, and the cross elasticity of demand is −0.6.</span>
+                      <span class="quiz-option-text">Complements, and the cross elasticity of demand is −0.6.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1400,7 +1406,7 @@
                     />
                     <label for="aqa-1-3-2-q9-B">
                       <span class="quiz-letter">B</span>
-                      <span class="quiz-option-text">complements, and the cross elasticity of demand is +0.6.</span>
+                      <span class="quiz-option-text">Complements, and the cross elasticity of demand is +0.6.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1412,7 +1418,7 @@
                     />
                     <label for="aqa-1-3-2-q9-C">
                       <span class="quiz-letter">C</span>
-                      <span class="quiz-option-text">substitutes, and the cross elasticity of demand is −0.6.</span>
+                      <span class="quiz-option-text">Substitutes, and the cross elasticity of demand is −0.6.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1424,7 +1430,7 @@
                     />
                     <label for="aqa-1-3-2-q9-D">
                       <span class="quiz-letter">D</span>
-                      <span class="quiz-option-text">substitutes, and the cross elasticity of demand is +0.6.</span>
+                      <span class="quiz-option-text">Substitutes, and the cross elasticity of demand is +0.6.</span>
                     </label>
                   </div>
                 </fieldset>
@@ -1433,7 +1439,7 @@
                   <summary>Show model answer</summary>
                   <div class="quiz-model-body">
                     <p>
-                      <strong>Answer: A (complements, and the cross elasticity of demand is −0.6.).</strong>
+                      <strong>Answer: A (Complements, and the cross elasticity of demand is −0.6.).</strong>
                       XED = percentage change in quantity demanded of the firm's product ÷ percentage change in the price of Product Z = −6 ÷ +10 = <strong>−0.6</strong>.<br />A <strong>negative</strong> XED means the two goods are <strong>complements</strong> — they are bought and used together, so when one becomes dearer, demand for the other falls with it. Printers and ink cartridges behave this way. The magnitude of 0.6 says the link is real but not especially strong.
                     </p>
                     <p class="quiz-why-wrong-heading">
@@ -1482,7 +1488,7 @@
                     />
                     <label for="aqa-1-3-2-q10-A">
                       <span class="quiz-letter">A</span>
-                      <span class="quiz-option-text">a larger fall in price and a larger rise in quantity in the market for Good X.</span>
+                      <span class="quiz-option-text">A larger fall in price and a larger rise in quantity in the market for Good X.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1494,7 +1500,7 @@
                     />
                     <label for="aqa-1-3-2-q10-B">
                       <span class="quiz-letter">B</span>
-                      <span class="quiz-option-text">a larger fall in price and a larger rise in quantity in the market for Good Y.</span>
+                      <span class="quiz-option-text">A larger fall in price and a larger rise in quantity in the market for Good Y.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1506,7 +1512,7 @@
                     />
                     <label for="aqa-1-3-2-q10-C">
                       <span class="quiz-letter">C</span>
-                      <span class="quiz-option-text">a larger fall in price for Good X and a larger rise in quantity for Good Y.</span>
+                      <span class="quiz-option-text">A larger fall in price for Good X and a larger rise in quantity for Good Y.</span>
                     </label>
                   </div>
                   <div class="quiz-option">
@@ -1518,7 +1524,7 @@
                     />
                     <label for="aqa-1-3-2-q10-D">
                       <span class="quiz-letter">D</span>
-                      <span class="quiz-option-text">a larger fall in price for Good Y and a larger rise in quantity for Good X.</span>
+                      <span class="quiz-option-text">A larger fall in price for Good Y and a larger rise in quantity for Good X.</span>
                     </label>
                   </div>
                 </fieldset>
@@ -1527,7 +1533,7 @@
                   <summary>Show model answer</summary>
                   <div class="quiz-model-body">
                     <p>
-                      <strong>Answer: D (a larger fall in price for Good Y and a larger rise in quantity for Good X.).</strong>
+                      <strong>Answer: D (A larger fall in price for Good Y and a larger rise in quantity for Good X.).</strong>
                       Sketch each market with the same demand-and-supply axes, then shift supply to the right by the same vertical distance — the subsidy per unit — in both. What differs is the slope of the demand curve the new supply curve meets.<br />Against the <strong>steep, inelastic</strong> demand curve for Good Y, the market clears mainly through a large <strong>fall in price</strong>, because buyers will not take many extra units however cheap it gets.<br />Against the <strong>shallow, elastic</strong> demand curve for Good X, it clears mainly through a large <strong>rise in quantity</strong>, because buyers pour in and hold the price up.<br />So the price effect is concentrated where demand is inelastic and the quantity effect where demand is elastic. This is why a government aiming to increase <em>consumption</em> — of insulation or electric vehicles, say — targets goods with elastic demand.
                     </p>
                     <p class="quiz-why-wrong-heading">

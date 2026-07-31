@@ -81,7 +81,10 @@
 
   /* --------------------------------------------------------------- setup */
 
-  var page = document.querySelector(".quiz-page");
+  // .quiz-page is a question page; .practice-questions-page is the hub or a
+  // board index. They look nothing alike and load different stylesheets, but
+  // both read the same localStorage.
+  var page = document.querySelector(".quiz-page, .practice-questions-page");
   if (!page) return;
 
   /* --------------------------------------------------------- index pages

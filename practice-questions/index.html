@@ -17,8 +17,14 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css/main.css reaches the web fonts through an @import, so the browser
+         cannot discover fonts.gstatic.com until main.css has parsed and the
+         imported sheet has come back. Warming both origins here shortens that
+         chain and cuts the font-swap layout shift. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>A-Level Economics Practice Questions — AQA and Edexcel | Economics Academy</title>
-    <meta name="description" content="Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topics, each with a full worked answer." />
+    <meta name="description" content="Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topic, each with a full worked answer." />
 
     <link rel="canonical" href="https://economicsacademy.co.uk/practice-questions/index.html" />
     <meta property="og:type" content="website" />
@@ -26,7 +32,7 @@
     <meta property="og:locale" content="en_GB" />
     <meta property="og:url" content="https://economicsacademy.co.uk/practice-questions/index.html" />
     <meta property="og:title" content="A-Level Economics Practice Questions — AQA and Edexcel | Economics Academy" />
-    <meta property="og:description" content="Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topics, each with a full worked answer." />
+    <meta property="og:description" content="Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topic, each with a full worked answer." />
     <meta property="og:image" content="https://economicsacademy.co.uk/og-image.png?v=1" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
@@ -34,14 +40,14 @@
     <meta property="og:image:alt" content="Economics Academy logo" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="A-Level Economics Practice Questions — AQA and Edexcel | Economics Academy" />
-    <meta name="twitter:description" content="Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topics, each with a full worked answer." />
+    <meta name="twitter:description" content="Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topic, each with a full worked answer." />
     <meta name="twitter:image" content="https://economicsacademy.co.uk/og-image.png?v=1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "A-Level Economics practice questions",
-        "description": "Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topics, each with a full worked answer.",
+        "description": "Free A-Level Economics multiple-choice practice questions for AQA and Edexcel. 10 questions across 1 topic, each with a full worked answer.",
         "url": "https://economicsacademy.co.uk/practice-questions/index.html",
         "inLanguage": "en-GB",
         "isPartOf": {
@@ -56,7 +62,7 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/css/main.css" />
 
-    <link rel="stylesheet" href="/css/pages/quiz.css" />
+    <link rel="stylesheet" href="/css/pages/practice-questions.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -82,58 +88,117 @@
       <!-- Header -->
       <div id="header-placeholder"></div>
 
-      <section id="main" class="quiz-page quiz-index">
+      <main id="main" class="practice-questions-page">
         <div class="container">
-          <nav class="breadcrumb">
-            <a href="/">Home</a>
-            <span class="separator">&rsaquo;</span>
-            <span>Practice Questions</span>
-          </nav>
-
-          <div class="quiz-container">
-            <header class="major">
-              <h1>A-Level Economics Practice Questions</h1>
-            </header>
-
-            <p class="quiz-intro">
-              Free multiple-choice questions for every topic we cover, written to
-              the style and difficulty of the real papers. Answer one at a time for
-              instant feedback, then read a full worked model answer that explains
-              the right option and names the mistake behind each wrong one. No sign
-              up, no paywall.
+          <section class="pq-hero">
+            <h1 class="pq-hero-title">A-Level Economics Practice Questions</h1>
+            <p class="pq-hero-subhead">
+              Free exam-style multiple-choice questions for every topic we cover.
+              Answer one at a time for instant feedback, then read a full worked
+              answer that explains the right option and names the mistake behind
+              each wrong one.
             </p>
-
-            <p class="quiz-meta">
-              <span>1 topics</span>
-              <span>10 questions</span>
-              <span>AQA and Edexcel</span>
-            </p>
-
-            <h2>Choose your board</h2>
-            <ul class="quiz-board-list">
-              <li class="quiz-board-item">
-                <h3>
-                  <a href="/practice-questions/aqa-a2-micro/index.html">AQA Microeconomics</a>
-                </h3>
-                <p class="quiz-board-blurb">Individuals, Firms, Markets and Market Failure</p>
-                <p class="quiz-index-meta">
-                  <span>1 topics</span>
-                  <span>10 questions</span>
-                </p>
+            <ul class="pq-hero-actions">
+              <li>
+                <a
+                  href="/practice-questions/aqa-a2-micro/index.html"
+                  class="button large"
+                  >Start Practising</a
+                >
+              </li>
+              <li>
+                <a href="/revision-notes/index.html" class="button alt large"
+                  >Browse Free Notes</a
+                >
               </li>
             </ul>
+            <p class="pq-hero-trust">
+              10 questions &middot; 1 topic &middot; No sign-up, no paywall
+            </p>
+          </section>
 
-            <div class="quiz-cta">
-              <p>Prefer to read first?</p>
-              <a href="/revision-notes/index.html" class="button alt"
-                >Free Revision Notes</a
-              >
-              <a href="/past-papers/index.html" class="button alt">Past Papers</a>
-              <a href="/marking.html" class="button">Get Your Essays Marked</a>
+          <section>
+            <header class="major">
+              <h2>Choose Your Exam Board</h2>
+            </header>
+            <div class="pq-grid pq-grid--n1">
+              <a class="pq-card" href="/practice-questions/aqa-a2-micro/index.html">
+                <span class="pq-badge">Free</span>
+                <span
+                  class="icon solid fa-store pq-card-icon"
+                  aria-hidden="true"
+                ></span>
+                <h3>AQA Microeconomics</h3>
+                <p>Individuals, Firms, Markets and Market Failure</p>
+                <p class="pq-card-meta">
+                  <span>1 topic</span>
+                  <span>10 questions</span>
+                </p>
+              </a>
             </div>
-          </div>
+          </section>
+
+          <section class="pq-stats" aria-label="What is on offer">
+            <div class="pq-stats-grid">
+              <div class="pq-stat">
+                <span class="pq-stat-number">10</span>
+                <span class="pq-stat-label">Free Questions</span>
+              </div>
+              <div class="pq-stat">
+                <span class="pq-stat-number">1</span>
+                <span class="pq-stat-label">Topic</span>
+              </div>
+              <div class="pq-stat">
+                <span class="pq-stat-number">1</span>
+                <span class="pq-stat-label">Exam Board</span>
+              </div>
+              <div class="pq-stat">
+                <span class="pq-stat-number">£0</span>
+                <span class="pq-stat-label">Cost to You</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <header class="major">
+              <h2>How It Works</h2>
+            </header>
+            <ol class="pq-steps">
+              <li>
+                <h3>Read the notes</h3>
+                <p>
+                  Work through the topic on our free revision notes first, so you
+                  are testing recall rather than guessing.
+                </p>
+              </li>
+              <li>
+                <h3>Answer the questions</h3>
+                <p>
+                  Pick an option and find out straight away whether you were right.
+                  Your score builds as you go.
+                </p>
+              </li>
+              <li>
+                <h3>Read the model answers</h3>
+                <p>
+                  Every question shows the full working for the correct option and
+                  explains exactly why each other option is wrong.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="pq-cta">
+            <h2>Want your written answers marked?</h2>
+            <p>Multiple choice tests your knowledge, but the marks at A-Level are in the essays. Send yours for examiner-style feedback, or work through the tricky topics with a specialist tutor.</p>
+            <div class="pq-cta-actions">
+              <a href="/past-papers/index.html" class="button alt">Past Papers</a>
+              <a href="/marking.html" class="button alt">Get Your Essays Marked</a>
+              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
+            </div>
+          </section>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <div id="footer-placeholder"></div>
@@ -147,5 +212,6 @@
     <script src="/js/breakpoints.min.js"></script>
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/quiz.js" defer></script>
   </body>
 </html>

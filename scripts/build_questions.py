@@ -79,6 +79,16 @@ BOARDS = [
 BOARD_ORDER = {d: i for i, (d, _, _) in enumerate(BOARDS)}
 BOARD_BLURB = {d: b for d, _, b in BOARDS}
 
+# Font Awesome 5 solid, already bundled in css/fontawesome-all.min.css.
+BOARD_ICONS = {
+    "edexcel-theme-1": "fa-balance-scale",
+    "edexcel-theme-2": "fa-chart-line",
+    "edexcel-theme-3": "fa-industry",
+    "edexcel-theme-4": "fa-globe-europe",
+    "aqa-a2-micro": "fa-store",
+    "aqa-a2-macro": "fa-landmark",
+}
+
 # Inline markup an author may use inside a fragment. Anything else is a bug
 # in the source, not something to silently pass through to the page.
 ALLOWED_TAGS_RE = re.compile(r"</?(?:strong|em|sub|sup)>|<br />")
@@ -115,11 +125,24 @@ class SetError(Exception):
 # ---------------------------------------------------------------- validation
 
 
-def _fragment_errors(where, text):
+def _starts_capitalised(text):
+    """First visible character is not a lower-case letter.
+
+    Options are read as standalone sentences next to their A-D chip, not as
+    a grammatical continuation of the stem, so they open with a capital.
+    Numbers and symbols ('-2.0', '£30') are left alone.
+    """
+    stripped = TAG_RE.sub("", text).lstrip()
+    return not (stripped and stripped[0].isalpha() and stripped[0].islower())
+
+
+def _fragment_errors(where, text, capitalised=False):
     """Fragments are HTML, so they must be pre-escaped and use known tags."""
     errors = []
     if not isinstance(text, str) or not text.strip():
         return [f"{where}: empty or not a string"]
+    if capitalised and not _starts_capitalised(text):
+        errors.append(f"{where}: must start with a capital letter")
     stripped = ALLOWED_TAGS_RE.sub("", text)
     for bad in TAG_RE.findall(stripped):
         errors.append(f"{where}: disallowed markup {bad!r}")
@@ -166,7 +189,7 @@ def validate(topic, path, seen_ids):
         errors.append("pageTitle must end '| Economics Academy'")
 
     for field in ("intro", "notesTeaser"):
-        errors += _fragment_errors(field, topic[field])
+        errors += _fragment_errors(field, topic[field], capitalised=True)
 
     questions = topic["questions"]
     if not 4 <= len(questions) <= 10:
@@ -192,14 +215,16 @@ def validate(topic, path, seen_ids):
         if not isinstance(q.get("sketch"), bool):
             errors.append(f"{where}: sketch must be true or false")
 
-        errors += _fragment_errors(f"{where}.stem", q.get("stem", ""))
+        errors += _fragment_errors(f"{where}.stem", q.get("stem", ""), capitalised=True)
 
         options = q.get("options") or {}
         if set(options) != set(LETTERS):
             errors.append(f"{where}: options must be exactly A, B, C, D")
         else:
             for letter in LETTERS:
-                errors += _fragment_errors(f"{where}.options.{letter}", options[letter])
+                errors += _fragment_errors(
+                    f"{where}.options.{letter}", options[letter], capitalised=True
+                )
                 if BANNED_OPTION_RE.search(TAG_RE.sub("", options[letter])):
                     errors.append(f"{where}.options.{letter}: banned option pattern")
 
@@ -210,7 +235,9 @@ def validate(topic, path, seen_ids):
             tally[answer] += 1
 
         model = q.get("model") or {}
-        errors += _fragment_errors(f"{where}.model.working", model.get("working", ""))
+        errors += _fragment_errors(
+            f"{where}.model.working", model.get("working", ""), capitalised=True
+        )
 
         distractors = model.get("distractors") or {}
         if answer in LETTERS:
@@ -223,7 +250,9 @@ def validate(topic, path, seen_ids):
             else:
                 for letter in sorted(expected):
                     errors += _fragment_errors(
-                        f"{where}.model.distractors.{letter}", distractors[letter]
+                        f"{where}.model.distractors.{letter}",
+                        distractors[letter],
+                        capitalised=True,
                     )
 
         table = q.get("table")
@@ -579,7 +608,7 @@ def render_page(topic):
         title=topic["pageTitle"],
         desc=topic["metaDescription"],
         url=url,
-        css_extra="",
+        css="/css/pages/quiz.css",
         jsonld=jsonld_block(render_jsonld_quiz(topic), 4),
         breadcrumb=breadcrumb_jsonld(
             [
@@ -601,7 +630,7 @@ def render_page(topic):
 
 
 def shell(
-    *, title, desc, url, css_extra, jsonld, breadcrumb, body, scripts="",
+    *, title, desc, url, css, jsonld, breadcrumb, body, scripts="",
     og_type="website",
 ):
     """The common page skeleton. Same head order as a notes topic page."""
@@ -624,6 +653,12 @@ def shell(
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css/main.css reaches the web fonts through an @import, so the browser
+         cannot discover fonts.gstatic.com until main.css has parsed and the
+         imported sheet has come back. Warming both origins here shortens that
+         chain and cuts the font-swap layout shift. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>{attr(title)}</title>
     <meta name="description" content="{attr(desc)}" />
 
@@ -649,7 +684,7 @@ def shell(
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/css/main.css" />
 
-    <link rel="stylesheet" href="/css/pages/quiz.css" />{css_extra}
+    <link rel="stylesheet" href="{css}" />
 {breadcrumb}
   </head>
   <body class="is-preload">
@@ -695,17 +730,70 @@ def breadcrumb_jsonld(trail):
 
 def render_topic_card(topic):
     count = len(topic["questions"])
-    href = page_url(topic)
-    return f"""              <li class="quiz-index-item">
-                <a class="quiz-index-link" href="{href}">
-                  <span class="quiz-index-code">{topic['spec']}</span>
-                  <span class="quiz-index-name">{topic['shortTitle']}</span>
-                </a>
-                <p class="quiz-index-meta">
+    return f"""              <a class="pq-card pq-card--topic" href="{page_url(topic)}">
+                <span class="pq-card-code">{topic['spec']}</span>
+                <h3>{topic['shortTitle']}</h3>
+                <p class="pq-card-meta">
                   <span>{count} questions</span>
-                  <span class="quiz-index-last" data-quiz-last="{topic['board']}:{topic['spec']}"></span>
+                  <span
+                    class="pq-card-last"
+                    data-quiz-last="{topic['board']}:{topic['spec']}"
+                  ></span>
                 </p>
-              </li>"""
+              </a>"""
+
+
+def render_board_card(board_dir, topics):
+    name = next(n for d, n, _ in BOARDS if d == board_dir)
+    blurb = BOARD_BLURB[board_dir]
+    count = sum(len(t["questions"]) for t in topics)
+    return f"""              <a class="pq-card" href="/practice-questions/{board_dir}/index.html">
+                <span class="pq-badge">Free</span>
+                <span
+                  class="icon solid {BOARD_ICONS[board_dir]} pq-card-icon"
+                  aria-hidden="true"
+                ></span>
+                <h3>{name}</h3>
+                <p>{blurb}</p>
+                <p class="pq-card-meta">
+                  <span>{len(topics)} {'topic' if len(topics) == 1 else 'topics'}</span>
+                  <span>{count} questions</span>
+                </p>
+              </a>"""
+
+
+def grid_modifier(n):
+    """Few-card grids centre rather than strand cards in the first column."""
+    return f" pq-grid--n{n}" if n in (1, 2) else ""
+
+
+def render_stat_bar(stats, label):
+    cells = "\n".join(
+        f"""              <div class="pq-stat">
+                <span class="pq-stat-number">{value}</span>
+                <span class="pq-stat-label">{caption}</span>
+              </div>"""
+        for value, caption in stats
+    )
+    return f"""          <section class="pq-stats" aria-label="{label}">
+            <div class="pq-stats-grid">
+{cells}
+            </div>
+          </section>"""
+
+
+def render_cta(heading, text, actions):
+    buttons = "\n".join(
+        f'              <a href="{href}" class="button{cls}">{text_}</a>'
+        for href, cls, text_ in actions
+    )
+    return f"""          <section class="pq-cta">
+            <h2>{heading}</h2>
+            <p>{text}</p>
+            <div class="pq-cta-actions">
+{buttons}
+            </div>
+          </section>"""
 
 
 def render_board_index(board_dir, topics):
@@ -715,19 +803,21 @@ def render_board_index(board_dir, topics):
     label = BOARD_LABELS[board]
     papers_href, papers_label = PAST_PAPERS[board]
     count = sum(len(t["questions"]) for t in topics)
+    topic_word = "topic" if len(topics) == 1 else "topics"
     url = f"{SITE}/practice-questions/{board_dir}/index.html"
 
     title = f"{name} Practice Questions — {label} A-Level Economics | Economics Academy"
     desc = (
-        f"Free multiple-choice practice questions for {name}: {blurb}. "
-        f"{count} questions across {len(topics)} topics, each with worked answers."
+        f"Free {label} A-Level Economics multiple-choice questions on {blurb.lower()}. "
+        f"{count} questions across {len(topics)} {topic_word}, each with a worked answer."
     )[:164]
 
     cards = "\n".join(
         render_topic_card(t) for t in sorted(topics, key=lambda t: spec_key(t["spec"]))
     )
+    first = sorted(topics, key=lambda t: spec_key(t["spec"]))[0]
 
-    body = f"""      <section id="main" class="quiz-page quiz-index">
+    body = f"""      <main id="main" class="practice-questions-page">
         <div class="container">
           <nav class="breadcrumb">
             <a href="/">Home</a>
@@ -737,46 +827,67 @@ def render_board_index(board_dir, topics):
             <span>{name}</span>
           </nav>
 
-          <div class="quiz-container">
-            <header class="major">
-              <h1>{name} Practice Questions</h1>
-            </header>
-
-            <p class="quiz-intro">
-              Free multiple-choice questions on {blurb.lower()}, written to the
-              style and difficulty of {label} exam papers. Every question carries a
-              full worked model answer that explains the correct option and names
-              the mistake behind each wrong one.
+          <section class="pq-hero">
+            <h1 class="pq-hero-title">{name} Practice Questions</h1>
+            <p class="pq-hero-subhead">
+              Exam-style multiple-choice questions on {blurb.lower()}, written to
+              the style and difficulty of the real {label} papers. Every question
+              comes with a full worked answer explaining the right option and the
+              mistake behind each wrong one.
             </p>
-
-            <p class="quiz-meta">
-              <span>{len(topics)} topics</span>
-              <span>{count} questions</span>
-              <span>{label} A-Level</span>
-            </p>
-
-            <h2>Topics</h2>
-            <ul class="quiz-index-list">
-{cards}
+            <ul class="pq-hero-actions">
+              <li>
+                <a href="{page_url(first)}" class="button large"
+                  >Start with {first['spec']} {first['shortTitle']}</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/revision-notes/{board_dir}/index.html"
+                  class="button alt large"
+                  >Read the Notes</a
+                >
+              </li>
             </ul>
+            <p class="pq-hero-trust">
+              {len(topics)} {topic_word} &middot; {count} questions &middot; Free, no sign-up
+            </p>
+          </section>
 
-            <div class="quiz-cta">
-              <p>Ready to go further?</p>
-              <a href="/revision-notes/{board_dir}/index.html" class="button alt"
-                >{name} Revision Notes</a
-              >
-              <a href="{papers_href}" class="button alt">{papers_label}</a>
-              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
+          <section>
+            <header class="major">
+              <h2>Choose a Topic</h2>
+            </header>
+            <div class="pq-grid pq-grid--topics{grid_modifier(len(topics))}">
+{cards}
             </div>
-          </div>
+          </section>
+
+{render_stat_bar([
+    (count, "Questions"),
+    (len(topics), topic_word.title()),
+    (label, "Exam Board"),
+    ("£0", "Cost to You"),
+], "What is on offer")}
+
+{render_cta(
+    "Stuck on a topic?",
+    "Questions show you where the gaps are. Fill them with one-to-one tutoring, "
+    "or send an essay for examiner-style marking.",
+    [
+        (papers_href, " alt", papers_label),
+        ("/marking.html", " alt", "Get Your Essays Marked"),
+        ("/tutoring.html", "", "Book a Free Intro Call"),
+    ],
+)}
         </div>
-      </section>"""
+      </main>"""
 
     return shell(
         title=title,
         desc=desc,
         url=url,
-        css_extra="",
+        css="/css/pages/practice-questions.css",
         jsonld=jsonld_block(
             {
                 "@context": "https://schema.org",
@@ -808,85 +919,119 @@ def render_board_index(board_dir, topics):
 def render_hub(by_board):
     total = sum(len(t["questions"]) for ts in by_board.values() for t in ts)
     topic_count = sum(len(ts) for ts in by_board.values())
+    topic_word = "topic" if topic_count == 1 else "topics"
+    boards_live = [d for d, _, _ in BOARDS if by_board.get(d)]
+    board_count = len({d.split("-")[0] for d in boards_live})
     url = f"{SITE}/practice-questions/index.html"
+
     title = (
         "A-Level Economics Practice Questions — AQA and Edexcel "
         "| Economics Academy"
     )
     desc = (
         f"Free A-Level Economics multiple-choice practice questions for AQA and "
-        f"Edexcel. {total} questions across {topic_count} topics, each with a full "
-        f"worked answer."
+        f"Edexcel. {total} questions across {topic_count} {topic_word}, each with a "
+        f"full worked answer."
     )[:164]
 
-    cards = []
-    for board_dir, name, blurb in BOARDS:
-        topics = by_board.get(board_dir)
-        if not topics:
-            continue
-        count = sum(len(t["questions"]) for t in topics)
-        cards.append(
-            f"""              <li class="quiz-board-item">
-                <h3>
-                  <a href="/practice-questions/{board_dir}/index.html">{name}</a>
-                </h3>
-                <p class="quiz-board-blurb">{blurb}</p>
-                <p class="quiz-index-meta">
-                  <span>{len(topics)} topics</span>
-                  <span>{count} questions</span>
-                </p>
-              </li>"""
-        )
+    cards = "\n".join(
+        render_board_card(d, by_board[d]) for d in boards_live
+    )
+    first_board = boards_live[0]
 
-    body = f"""      <section id="main" class="quiz-page quiz-index">
+    body = f"""      <main id="main" class="practice-questions-page">
         <div class="container">
-          <nav class="breadcrumb">
-            <a href="/">Home</a>
-            <span class="separator">&rsaquo;</span>
-            <span>Practice Questions</span>
-          </nav>
-
-          <div class="quiz-container">
-            <header class="major">
-              <h1>A-Level Economics Practice Questions</h1>
-            </header>
-
-            <p class="quiz-intro">
-              Free multiple-choice questions for every topic we cover, written to
-              the style and difficulty of the real papers. Answer one at a time for
-              instant feedback, then read a full worked model answer that explains
-              the right option and names the mistake behind each wrong one. No sign
-              up, no paywall.
+          <section class="pq-hero">
+            <h1 class="pq-hero-title">A-Level Economics Practice Questions</h1>
+            <p class="pq-hero-subhead">
+              Free exam-style multiple-choice questions for every topic we cover.
+              Answer one at a time for instant feedback, then read a full worked
+              answer that explains the right option and names the mistake behind
+              each wrong one.
             </p>
-
-            <p class="quiz-meta">
-              <span>{topic_count} topics</span>
-              <span>{total} questions</span>
-              <span>AQA and Edexcel</span>
-            </p>
-
-            <h2>Choose your board</h2>
-            <ul class="quiz-board-list">
-{chr(10).join(cards)}
+            <ul class="pq-hero-actions">
+              <li>
+                <a
+                  href="/practice-questions/{first_board}/index.html"
+                  class="button large"
+                  >Start Practising</a
+                >
+              </li>
+              <li>
+                <a href="/revision-notes/index.html" class="button alt large"
+                  >Browse Free Notes</a
+                >
+              </li>
             </ul>
+            <p class="pq-hero-trust">
+              {total} questions &middot; {topic_count} {topic_word} &middot; No sign-up, no paywall
+            </p>
+          </section>
 
-            <div class="quiz-cta">
-              <p>Prefer to read first?</p>
-              <a href="/revision-notes/index.html" class="button alt"
-                >Free Revision Notes</a
-              >
-              <a href="/past-papers/index.html" class="button alt">Past Papers</a>
-              <a href="/marking.html" class="button">Get Your Essays Marked</a>
+          <section>
+            <header class="major">
+              <h2>Choose Your Exam Board</h2>
+            </header>
+            <div class="pq-grid{grid_modifier(len(boards_live))}">
+{cards}
             </div>
-          </div>
+          </section>
+
+{render_stat_bar([
+    (total, "Free Questions"),
+    (topic_count, topic_word.title()),
+    (board_count, "Exam Board" if board_count == 1 else "Exam Boards"),
+    ("£0", "Cost to You"),
+], "What is on offer")}
+
+          <section>
+            <header class="major">
+              <h2>How It Works</h2>
+            </header>
+            <ol class="pq-steps">
+              <li>
+                <h3>Read the notes</h3>
+                <p>
+                  Work through the topic on our free revision notes first, so you
+                  are testing recall rather than guessing.
+                </p>
+              </li>
+              <li>
+                <h3>Answer the questions</h3>
+                <p>
+                  Pick an option and find out straight away whether you were right.
+                  Your score builds as you go.
+                </p>
+              </li>
+              <li>
+                <h3>Read the model answers</h3>
+                <p>
+                  Every question shows the full working for the correct option and
+                  explains exactly why each other option is wrong.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+{render_cta(
+    "Want your written answers marked?",
+    "Multiple choice tests your knowledge, but the marks at A-Level are in the "
+    "essays. Send yours for examiner-style feedback, or work through the tricky "
+    "topics with a specialist tutor.",
+    [
+        ("/past-papers/index.html", " alt", "Past Papers"),
+        ("/marking.html", " alt", "Get Your Essays Marked"),
+        ("/tutoring.html", "", "Book a Free Intro Call"),
+    ],
+)}
         </div>
-      </section>"""
+      </main>"""
 
     return shell(
         title=title,
         desc=desc,
         url=url,
-        css_extra="",
+        css="/css/pages/practice-questions.css",
         jsonld=jsonld_block(
             {
                 "@context": "https://schema.org",
@@ -903,10 +1048,9 @@ def render_hub(by_board):
             },
             4,
         ),
-        breadcrumb=breadcrumb_jsonld(
-            [("Home", "/"), ("Practice Questions", None)]
-        ),
+        breadcrumb=breadcrumb_jsonld([("Home", "/"), ("Practice Questions", None)]),
         body=body,
+        scripts='\n    <script src="/js/components/quiz.js" defer></script>',
     )
 
 
