@@ -60,3 +60,29 @@ multiplier 2.5 → £10bn, with the saving-only error giving £40bn; current acc
 The 2-1-2 example also settles open audit flag C5: it defines the labour force
 explicitly as employed plus unemployed, so the unemployment-rate formula and the
 economically-inactive prose above it now agree on the page.
+
+## Batch 3 — Edexcel Theme 1
+
+5 components across 4 of 22 pages. 18 pages received nothing.
+
+Three of the five are **byte-identical reuse** of components already applied to the
+AQA twin pages, verified by hashing: `1-2-3` is word-for-word identical to
+`aqa-a2-micro/1-3-2`, and `1-2-5` is 94% identical to `aqa-a2-micro/1-3-4`. Writing
+different examples for identical pages would be maintenance debt with no gain.
+
+| File | Line | Type | Sits under | What it adds |
+| --- | ---: | --- | --- | --- |
+| `edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html` | 270 | worked example | Price Elasticity of Demand (PED) | PED from a £3.00→£3.60 price rise — **reused verbatim from AQA 1-3-2** |
+| `edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html` | 301 | exam tip | Price Elasticity of Demand (PED) | Classify PED on magnitude, not sign — **reused verbatim from AQA 1-3-2** |
+| `edexcel-theme-1/1-2-5-price-elasticity-of-supply.html` | 273 | worked example | Interpreting PES Values | Same 25% price rise short run vs long run — **reused verbatim from AQA 1-3-4** |
+| `edexcel-theme-1/1-2-8-producer-consumer-surplus.html` | 241 | worked example | Consumer & Producer Surplus at Market Equilibrium | Consumer and producer surplus as triangle areas, £250 and £200 |
+| `edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html` | 243 | worked example | Tax Incidence | Consumer £138, producer £46, government revenue £184 from a £2 specific tax |
+
+**Figures verified by recomputation**: consumer incidence £138 + producer £46 =
+government revenue £184 exactly, with consumers bearing 75%; surplus
+½ × 50 × 10 = £250 and ½ × 50 × 8 = £200, social surplus £450.
+
+`1-2-4-supply` was deliberately given nothing: open audit flag C1 is unresolved
+there, so the page still contradicts itself between its Figure 1 caption and the
+bullets below it. It is the natural home for a movement-versus-shift tip once C1
+is fixed.
