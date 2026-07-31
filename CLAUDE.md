@@ -67,8 +67,8 @@ to `sitemap.xml`. Topic pages carry two JSON-LD blocks — `LearningResource` an
 - `<strong>` for key terms, table row labels and bullet lead-ins. `<em>` only for
   logical contrast. Never `<b>`, `<i>`, `<u>`, `<mark>`.
 - Root-absolute paths: `/images/…`, `/css/…`, `/marking.html`.
-- Expand/collapse is a `<button>` with `aria-expanded` and `aria-controls`. Never
-  `onclick` on an `<li>` — the hub pages do that; don't copy it.
+- Expand/collapse is a `<button>` with `aria-expanded` and `aria-controls`, wired
+  up in JS. No `onclick` attributes remain in the repo; don't reintroduce one.
 - Escape `<` as `&lt;` and `&` as `&amp;` in body text, LaTeX included.
 - Diagram captions on topic pages open `Figure N:`.
 

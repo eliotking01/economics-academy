@@ -145,10 +145,12 @@
 /* ── Heading-level compatibility ─────────────────────────────
    The revision notes gained a proper <h1> page title, so
    revision-notes-textbook.css moved its body-heading styles up one
-   level (section h3 -> h2, sub-heading h4 -> h3). This page still uses
-   the older h2/h3/h4 structure, so its previous appearance is restored
-   below. This stylesheet is loaded only by this page, and after
-   revision-notes-textbook.css, so nothing else is affected.
+   level (section h3 -> h2, sub-heading h4 -> h3). The page title and
+   "Before You Start" have since been raised to h1 and h2, but the
+   country sections below them still use the older h3/h4 structure, so
+   their previous appearance is restored here. This stylesheet is loaded
+   only by this page, and after revision-notes-textbook.css, so nothing
+   else is affected.
    ──────────────────────────────────────────────────────────── */
 
 /* Section headings here are h3: restore the former h3 treatment. */
@@ -191,16 +193,21 @@
   border-bottom: 2px dashed var(--border-light);
 }
 
-/* The page title is still an h2 inside header.major, so it must opt out
-   of the section styling now attached to h2. */
-.revision-notes-content .notes-container > header.major h2 {
+/* The page title is an h1 inside header.major. main.css and the textbook
+   stylesheet size it, but this page has always carried extra horizontal
+   padding on it, which is preserved here. */
+.revision-notes-content .notes-container > header.major h1 {
   margin: 0 0 0.5em 0;
   padding: 0 1em 0.5em 1em;
   border-left: none;
   border-radius: 0;
+  /* main.css lifts header.major headings with "top: -0.65em" but only
+     matches h2, so the title keeps its original position here. */
+  position: relative;
+  top: -0.65em;
 }
 
-.revision-notes-content .notes-container > header.major h2:before {
+.revision-notes-content .notes-container > header.major h1:before {
   content: none;
 }
 
@@ -222,7 +229,7 @@
 
 @media (max-width: 768px) {
   /* Matches the tighter title spacing the textbook CSS applies here. */
-  .revision-notes-content .notes-container > header.major h2 {
+  .revision-notes-content .notes-container > header.major h1 {
     margin: 0 0 0.3em 0;
     padding: 0 1em 0.3em 1em;
   }

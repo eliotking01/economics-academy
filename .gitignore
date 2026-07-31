@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Python (scripts/)
+__pycache__/
+*.py[cod]
+
+# Editor / OS cruft
+.vscode/
+*.swp
+Thumbs.db

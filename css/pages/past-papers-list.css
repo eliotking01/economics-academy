@@ -202,3 +202,52 @@
     flex-wrap: nowrap;
   }
 }
+
+/* "Available Papers" was an h3 and is now an h2 so the page has no skipped
+   heading levels. main.css sizes h2 at 1.5em; this restores the h3 size it
+   has always rendered at. */
+.papers-container > h2 {
+  font-size: 1.35em;
+}
+
+/* The paper-group heading is a <button> so the group is reachable by
+   keyboard. These rules strip the native button chrome so it renders exactly
+   as the bare heading text did. */
+.year-header h2 {
+  margin: 0;
+}
+
+.year-toggle-btn,
+.year-toggle-btn:hover,
+.year-toggle-btn:active {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  /* main.css styles every bare <button> as a pink CTA and sets
+     "color: #fff !important", so the inherited heading colour has to be
+     forced back the same way. */
+  color: inherit !important;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: inherit;
+  cursor: pointer;
+  transition: none;
+}
+
+.year-toggle-btn:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 736px) {
+  /* main.css drops h2-h6 to 1.25em here, so the compensation above must not
+     hold the old h3 size at mobile widths. */
+  .papers-container > h2 {
+    font-size: 1.25em;
+  }
+}

@@ -53,9 +53,13 @@
   display: block;
 }
 
-.contact-card h3 {
+/* These card headings were h3s and are now h2s so the page has no skipped
+   heading levels. main.css sizes h2 at 1.5em; the font-size below restores
+   the h3 size they have always rendered at. */
+.contact-card h2 {
   margin-bottom: 15px;
   color: #252122;
+  font-size: 1.35em;
 }
 
 .contact-card p {
@@ -282,4 +286,12 @@ input[type="reset"] {
   background: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
+}
+
+@media screen and (max-width: 736px) {
+  /* main.css drops h2-h6 to 1.25em here, so the compensation above must not
+     hold the old h3 size at mobile widths. */
+  .contact-card h2 {
+    font-size: 1.25em;
+  }
 }

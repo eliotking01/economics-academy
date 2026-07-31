@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -114,15 +114,24 @@
 
           <!-- Notes Content -->
           <div class="notes-container">
-            <h3>Available Topics</h3>
+            <h2>Available Topics</h2>
             <p>Click on any unit below to view its subtopics:</p>
 
             <ul class="topic-list">
               <!-- Year 1 Content -->
-              <li class="topic-item" onclick="toggleSubtopic('subtopic-1')">
+              <li class="topic-item">
                 <div class="topic-header">
-                  <h2>2.1 The Measurement of Macroeconomic Performance</h2>
-                  <span class="toggle-icon">+</span>
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-1"
+                    >
+                      2.1 The Measurement of Macroeconomic Performance
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
                 </div>
                 <p>Growth, inflation, unemployment, balance of payments</p>
 
@@ -154,10 +163,19 @@
                 </ul>
               </li>
 
-              <li class="topic-item" onclick="toggleSubtopic('subtopic-2')">
+              <li class="topic-item">
                 <div class="topic-header">
-                  <h2>2.2 How the Macroeconomy Works</h2>
-                  <span class="toggle-icon">+</span>
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-2"
+                    >
+                      2.2 How the Macroeconomy Works
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
                 </div>
                 <p>AD components, AS models, macroeconomic equilibrium</p>
 
@@ -203,10 +221,19 @@
               </li>
 
               <!-- Year 2 Content -->
-              <li class="topic-item" onclick="toggleSubtopic('subtopic-3')">
+              <li class="topic-item">
                 <div class="topic-header">
-                  <h2>2.3 Economic Performance</h2>
-                  <span class="toggle-icon">+</span>
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-3"
+                    >
+                      2.3 Economic Performance
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
                 </div>
                 <p>Fiscal, monetary, supply-side policies</p>
 
@@ -239,10 +266,19 @@
                 </ul>
               </li>
 
-              <li class="topic-item" onclick="toggleSubtopic('subtopic-4')">
+              <li class="topic-item">
                 <div class="topic-header">
-                  <h2>2.4 Financial Markets and Monetary Policy</h2>
-                  <span class="toggle-icon">+</span>
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-4"
+                    >
+                      2.4 Financial Markets and Monetary Policy
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
                 </div>
                 <p>Globalisation, trade, development</p>
 
@@ -275,10 +311,19 @@
                 </ul>
               </li>
 
-              <li class="topic-item" onclick="toggleSubtopic('subtopic-5')">
+              <li class="topic-item">
                 <div class="topic-header">
-                  <h2>2.5 Fiscal Policy and Supply-Side Policies</h2>
-                  <span class="toggle-icon">+</span>
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-5"
+                    >
+                      2.5 Fiscal Policy and Supply-Side Policies
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
                 </div>
                 <p>Money, banking, financial sector</p>
 
@@ -298,10 +343,19 @@
                 </ul>
               </li>
 
-              <li class="topic-item" onclick="toggleSubtopic('subtopic-6')">
+              <li class="topic-item">
                 <div class="topic-header">
-                  <h2>2.6 The International Economy</h2>
-                  <span class="toggle-icon">+</span>
+                  <h2>
+                    <button
+                      type="button"
+                      class="topic-toggle"
+                      aria-expanded="false"
+                      aria-controls="subtopic-6"
+                    >
+                      2.6 The International Economy
+                    </button>
+                  </h2>
+                  <span class="toggle-icon" aria-hidden="true">+</span>
                 </div>
                 <p>Taxation, public spending, fiscal policy</p>
 
@@ -396,18 +450,36 @@
     <script src="/js/main.js"></script>
 
     <script>
-      function toggleSubtopic(id) {
-        const subtopic = document.getElementById(id);
-        const icon = subtopic.parentElement.querySelector(".toggle-icon");
+      // Each topic heading is a <button>, so the panel can be opened from the
+      // keyboard. The whole card stays clickable as well, via the delegated
+      // handler below; clicks that originate on the button are ignored there
+      // so a single tap does not toggle twice.
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".topic-item").forEach(function (item) {
+          const button = item.querySelector(".topic-toggle");
+          const panel = item.querySelector(".subtopic-list");
+          const icon = item.querySelector(".toggle-icon");
+          if (!button || !panel) return;
 
-        if (subtopic.style.display === "block") {
-          subtopic.style.display = "none";
-          icon.textContent = "+";
-        } else {
-          subtopic.style.display = "block";
-          icon.textContent = "-";
-        }
-      }
+          function toggle() {
+            const isOpen = panel.style.display === "block";
+            panel.style.display = isOpen ? "none" : "block";
+            button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+            if (icon) icon.textContent = isOpen ? "+" : "-";
+          }
+
+          button.addEventListener("click", function (event) {
+            event.stopPropagation();
+            toggle();
+          });
+
+          item.addEventListener("click", function (event) {
+            // Let subtopic links navigate without toggling the panel shut.
+            if (event.target.closest("a")) return;
+            toggle();
+          });
+        });
+      });
     </script>
   </body>
 </html>

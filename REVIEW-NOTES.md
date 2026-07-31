@@ -406,118 +406,127 @@ here are clean.
 
 ---
 
-# Site-wide scan — 31 Jul 2026
+# Site-wide scan and fixes — 31 Jul 2026
 
-Found while scanning the whole site to write `CLAUDE.md`. **Nothing here was
-fixed.** The enrichment pass covered only the 166 topic pages; this scan covered
-the commercial pages, past-paper pages, hubs, CSS and JS as well, which is where
-most of it sits.
+Found while scanning the whole site to write `CLAUDE.md`, then worked through on
+the author's instruction. The enrichment pass covered only the 166 topic pages;
+this scan covered the commercial pages, past-paper pages, hubs, CSS and JS too,
+which is where nearly all of it sat.
 
-## Broken for users
+Numbering matches the list the author triaged. **12 of 15 fixed, 3 left.**
 
-**S1 — three dead download links.** `past-papers/edexcel-b/index.html` lines
-130, 316 and 504 link June 2023 mark schemes for papers 1, 2 and 3:
+| # | Finding | Outcome |
+| ---: | --- | --- |
+| 1 | 3 dead Edexcel B mark-scheme links | **Left** — author fixing |
+| 2 | 55 keyboard-inaccessible accordions | **Fixed** |
+| 3 | `privacy.html` had no `<h1>` | **Fixed** |
+| 4 | `macro-application` had no `<h1>`, canonical or OG | **Fixed** |
+| 5 | Heading-level skips on 12 pages | **Fixed** |
+| 6 | Dead `carousel.js` + its CSS | **Removed** |
+| 7 | No `.gitignore`; 11 junk files tracked | **Fixed** |
+| 8 | `lang="en"` on 22 pages | **Fixed** — all now `en-GB` |
+| 9 | `.notes-container` defined in two stylesheets | **Left** |
+| 10 | 3 relative asset paths | **Fixed** |
+| 11 | `confirmation.html` had no description or canonical | **Partly** — see below |
+| 12 | Stale `codex-promts/`, empty `raw-notes/aqa/` | **Deleted** |
+| 13 | Filename outliers (`eliot_shirt.JPG` etc.) | **Left** |
+| 14 | 284 `target="_blank"` without `rel` | **Fixed** |
+| 15 | Dead `.coming-soon` CSS | **Removed** |
 
+## The two that need explaining
+
+**#11 — the canonical was deliberately not added.** `confirmation.html` already
+carries `<meta name="robots" content="noindex, nofollow">`, which the original
+finding missed. A canonical on a `noindex` page is a mixed signal — it asks
+search engines to consolidate a page they have been told to ignore — so only the
+meta description was added, which costs nothing and is ready if the `noindex` is
+ever lifted. Add the canonical only if that tag goes.
+
+**#2 — the two past-paper toggle implementations were kept separate.**
+`past-papers/aqa/index.html` uses a different `toggleYear` from the other three
+boards: it toggles `.collapsed`/`.expanded` and lets CSS animate, while
+`edexcel`, `edexcel-b` and `ocr` drive `max-height` from JS with a 300 ms
+`setTimeout`. Unifying them would have changed how the AQA page animates, so
+both were left as they were and only the accessibility wiring was added. Worth
+unifying deliberately at some point; it is a behaviour change, not a refactor.
+
+## What #2 actually changed
+
+Every `<li class="topic-item" onclick=…>` and `<li class="year-item" onclick=…>`
+became:
+
+```html
+<li class="topic-item">
+  <div class="topic-header">
+    <h2>
+      <button type="button" class="topic-toggle"
+              aria-expanded="false" aria-controls="subtopic-1">
+        1.1 Nature of Economics
+      </button>
+    </h2>
+    <span class="toggle-icon" aria-hidden="true">+</span>
+  </div>
 ```
-/past-papers/edexcel-b/a-level/paper-{1,2,3}/edexcel-b-a-level-economics-paper-{1,2,3}-june-2023-mark-scheme.pdf
-```
 
-None of the three files is on disk. The matching question papers are all present,
-so the row renders with one working button and one 404. Either the PDFs were
-never added or they were removed without unlinking. The only broken internal
-hrefs on the site.
+The heading text moved inside a `<button>`, so it is focusable and announces its
+state. The card keeps its click-anywhere behaviour through a delegated listener;
+clicks originating on the button call `stopPropagation` so one tap cannot toggle
+twice. There are now **no `onclick` attributes anywhere in the repo**.
 
-**S2 — the notes and past-papers navigation is mouse-only.** 55 click handlers
-sit on non-focusable `<li>` elements:
+Behaviour was checked in a browser, not just by eye: a temporary harness drove
+the first accordion through open/close by button, open by card body, and a
+repeat button press, asserting `display`, `aria-expanded` and the `+`/`-` glyph
+at each step. 11/11 passed. The harness was deleted afterwards.
 
-| Pattern | Uses | Where |
-| --- | ---: | --- |
-| `<li class="topic-item" onclick="toggleSubtopic(…)">` | 35 | the 6 revision-notes hub pages |
-| `<li class="year-item" onclick="toggleYear(…)">` | 20 | the 4 past-paper board pages |
+## Regressions caught during verification
 
-No `tabindex`, no `role`, no `aria-expanded`, no key handler. A keyboard or
-screen-reader user cannot open any topic group or year group, which means they
-cannot reach a single topic page or paper through the hubs. `faq.html` already
-implements this correctly — `<button class="accordion-button">` with
-`aria-expanded` and `aria-controls` — so the fix pattern is on-site.
+Four changes looked correct and were not. Each was caught by comparing
+screenshots against `main`, and each is a cascade rule that a reading of the
+markup would not have surfaced. Recorded because they are all traps for the
+next person touching this CSS.
 
-## Document structure
+| What broke | Cause |
+| --- | --- |
+| Accordion headings rendered near-white | `css/main.css:1756` styles **every bare `<button>`** as a pink CTA with `color: #fff !important`. A plain reset loses to it; the override has to be `!important` too. |
+| `privacy.html` title gained a white box | `header.major h2` sets `background: #fff`, but `#main .major h2` (line 2448) overrides it to `#f7f7f7` for anything inside `#main`. Only the second value was ever visible. |
+| `macro-application` title dropped ~20px | `header.major h2` also applies `position: relative; top: -0.65em`. Promoting the title to `h1` silently dropped the lift. |
+| Every retagged heading was too large below 736px | `css/main.css:2909` sets `h2–h6` to `1.25em` at `max-width: 736px`. Unconditional compensation rules overrode it. Note this rule does **not** cover `h1`. |
 
-**S3 — `privacy.html` has no `<h1>`.** The document opens at `<h2>` and stays
-there. It is the only page on the site with no `h1` other than S4.
+## Verification
 
-**S4 — `revision-notes/macro-application/index.html`** has no `<h1>` (its
-`header.major` uses `<h2>`), no `<link rel="canonical">` and no Open Graph tags.
-The only note-section page missing all three. `404.html` and `confirmation.html`
-also lack canonical and OG, which is defensible for `404` but probably not for
-`confirmation`; `confirmation.html` additionally has no meta description.
-
-**S5 — heading-level skips (h1 → h3)** on `contact.html`, `tutoring.html`, the 4
-past-paper board pages and the 6 revision-notes hubs — 12 pages. All 166 topic
-pages are clean, having been fixed by `docs/revision-notes-audit.md`; that audit
-did not cover these.
-
-## Dead and stale
-
-**S6 — `js/components/carousel.js` is dead.** No page loads it. Checked every
-`<script src>` on all 192 HTML files: the only references to a carousel anywhere
-are that file and ~60 lines of `.carousel-*` rules at `css/main.css:3199`, which
-are equally unused. `index.html` renders testimonials through
-`js/components/reviews-render.js` and `js/data/reviews.js` instead. The carousel
-was presumably the earlier implementation.
-
-**S7 — no `.gitignore`.** 10 `.DS_Store` files are tracked, as is
-`scripts/__pycache__/convert_raw_notes.cpython-312.pyc`.
-
-**S8 — stale scaffolding.** `codex-promts/convert-one-file.md` (the directory
-name is a typo) instructs the reader to update `notes/{topic}.html`, a path that
-has never existed in this repo — the live instruction is
-`.codex/notes-workflow.md`, which names the correct path. `raw-notes/aqa/` is an
-empty directory; `raw-notes/edexcel/` holds 73 source files.
-
-**S9 — `.coming-soon` dead CSS.** Rules exist, no markup uses it. Already noted
-above under "Notes for later"; repeated here so the dead-code items sit together.
-
-## Inconsistencies
-
-**S10 — `lang="en"` on 22 pages, `lang="en-GB"` on 168.** The 168 are the 166
-topic pages plus the 2 diagram galleries. The 22 are every root page, every hub
-and every past-paper page. The SEO audit set `en-GB` on note pages and did not
-return for the rest. **`CLAUDE.md` now specifies `en-GB` for new pages**, so this
-will drift further apart until the 22 are normalised.
-
-**S11 — `.notes-container` is defined in two stylesheets.** Unscoped in
-`css/pages/revision-notes-topics.css`, scoped as
-`.revision-notes-content .notes-container` in
-`css/pages/revision-notes-textbook.css`. No page currently loads both, so nothing
-is visibly broken, but load order would decide the winner if one ever did. This
-is the concrete case behind the CSS scoping rule in `CLAUDE.md`.
-
-**S12 — three relative asset paths.** `about.html:93`, `about.html:244` and
-`tutoring.html:156` use `src="images/…"` against roughly 2,000 root-absolute
-references elsewhere. They resolve only because those two pages sit at the root;
-the same markup moved into a subdirectory would 404.
-
-**S13 — naming outliers.** `images/eliot_shirt.JPG` uses an uppercase extension
-and underscores (as do `eliot_boat.jpeg` and `eliot_grad.jpg`), against
-lowercase-kebab-case everywhere else. `images/diagrams/Indirect-tax-incidence-elastic-inelastic.png`
-is the only capitalised filename among 300 diagrams.
-
-**S14 — ~284 `target="_blank"` links without `rel="noopener"`**, all on the 4
-past-paper board pages. Modern browsers imply `noopener` for `target="_blank"`,
-so this is hygiene rather than an active problem. Lowest priority on this list.
-
-## Verification run
-
-Both existing validators were run against the whole site rather than just
-`revision-notes/`:
+Against `main`, on a pristine worktree served side by side with the working copy.
 
 | Check | Result |
 | --- | --- |
-| `scripts/verify_html.py .` | **192/192 files parse, 0 errors** |
-| `scripts/verify_links.py .` | 4,420 internal refs, 519 external skipped. **3 broken hrefs** — all of S1 |
+| `scripts/verify_html.py .` | **192/192 parse, 0 errors** |
+| `scripts/verify_links.py .` | 4,421 internal refs, **3 broken — all finding #1**, which was left |
+| Visible text vs `main` | **0 pages changed** |
+| `<a>` links vs `main` | **0 lost, 0 gained** |
+| `<img>` sources vs `main` | 3 changed — exactly the intended relative→absolute fixes |
+| `aria-controls` targets | 85 references, **0 unresolved** |
+| Heading structure | **0 pages** with a missing/duplicate `h1` or a skipped level (was 19) |
+| Pixel comparison at 480 / 760 / 1024 / 1440px | **Identical** on every changed page |
+
+Two pages cannot be pixel-compared and were excluded by proof, not assumption:
+`confirmation.html` builds its reference number from `Date.now()` and
+`Math.random()`, and `tutoring.html` embeds a Calendly widget whose loading
+spinner depends on real network timing. Both were shown non-deterministic by
+re-rendering the *same* version repeatedly and getting different bytes.
 
 `verify_links.py` also reports `templates/header.html:2 -> #main` as a broken
 fragment. That is a **false positive**: the template is injected into a host page
 that does have `#main`, and the script resolves fragments against the file it
-found them in. Worth a note in the script if it is ever run site-wide again.
+found them in.
+
+## Still open after this work
+
+- **#1, #9, #13** as triaged above.
+- **`css/main.css` fails `prettier --check`** at line 2407, a `box-shadow` list.
+  Pre-existing on `main` and untouched here.
+  `css/pages/revision-notes-textbook.css` **now passes** — its long-standing
+  failure was the `linear-gradient` inside the dead `.coming-soon` block removed
+  as #15.
+- **`.year-header h4` in `css/pages/past-papers-list.css` is a dead selector** —
+  that markup has always used `h2`. Noticed while fixing #2; left alone.
+- **`404.html`** has no canonical and no Open Graph tags. Defensible for a 404,
+  listed so it is a decision rather than an oversight.

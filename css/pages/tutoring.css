@@ -294,3 +294,18 @@
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
+/* The tutor-profile heading was an h3 and is now an h2 so the page has no
+   skipped heading levels. main.css sizes h2 at 1.5em; this restores the h3
+   size it has always rendered at. */
+.box.feature > h2 {
+  font-size: 1.35em;
+}
+
+@media screen and (max-width: 736px) {
+  /* main.css drops h2-h6 to 1.25em here, so the compensation above must not
+     hold the old h3 size at mobile widths. */
+  .box.feature > h2 {
+    font-size: 1.25em;
+  }
+}

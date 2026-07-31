@@ -1,0 +1,50 @@
+.privacy-notice {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-notice .privacy-meta {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+.privacy-notice section {
+  margin: 0 0 2.5em 0;
+}
+
+.privacy-notice ul {
+  margin-top: -0.75em;
+}
+
+/* Heading levels were corrected so the page has a single <h1> and no skipped
+   levels. main.css sizes and positions header.major headings as h2 and body
+   headings as h3, so both treatments are restored here at the new levels.
+   Scoped to .privacy-notice, so no other page is affected. */
+
+.privacy-notice header.major h1 {
+  font-size: 1.5em;
+  /* main.css paints header.major headings #fff, then overrides that to
+     #f7f7f7 for anything inside #main (see "#main .major h2"). This title
+     sits inside #main, so it takes the second value. */
+  background: #f7f7f7;
+  position: relative;
+  top: -0.65em;
+  display: inline;
+  margin: 0;
+  padding: 0 1em 0 1em;
+}
+
+.privacy-notice section h2 {
+  font-size: 1.35em;
+  margin-bottom: 0.75em;
+}
+
+@media screen and (max-width: 736px) {
+  /* main.css drops h2-h6 to 1.25em here. The page title is now an h1, which
+     that rule does not cover, so it is matched explicitly. */
+  .privacy-notice header.major h1,
+  .privacy-notice section h2 {
+    font-size: 1.25em;
+  }
+}
