@@ -15,7 +15,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
-| Phase 1B — enrichment plans | Batches 1–2 of 6 delivered and applied |
+| Phase 1B — enrichment plans | Batches 1–4 applied; batch 5 delivered |
 | Phase 2 commits 8–9 — enrichment, AQA | **Complete** — 12 components, `NEW-CONTENT-LOG.md` |
 | Phase 2, remaining enrichment | Batches 3–6 (Edexcel, 87 pages) not started |
 | Phase 3 — final verification | Partial (run after each commit so far) |
@@ -90,6 +90,18 @@ expects. Invalid markup rather than a visible fault. The earlier audit escaped b
 Escaped to `&lt;` at the author's request (commit "Escape bare < characters in note
 text"). Markup-only: 0 visible text changes, 0 tag or link changes, and pixel-
 identical rendering.
+
+**N5 — the Edexcel twin still carries the concentration-ratio error you fixed on AQA.**
+`edexcel-theme-3/3-4-4-oligopoly.html`:
+
+> "a **3-firm concentration ratio of 80%** means that the top **five** firms
+> account for 80% of total market sales"
+
+Corrected on `aqa-a2-micro/1-5-5` on 31 July but not on its Edexcel twin, so the
+same sentence is still wrong here. Same one-word fix. Found while preparing
+`PLAN-enrichment-edexcel-theme-3.md`; the concentration-ratio worked example
+proposed for that page would sit directly beneath the sentence, so the component is
+being held until the wording is fixed.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
