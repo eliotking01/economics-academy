@@ -1,0 +1,256 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.2.4",
+  "slug": "2-2-4-aggregate-demand-and-the-level-of-economic-activity",
+  "title": "Aggregate Demand and the Level of Economic Activity",
+  "shortTitle": "The Multiplier",
+  "pageTitle": "Multiplier Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on the multiplier for AQA A-Level Economics: marginal propensities, calculating the multiplier and what determines its size.",
+  "intro": "Ten original multiple-choice questions on the multiplier and the marginal propensities behind it, written to the style and difficulty of AQA Paper 3 Section A. Five are calculations.",
+  "notesTeaser": "Ten original multiple-choice questions on the multiplier process, the marginal propensities and what determines the multiplier's size, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-2-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The multiplier is best described as the process by which",
+      "options": {
+        "A": "A rise in interest rates leads to a fall in consumption.",
+        "B": "A rise in national income leads to a larger rise in investment.",
+        "C": "A rise in the price level leads to a fall in real output.",
+        "D": "An initial injection leads to a larger final rise in national income."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An injection becomes someone's income. They spend part of it, which becomes someone else's income, who spends part of that — and so on through successive rounds. Each round is smaller than the last because some income leaks out at every stage, but the rounds add up to <strong>more than the original injection</strong>.",
+        "distractors": {
+          "A": "This is a determinant of consumption, not the multiplier. Nothing here compounds through successive rounds of spending.",
+          "B": "This is the <strong>accelerator</strong> effect, which runs from income growth to investment. The two are frequently confused: the multiplier runs from an injection to income.",
+          "C": "This describes a movement along the aggregate demand curve, which has nothing to do with the multiplier process."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a closed economy with no government, households save 20p out of every extra £1 of income. The value of the multiplier is",
+      "options": {
+        "A": "0.20",
+        "B": "0.80",
+        "C": "1.25",
+        "D": "5.00"
+      },
+      "answer": "D",
+      "model": {
+        "working": "With no government and no trade, saving is the only leakage, so the marginal propensity to save is the whole marginal propensity to withdraw.<br />MPS = 0.2, so MPC = 0.8.<br />k = 1 ÷ (1 − MPC) = 1 ÷ 0.2 = <strong>5.00</strong>.<br />An initial injection of £1bn would eventually raise national income by £5bn.",
+        "distractors": {
+          "A": "0.20 is the marginal propensity to save itself. It is the input to the formula, not the answer.",
+          "B": "0.80 is the marginal propensity to consume, 1 − 0.2. Again an input, not the multiplier.",
+          "C": "1.25 is 1 ÷ 0.8, dividing by the MPC instead of by the leakage. The denominator must be the proportion of income that <em>leaves</em> the flow."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the marginal propensities of an economy.<br />Using Table 1, the value of the multiplier is",
+      "table": {
+        "caption": "Table 1: Marginal propensities",
+        "head": [
+          "Marginal propensity",
+          "Value"
+        ],
+        "rows": [
+          [
+            "To save (MPS)",
+            "0.05"
+          ],
+          [
+            "To tax (MPT)",
+            "0.15"
+          ],
+          [
+            "To import (MPM)",
+            "0.05"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1.3",
+        "B": "4.0",
+        "C": "6.7",
+        "D": "20.0"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The multiplier depends on <em>every</em> leakage, not just saving.<br />MPW = MPS + MPT + MPM = 0.05 + 0.15 + 0.05 = <strong>0.25</strong>.<br />k = 1 ÷ MPW = 1 ÷ 0.25 = <strong>4.0</strong>.<br />Check it the other way: MPC = 1 − 0.25 = 0.75, and 1 ÷ (1 − 0.75) also gives 4.0.",
+        "distractors": {
+          "A": "1.3 is 1 ÷ 0.75, dividing by the marginal propensity to <em>consume</em>. The denominator has to be the share of income that leaks out, not the share that is spent.",
+          "C": "6.7 is 1 ÷ 0.15, using only the marginal propensity to tax. Saving and imports leak out of the flow as well.",
+          "D": "20.0 is 1 ÷ 0.05, treating saving as the only leakage. That is the single most common multiplier error, and here it overstates the multiplier fivefold."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's marginal propensity to withdraw is 0.2. The government raises its spending by £6 billion. The final change in real GDP is",
+      "options": {
+        "A": "£1.2bn",
+        "B": "£6.0bn",
+        "C": "£7.5bn",
+        "D": "£30.0bn"
+      },
+      "answer": "D",
+      "model": {
+        "working": "Find the multiplier, then apply it to the injection.<br />k = 1 ÷ MPW = 1 ÷ 0.2 = <strong>5</strong>.<br />Final change in real GDP = £6bn × 5 = <strong>£30bn</strong>.<br />The £6bn is spent, becomes income, and 80p in every pound of it is passed on again — which is what turns £6bn of government spending into £30bn of national income.",
+        "distractors": {
+          "A": "£1.2bn is £6bn × 0.2, multiplying by the leakage instead of dividing by it. That would make the multiplier shrink the injection.",
+          "B": "£6.0bn is the injection with no multiplier applied at all — the answer if the extra income were never spent again.",
+          "C": "£7.5bn uses k = 1 ÷ (1 − 0.2) = 1.25. The 0.2 is already the withdrawal, so subtracting it from 1 treats it as though it were the MPC."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An injection of £3 billion eventually raises national income by £12 billion. The value of the multiplier is",
+      "options": {
+        "A": "0.25",
+        "B": "4.00",
+        "C": "9.00",
+        "D": "36.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The multiplier is the ratio of the final change in national income to the injection that caused it.<br />k = £12bn ÷ £3bn = <strong>4.00</strong>.<br />Working backwards, a multiplier of 4 implies leakages of 1 ÷ 4 = 0.25 of each extra pound of income.",
+        "distractors": {
+          "A": "0.25 inverts the ratio, £3bn ÷ £12bn. A multiplier below 1 would mean the injection shrank as it passed through the economy.",
+          "C": "9.00 is £12bn − £3bn, the extra income beyond the injection. That is a value in pounds, not a ratio.",
+          "D": "36.00 multiplies the two figures together. The multiplier is a ratio, so the injection goes on the bottom."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would increase the size of the multiplier?",
+      "options": {
+        "A": "A fall in the marginal propensity to consume.",
+        "B": "A fall in the marginal propensity to import.",
+        "C": "A rise in the marginal propensity to save.",
+        "D": "A rise in the marginal rate of tax."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The multiplier is 1 ÷ MPW, so anything that <strong>reduces leakages</strong> makes it larger. Imports are a leakage: money spent on foreign goods becomes income abroad and drops out of the domestic chain. A lower marginal propensity to import means more of each extra pound is spent at home, so the rounds of spending are larger and the multiplier rises.",
+        "distractors": {
+          "A": "A lower MPC means a higher MPW, so the multiplier gets <em>smaller</em>. Spending is what keeps the chain going.",
+          "C": "Saving is a leakage, so more of it shrinks the multiplier. This is the mirror image of the correct answer.",
+          "D": "Tax is a leakage too. A higher marginal tax rate takes more out of each round and reduces the multiplier."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The multiplier is likely to be larger in a recession than in a boom. The best explanation is that",
+      "options": {
+        "A": "Firms face capacity constraints that force prices up.",
+        "B": "Households and firms are more confident about the future.",
+        "C": "Spare capacity means extra demand raises output rather than prices.",
+        "D": "The marginal propensity to import is higher when incomes are low."
+      },
+      "answer": "C",
+      "model": {
+        "working": "In a recession there are unemployed workers and idle machinery, so extra spending can be met by producing more. The extra output creates real income, which is then spent again and keeps the multiplier rounds going.<br />Near full capacity the same extra demand mostly bids up <strong>prices</strong> instead, so the real effect on output — and so on income — is much smaller.",
+        "distractors": {
+          "A": "This describes a boom, where capacity constraints make the multiplier <em>smaller</em>.",
+          "B": "Confidence is generally lower in a recession, not higher. Where it holds up it does support the multiplier, but it is not what distinguishes a recession from a boom.",
+          "D": "There is no reason for import propensity to rise as incomes fall, and a higher MPM would in any case reduce the multiplier."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q8",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In an economy the marginal propensity to save is 0.15, the marginal propensity to tax is 0.25 and the marginal propensity to import is 0.10. The marginal propensity to consume is",
+      "options": {
+        "A": "0.50",
+        "B": "0.75",
+        "C": "0.85",
+        "D": "0.90"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Every extra pound of income is either consumed, saved, taxed or spent on imports, so the four propensities sum to 1.<br />MPC = 1 − (MPS + MPT + MPM) = 1 − (0.15 + 0.25 + 0.10) = 1 − 0.50 = <strong>0.50</strong>.<br />Half of each extra pound is spent on domestic goods and services; the other half leaks out of the circular flow.",
+        "distractors": {
+          "B": "0.75 is 1 − 0.25, deducting tax only. All three leakages have to come out.",
+          "C": "0.85 is 1 − 0.15, deducting saving only. This is the closed-economy formula applied to an economy that has both a government and trade.",
+          "D": "0.90 is 1 − 0.10, deducting imports only."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching an AD/AS diagram with a Keynesian LRAS curve, the effect of a rise in government spending on real output will be largest when the economy is",
+      "options": {
+        "A": "At full capacity output.",
+        "B": "Close to full capacity output.",
+        "C": "Far below full capacity output.",
+        "D": "Slightly below full capacity output."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Draw the Keynesian LRAS curve and shift AD to the right at different points along it.<br />On the <strong>flat section</strong>, far below capacity, the whole shift comes through as extra real output and the price level barely moves — the multiplier works on output in full.<br />As the curve steepens and then turns vertical, more of the same shift is absorbed by rising prices and less by output.",
+        "distractors": {
+          "A": "At full capacity the curve is vertical, so a rise in AD raises the price level and leaves real output unchanged.",
+          "B": "Close to capacity the curve is steep, so most of the shift comes through as higher prices and only a little as output.",
+          "D": "Slightly below capacity the curve is already sloping upwards, so the shift is split between output and prices rather than going wholly into output."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-4-q10",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two economies each receive an injection of £4 billion. Economy X has a marginal propensity to withdraw of 0.25 and economy Y has one of 0.50. The final rise in national income in X exceeds that in Y by",
+      "options": {
+        "A": "£2bn",
+        "B": "£8bn",
+        "C": "£16bn",
+        "D": "£24bn"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out each economy separately, then take the difference.<br />Economy X: k = 1 ÷ 0.25 = 4, so the final rise is £4bn × 4 = <strong>£16bn</strong>.<br />Economy Y: k = 1 ÷ 0.50 = 2, so the final rise is £4bn × 2 = <strong>£8bn</strong>.<br />Difference = £16bn − £8bn = <strong>£8bn</strong>.<br />Doubling the leakage halves the multiplier, so the same injection does half as much work. This is why the size of the multiplier matters so much for judging a fiscal stimulus.",
+        "distractors": {
+          "A": "£2bn is the difference between the two multipliers, 4 − 2. That is a ratio, not a sum of money — it still has to be applied to the £4bn injection.",
+          "C": "£16bn is economy X's final rise on its own. The question asks by how much it <em>exceeds</em> economy Y's.",
+          "D": "£24bn adds the two final rises, £16bn + £8bn, instead of subtracting one from the other."
+        }
+      }
+    }
+  ]
+}

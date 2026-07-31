@@ -1,0 +1,224 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.2.1",
+  "slug": "2-2-1-the-circular-flow-of-income",
+  "title": "The Circular Flow of Income",
+  "shortTitle": "The Circular Flow of Income",
+  "pageTitle": "Circular Flow of Income Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the circular flow of income for AQA A-Level Economics: injections, withdrawals, equilibrium and real versus money income.",
+  "intro": "Eight original multiple-choice questions on the circular flow of income, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on injections and withdrawals, equilibrium national income and real versus money income, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-2-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following is a withdrawal from the circular flow of income?",
+      "options": {
+        "A": "Exports sold to overseas buyers.",
+        "B": "Government spending on public services.",
+        "C": "Investment by firms in capital goods.",
+        "D": "Taxation paid to the government."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A withdrawal is money that leaves the circular flow rather than being passed on as domestic spending. The three withdrawals are <strong>saving, taxation and imports</strong>. Tax paid to the government is income households neither spend on domestic output nor save, so it leaves the flow.",
+        "distractors": {
+          "A": "Exports are an <strong>injection</strong>. They are spending by overseas buyers entering the domestic flow.",
+          "B": "Government spending is an <strong>injection</strong>. It is the counterpart of taxation, not another withdrawal.",
+          "C": "Investment is an <strong>injection</strong>. Firms are adding new spending on capital goods to the flow."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A household owns a flat worth £250,000 and receives £1,100 a month in rent from letting it. In economic terms",
+      "options": {
+        "A": "Both the flat and the rent are income.",
+        "B": "Both the flat and the rent are wealth.",
+        "C": "The flat is income and the rent is wealth.",
+        "D": "The flat is wealth and the rent is income."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Wealth is a <strong>stock</strong> of assets held at a point in time; income is a <strong>flow</strong> of money received over a period. The flat is an asset the household owns, so it is wealth. The £1,100 a month it generates is received over time, so it is income.<br />The relationship runs one way: wealth generates income, which is why the two are so easily confused.",
+        "distractors": {
+          "A": "The flat is not received over a period of time — it is held. Counting an asset as income would mean adding its whole value to this year's earnings.",
+          "B": "The rent arrives month after month, which is what makes it a flow rather than a stock.",
+          "C": "This has the two exactly the wrong way round. The test is whether something is held at a point in time or received over a period."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the basic two-sector circular flow model, households supply land, labour, capital and enterprise to firms. This is best described as",
+      "options": {
+        "A": "An injection into the circular flow.",
+        "B": "A money flow from firms to households.",
+        "C": "A real flow from households to firms.",
+        "D": "A withdrawal from the circular flow."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The model has two sets of flows running in opposite directions. <strong>Real flows</strong> are the factor services and the goods and services themselves; <strong>money flows</strong> are the payments made for them. Factors of production moving from households to firms are real, not monetary.<br />The money flow in the other direction is the rent, wages, interest and profit firms pay for those factors.",
+        "distractors": {
+          "A": "Injections are additions of new spending from outside the basic two-sector model — investment, government spending and exports. Factor services are internal to it.",
+          "B": "The money flow from firms to households is the <em>payment</em> for these factors, not the factors themselves.",
+          "D": "Withdrawals are saving, taxation and imports. Supplying factors of production takes nothing out of the flow."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the injections into and withdrawals from an economy's circular flow of income in one year.<br />Using Table 1, all other things being equal, national income will",
+      "table": {
+        "caption": "Table 1: Injections and withdrawals",
+        "head": [
+          "Item",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Investment",
+            "£180bn"
+          ],
+          [
+            "Saving",
+            "£200bn"
+          ],
+          [
+            "Government spending",
+            "£250bn"
+          ],
+          [
+            "Taxation",
+            "£270bn"
+          ],
+          [
+            "Exports",
+            "£310bn"
+          ],
+          [
+            "Imports",
+            "£290bn"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Contract, because withdrawals exceed injections by £20bn.",
+        "B": "Contract, because withdrawals exceed injections by £40bn.",
+        "C": "Expand, because injections exceed withdrawals by £20bn.",
+        "D": "Remain unchanged, because injections equal withdrawals."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Sort each item into an injection or a withdrawal, then total the two.<br />Injections = investment + government spending + exports = £180bn + £250bn + £310bn = <strong>£740bn</strong>.<br />Withdrawals = saving + taxation + imports = £200bn + £270bn + £290bn = <strong>£760bn</strong>.<br />Withdrawals exceed injections by <strong>£20bn</strong>, so more money is leaving the flow than entering it and national income contracts.",
+        "distractors": {
+          "B": "£40bn comes from leaving trade out and comparing only investment and government spending (£430bn) with saving and taxation (£470bn). Exports and imports belong in the totals.",
+          "C": "£20bn is the right gap with the sign reversed, which comes from swapping government spending and taxation. Government spending is the injection; taxation is the withdrawal.",
+          "D": "The two totals are not equal — that is the condition for equilibrium, which this economy is not in."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In an economy, total injections are currently greater than total withdrawals. All other things being equal, national income will",
+      "options": {
+        "A": "Contract until withdrawals fall to equal injections.",
+        "B": "Expand until withdrawals rise to equal injections.",
+        "C": "Remain unchanged, because the two flows are independent.",
+        "D": "Remain unchanged, because injections always equal withdrawals."
+      },
+      "answer": "B",
+      "model": {
+        "working": "More money is entering the flow than leaving it, so the flow grows and national income rises. As income rises, so do the things that depend on it — saving, tax paid and spending on imports — so <strong>withdrawals rise towards injections</strong>. The process stops when the two are equal again, which is the equilibrium condition <strong>J = W</strong>.",
+        "distractors": {
+          "A": "Contraction is what happens in the opposite case, when withdrawals exceed injections.",
+          "C": "The two are not independent. Withdrawals are driven by the level of income, which is exactly why the adjustment happens.",
+          "D": "Injections and withdrawals are equal only <em>in equilibrium</em>. They are planned by different groups for different reasons, so there is nothing forcing them to match at any given moment."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following would increase the size of the circular flow of income?",
+      "options": {
+        "A": "A fall in exports.",
+        "B": "A rise in imports.",
+        "C": "A rise in the rate of income tax.",
+        "D": "A rise in investment by firms."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The flow grows when injections rise or withdrawals fall. Investment is an <strong>injection</strong>, so a rise in it puts more new spending into the flow and national income expands.",
+        "distractors": {
+          "A": "Exports are an injection, so a <em>fall</em> in them shrinks the flow rather than expanding it.",
+          "B": "Imports are a withdrawal. A rise in them takes more money out of the domestic flow.",
+          "C": "Taxation is a withdrawal. A higher tax rate takes a larger share of income out of the flow."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A worker's money income rises by 6% over a year in which the general price level rises by 2%. All other things being equal, the worker's real income has",
+      "options": {
+        "A": "Fallen by about 4%.",
+        "B": "Risen by about 3%.",
+        "C": "Risen by about 4%.",
+        "D": "Risen by about 8%."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Real income is money income adjusted for the change in prices, so the two rates are subtracted.<br />6% − 2% = <strong>4%</strong>.<br />The worker's pay buys about 4% more than it did a year ago. Money income alone cannot answer the question, because part of any pay rise is simply keeping up with prices.",
+        "distractors": {
+          "A": "This subtracts the wrong way round, 2 − 6. Real income only falls when prices rise faster than money income.",
+          "B": "3 is 6 ÷ 2. Inflation is subtracted from the growth in money income, not divided into it.",
+          "D": "8 adds the two rates. Adding would mean inflation had made the worker better off."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An economy's equilibrium level of national income is below its full employment level of income. It follows that",
+      "options": {
+        "A": "Injections must exceed withdrawals at the current level of income.",
+        "B": "The economy has spare capacity and unemployed resources.",
+        "C": "The economy is producing on its production possibility frontier.",
+        "D": "Withdrawals must exceed injections at the current level of income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Equilibrium means injections equal withdrawals, so the flow is stable — but it is stable at a level of income below the one that would fully employ the economy's resources. That gap is precisely <strong>spare capacity</strong>: factors of production, labour above all, that are available but not being used.<br />The important point is that an economy can settle at this level and stay there. Equilibrium does not mean full employment.",
+        "distractors": {
+          "A": "If injections exceeded withdrawals the flow would still be expanding, so the economy would not be in equilibrium.",
+          "C": "Producing on the frontier means every resource is fully employed. An economy below full employment income is producing at a point <em>inside</em> its frontier.",
+          "D": "If withdrawals exceeded injections the flow would be contracting, so again this is not an equilibrium."
+        }
+      }
+    }
+  ]
+}

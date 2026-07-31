@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 58 topics, 434 questions. AQA Microeconomics is complete; AQA
-Macroeconomics unit 2.1 is done.**
+**Live: 64 topics, 484 questions. AQA Microeconomics is complete; AQA
+Macroeconomics units 2.1 and 2.2 are done.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -205,6 +205,11 @@ results mean:
   option. This is what caught 2.1.3 Q7: the numbers matched before any phrasing
   did. Common round numbers (£480, 460) collide harmlessly all the time, so read
   the surrounding context before rewriting anything.
+- **Compare whole option sets, not just single values.** Batch 7's multiplier
+  item shared three of its four options with a real question on the same
+  archetype while sharing no phrasing at all, so only a set comparison would
+  find it. One value in common is coincidence — 2.0, 2.5, 5.0 and 10.0 are the
+  multiplier values every textbook uses. Three is a rewrite.
 
 Do **not** try to parse the PDFs with a stdlib script. Their content streams use
 subsetted fonts with custom encodings, so pulling the parenthesised strings out
@@ -282,13 +287,12 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### AQA Macroeconomics — 21 topics, 176 questions still to write
+### AQA Macroeconomics — 15 topics, 126 questions still to write
 
-Unit 2.1 is done (see batch 6). What remains:
+Units 2.1 and 2.2 are done (batches 6 and 7). What remains:
 
 | Unit | Topics and planned counts |
 | --- | --- |
-| 2.2 | 2.2.1 (8) · 2.2.2 (9) · 2.2.3 (9) · 2.2.4 (10) · 2.2.5 (7) · 2.2.6 (7) — 50 |
 | 2.3 | 2.3.1 (9) · 2.3.2 (9) · 2.3.3 (10) · 2.3.4 (8) — 36 |
 | 2.4 | 2.4.1 (8) · 2.4.2 (7) · 2.4.3 (9) · 2.4.4 (6) — 30 |
 | 2.5 | 2.5.1 (9) · 2.5.2 (8) — 17 |
@@ -328,9 +332,10 @@ if in doubt — the guide's rule is that concision beats coverage.
   specification — units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual almost
   throughout. Recorded rather than corrected; watch whether macro and Edexcel
   bring the site-wide ratio closer to target. Macro 2.1 pulled the right way —
-  24% `calculation` and 15% `data-table` in that batch — but on 33 questions it
-  moves the site-wide figures only to 7% and 7%. Macro should keep correcting
-  this; Edexcel Themes 2 and 4 are where the rest of the arithmetic lives.
+  24% `calculation` and 15% `data-table` in that batch — and 2.2 held
+  `calculation` at 14%, taking the site-wide figures to 8% and 8%. Progress is
+  real but slow, because micro's 401 questions dominate the total. Edexcel
+  Themes 2 and 4 are where the rest of the arithmetic lives.
 - **Written-response extension.** Proposed in the original brief but **not
   built** and not approved: 1–2 short written questions per topic with
   indicative-content model answers behind `<details>`, plus a marking-service
@@ -488,9 +493,48 @@ The skill mix landed much closer to target than any micro batch:
 `calculation` 24% against a ~15% target and `data-table` 15% against ~20%,
 against 6% and 7% across the whole of micro.
 
+### Batch 7 — AQA macro 2.2 (2026-07-31)
+
+6 topics, 50 questions. All 50 re-derived from the stem alone with **0
+mismatches**; every figure in every multiplier, propensity and circular-flow
+calculation recomputed, including all distractor values.
+
+Fixed during verification:
+
+- **2.2.4 Q3 shared three option values with a real question.** AQA's June 2019
+  Paper 3 asks for the value of a multiplier with options `2.0 / 2.5 / 5.0 /
+  10.0`. The draft set was `2.0 / 3.3 / 5.0 / 10.0` on the same archetype — too
+  close, even though the route to the answer was different. Leakages re-picked
+  as 0.05 / 0.15 / 0.05, giving `1.3 / 4.0 / 6.7 / 20.0` and no overlap. This is
+  the second batch running where the mechanical originality check (§7) found
+  something reading had not.
+- **2.2.4 Q9 had two options meaning the same thing** — "At full capacity
+  output" and "On the vertical section of the LRAS curve". A duplicate option is
+  a wasted option and hands students an elimination shortcut. Replaced with
+  "Slightly below full capacity output", so the four options are distinct points
+  on one scale.
+- 5 options rewritten for length. No letter-distribution failures.
+
+**Sketch items are back**, as predicted: 5 of 50, exactly the ~10% target. Unit
+2.2 is the AD/AS unit, so the diagram is the natural way to answer — the
+Keynesian versus Classical LRAS contrast (2.2.2 Q5 and Q6) is tested by asking
+what the student's own sketch shows.
+
+| | |
+| --- | --- |
+| Answer letters | A 11, B 14, C 13, D 12 (even would be 12.5) |
+| Skills | applied-reasoning 26, definition-in-context 12, calculation 7, data-table 5 |
+| Difficulty | foundation 8, standard 36, stretch 6 |
+| Sketch to solve | 5 |
+
+`calculation` landed at 14% against the ~15% target — unit 2.2.4 alone
+contributed 5 items. `data-table` came in at 10% against ~20%: the unit is
+diagram- and concept-led, and forcing more tables into it would have meant
+inventing data rather than interpreting it.
+
 ---
 
-## AQA Macroeconomics — 4 of 25 topics
+## AQA Macroeconomics — 10 of 25 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -498,6 +542,12 @@ against 6% and 7% across the whole of micro.
 | 2.1 | 2.1.2 Macroeconomic Indicators | 8 | Done |
 | 2.1 | 2.1.3 Uses of Index Numbers | 10 | Done |
 | 2.1 | 2.1.4 Uses of National Income Data | 8 | Done |
+| 2.2 | 2.2.1 The Circular Flow of Income | 8 | Done |
+| 2.2 | 2.2.2 Aggregate Demand and Aggregate Supply Analysis | 9 | Done |
+| 2.2 | 2.2.3 The Determinants of Aggregate Demand | 9 | Done |
+| 2.2 | 2.2.4 Aggregate Demand and the Level of Economic Activity | 10 | Done |
+| 2.2 | 2.2.5 Determinants of Short-Run Aggregate Supply | 7 | Done |
+| 2.2 | 2.2.6 Determinants of Long-Run Aggregate Supply | 7 | Done |
 
 ---
 

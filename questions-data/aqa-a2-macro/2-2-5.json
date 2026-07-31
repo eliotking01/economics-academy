@@ -1,0 +1,194 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.2.5",
+  "slug": "2-2-5-determinants-of-short-run-aggregate-supply",
+  "title": "Determinants of Short-Run Aggregate Supply",
+  "shortTitle": "Determinants of SRAS",
+  "pageTitle": "SRAS Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on short-run aggregate supply for AQA A-Level Economics: costs, exchange rates, indirect taxes and supply shocks.",
+  "intro": "Seven original multiple-choice questions on the determinants of short-run aggregate supply, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Seven original multiple-choice questions on what shifts short-run aggregate supply, from input costs and exchange rates to supply shocks, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-2-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Short-run aggregate supply is the total planned output of an economy at a given price level, assuming that",
+      "options": {
+        "A": "All factors of production are fully and efficiently employed.",
+        "B": "At least one factor of production is fixed.",
+        "C": "The economy is operating on its production possibility frontier.",
+        "D": "Wages and prices adjust fully to changes in demand."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The short run in macroeconomics is the period in which at least one factor of production — typically capital or the state of technology — cannot be varied. That fixed factor is what makes unit costs rise as output is pushed up, and so what gives the <strong>SRAS curve its upward slope</strong>.",
+        "distractors": {
+          "A": "Full and efficient employment of every factor is the definition of <strong>long-run</strong> aggregate supply. It describes productive capacity, not short-run output.",
+          "C": "Producing on the frontier again describes the long-run, full-capacity position. In the short run an economy is usually inside it.",
+          "D": "Full adjustment of wages and prices is a long-run assumption, and it is the one the Classical model relies on."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-5-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four changes affecting firms across an economy over one year.<br />Using Table 1, the most likely combined effect is a shift of the SRAS curve to the",
+      "table": {
+        "caption": "Table 1: Changes affecting firms",
+        "head": [
+          "Change",
+          "Over the year"
+        ],
+        "rows": [
+          [
+            "Energy costs",
+            "Up 12%"
+          ],
+          [
+            "Average wages",
+            "Up 4%"
+          ],
+          [
+            "Rate of indirect tax",
+            "Unchanged"
+          ],
+          [
+            "Subsidies to firms",
+            "Withdrawn"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Left, because production costs have risen on balance.",
+        "B": "Left, because aggregate demand has fallen.",
+        "C": "Right, because production costs have fallen on balance.",
+        "D": "Right, because firms' revenues have risen."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Take the rows one at a time and ask what each does to firms' costs.<br />Energy costs up 12% and average wages up 4% both <strong>raise</strong> costs. Removing subsidies raises costs as well, since firms lose a payment that was offsetting them. Only the unchanged indirect tax rate is neutral.<br />Three cost increases and nothing pulling the other way means costs have risen on balance, so firms supply less at every price level and <strong>SRAS shifts left</strong>.",
+        "distractors": {
+          "B": "Aggregate demand is a different curve. Nothing in the table is a component of AD, and a fall in AD would not shift SRAS at all.",
+          "C": "Costs have risen, not fallen. A rightward shift needs cost reductions, such as cheaper energy or a new subsidy.",
+          "D": "Revenue is not what shifts SRAS — costs are. A higher price level would in any case be a movement along the curve, not a shift of it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The domestic currency appreciates. For firms that rely on imported raw materials, the most likely effect is that the SRAS curve shifts to the",
+      "options": {
+        "A": "Left, because imported inputs become dearer.",
+        "B": "Left, because exports become dearer.",
+        "C": "Right, because imported inputs become cheaper.",
+        "D": "Right, because exports become cheaper."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A stronger currency buys more foreign currency, so imported raw materials cost <strong>less</strong> in domestic currency. Lower input costs mean firms can supply more at every price level, so SRAS shifts to the right.<br />Note that the same appreciation makes exports dearer abroad, which reduces <em>aggregate demand</em>. The two effects sit on opposite sides of the model, which is what makes exchange rate questions worth reading carefully.",
+        "distractors": {
+          "A": "This is the effect of a <em>depreciation</em>. An appreciation makes imports cheaper, not dearer.",
+          "B": "Exports becoming dearer is a real consequence of an appreciation, but it shifts the AD curve, not SRAS. Export prices are not a cost of production.",
+          "D": "An appreciation makes exports dearer abroad, not cheaper — and either way this works through demand rather than supply."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts the rate of an indirect tax levied on firms throughout the economy. The SRAS curve will shift to the",
+      "options": {
+        "A": "Left, because firms' costs rise.",
+        "B": "Left, because government revenue falls.",
+        "C": "Right, because firms' costs fall.",
+        "D": "Right, because aggregate demand rises."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An indirect tax on production is a cost to the firm, so cutting it <strong>lowers costs</strong> at every level of output. Firms are then willing to supply more at any given price level, which shifts SRAS to the right and puts downward pressure on the price level.",
+        "distractors": {
+          "A": "A tax <em>rise</em> would raise costs and shift SRAS left. This is the correct mechanism applied in the wrong direction.",
+          "B": "Falling government revenue is a consequence for the budget, not a change in firms' production costs.",
+          "D": "A tax cut may well raise aggregate demand, but that shifts the AD curve. The stem asks about SRAS, which moves because costs have changed."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching an AD/AS diagram, a negative supply shock shifts the SRAS curve to the left. All other things being equal, the effect is to",
+      "options": {
+        "A": "Lower the price level and lower real output.",
+        "B": "Lower the price level and raise real output.",
+        "C": "Raise the price level and lower real output.",
+        "D": "Raise the price level and raise real output."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Draw AD as a fixed downward-sloping curve and slide SRAS to the left. The intersection travels <strong>up and to the left</strong> along AD: the price level rises and real output falls.<br />Rising prices alongside falling output is <strong>stagflation</strong>, and it is what makes supply shocks so awkward for policymakers — the usual demand-side tools push the two problems in opposite directions.",
+        "distractors": {
+          "A": "Output falls, but a leftward shift of supply cannot lower the price level. Scarcer supply pushes prices up.",
+          "B": "Both halves are wrong. This describes a rightward shift of SRAS, which is a positive supply shock.",
+          "D": "Real output falls, not rises. Firms are supplying less at every price level, so the new intersection is at lower output."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-5-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following causes a movement along the SRAS curve rather than a shift of it?",
+      "options": {
+        "A": "A change in the cost of imported raw materials.",
+        "B": "A change in the rate of indirect tax on firms.",
+        "C": "A change in wage costs across the economy.",
+        "D": "A rise in the average price level."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The price level is the variable on the vertical axis, so a change in it moves the economy <strong>along</strong> the existing curve. Everything else that affects how much firms will supply — every condition of supply — shifts the whole curve instead.<br />The test is simple: if the cause is the price level, it is a movement; if it is a cost, it is a shift.",
+        "distractors": {
+          "A": "Imported raw materials are a cost of production, so a change in their price shifts the whole curve.",
+          "B": "Indirect tax is a cost to firms, so a change in it shifts SRAS. Only the price level moves the economy along the curve.",
+          "C": "Wages are the largest cost for many firms. A change in them shifts SRAS rather than causing a movement along it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A temporary fall in world oil prices lowers firms' production costs. Compared with a permanent improvement in technology, the fall in oil prices is more likely to",
+      "options": {
+        "A": "Shift LRAS right but not SRAS.",
+        "B": "Shift SRAS right but not LRAS.",
+        "C": "Shift both curves to the right.",
+        "D": "Shift neither curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two curves answer different questions. SRAS shows what firms will supply at each price level given today's costs, so <strong>any</strong> fall in costs shifts it right — including a temporary one.<br />LRAS shows productive <em>capacity</em>, which depends on the quantity and quality of the factors of production. Cheaper oil does not create more factors or make them better, and when the price rises again the effect unwinds. Better technology does raise capacity permanently, which is why it shifts LRAS as well.",
+        "distractors": {
+          "A": "This has the two curves the wrong way round. A change in current costs is the textbook SRAS shifter; it is capacity that LRAS tracks.",
+          "C": "Shifting both is what the permanent improvement in technology does. The point of the comparison is that a temporary cost fall does not.",
+          "D": "Cheaper inputs certainly change what firms will supply at each price level, so SRAS does move."
+        }
+      }
+    }
+  ]
+}
