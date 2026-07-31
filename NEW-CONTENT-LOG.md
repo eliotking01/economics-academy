@@ -86,3 +86,29 @@ government revenue £184 exactly, with consumers bearing 75%; surplus
 there, so the page still contradicts itself between its Figure 1 caption and the
 bullets below it. It is the natural home for a movement-versus-shift tip once C1
 is fixed.
+
+## Batch 4 — Edexcel Theme 2
+
+5 worked examples across 5 of 24 pages. 19 pages received nothing.
+
+Larger than batches 2 and 3 because all three exemplar pages are AQA and Edexcel has
+none, so an AQA student saw these core macro calculations worked and an Edexcel
+student saw none of them. Three components are reused verbatim from an AQA page —
+approved explicitly — and hash-verified as identical.
+
+| File | Line | Type | Sits under | What it adds |
+| --- | ---: | --- | --- | --- |
+| `edexcel-theme-2/2-1-2-inflation.html` | 251 | worked example | How It's Calculated | Basket cost → CPI 100/105/109.2 → inflation 5% then 4% — **new** |
+| `edexcel-theme-2/2-1-3-employment-unemployment.html` | 179 | worked example | Key Definitions | Unemployment 7.1% and employment 65% from a 40m population — **reused verbatim from AQA 2-1-2** |
+| `edexcel-theme-2/2-1-4-balance-of-payments.html` | 220 | worked example | The Current Account | Current account −£50bn from four components — **reused verbatim from AQA 2-6-3** |
+| `edexcel-theme-2/2-2-1-aggregate-demand.html` | 253 | worked example | The Components of AD and Their Relative Importance | AD = £1,960bn; shares corroborate the page's stated 60/14/25% — **new** |
+| `edexcel-theme-2/2-4-4-the-multiplier.html` | 321 | worked example | Calculating the Multiplier | Multiplier 2.5 from MPS/MPT/MPM, £4bn → £10bn — **reused verbatim from AQA 2-2-4** |
+
+**Figures verified by recomputation**: 504 ÷ 480 × 100 = 105 and 524.16 ÷ 480 × 100
+= 109.2, giving 5% then 4% inflation; AD 1,200 + 280 + 500 − 20 = £1,960bn with
+shares 61 / 14 / 26 / −1%, matching the page's own "around 60%", "around 14%" and
+"around 25%".
+
+`2-1-3` is the one component in this pass that introduces a formula rather than
+demonstrating one the page already states — the page defines the Labour Force but
+gives no rate formula. Flagged in the plan and approved on that basis.
