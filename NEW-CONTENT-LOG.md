@@ -40,3 +40,23 @@ All nine follow the exemplar pattern from AQA 2.1.3, 2.1.4 and 2.4.1:
 - exam tips are a single `<p>` with a bolded lead sentence and no heading, and
   each corrects a specific confusion rather than restating theory
 - UK English, £ sterling, hyphen as the dash character
+
+## Batch 2 — AQA Macroeconomics
+
+3 components across 3 of 25 pages. 22 pages received nothing. The batch is small
+because 5 of the 25 already carried components (the three exemplars plus 2-4-2 and
+2-4-4), and because this directory already works most of its numbers through.
+
+| File | Line | Type | Sits under | What it adds |
+| --- | ---: | --- | --- | --- |
+| `aqa-a2-macro/2-1-2-macroeconomic-indicators.html` | 293 | worked example | Unemployment Indicators | Unemployment and employment rates from a 40m working-age population, showing why the two do not sum to 100% |
+| `aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html` | 324 | worked example | Calculating the Multiplier | Multiplier from MPS, MPT and MPM given separately; reconciles 1/MPW with 1/(1−MPC) |
+| `aqa-a2-macro/2-6-3-the-balance-of-payments.html` | 284 | worked example | Current Account Deficits and Surpluses | Current account balance summed from its four components, giving −£50bn |
+
+**Figures verified by recomputation**: 2 ÷ 28 = 7.1% and 26 ÷ 40 = 65%; MPW 0.4 →
+multiplier 2.5 → £10bn, with the saving-only error giving £40bn; current account
+−90 + 80 − 25 − 15 = −£50bn.
+
+The 2-1-2 example also settles open audit flag C5: it defines the labour force
+explicitly as employed plus unemployed, so the unemployment-rate formula and the
+economically-inactive prose above it now agree on the page.
