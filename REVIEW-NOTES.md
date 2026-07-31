@@ -403,3 +403,121 @@ here are clean.
 - **One wording change was made**, on explicit authorisation: "five" to "three" on
   `edexcel-theme-3/3-4-4-oligopoly.html`. Nothing else in 166 pages had a word
   altered.
+
+---
+
+# Site-wide scan — 31 Jul 2026
+
+Found while scanning the whole site to write `CLAUDE.md`. **Nothing here was
+fixed.** The enrichment pass covered only the 166 topic pages; this scan covered
+the commercial pages, past-paper pages, hubs, CSS and JS as well, which is where
+most of it sits.
+
+## Broken for users
+
+**S1 — three dead download links.** `past-papers/edexcel-b/index.html` lines
+130, 316 and 504 link June 2023 mark schemes for papers 1, 2 and 3:
+
+```
+/past-papers/edexcel-b/a-level/paper-{1,2,3}/edexcel-b-a-level-economics-paper-{1,2,3}-june-2023-mark-scheme.pdf
+```
+
+None of the three files is on disk. The matching question papers are all present,
+so the row renders with one working button and one 404. Either the PDFs were
+never added or they were removed without unlinking. The only broken internal
+hrefs on the site.
+
+**S2 — the notes and past-papers navigation is mouse-only.** 55 click handlers
+sit on non-focusable `<li>` elements:
+
+| Pattern | Uses | Where |
+| --- | ---: | --- |
+| `<li class="topic-item" onclick="toggleSubtopic(…)">` | 35 | the 6 revision-notes hub pages |
+| `<li class="year-item" onclick="toggleYear(…)">` | 20 | the 4 past-paper board pages |
+
+No `tabindex`, no `role`, no `aria-expanded`, no key handler. A keyboard or
+screen-reader user cannot open any topic group or year group, which means they
+cannot reach a single topic page or paper through the hubs. `faq.html` already
+implements this correctly — `<button class="accordion-button">` with
+`aria-expanded` and `aria-controls` — so the fix pattern is on-site.
+
+## Document structure
+
+**S3 — `privacy.html` has no `<h1>`.** The document opens at `<h2>` and stays
+there. It is the only page on the site with no `h1` other than S4.
+
+**S4 — `revision-notes/macro-application/index.html`** has no `<h1>` (its
+`header.major` uses `<h2>`), no `<link rel="canonical">` and no Open Graph tags.
+The only note-section page missing all three. `404.html` and `confirmation.html`
+also lack canonical and OG, which is defensible for `404` but probably not for
+`confirmation`; `confirmation.html` additionally has no meta description.
+
+**S5 — heading-level skips (h1 → h3)** on `contact.html`, `tutoring.html`, the 4
+past-paper board pages and the 6 revision-notes hubs — 12 pages. All 166 topic
+pages are clean, having been fixed by `docs/revision-notes-audit.md`; that audit
+did not cover these.
+
+## Dead and stale
+
+**S6 — `js/components/carousel.js` is dead.** No page loads it. Checked every
+`<script src>` on all 192 HTML files: the only references to a carousel anywhere
+are that file and ~60 lines of `.carousel-*` rules at `css/main.css:3199`, which
+are equally unused. `index.html` renders testimonials through
+`js/components/reviews-render.js` and `js/data/reviews.js` instead. The carousel
+was presumably the earlier implementation.
+
+**S7 — no `.gitignore`.** 10 `.DS_Store` files are tracked, as is
+`scripts/__pycache__/convert_raw_notes.cpython-312.pyc`.
+
+**S8 — stale scaffolding.** `codex-promts/convert-one-file.md` (the directory
+name is a typo) instructs the reader to update `notes/{topic}.html`, a path that
+has never existed in this repo — the live instruction is
+`.codex/notes-workflow.md`, which names the correct path. `raw-notes/aqa/` is an
+empty directory; `raw-notes/edexcel/` holds 73 source files.
+
+**S9 — `.coming-soon` dead CSS.** Rules exist, no markup uses it. Already noted
+above under "Notes for later"; repeated here so the dead-code items sit together.
+
+## Inconsistencies
+
+**S10 — `lang="en"` on 22 pages, `lang="en-GB"` on 168.** The 168 are the 166
+topic pages plus the 2 diagram galleries. The 22 are every root page, every hub
+and every past-paper page. The SEO audit set `en-GB` on note pages and did not
+return for the rest. **`CLAUDE.md` now specifies `en-GB` for new pages**, so this
+will drift further apart until the 22 are normalised.
+
+**S11 — `.notes-container` is defined in two stylesheets.** Unscoped in
+`css/pages/revision-notes-topics.css`, scoped as
+`.revision-notes-content .notes-container` in
+`css/pages/revision-notes-textbook.css`. No page currently loads both, so nothing
+is visibly broken, but load order would decide the winner if one ever did. This
+is the concrete case behind the CSS scoping rule in `CLAUDE.md`.
+
+**S12 — three relative asset paths.** `about.html:93`, `about.html:244` and
+`tutoring.html:156` use `src="images/…"` against roughly 2,000 root-absolute
+references elsewhere. They resolve only because those two pages sit at the root;
+the same markup moved into a subdirectory would 404.
+
+**S13 — naming outliers.** `images/eliot_shirt.JPG` uses an uppercase extension
+and underscores (as do `eliot_boat.jpeg` and `eliot_grad.jpg`), against
+lowercase-kebab-case everywhere else. `images/diagrams/Indirect-tax-incidence-elastic-inelastic.png`
+is the only capitalised filename among 300 diagrams.
+
+**S14 — ~284 `target="_blank"` links without `rel="noopener"`**, all on the 4
+past-paper board pages. Modern browsers imply `noopener` for `target="_blank"`,
+so this is hygiene rather than an active problem. Lowest priority on this list.
+
+## Verification run
+
+Both existing validators were run against the whole site rather than just
+`revision-notes/`:
+
+| Check | Result |
+| --- | --- |
+| `scripts/verify_html.py .` | **192/192 files parse, 0 errors** |
+| `scripts/verify_links.py .` | 4,420 internal refs, 519 external skipped. **3 broken hrefs** — all of S1 |
+
+`verify_links.py` also reports `templates/header.html:2 -> #main` as a broken
+fragment. That is a **false positive**: the template is injected into a host page
+that does have `#main`, and the script resolves fragments against the file it
+found them in. Worth a note in the script if it is ever run site-wide again.
