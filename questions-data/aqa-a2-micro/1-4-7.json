@@ -1,0 +1,221 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.7",
+  "slug": "1-4-7-profit",
+  "title": "Profit",
+  "shortTitle": "Profit",
+  "pageTitle": "Normal and Supernormal Profit Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on profit for AQA A-Level Economics: normal and supernormal profit, losses, profit maximisation and worked answers.",
+  "intro": "Eight original multiple-choice questions on normal profit, supernormal profit, losses and profit maximisation, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on normal and supernormal profit, losses and the profit-maximising rule, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-4-7-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Normal profit is best defined as",
+      "options": {
+        "A": "The minimum profit needed to keep a firm in its current industry.",
+        "B": "Any profit earned above the level needed to keep a firm in the industry.",
+        "C": "The maximum profit a firm is able to earn in the long run.",
+        "D": "The profit a firm earns when marginal cost equals the market price."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Normal profit</strong> is the return just sufficient to keep the entrepreneur in this line of business rather than moving resources elsewhere. Because it is the minimum required, it is the <strong>break-even</strong> position in economic terms, where total revenue equals total cost. On a diagram, a firm earning normal profit sits exactly where AR = AC.",
+        "distractors": {
+          "B": "This defines <strong>supernormal</strong> (or abnormal) profit — anything above the normal level, where TR exceeds TC.",
+          "C": "Nothing in the definition concerns a maximum. A firm earning normal profit is earning the least it will accept, not the most it could achieve.",
+          "D": "MC = price is a condition that happens to hold at the profit-maximising output in perfect competition. It says nothing about <em>how much</em> profit is earned there, which could be normal, supernormal or negative."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm sells 4,000 units at £15 each. Its total costs for the period, including normal profit, are £54,000. The firm is making",
+      "options": {
+        "A": "A loss of £6,000.",
+        "B": "Normal profit only.",
+        "C": "Supernormal profit of £6,000.",
+        "D": "Supernormal profit of £60,000."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Total revenue = 4,000 × £15 = <strong>£60,000</strong>.<br />Total cost = <strong>£54,000</strong>.<br />Profit = £60,000 − £54,000 = <strong>£6,000</strong>.<br />The phrase 'including normal profit' is the key to the question. Normal profit is already counted inside total cost, so anything left over on top of it is <strong>supernormal profit</strong>.",
+        "distractors": {
+          "A": "The subtraction has been done the wrong way round. Revenue is the larger figure, so the firm is in profit rather than making a loss.",
+          "B": "Normal profit alone would mean total revenue exactly equalled total cost. Here revenue exceeds cost by £6,000.",
+          "D": "£60,000 is total <em>revenue</em>, not profit. Costs of £54,000 still have to be deducted from it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Normal profit is treated as a cost of production because it is",
+      "options": {
+        "A": "Paid out to shareholders as a dividend each year.",
+        "B": "The opportunity cost of the entrepreneur staying put.",
+        "C": "The same thing as the firm's total fixed costs.",
+        "D": "Unavoidable in the short run but avoidable in the long run."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The entrepreneur could take their capital, effort and risk-taking elsewhere. Whatever they could earn doing so is a genuine <strong>opportunity cost</strong> of staying in this industry, and like any other cost it has to be covered before the venture is worth pursuing. That is why economists count normal profit inside total cost rather than treating it as a surplus — and why a firm 'breaking even' in economic terms is still earning a perfectly respectable return in its accounts.",
+        "distractors": {
+          "A": "Dividends are one way profit may be distributed once it has been earned. That is a question of what happens to profit, not of why it counts as a cost.",
+          "C": "Fixed costs are payments for factors such as premises and machinery. Normal profit is the return to <strong>enterprise</strong>, a different factor of production altogether.",
+          "D": "Normal profit is a cost in both periods. If it is not covered in the long run the entrepreneur leaves the industry, which is exactly what makes it a cost rather than a bonus."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm maximises its profit by producing the level of output at which",
+      "options": {
+        "A": "Average cost per unit is at its lowest possible level.",
+        "B": "Marginal cost equals marginal revenue.",
+        "C": "Marginal revenue equals zero.",
+        "D": "Total revenue is at its maximum."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Think about it one unit at a time. While an extra unit brings in more revenue than it costs — <strong>MR above MC</strong> — producing it adds to profit, so the firm should carry on. Once an extra unit costs more than it earns — <strong>MC above MR</strong> — producing it subtracts from profit. Profit is therefore greatest where the two are equal, <strong>MC = MR</strong>.",
+        "distractors": {
+          "A": "Minimum average cost is the most <em>cost-efficient</em> output, but it ignores revenue entirely. The most profitable output is usually a different one.",
+          "C": "MR = 0 is the <strong>revenue</strong>-maximising rule. It ignores the cost of the extra units, so it always lies at a higher output than profit maximisation.",
+          "D": "Same error stated in totals. Maximising revenue is not maximising profit, because the last units sold to boost revenue may cost more to make than they bring in."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a firm's total revenue and total cost at four levels of output. Total cost includes normal profit.<br />Using Table 1, the firm's profit is maximised at an output of",
+      "table": {
+        "caption": "Table 1: Total revenue and total cost at four output levels",
+        "head": [
+          "Output (units)",
+          "Total revenue",
+          "Total cost"
+        ],
+        "rows": [
+          [
+            "100",
+            "£1,200",
+            "£1,400"
+          ],
+          [
+            "200",
+            "£2,200",
+            "£2,000"
+          ],
+          [
+            "300",
+            "£3,000",
+            "£2,700"
+          ],
+          [
+            "400",
+            "£3,600",
+            "£3,700"
+          ]
+        ]
+      },
+      "options": {
+        "A": "100 units.",
+        "B": "200 units.",
+        "C": "300 units.",
+        "D": "400 units."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Work out profit at each output by subtracting total cost from total revenue.<br />100 units: £1,200 − £1,400 = <strong>−£200</strong> (a loss)<br />200 units: £2,200 − £2,000 = <strong>+£200</strong><br />300 units: £3,000 − £2,700 = <strong>+£300</strong><br />400 units: £3,600 − £3,700 = <strong>−£100</strong> (a loss)<br />Profit is greatest at <strong>300 units</strong>. Note that the largest output is not the most profitable — beyond 300 units the extra cost of production outruns the extra revenue.",
+        "distractors": {
+          "A": "At 100 units cost exceeds revenue by £200, so the firm is making a loss rather than any profit.",
+          "B": "200 units is profitable, at £200, but 300 units yields more. Stopping at the first profitable output leaves money on the table.",
+          "D": "400 units gives the highest <em>revenue</em> at £3,600, which is exactly why it is tempting. Cost is higher still, so the firm makes a £100 loss."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market economy, persistently high supernormal profits in an industry act as a signal that",
+      "options": {
+        "A": "Consumers are being exploited, so prices must be regulated.",
+        "B": "Firms in that industry have reached their minimum efficient scale.",
+        "C": "Firms in that industry must be productively efficient.",
+        "D": "Resources should be moved into that industry."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Profit is one of the main <strong>signalling and incentive</strong> mechanisms in a market economy. Supernormal profit shows that consumers value the industry's output by more than the resources used to produce it are worth elsewhere, so it draws new firms in and existing firms expand. Resources shift towards where they are most valued — and as they do, supply rises, prices fall and the supernormal profit is competed away.",
+        "distractors": {
+          "A": "This may be a reasonable policy view in a particular case, but it is a <strong>normative</strong> judgement rather than what the profit signal itself conveys. Profit signals where resources should go; whether the outcome is fair is a separate question.",
+          "B": "Minimum efficient scale concerns the level of output at which long-run average cost is lowest. A firm can earn large profits well short of it, or operate at it and earn nothing.",
+          "C": "High profit can come from market power, strong demand or a temporary shortage just as easily as from efficient production. It is not evidence of productive efficiency."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "At its profit-maximising level of output, a firm's average revenue is below its average cost. The firm is",
+      "options": {
+        "A": "Making a loss.",
+        "B": "Breaking even, earning exactly normal profit.",
+        "C": "Making supernormal profit.",
+        "D": "Producing where marginal cost exceeds marginal revenue."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Average revenue is revenue per unit and average cost is cost per unit, so if AR is below AC the firm loses money on <em>every unit it sells</em>. Multiply that gap by output and you have the total loss — the shaded area in the standard diagram.<br />The three cases on a diagram: AR above AC means supernormal profit, AR equal to AC means normal profit, and AR below AC means a loss.",
+        "distractors": {
+          "B": "Breaking even requires AR to <strong>equal</strong> AC exactly. Here it is below, so the firm is not covering its costs including normal profit.",
+          "C": "Supernormal profit requires AR <em>above</em> AC. This firm is in the opposite position.",
+          "D": "At the profit-maximising output, MC equals MR by definition — that is what makes it the profit-maximising output. A firm can be loss-making and still be at that point, minimising the loss rather than maximising a profit."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-7-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm's accounts show a profit of £40,000 for the year. Its owner could have earned £40,000 running a comparable business elsewhere. In economic terms the firm is",
+      "options": {
+        "A": "Making a loss of £40,000.",
+        "B": "Making normal profit but no supernormal profit.",
+        "C": "Making supernormal profit of £40,000.",
+        "D": "Making supernormal profit of £80,000 for the year."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Economists count the <strong>opportunity cost</strong> of the owner's time and capital as a cost of the business; accountants do not. The owner's next-best alternative is worth £40,000, so that £40,000 is exactly the <strong>normal profit</strong> this venture must earn to be worth staying in.<br />Accounting profit £40,000 − opportunity cost £40,000 = <strong>zero economic profit</strong>. The firm is breaking even in economic terms, earning normal profit and nothing above it. It is a perfectly viable business — but the owner is no better off than they would have been elsewhere.",
+        "distractors": {
+          "A": "A loss would require the accounting profit to fall <em>short</em> of the £40,000 available elsewhere. The two are equal, so the firm is exactly at break-even.",
+          "C": "This is the accountant's answer, and it is the one most students give. It ignores the opportunity cost entirely, which is precisely the difference between accounting and economic profit.",
+          "D": "£80,000 adds the accounting profit to the forgone alternative. The alternative is a cost to be subtracted, not a benefit to be added."
+        }
+      }
+    }
+  ]
+}

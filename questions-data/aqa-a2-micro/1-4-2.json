@@ -1,0 +1,168 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.2",
+  "slug": "1-4-2-specialisation-division-of-labour-and-exchange",
+  "title": "Specialisation, Division of Labour and Exchange",
+  "shortTitle": "Specialisation and Division of Labour",
+  "pageTitle": "Division of Labour and Money Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on specialisation, the division of labour and the functions of money for AQA A-Level Economics, with worked answers.",
+  "intro": "Six original multiple-choice questions on specialisation, the division of labour and the functions of money, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on specialisation, the division of labour and the functions of money, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-4-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The division of labour is best defined as",
+      "options": {
+        "A": "A country concentrating on the goods in which it has a comparative advantage.",
+        "B": "Splitting a production process into separate tasks, each done by a different worker.",
+        "C": "The sharing of a firm's profits between its workers and its owners.",
+        "D": "Workers being paid according to the quantity of output they produce."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The <strong>division of labour</strong> is a particular form of specialisation applied <em>within</em> a production process: the process is broken into separate tasks and each worker performs one of them repeatedly. Adam Smith's pin factory is the classic illustration — ten specialised workers produced 48,000 pins a day between them, against 20 for a single worker doing every stage alone.",
+        "distractors": {
+          "A": "This describes specialisation at the <strong>national</strong> level. It is specialisation, but not the division of labour, which operates task by task inside a workplace.",
+          "C": "Profit sharing is a matter of how income is distributed. It says nothing about how the work itself is organised.",
+          "D": "Piece rates are a method of payment. A worker can be paid per unit while still performing every stage of production alone."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A car factory reorganises so that each worker performs a single repeated task on the assembly line. All other things being equal, the most likely immediate consequence is",
+      "options": {
+        "A": "An increase in output per worker, and a fall in average cost.",
+        "B": "An increase in output per worker, and a rise in average cost.",
+        "C": "A reduction in output per worker, and a fall in average cost.",
+        "D": "A reduction in output per worker, and a rise in average cost."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Repeating one task makes a worker quicker and more skilled at it, and removes the time lost switching between jobs and tools. Output per worker — <strong>productivity</strong> — therefore rises. With wage rates unchanged, more output for the same labour cost means a lower cost <strong>per unit</strong>, so average cost falls. Those lower costs can be passed on as lower prices or retained as profit.",
+        "distractors": {
+          "B": "Higher productivity with unchanged wages cannot raise unit costs. The same wage bill is now spread over more output.",
+          "C": "Productivity rises rather than falls under the division of labour. That gain is the whole reason firms organise production this way.",
+          "D": "Both halves run against the argument. The recognised drawbacks of the division of labour — boredom, high staff turnover — are longer-term effects, and even they work by eroding the productivity gain rather than reversing it immediately."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A region that has specialised for decades in shipbuilding sees the industry close down. Its workers find it hard to obtain jobs in other industries. This is best described as",
+      "options": {
+        "A": "A loss of variety caused by mass production.",
+        "B": "Over-dependence on imported raw materials and components.",
+        "C": "Structural unemployment, because skills do not transfer.",
+        "D": "Worker demotivation caused by repetitive tasks."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Specialisation makes workers highly skilled at one thing, and that is precisely the risk. When the industry those skills belong to declines, the skills do not transfer, so workers remain unemployed even where vacancies exist elsewhere. Unemployment caused by a mismatch between the skills workers have and the skills employers want is <strong>structural unemployment</strong>, and it is one of the main disadvantages of specialisation.",
+        "distractors": {
+          "A": "Loss of variety refers to standardised, mass-produced goods offering consumers less choice. It concerns products rather than the labour market.",
+          "B": "Over-dependence is a genuine disadvantage of specialisation, but it describes vulnerability to demand or supply shocks in the specialist product. The problem here is that the workers' skills will not transfer.",
+          "D": "Demotivation from repetitive work reduces productivity while the industry is running. Here the industry has closed altogether, and the difficulty is finding new work."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A saver holds money in a bank account intending to spend it in two years' time. The function of money being relied on here is",
+      "options": {
+        "A": "Medium of exchange.",
+        "B": "Standard of deferred payment.",
+        "C": "Store of value.",
+        "D": "Unit of account."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Money performs four functions, and the question is which one is doing the work. Holding purchasing power now in order to spend it later is the <strong>store of value</strong> function. It is what makes saving possible: goods may perish, but money keeps its command over resources across time — provided inflation is low, which is why high inflation undermines this function in particular.",
+        "distractors": {
+          "A": "Medium of exchange is money being accepted as payment in a transaction. No transaction is taking place while the money simply sits in the account.",
+          "B": "Standard of deferred payment concerns settling a <strong>debt</strong> in the future — borrowing now and repaying later in money. The saver here owes nothing.",
+          "D": "Unit of account is money providing a common measure so prices can be compared. That function is about measurement, not about holding value over time."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a barter economy, a baker who wants shoes must find a shoemaker who wants bread. The problem this illustrates is",
+      "options": {
+        "A": "Solved by money acting as a medium of exchange.",
+        "B": "Solved by money acting as a standard of deferred payment.",
+        "C": "The need for a double coincidence of wants, which money does not remove.",
+        "D": "The result of specialisation, and avoidable if firms produce a wider range of goods."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Barter requires a <strong>double coincidence of wants</strong>: each party must want exactly what the other is offering. Finding such a match costs time and often fails, which severely limits trade and therefore limits how far specialisation can go. Money removes the problem because it is accepted by everyone as payment — the baker sells bread for money to anyone who wants bread, then buys shoes with it. That is money acting as a <strong>medium of exchange</strong>.",
+        "distractors": {
+          "B": "Standard of deferred payment concerns settling debts in future. The baker's difficulty is completing a purchase today, not borrowing.",
+          "C": "The double coincidence of wants is correctly identified, and then the conclusion is wrong. Removing that requirement is the primary thing money does.",
+          "D": "Producing a wider range of goods would sacrifice the gains from specialisation to work around a problem money already solves — which is the opposite of what actually happened historically."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-2-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes three examples of specialisation.<br />Using Table 1, which one of the following correctly identifies the level of specialisation in each case?",
+      "table": {
+        "caption": "Table 1: Three examples of specialisation",
+        "head": [
+          "Example",
+          "Description"
+        ],
+        "rows": [
+          [
+            "1",
+            "A surgeon who works only on operations involving the heart"
+          ],
+          [
+            "2",
+            "A car manufacturer that produces only electric vehicles"
+          ],
+          [
+            "3",
+            "A country whose exports are dominated by crude oil"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 is individual, 2 is firm, 3 is national.",
+        "B": "1 is individual, 2 is regional, 3 is national.",
+        "C": "1 is firm, 2 is individual, 3 is regional.",
+        "D": "1 is regional, 2 is firm, 3 is national."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Specialisation happens at four levels, and each example sits at one of them.<br /><strong>Example 1</strong> is one person concentrating on a single field of work, so it is <strong>individual</strong> specialisation.<br /><strong>Example 2</strong> is a company concentrating on one product, so it is <strong>firm</strong>-level.<br /><strong>Example 3</strong> is a whole country concentrating on a good in which it has a comparative advantage, so it is <strong>national</strong>.",
+        "distractors": {
+          "B": "A single manufacturer is a firm, not a region. Regional specialisation would describe a whole geographic area concentrating on one industry, as with technology in Silicon Valley.",
+          "C": "This swaps examples 1 and 2. A surgeon is a person and a car manufacturer is a company, and it also demotes a country's export specialisation to a regional one.",
+          "D": "A surgeon working alone in one field is not a region. Only example 3 is correctly placed here."
+        }
+      }
+    }
+  ]
+}

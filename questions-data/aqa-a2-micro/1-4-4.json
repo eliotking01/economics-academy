@@ -1,0 +1,282 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.4",
+  "slug": "1-4-4-costs-of-production",
+  "title": "Costs of Production",
+  "shortTitle": "Costs of Production",
+  "pageTitle": "Costs of Production Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on costs of production for AQA A-Level Economics: fixed, variable, average and marginal costs, with worked calculations.",
+  "intro": "Ten original multiple-choice questions on the costs of production, written to the style and difficulty of AQA Paper 3 Section A. Several are calculations from a cost schedule. Every question carries a full worked model answer.",
+  "notesTeaser": "Ten original multiple-choice questions on fixed, variable, average and marginal costs, written to AQA Paper 3 Section A style, with worked calculations.",
+  "questions": [
+    {
+      "id": "aqa-1-4-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following is most likely to be a fixed cost for a bakery?",
+      "options": {
+        "A": "Electricity used to run the ovens.",
+        "B": "Flour and yeast used in baking.",
+        "C": "Rent on the premises, paid monthly.",
+        "D": "Wages of staff paid by the hour."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>fixed cost</strong> does not vary with output: it is incurred at the same level whether the bakery produces one loaf or a thousand, and it is still payable if output is zero. Rent is the standard example — the landlord charges the same whatever comes out of the ovens.",
+        "distractors": {
+          "A": "Running the ovens for longer to bake more bread uses more electricity, so this cost rises directly with output. That makes it variable.",
+          "B": "Ingredients are the clearest variable cost of all: every extra loaf requires more flour and yeast.",
+          "D": "Hourly wages are variable, because more output requires more staff hours. Note that salaried staff on fixed annual contracts would be a fixed cost — how labour is paid decides which category it falls into."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a firm's costs at four levels of output.<br />Using Table 1, the average total cost of producing 200 units is",
+      "table": {
+        "caption": "Table 1: Total fixed and total variable costs at four output levels",
+        "head": [
+          "Output (units)",
+          "Total fixed cost",
+          "Total variable cost"
+        ],
+        "rows": [
+          [
+            "0",
+            "£600",
+            "£0"
+          ],
+          [
+            "100",
+            "£600",
+            "£400"
+          ],
+          [
+            "200",
+            "£600",
+            "£900"
+          ],
+          [
+            "300",
+            "£600",
+            "£1,650"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£3.00",
+        "B": "£4.50",
+        "C": "£7.50",
+        "D": "£15.00"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Average total cost is total cost divided by output, so build the total first.<br />Total cost at 200 units = £600 + £900 = <strong>£1,500</strong>.<br />ATC = £1,500 ÷ 200 = <strong>£7.50</strong>.<br />It is worth seeing that this splits into average fixed cost (£600 ÷ 200 = £3.00) and average variable cost (£900 ÷ 200 = £4.50), which of course sum to £7.50.",
+        "distractors": {
+          "A": "£3.00 is the <strong>average fixed cost</strong> at this output. It leaves out the variable costs entirely.",
+          "B": "£4.50 is the <strong>average variable cost</strong>. It leaves out the fixed costs, which are just as real.",
+          "D": "£15.00 divides the correct total cost of £1,500 by 100 rather than 200 — the wrong row's output."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's total cost rises from £8,400 to £9,000 when its output increases from 300 to 350 units. Its marginal cost over that range is",
+      "options": {
+        "A": "£12.00",
+        "B": "£25.71",
+        "C": "£28.00",
+        "D": "£600.00"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Marginal cost is the change in total cost divided by the change in output.<br />Change in total cost: £9,000 − £8,400 = £600.<br />Change in output: 350 − 300 = 50 units.<br />MC = £600 ÷ 50 = <strong>£12.00 per unit</strong>.<br />The division by the change in <em>quantity</em> is what makes it a per-unit figure, and it is the step most often skipped.",
+        "distractors": {
+          "B": "£9,000 ÷ 350 = £25.71 is the <strong>average</strong> total cost at the higher output, not the cost of the extra units.",
+          "C": "£8,400 ÷ 300 = £28.00 is the average total cost at the lower output. Notice that average cost is falling here while marginal cost is well below it — which is exactly the relationship you would expect.",
+          "D": "£600 is the total extra cost of all 50 units. Dividing by the change in output is what converts it into a marginal figure."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm has fixed costs of £9,000 a month. When it produces 750 units in a month, its average fixed cost is",
+      "options": {
+        "A": "£12, and it stays the same as output rises.",
+        "B": "£12, and it falls as output rises.",
+        "C": "£9,000, and it stays the same as output rises.",
+        "D": "£9,000, and it falls as output rises."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Average fixed cost is total fixed cost divided by output.<br />AFC = £9,000 ÷ 750 = <strong>£12 per unit</strong>.<br />Because the numerator is a constant and the denominator grows, AFC <strong>falls continuously</strong> as output rises — at 1,500 units it would be £6, at 3,000 units £3. This is the effect firms mean when they talk about spreading their overheads, and it is why average total cost falls steeply at low levels of output.",
+        "distractors": {
+          "A": "The figure is right but the behaviour is not. <em>Total</em> fixed cost stays the same as output rises; average fixed cost does not, because the same total is being divided by an ever larger output.",
+          "C": "£9,000 is the total fixed cost, not the average. And this option makes the same mistake as A about how it behaves.",
+          "D": "£9,000 is again the total rather than the per-unit figure, although the direction of change is correctly identified for the average."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's marginal cost is below its average total cost. As output rises, its average total cost will be",
+      "options": {
+        "A": "At its minimum.",
+        "B": "Constant.",
+        "C": "Falling.",
+        "D": "Rising."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An average is pulled in the direction of the value being added to it. If the next unit costs <strong>less</strong> than the current average, it must drag that average <strong>down</strong>.<br />The cricketing analogy is exact: score less than your batting average and the average falls. The three cases follow: MC below AC means AC falling, MC above AC means AC rising, and MC equal to AC means AC is at its minimum.",
+        "distractors": {
+          "A": "Average total cost reaches its minimum only where marginal cost has risen to <em>equal</em> it. While MC is still below AC there is further to fall.",
+          "B": "Average total cost would only stay constant if each extra unit cost exactly the average, which again means MC equals AC.",
+          "D": "Rising average cost requires marginal cost to be <strong>above</strong> it. That happens later, once diminishing returns have pushed MC up through the AC curve."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 2 shows a firm's total cost at two levels of output.<br />Using Table 2, the firm's total fixed cost and its average variable cost at 1,000 units are",
+      "table": {
+        "caption": "Table 2: Total cost at two output levels",
+        "head": [
+          "Output (units)",
+          "Total cost"
+        ],
+        "rows": [
+          [
+            "0",
+            "£500"
+          ],
+          [
+            "1,000",
+            "£2,500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£500 and £2.50.",
+        "B": "£500 and £2.00.",
+        "C": "£2,000 and £2.50.",
+        "D": "£2,500 and £2.00."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Start with the zero-output row, which is the key to the whole table. At zero output there are no variable costs, so the entire £500 must be <strong>total fixed cost</strong>.<br />At 1,000 units, total variable cost = £2,500 − £500 = £2,000.<br />Average variable cost = £2,000 ÷ 1,000 = <strong>£2.00</strong>.",
+        "distractors": {
+          "A": "The fixed cost is right, but £2.50 is £2,500 ÷ 1,000 — the <strong>average total</strong> cost. It includes the fixed costs, which average variable cost must exclude.",
+          "C": "£2,000 is the total <em>variable</em> cost at 1,000 units, not the fixed cost. The fixed cost is what remains when output is zero.",
+          "D": "£2,500 is the total cost of producing 1,000 units, which includes both fixed and variable elements. The average variable cost quoted alongside it is correct."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The wage rate a firm pays rises while the productivity of its workers is unchanged. All other things being equal, this will",
+      "options": {
+        "A": "Have no effect on costs, because wages are a fixed cost.",
+        "B": "Lower its average total cost at every level of output.",
+        "C": "Raise its average total cost at every level of output.",
+        "D": "Raise its total fixed cost but leave average variable cost unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A firm's costs depend on two things: the <strong>price of its factors</strong> and the <strong>productivity</strong> of those factors. Here the price of labour has risen with no offsetting gain in output per worker, so every unit now carries a higher labour cost. Average total cost rises at every level of output, which on a diagram shifts the whole cost curve upwards.",
+        "distractors": {
+          "A": "Hourly wages vary directly with output, so they are a variable cost. Even where staff are salaried, a pay rise still raises costs — it would raise fixed costs rather than variable ones.",
+          "B": "Costs fall when factor prices fall or productivity rises. This is the opposite case on both counts.",
+          "D": "Wages paid to production workers are part of variable cost, so average variable cost is exactly what rises. Placing the increase in fixed costs misclassifies the item."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would reduce a firm's average total cost at every level of output?",
+      "options": {
+        "A": "A fall in the productivity of its workforce.",
+        "B": "A rise in the price of the raw materials it uses.",
+        "C": "A rise in the rent charged on its premises.",
+        "D": "A rise in output per worker, with wages unchanged."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Costs per unit fall when a firm gets <strong>more output from the same spending</strong>. Higher output per worker with unchanged wage rates does exactly that: the wage bill per unit produced falls, and with it average total cost, at every level of output. This is why productivity growth matters so much to a firm's competitiveness.",
+        "distractors": {
+          "A": "Lower productivity means more labour is needed per unit, so costs per unit rise. This is the mirror image of the correct answer.",
+          "B": "Dearer raw materials raise variable costs directly, pushing average total cost up.",
+          "C": "Higher rent raises fixed costs. Average fixed cost rises at every output, and average total cost rises with it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the long run, a firm's costs are best described as",
+      "options": {
+        "A": "All fixed, because the scale of production has been set.",
+        "B": "All variable, because every factor of production can be changed.",
+        "C": "Partly fixed and partly variable, exactly as in the short run.",
+        "D": "Unrelated to the quantity of factors the firm employs."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The long run is defined as the period in which <strong>every</strong> factor of production can be varied — the firm can move premises, buy or sell machinery, and change its whole scale of operation. Since nothing is fixed, no cost is fixed either: <strong>all costs are variable in the long run</strong>. This is why long-run cost analysis is about economies and diseconomies of scale rather than about spreading fixed costs.",
+        "distractors": {
+          "A": "This describes the short run, where the scale of production is what cannot be changed.",
+          "C": "The split between fixed and variable is precisely what distinguishes the short run. In the long run the fixed category is empty.",
+          "D": "Costs are always determined by the quantity and price of the factors employed. What changes between the two periods is which factors can be adjusted."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-4-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm's marginal cost curve cuts its average total cost curve at",
+      "options": {
+        "A": "The output at which average total cost is at its minimum.",
+        "B": "The output at which average total cost is at its maximum.",
+        "C": "The output at which marginal cost is at its minimum.",
+        "D": "The output at which total cost is at its minimum."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Follow the logic of averages. While marginal cost lies <strong>below</strong> average total cost it is dragging the average <em>down</em>; once it rises <strong>above</strong>, it pulls the average <em>up</em>. The average therefore stops falling and starts rising at exactly the point where the two are equal — so marginal cost must cut average total cost at the <strong>minimum</strong> of the AC curve. The same reasoning applies to average variable cost.",
+        "distractors": {
+          "B": "Average total cost has no maximum on a standard U-shaped curve; it rises without limit as diminishing returns bite.",
+          "C": "Marginal cost reaches its own minimum <em>before</em> this point, while it is still below average cost and pulling it down. The crossing happens later, on the rising section of MC.",
+          "D": "Total cost is at its minimum when output is zero, where it equals total fixed cost. That has nothing to do with where the two curves cross."
+        }
+      }
+    }
+  ]
+}

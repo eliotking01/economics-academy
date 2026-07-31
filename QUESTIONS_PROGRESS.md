@@ -4,7 +4,7 @@ Batch state for the free practice questions. The authoring standard is
 `QUESTIONS_GUIDE.md`; this file records what is done and what is next, so work
 can resume cleanly across sessions.
 
-**Live: 15 topics, 104 questions.** Target: 166 topics, ~1,272 questions.
+**Live: 23 topics, 166 questions.** Target: 166 topics, ~1,272 questions.
 
 ---
 
@@ -29,7 +29,7 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 
 ---
 
-## AQA Microeconomics — 15 of 54 topics
+## AQA Microeconomics — 23 of 54 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -48,7 +48,14 @@ with the recorded key. See "Verification protocol" in `QUESTIONS_GUIDE.md`.
 | 1.3 | 1.3.4 Price Elasticity of Supply | 8 | Done |
 | 1.3 | 1.3.5 The Determination of Equilibrium Market Prices | 9 | Done |
 | 1.3 | 1.3.6 The Interrelationship between Markets | 7 | Done |
-| 1.4 | Production, Costs and Revenue (8 topics) | 62 | Not started |
+| 1.4 | 1.4.1 Production and Productivity | 7 | Done |
+| 1.4 | 1.4.2 Specialisation, Division of Labour and Exchange | 6 | Done |
+| 1.4 | 1.4.3 The Law of Diminishing Returns and Returns to Scale | 9 | Done |
+| 1.4 | 1.4.4 Costs of Production | 10 | Done |
+| 1.4 | 1.4.5 Economies and Diseconomies of Scale | 8 | Done |
+| 1.4 | 1.4.6 Marginal, Average and Total Revenue | 9 | Done |
+| 1.4 | 1.4.7 Profit | 8 | Done |
+| 1.4 | 1.4.8 Technological Change | 5 | Done |
 | 1.5 | Market Structures (11 topics) | 86 | Not started |
 | 1.6 | The Labour Market (7 topics) | 53 | Not started |
 | 1.7 | Distribution of Income and Wealth (3 topics) | 22 | Not started |
@@ -99,6 +106,34 @@ information and behavioural economics offer almost nothing to calculate. The
 arithmetic in this batch is concentrated where it exists — 1.1.4, 1.1.5, 1.2.1,
 1.3.4 and 1.3.5. Units 1.4 (costs and revenue) and 1.5 (market structures) will
 pull the ratio back up on their own.
+
+### Batch 2 — AQA micro 1.4 (2026-07-31)
+
+8 topics, 62 questions. All 62 re-solved cold from the stem alone with **0
+mismatches**; every figure in every calculation and cost, revenue and output
+schedule recomputed and confirmed.
+
+Fixed during verification:
+
+- 1.4.5 failed the generator's letter-distribution check (A used five times in
+  a set of eight). The "which type of economy of scale" questions were being
+  pushed to early letters because the option lists were alphabetical. Ordering
+  them as the notes list the types instead spread the answers out.
+- 12 options rewritten because the correct answer was more than 10% longer
+  than the next longest. None remain anywhere on the site.
+
+Site profile after batch 2:
+
+| | |
+| --- | --- |
+| Answer letters | A 46, B 48, C 39, D 33 (even would be 41.5) |
+| Skills | applied-reasoning 96, definition-in-context 35, data-table 21, calculation 14 |
+| Difficulty | foundation 24, standard 123, stretch 19 |
+| Sketch to solve | 8 |
+
+The `calculation` share recovered as predicted: unit 1.4 contributed 7 of the
+site's 14 calculation items, and its data-table share is higher again, since
+cost, revenue and output schedules are the natural form for this material.
 
 ---
 

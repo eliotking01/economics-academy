@@ -1,0 +1,212 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.5",
+  "slug": "1-4-5-economies-and-diseconomies-of-scale",
+  "title": "Economies and Diseconomies of Scale",
+  "shortTitle": "Economies and Diseconomies of Scale",
+  "pageTitle": "Economies of Scale Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on economies and diseconomies of scale for AQA A-Level Economics: internal, external, MES and the LRAC curve.",
+  "intro": "Eight original multiple-choice questions on economies and diseconomies of scale, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on internal and external economies of scale, diseconomies and the minimum efficient scale, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-4-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Internal economies of scale occur when",
+      "options": {
+        "A": "A firm's long-run average cost falls as its scale of output increases.",
+        "B": "A firm's total cost falls as its scale of output increases.",
+        "C": "An industry's output grows, lowering costs for every firm in it.",
+        "D": "Marginal cost falls as a firm employs more of a variable factor."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Economies of scale are about <strong>average</strong> cost, not total cost, and about the <strong>long run</strong>, when the firm can change its scale. As a firm grows it can buy in bulk, use larger and more efficient machinery, borrow more cheaply and spread its marketing over more units — all of which reduce the cost <em>per unit</em>. They are called <strong>internal</strong> because they arise from the growth of the firm itself.",
+        "distractors": {
+          "B": "Total cost almost always <em>rises</em> as a firm produces more; producing extra output uses extra resources. What falls is the cost per unit, which is why the distinction matters.",
+          "C": "This describes <strong>external</strong> economies of scale, which come from the growth of the whole industry and shift the LRAC curve down for every firm in it.",
+          "D": "Falling marginal cost as a variable factor is added is a <strong>short-run</strong> effect, driven by increasing marginal returns. Economies of scale require all factors to be varied."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A national supermarket chain negotiates a lower price per litre for milk than a single independent corner shop can obtain. This is an example of",
+      "options": {
+        "A": "Technical economies of scale.",
+        "B": "Financial economies of scale.",
+        "C": "Purchasing economies of scale.",
+        "D": "External economies of scale."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Purchasing economies</strong> — often called bulk-buying economies — arise because a large firm places much bigger orders. That order represents a substantial share of the supplier's revenue, so the supplier is willing to accept a lower price per unit to secure it. The corner shop has no such leverage.",
+        "distractors": {
+          "A": "Technical economies come from using larger, more efficient machinery or production processes, such as a robotic assembly line. Nothing here concerns the method of production.",
+          "B": "Financial economies are about cheaper access to <em>finance</em> — lower interest rates on loans, because a large firm looks less risky to lenders.",
+          "D": "External economies come from the growth of the whole industry, such as a pool of skilled labour building up in an area. This advantage belongs to the chain because of its own size."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A large public limited company is offered a lower rate of interest on a loan than a small local business. This is an example of",
+      "options": {
+        "A": "Managerial economies of scale.",
+        "B": "Marketing economies of scale.",
+        "C": "Risk-bearing economies of scale.",
+        "D": "Financial economies of scale."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Financial economies</strong> arise because lenders regard a large firm as a safer borrower: it has higher revenues and substantial assets that can be offered as security. A lower interest rate reduces the firm's fixed costs, so average fixed cost and therefore average total cost fall.",
+        "distractors": {
+          "A": "Managerial economies come from being able to afford specialist managers, whose expertise raises productivity. That is about people, not the cost of borrowing.",
+          "B": "Marketing economies come from spreading a fixed advertising budget over a much larger output, reducing the advertising cost per unit sold.",
+          "C": "Risk-bearing economies come from diversifying across products or markets, so that losses in one area can be offset by profits in another."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes three cost advantages enjoyed by large firms.<br />Using Table 1, which one of the following correctly identifies each type of economy of scale?",
+      "table": {
+        "caption": "Table 1: Three cost advantages of large firms",
+        "head": [
+          "Example",
+          "Description"
+        ],
+        "rows": [
+          [
+            "1",
+            "A car plant installs a robotic assembly line that a small workshop could not afford"
+          ],
+          [
+            "2",
+            "A global brand's television advertising costs very little per unit sold"
+          ],
+          [
+            "3",
+            "A conglomerate absorbs losses in one division using profits from another"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 is technical, 2 is purchasing, 3 is financial.",
+        "B": "1 is technical, 2 is marketing, 3 is risk-bearing.",
+        "C": "1 is managerial, 2 is marketing, 3 is risk-bearing.",
+        "D": "1 is purchasing, 2 is marketing, 3 is financial."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Take each in turn.<br /><strong>Example 1</strong> is large-scale machinery raising productivity, which is a <strong>technical</strong> economy.<br /><strong>Example 2</strong> spreads a fixed advertising cost over a very large output, cutting the cost per unit sold — a <strong>marketing</strong> economy.<br /><strong>Example 3</strong> is diversification spreading risk across divisions, which is a <strong>risk-bearing</strong> economy.",
+        "distractors": {
+          "A": "Purchasing economies concern bulk-buying discounts from suppliers, and financial economies concern the cost of borrowing. Neither describes advertising or diversification.",
+          "C": "Managerial economies come from employing specialist managers. The advantage in example 1 comes from the machinery itself, not from who is running the plant.",
+          "D": "Example 1 is about production technology rather than buying inputs cheaply, and example 3 is about spreading risk rather than obtaining cheaper finance."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The minimum efficient scale is best defined as",
+      "options": {
+        "A": "The largest output a firm can produce before diseconomies of scale begin.",
+        "B": "The lowest output at which a firm achieves its lowest long-run average cost.",
+        "C": "The output at which a firm's marginal cost equals its marginal revenue.",
+        "D": "The smallest output at which a firm can cover its total fixed costs."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The <strong>minimum efficient scale</strong> is the point on the long-run average cost curve where average cost first reaches its lowest level — the output a firm has to reach to be as cost-competitive as anyone else in the industry. It matters strategically: where the MES is large relative to the market, only a few firms can operate efficiently, which tends to produce a concentrated industry.",
+        "distractors": {
+          "A": "This describes the point where the LRAC curve turns upwards. On a U-shaped curve that coincides with the minimum, but the definition of MES is about achieving the lowest average cost, not about the onset of diseconomies.",
+          "C": "MC equals MR is the <strong>profit-maximising</strong> rule. It concerns revenue as well as cost, and has nothing to do with the shape of the LRAC curve.",
+          "D": "Covering fixed costs is a break-even idea drawn from the short run. The minimum efficient scale is about long-run cost per unit, whether or not the firm is profitable."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm grows so large that instructions from senior management are repeatedly delayed and distorted before reaching the shop floor, and costs rise as a result. This is best described as",
+      "options": {
+        "A": "A geographical diseconomy of scale.",
+        "B": "A motivational diseconomy of scale.",
+        "C": "A communication diseconomy of scale.",
+        "D": "The law of diminishing returns."
+      },
+      "answer": "C",
+      "model": {
+        "working": "As an organisation grows it adds layers of management and separate departments, and information passing through that hierarchy is delayed, distorted or lost. The resulting mistakes and slow decisions push average cost up. This is the <strong>communication</strong> or managerial diseconomy of scale, and it is one of the main reasons the LRAC curve eventually turns upwards.",
+        "distractors": {
+          "A": "Geographical diseconomies arise from coordinating <em>distant sites</em> — separate plants or offices in different places. The problem described is within the chain of command rather than across locations.",
+          "B": "Motivational diseconomies arise when workers feel their individual contribution goes unnoticed in a large firm, so productivity falls. Here the difficulty is the message itself failing to arrive.",
+          "D": "Diminishing returns is a <strong>short-run</strong> effect caused by adding a variable factor to a fixed one. This firm has grown its whole scale, which is a long-run change."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cluster of technology firms grows in one city, and a large pool of specialist software engineers builds up locally. Every firm in the cluster finds its recruitment and training costs fall. This is best described as",
+      "options": {
+        "A": "An internal economy of scale, arising from the growth of each individual firm.",
+        "B": "An internal economy of scale, arising from the growth of the industry as a whole.",
+        "C": "An external economy of scale, causing a movement down each firm's existing cost curve.",
+        "D": "An external economy of scale, shifting each firm's long-run average cost curve downwards."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The advantage comes from the growth of the <strong>industry</strong>, not of any one firm, so it is an <strong>external</strong> economy of scale. Because costs fall for a firm at <em>every</em> level of its own output, the effect is a downward <strong>shift</strong> of the whole long-run average cost curve rather than a movement along it. Internal economies, by contrast, are shown as a movement down an existing LRAC curve as the firm expands.",
+        "distractors": {
+          "A": "Nothing in the stem says any individual firm has grown. The saving arises from the labour pool created by the cluster as a whole.",
+          "B": "This is self-contradictory. An advantage arising from the growth of the industry is by definition external, not internal.",
+          "C": "The external nature is right but the diagram is wrong. A movement down the existing curve happens when the firm itself grows; here the curve relocates because the environment has improved."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm's long-run average cost curve is U-shaped. The upward-sloping section of that curve is caused by",
+      "options": {
+        "A": "Diminishing marginal returns to the variable factor.",
+        "B": "Diseconomies of scale.",
+        "C": "Rising average fixed costs as output increases.",
+        "D": "The firm having passed its minimum efficient scale."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The long-run average cost curve is drawn for a firm that can vary <em>every</em> factor, so nothing on it can be caused by a fixed factor. Its downward section reflects <strong>economies of scale</strong> and its upward section <strong>diseconomies of scale</strong> — communication breaking down, workers becoming less motivated, and distant sites proving hard to coordinate as the organisation grows.",
+        "distractors": {
+          "A": "Diminishing returns is a short-run effect that shapes the <em>marginal cost</em> curve. There is no fixed factor in the long run for it to operate on.",
+          "C": "Average fixed cost falls as output rises, and in any case there are no fixed costs at all in the long run.",
+          "D": "This is the closest wrong answer, and it confuses a location with a cause. Passing the minimum efficient scale is a way of <em>describing where</em> the firm now sits on the curve; diseconomies of scale are the reason the curve rises beyond that point."
+        }
+      }
+    }
+  ]
+}
