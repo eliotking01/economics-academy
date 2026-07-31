@@ -15,7 +15,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
-| Phase 1B — enrichment plans | Batch 1 of 6 delivered and applied |
+| Phase 1B — enrichment plans | Batches 1–2 of 6 delivered; batch 1 applied |
 | Phase 2 commit 8 — enrichment, AQA micro | **Complete** — 9 components, `NEW-CONTENT-LOG.md` |
 | Phase 2, remaining enrichment | Batches 2–6 not started |
 | Phase 3 — final verification | Partial (run after each commit so far) |
@@ -75,6 +75,20 @@ One of the two numbers is wrong. This page's `spec-alert` requires students to
 read most closely. Found while preparing `PLAN-enrichment-aqa-micro.md`; the worked
 example proposed there sits directly beneath this sentence, which would make the
 inconsistency more conspicuous, so it is worth fixing first.
+
+**N4 — 32 unescaped `<` characters in note body text, across 20 pages.**
+
+Examples: `\( X < M \)` on `aqa-a2-macro/2-2-3` and `edexcel-theme-2/2-2-5`,
+`(PED < 1)` on `aqa-a2-micro/1-3-2` and `edexcel-theme-3/3-3-1`, `0 < PES < 1` on
+`aqa-a2-micro/1-3-4`, `\( MC < AVC \)` on `aqa-a2-micro/1-4-4`.
+
+Every one is `<` followed by a space or a backslash, which the HTML5 parser
+recovers as literal text — so all 32 render correctly and MathJax receives what it
+expects. Invalid markup rather than a visible fault. The earlier audit escaped bare
+`&` across 29 files but not `<`.
+
+Escaping to `&lt;` is markup-only with no rendering change and is within this pass's
+remit, but is not in any approved plan, so it is logged rather than done.
 
 ### Carried over from `docs/revision-notes-audit.md` — still open
 
