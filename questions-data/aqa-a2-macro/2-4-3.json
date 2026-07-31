@@ -1,0 +1,243 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.4.3",
+  "slug": "2-4-3-central-banks-and-monetary-policy",
+  "title": "Central Banks and Monetary Policy",
+  "shortTitle": "Central Banks and Monetary Policy",
+  "pageTitle": "Monetary Policy Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on monetary policy for AQA A-Level Economics: Bank Rate, quantitative easing, the transmission mechanism and its limits.",
+  "intro": "Nine original multiple-choice questions on central banks and monetary policy, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on the functions of a central bank, Bank Rate, quantitative easing and the transmission mechanism, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-4-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A central bank provides emergency funding to a commercial bank that cannot meet its immediate obligations. The central bank is acting as",
+      "options": {
+        "A": "A prudential regulator.",
+        "B": "Issuer of the national currency.",
+        "C": "Lender of last resort.",
+        "D": "The government's own bank."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Lender of last resort</strong> is the central bank's role in a liquidity crisis: it lends to a solvent bank that cannot raise cash quickly enough elsewhere, so that a temporary shortage does not turn into a collapse and spread to other banks.",
+        "distractors": {
+          "A": "Prudential regulation is setting capital and liquidity rules and stress-testing banks in advance. It is preventative, not an emergency loan.",
+          "B": "Issuing currency is a separate function, giving the central bank sole authority over notes and coins.",
+          "D": "Acting as the government's bank means holding its accounts and managing its borrowing, not rescuing commercial banks."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Inflation has risen well above its target. The most likely monetary policy response is to",
+      "options": {
+        "A": "Cut Bank Rate and begin quantitative easing.",
+        "B": "Cut Bank Rate and raise government spending.",
+        "C": "Raise Bank Rate and begin quantitative tightening.",
+        "D": "Raise Bank Rate and cut the rate of income tax."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Bringing inflation down means reducing aggregate demand, which calls for <strong>contractionary monetary policy</strong>: a higher Bank Rate to raise the cost of borrowing and the reward for saving, and quantitative tightening to reduce the money supply.<br />Both tools push the same way, which is what makes the pairing coherent.",
+        "distractors": {
+          "A": "This is expansionary policy — it would raise aggregate demand and push inflation higher still.",
+          "B": "Cutting Bank Rate is expansionary, and government spending is a <em>fiscal</em> instrument, not a monetary one.",
+          "D": "Raising Bank Rate is right, but cutting income tax is fiscal policy and it pulls in the opposite direction by raising disposable income."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cut in Bank Rate raises consumption partly because households with variable-rate mortgages",
+      "options": {
+        "A": "Face higher monthly repayments.",
+        "B": "Save more in response to lower returns.",
+        "C": "See their monthly repayments fall.",
+        "D": "Switch to fixed-rate mortgages."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A variable-rate mortgage reprices when Bank Rate moves, so a cut feeds through to lower monthly payments almost at once. That leaves households with <strong>more disposable income</strong> to spend on everything else, which raises consumption.<br />This channel sits alongside the two more familiar ones: cheaper borrowing and a smaller reward for saving.",
+        "distractors": {
+          "A": "Repayments fall when Bank Rate falls. Rising repayments would follow a rate <em>rise</em>.",
+          "B": "Lower returns on saving are a reason to save <em>less</em> and spend more, which reinforces the effect rather than working against it.",
+          "D": "Some households may remortgage, but that is a response to the rate change, not the reason consumption rises."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cut in Bank Rate is likely to raise net exports because it causes",
+      "options": {
+        "A": "Hot money to flow in, appreciating the pound.",
+        "B": "Hot money to flow out, depreciating the pound.",
+        "C": "The pound to appreciate, making exports cheaper.",
+        "D": "The pound to depreciate, making exports dearer."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Lower UK interest rates make sterling deposits less attractive, so foreign investors move <strong>hot money</strong> abroad in search of better returns. Selling pounds raises the supply of sterling on the foreign exchange market, so the pound <strong>depreciates</strong>.<br />A weaker pound makes UK exports cheaper abroad and imports dearer at home, so net exports rise. This is the exchange rate channel of the transmission mechanism.",
+        "distractors": {
+          "A": "Hot money chases the higher return. A rate <em>cut</em> pushes it out, not in.",
+          "C": "This contains a contradiction: an appreciation makes exports <em>dearer</em> abroad, not cheaper.",
+          "D": "The same contradiction the other way round: a depreciation makes exports cheaper, which is precisely why net exports improve."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Quantitative easing increases the money supply because the central bank",
+      "options": {
+        "A": "Buys government bonds from banks and investors.",
+        "B": "Cuts Bank Rate as far as it can towards zero.",
+        "C": "Lends directly to households and firms.",
+        "D": "Sells government bonds to commercial banks."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Under quantitative easing the central bank creates new money, digitally, and uses it to <strong>buy government bonds</strong> from banks and other financial institutions. The sellers end up holding cash instead of bonds, so the money supply rises and the banking system becomes more liquid.",
+        "distractors": {
+          "B": "Cutting Bank Rate is the conventional tool, and it is a separate instrument. QE is normally used precisely when rates are already near zero and cannot fall further.",
+          "C": "Central banks do not lend to households and firms directly. QE works through the financial institutions that hold the bonds.",
+          "D": "<em>Selling</em> bonds takes money out of the system. That is quantitative tightening, the opposite policy."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Quantitative easing is intended to raise aggregate demand by",
+      "options": {
+        "A": "Increasing the government's tax revenue.",
+        "B": "Raising banks' liquidity so they lend more.",
+        "C": "Raising the interest rate paid on savings.",
+        "D": "Reducing the quantity of money in circulation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Buying bonds leaves commercial banks holding more cash and fewer securities. With greater <strong>liquidity</strong> and a profit motive, banks want to lend more, and to attract borrowers they lower the interest rates they charge.<br />From there the effect is much the same as a cut in Bank Rate: cheaper credit raises consumption and investment, so aggregate demand rises.",
+        "distractors": {
+          "A": "QE is a monetary operation by the central bank. It does not raise tax revenue, which is a fiscal matter.",
+          "C": "QE pushes interest rates <em>down</em>, including the return on savings. Higher savings rates would discourage spending.",
+          "D": "QE increases the quantity of money. Reducing it is quantitative tightening, which lowers aggregate demand."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Interest rates are already close to zero, and further cuts are having almost no effect on consumption and investment. This situation is best described as",
+      "options": {
+        "A": "A credit crunch.",
+        "B": "A liquidity trap.",
+        "C": "Moral hazard.",
+        "D": "Quantitative tightening."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>liquidity trap</strong> is where interest rates are so close to their lower bound that further cuts cannot do useful work: there is almost no room left to cut, and households and firms hold money rather than spending it whatever the rate.<br />Conventional monetary policy loses traction, which is why central banks turned to quantitative easing after 2008.",
+        "distractors": {
+          "A": "A credit crunch is a sharp contraction in the <em>availability</em> of loans, usually because banks are rebuilding liquidity. Here the problem is that cheap credit is not being taken up.",
+          "C": "Moral hazard is excessive risk-taking by banks that expect to be rescued. It concerns bank behaviour, not the effectiveness of rate cuts.",
+          "D": "Quantitative tightening is a deliberate contractionary policy. Nothing here is being tightened."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows one economist's four predictions for the effects of a cut in Bank Rate.<br />Using Table 1, the prediction most likely to be wrong is",
+      "table": {
+        "caption": "Table 1: Predicted effects of a cut in Bank Rate",
+        "head": [
+          "Prediction",
+          "Variable",
+          "Predicted effect"
+        ],
+        "rows": [
+          [
+            "1",
+            "Consumption",
+            "Rises"
+          ],
+          [
+            "2",
+            "Investment",
+            "Rises"
+          ],
+          [
+            "3",
+            "The pound",
+            "Appreciates"
+          ],
+          [
+            "4",
+            "Inflation",
+            "Rises"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Prediction 1.",
+        "B": "Prediction 2.",
+        "C": "Prediction 3.",
+        "D": "Prediction 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Three of the four follow the transmission mechanism correctly. Cheaper borrowing raises <strong>consumption</strong> and <strong>investment</strong>, and the resulting rise in aggregate demand puts upward pressure on <strong>inflation</strong>.<br />Prediction 3 has the exchange rate backwards. Lower UK rates make sterling less attractive, so hot money flows out, the supply of pounds rises and the pound <strong>depreciates</strong> — it does not appreciate.",
+        "distractors": {
+          "A": "Consumption does rise: borrowing is cheaper, saving less rewarding, and variable-rate mortgage payments fall.",
+          "B": "Investment does rise, because a lower cost of borrowing makes more capital projects worth undertaking.",
+          "D": "Inflation would be expected to rise, since the whole point of the policy is to raise aggregate demand."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A central bank cuts Bank Rate sharply during a deep recession, but consumption barely responds. The most likely explanation is that",
+      "options": {
+        "A": "Firms have too much spare capacity to invest.",
+        "B": "The exchange rate has appreciated.",
+        "C": "The money supply has fallen.",
+        "D": "Weak confidence leads households to save instead."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The transmission mechanism assumes households and firms respond to cheaper credit — but that response depends on <strong>confidence</strong>. In a deep recession people fear for their jobs and future income, so they pay down debt or build up savings rather than spending, however cheap borrowing becomes.<br />Two related limits reinforce this: much of any rate cut passes through slowly because many borrowers are on fixed-rate deals, and near the zero lower bound there is little room to cut at all.",
+        "distractors": {
+          "A": "Spare capacity is a reason firms may not <em>invest</em>, which is plausible in itself. But the stem asks specifically about household consumption.",
+          "B": "An appreciation would reduce net exports, not consumption — and a rate cut would tend to cause a depreciation in any case.",
+          "C": "A cut in Bank Rate is expansionary and would be expected to support the money supply through more lending, not reduce it."
+        }
+      }
+    }
+  ]
+}

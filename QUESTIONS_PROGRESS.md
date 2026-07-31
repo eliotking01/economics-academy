@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 68 topics, 520 questions. AQA Microeconomics is complete; AQA
-Macroeconomics units 2.1, 2.2 and 2.3 are done.**
+**Live: 72 topics, 550 questions. AQA Microeconomics is complete; AQA
+Macroeconomics units 2.1 to 2.4 are done.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -306,13 +306,12 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### AQA Macroeconomics — 11 topics, 90 questions still to write
+### AQA Macroeconomics — 7 topics, 60 questions still to write
 
-Units 2.1, 2.2 and 2.3 are done (batches 6 to 8). What remains:
+Units 2.1 to 2.4 are done (batches 6 to 9). What remains:
 
 | Unit | Topics and planned counts |
 | --- | --- |
-| 2.4 | 2.4.1 (8) · 2.4.2 (7) · 2.4.3 (9) · 2.4.4 (6) — 30 |
 | 2.5 | 2.5.1 (9) · 2.5.2 (8) — 17 |
 | 2.6 | 2.6.1 (7) · 2.6.2 (9) · 2.6.3 (9) · 2.6.4 (10) · 2.6.5 (8) — 43 |
 
@@ -598,9 +597,49 @@ support (unemployment rates, inflation rates from a CPI series) was already used
 in unit 2.1, so repeating it would have meant near-duplicate questions across two
 topics.
 
+### Batch 9 — AQA macro 2.4 (2026-07-31)
+
+4 topics, 30 questions. All 30 re-derived from the stem alone with **0
+mismatches**; every bond yield, balance sheet total, credit creation multiple
+and bank ratio recomputed, including all distractor values.
+
+Nothing needed rewriting for originality — the first macro batch where that was
+true. Two 8-gram hits were stock stem scaffolding, and both were checked by hand
+against the real questions that produced them:
+
+- "Which one of the following is a function of…" appears in a real paper, but
+  the completion there is *prices in a market economy*, not banks. Only the
+  stock opening is shared.
+- The corpus does contain a real **bank balance sheet** item and a real
+  **systemic risk** item, both worth knowing about. The balance sheet one gives
+  a full balance sheet and asks what kind of bank it is; ours gives four line
+  items and asks for total liabilities, on entirely different figures. The
+  systemic risk one asks under what conditions systemic risk arises; ours gives
+  a contagion scenario and asks the student to name it. Archetype reuse is
+  allowed and the surface detail differs throughout.
+
+Worth recording for later batches: the papers also contain a **Fisher's equation
+of exchange** item asking for the percentage rise in the price level. Unit
+2.3.3 Q6 asks for the price level itself on unrelated figures, and shares none
+of its options — but anyone writing more quantity theory questions should check
+against it.
+
+| | |
+| --- | --- |
+| Answer letters | A 7, B 8, C 10, D 5 (even would be 7.5) |
+| Skills | applied-reasoning 14, definition-in-context 10, calculation 3, data-table 3 |
+| Difficulty | foundation 4, standard 22, stretch 4 |
+| Sketch to solve | 0 |
+
+**No sketch items, by design.** Unit 2.4 is money, banking and regulation; its
+only diagram is a single AD/AS figure for monetary policy, and a sketch item
+there would have duplicated 2.2 and 2.3. The unit does carry good arithmetic
+instead — bond yields, credit creation and bank ratios — though at 30 questions
+that is only 3 calculation items.
+
 ---
 
-## AQA Macroeconomics — 14 of 25 topics
+## AQA Macroeconomics — 18 of 25 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -618,6 +657,10 @@ topics.
 | 2.3 | 2.3.2 Employment and Unemployment | 9 | Done |
 | 2.3 | 2.3.3 Inflation and Deflation | 10 | Done |
 | 2.3 | 2.3.4 Possible Conflicts between Macroeconomic Policy Objectives | 8 | Done |
+| 2.4 | 2.4.1 The Structure of Financial Markets and Financial Assets | 8 | Done |
+| 2.4 | 2.4.2 Commercial Banks and Investment Banks | 7 | Done |
+| 2.4 | 2.4.3 Central Banks and Monetary Policy | 9 | Done |
+| 2.4 | 2.4.4 The Regulation of the Financial System | 6 | Done |
 
 ---
 
