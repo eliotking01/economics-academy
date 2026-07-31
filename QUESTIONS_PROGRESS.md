@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 72 topics, 550 questions. AQA Microeconomics is complete; AQA
-Macroeconomics units 2.1 to 2.4 are done.**
+**Live: 74 topics, 567 questions. AQA Microeconomics is complete; AQA
+Macroeconomics units 2.1 to 2.5 are done, leaving only 2.6.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -230,6 +230,11 @@ results mean:
   Prefer a scenario the student has to interpret; it is both more original and a
   better question.
 
+  Batch 10 tested this deliberately by dropping the stock opening entirely and
+  using scenarios and tables throughout. It returned **zero hits at every n-gram
+  length, including 8** — the only batch so far to do so. Treat the scenario form
+  as the default and the stock stem as the exception.
+
 Do **not** try to parse the PDFs with a stdlib script. Their content streams use
 subsetted fonts with custom encodings, so pulling the parenthesised strings out
 of the decompressed streams returns binary noise, not text.
@@ -306,13 +311,12 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### AQA Macroeconomics — 7 topics, 60 questions still to write
+### AQA Macroeconomics — 5 topics, 43 questions still to write
 
-Units 2.1 to 2.4 are done (batches 6 to 9). What remains:
+Units 2.1 to 2.5 are done (batches 6 to 10). Only unit 2.6 remains:
 
 | Unit | Topics and planned counts |
 | --- | --- |
-| 2.5 | 2.5.1 (9) · 2.5.2 (8) — 17 |
 | 2.6 | 2.6.1 (7) · 2.6.2 (9) · 2.6.3 (9) · 2.6.4 (10) · 2.6.5 (8) — 43 |
 
 Expect the **calculation share to recover here**: index numbers, real vs
@@ -637,9 +641,50 @@ there would have duplicated 2.2 and 2.3. The unit does carry good arithmetic
 instead — bond yields, credit creation and bank ratios — though at 30 questions
 that is only 3 calculation items.
 
+### Batch 10 — AQA macro 2.5 (2026-07-31)
+
+2 topics, 17 questions. All 17 re-derived from the stem alone with **0
+mismatches**; the budget balance and tax progressivity figures recomputed,
+including all distractor values.
+
+**Originality came back completely clean — no shared runs even at 8 words.**
+That is the first batch with no hits at all, and it is not luck: this batch
+deliberately avoided the stock "Which one of the following…" opening throughout,
+using scenarios and table-based items instead. Batch 8 identified that stem plus
+a list of causes as the highest-collision shape on the paper; dropping it removed
+every hit at once. Worth doing by default from here.
+
+The set validator passed on the first run, with no length or distribution fixes
+needed — also a first, and a consequence of applying the option-ordering and
+length rules while drafting rather than afterwards.
+
+One option was rewritten on quality grounds rather than because a check caught
+it. In 2.5.2 Q6, "Is owned by shareholders rather than the state" is true of any
+privatised firm and so obviously not a reason for the policy to fail — a wasted
+option. It became "Has less access to government funding than before", which is
+a mistake a student might genuinely make.
+
+Care was needed over overlap with earlier units, which is now the binding
+constraint on macro rather than originality against the papers:
+
+- 2.2.6 Q6 already asks how training raises capacity (quality of labour), so
+  2.5.2 uses **infrastructure** for the mechanism question instead.
+- 2.2.6 Q7 already asks what an LRAS shift does with AD unchanged, so 2.5.2 Q7
+  asks for the **contrast with expansionary fiscal policy** instead.
+- 2.2.3 Q6 already covers automatic stabilisers, so 2.5.1 stays on the deficit
+  and debt distinction, the Laffer curve, crowding out and Ricardian
+  equivalence.
+
+| | |
+| --- | --- |
+| Answer letters | A 4, B 5, C 5, D 3 (even would be 4.25) |
+| Skills | applied-reasoning 9, definition-in-context 5, data-table 2, calculation 1 |
+| Difficulty | foundation 2, standard 13, stretch 2 |
+| Sketch to solve | 1 |
+
 ---
 
-## AQA Macroeconomics — 18 of 25 topics
+## AQA Macroeconomics — 20 of 25 topics
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -661,6 +706,8 @@ that is only 3 calculation items.
 | 2.4 | 2.4.2 Commercial Banks and Investment Banks | 7 | Done |
 | 2.4 | 2.4.3 Central Banks and Monetary Policy | 9 | Done |
 | 2.4 | 2.4.4 The Regulation of the Financial System | 6 | Done |
+| 2.5 | 2.5.1 Fiscal Policy | 9 | Done |
+| 2.5 | 2.5.2 Supply-Side Policies | 8 | Done |
 
 ---
 

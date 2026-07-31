@@ -1,0 +1,263 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.5.1",
+  "slug": "2-5-1-fiscal-policy",
+  "title": "Fiscal Policy",
+  "shortTitle": "Fiscal Policy",
+  "pageTitle": "Fiscal Policy Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on fiscal policy for AQA A-Level Economics: budget deficits and national debt, types of tax, the Laffer curve and crowding out.",
+  "intro": "Nine original multiple-choice questions on fiscal policy, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on budget deficits and national debt, progressive and regressive taxes, the Laffer curve and crowding out, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-5-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The difference between a government's fiscal deficit and its national debt is that the deficit is",
+      "options": {
+        "A": "A flow measured over one year, and the debt a stock built up over time.",
+        "B": "A stock built up over time, and the debt a flow measured over one year.",
+        "C": "Always larger than the debt in any given year.",
+        "D": "Measured only when the economy is in recession."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>deficit</strong> is the gap between spending and tax revenue in a single year, and it resets each year — a flow. The <strong>national debt</strong> is the accumulation of every past deficit less every past surplus — a stock.<br />So a government can cut its deficit and still see its debt rise: as long as the deficit is positive at all, more borrowing is being added to the pile.",
+        "distractors": {
+          "B": "This is the distinction exactly reversed. The debt is what has built up; the deficit is this year's addition to it.",
+          "C": "The deficit is normally a small fraction of the debt, since the debt is decades of deficits added together.",
+          "D": "Deficits are measured every year whatever the state of the economy. Recessions widen them, but they exist in booms too."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a government's revenue and spending for one year.<br />Using Table 1, the budget position is",
+      "table": {
+        "caption": "Table 1: Government revenue and spending",
+        "head": [
+          "Item",
+          "£bn"
+        ],
+        "rows": [
+          [
+            "Income tax and National Insurance",
+            "480"
+          ],
+          [
+            "VAT and other indirect taxes",
+            "340"
+          ],
+          [
+            "Current expenditure",
+            "690"
+          ],
+          [
+            "Capital expenditure",
+            "130"
+          ],
+          [
+            "Transfer payments",
+            "60"
+          ]
+        ]
+      },
+      "options": {
+        "A": "A balanced budget.",
+        "B": "A deficit of £60bn.",
+        "C": "A surplus of £60bn.",
+        "D": "A surplus of £130bn."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Add up each side, then take revenue minus spending.<br />Revenue = £480bn + £340bn = <strong>£820bn</strong>.<br />Spending = £690bn + £130bn + £60bn = <strong>£880bn</strong>.<br />Balance = 820 − 880 = <strong>−£60bn</strong>, so the government runs a <strong>deficit of £60bn</strong> and must borrow to cover it. That borrowing is then added to the national debt.",
+        "distractors": {
+          "A": "A balanced budget comes from leaving transfer payments out: 820 − (690 + 130) = 0. Pensions and benefits are government spending, even though nothing is produced in return.",
+          "C": "The size is right but the sign is reversed. Spending exceeds revenue here, so the government is borrowing rather than repaying.",
+          "D": "£130bn surplus counts only current expenditure as spending, 820 − 690. Capital expenditure and transfer payments are spending too."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government pays the state pension to a retired person. In the classification of public spending this is",
+      "options": {
+        "A": "Capital expenditure, since it is long-term.",
+        "B": "Current expenditure on goods and services.",
+        "C": "Not government spending, since no good is bought.",
+        "D": "Redistribution through a transfer payment."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>transfer payment</strong> is a payment for which no good or service is received in return. The government hands over purchasing power; nothing is produced by the transaction.<br />That is why transfer payments do not count directly towards GDP, even though they are certainly government spending and certainly affect aggregate demand once the recipient spends the money.",
+        "distractors": {
+          "A": "Capital expenditure buys long-lived assets — roads, hospitals, schools — that add to productive potential. A pension buys no asset.",
+          "B": "Current expenditure is day-to-day spending on public sector wages and on goods and services actually consumed, such as medicines. Nothing is consumed by the government here.",
+          "C": "It is spending, and a very large part of it. The point is only that nothing is produced in exchange."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "VAT is usually described as a regressive tax because",
+      "options": {
+        "A": "Higher earners pay a larger share of their income in it.",
+        "B": "It is charged at a single rate across most goods.",
+        "C": "Lower earners spend a larger share of income on taxed goods.",
+        "D": "The government raises more from it than from income tax."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Regressive means the <strong>percentage of income</strong> paid in tax falls as income rises. A single VAT rate applies to everyone, but lower-income households spend nearly all of what they earn, while higher-income households save a good deal of theirs.<br />Since VAT is only paid on spending, the household that spends all its income pays tax on all of it, and the one that saves half pays tax on half. The burden as a share of income therefore falls as income rises.",
+        "distractors": {
+          "A": "That describes a <strong>progressive</strong> tax, such as income tax. Regressive means the opposite.",
+          "B": "The single rate is how VAT is levied, but a flat rate on spending is not the same as a flat rate on income. It is the difference in spending patterns that makes the tax regressive.",
+          "D": "Income tax raises more than VAT in the UK, and in any case how much a tax raises says nothing about how its burden is distributed."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the income tax paid by three households.<br />Using Table 1, this tax is",
+      "table": {
+        "caption": "Table 1: Income and income tax paid",
+        "head": [
+          "Household income",
+          "Tax paid"
+        ],
+        "rows": [
+          [
+            "£20,000",
+            "£3,000"
+          ],
+          [
+            "£50,000",
+            "£10,000"
+          ],
+          [
+            "£100,000",
+            "£25,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Impossible to classify from the data.",
+        "B": "Progressive.",
+        "C": "Proportional.",
+        "D": "Regressive."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Classification depends on the <em>percentage</em> of income paid, not the amount.<br />£3,000 ÷ £20,000 = <strong>15%</strong>.<br />£10,000 ÷ £50,000 = <strong>20%</strong>.<br />£25,000 ÷ £100,000 = <strong>25%</strong>.<br />The share rises as income rises, so the tax is <strong>progressive</strong>. Note that the cash amount rises under a proportional tax too — reading the middle column alone would tell you nothing.",
+        "distractors": {
+          "A": "The table gives income and tax paid for three households, which is exactly what is needed. Dividing one by the other settles it.",
+          "C": "Proportional would mean the same percentage at every income — 15% throughout, say. Here the percentage climbs from 15% to 25%.",
+          "D": "Regressive would mean the percentage <em>falling</em> as income rises, which is what VAT does. This tax does the opposite."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government finances a large rise in spending by borrowing more. Crowding out describes the risk that",
+      "options": {
+        "A": "Higher taxes reduce households' disposable income.",
+        "B": "Imports rise faster than exports.",
+        "C": "Interest rates rise and private investment falls.",
+        "D": "The multiplier becomes larger than expected."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Extra government borrowing is extra demand for funds. That pushes interest rates up across the economy, which raises the cost of borrowing for firms and makes some investment projects no longer worthwhile.<br />The private sector's spending is therefore <strong>crowded out</strong> by the public sector's, and the net rise in aggregate demand is smaller than the increase in government spending alone would suggest.",
+        "distractors": {
+          "A": "Crowding out works through the cost of borrowing, not through taxation. The stem specifies that the spending is financed by borrowing.",
+          "B": "Rising imports would worsen the current account, which is a genuine consequence of higher demand but a different mechanism entirely.",
+          "D": "Crowding out makes fiscal expansion <em>less</em> effective, not more. A larger multiplier would work the other way."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A budget deficit that remains even when the economy is operating at its potential output is best described as",
+      "options": {
+        "A": "A balanced budget.",
+        "B": "A cyclical deficit.",
+        "C": "A structural deficit.",
+        "D": "The national debt."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>structural</strong> deficit is the part that is not explained by the economic cycle. Because the economy is already at potential output, no recovery is available to close it — tax revenue will not rise further and welfare spending will not fall further.<br />Closing it therefore requires a deliberate change in spending or taxation, which is what makes structural deficits politically difficult.",
+        "distractors": {
+          "A": "A balanced budget means revenue equals spending. Here there is a gap.",
+          "B": "A cyclical deficit is precisely the part caused by the economy running below potential, and it closes on its own as output recovers. At potential output there is none left.",
+          "D": "The national debt is the accumulated stock of past borrowing. This question is about the shortfall in a single year."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Laffer curve suggests that raising the rate of income tax above its optimal level will",
+      "options": {
+        "A": "Lower tax revenue, as incentives weaken.",
+        "B": "Lower tax revenue, because the tax base is fixed.",
+        "C": "Raise tax revenue, but by less than expected.",
+        "D": "Raise tax revenue in proportion to the rate."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The Laffer curve's point is that revenue depends on the tax rate <em>and</em> on the size of the tax base, and that the rate itself affects the base. Beyond the optimal rate, higher rates weaken the incentive to work and invest, encourage avoidance and evasion, and push some skilled workers and firms abroad.<br />The base shrinks by more than the rate rises, so <strong>total revenue falls</strong>.",
+        "distractors": {
+          "B": "If the tax base were fixed, a higher rate would always raise more revenue and the Laffer curve would not exist. A shrinking base is the whole mechanism.",
+          "C": "Above the optimal rate revenue falls outright, not merely by less than hoped. Below that rate this would be a fair description.",
+          "D": "Proportionality assumes behaviour never changes. The curve exists precisely because people respond to tax rates."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-1-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government cuts taxes to raise consumption, but households save most of the extra income because they expect taxes to rise again in future. This is best described as",
+      "options": {
+        "A": "Crowding out.",
+        "B": "The Laffer curve effect.",
+        "C": "A structural deficit.",
+        "D": "Ricardian equivalence."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Ricardian equivalence</strong> is the argument that households see through a tax cut financed by borrowing. Government borrowing today implies taxation tomorrow, so a forward-looking household saves the windfall to meet that future bill rather than spending it.<br />If it holds even partly, the multiplier on a debt-financed tax cut is much smaller than the standard analysis implies — which is one of the strongest evaluation points available on fiscal policy.",
+        "distractors": {
+          "A": "Crowding out works through interest rates squeezing private investment. Here the response is a deliberate decision by households to save.",
+          "B": "The Laffer curve is about how the tax <em>rate</em> affects total revenue through incentives. This is about what households do with money they have already received.",
+          "C": "A structural deficit describes a persistent gap in the public finances, not a behavioural response to a tax cut."
+        }
+      }
+    }
+  ]
+}
