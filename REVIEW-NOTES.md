@@ -1001,10 +1001,13 @@ the page's own terms and correct in general. If the sentence is ever revised,
 
 ---
 
-## N-Q15 — `3-4-6-monopsony` promises four things and delivers none of them
+## N-Q15 — `3-4-6-monopsony` promised four things and delivered none — FIXED
 
-**The largest single over-promise found on the site.** The spec alert on
-`3-4-6-monopsony` says students should be able to:
+**Status: fixed on 2026-08-01 with the site owner's explicit instruction.** The
+record below is what was found; the fix applied is described at the end.
+
+**This was the largest single over-promise found on the site.** The spec alert on
+`3-4-6-monopsony` said students should be able to:
 
 > …explain **the monopsony labour market diagram**, compare monopsony outcomes
 > with competitive outcomes, analyse **monopsonistic exploitation**, and evaluate
@@ -1024,20 +1027,41 @@ further detail in 3.5.3 Wage Determination", and `3-5-3-wage-determination` does
 cover monopsony, the marginal cost of labour, minimum wages and trade unions.
 Only **monopsonistic exploitation** is missing from both pages.
 
-So this is largely a **cross-reference problem rather than a content gap**: the
-alert on 3.4.6 claims for itself what 3.5.3 delivers. Two candidate fixes, and
-they are much cheaper than the N-Q8 cases:
-
-1. Rewrite the 3.4.6 alert to describe what the page actually does — buyer power,
-   and the effects on suppliers, workers and consumers — and point to 3.5.3 for
-   the labour market treatment.
-2. Or move the labour-market clauses out of the 3.4.6 alert and into 3.5.3's.
-
-Either way the `metaDescription`, OG and Twitter cards and JSON-LD carry the same
-claim and would need the same edit. **Needs an explicit instruction.**
+So this was largely a **cross-reference problem rather than a content gap**: the
+alert on 3.4.6 claimed for itself what 3.5.3 delivers.
 
 **The question set was written to the body**, so it covers buyer power generally
 — the supermarket-and-farmers case, the four-agent ledger, and the combination of
 monopoly and monopsony power in one firm. Nothing in it touches the labour market
 diagram, which is the right place to draw the line: those questions belong with
 3.5.3 when that set is written.
+
+### The fix as applied
+
+Five locations changed, all of them metadata or the alert sentence. **No
+economics in the body of the page was touched.**
+
+| Location | Change |
+| --- | --- |
+| `spec-alert` | Rewritten to describe buyer power and the four-agent evaluation, with a cross-reference to 3.5.3 |
+| `<meta name="description">` | Rewritten, 153 characters |
+| `og:description` | Same replacement |
+| `twitter:description` | Same replacement |
+| JSON-LD `description` | Rewritten to match |
+
+The alert now reads: understand what a monopsony is, identify the conditions
+under which monopsony power arises, and evaluate its costs and benefits for the
+firm, consumers, workers and suppliers — followed by a sentence directing the
+reader to 3.5.3 for the labour market diagram, minimum wages and trade unions.
+
+**One deviation from house style, left deliberately and worth knowing about.**
+The cross-reference is a real link, which makes this the **only spec alert on the
+site containing an `<a>` tag** — the other 165 are plain text. It was kept
+because an unlinked pointer is markedly less useful to a student who has arrived
+from a search result looking for the labour market treatment. Converting it to
+plain text is a one-line change if the consistency matters more.
+
+**Monopsonistic exploitation is still missing from both pages**, and is the one
+genuinely absent concept rather than a misplaced cross-reference. It has been
+removed from the alert's claims, so the page no longer promises it; adding the
+term to 3.5.3 would close the gap properly. **Still needs an instruction.**
