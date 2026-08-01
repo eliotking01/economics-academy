@@ -822,3 +822,26 @@ actual-versus-potential growth (2.1.1), expectations as a determinant of
 consumption (2.2.2), the accelerator (2.2.3) and cost-push shocks (2.3.2). If
 the pages are completed, those four sets are worth extending — the AQA sets
 cover all four concepts, so the material is proven to work as questions.
+
+## N-Q9 addendum — a ninth Theme 2 page, found while writing the questions
+
+`2-2-5-net-trade.html` belongs on the N-Q9 list. Its spec alert promises "how
+the **Marshall-Lerner condition** and **J-curve** influence the impact of
+exchange rate changes on the trade balance", and neither term appears anywhere
+below it.
+
+This one is a **softer case** than the other eight, and worth distinguishing.
+The body does describe both mechanisms — it says the effect of a depreciation
+"depends on the price elasticity of demand for exports and imports", which is
+Marshall-Lerner without the name, and it notes that a depreciation "may
+initially worsen the trade balance before improving it in the longer run", which
+is the J-curve without the name. The economics is present; only the labels are
+missing.
+
+That still matters at A-Level, because both terms are examinable by name and a
+student who has only read this page would not recognise either in a question.
+The fix here is smaller than for the others: name the two concepts in the
+existing paragraphs rather than write new sections. **Still an economics content
+change, so it needs an explicit instruction.**
+
+Running total: **11 pages** across Themes 1 and 2. Themes 3 and 4 unchecked.

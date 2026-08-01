@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.2.3",
+  "slug": "2-2-3-investment",
+  "title": "Investment",
+  "shortTitle": "Investment",
+  "pageTitle": "Investment and the Capital Stock Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on investment for Edexcel A-Level Economics: gross and net investment, depreciation and what drives firms to invest.",
+  "intro": "Seven original multiple-choice questions on investment, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on gross and net investment, depreciation, the influences on investment decisions, and its effect on AD and LRAS.",
+  "questions": [
+    {
+      "id": "edexcel-2-2-3-q1",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm spends £3.5 million on new machinery during a year. Over the same year, £900,000 of its existing machinery wears out. Net investment is",
+      "options": {
+        "A": "£0.9m",
+        "B": "£2.6m",
+        "C": "£3.5m",
+        "D": "£4.4m"
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Net investment = gross investment − depreciation.</strong><br />£3.5m − £0.9m = <strong>£2.6m</strong>.<br />Gross investment is the whole £3.5m spent. But £0.9m of it merely replaces machinery that has worn out, so only £2.6m is a genuine <strong>addition to the capital stock</strong>.<br />That distinction is what matters for the long run: an economy whose gross investment only matches depreciation is standing still, however large the spending figure looks.",
+        "distractors": {
+          "A": "£0.9m is depreciation — the capital used up, not the capital added.",
+          "C": "£3.5m is <strong>gross</strong> investment. It is the total spent, before allowing for what had to be replaced.",
+          "D": "This adds depreciation instead of subtracting it. Wear and tear reduces the capital stock, so it cannot increase net investment."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Capital goods lose value over time through wear and tear and through becoming obsolete. Economists call this",
+      "options": {
+        "A": "Deflation.",
+        "B": "Depreciation.",
+        "C": "Disinvestment.",
+        "D": "Net investment."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Depreciation</strong>, also called capital consumption, is the loss of value of capital goods over time — machinery wearing out, and equipment being overtaken by something better.<br />It is the figure that separates gross from net investment. An economy has to invest enough each year simply to cover it before any of its spending starts adding to productive capacity.",
+        "distractors": {
+          "A": "Deflation is a sustained fall in the general <em>price level</em>. The word describes prices across an economy, not the wearing out of machines.",
+          "C": "Disinvestment is a <em>reduction</em> in the capital stock, which is what happens when investment fails to cover depreciation. It is a consequence rather than the process itself.",
+          "D": "Net investment is gross investment <em>minus</em> depreciation. It is what is left over, not the loss being subtracted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Firms delay investment projects despite low interest rates and healthy order books, because managers simply feel uneasy about the years ahead. Keynes called this influence",
+      "options": {
+        "A": "Access to credit.",
+        "B": "Animal spirits.",
+        "C": "Government regulation.",
+        "D": "The rate of economic growth."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Animal spirits</strong> is Keynes's term for the role of emotion, intuition and general sentiment in business decisions — the part of investment that no calculation explains.<br />The stem is constructed so nothing measurable accounts for the delay: borrowing is cheap and orders are strong. What is left is how the managers <em>feel</em> about a future they cannot see. This is a large part of why investment is the most volatile component of aggregate demand, and why confidence surveys are watched so closely.",
+        "distractors": {
+          "A": "Access to credit is about whether banks will lend. The stem says rates are low and gives no suggestion that finance is unavailable.",
+          "C": "Regulation is a concrete constraint on what firms may do. Nothing in the stem points to a rule standing in the way.",
+          "D": "The rate of economic growth shapes expected future demand, and healthy order books suggest that demand is there. The hesitation is not coming from the data."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank cuts interest rates sharply. For a firm weighing up whether to build a new factory, the most direct effect is that",
+      "options": {
+        "A": "Consumer confidence rises immediately.",
+        "B": "Depreciation on its existing capital falls.",
+        "C": "The cost of borrowing to fund it falls.",
+        "D": "Its existing machinery becomes more productive."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Most investment is financed by borrowing, so the interest rate is effectively the <strong>price of the project</strong>. A lower rate reduces the return the factory has to earn in order to be worth building, so projects that were marginal become viable.<br />There is a second route worth noting: even a firm funding the factory from its own reserves faces a lower <em>opportunity cost</em>, because leaving the money in the bank now earns less. Both push the same way.",
+        "distractors": {
+          "A": "Consumer confidence may well improve eventually, and stronger demand would encourage investment. But that is an indirect and slower channel than the cost of finance.",
+          "B": "Depreciation depends on wear and obsolescence. Interest rates have no bearing on how fast machinery wears out.",
+          "D": "Existing machinery is unchanged. What has changed is the cost of acquiring more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm builds a new factory. The spending raises aggregate demand at once. Its second, later effect is to",
+      "options": {
+        "A": "Lower the economy's rate of depreciation.",
+        "B": "Raise short-run aggregate demand a second time.",
+        "C": "Reduce the economy's productive potential.",
+        "D": "Shift long-run aggregate supply to the right."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Investment is unusual in acting on <strong>both sides of the model</strong>, at different times.<br />In the <strong>short run</strong> it is a component of aggregate demand: the money spent on building the factory is demand for construction, materials and labour, so AD shifts right.<br />In the <strong>long run</strong> the finished factory adds to the capital stock, so the economy can produce more. <strong>LRAS shifts right</strong>.<br />That combination is what makes investment the route to <em>non-inflationary</em> growth: demand and capacity both rise, so output can expand without the same pressure on prices.",
+        "distractors": {
+          "A": "More capital means more to wear out, so depreciation in absolute terms tends to rise rather than fall.",
+          "B": "The spending raises AD once, when it happens. There is no second demand effect from the same outlay.",
+          "C": "This has the direction backwards. Adding to the capital stock raises productive potential."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-3-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four developments facing firms in an economy.<br />Using Table 1, the development most likely to reduce investment is",
+      "table": {
+        "caption": "Table 1: Four developments facing firms",
+        "head": [
+          "",
+          "Development"
+        ],
+        "rows": [
+          [
+            "Development 1",
+            "Banks tighten their lending criteria sharply"
+          ],
+          [
+            "Development 2",
+            "The government introduces tax relief on new equipment"
+          ],
+          [
+            "Development 3",
+            "Export orders from abroad rise strongly"
+          ],
+          [
+            "Development 4",
+            "Business surveys report rising optimism"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Development 1.",
+        "B": "Development 2.",
+        "C": "Development 3.",
+        "D": "Development 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Access to credit</strong> is one of the main influences on investment, and it is separate from the price of credit. A firm facing tighter lending criteria may be unable to borrow at any rate.<br />Tighter criteria therefore cut investment directly, and they bite hardest on smaller and newer firms with less security to offer. The other three developments all point the other way.",
+        "distractors": {
+          "B": "Tax relief on new equipment lowers the effective cost of capital, so it encourages investment. Government incentives are a recognised influence.",
+          "C": "Stronger export orders give firms a reason to expand capacity to meet the demand, which raises investment.",
+          "D": "Rising business optimism is among the strongest drivers of investment, since decisions rest on expectations about the future."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Investment swings far more sharply over the economic cycle than consumption does. The best explanation is that investment decisions",
+      "options": {
+        "A": "Are made by firms rather than by households.",
+        "B": "Depend on the price level rather than on output.",
+        "C": "Get postponed when the future looks uncertain.",
+        "D": "Make up the largest single component of AD."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The asymmetry comes from what each kind of spending is <em>for</em>. Households cannot postpone eating, heating or travelling to work, so consumption has a floor beneath it however bad the outlook.<br />A new factory has no such floor. It can wait a year, or five, at almost no immediate cost — and since the decision rests on expectations about a future nobody can see, a darkening outlook is reason enough to wait. When confidence returns, the postponed projects arrive together.<br />That is why investment falls hardest in a recession and rebounds hardest in a recovery, despite being only about 14% of aggregate demand.",
+        "distractors": {
+          "A": "Who takes the decision does not by itself make it volatile. What matters is that the decision can be deferred and rests on an uncertain future.",
+          "B": "Investment responds to expected demand and the cost of finance. The price level is not the driver, and in any case consumption faces the same price level.",
+          "D": "Consumption is much the largest component, at around 60% against investment's 14%. Size is a separate matter from volatility in any case."
+        }
+      }
+    }
+  ]
+}

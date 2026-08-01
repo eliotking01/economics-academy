@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.2.5",
+  "slug": "2-2-5-net-trade",
+  "title": "Net Trade",
+  "shortTitle": "Net Trade",
+  "pageTitle": "Net Trade and the Trade Balance Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on net trade for Edexcel A-Level Economics: real incomes, exchange rates, world conditions and protectionism.",
+  "intro": "Seven original multiple-choice questions on net trade, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on what moves net trade — real incomes at home and abroad, exchange rates, world growth, protectionism and competitiveness.",
+  "questions": [
+    {
+      "id": "edexcel-2-2-5-q1",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country's exports are £520bn and its imports are £555bn. Net trade's contribution to aggregate demand is",
+      "options": {
+        "A": "−£35bn",
+        "B": "+£35bn",
+        "C": "+£520bn",
+        "D": "+£1,075bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Net trade is exports minus imports:<br />£520bn − £555bn = <strong>−£35bn</strong>.<br />The country buys more from abroad than it sells, so net trade <strong>subtracts</strong> £35bn from aggregate demand. The money spent on imports is demand for output produced somewhere else, which is why it comes off rather than going on.",
+        "distractors": {
+          "B": "The size is right but the sign is wrong. Imports exceed exports, so the contribution must be negative.",
+          "C": "£520bn is exports alone. Net trade is the difference between the two flows, not one of them.",
+          "D": "This adds the two figures. Imports are subtracted from exports, never added to them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Real incomes in a country rise strongly while incomes in its trading partners are unchanged. The most likely effect on net trade is that it",
+      "options": {
+        "A": "Improves, as exports become cheaper abroad.",
+        "B": "Improves, as households buy more domestic goods.",
+        "C": "Worsens, as households can afford more imports.",
+        "D": "Worsens, as exports become dearer abroad."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Higher <strong>domestic</strong> real incomes raise spending on everything, and a share of that spending goes on imported goods — cars, electronics, foreign holidays.<br />Imports therefore rise. Exports are unchanged, because incomes abroad have not moved and nothing has happened to competitiveness. With M up and X flat, net trade <strong>worsens</strong>.<br />This is why a domestic boom and a widening trade deficit so often arrive together.",
+        "distractors": {
+          "A": "Nothing here has changed relative prices. Domestic incomes rising does not make exports cheaper to foreign buyers.",
+          "B": "Some of the extra spending does go on domestic goods, but that does not affect net trade. What matters is the part that goes on imports.",
+          "D": "Export prices are set by costs and the exchange rate, neither of which the stem changes."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's main trading partners enter a deep recession. For that country's net trade, the most likely effect is",
+      "options": {
+        "A": "An improvement, as its imports fall.",
+        "B": "An improvement, as its exports rise.",
+        "C": "A worsening, as its exports fall.",
+        "D": "A worsening, as its imports rise."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is the mirror of the previous case: it is <strong>foreign</strong> real incomes that have moved.<br />Households and firms abroad have less to spend, so they buy less of everything, including this country's exports. X falls while M is broadly unchanged, and net trade worsens.<br />For an open economy like the UK, where exports and imports are a large share of GDP, conditions abroad are usually the most important short-run influence on the trade balance — and they are entirely outside the country's control.",
+        "distractors": {
+          "A": "A recession abroad does not reduce this country's appetite for imports. Domestic incomes have not changed.",
+          "B": "Exports fall rather than rise. Poorer customers buy less.",
+          "D": "Imports depend on domestic incomes, which the stem leaves untouched."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's currency depreciates. Its trade balance worsens for several months before it begins to improve. The best explanation is that in the short run",
+      "options": {
+        "A": "Exports become dearer and imports cheaper.",
+        "B": "The depreciation raises the price level at home.",
+        "C": "Trading partners retaliate by imposing tariffs.",
+        "D": "Volumes respond only slowly to the price change."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A depreciation changes prices immediately but quantities only gradually. Contracts are already signed, supply chains take time to switch, and buyers need time to notice and react.<br />So in the first months the country pays <strong>more</strong> for much the same volume of imports while earning much the same volume of exports at lower prices — and the balance worsens. As demand becomes more responsive over the following year or two, volumes shift, and the balance improves.<br />The path traced out is a shallow dip followed by a sustained rise.",
+        "distractors": {
+          "A": "A depreciation makes exports <em>cheaper</em> to foreign buyers and imports <em>dearer</em> at home. The stem's puzzle is why the balance still worsens at first.",
+          "B": "Imported inputs do become dearer, which feeds into domestic prices. But that is a story about inflation, not about why the trade balance dips and then recovers.",
+          "C": "Nothing in the stem mentions retaliation, and a depreciation is not a protectionist measure that would invite it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government imposes tariffs on imports in order to improve its trade balance. The main risk to that aim is that",
+      "options": {
+        "A": "Consumers switch to domestic substitutes instead.",
+        "B": "Import prices rise for buyers in the home market.",
+        "C": "Tariff revenue accrues to the government itself.",
+        "D": "Trading partners retaliate against its exports."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Tariffs work on one side of the balance: they raise the price of imports, so fewer are bought. If nothing else happened, the balance would improve.<br />Something else usually does happen. Trading partners answer with tariffs of their own, and <strong>exports fall</strong>. Since net trade is X − M, a policy that cuts imports and exports together may leave the balance no better and possibly worse — while both countries end up with dearer goods and less efficient production.",
+        "distractors": {
+          "A": "Switching to domestic substitutes is the intended effect, not a risk. It is how the tariff reduces imports.",
+          "B": "Dearer imports are the mechanism of the policy and a genuine cost to consumers, but they do not threaten the trade-balance aim.",
+          "C": "Revenue is a benefit to the government. It has no bearing on whether the trade balance improves."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four changes affecting a country's trade.<br />Using Table 1, the change that works through non-price competitiveness is",
+      "table": {
+        "caption": "Table 1: Four changes affecting trade",
+        "head": [
+          "",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Change 1",
+            "The domestic currency appreciates"
+          ],
+          [
+            "Change 2",
+            "Domestic firms improve product quality and branding"
+          ],
+          [
+            "Change 3",
+            "Trading partners grow strongly"
+          ],
+          [
+            "Change 4",
+            "Foreign governments cut their tariffs"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Change 1.",
+        "B": "Change 2.",
+        "C": "Change 3.",
+        "D": "Change 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Non-price competitiveness</strong> covers everything that makes buyers choose a product other than its price — quality, design, reliability, branding, after-sales service and innovation.<br />Improving quality and branding makes exports more attractive at an unchanged price. That is a durable advantage: unlike a cheaper currency it cannot be undone by a movement in the exchange rate, which is why it is the route governments favour for the long run. The other three all work through price.",
+        "distractors": {
+          "A": "An appreciation changes the <em>price</em> foreign buyers face, making exports dearer and imports cheaper.",
+          "C": "Stronger growth abroad works through foreign real incomes — customers have more to spend, at unchanged prices.",
+          "D": "Lower tariffs abroad reduce the price foreign buyers pay for this country's goods, so again a price effect."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "For the UK, the state of the world economy is usually the most important short-run influence on the trade balance. The reason is that the UK",
+      "options": {
+        "A": "Fixes its exchange rate against major currencies.",
+        "B": "Has a large share of GDP in exports and imports.",
+        "C": "Imposes very high tariffs on imported goods.",
+        "D": "Runs a persistent surplus on trade in goods."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The UK is a relatively <strong>open</strong> economy: trade accounts for a large share of GDP in both directions.<br />Openness is what turns conditions abroad into a domestic problem. When a large fraction of output is sold overseas, a downturn in customer countries hits export demand hard and fast — and no amount of domestic policy can conjure buyers who have stopped spending. A more closed economy would feel the same world downturn far less.<br />The other influences on net trade are real, but exchange rates, competitiveness and protectionism all work more slowly than a change in world demand.",
+        "distractors": {
+          "A": "The pound floats. A fixed rate would if anything insulate trade flows from currency movements, which is not the mechanism here.",
+          "C": "The UK is a relatively open trading economy with low tariffs. High tariffs would reduce its exposure to world conditions, not raise it.",
+          "D": "The UK runs a persistent <em>deficit</em> on trade in goods, partly offset by a surplus on services. In any case the direction of the balance is not what makes it sensitive to world demand."
+        }
+      }
+    }
+  ]
+}

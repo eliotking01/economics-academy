@@ -1,0 +1,238 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.2.1",
+  "slug": "2-2-1-aggregate-demand",
+  "title": "Aggregate Demand",
+  "shortTitle": "Aggregate Demand",
+  "pageTitle": "Aggregate Demand and the AD Curve Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on aggregate demand for Edexcel A-Level Economics: the AD components, why the curve slopes down, and what shifts it.",
+  "intro": "Nine original multiple-choice questions on aggregate demand, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Nine original multiple-choice questions on the components of aggregate demand, the slope of the AD curve, and movements along it against shifts of it.",
+  "questions": [
+    {
+      "id": "edexcel-2-2-1-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy has aggregate demand of £1,450bn. Consumption is £900bn, investment is £210bn and government spending is £380bn. Net trade is therefore",
+      "options": {
+        "A": "−£40bn",
+        "B": "+£40bn",
+        "C": "+£1,450bn",
+        "D": "+£1,490bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Rearrange the identity. If AD = C + I + G + (X − M), then net trade is what is left once the other three are taken out.<br />C + I + G = £900bn + £210bn + £380bn = <strong>£1,490bn</strong>.<br />Net trade = £1,450bn − £1,490bn = <strong>−£40bn</strong>.<br />The negative sign says imports exceed exports, so net trade is <em>subtracting</em> from aggregate demand. That is the normal position for the UK, and it is why the three positive components sum to more than AD itself.",
+        "distractors": {
+          "B": "The size is right but the sign is wrong. C + I + G comes to <em>more</em> than aggregate demand, so the missing component must be negative.",
+          "C": "£1,450bn is aggregate demand itself, not the trade component within it.",
+          "D": "£1,490bn is C + I + G. That is the figure net trade has to be measured against, not the answer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government pays out £90bn in unemployment benefits and state pensions. In the aggregate demand equation, this spending is",
+      "options": {
+        "A": "Counted in full within G, as government spending.",
+        "B": "Counted within C when the recipients spend it.",
+        "C": "Counted within both C and G, as it passes through.",
+        "D": "Excluded from aggregate demand altogether."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>G covers government spending on goods and services</strong> — nurses, roads, defence equipment. Transfer payments are deliberately excluded, because the state buys nothing with them: it moves purchasing power from one household to another.<br />The money still reaches aggregate demand, but by a different route. Benefits and pensions raise the recipients' <strong>disposable income</strong>, and what they then spend appears in <strong>C</strong>. That is why transfers support demand in a recession despite not counting as G.",
+        "distractors": {
+          "A": "Counting transfers in G would treat a payment as though the government had bought something with it. Nothing has been produced.",
+          "C": "Counting the same pounds in both G and C would double count them, inflating the AD figure.",
+          "D": "The money is not lost from AD. It arrives as consumption once the recipients spend it, and recipients on low incomes tend to spend most of it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The average price level in an economy falls while prices abroad are unchanged. Through the international trade effect, this raises aggregate demand because",
+      "options": {
+        "A": "Exports become cheaper and imports dearer.",
+        "B": "Exports become dearer and imports cheaper.",
+        "C": "Interest rates fall, encouraging borrowing.",
+        "D": "The real value of money held rises."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>international trade effect</strong> is one of three reasons the AD curve slopes downwards, and it works through net exports.<br />If domestic prices fall while foreign prices do not, home-produced goods become <strong>relatively cheaper</strong>. Foreign buyers take more of them, so exports rise; domestic buyers switch away from now relatively dearer foreign goods, so imports fall. Net exports rise, and with them aggregate demand.",
+        "distractors": {
+          "B": "This reverses the comparison. A lower domestic price level makes home-produced goods cheaper relative to foreign ones, not dearer.",
+          "C": "That is the <strong>interest rate effect</strong>, a separate reason the curve slopes down. It works through investment and consumption rather than trade.",
+          "D": "That is the <strong>wealth effect</strong>, the third reason. A lower price level raises the real value of money held, and works through consumption."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A fall in the average price level, with nothing else in the economy changing, is shown on the aggregate demand diagram by",
+      "options": {
+        "A": "A leftward shift of the AD curve.",
+        "B": "A movement down along the AD curve.",
+        "C": "A movement up along the AD curve.",
+        "D": "A rightward shift of the AD curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The rule is the same one that governs microeconomic demand curves. A change in the variable on the vertical axis — here the <strong>average price level</strong> — produces a movement along the curve. Anything else shifts it.<br />The price level has fallen, so the economy moves <strong>down</strong> the existing AD curve to a larger quantity of real GDP demanded. The three effects behind the slope, wealth, interest rate and international trade, are what make that larger quantity happen.",
+        "distractors": {
+          "A": "Shifts come from changes in C, I, G or net trade <em>at a given price level</em>. The price level itself is not one of them.",
+          "C": "A movement up the curve follows a price level <em>rise</em>. The stem says it fell.",
+          "D": "Same objection as A. The curve has not moved; the economy has moved along it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four changes in an economy.<br />Using Table 1, the change that reduces aggregate demand through net trade is",
+      "table": {
+        "caption": "Table 1: Four changes in the economy",
+        "head": [
+          "",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Change 1",
+            "The central bank cuts interest rates"
+          ],
+          [
+            "Change 2",
+            "Trading partners enter a deep recession"
+          ],
+          [
+            "Change 3",
+            "The government cancels a hospital-building programme"
+          ],
+          [
+            "Change 4",
+            "House prices rise sharply"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Change 1.",
+        "B": "Change 2.",
+        "C": "Change 3.",
+        "D": "Change 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Net trade depends heavily on incomes in the countries a nation sells to. When trading partners fall into recession, their households and firms buy less of everything, including imports from abroad.<br />The country's <strong>exports fall</strong>, so (X − M) shrinks and aggregate demand falls with it. Nothing about the country's own competitiveness has changed — the demand for what it makes simply is not there.",
+        "distractors": {
+          "A": "A cut in interest rates raises consumption and investment, so it <em>increases</em> aggregate demand rather than reducing it.",
+          "C": "Cancelling a building programme does reduce aggregate demand, but through <strong>G</strong> rather than through trade.",
+          "D": "Rising house prices raise consumption through the wealth effect, so this increases aggregate demand and works through C."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Consumption accounts for around 60% of aggregate demand and net trade for around 1%. It follows that a given percentage fall in",
+      "options": {
+        "A": "Consumption reduces AD by far more than the same fall in net trade.",
+        "B": "Consumption reduces AD by the same amount as an equal fall in net trade.",
+        "C": "Net trade reduces AD by far more than the same fall in consumption.",
+        "D": "Either component reduces AD in proportion to how volatile it is."
+      },
+      "answer": "A",
+      "model": {
+        "working": "What matters for the effect on aggregate demand is the <strong>share</strong> a component holds, not just how much it moves in percentage terms.<br />A 5% fall in consumption removes 5% of 60% of AD — three percentage points. A 5% fall in net trade removes 5% of about 1% — a twentieth of a percentage point. The first is roughly sixty times the second.<br />This is why forecasters watch consumer confidence so closely: consumption is the component where even a modest percentage change moves the whole economy.",
+        "distractors": {
+          "B": "Equal percentage changes have very unequal effects when the bases differ by a factor of sixty.",
+          "C": "This reverses the relationship. Net trade's share is the smallest of the four, so it carries the least weight.",
+          "D": "Volatility describes how much a component tends to move, which is a separate matter from how much a given movement matters. Investment is the most volatile component and still smaller than consumption."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Investment is around 14% of aggregate demand but is described as its most volatile component. This means investment",
+      "options": {
+        "A": "Contributes the largest share of any component.",
+        "B": "Is the component least affected by confidence.",
+        "C": "Never falls during an economic downturn.",
+        "D": "Swings by large percentages from year to year."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Volatile</strong> describes the size of the swings, not the size of the component. Investment can rise or fall by a fifth in a single year in a way consumption never does.<br />The reason is what investment decisions depend on: expectations about a future that firms cannot see, and projects that can be postponed at almost no cost when the outlook darkens. Households cannot postpone eating; firms can postpone a new factory indefinitely.",
+        "distractors": {
+          "A": "At around 14%, investment is the second smallest component. Consumption is much the largest at roughly 60%.",
+          "B": "Confidence is one of the strongest influences on investment, and it is a large part of why the component swings so much.",
+          "C": "Investment typically falls hardest in a downturn, precisely because it is the easiest spending to defer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises income tax while the average price level is unchanged. On the aggregate demand diagram the most likely effect is",
+      "options": {
+        "A": "A leftward shift, as disposable income falls.",
+        "B": "A movement down along the existing AD curve.",
+        "C": "A movement up along the existing AD curve.",
+        "D": "A rightward shift, as government revenue rises."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Higher income tax reduces <strong>disposable income</strong>, and disposable income is the main determinant of consumption. Households spend less at <em>every</em> price level, so the whole curve moves.<br />That is a <strong>leftward shift</strong>. The price level is explicitly held constant in the stem, which rules out any movement along the curve — a change in a determinant other than the price level always shifts the curve rather than moving the economy along it.",
+        "distractors": {
+          "B": "Movements along the curve are caused by changes in the price level, which the stem holds constant.",
+          "C": "Same objection, and in the wrong direction: a movement up the curve would follow a price rise.",
+          "D": "Revenue rising does not itself raise AD. What raises AD is government <em>spending</em>, and taking income out of households' hands reduces consumption."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-1-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The wealth effect, the interest rate effect and the international trade effect are all used to explain the shape of the AD curve. What they have in common is that each",
+      "options": {
+        "A": "Applies only when the economy is at full capacity.",
+        "B": "Explains why the curve shifts rather than its slope.",
+        "C": "Links the price level to a change in spending.",
+        "D": "Works entirely through government policy decisions."
+      },
+      "answer": "C",
+      "model": {
+        "working": "All three run from the <strong>price level</strong> to one or more components of aggregate demand. The wealth effect reaches consumption through the real value of money; the interest rate effect reaches consumption and investment through the cost of borrowing; the international trade effect reaches net exports through relative prices.<br />That common structure is exactly what a <em>slope</em> is. A curve slopes because the variable on one axis changes the quantity on the other. Anything that changed spending <em>without</em> the price level changing would shift the curve instead, which is the distinction the three effects are there to establish.",
+        "distractors": {
+          "A": "None of them depends on the economy being at full capacity. They operate at any level of output.",
+          "B": "Shifts come from changes in the determinants of AD at a given price level. These three are precisely the mechanisms that operate <em>through</em> the price level.",
+          "D": "Only some government actions touch them at all. The wealth and international trade effects work through markets with no policy involvement."
+        }
+      }
+    }
+  ]
+}

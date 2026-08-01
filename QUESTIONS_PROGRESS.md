@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 105 topics, 808 questions. AQA is complete, Edexcel Theme 1 is complete,
-and Theme 2 unit 2.1 is done. 61 topics remain.**
+**Live: 110 topics, 845 questions. AQA is complete, Edexcel Theme 1 is complete,
+and Theme 2 units 2.1 and 2.2 are done. 56 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -360,16 +360,22 @@ Useful things established while building, worth not rediscovering.
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 20 (units 2.2 to 2.6) | ~150 |
+| Theme 2 | 15 (units 2.3 to 2.6) | ~113 |
 | Theme 3 | 20 | 157 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 2 unit 2.2 (Aggregate Demand)** — 2.2.1 aggregate demand,
-2.2.2 consumption, 2.2.3 investment, 2.2.4 government expenditure, 2.2.5 net
-trade. Five topics. Edexcel splits AD into five separate topics where AQA has
-one (2.2.3 Determinants of AD, 9 questions), so there is more room than the
-overlap first suggests — each Edexcel topic can go deeper into its own component
-than the single AQA set does.
+**Next batch: Theme 2 unit 2.3 (Aggregate Supply)** — 2.3.1 aggregate supply,
+2.3.2 short-run AS, 2.3.3 long-run AS. Only three topics, so pair it with unit
+2.4 (national income, 4 topics) unless the AS pages turn out to be dense.
+
+**Expect this to be the hardest twin problem yet.** AQA 2.2.5 (SRAS, 7
+questions) and AQA 2.2.6 (LRAS, 7 questions) cover the same ground almost
+completely, *including both sketch items* and the Keynesian/Classical contrast.
+AQA 2.2.2 adds four more on the AD/AS model. Unlike unit 2.2, Edexcel does not
+subdivide the topic further than AQA does, so there is no structural room to
+exploit — the angles will have to come from what the Edexcel pages emphasise
+differently. Note also that `2-3-2-short-run-aggregate-supply` is one of the
+incomplete pages (N-Q9): it promises cost-push shocks and never covers them.
 
 **The twins for the rest of Theme 2 are AQA macro, and the overlap is severe.**
 Unit 2.1 alone collided with AQA 2.1.2, 2.1.3, 2.1.4, 2.3.2, 2.3.3 and 2.6.3.
@@ -978,6 +984,81 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 15 — Edexcel Theme 2, unit 2.2 (2026-08-01)
+
+5 topics, 37 questions. **Aggregate Demand** — its components, the AD curve, and
+each of the four components in its own topic.
+
+All 37 re-derived from the stem alone with **0 mismatches**; 11 arithmetic
+checks covering every figure and distractor.
+
+**Originality: zero shared 8-word runs against either past-paper corpus, and one
+collision against our own bank, fixed.** Edexcel 2.2.2 Q2 opened "In an economy
+the marginal propensity to save is 0.15…", which is AQA 2.2.4 Q8 word for word
+*and* uses the same MPS value. The two questions then diverge completely — ours
+asks for the MPC, AQA's is a multiplier calculation — but the opening and the
+number together were too close. Rebuilt around a household saving 0.2 of each
+extra pound.
+
+**Edexcel splitting AD into five topics is what made this batch possible.** AQA
+covers the same economics in one set of nine (2.2.3 Determinants of AD) plus
+parts of 2.2.2. Five separate Edexcel topics meant each component could be taken
+further than a single shared set can go — consumption alone supports eight
+questions on disposable income, the MPC, interest rates, confidence, wealth and
+income distribution. Where Edexcel does *not* subdivide further than AQA, as in
+unit 2.3, that structural room will not be there.
+
+**Angles Edexcel opens that AQA does not:**
+
+- **G excludes transfer payments**, stated explicitly on the Edexcel page. 2.2.1
+  Q2 turns on where £90bn of benefits and pensions actually lands in the AD
+  equation — not in G, but in C once recipients spend it.
+- **The three reasons the AD curve slopes down are named** — wealth, interest
+  rate and international trade effects. AQA asks the general question; the
+  Edexcel set can test one specific effect and use the other two as distractors,
+  which is a much better question.
+- **The relative shares** (C ~60%, I ~14%, G ~25%, net trade ~1%) support a
+  question about why a given percentage change in consumption matters far more
+  than the same change in net trade.
+- **Income distribution as a determinant of aggregate consumption** — that
+  redistributing towards lower earners raises consumption because their MPC is
+  higher. AQA has nothing on this, and it makes the best stretch item in the
+  batch.
+- **Animal spirits**, named on the Edexcel investment page. AQA does not use the
+  term.
+- **Gross against net investment with depreciation arithmetic.** AQA defines net
+  investment; Edexcel works the subtraction, so the calculation is free ground.
+- **Automatic stabilisers against discretionary policy as a contrast.** AQA has
+  automatic stabilisers as a definition; Edexcel's page frames the pair, so the
+  question can put both halves in one stem and ask which is which.
+
+**A second over-promising page found: `2-2-5-net-trade`.** Its spec alert names
+the **Marshall-Lerner condition** and the **J-curve**; neither term appears in
+the body. This one is a softer case than the others in N-Q9 — the body *does*
+describe the J-curve mechanism, in the note that a depreciation "may initially
+worsen the trade balance before improving it" — it simply never gives it a name.
+The question (2.2.5 Q4) tests the mechanism without using the label.
+
+| | |
+| --- | --- |
+| Answer letters | A 11, B 11, C 9, D 6 (even would be 9.25) |
+| Skills | applied-reasoning 24, calculation 5, definition-in-context 4, data-table 4 |
+| Difficulty | foundation 6, standard 26, stretch 5 |
+| Sketch to solve | 0 |
+
+**No sketch items again**, and for the same reason as unit 2.1: the AD curve is
+introduced here but the AD/AS diagram that makes sketching worthwhile arrives in
+unit 2.3. Expect the share to recover there — and note that AQA 2.2.2 and 2.2.6
+already use both obvious AS sketch items, so the Edexcel ones will need a
+different angle rather than a different diagram.
+
+**Five option sets needed lengthening** so the correct answer was not the
+longest — the highest count since batch 12, and all in the same direction: the
+correct option carried an explanatory clause the distractors lacked. Worth
+watching when a set is written quickly.
+
+---
 
 ### Batch 14 — Edexcel Theme 2, unit 2.1 (2026-08-01)
 
