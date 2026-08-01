@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.10",
+  "slug": "1-2-10-alternative-views-of-consumer-behaviour",
+  "title": "Alternative Views of Consumer Behaviour",
+  "shortTitle": "Alternative Views of Consumer Behaviour",
+  "pageTitle": "Behavioural Economics and Consumer Behaviour Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on alternative views of consumer behaviour for Edexcel A-Level Economics: herding, inertia, bounded rationality and nudges.",
+  "intro": "Seven original multiple-choice questions on alternative views of consumer behaviour, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on herding, habit and inertia, bounded rationality, and how nudges are used in policy.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-10-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A queue forms outside a newly opened restaurant. Passers-by join it because they assume the food must be good. This behaviour is best described as",
+      "options": {
+        "A": "Bounded rationality.",
+        "B": "Consumer inertia.",
+        "C": "Herding.",
+        "D": "Utility maximisation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Herding</strong> is following the crowd rather than making an independent judgement. The queue itself is being read as evidence about the food, so the decision is based on what other people are doing.<br />It is not necessarily foolish — other people's behaviour genuinely does carry some information. But it is systematically exploitable, which is why firms use social proof, celebrity endorsement and 'best seller' labels so heavily.",
+        "distractors": {
+          "A": "Bounded rationality is deciding under limits of information, time and mental effort. It describes why shortcuts get used; herding is the particular shortcut being used here.",
+          "B": "Consumer inertia is sticking with a familiar choice because switching takes effort. These passers-by are doing something new.",
+          "D": "Utility maximisation in the classical sense means weighing the options for yourself. Copying the queue is precisely what that model does not predict."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-10-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A household stays with the same energy supplier for eight years despite cheaper tariffs being available, because switching would take time and effort. This is best described as",
+      "options": {
+        "A": "Altruism towards the existing supplier.",
+        "B": "Herding behaviour copying other households.",
+        "C": "Inertia in the face of switching costs.",
+        "D": "Rational maximisation of household utility."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Consumer inertia</strong> is staying with a familiar choice out of convenience, even when a better alternative exists. The obstacle is not ignorance — the household knows cheaper tariffs are out there — but the effort of acting on it.<br />Firms rely on this. Automatic renewals, default tariffs and awkward cancellation processes all work by making the effort of leaving larger than the effort of staying, and they are effective precisely because the saving has to clear that hurdle before anyone moves.",
+        "distractors": {
+          "A": "Nothing suggests the household wants to benefit the supplier. The reason given is the effort involved in moving.",
+          "B": "No one else's behaviour is mentioned. This is about the household's own inertia, not about copying anyone.",
+          "D": "A utility-maximising household in the classical model would switch as soon as the saving exceeded the cost of switching. Eight years of paying more is what the model fails to predict."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-10-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A mobile phone company offers 14 tariffs, each bundling calls, data and handset costs in a different way. Judged by behavioural economics, the most likely purpose is to",
+      "options": {
+        "A": "Ensure every consumer finds the tariff that suits them.",
+        "B": "Make comparison hard, so fewer consumers switch away.",
+        "C": "Reduce the company's own administrative costs.",
+        "D": "Signal that the company has a wide product range."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Consumers have <strong>bounded rationality</strong>: limited time, limited information and limited appetite for arithmetic. Fourteen bundles that mix three different costs together push the comparison past the point at which most people will attempt it.<br />A consumer who cannot tell which deal is best cannot reliably move to it, so competitive pressure on the firm weakens. Deliberately complex pricing is one of the standard ways firms exploit the limits of rational decision-making, and it is why regulators push for simplified, comparable tariffs.",
+        "distractors": {
+          "A": "With this many overlapping bundles the effect is the opposite. Choice on this scale exceeds what most consumers will work through, so they choose badly or not at all.",
+          "C": "More tariffs mean more systems, more billing rules and more customer queries, so administrative costs rise rather than fall.",
+          "D": "A wide range can be a genuine signal, but bundling three separate costs into each option is what makes comparison hard — and that part benefits the firm, not the buyer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-10-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Employees at a firm are automatically enrolled in a workplace pension but may opt out at any time. Savings rates rise sharply. This policy is best described as",
+      "options": {
+        "A": "A ban on opting out of pension saving.",
+        "B": "A nudge that leaves the choice intact.",
+        "C": "A subsidy paid to pension savers.",
+        "D": "A tax on employees who do not save."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>nudge</strong> changes how a choice is presented without removing any option. Here the default is reversed: saving happens unless you actively stop it, rather than only if you actively start it.<br />Nothing has been made compulsory and nothing has been paid, yet behaviour changes substantially. That is because inertia works in whichever direction the default points, so setting a good default harnesses the same tendency that would otherwise keep people from saving at all.",
+        "distractors": {
+          "A": "Nobody is banned from anything — employees may opt out whenever they choose. Preserving that freedom is what makes it a nudge rather than a mandate.",
+          "C": "No payment is being made to savers. The only thing that has changed is which option happens by default.",
+          "D": "There is no penalty for opting out. Employees who leave the scheme are no worse off than before."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-10-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four consumer decisions.<br />Using Table 1, the decision that best illustrates the influence of social pressure is",
+      "table": {
+        "caption": "Table 1: Four consumer decisions",
+        "head": [
+          "",
+          "Decision"
+        ],
+        "rows": [
+          [
+            "Decision 1",
+            "Buying a brand because a celebrity endorses it"
+          ],
+          [
+            "Decision 2",
+            "Keeping a subscription because cancelling is a nuisance"
+          ],
+          [
+            "Decision 3",
+            "Taking the item at eye level without comparing shelves"
+          ],
+          [
+            "Decision 4",
+            "Buying the same coffee every morning out of routine"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Decision 1.",
+        "B": "Decision 2.",
+        "C": "Decision 3.",
+        "D": "Decision 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Social influence works through what other people think and do. A celebrity endorsement carries no information at all about how the product performs — it works on image, popularity and perceived status.<br />That makes Decision 1 the clearest case of <strong>social influence and herding</strong>. The other three are all departures from rationality too, but each has a different mechanism behind it, and telling them apart is what these questions test.",
+        "distractors": {
+          "B": "Keeping a subscription because cancelling is a nuisance is <strong>consumer inertia</strong>: the obstacle is the effort of switching, not other people's opinions.",
+          "C": "Taking the item at eye level without comparing shelves is <strong>bounded rationality</strong> exploited through product placement. The shopper is simplifying, not following a crowd.",
+          "D": "Buying the same coffee every morning out of routine is <strong>habit</strong>, a rule of thumb adopted to save time on a repeated decision."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-10-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Behavioural economists observe that many consumers do not respond to small changes in price. For the standard model of demand, the implication is that",
+      "options": {
+        "A": "Demand curves must slope upwards.",
+        "B": "Price has no effect on quantity demanded at all.",
+        "C": "Real demand is less predictable than assumed.",
+        "D": "The law of diminishing marginal utility is false."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The standard model assumes consumers notice price changes and re-optimise. Habit, inertia and bounded rationality mean many do not, so the quantity actually bought responds less reliably than the model implies.<br />This does not overturn demand theory — it qualifies it. Demand still slopes downwards and large price changes still move quantities. What weakens is the assumption that every small change produces a prompt, proportionate response, and that matters for any policy that works through price signals.",
+        "distractors": {
+          "A": "An upward-sloping demand curve would mean people buy more as price rises. Responding weakly is not the same as responding in reverse.",
+          "B": "The claim is that responses are weaker and less consistent than predicted, not that price is irrelevant. Large price changes still change behaviour.",
+          "D": "Diminishing marginal utility is untouched by this. It explains why the curve slopes down at all, not how sharply consumers react to a small move."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-10-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government wants many more households to insulate their homes. Behavioural evidence suggests that the single most effective change would be to",
+      "options": {
+        "A": "Ban the sale of homes below a set standard.",
+        "B": "Publish detailed research on the savings available.",
+        "C": "Reduce the price of insulation by a small amount.",
+        "D": "Set the grant as the default, letting people decline."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The barrier to insulation is rarely that households have done the sums and decided against it. It is that they never get round to doing the sums at all — <strong>inertia</strong> and <strong>bounded rationality</strong>, not price.<br />Changing the default attacks exactly that barrier. Households who would never have applied are enrolled unless they actively decline, and the same tendency that kept them from acting now keeps them in the scheme. This is the mechanism behind automatic pension enrolment, and it is far more effective than information or small price changes.",
+        "distractors": {
+          "A": "A ban does change behaviour, but it removes the choice rather than nudging it, and it reaches only homes that happen to be sold.",
+          "B": "More information helps consumers who were going to work through the figures. Bounded rationality means many will not, so the research goes unread.",
+          "C": "A small price cut assumes households were weighing the cost carefully at the margin. The evidence is that most were not weighing it at all."
+        }
+      }
+    }
+  ]
+}

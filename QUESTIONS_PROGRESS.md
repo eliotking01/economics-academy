@@ -5,8 +5,9 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 79 topics, 610 questions. AQA is complete — both Microeconomics and
-Macroeconomics. Only Edexcel remains.**
+**Live: 95 topics, 732 questions. AQA is complete — both Microeconomics and
+Macroeconomics. Edexcel Theme 1 units 1.1 and 1.2 are done; 71 Edexcel topics
+remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -239,6 +240,48 @@ Do **not** try to parse the PDFs with a stdlib script. Their content streams use
 subsetted fonts with custom encodings, so pulling the parenthesised strings out
 of the decompressed streams returns binary noise, not text.
 
+### 8. Cross-board duplication — the binding constraint on Edexcel
+
+**New in batch 12, and the single biggest risk for every remaining batch.** The
+past papers are no longer the main originality problem. **Our own AQA bank is.**
+610 AQA questions already exist, and most Edexcel topics cover economics that
+one of them already tests.
+
+Batch 12 was written from the Edexcel notes with no reference to the AQA sets,
+and it still produced **four questions that read as ports**, including one whose
+stem was word-for-word identical to an AQA stem with only the commodity changed.
+None of them was visible while drafting. All four were caught by shingling the
+new sets against `questions-data/` and comparing stems:
+
+```python
+# 8-grams over STEMS ONLY, new sets vs every AQA question
+aqa = {(spec, i): norm(q['stem']).split() for ...}   # skip edexcel dirs
+```
+
+Run this **as well as** the past-paper check, from now on. Notes on reading it:
+
+- **Shared option grids are fine and expected.** The four price/quantity
+  strings ("A higher price and a higher quantity", …) produce 19 shared
+  10-grams between any two questions that use them, and §1 above explicitly
+  tells you to standardise on that grid. Ignore option-only overlap.
+- **The elasticity stem template is fine.** "Measuring each percentage change
+  against its original value, the … elasticity of … is" appears in every
+  elasticity question on the site, on both boards. It is a precision
+  instruction the guide requires, and inventing a different phrasing per board
+  would make the site inconsistent for no gain.
+- **Shared runs inside the stem's own scenario are not fine.** That is the
+  signal. Filter the template and the option strings out first, then read what
+  is left by hand.
+
+The four fixed in batch 12, all rebuilt on new scenarios:
+
+| Ours | Collided with | What was shared |
+| --- | --- | --- |
+| 1.1.1 Q1 | AQA 1.1.1 Q3 | Identical second sentence; same answer; only the commodity differed |
+| 1.2.8 Q4 | AQA 1.5.11 Q5 | Identical opening sentence; same answer; near-identical correct option |
+| 1.2.3 Q9 | AQA 1.3.2 Q8 | Same question in substance — which PED maximises tax revenue |
+| 1.2.8 Q2 | AQA 1.5.11 Q3 | Same straight-line surplus template and the same £20 equilibrium price |
+
 ---
 
 ## Ratified content decisions
@@ -311,16 +354,24 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 87 topics, 662 questions planned
+### Edexcel — 71 topics, 540 questions still to write
 
-**This is all that is left.** AQA is finished.
+**This is all that is left.** AQA is finished, and Theme 1 is two-thirds done.
 
-| Theme | Topics | Questions |
-| --- | --- | --- |
-| Theme 1 | 22 | 157 |
-| Theme 2 | 24 | 185 |
-| Theme 3 | 20 | 157 |
-| Theme 4 | 21 | 163 |
+| Theme | Topics done | Topics left | Questions left |
+| --- | --- | --- | --- |
+| Theme 1 | 16 (units 1.1, 1.2) | 6 (units 1.3, 1.4) | ~35 |
+| Theme 2 | 0 | 24 | 185 |
+| Theme 3 | 0 | 20 | 157 |
+| Theme 4 | 0 | 21 | 163 |
+
+**Next batch: Theme 1 units 1.3 and 1.4** — 1.3.1 types of market failure, 1.3.2
+externalities, 1.3.3 public goods, 1.3.4 information gaps, 1.4.1 government
+intervention in markets, 1.4.2 government failure. That finishes Theme 1 and
+makes the Theme 1 board index complete. Note that `raw-notes/edexcel/1.3.*.md`
+and `1.4.*.md` exist, so those six can be read as markdown rather than scraped
+out of the HTML — units 1.1 and 1.2 had no raw notes and had to be extracted
+from the pages.
 
 Per-topic counts follow the same pattern: 10 for the densest calculable topics,
 5–6 for narrow definitional ones, 7–9 otherwise. Recompute from the notes page
@@ -338,9 +389,11 @@ if in doubt — the guide's rule is that concision beats coverage.
   are built.**
 - **Hub and board index density.** Both list only what is live. They fill out
   per batch; no action needed.
-- **Nav sub-menu.** Both AQA board indexes now exist, but the four Edexcel ones
-  do not, so the two-level dropdown still cannot be restored. See the fuller
-  note below; revisit once Edexcel Theme 1 is live.
+- **Nav sub-menu.** Three of the five board indexes now exist — both AQA ones and
+  `practice-questions/edexcel-theme-1/index.html` (live from batch 12). Themes 2,
+  3 and 4 do not, so the two-level dropdown still cannot be restored without
+  pointing at missing pages. Revisit once Theme 2 is live, or restore it early
+  listing only the boards that exist.
 - **Skill mix across AQA micro.** `applied-reasoning` finished at 64% against a
   ~40% target and `calculation` at 6% against ~15%. This is a property of the
   specification — units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual almost
@@ -691,6 +744,21 @@ scenarios and tables rather than stock stems, have produced zero hits.
 Fixed during verification: 5 options shortened for length. No letter-distribution
 failures and no answer-key changes.
 
+**Re-verified in full after the commit** (2026-08-01), including a second cold
+re-solve of all 43 — again 0 mismatches. The numeric option-set check, which the
+first pass did not record, turned up one 3-value overlap and it is a coincidence:
+2.6.2 Q2 (opportunity cost from a maximum-output table) has options
+`0.25 / 2 / 4 / 240 units of cloth`, against `A +0.25 B +2.0 C +4.0 D +7.5` in
+AQA June 2019 Paper 3 Q29 — **price elasticity of supply read off a diagram**.
+Different topic, different route, different units, and our fourth value shares
+nothing. This is the same real question that batch 8 adjudicated the same way;
+0.25 / 2 / 4 are simply the reciprocal pairs that any ratio question lands on.
+**Left as it is — do not rewrite it a third time round.**
+
+Also noted, not changed: 2.6.4 Q3 carries `"skill": "calculation"` but its only
+arithmetic is 0.4 + 0.5 against the Marshall-Lerner threshold. Defensible, since
+the condition is numeric, but it flatters the batch's calculation share by one.
+
 **A verification gotcha worth knowing about.** This batch ran on a different
 calendar day from the previous one, and the removed-line guard
 
@@ -720,6 +788,83 @@ the check that actually matters, and it stays clean.
 | Skills | applied-reasoning 26, definition-in-context 9, data-table 4, calculation 4 |
 | Difficulty | foundation 5, standard 33, stretch 5 |
 | Sketch to solve | 2 |
+
+### Batch 12 — Edexcel Theme 1, units 1.1 and 1.2 (2026-08-01)
+
+16 topics, 122 questions. **The first Edexcel batch**, and the first questions
+on the site written to Edexcel rather than AQA.
+
+All 122 re-derived from the stem alone with **0 mismatches**. Every figure
+recomputed independently, including all distractor values — 50 arithmetic
+checks, plus the internal consistency of the four schedules (the PPF table's
+sacrifices rise 4 / 8 / 12 / 16 for equal 30-thousand steps; the coffee schedule
+clears at exactly one price; the candle and snack-bar tables shift by a constant
+amount at every price).
+
+**Originality against the 40 Edexcel papers came back completely clean — zero
+shared runs at 8 words or more**, and no numeric option set shared three values
+with any of the 25 numeric option sets in the papers. The batch used scenarios
+and tables throughout and avoided stock stem openings, which is now the third
+batch running to return nothing (see batches 10 and 11).
+
+**Originality against our own AQA bank was a different story, and is the real
+finding of this batch.** Four questions read as ports and were rebuilt; see
+Recurring problems §8, which is the most important thing to read before the next
+Edexcel batch.
+
+Also fixed during verification: 3 options lengthened so the correct one was not
+the longest, and one stem/option grammar clash (1.2.8 Q7's stem ended "…social
+surplus is" while its options opened "Is unchanged", "Rises"). Worth checking
+mechanically — a stem ending in a verb plus an option starting with one is easy
+to introduce when options get reordered to fix the letter distribution. No
+letter-distribution failures and no answer-key changes.
+
+**Board fidelity.** Every set was written against its own Edexcel notes page.
+Points where that changed what could be asked:
+
+- Edexcel 1.1.5 teaches the **functions of money** and the double coincidence of
+  wants inside the specialisation topic, which AQA does not, so two questions
+  cover it.
+- Edexcel 1.2.3 covers PED, YED **and** XED in one topic, where AQA splits them.
+  That is why 1.2.3 carries 10 questions and three separate calculations.
+- Edexcel 1.2.10 uses the notes' own vocabulary — *herding*, *consumer inertia*,
+  *bounded rationality*, *nudges*. Anchoring and loss aversion were left out
+  because the notes do not teach them.
+- Where a notes page carries a worked example, the questions use different
+  figures throughout: the 1.2.3 latte, the 1.2.5 t-shirts, the 1.2.8 £14/50
+  surplus market and the 1.2.9 £2 tax all have fresh contexts and numbers.
+
+**The Edexcel notes for units 1.1 and 1.2 have no `raw-notes/` markdown** — only
+1.2.9, 1.2.10 and the 1.3/1.4 topics do. The 16 pages had to be read by
+extracting visible text from the HTML. A throwaway extractor that strips
+`<script>`, `<nav>` and tags while keeping headings, list items and table cells
+was enough, and is worth rebuilding rather than reading 240 KB of markup.
+
+| | |
+| --- | --- |
+| Answer letters | A 35, B 38, C 30, D 19 (even would be 30.5) |
+| Skills | applied-reasoning 68, definition-in-context 25, data-table 19, calculation 10 |
+| Difficulty | foundation 21, standard 85, stretch 16 |
+| Sketch to solve | 2 |
+
+**D is under-used at batch level** — 19 against an even 30.5. Every set passes
+the generator's per-set check (no letter more than 2 from even in its own set),
+which is the standard the guide sets, so nothing was changed. The cause is the
+one described in §1: alphabetical option order pushes correct answers to early
+letters, and correcting it set by set pushes them to B and C rather than to D.
+AQA micro finished the same way (D 79 against an even 100). If it is to be
+fixed, the fix is to order more option lists by domain sequence while drafting,
+not to reshuffle afterwards.
+
+`data-table` at 16% is the best of any batch so far, and `calculation` at 8%
+reflects units 1.1 and 1.2 being conceptual for the most part — the arithmetic
+lives in 1.2.3, 1.2.5, 1.2.8 and 1.2.9, which supplied 9 of the 10.
+
+**Only 2 sketch items**, against a ~10% target. Units 1.1 and 1.2 are where the
+diagrams are first taught rather than applied, and the notes carry the figures on
+the page, so most diagram questions would have been asking the student to
+redraw something they are looking at. Expect the share to recover in 1.3 and 1.4,
+where externality and intervention diagrams have to be constructed.
 
 ---
 

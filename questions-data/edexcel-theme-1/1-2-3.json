@@ -1,0 +1,260 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.3",
+  "slug": "1-2-3-price-income-cross-elasticities-of-demand",
+  "title": "Price, Income and Cross Elasticities of Demand",
+  "shortTitle": "Elasticities of Demand",
+  "pageTitle": "PED, YED and XED Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on elasticities of demand for Edexcel A-Level Economics: PED, YED and XED, their calculation and their significance.",
+  "intro": "Ten original multiple-choice questions on price, income and cross elasticities of demand, written to the style and difficulty of Edexcel Paper 1 Section A. Three are calculations.",
+  "notesTeaser": "Ten original multiple-choice questions on PED, YED and XED — calculating them, classifying them, and using them to predict revenue and tax receipts.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The price elasticity of demand for a good is −0.4. Demand for the good is",
+      "options": {
+        "A": "Perfectly inelastic.",
+        "B": "Relatively inelastic.",
+        "C": "Unitary elastic.",
+        "D": "Relatively elastic."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Classify on the <strong>magnitude</strong>, ignoring the minus sign. A magnitude of 0.4 lies between 0 and 1, so demand is <strong>relatively inelastic</strong>: quantity demanded changes proportionally less than price.<br />The minus sign is not optional and not a mistake — it reflects the inverse relationship between price and quantity demanded, and it will be there for any normal good. Show it in the working, then set it aside when classifying.",
+        "distractors": {
+          "A": "Perfectly inelastic means PED is exactly 0 — quantity does not respond to price at all. Here it does respond, just weakly.",
+          "C": "Unitary elasticity is a magnitude of exactly 1, where quantity changes in the same proportion as price.",
+          "D": "Relatively elastic needs a magnitude above 1. The common error is to argue that −0.4 is a 'smaller' number than −3 and therefore more elastic; classify on size regardless of sign."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cinema raises the price of an adult ticket from £8.00 to £9.00. Weekly admissions fall from 2,400 to 2,160. Measuring each percentage change against its original value, the price elasticity of demand is",
+      "options": {
+        "A": "−1.25",
+        "B": "−0.8",
+        "C": "+0.8",
+        "D": "+1.25"
+      },
+      "answer": "B",
+      "model": {
+        "working": "PED is the percentage change in quantity demanded divided by the percentage change in price.<br />Percentage change in admissions: (2,160 − 2,400) ÷ 2,400 × 100 = <strong>−10%</strong>.<br />Percentage change in price: (£9.00 − £8.00) ÷ £8.00 × 100 = <strong>+12.5%</strong>.<br />PED = −10 ÷ +12.5 = <strong>−0.8</strong>.<br />A magnitude of 0.8 is relatively inelastic, so the cinema's total revenue rises: from 2,400 × £8.00 = £19,200 to 2,160 × £9.00 = £19,440.",
+        "distractors": {
+          "A": "The formula has been inverted: 12.5 ÷ −10 rather than −10 ÷ 12.5. That measures how responsive price is to quantity, which is not what PED means. The percentage change in <strong>quantity</strong> always goes on top.",
+          "C": "The arithmetic is right but the sign has been dropped too early. Price rose and quantity fell, so the two percentage changes have opposite signs and PED must come out negative.",
+          "D": "Both errors together — the formula inverted and the minus sign discarded."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rail operator raises its fares by 10% and finds that its total revenue rises. It follows that demand for its services is",
+      "options": {
+        "A": "Perfectly inelastic.",
+        "B": "Price elastic.",
+        "C": "Price inelastic.",
+        "D": "Unitary elastic."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Revenue is price multiplied by quantity. Raising price by 10% raises revenue only if quantity falls by <em>less</em> than 10% in proportional terms — that is, if demand is <strong>price inelastic</strong>.<br />This is the practical use of PED for a firm. Raise price where demand is inelastic and lower it where demand is elastic. Rail commuting into a city is a standard inelastic case: there are few substitutes at the times people must travel.",
+        "distractors": {
+          "A": "Perfectly inelastic demand would leave quantity completely unchanged, so revenue would rise by the full 10%. That is a special case, and the stem only tells us revenue rose.",
+          "B": "With elastic demand, quantity falls proportionally more than price rises, so a fare increase would <em>reduce</em> revenue.",
+          "D": "With unitary elasticity the two proportional changes are equal and revenue is unchanged. Here it rose."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Average real incomes rise from £30,000 to £31,500. Over the same period, demand for restaurant meals rises from 40,000 to 46,000 a month. Measuring each percentage change against its original value, the income elasticity of demand for restaurant meals is",
+      "options": {
+        "A": "−3.0",
+        "B": "+0.33",
+        "C": "+3.0",
+        "D": "+15.0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "YED is the percentage change in quantity demanded divided by the percentage change in income.<br />Percentage change in income: (£31,500 − £30,000) ÷ £30,000 × 100 = <strong>+5%</strong>.<br />Percentage change in quantity: (46,000 − 40,000) ÷ 40,000 × 100 = <strong>+15%</strong>.<br />YED = +15 ÷ +5 = <strong>+3.0</strong>.<br />A positive value above 1 makes restaurant meals a <strong>normal luxury</strong>: demand rises more than proportionally with income. Firms selling them should expect a good boom and a bad recession.",
+        "distractors": {
+          "A": "A negative YED would make this an inferior good, whose demand falls as income rises. Both changes here are positive, so the answer must be positive.",
+          "B": "The formula has been inverted: 5 ÷ 15 rather than 15 ÷ 5. The percentage change in <strong>quantity</strong> is always the numerator.",
+          "D": "This is the percentage change in quantity on its own, reported as though it were the elasticity. It still has to be divided by the change in income."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A good has an income elasticity of demand of +0.3. The good is best described as",
+      "options": {
+        "A": "A normal luxury.",
+        "B": "A normal necessity.",
+        "C": "An inferior good.",
+        "D": "A substitute good."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The sign tells you normal or inferior; the magnitude tells you luxury or necessity.<br />A <strong>positive</strong> YED means demand rises with income, so the good is normal. A magnitude <strong>below 1</strong> means it rises less than proportionally, so it is a <strong>necessity</strong>. Food and basic clothing behave this way: people buy somewhat more as they get richer, but not much more.",
+        "distractors": {
+          "A": "A normal luxury needs a YED above 1, so that demand rises more than proportionally with income.",
+          "C": "An inferior good has a <em>negative</em> YED. This one is positive.",
+          "D": "Substitutes and complements are categories of <strong>cross</strong> elasticity, which measures the response to another good's price. YED says nothing about relationships between goods."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A city raises the price of an all-day bus pass from £4.00 to £5.00. Over the following month the number of tram journeys rises from 8,000 to 9,200 a day. Measuring each percentage change against its original value, the cross elasticity of demand for tram journeys with respect to the bus fare is",
+      "options": {
+        "A": "−1.67",
+        "B": "−0.6",
+        "C": "+0.6",
+        "D": "+1.67"
+      },
+      "answer": "C",
+      "model": {
+        "working": "XED is the percentage change in quantity demanded of one good divided by the percentage change in the price of another.<br />Percentage change in the bus fare: (£5.00 − £4.00) ÷ £4.00 × 100 = <strong>+25%</strong>.<br />Percentage change in tram journeys: (9,200 − 8,000) ÷ 8,000 × 100 = <strong>+15%</strong>.<br />XED = +15 ÷ +25 = <strong>+0.6</strong>.<br />The positive sign is the useful part: buses and trams are <strong>substitutes</strong>, which is what you would expect when one becomes dearer. A magnitude below 1 says the substitution is real but not strong — a 25% fare rise moved tram use by only 15%.",
+        "distractors": {
+          "A": "Both errors at once — the formula inverted to give 25 ÷ 15, and a minus sign attached on top of that.",
+          "B": "The arithmetic is right but the sign is wrong. A negative XED means the goods are <strong>complements</strong>. Here both percentage changes are positive, so the answer must be positive.",
+          "D": "The formula has been inverted: 25 ÷ 15 rather than 15 ÷ 25. The percentage change in the <strong>quantity of the other good</strong> always goes on top."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 gives cross elasticity of demand estimates for four pairs of goods.<br />Using Table 1, the pair that are the strongest complements is",
+      "table": {
+        "caption": "Table 1: Cross elasticity of demand estimates",
+        "head": [
+          "",
+          "XED"
+        ],
+        "rows": [
+          [
+            "Pair 1",
+            "+1.8"
+          ],
+          [
+            "Pair 2",
+            "+0.2"
+          ],
+          [
+            "Pair 3",
+            "−0.1"
+          ],
+          [
+            "Pair 4",
+            "−2.4"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Pair 1.",
+        "B": "Pair 2.",
+        "C": "Pair 3.",
+        "D": "Pair 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Complements have a <strong>negative</strong> XED: a rise in the price of one reduces demand for the other, because they are consumed together.<br />Two pairs qualify, and the strength of the relationship is given by the magnitude. Pair 3 is −0.1, barely related; Pair 4 is <strong>−2.4</strong>, much the strongest. Printers and ink, or consoles and games, behave like Pair 4.",
+        "distractors": {
+          "A": "+1.8 is positive, so these are substitutes — and strong ones. The sign is what separates substitutes from complements.",
+          "B": "+0.2 is also positive, so substitutes again, though only weakly related.",
+          "C": "−0.1 is negative, so these are complements, but the link is very weak. The question asks for the strongest."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two goods are alike in every respect except that one has many close substitutes and the other has none. Compared with the good that has none, demand for the good with many substitutes is",
+      "options": {
+        "A": "More price elastic.",
+        "B": "More price inelastic.",
+        "C": "Perfectly inelastic.",
+        "D": "Unaffected by substitutes."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The number and closeness of <strong>substitutes</strong> is the single most important determinant of PED. If a good's price rises and buyers can switch easily, quantity demanded falls a long way.<br />With no substitutes there is nowhere to go, so quantity holds up and demand is inelastic. This is why a specific brand almost always has more elastic demand than the product category it belongs to: you can switch brand far more easily than you can stop buying bread.",
+        "distractors": {
+          "B": "This inverts the relationship. More substitutes make it easier to switch away, so demand becomes more responsive, not less.",
+          "C": "Perfectly inelastic means quantity does not respond to price at all. The good with <em>no</em> substitutes is the one closer to that extreme.",
+          "D": "Substitutes are the main influence on PED, so demand is certainly affected by them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A Chancellor must choose between placing a new indirect tax on a good with a PED of −0.2 and one with a PED of −2.5, and wants the larger revenue. The better choice, and the reason for it, is",
+      "options": {
+        "A": "The good with PED −0.2, because quantity barely falls.",
+        "B": "The good with PED −0.2, because it has more substitutes.",
+        "C": "The good with PED −2.5, because quantity falls sharply.",
+        "D": "The good with PED −2.5, because buyers can switch away."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Revenue depends on how much of the good is still bought once the price has risen, so the tax base needs to survive the tax.<br />A magnitude of 0.2 is <strong>relatively inelastic</strong>: a price rise cuts quantity by proportionally very little, so almost all of the original sales remain to be taxed. A magnitude of 2.5 is <strong>relatively elastic</strong>, and quantity would collapse, taking the revenue with it.<br />This is why tobacco, alcohol and fuel carry such heavy duties — and it is also the tension in the policy, since the goods that raise the most money are the ones where the tax does least to change behaviour.",
+        "distractors": {
+          "B": "The right good, but the reason contradicts the figure. A PED of −0.2 means demand is <em>un</em>responsive, which is what happens when a good has <strong>few</strong> substitutes, not many.",
+          "C": "A sharp fall in quantity shrinks the tax base, so this raises less. It is the good to choose if the aim is to cut consumption, which is a different objective.",
+          "D": "The reasoning about behaviour is correct — buyers can switch away from an elastic good — but that is exactly why it is the wrong good to tax for revenue."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-3-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A large rise in domestic gas prices causes only a small fall in the quantity demanded in the first year, but a much larger fall over the following five years. The best explanation is that over time",
+      "options": {
+        "A": "Consumers find substitutes and adjust their habits.",
+        "B": "Gas becomes a luxury rather than a necessity.",
+        "C": "The income elasticity of demand for gas turns negative.",
+        "D": "The price elasticity of supply of gas increases."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Time</strong> is a determinant of PED. In the first year households are locked in: the boiler is installed, the house is as insulated as it is, and there is little to do but pay.<br />Given five years they can insulate, replace the boiler with a heat pump, or move to a better-insulated home. Each of those makes demand more responsive, so the same price rise produces a much larger fall in quantity. Demand is therefore <strong>more elastic in the long run</strong> than in the short run.",
+        "distractors": {
+          "B": "Nothing about the good has changed. What has changed is consumers' ability to respond, which is a determinant of PED rather than a reclassification of the good.",
+          "C": "YED describes the response to a change in <em>income</em>, and income is not what changed. The stem describes a price rise.",
+          "D": "PES describes how producers respond to price. The stem is entirely about what quantity <em>demanded</em> does, which is PED."
+        }
+      }
+    }
+  ]
+}

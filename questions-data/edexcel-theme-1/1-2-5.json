@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.5",
+  "slug": "1-2-5-price-elasticity-of-supply",
+  "title": "Price Elasticity of Supply",
+  "shortTitle": "Price Elasticity of Supply",
+  "pageTitle": "Price Elasticity of Supply Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on price elasticity of supply for Edexcel A-Level Economics: calculating PES, its determinants and short run versus long run.",
+  "intro": "Eight original multiple-choice questions on price elasticity of supply, written to the style and difficulty of Edexcel Paper 1 Section A. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on calculating and interpreting PES, its determinants, and why supply is more elastic in the long run.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-5-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The market price of a garden bench rises from £20 to £22. A manufacturer's monthly output rises from 400 benches to 500. Measuring each percentage change against its original value, the price elasticity of supply is",
+      "options": {
+        "A": "0.4",
+        "B": "2.0",
+        "C": "2.5",
+        "D": "25.0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "PES is the percentage change in quantity supplied divided by the percentage change in price.<br />Percentage change in price: (£22 − £20) ÷ £20 × 100 = <strong>+10%</strong>.<br />Percentage change in output: (500 − 400) ÷ 400 × 100 = <strong>+25%</strong>.<br />PES = 25 ÷ 10 = <strong>2.5</strong>.<br />A value above 1 means supply is <strong>relatively elastic</strong>: output responded proportionally more than price. That is typical of a manufactured good, where production can be scaled up with existing machinery and materials.",
+        "distractors": {
+          "A": "The formula has been inverted: 10 ÷ 25 rather than 25 ÷ 10. The percentage change in <strong>quantity</strong> is always the numerator.",
+          "B": "The quantity change has been measured against the new output: 100 ÷ 500 = 20%, giving 20 ÷ 10 = 2.0. Percentage changes are measured against the <strong>original</strong> value, so the denominator should be 400.",
+          "D": "This is the percentage change in quantity on its own. It still has to be divided by the percentage change in price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The price elasticity of supply of a good is 0.3. Supply of the good is",
+      "options": {
+        "A": "Perfectly inelastic.",
+        "B": "Relatively inelastic.",
+        "C": "Relatively elastic.",
+        "D": "Perfectly elastic."
+      },
+      "answer": "B",
+      "model": {
+        "working": "PES is positive for a normal supply curve, so the classification rests entirely on the magnitude.<br />A value between 0 and 1 means quantity supplied changes proportionally <em>less</em> than price: supply is <strong>relatively inelastic</strong>. Agricultural products and goods with long or complex production processes typically sit here, because producers cannot raise output quickly however attractive the price becomes.",
+        "distractors": {
+          "A": "Perfectly inelastic means PES is exactly 0 and the supply curve is vertical — output cannot change at all. Here it does change, weakly.",
+          "C": "Relatively elastic needs a value above 1, where quantity responds proportionally more than price.",
+          "D": "Perfectly elastic supply is the horizontal case: unlimited quantity at one price, and nothing at any lower price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two factories face the same price rise. One is running at full capacity; the other has a third of its machines standing idle. Compared with the factory with idle machines, supply from the factory at full capacity is",
+      "options": {
+        "A": "More price elastic.",
+        "B": "More price inelastic.",
+        "C": "Perfectly elastic.",
+        "D": "Unaffected by the price rise."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Spare capacity</strong> is one of the main determinants of PES. A factory with idle machines can raise output quickly and cheaply, so its supply responds strongly to a price rise.<br />A factory already at full capacity has no such room. Producing more would mean new machinery or a new site, neither of which happens quickly. Its supply is therefore <strong>more inelastic</strong> — the same price signal produces a much smaller response.",
+        "distractors": {
+          "A": "This reverses the comparison. Spare capacity is what makes supply responsive, and the full-capacity factory is the one without it.",
+          "C": "Perfectly elastic supply means unlimited output at the going price. A factory at full capacity is at the opposite extreme.",
+          "D": "Its supply is still affected — the point is that the response is small, not that there is none. It could still work overtime or run down stocks."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A vineyard takes four years before newly planted vines bear fruit. Following a permanent rise in the price of wine, supply from the vineyard is most likely to be",
+      "options": {
+        "A": "Elastic in the short run and inelastic in the long run.",
+        "B": "Elastic in both the short run and the long run.",
+        "C": "Inelastic in the short run and elastic in the long run.",
+        "D": "Inelastic in both the short run and the long run."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Time</strong> is the main determinant of PES. In the short run at least one factor is fixed — here, the vines already in the ground. Whatever the price does, this year's crop is broadly what it is, so supply is <strong>inelastic</strong>.<br />In the long run every factor is variable. Four years is long enough to plant new vines, buy more land and hire more staff, so output can rise substantially and supply becomes <strong>elastic</strong>. Note that the price change is identical in both periods; only the time to respond differs.",
+        "distractors": {
+          "A": "This reverses the two. The short run is the constrained period, because the fixed factors cannot be changed within it.",
+          "B": "Supply cannot be elastic in the short run when the vines take four years to fruit. That delay is exactly what makes the short-run response small.",
+          "D": "Given four years the vineyard can plant, expand and hire. The long-run constraint that would keep supply inelastic is not there."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four goods.<br />Using Table 1, the good whose supply is closest to perfectly inelastic is",
+      "table": {
+        "caption": "Table 1: Four goods",
+        "head": [
+          "",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Good 1",
+            "Seats at a concert hall on a given night"
+          ],
+          [
+            "Good 2",
+            "Mass-produced plastic storage boxes"
+          ],
+          [
+            "Good 3",
+            "Fresh strawberries during the growing season"
+          ],
+          [
+            "Good 4",
+            "Hardwood from trees planted 40 years ago"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Good 1.",
+        "B": "Good 2.",
+        "C": "Good 3.",
+        "D": "Good 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Perfectly inelastic supply means quantity cannot change at all, whatever the price — a vertical supply curve, PES = 0.<br />The number of seats in a concert hall on a given night is fixed by the building. No price, however high, produces a 501st seat in a 500-seat hall for tonight's performance. That is as close to PES = 0 as a real market gets.",
+        "distractors": {
+          "B": "Mass-produced plastic goods have highly <em>elastic</em> supply. Output can be raised quickly and cheaply on existing machinery.",
+          "C": "Strawberry supply within a season is inelastic, but not fixed. Growers can pick more intensively, harvest for longer, or bring in extra labour.",
+          "D": "Hardwood supply is very inelastic across decades, but standing timber can still be felled sooner or later in response to price. The concert hall's capacity for one night cannot be varied at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A wholesaler holds large stocks of tinned food in a warehouse. Compared with a supplier of fresh fish, which cannot be stored, the wholesaler's supply is",
+      "options": {
+        "A": "Less able to respond to a price rise.",
+        "B": "Perfectly inelastic at every price level.",
+        "C": "Unrelated to the price of tinned food.",
+        "D": "Well able to respond to a price rise."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>ease of storing stocks</strong> is a determinant of PES. A wholesaler sitting on a warehouse of tins can release them the moment the price rises, without producing anything new.<br />Fresh fish cannot be held back: it is caught and sold, and today's catch is today's supply. The wholesaler's supply is therefore considerably <strong>more elastic</strong>, because the stock acts as a buffer that converts a price signal into extra quantity almost immediately.",
+        "distractors": {
+          "A": "This reverses it. Stocks are what make a supplier <em>able</em> to respond quickly; without them the response has to wait on production.",
+          "B": "Perfectly inelastic means no response at all. Releasing stock is a response, and a fast one.",
+          "C": "Supply always responds to price where it can. The stock is precisely what makes the response possible here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm can switch its machinery and its workforce between producing garden chairs and garden tables at short notice. This makes supply of each product",
+      "options": {
+        "A": "More price elastic than it would otherwise be.",
+        "B": "More price inelastic than it would otherwise be.",
+        "C": "Perfectly inelastic in the short run.",
+        "D": "Independent of the price of the other product."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>mobility of factors of production</strong> is a determinant of PES. Where labour and capital can be moved between uses easily, output of whichever good has become more valuable can be raised quickly.<br />If chair prices rise, this firm shifts machines and staff onto chairs the same week. That responsiveness is what an elastic supply curve describes. A firm with specialised, single-purpose equipment would have no such option, and its supply would be far more inelastic.",
+        "distractors": {
+          "B": "Mobility increases responsiveness. Immobile factors, tied to one use, are what make supply inelastic.",
+          "C": "Being able to switch at short notice is the opposite of a fixed short-run output.",
+          "D": "The two products compete for the same machines and staff, so the price of one directly affects how much of the other is supplied."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Demand for a crop rises sharply and unexpectedly. Supply of the crop is highly price inelastic in the short run. The most likely short-run outcome is",
+      "options": {
+        "A": "A large rise in price and a small rise in quantity.",
+        "B": "A large rise in quantity and a small rise in price.",
+        "C": "A small rise in price and no change in quantity.",
+        "D": "No change in price and a large rise in quantity."
+      },
+      "answer": "A",
+      "model": {
+        "working": "When demand shifts right, the new equilibrium is found by moving up the existing supply curve. How the adjustment splits between price and quantity depends on how steep that curve is.<br />Inelastic supply means a <strong>steep</strong> curve: quantity barely responds, so almost the whole adjustment has to come through <strong>price</strong>. Growers cannot conjure an extra harvest, so price does the rationing instead. This is why agricultural prices are so volatile — inelastic supply meeting variable demand.",
+        "distractors": {
+          "B": "That is what happens when supply is <em>elastic</em>. Producers meet the extra demand from spare capacity and price barely moves.",
+          "C": "Inelastic supply produces a <em>large</em> price rise, not a small one, precisely because price is doing nearly all the work.",
+          "D": "Quantity is the variable that cannot respond in the short run. Price must rise to ration the limited crop among more buyers."
+        }
+      }
+    }
+  ]
+}
