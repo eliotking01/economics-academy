@@ -11,8 +11,8 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 
 | Phase | State |
 | --- | --- |
-| Phase 0 — reconnaissance | Complete — `RECON.md` |
-| Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
+| Phase 0 — reconnaissance | Complete — plan retired, see `PROJECT-LOG.md` |
+| Phase 1A — mechanical plan | Complete — plan retired, see `PROJECT-LOG.md` |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
@@ -81,7 +81,7 @@ record.
 
 One of the two numbers is wrong. This page's `spec-alert` requires students to
 "calculate and interpret concentration ratios", so it is the sentence they will
-read most closely. Found while preparing `PLAN-enrichment-aqa-micro.md`; the worked
+read most closely. Found while preparing the AQA micro enrichment batch; the worked
 example proposed there sits directly beneath this sentence, which would make the
 inconsistency more conspicuous, so it is worth fixing first.
 
@@ -210,7 +210,7 @@ because attributes that had been split now fit on one line.
 (`<strong>` + `key-definition`) density. **16 needed work; 9 did not** and were
 left alone. The metric over-flags pages whose content sits in long explanatory
 text after an already-bolded lead-in, or inside a correctly-emphasised table — this
-was anticipated in `PLAN-mechanical.md`, though the estimate there was 15–20 of 25
+was anticipated in the mechanical plan, though the estimate there was 15–20 of 25
 and the AQA half came in lower.
 
 Three patterns applied, each with an existing on-site precedent:

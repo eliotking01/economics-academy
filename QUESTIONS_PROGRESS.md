@@ -1672,9 +1672,9 @@ question count predicted neither.**
 | --- | --- |
 | Topics | 166 of 166 |
 | Questions | **1,267**, against ~1,272 planned |
-| Answer letters | A 320, B 358, C 332, D 258 (even would be 317) |
-| Skills | applied-reasoning 791 (62%), definition-in-context 247 (19%), data-table 127 (10%), calculation 103 (8%) |
-| Difficulty | foundation 155 (12%), standard 951 (75%), stretch 162 (13%) |
+| Answer letters | A 320, B 358, C 331, D 258 (even would be 316.75) |
+| Skills | applied-reasoning 790 (62%), definition-in-context 247 (19%), data-table 127 (10%), calculation 103 (8%) |
+| Difficulty | foundation 155 (12%), standard 950 (75%), stretch 162 (13%) |
 | Sketch to solve | 38 (3%) |
 
 | Board / theme | Topics | Questions |

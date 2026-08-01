@@ -4,7 +4,8 @@ Every piece of newly written content added by the notes consistency &
 enrichment pass, so it can be reviewed in situ. Nothing here is existing
 economics wording; it is all new prose written for this pass.
 
-Branch: `notes-consistency-pass`. Plan: `PLAN-enrichment-aqa-micro.md` (batch 1).
+Branch: `notes-consistency-pass`. The batch plans this was built from are
+retired; see `PROJECT-LOG.md`.
 
 ## Batch 1 — AQA Microeconomics
 
