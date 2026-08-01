@@ -1,0 +1,270 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.3.4",
+  "slug": "3-3-4-normal-profits-supernormal-profits-losses",
+  "title": "Normal Profits, Supernormal Profits and Losses",
+  "shortTitle": "Profits and Losses",
+  "pageTitle": "Normal and Supernormal Profit Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on profit for Edexcel A-Level Economics: normal and supernormal profit, losses, and the short-run and long-run shut-down rules.",
+  "intro": "Ten original multiple-choice questions on normal profit, supernormal profit and losses, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Ten original multiple-choice questions on normal and supernormal profit, economic against accounting profit, and the short-run and long-run shut-down rules.",
+  "questions": [
+    {
+      "id": "edexcel-3-3-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm earning only normal profit is described as being at its break-even point. The condition that defines that point is",
+      "options": {
+        "A": "AR = AC",
+        "B": "AR = AVC",
+        "C": "MC = AC",
+        "D": "MC = MR"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Normal profit is the minimum return needed to keep the entrepreneur in this industry, and because it is an <strong>opportunity cost</strong> it is counted inside the firm's costs rather than on top of them. A firm covering its costs exactly — total revenue equal to total cost, or per unit, average revenue equal to average cost — is therefore earning precisely normal profit and nothing more. That is the break-even point. Its accounts would still show a positive figure; in economic terms it is making nothing extra.",
+        "distractors": {
+          "B": "AR = AVC is the <strong>short-run shut-down</strong> condition, the point below which a firm should stop producing at once. A firm there is losing its entire fixed cost.",
+          "C": "MC = AC identifies the minimum point of the average cost curve. It is about costs alone and says nothing at all about revenue.",
+          "D": "MC = MR is the profit-maximising rule. It tells a firm which output to choose, not whether that output is profitable."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm sells 500 units a week at £14 each. Its variable costs are £6,000 a week and its fixed costs are £2,500 a week. In the short run it should",
+      "options": {
+        "A": "Shut down, since price is below average total cost.",
+        "B": "Shut down, since the firm is making a loss.",
+        "C": "Keep producing, since the firm is making a profit.",
+        "D": "Keep producing, since price covers variable cost."
+      },
+      "answer": "D",
+      "model": {
+        "working": "In the short run the £2,500 of fixed costs is paid whether the firm produces or not, so the only question is whether producing makes the loss smaller.<br />Average variable cost: £6,000 ÷ 500 = <strong>£12.00</strong>.<br />Price (AR): <strong>£14.00</strong>.<br />Since AR &gt; AVC, every unit sold covers its own variable cost and contributes £2 towards the fixed costs — £1,000 in all. The firm's loss is £7,000 − £8,500 = <strong>£1,500</strong>, against the £2,500 it would lose by shutting down. So it keeps going, even though it is losing money.",
+        "distractors": {
+          "A": "Price is indeed below average total cost, which is £8,500 ÷ 500 = £17, and that is why the firm is losing money. But average total cost is the <em>long-run</em> test; in the short run the fixed costs are already sunk.",
+          "B": "Making a loss is not by itself a reason to shut down in the short run. Shutting down here would produce a larger loss, not a smaller one.",
+          "C": "The firm is not making a profit — total cost is £8,500 against revenue of £7,000. Continuing is still right, but the reason is that the loss is smaller than the alternative."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the short run a loss-making firm compares its price with average variable cost rather than with average total cost. The reason is that in the short run",
+      "options": {
+        "A": "Average total cost cannot be calculated.",
+        "B": "Fixed costs are paid whatever it produces.",
+        "C": "Variable costs are larger than fixed costs.",
+        "D": "Variable costs do not change with output."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The decision is about which of two outcomes is less bad. Shut down, and the firm still pays its fixed costs while earning nothing — so it loses exactly its total fixed cost. Keep producing, and it loses that too, but anything revenue brings in beyond variable cost is a <strong>contribution</strong> towards those fixed costs, making the loss smaller. So the only thing that matters is whether price covers average variable cost. Average total cost includes the fixed element that will be paid either way, which is exactly why it is the wrong test here.",
+        "distractors": {
+          "A": "Average total cost is perfectly easy to calculate. It is simply not the relevant comparison while the fixed costs are sunk.",
+          "C": "Which of the two is larger varies from firm to firm and makes no difference to the rule.",
+          "D": "Variable costs change with output by definition — that is what makes them variable."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm has covered its variable costs but not its total costs for several years, and its lease is now due to expire. Applying the long-run rule, it should",
+      "options": {
+        "A": "Continue, since it covers its variable costs.",
+        "B": "Continue, since it is earning normal profit.",
+        "C": "Exit the industry, since AR is below AC.",
+        "D": "Exit the industry, since it has no fixed costs."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The short-run rule keeps a firm going while price covers average variable cost, because the fixed costs are being paid regardless. Once the commitment ends — the lease expires, the machinery is written off — <strong>all costs become variable</strong>, and there is nothing left that would be paid whatever the firm does. The comparison is then simply price against average cost. AR below AC means the entrepreneur is earning less than their resources would earn elsewhere, so those resources should move.",
+        "distractors": {
+          "A": "Covering variable costs is the short-run test, and it is precisely the test that stops applying once the fixed commitments come to an end.",
+          "B": "A firm earning normal profit has AR = AC. This one has AR below AC, so it is earning less than normal profit.",
+          "D": "It is true that there are no fixed costs in the long run, but that is why the variable-cost test no longer applies. It is not itself the reason to leave — the reason is that revenue does not cover cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An accountant reports a firm's profit for the year as £62,000. Its owner gave up a salaried job paying £45,000 to run it, and could have earned £9,000 in interest on the capital invested. Once the opportunity costs are taken into account, the firm made",
+      "options": {
+        "A": "A loss of £8,000.",
+        "B": "Supernormal profit of £8,000.",
+        "C": "Supernormal profit of £17,000.",
+        "D": "Supernormal profit of £62,000."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Economists count the <strong>opportunity cost</strong> of the resources the owner supplies, which an accountant does not. There are two here.<br />Salary forgone: <strong>£45,000</strong>.<br />Interest forgone on the capital: <strong>£9,000</strong>.<br />Together those are £54,000 — the normal profit, the minimum return needed to keep this owner and this capital in this business.<br />Economic profit = £62,000 − £54,000 = <strong>£8,000</strong> of supernormal profit.<br />The firm is genuinely doing better than the owner's alternatives, but by £8,000, not by £62,000.",
+        "distractors": {
+          "A": "The sign is the wrong way round. £62,000 exceeds the £54,000 of opportunity cost, so the firm is ahead of the alternatives, not behind them.",
+          "C": "£17,000 subtracts the forgone salary but not the forgone interest. Capital has an opportunity cost as well as labour.",
+          "D": "£62,000 is the accounting profit, which counts none of the opportunity costs at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the price and the unit costs facing four firms.<br />From Table 1, the only firm that should shut down immediately is",
+      "table": {
+        "caption": "Table 1: Price and unit costs at four firms",
+        "head": [
+          "",
+          "Price",
+          "AVC",
+          "AC"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "£20",
+            "£14",
+            "£18"
+          ],
+          [
+            "Firm 2",
+            "£20",
+            "£16",
+            "£23"
+          ],
+          [
+            "Firm 3",
+            "£20",
+            "£22",
+            "£26"
+          ],
+          [
+            "Firm 4",
+            "£20",
+            "£11",
+            "£24"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The short-run shut-down rule compares price with <strong>average variable cost</strong>, not with average cost. Firm 3 is the only one where price is below AVC: at £20 a unit against £22 of variable cost, every unit it makes deepens the loss. It should stop at once and lose only its fixed costs.",
+        "distractors": {
+          "A": "Firm 1's price of £20 is above its average cost of £18, so it is making supernormal profit.",
+          "B": "Firm 2 is making a loss, since £20 is below its £23 average cost — but £20 covers its £16 average variable cost with £4 left over towards fixed costs, so it should keep producing in the short run.",
+          "D": "The tempting answer, since Firm 4 has the largest loss of the four at £4 a unit. But its price covers its £11 average variable cost with £9 to spare, so producing leaves it far better off than shutting down."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "On a firm diagram, supernormal profit is shown by the area between",
+      "options": {
+        "A": "AC and AVC, up to the profit-maximising output.",
+        "B": "AR and AC, up to the profit-maximising output.",
+        "C": "MC and MR, up to the profit-maximising output.",
+        "D": "MR and AR, up to the profit-maximising output."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit per unit is revenue per unit minus cost per unit — average revenue minus average cost. Multiply that by the number of units and you have total supernormal profit: the rectangle between the AR and AC curves, running from the origin out to the profit-maximising output. Because normal profit already sits inside AC, everything in that rectangle is profit <em>over and above</em> what is needed to keep the firm in the industry. Where AR lies below AC, the same rectangle measures the loss instead.",
+        "distractors": {
+          "A": "The gap between AC and AVC is average <em>fixed</em> cost. It says nothing about profit.",
+          "C": "MC and MR determine which output the firm chooses. The area between them is not a sum of money the firm keeps.",
+          "D": "For a firm with market power the gap between AR and MR reflects the price cut needed to sell an extra unit, not profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's fixed costs double overnight because its landlord raises the rent. Its price and its variable costs are unchanged. In the short run the firm should",
+      "options": {
+        "A": "Continue at the same output, since AR still covers AVC.",
+        "B": "Cut its output, since its average cost has risen.",
+        "C": "Raise its price, to cover the higher rent.",
+        "D": "Shut down, since its average cost now exceeds its price."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A change in fixed costs does not touch marginal cost, and it does not touch average variable cost either. The profit-maximising output is set where MC = MR, so it does not move — and the short-run shut-down test compares price with AVC, which has not moved either. The firm is worse off by the whole of the rent increase, but there is nothing it can do about that in the short run by changing what it produces. In the long run, if the higher rent means AR no longer covers AC, it should leave.",
+        "distractors": {
+          "B": "A higher fixed cost raises average cost at every output but leaves marginal cost untouched, so the output at which MC = MR is exactly where it was.",
+          "C": "What a firm can charge is set by demand, not by what its costs happen to be. It was already charging the profit-maximising price.",
+          "D": "Average cost exceeding price means a loss, which is not a reason to shut down in the short run. That test uses average <em>variable</em> cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm's price covers its average variable cost but not its average cost. It has no fixed commitments beyond the current year. The correct decision is to",
+      "options": {
+        "A": "Continue indefinitely, since variable costs are covered.",
+        "B": "Leave immediately, since it is making a loss.",
+        "C": "Raise output until average cost falls below price.",
+        "D": "Run out the year and then leave the industry."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The two rules point in opposite directions here, and each is right about its own horizon. In the <strong>short run</strong> this year's fixed costs are already committed, and price covers average variable cost, so producing leaves a smaller loss than shutting down would — the firm should keep going. In the <strong>long run</strong> all costs become variable, and price below average cost means the owner is earning less than their next-best alternative, so the resources should move elsewhere. Putting the two together: run out the year, then leave.",
+        "distractors": {
+          "A": "Continuing indefinitely ignores the long-run test. Covering variable costs is enough only while the fixed costs are sunk, and here they stop being sunk at the end of the year.",
+          "B": "Leaving at once throws away the contribution the firm is currently making towards fixed costs it has already committed to, which makes this year's loss larger than it needs to be.",
+          "C": "Raising output does not reliably lower average cost, and if the firm is already producing where MC = MR then producing more reduces its profit further."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-4-q10",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm sells 400 units a week at £9 each. Its variable costs are £2,800 a week and its fixed costs are £1,600 a week. Compared with shutting down, producing leaves the firm better off by",
+      "options": {
+        "A": "£800",
+        "B": "£1,600",
+        "C": "£2,800",
+        "D": "£3,600"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Compare the two outcomes directly.<br />Shut down: it produces nothing, earns nothing, and still pays the £1,600 of fixed costs. Loss = <strong>£1,600</strong>.<br />Produce: revenue is 400 × £9 = £3,600, and total cost is £2,800 + £1,600 = £4,400. Loss = <strong>£800</strong>.<br />Producing therefore leaves it £1,600 − £800 = <strong>£800</strong> better off.<br />That £800 is the <strong>contribution</strong>: revenue minus variable cost, £3,600 − £2,800. Per unit it is £9 − £7 = £2, and 400 × £2 = £800. Whenever price exceeds average variable cost, producing beats shutting down by exactly the contribution.",
+        "distractors": {
+          "B": "£1,600 is the loss the firm would make by shutting down, not the improvement that producing brings.",
+          "C": "£2,800 is total variable cost.",
+          "D": "£3,600 is total revenue, which takes no account of any of the costs incurred in earning it."
+        }
+      }
+    }
+  ]
+}

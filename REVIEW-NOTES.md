@@ -942,3 +942,59 @@ page's own wording makes more likely rather than less.
 **The fix is the same pair of options as N-Q8**: write the missing paragraph, or
 cut the over-claim from the alert and its four copies in the metadata. Both need
 an explicit instruction.
+
+---
+
+## N-Q13 — `3-3-4` promises explicit and implicit costs and never defines them
+
+Found the same way, while writing the unit 3.3 question sets. The spec alert on
+`3-3-4-normal-profits-supernormal-profits-losses` opens:
+
+> Students should be able to **distinguish between explicit and implicit costs**,
+> define normal profit, supernormal profit, and loss in economic terms…
+
+Neither term appears anywhere in the body. Everything else the alert promises is
+delivered, and delivered well — the shut-down rules in particular are the
+clearest treatment of anything on the Theme 3 pages.
+
+**This one is closer to `2-2-5` than to the others**: the page does teach the
+underlying idea, in the passage explaining that normal profit is "the opportunity
+cost of the entrepreneur staying in this industry, so it is already counted
+inside the firm's costs". That *is* an implicit cost. It simply never gets the
+label, and the explicit/implicit pair is never drawn. The fix could be as small
+as naming the two categories in that paragraph.
+
+The other three pages in unit 3.3 check out clean against their alerts.
+
+**The question set works round it**: `3.3.4` Q5 tests the distinction through a
+calculation — an accounting profit against a forgone salary and forgone interest
+— without using either term.
+
+---
+
+## N-Q14 — `3-3-2` states the LRAC envelope relationship imprecisely
+
+Not an over-promise but a content point, and a more subtle one. The *Relationship
+Between SRAC and LRAC* section says:
+
+> The LRAC curve is an envelope curve that **touches the lowest points of the
+> SRAC curves**.
+
+That holds at exactly one point — the minimum of LRAC, at minimum efficient
+scale. Everywhere else the tangency is off the SRAC minimum: to the **left** of it
+while LRAC is falling, and to the **right** of it while LRAC is rising. The
+general statement is that LRAC touches each SRAC at the output for which that
+scale is the cheapest available, which is not the same as each SRAC's own lowest
+point.
+
+It is a standard textbook simplification rather than a blunder, and the rest of
+the section is right — including the observation that LRAC is flatter than the
+SRAC curves, which is the practically useful part. But a student who has been
+told the simplified version and then meets a properly drawn diagram will find the
+tangency points do not sit where they were told to expect them.
+
+**Not fixed, and no question depends on it.** `3.3.2` Q6 was drafted on the
+page's wording, caught during the cold re-solve, and rewritten to ask what the
+envelope *is* — the lowest cost achievable at each output — which is correct on
+the page's own terms and correct in general. If the sentence is ever revised,
+"touches each SRAC curve at the output where that scale is cheapest" would do it.

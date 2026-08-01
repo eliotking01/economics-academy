@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 129 topics, 1,007 questions. AQA is complete, Edexcel Themes 1 and 2 are
-complete, and Theme 3 units 3.1 and 3.2 are done. 37 topics remain.**
+**Live: 133 topics, 1,043 questions. AQA is complete, Edexcel Themes 1 and 2 are
+complete, and Theme 3 units 3.1 to 3.3 are done. 33 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -283,6 +283,35 @@ The four fixed in batch 12, all rebuilt on new scenarios:
 
 ---
 
+### 9. Shingling misses collisions that share no wording — grep by concept too
+
+**New in batch 21.** The 8-gram check finds questions that share *phrasing*. It
+cannot find two questions that ask the same thing in different words, and on the
+micro topics that is now the more common failure.
+
+Batch 21 drafted "A firm is productively efficient when it produces at the output
+where… average cost is at its minimum". That is **AQA 1.5.10 Q2 in substance and
+almost in wording**, and the shingle check returned nothing for it, because the
+stems are phrased differently and the option sets share no runs. It was found by
+grepping the whole bank for `productive efficiency`.
+
+**Do both, every batch.** Before writing a set, list the four or five ideas it
+will turn on and search `questions-data/` for each:
+
+```python
+for f in pathlib.Path('questions-data').rglob('*.json'):
+    for q in json.loads(f.read_text())['questions']:
+        if re.search(TERM, " ".join([q['stem'], *q['options'].values()]), re.I):
+            print(spec, i, q['answer'], q['stem'][:100])
+```
+
+It takes a minute and it catches a class of duplication the shingle never will.
+In batch 21 the same search also confirmed that the **shut-down rules** and the
+**SRAC/LRAC envelope** appeared nowhere in 1,007 questions, which is how those
+became the backbone of the unit rather than a guess.
+
+---
+
 ## Ratified content decisions
 
 Do not revisit these without asking.
@@ -353,37 +382,51 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 37 topics, 287 questions still to write
+### Edexcel — 33 topics, 251 questions still to write
 
 **This is all that is left.** AQA is finished, Themes 1 and 2 are complete, and
-Theme 3 units 3.1 and 3.2 are done.
+Theme 3 units 3.1 to 3.3 are done.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
 | Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 16 | 124 |
+| Theme 3 | 12 | 88 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 3 unit 3.3** — 3.3.1 revenue, 3.3.2 costs, 3.3.3 economies
-and diseconomies of scale, 3.3.4 normal and supernormal profit. Four topics, and
-this is **the arithmetic unit of the whole theme**: plan 9–10 questions each and
-several calculations per set. Theme 3's remaining topics are:
+**Next batch: Theme 3 unit 3.4** — the market structures unit, and the largest
+remaining block on the site. Seven topics:
 
 ```
-3.3.1 3.3.2 3.3.3 3.3.4
-3.4.1 3.4.2 3.4.3 3.4.4 3.4.5 3.4.6 3.4.7 | 3.5.1 3.5.2 3.5.3 | 3.6.1 3.6.2
+3.4.1 efficiency        3.4.2 perfect competition   3.4.3 monopolistic competition
+3.4.4 oligopoly         3.4.5 monopoly              3.4.6 monopsony
+3.4.7 contestability
 ```
 
-**Unit 3.3's twins are the densest arithmetic in the AQA bank** — 1.4.3
-(diminishing returns, 9), 1.4.4 (costs, 10), 1.4.5 (economies of scale, 8),
-1.4.6 (revenue, 9) and 1.4.7 (profit, 8): **44 questions**, most of them built on
-cost or revenue schedules. Print all five before writing. Note in particular that
-AQA 1.4.5 already owns the *types* of economy of scale (purchasing, financial,
-technical, marketing, risk-bearing, managerial), the minimum efficient scale,
-communication diseconomies, external economies and the U-shaped LRAC. Batch 20
-had to drop two drafted questions to AQA 1.4.5 alone; unit 3.3 will hit it much
-harder.
+Roughly 55 questions, so **split it into two batches** — 3.4.1 to 3.4.4, then
+3.4.5 to 3.4.7. Trying to hold seven twin audits in mind at once is what makes
+sets drift towards the AQA phrasing.
+
+**The twin overlap is the worst on the project**: AQA 1.5.3 (perfect competition,
+9), 1.5.4 (monopolistic competition, 7), 1.5.5 (oligopoly, 9), 1.5.6 (monopoly,
+9), 1.5.7 (price discrimination, 8), 1.5.9 (contestable markets, 8), 1.5.10
+(efficiency, 8) and 1.6.4 (imperfect labour markets, covering monopsony, 8) —
+**66 questions over the same seven topics**. Print each twin immediately before
+writing its Edexcel counterpart, not all at once.
+
+Two things known in advance:
+
+- **AQA 1.5.10 owns the efficiency definitions outright** — allocative at
+  AR = MC, productive at minimum AC, static, dynamic, X-inefficiency, and a
+  three-situation classification table. Unit 3.4.1 will need its angles from what
+  Edexcel adds, not from the definitions.
+- **Monopsony is the one genuinely free topic.** AQA covers it inside 1.6.4 as a
+  labour market case; Edexcel gives it a topic of its own in the firms unit, so
+  the buyer-power framing is open ground.
+
+**Unit 3.4 has no arithmetic to speak of** beyond concentration ratios. After
+unit 3.3's 22% calculation share, expect the batch figure to fall back towards
+5%; that is the material, not a lapse.
 
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
 market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
@@ -396,10 +439,10 @@ competition policy. The twin map:
 | ~~3.1.2 business growth~~ | 1.8.7 competition policy — **done, batch 20** | — |
 | ~~3.1.3 demergers~~ | none — **done, batch 20** | — |
 | ~~3.2.1 business objectives~~ | 1.5.2, 1.4.6, 1.4.7 — **done, batch 20** | — |
-| 3.3.1 revenue | 1.4.6 marginal, average and total revenue | 9 |
-| 3.3.2 costs | 1.4.4 costs of production, 1.4.3 diminishing returns | 19 |
-| 3.3.3 economies and diseconomies of scale | 1.4.5 | 8 |
-| 3.3.4 normal and supernormal profit | 1.4.7 profit | 8 |
+| ~~3.3.1 revenue~~ | 1.4.6 — **done, batch 21** | — |
+| ~~3.3.2 costs~~ | 1.4.4, 1.4.3 — **done, batch 21** | — |
+| ~~3.3.3 economies and diseconomies of scale~~ | 1.4.5 — **done, batch 21** | — |
+| ~~3.3.4 normal and supernormal profit~~ | 1.4.7 — **done, batch 21** | — |
 | 3.4.1 efficiency | 1.5.10 market structure and efficiency | 8 |
 | 3.4.2–3.4.5 | 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7 | 42 |
 | 3.4.6 monopsony | 1.6.4 imperfect labour markets (partly) | 8 |
@@ -1005,6 +1048,111 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 21 — Edexcel Theme 3, unit 3.3 (2026-08-01)
+
+4 topics, 36 questions. Revenue, costs, economies of scale, and profit — **the
+arithmetic unit of the specification, and the batch that was supposed to pull the
+calculation share back up. It did.**
+
+All 36 re-derived from the stem alone with **0 mismatches**; every figure in
+every schedule recomputed, including all distractor values — 30 arithmetic checks
+in total, plus the internal consistency of each cost schedule (AFC + AVC = AC in
+3.3.2 Q2 and Q9; the MR series in 3.3.1 Q4 falling +22, +14, +6, −2; the two
+shut-down cases in 3.3.4 Q2 and Q10 cross-checked against the contribution).
+
+**`calculation` came in at 8 of 36 — 22%**, against a ~15% target and against 0%
+in batch 20. Only unit 2.1's 23% beats it. Site-wide the figure has moved from 8%
+to 9%, which does not sound like much but is the first upward movement in nine
+batches. The material is what did it: revenue and cost schedules, marginal
+calculations, opportunity-cost profit and the shut-down arithmetic are all
+genuinely on these four pages.
+
+**Originality clean against both past-paper corpora at every n-gram length.**
+Against the 1,007-question bank, two hits, one of them serious:
+
+- **3.3.1 Q4 shared a fourteen-word stem sentence with AQA 1.4.6 Q2** — "Table 1
+  shows the price a firm must [charge/set] in order to sell each quantity of its
+  output" — *and* asked the same thing off the same kind of table. Rebuilt from
+  the other direction: the table now gives quantity and total revenue, and the
+  question asks where marginal revenue first turns negative. That forces the
+  student to compute MR from TR rather than read a peak off a column, which is a
+  better question as well as an original one.
+- 3.3.3 Q7 shared "has risen. the most likely explanation is that" with AQA 1.7.2
+  Q7 — stock scaffolding across unrelated topics, reworded anyway.
+
+**One numeric option-set flag, adjudicated and left.** 3.3.1 Q2's options
+(−£15, −£6, £3, £9) share three values with an AQA paper set of 3 / 5 / 6 / 9.
+That real question is the **natural rate of unemployment** item batches 8 and 11
+have both looked at before: percentages, macro, no negatives. Coincidence, as
+§7 predicts for small integers. **Do not rewrite it on a fourth encounter.**
+
+**Six drafted questions were dropped or rebuilt at the twin-audit stage**, which
+is the highest count of any batch and exactly what was predicted for this unit:
+
+- An MC-from-two-total-costs item that reproduced AQA 1.4.4 Q3 sentence for
+  sentence. Rebuilt as a per-unit question on new figures.
+- A supernormal-profit calculation that was AQA 1.4.7 Q2 with different numbers
+  (units × price against total costs including normal profit).
+- "MC is above AVC, so AVC will…", which is AQA 1.4.4 Q5 mirrored.
+- "Productively efficient at minimum AC", which is **AQA 1.5.10 Q2 verbatim** —
+  caught by grepping the whole bank for the concept rather than by shingling.
+- A bigger-factory-higher-LRAC item, which is AQA 1.4.3 Q9.
+- A U-shaped-LRAC item whose first sentence matched AQA 1.4.5 Q8.
+
+**Grepping the bank by concept, not just shingling by phrase, is what caught the
+worst of these.** The productive-efficiency collision shared almost no wording
+with AQA 1.5.10 Q2 and would have survived the 8-gram check untouched. Worth
+doing for every unit from here: pick the four or five ideas the set turns on and
+search the whole bank for each.
+
+**What was left, once AQA's 44 questions were subtracted:**
+
+- **The shut-down rules are completely free ground**, and they are the best
+  material in the batch. Nothing anywhere in the bank mentions AVC as a decision
+  rule. Five questions come from them: the short-run test, why it is AVC rather
+  than AC, the long-run test, a four-firm table where the largest loss is *not*
+  the firm that should stop, and the case where the two rules disagree and the
+  answer is to run out the year and then leave.
+- **The SRAC/LRAC envelope** — also entirely absent from the bank.
+- **Marginal cost is unaffected by a change in fixed costs.** A rent rise moves AC
+  at every output and leaves MC untouched, so the profit-maximising output does
+  not move. Edexcel's page supports it and AQA never tests it; it also sets up the
+  shut-down rule directly.
+- **The total revenue rule as a full grid.** AQA tests one cell of it. Unitary
+  elasticity leaving TR unchanged, and the inelastic-so-raise-the-price decision,
+  are both free.
+- **Favourable legislation** as an external economy of scale, and **motivational**
+  and **geographical** diseconomies, all of which Edexcel names and AQA uses only
+  as distractors.
+- **MES applied to market structure** rather than defined. AQA defines it; asking
+  what a MES of 40% of demand implies about the number of firms is new, and it is
+  the best question in 3.3.3.
+- **Edexcel's explanation of *why* a supplier grants a bulk discount** — the order
+  is a large share of the supplier's own revenue. AQA asks students to classify
+  the discount; Edexcel explains the bargaining behind it.
+
+**Two content findings logged, not fixed** — `REVIEW-NOTES.md` N-Q13 and N-Q14.
+`3-3-4` promises explicit and implicit costs in its spec alert and never names
+either, though it does teach the underlying idea inside its treatment of normal
+profit. And `3-3-2` states the LRAC envelope as touching "the lowest points of the
+SRAC curves", which holds only at minimum efficient scale. The second was found
+*during the cold re-solve*: 3.3.2 Q6 had been drafted on the page's wording, and
+solving it cold surfaced the problem. It now asks what the envelope is — the
+lowest cost achievable at each output — which is right on the page's terms and
+right in general.
+
+**No sketch items.** Unit 3.3 is where the cost and revenue curves are built, and
+every diagram the four pages carry is printed on the page. Asking a student to
+sketch what they are looking at earns nothing; the sketch items in this theme
+belong in 3.4, where the curves have to be combined.
+
+| | |
+| --- | --- |
+| Answer letters | A 8, B 9, C 11, D 8 (even would be 9) |
+| Skills | applied-reasoning 21, calculation 8, data-table 4, definition-in-context 3 |
+| Difficulty | foundation 3, standard 28, stretch 5 |
+| Sketch to solve | 0 |
 
 ### Batch 20 — Edexcel Theme 3, units 3.1 and 3.2 (2026-08-01)
 
