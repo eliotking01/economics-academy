@@ -1,0 +1,147 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.5.1",
+  "slug": "3-5-1-demand-for-labour",
+  "title": "Demand for Labour",
+  "shortTitle": "Demand for Labour",
+  "pageTitle": "Demand for Labour Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the demand for labour for Edexcel A-Level Economics: derived demand, marginal revenue product and wage elasticity.",
+  "intro": "Six original multiple-choice questions on the demand for labour, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on marginal revenue product, what shifts the demand for labour, and the wage elasticity of that demand.",
+  "questions": [
+    {
+      "id": "edexcel-3-5-1-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The world price of a metal rises sharply, while the productivity of the miners extracting it is unchanged. The effect on the demand for those miners is that it",
+      "options": {
+        "A": "Falls, since the metal is now dearer to buy.",
+        "B": "Rises, since more miners will apply for work.",
+        "C": "Rises, since the value of each miner's output rises.",
+        "D": "Stays where it is, since productivity is unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Demand for labour is set by <strong>marginal revenue product</strong>, MRP = MPP × MR. The stem holds MPP constant, so any change has to come through MR. A higher price for the metal means every extra tonne a miner produces sells for more, so each miner is worth more to the firm and the demand curve for miners shifts right. Edexcel lists the <em>price</em> of the final product alongside <em>demand</em> for the final product as a shift factor, and both work through this same channel.",
+        "distractors": {
+          "A": "A higher price is what the mine receives, not what it pays. It raises the value of what miners produce rather than the cost of employing them.",
+          "B": "More applicants would shift the labour <em>supply</em> curve. Demand is about what employers want, not what workers offer.",
+          "D": "MRP has two components, and the stem changes the other one. Productivity being unchanged does not leave MRP unchanged."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A worker's marginal physical product is 14 units a week and their marginal revenue product is £252. The firm sells its output at a constant price. That price is",
+      "options": {
+        "A": "£14.00",
+        "B": "£18.00",
+        "C": "£238.00",
+        "D": "£3,528.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "MRP = MPP × MR, and where a firm sells at a constant price its marginal revenue <em>is</em> that price.<br />£252 = 14 × MR<br />MR = £252 ÷ 14 = <strong>£18.00</strong>.<br />Check it: 14 units at £18 each is £252 of extra revenue, which is what the worker brings in. A profit-maximising firm employs this worker so long as the weekly wage is no more than £252.",
+        "distractors": {
+          "A": "£14.00 is the marginal physical product — a quantity of output, not a price.",
+          "C": "£238.00 subtracts the output from the revenue. The two are in different units and the relationship between them is multiplicative.",
+          "D": "£3,528.00 multiplies instead of dividing, which gives the revenue from 14 workers each producing £252 rather than the price of a single unit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A reliable warehouse robot falls sharply in price, and is now a close substitute for manual picking. For the demand curve for warehouse pickers, the effect is",
+      "options": {
+        "A": "A movement along it, since the wage is unchanged.",
+        "B": "A shift to the left, as firms switch to capital.",
+        "C": "A shift to the right, as output can now expand.",
+        "D": "No effect, since robots are capital, not labour."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Anything that changes the marginal revenue product of labour, or the attractiveness of labour against its substitutes, shifts the whole demand curve. Cheaper capital that does the same job means firms want fewer workers <strong>at every wage</strong>, so the curve moves left. Edexcel lists the substitutability of labour among the shift factors for precisely this reason.",
+        "distractors": {
+          "A": "A movement along the curve is caused by a change in the wage. The wage is unchanged here; something else has moved.",
+          "C": "Cheaper capital may well allow more output, but it does so by replacing workers rather than by requiring more of them.",
+          "D": "Robots being capital is exactly why they matter. They compete with labour for the same task, which is what makes them a substitute."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Wages rise by 10% in two industries. In the first, labour accounts for 70% of total costs; in the second, for 5%. Compared with the second, demand for labour in the first industry is likely to be",
+      "options": {
+        "A": "Less wage elastic, since wages matter more.",
+        "B": "Perfectly inelastic, since workers are essential.",
+        "C": "Unaffected, since the wage rise is the same.",
+        "D": "Wage elastic, since total costs rise by more."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A 10% wage rise adds 7% to total costs in the first industry and just 0.5% in the second. The first firm therefore has a far stronger reason to cut back on labour — automate, reorganise, or reduce output — while the second can absorb the increase almost without noticing. Edexcel lists <strong>labour's share of total costs</strong> among the determinants of wage elasticity of demand: the larger the share, the more elastic the demand.",
+        "distractors": {
+          "A": "The reasoning is inverted. Wages mattering more to the cost base is exactly what makes the response larger rather than smaller.",
+          "B": "No demand for labour is perfectly inelastic. Firms can always substitute capital, reorganise, or in the end reduce output.",
+          "C": "The same percentage wage rise has very different effects on total cost depending on labour's share, which is the whole point of the comparison."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A large wage rise is imposed on an industry. Employment falls only slightly at first, then much more as the next five years pass. This is because demand for labour is",
+      "options": {
+        "A": "More elastic in the long run, as firms reorganise.",
+        "B": "More elastic in the short run, as firms react at once.",
+        "C": "Perfectly inelastic in both periods.",
+        "D": "Unrelated to the time period considered."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In the first year firms are stuck with the production methods, machinery and contracts they already have, so there is little they can do beyond trimming at the edges. Given five years they can redesign processes, install machinery, move work elsewhere or let the workforce shrink through natural wastage. Edexcel lists the <strong>time period</strong> among the determinants of wage elasticity of demand: labour demand is more elastic in the long run, because firms have more time to reorganise production.",
+        "distractors": {
+          "B": "The opposite. Short-run responses are constrained by the capital and commitments a firm already has in place.",
+          "C": "Perfectly inelastic demand would mean employment did not change at all, and the stem says it fell in both periods.",
+          "D": "The stem is direct evidence that it is related — the same wage rise produced very different responses over different horizons."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Demand for a firm's product is highly price elastic. If wages rise and the firm passes the cost on, it will lose a great many sales. This makes its demand for labour",
+      "options": {
+        "A": "More wage elastic than it would otherwise be.",
+        "B": "Perfectly elastic at the current wage rate.",
+        "C": "Unrelated to the elasticity of product demand.",
+        "D": "Wage inelastic, since it must keep producing."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Labour demand is <em>derived</em> from product demand, so the elasticity carries across from one to the other. If a wage rise forces the price up and buyers desert the product in large numbers, output must fall sharply — and with it the number of workers needed. Where product demand is inelastic the firm can pass the cost on and keep selling, so employment barely moves. Edexcel lists the <strong>PED of the final product</strong> first among the determinants of wage elasticity of demand for labour.",
+        "distractors": {
+          "B": "Perfectly elastic labour demand would mean the firm hires nobody at all above the current wage, which no real firm does.",
+          "C": "The derived nature of labour demand is precisely what connects the two elasticities.",
+          "D": "Having to keep producing is what inelastic <em>product</em> demand would allow. Here customers leave as soon as the price rises."
+        }
+      }
+    }
+  ]
+}

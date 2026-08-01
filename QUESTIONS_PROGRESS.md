@@ -5,9 +5,9 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 140 topics, 1,090 questions. AQA is complete, Edexcel Themes 1 and 2 are
-complete, and Theme 3 units 3.1 to 3.4 are done. 26 topics remain — Theme 3
-units 3.5 and 3.6, then the whole of Theme 4.**
+**Live: 143 topics, 1,108 questions. AQA is complete, Edexcel Themes 1 and 2 are
+complete, and Theme 3 units 3.1 to 3.5 are done. 23 topics remain — Theme 3
+unit 3.6, then the whole of Theme 4.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -383,44 +383,45 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 26 topics, 204 questions still to write
+### Edexcel — 23 topics, 186 questions still to write
 
 **This is all that is left.** AQA is finished, Themes 1 and 2 are complete, and
-Theme 3 is done as far as the end of unit 3.4.
+Theme 3 is done as far as the end of unit 3.5.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
 | Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 5 | 41 |
+| Theme 3 | 2 (unit 3.6 only) | ~14 |
 | Theme 4 | 21 | 163 |
 
-**Next batches:**
+**Next batch: unit 3.6, which finishes Theme 3** — 3.6.1 government
+intervention, 3.6.2 the impact of government intervention. Two topics, and
+expect them to be small.
 
-```
-batch 24:  3.5.1 demand for labour   3.5.2 supply of labour   3.5.3 wage determination
-batch 25:  3.6.1 government intervention   3.6.2 impact of intervention
-```
+**Twins: AQA 1.8.7 competition policy (7) and 1.8.8 public ownership,
+privatisation and regulation (7).** Both were already drawn on in batch 20 for
+Edexcel 3.1.2's constraint question, so re-read them rather than assuming.
+Specific ground AQA already holds:
 
-**Twins for batch 24: AQA 1.6.1, 1.6.2, 1.6.3 (24 questions)** — marginal
-revenue productivity theory, influences on labour supply, and wage determination
-in competitive labour markets. Expect this to be tight; MRP in particular is a
-small topic that AQA covers in nine questions.
+- The CMA as the UK competition body, and what it investigates as
+  anti-competitive (price fixing).
+- A merger between two of four firms raising concentration and prices.
+- Blocking a merger against the economies of scale it would have delivered.
+- Privatisation defined, and the profit-motive argument for it.
+- Keeping a natural monopoly in public ownership.
+- Deregulation defined; price caps on a privatised natural monopoly; privatising
+  a natural monopoly without a regulator.
 
-**Two things carried over into batch 24 specifically:**
+**Read the Edexcel pages before assuming there is nothing left.** Batch 23's
+monopsony set is the precedent: the page framed the topic quite differently from
+AQA and the whole set came out of that difference. 3.6.1 also carries the natural
+monopoly diagram cross-referenced from 3.4.5, which may open an angle.
 
-- **AQA 1.6.4, 1.6.5 and 1.6.6 (23 more questions) also bear on 3.5.3**, since
-  that is where the Edexcel monopsony labour-market diagram, minimum wages and
-  trade unions actually live. AQA 1.6.6 Q5 is already a minimum-wage-in-monopsony
-  sketch item and 1.6.4 Q5 and 1.6.5 Q6 both cover a union bargaining with a
-  monopsonist. **Print all six AQA 1.6.x sets before writing 3.5.3**, not just
-  1.6.3.
-- **Batch 23 deliberately left the monopsony labour market alone**, writing 3.4.6
-  on general buyer power instead, because the Edexcel page defers labour markets
-  to 3.5.3. The labour-side questions belong in that set.
-
-**Unit 3.6's twins are AQA 1.8.7 and 1.8.8 (14 questions)** on competition policy
-and public ownership, both already drawn on in batch 20.
+**After that, Theme 4 — 21 topics and the largest single block left on the
+site.** Its twins are AQA macro 2.6 (globalisation, trade, balance of payments,
+exchange rates, growth and development — 43 questions) plus parts of 2.5. Plan
+that split before starting; it is at least four batches.
 
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
 market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
@@ -1042,6 +1043,88 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 24 — Edexcel Theme 3, unit 3.5 (2026-08-01)
+
+3 topics, 18 questions. The labour market unit — demand for labour, supply of
+labour and wage determination.
+
+All 18 re-derived from the stem alone with **0 mismatches**; both calculations
+recomputed with every distractor value.
+
+**Originality clean on all three fronts.** One intra-bank hit was fixed first:
+3.5.1 Q5 shared "over the following five years. the best explanation is that"
+with Edexcel 1.2.3 Q10 — my own scaffolding, reworded.
+
+**This was the tightest twin situation of the entire project.** AQA 1.6.1 to
+1.6.6 carry **47 questions** across exactly this ground, and between them they
+own:
+
+- derived demand, MRP = MPP × MR, MRP from a table, hiring until MRP = wage, the
+  downward slope from diminishing returns, and the criticism that individual
+  output cannot be measured (1.6.1, nine questions)
+- the upward-sloping supply curve, the backward bend, occupational and
+  geographical immobility, retraining, and inelastic supply from training time
+  (1.6.2, seven)
+- wage takers, disequilibrium wages, the firm's perfectly elastic supply curve,
+  product demand shifting the labour market, MRP against the wage, surgeons
+  against cleaners, and migration (1.6.3, eight)
+- the whole of monopsony (1.6.4, eight), the whole of trade unions (1.6.5,
+  seven), and the whole of the minimum wage (1.6.6, eight)
+
+**18 questions is what honestly remained.** The concept-grep is the only reason
+there were that many: six of the eight ideas checked before drafting returned
+**zero hits across 1,090 questions**, and each of them became a question.
+
+| Concept | Hits before this batch |
+| --- | --- |
+| non-monetary benefits and working conditions | 0 |
+| worker motivation offsetting a minimum wage | 0 |
+| the vocational aspect of supply elasticity | 0 |
+| labour demand more elastic in the long run | 0 |
+| the price of the final product raising MRP | 0 |
+| economic conditions and union bargaining power | 0 |
+
+**The two calculations are both new archetypes for the bank:**
+
+- **MRP run backwards.** Given MPP and MRP, find the product price. AQA 1.6.1 Q3
+  runs it forwards off a table, which is the standard form and was unavailable.
+- **The marginal cost of labour, computed.** 50 workers at £400, a 51st requiring
+  £405 for everyone: MCL = £655, not the £405 the new worker receives. AQA 1.6.4
+  Q3 *explains* why MCL lies above the supply curve but never puts a number on
+  it, and the arithmetic makes the point far better than the words do.
+
+**Where else Edexcel opened room:**
+
+- **The price of the final product** as a shift factor distinct from demand for
+  it. Both work through MR, and AQA only tests the demand side.
+- **Substitutability as a shifter rather than an elasticity determinant.** AQA
+  uses cheap capital to explain elasticity; Edexcel lists it as something that
+  moves the curve.
+- **Three of the four wage-elasticity-of-demand determinants** — labour's share
+  of total costs, the time period, and the PED of the final product. AQA tests
+  only the fourth.
+- **The available pool of labour and the vocational aspect** on the supply side.
+- **Where the monopsonist's wage is actually read from.** AQA establishes that
+  workers are paid less than their MRP; nothing in the bank says the wage comes
+  off the *supply curve* at the chosen quantity, which is the step students miss.
+- **Both minimum-wage evaluations Edexcel gives** — that the effect depends on
+  how far above equilibrium the floor is set, and that improved motivation can
+  offset the cost rise. The second is the best question in the batch.
+
+| | |
+| --- | --- |
+| Answer letters | A 6, B 5, C 3, D 4 (even would be 4.5) |
+| Skills | applied-reasoning 14, calculation 2, data-table 1, definition-in-context 1 |
+| Difficulty | standard 16, stretch 2, foundation 0 |
+| Sketch to solve | 0 |
+
+**No foundation items and no sketch items, both for the same reason.** Every
+straightforward definitional question in this unit — derived demand, MRP, wage
+takers, the backward bend, union density, the minimum wage as a price floor — is
+already in the AQA bank, and so is every obvious diagram, including AQA 1.6.3 Q3
+and 1.6.6 Q5. What was left needs a chained inference by construction, which is
+why the batch is almost entirely `standard`.
 
 ### Batch 23 — Edexcel Theme 3, units 3.4.5 to 3.4.7 (2026-08-01)
 
