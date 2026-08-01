@@ -281,35 +281,5 @@
         }
       }
     }
-  ],
-  "written": [
-    {
-      "id": "edexcel-1-2-9-w1",
-      "command": "Explain",
-      "marks": 5,
-      "prompt": "A government puts a tax of £1.20 on every pack of a medicine that patients cannot easily do without. The firms making it could switch their plant to other products at short notice. Explain how the burden of that tax is likely to be shared between patients and producers.",
-      "indicative": [
-        "The incidence of an indirect tax falls more heavily on whichever side of the market is <strong>less able to walk away</strong> from the higher price.",
-        "Patients who cannot do without the medicine have inelastic demand: they cut their purchases by proportionately less than the price rises, because there is no substitute to switch to.",
-        "The firms are in the opposite position. Being able to move their plant to other products makes their supply elastic, so they can cut output rather than absorb the tax, which limits the share they end up bearing.",
-        "The result is that <strong>most of the £1.20 reaches the patient</strong> as a higher price, with the producers bearing the smaller share through a lower net price received.",
-        "Credit is available for showing this on a supply and demand diagram: the supply curve shifts vertically upward by the full £1.20, and the consumer's share is the gap between the new and the old price, with the producer's share whatever is left of the £1.20 below it."
-      ]
-    },
-    {
-      "id": "edexcel-1-2-9-w2",
-      "command": "Assess",
-      "marks": 12,
-      "prompt": "A government introduces a tax on sugary drinks, charged according to how much sugar each drink contains. Assess the likely impact of this tax on consumers, on producers and on the government.",
-      "indicative": [
-        "<strong>Consumers</strong> face a higher price, so quantity demanded contracts and the external cost their consumption imposes on others is partly internalised. Those who keep buying are worse off in cash terms.",
-        "<strong>Consumers, against:</strong> the burden is regressive. Low-income households spend a larger share of their income on the taxed drinks, so the tax takes proportionately more from those least able to pay it.",
-        "<strong>Producers</strong> have two responses, and the tax is deliberately designed to encourage the second. They can pass the tax on and lose some sales, or <strong>reformulate</strong> — cutting the sugar to fall below the threshold, which cuts sugar consumption without cutting their volumes at all.",
-        "<strong>The government</strong> gains revenue, and gains most where behaviour changes least. Demand for these drinks is price inelastic and habitual, so a tax raising price by 10% cuts quantity by considerably less — which makes it a more reliable revenue-raiser than behavioural instrument.",
-        "<strong>The government, against:</strong> the revenue shrinks precisely to the extent the policy works. A tax that succeeds in driving reformulation raises very little, so it cannot be relied on to fund the health spending it is often promised for.",
-        "<strong>Setting the rate</strong> requires a monetary value for the external cost, which nobody can estimate confidently. Too low and consumption barely moves; too high and the welfare loss to consumers exceeds the external cost being corrected.",
-        "<strong>Judgement:</strong> the impact is unevenly distributed and depends heavily on the design. Charging by sugar content rather than by volume is what makes producers the group most likely to change behaviour, and that is where the policy does its work; consumers bear a regressive cost, and the government should not count on the revenue lasting. Combined with information provision the case is stronger; as a standalone measure on inelastic demand it raises money more reliably than it changes habits."
-      ]
-    }
   ]
 }

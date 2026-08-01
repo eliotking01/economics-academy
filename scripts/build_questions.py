@@ -287,13 +287,6 @@ US_SPELLINGS = [
 US_SPELLING_RE = re.compile(r"\b(" + "|".join(US_SPELLINGS) + r")\b", re.IGNORECASE)
 
 ID_RE = re.compile(r"^(aqa|edexcel)-\d+(?:-\d+)*-q\d+$")
-WRITTEN_ID_RE = re.compile(r"^(aqa|edexcel)-\d+(?:-\d+)*-w\d+$")
-
-# Command words as the two boards use them. The command sets the mark scheme's
-# expectations, so it is stated rather than inferred from the prompt.
-COMMAND_WORDS = {
-    "Explain", "Calculate", "Analyse", "Assess", "Evaluate", "Discuss",
-}
 
 
 NOSCRIPT_ACCORDION = """
@@ -354,52 +347,6 @@ def _fragment_errors(where, text, capitalised=False):
     hit = US_SPELLING_RE.search(TAG_RE.sub("", text))
     if hit:
         errors.append(f"{where}: US spelling {hit.group(1)!r}")
-    return errors
-
-
-def _written_errors(topic, seen_ids, path):
-    """Validate the optional `written` array. Absent means an MCQ-only set."""
-    written = topic.get("written")
-    if written is None:
-        return []
-
-    errors = []
-    if not isinstance(written, list) or not 1 <= len(written) <= 2:
-        return [f"written: must be a list of 1-2 questions, got {written!r}"]
-
-    for index, w in enumerate(written, start=1):
-        where = f"w{index}"
-
-        wid = w.get("id", "")
-        if not WRITTEN_ID_RE.match(wid):
-            errors.append(f"{where}: id {wid!r} does not match <board>-<spec>-w<n>")
-        elif wid in seen_ids:
-            errors.append(f"{where}: duplicate id {wid!r} (also in {seen_ids[wid]})")
-        else:
-            seen_ids[wid] = str(path.relative_to(ROOT))
-
-        if w.get("command") not in COMMAND_WORDS:
-            errors.append(f"{where}: command must be one of {sorted(COMMAND_WORDS)}")
-
-        marks = w.get("marks")
-        if not isinstance(marks, int) or not 2 <= marks <= 25:
-            errors.append(f"{where}: marks must be a whole number from 2 to 25")
-
-        errors += _fragment_errors(f"{where}.prompt", w.get("prompt", ""),
-                                   capitalised=True)
-
-        indicative = w.get("indicative")
-        if not isinstance(indicative, list) or not 2 <= len(indicative) <= 8:
-            errors.append(f"{where}.indicative: must be a list of 2-8 points")
-        else:
-            for i, point in enumerate(indicative):
-                errors += _fragment_errors(
-                    f"{where}.indicative[{i}]", point, capitalised=True
-                )
-
-        if w.get("tip"):
-            errors += _fragment_errors(f"{where}.tip", w["tip"], capitalised=True)
-
     return errors
 
 
@@ -534,9 +481,6 @@ def validate(topic, path, seen_ids):
                     f"letter distribution: {letter} used {tally[letter]} times "
                     f"in a set of {len(questions)}"
                 )
-
-    # Written-response questions are optional. A set without them is unaffected.
-    errors += _written_errors(topic, seen_ids, path)
 
     if errors:
         raise SetError(f"{path.relative_to(ROOT)}:\n  " + "\n  ".join(errors))
@@ -690,82 +634,6 @@ def render_question(q, number):
     return "\n".join(out)
 
 
-def render_written(topic):
-    """The written-response block. Returns '' for a set without one."""
-    written = topic.get("written")
-    if not written:
-        return ""
-
-    out = [
-        '            <section class="quiz-written">',
-        '              <header class="major">',
-        "                <h2>Written response</h2>",
-        "              </header>",
-        '              <p class="quiz-written-intro">',
-        "                Exam-style written questions on the same material. Write your",
-        "                answer out in full before opening the indicative content &mdash;",
-        "                the point is the practice of writing, not the reading.",
-        "              </p>",
-    ]
-
-    for w in written:
-        plural = "" if w["marks"] == 1 else "s"
-        out += [
-            '              <article',
-            '                class="quiz-written-item"',
-            f'                id="{w["id"].rsplit("-", 1)[-1]}"',
-            f'                data-qid="{w["id"]}"',
-            f'                data-marks="{w["marks"]}"',
-            f'                data-command="{w["command"]}"',
-            "              >",
-            '                <p class="quiz-written-tags">',
-            f'                  <span class="quiz-tag">{w["command"]}</span>',
-            f'                  <span class="quiz-tag quiz-tag-marks">{w["marks"]} mark{plural}</span>',
-            "                </p>",
-            f'                <h3 class="quiz-written-prompt">{w["prompt"]}</h3>',
-            '                <details class="quiz-model quiz-written-model">',
-            "                  <summary>Show indicative content</summary>",
-            '                  <div class="quiz-model-body">',
-            '                    <p class="quiz-written-lead">',
-            "                      <strong>What a strong answer covers.</strong> These are",
-            "                      the points an examiner is looking for, not a script to",
-            "                      reproduce.",
-            "                    </p>",
-            '                    <ul class="quiz-written-indicative">',
-        ]
-        for point in w["indicative"]:
-            out += ["                      <li>" + point + "</li>"]
-        out += [
-            "                    </ul>",
-        ]
-        if w.get("tip"):
-            out += [
-                '                    <p class="quiz-written-tip">',
-                f"                      <strong>Exam tip.</strong> {w['tip']}",
-                "                    </p>",
-            ]
-        out += [
-            "                  </div>",
-            "                </details>",
-            "              </article>",
-        ]
-
-    out += [
-        '              <div class="quiz-written-cta">',
-        "                <p>",
-        "                  Written answers are only worth as much as the feedback on",
-        "                  them. I mark full papers and single essays, with a marked",
-        "                  script back and the specific things to change next time.",
-        "                </p>",
-        '                <a href="/marking.html" class="button primary"',
-        "                  >Get Essays Marked</a",
-        "                >",
-        "              </div>",
-        "            </section>",
-    ]
-    return "\n".join(out)
-
-
 def render_jsonld_quiz(topic):
     questions = []
     for q in topic["questions"]:
@@ -798,23 +666,6 @@ def render_jsonld_quiz(topic):
                     },
                 },
                 "suggestedAnswer": suggested,
-            }
-        )
-
-    # Written questions join the same hasPart list, so the JSON stays the single
-    # source of truth for the markup and the structured data alike.
-    for w in topic.get("written") or []:
-        questions.append(
-            {
-                "@type": "Question",
-                "eduQuestionType": "Extended response",
-                "learningResourceType": "Practice problem",
-                "name": headline(w["prompt"]),
-                "text": plain(w["prompt"]),
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": " ".join(plain(point) for point in w["indicative"]),
-                },
             }
         )
 
@@ -870,11 +721,6 @@ def render_page(topic):
         for n, q in enumerate(topic["questions"], start=1)
     )
 
-    written_block = render_written(topic)
-    written_chip = (
-        "\n              <span>Written response</span>" if written_block else ""
-    )
-
     body = f"""      <section id="main" class="quiz-page">
         <div class="container">
           <nav class="breadcrumb">
@@ -899,7 +745,7 @@ def render_page(topic):
             <p class="quiz-meta">
               <span>{count} questions</span>
               <span>{board_label} A-Level</span>
-              <span>Multiple choice</span>{written_chip}
+              <span>Multiple choice</span>
               <span>Model answers included</span>
             </p>
 
@@ -939,7 +785,7 @@ def render_page(topic):
                 <a href="{notes}" class="button alt">Back to the notes</a>
               </div>
             </div>
-{written_block}
+
             <div class="quiz-cta">
               <p>Ready to go further?</p>
               <a href="{notes}" class="button alt"

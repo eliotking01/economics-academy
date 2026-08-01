@@ -234,36 +234,5 @@
         }
       }
     }
-  ],
-  "written": [
-    {
-      "id": "edexcel-3-6-1-w1",
-      "command": "Explain",
-      "marks": 5,
-      "prompt": "Explain how RPI-X price capping is intended to improve the performance of a privatised monopoly.",
-      "indicative": [
-        "The cap allows the firm to raise its prices by inflation (RPI) minus a figure X set by the regulator, so prices are required to fall in real terms.",
-        "Because the cap is fixed in advance and does not move with the firm's costs, any cost reduction the firm achieves is kept as profit until the cap is next reset.",
-        "That gives the firm a <strong>direct incentive to become more efficient</strong>, which a monopoly facing no competition would otherwise lack.",
-        "Consumers gain through lower real prices, which addresses the central objection to monopoly — that price sits above marginal cost and output below the competitive level.",
-        "Credit for noting the regulator's difficulty: X has to be set from information the firm itself supplies, so a firm that overstates its costs can win a lenient cap."
-      ]
-    },
-    {
-      "id": "edexcel-3-6-1-w2",
-      "command": "Evaluate",
-      "marks": 15,
-      "prompt": "Evaluate the case for regulating a natural monopoly rather than allowing it to be broken up into competing firms.",
-      "indicative": [
-        "<strong>The defining feature:</strong> in a natural monopoly one firm can supply the whole market at lower average cost than several, because fixed costs are enormous and economies of scale run to the size of the market.",
-        "<strong>For regulation:</strong> breaking the firm up duplicates the fixed capital — a second water network, a second set of rails — which raises average cost across the industry and wastes resources. The productive inefficiency of competition here exceeds the allocative inefficiency of monopoly.",
-        "<strong>For regulation:</strong> price capping, profit regulation and quality standards can deliver the outcome competition would, without losing the scale economies. RPI-X in particular reproduces the cost-cutting incentive.",
-        "<strong>Against:</strong> regulation depends on information the regulator does not have. The firm knows its own costs and has every reason to present them favourably — asymmetric information is the standing weakness of every regulatory regime.",
-        "<strong>Against:</strong> regulatory capture. A regulator that recruits from the industry and relies on it for data may come to serve the firms it oversees rather than consumers.",
-        "<strong>Against:</strong> profit regulation carries a perverse incentive — a firm allowed a fixed return on capital has reason to over-invest, and one facing a cap on profit has little reason to control costs at all.",
-        "<strong>A middle route worth raising:</strong> parts of a natural monopoly are not naturally monopolistic. The network can stay a regulated monopoly while the services running over it are opened to competition, which is the structure used in rail and energy supply.",
-        "<strong>Judgement:</strong> where the scale economies genuinely extend across the whole market, regulation is the better answer and the debate is about how it is designed rather than whether to have it. The case weakens as technology shrinks the minimum efficient scale, which is why parts of telecommunications ceased to be natural monopolies and were opened to competition instead."
-      ]
-    }
   ]
 }

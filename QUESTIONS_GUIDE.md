@@ -193,43 +193,6 @@ Each page loads exactly one of the two stylesheets. Never load both.
 The generator derives the JSON-LD `name` from the stem's first sentence, so write a
 stem whose opening sentence stands alone as a label.
 
-### Written-response questions — optional, pilot stage
-
-A topic may carry an optional `written` array of **one or two** exam-style written
-questions, rendered beneath the multiple-choice list. **A set without the field is
-unaffected**, and 161 of the 166 sets do not have it. Approved as a pilot by the
-site owner; five topics carry it so far.
-
-| Field | Type | Notes |
-| --- | --- | --- |
-| `id` | string | `"<board>-<spec-with-hyphens>-w<n>"`. Shares the site-wide uniqueness check with the MCQ ids. |
-| `command` | enum | `Explain` \| `Calculate` \| `Analyse` \| `Assess` \| `Evaluate` \| `Discuss`. Stated rather than inferred, because the command sets the mark scheme's expectations. |
-| `marks` | integer | 2–25. Use the board's real allocations — AQA 9 and 25; Edexcel 5, 8, 10, 12, 15 and 25. |
-| `prompt` | HTML fragment | The question as a student would meet it. Opens with a capital. |
-| `indicative` | array | 2–8 HTML fragments, one per point. **Indicative content, not a model essay** — the points an examiner rewards, in the order a strong answer would reach them. |
-| `tip` | HTML fragment \| absent | One optional sentence on exam technique, rendered as a highlighted note. |
-
-House rules, which differ from the multiple-choice rules in three ways:
-
-- **Indicative content, never a script.** The block is headed "What a strong answer
-  covers", and it must read as a list of creditworthy points rather than something
-  to be copied out. For an `Evaluate` or `Assess` prompt the final point is the
-  **judgement**, and it must say what the answer depends on rather than announcing
-  a winner.
-- **Both sides, explicitly labelled.** Evaluation prompts carry `<strong>For:</strong>`
-  and `<strong>Against:</strong>` lead-ins so the structure is visible at a glance.
-- **Originality applies unchanged, and matters more.** Written prompts collide with
-  real papers far more easily than multiple-choice stems do, because the command
-  words and the phrasing around them are fixed. Two of the first ten drafted here
-  collided — one with an Edexcel paper's "an indirect tax as a means of reducing…",
-  one with an existing question on the same page — and both were rebuilt. **Shingle
-  the prompts and the indicative content against both corpora and the whole bank,
-  exactly as for the stems.**
-
-The marking call to action closes the block, and is the commercial point of the
-exercise: a student who has just written an answer and compared it with the
-indicative content is the reader most likely to want it marked.
-
 ### HTML fragments
 
 `stem`, `intro`, `notesTeaser`, `model.working`, `model.distractors.*`, option values and
@@ -437,5 +400,4 @@ Before a batch is committed:
 - [ ] `python3 scripts/verify_text_integrity.py <base-ref>` clean.
 - [ ] `python3 scripts/verify_markup_integrity.py <base-ref> --strict` clean.
 - [ ] `git diff <base-ref> -- revision-notes/` contains no removed line.
-- [ ] Any `written` block shingled against both corpora and the whole bank.
 - [ ] `QUESTIONS_PROGRESS.md` updated.

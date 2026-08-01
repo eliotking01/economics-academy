@@ -272,36 +272,5 @@
         }
       }
     }
-  ],
-  "written": [
-    {
-      "id": "aqa-1-3-2-w1",
-      "command": "Explain",
-      "marks": 9,
-      "prompt": "A rail operator raises its off-peak fares by 10% and finds that off-peak passenger numbers fall by 4%. Explain what this tells the operator about the price elasticity of demand for its off-peak services, and what it implies for its total revenue.",
-      "indicative": [
-        "PED is the percentage change in quantity demanded divided by the percentage change in price: −4 ÷ +10 = <strong>−0.4</strong>. Marks are available for the calculation and for stating the formula.",
-        "A coefficient between 0 and −1 means demand is <strong>price inelastic</strong> — quantity demanded is less than proportionately responsive to the price change.",
-        "The revenue implication follows directly. Price has risen by more, proportionately, than quantity has fallen, so <strong>total revenue rises</strong>. A numerical illustration earns credit: 100 passengers at £10 gives £1,000; 96 passengers at £11 gives £1,056.",
-        "The economics behind the figure: off-peak rail has some substitutes — driving, coach, not travelling at all — but for many journeys the alternatives are poor, and the fare is a small share of the cost of the trip.",
-        "A strong answer notes what the figure does <em>not</em> establish. It is measured over one route, one time of day and one price change, so it cannot be assumed to hold for peak travel, for a much larger fare rise, or over a longer period once passengers have had time to adjust."
-      ],
-      "tip": "The sign and the size do different jobs. The minus sign confirms the law of demand and is not part of the classification; the magnitude against 1 is what tells you elastic from inelastic. Drop the sign only <em>after</em> you have used it, never before."
-    },
-    {
-      "id": "aqa-1-3-2-w2",
-      "command": "Evaluate",
-      "marks": 25,
-      "prompt": "Evaluate the usefulness of price, income and cross elasticities of demand to a firm deciding whether to raise the price of one of its products.",
-      "indicative": [
-        "<strong>PED</strong> is the most directly useful: it tells the firm whether the price rise raises or lowers total revenue. Inelastic demand means revenue rises; elastic demand means it falls. A firm that does not know its PED is guessing at the effect of its own pricing decision.",
-        "<strong>XED</strong> matters because the firm rarely sells one product in isolation. A positive XED with a rival's good says how much demand will switch away if the rival holds its price; a negative XED with the firm's own complement says what the price rise does to sales of that complement.",
-        "<strong>YED</strong> is the least immediately relevant to a price decision but shapes the context. A product with high positive YED faces very different demand conditions in a downturn, which affects whether now is the moment to raise the price at all.",
-        "<strong>Against:</strong> elasticity estimates are historical. They are calculated from past data, and the conditions that produced them — competitors' prices, incomes, tastes — may not hold when the price actually changes.",
-        "<strong>Against:</strong> the coefficient is a point estimate. PED varies along a demand curve, so a value measured for a 5% change is a poor guide to a 30% change.",
-        "<strong>Against:</strong> the estimates are frequently unavailable or expensive. A small firm may have no reliable data at all, and market research costs money and takes time.",
-        "<strong>Judgement:</strong> the elasticities are useful as a structure for the decision rather than as a prediction of it. They tell the firm which questions matter — how substitutable is this, what happens to my other products, how exposed am I to incomes — and the size of the answers should be treated as indicative. Their usefulness rises with the quality of the data behind them and falls sharply for a large or novel price change."
-      ]
-    }
   ]
 }
