@@ -1,0 +1,238 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.1.3",
+  "slug": "2-1-3-employment-unemployment",
+  "title": "Employment and Unemployment",
+  "shortTitle": "Employment and Unemployment",
+  "pageTitle": "Employment and Unemployment Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on employment for Edexcel A-Level Economics: measuring unemployment, its types and causes, and the effects of migration.",
+  "intro": "Nine original multiple-choice questions on employment and unemployment, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Nine original multiple-choice questions on how unemployment is defined and measured, the types and causes of unemployment, underemployment and migration.",
+  "questions": [
+    {
+      "id": "edexcel-2-1-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A person of working age has given up looking for work after a long and unsuccessful search. In the official statistics they are counted as",
+      "options": {
+        "A": "Economically inactive.",
+        "B": "Employed.",
+        "C": "Underemployed.",
+        "D": "Unemployed."
+      },
+      "answer": "A",
+      "model": {
+        "working": "To count as <strong>unemployed</strong> a person must be without work, available to start, <em>and</em> actively seeking employment. This person fails the third test.<br />They are therefore <strong>economically inactive</strong> — the category that also covers full-time students, early retirees and the long-term sick. Discouraged workers are the awkward case: they would take a job tomorrow, but because they have stopped searching they drop out of the headline unemployment figure altogether, which is one reason that figure can understate the true shortfall in work.",
+        "distractors": {
+          "B": "They have no work at all, so they cannot be counted as employed.",
+          "C": "Underemployment means being <em>in</em> work that under-uses skills or hours. This person is not in work.",
+          "D": "The unemployed must be actively seeking work. However much they would like a job, someone who has stopped looking fails the definition."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy has a working-age population of 36 million. Of these, 24 million are in employment and 3 million are unemployed, with the rest economically inactive. The unemployment rate is",
+      "options": {
+        "A": "8.3%",
+        "B": "11.1%",
+        "C": "12.5%",
+        "D": "33.3%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The unemployment rate is measured against the <strong>labour force</strong>, not the population.<br />Labour force = employed + unemployed = 24m + 3m = <strong>27 million</strong>.<br />Unemployment rate = 3 ÷ 27 × 100 = <strong>11.1%</strong>.<br />The 9 million economically inactive are deliberately excluded, because they are neither working nor looking for work. Getting the denominator right is the whole of this calculation.",
+        "distractors": {
+          "A": "This divides by the working-age population of 36 million. That is the denominator for the <em>employment</em> rate, and using it here counts the economically inactive as though they were job-seekers.",
+          "C": "This divides by employment alone, 3 ÷ 24. The labour force includes the unemployed as well as the employed.",
+          "D": "This divides by the 9 million economically inactive, who are not part of the labour force at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In an economy the unemployment rate is 6% and the employment rate is 74%. These two figures do not sum to 100% because",
+      "options": {
+        "A": "Some people of working age are economically inactive.",
+        "B": "The two rates are measured in different years.",
+        "C": "Underemployed workers are excluded from both.",
+        "D": "Unemployment is measured by survey and employment is not."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two rates use <strong>different denominators</strong>, so there is no reason for them to be complements.<br />The <strong>unemployment rate</strong> is unemployed ÷ labour force. The <strong>employment rate</strong> is employed ÷ working-age population.<br />The working-age population is the larger of the two, because it also contains everyone who is economically inactive — students, early retirees, the long-term sick, discouraged workers. Those people appear in the denominator of one rate and in neither numerator, which is exactly why the figures fall short of 100%.",
+        "distractors": {
+          "B": "Both are published for the same period. Nothing about the timing explains the gap.",
+          "C": "The underemployed are in work, so they are counted in the employment rate. They are not missing from the figures, merely invisible within them.",
+          "D": "The Labour Force Survey measures employment and unemployment together, from the same household survey."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four unemployed workers.<br />Using Table 1, the worker experiencing real wage unemployment is",
+      "table": {
+        "caption": "Table 1: Four unemployed workers",
+        "head": [
+          "",
+          "Circumstances"
+        ],
+        "rows": [
+          [
+            "Worker 1",
+            "A ski instructor with no work during the summer"
+          ],
+          [
+            "Worker 2",
+            "Laid off when demand collapsed in a recession"
+          ],
+          [
+            "Worker 3",
+            "Priced out by a wage floor set above the market rate"
+          ],
+          [
+            "Worker 4",
+            "A graduate spending two months choosing between offers"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Worker 1.",
+        "B": "Worker 2.",
+        "C": "Worker 3.",
+        "D": "Worker 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Real wage unemployment</strong> occurs when wages are held above the market-clearing level, so that the quantity of labour supplied exceeds the quantity demanded. Minimum wage legislation and strong union bargaining are the usual causes.<br />Worker 3 is described exactly that way: priced out by a wage floor set above the rate that would clear the market. The other three are unemployed for entirely different reasons, and matching the cause to the right label is what decides which policy would help.",
+        "distractors": {
+          "A": "Seasonal unemployment — caused by predictable swings in the demand for particular labour through the year, as with ski instructors in summer.",
+          "B": "Cyclical, or demand-deficient, unemployment — caused by a shortage of aggregate demand during a downturn.",
+          "D": "Frictional unemployment — the short-term gap between jobs while someone finds the best match. It is generally the least damaging kind."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Automation removes most checkout roles from supermarkets, and the displaced workers do not have the skills the growing logistics sector is hiring for. Their unemployment is best described as",
+      "options": {
+        "A": "Cyclical.",
+        "B": "Frictional.",
+        "C": "Seasonal.",
+        "D": "Structural."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Structural unemployment</strong> is caused by a mismatch between the skills workers have and the skills employers want. Technological change is one of its commonest sources.<br />The jobs have not simply gone; they have been replaced by different jobs elsewhere in the economy that these workers cannot yet do. That is why structural unemployment persists even when the economy is growing, and why the remedies are training and mobility rather than demand management.",
+        "distractors": {
+          "A": "Cyclical unemployment comes from a shortage of aggregate demand. Here demand is fine — the logistics sector is hiring.",
+          "B": "Frictional unemployment is the brief gap while a worker moves between suitable jobs. These workers are not qualified for the vacancies that exist.",
+          "C": "Seasonal unemployment recurs with the calendar. Automation is a permanent change."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government tightens the eligibility rules for unemployment-related benefits, without anything else in the labour market changing. The most likely immediate effect is that",
+      "options": {
+        "A": "Both measures of unemployment fall.",
+        "B": "The Claimant Count falls but the LFS measure does not.",
+        "C": "The LFS measure falls but the Claimant Count does not.",
+        "D": "Neither measure changes at all."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two measures count different things. The <strong>Claimant Count</strong> records people claiming unemployment-related benefits, so it moves whenever the rules on who may claim change. The <strong>Labour Force Survey</strong> asks households directly whether they are out of work, available and searching, and takes no account of benefit entitlement.<br />Tightening eligibility removes people from the claimant figures while leaving their actual employment position untouched, so the LFS measure is unchanged. This is why the Claimant Count is treated as the less reliable indicator: it responds to policy as well as to the labour market.",
+        "distractors": {
+          "A": "The LFS is built on the ILO criteria, not on benefit receipt. Someone who loses entitlement is still unemployed by that definition.",
+          "C": "This reverses the two. It is the claimant figure that is sensitive to benefit rules.",
+          "D": "The Claimant Count must change, because fewer people now qualify to claim."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A qualified architect works twelve hours a week in a call centre because no architectural vacancies exist, and would prefer full-time work. They are best described as",
+      "options": {
+        "A": "Economically inactive.",
+        "B": "Frictionally unemployed.",
+        "C": "Underemployed.",
+        "D": "Unemployed."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Underemployment</strong> covers two situations: working in a job that under-uses your skills, and wanting more hours than you currently have. This architect meets both.<br />The significance is that none of it shows up in the headline figures. They are counted as employed, so the unemployment rate registers nothing, yet a great deal of productive potential is going to waste. Underemployment is <em>hidden within</em> the employment statistics, which is why the headline rate can look healthy while the labour market is not.",
+        "distractors": {
+          "A": "The economically inactive are not working and not seeking work. This person is doing both.",
+          "B": "Frictional unemployment means being out of work between jobs. They are in work, just the wrong work.",
+          "D": "The unemployed have no work at all. Twelve hours a week is employment, however poorly it matches their training."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Unemployment rises sharply across an economy. Alongside the obvious costs, this brings one benefit to firms, which is that",
+      "options": {
+        "A": "A larger pool of labour makes hiring easier and cheaper.",
+        "B": "Consumer spending rises as households seek out bargains.",
+        "C": "Government welfare spending raises their sales directly.",
+        "D": "Their existing workers become more productive per hour."
+      },
+      "answer": "A",
+      "model": {
+        "working": "With more people seeking work than there are jobs, firms can fill vacancies faster, choose from stronger applicants and offer lower wages than they would in a tight labour market.<br />It is worth being clear that this is a genuine benefit to firms and not a benefit to the economy. It comes at the cost of lower consumer spending, which cuts the same firms' sales, and of the skills and wellbeing lost by the people out of work. On balance the costs dominate, which is why full employment is a policy objective.",
+        "distractors": {
+          "B": "Unemployment reduces household incomes, so consumer spending falls rather than rises. That is the main cost to firms.",
+          "C": "Welfare payments partly cushion the fall in incomes, but they do not raise sales above where they were before.",
+          "D": "Nothing about rising unemployment makes the remaining workers more productive per hour. Job insecurity is as likely to harm performance as help it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Inward migration raises a country's labour force. It does not necessarily raise unemployment, because migrants",
+      "options": {
+        "A": "Are barred from claiming unemployment benefits.",
+        "B": "Are counted as economically inactive on arrival.",
+        "C": "Fill shortages and spend, creating demand for labour.",
+        "D": "Take only the jobs that native workers have refused."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The intuition that more workers must mean more unemployment treats the number of jobs as fixed. It is not.<br />Migrants add to the labour force, but they also <strong>fill vacancies</strong> employers could not otherwise fill, and they <strong>spend</strong> their earnings on housing, food and services — which raises demand for labour in turn. Both effects create work rather than competing for a fixed stock of it.<br />The honest position is that the net effect depends on the sector and the time horizon. Competition can raise unemployment among native workers in low-skilled sectors in the short run, while the demand effect builds over time.",
+        "distractors": {
+          "A": "Benefit entitlement is a matter of policy and varies. It has no bearing on whether jobs exist for people to do.",
+          "B": "Migrants who are working or looking for work are in the labour force, which is exactly what the stem states.",
+          "D": "Some do and some do not — the notes are explicit that competition for jobs in low-skilled sectors is real. The reason unemployment need not rise is that labour demand grows too."
+        }
+      }
+    }
+  ]
+}

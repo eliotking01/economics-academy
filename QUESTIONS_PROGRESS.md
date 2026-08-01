@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 101 topics, 773 questions. AQA is complete, and so is Edexcel Theme 1.
-65 topics remain — Edexcel Themes 2, 3 and 4.**
+**Live: 105 topics, 808 questions. AQA is complete, Edexcel Theme 1 is complete,
+and Theme 2 unit 2.1 is done. 61 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -360,17 +360,37 @@ Useful things established while building, worth not rediscovering.
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 24 | 185 |
+| Theme 2 | 20 (units 2.2 to 2.6) | ~150 |
 | Theme 3 | 20 | 157 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 2.** It is the macro theme — measures of economic
-performance, aggregate demand and supply, national income, economic growth,
-policy objectives and instruments — so the twins to check against are the whole
-of **AQA macro 2.1 to 2.5**, not micro. Expect the cross-board risk (§8) to be
-at its highest yet: 209 AQA macro questions cover almost exactly this ground.
-Theme 2 splits naturally at 2.1–2.3 (measurement and AD/AS) and 2.4–2.6 (growth,
-policy and conflicts).
+**Next batch: Theme 2 unit 2.2 (Aggregate Demand)** — 2.2.1 aggregate demand,
+2.2.2 consumption, 2.2.3 investment, 2.2.4 government expenditure, 2.2.5 net
+trade. Five topics. Edexcel splits AD into five separate topics where AQA has
+one (2.2.3 Determinants of AD, 9 questions), so there is more room than the
+overlap first suggests — each Edexcel topic can go deeper into its own component
+than the single AQA set does.
+
+**The twins for the rest of Theme 2 are AQA macro, and the overlap is severe.**
+Unit 2.1 alone collided with AQA 2.1.2, 2.1.3, 2.1.4, 2.3.2, 2.3.3 and 2.6.3.
+Print every AQA macro stem before writing, exactly as batch 13 did for micro.
+Specific ground already occupied:
+
+- **2.2 (AD)** — AQA 2.2.2 and 2.2.3: the AD expression, why AD slopes down,
+  MPC calculation, interest rates and consumption, the wealth effect, net
+  investment, automatic stabilisers, depreciation and net trade.
+- **2.3 (AS)** — AQA 2.2.5 and 2.2.6 cover SRAS and LRAS almost completely,
+  including the Keynesian/Classical contrast and both sketch items.
+- **2.4 (national income)** — AQA 2.2.1 (circular flow) and 2.2.4 (the
+  multiplier, 10 questions including five calculations).
+- **2.5 (growth)** — AQA 2.3.1 (growth and the economic cycle, output gaps).
+- **2.6 (objectives and policies)** — AQA 2.1.1, 2.3.4, 2.5.1 and 2.5.2.
+
+**Four Theme 2 pages in the remaining units are incomplete** — see
+`REVIEW-NOTES.md` N-Q9. 2.2.2 does not teach expectations, 2.2.3 does not teach
+the accelerator, 2.4.1 does not teach the three approaches to measuring GDP, and
+2.5.1 does not teach demand-side causes of growth. Write to what each body
+actually contains and note the omission, as unit 2.1 did.
 
 **Reading the notes.** `raw-notes/edexcel/` has markdown for most of Themes 2–4,
 which is far quicker than scraping the HTML — but **the published pages are what
@@ -958,6 +978,75 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 14 — Edexcel Theme 2, unit 2.1 (2026-08-01)
+
+4 topics, 35 questions. **Measures of Economic Performance** — the first macro
+questions written for Edexcel.
+
+All 35 re-derived from the stem alone with **0 mismatches**; 28 arithmetic
+checks, covering every figure in every calculation and distractor.
+
+**Originality finished clean on both fronts — zero shared 8-word runs against
+either past-paper corpus and zero against the whole 773-question bank.** It did
+not start that way. The first draft produced **five** collisions with AQA macro,
+two of which were effectively the same question with new numbers:
+
+- **2.1.2 Q3** asked for the inflation rate from two CPI values, "to one decimal
+  place" — which is AQA 2.1.3 Q8 exactly, down to the rounding instruction.
+  Rebuilt to run the calculation *forwards* instead: given the index and the
+  rate, find next year's index. AQA has nothing of that shape, and it tests the
+  index-points-versus-percentage confusion more directly.
+- **2.1.4 Q2** shared "Using Table 1, the current account balance is" with both
+  AQA 2.1.2 Q5 and AQA 2.6.3 Q2. Recast to ask whether the account is in deficit
+  or surplus and by how much, with the options as deficit/surplus statements
+  rather than signed figures.
+- 2.1.2 Q4, 2.1.3 Q6 and 2.1.4 Q7 needed stem rewording only.
+
+**"All other things being equal, the most likely…" is now a liability.** One
+draft stem using it collided with **20 existing questions** in our own bank and
+with the AQA papers. It is stock exam scaffolding and was fine when the bank was
+small; at 800 questions it is noise that buries real findings. Prefer a specific
+ceteris paribus clause — "without anything else in the labour market changing" —
+which is both more original and more precise.
+
+**Where Edexcel differs from AQA on this unit**, and what it bought:
+
+- Edexcel teaches the **income approach** to GDP (wages + rent + interest +
+  profit) alongside the expenditure approach, and that both should give the same
+  total. AQA uses only the expenditure method. Two questions come from this.
+- Edexcel names **disinflation** as a third category beside inflation and
+  deflation. AQA does not teach the term at all, and it makes a clean foundation
+  question.
+- Edexcel gives five named **CPI limitations**, including substitution bias and
+  quality change, neither of which AQA tests.
+- Edexcel defines the **capital account** as non-produced, non-financial assets —
+  land and patents. AQA never tests the capital account, so the patent question
+  is entirely free ground.
+- Edexcel names **real wage unemployment** as a type; AQA's list does not
+  include it.
+- Edexcel's page makes the **two-denominator** point explicitly: the
+  unemployment rate is measured against the labour force, the employment rate
+  against the working-age population. That is Q3.
+
+| | |
+| --- | --- |
+| Answer letters | A 11, B 9, C 9, D 6 (even would be 8.75) |
+| Skills | applied-reasoning 19, calculation 8, definition-in-context 5, data-table 3 |
+| Difficulty | foundation 4, standard 26, stretch 5 |
+| Sketch to solve | 0 |
+
+**`calculation` at 23% is the highest share of any batch on the site**, against a
+~15% target, and it confirms what AQA macro showed: the macro specification is
+simply more quantitative. GDP from its components, PPP conversion, CPI from a
+basket, index from a rate, a weighted price index, real wages, the unemployment
+rate and the current account balance are all genuine arithmetic that unit 2.1
+supports naturally.
+
+**No sketch items, by design.** Unit 2.1 is measurement — indicators, indices and
+the balance of payments. The AD/AS diagrams start at 2.2, and a sketch item here
+would have been invented rather than earned. The same thing happened at AQA 2.1,
+and the share recovered from 2.2 onward.
 
 ---
 

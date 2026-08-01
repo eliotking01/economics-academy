@@ -1,0 +1,191 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.1.1",
+  "slug": "2-1-1-economic-growth",
+  "title": "Economic Growth",
+  "shortTitle": "Measuring Economic Growth",
+  "pageTitle": "Measuring GDP and Economic Growth Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on measuring economic growth for Edexcel A-Level Economics: GDP, real and nominal, GNI, PPP and the limits of GDP.",
+  "intro": "Eight original multiple-choice questions on measuring economic growth, written to the style and difficulty of Edexcel Paper 2 Section A. Three are calculations.",
+  "notesTeaser": "Eight original multiple-choice questions on how GDP is measured, real against nominal, purchasing power parity, and what GDP data leaves out.",
+  "questions": [
+    {
+      "id": "edexcel-2-1-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A statistician adds together all the wages, rent, interest and profit earned in a country over a year. The figure produced is",
+      "options": {
+        "A": "GDP measured by the expenditure approach.",
+        "B": "GDP measured by the income approach.",
+        "C": "Gross National Income at market prices.",
+        "D": "Real GDP per capita for that year."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The <strong>income approach</strong> totals the payments made to the factors of production: wages to labour, rent to land, interest to capital and profit to enterprise.<br />It is one of two routes to the same destination. Producing output generates income of exactly the same value, so adding up all incomes gives the same figure as adding up all spending — which is why either method can be used to measure GDP.",
+        "distractors": {
+          "A": "The expenditure approach adds C + I + G + (X − M). It totals spending rather than income, though in principle it reaches the same number.",
+          "C": "GNI is GDP <em>plus</em> net income from abroad. Nothing here has been added for earnings sent home from overseas or subtracted for income paid out.",
+          "D": "Nothing has been adjusted for inflation or divided by the population, so this is neither real nor per capita."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In one year an economy records consumption of £780bn, investment of £190bn, government spending of £310bn, exports of £340bn and imports of £395bn. Using the expenditure approach, GDP is",
+      "options": {
+        "A": "£1,225bn",
+        "B": "£1,280bn",
+        "C": "£1,335bn",
+        "D": "£1,620bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The expenditure approach is <strong>GDP = C + I + G + (X − M)</strong>.<br />C + I + G = £780bn + £190bn + £310bn = <strong>£1,280bn</strong>.<br />Net exports: £340bn − £395bn = <strong>−£55bn</strong>.<br />GDP = £1,280bn − £55bn = <strong>£1,225bn</strong>.<br />Net exports are negative here because the country imports more than it sells abroad, and imports are subtracted because they are output produced somewhere else.",
+        "distractors": {
+          "B": "£1,280bn is C + I + G with net exports left out altogether. Trade is part of the expenditure total and cannot simply be dropped.",
+          "C": "This adds the £55bn instead of subtracting it: £1,280bn + £55bn. Getting the sign the wrong way round turns a trade deficit into a surplus.",
+          "D": "This adds exports but never subtracts imports: £780bn + £190bn + £310bn + £340bn. Imports have to come off, or foreign output is counted as domestic."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's GDP measured by the income approach differs from its GDP measured by the expenditure approach. In principle this should not happen, because",
+      "options": {
+        "A": "Every pound spent on output becomes income for someone.",
+        "B": "Governments require the two figures to be identical.",
+        "C": "Investment is counted in both totals by convention.",
+        "D": "Real and nominal GDP are always the same figure."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two approaches are two views of a single circular flow. When a household buys something, that spending becomes revenue for a firm, and the firm pays it out as wages, rent, interest and profit.<br />So the total spent on output and the total earned from producing it are the <strong>same quantity counted twice over</strong>. In practice the two estimates come from different surveys and rarely match exactly, and the gap is published as a statistical discrepancy — but there is no economic reason for one to exceed the other.",
+        "distractors": {
+          "B": "The two are compiled independently from different data. Nothing forces them to agree, which is precisely why a discrepancy shows up.",
+          "C": "Investment appears in the expenditure total only. On the income side it turns up as the wages and profits earned by making the capital goods.",
+          "D": "Real and nominal GDP differ whenever the price level changes. That is a separate distinction from how output is measured."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over one year an economy's nominal GDP rises while its real GDP falls. It follows that",
+      "options": {
+        "A": "Output fell and the price level rose.",
+        "B": "Output rose and the price level fell.",
+        "C": "The population must have fallen.",
+        "D": "Trade must have moved into surplus."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Nominal GDP is measured at current prices, so it moves with both the quantity produced and the prices charged. Real GDP strips the price effect out and tracks the <strong>volume of output</strong> alone.<br />Real GDP falling means output fell. Nominal GDP nonetheless rising means prices rose by enough to more than offset it. This is why real GDP is the measure used for economic growth: nominal figures can rise in a year when an economy is producing less than before.",
+        "distractors": {
+          "B": "That combination would show up as the reverse — real GDP rising and nominal GDP held back by falling prices.",
+          "C": "Population affects GDP <em>per capita</em>, not the level of GDP. Neither figure here is a per-head measure.",
+          "D": "The trade balance is one component of GDP. It cannot on its own explain a divergence between the nominal and real measures, which is caused by prices."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q5",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country's GNI per capita is 60,000 units of its own currency. The market exchange rate is 40 units to the pound, but a basket of goods costing £1 in the UK costs only 25 units there. Measured at purchasing power parity, GNI per capita is",
+      "options": {
+        "A": "£1,500",
+        "B": "£2,400",
+        "C": "£4,000",
+        "D": "£96,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Purchasing power parity converts income at the rate that makes a given basket cost the same in both countries, rather than at the rate currencies happen to trade at.<br />The PPP rate here is <strong>25 units to the pound</strong>, because that is what £1 of goods actually costs locally.<br />GNI per capita at PPP = 60,000 ÷ 25 = <strong>£2,400</strong>.<br />At the market rate it would be 60,000 ÷ 40 = £1,500. The PPP figure is the larger because the currency buys more at home than the exchange rate suggests — the usual pattern for a lower-income country, where local services and housing are cheap.",
+        "distractors": {
+          "A": "£1,500 converts at the <em>market</em> exchange rate of 40. That is exactly the figure PPP exists to replace, because it ignores how far the money goes locally.",
+          "C": "This divides by the 15-unit gap between the two rates (40 − 25) rather than by the PPP rate itself. The difference between the rates is not a conversion rate.",
+          "D": "This multiplies by 40 ÷ 25 instead of dividing by 25. Inverting the conversion inflates the figure enormously and should be obvious from the size of the answer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Smartphones sold today are far more capable than those sold a decade ago, yet cost about the same. In measuring the change in living standards, GDP data is likely to",
+      "options": {
+        "A": "Overstate the improvement in living standards.",
+        "B": "Record the change accurately in real terms.",
+        "C": "Understate the improvement in living standards.",
+        "D": "Show a fall in output from the sector."
+      },
+      "answer": "C",
+      "model": {
+        "working": "GDP counts the money value of output. If the price is unchanged, the same spending on phones contributes the same amount to GDP as it did a decade ago.<br />What the figures miss is that the buyer now gets a far better product for that money. Real welfare has risen and GDP has not moved, so the data <strong>understates</strong> the gain. This is the <em>quality change</em> limitation, and it applies most strongly to technology, medicine and anything else improving quickly at a stable price.",
+        "distractors": {
+          "A": "Overstating would require GDP to rise by more than welfare. Here GDP does not rise at all while welfare does.",
+          "B": "Real terms adjusts for the price level, not for what the product does. A constant price on a much better good is exactly the case real GDP cannot capture.",
+          "D": "Output has not fallen. The same number of phones is being sold at the same price, so the sector's contribution is unchanged."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries have identical real GDP per capita, but in one the richest tenth of households receive half of all income. Comparing living standards from GDP per capita alone will",
+      "options": {
+        "A": "Be accurate, since the averages are identical.",
+        "B": "Correct itself once PPP is applied.",
+        "C": "Overstate how the typical household there lives.",
+        "D": "Understate output in the more equal country."
+      },
+      "answer": "C",
+      "model": {
+        "working": "GDP per capita is an <strong>arithmetic mean</strong>, and a mean says nothing about how the total is shared out. Where income is heavily concentrated, the average sits well above what the household in the middle actually receives.<br />So the two countries look identical on the figures while the typical household in the unequal one is materially worse off. This is the first of the standard limitations: GDP data <strong>does not measure inequality</strong>, and comparisons drawn from it alone can mislead badly.",
+        "distractors": {
+          "A": "The averages being identical is precisely the problem. It is what conceals the difference in how most people actually live.",
+          "B": "PPP adjusts for differences in the cost of living <em>between</em> countries. It does nothing about the distribution of income within one.",
+          "D": "Output is the same in both, by assumption. What differs is who receives it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country has a very large unrecorded cash economy. Compared with the country's true level of output, measured GDP will be",
+      "options": {
+        "A": "Overstated, because cash spending is recorded twice.",
+        "B": "Unaffected, because informal work creates no output.",
+        "C": "Unaffected, because the two errors cancel out.",
+        "D": "Understated, because unrecorded activity is missed."
+      },
+      "answer": "D",
+      "model": {
+        "working": "GDP is built from recorded transactions — tax returns, surveys, company accounts. Work paid in cash and never declared produces real goods and services but leaves no trace in the data.<br />Measured GDP therefore comes in <strong>below</strong> the true figure, and the gap is largest where the informal sector is largest. Two consequences follow: the country looks poorer than it is, and comparisons with countries having smaller informal sectors are unreliable in a direction that is hard to quantify.",
+        "distractors": {
+          "A": "Double counting is a separate risk, guarded against by counting only final goods and services. It is not what an unrecorded economy causes.",
+          "B": "Informal work produces genuine output — meals cooked, hair cut, houses repaired. It is invisible to the statistician, not absent from the economy.",
+          "C": "There is only one error here, and it runs in one direction. Nothing offsets output that is never recorded."
+        }
+      }
+    }
+  ]
+}

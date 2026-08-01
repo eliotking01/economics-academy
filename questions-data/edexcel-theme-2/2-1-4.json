@@ -1,0 +1,241 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.1.4",
+  "slug": "2-1-4-balance-of-payments",
+  "title": "Balance of Payments",
+  "shortTitle": "The Balance of Payments",
+  "pageTitle": "Balance of Payments and Current Account Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the balance of payments for Edexcel A-Level Economics: the current account, causes of deficits and policy trade-offs.",
+  "intro": "Eight original multiple-choice questions on the balance of payments, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on the structure of the balance of payments, the current account, why deficits arise and the trade-offs in correcting them.",
+  "questions": [
+    {
+      "id": "edexcel-2-1-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country sells a patent to an overseas buyer. In the balance of payments this transaction is recorded in the",
+      "options": {
+        "A": "Capital account.",
+        "B": "Current account.",
+        "C": "Financial account.",
+        "D": "Secondary income balance."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>capital account</strong> records capital transfers and the sale or purchase of <strong>non-produced, non-financial assets</strong> — land, patents, copyrights and trademarks.<br />A patent fits exactly: it was not produced in the year it is sold, and it is not a financial asset like a share or a bond. The capital account is usually small enough to be ignored in analysis, which is precisely why the items that belong in it are easy to misfile.",
+        "distractors": {
+          "B": "The current account covers trade in goods and services, primary income and secondary income. Selling a patent outright is none of those — licensing its use for a fee would be a service export.",
+          "C": "The financial account records cross-border <em>investment</em> flows: direct investment, portfolio investment in shares and bonds, and changes in reserves.",
+          "D": "Secondary income covers one-way transfers such as foreign aid and remittances, and it sits inside the current account."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the balance on each component of one country's current account.<br />Using Table 1, the country's current account is in",
+      "table": {
+        "caption": "Table 1: One country's current account, £bn",
+        "head": [
+          "Component",
+          "Balance"
+        ],
+        "rows": [
+          [
+            "Trade in goods",
+            "−140"
+          ],
+          [
+            "Trade in services",
+            "+95"
+          ],
+          [
+            "Primary income",
+            "+18"
+          ],
+          [
+            "Secondary income",
+            "−22"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Deficit of £49bn.",
+        "B": "Deficit of £85bn.",
+        "C": "Deficit of £140bn.",
+        "D": "Surplus of £113bn."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The current account is the sum of its four components, each taken with its own sign:<br />−140 + 95 + 18 − 22 = <strong>−£49bn</strong>.<br />The country runs a current account <strong>deficit</strong> of £49bn. Note how much of the goods deficit the services surplus offsets: the £140bn shortfall on goods is reduced to £49bn once services, primary and secondary income are included. Quoting the goods figure alone would nearly treble the apparent problem.",
+        "distractors": {
+          "B": "This subtracts primary income instead of adding it: −140 + 95 − 18 − 22. Primary income is shown as +18, a net inflow, so it improves the balance rather than worsening it.",
+          "C": "£140bn is the trade in goods balance on its own. It is the largest single component, but the other three still have to be added.",
+          "D": "This adds only the two positive entries, 95 + 18, and ignores both deficits. Every component counts, whichever way it points."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country has a large deficit on trade in goods and a smaller surplus on trade in services. Quoting only the goods figure would",
+      "options": {
+        "A": "Give the correct figure, since services are invisible.",
+        "B": "Overstate the size of the current account deficit.",
+        "C": "Show a surplus rather than a deficit.",
+        "D": "Understate the size of the current account deficit."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Trade in goods is the <strong>visible balance</strong> and trade in services the <strong>invisible balance</strong>. Both are part of the current account.<br />A surplus on services offsets part of the deficit on goods, so the combined figure is a <em>smaller</em> deficit than the goods number alone. Reporting only the visible balance therefore makes the position look worse than it is — a common feature of headline coverage in economies like the UK, which run large goods deficits alongside substantial service exports.",
+        "distractors": {
+          "A": "Invisible means intangible, not excluded. Services count in full, and for some economies they are the larger export.",
+          "C": "The services surplus is smaller than the goods deficit, so the two together still leave a deficit.",
+          "D": "Understating would mean the true deficit is larger than the goods figure. The offsetting surplus makes it smaller."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A consumer boom raises household spending sharply while domestic output is already close to capacity. The most likely effect on the current account is that it",
+      "options": {
+        "A": "Improves, because higher incomes raise exports.",
+        "B": "Improves, because firms invest in new capacity.",
+        "C": "Worsens, because extra demand is met by imports.",
+        "D": "Worsens, because export prices fall."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is the <strong>demand-side</strong> cause of a current account deficit. Households want to buy more, and domestic producers are already near full capacity, so the additional demand is satisfied from abroad.<br />Imports rise, exports are unchanged, and the current account deteriorates. The link between strong domestic demand and a widening deficit is one of the most reliable in macroeconomics, and it is why fiscal tightening is a standard, if blunt, response.",
+        "distractors": {
+          "A": "Exports depend on demand in other countries and on competitiveness, neither of which a domestic consumer boom improves.",
+          "B": "Investment in new capacity might ease the pressure eventually, but it takes years. In the meantime the demand is met by imports.",
+          "D": "Nothing here makes export prices fall. If anything, an economy at full capacity tends to see costs and prices rise, which weakens competitiveness further."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four developments in an economy that runs a current account deficit.<br />Using Table 1, the development that is a supply-side cause of the deficit is",
+      "table": {
+        "caption": "Table 1: Four developments in the economy",
+        "head": [
+          "",
+          "Development"
+        ],
+        "rows": [
+          [
+            "Development 1",
+            "Households save less and spend more"
+          ],
+          [
+            "Development 2",
+            "A recession hits the country's main export markets"
+          ],
+          [
+            "Development 3",
+            "The currency appreciates strongly"
+          ],
+          [
+            "Development 4",
+            "Productivity growth falls behind that of competitors"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Development 1.",
+        "B": "Development 2.",
+        "C": "Development 3.",
+        "D": "Development 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Supply-side</strong> causes work through a country's ability to produce competitively: productivity, costs and the quality of what it makes.<br />Falling behind competitors on productivity raises unit costs relative to theirs, so exports become harder to sell and imports more attractive at home. The deficit that results is structural, and it will not be fixed by managing demand — which is what makes it the most stubborn of the four.",
+        "distractors": {
+          "A": "A <strong>demand-side</strong> cause. Lower saving means higher spending, and a good deal of that spending goes on imports.",
+          "B": "A <strong>global condition</strong>. Demand for the country's exports falls for reasons entirely outside its control.",
+          "C": "An <strong>exchange rate</strong> movement. A stronger currency makes exports dearer abroad and imports cheaper at home."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "To reduce a current account deficit, a government raises interest rates. Besides attracting investment from abroad, the policy is likely to",
+      "options": {
+        "A": "Raise domestic borrowing and household spending.",
+        "B": "Reduce domestic demand and slow economic growth.",
+        "C": "Weaken the currency against other currencies.",
+        "D": "Widen the deficit by raising the price of imports."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Higher interest rates make borrowing dearer and saving more rewarding, so consumption and investment both fall. Weaker domestic demand pulls imports down, which is the intended effect on the current account.<br />The cost arrives at the same time. Slower growth and higher unemployment are not side effects to be managed but the very mechanism by which the deficit narrows. This is what the notes mean by <strong>interconnectedness</strong>: a policy aimed at one objective necessarily moves the others.",
+        "distractors": {
+          "A": "Dearer borrowing reduces spending rather than raising it. That is the whole point of the policy.",
+          "C": "Attracting foreign investment raises demand for the currency, which tends to <em>strengthen</em> it. That is itself awkward, since a stronger currency makes exports dearer.",
+          "D": "A stronger currency makes imports cheaper, not dearer. The risk to the deficit runs through export competitiveness instead."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Faced with a persistent current account deficit, a government tightens fiscal policy to hold back domestic demand. The cost of taking this route is that it",
+      "options": {
+        "A": "Cuts growth and is likely to raise unemployment.",
+        "B": "Makes imports relatively cheaper than home-produced goods.",
+        "C": "Raises the price of the country's exports abroad.",
+        "D": "Weakens the currency and worsens the deficit further."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Cutting government spending reduces aggregate demand directly. Lower demand means fewer imports, so the current account improves — but the same fall in demand reduces output and costs jobs.<br />This is an <strong>expenditure-reducing</strong> approach, and its defining feature is that it works by making the country poorer. Nothing about competitiveness has improved; the deficit narrows because less of everything is being bought. That is why supply-side measures are the preferred long-run answer, despite taking far longer to work.",
+        "distractors": {
+          "B": "Lower domestic demand does not change relative prices between home and foreign goods. It reduces the quantity bought of both.",
+          "C": "Export prices are set by firms' costs and the exchange rate. Government spending cuts do not raise them, and by easing capacity pressure may slightly lower them.",
+          "D": "Fiscal tightening tends to be associated with a stronger currency, not a weaker one, and the deficit narrows rather than widening."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country imports more than it exports and covers the difference by selling assets to foreign buyers. In the balance of payments, the sale of those assets appears as",
+      "options": {
+        "A": "A credit in the current account.",
+        "B": "A debit in the current account.",
+        "C": "A credit in the financial account.",
+        "D": "A debit in the financial account."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The balance of payments must balance: total credits equal total debits. A current account deficit therefore has to be financed, and the <strong>financial account</strong> is where that financing is recorded.<br />Selling an asset to a foreign buyer brings money <em>into</em> the country, so it is a <strong>credit</strong>. The deficit on the current account and the surplus on the financial account are two sides of one transaction — the country is consuming more than it produces and paying for the difference by transferring ownership of its assets abroad.<br />That is also the long-run concern: the assets sold generate income for their new owners, which shows up as an outflow in primary income for years afterwards.",
+        "distractors": {
+          "A": "The current account records trade, income and transfers. Selling ownership of an asset is not one of them.",
+          "B": "Wrong on both counts — wrong account, and money is flowing in rather than out.",
+          "D": "The account is right but the direction is wrong. A sale brings money in, which is a credit."
+        }
+      }
+    }
+  ]
+}
