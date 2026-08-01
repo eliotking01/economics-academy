@@ -1,0 +1,199 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.2.2",
+  "slug": "4-2-2-inequality",
+  "title": "Inequality",
+  "shortTitle": "Inequality",
+  "pageTitle": "Inequality Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on inequality for Edexcel A-Level Economics: the Lorenz curve, the Gini coefficient, the Kuznets curve and capitalism.",
+  "intro": "Seven original multiple-choice questions on income and wealth inequality, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on measuring inequality with the Lorenz curve and Gini coefficient, the Kuznets curve, and the costs of an unequal distribution.",
+  "questions": [
+    {
+      "id": "edexcel-4-2-2-q1",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "On a Lorenz curve diagram, the area between the line of perfect equality and the Lorenz curve is 0.18, and the area beneath the Lorenz curve is 0.32. The Gini coefficient is",
+      "options": {
+        "A": "0.18",
+        "B": "0.32",
+        "C": "0.36",
+        "D": "0.56"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Gini coefficient is the area between the line of perfect equality and the Lorenz curve, divided by the <strong>whole</strong> area beneath the line of perfect equality.<br />Gini = A ÷ (A + B).<br />A + B = 0.18 + 0.32 = <strong>0.50</strong>.<br />Gini = 0.18 ÷ 0.50 = <strong>0.36</strong>.<br />The check on the arithmetic is that the total area beneath the diagonal of a unit square is always 0.5, which is what A and B sum to here. A coefficient of 0.36 sits in the range typical of a developed economy: some way from the 0 of perfect equality, a long way from the 1 of perfect inequality.",
+        "distractors": {
+          "A": "This is area A on its own. A bare area is not a coefficient — it has to be expressed as a proportion of the total area beneath the line of perfect equality, or it would change every time the diagram was drawn at a different size.",
+          "B": "This is area B, the area beneath the Lorenz curve itself. That area is the part of the diagram representing the distribution that <em>is</em> achieved, and it is the denominator's other half, not the answer.",
+          "D": "A denominator error: 0.18 ÷ 0.32 divides A by B rather than by A + B. The formula puts the <strong>total</strong> area beneath the diagonal underneath, not the remaining area."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the cumulative share of total income received by households in two countries, ranked from the poorest upwards.<br />From Table 1, the richest 20% of households receive",
+      "table": {
+        "caption": "Table 1: Cumulative share of total income, by population group",
+        "head": [
+          "Population group",
+          "Country R",
+          "Country S"
+        ],
+        "rows": [
+          [
+            "Poorest 20%",
+            "8%",
+            "4%"
+          ],
+          [
+            "Poorest 40%",
+            "20%",
+            "12%"
+          ],
+          [
+            "Poorest 60%",
+            "38%",
+            "26%"
+          ],
+          [
+            "Poorest 80%",
+            "62%",
+            "54%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "38% in Country R and 46% in Country S.",
+        "B": "38% in Country R and 54% in Country S.",
+        "C": "62% in Country R and 46% in Country S.",
+        "D": "62% in Country R and 54% in Country S."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The table is cumulative, so the bottom 80% row already contains everyone except the richest fifth. The richest 20% receive whatever is left over.<br />Country R: 100% − 62% = <strong>38%</strong>.<br />Country S: 100% − 54% = <strong>46%</strong>.<br />Country S is the more unequal of the two: its richest fifth take almost half of all income, and its Lorenz curve therefore lies further from the line of perfect equality at every point. Reading down the columns shows the same thing — S's poorest 20% receive 4% against R's 8%.",
+        "distractors": {
+          "B": "The subtraction is done for Country R and not for Country S, where 54% has been read off as the top share. 54% is the cumulative share of the bottom 80%, not the share of the top 20%.",
+          "C": "The reverse slip: 62% is read straight off the table for Country R, when that figure is the cumulative share of the poorest 80%.",
+          "D": "Both cumulative figures have been read as top-fifth shares. A cumulative table counts <strong>upwards from the poorest</strong>, so any share for the top group has to be found by subtracting from 100%."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "As a low-income economy industrialises, inequality first widens and then narrows once average incomes have risen far enough. This pattern is described by",
+      "options": {
+        "A": "The Gini coefficient.",
+        "B": "The Kuznets curve.",
+        "C": "The Lorenz curve.",
+        "D": "The poverty trap."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The Kuznets curve is a hypothesis about the <strong>path</strong> inequality follows as a country develops: an inverted U. Inequality rises in the early stages, reaches a turning point, and falls thereafter.<br />The mechanism behind the rising half is structural change. Industrialisation and urbanisation create a sector that pays much more than agriculture does, so as some workers move into it and others do not, the gap between them widens — even though nobody has become poorer.",
+        "distractors": {
+          "A": "The Gini coefficient is a single number measuring how unequal a distribution is at one moment. It can be plotted over time, but it is the measurement, not the hypothesis about how inequality and development are related.",
+          "C": "The Lorenz curve is the diagram from which the Gini coefficient is calculated. It shows the distribution of income across the population, not a path over the course of development.",
+          "D": "The poverty trap describes households unable to escape poverty because low skills mean low income and no means of investing in the next generation. It is about persistence at the bottom, not the shape of inequality as a country grows."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Kuznets curve predicts that inequality eventually falls once development has gone far enough. The mechanism usually given for this second stage is that",
+      "options": {
+        "A": "Agriculture disappears from the economy altogether.",
+        "B": "Industrial wages fall back towards agricultural wages.",
+        "C": "Population growth slows as countries become richer.",
+        "D": "Wider education and redistribution spread the gains."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The falling half of the curve is driven by things a richer country can afford and a poorer one cannot. Access to education broadens, which raises the earnings of people who were previously stuck in low-paid work; social mobility improves; and governments collect enough revenue to fund progressive taxes and welfare programmes.<br />Note that the second stage is a <strong>hypothesis, not a law</strong>. Several developed economies have seen inequality rise again in recent decades, which is the standard evaluation point against the Kuznets curve.",
+        "distractors": {
+          "A": "The share of the workforce in agriculture falls sharply during development, but the sector does not vanish, and its disappearance is not what the hypothesis rests on.",
+          "B": "Nothing in the hypothesis requires industrial wages to fall. Inequality narrows because the incomes at the bottom catch up, not because the incomes above them are pulled down.",
+          "C": "Slower population growth is a common feature of richer economies, but it acts on the size of the population rather than on how income is distributed within it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Inequality in a country becomes extreme, and low-income households come to see little prospect of improving their position however hard they work. The most likely economic cost is",
+      "options": {
+        "A": "A fall in effort and productivity.",
+        "B": "A fall in the country's Gini coefficient.",
+        "C": "A rise in entrepreneurial risk-taking.",
+        "D": "A rise in the returns to education."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The usual defence of some inequality is that it provides an incentive: the prospect of a higher income encourages people to work, train and take risks. That argument depends on the reward being <strong>reachable</strong>.<br />Where inequality becomes extreme and the system is widely seen as unfair, the incentive weakens rather than strengthens. Effort and productivity fall, which costs the economy output. The same mechanism explains the two-sided treatment of inequality: a moderate gap motivates, an extreme gap demotivates.",
+        "distractors": {
+          "B": "A falling Gini coefficient would mean inequality was <em>narrowing</em>. The question describes it widening, so the coefficient rises.",
+          "C": "Extreme inequality combined with no realistic prospect of advancement is the opposite of an environment that encourages risk-taking. This mistakes the incentive argument for one that holds at any level of inequality.",
+          "D": "If low-income households see no route to a better position, that is a sign that the returns to education are <strong>not</strong> reaching them. Widening inequality of this kind usually accompanies unequal access to education, not higher returns from it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An economy is based on private ownership of the factors of production, with output directed by the pursuit of profit. In such a system, rewards go to",
+      "options": {
+        "A": "Every household in equal shares.",
+        "B": "Those who own capital and make it profitable.",
+        "C": "Those whose incomes fall below the median.",
+        "D": "Workers rather than the owners of capital."
+      },
+      "answer": "B",
+      "model": {
+        "working": "That description is capitalism. Its distributive rule is that returns follow ownership and profitability, so those who own capital and can put it to profitable use accumulate faster than those with only their labour to sell.<br />This is why capitalism tends to produce inequality of <strong>wealth</strong> even more than of income: returns on assets can be reinvested, while wages are largely consumed. It is also why the debate over inequality is a debate about the system's incentives rather than an accident of policy.",
+        "distractors": {
+          "A": "Equal shares regardless of contribution describes a command or fully planned system. Capitalism distributes according to ownership and profit, which is precisely why outcomes are unequal.",
+          "C": "Directing rewards towards those below the median is what redistribution through tax and welfare does. That is a government correction applied to the outcome, not the rule the system itself follows.",
+          "D": "Workers are paid for their labour, but the residual profit belongs to the owners of the capital. It is that residual, and the ability to reinvest it, that drives the accumulation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a highly unequal economy, children from low-income households are much less likely than others to enter higher-paid occupations. This cost of inequality is best described as",
+      "options": {
+        "A": "A fall in the Gini coefficient.",
+        "B": "A rise in absolute poverty.",
+        "C": "Reduced social mobility.",
+        "D": "Reduced returns to education."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Social mobility is the ability to move between income groups over a lifetime or between generations. Where inequality is wide, the advantages that buy access to good schooling, professional networks and unpaid training are concentrated at the top, so the starting position predicts the finishing one.<br />The economic cost is not only unfairness. Talent that never reaches the occupation it is suited to is <strong>wasted productive potential</strong>, which lowers output below what the economy could otherwise produce.",
+        "distractors": {
+          "A": "The Gini coefficient would be <em>rising</em> in an economy described as highly unequal. A fall would indicate the distribution narrowing.",
+          "B": "Absolute poverty is about being unable to afford basic necessities. The question describes restricted access to higher-paid occupations, which can happen in a country where nobody is in absolute poverty at all.",
+          "D": "The returns to education are high in unequal economies — that is part of what makes them unequal. The problem is unequal <strong>access</strong> to education, not a poor payoff from it."
+        }
+      }
+    }
+  ]
+}

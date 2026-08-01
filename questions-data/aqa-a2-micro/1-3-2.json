@@ -1,0 +1,276 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.3.2",
+  "slug": "1-3-2-price-income-and-cross-elasticities-of-demand",
+  "title": "Price, Income and Cross Elasticities of Demand",
+  "shortTitle": "Elasticities of Demand",
+  "pageTitle": "Elasticity of Demand Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on PED, YED and XED for AQA A-Level Economics, with full worked answers and instant feedback. Test yourself now.",
+  "intro": "Ten original multiple-choice questions on price, income and cross elasticities of demand, written to the style and difficulty of AQA Paper 3 Section A. Answer them one at a time for instant feedback, or read straight through — every question carries a full worked model answer.",
+  "notesTeaser": "Ten original multiple-choice questions on price, income and cross elasticities of demand, written to AQA Paper 3 Section A style, with full worked answers.",
+  "questions": [
+    {
+      "id": "aqa-1-3-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following would be most likely to make the demand for a good more price elastic?",
+      "options": {
+        "A": "A fall in the number of firms competing to supply the good.",
+        "B": "An increase in the number of close substitutes available.",
+        "C": "The good becoming more addictive for consumers.",
+        "D": "The good taking up a smaller share of consumer income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Price elasticity of demand measures how responsive quantity demanded is to a change in the good's own price. The strongest determinant is <strong>substitutability</strong>. If close substitutes are available, a price rise sends buyers elsewhere and quantity demanded falls sharply, so demand is <strong>elastic</strong>. More close substitutes therefore means a higher PED.",
+        "distractors": {
+          "A": "Fewer firms means fewer alternatives to switch to, which makes demand <em>more</em> inelastic, not less. This confuses market structure with elasticity: how many firms there are and how responsive buyers are to price are separate questions.",
+          "C": "Addictive goods have inelastic demand. Consumers find it hard to cut consumption when the price rises, so quantity demanded barely moves — the opposite of what is being asked for.",
+          "D": "This is the income-proportion determinant read backwards. A good taking a <em>smaller</em> share of income matters less to the budget, so buyers respond less to a price change and demand is more inelastic."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bakery raises the price of a loaf from £2.50 to £3.00. Weekly sales fall from 1,200 loaves to 1,020 loaves. Measuring each percentage change against its original value, the price elasticity of demand for the loaf and the effect on the bakery's total revenue are",
+      "options": {
+        "A": "−1.33, and total revenue falls.",
+        "B": "−1.33, and total revenue rises.",
+        "C": "−0.75, and total revenue falls.",
+        "D": "−0.75, and total revenue rises."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Percentage change in quantity demanded: (1,020 − 1,200) ÷ 1,200 × 100 = <strong>−15%</strong>.<br />Percentage change in price: (£3.00 − £2.50) ÷ £2.50 × 100 = <strong>+20%</strong>.<br />PED = −15 ÷ +20 = <strong>−0.75</strong>.<br />A magnitude of 0.75 lies between 0 and 1, so demand is <strong>relatively inelastic</strong>: quantity fell by proportionally less than price rose. When demand is inelastic a price rise increases total revenue. Checking it directly: revenue was 1,200 × £2.50 = <strong>£3,000</strong> and is now 1,020 × £3.00 = <strong>£3,060</strong>, a rise of £60.",
+        "distractors": {
+          "A": "The formula has been inverted — 20 ÷ 15 = 1.33 — and the revenue conclusion then follows correctly from that wrong figure. A PED of −1.33 would be elastic, and a price rise would indeed cut revenue. The error is in the elasticity, not the revenue rule.",
+          "B": "Two errors that cancel out into the right revenue direction for the wrong reason. The formula is inverted to give −1.33, and elastic demand is then paired with rising revenue, which is not what the revenue test says.",
+          "C": "The elasticity is right but the revenue rule is inverted. Inelastic demand means quantity is unresponsive, so the firm keeps most of its sales at the higher price and revenue <strong>rises</strong>. Revenue falls on a price rise only when demand is elastic."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A commuter rail operator and a budget airline both want to increase their total revenue. Demand for commuter rail travel is price inelastic. Demand for budget air travel is price elastic. All other things being equal, the two firms are most likely to",
+      "options": {
+        "A": "Cut both rail fares and air fares.",
+        "B": "Cut rail fares and raise air fares.",
+        "C": "Raise both rail fares and air fares.",
+        "D": "Raise rail fares and cut air fares."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The revenue test works in both directions. Where demand is <strong>inelastic</strong>, quantity demanded changes by proportionally less than price, so <strong>raising</strong> the price increases total revenue — that is the commuter rail operator, whose passengers have few alternatives for getting to work. Where demand is <strong>elastic</strong>, quantity changes by proportionally more than price, so <strong>cutting</strong> the price increases total revenue — that is the budget airline, competing against other carriers and other holiday destinations.",
+        "distractors": {
+          "A": "Cutting price raises revenue only where demand is elastic. That is right for the airline but wrong for the rail operator, who would give up fare income without winning enough extra passengers to make it back.",
+          "B": "This reverses both firms. It cuts the fare in the market where passengers are least responsive and raises it in the market where they are most responsive, losing revenue twice over.",
+          "C": "Raising price raises revenue only where demand is inelastic. That is right for the rail operator but wrong for the airline, which would lose a larger proportion of its passengers than the proportion by which it raised the fare."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A gym raises the price of its monthly membership. The price of its pay-as-you-go day pass is unchanged. Table 1 shows the number of day passes sold before and after the increase.<br />Measuring each percentage change against its original value, the cross elasticity of demand for day passes with respect to the price of a monthly membership is",
+      "table": {
+        "caption": "Table 1: Monthly membership price and day passes sold",
+        "head": [
+          "",
+          "Price of a monthly membership",
+          "Day passes sold per month"
+        ],
+        "rows": [
+          [
+            "Before the price rise",
+            "£30.00",
+            "800"
+          ],
+          [
+            "After the price rise",
+            "£36.00",
+            "880"
+          ]
+        ]
+      },
+      "options": {
+        "A": "−2.0",
+        "B": "−0.5",
+        "C": "+0.5",
+        "D": "+2.0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Cross elasticity of demand is the percentage change in the quantity demanded of one good divided by the percentage change in the price of another good.<br />Percentage change in day passes sold: (880 − 800) ÷ 800 × 100 = <strong>+10%</strong>.<br />Percentage change in the membership price: (£36.00 − £30.00) ÷ £30.00 × 100 = <strong>+20%</strong>.<br />XED = +10 ÷ +20 = <strong>+0.5</strong>.<br />The sign is the useful part. A positive XED means the two are <strong>substitutes</strong>, which is what you would expect here: people priced out of the monthly membership switch to paying for individual visits instead. A magnitude below 1 says they are weak substitutes — a 20% rise in the membership price moved day-pass sales by only 10%.",
+        "distractors": {
+          "A": "Both errors at once. The formula has been inverted to give 20 ÷ 10 = 2, and a minus sign has been carried across from PED on top of that.",
+          "B": "The arithmetic is right but the sign is wrong. PED is negative for a normal demand curve, and that minus sign gets attached to XED out of habit. XED is negative only for <strong>complements</strong>. Here both percentage changes are positive, so the answer must be positive.",
+          "D": "The formula has been inverted: 20 ÷ 10 rather than 10 ÷ 20. That measures how responsive the membership price is to day-pass sales, which is not what XED means. The percentage change in the <strong>quantity demanded of the other good</strong> always goes on top."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 2 shows how the quantity demanded of three goods responded to a 5% rise in real incomes. All other things were equal.<br />Which one of the following statements is supported by the data in Table 2?",
+      "table": {
+        "caption": "Table 2: Response of quantity demanded to a 5% rise in real incomes",
+        "head": [
+          "Good",
+          "Change in quantity demanded"
+        ],
+        "rows": [
+          [
+            "Bus travel within a city",
+            "−4%"
+          ],
+          [
+            "Fresh bread",
+            "+2%"
+          ],
+          [
+            "Overseas package holidays",
+            "+9%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Bus travel is a normal good and fresh bread is a luxury.",
+        "B": "Bus travel is an inferior good and fresh bread is a necessity.",
+        "C": "Fresh bread is a luxury and bus travel is a necessity.",
+        "D": "Fresh bread is an inferior good and overseas holidays are a necessity."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Income elasticity of demand is the percentage change in quantity demanded divided by the percentage change in income, so divide each figure by 5.<br />Bus travel: −4 ÷ 5 = <strong>−0.8</strong>. Negative, so bus travel is an <strong>inferior good</strong> — demand falls as incomes rise, because people switch to cars and taxis.<br />Fresh bread: +2 ÷ 5 = <strong>+0.4</strong>. Positive but below 1, so bread is a <strong>normal necessity</strong> — demand rises with income, but by proportionally less.<br />Overseas holidays: +9 ÷ 5 = <strong>+1.8</strong>. Above 1, so holidays are a <strong>normal luxury</strong>.",
+        "distractors": {
+          "A": "Bus travel has a negative YED of −0.8, which makes it inferior, not normal. Bread's YED of +0.4 is below 1, which makes it a necessity, not a luxury. Both halves fail.",
+          "C": "This sorts the goods by what feels expensive rather than by the numbers. Bread's YED is +0.4, below 1, so it is a necessity and not a luxury. Bus travel's YED is negative, which makes it inferior — an inferior good is never classed as a normal necessity.",
+          "D": "Bread's YED is positive at +0.4, so demand <em>rises</em> with income and it cannot be inferior. Inferior means demand falls as income rises. Overseas holidays have a YED of +1.8, above 1, making them a luxury rather than a necessity."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A retail group sells both a budget own-label grocery range and a premium ready-meal range. Forecasters expect real household incomes to fall sharply over the next year. All other things being equal, the group is most likely to",
+      "options": {
+        "A": "Expand the budget range and cut back the premium range.",
+        "B": "Expand the premium range and cut back the budget range.",
+        "C": "Expand both ranges, because total spending on food is stable.",
+        "D": "Cut back both ranges, because demand for food falls when incomes fall."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two ranges have opposite income elasticities. A budget own-label range is an <strong>inferior good</strong>: its YED is negative, so when real incomes fall, demand for it <strong>rises</strong> as households trade down. A premium ready-meal range is a <strong>normal luxury</strong>: its YED is above 1, so when real incomes fall, demand for it falls by proportionally more than income does. Planning for the economic cycle means expanding the range whose demand is about to grow and cutting back the one about to shrink fastest.",
+        "distractors": {
+          "B": "This inverts both signs. It expands the range most exposed to a fall in income and cuts the one that is about to benefit from it — the worst possible reading of the two elasticities.",
+          "C": "This treats food as a single category with a YED near zero. The whole point of YED is that it varies by product, not by broad sector: within food, budget lines and premium lines move in opposite directions when incomes change.",
+          "D": "This assumes every food product moves with income in the same direction. Inferior goods have a <strong>negative</strong> YED, so demand for the budget range rises precisely because incomes are falling."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Real disposable income in an economy falls by 4%. Over the same period the quantity of own-label instant coffee demanded rises from 500,000 jars to 530,000 jars per month. Measuring each percentage change against its original value, the income elasticity of demand for own-label instant coffee and the classification of the good are",
+      "options": {
+        "A": "−1.5, and the good is inferior.",
+        "B": "−0.67, and the good is inferior.",
+        "C": "+0.67, and the good is a normal necessity.",
+        "D": "+1.5, and the good is a normal luxury."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Percentage change in quantity demanded: (530,000 − 500,000) ÷ 500,000 × 100 = <strong>+6%</strong>.<br />Percentage change in income: <strong>−4%</strong>. The sign matters — income <em>fell</em>.<br />YED = +6 ÷ −4 = <strong>−1.5</strong>.<br />A negative YED means the good is <strong>inferior</strong>: demand moves in the opposite direction to income. That fits the story — households switching to own-label coffee is exactly what you would expect when real incomes are being squeezed.",
+        "distractors": {
+          "B": "The sign is right but the formula has been inverted: −4 ÷ 6 rather than 6 ÷ −4. The classification still comes out as inferior, because inverting a negative number leaves it negative, so this option looks self-consistent and is easy to settle for.",
+          "C": "Both errors at once. The formula is inverted <em>and</em> the negative income change is treated as positive, giving 4 ÷ 6 = +0.67. A positive YED below 1 does describe a normal necessity, so the classification follows correctly from a figure that is itself wrong twice over.",
+          "D": "The magnitude is right but the negative sign on the income change has been dropped, giving 6 ÷ 4 = +1.5. This is the most common error here: quantity rose, so the answer is assumed to be positive. Income moved the other way, so the two percentage changes have opposite signs and the ratio must be negative."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government wants a new indirect tax to raise as much revenue as possible while causing the smallest possible fall in the quantity traded. All other things being equal, it should place the tax on a good for which demand is",
+      "options": {
+        "A": "Price elastic, because buyers will switch to untaxed substitutes.",
+        "B": "Price elastic, because the fall in quantity widens the tax base.",
+        "C": "Price inelastic, because quantity demanded barely responds to price.",
+        "D": "Price inelastic, because producers will absorb the whole of the tax."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An indirect tax raises the price paid by consumers, and the revenue it raises is the tax per unit multiplied by the quantity still traded. Where demand is <strong>inelastic</strong>, that price rise causes only a small fall in quantity demanded, so the government keeps a wide tax base and collects a large revenue — which is why duties fall on goods like tobacco, alcohol and fuel. It also meets the second aim, since the quantity traded barely moves.",
+        "distractors": {
+          "A": "This describes elastic demand correctly and then draws the opposite conclusion. Buyers switching away to untaxed substitutes is exactly what destroys the tax base: the government ends up taxing a much smaller quantity.",
+          "B": "A fall in quantity <em>shrinks</em> the tax base, it does not widen it. Revenue is the tax per unit times the quantity still traded, so fewer units sold means less revenue collected.",
+          "D": "The classification is right but the reason is wrong, and the reason given is the reverse of what happens. Where demand is inelastic relative to supply, the incidence falls mainly on <strong>consumers</strong>, not producers. Producers never automatically absorb a whole tax."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q9",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm finds that when the price of Product Z rises by 10%, the quantity demanded of its own product falls by 6%. All other things being equal, the two products are most likely",
+      "options": {
+        "A": "Complements, and the cross elasticity of demand is −0.6.",
+        "B": "Complements, and the cross elasticity of demand is +0.6.",
+        "C": "Substitutes, and the cross elasticity of demand is −0.6.",
+        "D": "Substitutes, and the cross elasticity of demand is +0.6."
+      },
+      "answer": "A",
+      "model": {
+        "working": "XED = percentage change in quantity demanded of the firm's product ÷ percentage change in the price of Product Z = −6 ÷ +10 = <strong>−0.6</strong>.<br />A <strong>negative</strong> XED means the two goods are <strong>complements</strong> — they are bought and used together, so when one becomes dearer, demand for the other falls with it. Printers and ink cartridges behave this way. The magnitude of 0.6 says the link is real but not especially strong.",
+        "distractors": {
+          "B": "The relationship is right but the sign contradicts it. A positive XED is the definition of substitutes, so an option cannot call the goods complements and give a positive value at the same time.",
+          "C": "The value is right but the relationship is wrong, for the same reason in reverse. A negative XED means the goods are bought together, not instead of one another.",
+          "D": "This is the substitutes case, which is not what the data show. If the two were substitutes, a 10% rise in the price of Product Z would have <em>increased</em> demand for the firm's product as buyers switched across. Demand fell instead."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-2-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "A government pays producers the same subsidy per unit on two goods. Demand for Good X is price elastic and demand for Good Y is price inelastic. Supply conditions are identical in the two markets. Sketching each market, the subsidy will produce",
+      "options": {
+        "A": "A larger fall in price and a larger rise in quantity in the market for Good X.",
+        "B": "A larger fall in price and a larger rise in quantity in the market for Good Y.",
+        "C": "A larger fall in price for Good X and a larger rise in quantity for Good Y.",
+        "D": "A larger fall in price for Good Y and a larger rise in quantity for Good X."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Sketch each market with the same demand-and-supply axes, then shift supply to the right by the same vertical distance — the subsidy per unit — in both. What differs is the slope of the demand curve the new supply curve meets.<br />Against the <strong>steep, inelastic</strong> demand curve for Good Y, the market clears mainly through a large <strong>fall in price</strong>, because buyers will not take many extra units however cheap it gets.<br />Against the <strong>shallow, elastic</strong> demand curve for Good X, it clears mainly through a large <strong>rise in quantity</strong>, because buyers pour in and hold the price up.<br />So the price effect is concentrated where demand is inelastic and the quantity effect where demand is elastic. This is why a government aiming to increase <em>consumption</em> — of insulation or electric vehicles, say — targets goods with elastic demand.",
+        "distractors": {
+          "A": "This puts both effects in the elastic market. Elastic demand does deliver the larger quantity response, but it produces the <em>smaller</em> price fall: extra buyers arrive as soon as the price dips, and that demand holds the price up.",
+          "B": "This puts both effects in the inelastic market. Inelastic demand does deliver the larger price fall, but quantity barely moves, which is the whole point of calling demand inelastic.",
+          "C": "This reverses both effects. It is the pattern you would get if the two elasticity labels had been swapped — the answer a sketch drawn with the curves the wrong way round would give."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.8",
+  "slug": "4-1-8-exchange-rates",
+  "title": "Exchange Rates",
+  "shortTitle": "Exchange Rates",
+  "pageTitle": "Exchange Rates Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on exchange rates for Edexcel A-Level Economics: floating, fixed and managed systems, and central bank intervention.",
+  "intro": "Six original multiple-choice questions on exchange rates, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on floating, fixed and managed exchange rate systems, what moves a currency, and how central banks intervene.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-8-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank lets its currency move freely so long as it stays within a stated band, and intervenes only when it threatens to leave that band. This system is",
+      "options": {
+        "A": "A fixed exchange rate.",
+        "B": "A floating exchange rate.",
+        "C": "A managed exchange rate.",
+        "D": "A monetary union."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The three systems differ in how far the rate is allowed to move. A <strong>floating</strong> rate is set entirely by demand and supply, with no intervention at all. A <strong>fixed</strong> rate is pegged at a stated value and held there. A <strong>managed</strong> rate is the middle case Edexcel describes: the central bank sets a range and lets market forces determine the rate inside it, stepping in only at the edges. Most real-world systems sit somewhere on this spectrum rather than at either extreme.",
+        "distractors": {
+          "A": "A fixed rate is held at a single value, not allowed to range within a band.",
+          "B": "A floating rate involves no intervention whatever, and here the bank intervenes at the limits.",
+          "D": "A monetary union abolishes the separate currency altogether, so there is no rate between members left to manage."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-8-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank operating a fixed exchange rate wants to lower the value at which its currency is pegged. Acting directly in the currency market, it would",
+      "options": {
+        "A": "Buy its own currency, raising demand.",
+        "B": "Cut its foreign currency reserves to zero.",
+        "C": "Raise interest rates to attract hot money.",
+        "D": "Sell its own currency, raising supply."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An exchange rate is a price, so a central bank moves it by changing demand or supply. To bring the value <em>down</em> it sells its own currency, which increases the supply on the market and lowers the price. To push the value up it does the reverse, buying its own currency using foreign reserves. Edexcel lists buying or selling currency alongside interest rate changes as the two tools available in a fixed or managed system — and a deliberate lowering of a peg is a <strong>devaluation</strong>, the term reserved for a fixed system, rather than a depreciation.",
+        "distractors": {
+          "A": "Buying its own currency raises demand and pushes the value up, which is the opposite of what is wanted here.",
+          "B": "Reserves are what a bank spends <em>defending</em> a currency by buying it. Running them down is a cost of holding a peg up, not a way of bringing one down.",
+          "C": "Higher interest rates attract hot money inflows, which raise demand for the currency and push its value up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-8-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Investors become convinced that a currency will fall next month, and sell it now. The immediate effect on the exchange rate is that it",
+      "options": {
+        "A": "Falls, making the expectation self-fulfilling.",
+        "B": "Falls, but only once next month arrives.",
+        "C": "Is unaffected, since nothing real has changed.",
+        "D": "Rises, as selling requires buying it first."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Selling a currency increases its supply on the foreign exchange market, and the rate falls at once — not next month. Edexcel lists <strong>speculation</strong> among the factors influencing a floating rate for exactly this reason: an expectation about the future changes behaviour today, and that behaviour brings about the very outcome expected. It is why currency markets can move sharply on news that changes nothing at all about trade flows or interest rates.",
+        "distractors": {
+          "B": "The selling happens now, so the price moves now. The expectation concerns next month; the transaction does not.",
+          "C": "Something real has changed — the quantity of the currency being offered for sale.",
+          "D": "Selling a currency means exchanging it for another, which adds to its supply rather than to its demand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-8-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's inflation rate falls well below its trading partners' and stays there. Taken on its own, the effect on its floating exchange rate is that the currency",
+      "options": {
+        "A": "Appreciates, as its exports become dearer.",
+        "B": "Appreciates, as its purchasing power holds up.",
+        "C": "Depreciates, as its goods become cheaper.",
+        "D": "Depreciates, as its interest rates must fall."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Lower inflation means the currency loses purchasing power more slowly than others, which makes holding it more attractive — and it makes the country's goods cheaper in relative terms, so foreign buyers need more of the currency to pay for exports. Demand for it rises on both counts. Edexcel lists <strong>relative inflation rates</strong> among the demand-side factors: a rate below trading partners' tends to cause an appreciation.",
+        "distractors": {
+          "A": "Lower inflation makes exports relatively <em>cheaper</em>, not dearer. That is part of why demand for the currency rises.",
+          "C": "Cheaper goods raise demand for the currency needed to buy them, so the effect on the rate is upward.",
+          "D": "Nothing here forces interest rates down, and lower inflation may or may not be accompanied by lower rates."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-8-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country moves from a large current account deficit to a sustained surplus. With no other change in the market, the effect on demand for its currency is that it",
+      "options": {
+        "A": "Falls, since fewer imports are bought.",
+        "B": "Is unchanged, since trade is balanced.",
+        "C": "Rises, as foreigners buy it to pay for exports.",
+        "D": "Rises, since the government must intervene."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A foreign buyer of this country's exports must first obtain its currency in order to pay for them, so exports create demand for the currency. Imports work the other way, creating supply as domestic buyers sell the currency to pay foreign sellers. Moving from deficit to surplus means exports now exceed imports, so demand outweighs supply on that account and the currency tends to appreciate. Edexcel lists the <strong>current account</strong> among the demand-side factors for this reason.",
+        "distractors": {
+          "A": "Buying fewer imports reduces the <em>supply</em> of the currency, which also pushes its value up rather than down.",
+          "B": "The stem describes a surplus, which means trade is not balanced.",
+          "D": "Nothing requires a government to intervene in a floating system, and intervention is not why demand has changed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-8-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A central bank has pegged its currency above the rate markets would set, and has been buying its own currency for months to hold the peg. The constraint that will eventually force it to devalue is that",
+      "options": {
+        "A": "Its foreign currency reserves run out.",
+        "B": "Its inflation rate falls too far.",
+        "C": "Its interest rates cannot be raised.",
+        "D": "Speculators cannot sell the currency."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Holding a currency above its market rate means buying up the excess supply, and a central bank pays for its own currency with <strong>foreign exchange reserves</strong>. Those are finite. Speculators who believe the peg cannot hold sell heavily, which forces the bank to buy still more, so the reserves drain faster the less credible the peg looks. When they are gone, the peg goes with them — which is why defending an overvalued currency so often ends in defeat.",
+        "distractors": {
+          "B": "Low inflation would strengthen the case for the currency's value rather than undermining the peg.",
+          "C": "Interest rates can be raised to support a currency, and usually are. The constraint is that doing so damages the domestic economy, not that it is impossible.",
+          "D": "Speculators selling is exactly what puts the peg under pressure, and in an open market they can sell freely."
+        }
+      }
+    }
+  ]
+}

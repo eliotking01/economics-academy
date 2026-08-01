@@ -1,0 +1,156 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.3.3",
+  "slug": "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+  "title": "The Determinants of the Supply of Goods and Services",
+  "shortTitle": "Determinants of Supply",
+  "pageTitle": "Determinants of Supply Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the determinants of supply for AQA A-Level Economics: movements, shifts, costs, subsidies and taxes, with worked answers.",
+  "intro": "Six original multiple-choice questions on the determinants of supply, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on the determinants of supply, movements along the curve and shifts of it, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-3-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The market price of a good rises and firms increase the quantity they supply. On a supply diagram this is shown as",
+      "options": {
+        "A": "A movement along the supply curve.",
+        "B": "A shift of the demand curve to the right.",
+        "C": "A shift of the supply curve to the left.",
+        "D": "A shift of the supply curve to the right."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Price is one of the two axes the supply curve is drawn against, so a change in the good's <strong>own price</strong> is already built into the curve. Firms simply move to a different point on it — an <strong>extension of supply</strong>. The curve slopes upwards because a higher price makes it worth covering the higher marginal costs of extra output.",
+        "distractors": {
+          "B": "A demand shift may well be what pushed the price up in the first place, but the supply-side response to that higher price is still a movement along the supply curve.",
+          "C": "A leftward shift means less is supplied at every price, which requires a change in a condition of supply such as higher input costs.",
+          "D": "A rightward shift also needs a condition of supply to change. Here only the price has moved, so the curve stays put."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sharp rise in the wages paid to workers in an industry will, all other things being equal,",
+      "options": {
+        "A": "Cause a movement up the supply curve of the industry.",
+        "B": "Shift the supply curve of the industry to the left.",
+        "C": "Shift the supply curve of the industry to the right.",
+        "D": "Shift the demand curve for the industry's output to the left."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Wages are a <strong>cost of production</strong>, and costs are one of the conditions of supply. Higher wages make every unit dearer to produce, so at any given price firms are willing to supply <strong>less</strong> than before. The whole curve moves <strong>left</strong> — equivalently, upwards, since firms now need a higher price to supply any given quantity.",
+        "distractors": {
+          "A": "A movement along the curve requires the good's own price to change. Here it is a cost that has changed, which shifts the curve itself.",
+          "C": "A rightward shift means more supplied at every price, which is what happens when costs <em>fall</em>. Higher wages do the opposite.",
+          "D": "Demand comes from buyers of the output and is unaffected by what the industry pays its workers. There may be a second-round effect on incomes across the economy, but the direct effect is on supply."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government pays wheat farmers a subsidy of £40 for every tonne produced. All other things being equal, this will",
+      "options": {
+        "A": "Cause a movement along the supply curve of wheat.",
+        "B": "Shift the demand curve for wheat to the right.",
+        "C": "Shift the supply curve of wheat to the left.",
+        "D": "Shift the supply curve of wheat to the right."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>subsidy</strong> is a payment to producers, so it lowers the effective cost of each tonne. Farmers are willing to supply more at every price, which shifts the supply curve <strong>right</strong> — or, read vertically, <strong>down by £40</strong>, because they will now accept £40 less from buyers for any given quantity. The usual consequence is a lower market price and a higher quantity traded.",
+        "distractors": {
+          "A": "A movement along the curve is caused by a change in the price of wheat itself. The subsidy changes the cost of producing it, which is a condition of supply.",
+          "B": "The subsidy is paid to producers, not to consumers. Buyers' incomes, tastes and alternatives are unchanged, so demand does not shift — though the quantity demanded will rise as the price falls, which is a movement along the demand curve.",
+          "C": "A leftward shift would follow from a <strong>tax</strong> on production, which raises costs. A subsidy works in the opposite direction."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm installs new machinery that allows it to produce the same output using fewer workers. All other things being equal, this will",
+      "options": {
+        "A": "Increase supply at every price.",
+        "B": "Increase the quantity supplied only if the market price rises.",
+        "C": "Reduce supply at every price, because the machinery is expensive to buy.",
+        "D": "Reduce the demand for the good, because fewer workers earn wages."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Improved <strong>technology</strong> raises productivity, so each unit costs less to produce. Lower costs mean the firm is willing to supply more at any given price, which is an <strong>increase in supply</strong> and a rightward shift of the curve. Technology is one of the standard conditions of supply for exactly this reason.",
+        "distractors": {
+          "B": "This describes a movement along the curve, which is the response to a price change. The stem describes a change in production costs, and that shifts the curve whether or not the price moves.",
+          "C": "The purchase price of the machinery is a <strong>fixed</strong> cost incurred once. What determines how much the firm supplies at each price is its <em>marginal</em> cost, and that has fallen.",
+          "D": "This is a second-round macroeconomic effect and far too small to matter for one firm's market. The direct effect of a productivity improvement is on the supply side."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-3-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the quantity of a good supplied at three prices, before and after a change in market conditions.<br />Using Table 1, the change between the two columns is best explained by",
+      "table": {
+        "caption": "Table 1: Quantity supplied before and after a change in conditions (units per week)",
+        "head": ["Price", "Quantity supplied before", "Quantity supplied after"],
+        "rows": [
+          ["£4", "200", "260"],
+          ["£6", "300", "360"],
+          ["£8", "400", "460"]
+        ]
+      },
+      "options": {
+        "A": "A fall in the costs of production.",
+        "B": "A fall in the price of the good.",
+        "C": "A rise in the costs of production.",
+        "D": "A rise in the price of the good."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Compare the two columns <strong>at the same price</strong>. At £4, supply rises from 200 to 260; at £6, from 300 to 360; at £8, from 400 to 460. Firms are willing to supply 60 more units at <em>every</em> price, so the supply curve has shifted <strong>right</strong>. An increase in supply of this kind is caused by a condition of supply changing, and lower production costs are the standard explanation.",
+        "distractors": {
+          "B": "A price change cannot explain the difference between the columns, because the columns are compared <em>at identical prices</em>. A price fall would move firms down a single column, not create a second one.",
+          "C": "Higher costs reduce supply at every price, which would show up as smaller figures in the second column rather than larger ones.",
+          "D": "Again a movement along the curve rather than a shift. Reading down either column already shows what a higher price does: quantity supplied rises from 200 to 400 within the first column alone."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government imposes a specific tax of £2 per unit on a good. All other things being equal, on a supply and demand diagram this is shown as",
+      "options": {
+        "A": "A downward shift of the supply curve by £2 at every quantity.",
+        "B": "A leftward shift of the demand curve by £2 at every quantity.",
+        "C": "An upward shift of the supply curve by £2 at every quantity.",
+        "D": "A movement up the existing supply curve equal to £2."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>specific tax</strong> adds a fixed amount to the cost of every unit, so producers now need £2 more than before to supply any given quantity. Reading the supply curve vertically as the price required to bring forth each quantity, the whole curve moves <strong>up by exactly £2</strong> — which is the same thing as a leftward shift.<br />Worth noting: the market price does <em>not</em> normally rise by the full £2. How the burden splits between consumers and producers depends on the relative elasticities of demand and supply.",
+        "distractors": {
+          "A": "A downward shift by a fixed amount per unit is a <strong>subsidy</strong>, which lowers the price producers need. A tax works in the opposite direction.",
+          "B": "The tax is levied on production, so it acts on the supply side. Consumers' willingness to pay at each price is unchanged; what changes is the quantity they end up buying, which is a movement along the demand curve.",
+          "D": "A movement along the supply curve is a response to the good's own price changing. The tax changes the cost of production, which relocates the curve itself."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.1.1",
+  "slug": "3-1-1-sizes-types-of-firms",
+  "title": "Sizes and Types of Firms",
+  "shortTitle": "Sizes and Types of Firms",
+  "pageTitle": "Sizes and Types of Firms Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the sizes and types of firms for Edexcel A-Level Economics: why firms grow, why some stay small, and who owns them.",
+  "intro": "Eight original multiple-choice questions on why firms grow and stay small, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on why firms grow, why some remain small, the divorce of ownership from control, and the public and private sectors.",
+  "questions": [
+    {
+      "id": "edexcel-3-1-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An organisation is owned by the government, exists mainly to provide a service rather than to earn a return, and is funded largely from taxation. It is best described as",
+      "options": {
+        "A": "A not-for-profit organisation.",
+        "B": "A partnership.",
+        "C": "A public limited company.",
+        "D": "A public sector organisation."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Three features have to hold together: government ownership, service as the purpose, and funding from taxation. The NHS, state schools and the BBC are the standard examples. Ownership is what does the work in the definition — <strong>private sector</strong> organisations are owned by private individuals or shareholders and normally aim at profit, whoever they happen to serve.",
+        "distractors": {
+          "A": "A not-for-profit organisation has a social, environmental or charitable mission and reinvests any surplus, but it can sit in either sector. Being not-for-profit says nothing about who owns it.",
+          "B": "A partnership is one of the standard private sector forms, owned by its partners.",
+          "C": "A public limited company is confusingly named. It is a private sector firm whose shares are traded publicly — not a firm owned by the public."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regional coffee chain expands from 20 outlets to 200 across the country. Its cost per cup is unchanged throughout. It still expects the expansion to raise its profit, because a larger chain",
+      "options": {
+        "A": "Becomes better known and wins more loyalty.",
+        "B": "Can be run with fewer managers in total.",
+        "C": "Faces lower barriers to entry in its market.",
+        "D": "Is charged a lower rate of corporation tax."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The stem removes economies of scale deliberately by holding cost per cup constant, so whatever raises profit has to work on the demand side. <strong>Brand recognition</strong> is one of the reasons Edexcel gives for firms growing: a chain with 200 outlets is more visible, more familiar and more trusted than one with 20, which raises the quantity people buy and how readily they return. More sales at the same unit cost means more profit.",
+        "distractors": {
+          "B": "Running the business with fewer managers would be a managerial economy of scale, and the stem holds unit costs constant.",
+          "C": "A firm's own growth does not lower the barriers it faces. If anything a large incumbent raises the barriers facing everyone else.",
+          "D": "Corporation tax rates do not fall as a company gets bigger."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A profitable family bakery repeatedly turns down offers of investment that would let it open branches nationally. The owners say they want to go on making the day-to-day decisions themselves. This is best explained as",
+      "options": {
+        "A": "A lack of access to the finance needed to grow.",
+        "B": "A preference for retaining control of the business.",
+        "C": "A regulatory constraint on the size of the firm.",
+        "D": "Diseconomies of scale in the baking industry."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Edexcel gives <strong>owner preferences</strong> as one of the reasons firms stay small. Not every owner wants the largest business the market would support; some would rather keep control of the decisions, or keep the firm at a size that suits the life they want. The stem rules the alternatives out one by one — the money was offered and refused, and the bakery is profitable as it is.",
+        "distractors": {
+          "A": "Finance was available. The owners turned it down, which is the opposite of being unable to obtain it.",
+          "C": "Nothing here is imposed from outside. The limit on the firm's size is a decision its owners have taken.",
+          "D": "Diseconomies would be a reason growth might not pay, but the owners give their reason directly and it is about control rather than cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The shareholders of a large company suspect its managers are pursuing higher salaries and a quieter life rather than the greatest possible profit. The measure most likely to bring the two sets of interests back together is",
+      "options": {
+        "A": "Increasing the managers' fixed annual salaries.",
+        "B": "Publishing the company's accounts more often.",
+        "C": "Recruiting the managers from within the firm.",
+        "D": "Tying the managers' pay to the share price."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The difficulty is that owners cannot watch what managers do from day to day, so managers are free to pursue goals of their own. Paying part of the reward in shares or share-linked bonuses changes the manager's own position rather than trying to police it: their income now rises and falls with the value of the company, so acting in the shareholders' interest becomes the same thing as acting in their own. Edexcel gives performance-related pay and stock options as the standard remedy.",
+        "distractors": {
+          "A": "A larger fixed salary is paid whatever the company does, so it weakens the link between the manager's reward and the owners' return rather than strengthening it.",
+          "B": "More frequent accounts help owners see the results, but results are affected by much besides managerial effort, and publication on its own changes nobody's incentives.",
+          "C": "An internal recruit may know the business better, but where their personal interest lies is exactly the same as before."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A social enterprise sells its products well above cost and puts everything it earns beyond its running costs back into its work with homeless people. In the classification of organisations it is",
+      "options": {
+        "A": "A profit organisation, since it earns a surplus.",
+        "B": "A public sector organisation, since it serves the public.",
+        "C": "Not-for-profit, and in the private sector.",
+        "D": "Not-for-profit, and therefore in the public sector."
+      },
+      "answer": "C",
+      "model": {
+        "working": "What makes an organisation not-for-profit is not that it fails to earn a surplus — this one plainly does — but what becomes of the surplus. Here it is reinvested in the mission rather than distributed to owners. Sector is a separate question, decided by ownership: charities and social enterprises are privately owned, so they sit in the <strong>private sector</strong> while being not-for-profit. Edexcel makes the point that not-for-profits operate in both sectors.",
+        "distractors": {
+          "A": "Earning a surplus does not make an organisation a profit organisation. The test is whether that surplus goes to owners.",
+          "B": "Public sector means owned and funded by government. This enterprise is neither, whatever social purpose it serves.",
+          "D": "The common error — assuming that a social mission implies public ownership. The two are independent of each other."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A licensing rule caps the number of vehicles any single operator may run in a city's taxi market. Several operators say they would expand if they were allowed to. The reason they remain small is best described as",
+      "options": {
+        "A": "A lack of demand in the market.",
+        "B": "A preference among owners for a quiet life.",
+        "C": "A regulatory constraint on growth.",
+        "D": "Diseconomies of scale setting in early."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Edexcel lists <strong>regulatory constraints</strong> among the reasons firms stay small: some industries carry rules that cap what any one firm may do, whatever it would otherwise choose. The constraint here is external and binding, and the stem says so — the operators want to expand and are prevented, which rules out every explanation resting on their own costs or their own preferences.",
+        "distractors": {
+          "A": "Demand is not the obstacle. Operators wanting to run more vehicles implies there are customers for them.",
+          "B": "The stem says they would grow if permitted, so this is not a choice they are making.",
+          "D": "Diseconomies would show up as rising average costs as the firm grew. The barrier described here is legal, not economic."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes how four organisations are owned and funded.<br />From Table 1, the only one in the public sector is",
+      "table": {
+        "caption": "Table 1: Four organisations, and how each is owned and funded",
+        "head": [
+          "",
+          "Organisation"
+        ],
+        "rows": [
+          [
+            "Organisation 1",
+            "A high-street bank owned by its shareholders"
+          ],
+          [
+            "Organisation 2",
+            "A charity funded by donations and run by trustees"
+          ],
+          [
+            "Organisation 3",
+            "A family firm owned by two partners"
+          ],
+          [
+            "Organisation 4",
+            "A state school funded from general taxation"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Organisation 1.",
+        "B": "Organisation 2.",
+        "C": "Organisation 3.",
+        "D": "Organisation 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The public sector test is government ownership and funding, with the provision of a service as the purpose. Only the state school meets it. The other three are all privately owned — and one of them, the charity, is <strong>not-for-profit</strong>, which is a different classification from the sector it belongs to.",
+        "distractors": {
+          "A": "Owned by its shareholders, so private sector, and operating for profit.",
+          "B": "The trap. A charity is not-for-profit, but it is privately owned and run by its own trustees, so it sits in the private sector.",
+          "C": "A partnership is one of the standard private sector forms of ownership."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm gives three reasons for expanding: lower unit costs, a stronger brand and more influence over its suppliers. What the three have in common is that each is expected to",
+      "options": {
+        "A": "Guarantee that the firm survives a recession.",
+        "B": "Increase the gap between revenue and cost.",
+        "C": "Reduce the firm's exposure to regulation.",
+        "D": "Shift the firm into a different market structure."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The three motives operate in quite different places — on costs, on demand and on bargaining power — but they converge on one result. Lower unit costs widen the margin on every sale; a stronger brand raises both the quantity sold and what buyers will pay for it; more influence over suppliers lowers the price of inputs. Edexcel's page makes the point directly: all of the reasons firms grow are, in the end, reasons to raise <strong>profit</strong>.",
+        "distractors": {
+          "A": "None of the three guarantees survival, and the motive that is actually aimed at risk — diversification — is not among them.",
+          "C": "A larger firm with more market power usually attracts <em>more</em> regulatory attention rather than less.",
+          "D": "Growth may change the market structure a firm operates in, but that is a consequence rather than the shared purpose, and conglomerate growth need not change it at all."
+        }
+      }
+    }
+  ]
+}

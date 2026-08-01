@@ -1,0 +1,242 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.3.1",
+  "slug": "3-3-1-revenue",
+  "title": "Revenue",
+  "shortTitle": "Revenue",
+  "pageTitle": "Revenue Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on revenue for Edexcel A-Level Economics: total, average and marginal revenue, and the total revenue rule with PED.",
+  "intro": "Nine original multiple-choice questions on total, average and marginal revenue, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on total, average and marginal revenue, revenue under perfect and imperfect competition, and the total revenue rule.",
+  "questions": [
+    {
+      "id": "edexcel-3-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "For a firm with market power, the average revenue curve is also its",
+      "options": {
+        "A": "Average cost curve.",
+        "B": "Demand curve.",
+        "C": "Marginal cost curve.",
+        "D": "Marginal revenue curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "AR = TR ÷ Q, and TR = P × Q, so AR = (P × Q) ÷ Q = <strong>P</strong>. Average revenue is simply the price. A line plotting the price against the quantity that can be sold at it is exactly the <strong>demand curve</strong> the firm faces, which is why the two are drawn as one line. It also explains the shape: a firm with market power must lower its price to sell more, so its AR curve slopes downward.",
+        "distractors": {
+          "A": "Average cost is a cost concept, built from the firm's spending rather than its receipts. Nothing links it to the price buyers will pay.",
+          "C": "Marginal cost is about production. It has no relationship to the demand curve at all.",
+          "D": "MR lies <em>below</em> AR for a firm with market power, and falls twice as fast. Only in perfect competition do the two coincide."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm with market power sells 5 units at £12 each. To sell a sixth it must cut the price to £9 on every unit it sells. The marginal revenue from the sixth unit is",
+      "options": {
+        "A": "−£15",
+        "B": "−£6",
+        "C": "£3",
+        "D": "£9"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Marginal revenue is the change in total revenue.<br />TR at 5 units: 5 × £12 = <strong>£60</strong>.<br />TR at 6 units: 6 × £9 = <strong>£54</strong>.<br />MR = (£54 − £60) ÷ 1 = <strong>−£6</strong>.<br />The sixth unit brought in £9, but cutting the price by £3 on each of the five units already being sold gave up £15. The net effect is −£6. This is why MR lies below AR whenever a firm has to cut its price to sell more, and why MR eventually turns negative: past that point total revenue is falling, not rising.",
+        "distractors": {
+          "A": "−£15 is the revenue given up on the five units already being sold, 5 × £3. It leaves out the £9 the sixth unit itself brings in.",
+          "C": "£3 is the size of the price cut per unit, not the change in revenue.",
+          "D": "£9 is the price the sixth unit sells for. Treating that as marginal revenue is the standard error — it ignores the £3 surrendered on each of the other five units."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm raises the price of its product and finds that its total revenue is exactly what it was before. Over that range, the price elasticity of demand must be",
+      "options": {
+        "A": "Perfectly inelastic.",
+        "B": "Price elastic.",
+        "C": "Price inelastic.",
+        "D": "Unitary elastic."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The total revenue rule links PED to what a price change does to revenue. Where demand is elastic, quantity falls proportionately more than price rises, so TR falls. Where it is inelastic, quantity falls proportionately less, so TR rises. <strong>Unitary elasticity</strong> is the boundary between them: the percentage fall in quantity exactly matches the percentage rise in price, so P × Q is unchanged. On the revenue diagram this is the output where MR = 0 and total revenue is at its peak.",
+        "distractors": {
+          "A": "With perfectly inelastic demand the quantity does not change at all, so a price rise raises total revenue in exact proportion to the price.",
+          "B": "Elastic demand means a price rise <em>reduces</em> total revenue, because customers are lost faster than the price gains.",
+          "C": "Inelastic demand means a price rise <em>increases</em> total revenue."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 records one firm's total revenue at five levels of output.<br />From Table 1, marginal revenue first becomes negative between",
+      "table": {
+        "caption": "Table 1: One firm's total revenue at five levels of output",
+        "head": [
+          "Units sold",
+          "Total revenue"
+        ],
+        "rows": [
+          [
+            "2",
+            "£60"
+          ],
+          [
+            "4",
+            "£104"
+          ],
+          [
+            "6",
+            "£132"
+          ],
+          [
+            "8",
+            "£144"
+          ],
+          [
+            "10",
+            "£140"
+          ]
+        ]
+      },
+      "options": {
+        "A": "2 and 4 units",
+        "B": "4 and 6 units",
+        "C": "6 and 8 units",
+        "D": "8 and 10 units"
+      },
+      "answer": "D",
+      "model": {
+        "working": "Marginal revenue is the change in total revenue per extra unit, so work it out for each step of two units:<br />2 → 4: (£104 − £60) ÷ 2 = <strong>+£22</strong><br />4 → 6: (£132 − £104) ÷ 2 = <strong>+£14</strong><br />6 → 8: (£144 − £132) ÷ 2 = <strong>+£6</strong><br />8 → 10: (£140 − £144) ÷ 2 = <strong>−£2</strong><br />MR turns negative between <strong>8 and 10 units</strong>, which is where total revenue stops rising and starts to fall. Notice that MR is falling steadily throughout — £22, £14, £6, −£2 — which is what a downward-sloping demand curve produces.",
+        "distractors": {
+          "A": "MR here is +£22, the largest of the four. Total revenue is climbing steeply.",
+          "B": "MR is +£14. Revenue is still rising, just more slowly than before.",
+          "C": "MR is +£6. This is the last positive step, and the tempting answer — but revenue still rises from £132 to £144, so MR has not yet turned negative."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm in perfect competition can sell as much as it wishes at the market price, but nothing at all above it. The demand curve facing this individual firm is therefore",
+      "options": {
+        "A": "Downward sloping and relatively elastic.",
+        "B": "Downward sloping and relatively inelastic.",
+        "C": "Horizontal, and perfectly elastic.",
+        "D": "Vertical, and perfectly inelastic."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The firm is one of many selling an identical product, so it is a <strong>price taker</strong>. A penny above the market price loses it every customer, and there is no reason to go below. Its demand curve is a horizontal line at the market price — <strong>perfectly elastic</strong>. Because the price stays the same however much it sells, average revenue and marginal revenue are both equal to that price and lie along the very same line.",
+        "distractors": {
+          "A": "A downward-sloping demand curve belongs to a firm with market power, which has to cut its price to sell more. This firm does not.",
+          "B": "Same objection, and inelastic demand would mean the firm could raise its price without losing many customers — the opposite of the situation described.",
+          "D": "A vertical demand curve would mean the quantity demanded is fixed whatever the price. Here quantity is entirely flexible at one price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's total revenue rises from £7,200 to £7,650 when it increases its sales from 400 units to 450 units. Its marginal revenue over that range is",
+      "options": {
+        "A": "£1.00",
+        "B": "£9.00",
+        "C": "£17.00",
+        "D": "£18.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Marginal revenue is the change in total revenue per extra unit sold.<br />Change in total revenue: £7,650 − £7,200 = <strong>£450</strong>.<br />Change in quantity: 450 − 400 = <strong>50 units</strong>.<br />MR = £450 ÷ 50 = <strong>£9.00</strong>.<br />Compare that with average revenue at the new output: £7,650 ÷ 450 = £17.00. Marginal revenue is far below it, which is exactly what you expect from a firm cutting its price to sell more — the extra 50 units earn much less each than the running average, because the price cut applies to all 450.",
+        "distractors": {
+          "A": "£1.00 divides the £450 change in revenue by the new <em>total</em> output of 450, rather than by the change of 50.",
+          "C": "£17.00 is average revenue at the new output, TR ÷ Q. That is the average over all units, not the revenue from the extra ones.",
+          "D": "£18.00 is average revenue at the original output, £7,200 ÷ 400."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rail operator knows that demand for peak-time commuter travel is price inelastic. To raise the total revenue it earns from those journeys it should",
+      "options": {
+        "A": "Cut the peak fare and raise off-peak fares.",
+        "B": "Cut the peak fare, since more passengers will travel.",
+        "C": "Leave the peak fare unchanged, since revenue cannot rise.",
+        "D": "Raise the peak fare, since few passengers will switch away."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Where demand is inelastic the percentage fall in quantity is smaller than the percentage rise in price, so P × Q rises. Commuters travelling to a fixed workplace at a fixed time have few alternatives, which is precisely why their demand is inelastic — and why a fare rise loses relatively few of them. The total revenue rule gives the answer directly: with inelastic demand, raise the price.",
+        "distractors": {
+          "A": "The first half is wrong for the reason above. What happens to off-peak fares is a separate decision about a separate market with quite different elasticity.",
+          "B": "Cutting the price raises revenue only where demand is <strong>elastic</strong>. Here the additional passengers would not make up for the lower fare paid by everyone else.",
+          "C": "Revenue can certainly rise. Raising the fare does it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm with market power increases its output steadily from zero. As it does so, its total revenue",
+      "options": {
+        "A": "Falls throughout, since the price must be cut.",
+        "B": "Rises at a constant rate, then levels off.",
+        "C": "Rises at a decreasing rate, then falls.",
+        "D": "Rises at an increasing rate throughout."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Each extra unit adds its own price to revenue, but requires a price cut on every unit already being sold. At low outputs the first effect wins, so total revenue rises — but by less each time, because there are more existing units to give up revenue on. Marginal revenue is falling throughout. Once MR reaches zero, TR is at its peak; beyond that MR is negative and TR falls. That is the inverted-U shape of the total revenue curve for a firm facing a downward-sloping demand curve.",
+        "distractors": {
+          "A": "Total revenue rises across the whole elastic section of the demand curve. It falls only after marginal revenue has turned negative.",
+          "B": "That is the perfect competition case. There the price is constant, so total revenue is a straight line through the origin and never levels off.",
+          "D": "Rising at an increasing rate would require marginal revenue to be rising. For a firm with market power MR falls throughout."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-1-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm with market power is producing at an output where its marginal revenue is negative. Whatever its costs happen to be, it could raise its profit by",
+      "options": {
+        "A": "Cutting output and raising its price.",
+        "B": "Leaving output exactly where it is.",
+        "C": "Lowering its price and selling more.",
+        "D": "Raising output until marginal revenue is zero."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Negative marginal revenue means the last unit produced <em>reduced</em> total revenue. It also cost something to make, so it reduced profit from both directions at once. Cutting output therefore raises total revenue and lowers total cost together, and profit must rise — whatever the cost curves look like. This is why no profit-maximising firm ever operates on the inelastic section of its demand curve. And since the demand curve slopes down, reducing output means <strong>raising the price</strong>.",
+        "distractors": {
+          "B": "Staying put leaves the firm producing units that lose it money on the revenue side and the cost side simultaneously.",
+          "C": "Cutting the price means selling more, which pushes further into the region where MR is negative and revenue is falling.",
+          "D": "The direction is right but the movement is backwards. MR falls as output rises, so the firm reaches MR = 0 by <em>reducing</em> output, not raising it."
+        }
+      }
+    }
+  ]
+}

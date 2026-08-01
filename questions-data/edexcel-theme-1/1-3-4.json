@@ -1,0 +1,169 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.3.4",
+  "slug": "1-3-4-information-gaps",
+  "title": "Information Gaps",
+  "shortTitle": "Information Gaps",
+  "pageTitle": "Information Gaps and Asymmetric Information Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on information gaps for Edexcel A-Level Economics: asymmetric information and the resulting misallocation of resources.",
+  "intro": "Five original multiple-choice questions on information gaps and asymmetric information, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on information gaps, asymmetric information and how imperfect information misallocates resources.",
+  "questions": [
+    {
+      "id": "edexcel-1-3-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Neither the buyer nor the seller of a newly invented building material knows how it will perform over thirty years. This is best described as",
+      "options": {
+        "A": "An information gap affecting both parties.",
+        "B": "Asymmetric information favouring the buyer.",
+        "C": "Asymmetric information favouring the seller.",
+        "D": "Perfect information on both sides."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The notes draw a distinction worth holding onto. An <strong>information gap</strong> is a shortage of the information needed to decide well. <strong>Asymmetric information</strong> is the sharper case where one side knows <em>more than the other</em>.<br />Here the material is new, so nobody has thirty years of evidence about it. Both sides are equally in the dark, which makes this an information gap but not an asymmetry — and the decisions taken on it may still be poor ones.",
+        "distractors": {
+          "B": "Asymmetry requires one party to hold better information. The buyer has no advantage over the seller here.",
+          "C": "Nor does the seller. Having invented the material does not confer knowledge of how it behaves after thirty years in a wall.",
+          "D": "Perfect information would mean both sides knowing the full thirty-year performance. That is precisely what neither has."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A landlord knows a flat suffers badly from damp each winter. A prospective tenant viewing it in July cannot tell. The most likely market outcome is that",
+      "options": {
+        "A": "Rents fall right across the local market.",
+        "B": "The flat lets for more than it is worth.",
+        "C": "The landlord is unable to let the flat.",
+        "D": "The tenant pays exactly what the flat is worth."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is <strong>asymmetric information</strong> in its standard form: the seller knows the quality and the buyer does not.<br />The tenant values the flat on what they can observe, which in July looks fine. They therefore agree a rent that reflects a flat without a damp problem, and pay more than the flat is actually worth to them. Resources are misallocated — a property that should command a lower rent, or be repaired, gets neither.",
+        "distractors": {
+          "A": "One mispriced flat does not move a whole market. If tenants did learn to discount every flat, that would be the market adjusting to the problem rather than a result of this letting.",
+          "C": "The defect is invisible in July, so there is nothing to put the tenant off. The letting goes ahead — which is exactly the problem.",
+          "D": "The tenant is paying a price based on the flat as it appears, not as it is. The two coincide only when information is complete."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Many households have no idea how much a loft insulation grant would cut their heating bills, and few apply for it. In economic terms, insulation is",
+      "options": {
+        "A": "Over-consumed, because its private cost is too low.",
+        "B": "Over-consumed, because its benefits are overstated.",
+        "C": "Under-consumed, because its benefits are not known.",
+        "D": "Under-consumed, because its private cost is too high."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An information gap distorts choice by changing what people <em>think</em> a good is worth, not what it costs.<br />Households here underestimate the benefit because they have never seen the figures, so the insulation looks less worthwhile than it is and too few install it. The good is <strong>under-consumed</strong>, and the resulting misallocation is a loss of allocative efficiency.<br />The remedy follows from the diagnosis: supply the missing information, rather than change the price.",
+        "distractors": {
+          "A": "Consumption is too low, not too high. And nothing in the stem says the cost is low — a grant is on offer, which lowers it further.",
+          "B": "Overstating benefits would push consumption up. The problem here is that the benefits are understated, because they are unknown.",
+          "D": "Price is not the barrier the stem identifies. The grant exists and goes unclaimed, which points to knowledge rather than cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market where buyers cannot judge quality before they purchase, firms selling shoddy goods can charge the same price as firms selling good ones. Over time the most likely result is that",
+      "options": {
+        "A": "Buyers learn to identify quality without help.",
+        "B": "Good-quality suppliers leave the market.",
+        "C": "Prices rise to reflect the better products.",
+        "D": "Shoddy suppliers are driven out by competition."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Quality costs money to build in. If buyers cannot see it before purchase, they will not pay extra for it, so the careful producer carries higher costs and earns the same price as the careless one.<br />That is not a position a good-quality supplier can hold indefinitely. They cut quality or exit, and the average standard in the market falls. Markets with information gaps therefore <strong>over-provide low-quality goods and under-provide good ones</strong> — a misallocation of resources, and the reason regulation and labelling exist.",
+        "distractors": {
+          "A": "If buyers could learn to tell the difference the problem would solve itself, but the stem specifies that quality cannot be judged before purchase.",
+          "C": "Buyers will not pay more for a quality they cannot verify, so there is no route by which prices come to reflect it.",
+          "D": "Competition punishes weaknesses buyers can observe. Here they cannot, so it is the shoddy supplier who holds the cost advantage."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government requires every packaged food to carry a standardised nutrition label. The economic case for the requirement is that it",
+      "options": {
+        "A": "Bans the sale of foods that are bad for health.",
+        "B": "Lowers the price of healthier food products.",
+        "C": "Narrows the information gap facing consumers.",
+        "D": "Removes the profit motive from food producers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The market failure being addressed is a shortage of information, so the remedy is aimed squarely at it: make the missing facts available at the point of choice, in a form that can be compared across products.<br />Nothing else about the market is altered. Prices, products and the profit motive all stay where they were, and consumers keep every option they had. What changes is that their choices now reflect what they are actually buying, which is what allocative efficiency requires.",
+        "distractors": {
+          "A": "Nothing is banned. Labelling leaves the decision with the consumer and changes only what they know when they take it.",
+          "B": "Labels do not move prices. They change which products people are willing to pay for, which may in time change what gets made.",
+          "D": "Producers still pursue profit. The requirement changes what pursuing profit leads them to do, because buyers can now see what they are getting."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market for second-hand machinery, buyers cannot judge condition before they buy, so they will only offer a price reflecting average quality. Owners of the best machines stop selling, and average quality falls further. This process is called",
+      "options": {
+        "A": "Adverse selection.",
+        "B": "Consumer inertia.",
+        "C": "Herding behaviour.",
+        "D": "Moral hazard."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Adverse selection</strong> happens <em>before</em> a transaction. The side with less information cannot tell good from bad, so it prices for the average — and that price is too low to be worth accepting for anyone selling something above average.<br />The good machines leave, which lowers the average, which lowers the price buyers will offer, which drives out the next tier. The market unravels from the top down, and can end up trading only the worst goods. This is the mechanism behind the 'lemons problem' in second-hand cars.",
+        "distractors": {
+          "B": "Consumer inertia is sticking with a familiar choice because switching takes effort. Nobody here is staying put out of convenience.",
+          "C": "Herding is copying what other people do. These sellers are responding to the price on offer, not to each other.",
+          "D": "Moral hazard happens <em>after</em> a deal is struck, when one party changes its behaviour because it no longer bears the full risk. Here the problem arises before anything is bought."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A driver takes out fully comprehensive motor insurance and afterwards begins parking in less secure places and driving less carefully. This change in behaviour is called",
+      "options": {
+        "A": "Adverse selection.",
+        "B": "Asymmetric information.",
+        "C": "Bounded rationality.",
+        "D": "Moral hazard."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Moral hazard</strong> occurs <em>after</em> a transaction, when one party alters its behaviour because it no longer carries the full cost of the risk it takes.<br />The insurer now bears the cost of a theft or a crash, so the driver's own incentive to be careful weakens. Nothing dishonest need be involved — the change is often unconscious.<br />The timing is what separates it from adverse selection: adverse selection is about <em>who</em> buys the insurance, moral hazard about <em>how they behave</em> once they have it. Excesses and no-claims bonuses exist to put some of the risk back onto the driver.",
+        "distractors": {
+          "A": "Adverse selection would be the riskiest drivers being the keenest to buy comprehensive cover in the first place. That happens before the policy is signed.",
+          "B": "Asymmetric information is the underlying condition — the insurer cannot observe how carefully the driver drives. Moral hazard is the specific behaviour that condition permits.",
+          "C": "Bounded rationality is deciding under limits of information and mental effort. The driver here is responding rationally to a change in who bears the risk."
+        }
+      }
+    }
+  ]
+}

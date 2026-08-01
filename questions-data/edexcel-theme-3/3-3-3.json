@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.3.3",
+  "slug": "3-3-3-economies-diseconomies-of-scale",
+  "title": "Economies and Diseconomies of Scale",
+  "shortTitle": "Economies of Scale",
+  "pageTitle": "Economies of Scale Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on economies and diseconomies of scale for Edexcel A-Level Economics, including external economies and minimum efficient scale.",
+  "intro": "Seven original multiple-choice questions on economies and diseconomies of scale, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on internal and external economies of scale, the causes of diseconomies, and the minimum efficient scale.",
+  "questions": [
+    {
+      "id": "edexcel-3-3-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government introduces a tax credit for research spending, available to every firm in the pharmaceutical industry. Costs fall right across the industry. This is best described as",
+      "options": {
+        "A": "A technical economy of scale.",
+        "B": "An external economy of scale.",
+        "C": "An internal economy of scale.",
+        "D": "Increasing returns to scale."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The distinction is whether a cost saving comes from a firm's own growth or from the growth of the industry around it. Nothing about any individual firm has changed here — the credit is available to all of them because the <em>industry</em> has become important enough for the government to support. Edexcel lists <strong>favourable legislation</strong> among the external economies of scale, alongside geographic clusters, skilled labour pools and improved infrastructure. External economies shift every firm's LRAC curve downwards rather than moving one firm along its own.",
+        "distractors": {
+          "A": "Technical economies come from a single firm installing larger-scale machinery. Nothing here concerns any firm's equipment.",
+          "C": "Internal economies arise from the growth of the individual firm. No firm's size has changed.",
+          "D": "Increasing returns to scale describes output rising more than proportionately when a firm increases all of its own inputs. No firm here has changed its inputs at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A company grows from 200 employees to 4,000. Staff report that their individual contribution now goes unnoticed, and output per worker falls. This is best described as",
+      "options": {
+        "A": "A communication diseconomy of scale.",
+        "B": "A geographical diseconomy of scale.",
+        "C": "A motivational diseconomy of scale.",
+        "D": "The law of diminishing returns."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Edexcel gives three causes of diseconomies of scale, and this is the <strong>motivational</strong> one. As a firm gets larger each employee's effort is a smaller share of the whole and is less easily noticed or rewarded, so effort falls away. The page links it directly to the principal-agent problem: what an individual worker gains from working hard drifts apart from what the firm gains. Lower output per worker means higher average cost at the larger scale.",
+        "distractors": {
+          "A": "Communication diseconomies are about messages being distorted, delayed or lost across layers of management. The stem describes how workers feel about their own contribution, not a breakdown in information.",
+          "B": "Geographical diseconomies arise from co-ordinating plants or offices in different places. Nothing in the stem concerns distance.",
+          "D": "Diminishing returns are a short-run effect from adding a variable factor to a fixed one. Here the whole scale of the firm has grown, which makes it a long-run effect."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In one industry the minimum efficient scale is reached at an output equal to 40% of total market demand. All other things being equal, the market structure this industry is most likely to have is",
+      "options": {
+        "A": "Perfect competition among many small firms.",
+        "B": "Monopolistic competition among many firms.",
+        "C": "An oligopoly of two or three large firms.",
+        "D": "A monopoly served by a single firm."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Minimum efficient scale is the lowest output at which a firm reaches the bottom of its LRAC curve. If a firm must supply 40% of the market before its costs are as low as they can get, then at most two firms can operate efficiently, and a third would be stuck at a permanently higher average cost than its rivals. A high MES relative to the size of the market is therefore what produces concentrated markets — a barrier to entry created by cost conditions rather than by regulation or branding.",
+        "distractors": {
+          "A": "Perfect competition needs many firms each supplying a tiny share, which is only viable where MES is very small relative to demand. At 40% each, only two firms fit.",
+          "B": "Monopolistic competition likewise requires many firms. None of them could reach minimum efficient scale here.",
+          "D": "A single firm is possible but not the most likely outcome. Two firms can each reach MES at 40% and still supply 80% of the market between them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-3-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four reductions in one firm's average costs.<br />From Table 1, the only external economy of scale is",
+      "table": {
+        "caption": "Table 1: Four reductions in one firm's average costs",
+        "head": [
+          "",
+          "Cost reduction"
+        ],
+        "rows": [
+          [
+            "Reduction 1",
+            "Bulk orders now secure a lower price per unit"
+          ],
+          [
+            "Reduction 2",
+            "Larger machinery has raised output per hour"
+          ],
+          [
+            "Reduction 3",
+            "Experienced specialist managers have been hired"
+          ],
+          [
+            "Reduction 4",
+            "A new rail link serves the whole industrial estate"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Reduction 1.",
+        "B": "Reduction 2.",
+        "C": "Reduction 3.",
+        "D": "Reduction 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An <strong>external</strong> economy of scale comes from the growth of the industry rather than of the firm, and it lowers costs for every firm in that industry at once. A rail link serving the whole estate does exactly that: this firm did nothing to earn it and cannot keep the benefit to itself. Edexcel lists improved infrastructure alongside geographic clusters, skilled labour pools and favourable legislation. The other three all follow from this firm's own growth, which makes them internal.",
+        "distractors": {
+          "A": "A purchasing economy, and internal: it is this firm's own orders that have become larger.",
+          "B": "A technical economy, and internal: this firm has bought bigger machinery.",
+          "C": "A managerial economy, and internal: this firm can now afford specialist managers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm operating in a single market buys businesses in three unrelated markets. Its average costs fall, even though none of the four businesses has changed how it produces. The most likely explanation is",
+      "options": {
+        "A": "A purchasing economy of scale.",
+        "B": "A technical economy of scale.",
+        "C": "A risk-bearing economy of scale.",
+        "D": "An external economy of scale."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The stem rules out every explanation working through production, since nothing about how the four businesses operate has changed. What has changed is the firm's exposure: a poor year in one market can now be absorbed by the other three. Edexcel calls this a <strong>risk-bearing</strong> economy of scale, and lists diversification across products or markets as its source. It lowers costs because a more stable firm is a safer borrower and needs to hold less in reserve against a bad outcome.",
+        "distractors": {
+          "A": "Purchasing economies come from placing larger orders with suppliers. Four businesses in unrelated markets buy quite different things, so nothing here consolidates any purchasing.",
+          "B": "Technical economies come from larger-scale machinery, and the stem states that production methods are unchanged.",
+          "D": "External economies come from the growth of the industry around a firm. Here it is the firm itself that has grown."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A national hotel group pays less per tonne for laundry detergent than an independent guesthouse does. The reason its supplier is willing to charge the group less is that the group's order",
+      "options": {
+        "A": "Is a large share of the supplier's own revenue.",
+        "B": "Is delivered to a single central location.",
+        "C": "Is paid for more quickly than a small order.",
+        "D": "Requires less packaging per tonne supplied."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Bulk-buying discounts are not automatic — the supplier has to want to offer one. Edexcel's page explains why it does: a very large order accounts for a substantial share of the supplier's total revenue, so losing it would hurt and winning it is worth conceding margin for. It is the buyer's bargaining position, not merely the quantity, that secures the lower unit price. That is what makes it a <strong>purchasing</strong> economy of scale.",
+        "distractors": {
+          "B": "Central delivery can lower a supplier's costs, but a national group typically needs distribution to sites all over the country, which is the opposite of central.",
+          "C": "Large customers usually negotiate <em>longer</em> payment terms, not shorter ones. That is a cost to the supplier rather than a saving.",
+          "D": "Packaging per tonne is determined by the product, not by how much of it somebody orders."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-3-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm producing well below the minimum efficient scale doubles its output, and its average cost goes up rather than down. The best explanation is that the firm",
+      "options": {
+        "A": "Has moved past the minimum efficient scale.",
+        "B": "Is experiencing external economies of scale.",
+        "C": "Is suffering from short-run diminishing returns.",
+        "D": "Was already at the bottom of its LRAC curve."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Below MES, growing should lower average cost — so the observation needs explaining. Doubling output in a single step from a low base can carry a firm straight past the bottom of its LRAC curve and up onto the far arm, where diseconomies of scale in communication, motivation and geography outweigh the economies still being gained. Minimum efficient scale is the <em>lowest</em> output at which minimum average cost is reached; there is a range beyond it where costs rise again, and a large single jump can land there.",
+        "distractors": {
+          "B": "External economies lower costs for every firm in an industry. They would push average cost down, not up.",
+          "C": "Diminishing returns are a short-run effect, arising when a variable factor is added to a fixed one. Doubling output by changing the scale of production is a long-run change, with no fixed factor left to constrain it.",
+          "D": "The stem says the firm was well below MES, so by definition it was not at the bottom of its curve."
+        }
+      }
+    }
+  ]
+}

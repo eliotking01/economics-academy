@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.4.5",
+  "slug": "3-4-5-monopoly",
+  "title": "Monopoly",
+  "shortTitle": "Monopoly",
+  "pageTitle": "Monopoly Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on monopoly for Edexcel A-Level Economics: barriers to entry, price discrimination, natural monopoly and welfare effects.",
+  "intro": "Eight original multiple-choice questions on monopoly and monopoly power, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on the characteristics of monopoly, third-degree price discrimination, natural monopoly and who gains and loses.",
+  "questions": [
+    {
+      "id": "edexcel-3-4-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "One characteristic of a monopoly is that the firm knows considerably more about its own market than its customers do. This is called",
+      "options": {
+        "A": "Asymmetric information.",
+        "B": "Interdependence.",
+        "C": "Perfect information.",
+        "D": "Product differentiation."
+      },
+      "answer": "A",
+      "model": {
+        "working": "With no rival supplier, buyers have nothing to compare against — no second price, no alternative specification, no independent account of quality. The firm has all of it. Edexcel lists <strong>asymmetric information</strong> among the characteristics of monopoly for exactly this reason: it is not simply that the firm is the only seller, but that being the only seller leaves consumers unable to judge what they are being offered. That strengthens its pricing power beyond what the absence of substitutes alone would give.",
+        "distractors": {
+          "B": "Interdependence is the defining feature of oligopoly, where a few firms must each anticipate the others. A monopolist has no rival to anticipate.",
+          "C": "Perfect information is a condition of perfect competition, and it is the opposite of what a monopoly produces.",
+          "D": "Product differentiation distinguishes monopolistic competition. A monopolist has no rival product to be differentiated from."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A pharmaceutical firm holds a twenty-year patent on a drug with no therapeutic alternative. What the patent allows the firm to do is",
+      "options": {
+        "A": "Charge a price equal to its marginal cost.",
+        "B": "Keep supernormal profit into the long run.",
+        "C": "Produce at the minimum of its average cost curve.",
+        "D": "Sell as much as it likes at the going price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "In any market without barriers, supernormal profit attracts entry and is competed away. A <strong>patent</strong> is a legal barrier: it makes entry unlawful for the length of its term, so the profit survives into the long run. Edexcel lists patents and copyrights among the sources of a monopoly's unique product, and it is the barrier rather than the firm's size that does the work. When the patent expires, generic manufacturers enter and the price falls back towards cost.",
+        "distractors": {
+          "A": "A monopolist charges <em>above</em> marginal cost, which is precisely why the outcome is allocatively inefficient.",
+          "C": "Nothing about holding a patent puts a firm at the minimum of its average cost curve, and monopolies typically produce well away from it.",
+          "D": "Selling any quantity at a fixed going price describes a price taker in perfect competition. This firm sets its own price along a downward-sloping demand curve."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four consequences of one firm holding monopoly power in its market.<br />From Table 1, the consequence usually presented as an advantage of monopoly is",
+      "table": {
+        "caption": "Table 1: Four consequences of one firm holding monopoly power",
+        "head": [
+          "",
+          "Consequence"
+        ],
+        "rows": [
+          [
+            "Consequence 1",
+            "Its suppliers accept lower prices and longer payment terms"
+          ],
+          [
+            "Consequence 2",
+            "Consumers face higher prices and less choice"
+          ],
+          [
+            "Consequence 3",
+            "Its workers have few opportunities to move elsewhere"
+          ],
+          [
+            "Consequence 4",
+            "Economies of scale lower the firm's unit costs"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Consequence 1.",
+        "B": "Consequence 2.",
+        "C": "Consequence 3.",
+        "D": "Consequence 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Edexcel sets the costs and benefits of monopoly out by stakeholder, and only one entry here falls on the benefit side. A monopolist supplying the whole market operates at a large scale, and <strong>economies of scale</strong> lower its unit costs. That is the standard argument that a single firm can be cheaper to run than several competing ones, and can pass part of the saving on. The other three are costs — to suppliers, to consumers and to workers in turn.",
+        "distractors": {
+          "A": "Reduced bargaining power for suppliers, including longer payment terms, is one of the costs Edexcel attaches to monopoly.",
+          "B": "Higher prices, lower output and reduced choice are the standard consumer costs of monopoly.",
+          "C": "Limited career progression, because there is nowhere else in the industry to go, is the cost that falls on workers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cinema chain introduces student pricing, and must now check identification at every screening and stop cheaper tickets being passed on. The effect on the gain from price discrimination is that it",
+      "options": {
+        "A": "Disappears, since resale cannot be stopped.",
+        "B": "Is reduced by the cost of separating the markets.",
+        "C": "Is unaffected, since checking costs nothing.",
+        "D": "Rises, because more consumers are identified."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Price discrimination raises revenue by charging each group closer to what it will pay, but running it is not free. The firm has to identify the groups and keep the cheaper tickets out of the dearer market — checking ID, restricting transfers, policing the boundary. Edexcel makes the point that these costs reduce the overall gain, and where they exceed the extra revenue the scheme is not worth operating. It is one reason firms discriminate on characteristics that are cheap to verify, such as age or time of day.",
+        "distractors": {
+          "A": "Resale can be stopped, at a cost — that is what the checks are for. If it could not be stopped at all the scheme would collapse rather than merely earn less.",
+          "C": "Checking identification at every screening takes staff time, which is a real cost however small it looks.",
+          "D": "Identifying more consumers does raise revenue, but the question is the <em>net</em> gain, and identification is the thing that costs money."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rail operator charges much less for off-peak travel than for peak travel on the same route. Besides paying a lower fare, off-peak passengers gain because",
+      "options": {
+        "A": "Peak passengers subsidise the off-peak service.",
+        "B": "The operator earns less total profit overall.",
+        "C": "Their trains are quieter and seats easier to find.",
+        "D": "They have more inelastic demand than commuters."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Third-degree price discrimination separates markets by elasticity, and the effect is not confined to the fare. The lower price goes to the group whose demand is elastic — leisure travellers with flexible timing — while the higher peak fare pushes demand away from the busiest services. Edexcel lists this among the consumer benefits: those buying at the lower price also enjoy <strong>quieter services and better availability</strong>. The cost falls on the inelastic group, who pay more than they would under a single fare.",
+        "distractors": {
+          "A": "The two fares reflect different elasticities rather than a cross-subsidy, and both may well sit above the marginal cost of carrying a passenger.",
+          "B": "Successful price discrimination raises the operator's total profit. That is why it does it.",
+          "D": "Off-peak travellers have <em>more elastic</em> demand, which is exactly why they are the group offered the lower fare."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A water company's costs are almost entirely the fixed cost of its pipe network, with very little attached to supplying each extra litre. Across the whole range of market demand its long-run average cost therefore",
+      "options": {
+        "A": "Falls throughout, so one firm supplies most cheaply.",
+        "B": "Falls then rises, so several firms can compete.",
+        "C": "Is constant, so the number of firms does not matter.",
+        "D": "Rises throughout, so many small firms are efficient."
+      },
+      "answer": "A",
+      "model": {
+        "working": "With very high fixed costs and very low marginal costs, every additional litre spreads the network's cost over a larger output — so average cost keeps falling, and keeps falling right across the range of demand rather than turning upward at some efficient scale. That is the defining condition of a <strong>natural monopoly</strong>: one firm supplying everybody achieves a lower average cost than two firms each supplying half, because duplicating the pipes would double the fixed cost without adding any output at all.",
+        "distractors": {
+          "B": "A U-shaped LRAC is the ordinary case, where minimum efficient scale is small relative to demand and several firms can each reach it.",
+          "C": "Constant long-run average cost would make the number of firms irrelevant to cost, which is not what a very high fixed cost produces.",
+          "D": "A rising LRAC throughout would mean the smallest firms were cheapest — the opposite of a network industry."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two firms each supply 100% of their market. One faces a credible threat that a rival could enter within months; the other is protected by a legal barrier lasting decades. X-inefficiency is more likely in",
+      "options": {
+        "A": "Neither, since both are monopolies.",
+        "B": "The first, since it must keep prices low.",
+        "C": "The second, since no threat disciplines it.",
+        "D": "Both equally, since market share is the same."
+      },
+      "answer": "C",
+      "model": {
+        "working": "X-inefficiency is organisational slack — costs drifting above the minimum because nothing forces them down. Market share on its own does not produce it; the absence of pressure does. A firm that could be entered within months has to keep costs and prices under control whether or not a rival has actually appeared, because visible supernormal profit would invite one. A firm protected for decades faces no such discipline. This is why Edexcel lists X-inefficiency in monopoly as <strong>possible</strong>, depending on the barriers and the competitive threat, rather than automatic.",
+        "distractors": {
+          "A": "Being a monopoly is exactly the situation in which X-inefficiency arises. The question is which of the two is more exposed to it.",
+          "B": "The first firm does have reason to hold prices down — but that is an argument for <em>less</em> X-inefficiency there, not more.",
+          "D": "Market share is identical in both cases, which is precisely why it cannot be what distinguishes them. The barriers can."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A monopolist is often described as being able to set its own price. It cannot, however, set any price it likes, because",
+      "options": {
+        "A": "A regulator caps every monopoly's price by law.",
+        "B": "It must still match the prices of close substitutes.",
+        "C": "Raising the price further would reduce its profit.",
+        "D": "Its marginal revenue curve lies above its demand curve."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Being a price maker means choosing a point on the demand curve, not escaping it. The monopolist may pick whatever price it wishes, but the quantity it then sells is decided by buyers — and beyond the profit-maximising price, the sales lost outweigh the wider margin. Profit is maximised at the single output where MC = MR, and any price above the one corresponding to that output reduces it. Market power widens the range of choice; it does not remove the constraint.",
+        "distractors": {
+          "A": "Some monopolies are regulated and many are not, yet the constraint described here applies to all of them.",
+          "B": "A pure monopoly by definition has no close substitutes. That absence is what gives it the power in the first place.",
+          "D": "Marginal revenue lies <em>below</em> average revenue for any firm facing a downward-sloping demand curve, which is part of why the profit-maximising output is limited."
+        }
+      }
+    }
+  ]
+}

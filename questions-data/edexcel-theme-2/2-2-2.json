@@ -1,0 +1,213 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.2.2",
+  "slug": "2-2-2-consumption",
+  "title": "Consumption",
+  "shortTitle": "Consumption",
+  "pageTitle": "Consumption and the Marginal Propensity to Consume Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on consumption for Edexcel A-Level Economics: disposable income, the MPC, interest rates, confidence and wealth.",
+  "intro": "Eight original multiple-choice questions on consumption, written to the style and difficulty of Edexcel Paper 2 Section A. Two are calculations.",
+  "notesTeaser": "Eight original multiple-choice questions on what determines household consumption — disposable income, the marginal propensity to consume, interest rates, confidence and wealth.",
+  "questions": [
+    {
+      "id": "edexcel-2-2-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A household's disposable income rises by £250 a month. It increases its spending by £175 and saves the rest. Its marginal propensity to consume is",
+      "options": {
+        "A": "0.30",
+        "B": "0.70",
+        "C": "1.43",
+        "D": "175.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The marginal propensity to consume is the fraction of <em>extra</em> disposable income that gets spent:<br />MPC = £175 ÷ £250 = <strong>0.70</strong>.<br />The £75 not spent is saved, giving an MPS of 0.30. The two always sum to 1, because every extra pound is either spent or saved — which gives you a free check on any answer.",
+        "distractors": {
+          "A": "0.30 is the marginal propensity to <strong>save</strong>: £75 ÷ £250. It is the complement of the right answer, not the answer.",
+          "C": "This inverts the fraction: £250 ÷ £175. An MPC above 1 would mean spending more than the extra income, which cannot be sustained out of that income alone.",
+          "D": "175.00 is the cash sum. A propensity is a proportion and has no units, so it must lie between 0 and 1."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q2",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A household saves 0.2 of every extra pound of disposable income it receives. Its marginal propensity to consume is",
+      "options": {
+        "A": "0.20",
+        "B": "0.80",
+        "C": "1.20",
+        "D": "5.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Every extra pound of disposable income is either spent or saved, so <strong>MPC + MPS = 1</strong>.<br />MPC = 1 − 0.2 = <strong>0.80</strong>.<br />An MPC of 0.8 means the household passes four fifths of any income increase straight back into the economy as spending, which is what makes changes in disposable income move aggregate demand so effectively.",
+        "distractors": {
+          "A": "0.20 is the MPS itself, repeated. The two propensities are complements, so they cannot be the same number.",
+          "C": "This adds rather than subtracts. An MPC above 1 would mean spending more than the whole of the extra pound.",
+          "D": "5.00 is 1 ÷ 0.2. That formula belongs to the multiplier, not to the marginal propensity to consume."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Disposable income is best defined as household income after",
+      "options": {
+        "A": "Direct taxes, with transfer payments added.",
+        "B": "Direct taxes, with transfer payments deducted.",
+        "C": "Indirect taxes, with savings added.",
+        "D": "Saving, with direct taxes added."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Disposable income is what a household actually has available to spend or save. Two adjustments get it there: <strong>subtract direct taxes</strong> such as income tax and National Insurance, then <strong>add transfer payments</strong> such as benefits and the state pension.<br />It matters because it, rather than gross income, is what drives consumption. A tax cut and a benefit increase raise it by the same route, which is why both are used to support demand.",
+        "distractors": {
+          "B": "Transfers are money coming <em>in</em> to the household, so they are added. Deducting them would understate what is available to spend.",
+          "C": "Indirect taxes such as VAT are paid when income is spent, not before it is received. They affect what the money buys, not how much of it there is.",
+          "D": "Saving comes <em>out of</em> disposable income — it is one of the two things the household does with it, not a step in calculating it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government transfers income from high-earning to low-earning households, leaving total household income unchanged. Aggregate consumption is most likely to",
+      "options": {
+        "A": "Fall, because higher earners save more.",
+        "B": "Fall, because total income has not changed.",
+        "C": "Rise, because lower earners have a higher MPC.",
+        "D": "Stay the same, because total income is unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Total income is fixed, so the whole of the effect comes from <em>who holds</em> it.<br />Lower-income households have a <strong>higher marginal propensity to consume</strong>: more of each extra pound is spent because more of it goes on necessities. Higher-income households save a larger share.<br />Moving a pound from a low-MPC household to a high-MPC one therefore raises the amount that gets spent, so aggregate consumption rises even though nobody in aggregate has more. This is why the <strong>distribution</strong> of income affects AD and not just its total.",
+        "distractors": {
+          "A": "Higher earners saving more is true, and it is the reason consumption <em>rises</em> — the money has been moved away from them towards households who spend more of it.",
+          "B": "Unchanged total income rules out an income effect, but not a distribution effect. The composition of who holds the income has changed.",
+          "D": "This treats consumption as depending only on total income. It also depends on how that total is spread across households with different propensities to consume."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Household incomes are unchanged, but a run of bad economic news makes households markedly more pessimistic about the year ahead. Consumption is most likely to",
+      "options": {
+        "A": "Fall, as households save more and borrow less.",
+        "B": "Fall, as disposable income has been reduced.",
+        "C": "Rise, as households bring purchases forward.",
+        "D": "Stay the same, since income has not changed."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Consumer confidence</strong> is an influence on consumption in its own right, separate from income. Households worried about their jobs or future earnings build a buffer: they save a larger share of what they have and take on less debt.<br />So consumption falls with income untouched. This is one reason recessions can be self-reinforcing — pessimism cuts spending, weaker spending cuts output and jobs, and the news gets worse.",
+        "distractors": {
+          "B": "The stem says incomes are unchanged. Nothing has happened to disposable income; what has changed is how households feel about the future.",
+          "C": "Bringing purchases forward is what households do when they expect prices to <em>rise</em>, not when they fear for their incomes.",
+          "D": "Income is not the only determinant of consumption. Confidence, interest rates, wealth and the distribution of income all matter too."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Interest rates rise sharply. Besides making borrowing dearer, this reduces consumption because it",
+      "options": {
+        "A": "Cuts the disposable income of savers.",
+        "B": "Lowers the price level across the economy.",
+        "C": "Raises the marginal propensity to consume.",
+        "D": "Rewards saving rather than spending."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A rate rise works on consumption from <strong>two directions at once</strong>. The stem gives the first: borrowing costs more, so credit-financed spending falls.<br />The second is the return on saving. A higher rate means a pound put aside is worth more later, which makes deferring consumption more attractive relative to spending now. Households save a larger share of income, and consumption falls further.<br />Both effects push the same way, which is what makes interest rates such a powerful tool of demand management.",
+        "distractors": {
+          "A": "Higher rates <em>raise</em> the interest savers receive, so their income goes up rather than down. That effect works against the other two, though it is normally much the weaker.",
+          "B": "Interest rates affect the price level only indirectly and with a long lag, through their effect on demand. It is not the mechanism the question is asking about.",
+          "C": "A higher reward for saving lowers the propensity to consume out of extra income, it does not raise it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sustained fall in share prices reduces the value of households' holdings, while their incomes are unchanged. Consumption is most likely to",
+      "options": {
+        "A": "Fall, through the wealth effect.",
+        "B": "Fall, through lower disposable income.",
+        "C": "Rise, as households sell shares in order to spend.",
+        "D": "Stay the same, since incomes have not changed."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>wealth effect</strong> links what households own to what they spend. Feeling wealthier encourages spending and borrowing; feeling poorer does the reverse, whatever is happening to income.<br />Shares and housing are the two forms of wealth that matter most here. A sustained fall in either makes households more cautious, so they rebuild savings and cut back — with no change in income at all. It is the same mechanism as a house price boom raising consumption, running in reverse.",
+        "distractors": {
+          "B": "Disposable income is explicitly unchanged. Wealth is a stock of assets; income is a flow, and they move independently.",
+          "C": "Selling assets after a fall crystallises the loss. Households are more likely to hold on and spend less elsewhere.",
+          "D": "Income is not the only determinant. Wealth, confidence, interest rates and income distribution all affect consumption too."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government wants to raise aggregate consumption without raising total household income. Of the following, the measure most likely to work is",
+      "options": {
+        "A": "Raising interest rates to reward saving.",
+        "B": "Raising taxes on lower-income households.",
+        "C": "Redistributing income towards lower earners.",
+        "D": "Reducing the value of household wealth."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The constraint rules out the obvious lever — total income has to stay where it is — so the answer must work through one of the <em>other</em> determinants.<br />Redistribution does exactly that. Lower earners have a higher marginal propensity to consume, so shifting the same total towards them raises the share of it that is spent. Consumption rises with aggregate income untouched.<br />Each of the other three moves a genuine determinant of consumption, and every one of them moves it the wrong way.",
+        "distractors": {
+          "A": "A higher return on saving makes deferring consumption more attractive. Spending falls rather than rising.",
+          "B": "This is redistribution running the wrong way. It takes money from the households with the highest propensity to spend it.",
+          "D": "A fall in wealth reduces consumption through the wealth effect, which is the opposite of what is wanted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Households learn from credible reports that a large rise in energy bills will take effect in six months' time. Their incomes this month are unchanged. Consumption this month is most likely to",
+      "options": {
+        "A": "Be unaffected, since incomes have not changed.",
+        "B": "Fall, as households save more in advance of it.",
+        "C": "Rise, as households buy energy before the increase.",
+        "D": "Rise, because expectations do not affect spending."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Expectations</strong> influence consumption in their own right, before anything has actually happened to income.<br />A household that knows a large bill is coming builds a buffer for it, and the only way to do that out of unchanged income is to spend less on other things now. Consumption falls this month because of something scheduled for six months' time.<br />This is why announcing a future tax rise or benefit cut can weaken demand immediately, and why confidence measures are watched as leading indicators — spending responds to what households think is coming, not only to what has already arrived.",
+        "distractors": {
+          "A": "Income is only one determinant of consumption. Expectations, confidence, interest rates and wealth all move spending without income changing at all.",
+          "C": "Energy is largely bought as it is used and cannot be stockpiled by a household, so bringing purchases forward is not really available here.",
+          "D": "Expectations plainly do affect spending, which is the whole point of the question. A household that knows a bill is coming behaves differently today."
+        }
+      }
+    }
+  ]
+}

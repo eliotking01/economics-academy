@@ -1,0 +1,125 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.8",
+  "slug": "1-4-8-technological-change",
+  "title": "Technological Change",
+  "shortTitle": "Technological Change",
+  "pageTitle": "Invention and Innovation Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on technological change for AQA A-Level Economics: invention, innovation, productivity and costs, with worked answers.",
+  "intro": "Five original multiple-choice questions on technological change, invention and innovation, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Five original multiple-choice questions on invention, innovation and the effects of technological change on costs and productivity, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-4-8-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following is best described as an innovation rather than an invention?",
+      "options": {
+        "A": "Building the first working electric battery.",
+        "B": "Developing a longer-lasting battery from an existing design.",
+        "C": "Discovering a chemical element that was previously unknown.",
+        "D": "Producing the first ever working telephone."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An <strong>invention</strong> is the creation of something entirely new that did not exist before. An <strong>innovation</strong> is the development or improvement of something that already exists — making it better, more efficient, or suited to a new purpose. Improving an existing battery design is therefore innovation: the battery already existed, and it has been refined.",
+        "distractors": {
+          "A": "The <em>first</em> working battery is an invention by definition, because nothing of the kind existed before it.",
+          "C": "Discovering a previously unknown element is a scientific discovery leading to an invention. Nothing is being improved upon.",
+          "D": "The first telephone is the standard example of an invention. Developing smartphones out of it, by contrast, is innovation."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-8-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A manufacturer installs new technology that produces the same output using less electricity and fewer raw materials. All other things being equal, this will",
+      "options": {
+        "A": "Lower its average cost of production.",
+        "B": "Lower its total revenue.",
+        "C": "Raise its average cost of production.",
+        "D": "Raise its total fixed costs permanently."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Producing the same output from fewer inputs means less is spent on those inputs per unit made, so the cost <strong>per unit</strong> falls. Reducing waste is one of the standard routes by which technological change lowers costs, alongside raising productivity. On a cost diagram the whole average cost curve shifts downwards.",
+        "distractors": {
+          "B": "Revenue depends on price and quantity sold, neither of which has changed. The firm is producing the same output; only the resources used to make it have fallen.",
+          "C": "This has the effect backwards. Using fewer inputs for the same output is the definition of becoming more efficient, which reduces unit costs.",
+          "D": "Buying the technology is a one-off capital outlay, and the purpose of the investment is to lower costs overall. Treating that outlay as a permanent rise in fixed costs ignores the ongoing saving on electricity and materials."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-8-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Technological change raises a firm's labour productivity when it allows the firm to",
+      "options": {
+        "A": "Employ more workers to produce the same output.",
+        "B": "Produce the same output at a higher price.",
+        "C": "Raise output without employing any extra workers.",
+        "D": "Sell more output by advertising more heavily."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Labour productivity is <strong>output per worker</strong>. Raising output while the workforce stays the same increases the numerator without changing the denominator, so productivity rises. An automated production line that turns out more units an hour with the same staff is the standard illustration.",
+        "distractors": {
+          "A": "This is the opposite: the same output divided by <em>more</em> workers gives lower output per worker, so productivity falls.",
+          "B": "Price affects revenue, not productivity. Productivity is a physical relationship between inputs and output, measured before any money is involved.",
+          "D": "Advertising influences how much the firm sells, not how efficiently it produces. Productivity concerns the production process itself."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-8-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A new technology becomes available to every firm in an industry and lowers their costs of production. All other things being equal, the effect on the market for the good is",
+      "options": {
+        "A": "A leftward shift of the industry supply curve.",
+        "B": "A movement along the industry supply curve.",
+        "C": "A rightward shift of the industry demand curve.",
+        "D": "A rightward shift of the industry supply curve."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Costs of production are one of the <strong>conditions of supply</strong>. Lower costs mean firms are willing to supply more at every price, so the whole supply curve shifts <strong>right</strong>. Against an unchanged demand curve the new equilibrium has a <strong>lower price and a higher quantity</strong> — which is how technological progress in an industry reaches consumers.",
+        "distractors": {
+          "A": "A leftward shift means less supplied at every price, which is what happens when costs <em>rise</em>.",
+          "B": "A movement along the supply curve is the response to a change in the good's own price. Here it is a condition of supply that has changed, which relocates the curve.",
+          "C": "Consumers' incomes, tastes and alternatives are unchanged, so demand does not shift. The quantity demanded rises, but as a movement along the demand curve in response to the lower price."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-8-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Precision farming technology allows a crop to be grown using significantly less water and fertiliser than before, with no change in yield. This is best described as an improvement in",
+      "options": {
+        "A": "Allocative efficiency, because consumers obtain more of what they want.",
+        "B": "Productive efficiency, because the same output uses fewer resources.",
+        "C": "The firm's total revenue, because its costs have fallen.",
+        "D": "The terms of trade, because the crop becomes cheaper to export."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Productive efficiency</strong> is about getting the maximum output from a given set of resources — or equivalently, producing a given output using as few resources as possible. Growing the same crop with less water and fertiliser is exactly that. The resources released are then available for other uses, which is why efficiency gains of this kind matter beyond the individual farm.",
+        "distractors": {
+          "A": "Allocative efficiency is about producing the <em>combination</em> of goods society values most. Nothing here changes what is produced, only the resources used to produce it.",
+          "C": "Revenue depends on price and quantity sold, and the yield is unchanged. Lower costs raise <strong>profit</strong>, not revenue — the two are distinct.",
+          "D": "The terms of trade is a macroeconomic measure comparing export and import prices for a whole country. It is far too broad a concept for a change in one farming technique."
+        }
+      }
+    }
+  ]
+}

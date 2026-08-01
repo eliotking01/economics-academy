@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.8",
+  "slug": "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets",
+  "title": "Public Ownership, Privatisation, Regulation and Deregulation of Markets",
+  "shortTitle": "Privatisation and Regulation",
+  "pageTitle": "Privatisation and Regulation Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on privatisation and regulation for AQA A-Level Economics, including regulatory capture, with full worked answers.",
+  "intro": "Seven original multiple-choice questions on public ownership, privatisation, regulation and deregulation, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on public ownership, privatisation, regulation, deregulation and regulatory capture, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-8-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Privatisation is best defined as",
+      "options": {
+        "A": "The removal of rules and restrictions from a market.",
+        "B": "The transfer of ownership of an enterprise from the state to the private sector.",
+        "C": "The transfer of ownership of an enterprise from the private sector to the state.",
+        "D": "The setting of maximum prices for a privately owned monopoly."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Privatisation</strong> moves an enterprise out of public ownership and into private hands. The case for it rests on the <strong>profit motive</strong> sharpening incentives to cut costs and innovate, and on competition where it can be introduced. Note that it is distinct from <strong>deregulation</strong>, which removes rules but says nothing about who owns the firm.",
+        "distractors": {
+          "A": "Removing rules and restrictions is <strong>deregulation</strong>. The two often happen together but they are separate policies.",
+          "C": "Transfer in the opposite direction is <strong>nationalisation</strong>, a form of public ownership.",
+          "D": "Price capping is <strong>regulation</strong>, frequently applied <em>after</em> privatisation to control a private monopoly."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-8-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The main economic argument in favour of privatising a state-owned enterprise is that",
+      "options": {
+        "A": "Prices will always fall to the allocatively efficient level.",
+        "B": "The government will no longer be able to regulate the industry.",
+        "C": "The government will receive a payment when the enterprise is sold.",
+        "D": "The profit motive gives stronger incentives to cut costs and innovate."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A state-owned enterprise has no shareholders demanding a return and no threat of takeover or bankruptcy, so the pressure to control costs is weak and <strong>X-inefficiency</strong> can build up. Private ownership introduces the <strong>profit motive</strong>, which rewards cutting costs and innovating — and where competition can be introduced alongside it, consumers gain through lower prices and better service.",
+        "distractors": {
+          "A": "Nothing guarantees allocative efficiency. Privatising a natural monopoly without effective regulation can leave prices <em>higher</em>, since a private monopolist maximises profit.",
+          "B": "Regulation usually continues after privatisation, and for natural monopolies it is essential.",
+          "C": "Sale proceeds are a real fiscal benefit, but they are a one-off. The lasting economic argument concerns efficiency."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-8-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government keeps a natural monopoly water supplier in public ownership rather than privatising it. The strongest economic argument for doing so is that",
+      "options": {
+        "A": "A private monopolist would restrict output and charge above marginal cost.",
+        "B": "Public ownership guarantees that the firm will minimise its average costs.",
+        "C": "Public sector managers are always more capable than private ones.",
+        "D": "State-owned firms are unable to make a loss."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>natural monopoly</strong> cannot be broken up without raising average costs, so competition is not available as a discipline. Left in private hands and unregulated, the firm would maximise profit by <strong>restricting output and charging above marginal cost</strong> — allocative inefficiency in an essential service. Public ownership allows output to be set closer to the allocatively efficient point where AR = MC, delivering lower prices and higher output at the cost of lower profit.",
+        "distractors": {
+          "B": "Public ownership carries its own risk of X-inefficiency, since the profit motive and the threat of failure are both absent.",
+          "C": "There is no reason to assume public managers are more capable. The argument rests on the firm's <em>objectives</em>, not the quality of its staff.",
+          "D": "State-owned firms can and do make losses; they are simply covered by the taxpayer, which is itself a cost."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-8-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Deregulation is best described as",
+      "options": {
+        "A": "Selling a state-owned enterprise to private investors.",
+        "B": "Splitting a dominant firm into several smaller companies.",
+        "C": "The removal of legal barriers and restrictions from a market.",
+        "D": "Setting a maximum price that a monopoly may charge."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Deregulation</strong> removes rules that restrict entry or conduct — licensing requirements, statutory monopolies, restrictions on who may compete. Its purpose is to raise <strong>contestability</strong>: with barriers lowered, the threat of entry disciplines incumbent firms even before any new firm arrives.",
+        "distractors": {
+          "A": "Selling a state enterprise is <strong>privatisation</strong>, which changes ownership rather than the rules.",
+          "B": "Splitting up a dominant firm is a structural competition remedy, usually imposed by a regulator.",
+          "D": "Imposing a price cap is <strong>regulation</strong> — adding a rule rather than removing one."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-8-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Regulatory capture occurs when a regulator",
+      "options": {
+        "A": "Becomes too close to the firms it regulates.",
+        "B": "Fails to collect enough revenue to cover its own costs.",
+        "C": "Imposes fines that are too large for firms to pay.",
+        "D": "Is taken over by the government department that created it."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Regulatory capture</strong> is the tendency for a regulator, over time, to identify with the industry it supervises rather than with consumers. It happens because the regulator depends on the firms for information and expertise, and because staff often move between the two. The result is weak enforcement and prices or standards set to suit producers — a form of <strong>government failure</strong>, since the intervention meant to correct market failure ends up entrenching it.",
+        "distractors": {
+          "B": "A regulator's funding arrangements are a practical matter and not what the term describes.",
+          "C": "Excessive fines would be over-zealous enforcement, which is the opposite failing.",
+          "D": "Departmental reorganisation is an administrative change with no bearing on whose interests are served."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-8-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator imposes a price cap on a privatised natural monopoly. The main purpose is to",
+      "options": {
+        "A": "Guarantee that the firm earns supernormal profit.",
+        "B": "Increase the firm's incentive to restrict output.",
+        "C": "Prevent the firm exploiting its market power.",
+        "D": "Remove the barriers to entry protecting the firm."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Where competition cannot realistically be introduced, <strong>regulation substitutes for it</strong>. A price cap stops the monopolist charging what its market power would allow, holding prices closer to the competitive level and protecting consumers. Caps of the RPI−X form go further, requiring real prices to fall each year and so building in an incentive to find efficiency savings.",
+        "distractors": {
+          "A": "The cap limits profit rather than guaranteeing it. That is precisely its purpose.",
+          "B": "Restricting output is the behaviour being prevented, not encouraged.",
+          "D": "Barriers to entry in a natural monopoly stem from its cost structure. A price cap cannot remove them, which is why regulation is needed in the first place."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-8-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government privatises a natural monopoly without establishing an effective regulator. The most likely outcome is that",
+      "options": {
+        "A": "Average costs rise sharply as the market fragments.",
+        "B": "Consumers face higher prices and lower output than before.",
+        "C": "The industry immediately becomes perfectly competitive.",
+        "D": "The new owners are unable to earn any supernormal profit."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Privatisation delivers efficiency gains through <strong>competition</strong> and the profit motive — but a natural monopoly cannot be made competitive, because duplicating the network would raise average costs for everyone. Transferred to private hands without regulation, the firm keeps the monopoly and gains a profit-maximising objective, so it <strong>restricts output and raises price</strong>. Consumers end up worse off than under public ownership.<br />This is why privatisation of utilities has always been accompanied by a regulator, and why the design of that regulation matters more than the transfer of ownership itself.",
+        "distractors": {
+          "A": "The market does not fragment. The single network remains intact under one owner, which is the source of the problem.",
+          "C": "Perfect competition requires many firms and free entry. The cost structure of a natural monopoly rules both out.",
+          "D": "With no competition and no price cap, supernormal profit is exactly what the new owners can expect to earn."
+        }
+      }
+    }
+  ]
+}

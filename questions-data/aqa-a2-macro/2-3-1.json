@@ -1,0 +1,238 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.3.1",
+  "slug": "2-3-1-economic-growth-and-the-economic-cycle",
+  "title": "Economic Growth and the Economic Cycle",
+  "shortTitle": "Growth and the Economic Cycle",
+  "pageTitle": "Economic Growth and the Cycle Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on economic growth and the economic cycle for AQA A-Level Economics: actual and potential growth, output gaps and shocks.",
+  "intro": "Nine original multiple-choice questions on economic growth, the trade cycle and output gaps, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on short-run and long-run growth, the trade cycle and positive and negative output gaps, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Long-run economic growth is best defined as an increase in",
+      "options": {
+        "A": "An economy's actual output of goods and services.",
+        "B": "The average price level of goods and services.",
+        "C": "The maximum output an economy could produce.",
+        "D": "The proportion of the labour force in work."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Long-run growth — also called <strong>potential growth</strong> — is an increase in the economy's productive capacity: the most it could produce with all its resources fully employed. It is shown as an outward shift of the LRAS curve and of the production possibility frontier.",
+        "distractors": {
+          "A": "Actual output is <strong>short-run</strong> growth. An economy can raise actual output simply by using spare capacity, without its potential changing at all.",
+          "B": "A rise in the average price level is inflation. It is a separate macroeconomic variable and can happen with or without growth.",
+          "D": "The share of the labour force in work is the employment rate. It affects how much of the economy's potential is used, not how large that potential is."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy moves from a point inside its production possibility frontier to a point on the frontier. This is best described as",
+      "options": {
+        "A": "Long-run growth, because potential output has risen.",
+        "B": "Long-run growth, because the frontier has shifted outwards.",
+        "C": "Short-run growth, because actual output has risen.",
+        "D": "Short-run growth, because the frontier has shifted outwards."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The frontier itself has not moved — the economy has simply moved <em>towards</em> it, using resources that were previously idle. Actual output rises while potential output is unchanged, which is exactly what <strong>short-run</strong> or actual growth means.",
+        "distractors": {
+          "A": "Potential output is the frontier, and it is where it always was. Nothing here raises the economy's capacity.",
+          "B": "The frontier has not shifted. The economy has moved to a different point on the same frontier.",
+          "D": "The first half is right and the second half is wrong. Short-run growth involves no shift of the frontier."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would cause long-run economic growth?",
+      "options": {
+        "A": "A depreciation of the currency that raises net exports.",
+        "B": "A rise in consumer confidence and household spending.",
+        "C": "A rise in government spending during a recession.",
+        "D": "Investment that raises the quality of the capital stock."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Long-run growth requires a change in the <strong>quantity or quality of the factors of production</strong>. Better capital means more output can be produced from the same inputs, so the LRAS curve and the production possibility frontier both shift outwards.",
+        "distractors": {
+          "A": "Net exports are a component of aggregate demand. A rise in them raises actual output towards existing capacity, not the capacity itself.",
+          "B": "Consumer confidence works through consumption, so again this is a demand-side effect and therefore short-run growth.",
+          "C": "Government spending in a recession closes a negative output gap. That uses idle resources rather than creating new ones."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An economy producing below its potential output is said to have",
+      "options": {
+        "A": "A negative output gap.",
+        "B": "A positive output gap.",
+        "C": "A wage-price spiral.",
+        "D": "Long-run economic growth."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The output gap is actual real GDP minus potential real GDP. When actual output is the smaller of the two the gap is <strong>negative</strong> — also called a recessionary gap. It goes with spare capacity, cyclical unemployment and weak inflationary pressure.",
+        "distractors": {
+          "B": "A positive output gap is the opposite case, where actual output is <em>above</em> potential and resources are being used unsustainably.",
+          "C": "A wage-price spiral is a mechanism that sustains inflation, not a description of where output sits relative to capacity.",
+          "D": "Long-run growth is a rise in potential output itself. It says nothing about the gap between actual and potential."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four indicators for an economy in its most recent quarter.<br />Using Table 1, the economy is most likely in",
+      "table": {
+        "caption": "Table 1: Selected indicators, latest quarter",
+        "head": [
+          "Indicator",
+          "Latest reading"
+        ],
+        "rows": [
+          [
+            "Real GDP growth",
+            "−0.8%"
+          ],
+          [
+            "Unemployment",
+            "Rising"
+          ],
+          [
+            "Inflation",
+            "Falling"
+          ],
+          [
+            "Business confidence",
+            "Low"
+          ]
+        ]
+      },
+      "options": {
+        "A": "A boom.",
+        "B": "A period of long-run growth.",
+        "C": "A recession.",
+        "D": "A supply-side shock."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Read the four indicators together. Real GDP is <strong>falling</strong>, unemployment is rising, inflation is falling and business confidence is low. That combination is the standard profile of a <strong>recession</strong>, with a negative output gap opening up as actual output drops below potential.",
+        "distractors": {
+          "A": "A boom shows the opposite on every row: rising real GDP, low unemployment, demand-pull inflation and high confidence.",
+          "B": "Long-run growth is a rise in productive capacity. These indicators describe where actual output sits in the cycle, and it is falling.",
+          "D": "A supply-side shock would push inflation <em>up</em> while output fell. Here inflation is falling, which points to weak demand rather than higher costs."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's actual real GDP is £950bn and its potential real GDP is £1,000bn. Expressed as a percentage of potential GDP, the output gap is",
+      "options": {
+        "A": "−5.3%",
+        "B": "−5.0%",
+        "C": "−0.05%",
+        "D": "+5.0%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The output gap is actual output minus potential output, measured against potential output.<br />£950bn − £1,000bn = <strong>−£50bn</strong>.<br />−50 ÷ 1,000 × 100 = <strong>−5.0%</strong>.<br />The sign matters: a negative gap means the economy is producing £50bn less than it is capable of, so there is spare capacity and cyclical unemployment.",
+        "distractors": {
+          "A": "−5.3% divides by <em>actual</em> GDP, −50 ÷ 950. The output gap is conventionally measured against potential output, the benchmark being fallen short of.",
+          "C": "−0.05% is −50 ÷ 1,000 with the multiplication by 100 left out. That is the gap expressed as a decimal fraction, not a percentage.",
+          "D": "+5.0% has the right size but the wrong sign, which reverses the economics. A positive gap would mean the economy was overheating, not that it had spare capacity."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is operating with a large positive output gap. The most likely consequences are",
+      "options": {
+        "A": "Deflation and rising unemployment.",
+        "B": "Falling business confidence and investment.",
+        "C": "Labour shortages and demand-pull inflation.",
+        "D": "Spare capacity and cyclical unemployment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A positive output gap means actual output has been pushed <em>above</em> the sustainable level — through overtime, overuse of machinery and hiring in an already tight labour market. Firms compete for scarce workers and inputs, so <strong>labour shortages</strong> appear and the excess demand pulls prices up, giving <strong>demand-pull inflation</strong>.",
+        "distractors": {
+          "A": "Deflation and rising unemployment go with a deep <em>negative</em> output gap, where demand is deficient.",
+          "B": "Confidence is typically high in the boom conditions that create a positive output gap, which is part of what sustains the excess demand.",
+          "D": "Spare capacity is the defining feature of a negative output gap. A positive gap means the opposite: capacity is being stretched."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Classical and Keynesian views differ over whether a negative output gap",
+      "options": {
+        "A": "Can be measured accurately by economists.",
+        "B": "Corresponds to output below potential GDP.",
+        "C": "Is associated with unemployed resources.",
+        "D": "Requires government intervention to close."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Classical economists argue the gap is <strong>temporary</strong>: falling prices and wages restore full employment on their own, so intervention is unnecessary and may be harmful. Keynesians argue that wages and prices are <strong>sticky</strong> and confidence stays low, so an economy can sit in a negative output gap indefinitely and needs government action to raise aggregate demand.<br />That disagreement about self-correction is the whole argument.",
+        "distractors": {
+          "A": "Both accept measurement is difficult, because potential GDP cannot be observed directly and has to be estimated.",
+          "B": "This is the definition of a negative output gap. Neither side disputes what the term means.",
+          "C": "Both agree a negative gap involves unemployed resources. They disagree about whether that state persists."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-1-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "A sharp rise in world energy prices hits an economy. Compared with a fall in consumer confidence of similar size, the energy shock is more likely to",
+      "options": {
+        "A": "Lower both real output and the price level.",
+        "B": "Lower real output while raising the price level.",
+        "C": "Raise both real output and the price level.",
+        "D": "Raise real output while lowering the price level."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two shocks hit different curves, which is why they have different signatures.<br />A fall in confidence is a <strong>demand-side shock</strong>: AD shifts left, so output <em>and</em> the price level both fall.<br />An energy price rise is a <strong>supply-side shock</strong>: it raises firms' costs, so SRAS shifts left. Output falls but the price level <strong>rises</strong>.<br />Falling output alongside rising prices is stagflation, and it is awkward precisely because demand-side policy cannot fix both halves at once.",
+        "distractors": {
+          "A": "This is the demand-side shock the stem is comparing against, not the energy shock.",
+          "C": "Rising output would need a rightward shift of one of the curves. Dearer energy makes firms supply less, not more.",
+          "D": "Both halves are wrong: this describes a positive supply shock, such as energy becoming cheaper."
+        }
+      }
+    }
+  ]
+}

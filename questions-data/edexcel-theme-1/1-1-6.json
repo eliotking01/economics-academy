@@ -1,0 +1,199 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.1.6",
+  "slug": "1-1-6-types-of-economies",
+  "title": "Types of Economies",
+  "shortTitle": "Types of Economies",
+  "pageTitle": "Free Market, Command and Mixed Economy Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on types of economy for Edexcel A-Level Economics: free market, command and mixed systems, and the role of the state.",
+  "intro": "Seven original multiple-choice questions on free market, command and mixed economies, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on free market, command and mixed economies and the role of the state, written to Edexcel Paper 1 Section A style.",
+  "questions": [
+    {
+      "id": "edexcel-1-1-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government decides that scarce hospital capacity will be allocated according to clinical need rather than ability to pay. This is an answer to the economic question of",
+      "options": {
+        "A": "What to produce.",
+        "B": "How to produce.",
+        "C": "For whom to produce.",
+        "D": "How much to invest."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Every economic system must answer three questions: <strong>what</strong> to produce, <strong>how</strong> to produce it, and <strong>for whom</strong> to produce it.<br />The decision here is about who receives the treatment once it exists — the distribution of output. That is the <em>for whom</em> question. Answering it by clinical need rather than by price is a deliberate move away from the market's own answer, which would allocate to whoever is willing and able to pay.",
+        "distractors": {
+          "A": "The <em>what</em> question is about which goods and services get produced and in what quantities. That the country provides hospital treatment is already settled here.",
+          "B": "The <em>how</em> question is about the combination of labour, capital and other resources used. Nothing in the stem concerns the method of treatment.",
+          "D": "How much to invest is a real economic decision, but it is not one of the three fundamental questions. It is a version of the <em>what</em> question, between capital and consumer goods."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-6-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Friedrich Hayek argued that central planners cannot allocate resources effectively. His main reason was that planners",
+      "options": {
+        "A": "Are unable to raise sufficient tax revenue.",
+        "B": "Cannot obtain the information that prices convey.",
+        "C": "Face too much competition from private firms.",
+        "D": "Have no legal power to direct production."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Hayek's objection to central planning was about <strong>information</strong>. In a market, prices summarise millions of separate judgements about scarcity and want, and they do it continuously and for free.<br />A planning office has no equivalent. It cannot know how much every household values every good, or which producer can make it most cheaply, and it cannot keep that knowledge current. The result is decisions taken on information that is incomplete and out of date, which is why shortages and surpluses persist.",
+        "distractors": {
+          "A": "A command economy directs resources rather than buying them at market prices. Revenue is not the constraint Hayek identified.",
+          "C": "There is little private competition in a command economy by definition. His objection applies with full force even where planners face none.",
+          "D": "Planners in a command economy have extensive legal authority. Hayek's point was that authority is not enough without the information to use it well."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-6-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country withdraws almost all state provision and relies on markets to allocate resources. The most likely combination of outcomes is",
+      "options": {
+        "A": "Greater innovation and greater inequality.",
+        "B": "Greater innovation and less inequality.",
+        "C": "Less innovation and greater inequality.",
+        "D": "Less innovation and less inequality."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Both effects follow from the same mechanism — the <strong>profit incentive</strong>.<br />Innovation rises because firms that develop better products keep the reward, and competition punishes those that do not. Inequality rises because output is distributed by ability to pay, and the safety net that redistributed it has been withdrawn. This pairing is the central trade-off in the free market case: it tends to deliver efficiency and growth alongside outcomes many would judge unfair.",
+        "distractors": {
+          "B": "Withdrawing redistribution removes what was narrowing the income distribution. Markets allocate by ability to pay, which widens it.",
+          "C": "The profit motive and competition are precisely what drive innovation in a market system. Removing state provision strengthens them rather than weakening them.",
+          "D": "This gets both halves the wrong way round, and the outcomes are opposite ends of the same trade-off rather than moving together."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-6-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 compares two economies.<br />Using Table 1, the feature most often presented as an advantage of Economy 2 is",
+      "table": {
+        "caption": "Table 1: Features of two economies",
+        "head": [
+          "",
+          "Economy 1",
+          "Economy 2"
+        ],
+        "rows": [
+          [
+            "Ownership of firms",
+            "Almost entirely private",
+            "Almost entirely state"
+          ],
+          [
+            "How prices are set",
+            "By supply and demand",
+            "By government decision"
+          ],
+          [
+            "Range of goods available",
+            "Wide",
+            "Narrow"
+          ],
+          [
+            "Income inequality",
+            "High",
+            "Low"
+          ]
+        ]
+      },
+      "options": {
+        "A": "How prices are set.",
+        "B": "Income inequality.",
+        "C": "Ownership of firms.",
+        "D": "Range of goods available."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Economy 2 is a command economy: state ownership, prices set by government, a narrow range of goods, and low inequality.<br />Of those four features, the one usually advanced <em>in its favour</em> is the last. A command economy can guarantee basic necessities and compress the income distribution, because it does not allocate by ability to pay. The other three features are the standard criticisms — administered prices carry no information, state monopoly removes the profit incentive, and choice is limited.",
+        "distractors": {
+          "A": "Prices set by government decision are Hayek's central objection, not an advantage. Administered prices cannot convey information about scarcity.",
+          "C": "Almost entirely state ownership is normally cited as a weakness, because it removes the profit incentive that drives efficiency and innovation.",
+          "D": "A narrow range of goods is a disadvantage. Limited consumer choice is one of the standard criticisms of command economies."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-6-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government introduces a levy on sugary drinks in order to discourage consumption. Among the roles of the state in a mixed economy, this is",
+      "options": {
+        "A": "Government spending.",
+        "B": "Redistribution.",
+        "C": "Regulation.",
+        "D": "Taxation."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Taxation</strong> has two purposes in a mixed economy: raising revenue, and influencing behaviour. A sugar levy is squarely the second — it raises the price of the drink so that less is bought.<br />Note that a tax can be aimed at behaviour and still raise money, and the two objectives pull against each other. The more successfully it changes behaviour, the less revenue it collects.",
+        "distractors": {
+          "A": "Government spending is the state buying or providing things — defence, schools, hospitals, infrastructure. A levy takes money in rather than paying it out.",
+          "B": "Redistribution uses taxes and benefits together to narrow the income distribution. The aim here is to change what people drink, not what they earn.",
+          "C": "Regulation works through rules and legal limits — a ban on selling to under-18s, or a cap on sugar content. This levy works through price instead."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a command economy, long queues form for some goods while others sit unsold in warehouses. The best explanation is that planners",
+      "options": {
+        "A": "Are allocating resources through the price mechanism.",
+        "B": "Have set prices that do not clear markets.",
+        "C": "Have too little legal authority over firms.",
+        "D": "Face strong competition from imported goods."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Both symptoms appear at once, which is the clue. Queues mean quantity demanded exceeds quantity supplied at the set price; unsold stock means the opposite in another market.<br />In a free market, prices would move to remove both — rising where there are queues, falling where there is surplus. Planners set prices administratively, so nothing forces that adjustment. The mismatch is the practical form of Hayek's information problem: planners cannot know what people want at what price, and fixed prices give them no feedback when they get it wrong.",
+        "distractors": {
+          "A": "A command economy does not use the price mechanism — that is what makes it a command economy. If it did, these shortages and surpluses would be corrected by price movements.",
+          "C": "Planners in a command economy have extensive authority over firms. Their difficulty is knowing what to instruct, not being able to instruct it.",
+          "D": "Command economies typically restrict imports heavily. Foreign competition is not what produces unsold domestic stock here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government sharply raises the top rate of income tax and uses the revenue to fund welfare payments. The most likely trade-off involved is",
+      "options": {
+        "A": "Greater equity at the cost of some efficiency.",
+        "B": "Greater equity and greater efficiency together.",
+        "C": "Less equity at the cost of some efficiency.",
+        "D": "Less equity but greater efficiency overall."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The policy transfers income from higher to lower earners, which narrows the distribution. That is a gain in <strong>equity</strong>.<br />The cost is to <strong>efficiency</strong>. A higher top rate weakens the incentive to work extra hours, take risks or start a business, and higher welfare payments can weaken the incentive to take low-paid work. Whether the gain is worth the cost is a value judgement, and it is the judgement that separates mixed economies from one another.",
+        "distractors": {
+          "B": "Equity does improve, but efficiency does not improve alongside it. Both taxes and benefits blunt incentives at the margin.",
+          "C": "Redistribution from high earners to welfare recipients narrows the income distribution. Equity improves rather than worsening.",
+          "D": "This reverses both halves. Higher taxes on top earners do not raise efficiency, and the transfer does not reduce equity."
+        }
+      }
+    }
+  ]
+}

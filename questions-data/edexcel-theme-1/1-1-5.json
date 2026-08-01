@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.1.5",
+  "slug": "1-1-5-specialisation-division-of-labour",
+  "title": "Specialisation and the Division of Labour",
+  "shortTitle": "Specialisation and the Division of Labour",
+  "pageTitle": "Specialisation and Division of Labour Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on specialisation for Edexcel A-Level Economics: the division of labour, its drawbacks, and the four functions of money.",
+  "intro": "Eight original multiple-choice questions on specialisation and the division of labour, written to the style and difficulty of Edexcel Paper 1 Section A. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on specialisation, the division of labour and the functions of money, written to Edexcel Paper 1 Section A style.",
+  "questions": [
+    {
+      "id": "edexcel-1-1-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A car plant splits final assembly into 60 separate tasks, with each worker performing one of them repeatedly. This is best described as",
+      "options": {
+        "A": "Division of labour.",
+        "B": "National specialisation.",
+        "C": "Regional specialisation.",
+        "D": "The double coincidence of wants."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>division of labour</strong> is the form of specialisation in which a production process is broken into separate tasks and each worker is assigned one of them.<br />Splitting assembly into 60 tasks is exactly that. The worker becomes highly skilled and quick at a narrow job, which is where the productivity gain comes from — and it is also where the drawbacks come from, since the same narrowness causes boredom and leaves skills hard to transfer elsewhere.",
+        "distractors": {
+          "B": "National specialisation is a country concentrating on particular goods, such as Saudi Arabia and oil. This is happening inside a single plant.",
+          "C": "Regional specialisation is an area concentrating on an industry, such as Silicon Valley and technology. Again, the scale here is one workplace.",
+          "D": "The double coincidence of wants is the obstacle to barter that money removes. It has nothing to do with how a production process is organised."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A workshop making wooden stools employs 8 workers. Working alone, each completes 6 stools a day. After the process is divided into separate tasks the 8 workers together complete 240 stools a day. Measured against the original figure, output per worker has risen by",
+      "options": {
+        "A": "80%",
+        "B": "400%",
+        "C": "500%",
+        "D": "3,900%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work in output per worker throughout.<br />Before: <strong>6 stools</strong> per worker per day.<br />After: 240 ÷ 8 = <strong>30 stools</strong> per worker per day.<br />Percentage change against the original: (30 − 6) ÷ 6 × 100 = <strong>400%</strong>.<br />Output per worker is six times what it was, which is a rise of five times, or 400% on top of the original. Adam Smith's pin factory made the same point on a far larger scale, and it is the central argument for the division of labour.",
+        "distractors": {
+          "A": "This divides by the new value: 24 ÷ 30 × 100 = 80%. Percentage changes are always measured against the <strong>original</strong> figure, so the denominator should be 6.",
+          "C": "This is the <em>ratio</em> of new to old, 30 ÷ 6 = 5, read straight off as 500%. A ratio of 5 is a rise of 400%; the original 100% has not been subtracted.",
+          "D": "This compares the whole workshop's new output with a single worker's old output: (240 − 6) ÷ 6 × 100. The 240 covers all 8 workers and must be divided by 8 before the comparison."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A region has specialised in shipbuilding for decades. World demand collapses and the yards close. The most likely consequence for local workers is",
+      "options": {
+        "A": "Frictional unemployment lasting a few weeks.",
+        "B": "Rapid re-employment in other local industries.",
+        "C": "Seasonal unemployment in the shipbuilding trade.",
+        "D": "Structural unemployment from narrow skills."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Specialisation makes workers highly skilled at a narrow task, and that is precisely what makes them vulnerable when the industry declines. Welding and fitting skills built up over decades in shipbuilding do not transfer readily to other work.<br />Unemployment caused by a mismatch between the skills workers have and the skills employers want is <strong>structural</strong>. It is the most serious of the drawbacks of specialisation, because it persists long after the closure itself.",
+        "distractors": {
+          "A": "Frictional unemployment is the short gap between leaving one job and starting another, where suitable jobs exist. The problem here is that the workers' skills no longer match the jobs available.",
+          "B": "Other local industries are unlikely to want these specific skills, and a region built around one industry has few alternative employers in the first place.",
+          "C": "Seasonal unemployment recurs with the calendar, as in tourism or agriculture. A permanent collapse in demand is not seasonal."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A factory reports rising absenteeism and staff turnover in the months after dividing its production line into short, repetitive tasks. This is best explained by",
+      "options": {
+        "A": "A fall in each worker's skill at their own task.",
+        "B": "Demotivation caused by monotonous work.",
+        "C": "The loss of economies of scale in production.",
+        "D": "Workers being paid less than they were before."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The main drawback of the division of labour is its effect on the people doing it. Repeating one short task all day is <strong>monotonous</strong>, and monotony lowers morale.<br />The two symptoms in the stem are the standard consequences: <strong>absenteeism</strong> rises as workers take days off, and <strong>turnover</strong> rises as they leave. Both are costly, because recruiting and training replacements eats into the productivity gain that dividing the work was meant to deliver.",
+        "distractors": {
+          "A": "Skill at the individual task rises with repetition — that is the source of the productivity gain. What falls is the willingness to keep doing it.",
+          "C": "Dividing the work is a route to lower average costs, not a loss of scale economies. Nothing in the stem suggests output has fallen.",
+          "D": "Nothing in the stem mentions pay. Absenteeism and turnover follow from the nature of the work here, which is what has actually changed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A shopkeeper compares the prices quoted by two suppliers before deciding which to buy from. The function of money being used is",
+      "options": {
+        "A": "Medium of exchange.",
+        "B": "Unit of account.",
+        "C": "Store of value.",
+        "D": "Standard of deferred payment."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Money as a <strong>unit of account</strong> provides a common measure of value, so different things can be compared on a single scale.<br />Nothing is being bought at this moment; the shopkeeper is weighing one quote against another. That comparison is only possible because both are expressed in pounds. Under barter there would be no common measure, and ranking two offers of different goods would be far harder.",
+        "distractors": {
+          "A": "Medium of exchange is money changing hands as payment. No payment has been made yet — the decision is still being taken.",
+          "C": "Store of value is money holding its purchasing power over time, which is what makes saving possible. Nothing is being held here.",
+          "D": "Standard of deferred payment is money settling a debt in the future. These are prices for an immediate purchase, not a credit arrangement."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A carpenter wants bread and a baker wants shoes, so in a barter economy no trade takes place between them. Money resolves this because it",
+      "options": {
+        "A": "Acts as a medium of exchange accepted by both.",
+        "B": "Guarantees that the two goods are equally valuable.",
+        "C": "Removes the need for anyone to specialise.",
+        "D": "Stores purchasing power for use in the future."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Barter needs a <strong>double coincidence of wants</strong> — each party must want exactly what the other is offering. Here that fails, so the trade dies even though both would gain from trading with someone.<br />Money breaks the deadlock because it is accepted by everyone. The carpenter sells to whoever wants furniture and buys bread with the proceeds; the baker does the same for shoes. Neither has to find a single counterparty who matches them in both directions.",
+        "distractors": {
+          "B": "Money measures value, it does not equalise it. The two goods can be worth quite different amounts and trade still goes ahead at the appropriate prices.",
+          "C": "Money makes specialisation more attractive, not unnecessary. The whole point is that specialists can now trade with anyone.",
+          "D": "Store of value is a genuine function of money, but it is not what unblocks this trade. What was missing is a means of payment both will accept."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 gives four examples of specialisation.<br />Using Table 1, the example of specialisation at the regional level is",
+      "table": {
+        "caption": "Table 1: Four examples of specialisation",
+        "head": [
+          "",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Example 1",
+            "A cardiac surgeon who operates only on hearts"
+          ],
+          [
+            "Example 2",
+            "A company that produces electric vehicles only"
+          ],
+          [
+            "Example 3",
+            "An area whose economy is built on technology firms"
+          ],
+          [
+            "Example 4",
+            "A country whose exports are dominated by oil"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Example 1.",
+        "B": "Example 2.",
+        "C": "Example 3.",
+        "D": "Example 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Specialisation happens at four levels: the <strong>individual</strong>, the <strong>firm</strong>, the <strong>region</strong> and the <strong>nation</strong>.<br />Example 3 describes a geographic area whose economy is built around one industry, which is regional specialisation. Silicon Valley and technology is the standard illustration. The gain is a concentration of skilled labour and suppliers in one place; the risk is that the whole area suffers together if demand for that industry falls.",
+        "distractors": {
+          "A": "A surgeon operating only on hearts is specialisation at the <strong>individual</strong> level — one person concentrating on one kind of work.",
+          "B": "A company producing only electric vehicles is specialisation at the <strong>firm</strong> level.",
+          "D": "A country whose exports are dominated by one commodity is specialisation at the <strong>national</strong> level."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A small country specialises almost entirely in producing one crop for export. World demand for that crop falls sharply. Compared with a more diversified economy, this country is likely to face",
+      "options": {
+        "A": "A larger fall in national income.",
+        "B": "A smaller fall in national income.",
+        "C": "No change, since it can switch crops at once.",
+        "D": "Steady income, because it still trades."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Over-dependence is the standard risk of specialisation at national level. A country producing one crop has nothing else earning export revenue when demand for that crop falls, so the whole shock lands on a single sector.<br />A diversified economy absorbs the same shock more easily, because the sectors that are unaffected carry on earning. This is the trade-off: specialisation raises output when conditions are good and concentrates the damage when they are not.",
+        "distractors": {
+          "B": "Diversification is what spreads risk, and this country has none. The fall should be larger, not smaller.",
+          "C": "Switching crops takes land, skills, equipment and time, and the new crop faces its own market conditions. Resources are not instantly mobile between uses.",
+          "D": "Trade continues, but at much lower volumes or prices. Continuing to trade is not the same as earning the same income from it."
+        }
+      }
+    }
+  ]
+}

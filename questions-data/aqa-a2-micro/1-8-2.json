@@ -1,0 +1,147 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.2",
+  "slug": "1-8-2-the-meaning-of-market-failure",
+  "title": "The Meaning of Market Failure",
+  "shortTitle": "The Meaning of Market Failure",
+  "pageTitle": "Market Failure Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on market failure for AQA A-Level Economics: partial and complete failure and the main types, with worked answers.",
+  "intro": "Six original multiple-choice questions on the meaning of market failure, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on the meaning and types of market failure, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Market failure occurs when the free market",
+      "options": {
+        "A": "Fails to allocate scarce resources efficiently.",
+        "B": "Fails to distribute income equally between households.",
+        "C": "Produces less output than it did in the previous year.",
+        "D": "Allows some firms to make losses and leave the industry."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Market failure</strong> is a failure of <strong>allocative efficiency</strong>: the price mechanism produces a quantity of some good that is not the socially optimal one, so society's welfare is lower than it could be. Notice that it is defined by the <em>misallocation of resources</em>, not by any outcome simply being unpopular.",
+        "distractors": {
+          "B": "Unequal income is an <strong>equity</strong> concern rather than an efficiency failure. It is a common reason for intervention, but it is a separate justification from market failure.",
+          "C": "Falling output is a matter of the economic cycle and belongs to macroeconomics.",
+          "D": "Firms making losses and exiting is the market <em>working</em>. It is how resources are moved out of activities society values less."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The free market provides no national defence at all. This is best described as",
+      "options": {
+        "A": "Complete market failure.",
+        "B": "Government failure.",
+        "C": "Partial market failure.",
+        "D": "Productive inefficiency."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Complete market failure</strong> means a good is not provided by the market <em>at all</em>. Pure public goods are the standard case: because national defence is non-excludable, no firm can charge for it, so none supplies it. Contrast this with <strong>partial</strong> market failure, where a good is provided but in the wrong quantity.",
+        "distractors": {
+          "B": "Government failure is intervention making things worse. Here the market has failed before any government has acted.",
+          "C": "Partial failure means the good <em>is</em> provided, just not in the socially optimal quantity — as with education or tobacco.",
+          "D": "Productive inefficiency means not producing at lowest average cost. The problem here is that nothing is produced at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The market provides education, but consumers under-estimate its long-term benefits and buy less than is socially optimal. This is best described as",
+      "options": {
+        "A": "Complete market failure.",
+        "B": "Partial market failure.",
+        "C": "Perfect competition.",
+        "D": "Productive efficiency."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Education is supplied and bought, so the market has not failed completely — but the quantity is <strong>below the social optimum</strong>, because consumers do not account for the full benefits. That is <strong>partial market failure</strong>: under-provision of a merit good. Over-provision of demerit goods such as tobacco is the mirror image.",
+        "distractors": {
+          "A": "Complete failure means nothing is provided at all. Private schools, universities and training providers all exist.",
+          "C": "Perfect competition is a market structure. It describes how a market is organised, not whether it allocates resources correctly.",
+          "D": "Productive efficiency concerns producing at lowest average cost. The problem here is the quantity consumed, not the cost of providing it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is not usually classed as a cause of market failure?",
+      "options": {
+        "A": "Externalities arising from production or consumption.",
+        "B": "Firms competing to lower their costs of production.",
+        "C": "Information gaps between buyers and sellers.",
+        "D": "Monopoly power held by a dominant firm."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Competition driving costs down is the market working <em>well</em>: it pushes firms towards productive efficiency and lower prices for consumers. The recognised causes of market failure are <strong>externalities</strong>, <strong>public goods</strong>, <strong>information gaps</strong> and <strong>monopoly power</strong> — plus the immobility of factors of production.",
+        "distractors": {
+          "A": "Externalities are costs or benefits falling on third parties, and because neither buyer nor seller accounts for them the market quantity is wrong.",
+          "C": "Information gaps cause consumers to buy quantities that do not maximise their welfare, so resources are misallocated.",
+          "D": "A monopolist restricts output and charges above marginal cost, which is allocative inefficiency."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chemical works discharges waste into a river, harming fisheries downstream. The cost to the fisheries is not reflected in the price of the chemicals. This is an example of market failure caused by",
+      "options": {
+        "A": "A public good.",
+        "B": "An information gap.",
+        "C": "A negative externality.",
+        "D": "Monopoly power."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The harm falls on a <strong>third party</strong> — the fisheries — who are not part of the transaction between the chemical works and its customers. Because that cost is not paid by either party, it is not reflected in the price, so the market over-produces chemicals relative to the socially optimal quantity. That is a <strong>negative externality</strong> in production.",
+        "distractors": {
+          "A": "A public good is non-excludable and non-rival. Chemicals are plainly both excludable and rival.",
+          "B": "An information gap would mean somebody lacking knowledge needed to decide. The problem here is that a real cost falls on someone outside the transaction.",
+          "D": "Nothing in the stem suggests the chemical works dominates its market. Externalities arise in competitive industries just as readily."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Market failure is defined in terms of allocative efficiency. It follows that a market can fail even when",
+      "options": {
+        "A": "Consumers are willing to pay for the good being produced.",
+        "B": "Every firm in it is productively efficient and competitive.",
+        "C": "Firms in it are making a loss and leaving the industry.",
+        "D": "The government has already intervened to correct it."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Producing at the lowest possible cost says nothing about producing the <strong>right quantity</strong>. An industry can be perfectly cost-efficient and still pour out pollution nobody pays for, or under-supply a merit good because consumers undervalue it. Market failure is about the quantity being wrong from <em>society's</em> point of view, which is why efficient firms and a failing market are entirely compatible.",
+        "distractors": {
+          "A": "Willingness to pay is what creates demand in the first place, so it is present in every functioning market, failing or not.",
+          "C": "Firms exiting after losses is the market reallocating resources correctly, not a distinctive case of failure.",
+          "D": "Intervention may reduce a market failure or, if badly designed, worsen it — but that is government failure, a separate idea."
+        }
+      }
+    }
+  ]
+}

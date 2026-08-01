@@ -1,0 +1,275 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.3",
+  "slug": "1-4-3-the-law-of-diminishing-returns-and-returns-to-scale",
+  "title": "The Law of Diminishing Returns and Returns to Scale",
+  "shortTitle": "Diminishing Returns and Returns to Scale",
+  "pageTitle": "Diminishing Returns Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on diminishing returns and returns to scale for AQA A-Level Economics, with calculations and full worked answers.",
+  "intro": "Nine original multiple-choice questions on the law of diminishing returns and returns to scale, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Nine original multiple-choice questions on the short run and long run, diminishing returns and returns to scale, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-4-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In economics, the short run is the period in which",
+      "options": {
+        "A": "All factors of production are fixed.",
+        "B": "All factors of production can be varied.",
+        "C": "At least one factor of production is fixed.",
+        "D": "Output cannot be increased at all."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The short run is defined by what the firm <em>cannot</em> change: <strong>at least one</strong> factor is fixed, typically capital such as the factory itself. Output can still be varied, but only by using more of the variable factors, usually labour and raw materials. Because those are being added to something fixed, the short run is the period in which the <strong>law of diminishing returns</strong> applies.",
+        "distractors": {
+          "A": "If every factor were fixed, output could not be varied at all and there would be nothing to analyse. At least one factor is variable in the short run.",
+          "B": "This is the definition of the <strong>long run</strong>, which is why returns to scale — not diminishing returns — apply there.",
+          "D": "Output can certainly be increased in the short run, by employing more of the variable factor. What eventually limits it is the fixed factor."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how the total output of a firm changes as it employs more workers. All other factors of production are fixed.<br />Using Table 1, the marginal returns from the fourth worker are ___ units, and diminishing marginal returns first set in with the ___ worker.",
+      "table": {
+        "caption": "Table 1: Workers employed and total output (units per day)",
+        "head": [
+          "Workers",
+          "Total output"
+        ],
+        "rows": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "26"
+          ],
+          [
+            "3",
+            "48"
+          ],
+          [
+            "4",
+            "66"
+          ],
+          [
+            "5",
+            "80"
+          ],
+          [
+            "6",
+            "84"
+          ]
+        ]
+      },
+      "options": {
+        "A": "18 and fourth.",
+        "B": "18 and fifth.",
+        "C": "22 and fourth.",
+        "D": "22 and fifth."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Marginal returns are the extra output from each additional worker, so take the differences down the output column: <strong>10, 16, 22, 18, 14, 4</strong>.<br />The fourth worker adds 66 − 48 = <strong>18 units</strong>.<br />Diminishing marginal returns begin at the first worker whose contribution is <em>smaller than the one before</em>. The third worker added 22 and the fourth added 18, so they set in with the <strong>fourth</strong> worker.<br />Note that total output is still rising throughout — diminishing returns means each extra worker adds less, not that output falls.",
+        "distractors": {
+          "B": "The marginal figure is right but the turning point is placed one worker too late. The fall from 22 to 18 happens at the fourth worker; by the fifth, marginal returns are simply continuing to fall.",
+          "C": "22 is the marginal return of the <strong>third</strong> worker, an off-by-one error. The fourth worker's contribution is the change from the fourth row to the third.",
+          "D": "Both parts are wrong: 22 belongs to the third worker, and diminishing returns begin with the fourth."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's marginal returns to labour are positive but falling. It follows that the firm's total output is",
+      "options": {
+        "A": "At a maximum.",
+        "B": "Falling.",
+        "C": "Rising at a decreasing rate.",
+        "D": "Rising at an increasing rate."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Marginal returns are the <em>addition</em> to total output from one more worker. While that addition is <strong>positive</strong>, total output must be <strong>rising</strong>; because the addition is <strong>falling</strong>, each worker adds less than the last, so output rises more and more slowly.<br />The three cases are worth holding together: positive marginal returns mean total output rising; zero marginal returns mean total output at its maximum; negative marginal returns mean total output falling.",
+        "distractors": {
+          "A": "Total output peaks where marginal returns reach <strong>zero</strong>. While they are still positive, another worker would add more output, so the maximum has not been reached.",
+          "B": "Output only falls once an extra worker actively reduces it, which means negative marginal returns. Positive returns, however small, still add to the total.",
+          "D": "Rising at an increasing rate describes <em>increasing</em> marginal returns, the stage before diminishing returns set in."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The law of diminishing returns applies in the short run because",
+      "options": {
+        "A": "All factors of production can be varied.",
+        "B": "At least one factor of production is fixed.",
+        "C": "Firms are unable to change their scale of production over time.",
+        "D": "Workers become less skilled as more of them are employed."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Diminishing returns arise from a <strong>fixed factor acting as a constraint</strong>. Adding more of a variable factor to something that cannot be expanded eventually means each extra unit has less of the fixed factor to work with. A pub with a fixed number of bar counters is the standard illustration: extra bartenders help at first, then start getting in one another's way.",
+        "distractors": {
+          "A": "This is the long run, where returns to <strong>scale</strong> apply instead. If everything can be varied there is no fixed constraint to cause diminishing returns.",
+          "C": "Firms can change scale — that is precisely what the long run allows. The short run is a period, not a permanent inability.",
+          "D": "This is the most tempting wrong answer. The extra workers are just as skilled as the others; what has changed is that they have less capital to work with. The constraint is the fixed factor, not the quality of labour."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Returns to scale can only be experienced in the long run because",
+      "options": {
+        "A": "Every factor of production can be varied in the long run.",
+        "B": "Firms only begin to make a profit once they reach the long run.",
+        "C": "Fixed costs are always higher in the long run.",
+        "D": "Marginal costs are constant in the long run."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Returns to scale describe what happens to output when <strong>all inputs are increased in proportion</strong>. That experiment is only possible when every factor is variable, which is the definition of the <strong>long run</strong>. In the short run something is fixed, so inputs cannot all be scaled together and the relevant idea is diminishing returns instead.",
+        "distractors": {
+          "B": "Profitability has no bearing on the definition. A firm can be profitable in the short run and loss-making in the long run, or the reverse.",
+          "C": "In the long run there are no fixed costs at all, because every factor can be varied. The statement inverts the distinction between the two periods.",
+          "D": "Marginal costs are not assumed constant in either period, and returns to scale concern the relationship between inputs and output rather than the behaviour of costs."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm doubles every one of its inputs and finds that its output rises by 150%. The firm is experiencing",
+      "options": {
+        "A": "Constant returns to scale.",
+        "B": "Decreasing returns to scale.",
+        "C": "Diminishing marginal returns.",
+        "D": "Increasing returns to scale."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Compare the two proportional changes.<br />Inputs: doubled, so up <strong>100%</strong>.<br />Output: up <strong>150%</strong>.<br />Output has risen by a <em>greater</em> proportion than inputs, which is <strong>increasing returns to scale</strong>.",
+        "distractors": {
+          "A": "Constant returns to scale would mean output rose by exactly 100% — doubling alongside the inputs. It rose by half as much again.",
+          "B": "Decreasing returns to scale would mean output rose by <em>less</em> than 100%. Here it rose by more.",
+          "C": "This is the key trap. Diminishing marginal returns is a <strong>short-run</strong> idea, caused by adding a variable factor to a fixed one. Here every input has been increased together, which can only happen in the long run, so the relevant concept is returns to scale."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The law of diminishing returns explains why a firm's short-run marginal cost curve",
+      "options": {
+        "A": "Eventually slopes upwards as output rises.",
+        "B": "Is horizontal at every level of output.",
+        "C": "Is vertical at the firm's capacity output.",
+        "D": "Slopes downwards throughout its length."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Marginal cost and marginal returns are two views of the same thing. While extra workers are adding <em>more</em> output each, the cost of producing an extra unit is <strong>falling</strong>, so marginal cost slopes down. Once diminishing returns set in, each extra worker adds <em>less</em> output, so producing another unit takes more labour and costs more — and marginal cost turns <strong>upwards</strong>. The upward-sloping section of the MC curve is diminishing returns expressed in money.",
+        "distractors": {
+          "B": "A horizontal marginal cost curve would mean every extra unit costs the same however much is produced, which requires marginal returns to be constant. Diminishing returns rules that out.",
+          "C": "A vertical line would mean cost is undefined at a single output. Capacity constraints make marginal cost rise very steeply, but the curve still slopes.",
+          "D": "Marginal cost does fall at first, while marginal returns are increasing. Diminishing returns is precisely the reason that fall does not continue."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 2 shows the inputs used and output produced by a firm at three different scales of production.<br />Using Table 2, the firm experiences",
+      "table": {
+        "caption": "Table 2: Inputs and output at three scales of production",
+        "head": [
+          "Scale",
+          "Workers",
+          "Machines",
+          "Output (units)"
+        ],
+        "rows": [
+          [
+            "1",
+            "10",
+            "5",
+            "200"
+          ],
+          [
+            "2",
+            "20",
+            "10",
+            "460"
+          ],
+          [
+            "3",
+            "40",
+            "20",
+            "920"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Constant returns to scale between scales 1 and 2, and increasing returns between 2 and 3.",
+        "B": "Decreasing returns to scale throughout.",
+        "C": "Increasing returns to scale between scales 1 and 2, and constant returns between 2 and 3.",
+        "D": "Increasing returns to scale throughout."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Check that inputs rise in proportion, then compare the change in output.<br /><strong>Scale 1 to 2:</strong> workers and machines both double. Output goes from 200 to 460, which is 2.3 times — more than double, so <strong>increasing returns to scale</strong>.<br /><strong>Scale 2 to 3:</strong> workers and machines double again. Output goes from 460 to 920, which is exactly double, so <strong>constant returns to scale</strong>.",
+        "distractors": {
+          "A": "This reverses the two stages. Output more than doubles in the first step and exactly doubles in the second, not the other way round.",
+          "B": "Decreasing returns would require output to rise by less than the inputs. It rises by more in the first step and by the same proportion in the second, so it never happens here.",
+          "D": "The first step does show increasing returns, but the second does not: 460 to 920 is precisely a doubling, matching the doubling of inputs."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm builds a second, much larger factory and finds that its long-run average cost is higher than before. This is best described as",
+      "options": {
+        "A": "Diminishing marginal returns, because output per worker employed has fallen.",
+        "B": "Diseconomies of scale, because average cost rises with the scale of production.",
+        "C": "Increasing returns to scale, because the firm now produces more output.",
+        "D": "The law of diminishing returns, because a fixed factor is constraining output."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The clue is that the firm has <strong>changed its scale</strong> — it has built a new factory, so capital is not fixed and this is the <strong>long run</strong>. Rising average cost as scale increases is <strong>diseconomies of scale</strong>, typically caused by communication breaking down across a bigger organisation, weaker worker motivation, or the difficulty of coordinating sites.<br />The distinction to hold on to: <strong>diminishing returns</strong> is short-run, comes from adding a variable factor to a fixed one, and pushes <em>marginal cost</em> up. <strong>Diseconomies of scale</strong> is long-run, occurs after all factors have been increased, and pushes <em>long-run average cost</em> up. Any question describing a firm expanding its plant is testing the second.",
+        "distractors": {
+          "A": "Diminishing marginal returns requires a fixed factor. Building a new factory is exactly the opposite — the firm has varied its capital.",
+          "C": "Increasing returns to scale would show up as <em>falling</em> long-run average cost. Producing more output is not itself evidence of increasing returns; what matters is output relative to inputs.",
+          "D": "The same error as A stated more explicitly. There is no fixed factor here, so the law of diminishing returns cannot be operating."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.5",
+  "slug": "4-1-5-trading-blocs-and-the-world-trade-organisation",
+  "title": "Trading Blocs and the World Trade Organisation",
+  "shortTitle": "Trading Blocs and the WTO",
+  "pageTitle": "Trading Blocs and the WTO Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on trading blocs and the WTO for Edexcel A-Level Economics: types of bloc, trade creation and diversion, and monetary unions.",
+  "intro": "Eight original multiple-choice questions on trading blocs and the WTO, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on the four forms of trading bloc, trade creation and diversion, monetary unions, and the role of the WTO.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-5-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four groups of countries at different stages of economic integration.<br />From Table 1, the common market is",
+      "table": {
+        "caption": "Table 1: Four groups of countries at different stages of integration",
+        "head": [
+          "",
+          "What members have agreed"
+        ],
+        "rows": [
+          [
+            "Group 1",
+            "Tariffs removed between members only"
+          ],
+          [
+            "Group 2",
+            "Tariffs removed, plus a common external tariff"
+          ],
+          [
+            "Group 3",
+            "As Group 2, plus free movement of labour and capital"
+          ],
+          [
+            "Group 4",
+            "As Group 3, plus a single shared currency"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Group 1.",
+        "B": "Group 2.",
+        "C": "Group 3.",
+        "D": "Group 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Edexcel sets the four forms out as a ladder, each adding one feature to the one below it. A <strong>free trade area</strong> removes tariffs between members but leaves each free to set its own policy towards outsiders. A <strong>customs union</strong> adds a common external tariff. A <strong>common market</strong> adds free movement of the factors of production, labour and capital. A <strong>monetary union</strong> adds a single currency on top of all of that. Group 3 is therefore the common market.",
+        "distractors": {
+          "A": "Group 1 is a free trade area — the first rung, with tariffs removed internally and nothing else agreed.",
+          "B": "Group 2 is a customs union. Tariffs are removed internally and a common external tariff applies, but factors still cannot move freely.",
+          "D": "Group 4 is a monetary union, the furthest stage, of which the Eurozone is the example."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After a bloc is formed, a member country stops buying a good from its own high-cost domestic producers and buys it instead from a lower-cost producer in another member state. This is",
+      "options": {
+        "A": "Dumping.",
+        "B": "Trade creation.",
+        "C": "Trade diversion.",
+        "D": "Trade liberalisation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Trade creation</strong> is the welfare gain a bloc can deliver: production shifts from a high-cost source to a genuinely lower-cost one, so resources are used better and consumers pay less. Its counterpart is <strong>trade diversion</strong>, where the switch runs the wrong way — away from an efficient producer outside the bloc towards a less efficient one inside it, purely because the outsider now faces a tariff the insider does not. Whether a bloc raises welfare depends on which of the two effects is larger.",
+        "distractors": {
+          "A": "Dumping is selling exports below cost, usually to capture a market or drive out rivals.",
+          "C": "Trade diversion is a switch away from a lower-cost producer <em>outside</em> the bloc. Here the new supplier is genuinely the cheaper one.",
+          "D": "Trade liberalisation is the general removal of trade barriers, not this particular reallocation of production."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two economies share a single currency, and therefore a single interest rate. One is in a deep recession while the other is booming. The difficulty this creates is that",
+      "options": {
+        "A": "Each can set the interest rate it needs.",
+        "B": "Neither can devalue against the other.",
+        "C": "No single interest rate suits both.",
+        "D": "The bloc must impose a common tariff."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A monetary union means one monetary policy for every member. The rate the recessionary economy needs is low; the rate the booming one needs is high; there is only one rate, and it will be wrong for both of them. Edexcel lists <strong>synchronised business cycles</strong> first among the conditions for a successful monetary union for exactly this reason — members whose economies move together can be served by a single policy, and members whose economies diverge cannot.",
+        "distractors": {
+          "A": "The opposite is true: neither can set its own rate, and that is precisely the problem.",
+          "B": "Being unable to devalue against each other is a real consequence of sharing a currency, but it follows from the currency itself rather than from the divergent cycles the stem describes.",
+          "D": "A common external tariff belongs to a customs union and has nothing to do with interest rates."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "One region of a monetary union suffers a severe local downturn while the rest is unaffected. It can neither cut its own interest rate nor devalue. Of the following, the mechanism that would most help it adjust is",
+      "options": {
+        "A": "A common external tariff on imports.",
+        "B": "Removing the single currency for one year.",
+        "C": "Requiring the other members to raise taxes.",
+        "D": "Support from a central budget of the union."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The two adjustment routes a country normally has — cutting interest rates and letting its currency fall — are both surrendered on joining a monetary union. Edexcel names two substitutes among the conditions for success: <strong>labour mobility</strong>, so that workers can move to where the jobs are, and <strong>fiscal transfers</strong>, so that a central budget can support a region absorbing a shock. Both are ways of moving resources towards the affected area once the exchange rate can no longer do it.",
+        "distractors": {
+          "A": "A common external tariff is a feature of a customs union and does nothing whatever for a local downturn.",
+          "B": "Leaving the currency temporarily is not a mechanism that exists. The conditions are meant to make the union workable, not to suspend it.",
+          "C": "Raising taxes elsewhere would be contractionary for the members doing well, and on its own moves no resources at all towards the affected region."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two member countries disagree over whether one of them has broken global trade rules. The World Trade Organisation's role in this is to",
+      "options": {
+        "A": "Act as a court and settle the dispute.",
+        "B": "Impose a common external tariff on both.",
+        "C": "Provide a loan to the country that loses.",
+        "D": "Set the exchange rate between the two."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Edexcel gives the WTO two main functions. It is a <strong>negotiating forum</strong>, hosting the rounds of talks through which tariffs and quotas are reduced internationally; and it runs a <strong>dispute settlement</strong> process, acting as a court where members accuse one another of breaking the rules they have all agreed to. It has no money to lend and no authority over exchange rates — those belong to the IMF and to national central banks respectively.",
+        "distractors": {
+          "B": "A common external tariff is agreed by the members of a customs union. The WTO does not impose tariffs on anybody.",
+          "C": "Lending to countries in difficulty is the International Monetary Fund's role, not the WTO's.",
+          "D": "Exchange rates are set by markets or by national policy. The WTO has no part in them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The WTO's central principle is that a member should not discriminate between its trading partners. Regional trading blocs sit awkwardly with this because they",
+      "options": {
+        "A": "Give members terms outsiders do not get.",
+        "B": "Have no dispute settlement procedure.",
+        "C": "Raise tariffs on all of their imports.",
+        "D": "Reduce the total volume of world trade."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The entire point of a bloc is preferential treatment: members trade with each other on terms that non-members do not receive. That is discrimination by definition, and it runs directly against the WTO's aim of non-discrimination in global trade. Edexcel notes the tension explicitly. The usual defence is that blocs liberalise trade further and faster among their members than global negotiation manages, so the discrimination buys real liberalisation; the objection is that it also diverts trade away from efficient outsiders.",
+        "distractors": {
+          "B": "Blocs commonly operate their own dispute mechanisms, and in any case the tension is about discrimination rather than procedure.",
+          "C": "Blocs <em>remove</em> tariffs between members. A customs union sets a common external tariff, which need not be higher than what members were charging before.",
+          "D": "Blocs generally raise the volume of trade, at least among their members. The concern is where that trade is sourced from, not how much of it there is."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country joining a customs union must adopt the bloc's external tariff and can no longer negotiate its own trade deals with outside countries. Among the costs of membership, this is",
+      "options": {
+        "A": "Dependency on other members.",
+        "B": "Loss of economic sovereignty.",
+        "C": "Trade diversion from outsiders.",
+        "D": "Unequal distribution of benefits."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The common external tariff is what distinguishes a customs union from a free trade area, and adopting it means surrendering an instrument of national policy. Edexcel lists <strong>loss of sovereignty</strong> among the costs of regional trade agreements: members hand over some control of their trade policy and regulation in exchange for access to the internal market. Whether that exchange is worth making is a political judgement at least as much as an economic one.",
+        "distractors": {
+          "A": "Dependency describes becoming over-reliant on trade within the bloc. That is a different cost, and it concerns trade flows rather than policy control.",
+          "C": "Trade diversion is a likely consequence of the common external tariff, but the stem describes losing the policy instrument itself.",
+          "D": "Unequal benefits concerns some members gaining more than others, which the stem does not mention."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A manufacturer that previously sold only within its own country of 8 million people now sells tariff-free across a bloc of 400 million. Besides higher sales, the most likely benefit is",
+      "options": {
+        "A": "Higher average costs from managing scale.",
+        "B": "Protection from competitors inside the bloc.",
+        "C": "Spreading fixed costs over far more units.",
+        "D": "The end of competition from outside the bloc."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A market fifty times larger lets a firm produce at a scale that was never worth reaching before. Fixed costs — design, tooling, marketing, research — are spread across far more units, and longer production runs justify more specialised machinery. Edexcel lists <strong>economies of scale</strong> among the benefits of regional trade agreements for this reason: it is the size of the market, and not only the removal of the tariff, that brings average costs down.",
+        "distractors": {
+          "A": "Diseconomies are possible at very large scale, but a firm moving out of a small national market is far more likely to be gaining scale economies than losing them.",
+          "B": "The same removal of tariffs exposes it to every other producer in the bloc. Membership brings more competition, not less.",
+          "D": "A common external tariff limits competition from outside the bloc but does not end it."
+        }
+      }
+    }
+  ]
+}

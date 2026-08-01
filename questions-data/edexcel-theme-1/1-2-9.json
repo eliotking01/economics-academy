@@ -1,0 +1,285 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.9",
+  "slug": "1-2-9-indirect-taxes-subsidies",
+  "title": "Indirect Taxes and Subsidies",
+  "shortTitle": "Indirect Taxes and Subsidies",
+  "pageTitle": "Indirect Taxes and Subsidies Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on indirect taxes and subsidies for Edexcel A-Level Economics: tax incidence, government revenue and the role of elasticity.",
+  "intro": "Ten original multiple-choice questions on indirect taxes and subsidies, written to the style and difficulty of Edexcel Paper 1 Section A. Three are calculations.",
+  "notesTeaser": "Ten original multiple-choice questions on specific and ad valorem taxes, tax incidence, subsidies and how price elasticity decides who really pays.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-9-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government levies a tax of 20% of the selling price on all electronic goods. This is",
+      "options": {
+        "A": "A direct tax.",
+        "B": "A specific tax.",
+        "C": "A subsidy.",
+        "D": "An ad valorem tax."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An <strong>ad valorem</strong> tax is charged as a percentage of the price, so the amount paid rises with the value of the item. VAT at 20% is the standard UK example, and this levy works the same way.<br />The consequence for the diagram is worth knowing: an ad valorem tax pivots the supply curve rather than shifting it in parallel, because the tax per unit is larger on dearer items.",
+        "distractors": {
+          "A": "A direct tax is levied on income or wealth and paid straight to the government by the person who bears it, like income tax. This one is paid on a purchase.",
+          "B": "A specific tax is a fixed amount per unit, such as a set sum per packet of cigarettes. This one varies with the price.",
+          "C": "A subsidy is a payment from the government to producers, which lowers costs. This takes money in rather than paying it out."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A specific tax is placed on a good. On the supply and demand diagram, the immediate effect is",
+      "options": {
+        "A": "A leftward shift of the demand curve.",
+        "B": "A leftward shift of the supply curve.",
+        "C": "A rightward shift of the demand curve.",
+        "D": "A rightward shift of the supply curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An indirect tax is paid by the producer to the government, so it acts as an <strong>increase in the firm's costs</strong>. At every price, supplying becomes less profitable, so less is offered.<br />That is a <strong>leftward</strong> shift of the supply curve — equivalently, an upward shift by the amount of the tax. Demand does not move: consumers' incomes, tastes and the prices of other goods are all unchanged. What consumers experience is a higher price, reached by moving along their existing demand curve.",
+        "distractors": {
+          "A": "Demand shifts only when a condition of demand changes. A tax on the good raises its price, which moves the market along the demand curve.",
+          "C": "Same objection, and a rightward shift would mean consumers wanting more, which a tax does not cause.",
+          "D": "A rightward shift of supply means more offered at every price. That is what a <em>subsidy</em> does; a tax does the opposite."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows what happens in a market when a specific tax of £3 per unit is introduced.<br />Using Table 1, the consumer incidence of the tax is",
+      "table": {
+        "caption": "Table 1: A market before and after a specific tax of £3 per unit",
+        "head": [
+          "",
+          "Before the tax",
+          "After the tax"
+        ],
+        "rows": [
+          [
+            "Price paid by consumers",
+            "£20.00",
+            "£22.00"
+          ],
+          [
+            "Price received by producers",
+            "£20.00",
+            "£19.00"
+          ],
+          [
+            "Quantity traded",
+            "500",
+            "440"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£440",
+        "B": "£880",
+        "C": "£1,000",
+        "D": "£1,320"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Consumer incidence is the part of the tax borne by buyers through the higher price, measured across the units actually traded after the tax.<br />Rise in the price consumers pay: £22.00 − £20.00 = <strong>£2.00</strong>.<br />Quantity traded after the tax: <strong>440</strong>.<br />Consumer incidence = £2.00 × 440 = <strong>£880</strong>.<br />Consumers carry £2 of the £3, or two-thirds of the tax, which tells you demand is the less responsive side of this market.",
+        "distractors": {
+          "A": "£440 is the <strong>producer</strong> incidence: the £1.00 fall in the price producers keep, multiplied by 440.",
+          "C": "This uses the <em>old</em> quantity: £2.00 × 500. Every incidence area is measured at the new, lower quantity, because that is how many units are actually traded once the tax is in place.",
+          "D": "£1,320 is the government's total revenue, £3.00 × 440. That is consumer incidence and producer incidence added together, not the consumer share alone."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Using Table 1 in the previous question, the total revenue the government raises from the tax is",
+      "options": {
+        "A": "£440",
+        "B": "£880",
+        "C": "£1,320",
+        "D": "£1,500"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Government revenue is the tax per unit multiplied by the quantity traded after the tax.<br />Tax per unit: <strong>£3.00</strong>. Note that this is also £22.00 − £19.00, the full gap between what consumers pay and what producers keep.<br />Quantity traded after the tax: <strong>440</strong>.<br />Revenue = £3.00 × 440 = <strong>£1,320</strong>.<br />It checks against the two incidences: £880 from consumers plus £440 from producers is exactly £1,320.",
+        "distractors": {
+          "A": "£440 is the producer incidence alone — the £1.00 the producers absorb, times 440.",
+          "B": "£880 is the consumer incidence alone — the £2.00 consumers pay extra, times 440.",
+          "D": "This uses the pre-tax quantity: £3.00 × 500. The tax itself reduces the quantity traded to 440, so 500 units are never taxed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An indirect tax is placed on a good for which demand is highly price inelastic. Compared with an otherwise identical good with elastic demand, the outcome is that",
+      "options": {
+        "A": "Consumers bear more of the tax and quantity falls less.",
+        "B": "Consumers bear more of the tax and quantity falls more.",
+        "C": "Producers bear more of the tax and quantity falls less.",
+        "D": "Producers bear more of the tax and quantity falls more."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Inelastic demand means buyers keep buying even as the price rises, so the producer can pass most of the tax on without losing much custom. <strong>Consumers therefore bear the larger share.</strong><br />The same unresponsiveness means the quantity traded <strong>falls only a little</strong>. The two results are two views of the same fact: buyers who will not walk away both absorb the tax and keep buying.<br />This is why taxes on tobacco and fuel raise so much revenue while doing relatively little to consumption.",
+        "distractors": {
+          "B": "Quantity falling a lot is the <em>elastic</em> case. If buyers were that responsive, the producer could not have passed the tax on in the first place.",
+          "C": "The producer bears more where demand is elastic and buyers would leave. With inelastic demand the producer has no need to absorb it.",
+          "D": "Both halves describe the elastic case, which is the opposite of the good in the stem."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government taxes cigarettes, for which demand is price inelastic, with the stated aim of cutting smoking. The most likely result is that the tax",
+      "options": {
+        "A": "Cuts consumption sharply but raises little revenue.",
+        "B": "Cuts consumption sharply and raises large revenue.",
+        "C": "Raises large revenue but cuts consumption only a little.",
+        "D": "Raises little revenue and cuts consumption only a little."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Inelastic demand means quantity barely responds to the higher price. Smokers largely carry on smoking, so the tax base survives and receipts are <strong>large</strong> — while consumption falls only <strong>slightly</strong>.<br />That is the tension at the heart of taxing demerit goods. The characteristic that makes a good a reliable source of revenue is exactly the characteristic that makes the tax a weak tool for changing behaviour. A government cannot have both from the same tax.",
+        "distractors": {
+          "A": "Sharp falls in consumption require elastic demand, and this good has the opposite. Inelastic demand also means the revenue is large, not small.",
+          "B": "The two cannot both happen. If consumption fell sharply the tax base would shrink, and revenue with it.",
+          "D": "Consumption does fall only a little, but revenue is large rather than small — that is what makes the tax worth levying to a Chancellor."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government pays producers a subsidy of £4 for every solar panel sold. On the supply and demand diagram, the vertical distance between the old and the new supply curves is",
+      "options": {
+        "A": "Equal to the fall in the price consumers pay.",
+        "B": "Equal to the rise in the price producers receive.",
+        "C": "The subsidy of £4 per unit.",
+        "D": "The total cost of the subsidy to the government."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A subsidy lowers the cost of supplying each unit by a fixed amount, so the supply curve shifts down by exactly that amount at every quantity. The vertical gap between the two curves is the subsidy itself, <strong>£4</strong>.<br />The two price changes are both <em>smaller</em> than £4, because the benefit is split. Consumers gain part of it through a lower price, producers keep the rest through a higher net receipt, and the two changes add up to £4.",
+        "distractors": {
+          "A": "Consumers capture only part of the subsidy, so the price they pay falls by less than £4.",
+          "B": "Producers keep the remainder, so the price they receive rises by less than £4 as well. The two changes together make up the £4.",
+          "D": "The total cost is £4 multiplied by the quantity traded, which is an <strong>area</strong> on the diagram rather than a distance."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a market before and after a subsidy of £6 per unit is introduced.<br />Using Table 1, the total cost of the subsidy to the government is",
+      "table": {
+        "caption": "Table 1: A market before and after a subsidy of £6 per unit",
+        "head": [
+          "",
+          "Before the subsidy",
+          "After the subsidy"
+        ],
+        "rows": [
+          [
+            "Price paid by consumers",
+            "£40",
+            "£36"
+          ],
+          [
+            "Price received by producers",
+            "£40",
+            "£42"
+          ],
+          [
+            "Quantity traded",
+            "2,000",
+            "2,300"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£4,600",
+        "B": "£9,200",
+        "C": "£12,000",
+        "D": "£13,800"
+      },
+      "answer": "D",
+      "model": {
+        "working": "The government pays the subsidy on every unit actually traded once the subsidy is in place.<br />Subsidy per unit: <strong>£6</strong>. This is also £42 − £36, the gap between what producers receive and what consumers pay.<br />Quantity traded after the subsidy: <strong>2,300</strong>.<br />Total cost = £6 × 2,300 = <strong>£13,800</strong>.<br />Of that, consumers gain £4 × 2,300 = £9,200 through the lower price and producers gain £2 × 2,300 = £4,600 through the higher receipt.",
+        "distractors": {
+          "A": "£4,600 is the producers' share alone: the £2 rise in what they receive, times 2,300.",
+          "B": "£9,200 is the consumers' share alone: the £4 fall in what they pay, times 2,300.",
+          "C": "This uses the quantity <em>before</em> the subsidy: £6 × 2,000. The subsidy raises the quantity traded to 2,300, and the government pays on every one of them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government subsidises a good in order to increase the quantity consumed by as much as possible. The subsidy will be most effective where demand is",
+      "options": {
+        "A": "Perfectly inelastic.",
+        "B": "Price elastic.",
+        "C": "Price inelastic.",
+        "D": "Unitary elastic."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A subsidy works by lowering the price consumers face. How much extra gets consumed then depends entirely on how responsive buyers are to that lower price.<br />With <strong>elastic</strong> demand, a modest fall in price produces a proportionally larger rise in quantity, so the subsidy buys a lot of extra consumption per pound spent. This is why subsidies for things like insulation or electric vehicles are aimed at markets where buyers are price-sensitive and hesitating.",
+        "distractors": {
+          "A": "With perfectly inelastic demand, quantity does not change however far the price falls. The subsidy would raise consumption by nothing at all, and every pound would be a pure transfer.",
+          "C": "Inelastic demand means quantity responds only weakly, so most of the subsidy ends up as a transfer to existing buyers rather than as extra consumption.",
+          "D": "Unitary elasticity is the middle case. It does better than an inelastic good and worse than an elastic one, so it is not the best choice."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-9-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An indirect tax is placed on a good whose supply is perfectly inelastic. The incidence of the tax falls",
+      "options": {
+        "A": "Entirely on consumers, through a higher price.",
+        "B": "Entirely on producers, through a lower net price.",
+        "C": "Equally on consumers and producers.",
+        "D": "On the government, which collects the revenue."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Perfectly inelastic supply is a vertical supply curve: the same quantity is offered whatever the price. The classic cases are land and seats at a fixed venue.<br />Because quantity cannot fall, the market price consumers pay is determined entirely by demand and does not move. The producer still owes the tax on every unit, so the whole of it comes out of what they keep. <strong>The producer bears all of it.</strong><br />The general rule is that the tax falls on whichever side is less able to respond, and a side that cannot respond at all bears the lot.",
+        "distractors": {
+          "A": "That is the mirror case, where <em>demand</em> is perfectly inelastic and buyers will pay anything. Here it is supply that cannot respond.",
+          "C": "An even split needs demand and supply to be equally responsive. Perfectly inelastic supply is the furthest possible case from that.",
+          "D": "The government collects the tax; it does not bear it. Incidence asks who ends up worse off, not who hands the money over."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.6.1",
+  "slug": "2-6-1-globalisation",
+  "title": "Globalisation",
+  "shortTitle": "Globalisation",
+  "pageTitle": "Globalisation Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on globalisation for AQA A-Level Economics: its causes, and its effects on consumers, workers, firms and the environment.",
+  "intro": "Seven original multiple-choice questions on globalisation, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the causes of globalisation and its effects on consumers, workers, firms and the environment, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-6-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Globalisation is best defined as",
+      "options": {
+        "A": "The increasing integration and interdependence of economies.",
+        "B": "The removal of all tariffs by the World Trade Organisation.",
+        "C": "The tendency for firms to produce only for domestic markets.",
+        "D": "The transfer of production from developing to developed countries."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Globalisation is the growing <strong>integration and interdependence</strong> of the world's economies. It shows up as more trade in goods and services, more foreign direct investment and capital flows, more foreign ownership through multinationals, and greater freedom of movement of labour.",
+        "distractors": {
+          "B": "The WTO promotes trade liberalisation, but tariffs have not been abolished and its work is one driver of globalisation rather than the thing itself.",
+          "C": "Producing only for the domestic market is the opposite of globalisation.",
+          "D": "Production has largely moved the other way, from developed to lower-cost developing economies. Either way, one flow of production is not the definition."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The spread of standardised shipping containers sharply cut the cost and time of moving goods between countries. This contributed to globalisation mainly by",
+      "options": {
+        "A": "Increasing the mobility of labour between countries.",
+        "B": "Lowering transport costs, so more trade became viable.",
+        "C": "Raising tariffs on manufactured goods.",
+        "D": "Reducing the number of multinational corporations."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Containerisation</strong> made loading and shipping far cheaper and faster. Goods that were previously not worth moving across the world became worth moving, so the range of products traded internationally widened and global supply chains became practical.",
+        "distractors": {
+          "A": "Containers move goods, not people. Labour mobility rose for separate reasons, such as changes in immigration rules.",
+          "C": "Tariffs are set by governments and have generally fallen over this period. Cheaper shipping is not a tariff.",
+          "D": "Cheaper transport helped multinationals expand by making dispersed supply chains viable, so their number and reach grew."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country opens its market to imports from lower-cost foreign producers. In the short run, the most likely effect on domestic consumers is",
+      "options": {
+        "A": "Higher prices and less choice.",
+        "B": "Higher prices and more choice.",
+        "C": "Lower prices and less choice.",
+        "D": "Lower prices and more choice."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Cheaper foreign producers add supply and competition, which pushes <strong>prices down</strong>, and they bring goods domestic firms do not make, which widens <strong>choice</strong>. Both move in the consumer's favour.<br />The costs of the same change fall elsewhere — on workers in the industries that now face competition, and potentially on consumers in the long run if domestic firms close and choice narrows again.",
+        "distractors": {
+          "A": "Both halves are wrong. More competition and more sources of supply do not raise prices or narrow choice.",
+          "B": "Choice does widen, but extra low-cost competition pushes prices down rather than up.",
+          "C": "Prices do fall, but consumers gain access to more products, not fewer."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK manufacturer closes a factory and relocates production to a country with much lower labour costs. For the UK workers affected, the most likely result is",
+      "options": {
+        "A": "Frictional unemployment, resolved within weeks.",
+        "B": "Higher wages, from increased competition for labour.",
+        "C": "Seasonal unemployment in that industry.",
+        "D": "Structural unemployment, from a skills mismatch."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The jobs have not gone temporarily; they have gone permanently, and to another country. Workers whose skills are specific to that industry face a <strong>mismatch</strong> between what they can do and the vacancies that exist, which is <strong>structural unemployment</strong>.<br />It is typically long-lasting and regionally concentrated, and it is the clearest cost of globalisation for workers in higher-cost economies.",
+        "distractors": {
+          "A": "Frictional unemployment is a short spell between jobs a worker is already qualified for. A permanent closure does not fit.",
+          "B": "Competition for these workers has fallen, not risen — their employer has left.",
+          "C": "Seasonal unemployment follows a predictable annual cycle. A relocation is permanent."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four changes recorded in an economy after it opened up to international trade.<br />Using Table 1, the row that records a cost of globalisation is",
+      "table": {
+        "caption": "Table 1: Changes after opening up to trade",
+        "head": [
+          "Change",
+          "Direction"
+        ],
+        "rows": [
+          [
+            "Consumer prices",
+            "Fell"
+          ],
+          [
+            "Variety of goods available",
+            "Rose"
+          ],
+          [
+            "Employment in textiles",
+            "Fell"
+          ],
+          [
+            "Access to imported raw materials",
+            "Rose"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Access to imported raw materials.",
+        "B": "Consumer prices.",
+        "C": "Employment in textiles.",
+        "D": "Variety of goods available."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Three of the four rows are benefits: prices fell, variety rose, and firms gained access to imported inputs that lower their costs.<br />The fall in <strong>textiles employment</strong> is the cost. Domestic producers exposed to cheaper foreign competition lose market share, and the workers laid off face structural unemployment. Globalisation's gains and losses fall on different groups, which is why the politics of it are so contested.",
+        "distractors": {
+          "A": "Cheaper and more readily available imported inputs reduce firms' costs and improve their competitiveness — a benefit.",
+          "B": "Consumer prices fell, which raises real incomes. That is one of the clearest consumer gains from opening up.",
+          "D": "Greater variety means consumers can buy goods that were previously unavailable domestically."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Globalisation is generally held to worsen environmental outcomes because it",
+      "options": {
+        "A": "Increases the cost of imported raw materials.",
+        "B": "Raises production and long-distance transport.",
+        "C": "Reduces the number of firms operating globally.",
+        "D": "Restricts the movement of capital between countries."
+      },
+      "answer": "B",
+      "model": {
+        "working": "More trade means more output and far more freight moving between continents, both of which raise emissions. Globalisation also intensifies the extraction of natural resources, contributing to deforestation and habitat loss.<br />These are <strong>negative externalities</strong>: the environmental cost falls on third parties and is not reflected in the price of traded goods.",
+        "distractors": {
+          "A": "Globalisation tends to make imported inputs cheaper and more available, not dearer — and input costs are not an environmental effect.",
+          "C": "The number and reach of firms operating internationally has grown substantially.",
+          "D": "Capital moves more freely under globalisation, not less. Financial deregulation was one of its drivers."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Globalisation is often said to raise average incomes while also widening inequality. The best explanation is that its gains",
+      "options": {
+        "A": "Are shared equally across all groups in an economy.",
+        "B": "Fall mainly to capital owners and skilled workers.",
+        "C": "Go entirely to developed countries.",
+        "D": "Go entirely to developing countries."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Both claims can hold at once because the <em>average</em> conceals the distribution. Owners of capital gain from access to larger markets and cheaper production, and skilled workers gain from worldwide demand for their skills.<br />Meanwhile lower-skilled workers in higher-cost economies face competition from imports and relocation, so their wages stagnate or their jobs disappear. Total income rises; its distribution widens.",
+        "distractors": {
+          "A": "If gains were shared equally, average income would rise without inequality changing. The question is precisely why it does change.",
+          "C": "Developing economies have gained substantially, particularly through employment created by multinationals and export growth.",
+          "D": "Developed economies gain too, through cheaper imports, larger markets and higher returns on capital. The split is not between countries but within them."
+        }
+      }
+    }
+  ]
+}

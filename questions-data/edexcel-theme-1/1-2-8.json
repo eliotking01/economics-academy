@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.8",
+  "slug": "1-2-8-producer-consumer-surplus",
+  "title": "Producer and Consumer Surplus",
+  "shortTitle": "Producer and Consumer Surplus",
+  "pageTitle": "Consumer and Producer Surplus Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on consumer and producer surplus for Edexcel A-Level Economics: measuring the areas, social surplus and welfare loss.",
+  "intro": "Eight original multiple-choice questions on consumer and producer surplus, written to the style and difficulty of Edexcel Paper 1 Section A. Three are calculations.",
+  "notesTeaser": "Eight original multiple-choice questions on consumer surplus, producer surplus and social surplus, including measuring the areas and what happens when they change.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-8-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A commuter would have been willing to pay up to £9 for a train ticket, but the fare charged is £6. The commuter's consumer surplus is",
+      "options": {
+        "A": "£3",
+        "B": "£6",
+        "C": "£9",
+        "D": "£15"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Consumer surplus is the difference between what a consumer <strong>would have paid</strong> and what they <strong>actually paid</strong>.<br />£9 − £6 = <strong>£3</strong>.<br />It is a measure of the benefit the commuter gets from the transaction over and above the money handed over. On a diagram it is the vertical gap between the demand curve and the price, which is why total consumer surplus is the area below the demand curve and above the price line.",
+        "distractors": {
+          "B": "£6 is the price paid. That is a cost to the consumer, not a benefit over and above the cost.",
+          "C": "£9 is the maximum the commuter would have paid — one of the two inputs to the calculation, not the answer.",
+          "D": "£15 adds the two figures together. The surplus is the gap between them, so they must be subtracted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market for craft beer clears at £6 a bottle, with 900 bottles traded a week. Both curves are straight lines: the demand curve cuts the price axis at £15 and the supply curve cuts it at £2. Consumer surplus is",
+      "options": {
+        "A": "£1,800",
+        "B": "£4,050",
+        "C": "£5,400",
+        "D": "£8,100"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Consumer surplus is the triangle below the demand curve and above the price line, so it is ½ × base × height.<br />The base is the quantity traded: <strong>900</strong>.<br />The height is the gap between where the demand curve cuts the price axis and the price paid: £15 − £6 = <strong>£9</strong>.<br />Consumer surplus = ½ × 900 × £9 = <strong>£4,050</strong>.<br />The supply intercept of £2 belongs to the producer surplus calculation and plays no part in this one.",
+        "distractors": {
+          "A": "This is <strong>producer</strong> surplus: ½ × 900 × (£6 − £2) = £1,800. It uses the supply intercept instead of the demand intercept, so it measures the triangle on the wrong side of the price line.",
+          "C": "This is 900 × £6, the total spent on beer. Expenditure and surplus are different things — surplus is the benefit received <em>above</em> what was spent.",
+          "D": "The ½ has been left out: 900 × £9 = £8,100. That measures the rectangle enclosing the triangle, so it is exactly double the right answer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A local market for garden plants clears at £12 a plant, with 400 plants sold. Both curves are straight lines: the demand curve cuts the price axis at £20 and the supply curve cuts it at £6. Social surplus is",
+      "options": {
+        "A": "£1,200",
+        "B": "£1,600",
+        "C": "£2,800",
+        "D": "£5,600"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Social surplus is consumer surplus plus producer surplus, so work out both triangles and add them.<br />Consumer surplus = ½ × 400 × (£20 − £12) = ½ × 400 × £8 = <strong>£1,600</strong>.<br />Producer surplus = ½ × 400 × (£12 − £6) = ½ × 400 × £6 = <strong>£1,200</strong>.<br />Social surplus = £1,600 + £1,200 = <strong>£2,800</strong>.<br />This is the total welfare the market generates, and in a competitive market left to clear it is as large as it can be.",
+        "distractors": {
+          "A": "£1,200 is producer surplus on its own. The consumer side still has to be added.",
+          "B": "£1,600 is consumer surplus on its own, for the same reason.",
+          "D": "The ½ has been dropped from both triangles: 400 × (£20 − £6) = £5,600. That measures the whole rectangle between the two intercepts rather than the two triangles inside it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A technological advance makes a good considerably cheaper to manufacture, and the market settles at a new equilibrium. Consumer surplus",
+      "options": {
+        "A": "Falls, because producers capture more of the gain.",
+        "B": "Falls, because the quantity traded increases.",
+        "C": "Rises, because buyers pay less and buy more.",
+        "D": "Rises, because the demand curve shifts outwards."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Cheaper manufacturing shifts supply to the right, so the equilibrium price <strong>falls</strong> and the equilibrium quantity <strong>rises</strong>.<br />Consumer surplus gains twice over. Every buyer who was already purchasing now pays less, widening the gap between what they would have paid and what they do pay. And new buyers enter at the lower price, each adding a surplus of their own. The triangle below the demand curve and above the price line therefore grows on both dimensions.",
+        "distractors": {
+          "A": "Producer surplus rises too, but not at consumers' expense. Both sides gain here, because the extra output creates value rather than transferring it.",
+          "B": "A larger quantity traded <em>increases</em> consumer surplus. More units are being bought by people who value them above the price.",
+          "D": "The demand curve has not moved. Consumers gain by sliding down their existing demand curve to a lower price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the most that each of four consumers would pay for a concert ticket. Tickets are sold at £30, and every consumer willing to pay at least that much buys one.<br />Using Table 1, total consumer surplus is",
+      "table": {
+        "caption": "Table 1: The most each consumer would pay for a ticket",
+        "head": [
+          "",
+          "Maximum willing to pay"
+        ],
+        "rows": [
+          [
+            "Consumer 1",
+            "£45"
+          ],
+          [
+            "Consumer 2",
+            "£38"
+          ],
+          [
+            "Consumer 3",
+            "£30"
+          ],
+          [
+            "Consumer 4",
+            "£22"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£15",
+        "B": "£23",
+        "C": "£83",
+        "D": "£113"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out each buyer's surplus and add them up. Only consumers willing to pay at least £30 buy.<br />Consumer 1: £45 − £30 = <strong>£15</strong>.<br />Consumer 2: £38 − £30 = <strong>£8</strong>.<br />Consumer 3: £30 − £30 = <strong>£0</strong> — they buy, but gain nothing beyond the price.<br />Consumer 4 values the ticket at £22, below the price, so does not buy and has no surplus.<br />Total = £15 + £8 + £0 = <strong>£23</strong>.",
+        "distractors": {
+          "A": "£15 is Consumer 1's surplus alone. The other buyers' surpluses still have to be added.",
+          "C": "This subtracts the price once instead of once per buyer: (£45 + £38 + £30) − £30 = £83. Each of the three buyers pays £30, so £90 must come off in total.",
+          "D": "£113 is the total the three buyers were willing to pay, with nothing subtracted at all. Surplus is what is left after the price is paid."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a competitive market left to reach its own equilibrium, social surplus is",
+      "options": {
+        "A": "Equal to consumer surplus alone.",
+        "B": "Larger the further price is from equilibrium.",
+        "C": "The largest it can be in that market.",
+        "D": "Zero, because the two surpluses cancel out."
+      },
+      "answer": "C",
+      "model": {
+        "working": "At the market-clearing price, every trade takes place where the buyer values the good at or above what it costs to supply, and no trade takes place where they do not. There is no value left unrealised.<br />That makes social surplus — consumer surplus plus producer surplus — as large as the market can make it. Any move away from equilibrium, such as a price control or a tax, prevents some mutually beneficial trades and creates a <strong>welfare loss</strong>.",
+        "distractors": {
+          "A": "Social surplus is consumer surplus <em>plus</em> producer surplus. Leaving the producer side out understates it.",
+          "B": "The opposite holds. The further price is from equilibrium, the more beneficial trades fail to happen, and the smaller total surplus becomes.",
+          "D": "The two surpluses add together; they do not offset one another. Both sides of a voluntary trade gain, which is why it happens."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A specific tax is placed on a good in a competitive market. Compared with the position before the tax, social surplus",
+      "options": {
+        "A": "Is unchanged, because the tax is transferred to the government.",
+        "B": "Rises, because government revenue is added to it.",
+        "C": "Rises, because producers raise the price they receive.",
+        "D": "Shrinks, because fewer beneficial trades take place."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The tax raises the price consumers pay and lowers the price producers keep, so the quantity traded falls.<br />The trades that no longer happen were ones where the buyer valued the good <em>above</em> what it cost to supply. That value is now simply not created — it does not go to the buyer, the seller or the government. This is the <strong>welfare loss</strong>, and it is why social surplus falls even though the tax revenue itself is a transfer rather than a loss.",
+        "distractors": {
+          "A": "The revenue is a transfer, but the fall in quantity is not. Some worthwhile trades stop happening, and that value is lost to everyone.",
+          "B": "Tax revenue moves surplus from buyers and sellers to the government. Moving it does not create any.",
+          "C": "Producers receive <em>less</em> per unit after the tax, not more. The price buyers pay rises; the price sellers keep falls."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-8-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two markets have the same equilibrium price and the same equilibrium quantity. In the first the demand curve is much steeper than the supply curve; in the second the reverse is true. Compared with the second market, the first market has",
+      "options": {
+        "A": "Larger consumer surplus and smaller producer surplus.",
+        "B": "Larger consumer surplus and larger producer surplus.",
+        "C": "Smaller consumer surplus and larger producer surplus.",
+        "D": "Smaller consumer surplus and smaller producer surplus."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Both triangles share the same base, because the quantity traded is the same in both markets. What differs is their height.<br />A <strong>steeper demand curve</strong> meets the price axis further above the equilibrium price, so the consumer surplus triangle is taller and its area larger.<br />A <strong>flatter supply curve</strong> meets the price axis closer below the equilibrium price, so the producer surplus triangle is shorter and its area smaller.<br />The relative slopes of the two curves are what decide how the gains from trade are split.",
+        "distractors": {
+          "B": "Both cannot be larger. With price and quantity fixed, a steeper demand curve is necessarily paired with a flatter supply curve, so one triangle grows as the other shrinks.",
+          "C": "This reverses the reasoning. A steeper demand curve raises the vertical gap between the curve and the price, which is what makes consumer surplus larger.",
+          "D": "The same objection as B, in the other direction. The two surpluses move oppositely when the intersection point is held fixed."
+        }
+      }
+    }
+  ]
+}

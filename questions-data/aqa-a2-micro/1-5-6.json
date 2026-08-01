@@ -1,0 +1,234 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.6",
+  "slug": "1-5-6-monopoly-and-monopoly-power",
+  "title": "Monopoly and Monopoly Power",
+  "shortTitle": "Monopoly and Monopoly Power",
+  "pageTitle": "Monopoly Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on monopoly for AQA A-Level Economics: barriers to entry, natural monopoly and the costs and benefits of monopoly power.",
+  "intro": "Nine original multiple-choice questions on monopoly and monopoly power, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Nine original multiple-choice questions on monopoly, barriers to entry, natural monopoly and the costs and benefits of monopoly power, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A pure monopoly is best defined as a market in which there is",
+      "options": {
+        "A": "A firm holding a market share of 25% or more.",
+        "B": "A firm that is able to earn supernormal profit in the short run.",
+        "C": "A single seller of a product with no close substitutes.",
+        "D": "A small number of firms that dominate total sales."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A <strong>pure monopoly</strong> is a single seller of a product for which there are <strong>no close substitutes</strong>, protected by high barriers to entry. Both halves matter: a firm can be the only seller of its own brand and still face fierce competition from near-identical products, in which case it has little real power.",
+        "distractors": {
+          "A": "A 25% share is the threshold the Competition and Markets Authority uses to identify a <strong>legal</strong> or working monopoly. That is a regulatory definition, not the pure economic one, and such a firm plainly has rivals.",
+          "B": "Firms in perfect competition and monopolistic competition can also earn short-run supernormal profit. What distinguishes monopoly is the ability to <em>sustain</em> it, thanks to barriers to entry.",
+          "D": "A few dominant firms is an <strong>oligopoly</strong>. Monopoly means one."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm holds a UK market share of over 90% in its industry. Under the definition used by the Competition and Markets Authority, this firm",
+      "options": {
+        "A": "Has a legal monopoly, because its share exceeds 25%.",
+        "B": "Has no monopoly power, because rival firms still exist.",
+        "C": "Is a pure monopoly, because its share exceeds 90%.",
+        "D": "Is an oligopolist, because it is one of several firms."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The CMA treats any firm with a market share of <strong>25% or more</strong> as holding a <strong>legal or working monopoly</strong>. That threshold matters practically: it is the point at which a firm's conduct can attract regulatory scrutiny, whether or not it is the only seller. A search engine with over 90% of UK searches clears it comfortably.",
+        "distractors": {
+          "B": "Rivals existing does not remove monopoly power. With 90% of the market, this firm can influence price and conditions in a way its small competitors cannot.",
+          "C": "A <strong>pure</strong> monopoly requires a <em>single</em> seller with no close substitutes. Over 90% is dominant but not sole, so the legal definition is the one that applies.",
+          "D": "Oligopoly means a few firms sharing the market between them. One firm holding over 90% is not that."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Unlike a firm in perfect competition, a monopolist can sustain supernormal profit into the long run. The main reason is that",
+      "options": {
+        "A": "Consumers have perfect information about its prices.",
+        "B": "High barriers to entry keep new firms out.",
+        "C": "It produces at the minimum point of its average cost curve.",
+        "D": "Its marginal revenue curve lies above its average revenue curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "In perfect competition, supernormal profit attracts new entrants, supply rises, price falls and the profit disappears. A monopolist is protected by <strong>high barriers to entry</strong> — patents, ownership of a key resource, enormous set-up costs, legal restrictions — so that mechanism never operates. The profit therefore persists indefinitely, which is the central difference between the two market structures over time.",
+        "distractors": {
+          "A": "Perfect information is a feature of perfect competition, and monopoly is in fact associated with <em>asymmetric</em> information. Either way, information does not explain persistent profit.",
+          "C": "A profit-maximising monopolist typically does <strong>not</strong> produce at minimum average cost. Producing efficiently would not by itself protect profit from competition anyway.",
+          "D": "Marginal revenue lies <em>below</em> average revenue for any firm facing a downward-sloping demand curve, including a monopolist."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the standard monopoly diagram at the profit-maximising output, the price charged will be",
+      "options": {
+        "A": "Above marginal cost, so the outcome is allocatively inefficient.",
+        "B": "Above marginal cost, so the outcome is allocatively efficient.",
+        "C": "Equal to marginal cost, so the outcome is allocatively efficient.",
+        "D": "Below marginal cost, so the firm makes a loss on the last unit."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Sketch a downward-sloping AR curve with MR beneath it, and a rising MC curve. The monopolist maximises profit where <strong>MC = MR</strong>, then reads the <em>price</em> up from that quantity to the <strong>AR</strong> curve — which lies above MR, and therefore above MC.<br />Because <strong>P &gt; MC</strong>, the value consumers place on an extra unit exceeds the cost of producing it, so society would gain from more being made. Too little is produced, which is <strong>allocative inefficiency</strong>, and the resulting welfare loss is the standard case against monopoly.",
+        "distractors": {
+          "B": "The first half is right and the conclusion is wrong. Allocative efficiency requires P = MC exactly; any gap between them means the wrong quantity is being produced.",
+          "C": "P = MC is the <strong>perfectly competitive</strong> outcome, where the horizontal demand curve makes AR and MR the same line. A monopolist's AR sits above its MR, so price must exceed marginal cost.",
+          "D": "Price below marginal cost would mean losing money on the last unit, which no profit-maximising firm would choose. The monopolist's problem for society is the opposite — charging too much, not too little."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A natural monopoly is best described as an industry in which",
+      "options": {
+        "A": "One firm can supply the whole market more cheaply than several.",
+        "B": "A single firm has been granted a legal right to be the only supplier.",
+        "C": "Firms use natural resources that cannot be replaced once used.",
+        "D": "The government owns the only firm operating in the market."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>natural monopoly</strong> arises where fixed costs are so large relative to the market that average cost keeps falling across the whole range of demand. Duplicating the infrastructure — a second set of water mains or rail track alongside the first — would raise average cost for everyone. One supplier is therefore the cheapest arrangement, which is why such industries are usually regulated rather than broken up.",
+        "distractors": {
+          "B": "A legally granted exclusive right is a <strong>statutory</strong> monopoly. It may or may not also be natural; what defines a natural monopoly is the cost structure, not the law.",
+          "C": "This describes non-renewable resources, which is an entirely different idea from a monopoly market structure.",
+          "D": "Public ownership is a question of who owns the firm. Natural monopolies exist in private hands too, which is exactly why regulators supervise them."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is most likely to be a benefit of monopoly power?",
+      "options": {
+        "A": "Allocative efficiency, because price is set equal to marginal cost.",
+        "B": "Lower barriers to entry, because the firm has no need to protect itself.",
+        "C": "Productive efficiency, because output is at minimum average cost.",
+        "D": "Supernormal profit funding research and development."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The strongest case for monopoly is <strong>dynamic efficiency</strong>. Sustained supernormal profit gives a monopolist both the funds and the incentive to invest in <strong>research and development</strong>, since the barriers protecting it mean the returns on any innovation can be captured rather than immediately copied. Large-scale production can also deliver <strong>economies of scale</strong>, so average costs may be lower than under a fragmented industry.",
+        "distractors": {
+          "A": "A monopolist charges a price <em>above</em> marginal cost, so the outcome is allocatively inefficient. This is a cost of monopoly rather than a benefit.",
+          "B": "High barriers to entry are what make monopoly possible. A monopolist has every reason to maintain them, not to lower them.",
+          "C": "A profit-maximising monopolist produces where MC = MR, which is not normally the minimum of its average cost curve. Productive inefficiency and X-inefficiency are among the usual criticisms."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A monopolist faces no competitive pressure and its average costs drift upwards as the organisation becomes slack. This is best described as",
+      "options": {
+        "A": "Allocative inefficiency.",
+        "B": "Diseconomies of scale.",
+        "C": "Dynamic inefficiency.",
+        "D": "X-inefficiency."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>X-inefficiency</strong> is the rise in average cost that comes from a lack of competitive pressure: without rivals threatening to take its customers, a firm has weaker incentives to control costs, and organisational slack creeps in. It is distinct from the other inefficiencies because it is about <em>management</em> rather than about the quantity produced or the scale of operation.",
+        "distractors": {
+          "A": "Allocative inefficiency is producing the wrong quantity, with price above marginal cost. That is a separate criticism of monopoly and it concerns output, not costs.",
+          "B": "Diseconomies of scale raise average cost because the firm has grown too <em>large</em> to coordinate. Here the cause is the absence of competition, not size.",
+          "C": "Dynamic inefficiency would mean failing to innovate over time. Slack cost control is a present-day inefficiency rather than a failure to improve in future."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists three features of a market.<br />Using Table 1, which one of the following combinations is most consistent with a firm holding substantial monopoly power?",
+      "table": {
+        "caption": "Table 1: Three features of a market",
+        "head": [
+          "Feature",
+          "Description"
+        ],
+        "rows": [
+          [
+            "1",
+            "Barriers to entry"
+          ],
+          [
+            "2",
+            "Availability of close substitutes"
+          ],
+          [
+            "3",
+            "The firm's share of total market sales"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 high, 2 few, 3 high.",
+        "B": "1 high, 2 many, 3 low.",
+        "C": "1 low, 2 few, 3 high.",
+        "D": "1 low, 2 many, 3 low."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Monopoly power grows with all three working in the same direction.<br /><strong>High barriers</strong> keep potential rivals out, so profit is not competed away.<br /><strong>Few close substitutes</strong> mean customers cannot easily switch, so demand is price inelastic and the firm can raise price without losing them.<br /><strong>A high market share</strong> means the firm's own decisions move the market.<br />Together these give real power to set price.",
+        "distractors": {
+          "B": "Many substitutes and a low share leave the firm unable to raise price without losing customers, whatever the barriers to entry.",
+          "C": "A high share with <em>low</em> barriers is fragile: any attempt to exploit that position would attract entrants almost immediately. This is closer to a contestable market.",
+          "D": "This is the profile of a highly competitive market — easy entry, plenty of alternatives, and no firm large enough to matter."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-6-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A regulator requires a natural monopoly supplying water to set its price equal to marginal cost. All other things being equal, the most likely difficulty with this rule is that the firm will",
+      "options": {
+        "A": "Be unable to charge different prices to different consumers.",
+        "B": "Make a loss, because average cost is still falling at that output.",
+        "C": "Produce too little water, because the price is set too low.",
+        "D": "Retain supernormal profit, because marginal cost is above average cost."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A natural monopoly has very large fixed costs and low marginal costs, so its <strong>average cost falls continuously</strong> across the relevant range of output. Whenever average cost is falling, <strong>marginal cost lies below it</strong>. Setting price equal to marginal cost therefore sets price <em>below</em> average cost, and the firm loses money on every unit.<br />The result is allocatively efficient but financially impossible without support, which is why regulators typically use average cost pricing or a subsidy instead — accepting a little inefficiency in exchange for a firm that can survive.",
+        "distractors": {
+          "A": "Price discrimination is a separate matter and is not what the rule prevents. The difficulty is that the single regulated price does not cover costs.",
+          "C": "Marginal cost pricing produces <em>more</em> output than the monopolist would choose, not less. That is the point of the rule — the problem is the loss it creates, not the quantity.",
+          "D": "This inverts the cost relationship. With average cost falling, marginal cost is below average cost, so a price equal to MC cannot leave any profit."
+        }
+      }
+    }
+  ]
+}

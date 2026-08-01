@@ -1,0 +1,150 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.3.1",
+  "slug": "1-3-1-types-of-market-failure",
+  "title": "Types of Market Failure",
+  "shortTitle": "Types of Market Failure",
+  "pageTitle": "Types of Market Failure Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on types of market failure for Edexcel A-Level Economics: externalities, public goods and information gaps.",
+  "intro": "Five original multiple-choice questions on the types of market failure, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on externalities, public goods and information gaps as causes of market failure.",
+  "questions": [
+    {
+      "id": "edexcel-1-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Late-night violence linked to heavy drinking imposes costs on the police and on hospital emergency departments. In economic terms this is",
+      "options": {
+        "A": "A negative externality of production.",
+        "B": "A negative externality of consumption.",
+        "C": "A positive externality of production.",
+        "D": "A positive externality of consumption."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An externality is a spillover effect on a <strong>third party</strong> not involved in the transaction. The police and the health service are neither buying nor selling the alcohol, and they bear a real cost.<br />The cost arises from the alcohol being <strong>drunk</strong>, not from its being brewed, so it attaches to consumption. It is therefore a <strong>negative externality of consumption</strong> — the same category the notes use for second-hand smoke and for noise from loud music.",
+        "distractors": {
+          "A": "A negative externality of production comes from the process of making the good — emissions from the brewery, or lorries delivering it. The harm here follows from drinking.",
+          "C": "A positive externality is a <em>benefit</em> to third parties. Policing and hospital treatment are costs.",
+          "D": "Again, the spillover here is a cost rather than a benefit. Vaccination and education are the standard positive-consumption examples."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four situations in an economy.<br />Using Table 1, the situation in which the free market is most likely to provide nothing at all is",
+      "table": {
+        "caption": "Table 1: Four situations in an economy",
+        "head": [
+          "",
+          "Situation"
+        ],
+        "rows": [
+          [
+            "Situation 1",
+            "A beekeeper whose bees pollinate a neighbouring orchard"
+          ],
+          [
+            "Situation 2",
+            "A power station whose emissions harm nearby residents"
+          ],
+          [
+            "Situation 3",
+            "Street lighting that nobody can be charged for using"
+          ],
+          [
+            "Situation 4",
+            "A buyer who cannot tell which second-hand goods are faulty"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Situation 1.",
+        "B": "Situation 2.",
+        "C": "Situation 3.",
+        "D": "Situation 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Market failure comes in three strengths: <strong>over-provision</strong>, <strong>under-provision</strong> and <strong>non-provision</strong>. Only one type reaches the third.<br />Street lighting is <strong>non-excludable</strong> — nobody can be stopped from benefiting, so nobody can be charged. With no revenue there is no profit incentive, and a private firm supplies none of it. The other three situations all describe markets that still function, just at the wrong quantity.",
+        "distractors": {
+          "A": "A positive externality of production. The orchard gains for free, so beekeeping is <em>under</em>-provided — but beekeepers still sell honey, so provision is not zero.",
+          "B": "A negative externality of production. Electricity is still supplied, and indeed over-supplied relative to the social optimum.",
+          "D": "An information gap. Second-hand goods still trade; the problem is that too many poor ones are sold and buyers are misled."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Vaccination protects the person vaccinated and also reduces the spread of disease to people around them. Left uncorrected, the free market outcome will be",
+      "options": {
+        "A": "Over-consumption, because the private benefit exceeds the social benefit.",
+        "B": "Over-consumption, because consumers ignore the external benefit.",
+        "C": "Under-consumption, because consumers ignore the external benefit.",
+        "D": "Under-consumption, because the social benefit is below the private benefit."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Social benefit is private benefit <em>plus</em> external benefit, so where there is a positive externality the social benefit is the <strong>larger</strong> of the two.<br />An individual deciding whether to be vaccinated weighs only their own protection. The reduced risk to everyone else does not enter their calculation, so they buy less than is socially optimal. Markets <strong>under-provide</strong> goods with positive externalities, which is why vaccination is usually subsidised or provided free.",
+        "distractors": {
+          "A": "The inequality is the wrong way round — external benefits are added to private ones, so social benefit is larger. And over-consumption is what a <em>negative</em> externality produces.",
+          "B": "The reason is right and the outcome is wrong. Ignoring a benefit makes people buy too little of something, not too much.",
+          "D": "The outcome is right and the reason is wrong, for the same reason as A. Social benefit exceeds private benefit here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Consumers consistently underestimate the long-term health effects of a food product and buy more of it than they would if they were fully informed. This market failure is caused by",
+      "options": {
+        "A": "Non-excludability of the good.",
+        "B": "Non-rivalry in its consumption.",
+        "C": "The absence of full information.",
+        "D": "The free rider problem in action."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Markets allocate efficiently only if buyers and sellers have good information. Where consumers do not know something material about a good, their choices no longer reflect what the good is actually worth to them.<br />Here the misjudgement runs one way — the harm is understated — so the good is <strong>over-consumed</strong> and resources are misallocated towards it. That is an <strong>information gap</strong>, the third of the three types of market failure the notes identify.",
+        "distractors": {
+          "A": "Non-excludability means non-payers cannot be prevented from consuming. Anyone can be stopped from taking this product without paying.",
+          "B": "Non-rivalry means one person's consumption leaves no less for anyone else. Food eaten by one person is plainly not available to another.",
+          "D": "Free riding follows from non-excludability and results in non-provision. This product is provided, and over-consumed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government must choose one policy for each of two problems: a good that nobody can be charged for, and a good whose production pollutes. The policies most likely to fit are",
+      "options": {
+        "A": "A tax for both problems.",
+        "B": "A tax for the first, direct provision for the second.",
+        "C": "Direct provision for both problems.",
+        "D": "Direct provision for the first, a tax for the second."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Match the remedy to the failure.<br />A good <strong>nobody can be charged for</strong> is non-excludable, so the free rider problem means no market exists at all. Nothing is bought or sold, so there is nothing to tax — the state has to provide it and fund it from taxation.<br />A good whose <strong>production pollutes</strong> is supplied perfectly well; it is simply over-supplied because the external cost is ignored. A tax raises the producer's private cost towards the social cost, cutting output towards the optimum without the state having to make the good itself.",
+        "distractors": {
+          "A": "A tax cannot work on the first problem. A tax needs transactions to fall on, and the free rider problem means there are none.",
+          "B": "This reverses the two. The taxable market is the polluting one, and the one needing provision is the good nobody can be charged for.",
+          "C": "Direct provision of the polluting good would mean the state taking over the industry. The problem there is the level of output, not that nothing is being produced."
+        }
+      }
+    }
+  ]
+}

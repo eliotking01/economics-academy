@@ -1,0 +1,147 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.2",
+  "slug": "4-1-2-specialisation-trade",
+  "title": "Specialisation and Trade",
+  "shortTitle": "Specialisation and Trade",
+  "pageTitle": "Specialisation and Trade Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on specialisation and trade for Edexcel A-Level Economics: absolute and comparative advantage, and the gains from trade.",
+  "intro": "Six original multiple-choice questions on specialisation and trade, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on absolute and comparative advantage, opportunity cost, and the benefits and limitations of international trade.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries specialise according to comparative advantage and then trade with one another. The clearest evidence that both have gained is that each can now",
+      "options": {
+        "A": "Consume at a point beyond its own PPF.",
+        "B": "Produce both goods more cheaply than before.",
+        "C": "Shift its production possibility frontier outward.",
+        "D": "Supply the whole world market on its own."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A country's production possibility frontier marks the most it can <em>produce</em> with the resources it has. Specialisation does not move that frontier — no new resources appear and no technology changes. What trade does is separate what a country produces from what it <strong>consumes</strong>: by making more of one good than it wants and exchanging the surplus, it ends up consuming a combination lying outside its own frontier altogether. That is the gain from trade, and it is what the standard diagram is drawn to show.",
+        "distractors": {
+          "B": "Specialisation lowers the <em>opportunity cost</em> of what each country makes. It does not make production physically cheaper in both goods at once.",
+          "C": "An outward shift of the frontier needs more or better resources, which trade does not provide.",
+          "D": "Comparative advantage explains why countries trade with each other, not why one would supply everything."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The theory of comparative advantage assumes that factors of production move freely between industries within a country. Where that assumption fails, specialisation is likely to bring",
+      "options": {
+        "A": "A larger gain in global output than predicted.",
+        "B": "No change to any country's opportunity costs.",
+        "C": "Structural unemployment in declining sectors.",
+        "D": "Zero transport costs between the countries."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The model assumes that as a country specialises, the workers and capital released by the shrinking industry move smoothly into the expanding one. In practice a textile worker does not become a chip designer quickly, and a mill cannot be converted into a fabrication plant at all. Where mobility fails, the resources released are not reabsorbed, and the country ends up with <strong>structural unemployment</strong> alongside its gains from trade. This is the standard evaluation of comparative advantage, and the reason free trade produces losers as well as winners.",
+        "distractors": {
+          "A": "The predicted gain assumes the released resources are redeployed. If they sit idle instead, the gain realised is <em>smaller</em> than predicted, not larger.",
+          "B": "Opportunity costs come from a country's production possibilities, not from how easily its factors move between industries.",
+          "D": "Zero transport costs is a different assumption of the same model, and it is not the one the stem sets aside."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-2-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In one hour a worker in Country P can make either 6 crates of olives or 30 litres of oil. The opportunity cost to Country P of one crate of olives is",
+      "options": {
+        "A": "0.2 litres of oil",
+        "B": "5 litres of oil",
+        "C": "24 litres of oil",
+        "D": "30 litres of oil"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Opportunity cost is what must be given up. The hour spent making crates of olives could have been spent making oil instead.<br />One hour produces either 6 crates <em>or</em> 30 litres, so the two are equivalent in resources: 6 crates ≡ 30 litres.<br />One crate ≡ 30 ÷ 6 = <strong>5 litres of oil</strong>.<br />The reciprocal is worth having too: one litre of oil costs 6 ÷ 30 = 0.2 crates. A country has a comparative advantage in whichever good it gives up least to produce.",
+        "distractors": {
+          "A": "0.2 is the opportunity cost of one <em>litre of oil</em> — the reciprocal of what the question asks for.",
+          "C": "24 subtracts one output from the other. The two are in different units and cannot meaningfully be subtracted.",
+          "D": "30 litres is what a whole hour produces, not what a single crate costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A developed country imports clothing made in factories where safety rules are weak and hours are long. Among the disadvantages of specialisation and trade, this is",
+      "options": {
+        "A": "Dependency on imports of essential goods.",
+        "B": "Income inequality between skilled workers.",
+        "C": "Job losses in the importing country's mills.",
+        "D": "Workers being exploited to produce the goods."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Trade lets production move to wherever it is cheapest — and part of what makes it cheaper can be standards the importing country would not permit at home. Edexcel lists <strong>exploitation of workers</strong> among the disadvantages of specialisation and trade for precisely this reason: gains to consumers in one country are partly funded by conditions in another. It is a distinct objection from the job losses trade causes domestically, which fall on an entirely different group of people.",
+        "distractors": {
+          "A": "Dependency concerns what happens when supply is interrupted. Nothing here is about security of supply.",
+          "B": "Income inequality between skilled and unskilled workers is a separate disadvantage, and the stem says nothing about relative pay.",
+          "C": "Job losses in the importing country are a real cost of trade, but the stem describes conditions in the exporting country."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The comparative advantage model assumes constant returns to scale. If a country specialising heavily in one good instead runs into diminishing returns, the gains from trade will be",
+      "options": {
+        "A": "Larger, since specialisation deepens.",
+        "B": "Smaller than the model predicts.",
+        "C": "Unaffected, since trade is voluntary.",
+        "D": "Zero, since no country would specialise."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The model assumes that doubling the inputs doubles the output, so a country can specialise as far as it likes without its costs rising. If instead the extra resources drawn into the expanding industry are progressively less suited to it — poorer land, less appropriate machinery, workers with the wrong skills — then output per unit of input falls as specialisation deepens. The country's cost advantage narrows the further it goes, complete specialisation stops paying, and the gain actually realised is <strong>smaller</strong> than the model predicts.",
+        "distractors": {
+          "A": "Diminishing returns work against deeper specialisation rather than for it.",
+          "C": "Trade being voluntary explains why it happens at all. It says nothing about the size of the gain.",
+          "D": "Some gain remains for as long as opportunity costs still differ. The model overstates the gain rather than eliminating it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country specialises completely in financial services and imports all of its food. Global output is higher as a result. The strongest objection to this arrangement is that",
+      "options": {
+        "A": "Comparative advantage does not apply to services.",
+        "B": "Financial services cannot be exported at all.",
+        "C": "It cannot feed itself if supply is interrupted.",
+        "D": "Its opportunity cost of food would be zero."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The efficiency case is left intact — the stem grants that global output is higher. The objection is about risk rather than efficiency. A country with no domestic food production has no fallback if a war, a pandemic or a shipping crisis cuts the supply, and food is not something consumption can simply be postponed on. Edexcel lists <strong>dependency on other countries</strong> for essential goods among the disadvantages of specialisation, and it is why governments protect some sectors on security grounds even where the economics argues against it.",
+        "distractors": {
+          "A": "Comparative advantage applies to services exactly as it does to goods.",
+          "B": "Financial services are among the largest UK exports, so this is simply false.",
+          "D": "A country producing no food has little opportunity cost of food to speak of — but that is a consequence of the arrangement rather than an objection to it."
+        }
+      }
+    }
+  ]
+}

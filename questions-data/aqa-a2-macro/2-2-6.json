@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.2.6",
+  "slug": "2-2-6-determinants-of-long-run-aggregate-supply",
+  "title": "Determinants of Long-Run Aggregate Supply",
+  "shortTitle": "Determinants of LRAS",
+  "pageTitle": "LRAS Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on long-run aggregate supply for AQA A-Level Economics: Classical and Keynesian views, and what shifts productive capacity.",
+  "intro": "Seven original multiple-choice questions on the determinants of long-run aggregate supply, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Seven original multiple-choice questions on the Classical and Keynesian views of LRAS and the factors that shift productive capacity, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-2-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Long-run aggregate supply represents",
+      "options": {
+        "A": "The economy's productive capacity when factors are fully employed.",
+        "B": "The output firms supply when at least one factor is fixed.",
+        "C": "The total planned spending on domestic output at each price level.",
+        "D": "The total value of output actually produced last year."
+      },
+      "answer": "A",
+      "model": {
+        "working": "LRAS shows what an economy is <strong>capable</strong> of producing when all its factors of production are fully and efficiently employed. It is a statement about capacity, not about what is currently being produced — which is why a shift in LRAS is equivalent to an outward shift of the production possibility frontier.",
+        "distractors": {
+          "B": "A fixed factor is the <strong>short-run</strong> assumption, and it describes SRAS. In the long run all factors can be varied.",
+          "C": "Total planned spending at each price level is <strong>aggregate demand</strong>, which sits on the other side of the model.",
+          "D": "Output actually produced is real GDP, an outcome. LRAS is the ceiling that output could reach, and economies frequently sit below it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-6-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "On the Classical view, the long-run aggregate supply curve is",
+      "options": {
+        "A": "Downward sloping, because higher prices reduce demand.",
+        "B": "Horizontal, because firms supply any output at the going price.",
+        "C": "Upward sloping, because unit costs rise as output rises.",
+        "D": "Vertical, because output does not depend on the price level."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Classical economists argue that in the long run wages and prices adjust until the economy returns to full employment. Long-run output is therefore fixed by the <strong>quantity and quality of the factors of production</strong>, and is completely unresponsive to the price level — a perfectly inelastic, vertical curve at Yfe.<br />The consequence is stark: changes in aggregate demand affect only the price level in the long run.",
+        "distractors": {
+          "A": "No aggregate supply curve slopes downwards. Falling supply as prices rise would make no sense for producers.",
+          "B": "A horizontal curve is the Keynesian shape where there is large spare capacity, and even then only over part of the range.",
+          "C": "An upward slope is the <strong>short-run</strong> curve, where rising unit costs mean firms need a higher price to supply more."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-6-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching a Keynesian long-run aggregate supply curve, the curve is perfectly elastic where",
+      "options": {
+        "A": "Resources are fully and efficiently employed.",
+        "B": "The economy has large amounts of spare capacity.",
+        "C": "The economy is at full capacity output.",
+        "D": "The price level is above its long-run level."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Draw the Keynesian curve as an L: flat at low output, then curving upwards, then vertical at Yfe.<br />The flat stretch is where <strong>spare capacity is large</strong>. Unemployed workers and idle machinery can be brought back into use without bidding up wages or input prices, so firms expand output at an unchanged price level — which is exactly what perfect elasticity means.",
+        "distractors": {
+          "A": "Full and efficient employment of resources is the <em>vertical</em> end of the curve, where no more output is possible at any price.",
+          "C": "At full capacity output the curve is perfectly inelastic, not perfectly elastic. These are opposite ends of the same curve.",
+          "D": "The shape of the Keynesian curve depends on how much spare capacity there is, not on where the price level happens to sit."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would shift the long-run aggregate supply curve to the right?",
+      "options": {
+        "A": "A fall in the price of imported raw materials.",
+        "B": "A rise in consumer confidence.",
+        "C": "A rise in spending on education and training.",
+        "D": "A temporary fall in wage costs."
+      },
+      "answer": "C",
+      "model": {
+        "working": "LRAS shifts when the <strong>quantity or quality of the factors of production</strong> changes. Education and training raise the quality of labour, so the same workforce can produce more — a permanent increase in the economy's productive potential.",
+        "distractors": {
+          "A": "Cheaper raw materials lower current production costs, which shifts <strong>SRAS</strong>. Productive capacity is unchanged.",
+          "B": "Consumer confidence is a determinant of consumption, so it shifts <strong>AD</strong>. It has nothing to do with the supply side.",
+          "D": "A temporary change in costs shifts SRAS and then unwinds. LRAS only moves when capacity itself changes."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An outward shift of the long-run aggregate supply curve is equivalent to",
+      "options": {
+        "A": "A movement along the production possibility frontier.",
+        "B": "A point inside the production possibility frontier.",
+        "C": "An inward shift of the production possibility frontier.",
+        "D": "An outward shift of the production possibility frontier."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Both diagrams show the same thing in different form: the maximum an economy is capable of producing. LRAS shifting right and the PPF shifting outwards are two representations of <strong>long-run economic growth</strong> — more or better factors of production, so a higher ceiling on output.",
+        "distractors": {
+          "A": "A movement along the frontier is a change in the <em>combination</em> of goods produced, with capacity unchanged. LRAS would not move.",
+          "B": "A point inside the frontier means resources are unemployed. That is a position within existing capacity, not a change in it.",
+          "C": "An inward shift is a <em>loss</em> of productive potential, which would correspond to LRAS shifting left."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country invests heavily in training its workforce. This shifts the LRAS curve to the right by improving the",
+      "options": {
+        "A": "Quality of capital.",
+        "B": "Quality of labour.",
+        "C": "Quantity of capital.",
+        "D": "Quantity of labour."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Training does not create extra workers, so the <em>quantity</em> of labour is unchanged. What changes is how productive each worker is: the same number of people can now produce more, which is an improvement in the <strong>quality of labour</strong>.<br />The quantity/quality distinction runs through every LRAS factor — migration adds quantity, education adds quality, and both shift the curve right.",
+        "distractors": {
+          "A": "Capital is machinery, buildings and equipment. Its quality is raised by better technology, not by training people.",
+          "C": "Training buys no new machinery, so the capital stock is unchanged. That would need investment in physical capital.",
+          "D": "The number of workers is the same. Migration or a rising birth rate would change the quantity of labour."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An economy's long-run aggregate supply curve shifts to the right while aggregate demand is unchanged. All other things being equal, the most likely result is",
+      "options": {
+        "A": "Higher real output and a lower price level.",
+        "B": "Higher real output and a higher price level.",
+        "C": "Lower real output and a higher price level.",
+        "D": "Lower real output and a lower price level."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Hold AD still and slide LRAS to the right. The intersection travels <strong>down and to the right</strong> along the fixed AD curve: real output rises and the price level falls.<br />This is why supply-side improvement is so prized. Demand-side expansion raises output at the cost of higher prices; growth driven by capacity delivers more output <em>and</em> takes pressure off inflation — non-inflationary growth.",
+        "distractors": {
+          "B": "A higher price level accompanies growth driven by <em>demand</em>. Here the extra output comes from the supply side, which eases price pressure.",
+          "C": "This is a leftward shift of supply — the stagflation case. The stem describes capacity increasing, not shrinking.",
+          "D": "Output rises rather than falls. More productive capacity, met by the same demand, means more can be produced and sold."
+        }
+      }
+    }
+  ]
+}

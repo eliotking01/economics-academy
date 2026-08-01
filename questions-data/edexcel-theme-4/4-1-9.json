@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.9",
+  "slug": "4-1-9-international-competitiveness",
+  "title": "International Competitiveness",
+  "shortTitle": "International Competitiveness",
+  "pageTitle": "International Competitiveness Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on international competitiveness for Edexcel A-Level Economics: unit labour costs, cost and non-cost factors.",
+  "intro": "Seven original multiple-choice questions on international competitiveness, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on how competitiveness is measured, the cost and non-cost factors behind it, and why it matters.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-9-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country A's total labour costs are £4.8m for an output of 600 units. Country B's are £7.0m for an output of 1,000 units. On unit labour costs, the more cost-competitive of the two is",
+      "options": {
+        "A": "Country A, since its total wage bill is lower.",
+        "B": "Country A, since its output is lower.",
+        "C": "Country B, since its total wage bill is higher.",
+        "D": "Country B, since its cost per unit is lower."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Competitiveness is about cost <strong>per unit</strong>, not the total wage bill.<br />Country A: £4,800,000 ÷ 600 = <strong>£8,000</strong> per unit.<br />Country B: £7,000,000 ÷ 1,000 = <strong>£7,000</strong> per unit.<br />Country B spends more on labour in total and is still the cheaper producer, because its output is higher by proportionately more. On this measure A's unit labour costs are about 14% above B's. A total wage bill on its own says nothing whatever about competitiveness.",
+        "distractors": {
+          "A": "A lower total wage bill usually just means a smaller operation. On its own it is uninformative.",
+          "B": "Lower output is what makes A's cost per unit higher, not lower — the same fixed wage bill is spread over fewer units.",
+          "C": "A higher total wage bill is not an advantage either. What matters is what that spending buys in output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-9-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Wages in a country rise by 6% over a year while output per worker rises by 9%. The effect on its unit labour costs is that they",
+      "options": {
+        "A": "Fall, since output grew faster than pay.",
+        "B": "Rise, since wages have risen.",
+        "C": "Rise, since both figures are positive.",
+        "D": "Stay the same, since both have risen."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Unit labour cost is total labour cost divided by output, so it depends on the race between pay and productivity. Wages rising 6% raise the numerator; output per worker rising 9% raises the denominator by more. The cost of producing each unit therefore <em>falls</em>, and the country becomes more cost-competitive despite paying its workers more. This is why rising wages are not in themselves a competitiveness problem — only wages rising faster than productivity are.",
+        "distractors": {
+          "B": "Wages rising is only half of the calculation. What those wages produce has risen faster still.",
+          "C": "Both figures being positive tells you nothing. It is which of the two is larger that decides the direction.",
+          "D": "The two cancel only if they rise at the same rate, and here they do not."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-9-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's currency depreciates by 15% and stays there. For its exporters' price competitiveness, the immediate effect is",
+      "options": {
+        "A": "A gain, since their goods cost foreigners less.",
+        "B": "A gain, since their input costs have fallen.",
+        "C": "A loss, since their goods cost foreigners more.",
+        "D": "No change, since domestic prices are unchanged."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A depreciation lowers the price of a country's goods when quoted in foreign currency, without the exporter changing its domestic price at all. That is an immediate gain in <strong>price competitiveness</strong>, and Edexcel lists exchange rates among the cost factors influencing it. The gain is not free: imported inputs become dearer, which raises costs over time, and it does nothing for the non-cost factors — quality, branding, innovation — that determine competitiveness in the longer run.",
+        "distractors": {
+          "B": "A depreciation raises the cost of imported inputs rather than lowering it.",
+          "C": "This is what an appreciation would do. A depreciation makes exports cheaper abroad.",
+          "D": "Domestic prices are indeed unchanged, and that is exactly why foreign buyers now pay less in their own currency."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-9-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's exports command premium prices even though its unit labour costs are among the highest in its industry. The most likely explanation is that it competes on",
+      "options": {
+        "A": "A weaker currency than its rivals.",
+        "B": "Its share of the world export market.",
+        "C": "Lower prices than its rivals charge.",
+        "D": "Quality and brand rather than price."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Competitiveness is not only about cost. Edexcel divides the influences into <strong>cost factors</strong> — unit labour costs, exchange rates, inflation, productivity — and <strong>non-cost factors</strong>: innovation and technology, quality and branding, infrastructure and logistics. A country selling successfully at premium prices with high unit costs must be winning on the second group. Its buyers are paying for something other than a low price.",
+        "distractors": {
+          "A": "A weaker currency would lower its export prices, and the stem says its prices are high.",
+          "B": "Export market share is a <em>measure</em> of competitiveness, not a way of competing.",
+          "C": "The stem says the opposite: its prices are at a premium."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-9-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four changes affecting one country's exporters.<br />From Table 1, the only one that works through a non-cost factor is",
+      "table": {
+        "caption": "Table 1: Four changes affecting one country's exporters",
+        "head": [
+          "",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Change 1",
+            "Unit labour costs fall relative to competitors"
+          ],
+          [
+            "Change 2",
+            "Its goods win an international reputation for reliability"
+          ],
+          [
+            "Change 3",
+            "The currency depreciates against major rivals"
+          ],
+          [
+            "Change 4",
+            "Productivity in export industries rises"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Change 1.",
+        "B": "Change 2.",
+        "C": "Change 3.",
+        "D": "Change 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Edexcel separates the influences on competitiveness into cost and non-cost factors. Three of these changes work on cost: lower unit labour costs, a cheaper currency and higher productivity each reduce what it costs to deliver a unit to a foreign buyer. A reputation for reliability works quite differently — it is a matter of <strong>quality and branding</strong>, which Edexcel lists among the non-cost factors, and it wins orders even where it changes no price at all.",
+        "distractors": {
+          "A": "Unit labour costs are the first cost factor on Edexcel's list.",
+          "C": "The exchange rate is a cost factor: it changes the price foreign buyers pay without changing anything at home.",
+          "D": "Productivity is a cost factor, and it works precisely by lowering unit labour costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-9-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's international competitiveness declines steadily over a decade. For the industries that export, the most likely consequence is",
+      "options": {
+        "A": "Expansion, as they win new markets abroad.",
+        "B": "Higher investment, as firms respond to demand.",
+        "C": "Job losses, as output and orders fall.",
+        "D": "No change, since competitiveness is relative."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Edexcel sets out the problems of low competitiveness by consequence: weaker exports, slower growth, <strong>job losses in export-oriented industries</strong>, and a persistent current account deficit. The chain runs through orders. Goods that sell less well abroad mean less output, and less output in an export sector means fewer people employed in it. The effect is concentrated rather than spread, which is why declining competitiveness tends to show up as regional unemployment in the places where the exporting industries happen to be.",
+        "distractors": {
+          "A": "Expansion into new markets is what <em>high</em> competitiveness delivers. This country is losing ground.",
+          "B": "Firms invest where they expect demand to grow. Falling orders discourage investment rather than encouraging it.",
+          "D": "Competitiveness is indeed relative — and this country is losing on that relative measure, which is precisely why its export industries contract."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-9-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country responds to a long decline in competitiveness by letting its currency fall each time exports weaken. The main objection to relying on this is that it",
+      "options": {
+        "A": "Cannot affect the price foreigners pay.",
+        "B": "Raises import prices and living costs.",
+        "C": "Removes the need for any exports at all.",
+        "D": "Worsens the current account immediately."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A depreciation buys price competitiveness without any of the underlying improvement — productivity, quality, innovation — that would have earned it. The cost is paid at home: imported goods and inputs become dearer, so real incomes fall and inflation rises. The country is competing by becoming poorer rather than by becoming better — and because nothing structural has improved, the same problem returns and the currency has to fall again.",
+        "distractors": {
+          "A": "A depreciation is precisely what changes the price foreigners pay, and it works. That is what makes it tempting.",
+          "C": "Exports become <em>more</em> important under this strategy, not less.",
+          "D": "The J-curve means the current account can worsen at first, but that is a timing effect rather than the main objection to the strategy."
+        }
+      }
+    }
+  ]
+}

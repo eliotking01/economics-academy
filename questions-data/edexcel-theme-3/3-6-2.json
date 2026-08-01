@@ -1,0 +1,150 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.6.2",
+  "slug": "3-6-2-the-impact-of-government-intervention",
+  "title": "The Impact of Government Intervention",
+  "shortTitle": "Impact of Intervention",
+  "pageTitle": "Impact of Government Intervention Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on the impact of government intervention for Edexcel A-Level Economics: its aims, and why it can fail.",
+  "intro": "Five original multiple-choice questions on what intervention aims at and why it fails, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on the aims of intervention, regulatory capture, asymmetric information and unintended consequences.",
+  "questions": [
+    {
+      "id": "edexcel-3-6-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator tightens a price cap on a water company. Bills fall, but over the following decade the company replaces fewer pipes and leakage rises. This illustrates that intervention can",
+      "options": {
+        "A": "Achieve one aim at the expense of another.",
+        "B": "Always leave consumers worse off overall.",
+        "C": "Never affect a firm's investment decisions.",
+        "D": "Remove a firm's monopoly power completely."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Edexcel lists five aims for intervention — lower prices, better quality, more choice, controlled profit and greater efficiency — and notes that they can pull against one another. A tighter cap delivers the price aim directly. But the money for renewing infrastructure has to come from somewhere, and squeezing the margin squeezes the investment with it, so the quality aim suffers. Edexcel calls this <strong>conflicting objectives</strong>, and gives a price cap reducing future investment as the example.",
+        "distractors": {
+          "B": "Consumers gained on price, which is a real benefit. Whether they are worse off overall depends on how the two effects compare, which the stem does not settle.",
+          "C": "The stem is direct evidence that it did affect investment — that is the whole point of the example.",
+          "D": "A price cap constrains how monopoly power is used. It leaves the firm's position in the market exactly as it was."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-6-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator writes a rule based on figures supplied by the firms it oversees. Within a year those firms have restructured their reporting so that the rule no longer binds them. This is best explained by",
+      "options": {
+        "A": "Regulatory capture through the revolving door.",
+        "B": "The administrative cost of enforcing the rule.",
+        "C": "The firms knowing more than the regulator does.",
+        "D": "The removal of barriers to entry in the market."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The regulator does not observe the industry directly. It relies on what firms tell it, and they know their own operations far better than any outsider can. Edexcel gives this <strong>asymmetric information</strong> as a limitation of intervention in its own right, separate from capture: a policy built on the regulated firm's own figures tends to be poorly targeted and easy to work around, because the people designing it cannot see what the people complying with it can.",
+        "distractors": {
+          "A": "The revolving door is about staff moving between the regulator and the industry. Nothing in the stem describes anybody changing job.",
+          "B": "Enforcement costing more than it delivers is a separate limitation. Here the rule was cheap enough to enforce — it simply stopped applying.",
+          "D": "No barrier has been removed. The firms changed how they report, not who is allowed into the market."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-6-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 sets out four things a government hopes its intervention in a market will achieve.<br />From Table 1, the outcome that describes productive efficiency is",
+      "table": {
+        "caption": "Table 1: What a government hopes its intervention will achieve",
+        "head": [
+          "",
+          "Intended outcome"
+        ],
+        "rows": [
+          [
+            "Aim 1",
+            "Bills that low-income households can afford"
+          ],
+          [
+            "Aim 2",
+            "More suppliers for customers to choose between"
+          ],
+          [
+            "Aim 3",
+            "Profits large enough to fund reinvestment"
+          ],
+          [
+            "Aim 4",
+            "Production at the lowest possible average cost"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Aim 1.",
+        "B": "Aim 2.",
+        "C": "Aim 3.",
+        "D": "Aim 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Productive efficiency</strong> means producing at the minimum point of the average cost curve — getting the most output from the resources used. That is Aim 4. The other three are the remaining aims Edexcel lists for intervention: affordable prices, greater choice, and profits controlled so that they permit reinvestment without coming at consumers' expense. Improved efficiency is only one of five aims, and a policy can advance one while setting back another.",
+        "distractors": {
+          "A": "Affordable bills is the price aim. It says nothing about how cheaply the output is produced — a subsidised firm could have low prices and high costs.",
+          "B": "More suppliers to choose between is the choice aim, which Edexcel links to allocative rather than productive efficiency.",
+          "C": "Profits large enough to reinvest is the profit aim, and reinvestment feeds dynamic efficiency rather than productive efficiency."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-6-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A regulator introduces detailed compliance requirements costing every firm £2 million a year to meet. The largest firms absorb this easily; three small rivals leave the market. The intervention has",
+      "options": {
+        "A": "Made the market less competitive than before.",
+        "B": "Made the market more contestable than before.",
+        "C": "Raised the number of firms serving consumers.",
+        "D": "Removed the largest firms' market power."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A fixed compliance cost falls equally on every firm in cash terms but not in proportion to size. £2 million is a small share of a large firm's costs and a crippling one for a small firm, so the requirement works like a barrier to entry and a reason to exit. Edexcel lists <strong>limiting competition</strong> among the unintended consequences of intervention, and this is the standard mechanism: a rule intended to protect consumers ends up protecting incumbents from their smaller rivals.",
+        "distractors": {
+          "B": "The market is now harder to survive in, not easier to enter, so contestability has fallen rather than risen.",
+          "C": "Three firms have left, so the number serving consumers has fallen.",
+          "D": "The largest firms face fewer rivals than they did, so their market power has grown."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-6-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Senior staff move regularly between a regulator and the firms it oversees, and some regulators soften their approach in the hope of a job in the industry later. This mechanism is known as",
+      "options": {
+        "A": "Asymmetric information.",
+        "B": "Competitive tendering.",
+        "C": "The free rider problem.",
+        "D": "The revolving door."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Edexcel gives two causes of regulatory capture, and this is the second of them. The <strong>revolving door</strong> describes careers that move back and forth between regulator and regulated, so that the people writing the rules today expect to be working under them — or benefiting from them — tomorrow. The effect is usually not corruption but a softening of judgement, and it leaves regulation more lenient towards incumbents than consumers' interests warrant. The other cause is asymmetric information: the regulator depending on the industry for its data.",
+        "distractors": {
+          "A": "Asymmetric information is the other cause of capture, and it concerns what the regulator knows rather than who it employs.",
+          "B": "Competitive tendering is a way of promoting competition for a publicly funded contract.",
+          "C": "The free rider problem concerns public goods, where people cannot be excluded from a benefit they have not paid for."
+        }
+      }
+    }
+  ]
+}

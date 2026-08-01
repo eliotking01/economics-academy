@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.10",
+  "slug": "1-8-10-government-failure",
+  "title": "Government Failure",
+  "shortTitle": "Government Failure",
+  "pageTitle": "Government Failure Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on government failure for AQA A-Level Economics: distorted price signals, unintended consequences and information failure.",
+  "intro": "Seven original multiple-choice questions on government failure, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on government failure and its causes, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-10-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Government failure occurs when government intervention",
+      "options": {
+        "A": "Fails to raise enough tax revenue to fund public services.",
+        "B": "Is opposed by a majority of voters in an election.",
+        "C": "Leads to a larger net welfare loss than before.",
+        "D": "Requires a government department to administer it."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Government failure</strong> is intervention that leaves the allocation of resources <em>worse</em> than before — the cost of the intervention outweighs the benefit, producing a larger net welfare loss than the original market failure. The test is economic rather than political: an unpopular policy that improves allocation is not government failure, and a popular one that worsens it is.",
+        "distractors": {
+          "A": "A revenue shortfall is a fiscal problem. Government failure concerns the efficiency of resource allocation.",
+          "B": "Public opinion is not the criterion. Many efficient policies are unpopular.",
+          "D": "All intervention needs administering. It is government failure only if the costs, including administrative ones, exceed the benefits."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-10-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maximum price on a good creates a shortage and a black market. This is an example of government failure caused by",
+      "options": {
+        "A": "Administrative costs exceeding the benefits of the policy.",
+        "B": "Distortion of price signals in the market.",
+        "C": "Excessive taxation of producers.",
+        "D": "Regulatory capture by the affected firms."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A binding price control stops the price performing its <strong>rationing, signalling and incentive</strong> functions. It can no longer allocate the good, no longer tell producers that more is wanted, and no longer reward them for supplying it. Shortages, queues and black markets follow — resources allocated worse than before the intervention.",
+        "distractors": {
+          "A": "Price controls do carry administrative costs, but the failure here comes from what the control does to the market, not from the cost of running it.",
+          "C": "No tax is involved. A maximum price caps what may be charged.",
+          "D": "Regulatory capture is a regulator serving the industry's interests. A price ceiling works against producers rather than for them."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-10-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government bans the sale of a demerit good outright. Sales through unregulated illegal channels then rise sharply. This is best described as government failure caused by",
+      "options": {
+        "A": "Administrative costs of enforcement.",
+        "B": "An information gap about consumer preferences.",
+        "C": "Regulatory capture by illegal suppliers.",
+        "D": "Unintended consequences of the intervention."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Economic agents respond to policy in ways that serve their own interests, and those responses are often not the ones intended. Banning a good with inelastic demand does not remove the demand — it moves it to a market with no quality control, no age checks and no tax revenue, which can leave consumers <strong>worse off</strong> than under a regulated legal market. That is the classic <strong>unintended consequence</strong>.",
+        "distractors": {
+          "A": "Enforcement is certainly costly, but the failure described is the shift of trade into illegal channels rather than the expense of policing it.",
+          "B": "The government understands the preferences well enough — that is why it banned the good. The problem is how consumers responded.",
+          "C": "Capture involves a regulator being influenced by the firms it oversees. Illegal suppliers are outside the regulatory system entirely."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-10-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government sets an indirect tax on a polluting activity but has no reliable estimate of the external cost involved. The most likely form of government failure is that",
+      "options": {
+        "A": "Firms will refuse to pay the tax at all.",
+        "B": "The market failure will be corrected exactly by chance.",
+        "C": "The tax will be set at the wrong level.",
+        "D": "The tax will raise no revenue for the government."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Correcting an externality precisely requires the tax to equal the <strong>marginal external cost</strong> — and valuing that cost in money terms is genuinely hard. How much is a tonne of carbon worth? What is the cost of a decibel of noise? Set the tax too low and over-production persists; set it too high and output is pushed below the social optimum, creating a new welfare loss. <strong>Information failure</strong> on the government's side is one of the main causes of government failure.",
+        "distractors": {
+          "A": "Indirect taxes are collected through the supply chain and are difficult to evade.",
+          "B": "Landing exactly on the right figure by luck would be a success, not a failure, and it is most unlikely.",
+          "D": "The tax raises revenue whatever level it is set at. The problem is whether that level corrects the externality."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-10-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator becomes closely aligned with the firms it supervises and sets price caps generous to them. This is best described as",
+      "options": {
+        "A": "A distortion of price signals in the market.",
+        "B": "An unintended consequence of deregulation.",
+        "C": "Government failure caused by regulatory capture.",
+        "D": "Market failure caused by monopoly power."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Regulatory capture</strong> happens because a regulator depends on the industry for information and expertise, and because staff frequently move between the two. The regulator comes to see the world as the firms do, and the intervention created to protect consumers ends up shielding producers instead — <strong>government failure</strong>, since the remedy has made the original problem worse.",
+        "distractors": {
+          "A": "Price signals are being set too generously as a <em>result</em> of capture. The cause is the relationship between regulator and industry.",
+          "B": "Capture concerns a regulator that exists and is too soft, not the removal of regulation.",
+          "D": "Monopoly power is the underlying market failure the regulator was created to address. The failure described is in the response to it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-10-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is not usually given as a cause of government failure?",
+      "options": {
+        "A": "Administrative costs of designing and enforcing a policy.",
+        "B": "Distortion of price signals by intervention.",
+        "C": "Imperfect information held by the government.",
+        "D": "The existence of externalities in a market."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Externalities are a cause of <strong>market</strong> failure — they are the problem intervention is meant to solve, not a reason intervention goes wrong. The recognised causes of <strong>government</strong> failure are distorted price signals, unintended consequences, imperfect information on the government's part, excessive administrative costs, and regulatory capture.",
+        "distractors": {
+          "A": "If designing, administering and enforcing a policy costs more than the welfare it recovers, intervention has made things worse.",
+          "B": "Price controls interfere with the signalling, rationing and incentive functions of prices, which is the most common route to government failure.",
+          "C": "Governments rarely know the exact size of an externality or the true costs of a regulated firm, so interventions are frequently mis-set."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-10-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The existence of government failure is sometimes used to argue against all intervention. The strongest response to that argument is that",
+      "options": {
+        "A": "Government failure has never been shown to occur in practice.",
+        "B": "Intervention should be judged case by case.",
+        "C": "Markets always allocate resources efficiently when left alone.",
+        "D": "The costs of intervention are always smaller than its benefits."
+      },
+      "answer": "B",
+      "model": {
+        "working": "That intervention <em>can</em> fail does not establish that it always does, any more than the existence of market failure means markets never work. The economic question in each case is whether the expected gain from correcting the market failure exceeds the expected cost of the intervention — including administrative costs, distortions and the risk of unintended consequences.<br />That is why well-designed policy focuses on the least distorting instrument available, builds in review, and accepts that leaving a market failure uncorrected is sometimes the better option.",
+        "distractors": {
+          "A": "Government failure is extremely well documented, from price controls to poorly designed subsidies. Denying it is not a serious response.",
+          "C": "If markets always allocated efficiently there would be no case for intervention at all — and public goods, externalities and monopoly power show otherwise.",
+          "D": "Assuming benefits always exceed costs simply asserts the opposite error. It is the comparison that matters, and it has to be made case by case."
+        }
+      }
+    }
+  ]
+}

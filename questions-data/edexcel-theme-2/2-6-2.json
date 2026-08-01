@@ -1,0 +1,260 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.6.2",
+  "slug": "2-6-2-demand-side-policies",
+  "title": "Demand-Side Policies",
+  "shortTitle": "Demand-Side Policies",
+  "pageTitle": "Demand-Side Policies Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on demand-side policies for Edexcel A-Level Economics: monetary and fiscal policy, transmission mechanisms and evaluation.",
+  "intro": "Ten original multiple-choice questions on monetary and fiscal policy, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Ten original multiple-choice questions on monetary and fiscal policy, the transmission mechanism, the government budget and the trade-offs each policy brings.",
+  "questions": [
+    {
+      "id": "edexcel-2-6-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government wants to raise more revenue without changing the rate at which any household's earnings are taxed. Of the following, the tax it would raise is",
+      "options": {
+        "A": "Corporation Tax.",
+        "B": "Income Tax.",
+        "C": "National Insurance.",
+        "D": "Value Added Tax."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Taxes divide into <strong>direct</strong> taxes, charged on income and profits, and <strong>indirect</strong> taxes, charged on spending. VAT is levied when a good or service is bought, so raising it leaves untouched the rate applied to what anyone earns. It still reduces real spending power — and does so most for lower-income households, who spend a larger share of their income — but it does that through prices rather than through the payslip.",
+        "distractors": {
+          "A": "Corporation Tax is a direct tax on company profits. It is not charged on earnings, but it is not charged on spending either.",
+          "B": "Income Tax is the direct tax on earnings that the stem rules out.",
+          "C": "National Insurance is also levied on earnings, so it is a direct tax and is ruled out for the same reason."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 sets out four policy actions announced in one country during a single year.<br />From Table 1, the contractionary fiscal action is",
+      "table": {
+        "caption": "Table 1: Four policy actions announced during the year",
+        "head": [
+          "",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Action 1",
+            "The central bank raises the base interest rate"
+          ],
+          [
+            "Action 2",
+            "The government raises the rate of income tax"
+          ],
+          [
+            "Action 3",
+            "The central bank begins quantitative easing"
+          ],
+          [
+            "Action 4",
+            "The government increases spending on new schools"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Action 1.",
+        "B": "Action 2.",
+        "C": "Action 3.",
+        "D": "Action 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Two tests have to be passed at once. <strong>Fiscal</strong> policy is the government's, and works through spending and taxation; <strong>contractionary</strong> means it reduces aggregate demand. Raising the rate of income tax cuts households' disposable income, so consumption falls and AD shifts left — and it is the government, not the central bank, that sets it.",
+        "distractors": {
+          "A": "Contractionary, but monetary. The base rate is the central bank's instrument, not the government's.",
+          "C": "Monetary and expansionary. Quantitative easing increases the money supply in order to raise AD.",
+          "D": "Fiscal, but expansionary. Higher government spending raises the G component of aggregate demand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Monetary policy in the UK is set by an independent Bank of England, while fiscal policy is set by the government. The advantage most often claimed for that independence is that interest rate decisions",
+      "options": {
+        "A": "Are free of pressure before an election.",
+        "B": "Can be reversed only once a year.",
+        "C": "Have no effect on the government's budget.",
+        "D": "Take effect faster than tax changes do."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A government approaching an election has an obvious incentive to let the economy run hot — cheap borrowing, strong demand, falling unemployment — and to leave the inflation that follows to whoever is in office next. A central bank with a fixed inflation target and no electoral timetable does not face that temptation. This is the <strong>avoids political bias</strong> strength the notes give for monetary policy, and it is the main reason rate-setting was handed to the Bank of England.",
+        "distractors": {
+          "B": "The opposite. Independence goes with frequent, incremental changes — the Monetary Policy Committee meets eight times a year — while fiscal changes are tied to the Budget.",
+          "C": "Rate changes bear directly on the budget, because they change what it costs the government to service the national debt.",
+          "D": "Fiscal policy is usually the <em>faster</em>-acting of the two. Monetary policy's time lag runs up to about two years."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank holds interest rates at a very low level for several years. Household incomes are unchanged throughout and inflation stays at target. The most likely effect on the distribution of wealth is that it",
+      "options": {
+        "A": "Becomes less equal, as real wages are eroded.",
+        "B": "Becomes less equal, since asset owners gain most.",
+        "C": "Becomes more equal, as borrowing is cheaper for all.",
+        "D": "Is unaffected, since incomes have not changed."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Low interest rates raise the price of assets. Housing demand rises because mortgages are cheap, and shares become more attractive relative to savings accounts, so both markets rise. Those gains go to people who already own the assets. Households with no property and no shares get nothing from the rise, and first-time buyers face a higher price than before. Wealth inequality therefore widens even though nobody's income has moved — which is the distributional effect the notes attach to expansionary monetary policy.",
+        "distractors": {
+          "A": "Inflation eroding real wages is a different mechanism entirely, and the stem holds inflation at target so real wages are not being eroded.",
+          "C": "Cheaper borrowing is available in principle to everyone, but the benefit is concentrated among those who can borrow and who own the assets whose prices then rise.",
+          "D": "The distribution of <strong>wealth</strong> can change without any change in income. An asset price boom is exactly the case where it does."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government increases spending on state education and healthcare, funded from a progressive income tax. Besides raising aggregate demand, the most likely effect on the distribution of living standards is that it",
+      "options": {
+        "A": "Leaves it unchanged, since total income is the same.",
+        "B": "Makes it less equal, as higher earners gain most.",
+        "C": "Makes it less equal, as taxes reduce incentives.",
+        "D": "Makes it more equal, as low earners gain services."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Both halves of the policy run the same way. A <strong>progressive</strong> income tax takes a larger proportion from higher earners, so the burden of paying for it is concentrated at the top. The spending provides services that lower-income households would otherwise struggle to afford, so the benefit is concentrated at the bottom. Living standards therefore become more equal. This is the respect in which expansionary fiscal policy differs from expansionary monetary policy, which tends to push the other way.",
+        "distractors": {
+          "A": "Pre-tax income is unchanged, but what households can actually consume is not. Redistribution changes real living standards without changing the total.",
+          "B": "Under a progressive system higher earners pay a larger share of their income, so they fund more of the spending than they receive back in services.",
+          "C": "Weakened incentives are a genuine evaluation point, but their effect would show up as lower output and slower growth, not as a less equal distribution."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government chooses between cutting income tax and cutting VAT, by amounts that would raise aggregate demand equally. Compared with the income tax cut, the VAT cut is more likely to",
+      "options": {
+        "A": "Improve the current account, as exports get cheaper.",
+        "B": "Improve the current account, as incomes rise by less.",
+        "C": "Worsen the current account, as disposable incomes rise.",
+        "D": "Worsen the current account, as imports become dearer."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two cuts reach aggregate demand by different routes. An <strong>income tax</strong> cut works through disposable income, and part of every extra pound is spent on imports, so the current account worsens. A <strong>VAT</strong> cut works through prices: it lowers indirect tax costs across the economy, so domestically produced goods and exports can be sold more cheaply, and export demand rises. This is the point the notes make about expansionary fiscal policy — its balance of payments effect depends on which tax is changed.",
+        "distractors": {
+          "B": "A VAT cut raises real incomes too, and the stem holds the aggregate demand effect equal in any case. The mechanism is price competitiveness, not a smaller income effect.",
+          "C": "This is the income tax cut's effect, not the VAT cut's — and it is the reason the two differ.",
+          "D": "A VAT cut lowers the shop price of imported goods as well, so it does not make imports dearer. What matters is that it lowers the cost of producing at home."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank cuts the base rate sharply. Besides its effect on consumption and investment, the cut also changes the government's own finances, because it",
+      "options": {
+        "A": "Increases the tax revenue raised from savers.",
+        "B": "Raises the amount the government may borrow.",
+        "C": "Reduces the cost of servicing the national debt.",
+        "D": "Removes the government's budget deficit entirely."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A government finances its deficit by issuing debt and pays interest on it. When the base rate falls, the yield it has to offer on new borrowing falls with it, so the interest bill on the national debt falls too. With spending and taxation otherwise unchanged, the budget position improves. The notes list this among the effects of expansionary monetary policy on the macroeconomic objectives — the government budget is one of the things a rate decision moves.",
+        "distractors": {
+          "A": "Lower rates reduce the interest savers receive, so the tax collected on savings income falls rather than rises.",
+          "B": "There is no ceiling being lifted. What changes is the price of borrowing, not permission to borrow.",
+          "D": "Debt interest is only one part of government spending. Cheaper borrowing shrinks the deficit; it does not close it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank cuts the base rate. Most households in the country are on fixed-rate mortgages agreed several years earlier. The most likely consequence is that the effect on consumption is",
+      "options": {
+        "A": "Larger, as households refinance immediately.",
+        "B": "Permanent, as fixed rates never change.",
+        "C": "Reversed, as fixed-rate borrowers pay more.",
+        "D": "Slowed, until fixed deals come up for renewal."
+      },
+      "answer": "D",
+      "model": {
+        "working": "One channel of the transmission mechanism runs through the disposable income of households with variable-rate borrowing: their repayments fall as soon as the base rate does, and they can spend the difference. A household locked into a fixed rate sees nothing until the deal expires, which may be two or five years away. The more of the mortgage market that is fixed, the longer the cut takes to reach consumption — which is one reason the notes put monetary policy's time lag at up to about two years.",
+        "distractors": {
+          "A": "Leaving a fixed deal early normally carries an early repayment charge, and the stem says the deals were agreed years ago, so most have time still to run.",
+          "B": "Fixed rates are fixed for a term, not for the life of the loan. Every deal comes up for renewal eventually.",
+          "C": "A fixed-rate borrower's payments do not change at all when the base rate falls. The effect is muted, not turned around."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Interest rates are held close to zero for a decade. Over the same period house prices and share prices rise far faster than incomes. The main risk this creates is that",
+      "options": {
+        "A": "Consumption falls immediately as wealth rises.",
+        "B": "Lending contracts as the money supply expands.",
+        "C": "Prices correct sharply and a downturn follows.",
+        "D": "The central bank loses the power to raise rates."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Cheap credit sustained for years pushes asset prices up faster than the incomes that have to service the borrowing behind them. The notes call the result an <strong>asset price bubble</strong>. When it deflates, households' wealth falls and they cut spending; the collateral behind bank lending is worth less, so banks lend less; and both effects reduce aggregate demand together. That is how a fall in asset prices turns into a wider economic downturn.",
+        "distractors": {
+          "A": "The wealth effect runs the other way — rising asset values make households feel better off and raise consumption. That is part of how the policy is meant to work.",
+          "B": "Cheap credit expands lending and the money supply together. They do not move in opposite directions.",
+          "D": "The central bank keeps the power to raise rates throughout. The difficulty is that using it may be what bursts the bubble."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-2-q10",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government's national debt stands at £2,400bn at the start of the year. During the year its total spending is £1,180bn and its tax revenue is £1,105bn. Ignoring interest, its national debt at the end of the year is",
+      "options": {
+        "A": "£75bn",
+        "B": "£2,325bn",
+        "C": "£2,475bn",
+        "D": "£3,580bn"
+      },
+      "answer": "C",
+      "model": {
+        "working": "First find the year's budget position. Spending exceeds revenue, so there is a <strong>deficit</strong>: £1,180bn − £1,105bn = <strong>£75bn</strong>.<br />The deficit has to be borrowed, and borrowing adds to the stock of debt already outstanding: £2,400bn + £75bn = <strong>£2,475bn</strong>.<br />The distinction is the point. The <strong>deficit</strong> is a flow measured over the year; the <strong>national debt</strong> is a stock measured at a moment. A deficit always makes the debt larger — the debt falls only in a year when the government runs a surplus.",
+        "distractors": {
+          "A": "£75bn is the deficit itself. That is the flow added during the year, not the stock it is added to.",
+          "B": "This subtracts the deficit from the debt. Borrowing increases what is owed; it does not reduce it.",
+          "D": "This adds the whole year's spending to the debt. Only the part not covered by tax revenue has to be borrowed."
+        }
+      }
+    }
+  ]
+}

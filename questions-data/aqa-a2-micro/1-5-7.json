@@ -1,0 +1,191 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.7",
+  "slug": "1-5-7-price-discrimination",
+  "title": "Price Discrimination",
+  "shortTitle": "Price Discrimination",
+  "pageTitle": "Price Discrimination Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on price discrimination for AQA A-Level Economics: the three degrees, the conditions required and who gains and loses.",
+  "intro": "Eight original multiple-choice questions on price discrimination, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on the three degrees of price discrimination, the conditions required and its effects, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-7-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Price discrimination occurs when a firm charges different prices for the same product and the difference is",
+      "options": {
+        "A": "Agreed in advance with the firm's competitors.",
+        "B": "Fully explained by differences in the cost of supplying each consumer.",
+        "C": "Not explained by differences in the cost of supplying each consumer.",
+        "D": "Set by a regulator rather than by the firm itself."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The definition turns on <strong>cost</strong>. Charging more to deliver to a remote address is not price discrimination — that price gap reflects a genuine cost difference. Price discrimination is charging different prices for the <em>same</em> product where the gap is <strong>not</strong> justified by cost, and it exists to extract more revenue from consumers who are willing to pay more.",
+        "distractors": {
+          "A": "An agreement between competitors is <strong>collusion</strong>. Price discrimination is something a single firm does to its own customers.",
+          "B": "If cost differences fully explain the price gap, it is not discrimination at all — just normal pricing that reflects what supply actually costs.",
+          "D": "Regulated prices are set to constrain a firm, usually to prevent it exploiting market power. Price discrimination is the firm exercising that power."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rail operator charges lower fares to passengers holding a student railcard than to other passengers travelling on the same service. This is an example of",
+      "options": {
+        "A": "First-degree price discrimination.",
+        "B": "Second-degree price discrimination.",
+        "C": "Third-degree price discrimination.",
+        "D": "Predatory pricing."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Third-degree</strong> price discrimination charges different prices to different <strong>consumer groups</strong> identified by a characteristic such as age, income, occupation or location. A student railcard identifies a group with more elastic demand — students have more time to shop around and less money — so the operator can charge them less while keeping the higher fare for everyone else. It is by far the most common form in practice.",
+        "distractors": {
+          "A": "First-degree discrimination charges <em>each individual</em> the maximum they personally would pay, capturing all consumer surplus. An auction comes closest; a railcard applies one discount to a whole group.",
+          "B": "Second-degree discrimination varies price by the <em>quantity</em> bought or the version chosen, such as bulk discounts or a premium tier.",
+          "D": "Predatory pricing is setting price below cost to drive a rival out of the market. The discount here targets a customer group, not a competitor."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A wholesaler charges £4 per unit for orders under 100 units and £3 per unit for larger orders. This is an example of",
+      "options": {
+        "A": "First-degree price discrimination.",
+        "B": "Second-degree price discrimination.",
+        "C": "Third-degree price discrimination.",
+        "D": "Limit pricing."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Second-degree</strong> price discrimination varies the price with the <strong>quantity purchased</strong> or the version of the product chosen. A bulk discount is the standard case: the price falls once the order passes a threshold, and every customer faces the same schedule — it is what they buy, not who they are, that determines what they pay.",
+        "distractors": {
+          "A": "First-degree discrimination would require the wholesaler to know and charge each buyer's individual maximum willingness to pay, capturing all their consumer surplus.",
+          "C": "Third-degree discrimination separates consumers by a personal characteristic such as age or location. Here any buyer can obtain the lower price simply by ordering more.",
+          "D": "Limit pricing means setting price low to deter new entrants. This is a discount structure aimed at existing customers."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is not a condition required for a firm to practise price discrimination successfully?",
+      "options": {
+        "A": "The firm must have some degree of market power.",
+        "B": "The firm must be able to prevent resale between consumer groups.",
+        "C": "The firm must face identical price elasticities in each sub-market.",
+        "D": "The firm must be able to identify separate consumer groups."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Price discrimination requires the sub-markets to have <strong>different</strong> price elasticities of demand — that difference is the whole point. The firm charges more where demand is inelastic and less where it is elastic, and if the elasticities were identical there would be no gain from separating them at all. The other three conditions are all genuinely necessary.",
+        "distractors": {
+          "A": "Market power is essential. A price taker has to accept the market price and cannot charge anyone more than it.",
+          "B": "Preventing resale is essential too. If cheap buyers could resell to expensive ones, the higher price would collapse — which is why student railcards are non-transferable and tickets are checked against ID.",
+          "D": "The firm must be able to tell the groups apart and enforce the distinction. A railcard, an age check or a geographic boundary does that job."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cinema charges a lower price for afternoon screenings than for evening screenings of the same film. The most likely economic reason is that afternoon customers",
+      "options": {
+        "A": "Are cheaper for the cinema to serve.",
+        "B": "Have more elastic demand, so a lower price attracts them.",
+        "C": "Have more inelastic demand, so a lower price is necessary.",
+        "D": "Value the film more highly than evening customers do."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Afternoon audiences tend to be more flexible about when they watch — students, retired people, parents with young children — and more willing to go without if the price is high. Their demand is therefore <strong>more price elastic</strong>, so a lower price brings in a proportionally large number of extra customers. Evening customers, working during the day, have <strong>inelastic</strong> demand and will pay more. Charging each group according to its elasticity raises total profit.",
+        "distractors": {
+          "A": "The cinema's costs are essentially the same whenever the film runs — the same screen, the same licence, much the same staffing. If costs did explain the gap it would not be price discrimination at all.",
+          "C": "This has the elasticities the wrong way round. It is the <em>inelastic</em> group that can be charged more, which is why the evening price is higher.",
+          "D": "Valuing the film more highly would mean a higher willingness to pay, which would justify charging them <em>more</em>, not less."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "All other things being equal, a firm that successfully practises price discrimination will",
+      "options": {
+        "A": "Earn less profit but gain a larger market share.",
+        "B": "Earn more profit and convert some consumer surplus into revenue.",
+        "C": "Earn the same profit, because the higher and lower prices cancel out.",
+        "D": "Increase consumer surplus in every sub-market it serves."
+      },
+      "answer": "B",
+      "model": {
+        "working": "By charging each group closer to what it is actually willing to pay, the firm captures value that would otherwise have been enjoyed as <strong>consumer surplus</strong>. Total profit rises — no firm would incur the cost of separating markets otherwise. The distributional effect is that surplus transfers from consumers to the producer, which is the main reason price discrimination is often criticised.",
+        "distractors": {
+          "A": "The firm would not bother if profit fell. Market share may well rise in the elastic sub-market, but the objective is higher profit.",
+          "C": "The prices do not cancel out. The firm sets each one to suit that sub-market's elasticity, which by construction beats charging a single price to everyone.",
+          "D": "Consumer surplus <em>falls</em> for the group charged the higher price. Those paying less may gain, and some consumers priced out under a single price may now be served, but the overall effect is a transfer away from consumers."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is most likely to be a benefit of price discrimination for consumers?",
+      "options": {
+        "A": "All consumers pay a lower price than they would under a single price.",
+        "B": "Consumers in the inelastic sub-market gain the largest share of the benefit.",
+        "C": "Some consumers are served who would not have been at a single price.",
+        "D": "The firm earns only normal profit, so no surplus is transferred."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The genuine consumer benefit is <strong>wider access</strong>. Under a single price, some buyers with lower willingness to pay are priced out altogether. Discrimination allows the firm to serve them at a lower price while still charging more elsewhere, so output rises and consumers who would otherwise have gone without are served — off-peak travellers and concession ticket holders being the obvious cases. Extra profit may also cross-subsidise services that would not survive on their own.",
+        "distractors": {
+          "A": "Only the elastic group pays less. The inelastic group pays <em>more</em> than it would under a single price, which is where most of the extra profit comes from.",
+          "B": "The inelastic group is the one that loses out, since it faces the higher price.",
+          "D": "Price discrimination requires market power and exists precisely to raise profit above the single-price level. Surplus is transferred from consumers to the firm."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-7-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm practises perfect first-degree price discrimination, charging every consumer exactly their maximum willingness to pay. All other things being equal, the result is that",
+      "options": {
+        "A": "Consumer surplus is eliminated and output rises to the competitive level.",
+        "B": "Consumer surplus is eliminated and output falls below the competitive level.",
+        "C": "Consumer surplus is unchanged and output rises to the competitive level.",
+        "D": "Consumer surplus rises and output falls below the competitive level."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Two things happen at once, and the second is the one students miss.<br />Every consumer pays exactly what the good is worth to them, so nobody enjoys any surplus at all — <strong>consumer surplus is eliminated</strong> and captured entirely as profit.<br />But because the firm no longer has to cut the price on earlier units to sell one more, its marginal revenue <em>is</em> the price. It therefore keeps selling until <strong>price equals marginal cost</strong>, which is the same output a competitive market would produce.<br />The outcome is <strong>allocatively efficient</strong> yet distributionally extreme: the entire welfare gain goes to the producer. It is a striking result, and it is why efficiency and fairness have to be judged separately.",
+        "distractors": {
+          "B": "Output <em>rises</em> to the competitive level rather than falling. Restricted output is the consequence of a single monopoly price, and perfect discrimination removes the reason for restricting it.",
+          "C": "Consumer surplus cannot be unchanged when every consumer is charged their exact maximum. That is the definition of capturing all of it.",
+          "D": "Consumer surplus falls to zero, not up. This option reverses both effects."
+        }
+      }
+    }
+  ]
+}

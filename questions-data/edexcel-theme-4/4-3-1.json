@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.3.1",
+  "slug": "4-3-1-measures-of-development",
+  "title": "Measures of Development",
+  "shortTitle": "Measures of Development",
+  "pageTitle": "Measures of Development Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on measures of development for Edexcel A-Level Economics: single and composite indicators, HDI, IHDI and their limits.",
+  "intro": "Six original multiple-choice questions on measuring development, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on growth against development, single and composite indicators, and what the HDI does and does not capture.",
+  "questions": [
+    {
+      "id": "edexcel-4-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A development economist wants a single figure that combines a country's health, education and income into one score. The type of measure needed is",
+      "options": {
+        "A": "A composite indicator.",
+        "B": "A single indicator.",
+        "C": "An income indicator.",
+        "D": "An inequality indicator."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A composite indicator combines several separate measures into one index. The Human Development Index is the best-known example: life expectancy at birth, years of schooling and real GNI per capita at purchasing power parity, weighted equally and expressed as a score between 0 and 1.<br />The point of combining them is that development is <strong>multi-dimensional</strong>. A country can be rich and unhealthy, or poor and well-schooled, and no one figure taken on its own would reveal that.",
+        "distractors": {
+          "B": "A single indicator measures one dimension only — the literacy rate, the infant mortality rate, access to clean water. Useful for a specific comparison, but it gives a partial picture by design.",
+          "C": "An income measure such as real GNI per capita is one of the three components of HDI, not a combination of them. Using it alone is the narrow approach the composite measure was created to replace.",
+          "D": "An inequality measure such as the Gini coefficient describes how income is spread within a country. That is a different question from how developed the country is overall."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four indicators for one low-income country.<br />From Table 1, the safest conclusion is that",
+      "table": {
+        "caption": "Table 1: Selected development indicators for one country",
+        "head": [
+          "Indicator",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Adult literacy rate",
+            "96%"
+          ],
+          [
+            "Life expectancy at birth",
+            "54 years"
+          ],
+          [
+            "Real GNI per capita (PPP)",
+            "$3,100"
+          ],
+          [
+            "Access to clean water",
+            "61%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "A high literacy rate can coexist with poor health.",
+        "B": "High literacy has raised the country's income per head.",
+        "C": "Its access to clean water explains its literacy rate.",
+        "D": "Literacy is the best single measure of its development."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The table sets a strong figure beside three weak ones. Adult literacy of 96% would suggest an advanced economy; life expectancy of 54 years, GNI per capita of $3,100 and 61% access to clean water all point the other way.<br />The safe reading is the modest one: this country has done well on schooling and badly on health, income and basic services. That is exactly why <strong>single indicators mislead</strong> — pick the literacy rate on its own and you would place this country somewhere it does not belong.",
+        "distractors": {
+          "B": "This reads a causal claim into a table that shows only two figures side by side. Nothing here establishes that literacy raised income, and at $3,100 per head the income figure is low despite the literacy rate.",
+          "C": "Another correlation read as causation, and an implausible one. Two indicators appearing in the same table is not evidence that one produces the other.",
+          "D": "It is the least reliable single measure here, because it is the one figure that points in the opposite direction from all the others. That is the argument for a composite measure, not for this one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country raises its HDI score over twenty years by expanding mining output, which funds new hospitals and schools while leaving its rivers polluted and its forests cleared. This illustrates that HDI",
+      "options": {
+        "A": "Cannot be calculated for resource exporters.",
+        "B": "Ignores whether development is sustainable.",
+        "C": "Measures income at market exchange rates.",
+        "D": "Weights health more heavily than income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Every component of HDI has improved here. Mining revenue raised GNI per capita; the hospitals raised life expectancy; the schools raised years of schooling. The score goes up, and the index has no way of registering what was destroyed to achieve it.<br />That is the standard environmental criticism of HDI: it takes no account of <strong>sustainability</strong>, so development financed by depleting natural capital looks identical to development that could be maintained indefinitely. It is one reason separate environmental indicators — carbon emissions, deforestation rates, biodiversity loss — are used alongside it.",
+        "distractors": {
+          "A": "HDI is calculated for almost every country in the world, resource exporters included. The objection is to what the score leaves out, not to whether it can be worked out.",
+          "C": "HDI deliberately avoids this problem: its income component is real GNI per capita at <strong>purchasing power parity</strong>, precisely so that differences in the cost of living do not distort the comparison.",
+          "D": "The three components are weighted equally. Even if health were weighted more heavily, that would not capture the environmental damage described here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A low-income country's most recent census is fifteen years old, and the life expectancy figure in its HDI is estimated from it. For that country's HDI score, this means",
+      "options": {
+        "A": "It cannot be compared with any other country.",
+        "B": "It is no more reliable than the data behind it.",
+        "C": "It must be adjusted for inequality before use.",
+        "D": "It will always overstate the level of development."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A composite index is an arithmetic operation on its inputs. Combining three numbers into one score does nothing to improve any of them, so a score built on a fifteen-year-old estimate carries that uncertainty forward into the result.<br />Data quality is the practical limitation on development statistics, and it is worst in exactly the countries the measures matter most for. The score is still <strong>usable</strong> — it is the false precision of comparing 0.512 with 0.518 that is not.",
+        "distractors": {
+          "A": "Comparability is the main reason HDI exists, and a country is not excluded from it because its data are weak. The right response is caution about small differences, not refusing to compare at all.",
+          "C": "Adjusting for inequality gives the IHDI, which is a different measure answering a different question. It corrects for how unevenly outcomes are spread, not for whether the underlying figures are accurate.",
+          "D": "An out-of-date estimate could err in either direction. If life expectancy has risen since the census, the score understates development rather than overstating it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-1-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A researcher needs a measure of development that reflects how unevenly health, education and income are spread within a country. The most appropriate measure is",
+      "options": {
+        "A": "Real GNI per capita at PPP.",
+        "B": "The Gini coefficient.",
+        "C": "The Human Development Index.",
+        "D": "The Inequality-adjusted HDI."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The Inequality-adjusted HDI takes the three HDI components and discounts each one according to how unequally it is distributed within the country. Where outcomes are spread evenly, the IHDI is close to the HDI; where they are not, it falls below it, and the size of the gap is itself a measure of the inequality.<br />That is what the question asks for: development <strong>and</strong> its distribution in one figure, across all three dimensions rather than income alone.",
+        "distractors": {
+          "A": "An average income figure says nothing about distribution. Two countries with identical GNI per capita can have completely different degrees of inequality, which is the whole difficulty here.",
+          "B": "The Gini coefficient measures the distribution of income or wealth, and does it well — but only that. It captures nothing about health or education, which the question asks for.",
+          "C": "HDI covers all three dimensions and averages each across the population, so two countries with very different distributions can record the same score. The IHDI exists to correct exactly this."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's real GDP grows by 6% a year for a decade. Over the same period, life expectancy, mean years of schooling and access to clean water are all unchanged. The country has experienced",
+      "options": {
+        "A": "Both growth and development.",
+        "B": "Development but not growth.",
+        "C": "Growth but little development.",
+        "D": "Neither growth nor development."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Growth is the narrower idea — a rise in real GDP, which this country has had in abundance. Development is broader: it takes in health, education, living standards and the quality of life alongside output.<br />Ten years of 6% growth has produced no movement in any of the non-income indicators, so output has risen without the improvement in people's lives that development means. This is the standard point that <strong>growth does not automatically deliver development</strong> — where the extra output goes matters as much as the fact that there is more of it.",
+        "distractors": {
+          "A": "Growth, certainly. Development requires evidence of broader improvement, and all three of the non-income indicators given are flat.",
+          "B": "This has the two the wrong way round. Six per cent a year for a decade is unambiguous growth; it is the development that is missing.",
+          "D": "Real GDP rising 6% a year is growth by definition. Roughly, output would be about 80% higher after ten years at that rate."
+        }
+      }
+    }
+  ]
+}

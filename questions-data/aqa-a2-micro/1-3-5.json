@@ -1,0 +1,248 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.3.5",
+  "slug": "1-3-5-the-determination-of-equilibrium-market-prices",
+  "title": "The Determination of Equilibrium Market Prices",
+  "shortTitle": "Equilibrium Market Prices",
+  "pageTitle": "Market Equilibrium Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on equilibrium market prices for AQA A-Level Economics: equilibrium, shortages, surpluses and shifts, with worked answers.",
+  "intro": "Nine original multiple-choice questions on the determination of equilibrium market prices, written to the style and difficulty of AQA Paper 3 Section A. Three ask you to sketch the diagram yourself. Every question carries a full worked model answer.",
+  "notesTeaser": "Nine original multiple-choice questions on market equilibrium, shortages, surpluses and shifts in demand and supply, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-3-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A market is in equilibrium when",
+      "options": {
+        "A": "Every consumer is able to buy the good at a price they consider fair.",
+        "B": "The quantity demanded equals the quantity supplied at the ruling price.",
+        "C": "The quantity demanded is greater than the quantity supplied.",
+        "D": "The price has been set by the government at the market-clearing level."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Equilibrium</strong> is where the plans of buyers and sellers coincide: at the ruling price, the amount consumers wish to buy is exactly the amount producers wish to sell. On a diagram it is the point where the two curves intersect. Because nobody is left frustrated, there is no pressure on the price to change — which is what makes the position stable.",
+        "distractors": {
+          "A": "Fairness plays no part in the definition. A market can clear at a price many buyers consider outrageous, and it is still in equilibrium.",
+          "C": "Demand exceeding supply is <strong>excess demand</strong>, a shortage. That is a state of disequilibrium and it pushes the price up.",
+          "D": "Equilibrium is what the market reaches by itself through price adjustment. A government-set price is exactly the case where the market may <em>not</em> clear."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the quantity of a good demanded and supplied at five prices.<br />Using Table 1, the equilibrium price and quantity are",
+      "table": {
+        "caption": "Table 1: Demand and supply schedule (units per week)",
+        "head": [
+          "Price",
+          "Quantity demanded",
+          "Quantity supplied"
+        ],
+        "rows": [
+          [
+            "£2",
+            "900",
+            "300"
+          ],
+          [
+            "£3",
+            "750",
+            "450"
+          ],
+          [
+            "£4",
+            "600",
+            "600"
+          ],
+          [
+            "£5",
+            "450",
+            "750"
+          ],
+          [
+            "£6",
+            "300",
+            "900"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£3 and 450 units.",
+        "B": "£4 and 600 units.",
+        "C": "£4 and 1,200 units.",
+        "D": "£5 and 750 units."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Read down the table looking for the row where the two quantity columns are <strong>equal</strong>. At £4 the quantity demanded is 600 and the quantity supplied is 600, so the market clears there.<br />Every other row leaves someone frustrated. Below £4 demand exceeds supply, creating a shortage that bids the price up; above £4 supply exceeds demand, creating a surplus that pushes the price down. Both forces converge on £4 and 600 units.",
+        "distractors": {
+          "A": "At £3 the quantity demanded is 750 and the quantity supplied only 450, so there is excess demand of 300 units. That is a shortage, not equilibrium.",
+          "C": "The price is right but the quantity has been found by <em>adding</em> the two columns. Equilibrium quantity is the amount actually traded — 600 units change hands, once, not 1,200.",
+          "D": "At £5 the quantity supplied is 750 but only 450 units are demanded, leaving a surplus of 300. Prices above equilibrium always leave sellers with unsold stock."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a free market the price of a good is currently above its equilibrium level. All other things being equal, this will result in",
+      "options": {
+        "A": "Excess demand, and pressure for the price to fall.",
+        "B": "Excess demand, and pressure for the price to rise.",
+        "C": "Excess supply, and pressure for the price to fall.",
+        "D": "Excess supply, and pressure for the price to rise."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Above the equilibrium price, the high price encourages producers to supply a lot and discourages consumers from buying, so quantity supplied exceeds quantity demanded. That is <strong>excess supply</strong> — a surplus. Sellers left holding unsold stock cut their prices to shift it, so the price is driven <strong>down</strong> towards equilibrium. Notice the direction of the pressure always works to remove the imbalance.",
+        "distractors": {
+          "A": "The imbalance is the wrong way round. Excess demand occurs <em>below</em> the equilibrium price, where the good is cheap enough that buyers want more than is available.",
+          "B": "Both halves are wrong for a price above equilibrium: there is no shortage, and the price needs to fall rather than rise.",
+          "D": "The surplus is correctly identified but the response is not. Sellers with unsold goods have no reason to raise prices, and doing so would make the surplus worse."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "At a price of £8 the quantity of a good demanded is 4,500 units a week and the quantity supplied is 2,800 units a week. The market is in",
+      "options": {
+        "A": "Disequilibrium, with excess demand of 1,700 units.",
+        "B": "Disequilibrium, with excess demand of 7,300 units.",
+        "C": "Disequilibrium, with excess supply of 1,700 units.",
+        "D": "Equilibrium, because the quantities demanded and supplied are both positive."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Compare the two quantities at the ruling price. Consumers wish to buy 4,500 units; producers wish to sell 2,800.<br />Excess demand = 4,500 − 2,800 = <strong>1,700 units</strong>.<br />Because demand exceeds supply, the good is under-priced and there is a <strong>shortage</strong>. Buyers competing for the limited quantity bid the price up, which chokes off some demand and draws out more supply until the gap closes.",
+        "distractors": {
+          "B": "4,500 + 2,800 = 7,300 adds the two quantities instead of subtracting them. Excess demand is the <em>gap</em> between the two plans, not their sum.",
+          "C": "The size of the gap is right but the direction is reversed. Excess supply would mean the quantity supplied was the larger figure, which it is not.",
+          "D": "Equilibrium requires the two quantities to be <strong>equal</strong>, not merely both greater than zero. Here they differ by 1,700 units."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A widely reported health study makes a particular fruit much more popular with consumers. Sketching the market before and after, the new equilibrium will have",
+      "options": {
+        "A": "A higher price and a higher quantity.",
+        "B": "A higher price and a lower quantity.",
+        "C": "A lower price and a higher quantity.",
+        "D": "A lower price and a lower quantity."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Sketch demand and supply crossing at the original equilibrium. A change in <strong>tastes</strong> is a condition of demand, so shift the demand curve to the <strong>right</strong> and leave supply where it is.<br />The new intersection sits up and to the right of the old one: both the equilibrium <strong>price</strong> and the equilibrium <strong>quantity</strong> rise. The mechanism is worth stating — at the old price there is now excess demand, which bids the price up and draws out extra supply along the unchanged supply curve.",
+        "distractors": {
+          "B": "A higher price with a lower quantity is the signature of a <em>leftward supply</em> shift, such as a poor harvest. Here it is demand that has moved.",
+          "C": "A lower price with a higher quantity means supply has increased. Nothing has happened to producers' costs or capacity.",
+          "D": "Both falling would follow a <em>decrease</em> in demand — the result if the study had found the fruit harmful."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A new pest destroys a third of a country's olive crop. Sketching the market before and after, the new equilibrium will have",
+      "options": {
+        "A": "A lower price and a higher quantity.",
+        "B": "A lower price and a lower quantity.",
+        "C": "A higher price and a higher quantity.",
+        "D": "A higher price and a lower quantity."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Sketch the original equilibrium, then shift the <strong>supply</strong> curve to the <strong>left</strong> — less is now available at every price. Demand is unchanged.<br />The new intersection lies up and to the left: the equilibrium <strong>price rises</strong> and the equilibrium <strong>quantity falls</strong>. At the old price there is now excess demand, and buyers competing for the reduced crop bid the price up until the quantity demanded has fallen back to match what is available.",
+        "distractors": {
+          "A": "This is what an <em>increase</em> in supply produces, such as an exceptional harvest or a fall in production costs.",
+          "B": "Price and quantity both falling requires demand to decrease. Consumers' willingness to buy olives has not changed here.",
+          "C": "Both rising is the result of an increase in <em>demand</em>. The pest affects the growers, not the buyers."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": true,
+      "stem": "In the market for a normal good, consumer incomes rise at the same time as the cost of a key raw material falls. Sketching both changes on one diagram, the effect on the equilibrium is",
+      "options": {
+        "A": "Price rises and quantity rises, because demand has increased.",
+        "B": "Price falls and quantity rises.",
+        "C": "Quantity rises, but the price effect is indeterminate.",
+        "D": "Price is unchanged and quantity rises."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Take the two changes separately on your sketch.<br /><strong>Higher incomes</strong> shift demand right for a normal good: price up, quantity up.<br /><strong>Cheaper raw materials</strong> shift supply right: price down, quantity up.<br />On <strong>quantity</strong> the two effects agree — both push it up, so quantity definitely rises. On <strong>price</strong> they pull in opposite directions, and which wins depends on the relative sizes of the two shifts. Without knowing that, the price effect is <strong>indeterminate</strong>.<br />Whenever both curves shift, always check each variable separately: one is usually determinate and the other is not.",
+        "distractors": {
+          "A": "This is the demand shift taken on its own. It ignores the supply shift, which pushes price the other way.",
+          "B": "This is the supply shift taken on its own, ignoring the upward pressure on price from higher incomes.",
+          "D": "An unchanged price is one possible outcome — it happens if the two shifts are exactly equal — but only one of many. Nothing in the stem tells us the shifts are the same size, so this cannot be asserted."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A local authority sets a maximum rent below the equilibrium level in the market for rented housing. All other things being equal, the most likely consequence is",
+      "options": {
+        "A": "An increase in the quantity of rented housing supplied.",
+        "B": "An increase in the equilibrium rent in that market.",
+        "C": "A surplus of rented housing.",
+        "D": "A shortage of rented housing."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A maximum price set <strong>below</strong> equilibrium leaves rents artificially low. At that rent more households want to rent than before, while landlords are willing to offer fewer properties — some will sell up or switch to short-term lets. Quantity demanded exceeds quantity supplied, which is a <strong>shortage</strong>. Because the price is not permitted to rise, the usual mechanism for closing the gap is blocked, so the shortage persists and rationing happens by waiting list or by who the landlord happens to favour.",
+        "distractors": {
+          "A": "A lower rent makes letting less profitable, so the quantity supplied <em>falls</em>. This is the effect that makes rent controls contentious.",
+          "B": "The underlying equilibrium rent is determined by demand and supply and is unaffected by the control. What the policy does is prevent the market from reaching it.",
+          "C": "A surplus arises from a <strong>minimum</strong> price set above equilibrium, such as a price floor for agricultural produce. A maximum price produces the opposite imbalance."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-5-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The price of a raw material used to make batteries rises sharply. All other things being equal, the most likely effect on the market for electric cars is",
+      "options": {
+        "A": "A leftward shift of the demand curve for electric cars.",
+        "B": "A leftward shift of the supply curve of electric cars, raising their price.",
+        "C": "A movement up the existing supply curve of electric cars.",
+        "D": "A rightward shift of the supply curve of electric cars, lowering their price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Batteries are an input into electric cars, so a dearer raw material raises manufacturers' <strong>costs of production</strong>. Costs are a condition of supply, so the supply curve of electric cars shifts <strong>left</strong>: fewer cars are offered at every price. Against an unchanged demand curve, the new equilibrium has a <strong>higher price and a lower quantity</strong>. This is how a shock in one market transmits into another through the cost chain.",
+        "distractors": {
+          "A": "Consumers' incomes, tastes and alternatives are unchanged, so their willingness to buy at each price is unchanged. Fewer cars will be bought, but that is a movement along the demand curve, not a shift of it.",
+          "C": "A movement along the supply curve is a response to the price of <em>electric cars</em> changing. Here the change originates in an input cost, which relocates the curve itself.",
+          "D": "A rightward shift means firms supply more at every price, which is what happens when costs <em>fall</em>. The change described runs the other way."
+        }
+      }
+    }
+  ]
+}

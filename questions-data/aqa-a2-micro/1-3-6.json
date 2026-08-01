@@ -1,0 +1,190 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.3.6",
+  "slug": "1-3-6-the-interrelationship-between-markets",
+  "title": "The Interrelationship between Markets",
+  "shortTitle": "Interrelationship between Markets",
+  "pageTitle": "Joint and Derived Demand Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the interrelationship between markets for AQA A-Level Economics: joint, competitive, composite and derived demand.",
+  "intro": "Seven original multiple-choice questions on how markets are connected — joint demand, competitive demand, composite demand, derived demand and joint supply — written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on joint, competitive, composite and derived demand and on joint supply, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-3-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Cars and petrol are an example of",
+      "options": {
+        "A": "Competitive demand.",
+        "B": "Composite demand.",
+        "C": "Derived demand.",
+        "D": "Joint demand."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Joint demand</strong> describes goods that are demanded and consumed <em>together</em> — complementary goods. A car is of little use without fuel, so the two are bought as a pair. The practical consequence is that a change in the price of one affects the demand for the other in the opposite direction: dearer cars mean fewer cars on the road and therefore less petrol demanded.",
+        "distractors": {
+          "A": "Competitive demand covers goods that are alternatives for the same purpose — substitutes, such as butter and margarine. Petrol is no substitute for a car.",
+          "B": "Composite demand is where one input can be put to several different uses but only one at a time, as with milk going to either cheese or butter.",
+          "C": "Derived demand is where demand for one good arises <em>because of</em> demand for another, such as bricklayers being wanted because houses are wanted. Petrol is consumed alongside cars rather than being an input into making them."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-6-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The demand for steel arises largely from the demand for cars, ships and buildings. This is an example of",
+      "options": {
+        "A": "Competitive demand.",
+        "B": "Composite demand.",
+        "C": "Derived demand.",
+        "D": "Joint supply."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Derived demand</strong> is demand for a good that exists only because of the demand for something else it helps to produce. Nobody wants steel for its own sake; it is wanted because cars, ships and buildings are wanted. The same logic explains the demand for most factors of production, which is why labour is described as being in derived demand — a fall in demand for houses reduces demand for bricklayers.",
+        "distractors": {
+          "A": "Competitive demand means two goods are alternatives for the same purpose. Cars and ships are not alternatives for steel; they are things steel is used to make.",
+          "B": "Composite demand is close and worth separating carefully. It describes one input with several possible uses that compete for it, emphasising that using it for one purpose leaves less for another. The point being made here is about <em>where the demand comes from</em>, not about rival uses.",
+          "D": "Joint supply concerns two goods produced together from the same process, such as beef and leather. Steel is an input, not a by-product."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-6-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Beef and leather are both obtained from cattle. All other things being equal, a large and sustained rise in the demand for beef will",
+      "options": {
+        "A": "Increase the demand for leather.",
+        "B": "Reduce the demand for leather.",
+        "C": "Increase the supply of leather.",
+        "D": "Reduce the supply of leather."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Beef and leather are in <strong>joint supply</strong>: producing one automatically produces the other, because both come from the same animal. Stronger demand for beef raises its price, farmers rear and slaughter more cattle, and more hides therefore reach the market as a by-product. The <strong>supply</strong> of leather increases, shifting its supply curve right, and the price of leather tends to <strong>fall</strong> even though nothing has changed in the leather market itself.",
+        "distractors": {
+          "A": "Nothing has happened to make consumers want more leather goods. Their incomes, tastes and alternatives are unchanged — what has changed is how much leather is available to them.",
+          "B": "Demand in the leather market has not moved in either direction. The link between the two markets runs through production, not through consumers' preferences.",
+          "D": "This is the answer that would apply under <strong>composite</strong> demand, where using an input for one purpose leaves less for another. Joint supply works the other way: the two outputs rise and fall together."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Milk can be processed into either cheese or butter, but a given quantity can be used for only one of them. All other things being equal, a sharp rise in the demand for cheese will",
+      "options": {
+        "A": "Increase the demand for butter.",
+        "B": "Reduce the demand for butter.",
+        "C": "Increase the supply of butter.",
+        "D": "Reduce the supply of butter."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Milk is in <strong>composite demand</strong>: it is wanted for several purposes that compete with one another for the same limited quantity. Stronger demand for cheese pulls milk towards cheese production, so less is left for butter. The <strong>supply</strong> of butter falls, its curve shifts left, and the price of butter rises — again with no change at all in what butter consumers want.",
+        "distractors": {
+          "A": "Demand for butter is unchanged; consumers have not altered their tastes for it. The effect comes through the availability of the shared input, which is a supply-side change.",
+          "B": "Butter consumers are unaffected by what happens in the cheese market. Their willingness to buy at each price is exactly as it was.",
+          "C": "An increase in butter supply would require <em>more</em> milk to be available for it, which is the opposite of what competition from cheese produces."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Butter and margarine are substitutes. All other things being equal, a rise in the price of butter will",
+      "options": {
+        "A": "Increase the demand for margarine.",
+        "B": "Reduce the demand for margarine.",
+        "C": "Increase the supply of margarine.",
+        "D": "Reduce the supply of margarine."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Butter and margarine are in <strong>competitive demand</strong> — they serve the same purpose, so consumers choose between them. When butter becomes dearer, some shoppers switch, so more margarine is wanted <strong>at every price of margarine</strong>. That is an increase in demand and a rightward shift of the margarine demand curve, raising both its price and the quantity traded. This is the same relationship measured by a positive cross elasticity of demand.",
+        "distractors": {
+          "B": "Demand for margarine would fall if butter became <em>cheaper</em>, drawing consumers away from margarine. The change here runs the other way.",
+          "C": "Nothing has happened to the cost or ease of producing margarine, so its supply curve does not move. The quantity supplied will rise, but as a movement along the curve in response to the higher price.",
+          "D": "Again a supply-side answer to a demand-side change. Margarine producers face exactly the same costs as before."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-6-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows three pairs of goods.<br />Using Table 1, which one of the following correctly identifies each relationship?",
+      "table": {
+        "caption": "Table 1: Three relationships between goods",
+        "head": [
+          "Pair",
+          "Goods"
+        ],
+        "rows": [
+          [
+            "1",
+            "Tennis rackets and tennis balls"
+          ],
+          [
+            "2",
+            "Bricklayers and new houses"
+          ],
+          [
+            "3",
+            "Beef and leather from cattle"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 is joint demand, 2 is derived demand, 3 is joint supply.",
+        "B": "1 is joint demand, 2 is composite demand, 3 is joint supply.",
+        "C": "1 is joint supply, 2 is derived demand, 3 is joint demand.",
+        "D": "1 is competitive demand, 2 is derived demand, 3 is joint supply."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Take each pair in turn.<br /><strong>Pair 1:</strong> rackets and balls are used together, so they are complements — <strong>joint demand</strong>.<br /><strong>Pair 2:</strong> bricklayers are wanted only because houses are wanted, so the demand for their labour comes from the demand for the output — <strong>derived demand</strong>.<br /><strong>Pair 3:</strong> both come from the same animal, so producing one produces the other — <strong>joint supply</strong>.",
+        "distractors": {
+          "B": "Composite demand would require bricklayers to be an input with several rival uses competing for a fixed supply. The relationship described is about where their demand originates, which is derived demand.",
+          "C": "This swaps pairs 1 and 3. Rackets and balls are not produced by a single process, and beef and leather are not consumed together — a leather jacket does not require a steak.",
+          "D": "Competitive demand means the goods are alternatives. A tennis ball is no substitute for a racket; you need both to play."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-3-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A new technology sharply reduces the cost of producing solar panels. All other things being equal, the most likely effect on the market for the batteries used to store solar electricity is",
+      "options": {
+        "A": "A fall in the demand for batteries, because solar panels are a substitute for them.",
+        "B": "A rise in the demand for batteries, because panels and batteries are in joint demand.",
+        "C": "A fall in the supply of batteries, because production shifts towards panels.",
+        "D": "A rise in the supply of batteries, because costs have fallen in both markets."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Follow the chain through two markets.<br />First, cheaper production shifts the <strong>supply</strong> of solar panels right, lowering their price and raising the quantity bought.<br />Second, panels and storage batteries are <strong>complements</strong> — they are installed and used together, so they are in joint demand. More panels in use means more batteries wanted <strong>at every battery price</strong>, so the demand curve for batteries shifts <strong>right</strong> and their price rises.<br />Notice that the change originated on the <em>supply</em> side of one market and arrived as a <em>demand</em> change in the other.",
+        "distractors": {
+          "A": "Panels generate electricity and batteries store it; they perform different jobs and are used together rather than instead of one another. Treating complements as substitutes reverses the direction of the whole effect.",
+          "C": "Battery manufacturers have not been affected by the change in panel technology, so their costs and capacity are unchanged. Nothing has shifted the battery supply curve.",
+          "D": "The cost saving is specific to the manufacture of solar panels. There is no reason for it to reduce the cost of producing batteries, which is a different process."
+        }
+      }
+    }
+  ]
+}

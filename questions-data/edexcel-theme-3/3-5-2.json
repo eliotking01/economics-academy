@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.5.2",
+  "slug": "3-5-2-supply-of-labour",
+  "title": "Supply of Labour",
+  "shortTitle": "Supply of Labour",
+  "pageTitle": "Supply of Labour Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the supply of labour for Edexcel A-Level Economics: shift factors, labour immobility and wage elasticity of supply.",
+  "intro": "Six original multiple-choice questions on the supply of labour, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on what shifts labour supply, the income and substitution effects, immobility, and the elasticity of supply.",
+  "questions": [
+    {
+      "id": "edexcel-3-5-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An employer keeps its pay unchanged but introduces flexible hours, an on-site nursery and private healthcare. The supply of labour to that employer will most likely",
+      "options": {
+        "A": "Fall, since the cost is met out of wages.",
+        "B": "Increase, since the job is more attractive.",
+        "C": "Move along the existing supply curve.",
+        "D": "Stay the same, since the wage is unchanged."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The supply curve plots the number of people willing to work against the <strong>wage</strong>, so anything else that makes a job more or less attractive shifts the whole curve. Edexcel lists <strong>non-monetary benefits</strong> — working conditions, flexible hours, healthcare — among the shift factors, alongside monetary ones such as bonuses and overtime pay. More people are now willing to work here at any given wage, so supply shifts right.",
+        "distractors": {
+          "A": "The stem says pay is unchanged. How the employer funds the benefits is a separate question about its costs.",
+          "C": "A movement along the curve is caused by a change in the wage, and the wage has not moved.",
+          "D": "The wage is only one of the things people weigh up. Conditions, hours and benefits all affect willingness to work at any given wage."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four changes affecting one occupation.<br />From Table 1, the change that shifts the supply of labour to the left is",
+      "table": {
+        "caption": "Table 1: Four changes affecting one occupation",
+        "head": [
+          "",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Change 1",
+            "Visa rules cut the number of overseas workers"
+          ],
+          [
+            "Change 2",
+            "The employer introduces flexible hours"
+          ],
+          [
+            "Change 3",
+            "A new college course trains more entrants"
+          ],
+          [
+            "Change 4",
+            "The wage in the occupation rises"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Change 1.",
+        "B": "Change 2.",
+        "C": "Change 3.",
+        "D": "Change 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A leftward shift means fewer people willing and able to do the work <em>at every wage</em>. Tighter visa rules do exactly that: the pool of people permitted to take these jobs is smaller, whatever the pay. Edexcel lists <strong>migration policy</strong> among the factors that shift labour supply. With demand unchanged, the equilibrium wage rises and employment falls.",
+        "distractors": {
+          "B": "Flexible hours make the job more attractive at any given wage, so supply shifts <em>right</em>.",
+          "C": "More trained entrants means more people able to do the work, which also shifts supply right.",
+          "D": "A change in the wage causes a <strong>movement along</strong> the supply curve, not a shift of it. That is the distinction the question turns on."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "As the hourly wage rises, an hour of leisure costs a worker more in forgone earnings, so they choose to work longer. This is",
+      "options": {
+        "A": "Geographical mobility of labour.",
+        "B": "The income effect of a wage rise.",
+        "C": "The substitution effect of a wage rise.",
+        "D": "The wage elasticity of labour supply."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A wage rise makes leisure dearer, because every hour not worked now costs more in earnings given up. The <strong>substitution effect</strong> is the response to that change in relative price: workers substitute away from leisure and towards work. The <strong>income effect</strong> pulls the other way — a higher wage means the same standard of living can be had for fewer hours. Which of the two dominates decides the shape of an individual's supply curve, and it is the income effect winning at very high wages that makes it bend backwards.",
+        "distractors": {
+          "A": "Geographical mobility is about moving between regions, not between work and leisure.",
+          "B": "The income effect is the opposite response — working <em>fewer</em> hours, because the target standard of living is reached sooner.",
+          "D": "The wage elasticity of supply measures how much the quantity supplied responds overall. It is the outcome of these two effects rather than one of them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two occupations both see wages rise by 20%. One requires a seven-year qualification; the other can be learned in a fortnight. Compared with the second, the supply of labour to the first is",
+      "options": {
+        "A": "More wage elastic, since the pay rise is larger.",
+        "B": "Perfectly elastic, since workers will always move.",
+        "C": "Unaffected, since qualifications are already held.",
+        "D": "Wage inelastic, since qualified workers are scarce."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Elasticity of supply is about how quickly the number of people willing and able to do the work can respond. Where the job can be learned in a fortnight, a 20% rise brings people in almost at once. Where it takes seven years to qualify, nobody can respond quickly however attractive the pay becomes, so the quantity supplied barely moves in the short run. Edexcel calls this the <strong>vocational aspect</strong>: the more specific the skills or qualifications required, the less elastic the supply.",
+        "distractors": {
+          "A": "The pay rise is 20% in both occupations, so it cannot be what distinguishes them.",
+          "B": "Perfectly elastic supply would mean unlimited workers available at the going wage, which a seven-year qualification rules out entirely.",
+          "C": "Those already qualified are the existing supply. Elasticity is about whether <em>more</em> workers can be brought in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A coalfield closes. Ten years later many former miners in the area are still out of work, while vacancies go unfilled in cities two hundred miles away. The unemployment this describes is",
+      "options": {
+        "A": "Cyclical, caused by a shortage of demand.",
+        "B": "Frictional, as workers move between jobs.",
+        "C": "Real wage, caused by pay set above equilibrium.",
+        "D": "Structural, caused by labour immobility."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Two kinds of immobility are at work together. <strong>Occupational</strong> immobility means mining skills do not transfer to the jobs that exist; <strong>geographical</strong> immobility means the workers cannot easily move to where the vacancies are, because of housing costs, moving costs, or simply not knowing about them. The two leave unemployment and unfilled vacancies sitting side by side for years. Edexcel treats labour immobility as an important cause of market failure precisely because it produces <strong>structural unemployment</strong> and skill shortages at the same time.",
+        "distractors": {
+          "A": "Cyclical unemployment comes and goes with the economic cycle and affects the whole economy. This has persisted for a decade in one place while jobs exist elsewhere.",
+          "B": "Frictional unemployment is the short gap between leaving one job and starting the next. Ten years is not a gap.",
+          "C": "Real wage unemployment is caused by the wage being held above equilibrium, by a minimum wage or a union. Nothing here concerns pay levels."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two regions have identical occupations and identical wages. One has a large pool of unemployed workers with the relevant skills; the other has almost none. A firm in the second region raising its wage by 10% will find that",
+      "options": {
+        "A": "Applicants arrive as fast as in the first region.",
+        "B": "Fewer extra applicants come forward than elsewhere.",
+        "C": "No applicants at all come forward.",
+        "D": "The supply of labour curve shifts to the right."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A wage rise moves the firm <strong>along</strong> its supply curve, and how far it moves depends on how many suitable people are available to respond. Where a large pool of unemployed skilled workers exists, a modest rise brings a lot of them forward and supply is elastic. Where almost everyone with the skills is already employed, the same rise brings few, because they have to be attracted away from other employers rather than out of unemployment. Edexcel lists the <strong>available pool of labour</strong> among the determinants of wage elasticity of supply.",
+        "distractors": {
+          "A": "That would mean the size of the available pool made no difference, which is the opposite of what elasticity of supply describes.",
+          "C": "Some workers will respond — the point is that fewer do, not that none do.",
+          "D": "A rightward shift would need something other than the wage to change. The wage is exactly what has changed, so this is a movement along the curve."
+        }
+      }
+    }
+  ]
+}

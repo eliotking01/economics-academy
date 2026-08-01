@@ -11,13 +11,23 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 
 | Phase | State |
 | --- | --- |
-| Phase 0 — reconnaissance | Complete — `RECON.md` |
-| Phase 1A — mechanical plan | Complete — `PLAN-mechanical.md`, approved |
+| Phase 0 — reconnaissance | Complete — plan retired, see `PROJECT-LOG.md` |
+| Phase 1A — mechanical plan | Complete — plan retired, see `PROJECT-LOG.md` |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
+| Practice questions (separate project) | **Complete — 166 of 166 topics, 1,267 questions** — state in `QUESTIONS_PROGRESS.md` |
+
+**If you are resuming, read the last section of this file first** — *State of
+play for a new session*. It indexes everything still outstanding and says what
+kind of change each one needs.
+
+Content problems found while writing the practice questions are logged at the end
+of this file, in two blocks: the AQA macro findings (N-Q2 to N-Q7) and the
+Edexcel findings (N-Q8, N-Q10 to N-Q20). The Edexcel block **replaced six earlier
+entries** that had accumulated corrections; it is the current position.
 
 ---
 
@@ -71,7 +81,7 @@ record.
 
 One of the two numbers is wrong. This page's `spec-alert` requires students to
 "calculate and interpret concentration ratios", so it is the sentence they will
-read most closely. Found while preparing `PLAN-enrichment-aqa-micro.md`; the worked
+read most closely. Found while preparing the AQA micro enrichment batch; the worked
 example proposed there sits directly beneath this sentence, which would make the
 inconsistency more conspicuous, so it is worth fixing first.
 
@@ -200,7 +210,7 @@ because attributes that had been split now fit on one line.
 (`<strong>` + `key-definition`) density. **16 needed work; 9 did not** and were
 left alone. The metric over-flags pages whose content sits in long explanatory
 text after an already-bolded lead-in, or inside a correctly-emphasised table — this
-was anticipated in `PLAN-mechanical.md`, though the estimate there was 15–20 of 25
+was anticipated in the mechanical plan, though the estimate there was 15–20 of 25
 and the AQA half came in lower.
 
 Three patterns applied, each with an existing on-site precedent:
@@ -530,3 +540,920 @@ found them in.
   that markup has always used `h2`. Noticed while fixing #2; left alone.
 - **`404.html`** has no canonical and no Open Graph tags. Defensible for a 404,
   listed so it is a decision rather than an oversight.
+
+## Found while building the practice questions (2026-07-31)
+
+Site-wide, pre-existing, not touched. All three were measured with Lighthouse 12
+against `revision-notes/aqa-a2-micro/1-3-3-…html`, a page this work did not edit,
+so none of them is caused by the questions feature.
+
+- **`[aria-hidden="true"]` elements contain focusable descendants.** The only
+  accessibility failure left on every page of the site, notes and questions
+  alike. `js/components/inject-templates.js` builds `#navPanel` with
+  `aria-hidden="true"` while its links stay in the tab order, so a keyboard user
+  can tab into a panel screen readers are told to ignore. The fix is to toggle
+  `inert` (or `tabindex="-1"` on the links) alongside `aria-hidden` in
+  `openNav`/`closeNav`. Holds every page at Accessibility 96 rather than 100.
+- **Contrast in the breadcrumb.** `css/main.css:3183` sets
+  `.breadcrumb a { text-decoration: none }`, and the notes breadcrumb pairs a
+  `#2a5c8d` link with `#7f888f` surrounding text — 1.9:1 against each other, and
+  the surrounding text is itself only 3.6:1 on white, under the 4.5:1 AA floor.
+  The separator `#d3d9df` is 1.5:1. axe happens not to flag the notes page, but
+  the numbers fail regardless. `css/pages/quiz.css` deliberately diverges here:
+  its breadcrumb links are underlined and its separator darkened. Worth making
+  the site-wide breadcrumb match.
+- **Layout shift from web fonts.** `css/main.css:2` loads Merriweather, Open Sans
+  and Source Sans Pro through a single Google Fonts `@import` with
+  `display=swap`, plus Font Awesome from `/webfonts/`. The swap shifts text on
+  every page — CLS 0.078 on a notes page, 0.154 on the longer questions page,
+  both above the 0.1 "good" threshold. Self-hosting the three families with
+  `size-adjust`, or preloading the woff2 the fold actually needs, would fix it
+  site-wide. This is the single biggest remaining Performance cost.
+
+## Economics content found while writing the AQA macro questions (2026-07-31)
+
+Flagged, not changed — content is the author's call, per `CLAUDE.md`.
+
+**N-Q1 — the Claimant Count described as the internationally comparable
+measure.** `aqa-a2-macro/2-1-2-macroeconomic-indicators.html`, in the "Measures
+of Unemployment" section:
+
+> The Claimant Count is easier to compare internationally, as it is based on a
+> standardised definition of unemployment.
+
+This reads the wrong way round. The Claimant Count is defined by each country's
+own benefit rules, which is exactly what makes it hard to compare across
+borders. The Labour Force Survey is the measure built on a standardised
+international definition — the ILO one — and that is why the ONS treats it as
+the internationally comparable series. The paragraph immediately after this
+already says the LFS is the more accurate measure, so the two sentences pull
+against each other.
+
+**`2-3-2-employment-and-unemployment.html` states the same point correctly**, and
+in as many words:
+
+> ILO or Labour Force Survey (LFS): The internationally comparable measure.
+
+So the site currently contradicts itself between two pages of the same unit.
+2.3.2 is the one that is right.
+
+Both question sets were written around this. The LFS/Claimant Count questions
+(2.1.2 Q4 and 2.3.2 Q5) turn on benefit eligibility and on why the LFS returns a
+higher figure — points both notes pages state correctly and agree on — and stay
+off international comparability altogether. A student who has read 2.1.2 will
+not be penalised by either set. If the sentence in 2.1.2 is corrected, neither
+set needs changing.
+
+---
+
+# Fixes applied on 2026-08-01, at the site owner's instruction
+
+The site owner reviewed the whole findings list and gave a decision on each one.
+**Everything below has been applied.** Nothing was touched without an explicit
+instruction, per `CLAUDE.md`.
+
+| Finding | Instruction | What was changed |
+| --- | --- | --- |
+| N-Q1 | Correct the sentence | `2-1-2` now says the Claimant Count is *harder* to compare internationally, because it depends on each country's own benefit rules. The page no longer contradicts `2-3-2`. |
+| N-Q2 | Remove the cross-reference | The "covered in detail in 4.5.2 Taxation" sentence is gone from `aqa-a2-macro/2-5-1`. No Edexcel spec code now appears on any AQA page. |
+| N-Q3 | Remove the incorrect IMF reference | The fixed exchange rate definition no longer says the central bank negotiates the peg with the IMF. **Applied to the Edexcel twin `4-1-8` as well**, which carried the sentence word for word. |
+| N-Q4 | Remove the US term | "checking accounts" → "current accounts" on `2-4-1`. |
+| N-Q5 | Update to USMCA | `2-6-2` now gives USMCA (the United States-Mexico-Canada Agreement) as the free trade area example. **Applied to the Edexcel twin `4-1-5` as well.** |
+| N-Q6 | Correct all typos and slips | All seven listed instances fixed. **Five more were found on the Edexcel twins and fixed too** — see below. |
+| N-Q7 | Leave | Untouched. |
+| N-Q8 | Propose first | **Not applied.** Proposal put to the site owner. |
+| N-Q10 | Fix the figure numbers | Twelve pages renumbered. **The thirteenth was a false positive** and one page the original scan missed was found — see below. |
+| N-Q11 | Leave | Untouched. |
+| N-Q12 | Cut the over-claim | The sole traders / partnerships / limited companies sentence is gone from `3-1-1`'s alert, and its JSON-LD description rewritten to what the page teaches. |
+| N-Q13 | Cut the claim | "distinguish between explicit and implicit costs" is gone from `3-3-4`'s alert, and from its meta, OG and Twitter descriptions. |
+| N-Q14 | Propose first | **Not applied.** Proposal put to the site owner. |
+| N-Q16 | Cut the claim | "deindustrialisation in developed countries" is gone from `4-1-3`'s alert and JSON-LD description. |
+| N-Q17 | Cut the claim | `4-1-9`'s alert now promises unit labour costs and **relative export prices**, which is what the body actually delivers. **This leaves 4.1.9 Q8 unsupported — see the note below.** |
+| N-Q18 | Cut the claim | "redistribution and social protection as policy responses" is gone from `4-2-1`'s alert, and its JSON-LD description rewritten. |
+| N-Q19 | Propose first | **Not applied.** Proposal put to the site owner. |
+| N-Q20 | Cut the claims | Tax incidence and the principles of a good tax system are gone from `4-5-2`'s alert and its three meta descriptions; fiscal consolidation from `4-5-3`'s alert; capital mobility from `4-5-4`'s alert. |
+
+### Second instruction, same day — the three held findings decided
+
+| Finding | Instruction | What was changed |
+| --- | --- | --- |
+| N-Q14 | Proposal approved | The LRAC envelope sentence on `3-3-2` now reads "touches each SRAC curve at the output where that scale is the cheapest available", which is true at every output rather than only at minimum efficient scale. **Applied to the AQA twin `1-4-4` as well**, which carried the sentence word for word. |
+| N-Q19 | "Leave this out, the notes don't need it" | **No content added.** The three undelivered concepts — risk spreading, liquidity provision, financial intermediation — were instead **cut from `4-4-1`'s alert and its JSON-LD description**, so the page no longer promises them. See the note below on how this was read. |
+| N-Q8 | Proposal approved | Six of the nine pages fixed. The three needing new prose are still open. |
+| N-Q17 consequence | "Remove it and the question" | `4-1-9` Q8 deleted. The set is now seven questions, and its `metaDescription`, `intro`, `notesTeaser` and the end-of-notes teaser all say "Seven". Site total: **1,267 questions**. |
+
+**How the N-Q19 instruction was read, in case it should be reversed.** "Leave
+this out" was taken to mean the *content* is not wanted, not that the finding
+should be dropped — so the alert was corrected to match the body rather than
+left promising three things the page does not teach. That is the same treatment
+every other over-claim received. Restoring the original alert sentence is a
+one-line revert if the other reading was intended.
+
+### N-Q8 — six of nine pages fixed
+
+**Restored from `raw-notes/`, where the content had been written and lost in
+conversion:**
+
+- `1-3-4-information-gaps` — **adverse selection** and **moral hazard** now have
+  their own subsections, each with the definition and the standard example (the
+  used-car market; comprehensive motor insurance), matching the page's existing
+  "definition then example" pattern.
+- `2-2-3-investment` — **the accelerator effect** added to the *Key Influences*
+  list: investment depends on the change in the rate of growth rather than its
+  level.
+- `2-5-3-trade-cycle` — the four phases restored beneath *The Stages of the Trade
+  Cycle*, which previously held nothing but a figure. **Boom, recession, slump
+  and recovery** are each defined against the trend rate and the output gap, and
+  the two-quarter definition of a technical recession is included.
+- `2-3-2-short-run-aggregate-supply` — a paragraph naming **cost-push inflation**
+  and the **cost-push shock** as what a leftward SRAS shift produces.
+
+**Named, with no new economics:**
+
+- `2-2-5-net-trade` — the page already described both mechanisms correctly. They
+  are now labelled: the **Marshall-Lerner condition** on the elasticity paragraph
+  and the **J-curve effect** on the delayed-improvement paragraph.
+
+**Cross-referenced, because the content lives elsewhere:**
+
+- `2-1-1-economic-growth` — a short paragraph distinguishing **actual** from
+  **potential growth** and naming **productive capacity**, linking to
+  `2-5-1-causes-of-growth`, which teaches both in full.
+
+**Still open — the three that need writing from scratch.** None survives in
+`raw-notes/`, so each needs new prose and a separate decision:
+
+| Page | Promised and still missing |
+| --- | --- |
+| `1-4-2-government-failure` | regulatory capture |
+| `2-2-2-consumption` | the role of expectations |
+| `2-5-4-the-impact-of-economic-growth` | sustainable development |
+
+All three are tested by live questions, so cutting the claims would strand them;
+they are the reason N-Q8 is not yet closed.
+
+---
+
+### Three things found while applying these
+
+**1. N-Q10 listed one page that was not broken.**
+`aqa-a2-micro/1-5-11-consumer-and-producer-surplus` was recorded as numbering its
+figures 1, 4, 5, 6, 7. It does not. Its captions run **1, 2a & 2b, 3a & 3b, 4, 5,
+6, 7** — a complete sequence using a lettered convention for the paired diagrams.
+The original scan's regex, `Figure\s+(\d+)\s*:`, cannot match `Figure 2a & 2b:`
+and silently dropped them. `edexcel-theme-1/1-2-8-producer-consumer-surplus` uses
+the same convention and was never flagged, which is the tell. **Neither page was
+touched.** Any future run of this check must allow for the lettered form.
+
+**2. N-Q10 missed a page that was broken.**
+`aqa-a2-macro/2-5-1-fiscal-policy` numbered its two figures **2 then 1** — the
+AD/AS diagram as Figure 2 and the Laffer curve as Figure 1. Now corrected to 1
+and 2. All 166 topic pages now number their figures sequentially from 1.
+
+**3. A caption on `1-1-4` described the wrong diagram — FIXED 2026-08-01.**
+The page's second figure is `ppf-growth-decline.png`, showing the frontier
+shifting outwards and inwards. Its caption was a verbatim copy of Figure 1's and
+described the *other* diagram: "Standard PPF curve showing opportunity cost
+through movement from C to D".
+
+Renumbering it to Figure 2 was covered by the N-Q10 instruction; rewriting the
+text was not, so it was raised separately and then authorised. It now reads:
+
+> Figure 2: An outward shift of the PPF showing economic growth, and an inward
+> shift showing economic decline
+
+That matches the image's own alt text and the section it sits in, *Shifts in the
+PPF: Economic Growth & Decline*, and uses the page's own vocabulary for both
+directions. Punctuation follows Figure 1 on the same page, which carries no
+closing full stop.
+
+### The five extra typo fixes, on the Edexcel twin pages
+
+N-Q6 audited AQA macro only, but the Edexcel twins carry the same sentences word
+for word — the same relationship that produced N5 earlier in this file. The
+instruction was to correct all typos and slips, so these were fixed too:
+
+| Page | Fixed |
+| --- | --- |
+| `edexcel-theme-2/2-6-2-demand-side-policies` | "To increases" → "To increase"; "to incentive" → "to incentivise"; "A fal in" → "A fall in"; "offseting" → "offsetting"; "signficant" ×2 |
+| `edexcel-theme-2/2-6-3-supply-side-policies` | "signficant" ×2 |
+| `edexcel-theme-3/3-4-6-monopsony` | "signficant" ×1 |
+
+A site-wide grep for all seven strings now returns nothing.
+
+### One consequence to decide on — 4.1.9 Q8
+
+Cutting N-Q17's over-claim means `4-1-9` no longer promises export market share,
+and it never taught it. **4.1.9 Q8 tests it**: "One way of judging a country's
+international competitiveness is to track its share of world exports over time. A
+falling share suggests that its goods are…"
+
+The question is still answerable — the stem defines the measure before asking
+about it, and the model answer stands alone. But a student who gets it wrong and
+returns to the notes now finds nothing at all on the topic, where previously the
+alert at least implied it was covered. **Three options**: add the short paragraph
+the original N-Q17 entry describes and restore the claim; replace Q8 with a
+question on material the page does teach; or leave it, on the basis that the stem
+is self-contained. Needs a decision.
+
+---
+
+# Found while writing the AQA macro questions — units 2.1 to 2.6 (2026-08-01)
+
+Everything below was found by reading all 25 AQA macro notes pages closely while
+writing the question sets for them (batches 6 to 11, `QUESTIONS_PROGRESS.md`).
+
+**Nothing here has been changed.** Content and wording are the author's call, per
+`CLAUDE.md`. None of it blocks the question sets — each set was written around
+the problem, and where a fix would change what a question tests that is noted.
+
+Ordered most to least significant.
+
+## N-Q2 — an Edexcel spec code cited on an AQA page
+
+`aqa-a2-macro/2-5-1-fiscal-policy.html`, in the evaluation list for lowering
+taxes:
+
+> **Laffer Curve:** This is a very strong evaluation for taxation changes. This
+> is covered in detail in 4.5.2 Taxation.
+
+`revision-notes/edexcel-theme-4/4-5-2-taxation.html` does exist and does cover
+the Laffer curve, so the reference is not dangling — but it is an **Edexcel**
+page cited from an **AQA** page, using Edexcel's real theme numbering.
+
+Two problems follow. A student working through AQA macro has never seen a
+"4.5.2" and has no way to place it, which is exactly the two-numbering-systems
+confusion `CLAUDE.md` and `QUESTIONS_GUIDE.md` both take pains to avoid. And it
+is plain text rather than a link, so even a student who guesses what it means
+cannot follow it.
+
+**This is the only cross-board spec reference on any AQA page** — a grep for
+`4.x.y` across `aqa-a2-macro/` and `aqa-a2-micro/` returns this file alone. So
+it is a one-line fix. The simplest correction is to delete the cross-reference,
+since the same page already covers the Laffer curve in full immediately below.
+
+## N-Q3 — the IMF's role in fixed exchange rates
+
+`2-6-4-exchange-rate-systems.html`:
+
+> **Fixed exchange rate:** an exchange rate system where the central bank
+> negotiates with the IMF to fix the currency at a certain value, often by
+> pegging it to another currency.
+
+Countries do not negotiate their pegs with the IMF. A government or central bank
+chooses the rate and defends it with reserves and interest rates; the IMF
+monitors arrangements and lends to members in difficulty, but it does not set or
+approve the value. The description fits the Bretton Woods system, which ended in
+1971, rather than fixed rates as they work now.
+
+The rest of the section — revaluation and devaluation, the advantages and
+disadvantages, the cost of defending a peg — is sound. Unit 2.6.4's questions
+avoid the IMF entirely and turn on the loss of monetary policy independence,
+which the page states correctly.
+
+## N-Q4 — "checking accounts" is a US term
+
+`2-4-1-the-structure-of-financial-markets-and-financial-assets.html`, defining
+narrow money:
+
+> Narrow money (M1) includes the most liquid forms of money, such as cash and
+> demand deposits (checking accounts).
+
+The UK term is **current accounts**. `QUESTIONS_GUIDE.md` enforces UK English in
+the question sets through a spelling blocklist, and the notes follow the same
+house rule elsewhere. The parenthesis is the only US-ism I found across the 25
+macro pages.
+
+## N-Q5 — NAFTA given as a current example of a free trade area
+
+`2-6-2-trade.html`, listing types of trading bloc:
+
+> Free trade area: e.g. NAFTA (North American Free Trade Agreement)
+
+NAFTA was replaced by the **USMCA** (the United States–Mexico–Canada Agreement)
+on 1 July 2020. NAFTA remains a perfectly good historical illustration, but
+presented as a current example alongside MERCOSUR and the EU it reads as though
+it still exists.
+
+Unit 2.6.2's question on trading blocs (Q6) describes the *features* of a
+customs union rather than naming an example, so it is unaffected either way.
+
+## N-Q6 — typos and slips, seven instances across four pages
+
+None of these affect the economics; they are listed together so they can be
+fixed in one pass.
+
+| Page | Text | Should read |
+| --- | --- | --- |
+| `2-1-1-the-objectives-of-government-economic-policy.html` | "When the Government pursues one objectives" | "one objective" |
+| `2-4-3-central-banks-and-monetary-policy.html` | "To increases the supply of loans" | "To increase" |
+| `2-4-3-central-banks-and-monetary-policy.html` | "to incentive firms and consumers" | "to incentivise" |
+| `2-5-1-fiscal-policy.html` | "A fal in indirect taxes" | "A fall" |
+| `2-5-1-fiscal-policy.html` | "offseting the rise in AD" | "offsetting" |
+| `2-5-1-fiscal-policy.html` | "signficant" — 2 occurrences | "significant" |
+| `2-5-2-supply-side-policies.html` | "signficant" — 2 occurrences | "significant" |
+
+## N-Q7 — dated HDI figures
+
+`2-6-5-economic-growth-and-development.html` quotes Norway at 0.961 and Niger at
+0.394. These were correct for the 2021–22 Human Development Report but are now
+several editions old. Worth refreshing whenever the page is next touched, and
+worth considering whether to name specific years alongside the figures so the
+staleness is visible rather than implied.
+
+---
+
+## Not a content problem: a verification gotcha worth knowing
+
+Recorded here because it looks like a regression and is not.
+
+Running a question batch on a **different calendar day** from the previous one
+makes the standard removed-line guard fire on `sitemap.xml`:
+
+```bash
+git diff $BASE -- revision-notes/ templates/ js/ css/ sitemap.xml | grep '^-[^-]'
+```
+
+`scripts/build_questions.py --sitemap` rewrites the whole practice-questions
+block with today's `lastmod`, so every existing URL line shows as removed and
+re-added. In batch 11 that was about 75 lines.
+
+Confirm it rather than assuming, by comparing URL sets and the entries with
+`lastmod` stripped out — zero URLs removed and zero entries lost means it is a
+date change only. And run the guard against `revision-notes/ templates/ js/ css/`
+**separately**, since that is the check that actually protects the notes. Fuller
+notes in `QUESTIONS_PROGRESS.md`, batch 11.
+
+---
+# Found while writing the Edexcel practice questions — Themes 1 and 2 (2026-08-01)
+
+**This section replaces six earlier entries** (N-Q8, N-Q9, the N-Q9 addendum, a
+status update and two corrections) that were written as the finding developed and
+then partly contradicted each other. Everything below is the current, checked
+position. Nothing outside this section was changed.
+
+---
+
+## N-Q8 — nine pages promise content their bodies never deliver
+
+Each of these pages names a concept in its `spec-alert` sentence, its
+`metaDescription`, its OG and Twitter cards **and** its JSON-LD `description`,
+and then never mentions it again below the alert. A student arriving from a
+search result for that term finds nothing on the page about it.
+
+| Page | Promised and not delivered |
+| --- | --- |
+| `1-3-4-information-gaps` | adverse selection; moral hazard |
+| `1-4-2-government-failure` | regulatory capture |
+| `2-1-1-economic-growth` | actual against potential growth; productive capacity |
+| `2-2-2-consumption` | the role of expectations |
+| `2-2-3-investment` | the accelerator effect |
+| `2-2-5-net-trade` | the Marshall-Lerner condition; the J-curve |
+| `2-3-2-short-run-aggregate-supply` | cost-push shocks |
+| `2-5-3-trade-cycle` | the boom, recession, slump and recovery phases |
+| `2-5-4-the-impact-of-economic-growth` | sustainable development |
+
+**Two of the nine are softer cases.** `2-2-5` describes both mechanisms
+correctly — the elasticity condition and the delayed improvement — and simply
+never gives them their names, so the fix is to label two existing paragraphs.
+`2-1-1` is not missing content at all: actual against potential growth **is**
+taught on the site, on `2-5-1-causes-of-growth`, which opens with a section on
+exactly that. A cross-reference would settle it.
+
+`2-5-3` is the worst of them. The heading *The Stages of the Trade Cycle* has
+nothing beneath it but a figure caption, so the page names none of the four
+phases. `raw-notes/edexcel/` still holds several of the missing sections,
+including the accelerator in `2.2.3.md` and adverse selection and moral hazard in
+`1.3.4.md`, so some of this was written and lost in the conversion.
+
+**Why it matters beyond tidiness.** The promised terms are all on the Edexcel
+specification and several are heavily searched — *the accelerator*, *cost-push*,
+*sustainable development*, *the J-curve*. The pages are indexed for content they
+do not contain, and the meta description that drew the reader in was inaccurate.
+
+### The questions now cover all nine — the pages still do not
+
+The site owner asked for the missing concepts to be tested regardless, intending
+to bring the notes up to match later. **That has been done.** Ten questions were
+retrofitted into six already-committed sets, and the remaining gaps were written
+directly into the sets for units 2.3 and 2.5 as they were built.
+
+So every page in the table above now carries a link to a question set that tests
+something the page itself never explains. The model answers were written longer
+than usual and to stand alone for that reason, but it is a workaround: a student
+who gets one wrong and returns to the notes will find nothing there.
+
+**Two possible fixes, and they are different jobs.** Restore the missing sections
+from `raw-notes/`, or cut the over-claim from each spec alert and its metadata so
+the page describes itself accurately. The first is an economics content change;
+the second is a metadata correction. **Both need an explicit instruction.**
+
+### How to check this properly on Themes 3 and 4
+
+Strip everything above the spec alert's closing `</div>` before searching, or the
+metadata copies produce false negatives:
+
+```python
+i = t.find('Specification Coverage'); j = t.find('</div>', i)
+body = strip_tags(t[j:t.rfind('</body>')]).lower()
+'accelerator' in body      # False on 2-2-3-investment
+```
+
+**Then read the page.** An automated first pass found every real case here, but
+it also produced false positives at roughly one in three, because it matched the
+spec alert's wording rather than the concept. Three entries had to be withdrawn:
+
+- `2-4-1-national-income` — teaches all three measurement routes, calling them
+  the Output, Income and **Expenditure Method** where the alert says "approach".
+- `2-5-1-causes-of-growth` — covers demand-side causes under the heading
+  *Short-Run Economic Growth*.
+- `2-5-4` — covers inequality as **"Worsened Income Equality"**. Only sustainable
+  development was genuinely missing, not three concepts.
+
+Match on the concept and its common synonyms, and read the section headings of
+every hit before recording it.
+
+---
+
+## N-Q10 — duplicate and non-sequential figure numbers, 13 pages
+
+`CLAUDE.md` fixes the convention: diagram captions on topic pages open
+`Figure N:`. Thirteen pages break it, across every board. Nine reuse a number on
+the same page, so two different diagrams are both "Figure 1"; the rest skip
+numbers or start partway through the sequence.
+
+| Page | Figure numbers present |
+| --- | --- |
+| `edexcel-theme-1/1-1-4-production-possibility-frontiers` | 1, 1 |
+| `edexcel-theme-1/1-2-9-indirect-taxes-subsidies` | 1, 2, 1 |
+| `edexcel-theme-1/1-3-2-externalities` | 1, 1 |
+| `edexcel-theme-2/2-3-2-short-run-aggregate-supply` | 2, 2 |
+| `edexcel-theme-2/2-4-2-injections-withdrawals` | 2 |
+| `edexcel-theme-4/4-1-8-exchange-rates` | 1, 1 |
+| `aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply` | 2, 2 |
+| `aqa-a2-macro/2-6-2-trade` | 1, 1 |
+| `aqa-a2-macro/2-6-4-exchange-rate-systems` | 1, 1 |
+| `aqa-a2-micro/1-5-11-consumer-and-producer-surplus` | 1, 4, 5, 6, 7 |
+| `aqa-a2-micro/1-5-6-monopoly-and-monopoly-power` | 1, 3 |
+| `aqa-a2-micro/1-5-7-price-discrimination` | 2 |
+| `aqa-a2-micro/1-6-6-the-national-minimum-wage` | 4 |
+
+The duplicates are the ones that actually mislead — `1-3-2-externalities` labels
+both the negative-production and positive-consumption diagrams "Figure 1", so
+prose referring to "Figure 1" is ambiguous. The gaps are more likely to be
+leftovers from the diagrams removed in the earlier consistency pass.
+
+**This is renumbering captions, not touching economics wording**, so it is
+formatting work under the `CLAUDE.md` rules rather than a content change. Still
+worth an explicit go-ahead, because prose elsewhere on those pages may refer to
+the numbers.
+
+Reproduce with:
+
+```python
+caps = re.findall(r'Figure\s+(\d+)\s*:', strip_tags(page))
+```
+
+---
+
+## N-Q11 — `2.4.1` and `2.4.2` substantially duplicate each other
+
+`2-4-1-national-income` (488 words of body) and `2-4-2-injections-withdrawals`
+(409 words) share **55 ten-word runs**. Roughly a third of 2.4.2 repeats 2.4.1
+almost verbatim: the extended circular flow, the three injections, the three
+withdrawals, the `J = W` condition, and the consequences of each being larger.
+
+Both pages are correct, and some overlap between adjacent topics is reasonable.
+But this much means a student reading them in order covers the same ground twice
+and may reasonably wonder what they missed. The Edexcel specification does list
+them separately, so the fix is presumably to let 2.4.1 introduce the circular
+flow and have 2.4.2 go deeper — the source and destination of each flow, the
+multiplier — rather than restating it.
+
+**An economics content change, so it needs an explicit instruction.** Recorded
+because it was noticeable while writing questions for both: the two sets had to
+be kept apart deliberately, and 2.4.2's questions lean on the details only that
+page carries.
+
+---
+
+## State of play for a new session
+
+**The practice-questions project is at 121 topics and 940 questions**, on branch
+`feature/topic-questions`, nothing pushed. Batch state, the authoring standard
+and the per-unit records are in `QUESTIONS_PROGRESS.md`, which is the file to
+read first — this one holds only the site problems found along the way.
+
+Outstanding here, all needing an explicit instruction before anything is touched:
+
+| Finding | Scope | Kind of change |
+| --- | --- | --- |
+| N-Q8 | 9 notes pages | economics content, or metadata correction |
+| N-Q10 | 13 notes pages | formatting — caption renumbering |
+| N-Q11 | 2 notes pages | economics content — restructuring |
+| N-Q2 to N-Q7 | AQA macro pages, earlier in this file | economics content |
+| `navPanel` `aria-hidden` | site-wide | accessibility, in the earlier sections |
+
+**Audit status for N-Q8 and N-Q10, as at 2026-08-01.** Both checks are scripted
+above and take a couple of minutes each. Run them on any page before writing its
+question set, and **read every hit** before recording it — the automated pass
+produces false positives at roughly one in three, because it matches the alert's
+wording rather than the concept.
+
+| Theme | N-Q8 (over-promising alerts) | N-Q10 (figure numbers) |
+| --- | --- | --- |
+| Theme 1 | checked — 2 failures, in the table above | checked — 3 failures |
+| Theme 2 | checked — 7 failures, in the table above | checked — 2 failures |
+| Theme 3 | **checked, all 20 pages** — N-Q12, N-Q13, N-Q14, N-Q15 | **re-run — clean** |
+| Theme 4, unit 4.1 | **checked, 9 pages** — N-Q16, N-Q17 | **re-run — 1 failure, already listed** |
+| Theme 4, units 4.2–4.3 | **checked, 5 pages** — N-Q18 | **re-run — clean** |
+| Theme 4, unit 4.4 | **checked, 3 pages** — N-Q19 | **re-run — clean** |
+| Theme 4, unit 4.5 | **checked, 4 pages** — N-Q20 | **re-run — clean** |
+
+N-Q10 has now been re-run over the whole of Theme 4, units 4.2 to 4.5 included,
+and those twelve pages are clean: only three carry a figure at all, and each
+numbers sequentially from 1. **The figure-number audit is therefore complete
+site-wide.** N-Q8 has since been run over units 4.4 and 4.5 as well, so **both
+audits are now complete across all 166 topic pages.** Nothing further is
+outstanding on either.
+
+---
+
+## N-Q12 — `3-1-1-sizes-types-of-firms` promises company types it never covers
+
+Same shape as N-Q8, found while writing the unit 3.1 question sets. The spec
+alert closes:
+
+> These notes also cover sole traders, partnerships, and private and public
+> limited companies.
+
+The body never mentions a **private limited company** or a **public limited
+company** at all, and never distinguishes them. The nearest it comes is the
+abbreviation "PLCs", used in passing in the *Divorce of Ownership and Control*
+section without being expanded or defined. Sole traders and partnerships fare
+slightly better but not much: they appear once, in a list — "they include sole
+traders, partnerships, and companies" — with no explanation of what either is or
+how they differ.
+
+As with the nine pages in N-Q8, the promise is repeated in the page's
+`metaDescription`, its OG and Twitter cards and its JSON-LD `description`, so the
+page is indexed for terms it does not explain. `raw-notes/edexcel/3.1.1.md` does
+**not** contain the missing material either, so this is not a conversion loss —
+the alert claims more than was ever written.
+
+**The question set was written to what the body actually teaches**, so no
+question turns on the difference between a private and a public limited company.
+One distractor in `3.1.1` Q1 does rely on a student not mistaking a *public
+limited company* for a *public sector* organisation, which is a confusion the
+page's own wording makes more likely rather than less.
+
+**The fix is the same pair of options as N-Q8**: write the missing paragraph, or
+cut the over-claim from the alert and its four copies in the metadata. Both need
+an explicit instruction.
+
+---
+
+## N-Q13 — `3-3-4` promises explicit and implicit costs and never defines them
+
+Found the same way, while writing the unit 3.3 question sets. The spec alert on
+`3-3-4-normal-profits-supernormal-profits-losses` opens:
+
+> Students should be able to **distinguish between explicit and implicit costs**,
+> define normal profit, supernormal profit, and loss in economic terms…
+
+Neither term appears anywhere in the body. Everything else the alert promises is
+delivered, and delivered well — the shut-down rules in particular are the
+clearest treatment of anything on the Theme 3 pages.
+
+**This one is closer to `2-2-5` than to the others**: the page does teach the
+underlying idea, in the passage explaining that normal profit is "the opportunity
+cost of the entrepreneur staying in this industry, so it is already counted
+inside the firm's costs". That *is* an implicit cost. It simply never gets the
+label, and the explicit/implicit pair is never drawn. The fix could be as small
+as naming the two categories in that paragraph.
+
+The other three pages in unit 3.3 check out clean against their alerts.
+
+**The question set works round it**: `3.3.4` Q5 tests the distinction through a
+calculation — an accounting profit against a forgone salary and forgone interest
+— without using either term.
+
+---
+
+## N-Q14 — `3-3-2` states the LRAC envelope relationship imprecisely
+
+Not an over-promise but a content point, and a more subtle one. The *Relationship
+Between SRAC and LRAC* section says:
+
+> The LRAC curve is an envelope curve that **touches the lowest points of the
+> SRAC curves**.
+
+That holds at exactly one point — the minimum of LRAC, at minimum efficient
+scale. Everywhere else the tangency is off the SRAC minimum: to the **left** of it
+while LRAC is falling, and to the **right** of it while LRAC is rising. The
+general statement is that LRAC touches each SRAC at the output for which that
+scale is the cheapest available, which is not the same as each SRAC's own lowest
+point.
+
+It is a standard textbook simplification rather than a blunder, and the rest of
+the section is right — including the observation that LRAC is flatter than the
+SRAC curves, which is the practically useful part. But a student who has been
+told the simplified version and then meets a properly drawn diagram will find the
+tangency points do not sit where they were told to expect them.
+
+**Not fixed, and no question depends on it.** `3.3.2` Q6 was drafted on the
+page's wording, caught during the cold re-solve, and rewritten to ask what the
+envelope *is* — the lowest cost achievable at each output — which is correct on
+the page's own terms and correct in general. If the sentence is ever revised,
+"touches each SRAC curve at the output where that scale is cheapest" would do it.
+
+---
+
+## N-Q15 — `3-4-6-monopsony` promised four things and delivered none — FIXED
+
+**Status: fixed on 2026-08-01 with the site owner's explicit instruction.** The
+record below is what was found; the fix applied is described at the end.
+
+**This was the largest single over-promise found on the site.** The spec alert on
+`3-4-6-monopsony` said students should be able to:
+
+> …explain **the monopsony labour market diagram**, compare monopsony outcomes
+> with competitive outcomes, analyse **monopsonistic exploitation**, and evaluate
+> the impact of monopsony power and possible government responses. These notes
+> also cover **minimum wages** and **trade unions** as countervailing forces.
+
+The body contains none of the four terms in bold. There is no diagram of any
+kind on the page, no comparison with a competitive outcome, no mention of
+monopsonistic exploitation, and nothing about minimum wages or trade unions. What
+the page does contain — a definition, three characteristics and a four-agent
+costs-and-benefits table — is good, and is genuinely different from how AQA
+treats the topic. It simply is not what the alert describes.
+
+**Unlike the other N-Q entries, most of the missing content exists elsewhere on
+the site.** The page ends by saying "Monopsonies in labour markets are covered in
+further detail in 3.5.3 Wage Determination", and `3-5-3-wage-determination` does
+cover monopsony, the marginal cost of labour, minimum wages and trade unions.
+Only **monopsonistic exploitation** is missing from both pages.
+
+So this was largely a **cross-reference problem rather than a content gap**: the
+alert on 3.4.6 claimed for itself what 3.5.3 delivers.
+
+**The question set was written to the body**, so it covers buyer power generally
+— the supermarket-and-farmers case, the four-agent ledger, and the combination of
+monopoly and monopsony power in one firm. Nothing in it touches the labour market
+diagram, which is the right place to draw the line: those questions belong with
+3.5.3 when that set is written.
+
+### The fix as applied
+
+Five locations changed, all of them metadata or the alert sentence. **No
+economics in the body of the page was touched.**
+
+| Location | Change |
+| --- | --- |
+| `spec-alert` | Rewritten to describe buyer power and the four-agent evaluation, with a cross-reference to 3.5.3 |
+| `<meta name="description">` | Rewritten, 153 characters |
+| `og:description` | Same replacement |
+| `twitter:description` | Same replacement |
+| JSON-LD `description` | Rewritten to match |
+
+The alert now reads: understand what a monopsony is, identify the conditions
+under which monopsony power arises, and evaluate its costs and benefits for the
+firm, consumers, workers and suppliers — followed by a sentence directing the
+reader to 3.5.3 for the labour market diagram, minimum wages and trade unions.
+
+**One deviation from house style, left deliberately and worth knowing about.**
+The cross-reference is a real link, which makes this the **only spec alert on the
+site containing an `<a>` tag** — the other 165 are plain text. It was kept
+because an unlinked pointer is markedly less useful to a student who has arrived
+from a search result looking for the labour market treatment. Converting it to
+plain text is a one-line change if the consistency matters more.
+
+**Monopsonistic exploitation — CLOSED on 2026-08-01, at the site owner's
+instruction**, once the question project reached its end and the decision was
+put to them. It was the one genuinely absent concept here rather than a
+misplaced cross-reference.
+
+A paragraph was added to `3-5-3-wage-determination`, directly after the
+existing monopsony equilibrium paragraph and altering none of it:
+
+> The gap between what the last worker adds to the firm's revenue and the wage
+> that worker is actually paid is known as **monopsonistic exploitation**. At Qm
+> the monopsonist hires where MCL = MRPL, but pays only Wm — the wage read off
+> the supply curve — so each worker is paid less than the value of what they
+> produce. The larger the gap between MRPL and Wm, the greater the exploitation.
+
+It sits where the page already teaches the mechanism, uses the page's own
+notation (MCL, MRPL, Wm, Qm) and needs no change to the diagram, which already
+shows both curves. **Addition only** — the text and markup integrity checks
+report one file changed, two additions, zero losses and no removed lines. No
+question needed rewriting: 3.5.3 Q2 already tested the mechanism.
+
+---
+
+## N-Q16 — `4-1-3-pattern-of-trade` promises deindustrialisation, never names it
+
+Found by the spec-alert audit over Theme 4 unit 4.1. The alert closes:
+
+> These notes also cover the rise of emerging economies and **deindustrialisation
+> in developed countries**.
+
+The word does not appear in the body. Emerging economies are covered properly.
+
+**This is the soft `2-2-5` case, not the hard `3-4-6` one.** The body *does*
+describe deindustrialisation, in the comparative advantage section: "the UK no
+longer has a comparative advantage in manufacturing, leading to a decline in
+exports of manufactured goods and an increase in imports of manufactured goods."
+That is the phenomenon. It simply never gets its label, and a student searching
+for the term will not find it.
+
+**The fix is one word in an existing sentence.** No question depends on it —
+`4.1.3` Q2 tests the shift from manufacturing to services without using the term.
+
+---
+
+## N-Q17 — `4-1-9` promises export market share and does not cover it
+
+The more substantial of the two Theme 4 findings. The alert on
+`4-1-9-international-competitiveness` closes:
+
+> These notes also cover **unit labour costs** and **export market share** as
+> measures of competitiveness.
+
+Unit labour costs are covered thoroughly, with a formula and a worked example.
+**Export market share does not appear anywhere in the body.** The page gives two
+measures — relative unit labour costs and relative export prices — and stops.
+
+**A question in the batch depends on this, and that is deliberate.** `4.1.9` Q8
+asks what a falling share of world exports indicates. It was written from the
+spec alert rather than the body, under the policy the site owner set in batch 16:
+*where a page advertises a concept it does not deliver, write the question anyway
+and bring the notes up to match afterwards.* The model answer is written longer
+than usual and to stand alone, as the retrofitted questions were, because a
+student who gets it wrong and returns to the notes will currently find nothing
+there.
+
+**Closing this needs a short paragraph on the page** — export market share as a
+third measure, with the point that it captures cost and non-cost factors together
+but says nothing about which is at work. That sentence is already in the Q8 model
+answer and could be lifted straight across.
+
+---
+
+## N-Q10 addendum — re-run over Themes 3 and 4, no new failures
+
+The figure-number check was re-run on 2026-08-01 over Theme 3 in full and Theme 4
+as far as unit 4.1, to confirm the N-Q10 table above is still complete for those
+pages. **It is. Nothing new was found.**
+
+- **Theme 3: clean.** All twenty topic pages number their figures sequentially
+  from 1, with no duplicates.
+- **Theme 4, unit 4.1: one failure, and it is already listed** —
+  `4-1-8-exchange-rates` with two figures both labelled "Figure 1". No second
+  page in the unit fails.
+
+This corrects the note previously carried at the end of this file, which said
+Themes 3 and 4 had not been checked for N-Q10. The original N-Q10 scan was
+site-wide and did cover them; what had not been re-run was a confirmation after
+the notes were edited.
+
+```python
+nums = [int(m) for m in re.findall(r'Figure\s+(\d+):', page_text)]
+bad  = nums and nums != list(range(1, len(nums) + 1))
+```
+
+**Units 4.2 to 4.5 were re-run on 2026-08-01 while batch 28 was written, and all
+twelve pages are clean.** Only three of them carry a figure at all —
+`4-2-2-inequality` (Figures 1 and 2), `4-3-3-strategies-influencing-growth-development`
+(Figure 1) and `4-5-2-taxation` (Figure 1) — and each numbers sequentially with no
+duplicates. **N-Q10 is now closed for the whole site**, subject to the thirteen
+pages already listed in the table above remaining unfixed.
+
+---
+
+## N-Q18 — `4-2-1` promises redistribution and social protection, and has neither
+
+Found while writing the unit 4.2 question sets. The spec alert on
+`4-2-1-absolute-relative-poverty` closes:
+
+> These notes also cover **redistribution and social protection** as policy
+> responses.
+
+The body has no policy-response section at all. It runs Key Definitions, then
+*Causes of Changes in Absolute Poverty* and *Causes of Changes in Relative
+Poverty*, and stops. **"Social protection" appears nowhere in the body.**
+"Redistributing income" appears once, as a clause inside a bullet about the tax
+and welfare system as a *cause* of changes in relative poverty — which is not the
+same thing as covering it as a policy response.
+
+The same alert also promises an analysis of "the relationship between economic
+growth and different measures of poverty". The body gives that one bullet —
+growth in developing countries can reduce absolute poverty — and never reaches
+the point the promise implies, which is that growth reduces absolute poverty
+while leaving *relative* poverty untouched if the distribution does not change.
+
+As with N-Q8, the promise is repeated in the page's `metaDescription`, its OG and
+Twitter cards and its JSON-LD `description`.
+
+**The questions do not depend on it.** Unlike N-Q17, the 4.2.1 set was written
+strictly to the body: it tests the two definitions, the moving relative line and
+the listed causes, and nothing on redistribution or social protection. So this is
+a metadata accuracy problem rather than a gap a student will hit from a question.
+
+**Two fixes, as with N-Q8**: add a short policy-response section — cash transfers,
+means-tested benefits, progressive taxation, a minimum wage — or cut the
+over-claim from the alert and its four metadata copies. Note that AQA 1.7.3
+already carries seven questions on exactly this material, so if the section is
+written, the questions for it exist in substance and would need only an Edexcel
+rewrite.
+
+---
+
+## N-Q19 — `4-4-1` promises four things and delivers one and a half
+
+Found while writing the unit 4.4 question sets, and the largest over-claim of the
+Theme 4 pages. The spec alert on `4-4-1-role-of-financial-markets` closes:
+
+> These notes also cover **the channelling of savings into investment**, **risk
+> spreading**, **liquidity provision** and **financial intermediation**.
+
+Against the body:
+
+| Promised | In the body? |
+| --- | --- |
+| Channelling savings into investment | **In substance, not by name.** Split across *To Facilitate Saving* and *To Lend to Businesses and Individuals*, with the Harrod-Domar link between saving and growth |
+| Risk spreading | **No.** The word *risk* appears once, in the hedging section, and diversification is never mentioned |
+| Liquidity provision | **No.** "Liquid" does not appear on the page at all |
+| Financial intermediation | **No.** The term does not appear, and no section explains the maturity transformation it describes |
+
+The five functions the page actually teaches are facilitating saving, lending,
+facilitating exchange, forward markets and equity markets. Three of the four
+concepts advertised beneath them are simply not there.
+
+**The questions were written to the body.** 4.4.1 Q3 tests the channelling of
+savings into investment as a *mechanism* — deposits in, plant and machinery out —
+without using the word *intermediation*, which the page never gives the student.
+*Risk spreading* appears once as a distractor and is never the answer. So no
+question depends on the missing material, as with N-Q18 and unlike N-Q17.
+
+**Closing it is a short job.** Liquidity provision and intermediation are one
+paragraph each and follow naturally from the two sections already there; risk
+spreading needs a sentence on diversification. Alternatively cut the sentence
+from the alert and its four metadata copies.
+
+### A trap in the N-Q8 script, now that the questions are linked
+
+The check strips everything **above** the spec alert to avoid matching the
+metadata copies. The end-of-notes practice-questions block sits **below** it, and
+its teaser sentence is prose about the topic — so it can match a concept the body
+never teaches and report a false negative.
+
+It did exactly that here: `channelling savings into investment` matched, and the
+only occurrence on the page was in the block this project appended. **Print the
+matching context, not just a boolean**, and discard any hit inside
+`notes-questions-cta` before recording a page as clean.
+
+---
+
+## N-Q20 — unit 4.5: one real over-claim and two soft ones
+
+Found while writing the final batch of question sets, which completes the N-Q8
+sweep over the whole site.
+
+### `4-5-2-taxation` — two promised concepts, neither delivered
+
+The alert says students should be able to
+
+> …evaluate the macroeconomic effects of tax changes, and **explain how
+> elasticity affects tax incidence**. These notes also cover **the principles of
+> a good tax system**.
+
+Neither appears in the body. The word *incidence* is absent from the page, there
+is no treatment of how PED and PES split a tax between producer and consumer, and
+no list of the canons of taxation — equity, certainty, convenience, efficiency —
+under any wording. What the page does deliver is thorough: the three tax systems,
+direct against indirect, a seven-row grid of macroeconomic effects, and the
+Laffer curve with a diagram.
+
+**Tax incidence is taught elsewhere on the site**, on
+`edexcel-theme-1/1-2-9-indirect-taxes-and-subsidies`, and Edexcel 1.2.9 Q3 and
+Q10 already test it — including the perfectly inelastic case. So this is closer
+to the `2-1-1` case in N-Q8 than to a true content gap: **a cross-reference would
+settle it**, or the sentence could be cut from the alert. The principles of a
+good tax system are genuinely missing and would need writing.
+
+### Two soft cases, recorded but not worth acting on alone
+
+- **`4-5-3-public-sector-finances`** promises "the options for fiscal
+  consolidation". The body covers what deficits and debt are, what moves them and
+  why they matter, but never sets out the options for closing them. Those options
+  — austerity, structural reform, debt restructuring — are taught in full on
+  `4-5-4`, the next page in the same unit. A cross-reference fixes it.
+- **`4-5-4-macroeconomic-policies-in-a-global-context`** promises "capital
+  mobility". The body covers firms relocating production and regulatory
+  arbitrage, which is the same idea applied to plant rather than to money, but
+  never discusses mobile capital as such. `4-1-1-globalisation` does, and
+  4.1.1 Q1 tests it.
+
+**No question in the unit depends on any of the missing material.** All four sets
+were written to what the bodies teach.

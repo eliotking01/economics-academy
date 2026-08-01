@@ -1,0 +1,177 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.1",
+  "slug": "1-4-1-production-and-productivity",
+  "title": "Production and Productivity",
+  "shortTitle": "Production and Productivity",
+  "pageTitle": "Labour Productivity Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on production and productivity for AQA A-Level Economics, including labour productivity calculations and worked answers.",
+  "intro": "Seven original multiple-choice questions on production, productivity and added value, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Seven original multiple-choice questions on production, labour productivity and added value, written to AQA Paper 3 Section A style, with full worked answers.",
+  "questions": [
+    {
+      "id": "aqa-1-4-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following correctly distinguishes production from productivity?",
+      "options": {
+        "A": "Production is measured per worker; productivity is total output.",
+        "B": "Production is output in the long run; productivity is output in the short run.",
+        "C": "Production is output per unit of input; productivity is total output.",
+        "D": "Production is total output; productivity is output per unit of input."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Production</strong> is the total quantity of goods and services turned out by a firm, industry or economy over a period. <strong>Productivity</strong> is a measure of <em>efficiency</em>: how much output is obtained from each unit of input. The two move independently, which is why the distinction matters — a firm can raise production simply by hiring more workers while its output per worker falls.",
+        "distractors": {
+          "A": "This reverses the two definitions. It is productivity that is expressed per unit of input, most often per worker.",
+          "B": "Neither term is defined by a time period. Short run and long run concern which factors of production can be varied, which is a separate distinction.",
+          "C": "Again the definitions have been swapped. Output per unit of input is the definition of productivity."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A factory employs 25 workers and produces 3,000 units a week. Its labour productivity is",
+      "options": {
+        "A": "0.0083 workers per unit produced.",
+        "B": "120 units per worker per week.",
+        "C": "3,000 units per worker per week.",
+        "D": "75,000 units per worker per week."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Labour productivity is output divided by the number of workers.<br />3,000 ÷ 25 = <strong>120 units per worker per week</strong>.<br />Always check the units of the answer. Productivity is an output-per-input figure, so it must come out as units per worker, not as a total or as an inverted ratio.",
+        "distractors": {
+          "A": "The formula has been inverted: 25 ÷ 3,000. That gives workers per unit, which is a measure of labour <em>input</em> per unit rather than of productivity.",
+          "C": "This is total output — production, not productivity. It takes no account of how many workers were needed to produce it.",
+          "D": "The two figures have been multiplied rather than divided. Multiplying an output by a workforce produces a number with no economic meaning."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-1-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's monthly output rises from 4,000 units to 5,400 units while its workforce rises from 40 to 45 workers. Its labour productivity has",
+      "options": {
+        "A": "Fallen by 20 units per worker.",
+        "B": "Risen by 20 units per worker, from 100 to 120.",
+        "C": "Risen by 35 units per worker, in line with the rise in output.",
+        "D": "Stayed the same, because output and employment both rose."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out productivity before and after, rather than looking at the changes on their own.<br />Before: 4,000 ÷ 40 = <strong>100 units per worker</strong>.<br />After: 5,400 ÷ 45 = <strong>120 units per worker</strong>.<br />Productivity has risen by <strong>20 units per worker</strong>, a rise of 20%. Output grew by 35% while the workforce grew by only 12.5%, which is why output per worker improved.",
+        "distractors": {
+          "A": "The direction is wrong. Output rose proportionally faster than employment, so each worker is now producing more, not less.",
+          "C": "1,400 ÷ 40 = 35 divides the <em>change</em> in output by the <em>original</em> workforce. That mixes a change with a level and does not measure output per worker at either point.",
+          "D": "Both rising does not leave productivity unchanged — that only happens if they rise by the same proportion. Here output rose by 35% and employment by 12.5%."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm raises its labour productivity while wage rates remain unchanged. All other things being equal, the most likely consequence is",
+      "options": {
+        "A": "A fall in its average cost per unit.",
+        "B": "A fall in its total output.",
+        "C": "A rise in its average cost per unit.",
+        "D": "A rise in its total fixed costs."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Higher productivity means each worker produces more output for the same wage, so the labour cost <strong>per unit</strong> falls. With wage rates unchanged, average cost falls too. This is the central reason productivity matters commercially: lower unit costs can be passed to consumers as lower prices, kept as higher profit, or split between the two — and either way the firm gains a competitive advantage.",
+        "distractors": {
+          "B": "Output per worker has risen, so for any given workforce total output rises rather than falls.",
+          "C": "This has the effect backwards. Costs per unit rise when productivity falls or wages rise faster than output per worker — the opposite of what is described.",
+          "D": "Fixed costs are unaffected by how productive workers are. Rent and insurance do not change because output per worker has improved."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm doubles the size of its workforce and finds that its weekly output rises by 60%. All other things being equal, this shows that",
+      "options": {
+        "A": "Both production and productivity have risen.",
+        "B": "Production has fallen and productivity has risen.",
+        "C": "Production has risen and productivity has fallen.",
+        "D": "Production has risen and productivity is unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Take the two measures separately.<br /><strong>Production</strong> is total output, and it has risen by 60%.<br /><strong>Productivity</strong> is output per worker. Output is now 1.6 times its old level while the workforce is 2 times its old level, so output per worker is 1.6 ÷ 2 = <strong>0.8</strong> of what it was — a fall of 20%.<br />This is exactly why the two terms cannot be used interchangeably: the firm is producing more while each worker produces less.",
+        "distractors": {
+          "A": "Production has certainly risen, but productivity cannot have. Employment grew faster than output, so the output attributable to each worker must have fallen.",
+          "B": "Production is total output, and a 60% rise in output is a rise in production by definition.",
+          "D": "Productivity would be unchanged only if output and employment rose by the <em>same</em> proportion. Doubling the workforce for a 60% output gain is well short of that."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the workforce and weekly output of two firms in the same industry.<br />Using Table 1, which one of the following is correct?",
+      "table": {
+        "caption": "Table 1: Workforce and weekly output of two firms",
+        "head": ["Firm", "Workers", "Weekly output (units)"],
+        "rows": [
+          ["P", "30", "2,700"],
+          ["Q", "45", "3,600"]
+        ]
+      },
+      "options": {
+        "A": "Firm P has higher production and higher labour productivity than Firm Q.",
+        "B": "Firm P has higher labour productivity, but Firm Q has higher production.",
+        "C": "Firm Q has higher production and higher labour productivity than Firm P.",
+        "D": "Firm Q has higher labour productivity, but Firm P has higher production."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out both measures for each firm.<br /><strong>Production:</strong> P makes 2,700 units, Q makes 3,600. Q produces more.<br /><strong>Labour productivity:</strong> P is 2,700 ÷ 30 = <strong>90</strong> units per worker; Q is 3,600 ÷ 45 = <strong>80</strong> units per worker. P is more productive.<br />So the larger firm produces more in total while getting less out of each worker — a common pattern, and the reason both measures are reported.",
+        "distractors": {
+          "A": "P is the more productive firm but it is the smaller one. 2,700 units is less total output than 3,600.",
+          "C": "Q does produce more in total, but its output per worker is 80 against P's 90. Being bigger is not the same as being more efficient.",
+          "D": "This reverses both measures. Q has the higher total and the lower output per worker."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A furniture maker buys £40 of timber and other inputs and sells the finished chair for £110. The £70 difference is best described as the firm's",
+      "options": {
+        "A": "Added value.",
+        "B": "Marginal cost.",
+        "C": "Productivity.",
+        "D": "Supernormal profit."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Added value</strong> is the difference between the value of a firm's output and the cost of the inputs bought in to make it. Production is the process of adding that value: timber worth £40 becomes a chair worth £110 because labour, capital and enterprise have been applied to it. Adding value is what allows a firm to sell for more than its inputs cost.",
+        "distractors": {
+          "B": "Marginal cost is the addition to total cost from producing one more unit. The £70 here is a margin between revenue and input cost, not a cost at all.",
+          "C": "Productivity is an output-per-input ratio, so it is measured in units per worker or per hour rather than in pounds.",
+          "D": "This is the trap. The £70 still has to cover wages, rent, machinery and every other cost the firm bears, plus normal profit. Only what remains after all of those is supernormal profit."
+        }
+      }
+    }
+  ]
+}

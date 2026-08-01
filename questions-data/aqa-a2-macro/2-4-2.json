@@ -1,0 +1,194 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.4.2",
+  "slug": "2-4-2-commercial-banks-and-investment-banks",
+  "title": "Commercial Banks and Investment Banks",
+  "shortTitle": "Commercial and Investment Banks",
+  "pageTitle": "Commercial Banks Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on banking for AQA A-Level Economics: commercial and investment banks, the balance sheet, bank objectives and credit creation.",
+  "intro": "Seven original multiple-choice questions on commercial and investment banks, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on bank balance sheets, the conflict between liquidity and profitability, and how banks create credit, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-4-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following is a function of a commercial bank but not of an investment bank?",
+      "options": {
+        "A": "Accepting deposits from households.",
+        "B": "Advising firms on mergers and takeovers.",
+        "C": "Trading securities on its own account.",
+        "D": "Underwriting new issues of shares."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A commercial bank — the high street or retail bank — takes <strong>deposits</strong> from households and firms, lends to them, and runs the payments system. An investment bank takes no deposits from the general public; it funds itself on wholesale markets and from shareholders' capital.",
+        "distractors": {
+          "B": "Advising on mergers and takeovers is a classic investment banking service, sold to large firms for a fee.",
+          "C": "Trading securities on its own account is investment banking, and it is one reason those banks carry more risk.",
+          "D": "Underwriting new share issues — guaranteeing that an issue sells — is investment banking work."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four items from a commercial bank's balance sheet.<br />Using Table 1, the bank's total liabilities are",
+      "table": {
+        "caption": "Table 1: Selected balance sheet items",
+        "head": [
+          "Item",
+          "Amount"
+        ],
+        "rows": [
+          [
+            "Customer deposits",
+            "£420bn"
+          ],
+          [
+            "Loans and advances to customers",
+            "£380bn"
+          ],
+          [
+            "Cash and reserves at the central bank",
+            "£45bn"
+          ],
+          [
+            "Bonds issued by the bank",
+            "£30bn"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£420bn",
+        "B": "£425bn",
+        "C": "£450bn",
+        "D": "£875bn"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Liabilities are what the bank <strong>owes to others</strong>. It owes customers their deposits back, and it owes investors the money raised through the bonds it has issued.<br />£420bn + £30bn = <strong>£450bn</strong>.<br />The other two items are assets: loans are owed <em>to</em> the bank, and cash and reserves are money it holds.",
+        "distractors": {
+          "A": "£420bn is customer deposits alone. The bonds the bank has itself issued are borrowing too, so they are also a liability.",
+          "B": "£425bn is loans plus cash and reserves — the two <strong>assets</strong>. This is the classic error of treating deposits as assets and loans as liabilities, which is exactly backwards.",
+          "D": "£875bn adds all four items together. Assets and liabilities are the two sides of the balance sheet and are never summed."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The three objectives a commercial bank pursues simultaneously are",
+      "options": {
+        "A": "Growth, market share and profitability.",
+        "B": "Liquidity, profitability and security.",
+        "C": "Liquidity, solvency and market share.",
+        "D": "Profitability, growth and security."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A commercial bank must hold enough liquid assets to meet withdrawals (<strong>liquidity</strong>), earn a return for its shareholders (<strong>profitability</strong>), and avoid losses from bad debts (<strong>security</strong>).<br />The three pull against each other, which is why a bank's balance sheet is always a compromise rather than an optimum on any one measure.",
+        "distractors": {
+          "A": "Market share is a general business aim, not one of the three objectives that structure a bank's balance sheet.",
+          "C": "Solvency is the <em>result</em> of pursuing security successfully — a bank is insolvent when losses exceed capital — rather than one of the three objectives itself.",
+          "D": "Growth again is a general aim. Liquidity is the objective missing here, and it is the one banks fail on first in a crisis."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A commercial bank moves a large share of its assets out of central bank reserves and into long-term mortgage lending. The bank has become",
+      "options": {
+        "A": "Less liquid and less profitable.",
+        "B": "Less liquid and more profitable.",
+        "C": "More liquid and less profitable.",
+        "D": "More liquid and more profitable."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is the central conflict on a bank's balance sheet. Assets are listed in falling order of liquidity, and return rises as liquidity falls.<br />Reserves at the central bank are perfectly liquid but earn almost nothing. Mortgages are the least liquid asset a bank holds and the most profitable. Shifting from one to the other therefore raises profit and reduces the bank's ability to meet withdrawals — <strong>less liquid, more profitable</strong>.<br />A bank that pushes this too far can be perfectly solvent and still fail, if depositors ask for money it cannot raise quickly.",
+        "distractors": {
+          "A": "Mortgages earn considerably more than reserves at the central bank, so profitability rises.",
+          "C": "Long-term mortgages cannot be turned into cash quickly, so this move reduces liquidity rather than raising it.",
+          "D": "Both halves are wrong. Liquidity and profitability move in opposite directions along the balance sheet, so no reshuffle raises both."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank grants a customer a new loan of £10,000. The immediate effect on the money supply is that it",
+      "options": {
+        "A": "Falls by £10,000, because the bank's reserves fall.",
+        "B": "Is unchanged, because the bank lends out an existing deposit.",
+        "C": "Rises by £10,000, because a new deposit is created.",
+        "D": "Rises by £10,000, because the central bank prints the money."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The bank makes the loan by <strong>crediting the borrower's account</strong>. That deposit did not exist a moment earlier, and deposits are money — so the act of lending has itself increased broad money by £10,000.<br />The balance sheet still balances: the loan is a new asset and the deposit a new liability, so both sides expand together.",
+        "distractors": {
+          "A": "Nothing leaves the banking system. No cash has moved, and the bank's reserves are untouched by the act of crediting an account.",
+          "B": "This is the most common misconception on the topic. Banks do not pass on money that savers have deposited — new lending creates new deposits.",
+          "D": "The central bank is not involved. Commercial bank lending is the principal source of new broad money in a modern economy."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-2-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A banking system operating with a liquidity ratio of 10% receives an initial new deposit of £2,000. Once the credit creation process is complete, the maximum total value of deposits in the system is",
+      "options": {
+        "A": "£200",
+        "B": "£1,800",
+        "C": "£18,000",
+        "D": "£20,000"
+      },
+      "answer": "D",
+      "model": {
+        "working": "Each bank keeps a fraction of every deposit as reserves and lends the rest, which becomes a deposit at another bank, and so on. The rounds shrink but sum to a multiple of the original.<br />Total deposits = initial deposit ÷ liquidity ratio = £2,000 ÷ 0.10 = <strong>£20,000</strong>.<br />The smaller the fraction held in reserve, the more credit the system can create — and the less liquid it becomes.",
+        "distractors": {
+          "A": "£200 is 10% of the initial deposit, which is the amount the first bank holds back as reserves rather than the deposits created.",
+          "B": "£1,800 is the amount the first bank can lend from the initial deposit. That is only the first round of a process with many more.",
+          "C": "£18,000 is the <em>additional</em> deposits created, £20,000 − £2,000. The question asks for total deposits, which includes the original £2,000."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Banks are sometimes described as able to create credit without limit. The strongest objection is that credit creation is constrained by",
+      "options": {
+        "A": "Loan demand and banks' own caution.",
+        "B": "The quantity of notes and coins in circulation.",
+        "C": "The savings deposited by households.",
+        "D": "The total value of shares issued by banks."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The ability to create credit is not the same as the willingness or the opportunity to use it. A bank cannot lend to borrowers who do not want to borrow, and in a downturn creditworthy demand for loans dries up.<br />Banks also restrain themselves: they hold liquidity above the regulatory minimum because they fear withdrawals, and they tighten lending standards when they expect bad debts. In a recession both constraints bind at once, which is why cutting interest rates does not automatically produce more lending.",
+        "distractors": {
+          "B": "Under fractional reserve banking most payments are settled by transfers between accounts, not in cash, so the stock of notes and coins is not the binding constraint.",
+          "C": "This is the misconception the topic exists to correct. Banks do not lend out deposits — lending creates deposits.",
+          "D": "Share capital determines a bank's ability to absorb losses, which regulators cap lending against. But it is not what limits credit creation in the sense described."
+        }
+      }
+    }
+  ]
+}

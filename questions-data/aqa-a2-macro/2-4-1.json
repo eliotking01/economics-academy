@@ -1,0 +1,212 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.4.1",
+  "slug": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+  "title": "The Structure of Financial Markets and Financial Assets",
+  "shortTitle": "Financial Markets and Assets",
+  "pageTitle": "Financial Markets and Bonds Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on financial markets for AQA A-Level Economics: money, narrow and broad money, debt and equity, and bond prices and yields.",
+  "intro": "Eight original multiple-choice questions on financial markets and financial assets, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on the functions of money, money and capital markets, debt and equity, and bond prices and yields, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-4-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A shop prices every item on its shelves in pounds, so that customers can compare them. Money is here acting as a",
+      "options": {
+        "A": "Medium of exchange.",
+        "B": "Standard of deferred payment.",
+        "C": "Store of value.",
+        "D": "Unit of account."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Pricing goods in a common currency lets buyers compare values and lets firms calculate profit and loss. That is money working as a <strong>unit of account</strong> — a common measure of value.",
+        "distractors": {
+          "A": "Money is a medium of exchange when it is actually handed over to complete a transaction. Here nothing has been bought yet; the prices are only being displayed.",
+          "B": "Standard of deferred payment is money's role in settling debts over time, which is what makes credit possible. No borrowing is involved here.",
+          "C": "Store of value is money's ability to hold purchasing power for future use. Labelling a price is not saving."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Narrow money differs from broad money in that narrow money",
+      "options": {
+        "A": "Includes only the most liquid forms of money.",
+        "B": "Includes savings accounts and time deposits.",
+        "C": "Is issued only by commercial banks.",
+        "D": "Is the larger of the two measures."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Narrow money covers the most <strong>liquid</strong> holdings — cash in circulation and deposits that can be drawn on demand. It is the money immediately available to spend.<br />Broad money adds the less liquid holdings on top: savings accounts, time deposits and similar instruments.",
+        "distractors": {
+          "B": "Savings accounts and time deposits are exactly what <em>broad</em> money adds. They require notice of withdrawal, so they are less liquid.",
+          "C": "Cash is issued by the central bank, and broad money is largely created by commercial bank lending. Neither measure is defined by its issuer.",
+          "D": "Broad money is the larger measure, because it contains narrow money and more besides."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm borrows for three months by issuing a commercial bill. This borrowing takes place on the",
+      "options": {
+        "A": "Capital market.",
+        "B": "Equity market.",
+        "C": "Foreign exchange market.",
+        "D": "Money market."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The dividing line is the length of the borrowing. The <strong>money market</strong> handles short-term borrowing and lending — conventionally one year or less — which is exactly what a three-month commercial bill is.",
+        "distractors": {
+          "A": "The capital market handles long-term borrowing, over a year. A ten-year bond would belong there; a three-month bill does not.",
+          "B": "Equity markets trade shares, which give ownership rather than a debt to be repaid. A commercial bill is borrowing.",
+          "C": "The foreign exchange market trades currencies against one another. No currency conversion is involved here."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm raises long-term finance by issuing bonds rather than by issuing new shares. It follows that the firm",
+      "options": {
+        "A": "Dilutes the ownership of its existing shareholders.",
+        "B": "Gains a source of capital it never has to repay.",
+        "C": "Must repay the sum borrowed on a fixed date.",
+        "D": "Pays a return only in the years it makes a profit."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A bond is <strong>debt</strong>. The firm is contractually obliged to pay a fixed coupon each year and to repay the face value in full on the maturity date, whether or not the business is doing well.<br />That obligation is the essential difference from equity: shares carry no repayment date and no guaranteed return, but they hand over part of the ownership of the firm.",
+        "distractors": {
+          "A": "Bondholders are lenders, not owners. It is issuing <em>shares</em> that dilutes existing shareholders' stakes.",
+          "B": "This describes equity. Share capital is permanent; bonds mature and must be repaid.",
+          "D": "This describes dividends, which are paid at the firm's discretion out of profit. Bond coupons must be paid regardless."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A corporate bond has a face value of £200 and pays a coupon of 6%. It currently trades on the secondary market at £160. To one decimal place, its yield is",
+      "options": {
+        "A": "3.8%",
+        "B": "6.0%",
+        "C": "7.5%",
+        "D": "13.3%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The coupon is a percentage of the <strong>face value</strong>, not of the market price, and it never changes.<br />Annual coupon = 6% × £200 = <strong>£12</strong>.<br />Yield = annual coupon ÷ market price × 100 = 12 ÷ 160 × 100 = <strong>7.5%</strong>.<br />The bond trades below its face value, so the fixed £12 is a better return than 6% on the money actually laid out. A bond only yields its coupon rate when it trades exactly at par.",
+        "distractors": {
+          "A": "3.8% is 6 ÷ 160, using the coupon <em>rate</em> where the cash coupon belongs. The top of the fraction must be the £12 actually received.",
+          "B": "6.0% is the coupon rate, or equivalently 12 ÷ 200 using the face value as the denominator. The denominator is the price the investor actually paid.",
+          "D": "13.3% is 160 ÷ 12, inverting the formula. That tells you how many years of coupons it would take to recover the purchase price, not the yield."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the yield on one bond at three different market prices.<br />Using Table 1, it follows that",
+      "table": {
+        "caption": "Table 1: One bond's yield at three market prices",
+        "head": [
+          "Market price",
+          "Yield"
+        ],
+        "rows": [
+          [
+            "£125",
+            "8.0%"
+          ],
+          [
+            "£200",
+            "5.0%"
+          ],
+          [
+            "£250",
+            "4.0%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "The annual coupon payment falls as the price rises.",
+        "B": "The bond's yield and its price move in opposite directions.",
+        "C": "The bond's yield and its price move in the same direction.",
+        "D": "The bond would yield 5% whatever price it traded at."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Read down the table. As the price rises from £125 to £200 to £250, the yield falls from 8.0% to 5.0% to 4.0%. The two move in <strong>opposite directions</strong>, always.<br />The reason is in the formula: the coupon on the top of the fraction is fixed in cash terms — £10 a year at every one of these prices — so the yield can only change because the price on the bottom has changed.",
+        "distractors": {
+          "A": "The coupon is fixed. Check it: 8% of £125, 5% of £200 and 4% of £250 all come to exactly <strong>£10</strong>. That is the whole point.",
+          "C": "The table shows the opposite. A higher price buys the same £10 a year, which must be a worse percentage return.",
+          "D": "It yields 5% only at £200. At any other price the same £10 is a different percentage of what the investor paid."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Bank of England raises Bank Rate. All other things being equal, the most likely effect on existing government bonds is that their",
+      "options": {
+        "A": "Prices fall and yields fall.",
+        "B": "Prices fall and yields rise.",
+        "C": "Prices rise and yields fall.",
+        "D": "Prices rise and yields rise."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work through the chain rather than asserting the result.<br />Higher Bank Rate means savings accounts and newly issued bonds offer better returns. Existing bonds still pay their old, lower fixed coupon, so they become relatively unattractive. Investors sell them, demand on the secondary market falls, and the <strong>price falls</strong>.<br />The coupon has not changed, so that fixed payment is now a larger percentage of a smaller price — the <strong>yield rises</strong>. Prices stop falling once the yield matches the returns available elsewhere.",
+        "distractors": {
+          "A": "Price and yield cannot fall together. With the coupon fixed, a lower price mechanically means a higher yield.",
+          "C": "This is what a <em>cut</em> in Bank Rate produces: existing bonds look more attractive, demand rises, prices rise and yields fall.",
+          "D": "Price and yield cannot rise together, for the same arithmetic reason as option A."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Gilt yields rise sharply and stay high. The most likely consequence for the government is that",
+      "options": {
+        "A": "Financing its deficit becomes more expensive.",
+        "B": "It can borrow more cheaply than before.",
+        "C": "The coupon on gilts already issued rises.",
+        "D": "The face value of gilts already issued rises."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Gilt yields are the return investors demand for lending to the government, so they set the price of <strong>new</strong> borrowing. When yields rise, each fresh gilt the Treasury issues must offer a higher coupon to attract buyers.<br />Debt interest then absorbs a larger share of government spending, which narrows the room for tax cuts or spending increases elsewhere. The same logic applies to firms: higher corporate bond yields raise the cost of long-term finance and can reduce investment.",
+        "distractors": {
+          "B": "Higher yields mean lenders are demanding <em>more</em>, so borrowing becomes dearer rather than cheaper.",
+          "C": "The coupon on a bond already in issue is fixed for its whole life. Only newly issued gilts carry the higher coupon.",
+          "D": "Face value is the fixed sum repaid at maturity. It is the <em>market price</em> that moves, and when yields rise it falls."
+        }
+      }
+    }
+  ]
+}

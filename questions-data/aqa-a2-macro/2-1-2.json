@@ -1,0 +1,237 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.1.2",
+  "slug": "2-1-2-macroeconomic-indicators",
+  "title": "Macroeconomic Indicators",
+  "shortTitle": "Macroeconomic Indicators",
+  "pageTitle": "Macroeconomic Indicators Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on macroeconomic indicators for AQA A-Level Economics: real GDP, CPI and RPI, unemployment measures and the current account.",
+  "intro": "Eight original multiple-choice questions on the main macroeconomic indicators and how they are measured, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on real GDP, CPI and RPI, the measures of unemployment and the current account, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-1-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the labour market position of an economy with a working-age population of 30 million.<br />Using Table 1, the unemployment rate is",
+      "table": {
+        "caption": "Table 1: Labour market position",
+        "head": [
+          "Group",
+          "People"
+        ],
+        "rows": [
+          [
+            "In employment",
+            "21.6 million"
+          ],
+          [
+            "Unemployed (available and seeking work)",
+            "2.4 million"
+          ],
+          [
+            "Economically inactive",
+            "6.0 million"
+          ]
+        ]
+      },
+      "options": {
+        "A": "8.0%",
+        "B": "10.0%",
+        "C": "11.1%",
+        "D": "20.0%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The unemployment rate is the number unemployed divided by the <strong>labour force</strong>, not by the working-age population.<br />Labour force = those in employment + those unemployed = 21.6m + 2.4m = <strong>24.0m</strong>.<br />Unemployment rate = 2.4 ÷ 24.0 × 100 = <strong>10.0%</strong>.<br />The 6.0 million economically inactive are neither working nor seeking work, so they are excluded from the labour force altogether. That is why the unemployment rate and the employment rate never sum to 100%.",
+        "distractors": {
+          "A": "8.0% is 2.4 ÷ 30.0, dividing by the whole working-age population. That wrongly counts the 6.0 million economically inactive as part of the labour force.",
+          "C": "11.1% is 2.4 ÷ 21.6, dividing by those in employment rather than by the labour force. The denominator must include the unemployed themselves.",
+          "D": "20.0% is 6.0 ÷ 30.0, the share of the working-age population that is economically inactive. That is the inactivity rate, not the unemployment rate."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's nominal GDP rises by 6.4% over a year in which the inflation rate is 2.9%. To one decimal place, real GDP has risen by",
+      "options": {
+        "A": "2.2%",
+        "B": "3.5%",
+        "C": "6.4%",
+        "D": "9.3%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Real GDP strips inflation out of the nominal figure.<br />Percentage change in real GDP = percentage change in nominal GDP − inflation rate.<br />6.4 − 2.9 = <strong>3.5%</strong>.<br />Roughly half of the 6.4% rise in the cash value of output was simply higher prices; only 3.5% was more goods and services actually produced.",
+        "distractors": {
+          "A": "2.2% divides one percentage by the other: 6.4 ÷ 2.9. Inflation is subtracted from nominal growth, not divided into it.",
+          "C": "6.4% is the <strong>nominal</strong> growth rate, left unadjusted. It measures output at current prices, so it counts price rises as though they were extra output.",
+          "D": "9.3% adds the inflation rate instead of subtracting it. Adding would mean inflation had made the economy better off in real terms."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Retail Prices Index (RPI) differs from the Consumer Prices Index (CPI) in that the RPI",
+      "options": {
+        "A": "Covers only the prices of goods, and not of services.",
+        "B": "Excludes housing costs such as council tax.",
+        "C": "Includes housing costs such as mortgage interest payments.",
+        "D": "Is not used to calculate a rate of inflation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The RPI includes <strong>housing costs</strong> that the CPI leaves out, most importantly mortgage interest payments and council tax. That single difference in coverage is why the two indices give different inflation figures for the same year, and why RPI tends to run above CPI when interest rates rise.",
+        "distractors": {
+          "A": "Both indices track a basket of goods <em>and</em> services. Services such as transport, insurance and haircuts are a large share of household spending in both.",
+          "B": "This is the difference stated backwards. It is the CPI that leaves housing costs of this kind out; the RPI puts them in.",
+          "D": "Both are used to calculate inflation rates. The annual percentage change in the CPI is the headline rate, but the RPI is also published and still used in some contracts."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A person is out of work, is available to start within two weeks, and has actively sought work in the last four weeks, but claims no unemployment benefits. This person is counted as unemployed by",
+      "options": {
+        "A": "Both measures.",
+        "B": "Neither measure.",
+        "C": "The Claimant Count but not the Labour Force Survey.",
+        "D": "The Labour Force Survey but not the Claimant Count."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The Labour Force Survey classes someone as unemployed if they are without a job, available to start within two weeks and have actively sought work in the last four weeks. This person meets all three, so the <strong>LFS counts them</strong>.<br />The Claimant Count only counts people <em>claiming</em> unemployment benefits, and this person claims none, so it misses them. This is exactly why the LFS is treated as the wider and more accurate measure.",
+        "distractors": {
+          "A": "The Claimant Count cannot include someone who makes no claim. Its coverage is defined by the benefit system, not by whether a person is genuinely seeking work.",
+          "B": "The person satisfies every LFS condition set out in the stem, so at least one measure counts them.",
+          "C": "This has the two measures the wrong way round. It is the Claimant Count, not the LFS, that requires a benefit claim."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the components of one country's current account for a year.<br />Using Table 1, the current account balance is",
+      "table": {
+        "caption": "Table 1: Current account components",
+        "head": [
+          "Component",
+          "Balance"
+        ],
+        "rows": [
+          [
+            "Trade in goods",
+            "−£120bn"
+          ],
+          [
+            "Trade in services",
+            "+£95bn"
+          ],
+          [
+            "Primary income",
+            "−£15bn"
+          ],
+          [
+            "Secondary income",
+            "−£25bn"
+          ]
+        ]
+      },
+      "options": {
+        "A": "−£65bn",
+        "B": "−£40bn",
+        "C": "−£25bn",
+        "D": "+£65bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The current account is the sum of all four components, with deficits entered as negatives.<br />(−£120bn) + £95bn + (−£15bn) + (−£25bn) = <strong>−£65bn</strong>.<br />So the country runs a current account <strong>deficit of £65bn</strong>. Notice that a healthy surplus on services is not enough to offset the goods deficit, which is the usual UK pattern.",
+        "distractors": {
+          "B": "−£40bn leaves secondary income out: −120 + 95 − 15. Current transfers such as foreign aid and remittances are part of the current account, not an extra to be set aside.",
+          "C": "−£25bn is the trade balance alone: −120 + 95. That is trade in goods and services only, and ignores both income components.",
+          "D": "+£65bn is the right magnitude with the sign reversed, which comes from adding the deficits as though they were surpluses. Imports exceeding exports is a debit."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's real GDP rises by 4.0% over a year in which its population rises by 1.5%. All other things being equal, real GDP per capita has",
+      "options": {
+        "A": "Fallen by about 2.5%.",
+        "B": "Risen by about 1.5%.",
+        "C": "Risen by about 2.5%.",
+        "D": "Risen by about 5.5%."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Real GDP per capita is real GDP divided by the population, so its growth rate is roughly the difference between the two growth rates.<br />4.0 − 1.5 = <strong>2.5%</strong>.<br />Output grew faster than the number of people sharing it, so average output per person rose. Had population grown by more than 4.0%, real GDP per capita would have fallen even though total output was rising.",
+        "distractors": {
+          "A": "This has the subtraction the wrong way round: 1.5 − 4.0. Per capita output only falls when the population grows <em>faster</em> than output.",
+          "B": "1.5% is the population growth rate, copied straight out of the stem. It is the denominator's growth, not the growth of the ratio.",
+          "D": "5.5% adds the two rates. Adding would mean a larger population made everyone better off per head."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An economy's nominal GDP rises by 4% over a year in which the general price level also rises by 4%. It follows that",
+      "options": {
+        "A": "Real GDP has risen by 4%.",
+        "B": "Real GDP has risen by 8%.",
+        "C": "Real GDP is unchanged.",
+        "D": "The economy is in deflation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Nominal GDP measures output at <strong>current prices</strong>, so it rises when prices rise, when output rises, or both. Here the whole 4% increase is accounted for by the 4% rise in prices: 4 − 4 = <strong>0</strong>. The same quantity of goods and services was produced, just valued at higher prices.",
+        "distractors": {
+          "A": "This reports the nominal figure as though it were real. It counts the price rise as extra output.",
+          "B": "8% adds the inflation rate to nominal growth. Inflation is subtracted to reach the real figure, never added.",
+          "D": "Deflation is a <em>fall</em> in the general price level. Here prices rose by 4%, so the economy has inflation, not deflation."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over one year an economy's employment rate and its unemployment rate both rise. The most likely explanation is that",
+      "options": {
+        "A": "More people have joined the labour force.",
+        "B": "The labour force has shrunk over the year.",
+        "C": "The number of people in employment has fallen.",
+        "D": "The population of working age has fallen sharply."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two rates have different denominators, which is what makes this possible. The employment rate is those in work divided by the <strong>working-age population</strong>; the unemployment rate is those unemployed divided by the <strong>labour force</strong>.<br />If people who were economically inactive start looking for work, some find jobs — raising employment and so the employment rate — while the rest join the ranks of the unemployed, and the labour force grows. Both rates can therefore rise together.",
+        "distractors": {
+          "B": "A shrinking labour force could raise the unemployment rate, but it would not raise the employment rate at the same time, because fewer people would be in work.",
+          "C": "Fewer people in employment means a lower employment rate, since the working-age population is the denominator. That contradicts the stem.",
+          "D": "A smaller working-age population would raise the employment rate mechanically, but it gives no reason for the unemployment rate to rise alongside it."
+        }
+      }
+    }
+  ]
+}

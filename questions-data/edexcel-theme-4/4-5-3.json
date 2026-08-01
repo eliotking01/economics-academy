@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.5.3",
+  "slug": "4-5-3-public-sector-finances",
+  "title": "Public Sector Finances",
+  "shortTitle": "Public Sector Finances",
+  "pageTitle": "Public Sector Finances Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on public sector finances for Edexcel A-Level Economics: cyclical and structural deficits, national debt and credit ratings.",
+  "intro": "Six original multiple-choice questions on public sector finances, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on cyclical against structural deficits, how deficits accumulate into debt, and why the size of that debt matters.",
+  "questions": [
+    {
+      "id": "edexcel-4-5-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy enters a deep recession and its fiscal deficit widens sharply. Two years later output has recovered fully and the deficit is back to where it began. The part of the deficit that appeared and then disappeared is best described as",
+      "options": {
+        "A": "Cyclical, since it moved with the economic cycle.",
+        "B": "Discretionary, since ministers chose to create it.",
+        "C": "Structural, since it lasted for two whole years.",
+        "D": "The national debt, since borrowing had to rise."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A deficit that opens up in a downturn and closes again when output recovers is the cycle showing up in the public finances. In the recession, tax receipts fall with incomes, employment and spending, while welfare payments rise — and both reverse as the economy recovers.<br />That is the <strong>cyclical</strong> component, and the fact that it disappeared without anyone doing anything is the proof. Had a deficit remained once output was back at potential, what was left would have been structural.",
+        "distractors": {
+          "B": "Discretionary changes are the ones ministers decide on. Nothing here says anyone decided anything; the deficit widened and narrowed on its own as the economy moved.",
+          "C": "Two years is a long time in politics and no time at all in this classification. What makes a deficit structural is that it survives the return to potential output, not that it lasted a while.",
+          "D": "The deficit is the annual shortfall; the debt is the stock that the shortfalls accumulate into. Two years of larger deficits leave the debt permanently higher even though the deficit itself has returned to normal."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's fiscal deficit is 4% of GDP even though output is at its potential level and unemployment is at its natural rate. To remove that deficit, the government must",
+      "options": {
+        "A": "Cut spending or raise taxes permanently.",
+        "B": "Do nothing, as growth will remove it in time.",
+        "C": "Print money to cover the annual shortfall.",
+        "D": "Wait for the next boom, which will close it."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A deficit that is still there when the economy is running at full capacity cannot be blamed on the cycle, because the cycle is at its most favourable point already. There is no recovery left to come that would close it.<br />That makes it <strong>structural</strong>: a permanent mismatch between what the government has committed to spend and what its tax system raises. Removing it needs a permanent change to one side or the other — which is what makes structural deficits politically hard, since every option means either services people rely on or taxes they will notice.",
+        "distractors": {
+          "B": "Growth closes a cyclical deficit, and this one has already survived the return to potential output. Waiting simply adds another 4% of GDP to the national debt each year.",
+          "C": "Financing a deficit with newly created money adds to aggregate demand in an economy already at capacity, which produces inflation rather than a solution.",
+          "D": "A boom would flatter the figures temporarily by raising receipts above their sustainable level, and the deficit would return with the next downturn — larger, because the debt would be higher."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's national debt has risen steadily for a decade, and a ratings agency downgrades its credit rating. The most likely direct consequence is that",
+      "options": {
+        "A": "Investors are obliged to sell the country's bonds.",
+        "B": "Its exchange rate is fixed against the dollar.",
+        "C": "The government must pay more to borrow.",
+        "D": "The national debt falls as borrowing is refused."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A credit rating is an assessment of how likely a borrower is to repay. Downgrade it and lenders demand a higher yield to hold that government's bonds, because they are being asked to carry more risk.<br />The trap is that this makes the original problem worse. Higher borrowing costs mean more of each year's revenue goes on debt interest, which widens the deficit, which adds to the debt — the mechanism by which a fiscal problem becomes a fiscal <strong>crisis</strong>. It is why governments treat their rating as worth defending even when the immediate borrowing is affordable.",
+        "distractors": {
+          "A": "Some institutional investors have mandates restricting them to highly rated bonds, and a downgrade can force sales at the margin. But no investor is obliged to sell in general, and the direct consequence is priced through the yield.",
+          "B": "A credit rating and an exchange rate regime are unconnected. Nothing about a downgrade requires or produces a fixed rate; if anything it puts a currency under downward pressure.",
+          "D": "Governments in this position generally borrow more rather than less, since the higher interest bill has to be funded. Lending does not stop — it gets dearer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Rather than selling bonds to savers, a government finances its deficit by having the central bank create new money to pay for its spending. The most likely consequence is",
+      "options": {
+        "A": "A fall in the price level, as output rises.",
+        "B": "A rise in inflation, eroding the value of money.",
+        "C": "No effect, as the spending is the same either way.",
+        "D": "The national debt is repaid without cost."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Selling bonds to savers moves existing purchasing power from the saver to the government. Creating money to spend does not move anything — it adds new money to an economy whose output has not changed, so there is more money chasing the same goods.<br />The result is <strong>inflation</strong>, which erodes the real value of money and of savings. That is the third of the significances the notes attach to deficits, and it is also the reason central bank independence exists: a government that can print what it needs faces no discipline until the currency provides it.",
+        "distractors": {
+          "A": "There is no route from monetary financing to a falling price level. The extra money raises demand, and if capacity has not risen with it, prices are what give way.",
+          "C": "The spending is the same but the financing is not, and the financing is what matters here. One method transfers purchasing power; the other creates it.",
+          "D": "Inflation does reduce the real value of existing debt, which is why governments have historically been tempted by it. It is not costless — savers bear the loss, and lenders demand higher yields once they see it coming."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two governments each borrow the same sum. One funds a network of new railways; the other funds this year's public sector pay bill. On the argument from intergenerational equity, the second is harder to justify because",
+      "options": {
+        "A": "Borrowing for wages is illegal in most countries.",
+        "B": "Future taxpayers repay it and get nothing for it.",
+        "C": "Railways can be sold later to repay the debt.",
+        "D": "Wages are current spending and so cost less."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Debt is repaid by whoever is paying tax when it falls due, which for long-dated borrowing means the next generation. The question intergenerational equity asks is whether those people get anything for their money.<br />Borrowing for <strong>capital</strong> spending passes on an asset alongside the bill: the railway is still there, still carrying people, still supporting output. Borrowing for <strong>current</strong> spending passes on the bill alone — this year's salaries are consumed this year, and the taxpayers repaying them in twenty years receive nothing in return.<br />That is why the distinction between current and capital spending matters for more than accounting, and why fiscal rules often permit borrowing for investment while requiring day-to-day spending to be funded from taxation.",
+        "distractors": {
+          "A": "It is not illegal anywhere, and governments do it routinely — every deficit funds some current spending. The objection is one of fairness, not legality.",
+          "C": "Selling the asset later is possible but is not the argument. The case for borrowing to invest is that the asset keeps producing benefits for the people who repay the debt, whether or not it is ever sold.",
+          "D": "Both governments borrowed the same sum, so the cost is identical. What differs is what the money bought and who benefits from it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-3-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four developments in a country over one year.<br />From Table 1, the only one likely to reduce the fiscal deficit is",
+      "table": {
+        "caption": "Table 1: Four developments over one year",
+        "head": [
+          "",
+          "Development"
+        ],
+        "rows": [
+          [
+            "Development 1",
+            "Interest rates rise sharply and stay high"
+          ],
+          [
+            "Development 2",
+            "The share of the population above retirement age rises"
+          ],
+          [
+            "Development 3",
+            "A severe external shock closes parts of the economy"
+          ],
+          [
+            "Development 4",
+            "Economic growth accelerates and unemployment falls"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Development 1.",
+        "B": "Development 2.",
+        "C": "Development 3.",
+        "D": "Development 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A deficit narrows when revenue rises or spending falls, and only one of these does either.<br /><strong>Development 4</strong> does both at once: faster growth raises incomes, employment and spending, so income tax, National Insurance and VAT receipts all rise, while the number of people claiming unemployment-related benefits falls. This is why growth is the least painful route to a smaller deficit, and why governments reach for it before austerity.",
+        "distractors": {
+          "A": "Higher interest rates raise the cost of servicing existing debt. More of the budget goes on interest, which widens the deficit rather than narrowing it.",
+          "B": "An ageing population raises spending on pensions and healthcare while the working-age share that funds them shrinks. It is one of the most persistent pressures on public finances.",
+          "C": "A severe external shock raises spending on support for households and firms while tax receipts fall with incomes. Both sides of the budget move the wrong way at once."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.4.2",
+  "slug": "1-4-2-government-failure",
+  "title": "Government Failure",
+  "shortTitle": "Government Failure",
+  "pageTitle": "Government Failure Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on government failure for Edexcel A-Level Economics: distorted price signals, unintended consequences and administrative costs.",
+  "intro": "Six original multiple-choice questions on government failure, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on government failure — distorted price signals, unintended consequences, administrative costs and information gaps.",
+  "questions": [
+    {
+      "id": "edexcel-1-4-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government intervenes to correct a market failure. Afterwards, the misallocation of resources is larger than it was before. This outcome is",
+      "options": {
+        "A": "Allocative efficiency.",
+        "B": "Government failure.",
+        "C": "Market failure.",
+        "D": "The free rider problem."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Government failure</strong> is intervention that leaves the allocation of resources worse than it found it — the cost of the cure exceeding the cost of the disease.<br />The test is comparative, and that is the part students most often miss. It is not enough that the intervention was imperfect, or that some market failure remains. The question is whether the outcome <em>after</em> intervening is worse than the outcome before, and here the stem says it is.",
+        "distractors": {
+          "A": "Allocative efficiency is what the intervention was aiming at. The stem says the misallocation grew, so it was not achieved.",
+          "C": "The market failure is what prompted the intervention in the first place. Government failure is the separate problem of the remedy making matters worse.",
+          "D": "Free riding is a reason markets under-provide public goods. It is a cause of market failure, not a description of a failed intervention."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A recycling scheme delivers about £4 million of environmental benefit a year but costs £7 million a year to run, monitor and enforce. This is government failure caused by",
+      "options": {
+        "A": "Distortion of price signals.",
+        "B": "Unintended consequences.",
+        "C": "Excessive administrative costs.",
+        "D": "Information gaps in government."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The scheme does what it was designed to do — the environmental benefit is real. It simply costs more to operate than it delivers, so society is £3 million a year worse off for having it.<br />That is <strong>excessive administrative cost</strong>: the expense of implementing, monitoring and enforcing a policy exceeding the welfare gain it creates. The intervention is not misconceived, and nobody has behaved unexpectedly; it is just poor value for money.",
+        "distractors": {
+          "A": "No price has been distorted. The scheme does not set a minimum or maximum price, and the market's signalling function is untouched.",
+          "B": "Nothing unexpected has happened. Agents are behaving exactly as anticipated, and the policy is achieving its stated environmental aim.",
+          "D": "The government appears well informed — the benefit and the cost are both known. The problem is the ratio between them, not ignorance of either."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A tax on a demerit good is set so high that consumption falls well below the socially optimal level. This is possible because a demerit good",
+      "options": {
+        "A": "Cannot generate any external costs at all.",
+        "B": "Has no private benefit to its consumers.",
+        "C": "Is always consumed by well-informed buyers.",
+        "D": "Still yields some value to society."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The socially optimal quantity of a demerit good is lower than the market quantity — but it is not <strong>zero</strong>. The good delivers genuine private benefit to the people who buy it, and the industry supplying it provides employment and tax revenue that fund spending elsewhere.<br />So there is a level below which further reductions cost society more than they save. A tax set well above the external cost pushes consumption past that point, and the welfare loss from <em>under</em>-consumption can exceed the one the tax was correcting. Getting the size right requires information governments frequently do not have.",
+        "distractors": {
+          "A": "External costs are what make it a demerit good. Without them there would be no case for taxing it at all.",
+          "B": "Consumers buy it precisely because it benefits them privately. That private benefit is part of what is lost when consumption is driven too low.",
+          "C": "Demerit goods are often over-consumed because buyers are <em>not</em> well informed about the harm. Either way, buyer knowledge is not what makes over-taxation possible."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A city introduces a charge on single-use carrier bags. Shoppers switch to thicker reusable bags but buy so many of them that total plastic use rises. This is government failure caused by",
+      "options": {
+        "A": "Distortion of price signals.",
+        "B": "Unintended consequences.",
+        "C": "Excessive administrative costs.",
+        "D": "Information gaps in government."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Economic agents respond to policies in whatever way suits them, and not always the way the designer expected. Shoppers here did change behaviour, exactly as intended — just in a direction that defeated the purpose.<br />That is an <strong>unintended consequence</strong>, and the pattern is common enough to be worth anticipating. A policy aimed at one visible quantity, the number of thin bags, moved a different one that mattered more.",
+        "distractors": {
+          "A": "The charge does alter a price, but that is the intended mechanism working properly. The failure lies in how shoppers responded, not in the signal itself.",
+          "C": "Nothing suggests the charge is expensive to administer. It is collected at the till by retailers who are already taking payment.",
+          "D": "The government may well have failed to anticipate the switch, but the cause is best described by what actually happened — agents responding in a way that undermined the aim."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market failure has been identified in an industry. It does not automatically follow that the government should intervene, because",
+      "options": {
+        "A": "Intervention may leave the allocation worse than before.",
+        "B": "Market failures correct themselves given enough time.",
+        "C": "The government has no legal power to intervene.",
+        "D": "The market failure will be small in every case."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The existence of a market failure establishes only that the free market outcome is not efficient. It says nothing about whether any available intervention would do better.<br />Every policy carries its own risks — distorted signals, unintended responses, administrative cost, and the government's own imperfect information. Where those outweigh the gain, intervening makes things worse. The honest question is therefore comparative: not <em>is the market failing?</em> but <strong>would this particular intervention improve on it?</strong>",
+        "distractors": {
+          "B": "Many do not. A pure public good is never provided by the market, however long it is left, because the free rider problem does not go away.",
+          "C": "Governments in mixed economies have extensive powers to tax, subsidise, regulate and provide. Capability is not the constraint.",
+          "D": "Market failures vary enormously in scale. The external costs of power generation or road congestion are very large indeed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-2-q6",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 shows what happened to a market after the government intervened in it.<br />Using Table 1, the intervention",
+      "table": {
+        "caption": "Table 1: Costs to society of a market failure, £m per year",
+        "head": [
+          "",
+          "Before intervention",
+          "After intervention"
+        ],
+        "rows": [
+          [
+            "Welfare loss from the market failure",
+            "40",
+            "15"
+          ],
+          [
+            "Cost of administering the policy",
+            "0",
+            "32"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Has caused government failure, raising the total loss.",
+        "B": "Has caused government failure, but cut the total loss.",
+        "C": "Has succeeded, because the welfare loss has fallen.",
+        "D": "Has succeeded, because the administration cost is small."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Add up everything society gives up, in each column.<br />Before: welfare loss <strong>£40m</strong>, administration <strong>£0</strong> — total <strong>£40m</strong>.<br />After: welfare loss <strong>£15m</strong>, administration <strong>£32m</strong> — total <strong>£47m</strong>.<br />The intervention removed £25m of welfare loss and spent £32m doing it, so society is <strong>£7m a year worse off</strong>. That is government failure: a policy that works, in the narrow sense of hitting its target, while costing more than the problem it solved.<br />The trap is judging the policy on the first row alone.",
+        "distractors": {
+          "B": "The two halves contradict each other. Government failure means the total is worse, and here it rose from £40m to £47m.",
+          "C": "The welfare loss did fall, from £40m to £15m — but that £25m gain cost £32m to achieve. Reading only the first row is exactly the error the table is testing.",
+          "D": "£32m is not small; it is the larger of the two figures in the second column and more than the £25m improvement it bought."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator recruits most of its senior staff from the industry it oversees, and depends on that industry for almost all of the data it uses. The economic risk this creates is that",
+      "options": {
+        "A": "The industry will lobby for the regulator to be abolished.",
+        "B": "The regulator will lack the legal power to impose fines.",
+        "C": "The regulator will come to serve the firms it oversees.",
+        "D": "The regulator's administrative costs will exceed its benefits."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is <strong>regulatory capture</strong>: a regulator set up to act for consumers gradually comes to act for the industry instead.<br />Neither of the conditions in the stem is sinister on its own. Regulators need people who understand the industry, and the industry holds the data. But together they mean the regulator sees the world largely through the firms' eyes, and the people making the decisions expect to work in the sector again.<br />The result is intervention that leaves the outcome worse than no intervention would have — a government failure created by the body meant to correct a market failure.",
+        "distractors": {
+          "A": "A captured regulator is useful to the industry, not a threat to it. Firms have every reason to keep it in place.",
+          "B": "Legal powers are set by statute and are unaffected by who the regulator employs. The problem is how willingly the powers get used.",
+          "D": "Excessive administrative cost is a separate cause of government failure. Nothing in the stem suggests this regulator is expensive to run."
+        }
+      }
+    }
+  ]
+}

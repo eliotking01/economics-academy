@@ -1,0 +1,147 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.5.3",
+  "slug": "3-5-3-wage-determination",
+  "title": "Wage Determination",
+  "shortTitle": "Wage Determination",
+  "pageTitle": "Wage Determination Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on wage determination for Edexcel A-Level Economics: competitive and monopsony labour markets, unions and minimum wages.",
+  "intro": "Six original multiple-choice questions on how wages are determined, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on wage determination in competitive and monopsony labour markets, trade union power and the national minimum wage.",
+  "questions": [
+    {
+      "id": "edexcel-3-5-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A minimum wage is introduced, and the job losses that were predicted fail to materialise. One explanation offered is that the higher pay has",
+      "options": {
+        "A": "Attracted more workers into the labour market.",
+        "B": "Made workers more productive, offsetting the cost.",
+        "C": "Raised the price elasticity of demand for labour.",
+        "D": "Reduced the number of firms in the market."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The standard prediction is that a wage floor above equilibrium raises firms' costs, so demand for labour contracts and real wage unemployment appears. Edexcel gives worker motivation as one of the evaluations of that prediction: if better pay raises effort, retention and productivity, output per worker rises and the increase in average total cost is partly or wholly offset. If unit costs do not rise, the firm has no reason to cut employment.",
+        "distractors": {
+          "A": "More workers entering enlarges the <em>supply</em> of labour, which would increase measured unemployment at the minimum wage rather than reduce it.",
+          "C": "Nothing about a minimum wage changes how responsive labour demand is to the wage — and more elastic demand would mean <em>more</em> job losses, not fewer.",
+          "D": "Firms leaving the market would reduce employment further, which is the opposite of what the stem describes."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A monopsonist hires the number of workers at which the marginal cost of labour equals their marginal revenue product. The wage it then pays is read from",
+      "options": {
+        "A": "The demand curve, at that level of employment.",
+        "B": "The marginal cost of labour curve, at that level.",
+        "C": "The marginal revenue product curve, at that level.",
+        "D": "The supply curve of labour, at that level."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The monopsonist chooses the <em>quantity</em> where MCL = MRPL, but it does not have to pay what that last worker is worth. It pays the lowest wage at which that number of workers will supply their labour — the point on the <strong>supply curve</strong> at that quantity. Because MCL lies above the supply curve, the wage ends up below both MCL and MRPL. That gap between what a worker produces and what they are paid is the whole basis of the argument about monopsony power.",
+        "distractors": {
+          "A": "In a labour market the demand curve <em>is</em> the MRP curve, and the wage paid lies below it.",
+          "B": "MCL is the cost of hiring one more worker. It exceeds the wage precisely because raising the wage to attract that worker means raising it for everyone already employed.",
+          "C": "Reading the wage off MRPL would give what the worker is worth — which is what a competitive market would pay, not what a monopsonist pays."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A trade union enters wage negotiations during a strong boom, with its employer's order book full and profits at a record level. Compared with negotiating in a recession, its bargaining position is",
+      "options": {
+        "A": "Stronger, since a stoppage would cost the firm more.",
+        "B": "Stronger, since union density always rises in booms.",
+        "C": "Unchanged, since pay depends only on productivity.",
+        "D": "Weaker, since the firm can replace strikers easily."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A union's power rests on what a strike would cost the employer against what conceding would cost. With the order book full, every day of lost production is a day of lost sales that cannot be made up — and a highly profitable firm can afford to pay more without threatening its survival. In a recession the calculation reverses: the output was not being sold anyway, and the firm may even welcome the saving. Edexcel lists <strong>economic conditions</strong> among the determinants of union power, alongside union size, the profitability of the firm and government policy.",
+        "distractors": {
+          "B": "Union density may or may not move with the cycle, and the stem gives no information about it.",
+          "C": "The competitive model says wages reflect marginal revenue product, but the entire point of studying unions is that bargaining power moves wages away from it.",
+          "D": "Replacing striking workers is <em>harder</em> in a boom, when unemployment is low and skilled labour is scarce."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries introduce a minimum wage. In the first it is set just above the market equilibrium wage; in the second, far above it. Compared with the first, the second country will most likely see",
+      "options": {
+        "A": "A larger rise in low pay and more unemployment.",
+        "B": "A larger rise in low pay and no unemployment.",
+        "C": "A smaller rise in low pay and more unemployment.",
+        "D": "No change in either pay or unemployment."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A minimum wage works by forcing the wage above where supply and demand would settle. The further above equilibrium it is set, the bigger the gain for those who keep their jobs — and the bigger the gap between the number of workers willing to supply their labour at that wage and the number firms want to hire. Edexcel puts the <strong>size of the minimum wage</strong> first among the evaluations for exactly this reason: the same trade-off operates in both countries, but far more sharply in the second.",
+        "distractors": {
+          "B": "The higher the floor, the more the quantity of labour demanded contracts. Some unemployment is the counterpart of the larger pay rise.",
+          "C": "A minimum wage set further above equilibrium raises pay by more, not less, for those who remain employed.",
+          "D": "A minimum wage above the equilibrium always has an effect. It is one set <em>below</em> equilibrium that changes nothing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Demand for a specialist occupation rises sharply. Training for it takes six years. Compared with an occupation that can be learned quickly, the effect over the first two years will be",
+      "options": {
+        "A": "A large rise in the wage and little rise in employment.",
+        "B": "A large rise in both the wage and employment.",
+        "C": "A small rise in the wage and a large rise in employment.",
+        "D": "No change in either the wage or employment."
+      },
+      "answer": "A",
+      "model": {
+        "working": "When demand shifts right, how the adjustment divides between the wage and the quantity depends on the <strong>elasticity of supply</strong>. Where six years of training stands between a willing person and the job, almost nobody can respond within two years, so supply is close to vertical over that horizon and the extra demand shows up almost entirely in the wage. Where the work can be learned quickly, supply is elastic and the adjustment comes mostly through employment, with the wage barely moving.",
+        "distractors": {
+          "B": "Employment cannot rise much when the number of qualified people is effectively fixed in the short run. That is what inelastic supply means.",
+          "C": "This describes the other occupation — the one that can be learned quickly and whose supply is elastic.",
+          "D": "Demand has risen, so something must adjust. With supply fixed over this horizon, it is the wage that moves."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-5-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A dominant employer pays £400 a week to each of its 50 workers. To attract a 51st it must raise the weekly wage to £405 for everyone. The marginal cost of that 51st worker is",
+      "options": {
+        "A": "£5",
+        "B": "£405",
+        "C": "£655",
+        "D": "£20,655"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The marginal cost of labour is the change in the <strong>total</strong> wage bill, not the wage of the extra worker.<br />Before: 50 × £400 = <strong>£20,000</strong>.<br />After: 51 × £405 = <strong>£20,655</strong>.<br />MCL = £20,655 − £20,000 = <strong>£655</strong>.<br />The 51st worker is paid £405, but attracting them costs an extra £5 on each of the 50 already employed, which is £250 more. This is exactly why the marginal cost of labour lies <em>above</em> the supply curve for a monopsonist — and why it stops hiring sooner, and pays less, than a competitive employer would.",
+        "distractors": {
+          "A": "£5 is the rise in the wage rate, not the cost of taking on the extra worker.",
+          "B": "£405 is the wage the new worker receives. Treating that as the marginal cost ignores the £250 added to everyone else's pay.",
+          "D": "£20,655 is the new total wage bill. Marginal cost is the change in it."
+        }
+      }
+    }
+  ]
+}

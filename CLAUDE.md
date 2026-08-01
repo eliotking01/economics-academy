@@ -137,9 +137,14 @@ House rules:
 
 ## See also
 
+- `PROJECT-LOG.md` — what the two large pieces of work did, and the single
+  consolidated list of what is still flagged. **Start here.**
 - `ROADMAP.md` — planned work.
+- `QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
 - `REVIEW-NOTES.md` — problems found but not fixed, including open economics
   content errors. Log new ones there rather than fixing them.
+- `QUESTIONS_PROGRESS.md` — the question bank's batch record and the recurring
+  failure modes. Historical, but read §8 and §9 before extending the bank.
 - `docs/revision-notes-audit.md` — the SEO and accessibility audit already applied.
 - Third-party services: Formspree, Calendly, Stripe payment links, GA4. All IDs
   are public by design.

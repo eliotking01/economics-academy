@@ -1,0 +1,191 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.5.2",
+  "slug": "2-5-2-output-gaps",
+  "title": "Output Gaps",
+  "shortTitle": "Output Gaps",
+  "pageTitle": "Output Gaps Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on output gaps for Edexcel A-Level Economics: positive and negative gaps, the trend rate and the trouble with measuring them.",
+  "intro": "Eight original multiple-choice questions on output gaps, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on positive and negative output gaps, the trend rate of growth, and why potential output is so hard to measure.",
+  "questions": [
+    {
+      "id": "edexcel-2-5-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The long-term average growth rate of an economy, usually measured over a decade or more, is called its",
+      "options": {
+        "A": "Actual growth rate.",
+        "B": "Output gap.",
+        "C": "Potential output.",
+        "D": "Trend rate of growth."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>trend rate of growth</strong> is the average an economy manages over a long period, smoothing out the booms and recessions along the way.<br />It matters because it is the benchmark. Growth above trend suggests the economy is running hot and building inflationary pressure; growth below trend suggests spare capacity and rising unemployment. Neither judgement can be made from a single year's figure on its own.",
+        "distractors": {
+          "A": "The actual growth rate is the percentage change in real GDP over one period, typically a year. The trend is the average of many such years.",
+          "B": "An output gap is the difference between actual and potential GDP at a point in time, not a growth rate.",
+          "C": "Potential output is a level of output — what the economy could produce at full capacity — rather than a rate of change."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is running with a positive output gap of 5%. Its potential real GDP is £820bn. Its actual real GDP must therefore be",
+      "options": {
+        "A": "£779bn",
+        "B": "£825bn",
+        "C": "£861bn",
+        "D": "£4,100bn"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The gap is measured as a percentage <em>of potential GDP</em>, so potential is the base to apply it to.<br />5% of £820bn = <strong>£41bn</strong>.<br />A <strong>positive</strong> gap means actual output is <em>above</em> potential, so add it: £820bn + £41bn = <strong>£861bn</strong>.<br />The sign carries the economics. Running £41bn above capacity means labour shortages, overtime and machinery worked beyond its comfortable rate — which is why a positive gap comes with demand-pull inflation.",
+        "distractors": {
+          "A": "£779bn subtracts the £41bn instead of adding it, which is what a <em>negative</em> gap of 5% would give. The sign has been reversed.",
+          "B": "£825bn adds 5 rather than 5%. The gap is a percentage of £820bn, not a flat £5bn.",
+          "D": "£4,100bn multiplies by 5 instead of taking 5%. That would be an economy producing five times its capacity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's actual GDP is above its potential GDP. As well as a positive output gap, this situation is described as",
+      "options": {
+        "A": "A deflationary gap.",
+        "B": "An inflationary gap.",
+        "C": "A recessionary gap.",
+        "D": "A trend gap."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two names describe the same thing from different angles. <strong>Positive output gap</strong> says where output sits relative to capacity; <strong>inflationary gap</strong> says what that position does to prices.<br />With output above the sustainable level, firms are bidding for scarce labour, running machinery beyond its comfortable rate and paying overtime. Costs rise and demand exceeds what can be supplied, so the price level climbs.<br />The mirror pair is worth learning together: a negative output gap is also called a <strong>recessionary</strong> gap.",
+        "distractors": {
+          "A": "A deflationary gap is another name for a negative output gap, where weak demand puts downward pressure on prices.",
+          "C": "A recessionary gap is the same thing as a deflationary gap — output below potential, not above it.",
+          "D": "There is no such term. The trend rate of growth is a separate idea, describing long-run average growth."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy has a large negative output gap. The characteristics most likely to accompany it are",
+      "options": {
+        "A": "Excessive overtime and overuse of machinery.",
+        "B": "Labour shortages and demand-pull inflation.",
+        "C": "Rising investment and falling unemployment.",
+        "D": "Spare capacity and cyclical unemployment."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A negative output gap means actual GDP is below potential GDP: the economy is producing less than it could.<br />The resources that are not being used show up as <strong>spare capacity</strong> — idle machinery and premises — and as <strong>cyclical unemployment</strong>, workers out of a job because demand is deficient rather than because their skills are wrong.<br />With demand weak, there is little upward pressure on prices, so inflation is low or even negative. That is why the same situation is called a deflationary gap.",
+        "distractors": {
+          "A": "Overtime and overworked machinery are signs of an economy operating <em>above</em> capacity, which is a positive gap.",
+          "B": "Labour shortages and demand-pull inflation are again positive-gap characteristics, caused by demand exceeding what can be supplied.",
+          "C": "Investment rising and unemployment falling describe a recovery or a boom, not an economy well below capacity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A positive output gap can be drawn on a Classical AD/AS diagram but not on a Keynesian one. The reason is that the Keynesian LRAS curve",
+      "options": {
+        "A": "Becomes vertical at full capacity output.",
+        "B": "Is horizontal at low levels of output.",
+        "C": "Shifts outward whenever demand rises.",
+        "D": "Slopes upward throughout its length."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A positive output gap means actual output <em>exceeds</em> the full employment level, which requires the diagram to allow output beyond Yfe.<br />The Keynesian LRAS curve turns <strong>vertical at Yfe</strong>. Nothing can be produced to the right of it, so extra aggregate demand raises only the price level and no positive gap can be drawn at all.<br />The Classical curve is vertical too, but the Classical <em>model</em> permits output to sit temporarily beyond it, with wages and prices then rising to pull it back. That is the difference the question rests on.",
+        "distractors": {
+          "B": "The horizontal section explains why output can rise without inflation when there is spare capacity. It concerns the left of the diagram, not the right.",
+          "C": "LRAS shifts on changes in productive capacity, not on changes in demand. If it moved with demand there would be no capacity constraint at all.",
+          "D": "The upward-sloping section sits between the horizontal and vertical parts. The curve is not upward sloping throughout."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Classical economists argue that a negative output gap is temporary. The mechanism they rely on is",
+      "options": {
+        "A": "Falling wages and prices restoring full employment.",
+        "B": "Government spending raising aggregate demand.",
+        "C": "Rising confidence among firms and households.",
+        "D": "The central bank cutting interest rates sharply."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The Classical case rests on markets clearing. With output below capacity there is surplus labour and idle equipment, so <strong>wages and prices fall</strong>.<br />Lower costs shift SRAS to the right and the economy returns to full employment on its own. The gap closes without anyone doing anything, which is why the Classical conclusion is that intervention is unnecessary.<br />The Keynesian objection is not that the logic fails but that wages are <strong>sticky downwards</strong>. If they barely fall, the mechanism stalls and the economy can sit in a negative gap for years — which is where the case for intervention comes from.",
+        "distractors": {
+          "B": "Government spending is the <em>Keynesian</em> remedy. The Classical claim is that the economy needs no such help.",
+          "C": "Confidence returning would help, but it is not a mechanism the model guarantees. Price and wage flexibility is.",
+          "D": "Monetary policy is again an intervention. The Classical argument is about what happens in its absence."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Estimates of an economy's output gap published by different institutions often differ substantially. The main reason is that",
+      "options": {
+        "A": "Actual real GDP cannot be measured at all.",
+        "B": "Potential output is not directly observable.",
+        "C": "Output gaps are measured in nominal terms.",
+        "D": "The trend rate of growth is fixed by law."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An output gap needs two numbers. Actual GDP is measured, imperfectly but directly. <strong>Potential GDP is not measured at all</strong> — it is estimated from models of how much the economy could produce if every resource were fully employed.<br />Different models make different assumptions about the capital stock, participation in the labour force and the pace of technological change, so they reach different answers. Revisions years after the event are common and can be large.<br />That uncertainty is not academic: policy is set on these estimates, and acting on a gap that turns out not to exist is a live route to government failure.",
+        "distractors": {
+          "A": "Actual GDP is measured by three separate methods and published quarterly. It is imprecise, but it is observable.",
+          "C": "Output gaps are calculated in real terms, precisely so that inflation does not distort the comparison.",
+          "D": "No law fixes the trend rate. It is an estimate too, and part of the same difficulty."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government believes the economy has a large negative output gap when in fact it has none, and responds with a large fiscal expansion. The most likely result is",
+      "options": {
+        "A": "A fall in both real output and the price level.",
+        "B": "Demand-pull inflation with little extra output.",
+        "C": "No effect on either output or the price level.",
+        "D": "A rise in real output with stable prices."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is the measurement problem turning into a policy problem.<br />The government expects to be operating on the flat part of the supply curve, where spare capacity means extra demand becomes extra output. In fact the economy is already at capacity, so the fiscal expansion meets a vertical constraint. Aggregate demand shifts right and there is nothing more to produce.<br />The result is <strong>demand-pull inflation</strong> with very little to show for it in real terms — a textbook case of <strong>government failure</strong> caused by imperfect information, and the reason central banks treat output gap estimates so cautiously.",
+        "distractors": {
+          "A": "Expansionary policy raises aggregate demand, which pushes the price level up rather than down.",
+          "C": "Aggregate demand has shifted right, so something must change. At full capacity it is the price level that moves.",
+          "D": "That is the outcome the government <em>expected</em>, and it requires spare capacity. The premise of the question is that there is none."
+        }
+      }
+    }
+  ]
+}

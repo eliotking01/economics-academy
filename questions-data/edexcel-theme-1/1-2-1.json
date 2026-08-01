@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.1",
+  "slug": "1-2-1-rational-decision-making",
+  "title": "Rational Decision Making",
+  "shortTitle": "Rational Decision Making",
+  "pageTitle": "Rational Decision Making Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on rational decision making for Edexcel A-Level Economics: utility and profit maximisation and the limits of rationality.",
+  "intro": "Six original multiple-choice questions on rational decision making, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on the rationality assumption, what each economic agent maximises, and where the assumption breaks down.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In classical economic theory, a rational economic agent is one who",
+      "options": {
+        "A": "Always makes the choice that other people expect.",
+        "B": "Chooses the option with the highest net benefit.",
+        "C": "Never changes a decision once it has been made.",
+        "D": "Weighs only the money cost of each option."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Rationality in the classical model means choosing so as to <strong>maximise self-interest</strong>, on a logical calculation of the expected benefits and costs of each option.<br />The agent compares the net benefit of every alternative and takes the largest. Note what this does not require: perfect foresight, or that everyone reaches the same answer. Two people with different tastes can both be rational and choose differently, because the benefits they are weighing are their own.",
+        "distractors": {
+          "A": "Following others is not rational calculation — it is the herding behaviour that behavioural economics identifies as a departure from the model.",
+          "C": "A rational agent revises a decision whenever the net benefits change. Refusing to revise would ignore new information.",
+          "D": "Net benefit covers everything the agent values, including time, effort and enjoyment. Restricting it to money would leave most of the calculation out."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-1-q2",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 describes four economic agents.<br />Using Table 1, the agent assumed in classical theory to maximise profit is",
+      "table": {
+        "caption": "Table 1: Four economic agents",
+        "head": [
+          "",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Agent 1",
+            "A household deciding how to spend its weekly budget"
+          ],
+          [
+            "Agent 2",
+            "A worker choosing between two job offers"
+          ],
+          [
+            "Agent 3",
+            "A government deciding how to allocate its budget"
+          ],
+          [
+            "Agent 4",
+            "A business deciding how much output to produce"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Agent 1.",
+        "B": "Agent 2.",
+        "C": "Agent 3.",
+        "D": "Agent 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Classical theory gives each agent its own maximand. <strong>Consumers</strong> maximise utility, <strong>workers</strong> maximise net welfare from employment, <strong>governments</strong> maximise social welfare, and <strong>firms</strong> maximise profit.<br />Agent 4 is the firm, so profit — total revenue minus total costs — is what it is assumed to pursue. Everything else the model says about how firms choose output follows from that single assumption.",
+        "distractors": {
+          "A": "A household spending its budget is a consumer, and consumers are assumed to maximise <strong>utility</strong>, meaning the satisfaction they get from what they buy.",
+          "B": "A worker choosing between jobs is assumed to maximise <strong>net welfare</strong> from employment, balancing pay against hours, conditions and other benefits.",
+          "C": "A government allocating its budget is assumed to maximise <strong>social welfare</strong> — the public interest, rather than any private gain."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A shopper facing 40 broadband tariffs picks the first one that looks acceptable rather than comparing them all. This is best described as",
+      "options": {
+        "A": "Altruism overriding self-interest.",
+        "B": "Bounded rationality limiting the comparison.",
+        "C": "Emotional influence created by advertising.",
+        "D": "Utility maximisation with full information."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Bounded rationality</strong> is decision-making under limits of information, time and mental effort. Forty tariffs is more than most people will work through, so the shopper stops at the first acceptable option rather than the best one.<br />This is not stupidity, and it may even be sensible — the time saved is worth something. But it means the outcome is <em>satisfactory rather than optimal</em>, and the classical model, which assumes the whole comparison gets made, predicts the wrong choice.",
+        "distractors": {
+          "A": "Altruism is acting against self-interest for the benefit of others. The shopper is pursuing their own interest, just not exhaustively.",
+          "C": "Nothing in the stem involves marketing or emotional appeal. What stops the comparison is its sheer size.",
+          "D": "Full information is precisely what the shopper does not act on. Under the classical assumption they would compare all 40 and take the best."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A commuter regularly gives money to a charity collection at the station, gaining nothing material in return. Against the rationality assumption, this is best explained by",
+      "options": {
+        "A": "Bounded rationality about the cost involved.",
+        "B": "Emotional influence created by advertising.",
+        "C": "Habit, applied to weekly spending.",
+        "D": "Regard for others, which self-interest omits."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The classical model assumes agents act to maximise their own net benefit. Giving money away for no material return does not fit, and the standard explanation is <strong>altruism</strong> — acting for moral or social reasons rather than pure self-interest.<br />This matters beyond charity. Fairness, reciprocity and a willingness to bear a cost to punish unfair behaviour all show up in real markets, and none of them follow from self-interest alone.",
+        "distractors": {
+          "A": "Bounded rationality is about limited information and limited computing power. The commuter knows exactly what the donation costs and gives anyway.",
+          "B": "There is no marketing in the scenario. The behaviour is regular and deliberate rather than prompted by an appeal.",
+          "C": "Habit explains why the giving is regular, but not why it happens at all. A self-interested agent would have no reason to start."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A driver refills at the same petrol station every week without ever checking whether it is the cheapest nearby. The limitation of the rationality assumption this illustrates is",
+      "options": {
+        "A": "Altruism towards the station's owner.",
+        "B": "Maximising net welfare from employment.",
+        "C": "Reliance on habit, not full comparison.",
+        "D": "The influence of a government nudge."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Consumers make far too many decisions to calculate each one from scratch, so they fall back on <strong>habit</strong> and simple <strong>rules of thumb</strong> — in this case, always use the same station.<br />The rule saves time, which is genuinely valuable. The cost is that it stops responding to information: if a cheaper station opens next door, the driver will not notice. The classical model assumes that comparison is made afresh every time, and here it is not made at all.",
+        "distractors": {
+          "A": "Nothing suggests the driver is trying to benefit the owner. The choice is about convenience.",
+          "B": "That is what a worker is assumed to maximise when choosing a job. This decision is a consumer's, and no employment is involved.",
+          "D": "A nudge is a deliberate change to how choices are presented. Nobody has designed this — it is the driver's own routine."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Consumers in a market consistently fail to compare prices before buying. Compared with the prediction of the classical model, the most likely consequence is that",
+      "options": {
+        "A": "Firms face weaker pressure to keep prices down.",
+        "B": "Firms face stronger pressure to cut prices.",
+        "C": "The market allocates resources more efficiently.",
+        "D": "Utility is maximised for every consumer."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Competitive pressure works through consumers switching. A firm that raises its price loses customers to rivals, which is what keeps prices near costs.<br />If consumers do not compare, that mechanism weakens. A firm can charge more without losing much business, so prices sit higher and the incentive to be efficient is blunted. This is why the limits of rationality are treated as a <strong>source of market failure</strong> rather than as a curiosity: they change what markets actually deliver.",
+        "distractors": {
+          "B": "Pressure to cut prices comes from customers who will move. Consumers who do not compare cannot move for a reason they never noticed.",
+          "C": "Efficient allocation depends on consumers responding to price signals. Where they do not, resources stay with firms that do not deserve them on price or quality.",
+          "D": "A consumer who does not compare may well end up paying more than necessary for a worse product. Utility is not being maximised."
+        }
+      }
+    }
+  ]
+}

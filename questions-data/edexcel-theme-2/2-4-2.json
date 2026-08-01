@@ -1,0 +1,199 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.4.2",
+  "slug": "2-4-2-injections-withdrawals",
+  "title": "Injections and Withdrawals",
+  "shortTitle": "Injections and Withdrawals",
+  "pageTitle": "Injections and Withdrawals Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on injections and withdrawals for Edexcel A-Level Economics: the extended circular flow and its equilibrium condition.",
+  "intro": "Seven original multiple-choice questions on injections and withdrawals, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on the three injections and three withdrawals, the equilibrium condition, and how leakages affect national income.",
+  "questions": [
+    {
+      "id": "edexcel-2-4-2-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 shows four money flows and where each one comes from or goes to.<br />Using Table 1, the only flow that is an injection is",
+      "table": {
+        "caption": "Table 1: Four money flows",
+        "head": [
+          "",
+          "Flow",
+          "Source or destination"
+        ],
+        "rows": [
+          [
+            "Flow 1",
+            "Savings",
+            "The financial sector"
+          ],
+          [
+            "Flow 2",
+            "Investment",
+            "The financial sector"
+          ],
+          [
+            "Flow 3",
+            "Taxation",
+            "The government"
+          ],
+          [
+            "Flow 4",
+            "Imports",
+            "Overseas"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Flow 1.",
+        "B": "Flow 2.",
+        "C": "Flow 3.",
+        "D": "Flow 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The financial sector appears twice in the table, once on each side, and that is the point worth noticing.<br />Savings <em>leave</em> the circular flow and go into the financial sector, so they are a withdrawal. Investment comes <em>out</em> of the financial sector and back into the flow as spending by firms on capital goods, so it is an injection.<br />The same institutions handle both, which is why the direction of travel rather than the counterparty is what classifies a flow.",
+        "distractors": {
+          "A": "Savings are income not spent, leaking out of the flow into the financial sector. That makes them a withdrawal.",
+          "C": "Taxation is income paid to the government rather than spent on domestic output, so it is a withdrawal.",
+          "D": "Imports are spending that goes overseas rather than to domestic producers, so the money leaves the flow."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In the circular flow model, a leakage is best defined as income that is",
+      "options": {
+        "A": "Earned abroad by domestic residents in a year.",
+        "B": "Paid to households by firms in the form of wages.",
+        "C": "Spent by firms on new capital goods each year.",
+        "D": "Withheld from spending on domestic output."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A withdrawal, or leakage, is income that <strong>does not return to domestic firms as demand</strong> for what they produce.<br />All three withdrawals fit that description. Saving is income held back rather than spent; taxation goes to the government instead; imports are spending that reaches producers abroad. In every case the money leaves the domestic circular flow, so the flow shrinks.<br />Note that the money is not destroyed — savings and taxes come back as investment and government spending. But they only do so as <em>injections</em>, which is a separate flow.",
+        "distractors": {
+          "A": "Income earned abroad by residents flows <em>into</em> the domestic economy. It is closer to an injection than a withdrawal.",
+          "B": "Wages paid by firms to households are the money flow that keeps the basic circular flow going. They stay inside it.",
+          "C": "Spending by firms on capital goods is <strong>investment</strong>, which is an injection."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Savings flow out of the circular flow into the financial sector, and investment flows from the financial sector back into it. The financial sector therefore",
+      "options": {
+        "A": "Channels withdrawn income back into the flow.",
+        "B": "Creates new money that did not exist before.",
+        "C": "Permanently removes income from the economy.",
+        "D": "Prevents the circular flow from ever expanding."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Saving and investment are the same money seen at two moments. Households put income aside, banks and pension funds hold it, and firms borrow it to buy capital goods.<br />So the financial sector is the <strong>link</strong> between one withdrawal and one injection. That is why saving is not simply lost to the economy — its effect on national income depends on whether the financial sector passes it on.<br />It also explains why a banking crisis is so damaging: savings still leak out, but the channel returning them as investment is blocked.",
+        "distractors": {
+          "B": "Commercial banks can create credit, but that is a separate topic. Here the money being invested is money that was saved.",
+          "C": "Saving would only be permanently removed if it were never lent on. The whole point of the financial sector is that it is.",
+          "D": "The flow expands whenever injections exceed withdrawals, and investment is one of the injections that can make that happen."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-2-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's circular flow is in equilibrium. Investment is £150bn, government spending is £290bn, savings are £180bn, taxation is £300bn and imports are £195bn. Exports must therefore be",
+      "options": {
+        "A": "£195bn",
+        "B": "£235bn",
+        "C": "£440bn",
+        "D": "£675bn"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Equilibrium means <strong>I + G + X = S + T + M</strong>, so rearrange for the unknown.<br />Withdrawals: £180bn + £300bn + £195bn = <strong>£675bn</strong>.<br />Known injections: £150bn + £290bn = <strong>£440bn</strong>.<br />Exports = £675bn − £440bn = <strong>£235bn</strong>.<br />The check is that injections now total £150bn + £290bn + £235bn = £675bn, matching withdrawals exactly.",
+        "distractors": {
+          "A": "£195bn is the value of imports. Exports and imports are separate flows on opposite sides of the equation and need not be equal.",
+          "C": "£440bn is investment plus government spending — the injections already known. Exports are what has to be <em>added</em> to them.",
+          "D": "£675bn is total withdrawals. Exports have to bring injections up to that figure, not equal it on their own."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts income tax rates while nothing else in the economy changes. In terms of the circular flow of income this is",
+      "options": {
+        "A": "A fall in a withdrawal, so the flow expands.",
+        "B": "A fall in an injection, so the flow contracts.",
+        "C": "A rise in a withdrawal, so the flow contracts.",
+        "D": "A rise in an injection, so the flow expands."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Taxation is one of the three <strong>withdrawals</strong>, so cutting tax rates reduces a leakage rather than adding an injection.<br />Less income leaves the flow, so more of it stays in as consumer spending. With injections unchanged and withdrawals lower, injections now exceed withdrawals and the circular flow <strong>expands</strong>.<br />The outcome is the same as raising an injection would produce, but the route is different — and getting the classification right is what the question is testing.",
+        "distractors": {
+          "B": "Taxation is a withdrawal, not an injection. Government <em>spending</em> is the injection, and it has not changed.",
+          "C": "Tax rates have been cut, so the withdrawal falls rather than rising.",
+          "D": "Again, the wrong side of the equation. A tax cut works by reducing what leaks out."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An initial injection of £1bn into the circular flow raises national income by considerably more than £1bn. This happens because the money",
+      "options": {
+        "A": "Is created anew by the banking system.",
+        "B": "Never leaves the circular flow at any point.",
+        "C": "Passes on as income and is spent again.",
+        "D": "Reduces withdrawals by the same amount."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is the <strong>multiplier process</strong>. The £1bn is spent, and that spending becomes somebody's income — builders, suppliers, their employees.<br />Those recipients spend a proportion of it, set by their <strong>marginal propensity to consume</strong>, and that spending becomes income for others, who spend a proportion in turn. Each round is smaller than the last, but they add up to considerably more than the original £1bn.<br />How much more depends on how much leaks out at each round through saving, taxation and imports.",
+        "distractors": {
+          "A": "No new money is being created here. The same pounds are changing hands repeatedly, which is a different mechanism from credit creation.",
+          "B": "Money does leak out at every round, through saving, taxation and imports. That leakage is exactly what limits the size of the multiplier.",
+          "D": "Withdrawals are unaffected as a proportion of income. If anything, higher income generates more saving, tax and imports in absolute terms."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two economies receive an identical injection. One buys a far larger share of its goods from abroad than the other. In the more import-dependent economy the eventual rise in national income will be",
+      "options": {
+        "A": "Larger, because imports add to the circular flow.",
+        "B": "Larger, because trade raises national income.",
+        "C": "Smaller, because more income leaks abroad.",
+        "D": "The same, because the injection is identical."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Imports are a <strong>withdrawal</strong>. At every round of the multiplier process, a share of the income being passed on is spent on foreign goods and leaves the domestic circular flow.<br />The higher that share, the less is left to become domestic income at the next round, so the rounds die away faster and the total effect is smaller.<br />This is why the multiplier tends to be smaller in a very open economy, and it is one reason the same fiscal stimulus does more for output in a large, relatively closed economy than in a small trading one.",
+        "distractors": {
+          "A": "Imports take money out of the domestic flow rather than adding to it. They are spending on output produced elsewhere.",
+          "B": "Trade brings real benefits, but that is a separate argument. Within the multiplier process, imports are a leakage.",
+          "D": "The injection is the same, but what happens to it afterwards is not. The size of the leakages determines how far it goes."
+        }
+      }
+    }
+  ]
+}

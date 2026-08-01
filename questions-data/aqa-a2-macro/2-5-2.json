@@ -1,0 +1,216 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.5.2",
+  "slug": "2-5-2-supply-side-policies",
+  "title": "Supply-Side Policies",
+  "shortTitle": "Supply-Side Policies",
+  "pageTitle": "Supply-Side Policies Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on supply-side policies for AQA A-Level Economics: market-based and interventionist measures, and how to evaluate them.",
+  "intro": "Eight original multiple-choice questions on supply-side policies, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Eight original multiple-choice questions on market-based and interventionist supply-side policies and their evaluation, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-5-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Supply-side policies aim to",
+      "options": {
+        "A": "Reduce aggregate demand in order to control inflation.",
+        "B": "Reduce the size of the government's budget deficit.",
+        "C": "Shift the aggregate demand curve to the right.",
+        "D": "Shift the long-run aggregate supply curve to the right."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Supply-side policies work on the economy's <strong>productive potential</strong> — the maximum it could produce with all its resources fully employed. Raising that potential shifts the LRAS curve to the right, which is equivalent to shifting the production possibility frontier outwards.<br />That is what distinguishes them from demand-side policies, which move the economy within its existing capacity rather than expanding it.",
+        "distractors": {
+          "A": "Reducing aggregate demand is contractionary demand-side policy, using interest rates or taxation. It does nothing to capacity.",
+          "B": "Some supply-side measures worsen the deficit and others improve it, but the deficit is not what they aim at.",
+          "C": "Shifting AD right is expansionary demand-side policy. Supply-side policy works on the other side of the model."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four supply-side measures.<br />Using Table 1, the interventionist policy is",
+      "table": {
+        "caption": "Table 1: Four supply-side measures",
+        "head": [
+          "Policy",
+          "Measure"
+        ],
+        "rows": [
+          [
+            "Policy 1",
+            "Cutting the rate of corporation tax"
+          ],
+          [
+            "Policy 2",
+            "Government funding for apprenticeship places"
+          ],
+          [
+            "Policy 3",
+            "Reducing the powers of trade unions"
+          ],
+          [
+            "Policy 4",
+            "Deregulating the energy market"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Policy 1.",
+        "B": "Policy 2.",
+        "C": "Policy 3.",
+        "D": "Policy 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The dividing line is whether the state is <em>spending</em> or <em>withdrawing</em>. <strong>Interventionist</strong> policies raise capacity through government spending; <strong>market-based</strong> policies raise it by removing government interference and sharpening incentives.<br />Policy 2 commits public money to training, so it is interventionist. It also carries the characteristic interventionist drawback: it costs money now and the benefit arrives years later.",
+        "distractors": {
+          "A": "Cutting corporation tax is market-based. It works by strengthening the incentive to start and expand firms, not by government spending.",
+          "C": "Reducing trade union powers is market-based, and one of the more contentious. It aims to lower wage costs so firms hire more.",
+          "D": "Deregulating a market is the clearest market-based measure of all — the government is removing its own restrictions."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Government spending on transport infrastructure raises productive capacity mainly by",
+      "options": {
+        "A": "Increasing the quantity of labour available to firms.",
+        "B": "Lowering firms' costs and raising their efficiency.",
+        "C": "Raising the incentive for people to join the labour force.",
+        "D": "Reducing the government's budget deficit."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Better roads, railways and communications reduce the time and cost of moving goods, workers and information. Firms can produce and distribute more from the same inputs, so the economy's <strong>capacity</strong> rises and LRAS shifts right.<br />The characteristic weakness is timing: infrastructure projects are expensive and slow. HS2 has been in planning since 2009, so the capacity gain arrives long after the money is spent.",
+        "distractors": {
+          "A": "Infrastructure does not create workers. Migration or a rising birth rate would change the quantity of labour.",
+          "C": "Incentives to join the labour force are affected by tax and benefit changes, not by building a railway.",
+          "D": "Infrastructure spending <em>worsens</em> the deficit in the short run, since it is money the government has to find now."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Cutting the basic rate of income tax is treated as a supply-side policy because it",
+      "options": {
+        "A": "Increases the incentive to work.",
+        "B": "Increases government tax revenue immediately.",
+        "C": "Reduces firms' costs of production.",
+        "D": "Weakens the incentive for people to seek work."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Keeping more of each pound earned raises the reward for working, which can draw economically inactive people into the labour force and encourage others to work longer hours. A larger, more willing labour force is a larger productive capacity, so LRAS shifts right.<br />The evaluation cuts both ways, though. Some workers respond to a tax cut by working <em>fewer</em> hours, because they can reach the same take-home pay more easily — and cutting only the top rates would widen inequality.",
+        "distractors": {
+          "B": "Revenue falls immediately when a rate is cut. The Laffer curve argument is that it may recover later through a larger tax base, which is a long way from 'immediately'.",
+          "C": "Income tax is paid by individuals on their earnings. It is corporation tax and indirect taxes that sit in firms' costs.",
+          "D": "This has the incentive backwards. A tax cut increases the gap between working and not working."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Cutting the national minimum wage is intended to raise employment and productive capacity. One reason it may fail is that it",
+      "options": {
+        "A": "Increases firms' costs of production.",
+        "B": "Narrows the gap between wages and benefits.",
+        "C": "Raises the incentive for firms to invest in capital.",
+        "D": "Reduces the number of people claiming benefits."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The intended chain is straightforward: cheaper labour, so firms hire more, so output and capacity rise.<br />The problem is on the supply side of the labour market. If low-paid work now pays little more than claiming benefits, the <strong>financial reward for taking a job falls</strong> and some people withdraw from the labour force altogether. Labour supply contracts, and productive capacity can end up lower rather than higher.",
+        "distractors": {
+          "A": "A lower minimum wage <em>reduces</em> firms' costs. That is the mechanism the policy relies on, not an objection to it.",
+          "C": "Cheaper labour makes firms rather less likely to substitute capital for workers, and in any case that would not explain the policy failing.",
+          "D": "Fewer benefit claims would be a sign the policy was working. The objection is that the opposite may happen."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government privatises a state-owned industry in which barriers to entry are very high. The policy may fail to raise efficiency because the privatised firm",
+      "options": {
+        "A": "Faces little competition once privatised.",
+        "B": "Has less access to government funding than before.",
+        "C": "Must pay corporation tax on its profits.",
+        "D": "Will always be more productively efficient."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Privatisation is supposed to work through the profit motive: private owners cut costs to raise returns. But that discipline depends on <strong>competition</strong>. Where barriers to entry are very high — railways, water — the privatised firm simply becomes a private monopoly.<br />A monopolist can raise profit by restricting output and charging more, which is easier than becoming efficient. That is why privatisation of natural monopolies is normally paired with a regulator.",
+        "distractors": {
+          "B": "Losing state funding is a real change, but a privatised firm can raise finance from shareholders and lenders instead. It is the absence of competitive pressure, not the absence of subsidy, that undermines the efficiency gain.",
+          "C": "Corporation tax is paid by private firms generally and is not what determines whether privatisation raises efficiency.",
+          "D": "This is the assumption the question is challenging. Without competitive pressure there is no guarantee of efficiency at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching an AD/AS diagram, the difference between a successful supply-side policy and expansionary fiscal policy is that the supply-side policy",
+      "options": {
+        "A": "Lowers real output in the long run.",
+        "B": "Raises output by shifting AD rather than LRAS.",
+        "C": "Raises output while easing price pressure.",
+        "D": "Raises the price level by more."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Draw the two side by side. Expansionary fiscal policy shifts <strong>AD</strong> right along an upward-sloping supply curve, so output and the price level rise together.<br />A successful supply-side policy shifts <strong>LRAS</strong> right instead. With AD unchanged, the new intersection sits further right and lower down: real output rises <em>and</em> the price level falls.<br />That is why supply-side measures are described as delivering non-inflationary growth — and why they are the standard answer to the growth-versus-inflation conflict.",
+        "distractors": {
+          "A": "Successful supply-side policy raises long-run output. That is its entire purpose.",
+          "B": "This describes the fiscal policy, not the supply-side one. Shifting LRAS is what makes a policy supply-side.",
+          "D": "The price level falls rather than rising. It is the demand-side policy that pushes prices up."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-5-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government introduces a large programme of education and training reform. The strongest objection to relying on it to reduce unemployment in the next two years is that",
+      "options": {
+        "A": "It has no effect on the economy's productive capacity.",
+        "B": "It raises inequality between skilled and unskilled workers.",
+        "C": "Its effects take many years to reach the labour force.",
+        "D": "It shifts aggregate demand rather than long-run supply."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Education reform is one of the most effective supply-side measures available, but it works on the <strong>future</strong> workforce. Children educated under a new curriculum reach the labour market a decade later, and retraining schemes take years to run at scale.<br />So the objection is not that the policy is wrong, but that it is answering a different question: over a two-year horizon, unemployment would have to be tackled by demand-side measures instead. Time lags are the standard evaluation point on interventionist supply-side policy, alongside cost and opportunity cost.",
+        "distractors": {
+          "A": "Raising the quality of labour is exactly how education raises productive capacity. The objection is about when, not whether.",
+          "B": "Better education tends to <em>narrow</em> the skills gap over time, and interventionist measures of this kind generally reduce inequality rather than widening it.",
+          "D": "Education spending does add to aggregate demand in the short run, but its purpose and main effect are on long-run supply."
+        }
+      }
+    }
+  ]
+}

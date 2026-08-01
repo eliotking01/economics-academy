@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.4.3",
+  "slug": "3-4-3-monopolistic-competition",
+  "title": "Monopolistic Competition",
+  "shortTitle": "Monopolistic Competition",
+  "pageTitle": "Monopolistic Competition Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on monopolistic competition for Edexcel A-Level Economics: differentiation, long-run normal profit and consumer impacts.",
+  "intro": "Seven original multiple-choice questions on monopolistic competition, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on product differentiation, the adjustment to long-run normal profit, and what the structure means for consumers.",
+  "questions": [
+    {
+      "id": "edexcel-3-4-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Firms in a monopolistically competitive market are making losses. As the market adjusts towards long-run equilibrium, each remaining firm's demand curve will",
+      "options": {
+        "A": "Become horizontal at the market price.",
+        "B": "Shift left, as customers are lost to rivals.",
+        "C": "Shift right, as rivals' customers arrive.",
+        "D": "Stay where it is, since entry is free."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Losses drive some firms out of the market. With fewer sellers left, the customers who used to buy from them are shared among those that remain, so every surviving firm's demand curve shifts <strong>right</strong>. That continues until the losses have gone — until AR is once again tangent to AC at the profit-maximising output and firms earn normal profit. It is the exact mirror image of the entry adjustment, where new firms take demand away and each existing firm's curve shifts left.",
+        "distractors": {
+          "A": "The demand curve stays downward sloping. Products remain differentiated however many firms there are, and that is what separates this structure from perfect competition.",
+          "B": "A leftward shift is what <em>entry</em> causes, when short-run supernormal profit attracts newcomers. Losses do the opposite.",
+          "D": "Free entry and exit is precisely why the curve moves. It is the mechanism that restores normal profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm in monopolistic competition earns supernormal profit in the short run but only normal profit in the long run. Its scope for dynamic efficiency is therefore",
+      "options": {
+        "A": "Limited, since the profit is only temporary.",
+        "B": "Nil, since it never earns supernormal profit.",
+        "C": "Strong, since it earns supernormal profit each year.",
+        "D": "Unaffected, since dynamic efficiency needs no profit."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Dynamic efficiency needs supernormal profit to fund research and development. A monopolistically competitive firm does earn some — but only in the short run, because free entry competes it away, and in long-run equilibrium AR is tangent to AC and nothing is left over. So there is <em>some</em> scope for investment, which is why Edexcel's page says these firms may invest to some extent, but nothing like the sustained flow available to a firm protected by high barriers to entry.",
+        "distractors": {
+          "B": "The firm does earn supernormal profit in the short run. The constraint is that it does not last, not that it never arises.",
+          "C": "The profit does not persist. Entry removes it, which is the defining consequence of low barriers to entry.",
+          "D": "Dynamic efficiency requires funds to reinvest, so profit is exactly what it depends on."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Some economists argue that consumers pay more in monopolistic competition than they would in a more concentrated market. The strongest version of that argument is that the many small firms",
+      "options": {
+        "A": "Agree among themselves to hold prices up.",
+        "B": "Are protected from entry by high barriers.",
+        "C": "Face no competition on quality or service.",
+        "D": "Never reach a scale that cuts their costs."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A market served by many small firms means each of them produces a small output, and none gets far down its long-run average cost curve. Without purchasing, technical or marketing economies of scale, unit costs stay high — and prices have to cover them. Edexcel's page makes exactly this point: these firms are small and lack economies of scale, which can lead to higher production costs and higher prices. The counter-argument the page also gives is that many firms and free entry compete prices <em>down</em>, so the net effect is genuinely uncertain.",
+        "distractors": {
+          "A": "With many firms and free entry, collusion is close to impossible to organise, let alone sustain.",
+          "B": "Barriers to entry in monopolistic competition are low by definition, which is why long-run profit falls back to normal.",
+          "C": "These firms compete on quality and service intensely. It is one of their principal forms of non-price competition."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-3-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 reproduces four notes a student has made on monopolistic competition.<br />From Table 1, the note that is wrong is",
+      "table": {
+        "caption": "Table 1: Four notes a student has made on monopolistic competition",
+        "head": [
+          "",
+          "Note"
+        ],
+        "rows": [
+          [
+            "Note 1",
+            "Choice is wide, since products are differentiated"
+          ],
+          [
+            "Note 2",
+            "Prices may be high, since firms lack economies of scale"
+          ],
+          [
+            "Note 3",
+            "Quality is driven up by competition for customers"
+          ],
+          [
+            "Note 4",
+            "Profits stay high, since barriers to entry are strong"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Note 1.",
+        "B": "Note 2.",
+        "C": "Note 3.",
+        "D": "Note 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Barriers to entry in monopolistic competition are <strong>low</strong>, and that is the whole reason long-run profit falls back to normal. Note 4 describes an oligopoly or a monopoly instead. The other three are the standard consumer effects Edexcel sets out: wide choice from differentiation, potentially high prices because small firms miss out on economies of scale, and quality pushed up by the need to stand out from close rivals.",
+        "distractors": {
+          "A": "Correct. Differentiation is what gives consumers variety — though the page notes the differences can be superficial.",
+          "B": "Correct, and one of the two sides of the price argument. Small scale means high unit costs.",
+          "C": "Correct. Competing for customers without being able to rely on price pushes firms towards quality and service."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A shopper finds forty brands of shampoo on one supermarket shelf, all containing near-identical ingredients and differing mainly in packaging and scent. This illustrates the argument that in monopolistic competition",
+      "options": {
+        "A": "Choice may be less real than it appears.",
+        "B": "Firms cannot make supernormal profit at all.",
+        "C": "Prices are always lower than under monopoly.",
+        "D": "Products must be identical to be competitive."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Differentiation is what gives monopolistic competition its variety, and Edexcel lists wider choice among the benefits to consumers. But the page gives the counter-argument as well: differentiation can be <strong>surface-level and not meaningful</strong>, so what looks like forty choices may be one product in forty packages. The shopper gains the appearance of choice, and pays for the branding that creates the appearance.",
+        "distractors": {
+          "B": "Firms in monopolistic competition do earn supernormal profit in the short run. Free entry removes it only in the long run.",
+          "C": "The page argues the opposite is possible, precisely because small firms lack economies of scale and so carry higher unit costs.",
+          "D": "Identical products define perfect competition. Differentiation is exactly what distinguishes monopolistic competition from it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Firms in monopolistic competition rely heavily on quality, service and location rather than on price. The reason is that each firm's market power is",
+      "options": {
+        "A": "Great enough to set any price it chooses.",
+        "B": "Non-existent, so it must take the market price.",
+        "C": "Small, so a price cut is soon matched.",
+        "D": "Sustained by high barriers to entry."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A monopolistically competitive firm has <em>some</em> market power — its product is differentiated, so it faces a downward-sloping demand curve and can choose its own price. But with many close substitutes a step or two away, that power is slight. Cutting the price wins only a limited number of extra customers, because rivals are numerous and their products are nearly as good, and any advantage is short-lived. Competing on quality, service, convenience and loyalty is simply more effective.",
+        "distractors": {
+          "A": "That describes a monopoly. This firm's customers have many alternatives, and it would lose most of them.",
+          "B": "A firm with no market power at all is a price taker in perfect competition, and its product would be identical to every rival's.",
+          "D": "Barriers to entry here are low, which is exactly why long-run profit is only normal."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-3-q7",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm in monopolistic competition can raise its price a little without losing every customer. In the standard classification this makes it",
+      "options": {
+        "A": "A monopolist.",
+        "B": "A price maker.",
+        "C": "A price taker.",
+        "D": "Perfectly competitive."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>price taker</strong> must accept whatever price the market sets, because its product is identical to everyone else's and charging a penny more loses it every customer. A <strong>price maker</strong> has some choice, because differentiation means at least some buyers prefer its product and will pay a little more for it. That is why a monopolistically competitive firm faces a downward-sloping demand curve rather than a horizontal one — the discretion is real, even though many close substitutes keep it small.",
+        "distractors": {
+          "A": "A monopolist is the only supplier in its market. This firm has many rivals selling close substitutes.",
+          "C": "A price taker loses every customer the moment it charges above the market price, which is what the stem rules out.",
+          "D": "Perfect competition requires homogeneous products, which would make the firm a price taker."
+        }
+      }
+    }
+  ]
+}

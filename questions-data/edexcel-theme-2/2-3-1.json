@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.3.1",
+  "slug": "2-3-1-aggregate-supply",
+  "title": "Aggregate Supply",
+  "shortTitle": "Aggregate Supply",
+  "pageTitle": "Aggregate Supply, SRAS and LRAS Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on aggregate supply for Edexcel A-Level Economics: why SRAS slopes up, what LRAS represents and how the two relate.",
+  "intro": "Seven original multiple-choice questions on aggregate supply, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on short-run and long-run aggregate supply, the slope of SRAS, and what productive capacity means.",
+  "questions": [
+    {
+      "id": "edexcel-2-3-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "One curve shows what firms are willing to produce at each price level. The other shows what the economy is capable of producing when every factor is fully and efficiently employed. The second of these is",
+      "options": {
+        "A": "Aggregate demand.",
+        "B": "Long-run aggregate supply.",
+        "C": "Short-run aggregate supply.",
+        "D": "The circular flow of income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The distinction is between <em>willing</em> and <em>able</em>.<br /><strong>SRAS</strong> is a behavioural relationship: it shows how much firms choose to supply at each price level, given their costs. <strong>LRAS</strong> is a capacity constraint: it shows the maximum the economy could produce with all its factors of production fully and efficiently employed.<br />That is why LRAS is drawn independent of the price level. Capacity depends on the quantity and quality of land, labour, capital and enterprise, and no price can conjure resources that do not exist.",
+        "distractors": {
+          "A": "Aggregate demand is total planned spending at each price level. It concerns buyers, not what the economy can produce.",
+          "C": "SRAS is the first curve described — what firms are willing to supply, which depends on their costs and on the price they can charge.",
+          "D": "The circular flow traces income and spending between households and firms. It is not a curve relating output to the price level at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "To raise output, a factory takes on overtime shifts at premium rates and brings older, less efficient machines back into use. For the SRAS curve, this behaviour explains why",
+      "options": {
+        "A": "Firms need a higher price to supply more.",
+        "B": "Firms supply more at any given price.",
+        "C": "The curve is vertical in the short run.",
+        "D": "The curve shifts right as output rises."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In the short run at least one factor of production is fixed, so extra output has to be squeezed out of what is already there — overtime instead of ordinary hours, older machines instead of the best ones.<br />That means <strong>unit costs rise as output rises</strong>. A firm will only take on that extra production if it can charge enough to cover the higher cost of making it, so more is supplied only at a higher price level.<br />That relationship — higher price level, higher quantity supplied — is exactly what an upward-sloping curve draws.",
+        "distractors": {
+          "B": "Supplying more at any given price would be a <em>shift</em> of the curve, caused by costs falling. Here costs are rising as output expands.",
+          "C": "A vertical curve would mean output could not respond to price at all. Firms plainly can produce more in the short run, just at a higher unit cost.",
+          "D": "The curve does not shift as the economy moves along it. Rising output raising unit costs is what gives the curve its slope, not what moves it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Firms across an economy face sharply higher energy costs, with the price level itself unmoved. On the SRAS diagram this is shown by",
+      "options": {
+        "A": "A leftward shift of the SRAS curve.",
+        "B": "A movement down along the SRAS curve.",
+        "C": "A movement up along the SRAS curve.",
+        "D": "A rightward shift of the SRAS curve."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Energy is a cost of production, and a change in costs alters what firms are willing to supply <em>at every price level</em>. That is a shift, not a movement.<br />Higher costs mean less is supplied at each price, so the curve moves <strong>left</strong>. The stem holds the price level constant precisely to rule out a movement along the curve — only a change in the price level itself does that.",
+        "distractors": {
+          "B": "Movements along the curve are caused by changes in the price level, which the stem fixes.",
+          "C": "Same objection, and in the wrong direction: a movement up the curve would follow a price level rise.",
+          "D": "A rightward shift means more supplied at every price, which is what <em>lower</em> costs would produce."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The LRAS curve is drawn as a vertical line, independent of the price level. This is because potential output depends on",
+      "options": {
+        "A": "The average price level prevailing in the economy.",
+        "B": "The level of aggregate demand in the economy.",
+        "C": "The quantity and quality of factors of production.",
+        "D": "The rate of inflation that firms have come to expect."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Long-run aggregate supply is a statement about <strong>capacity</strong>: how much the economy could produce with every resource fully and efficiently employed.<br />That ceiling is set by real things — how many workers there are and how skilled they are, how much machinery and infrastructure exists, what technology is available, how well institutions and enterprise function. None of those changes because the price level changes.<br />So LRAS is vertical, and shifting it requires changing the resources themselves rather than the prices charged for their output.",
+        "distractors": {
+          "A": "If potential output depended on the price level, the curve would not be vertical. Independence from the price level is precisely what the vertical line represents.",
+          "B": "Aggregate demand determines how much of the capacity is actually used, not how much capacity exists. On the Classical view it cannot change long-run output at all.",
+          "D": "Expected inflation may affect wage bargaining and short-run costs, but it does not add to the machinery, skills or technology an economy has."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A severe frost wipes out much of a country's harvest, raising food-processing costs for a single season before conditions return to normal. In terms of aggregate supply, this is best described as",
+      "options": {
+        "A": "A permanent fall in the economy's capacity.",
+        "B": "A rightward shift of the whole LRAS curve.",
+        "C": "A temporary SRAS shift around the LRAS trend.",
+        "D": "A movement along the vertical LRAS curve."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two curves answer different questions, and the word <em>season</em> settles which one is moving.<br />Costs have risen, so SRAS shifts <strong>left</strong> — but nothing has happened to the economy's stock of land, labour, capital or technology, so LRAS is untouched. Once the harvest recovers, SRAS returns.<br />This is the general pattern the notes describe: the economy tends towards its LRAS level of output, and supply shocks are <strong>temporary adjustments around that trend</strong> rather than changes in the trend itself.",
+        "distractors": {
+          "A": "Nothing permanent has been lost. The frost hit one harvest; the land, workers and processing plants all remain.",
+          "B": "A rightward shift of LRAS would mean the economy could now produce <em>more</em>. The frost has made things harder, not easier.",
+          "D": "LRAS is vertical, so there is nothing to move along. Its position changes only when productive capacity itself changes."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four developments in an economy.<br />Using Table 1, the development that shifts long-run aggregate supply rather than short-run aggregate supply is",
+      "table": {
+        "caption": "Table 1: Four developments in the economy",
+        "head": [
+          "",
+          "Development"
+        ],
+        "rows": [
+          [
+            "Development 1",
+            "Oil prices fall sharply for one quarter"
+          ],
+          [
+            "Development 2",
+            "The currency depreciates, raising import costs"
+          ],
+          [
+            "Development 3",
+            "An indirect tax levied on firms is increased"
+          ],
+          [
+            "Development 4",
+            "A large cohort of trained engineers joins the workforce"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Development 1.",
+        "B": "Development 2.",
+        "C": "Development 3.",
+        "D": "Development 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The test is whether the economy's <strong>productive capacity</strong> changes, or only firms' current costs.<br />A large cohort of trained engineers raises both the quantity and the quality of labour permanently. That is more the economy <em>can</em> produce, so <strong>LRAS</strong> shifts right.<br />The other three all change costs without changing capacity. They move SRAS, and two of them only for as long as the cause lasts.",
+        "distractors": {
+          "A": "A one-quarter fall in oil prices lowers production costs temporarily, shifting SRAS right. Capacity is unchanged, and the effect reverses when prices recover.",
+          "B": "A depreciation raises the cost of imported inputs, shifting SRAS left. The economy can still produce just as much as before.",
+          "C": "A higher indirect tax raises costs across the economy and shifts SRAS left. It does not destroy any productive resources."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Following a surge in demand, an economy produces above its long-run aggregate supply level of output. Over time the most likely outcome is that output",
+      "options": {
+        "A": "Returns towards the LRAS level as costs rise.",
+        "B": "Rises further above LRAS indefinitely.",
+        "C": "Stays permanently above LRAS at a higher price.",
+        "D": "Falls to a point well inside the LRAS level."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Producing above the LRAS level means working resources harder than they can be sustained — overtime, deferred maintenance, workers recruited from an already tight labour market.<br />All of that pushes <strong>costs up</strong>. Rising costs shift SRAS left, and the economy is drawn back towards the output its capacity actually supports, at a higher price level than before.<br />This is what the notes mean by the economy tending towards its LRAS level. Demand determines where output sits in the short run; capacity determines where it settles.",
+        "distractors": {
+          "B": "Output above capacity is possible briefly but not indefinitely. The cost pressures that pull it back build the longer it persists.",
+          "C": "The price level does end up higher, but output does not stay above capacity. Only a rightward shift in LRAS could raise sustainable output.",
+          "D": "There is no reason for output to overshoot downwards. The adjustment is back towards the LRAS level, not far below it."
+        }
+      }
+    }
+  ]
+}

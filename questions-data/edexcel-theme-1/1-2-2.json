@@ -1,0 +1,246 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.2",
+  "slug": "1-2-2-demand",
+  "title": "Demand",
+  "shortTitle": "Demand",
+  "pageTitle": "Demand Curve and Conditions of Demand Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on demand for Edexcel A-Level Economics: the law of demand, movements and shifts, and the conditions of demand.",
+  "intro": "Eight original multiple-choice questions on demand, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on the law of demand, movements along and shifts of the curve, and diminishing marginal utility.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A student would love to own a sports car but could not begin to afford one. In economic terms, what the student has is",
+      "options": {
+        "A": "A contraction in demand for sports cars.",
+        "B": "An extension in demand for sports cars.",
+        "C": "Desire, but not effective demand.",
+        "D": "Effective demand at the current price."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Demand in economics means <strong>effective demand</strong>: both the willingness <em>and</em> the ability to pay. Wanting something is not enough.<br />The student has the willingness but not the ability, so nothing they do registers in the market. This is why demand curves are drawn from what people would actually buy at each price rather than from what they would like to own — and why a fall in price can turn desire into demand by bringing the good within reach.",
+        "distractors": {
+          "A": "A contraction is a movement up the demand curve caused by a price rise. No price has changed here.",
+          "B": "An extension is a movement down the curve caused by a price fall. Again, nothing has changed price.",
+          "D": "Effective demand needs the ability to pay, which the stem rules out explicitly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The price of a brand of trainers falls, with nothing else changing. On the demand diagram for those trainers this causes",
+      "options": {
+        "A": "A contraction in quantity demanded.",
+        "B": "An extension in quantity demanded.",
+        "C": "A leftward shift of the demand curve.",
+        "D": "A rightward shift of the demand curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A change in the price <em>of the good itself</em> moves the economy along the existing demand curve. It never shifts it.<br />Price has fallen, so quantity demanded rises: a movement <strong>down</strong> the curve, which is called an <strong>extension</strong>. Getting this right is largely a matter of asking one question first — has the good's own price changed, or has something else? Own price means a movement; anything else means a shift.",
+        "distractors": {
+          "A": "A contraction is a movement <em>up</em> the curve, caused by a price rise. Price has fallen here.",
+          "C": "Shifts are caused by non-price conditions of demand — incomes, tastes, the price of other goods, population. The good's own price is not one of them.",
+          "D": "Same objection. The curve has not moved; the economy has moved along it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The price of butter rises sharply. In the market for margarine, the most likely effect is",
+      "options": {
+        "A": "A contraction in quantity demanded.",
+        "B": "An extension in quantity demanded.",
+        "C": "A leftward shift of the demand curve.",
+        "D": "A rightward shift of the demand curve."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Butter and margarine are <strong>substitutes</strong>. When butter becomes dearer, some buyers switch, so more margarine is wanted <em>at every margarine price</em>.<br />That is a shift of the margarine demand curve to the <strong>right</strong>, not a movement along it. The test is which price changed: the price of margarine is unchanged, so nothing can have moved the market along margarine's own curve. A change in the price of a related good is a condition of demand.",
+        "distractors": {
+          "A": "Movements along the curve require margarine's own price to change, and it has not.",
+          "B": "Same objection. More margarine is bought, but because the curve has moved outwards, not because the market slid down it.",
+          "C": "A leftward shift means less demanded at every price. That would happen if butter became <em>cheaper</em>, drawing buyers away from margarine."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Real incomes in an economy rise steadily for several years. Over the same period, demand for a supermarket's own-brand value range falls. This indicates that the range consists of",
+      "options": {
+        "A": "Complements.",
+        "B": "Inferior goods.",
+        "C": "Normal luxuries.",
+        "D": "Normal necessities."
+      },
+      "answer": "B",
+      "model": {
+        "working": "An <strong>inferior good</strong> is one whose demand <em>falls</em> as real income rises, because people trade up to something they prefer once they can afford it.<br />Value ranges, bus travel and budget brands are the standard examples, and the relationship is a property of the good at that income level rather than of its quality in any absolute sense. The same product can be inferior for one group of consumers and normal for another.",
+        "distractors": {
+          "A": "Complements are pairs of goods used together, identified by what happens when the price of the other one changes. Nothing here concerns a second good's price.",
+          "C": "A normal luxury has demand rising <em>more</em> than proportionally with income. Demand here has fallen.",
+          "D": "A normal necessity has demand rising less than proportionally with income — rising, nonetheless. Again, demand has fallen."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four changes affecting the market for cinema tickets.<br />Using Table 1, the only change that causes a movement along the demand curve rather than a shift of it is",
+      "table": {
+        "caption": "Table 1: Four changes affecting the market for cinema tickets",
+        "head": [
+          "",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Change 1",
+            "The price of a cinema ticket falls"
+          ],
+          [
+            "Change 2",
+            "A popular film series releases a new instalment"
+          ],
+          [
+            "Change 3",
+            "Streaming subscription prices fall"
+          ],
+          [
+            "Change 4",
+            "The local population grows"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Change 1.",
+        "B": "Change 2.",
+        "C": "Change 3.",
+        "D": "Change 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Only a change in <strong>the price of the good itself</strong> produces a movement along the demand curve. Everything else is a condition of demand and shifts the whole curve.<br />Change 1 is the ticket price, so it moves the market down its existing curve — an extension in quantity demanded. The other three are a change in tastes, a change in the price of a substitute, and a change in population, and each shifts the curve.",
+        "distractors": {
+          "B": "A popular new release changes <strong>tastes</strong>, so more tickets are wanted at every price. That shifts the curve to the right.",
+          "C": "Streaming is a <strong>substitute</strong> for the cinema. Cheaper streaming draws viewers away, shifting cinema demand to the left.",
+          "D": "A larger local <strong>population</strong> means more potential customers at every price, which shifts the curve to the right."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A consumer values a first cup of coffee at £4.00, a second at £2.50 and a third at £1.00. This pattern explains why the demand curve",
+      "options": {
+        "A": "Is downward sloping, since extra units are worth less.",
+        "B": "Is upward sloping, since more is bought at high prices.",
+        "C": "Shifts left as consumption rises over time.",
+        "D": "Shifts right as consumption rises over time."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is the <strong>law of diminishing marginal utility</strong>: each additional unit consumed adds less satisfaction than the one before.<br />It follows directly that the consumer will only buy the second cup if the price is at or below £2.50, and the third only at or below £1.00. Willingness to pay falls as quantity rises, and plotting willingness to pay against quantity <em>is</em> the demand curve. That is why it slopes down.",
+        "distractors": {
+          "B": "An upward-sloping demand curve would mean more is bought as price rises. The figures show the opposite: each further cup is worth less, so a lower price is needed to sell it.",
+          "C": "Nothing here shifts the curve. Diminishing marginal utility explains the shape of a single curve, not movements of the whole curve.",
+          "D": "Same objection. The three valuations are three points on one demand curve, not three different curves."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows weekly demand for a snack bar before and after an advertising campaign.<br />Using Table 1, at a price of £1.60 the campaign has increased quantity demanded by",
+      "table": {
+        "caption": "Table 1: Weekly demand for a snack bar, units",
+        "head": [
+          "Price",
+          "Before the campaign",
+          "After the campaign"
+        ],
+        "rows": [
+          [
+            "£1.20",
+            "900",
+            "1,150"
+          ],
+          [
+            "£1.40",
+            "750",
+            "1,000"
+          ],
+          [
+            "£1.60",
+            "600",
+            "850"
+          ],
+          [
+            "£1.80",
+            "450",
+            "700"
+          ]
+        ]
+      },
+      "options": {
+        "A": "150 units.",
+        "B": "250 units.",
+        "C": "400 units.",
+        "D": "850 units."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Read straight across the £1.60 row and take the difference between the two columns.<br />Before: <strong>600</strong>. After: <strong>850</strong>.<br />Increase: 850 − 600 = <strong>250 units</strong>.<br />The same gap of 250 appears at every price, which is what makes this a shift of the whole demand curve to the right rather than a movement along it. Advertising is a condition of demand: it raises the quantity wanted at each price without any price having changed.",
+        "distractors": {
+          "A": "This is 750 − 600, which compares the £1.60 row with the £1.40 row in the <em>before</em> column. Both figures must come from the same price row.",
+          "C": "This is 1,000 − 600, mixing the £1.40 row of the after column with the £1.60 row of the before column.",
+          "D": "This is the quantity demanded after the campaign, not the increase. The question asks for the change, so the earlier figure has to be subtracted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "During a recession real incomes fall, while the price of rail travel is unchanged. Demand for rail season tickets falls and demand for second-hand bicycles rises. Taken together, this suggests that",
+      "options": {
+        "A": "Bicycles are an inferior good and rail travel is normal.",
+        "B": "Both goods are normal, with different income elasticities.",
+        "C": "Rail travel is an inferior good and bicycles are normal.",
+        "D": "The two goods are complements in consumption."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Income is the only thing that has changed, so both responses have to be read as income effects.<br />Rail season tickets: income falls, demand falls — they move together, which makes rail travel a <strong>normal</strong> good.<br />Second-hand bicycles: income falls, demand rises — they move in opposite directions, which makes bicycles an <strong>inferior</strong> good.<br />The story is consistent: commuters priced out of the season ticket switch to a cheaper way of making the same journey.",
+        "distractors": {
+          "B": "If both were normal, demand for both would fall when incomes fall. Bicycle demand rose, so at least one of them is not normal.",
+          "C": "This reverses the two. The inferior good is the one whose demand rises as income falls, which is bicycles.",
+          "D": "Complements are identified by the response to a <em>price</em> change in the other good, and no price has changed. Income moved, and the two goods went opposite ways."
+        }
+      }
+    }
+  ]
+}

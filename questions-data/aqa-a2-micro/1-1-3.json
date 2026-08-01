@@ -1,0 +1,150 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.1.3",
+  "slug": "1-1-3-economic-resources",
+  "title": "Economic Resources",
+  "shortTitle": "Economic Resources",
+  "pageTitle": "Factors of Production Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on economic resources for AQA A-Level Economics: the four factors of production, their rewards and the environment.",
+  "intro": "Five original multiple-choice questions on the factors of production and the environment as a scarce resource, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Five original multiple-choice questions on the four factors of production, their rewards and the environment as a scarce resource, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-1-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A vineyard owner buys an additional field in order to plant more vines. In economics, the field is classified as",
+      "options": {
+        "A": "Capital.",
+        "B": "Enterprise.",
+        "C": "Labour.",
+        "D": "Land."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Land</strong> covers all natural resources used in production — the ground itself, and everything found on or beneath it. A field is the textbook case. The four factors are land, labour (human effort), capital (goods used to produce other goods) and enterprise (the risk-taking that combines the other three).",
+        "distractors": {
+          "A": "Capital is a <em>man-made</em> resource used to produce other goods: the trellises, the tractor, the winery building. The land itself is not produced by anyone.",
+          "B": "Enterprise is the function of organising the other factors and bearing the risk of the venture. That is what the owner does; it is not the field she buys.",
+          "C": "Labour is the human effort applied to production — here, the workers who plant and harvest the vines."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would be classified as land as a factor of production?",
+      "options": {
+        "A": "A fishing trawler used to catch fish at sea.",
+        "B": "A shoal of fish in the sea before it is caught.",
+        "C": "The crew employed to operate the trawler.",
+        "D": "The wages paid to the crew."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Land</strong> means the gifts of nature available for production, not just ground. Fish in the sea have not been produced by anyone — they are a natural resource waiting to be harvested, so they count as land. This is also why the environment is treated as an economic resource: it is finite, it has alternative uses, and using it up has an opportunity cost.",
+        "distractors": {
+          "A": "The trawler is <strong>capital</strong>. It is man-made and it exists to help produce something else — the classic definition of a capital good.",
+          "C": "The crew supply <strong>labour</strong>: human physical and mental effort applied to production.",
+          "D": "Wages are the <em>reward</em> paid to a factor, not a factor themselves. Confusing a factor with its payment is a common slip: land earns rent, labour earns wages, capital earns interest and enterprise earns profit."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A delivery company buys twenty vans for its distribution fleet. A family buys an identical van to use for holidays. All other things being equal, the vans are",
+      "options": {
+        "A": "Capital goods, and the family's van is a consumer good, because use decides the category.",
+        "B": "Capital goods, and the family's van is also a capital good, because the vehicles are identical.",
+        "C": "Consumer goods, and the family's van is a capital good, because the family paid for it directly.",
+        "D": "Consumer goods, because vans are bought by households as well as by firms."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The distinction turns on <strong>use</strong>, not on the physical object. A <strong>capital good</strong> is used to produce other goods and services; a <strong>consumer good</strong> is bought for the satisfaction it gives directly. The company's vans are used to deliver parcels, so they help produce a service and are capital. The family's van carries them on holiday, so it is consumed directly and is a consumer good. The same model of van sits in either category depending on what it is for.",
+        "distractors": {
+          "B": "Being physically identical is exactly what does <em>not</em> settle the classification. If it did, every computer, van and building would have to fall in the same category regardless of purpose.",
+          "C": "Who paid for the good is irrelevant. Firms and households both pay for what they buy; what matters is whether the good goes on to produce something else.",
+          "D": "This treats the category as a property of the product type. Vans are bought by both, which is precisely why the classification has to depend on use rather than on the item."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government auctions a limited number of licences permitting firms to extract water from a river. All other things being equal, the best economic explanation for issuing licences is that",
+      "options": {
+        "A": "The environment is a free good, so its use has to be regulated instead of priced.",
+        "B": "The environment is a scarce resource with alternative uses, so using it carries an opportunity cost.",
+        "C": "The environment has no opportunity cost, which is why a price must be created artificially.",
+        "D": "Water is renewable, so the supply available to firms is effectively unlimited."
+      },
+      "answer": "B",
+      "model": {
+        "working": "River water is finite and has <strong>competing uses</strong>: a bottling plant, a farm's irrigation, drinking supply, and the river's own ecology. Water taken by one user is not available to another, so extraction has a real <strong>opportunity cost</strong>. That is what makes it an economic resource rather than a free good, and auctioning a limited number of licences is a way of rationing it and making users face that cost.",
+        "distractors": {
+          "A": "A free good is one with no opportunity cost, available in unlimited supply at zero price. River water is not one — the whole reason licences are needed is that there is not enough to satisfy every use.",
+          "C": "If the environment genuinely had no opportunity cost there would be nothing to ration and no reason to restrict access. The licence system exists because the cost is real.",
+          "D": "Renewable does not mean unlimited. A renewable resource replenishes at a finite rate, and extracting faster than that rate depletes it — which is exactly the risk the licences are designed to manage."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-3-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the factors of production and the reward earned by each. Two of the rewards are missing.<br />Which one of the following correctly completes Table 1?",
+      "table": {
+        "caption": "Table 1: Factors of production and their rewards",
+        "head": [
+          "Factor of production",
+          "Reward"
+        ],
+        "rows": [
+          [
+            "Land",
+            "Rent"
+          ],
+          [
+            "Labour",
+            "Wages"
+          ],
+          [
+            "Capital",
+            "Missing"
+          ],
+          [
+            "Enterprise",
+            "Missing"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Capital earns interest and enterprise earns profit.",
+        "B": "Capital earns interest and enterprise earns wages.",
+        "C": "Capital earns profit and enterprise earns interest.",
+        "D": "Capital earns rent and enterprise earns profit."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Each factor has its own reward: land earns <strong>rent</strong>, labour earns <strong>wages</strong>, capital earns <strong>interest</strong> and enterprise earns <strong>profit</strong>. The logic is worth holding on to. Interest is the return for supplying the funds tied up in capital equipment. Profit is what is left after every other factor has been paid, which is why it belongs to enterprise — the entrepreneur bears the risk that there is nothing left at all.",
+        "distractors": {
+          "B": "Wages are the reward to labour, and the table already shows that. An entrepreneur who draws a salary is being paid for the labour element of what they do; the return for bearing risk is still profit.",
+          "C": "This swaps the two. Profit is the residual that rewards risk-taking, so it cannot be the contractual return on capital, and interest is a fixed return that carries none of the risk that defines enterprise.",
+          "D": "Rent is the reward to land, which the table already shows. Paying rent for the use of a machine is everyday language, but in factor-reward terms the return on capital is interest."
+        }
+      }
+    }
+  ]
+}

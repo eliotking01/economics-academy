@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.8.1",
+  "slug": "1-8-1-how-markets-and-prices-allocate-resources",
+  "title": "How Markets and Prices Allocate Resources",
+  "shortTitle": "The Price Mechanism",
+  "pageTitle": "Price Mechanism Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the price mechanism for AQA A-Level Economics: the rationing, incentive and signalling functions, with worked answers.",
+  "intro": "Seven original multiple-choice questions on how markets and prices allocate resources, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the price mechanism and its three functions, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-8-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The three functions of the price mechanism are usually described as",
+      "options": {
+        "A": "Equity, efficiency and stability.",
+        "B": "Production, distribution and exchange.",
+        "C": "Rationing, incentive and signalling.",
+        "D": "Taxation, subsidy and regulation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Prices do three jobs at once in a free market. They <strong>ration</strong> scarce goods to those willing and able to pay, they give producers an <strong>incentive</strong> to supply more where prices are high, and they <strong>signal</strong> to both sides where resources should move. Adam Smith called the combined effect the <em>invisible hand</em>.",
+        "distractors": {
+          "A": "Equity, efficiency and stability are policy objectives a government might pursue, not functions performed by prices.",
+          "B": "Production, distribution and exchange are stages of economic activity rather than functions of the price mechanism.",
+          "D": "Taxes, subsidies and regulation are forms of government <em>intervention</em> in the price mechanism, not part of how it works by itself."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A poor harvest causes the price of coffee beans to rise sharply, and consumers reduce the quantity they buy. This best illustrates the price mechanism's",
+      "options": {
+        "A": "Incentive function.",
+        "B": "Rationing function.",
+        "C": "Signalling function.",
+        "D": "Redistributive function."
+      },
+      "answer": "B",
+      "model": {
+        "working": "With less coffee available, the higher price allocates the reduced quantity to those willing and able to pay most, and squeezes out everyone else. That is the <strong>rationing</strong> function: price does the job of deciding who gets a scarce good, without any queue, ballot or official making the decision.",
+        "distractors": {
+          "A": "The incentive function concerns <em>producers</em> responding to the higher price by supplying more. Here the focus is on consumers being priced out.",
+          "C": "The signalling function is the information the price change conveys about relative scarcity. Rationing is what the price actually <em>does</em> to the quantity each buyer gets.",
+          "D": "Redistribution is not one of the functions of the price mechanism; it is something governments do through taxes and benefits."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The price of lithium rises, and mining firms respond by opening new extraction sites. This best illustrates the price mechanism's",
+      "options": {
+        "A": "Rationing function.",
+        "B": "Redistributive function.",
+        "C": "Regulatory function.",
+        "D": "Incentive function."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A higher price raises the profitability of supplying lithium, so firms commit resources to producing more of it. That is the <strong>incentive</strong> function: price changes motivate producers to expand where returns are high and to withdraw where they are low, which is how resources are reallocated between markets over time.",
+        "distractors": {
+          "A": "The rationing function concerns how a limited quantity is shared among buyers. Here the response comes from the supply side.",
+          "B": "Redistribution of income is a government objective, not a function of prices.",
+          "C": "Regulation is a form of intervention imposed on a market rather than something the price mechanism does."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sustained rise in the price of a good conveys information to producers that it has become relatively scarce. This is the price mechanism's",
+      "options": {
+        "A": "Incentive function.",
+        "B": "Rationing function.",
+        "C": "Signalling function.",
+        "D": "Stabilising function."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>signalling</strong> function is about the <em>information</em> a price carries. A rising price tells everyone in the market that the good has become scarcer relative to demand — without anyone having to be told directly. Signalling and incentive work together: the signal conveys the information, and the profit motive supplies the reason to act on it.",
+        "distractors": {
+          "A": "The incentive function is the <em>response</em> to the signal — firms committing resources because higher prices mean higher profits.",
+          "B": "The rationing function concerns who ends up with the good once it is scarce.",
+          "D": "Stabilisation is a macroeconomic policy objective rather than a function of prices."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is an advantage of using the price mechanism to allocate resources?",
+      "options": {
+        "A": "It ensures that income and wealth are distributed fairly.",
+        "B": "It guarantees that public goods will be provided.",
+        "C": "It responds automatically to changes in consumer demand.",
+        "D": "It removes the problem of scarcity from the economy."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The great strength of the price mechanism is that it works <strong>automatically</strong>. No central authority needs to gather information or issue instructions: when consumers want more of something, the price rises, profits rise, and resources move in. It is fast, decentralised and requires no administration — which is why market economies allocate most goods this way.",
+        "distractors": {
+          "A": "The market rewards those with purchasing power, and it takes no account of fairness. Inequality is one of the standard criticisms of relying on it.",
+          "B": "Public goods are precisely what the market fails to provide, because non-excludability makes the free rider problem insurmountable.",
+          "D": "Nothing can remove scarcity. The price mechanism is a way of <em>managing</em> it, not abolishing it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is a disadvantage of relying on the price mechanism alone to allocate resources?",
+      "options": {
+        "A": "It allocates goods according to ability to pay, ignoring need.",
+        "B": "It requires a large administrative bureaucracy to operate.",
+        "C": "It responds too slowly to changes in consumer preferences.",
+        "D": "It prevents firms from earning any profit in the long run."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Price rations by <strong>willingness and ability to pay</strong>, which says nothing about need. A wealthy household outbids a poor one for housing however urgent the poorer family's situation. Alongside this equity objection sit the efficiency failures: the market under-provides merit goods and public goods, over-provides demerit goods, and ignores externalities altogether.",
+        "distractors": {
+          "B": "Requiring no bureaucracy is one of the price mechanism's <em>advantages</em>. It is central planning that demands a large administrative apparatus.",
+          "C": "Prices adjust quickly, often within hours in commodity and financial markets. Speed of response is a strength rather than a weakness.",
+          "D": "Profit is what drives the incentive function. Competition erodes supernormal profit in the long run, but normal profit is earned throughout."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-8-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government imposes a maximum price on a good well below its equilibrium level. In terms of the price mechanism, the most significant consequence is that",
+      "options": {
+        "A": "Prices can no longer ration or signal properly.",
+        "B": "Producers receive a stronger incentive to expand supply.",
+        "C": "The good ceases to be scarce, so allocation is no longer necessary.",
+        "D": "The market reaches allocative efficiency more quickly."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A binding price ceiling stops the price from doing its work. It can no longer <strong>ration</strong>, so the shortage is settled by queues, waiting lists or the black market instead. It can no longer <strong>signal</strong> scarcity accurately, so producers are not told that more is wanted, and the <strong>incentive</strong> to supply is weakened rather than strengthened. This is a common route to <strong>government failure</strong>: intervention aimed at fairness ends up worsening the allocation of resources.",
+        "distractors": {
+          "B": "A lower price makes supplying the good less profitable, so the incentive to produce it weakens and the quantity supplied falls.",
+          "C": "The good remains just as scarce — indeed the shortage grows. What has changed is the mechanism used to decide who gets it.",
+          "D": "Allocative efficiency requires price to equal marginal cost. Holding price artificially below that level moves the market away from it."
+        }
+      }
+    }
+  ]
+}

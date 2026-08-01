@@ -1,0 +1,221 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.3.4",
+  "slug": "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+  "title": "Possible Conflicts between Macroeconomic Policy Objectives",
+  "shortTitle": "Policy Conflicts",
+  "pageTitle": "Macroeconomic Policy Conflicts Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on macroeconomic policy conflicts for AQA A-Level Economics: the Phillips curve, trade-offs and supply-side solutions.",
+  "intro": "Eight original multiple-choice questions on the conflicts between macroeconomic policy objectives, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Eight original multiple-choice questions on policy trade-offs, the short-run and long-run Phillips curves and supply-side solutions, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-3-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The short-run Phillips curve shows",
+      "options": {
+        "A": "A direct relationship between inflation and unemployment.",
+        "B": "No relationship between inflation and unemployment.",
+        "C": "The relationship between economic growth and inflation.",
+        "D": "Unemployment and inflation moving in opposite directions."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The short-run Phillips curve is downward sloping: lower unemployment comes with <strong>higher</strong> inflation, and higher unemployment with lower inflation — an inverse relationship.<br />The mechanism is demand-pull. As unemployment falls, more people move from benefits onto full incomes, spending rises, and the tightening labour market pushes wages and then prices up.",
+        "distractors": {
+          "A": "A direct relationship would mean the two rise and fall together, which is the opposite of what the curve shows.",
+          "B": "No relationship is the <strong>long-run</strong> position, where the curve is vertical at the natural rate. In the short run the trade-off is real.",
+          "C": "Growth and inflation are certainly related, but the Phillips curve plots inflation against <em>unemployment</em>."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching a short-run Phillips curve with unemployment on the horizontal axis, a fall in unemployment is shown as a movement",
+      "options": {
+        "A": "Down and to the left, with lower inflation.",
+        "B": "Down and to the right, with lower inflation.",
+        "C": "Up and to the left, with higher inflation.",
+        "D": "Up and to the right, with higher inflation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Unemployment is on the horizontal axis, so a fall in it moves the economy <strong>left</strong> along the curve. Because the curve slopes downwards, moving left means moving <strong>up</strong> — to a higher rate of inflation.<br />That is the trade-off in one picture: buying lower unemployment costs higher inflation, at least in the short run.",
+        "distractors": {
+          "A": "Moving left is right, but the curve slopes downwards, so going left takes you up rather than down.",
+          "B": "Moving right would mean unemployment <em>rising</em>, which is the opposite of what the stem describes.",
+          "D": "Higher inflation is right, but it comes with a movement to the left. Rightward movement means more unemployment, which brings inflation down."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the long run the Phillips curve is vertical at the natural rate of unemployment. It follows that",
+      "options": {
+        "A": "Inflation and unemployment can both fall indefinitely.",
+        "B": "Lower unemployment cannot be sustained by inflation.",
+        "C": "Supply-side policy cannot reduce unemployment at all.",
+        "D": "Unemployment can only be reduced by raising inflation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A vertical long-run curve means unemployment returns to the <strong>natural rate</strong> whatever the rate of inflation. A government that expands demand to push unemployment below that rate gets lower unemployment only while inflation is higher than people expected. Once expectations catch up, unemployment drifts back to the natural rate and the economy is left with the higher inflation and nothing to show for it.",
+        "distractors": {
+          "A": "The long-run curve rules out a permanent improvement in both from demand-side policy. Getting both requires shifting the curve itself.",
+          "C": "Supply-side policy is exactly what <em>can</em> reduce unemployment in the long run, by lowering the natural rate and shifting the vertical curve left.",
+          "D": "This describes the short-run trade-off, which the vertical long-run curve says does not last."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The only way to reduce unemployment in the long run, without raising inflation, is to",
+      "options": {
+        "A": "Accept a permanently higher rate of inflation.",
+        "B": "Cut interest rates to raise aggregate demand.",
+        "C": "Raise government spending to boost demand.",
+        "D": "Use supply-side policy to cut the natural rate."
+      },
+      "answer": "D",
+      "model": {
+        "working": "If the long-run Phillips curve is vertical at the natural rate, the only lasting improvement comes from moving that curve — which means reducing the <strong>natural rate itself</strong>. Supply-side measures do this: better training reduces the skills mismatch behind structural unemployment, and better job information reduces frictional unemployment.<br />This is why supply-side policy is presented as the way out of the conflict rather than a way of living with it.",
+        "distractors": {
+          "A": "Accepting higher inflation buys nothing in the long run. Once expectations adjust, unemployment returns to the natural rate anyway.",
+          "B": "Cutting rates raises aggregate demand, which moves the economy along the short-run curve. The effect on unemployment fades as inflation expectations catch up.",
+          "C": "Higher government spending is another demand-side measure, so it runs into the same problem. Only where it raises productive capacity would it shift the long-run position."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts corporation tax and reduces employment regulation in order to raise efficiency and growth. The objective most likely to be worsened is",
+      "options": {
+        "A": "Balance of payments equilibrium.",
+        "B": "Economic growth.",
+        "C": "Greater income equality.",
+        "D": "Low and stable inflation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "These are <strong>free-market supply-side</strong> measures. Lower corporation tax raises post-tax profits, which flow mainly to owners of capital and shareholders, while weaker employment protection tends to reduce the bargaining power and job security of lower-paid workers.<br />The gains are therefore concentrated at the top, so the efficiency improvement comes at the cost of <strong>greater inequality</strong> — the efficiency-versus-equity conflict.",
+        "distractors": {
+          "A": "If the measures raise competitiveness they would tend to help the current account, not worsen it.",
+          "B": "Raising growth is the policy's purpose, and supply-side measures work by expanding capacity. This objective is being pursued, not sacrificed.",
+          "D": "Supply-side policy shifts LRAS right, which eases price pressure. It is demand-side expansion that threatens the inflation target."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Expansionary fiscal policy can raise growth in the short run but constrain it later. The reason is that it",
+      "options": {
+        "A": "Increases the deficit and the national debt.",
+        "B": "Lowers the natural rate of unemployment.",
+        "C": "Raises the economy's productive capacity.",
+        "D": "Reduces the rate of inflation permanently."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Higher spending or lower taxes must be financed by borrowing, so the deficit widens and <strong>national debt accumulates</strong>. A larger debt means more interest to service each year, which crowds out other spending and narrows the room for a fiscal response to the next downturn.<br />That is the conflict between the short run and the long run: the boost is immediate, the constraint arrives later.",
+        "distractors": {
+          "B": "A lower natural rate would be a long-run <em>benefit</em>, and demand-side policy does not deliver it in any case.",
+          "C": "Some fiscal expansion does raise capacity — infrastructure and education, for instance. But that would ease the long-run constraint, not create it.",
+          "D": "Expansionary policy raises aggregate demand, which puts <em>upward</em> pressure on inflation."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four indicators for an economy before and after a change in policy.<br />Using Table 1, the policy has most likely been",
+      "table": {
+        "caption": "Table 1: Indicators before and after the policy change",
+        "head": [
+          "Indicator",
+          "Before",
+          "After"
+        ],
+        "rows": [
+          [
+            "Real GDP growth",
+            "1.2%",
+            "2.8%"
+          ],
+          [
+            "Unemployment",
+            "5.4%",
+            "4.1%"
+          ],
+          [
+            "Inflation (CPI)",
+            "1.8%",
+            "3.6%"
+          ],
+          [
+            "Current account",
+            "−2.0% of GDP",
+            "−4.5% of GDP"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Contractionary, because inflation has risen.",
+        "B": "Expansionary, because growth and employment have risen.",
+        "C": "Neutral, because some indicators improved and others worsened.",
+        "D": "Supply-side, because growth has risen without more inflation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Read the four rows as a pattern rather than one at a time. Growth is up, unemployment is down, inflation is up and the current account deficit has widened.<br />That is the classic signature of a rightward shift in <strong>aggregate demand</strong>: more output and jobs, bought at the cost of higher prices and more imports sucked in by rising incomes. Two objectives improve and two worsen, which is what makes these conflicts unavoidable.",
+        "distractors": {
+          "A": "Contractionary policy reduces demand, so growth would fall and unemployment rise. Both moved the other way.",
+          "C": "Indicators moving in different directions is what a demand-side expansion looks like — it is not evidence that policy did nothing.",
+          "D": "Supply-side policy raises capacity, so growth would rise <em>with</em> inflation steady or falling. Here inflation has doubled, which points to demand rather than supply."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Supply-side policy is often said to ease the conflict between macroeconomic objectives. The best explanation is that it",
+      "options": {
+        "A": "Guarantees that income inequality will fall.",
+        "B": "Raises aggregate demand without raising the price level.",
+        "C": "Raises capacity, so growth brings less inflation.",
+        "D": "Removes the need for any monetary policy."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Demand-side policy moves the economy <em>along</em> its supply constraint, so every gain in output is paid for in higher prices. Supply-side policy moves the constraint itself: a rightward shift in LRAS means output can rise with <strong>less inflationary pressure</strong>, and lower unemployment can be sustained because the natural rate has fallen.<br />The honest caveat is that supply-side measures work slowly, and free-market versions can worsen inequality even while they ease the growth-inflation conflict.",
+        "distractors": {
+          "A": "Free-market supply-side measures often <em>widen</em> inequality. Only the interventionist kind, such as education spending, reliably narrows it.",
+          "B": "Supply-side policy works on the supply side, not by raising aggregate demand. Raising AD is precisely what causes the price pressure it avoids.",
+          "D": "Inflation still has to be managed, and demand still fluctuates over the cycle. Supply-side policy complements monetary policy rather than replacing it."
+        }
+      }
+    }
+  ]
+}

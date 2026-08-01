@@ -1,0 +1,226 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.4.6",
+  "slug": "1-4-6-marginal-average-and-total-revenue",
+  "title": "Marginal, Average and Total Revenue",
+  "shortTitle": "Marginal, Average and Total Revenue",
+  "pageTitle": "Total and Marginal Revenue Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on total, average and marginal revenue for AQA A-Level Economics, with calculations and full worked answers.",
+  "intro": "Nine original multiple-choice questions on total, average and marginal revenue, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Nine original multiple-choice questions on total, average and marginal revenue in competitive and imperfectly competitive markets, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-4-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "For any firm, average revenue is always equal to",
+      "options": {
+        "A": "Marginal revenue.",
+        "B": "The price of the good.",
+        "C": "Total revenue divided by total cost.",
+        "D": "Total revenue multiplied by quantity."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Average revenue is total revenue divided by quantity. Since total revenue is price multiplied by quantity, dividing by quantity leaves <strong>price</strong>. AR = (P × Q) ÷ Q = P.<br />This identity is worth remembering, because it means the firm's <strong>average revenue curve is its demand curve</strong> — the two are the same line, read either as the price at each quantity or as the quantity sold at each price.",
+        "distractors": {
+          "A": "AR and MR are equal only in <strong>perfect competition</strong>, where the firm can sell any quantity at the market price. Where a firm has market power, MR lies below AR.",
+          "C": "Dividing revenue by cost produces a ratio with no standard meaning in this topic. Average revenue divides revenue by <em>quantity</em>.",
+          "D": "Multiplying total revenue by quantity compounds an amount that already includes quantity. It is the inverse of the correct operation."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the price a firm must charge in order to sell each quantity of its output, together with the resulting total revenue.<br />Using Table 1, the marginal revenue from selling the fifth unit is ___ and total revenue is maximised at ___ units.",
+      "table": {
+        "caption": "Table 1: Price and total revenue at seven levels of output",
+        "head": ["Price", "Quantity", "Total revenue"],
+        "rows": [
+          ["£22", "1", "£22"],
+          ["£20", "2", "£40"],
+          ["£18", "3", "£54"],
+          ["£16", "4", "£64"],
+          ["£14", "5", "£70"],
+          ["£12", "6", "£72"],
+          ["£10", "7", "£70"]
+        ]
+      },
+      "options": {
+        "A": "£6 and 6 units.",
+        "B": "£6 and 7 units.",
+        "C": "£14 and 6 units.",
+        "D": "£14 and 7 units."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Marginal revenue</strong> is the change in total revenue from selling one more unit.<br />MR of the fifth unit = £70 − £64 = <strong>£6</strong>.<br /><strong>Total revenue</strong> is maximised where the total revenue column peaks: it rises to <strong>£72 at 6 units</strong> and then falls to £70 at 7.<br />Notice what happens at that peak. MR falls 18, 14, 10, 6, 2 and then turns negative at −£2 for the seventh unit. Total revenue is at its maximum exactly where marginal revenue passes through zero.",
+        "distractors": {
+          "B": "The marginal figure is right, but 7 units is past the peak: total revenue has already fallen back to £70. Selling more is not the same as earning more.",
+          "C": "£14 is the <strong>price</strong> — the average revenue — at 5 units, not the addition to total revenue from that unit. Confusing AR with MR is the commonest error in this topic.",
+          "D": "Both parts are wrong: £14 is the price rather than the marginal revenue, and revenue peaks at 6 units rather than 7."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm in perfect competition is a price taker. It follows that the firm's",
+      "options": {
+        "A": "Average revenue exceeds its marginal revenue at every level of output.",
+        "B": "Average revenue equals its marginal revenue, and both equal the market price.",
+        "C": "Demand curve is downward sloping, with marginal revenue below it.",
+        "D": "Marginal revenue is zero at every level of output."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A price taker can sell as much as it wishes at the ruling market price and nothing at all above it. Every extra unit therefore brings in exactly the market price, so <strong>MR = P</strong>; and since every unit sells at that price, <strong>AR = P</strong> too. The firm's demand curve is <strong>perfectly elastic</strong> — horizontal at the market price — and AR and MR sit along it together.",
+        "distractors": {
+          "A": "AR exceeds MR only where the firm must <em>cut its price</em> to sell more, which is the imperfectly competitive case. A price taker never has to.",
+          "C": "A downward-sloping demand curve with MR beneath it describes a firm with market power. A price taker faces a horizontal demand curve.",
+          "D": "Marginal revenue equals the market price, which is positive. MR of zero would mean extra sales bring in nothing at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm with market power must lower its price in order to sell an extra unit. Its marginal revenue is below its average revenue because",
+      "options": {
+        "A": "It must cut the price on every unit it sells, not only on the extra one.",
+        "B": "Its average revenue includes fixed costs but its marginal revenue does not.",
+        "C": "Marginal revenue is measured before tax and average revenue after tax.",
+        "D": "The extra unit costs more to produce than the previous one."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Selling one more unit brings in the new, lower price — but the firm must also accept that lower price on all the units it was already selling. Marginal revenue is therefore the price of the extra unit <em>minus</em> the revenue lost on the earlier ones, which makes it smaller than the price. Since average revenue <em>is</em> the price, <strong>MR lies below AR</strong> at every output, and on a linear demand curve it falls twice as fast.",
+        "distractors": {
+          "B": "Costs of any kind play no part in a revenue calculation. Revenue is what comes in from sales; fixed costs belong on the other side of the profit equation.",
+          "C": "Tax has nothing to do with the relationship. AR and MR are both measured on the same basis, and the gap between them exists in a tax-free world too.",
+          "D": "This is the most tempting distractor because it is a true statement about <em>costs</em> under diminishing returns. It explains rising marginal cost, not falling marginal revenue."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm maximises its total revenue at the level of output where",
+      "options": {
+        "A": "Average revenue is at its maximum.",
+        "B": "Marginal cost equals marginal revenue.",
+        "C": "Marginal revenue equals zero.",
+        "D": "Total cost is at its minimum."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Total revenue rises while each extra unit still adds something, so while <strong>MR is positive</strong>. It falls once extra units subtract from the total, so where <strong>MR is negative</strong>. The peak lies between the two — the output at which <strong>marginal revenue is zero</strong>.",
+        "distractors": {
+          "A": "Average revenue is the price, and it is highest at the very lowest output where the firm sells almost nothing. Charging the maximum price is not the same as earning the most revenue.",
+          "B": "MC = MR is the <strong>profit</strong>-maximising rule, and the distinction matters. Profit maximisation occurs at a lower output than revenue maximisation, because it takes the cost of the extra units into account.",
+          "D": "Total cost is at its minimum at zero output, where the firm produces nothing and earns no revenue at all. Costs are irrelevant to a revenue-maximising decision."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm faces a straight-line, downward-sloping demand curve. Its marginal revenue curve",
+      "options": {
+        "A": "Is horizontal at the market price.",
+        "B": "Lies above average revenue and is twice as steep.",
+        "C": "Lies below average revenue and is twice as steep.",
+        "D": "Lies below average revenue and has the same slope."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Because the firm has to cut its price on every unit in order to sell one more, marginal revenue is always <strong>below</strong> average revenue once output exceeds the first unit. With a <em>linear</em> demand curve there is a further result worth knowing for diagrams: MR starts from the same point on the vertical axis and falls <strong>twice as steeply</strong>, so it hits the horizontal axis at exactly half the quantity at which AR does.",
+        "distractors": {
+          "A": "A horizontal MR curve belongs to <strong>perfect competition</strong>, where the firm is a price taker. Here the demand curve slopes down, so the firm has market power.",
+          "B": "MR can never lie above AR for a firm that must lower its price to sell more — each extra sale drags the average down, so the marginal figure has to be the lower of the two.",
+          "D": "Below AR is right, but the same slope is not. If the two lines were parallel they would never converge on the axis in the way a linear demand curve requires."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm with market power cuts its price and finds that its total revenue falls. It follows that at the original price",
+      "options": {
+        "A": "Demand was price elastic and marginal revenue was negative.",
+        "B": "Demand was price elastic and marginal revenue was positive.",
+        "C": "Demand was price inelastic and marginal revenue was negative.",
+        "D": "Demand was price inelastic and marginal revenue was positive."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Two steps, and the second is the one worth learning.<br />First, the revenue test: cutting the price raises total revenue where demand is <strong>elastic</strong> and lowers it where demand is <strong>inelastic</strong>. Revenue fell, so demand was <strong>inelastic</strong>.<br />Second, link that to marginal revenue. If selling extra units by cutting the price <em>reduces</em> total revenue, then each extra unit is subtracting from the total — which is precisely what a <strong>negative marginal revenue</strong> means.<br />The general result: MR is positive where demand is elastic, zero where demand is unit elastic, and negative where demand is inelastic.",
+        "distractors": {
+          "A": "The two halves contradict each other. Elastic demand means a price cut <em>raises</em> revenue, which is the same thing as marginal revenue being positive.",
+          "B": "Both halves describe the case where a price cut would have increased revenue. That is the opposite of what happened.",
+          "D": "The elasticity is right but the sign of marginal revenue is not. If MR were positive, selling more units would have added to total revenue rather than reducing it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q8",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm sells 250 units in a week at an average revenue of £16. Its total revenue for the week is",
+      "options": {
+        "A": "£15.63",
+        "B": "£266",
+        "C": "£3,984",
+        "D": "£4,000"
+      },
+      "answer": "D",
+      "model": {
+        "working": "Average revenue is total revenue divided by quantity, so total revenue is average revenue multiplied by quantity.<br />TR = £16 × 250 = <strong>£4,000</strong>.<br />Because average revenue is also the price, this is the familiar TR = P × Q in another guise.",
+        "distractors": {
+          "A": "250 ÷ 16 = 15.63 inverts the relationship, dividing quantity by average revenue. The result is not a revenue figure at all.",
+          "B": "£266 adds the two numbers rather than multiplying them. A price and a quantity cannot meaningfully be added.",
+          "C": "£3,984 subtracts 16 from £4,000, as though the first unit were free. Every one of the 250 units earns £16."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-4-6-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm in perfect competition sells its output at a constant market price. As its output rises, its total revenue",
+      "options": {
+        "A": "Falls at a constant rate.",
+        "B": "Rises at a constant rate.",
+        "C": "Rises at a decreasing rate.",
+        "D": "Rises and then falls."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Every unit sells for the same price, so every unit adds exactly that price to total revenue. Marginal revenue is <strong>constant</strong>, which means total revenue rises by the same amount for each extra unit — a <strong>straight line through the origin</strong> with a slope equal to the market price.<br />Contrast this with imperfect competition, where the firm must cut its price to sell more, so MR falls, TR rises at a decreasing rate, peaks where MR is zero, and then declines.",
+        "distractors": {
+          "A": "Selling more at a positive price cannot reduce revenue. Total revenue falls with extra output only where marginal revenue has turned negative, which cannot happen to a price taker.",
+          "C": "Rising at a decreasing rate is the <strong>imperfect competition</strong> case, where each extra unit brings in less than the last because the price has to be cut.",
+          "D": "A rise then a fall describes total revenue under imperfect competition, peaking where MR equals zero. A price taker's MR never reaches zero."
+        }
+      }
+    }
+  ]
+}

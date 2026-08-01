@@ -1,0 +1,248 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.1.4",
+  "slug": "1-1-4-production-possibility-frontiers",
+  "title": "Production Possibility Frontiers",
+  "shortTitle": "Production Possibility Frontiers",
+  "pageTitle": "Production Possibility Frontier Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on production possibility frontiers for Edexcel A-Level Economics: opportunity cost, efficiency, shifts and capital goods.",
+  "intro": "Nine original multiple-choice questions on production possibility frontiers, written to the style and difficulty of Edexcel Paper 1 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Nine original multiple-choice questions on production possibility frontiers, opportunity cost, efficiency and shifts of the curve, written to Edexcel Paper 1 Section A style.",
+  "questions": [
+    {
+      "id": "edexcel-1-1-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country's factories are running well below capacity and unemployment is high. On a production possibility frontier diagram, the country is most likely to be",
+      "options": {
+        "A": "At a point inside the frontier.",
+        "B": "At a point on the frontier.",
+        "C": "At a point outside the frontier.",
+        "D": "On a frontier that has shifted inwards."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The frontier shows the maximum combinations available when all resources are <strong>fully and efficiently employed</strong>. Idle factories and unemployed workers mean neither condition holds, so output is below what the country could manage.<br />That places it <strong>inside</strong> the frontier — productively inefficient, with unemployed resources. The useful consequence is that it could produce more of <em>both</em> goods at zero opportunity cost simply by putting those resources back to work, which is never true anywhere on the frontier itself.",
+        "distractors": {
+          "B": "Points on the frontier require every resource to be fully and efficiently used. Idle factories and high unemployment rule that out.",
+          "C": "Points outside the frontier are unattainable with existing resources and technology. This country is producing less than it could, not more.",
+          "D": "An inward shift means productive potential has been <em>lost</em> — capital destroyed, or skills gone for good. Here the factories and the workers still exist; they are simply not being used."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is able to produce any of the five output combinations set out in Table 1, provided it employs every resource it has.<br />Using Table 1, moving from Combination 3 to Combination 4 costs the economy",
+      "table": {
+        "caption": "Table 1: Production possibilities, thousands of units per year",
+        "head": [
+          "",
+          "Capital goods",
+          "Consumer goods"
+        ],
+        "rows": [
+          [
+            "Combination 1",
+            "40",
+            "0"
+          ],
+          [
+            "Combination 2",
+            "36",
+            "30"
+          ],
+          [
+            "Combination 3",
+            "28",
+            "60"
+          ],
+          [
+            "Combination 4",
+            "16",
+            "90"
+          ],
+          [
+            "Combination 5",
+            "0",
+            "120"
+          ]
+        ]
+      },
+      "options": {
+        "A": "8 thousand capital goods.",
+        "B": "12 thousand capital goods.",
+        "C": "16 thousand capital goods.",
+        "D": "28 thousand capital goods."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Opportunity cost is what has to be given up. Moving from Combination 3 to Combination 4 gains consumer goods and sacrifices capital goods.<br />Capital goods at Combination 3: <strong>28 thousand</strong>. At Combination 4: <strong>16 thousand</strong>.<br />Sacrifice: 28 − 16 = <strong>12 thousand capital goods</strong>.<br />Notice that each successive block of 30 thousand consumer goods costs more than the last — 4, then 8, then 12, then 16. That rising cost is why the frontier is drawn bowed outwards rather than as a straight line.",
+        "distractors": {
+          "A": "This is the cost of the <em>previous</em> step, from Combination 2 to Combination 3, where capital goods fall from 36 to 28. Reading one row too high is easy when the steps are unequal.",
+          "C": "This is the cost of the <em>next</em> step, from Combination 4 to Combination 5, where capital goods fall from 16 to 0.",
+          "D": "This is the <em>level</em> of capital goods at Combination 3, not the change between the two rows. Opportunity cost is always a difference, never a level."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Using Table 1 in the previous question, as the economy moves from Combination 1 through to Combination 5, the opportunity cost of each further 30 thousand consumer goods",
+      "options": {
+        "A": "Falls steadily.",
+        "B": "Is constant throughout.",
+        "C": "Rises and then falls.",
+        "D": "Rises steadily."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Take the four steps in turn. Capital goods sacrificed for each extra 30 thousand consumer goods: 40 → 36 is <strong>4</strong>; 36 → 28 is <strong>8</strong>; 28 → 16 is <strong>12</strong>; 16 → 0 is <strong>16</strong>.<br />The cost rises at every step. This is <strong>increasing opportunity cost</strong>, and it happens because resources are not perfectly adaptable — the land and labour best suited to consumer goods get switched first, and progressively less suitable resources have to be moved after them.",
+        "distractors": {
+          "A": "The sacrifice grows from 4 to 16 thousand. A falling cost would need the numbers to shrink, which would imply resources becoming more rather than less suited to their new use.",
+          "B": "A constant cost gives a straight-line frontier, where each step sacrifices the same amount. Here every step costs more than the one before.",
+          "C": "There is no turning point. The four sacrifices rise monotonically: 4, 8, 12, 16."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's workers acquire new skills through a large government training programme. On a production possibility frontier diagram this is shown by",
+      "options": {
+        "A": "A movement along the existing frontier.",
+        "B": "A point moving from outside to inside.",
+        "C": "An inward shift of the entire frontier.",
+        "D": "An outward shift of the entire frontier."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Training raises the <strong>quality</strong> of one of the factors of production. Better-skilled labour can produce more from the same hours, so the economy's productive potential rises.<br />A change in potential is always a <strong>shift</strong> of the frontier, and an increase in potential shifts it outwards. Combinations that were previously unattainable become attainable. Movements along the curve are a different thing entirely — they only reallocate the resources the economy already has.",
+        "distractors": {
+          "A": "A movement along the frontier reallocates existing resources between the two goods. Nothing about the economy's capacity changes, which is not what training does.",
+          "B": "Points do not move from outside to inside. An unattainable combination becomes attainable only when the frontier itself moves out to meet it.",
+          "C": "An inward shift represents lost productive potential — war, natural disaster, or skills decaying through long-term unemployment. Training is the opposite case."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching a production possibility frontier with capital goods on one axis and consumer goods on the other, an economy that chooses a point with more capital goods and fewer consumer goods is most likely to",
+      "options": {
+        "A": "Achieve a faster outward shift in future.",
+        "B": "Move to a point inside its current frontier.",
+        "C": "Raise consumer living standards immediately.",
+        "D": "Shift its frontier inwards in the long run."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Capital goods are used to produce other goods in future; consumer goods are used up now. Choosing more capital goods means investing rather than consuming.<br />On the sketch, the economy stays <em>on</em> the frontier — it has simply moved up and to the left along it. The gain comes later: more machinery and infrastructure raise productive potential, so the frontier itself shifts <strong>outwards</strong> faster than it otherwise would. The cost is the consumer goods given up today, which is the opportunity cost of investment.",
+        "distractors": {
+          "B": "Both points are on the frontier. Choosing a different combination is a movement along it, not a retreat inside it.",
+          "C": "Living standards today are determined by consumer goods, and there are now fewer of them. The benefit of the choice arrives in the future, not immediately.",
+          "D": "More capital raises future potential, so the frontier shifts outwards. An inward shift would need capital to be destroyed or to depreciate faster than it is replaced."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy moves from a point inside its frontier to a point on the frontier, producing more of both goods. This change improves",
+      "options": {
+        "A": "Allocative efficiency but not productive efficiency.",
+        "B": "Both allocative and productive efficiency.",
+        "C": "Neither allocative nor productive efficiency.",
+        "D": "Productive efficiency but not allocative efficiency."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Two things improve at once here.<br /><strong>Productive efficiency</strong> improves because the economy moves from inside the frontier, where resources are idle, onto it, where they are fully and efficiently used.<br /><strong>Allocative efficiency</strong> improves because more of one good is produced without producing less of the other. Society is unambiguously better supplied than before, and no one has had to give anything up to achieve it.",
+        "distractors": {
+          "A": "Productive efficiency is exactly what moving onto the frontier achieves. A point inside it is productively inefficient by definition.",
+          "C": "Both improve. Ruling out productive efficiency ignores the move onto the frontier; ruling out allocative efficiency ignores that both goods increase.",
+          "D": "Producing more of both goods, with less of neither, is the standard test for an improvement in allocative efficiency."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A prolonged conflict destroys a large part of a country's factories and railways. On a production possibility frontier diagram the effect is",
+      "options": {
+        "A": "A movement along the frontier towards capital goods.",
+        "B": "A movement to a point outside the frontier.",
+        "C": "An inward shift, showing lost productive potential.",
+        "D": "An outward shift, showing reallocated resources."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Factories and railways are <strong>capital</strong>. Destroying them reduces the quantity of a factor of production, so the economy can no longer produce the combinations it could before.<br />A fall in productive potential is an <strong>inward shift</strong> of the whole frontier. Combinations that were on the old frontier are now unattainable. This is the same mechanism as an outward shift, running in reverse: natural disasters and the loss of skills through long-term unemployment shift the curve the same way.",
+        "distractors": {
+          "A": "A movement along the frontier reallocates the resources the economy still has. Here resources have been destroyed, so the frontier itself has moved.",
+          "B": "Points outside the frontier are unattainable. Losing capital moves the economy further from them, not to them.",
+          "D": "An outward shift means greater potential. Reallocating resources does not shift the frontier at all — it moves the economy along it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q8",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A delivery firm buys a fleet of vans. In the distinction between capital goods and consumer goods, the vans are",
+      "options": {
+        "A": "Capital goods, because they are used to produce.",
+        "B": "Capital goods, because they are expensive to buy.",
+        "C": "Consumer goods, because a household could own one.",
+        "D": "Consumer goods, because they are finished products."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The distinction turns on <strong>use</strong>, not on the object. Capital goods are used to produce other goods and services; consumer goods are bought for immediate consumption.<br />These vans are inputs to a delivery service, so they are capital. The identical van bought by a household for family use would be a consumer good. This is why the same physical item can fall on either side of the line, and why the question to ask is always what the good is for.",
+        "distractors": {
+          "B": "Price is irrelevant. A cheap spanner used in a workshop is a capital good; an expensive holiday is a consumer good.",
+          "C": "That a household <em>could</em> own one is beside the point. What matters is the use it is actually put to, and here it is production.",
+          "D": "Capital goods are finished products too. A completed machine is finished, and is still bought to produce with rather than to consume."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An economy cannot currently reach a combination lying outside its frontier. Large new mineral reserves are then discovered, making that combination possible. The best description is that the discovery has",
+      "options": {
+        "A": "Improved allocative efficiency at the old frontier.",
+        "B": "Increased the quantity of the factors of production.",
+        "C": "Moved the economy along its existing frontier.",
+        "D": "Removed the problem of scarcity from the economy."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Mineral reserves are <strong>land</strong> — a natural resource, and one of the four factors of production. Discovering more of it raises the economy's productive potential.<br />The frontier therefore shifts <strong>outwards</strong>, and a combination that used to lie beyond it now lies on or inside it. This is economic growth in its simplest form: an increase in the quantity of a factor, alongside the other route of an improvement in factor quality through education, training or new technology.",
+        "distractors": {
+          "A": "Allocative efficiency is about which combination on the frontier is chosen. Here the frontier itself has moved, which is a different kind of change.",
+          "C": "A movement along the frontier can only reach combinations already on it. It can never reach a point that was previously outside.",
+          "D": "More resources relieve scarcity without ending it. Wants remain effectively unlimited, so choices between competing uses still have to be made."
+        }
+      }
+    }
+  ]
+}

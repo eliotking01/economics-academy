@@ -1,0 +1,172 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.1.4",
+  "slug": "1-1-4-scarcity-choice-and-the-allocation-of-resources",
+  "title": "Scarcity, Choice and the Allocation of Resources",
+  "shortTitle": "Scarcity, Choice and Opportunity Cost",
+  "pageTitle": "Scarcity and Opportunity Cost Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on scarcity, choice and opportunity cost for AQA A-Level Economics, including a calculation and full worked answers.",
+  "intro": "Six original multiple-choice questions on scarcity, choice and opportunity cost, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on scarcity, choice and opportunity cost, written to AQA Paper 3 Section A style, with full worked answers.",
+  "questions": [
+    {
+      "id": "aqa-1-1-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A student has £30 and can buy either a textbook or two theatre tickets, but not both. She buys the textbook. The opportunity cost of the textbook is",
+      "options": {
+        "A": "The £30 she spent on it.",
+        "B": "The benefit she would have gained from the theatre tickets.",
+        "C": "The textbook and the theatre tickets taken together.",
+        "D": "The value of the theatre tickets plus the £30 she spent on the book."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Opportunity cost</strong> is the benefit of the <strong>next-best alternative given up</strong> when a choice is made. She could have had the theatre tickets and chose not to, so what she sacrificed is the enjoyment those tickets would have brought. Note that the cost is expressed as the <em>alternative</em>, not as the money.",
+        "distractors": {
+          "A": "The £30 is the price, not the opportunity cost. Money is only a claim on resources; what she actually gave up is what that money could otherwise have bought.",
+          "C": "She has the textbook — it is not sacrificed. Opportunity cost counts only what is forgone.",
+          "D": "This double-counts. The £30 and the theatre tickets are the same sacrifice described two ways: the money matters only because of the tickets it could have bought."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following best explains why scarcity exists even in a very wealthy economy?",
+      "options": {
+        "A": "Governments in wealthy economies choose not to produce enough.",
+        "B": "Wealthy economies have unequal distributions of income and wealth.",
+        "C": "Wealthy economies import goods rather than producing them.",
+        "D": "Wants are unlimited while the resources to satisfy them are finite."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Scarcity</strong> is the gap between unlimited wants and finite resources, and rising wealth does not close it. As an economy grows richer its people simply want more and different things — bigger homes, more travel, better healthcare. Because wants expand alongside output, no level of production makes scarcity disappear. This is why every economy, rich or poor, still has to choose.",
+        "distractors": {
+          "A": "This treats scarcity as a policy failure that a determined government could fix. It cannot: the constraint is the quantity of land, labour, capital and enterprise available, not a decision about how hard to try.",
+          "B": "Inequality concerns <em>how</em> output is shared out. A perfectly equal economy would still face scarcity, because the total available would still fall short of what everyone wants.",
+          "C": "Importing changes where goods come from, not how many exist. World resources are finite too, so trade relocates production without abolishing the constraint."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is most likely to be a free good?",
+      "options": {
+        "A": "Bottled mineral water sold in a supermarket.",
+        "B": "Clean air in a heavily industrialised city.",
+        "C": "Public parkland maintained by a local council.",
+        "D": "Sunlight falling on an uninhabited desert."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>free good</strong> has no opportunity cost: it is available in such abundance that one person's use leaves no less for anyone else, and no resources have to be diverted to provide it. Sunlight in an empty desert qualifies — nobody is deprived by it being used, and nothing has to be given up to supply it.",
+        "distractors": {
+          "A": "Bottled water is an <strong>economic good</strong>. Land, labour and capital go into extracting, bottling and transporting it, and those resources have alternative uses.",
+          "B": "This is the trap, because air feels like the standard example of a free good. In a heavily industrialised city it is not: clean air is genuinely scarce there, and obtaining more of it means giving up output through emissions controls. That is an opportunity cost.",
+          "C": "Free at the point of use is not the same as a free good. The council spends money maintaining the park and the land could have been built on, so the parkland has a clear opportunity cost."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A farmer has 40 hectares of land. Each hectare can produce either 6 tonnes of wheat or 10 tonnes of barley. She currently grows wheat on all 40 hectares, and decides to switch 12 hectares to barley. The opportunity cost of that decision is",
+      "options": {
+        "A": "48 tonnes, the difference between the barley gained and the wheat given up.",
+        "B": "72 tonnes of wheat, the output given up on the 12 hectares.",
+        "C": "120 tonnes of barley, the output gained on the 12 hectares.",
+        "D": "192 tonnes, the combined wheat and barley output of the 12 hectares."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Opportunity cost is what is <strong>sacrificed</strong>, so the only figure that matters is the wheat those 12 hectares would have produced.<br />Wheat given up: 12 × 6 = <strong>72 tonnes</strong>.<br />For completeness, the barley gained is 12 × 10 = 120 tonnes — but that is the benefit of the decision, not its cost.",
+        "distractors": {
+          "A": "120 − 72 = 48 is the <em>net</em> gain in tonnage, which treats wheat and barley as interchangeable and then reports a benefit rather than a cost. Opportunity cost is the whole of what is forgone, not the amount by which the gain exceeds it.",
+          "C": "This is the gain, not the cost. The two are easy to swap because both are calculated from the same 12 hectares, but opportunity cost always looks at the alternative given up.",
+          "D": "Adding the two together counts output that cannot both exist. The 12 hectares grow wheat or barley, never both, so 72 and 120 are alternatives rather than components of a total."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A city council has a fixed budget and must choose between building a new library and resurfacing several roads. This decision illustrates",
+      "options": {
+        "A": "That resources are scarce, so choices carry an opportunity cost.",
+        "B": "That the council is behaving irrationally by not doing both.",
+        "C": "That the council's budget will be unlimited in the long run.",
+        "D": "That the library and the roads are both free goods."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is the basic economic problem in miniature. The budget is <strong>finite</strong> and both projects are wanted, so the council must <strong>choose</strong>, and choosing one means giving up the other. The road resurfacing forgone is the <strong>opportunity cost</strong> of the library. Scarcity forces choice, and choice creates opportunity cost — the chain runs the same way for a household, a firm or a government.",
+        "distractors": {
+          "B": "Doing both is not an option the council has. Acting within a constraint is rational, not irrational; it would be irrational to commit to spending money that does not exist.",
+          "C": "Nothing suggests the constraint disappears with time. Even a larger future budget would still be finite, and the council would still be choosing between competing uses.",
+          "D": "Both projects absorb real resources — labour, materials, machinery — which have alternative uses. That is what makes them economic goods rather than free goods."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-4-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows three ways a household could use a budget of £600, together with the household's own ranking of them. It can afford only one.<br />The household chooses the new laptop. Using Table 1, the opportunity cost of the laptop is",
+      "table": {
+        "caption": "Table 1: Three uses of a £600 budget, ranked by the household",
+        "head": [
+          "Option",
+          "Cost",
+          "Household's ranking"
+        ],
+        "rows": [
+          [
+            "New laptop",
+            "£600",
+            "1st"
+          ],
+          [
+            "Weekend break",
+            "£450",
+            "2nd"
+          ],
+          [
+            "Winter coat",
+            "£180",
+            "3rd"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£600, the amount of money the household spends.",
+        "B": "£630, the combined cost of the weekend break and the winter coat.",
+        "C": "The weekend break, the household's next-best alternative.",
+        "D": "The weekend break and the winter coat, both of which are given up."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Two features of opportunity cost decide this. First, it is measured by the <strong>alternative forgone</strong>, not by the money spent. Second, it counts only the <strong>next-best</strong> alternative — the single option the household would have taken instead. The ranking column identifies that directly: the weekend break is second, so it is what the laptop displaces.",
+        "distractors": {
+          "A": "This reports the price. The £600 matters only because of what it could have bought, and the table tells us what that would have been.",
+          "B": "Adding up every alternative overstates the cost. The household could not have had both the break and the coat instead of the laptop in any meaningful ranking — only the best forgone option counts.",
+          "D": "The same error stated in goods rather than money. Opportunity cost is the next-best alternative alone, which is why the ranking is given."
+        }
+      }
+    }
+  ]
+}

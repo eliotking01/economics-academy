@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.5.3",
+  "slug": "2-5-3-trade-cycle",
+  "title": "The Trade Cycle",
+  "shortTitle": "The Trade Cycle",
+  "pageTitle": "The Trade Cycle Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the trade cycle for Edexcel A-Level Economics: the four phases, output gaps, the causes and stabilisation policy.",
+  "intro": "Eight original multiple-choice questions on the trade cycle, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on the phases of the trade cycle, how they relate to output gaps, what drives the cycle and how governments try to smooth it.",
+  "questions": [
+    {
+      "id": "edexcel-2-5-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The trade cycle is conventionally divided into four phases. Taken in the order they occur, they are",
+      "options": {
+        "A": "Boom, recession, slump, recovery.",
+        "B": "Boom, recovery, recession, slump.",
+        "C": "Recession, boom, recovery, slump.",
+        "D": "Slump, boom, recession, recovery."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The cycle runs <strong>boom → recession → slump → recovery</strong>, and then back to boom.<br />A <strong>boom</strong> is the peak: output above trend, unemployment low, inflation rising. A <strong>recession</strong> is the downswing, with falling real GDP. A <strong>slump</strong> is the trough — output well below trend and confidence at its lowest. A <strong>recovery</strong> is the upswing back towards trend.<br />The names describe positions relative to the <em>trend line</em>, not absolute levels. An economy in recovery may still be producing less than it did at the previous peak.",
+        "distractors": {
+          "B": "Recovery follows the trough, not the peak. An economy does not recover from a boom; it falls into recession from one.",
+          "C": "The cycle does not run recession into boom directly. The trough comes first, then the upswing.",
+          "D": "A slump is the deepest point of the downswing. Going straight from there to a boom skips the recovery."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After a prolonged downturn, an economy's real GDP begins to rise, unemployment starts to fall and business confidence returns — though output is still below its previous peak. The economy is in",
+      "options": {
+        "A": "A boom.",
+        "B": "A recession.",
+        "C": "A recovery.",
+        "D": "A slump."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The phases are defined by the <em>direction of travel</em> as much as the level.<br />Output rising, unemployment falling and confidence returning is the <strong>recovery</strong> — the upswing out of the trough. That it remains below the previous peak is exactly what makes it a recovery rather than a boom: the economy is climbing back, not yet running hot.<br />Getting this right is a common exam trap. Students see 'below the previous peak' and reach for recession, when the movement is upward.",
+        "distractors": {
+          "A": "A boom has output <em>above</em> trend, with low unemployment and rising inflation. Here output is still below its previous peak.",
+          "B": "In a recession real GDP is falling. Here it has started to rise.",
+          "D": "A slump is the trough — the deepest point, with output at its lowest and confidence flat. The economy has already left it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 reports an economy's latest quarterly figures.<br />From Table 1, the economy most likely has",
+      "table": {
+        "caption": "Table 1: The economy's latest quarterly figures",
+        "head": [
+          "Indicator",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Change in real GDP",
+            "+3.8%"
+          ],
+          [
+            "Unemployment rate",
+            "3.1%, a 30-year low"
+          ],
+          [
+            "Inflation rate",
+            "6.2% and rising"
+          ],
+          [
+            "Business investment",
+            "Rising strongly"
+          ]
+        ]
+      },
+      "options": {
+        "A": "A negative output gap.",
+        "B": "A positive output gap.",
+        "C": "No output gap at all.",
+        "D": "A falling trend rate of growth."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Read the four indicators together. Real GDP growing at 3.8%, unemployment at a thirty-year low, inflation at 6.2% and rising, and investment strong — that is an economy in a <strong>boom</strong>.<br />A boom means actual output is running <em>above</em> the sustainable level, which is a <strong>positive output gap</strong>. The tight labour market and accelerating inflation are the symptoms: firms are competing for scarce workers and demand is outrunning what can be supplied.<br />This is the link the Edexcel page draws between the two topics — booms carry positive gaps, recessions carry negative ones.",
+        "distractors": {
+          "A": "A negative gap means output below potential, with spare capacity and rising unemployment. Every indicator here points the other way.",
+          "C": "No gap would mean output exactly at potential, with inflation stable. Inflation at 6.2% and rising says otherwise.",
+          "D": "The trend rate is a long-run average measured over a decade or more. A single quarter's figures say nothing about it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Fluctuations in the trade cycle are attributed mainly to changes in",
+      "options": {
+        "A": "Aggregate supply, especially the cost of inputs.",
+        "B": "Swings in demand, mainly confidence and investment.",
+        "C": "The economy's underlying trend rate of growth.",
+        "D": "The size of the working-age population."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The trade cycle is a story about <strong>aggregate demand</strong> moving around a relatively stable trend.<br />Consumer confidence and business investment are the two most volatile components. When households feel secure they spend and borrow, and when firms expect good returns they invest — both of which push the economy above trend. When confidence turns, both collapse, and the economy falls below it.<br />The trend line itself, set by productive capacity, moves slowly and steadily. It is demand that swings around it, which is why stabilisation policy is demand-side policy.",
+        "distractors": {
+          "A": "Supply shocks do occur and can be severe, but they are occasional. The recurring cycle comes from the demand side.",
+          "C": "The trend rate <em>is</em> the line the cycle fluctuates around. If it were what moved, there would be no cycle to observe.",
+          "D": "Demographic change alters potential output very slowly. It moves the trend line rather than producing swings around it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is in a boom with a large positive output gap. A government wanting to stabilise the cycle would most likely",
+      "options": {
+        "A": "Cut interest rates and raise its own spending.",
+        "B": "Cut taxes and raise its own spending.",
+        "C": "Raise taxes and cut interest rates.",
+        "D": "Tighten by raising rates and cutting spending."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Stabilisation means leaning against the cycle, so in a boom the aim is to <strong>cool</strong> aggregate demand.<br />Higher interest rates make borrowing dearer and saving more attractive, reducing consumption and investment. Lower government spending removes an injection directly. Both pull AD back towards the level the economy can sustain, closing the positive gap and easing inflation.<br />In a recession the same logic runs in reverse — lower rates, lower taxes, higher spending — which is why the two halves of the policy are mirror images.",
+        "distractors": {
+          "A": "Both measures are expansionary. Applied in a boom they would widen the positive output gap and add to inflation.",
+          "B": "Again both are expansionary. Cutting taxes raises disposable income and spending at exactly the wrong moment.",
+          "C": "This mixes the two. Higher taxes cool demand, but cutting interest rates works against that."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "On a trade cycle diagram, the straight line about which actual GDP fluctuates represents",
+      "options": {
+        "A": "The government's growth target.",
+        "B": "The level of aggregate demand.",
+        "C": "The path of potential output.",
+        "D": "The rate of inflation over time."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The trend line traces <strong>potential output</strong> — the path the economy would follow if it grew steadily at its trend rate with resources fully employed. It is the same quantity that LRAS represents on the AD/AS diagram.<br />Actual GDP swings above and below it as demand fluctuates. Above the line is a positive output gap and a boom; below it is a negative gap and a recession.<br />So the diagram puts both topics on one picture: the line is capacity, and the wiggles are demand.",
+        "distractors": {
+          "A": "A target is a policy aim. The trend line is an estimate of what the economy can actually sustain, whether or not any target exists.",
+          "B": "Aggregate demand is what causes the fluctuations <em>around</em> the line. It is not the line itself.",
+          "D": "Inflation is not plotted on a trade cycle diagram, whose vertical axis is real GDP."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Actual GDP fluctuates around the trend line rather than following it exactly. The best explanation is that",
+      "options": {
+        "A": "Potential output falls during every recession.",
+        "B": "Swings in demand exceed swings in capacity.",
+        "C": "The trend line is recalculated every quarter.",
+        "D": "Trend growth responds quickly to interest rates."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Productive capacity changes slowly. The capital stock, the size and skills of the workforce and the state of technology all move by small amounts each year, so the trend line is close to smooth.<br />Aggregate demand does not behave that way. Confidence, investment and world conditions can shift sharply within months, so actual output is pushed well above or below what capacity alone would deliver.<br />The gap between a fast-moving numerator and a slow-moving benchmark <em>is</em> the cycle.",
+        "distractors": {
+          "A": "Deep recessions can damage capacity through lost skills and forgone investment, but potential output does not fall in every downturn. The line usually keeps rising more slowly.",
+          "C": "How often the estimate is revised does not create the fluctuations. Actual output would still swing around it if it were never recalculated.",
+          "D": "Interest rates work on demand, not on capacity. Their effect on the trend rate is indirect and slow."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government tries to smooth the trade cycle with demand-side policy but consistently acts too late, tightening only after a boom has already ended. The most likely result is that the policy",
+      "options": {
+        "A": "Amplifies the cycle rather than smoothing it.",
+        "B": "Has no effect on output at any point.",
+        "C": "Raises the economy's trend rate of growth.",
+        "D": "Removes the cycle entirely within a year."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Stabilisation only works if the policy arrives while the condition it targets is still present.<br />Tightening after the boom has ended means cooling an economy that is already slowing, deepening the recession that follows. Loosening after the recovery has begun means stimulating one that is already growing, feeding the next boom. The policy pushes in the same direction as the cycle instead of against it.<br />This is why lags — recognising the problem, deciding, legislating, and waiting for the effect — are the central practical objection to fine-tuning demand, and why some economists prefer to rely on automatic stabilisers, which act without any decision at all.",
+        "distractors": {
+          "B": "The policy has substantial effects on output. The problem is their timing, not their absence.",
+          "C": "Demand-side policy works on where output sits relative to capacity. Raising the trend rate needs supply-side measures.",
+          "D": "No demand-side policy removes the cycle, and one applied with the wrong timing makes it worse rather than better."
+        }
+      }
+    }
+  ]
+}

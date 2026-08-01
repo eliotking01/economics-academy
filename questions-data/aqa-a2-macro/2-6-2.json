@@ -1,0 +1,233 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.6.2",
+  "slug": "2-6-2-trade",
+  "title": "Trade",
+  "shortTitle": "Trade",
+  "pageTitle": "International Trade Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on international trade for AQA A-Level Economics: comparative advantage, tariffs and quotas, and types of trading bloc.",
+  "intro": "Nine original multiple-choice questions on international trade, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Nine original multiple-choice questions on comparative advantage, protectionism and trading blocs, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-6-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country has a comparative advantage in a good when it can produce that good",
+      "options": {
+        "A": "At a lower opportunity cost than another country.",
+        "B": "In greater quantity than another country.",
+        "C": "Using fewer workers than another country.",
+        "D": "With more advanced technology than another country."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Comparative advantage is about <strong>opportunity cost</strong> — what has to be given up to produce the good. A country should specialise where it sacrifices least.<br />This is what makes the theory powerful: a country can be worse at producing everything in absolute terms and still have a comparative advantage in something, because opportunity cost is a relative measure.",
+        "distractors": {
+          "B": "Producing more with the same resources is an <strong>absolute</strong> advantage. It is a different concept and it does not determine what a country should specialise in.",
+          "C": "Needing fewer workers is again absolute advantage, expressed in terms of labour productivity.",
+          "D": "Better technology usually produces an absolute advantage. It says nothing directly about what is given up."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the maximum output each country could produce if it devoted all its resources to one good.<br />Using Table 1, the opportunity cost to Country X of producing one unit of wheat is",
+      "table": {
+        "caption": "Table 1: Maximum output of each good",
+        "head": [
+          "Country",
+          "Wheat",
+          "Cloth"
+        ],
+        "rows": [
+          [
+            "Country X",
+            "60",
+            "240"
+          ],
+          [
+            "Country Y",
+            "40",
+            "80"
+          ]
+        ]
+      },
+      "options": {
+        "A": "0.25 units of cloth.",
+        "B": "2 units of cloth.",
+        "C": "4 units of cloth.",
+        "D": "240 units of cloth."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Opportunity cost is what must be given up. Country X can make either 60 wheat or 240 cloth, so devoting resources to the whole wheat crop costs it the whole cloth output.<br />240 ÷ 60 = <strong>4 units of cloth per unit of wheat</strong>.<br />Country Y gives up only 80 ÷ 40 = 2 cloth per wheat, so <strong>Y</strong> has the comparative advantage in wheat and should specialise in it, leaving cloth to X.",
+        "distractors": {
+          "A": "0.25 is the reciprocal, 60 ÷ 240. That is X's opportunity cost of one unit of <em>cloth</em>, measured in wheat.",
+          "B": "2 units is Country Y's opportunity cost of wheat, not Country X's. Comparing the two is the next step, but the question asks for X.",
+          "D": "240 is X's total cloth output, not what one unit of wheat costs. Opportunity cost is a ratio between the two goods."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country A has an absolute advantage over Country B in producing both of the goods they trade. It follows that",
+      "options": {
+        "A": "Country A should produce both goods itself.",
+        "B": "Country B has a comparative advantage in neither good.",
+        "C": "Trade between them cannot raise total output.",
+        "D": "Trade can still benefit both countries."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Absolute advantage in everything does not settle the question. What matters is <strong>relative</strong> opportunity cost, and unless the two countries' opportunity cost ratios are identical, each is relatively better at one good.<br />Each specialises where it gives up least, total output rises, and both can consume beyond their own production possibility frontier. This is the central insight of the theory.",
+        "distractors": {
+          "A": "This is the intuition the theory exists to correct. Producing both means giving up the gains from specialising where the sacrifice is smallest.",
+          "B": "Comparative advantage is relative, so with two goods and differing ratios each country has one. Country B is relatively better at something.",
+          "C": "Total output rises through specialisation. That gain is precisely what the theory predicts."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The theory of comparative advantage assumes zero transport costs. Allowing for transport costs in practice means that",
+      "options": {
+        "A": "Comparative advantage no longer exists.",
+        "B": "Some trade the model predicts is not worthwhile.",
+        "C": "Specialisation always raises global output further.",
+        "D": "Tariffs become unnecessary."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The gain from trade is the difference in opportunity costs. If moving the goods costs more than that difference is worth, the trade does not happen even though the model says it should.<br />This is why heavy, low-value goods are traded far less than the theory alone would suggest, and it sits alongside the model's other assumptions — perfect knowledge, mobile factors, constant returns to scale and no trade barriers — as a reason real trade patterns depart from it.",
+        "distractors": {
+          "A": "Differences in opportunity cost are unaffected by transport costs. The advantage still exists; some of it is simply eaten up in moving goods.",
+          "C": "Transport costs reduce the net gain from specialisation, so they can only make the total smaller, not larger.",
+          "D": "Tariffs are policy choices. Transport costs happen to restrict trade in a similar way, but they do not make protection unnecessary."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the domestic market for a good that is also imported, the imposition of a tariff will most likely lead to",
+      "options": {
+        "A": "A higher price and higher domestic production.",
+        "B": "A higher price and lower domestic production.",
+        "C": "A lower price and higher domestic production.",
+        "D": "A lower price and lower domestic production."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Draw the domestic supply and demand curves with a world price line below the domestic equilibrium. A tariff raises the price of imports, so the world price line shifts <strong>up</strong>.<br />At that higher price, domestic producers are willing to supply more, so <strong>domestic production rises</strong>, while total consumption falls and imports are squeezed from both ends.<br />Consumers lose more than producers and the government gain, and the difference is the net welfare loss the tariff creates.",
+        "distractors": {
+          "B": "Domestic production rises rather than falls. A higher price makes domestic supply more attractive, which is the tariff's purpose.",
+          "C": "A tariff is a tax on imports, so it raises the price consumers pay rather than lowering it.",
+          "D": "Both halves are wrong: the price rises and domestic output expands."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A group of countries removes all tariffs on trade between themselves and adopts a common external tariff on imports from non-members, but does not allow factors of production to move freely. This is",
+      "options": {
+        "A": "A common market.",
+        "B": "A currency union.",
+        "C": "A customs union.",
+        "D": "A free trade area."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two features together identify it. Removing internal tariffs happens in every bloc; adding a <strong>common external tariff</strong> is what distinguishes a <strong>customs union</strong> from a free trade area.<br />Free movement of labour and capital would take it a step further, to a common market.",
+        "distractors": {
+          "A": "A common market has all these features <em>plus</em> free movement of factors of production, which the stem explicitly rules out.",
+          "B": "A currency union goes further still, adding a single currency on top of common market arrangements.",
+          "D": "In a free trade area members keep their own separate trade policies towards non-members. Here they have adopted a common one."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After joining a trading bloc, a country switches from buying a good from a low-cost producer outside the bloc to a higher-cost producer inside it. This is best described as",
+      "options": {
+        "A": "Comparative advantage.",
+        "B": "Dumping.",
+        "C": "Trade creation.",
+        "D": "Trade diversion."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Trade diversion</strong> is the cost side of joining a bloc. The common external tariff makes the genuinely cheaper outside producer artificially expensive, so trade shifts to a less efficient producer inside the bloc.<br />Resources are allocated worse than before, so welfare falls. It is the mirror image of trade creation, where trade shifts from a high-cost domestic producer to a cheaper one inside the bloc and welfare rises.",
+        "distractors": {
+          "A": "Comparative advantage explains why countries trade at all. Here trade is moving <em>away</em> from the lowest-cost producer.",
+          "B": "Dumping is selling exports below cost to capture market share. Nothing in the stem suggests that.",
+          "C": "Trade creation is the beneficial case — switching to a cheaper source. This switch is to a dearer one."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government temporarily protects a newly established domestic industry so that it can grow to a competitive size. This is best described as protecting",
+      "options": {
+        "A": "A strategic industry.",
+        "B": "A sunset industry.",
+        "C": "An infant industry.",
+        "D": "Against dumping."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>infant industry</strong> argument is that a new industry cannot yet compete with established foreign rivals — it has not reached the scale needed for low average costs or accumulated experience — but could do so given time behind temporary protection.<br />The standard objection is that 'temporary' protection is difficult to remove, and a shielded industry may never face the pressure that would make it efficient.",
+        "distractors": {
+          "A": "Strategic industries are protected for national security reasons, such as defence or energy, regardless of their age.",
+          "B": "A sunset industry is a declining one, protected to slow job losses. This industry is new and growing.",
+          "D": "Anti-dumping measures respond to foreign firms selling below cost. The stem describes a domestic industry that is simply young."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government imposes a tariff intending to reduce imports, but demand for the imported good turns out to be highly price inelastic. The most likely result is that",
+      "options": {
+        "A": "Consumers pay much more and imports fall little.",
+        "B": "Imports fall sharply and consumers gain.",
+        "C": "Imports fall sharply and tariff revenue falls.",
+        "D": "Imports rise as consumers switch towards them."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A tariff works by raising the price of imports and relying on buyers to respond. If demand is <strong>inelastic</strong> — because there is no close domestic substitute, or the good is a necessity — quantity barely moves.<br />So the policy fails on its own terms while still raising the price consumers pay. Tariff revenue is actually high in this case, since revenue is the tariff multiplied by a quantity that has hardly fallen. Whether a tariff works depends on elasticity, and that is the first evaluation point to reach for.",
+        "distractors": {
+          "B": "Inelastic demand means quantity responds weakly, and consumers face higher prices either way, so they do not gain.",
+          "C": "The first half contradicts inelastic demand, and the second contradicts the first: if imports did fall sharply, revenue would fall because there is less to tax.",
+          "D": "A tariff makes imports dearer relative to domestic goods, so it can only discourage them, never encourage them."
+        }
+      }
+    }
+  ]
+}

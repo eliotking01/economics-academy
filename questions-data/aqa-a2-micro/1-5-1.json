@@ -1,0 +1,190 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.1",
+  "slug": "1-5-1-market-structures",
+  "title": "Market Structures",
+  "shortTitle": "Market Structures",
+  "pageTitle": "Market Structures Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on market structures for AQA A-Level Economics: the spectrum of competition and the characteristics that define it.",
+  "intro": "Seven original multiple-choice questions on the spectrum of competition and the characteristics that distinguish market structures, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the spectrum of competition and the characteristics that distinguish market structures, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following lists market structures in order from most competitive to least competitive?",
+      "options": {
+        "A": "Monopolistic competition, perfect competition, monopoly, oligopoly.",
+        "B": "Monopoly, oligopoly, monopolistic competition, perfect competition.",
+        "C": "Oligopoly, monopoly, perfect competition, monopolistic competition.",
+        "D": "Perfect competition, monopolistic competition, oligopoly, monopoly."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The spectrum runs from an infinite number of firms to a single one. <strong>Perfect competition</strong> has countless firms and no market power at all; <strong>monopolistic competition</strong> has many firms but differentiated products; <strong>oligopoly</strong> has a handful of large firms; <strong>monopoly</strong> has one. Competition falls and market power rises as you move along it.",
+        "distractors": {
+          "A": "Perfect competition is the most competitive structure of all, so it cannot sit second. Monopoly and oligopoly are also the wrong way round.",
+          "B": "This is the correct order reversed — least competitive first.",
+          "C": "Monopoly is the least competitive structure, so it cannot appear before perfect competition."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is not used by economists to distinguish between market structures?",
+      "options": {
+        "A": "The height of barriers to entry and exit.",
+        "B": "The level of information available to buyers and sellers.",
+        "C": "The number of firms operating in the market.",
+        "D": "The total revenue earned by the largest firm."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Market structures are classified by four features: the <strong>number of firms</strong>, whether products are <strong>homogeneous or differentiated</strong>, the height of <strong>barriers to entry and exit</strong>, and the <strong>level of information</strong>. One firm's total revenue tells you nothing on its own — a large revenue could belong to a monopolist or to one supermarket among several in a competitive market. It is the firm's revenue <em>relative to the market</em> that matters, which is a different measure.",
+        "distractors": {
+          "A": "Barriers to entry are central. High barriers keep new firms out and allow supernormal profit to persist, which is what separates monopoly from perfect competition in the long run.",
+          "B": "Information matters because perfect information allows fully informed decisions and strengthens competition, while asymmetric information weakens it.",
+          "C": "The number of firms is the most obvious of the four characteristics, running from one under monopoly to an infinite number under perfect competition."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market contains many small firms selling products that are near-identical, and new firms can enter freely. This market is best described as",
+      "options": {
+        "A": "A monopoly.",
+        "B": "An oligopoly.",
+        "C": "Perfectly competitive.",
+        "D": "Monopolistically competitive."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Three of the four defining characteristics are given: <strong>many firms</strong>, <strong>homogeneous products</strong> and <strong>freedom of entry</strong>. That combination points to <strong>perfect competition</strong>, in which each firm is too small to influence the market price and is therefore a price taker.",
+        "distractors": {
+          "A": "A monopoly has a single seller. This market has many.",
+          "B": "An oligopoly is dominated by a few large firms with high barriers to entry. Here the firms are small and entry is free.",
+          "D": "Monopolistic competition also has many firms and low barriers, but its defining feature is <strong>differentiated</strong> products. These are near-identical, which is the perfectly competitive case."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "All other things being equal, a rise in barriers to entry in a market is most likely to",
+      "options": {
+        "A": "Increase competition and reduce the market power of existing firms.",
+        "B": "Increase the number of firms operating in the market.",
+        "C": "Reduce competition and allow supernormal profit to persist.",
+        "D": "Reduce the degree of product differentiation in the market."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Barriers to entry keep potential rivals out. Existing firms therefore face less threat from newcomers, can hold prices above the competitive level, and — crucially — can sustain <strong>supernormal profit into the long run</strong> rather than seeing it competed away. This is precisely why monopoly and oligopoly behave differently from perfect competition over time.",
+        "distractors": {
+          "A": "Barriers do the opposite: fewer potential entrants means less competitive pressure and <em>more</em> market power for incumbents.",
+          "B": "Higher barriers make it harder for firms to join, so the number of firms tends to fall or stay fixed rather than rise.",
+          "D": "Differentiation is a separate characteristic, driven by branding and product design. Barriers to entry concern how easy it is to join the market at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes three markets.<br />Using Table 1, which one of the following correctly identifies each market structure?",
+      "table": {
+        "caption": "Table 1: Characteristics of three markets",
+        "head": [
+          "Market",
+          "Characteristics"
+        ],
+        "rows": [
+          [
+            "1",
+            "One firm, no close substitutes, very high barriers to entry"
+          ],
+          [
+            "2",
+            "Many firms, differentiated products, low barriers to entry"
+          ],
+          [
+            "3",
+            "Four firms share 90% of sales, high barriers to entry"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1 is monopoly, 2 is monopolistic competition, 3 is oligopoly.",
+        "B": "1 is monopoly, 2 is perfect competition, 3 is oligopoly.",
+        "C": "1 is oligopoly, 2 is monopolistic competition, 3 is monopoly.",
+        "D": "1 is oligopoly, 2 is perfect competition, 3 is monopoly."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Take each in turn.<br /><strong>Market 1:</strong> a single seller with no close substitutes and very high barriers is a <strong>monopoly</strong>.<br /><strong>Market 2:</strong> many firms with differentiated products and low barriers is <strong>monopolistic competition</strong> — the differentiation is what separates it from perfect competition.<br /><strong>Market 3:</strong> a few firms holding most of the market behind high barriers is an <strong>oligopoly</strong>.",
+        "distractors": {
+          "B": "Market 2 has differentiated products, and perfect competition requires <em>homogeneous</em> ones. The other two are correctly placed.",
+          "C": "This swaps markets 1 and 3. One firm is a monopoly by definition; four firms sharing the market is an oligopoly.",
+          "D": "Both errors at once: the structures for markets 1 and 3 are swapped, and market 2 is misidentified as perfect competition despite its differentiated products."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In which one of the following market structures are firms most likely to be price takers?",
+      "options": {
+        "A": "Monopolistic competition.",
+        "B": "Perfect competition.",
+        "C": "Monopoly.",
+        "D": "Oligopoly."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>price taker</strong> has to accept the market price and cannot influence it. That requires each firm to be a negligible part of the market and to sell a product identical to everyone else's, so that charging even slightly more loses all its customers. Only <strong>perfect competition</strong> meets both conditions, which is why the firm's demand curve there is perfectly elastic.",
+        "distractors": {
+          "A": "Product differentiation gives each monopolistically competitive firm a little market power and a downward-sloping demand curve, so it can set its own price within limits.",
+          "C": "A monopolist is the clearest example of a price <em>maker</em>, facing the entire market demand curve.",
+          "D": "Oligopolists are price makers too, though their pricing is constrained by interdependence — they must anticipate how rivals will react."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two markets each contain exactly three firms. In the first, entry requires a licence that takes years to obtain; in the second, a new firm could begin trading within a week. All other things being equal, the second market is likely to have",
+      "options": {
+        "A": "Higher prices, because fewer firms means less rivalry.",
+        "B": "Identical prices, because both markets contain the same number of firms.",
+        "C": "Lower prices, because the threat of entry disciplines the existing firms.",
+        "D": "Lower prices, because its products must be homogeneous."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Counting firms is not the whole story. What also matters is how easily <em>new</em> firms could arrive. Where entry is quick and cheap, incumbents know that charging high prices would attract competitors almost immediately, so they hold prices closer to the competitive level even though only three firms actually trade. This is the idea of <strong>contestability</strong>: the threat of potential competition can discipline behaviour as effectively as actual competition.",
+        "distractors": {
+          "A": "Both markets contain three firms, so the number of rivals cannot explain a price difference between them.",
+          "B": "This treats the number of firms as the only thing that matters. Barriers to entry are one of the four defining characteristics precisely because they change behaviour independently of firm numbers.",
+          "D": "Nothing in the stem says the products are homogeneous, and the price difference is driven by ease of entry rather than by product type."
+        }
+      }
+    }
+  ]
+}

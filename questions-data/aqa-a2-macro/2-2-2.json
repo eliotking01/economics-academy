@@ -1,0 +1,238 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.2.2",
+  "slug": "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+  "title": "Aggregate Demand and Aggregate Supply Analysis",
+  "shortTitle": "AD and AS Analysis",
+  "pageTitle": "Aggregate Demand and Supply Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on AD/AS analysis for AQA A-Level Economics: the AD curve, movements and shifts, SRAS, and Classical versus Keynesian LRAS.",
+  "intro": "Nine original multiple-choice questions on aggregate demand and aggregate supply analysis, written to the style and difficulty of AQA Paper 3 Section A. Two ask you to sketch the diagram yourself.",
+  "notesTeaser": "Nine original multiple-choice questions on the AD curve, movements versus shifts and the Classical and Keynesian views of LRAS, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-2-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Aggregate demand is best expressed as",
+      "options": {
+        "A": "C + I + G + (M − X)",
+        "B": "C + I + G + (X − M)",
+        "C": "C + I + G + X + M",
+        "D": "C + S + G + (X − M)"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Aggregate demand is total planned spending on domestic output: consumption, plus investment, plus government spending, plus <strong>net exports</strong>.<br />Net exports are exports <em>minus</em> imports, because imports are spending on output produced abroad and so must be taken out.",
+        "distractors": {
+          "A": "This reverses net exports. Written this way, a trade deficit would add to aggregate demand rather than subtract from it.",
+          "C": "Adding imports counts foreign production as part of domestic demand. Imports carry a minus sign.",
+          "D": "Saving is not a component of aggregate demand — it is a withdrawal from the circular flow. Consumption is what belongs in the first term."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the approximate share of each component in the UK's aggregate demand.<br />Using Table 1, a fall of 10% in which component would reduce aggregate demand by about 2.5%?",
+      "table": {
+        "caption": "Table 1: Components of aggregate demand",
+        "head": [
+          "Component",
+          "Approximate share of AD"
+        ],
+        "rows": [
+          [
+            "Consumption",
+            "60%"
+          ],
+          [
+            "Investment",
+            "14%"
+          ],
+          [
+            "Government spending",
+            "25%"
+          ],
+          [
+            "Net exports",
+            "1%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Consumption.",
+        "B": "Investment.",
+        "C": "Government spending.",
+        "D": "Net exports."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A percentage fall in one component reduces aggregate demand in proportion to that component's <strong>share</strong> of it.<br />Government spending is 25% of AD, so a 10% fall in it reduces AD by 10% × 25% = <strong>2.5%</strong>.",
+        "distractors": {
+          "A": "Consumption is 60% of AD, so a 10% fall would cut AD by 6% — much the largest effect of the four, which is exactly why consumer confidence matters so much.",
+          "B": "Investment is 14% of AD, so a 10% fall would cut AD by about 1.4%. Investment is the most volatile component, but it is not the largest.",
+          "D": "Net exports are about 1% of AD, so a 10% fall would cut AD by around 0.1% — a negligible effect."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The aggregate demand curve slopes downwards partly because a fall in the average price level",
+      "options": {
+        "A": "Increases the real value of money, so consumption rises.",
+        "B": "Increases the cost of imported raw materials, so output falls.",
+        "C": "Raises interest rates, so investment falls.",
+        "D": "Shifts the aggregate demand curve to the right."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is the <strong>wealth effect</strong>. When the price level falls, a given amount of money buys more, so households are wealthier in real terms and spend more. Consumption is the largest component of AD, so the quantity of real GDP demanded rises.<br />Two other effects work alongside it: a lower price level reduces the demand for money and so interest rates, encouraging borrowing and investment; and it makes exports cheaper and imports dearer, raising net exports.",
+        "distractors": {
+          "B": "This is a cost of production, which shifts the <strong>SRAS</strong> curve. It has nothing to do with why AD slopes downwards.",
+          "C": "The interest rate effect runs the other way. A lower price level reduces the demand for money and so <em>lowers</em> interest rates, which raises investment.",
+          "D": "A change in the price level causes a <strong>movement along</strong> the AD curve, never a shift of it. Shifts come from changes in C, I, G or net exports at a given price level."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Consumer confidence rises sharply while the average price level is unchanged. In the AD/AS model this causes",
+      "options": {
+        "A": "A movement along the AD curve to the left.",
+        "B": "A movement along the AD curve to the right.",
+        "C": "A shift of the AD curve to the left.",
+        "D": "A shift of the AD curve to the right."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Consumer confidence is a determinant of consumption, and consumption is a component of AD. A change in any determinant <em>other than the price level</em> changes planned spending at every price level, which is a <strong>shift</strong> of the whole curve. More confident households spend more, so the shift is to the right.",
+        "distractors": {
+          "A": "Movements along the curve are caused only by changes in the price level, which the stem rules out. The direction is wrong too.",
+          "B": "The direction is right but the mechanism is wrong. Only a change in the price level moves the economy along a fixed AD curve.",
+          "C": "A leftward shift would mean less planned spending at every price level. Greater confidence raises spending."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching an AD/AS diagram with a Keynesian LRAS curve, an increase in aggregate demand while the economy has large spare capacity will",
+      "options": {
+        "A": "Leave both output and the price level unchanged.",
+        "B": "Raise both output and the price level equally.",
+        "C": "Raise output with little effect on the price level.",
+        "D": "Raise the price level with little effect on output."
+      },
+      "answer": "C",
+      "model": {
+        "working": "On the Keynesian view the LRAS curve is <strong>perfectly elastic</strong> where there is large spare capacity, because unemployed resources can be brought into use without bidding up costs. Draw AD shifting right along that horizontal stretch and the intersection moves out along it: <strong>real output rises and the price level barely moves</strong>.<br />This is the case for demand-side policy in a recession — and it is exactly where the Classical and Keynesian models disagree.",
+        "distractors": {
+          "A": "This would require a vertical AD curve or no shift at all. On the flat stretch, extra demand is met by extra output.",
+          "B": "Equal movement in both would need the curve to be sloping at 45 degrees, which is not the Keynesian shape anywhere.",
+          "D": "This is what happens on the <em>vertical</em> section, at full capacity — the opposite end of the same curve. With large spare capacity there is room to expand output."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching an AD/AS diagram with a Classical LRAS curve, an increase in aggregate demand in the long run will",
+      "options": {
+        "A": "Increase both real output and the price level.",
+        "B": "Increase real output only.",
+        "C": "Increase the price level only.",
+        "D": "Leave the price level unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Classical LRAS curve is <strong>vertical</strong> at the full employment level of output, because in the long run output depends on the quantity and quality of the factors of production, not on the price level. Shifting AD right along a vertical LRAS moves the intersection straight up: <strong>the price level rises and real output is unchanged</strong>.<br />This is why Classical economists argue demand-side policy cannot raise long-run output, and that supply-side measures are needed instead.",
+        "distractors": {
+          "A": "Output rises with AD in the <em>short</em> run, along SRAS. In the long run the Classical curve is vertical, so output returns to Yfe.",
+          "B": "This is the outcome only where LRAS is perfectly elastic, which the Classical model never allows in the long run.",
+          "D": "An unchanged price level would require a horizontal LRAS. Against a vertical curve, the whole adjustment falls on prices."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The short-run aggregate supply curve slopes upwards because, as output rises,",
+      "options": {
+        "A": "Firms face higher unit costs and need a higher price.",
+        "B": "Households feel wealthier and spend more of their income.",
+        "C": "The economy's productive capacity increases automatically.",
+        "D": "The exchange rate appreciates, lowering the cost of imports."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In the short run at least one factor of production is fixed, so pushing output higher means paying for overtime, less efficient equipment and dearer inputs. <strong>Unit costs rise with output</strong>, so firms will only supply more if the price they receive rises too. That is what gives SRAS its upward slope.",
+        "distractors": {
+          "B": "The wealth effect is one reason the <strong>AD</strong> curve slopes downwards. It is about spending, not about the cost of producing.",
+          "C": "Productive capacity is what the <strong>LRAS</strong> curve shows, and it does not expand simply because current output has risen.",
+          "D": "Exchange rate movements shift the SRAS curve by changing import costs. They do not explain its slope."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The average price level rises while all conditions of supply are unchanged. In the short run this causes firms to",
+      "options": {
+        "A": "Move along the SRAS curve to a higher level of output.",
+        "B": "Move along the SRAS curve to a lower level of output.",
+        "C": "Shift the SRAS curve to the left.",
+        "D": "Shift the SRAS curve to the right."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A change in the price level with costs unchanged is a <strong>movement along</strong> the SRAS curve, not a shift of it. Because SRAS slopes upwards, a higher price makes extra production worthwhile at the higher unit costs it involves, so firms supply more.",
+        "distractors": {
+          "B": "This would need a downward-sloping SRAS curve. A higher price makes supplying more attractive, not less.",
+          "C": "Shifts of SRAS come from changes in production costs. The stem holds conditions of supply constant, so nothing shifts.",
+          "D": "Again this is a shift, and shifts require a change in costs. The price level is not a condition of supply."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "The Classical and Keynesian views of long-run aggregate supply disagree fundamentally over whether",
+      "options": {
+        "A": "Firms face higher unit costs as output rises in the short run.",
+        "B": "The economy can produce beyond its productive potential.",
+        "C": "The price level responds to changes in aggregate demand.",
+        "D": "Total output can be raised by aggregate demand in the long run."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The shape of the curve is the whole argument. A <strong>vertical</strong> Classical LRAS means long-run output is fixed by the factors of production, so aggregate demand can only move the price level. A Keynesian LRAS with a flat or upward-sloping section means an economy stuck below full employment <em>can</em> be moved to higher output by extra demand.<br />Everything else follows from this: whether demand-side policy can raise output, or whether only supply-side policy can.",
+        "distractors": {
+          "A": "Both accept this. It is why the short-run aggregate supply curve slopes upwards in either model.",
+          "B": "Neither view allows output beyond productive potential in the long run. The Keynesian curve is also vertical once full capacity is reached.",
+          "C": "Both agree the price level responds to demand. They disagree about whether <em>output</em> does as well."
+        }
+      }
+    }
+  ]
+}

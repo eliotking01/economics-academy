@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.6.5",
+  "slug": "1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment",
+  "title": "The Influence of Trade Unions in Determining Wages and Levels of Employment",
+  "shortTitle": "Trade Unions",
+  "pageTitle": "Trade Union Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on trade unions for AQA A-Level Economics: union density, collective bargaining and the effect on wages and employment.",
+  "intro": "Seven original multiple-choice questions on trade unions and their influence on wages and employment, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on union density, collective bargaining and the effect of unions on wages and employment, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-6-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Union density measures the proportion of",
+      "options": {
+        "A": "A union's members who vote in favour of industrial action.",
+        "B": "A firm's total costs that are accounted for by wages.",
+        "C": "The total workforce who are members of a trade union.",
+        "D": "Wage rises that are agreed through collective bargaining."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Union density</strong> is the number of union members divided by the total workforce, expressed as a percentage. It is the standard indicator of union strength: the higher the density, the more credible a threat of industrial action becomes, because a strike would halt more of the employer's operations.",
+        "distractors": {
+          "A": "The size of a strike ballot majority matters tactically, but density measures <em>membership</em> across the workforce.",
+          "B": "The share of costs made up by wages helps determine the <strong>elasticity of labour demand</strong>, which is a different influence on bargaining outcomes.",
+          "D": "The proportion of pay settled collectively is bargaining coverage, a related but distinct measure."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-5-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm employs 2,500 workers, of whom 1,600 belong to a trade union. Union density in this workforce is",
+      "options": {
+        "A": "36%",
+        "B": "64%",
+        "C": "156%",
+        "D": "1,600%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Union density = union members ÷ total workforce × 100.<br />1,600 ÷ 2,500 × 100 = <strong>64%</strong>.<br />A density this high gives the union considerable bargaining power, since a strike would stop most of the firm's operations.",
+        "distractors": {
+          "A": "36% is the proportion of the workforce <em>not</em> in the union (900 ÷ 2,500). Density measures membership, not its opposite.",
+          "C": "156% inverts the fraction, dividing 2,500 by 1,600. A proportion of a workforce cannot exceed 100%.",
+          "D": "1,600% multiplies rather than divides. Always check that a percentage answer is plausible before choosing it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would most increase a trade union's bargaining power?",
+      "options": {
+        "A": "A fall in union density among the workforce.",
+        "B": "A rise in the profitability of the employer.",
+        "C": "Legislation restricting the right to take industrial action.",
+        "D": "The employer finding it easy to replace striking workers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>profitable</strong> employer has the capacity to pay more and a great deal to lose from a stoppage, so it has both the means and the motive to settle. Union power also rises with <strong>high union density</strong>, <strong>inelastic demand for labour</strong>, buoyant economic conditions and supportive legislation.",
+        "distractors": {
+          "A": "Lower density means fewer members, so a strike would disrupt less and the threat carries less weight.",
+          "C": "Restricting industrial action removes the union's main sanction and directly weakens its position.",
+          "D": "Easy replacement of strikers makes the threat of a stoppage almost costless to the employer."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A trade union is most likely to raise wages without causing significant job losses when the demand for labour is",
+      "options": {
+        "A": "Wage elastic, because firms will absorb the cost.",
+        "B": "Wage elastic, because output can be maintained with fewer workers.",
+        "C": "Wage inelastic, because firms cannot easily reduce employment.",
+        "D": "Wage inelastic, because workers are easily replaced by machines."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Where demand for labour is <strong>wage inelastic</strong>, a rise in the wage causes only a small fall in the quantity of labour demanded — the firm cannot readily substitute machines, cannot do without the specialist skills, or would lose too much output by cutting staff. The union secures higher pay at little cost in jobs. Where demand is elastic, the same wage rise triggers substantial job losses.",
+        "distractors": {
+          "A": "Elastic demand means firms respond strongly to a wage rise by cutting employment, rather than absorbing it.",
+          "B": "Maintaining output with fewer workers is precisely the job loss the union wants to avoid.",
+          "D": "Easy substitution by machines makes labour demand <em>elastic</em>, so this reason contradicts the classification given."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a competitive labour market, a trade union succeeds in raising the wage above the equilibrium level. On a diagram this creates",
+      "options": {
+        "A": "An excess demand for labour, shown as a shortage of workers.",
+        "B": "An excess supply of labour, shown as unemployment in that market.",
+        "C": "A leftward shift of the labour demand curve.",
+        "D": "A rightward shift of the labour supply curve."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A negotiated wage above equilibrium works exactly like a <strong>price floor</strong>. At the higher wage more workers want jobs while firms want fewer, so the quantity supplied exceeds the quantity demanded. The gap is an <strong>excess supply of labour</strong> — unemployment among those who would have been willing to work at the old wage.",
+        "distractors": {
+          "A": "Excess demand is a shortage of workers, which occurs when the wage is held <em>below</em> equilibrium.",
+          "C": "The demand curve does not move. Firms slide up their existing curve to a lower level of employment.",
+          "D": "The supply curve does not move either. More workers <em>want</em> jobs, but that is a movement along the supply curve caused by the higher wage."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A trade union bargains with a monopsony employer rather than in a competitive labour market. Compared with the competitive case, the union is more likely to raise wages",
+      "options": {
+        "A": "And employment at the same time.",
+        "B": "But cause a larger fall in employment.",
+        "C": "Only if it also accepts lower employment.",
+        "D": "Only if the employer is making a loss."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A monopsonist deliberately <em>restricts</em> employment in order to keep the wage down. A union-negotiated wage removes that incentive, because the employer now faces a flat cost of labour rather than one that rises with every extra hire. The result can be a <strong>higher wage and higher employment together</strong>, moving the market towards the competitive outcome. It is the standard evaluation point whenever a question asks whether unions cost jobs.",
+        "distractors": {
+          "B": "A larger fall in employment is the risk in a <em>competitive</em> market, where the wage was already at equilibrium.",
+          "C": "Accepting lower employment is exactly the trade-off that monopsony removes, because the restriction was the monopsonist's own choice.",
+          "D": "The employer's profitability affects how much it can afford to concede, but the employment result comes from the structure of the market."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-5-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Union density in the UK has fallen substantially over recent decades. All other things being equal, the most likely consequence for the labour market is",
+      "options": {
+        "A": "Greater bargaining power for individual workers.",
+        "B": "Higher wages across all occupations.",
+        "C": "Wages settled more by market forces than by bargaining.",
+        "D": "Wider use of minimum wage legislation by employers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "As union membership falls, fewer wages are set by <strong>collective bargaining</strong> and more are determined by the interaction of labour demand and supply — that is, by each worker's marginal revenue product and the availability of workers with those skills. The likely effects are a narrower union wage premium and, where employers hold monopsony power, wages closer to the level that power allows.",
+        "distractors": {
+          "A": "Individual workers have far less bargaining strength than a union acting collectively. The loss of a union weakens their position rather than strengthening it.",
+          "B": "If anything, weaker unions tend to reduce the wage premium union members enjoy. There is no mechanism by which falling density raises pay everywhere.",
+          "D": "The minimum wage is set by government, not chosen by employers. It may become a more important floor as union coverage falls, but employers do not adopt it voluntarily."
+        }
+      }
+    }
+  ]
+}

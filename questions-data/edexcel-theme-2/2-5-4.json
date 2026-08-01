@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.5.4",
+  "slug": "2-5-4-the-impact-of-economic-growth",
+  "title": "The Impact of Economic Growth",
+  "shortTitle": "The Impact of Economic Growth",
+  "pageTitle": "Costs and Benefits of Economic Growth Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on the impact of growth for Edexcel A-Level Economics: living standards, inequality, the environment and sustainability.",
+  "intro": "Eight original multiple-choice questions on the impact of economic growth, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on the benefits and costs of economic growth, and the trade-offs it creates with other macroeconomic objectives.",
+  "questions": [
+    {
+      "id": "edexcel-2-5-4-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 lists four consequences of sustained economic growth.<br />Using Table 1, the only consequence usually counted as a benefit is",
+      "table": {
+        "caption": "Table 1: Four consequences of sustained growth",
+        "head": [
+          "",
+          "Consequence"
+        ],
+        "rows": [
+          [
+            "Consequence 1",
+            "Tax receipts from incomes and profits rise"
+          ],
+          [
+            "Consequence 2",
+            "Congestion and house prices increase in cities"
+          ],
+          [
+            "Consequence 3",
+            "Pollution and resource depletion increase"
+          ],
+          [
+            "Consequence 4",
+            "Average working hours lengthen"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Consequence 1.",
+        "B": "Consequence 2.",
+        "C": "Consequence 3.",
+        "D": "Consequence 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Rising incomes and profits raise receipts from income tax, corporation tax and VAT without any change in tax rates. That gives a government more to spend on public services, or the room to reduce borrowing — a clear <strong>benefit</strong> of growth.<br />The other three are all on the cost side of the ledger. Growth is not a free good, and the Edexcel page sets seven benefits against seven costs precisely to make that point.",
+        "distractors": {
+          "B": "Congestion and rising house prices are urban costs of concentrated growth, straining infrastructure and squeezing housing.",
+          "C": "Pollution and resource depletion are <strong>negative externalities</strong> — costs falling on third parties and on future generations.",
+          "D": "Longer working hours are the cost to work-life balance, bringing stress and less leisure with them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Sustained growth in a low-income country raises average real incomes substantially. The benefit most directly claimed for this is",
+      "options": {
+        "A": "A fall in relative poverty.",
+        "B": "A more equal income distribution.",
+        "C": "Lower environmental damage.",
+        "D": "Reduced absolute poverty."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Absolute poverty</strong> is living below the income needed for basic subsistence. Raising average real incomes can lift large numbers of people above that line, and it is the strongest single argument for growth in a low-income country.<br />Note how carefully the claim has to be stated. Growth reduces absolute poverty <em>if</em> the gains reach the poorest, and the Edexcel page is explicit that the benefits may not be evenly distributed. The benefit is real but conditional.",
+        "distractors": {
+          "A": "Relative poverty is measured against the income distribution, so it can persist or worsen even as everyone becomes better off.",
+          "B": "Growth carries no guarantee of a more equal distribution. The page lists worsened income equality among its <em>costs</em>.",
+          "C": "Growth generally raises production and consumption, which increases environmental pressure rather than reducing it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's real GDP per capita doubles over twenty years, but the poorest households are no better off than they were. This illustrates that growth",
+      "options": {
+        "A": "Cannot raise living standards at all.",
+        "B": "May not be evenly distributed.",
+        "C": "Must reduce absolute poverty.",
+        "D": "Always worsens income equality."
+      },
+      "answer": "B",
+      "model": {
+        "working": "GDP per capita is a <strong>mean</strong>. It can double while the gains go almost entirely to households already near the top, leaving those at the bottom where they were.<br />That is the cost the Edexcel page calls <strong>worsened income equality</strong>: the benefits of growth may not be evenly shared, so the average figure conceals what has happened to most people.<br />It is also the reason distribution is treated as a separate objective from growth. A country can succeed on one and fail on the other, and GDP alone will not show it.",
+        "distractors": {
+          "A": "Living standards have risen substantially on average. The problem is who received the increase, not whether there was one.",
+          "C": "Growth <em>can</em> reduce absolute poverty, and often does — but the stem describes a case where it did not reach the poorest.",
+          "D": "Not always. Growth sometimes narrows the distribution, particularly where it comes with rising employment. The point is that it is not guaranteed either way."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Rapid growth raises production and consumption, and with them pollution and the depletion of natural resources. In the language of Theme 1, these costs are",
+      "options": {
+        "A": "Negative externalities of the growth.",
+        "B": "Positive externalities of the growth.",
+        "C": "Private costs borne by the producers.",
+        "D": "Transfer payments to third parties."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Pollution and resource depletion fall on people outside the transactions that caused them — neighbours, other countries, and future generations who had no say in any of it.<br />That is the definition of a <strong>negative externality</strong>: a cost imposed on a third party and not reflected in the market price. Because the price of the goods being produced omits it, the market over-produces them relative to the social optimum.<br />It also explains the remedy. If growth's environmental costs are externalities, the tools are the Theme 1 ones — taxes, tradable permits, regulation — rather than anything specific to macroeconomic policy.",
+        "distractors": {
+          "B": "A positive externality is a <em>benefit</em> to third parties. Pollution is plainly a cost.",
+          "C": "Private costs are borne by the producer and appear in its accounts. The whole difficulty is that these costs do not.",
+          "D": "A transfer payment moves money from one party to another without anything being produced. Nothing is being transferred here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Development that meets the needs of the present without reducing the ability of future generations to meet their own is called",
+      "options": {
+        "A": "Actual growth.",
+        "B": "Export-led growth.",
+        "C": "Sustainable development.",
+        "D": "Trend rate growth."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Sustainable development</strong> sets today's growth against what it leaves behind. Output raised by burning through finite resources or degrading the environment has been borrowed from the future rather than created.<br />It reframes the whole growth debate. On this view the question is not simply how fast GDP is rising but whether the capacity to keep growing is being maintained — which is why it sits alongside inequality and environmental damage in the case for looking past GDP to broader measures of well-being.",
+        "distractors": {
+          "A": "Actual growth is a rise in real GDP over a period. It says nothing about whether the growth can be maintained.",
+          "B": "Export-led growth is a strategy for generating growth, not a judgement about its long-run viability.",
+          "D": "The trend rate of growth is an economy's long-run average growth rate — a measurement, not a standard to be met."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy grows rapidly, and domestic demand rises faster than its capacity to supply. The effect on the current account is most likely to be",
+      "options": {
+        "A": "An improvement, as exports become cheaper.",
+        "B": "An improvement, as incomes rise.",
+        "C": "A worsening, as imports rise.",
+        "D": "No change, since growth affects only output."
+      },
+      "answer": "C",
+      "model": {
+        "working": "When demand outruns domestic capacity, the shortfall is met from abroad. Imports rise, and the current account deteriorates.<br />A second effect reinforces it. An economy running above capacity generates rising costs and prices, which erodes the competitiveness of its exports — so the trade balance is squeezed from both sides at once.<br />This is one of the standard costs of rapid growth, and it is why the Edexcel page lists <strong>current account problems</strong> alongside inflation as a consequence of demand running ahead of supply.",
+        "distractors": {
+          "A": "Rapid growth tends to raise domestic costs and prices, which makes exports <em>dearer</em> abroad rather than cheaper.",
+          "B": "Higher incomes raise spending on imports as well as on domestic goods, so rising incomes worsen the balance rather than improving it.",
+          "D": "Growth affects the composition of demand and the price level, both of which feed straight into the trade balance."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Some economists argue that governments should target broader measures of well-being rather than growth alone. The strongest argument for this is that GDP growth",
+      "options": {
+        "A": "Cannot be measured with any real accuracy.",
+        "B": "Is always accompanied by higher inflation.",
+        "C": "Omits costs such as pollution and lost leisure.",
+        "D": "Reduces employment over the long run in most economies."
+      },
+      "answer": "C",
+      "model": {
+        "working": "GDP counts what is produced and sold. It does not subtract the pollution created along the way, the leisure given up to produce it, or the congestion and stress that come with it — and it says nothing about how the output is shared.<br />So an economy can post strong GDP growth while its people are, on any broader reckoning, no better off. That is the case for measuring well-being directly rather than assuming output growth stands in for it.<br />The counter-argument is worth holding too: growth funds the health, education and clean technology that raise well-being, so the two are not simply in opposition.",
+        "distractors": {
+          "A": "GDP is measured imperfectly but not uselessly, by three separate methods. The objection is about what it leaves out, not about precision.",
+          "B": "Growth is only inflationary when demand runs ahead of capacity. Long-run growth driven by rising capacity need not raise prices at all.",
+          "D": "Growth generally raises employment, which the Edexcel page lists among its benefits."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-5-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "It is argued that growth both damages the environment and helps to protect it. The second half of that claim rests on growth",
+      "options": {
+        "A": "Ending the use of fossil fuels automatically.",
+        "B": "Funding research into cleaner technology.",
+        "C": "Reducing the total output that is produced.",
+        "D": "Removing the need for any regulation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The two halves of the argument operate through different channels, which is why both can hold at once.<br />The <strong>damage</strong> is direct: more production and consumption mean more emissions, more waste and more resource depletion.<br />The <strong>protection</strong> is indirect and conditional. Higher incomes and profits generate the tax receipts and private funds that pay for research into cleaner technology, and richer societies tend to demand higher environmental standards once basic needs are met.<br />Nothing makes the second effect automatic. It depends on the money actually being directed that way, which is a policy choice — and that is precisely where the debate about sustainable development sits.",
+        "distractors": {
+          "A": "Nothing about growth ends fossil fuel use on its own. Growth raises energy demand, and the shift away from fossil fuels is driven by policy and technology.",
+          "C": "Growth means <em>more</em> output, not less. Reducing output is the opposite proposition, and a quite different argument.",
+          "D": "Higher incomes may raise demand for environmental standards, but externalities still need correcting. Growth does not make regulation unnecessary."
+        }
+      }
+    }
+  ]
+}

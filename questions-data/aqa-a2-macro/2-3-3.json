@@ -1,0 +1,265 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.3.3",
+  "slug": "2-3-3-inflation-and-deflation",
+  "title": "Inflation and Deflation",
+  "shortTitle": "Inflation and Deflation",
+  "pageTitle": "Inflation and Deflation Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on inflation and deflation for AQA A-Level Economics: demand-pull and cost-push causes, CPI limits and the quantity theory.",
+  "intro": "Ten original multiple-choice questions on inflation and deflation, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Ten original multiple-choice questions on the causes and effects of inflation and deflation, the limits of the CPI and the quantity theory of money, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-3-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Inflation is best defined as",
+      "options": {
+        "A": "A one-off rise in the price of a single good.",
+        "B": "A rise in firms' costs of production.",
+        "C": "A rise in the money supply of an economy.",
+        "D": "A sustained rise in the general price level."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Two words carry the definition. <strong>Sustained</strong> rules out a one-off jump, and <strong>general</strong> means the average across the economy, not one product. Inflation is measured as the annual percentage change in a price index such as the CPI.",
+        "distractors": {
+          "A": "A single price rising once is a change in a relative price. Prices of individual goods move all the time without the general price level changing.",
+          "B": "Rising production costs cause cost-push inflation. That is a cause of inflation, not the definition of it.",
+          "C": "Rapid growth in the money supply is another possible <em>cause</em>, and the quantity theory links the two, but it is not what the word means."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts income tax sharply at a time when the economy is already close to full capacity. The inflation that follows is best described as",
+      "options": {
+        "A": "Cost-push, because firms' wage bills have risen.",
+        "B": "Cost-push, because indirect taxes have been changed.",
+        "C": "Demand-pull, because aggregate demand has risen.",
+        "D": "Demand-pull, because productive capacity has fallen."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An income tax cut raises households' disposable income, so consumption rises and <strong>aggregate demand shifts right</strong>. With the economy already near full capacity there is little room to meet that demand with extra output, so the adjustment falls mostly on prices.<br />Inflation caused by demand outrunning supply is <strong>demand-pull</strong>, and the closer the economy is to capacity the more of any demand increase shows up as inflation rather than growth.",
+        "distractors": {
+          "A": "Wage bills would raise costs and shift SRAS left, but nothing in the stem raises them. The tax cut works on households' spending power, not on firms' costs.",
+          "B": "Income tax is a <em>direct</em> tax on income. Indirect taxes are levied on spending, and they have not been changed here.",
+          "D": "The conclusion is right but the reason is wrong. Demand-pull inflation comes from AD rising, not from capacity falling — a fall in capacity would be a supply-side problem."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching an AD/AS diagram, cost-push inflation is best shown by",
+      "options": {
+        "A": "A leftward shift of AD, lowering prices and output.",
+        "B": "A leftward shift of SRAS, raising prices and lowering output.",
+        "C": "A rightward shift of AD, raising prices and output.",
+        "D": "A rightward shift of SRAS, lowering prices and raising output."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Cost-push inflation starts with firms' costs, so it is the <strong>supply</strong> curve that moves. Draw SRAS shifting left against a fixed AD and the intersection travels up and to the left: the <strong>price level rises and real output falls</strong>.<br />That falling-output signature is what distinguishes it from demand-pull inflation, where output rises alongside prices.",
+        "distractors": {
+          "A": "A leftward shift of AD <em>lowers</em> the price level, so it cannot cause inflation of any kind.",
+          "C": "This is demand-pull inflation. Prices rise, but output rises too, which is the opposite of the cost-push case.",
+          "D": "A rightward shift of SRAS lowers the price level. That is a positive supply shock, not inflation."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Workers respond to higher prices by demanding higher wages, which raises firms' costs and pushes prices up again. This is best described as",
+      "options": {
+        "A": "A negative output gap.",
+        "B": "A positive output gap.",
+        "C": "A wage-price spiral.",
+        "D": "Disinflation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>wage-price spiral</strong> is a self-feeding loop: prices rise, workers bargain for higher wages to protect their real incomes, higher wages raise firms' costs, and firms raise prices again. Once expectations of inflation are built into wage bargaining, inflation can persist even after whatever started it has gone away.",
+        "distractors": {
+          "A": "A negative output gap means spare capacity and weak demand, which puts <em>downward</em> pressure on prices.",
+          "B": "A positive output gap can trigger the spiral by tightening the labour market, but the gap is a state of the economy, not the feedback loop itself.",
+          "D": "Disinflation is a fall in the rate of inflation. This process does the opposite — it keeps inflation going."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 compares the weights in the CPI basket with the spending pattern of a typical pensioner household.<br />Using Table 1, the CPI will most understate the inflation this household faces if prices rise fastest for",
+      "table": {
+        "caption": "Table 1: CPI weights and one household's spending",
+        "head": [
+          "Category",
+          "Weight in CPI basket",
+          "Share of this household's spending"
+        ],
+        "rows": [
+          [
+            "Housing and fuel",
+            "12%",
+            "28%"
+          ],
+          [
+            "Food",
+            "10%",
+            "10%"
+          ],
+          [
+            "Transport",
+            "14%",
+            "6%"
+          ],
+          [
+            "Other goods and services",
+            "64%",
+            "56%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Food.",
+        "B": "Housing and fuel.",
+        "C": "Other goods and services.",
+        "D": "Transport."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The CPI weights each category by its share of <em>average</em> household spending. Where a particular household spends a larger share than the average, the index under-weights what matters to them.<br />This household puts <strong>28%</strong> of its spending on housing and fuel against the CPI's <strong>12%</strong> — much the largest gap in the table. So a surge in housing and fuel prices hurts them far more than the headline CPI figure would suggest.<br />This is the 'not representative' limitation of the CPI: one index cannot describe every household's experience.",
+        "distractors": {
+          "A": "Food takes 10% of this household's spending and carries a 10% weight in the CPI. The weights match, so the index would track their experience accurately.",
+          "C": "Other goods and services take 56% of this household's spending against a CPI weight of 64%, so the index <em>over</em>-weights this category for them.",
+          "D": "Transport is 6% of their spending against a CPI weight of 14%. The index over-weights it, so rising transport prices would overstate their inflation, not understate it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In an economy the money supply is £500bn and the velocity of circulation is 8. Real output is £2,000bn measured at constant prices. Using Fisher's equation of exchange, the price level is",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "2.0",
+        "D": "32.0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Fisher's equation is M × V = P × Q, so rearranging gives P = (M × V) ÷ Q.<br />M × V = £500bn × 8 = <strong>£4,000bn</strong>.<br />P = 4,000 ÷ 2,000 = <strong>2.0</strong>.<br />The left-hand side is total spending in the economy; the right-hand side is the same spending seen as a quantity of goods multiplied by their average price. The quantity theory's claim is that if V and Q hold steady, a rise in M feeds straight through into P.",
+        "distractors": {
+          "A": "0.25 is 500 ÷ 2,000, dividing the money supply by output and forgetting velocity altogether. Each pound is spent eight times over, so ignoring V understates total spending eightfold.",
+          "B": "0.5 is 2,000 ÷ 4,000, inverting the formula. That gives output per unit of spending rather than the price level.",
+          "D": "32.0 is (8 × 2,000) ÷ 500, which swaps M and P in the equation. The money supply belongs on the top of the fraction, not the bottom."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Unanticipated inflation is most likely to benefit",
+      "options": {
+        "A": "Borrowers, because the real value of their debt falls.",
+        "B": "Borrowers, because their nominal repayments fall.",
+        "C": "Savers, because the real value of their savings rises.",
+        "D": "Savers, because nominal interest rates always fall."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A debt is fixed in nominal terms. If prices and incomes rise faster than expected, the same cash repayment represents a smaller share of the borrower's income and buys fewer goods — so the <strong>real burden of the debt falls</strong>.<br />Savers are on the other side of exactly the same effect: if inflation outruns the interest they earn, their savings lose purchasing power. Inflation quietly redistributes from lenders and savers to borrowers.",
+        "distractors": {
+          "B": "Nominal repayments on a fixed-rate loan do not change at all. It is their <em>real</em> value that falls.",
+          "C": "Inflation <strong>erodes</strong> the real value of savings. Money put aside buys less than it would have done.",
+          "D": "Central banks usually <em>raise</em> interest rates in response to inflation, and in any case a nominal rate below the inflation rate still leaves savers worse off in real terms."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sustained period of deflation is likely to reduce aggregate demand because consumers",
+      "options": {
+        "A": "Delay purchases, expecting further falls.",
+        "B": "Face a falling real value of their debts.",
+        "C": "Find the real value of their savings falling.",
+        "D": "Receive higher nominal wages."
+      },
+      "answer": "A",
+      "model": {
+        "working": "If prices are expected to keep falling, waiting is rewarded — the same television will be cheaper next month. Households therefore <strong>delay spending</strong>, which reduces consumption and aggregate demand, which pushes prices down further.<br />That is what makes deflation dangerous: the expectation of falling prices helps bring about more falling prices.",
+        "distractors": {
+          "B": "Deflation <em>raises</em> the real value of debt, because repayments are fixed in cash terms while incomes and prices fall. That also reduces spending, but for the opposite reason to the one given.",
+          "C": "Deflation raises the real value of savings, since money buys more over time. This is one of deflation's few benefits, and it does not reduce demand.",
+          "D": "Nominal wages tend to stagnate or fall in deflation. Even where they hold steady, that raises real wages rather than cutting demand."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The CPI may overstate the true rise in the cost of living because it",
+      "options": {
+        "A": "Covers only a sample of retail outlets.",
+        "B": "Is published monthly rather than weekly.",
+        "C": "Is slow to reflect switching to cheaper goods.",
+        "D": "Uses a basket that is reviewed every year."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is <strong>substitution bias</strong>. When one product's price jumps, households shift towards cheaper alternatives, so the amount they actually need to spend rises by less than the index suggests. Because the basket's weights are fixed between reviews, the CPI keeps assuming the old spending pattern and so overstates the increase in living costs.",
+        "distractors": {
+          "A": "Sampling means the figure carries some error, but the error could go either way. It gives no reason for a consistent overstatement.",
+          "B": "The publication schedule affects how quickly the data arrives, not whether the number itself is too high or too low.",
+          "D": "Annual review of the basket is what keeps the CPI current as tastes and technology change. It reduces bias rather than causing it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-3-3-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "According to the quantity theory of money, a 10% rise in the money supply raises the price level by 10% only if",
+      "options": {
+        "A": "Interest rates are held constant.",
+        "B": "Real output rises by 10% as well.",
+        "C": "The velocity of circulation falls by 10%.",
+        "D": "Velocity and output are unchanged."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Fisher's equation M × V = P × Q is an identity — it holds by construction. Turning it into a <em>theory</em> of inflation requires the assumption that <strong>V and Q are stable</strong>. Only then is a rise in M forced through into P.<br />That assumption is where the argument is actually had. If velocity falls when money is created, or if output responds because the economy has spare capacity, the price level need not rise proportionately at all.",
+        "distractors": {
+          "A": "Interest rates appear nowhere in Fisher's equation. They matter for how money creation transmits to demand, but the identity does not involve them.",
+          "B": "If real output also rose by 10%, the extra money would be matched by extra goods and the price level would be <em>unchanged</em>. This is the condition for no inflation, not for 10% inflation.",
+          "C": "If velocity fell by 10%, the rise in M would be roughly cancelled out, so total spending and the price level would barely move."
+        }
+      }
+    }
+  ]
+}

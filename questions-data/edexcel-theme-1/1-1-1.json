@@ -1,0 +1,147 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.1.1",
+  "slug": "1-1-1-economics-as-a-social-science",
+  "title": "Economics as a Social Science",
+  "shortTitle": "Economics as a Social Science",
+  "pageTitle": "Economic Models and Ceteris Paribus Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on economics as a social science for Edexcel A-Level Economics: models, assumptions, ceteris paribus and testing theories.",
+  "intro": "Six original multiple-choice questions on economics as a social science, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on economic models, assumptions and the ceteris paribus rule, written to Edexcel Paper 1 Section A style.",
+  "questions": [
+    {
+      "id": "edexcel-1-1-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An economist predicts that cutting bus fares will raise the number of bus journeys made. Fares are cut, but journeys fall, because a new tram line opens in the same month. The prediction had been made",
+      "options": {
+        "A": "Ceteris paribus, and other things did not stay equal.",
+        "B": "Normatively, so it could never have been tested.",
+        "C": "Without any assumptions, which is why it failed.",
+        "D": "Without evidence, so it should not have been made."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Ceteris paribus means <strong>all other things being equal</strong>. Every prediction of this kind carries it, whether or not it is stated: cheaper bus travel raises bus journeys <em>provided nothing else changes</em>.<br />Something else did change. The tram line is a new substitute, and it pulled passengers away faster than the lower fare drew them in. The economics was not wrong — the condition it depended on failed. This is the standing limitation of economic models, and the reason results vary between periods and places.",
+        "distractors": {
+          "B": "The prediction says what will happen to journey numbers, which is a factual claim that data can check. It is positive, and it was in fact tested.",
+          "C": "Every economic prediction rests on assumptions. Naming the ceteris paribus condition is precisely what makes this outcome intelligible rather than a puzzle.",
+          "D": "The prediction follows from the law of demand, which has a great deal of evidence behind it. What defeated it was a second change happening at the same time, not a lack of grounds."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A model of the housing market assumes that all houses are identical. The assumption is best described as",
+      "options": {
+        "A": "A deliberate simplification that keeps the model workable.",
+        "B": "A normative statement about how housing should be built.",
+        "C": "A prediction that the model has been tested against.",
+        "D": "An error that makes the model worthless."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A model is a <strong>simplified representation of reality</strong>. Real houses differ in size, age, condition and location, and a model that tracked every difference would be unusable.<br />Assuming identical houses strips the market down to price and quantity so the core relationship can be examined. Whether the simplification is acceptable depends on the question being asked — it would be reasonable for studying the effect of interest rates on prices, and unreasonable for studying why one street costs more than the next.",
+        "distractors": {
+          "B": "Nothing here says what ought to happen. Normative statements carry a value judgement, and this one only makes the analysis manageable.",
+          "C": "An assumption is what a model starts from; a prediction is what it produces. What gets tested is the model's conclusion about prices and quantities, not the assumption itself.",
+          "D": "Every model simplifies, so this cannot be the standard. An assumption is a problem only when the conclusion depends on it in a misleading way."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two economists are given the same data on employment and reach opposite conclusions about the effect of a minimum wage. The most likely explanation is",
+      "options": {
+        "A": "Better data being available to one of them.",
+        "B": "Different assumptions built into their models.",
+        "C": "Disagreement about which years the data cover.",
+        "D": "Errors in one economist's arithmetic."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Economists build models on assumptions, and <strong>different assumptions produce different interpretations of the same data</strong>. One may assume that firms respond to higher wage costs by cutting jobs; the other may assume they absorb the cost through lower profits or higher productivity.<br />The data are identical, so the disagreement cannot come from the evidence. It comes from the framework each is reading the evidence through — which is why economics, as a social science, generates lasting debates that a laboratory science would settle.",
+        "distractors": {
+          "A": "The stem rules this out: both are given the same data. Better evidence would change the analysis, but there is no better evidence here.",
+          "C": "Again ruled out by the stem. The same data cover the same period for both.",
+          "D": "An arithmetic slip is a mistake to be corrected, not a genuine disagreement. Two economists checking the same figures would find it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government wants to know whether a new training scheme raises wages. Unlike a natural scientist, an economist cannot answer this by",
+      "options": {
+        "A": "Comparing wages before and after the scheme.",
+        "B": "Gathering survey evidence from participants.",
+        "C": "Using historical records from similar schemes.",
+        "D": "Holding every other influence on wages constant."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Economics <strong>cannot run laboratory-controlled experiments</strong>. It is impossible to take a real economy, hold incomes, technology, migration and the business cycle still, and vary only the training scheme.<br />Everything else in the list is available and is exactly what economists do use: observation of outcomes before and after, survey evidence, and the historical record of comparable schemes elsewhere. The cost of working this way is that results can vary between periods and between countries, so conclusions stay open to challenge.",
+        "distractors": {
+          "A": "A before-and-after comparison is the standard empirical approach. It is imperfect, because other things will also have changed, but it is entirely available.",
+          "B": "Surveys are part of the social scientific method — hypothesis, empirical research, analysis, conclusion. Economists use them routinely.",
+          "C": "Historical records are one of the main sources of evidence available <em>because</em> controlled experiments are not."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-1-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economist writes that if income tax is cut, consumer spending will rise. The claim is best understood as",
+      "options": {
+        "A": "A normative judgement about tax policy.",
+        "B": "A prediction that holds only ceteris paribus.",
+        "C": "A statement that cannot be tested by evidence.",
+        "D": "An assumption on which a model is built."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The claim is an output of a model of consumer behaviour: lower tax raises disposable income, and higher disposable income raises spending.<br />It is a <strong>prediction</strong>, and like every prediction in economics it is made under ceteris paribus. If interest rates rose at the same time, or confidence collapsed, spending could fall despite the tax cut — without the prediction having been a bad one. That conditional quality is the honest form of a social-science forecast.",
+        "distractors": {
+          "A": "No value judgement is being made. The claim says what will happen, not what ought to happen.",
+          "C": "It is testable in principle: spending data before and after a tax cut can support or undermine it. Testability is precisely what makes a statement positive.",
+          "D": "Assumptions are what a model starts from. This is what the model concludes."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A model of consumer demand assumes shoppers know the price of every alternative. A firm then finds its sales barely fall when it raises prices, because shoppers do not compare. The best conclusion is that the model",
+      "options": {
+        "A": "Has been disproved and should be abandoned.",
+        "B": "Is unaffected, because assumptions cannot be wrong.",
+        "C": "Predicts poorly here because a key assumption fails.",
+        "D": "Was normative rather than positive all along."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The model's prediction — that a price rise costs the firm sales — rests on shoppers comparing prices. In this market they do not, so the assumption is a poor fit and the prediction fails.<br />That is a statement about <strong>where the model applies</strong>, not about whether models are useful. The usefulness of any model depends on its assumptions, so the correct response is to identify which assumption broke and build the search cost into a revised version, which is what behavioural economics does.",
+        "distractors": {
+          "A": "A model that fits one market badly is not worthless. Abandoning it would also mean abandoning every case where shoppers do compare prices, where its prediction holds well.",
+          "B": "Assumptions can certainly be a poor fit for the case in hand. That is exactly why different assumptions lead to different conclusions.",
+          "D": "The model makes a testable claim about sales, so it is positive. Its failure here is empirical, not a matter of value judgement."
+        }
+      }
+    }
+  ]
+}

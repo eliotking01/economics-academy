@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.1.3",
+  "slug": "1-1-3-the-economic-problem",
+  "title": "The Economic Problem",
+  "shortTitle": "The Economic Problem",
+  "pageTitle": "Scarcity and Opportunity Cost Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the economic problem for Edexcel A-Level Economics: scarcity, the factors of production, opportunity cost and resources.",
+  "intro": "Seven original multiple-choice questions on the economic problem, written to the style and difficulty of Edexcel Paper 1 Section A. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on scarcity, the factors of production, opportunity cost and renewable resources, written to Edexcel Paper 1 Section A style.",
+  "questions": [
+    {
+      "id": "edexcel-1-1-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country has abundant farmland, yet its population still cannot obtain everything it wants. This illustrates that scarcity arises from",
+      "options": {
+        "A": "Finite resources set against unlimited wants.",
+        "B": "Government failure to distribute output fairly.",
+        "C": "The absence of any renewable resources.",
+        "D": "Wants that are themselves strictly limited."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Scarcity is the relationship between two things: <strong>finite resources</strong> and <strong>infinite wants</strong>. Abundance in one resource does not remove it, because the wants still outrun what the whole set of resources can produce.<br />This is why the economic problem applies to rich countries as well as poor ones. However much farmland a country has, its land, labour, capital and enterprise are limited in total, so choices about how to use them still have to be made.",
+        "distractors": {
+          "B": "Distribution is a separate question — how output is shared out once produced. Scarcity would exist under any distribution, including a perfectly equal one.",
+          "C": "Renewable resources are replenished over time, but they are not unlimited at a point in time. Their presence or absence does not create scarcity.",
+          "D": "This inverts the definition. Scarcity exists precisely because wants are effectively unlimited while the means of satisfying them are not."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-3-q2",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 describes four resources used by a bakery.<br />Using Table 1, the resource whose reward is interest is",
+      "table": {
+        "caption": "Table 1: Four resources used by a bakery",
+        "head": [
+          "",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Resource 1",
+            "The wheat fields the flour is grown on"
+          ],
+          [
+            "Resource 2",
+            "The ovens installed in the bakery"
+          ],
+          [
+            "Resource 3",
+            "The bakers who work the early shift"
+          ],
+          [
+            "Resource 4",
+            "The owner who risked her savings to open it"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Resource 1.",
+        "B": "Resource 2.",
+        "C": "Resource 3.",
+        "D": "Resource 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each factor of production earns its own reward: land earns <strong>rent</strong>, labour earns <strong>wages</strong>, capital earns <strong>interest</strong> and enterprise earns <strong>profit</strong>.<br />The ovens are manufactured resources used to produce other goods, which makes them <strong>capital</strong>. Capital earns interest, so Resource 2 is the answer. Working the mapping in this direction — from reward back to factor — is a useful check that you know both lists rather than just one.",
+        "distractors": {
+          "A": "The wheat fields are a natural resource, so they are <strong>land</strong>, and land earns rent.",
+          "C": "The bakers supply human effort, so they are <strong>labour</strong>, and labour earns wages.",
+          "D": "The owner takes the risk of running the business, so this is <strong>enterprise</strong>, and enterprise earns profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-3-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A grower has 40 hectares of land. Each hectare produces either £900 of barley or £1,400 of oilseed, and nothing else is worth growing. She plants the whole 40 hectares with barley. The opportunity cost of that decision is",
+      "options": {
+        "A": "£20,000",
+        "B": "£36,000",
+        "C": "£56,000",
+        "D": "£92,000"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Opportunity cost is <strong>the value of the next best alternative forgone</strong>. The alternative here is oilseed across the whole 40 hectares.<br />Oilseed forgone: 40 × £1,400 = <strong>£56,000</strong>.<br />The barley she does grow is worth 40 × £900 = £36,000, but that is the benefit of the choice, not its cost. Opportunity cost always measures what was given up, which is why it is £56,000 even though the decision itself earns less than that.",
+        "distractors": {
+          "A": "This is £56,000 − £36,000, the <em>net</em> amount lost by choosing barley. It is a real quantity, but it is not what opportunity cost measures — the definition is the full value of the alternative, not the difference between the two.",
+          "B": "This is the value of the barley actually grown. It is what the decision produces, not what it sacrifices.",
+          "D": "This adds the two together, £36,000 + £56,000. That counts the land twice, once under each crop, when only one can be planted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government uses an unexpected budget surplus to build a new hospital. The opportunity cost of that decision is",
+      "options": {
+        "A": "The full cost of building and staffing the hospital.",
+        "B": "The tax revenue raised to produce the surplus.",
+        "C": "The value of the health benefits the hospital delivers.",
+        "D": "What the funds could otherwise have bought."
+      },
+      "answer": "D",
+      "model": {
+        "working": "For a government, the opportunity cost of any spending decision is <strong>the next best use of the same money</strong> — more school places, a road scheme, or lower borrowing.<br />The money cost of the hospital appears in the accounts; the opportunity cost does not, which is why it is easy to overlook. It is nonetheless the figure that matters when judging whether the decision was a good one, because a project is only worth doing if it beats the best alternative it displaces.",
+        "distractors": {
+          "A": "That is the money cost, and it is what the budget records. Opportunity cost asks what those pounds could have bought instead.",
+          "B": "The revenue was raised before this choice was made. The decision is about how to use a surplus that already exists.",
+          "C": "Health benefits are the <em>benefit</em> of the decision. Costs and benefits are the two sides of the comparison, not the same thing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country begins meeting a growing share of its electricity demand from wind rather than from gas. In terms of the economic problem, the significance of wind is that it",
+      "options": {
+        "A": "Can be replenished, so its use is sustainable.",
+        "B": "Costs nothing to use once turbines are built.",
+        "C": "Is not scarce, so it carries no opportunity cost.",
+        "D": "Removes the need to allocate resources at all."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Wind is a <strong>renewable</strong> resource: it is replenished naturally, so using it today does not reduce what is available tomorrow.<br />Gas is <strong>non-renewable</strong> and finite, so every unit burned is one that future generations cannot use. That is the opportunity cost the switch avoids. Note what the switch does <em>not</em> do — turbines, land, steel and maintenance are all scarce, so wind power is renewable without being free.",
+        "distractors": {
+          "B": "Turbines wear out, land has alternative uses and maintenance takes labour. The fuel is free; the electricity is not.",
+          "C": "Wind power still uses scarce capital and land, and those have alternative uses. Renewable means replenished, not unlimited at zero cost.",
+          "D": "Every economy allocates scarce resources whatever it burns. Changing the energy source changes the choices, not the need to choose."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A software engineer leaves a salaried job to set up her own firm, taking on the risk of failure herself. The factor of production she now supplies that she did not supply before is",
+      "options": {
+        "A": "Capital.",
+        "B": "Enterprise.",
+        "C": "Labour.",
+        "D": "Land."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Enterprise</strong> is the willingness to take the risk of starting or expanding a business, and its reward is profit — which may be negative.<br />In her salaried job she supplied labour and was paid a wage regardless of whether the employer succeeded. Setting up on her own, she still supplies labour, but she now also bears the residual risk. That risk-bearing is the factor that is new, and it is what distinguishes an entrepreneur from an employee.",
+        "distractors": {
+          "A": "Capital is the manufactured resources the firm uses — computers, servers, equipment. Buying them is a decision she makes, but capital is not a factor she personally supplies by virtue of starting up.",
+          "C": "She supplied labour in her salaried job too, so it is not new. Her hours may have gone up, but the factor has not changed.",
+          "D": "Land is natural resources. Nothing in the scenario alters her supply of them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-1-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country decides to extract and sell its remaining oil reserves as quickly as it can. Judged against the economic problem, the strongest objection is that this",
+      "options": {
+        "A": "Guarantees the country will run a trade deficit.",
+        "B": "Imposes a high opportunity cost on future generations.",
+        "C": "Makes the resource renewable rather than non-renewable.",
+        "D": "Removes the need for any future economic choices."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Oil is <strong>non-renewable</strong>: once extracted it cannot be replenished. Selling the reserves quickly converts a stock that future generations could have used into income for the present one.<br />The opportunity cost of the decision therefore falls largely on people who had no say in it. That is the objection — not that extraction is wrong, but that the cost is borne at a different time from the benefit, which is exactly the case for extracting more slowly.",
+        "distractors": {
+          "A": "Selling oil earns export revenue and would tend to improve the trade balance, not worsen it. The objection has nothing to do with trade.",
+          "C": "Nothing about how fast a finite resource is used can make it renewable. The difficulty is precisely that it cannot be replenished.",
+          "D": "Using up one resource does not end scarcity. Wants remain unlimited and the remaining resources are fewer, so the choices become harder rather than unnecessary."
+        }
+      }
+    }
+  ]
+}

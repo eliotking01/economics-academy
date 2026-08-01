@@ -1,0 +1,191 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.9",
+  "slug": "1-5-9-contestable-and-non-contestable-markets",
+  "title": "Contestable and Non-Contestable Markets",
+  "shortTitle": "Contestable Markets",
+  "pageTitle": "Contestable Markets Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on contestable markets for AQA A-Level Economics: sunk costs, hit-and-run entry and how contestability differs from competition.",
+  "intro": "Eight original multiple-choice questions on contestable and non-contestable markets, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on contestability, sunk costs and hit-and-run entry, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-9-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A contestable market is best defined as one in which",
+      "options": {
+        "A": "Firms sell homogeneous products to many small buyers.",
+        "B": "No single firm holds more than a quarter of total sales.",
+        "C": "There are a large number of firms actively competing.",
+        "D": "There is freedom of entry to and exit from the market."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Contestability is about how easily firms can <strong>get in and out</strong>, not about how many are currently trading. A market with no barriers to entry or exit and minimal sunk costs is contestable, because the mere <strong>threat</strong> of a newcomer disciplines the firms already there. Freedom of <em>exit</em> matters as much as entry: a firm will not enter if it cannot leave without heavy losses.",
+        "distractors": {
+          "A": "Homogeneous products and many small buyers are characteristics of <strong>perfect competition</strong>, which is a statement about market structure rather than about ease of entry.",
+          "B": "Market share thresholds are used to identify monopoly power. A market can be highly concentrated and still be contestable.",
+          "C": "This is the definition of <strong>competition</strong>, and separating the two is the whole point of the topic. Competition counts the firms in the market; contestability asks how easily others could join them."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The key distinction between competition and contestability is that competition refers to",
+      "options": {
+        "A": "The height of barriers to entry, while contestability refers to profit levels.",
+        "B": "The number of firms, while contestability refers to ease of entry.",
+        "C": "The number of products sold, while contestability refers to the number of firms.",
+        "D": "The size of firms, while contestability refers to their costs of production."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Competition</strong> describes how many firms are actually trading and how hard they compete. <strong>Contestability</strong> describes how easily <em>other</em> firms could join or leave. The two can come apart: a market with only three firms can behave very competitively if entry is quick and cheap, because the incumbents know that exploiting their position would invite immediate rivals.",
+        "distractors": {
+          "A": "This reverses the terms. Barriers to entry are what determine contestability, and profit levels are a consequence rather than a definition.",
+          "C": "Competition is about the number of <em>firms</em>, not products, and contestability is about entry and exit rather than firm numbers.",
+          "D": "Neither concept is defined by firm size or production costs, although sunk costs do affect how contestable a market is."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sunk cost is best defined as a cost that",
+      "options": {
+        "A": "Cannot be recovered if a firm decides to leave the market.",
+        "B": "Falls as a firm increases its scale of production.",
+        "C": "Is incurred only once a firm has begun trading profitably.",
+        "D": "Varies directly with the quantity a firm produces."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>sunk cost</strong> is spending that cannot be recouped on exit — bespoke advertising, industry-specific research, a licence with no resale value. Sunk costs are the single biggest obstacle to contestability, because a firm considering entry knows that if the venture fails, that money is simply gone. Equipment that could be sold on second-hand is <em>not</em> sunk, which is why leasing aircraft or vans makes a market far more contestable than owning them.",
+        "distractors": {
+          "B": "Costs falling as scale increases describes <strong>economies of scale</strong>, which is a different idea, though large economies of scale can themselves act as a barrier to entry.",
+          "C": "Sunk costs are typically incurred <em>before</em> any trading begins — that is precisely what makes entry risky.",
+          "D": "Costs varying with output are <strong>variable</strong> costs. Sunk costs are usually fixed and, crucially, unrecoverable."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm enters a market to capture short-run supernormal profit and leaves once profits fall back to normal. This is best described as",
+      "options": {
+        "A": "Collusive behaviour.",
+        "B": "Creative destruction.",
+        "C": "Hit-and-run competition.",
+        "D": "Predatory pricing."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Hit-and-run competition</strong> is only possible where entry and exit are both cheap. A firm spots supernormal profit, enters quickly to take a share of it, and withdraws once the profit is competed away — losing nothing on exit because it had no sunk costs. Its importance is that the mere <em>possibility</em> of this behaviour restrains incumbent firms even when no entry actually occurs.",
+        "distractors": {
+          "A": "Collusion means rival firms cooperating to keep prices high. Hit-and-run entry does the opposite: it competes profit away.",
+          "B": "Creative destruction is innovation displacing older products and firms. The entrant here is not innovating, simply capturing an existing profit.",
+          "D": "Predatory pricing is an incumbent pricing below cost to drive out a rival. This describes an entrant arriving to take a share of profit."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market contains only two firms, but entry requires no sunk costs and any new firm could begin trading immediately. All other things being equal, the two firms are most likely to",
+      "options": {
+        "A": "Collude to raise prices, because there are only two of them.",
+        "B": "Restrict output and charge a high price, as a monopolist would.",
+        "C": "Set prices close to average cost, to deter potential entrants.",
+        "D": "Set prices far above average cost, since no rivals are present."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is the central insight of contestability theory. With no sunk costs, any attempt to charge a high price would attract entrants within days, so the incumbents restrain themselves and set prices close to <strong>average cost</strong> — earning little more than normal profit. The market <em>behaves</em> competitively despite containing only two firms, because the discipline comes from <strong>potential</strong> rather than actual competition.",
+        "distractors": {
+          "A": "Collusion is easy to arrange with two firms but pointless here: the high price it produced would simply draw in outsiders who are not party to the agreement.",
+          "B": "Monopoly behaviour requires protection from entry. Without barriers, restricting output to raise price invites the competition that removes the profit.",
+          "D": "No rivals are present <em>at the moment</em>, and that is exactly the trap in this question. The threat of entry constrains behaviour even when nobody has entered."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following would make a market less contestable?",
+      "options": {
+        "A": "Entrants being able to lease equipment rather than buy it.",
+        "B": "Incumbent firms building strong brand loyalty over many years.",
+        "C": "New entrants having access to the same technology as incumbents.",
+        "D": "Perfect information being available to all firms in the market."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Strong <strong>brand loyalty</strong> is a barrier to entry. A newcomer must spend heavily on advertising to persuade customers to switch, and that spending is largely a <strong>sunk cost</strong> — unrecoverable if the entry attempt fails. The prospect of losing it deters entry, which weakens the threat that disciplines the incumbents and so makes the market less contestable.",
+        "distractors": {
+          "A": "Leasing rather than buying converts what would be a sunk cost into a recoverable one, so the entrant can walk away cheaply. That makes a market <em>more</em> contestable.",
+          "C": "Equal access to technology means the entrant suffers no competitive disadvantage, which is one of the listed characteristics of a contestable market.",
+          "D": "Perfect information removes the informational advantage incumbents would otherwise hold, again increasing contestability."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a highly contestable market, incumbent firms are most likely to",
+      "options": {
+        "A": "Charge higher prices and produce less than in a less contestable market.",
+        "B": "Charge lower prices and produce more than in a less contestable market.",
+        "C": "Earn persistent supernormal profit, protected by their established position.",
+        "D": "Ignore potential entrants, since only actual rivals affect their decisions."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Knowing that supernormal profit would attract entrants, incumbents in a contestable market hold back from exploiting their position. They set <strong>lower prices</strong> and produce <strong>more output</strong> than they would if entry were blocked, and earn something close to normal profit. Contestability therefore delivers many of the benefits of competition without requiring a large number of firms actually to be present.",
+        "distractors": {
+          "A": "Restricting output to raise price is what firms do when they are <em>protected</em> from entry. Contestability produces the opposite behaviour.",
+          "C": "Persistent supernormal profit requires barriers to entry. In a contestable market it would be competed away, which is why incumbents avoid provoking entry in the first place.",
+          "D": "The whole theory rests on potential entrants mattering. Incumbents change their behaviour precisely because of rivals who have not yet arrived."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-9-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government wants an industry dominated by one large firm to behave more competitively, but breaking the firm up is impractical. The policy most consistent with contestability theory would be to",
+      "options": {
+        "A": "Cap the firm's profits at the level of normal profit.",
+        "B": "Nationalise the firm so that it is run in the public interest.",
+        "C": "Reduce the barriers and sunk costs facing potential entrants.",
+        "D": "Set a maximum price below the firm's average cost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Contestability theory says behaviour is shaped by the <strong>threat</strong> of entry, not merely by how many firms exist. If the government cannot change the number of firms, it can still change how easily others could arrive — by removing licensing restrictions, requiring incumbents to share essential infrastructure, or funding common standards that cut set-up costs. The dominant firm then has to price as though rivals were about to appear, even if none does.",
+        "distractors": {
+          "A": "A profit cap tackles the symptom directly, but it requires the regulator to know the firm's true costs and it blunts the incentive to become more efficient. It is regulation rather than contestability.",
+          "B": "Public ownership changes who owns the firm rather than the competitive pressure it faces, and it leaves the same monopoly cost structure in place.",
+          "D": "A price below average cost would force the firm into losses and eventually out of business, leaving consumers with no supplier at all."
+        }
+      }
+    }
+  ]
+}

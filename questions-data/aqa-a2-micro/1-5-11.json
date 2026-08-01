@@ -1,0 +1,191 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.11",
+  "slug": "1-5-11-consumer-and-producer-surplus",
+  "title": "Consumer and Producer Surplus",
+  "shortTitle": "Consumer and Producer Surplus",
+  "pageTitle": "Consumer and Producer Surplus Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on consumer and producer surplus for AQA A-Level Economics, with calculations, diagrams to sketch and worked answers.",
+  "intro": "Eight original multiple-choice questions on consumer and producer surplus, written to the style and difficulty of AQA Paper 3 Section A. Two ask you to sketch the diagram yourself. Every question carries a full worked model answer.",
+  "notesTeaser": "Eight original multiple-choice questions on consumer surplus, producer surplus and social welfare, written to AQA Paper 3 Section A style, with worked calculations.",
+  "questions": [
+    {
+      "id": "aqa-1-5-11-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Consumer surplus is best defined as the difference between",
+      "options": {
+        "A": "The price a consumer is willing to pay and the price actually paid.",
+        "B": "The price a consumer pays and the cost of producing the good.",
+        "C": "The price a producer receives and the price a consumer pays.",
+        "D": "The quantity a consumer wants to buy and the quantity available."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Consumer surplus</strong> is the gap between what a good is <em>worth</em> to a buyer — their maximum willingness to pay — and what they actually hand over. Somebody prepared to pay £30 for a ticket priced at £18 enjoys £12 of surplus. It is the standard measure of consumer welfare, and on a diagram it is the area below the demand curve and above the price.",
+        "distractors": {
+          "B": "The gap between price and production cost belongs to the <em>producer</em> side of the market. Consumer surplus concerns what buyers were willing to pay.",
+          "C": "In an ordinary market these are the same figure. A gap between them opens only when a tax or subsidy comes between buyer and seller.",
+          "D": "A gap between the quantity wanted and the quantity available is <strong>excess demand</strong>, which is a disequilibrium rather than a measure of welfare."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "On a supply and demand diagram, producer surplus is represented by the area",
+      "options": {
+        "A": "Above the demand curve and below the equilibrium price.",
+        "B": "Above the supply curve and below the equilibrium price.",
+        "C": "Below the demand curve and above the equilibrium price.",
+        "D": "Below the supply curve and above the equilibrium price."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The supply curve shows the <strong>minimum price</strong> a producer would accept for each unit, which reflects its cost of supply. Everything the producer actually receives above that line is a gain, so <strong>producer surplus</strong> is the area <strong>above the supply curve and below the price</strong>. Consumer surplus is its mirror image: below the demand curve and above the price.",
+        "distractors": {
+          "A": "Nothing meaningful sits above the demand curve — that region represents prices at which consumers would not buy at all.",
+          "C": "This is <strong>consumer</strong> surplus, and it is the most common mix-up in this topic. Keep the rule simple: consumers gain <em>below</em> their curve, producers gain <em>above</em> theirs.",
+          "D": "The area below the supply curve represents the cost of supplying the units, not a surplus."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market with straight-line demand and supply curves, the equilibrium price is £20 and the equilibrium quantity is 400 units. Demand falls to zero at a price of £60. The consumer surplus is",
+      "options": {
+        "A": "£4,000",
+        "B": "£8,000",
+        "C": "£12,000",
+        "D": "£16,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "With a straight-line demand curve, consumer surplus is the <strong>triangle</strong> below the demand curve and above the price, so use ½ × base × height.<br />Base = the equilibrium quantity = <strong>400</strong>.<br />Height = the gap between the highest price anyone would pay and the price actually paid = £60 − £20 = <strong>£40</strong>.<br />Consumer surplus = ½ × 400 × £40 = <strong>£8,000</strong>.",
+        "distractors": {
+          "A": "£4,000 halves the answer a second time, most often by using ¼ rather than ½ or by halving the base as well as applying the formula.",
+          "C": "£12,000 uses the full choke price of £60 as the height rather than the £40 difference. Surplus is measured from the price actually paid, not from zero.",
+          "D": "£16,000 is 400 × £40, which is the rectangle rather than the triangle. The ½ is what accounts for the demand curve sloping down."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the same market, the supply curve meets the vertical axis at a price of £10, the equilibrium price is £20 and the equilibrium quantity is 400 units. The producer surplus and the social surplus are",
+      "options": {
+        "A": "£2,000 and £6,000.",
+        "B": "£2,000 and £10,000.",
+        "C": "£4,000 and £10,000.",
+        "D": "£4,000 and £12,000."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Producer surplus</strong> is the triangle above the supply curve and below the price.<br />½ × 400 × (£20 − £10) = ½ × 400 × £10 = <strong>£2,000</strong>.<br /><strong>Social surplus</strong> is consumer surplus plus producer surplus. Consumer surplus here is £8,000, so the total is £8,000 + £2,000 = <strong>£10,000</strong>.<br />Social surplus measures the total welfare the market generates, and at the free market equilibrium it is at its maximum.",
+        "distractors": {
+          "A": "The producer surplus is right but the social surplus omits most of the consumer side. Consumer surplus alone is £8,000.",
+          "C": "£4,000 uses the full £20 price as the height instead of the £10 gap above the supply curve. Producer surplus is measured from the supply curve upwards, not from zero.",
+          "D": "Both figures are too large, and they are inconsistent with each other: £4,000 of producer surplus plus £8,000 of consumer surplus would give £12,000, but the producer figure is itself wrong."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A fall in production costs shifts the supply curve of a good to the right. Sketching the market before and after, the effect on consumer surplus is that it",
+      "options": {
+        "A": "Falls, because producers capture more of the total surplus.",
+        "B": "Is unchanged, because the demand curve has not moved.",
+        "C": "Rises, because the price falls and quantity rises.",
+        "D": "Rises, but only if demand is perfectly inelastic."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Sketch the original equilibrium, then shift supply to the right. The price <strong>falls</strong> and the quantity traded <strong>rises</strong>.<br />Consumer surplus is the triangle below the demand curve and above the price. A lower price makes that triangle both <em>taller</em> and <em>wider</em>, so consumer surplus clearly increases. Existing buyers pay less for what they were already buying, and new buyers enter the market who previously found the good too expensive.",
+        "distractors": {
+          "A": "Producers gain in some ways and lose in others — a lower price against a larger volume — but consumers unambiguously gain from a lower price. This is not a case of one side capturing the other's surplus.",
+          "B": "The demand curve staying put is exactly why the analysis works. Consumer surplus depends on where the <em>price</em> sits relative to that unchanged curve, and the price has fallen.",
+          "D": "Consumer surplus rises whatever the elasticity of demand. Elasticity affects the <em>size</em> of the gain, not its direction."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "At the free market equilibrium, social surplus is",
+      "options": {
+        "A": "At its maximum, so any deviation from equilibrium creates a welfare loss.",
+        "B": "At its minimum, because both consumers and producers would prefer a different price.",
+        "C": "Equal to consumer surplus, because producer surplus is captured as profit.",
+        "D": "Zero, because what consumers pay is exactly what producers receive."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Social surplus</strong> — consumer surplus plus producer surplus — is <strong>maximised</strong> at the free market equilibrium. Every unit for which the value to a consumer exceeds the cost of supplying it does get produced, and no unit is produced where the reverse holds. Move away from equilibrium in either direction, through a price control or a tax, and some mutually beneficial trades no longer happen: that lost surplus is the <strong>welfare loss</strong>.",
+        "distractors": {
+          "B": "The equilibrium is the position that maximises total welfare, not minimises it. Either side might prefer a different price for itself, but any such move shrinks the total.",
+          "C": "Producer surplus is a genuine part of social surplus. It is closely related to profit, but it is not excluded from the welfare calculation.",
+          "D": "Payments matching receipts is simply how a transaction works. Surplus arises because buyers would have paid more and sellers would have accepted less."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A firm with market power moves from charging a single price to practising first-degree price discrimination. Sketching the market, the effect on consumer surplus is that it",
+      "options": {
+        "A": "Increases, because more consumers are able to buy the good.",
+        "B": "Is eliminated, because each consumer pays their full valuation.",
+        "C": "Is unchanged, because the demand curve has not shifted.",
+        "D": "Is transferred to other consumers who pay less than before."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sketch the demand curve and mark the single monopoly price: consumer surplus is the triangle above it.<br />Under <strong>first-degree</strong> price discrimination the firm charges each consumer exactly what the good is worth to them, so that triangle is captured entirely as revenue. <strong>Consumer surplus falls to zero</strong> and is transferred to the producer.<br />Output does rise to the allocatively efficient level, since the firm no longer has to cut its price on earlier units to sell one more — so total welfare increases even as consumers' share of it disappears.",
+        "distractors": {
+          "A": "More consumers are indeed served, which is why output rises. But each of them pays their full valuation, so none of them keeps any surplus.",
+          "C": "The demand curve does not move, and that is precisely what allows the firm to work its way down it, charging each buyer their own maximum.",
+          "D": "The surplus does not move between consumers — it moves from consumers to the <strong>producer</strong>. Every consumer ends up with none."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-11-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government sets a maximum price below the equilibrium price in a market. All other things being equal, the most likely effect on total social surplus is that it",
+      "options": {
+        "A": "Falls, because fewer units are traded than at equilibrium.",
+        "B": "Falls, because consumers are worse off at the lower price.",
+        "C": "Rises, because consumers pay less for each unit they buy.",
+        "D": "Is unchanged, because surplus is transferred from producers to consumers."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Two things happen, and only one of them is a transfer.<br />A price ceiling below equilibrium does move some surplus <em>from producers to consumers</em> on the units still traded — that part is redistribution and does not change the total.<br />But at the lower price producers supply <strong>less</strong>, so the quantity traded falls below the equilibrium level. Every unit no longer produced was one where the value to a consumer exceeded the cost of supplying it, and the surplus those trades would have generated simply vanishes. That is the <strong>welfare loss</strong>, and it means total social surplus <strong>falls</strong>.",
+        "distractors": {
+          "B": "The direction is right but the reason is wrong. Consumers who still obtain the good are better off, and some are worse off only because they cannot get it at all. The loss to society comes from the trades that no longer take place.",
+          "C": "Consumers who manage to buy do pay less, but that is a transfer from producers rather than an addition to total welfare, and it is outweighed by the trades lost.",
+          "D": "A pure transfer would leave the total unchanged, and that is the trap. Here the quantity traded also falls, which destroys surplus rather than moving it."
+        }
+      }
+    }
+  ]
+}

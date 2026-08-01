@@ -1,0 +1,213 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.4.4",
+  "slug": "3-4-4-oligopoly",
+  "title": "Oligopoly",
+  "shortTitle": "Oligopoly",
+  "pageTitle": "Oligopoly Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on oligopoly for Edexcel A-Level Economics: concentration ratios, collusion, the kinked demand curve and game theory.",
+  "intro": "Nine original multiple-choice questions on oligopoly, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on interdependence, concentration ratios, collusive and competitive behaviour, and game theory.",
+  "questions": [
+    {
+      "id": "edexcel-3-4-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A framework for analysing decisions in which the best choice for each firm depends on what its rivals do is called",
+      "options": {
+        "A": "Collusion.",
+        "B": "Creative destruction.",
+        "C": "Game theory.",
+        "D": "Price discrimination."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Game theory</strong> is the tool economists use for exactly this situation. It matters in oligopoly because the defining feature of that structure is <strong>interdependence</strong>: with only a few large firms, each one's profit depends on how the others respond to what it does. A firm setting a price is not simply reading a demand curve — it is anticipating a reaction, and knows its rival is doing the same.",
+        "distractors": {
+          "A": "Collusion is one possible <em>outcome</em> that game theory helps to explain, not the framework used to analyse it.",
+          "B": "Creative destruction describes new technologies displacing established firms and industries over time.",
+          "D": "Price discrimination is charging different prices to different buyers for the same good."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two firms would each earn more by colluding on a high price than by both charging a low one. Each also knows it would earn most of all by undercutting while the other holds its price high. Acting independently, the most likely outcome is that",
+      "options": {
+        "A": "Both charge a high price and share the maximum profit.",
+        "B": "Both charge a low price and earn less than by colluding.",
+        "C": "One charges high and the other low, indefinitely.",
+        "D": "Neither firm is able to decide on a price at all."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is the <strong>Prisoner's Dilemma</strong>. Whatever the rival does, each firm is better off charging the low price: if the rival goes high, undercutting captures the market; if the rival goes low, matching avoids being undercut. Charging low is therefore a <strong>dominant strategy</strong> for both, and both playing it is a <strong>Nash equilibrium</strong> — neither can improve its position by changing alone. Both end up worse off than if they had colluded, which is why collusion needs trust and communication, and why it is so hard to sustain.",
+        "distractors": {
+          "A": "The collusive outcome is jointly best but individually unstable. Each firm has a private incentive to defect from it, and each knows the other has the same incentive.",
+          "C": "The firm charging the high price is being undercut and losing customers. It would not hold that position for long.",
+          "D": "Each firm has a clear best choice whatever the other does, which makes the outcome predictable rather than paralysed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a two-firm game, one firm finds that charging a low price gives it the better outcome whatever its rival chooses to do. Charging low is best described as",
+      "options": {
+        "A": "A collusive agreement.",
+        "B": "A dominant strategy.",
+        "C": "A Nash equilibrium.",
+        "D": "Predatory pricing."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>dominant strategy</strong> gives a player the better outcome regardless of what anyone else does, so there is no need to predict the rival at all. It is a property of one firm's own choices. A <strong>Nash equilibrium</strong> is a property of the pair: a combination of choices from which neither firm can improve by moving alone. Where both firms have a dominant strategy, both playing it is a Nash equilibrium — which is what makes the Prisoner's Dilemma outcome so stable, and so bad for both of them.",
+        "distractors": {
+          "A": "No agreement is involved. The firm reaches this choice on its own, and acting on it works against the rival's interest.",
+          "C": "A Nash equilibrium describes the outcome of both firms' choices together. This option describes one firm's best move.",
+          "D": "Predatory pricing means pricing below cost to force a rival out and raising the price afterwards. Nothing here is below cost or aimed at removing anyone."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The four largest firms in a market have combined sales of £680m, and the four-firm concentration ratio is 85%. Total sales in the market are",
+      "options": {
+        "A": "£120m",
+        "B": "£578m",
+        "C": "£782m",
+        "D": "£800m"
+      },
+      "answer": "D",
+      "model": {
+        "working": "The concentration ratio is the top n firms' sales as a percentage of total market sales:<br />CR = (top four sales ÷ total sales) × 100.<br />Rearranging for the total: total sales = £680m ÷ 0.85 = <strong>£800m</strong>.<br />Check it: £680m ÷ £800m × 100 = 85%. ✓<br />The remaining firms therefore account for the other 15%, which is £120m — a highly concentrated market in which the leading four are strongly interdependent.",
+        "distractors": {
+          "A": "£120m is what all the <em>other</em> firms sell between them, not the market total.",
+          "B": "£578m multiplies by 0.85 instead of dividing by it. It gives a figure smaller than the top four's sales alone, which is impossible.",
+          "C": "£782m adds 15% of the top four's sales. But the 15% is a share of the market <em>total</em>, not of the top four."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The largest firm in a market announces a price rise each January, and the others follow within a fortnight without any meeting or agreement between them. This is best described as",
+      "options": {
+        "A": "Non-collusive competition.",
+        "B": "Overt collusion through a cartel.",
+        "C": "Predatory pricing by the market leader.",
+        "D": "Tacit collusion through price leadership."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Overt</strong> collusion is a formal agreement — firms meet, fix a price or carve up a market, and can be proved to have done so in court. <strong>Tacit</strong> collusion reaches the same outcome with no agreement at all: firms simply understand what is expected of them. <strong>Price leadership</strong> is its commonest form, in which one firm — usually the largest — moves first and the rest follow. The result for consumers is much the same as a cartel, and that is what makes it so difficult for regulators: there is nothing to find.",
+        "distractors": {
+          "A": "The firms are not competing. They are matching each other's prices upward, which is the opposite of competitive behaviour.",
+          "B": "A cartel is a formal agreement, and the stem states explicitly that there is no meeting and no agreement.",
+          "C": "Predatory pricing means cutting prices below cost to drive a rival out. Here prices are being raised, and no firm is being targeted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A large firm holds its price below its own average cost for eighteen months, until a smaller rival that cannot sustain the losses leaves the market. It then raises its price sharply. This is",
+      "options": {
+        "A": "Limit pricing.",
+        "B": "Predatory pricing.",
+        "C": "Price leadership.",
+        "D": "Tacit collusion."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Predatory pricing</strong> is a deliberate loss made in order to remove a competitor, with the losses recouped once the rival has gone. The two markers are both present here: pricing <em>below cost</em>, and the price rise afterwards. Edexcel notes that it is illegal in the UK and the US, precisely because the short-run gain to consumers is paid for by a less competitive market later on.",
+        "distractors": {
+          "A": "Limit pricing sets a price low enough to make entry unattractive, but still above cost — so it is sustainable indefinitely and the firm stays profitable. It deters newcomers rather than removing an incumbent.",
+          "C": "Price leadership is a form of tacit collusion in which rivals follow a leader's price. No firm is being driven out.",
+          "D": "Tacit collusion means firms acting together without an agreement. Here one firm is attacking another."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the kinked demand curve model, the section of a firm's demand curve above the current price is drawn as relatively elastic. The reason is that if the firm raises its price, its rivals will",
+      "options": {
+        "A": "Hold their prices, so its customers switch away.",
+        "B": "Match the rise, so it keeps its customers.",
+        "C": "Cut their prices below cost to drive it out.",
+        "D": "Raise their prices further, so its sales rise."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The model rests on an asymmetry in what a firm expects its rivals to do. Raise the price and the others are content to leave theirs alone — they pick up customers for nothing — so the firm loses a great many sales for a small price rise, and demand is <strong>elastic</strong> above the current price. Cut the price and rivals must match it or lose their own customers, so the firm gains very few sales, and demand is <strong>inelastic</strong> below. Either move reduces revenue, which is why prices in a non-collusive oligopoly are often \"sticky\" and firms compete on other things instead.",
+        "distractors": {
+          "B": "If rivals matched a price rise the firm would keep its customers and demand would be inelastic — the opposite of what the model assumes above the kink.",
+          "C": "Pricing below cost is predatory pricing, a different behaviour with a different purpose. The model assumes ordinary competitive responses.",
+          "D": "Nothing in the model suggests rivals would raise their prices further, and if they did the firm's sales would rise rather than fall."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two supermarket chains cut prices repeatedly in response to each other over several months. Sales volumes end up almost where they started, but both firms' margins are far thinner. This episode is best described as",
+      "options": {
+        "A": "A price war.",
+        "B": "Limit pricing.",
+        "C": "Overt collusion.",
+        "D": "Tacit collusion."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>price war</strong> is exactly this: repeated undercutting between rivals, each defending its share, which leaves relative positions unchanged and everybody's profit lower. It is the outcome the kinked demand curve model predicts firms will try to avoid, and the reason non-collusive oligopolies drift towards non-price competition instead. Consumers gain while it lasts — whether they gain in the long run depends on whether any firm is forced out of the market by it.",
+        "distractors": {
+          "B": "Limit pricing is a sustained low price aimed at deterring <em>entry</em>, not a spiral of cuts between firms already in the market.",
+          "C": "Overt collusion means a formal agreement to keep prices up. These firms are competing them down.",
+          "D": "Tacit collusion also means firms co-operating to hold prices high, without a formal agreement. Again, the opposite of what is described."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cartel restricts output and raises price, behaving as a monopoly would. Compared with the competitive outcome, the cost to society is best described as",
+      "options": {
+        "A": "A deadweight loss, since output is below the optimum.",
+        "B": "A transfer from firms to consumers.",
+        "C": "An increase in producer surplus only.",
+        "D": "Nothing, since the same goods are still produced."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Collusion moves the market from the competitive price and quantity to the monopoly ones — a higher price and a lower output. Part of what consumers lose is simply transferred to the firms as extra profit, which is a redistribution rather than a loss to society as a whole. But the units that are no longer produced were worth more to buyers than they would have cost to make, and that value disappears altogether. Edexcel calls it the <strong>deadweight loss</strong>, and it is the reason competition authorities pursue cartels.",
+        "distractors": {
+          "B": "The transfer runs the other way, from consumers to firms — and in any case a transfer is not the loss. What is lost is the output that never happens.",
+          "C": "Producer surplus does rise, but consumer surplus falls by more. The difference between the two is the deadweight loss.",
+          "D": "Output is lower under a cartel. Restricting it is how the higher price is sustained."
+        }
+      }
+    }
+  ]
+}

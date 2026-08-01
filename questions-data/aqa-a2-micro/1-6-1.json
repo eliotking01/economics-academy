@@ -1,0 +1,238 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.6.1",
+  "slug": "1-6-1-the-demand-for-labour-marginal-productivity-theory",
+  "title": "The Demand for Labour, Marginal Productivity Theory",
+  "shortTitle": "The Demand for Labour",
+  "pageTitle": "Marginal Revenue Product Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on the demand for labour for AQA A-Level Economics: marginal revenue product, derived demand and shifts in labour demand.",
+  "intro": "Nine original multiple-choice questions on the demand for labour and marginal productivity theory, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Nine original multiple-choice questions on marginal revenue product, derived demand and the elasticity of labour demand, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-6-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The demand for labour is described as a derived demand because it",
+      "options": {
+        "A": "Depends on demand for the goods labour produces.",
+        "B": "Derives from the wage rate workers are willing to accept.",
+        "C": "Falls as the wage rate rises, like any other demand curve.",
+        "D": "Is determined by the size of the working population."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Firms do not want workers for their own sake — they want the output workers produce. Demand for labour is therefore <strong>derived</strong> from demand for the final product: if demand for new houses collapses, demand for bricklayers falls with it, however skilled or willing those bricklayers are.",
+        "distractors": {
+          "B": "Wages are a price in this market, and price affects the quantity demanded rather than explaining where the demand comes from.",
+          "C": "The demand curve for labour does slope downwards, but that is a consequence of diminishing returns rather than the meaning of derived demand.",
+          "D": "The size of the working population affects the <strong>supply</strong> of labour, not the demand for it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The marginal revenue product of labour is calculated as",
+      "options": {
+        "A": "Marginal physical product divided by the wage rate.",
+        "B": "Marginal physical product multiplied by marginal revenue.",
+        "C": "Total output multiplied by the price of the product.",
+        "D": "Total revenue divided by the number of workers employed."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>MRP = MPP × MR</strong>. The extra worker produces some extra output — the <strong>marginal physical product</strong> — and each unit of that output earns the firm some extra revenue, the <strong>marginal revenue</strong>. Multiplying the two gives the extra revenue the worker brings in, which is what the worker is worth to the firm and therefore what determines the demand for labour.",
+        "distractors": {
+          "A": "The wage is what the worker <em>costs</em>, and it is compared with MRP rather than used to calculate it.",
+          "C": "Total output times price gives <strong>total revenue</strong>. MRP is a marginal figure, concerning only the extra worker.",
+          "D": "Total revenue divided by workers is an <em>average</em> revenue product. The demand for labour is based on the marginal figure."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm sells its output at a constant £8 per unit, so its marginal revenue is £8. Table 1 shows how total output changes as it hires more workers.<br />Using Table 1, the marginal revenue product of the third worker is",
+      "table": {
+        "caption": "Table 1: Workers employed and total output (units per week)",
+        "head": [
+          "Workers",
+          "Total output"
+        ],
+        "rows": [
+          [
+            "1",
+            "15"
+          ],
+          [
+            "2",
+            "35"
+          ],
+          [
+            "3",
+            "51"
+          ],
+          [
+            "4",
+            "63"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£96",
+        "B": "£128",
+        "C": "£160",
+        "D": "£408"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out the marginal physical product first, then multiply by marginal revenue.<br />MPP of the third worker = 51 − 35 = <strong>16 units</strong>.<br />MRP = 16 × £8 = <strong>£128</strong>.<br />The full series of MPPs is 15, 20, 16, 12, so MRP runs £120, £160, £128, £96. MPP rises to the second worker and falls after it — diminishing returns setting in, which is what makes the labour demand curve slope downwards.",
+        "distractors": {
+          "A": "£96 is the MRP of the <strong>fourth</strong> worker (12 × £8), one row too far down the table.",
+          "C": "£160 is the MRP of the <strong>second</strong> worker (20 × £8), one row too early.",
+          "D": "£408 is 51 × £8, the total revenue produced by all three workers. MRP concerns only what the third worker adds."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A profit-maximising firm will continue to employ additional workers up to the point where",
+      "options": {
+        "A": "Marginal physical product is at its maximum.",
+        "B": "Marginal revenue product is at its maximum.",
+        "C": "Marginal revenue product equals the wage rate.",
+        "D": "Total revenue product is at its maximum."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Each extra worker adds their <strong>MRP</strong> to revenue and their <strong>wage</strong> to costs. While MRP is above the wage, hiring adds to profit; once MRP falls below the wage, hiring subtracts from it. The profit-maximising level of employment is therefore where <strong>MRP = W</strong> — the same marginal logic as MC = MR, applied to the labour market.",
+        "distractors": {
+          "A": "Maximum MPP is where the productivity of the last worker peaks. Workers beyond that point are still worth hiring as long as they earn back more than they cost.",
+          "B": "Maximum MRP is the same point expressed in money. It marks where diminishing returns begin, not where hiring should stop.",
+          "D": "Maximising total revenue ignores the wage bill entirely. A firm chasing revenue alone would hire workers who cost more than they bring in."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's marginal revenue product from successive workers is £120, £160, £128 and £96. The weekly wage rate is £110 and the firm maximises profit. It will employ",
+      "options": {
+        "A": "1 worker.",
+        "B": "2 workers.",
+        "C": "3 workers.",
+        "D": "4 workers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Take the workers one at a time and compare each MRP with the £110 wage.<br />Worker 1: £120 &gt; £110 → <strong>hire</strong>.<br />Worker 2: £160 &gt; £110 → <strong>hire</strong>.<br />Worker 3: £128 &gt; £110 → <strong>hire</strong>.<br />Worker 4: £96 &lt; £110 → <strong>do not hire</strong>.<br />The firm employs <strong>3 workers</strong>. Note that the third worker is worth less than the second and is still worth having — what matters is whether they cover their own wage, not whether they beat the worker before them.",
+        "distractors": {
+          "A": "Stopping at one worker forgoes the second, who brings in £160 against a wage of £110 — the most profitable hire of all.",
+          "B": "Stopping at two treats the fall in MRP from £160 to £128 as the signal to stop. Falling MRP is not the test; falling <em>below the wage</em> is.",
+          "D": "The fourth worker earns the firm £96 but costs £110, so hiring them reduces profit by £14."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The demand curve for labour slopes downwards mainly because",
+      "options": {
+        "A": "Firms can substitute capital for labour when wages rise.",
+        "B": "Higher wages reduce the number of workers willing to work.",
+        "C": "Diminishing returns cause marginal physical product to fall.",
+        "D": "Trade unions restrict the supply of labour to the market."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The labour demand curve <em>is</em> the MRP curve. As more workers are added to a fixed quantity of capital, the <strong>law of diminishing returns</strong> means each extra worker eventually adds less output than the last, so MPP falls and MRP falls with it. Firms will only pay a lower wage for those later workers, which is exactly what a downward-sloping demand curve says.",
+        "distractors": {
+          "A": "Substituting capital for labour is a real response to higher wages and it reinforces the effect, but the shape of the curve comes from MRP falling as employment rises.",
+          "B": "This describes the <strong>supply</strong> side, and it has the relationship backwards — higher wages attract more workers, not fewer.",
+          "D": "Union activity can shift the supply curve of labour. It does not explain the slope of the demand curve."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "All other things being equal, which one of the following would shift the demand curve for labour in an industry to the right?",
+      "options": {
+        "A": "A fall in the demand for the industry's final product.",
+        "B": "A fall in the wage rate paid in the industry.",
+        "C": "A rise in the number of workers seeking jobs in the industry.",
+        "D": "A rise in the productivity of workers in the industry."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Since demand for labour is the MRP curve, anything that raises MRP shifts it right. Higher <strong>productivity</strong> raises marginal physical product, so each worker is worth more to the firm at any given wage and more workers are demanded. A rise in the price of the final product would do the same, by raising marginal revenue.",
+        "distractors": {
+          "A": "Because labour demand is derived, weaker demand for the product <em>reduces</em> demand for labour, shifting the curve left.",
+          "B": "A change in the wage rate is a movement <em>along</em> the labour demand curve, not a shift of it — the same distinction as price and demand in a goods market.",
+          "C": "More workers seeking jobs shifts the <strong>supply</strong> of labour, which is the other curve."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The demand for labour in an occupation is most likely to be wage inelastic when",
+      "options": {
+        "A": "Labour costs are a large share of the firm's total costs.",
+        "B": "Machines can easily be substituted for workers.",
+        "C": "The demand for the final product is highly price elastic.",
+        "D": "Workers have specialist skills that are hard to replace."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Demand for labour is wage <strong>inelastic</strong> when firms have little scope to respond to a wage rise by cutting jobs. Highly specialist workers who cannot readily be replaced by machines or by other staff are the clearest case — a hospital cannot substitute equipment for surgeons. The main determinants run the other way too: demand is more elastic where labour is a large share of costs, where capital substitutes easily, and where the final product's demand is elastic.",
+        "distractors": {
+          "A": "If wages are a large share of total costs, a wage rise hits the firm hard and it must cut employment sharply. That makes demand <em>more</em> elastic.",
+          "B": "Easy substitution of machines for workers means a wage rise triggers rapid automation, which again makes labour demand more elastic.",
+          "C": "Elastic product demand means the firm cannot pass higher wage costs on in its prices without losing many sales, so it cuts employment instead."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-1-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Marginal revenue product theory is criticised as an incomplete explanation of wages. The strongest reason is that",
+      "options": {
+        "A": "Employers never consider how productive their workers are.",
+        "B": "Firms cannot always measure an individual worker's output precisely.",
+        "C": "Wages are set entirely by trade unions in every labour market.",
+        "D": "Workers are paid before their output is produced and sold."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The theory requires the firm to know what each extra worker adds to output and revenue. In much of the modern economy that is very hard to establish: a nurse, a teacher or a member of a design team works jointly with others, and no single person's contribution can be separated out. Add imperfect information, monopsony power and union bargaining, and observed wages can depart a long way from MRP — though the theory remains a useful starting point.",
+        "distractors": {
+          "A": "Employers care about productivity a great deal. The criticism is that it is hard to <em>measure</em> individually, not that it is ignored.",
+          "C": "Union density is low in many labour markets and unions are absent from others entirely, so this is far too strong a claim.",
+          "D": "Paying wages before output is sold is a cash-flow matter. Firms base hiring on <em>expected</em> MRP, which the theory allows for."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.1.3",
+  "slug": "3-1-3-demergers",
+  "title": "Demergers",
+  "shortTitle": "Demergers",
+  "pageTitle": "Demergers Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on demergers for Edexcel A-Level Economics: why firms split up, and the effects on the business, workers and consumers.",
+  "intro": "Seven original multiple-choice questions on demergers, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on why firms demerge and how a split affects the business, its workers and its consumers.",
+  "questions": [
+    {
+      "id": "edexcel-3-1-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A large conglomerate splits into two separate, independently owned companies. This is",
+      "options": {
+        "A": "A demerger.",
+        "B": "A horizontal merger.",
+        "C": "A takeover.",
+        "D": "Organic growth."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>demerger</strong> is the division of one large firm into two or more separate, independent businesses. It is the reverse of a merger, and Edexcel treats it as a reversal of integration — a firm that grew by joining businesses together now unwinding part of that.",
+        "distractors": {
+          "B": "A horizontal merger joins two competitors at the same stage of production. This is a split, not a join.",
+          "C": "A takeover is one firm buying another. Here no firm is being bought; one is being divided.",
+          "D": "Organic growth is expansion from within a firm's own resources. Nothing here is growing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that has grown through a series of acquisitions finds that decisions now pass through so many layers of management that its average costs have risen. It splits itself into three independent companies. The gain it is seeking is to",
+      "options": {
+        "A": "Capture the profit margin of its retailers.",
+        "B": "Diversify the risk it faces across markets.",
+        "C": "Increase its share of the market it serves.",
+        "D": "Lower average costs by cutting bureaucracy."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The stem describes <strong>diseconomies of scale</strong> — a firm that has grown past the point where its size still lowers unit costs, so that co-ordinating it now consumes more than the scale saves. Edexcel gives reducing those diseconomies as the first reason for a demerger. Three smaller independent companies each have fewer layers between a decision and the people who act on it, so average costs can fall.",
+        "distractors": {
+          "A": "Capturing a retailer's margin is the motive for forward vertical integration, which is growth rather than a split.",
+          "B": "Diversifying risk is the motive for conglomerate integration. A demerger narrows the range of markets each new firm operates in.",
+          "C": "Splitting into three raises nobody's market share. If anything the three now pursue their markets separately."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A competition authority concludes that one firm's dominance of a market is harming consumers, and requires it to sell part of the business as a separate company. The purpose of forcing the split is to",
+      "options": {
+        "A": "Allow the firm to concentrate on its core activity.",
+        "B": "Increase competition and reduce monopoly power.",
+        "C": "Raise capital that the firm can reinvest.",
+        "D": "Remove a division that has been making losses."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Most demergers are the firm's own decision, but Edexcel lists <strong>regulatory pressure</strong> among the reasons they happen. Where an authority such as the CMA judges that one firm's dominance is harming consumers, and that rules about its conduct will not be enough, it can require the firm to be broken up. The remedy is structural: two competing firms where there was one, so that rivalry rather than regulation disciplines prices.",
+        "distractors": {
+          "A": "Sharper focus is a real benefit of demerging, but it is the firm's own motive. The stem says the split was required of it.",
+          "C": "Raising capital is another of the firm's own motives for choosing to demerge, not the authority's reason for insisting.",
+          "D": "Nothing suggests the divested part is losing money. The authority's concern is that the firm is too strong, not that part of it is weak."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two divisions of a company have always shared a research laboratory and bought their raw materials together. The company demerges them into separate firms. The most likely cost of the split is that",
+      "options": {
+        "A": "Bureaucracy increases for both new firms.",
+        "B": "Shared research and buying power are lost.",
+        "C": "The competition regulator intervenes.",
+        "D": "The two firms can no longer compete at all."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Edexcel names the <strong>loss of synergies</strong> as the main cost of a demerger. The shared laboratory and the joint purchasing existed only because the two divisions belonged to one firm: a single research budget served both, and buying for both together commanded a better price. Once separated, each has to fund its own research and buy on its own smaller scale, so costs rise on both counts.",
+        "distractors": {
+          "A": "A demerger reduces layers of management rather than adding them. That is one of the standard reasons for doing it.",
+          "C": "Regulators are far more likely to welcome a split than to act against one, since it usually increases competition.",
+          "D": "The two were divisions of a single company, so they were not competing before. Nothing about the split prevents them competing now."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A large manufacturer demerges into two smaller independent firms. Prices to consumers then rise. The most likely explanation is that the two new firms",
+      "options": {
+        "A": "Are able to specialise more narrowly than before.",
+        "B": "Face a competition investigation as a result.",
+        "C": "Have lost the economies of scale of the larger firm.",
+        "D": "Now compete against each other for customers."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The case usually made for a demerger on consumers' behalf is that more independent firms means more competition and so lower prices. Edexcel is careful to give the other side. If the split leaves two firms each too small to buy, produce and distribute at the scale the parent managed, their average costs rise — and higher costs are passed on. Whether consumers gain depends on which of the two effects is larger.",
+        "distractors": {
+          "A": "Narrower specialisation should lower costs rather than raise prices; it is one of the benefits claimed for demerging.",
+          "B": "An investigation does not itself raise prices, and a firm that has just split is less likely to attract one.",
+          "D": "Competition between the two would push prices down, which is the opposite of what the stem reports."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-3-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 reports four consequences observed after a large firm demerged.<br />From Table 1, the only one that is a cost rather than a benefit is",
+      "table": {
+        "caption": "Table 1: Four consequences reported after a demerger",
+        "head": [
+          "",
+          "Consequence"
+        ],
+        "rows": [
+          [
+            "Consequence 1",
+            "Each firm's managers concentrate on one business"
+          ],
+          [
+            "Consequence 2",
+            "Staff report better morale in a smaller firm"
+          ],
+          [
+            "Consequence 3",
+            "The two firms compete, and prices fall"
+          ],
+          [
+            "Consequence 4",
+            "Roles duplicated across the two firms are cut"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Consequence 1.",
+        "B": "Consequence 2.",
+        "C": "Consequence 3.",
+        "D": "Consequence 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A demerger normally means each new firm builds its own finance, personnel and administrative functions, and the roles that now exist twice over are removed. Edexcel lists <strong>job losses from restructuring and duplication</strong> as the main cost to workers. The other three are the standard benefits: sharper strategic focus for the business, better morale in a smaller and more coherent organisation, and lower prices for consumers where the split genuinely increases competition.",
+        "distractors": {
+          "A": "Concentrating on one business is the increased-focus benefit, and among the main reasons for demerging in the first place.",
+          "B": "Better morale is one of the benefits Edexcel gives for workers, particularly where an incompatible culture has been separated out.",
+          "C": "Lower prices from greater competition is the benefit claimed for consumers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two firms demerge in the same year. One had grown far beyond the size at which scale still lowered its unit costs; the other had been operating well within it. Two years later only the first has reduced its average costs. This is because a demerger",
+      "options": {
+        "A": "Always lowers costs in the first two years.",
+        "B": "Only helps a firm that was genuinely too large.",
+        "C": "Raises costs whenever synergies are lost.",
+        "D": "Works only where a regulator has required it."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A demerger cuts costs by removing diseconomies of scale, so it can only cut costs where diseconomies were present. The first firm had grown past its efficient size, so splitting it removed layers of management that were costing more than the scale was saving. The second was still inside the range where size lowered its unit costs, so the split gave up scale the firm was genuinely using and gained nothing to set against it. This is Edexcel's evaluation of demergers exactly: success turns on whether the original firm really was too large.",
+        "distractors": {
+          "A": "The second firm's costs did not fall, which the stem states directly.",
+          "C": "Synergies were lost in both cases, and that did not stop the first firm gaining. The question is whether the loss outweighs the diseconomies removed.",
+          "D": "Neither of these demergers was required by a regulator, and one of them worked."
+        }
+      }
+    }
+  ]
+}

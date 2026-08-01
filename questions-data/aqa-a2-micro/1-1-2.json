@@ -1,0 +1,125 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.1.2",
+  "slug": "1-1-2-the-nature-and-purpose-of-economic-activity",
+  "title": "The Nature and Purpose of Economic Activity",
+  "shortTitle": "The Purpose of Economic Activity",
+  "pageTitle": "Purpose of Economic Activity Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on the nature and purpose of economic activity for AQA A-Level Economics, covering what, how and for whom to produce.",
+  "intro": "Five original multiple-choice questions on the purpose of economic activity and the three fundamental economic questions, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Five original multiple-choice questions on the purpose of economic activity and the three fundamental economic questions, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-1-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A car manufacturer replaces most of its assembly-line workers with robots. In terms of the three fundamental economic questions, this decision is mainly about",
+      "options": {
+        "A": "For whom to produce, because replacing workers changes how income is distributed.",
+        "B": "How to produce, because the firm has changed the combination of labour and capital it uses.",
+        "C": "What to produce, because the firm is now making a different product.",
+        "D": "Where to produce, because automation allows production to move to another location."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Every economy must answer three questions: <strong>what</strong> to produce, <strong>how</strong> to produce it, and <strong>for whom</strong>. Swapping workers for robots changes the <strong>method</strong> of production — the firm is using more capital and less labour to make the same cars. That is squarely the 'how' question.",
+        "distractors": {
+          "A": "A real consequence, but not the question being answered. Automation does change who receives income, since wages are lost and profits rise. The <em>decision</em>, though, was about which resources to use; the distributional effect follows from it rather than driving it.",
+          "C": "The firm is still making cars. Nothing about the output has changed, only the way it is produced.",
+          "D": "Where to produce is a genuine business decision, but it is not one of the three fundamental questions, and nothing in the stem says production has moved."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises the rate of income tax paid by high earners and uses the revenue to increase the state pension. In terms of the three fundamental economic questions, this decision is mainly about",
+      "options": {
+        "A": "For whom to produce, because it changes how output is distributed.",
+        "B": "How much to produce, because it changes the total output of the economy.",
+        "C": "How to produce, because it changes the resources used in production.",
+        "D": "What to produce, because it changes the mix of goods the economy makes."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Taking income from one group and transferring it to another changes <strong>who gets the output</strong> the economy produces. Pensioners can now command more goods and services and high earners fewer. That is the <strong>for whom</strong> question — the distribution question — and it is the one every economy has to answer alongside what and how.",
+        "distractors": {
+          "B": "How much to produce is not one of the three fundamental questions, and a transfer of income does not by itself change the economy's productive capacity. The same output is simply shared out differently.",
+          "C": "The resources used in production are untouched. The same workers, machines and land are employed as before; only the claims on the resulting output have changed.",
+          "D": "The mix of goods may shift a little as pensioners and high earners buy different things, but that is a knock-on effect. The decision itself is about who receives income."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The central purpose of economic activity is best described as",
+      "options": {
+        "A": "Eliminating scarcity so that all human wants can be satisfied.",
+        "B": "Ensuring that every citizen receives an equal share of total output.",
+        "C": "Maximising the profits earned by firms in the economy.",
+        "D": "Producing the goods and services that satisfy people's needs and wants."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Economic activity exists to turn scarce resources into the <strong>goods and services that satisfy people's needs and wants</strong>, and so to raise their standard of living. Everything else in the subject — production, exchange, allocation — is a means to that end.",
+        "distractors": {
+          "A": "Scarcity cannot be eliminated, which is the starting point of the whole subject. Wants are unlimited and resources are finite, so however much output rises there is always more that people would like. Economic activity manages scarcity rather than abolishing it.",
+          "B": "An equal distribution is one view of what a good outcome looks like, but it is a <strong>normative</strong> goal rather than the purpose of economic activity itself. Economies with very unequal distributions are still engaged in economic activity.",
+          "C": "Profit maximisation is an objective firms may pursue, and it is one mechanism by which resources get allocated. It is not the purpose of the activity as a whole — households, governments and charities all take part in economic activity without pursuing profit."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two economies produce a similar range of goods. One allocates resources mainly through the price mechanism and the other mainly through central planning. All other things being equal, the two economies differ in",
+      "options": {
+        "A": "How the answers to the fundamental economic questions are decided.",
+        "B": "Whether resources in that economy are scarce.",
+        "C": "Whether the fundamental economic questions have to be answered at all.",
+        "D": "Which goods in that economy count as needs rather than wants."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Scarcity is universal, so <em>every</em> economy has to decide what to produce, how to produce it and for whom. What differs between economic systems is the <strong>mechanism</strong> that decides. In a market economy prices and profits do the allocating; under central planning an authority makes the decisions directly. The questions are the same — only the answering process changes.",
+        "distractors": {
+          "B": "Scarcity is a fact about resources and wants, not about the system used to allocate them. Central planning does not create extra resources, and neither does the price mechanism.",
+          "C": "This is the same error one step further on. The three questions arise from scarcity itself, so no economic system can avoid having to answer them.",
+          "D": "The distinction between needs and wants comes from what people require to live, not from how the economy is organised. Food is a need in both economies."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-1-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following is best described as an economic want rather than a need?",
+      "options": {
+        "A": "A second family car.",
+        "B": "Basic shelter from the weather.",
+        "C": "Clean drinking water for a household.",
+        "D": "Enough food to avoid malnutrition."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>need</strong> is something required for survival or basic functioning; a <strong>want</strong> is something desired beyond that. A household that already has one car does not require a second in order to live — the second car adds convenience and comfort. That makes it a want, and it is wants of this kind that are effectively unlimited and so keep scarcity in place.",
+        "distractors": {
+          "B": "Shelter is one of the standard examples of a need. Without protection from the weather, health and survival are directly at risk.",
+          "C": "Clean drinking water is a physiological necessity. Its absence causes illness and death, which is exactly what distinguishes a need from a want.",
+          "D": "Food sufficient to avoid malnutrition is a need by definition — the phrase specifies the minimum required for health rather than any level of consumption above it."
+        }
+      }
+    }
+  ]
+}

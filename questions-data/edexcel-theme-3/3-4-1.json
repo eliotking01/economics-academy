@@ -1,0 +1,150 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.4.1",
+  "slug": "3-4-1-efficiency",
+  "title": "Efficiency",
+  "shortTitle": "Efficiency",
+  "pageTitle": "Efficiency Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on efficiency for Edexcel A-Level Economics: allocative, productive and dynamic efficiency, and X-inefficiency.",
+  "intro": "Five original multiple-choice questions on the four types of efficiency, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on allocative, productive and dynamic efficiency, X-inefficiency, and the static against dynamic trade-off.",
+  "questions": [
+    {
+      "id": "edexcel-3-4-1-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm with market power sets a price well above its marginal cost. The consequence for society is that",
+      "options": {
+        "A": "A deadweight loss arises from underproduction.",
+        "B": "Consumers pay less than the good costs to make.",
+        "C": "Output is too high, so resources are wasted.",
+        "D": "The firm's average costs are minimised."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Allocative efficiency requires <strong>P = MC</strong> — production continuing to the point where the value the last unit gives a buyer just equals what it costs society to make. When price sits above marginal cost there are units worth more to consumers than they cost to produce which are simply not being made. That missing output is <strong>underproduction</strong>, and the welfare it would have created is lost to everybody: Edexcel calls it the <strong>deadweight welfare loss</strong>. It is the central case against market power.",
+        "distractors": {
+          "B": "The reverse. P &gt; MC means consumers are paying <em>more</em> than the last unit costs to produce.",
+          "C": "The problem is too little output, not too much. Over-production is what a negative externality causes, which is a different market failure.",
+          "D": "Nothing here concerns average cost. A firm with market power usually fails the productive efficiency test as well, but that is a separate failing from this one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "X-inefficiency arises where an organisation becomes slack and its costs drift above the minimum necessary. Of the following, the condition most likely to bring it about is",
+      "options": {
+        "A": "A firm operating at the minimum of its AC curve.",
+        "B": "A firm that keeps none of any surplus it generates.",
+        "C": "Many rivals selling an identical product.",
+        "D": "Rapid entry of new firms into the market."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Edexcel gives two conditions for X-inefficiency: a <strong>lack of competition</strong> or a <strong>lack of profit incentive</strong>. The second is what the stem describes. An organisation that cannot retain any surplus gains nothing from cutting its costs, so nobody within it has a reason to press for savings and slack accumulates year after year. Competition supplies the same discipline from outside; where neither pressure exists, average cost drifts above the minimum the organisation could achieve.",
+        "distractors": {
+          "A": "A firm at the minimum of its average cost curve is <em>productively efficient</em>, which is the opposite of X-inefficient.",
+          "C": "Many rivals selling an identical product is intense competitive pressure. It removes X-inefficiency rather than causing it.",
+          "D": "Rapid entry is competitive pressure too — a firm that lets its costs slip will be undercut by the newcomers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A monopolist earns large supernormal profit year after year and pays every penny of it out to shareholders. In terms of dynamic efficiency, this firm",
+      "options": {
+        "A": "Achieves dynamic efficiency, since the profit exists.",
+        "B": "Achieves productive efficiency, since profit is high.",
+        "C": "Has the potential for it, but has not realised it.",
+        "D": "Is allocatively efficient, since shareholders are satisfied."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Edexcel is careful with its wording here: imperfect competition has the <strong>potential</strong> for dynamic efficiency, not a guarantee of it. Supernormal profit is the necessary condition, because it is the money available to spend on research and development. It is not sufficient. Profit distributed to shareholders funds no innovation at all. Dynamic efficiency requires both that the profit exists <em>and</em> that the firm chooses to reinvest it in better products or better production methods over time.",
+        "distractors": {
+          "A": "The existence of profit is only half of the requirement. It has to be put into R&amp;D for anything to improve.",
+          "B": "Productive efficiency means producing at the minimum of the average cost curve. It has nothing to do with how large profit is — a monopolist usually earns high profit while sitting well above minimum AC.",
+          "D": "Allocative efficiency is about price equalling marginal cost, judged from society's point of view. Whether shareholders are content is beside the point."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Static efficiency and dynamic efficiency differ mainly in that dynamic efficiency is concerned with",
+      "options": {
+        "A": "Costs at a single moment in time.",
+        "B": "How resources are allocated between goods.",
+        "C": "Improvement in products and methods over time.",
+        "D": "Whether output is at minimum average cost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Static</strong> efficiency judges an economy at a point in time, and has two components: is output being produced at least cost (productive), and is the right mix of goods being produced (allocative)? <strong>Dynamic</strong> efficiency asks a different question altogether — is the economy getting better over time? It is achieved when firms reinvest supernormal profit in research and development, producing innovation, higher quality and lower costs in future. The two can pull against each other, which is why a market can pass one test and fail the other.",
+        "distractors": {
+          "A": "Costs at a moment in time are what productive efficiency examines, and productive efficiency is one of the two static concepts.",
+          "B": "Allocation between goods is allocative efficiency — also static.",
+          "D": "Minimum average cost is the productive efficiency condition, so this is the static test again."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A student writes down the four statements in Table 1 about a perfectly competitive market in long-run equilibrium.<br />From Table 1, the statement that does not hold is",
+      "table": {
+        "caption": "Table 1: Four statements about perfect competition in the long run",
+        "head": [
+          "",
+          "Statement"
+        ],
+        "rows": [
+          [
+            "Statement 1",
+            "Price equals marginal cost, so it is allocatively efficient"
+          ],
+          [
+            "Statement 2",
+            "Output is at minimum average cost, so it is productively efficient"
+          ],
+          [
+            "Statement 3",
+            "Firms earn only normal profit in the long run"
+          ],
+          [
+            "Statement 4",
+            "Supernormal profit funds research, so it is dynamically efficient"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Statement 1.",
+        "B": "Statement 2.",
+        "C": "Statement 3.",
+        "D": "Statement 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Statement 3 is correct, and it is what makes Statement 4 wrong. In long-run equilibrium a perfectly competitive firm earns <strong>only normal profit</strong>, because free entry competes any surplus away. There is therefore nothing left over to fund research and development, and dynamic efficiency is unlikely. Perfect competition scores well on both static tests and poorly on the dynamic one — Statements 3 and 4 contradict each other, and Statement 3 is the true one.",
+        "distractors": {
+          "A": "Correct. The firm's horizontal demand curve means P = MR, and profit maximisation sets MC = MR, so P = MC — the allocative efficiency condition.",
+          "B": "Correct. Entry drives the price down until it is tangent to the minimum point of the average cost curve, which is productive efficiency.",
+          "C": "Correct, and it is precisely the reason Statement 4 fails."
+        }
+      }
+    }
+  ]
+}

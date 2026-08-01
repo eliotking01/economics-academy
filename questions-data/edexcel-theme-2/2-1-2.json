@@ -1,0 +1,290 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.1.2",
+  "slug": "2-1-2-inflation",
+  "title": "Inflation",
+  "shortTitle": "Inflation",
+  "pageTitle": "Inflation, CPI and Its Causes Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on inflation for Edexcel A-Level Economics: measuring CPI, its limitations, demand-pull and cost-push causes and effects.",
+  "intro": "Ten original multiple-choice questions on inflation, written to the style and difficulty of Edexcel Paper 2 Section A. Four are calculations.",
+  "notesTeaser": "Ten original multiple-choice questions on inflation, deflation and disinflation, how the CPI is built and what it misses, and the causes and effects of inflation.",
+  "questions": [
+    {
+      "id": "edexcel-2-1-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country's annual inflation rate falls from 6% to 3%. Prices are still rising, but more slowly than before. This is best described as",
+      "options": {
+        "A": "Deflation.",
+        "B": "Disinflation.",
+        "C": "Hyperinflation.",
+        "D": "Stagflation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Disinflation</strong> is a fall in the <em>rate</em> of inflation. The price level is still going up; it is simply climbing less steeply than it was.<br />The distinction matters because it is so often misread. At 3% inflation nothing has become cheaper — the shopping basket costs 3% more than a year ago. Prices only actually fall when the rate goes below zero, and that is deflation, a different and generally more dangerous condition.",
+        "distractors": {
+          "A": "Deflation is a sustained <em>fall</em> in the general price level, giving a negative inflation rate. Here the rate is positive at 3%.",
+          "C": "Hyperinflation is inflation running out of control, at extremely high rates. A fall from 6% to 3% is the opposite direction entirely.",
+          "D": "Stagflation is high inflation combined with stagnant output and rising unemployment. The stem says nothing about output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A representative basket of goods cost £250 in the base year and £271 this year. Taking the base year as 100, the Consumer Prices Index for this year is",
+      "options": {
+        "A": "8.4",
+        "B": "92.3",
+        "C": "108.4",
+        "D": "271.0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The index expresses this year's basket cost as a proportion of the base year's, multiplied by 100:<br />CPI = (£271 ÷ £250) × 100 = <strong>108.4</strong>.<br />Read it as the basket costing 8.4% more than in the base year. The index and the percentage change are related but different things — the index carries the base of 100 with it, which is what allows any two years to be compared directly.",
+        "distractors": {
+          "A": "8.4 is the percentage <em>change</em> since the base year, not the index. The index for the base year is 100, so this year's must be near 108, not near 8.",
+          "B": "This inverts the fraction: (£250 ÷ £271) × 100. An index below 100 would mean the basket had become cheaper than in the base year, and it has not.",
+          "D": "271.0 is the cash cost of the basket. An index is a ratio to the base year, not a money amount."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's Consumer Prices Index stood at 125.0 last year. Prices then rose by 4.0% over the following twelve months. This year's index is",
+      "options": {
+        "A": "104.0",
+        "B": "121.0",
+        "C": "129.0",
+        "D": "130.0"
+      },
+      "answer": "D",
+      "model": {
+        "working": "An index is scaled up by the percentage change, not shifted by it:<br />125.0 × 1.04 = <strong>130.0</strong>.<br />The check is that the rise should be 4% <em>of 125</em>, which is 5 index points — not 4. Index points and percentages only coincide when the index sits at exactly 100, which is why working forwards from a rate trips people up in every year except the base year.",
+        "distractors": {
+          "A": "104.0 is what the index would be if last year's value were 100. The starting point of 125.0 has been discarded.",
+          "B": "This subtracts: 125.0 − 4. Prices rose, so the index must go up, and in any case the change is a percentage rather than a number of points.",
+          "C": "This adds the 4 as <em>index points</em>: 125.0 + 4. A 4% rise on a base of 125.0 is 5 points, so the answer is 130.0 rather than 129.0."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 sets out four categories of household spending, the weight of each out of 100, and how its price moved over the year.<br />Using Table 1, the overall rate of inflation is",
+      "table": {
+        "caption": "Table 1: A simplified consumer basket",
+        "head": [
+          "Category",
+          "Weight",
+          "Price change over the year"
+        ],
+        "rows": [
+          [
+            "Housing",
+            "40",
+            "+5%"
+          ],
+          [
+            "Food",
+            "30",
+            "+2%"
+          ],
+          [
+            "Transport",
+            "20",
+            "−1%"
+          ],
+          [
+            "Leisure",
+            "10",
+            "+4%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "2.5%",
+        "B": "2.8%",
+        "C": "3.2%",
+        "D": "10.0%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each price change counts in proportion to its weight, so multiply and then divide by the total weight.<br />Housing: 40 × 5 = 200. Food: 30 × 2 = 60. Transport: 20 × (−1) = <strong>−20</strong>. Leisure: 10 × 4 = 40.<br />Total = 200 + 60 − 20 + 40 = 280.<br />Inflation = 280 ÷ 100 = <strong>2.8%</strong>.<br />Weighting is what makes the CPI meaningful: housing takes 40% of spending, so its 5% rise moves the index far more than leisure's 4% rise does.",
+        "distractors": {
+          "A": "2.5% is the simple average of the four price changes, (5 + 2 − 1 + 4) ÷ 4. That treats a category taking 10% of spending as mattering as much as one taking 40%.",
+          "C": "3.2% comes from treating transport's −1% as +1%. A falling price pulls the index <em>down</em>, and dropping the minus sign loses that.",
+          "D": "10.0% is the four price changes added together with no weighting and no division. That is not an average of anything."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "When beef becomes dearer, many households switch to chicken. The CPI basket is revised only once a year. As a result the CPI will",
+      "options": {
+        "A": "Be unaffected, since both meats are in the basket.",
+        "B": "Exaggerate the rise in the cost of living.",
+        "C": "Fall, because chicken is the cheaper of the two.",
+        "D": "Understate the rise in the cost of living."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The index keeps charging households for the old basket, including the beef they have largely stopped buying, until the annual revision catches up.<br />In reality they avoided part of the price rise by switching. Their true cost of living therefore rose by <em>less</em> than the index records, so the CPI <strong>overstates</strong> it. This is <strong>substitution bias</strong>, and it is one of the standard limitations of the measure.",
+        "distractors": {
+          "A": "Both being in the basket is not enough. What matters is the <em>weights</em>, which still reflect last year's spending pattern rather than this year's.",
+          "C": "The index cannot fall on this evidence. Beef has become dearer and the basket is dominated by the old weights, so the recorded figure rises.",
+          "D": "Understating would require households to be worse off than the index shows. Switching to a cheaper substitute makes them better off than the fixed basket implies."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a year when mortgage interest rates rise sharply, a country's RPI inflation figure comes in well above its CPI figure. The most likely reason is that",
+      "options": {
+        "A": "CPI is collected less frequently than RPI.",
+        "B": "CPI uses a much smaller basket of goods.",
+        "C": "RPI is the Bank of England's target measure.",
+        "D": "The RPI includes housing costs the CPI omits."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>RPI</strong> includes housing costs that the CPI leaves out, most importantly <strong>mortgage interest payments</strong> and council tax.<br />In a year when mortgage rates jump, those costs rise steeply and pull the RPI up with them, while the CPI barely registers the change. This is also why the RPI generally runs higher than the CPI, and part of why it is no longer the UK's official target measure.",
+        "distractors": {
+          "A": "Both are compiled from monthly price collection. Frequency is not what separates them.",
+          "B": "The difference is in what the baskets contain, not how large they are. Housing costs are the item that matters here.",
+          "C": "The Bank of England's target is <strong>CPI at 2%</strong>, not RPI. That is the wrong way round."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over one year an economy records a rising price level together with falling real output. The most likely cause is",
+      "options": {
+        "A": "Cost-push inflation from higher production costs.",
+        "B": "Demand-pull inflation from higher consumer spending.",
+        "C": "Disinflation caused by weakening demand.",
+        "D": "Growth in the money supply raising spending."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The two facts together are what identify the cause. Prices up <em>and</em> output down is the signature of a leftward shift in short-run aggregate supply.<br />Higher costs — energy, imported materials, wages, indirect taxes — make firms less willing to supply at any given price level. SRAS shifts left, and the new equilibrium sits at a <strong>higher price level and lower output</strong>. That combination is what makes cost-push inflation so difficult to respond to: cooling demand worsens the output problem, while supporting demand worsens the price problem.",
+        "distractors": {
+          "B": "Demand-pull raises prices and output <em>together</em>, because AD shifts right along an upward-sloping SRAS. Output is falling here.",
+          "C": "Disinflation is a fall in the rate of inflation, not a rise in the price level. The stem describes prices rising.",
+          "D": "Money supply growth works mainly through demand, which would raise output alongside prices rather than reduce it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q8",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over one year a worker's nominal wage rises by 2% while inflation runs at 5%. The worker's real wage has",
+      "options": {
+        "A": "Fallen by about 3%.",
+        "B": "Fallen by about 7%.",
+        "C": "Risen by about 3%.",
+        "D": "Risen by about 7%."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Real wage growth is approximately the nominal rise minus inflation:<br />2% − 5% = <strong>−3%</strong>.<br />The worker takes home more pounds and can buy less with them, because prices ran ahead of pay. This is the central effect of inflation on workers, and it is why pay settlements are argued over in real rather than cash terms. Note that nothing about the job has changed — the loss comes entirely from the price level.",
+        "distractors": {
+          "B": "7% is the two figures added together. Inflation is subtracted from the nominal rise, not added to it.",
+          "C": "The direction is wrong. A 2% pay rise does not keep pace with 5% inflation, so purchasing power falls.",
+          "D": "Both the direction and the size are wrong, for the two reasons above."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q9",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four groups in an economy going through a period of high inflation.<br />Using Table 1, the group facing menu costs is",
+      "table": {
+        "caption": "Table 1: Four groups during a period of high inflation",
+        "head": [
+          "",
+          "Position"
+        ],
+        "rows": [
+          [
+            "Group 1",
+            "Savers holding cash in an account paying 1% interest"
+          ],
+          [
+            "Group 2",
+            "Workers whose pay rises in line with inflation"
+          ],
+          [
+            "Group 3",
+            "Exporters selling into markets with lower inflation"
+          ],
+          [
+            "Group 4",
+            "Shops that must reprint price lists and relabel stock"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Group 1.",
+        "B": "Group 2.",
+        "C": "Group 3.",
+        "D": "Group 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Menu costs</strong> are the practical costs a firm bears from having to change its prices — reprinting lists and menus, relabelling stock, updating systems and telling customers.<br />Group 4 is doing exactly that. The cost is small per change but real, and it recurs constantly when inflation is high, which is one reason firms dislike an unstable price level even when they can pass the increases on.",
+        "distractors": {
+          "A": "Savers suffer the <em>erosion of the real value</em> of their savings, since 1% interest against high inflation means losing purchasing power every year. That is a different cost.",
+          "B": "Workers whose pay rises in line with inflation are largely protected. Real wages fall only when nominal rises lag behind prices.",
+          "C": "Exporters lose <em>international competitiveness</em> when domestic inflation runs above their trading partners'. Again a real cost, but not a menu cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-2-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A large expansion of the money supply causes a country's currency to depreciate. Besides raising demand, this adds to inflation by",
+      "options": {
+        "A": "Cutting the price of imported raw materials.",
+        "B": "Lowering firms' costs and raising their output.",
+        "C": "Raising the price of imported raw materials.",
+        "D": "Reducing the money available to be spent."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Money supply growth is usually discussed as a demand-side story: more money, cheaper borrowing, more spending, demand-pull inflation.<br />The depreciation opens a <em>second</em> channel. A weaker currency makes every imported input dearer in domestic currency — energy, components, raw materials — which raises firms' costs and shifts SRAS to the left. That is <strong>cost-push</strong> inflation arriving by the same route.<br />The two reinforce each other, which is why a monetary expansion large enough to move the exchange rate is hard to reverse: prices are being pushed up from both sides at once.",
+        "distractors": {
+          "A": "A depreciation makes imports <em>dearer</em> in domestic currency, not cheaper. It takes more of the weaker currency to buy the same dollar-priced input.",
+          "B": "Costs rise rather than fall, and higher costs reduce the output firms are willing to supply at any price level.",
+          "D": "An expansion of the money supply increases the money available to be spent. That is what generates the demand-side effect in the first place."
+        }
+      }
+    }
+  ]
+}

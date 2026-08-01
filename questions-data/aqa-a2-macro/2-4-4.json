@@ -1,0 +1,147 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.4.4",
+  "slug": "2-4-4-the-regulation-of-the-financial-system",
+  "title": "The Regulation of the Financial System",
+  "shortTitle": "Regulation of the Financial System",
+  "pageTitle": "Financial Regulation Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on financial regulation for AQA A-Level Economics: capital and liquidity ratios, moral hazard, systemic risk and the trade-offs.",
+  "intro": "Six original multiple-choice questions on the regulation of the financial system, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on capital and liquidity ratios, moral hazard and systemic risk, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-4-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A bank's capital ratio measures its ability to",
+      "options": {
+        "A": "Absorb losses from bad debts.",
+        "B": "Meet depositors' withdrawals on demand.",
+        "C": "Pay dividends to its shareholders.",
+        "D": "Raise funds on the interbank market."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Capital is shareholders' funds plus retained profit, and it is what stands between a bank's losses and its depositors. When borrowers default, the losses are written off against <strong>capital</strong>. A bank with a thick capital buffer survives a wave of bad debts; once losses exceed capital, liabilities exceed assets and the bank is insolvent.",
+        "distractors": {
+          "B": "Meeting withdrawals is what the <strong>liquidity</strong> ratio measures. The two ratios guard against the two distinct ways a bank can fail, and confusing them is the commonest error here.",
+          "C": "Dividends are paid out of profit. Regulators care about capital as a buffer against loss, not as a source of shareholder payouts.",
+          "D": "Access to the interbank market depends on other banks' confidence. Capital supports that confidence, but the ratio does not measure borrowing ability."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank holds £36bn of liquid assets out of total assets of £450bn. To one decimal place, its liquidity ratio is",
+      "options": {
+        "A": "8.0%",
+        "B": "8.7%",
+        "C": "12.5%",
+        "D": "92.0%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The liquidity ratio is liquid assets as a share of <strong>total</strong> assets.<br />36 ÷ 450 × 100 = <strong>8.0%</strong>.<br />So £8 in every £100 the bank holds could be turned into cash quickly. The other 92% is committed to less liquid but more profitable assets, principally loans — which is exactly the compromise between liquidity and profitability that every bank has to strike.",
+        "distractors": {
+          "B": "8.7% is 36 ÷ 414, dividing by the illiquid assets rather than by total assets. The denominator is everything the bank holds.",
+          "C": "12.5% is 450 ÷ 36, inverting the fraction. That says how many times total assets exceed liquid assets, which is not a ratio expressed as a percentage of assets.",
+          "D": "92.0% is 414 ÷ 450, the share of assets that are <em>not</em> liquid. It is the mirror image of the right answer."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank's borrowers default on a large volume of loans, and the resulting losses exceed the bank's capital. The bank has become",
+      "options": {
+        "A": "Illiquid but still solvent.",
+        "B": "Insolvent.",
+        "C": "Ring-fenced.",
+        "D": "Subject to a bank run."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Losses are written off against capital. Once they exceed it, the bank's <strong>liabilities exceed its assets</strong> — it owes more than it owns, which is the definition of insolvency.<br />This is a different failure from illiquidity. An illiquid bank has sound assets it cannot sell quickly; an insolvent bank's assets are simply not worth enough, and lending it cash does not fix that.",
+        "distractors": {
+          "A": "This describes the opposite problem: a bank whose assets are sound but cannot be turned into cash fast enough. Here the assets have genuinely lost value.",
+          "C": "Ring-fencing is a regulatory requirement to separate retail from investment banking. It is a rule about structure, not a condition a bank falls into.",
+          "D": "A bank run may well follow, as depositors take fright. But the run would be a consequence of insolvency, not the description of it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-4-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank takes larger trading risks than it otherwise would, because it expects the government to rescue it if those risks go wrong. This is best described as",
+      "options": {
+        "A": "A credit crunch.",
+        "B": "Contagion.",
+        "C": "Moral hazard.",
+        "D": "Systemic risk."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Moral hazard</strong> is taking more risk because you do not bear the full cost of it going wrong. A bank that believes it is too big to fail expects rescue, so the downside is capped while the upside accrues to it — and it prices risk too cheaply as a result.<br />The uncomfortable part is that the measures that contain a crisis, such as bailouts and the lender of last resort, are the very things that create this incentive.",
+        "distractors": {
+          "A": "A credit crunch is a sharp contraction in lending, usually a consequence of a crisis rather than a cause of risk-taking.",
+          "B": "Contagion is the mechanism by which one bank's failure spreads to others. It describes transmission, not the incentive to take the risk.",
+          "D": "Systemic risk is the danger that one failure brings down the system. Moral hazard is one of the reasons that risk builds up, but the two are not the same thing."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-4-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "One large bank fails. Other banks that had lent to it on the interbank market suffer losses, and lending between banks dries up. This is best described as",
+      "options": {
+        "A": "Moral hazard.",
+        "B": "Quantitative tightening.",
+        "C": "Ring-fencing.",
+        "D": "Systemic risk."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Systemic risk</strong> is the risk that one institution's failure brings down others and threatens the whole financial system. It exists because banks are interconnected: they lend to each other, hold similar assets, and depend on confidence.<br />Failure then spreads by contagion — lending stops, banks sell assets quickly to raise cash, those fire sales push prices down further, and more balance sheets are damaged. The collapse of Lehman Brothers in 2008 set off exactly this sequence.",
+        "distractors": {
+          "A": "Moral hazard is why banks take excessive risks in the first place. Here the question is about how one failure spreads to others.",
+          "B": "Quantitative tightening is a deliberate central bank policy to reduce the money supply, not a crisis spreading through the system.",
+          "C": "Ring-fencing is one of the regulatory responses to this problem — separating retail from investment banking — rather than the problem itself."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-4-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Regulators require banks to hold higher capital and liquidity ratios. The strongest objection to doing so is that it",
+      "options": {
+        "A": "Increases the risk of a bank run.",
+        "B": "Makes banks more likely to become insolvent.",
+        "C": "Reduces lending and so weakens growth.",
+        "D": "Removes the need for deposit insurance."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Every pound held as capital or as liquid reserves is a pound not lent out. Tighter ratios therefore restrain <strong>credit creation</strong>, and since bank lending is the main source of new broad money, they restrain consumption, investment and aggregate demand with it.<br />That is the trade-off regulators cannot escape: the same rules that make banks harder to break make them less able to finance growth. Neither financial stability nor growth can be maximised on its own.",
+        "distractors": {
+          "A": "Higher ratios make a run <em>less</em> likely, because the bank can meet more withdrawals and depositors have less reason to panic.",
+          "B": "More capital is precisely what absorbs losses, so insolvency becomes less likely rather than more.",
+          "D": "Deposit insurance addresses a different problem — the incentive for depositors to withdraw first — and stays useful whatever the ratios are."
+        }
+      }
+    }
+  ]
+}

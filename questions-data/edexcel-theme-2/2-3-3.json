@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.3.3",
+  "slug": "2-3-3-long-run-aggregate-supply",
+  "title": "Long-Run Aggregate Supply",
+  "shortTitle": "Long-Run Aggregate Supply",
+  "pageTitle": "Long-Run Aggregate Supply Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on long-run aggregate supply for Edexcel A-Level Economics: the Classical and Keynesian views and what shifts LRAS.",
+  "intro": "Eight original multiple-choice questions on long-run aggregate supply, written to the style and difficulty of Edexcel Paper 2 Section A. One asks you to sketch the curve.",
+  "notesTeaser": "Eight original multiple-choice questions on the Classical and Keynesian views of LRAS and the factors that shift an economy's productive potential.",
+  "questions": [
+    {
+      "id": "edexcel-2-3-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching a Keynesian LRAS curve, aggregate demand increases while the economy is close to, but not yet at, full capacity. The most likely result is",
+      "options": {
+        "A": "Higher output and a higher price level.",
+        "B": "Higher output with the price level unchanged.",
+        "C": "No change in output and a higher price level.",
+        "D": "No change in either output or the price level."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The Keynesian curve has three segments, and this question sits on the middle one.<br />At <strong>low output</strong> it is horizontal: spare resources are plentiful, so output can rise with no upward pressure on prices. At <strong>full capacity</strong> it is vertical: nothing more can be produced, so extra demand only raises prices.<br />Between the two it <strong>slopes upward</strong>. Resources are getting scarce but are not exhausted, so firms can produce more, at rising cost, and pass some of that on. Output and the price level therefore both rise — which is why the segment matters: it is the only one where a demand expansion buys real growth <em>and</em> inflation together.",
+        "distractors": {
+          "B": "That is the horizontal segment, which applies when there is large spare capacity. The stem places the economy close to full capacity instead.",
+          "C": "That is the vertical segment at full capacity. The economy has not reached it yet, so some extra output is still available.",
+          "D": "An increase in aggregate demand must move something. Only if LRAS were vertical <em>and</em> the price level fixed would nothing change, which is not a case the model contains."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "On the Classical view of long-run aggregate supply, a government that raises aggregate demand will in the long run achieve",
+      "options": {
+        "A": "Higher output and stable prices.",
+        "B": "Higher output and higher prices.",
+        "C": "Higher prices and no more output.",
+        "D": "Lower prices and higher output."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Classical view holds that the economy always adjusts back to <strong>full employment</strong> in the long run. Output is then determined entirely by the quantity and quality of the factors of production, so the LRAS curve is <strong>vertical</strong> at Yfe.<br />Shifting AD right along a vertical curve raises the price level and leaves real output exactly where it was.<br />The policy conclusion follows directly, and it is the heart of the disagreement with Keynesians: demand management cannot raise long-run output, so a government wanting growth must shift LRAS instead through supply-side measures.",
+        "distractors": {
+          "A": "A vertical LRAS rules this out. Higher demand against fixed capacity pushes the price level up.",
+          "B": "Output cannot rise in the long run on this view, whatever happens to demand. This describes the short run, or the Keynesian upward-sloping segment.",
+          "D": "Rising aggregate demand raises the price level rather than lowering it, and output is fixed by capacity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four government measures.<br />Using Table 1, the measure most likely to shift long-run aggregate supply to the right is",
+      "table": {
+        "caption": "Table 1: Four government measures",
+        "head": [
+          "",
+          "Measure"
+        ],
+        "rows": [
+          [
+            "Measure 1",
+            "Breaking up a monopoly and lowering barriers to entry"
+          ],
+          [
+            "Measure 2",
+            "A one-off cut in an indirect tax levied on firms"
+          ],
+          [
+            "Measure 3",
+            "A temporary subsidy on business energy bills"
+          ],
+          [
+            "Measure 4",
+            "A cash transfer paid to pensioners"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Measure 1.",
+        "B": "Measure 2.",
+        "C": "Measure 3.",
+        "D": "Measure 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "LRAS shifts only when the economy's <strong>productive potential</strong> changes — the quantity or quality of its factors of production, or how efficiently they are used.<br />Breaking up a monopoly and lowering barriers to entry does exactly that. Competition forces firms to cut waste and innovate, and easier entry lets more efficient producers in. Output per unit of input rises across the industry, so the economy can produce more.<br /><strong>Competition policy and deregulation</strong> are recognised LRAS factors for this reason, alongside education, technology and investment.",
+        "distractors": {
+          "B": "A one-off cut in an indirect tax lowers firms' costs and shifts <strong>SRAS</strong> right. Productive capacity is unchanged.",
+          "C": "A temporary subsidy shifts SRAS right for as long as it lasts, then reverses. Nothing permanent has been added to capacity.",
+          "D": "A cash transfer to pensioners raises their disposable income and therefore consumption, which shifts <strong>aggregate demand</strong> rather than supply."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country strengthens property rights and substantially reduces corruption in its courts. Over time this is likely to shift LRAS to the right because it",
+      "options": {
+        "A": "Encourages investment by making returns more secure.",
+        "B": "Increases aggregate demand from government spending.",
+        "C": "Lowers the price level that firms are able to charge.",
+        "D": "Raises the marginal propensity to consume of households."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Institutional quality</strong> is a recognised influence on LRAS, and it works through investment.<br />A firm deciding whether to build a factory is committing money for decades. That decision depends on confidence that the asset cannot be expropriated, that contracts will be enforced, and that officials cannot extract payments at will. Weak institutions make the expected return unreliable, so less investment happens at any interest rate.<br />Strengthening them raises investment, which raises the capital stock, which raises productive potential. The effect is slow but cumulative, and it is one of the main explanations for large and persistent differences in income between countries.",
+        "distractors": {
+          "B": "Nothing in the stem involves the government spending more. Legal reform changes the environment firms operate in, not the level of demand.",
+          "C": "Better institutions do not cap what firms may charge. Prices are set by supply and demand, and this works on the supply side by raising capacity.",
+          "D": "The marginal propensity to consume concerns how households split extra income between spending and saving. Court reform does not touch it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Positive net migration of working-age people and a large increase in spending on training both shift LRAS to the right. They differ in that migration raises the",
+      "options": {
+        "A": "Quality of labour, while training raises the quantity.",
+        "B": "Quantity of labour, while training raises the quality.",
+        "C": "Quantity of capital, while training raises the quantity of labour.",
+        "D": "Same thing as training does, by a different route."
+      },
+      "answer": "B",
+      "model": {
+        "working": "LRAS depends on both the <strong>quantity</strong> and the <strong>quality</strong> of the factors of production, and these two measures work on different halves of that.<br />Migration adds <em>more workers</em> — a larger working-age population, so a bigger labour force. Training makes the existing workers <em>more productive</em> — more output from the same hours.<br />Both push the curve right, and an economy can pursue either. Which it should depends on where its constraint actually lies, which is why the distinction is worth keeping clear rather than lumping both under a vague heading of labour supply.",
+        "distractors": {
+          "A": "This reverses them. Arriving workers add to numbers; training adds to skills.",
+          "C": "Migration adds labour, not capital. Capital is machinery, buildings and infrastructure.",
+          "D": "They are not the same thing. One changes how many workers there are, the other how productive each one is."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "On the Keynesian LRAS curve, output can rise with no increase in the price level while output is low. The reason given for this is that",
+      "options": {
+        "A": "Aggregate demand is fixed at low levels of output.",
+        "B": "Firms are legally prevented from raising their prices.",
+        "C": "The price level is set by conditions in the world economy.",
+        "D": "Unemployed resources are available to be brought in."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The horizontal segment reflects an economy with <strong>large spare capacity</strong> — idle machinery and unemployed workers waiting to be used.<br />Because those resources are readily available, firms taking on extra production do not have to bid up wages or pay premium rates to get hold of them. Costs per unit stay flat, so output can expand with no upward pressure on prices at all.<br />This is the heart of the Keynesian case for demand management in a slump: with resources lying idle, raising aggregate demand buys real output essentially for free. The Classical view denies the segment exists in the long run, which is precisely what the two schools disagree about.",
+        "distractors": {
+          "A": "Aggregate demand is exactly what varies in this analysis. The horizontal segment describes how output responds when demand rises.",
+          "B": "Nothing legal is involved. Firms hold prices steady because their costs are steady, not because they are forbidden to raise them.",
+          "C": "The price level here is determined by domestic costs and demand. World conditions matter for an open economy, but they are not what makes this segment flat."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Widespread adoption of automation raises output per worker across an economy. This shifts LRAS to the right because automation improves the",
+      "options": {
+        "A": "Level of aggregate demand in the economy.",
+        "B": "Quality of the capital stock in use.",
+        "C": "Quantity of labour that is available.",
+        "D": "Rate of inflation that firms expect."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Technological advance works on the <strong>quality</strong> of capital: the same investment now buys machinery that does more, faster and with fewer errors.<br />That raises output per worker, so the economy can produce more from the resources it already has. Productive potential rises and LRAS shifts right.<br />Note that the number of workers has not changed and neither has the number of machines. What has changed is what each machine can do, which is why technology is treated as a quality improvement rather than a quantity one.",
+        "distractors": {
+          "A": "Automation may well change spending patterns, but the reason LRAS moves is that capacity has risen. AD and LRAS are different curves shifted by different things.",
+          "C": "The quantity of labour is unchanged — automation may even reduce the labour needed for a given output. The gain is in productivity per worker.",
+          "D": "Expected inflation influences wage bargaining and short-run costs. It does not add to what the economy is capable of producing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-3-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An economy's LRAS shifts right at the same time as aggregate demand rises by a similar amount. Compared with a rise in aggregate demand alone, this outcome delivers",
+      "options": {
+        "A": "Higher output and less inflationary pressure.",
+        "B": "Higher output and more inflationary pressure.",
+        "C": "Lower output and less inflationary pressure.",
+        "D": "Lower output and more inflationary pressure."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Aggregate demand rising on its own runs into the economy's capacity ceiling. Output goes up somewhat and the price level goes up too, and the closer the economy is to full capacity the more of the adjustment lands on prices.<br />When LRAS moves right at the same time, the ceiling rises with the demand. The extra output can actually be produced, so more of the increase in demand turns into real goods and less of it into higher prices.<br />That combination is <strong>non-inflationary growth</strong>, and it is the argument for pairing demand-side stimulus with supply-side measures — investment, training, infrastructure — rather than relying on either on its own.",
+        "distractors": {
+          "B": "Extra capacity relieves price pressure rather than adding to it. More demand chasing more goods is less inflationary than more demand chasing the same goods.",
+          "C": "Output is higher, not lower. Both curves have moved in the direction that raises it.",
+          "D": "Both halves are wrong: the extra capacity raises output and eases the pressure on prices."
+        }
+      }
+    }
+  ]
+}

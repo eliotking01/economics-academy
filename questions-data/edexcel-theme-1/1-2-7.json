@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.7",
+  "slug": "1-2-7-price-mechanism",
+  "title": "The Price Mechanism",
+  "shortTitle": "The Price Mechanism",
+  "pageTitle": "Price Mechanism Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the price mechanism for Edexcel A-Level Economics: the rationing, incentive and signalling functions of prices.",
+  "intro": "Seven original multiple-choice questions on the price mechanism, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the rationing, incentive and signalling functions of the price mechanism in local, national and global markets.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-7-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Only 500 tickets are available for a concert and far more people want to attend. The price rises until just 500 people are still willing to buy. The function of the price mechanism at work is",
+      "options": {
+        "A": "Incentive.",
+        "B": "Rationing.",
+        "C": "Redistribution.",
+        "D": "Signalling."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Rationing</strong> is the price mechanism deciding who gets a scarce good. Where demand exceeds supply, price rises until only as many buyers remain as there are units available.<br />That is precisely what happens here: 500 tickets, and the price climbs until exactly 500 people are still willing to pay. The good goes to those with the greatest willingness and ability to pay — which is efficient in the market's own terms, and is also the reason rationing by price is often thought unfair.",
+        "distractors": {
+          "A": "Incentive works on <em>producers</em>, encouraging them to supply more. The concert hall cannot add seats for tonight, so no supply response is possible.",
+          "C": "Redistribution is not one of the three functions of the price mechanism. It is something governments do through taxes and benefits.",
+          "D": "Signalling conveys information about where resources are needed. The high price does signal strong demand, but what it is doing <em>here</em> is deciding who gets in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-7-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rising world price for cocoa tells producers that the crop has become scarce relative to demand, and at the same time makes growing it more profitable. The two functions being performed are",
+      "options": {
+        "A": "Rationing and incentive.",
+        "B": "Rationing and signalling.",
+        "C": "Signalling and incentive.",
+        "D": "Signalling and redistribution."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Read the two halves of the stem separately.<br />'Tells producers the crop has become scarce' is <strong>signalling</strong>: the price is carrying information about conditions in the market.<br />'Makes growing it more profitable' is <strong>incentive</strong>: the price is changing what producers find it worthwhile to do.<br />The two almost always travel together, which is why they are easy to confuse. The test is whether the price is conveying information or altering behaviour.",
+        "distractors": {
+          "A": "Incentive is right, but rationing is about allocating the good among <em>buyers</em>. The stem describes producers throughout.",
+          "B": "Signalling is right, but again the stem says nothing about how the cocoa is shared out among consumers.",
+          "D": "Redistribution is not one of the three functions. The three are rationing, incentive and signalling."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-7-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A severe frost destroys much of a country's tomato crop and prices double. Households buy fewer tomatoes, and those who value them most keep buying. This is the price mechanism",
+      "options": {
+        "A": "Failing, because supply has not increased.",
+        "B": "Incentivising growers to plant more next season.",
+        "C": "Rationing the reduced supply among consumers.",
+        "D": "Signalling to growers that demand has fallen."
+      },
+      "answer": "C",
+      "model": {
+        "working": "There are fewer tomatoes than before and something has to decide who goes without. The higher price does it: buyers who value tomatoes least drop out, and the reduced crop goes to those who value it most.<br />That is the <strong>rationing</strong> function. It is worth noticing that the mechanism is doing its job here, not failing — a shortage without a price rise would mean empty shelves and queues instead, with no reliable way of deciding who is served.",
+        "distractors": {
+          "A": "Supply cannot increase — the crop was destroyed. The price mechanism is doing what it can in that situation, which is to allocate what remains.",
+          "B": "The higher price will indeed incentivise growers, but that acts on producers and on next season's crop. The stem describes how <em>this</em> year's reduced crop is being shared out.",
+          "D": "The price rise signals that tomatoes have become scarce. Demand has not fallen; the fall in quantity bought is a response to price, not a shift in demand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-7-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four effects of a rise in the world price of copper.<br />Using Table 1, the effect that shows the rationing function of the price mechanism is",
+      "table": {
+        "caption": "Table 1: Four effects of a rise in the world price of copper",
+        "head": [
+          "",
+          "Effect"
+        ],
+        "rows": [
+          [
+            "Effect 1",
+            "Mining firms bring an idle mine back into production"
+          ],
+          [
+            "Effect 2",
+            "Firms read the higher price as a sign copper is scarce"
+          ],
+          [
+            "Effect 3",
+            "Exploration companies start searching for new deposits"
+          ],
+          [
+            "Effect 4",
+            "Copper goes to the buyers willing to pay the most"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Effect 1.",
+        "B": "Effect 2.",
+        "C": "Effect 3.",
+        "D": "Effect 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Rationing</strong> is about which buyers end up with the scarce good. Effect 4 says copper goes to the buyers willing to pay the most, which is the rationing function stated directly.<br />The other three all concern producers. Two describe firms changing what they do because the higher price has made copper more profitable, and one describes firms reading information out of the price. Sorting the four this way — buyers or producers first, then information or behaviour — makes these questions quick.",
+        "distractors": {
+          "A": "Bringing an idle mine back into production is a response to higher profitability, which is the <strong>incentive</strong> function.",
+          "B": "Reading the higher price as a sign that copper is scarce is the <strong>signalling</strong> function: the price is carrying information.",
+          "C": "Beginning to search for new deposits is another producer response to profitability, so again this is <strong>incentive</strong>."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-7-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rise in the world price of wheat leads farmers in several different countries to plant more wheat and less barley. This shows that the price mechanism",
+      "options": {
+        "A": "Allocates resources across national borders.",
+        "B": "Eliminates scarcity in the wheat market.",
+        "C": "Guarantees that farmers will make a profit.",
+        "D": "Prevents any change in the barley market."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Wheat is traded on a world market, so a single price is visible to growers everywhere. When it rises, farmers in different countries independently move land, machinery and labour into wheat.<br />No one coordinates this. The price does the whole job, and it does it <strong>internationally</strong> — which is the point the notes make about global commodity markets. The same mechanism that allocates resources within a town allocates them between continents.",
+        "distractors": {
+          "B": "Scarcity is never eliminated. The price mechanism decides how scarce resources are used; it does not create more of them.",
+          "C": "Nothing is guaranteed. Farmers respond to the price they can see now, and by harvest the extra planting may well have pushed it back down.",
+          "D": "The barley market is directly affected — land has been switched out of it, so barley supply falls and its price will tend to rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-7-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The price of a good falls steadily for two years and several producers leave the market. The function of the price mechanism at work in their exit is",
+      "options": {
+        "A": "Incentive, working in reverse.",
+        "B": "Rationing, applied to producers.",
+        "C": "Redistribution from firms to consumers.",
+        "D": "Signalling that demand has risen."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>incentive</strong> function works in both directions. A high price draws resources in by making production profitable; a low price drives them out by making it unprofitable.<br />Firms leaving a market with a falling price are responding to exactly that. The resources they release — premises, staff, equipment — become available to industries where prices, and therefore returns, are higher. Exit is as much a part of allocating resources efficiently as entry is.",
+        "distractors": {
+          "B": "Rationing decides which <em>buyers</em> get a scarce good. Firms leaving is a supply-side response.",
+          "C": "Redistribution is not one of the three functions. Consumers do gain from lower prices, but that is an outcome rather than a function of the mechanism.",
+          "D": "A falling price signals weak demand or abundant supply. Rising demand would push the price up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-7-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A new medicine is very expensive when first launched. Over the following years more firms enter the market, output rises and the price falls back. Across the whole episode, the high initial price was",
+      "options": {
+        "A": "Preventing any increase in the quantity supplied.",
+        "B": "Purely a transfer from patients to firms.",
+        "C": "Rationing supply and attracting new producers.",
+        "D": "Signalling that demand for the medicine was weak."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The high price is doing two things at once, and both matter.<br />In the short run it <strong>rations</strong> a limited supply, allocating the medicine to those willing and able to pay most.<br />Over time it <strong>incentivises</strong> entry: the profits on offer draw in rival producers, output rises, and the price is competed back down.<br />The second effect is what makes the first temporary. The high price is uncomfortable but self-correcting — it is the signal that brings the supply which eventually removes it.",
+        "distractors": {
+          "A": "The high price is what <em>caused</em> the increase in supply. Firms entered precisely because the returns were attractive.",
+          "B": "A transfer does occur, but calling it purely that misses the mechanism. The profit is exactly what attracted the entrants whose competition then lowered the price.",
+          "D": "A high price signals that the good is scarce relative to demand — strong demand, not weak."
+        }
+      }
+    }
+  ]
+}

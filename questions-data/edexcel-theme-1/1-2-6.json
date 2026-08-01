@@ -1,0 +1,226 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.2.6",
+  "slug": "1-2-6-price-determination",
+  "title": "Price Determination",
+  "shortTitle": "Price Determination",
+  "pageTitle": "Market Equilibrium and Price Determination Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on price determination for Edexcel A-Level Economics: equilibrium, excess demand and supply, and shifts in the market.",
+  "intro": "Eight original multiple-choice questions on price determination, written to the style and difficulty of Edexcel Paper 1 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Eight original multiple-choice questions on market equilibrium, excess demand and excess supply, and how shifts in demand and supply change price and quantity.",
+  "questions": [
+    {
+      "id": "edexcel-1-2-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "At the equilibrium price in a competitive market",
+      "options": {
+        "A": "Consumer surplus is zero.",
+        "B": "Firms are producing at their maximum capacity.",
+        "C": "Quantity demanded equals quantity supplied.",
+        "D": "The government sets the price directly."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Equilibrium is defined by one condition: <strong>quantity demanded equals quantity supplied</strong>. At that price the market clears, with no shortage and no surplus.<br />Everything else follows from it. Nobody who is willing to pay the price goes without, and nobody willing to sell at that price is left holding stock. Because no one has any reason to change what they are doing, the price stays put until something shifts one of the curves.",
+        "distractors": {
+          "A": "Consumer surplus is generally at its largest in a cleared competitive market, not zero. It would only be zero if every buyer valued the good at exactly the price they paid.",
+          "B": "Equilibrium says nothing about capacity. Firms supply the quantity that is profitable at that price, which is usually well below the most they could physically produce.",
+          "D": "The equilibrium price emerges from the interaction of demand and supply. A price set by government is exactly what would <em>prevent</em> the market reaching it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows weekly demand and supply for a bag of coffee beans.<br />Using Table 1, at a price of £6 the market has",
+      "table": {
+        "caption": "Table 1: Weekly demand and supply for a bag of coffee beans",
+        "head": [
+          "Price",
+          "Quantity demanded",
+          "Quantity supplied"
+        ],
+        "rows": [
+          [
+            "£6",
+            "1,400",
+            "600"
+          ],
+          [
+            "£7",
+            "1,200",
+            "800"
+          ],
+          [
+            "£8",
+            "1,000",
+            "1,000"
+          ],
+          [
+            "£9",
+            "800",
+            "1,200"
+          ],
+          [
+            "£10",
+            "600",
+            "1,400"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Excess demand of 800 bags.",
+        "B": "Excess demand of 1,400 bags.",
+        "C": "Excess supply of 600 bags.",
+        "D": "Excess supply of 800 bags."
+      },
+      "answer": "A",
+      "model": {
+        "working": "At £6, quantity demanded is <strong>1,400</strong> and quantity supplied is <strong>600</strong>. Buyers want more than sellers will provide, so there is <strong>excess demand</strong> — a shortage.<br />Its size is the gap between the two: 1,400 − 600 = <strong>800 bags</strong>.<br />£6 is below the equilibrium price of £8, and excess demand is what always appears below equilibrium. Buyers then compete for the limited supply, bidding the price up until the gap closes.",
+        "distractors": {
+          "B": "1,400 is the quantity demanded, not the shortage. Excess demand is the <em>difference</em> between the two quantities, so the 600 supplied has to be subtracted.",
+          "C": "600 is the quantity supplied, and the direction is wrong as well. At £6 the market is short of coffee, not oversupplied.",
+          "D": "The size is right but the direction is wrong. Excess supply appears at prices <em>above</em> equilibrium, where sellers offer more than buyers want."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Using Table 1 in the previous question, if the price were £10 the market would correct through",
+      "options": {
+        "A": "A fall in price, as sellers compete to clear stock.",
+        "B": "A fall in price, as buyers compete for scarce goods.",
+        "C": "A rise in price, as sellers compete to clear stock.",
+        "D": "A rise in price, as buyers compete for scarce goods."
+      },
+      "answer": "A",
+      "model": {
+        "working": "At £10, quantity supplied is 1,400 and quantity demanded is only 600, so there is <strong>excess supply</strong> of 800 bags — a surplus.<br />Sellers are left with unsold stock, and the way to shift it is to cut the price. As price falls there is a <strong>contraction in quantity supplied</strong> down the supply curve and an <strong>extension in quantity demanded</strong> down the demand curve. The two converge until the market clears at £8.",
+        "distractors": {
+          "B": "The price does fall, but the reason is wrong. Buyers competing for a scarce good is what pushes prices <em>up</em>, and there is no scarcity at £10.",
+          "C": "A price rise would make the surplus worse: even fewer bags would be bought and even more offered.",
+          "D": "Both halves are wrong here. Nothing is scarce at £10 — there are 1,400 bags on offer and 600 buyers for them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government campaign persuades far more households to install smart heating controls. In the market for those controls the most likely new equilibrium has",
+      "options": {
+        "A": "A higher price and a higher quantity.",
+        "B": "A higher price and a lower quantity.",
+        "C": "A lower price and a higher quantity.",
+        "D": "A lower price and a lower quantity."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The campaign changes <strong>tastes</strong>, which is a condition of demand, so the demand curve shifts to the <strong>right</strong>. Supply is unaffected.<br />At the old price there is now excess demand, and buyers bid the price up. As they do, quantity supplied extends up the supply curve. The new equilibrium therefore has both a <strong>higher price</strong> and a <strong>higher quantity</strong> — the standard result whenever demand rises against an unchanged supply curve.",
+        "distractors": {
+          "B": "Quantity falls only if the supply curve shifts left. Nothing here affects manufacturers' costs or capacity.",
+          "C": "A lower price needs demand to fall or supply to rise. Demand has risen.",
+          "D": "This is what a fall in demand would produce, and the study does the opposite."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government introduces a subsidy for solar panel manufacturers. In the market for solar panels the most likely new equilibrium has",
+      "options": {
+        "A": "A higher price and a higher quantity.",
+        "B": "A higher price and a lower quantity.",
+        "C": "A lower price and a higher quantity.",
+        "D": "A lower price and a lower quantity."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A subsidy lowers manufacturers' costs, so more panels are supplied at every price and the supply curve shifts to the <strong>right</strong>. Demand is unchanged.<br />At the old price there is now excess supply, so the price falls. As it does, quantity demanded extends down the demand curve. The new equilibrium has a <strong>lower price</strong> and a <strong>higher quantity</strong>, which is exactly the outcome a government subsidising a merit good is looking for.",
+        "distractors": {
+          "A": "A higher price would need supply to fall or demand to rise. The subsidy raises supply.",
+          "B": "This is the result of a leftward shift in supply — higher costs, a tax, or a supply shock. A subsidy is the opposite.",
+          "D": "Quantity falls only if demand falls or supply falls. Neither has happened, and more panels are being made."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the market for a good, demand increases at the same time as supply decreases. It follows that",
+      "options": {
+        "A": "Price falls and quantity is indeterminate.",
+        "B": "Price rises and quantity is indeterminate.",
+        "C": "Price is indeterminate and quantity falls.",
+        "D": "Price is indeterminate and quantity rises."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Take the two shifts one at a time on the sketch.<br />Demand shifts right: price up, quantity up.<br />Supply shifts left: price up, quantity down.<br />Both push <strong>price</strong> the same way, so price definitely rises. They push <strong>quantity</strong> in opposite directions, so the outcome depends on which shift is larger — quantity could rise, fall, or stay exactly where it was.<br />The general rule is worth remembering: when two curves move, whichever variable both shifts push the same way is the one you can be certain about.",
+        "distractors": {
+          "A": "Nothing here pushes price down. Higher demand raises it and lower supply raises it too.",
+          "C": "This gets the two the wrong way round. Price is the variable both shifts agree on; quantity is the ambiguous one.",
+          "D": "Same objection. Quantity might well rise, but it might equally fall, so it cannot be stated with certainty."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A surplus of unsold stock builds up in a competitive market. The mechanism that removes it is that",
+      "options": {
+        "A": "Buyers offer higher prices to secure the good.",
+        "B": "Sellers cut prices, extending demand and contracting supply.",
+        "C": "Sellers raise prices to recover their costs.",
+        "D": "The government sets a price at which the stock will clear."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A surplus means sellers are holding goods nobody will buy at the current price. Cutting the price is the only way to move them, and competition between sellers makes sure someone does.<br />The falling price then works on both sides at once. Quantity demanded <strong>extends</strong> as the good becomes affordable to more buyers, and quantity supplied <strong>contracts</strong> as production becomes less profitable at the margin. The two move towards each other until the surplus disappears.",
+        "distractors": {
+          "A": "Buyers bid prices up when a good is scarce. Here there is more than enough to go round, so they have no reason to.",
+          "C": "Raising the price would enlarge the surplus. Costs already incurred cannot be recovered by charging a price at which nothing sells.",
+          "D": "In a competitive market no one sets the price. It emerges from the interaction of buyers and sellers, and a government-set price is what tends to <em>create</em> a persistent surplus."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-2-6-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "In a competitive market a price is being charged at which quantity demanded exceeds quantity supplied. As the market corrects, the quantity actually traded",
+      "options": {
+        "A": "Falls, because supply contracts as price rises.",
+        "B": "Is unchanged, because the two forces cancel out.",
+        "C": "Rises, because demand extends as price rises.",
+        "D": "Rises, because supply extends as price rises."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Below equilibrium, trade is limited by the <strong>short side</strong> of the market: however much buyers want, only the quantity supplied can actually change hands.<br />As buyers compete and price rises, quantity supplied <strong>extends</strong> up the supply curve. That extra output is what allows more trade to take place, so the quantity traded rises from the original low quantity supplied towards the equilibrium quantity.<br />Quantity demanded contracts over the same stretch, but it was never the binding constraint.",
+        "distractors": {
+          "A": "Supply extends when price rises; it contracts when price falls. The direction here is upward.",
+          "B": "The two movements converge rather than cancelling. They meet at the equilibrium quantity, which is above the quantity supplied at the original price.",
+          "C": "Demand contracts as price rises, so it cannot be what allows more to be traded. It is the supply side doing the work."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.3.3",
+  "slug": "1-3-3-public-goods",
+  "title": "Public Goods",
+  "shortTitle": "Public Goods",
+  "pageTitle": "Public Goods and the Free Rider Problem Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on public goods for Edexcel A-Level Economics: non-excludability, non-rivalry and the free rider problem.",
+  "intro": "Six original multiple-choice questions on public goods, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on non-excludability, non-rivalry, the free rider problem and why the state provides public goods.",
+  "questions": [
+    {
+      "id": "edexcel-1-3-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A lighthouse warns every ship in the area, and its operator has no practical way of charging the ships that pass. The characteristic being described is",
+      "options": {
+        "A": "Non-excludability.",
+        "B": "Non-rivalry.",
+        "C": "The free rider problem.",
+        "D": "Under-provision."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Non-excludability</strong> means it is impossible, or prohibitively costly, to prevent non-payers from consuming the good once it exists. Light shines on every ship whether or not it has paid.<br />Keep it separate from what follows from it. Non-excludability is a <em>property of the good</em>; free riding is the behaviour it invites; under-provision is the outcome. The question asks for the property.",
+        "distractors": {
+          "B": "Non-rivalry is that one ship's use of the light leaves no less for the next. A lighthouse is non-rival too, but that is not what an inability to charge describes.",
+          "C": "Free riding is the <em>consequence</em> of non-excludability — people benefiting without paying because they can. The characteristic is what makes it possible.",
+          "D": "Under-provision is the market outcome at the end of the chain, not a characteristic of the good."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The marginal cost of letting one more person into a live broadcast is zero and their watching takes nothing away from anyone else, but the broadcaster can still require a subscription. The good is",
+      "options": {
+        "A": "Excludable and rival.",
+        "B": "Excludable and non-rival.",
+        "C": "Non-excludable and rival.",
+        "D": "Non-excludable and non-rival."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Take the two properties one at a time.<br /><strong>Rivalry:</strong> an extra viewer costs nothing to serve and reduces nobody else's viewing, so the good is <strong>non-rival</strong>.<br /><strong>Excludability:</strong> a subscription can be required, so non-payers <em>can</em> be kept out — the good is <strong>excludable</strong>.<br />Only a good failing <em>both</em> tests is a pure public good. This one fails only the rivalry test, so a private firm can charge for it and will supply it.",
+        "distractors": {
+          "A": "Rival means one person's consumption leaves less for others. The stem says the opposite — watching takes nothing away from anyone else.",
+          "C": "Both halves are wrong. The subscription makes it excludable, and the zero marginal cost makes it non-rival.",
+          "D": "This is the pure public good combination, and it is what a broadcaster <em>without</em> the ability to charge would face. Here the subscription is the difference."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Residents of a village would each gain from a flood barrier, but every resident refuses to contribute, each expecting the others to pay. The barrier is never built. This illustrates",
+      "options": {
+        "A": "Asymmetric information.",
+        "B": "Non-rivalry in consumption.",
+        "C": "The free rider problem.",
+        "D": "The price mechanism rationing."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The barrier would protect the whole village whether or not any given household paid for it. That makes withholding payment individually rational — you get the protection either way.<br />The trouble is that everyone reasons identically, so nobody pays and nothing is built. This is the <strong>free rider problem</strong>, and it is why non-excludable goods end up not merely under-provided but often not provided at all.",
+        "distractors": {
+          "A": "Asymmetric information is one party knowing more than another. Every resident here knows exactly what the barrier would do and what it would cost.",
+          "B": "Non-rivalry is a property of the good — one household's protection does not reduce another's — and it is true here. But it is not what stops the barrier being built; the inability to charge is.",
+          "D": "Rationing is the price mechanism allocating a scarce good among buyers. Here no price is charged and no good exists to allocate."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Private firms do not supply national defence. The reason is that they",
+      "options": {
+        "A": "Face costs that rise with each extra person protected.",
+        "B": "Find the good too cheap to be worth producing.",
+        "C": "Have no way of charging those who benefit from it.",
+        "D": "Would be prevented from doing so by law."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Firms supply goods when they can capture revenue from them. Defence protects everyone within a country's borders simultaneously, and there is no way to withhold it from a household that declines to pay.<br />With no way to collect revenue there is <strong>no profit incentive</strong>, however valuable the good is. That is the whole difficulty: national defence is enormously valuable and completely unsellable, which is why it is funded from taxation instead.",
+        "distractors": {
+          "A": "The marginal cost of protecting one more person is close to zero — that is non-rivalry. If costs did rise per user, charging would be more attractive rather than less.",
+          "B": "Cost is not the obstacle; defence is extraordinarily expensive. The obstacle is that the money cannot be collected from the beneficiaries.",
+          "D": "The barrier is economic, not legal. Even where private security firms are permitted, none could defend a country and bill its residents for it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-3-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 sets out the properties of four goods.<br />Using Table 1, the good the free market is least likely to provide at all is",
+      "table": {
+        "caption": "Table 1: Properties of four goods",
+        "head": [
+          "",
+          "Can non-payers be excluded?",
+          "Does one person's use reduce what is left?"
+        ],
+        "rows": [
+          [
+            "Good 1",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Good 2",
+            "Yes",
+            "No"
+          ],
+          [
+            "Good 3",
+            "No",
+            "Yes"
+          ],
+          [
+            "Good 4",
+            "No",
+            "No"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Good 1.",
+        "B": "Good 2.",
+        "C": "Good 3.",
+        "D": "Good 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>pure public good</strong> is the one that fails both tests: non-payers cannot be excluded, and one person's use reduces nothing.<br />Good 4 is the only one answering no to both questions. Because non-payers cannot be shut out, every buyer has an incentive to free ride; because nobody pays, no firm has a reason to supply it. The result is <strong>non-provision</strong> rather than merely too little.",
+        "distractors": {
+          "A": "Excludable and rival — an ordinary private good. Markets supply these perfectly well, since the seller can charge and each unit sold is used up.",
+          "B": "Excludable but non-rival. The producer can still charge, so there is a profit incentive; a cinema screening or a subscription broadcast works this way.",
+          "C": "Non-excludable but rival. This causes over-use rather than non-provision, because each user really does deplete what is left for the next."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government provides street lighting and funds it from general taxation rather than by charging the people who walk beneath it. The economic justification is that",
+      "options": {
+        "A": "Charging users would be cheaper than taxing them.",
+        "B": "Street lighting is rival, so its use must be rationed.",
+        "C": "Taxation compels the payment that free riding prevents.",
+        "D": "The service costs less when it is publicly owned."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The free rider problem is a collective action failure: everyone wants street lighting and nobody will volunteer to pay for it, because the light falls on them either way.<br />Taxation solves it by removing the choice. Payment becomes compulsory, so the good gets funded despite nobody having a private incentive to contribute. That is the economic case — not that the state is a better provider, but that it is the only body able to <strong>make everyone pay</strong>.",
+        "distractors": {
+          "A": "Nothing suggests taxation is administratively cheaper. The point is that charging is not possible at all, not that it costs more.",
+          "B": "Street lighting is <strong>non-rival</strong> — one person walking under a lamp leaves no less light for the next. Rationing it would waste a service that costs nothing extra to share.",
+          "D": "Public ownership carries no guarantee of lower costs, and it is not the argument. The argument is that no private firm could collect the revenue in the first place."
+        }
+      }
+    }
+  ]
+}

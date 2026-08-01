@@ -1,0 +1,147 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.2.2",
+  "slug": "1-2-2-imperfect-information",
+  "title": "Imperfect Information",
+  "shortTitle": "Imperfect Information",
+  "pageTitle": "Asymmetric Information Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on imperfect information for AQA A-Level Economics: information gaps, asymmetric information and their consequences.",
+  "intro": "Six original multiple-choice questions on information gaps and asymmetric information, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on information gaps, asymmetric information and their consequences, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-2-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A householder buying a second-hand boiler knows far less about its condition than the person selling it. This is best described as",
+      "options": {
+        "A": "A negative externality, because a third party is harmed.",
+        "B": "A public good, because information is non-excludable.",
+        "C": "Asymmetric information, because one party knows more than the other.",
+        "D": "Symmetric information, because both parties can inspect the boiler."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Asymmetric information</strong> exists when one party to a transaction has more or better information than the other. The seller has lived with the boiler and knows its faults; the buyer can only see the outside. That imbalance is what makes the transaction risky for the buyer and can lead to a decision that does not maximise their utility.",
+        "distractors": {
+          "A": "An externality is a cost or benefit falling on someone <em>outside</em> the transaction. Here the harm falls on the buyer, who is a party to it.",
+          "B": "Non-excludability means nobody can be prevented from consuming a good. The seller here is doing precisely the opposite — keeping information to themselves.",
+          "D": "Symmetric information would mean both parties know the same things. Being able to look at the outside of a boiler is not the same as knowing its service history."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a second-hand car market, buyers cannot tell reliable cars from unreliable ones before purchase, but sellers can. All other things being equal, the most likely consequence is that",
+      "options": {
+        "A": "Buyers offer a price based on average quality, so the best cars are withdrawn.",
+        "B": "Buyers pay more than the value of the very best cars on the market.",
+        "C": "Sellers of the poorest-quality cars are the first to leave the market.",
+        "D": "The market allocates cars efficiently, because prices adjust to reflect quality."
+      },
+      "answer": "A",
+      "model": {
+        "working": "If buyers cannot distinguish good cars from bad, they will not pay a premium for quality they cannot verify. They offer roughly what an <strong>average</strong> car is worth. That price is a bargain for the owner of a poor car and an insult to the owner of an excellent one, so the best cars are withdrawn. The average quality remaining then falls, buyers offer less again, and the market drifts towards the worst vehicles. This is one of the clearest ways asymmetric information produces a <strong>misallocation of resources</strong>.",
+        "distractors": {
+          "B": "Buyers protect themselves against a risk they cannot assess by offering <em>less</em>, not more. Paying above the value of the best car would require them to be more confident than the information allows.",
+          "C": "This has the incentive exactly backwards. An average price is generous to a poor-quality car, so those sellers are the ones with every reason to stay.",
+          "D": "Prices can only adjust to quality if quality is observable. That is exactly what is missing here, which is why the outcome is inefficient."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Information gaps lead to a misallocation of resources because",
+      "options": {
+        "A": "Consumers always overestimate the benefits of the goods they buy.",
+        "B": "Consumers may buy quantities that do not maximise their welfare.",
+        "C": "Firms are unable to earn any profit when information is incomplete.",
+        "D": "Prices stop responding to changes in demand and supply."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A market allocates resources well only if the people in it can judge the costs and benefits of what they are buying. Where information is missing, consumers act on a <strong>mistaken view</strong> of those costs and benefits and end up buying too much of some things and too little of others. Resources follow that spending, so the pattern of production is wrong — too many resources in one market, too few in another.",
+        "distractors": {
+          "A": "The word <strong>always</strong> is what fails here. Information gaps cut both ways: consumers under-consume goods whose benefits they underestimate, such as preventative healthcare, just as they over-consume goods whose harms they underestimate.",
+          "C": "Profits are not eliminated by poor information — if anything a seller who knows more than the buyer is well placed to profit from it. The problem is a welfare loss to consumers, not an absence of profit.",
+          "D": "Prices continue to move with demand and supply. The difficulty is that the demand they respond to is based on faulty information, so the resulting price signals point resources in the wrong direction."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is an example of asymmetric information rather than a general information gap?",
+      "options": {
+        "A": "A restaurant owner who knows of a failed hygiene inspection diners cannot see.",
+        "B": "A saver who does not know what the rate of inflation will be next year.",
+        "C": "A shopper who has not compared the prices charged by other supermarkets.",
+        "D": "Two firms bidding for a contract, neither of which knows the other's bid."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The test is whether the two parties to the transaction are <strong>unequally</strong> informed. The restaurant owner holds information about the very thing being sold that the diner cannot obtain, so one side of the deal knows more than the other. That is <strong>asymmetric information</strong>. A general <strong>information gap</strong> is simply missing information, and it may be missing for everyone equally.",
+        "distractors": {
+          "B": "Nobody knows next year's inflation rate, including the bank. This is a genuine information gap, but it is shared, so there is no asymmetry between the two parties.",
+          "C": "The shopper lacks information about <em>other</em> sellers, not about the product in front of them. This is an information gap that the shopper could close by looking, and the supermarket has no special knowledge being withheld.",
+          "D": "Both bidders are equally in the dark about each other. Symmetrical ignorance is not asymmetric information, however uncertain the situation feels."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government requires every seller of a second-hand car to supply an independent mechanical inspection report to the buyer. The main economic purpose of this policy is to",
+      "options": {
+        "A": "Increase the number of second-hand cars supplied to the market.",
+        "B": "Raise tax revenue from the second-hand car market.",
+        "C": "Set a minimum price for second-hand cars.",
+        "D": "Shrink the information gap between buyers and sellers."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The problem in this market is that the seller knows the condition of the car and the buyer does not. An <strong>independent</strong> report puts that information into the buyer's hands, so both parties are judging the same vehicle on the same evidence. With the asymmetry reduced, buyers are willing to pay for quality they can now verify, good cars stay in the market and resources are allocated better.",
+        "distractors": {
+          "A": "Supply may well rise as a side effect, because owners of good cars can prove their quality and are more willing to sell. But that is a consequence of fixing the information problem rather than the purpose of the policy.",
+          "B": "Nothing in the policy raises revenue. An inspection requirement imposes a cost on sellers; it is not a tax collected by government.",
+          "C": "No price is being set. The policy changes what buyers <em>know</em> and leaves them free to negotiate whatever price the information supports."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-2-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "In most markets asymmetric information favours the seller. Which one of the following is an example of asymmetric information favouring the buyer?",
+      "options": {
+        "A": "A householder buying a boiler that the installer knows to be faulty.",
+        "B": "A life insurance applicant who knows more about their health than the insurer.",
+        "C": "A shopper who cannot compare the prices charged by different supermarkets.",
+        "D": "A tourist paying more than a local resident for the same taxi journey."
+      },
+      "answer": "B",
+      "model": {
+        "working": "In an insurance market the roles are reversed. The insurer is the <em>seller</em> of the policy, and the applicant — the buyer — knows far more about their own health, habits and family history than the insurer can discover. The buyer therefore holds the informational advantage, which is why insurers ask detailed medical questions and why premiums rise if answers turn out to be incomplete.",
+        "distractors": {
+          "A": "This is the standard case, with the advantage on the seller's side: the installer knows about the fault and the householder does not.",
+          "C": "This is an information gap on the buyer's side about other sellers in the market, so if anything it leaves the buyer worse informed, not better.",
+          "D": "Again the seller holds the advantage. The driver knows the going rate for the journey and the tourist does not."
+        }
+      }
+    }
+  ]
+}

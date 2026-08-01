@@ -1,0 +1,233 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.2.3",
+  "slug": "2-2-3-the-determinants-of-aggregate-demand",
+  "title": "The Determinants of Aggregate Demand",
+  "shortTitle": "Determinants of AD",
+  "pageTitle": "Determinants of Aggregate Demand Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on the determinants of aggregate demand for AQA A-Level Economics: consumption, investment, net trade and the accelerator.",
+  "intro": "Nine original multiple-choice questions on the determinants of aggregate demand, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on consumption, investment, government spending, net trade and the accelerator effect, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-2-3-q1",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A household's disposable income rises by £400 and its spending rises by £300. Its marginal propensity to consume is",
+      "options": {
+        "A": "0.25",
+        "B": "0.75",
+        "C": "1.33",
+        "D": "4.00"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The marginal propensity to consume is the proportion of <em>extra</em> income that is spent.<br />MPC = change in consumption ÷ change in disposable income = £300 ÷ £400 = <strong>0.75</strong>.<br />The remaining £100 is saved, so the marginal propensity to save is 0.25 — and the two add to 1, as they must.",
+        "distractors": {
+          "A": "0.25 is the marginal propensity to <strong>save</strong>: the £100 not spent, divided by £400. MPC and MPS are easy to swap, but they always sum to 1.",
+          "C": "1.33 inverts the formula, £400 ÷ £300. An MPC above 1 would mean spending more than the extra income received.",
+          "D": "4.00 is the <em>multiplier</em>, 1 ÷ (1 − 0.75). That is a later step, and it answers a different question."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank raises interest rates. All other things being equal, the most likely effect on consumption is that it",
+      "options": {
+        "A": "Falls, because borrowing is dearer.",
+        "B": "Falls, because incomes rise.",
+        "C": "Rises, because borrowing is dearer.",
+        "D": "Rises, because saving pays more."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Higher rates work on consumption from two directions at once. Borrowing to spend costs more, so credit-financed purchases fall; and the reward for saving rises, so households put more aside. Both pull in the same direction, so <strong>consumption falls</strong>.<br />Households with mortgages face a third squeeze: higher repayments leave less disposable income for everything else.",
+        "distractors": {
+          "B": "The direction is right but the reason contradicts it. Higher rates reduce the disposable income of borrowers rather than raising it.",
+          "C": "Dearer borrowing discourages spending. It cannot be a reason for consumption to rise.",
+          "D": "A better return on saving is a reason to save <em>more</em>, which means consuming less out of the same income."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "House prices rise sharply while incomes are unchanged. Consumption then rises. This is best explained by",
+      "options": {
+        "A": "The accelerator effect.",
+        "B": "The distribution of income.",
+        "C": "The multiplier effect.",
+        "D": "The wealth effect."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Households own their homes as assets, so rising house prices make them <strong>wealthier</strong> without changing their income. Feeling better off, they save less and spend more of the income they do have — and some borrow against the higher value of the property. That is the wealth effect.",
+        "distractors": {
+          "A": "The accelerator links a change in the rate of growth to a larger percentage change in <em>investment</em>, not to household consumption.",
+          "B": "A change in the distribution of income can change total consumption, but the stem says incomes are unchanged.",
+          "C": "The multiplier describes what happens <em>after</em> an initial injection. Here the question is what causes the initial change in spending."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Net investment is best defined as",
+      "options": {
+        "A": "Gross investment plus depreciation.",
+        "B": "Investment by firms minus investment by the government.",
+        "C": "The addition to the capital stock after depreciation.",
+        "D": "Total spending on capital goods."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Some investment simply replaces capital that has worn out or become obsolete. Stripping that out leaves the <strong>net</strong> addition to the capital stock:<br />Net investment = gross investment − depreciation.<br />This is the figure that matters for growth, because only a genuine addition to the capital stock raises the economy's productive potential and shifts LRAS to the right.",
+        "distractors": {
+          "A": "Adding depreciation moves the wrong way. Depreciation is a loss of capital value, so it is deducted.",
+          "B": "The split between private and public investment is not what 'net' refers to. Both count towards gross investment.",
+          "D": "Total spending on capital goods is <strong>gross</strong> investment, before any allowance for wear and tear."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The accelerator effect describes the idea that",
+      "options": {
+        "A": "A change in investment leads to a larger change in national income.",
+        "B": "A rise in the rate of growth causes a larger percentage rise in investment.",
+        "C": "An initial injection leads to a larger final rise in national income.",
+        "D": "Higher interest rates lead to lower investment by firms."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The accelerator runs from <strong>growth to investment</strong>. When the economy grows faster, firms expect higher future demand and add capacity to meet it, and the percentage rise in investment is larger than the percentage rise in national income. It works in reverse too: slowing growth can cause a disproportionate collapse in investment.",
+        "distractors": {
+          "A": "This is the multiplier, described from the investment end. The multiplier runs from an injection to income; the accelerator runs from income growth to investment.",
+          "C": "This is the multiplier itself. The two effects are often taught together and reinforce one another, but they are not the same idea.",
+          "D": "This is a true statement about a determinant of investment, but it is not the accelerator, which is about the rate of growth."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "During a recession, government spending on welfare benefits rises without any new policy decision being taken. This is best described as",
+      "options": {
+        "A": "Automatic stabilisers.",
+        "B": "Contractionary fiscal policy.",
+        "C": "Discretionary fiscal policy.",
+        "D": "Supply-side policy."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Automatic stabilisers</strong> are the parts of the budget that respond to the economic cycle on their own. In a recession more people claim benefits and tax receipts fall, which supports aggregate demand at exactly the moment it is weakening — with no minister deciding anything.<br />The same mechanism cools a boom, as claims fall and tax revenue rises.",
+        "distractors": {
+          "B": "Contractionary policy reduces aggregate demand. This supports it.",
+          "C": "Discretionary policy means a deliberate decision to change spending or taxation. The stem rules that out explicitly.",
+          "D": "Supply-side policy aims to raise productive capacity and shift LRAS. Benefit payments in a downturn are a demand-side effect."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Sterling depreciates against other currencies. All other things being equal, the most likely effect is that",
+      "options": {
+        "A": "Exports become cheaper abroad and imports become dearer.",
+        "B": "Exports become dearer abroad and imports become cheaper.",
+        "C": "Both exports and imports become cheaper.",
+        "D": "Both exports and imports become dearer."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A depreciation means each pound buys less foreign currency, and each unit of foreign currency buys more pounds. So a UK good priced in pounds costs overseas buyers <strong>less</strong> in their own currency, while foreign goods cost UK buyers <strong>more</strong> in pounds.<br />Net exports would therefore be expected to improve — though by how much depends on the price elasticity of demand for exports and imports, and the balance can worsen in the short run before it improves.",
+        "distractors": {
+          "B": "This is an <em>appreciation</em>. A stronger pound makes exports dearer abroad and imports cheaper at home.",
+          "C": "The two must move in opposite directions. A currency cannot be worth both less and more at the same time.",
+          "D": "Same objection: an exchange rate change always makes one side cheaper and the other dearer."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how two households respond to an identical rise in disposable income.<br />Using Table 1, which conclusion follows?",
+      "table": {
+        "caption": "Table 1: Response to a rise in disposable income",
+        "head": [
+          "Household",
+          "Rise in disposable income",
+          "Rise in spending"
+        ],
+        "rows": [
+          [
+            "Lower-income",
+            "£500",
+            "£475"
+          ],
+          [
+            "Higher-income",
+            "£500",
+            "£300"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Both households have the same marginal propensity to consume.",
+        "B": "Redistribution towards the lower-income household raises consumption.",
+        "C": "The higher-income household has the larger marginal propensity to consume.",
+        "D": "The lower-income household saves a larger proportion of extra income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Work out each household's marginal propensity to consume.<br />Lower-income household: £475 ÷ £500 = <strong>0.95</strong>.<br />Higher-income household: £300 ÷ £500 = <strong>0.60</strong>.<br />The lower-income household spends far more of each extra pound. So moving £1 of income from the higher-income household to the lower-income one raises total spending by about 95p and cuts it by about 60p — a net rise of roughly 35p.<br />This is why a more equal distribution of income tends to raise consumption, and so aggregate demand.",
+        "distractors": {
+          "A": "0.95 and 0.60 are a long way apart. The whole point of the table is that they differ.",
+          "C": "The higher-income household has the <em>smaller</em> MPC, at 0.60. Higher-income households typically save a larger share of extra income.",
+          "D": "The lower-income household saves only 5p in the pound, against 40p for the higher-income household. This is the right idea applied to the wrong household."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-2-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A large rise in business investment affects the economy twice over. The two effects are that investment",
+      "options": {
+        "A": "Lowers AD in the short run and raises LRAS in the long run.",
+        "B": "Raises AD in the short run and lowers LRAS in the long run.",
+        "C": "Raises AD in the short run and raises LRAS in the long run.",
+        "D": "Raises LRAS in the short run and raises AD in the long run."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Investment is unusual because it appears on both sides of the model.<br />In the <strong>short run</strong> it is a component of aggregate demand — the I in C + I + G + (X − M) — so extra investment spending raises AD, output and employment straight away.<br />In the <strong>long run</strong> the capital goods bought are still there, adding to the capital stock and raising the economy's productive capacity, which shifts <strong>LRAS to the right</strong>.<br />That combination is why investment is treated as the route to non-inflationary growth: demand rises, but so does the capacity to meet it.",
+        "distractors": {
+          "A": "Investment is a component of AD, so more of it raises aggregate demand rather than lowering it.",
+          "B": "The AD half is right but the LRAS half is backwards. Adding to the capital stock raises productive potential.",
+          "D": "The two effects are the right way round in substance but the wrong way round in time. Building capacity takes time; the spending counts immediately."
+        }
+      }
+    }
+  ]
+}

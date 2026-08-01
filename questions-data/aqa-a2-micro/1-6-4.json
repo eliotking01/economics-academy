@@ -1,0 +1,191 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.6.4",
+  "slug": "1-6-4-wage-determination-imperfectly-competitive-labour-markets",
+  "title": "The Determination of Relative Wage Rates and Levels of Employment in Imperfectly Competitive Labour Markets",
+  "shortTitle": "Wages in Imperfect Labour Markets",
+  "pageTitle": "Monopsony Labour Market Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on imperfectly competitive labour markets for AQA A-Level Economics: monopsony, trade unions and bilateral monopoly.",
+  "intro": "Eight original multiple-choice questions on wage determination in imperfectly competitive labour markets, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on monopsony, trade unions and bilateral monopoly, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-6-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A monopsony in a labour market exists when there is",
+      "options": {
+        "A": "A single or dominant buyer of labour.",
+        "B": "A single or dominant seller of labour.",
+        "C": "A single firm selling the industry's output.",
+        "D": "Only one trade union representing all workers."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>monopsony</strong> is a market with one dominant <em>buyer</em>. In a labour market that means one main employer of a particular kind of worker — the NHS for UK-trained nurses, for example. Because workers have few alternative employers, the monopsonist has <strong>wage-setting power</strong> and can pay below the competitive rate.",
+        "distractors": {
+          "B": "A dominant <em>seller</em> of labour is a trade union with high union density, which is a different source of imperfect competition.",
+          "C": "A single seller of the industry's output is a monopoly in the <strong>product</strong> market. A firm can be one without being a monopsony employer.",
+          "D": "A single union is again a supply-side concentration. Monopsony is about the buying side."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Compared with a perfectly competitive labour market, a profit-maximising monopsonist will employ",
+      "options": {
+        "A": "Fewer workers at a higher wage.",
+        "B": "Fewer workers at a lower wage.",
+        "C": "More workers at a higher wage.",
+        "D": "More workers at a lower wage."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A monopsonist faces the whole upward-sloping market supply curve of labour, so hiring an extra worker means <strong>raising the wage for everyone</strong>. Its marginal cost of labour therefore lies <em>above</em> the supply curve. Profit maximisation at MCL = MRP gives a level of employment <strong>below</strong> the competitive one, and the wage is then read off the supply curve, which is <strong>below</strong> both MRP and the competitive wage.<br />So the monopsonist restricts employment and pays less — the labour market equivalent of a monopolist restricting output and charging more.",
+        "distractors": {
+          "A": "A higher wage would defeat the purpose. Monopsony power exists precisely to pay <em>below</em> the competitive rate.",
+          "C": "Both figures move the wrong way. Employment falls rather than rises under monopsony.",
+          "D": "The wage is correctly identified as lower, but employment falls too, because the monopsonist restricts hiring to keep the wage down."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a monopsony labour market, the marginal cost of labour lies above the supply curve of labour because",
+      "options": {
+        "A": "The higher wage must be paid to all workers, not just the new one.",
+        "B": "The firm must pay a recruitment fee for every worker it hires.",
+        "C": "Trade unions force the firm to raise wages as it expands.",
+        "D": "Workers become less productive as more of them are employed."
+      },
+      "answer": "A",
+      "model": {
+        "working": "To attract one more worker the monopsonist must offer a higher wage — and it has to pay that higher wage to <strong>every worker already employed</strong>. The true cost of the extra worker is therefore their own wage <em>plus</em> the rise given to everyone else, which puts <strong>MCL above the supply curve</strong>.<br />This is the exact mirror of marginal revenue lying below average revenue for a monopolist, and for the same reason: the price has to move for all units, not just the last one.",
+        "distractors": {
+          "B": "Recruitment costs exist but they are not what creates the gap. It would appear even if hiring were costless.",
+          "C": "Unions are a separate source of imperfect competition. Monopsony power exists whether or not a union is present.",
+          "D": "Falling productivity affects the <strong>MRP</strong> curve, which is the demand side. The gap between MCL and supply is a cost-side effect."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A trade union negotiates a wage above the competitive level in an otherwise competitive labour market. All other things being equal, the most likely consequence is",
+      "options": {
+        "A": "Higher wages and higher employment for its members.",
+        "B": "Higher wages but lower employment in that market.",
+        "C": "Lower wages and higher employment in that market.",
+        "D": "No change, because firms simply absorb the extra cost."
+      },
+      "answer": "B",
+      "model": {
+        "working": "In a competitive labour market, forcing the wage above equilibrium acts like a <strong>price floor</strong>. Firms move up their labour demand curve and hire <strong>fewer</strong> workers, while more people want jobs at the higher wage, so an excess supply of labour appears. Those still employed gain; some lose their jobs. How large that trade-off is depends on the <strong>wage elasticity of labour demand</strong>.",
+        "distractors": {
+          "A": "Employment cannot rise along an unchanged demand curve when the wage goes up.",
+          "C": "This reverses the union's objective. Unions bargain for higher pay, not lower.",
+          "D": "Firms respond to higher labour costs by employing fewer workers, substituting capital, or both. Absorbing the cost entirely would mean a permanently lower profit for no reason."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A trade union negotiates a higher wage with a monopsony employer. Compared with the monopsony outcome, it is possible for this to result in",
+      "options": {
+        "A": "A higher wage and higher employment at the same time.",
+        "B": "A higher wage and lower employment, as in a competitive market.",
+        "C": "A lower wage and higher employment.",
+        "D": "No change in either the wage or employment."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is the striking result of the monopsony model. Because the monopsonist was <em>restricting</em> employment to hold the wage down, a union-imposed wage removes its incentive to do so: the firm now faces a flat cost of labour at the negotiated wage, so its marginal cost of labour no longer rises with hiring. Employment can therefore rise <strong>and</strong> the wage can rise, both moving towards the competitive outcome.<br />The same logic explains why a minimum wage need not cost jobs in a monopsonistic labour market — the standard evaluation point in this topic.",
+        "distractors": {
+          "B": "That is the outcome in a <em>competitive</em> labour market, where the wage was already at equilibrium and there was no restriction to remove.",
+          "C": "Unions bargain for higher pay, so a lower wage is not the intended or likely result.",
+          "D": "Union bargaining changes the firm's cost of labour, so it cannot leave the outcome untouched."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A labour market in which a single dominant employer bargains with a single strong trade union is described as",
+      "options": {
+        "A": "A bilateral monopoly.",
+        "B": "A competitive labour market.",
+        "C": "A contestable labour market.",
+        "D": "A natural monopoly."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Bilateral monopoly</strong> is monopsony power on the buying side facing monopoly power on the selling side. Neither party can simply impose its preferred wage, so the outcome is settled by <strong>relative bargaining strength</strong> and lies somewhere between the low wage the employer would like and the high wage the union would like.",
+        "distractors": {
+          "B": "A competitive labour market has many buyers and many sellers, and both sides are wage takers.",
+          "C": "Contestability concerns ease of entry and exit. It is a product-market idea and does not describe this bargaining structure.",
+          "D": "A natural monopoly is a product-market situation where one firm can supply the whole market at lowest average cost."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is not a cause of imperfect competition in a labour market?",
+      "options": {
+        "A": "Imperfect information about wages and vacancies.",
+        "B": "Many small firms competing to hire the same workers.",
+        "C": "Monopsony power held by a dominant employer.",
+        "D": "Trade unions bargaining collectively for their members."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Many small firms competing for the same workers is what makes a labour market <strong>competitive</strong>: no employer is large enough to set the wage, so all are wage takers. The three genuine causes of imperfection are <strong>monopsony power</strong>, <strong>trade unions</strong>, and <strong>imperfect information</strong>.",
+        "distractors": {
+          "A": "Workers who do not know what other employers pay cannot move to the best offer, which weakens competitive pressure on wages.",
+          "C": "A dominant buyer of labour can set the wage rather than accept it, which is the clearest departure from perfect competition.",
+          "D": "Collective bargaining concentrates the selling side of the market, giving workers power they would not have individually."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-6-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a monopsony labour market, workers are typically paid",
+      "options": {
+        "A": "Exactly their marginal revenue product.",
+        "B": "Less than their marginal revenue product.",
+        "C": "More than their marginal revenue product.",
+        "D": "More than the marginal cost of labour."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The monopsonist hires where <strong>MCL = MRP</strong>, then pays the wage that the <em>supply curve</em> shows is needed to attract that many workers. Since MCL lies above the supply curve, the wage sits <strong>below MRP</strong>. The gap between what a worker adds to revenue and what they are paid is the monopsonist's gain from its buying power, and it is the main equity objection to monopsony.",
+        "distractors": {
+          "A": "Payment equal to MRP is the <em>competitive</em> outcome, which is precisely what monopsony power departs from.",
+          "C": "Being paid above MRP would mean the employer losing money on each worker. That can happen where a strong union bargains successfully, but not from monopsony power itself.",
+          "D": "At the chosen level of employment the marginal cost of labour <em>equals</em> MRP and exceeds the wage, so the wage is below MCL rather than above it."
+        }
+      }
+    }
+  ]
+}

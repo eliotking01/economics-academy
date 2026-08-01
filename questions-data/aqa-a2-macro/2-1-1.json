@@ -1,0 +1,199 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.1.1",
+  "slug": "2-1-1-the-objectives-of-government-economic-policy",
+  "title": "The Objectives of Government Economic Policy",
+  "shortTitle": "Objectives of Government Policy",
+  "pageTitle": "Government Policy Objectives Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on government policy objectives for AQA A-Level Economics: growth, inflation, unemployment, the budget and policy conflicts.",
+  "intro": "Seven original multiple-choice questions on the objectives of government economic policy, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the objectives of government economic policy and the conflicts between them, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-1-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Progress towards the objective of greater income equality is most commonly measured by",
+      "options": {
+        "A": "The Consumer Prices Index.",
+        "B": "The current account balance.",
+        "C": "The Gini coefficient.",
+        "D": "The unemployment rate."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>Gini coefficient</strong> is the standard summary measure of income inequality, so it is the natural yardstick for an equality objective. A lower Gini means income is more evenly distributed; a higher one means it is more concentrated.",
+        "distractors": {
+          "A": "The CPI measures the average change in consumer prices. It tracks the inflation objective, and says nothing about how income is shared out.",
+          "B": "The current account balance records trade and income flows with the rest of the world. It belongs to the balance of payments objective.",
+          "D": "The unemployment rate is a labour market measure. High unemployment tends to worsen inequality, but the rate itself measures joblessness, not the distribution of income."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy grows rapidly and output moves close to full capacity. All other things being equal, the objective most likely to be put at risk is",
+      "options": {
+        "A": "A balanced government budget.",
+        "B": "Greater income equality.",
+        "C": "Low and stable inflation.",
+        "D": "Low unemployment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Near full capacity, extra demand cannot easily be met by extra output, so it pushes up prices instead. That is <strong>demand-pull inflation</strong>, and it is the classic short-run conflict: rapid growth and the 2% inflation target pull against each other.",
+        "distractors": {
+          "A": "Rapid growth usually <em>helps</em> the budget. Rising incomes and profits raise tax revenue while spending on unemployment benefits falls, so the deficit tends to narrow.",
+          "B": "Growth has no automatic effect in either direction here. Whether inequality widens or narrows depends on who gains from the growth, which the stem does not tell you.",
+          "D": "Rapid growth raises the demand for labour, so unemployment would be expected to fall. This objective is being helped, not put at risk."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts income tax to reduce unemployment. Households spend much of the extra income on imported goods. The objective most likely to be worsened is",
+      "options": {
+        "A": "Current account equilibrium.",
+        "B": "Environmental protection.",
+        "C": "Greater income equality.",
+        "D": "Low unemployment."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Imports are a debit on the <strong>current account</strong>. If the extra spending goes disproportionately abroad, imports rise faster than exports and the current account moves further into deficit. This is the standard conflict between demand management aimed at jobs and the external balance.",
+        "distractors": {
+          "B": "Nothing in the stem points at pollution or resource use. The extra spending is on imported goods, which is an external-balance effect, not an environmental one.",
+          "C": "An income tax cut may change the distribution of income, but the direction depends entirely on which rates were cut, which the stem does not say.",
+          "D": "Reducing unemployment is the policy's purpose, and higher spending raises the demand for labour. This objective is the one being helped."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government runs a large budget deficit for several years in succession. All other things being equal, the most likely consequence is",
+      "options": {
+        "A": "A current account surplus in the long run.",
+        "B": "An immediate fall in the economy's productive capacity.",
+        "C": "Falling income inequality across households.",
+        "D": "Rising debt-servicing costs and less policy flexibility."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Persistent deficits are financed by borrowing, so the stock of <strong>national debt</strong> rises. A larger debt means more interest to pay each year, and interest payments are money that cannot be spent on anything else — which is exactly what is meant by reduced future policy flexibility.",
+        "distractors": {
+          "A": "There is no mechanism taking a budget deficit to a current account surplus. If anything the causation runs the other way: a deficit financed by higher domestic demand tends to pull in imports.",
+          "B": "Productive capacity is determined by the quantity and quality of factors of production. Borrowing does not shrink them, and certainly not immediately.",
+          "C": "This confuses the size of the deficit with what the money is spent on. A deficit says nothing on its own about how the spending is distributed."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The objective of greater income equality is usually stated as reducing inequality to socially acceptable levels rather than eliminating it altogether. The main economic reason is that complete equality would",
+      "options": {
+        "A": "Breach the country's international trade obligations.",
+        "B": "Make the tax system impossible to administer.",
+        "C": "Raise the rate of inflation permanently.",
+        "D": "Weaken the incentive to work, train and take risks."
+      },
+      "answer": "D",
+      "model": {
+        "working": "If every household ended up with the same income whatever it did, the reward for extra effort, extra training or starting a business would disappear. Those rewards are the market's <strong>incentives</strong>, and removing them would be expected to reduce effort and enterprise — which is why the objective is framed as reducing inequality, not abolishing it.",
+        "distractors": {
+          "A": "No trade agreement dictates a country's internal distribution of income. This confuses domestic policy with external obligations.",
+          "B": "Administrative difficulty is a practical objection, not the economic one. The economic argument is about incentives and what they do to output.",
+          "C": "Redistribution changes who holds spending power, not the total. There is no automatic route from equality to a permanently higher inflation rate."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows one economy's macroeconomic objectives, the target set for each, and the latest outturn.<br />Using Table 1, the only objective the economy is currently meeting is",
+      "table": {
+        "caption": "Table 1: Policy targets and latest outturn",
+        "head": [
+          "Objective",
+          "Target",
+          "Latest outturn"
+        ],
+        "rows": [
+          [
+            "Economic growth",
+            "2–3% a year",
+            "2.4%"
+          ],
+          [
+            "Inflation (CPI)",
+            "2%",
+            "5.6%"
+          ],
+          [
+            "Unemployment",
+            "4–5%",
+            "6.2%"
+          ],
+          [
+            "Current account",
+            "Small deficit or surplus",
+            "Deficit of 6% of GDP"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Current account equilibrium.",
+        "B": "Economic growth.",
+        "C": "Low and stable inflation.",
+        "D": "Low unemployment."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Take the rows one at a time. Economic growth of <strong>2.4%</strong> sits inside the 2–3% target range, so that objective is met. Inflation of 5.6% is well above the 2% target; unemployment of 6.2% is above the 4–5% range; and a current account deficit of 6% of GDP is far larger than the small deficit or surplus the target allows. Only growth is on target.",
+        "distractors": {
+          "A": "A deficit of <strong>6% of GDP</strong> is not a small deficit. This objective is the one being missed by the widest margin.",
+          "C": "Inflation of <strong>5.6%</strong> is nearly three times the 2% target. Reading this as met usually comes from checking only that inflation is positive.",
+          "D": "Unemployment of <strong>6.2%</strong> is above the 4–5% target range, not inside it. Being close to a range is not the same as being in it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-1-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government tightens policy to bring inflation back down to its target. All other things being equal, the most likely short-run effect on its other objectives is that",
+      "options": {
+        "A": "Unemployment falls and the current account deficit narrows.",
+        "B": "Unemployment falls and the current account deficit widens.",
+        "C": "Unemployment rises and the current account deficit narrows.",
+        "D": "Unemployment rises and the current account deficit widens."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Follow the two chains from the same starting point. Tighter policy reduces aggregate demand. Firms facing weaker demand hire fewer workers, so <strong>unemployment rises</strong> — the short-run conflict between low inflation and low unemployment. Weaker demand also means households buy fewer imports, so the <strong>current account deficit narrows</strong>. One objective is worsened and one is helped, which is why these conflicts are judged over the cycle rather than year by year.",
+        "distractors": {
+          "A": "The unemployment half is the wrong way round. Reducing demand to slow inflation is precisely what raises unemployment in the short run.",
+          "B": "Both halves are wrong. This describes a loosening of policy, not a tightening.",
+          "D": "The current account half is the wrong way round. Lower domestic demand means fewer imports, which narrows the deficit rather than widening it."
+        }
+      }
+    }
+  ]
+}

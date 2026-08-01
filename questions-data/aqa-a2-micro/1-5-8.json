@@ -1,0 +1,147 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-micro",
+  "boardName": "AQA Microeconomics",
+  "spec": "1.5.8",
+  "slug": "1-5-8-the-dynamics-of-competition-and-competitive-market-processes",
+  "title": "The Dynamics of Competition and Competitive Market Processes",
+  "shortTitle": "The Dynamics of Competition",
+  "pageTitle": "Creative Destruction Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the dynamics of competition for AQA A-Level Economics: the benefits of competition and creative destruction.",
+  "intro": "Six original multiple-choice questions on the dynamics of competition and creative destruction, written to the style and difficulty of AQA Paper 3 Section A. Every question carries a full worked model answer.",
+  "notesTeaser": "Six original multiple-choice questions on the short-run and long-run benefits of competition and on creative destruction, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-1-5-8-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Creative destruction is best described as the process by which",
+      "options": {
+        "A": "Firms deliberately destroy stock in order to keep prices high.",
+        "B": "Governments break up firms that have grown too large.",
+        "C": "New innovations replace older products, firms and industries.",
+        "D": "Recessions force inefficient firms out of the market."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Creative destruction</strong> is the idea that competition drives firms to innovate, and that successful innovations displace what came before. The creation of the new <em>is</em> the destruction of the old: digital streaming displaced physical media, which had itself displaced earlier formats. It is disruptive for the firms and workers involved, but it is the mechanism by which competitive markets raise living standards over time.",
+        "distractors": {
+          "A": "Destroying stock to support a price is a restrictive practice. Creative destruction is about innovation displacing older technology, not about withholding supply.",
+          "B": "Breaking up dominant firms is competition policy, carried out by a regulator. Creative destruction happens through the market itself.",
+          "D": "Recessions do force weaker firms out, but that is a cyclical effect. Creative destruction operates through <strong>innovation</strong> and happens in booms as well as slumps."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-8-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A new streaming technology causes a chain of video rental shops to close. This is best described as",
+      "options": {
+        "A": "An example of creative destruction.",
+        "B": "An example of predatory pricing.",
+        "C": "Government failure in the media market.",
+        "D": "The result of a cartel among streaming firms."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A new technology has delivered what consumers want more cheaply and conveniently, and in doing so has made an entire existing business model obsolete. That combination of <strong>innovation creating</strong> and <strong>incumbents being destroyed</strong> is exactly what the term describes. Consumers gain; the workers and owners of the displaced firms bear a real cost, often as structural unemployment.",
+        "distractors": {
+          "B": "Predatory pricing means deliberately pricing below cost to force a rival out. The rental shops closed because a better product appeared, not because of a pricing attack.",
+          "C": "Government failure means intervention making an outcome worse. No intervention is described here.",
+          "D": "A cartel is a secret agreement between rivals to fix prices. Nothing suggests coordination; the shops were displaced by superior technology."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-8-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Which one of the following is best described as a long-run rather than a short-run benefit of competition?",
+      "options": {
+        "A": "An immediate cut in prices as firms compete for customers.",
+        "B": "A wider variety of products becoming available to consumers.",
+        "C": "Firms advertising more heavily to attract new buyers.",
+        "D": "Sustained quality improvements as firms invest in R&amp;D."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>short-run</strong> benefits of competition are immediate: lower prices as firms undercut each other, more choice, and more non-price competition. The <strong>long-run</strong> benefits come from what competition makes firms <em>do</em> over time — invest in research and development, raise quality, and drive costs down permanently, which sustains lower prices rather than merely delivering them once.",
+        "distractors": {
+          "A": "An immediate price cut is the standard short-run benefit. Its long-run counterpart is <em>sustained</em> lower prices, achieved through greater efficiency.",
+          "B": "Wider choice appears quickly as firms differentiate to attract customers, so it is a short-run benefit.",
+          "C": "Advertising is a form of non-price competition and takes effect straight away. It also raises costs, so it is not an unambiguous benefit at all."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-8-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two firms in an industry compete by improving product quality and after-sales service rather than by cutting prices. This is best described as",
+      "options": {
+        "A": "Allocative efficiency.",
+        "B": "Collusion.",
+        "C": "Creative destruction.",
+        "D": "Non-price competition."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Non-price competition</strong> is rivalry conducted through any means other than the price: quality, service, branding, advertising, product design, opening hours. It is a genuine benefit of competition for consumers, and firms often prefer it to price cutting because an improvement in quality or reputation is much harder for a rival to copy overnight than a price reduction.",
+        "distractors": {
+          "A": "Allocative efficiency is a condition about resource allocation, where price equals marginal cost. It describes an outcome rather than a form of competitive behaviour.",
+          "B": "Collusion means firms agreeing to <em>avoid</em> competing. These firms are competing hard, just not on price.",
+          "C": "Creative destruction requires innovation to displace existing products or firms. Improving service is competition within the existing market rather than the replacement of it."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-8-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "All other things being equal, an increase in competition in an industry is most likely to reduce",
+      "options": {
+        "A": "The range of products available to consumers.",
+        "B": "The rate at which firms innovate.",
+        "C": "X-inefficiency among existing firms.",
+        "D": "The total quantity of output produced."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>X-inefficiency</strong> is the organisational slack that builds up when a firm faces no serious threat: costs drift upwards because nobody has to hold them down. Competition removes that comfort. A firm that lets its costs rise while rivals control theirs will be undercut and lose customers, so competition disciplines cost control and pushes average cost back down.",
+        "distractors": {
+          "A": "Competition normally <em>widens</em> the range available, as firms differentiate their products to attract customers.",
+          "B": "Competition is one of the main spurs to innovation, since a firm that fails to improve is overtaken. The counter-argument is that supernormal profit funds research — but more competition does not straightforwardly reduce the rate of innovation.",
+          "D": "More competition typically means lower prices and a <em>larger</em> quantity traded, not a smaller one."
+        }
+      }
+    },
+    {
+      "id": "aqa-1-5-8-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government is considering whether to protect an established industry from a disruptive new technology. The strongest economic argument against doing so is that protection would",
+      "options": {
+        "A": "Be impossible to enforce, because technology cannot be restricted.",
+        "B": "Guarantee that the established firms would fail in any case.",
+        "C": "Increase competition and so reduce the profits of the new entrants.",
+        "D": "Preserve inefficient production and deny consumers the gains."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Creative destruction is painful for the firms and workers displaced, and that cost is real — structural unemployment can persist for years in an affected region. But blocking it means keeping resources tied up in <strong>less efficient</strong> production and denying consumers the lower prices and better products the new technology offers. The economically stronger response is usually to help the people affected to adjust — retraining, relocation support — rather than to protect the old industry itself.",
+        "distractors": {
+          "A": "Protection is often perfectly enforceable through tariffs, licensing or regulation. The argument against it is that it is <em>undesirable</em>, not that it is impractical.",
+          "B": "Protection may well keep the established firms alive for a long time. That is precisely the problem — it sustains them at consumers' expense.",
+          "C": "Protecting incumbents <em>reduces</em> competition rather than increasing it, and the concern is the loss to consumers rather than the profits of new entrants."
+        }
+      }
+    }
+  ]
+}

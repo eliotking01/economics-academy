@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.2.4",
+  "slug": "2-2-4-government-expenditure",
+  "title": "Government Expenditure",
+  "shortTitle": "Government Expenditure",
+  "pageTitle": "Government Expenditure and Automatic Stabilisers Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on government expenditure for Edexcel A-Level Economics: automatic stabilisers, discretionary policy and effects on AD.",
+  "intro": "Six original multiple-choice questions on government expenditure, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on government spending as a component of AD, automatic stabilisers against discretionary policy, and the effect on LRAS.",
+  "questions": [
+    {
+      "id": "edexcel-2-2-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In a recession, welfare spending rises and tax receipts fall without any minister deciding anything. The government then also announces a new road-building programme. The second of these is",
+      "options": {
+        "A": "An automatic stabiliser.",
+        "B": "Contractionary fiscal policy.",
+        "C": "Discretionary fiscal policy.",
+        "D": "A supply-side policy only."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The stem deliberately puts the two side by side. The first half is an <strong>automatic stabiliser</strong>: spending and receipts move with the cycle on their own, with nobody choosing it.<br />The road programme is the opposite. Someone decided to do it, so it is <strong>discretionary fiscal policy</strong> — a deliberate change in spending made to pursue a policy aim.<br />The practical difference is timing. Stabilisers act immediately; discretionary measures need a decision, legislation and time to build, by which point the recession may be over.",
+        "distractors": {
+          "A": "Automatic stabilisers require no decision. The road programme was announced, which is what makes it discretionary.",
+          "B": "The programme raises spending, so it is expansionary. Contractionary policy would cut spending or raise taxes.",
+          "D": "Roads do raise productive potential, so there is a supply-side element. But the spending raises aggregate demand immediately too, so calling it supply-side <em>only</em> misses half of what it does."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy enters a strong boom. With no change in policy at all, the government's budget position will tend to",
+      "options": {
+        "A": "Improve, as receipts rise and welfare spending falls.",
+        "B": "Improve, as ministers cut spending deliberately.",
+        "C": "Worsen, as receipts fall and welfare spending rises.",
+        "D": "Worsen, as the government must raise its borrowing."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In a boom more people are working and earning, so income tax and National Insurance receipts rise, and VAT receipts rise with spending. At the same time fewer people claim unemployment-related benefits, so welfare spending falls.<br />Both movements improve the budget, and neither needed a decision. That is the <strong>automatic fiscal contraction</strong> side of the stabilisers: by taking money out of a fast-growing economy, they cool it without anyone having to act.",
+        "distractors": {
+          "B": "The improvement here is automatic. The stem specifies that policy has not changed.",
+          "C": "This describes a <em>recession</em>, when receipts fall and welfare claims rise. A boom does the reverse.",
+          "D": "Borrowing falls in a boom, because the gap between spending and receipts narrows."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government increases spending on new hospitals by £8bn in an economy with substantial spare capacity. The most likely effect is",
+      "options": {
+        "A": "No change in either real GDP or the price level.",
+        "B": "No change in real GDP and a higher price level.",
+        "C": "Higher real GDP and a sharply higher price level.",
+        "D": "Higher real GDP with little price level effect."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Government spending is a direct component of aggregate demand, so £8bn of hospital building shifts AD to the right.<br />What happens next depends entirely on <strong>spare capacity</strong>. With unemployed workers and idle equipment available, firms meet the extra demand by producing more rather than by raising prices. Real GDP rises and the price level barely moves.<br />The same £8bn in an economy at full capacity would do the opposite, which is why the state of the economy matters as much as the size of the injection.",
+        "distractors": {
+          "A": "Aggregate demand has risen, so something must change. AD is a component of the model, not a bystander.",
+          "B": "Prices rise instead of output only when there is no spare capacity to draw on. The stem says there is substantial spare capacity.",
+          "C": "A sharply higher price level is the full-capacity outcome. With slack in the economy the pressure on prices is mild."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Government spending on transport infrastructure raises aggregate demand in the short run. Its distinctive long-run effect is that it",
+      "options": {
+        "A": "Increases welfare payments automatically.",
+        "B": "Raises the economy's productive potential.",
+        "C": "Reduces the government's budget deficit.",
+        "D": "Reduces the marginal propensity to consume."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Roads, railways and ports are <strong>capital</strong>. Once built, they lower transport costs and raise productivity across every industry that uses them.<br />That shifts <strong>long-run aggregate supply</strong> to the right — the economy can produce more than before. Combined with the short-run boost to AD, it is why infrastructure spending is treated as both a demand-side and a supply-side measure, and why it is the form of government spending most often defended on growth grounds.",
+        "distractors": {
+          "A": "Welfare payments move with the economic cycle as automatic stabilisers. They have nothing to do with building a railway.",
+          "C": "The spending <em>adds</em> to the deficit in the short run. Any improvement comes much later, and only if the growth it generates raises tax receipts by more than the cost.",
+          "D": "Nothing here changes how households divide extra income between spending and saving."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-4-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four pressures on a government's spending plans.<br />Using Table 1, the pressure that raises spending automatically rather than by decision is",
+      "table": {
+        "caption": "Table 1: Four pressures on spending plans",
+        "head": [
+          "",
+          "Pressure"
+        ],
+        "rows": [
+          [
+            "Pressure 1",
+            "The share of the population aged over 70 is rising"
+          ],
+          [
+            "Pressure 2",
+            "A manifesto promised more police officers"
+          ],
+          [
+            "Pressure 3",
+            "Unemployment rises as the economy slows"
+          ],
+          [
+            "Pressure 4",
+            "Ministers decide to expand apprenticeship funding"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Pressure 1.",
+        "B": "Pressure 2.",
+        "C": "Pressure 3.",
+        "D": "Pressure 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The test is whether anyone has to <em>decide</em> anything. Rising unemployment raises welfare spending through the existing benefit system: more people qualify, so more is paid out, with no new policy at all.<br />That is an <strong>automatic stabiliser</strong> in operation, and it supports aggregate demand at exactly the moment the economy is weakening. The other three all require a choice, whatever pressure lies behind them.",
+        "distractors": {
+          "A": "An ageing population does raise pension and healthcare spending, but the level of pensions and the shape of the health service are still set by decisions.",
+          "B": "A manifesto promise is a political choice about priorities, however firmly it has been made.",
+          "D": "Expanding apprenticeship funding is a deliberate decision, and a discretionary supply-side one at that."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government raises its spending sharply while the economy is already operating at full capacity. The most likely result is",
+      "options": {
+        "A": "Higher prices with little extra real output.",
+        "B": "Higher real output with a stable price level.",
+        "C": "Lower prices alongside higher real output.",
+        "D": "No effect on either prices or real output."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Aggregate demand shifts right, but at full capacity there is nothing left to draw on — no idle workers, no spare machinery. Firms cannot produce more, so the extra demand competes for output that already exists.<br />The result is <strong>inflationary pressure</strong> rather than growth. This is the mirror image of the spare-capacity case, and it is the standard argument against fiscal expansion late in a boom: the same policy that raises output in a slump raises only prices at the peak.",
+        "distractors": {
+          "B": "Higher output with stable prices is what happens when there <em>is</em> spare capacity. At full capacity the output cannot be produced.",
+          "C": "Rising aggregate demand pushes the price level up, not down, and the output constraint is binding either way.",
+          "D": "Government spending is a component of AD, so raising it must have an effect. At full capacity that effect lands almost entirely on prices."
+        }
+      }
+    }
+  ]
+}
