@@ -1,0 +1,125 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.3",
+  "slug": "4-1-3-pattern-of-trade",
+  "title": "Pattern of Trade",
+  "shortTitle": "Pattern of Trade",
+  "pageTitle": "Pattern of Trade Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on the pattern of trade for Edexcel A-Level Economics: what changes it, emerging economies and deindustrialisation.",
+  "intro": "Five original multiple-choice questions on the pattern of trade, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on what the pattern of trade means and the four factors that shift it over time.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In international economics, the pattern of trade means",
+      "options": {
+        "A": "The balance between a country's exports and imports.",
+        "B": "The rate at which a country's trade is growing.",
+        "C": "The ratio of export prices to import prices.",
+        "D": "What a country trades, and with whom."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>pattern of trade</strong> is about the composition and direction of a country's trade: which goods and services it exports and imports, and which countries sit on the other side of each transaction. It is a description of structure rather than of size or balance, and it shifts slowly as comparative advantage moves, as new economies emerge and as trade agreements are made or unwound.",
+        "distractors": {
+          "A": "That is the trade balance, which is part of the current account of the balance of payments.",
+          "B": "The growth rate of trade measures volume over time, not what is traded or with whom.",
+          "C": "That is the terms of trade, a ratio of two price indices."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over four decades a developed country's exports shift away from manufactured goods towards financial and professional services, while it imports more manufactures. The most likely underlying cause is that",
+      "options": {
+        "A": "Its comparative advantage has moved.",
+        "B": "Its currency has appreciated permanently.",
+        "C": "Its trading partners have raised tariffs.",
+        "D": "The WTO has required the change."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The pattern of trade follows comparative advantage, and comparative advantage is not fixed. As other countries' manufacturing productivity rose while their labour stayed cheaper, this country's opportunity cost of producing manufactures rose relative to theirs — and its accumulated skills, institutions and reputation gave it an advantage in services instead. Edexcel gives exactly this as the leading factor changing a pattern of trade, with UK manufacturing as its example.",
+        "distractors": {
+          "B": "An appreciation would make <em>all</em> exports less competitive rather than shifting the composition between sectors, and it would be unlikely to persist for four decades.",
+          "C": "Tariffs raised against this country would reduce its exports generally, not redirect them into services.",
+          "D": "The WTO negotiates the reduction of trade barriers. It does not direct what any member produces."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "China and India now account for a far larger share of world exports and imports than they did thirty years ago. For established exporters of manufactured goods, the most likely consequence is",
+      "options": {
+        "A": "A larger share of the world market.",
+        "B": "Greater competition in export markets.",
+        "C": "Higher prices for the goods they sell.",
+        "D": "Less need to specialise than before."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The rise of <strong>emerging economies</strong> is one of the factors Edexcel gives for a changing pattern of trade. When very large economies with lower costs enter world manufacturing, they take share from established producers and push prices down. That is a benefit to consumers everywhere and a sustained pressure on incumbent exporters — which is why it shows up as deindustrialisation in parts of the developed world.",
+        "distractors": {
+          "A": "A larger share for the emerging economies necessarily means a smaller share for everybody else.",
+          "C": "More supply at lower cost pushes prices down, not up.",
+          "D": "Sharper competition strengthens the case for specialising where the advantage genuinely lies, rather than weakening it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country leaves the trading bloc it has belonged to for decades. Tariffs now apply to its trade with former partners, but not to several new bilateral agreements signed elsewhere. The most likely effect on its pattern of trade is",
+      "options": {
+        "A": "A shift away from bloc members towards others.",
+        "B": "An equal reduction in all of its trade.",
+        "C": "No change, since comparative advantage is fixed.",
+        "D": "The end of all trade with former partners."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The pattern of trade responds to the relative cost of trading with different partners, and a tariff raises that cost. Once trade with former bloc members carries a duty that trade with the new partners does not, buyers and sellers on both sides substitute towards the cheaper route. Edexcel lists <strong>trade blocs and bilateral agreements</strong> among the factors changing the pattern of trade, and gives precisely this as the example.",
+        "distractors": {
+          "B": "Trade with the new partners becomes relatively cheaper, so it rises rather than falling.",
+          "C": "Comparative advantage is not fixed — and in any case the tariff changes the terms on which it is exploited.",
+          "D": "A tariff makes trade dearer, not impossible. Much of it continues at a higher price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's currency depreciates substantially and stays low for several years. For its pattern of trade, the most likely effect is that exports",
+      "options": {
+        "A": "And imports both fall in volume.",
+        "B": "Fall while imports rise.",
+        "C": "Rise while imports fall.",
+        "D": "Rise, with imports unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A depreciation makes a country's goods cheaper when priced in foreign currency, and foreign goods dearer when priced in domestic currency. Export volumes rise and import volumes fall. If the currency stays low for years the shift becomes structural rather than temporary, because firms build capacity aimed at export markets. Edexcel lists <strong>relative exchange rates</strong> among the factors influencing the pattern of trade for this reason.",
+        "distractors": {
+          "A": "A depreciation moves exports and imports in opposite directions, not in the same one.",
+          "B": "This is what an <em>appreciation</em> would do — dearer exports and cheaper imports.",
+          "D": "Imports become dearer in domestic currency, so their volume falls. They do not stay where they were."
+        }
+      }
+    }
+  ]
+}

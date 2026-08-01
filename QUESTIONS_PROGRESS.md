@@ -5,9 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 145 topics, 1,122 questions. AQA is complete, and Edexcel Themes 1, 2
-and 3 are all complete. 21 topics remain — the whole of Theme 4, and nothing
-else.**
+**Live: 150 topics, 1,154 questions. AQA is complete, Edexcel Themes 1, 2 and 3
+are complete, and Theme 4 unit 4.1 is half done. 16 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -383,37 +382,55 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel Theme 4 — 21 topics, 163 questions. All that is left.
+### Edexcel Theme 4 — 16 topics, 131 questions. All that is left.
 
-AQA is finished and Edexcel Themes 1, 2 and 3 are complete.
+AQA is finished, Themes 1 to 3 are complete, and Theme 4 unit 4.1 is half done.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
-| Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 0 — **complete**, 20 topics and 148 questions | — |
-| Theme 4 | 21 | 163 |
+| Themes 1–3 | 0 — **all complete**, 66 topics and 509 questions | — |
+| Theme 4 | 16 | 131 |
 
-**Theme 4 is the last block, and it is the largest single one remaining.** Check
-the directory for the real topic list before planning — do not work from memory
-of the specification.
+**The agreed split for Theme 4**, with batch 26 done:
 
-**Its twins are almost entirely AQA macro 2.6** — globalisation (7), trade (9),
-the balance of payments (9), exchange rate systems (10) and growth and
-development (8): **43 questions**, plus parts of 2.5 on fiscal and supply-side
-policy. Several Edexcel Theme 2 sets also bear on it, particularly 2.1.4 on the
-balance of payments and 2.2.5 on net trade, both of which are mine.
+```
+batch 26 ✓  4.1.1 globalisation  4.1.2 specialisation & trade  4.1.3 pattern of trade
+            4.1.4 terms of trade  4.1.5 trading blocs & the WTO          (32 questions)
+batch 27    4.1.6 restrictions on free trade  4.1.7 balance of payments
+            4.1.8 exchange rates  4.1.9 international competitiveness
+batch 28    4.2.1 absolute & relative poverty  4.2.2 inequality
+            4.3.1 measures of development  4.3.2 factors influencing growth
+            4.3.3 strategies influencing growth
+batch 29    4.4.1 role of financial markets  4.4.2 market failure in the financial sector
+            4.4.3 role of central banks
+batch 30    4.5.1 public expenditure  4.5.2 taxation  4.5.3 public sector finances
+            4.5.4 macroeconomic policies in a global context
+```
 
-**Plan the split before starting.** On the pattern of Themes 2 and 3, expect four
-or five batches of four to five topics each. The three rules that have held
-throughout:
+**Twins, batch by batch:**
+
+- **Batch 27** — AQA 2.6.2 (trade, for tariffs and protectionism), 2.6.3 (balance
+  of payments, 9) and 2.6.4 (exchange rate systems, 10). **Also my own Edexcel
+  2.1.4 (balance of payments, 8) and 2.2.5 (net trade, 9)**, which between them
+  already cover the current account components, the J-curve, Marshall-Lerner,
+  and a depreciation's effect on the trade balance. This is the tightest of the
+  four remaining batches — check both boards before writing 4.1.7 and 4.1.8.
+- **Batch 28** — AQA 1.7.1, 1.7.2 and 1.7.3 (22 questions on income distribution,
+  poverty and policy) for unit 4.2, and AQA 2.6.5 (growth and development, 8) for
+  unit 4.3. Note AQA 2.6.5 includes the Harrod-Domar model.
+- **Batch 29** — AQA 2.4.1 to 2.4.4 (30 questions on financial markets, banks,
+  central banks and regulation). Expect heavy occupation, particularly on 4.4.3.
+- **Batch 30** — AQA 2.5.1 (fiscal policy, 9) and 2.5.2 (supply-side, 8), both
+  already drawn on for Edexcel 2.6. Also my own Edexcel 2.6.2 and 2.6.3.
+
+The three rules that have held throughout:
 
 1. **Print the AQA twin immediately before writing each Edexcel set**, not all at
    once at the start of a multi-topic batch.
 2. **Concept-grep the bank for the four or five ideas each set will turn on**
    before drafting (Recurring problems §9). It has decided the shape of every
    batch since 21 and found collisions the shingle cannot.
-3. **Vary the table stem and caption wording per set.** Six phrasings are now in
+3. **Vary the table stem and caption wording per set.** Seven phrasings are now in
    circulation and the check surfaces whichever gets reused.
 
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
@@ -1050,6 +1067,77 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 26 — Edexcel Theme 4, units 4.1.1 to 4.1.5 (2026-08-01)
+
+5 topics, 32 questions. **The first Theme 4 batch** — globalisation,
+specialisation and trade, the pattern of trade, the terms of trade, and trading
+blocs and the WTO.
+
+All 32 re-derived from the stem alone with **0 mismatches**; all three
+calculations recomputed with every distractor value.
+
+**Originality came back clean on all three fronts at the first attempt** — zero
+shared 8-word runs against both past-paper corpora, zero against the
+1,122-question bank, and no numeric option-set flag. Only batch 25 has managed
+that before, and this batch is more than twice its size.
+
+**The concept-grep found two topics that are effectively virgin ground**, which is
+why the batch is 32 rather than the ~20 the AQA overlap would have suggested:
+
+| Concept | Hits before this batch |
+| --- | --- |
+| terms of trade | 0 (one false positive, an unrelated micro distractor) |
+| pattern of trade | 0 |
+| emerging economies | 0 |
+| WTO / World Trade Organisation | 0 as an answer |
+| trade creation | 0 as an answer |
+| free trade area, common market, monetary union | 0 (only the customs union definition) |
+
+**4.1.4 terms of trade is the strongest set in the batch and AQA has nothing on
+the topic at all.** It carries two of the three calculations — the index from two
+price indices, and the harder one of applying two different growth rates to an
+existing index — plus the three points that make the topic worth teaching:
+
+- **The terms of trade is a ratio, so direction alone tells you nothing.** Export
+  prices rising 4% while import prices rise 9% is a deterioration. Edexcel's own
+  worked example makes the point and it is the best stretch item here.
+- **Faster productivity growth *worsens* the terms of trade.** Lower costs mean
+  lower export prices, which lowers the ratio — even though competitiveness has
+  improved. Students reliably get this backwards.
+- **An improvement can reduce export revenue.** With elastic demand for exports,
+  higher prices lose more volume than they gain in margin, so the current account
+  worsens. Edexcel sets it out explicitly; nothing in the bank had it.
+
+**4.1.5 was expected to be occupied and was not.** AQA 2.6.2 has the customs
+union definition and trade diversion, and that is all. Edexcel's four-rung ladder
+(free trade area → customs union → common market → monetary union), the
+**conditions for a successful monetary union** — synchronised cycles, labour
+mobility, fiscal transfers, capital mobility — and the **WTO's two functions and
+its tension with regional blocs** were all untouched, and carry six of the eight
+questions.
+
+**Where AQA did bind, the sets are short and built on what Edexcel adds.** 4.1.1
+is five questions, because AQA 2.6.1 owns the definition, containerisation,
+consumer effects, offshoring, the environment and inequality; what was left is
+financial deregulation, global institutions, **cultural imperialism**, supply
+chain dependence, and competition for skilled labour raising a domestic firm's
+wage bill. 4.1.2 is six, because AQA 2.6.2 owns comparative advantage, the
+opportunity cost table and the transport cost assumption; what was left is
+consuming beyond the PPF, the **other four assumptions** of the model, and the
+exploitation and food-security objections.
+
+| | |
+| --- | --- |
+| Answer letters | A 9, B 8, C 8, D 7 (even would be 8) |
+| Skills | applied-reasoning 23, definition-in-context 3, data-table 3, calculation 3 |
+| Difficulty | foundation 1, standard 26, stretch 5 |
+| Sketch to solve | 0 |
+
+**No sketch items.** The one diagram unit 4.1 turns on is the PPF illustration of
+comparative advantage, and it is printed on the 4.1.2 page — while AQA 2.6.2 Q5
+already owns the tariff sketch. 4.1.2 Q1 asks what the diagram *shows* (consuming
+beyond your own frontier) rather than asking a student to redraw it.
 
 ### Batch 25 — Edexcel Theme 3, unit 3.6 (2026-08-01)
 
