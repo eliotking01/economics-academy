@@ -7,7 +7,9 @@ session.
 
 **COMPLETE. 166 of 166 topics, 1,268 questions**, against ~1,272 planned. Every
 board and every theme is finished: AQA Microeconomics and Macroeconomics, and
-Edexcel Themes 1, 2, 3 and 4. **No topic remains.**
+Edexcel Themes 1, 2, 3 and 4. **No topic remains.** Five of those topics also
+carry a written-response pilot — ten exam-style written questions with indicative
+content, awaiting the site owner's verdict on the format.
 
 **Branch:** `feature/topic-questions`, branched from `main`, **pushed to the
 remote and not merged.** `main` auto-publishes, so nothing here is live on
@@ -32,9 +34,10 @@ for the end of the run have all been taken:
    `templates/header.html`.
 3. **Monopsonistic exploitation — added** to `3-5-3-wage-determination`, closing
    `REVIEW-NOTES.md` N-Q15.
-4. **The written-response extension — a pilot is approved and not yet built.**
-   This is the only outstanding piece of work on the project. See **Open items**
-   for what it needs first.
+4. **The written-response extension — the pilot is approved and built.** Ten
+   written questions across five topics, with the schema, the generator support
+   and the stylesheet behind them. **It needs the site owner's judgement on the
+   format before it goes any further.** See **Open items**.
 
 Beyond those, `REVIEW-NOTES.md` carries **twelve open notes-page findings** turned
 up while writing the questions (N-Q8, N-Q10 to N-Q14 and N-Q16 to N-Q20; N-Q15 is
@@ -581,33 +584,48 @@ Three are done; the fourth is scoped below.**
   theme, and unavoidable on a trade-and-development theme whose arithmetic AQA
   macro had already used. **Recorded rather than corrected. It is now final**, and
   changing it would mean rewriting sets that pass every other check.
-- **Written-response extension — DECIDED: build a pilot on a few topics.** 1–2
-  short written questions per topic with indicative-content model answers behind
-  `<details>`, plus a marking-service call to action. The site owner has asked for
-  a pilot across a handful of topics first, so the format, the model-answer style
-  and the call to action can be judged before committing to 166 of them. **Not
-  yet started.** It needs a schema extension, generator support and a stylesheet
-  addition before any content is written — see the note below.
+- **Written-response extension — DECIDED: pilot approved, and BUILT.** Five
+  topics carry it, ten written questions in all, spread deliberately across the
+  boards and the formats:
 
-### The written-response pilot — what it needs before any content is written
+  | Topic | Questions | Marks |
+  | --- | --- | --- |
+  | AQA 1.3.2 Elasticities of Demand | Explain (9), Evaluate (25) | 34 |
+  | AQA 2.5.1 Fiscal Policy | Explain (9), Evaluate (25) | 34 |
+  | Edexcel 1.2.9 Indirect Taxes and Subsidies | Explain (5), Assess (12) | 17 |
+  | Edexcel 3.6.1 Government Intervention | Explain (5), Evaluate (15) | 20 |
+  | Edexcel 4.1.6 Restrictions on Free Trade | Explain (5), Assess (12) | 17 |
 
-Scoped but not built. Doing it properly means four things, in this order:
+  Each set pairs a short `Explain` with a longer evaluation, at the mark
+  allocations the two boards actually use — AQA 9 and 25, Edexcel 5, 12 and 15.
+  **The remaining 161 sets are untouched and render byte-identically.**
 
-1. **Schema.** An optional `written` array on the topic object, each entry
-   carrying a prompt, a mark allocation, and indicative content as a list of
-   points. Optional, so all 166 existing sets stay valid and untouched.
-2. **Generator.** `scripts/build_questions.py` renders the array beneath the
-   multiple-choice list, inside `<details>` so it works with JavaScript off, and
-   extends the JSON-LD. The validator needs the same option-hygiene and
-   UK-spelling passes the MCQ path already has.
-3. **Stylesheet.** `css/pages/quiz.css` gains the written-response block. It must
-   stay inside the existing `.quiz-*` scope so nothing leaks to other pages.
-4. **Content, then the pilot set.** Choose topics that show the format at its
-   best — one calculation-heavy, one evaluation-heavy, one on each board.
+  **What was built.** `written` is an optional array on the topic object; the
+  schema is documented in `QUESTIONS_GUIDE.md`. `scripts/build_questions.py`
+  validates it (id uniqueness shared with the MCQ ids, command word from a fixed
+  set, marks 2–25, 2–8 indicative points, the same fragment and capitalisation
+  rules) and renders it beneath the multiple-choice list, inside `<details>` so it
+  works with JavaScript off. The written questions join the same JSON-LD
+  `hasPart` array as `Extended response` entries, so the JSON stays the single
+  source of truth. `css/pages/quiz.css` gained a `.quiz-written*` block, scoped
+  under `.quiz-page` like everything else in that file, with a responsive rule.
 
-The marking call to action is the commercial point of the exercise, so it should
-sit directly beneath the model answer, where a student has just discovered how
-their attempt compares.
+  **Originality is the finding worth carrying forward.** Written prompts collide
+  with real papers far more readily than multiple-choice stems do, because the
+  command words and the phrasing around them are fixed. **Two of the first ten
+  drafted collided and both were rebuilt**: `1.2.9` w2 shared "an indirect tax as
+  a means of reducing…" with a real Edexcel question on disposable coffee cups,
+  and `1.2.9` w1 shared a run with Q5 on its own page. Rewritten, all ten are
+  clean at 8 and 10 words against both corpora and against all 1,268 stems.
+
+  **What the site owner should judge before it goes further.** Whether the
+  indicative-content style is right — points an examiner rewards, ending on a
+  judgement that says what the answer depends on, rather than a model essay;
+  whether two questions per topic is the right number; and whether the marking
+  call to action sits well directly beneath the model answer. Extending to all
+  166 topics is a large content job: roughly 330 written questions, each needing
+  indicative content written by hand and shingled.
+
 - **Site-wide issues found but not fixed** are logged in `REVIEW-NOTES.md`, per
   `CLAUDE.md`: the `navPanel` `aria-hidden` bug (the only remaining
   accessibility failure on any page), breadcrumb contrast in `css/main.css`, and

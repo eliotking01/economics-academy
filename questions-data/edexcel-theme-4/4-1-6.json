@@ -212,5 +212,36 @@
         }
       }
     }
+  ],
+  "written": [
+    {
+      "id": "edexcel-4-1-6-w1",
+      "command": "Explain",
+      "marks": 5,
+      "prompt": "Explain why a government might impose a tariff on imported steel even though the tariff raises costs for domestic manufacturers that use steel.",
+      "indicative": [
+        "A tariff raises the price of imported steel, so demand switches towards domestic producers, protecting output and employment in the domestic steel industry.",
+        "The government may be protecting a <strong>strategic industry</strong> it judges necessary for national security or infrastructure, where dependence on foreign supply is itself a risk.",
+        "It may be responding to <strong>dumping</strong> — foreign producers selling below cost to drive domestic mills out of business, after which prices would rise again.",
+        "A <strong>sunset industry</strong> argument may apply: the tariff slows a decline that is happening anyway, giving the workforce and the region time to adjust rather than facing sudden mass unemployment.",
+        "The tariff also raises revenue for the government, and the costs are concentrated on manufacturers while the benefits are visible and politically concentrated — which explains why such tariffs are imposed despite the net welfare loss."
+      ],
+      "tip": "The question tells you the policy has a cost and asks why it is done anyway. That is a signal to give the government's reasoning rather than your verdict on it — the evaluation marks are not in this question."
+    },
+    {
+      "id": "edexcel-4-1-6-w2",
+      "command": "Assess",
+      "marks": 12,
+      "prompt": "Assess the likely impact on a developing economy of removing the tariffs it currently places on imported manufactured goods.",
+      "indicative": [
+        "<strong>For removal:</strong> consumers gain access to cheaper goods, raising real incomes. The welfare loss the tariff created — the deadweight triangles of production and consumption inefficiency — is recovered.",
+        "<strong>For:</strong> domestic firms buying imported machinery and components face lower input costs, which raises their competitiveness in export markets.",
+        "<strong>For:</strong> exposure to foreign competition forces domestic producers to cut costs and innovate, and removal makes retaliation by trading partners less likely, improving access for the country's own exports.",
+        "<strong>Against:</strong> the infant industry argument. Manufacturing that has not yet achieved economies of scale may be wiped out by established foreign competitors, leaving the economy more dependent on primary exports and more exposed to commodity price volatility.",
+        "<strong>Against:</strong> structural unemployment in the industries that contract, concentrated in particular regions and among workers whose skills are occupationally immobile.",
+        "<strong>Against:</strong> tariff revenue is a significant share of government income in many low-income countries, where income tax collection is weak. Removing it may force cuts to spending on health and education.",
+        "<strong>Judgement:</strong> the impact depends on the sequencing and on what else is in place. Removal alongside investment in infrastructure, education and a broader tax base is very different from removal on its own. It also depends on whether the protected industries had a realistic path to competitiveness or were simply being sustained — twenty-five years of protection producing costs above world levels suggests the latter."
+      ]
+    }
   ]
 }
