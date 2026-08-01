@@ -764,3 +764,61 @@ and 1.4.2 question sets were written to what the bodies actually teach, so
 neither tests adverse selection, moral hazard or regulatory capture. If the
 pages are ever completed, those sets are worth revisiting — the terms are good
 question material and the AQA sets do not use them either.
+
+---
+
+## N-Q9 — the over-promising spec alert is systemic, not a one-off
+
+N-Q8 recorded two Theme 1 pages whose `spec-alert` and metadata name concepts
+the body never covers. Running the same check across the whole of Theme 2 shows
+it is a **pattern in the notes conversion**, not two slips.
+
+**Theme 2: 8 of 24 pages.** In each case the term appears in the meta
+description, the OG and Twitter cards, the JSON-LD `description` and the
+`spec-alert` sentence — and nowhere below it.
+
+| Page | Promised in the spec alert | In the body |
+| --- | --- | --- |
+| `2-1-1-economic-growth` | actual vs potential growth; determinants of productive capacity | No |
+| `2-2-2-consumption` | the role of expectations | No |
+| `2-2-3-investment` | the accelerator effect | No |
+| `2-3-2-short-run-aggregate-supply` | cost-push shocks and their effect on output | No |
+| `2-4-1-national-income` | the three approaches to measuring GDP | No |
+| `2-5-1-causes-of-growth` | demand-side causes of growth | No |
+| `2-5-3-trade-cycle` | recovery phases and the conditions typical of each | No |
+| `2-5-4-the-impact-of-economic-growth` | rising inequality; sustainable development | No |
+
+Plus `1-3-4-information-gaps` and `1-4-2-government-failure` from N-Q8: **10
+pages in total so far.** Themes 3 and 4 have not been checked and probably carry
+more.
+
+**Why it matters beyond tidiness.** The promised terms are all on the Edexcel
+specification, and several are among the most searched-for topics on the site —
+*the accelerator*, *actual and potential growth*, *cost-push*, *sustainable
+development*. The pages are indexed for terms they do not teach, so a student
+arriving on one finds nothing about the thing they searched for, and the meta
+description that drew them in was inaccurate.
+
+**Reproducing the check.** Strip everything above the spec alert's closing
+`</div>` before searching, or the metadata copies produce false negatives:
+
+```python
+i = t.find('Specification Coverage'); j = t.find('</div>', i)
+body = strip_tags(t[j:t.rfind('</body>')]).lower()
+'accelerator' in body      # False on 2-2-3-investment
+```
+
+**Two possible fixes, and they are different jobs.** Either restore the missing
+sections — `raw-notes/edexcel/` still contains several of them, including the
+accelerator in `2.2.3.md` — or cut the over-claim from the spec alert and the
+metadata so the page describes itself accurately. The first is an economics
+content change; the second is a metadata correction. **Both need an explicit
+instruction.**
+
+**Consequence for the practice questions, already applied.** Every Edexcel set
+is written to what its page's body actually teaches, so none of the missing
+concepts is tested anywhere. For Theme 2 units 2.1 to 2.3 that meant leaving out
+actual-versus-potential growth (2.1.1), expectations as a determinant of
+consumption (2.2.2), the accelerator (2.2.3) and cost-push shocks (2.3.2). If
+the pages are completed, those four sets are worth extending — the AQA sets
+cover all four concepts, so the material is proven to work as questions.
