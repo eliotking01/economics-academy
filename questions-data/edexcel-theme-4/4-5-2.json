@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.5.2",
+  "slug": "4-5-2-taxation",
+  "title": "Taxation",
+  "shortTitle": "Taxation",
+  "pageTitle": "Taxation Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on taxation for Edexcel A-Level Economics: progressive and regressive taxes, direct and indirect taxes and the Laffer curve.",
+  "intro": "Eight original multiple-choice questions on taxation, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on progressive, proportional and regressive taxes, direct against indirect taxation, and the Laffer curve in numbers.",
+  "questions": [
+    {
+      "id": "edexcel-4-5-2-q1",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government raises the tax rate on a category of income from 40% to 50%. The income declared in that category falls from £150bn to £100bn. The effect on the revenue collected from it is",
+      "options": {
+        "A": "A fall of £20bn.",
+        "B": "A fall of £10bn.",
+        "C": "A rise of £15bn.",
+        "D": "No change in revenue."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Revenue is the rate multiplied by the base, and here both have moved.<br />Before: 40% × £150bn = <strong>£60bn</strong>.<br />After: 50% × £100bn = <strong>£50bn</strong>.<br />Change: £50bn − £60bn = <strong>a fall of £10bn</strong>.<br />This is the Laffer curve in numbers. The rate went up by a quarter and the revenue went down, because the base shrank by a third — through reduced incentives to work and invest, through avoidance and evasion, and through high earners and their capital leaving for lower-tax countries. Above the optimal rate, a government that raises the rate collects less.",
+        "distractors": {
+          "A": "This applies the <strong>old</strong> rate to the new base: 40% × £100bn = £40bn, a fall of £20bn. It attributes the whole change to the shrinking base and ignores the rate rise that partly offset it.",
+          "C": "This holds the base constant: 50% × £150bn = £75bn, a rise of £15bn. It is the figure a government expects if it assumes taxpayers do not respond — which is exactly the assumption the Laffer curve denies.",
+          "D": "The two effects work against each other but do not cancel. A rate up by 10 percentage points against a base down by a third leaves revenue lower, not level."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country replaces a progressive income tax with a single flat rate of 20% on all income, with no allowances. The effect on the share of their income paid in tax by the highest earners is that it",
+      "options": {
+        "A": "Falls, since the share is now the same for all.",
+        "B": "Rises, since they have the largest incomes.",
+        "C": "Rises, since a flat tax is progressive.",
+        "D": "Stays the same as under the old system."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The three systems are defined by what happens to the <strong>share of income</strong> paid as income rises. Under a progressive tax that share rises with income; under a proportional tax it is constant; under a regressive tax it falls.<br />A flat 20% with no allowances is proportional: every household pays 20%, whatever it earns. Under the progressive system it replaced, the highest earners were paying a larger share than that. So their share falls — even though they still pay far more in pounds than anyone else, because 20% of a large income is a large sum.",
+        "distractors": {
+          "B": "They do pay the most in cash terms, and they did before. The question asks about the share of their income, which is what classifies a tax system, and that share has fallen.",
+          "C": "A flat rate is proportional, not progressive. Progressivity requires the percentage to rise with income, which a single rate with no allowances cannot do.",
+          "D": "Only if the old system had been proportional too. It was progressive, which means the top earners' share was above the average — so replacing it with a single rate must reduce it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government shifts the tax burden away from income tax and towards VAT, leaving its total revenue unchanged. The most likely effect on the distribution of income is that it becomes",
+      "options": {
+        "A": "Less equal, as the burden moves to a regressive tax.",
+        "B": "Less equal, as higher earners now pay more tax.",
+        "C": "More equal, as everybody pays the same VAT rate.",
+        "D": "Unchanged, as total revenue has not moved."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Direct taxes on income and profits tend to be progressive: the rate structure takes a larger share from higher incomes. Indirect taxes on spending tend to be regressive, because lower-income households spend a larger proportion of what they earn, so a tax on spending takes a larger share of their income.<br />Moving the burden from the first to the second therefore lightens the load at the top and adds to it at the bottom. Total revenue is the same; <strong>who pays it</strong> has changed, and the distribution of income after tax widens.",
+        "distractors": {
+          "B": "The shift does the opposite for higher earners: less income tax and a tax on spending they can more easily avoid by saving. Their total burden falls rather than rises.",
+          "C": "Everybody does face the same VAT rate, and that is precisely why it is regressive. An identical rate applied to a much larger share of a poor household's income takes a bigger bite out of it.",
+          "D": "Revenue measures how much the government collects, not from whom. The distributional effect comes entirely from the change in the mix."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country cuts its rate of corporation tax well below the rates charged by neighbouring countries. The most likely effect on inward foreign direct investment is that it",
+      "options": {
+        "A": "Falls, as firms expect the rate to rise again.",
+        "B": "Falls, as public services deteriorate.",
+        "C": "Rises, as after-tax returns are higher.",
+        "D": "Is unchanged, as tax does not affect location."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A multinational choosing where to put a plant compares what it would keep after tax. A lower corporation tax rate raises the post-tax return on the same project, so the country moves up the list.<br />This is why corporate tax rates are the most competed-over part of a tax system, and why it is a two-sided policy. The investment, jobs and technology are real gains; so is the revenue given up on the profits that would have been taxed anyway, and so is the pressure it puts on every neighbour to match the cut.",
+        "distractors": {
+          "A": "A firm might worry about that, but a rate cut is a poor reason to expect a rise. Governments that cut corporate taxes to attract investment generally have to keep them low to retain it.",
+          "B": "Lower revenue may eventually strain public services, and that would matter to an investor who needs skilled workers and good infrastructure. It is a long-run concern and does not outweigh the immediate effect on returns.",
+          "D": "Tax is one of several location factors, alongside skills, infrastructure and market access — but it plainly does affect the decision, which is why countries compete on it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises its top rate of income tax sharply. Over the next two years a number of high earners move abroad and take their businesses with them. The effect on the revenue raised from the top rate is that it",
+      "options": {
+        "A": "Falls to zero, since nobody pays the top rate.",
+        "B": "Is smaller than the rate rise implied.",
+        "C": "Rises exactly in proportion to the rate.",
+        "D": "Rises, since those leaving still pay it."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The rate rise pulls revenue up and the shrinking base pulls it down. Both happen, so the outcome sits between them: more revenue per pound of income that stays, on less income staying.<br />Emigration of high earners is one of the three mechanisms behind the Laffer curve's downward-sloping section, alongside weaker incentives to work and greater avoidance and evasion. It is the hardest to reverse — capital and skilled people, once relocated, do not return when the rate comes back down.",
+        "distractors": {
+          "A": "Some high earners leave; most do not. Moving a household and a business abroad is expensive and disruptive, so a rate rise thins the base rather than emptying it.",
+          "C": "That is what a static calculation assumes, and it is exactly what the behavioural response disproves. Revenue rises in proportion only if nobody changes anything.",
+          "D": "Someone who has moved abroad is generally outside the country's tax net on income earned there. That is the point of moving, and it is why the base falls."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government raises taxes on firms sharply. It expects the trade balance to improve, because lower incomes at home should reduce imports. The reason it may worsen instead is that",
+      "options": {
+        "A": "Cheaper exports would raise the volume imported.",
+        "B": "Higher taxes always raise the exchange rate.",
+        "C": "Households would switch spending towards imports.",
+        "D": "Weaker domestic output must be replaced by imports."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The government's reasoning is the demand side and it is sound as far as it goes: higher taxes cut disposable income, spending falls, and some of the spending that falls would have gone on imports.<br />The supply side works the other way. Taxes on firms raise their costs, so domestic production contracts — and demand that domestic producers no longer meet is met from abroad instead. Whether the trade balance improves or worsens depends on which effect is larger, which is why the notes treat the trade effect of a tax change as <strong>ambiguous</strong> rather than predictable.",
+        "distractors": {
+          "A": "Nothing here makes exports cheaper. Higher taxes on firms raise costs, which if anything makes exports dearer.",
+          "B": "There is no such rule. Tax changes affect the exchange rate only indirectly, through their effects on growth, inflation and interest rates, and the direction is not fixed.",
+          "C": "Households facing lower disposable income buy less of everything, imports included. That is the government's own argument, not a reason for it to fail."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four taxes and what each is levied on.<br />From Table 1, the only direct tax is",
+      "table": {
+        "caption": "Table 1: Four taxes and their tax base",
+        "head": [
+          "",
+          "Levied on"
+        ],
+        "rows": [
+          [
+            "Tax 1",
+            "The sale of most goods and services"
+          ],
+          [
+            "Tax 2",
+            "Each litre of road fuel sold"
+          ],
+          [
+            "Tax 3",
+            "The profits made by companies"
+          ],
+          [
+            "Tax 4",
+            "Premiums paid on insurance policies"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Tax 1.",
+        "B": "Tax 2.",
+        "C": "Tax 3.",
+        "D": "Tax 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The test is what the tax is levied on. A <strong>direct</strong> tax falls on income, profits or wealth and is paid by the person or firm that bears it. An <strong>indirect</strong> tax falls on spending and is collected by the seller from the buyer.<br />Only <strong>Tax 3</strong>, on company profits, meets the first description. The other three are all charged on transactions — a sale of goods, a purchase of fuel, an insurance premium — and each reaches the government through the business that made the sale.",
+        "distractors": {
+          "A": "A tax on the sale of goods and services is VAT in all but name: charged on spending, collected by the retailer, and therefore indirect.",
+          "B": "Excise duty on fuel is levied on each litre sold. It is a specific indirect tax, and one of the most regressive, since fuel is a necessity for many households.",
+          "D": "A tax on insurance premiums is a charge on the purchase of a service. It is collected by the insurer from the customer, which makes it indirect."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government sets a marginal tax rate of 100% on all income above a certain threshold. The revenue it raises from income above that threshold is likely to be",
+      "options": {
+        "A": "Close to nothing, as nobody earns above it.",
+        "B": "Equal to all the income above the threshold.",
+        "C": "Half the income above the threshold.",
+        "D": "The largest amount the government could raise."
+      },
+      "answer": "A",
+      "model": {
+        "working": "At a marginal rate of 100% an extra pound earned above the threshold is an extra pound handed over. Nobody works, invests or declares income for no reward, so almost no income is recorded above the line and almost no revenue is collected from it.<br />That is the right-hand end of the <strong>Laffer curve</strong>, and it is the whole reason the curve has the shape it does: revenue is zero at a rate of 0% because nothing is taken, and approximately zero at 100% because there is nothing left to take from. Somewhere between the two lies the rate that raises the most, and it is not at either extreme.",
+        "distractors": {
+          "B": "That is the static answer — the rate multiplied by the income that used to be earned. It assumes people carry on exactly as before while keeping none of what they earn.",
+          "C": "There is nothing in the arithmetic to produce a half. The rate is 100%, and the question is how much income is declared at that rate rather than what fraction is taken.",
+          "D": "The highest rate does not raise the most revenue. That is precisely what the Laffer curve denies, and a 100% rate is the clearest case of it."
+        }
+      }
+    }
+  ]
+}

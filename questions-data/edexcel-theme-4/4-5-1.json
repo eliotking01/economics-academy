@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.5.1",
+  "slug": "4-5-1-public-expenditure",
+  "title": "Public Expenditure",
+  "shortTitle": "Public Expenditure",
+  "pageTitle": "Public Expenditure Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on public expenditure for Edexcel A-Level Economics: current and capital spending, transfer payments and the size of the state.",
+  "intro": "Six original multiple-choice questions on public expenditure, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on the three types of public spending, what moves their size and composition, and what spending as a share of GDP does and does not tell you.",
+  "questions": [
+    {
+      "id": "edexcel-4-5-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government pays the salaries of nurses working in hospitals that are already built and running. This spending is best classified as",
+      "options": {
+        "A": "Capital expenditure, as it funds a public asset.",
+        "B": "Current expenditure, as it is day-to-day spending.",
+        "C": "A subsidy, as it lowers the cost of a service.",
+        "D": "A transfer payment, as nothing is received back."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Public spending divides three ways, and the test is what the government gets for the money.<br /><strong>Current expenditure</strong> is the day-to-day running cost of the state — wages for teachers, nurses and civil servants, and the medicines, fuel and supplies consumed in delivering services. Nurses' salaries are the textbook case.<br /><strong>Capital expenditure</strong> buys assets that last: roads, hospitals, schools. <strong>Transfer payments</strong> buy nothing at all — pensions and benefits move income from one household to another.",
+        "distractors": {
+          "A": "The hospitals are capital, and building them was capital expenditure. Paying the staff who work inside them afterwards is a recurring running cost, not the purchase of an asset.",
+          "C": "A subsidy is a payment to a producer to lower the price of a good. The government here is the employer paying its own staff, not subsidising anyone else's costs.",
+          "D": "A transfer payment is made without anything being received in return, which is why pensions and benefits do not count towards GDP. The state receives a great deal in return for a nurse's salary — the nursing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over thirty years the share of a country's population aged over seventy doubles, while the share of working age falls. The most likely effect on public expenditure is that",
+      "options": {
+        "A": "Capital spending on infrastructure rises fastest.",
+        "B": "Spending falls, as fewer people are in work.",
+        "C": "Spending on pensions and healthcare rises.",
+        "D": "Transfer payments fall as pensioners have savings."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two largest items in most developed countries' budgets are the ones an ageing population drives directly. More people above retirement age means more state pensions paid, for more years each; and health spending per person rises steeply with age.<br />The squeeze comes from both ends, which is what makes demography the most predictable pressure on public finances there is. The bill rises while the working-age population that funds it through income tax and National Insurance is shrinking as a share of the whole.",
+        "distractors": {
+          "A": "Infrastructure is the item that tends to be cut when demographic pressure builds, precisely because it is easier to postpone than a pension. It is not what an ageing population drives.",
+          "B": "Fewer people in work reduces tax <strong>revenue</strong>. Spending moves the other way, which is why an ageing population is a fiscal problem rather than a neutral change.",
+          "D": "Some pensioners have savings and some have none, and the state pension is paid regardless. Transfer payments to older households are the fastest-growing part of the bill, not a falling one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A pandemic forces large parts of an economy to close for a year. The component of public expenditure most likely to rise fastest is",
+      "options": {
+        "A": "Capital expenditure on new infrastructure.",
+        "B": "Current expenditure on civil servants' pay.",
+        "C": "Spending on defence equipment.",
+        "D": "Transfer payments to households."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An external shock of this kind hits incomes first. Households lose work, and the payments that exist to support people out of work — unemployment benefits, income support, emergency schemes — rise immediately and by a great deal.<br />That is a change in the <strong>composition</strong> of public spending as well as its level. Transfer payments redistribute income without buying any good or service, so the state's spending rises sharply while what it actually purchases barely changes. External shocks are listed alongside demographics and political priorities as the reasons the size and mix of public expenditure move over time.",
+        "distractors": {
+          "A": "Infrastructure projects need planning, procurement and sites. Some governments do bring them forward as stimulus, but they cannot be scaled up within the year in the way transfers can.",
+          "B": "Civil servants continue to be paid much as before. Their pay is a large and stable item, which is precisely why it does not move fastest in a shock.",
+          "C": "Defence procurement runs on multi-year contracts and has no particular connection to a pandemic. It is among the least responsive lines in the budget."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four items of government spending in one year.<br />From Table 1, the only one that is capital expenditure is",
+      "table": {
+        "caption": "Table 1: Four items of government spending",
+        "head": [
+          "",
+          "Item"
+        ],
+        "rows": [
+          [
+            "Item 1",
+            "Salaries paid to teachers in state schools"
+          ],
+          [
+            "Item 2",
+            "Construction of a new hospital"
+          ],
+          [
+            "Item 3",
+            "Medicines bought for use in existing clinics"
+          ],
+          [
+            "Item 4",
+            "State pensions paid to retired households"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Item 1.",
+        "B": "Item 2.",
+        "C": "Item 3.",
+        "D": "Item 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Capital expenditure buys something that lasts and adds to the economy's productive capacity. <strong>Item 2 builds a hospital</strong> — an asset that will still be delivering services in forty years.<br />The other three are consumed within the year or hand money to someone else. Teachers' salaries and medicines are current spending; the state pension is a transfer payment. The distinction matters because only capital spending raises long-run supply, which is the argument for protecting it when budgets are cut.",
+        "distractors": {
+          "A": "Teachers' salaries are the clearest case of current expenditure — a recurring cost of running a service that has to be paid again next year.",
+          "C": "Medicines are consumed as they are used. Buying them is current expenditure on goods, even though the hospital they are used in is a capital asset.",
+          "D": "The state pension buys nothing in return, which makes it a transfer payment. It redistributes income rather than adding to output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Country X spends 45% of its GDP through the state and Country Y spends 28%. Taken on its own, this comparison tells you",
+      "options": {
+        "A": "That Country X has the larger state sector.",
+        "B": "That Country X's public services are better.",
+        "C": "That Country Y will grow faster than X.",
+        "D": "That Country Y's taxes must be regressive."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Public expenditure as a percentage of GDP measures one thing precisely: how much of the economy passes through the state. On that measure X's state sector is much the larger.<br />It says nothing about whether the money is well spent. A country can spend 45% of GDP badly and 28% well, and the ratio cannot tell them apart — it is a measure of <strong>size, not of quality or outcome</strong>. That is why the significance of the ratio is argued over rather than read off: the same figure carries an argument about growth, about living standards, about crowding out and about equality, and the number alone settles none of them.",
+        "distractors": {
+          "B": "Higher spending buys more services only if it is spent efficiently. Two countries can spend very different shares of GDP and achieve similar health and education outcomes, which is the whole difficulty with judging a state sector by its size.",
+          "C": "Growth depends on what the spending is for. Capital spending on infrastructure and education can raise productive capacity; the ratio does not reveal how much of either country's spending is of that kind.",
+          "D": "The ratio describes total spending, not how the revenue funding it is raised. A country with a small state can have a steeply progressive tax system, and the reverse."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government announces a large increase in defence spending. Taxation is unchanged and it has committed itself to borrowing no more than planned. It follows that",
+      "options": {
+        "A": "Public spending as a share of GDP must rise.",
+        "B": "Spending on other programmes must be cut.",
+        "C": "The fiscal deficit must widen this year.",
+        "D": "The national debt must fall over time."
+      },
+      "answer": "B",
+      "model": {
+        "working": "With revenue fixed and borrowing capped, total spending is fixed too. Any increase in one programme has to be met from another, so the opportunity cost of the defence increase is whatever is given up to fund it — health, education, capital projects.<br />This is why the <strong>composition</strong> of public spending is a political question rather than an economic one. Shifting priorities between programmes is the normal way budgets change, and it is exactly what the notes mean by political priorities altering the mix of expenditure.",
+        "distractors": {
+          "A": "Total spending is unchanged, so its share of GDP will not rise on account of this decision. Only the composition of that total has altered.",
+          "C": "The deficit is the gap between spending and revenue, and neither the total nor the revenue has moved. A reallocation within a fixed total leaves the deficit where it was.",
+          "D": "The debt falls only if the government runs a surplus. Nothing here says it is doing that; it has committed to borrowing no more than planned, which is not the same as borrowing nothing."
+        }
+      }
+    }
+  ]
+}

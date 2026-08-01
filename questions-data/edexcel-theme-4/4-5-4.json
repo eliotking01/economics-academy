@@ -1,0 +1,221 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.5.4",
+  "slug": "4-5-4-macroeconomic-policies-in-a-global-context",
+  "title": "Macroeconomic Policies in a Global Context",
+  "shortTitle": "Policies in a Global Context",
+  "pageTitle": "Macroeconomic Policies in a Global Context Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on macroeconomic policy in a global context for Edexcel A-Level Economics: transfer pricing, austerity and coordination.",
+  "intro": "Eight original multiple-choice questions on macroeconomic policies in a global context, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on how globalisation constrains national policy — transfer pricing, regulatory arbitrage, debt restructuring and the limits of forecasting.",
+  "questions": [
+    {
+      "id": "edexcel-4-5-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A multinational sells components from its subsidiary in a high-tax country to its subsidiary in a low-tax country at an artificially low price, so that most of the group's profit is recorded where tax is lowest. This is",
+      "options": {
+        "A": "Capital flight.",
+        "B": "Regulatory arbitrage.",
+        "C": "Trade liberalisation.",
+        "D": "Transfer pricing."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Transfer pricing is the price a multinational sets on goods and services moving between its own subsidiaries. Because both sides of the transaction belong to the same group, the price can be chosen rather than negotiated — and choosing it well moves profit from where tax is high to where tax is low.<br />Nothing physical changes: the same components are made in the same factory and sold to the same customers. Only the country in which the profit appears is different, which is why it is so hard for any single tax authority to challenge and why it is met with <strong>transfer pricing rules</strong> rather than with ordinary corporate tax law.",
+        "distractors": {
+          "A": "Capital flight is money leaving a country quickly in response to economic or political instability. The multinational here is not fleeing anything; it is arranging where its profit is recorded.",
+          "B": "Regulatory arbitrage means exploiting differences in <em>regulation</em> between countries — moving production to where environmental or labour rules are laxest. This is the tax version of the same instinct, but it has its own name.",
+          "C": "Trade liberalisation is the removal of tariffs and other barriers to trade. It is a government policy, not something a firm does to its own internal pricing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises its corporation tax rate. Several multinationals respond by recording a larger share of their profits in other countries, and the extra revenue does not appear. The lesson for national policy is that",
+      "options": {
+        "A": "Corporation tax should always be cut instead.",
+        "B": "Multinationals pay no tax anywhere at all.",
+        "C": "One country acting alone has limited power.",
+        "D": "Tax rates have no effect on where firms invest."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A firm operating in forty countries can respond to one country's tax decision by changing where its profits are declared, without changing where anything is actually produced. The government has moved a lever attached to a smaller machine than it thought.<br />This is the central constraint globalisation places on national macroeconomic policy: <strong>the tax base is mobile and the government is not</strong>. It is why the serious answers to corporate tax avoidance are international ones — common minimum rates, transfer pricing rules and information sharing agreed through bodies such as the OECD — rather than another national rate change.",
+        "distractors": {
+          "A": "Cutting the rate is one response, and it starts a competition in which every country cuts and all of them collect less. The finding here is about the limits of unilateral action, not the direction the rate should move.",
+          "B": "They pay a great deal of tax, and much of it in the countries where the rates are lowest. The complaint is about where the profits are declared, not whether any tax is paid.",
+          "D": "Tax rates affect both where firms invest and where they declare profit, and this episode demonstrates the second. Concluding that tax is irrelevant gets it exactly backwards."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country tightens its environmental regulations. A global manufacturer responds by moving production to a country whose rules are far weaker, and exporting back. The limit on national regulation that this illustrates is",
+      "options": {
+        "A": "Fiscal austerity.",
+        "B": "Inaccurate information.",
+        "C": "Intergenerational equity.",
+        "D": "Regulatory arbitrage."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Regulatory arbitrage is the exploitation of differences in regulation between countries — treating national rules as a menu and choosing the least demanding.<br />It is a genuine limit on what one government can achieve alone. The regulation succeeded in its own terms, since the polluting activity no longer happens there, and failed in every other sense: global emissions are unchanged or higher, the jobs have gone, and the goods come back as imports. The response has to be <strong>international coordination</strong> on common standards, which is slow and requires agreement from countries whose advantage lies in not agreeing.",
+        "distractors": {
+          "A": "Austerity is a fiscal programme of spending cuts and tax rises to reduce a deficit. It has nothing to do with the location of production.",
+          "B": "Inaccurate information is a separate problem for policymakers — acting on data and forecasts that turn out to be wrong. The government here was not misinformed; the firm simply moved.",
+          "C": "Intergenerational equity concerns the burden that today's borrowing places on future taxpayers. It is an argument in the debate about public debt, not about regulation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A group of countries agrees through an international organisation to apply a common minimum rate of corporation tax. The purpose of acting together rather than separately is to",
+      "options": {
+        "A": "Guarantee that every firm pays the same tax bill.",
+        "B": "Prevent firms shopping between tax systems.",
+        "C": "Raise the tax rate in the highest-taxed country.",
+        "D": "Remove the need for national tax authorities."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A minimum rate agreed by many countries at once removes the option the firm was relying on. If there is nowhere left offering a materially lower rate, moving reported profits stops paying, and the competitive pressure on each government to undercut its neighbours disappears with it.<br />That is what <strong>international policy coordination</strong> is for: it does not give any single government a new power, it removes the escape route that made everyone's existing powers ineffective. It is also why coordination is so hard to achieve — the countries benefiting most from being the low-tax option are the ones whose agreement is needed.",
+        "distractors": {
+          "A": "A minimum rate sets a floor, not a uniform bill. Countries remain free to tax above it, and firms of different sizes and profitability will pay very different amounts.",
+          "C": "A minimum binds the countries below it. The highest-taxed country is already above the floor and is unaffected by it.",
+          "D": "Someone still has to assess and collect the tax. The agreement changes the rules national authorities apply; it does not replace them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A heavily indebted country cannot meet its repayment schedule. It negotiates with its creditors to extend the repayment period and lower the interest rate on what it owes. This is best described as",
+      "options": {
+        "A": "Debt restructuring.",
+        "B": "Fiscal austerity.",
+        "C": "Quantitative easing.",
+        "D": "Structural reform."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Debt restructuring changes the terms on which existing debt is repaid — longer to pay, a lower rate, and sometimes a write-off of part of the principal. The debt is not wished away; the schedule is made one the country can actually meet.<br />It is the third of the routes out of an unsustainable fiscal position, alongside <strong>austerity</strong>, which cuts spending and raises taxes, and <strong>structural reform</strong>, which tries to grow the economy and the tax base instead. Restructuring is the fastest of the three and the most expensive in reputation: creditors who have taken a loss lend again only at a higher price.",
+        "distractors": {
+          "B": "Austerity is what a government does to its own budget — spending cuts and tax rises. Nothing here changes the budget; the negotiation is with the creditors.",
+          "C": "Quantitative easing is a central bank buying assets to increase the money supply. It is a monetary tool for a domestic economy, not a negotiation over foreign debt.",
+          "D": "Structural reform means changing how the economy works — labour markets, pensions, the efficiency of public services — to raise growth. It is a long-run answer to the same problem, and not what is described."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government cuts public spending sharply during a recession in order to reduce its fiscal deficit. The risk economists identify with this is that",
+      "options": {
+        "A": "The cuts raise inflation and the deficit widens.",
+        "B": "The deficit falls by less than the cuts imply.",
+        "C": "The national debt is repaid faster than planned.",
+        "D": "The government will be unable to borrow at all."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Cutting spending reduces the deficit directly, pound for pound. It also reduces aggregate demand, and in a recession that means lower output, lower employment and therefore lower tax receipts and higher spending on unemployment support.<br />The second effect claws back part of the first, so the deficit falls by less than the arithmetic of the cuts suggested — and if the multiplier is large enough, the ratio of debt to GDP can rise even as borrowing falls, because the denominator is shrinking too. This is the case against <strong>austerity in a downturn</strong>, and the counter-argument is that a government which loses the confidence of its creditors has no choice about the timing.",
+        "distractors": {
+          "A": "Cutting demand puts downward pressure on prices, not upward. Austerity is associated with disinflation, which is one reason it is painful.",
+          "C": "Faster repayment is the intended outcome, not the risk. The concern is that the debt falls more slowly than planned, or not at all as a share of GDP.",
+          "D": "Losing access to borrowing is what austerity is usually meant to prevent. It is the reason a government might cut in a recession despite the damage, rather than a consequence of doing so."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 pairs four global economic challenges with a policy response.<br />From Table 1, the pairing in which the response does not address the challenge is",
+      "table": {
+        "caption": "Table 1: Four challenges and the policy proposed for each",
+        "head": [
+          "",
+          "Challenge",
+          "Policy response"
+        ],
+        "rows": [
+          [
+            "Pairing 1",
+            "High income inequality",
+            "Make the income tax system more progressive"
+          ],
+          [
+            "Pairing 2",
+            "A large fiscal deficit",
+            "Reduce public spending and raise taxes"
+          ],
+          [
+            "Pairing 3",
+            "Weak international competitiveness",
+            "Reduce tariffs and other trade barriers"
+          ],
+          [
+            "Pairing 4",
+            "A sharp rise in world commodity prices",
+            "Raise the national minimum wage"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Pairing 1.",
+        "B": "Pairing 2.",
+        "C": "Pairing 3.",
+        "D": "Pairing 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Three of the pairings match the tool to the problem. Progressive taxation redistributes income and so addresses inequality; austerity reduces a deficit by cutting spending and raising taxes; trade liberalisation exposes domestic industry to competition and widens its markets, which is a competitiveness policy.<br /><strong>Pairing 4 does not fit.</strong> A minimum wage is a labour market intervention aimed at low pay. A sudden rise in world commodity prices is an external cost shock, and raising the wages firms must pay adds to their costs at exactly the moment those costs are already rising. The tools for an external shock are monetary, fiscal and exchange rate policy.",
+        "distractors": {
+          "A": "Progressive taxation takes a larger share from higher incomes and funds services and transfers that benefit lower ones. It is the standard response to inequality.",
+          "B": "Austerity — spending cuts, tax rises — reduces a deficit directly. Whether it is wise during a downturn is argued over, but it does address the problem it is paired with.",
+          "C": "Trade liberalisation raises competitiveness by giving domestic firms access to larger markets and forcing them to compete with imports. It is one of the standard competitiveness policies."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-5-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government sets its budget on a forecast that the economy will grow by 2%. A downturn in its main export markets leaves growth at 0.2%, and the deficit comes in far above plan. This best illustrates that policymakers",
+      "options": {
+        "A": "Act on information that can prove wrong.",
+        "B": "Can eliminate uncertainty by forecasting.",
+        "C": "Have no influence over their own budgets.",
+        "D": "Should set budgets only once growth is known."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Every fiscal plan is built on a forecast, and a forecast is a judgement about a future nobody can observe. Get the growth rate wrong and every figure downstream of it — receipts, welfare spending, the deficit — is wrong too, without a single decision having been mistaken.<br />Two of the three problems the notes identify are visible here at once: <strong>inaccurate information</strong>, since the forecast the budget rested on was wrong, and the <strong>inability to control external shocks</strong>, since the cause was a downturn in other countries. It is an argument for building margins into fiscal plans and for judging policy by whether it was reasonable on what was known, not by what happened afterwards.",
+        "distractors": {
+          "B": "Forecasting narrows uncertainty at best; it cannot remove it. This episode is a demonstration of the limits of forecasting, not of its power.",
+          "C": "The government controls its own spending and tax decisions entirely. What it does not control is the economy those decisions land in.",
+          "D": "Budgets have to be set in advance — spending must be authorised before it happens. Waiting until the outturn is known would mean never setting one."
+        }
+      }
+    }
+  ]
+}

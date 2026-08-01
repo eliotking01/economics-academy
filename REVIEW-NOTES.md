@@ -18,7 +18,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
-| Practice questions (separate project) | **AQA complete; Edexcel Themes 1–3 complete; Theme 4 at unit 4.3** — state in `QUESTIONS_PROGRESS.md` |
+| Practice questions (separate project) | **Complete — 166 of 166 topics, 1,268 questions** — state in `QUESTIONS_PROGRESS.md` |
 
 **If you are resuming, read the last section of this file first** — *State of
 play for a new session*. It indexes everything still outstanding and says what
@@ -26,7 +26,7 @@ kind of change each one needs.
 
 Content problems found while writing the practice questions are logged at the end
 of this file, in two blocks: the AQA macro findings (N-Q2 to N-Q7) and the
-Edexcel findings (N-Q8, N-Q10 to N-Q18). The Edexcel block **replaced six earlier
+Edexcel findings (N-Q8, N-Q10 to N-Q20). The Edexcel block **replaced six earlier
 entries** that had accumulated corrections; it is the current position.
 
 ---
@@ -916,14 +916,14 @@ wording rather than the concept.
 | Theme 4, unit 4.1 | **checked, 9 pages** — N-Q16, N-Q17 | **re-run — 1 failure, already listed** |
 | Theme 4, units 4.2–4.3 | **checked, 5 pages** — N-Q18 | **re-run — clean** |
 | Theme 4, unit 4.4 | **checked, 3 pages** — N-Q19 | **re-run — clean** |
-| Theme 4, unit 4.5 | **not checked** — 4 pages | **re-run — clean** |
+| Theme 4, unit 4.5 | **checked, 4 pages** — N-Q20 | **re-run — clean** |
 
 N-Q10 has now been re-run over the whole of Theme 4, units 4.2 to 4.5 included,
 and those twelve pages are clean: only three carry a figure at all, and each
 numbers sequentially from 1. **The figure-number audit is therefore complete
-site-wide.** N-Q8 has since been run over unit 4.4 as well, and **only unit 4.5's
-four pages remain unchecked** — run it as batch 30 reaches them. That is all that
-is outstanding.
+site-wide.** N-Q8 has since been run over units 4.4 and 4.5 as well, so **both
+audits are now complete across all 166 topic pages.** Nothing further is
+outstanding on either.
 
 ---
 
@@ -1247,3 +1247,48 @@ It did exactly that here: `channelling savings into investment` matched, and the
 only occurrence on the page was in the block this project appended. **Print the
 matching context, not just a boolean**, and discard any hit inside
 `notes-questions-cta` before recording a page as clean.
+
+---
+
+## N-Q20 — unit 4.5: one real over-claim and two soft ones
+
+Found while writing the final batch of question sets, which completes the N-Q8
+sweep over the whole site.
+
+### `4-5-2-taxation` — two promised concepts, neither delivered
+
+The alert says students should be able to
+
+> …evaluate the macroeconomic effects of tax changes, and **explain how
+> elasticity affects tax incidence**. These notes also cover **the principles of
+> a good tax system**.
+
+Neither appears in the body. The word *incidence* is absent from the page, there
+is no treatment of how PED and PES split a tax between producer and consumer, and
+no list of the canons of taxation — equity, certainty, convenience, efficiency —
+under any wording. What the page does deliver is thorough: the three tax systems,
+direct against indirect, a seven-row grid of macroeconomic effects, and the
+Laffer curve with a diagram.
+
+**Tax incidence is taught elsewhere on the site**, on
+`edexcel-theme-1/1-2-9-indirect-taxes-and-subsidies`, and Edexcel 1.2.9 Q3 and
+Q10 already test it — including the perfectly inelastic case. So this is closer
+to the `2-1-1` case in N-Q8 than to a true content gap: **a cross-reference would
+settle it**, or the sentence could be cut from the alert. The principles of a
+good tax system are genuinely missing and would need writing.
+
+### Two soft cases, recorded but not worth acting on alone
+
+- **`4-5-3-public-sector-finances`** promises "the options for fiscal
+  consolidation". The body covers what deficits and debt are, what moves them and
+  why they matter, but never sets out the options for closing them. Those options
+  — austerity, structural reform, debt restructuring — are taught in full on
+  `4-5-4`, the next page in the same unit. A cross-reference fixes it.
+- **`4-5-4-macroeconomic-policies-in-a-global-context`** promises "capital
+  mobility". The body covers firms relocating production and regulatory
+  arbitrage, which is the same idea applied to plant rather than to money, but
+  never discusses mobile capital as such. `4-1-1-globalisation` does, and
+  4.1.1 Q1 tests it.
+
+**No question in the unit depends on any of the missing material.** All four sets
+were written to what the bodies teach.
