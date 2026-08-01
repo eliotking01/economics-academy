@@ -189,6 +189,50 @@
           "D": "The UK runs a persistent <em>deficit</em> on trade in goods, partly offset by a surplus on services. In any case the direction of the balance is not what makes it sensitive to world demand."
         }
       }
+    },
+    {
+      "id": "edexcel-2-2-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government considers allowing its currency to depreciate in order to improve the trade balance. Its economists report that demand for both its exports and its imports is highly price inelastic. The advice they should give is that a depreciation",
+      "options": {
+        "A": "Would improve the balance, since exports get cheaper.",
+        "B": "Would leave the balance unchanged in every period.",
+        "C": "Would probably worsen the balance, not improve it.",
+        "D": "Would work only if the currency were fixed."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>Marshall-Lerner condition</strong> says a depreciation improves the trade balance only if the price elasticities of demand for exports and imports <strong>sum to more than one</strong>.<br />If both are highly inelastic that sum is below one, and the depreciation makes matters worse. The reason is that quantities barely move: the country still buys much the same volume of imports and now pays more for them, while still selling much the same volume of exports for less.<br />A weaker currency is therefore not a reliable cure for a trade deficit. Whether it works at all depends on how responsive buyers on both sides turn out to be.",
+        "distractors": {
+          "A": "Exports do become cheaper, but that only improves the balance if foreign buyers respond by buying enough more. Inelastic demand means they do not.",
+          "B": "The balance certainly changes — import bills rise immediately. It is the direction of the change that the elasticities decide.",
+          "D": "A currency that is fixed cannot depreciate in the market at all. Devaluation under a fixed rate faces exactly the same elasticity test."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-2-5-q9",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After a depreciation, a country's trade balance first worsens for several months and then improves steadily past its original level. The shape this path traces out is known as",
+      "options": {
+        "A": "The accelerator effect.",
+        "B": "The J-curve effect.",
+        "C": "The Marshall-Lerner condition.",
+        "D": "The multiplier effect."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Plotted against time, the trade balance dips below where it started before climbing well above it — a shape close to the letter <strong>J</strong>.<br />The dip happens because prices change at once while quantities take time to respond: contracts are already signed, supply chains take months to switch, and buyers need time to react. In that window the country pays more for much the same volume of imports.<br />As demand becomes more elastic over the following year or two, the Marshall-Lerner condition starts to be met and the balance improves. The two ideas fit together: <strong>Marshall-Lerner says whether</strong> a depreciation works, the <strong>J-curve says when</strong>.",
+        "distractors": {
+          "A": "The accelerator describes investment responding to the rate of change of demand. It has nothing to do with trade balances.",
+          "C": "The Marshall-Lerner condition is the elasticity test that decides whether a depreciation improves the balance at all. It is a condition, not a time path.",
+          "D": "The multiplier describes how an injection of spending raises national income through successive rounds."
+        }
+      }
     }
   ]
 }

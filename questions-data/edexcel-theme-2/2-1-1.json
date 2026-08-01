@@ -186,6 +186,50 @@
           "C": "There is only one error here, and it runs in one direction. Nothing offsets output that is never recorded."
         }
       }
+    },
+    {
+      "id": "edexcel-2-1-1-q9",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's real GDP rises this year because factories that had been standing idle are brought back into use. The maximum output the economy could produce is unchanged. This is",
+      "options": {
+        "A": "Actual growth and potential growth.",
+        "B": "Actual growth but not potential growth.",
+        "C": "Neither actual nor potential growth.",
+        "D": "Potential growth but not actual growth."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Actual growth</strong> is a rise in real GDP — what the economy did produce. <strong>Potential growth</strong> is a rise in what it is <em>capable</em> of producing.<br />Bringing idle factories back into use raises output, so actual growth is positive. But no new machinery, workers or technology have been added, so the ceiling has not moved: potential growth is zero.<br />The distinction matters because this kind of growth has a limit. Once the idle capacity is used up, output cannot rise further without raising the ceiling itself — which needs investment, training or new technology.",
+        "distractors": {
+          "A": "Potential output is explicitly unchanged. Recovery of unused capacity does not add to what the economy could produce at full stretch.",
+          "C": "Real GDP has risen, so there is certainly actual growth. The question is only whether potential growth accompanies it.",
+          "D": "This reverses the two. Output rose, so actual growth happened; capacity did not, so potential growth did not."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-1-1-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two economies produce the same real GDP this year. One has far more machinery, better-trained workers and newer technology than the other. The difference between them lies in their",
+      "options": {
+        "A": "Actual level of output.",
+        "B": "Nominal GDP figures.",
+        "C": "Productive capacity.",
+        "D": "Rate of inflation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Productive capacity</strong> is the maximum an economy could produce with all its factors of production fully and efficiently employed. It is determined by the quantity and quality of those factors — land, labour, capital, enterprise and technology.<br />Both economies are producing the same amount today, so their actual output is identical. The better-equipped one is simply operating further below its ceiling: it has spare capacity the other does not.<br />That matters for what happens next. The economy with the higher capacity can grow through recovery alone, while the other would need new investment to expand at all.",
+        "distractors": {
+          "A": "Actual output is stated to be the same in both. That is what makes the comparison interesting.",
+          "B": "Nominal GDP is real GDP measured at current prices. Nothing in the stem concerns the price level in either economy.",
+          "D": "Inflation is a rate of change in prices. The difference described is in machinery, skills and technology, which are real resources."
+        }
+      }
     }
   ]
 }

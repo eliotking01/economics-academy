@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 110 topics, 845 questions. AQA is complete, Edexcel Theme 1 is complete,
-and Theme 2 units 2.1 and 2.2 are done. 56 topics remain.**
+**Live: 113 topics, 878 questions. AQA is complete, Edexcel Theme 1 is complete,
+and Theme 2 units 2.1 to 2.3 are done. 53 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -360,22 +360,26 @@ Useful things established while building, worth not rediscovering.
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 15 (units 2.3 to 2.6) | ~113 |
+| Theme 2 | 12 (units 2.4 to 2.6) | ~90 |
 | Theme 3 | 20 | 157 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 2 unit 2.3 (Aggregate Supply)** — 2.3.1 aggregate supply,
-2.3.2 short-run AS, 2.3.3 long-run AS. Only three topics, so pair it with unit
-2.4 (national income, 4 topics) unless the AS pages turn out to be dense.
+**Next batch: Theme 2 unit 2.4 (National Income)** — 2.4.1 national income,
+2.4.2 injections and withdrawals, 2.4.3 equilibrium levels of real national
+output, 2.4.4 the multiplier. Four topics.
 
-**Expect this to be the hardest twin problem yet.** AQA 2.2.5 (SRAS, 7
-questions) and AQA 2.2.6 (LRAS, 7 questions) cover the same ground almost
-completely, *including both sketch items* and the Keynesian/Classical contrast.
-AQA 2.2.2 adds four more on the AD/AS model. Unlike unit 2.2, Edexcel does not
-subdivide the topic further than AQA does, so there is no structural room to
-exploit — the angles will have to come from what the Edexcel pages emphasise
-differently. Note also that `2-3-2-short-run-aggregate-supply` is one of the
-incomplete pages (N-Q9): it promises cost-push shocks and never covers them.
+**The multiplier is the tightest spot on the whole specification.** AQA 2.2.4
+carries **ten** questions on it including five calculations, and AQA 2.2.1
+covers the circular flow with eight more. Every standard multiplier archetype is
+taken: 1/MPS, 1/MPW, the multiplier from a table of propensities, the final rise
+in income from an injection, the multiplier implied by an injection and an
+outcome, and two economies compared. Do the twin audit before writing a line,
+and expect to need genuinely different framings rather than new numbers.
+
+**`2-4-1-national-income` is on the N-Q9 list** — it promises the three
+approaches to measuring GDP and never covers them. Per the site owner's
+instruction, write the questions anyway and record it, as unit 2.3 did for
+cost-push.
 
 **The twins for the rest of Theme 2 are AQA macro, and the overlap is severe.**
 Unit 2.1 alone collided with AQA 2.1.2, 2.1.3, 2.1.4, 2.3.2, 2.3.3 and 2.6.3.
@@ -984,6 +988,106 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 16 — Edexcel Theme 2 unit 2.3, plus a retrofit pass (2026-08-01)
+
+**Two things in one batch: 3 new topics (23 questions) and 10 questions added to
+six already-committed sets.** 33 questions in total, all re-derived from the stem
+alone with **0 mismatches**.
+
+#### The retrofit — a ratified change of policy
+
+Until now, every Edexcel set was written strictly to what its notes page body
+actually teaches, and concepts the page merely *advertised* were left out. Ten
+questions were skipped that way across six sets, all recorded in `REVIEW-NOTES.md`
+under N-Q8 and N-Q9.
+
+**The site owner has now asked for those concepts to be covered anyway**, and
+will bring the notes pages up to match afterwards. So they were written and
+added:
+
+| Set | Concept | Questions | New size |
+| --- | --- | --- | --- |
+| 1.3.4 | adverse selection; moral hazard | 2 | 5 → 7 |
+| 1.4.2 | regulatory capture | 1 | 6 → 7 |
+| 2.1.1 | actual against potential growth; productive capacity | 2 | 8 → 10 |
+| 2.2.2 | the role of expectations | 1 | 8 → 9 |
+| 2.2.3 | the accelerator effect | 2 | 7 → 9 |
+| 2.2.5 | Marshall-Lerner and the J-curve, by name | 2 | 7 → 9 |
+
+**How to do this safely.** Appending to a committed set rather than regenerating
+it keeps the existing questions and their ids untouched, which matters because
+`id` is unique site-wide and the JSON-LD is derived from it. The retrofit script
+loads each file, appends question objects with ids continuing the sequence,
+re-runs the letter-distribution and option-length assertions over the *whole*
+set, and writes back. Two points learned:
+
+- **The script writes per file, so a mid-run assertion failure leaves earlier
+  files already modified.** `git checkout -- questions-data/` before re-running,
+  or the additions get applied twice.
+- **Adding questions changes the set's letter distribution**, so pick the answers
+  to improve it. Every one of the six sets came out closer to even than before.
+
+**The model answers are carrying the teaching here**, since the notes pages do
+not yet cover these concepts. They were written longer than usual and to stand
+alone for exactly that reason — a student who gets one wrong and returns to the
+notes will currently find nothing there.
+
+#### Unit 2.3 — Aggregate Supply
+
+3 topics, 23 questions. `2-3-2` promised cost-push shocks and never covered them,
+so that question (2.3.2 Q3) was written directly into the new set rather than
+retrofitted.
+
+**Originality: zero shared 8-word runs against either past-paper corpus.**
+Against our own bank, six overlaps, all of them template scaffolding — "Using
+Table 1, the only change that shifts…", "Table 1 lists four developments in an
+economy", "while the average price level is unchanged". None was scenario
+overlap, which is the distinction §8 draws. Two were reworded anyway to keep the
+signal clean.
+
+**This was expected to be the hardest twin problem so far and it was.** AQA
+2.2.2, 2.2.5 and 2.2.6 carry 23 questions over the same ground, including both
+obvious sketch items. Unlike unit 2.2, Edexcel does not subdivide further than
+AQA does, so there was no structural room. The angles had to come from what the
+Edexcel pages emphasise differently:
+
+- **Subsidies as an SRAS factor.** Edexcel lists them; AQA's SRAS factors do not.
+- **The Keynesian curve's middle segment.** AQA's sketch item asks where the
+  curve is perfectly elastic. The Edexcel page describes all three segments with
+  reasons, so 2.3.3 Q1 asks what happens on the *upward-sloping* section — close
+  to capacity but not at it — which AQA never tests.
+- **Institutional quality** — property rights and corruption — as an LRAS factor.
+  Edexcel lists it; AQA does not.
+- **Competition policy and deregulation** as an LRAS factor, likewise.
+- **The SRAS/LRAS relationship stated as a trend.** The Edexcel page says the
+  economy tends towards its LRAS level while SRAS shocks are temporary
+  adjustments around it. Two questions come from that framing.
+- **The cost-push policy dilemma** (2.3.2 Q3): responding to a leftward SRAS
+  shift by raising AD recovers output but pushes prices higher still. Nothing in
+  the bank covered it, on either board.
+
+| | |
+| --- | --- |
+| Answer letters, unit 2.3 | A 9, B 6, C 4, D 4 (even would be 5.75) |
+| Skills | applied-reasoning 18, data-table 3, definition-in-context 2 |
+| Difficulty | foundation 1, standard 18, stretch 4 |
+| Sketch to solve | 1 |
+
+`applied-reasoning` at 78% is the highest of any batch and `calculation` is zero.
+Aggregate supply is a diagram-and-mechanism topic: there is nothing on these
+three pages to compute. The single foundation item reflects the same thing —
+almost every question needs a chained inference, because the bare definitions
+were already used in unit 2.2.
+
+**Site-wide letter distribution is now A 219, B 255, C 230, D 174 of 878.** D
+remains under-used by about 45 against an even 219.5. Every individual set passes
+the per-set check, and the retrofit improved six sets, but the site-wide skew has
+not shifted much because it was built up over the first twelve batches. It is not
+worth retrofitting further; it is worth continuing to order options by domain
+sequence while drafting, which is what has kept the recent batches balanced.
+
+---
 
 ### Batch 15 — Edexcel Theme 2, unit 2.2 (2026-08-01)
 

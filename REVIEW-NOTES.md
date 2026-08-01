@@ -845,3 +845,45 @@ existing paragraphs rather than write new sections. **Still an economics content
 change, so it needs an explicit instruction.**
 
 Running total: **11 pages** across Themes 1 and 2. Themes 3 and 4 unchecked.
+
+## N-Q8 / N-Q9 status update — the questions now exist, the pages still do not
+
+**2026-08-01.** The site owner has asked for the omitted concepts to be covered
+in the practice questions regardless of the gap, and will bring the notes pages
+up to match afterwards. **The questions have been written and are live.** This
+reverses the "Consequence for the practice questions" paragraphs recorded under
+N-Q8 and N-Q9, which said the concepts were deliberately untested.
+
+Ten questions were added to six already-committed sets, covering every concept
+those pages advertise and never explain:
+
+| Set | Concept now tested | Questions |
+| --- | --- | --- |
+| Edexcel 1.3.4 | adverse selection; moral hazard | 2 |
+| Edexcel 1.4.2 | regulatory capture | 1 |
+| Edexcel 2.1.1 | actual against potential growth; productive capacity | 2 |
+| Edexcel 2.2.2 | the role of expectations | 1 |
+| Edexcel 2.2.3 | the accelerator effect | 2 |
+| Edexcel 2.2.5 | the Marshall-Lerner condition; the J-curve, by name | 2 |
+
+`2-3-2-short-run-aggregate-supply` promised **cost-push shocks** and was written
+into the new unit 2.3 batch directly rather than retrofitted, so it needs no
+separate entry.
+
+**No revision-notes content was edited.** The only change to any notes page
+remains the additive end-of-notes link block, which contains no economics
+wording.
+
+**What is still outstanding, and it is now the more visible half.** Each of these
+pages carries a link to a question set that tests a concept the page itself never
+covers. A student who follows the link, gets the question wrong and returns to
+the notes to find out why will find nothing there. Until the pages are completed
+the model answers are carrying the teaching on their own — they are written to
+stand alone for exactly this reason, but that is a workaround rather than a fix.
+
+Remaining pages on the list that have **not** been covered by questions, because
+they fall in units not yet written: `2-4-1-national-income` (the three approaches
+to measuring GDP), `2-5-1-causes-of-growth` (demand-side causes),
+`2-5-3-trade-cycle` (recovery phases), `2-5-4-the-impact-of-economic-growth`
+(inequality, sustainable development). These will be covered the same way when
+units 2.4 and 2.5 are written.

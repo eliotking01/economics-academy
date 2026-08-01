@@ -186,6 +186,28 @@
           "D": "A fall in wealth reduces consumption through the wealth effect, which is the opposite of what is wanted."
         }
       }
+    },
+    {
+      "id": "edexcel-2-2-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Households learn from credible reports that a large rise in energy bills will take effect in six months' time. Their incomes this month are unchanged. Consumption this month is most likely to",
+      "options": {
+        "A": "Be unaffected, since incomes have not changed.",
+        "B": "Fall, as households save more in advance of it.",
+        "C": "Rise, as households buy energy before the increase.",
+        "D": "Rise, because expectations do not affect spending."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Expectations</strong> influence consumption in their own right, before anything has actually happened to income.<br />A household that knows a large bill is coming builds a buffer for it, and the only way to do that out of unchanged income is to spend less on other things now. Consumption falls this month because of something scheduled for six months' time.<br />This is why announcing a future tax rise or benefit cut can weaken demand immediately, and why confidence measures are watched as leading indicators — spending responds to what households think is coming, not only to what has already arrived.",
+        "distractors": {
+          "A": "Income is only one determinant of consumption. Expectations, confidence, interest rates and wealth all move spending without income changing at all.",
+          "C": "Energy is largely bought as it is used and cannot be stockpiled by a household, so bringing purchases forward is not really available here.",
+          "D": "Expectations plainly do affect spending, which is the whole point of the question. A household that knows a bill is coming behaves differently today."
+        }
+      }
     }
   ]
 }

@@ -120,6 +120,50 @@
           "D": "Producers still pursue profit. The requirement changes what pursuing profit leads them to do, because buyers can now see what they are getting."
         }
       }
+    },
+    {
+      "id": "edexcel-1-3-4-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a market for second-hand machinery, buyers cannot judge condition before they buy, so they will only offer a price reflecting average quality. Owners of the best machines stop selling, and average quality falls further. This process is called",
+      "options": {
+        "A": "Adverse selection.",
+        "B": "Consumer inertia.",
+        "C": "Herding behaviour.",
+        "D": "Moral hazard."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Adverse selection</strong> happens <em>before</em> a transaction. The side with less information cannot tell good from bad, so it prices for the average — and that price is too low to be worth accepting for anyone selling something above average.<br />The good machines leave, which lowers the average, which lowers the price buyers will offer, which drives out the next tier. The market unravels from the top down, and can end up trading only the worst goods. This is the mechanism behind the 'lemons problem' in second-hand cars.",
+        "distractors": {
+          "B": "Consumer inertia is sticking with a familiar choice because switching takes effort. Nobody here is staying put out of convenience.",
+          "C": "Herding is copying what other people do. These sellers are responding to the price on offer, not to each other.",
+          "D": "Moral hazard happens <em>after</em> a deal is struck, when one party changes its behaviour because it no longer bears the full risk. Here the problem arises before anything is bought."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-3-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A driver takes out fully comprehensive motor insurance and afterwards begins parking in less secure places and driving less carefully. This change in behaviour is called",
+      "options": {
+        "A": "Adverse selection.",
+        "B": "Asymmetric information.",
+        "C": "Bounded rationality.",
+        "D": "Moral hazard."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Moral hazard</strong> occurs <em>after</em> a transaction, when one party alters its behaviour because it no longer carries the full cost of the risk it takes.<br />The insurer now bears the cost of a theft or a crash, so the driver's own incentive to be careful weakens. Nothing dishonest need be involved — the change is often unconscious.<br />The timing is what separates it from adverse selection: adverse selection is about <em>who</em> buys the insurance, moral hazard about <em>how they behave</em> once they have it. Excesses and no-claims bonuses exist to put some of the risk back onto the driver.",
+        "distractors": {
+          "A": "Adverse selection would be the riskiest drivers being the keenest to buy comprehensive cover in the first place. That happens before the policy is signed.",
+          "B": "Asymmetric information is the underlying condition — the insurer cannot observe how carefully the driver drives. Moral hazard is the specific behaviour that condition permits.",
+          "C": "Bounded rationality is deciding under limits of information and mental effort. The driver here is responding rationally to a change in who bears the risk."
+        }
+      }
     }
   ]
 }

@@ -162,6 +162,28 @@
           "D": "£32m is not small; it is the larger of the two figures in the second column and more than the £25m improvement it bought."
         }
       }
+    },
+    {
+      "id": "edexcel-1-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator recruits most of its senior staff from the industry it oversees, and depends on that industry for almost all of the data it uses. The economic risk this creates is that",
+      "options": {
+        "A": "The industry will lobby for the regulator to be abolished.",
+        "B": "The regulator will lack the legal power to impose fines.",
+        "C": "The regulator will come to serve the firms it oversees.",
+        "D": "The regulator's administrative costs will exceed its benefits."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is <strong>regulatory capture</strong>: a regulator set up to act for consumers gradually comes to act for the industry instead.<br />Neither of the conditions in the stem is sinister on its own. Regulators need people who understand the industry, and the industry holds the data. But together they mean the regulator sees the world largely through the firms' eyes, and the people making the decisions expect to work in the sector again.<br />The result is intervention that leaves the outcome worse than no intervention would have — a government failure created by the body meant to correct a market failure.",
+        "distractors": {
+          "A": "A captured regulator is useful to the industry, not a threat to it. Firms have every reason to keep it in place.",
+          "B": "Legal powers are set by statute and are unaffected by who the regulator employs. The problem is how willingly the powers get used.",
+          "D": "Excessive administrative cost is a separate cause of government failure. Nothing in the stem suggests this regulator is expensive to run."
+        }
+      }
     }
   ]
 }
