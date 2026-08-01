@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.6.4",
+  "slug": "2-6-4-conflicts-between-objectives-and-policies",
+  "title": "Conflicts Between Objectives and Policies",
+  "shortTitle": "Conflicts Between Objectives",
+  "pageTitle": "Policy Conflicts and Trade-Offs Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on conflicts between macroeconomic objectives for Edexcel A-Level Economics, including the short-run Phillips curve.",
+  "intro": "Seven original multiple-choice questions on the trade-offs between macroeconomic objectives, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on trade-offs between objectives, the short-run Phillips curve, and the conflicts each policy tool creates.",
+  "questions": [
+    {
+      "id": "edexcel-2-6-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Governments face trade-offs between their macroeconomic objectives. A trade-off between two objectives means that",
+      "options": {
+        "A": "Both can be met at the same time.",
+        "B": "Improving one tends to worsen the other.",
+        "C": "Neither can be achieved by policy.",
+        "D": "The two are measured on the same scale."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A trade-off is not a claim that an objective is out of reach. It is a claim that progress towards it is paid for in another objective. Rapid growth tends to raise inflation and pull in imports; reducing inequality can dull incentives; using higher interest rates to cut inflation slows growth. Because objectives conflict in this way, policy involves <strong>prioritisation</strong> — deciding which objective matters most in the current circumstances — rather than meeting all of them at once.",
+        "distractors": {
+          "A": "That is the absence of a trade-off. Where two objectives can be met together there is no conflict to resolve.",
+          "C": "A trade-off assumes policy works. It is precisely because a policy succeeds on one front that it costs something on another.",
+          "D": "The objectives are measured on entirely different scales — percentages, indices, coefficients. That has nothing to do with whether they conflict."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Unemployment in an economy falls sharply, and demand-pull inflation follows. The link between the two is that people moving from benefits into work",
+      "options": {
+        "A": "Bid up the prices firms pay for materials.",
+        "B": "Force firms to raise wages to keep them.",
+        "C": "Push the exchange rate up against other currencies.",
+        "D": "Take home a full wage and spend more."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A household living on unemployment-related benefits receives far less than the same household earning a full wage. As unemployment falls, incomes across those households rise by the difference, and consumption rises with them. That is an increase in <strong>aggregate demand</strong>, and in an economy near capacity it pulls the price level up. This is the mechanism the notes give for the unemployment-inflation trade-off: it runs through demand, not through costs.",
+        "distractors": {
+          "A": "Higher material prices are a <strong>cost-push</strong> mechanism, shifting SRAS left rather than AD right. The stem specifies demand-pull inflation.",
+          "B": "Wage pressure in a tight labour market is real, but it is cost-push as well — it raises firms' costs. Again the stem specifies demand-pull.",
+          "C": "Nothing in the stem moves the exchange rate, and a stronger currency would make imports cheaper, holding prices down rather than pushing them up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises aggregate demand, and unemployment falls below its previous level while inflation rises. Two years later inflation is higher still and unemployment has returned to where it began. This sequence illustrates that the trade-off",
+      "options": {
+        "A": "Applies only in the short run.",
+        "B": "Can be exploited indefinitely by policy.",
+        "C": "Never existed in the first place.",
+        "D": "Runs in the opposite direction to the curve."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The short-run Phillips curve describes a genuine inverse relationship, and the first part of the sequence is exactly what it predicts: higher demand, lower unemployment, higher inflation. The limitation the notes attach is that this holds only in the <strong>short run</strong>. In the long run the Phillips curve is vertical at the <strong>natural rate of unemployment</strong>, so unemployment returns to that rate whatever the government does to demand. What remains is the inflation. The gain was temporary; the cost was not.",
+        "distractors": {
+          "B": "If it could be exploited indefinitely, unemployment would have stayed down. The second half of the sequence is the evidence against that.",
+          "C": "The trade-off did operate — unemployment fell at first, and inflation rose as the curve predicts. The point is how long it lasted.",
+          "D": "The economy moved down and along the curve in the expected direction. Nothing here is inverted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A central bank raises interest rates over two years in order to bring inflation back to target, and succeeds. The conflict this creates with another objective is that higher rates have also",
+      "options": {
+        "A": "Discouraged the investment that raises capacity.",
+        "B": "Made the currency cheaper against other currencies.",
+        "C": "Raised the government's tax revenue from firms.",
+        "D": "Widened the gap between rich and poor households."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Contractionary monetary policy works by reducing aggregate demand, and <strong>investment</strong> is one of the components it reduces: borrowing to build a factory or buy machinery costs more, and future returns look less attractive against a higher rate. But investment is also what adds to the capital stock. Two years of weak investment leaves the economy with less productive capacity than it would otherwise have had, so the inflation target has been met at the cost of long-run growth. This is the monetary policy conflict the notes describe.",
+        "distractors": {
+          "B": "Higher rates attract money in from abroad, which raises demand for the currency and makes it <em>dearer</em>, not cheaper.",
+          "C": "Weaker demand means lower profits, so corporation tax receipts fall. Higher revenue would in any case not be a conflict.",
+          "D": "Higher rates reward savers and penalise borrowers, so the distributional effect is not straightforwardly a widening one — it is prolonged <em>low</em> rates that inflate asset prices and widen wealth gaps."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is in a deep recession and the government's budget deficit is already large. It announces a substantial increase in spending on benefits and on new infrastructure. The objective it has chosen to set aside is",
+      "options": {
+        "A": "Economic growth.",
+        "B": "Environmental protection.",
+        "C": "Fiscal balance.",
+        "D": "Low unemployment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The announcement is expansionary fiscal policy: higher government spending in a downturn. It is aimed squarely at growth and at unemployment, which are the objectives a recession puts most at risk. But with the deficit already large, spending more has to be borrowed, widening the deficit further and adding to the national debt. The government has judged that output and jobs matter more right now than balancing the books — which is what prioritising between conflicting objectives looks like in practice.",
+        "distractors": {
+          "A": "The policy is aimed at supporting growth, not at giving it up. Raising AD in a recession is the standard response.",
+          "B": "Infrastructure building does carry an environmental cost, but nothing in the announcement makes that the objective being traded away. The deficit is what the stem puts under strain.",
+          "D": "Higher spending on benefits and construction supports employment. It is one of the two objectives the policy is protecting."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-4-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 sets out four claims a student makes about the trade-offs that come with rapid economic growth.<br />From Table 1, the claim that is stated the wrong way round is",
+      "table": {
+        "caption": "Table 1: Four claims about the trade-offs that come with growth",
+        "head": [
+          "",
+          "Claim"
+        ],
+        "rows": [
+          [
+            "Claim 1",
+            "Rapid growth tends to raise inflation"
+          ],
+          [
+            "Claim 2",
+            "Rapid growth tends to widen income inequality"
+          ],
+          [
+            "Claim 3",
+            "Rapid growth tends to worsen the current account"
+          ],
+          [
+            "Claim 4",
+            "Rapid growth tends to reduce pollution"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Claim 1.",
+        "B": "Claim 2.",
+        "C": "Claim 3.",
+        "D": "Claim 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Growth means more production, more transport and more consumption, so pollution and carbon emissions rise with it and natural resources are depleted faster. That is why growth is said to <em>conflict</em> with environmental sustainability, and the claim has the relationship the wrong way round. The other three are the standard trade-offs the notes set out: demand-pull inflation as the economy overheats, higher incomes pulling in imports, and the gains from growth accruing disproportionately to those who are already better off.",
+        "distractors": {
+          "A": "Correct as stated. Growth driven by rising aggregate demand pushes inflation above its target.",
+          "B": "Correct as stated. Growth in high-paying sectors benefits skilled workers most, so the income distribution tends to widen.",
+          "C": "Correct as stated. Higher average incomes raise demand for imports, which worsens the current account unless exports keep pace."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government must choose between weakening employment protection and funding a large retraining programme. Both are intended to raise productive capacity. Compared with the retraining programme, the deregulation route is most likely to",
+      "options": {
+        "A": "Cost more and raise capacity by less.",
+        "B": "Raise capacity later but spread the gains more evenly.",
+        "C": "Raise capacity sooner but widen income inequality.",
+        "D": "Widen inequality and the budget deficit together."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two routes differ on cost, on speed and on who gains. Weakening employment protection is <strong>market-based</strong>: it costs the government nothing and takes effect as soon as firms adjust their hiring, but it works by reducing the pay and security of the workers affected, so it tends to widen inequality. Retraining is <strong>interventionist</strong>: it raises the quality of labour and tends to narrow inequality, but it has to be funded, and its effects reach the labour force only after several years. This is the efficiency-against-equity conflict the notes set out for supply-side policy.",
+        "distractors": {
+          "A": "Deregulation costs the government nothing, so it is the cheaper of the two routes by a wide margin.",
+          "B": "This describes the retraining programme — slower to work, but distributing the gains more evenly. The stem asks about the deregulation route.",
+          "D": "Only half right. Deregulation does tend to widen inequality, but it requires no public spending, so it does not widen the deficit. Retraining is the route that costs money."
+        }
+      }
+    }
+  ]
+}

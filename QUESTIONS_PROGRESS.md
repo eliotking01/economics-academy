@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 121 topics, 940 questions. AQA is complete, Edexcel Theme 1 is complete,
-and Theme 2 units 2.1 to 2.5 are done. 45 topics remain.**
+**Live: 125 topics, 974 questions. AQA is complete, Edexcel Themes 1 and 2 are
+complete. 41 topics remain, all in Themes 3 and 4.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -353,52 +353,62 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 65 topics, 505 questions still to write
+### Edexcel — 41 topics, 320 questions still to write
 
-**This is all that is left.** AQA is finished and Theme 1 is complete.
+**This is all that is left.** AQA is finished, and Themes 1 and 2 are complete.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 4 (unit 2.6 only) | ~30 |
+| Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
 | Theme 3 | 20 | 157 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 2 unit 2.6, which finishes Theme 2** — 2.6.1 possible
-macroeconomic objectives, 2.6.2 demand-side policies, 2.6.3 supply-side policies,
-2.6.4 conflicts between objectives and policies. Four topics, roughly 30
-questions.
+**Next batch: Theme 3 unit 3.1 and 3.2** — 3.1.1 sizes and types of firms,
+3.1.2 business growth, 3.1.3 demergers, 3.2.1 business objectives. Four topics,
+roughly 30 questions. Theme 3's twenty topics are:
 
-**Twins to audit:** AQA 2.1.1 (objectives of government policy, 7 questions),
-AQA 2.3.4 (policy conflicts and the Phillips curve, 8), AQA 2.4.3 (central banks
-and monetary policy, 9), AQA 2.5.1 (fiscal policy, 9) and AQA 2.5.2 (supply-side
-policies, 8). **41 questions over the same ground — the largest twin overlap of
-any Edexcel unit so far.** Print all five sets before writing.
+```
+3.1.1 3.1.2 3.1.3 | 3.2.1 | 3.3.1 3.3.2 3.3.3 3.3.4
+3.4.1 3.4.2 3.4.3 3.4.4 3.4.5 3.4.6 3.4.7 | 3.5.1 3.5.2 3.5.3 | 3.6.1 3.6.2
+```
 
-Note that AQA 2.3.4 owns the **Phillips curve** entirely, including a sketch
-item. Check whether the Edexcel 2.6.4 page teaches it before deciding what to do
-with that.
+**Theme 3 is the closest twin of the whole project — closer than Theme 1's
+market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
+topic for topic — **201 questions** between them, plus 1.8.7 and 1.8.8 on
+competition policy. The twin map:
 
-**The twins for the rest of Theme 2 are AQA macro, and the overlap is severe.**
-Unit 2.1 alone collided with AQA 2.1.2, 2.1.3, 2.1.4, 2.3.2, 2.3.3 and 2.6.3.
-Print every AQA macro stem before writing, exactly as batch 13 did for micro.
-Specific ground already occupied:
+| Edexcel | AQA twin | AQA questions |
+| --- | --- | --- |
+| 3.1.1 sizes and types of firms | 1.5.1 market structures (partly) | 7 |
+| 3.1.2 business growth | 1.5.8 dynamics of competition (partly) | 6 |
+| 3.2.1 business objectives | 1.5.2 objectives of firms | 7 |
+| 3.3.1 revenue | 1.4.6 marginal, average and total revenue | 9 |
+| 3.3.2 costs | 1.4.4 costs of production, 1.4.3 diminishing returns | 19 |
+| 3.3.3 economies and diseconomies of scale | 1.4.5 | 8 |
+| 3.3.4 normal and supernormal profit | 1.4.7 profit | 8 |
+| 3.4.1 efficiency | 1.5.10 market structure and efficiency | 8 |
+| 3.4.2–3.4.5 | 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7 | 42 |
+| 3.4.6 monopsony | 1.6.4 imperfect labour markets (partly) | 8 |
+| 3.4.7 contestability | 1.5.9 contestable markets | 8 |
+| 3.5.1–3.5.3 labour | 1.6.1, 1.6.2, 1.6.3 | 24 |
+| 3.6.1–3.6.2 intervention | 1.8.7, 1.8.8 competition policy | 14 |
 
-- **2.2 (AD)** — AQA 2.2.2 and 2.2.3: the AD expression, why AD slopes down,
-  MPC calculation, interest rates and consumption, the wealth effect, net
-  investment, automatic stabilisers, depreciation and net trade.
-- **2.3 (AS)** — AQA 2.2.5 and 2.2.6 cover SRAS and LRAS almost completely,
-  including the Keynesian/Classical contrast and both sketch items.
-- **2.4 (national income)** — AQA 2.2.1 (circular flow) and 2.2.4 (the
-  multiplier, 10 questions including five calculations).
-- **2.5 (growth)** — AQA 2.3.1 (growth and the economic cycle, output gaps).
-- **2.6 (objectives and policies)** — AQA 2.1.1, 2.3.4, 2.5.1 and 2.5.2.
+**Print the AQA twin before writing each Edexcel set, without exception.**
+Batch 13 proved the value of doing this in advance (one residual 8-gram over 41
+questions) and batch 12 proved the cost of skipping it (four rewrites). At this
+overlap density, doing it afterwards will not be recoverable.
 
-**Four Theme 2 pages in the remaining units are incomplete** — see
-`REVIEW-NOTES.md` N-Q9. 2.2.2 does not teach expectations, 2.2.3 does not teach
-the accelerator, 2.4.1 does not teach the three approaches to measuring GDP, and
-2.5.1 does not teach demand-side causes of growth. Write to what each body
-actually contains and note the omission, as unit 2.1 did.
+Unlike Themes 1 and 2, Theme 3 has **real arithmetic on almost every page** —
+revenue and cost schedules, average and marginal calculations, concentration
+ratios, profit. That is the best chance the site has left to pull the `calculation`
+share back towards its ~15% target from the current 8%. Plan the calculation
+items deliberately, and note that AQA's 1.4.4 and 1.4.6 already use most of the
+standard schedule archetypes, so the numbers and the framings both have to be new.
+
+**`raw-notes/edexcel/` has markdown for all twenty Theme 3 topics** (3.2 is a
+single file covering 3.2.1). Read it for speed, then diff against the published
+page.
 
 **Reading the notes.** `raw-notes/edexcel/` has markdown for most of Themes 2–4,
 which is far quicker than scraping the HTML — but **the published pages are what
@@ -415,30 +425,26 @@ if in doubt — the guide's rule is that concision beats coverage.
 
 ## Open items
 
-- **Nav sub-menu.** `templates/header.html` carries a top-level
-  **Practice Questions** entry only. The two-level board dropdown that Revision
-  Notes and Past Papers have was written and then deliberately removed, because
-  it would have pointed at five board index pages that do not yet exist. A
-  comment marks the insertion point. **Add it once the remaining board indexes
-  are built.**
+- **Nav sub-menu — needs the site owner's call.** `templates/header.html` carries
+  a top-level **Practice Questions** entry only. The two-level board dropdown
+  that Revision Notes and Past Papers have was written and then deliberately
+  removed, because it would have pointed at five board index pages that did not
+  yet exist. A comment marks the insertion point. **Four of the five now exist
+  and are complete and final** — both AQA indexes, `edexcel-theme-1` (22 of 22)
+  and `edexcel-theme-2` (24 of 24). Only Themes 3 and 4 are missing, and those
+  are the last two batches of work. Restoring the dropdown with the four that are
+  finished is now a reasonable call; so is waiting for Theme 4. Either way it is
+  a nav change on every page, so it needs approval.
 - **Hub and board index density.** Both list only what is live. They fill out
   per batch; no action needed.
-- **Nav sub-menu.** Three of the five board indexes now exist — both AQA ones and
-  `practice-questions/edexcel-theme-1/index.html`, which is now **complete** at
-  22 of 22 topics rather than partial. Themes 2, 3 and 4 do not exist, so the
-  two-level dropdown still cannot list all five. Now is a reasonable moment to
-  restore it with the three that are finished, since none of them will change
-  again; the alternative is to keep waiting until Theme 4 lands. **Needs the site
-  owner's call** — it is a nav change on every page.
-- **Skill mix across AQA micro.** `applied-reasoning` finished at 64% against a
-  ~40% target and `calculation` at 6% against ~15%. This is a property of the
-  specification — units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual almost
-  throughout. Recorded rather than corrected; watch whether macro and Edexcel
-  bring the site-wide ratio closer to target. Macro 2.1 pulled the right way —
-  24% `calculation` and 15% `data-table` in that batch — and 2.2 held
-  `calculation` at 14%, taking the site-wide figures to 8% and 8%. Progress is
-  real but slow, because micro's 401 questions dominate the total. Edexcel
-  Themes 2 and 4 are where the rest of the arithmetic lives.
+- **Skill mix.** `applied-reasoning` runs at 60% site-wide against a ~40% target
+  and `calculation` at 8% against ~15%. This is largely a property of the
+  specifications — AQA micro units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual
+  almost throughout, and AQA micro's 401 questions dominate the total. Macro
+  pulled the right way: AQA macro finished at 12% `calculation`, Edexcel Theme 2
+  at 11%. Recorded rather than corrected. **Edexcel Theme 3 is the last real
+  chance to move it** — revenue, cost and profit schedules, average against
+  marginal, and concentration ratios are all on those pages.
 - **Written-response extension.** Proposed in the original brief but **not
   built** and not approved: 1–2 short written questions per topic with
   indicative-content model answers behind `<details>`, plus a marking-service
@@ -987,6 +993,104 @@ over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
 
+### Batch 19 — Edexcel Theme 2, unit 2.6 (2026-08-01)
+
+4 topics, 34 questions. **Completes Edexcel Theme 2: 24 of 24 topics and 198
+questions.** Objectives, demand-side policies, supply-side policies and the
+conflicts between them.
+
+All 34 re-derived from the stem alone with **0 mismatches**; the one calculation
+(2.6.2 Q10, a deficit added to a debt stock) recomputed with all three distractor
+figures.
+
+**Both originality checks came back completely clean, and this is the headline.**
+Zero shared runs of 8 words or more against either past-paper corpus, **and zero
+against the 940-question bank** — no rewrites, no rewordings, nothing to
+adjudicate. That is the first batch on either board to return nothing on all
+three fronts at once, and it happened on the unit that was flagged in advance as
+having the largest twin overlap of any Edexcel unit so far.
+
+**The reason is the twin audit, run in full before a word was written.** All 41
+questions from AQA 2.1.1, 2.3.4, 2.4.3, 2.5.1 and 2.5.2 were printed and read,
+and so were all 164 existing Edexcel Theme 2 stems, which turned out to matter
+just as much. The ground that had to be surrendered:
+
+- **AQA 2.4.3 owns the whole monetary transmission mechanism** — variable-rate
+  mortgages, hot money and the exchange rate, what QE buys, why QE raises
+  lending, the liquidity trap, and a rate cut blunted by weak confidence. Six of
+  the nine.
+- **AQA 2.5.1 owns fiscal policy's set pieces** — deficit against debt, the
+  budget-position table, transfer payments, VAT's regressiveness, crowding out,
+  the structural deficit, the Laffer curve and Ricardian equivalence. Eight of
+  the nine, and the Edexcel page teaches all of them.
+- **AQA 2.5.2 owns five of the eight supply-side archetypes** — the aim, the
+  market-based/interventionist table, infrastructure, the income tax incentive,
+  the minimum wage cut narrowing the benefit gap, privatisation into a monopoly,
+  and the education time lag.
+- **AQA 2.3.4 owns the Phillips curve outright**, including the sketch item, the
+  vertical long-run curve and supply-side policy cutting the natural rate.
+- **My own Theme 2 sets had already taken more than expected**: infrastructure
+  raising AD then LRAS (2.2.4 Q4), training doing the same (2.5.1 Q5), tightening
+  in a boom (2.5.3 Q5), a table of measures that shift LRAS (2.3.3 Q3), an LRAS
+  shift lowering the price level (2.4.3 Q5), and growth worsening the current
+  account (2.5.4 Q6).
+
+**What was left is almost entirely Edexcel's own material, and there was more of
+it than the twin overlap suggested:**
+
+- **The seven-objective impact grid.** The Edexcel 2.6.2 and 2.6.3 pages work
+  through what each policy does to growth, inflation, employment, the current
+  account, income distribution, the environment and the government budget. AQA
+  never does this systematically, and three questions come straight out of it:
+  low rates widening *wealth* inequality through asset prices, expansionary
+  fiscal policy improving equality through progressive tax and public services,
+  and a rate cut improving the budget by cutting debt-servicing costs.
+- **The balance of payments effect of a tax cut depends on which tax.** An income
+  tax cut pulls in imports; a VAT cut works on prices and helps exports. The
+  Edexcel page states both halves. This is the best question in the batch and has
+  no counterpart anywhere in the bank.
+- **Cutting income tax can *reduce* hours worked**, because the same target income
+  is now reachable in less time. Edexcel gives this as the evaluation of the
+  policy AQA 2.5.2 Q4 tests straight.
+- **Evaluations attached to every supply-side tool** — subsidy dependency,
+  deregulation's unintended quality effects, weaker unions damaging motivation
+  and so productivity, lower corporation tax against the budget. Five questions,
+  and AQA has none of these.
+- **Full employment stated as 4-5% rather than 0%**, and the fiscal target stated
+  **over the cycle** rather than annually. Both are Edexcel framings.
+- **Large current account *surpluses* as a problem.** AQA only ever tests
+  deficits.
+- **The Edexcel mechanism for the unemployment-inflation link** — people moving
+  from benefits onto a full wage and spending the difference, so the inflation is
+  explicitly demand-pull rather than cost-push. Naming demand-pull in the stem is
+  what makes the wage-cost distractor cleanly wrong.
+
+**No sketch items, and this one is a genuine loss rather than a design choice.**
+Unit 2.6 is where AD/AS and LRAS diagrams are applied, but AQA 2.5.2 Q7 already
+has the supply-side-against-fiscal sketch, AQA 2.3.4 Q2 has the Phillips curve,
+and my own 2.3.3 and 2.4.3 have the Keynesian ones. The one free diagram — the
+raw notes' contractionary policy on a Keynesian curve, with AD in the vertical
+section — **is not on the published page**, so it was left alone.
+
+**Letter distribution came out at A 9, B 7, C 8, D 10** — the first batch on the
+site where D is the most-used letter. Options were ordered by domain sequence
+while drafting, and where alphabetical order would have pushed the answer early,
+the correct option was reworded to sort later rather than the set being
+reshuffled afterwards. That is §1's advice applied at the point it is cheap.
+
+| | |
+| --- | --- |
+| Answer letters | A 9, B 7, C 8, D 10 (even would be 8.5) |
+| Skills | applied-reasoning 23, definition-in-context 6, data-table 4, calculation 1 |
+| Difficulty | foundation 4, standard 26, stretch 4 |
+| Sketch to solve | 0 |
+
+`applied-reasoning` at 68% is the second highest of any batch. Unit 2.6 is policy
+evaluation from end to end: every page is a list of tools followed by a list of
+reasons each may fail. `calculation` at 3% matches unit 2.5's low, and for the
+same reason — the only arithmetic these four pages support is the budget
+identity, and using it twice would have produced near-duplicate questions.
+
 ### Batch 18 — Edexcel Theme 2, unit 2.5 (2026-08-01)
 
 4 topics, 31 questions. **Economic Growth** — its causes, output gaps, the trade
@@ -1015,6 +1119,21 @@ Against our own bank, three needed fixing and one of them was a port:
 **Worth carrying forward: my own table captions are becoming a template.** The
 cross-bank check now surfaces them more often than it surfaces real overlaps.
 Vary the caption wording per set, or the noise will keep growing as the bank does.
+
+**Re-verified in full before batch 19 (2026-08-01).** Second cold re-solve of all
+31 — again 0 mismatches. Every mechanical gate clean: the generator, HTML, links,
+text and markup integrity, no removed lines, no site-wide option-length flags,
+cross-links and sitemap entries present on all four topics. Originality re-run
+returned zero hits at n=8 against both past-paper corpora and no numeric option
+set sharing three values with a paper.
+
+One intra-bank 8-gram survived and **is being left alone**: 2.5.1 Q4 shares
+"in an economy. using table 1 the change that" with 2.2.1 Q5. That is exactly the
+caption-plus-stem template this batch flagged — the two tables and the two
+questions have nothing else in common (potential against actual output, versus
+net trade). It is noise of my own making, not duplication. The fix is to vary the
+template in new sets, which batch 19 did, not to rewrite a committed question for
+a third time.
 
 **Angles Edexcel opens that AQA does not:**
 
@@ -1372,6 +1491,42 @@ supports naturally.
 the balance of payments. The AD/AS diagrams start at 2.2, and a sketch item here
 would have been invented rather than earned. The same thing happened at AQA 2.1,
 and the share recovered from 2.2 onward.
+
+---
+
+## Edexcel Theme 2 — 24 of 24 topics, complete
+
+**Final profile:**
+
+| | |
+| --- | --- |
+| Topics | 24 of 24 |
+| Questions | 198, against 187 planned |
+| Answer letters | A 57, B 55, C 49, D 37 (even would be 49.5) |
+| Skills | applied-reasoning 127, definition-in-context 31, calculation 21, data-table 19 |
+| Difficulty | foundation 24, standard 147, stretch 27 |
+| Sketch to solve | 2 |
+
+Theme 2 is the site's best theme for arithmetic — `calculation` at 11% and
+`data-table` at 10%, against 7% and 8% in Theme 1. The macro specification
+carries it: GDP from its components, PPP conversion, index numbers, real wages,
+the unemployment rate, the current account, net investment, the multiplier, the
+output gap and the budget identity are all genuine calculations that the pages
+support without invention.
+
+**Only 2 sketch items across 198 questions**, against a ~10% target, and the
+cause is structural rather than an oversight. AQA macro was written first and
+took both obvious AS sketch items (2.2.2 and 2.2.6), the supply-side against
+fiscal contrast (2.5.2) and the Phillips curve (2.3.4). Where Edexcel introduces
+a diagram — the AD curve in 2.2, the trade cycle in 2.5.3, AD/AS in 2.6 — the
+page has the figure printed on it, so asking a student to sketch what they are
+looking at earns nothing. The two that survived are in 2.3.3 and 2.4.3, where the
+Keynesian and Classical models have to be compared rather than reproduced.
+
+`D` finished at 37 against an even 49.5, the same shortfall Theme 1 showed. It is
+concentrated in units 2.1 to 2.4; the last two batches came in at D 5 of 31 and
+D 10 of 34 respectively, so the drafting-order fix works when it is applied from
+the start. Not worth retrofitting.
 
 ---
 

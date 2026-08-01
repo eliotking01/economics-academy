@@ -1,0 +1,260 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.6.3",
+  "slug": "2-6-3-supply-side-policies",
+  "title": "Supply-Side Policies",
+  "shortTitle": "Supply-Side Policies",
+  "pageTitle": "Supply-Side Policies Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on supply-side policies for Edexcel A-Level Economics: market-based and interventionist measures, and how to evaluate each.",
+  "intro": "Ten original multiple-choice questions on supply-side policies, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Ten original multiple-choice questions on market-based and interventionist supply-side policies, how each raises capacity, and the evaluation of each.",
+  "questions": [
+    {
+      "id": "edexcel-2-6-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An economy's productive potential is the maximum output it can produce when every factor of production is being used to the full. This level of output is also known as",
+      "options": {
+        "A": "Full employment output.",
+        "B": "Nominal output at current prices.",
+        "C": "The long-term average growth rate.",
+        "D": "This year's actual output."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Productive potential, or productive capacity, is what an economy <em>could</em> produce with all its resources employed. It is the position of the <strong>LRAS</strong> curve on an AD/AS diagram and of the production possibility frontier. Because it is the output associated with all factors being fully employed, it is written Yfe and called the full employment level of output. Supply-side policies are defined by their aim of raising it.",
+        "distractors": {
+          "B": "Nominal output is measured at current prices, so it moves with the price level as well as with output. Capacity is a real concept.",
+          "C": "The long-term average growth rate is the <strong>trend rate of growth</strong>. It describes how fast potential output rises, not the level it has reached.",
+          "D": "Actual output is what the economy does produce, which usually sits below potential. The difference between the two is the output gap."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 pairs four supply-side aims with a policy intended to meet each.<br />From Table 1, the policy that does not meet the aim beside it is",
+      "table": {
+        "caption": "Table 1: Supply-side aims and a policy intended to meet each",
+        "head": [
+          "Aim",
+          "Policy"
+        ],
+        "rows": [
+          [
+            "Increase incentives",
+            "Reduce the rate of income tax"
+          ],
+          [
+            "Promote competition",
+            "Deregulate a protected market"
+          ],
+          [
+            "Improve the quality of labour",
+            "Raise spending on schools and training"
+          ],
+          [
+            "Improve infrastructure",
+            "Reduce the powers of trade unions"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Reduce the rate of income tax.",
+        "B": "Deregulate a protected market.",
+        "C": "Raise spending on schools and training.",
+        "D": "Reduce the powers of trade unions."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Reducing union power is a <strong>labour market</strong> reform. The argument for it is that weaker bargaining lowers the wage firms have to pay, so they employ more workers. It does nothing at all for the roads, railways, broadband and energy networks that the infrastructure aim is about — those need <strong>government investment</strong>, which is an interventionist measure. The other three pairings are the standard ones.",
+        "distractors": {
+          "A": "Cutting income tax raises the take-home reward from working, which is precisely the incentives aim.",
+          "B": "Deregulation lowers barriers to entry, so more firms can compete in the market. That is the competition aim.",
+          "C": "Spending on schools and training raises human capital, which is how the quality of labour is improved."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Supply-side policies are divided into market-based and interventionist measures. What makes a policy market-based is that it raises productive capacity by",
+      "options": {
+        "A": "Funding projects the private sector will not.",
+        "B": "Removing a government intervention.",
+        "C": "Shifting aggregate demand to the right.",
+        "D": "Spending public money on human capital."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Both types share the same aim — shifting <strong>LRAS</strong> to the right — so the distinction is about the instrument, not the objective. <strong>Market-based</strong> measures work by taking the government out of the way: cutting tax rates, deregulating, privatising, weakening union power. <strong>Interventionist</strong> measures work by putting public money in: education, healthcare, infrastructure, research and development, and subsidies.",
+        "distractors": {
+          "A": "This is an interventionist measure. Funding what the market will not provide is government spending to correct a market failure.",
+          "C": "Shifting AD is demand-side policy. Every supply-side policy, of either type, is aimed at LRAS.",
+          "D": "Also interventionist. Spending on human capital is the classic example of the government route rather than the market route."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government reduces the value of unemployment-related benefits. The mechanism by which this is expected to raise productive capacity is that it",
+      "options": {
+        "A": "Increases the gap between benefits and pay in work.",
+        "B": "Lowers the cost of employing each worker.",
+        "C": "Reduces the government's spending and its deficit.",
+        "D": "Removes the need for firms to train new staff."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Capacity depends partly on how large the labour force is. Cutting benefits widens the income differential between claiming and working, which strengthens the incentive to take a job. If people who were economically inactive join the labour force as a result, more factors of production are available and potential output rises. The evaluation the notes attach is that people genuinely unable to work are left with less, which raises inequality and can push households into poverty.",
+        "distractors": {
+          "B": "Benefits are paid by the state, not by employers. Cutting the minimum wage or employers' National Insurance would lower the cost of hiring; cutting benefits does not.",
+          "C": "A smaller deficit is a fiscal consequence of the policy, not the route by which capacity rises. LRAS shifts because the labour force grows.",
+          "D": "Benefit levels have nothing to do with firms' training needs. Training raises the <em>quality</em> of labour, which is a separate aim."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government cuts the basic rate of income tax in order to raise the incentive to work. Some workers respond by working fewer hours than before. The best explanation is that these workers",
+      "options": {
+        "A": "Are now taxed at a higher marginal rate.",
+        "B": "Can reach their target income in less time.",
+        "C": "Face a higher cost of living after the cut.",
+        "D": "Have moved into a higher tax band as a result."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A tax cut raises take-home pay per hour, and that pulls in two directions at once. It raises the reward for working an extra hour, which encourages more work. But it also means a worker aiming at a particular standard of living can now reach it in fewer hours, and can take the gain as leisure instead. The notes give this as the evaluation of cutting income tax: labour supply can <em>contract</em> rather than expand, so the increase in productive capacity is not guaranteed.",
+        "distractors": {
+          "A": "The policy cuts the basic rate, so the marginal rate these workers face has fallen. That is the whole mechanism the policy relies on.",
+          "C": "Nothing in the stem raises prices — and a higher cost of living would push workers towards more hours, not fewer.",
+          "D": "Tax bands are defined on income, and earning the same income at a lower rate moves nobody into a higher band."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts corporation tax to encourage firms to start up and to reinvest their retained profits. The conflict this creates with another macroeconomic objective is that it",
+      "options": {
+        "A": "Lowers the productivity of the workforce.",
+        "B": "Raises the price level in the short run.",
+        "C": "Reduces tax revenue and widens the deficit.",
+        "D": "Slows the growth of productive capacity."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Lower corporation tax leaves firms with more profit after tax, which makes starting a business more attractive and gives existing firms more to reinvest. That is the capacity argument. But corporation tax is also a source of government revenue, and cutting the rate reduces receipts, at least until any extra activity feeds through. With spending unchanged the budget deficit widens and the national debt rises, which conflicts directly with the <strong>fiscal balance</strong> objective.",
+        "distractors": {
+          "A": "Nothing in the policy lowers productivity. If the reinvestment happens, productivity is what rises.",
+          "B": "Supply-side measures work on capacity, which eases price pressure rather than adding to it. That is one of the arguments for them.",
+          "D": "This is the opposite of the policy's intended effect, and it is not the conflict the notes identify."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government removes the requirement for care homes to publish independent inspection ratings, in order to cut the compliance costs providers face. The main risk this creates is that",
+      "options": {
+        "A": "Care homes cut quality to reduce costs further.",
+        "B": "Entry to the market becomes harder for new firms.",
+        "C": "The number of care homes falls sharply.",
+        "D": "Wages in the sector are driven upwards."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Deregulation raises capacity by lowering firms' costs and barriers to entry, which is the intended effect here. But the rating requirement existed because families cannot easily judge the quality of care for themselves — an information gap. Once the ratings are gone, a profit-maximising provider can cut staffing or standards without losing custom, because buyers cannot see the difference. The cost saving is real; so is the fall in the standard the regulation was protecting.",
+        "distractors": {
+          "B": "Removing a compliance requirement lowers barriers to entry rather than raising them. Easier entry is what the policy is aiming at.",
+          "C": "Cheaper compliance makes providing care more profitable, so the number of providers would if anything rise.",
+          "D": "Lower compliance costs do not bid wages up, and the concern the policy raises is about the quality of the service rather than the price of labour."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government subsidises firms in a struggling industry so that they can invest and raise output. Ten years later the subsidy is withdrawn and output falls back to where it started. The best explanation is that the firms",
+      "options": {
+        "A": "Faced higher costs than before the subsidy began.",
+        "B": "Invested the subsidy in new capital each year.",
+        "C": "Raised productivity faster than their rivals did.",
+        "D": "Relied on the subsidy rather than reinvesting it."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The case for a subsidy is that it lowers costs enough for firms to invest, so that capacity is permanently higher and the support can eventually stop. The risk the notes identify is that firms simply use the payment to stay profitable at their existing scale. If nothing was reinvested, nothing about the industry's productive capacity changed, and removing the payment returns output to where it began. Ten years of spending bought output while it lasted, at a considerable opportunity cost, and bought no capacity at all.",
+        "distractors": {
+          "A": "Withdrawing the subsidy returns costs to their original level. There is no reason for them to end up higher than before it started.",
+          "B": "Had the money gone into new capital, capacity would be permanently higher and output would not have fallen all the way back.",
+          "C": "Faster productivity growth is exactly what would have made the gain permanent. The puzzle in the stem is that nothing persisted."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government reduces the legal powers of trade unions so that firms can employ more workers at lower wage rates. One reason the expected rise in productive capacity may not materialise is that",
+      "options": {
+        "A": "Firms will have to pay higher wages instead.",
+        "B": "The labour force will shrink as workers retire.",
+        "C": "Unions will be able to negotiate more strongly.",
+        "D": "Worse pay and conditions lower productivity."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The argument for the reform is arithmetic: weaker bargaining lowers the wage, so firms hire more workers and produce more. The notes' evaluation is that pay and working conditions are also what motivate people at work. If both deteriorate, output per worker falls, and that loss offsets the gain from employing more of them. Capacity depends on the <em>quality</em> of labour as well as its quantity, and this policy moves the two in opposite directions.",
+        "distractors": {
+          "A": "Weakening union power lowers the wage firms have to pay. That is the mechanism the policy depends on.",
+          "B": "Retirement patterns have nothing to do with union law, and nothing in the stem changes them.",
+          "C": "The reform reduces union bargaining power. The stem says so directly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-3-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Supply-side policies are sometimes defended on balance of payments grounds. The route by which they are expected to improve the current account is that higher productivity",
+      "options": {
+        "A": "Attracts short-term flows of money from abroad.",
+        "B": "Lowers the exchange rate against other currencies.",
+        "C": "Makes exports more competitive on price.",
+        "D": "Reduces the volume of raw materials imported."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Higher productivity means more output from the same inputs, so the cost of producing each unit falls. Firms can then hold or cut their prices without losing margin, which makes their goods cheaper relative to foreign competitors'. Export volumes rise and imports lose some of their price advantage at home, so the current account improves. Unlike a depreciation, which improves competitiveness only until import costs feed through, this gain lasts as long as the productivity advantage does.",
+        "distractors": {
+          "A": "Short-term money flows are driven by interest rates and are recorded in the financial account, not the current account.",
+          "B": "Supply-side policy works on costs, not on the currency. A more productive economy may well see its currency appreciate.",
+          "D": "Better technology may cut input use, but the balance of payments case rests on selling more abroad rather than on buying fewer raw materials."
+        }
+      }
+    }
+  ]
+}

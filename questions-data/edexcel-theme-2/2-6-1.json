@@ -1,0 +1,194 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.6.1",
+  "slug": "2-6-1-possible-macroeconomic-objectives",
+  "title": "Possible Macroeconomic Objectives",
+  "shortTitle": "Macroeconomic Objectives",
+  "pageTitle": "Macroeconomic Objectives Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on macroeconomic objectives for Edexcel A-Level Economics: growth, unemployment, inflation, the current account and equality.",
+  "intro": "Seven original multiple-choice questions on the objectives a government pursues, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the seven macroeconomic objectives, the indicators used to judge them, and the trade-offs between them.",
+  "questions": [
+    {
+      "id": "edexcel-2-6-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government treats an unemployment rate of around 4-5% as full employment rather than aiming for 0%. The reason a rate this high still counts as full employment is that",
+      "options": {
+        "A": "Cyclical unemployment remains even at the peak of a boom.",
+        "B": "Some unemployment is needed to hold wages down.",
+        "C": "Structural unemployment is left out of the official figures.",
+        "D": "Workers moving between jobs are counted as unemployed."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Full employment does not mean that every person of working age is in a job. At any moment some workers have left one job and not yet started the next, and are counted as unemployed while they search. This is <strong>frictional unemployment</strong>, and it exists even in a healthy labour market, because matching people to vacancies takes time. A target of 0% would mean nobody was ever between jobs — which would require a labour market with no movement in it at all. That is why the UK objective is stated as a rate of roughly <strong>4-5%</strong>.",
+        "distractors": {
+          "A": "Cyclical unemployment is caused by a lack of aggregate demand, and it is precisely the kind that disappears as the economy approaches a boom. If it were still present at the peak, the economy would not be at full employment.",
+          "B": "This treats unemployment as a deliberate tool for suppressing wages. The objective is stated the way it is because some search unemployment is unavoidable, not because a government wants people out of work.",
+          "C": "Structural unemployment is counted. The official measure counts anyone out of work who is available for and seeking a job, whatever the reason they lost the last one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government's fiscal objective is to balance revenue and expenditure <em>over the economic cycle</em> rather than in each individual year. The main advantage of stating it this way is that it",
+      "options": {
+        "A": "Allows borrowing in a slump to be repaid in a boom.",
+        "B": "Guarantees that the national debt falls every year.",
+        "C": "Makes the government's fiscal position easier to measure.",
+        "D": "Removes the need for the government to borrow at all."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In a downturn tax receipts fall and spending on unemployment-related benefits rises, without any decision being taken. Insisting on balance in that year would force tax rises or spending cuts at exactly the moment the economy is weakest, deepening the downturn. Stating the objective <strong>across the cycle</strong> lets those deficits be offset by surpluses in the boom years, when receipts are strong. National debt is still controlled, but the fiscal stance is not forced to work against the cycle.",
+        "distractors": {
+          "B": "Nothing guarantees that. The debt falls only in a year when the government actually runs a surplus, and the objective explicitly permits deficits in weak years.",
+          "C": "The cycle-based version is <em>harder</em> to judge, not easier, because it depends on where in the cycle the economy is currently thought to be — and that is the same measurement problem that makes output gaps so hard to estimate.",
+          "D": "Balancing over the cycle assumes borrowing in some years and repayment in others. It is a way of controlling the debt, not a way of avoiding borrowing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The current account objective is usually stated as a sustainable position — a small surplus or deficit — rather than the largest surplus achievable. A persistently large surplus is a concern because it",
+      "options": {
+        "A": "Adds to the country's borrowing from abroad.",
+        "B": "Causes tension with the country's trading partners.",
+        "C": "Means the country is living beyond its means.",
+        "D": "Reduces the country's holdings of foreign assets."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A large surplus means a country is selling far more to the rest of the world than it buys from it. Because one country's surplus is matched by deficits elsewhere, a persistent large surplus is read abroad as a country relying on other people's demand while restraining its own. That invites retaliation — tariffs, currency disputes and pressure through international institutions. This is why the objective is a <strong>sustainable</strong> position rather than the biggest possible surplus.",
+        "distractors": {
+          "A": "This describes a deficit. A country running a surplus is lending to the rest of the world, not borrowing from it.",
+          "C": "Also a deficit. Living beyond its means is the standard description of a country consuming more than it produces, which is what a persistent deficit implies.",
+          "D": "Backwards. The counterpart of a current account surplus is an accumulation of claims on the rest of the world, so foreign asset holdings rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-1-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Environmental protection is listed among a government's macroeconomic objectives alongside growth and low inflation. The economic case for treating it as one is that pollution and resource depletion",
+      "options": {
+        "A": "Are measured directly in the GDP figures.",
+        "B": "Fall automatically as an economy grows richer.",
+        "C": "Impose costs on others and on future output.",
+        "D": "Only matter to households, not to firms."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Pollution and the depletion of natural resources are <strong>negative externalities</strong>: costs falling on third parties who had no part in the transaction that created them. They are also a claim on the future — an economy that runs down its natural resources and damages its own environment reduces the output it will be able to produce later. That is why the objective is framed in terms of long-term economic viability, and why it belongs beside growth rather than being separate from it.",
+        "distractors": {
+          "A": "GDP measures the value of output and nets off none of the environmental damage caused in producing it. That omission is one of the main arguments for judging performance on broader measures of well-being.",
+          "B": "The claim that growth cleans up after itself is contested, and the objective does not assume it. If it were reliably true there would be no need to state environmental protection as an aim at all.",
+          "D": "Firms bear these costs too, through resource prices, regulation and disrupted supply. The defining feature of an externality is that the cost falls on parties outside the transaction, not that it falls on one sector."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government sets its growth objective at a sustainable 2-3% a year rather than the highest rate it could reach. The reason for that qualification is that growth well above the rate capacity can support",
+      "options": {
+        "A": "Cannot be measured by real GDP figures.",
+        "B": "Is impossible for any economy to achieve.",
+        "C": "Requires the labour force to shrink.",
+        "D": "Runs ahead of capacity and pushes prices up."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The 2-3% figure is roughly what the UK's productive capacity can support. Growth faster than that has to come from working existing capacity harder rather than from having more of it, which opens a <strong>positive output gap</strong>: labour shortages, demand-pull inflation above the 2% target, and imports pulled in as domestic supply cannot keep up. A boom on those terms also ends in a downturn. Sustainable growth means growth the economy can keep up without those costs.",
+        "distractors": {
+          "A": "Real GDP measures growth perfectly well at any rate. The problem with very fast growth is what it does to the other objectives, not whether it can be counted.",
+          "B": "Several economies have grown at 6-8% a year for long periods. The objective is about what a mature economy can sustain, not about what is achievable anywhere.",
+          "C": "Nothing about faster growth requires fewer workers. A growing labour force is one of the things that raises the sustainable rate."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "One reason given for the low and stable inflation objective is the protection of international competitiveness. A country whose inflation runs persistently above its trading partners', with the exchange rate unchanged, will find that its",
+      "options": {
+        "A": "Exports become dearer relative to theirs.",
+        "B": "Exports become more attractive on price.",
+        "C": "Imports become dearer relative to home goods.",
+        "D": "Imports and exports are both unaffected."
+      },
+      "answer": "A",
+      "model": {
+        "working": "If domestic prices rise 6% a year while partners' prices rise 2%, then each year home-produced goods cost more relative to foreign ones. With the exchange rate unchanged, nothing offsets that. Overseas buyers face steadily dearer exports and switch away; domestic buyers find imports steadily cheaper and switch towards them. Net trade weakens, and with it aggregate demand and the current account. This is why the objective is low <em>and stable</em> inflation, not merely positive inflation.",
+        "distractors": {
+          "B": "The opposite. Faster domestic inflation makes exports less attractive on price, not more.",
+          "C": "Backwards. Home-produced goods are the ones whose prices are rising faster, so imports become relatively <strong>cheaper</strong> in the domestic market.",
+          "D": "This would require the exchange rate to move by exactly enough to cancel the inflation difference. The stem holds the exchange rate constant, and no objective can be set on the assumption that it always adjusts perfectly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-6-1-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 pairs four macroeconomic objectives with the indicator most commonly used to judge progress towards each.<br />From Table 1, the pairing that does not fit is",
+      "table": {
+        "caption": "Table 1: Objectives and the indicator used to judge each",
+        "head": [
+          "Objective",
+          "Indicator"
+        ],
+        "rows": [
+          [
+            "Economic growth",
+            "The annual change in real GDP"
+          ],
+          [
+            "Low and stable inflation",
+            "The annual change in nominal GDP"
+          ],
+          [
+            "Greater income equality",
+            "The Gini coefficient"
+          ],
+          [
+            "Environmental protection",
+            "Emissions against the net-zero target"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Economic growth.",
+        "B": "Low and stable inflation.",
+        "C": "Greater income equality.",
+        "D": "Environmental protection."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Nominal GDP rises when output rises, when prices rise, or both, so a change in it cannot separate inflation from growth — which is exactly what an inflation indicator has to do. Inflation is judged by the <strong>Consumer Prices Index</strong> against the 2% target. The other three pairings are the standard ones: the annual change in real GDP for growth, the Gini coefficient for income inequality, and emissions measured against the net-zero target for environmental protection.",
+        "distractors": {
+          "A": "Real GDP strips price changes out, which is precisely why it is the growth measure rather than nominal GDP.",
+          "C": "The Gini coefficient is the standard summary measure of income inequality, running from 0 for complete equality to 1 for complete concentration.",
+          "D": "Greenhouse gas emissions measured against a net-zero commitment are how progress on the environmental objective is judged."
+        }
+      }
+    }
+  ]
+}
