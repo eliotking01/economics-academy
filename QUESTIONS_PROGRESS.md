@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 150 topics, 1,154 questions. AQA is complete, Edexcel Themes 1, 2 and 3
-are complete, and Theme 4 unit 4.1 is half done. 16 topics remain.**
+**Live: 154 topics, 1,181 questions. AQA is complete, Edexcel Themes 1, 2 and 3
+are complete, and Theme 4 unit 4.1 is finished. 12 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -382,22 +382,23 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel Theme 4 — 16 topics, 131 questions. All that is left.
+### Edexcel Theme 4 — 12 topics, 104 questions. All that is left.
 
-AQA is finished, Themes 1 to 3 are complete, and Theme 4 unit 4.1 is half done.
+AQA is finished, Themes 1 to 3 are complete, and Theme 4 unit 4.1 is finished
+(9 topics, 59 questions).
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Themes 1–3 | 0 — **all complete**, 66 topics and 509 questions | — |
-| Theme 4 | 16 | 131 |
+| Theme 4 | 12 | 104 |
 
 **The agreed split for Theme 4**, with batch 26 done:
 
 ```
 batch 26 ✓  4.1.1 globalisation  4.1.2 specialisation & trade  4.1.3 pattern of trade
             4.1.4 terms of trade  4.1.5 trading blocs & the WTO          (32 questions)
-batch 27    4.1.6 restrictions on free trade  4.1.7 balance of payments
-            4.1.8 exchange rates  4.1.9 international competitiveness
+batch 27 ✓  4.1.6 restrictions on free trade  4.1.7 balance of payments
+            4.1.8 exchange rates  4.1.9 international competitiveness  (27 questions)
 batch 28    4.2.1 absolute & relative poverty  4.2.2 inequality
             4.3.1 measures of development  4.3.2 factors influencing growth
             4.3.3 strategies influencing growth
@@ -409,12 +410,6 @@ batch 30    4.5.1 public expenditure  4.5.2 taxation  4.5.3 public sector financ
 
 **Twins, batch by batch:**
 
-- **Batch 27** — AQA 2.6.2 (trade, for tariffs and protectionism), 2.6.3 (balance
-  of payments, 9) and 2.6.4 (exchange rate systems, 10). **Also my own Edexcel
-  2.1.4 (balance of payments, 8) and 2.2.5 (net trade, 9)**, which between them
-  already cover the current account components, the J-curve, Marshall-Lerner,
-  and a depreciation's effect on the trade balance. This is the tightest of the
-  four remaining batches — check both boards before writing 4.1.7 and 4.1.8.
 - **Batch 28** — AQA 1.7.1, 1.7.2 and 1.7.3 (22 questions on income distribution,
   poverty and policy) for unit 4.2, and AQA 2.6.5 (growth and development, 8) for
   unit 4.3. Note AQA 2.6.5 includes the Harrod-Domar model.
@@ -1067,6 +1062,72 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 27 — Edexcel Theme 4, units 4.1.6 to 4.1.9 (2026-08-01)
+
+4 topics, 27 questions. **Completes unit 4.1** — restrictions on free trade, the
+balance of payments, exchange rates, and international competitiveness.
+
+All 27 re-derived from the stem alone with **0 mismatches**.
+
+**This was flagged in advance as the tightest batch remaining, and it was — but
+not evenly.** The four topics split cleanly into two saturated and two open:
+
+- **4.1.7 balance of payments is the most heavily occupied topic on the site.**
+  AQA 2.6.3 has nine questions and my own Edexcel 2.1.4 has eight, and between
+  them they cover the current account components, the balance calculation, the
+  accounting identity, appreciation worsening the current account,
+  expenditure-switching and expenditure-reducing policies, and financing a deficit
+  by selling assets. **Seventeen questions on one topic before this batch
+  started.** What remained is definitional detail nobody had used: remittances as
+  secondary income, debt forgiveness as the capital account item, FDI against
+  portfolio investment, and — the one genuinely good question — that **the size
+  of a deficit matters less than the quality of what finances it**.
+- **4.1.8 exchange rates is nearly as bad.** AQA 2.6.4's ten questions own
+  depreciation against devaluation, the interest-rate sketch, Marshall-Lerner, a
+  currency conversion, the J-curve, imported inflation, the cost of a fixed rate,
+  a table of depreciation causes, currency unions and competitive devaluation.
+  The concept-grep found the gaps: **managed floats returned zero hits**, as did
+  central bank intervention by buying and selling its own currency, speculation as
+  a self-fulfilling force, and reserves running out as the constraint on defending
+  a peg. Six questions, all from that list.
+- **4.1.6 and 4.1.9 were wide open.** Quotas, non-tariff barriers and unit labour
+  costs all returned **zero hits across 1,154 questions**. AQA 2.6.2 has the
+  tariff sketch, infant industries and the inelastic-demand evaluation, and
+  nothing else on protection; it has no topic on competitiveness at all.
+
+**One real collision, caught by the shingle and rebuilt.** 4.1.9 Q6 shared a
+nine-word run with AQA 2.6.3 Q4 — "the most likely effect on its current account
+is that it" — and, worse, the same answer shape, "Worsens, ... exports ...
+abroad". Two questions from different topics converging on the same sentence and
+the same conclusion is a port however it arose. Rebuilt on the **employment**
+consequence of lost competitiveness instead, which Edexcel lists separately and
+which nothing in the bank covered.
+
+**Two more "all other things being equal" flags**, in 4.1.8 Q4 and Q5. Batch 14
+recorded that phrase as a liability at bank scale and it keeps proving so —
+it now collides with something almost every time it is used. Both reworded, to
+"Taken on its own" and "With no other change in the market". **Stop reaching for
+it.**
+
+**The best question in the batch is 4.1.9 Q1**, and it is worth recording why.
+Country A spends £4.8m on labour for 600 units; Country B spends £7.0m for 1,000.
+B has the larger wage bill and is the more competitive producer, because its unit
+labour cost is £7,000 against A's £8,000. The whole point of the measure is that a
+total wage bill says nothing at all on its own — and the arithmetic makes that
+far better than any definition would.
+
+| | |
+| --- | --- |
+| Answer letters | A 6, B 6, C 9, D 6 (even would be 6.75) |
+| Skills | applied-reasoning 19, definition-in-context 4, data-table 3, calculation 1 |
+| Difficulty | foundation 1, standard 22, stretch 4 |
+| Sketch to solve | 0 |
+
+**No sketch items.** The two diagrams unit 4.1 turns on — the tariff diagram and
+the currency demand-and-supply diagram — are both already owned as sketch items
+by AQA 2.6.2 Q5 and 2.6.4 Q2. 4.1.6 Q6 asks about the tariff diagram's *areas*
+instead, which is the part Edexcel sets out in detail and AQA does not.
 
 ### Batch 26 — Edexcel Theme 4, units 4.1.1 to 4.1.5 (2026-08-01)
 

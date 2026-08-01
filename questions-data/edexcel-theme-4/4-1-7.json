@@ -1,0 +1,150 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.7",
+  "slug": "4-1-7-balance-of-payments",
+  "title": "Balance of Payments",
+  "shortTitle": "Balance of Payments",
+  "pageTitle": "Balance of Payments Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on the balance of payments for Edexcel A-Level Economics: the three accounts, and how deficits are financed.",
+  "intro": "Five original multiple-choice questions on the balance of payments, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on the current, capital and financial accounts, and on what it means for a deficit to be financed well or badly.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-7-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Migrant workers in a country send part of their earnings home to their families abroad. In that country's balance of payments these payments are recorded in the",
+      "options": {
+        "A": "Capital account, as a transfer of assets.",
+        "B": "Current account, as primary income.",
+        "C": "Current account, as secondary income.",
+        "D": "Financial account, as portfolio investment."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The current account has four components, and the last two are easily confused. <strong>Primary income</strong> is the return earned on factors of production — profits, interest and dividends. <strong>Secondary income</strong> is transfers for which nothing is received in return: foreign aid, gifts, and remittances sent home by workers. Nothing is being paid <em>for</em> here, and that is what places remittances in secondary income.",
+        "distractors": {
+          "A": "The capital account records transfers of fixed assets and debt forgiveness, not income sent abroad.",
+          "B": "Primary income would be right if the payment were a return on an investment. Wages sent to relatives are not.",
+          "D": "Portfolio investment is the purchase of foreign shares and bonds — an entry in the financial account."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-7-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country cancels a debt owed to it by a lower-income country. In its balance of payments this is recorded in the",
+      "options": {
+        "A": "Capital account.",
+        "B": "Current account.",
+        "C": "Financial account.",
+        "D": "Reserve account."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>capital account</strong> is the smallest of the three and records a narrow set of items: transfers of ownership of fixed assets such as land and buildings, and <strong>debt forgiveness</strong>. Writing off a loan hands over the value of an asset with nothing coming back, which is why it sits here rather than in the financial account, where the original lending was recorded.",
+        "distractors": {
+          "B": "The current account records trade, income and transfers of money. Cancelling a debt transfers an asset.",
+          "C": "The financial account records investment flows and changes in reserves. Cancelling a debt is not an investment.",
+          "D": "There is no separate reserve account. Reserve assets sit inside the financial account."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-7-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "One foreign investor buys £5m of shares in a listed company but takes no part in running it; another buys a factory and operates it. In the financial account these are respectively",
+      "options": {
+        "A": "FDI and portfolio investment.",
+        "B": "Portfolio investment and FDI.",
+        "C": "Primary income and secondary income.",
+        "D": "Reserve assets and capital transfers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Both are entries in the <strong>financial account</strong>, and the distinction is control. <strong>Portfolio investment</strong> buys financial assets — shares and bonds — purely for the return, with no involvement in management. <strong>Foreign direct investment</strong> buys physical assets abroad with the intention of operating them. FDI tends to be long-term and hard to reverse; portfolio investment can be sold in a day, which is why an economy financed by one is in a very different position from one financed by the other.",
+        "distractors": {
+          "A": "The order is reversed. Buying shares passively is portfolio investment; operating a factory is direct investment.",
+          "C": "Primary and secondary income are current account components, not investment flows.",
+          "D": "Reserve assets are a central bank's foreign currency holdings, and capital transfers belong to the capital account."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-7-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Two countries run current account deficits of exactly the same size. One is financed by long-term foreign direct investment; the other by short-term deposits that can be withdrawn at any time. The second country is more vulnerable because",
+      "options": {
+        "A": "Its deficit is larger than the first country's.",
+        "B": "Its financial account must be in deficit.",
+        "C": "The funding can leave at short notice.",
+        "D": "The funding must be repaid in foreign currency."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The balance of payments always balances, so both deficits are being financed — the question is by what. FDI buys factories and equipment that cannot be moved out quickly, and the investor's return depends on the economy performing. Short-term deposits can be withdrawn the moment sentiment turns, and if they are, the currency falls sharply and the deficit has to close abruptly rather than gradually. <strong>The size of a deficit matters less than the quality of what finances it.</strong>",
+        "distractors": {
+          "A": "The stem states that the two deficits are the same size, so this cannot be the difference.",
+          "B": "A current account deficit is matched by a <em>surplus</em> on the capital and financial accounts, and that holds for both countries equally.",
+          "D": "The currency of repayment is a genuine risk, but the distinction the stem draws is the term of the funding rather than its denomination."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-7-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four international transactions recorded by one country.<br />From Table 1, the only one entered in the current account as primary income is",
+      "table": {
+        "caption": "Table 1: Four international transactions recorded by one country",
+        "head": [
+          "",
+          "Transaction"
+        ],
+        "rows": [
+          [
+            "Transaction 1",
+            "Aid is sent to a country after an earthquake"
+          ],
+          [
+            "Transaction 2",
+            "A foreign firm builds a factory in the country"
+          ],
+          [
+            "Transaction 3",
+            "The central bank's foreign currency holdings fall"
+          ],
+          [
+            "Transaction 4",
+            "A resident receives dividends from foreign shares"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Transaction 1.",
+        "B": "Transaction 2.",
+        "C": "Transaction 3.",
+        "D": "Transaction 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Primary income</strong> is the return earned on factors of production owned abroad — profits, interest and dividends. Transaction 4 is exactly that: a payment received for owning a foreign asset. The other three sit elsewhere in the accounts.",
+        "distractors": {
+          "A": "Aid is a transfer for which nothing is received in return, which makes it <em>secondary</em> income.",
+          "B": "Building a factory abroad is foreign direct investment, an entry in the financial account.",
+          "C": "Changes in the central bank's foreign currency holdings are reserve assets, also in the financial account."
+        }
+      }
+    }
+  ]
+}

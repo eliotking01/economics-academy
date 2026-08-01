@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.1.6",
+  "slug": "4-1-6-restrictions-on-free-trade",
+  "title": "Restrictions on Free Trade",
+  "shortTitle": "Restrictions on Free Trade",
+  "pageTitle": "Restrictions on Free Trade Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on protectionism for Edexcel A-Level Economics: tariffs, quotas, subsidies, non-tariff barriers and their evaluation.",
+  "intro": "Eight original multiple-choice questions on restrictions on free trade, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on why governments restrict trade, the four methods of protection, and how to evaluate them.",
+  "questions": [
+    {
+      "id": "edexcel-4-1-6-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government limits imports of a good to 40,000 tonnes a year, whatever price foreign producers offer. This restriction is",
+      "options": {
+        "A": "A non-tariff barrier.",
+        "B": "A quota.",
+        "C": "A subsidy.",
+        "D": "A tariff."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>quota</strong> is a physical limit on the quantity that may be imported. It restricts supply directly rather than working through price: whatever foreign producers charge, only 40,000 tonnes may enter. The reduced supply pushes the domestic price up, which benefits domestic producers and harms consumers — but unlike a tariff it raises no revenue at all for the government, because nothing is being taxed.",
+        "distractors": {
+          "A": "Non-tariff barriers work through rules and procedures — product standards, safety rules, paperwork — rather than through a stated quantity limit.",
+          "C": "A subsidy is a payment to domestic producers, lowering their costs rather than restricting anybody's imports.",
+          "D": "A tariff is a tax on imports. It raises the price but places no limit on the quantity that may come in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Instead of taxing imports, a government pays its own producers £20 for every unit they make. The most likely effect on imports is that they",
+      "options": {
+        "A": "Are unaffected, since imports are not taxed.",
+        "B": "Rise, since domestic output has increased.",
+        "C": "Rise, since the subsidy is paid to foreigners.",
+        "D": "Shrink, since domestic goods undercut them."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A subsidy lowers domestic producers' costs, so they can charge less and still cover them. Domestic goods become cheaper relative to imports even though nothing whatever has been done to the imports, and buyers switch. Edexcel lists <strong>subsidies to domestic producers</strong> among the methods of protectionism for this reason: the protective effect is the same as a tariff's, but it is achieved by making home production cheaper rather than imports dearer — and it is paid for by the taxpayer rather than by the importer.",
+        "distractors": {
+          "A": "Imports do not have to be taxed to be displaced. What matters is the price of one relative to the other.",
+          "B": "Domestic output does rise, and that is precisely what pushes imports out of the market.",
+          "C": "The subsidy is paid to domestic producers. That is what makes it a protectionist measure."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country requires every imported electrical product to be tested in a domestic laboratory with a nine-month waiting list, while domestic products are exempt. The attraction of this method of protection is that it",
+      "options": {
+        "A": "Costs the government nothing to run.",
+        "B": "Guarantees imports fall to zero.",
+        "C": "Is harder to challenge than a tariff.",
+        "D": "Raises revenue like a tariff does."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A tariff is transparent: it appears in a published schedule, it can be measured, and it can be challenged at the WTO as a breach of an agreement. A testing requirement can be presented as consumer protection while achieving much the same effect, and proving that it is really protectionism is far harder. Edexcel groups product standards, health and safety rules and administrative procedures together as <strong>non-tariff barriers</strong> for exactly this reason.",
+        "distractors": {
+          "A": "Running a testing regime costs money, and either the government or the importer bears it.",
+          "B": "Imports are delayed and made costlier, not eliminated. A nine-month wait is an obstacle rather than a ban.",
+          "D": "No tax is levied, so unlike a tariff this raises no revenue whatever."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government imposes tariffs on imported steel to slow the decline of a domestic industry that has been shrinking for thirty years, so that its workforce has time to retrain. The industry is being protected as",
+      "options": {
+        "A": "A contestable industry.",
+        "B": "A strategic industry.",
+        "C": "A sunset industry.",
+        "D": "An infant industry."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The three cases are distinguished by where an industry sits in its life. An <strong>infant industry</strong> is new and needs time to reach a competitive scale. A <strong>strategic industry</strong> is protected because the country cannot afford to depend on foreign supply — defence, food, energy. A <strong>sunset industry</strong> is in long-term decline, and the argument for protecting it is not that it will ever compete again, but that a sudden collapse would concentrate the whole adjustment cost on one region and one workforce.",
+        "distractors": {
+          "A": "Contestability describes how easily firms can enter and leave a market. It is not one of the grounds for protection.",
+          "B": "Steel is sometimes argued to be strategic, but the stem gives retraining time as the reason rather than national security.",
+          "D": "An infant industry is a new one. This industry is thirty years into its decline."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government imposes a steep tariff on imported timber, expecting domestic sawmills to fill the gap. Domestic capacity turns out to be far below what the market needs. The most likely result is that",
+      "options": {
+        "A": "Consumers pay more than expected.",
+        "B": "Domestic producers cut their prices.",
+        "C": "Imports rise despite the tariff.",
+        "D": "Tariff revenue falls to zero."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A tariff is meant to shift demand from imports towards domestic production, and that only helps consumers if domestic producers can actually supply the quantity. Where they cannot, the tariff restricts total supply rather than reallocating it — so the price rises by <em>more</em> than the tariff itself, because domestic output cannot expand to meet the demand diverted to it. Edexcel lists the <strong>ability of domestic producers to increase production</strong> among the evaluations of protectionist policy for precisely this reason.",
+        "distractors": {
+          "B": "With demand diverted towards them and capacity already tight, domestic producers can raise prices rather than cut them.",
+          "C": "Imports fall, since they are now dearer. The question is what happens to the price of what remains.",
+          "D": "Imports still enter and are still taxed, so revenue continues to be collected."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 identifies four areas on the standard tariff diagram.<br />From Table 1, the area that is neither transferred to producers nor collected by the government is",
+      "table": {
+        "caption": "Table 1: Four areas on the standard tariff diagram",
+        "head": [
+          "",
+          "Area"
+        ],
+        "rows": [
+          [
+            "Area 1",
+            "The gain in domestic producer surplus"
+          ],
+          [
+            "Area 2",
+            "The revenue the government collects"
+          ],
+          [
+            "Area 3",
+            "The fall in consumer surplus"
+          ],
+          [
+            "Area 4",
+            "The net welfare loss to society"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Area 1.",
+        "B": "Area 2.",
+        "C": "Area 3.",
+        "D": "Area 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A tariff raises the domestic price, and consumers lose surplus as a result — the whole of Area 3. Part of that loss is not destroyed but <strong>transferred</strong>: some becomes extra producer surplus for domestic firms (Area 1) and some becomes tariff revenue for the government (Area 2). What is left over goes to nobody at all. That remainder is the <strong>net welfare loss</strong>, Area 4, and it is the economic case against a tariff — consumers lose more than everyone else gains.",
+        "distractors": {
+          "A": "The gain in producer surplus is a transfer from consumers to domestic firms. Nothing is lost to society by it.",
+          "B": "Tariff revenue is a transfer from consumers to the government, and it can be spent on anything.",
+          "C": "The fall in consumer surplus is the total loss to consumers, most of which is transferred rather than destroyed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A foreign producer sells steel in another country below what it costs to make, apparently in order to drive local mills out of business. The protectionist response this is used to justify is a tariff aimed at",
+      "options": {
+        "A": "Correcting a current account deficit.",
+        "B": "Preventing dumping.",
+        "C": "Protecting an infant industry.",
+        "D": "Raising revenue for the government."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Dumping</strong> is selling exports below cost, typically to capture a market and raise prices once rivals have gone. It is among the least contested arguments for protection, because the low price does not come from a genuine cost advantage and will not last — so allowing it destroys efficient domestic capacity in exchange for a temporary gain. Edexcel lists preventing dumping among the reasons for protectionism, and it is the ground on which anti-dumping duties are permitted under WTO rules.",
+        "distractors": {
+          "A": "A tariff can be used against a deficit, but the stem describes predatory pricing rather than a trade imbalance.",
+          "C": "An infant industry is new and needs time to grow. The local mills here are established and are being attacked.",
+          "D": "Tariffs do raise revenue, but that is a by-product rather than the justification the stem points to."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-1-6-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A domestic industry has been protected by tariffs for twenty-five years. Its costs per unit are now well above those of foreign producers. This illustrates the evaluation that protection can",
+      "options": {
+        "A": "Guarantee that domestic firms innovate.",
+        "B": "Raise the government's tariff revenue.",
+        "C": "Reduce the pressure to become efficient.",
+        "D": "Remove the need for any trade at all."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Competition is what forces firms to control costs and improve. Removing it by tariff removes that pressure, and over a long period the sheltered industry drifts further behind the producers it was protected from — so the protection becomes permanently necessary rather than temporary. Edexcel lists the <strong>long-term impact on efficiency and innovation</strong> among the evaluations of protectionism, and it is the strongest objection to the infant industry argument: the infant may never grow up.",
+        "distractors": {
+          "A": "Protection weakens the incentive to innovate rather than guaranteeing it, since the reward for doing so is smaller.",
+          "B": "Revenue is collected, but that is not what a twenty-five-year cost gap illustrates.",
+          "D": "The industry now needs protection precisely because it cannot compete. Trade has not become unnecessary."
+        }
+      }
+    }
+  ]
+}
