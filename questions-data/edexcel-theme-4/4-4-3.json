@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.4.3",
+  "slug": "4-4-3-role-of-central-banks",
+  "title": "Role of Central Banks",
+  "shortTitle": "Role of Central Banks",
+  "pageTitle": "Role of Central Banks Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the role of central banks for Edexcel A-Level Economics: the MPC, quantitative easing, the PRA and the FPC.",
+  "intro": "Six original multiple-choice questions on the role of central banks, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on what a central bank does — monetary policy, banking for the government, and the two arms of financial regulation.",
+  "questions": [
+    {
+      "id": "edexcel-4-4-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A central bank manages the government's accounts, issues new government bonds on its behalf and advises it on economic conditions. Among the central bank's key functions, this is",
+      "options": {
+        "A": "Acting as banker to the government.",
+        "B": "Acting as lender of last resort.",
+        "C": "Implementing monetary policy.",
+        "D": "Regulating the banking system."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A government needs an account to receive tax revenue and pay its bills, and it needs someone to sell its debt when it borrows. The central bank does both, and advises on economic conditions while it is about it.<br />It is worth keeping the four functions separate, because they answer to different objectives. Banking for the government is administration. <strong>Monetary policy</strong> targets inflation, <strong>lender of last resort</strong> protects the banking system's liquidity, and <strong>regulation</strong> keeps individual banks and the system as a whole sound.",
+        "distractors": {
+          "B": "The lender of last resort function is emergency lending to a commercial bank that cannot raise cash elsewhere. It is banking for the banks, not for the government.",
+          "C": "Monetary policy is setting Bank Rate and conducting quantitative easing to meet the inflation target. Issuing debt for the government is a separate job, even though both involve bonds.",
+          "D": "Regulation means setting the standards banks must meet and monitoring risks across the system. Nothing in the question concerns the soundness of any bank."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Inflation is below the 2% target and Bank Rate is already close to zero. The tool the central bank is most likely to turn to is",
+      "options": {
+        "A": "A further cut in Bank Rate.",
+        "B": "Quantitative easing.",
+        "C": "An increase in Bank Rate.",
+        "D": "Quantitative tightening."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Bank Rate is the usual tool, and with inflation below target the usual answer would be to cut it. At close to zero there is nothing meaningful left to cut — the <strong>zero lower bound</strong> — so the central bank needs a way of loosening policy that does not run through the policy rate.<br />Quantitative easing is that way. The central bank creates reserves and buys assets, mostly government bonds, from banks and other investors. That raises their prices and lowers longer-term yields, leaves the sellers holding cash rather than bonds, and is intended to feed through into lending and spending.",
+        "distractors": {
+          "A": "There is almost nothing left to cut, which is the whole difficulty. Rates at or below zero also start to work against the policy, since banks and savers respond to them in ways that reduce rather than raise lending.",
+          "C": "Raising Bank Rate tightens policy. With inflation already below target, that pushes it further from the target rather than back towards it.",
+          "D": "Quantitative tightening is the reverse of QE — selling assets or letting them mature to withdraw money from the economy. It is the tool for inflation that is too high."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-3-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "One arm of the Bank of England monitors risks building across the financial system as a whole, rather than the soundness of any one bank. That arm is",
+      "options": {
+        "A": "The Monetary Policy Committee.",
+        "B": "The Prudential Regulation Authority.",
+        "C": "The Financial Policy Committee.",
+        "D": "The Treasury."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Bank's regulatory job is split in two, and the split is the thing to learn. The <strong>PRA</strong> works firm by firm: capital standards, liquidity standards, stress tests on an individual balance sheet. The <strong>FPC</strong> looks at the system.<br />That second view exists because risks can build up which no single bank has any reason to restrain — every lender's mortgage book looks prudent on its own while all of them together are inflating a property boom. The FPC identifies those risks and recommends measures against them, such as limits on loan-to-value ratios.",
+        "distractors": {
+          "A": "The MPC sets Bank Rate and decides on quantitative easing to meet the inflation target. It is monetary policy, not financial regulation.",
+          "B": "The PRA is the microprudential half of the job — the standards a named bank must meet and the stress tests it must pass. It looks at the parts rather than the whole.",
+          "D": "The Treasury is the government department responsible for fiscal policy. Financial supervision was deliberately placed with the Bank of England rather than with ministers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A regulator models a recession far more severe than anyone expects, and checks whether each large bank would still hold enough capital to absorb the losses. The purpose of the exercise is",
+      "options": {
+        "A": "To check the bank could survive a severe shock.",
+        "B": "To force the bank to lend more to small firms.",
+        "C": "To measure how profitable the bank was last year.",
+        "D": "To set the rate of interest the bank charges."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A stress test is a hypothetical. Nobody is forecasting the recession being modelled — the point is to ask what would be left of the bank's capital if it happened, and whether the bank would still be standing at the end of it.<br />The value is in the <strong>timing</strong>. A bank found to be short of capital under the scenario can be made to raise more while conditions are calm and raising capital is possible. Discovering the same shortfall during an actual crisis, when no investor will supply capital at any price, is how banks fail and taxpayers end up paying.",
+        "distractors": {
+          "B": "Stress tests generally have the opposite effect in the short run. A bank told to hold more capital against its assets tends to lend less, not more, which is the standard objection to tighter requirements.",
+          "C": "Past profitability is already in the published accounts and needs no scenario. The test is forward-looking and deliberately pessimistic.",
+          "D": "Interest rates charged by a bank are its own commercial decision, constrained by Bank Rate and competition. A regulator testing resilience does not set prices."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-3-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four actions taken by a central bank.<br />From Table 1, the only one aimed at the financial system as a whole is",
+      "table": {
+        "caption": "Table 1: Four central bank actions",
+        "head": [
+          "",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Action 1",
+            "Setting a minimum capital ratio for one large bank"
+          ],
+          [
+            "Action 2",
+            "Providing emergency funding to a bank that is short of cash"
+          ],
+          [
+            "Action 3",
+            "Stress-testing an individual bank's balance sheet"
+          ],
+          [
+            "Action 4",
+            "Recommending a loan-to-value limit that applies to all lenders"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Action 1.",
+        "B": "Action 2.",
+        "C": "Action 3.",
+        "D": "Action 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Three of these actions are about one institution: a capital ratio set for a named bank, emergency funding for a bank short of cash, and a stress test of a single balance sheet. Each asks whether <em>that</em> bank can withstand trouble.<br /><strong>Action 4 asks a different question.</strong> A loan-to-value limit applying to every lender is aimed at a risk building across the system — households and lenders together becoming over-extended against rising property prices — which no single bank has any reason to restrain on its own. That is the distinction between microprudential regulation, firm by firm, and macroprudential regulation of the system.",
+        "distractors": {
+          "A": "A minimum capital ratio set for one large bank is microprudential: it makes that bank better able to absorb its own losses.",
+          "B": "Emergency funding is the lender of last resort function, and it is directed at the institution that cannot raise cash. It protects the system indirectly, but the action itself concerns one bank.",
+          "C": "A stress test run on an individual balance sheet asks whether that bank would survive a severe recession. The system-wide version of the same exercise is a different tool."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-3-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In the United Kingdom, the remit of the Monetary Policy Committee is to",
+      "options": {
+        "A": "Manage the government's accounts and issue its debt.",
+        "B": "Recommend limits on lenders' loan-to-value ratios.",
+        "C": "Set Bank Rate to meet the 2% CPI inflation target.",
+        "D": "Set the minimum capital requirements for each bank."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The MPC is given a target and the tools to hit it: 2% on the CPI measure of inflation, pursued by setting Bank Rate and, when the rate is already at its floor, by quantitative easing.<br />The target is set by the government and the decisions are taken by the committee, which is what <strong>operational independence</strong> means. Politicians choose what inflation rate the country aims for; they do not choose the interest rate that gets it there.",
+        "distractors": {
+          "A": "Banking for the government is a separate central bank function. The MPC neither manages those accounts nor decides how much the government borrows.",
+          "B": "Loan-to-value recommendations are macroprudential and belong to the Financial Policy Committee.",
+          "D": "Capital requirements for individual banks are set by the Prudential Regulation Authority. The MPC has no supervisory role at all."
+        }
+      }
+    }
+  ]
+}

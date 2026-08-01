@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 159 topics, 1,219 questions. AQA is complete, Edexcel Themes 1, 2 and 3
-are complete, and Theme 4 units 4.1, 4.2 and 4.3 are finished. 7 topics remain.**
+**Live: 162 topics, 1,240 questions. AQA is complete, Edexcel Themes 1, 2 and 3
+are complete, and Theme 4 units 4.1 to 4.4 are finished. 4 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -17,11 +17,10 @@ approval — see `CLAUDE.md`.
 
 ## Read this first if you are resuming
 
-**State at handover (2026-08-01).** Branch `feature/topic-questions`, **38
-commits ahead of `main`**, working tree clean, **nothing pushed**. 159 of 166
-topics and 1,219 questions are done. Seven topics remain, all in Edexcel Theme 4
-units 4.4 and 4.5, and they are planned as two batches — see **Remaining work**
-below.
+**State at handover (2026-08-01).** Branch `feature/topic-questions`, **39
+commits ahead of `main`**, working tree clean, **nothing pushed**. 162 of 166
+topics and 1,240 questions are done. Four topics remain, all in Edexcel Theme 4
+unit 4.5, and they are the final batch — see **Remaining work** below.
 
 Read these four things, in this order, before writing anything:
 
@@ -444,17 +443,17 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel Theme 4 — 7 topics, ~66 questions. All that is left.
+### Edexcel Theme 4 — 4 topics, ~30 questions. All that is left.
 
-AQA is finished, Themes 1 to 3 are complete, and Theme 4 units 4.1, 4.2 and 4.3
-are finished (14 topics, 97 questions).
+AQA is finished, Themes 1 to 3 are complete, and Theme 4 units 4.1 to 4.4 are
+finished (17 topics, 118 questions).
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Themes 1–3 | 0 — **all complete**, 66 topics and 509 questions | — |
-| Theme 4 | 7 | ~66 |
+| Theme 4 | 4 | ~30 |
 
-**The agreed split for Theme 4**, with batches 26 to 28 done:
+**The agreed split for Theme 4**, with batches 26 to 29 done:
 
 ```
 batch 26 ✓  4.1.1 globalisation  4.1.2 specialisation & trade  4.1.3 pattern of trade
@@ -464,16 +463,14 @@ batch 27 ✓  4.1.6 restrictions on free trade  4.1.7 balance of payments
 batch 28 ✓  4.2.1 absolute & relative poverty  4.2.2 inequality
             4.3.1 measures of development  4.3.2 factors influencing growth
             4.3.3 strategies influencing growth                    (38 questions)
-batch 29    4.4.1 role of financial markets  4.4.2 market failure in the financial sector
-            4.4.3 role of central banks
+batch 29 ✓  4.4.1 role of financial markets  4.4.2 market failure in the financial sector
+            4.4.3 role of central banks                          (21 questions)
 batch 30    4.5.1 public expenditure  4.5.2 taxation  4.5.3 public sector finances
             4.5.4 macroeconomic policies in a global context
 ```
 
-**Twins, batch by batch:**
+**Twins:**
 
-- **Batch 29** — AQA 2.4.1 to 2.4.4 (30 questions on financial markets, banks,
-  central banks and regulation). Expect heavy occupation, particularly on 4.4.3.
 - **Batch 30** — AQA 2.5.1 (fiscal policy, 9) and 2.5.2 (supply-side, 8), both
   already drawn on for Edexcel 2.6. Also my own Edexcel 2.6.2 and 2.6.3.
 
@@ -487,16 +484,7 @@ The three rules that have held throughout:
 3. **Vary the table stem and caption wording per set.** Seven phrasings are now in
    circulation and the check surfaces whichever gets reused.
 
-### What to expect in each of the two remaining batches
-
-**Batch 29 — unit 4.4, three topics.** Expect this to be the harder of the
-two. **AQA 2.4.1 to 2.4.4 carry 30 questions** on financial markets, commercial
-and investment banks, central banks and regulation — including bond yields,
-balance sheets, credit creation, the lender of last resort, QE, the liquidity
-trap and systemic risk. 4.4.3 in particular may have very little left. The likely
-free ground is Edexcel's own framing of **market failure in the financial
-sector** — asymmetric information, externalities, moral hazard, speculation and
-market bubbles, market rigging — which AQA treats only glancingly.
+### What to expect in the final batch
 
 **Batch 30 — unit 4.5, four topics.** Twins are AQA 2.5.1 (fiscal policy, 9) and
 2.5.2 (supply-side, 8), **both already drawn on twice** — for Edexcel 2.6 and
@@ -509,6 +497,16 @@ individually, since AQA 2.5.1 has the Laffer curve but Theme 4 goes further.
 **Batch 28's grep also found that `aid`, `debt relief` and `structural
 adjustment` were entirely free before 4.3.3 used them**, which is worth knowing
 for 4.5.4 — the international-institutions material now has questions on it.
+
+**One lesson from batch 29 that applies directly here.** Unit 4.4 was predicted
+to be the hardest batch of the project and turned out to be one of the easier
+ones, because AQA's unit 2.4 and Edexcel's unit 4.4 cover the same specification
+area from opposite ends — AQA on money and banking mechanics, Edexcel on
+functions and failures. **Do not size a batch from the twin's question count.
+Size it from the concept-grep.** The same may well be true of 4.5: AQA 2.5.1 is
+a deficit-and-debt set, while Edexcel 4.5 is about the composition of public
+expenditure, the structure of taxation and their effects on the distribution of
+income.
 
 **When unit 4.5 is finished, the project is complete** — 166 topics. Write the
 Theme 4 final profile and a site-wide closing profile in the same shape as the
@@ -589,7 +587,7 @@ if in doubt — the guide's rule is that concision beats coverage.
   yet exist. A comment marks the insertion point. **All five now exist, and four
   are complete and final** — both AQA indexes, `edexcel-theme-1` (22 of 22),
   `edexcel-theme-2` (24 of 24) and `edexcel-theme-3` (20 of 20). Only
-  `edexcel-theme-4` is still filling up, at 14 of 21 after batch 28. Restoring the
+  `edexcel-theme-4` is still filling up, at 17 of 21 after batch 29. Restoring the
   dropdown now would point at five real pages, one of them incomplete; waiting for
   batch 30 costs nothing. Either way it is a nav change on every page, so it needs
   approval.
@@ -629,6 +627,7 @@ to end.
 | N-Q16 | `4-1-3-pattern-of-trade` | Promises deindustrialisation; describes it, never names it | Not tested; one-word fix |
 | **N-Q17** | `4-1-9` | Promises export market share as a measure; body omits it entirely | **`4.1.9` Q8 depends on it** |
 | N-Q18 | `4-2-1` | Promises redistribution and social protection as policy responses; body has no policy section | Not tested; set written to the body |
+| N-Q19 | `4-4-1` | Promises risk spreading, liquidity provision and financial intermediation; body has none of the three | Not tested; set written to the body |
 | N-Q10 | 13 pages, all boards | Duplicate or non-sequential figure numbers | Cosmetic; already listed in full |
 
 **N-Q17 is the one to act on first if any of these are taken up.** A question is
@@ -637,8 +636,11 @@ covering advertised concepts and bringing the notes up afterwards. The paragraph
 needed is short and the wording exists in the Q8 model answer.
 
 **Audit coverage.** The N-Q8 spec-alert check has now been run over Themes 1, 2
-and 3 and over Theme 4 units 4.1, 4.2 and 4.3. **Only units 4.4 and 4.5 remain —
-run it as batches 29 and 30 reach them.** The N-Q10 figure-number check is
+and 3 and over Theme 4 units 4.1 to 4.4. **Only unit 4.5's four pages remain —
+run it as batch 30 reaches them.** Note the script's blind spot recorded with
+N-Q19: the end-of-notes question block sits below the spec alert, so its teaser
+can match a concept the body never teaches. Print the matching context and
+discard hits inside `notes-questions-cta`. The N-Q10 figure-number check is
 **finished site-wide**: it was re-run over the whole of Theme 4 during batch 28
 and units 4.2 to 4.5 are clean, so nothing beyond the thirteen pages already
 listed needs renumbering. Both scripts are in `REVIEW-NOTES.md`, along with the
@@ -1183,6 +1185,103 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 29 — Edexcel Theme 4, unit 4.4 (2026-08-01)
+
+3 topics, 21 questions. Financial markets, market failure in the financial
+sector, and central banks.
+
+All 21 re-derived from the stem alone with **0 mismatches**.
+
+**This was billed as the hardest batch remaining and it was not close to it.**
+The prediction was that AQA 2.4.1 to 2.4.4's 30 questions would leave 4.4.3 with
+almost nothing. What the concept-grep actually found was that AQA and Edexcel
+approach the same unit from opposite ends, and barely meet:
+
+| Concept | Hits before this batch |
+| --- | --- |
+| forward markets, futures, hedging | 0 |
+| financial intermediation | 0 |
+| market bubbles | 0 |
+| market rigging, LIBOR, manipulation | 0 |
+| bailouts and the taxpayer | 0 |
+| banker to the government | 0 |
+| the PRA, the FPC, macroprudential, loan-to-value | 0 |
+| stress tests | 0 |
+| the zero lower bound | 0 |
+| the 2008 financial crisis | 0 |
+
+AQA's unit 2.4 is a **money and banking** unit — narrow and broad money, the
+money market against the capital market, bond yields, balance sheets, credit
+creation, liquidity ratios. Edexcel's 4.4 is a **functions and failures** unit.
+The two overlap on precisely four things, and all four were left alone: the
+lender of last resort (AQA 2.4.3 Q1), the mechanics and purpose of QE (2.4.3 Q5
+and Q6), naming systemic risk (2.4.4 Q5) and naming moral hazard (2.4.4 Q4).
+
+**Two of those four are worth recording, because they cost real questions.**
+
+- **The lender of last resort is not tested at all**, despite being one of the
+  four functions on the 4.4.3 page. AQA 2.4.3 Q1 asks it directly, and the only
+  distinct angle left — that standing ready to rescue banks encourages them to
+  take risks — is moral hazard, which AQA 2.4.4 Q4 also owns. Two occupied
+  approaches to one function; it appears in this batch only as a distractor and
+  in a model answer.
+- **Moral hazard is unusable as an answer anywhere in unit 4.4**, which is
+  awkward on a page that gives it a heading. AQA owns the bailout version and my
+  own Edexcel 1.3.4 Q7 owns the insurance version — Edexcel's two examples,
+  exactly. So 4.4.2 covers the other four causes of failure and leaves it.
+
+**Originality clean on all three fronts at the first attempt**, with no rewrites
+— the second batch running, and the fourth in five.
+
+**4.4.2 is the strongest set in the batch**, and the reason is that Edexcel's
+framing of financial market failure is genuinely its own. Nine questions came out
+of adverse selection driving the safest borrowers out of a credit market,
+information gaps in high-cost lending and the disclosure remedy for them, the
+externality argument for regulating banks more heavily than other firms, bubbles
+and the 95% mortgage that turns one into a banking crisis, the LIBOR-style
+benchmark manipulation and why it damages contracts across an economy, the run
+that brings down a solvent bank, and the equity objection to a rescue.
+
+**A length-check finding worth knowing.** 4.4.3 Q3 failed the option-length rule
+because "The Prudential Regulation Authority" is 36 characters and "The Financial
+Policy Committee" is 31 — a difference that carries no signal whatever, since
+both are just the names of the bodies. The guide's script exempts option sets
+whose longest entry is under 30 characters for exactly this reason, and proper
+nouns sit just above the line. **The question was restructured rather than the
+name mangled**: the stem now asks for the FPC via its system-wide remit, and the
+PRA's stress-testing content moved into its own applied question, which is a
+better set than the original in any case.
+
+| | |
+| --- | --- |
+| Answer letters | A 7, B 5, C 6, D 3 (even would be 5.25) |
+| Skills | applied-reasoning 12, definition-in-context 6, data-table 3 |
+| Difficulty | foundation 3, standard 17, stretch 1 |
+| Sketch to solve | 0 |
+
+**No calculation items, and no sketch items.** Unit 4.4's arithmetic — bond
+yields, the credit multiplier, liquidity and capital ratios — is entirely AQA
+2.4.1, 2.4.2 and 2.4.4's, all of it already used, and Edexcel's pages carry no
+figures of their own to build new ones from. The nearest this batch comes is
+4.4.2 Q5, where a 95% mortgage against a one-third fall in prices has to be
+turned into negative equity; it is tagged `applied-reasoning` because the
+arithmetic is in the model answer rather than the stem. There is no diagram
+anywhere in the unit.
+
+**Notes audit run at the same time.** One new finding, **N-Q19**: `4-4-1`
+promises the channelling of savings into investment, risk spreading, liquidity
+provision and financial intermediation, and delivers the first in substance and
+none of the other three — "liquid" and "intermediat" do not appear on the page at
+all. No question depends on the missing material.
+
+**A trap in the N-Q8 script, now that notes pages link to question sets.** The
+script strips everything above the spec alert to avoid matching the metadata
+copies, but the end-of-notes block sits *below* it, and its teaser is prose about
+the topic. On 4.4.1 the phrase `channelling savings into investment` matched —
+and the only occurrence on the page was in the block this project appended.
+**Print the matching context rather than a boolean, and discard hits inside
+`notes-questions-cta`.** Recorded in `REVIEW-NOTES.md` alongside N-Q19.
 
 ### Batch 28 — Edexcel Theme 4, units 4.2 and 4.3 (2026-08-01)
 

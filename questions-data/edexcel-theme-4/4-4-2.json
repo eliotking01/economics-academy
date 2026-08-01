@@ -1,0 +1,238 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.4.2",
+  "slug": "4-4-2-market-failure-in-the-financial-sector",
+  "title": "Market Failure in the Financial Sector",
+  "shortTitle": "Market Failure in Finance",
+  "pageTitle": "Market Failure in the Financial Sector Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on market failure in the financial sector for Edexcel A-Level Economics: bubbles, market rigging and bank rescues.",
+  "intro": "Nine original multiple-choice questions on market failure in the financial sector, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on why financial markets fail — asymmetric information, externalities, speculation, market rigging and the cost of a rescue.",
+  "questions": [
+    {
+      "id": "edexcel-4-4-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A lender cannot tell which loan applicants are likely to repay and which are not, so it charges every borrower the same higher rate of interest. The most likely result is that",
+      "options": {
+        "A": "Lending falls as the safest borrowers drop out.",
+        "B": "Only the safest borrowers continue to apply.",
+        "C": "The lender's profits rise with the higher rate.",
+        "D": "The riskiest borrowers are priced out first."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A rate that reflects the average risk is a bad deal for a safe borrower and a bargain for a risky one. So the safe borrowers, who could get credit more cheaply if their quality could be observed, walk away — and the pool left behind is riskier than the one the lender priced for.<br />Losses then rise, the rate goes up again, and more of the remaining good borrowers leave. The market shrinks, and lending that would have been profitable on both sides never happens. This is the <strong>adverse selection</strong> that asymmetric information produces in credit markets, and it is a market failure because the loans that do not get made were worth making.",
+        "distractors": {
+          "B": "The reverse. A safe borrower is the one with somewhere better to go, so they are the first to leave rather than the ones who stay.",
+          "C": "A higher rate raises the return on each loan and lowers both the number of loans and their average quality. That is why lenders ration credit rather than simply raising the price of it.",
+          "D": "A risky borrower who has no cheaper alternative will pay the higher rate. Being priced out requires a better option elsewhere, which is what the risky borrower lacks."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Many borrowers taking out short-term loans at very high rates of interest do not realise how much they will repay in total. The intervention aimed most directly at this failure is",
+      "options": {
+        "A": "Capping the number of lenders in the market.",
+        "B": "Guaranteeing the loans against default.",
+        "C": "Requiring the total repayment to be shown.",
+        "D": "Subsidising the interest rate on the loans."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The failure here is an information gap: the borrower cannot judge what the product costs, so the decision to take it is not an informed one. The remedy that fits a failure of information is <strong>information</strong> — stating the cash sum that will be repaid, in a form nobody has to calculate.<br />That is also why it is the cheapest intervention available. It leaves the market open, leaves the price alone, and corrects the specific thing that was wrong with the transaction.",
+        "distractors": {
+          "A": "Fewer lenders means less competition and probably higher rates. It does nothing about a borrower not understanding the deal in front of them.",
+          "B": "A guarantee protects the lender against a borrower who cannot repay. It leaves the borrower exactly as badly informed and makes reckless lending safer for the lender, not less likely.",
+          "D": "A subsidy makes the loan cheaper without making it better understood, and it uses public money to encourage borrowing that the borrower may not want on any terms they understand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank's risky lending collapses. The recession that follows costs jobs at firms which never dealt with the bank at all. This makes the risk-taking a market failure because the cost falls on",
+      "options": {
+        "A": "Borrowers who defaulted on their loans.",
+        "B": "Shareholders who chose to invest in it.",
+        "C": "The regulator that authorised the bank.",
+        "D": "Third parties who were never involved."
+      },
+      "answer": "D",
+      "model": {
+        "working": "When a bank weighs up a risky strategy it counts the profit it might make and the money it might lose. What it does not count is the damage a failure does to everyone else — the firms that lose their credit lines, the workers laid off in the recession, the businesses that fail because their customers have stopped spending.<br />Those costs fall on people who were not party to the transaction and had no say in it. That is a <strong>negative externality</strong>, and it means the private cost of the risk is below the social cost, so more risk is taken than is efficient. It is the strongest single argument for regulating banks more heavily than other firms.",
+        "distractors": {
+          "A": "Defaulting borrowers do bear a cost, but they were parties to the loans. An externality is a cost falling outside the transaction.",
+          "B": "Shareholders bear losses too, and they chose the exposure when they bought the shares. Their loss is a private cost, properly accounted for.",
+          "C": "A regulator that authorised the bank may be criticised, but it is not where the economic cost lands. The jobs and output are lost in the real economy."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Investors buy an asset only because they expect to sell it on at a higher price, and its price rises far above anything the returns on it would justify. This is best described as",
+      "options": {
+        "A": "A bank run.",
+        "B": "A liquidity trap.",
+        "C": "A market bubble.",
+        "D": "Adverse selection."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The test is what the buying is based on. Buying an asset for the income it will produce is investment; buying it because someone else is expected to pay more for it is <strong>speculation</strong>, and when enough of the market is doing that the price detaches from the underlying value.<br />That detachment is the bubble. It can run a long way, because rising prices appear to confirm the belief that prices rise — and it ends when buyers run out, at which point the price falls to what the asset is actually worth, taking a great deal of wealth with it.",
+        "distractors": {
+          "A": "A bank run is depositors withdrawing money at once because they fear the bank cannot pay. It concerns confidence in an institution, not the price of an asset.",
+          "B": "A liquidity trap is a situation in which interest rate cuts stop stimulating spending. It is a monetary policy problem and has nothing to do with asset prices detaching from value.",
+          "D": "Adverse selection is what happens when one side of a transaction cannot judge the quality of the other. Here everyone can see the price; the problem is that they are ignoring what it should be."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "While house prices are rising quickly, lenders grant mortgages worth 95% of a property's value. Prices then fall by a third. The most likely consequence for the lenders is that",
+      "options": {
+        "A": "Their loans exceed the value of the security.",
+        "B": "Their borrowers' stake in the property rises.",
+        "C": "They can lend more, since houses are cheaper.",
+        "D": "They gain, since the loans were fully secured."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A 95% mortgage leaves a 5% cushion. A property worth £200,000 carries a £190,000 loan, and after a one-third fall it is worth about £133,000 — some £57,000 less than the debt against it.<br />The security is now worth less than the loan, so a borrower who defaults leaves the lender with a loss that repossession cannot recover. That is how an asset bubble becomes a <strong>banking</strong> problem: the lending looked safe while prices were rising, and the collateral that made it safe was itself inflated by the same bubble.",
+        "distractors": {
+          "B": "The borrower's stake is the gap between the property's value and the debt, and the fall in prices has wiped it out. Their equity is negative, not larger.",
+          "C": "Lenders sitting on losses on their existing book lend less, not more, and the borrowers who might buy at the lower prices are the ones the lenders have just become wary of.",
+          "D": "Secured lending is only as good as the security. The whole difficulty is that the value the loan was secured against has fallen below the loan."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Traders at several banks agree to submit false figures for a benchmark interest rate, so that their own positions become more profitable. This is best described as",
+      "options": {
+        "A": "Adverse selection.",
+        "B": "Market rigging.",
+        "C": "Moral hazard.",
+        "D": "Speculation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Market rigging is the deliberate manipulation of a market for the benefit of those doing the manipulating, at the expense of everyone else trading in it. The LIBOR scandal is the standard example: banks submitting the rates from which a benchmark was calculated, and submitting figures that suited their own books.<br />It is a market failure because prices stop carrying information. A rate that is supposed to summarise what banks actually pay to borrow instead reports what a few traders wanted it to say, and every decision taken on the strength of it is <strong>distorted</strong>.",
+        "distractors": {
+          "A": "Adverse selection arises from one party knowing more than the other about the quality of what is being traded. Here the traders are not exploiting an information gap — they are creating false information.",
+          "C": "Moral hazard is taking more risk because someone else will bear the consequences. These traders are not taking a risk they have shifted onto others; they are fixing the outcome.",
+          "D": "Speculation is buying in the expectation of a price rise, and it is legal and often useful. Rigging is not a bet on the price at all — it is deciding it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A benchmark interest rate used to price mortgages and business loans across an economy is found to have been manipulated by the banks that submit it. The wider economic damage is that",
+      "options": {
+        "A": "Contracts across the economy were mispriced.",
+        "B": "Only the banks that submitted it lost money.",
+        "C": "The benchmark can no longer be calculated at all.",
+        "D": "The rate was set too low for savers alone."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A benchmark is not just a number the banks trade on. Mortgages, business loans and derivative contracts worth many times the banks' own positions are all written to move with it, so a rate that is even slightly wrong prices all of them wrongly.<br />Somebody pays too much and somebody receives too little on every one of those contracts, and none of them chose to take that risk. Beyond the money, the lasting damage is to <strong>trust</strong>: a financial system runs on the belief that published prices mean what they say, and repairing that belief costs far more than the manipulation gained.",
+        "distractors": {
+          "B": "The banks lost money in fines and reputation once it was discovered, but the point of the manipulation was to profit at the expense of the counterparties on the other side of those contracts.",
+          "C": "A manipulated benchmark can still be calculated; the reforms that followed changed how it is compiled and supervised. The problem was that the figure was false, not that it was unobtainable.",
+          "D": "The direction of the manipulation varied with what suited the traders on the day. Borrowers and savers were both affected, and treating one group as the only loser misses the scale of it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A rumour spreads that a bank cannot meet withdrawals. Depositors queue to take their money out, and the bank cannot sell its assets quickly enough to pay them all. The point this illustrates is that",
+      "options": {
+        "A": "A bank run affects only banks that are insolvent.",
+        "B": "Confidence alone can bring down a solvent bank.",
+        "C": "Deposits are always repaid in full on demand.",
+        "D": "The bank's assets were worthless from the start."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A bank takes deposits repayable on demand and lends them out for years. That mismatch is the business — and it means no bank, however sound, holds enough cash to repay every depositor at once.<br />So a bank that is entirely solvent, with assets comfortably exceeding its liabilities, can still fail if enough people ask for their money at the same time. The belief that it cannot pay is what makes it unable to pay, which is why a <strong>loss of confidence</strong> is listed as a consequence of financial market failure in its own right, and why the central bank stands behind the system as lender of last resort.",
+        "distractors": {
+          "A": "Insolvency and illiquidity are different failures. This bank's assets may be worth far more than its debts; it simply cannot turn them into cash today.",
+          "C": "That is precisely what a run disproves. Deposits are repayable on demand as a promise, and the promise holds only so long as depositors do not all test it together.",
+          "D": "Nothing suggests the assets are bad. Long-term loans that will be repaid in full over ten years are still worth very little to a bank that needs the cash this afternoon."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-2-q9",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four outcomes after a government rescues a large failing bank with public money.<br />From Table 1, the outcome that makes the rescue inequitable is",
+      "table": {
+        "caption": "Table 1: Four outcomes of a bank rescue",
+        "head": [
+          "",
+          "Outcome"
+        ],
+        "rows": [
+          [
+            "Outcome 1",
+            "The bank's shareholders lose almost all of their investment"
+          ],
+          [
+            "Outcome 2",
+            "Depositors keep full access to their savings"
+          ],
+          [
+            "Outcome 3",
+            "Government borrowing rises to fund the rescue"
+          ],
+          [
+            "Outcome 4",
+            "Lending to businesses continues without interruption"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Outcome 1.",
+        "B": "Outcome 2.",
+        "C": "Outcome 3.",
+        "D": "Outcome 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Three of these outcomes are the rescue working: shareholders take the loss they signed up for, depositors keep their savings, and credit keeps flowing to firms that had nothing to do with the failure.<br /><strong>Outcome 3 is the price.</strong> The profits made while the risks were being taken went to the bank's owners and staff; the cost of the losses is met by taxpayers who took no part in it and got no share of the gains. Privatised gains against socialised losses is the standard objection to bailouts, and it is why the notes list inequity alongside the economic consequences rather than treating the rescue as free.",
+        "distractors": {
+          "A": "Shareholders losing their investment is the equitable part. They owned the bank, they took the risk, and they bear the loss before anyone else.",
+          "B": "Protecting ordinary depositors is one of the main justifications for a rescue. They are the parties least able to judge the bank's risks and least able to absorb the loss.",
+          "D": "Keeping credit flowing to firms limits the damage to the wider economy. It is a reason for the rescue rather than an objection to it."
+        }
+      }
+    }
+  ]
+}

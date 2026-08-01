@@ -915,13 +915,15 @@ wording rather than the concept.
 | Theme 3 | **checked, all 20 pages** — N-Q12, N-Q13, N-Q14, N-Q15 | **re-run — clean** |
 | Theme 4, unit 4.1 | **checked, 9 pages** — N-Q16, N-Q17 | **re-run — 1 failure, already listed** |
 | Theme 4, units 4.2–4.3 | **checked, 5 pages** — N-Q18 | **re-run — clean** |
-| Theme 4, units 4.4–4.5 | **not checked** — 7 pages | **re-run — clean** |
+| Theme 4, unit 4.4 | **checked, 3 pages** — N-Q19 | **re-run — clean** |
+| Theme 4, unit 4.5 | **not checked** — 4 pages | **re-run — clean** |
 
 N-Q10 has now been re-run over the whole of Theme 4, units 4.2 to 4.5 included,
 and those twelve pages are clean: only three carry a figure at all, and each
 numbers sequentially from 1. **The figure-number audit is therefore complete
-site-wide.** N-Q8 still needs running over units 4.4 and 4.5 as batches 29 and 30
-reach them; that is all that remains outstanding.
+site-wide.** N-Q8 has since been run over unit 4.4 as well, and **only unit 4.5's
+four pages remain unchecked** — run it as batch 30 reaches them. That is all that
+is outstanding.
 
 ---
 
@@ -1199,3 +1201,49 @@ over-claim from the alert and its four metadata copies. Note that AQA 1.7.3
 already carries seven questions on exactly this material, so if the section is
 written, the questions for it exist in substance and would need only an Edexcel
 rewrite.
+
+---
+
+## N-Q19 — `4-4-1` promises four things and delivers one and a half
+
+Found while writing the unit 4.4 question sets, and the largest over-claim of the
+Theme 4 pages. The spec alert on `4-4-1-role-of-financial-markets` closes:
+
+> These notes also cover **the channelling of savings into investment**, **risk
+> spreading**, **liquidity provision** and **financial intermediation**.
+
+Against the body:
+
+| Promised | In the body? |
+| --- | --- |
+| Channelling savings into investment | **In substance, not by name.** Split across *To Facilitate Saving* and *To Lend to Businesses and Individuals*, with the Harrod-Domar link between saving and growth |
+| Risk spreading | **No.** The word *risk* appears once, in the hedging section, and diversification is never mentioned |
+| Liquidity provision | **No.** "Liquid" does not appear on the page at all |
+| Financial intermediation | **No.** The term does not appear, and no section explains the maturity transformation it describes |
+
+The five functions the page actually teaches are facilitating saving, lending,
+facilitating exchange, forward markets and equity markets. Three of the four
+concepts advertised beneath them are simply not there.
+
+**The questions were written to the body.** 4.4.1 Q3 tests the channelling of
+savings into investment as a *mechanism* — deposits in, plant and machinery out —
+without using the word *intermediation*, which the page never gives the student.
+*Risk spreading* appears once as a distractor and is never the answer. So no
+question depends on the missing material, as with N-Q18 and unlike N-Q17.
+
+**Closing it is a short job.** Liquidity provision and intermediation are one
+paragraph each and follow naturally from the two sections already there; risk
+spreading needs a sentence on diversification. Alternatively cut the sentence
+from the alert and its four metadata copies.
+
+### A trap in the N-Q8 script, now that the questions are linked
+
+The check strips everything **above** the spec alert to avoid matching the
+metadata copies. The end-of-notes practice-questions block sits **below** it, and
+its teaser sentence is prose about the topic — so it can match a concept the body
+never teaches and report a false negative.
+
+It did exactly that here: `channelling savings into investment` matched, and the
+only occurrence on the page was in the block this project appended. **Print the
+matching context, not just a boolean**, and discard any hit inside
+`notes-questions-cta` before recording a page as clean.

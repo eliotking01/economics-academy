@@ -1,0 +1,172 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.4.1",
+  "slug": "4-4-1-role-of-financial-markets",
+  "title": "Role of Financial Markets",
+  "shortTitle": "Role of Financial Markets",
+  "pageTitle": "Role of Financial Markets Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the role of financial markets for Edexcel A-Level Economics: saving, lending, forward markets and equity finance.",
+  "intro": "Six original multiple-choice questions on the role of financial markets, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on what financial markets are for — channelling savings into investment, hedging, payments and equity finance.",
+  "questions": [
+    {
+      "id": "edexcel-4-4-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An airline agrees today to buy jet fuel in six months' time at a price fixed now. The function of the financial markets being used here is",
+      "options": {
+        "A": "Facilitating saving by households.",
+        "B": "Hedging against a future price change.",
+        "C": "Providing equity finance for expansion.",
+        "D": "Settling payments between buyers and sellers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Forward and futures markets let a firm agree a price today for delivery later. The airline has not bought fuel — it has bought <strong>certainty about the price</strong> of fuel, which is a different product and a valuable one.<br />Fuel is one of an airline's largest costs and one of the most volatile. Fixing the price six months out means next summer's fares can be set knowing what the flying will cost. That is what hedging does: it does not remove the risk from the world, it transfers it to someone willing to carry it.",
+        "distractors": {
+          "A": "Saving instruments — deposits, bonds, equities — let households earn a return on money they are not spending. The airline is doing the opposite: committing to spend.",
+          "C": "Equity finance means raising capital by issuing shares. No capital is being raised here; a purchase price is being agreed.",
+          "D": "Payment systems settle transactions that are happening now. The whole point of a forward contract is that delivery and payment happen later, at a price agreed in advance."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A manufacturer can fix today the exchange rate at which it will convert next year's export earnings. The most likely effect on its willingness to invest in new capacity is that investment",
+      "options": {
+        "A": "Falls, since the cost of hedging reduces profit.",
+        "B": "Falls, since the firm gives up any favourable move.",
+        "C": "Rises, since the return on the project is more certain.",
+        "D": "Is unchanged, since the exchange rate is not a cost."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Investment is a commitment made now against a return that arrives later, so it is uncertainty that deters it. A firm that cannot know what next year's earnings will be worth in its own currency has to treat a wide range of outcomes as possible, and projects near the margin do not get approved.<br />Fixing the rate narrows that range. The project can be appraised against a known figure, so more projects clear the hurdle. This is the link the notes draw between forward markets and the real economy: <strong>reducing uncertainty encourages investment</strong>, which raises productive capacity.",
+        "distractors": {
+          "A": "Hedging is not free, but the cost is small beside the swing it protects against. If the charge exceeded the value of the certainty, no firm would hedge at all.",
+          "B": "True, and it is the genuine trade-off — a hedged firm gains nothing if the rate moves its way. But a firm that wanted to gamble on the exchange rate would not be investing in capacity, and giving up an unpredictable gain to remove an unpredictable loss is what makes planning possible.",
+          "D": "The exchange rate is not a cost, but it determines what the export revenue is worth once converted. That is the return the investment has to justify."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Households hold £40bn in deposits at a bank, which lends £34bn of it to firms building new plant and machinery. The function the bank is performing is",
+      "options": {
+        "A": "Channelling savings into productive investment.",
+        "B": "Hedging the firms' exposure to price changes.",
+        "C": "Providing a means of settling transactions.",
+        "D": "Spreading risk across a range of assets."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Savers want their money safe and available; firms want long-term finance for plant that will take years to pay for itself. Those two wishes are incompatible, and the bank exists to reconcile them — taking short-term deposits and making long-term loans.<br />That is the function the Harrod-Domar model turns on: saving only raises growth if it reaches the firms that invest, and a financial system is what carries it there. An economy can save a great deal and still grow slowly if there is no mechanism to <strong>channel that saving into investment</strong>.",
+        "distractors": {
+          "B": "Hedging means fixing a future price through a forward or futures contract. Nothing in the question involves a price agreed for a later date.",
+          "C": "Settling transactions is the payments function — cards, transfers, clearing. The deposits here are being lent on, not moved between buyers and sellers.",
+          "D": "Spreading risk means holding many assets so that no single failure is ruinous. The bank may well do that with its loan book, but the function described is the movement of funds from savers to investors."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A supermarket chain pays 2,000 suppliers on the same day through the banking system, with no cash changing hands. The function of the financial system shown here is",
+      "options": {
+        "A": "Facilitating the exchange of goods.",
+        "B": "Lending to businesses and individuals.",
+        "C": "Providing a forward market in commodities.",
+        "D": "Providing a market for equities."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Payment systems are the least visible function of the financial system and the one everything else depends on. Two thousand separate settlements in a day would be impossible in cash, and the transaction costs of trying would be enormous.<br />By making exchange cheap and reliable, the payments function lets trade take place on a scale that barter or cash could not support — which is why the notes list it alongside saving, lending and the capital markets rather than treating it as plumbing.",
+        "distractors": {
+          "B": "No borrowing is described. The supermarket is settling debts it already owes for goods it has received.",
+          "C": "A forward market fixes a price now for delivery later. These payments are for deliveries that have already happened.",
+          "D": "Equity markets let firms raise capital by issuing shares. Paying suppliers raises no capital and involves no ownership."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four things a country's financial system does in one week.<br />From Table 1, the only one that directly provides a firm with capital to expand is",
+      "table": {
+        "caption": "Table 1: Four activities in one week",
+        "head": [
+          "",
+          "Activity"
+        ],
+        "rows": [
+          [
+            "Activity 1",
+            "A household earns interest on a savings account"
+          ],
+          [
+            "Activity 2",
+            "A shopper pays for groceries by card at a till"
+          ],
+          [
+            "Activity 3",
+            "An importer fixes today the exchange rate for a payment due in June"
+          ],
+          [
+            "Activity 4",
+            "A firm sells new shares to investors to fund a new factory"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Activity 1.",
+        "B": "Activity 2.",
+        "C": "Activity 3.",
+        "D": "Activity 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Only one of these puts new money into a firm's hands to spend on productive capacity.<br /><strong>Activity 4</strong> is an equity issue: investors hand over cash, the firm gains the funds for its factory, and the investors gain a share of the ownership and of any future profit. That is what an equity market is for — it turns savings held by people who will never build a factory into a factory.",
+        "distractors": {
+          "A": "Interest on a savings account is the saving function. The money may eventually be lent to a firm, but the household earning interest is not itself providing capital for expansion.",
+          "B": "Paying by card is the payments function — settling a transaction that is already happening. No finance is provided to anyone.",
+          "C": "Fixing an exchange rate in advance is hedging. It protects the importer against a price movement; it provides no funds."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-4-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After heavy losses, a country's banks sharply reduce lending to small firms. The most likely effect on the wider economy is that",
+      "options": {
+        "A": "Consumption rises as households save less.",
+        "B": "Investment falls and growth slows.",
+        "C": "Investment rises as firms use retained profit.",
+        "D": "The money supply rises as loans are repaid."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Small firms rarely have the retained profit or the access to capital markets that large ones do, so bank lending is where their investment finance comes from. Withdraw it and projects are postponed rather than funded another way.<br />That is the lending function failing, and the damage runs straight into the real economy: less investment now means less productive capacity later, so both aggregate demand and long-run supply are weaker. It is also why a banking problem does not stay inside the banks.",
+        "distractors": {
+          "A": "Nothing here makes households save less. If anything, news of bank losses makes people more cautious, not less.",
+          "C": "Some firms will fall back on retained profit, but that is a smaller pool than borrowing, which is why they were borrowing. Substituting a smaller source for a larger one does not raise investment.",
+          "D": "Repaying loans <strong>reduces</strong> the money supply, since the deposit created when the loan was made is extinguished. Less new lending means slower growth in the money supply, not faster."
+        }
+      }
+    }
+  ]
+}
