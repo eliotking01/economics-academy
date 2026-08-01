@@ -5,9 +5,9 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 143 topics, 1,108 questions. AQA is complete, Edexcel Themes 1 and 2 are
-complete, and Theme 3 units 3.1 to 3.5 are done. 23 topics remain — Theme 3
-unit 3.6, then the whole of Theme 4.**
+**Live: 145 topics, 1,122 questions. AQA is complete, and Edexcel Themes 1, 2
+and 3 are all complete. 21 topics remain — the whole of Theme 4, and nothing
+else.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -383,45 +383,38 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 23 topics, 186 questions still to write
+### Edexcel Theme 4 — 21 topics, 163 questions. All that is left.
 
-**This is all that is left.** AQA is finished, Themes 1 and 2 are complete, and
-Theme 3 is done as far as the end of unit 3.5.
+AQA is finished and Edexcel Themes 1, 2 and 3 are complete.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
 | Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 2 (unit 3.6 only) | ~14 |
+| Theme 3 | 0 — **complete**, 20 topics and 148 questions | — |
 | Theme 4 | 21 | 163 |
 
-**Next batch: unit 3.6, which finishes Theme 3** — 3.6.1 government
-intervention, 3.6.2 the impact of government intervention. Two topics, and
-expect them to be small.
+**Theme 4 is the last block, and it is the largest single one remaining.** Check
+the directory for the real topic list before planning — do not work from memory
+of the specification.
 
-**Twins: AQA 1.8.7 competition policy (7) and 1.8.8 public ownership,
-privatisation and regulation (7).** Both were already drawn on in batch 20 for
-Edexcel 3.1.2's constraint question, so re-read them rather than assuming.
-Specific ground AQA already holds:
+**Its twins are almost entirely AQA macro 2.6** — globalisation (7), trade (9),
+the balance of payments (9), exchange rate systems (10) and growth and
+development (8): **43 questions**, plus parts of 2.5 on fiscal and supply-side
+policy. Several Edexcel Theme 2 sets also bear on it, particularly 2.1.4 on the
+balance of payments and 2.2.5 on net trade, both of which are mine.
 
-- The CMA as the UK competition body, and what it investigates as
-  anti-competitive (price fixing).
-- A merger between two of four firms raising concentration and prices.
-- Blocking a merger against the economies of scale it would have delivered.
-- Privatisation defined, and the profit-motive argument for it.
-- Keeping a natural monopoly in public ownership.
-- Deregulation defined; price caps on a privatised natural monopoly; privatising
-  a natural monopoly without a regulator.
+**Plan the split before starting.** On the pattern of Themes 2 and 3, expect four
+or five batches of four to five topics each. The three rules that have held
+throughout:
 
-**Read the Edexcel pages before assuming there is nothing left.** Batch 23's
-monopsony set is the precedent: the page framed the topic quite differently from
-AQA and the whole set came out of that difference. 3.6.1 also carries the natural
-monopoly diagram cross-referenced from 3.4.5, which may open an angle.
-
-**After that, Theme 4 — 21 topics and the largest single block left on the
-site.** Its twins are AQA macro 2.6 (globalisation, trade, balance of payments,
-exchange rates, growth and development — 43 questions) plus parts of 2.5. Plan
-that split before starting; it is at least four batches.
+1. **Print the AQA twin immediately before writing each Edexcel set**, not all at
+   once at the start of a multi-topic batch.
+2. **Concept-grep the bank for the four or five ideas each set will turn on**
+   before drafting (Recurring problems §9). It has decided the shape of every
+   batch since 21 and found collisions the shingle cannot.
+3. **Vary the table stem and caption wording per set.** Six phrasings are now in
+   circulation and the check surfaces whichever gets reused.
 
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
 market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
@@ -476,6 +469,20 @@ if in doubt — the guide's rule is that concision beats coverage.
 
 ## Open items
 
+- **Monopsonistic exploitation — a decision the site owner has deferred, not
+  declined.** `REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
+  alert and its four metadata copies no longer promise the monopsony labour
+  market diagram, minimum wages or trade unions, since those are taught on 3.5.3.
+  **One part of that finding is still open.** *Monopsonistic exploitation* — the
+  gap between a worker's marginal revenue product and the wage a monopsonist
+  actually pays — appears on **neither** page. It is no longer claimed anywhere,
+  so both pages are accurate as they stand, but the concept itself is missing
+  from the site. Closing it properly means adding the term to
+  `3-5-3-wage-determination`, which already teaches the mechanism without naming
+  it. The site owner has asked to **resolve this at the end of the current run of
+  work**, so raise it then rather than acting on it. Note that 3.5.3 Q2 already
+  tests the mechanism — where the monopsonist's wage is read from — so a question
+  would not need rewriting, only the notes page.
 - **Nav sub-menu — needs the site owner's call.** `templates/header.html` carries
   a top-level **Practice Questions** entry only. The two-level board dropdown
   that Revision Notes and Past Papers have was written and then deliberately
@@ -1043,6 +1050,101 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 25 — Edexcel Theme 3, unit 3.6 (2026-08-01)
+
+2 topics, 14 questions. **Completes Edexcel Theme 3: 20 of 20 topics and 148
+questions.** Government intervention, and its impact.
+
+All 14 re-derived from the stem alone with **0 mismatches**; the RPI-X
+calculation recomputed with every distractor.
+
+**Originality clean on all three fronts, with no rewrites needed** — the first
+batch since 21 where nothing had to be reworded for overlap. One numeric flag,
+adjudicated and left: 3.6.1 Q1's options (2%, 3%, 5%, 7%) share three values with
+an AQA paper set of 2 / 3 / 4 / 5, which is a question asking **how many workers**
+a firm employs. Different topic, different units, single-digit integers.
+Coincidence.
+
+**3.6.1 turned out far richer than the twin audit suggested, and 3.6.2 far
+poorer.** The reason is worth recording, because it inverts the usual pattern:
+
+- **3.6.1's competition-policy material is AQA-occupied, but its *regulation*
+  material is not.** AQA 1.8.7 and 1.8.8 own the CMA, price fixing, merger
+  control, forced divestment, privatisation, deregulation and the purpose of a
+  price cap. What they do not have is *how* regulation is actually done, which is
+  where Edexcel goes into detail: the **RPI-X formula**, **profit regulation**
+  and its perverse incentive, and **quality standards** with their unintended
+  consequences. All three were free, and they carry the set.
+- **3.6.2 is almost entirely occupied — by my own bank, not by AQA.** Edexcel
+  1.4.2 (Government Failure, seven questions) already covers the definition,
+  administrative costs exceeding benefits, unintended consequences, and — in Q7 —
+  a regulator that recruits from the industry it oversees *and* depends on it for
+  data, which is both of Edexcel 3.6.2's stated causes of regulatory capture in
+  one question. AQA 1.8.10 adds seven more. That is 14 questions on government
+  failure before this batch started, which is why 3.6.2 is only five.
+
+**What survived in 3.6.2**: conflicting objectives (a price cap delivering lower
+bills while starving investment), asymmetric information framed as firms being
+able to *work around* a rule rather than the regulator mispricing a tax, the
+five-aim list with productive efficiency picked out, compliance costs
+entrenching incumbents, and the **revolving door** by name — which the bank
+describes twice but has never labelled.
+
+**Also free and used in 3.6.1**: competitive tendering, start-up support as a
+contestability measure, and the whole of Edexcel's *protecting suppliers and
+employees* section — minimum prices against monopsony power, and cooperatives
+aggregating supply to counter a dominant buyer. Nothing in 1,108 questions
+touched either.
+
+| | |
+| --- | --- |
+| Answer letters | A 4, B 2, C 4, D 4 (even would be 3.5) |
+| Skills | applied-reasoning 9, definition-in-context 2, data-table 2, calculation 1 |
+| Difficulty | standard 11, stretch 3, foundation 0 |
+| Sketch to solve | 0 |
+
+---
+
+## Edexcel Theme 3 — 20 of 20 topics, complete
+
+**Final profile:**
+
+| | |
+| --- | --- |
+| Topics | 20 of 20 |
+| Questions | 148, against 157 planned |
+| Answer letters | A 37, B 37, C 38, D 36 (even would be 37) |
+| Skills | applied-reasoning 102, definition-in-context 17, data-table 16, calculation 13 |
+| Difficulty | foundation 10, standard 118, stretch 20 |
+| Sketch to solve | 2 |
+
+**The letter distribution is the best on the site by a wide margin** — 37 / 37 /
+38 / 36 against an even 37, a maximum deviation of one across 148 questions.
+Themes 1 and 2 finished with D at 28 of 163 and 37 of 198 respectively. The
+difference is that every Theme 3 set was ordered by domain sequence or reworded
+to sort the correct option late **while drafting**, rather than reshuffled after
+the generator complained. §1 has recommended this since batch 1; Theme 3 is the
+first theme to do it from the first set to the last.
+
+**148 against 157 planned, and the shortfall is deliberate.** Theme 3 is the
+closest twin of the whole project — AQA micro units 1.4, 1.5, 1.6 and parts of
+1.8 carry over 200 questions on the same economics. Five sets came in at five or
+six questions rather than eight, because that was what remained after the
+occupied ground was subtracted: 3.4.1 efficiency (5), 3.4.7 contestability (5),
+3.6.2 impact of intervention (5), and the three unit 3.5 labour sets (6 each).
+Padding them would have meant porting AQA questions with the nouns changed.
+
+`applied-reasoning` at 69% is the highest of any theme, and `foundation` at 7%
+the lowest. Both follow from the same cause: AQA had already taken essentially
+every definitional item in the theme, so what was left needed a chained
+inference by construction.
+
+`calculation` at 9% is close to the site-wide 8%, and unit 3.3 alone supplied 8
+of the 13. **The two new arithmetic archetypes worth remembering are the
+marginal cost of labour computed from a wage bill (3.5.3 Q6) and MRP run
+backwards to find a product price (3.5.1 Q2)** — both were built because AQA
+already owned the forward version.
 
 ### Batch 24 — Edexcel Theme 3, unit 3.5 (2026-08-01)
 
