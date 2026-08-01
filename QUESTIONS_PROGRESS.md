@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 154 topics, 1,181 questions. AQA is complete, Edexcel Themes 1, 2 and 3
-are complete, and Theme 4 unit 4.1 is finished. 12 topics remain.**
+**Live: 159 topics, 1,219 questions. AQA is complete, Edexcel Themes 1, 2 and 3
+are complete, and Theme 4 units 4.1, 4.2 and 4.3 are finished. 7 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -17,10 +17,10 @@ approval — see `CLAUDE.md`.
 
 ## Read this first if you are resuming
 
-**State at handover (2026-08-01).** Branch `feature/topic-questions`, **37
-commits ahead of `main`**, working tree clean, **nothing pushed**. 154 of 166
-topics and 1,181 questions are done. Twelve topics remain, all in Edexcel Theme 4
-units 4.2 to 4.5, and they are planned as three batches — see **Remaining work**
+**State at handover (2026-08-01).** Branch `feature/topic-questions`, **38
+commits ahead of `main`**, working tree clean, **nothing pushed**. 159 of 166
+topics and 1,219 questions are done. Seven topics remain, all in Edexcel Theme 4
+units 4.4 and 4.5, and they are planned as two batches — see **Remaining work**
 below.
 
 Read these four things, in this order, before writing anything:
@@ -444,26 +444,26 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel Theme 4 — 12 topics, 104 questions. All that is left.
+### Edexcel Theme 4 — 7 topics, ~66 questions. All that is left.
 
-AQA is finished, Themes 1 to 3 are complete, and Theme 4 unit 4.1 is finished
-(9 topics, 59 questions).
+AQA is finished, Themes 1 to 3 are complete, and Theme 4 units 4.1, 4.2 and 4.3
+are finished (14 topics, 97 questions).
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Themes 1–3 | 0 — **all complete**, 66 topics and 509 questions | — |
-| Theme 4 | 12 | 104 |
+| Theme 4 | 7 | ~66 |
 
-**The agreed split for Theme 4**, with batch 26 done:
+**The agreed split for Theme 4**, with batches 26 to 28 done:
 
 ```
 batch 26 ✓  4.1.1 globalisation  4.1.2 specialisation & trade  4.1.3 pattern of trade
             4.1.4 terms of trade  4.1.5 trading blocs & the WTO          (32 questions)
 batch 27 ✓  4.1.6 restrictions on free trade  4.1.7 balance of payments
             4.1.8 exchange rates  4.1.9 international competitiveness  (27 questions)
-batch 28    4.2.1 absolute & relative poverty  4.2.2 inequality
+batch 28 ✓  4.2.1 absolute & relative poverty  4.2.2 inequality
             4.3.1 measures of development  4.3.2 factors influencing growth
-            4.3.3 strategies influencing growth
+            4.3.3 strategies influencing growth                    (38 questions)
 batch 29    4.4.1 role of financial markets  4.4.2 market failure in the financial sector
             4.4.3 role of central banks
 batch 30    4.5.1 public expenditure  4.5.2 taxation  4.5.3 public sector finances
@@ -472,9 +472,6 @@ batch 30    4.5.1 public expenditure  4.5.2 taxation  4.5.3 public sector financ
 
 **Twins, batch by batch:**
 
-- **Batch 28** — AQA 1.7.1, 1.7.2 and 1.7.3 (22 questions on income distribution,
-  poverty and policy) for unit 4.2, and AQA 2.6.5 (growth and development, 8) for
-  unit 4.3. Note AQA 2.6.5 includes the Harrod-Domar model.
 - **Batch 29** — AQA 2.4.1 to 2.4.4 (30 questions on financial markets, banks,
   central banks and regulation). Expect heavy occupation, particularly on 4.4.3.
 - **Batch 30** — AQA 2.5.1 (fiscal policy, 9) and 2.5.2 (supply-side, 8), both
@@ -490,21 +487,10 @@ The three rules that have held throughout:
 3. **Vary the table stem and caption wording per set.** Seven phrasings are now in
    circulation and the check surfaces whichever gets reused.
 
-### What to expect in each of the three remaining batches
+### What to expect in each of the two remaining batches
 
-**Batch 28 — units 4.2 and 4.3, five topics.** The poverty and inequality
-material is heavily occupied: **AQA 1.7.1, 1.7.2 and 1.7.3 carry 22 questions**
-covering absolute and relative poverty definitions, the 60%-of-median line, the
-Gini coefficient, the Lorenz curve, the poverty trap, means-testing, and the
-equity-efficiency trade-off. Expect 4.2.1 and 4.2.2 to come in small. The
-development topics are more open — AQA 2.6.5 has only eight questions, though it
-does include the Harrod-Domar model, so check before using it. **The Kuznets
-curve, the HDI's three components and Edexcel's named strategies (aid, debt
-relief, microfinance, tourism, primary product dependence) are all worth grepping
-first; several are likely to be free.**
-
-**Batch 29 — unit 4.4, three topics.** Expect this to be the hardest of the
-three. **AQA 2.4.1 to 2.4.4 carry 30 questions** on financial markets, commercial
+**Batch 29 — unit 4.4, three topics.** Expect this to be the harder of the
+two. **AQA 2.4.1 to 2.4.4 carry 30 questions** on financial markets, commercial
 and investment banks, central banks and regulation — including bond yields,
 balance sheets, credit creation, the lender of last resort, QE, the liquidity
 trap and systemic risk. 4.4.3 in particular may have very little left. The likely
@@ -520,6 +506,9 @@ distinction. Edexcel 4.5.2 on taxation is the likely opening: **progressive,
 proportional and regressive systems, the Laffer curve and the effects of tax
 changes on incentives, output and the distribution of income** are worth grepping
 individually, since AQA 2.5.1 has the Laffer curve but Theme 4 goes further.
+**Batch 28's grep also found that `aid`, `debt relief` and `structural
+adjustment` were entirely free before 4.3.3 used them**, which is worth knowing
+for 4.5.4 — the international-institutions material now has questions on it.
 
 **When unit 4.5 is finished, the project is complete** — 166 topics. Write the
 Theme 4 final profile and a site-wide closing profile in the same shape as the
@@ -597,22 +586,24 @@ if in doubt — the guide's rule is that concision beats coverage.
   a top-level **Practice Questions** entry only. The two-level board dropdown
   that Revision Notes and Past Papers have was written and then deliberately
   removed, because it would have pointed at five board index pages that did not
-  yet exist. A comment marks the insertion point. **Four of the five now exist
-  and are complete and final** — both AQA indexes, `edexcel-theme-1` (22 of 22)
-  and `edexcel-theme-2` (24 of 24). Only Themes 3 and 4 are missing, and those
-  are the last two batches of work. Restoring the dropdown with the four that are
-  finished is now a reasonable call; so is waiting for Theme 4. Either way it is
-  a nav change on every page, so it needs approval.
+  yet exist. A comment marks the insertion point. **All five now exist, and four
+  are complete and final** — both AQA indexes, `edexcel-theme-1` (22 of 22),
+  `edexcel-theme-2` (24 of 24) and `edexcel-theme-3` (20 of 20). Only
+  `edexcel-theme-4` is still filling up, at 14 of 21 after batch 28. Restoring the
+  dropdown now would point at five real pages, one of them incomplete; waiting for
+  batch 30 costs nothing. Either way it is a nav change on every page, so it needs
+  approval.
 - **Hub and board index density.** Both list only what is live. They fill out
   per batch; no action needed.
-- **Skill mix.** `applied-reasoning` runs at 60% site-wide against a ~40% target
+- **Skill mix.** `applied-reasoning` runs at 62% site-wide against a ~40% target
   and `calculation` at 8% against ~15%. This is largely a property of the
   specifications — AQA micro units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual
   almost throughout, and AQA micro's 401 questions dominate the total. Macro
   pulled the right way: AQA macro finished at 12% `calculation`, Edexcel Theme 2
-  at 11%. Recorded rather than corrected. **Edexcel Theme 3 is the last real
-  chance to move it** — revenue, cost and profit schedules, average against
-  marginal, and concentration ratios are all on those pages.
+  at 11%. Theme 3 was the last real chance to move it and shifted the total by
+  under a point. **Recorded rather than corrected — it will not change now.**
+  Unit 4.5 supports a little arithmetic (tax progressivity, the deficit against
+  the debt), but seven topics cannot move a 1,219-question total.
 - **Written-response extension.** Proposed in the original brief but **not
   built** and not approved: 1–2 short written questions per topic with
   indicative-content model answers behind `<details>`, plus a marking-service
@@ -637,6 +628,7 @@ to end.
 | **N-Q15** | `3-4-6-monopsony` | **Fixed 2026-08-01.** Alert and four metadata copies rewritten | One part still open — see below |
 | N-Q16 | `4-1-3-pattern-of-trade` | Promises deindustrialisation; describes it, never names it | Not tested; one-word fix |
 | **N-Q17** | `4-1-9` | Promises export market share as a measure; body omits it entirely | **`4.1.9` Q8 depends on it** |
+| N-Q18 | `4-2-1` | Promises redistribution and social protection as policy responses; body has no policy section | Not tested; set written to the body |
 | N-Q10 | 13 pages, all boards | Duplicate or non-sequential figure numbers | Cosmetic; already listed in full |
 
 **N-Q17 is the one to act on first if any of these are taken up.** A question is
@@ -645,12 +637,13 @@ covering advertised concepts and bringing the notes up afterwards. The paragraph
 needed is short and the wording exists in the Q8 model answer.
 
 **Audit coverage.** The N-Q8 spec-alert check has now been run over Themes 1, 2
-and 3 and over Theme 4 unit 4.1. The N-Q10 figure-number check was site-wide
-originally and has been re-run over Themes 3 and 4.1, finding nothing new.
-**Units 4.2 to 4.5 are unchecked for N-Q8** — run it as batches 28 to 30 reach
-them, and re-run N-Q10 at the same time. Both scripts are in `REVIEW-NOTES.md`,
-along with the warning that the automated pass produces false positives at
-roughly one in three and every hit must be read before it is recorded.
+and 3 and over Theme 4 units 4.1, 4.2 and 4.3. **Only units 4.4 and 4.5 remain —
+run it as batches 29 and 30 reach them.** The N-Q10 figure-number check is
+**finished site-wide**: it was re-run over the whole of Theme 4 during batch 28
+and units 4.2 to 4.5 are clean, so nothing beyond the thirteen pages already
+listed needs renumbering. Both scripts are in `REVIEW-NOTES.md`, along with the
+warning that the automated pass produces false positives at roughly one in three
+and every hit must be read before it is recorded.
 
 ---
 
@@ -1190,6 +1183,101 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 28 — Edexcel Theme 4, units 4.2 and 4.3 (2026-08-01)
+
+5 topics, 38 questions. Poverty, inequality, and the whole of unit 4.3 —
+measuring development, the factors behind it, and the strategies for it.
+
+All 38 re-derived from the stem alone with **0 mismatches**; the savings gap, the
+Gini coefficient and both relative poverty lines recomputed with every distractor
+value.
+
+**Batch 27's verification pass was re-run first, in full, and came back clean** —
+27 of 27 re-solved cold, both past-paper corpora and the intra-bank shingle clear
+at every n-gram length, no numeric option-set flag, no option-length flag, and a
+rebuild that reproduced the committed pages byte for byte.
+
+**The two units could hardly have been less alike, and the concept-grep predicted
+it exactly.**
+
+- **Unit 4.2 is the most heavily occupied ground left on the site.** AQA 1.7.1,
+  1.7.2 and 1.7.3 carry 22 questions, and between them they own the income/wealth
+  flow-and-stock distinction, the Lorenz curve, a Gini coefficient of 0, a Gini
+  comparison table, the 60%-of-median definition *and* its calculation, income
+  doubling, the poverty trap, the consequences of poverty, progressive taxation,
+  means-testing, inheritance tax and the incentive argument for inequality. Six
+  and seven questions respectively is what honestly remained.
+- **Unit 4.3 is almost virgin ground.** AQA 2.6.5 has eight questions in total,
+  and outside them the grep returned **zero hits across 1,181 questions** for the
+  Kuznets curve, capitalism, quintile shares, composite and single indicators,
+  the MPI, the IHDI, infant mortality, clean water, primary product dependency,
+  microfinance, aid, debt relief, Fairtrade, tourism, the Lewis model, buffer
+  stocks, the World Bank, the IMF, NGOs, joint ventures, structural adjustment
+  and profit repatriation. Twenty-five questions came out of that list.
+
+**What was free in unit 4.2, and it is a short list.** The moving relative line
+tracked across two years — a household £2,400 better off and no further out of
+poverty, because the median rose by £4,000 — which is a different question from
+AQA's one-step 60% calculation. The Gini coefficient computed from the areas,
+A ÷ (A + B), which AQA never does. Cumulative quintile shares, where the trap is
+reading the bottom-80% figure as the top-20% share. Both halves of the Kuznets
+curve. Capitalism's distributive rule. And the **cost** side of the inequality
+trade-off — extreme inequality demotivating, and social immobility — where AQA
+1.7.1 Q7 owns the benefit side.
+
+**One collision, caught by the shingle and reworded.** 4.2.1 Q1 opened "counts a
+household as being in relative poverty when its income is below 60% of median
+household income", which is AQA 1.7.2 Q2's stem and correct option run together —
+nine shared words. The definition is unavoidable in a question that needs the
+line; the *phrasing* of it was not. Rewritten to "draws its relative poverty line
+at 60% of the median", and clean afterwards.
+
+**Everything else was clean at the first attempt** on all three fronts: zero
+shared 8-word runs against either past-paper corpus, and no numeric option-set
+flag. That is now three batches running.
+
+**Two adjacencies judged and kept, both recorded so they are not re-litigated:**
+
+- 4.3.3 Q1 (three deregulating measures → market-orientated strategies) against
+  Edexcel 2.6.3 Q3 (what makes a supply-side policy market-based). Same
+  underlying distinction, different specification area, different question shape
+  — one classifies concrete measures, the other defines the category by its
+  mechanism. Edexcel teaches both, under different names.
+- 4.3.1 Q6 (6% growth for a decade with every non-income indicator flat) against
+  AQA 2.6.5 Q1 and Edexcel 2.5.4 Q3. AQA's is the definition; Edexcel 2.5.4's is
+  about the distribution of growth's benefits. This one is about growth failing
+  to move health, schooling and water at all, which is the point of the 4.3.1
+  page.
+
+**The best question in the batch is 4.3.3 Q3**, the buffer stock. Year 1's
+harvest is large and the price would fall to £150; Year 2's fails and it would
+reach £260; the target is £200. The rule — buy in the good years, release in the
+bad — falls straight out of the table, and the two inverted options are exactly
+what a student who has memorised "the agency intervenes" without the direction
+will pick.
+
+| | |
+| --- | --- |
+| Answer letters | A 9, B 12, C 11, D 6 (even would be 9.5) |
+| Skills | applied-reasoning 23, definition-in-context 7, data-table 5, calculation 3 |
+| Difficulty | foundation 5, standard 31, stretch 2 |
+| Sketch to solve | 0 |
+
+**No sketch items.** Unit 4.2's two diagrams are the Lorenz curve and the Kuznets
+curve, and both are printed on the 4.2.2 page; 4.2.2 Q1 and Q2 ask the student to
+work *from* them numerically instead, which is the harder skill and the one the
+page supports. Unit 4.3's only diagram is the buffer stock, which 4.3.3 Q3 uses
+as a table.
+
+**Notes audit run at the same time.** N-Q8 checked over all five pages, N-Q10
+re-run over units 4.2 to 4.5. One new finding, **N-Q18**: `4-2-1` promises
+"redistribution and social protection as policy responses" in its spec alert and
+four metadata copies, and the body has no policy section at all — "social
+protection" appears nowhere in it. Unlike N-Q17, no question depends on it, since
+the 4.2.1 set was written strictly to the body. **N-Q10 came back clean across
+all twelve pages of units 4.2 to 4.5, which closes the figure-number audit
+site-wide.**
 
 ### Batch 27 — Edexcel Theme 4, units 4.1.6 to 4.1.9 (2026-08-01)
 

@@ -1,0 +1,192 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.2.1",
+  "slug": "4-2-1-absolute-relative-poverty",
+  "title": "Absolute and Relative Poverty",
+  "shortTitle": "Absolute and Relative Poverty",
+  "pageTitle": "Absolute and Relative Poverty Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on absolute and relative poverty for Edexcel A-Level Economics: the 60% median line, and the causes of changes in poverty.",
+  "intro": "Six original multiple-choice questions on absolute and relative poverty, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Six original multiple-choice questions on the two measures of poverty, the moving relative line, and what makes each of them rise and fall.",
+  "questions": [
+    {
+      "id": "edexcel-4-2-1-q1",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country draws its relative poverty line at 60% of the median. Table 1 shows median household income and one household's income in two separate years.<br />From Table 1, that household was",
+      "table": {
+        "caption": "Table 1: Median household income and one household's income",
+        "head": [
+          "",
+          "Year 1",
+          "Year 5"
+        ],
+        "rows": [
+          [
+            "Median household income",
+            "£30,000",
+            "£34,000"
+          ],
+          [
+            "The household's income",
+            "£17,400",
+            "£19,800"
+          ]
+        ]
+      },
+      "options": {
+        "A": "In relative poverty in Year 1 only.",
+        "B": "In relative poverty in Year 5 only.",
+        "C": "In relative poverty in both years.",
+        "D": "In relative poverty in neither year."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The line moves every year, because it is set against the median.<br />Year 1: 60% of £30,000 = <strong>£18,000</strong>. The household's £17,400 is below it, so it is in relative poverty.<br />Year 5: 60% of £34,000 = <strong>£20,400</strong>. The household's £19,800 is still below it, so it is in relative poverty again.<br />The household is £2,400 a year better off in cash terms and no further out of poverty, because the median rose by £4,000 while its own income rose by £2,400. Relative poverty measures the <strong>distance from the middle</strong>, not the level of income, so a household escapes it only by gaining on the median.",
+        "distractors": {
+          "A": "This compares the Year 5 income of £19,800 with the <strong>Year 1</strong> line of £18,000. The relative line is not fixed: it is recalculated from the median every year, and by Year 5 it stands at £20,400.",
+          "B": "The reverse slip — the Year 1 income of £17,400 is measured against the Year 5 line of £20,400. Each year's income must be compared with that same year's line.",
+          "D": "A rise in income does not by itself lift a household out of relative poverty. This one gained £2,400 while the line rose by £2,400 as well, so its position relative to the middle is unchanged."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A cyclone destroys homes, farmland and the road network across a region of a low-income country. Over the following year, the most likely effect in that region is",
+      "options": {
+        "A": "A fall in absolute poverty, as rebuilding creates work.",
+        "B": "A rise in absolute poverty, as livelihoods are destroyed.",
+        "C": "No change in absolute poverty, as emergency aid replaces losses.",
+        "D": "No change in absolute poverty, as it is measured in dollars."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Absolute poverty exists where people cannot afford the basic necessities — food, water, shelter, healthcare. A natural disaster attacks exactly those things: it destroys the land and tools people earn from, and the roads that bring goods to them.<br />Households that were just above the threshold lose their means of earning and fall below it, so the number in absolute poverty <strong>rises</strong>. Natural disasters and conflict are the standard causes of a sharp increase in absolute poverty, and their effects last well beyond the event itself, because the destroyed capital takes years to replace.",
+        "distractors": {
+          "A": "Reconstruction does eventually create work, but it is funded out of resources the region has just lost, and it comes after the destruction rather than instead of it. Within a year the loss of homes, farmland and roads dominates.",
+          "C": "This confuses a policy's intention with its effect. Emergency aid relieves the worst of the hardship; it does not restore the farmland, the housing stock and the transport network that generated incomes.",
+          "D": "The absolute poverty line is set in dollars at a fixed international level, but what is measured against it is the household's own income. Destroying the sources of that income moves households below a line that has not moved at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The share of households consisting of a single pensioner living on a fixed state pension rises sharply, while median earnings across the economy continue to grow. Taken on its own, the most likely effect is that",
+      "options": {
+        "A": "Absolute poverty falls, as pensioners draw on their savings.",
+        "B": "Absolute poverty rises, as the state pension is withdrawn.",
+        "C": "Relative poverty falls, as the state pension is guaranteed.",
+        "D": "Relative poverty rises, as more incomes fall behind the median."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Relative poverty is measured against a line that moves with median income. If median earnings keep growing while a growing group of households lives on a pension that does not, more and more of those households end up below 60% of the median.<br />Nothing here says pensioners are worse off in cash terms — their income is fixed, not falling. They are worse off <strong>relative to the middle</strong>, and that is what this measure captures. Demographic change of this kind is one of the standard causes of a rise in relative poverty even in a growing economy.",
+        "distractors": {
+          "A": "Savings are a stock of wealth, not income, and running them down is not a fall in poverty. Nothing in the question says pensioner households hold savings at all.",
+          "B": "The pension is fixed, not withdrawn. A fixed income means unchanged purchasing power in cash terms, so there is no reason for the number unable to afford basic necessities to rise.",
+          "C": "A guaranteed income protects a household against a fall in its own income. It gives no protection at all against the median rising faster, which is what the relative measure compares it with."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Unemployment in a country falls for three years running, but the number of households in relative poverty does not fall. The most likely explanation is that",
+      "options": {
+        "A": "Median household income has fallen sharply.",
+        "B": "Much of the new work is part-time and low-paid.",
+        "C": "The absolute poverty line has been raised.",
+        "D": "Welfare payments have risen faster than wages."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Having work and being out of relative poverty are not the same thing. If the jobs being created are part-time, insecure or low-paid, a household can move from unemployment into work and still sit below 60% of median income.<br />This is why the Edexcel material lists <strong>underemployment and low wages</strong> alongside unemployment as labour market causes of relative poverty. A falling unemployment rate counts people, not hours or pay, so it can improve while the income distribution does not.",
+        "distractors": {
+          "A": "A falling median would <strong>lower</strong> the poverty line, which on its own reduces the measured number below it. This gets the direction of the relative line backwards.",
+          "C": "The absolute line and the relative line are separate measures. Moving the absolute threshold changes the count of people in absolute poverty and has no effect on a figure calculated from the median.",
+          "D": "Welfare payments rising faster than wages would raise the incomes of the poorest households relative to the middle, which reduces relative poverty rather than holding it up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-1-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries measure absolute poverty against the World Bank's threshold of $2.15 a day and relative poverty against 60% of their own median household income. One country is high-income and the other low-income. It follows that",
+      "options": {
+        "A": "Both thresholds are set at the same level in the two countries.",
+        "B": "Neither threshold can be compared between the two countries.",
+        "C": "The absolute threshold is the same in both, the relative one is not.",
+        "D": "The relative threshold is the same in both, the absolute one is not."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two measures are built differently. The absolute threshold is a <strong>fixed international</strong> figure — $2.15 a day — chosen to represent what survival costs, and it does not change from country to country.<br />The relative threshold is <strong>country-specific</strong>, because it is 60% of that country's own median household income. The high-income country's median is far above the low-income country's, so its relative line sits far higher in cash terms.<br />This is why a rich country can have almost no absolute poverty and a substantial rate of relative poverty at the same time.",
+        "distractors": {
+          "A": "Only one of them is. The relative threshold is calculated from each country's own median, so two countries with different medians have different relative lines by construction.",
+          "B": "The absolute threshold exists precisely so that poverty can be compared internationally. It is the relative measure that resists comparison, because each country is being judged against itself.",
+          "D": "This has the two measures the wrong way round. The fixed international figure is the absolute one; the relative one moves with each country's median."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-2-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four changes in a low-income country over one year.<br />From Table 1, the change most likely to reduce absolute poverty is",
+      "table": {
+        "caption": "Table 1: Four changes over one year",
+        "head": [
+          "",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Change 1",
+            "Foreign firms open factories employing 20,000 previously jobless workers"
+          ],
+          [
+            "Change 2",
+            "Median household income rises while the poorest households' incomes are unchanged"
+          ],
+          [
+            "Change 3",
+            "The relative poverty line is redefined as 50% of median household income"
+          ],
+          [
+            "Change 4",
+            "The share of total income going to the richest tenth of households rises"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Change 1.",
+        "B": "Change 2.",
+        "C": "Change 3.",
+        "D": "Change 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Absolute poverty falls when households that could not afford basic necessities can now afford them. That needs the incomes of the poorest to rise.<br /><strong>Change 1</strong> does exactly that: 20,000 households that had no earnings now have some. Foreign investment, trade and aid are the global factors the Edexcel material identifies as capable of reducing absolute poverty in a developing economy, and this is the mechanism — jobs and incomes reaching people who had neither.",
+        "distractors": {
+          "B": "A rising median with the poorest standing still changes the <strong>relative</strong> measure, not the absolute one. In fact this widens the gap: the relative line rises while the incomes at the bottom do not.",
+          "C": "Redefining the line changes the count, not anyone's living standards. It also alters the relative measure, which is the one calculated from the median — the absolute threshold is a fixed international figure.",
+          "D": "A larger share going to the richest tenth is a change in the distribution. It tells you nothing about whether the poorest can now afford necessities, and if anything the shares of everyone else have fallen."
+        }
+      }
+    }
+  ]
+}

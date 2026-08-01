@@ -1,0 +1,238 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.3.2",
+  "slug": "4-3-2-factors-influencing-growth-development",
+  "title": "Factors Influencing Growth and Development",
+  "shortTitle": "Factors Influencing Growth",
+  "pageTitle": "Factors Influencing Growth and Development Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on the factors influencing growth and development for Edexcel A-Level Economics: the savings gap, capital flight and debt.",
+  "intro": "Nine original multiple-choice questions on the factors influencing growth and development, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on primary product dependency, the savings and foreign currency gaps, capital flight, debt and the non-economic factors.",
+  "questions": [
+    {
+      "id": "edexcel-4-3-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A developing economy's gross national income is £40bn, and its households and firms save 12% of it. To grow at the rate its government is targeting, the economy needs investment of £7.2bn a year. The savings gap is",
+      "options": {
+        "A": "£2.4bn",
+        "B": "£4.8bn",
+        "C": "£7.2bn",
+        "D": "£12.0bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The savings gap is the shortfall between the saving an economy generates and the investment it needs.<br />Saving available: 12% × £40bn = <strong>£4.8bn</strong>.<br />Investment needed: <strong>£7.2bn</strong>.<br />Savings gap = £7.2bn − £4.8bn = <strong>£2.4bn</strong>.<br />The Harrod-Domar model makes this the central constraint on a low-income economy: growth needs investment, investment needs saving, and saving is hard where incomes are barely above subsistence. The gap has to be filled from outside — by foreign investment, borrowing or aid — or the target rate is not reached.",
+        "distractors": {
+          "B": "This is the saving the economy generates, not the gap. The gap is what is <strong>missing</strong>, so the required investment has to be netted off against it.",
+          "C": "This is the investment requirement on its own. Taking it as the gap ignores the £4.8bn the economy already saves, and overstates the shortfall by exactly that amount.",
+          "D": "The two figures have been added rather than subtracted: £4.8bn + £7.2bn. A gap is always a difference."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country must use most of its foreign currency earnings to meet interest payments on debt owed abroad. Its development is held back because it",
+      "options": {
+        "A": "Attracts more foreign direct investment than before.",
+        "B": "Builds up its holdings of foreign currency reserves.",
+        "C": "Cannot pay for the machinery and medicines it imports.",
+        "D": "Improves its terms of trade against its creditors."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Imported machinery, technology and raw materials have to be paid for in foreign currency, and a country earns that currency by exporting. Where debt service takes most of those earnings, there is not enough left for the imports that industrialisation depends on.<br />This is the <strong>foreign currency gap</strong>. It is distinct from the savings gap: the economy might generate plenty of domestic saving and still be unable to convert it into the imported capital goods it needs.",
+        "distractors": {
+          "A": "A country visibly straining to service its external debt is a less attractive prospect for foreign investors, not a more attractive one. Debt difficulties usually deter inward investment.",
+          "B": "Reserves are being run down to make the payments, not accumulated. The whole difficulty is that the foreign currency is leaving.",
+          "D": "The terms of trade are the ratio of export prices to import prices. Debt payments do not enter that ratio at all, and paying interest to creditors does nothing to the price of anything."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "After a disputed election, wealthy residents and foreign investors move their money out of a country within weeks. The consequence for its development is that",
+      "options": {
+        "A": "Domestic banks gain deposits to lend on.",
+        "B": "Investment funds available at home shrink.",
+        "C": "The country's savings gap is closed.",
+        "D": "The currency becomes overvalued."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Capital flight is the rapid outflow of financial assets in response to economic or political instability, and this is a textbook trigger for it. The money leaving was the money that would otherwise have been lent to domestic firms.<br />The result is less investment, slower job creation and slower growth — and the timing is cruel, because capital leaves precisely when a country is least able to replace it. Confidence, once lost, is slow to return, so the effect outlasts the political crisis that caused it.",
+        "distractors": {
+          "A": "Deposits are being withdrawn, not received. Banks losing deposits have less to lend, which is the mechanism by which capital flight damages investment.",
+          "C": "It widens the savings gap. Funds that could have financed domestic investment have left the country, so the shortfall against what investment requires grows.",
+          "D": "Selling the domestic currency to buy foreign assets raises the supply of it on the foreign exchange market, which pushes its value <strong>down</strong>. Capital flight is associated with depreciation, not overvaluation."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country exports unprocessed cocoa beans, which are roasted, blended and turned into chocolate abroad. Its long-run growth is limited by this because",
+      "options": {
+        "A": "Cocoa prices are fixed by the importing country.",
+        "B": "Growers cannot sell to more than one buyer.",
+        "C": "Most of the value is added abroad, not at home.",
+        "D": "Unprocessed exports face the highest tariffs."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A tonne of cocoa beans is worth a fraction of the chocolate made from it. Where the roasting, blending and branding all happen elsewhere, the difference between the two accrues to firms in the importing country.<br />That is the second limb of <strong>primary product dependency</strong>, and it is the one that constrains growth over the long run: the country's real GDP is capped near the value of the raw commodity, however much of it is sold. Moving up the chain into processing is how an economy escapes it — and it is difficult precisely because the expertise, the capital and often the tariff structure all sit on the other side.",
+        "distractors": {
+          "A": "Commodity prices of this kind are set on world markets, not by any single buyer country. Volatility in those world prices is a real problem for such an economy — but it is a separate one from the value-added point.",
+          "B": "Cocoa is traded internationally with many buyers. Even with a dozen competing buyers, an exporter of raw beans would still be selling the low-value part of the product.",
+          "D": "Tariffs generally rise with the degree of processing, not fall — importing countries protect their own processing industries. That escalation is another obstacle to adding value at home, so this option has it backwards."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A low-income country's population grows at 3% a year, while its stock of schools, clinics and housing is unchanged. The most likely effect on development is that",
+      "options": {
+        "A": "Real GDP per head rises as the labour force grows.",
+        "B": "Schools, clinics and housing are spread more thinly.",
+        "C": "The country's savings gap closes as more people work.",
+        "D": "The rate of population growth falls automatically."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Development is measured per person. A population growing at 3% a year doubles in about 24 years, and if the schools, clinics and houses serving it do not grow with it, the provision each person receives falls.<br />That shows up directly in the development indicators: larger class sizes, more patients per doctor, worse overcrowding. Demographic pressure of this kind is why a country can record respectable output growth and still see <strong>living standards stagnate</strong>.",
+        "distractors": {
+          "A": "A larger population raises output only if the extra people have capital and infrastructure to work with. The question specifies that the stock of those is fixed, so output per head is more likely to fall than rise.",
+          "C": "A growing population raises the number of mouths to feed faster than it raises income, so saving becomes harder, not easier. The savings gap widens.",
+          "D": "Population growth does tend to slow as countries develop, but that is an outcome of rising incomes, health and education — not something that happens on its own while provision per person is falling."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government spends a quarter of its tax revenue on interest payments on money it borrowed in the past. The most likely consequence for development is that",
+      "options": {
+        "A": "Foreign investors are attracted by the high returns.",
+        "B": "The government's future borrowing costs fall.",
+        "C": "The savings available to domestic firms rise.",
+        "D": "The state has less to spend on schools and clinics."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Debt service is a first claim on the budget: the interest has to be paid before anything else is funded. A quarter of revenue going to creditors is a quarter unavailable for health, education, infrastructure or anything else that raises productive capacity.<br />This is how a high debt burden becomes a <strong>development</strong> problem rather than just an accounting one. It also tends to be self-reinforcing, because the spending being crowded out is exactly the spending that would grow the tax base and make the debt easier to carry.",
+        "distractors": {
+          "A": "A government spending a quarter of its revenue on interest looks risky, not attractive. Investors read a heavy debt burden as a warning about future stability, which is why such countries borrow at higher rates in the first place.",
+          "B": "Nothing here reduces the debt. Borrowing costs fall when lenders judge a government more likely to repay, and a quarter of revenue going out in interest points the other way.",
+          "C": "Government borrowing competes with private borrowers for the same pool of funds. A large debt burden makes credit scarcer and dearer for domestic firms, not more plentiful."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two neighbouring regions have the same natural resources and the same skills in their workforce. In one, small firms can borrow from banks; in the other, almost nobody can. The likely difference in development is that",
+      "options": {
+        "A": "Neither region grows, since their resources are identical.",
+        "B": "The region with credit grows faster, as investment is funded.",
+        "C": "The region without credit grows faster, as it saves more.",
+        "D": "The two regions grow at the same rate over the long run."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Access to credit is what turns an idea into productive capacity. A trader who can borrow can buy stock, a farmer can buy better seed, a workshop can buy a machine — and each of those raises output beyond what the owner's own cash would allow.<br />Where the banking system does not reach people, profitable investments simply do not happen, and the economy grows only as fast as firms can fund themselves from retained earnings. Identical resources and identical skills therefore produce very different outcomes: the <strong>financial system</strong> is itself a factor of development.",
+        "distractors": {
+          "A": "Identical resources are a reason to expect similar potential, not zero growth. The question is which region converts that potential into output, and credit is what makes the difference.",
+          "C": "Being unable to borrow does not make households save more; it usually means incomes are too low and too irregular to save much at all. Even if saving were higher, without a banking system it would not reach the firms that could invest it.",
+          "D": "That would be true only if credit made no difference to investment. The whole point of the comparison is that everything else about the two regions is the same."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A landlocked country with mountainous terrain finds that delivering its manufactured exports to a port costs far more than it costs its coastal rivals. This holds back its development because it",
+      "options": {
+        "A": "Lowers the country's rate of saving directly.",
+        "B": "Prevents the country from importing at all.",
+        "C": "Raises delivered costs, weakening its exports.",
+        "D": "Reduces the quality of its education system."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Geography is a non-economic factor with an entirely economic consequence. A good that costs more to move is dearer by the time it reaches a foreign buyer, whatever the factory gate price was — so the country's unit costs are higher than a coastal rival's before either has competed on anything.<br />That makes exporting harder, which limits the foreign currency earnings, the economies of scale and the technology transfer that trade brings. It is also the one factor on the list a government cannot change, which is why landlocked countries are so heavily represented among the least developed.",
+        "distractors": {
+          "A": "Saving is determined by incomes and by the financial system. High transport costs may lower incomes over time, but there is no direct route from terrain to the savings rate.",
+          "B": "Imports face the same higher transport costs, which makes them dearer — not impossible. Landlocked countries trade; they simply trade at a disadvantage.",
+          "D": "Difficult terrain can make schools harder to reach, but the mechanism the question describes is about the cost of delivering exports, and that acts on competitiveness."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-2-q9",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four conditions holding back development in one country.<br />From Table 1, the only non-economic factor is",
+      "table": {
+        "caption": "Table 1: Four conditions in one developing economy",
+        "head": [
+          "",
+          "Condition"
+        ],
+        "rows": [
+          [
+            "Condition 1",
+            "Export earnings depend almost entirely on a single crop"
+          ],
+          [
+            "Condition 2",
+            "Saving is far below the investment the growth target requires"
+          ],
+          [
+            "Condition 3",
+            "Foreign currency reserves are used up servicing external debt"
+          ],
+          [
+            "Condition 4",
+            "Officials require a bribe before granting a business permit"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Condition 1.",
+        "B": "Condition 2.",
+        "C": "Condition 3.",
+        "D": "Condition 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Three of the four are economic constraints: dependence on a single crop, a shortage of saving relative to the investment needed, and foreign currency going out in debt service rather than paying for imports.<br /><strong>Condition 4 is different in kind.</strong> Bribery is a failure of institutions and governance, not of resources or finance. It holds back development by diverting money from productive uses, distorting which projects go ahead, and adding an unpredictable cost to every transaction — which is enough on its own to deter investment that the economics would otherwise justify.",
+        "distractors": {
+          "A": "Depending on a single crop for export earnings is primary product dependency — an economic factor, and one of the standard ones.",
+          "B": "A shortage of saving relative to the investment a country needs is the savings gap, which is economic by definition.",
+          "C": "Foreign currency reserves absorbed by debt service is the foreign currency gap. It is a financial constraint, so it is economic."
+        }
+      }
+    }
+  ]
+}

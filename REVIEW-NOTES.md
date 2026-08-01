@@ -18,7 +18,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
-| Practice questions (separate project) | **AQA complete; Edexcel Theme 1 complete; Theme 2 at unit 2.5** — state in `QUESTIONS_PROGRESS.md` |
+| Practice questions (separate project) | **AQA complete; Edexcel Themes 1–3 complete; Theme 4 at unit 4.3** — state in `QUESTIONS_PROGRESS.md` |
 
 **If you are resuming, read the last section of this file first** — *State of
 play for a new session*. It indexes everything still outstanding and says what
@@ -26,7 +26,7 @@ kind of change each one needs.
 
 Content problems found while writing the practice questions are logged at the end
 of this file, in two blocks: the AQA macro findings (N-Q2 to N-Q7) and the
-Edexcel findings (N-Q8, N-Q10, N-Q11). The Edexcel block **replaced six earlier
+Edexcel findings (N-Q8, N-Q10 to N-Q18). The Edexcel block **replaced six earlier
 entries** that had accumulated corrections; it is the current position.
 
 ---
@@ -914,10 +914,14 @@ wording rather than the concept.
 | Theme 2 | checked — 7 failures, in the table above | checked — 2 failures |
 | Theme 3 | **checked, all 20 pages** — N-Q12, N-Q13, N-Q14, N-Q15 | **re-run — clean** |
 | Theme 4, unit 4.1 | **checked, 9 pages** — N-Q16, N-Q17 | **re-run — 1 failure, already listed** |
-| Theme 4, units 4.2–4.5 | **not checked** — 12 pages | not re-run since the original scan |
+| Theme 4, units 4.2–4.3 | **checked, 5 pages** — N-Q18 | **re-run — clean** |
+| Theme 4, units 4.4–4.5 | **not checked** — 7 pages | **re-run — clean** |
 
-Run both over units 4.2 to 4.5 as batches 28 to 30 reach them. That is all that
-remains outstanding.
+N-Q10 has now been re-run over the whole of Theme 4, units 4.2 to 4.5 included,
+and those twelve pages are clean: only three carry a figure at all, and each
+numbers sequentially from 1. **The figure-number audit is therefore complete
+site-wide.** N-Q8 still needs running over units 4.4 and 4.5 as batches 29 and 30
+reach them; that is all that remains outstanding.
 
 ---
 
@@ -1144,10 +1148,54 @@ pages. **It is. Nothing new was found.**
 This corrects the note previously carried at the end of this file, which said
 Themes 3 and 4 had not been checked for N-Q10. The original N-Q10 scan was
 site-wide and did cover them; what had not been re-run was a confirmation after
-the notes were edited. **Units 4.2 to 4.5 still warrant a re-run** as batches 28
-to 30 reach them:
+the notes were edited.
 
 ```python
 nums = [int(m) for m in re.findall(r'Figure\s+(\d+):', page_text)]
 bad  = nums and nums != list(range(1, len(nums) + 1))
 ```
+
+**Units 4.2 to 4.5 were re-run on 2026-08-01 while batch 28 was written, and all
+twelve pages are clean.** Only three of them carry a figure at all —
+`4-2-2-inequality` (Figures 1 and 2), `4-3-3-strategies-influencing-growth-development`
+(Figure 1) and `4-5-2-taxation` (Figure 1) — and each numbers sequentially with no
+duplicates. **N-Q10 is now closed for the whole site**, subject to the thirteen
+pages already listed in the table above remaining unfixed.
+
+---
+
+## N-Q18 — `4-2-1` promises redistribution and social protection, and has neither
+
+Found while writing the unit 4.2 question sets. The spec alert on
+`4-2-1-absolute-relative-poverty` closes:
+
+> These notes also cover **redistribution and social protection** as policy
+> responses.
+
+The body has no policy-response section at all. It runs Key Definitions, then
+*Causes of Changes in Absolute Poverty* and *Causes of Changes in Relative
+Poverty*, and stops. **"Social protection" appears nowhere in the body.**
+"Redistributing income" appears once, as a clause inside a bullet about the tax
+and welfare system as a *cause* of changes in relative poverty — which is not the
+same thing as covering it as a policy response.
+
+The same alert also promises an analysis of "the relationship between economic
+growth and different measures of poverty". The body gives that one bullet —
+growth in developing countries can reduce absolute poverty — and never reaches
+the point the promise implies, which is that growth reduces absolute poverty
+while leaving *relative* poverty untouched if the distribution does not change.
+
+As with N-Q8, the promise is repeated in the page's `metaDescription`, its OG and
+Twitter cards and its JSON-LD `description`.
+
+**The questions do not depend on it.** Unlike N-Q17, the 4.2.1 set was written
+strictly to the body: it tests the two definitions, the moving relative line and
+the listed causes, and nothing on redistribution or social protection. So this is
+a metadata accuracy problem rather than a gap a student will hit from a question.
+
+**Two fixes, as with N-Q8**: add a short policy-response section — cash transfers,
+means-tested benefits, progressive taxation, a minimum wage — or cut the
+over-claim from the alert and its four metadata copies. Note that AQA 1.7.3
+already carries seven questions on exactly this material, so if the section is
+written, the questions for it exist in substance and would need only an Edexcel
+rewrite.

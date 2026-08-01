@@ -1,0 +1,255 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-4",
+  "boardName": "Edexcel Theme 4",
+  "spec": "4.3.3",
+  "slug": "4-3-3-strategies-influencing-growth-development",
+  "title": "Strategies Influencing Growth and Development",
+  "shortTitle": "Development Strategies",
+  "pageTitle": "Development Strategies Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on development strategies for Edexcel A-Level Economics: microfinance, buffer stocks, the Lewis model, aid and the IMF.",
+  "intro": "Ten original multiple-choice questions on strategies influencing growth and development, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Ten original multiple-choice questions on market-orientated and interventionist strategies, from microfinance and buffer stocks to debt relief and the role of the IMF.",
+  "questions": [
+    {
+      "id": "edexcel-4-3-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government abolishes its fertiliser subsidy, sells its state-owned airline and cuts import tariffs. These measures are best described as",
+      "options": {
+        "A": "Interventionist strategies.",
+        "B": "Market-orientated strategies.",
+        "C": "Protectionist strategies.",
+        "D": "Redistributive strategies."
+      },
+      "answer": "B",
+      "model": {
+        "working": "All three withdraw the state and leave the outcome to the market: the subsidy goes, the airline passes to private owners, and the tariff protecting domestic producers is removed.<br />That is the defining feature of a <strong>market-orientated</strong> development strategy — it relies on free market forces and private sector activity to drive growth. The interventionist alternative does the opposite: the government directs development itself, through human capital investment, infrastructure, protection or state ownership.",
+        "distractors": {
+          "A": "Interventionist strategies add government action rather than removing it. Each of these three measures takes an existing intervention away.",
+          "C": "Cutting import tariffs is the reverse of protectionism. Protection would mean raising them to shield domestic producers from foreign competition.",
+          "D": "Redistribution moves income between groups. Removing a fertiliser subsidy will change who is better off, but that is a side effect of the reform rather than its purpose."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A scheme lends £150 at a time to market traders who cannot open a bank account, so that they can buy stock to sell. The main risk identified with schemes of this kind is that",
+      "options": {
+        "A": "Borrowers use the loans for consumption and fall into debt.",
+        "B": "Loans of this size are too large for a small trader.",
+        "C": "The scheme replaces the need for a banking system.",
+        "D": "Traders are prevented from expanding their businesses."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Microfinance works by putting small sums into the hands of people the banking system does not reach, so they can invest in something that generates an income. The gain depends on the loan actually being used that way.<br />Where the money goes on consumption instead — food, school fees, a family emergency — there is no new income stream to repay it from, and at the interest rates these schemes charge the borrower can end up in a <strong>debt cycle</strong> worse than the position they started in. That, alongside the rates themselves, is the standard evaluation of microfinance.",
+        "distractors": {
+          "B": "£150 is a substantial sum to a trader who cannot open a bank account, but it is small by design — enough to buy stock, not enough to be unmanageable. The size of the loan is what makes the scheme workable.",
+          "C": "Microfinance reaches people the banks do not, and reaching a few thousand traders does nothing to build the payments system, the deposit base or the business lending an economy needs. It is a substitute for nothing.",
+          "D": "Enabling expansion is precisely what the loan is for. A trader who can buy more stock can sell more, which is the mechanism the scheme relies on."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A buffer stock agency aims to hold the price of a commodity at £200 a tonne. Table 1 shows what the market price would be in two years if the agency did nothing.<br />From Table 1, to hold the price at its target the agency should",
+      "table": {
+        "caption": "Table 1: Market price without intervention, target £200 a tonne",
+        "head": [
+          "",
+          "Harvest",
+          "Market price without intervention"
+        ],
+        "rows": [
+          [
+            "Year 1",
+            "Large",
+            "£150 a tonne"
+          ],
+          [
+            "Year 2",
+            "Poor",
+            "£260 a tonne"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Buy in both years to support producers.",
+        "B": "Buy in Year 1 and release stock in Year 2.",
+        "C": "Buy in Year 2 and release stock in Year 1.",
+        "D": "Release stock in both years to hold prices down."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The rule follows from what is happening to supply. Year 1's harvest is large, so the market price would fall to £150 — below target. The agency buys the excess and takes it into store, which raises demand and lifts the price back towards £200.<br />Year 2's harvest fails and the price would rise to £260 — above target. The agency releases what it stored, which raises supply and brings the price back down.<br />So the scheme <strong>buys in the good years and sells in the bad ones</strong>, smoothing the income of producers who would otherwise face wild swings, and letting them invest with some confidence about what next year will bring.",
+        "distractors": {
+          "A": "Buying in Year 2 as well would push a price that is already above target higher still, and the agency would need stock it had just spent its funds accumulating. It also has to sell at some point, or the scheme simply runs out of money and storage.",
+          "C": "This is the rule exactly inverted — buying when the price is already high and selling when it is already low. It would amplify the swings the scheme exists to damp down, and lose money on every transaction.",
+          "D": "Releasing stock in Year 1 would push a price that is already below target lower still. It also assumes stock the agency has not bought, since a buffer stock can only sell what it has previously taken in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Workers move out of a farming sector where an extra worker adds almost nothing to output and into factory work. The Lewis model predicts this raises national income because",
+      "options": {
+        "A": "Agricultural output collapses once the workers leave.",
+        "B": "Farm wages rise faster than factory wages afterwards.",
+        "C": "Output per worker is higher in the factory sector.",
+        "D": "The country's rate of population growth slows."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Lewis model rests on there being <strong>surplus labour</strong> in agriculture — workers whose contribution to output is close to nothing, so that moving them costs the farming sector almost nothing in lost production.<br />Industry adds far more value per worker, because it processes and manufactures rather than simply harvesting. Transferring labour from the low-productivity sector to the high-productivity one therefore raises total output and real national income, without anything else in the economy having to change.<br />The obvious objection is the assumption itself: where farm labour is not in surplus, moving workers out reduces agricultural output, and the gain is far smaller than the model suggests.",
+        "distractors": {
+          "A": "The model assumes the opposite. The workers who move are those adding almost nothing at the margin, so agricultural output is barely affected — that is what makes the transfer worth making.",
+          "B": "Farm wages may rise once surplus labour has been absorbed, but that is a consequence of the transfer running its course, not the reason national income goes up.",
+          "D": "The model is about where labour works, not how fast the population grows. Nothing in the transfer of workers between sectors acts on the birth rate."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small island economy makes tourism the centre of its development strategy. The strongest economic objection to relying on it is that",
+      "options": {
+        "A": "Its earnings are exposed to shocks such as pandemics.",
+        "B": "Its earnings must all be spent on imported goods.",
+        "C": "Tourism cannot employ workers leaving agriculture.",
+        "D": "Tourism generates no foreign currency for the country."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Tourism has real attractions as a strategy: it earns foreign currency, it creates jobs across a range of skill levels, and it justifies infrastructure — airports, roads, water supply — that benefits the whole economy.<br />The weakness is <strong>concentration risk</strong>. Visitor numbers collapse in response to events the country has no control over and cannot forecast: a pandemic, a hurricane, a recession in the countries its visitors come from, or a security incident. An economy built on one such sector has no cushion when that happens, which is the same objection made to depending on a single export crop.",
+        "distractors": {
+          "B": "Tourism earnings can be spent on anything, imports included. Nothing compels a country to spend foreign currency in any particular way.",
+          "C": "Tourism absorbs labour leaving agriculture rather well, because much of the work needs limited formal training. That is usually counted among its advantages.",
+          "D": "Earning foreign currency is one of the main reasons to develop tourism. Visitors arrive holding foreign currency and exchange it locally."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A Fairtrade scheme guarantees coffee growers a minimum price above the market price, plus a premium for their communities. A limitation of this as a development strategy is that",
+      "options": {
+        "A": "Growers are paid less than the market price.",
+        "B": "Growers must sell all their output to one buyer.",
+        "C": "Only a small share of growers can take part.",
+        "D": "The premium is paid to governments, not communities."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Fairtrade does what it claims for the growers inside it: a guaranteed floor price, a premium for community projects, and better working conditions than the market alone would deliver.<br />The difficulty is <strong>reach</strong>. Only the growers whose output a scheme can certify and sell benefit, and that is limited by how much Fairtrade-labelled product consumers will buy at a higher price. Raising the price reduces the quantity demanded, which caps the number of producers who can be included — so the effect on a country's development as a whole stays small, however good it is for the individual grower.",
+        "distractors": {
+          "A": "This inverts the scheme. The guaranteed price sits <strong>above</strong> the market price; that is the whole mechanism.",
+          "B": "Fairtrade certifies producers and sets terms of sale. It does not tie a grower to a single buyer, and exclusivity is not part of the model.",
+          "D": "The premium goes to the producer organisation for community projects — schools, clinics, water supply. Routing it through governments would defeat its purpose."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A group of creditor countries cancels most of a low-income country's external debt. The risk identified with debt relief of this kind is that",
+      "options": {
+        "A": "Debt service payments rise immediately afterwards.",
+        "B": "Its export earnings fall once the debt is cancelled.",
+        "C": "The country can never borrow internationally again.",
+        "D": "Without fiscal discipline, new debt soon accumulates."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Debt relief frees up in a stroke the revenue that was going out in interest, and it improves creditworthiness, so the immediate effects are real and positive.<br />What it does not do is change the behaviour that produced the debt. If the deficits that caused the borrowing continue, the country re-accumulates debt within a few years and the exercise has bought time rather than a solution. There is also a <strong>moral hazard</strong> argument: a government that expects future write-offs has weaker reason to borrow prudently now.",
+        "distractors": {
+          "A": "Cancelling debt removes the interest owed on it, so payments fall sharply. That release of revenue is the point of the policy.",
+          "B": "Exports are unaffected by a change in who owes what to whom. If anything the country's trading position improves, since foreign currency previously spent on interest is now available to it.",
+          "C": "Debt relief usually improves access to credit rather than ending it, because the country's balance sheet looks stronger to lenders afterwards."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q8",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country cannot meet its foreign payments and needs short-term lending, on conditions, to stabilise its position. The international institution that exists to provide it is",
+      "options": {
+        "A": "A non-governmental organisation.",
+        "B": "The International Monetary Fund.",
+        "C": "The World Bank.",
+        "D": "The World Trade Organisation."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The IMF exists to promote global financial stability, and its characteristic operation is exactly this: short-term lending to a country facing a balance of payments crisis, tied to conditions about how the government will put its finances in order.<br />The division of labour with the World Bank is worth holding onto. The <strong>IMF</strong> handles short-term stabilisation; the <strong>World Bank</strong> makes long-term loans for infrastructure and development projects aimed at reducing poverty.",
+        "distractors": {
+          "A": "NGOs such as Oxfam run development projects, deliver aid and campaign on specific issues. They are not lenders of last resort to governments and could not fund a country's foreign payments.",
+          "C": "The World Bank lends for the long term — roads, power, water, health and education projects — and provides technical advice alongside them. A balance of payments crisis needs money within weeks, not a project loan.",
+          "D": "The WTO negotiates and enforces the rules of international trade and settles disputes between members. It does not lend at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A multinational builds a factory in a developing country and sends most of the profits back to its home country each year. For the host country this means",
+      "options": {
+        "A": "Higher tax revenue than a domestic firm would pay.",
+        "B": "No gain in employment from the investment.",
+        "C": "The gain is smaller than the output figures suggest.",
+        "D": "The savings gap is closed by the inflow of capital."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Promoting foreign direct investment is a standard market-orientated strategy, and the gains are genuine: capital the country could not raise itself, technology, management expertise and jobs.<br /><strong>Profit repatriation</strong> is the leak in it. Output produced inside the country counts towards its GDP, but the profits flow out as an outward income payment, so gross national income rises by considerably less than gross domestic product does. What the host keeps is the wages, the taxes and whatever skills and technology transfer to local firms — not the return on the capital.",
+        "distractors": {
+          "A": "Multinationals often pay proportionately less, not more. They can negotiate tax holidays as a condition of investing, and can shift profits between the countries they operate in.",
+          "B": "The factory employs people, and the jobs are a real benefit. The objection is about where the profits end up, not about whether anyone is hired.",
+          "D": "Some of the gap is filled while the factory is being built. Once profits start flowing out each year, the investment stops being a net inflow of funds — which is exactly why the strategy is evaluated rather than assumed to work."
+        }
+      }
+    },
+    {
+      "id": "edexcel-4-3-3-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A developing country accepts an international loan on condition that it cuts public spending sharply. The main development concern about such conditions is that",
+      "options": {
+        "A": "Austerity can weaken health and education provision.",
+        "B": "The conditions require the currency to be fixed.",
+        "C": "The lender takes ownership of state-owned assets.",
+        "D": "The loan has to be repaid in the domestic currency."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Structural adjustment conditions are attached to IMF lending to make repayment more likely: cut the deficit, reform the economy, liberalise. Judged on that objective they often work.<br />The development objection is what gets cut. Spending on health, education and infrastructure is the spending that builds <strong>human capital</strong> and long-run capacity, and it is also the easiest to cut quickly. Austerity therefore risks trading a short-term fiscal improvement for a long-term loss of the very capacity the country is trying to develop — and the burden falls hardest on the poorest, who depend most on state provision.",
+        "distractors": {
+          "B": "Conditions typically push in the other direction, towards liberalisation and market-determined exchange rates. A fixed rate is not a standard requirement.",
+          "C": "Conditions may require assets to be privatised, but they are sold to private investors rather than transferred to the lender. The IMF does not take ownership of what it lends against.",
+          "D": "International loans of this kind are denominated in foreign currency, which is precisely what makes them hard to service when export earnings fall."
+        }
+      }
+    }
+  ]
+}
