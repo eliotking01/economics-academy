@@ -5,7 +5,7 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**COMPLETE. 166 of 166 topics, 1,268 questions**, against ~1,272 planned. Every
+**COMPLETE. 166 of 166 topics, 1,267 questions**, against ~1,272 planned. Every
 board and every theme is finished: AQA Microeconomics and Macroeconomics, and
 Edexcel Themes 1, 2, 3 and 4. **No topic remains.**
 
@@ -19,7 +19,7 @@ economicsacademy.co.uk until the site owner merges — see `CLAUDE.md`.
 
 **State at completion (2026-08-01).** Branch `feature/topic-questions`, **41
 commits ahead of `main`**, working tree clean, **pushed to the remote but not
-merged**. All 166 topics and 1,268 questions are done, across thirty batches.
+merged**. All 166 topics and 1,267 questions are done, across thirty batches.
 `main` auto-publishes, so nothing is live until the site owner merges.
 
 **There is no remaining authoring work**, and the four decisions that were held
@@ -1193,7 +1193,7 @@ to follow it from the start.
 
 4 topics, 28 questions. Public expenditure, taxation, public sector finances, and
 macroeconomic policies in a global context. **This completes the project: 166 of
-166 topics and 1,268 questions.**
+166 topics and 1,267 questions.**
 
 All 28 re-derived from the stem alone with **0 mismatches**; the Laffer
 calculation recomputed with every distractor value.
@@ -1523,6 +1523,23 @@ the currency demand-and-supply diagram — are both already owned as sketch item
 by AQA 2.6.2 Q5 and 2.6.4 Q2. 4.1.6 Q6 asks about the tariff diagram's *areas*
 instead, which is the part Edexcel sets out in detail and AQA does not.
 
+### 4.1.9 Q8 removed on the site owner's instruction (2026-08-01)
+
+The set is now **seven questions, not eight**. Q8 asked what a falling share of
+world exports indicates, and it was written under the batch 16 policy of testing
+a concept the page advertised but did not deliver (`REVIEW-NOTES.md` N-Q17).
+
+When that policy was revisited at the end of the project the site owner chose to
+**cut the over-claim from the notes page and remove the question with it**, rather
+than write the missing paragraph. So `4-1-9` now promises unit labour costs and
+relative export prices — exactly what it teaches — and nothing on the site tests
+export market share.
+
+**This is the only question removed from the bank**, and it is why the site total
+is 1,267 rather than 1,268. The remaining seven questions were unaffected: letter
+distribution is A 2, B 2, C 1, D 2 against an even 1.75, comfortably inside
+tolerance.
+
 ### Batch 26 — Edexcel Theme 4, units 4.1.1 to 4.1.5 (2026-08-01)
 
 5 topics, 32 questions. **The first Theme 4 batch** — globalisation,
@@ -1601,7 +1618,7 @@ beyond your own frontier) rather than asking a student to redraw it.
 | | |
 | --- | --- |
 | Topics | 21 of 21 |
-| Questions | 146 |
+| Questions | 145 |
 | Answer letters | A 39, B 40, C 39, D 28 (even would be 36.5) |
 | Skills | applied-reasoning 97, definition-in-context 23, data-table 18, calculation 8 |
 | Difficulty | foundation 11, standard 119, stretch 16 |
@@ -1654,7 +1671,7 @@ question count predicted neither.**
 | | |
 | --- | --- |
 | Topics | 166 of 166 |
-| Questions | **1,268**, against ~1,272 planned |
+| Questions | **1,267**, against ~1,272 planned |
 | Answer letters | A 320, B 358, C 332, D 258 (even would be 317) |
 | Skills | applied-reasoning 791 (62%), definition-in-context 247 (19%), data-table 127 (10%), calculation 103 (8%) |
 | Difficulty | foundation 155 (12%), standard 951 (75%), stretch 162 (13%) |
@@ -1667,9 +1684,9 @@ question count predicted neither.**
 | Edexcel Theme 1 | 22 | 166 |
 | Edexcel Theme 2 | 24 | 198 |
 | Edexcel Theme 3 | 20 | 148 |
-| Edexcel Theme 4 | 21 | 146 |
+| Edexcel Theme 4 | 21 | 145 |
 
-**Every one of the 1,268 questions was re-solved cold from the stem alone, in the
+**Every one of the 1,267 questions was re-solved cold from the stem alone, in the
 batch it was written in, and diffed against the recorded key.** Across thirty
 batches that process found defects in a handful of questions and confirmed the
 rest. It is the single most valuable step in the workflow and it should be the

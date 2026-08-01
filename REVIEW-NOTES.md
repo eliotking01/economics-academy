@@ -18,7 +18,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
-| Practice questions (separate project) | **Complete — 166 of 166 topics, 1,268 questions** — state in `QUESTIONS_PROGRESS.md` |
+| Practice questions (separate project) | **Complete — 166 of 166 topics, 1,267 questions** — state in `QUESTIONS_PROGRESS.md` |
 
 **If you are resuming, read the last section of this file first** — *State of
 play for a new session*. It indexes everything still outstanding and says what
@@ -632,6 +632,67 @@ instruction, per `CLAUDE.md`.
 | N-Q18 | Cut the claim | "redistribution and social protection as policy responses" is gone from `4-2-1`'s alert, and its JSON-LD description rewritten. |
 | N-Q19 | Propose first | **Not applied.** Proposal put to the site owner. |
 | N-Q20 | Cut the claims | Tax incidence and the principles of a good tax system are gone from `4-5-2`'s alert and its three meta descriptions; fiscal consolidation from `4-5-3`'s alert; capital mobility from `4-5-4`'s alert. |
+
+### Second instruction, same day — the three held findings decided
+
+| Finding | Instruction | What was changed |
+| --- | --- | --- |
+| N-Q14 | Proposal approved | The LRAC envelope sentence on `3-3-2` now reads "touches each SRAC curve at the output where that scale is the cheapest available", which is true at every output rather than only at minimum efficient scale. **Applied to the AQA twin `1-4-4` as well**, which carried the sentence word for word. |
+| N-Q19 | "Leave this out, the notes don't need it" | **No content added.** The three undelivered concepts — risk spreading, liquidity provision, financial intermediation — were instead **cut from `4-4-1`'s alert and its JSON-LD description**, so the page no longer promises them. See the note below on how this was read. |
+| N-Q8 | Proposal approved | Six of the nine pages fixed. The three needing new prose are still open. |
+| N-Q17 consequence | "Remove it and the question" | `4-1-9` Q8 deleted. The set is now seven questions, and its `metaDescription`, `intro`, `notesTeaser` and the end-of-notes teaser all say "Seven". Site total: **1,267 questions**. |
+
+**How the N-Q19 instruction was read, in case it should be reversed.** "Leave
+this out" was taken to mean the *content* is not wanted, not that the finding
+should be dropped — so the alert was corrected to match the body rather than
+left promising three things the page does not teach. That is the same treatment
+every other over-claim received. Restoring the original alert sentence is a
+one-line revert if the other reading was intended.
+
+### N-Q8 — six of nine pages fixed
+
+**Restored from `raw-notes/`, where the content had been written and lost in
+conversion:**
+
+- `1-3-4-information-gaps` — **adverse selection** and **moral hazard** now have
+  their own subsections, each with the definition and the standard example (the
+  used-car market; comprehensive motor insurance), matching the page's existing
+  "definition then example" pattern.
+- `2-2-3-investment` — **the accelerator effect** added to the *Key Influences*
+  list: investment depends on the change in the rate of growth rather than its
+  level.
+- `2-5-3-trade-cycle` — the four phases restored beneath *The Stages of the Trade
+  Cycle*, which previously held nothing but a figure. **Boom, recession, slump
+  and recovery** are each defined against the trend rate and the output gap, and
+  the two-quarter definition of a technical recession is included.
+- `2-3-2-short-run-aggregate-supply` — a paragraph naming **cost-push inflation**
+  and the **cost-push shock** as what a leftward SRAS shift produces.
+
+**Named, with no new economics:**
+
+- `2-2-5-net-trade` — the page already described both mechanisms correctly. They
+  are now labelled: the **Marshall-Lerner condition** on the elasticity paragraph
+  and the **J-curve effect** on the delayed-improvement paragraph.
+
+**Cross-referenced, because the content lives elsewhere:**
+
+- `2-1-1-economic-growth` — a short paragraph distinguishing **actual** from
+  **potential growth** and naming **productive capacity**, linking to
+  `2-5-1-causes-of-growth`, which teaches both in full.
+
+**Still open — the three that need writing from scratch.** None survives in
+`raw-notes/`, so each needs new prose and a separate decision:
+
+| Page | Promised and still missing |
+| --- | --- |
+| `1-4-2-government-failure` | regulatory capture |
+| `2-2-2-consumption` | the role of expectations |
+| `2-5-4-the-impact-of-economic-growth` | sustainable development |
+
+All three are tested by live questions, so cutting the claims would strand them;
+they are the reason N-Q8 is not yet closed.
+
+---
 
 ### Three things found while applying these
 

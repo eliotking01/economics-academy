@@ -7,9 +7,9 @@
   "title": "International Competitiveness",
   "shortTitle": "International Competitiveness",
   "pageTitle": "International Competitiveness Questions — Edexcel A-Level Economics | Economics Academy",
-  "metaDescription": "Eight free multiple-choice questions on international competitiveness for Edexcel A-Level Economics: unit labour costs, cost and non-cost factors.",
-  "intro": "Eight original multiple-choice questions on international competitiveness, written to the style and difficulty of Edexcel Paper 2 Section A.",
-  "notesTeaser": "Eight original multiple-choice questions on how competitiveness is measured, the cost and non-cost factors behind it, and why it matters.",
+  "metaDescription": "Seven free multiple-choice questions on international competitiveness for Edexcel A-Level Economics: unit labour costs, cost and non-cost factors.",
+  "intro": "Seven original multiple-choice questions on international competitiveness, written to the style and difficulty of Edexcel Paper 2 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on how competitiveness is measured, the cost and non-cost factors behind it, and why it matters.",
   "questions": [
     {
       "id": "edexcel-4-1-9-q1",
@@ -187,28 +187,6 @@
           "A": "A depreciation is precisely what changes the price foreigners pay, and it works. That is what makes it tempting.",
           "C": "Exports become <em>more</em> important under this strategy, not less.",
           "D": "The J-curve means the current account can worsen at first, but that is a timing effect rather than the main objection to the strategy."
-        }
-      }
-    },
-    {
-      "id": "edexcel-4-1-9-q8",
-      "skill": "applied-reasoning",
-      "difficulty": "standard",
-      "sketch": false,
-      "stem": "One way of judging a country's international competitiveness is to track its share of world exports over time. A falling share suggests that its goods are",
-      "options": {
-        "A": "Becoming more attractive to foreign buyers.",
-        "B": "Being sold at premium prices abroad.",
-        "C": "Losing ground against those of rivals.",
-        "D": "Subject to a rising exchange rate only."
-      },
-      "answer": "C",
-      "model": {
-        "working": "Competitiveness is <strong>relative</strong>, so the natural way to measure it is against everybody else. A country's share of world exports falls when its goods sell less well than its rivals' — whether because they cost more, or because quality, design or reliability have slipped behind. Edexcel lists export market share alongside relative unit labour costs and relative export prices as a measure. Its strength is that it captures cost and non-cost factors together; its weakness is that it says nothing about <em>why</em> the share moved.",
-        "distractors": {
-          "A": "More attractive goods would win share rather than lose it.",
-          "B": "Premium prices are entirely compatible with a strong position, as high-quality exporters show. A falling share points the other way.",
-          "D": "A rising exchange rate is one possible cause among several, and the measure cannot identify which is at work."
         }
       }
     }
