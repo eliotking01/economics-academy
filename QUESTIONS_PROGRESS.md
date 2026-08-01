@@ -5,8 +5,9 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 133 topics, 1,043 questions. AQA is complete, Edexcel Themes 1 and 2 are
-complete, and Theme 3 units 3.1 to 3.3 are done. 33 topics remain.**
+**Live: 137 topics, 1,071 questions. AQA is complete, Edexcel Themes 1 and 2 are
+complete, and Theme 3 units 3.1 to 3.3 plus 3.4.1 to 3.4.4 are done. 29 topics
+remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -382,51 +383,50 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 33 topics, 251 questions still to write
+### Edexcel — 29 topics, 223 questions still to write
 
 **This is all that is left.** AQA is finished, Themes 1 and 2 are complete, and
-Theme 3 units 3.1 to 3.3 are done.
+Theme 3 is done as far as 3.4.4.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
 | Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 12 | 88 |
+| Theme 3 | 8 | 60 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 3 unit 3.4** — the market structures unit, and the largest
-remaining block on the site. Seven topics:
+**Next batch: the rest of unit 3.4, then unit 3.5 and 3.6** — five topics if
+taken together, which is one too many. Split as:
 
 ```
-3.4.1 efficiency        3.4.2 perfect competition   3.4.3 monopolistic competition
-3.4.4 oligopoly         3.4.5 monopoly              3.4.6 monopsony
-3.4.7 contestability
+batch 23:  3.4.5 monopoly   3.4.6 monopsony   3.4.7 contestability
+batch 24:  3.5.1 demand for labour   3.5.2 supply of labour   3.5.3 wage determination
+batch 25:  3.6.1 government intervention   3.6.2 impact of intervention
 ```
 
-Roughly 55 questions, so **split it into two batches** — 3.4.1 to 3.4.4, then
-3.4.5 to 3.4.7. Trying to hold seven twin audits in mind at once is what makes
-sets drift towards the AQA phrasing.
+**Twins for batch 23:** AQA 1.5.6 (monopoly and monopoly power, 9), 1.5.7 (price
+discrimination, 8), 1.5.9 (contestable and non-contestable markets, 8) and 1.6.4
+(imperfect labour markets, which is where AQA puts monopsony, 8). **33
+questions.**
 
-**The twin overlap is the worst on the project**: AQA 1.5.3 (perfect competition,
-9), 1.5.4 (monopolistic competition, 7), 1.5.5 (oligopoly, 9), 1.5.6 (monopoly,
-9), 1.5.7 (price discrimination, 8), 1.5.9 (contestable markets, 8), 1.5.10
-(efficiency, 8) and 1.6.4 (imperfect labour markets, covering monopsony, 8) —
-**66 questions over the same seven topics**. Print each twin immediately before
-writing its Edexcel counterpart, not all at once.
+- **Monopsony is the free topic of the three.** AQA treats it purely as a labour
+  market case — a dominant employer facing an upward-sloping labour supply curve.
+  Edexcel gives it a topic of its own inside the firms unit, so the general
+  buyer-power framing, the effect on suppliers rather than workers, and the
+  supermarket-and-farmer type of example are all open ground. Check the Edexcel
+  page first: if it teaches monopsony wholly through the labour market, the
+  overlap with AQA 1.6.4 will be much tighter than it looks.
+- **AQA 1.5.7 owns price discrimination completely**, including all three
+  degrees. If the Edexcel monopoly page teaches it, expect to find almost nothing
+  free.
+- **AQA 1.5.9 owns contestability**, including hit-and-run competition and sunk
+  costs.
 
-Two things known in advance:
+**Unit 3.5's twins are AQA 1.6.1, 1.6.2 and 1.6.3 (24 questions)** — MRP theory,
+influences on labour supply, and wage determination in competitive markets.
 
-- **AQA 1.5.10 owns the efficiency definitions outright** — allocative at
-  AR = MC, productive at minimum AC, static, dynamic, X-inefficiency, and a
-  three-situation classification table. Unit 3.4.1 will need its angles from what
-  Edexcel adds, not from the definitions.
-- **Monopsony is the one genuinely free topic.** AQA covers it inside 1.6.4 as a
-  labour market case; Edexcel gives it a topic of its own in the firms unit, so
-  the buyer-power framing is open ground.
-
-**Unit 3.4 has no arithmetic to speak of** beyond concentration ratios. After
-unit 3.3's 22% calculation share, expect the batch figure to fall back towards
-5%; that is the material, not a lapse.
+**Unit 3.6's twins are AQA 1.8.7 and 1.8.8 (14 questions)** on competition policy
+and public ownership, both already drawn on in batch 20.
 
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
 market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
@@ -1048,6 +1048,95 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 22 — Edexcel Theme 3, units 3.4.1 to 3.4.4 (2026-08-01)
+
+4 topics, 28 questions. Efficiency, perfect competition, monopolistic competition
+and oligopoly — the first half of the market structures unit, split in two as
+planned.
+
+All 28 re-derived from the stem alone with **0 mismatches**; the two calculations
+and every distractor figure recomputed.
+
+**Originality clean on all three fronts after two rounds of fixes** — zero shared
+8-word runs against both past-paper corpora and zero against the 1,043-question
+bank.
+
+**The concept-grep from §9 decided the shape of this batch, and it is the reason
+it exists at all.** Searching the whole bank before writing established that four
+ideas the Edexcel pages teach appear **nowhere in 1,043 questions**:
+
+| Concept | Hits in the bank before this batch |
+| --- | --- |
+| game theory, Prisoner's Dilemma, Nash equilibrium, dominant strategy | 0 |
+| deadweight loss | 0 |
+| price wars | 0 |
+| sticky or rigid prices | 0 |
+
+Those four carry six of the nine questions in 3.4.4 and one in 3.4.1. Without the
+grep this batch would have been written round the same concentration ratios and
+cartel definitions AQA 1.5.5 already has, and would have collided badly. **The
+search took under a minute.**
+
+The same search found the opposite result for **X-inefficiency**, which AQA tests
+three times (1.5.10 Q3, 1.5.6 Q7, 1.5.8 Q5) — including a "costs drift upwards
+with no competition" scenario almost identical to the one drafted for 3.4.1. That
+question was rebuilt to test Edexcel's *other* stated cause, a lack of profit
+incentive, and to ask which condition produces X-inefficiency rather than what to
+call it.
+
+**Twin pressure was heaviest on 3.4.1, and the set is only five questions as a
+result.** AQA 1.5.10's eight questions cover allocative at AR = MC, productive at
+minimum AC, static efficiency, dynamic efficiency needing reinvested supernormal
+profit, a three-situation classification table, perfect competition's static-but-
+not-dynamic verdict, the monopolist's allocative inefficiency, and the static
+against dynamic trade-off in a break-up decision. That is the whole topic. What
+was left is genuinely Edexcel: **deadweight welfare loss** as the consequence of
+underproduction, X-inefficiency by cause rather than label, and the page's careful
+word **potential** — imperfect competition has the potential for dynamic
+efficiency, which a firm paying all its profit out to shareholders does not
+realise. Five good questions beat eight with three ports in them.
+
+**Where Edexcel opened room the AQA sets do not have:**
+
+- **The loss-to-exit adjustment**, in both 3.4.2 and 3.4.3. AQA runs the long-run
+  adjustment only from supernormal profit inwards; Edexcel's pages set out both
+  directions, so the exit case is free on both topics.
+- **The four-way equality P = AR = AC = MC** decomposed. Asking what AR = AC on
+  its own tells you separates three facts students usually blur together.
+- **Edexcel's consumer-impact treatment of monopolistic competition** — prices
+  possibly higher because small firms miss economies of scale, and choice possibly
+  illusory because differentiation is surface-level. AQA has no evaluative
+  material here at all, and the shampoo-shelf question is the best in that set.
+- **Overt against tacit collusion, and price leadership.** AQA has "collusive
+  behaviour, forming a cartel" and nothing else.
+- **Predatory pricing as an answer.** It appears five times in the AQA bank, always
+  as a distractor.
+- **The kinked demand curve's asymmetry explained.** AQA sketches the curve and
+  asks what the firm does; Edexcel explains why each side has the elasticity it
+  has, which is a different and better question.
+
+**Two table-caption collisions, both with the same source.** 3.4.1 Q5 and 3.4.3 Q4
+both shared "Table 1 sets out four claims a student makes about" with Edexcel
+2.6.4 Q6. This is the template problem batch 18 first flagged and batch 19 warned
+about, and it has now recurred twice in one batch. The two were varied to
+"statements" and "notes" respectively. **Vary the noun as well as the verb: the
+bank now has claims, changes, developments, consequences, notes and statements,
+and the check will keep surfacing whichever gets reused.**
+
+| | |
+| --- | --- |
+| Answer letters | A 8, B 7, C 7, D 6 (even would be 7) |
+| Skills | applied-reasoning 19, definition-in-context 5, data-table 2, calculation 2 |
+| Difficulty | foundation 3, standard 22, stretch 3 |
+| Sketch to solve | 1 |
+
+`calculation` at 7% is exactly what was predicted for this unit — the only
+arithmetic unit 3.4 supports is the concentration ratio, and AQA 1.5.5 Q2 already
+runs it forwards, so 3.4.4 Q4 runs it backwards from the ratio to the market
+total. The one sketch item is in 3.4.2, where the market and the firm have to be
+drawn side by side to see that the firm's horizontal demand curve rises with the
+market price.
 
 ### Batch 21 — Edexcel Theme 3, unit 3.3 (2026-08-01)
 

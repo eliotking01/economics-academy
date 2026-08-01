@@ -1,0 +1,169 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.4.2",
+  "slug": "3-4-2-perfect-competition",
+  "title": "Perfect Competition",
+  "shortTitle": "Perfect Competition",
+  "pageTitle": "Perfect Competition Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on perfect competition for Edexcel A-Level Economics: price takers, short-run profit and long-run equilibrium.",
+  "intro": "Seven original multiple-choice questions on perfect competition, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Seven original multiple-choice questions on the conditions for perfect competition, the firm as a price taker, and the adjustment to long-run equilibrium.",
+  "questions": [
+    {
+      "id": "edexcel-3-4-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Firms in a perfectly competitive industry are making losses. The long-run adjustment that restores normal profit is that",
+      "options": {
+        "A": "New firms enter, industry supply falls and the price rises.",
+        "B": "New firms enter, industry supply rises and the price falls.",
+        "C": "Firms leave, industry supply falls and the price rises.",
+        "D": "Firms leave, industry supply rises and the price falls."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Losses mean the resources tied up in this industry are earning less than they could elsewhere, so some owners withdraw them. As firms leave, industry supply shifts <strong>left</strong>, and with market demand unchanged the market price <strong>rises</strong>. Each remaining firm's horizontal demand curve rises with it, until price is back at the minimum of the average cost curve and P = AR = AC = MC. At that point the losses are gone, nobody has any further reason to leave, and the industry is in long-run equilibrium.",
+        "distractors": {
+          "A": "Firms do not enter an industry that is making losses, and entry raises supply rather than reducing it. Both halves are wrong.",
+          "B": "Entry does raise supply and lower the price, but that is the adjustment from supernormal profit — and it would make these losses worse.",
+          "D": "Exit reduces industry supply. It cannot raise it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In long-run equilibrium in perfect competition, price, average revenue, average cost and marginal cost are all equal. The equality of AR and AC on its own tells us that the firm is",
+      "options": {
+        "A": "Allocatively efficient.",
+        "B": "Earning normal profit only.",
+        "C": "Producing at minimum average cost.",
+        "D": "X-inefficient."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The four-way equality P = AR = AC = MC packs three separate facts into one line, and it is worth separating them. <strong>AR = AC</strong> means revenue per unit exactly covers cost per unit — and since normal profit already sits inside cost, the firm is earning normal profit and nothing beyond it. <strong>P = MC</strong> is the allocative efficiency condition. And because AC = MC only at the lowest point of the average cost curve, the firm is productively efficient too. Each link in the chain says something different.",
+        "distractors": {
+          "A": "Allocative efficiency comes from P = MC, which is a different part of the chain.",
+          "C": "Producing at minimum average cost follows from AC = MC — again a different part.",
+          "D": "X-inefficiency means costs sitting above the minimum achievable. This firm is doing the opposite."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-2-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A wheat farmer sells at the market price of £8.00 a unit and has average costs of £9.50 a unit. Over a period in which the farm produces 1,200 units, its position is",
+      "options": {
+        "A": "A loss of £1,800.",
+        "B": "A loss of £11,400.",
+        "C": "Normal profit only.",
+        "D": "Supernormal profit of £1,800."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In perfect competition the firm is a price taker, so average revenue is simply the market price.<br />Profit per unit: £8.00 − £9.50 = <strong>−£1.50</strong>.<br />Total: 1,200 × −£1.50 = <strong>−£1,800</strong>, a loss.<br />Because normal profit is already counted inside average cost, a loss of £1,800 means the farm is earning £1,800 less than these resources would have earned in their next-best use. In the long run that is exactly why farms leave the industry — and as they do, supply falls, the price rises, and the loss is competed away.",
+        "distractors": {
+          "B": "£11,400 is total cost, 1,200 × £9.50. The loss is the gap between cost and revenue, not the whole of cost.",
+          "C": "Normal profit requires AR = AC. Here average revenue is £1.50 below average cost.",
+          "D": "The sign is the wrong way round. Average cost exceeds the price, so this is a loss rather than a profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In perfect competition the market demand curve slopes downward while the demand curve facing each individual firm is horizontal. The reason for the difference is that",
+      "options": {
+        "A": "Firms agree among themselves not to change prices.",
+        "B": "No single firm is large enough to move the price.",
+        "C": "The market curve measures revenue and the firm's price.",
+        "D": "The market has perfect information and the firm does not."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Total demand across the market behaves perfectly normally — lower the price and buyers want more of the good. But any one firm supplies such a tiny share of that market that changing its own output has no perceptible effect on the price. It can sell everything it produces at the going price and nothing at all above it, because buyers have perfect information and identical alternatives to turn to. So the firm's own demand curve is a horizontal line at the market price, even though the market's slopes down.",
+        "distractors": {
+          "A": "Perfect competition involves no agreement between firms. There are far too many of them for any agreement to be reached or enforced.",
+          "C": "Both curves plot price against quantity. What differs is the scale, not what is being measured.",
+          "D": "Perfect information holds for everyone in the model. It is one of the reasons the firm's curve is horizontal, not a difference between the firm and the market."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Two farmers' wheat is chemically identical, and buyers can see every price in the market instantly. Of the four conditions for perfect competition, the pair described here are",
+      "options": {
+        "A": "Freedom of entry and many buyers and sellers.",
+        "B": "Homogeneous products and freedom of entry.",
+        "C": "Homogeneous products and perfect information.",
+        "D": "Many buyers and sellers, and perfect information."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Homogeneous products</strong> means every firm's output is identical, so no buyer has any reason to prefer one seller over another — chemically identical wheat is the textbook case. <strong>Perfect information</strong> means buyers and sellers know all the prices and products in the market, which is what makes charging above the going price impossible. The other two conditions — many buyers and sellers, and freedom of entry and exit — are not described in the stem at all.",
+        "distractors": {
+          "A": "Neither is described. The stem says nothing about how easily new farmers can start up, nor about how many participants the market has.",
+          "B": "Homogeneous products is right, but freedom of entry is not mentioned. The stem tells you what the product is like and what buyers know, not who may join.",
+          "D": "Perfect information is right, but many buyers and sellers is not described — the stem mentions exactly two farmers, which if anything points the other way."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In perfect competition, entry drives the long-run price down to the minimum point of the average cost curve, and no lower. The reason it stops there is that",
+      "options": {
+        "A": "A lower price would cause losses and exit.",
+        "B": "Firms agree to hold the price at that level.",
+        "C": "Marginal cost cannot fall below average cost.",
+        "D": "The government sets a minimum price at that point."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The mechanism is symmetrical, and that is what makes it an equilibrium. Above minimum average cost there is supernormal profit, which attracts new firms, raises industry supply and pushes the price down. Below minimum average cost every firm is making a loss, so some leave, supply falls and the price is pushed back up. Only at the minimum of AC is there neither an incentive to enter nor a reason to leave — both forces vanish there, and nowhere else.",
+        "distractors": {
+          "B": "There is no agreement in perfect competition. With many small firms and no barriers, none could be organised or enforced.",
+          "C": "Marginal cost lies below average cost over the whole falling section of the AC curve. The two are equal only at its lowest point.",
+          "D": "No government is involved. The price is determined entirely by market supply and demand."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the market and the individual firm side by side, market demand increases and the market price rises. The immediate effect on the individual firm is that",
+      "options": {
+        "A": "Demand curve slopes downward for the first time.",
+        "B": "Marginal cost curve shifts upward with the price.",
+        "C": "Output falls, because the higher price reduces demand.",
+        "D": "The firm's horizontal demand curve rises."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The market price is set by industry supply and demand, and the individual firm simply takes it. When market demand shifts right the price rises, and the horizontal line representing the firm's demand — which sits at exactly that price — rises with it. Since that line is also the firm's AR and MR, the profit-maximising output where MC = MR moves right as well, and with price now above average cost the firm earns supernormal profit. That profit is what attracts entry and begins the long-run adjustment.",
+        "distractors": {
+          "A": "The firm's demand curve stays horizontal. Only the market's slopes down; the firm remains far too small to affect the price.",
+          "B": "A change in market demand does not change the firm's costs, so its marginal cost curve does not move at all.",
+          "C": "A higher price reduces the quantity demanded in the <em>market</em>, but the firm faces a horizontal demand curve at that price and will produce more, not less."
+        }
+      }
+    }
+  ]
+}
