@@ -1077,12 +1077,25 @@ because an unlinked pointer is markedly less useful to a student who has arrived
 from a search result looking for the labour market treatment. Converting it to
 plain text is a one-line change if the consistency matters more.
 
-**Monopsonistic exploitation is still missing from both pages**, and is the one
-genuinely absent concept rather than a misplaced cross-reference. It has been
-removed from the alert's claims, so the page no longer promises it; adding the
-term to 3.5.3 would close the gap properly. **The site owner has deferred this
-decision to the end of the current run of work.** Nothing depends on it — 3.5.3
-Q2 already tests the mechanism, so no question would need rewriting.
+**Monopsonistic exploitation — CLOSED on 2026-08-01, at the site owner's
+instruction**, once the question project reached its end and the decision was
+put to them. It was the one genuinely absent concept here rather than a
+misplaced cross-reference.
+
+A paragraph was added to `3-5-3-wage-determination`, directly after the
+existing monopsony equilibrium paragraph and altering none of it:
+
+> The gap between what the last worker adds to the firm's revenue and the wage
+> that worker is actually paid is known as **monopsonistic exploitation**. At Qm
+> the monopsonist hires where MCL = MRPL, but pays only Wm — the wage read off
+> the supply curve — so each worker is paid less than the value of what they
+> produce. The larger the gap between MRPL and Wm, the greater the exploitation.
+
+It sits where the page already teaches the mechanism, uses the page's own
+notation (MCL, MRPL, Wm, Qm) and needs no change to the diagram, which already
+shows both curves. **Addition only** — the text and markup integrity checks
+report one file changed, two additions, zero losses and no removed lines. No
+question needed rewriting: 3.5.3 Q2 already tested the mechanism.
 
 ---
 

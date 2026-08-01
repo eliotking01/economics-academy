@@ -9,35 +9,37 @@ session.
 board and every theme is finished: AQA Microeconomics and Macroeconomics, and
 Edexcel Themes 1, 2, 3 and 4. **No topic remains.**
 
-**Branch:** `feature/topic-questions`, branched from `main`.
-**Nothing has been pushed.** `main` auto-publishes, so pushing needs explicit
-approval — see `CLAUDE.md`.
+**Branch:** `feature/topic-questions`, branched from `main`, **pushed to the
+remote and not merged.** `main` auto-publishes, so nothing here is live on
+economicsacademy.co.uk until the site owner merges — see `CLAUDE.md`.
 
 ---
 
 ## Read this first if you are resuming
 
-**State at completion (2026-08-01).** Branch `feature/topic-questions`, **40
-commits ahead of `main`**, working tree clean, **nothing pushed**. All 166 topics
-and 1,268 questions are done, across thirty batches. `main` auto-publishes, so
-the branch goes nowhere until the site owner says so.
+**State at completion (2026-08-01).** Branch `feature/topic-questions`, **41
+commits ahead of `main`**, working tree clean, **pushed to the remote but not
+merged**. All 166 topics and 1,268 questions are done, across thirty batches.
+`main` auto-publishes, so nothing is live until the site owner merges.
 
-**There is no remaining authoring work.** What is left is four decisions, all of
-which belong to the site owner and three of which were deliberately deferred to
-this point:
+**There is no remaining authoring work**, and the four decisions that were held
+for the end of the run have all been taken:
 
-1. **Push the branch.** Forty commits, nothing published yet.
-2. **The nav sub-menu.** All five board index pages now exist and are complete,
-   so the two-level dropdown can be restored. It is a change to every page on the
-   site, so it needs approval. See **Open items**.
-3. **Monopsonistic exploitation.** The site owner asked for this to be raised at
-   the end of the run. It is now the end of the run. See **Open items**.
-4. **The written-response extension.** Proposed in the original brief, never
-   approved, never built. See **Open items**.
+1. **Push — the branch is pushed, and nothing is live.** `main` auto-publishes,
+   so merging is a separate decision the site owner has kept open until they have
+   reviewed the pages.
+2. **The nav sub-menu — restored.** The two-level board dropdown is back in
+   `templates/header.html`.
+3. **Monopsonistic exploitation — added** to `3-5-3-wage-determination`, closing
+   `REVIEW-NOTES.md` N-Q15.
+4. **The written-response extension — a pilot is approved and not yet built.**
+   This is the only outstanding piece of work on the project. See **Open items**
+   for what it needs first.
 
-Beyond those, `REVIEW-NOTES.md` carries **thirteen notes-page findings** turned
-up while writing the questions (N-Q8, N-Q10 to N-Q20). None of them blocks
-anything and all need an explicit instruction before any page is touched.
+Beyond those, `REVIEW-NOTES.md` carries **twelve open notes-page findings** turned
+up while writing the questions (N-Q8, N-Q10 to N-Q14 and N-Q16 to N-Q20; N-Q15 is
+now closed). None of them blocks anything and all need an explicit instruction
+before any page is touched.
 
 ### If you are extending this rather than resuming it
 
@@ -531,14 +533,17 @@ if in doubt — the guide's rule is that concision beats coverage.
 
 ## Open items
 
-**All four now need the site owner. The run is finished, so the three that were
-deferred to its end are due.**
+**All four were put to the site owner on 2026-08-01 and all four were decided.
+Three are done; the fourth is scoped below.**
 
-- **Push the branch — decision 1.** Forty commits on `feature/topic-questions`,
-  nothing published. `main` auto-publishes to economicsacademy.co.uk, so this is
-  the decision that makes 1,268 questions live.
-- **Monopsonistic exploitation — decision 2, deferred by the site owner to the
-  end of the run, which is now.** `REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
+- **Push — DECIDED: push the branch only.** `feature/topic-questions` is pushed
+  to the remote as a backup. **Nothing is live**: only `main` auto-publishes, and
+  the merge decision is deliberately left open until the site owner has reviewed
+  the pages themselves.
+- **Monopsonistic exploitation — DECIDED: add it, and DONE.** A paragraph naming
+  the concept was added to `3-5-3-wage-determination` on 2026-08-01, using the
+  page's own notation and altering no existing wording. `REVIEW-NOTES.md` N-Q15
+  is now closed. Original finding: `REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
   alert and its four metadata copies no longer promise the monopsony labour
   market diagram, minimum wages or trade unions, since those are taught on 3.5.3.
   **One part of that finding is still open.** *Monopsonistic exploitation* — the
@@ -551,16 +556,19 @@ deferred to its end are due.**
   work**. Note that 3.5.3 Q2 already tests the mechanism — where the monopsonist's
   wage is read from — so a question would not need rewriting, only the notes page.
   The change is one sentence naming the concept the page already explains.
-- **Nav sub-menu — decision 3, needs the site owner's call.** `templates/header.html` carries
+- **Nav sub-menu — DECIDED: restore it, and DONE.** The two-level board dropdown
+  is back in `templates/header.html`, mirroring the Revision Notes structure
+  exactly — Edexcel Themes 1 to 4 and both AQA indexes, three `<ul>` levels and
+  two `role="button"` parents. All six targets exist and the link check passes.
+  Original note: `templates/header.html` carries
   a top-level **Practice Questions** entry only. The two-level board dropdown
   that Revision Notes and Past Papers have was written and then deliberately
   removed, because it would have pointed at five board index pages that did not
   yet exist. A comment marks the insertion point. **All five now exist, and four
   are complete and final** — both AQA indexes, `edexcel-theme-1` (22 of 22),
   `edexcel-theme-2` (24 of 24), `edexcel-theme-3` (20 of 20) and
-  `edexcel-theme-4` (21 of 21). **All five are now complete and final, so the
-  reason the dropdown was held back no longer applies.** It is still a nav change
-  on every page, so it needs approval before it goes in.
+  `edexcel-theme-4` (21 of 21). All five are complete and final, which is what
+  removed the original objection.
 - **Hub and board index density.** Both now list all 166 topics across the five
   board indexes. Nothing further to do.
 - **Skill mix.** `applied-reasoning` runs at 62% site-wide against a ~40% target
@@ -573,10 +581,33 @@ deferred to its end are due.**
   theme, and unavoidable on a trade-and-development theme whose arithmetic AQA
   macro had already used. **Recorded rather than corrected. It is now final**, and
   changing it would mean rewriting sets that pass every other check.
-- **Written-response extension — decision 4.** Proposed in the original brief but
-  **not built** and not approved: 1–2 short written questions per topic with
-  indicative-content model answers behind `<details>`, plus a marking-service
-  call to action. Needs the site owner's sign-off before any work starts.
+- **Written-response extension — DECIDED: build a pilot on a few topics.** 1–2
+  short written questions per topic with indicative-content model answers behind
+  `<details>`, plus a marking-service call to action. The site owner has asked for
+  a pilot across a handful of topics first, so the format, the model-answer style
+  and the call to action can be judged before committing to 166 of them. **Not
+  yet started.** It needs a schema extension, generator support and a stylesheet
+  addition before any content is written — see the note below.
+
+### The written-response pilot — what it needs before any content is written
+
+Scoped but not built. Doing it properly means four things, in this order:
+
+1. **Schema.** An optional `written` array on the topic object, each entry
+   carrying a prompt, a mark allocation, and indicative content as a list of
+   points. Optional, so all 166 existing sets stay valid and untouched.
+2. **Generator.** `scripts/build_questions.py` renders the array beneath the
+   multiple-choice list, inside `<details>` so it works with JavaScript off, and
+   extends the JSON-LD. The validator needs the same option-hygiene and
+   UK-spelling passes the MCQ path already has.
+3. **Stylesheet.** `css/pages/quiz.css` gains the written-response block. It must
+   stay inside the existing `.quiz-*` scope so nothing leaks to other pages.
+4. **Content, then the pilot set.** Choose topics that show the format at its
+   best — one calculation-heavy, one evaluation-heavy, one on each board.
+
+The marking call to action is the commercial point of the exercise, so it should
+sit directly beneath the model answer, where a student has just discovered how
+their attempt compares.
 - **Site-wide issues found but not fixed** are logged in `REVIEW-NOTES.md`, per
   `CLAUDE.md`: the `navPanel` `aria-hidden` bug (the only remaining
   accessibility failure on any page), breadcrumb contrast in `css/main.css`, and
