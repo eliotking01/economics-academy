@@ -5,9 +5,9 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 137 topics, 1,071 questions. AQA is complete, Edexcel Themes 1 and 2 are
-complete, and Theme 3 units 3.1 to 3.3 plus 3.4.1 to 3.4.4 are done. 29 topics
-remain.**
+**Live: 140 topics, 1,090 questions. AQA is complete, Edexcel Themes 1 and 2 are
+complete, and Theme 3 units 3.1 to 3.4 are done. 26 topics remain — Theme 3
+units 3.5 and 3.6, then the whole of Theme 4.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -383,47 +383,41 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 29 topics, 223 questions still to write
+### Edexcel — 26 topics, 204 questions still to write
 
 **This is all that is left.** AQA is finished, Themes 1 and 2 are complete, and
-Theme 3 is done as far as 3.4.4.
+Theme 3 is done as far as the end of unit 3.4.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
 | Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 8 | 60 |
+| Theme 3 | 5 | 41 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: the rest of unit 3.4, then unit 3.5 and 3.6** — five topics if
-taken together, which is one too many. Split as:
+**Next batches:**
 
 ```
-batch 23:  3.4.5 monopoly   3.4.6 monopsony   3.4.7 contestability
 batch 24:  3.5.1 demand for labour   3.5.2 supply of labour   3.5.3 wage determination
 batch 25:  3.6.1 government intervention   3.6.2 impact of intervention
 ```
 
-**Twins for batch 23:** AQA 1.5.6 (monopoly and monopoly power, 9), 1.5.7 (price
-discrimination, 8), 1.5.9 (contestable and non-contestable markets, 8) and 1.6.4
-(imperfect labour markets, which is where AQA puts monopsony, 8). **33
-questions.**
+**Twins for batch 24: AQA 1.6.1, 1.6.2, 1.6.3 (24 questions)** — marginal
+revenue productivity theory, influences on labour supply, and wage determination
+in competitive labour markets. Expect this to be tight; MRP in particular is a
+small topic that AQA covers in nine questions.
 
-- **Monopsony is the free topic of the three.** AQA treats it purely as a labour
-  market case — a dominant employer facing an upward-sloping labour supply curve.
-  Edexcel gives it a topic of its own inside the firms unit, so the general
-  buyer-power framing, the effect on suppliers rather than workers, and the
-  supermarket-and-farmer type of example are all open ground. Check the Edexcel
-  page first: if it teaches monopsony wholly through the labour market, the
-  overlap with AQA 1.6.4 will be much tighter than it looks.
-- **AQA 1.5.7 owns price discrimination completely**, including all three
-  degrees. If the Edexcel monopoly page teaches it, expect to find almost nothing
-  free.
-- **AQA 1.5.9 owns contestability**, including hit-and-run competition and sunk
-  costs.
+**Two things carried over into batch 24 specifically:**
 
-**Unit 3.5's twins are AQA 1.6.1, 1.6.2 and 1.6.3 (24 questions)** — MRP theory,
-influences on labour supply, and wage determination in competitive markets.
+- **AQA 1.6.4, 1.6.5 and 1.6.6 (23 more questions) also bear on 3.5.3**, since
+  that is where the Edexcel monopsony labour-market diagram, minimum wages and
+  trade unions actually live. AQA 1.6.6 Q5 is already a minimum-wage-in-monopsony
+  sketch item and 1.6.4 Q5 and 1.6.5 Q6 both cover a union bargaining with a
+  monopsonist. **Print all six AQA 1.6.x sets before writing 3.5.3**, not just
+  1.6.3.
+- **Batch 23 deliberately left the monopsony labour market alone**, writing 3.4.6
+  on general buyer power instead, because the Edexcel page defers labour markets
+  to 3.5.3. The labour-side questions belong in that set.
 
 **Unit 3.6's twins are AQA 1.8.7 and 1.8.8 (14 questions)** on competition policy
 and public ownership, both already drawn on in batch 20.
@@ -1048,6 +1042,91 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 23 — Edexcel Theme 3, units 3.4.5 to 3.4.7 (2026-08-01)
+
+3 topics, 19 questions. **Completes unit 3.4** — monopoly, monopsony and
+contestability.
+
+All 19 re-derived from the stem alone with **0 mismatches**. Originality clean on
+all three fronts after fixing two option-length and template issues.
+
+**19 questions across three topics is the lightest batch on the site, and it is
+the right number.** AQA 1.5.6, 1.5.7, 1.5.9 and 1.6.4 carry **33 questions** over
+this ground, and two of the three topics are close to exhausted by them:
+
+- **AQA 1.5.9 owns contestability almost entirely** — the definition, the
+  competition-against-contestability distinction, sunk costs, hit-and-run entry,
+  two firms pricing near AC to deter entry, brand loyalty as a barrier, lower
+  prices in contestable markets, and reducing barriers as the policy response.
+  Eight of eight. Edexcel's page adds the **types of barrier** list and the
+  Amazon/eBay observation that a concentrated market can behave competitively, so
+  the set is five questions built on those.
+- **AQA 1.5.7 owns price discrimination**, all three degrees and the conditions.
+  What survived is Edexcel's own material: the **cost to the firm** of separating
+  markets and policing resale, and the benefit to elastic-demand consumers of
+  **quieter services and better availability**, neither of which AQA tests.
+
+**Monopsony was the free topic, and the concept-grep is what confirmed it.**
+Searching the bank returned 14 hits for monopsony, **every one of them AQA 1.6.x
+and every one framed as a labour market** — a dominant employer, the marginal
+cost of labour above the supply curve, unions and minimum wages. The Edexcel page
+frames monopsony as **general buyer power** ("a single buyer of a good, service or
+factor of production") and works through a four-agent ledger of firms, consumers,
+workers and suppliers. That is untouched ground, and the whole set was written on
+it: the supermarket-and-farmers case, delayed payment as the cost to suppliers,
+stable order books as the genuine benefit to them, lower shop prices as the
+consumer defence, and a firm holding monopoly and monopsony power at once.
+
+**Deliberately left alone: the monopsony labour market diagram.** The Edexcel page
+defers it to 3.5.3, and AQA 1.6.4/1.6.5/1.6.6 already carry a union-and-monopsonist
+question, a minimum-wage-in-monopsony sketch and the MCL-above-supply explanation.
+Those questions belong in the 3.5.3 set if anywhere.
+
+**Where 3.4.5 found room despite AQA's nine questions:**
+
+- **Asymmetric information as a characteristic of monopoly.** Edexcel lists it;
+  AQA does not, and the concept-grep confirmed the bank tests asymmetric
+  information eleven times without ever attaching it to monopoly.
+- **Patents as the barrier that sustains long-run profit.** One hit in the whole
+  bank, and that was in the balance of payments.
+- **The stakeholder ledger**, especially the effects on **suppliers and workers**,
+  which AQA's monopoly set does not consider at all.
+- **Natural monopoly by its cost structure** rather than its definition — high
+  fixed costs, low marginal costs, LRAC falling across the whole range of demand.
+  AQA Q5 gives the definition and Q9 the marginal-cost-pricing problem; the reason
+  behind both was free.
+- **X-inefficiency as conditional.** Edexcel says "possible", depending on the
+  barriers. Two firms each with 100% share but different entry threats makes that
+  concrete, and it is a genuinely good stretch item.
+- **Why a price maker still cannot charge anything it likes.** Nothing in the
+  bank makes the point that market power widens the choice without removing the
+  demand constraint.
+
+**A new N-Q finding, and the largest over-promise on the site** —
+`REVIEW-NOTES.md` N-Q15. `3-4-6-monopsony` promises the monopsony labour market
+diagram, monopsonistic exploitation, minimum wages and trade unions, and the body
+contains none of the four. Unlike the earlier cases most of the material exists,
+on `3-5-3-wage-determination`, so it is mainly a **cross-reference problem**: the
+alert claims for itself what another page delivers. Only monopsonistic
+exploitation is missing from both.
+
+**Table stems collided twice more with my own bank** — "From Table 1, the only one
+that is a…" against 3.1.3 Q6. That is the third batch running. The wording is now
+varied per set rather than per noun: "the consequence usually presented as an
+advantage", "the effect that harms rather than helps", "the sunk cost is".
+
+| | |
+| --- | --- |
+| Answer letters | A 4, B 6, C 5, D 4 (even would be 4.75) |
+| Skills | applied-reasoning 14, data-table 3, definition-in-context 2 |
+| Difficulty | foundation 1, standard 15, stretch 3 |
+| Sketch to solve | 0 |
+
+**No calculations and no sketch items**, and neither is an oversight. The three
+pages carry no figures at all, and every diagram on them is printed rather than
+constructed — while AQA 1.5.6 Q4 already owns the monopoly sketch. Unit 3.4 as a
+whole finished with 2 calculations and 1 sketch across 47 questions.
 
 ### Batch 22 — Edexcel Theme 3, units 3.4.1 to 3.4.4 (2026-08-01)
 

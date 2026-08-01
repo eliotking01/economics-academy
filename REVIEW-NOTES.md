@@ -998,3 +998,46 @@ page's wording, caught during the cold re-solve, and rewritten to ask what the
 envelope *is* — the lowest cost achievable at each output — which is correct on
 the page's own terms and correct in general. If the sentence is ever revised,
 "touches each SRAC curve at the output where that scale is cheapest" would do it.
+
+---
+
+## N-Q15 — `3-4-6-monopsony` promises four things and delivers none of them
+
+**The largest single over-promise found on the site.** The spec alert on
+`3-4-6-monopsony` says students should be able to:
+
+> …explain **the monopsony labour market diagram**, compare monopsony outcomes
+> with competitive outcomes, analyse **monopsonistic exploitation**, and evaluate
+> the impact of monopsony power and possible government responses. These notes
+> also cover **minimum wages** and **trade unions** as countervailing forces.
+
+The body contains none of the four terms in bold. There is no diagram of any
+kind on the page, no comparison with a competitive outcome, no mention of
+monopsonistic exploitation, and nothing about minimum wages or trade unions. What
+the page does contain — a definition, three characteristics and a four-agent
+costs-and-benefits table — is good, and is genuinely different from how AQA
+treats the topic. It simply is not what the alert describes.
+
+**Unlike the other N-Q entries, most of the missing content exists elsewhere on
+the site.** The page ends by saying "Monopsonies in labour markets are covered in
+further detail in 3.5.3 Wage Determination", and `3-5-3-wage-determination` does
+cover monopsony, the marginal cost of labour, minimum wages and trade unions.
+Only **monopsonistic exploitation** is missing from both pages.
+
+So this is largely a **cross-reference problem rather than a content gap**: the
+alert on 3.4.6 claims for itself what 3.5.3 delivers. Two candidate fixes, and
+they are much cheaper than the N-Q8 cases:
+
+1. Rewrite the 3.4.6 alert to describe what the page actually does — buyer power,
+   and the effects on suppliers, workers and consumers — and point to 3.5.3 for
+   the labour market treatment.
+2. Or move the labour-market clauses out of the 3.4.6 alert and into 3.5.3's.
+
+Either way the `metaDescription`, OG and Twitter cards and JSON-LD carry the same
+claim and would need the same edit. **Needs an explicit instruction.**
+
+**The question set was written to the body**, so it covers buyer power generally
+— the supermarket-and-farmers case, the four-agent ledger, and the combination of
+monopoly and monopsony power in one firm. Nothing in it touches the labour market
+diagram, which is the right place to draw the line: those questions belong with
+3.5.3 when that set is written.

@@ -1,0 +1,150 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.4.7",
+  "slug": "3-4-7-contestability",
+  "title": "Contestability",
+  "shortTitle": "Contestability",
+  "pageTitle": "Contestability Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on contestability for Edexcel A-Level Economics: barriers to entry, sunk costs and the threat of hit-and-run entry.",
+  "intro": "Five original multiple-choice questions on contestable markets, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Five original multiple-choice questions on what makes a market contestable, the role of sunk costs, and why the threat of entry disciplines firms.",
+  "questions": [
+    {
+      "id": "edexcel-3-4-7-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four costs a firm would incur on entering a market.<br />From Table 1, the sunk cost is",
+      "table": {
+        "caption": "Table 1: Four costs facing a firm considering entry",
+        "head": [
+          "",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "Cost 1",
+            "A fleet of standard vans, resaleable second-hand"
+          ],
+          [
+            "Cost 2",
+            "A national advertising campaign to launch the brand"
+          ],
+          [
+            "Cost 3",
+            "A stock of raw materials that can be sold on"
+          ],
+          [
+            "Cost 4",
+            "A short lease on premises, assignable to another tenant"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Cost 1.",
+        "B": "Cost 2.",
+        "C": "Cost 3.",
+        "D": "Cost 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>sunk cost</strong> is one that cannot be recovered if the firm decides to leave. Advertising is the clearest case there is: the money buys awareness of a brand that has no value to anybody else, and none of it comes back on exit. Edexcel lists advertising alongside specialised machinery and research and development. The other three all convert back into cash — vans, stock and an assignable lease can each be sold or passed on to somebody else.",
+        "distractors": {
+          "A": "Standard vans have a working second-hand market, so most of the outlay is recoverable.",
+          "C": "Raw materials that can be sold on are recoverable almost by definition.",
+          "D": "A lease that can be assigned transfers the remaining obligation to another tenant, so the firm is not locked into it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-7-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two firms account for 95% of an online marketplace, yet both keep their charges low and invest heavily in service. Entry requires little more than a website. This shows that",
+      "options": {
+        "A": "Concentration alone can mislead about competition.",
+        "B": "Concentration ratios are always calculated incorrectly.",
+        "C": "Contestability and competition mean the same thing.",
+        "D": "High concentration always produces high prices."
+      },
+      "answer": "A",
+      "model": {
+        "working": "<strong>Competition</strong> is about how many firms are in a market; <strong>contestability</strong> is about how easily others could join. A market with two firms looks uncompetitive on a concentration ratio — but if entry costs almost nothing, any attempt to exploit that position invites a newcomer, so the incumbents behave as though rivals were already present. Edexcel makes exactly this point with online marketplaces: highly concentrated, and yet behaving competitively because they are highly contestable.",
+        "distractors": {
+          "B": "The ratio is calculated perfectly correctly. It simply measures something other than the intensity of competition.",
+          "C": "They are distinct, and this market is the case that separates them — low competition on the count of firms, high contestability on ease of entry.",
+          "D": "This market is the counter-example. Concentration produces high prices only where barriers keep entrants out."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-7-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market is earning high supernormal profit, but entering it requires £40m of equipment with no other use and no resale value. Firms stay out mainly because",
+      "options": {
+        "A": "Entry is legally prohibited in this market.",
+        "B": "The equipment would raise their average costs.",
+        "C": "The profit would be competed away immediately.",
+        "D": "The £40m could not be recovered on leaving."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A firm weighing entry is not only asking whether it can make money, but what happens if it cannot. Where the £40m is <strong>sunk</strong> — unrecoverable on exit — a mistaken entry costs the whole of it, so the gamble has to be worth taking against that downside. Barriers to <em>exit</em> are therefore barriers to entry, which is why Edexcel calls sunk costs the main barrier to exit and makes their level the central determinant of how contestable a market is.",
+        "distractors": {
+          "A": "Nothing in the stem is prohibited. The obstacle is commercial rather than legal.",
+          "B": "The equipment is a fixed cost, spread over output like any other — and the incumbents are bearing it too.",
+          "C": "Profit being competed away happens <em>after</em> entry, and in a genuinely contestable market it is exactly why hit-and-run entry still pays. The deterrent here is the money that cannot be got back."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-7-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An established firm signs agreements requiring every major retailer to stock its products exclusively. Among the types of barrier to entry, this is",
+      "options": {
+        "A": "A legal barrier created by government.",
+        "B": "An anti-competitive practice by the incumbent.",
+        "C": "An economy of scale enjoyed by the incumbent.",
+        "D": "Ownership of an essential natural resource."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Edexcel lists six types of barrier to entry, and this one is created by the incumbent's own conduct rather than by cost conditions or by law. <strong>Exclusive dealing</strong> locks up the routes to market: a newcomer may have a better product at a lower price and still be unable to get it onto a shelf. Edexcel groups it with predatory pricing under anti-competitive practices, and it is the category competition authorities are readiest to act against — unlike economies of scale, it serves no efficiency purpose whatever.",
+        "distractors": {
+          "A": "Legal barriers are things granted by government, such as patents and licences. This is a private contract, and one a regulator might well strike down.",
+          "C": "Economies of scale are a cost advantage arising from size. Nothing here concerns the incumbent's unit costs.",
+          "D": "The firm controls access to retailers, which is a distribution channel rather than a natural resource."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-4-7-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A market contains forty firms, but each has invested heavily in equipment that cannot be resold, and leaving would mean writing all of it off. Judged on contestability rather than competition, this market is",
+      "options": {
+        "A": "Highly contestable, since there are forty firms.",
+        "B": "Highly contestable, since none of them is dominant.",
+        "C": "Not very contestable, since exit is expensive.",
+        "D": "Perfectly contestable, since no barriers are described."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The two ideas are independent, and this market separates them in the opposite direction to the usual example. Forty firms is plenty of <strong>competition</strong>. But <strong>contestability</strong> is about the ease of entering and leaving, and high sunk costs make leaving expensive — which makes entering risky, so the threat of new entry is weak. A market can therefore look competitive on the number of firms while being poorly disciplined by potential entrants, just as a two-firm market with no sunk costs can behave competitively.",
+        "distractors": {
+          "A": "This mistakes competition for contestability. How many firms are already in a market says nothing about how easily another could join or leave.",
+          "B": "The same error. The absence of a dominant firm is again a fact about competition, not about ease of entry.",
+          "D": "Substantial sunk costs are described, and they are precisely the barrier that makes a market less contestable."
+        }
+      }
+    }
+  ]
+}
