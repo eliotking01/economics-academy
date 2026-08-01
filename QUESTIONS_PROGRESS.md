@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 125 topics, 974 questions. AQA is complete, Edexcel Themes 1 and 2 are
-complete. 41 topics remain, all in Themes 3 and 4.**
+**Live: 129 topics, 1,007 questions. AQA is complete, Edexcel Themes 1 and 2 are
+complete, and Theme 3 units 3.1 and 3.2 are done. 37 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -353,25 +353,37 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 41 topics, 320 questions still to write
+### Edexcel — 37 topics, 287 questions still to write
 
-**This is all that is left.** AQA is finished, and Themes 1 and 2 are complete.
+**This is all that is left.** AQA is finished, Themes 1 and 2 are complete, and
+Theme 3 units 3.1 and 3.2 are done.
 
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
 | Theme 2 | 0 — **complete**, 24 topics and 198 questions | — |
-| Theme 3 | 20 | 157 |
+| Theme 3 | 16 | 124 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 3 unit 3.1 and 3.2** — 3.1.1 sizes and types of firms,
-3.1.2 business growth, 3.1.3 demergers, 3.2.1 business objectives. Four topics,
-roughly 30 questions. Theme 3's twenty topics are:
+**Next batch: Theme 3 unit 3.3** — 3.3.1 revenue, 3.3.2 costs, 3.3.3 economies
+and diseconomies of scale, 3.3.4 normal and supernormal profit. Four topics, and
+this is **the arithmetic unit of the whole theme**: plan 9–10 questions each and
+several calculations per set. Theme 3's remaining topics are:
 
 ```
-3.1.1 3.1.2 3.1.3 | 3.2.1 | 3.3.1 3.3.2 3.3.3 3.3.4
+3.3.1 3.3.2 3.3.3 3.3.4
 3.4.1 3.4.2 3.4.3 3.4.4 3.4.5 3.4.6 3.4.7 | 3.5.1 3.5.2 3.5.3 | 3.6.1 3.6.2
 ```
+
+**Unit 3.3's twins are the densest arithmetic in the AQA bank** — 1.4.3
+(diminishing returns, 9), 1.4.4 (costs, 10), 1.4.5 (economies of scale, 8),
+1.4.6 (revenue, 9) and 1.4.7 (profit, 8): **44 questions**, most of them built on
+cost or revenue schedules. Print all five before writing. Note in particular that
+AQA 1.4.5 already owns the *types* of economy of scale (purchasing, financial,
+technical, marketing, risk-bearing, managerial), the minimum efficient scale,
+communication diseconomies, external economies and the U-shaped LRAC. Batch 20
+had to drop two drafted questions to AQA 1.4.5 alone; unit 3.3 will hit it much
+harder.
 
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
 market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
@@ -380,9 +392,10 @@ competition policy. The twin map:
 
 | Edexcel | AQA twin | AQA questions |
 | --- | --- | --- |
-| 3.1.1 sizes and types of firms | 1.5.1 market structures (partly) | 7 |
-| 3.1.2 business growth | 1.5.8 dynamics of competition (partly) | 6 |
-| 3.2.1 business objectives | 1.5.2 objectives of firms | 7 |
+| ~~3.1.1 sizes and types of firms~~ | 1.5.1, 1.4.5, 1.5.2 — **done, batch 20** | — |
+| ~~3.1.2 business growth~~ | 1.8.7 competition policy — **done, batch 20** | — |
+| ~~3.1.3 demergers~~ | none — **done, batch 20** | — |
+| ~~3.2.1 business objectives~~ | 1.5.2, 1.4.6, 1.4.7 — **done, batch 20** | — |
 | 3.3.1 revenue | 1.4.6 marginal, average and total revenue | 9 |
 | 3.3.2 costs | 1.4.4 costs of production, 1.4.3 diminishing returns | 19 |
 | 3.3.3 economies and diseconomies of scale | 1.4.5 | 8 |
@@ -992,6 +1005,103 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 20 — Edexcel Theme 3, units 3.1 and 3.2 (2026-08-01)
+
+4 topics, 33 questions. **The first Theme 3 batch** — sizes and types of firms,
+business growth, demergers and business objectives.
+
+All 33 re-derived from the stem alone with **0 mismatches**, and the cold
+re-solve earned its keep for the first time in several batches: **3.2.1 Q6 had
+two defensible answers.** The stem asked which firm was pursuing an objective
+"outside the standard three of profit, revenue and sales maximisation", and one
+of the distractor rows described satisficing — which is also outside those three.
+The stem now names all four objectives explicitly, leaving only the CSR row.
+Nothing about that was visible while drafting; it only showed up on solving the
+question cold against its own options.
+
+**Originality clean against both past-paper corpora at every n-gram length.**
+Against the 974-question bank, two hits, one of them real:
+
+- **3.2.1 Q2 opened "A firm switches from profit maximisation to revenue
+  maximisation" — AQA 1.5.2 Q6's opening sentence word for word.** The questions
+  differ (AQA asks what happens to price and output; ours asks why a firm would
+  do it), but the shared sentence is exactly the §8 signal. Rebuilt to name the
+  rules instead of the labels: "produces past the output at which MC = MR,
+  settling instead at the output where MR = 0". That is a better stem as well as
+  an original one, since it makes the student apply the rule rather than
+  recognise the term.
+- 3.1.1 Q4 shared "of the following, the measure most likely to" with Edexcel
+  2.2.2 Q8. Stock scaffolding, reworded anyway.
+
+**Three drafted questions were dropped outright at the twin-audit stage**, before
+anything was written down, and it is worth recording what they were, because the
+same traps will recur through unit 3.3:
+
+- A *diseconomies of scale* item for 3.1.1 — the scenario (instructions delayed
+  and distorted on the way to the shop floor, costs rising) is AQA 1.4.5 Q6
+  almost word for word.
+- An *access to finance* item built on two firms of different sizes being quoted
+  different interest rates — that is AQA 1.4.5 Q3, the financial economies of
+  scale question. Rewritten around a single firm turned down by lenders.
+- A *horizontal merger* item opening "two of the four firms in a market agree to
+  merge" — AQA 1.8.7 Q4 uses the identical setup. Replaced with the culture-clash
+  question, which is Edexcel's own material and better anyway.
+
+**Where the twins bind hardest, and what was left:**
+
+- **AQA 1.5.2 owns the whole of Edexcel 3.2.1's core** — MR = 0, AC = AR, the
+  divorce of ownership from control, the principal-agent problem, satisficing,
+  the profit-max-to-revenue-max comparison and limit pricing. Seven of seven.
+- **AQA 1.4.7 Q4 and 1.4.6 Q5 own the two remaining rules**, MC = MR for profit
+  maximisation and MR = 0 for revenue maximisation, so all three definitional
+  items were gone before drafting began.
+- What survived is the **three-way ranking** (Qpm &lt; Qrm &lt; Qsm and the prices
+  in reverse), which AQA never asks and which makes the batch's sketch item; the
+  **commercial reason** for revenue maximisation, which Edexcel states as
+  economies of scale raising long-term profit; **satisficing's position between
+  the two extremes**; and the **other objectives** Edexcel lists and AQA does not
+  — survival, employee welfare and CSR.
+
+**3.1.3 has no AQA twin at all.** Demergers are not on the AQA specification, so
+the whole topic is free ground: the six motives, the loss of synergies, the
+stakeholder split between business, workers and consumers, and the evaluation
+that a demerger only cuts costs where diseconomies genuinely existed.
+
+**3.1.2 is nearly as free.** AQA has nothing on organic against inorganic growth
+or on the three types of integration; only 1.8.7 touches mergers, and from the
+competition authority's side. This is why the set runs to ten.
+
+**`calculation` is zero, and that is not an oversight.** Units 3.1 and 3.2 carry
+no numbers at all — no cost schedules, no revenue schedules, no figures on any of
+the four pages. Inventing arithmetic here would have meant pre-empting 3.3.1 and
+3.3.2, where it belongs and where the notes actually supply it. The claim in
+"Remaining work" that Theme 3 is where the calculation share recovers stands, but
+it rests entirely on unit 3.3 and on the concentration ratios in 3.4.
+
+**One sketch item** (3.2.1 Q1), and it is a genuine one: the single AR/MR/AC/MC
+diagram with all three objective outputs marked on it is exactly what the Edexcel
+page asks students to be able to draw, and no AQA question uses it.
+
+**A new N-Q8-type finding, logged not fixed** — `REVIEW-NOTES.md` N-Q12.
+`3-1-1-sizes-types-of-firms` promises "sole traders, partnerships, and private
+and public limited companies" in its spec alert and metadata, and the body never
+mentions limited companies at all. Unlike the Theme 2 cases this is not a
+conversion loss: `raw-notes/edexcel/3.1.1.md` does not contain the material
+either. The other three pages in this batch check out clean.
+
+| | |
+| --- | --- |
+| Answer letters | A 7, B 8, C 8, D 10 (even would be 8.25) |
+| Skills | applied-reasoning 25, definition-in-context 4, data-table 4, calculation 0 |
+| Difficulty | foundation 3, standard 26, stretch 4 |
+| Sketch to solve | 1 |
+
+`applied-reasoning` at 76% is the second highest of any batch, behind unit 2.3.
+The material is classification and evaluation throughout — which type of
+integration is this, why did this firm stay small, what did this demerger cost —
+and the definitional items that would have balanced it were the ones AQA had
+already taken. **D leads the batch for the second time running**, at 10 of 33.
 
 ### Batch 19 — Edexcel Theme 2, unit 2.6 (2026-08-01)
 

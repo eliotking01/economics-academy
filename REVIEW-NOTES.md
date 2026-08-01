@@ -902,6 +902,43 @@ Outstanding here, all needing an explicit instruction before anything is touched
 | N-Q2 to N-Q7 | AQA macro pages, earlier in this file | economics content |
 | `navPanel` `aria-hidden` | site-wide | accessibility, in the earlier sections |
 
-Themes 3 and 4 have **not** been checked for N-Q8 or N-Q10. Both checks are
+Themes 3 and 4 have **not** been fully checked for N-Q8 or N-Q10. Both checks are
 scripted above and take a couple of minutes; run them when those themes are
 reached, and read every hit before recording it.
+
+**Units 3.1 and 3.2 have now been checked for N-Q8, and one page fails.** The
+other three are clean.
+
+---
+
+## N-Q12 — `3-1-1-sizes-types-of-firms` promises company types it never covers
+
+Same shape as N-Q8, found while writing the unit 3.1 question sets. The spec
+alert closes:
+
+> These notes also cover sole traders, partnerships, and private and public
+> limited companies.
+
+The body never mentions a **private limited company** or a **public limited
+company** at all, and never distinguishes them. The nearest it comes is the
+abbreviation "PLCs", used in passing in the *Divorce of Ownership and Control*
+section without being expanded or defined. Sole traders and partnerships fare
+slightly better but not much: they appear once, in a list — "they include sole
+traders, partnerships, and companies" — with no explanation of what either is or
+how they differ.
+
+As with the nine pages in N-Q8, the promise is repeated in the page's
+`metaDescription`, its OG and Twitter cards and its JSON-LD `description`, so the
+page is indexed for terms it does not explain. `raw-notes/edexcel/3.1.1.md` does
+**not** contain the missing material either, so this is not a conversion loss —
+the alert claims more than was ever written.
+
+**The question set was written to what the body actually teaches**, so no
+question turns on the difference between a private and a public limited company.
+One distractor in `3.1.1` Q1 does rely on a student not mistaking a *public
+limited company* for a *public sector* organisation, which is a confusion the
+page's own wording makes more likely rather than less.
+
+**The fix is the same pair of options as N-Q8**: write the missing paragraph, or
+cut the over-claim from the alert and its four copies in the metadata. Both need
+an explicit instruction.

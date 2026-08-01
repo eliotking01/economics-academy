@@ -1,0 +1,260 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.1.2",
+  "slug": "3-1-2-business-growth",
+  "title": "Business Growth",
+  "shortTitle": "Business Growth",
+  "pageTitle": "Business Growth Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on business growth for Edexcel A-Level Economics: organic and inorganic growth, integration types and growth constraints.",
+  "intro": "Ten original multiple-choice questions on how firms grow, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Ten original multiple-choice questions on organic and inorganic growth, horizontal, vertical and conglomerate integration, and the constraints on growth.",
+  "questions": [
+    {
+      "id": "edexcel-3-1-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A chain of opticians opens fifteen new branches over three years, funding each from its own retained profit. It buys no other business. This growth is",
+      "options": {
+        "A": "Conglomerate integration.",
+        "B": "Horizontal integration.",
+        "C": "Inorganic growth.",
+        "D": "Organic growth."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Organic</strong> growth is generated from within the business using its own resources — new branches, new products, new markets, paid for out of what the firm already has. <strong>Inorganic</strong> growth means acquiring another firm through a merger or takeover. No other business appears anywhere in the stem, so this is organic: slower and more controlled, but lower risk, financed from profit, and leaving the firm's control and culture intact.",
+        "distractors": {
+          "A": "Conglomerate integration is a merger with a firm in a completely different industry.",
+          "B": "Horizontal integration is a merger with a competitor at the same stage of production. Opening your own branches is not a merger.",
+          "C": "Inorganic growth requires a merger or a takeover, and there is neither here."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chocolate manufacturer buys the cocoa plantation that supplies its beans. This is",
+      "options": {
+        "A": "Horizontal integration.",
+        "B": "Backward vertical integration.",
+        "C": "Forward vertical integration.",
+        "D": "Conglomerate integration."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Vertical integration is a merger with a firm at a different stage of the <em>same</em> supply chain. Raw materials come before manufacturing, so the plantation sits <strong>earlier</strong> in the chain than the buyer — which makes this backward integration. The motives Edexcel gives for it are securing the supply of inputs and gaining control over their cost and quality.",
+        "distractors": {
+          "A": "Horizontal integration would mean buying a rival chocolate manufacturer, at the same stage of the chain.",
+          "C": "Forward integration would mean buying something later in the chain, such as a chain of shops selling the finished chocolate.",
+          "D": "A conglomerate merger joins firms in completely different industries. Cocoa and chocolate are the same industry."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A furniture manufacturer that has always sold through independent retailers buys a chain of showrooms. Besides securing outlets for its products, the gain it is most directly seeking is to",
+      "options": {
+        "A": "Capture the margin the retailers were earning.",
+        "B": "Diversify into a completely different industry.",
+        "C": "Reduce the number of competing manufacturers.",
+        "D": "Secure a cheaper supply of timber and fabric."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is <strong>forward</strong> vertical integration — a move to a later stage of the same supply chain. Edexcel gives two motives for it, and the stem has already named one. The other is the margin: every sofa used to be sold to a retailer at wholesale and on to the customer at retail, with the difference going to the retailer. Owning the showrooms means the manufacturer now keeps both parts.",
+        "distractors": {
+          "B": "Showrooms selling furniture are part of the furniture chain, not a separate industry, so this is not conglomerate integration.",
+          "C": "Buying a retailer removes no manufacturer from the market. That would require horizontal integration.",
+          "D": "Timber and fabric are inputs, so securing them more cheaply would call for <em>backward</em> integration instead."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four acquisitions announced during a single week.<br />From Table 1, the conglomerate merger is",
+      "table": {
+        "caption": "Table 1: Four acquisitions announced during one week",
+        "head": [
+          "",
+          "Acquisition"
+        ],
+        "rows": [
+          [
+            "Deal 1",
+            "A supermarket buys a rival supermarket group"
+          ],
+          [
+            "Deal 2",
+            "An airline buys the catering firm that supplies its meals"
+          ],
+          [
+            "Deal 3",
+            "A publisher buys a chain of bookshops"
+          ],
+          [
+            "Deal 4",
+            "A shipping company buys a hotel group"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Deal 1.",
+        "B": "Deal 2.",
+        "C": "Deal 3.",
+        "D": "Deal 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A conglomerate merger joins firms in <strong>completely different industries</strong>, and its purpose is to diversify risk rather than to win share or control a supply chain. Shipping and hotels are unrelated: neither produces an input for the other and they do not compete for the same customers. Each of the other three sits inside a single industry or a single supply chain.",
+        "distractors": {
+          "A": "Two supermarkets are competitors at the same stage of production, so this is horizontal integration.",
+          "B": "The caterer supplies the airline, and sits earlier in its supply chain, so this is backward vertical integration.",
+          "C": "Bookshops come later in the publishing chain than the publisher, so this is forward vertical integration."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two engineering firms merge. One has always run on strict formal procedures, the other on informal team decisions. Two years later senior staff from both are leaving and output per worker has fallen. This illustrates the risk of",
+      "options": {
+        "A": "A clash of company cultures.",
+        "B": "Blocked approval from the regulator.",
+        "C": "Losing control of the supply chain.",
+        "D": "Missing out on economies of scale."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Horizontal integration promises rapid market share and economies of scale, but it joins two organisations that then have to work as one. Edexcel names <strong>culture clash</strong> among its main disadvantages, and it is what the stem points to: two incompatible ways of working, experienced staff leaving rather than adapting, and the productivity the merger was meant to deliver going into reverse.",
+        "distractors": {
+          "B": "The merger went through. The difficulty described arose afterwards, inside the merged firm.",
+          "C": "Both firms are at the same stage of production, so no supply chain has changed hands.",
+          "D": "A merger of this kind should if anything deliver economies of scale. What has been lost here is productivity, not scale."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm making agricultural machinery, whose sales swing sharply with the harvest, buys a company that services office air conditioning. The main advantage it expects is",
+      "options": {
+        "A": "A larger share of the machinery market.",
+        "B": "Control over the price of its raw materials.",
+        "C": "Economies of scale in machinery production.",
+        "D": "Less exposure to a single market's swings."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The two businesses have nothing to do with each other, and that is precisely the point. This is <strong>conglomerate integration</strong>, and Edexcel gives diversification of risk as its main advantage. Machinery sales rise and fall with the harvest; air conditioning contracts do not, so a bad year in one market is no longer a bad year for the whole firm. The disadvantages are the other side of the same coin — no expertise in the new market, and a more complex business to manage.",
+        "distractors": {
+          "A": "Buying a firm in an unrelated industry adds nothing to the machinery market share.",
+          "B": "Air conditioning servicing supplies the machinery business with nothing, so this is not backward integration.",
+          "C": "Economies of scale come from producing more of the same thing. The two businesses share no production at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm chooses to expand by opening its own new branches rather than by buying an established competitor. Compared with the takeover, the route it has chosen is most likely to be",
+      "options": {
+        "A": "Faster, but harder to finance from profit.",
+        "B": "Faster, and more likely to attract regulators.",
+        "C": "Slower, but easier to keep control of.",
+        "D": "Slower, and much riskier to the existing business."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Organic growth is the slower route, because the firm has to build the capacity itself rather than acquire it ready-made. What the time buys is control: the expansion is financed from retained profit rather than borrowing, the firm's own way of working carries across to each new branch, and there is no second organisation to absorb. Edexcel's balance is exactly this — lower risk and retained control, set against slow growth and limited finance.",
+        "distractors": {
+          "A": "Organic growth is the slower of the two, and being financed from retained profit is one of its advantages rather than a difficulty.",
+          "B": "Regulators scrutinise mergers and takeovers, because those reduce the number of competitors in a market. Opening your own branches does not.",
+          "D": "Organic growth is the <em>lower</em>-risk route. The takeover carries the risks of overpaying and of culture clash."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small firm with a strong order book cannot expand, because lenders regard it as too risky to fund. The constraint on its growth is",
+      "options": {
+        "A": "Access to finance.",
+        "B": "Government regulation.",
+        "C": "The objectives of its owners.",
+        "D": "The size of the market."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Edexcel gives four constraints on business growth: the size of the market, access to finance, the owners' objectives and government regulation. The stem rules out three of them — there is demand, since the order book is strong; the owners want to expand; and no regulator appears. What is missing is the funding, and the reason Edexcel gives is the one in the stem: smaller firms are perceived as riskier, so borrowing is harder to obtain and dearer when it is.",
+        "distractors": {
+          "B": "No rule is stopping this firm. The obstacle is private lenders' judgement of its risk.",
+          "C": "The owners want to grow. It is the money that is not available.",
+          "D": "The order book shows that the customers are there."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm making specialist parts for church organs already supplies almost every customer in the country. Its owners want to grow and can raise the finance. To expand significantly it will most likely have to",
+      "options": {
+        "A": "Cut its prices to win a larger market share.",
+        "B": "Merge with a supplier of its raw materials.",
+        "C": "Sell into markets in other countries.",
+        "D": "Wait for the domestic market to grow on its own."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The binding constraint here is the <strong>size of the market</strong>. A niche is limited not by the firm's finances or its ambitions but by how many buyers exist, and this firm already serves almost all of them. Edexcel's point is that a firm in a niche or saturated market that still wants to grow has to find more buyers, which in practice means internationalisation.",
+        "distractors": {
+          "A": "With almost every domestic customer already served there is no share left to win, so a price cut would lower revenue without raising volume much.",
+          "B": "Backward integration might reduce costs, but it adds no customers, and customers are what this firm is short of.",
+          "D": "Waiting is not expanding, and a market this specialised has no particular reason to grow quickly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-1-2-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A supermarket chain buys the farms that supply its vegetables, expecting to cut costs and control quality. Three years later the vegetable operation is losing money. The most likely explanation is that the chain",
+      "options": {
+        "A": "Faces higher barriers to entry than before.",
+        "B": "Has no expertise in growing vegetables.",
+        "C": "Has reduced the competition it faces.",
+        "D": "Is now buying its produce at market prices."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is backward vertical integration, and Edexcel gives <strong>lack of expertise at the new stage</strong> as one of its principal disadvantages. Running a supermarket and running a farm are different businesses, needing different skills, different capital and carrying different risks. A retailer that suddenly has to manage weather, yields and planting cycles may well farm less efficiently than the specialists it used to buy from — and lose more on the growing than it saves on the buying.",
+        "distractors": {
+          "A": "Barriers to entry concern getting into a market, and the chain is already in both. Higher barriers would in any case help an incumbent rather than hurt it.",
+          "C": "Buying a supplier removes no retail competitor, and less competition would raise profit rather than reduce it.",
+          "D": "Owning the farms means it no longer buys that produce at market prices. Avoiding those prices was the point of the purchase."
+        }
+      }
+    }
+  ]
+}

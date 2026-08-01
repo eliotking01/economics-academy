@@ -1,0 +1,216 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-3",
+  "boardName": "Edexcel Theme 3",
+  "spec": "3.2.1",
+  "slug": "3-2-1-business-objectives",
+  "title": "Business Objectives",
+  "shortTitle": "Business Objectives",
+  "pageTitle": "Business Objectives Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on business objectives for Edexcel A-Level Economics: profit, revenue and sales maximisation, satisficing and more.",
+  "intro": "Eight original multiple-choice questions on the objectives firms pursue, written to the style and difficulty of Edexcel Paper 1 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on profit, revenue and sales maximisation, satisficing, and the principal-agent problem behind them.",
+  "questions": [
+    {
+      "id": "edexcel-3-2-1-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching a single diagram with AR, MR, AC and MC curves and marking the output a firm would choose under each objective, the three outputs run from smallest to largest in the order",
+      "options": {
+        "A": "Profit maximisation, revenue maximisation, sales maximisation.",
+        "B": "Profit maximisation, sales maximisation, revenue maximisation.",
+        "C": "Revenue maximisation, profit maximisation, sales maximisation.",
+        "D": "Sales maximisation, revenue maximisation, profit maximisation."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Mark the three points on one diagram. <strong>Profit maximisation</strong> is where MC = MR; since MC is positive, that happens while MR is still above zero, so it is the leftmost point. <strong>Revenue maximisation</strong> is where MR = 0, further to the right. <strong>Sales maximisation</strong> is where AC = AR — the break-even output — further right again. So Qpm &lt; Qrm &lt; Qsm. Because AR slopes downward, the prices run the other way: Ppm &gt; Prm &gt; Psm.",
+        "distractors": {
+          "B": "Sales maximisation gives the largest output of the three, not the middle one. AC = AR lies beyond the point where MR = 0.",
+          "C": "Profit maximisation gives the smallest output. MC = MR is reached before MR falls all the way to zero.",
+          "D": "This reverses the order completely. Profit maximisation gives the smallest output at the highest price, not the largest output."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm deliberately produces past the output at which MC = MR, settling instead at the output where MR = 0. Its profit this year is lower as a result. The commercial case for that choice is that the larger output",
+      "options": {
+        "A": "Ensures that the firm will break even every year.",
+        "B": "Lowers average cost through economies of scale.",
+        "C": "Raises the price the firm is able to charge.",
+        "D": "Removes the need to consider marginal cost."
+      },
+      "answer": "B",
+      "model": {
+        "working": "MR = 0 is the <strong>revenue-maximising</strong> output, and it lies beyond the profit-maximising one, so profit this year is lower by construction. The pay-off lies in what the larger output does to costs and to position: producing more moves the firm down its long-run average cost curve, and a larger share of the market is worth holding in itself. Edexcel's page makes the point that both routes can raise <strong>long-term</strong> profitability, which is why a firm might accept less profit now.",
+        "distractors": {
+          "A": "Breaking even is the <em>sales</em>-maximising output, where AC = AR. A revenue maximiser produces less than that and still earns supernormal profit.",
+          "C": "On a downward-sloping demand curve a larger output can only be sold at a lower price, not a higher one.",
+          "D": "Marginal cost is exactly what makes the profit-maximising output different from the revenue-maximising one. The firm is choosing not to produce there, not choosing to ignore its costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm's managers aim at a level of profit their shareholders will accept rather than the highest attainable. Compared with a profit-maximising firm and a sales-maximising firm, this firm's output will be",
+      "options": {
+        "A": "Above both of them.",
+        "B": "Below both of them.",
+        "C": "Between the two.",
+        "D": "The same as the sales maximiser's."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Satisficing</strong> sits between the two extremes because it is a compromise between two sets of interests. Profit maximisation is what shareholders want and gives the smallest output at the highest price. Sales maximisation gives the largest output at the lowest price, and only normal profit. A firm delivering profit its owners will accept while leaving its managers room for objectives of their own ends up somewhere in between on output and on price alike.",
+        "distractors": {
+          "A": "Producing beyond the sales-maximising output would mean AC above AR, so the firm would be making a loss.",
+          "B": "Producing below the profit-maximising output gives less than the maximum profit <em>and</em> a smaller business, which serves neither group's interest.",
+          "D": "Matching the sales maximiser would leave only normal profit, which shareholders are unlikely to regard as satisfactory."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A deep recession cuts a firm's sales sharply and it has large debts falling due. It cuts its prices below the level that would maximise profit, purely to keep cash coming in. Its objective is best described as",
+      "options": {
+        "A": "Corporate social responsibility.",
+        "B": "Profit maximisation.",
+        "C": "Revenue maximisation.",
+        "D": "Survival."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Edexcel lists <strong>survival</strong> among the objectives a firm may pursue alongside the four main ones. In a downturn, or in a fiercely competitive market, a firm may have no realistic prospect of maximising anything: what matters is generating enough cash to meet its obligations and stay in business. That can justify pricing below the profit-maximising level, which would make no sense on any other objective.",
+        "distractors": {
+          "A": "Corporate social responsibility means taking account of the firm's effect on society and the environment. Nothing in the stem concerns that.",
+          "B": "The stem says explicitly that the firm has priced below the profit-maximising level.",
+          "C": "A revenue maximiser produces where MR = 0 as a deliberate strategy for share or scale. This firm is reacting to a threat to its existence, and would not choose these prices in normal conditions."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm raises pay above the going rate, improves its sick pay and guarantees hours, accepting lower profit in the short run. Besides the benefit to its staff, the commercial argument for this is that it",
+      "options": {
+        "A": "Guarantees the firm a larger share of its market.",
+        "B": "Lets the firm charge a higher price for its output.",
+        "C": "Raises productivity and reduces staff turnover.",
+        "D": "Removes the principal-agent problem entirely."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Edexcel lists <strong>employee welfare</strong> among the objectives a firm may hold, and gives the commercial case for it: better conditions, benefits and security raise productivity and loyalty. Both feed back into profit — output per worker rises, and the cost of recruiting and training replacements falls. A firm taking this route is accepting lower profit now in the expectation of a more productive and more stable workforce later.",
+        "distractors": {
+          "A": "Nothing about pay and conditions guarantees market share. Customers do not usually observe them.",
+          "B": "Higher costs do not by themselves let a firm charge more. What it can charge depends on demand.",
+          "D": "Better treatment may soften the conflict a little, but the principal-agent problem arises because owners cannot observe what managers do. Paying staff more does not change that."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 sets out what four firms say they are aiming at.<br />From Table 1, the firm pursuing an objective other than profit maximisation, revenue maximisation, sales maximisation or satisficing is",
+      "table": {
+        "caption": "Table 1: What four firms say they are aiming at",
+        "head": [
+          "",
+          "Stated aim"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "To produce where marginal cost equals marginal revenue"
+          ],
+          [
+            "Firm 2",
+            "To sell as many units as possible while breaking even"
+          ],
+          [
+            "Firm 3",
+            "To keep profit at a level the board is content with"
+          ],
+          [
+            "Firm 4",
+            "To reduce the environmental damage its production causes"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Firms 1 to 3 are the standard cases. Firm 4 is pursuing <strong>corporate social responsibility</strong>, which Edexcel lists among the other objectives a firm may hold — it is not a variation on maximising some financial quantity but a different kind of aim, weighed against profit rather than derived from it.",
+        "distractors": {
+          "A": "Producing where MC = MR is the profit-maximising rule, the objective traditional theory assumes.",
+          "B": "Selling as much as possible while breaking even is sales maximisation, which occurs where AC = AR.",
+          "C": "Aiming at a profit the board is content with, rather than the maximum, is satisficing."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A company's directors are paid a bonus based on annual sales revenue rather than on profit. The shareholders own the company and want profit maximised. The most likely result is an output that is",
+      "options": {
+        "A": "At the profit-maximising level, since shareholders own the firm.",
+        "B": "Below the profit-maximising level, to protect the bonus.",
+        "C": "Larger than the profit-maximising level.",
+        "D": "The largest the firm can produce without making a loss."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is the <strong>principal-agent problem</strong> in a specific form. The directors' own reward rises with revenue, and revenue is maximised where MR = 0 — which lies to the right of MC = MR. So the output they choose is larger than the one the owners want, the price is lower, and the profit is below its maximum. Edexcel gives manager incentives as one of the two standard reasons a firm pursues revenue maximisation.",
+        "distractors": {
+          "A": "Owning a firm is not the same as controlling it. The whole point of the divorce of ownership from control is that owners cannot make managers act against their own incentives.",
+          "B": "A smaller output would mean less revenue and so a smaller bonus. Nothing pushes the directors that way.",
+          "D": "The largest output without a loss is the <em>sales</em>-maximising output at AC = AR, which leaves only normal profit. Revenue maximisation stops short of it, at MR = 0."
+        }
+      }
+    },
+    {
+      "id": "edexcel-3-2-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Traditional theory assumes that firms maximise profit. The reason usually given for that assumption is that profit maximisation",
+      "options": {
+        "A": "Delivers the largest return to shareholders.",
+        "B": "Gives consumers the lowest possible price.",
+        "C": "Guarantees the firm's long-term survival.",
+        "D": "Requires no information about costs."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The owners of a firm are its shareholders, and what reaches them is profit — paid out as dividends or reflected in the share price. Maximising profit therefore maximises what the owners receive, which is why traditional theory takes it as the objective. Every other objective on the Edexcel list is a departure from it, and each needs an explanation of why the owners' interest is not being served: usually the principal-agent problem, or a deliberate trade of profit now for position later.",
+        "distractors": {
+          "B": "The lowest price comes from sales maximisation, at the largest output. Profit maximisation gives the highest price of the three.",
+          "C": "A profit maximiser can still fail, and in a downturn survival may require pricing below the profit-maximising level.",
+          "D": "Profit maximisation needs marginal cost as well as marginal revenue, which makes it the most information-hungry of the rules rather than the least."
+        }
+      }
+    }
+  ]
+}
