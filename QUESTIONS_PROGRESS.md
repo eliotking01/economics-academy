@@ -17,12 +17,52 @@ approval — see `CLAUDE.md`.
 
 ## Read this first if you are resuming
 
+**State at handover (2026-08-01).** Branch `feature/topic-questions`, **37
+commits ahead of `main`**, working tree clean, **nothing pushed**. 154 of 166
+topics and 1,181 questions are done. Twelve topics remain, all in Edexcel Theme 4
+units 4.2 to 4.5, and they are planned as three batches — see **Remaining work**
+below.
+
+Read these four things, in this order, before writing anything:
+
 1. `QUESTIONS_GUIDE.md` — the authoring standard. Non-negotiable.
-2. This file's **Recurring problems** section below. Five batches produced the
-   same handful of failures over and over; reading it first will save a lot of
-   rework.
-3. `scripts/build_questions.py` — the generator and validator. It refuses to
+2. This file's **Recurring problems** section. Nine numbered failure modes, every
+   one of which recurred across multiple batches. §8 (cross-board duplication)
+   and §9 (concept-grep) are the two that decide how a batch turns out.
+3. This file's **Remaining work** section — the batch plan, the twin map, and
+   what is already known to be occupied.
+4. `scripts/build_questions.py` — the generator and validator. It refuses to
    write a page from a bad source, so treat `--check` as the first gate.
+
+**Three decisions are open and belong to the site owner.** They are listed under
+**Open items**: the nav sub-menu, monopsonistic exploitation, and the written-
+response extension. None of them blocks the remaining batches. The site owner has
+asked for the monopsonistic exploitation question to be raised **at the end of
+the current run of work**, not before.
+
+### The shape of a batch, as it has settled
+
+Every batch since 21 has run the same way, and the order matters:
+
+1. `BASE=$(git rev-parse HEAD)` before touching anything.
+2. **Print the AQA twin set in full**, immediately before writing each Edexcel
+   set — not all of them at the start of a multi-topic batch.
+3. **Concept-grep the bank** for the four or five ideas the set will turn on
+   (§9). This decides how many questions the set can honestly carry.
+4. Read the **published** notes page, not the raw markdown, and write only to
+   what its body actually teaches.
+5. Author into a throwaway Python helper that asserts the mechanical rules at
+   write time (see **Authoring efficiently**).
+6. `--check`, then the originality script, then fix, then build.
+7. **Cold re-solve every question from the stem alone**, then diff against the
+   recorded keys. This has caught a real defect in three of the last seven
+   batches.
+8. Full verification suite, progress record, commit.
+
+**Sets come in at four to ten questions, and the number is a finding rather than
+a target.** Where AQA has already taken the ground, five honest questions beat
+eight with three ports in them. Five of Theme 3's twenty sets are five or six
+questions for exactly this reason.
 
 ---
 
@@ -42,12 +82,34 @@ python3 scripts/verify_html.py practice-questions revision-notes
 python3 scripts/verify_links.py practice-questions revision-notes
 python3 scripts/verify_text_integrity.py $BASE
 python3 scripts/verify_markup_integrity.py $BASE --strict
-git diff $BASE -- revision-notes/ templates/ js/ css/ sitemap.xml | grep '^-[^-]'
+git diff $BASE -- revision-notes/ templates/ js/ css/ | grep '^-[^-]'
 #   ^ must print nothing. Any output means a pre-existing line was changed.
+#   Note: run this WITHOUT sitemap.xml. On a different calendar day the sitemap
+#   block is rewritten with a new lastmod and every URL line shows as removed
+#   and re-added — benign, but it buries the check that matters. See batch 11.
 ```
 
 Then run the **cold re-solve** (see below), fix what it finds, rebuild, and
 commit.
+
+### The two originality scripts, which are not committed
+
+Both live in the session scratchpad and have to be rebuilt each time. They are
+short, and the batch records describe what they do.
+
+- **`orig.py`** — shingles the new sets against (a) the AQA past-paper corpus,
+  (b) the Edexcel past-paper corpus, and (c) every other question in
+  `questions-data/`, and separately compares numeric option sets against the
+  option blocks extracted from the papers. Stem-only for the intra-bank pass,
+  with the elasticity template and stock scaffolding filtered out first.
+- **`pagetext.py`** — extracts the visible text of a notes page, keeping
+  headings, list items, table cells and figure captions. Needed because the
+  published pages differ from `raw-notes/edexcel/`, sometimes substantially.
+
+**The past-paper corpora are worth locating rather than re-extracting.** They
+were built once with a four-line Swift/PDFKit script (§7) and take a couple of
+minutes to regenerate; copies have been kept in the session scratchpads as
+`aqa-all.txt` (45 papers, 945 KB) and `edexcel-all.txt` (40 papers, 5.8 MB).
 
 ### Authoring efficiently
 
@@ -428,6 +490,42 @@ The three rules that have held throughout:
 3. **Vary the table stem and caption wording per set.** Seven phrasings are now in
    circulation and the check surfaces whichever gets reused.
 
+### What to expect in each of the three remaining batches
+
+**Batch 28 — units 4.2 and 4.3, five topics.** The poverty and inequality
+material is heavily occupied: **AQA 1.7.1, 1.7.2 and 1.7.3 carry 22 questions**
+covering absolute and relative poverty definitions, the 60%-of-median line, the
+Gini coefficient, the Lorenz curve, the poverty trap, means-testing, and the
+equity-efficiency trade-off. Expect 4.2.1 and 4.2.2 to come in small. The
+development topics are more open — AQA 2.6.5 has only eight questions, though it
+does include the Harrod-Domar model, so check before using it. **The Kuznets
+curve, the HDI's three components and Edexcel's named strategies (aid, debt
+relief, microfinance, tourism, primary product dependence) are all worth grepping
+first; several are likely to be free.**
+
+**Batch 29 — unit 4.4, three topics.** Expect this to be the hardest of the
+three. **AQA 2.4.1 to 2.4.4 carry 30 questions** on financial markets, commercial
+and investment banks, central banks and regulation — including bond yields,
+balance sheets, credit creation, the lender of last resort, QE, the liquidity
+trap and systemic risk. 4.4.3 in particular may have very little left. The likely
+free ground is Edexcel's own framing of **market failure in the financial
+sector** — asymmetric information, externalities, moral hazard, speculation and
+market bubbles, market rigging — which AQA treats only glancingly.
+
+**Batch 30 — unit 4.5, four topics.** Twins are AQA 2.5.1 (fiscal policy, 9) and
+2.5.2 (supply-side, 8), **both already drawn on twice** — for Edexcel 2.6 and
+again for Theme 3. Also check my own Edexcel 2.6.2 and 2.6.3, which cover the
+seven-objective impact grid, RPI-X-adjacent material and the direct/indirect tax
+distinction. Edexcel 4.5.2 on taxation is the likely opening: **progressive,
+proportional and regressive systems, the Laffer curve and the effects of tax
+changes on incentives, output and the distribution of income** are worth grepping
+individually, since AQA 2.5.1 has the Laffer curve but Theme 4 goes further.
+
+**When unit 4.5 is finished, the project is complete** — 166 topics. Write the
+Theme 4 final profile and a site-wide closing profile in the same shape as the
+Theme 1, 2 and 3 sections, and raise the three open decisions with the site
+owner.
+
 **Theme 3 is the closest twin of the whole project — closer than Theme 1's
 market failure units were.** It is AQA micro units 1.4, 1.5 and 1.6 almost
 topic for topic — **201 questions** between them, plus 1.8.7 and 1.8.8 on
@@ -481,8 +579,8 @@ if in doubt — the guide's rule is that concision beats coverage.
 
 ## Open items
 
-- **Monopsonistic exploitation — a decision the site owner has deferred, not
-  declined.** `REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
+- **Monopsonistic exploitation — deferred by the site owner to the end of the
+  run, not declined. Raise it then.** `REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
   alert and its four metadata copies no longer promise the monopsony labour
   market diagram, minimum wages or trade unions, since those are taught on 3.5.3.
   **One part of that finding is still open.** *Monopsonistic exploitation* — the
@@ -523,6 +621,36 @@ if in doubt — the guide's rule is that concision beats coverage.
   `CLAUDE.md`: the `navPanel` `aria-hidden` bug (the only remaining
   accessibility failure on any page), breadcrumb contrast in `css/main.css`, and
   web-font layout shift.
+
+### Notes-page findings raised while writing the questions
+
+All are in `REVIEW-NOTES.md` with the evidence. **None blocks any batch.** They
+are listed here so a new session knows they exist without reading that file end
+to end.
+
+| Entry | Page | What is wrong | Weight |
+| --- | --- | --- | --- |
+| N-Q8 | 9 pages, Themes 1–2 | Alerts promise concepts the bodies never deliver | Questions written anyway, per the batch 16 instruction |
+| N-Q12 | `3-1-1-sizes-types-of-firms` | Promises private and public limited companies; body has neither | Not tested |
+| N-Q13 | `3-3-4` | Promises explicit and implicit costs; never names them, though it teaches the idea | Tested via a calculation instead |
+| N-Q14 | `3-3-2` | LRAC envelope stated as touching the SRAC minima — true only at MES | Question reworded to avoid it |
+| **N-Q15** | `3-4-6-monopsony` | **Fixed 2026-08-01.** Alert and four metadata copies rewritten | One part still open — see below |
+| N-Q16 | `4-1-3-pattern-of-trade` | Promises deindustrialisation; describes it, never names it | Not tested; one-word fix |
+| **N-Q17** | `4-1-9` | Promises export market share as a measure; body omits it entirely | **`4.1.9` Q8 depends on it** |
+| N-Q10 | 13 pages, all boards | Duplicate or non-sequential figure numbers | Cosmetic; already listed in full |
+
+**N-Q17 is the one to act on first if any of these are taken up.** A question is
+already live that the page does not support, written under the batch 16 policy of
+covering advertised concepts and bringing the notes up afterwards. The paragraph
+needed is short and the wording exists in the Q8 model answer.
+
+**Audit coverage.** The N-Q8 spec-alert check has now been run over Themes 1, 2
+and 3 and over Theme 4 unit 4.1. The N-Q10 figure-number check was site-wide
+originally and has been re-run over Themes 3 and 4.1, finding nothing new.
+**Units 4.2 to 4.5 are unchecked for N-Q8** — run it as batches 28 to 30 reach
+them, and re-run N-Q10 at the same time. Both scripts are in `REVIEW-NOTES.md`,
+along with the warning that the automated pass produces false positives at
+roughly one in three and every hit must be read before it is recorded.
 
 ---
 

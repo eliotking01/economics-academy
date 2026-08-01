@@ -902,12 +902,22 @@ Outstanding here, all needing an explicit instruction before anything is touched
 | N-Q2 to N-Q7 | AQA macro pages, earlier in this file | economics content |
 | `navPanel` `aria-hidden` | site-wide | accessibility, in the earlier sections |
 
-Themes 3 and 4 have **not** been fully checked for N-Q8 or N-Q10. Both checks are
-scripted above and take a couple of minutes; run them when those themes are
-reached, and read every hit before recording it.
+**Audit status for N-Q8 and N-Q10, as at 2026-08-01.** Both checks are scripted
+above and take a couple of minutes each. Run them on any page before writing its
+question set, and **read every hit** before recording it — the automated pass
+produces false positives at roughly one in three, because it matches the alert's
+wording rather than the concept.
 
-**Units 3.1 and 3.2 have now been checked for N-Q8, and one page fails.** The
-other three are clean.
+| Theme | N-Q8 (over-promising alerts) | N-Q10 (figure numbers) |
+| --- | --- | --- |
+| Theme 1 | checked — 2 failures, in the table above | checked — 3 failures |
+| Theme 2 | checked — 7 failures, in the table above | checked — 2 failures |
+| Theme 3 | **checked, all 20 pages** — N-Q12, N-Q13, N-Q14, N-Q15 | **re-run — clean** |
+| Theme 4, unit 4.1 | **checked, 9 pages** — N-Q16, N-Q17 | **re-run — 1 failure, already listed** |
+| Theme 4, units 4.2–4.5 | **not checked** — 12 pages | not re-run since the original scan |
+
+Run both over units 4.2 to 4.5 as batches 28 to 30 reach them. That is all that
+remains outstanding.
 
 ---
 
@@ -1064,4 +1074,80 @@ plain text is a one-line change if the consistency matters more.
 **Monopsonistic exploitation is still missing from both pages**, and is the one
 genuinely absent concept rather than a misplaced cross-reference. It has been
 removed from the alert's claims, so the page no longer promises it; adding the
-term to 3.5.3 would close the gap properly. **Still needs an instruction.**
+term to 3.5.3 would close the gap properly. **The site owner has deferred this
+decision to the end of the current run of work.** Nothing depends on it — 3.5.3
+Q2 already tests the mechanism, so no question would need rewriting.
+
+---
+
+## N-Q16 — `4-1-3-pattern-of-trade` promises deindustrialisation, never names it
+
+Found by the spec-alert audit over Theme 4 unit 4.1. The alert closes:
+
+> These notes also cover the rise of emerging economies and **deindustrialisation
+> in developed countries**.
+
+The word does not appear in the body. Emerging economies are covered properly.
+
+**This is the soft `2-2-5` case, not the hard `3-4-6` one.** The body *does*
+describe deindustrialisation, in the comparative advantage section: "the UK no
+longer has a comparative advantage in manufacturing, leading to a decline in
+exports of manufactured goods and an increase in imports of manufactured goods."
+That is the phenomenon. It simply never gets its label, and a student searching
+for the term will not find it.
+
+**The fix is one word in an existing sentence.** No question depends on it —
+`4.1.3` Q2 tests the shift from manufacturing to services without using the term.
+
+---
+
+## N-Q17 — `4-1-9` promises export market share and does not cover it
+
+The more substantial of the two Theme 4 findings. The alert on
+`4-1-9-international-competitiveness` closes:
+
+> These notes also cover **unit labour costs** and **export market share** as
+> measures of competitiveness.
+
+Unit labour costs are covered thoroughly, with a formula and a worked example.
+**Export market share does not appear anywhere in the body.** The page gives two
+measures — relative unit labour costs and relative export prices — and stops.
+
+**A question in the batch depends on this, and that is deliberate.** `4.1.9` Q8
+asks what a falling share of world exports indicates. It was written from the
+spec alert rather than the body, under the policy the site owner set in batch 16:
+*where a page advertises a concept it does not deliver, write the question anyway
+and bring the notes up to match afterwards.* The model answer is written longer
+than usual and to stand alone, as the retrofitted questions were, because a
+student who gets it wrong and returns to the notes will currently find nothing
+there.
+
+**Closing this needs a short paragraph on the page** — export market share as a
+third measure, with the point that it captures cost and non-cost factors together
+but says nothing about which is at work. That sentence is already in the Q8 model
+answer and could be lifted straight across.
+
+---
+
+## N-Q10 addendum — re-run over Themes 3 and 4, no new failures
+
+The figure-number check was re-run on 2026-08-01 over Theme 3 in full and Theme 4
+as far as unit 4.1, to confirm the N-Q10 table above is still complete for those
+pages. **It is. Nothing new was found.**
+
+- **Theme 3: clean.** All twenty topic pages number their figures sequentially
+  from 1, with no duplicates.
+- **Theme 4, unit 4.1: one failure, and it is already listed** —
+  `4-1-8-exchange-rates` with two figures both labelled "Figure 1". No second
+  page in the unit fails.
+
+This corrects the note previously carried at the end of this file, which said
+Themes 3 and 4 had not been checked for N-Q10. The original N-Q10 scan was
+site-wide and did cover them; what had not been re-run was a confirmation after
+the notes were edited. **Units 4.2 to 4.5 still warrant a re-run** as batches 28
+to 30 reach them:
+
+```python
+nums = [int(m) for m in re.findall(r'Figure\s+(\d+):', page_text)]
+bad  = nums and nums != list(range(1, len(nums) + 1))
+```
