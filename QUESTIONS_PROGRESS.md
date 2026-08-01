@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 117 topics, 909 questions. AQA is complete, Edexcel Theme 1 is complete,
-and Theme 2 units 2.1 to 2.4 are done. 49 topics remain.**
+**Live: 121 topics, 940 questions. AQA is complete, Edexcel Theme 1 is complete,
+and Theme 2 units 2.1 to 2.5 are done. 45 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -360,26 +360,24 @@ Useful things established while building, worth not rediscovering.
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 8 (units 2.5 and 2.6) | ~60 |
+| Theme 2 | 4 (unit 2.6 only) | ~30 |
 | Theme 3 | 20 | 157 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 2 units 2.5 and 2.6** — 2.5.1 causes of growth, 2.5.2 output
-gaps, 2.5.3 the trade cycle, 2.5.4 the impact of economic growth, 2.6.1 possible
+**Next batch: Theme 2 unit 2.6, which finishes Theme 2** — 2.6.1 possible
 macroeconomic objectives, 2.6.2 demand-side policies, 2.6.3 supply-side policies,
-2.6.4 conflicts between objectives and policies. Eight topics, which finishes
-Theme 2.
+2.6.4 conflicts between objectives and policies. Four topics, roughly 30
+questions.
 
-**Twins to audit:** AQA 2.3.1 (growth and the economic cycle, including output
-gaps), AQA 2.1.1 (objectives of government policy), AQA 2.3.4 (policy conflicts
-and the Phillips curve), AQA 2.5.1 (fiscal policy) and AQA 2.5.2 (supply-side
-policies). That is roughly 40 questions over the same ground.
+**Twins to audit:** AQA 2.1.1 (objectives of government policy, 7 questions),
+AQA 2.3.4 (policy conflicts and the Phillips curve, 8), AQA 2.4.3 (central banks
+and monetary policy, 9), AQA 2.5.1 (fiscal policy, 9) and AQA 2.5.2 (supply-side
+policies, 8). **41 questions over the same ground — the largest twin overlap of
+any Edexcel unit so far.** Print all five sets before writing.
 
-**Two pages on the corrected N-Q9 list fall in this batch.** `2-5-3-trade-cycle`
-covers boom and recession but not slump or recovery, and `2-5-4` never mentions
-inequality or sustainable development. Per the site owner's instruction, write
-those questions anyway. Note that `2-5-1` and `2-4-1` were **mis-flagged** and
-are fine — see the N-Q9 correction in `REVIEW-NOTES.md`.
+Note that AQA 2.3.4 owns the **Phillips curve** entirely, including a sketch
+item. Check whether the Edexcel 2.6.4 page teaches it before deciding what to do
+with that.
 
 **The twins for the rest of Theme 2 are AQA macro, and the overlap is severe.**
 Unit 2.1 alone collided with AQA 2.1.2, 2.1.3, 2.1.4, 2.3.2, 2.3.3 and 2.6.3.
@@ -988,6 +986,75 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 18 — Edexcel Theme 2, unit 2.5 (2026-08-01)
+
+4 topics, 31 questions. **Economic Growth** — its causes, output gaps, the trade
+cycle and the impact of growth.
+
+All 31 re-derived from the stem alone with **0 mismatches**.
+
+**Originality: zero shared 8-word runs against either past-paper corpus.**
+Against our own bank, three needed fixing and one of them was a port:
+
+- **2.5.2 Q2 was AQA 2.3.1 Q6 with new numbers.** Both read "…Expressed as a
+  percentage of potential GDP, the output gap is", differing only in the figures
+  and the sign of the gap. Rebuilt to run the calculation the other way: given a
+  5% positive gap and potential GDP, find actual GDP. Same concept, and the
+  distractors now test the sign and the base rather than the divisor.
+- 2.5.3 Q3 shared its stem shape with AQA 2.3.1 Q5 *and* AQA 2.3.4 Q7, both of
+  which open "Table 1 shows four indicators for an economy…". Reworded, and the
+  question asked was already different — AQA asks for the phase of the cycle,
+  ours for the output gap, which is the link the Edexcel page draws.
+- **2.5.1 Q4 collided with three of my own sets.** "Table 1 lists four
+  developments in an economy" had by then been used in 2.1.4, 2.2.3 and 2.3.1.
+  That is not a duplication problem, but four identical captions across the bank
+  is careless, and it buries real signal in the check output. Varied to "sets out
+  four changes taking place in an economy".
+
+**Worth carrying forward: my own table captions are becoming a template.** The
+cross-bank check now surfaces them more often than it surfaces real overlaps.
+Vary the caption wording per set, or the noise will keep growing as the bank does.
+
+**Angles Edexcel opens that AQA does not:**
+
+- **Export-led growth**, named with the China example and its risks. AQA has
+  nothing on it, so two questions come free.
+- **The trend rate of growth** as a defined term — a ten-year average — which
+  gives the output gap a benchmark AQA never states.
+- **Recessionary and inflationary gap** as alternative names for the negative and
+  positive gaps.
+- **A positive output gap cannot be drawn on a Keynesian diagram**, because the
+  curve turns vertical at Yfe. A genuinely good question and distinctly Edexcel.
+- **The difficulty of measuring potential output**, which has its own section.
+  2.5.2 Q8 turns it into a government-failure item: a fiscal expansion aimed at a
+  negative gap that turns out not to exist.
+- **The whole of 2.5.4.** AQA has no topic on the impact of growth, so the costs
+  and benefits, the growth-versus-well-being debate and the environmental
+  trade-off are all free ground.
+- **Spending on a supply-side measure is also a demand injection** (2.5.1 Q5):
+  training raises AD now and LRAS later.
+
+**Two more N-Q9 corrections, both from reading the pages rather than grepping.**
+`2-5-4` does cover inequality, as "Worsened Income Equality" — my audit searched
+for the wrong word. Only sustainable development was genuinely missing.
+`2-5-3` is worse than recorded: it names none of the four phases, not just slump
+and recovery. Questions were written for both gaps per the site owner's
+instruction. See `REVIEW-NOTES.md`; the corrected list is 8 pages.
+
+| | |
+| --- | --- |
+| Answer letters | A 8, B 10, C 8, D 5 (even would be 7.75) |
+| Skills | applied-reasoning 21, definition-in-context 6, data-table 3, calculation 1 |
+| Difficulty | foundation 4, standard 23, stretch 4 |
+| Sketch to solve | 0 |
+
+**`calculation` at 3% is the lowest of any batch**, and it is a property of the
+material rather than an oversight. The only arithmetic unit 2.5 supports is the
+output gap, and using it twice would have meant near-duplicate questions. Growth,
+the trade cycle and the impact of growth are argued rather than computed.
+
+---
 
 ### Batch 17 — Edexcel Theme 2, unit 2.4 (2026-08-01)
 

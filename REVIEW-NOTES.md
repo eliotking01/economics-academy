@@ -929,3 +929,33 @@ cross-reference from 2.1.1 rather than writing anything new.
 synonyms, not on the spec alert's own wording, and read the section headings
 before concluding anything is missing. An automated first pass is still worth
 running — it found the seven real cases — but every hit needs a look at the page.
+
+## N-Q9 second correction — 2.5.4's inequality flag was also wrong
+
+**2026-08-01, found while writing the unit 2.5 questions.** Two more amendments,
+both from reading the pages properly rather than grepping them:
+
+**`2-5-4-the-impact-of-economic-growth` — inequality is covered. Only sustainable
+development is missing.** The costs table has a row headed **"Worsened Income
+Equality"**, explaining that the benefits of growth may not be evenly
+distributed, and another headed "Environmental Damage". My audit searched for
+*inequality* and the page says *equality*. Sustainable development genuinely
+does not appear anywhere in the body, so the entry stands — but for one concept,
+not three.
+
+**`2-5-3-trade-cycle` — the gap is wider than recorded.** The alert promises
+"the boom, recession, slump and recovery phases". The body covers boom and
+recession in a comparison table, but **slump, recovery, peak and trough are all
+absent** — the *Stages of the Trade Cycle* heading has nothing under it but a
+figure caption. So the page never names the phases of the cycle at all, rather
+than missing two of four.
+
+**Corrected list, 8 pages:** 1.3.4, 1.4.2, 2.1.1 (cross-reference only), 2.2.2,
+2.2.3, 2.2.5, 2.3.2, 2.5.3 (the four phases), 2.5.4 (sustainable development
+only). Every one of them now has questions covering the missing concept.
+
+**Both corrections came from the same mistake**, made twice: searching for the
+spec alert's wording instead of reading the page. The automated pass is still
+worth running on Themes 3 and 4 — it found every real case — but it produces
+false positives at roughly one in three, so **read the section headings of every
+hit before recording it**.
