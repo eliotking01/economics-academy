@@ -710,15 +710,22 @@ touched.** Any future run of this check must allow for the lettered form.
 AD/AS diagram as Figure 2 and the Laffer curve as Figure 1. Now corrected to 1
 and 2. All 166 topic pages now number their figures sequentially from 1.
 
-**3. A caption on `1-1-4` describes the wrong diagram, and this was not fixed.**
+**3. A caption on `1-1-4` described the wrong diagram — FIXED 2026-08-01.**
 The page's second figure is `ppf-growth-decline.png`, showing the frontier
-shifting outwards and inwards. Its caption — now renumbered to Figure 2 — reads
-"Standard PPF curve showing opportunity cost through movement from C to D",
-which is a verbatim copy of Figure 1's caption and describes the *other*
-diagram. **Only the number was changed**, because rewriting the caption text is a
-content change and the instruction covered figure numbers. It needs one sentence:
-something on the order of "an outward shift showing economic growth and an inward
-shift showing decline". **This needs an explicit instruction.**
+shifting outwards and inwards. Its caption was a verbatim copy of Figure 1's and
+described the *other* diagram: "Standard PPF curve showing opportunity cost
+through movement from C to D".
+
+Renumbering it to Figure 2 was covered by the N-Q10 instruction; rewriting the
+text was not, so it was raised separately and then authorised. It now reads:
+
+> Figure 2: An outward shift of the PPF showing economic growth, and an inward
+> shift showing economic decline
+
+That matches the image's own alt text and the section it sits in, *Shifts in the
+PPF: Economic Growth & Decline*, and uses the page's own vocabulary for both
+directions. Punctuation follows Figure 1 on the same page, which carries no
+closing full stop.
 
 ### The five extra typo fixes, on the Edexcel twin pages
 
