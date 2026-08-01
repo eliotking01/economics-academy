@@ -18,6 +18,11 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
+| Practice questions (separate project) | **AQA complete**, Edexcel outstanding — state in `QUESTIONS_PROGRESS.md` |
+
+Content problems found while writing the practice questions are logged at the
+end of this file, under the two "AQA macro questions" headings. They are the
+newest entries here.
 
 ---
 
@@ -593,3 +598,131 @@ higher figure — points both notes pages state correctly and agree on — and s
 off international comparability altogether. A student who has read 2.1.2 will
 not be penalised by either set. If the sentence in 2.1.2 is corrected, neither
 set needs changing.
+
+---
+
+# Found while writing the AQA macro questions — units 2.1 to 2.6 (2026-08-01)
+
+Everything below was found by reading all 25 AQA macro notes pages closely while
+writing the question sets for them (batches 6 to 11, `QUESTIONS_PROGRESS.md`).
+
+**Nothing here has been changed.** Content and wording are the author's call, per
+`CLAUDE.md`. None of it blocks the question sets — each set was written around
+the problem, and where a fix would change what a question tests that is noted.
+
+Ordered most to least significant.
+
+## N-Q2 — an Edexcel spec code cited on an AQA page
+
+`aqa-a2-macro/2-5-1-fiscal-policy.html`, in the evaluation list for lowering
+taxes:
+
+> **Laffer Curve:** This is a very strong evaluation for taxation changes. This
+> is covered in detail in 4.5.2 Taxation.
+
+`revision-notes/edexcel-theme-4/4-5-2-taxation.html` does exist and does cover
+the Laffer curve, so the reference is not dangling — but it is an **Edexcel**
+page cited from an **AQA** page, using Edexcel's real theme numbering.
+
+Two problems follow. A student working through AQA macro has never seen a
+"4.5.2" and has no way to place it, which is exactly the two-numbering-systems
+confusion `CLAUDE.md` and `QUESTIONS_GUIDE.md` both take pains to avoid. And it
+is plain text rather than a link, so even a student who guesses what it means
+cannot follow it.
+
+**This is the only cross-board spec reference on any AQA page** — a grep for
+`4.x.y` across `aqa-a2-macro/` and `aqa-a2-micro/` returns this file alone. So
+it is a one-line fix. The simplest correction is to delete the cross-reference,
+since the same page already covers the Laffer curve in full immediately below.
+
+## N-Q3 — the IMF's role in fixed exchange rates
+
+`2-6-4-exchange-rate-systems.html`:
+
+> **Fixed exchange rate:** an exchange rate system where the central bank
+> negotiates with the IMF to fix the currency at a certain value, often by
+> pegging it to another currency.
+
+Countries do not negotiate their pegs with the IMF. A government or central bank
+chooses the rate and defends it with reserves and interest rates; the IMF
+monitors arrangements and lends to members in difficulty, but it does not set or
+approve the value. The description fits the Bretton Woods system, which ended in
+1971, rather than fixed rates as they work now.
+
+The rest of the section — revaluation and devaluation, the advantages and
+disadvantages, the cost of defending a peg — is sound. Unit 2.6.4's questions
+avoid the IMF entirely and turn on the loss of monetary policy independence,
+which the page states correctly.
+
+## N-Q4 — "checking accounts" is a US term
+
+`2-4-1-the-structure-of-financial-markets-and-financial-assets.html`, defining
+narrow money:
+
+> Narrow money (M1) includes the most liquid forms of money, such as cash and
+> demand deposits (checking accounts).
+
+The UK term is **current accounts**. `QUESTIONS_GUIDE.md` enforces UK English in
+the question sets through a spelling blocklist, and the notes follow the same
+house rule elsewhere. The parenthesis is the only US-ism I found across the 25
+macro pages.
+
+## N-Q5 — NAFTA given as a current example of a free trade area
+
+`2-6-2-trade.html`, listing types of trading bloc:
+
+> Free trade area: e.g. NAFTA (North American Free Trade Agreement)
+
+NAFTA was replaced by the **USMCA** (the United States–Mexico–Canada Agreement)
+on 1 July 2020. NAFTA remains a perfectly good historical illustration, but
+presented as a current example alongside MERCOSUR and the EU it reads as though
+it still exists.
+
+Unit 2.6.2's question on trading blocs (Q6) describes the *features* of a
+customs union rather than naming an example, so it is unaffected either way.
+
+## N-Q6 — typos and slips, seven instances across four pages
+
+None of these affect the economics; they are listed together so they can be
+fixed in one pass.
+
+| Page | Text | Should read |
+| --- | --- | --- |
+| `2-1-1-the-objectives-of-government-economic-policy.html` | "When the Government pursues one objectives" | "one objective" |
+| `2-4-3-central-banks-and-monetary-policy.html` | "To increases the supply of loans" | "To increase" |
+| `2-4-3-central-banks-and-monetary-policy.html` | "to incentive firms and consumers" | "to incentivise" |
+| `2-5-1-fiscal-policy.html` | "A fal in indirect taxes" | "A fall" |
+| `2-5-1-fiscal-policy.html` | "offseting the rise in AD" | "offsetting" |
+| `2-5-1-fiscal-policy.html` | "signficant" — 2 occurrences | "significant" |
+| `2-5-2-supply-side-policies.html` | "signficant" — 2 occurrences | "significant" |
+
+## N-Q7 — dated HDI figures
+
+`2-6-5-economic-growth-and-development.html` quotes Norway at 0.961 and Niger at
+0.394. These were correct for the 2021–22 Human Development Report but are now
+several editions old. Worth refreshing whenever the page is next touched, and
+worth considering whether to name specific years alongside the figures so the
+staleness is visible rather than implied.
+
+---
+
+## Not a content problem: a verification gotcha worth knowing
+
+Recorded here because it looks like a regression and is not.
+
+Running a question batch on a **different calendar day** from the previous one
+makes the standard removed-line guard fire on `sitemap.xml`:
+
+```bash
+git diff $BASE -- revision-notes/ templates/ js/ css/ sitemap.xml | grep '^-[^-]'
+```
+
+`scripts/build_questions.py --sitemap` rewrites the whole practice-questions
+block with today's `lastmod`, so every existing URL line shows as removed and
+re-added. In batch 11 that was about 75 lines.
+
+Confirm it rather than assuming, by comparing URL sets and the entries with
+`lastmod` stripped out — zero URLs removed and zero entries lost means it is a
+date change only. And run the guard against `revision-notes/ templates/ js/ css/`
+**separately**, since that is the check that actually protects the notes. Fuller
+notes in `QUESTIONS_PROGRESS.md`, batch 11.
