@@ -18,11 +18,16 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
-| Practice questions (separate project) | **AQA complete**, Edexcel outstanding — state in `QUESTIONS_PROGRESS.md` |
+| Practice questions (separate project) | **AQA complete; Edexcel Theme 1 complete; Theme 2 at unit 2.5** — state in `QUESTIONS_PROGRESS.md` |
 
-Content problems found while writing the practice questions are logged at the
-end of this file, under the two "AQA macro questions" headings. They are the
-newest entries here.
+**If you are resuming, read the last section of this file first** — *State of
+play for a new session*. It indexes everything still outstanding and says what
+kind of change each one needs.
+
+Content problems found while writing the practice questions are logged at the end
+of this file, in two blocks: the AQA macro findings (N-Q2 to N-Q7) and the
+Edexcel findings (N-Q8, N-Q10, N-Q11). The Edexcel block **replaced six earlier
+entries** that had accumulated corrections; it is the current position.
 
 ---
 
@@ -728,79 +733,73 @@ date change only. And run the guard against `revision-notes/ templates/ js/ css/
 notes in `QUESTIONS_PROGRESS.md`, batch 11.
 
 ---
+# Found while writing the Edexcel practice questions — Themes 1 and 2 (2026-08-01)
 
-# Found while writing the Edexcel Theme 1 questions — units 1.3 and 1.4 (2026-08-01)
-
-## N-Q8 — two pages promise content their bodies never deliver
-
-Both pages advertise named concepts in their `metaDescription`, their OG and
-Twitter cards, their JSON-LD `description` **and** their `spec-alert` sentence,
-and then never mention them again. A student who arrives from a search result
-for the term finds nothing on the page about it.
-
-**`1-3-4-information-gaps.html`** — the spec alert reads "… market failure
-through **adverse selection** and **moral hazard**". The body covers information
-gaps, asymmetric information, the used-car example and the healthcare check-up
-example. Neither adverse selection nor moral hazard is defined, illustrated or
-named anywhere in it. `raw-notes/edexcel/1.3.4.md` **does** define both, with the
-'lemons problem' and the car-insurance example, so the content existed and was
-dropped somewhere in the conversion.
-
-**`1-4-2-government-failure.html`** — the spec alert reads "… information gaps,
-**distorted incentives** and **regulatory capture** as causes of government
-failure". The body gives four causes: distortion of price signals, unintended
-consequences, excessive administrative costs, and information gaps. Regulatory
-capture appears nowhere. `raw-notes/edexcel/1.4.2.md` does not define it either,
-though it does carry a fifth cause the page drops — political self-interest and
-short-termism.
-
-Both are on the Edexcel specification, so the gap is real rather than a
-deliberate scope decision. The fix is to restore the missing sections from the
-raw notes (1.3.4) and to write regulatory capture and short-termism into 1.4.2
-— **an economics content change, so it needs an explicit instruction.**
-
-**Consequence for the practice questions, already applied.** The Edexcel 1.3.4
-and 1.4.2 question sets were written to what the bodies actually teach, so
-neither tests adverse selection, moral hazard or regulatory capture. If the
-pages are ever completed, those sets are worth revisiting — the terms are good
-question material and the AQA sets do not use them either.
+**This section replaces six earlier entries** (N-Q8, N-Q9, the N-Q9 addendum, a
+status update and two corrections) that were written as the finding developed and
+then partly contradicted each other. Everything below is the current, checked
+position. Nothing outside this section was changed.
 
 ---
 
-## N-Q9 — the over-promising spec alert is systemic, not a one-off
+## N-Q8 — nine pages promise content their bodies never deliver
 
-N-Q8 recorded two Theme 1 pages whose `spec-alert` and metadata name concepts
-the body never covers. Running the same check across the whole of Theme 2 shows
-it is a **pattern in the notes conversion**, not two slips.
+Each of these pages names a concept in its `spec-alert` sentence, its
+`metaDescription`, its OG and Twitter cards **and** its JSON-LD `description`,
+and then never mentions it again below the alert. A student arriving from a
+search result for that term finds nothing on the page about it.
 
-**Theme 2: 8 of 24 pages.** In each case the term appears in the meta
-description, the OG and Twitter cards, the JSON-LD `description` and the
-`spec-alert` sentence — and nowhere below it.
+| Page | Promised and not delivered |
+| --- | --- |
+| `1-3-4-information-gaps` | adverse selection; moral hazard |
+| `1-4-2-government-failure` | regulatory capture |
+| `2-1-1-economic-growth` | actual against potential growth; productive capacity |
+| `2-2-2-consumption` | the role of expectations |
+| `2-2-3-investment` | the accelerator effect |
+| `2-2-5-net-trade` | the Marshall-Lerner condition; the J-curve |
+| `2-3-2-short-run-aggregate-supply` | cost-push shocks |
+| `2-5-3-trade-cycle` | the boom, recession, slump and recovery phases |
+| `2-5-4-the-impact-of-economic-growth` | sustainable development |
 
-| Page | Promised in the spec alert | In the body |
-| --- | --- | --- |
-| `2-1-1-economic-growth` | actual vs potential growth; determinants of productive capacity | No |
-| `2-2-2-consumption` | the role of expectations | No |
-| `2-2-3-investment` | the accelerator effect | No |
-| `2-3-2-short-run-aggregate-supply` | cost-push shocks and their effect on output | No |
-| `2-4-1-national-income` | the three approaches to measuring GDP | No |
-| `2-5-1-causes-of-growth` | demand-side causes of growth | No |
-| `2-5-3-trade-cycle` | recovery phases and the conditions typical of each | No |
-| `2-5-4-the-impact-of-economic-growth` | rising inequality; sustainable development | No |
+**Two of the nine are softer cases.** `2-2-5` describes both mechanisms
+correctly — the elasticity condition and the delayed improvement — and simply
+never gives them their names, so the fix is to label two existing paragraphs.
+`2-1-1` is not missing content at all: actual against potential growth **is**
+taught on the site, on `2-5-1-causes-of-growth`, which opens with a section on
+exactly that. A cross-reference would settle it.
 
-Plus `1-3-4-information-gaps` and `1-4-2-government-failure` from N-Q8: **10
-pages in total so far.** Themes 3 and 4 have not been checked and probably carry
-more.
+`2-5-3` is the worst of them. The heading *The Stages of the Trade Cycle* has
+nothing beneath it but a figure caption, so the page names none of the four
+phases. `raw-notes/edexcel/` still holds several of the missing sections,
+including the accelerator in `2.2.3.md` and adverse selection and moral hazard in
+`1.3.4.md`, so some of this was written and lost in the conversion.
 
 **Why it matters beyond tidiness.** The promised terms are all on the Edexcel
-specification, and several are among the most searched-for topics on the site —
-*the accelerator*, *actual and potential growth*, *cost-push*, *sustainable
-development*. The pages are indexed for terms they do not teach, so a student
-arriving on one finds nothing about the thing they searched for, and the meta
-description that drew them in was inaccurate.
+specification and several are heavily searched — *the accelerator*, *cost-push*,
+*sustainable development*, *the J-curve*. The pages are indexed for content they
+do not contain, and the meta description that drew the reader in was inaccurate.
 
-**Reproducing the check.** Strip everything above the spec alert's closing
-`</div>` before searching, or the metadata copies produce false negatives:
+### The questions now cover all nine — the pages still do not
+
+The site owner asked for the missing concepts to be tested regardless, intending
+to bring the notes up to match later. **That has been done.** Ten questions were
+retrofitted into six already-committed sets, and the remaining gaps were written
+directly into the sets for units 2.3 and 2.5 as they were built.
+
+So every page in the table above now carries a link to a question set that tests
+something the page itself never explains. The model answers were written longer
+than usual and to stand alone for that reason, but it is a workaround: a student
+who gets one wrong and returns to the notes will find nothing there.
+
+**Two possible fixes, and they are different jobs.** Restore the missing sections
+from `raw-notes/`, or cut the over-claim from each spec alert and its metadata so
+the page describes itself accurately. The first is an economics content change;
+the second is a metadata correction. **Both need an explicit instruction.**
+
+### How to check this properly on Themes 3 and 4
+
+Strip everything above the spec alert's closing `</div>` before searching, or the
+metadata copies produce false negatives:
 
 ```python
 i = t.find('Specification Coverage'); j = t.find('</div>', i)
@@ -808,154 +807,101 @@ body = strip_tags(t[j:t.rfind('</body>')]).lower()
 'accelerator' in body      # False on 2-2-3-investment
 ```
 
-**Two possible fixes, and they are different jobs.** Either restore the missing
-sections — `raw-notes/edexcel/` still contains several of them, including the
-accelerator in `2.2.3.md` — or cut the over-claim from the spec alert and the
-metadata so the page describes itself accurately. The first is an economics
-content change; the second is a metadata correction. **Both need an explicit
-instruction.**
+**Then read the page.** An automated first pass found every real case here, but
+it also produced false positives at roughly one in three, because it matched the
+spec alert's wording rather than the concept. Three entries had to be withdrawn:
 
-**Consequence for the practice questions, already applied.** Every Edexcel set
-is written to what its page's body actually teaches, so none of the missing
-concepts is tested anywhere. For Theme 2 units 2.1 to 2.3 that meant leaving out
-actual-versus-potential growth (2.1.1), expectations as a determinant of
-consumption (2.2.2), the accelerator (2.2.3) and cost-push shocks (2.3.2). If
-the pages are completed, those four sets are worth extending — the AQA sets
-cover all four concepts, so the material is proven to work as questions.
+- `2-4-1-national-income` — teaches all three measurement routes, calling them
+  the Output, Income and **Expenditure Method** where the alert says "approach".
+- `2-5-1-causes-of-growth` — covers demand-side causes under the heading
+  *Short-Run Economic Growth*.
+- `2-5-4` — covers inequality as **"Worsened Income Equality"**. Only sustainable
+  development was genuinely missing, not three concepts.
 
-## N-Q9 addendum — a ninth Theme 2 page, found while writing the questions
+Match on the concept and its common synonyms, and read the section headings of
+every hit before recording it.
 
-`2-2-5-net-trade.html` belongs on the N-Q9 list. Its spec alert promises "how
-the **Marshall-Lerner condition** and **J-curve** influence the impact of
-exchange rate changes on the trade balance", and neither term appears anywhere
-below it.
+---
 
-This one is a **softer case** than the other eight, and worth distinguishing.
-The body does describe both mechanisms — it says the effect of a depreciation
-"depends on the price elasticity of demand for exports and imports", which is
-Marshall-Lerner without the name, and it notes that a depreciation "may
-initially worsen the trade balance before improving it in the longer run", which
-is the J-curve without the name. The economics is present; only the labels are
-missing.
+## N-Q10 — duplicate and non-sequential figure numbers, 13 pages
 
-That still matters at A-Level, because both terms are examinable by name and a
-student who has only read this page would not recognise either in a question.
-The fix here is smaller than for the others: name the two concepts in the
-existing paragraphs rather than write new sections. **Still an economics content
-change, so it needs an explicit instruction.**
+`CLAUDE.md` fixes the convention: diagram captions on topic pages open
+`Figure N:`. Thirteen pages break it, across every board. Nine reuse a number on
+the same page, so two different diagrams are both "Figure 1"; the rest skip
+numbers or start partway through the sequence.
 
-Running total: **11 pages** across Themes 1 and 2. Themes 3 and 4 unchecked.
+| Page | Figure numbers present |
+| --- | --- |
+| `edexcel-theme-1/1-1-4-production-possibility-frontiers` | 1, 1 |
+| `edexcel-theme-1/1-2-9-indirect-taxes-subsidies` | 1, 2, 1 |
+| `edexcel-theme-1/1-3-2-externalities` | 1, 1 |
+| `edexcel-theme-2/2-3-2-short-run-aggregate-supply` | 2, 2 |
+| `edexcel-theme-2/2-4-2-injections-withdrawals` | 2 |
+| `edexcel-theme-4/4-1-8-exchange-rates` | 1, 1 |
+| `aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply` | 2, 2 |
+| `aqa-a2-macro/2-6-2-trade` | 1, 1 |
+| `aqa-a2-macro/2-6-4-exchange-rate-systems` | 1, 1 |
+| `aqa-a2-micro/1-5-11-consumer-and-producer-surplus` | 1, 4, 5, 6, 7 |
+| `aqa-a2-micro/1-5-6-monopoly-and-monopoly-power` | 1, 3 |
+| `aqa-a2-micro/1-5-7-price-discrimination` | 2 |
+| `aqa-a2-micro/1-6-6-the-national-minimum-wage` | 4 |
 
-## N-Q8 / N-Q9 status update — the questions now exist, the pages still do not
+The duplicates are the ones that actually mislead — `1-3-2-externalities` labels
+both the negative-production and positive-consumption diagrams "Figure 1", so
+prose referring to "Figure 1" is ambiguous. The gaps are more likely to be
+leftovers from the diagrams removed in the earlier consistency pass.
 
-**2026-08-01.** The site owner has asked for the omitted concepts to be covered
-in the practice questions regardless of the gap, and will bring the notes pages
-up to match afterwards. **The questions have been written and are live.** This
-reverses the "Consequence for the practice questions" paragraphs recorded under
-N-Q8 and N-Q9, which said the concepts were deliberately untested.
+**This is renumbering captions, not touching economics wording**, so it is
+formatting work under the `CLAUDE.md` rules rather than a content change. Still
+worth an explicit go-ahead, because prose elsewhere on those pages may refer to
+the numbers.
 
-Ten questions were added to six already-committed sets, covering every concept
-those pages advertise and never explain:
+Reproduce with:
 
-| Set | Concept now tested | Questions |
+```python
+caps = re.findall(r'Figure\s+(\d+)\s*:', strip_tags(page))
+```
+
+---
+
+## N-Q11 — `2.4.1` and `2.4.2` substantially duplicate each other
+
+`2-4-1-national-income` (488 words of body) and `2-4-2-injections-withdrawals`
+(409 words) share **55 ten-word runs**. Roughly a third of 2.4.2 repeats 2.4.1
+almost verbatim: the extended circular flow, the three injections, the three
+withdrawals, the `J = W` condition, and the consequences of each being larger.
+
+Both pages are correct, and some overlap between adjacent topics is reasonable.
+But this much means a student reading them in order covers the same ground twice
+and may reasonably wonder what they missed. The Edexcel specification does list
+them separately, so the fix is presumably to let 2.4.1 introduce the circular
+flow and have 2.4.2 go deeper — the source and destination of each flow, the
+multiplier — rather than restating it.
+
+**An economics content change, so it needs an explicit instruction.** Recorded
+because it was noticeable while writing questions for both: the two sets had to
+be kept apart deliberately, and 2.4.2's questions lean on the details only that
+page carries.
+
+---
+
+## State of play for a new session
+
+**The practice-questions project is at 121 topics and 940 questions**, on branch
+`feature/topic-questions`, nothing pushed. Batch state, the authoring standard
+and the per-unit records are in `QUESTIONS_PROGRESS.md`, which is the file to
+read first — this one holds only the site problems found along the way.
+
+Outstanding here, all needing an explicit instruction before anything is touched:
+
+| Finding | Scope | Kind of change |
 | --- | --- | --- |
-| Edexcel 1.3.4 | adverse selection; moral hazard | 2 |
-| Edexcel 1.4.2 | regulatory capture | 1 |
-| Edexcel 2.1.1 | actual against potential growth; productive capacity | 2 |
-| Edexcel 2.2.2 | the role of expectations | 1 |
-| Edexcel 2.2.3 | the accelerator effect | 2 |
-| Edexcel 2.2.5 | the Marshall-Lerner condition; the J-curve, by name | 2 |
+| N-Q8 | 9 notes pages | economics content, or metadata correction |
+| N-Q10 | 13 notes pages | formatting — caption renumbering |
+| N-Q11 | 2 notes pages | economics content — restructuring |
+| N-Q2 to N-Q7 | AQA macro pages, earlier in this file | economics content |
+| `navPanel` `aria-hidden` | site-wide | accessibility, in the earlier sections |
 
-`2-3-2-short-run-aggregate-supply` promised **cost-push shocks** and was written
-into the new unit 2.3 batch directly rather than retrofitted, so it needs no
-separate entry.
-
-**No revision-notes content was edited.** The only change to any notes page
-remains the additive end-of-notes link block, which contains no economics
-wording.
-
-**What is still outstanding, and it is now the more visible half.** Each of these
-pages carries a link to a question set that tests a concept the page itself never
-covers. A student who follows the link, gets the question wrong and returns to
-the notes to find out why will find nothing there. Until the pages are completed
-the model answers are carrying the teaching on their own — they are written to
-stand alone for exactly this reason, but that is a workaround rather than a fix.
-
-Remaining pages on the list that have **not** been covered by questions, because
-they fall in units not yet written: `2-4-1-national-income` (the three approaches
-to measuring GDP), `2-5-1-causes-of-growth` (demand-side causes),
-`2-5-3-trade-cycle` (recovery phases), `2-5-4-the-impact-of-economic-growth`
-(inequality, sustainable development). These will be covered the same way when
-units 2.4 and 2.5 are written.
-
-## N-Q9 correction — three of the flagged pages were mis-flagged
-
-**2026-08-01.** Re-checking the N-Q9 list against synonyms, rather than only the
-exact wording used in each spec alert, shows the original audit was too strict.
-**The list should be 9 pages, not 11**, and one remaining entry is narrower than
-stated. The fault was mine: the audit searched for the words the spec alert uses
-and did not allow for the body using a different term for the same concept.
-
-**`2-4-1-national-income` — not a defect. Remove from the list.** The alert
-promises "the three approaches to measuring GDP" and the body delivers all
-three, under the heading *National Income: Key Concepts*, as the **Output
-Method**, **Income Method** and **Expenditure Method**. The audit searched for
-"approach" and the page says "method".
-
-**`2-5-1-causes-of-growth` — not a defect. Remove from the list.** The alert
-promises "demand-side causes of growth" and the body covers them under the
-heading *Short-Run Economic Growth*, worked through an AD shift from AD1 to AD2.
-The concept is there; the label "demand-side" is not.
-
-**`2-5-3-trade-cycle` — still a defect, but narrower than recorded.** The alert
-promises "the boom, recession, slump and recovery phases and the conditions
-typical of each". The body covers **boom and recession** in some detail, under
-*The Stages of the Trade Cycle* and *Characteristics of Booms and Recessions*.
-**Slump and recovery are named in the alert and nowhere else.** So it is two
-missing phases rather than the whole four-phase cycle. The earlier "expansion"
-match was spurious — it came from the phrase *expansionary policies*.
-
-**A related finding, and a more useful one.** `2-1-1-economic-growth` promises
-actual against potential growth and does not deliver it — that entry stands. But
-the distinction **is taught on the site**, on `2-5-1-causes-of-growth`, which
-opens with a section headed *Actual vs. Potential Growth*. So this is not missing
-content but content on an unexpected page, and the cheapest fix is a
-cross-reference from 2.1.1 rather than writing anything new.
-
-**Corrected list, 9 pages:** 1.3.4, 1.4.2, 2.1.1 (cross-reference only), 2.2.2,
-2.2.3, 2.2.5, 2.3.2, 2.5.3 (slump and recovery only), 2.5.4.
-
-**Lesson for auditing Themes 3 and 4.** Match on the *concept* and its common
-synonyms, not on the spec alert's own wording, and read the section headings
-before concluding anything is missing. An automated first pass is still worth
-running — it found the seven real cases — but every hit needs a look at the page.
-
-## N-Q9 second correction — 2.5.4's inequality flag was also wrong
-
-**2026-08-01, found while writing the unit 2.5 questions.** Two more amendments,
-both from reading the pages properly rather than grepping them:
-
-**`2-5-4-the-impact-of-economic-growth` — inequality is covered. Only sustainable
-development is missing.** The costs table has a row headed **"Worsened Income
-Equality"**, explaining that the benefits of growth may not be evenly
-distributed, and another headed "Environmental Damage". My audit searched for
-*inequality* and the page says *equality*. Sustainable development genuinely
-does not appear anywhere in the body, so the entry stands — but for one concept,
-not three.
-
-**`2-5-3-trade-cycle` — the gap is wider than recorded.** The alert promises
-"the boom, recession, slump and recovery phases". The body covers boom and
-recession in a comparison table, but **slump, recovery, peak and trough are all
-absent** — the *Stages of the Trade Cycle* heading has nothing under it but a
-figure caption. So the page never names the phases of the cycle at all, rather
-than missing two of four.
-
-**Corrected list, 8 pages:** 1.3.4, 1.4.2, 2.1.1 (cross-reference only), 2.2.2,
-2.2.3, 2.2.5, 2.3.2, 2.5.3 (the four phases), 2.5.4 (sustainable development
-only). Every one of them now has questions covering the missing concept.
-
-**Both corrections came from the same mistake**, made twice: searching for the
-spec alert's wording instead of reading the page. The automated pass is still
-worth running on Themes 3 and 4 — it found every real case — but it produces
-false positives at roughly one in three, so **read the section headings of every
-hit before recording it**.
+Themes 3 and 4 have **not** been checked for N-Q8 or N-Q10. Both checks are
+scripted above and take a couple of minutes; run them when those themes are
+reached, and read every hit before recording it.
