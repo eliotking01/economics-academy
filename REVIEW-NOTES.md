@@ -726,3 +726,41 @@ Confirm it rather than assuming, by comparing URL sets and the entries with
 date change only. And run the guard against `revision-notes/ templates/ js/ css/`
 **separately**, since that is the check that actually protects the notes. Fuller
 notes in `QUESTIONS_PROGRESS.md`, batch 11.
+
+---
+
+# Found while writing the Edexcel Theme 1 questions — units 1.3 and 1.4 (2026-08-01)
+
+## N-Q8 — two pages promise content their bodies never deliver
+
+Both pages advertise named concepts in their `metaDescription`, their OG and
+Twitter cards, their JSON-LD `description` **and** their `spec-alert` sentence,
+and then never mention them again. A student who arrives from a search result
+for the term finds nothing on the page about it.
+
+**`1-3-4-information-gaps.html`** — the spec alert reads "… market failure
+through **adverse selection** and **moral hazard**". The body covers information
+gaps, asymmetric information, the used-car example and the healthcare check-up
+example. Neither adverse selection nor moral hazard is defined, illustrated or
+named anywhere in it. `raw-notes/edexcel/1.3.4.md` **does** define both, with the
+'lemons problem' and the car-insurance example, so the content existed and was
+dropped somewhere in the conversion.
+
+**`1-4-2-government-failure.html`** — the spec alert reads "… information gaps,
+**distorted incentives** and **regulatory capture** as causes of government
+failure". The body gives four causes: distortion of price signals, unintended
+consequences, excessive administrative costs, and information gaps. Regulatory
+capture appears nowhere. `raw-notes/edexcel/1.4.2.md` does not define it either,
+though it does carry a fifth cause the page drops — political self-interest and
+short-termism.
+
+Both are on the Edexcel specification, so the gap is real rather than a
+deliberate scope decision. The fix is to restore the missing sections from the
+raw notes (1.3.4) and to write regulatory capture and short-termism into 1.4.2
+— **an economics content change, so it needs an explicit instruction.**
+
+**Consequence for the practice questions, already applied.** The Edexcel 1.3.4
+and 1.4.2 question sets were written to what the bodies actually teach, so
+neither tests adverse selection, moral hazard or regulatory capture. If the
+pages are ever completed, those sets are worth revisiting — the terms are good
+question material and the AQA sets do not use them either.

@@ -1,0 +1,243 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-1",
+  "boardName": "Edexcel Theme 1",
+  "spec": "1.4.1",
+  "slug": "1-4-1-government-intervention-in-markets",
+  "title": "Government Intervention in Markets",
+  "shortTitle": "Government Intervention in Markets",
+  "pageTitle": "Government Intervention in Markets Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on government intervention for Edexcel A-Level Economics: indirect taxes, subsidies, maximum and minimum prices.",
+  "intro": "Nine original multiple-choice questions on government intervention in markets, written to the style and difficulty of Edexcel Paper 1 Section A. Two use a market schedule.",
+  "notesTeaser": "Nine original multiple-choice questions on indirect taxes, subsidies, maximum and minimum prices, and the other tools governments use to correct market failure.",
+  "questions": [
+    {
+      "id": "edexcel-1-4-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government auctions licences to operate mobile phone networks and uses the proceeds to fund public services. Among the reasons for government intervention, this is best described as",
+      "options": {
+        "A": "Correcting market failure.",
+        "B": "Earning government revenue.",
+        "C": "Promoting equity.",
+        "D": "Supporting firms."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Governments intervene for four broad reasons: to correct market failure, to <strong>earn revenue</strong>, to promote equity, and to support firms.<br />Selling licences is squarely the second. The state owns the right to use the radio spectrum and sells it, exactly as any owner might, and the proceeds fund spending elsewhere. Note that a single policy can serve more than one aim — auctioning licences also allocates the spectrum to the firms that value it most — but revenue is what the stem describes.",
+        "distractors": {
+          "A": "Nothing here is being corrected. There is no externality, information gap or public good in the stem; the government is selling an asset it owns.",
+          "C": "Equity is about reducing inequality and supporting poorer households. How the proceeds are eventually spent might do that, but the intervention described is the auction itself.",
+          "D": "Supporting firms means helping industries stay competitive. Charging firms for licences does the opposite of subsidising them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A specific tax and an ad valorem tax are each placed on the same good. Drawn on a diagram, the specific tax moves the supply curve",
+      "options": {
+        "A": "In parallel, while the ad valorem tax pivots it.",
+        "B": "In parallel, and so does the ad valorem tax.",
+        "C": "By pivoting, while the ad valorem tax shifts it in parallel.",
+        "D": "By pivoting, and so does the ad valorem tax."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The difference is how each tax is calculated.<br />A <strong>specific tax</strong> is a fixed amount per unit — say 40p a litre — so it adds the same vertical distance at every quantity. The curve moves up bodily: a <strong>parallel</strong> shift.<br />An <strong>ad valorem tax</strong> is a percentage of price, so it takes more per unit on dearer units than on cheap ones. The gap between the old and new curves widens as price rises, and the curve <strong>pivots</strong> away from its original position.",
+        "distractors": {
+          "B": "An ad valorem tax cannot shift supply in parallel. A fixed percentage of a rising price is a rising absolute amount.",
+          "C": "This reverses the two. A constant amount per unit produces the parallel shift; a percentage produces the pivot.",
+          "D": "A specific tax adds the same amount at every quantity, so it has no reason to pivot the curve."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "During a drought a government sets a legal maximum price for bottled water below the market equilibrium. At that price there will be",
+      "options": {
+        "A": "An expansion in supply and a contraction in demand.",
+        "B": "An expansion in supply and an expansion in demand.",
+        "C": "A contraction in supply and a contraction in demand.",
+        "D": "A contraction in supply and an expansion in demand."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A maximum price bites only when it is set <strong>below</strong> the equilibrium, and both sides then move along their existing curves.<br />Producers find the lower price less rewarding, so quantity supplied <strong>contracts</strong> down the supply curve. Consumers find it cheaper, so quantity demanded <strong>expands</strong> down the demand curve.<br />The two move apart, and the gap is <strong>excess demand</strong> — a shortage. Queues, rationing and black markets all follow from it, which is the standing difficulty with price ceilings.",
+        "distractors": {
+          "A": "Both halves are the wrong way round. A lower price discourages supply and encourages demand, not the reverse.",
+          "B": "Supply contracts rather than expands. Producers offer less when the price they can charge is capped below the market level.",
+          "C": "Demand expands rather than contracts. A lower price is exactly what draws more buyers in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the weekly market for a basic foodstuff.<br />Using Table 1, a maximum price of £2 would create",
+      "table": {
+        "caption": "Table 1: Weekly market for a basic foodstuff, units",
+        "head": [
+          "Price",
+          "Quantity demanded",
+          "Quantity supplied"
+        ],
+        "rows": [
+          [
+            "£2",
+            "9,600",
+            "3,600"
+          ],
+          [
+            "£3",
+            "7,800",
+            "4,800"
+          ],
+          [
+            "£4",
+            "6,000",
+            "6,000"
+          ],
+          [
+            "£5",
+            "4,200",
+            "7,200"
+          ]
+        ]
+      },
+      "options": {
+        "A": "A shortage of 2,400 units.",
+        "B": "A shortage of 6,000 units.",
+        "C": "A surplus of 2,400 units.",
+        "D": "A surplus of 6,000 units."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The market clears at <strong>£4</strong>, where quantity demanded and quantity supplied are both 6,000. A maximum price of £2 is below that, so it binds.<br />At £2: quantity demanded <strong>9,600</strong>, quantity supplied <strong>3,600</strong>.<br />Buyers want 9,600 and sellers will provide 3,600, so there is <strong>excess demand of 6,000 units</strong>.<br />Note that the shortage is far larger than the fall in output alone. Capping the price both discourages supply and encourages demand, and the shortage is the sum of the two effects.",
+        "distractors": {
+          "A": "2,400 is 6,000 − 3,600, comparing quantity supplied at £2 with the <em>equilibrium</em> quantity. The shortage is the gap between the two quantities at £2 itself.",
+          "C": "The direction is wrong. A price below equilibrium leaves buyers wanting more than sellers will provide, which is a shortage.",
+          "D": "The size is right but the direction is not, for the same reason. Surpluses appear above the equilibrium price, not below it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Using Table 1 in the previous question, a minimum price of £5 would create",
+      "options": {
+        "A": "A shortage of 3,000 units.",
+        "B": "A surplus of 1,200 units.",
+        "C": "A surplus of 1,800 units.",
+        "D": "A surplus of 3,000 units."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A minimum price bites when it is set <strong>above</strong> the equilibrium of £4, so £5 binds.<br />At £5: quantity demanded <strong>4,200</strong>, quantity supplied <strong>7,200</strong>.<br />Sellers offer 7,200 and buyers want 4,200, so there is <strong>excess supply of 3,000 units</strong>.<br />Where the government has guaranteed the price, that surplus is not merely unsold stock — it is stock the state may have to buy and store, which is the main cost of the policy.",
+        "distractors": {
+          "A": "The direction is wrong. Above the equilibrium price, sellers offer more than buyers want, which is a surplus.",
+          "B": "1,200 is 7,200 − 6,000, comparing quantity supplied at £5 with the equilibrium quantity. The surplus is the gap between the two quantities at £5.",
+          "C": "1,800 is 6,000 − 4,200, the same error on the demand side. Both quantities must be read from the £5 row."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government caps the price a supplier may charge for a basic medicine, and holds the cap for several years. Besides a shortage, a likely consequence is that suppliers",
+      "options": {
+        "A": "Enter the market in much larger numbers.",
+        "B": "Invest heavily in developing better versions.",
+        "C": "Let quality control and reliability slip.",
+        "D": "Lower their prices further to win market share."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A capped price removes the usual way of protecting a margin when costs rise. What remains is to spend less on making the product, and quality is the easiest thing to cut because buyers notice it slowly.<br />This is the standard second consequence of a maximum price, alongside the shortage: the good becomes scarcer <em>and</em> worse. In a medicine market that matters a great deal, which is why price caps are normally paired with quality regulation rather than used alone.",
+        "distractors": {
+          "A": "A capped price lowers the return on entry, so fewer firms come in rather than more. That is part of why the shortage persists.",
+          "B": "Investment needs an expected return. A cap on what can be charged is precisely what removes it.",
+          "D": "Suppliers would charge more if they legally could — the cap is what stops them. Cutting prices further would make no commercial sense."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government guarantees farmers a minimum price above the market equilibrium and buys up whatever is left unsold. The direct cost to the government of doing so is",
+      "options": {
+        "A": "The revenue farmers lose on unsold output.",
+        "B": "The shortage multiplied by the minimum price.",
+        "C": "The surplus multiplied by the minimum price.",
+        "D": "The whole crop multiplied by the minimum price."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A minimum price above equilibrium produces <strong>excess supply</strong>. Consumers buy what they want at the guaranteed price, and the government buys the rest.<br />Its bill is therefore the <strong>surplus quantity multiplied by the minimum price</strong> — plus, in practice, the cost of storing it and the waste if it spoils.<br />That is the objection to price support. The policy protects farm incomes, but it does so by paying for output nobody wanted at that price, and the taxpayer carries it.",
+        "distractors": {
+          "A": "Farmers do not lose revenue — the guarantee is what protects it. The cost is transferred to the taxpayer rather than borne by producers.",
+          "B": "A minimum price above equilibrium creates a surplus, not a shortage. Quantity supplied exceeds quantity demanded.",
+          "D": "The government buys only the unsold surplus. Consumers still buy the rest at the minimum price, and the state does not pay for those units."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government subsidises a domestic industry for many years running. A criticism of the policy is that the firms in it may",
+      "options": {
+        "A": "Face costs that rise faster than the subsidy.",
+        "B": "Grow reliant on it and stop chasing efficiency.",
+        "C": "Lose market share to unsubsidised competitors.",
+        "D": "Pass the whole subsidy on to their customers."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A subsidy props up a firm's margin without the firm having done anything to earn it, and a margin that arrives regardless of performance weakens the pressure to cut costs or innovate.<br />Over years that becomes self-reinforcing: the industry needs the subsidy because it has become inefficient, and it is inefficient partly because of the subsidy. Resources stay in a sector that may not be where they are most productive — a <strong>misallocation</strong> the policy was not intended to cause.",
+        "distractors": {
+          "A": "Nothing about a subsidy makes costs rise. The criticism is the opposite — that it removes the pressure to bring them down.",
+          "C": "A subsidy lowers costs relative to unsubsidised rivals, so it should protect market share rather than erode it.",
+          "D": "Passing the subsidy on through a lower price is largely what it is for, particularly for a merit good. That is an intended effect, not a criticism."
+        }
+      }
+    },
+    {
+      "id": "edexcel-1-4-1-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Consumers consistently underestimate the running costs of low-efficiency appliances. Of the tools available to a government, the one that addresses the cause most directly is",
+      "options": {
+        "A": "A maximum price on inefficient appliances.",
+        "B": "A minimum price on inefficient appliances.",
+        "C": "A subsidy paid to appliance manufacturers.",
+        "D": "Compulsory energy-efficiency labelling."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Match the tool to the failure. The failure here is an <strong>information gap</strong> — buyers would choose differently if they knew what the appliance would cost to run.<br />Labelling supplies exactly the missing fact, at the moment of choice, in a form that can be compared between models. Nothing is banned and no price is distorted; the consumer simply decides on better information, which is what allocative efficiency requires.<br />The price-based tools all work around the problem rather than on it.",
+        "distractors": {
+          "A": "A maximum price would make inefficient appliances <em>cheaper</em>, raising sales of exactly the goods the policy is meant to discourage.",
+          "B": "A minimum price would raise their price and might cut sales, but buyers would still be choosing without knowing the running costs. It treats the symptom.",
+          "C": "A subsidy to manufacturers lowers prices across the board and tells buyers nothing about what an appliance will cost to run."
+        }
+      }
+    }
+  ]
+}

@@ -5,9 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 95 topics, 732 questions. AQA is complete — both Microeconomics and
-Macroeconomics. Edexcel Theme 1 units 1.1 and 1.2 are done; 71 Edexcel topics
-remain.**
+**Live: 101 topics, 773 questions. AQA is complete, and so is Edexcel Theme 1.
+65 topics remain — Edexcel Themes 2, 3 and 4.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -354,24 +353,31 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### Edexcel — 71 topics, 540 questions still to write
+### Edexcel — 65 topics, 505 questions still to write
 
-**This is all that is left.** AQA is finished, and Theme 1 is two-thirds done.
+**This is all that is left.** AQA is finished and Theme 1 is complete.
 
-| Theme | Topics done | Topics left | Questions left |
-| --- | --- | --- | --- |
-| Theme 1 | 16 (units 1.1, 1.2) | 6 (units 1.3, 1.4) | ~35 |
-| Theme 2 | 0 | 24 | 185 |
-| Theme 3 | 0 | 20 | 157 |
-| Theme 4 | 0 | 21 | 163 |
+| Theme | Topics left | Questions left |
+| --- | --- | --- |
+| Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
+| Theme 2 | 24 | 185 |
+| Theme 3 | 20 | 157 |
+| Theme 4 | 21 | 163 |
 
-**Next batch: Theme 1 units 1.3 and 1.4** — 1.3.1 types of market failure, 1.3.2
-externalities, 1.3.3 public goods, 1.3.4 information gaps, 1.4.1 government
-intervention in markets, 1.4.2 government failure. That finishes Theme 1 and
-makes the Theme 1 board index complete. Note that `raw-notes/edexcel/1.3.*.md`
-and `1.4.*.md` exist, so those six can be read as markdown rather than scraped
-out of the HTML — units 1.1 and 1.2 had no raw notes and had to be extracted
-from the pages.
+**Next batch: Theme 2.** It is the macro theme — measures of economic
+performance, aggregate demand and supply, national income, economic growth,
+policy objectives and instruments — so the twins to check against are the whole
+of **AQA macro 2.1 to 2.5**, not micro. Expect the cross-board risk (§8) to be
+at its highest yet: 209 AQA macro questions cover almost exactly this ground.
+Theme 2 splits naturally at 2.1–2.3 (measurement and AD/AS) and 2.4–2.6 (growth,
+policy and conflicts).
+
+**Reading the notes.** `raw-notes/edexcel/` has markdown for most of Themes 2–4,
+which is far quicker than scraping the HTML — but **the published pages are what
+counts**, and they differ. In Theme 1 the conversion dropped whole sections that
+the raw notes contain (see the 1.3.4 case in `REVIEW-NOTES.md` N-Q8). Read the
+raw markdown for speed, then diff it against the page before writing anything
+that depends on a section only the markdown has.
 
 Per-topic counts follow the same pattern: 10 for the densest calculable topics,
 5–6 for narrow definitional ones, 7–9 otherwise. Recompute from the notes page
@@ -390,10 +396,12 @@ if in doubt — the guide's rule is that concision beats coverage.
 - **Hub and board index density.** Both list only what is live. They fill out
   per batch; no action needed.
 - **Nav sub-menu.** Three of the five board indexes now exist — both AQA ones and
-  `practice-questions/edexcel-theme-1/index.html` (live from batch 12). Themes 2,
-  3 and 4 do not, so the two-level dropdown still cannot be restored without
-  pointing at missing pages. Revisit once Theme 2 is live, or restore it early
-  listing only the boards that exist.
+  `practice-questions/edexcel-theme-1/index.html`, which is now **complete** at
+  22 of 22 topics rather than partial. Themes 2, 3 and 4 do not exist, so the
+  two-level dropdown still cannot list all five. Now is a reasonable moment to
+  restore it with the three that are finished, since none of them will change
+  again; the alternative is to keep waiting until Theme 4 lands. **Needs the site
+  owner's call** — it is a nav change on every page.
 - **Skill mix across AQA micro.** `applied-reasoning` finished at 64% against a
   ~40% target and `calculation` at 6% against ~15%. This is a property of the
   specification — units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual almost
@@ -865,6 +873,115 @@ diagrams are first taught rather than applied, and the notes carry the figures o
 the page, so most diagram questions would have been asking the student to
 redraw something they are looking at. Expect the share to recover in 1.3 and 1.4,
 where externality and intervention diagrams have to be constructed.
+
+### Batch 13 — Edexcel Theme 1, units 1.3 and 1.4 (2026-08-01)
+
+6 topics, 41 questions. **Completes Edexcel Theme 1: 22 of 22 topics and 163
+questions**, against 157 planned.
+
+All 41 re-derived from the stem alone with **0 mismatches**; every figure
+recomputed, including the social cost and social benefit sums, both price-control
+gaps read off the schedule, and the two-row welfare table in 1.4.2 Q6.
+
+**Both originality checks came back clean, and the second one is the story.**
+Zero shared runs of 8 words or more against either past-paper corpus. Against the
+existing 732-question bank, a single 8-gram survived — "in a market with a
+negative externality in", shared between our 1.3.2 Q4 and AQA 1.8.4 Q7, which
+handle different sub-cases (production against consumption) and ask different
+things. That is the terminology, not the question.
+
+**This is the batch where §8 was applied in advance rather than after the fact,
+and it worked.** Units 1.3 and 1.4 are the closest twins in the whole project —
+AQA 1.8.2 to 1.8.10 plus 1.2.2 carry **53 questions** over the same economics.
+Before writing a line, every one of those 53 stems was printed and read. The
+angles they already occupy were then avoided outright:
+
+- AQA has the definition stems ("An externality is best defined as…",
+  "Market failure occurs when…"), so all six Edexcel sets open on scenarios.
+- AQA already uses the factory-air-pollution, solar-panel, worker-training,
+  crowded-beach, electronic-tolling, second-hand-car and second-hand-boiler
+  contexts. None is reused; Edexcel gets late-night drinking, a lighthouse, a
+  village flood barrier, a damp flat, a loft-insulation grant and a nutrition
+  label.
+- AQA 1.8.9 already covers the alcohol minimum price and the rent maximum price,
+  so the Edexcel price-control questions use bottled water in a drought, a
+  capped medicine price, and farm price support.
+
+Cost: roughly the time of writing two extra sets. Benefit: one residual 8-gram
+across 41 questions, against four rewrites in batch 12. **Do the twin audit
+first, every time.**
+
+**Where Edexcel genuinely differs from AQA**, and what it bought:
+
+- Edexcel teaches **merit and demerit goods inside 1.3.2**, where AQA gives them
+  their own topic (1.8.5). The definition question sits in the externalities set.
+- Edexcel's page labels the diagram **Q1 and Q2**, not Qm and Qopt. The questions
+  follow the page.
+- Edexcel attaches an **evaluation** to every policy tool — PED, regressive
+  incidence, enforcement cost, harm to small firms, subsidy dependency,
+  opportunity cost. Four questions test those evaluations, which is a shape the
+  AQA sets do not have at all.
+- Edexcel's four **reasons to intervene** include earning revenue and supporting
+  firms, which AQA does not frame that way. 1.4.1 Q1 tests it.
+- Edexcel 1.4.2 makes the point that **a tax can be set too high**, pushing a
+  demerit good below its optimal consumption, because such goods still yield some
+  value. That became the stretch item (1.4.2 Q3) and has no AQA counterpart.
+
+**Two content defects found and logged, not fixed** — `REVIEW-NOTES.md` N-Q8.
+`1-3-4-information-gaps.html` promises adverse selection and moral hazard in its
+spec alert, meta description, OG and Twitter cards and JSON-LD, and never
+mentions either in the body; `raw-notes/edexcel/1.3.4.md` defines both, so the
+content was dropped in conversion. `1-4-2-government-failure.html` promises
+regulatory capture the same way and never delivers it. **The question sets were
+written to what the bodies actually teach, so neither term is tested.** If the
+pages are ever completed, both sets are worth revisiting — the terms are good
+material and the AQA sets do not use them either.
+
+| | |
+| --- | --- |
+| Answer letters | A 8, B 10, C 14, D 9 (even would be 10.25) |
+| Skills | applied-reasoning 27, definition-in-context 7, data-table 5, calculation 2 |
+| Difficulty | foundation 6, standard 28, stretch 7 |
+| Sketch to solve | 1 |
+
+`applied-reasoning` at 66% is the highest of any batch, and it is a property of
+the material: market failure and government intervention are argued rather than
+calculated, and the two calculations the units support (MSC = MPC + MEC and
+MSB = MPB + MEB) are both in 1.3.2. The `stretch` share is also the highest so
+far at 17%, because the interesting questions here are all comparative — which
+tool fits which failure, and whether intervening beats leaving it alone.
+
+**Letter distribution came out much better than batch 12** — 8 / 10 / 14 / 9
+against an even 10.25, with D at 9 rather than badly under. The difference was
+deliberate: option lists were ordered by domain sequence while drafting (the
+notes' own list of causes, the notes' own order of interventions, consistent
+over/under and expansion/contraction grids) rather than alphabetically and then
+patched. That is what §1 has recommended all along, and this is the first batch
+to follow it from the start.
+
+---
+
+## Edexcel Theme 1 — 22 of 22 topics, complete
+
+**Final profile:**
+
+| | |
+| --- | --- |
+| Topics | 22 of 22 |
+| Questions | 163, against 157 planned |
+| Answer letters | A 43, B 48, C 44, D 28 (even would be 40.75) |
+| Skills | applied-reasoning 95, definition-in-context 32, data-table 24, calculation 12 |
+| Difficulty | foundation 27, standard 113, stretch 23 |
+| Sketch to solve | 3 |
+
+Theme 1 came in at 8% `data-table` and 7% `calculation`, close to AQA micro and
+well below AQA macro. Only units 1.2.3, 1.2.5, 1.2.8, 1.2.9 and 1.3.2 support
+real arithmetic; the rest of the theme is conceptual by design.
+
+`D` finished at 28 against an even 40.75. Every individual set passes the
+generator's per-set check, and the shortfall is concentrated in the batch 12
+sets, which were ordered alphabetically first and rebalanced afterwards. Batch 13
+shows the fix works when applied while drafting.
 
 ---
 
