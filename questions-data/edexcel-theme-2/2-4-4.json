@@ -1,0 +1,234 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.4.4",
+  "slug": "2-4-4-the-multiplier",
+  "title": "The Multiplier",
+  "shortTitle": "The Multiplier",
+  "pageTitle": "The Multiplier and Marginal Propensities Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on the multiplier for Edexcel A-Level Economics: marginal propensities, calculating the multiplier and what changes its size.",
+  "intro": "Nine original multiple-choice questions on the multiplier, written to the style and difficulty of Edexcel Paper 2 Section A. Four are calculations.",
+  "notesTeaser": "Nine original multiple-choice questions on the multiplier process, the four marginal propensities, calculating the multiplier and what determines its size.",
+  "questions": [
+    {
+      "id": "edexcel-2-4-4-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A household receives an extra £100. It spends £55 of it on domestic goods and services, pays £20 in tax and spends £10 on imports. Its marginal propensity to withdraw is",
+      "options": {
+        "A": "0.15",
+        "B": "0.30",
+        "C": "0.45",
+        "D": "0.75"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Every extra pound is either consumed domestically or withdrawn, so <strong>MPW = 1 − MPC</strong>.<br />MPC here is £55 ÷ £100 = 0.55, so MPW = 1 − 0.55 = <strong>0.45</strong>.<br />Check it the long way. Of the £100, £45 was not spent on domestic output: £20 in tax, £10 on imports, and the remaining £15 saved. MPW = 0.20 + 0.10 + 0.15 = <strong>0.45</strong>. The two routes agree, which is the check worth doing whenever the four propensities appear together.",
+        "distractors": {
+          "A": "0.15 is the marginal propensity to <em>save</em> alone — the £15 left over. Saving is only one of the three leakages.",
+          "B": "0.30 is the £20 of tax plus the £10 of imports, the two leakages stated explicitly. The £15 saved has been missed.",
+          "D": "0.75 adds the £55 spent to the £20 of tax. Consumption is not a withdrawal, so it cannot be on that side."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Out of every extra £1 of income, households in an economy save 5p, pay 25p in tax and spend 20p on imports. A student uses the saving figure on its own and calculates the multiplier as 20.0. The correct value is",
+      "options": {
+        "A": "2.0",
+        "B": "4.0",
+        "C": "5.0",
+        "D": "20.0"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The multiplier depends on <strong>every</strong> leakage, not just saving:<br />MPW = 0.05 + 0.25 + 0.20 = <strong>0.50</strong>.<br />Multiplier = 1 ÷ 0.50 = <strong>2.0</strong>.<br />The student's answer of 20.0 comes from 1 ÷ 0.05, using saving alone — and it is ten times too large. This is the single most common error on the topic, and it matters: an injection of £1bn would raise national income by £2bn, not £20bn.<br />Cross-check with the other formula: MPC = 1 − 0.50 = 0.50, and 1 ÷ (1 − 0.50) = 2.0 as well.",
+        "distractors": {
+          "B": "4.0 is 1 ÷ 0.25, using the tax leakage on its own. The same mistake as the student's, with a different single leakage.",
+          "C": "5.0 is 1 ÷ 0.20, using the import leakage on its own.",
+          "D": "20.0 is the student's figure, from 1 ÷ 0.05. The stem gives it precisely because it is the wrong answer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's multiplier is 3. A government wants to raise real GDP by £15 billion. The injection it needs to make is",
+      "options": {
+        "A": "£5bn",
+        "B": "£12bn",
+        "C": "£18bn",
+        "D": "£45bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The multiplier links an injection to the final change in national income:<br /><strong>final change = injection × multiplier</strong>.<br />Rearranging, injection = £15bn ÷ 3 = <strong>£5bn</strong>.<br />The check is quick: £5bn × 3 = £15bn. A multiplier greater than 1 always means the injection needed is <em>smaller</em> than the target, which rules out two of the options immediately.",
+        "distractors": {
+          "B": "£12bn subtracts the multiplier from the target, £15bn − 3. The multiplier is a ratio, not an amount in pounds.",
+          "C": "£18bn adds it, £15bn + 3, with the same confusion between a ratio and a quantity.",
+          "D": "£45bn multiplies instead of dividing. That is the size of the effect £15bn <em>would produce</em>, not the injection needed."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's households begin buying a much larger share of their goods from abroad. All other things being equal, the multiplier will",
+      "options": {
+        "A": "Rise, because imports add to demand.",
+        "B": "Rise, because the MPW has fallen.",
+        "C": "Fall, because more income leaks out.",
+        "D": "Fall, because the MPC has risen."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The marginal propensity to import is one of the three leakages that make up MPW, and the multiplier is 1 ÷ MPW.<br />A higher MPM raises MPW, and a larger denominator gives a <strong>smaller</strong> multiplier. At each round of the process, more of the income being passed on goes abroad rather than to domestic firms, so the rounds shrink faster.<br />This is why small open economies typically have smaller multipliers than large, relatively closed ones — the same stimulus leaks away faster.",
+        "distractors": {
+          "A": "Imports are spending on output produced elsewhere, so they leave the domestic circular flow rather than adding to demand within it.",
+          "B": "MPW has <em>risen</em>, because MPM is one of its components. A higher MPW gives a smaller multiplier.",
+          "D": "MPC falls when more income goes on imports, since MPC measures spending on <em>domestic</em> goods and services."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In an economy the marginal propensity to withdraw is 0.4, so the multiplier calculated as 1 ÷ MPW is 2.5. Calculating it instead as 1 ÷ (1 − MPC) would give",
+      "options": {
+        "A": "A larger value, because MPC excludes tax.",
+        "B": "A smaller value, because MPC excludes tax.",
+        "C": "An undefined value, because MPC is unknown.",
+        "D": "The same value, because MPC = 1 − MPW."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The two formulas are the same equation written differently.<br />Since every extra pound is either consumed or withdrawn, <strong>MPC + MPW = 1</strong>. So MPC = 1 − 0.4 = 0.6, and 1 − MPC = 0.4 — exactly the MPW you started with.<br />1 ÷ (1 − 0.6) = 1 ÷ 0.4 = <strong>2.5</strong>, the same answer.<br />Knowing they agree is genuinely useful: whichever propensities a question happens to give you, you can always reach the multiplier, and working it both ways is a free check on your arithmetic.",
+        "distractors": {
+          "A": "MPC does exclude tax, but so does the calculation. Tax is inside MPW, and 1 − MPC recovers MPW in full.",
+          "B": "The same objection. The identity guarantees the two routes give an identical figure, not merely a similar one.",
+          "C": "MPC is not unknown — it is 1 − MPW = 0.6. The identity supplies it whenever MPW is given."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the marginal propensities in an economy.<br />Using Table 1, an injection of £3 billion would raise national income by",
+      "table": {
+        "caption": "Table 1: Marginal propensities in the economy",
+        "head": [
+          "Propensity",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Marginal propensity to save",
+            "0.05"
+          ],
+          [
+            "Marginal propensity to tax",
+            "0.15"
+          ],
+          [
+            "Marginal propensity to import",
+            "0.05"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£0.75bn",
+        "B": "£3.0bn",
+        "C": "£12.0bn",
+        "D": "£60.0bn"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Add the leakages, then invert.<br />MPW = 0.05 + 0.15 + 0.05 = <strong>0.25</strong>.<br />Multiplier = 1 ÷ 0.25 = <strong>4</strong>.<br />Final change in national income = £3bn × 4 = <strong>£12bn</strong>.<br />The order matters: find MPW first, then the multiplier, then apply it to the injection. Going straight from a single propensity to an answer is where most marks are lost on this topic.",
+        "distractors": {
+          "A": "£0.75bn multiplies the injection <em>by</em> MPW instead of by the multiplier. The multiplier is the reciprocal of MPW, not MPW itself.",
+          "B": "£3.0bn is the injection with no multiplier applied at all. The whole point is that the final effect exceeds the initial injection.",
+          "D": "£60.0bn uses saving alone: 1 ÷ 0.05 = 20, times £3bn. Tax and imports are leakages too and must be included in MPW."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Households and firms across an economy become markedly more confident about the future. All other things being equal, the size of the multiplier is likely to",
+      "options": {
+        "A": "Rise, as more of each extra pound is spent.",
+        "B": "Rise, as the government spends more.",
+        "C": "Fall, as more income is saved.",
+        "D": "Fall, as the marginal propensity to withdraw rises."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Confidence works on the multiplier through the <strong>marginal propensity to consume</strong>.<br />Households who feel secure about their jobs and future income spend a larger share of any extra pound rather than putting it aside. A higher MPC means a lower MPW, and 1 ÷ MPW is therefore larger.<br />The practical consequence is that the same fiscal stimulus achieves more when confidence is high — and least when it is low, which is unfortunately when governments most want to use it.",
+        "distractors": {
+          "B": "Government spending is an <em>injection</em>. It determines what the multiplier is applied to, not how large the multiplier is.",
+          "C": "Confident households save a smaller share of extra income, not a larger one. Saving rises with caution.",
+          "D": "MPW falls as confidence rises, because more of each pound is spent domestically rather than withdrawn."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy is operating at full capacity when the government raises its spending. Compared with the same injection made during a deep recession, the effect on real output will be",
+      "options": {
+        "A": "Larger, because confidence is higher in a boom.",
+        "B": "Larger, because the multiplier rises with output.",
+        "C": "Smaller, because extra demand mainly raises prices.",
+        "D": "The same, because the multiplier is a fixed number."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The multiplier describes what happens to <em>spending</em>. Whether that spending becomes real output depends on whether the economy has the capacity to produce it.<br />At full capacity there are no idle workers or machines, so the extra demand meets a vertical or near-vertical supply constraint and pushes the <strong>price level</strong> up instead of output.<br />In a recession the same injection meets plentiful spare capacity, so it is met with real production. This is why the multiplier is usually described as larger in a slump — and why fiscal expansion at the peak of a boom is mostly inflationary.",
+        "distractors": {
+          "A": "Confidence may well be higher in a boom, but capacity is the binding constraint. There is nothing spare to produce with.",
+          "B": "The multiplier does not mechanically rise with output. If anything it is larger in a recession, when spare capacity and lower interest rates encourage spending.",
+          "D": "The multiplier is not a fixed number — it depends on the marginal propensities, which change with confidence and conditions."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government cuts its spending by £2 billion in an economy with a multiplier of 3. The most likely effect on national income is",
+      "options": {
+        "A": "A fall of £2 billion.",
+        "B": "A fall of £6 billion.",
+        "C": "A rise of £6 billion.",
+        "D": "No change, since the multiplier applies only to injections."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The multiplier works in <strong>both directions</strong>, and this is the part students most often miss.<br />Cutting government spending by £2bn removes £2bn of income from the recipients. They then cut their own spending by a proportion of it, which reduces somebody else's income, and so on down the rounds — the same process as an injection, running in reverse.<br />Final change = −£2bn × 3 = <strong>a fall of £6bn</strong>.<br />That asymmetry between the size of the cut and the size of the damage is a central argument against sharp fiscal consolidation in a weak economy.",
+        "distractors": {
+          "A": "A fall of £2bn is the initial withdrawal alone, before the knock-on rounds. The multiplier magnifies it.",
+          "C": "The size is right but the direction is wrong. Cutting spending reduces national income; it does not raise it.",
+          "D": "A cut in government spending is a reduction in an injection, and the multiplier applies to it exactly as it would to an increase."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.4.3",
+  "slug": "2-4-3-equilibrium-levels-of-real-national-output",
+  "title": "Equilibrium Levels of Real National Output",
+  "shortTitle": "Equilibrium Levels of National Output",
+  "pageTitle": "Macroeconomic Equilibrium Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on macroeconomic equilibrium for Edexcel A-Level Economics: the Classical and Keynesian views and shifts in AD and LRAS.",
+  "intro": "Seven original multiple-choice questions on equilibrium levels of real national output, written to the style and difficulty of Edexcel Paper 2 Section A. One asks you to sketch the diagram.",
+  "notesTeaser": "Seven original multiple-choice questions on short-run and long-run macroeconomic equilibrium, the Classical and Keynesian models, and shifts in AD and LRAS.",
+  "questions": [
+    {
+      "id": "edexcel-2-4-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Short-run macroeconomic equilibrium occurs at the level of real output where",
+      "options": {
+        "A": "AD equals LRAS.",
+        "B": "AD equals SRAS.",
+        "C": "Injections equal withdrawals.",
+        "D": "SRAS equals LRAS."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The short run is the period in which at least one factor of production is fixed, so the relevant supply curve is <strong>SRAS</strong>.<br />Where AD crosses SRAS determines both the actual price level and the actual level of real national output — what the economy <em>is</em> producing, as distinct from what it could produce.<br />Long-run equilibrium is a stronger condition. On the Classical view it requires AD = SRAS = LRAS, all at the full employment level of output.",
+        "distractors": {
+          "A": "AD equalling LRAS is part of the <em>long-run</em> condition, and on its own it does not fix the short-run price level.",
+          "C": "J = W is the equilibrium condition for the circular flow of income. It is a different model, though a consistent one.",
+          "D": "SRAS crossing LRAS says where the short-run curve happens to meet capacity. Equilibrium requires demand to be there too."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the Keynesian model an economy can settle in long-run equilibrium below the full employment level of output. The implication is that",
+      "options": {
+        "A": "Aggregate demand cannot affect real output.",
+        "B": "Prices and wages adjust quickly to restore Yfe.",
+        "C": "The economy will always self-correct in time.",
+        "D": "Unemployment can persist without intervention."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is the heart of the Keynesian position, and the reason it carries a policy conclusion.<br />Because the L-shaped LRAS curve permits equilibrium at output levels below Yfe, an economy can come to rest with <strong>unused capacity and unemployed workers</strong> and simply stay there. Nothing in the model drags it back on its own.<br />If that is right, waiting is not a policy. Government has to shift aggregate demand to move the economy towards full employment — which is exactly what the Classical model says is unnecessary and ineffective.",
+        "distractors": {
+          "A": "The opposite. The Keynesian case is that aggregate demand <em>does</em> determine real output below full capacity.",
+          "B": "Rapid wage and price adjustment is the <strong>Classical</strong> mechanism. It is what the Keynesian model doubts.",
+          "C": "Self-correction is the Classical claim. Equilibrium persisting below Yfe is precisely a failure to self-correct."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the Classical model an economy is temporarily producing below Yfe. The mechanism that returns it to Yfe is",
+      "options": {
+        "A": "An increase in government spending.",
+        "B": "An outward shift of the LRAS curve.",
+        "C": "Adjustment of wages and prices downwards.",
+        "D": "A permanent fall in the general price level."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The Classical model is built on markets clearing. With output below capacity there is spare labour and idle equipment, so <strong>wages and prices fall</strong>.<br />Lower costs shift SRAS to the right, and the economy slides back to Yfe of its own accord. No policy is needed, and the deviation is temporary by construction.<br />The Keynesian objection is empirical rather than logical: wages in particular are slow to fall, so the adjustment may take long enough that waiting for it is not a serious option.",
+        "distractors": {
+          "A": "Government spending is the <em>Keynesian</em> remedy. The Classical claim is that no intervention is required.",
+          "B": "An outward LRAS shift would raise Yfe itself. The question is about returning to the existing Yfe, not moving it.",
+          "D": "The price level does fall during the adjustment, but that is part of the mechanism rather than the end state. Once at Yfe there is no further downward pressure."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises aggregate demand. Whether real output rises as a result depends most on",
+      "options": {
+        "A": "How large the country's trade deficit is.",
+        "B": "Where the economy is on the LRAS curve.",
+        "C": "Whether the budget is in deficit or surplus.",
+        "D": "Whether the injection is investment or spending."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The same rightward shift in AD produces completely different outcomes depending on where it lands.<br />On the <strong>horizontal</strong> section of a Keynesian LRAS curve, with large spare capacity, output rises and prices barely move. On the <strong>upward-sloping</strong> section both rise. On the <strong>vertical</strong> section — or anywhere on a Classical LRAS — output cannot rise at all and the whole effect falls on the price level.<br />This is why the state of the economy matters more than the size of the stimulus, and why the same policy is right in a slump and wrong at the peak.",
+        "distractors": {
+          "A": "A trade deficit affects the size of the multiplier through import leakage, but it does not determine whether extra demand can be met with extra output.",
+          "C": "The budget position is about how the spending is financed. The supply side decides whether the economy can produce more.",
+          "D": "Both are injections and both shift AD right. What happens next depends on capacity, not on which component moved."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An economy's LRAS curve shifts outward while aggregate demand is unchanged. Compared with before, the new long-run equilibrium has",
+      "options": {
+        "A": "Higher output and a higher price level.",
+        "B": "Higher output and a lower price level.",
+        "C": "Lower output and a higher price level.",
+        "D": "Lower output and a lower price level."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Productive capacity has risen, so the economy can produce more. With demand unchanged, that extra supply has to find buyers, and the way it does so is through a <strong>lower price level</strong>.<br />So the new equilibrium sits at <strong>higher output and lower prices</strong> — the combination every government wants and the reason supply-side improvement is treated as the route to non-inflationary growth.<br />It is worth contrasting with the demand-side case: raising AD alone buys output at the cost of higher prices, while raising LRAS delivers more output <em>and</em> eases them.",
+        "distractors": {
+          "A": "A higher price level accompanies a rise in <em>demand</em>. Here supply has risen against unchanged demand, which pushes prices down.",
+          "C": "Output cannot fall when capacity has increased and demand has not changed.",
+          "D": "The price level does fall, but output rises rather than falling. More capacity means more can be produced."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching both models, aggregate demand rises by the same amount in a Classical economy at Yfe and in a Keynesian economy with large spare capacity. Compared with the Classical case, the Keynesian case gives",
+      "options": {
+        "A": "More output and less inflation.",
+        "B": "More output and more inflation.",
+        "C": "Less output and less inflation.",
+        "D": "Less output and more inflation."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Draw the two side by side and the contrast is stark.<br />In the <strong>Classical</strong> economy, LRAS is vertical at Yfe. AD shifts right, output cannot move, and the entire adjustment lands on the price level — pure inflation, no growth.<br />In the <strong>Keynesian</strong> economy with large spare capacity, the relevant section of LRAS is horizontal. Idle resources are drawn in at unchanged cost, so output rises and the price level barely moves.<br />Same policy, opposite results — which is why the disagreement between the two schools is about far more than the shape of a curve.",
+        "distractors": {
+          "B": "Inflation is <em>lower</em> in the Keynesian case, not higher. Spare capacity is what keeps costs and prices flat as output expands.",
+          "C": "Output is higher in the Keynesian case. In the Classical case it does not rise at all.",
+          "D": "Both halves are wrong: the Keynesian case delivers more output and less inflation than the Classical one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An economist argues that demand-side stimulus is pointless and that only supply-side reform can raise output in the long run. This position follows most directly from",
+      "options": {
+        "A": "The circular flow model of national income.",
+        "B": "The Keynesian view of long-run equilibrium.",
+        "C": "The multiplier process during a recession.",
+        "D": "The vertical LRAS curve of the Classical model."
+      },
+      "answer": "D",
+      "model": {
+        "working": "If LRAS is <strong>vertical</strong> at full employment, then long-run output is fixed by the quantity and quality of the factors of production and nothing else.<br />Shifting AD right along a vertical curve raises the price level and leaves output exactly where it was — so demand management can generate inflation but not growth. The only way to raise output is to move the curve itself, which means supply-side reform: skills, investment, technology, competition, institutions.<br />The argument is a direct consequence of the model's shape, which is why the Classical and Keynesian views lead to such different policy prescriptions.",
+        "distractors": {
+          "A": "The circular flow describes how income moves between agents. It says nothing about whether output is capacity-constrained in the long run.",
+          "B": "The Keynesian view is the opposite: below full employment, demand does determine output, so demand-side stimulus works.",
+          "C": "The multiplier is an argument <em>for</em> the potency of demand-side policy, particularly in a recession when spare capacity is plentiful."
+        }
+      }
+    }
+  ]
+}

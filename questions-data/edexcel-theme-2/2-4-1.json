@@ -1,0 +1,249 @@
+{
+  "board": "edexcel",
+  "boardDir": "edexcel-theme-2",
+  "boardName": "Edexcel Theme 2",
+  "spec": "2.4.1",
+  "slug": "2-4-1-national-income",
+  "title": "National Income",
+  "shortTitle": "National Income",
+  "pageTitle": "National Income and the Circular Flow Questions — Edexcel A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on national income for Edexcel A-Level Economics: the circular flow, the three measurement methods, income and wealth.",
+  "intro": "Eight original multiple-choice questions on national income, written to the style and difficulty of Edexcel Paper 2 Section A. One is a calculation.",
+  "notesTeaser": "Eight original multiple-choice questions on the circular flow of income, injections and withdrawals, and the three ways of measuring national income.",
+  "questions": [
+    {
+      "id": "edexcel-2-4-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A statistician measures a country's national income by the output method, then again by the income method, and then again by the expenditure method. In theory the three totals should",
+      "options": {
+        "A": "All be equal.",
+        "B": "Differ by the rate of inflation.",
+        "C": "Differ by the size of the trade deficit.",
+        "D": "Rise in the order they are taken."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The three methods are three views of the same circular flow, so in principle they measure the same quantity.<br />Everything <strong>produced</strong> is sold, and the money paid for it becomes <strong>income</strong> for whoever owns the factors that made it, which is then <strong>spent</strong>. Output, income and expenditure are therefore the same total counted at three different points in the circle.<br />That identity is what makes the national accounts checkable: if the three estimates diverge badly, something has been measured wrong.",
+        "distractors": {
+          "B": "Inflation affects whether the figures are nominal or real, and it affects all three equally. It does not open a gap between them.",
+          "C": "The trade deficit is already inside the expenditure total, in the (X − M) term. It is not a wedge between the three methods.",
+          "D": "There is no reason for one method to give a systematically larger figure than another. They are estimates of a single quantity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A country adds up the value of everything produced by its farms, factories, shops and service industries over a year. The method being used is the",
+      "options": {
+        "A": "Expenditure method.",
+        "B": "Income method.",
+        "C": "Output method.",
+        "D": "Withdrawals method."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>output method</strong> totals the value of the goods and services produced across every sector of the economy.<br />The care needed with it is avoiding double counting: only <em>final</em> output counts, or the value added at each stage. Counting the steel and then the car built from it would inflate the total.<br />It is the most direct of the three — it measures production itself rather than the income production generates or the spending it attracts.",
+        "distractors": {
+          "A": "The expenditure method totals spending, using C + I + G + (X − M). It measures what is bought rather than what is made.",
+          "B": "The income method totals the wages, rent, interest and profit earned from producing that output.",
+          "D": "There is no withdrawals method. Withdrawals are savings, taxation and imports, which is a different idea entirely."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Income is a flow and wealth is a stock. Of the following, the one that is a stock is",
+      "options": {
+        "A": "A monthly salary.",
+        "B": "A portfolio of shares.",
+        "C": "Annual dividend payments.",
+        "D": "Weekly benefit payments."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>stock</strong> is measured at a point in time; a <strong>flow</strong> is measured over a period.<br />A portfolio of shares has a value on any given day, without reference to a period — that is a stock, and it is <strong>wealth</strong>. It also generates income, which is the giveaway: wealth is the asset, income is what the asset pays out.<br />Notice that all three wrong options carry a period in their description — monthly, annual, weekly. Anything that needs a time period to make sense is a flow.",
+        "distractors": {
+          "A": "A salary is earned over a month, so it is a flow. It is the classic example of income.",
+          "C": "Dividends are received over a year, making them a flow. The shares that pay them are the stock.",
+          "D": "Benefits are paid weekly, so again a flow. They form part of disposable income."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the injections into and the withdrawals from an economy's circular flow over one year.<br />Using Table 1, for national income to be in equilibrium, injections would have to rise by",
+      "table": {
+        "caption": "Table 1: Injections and withdrawals, £bn",
+        "head": [
+          "Flow",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Investment",
+            "180"
+          ],
+          [
+            "Government spending",
+            "310"
+          ],
+          [
+            "Exports",
+            "240"
+          ],
+          [
+            "Savings",
+            "200"
+          ],
+          [
+            "Taxation",
+            "330"
+          ],
+          [
+            "Imports",
+            "265"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£65bn",
+        "B": "£130bn",
+        "C": "£730bn",
+        "D": "£795bn"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Equilibrium in the circular flow requires <strong>J = W</strong>.<br />Injections: £180bn + £310bn + £240bn = <strong>£730bn</strong>.<br />Withdrawals: £200bn + £330bn + £265bn = <strong>£795bn</strong>.<br />Withdrawals exceed injections by £795bn − £730bn = <strong>£65bn</strong>, so injections must rise by that amount to close the gap.<br />As things stand more is leaking out than is coming in, so the circular flow is contracting and national income is falling.",
+        "distractors": {
+          "B": "£130bn is twice the gap. Raising injections by the shortfall once is enough — the withdrawals side does not also have to move.",
+          "C": "£730bn is total injections. The question asks by how much they must <em>rise</em>, not what they currently are.",
+          "D": "£795bn is total withdrawals. Injections have to reach that figure, but they are already at £730bn, so the increase needed is the difference."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In an economy, savings, taxation and imports together exceed investment, government spending and exports. The circular flow of income will",
+      "options": {
+        "A": "Expand, as more enters the flow than leaves it.",
+        "B": "Reach equilibrium immediately at the new level.",
+        "C": "Remain at its current size indefinitely.",
+        "D": "Shrink, as more leaves the flow than enters it."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The first job is classification. Savings, taxation and imports are the three <strong>withdrawals</strong>; investment, government spending and exports are the three <strong>injections</strong>.<br />So the stem says W &gt; J. More money is leaking out of the circular flow than is being added to it, and the flow <strong>contracts</strong> — national income falls, and the economy moves towards recession.<br />Learning the two lists is what makes questions like this quick: <strong>S, T, M</strong> out and <strong>I, G, X</strong> in.",
+        "distractors": {
+          "A": "This is the case where injections exceed withdrawals, which is the reverse of what the stem describes.",
+          "B": "Equilibrium requires J = W, and here they are unequal. The flow has to change size before the two can meet.",
+          "C": "An imbalance between the two sides is precisely what changes the size of the flow. It stays constant only when they are equal."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In the simplest circular flow model, containing only households and firms, firms pay out wages, rent, interest and profit. This is best described as",
+      "options": {
+        "A": "A real flow from firms to households.",
+        "B": "A real flow from households to firms.",
+        "C": "A money flow from firms to households.",
+        "D": "A money flow from households to firms."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The model has two kinds of flow running in opposite directions.<br /><strong>Real flows</strong> are the things themselves: households supply land, labour, capital and enterprise to firms, and firms supply goods and services back.<br /><strong>Money flows</strong> pay for them: firms pay income to households for the factors, and households pay consumer expenditure to firms for the goods.<br />Wages, rent, interest and profit are money, and they move from firms to households — the payment for the factors of production.",
+        "distractors": {
+          "A": "Real flows are goods, services and factors of production, not payments. Money is not a real flow.",
+          "B": "Both halves are wrong: this is money rather than a real flow, and it travels from firms to households.",
+          "D": "The direction is reversed. Households pay firms as <em>consumer expenditure</em>; firms pay households as income."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four money flows in an economy.<br />Using Table 1, the only flow that is an injection into the circular flow is",
+      "table": {
+        "caption": "Table 1: Four money flows",
+        "head": [
+          "",
+          "Flow"
+        ],
+        "rows": [
+          [
+            "Flow 1",
+            "Households pay income tax"
+          ],
+          [
+            "Flow 2",
+            "A firm buys new machinery"
+          ],
+          [
+            "Flow 3",
+            "Households buy imported cars"
+          ],
+          [
+            "Flow 4",
+            "Households put money into pension funds"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Flow 1.",
+        "B": "Flow 2.",
+        "C": "Flow 3.",
+        "D": "Flow 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Injections</strong> are additions of new spending into the circular flow: investment, government spending and exports.<br />A firm buying new machinery is <strong>investment</strong> — spending by firms on capital goods, and the only injection here.<br />The other three are all <strong>withdrawals</strong>: income tax is taxation, buying imported cars is imports, and pension contributions are savings. Each is income not spent on domestic output, so each reduces the size of the flow.",
+        "distractors": {
+          "A": "Income tax is <strong>taxation</strong>, a withdrawal that goes to the government.",
+          "C": "Buying imported cars is <strong>imports</strong>. The money leaves the domestic circular flow and goes overseas.",
+          "D": "Money placed in pension funds is <strong>saving</strong> — income not spent, leaking into the financial sector."
+        }
+      }
+    },
+    {
+      "id": "edexcel-2-4-1-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "In practice a country's three measures of national income rarely give exactly the same figure. The best explanation is that each measure",
+      "options": {
+        "A": "Is calculated for a different time period.",
+        "B": "Is drawn from different and incomplete data.",
+        "C": "Measures a fundamentally different quantity.",
+        "D": "Uses a different rate of inflation to deflate it."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The three <em>should</em> be equal in theory, and the reason they are not is entirely practical.<br />Each is built from a different source: the output measure from production surveys, the income measure from tax records and company accounts, the expenditure measure from retail and trade data. Every one of those sources is a sample, every one misses the informal economy, and each misses a different part of it.<br />The published discrepancy is a measure of that imprecision rather than of any real economic gap — which is why statistical agencies report it openly instead of forcing the numbers to agree.",
+        "distractors": {
+          "A": "All three are compiled for the same year. A timing difference would be a straightforward error rather than an unavoidable one.",
+          "C": "They measure the same quantity by three different routes, which is exactly why they ought to agree.",
+          "D": "The discrepancy shows up in the nominal figures too, before any adjustment for inflation is made."
+        }
+      }
+    }
+  ]
+}

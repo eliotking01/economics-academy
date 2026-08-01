@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 113 topics, 878 questions. AQA is complete, Edexcel Theme 1 is complete,
-and Theme 2 units 2.1 to 2.3 are done. 53 topics remain.**
+**Live: 117 topics, 909 questions. AQA is complete, Edexcel Theme 1 is complete,
+and Theme 2 units 2.1 to 2.4 are done. 49 topics remain.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -360,26 +360,26 @@ Useful things established while building, worth not rediscovering.
 | Theme | Topics left | Questions left |
 | --- | --- | --- |
 | Theme 1 | 0 — **complete**, 22 topics and 163 questions | — |
-| Theme 2 | 12 (units 2.4 to 2.6) | ~90 |
+| Theme 2 | 8 (units 2.5 and 2.6) | ~60 |
 | Theme 3 | 20 | 157 |
 | Theme 4 | 21 | 163 |
 
-**Next batch: Theme 2 unit 2.4 (National Income)** — 2.4.1 national income,
-2.4.2 injections and withdrawals, 2.4.3 equilibrium levels of real national
-output, 2.4.4 the multiplier. Four topics.
+**Next batch: Theme 2 units 2.5 and 2.6** — 2.5.1 causes of growth, 2.5.2 output
+gaps, 2.5.3 the trade cycle, 2.5.4 the impact of economic growth, 2.6.1 possible
+macroeconomic objectives, 2.6.2 demand-side policies, 2.6.3 supply-side policies,
+2.6.4 conflicts between objectives and policies. Eight topics, which finishes
+Theme 2.
 
-**The multiplier is the tightest spot on the whole specification.** AQA 2.2.4
-carries **ten** questions on it including five calculations, and AQA 2.2.1
-covers the circular flow with eight more. Every standard multiplier archetype is
-taken: 1/MPS, 1/MPW, the multiplier from a table of propensities, the final rise
-in income from an injection, the multiplier implied by an injection and an
-outcome, and two economies compared. Do the twin audit before writing a line,
-and expect to need genuinely different framings rather than new numbers.
+**Twins to audit:** AQA 2.3.1 (growth and the economic cycle, including output
+gaps), AQA 2.1.1 (objectives of government policy), AQA 2.3.4 (policy conflicts
+and the Phillips curve), AQA 2.5.1 (fiscal policy) and AQA 2.5.2 (supply-side
+policies). That is roughly 40 questions over the same ground.
 
-**`2-4-1-national-income` is on the N-Q9 list** — it promises the three
-approaches to measuring GDP and never covers them. Per the site owner's
-instruction, write the questions anyway and record it, as unit 2.3 did for
-cost-push.
+**Two pages on the corrected N-Q9 list fall in this batch.** `2-5-3-trade-cycle`
+covers boom and recession but not slump or recovery, and `2-5-4` never mentions
+inequality or sustainable development. Per the site owner's instruction, write
+those questions anyway. Note that `2-5-1` and `2-4-1` were **mis-flagged** and
+are fine — see the N-Q9 correction in `REVIEW-NOTES.md`.
 
 **The twins for the rest of Theme 2 are AQA macro, and the overlap is severe.**
 Unit 2.1 alone collided with AQA 2.1.2, 2.1.3, 2.1.4, 2.3.2, 2.3.3 and 2.6.3.
@@ -988,6 +988,79 @@ notes' own list of causes, the notes' own order of interventions, consistent
 over/under and expansion/contraction grids) rather than alphabetically and then
 patched. That is what §1 has recommended all along, and this is the first batch
 to follow it from the start.
+
+### Batch 17 — Edexcel Theme 2, unit 2.4 (2026-08-01)
+
+4 topics, 31 questions. **National Income** — the circular flow, injections and
+withdrawals, macroeconomic equilibrium and the multiplier.
+
+All 31 re-derived from the stem alone with **0 mismatches**; 24 arithmetic
+checks, including the internal consistency of the propensity identities.
+
+**Originality finished clean — zero shared 8-word runs against either past-paper
+corpus and zero against the 878-question bank.** Three stems needed rewriting
+first, and one of them was the collision this batch was warned about:
+
+- **2.4.4 Q1 was the same archetype as AQA 2.2.4 Q8 in near-identical wording.**
+  Both opened "In an economy the marginal propensity to consume/save is 0.xx, the
+  marginal propensity to tax is 0.xx and the marginal propensity to import is
+  0.xx". The questions differ in what is given and what is asked — AQA asks for
+  MPC, ours for MPW — but the sentence was shared almost word for word, and the
+  run also matched the AQA papers. Rebuilt around a household receiving an extra
+  £100 and splitting it in pounds, which is both distinct and closer to how the
+  Edexcel page presents it.
+- 2.4.1 Q6 shared "in the basic two-sector circular flow model" with AQA 2.2.1
+  Q3; reworded to "the simplest circular flow model, containing only households
+  and firms".
+- 2.4.2 Q2 shared "a withdrawal from the circular flow of income" with both the
+  Edexcel papers and AQA 2.2.1 Q1. Reworded to use **leakage**, which is the
+  Edexcel page's own alternative term for the same thing.
+
+**The multiplier needed different framings, not different numbers.** AQA 2.2.4's
+ten questions take every standard archetype: 1/MPS, 1/MPW, the multiplier from a
+propensities table, the final rise from an injection, the multiplier implied by
+an injection and an outcome, and two economies compared. What was left, and what
+this set uses:
+
+- **Work backwards from the target.** Given the multiplier and the desired rise
+  in GDP, find the injection needed. AQA always runs it forwards.
+- **The single-leakage trap, stated in the stem.** The Edexcel page makes a point
+  of it — using MPS alone gives 10 instead of 2.5. Q2 hands the student the wrong
+  answer of 20.0 and asks for the right one, with each distractor being a
+  different single leakage.
+- **The two formulas agreeing.** Q5 asks what 1 ÷ (1 − MPC) gives when 1 ÷ MPW
+  has already given 2.5. The answer is that they are the same equation, which is
+  a genuinely useful thing to know and which AQA never tests.
+- **The multiplier in reverse.** Q9 cuts government spending by £2bn with a
+  multiplier of 3. Students routinely treat the multiplier as applying only to
+  increases, and nothing in the bank tested it.
+- **Confidence as a determinant**, which Edexcel lists and AQA does not.
+
+**Where else Edexcel differs:**
+
+- The **output method** of measuring national income. AQA uses the expenditure
+  method and, in the Edexcel 2.1.1 set, the income method — the output method was
+  still free.
+- The **financial sector as the link between saving and investment**, which the
+  Edexcel page draws out explicitly by naming the source or destination of every
+  flow. 2.4.2 Q3 turns on it.
+- **An LRAS shift lowering the price level** while raising output (2.4.3 Q5). The
+  Edexcel page states it in Figures 5 and 6; it is the cleanest statement of why
+  supply-side improvement is preferred to demand-side stimulus.
+
+| | |
+| --- | --- |
+| Answer letters | A 8, B 9, C 9, D 5 (even would be 7.75) |
+| Skills | applied-reasoning 18, calculation 6, definition-in-context 5, data-table 2 |
+| Difficulty | foundation 5, standard 22, stretch 4 |
+| Sketch to solve | 1 |
+
+`calculation` at 19% is the second highest of any batch, behind unit 2.1's 23%.
+The multiplier and the circular flow identity both support real arithmetic, and
+the J = W condition gives two good "find the missing component" items that need
+no table at all.
+
+---
 
 ### Batch 16 — Edexcel Theme 2 unit 2.3, plus a retrofit pass (2026-08-01)
 

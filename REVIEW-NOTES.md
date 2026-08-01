@@ -887,3 +887,45 @@ to measuring GDP), `2-5-1-causes-of-growth` (demand-side causes),
 `2-5-3-trade-cycle` (recovery phases), `2-5-4-the-impact-of-economic-growth`
 (inequality, sustainable development). These will be covered the same way when
 units 2.4 and 2.5 are written.
+
+## N-Q9 correction — three of the flagged pages were mis-flagged
+
+**2026-08-01.** Re-checking the N-Q9 list against synonyms, rather than only the
+exact wording used in each spec alert, shows the original audit was too strict.
+**The list should be 9 pages, not 11**, and one remaining entry is narrower than
+stated. The fault was mine: the audit searched for the words the spec alert uses
+and did not allow for the body using a different term for the same concept.
+
+**`2-4-1-national-income` — not a defect. Remove from the list.** The alert
+promises "the three approaches to measuring GDP" and the body delivers all
+three, under the heading *National Income: Key Concepts*, as the **Output
+Method**, **Income Method** and **Expenditure Method**. The audit searched for
+"approach" and the page says "method".
+
+**`2-5-1-causes-of-growth` — not a defect. Remove from the list.** The alert
+promises "demand-side causes of growth" and the body covers them under the
+heading *Short-Run Economic Growth*, worked through an AD shift from AD1 to AD2.
+The concept is there; the label "demand-side" is not.
+
+**`2-5-3-trade-cycle` — still a defect, but narrower than recorded.** The alert
+promises "the boom, recession, slump and recovery phases and the conditions
+typical of each". The body covers **boom and recession** in some detail, under
+*The Stages of the Trade Cycle* and *Characteristics of Booms and Recessions*.
+**Slump and recovery are named in the alert and nowhere else.** So it is two
+missing phases rather than the whole four-phase cycle. The earlier "expansion"
+match was spurious — it came from the phrase *expansionary policies*.
+
+**A related finding, and a more useful one.** `2-1-1-economic-growth` promises
+actual against potential growth and does not deliver it — that entry stands. But
+the distinction **is taught on the site**, on `2-5-1-causes-of-growth`, which
+opens with a section headed *Actual vs. Potential Growth*. So this is not missing
+content but content on an unexpected page, and the cheapest fix is a
+cross-reference from 2.1.1 rather than writing anything new.
+
+**Corrected list, 9 pages:** 1.3.4, 1.4.2, 2.1.1 (cross-reference only), 2.2.2,
+2.2.3, 2.2.5, 2.3.2, 2.5.3 (slump and recovery only), 2.5.4.
+
+**Lesson for auditing Themes 3 and 4.** Match on the *concept* and its common
+synonyms, not on the spec alert's own wording, and read the section headings
+before concluding anything is missing. An automated first pass is still worth
+running — it found the seven real cases — but every hit needs a look at the page.
