@@ -1,0 +1,273 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.6.3",
+  "slug": "2-6-3-the-balance-of-payments",
+  "title": "The Balance of Payments",
+  "shortTitle": "The Balance of Payments",
+  "pageTitle": "Balance of Payments Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Nine free multiple-choice questions on the balance of payments for AQA A-Level Economics: the current account, causes of deficits and the policies to correct them.",
+  "intro": "Nine original multiple-choice questions on the balance of payments, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Nine original multiple-choice questions on the structure of the balance of payments, the causes of a current account deficit and the policies used to reduce it, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-6-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Trade in goods and services, primary income and secondary income are together recorded in the",
+      "options": {
+        "A": "Capital account.",
+        "B": "Current account.",
+        "C": "Financial account.",
+        "D": "Reserve account."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The <strong>current account</strong> has exactly these four components. It is the part of the balance of payments that records income earned and spent across borders in the ordinary course of trade and transfers.",
+        "distractors": {
+          "A": "The capital account records relatively minor transfers of ownership, such as debt forgiveness and transfers of fixed assets.",
+          "C": "The financial account records flows of investment — foreign direct investment, portfolio investment and changes in reserves.",
+          "D": "Reserve assets are a component within the financial account, not an account in their own right."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a country's international transactions for one year. Credits are inflows and debits are outflows.<br />Using Table 1, the current account balance is",
+      "table": {
+        "caption": "Table 1: International transactions",
+        "head": [
+          "Component",
+          "Credits",
+          "Debits"
+        ],
+        "rows": [
+          [
+            "Trade in goods",
+            "£240bn",
+            "£350bn"
+          ],
+          [
+            "Trade in services",
+            "£180bn",
+            "£105bn"
+          ],
+          [
+            "Primary income",
+            "£60bn",
+            "£45bn"
+          ],
+          [
+            "Secondary income",
+            "£15bn",
+            "£35bn"
+          ]
+        ]
+      },
+      "options": {
+        "A": "−£110bn",
+        "B": "−£40bn",
+        "C": "−£20bn",
+        "D": "+£40bn"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Net each component first, then add the four together.<br />Goods: 240 − 350 = <strong>−£110bn</strong>.<br />Services: 180 − 105 = <strong>+£75bn</strong>.<br />Primary income: 60 − 45 = <strong>+£15bn</strong>.<br />Secondary income: 15 − 35 = <strong>−£20bn</strong>.<br />Current account = −110 + 75 + 15 − 20 = <strong>−£40bn</strong>.<br />Checking the other way gives the same answer: total credits of £495bn less total debits of £535bn is −£40bn.",
+        "distractors": {
+          "A": "−£110bn is the balance on trade in goods alone. Quoting it as the current account ignores a large services surplus and overstates the deficit nearly threefold.",
+          "C": "−£20bn leaves secondary income out: −110 + 75 + 15. Transfers such as aid and remittances are part of the current account.",
+          "D": "+£40bn is the right size with the sign reversed, which comes from subtracting credits from debits instead of the other way round."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country runs a large deficit on its current account. It follows that",
+      "options": {
+        "A": "It must run a surplus on its capital and financial accounts.",
+        "B": "Its capital and financial accounts must also be in deficit.",
+        "C": "Its currency must be fixed against other currencies.",
+        "D": "Its exports must exceed its imports."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The balance of payments must balance, because every transaction is recorded twice. A country buying more from abroad than it sells must be financing the difference — by borrowing, by selling assets to foreign investors, or by running down its reserves.<br />All of those are recorded as <strong>credits on the capital and financial accounts</strong>. So a current account deficit is matched by a surplus there, of the same size.",
+        "distractors": {
+          "B": "If both were in deficit the balance of payments would not balance, which is impossible by construction.",
+          "C": "Deficits occur under floating and fixed systems alike. The exchange rate regime affects how a deficit adjusts, not whether it can exist.",
+          "D": "Exports exceeding imports would tend to produce a surplus, not a deficit."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country's currency appreciates strongly and remains high for several years. The most likely effect on its current account is that it",
+      "options": {
+        "A": "Improves, because exports become cheaper abroad.",
+        "B": "Improves, because imports become dearer at home.",
+        "C": "Worsens, because exports become dearer abroad.",
+        "D": "Worsens, because imports become dearer at home."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A stronger currency means each unit buys more foreign currency. Domestic goods priced in the home currency therefore cost overseas buyers <strong>more</strong>, so exports become less competitive and export volumes fall.<br />At the same time imports become cheaper at home, so import volumes rise. Both effects push the current account towards deficit. This is one of the standard causes of a persistent deficit, alongside weak competitiveness and strong domestic demand.",
+        "distractors": {
+          "A": "An appreciation makes exports dearer abroad, not cheaper. That is a depreciation.",
+          "B": "Imports become cheaper under an appreciation, and cheaper imports worsen the balance rather than improving it.",
+          "D": "The direction of the effect is right but the reason is wrong: imports become cheaper, and it is that which pulls imports in."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises tariffs on imported goods in order to reduce a current account deficit. This is best described as",
+      "options": {
+        "A": "A monetary policy.",
+        "B": "A supply-side policy.",
+        "C": "An expenditure-reducing policy.",
+        "D": "An expenditure-switching policy."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Expenditure-switching</strong> policies aim to shift demand away from imports and towards domestically produced goods, without necessarily reducing total spending. Tariffs, quotas and devaluation all work this way.<br />The standard objections are retaliation from trading partners and higher prices for domestic consumers.",
+        "distractors": {
+          "A": "Monetary policy works through interest rates and the money supply. A tariff is a tax on imports.",
+          "B": "Supply-side policy raises the competitiveness of domestic industry over the long run, through investment in skills, infrastructure and innovation.",
+          "C": "Expenditure-reducing policies cut total demand — through higher taxes or higher interest rates — so that imports fall along with everything else. A tariff redirects spending rather than shrinking it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government raises income tax and cuts its own spending, partly in order to reduce a current account deficit. This works by",
+      "options": {
+        "A": "Increasing the country's foreign currency reserves.",
+        "B": "Making imports relatively dearer than domestic goods.",
+        "C": "Reducing domestic demand, so fewer imports are bought.",
+        "D": "Raising the competitiveness of domestic exporters."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is an <strong>expenditure-reducing</strong> policy. Contractionary fiscal policy lowers households' disposable income and total demand in the economy. Since a share of all spending goes on imports, lower spending means fewer imports and a narrower deficit.<br />The cost is that the policy works by making the economy weaker: growth slows and unemployment rises. That conflict is why it is rarely used for this purpose alone.",
+        "distractors": {
+          "A": "Reserves are affected by central bank intervention in currency markets, not by fiscal policy.",
+          "B": "Changing relative prices between imports and domestic goods is expenditure <em>switching</em>, achieved by tariffs or a devaluation.",
+          "D": "Competitiveness is raised by supply-side measures over the long run. Higher taxes do not make exporters more competitive."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government proposes investment in education, training and infrastructure as the route to reducing a current account deficit. The main drawback of this approach is that it",
+      "options": {
+        "A": "Cannot affect the competitiveness of exports.",
+        "B": "Provokes retaliation from trading partners.",
+        "C": "Raises the price of imported goods.",
+        "D": "Takes many years to have an effect."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Supply-side measures address the root cause — weak competitiveness — rather than the symptom, and they do not invite retaliation or raise consumer prices. On the economics they are the strongest of the three approaches.<br />The problem is <strong>time</strong>. Better-trained workers and new infrastructure take a decade to change what an economy can produce and sell, so a government facing an urgent deficit cannot rely on them alone.",
+        "distractors": {
+          "A": "Raising competitiveness is exactly what these measures do, by improving productivity and the quality of what is produced.",
+          "B": "Retaliation is a risk of protectionist expenditure-switching policies. Investing in your own workforce provokes none.",
+          "C": "Tariffs raise import prices. Investment in skills and infrastructure does not."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the four components of a country's current account in two consecutive years.<br />Using Table 1, the component mainly responsible for the move into deficit is",
+      "table": {
+        "caption": "Table 1: Current account components, £bn",
+        "head": [
+          "Component",
+          "Year 1",
+          "Year 2"
+        ],
+        "rows": [
+          [
+            "Trade in goods",
+            "−80",
+            "−140"
+          ],
+          [
+            "Trade in services",
+            "+70",
+            "+72"
+          ],
+          [
+            "Primary income",
+            "+20",
+            "+19"
+          ],
+          [
+            "Secondary income",
+            "−10",
+            "−11"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Primary income.",
+        "B": "Secondary income.",
+        "C": "Trade in goods.",
+        "D": "Trade in services."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The current account moved from balance to a £60bn deficit, so look for the component that changed by about £60bn.<br />Goods: −80 to −140, a deterioration of <strong>£60bn</strong>.<br />Services: +70 to +72, an improvement of £2bn.<br />Primary income: +20 to +19, and secondary income: −10 to −11, each a change of just £1bn.<br />Trade in goods accounts for essentially the whole movement. The size of a component's <em>balance</em> matters less than how much it has <em>changed</em>.",
+        "distractors": {
+          "A": "Primary income worsened by only £1bn. It is in surplus in both years and barely moved.",
+          "B": "Secondary income worsened by £1bn. It is the smallest component and cannot explain a £60bn swing.",
+          "D": "Services actually <em>improved</em> by £2bn, partly offsetting the deterioration rather than causing it."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-3-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country runs a large current account surplus for many years. A genuine economic concern is that it",
+      "options": {
+        "A": "Becomes unable to finance its imports.",
+        "B": "Grows over-reliant on demand from abroad.",
+        "C": "Must borrow heavily from abroad to continue.",
+        "D": "Will suffer a shortage of foreign currency."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Surpluses are often assumed to be straightforwardly good, but a persistent one means growth is being driven by <strong>external demand</strong> rather than domestic consumption and investment. That leaves the economy badly exposed to a global recession or a shift in trading partners' spending.<br />A large surplus also adds to aggregate demand and can generate inflationary pressure at home, and it can strain relations with deficit countries.",
+        "distractors": {
+          "A": "A surplus country earns more foreign currency than it spends, so financing imports is precisely what it can do comfortably.",
+          "C": "Borrowing from abroad is the position of a <em>deficit</em> country, which must finance the gap through the financial account.",
+          "D": "A shortage of foreign currency is a deficit country's problem. A surplus country is accumulating foreign currency."
+        }
+      }
+    }
+  ]
+}

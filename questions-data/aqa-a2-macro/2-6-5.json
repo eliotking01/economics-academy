@@ -1,0 +1,216 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.6.5",
+  "slug": "2-6-5-economic-growth-and-development",
+  "title": "Economic Growth and Development",
+  "shortTitle": "Growth and Development",
+  "pageTitle": "Economic Development Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on economic development for AQA A-Level Economics: growth versus development, the HDI, and the barriers to development.",
+  "intro": "Eight original multiple-choice questions on economic growth and development, written to the style and difficulty of AQA Paper 3 Section A.",
+  "notesTeaser": "Eight original multiple-choice questions on growth versus development, the Human Development Index and the barriers to development, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-6-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Economic development differs from economic growth in that development",
+      "options": {
+        "A": "Also covers health, education and living standards.",
+        "B": "Always follows automatically from economic growth.",
+        "C": "Is measured only by real GDP per capita.",
+        "D": "Is only relevant to developed economies."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Economic growth is the narrow measure: a rise in real GDP. <strong>Development</strong> is broader, taking in welfare and quality of life — health, education, equality and the non-material things income alone does not capture.<br />The distinction matters because growth can occur without development, if the extra income is concentrated among a few or spent in ways that do not improve most people's lives.",
+        "distractors": {
+          "B": "Growth makes development possible but does not guarantee it. Whether it delivers depends on how the gains are distributed and used.",
+          "C": "Real GDP per capita measures <em>growth</em>. Development uses broader indicators, of which HDI is the best known.",
+          "D": "Development applies everywhere. Health, education and inequality are live issues in rich and poor countries alike."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Human Development Index combines three equally weighted elements. They are",
+      "options": {
+        "A": "Health, income and inequality.",
+        "B": "Income, education and sustainability.",
+        "C": "Income, inequality and life expectancy.",
+        "D": "Life expectancy, schooling and income."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The HDI's three dimensions are <strong>health</strong>, measured by life expectancy at birth; <strong>education</strong>, measured by mean and expected years of schooling; and <strong>income</strong>, measured by real GNI per capita at purchasing power parity.<br />PPP is used so that differences in the cost of living do not distort the comparison. Scores run from 0 to 1.",
+        "distractors": {
+          "A": "Health and income belong, but inequality does not. That omission is the HDI's best-known limitation, and the reason the inequality-adjusted HDI exists.",
+          "B": "Income and education belong, but sustainability is not included — another recognised weakness of the measure.",
+          "C": "Life expectancy and income belong, but inequality is not one of the three, and education is missing."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries record the same HDI score, but income is distributed far more evenly in one than in the other. This illustrates that HDI",
+      "options": {
+        "A": "Cannot be compared across countries.",
+        "B": "Hides inequality within a country.",
+        "C": "Ignores life expectancy entirely.",
+        "D": "Measures only income."
+      },
+      "answer": "B",
+      "model": {
+        "working": "HDI averages across a population, and an average hides its distribution. Two countries can reach the same score with very different degrees of inequality in health, education and income.<br />This is why the <strong>inequality-adjusted HDI</strong> was developed, discounting the score according to how unevenly each dimension is spread.",
+        "distractors": {
+          "A": "Enabling international comparison is one of HDI's main strengths, and the reason it uses PPP for income.",
+          "C": "Life expectancy is one of the three components — it is the health dimension.",
+          "D": "Measuring more than income is the whole point of a composite index."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A developing economy depends heavily on exporting a single agricultural commodity. The most likely consequence is",
+      "options": {
+        "A": "A permanent current account surplus.",
+        "B": "Rapid growth in manufacturing exports.",
+        "C": "Stable export revenues from year to year.",
+        "D": "Unstable export revenues."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Primary product prices are notoriously volatile, because supply depends on harvests and weather while demand for many commodities is price inelastic. A small shift in either moves the price a long way.<br />An economy whose export earnings rest on one such commodity therefore faces <strong>unpredictable revenue</strong>, which makes planning government spending and investment very difficult. Primary product dependency also limits the ability to add value, and a commodity boom can push up the currency and damage other exports — the Dutch disease.",
+        "distractors": {
+          "A": "Volatile earnings can produce a deficit as easily as a surplus, and there is nothing permanent about either.",
+          "B": "Dependency on primary products is characterised by the <em>absence</em> of a developed manufacturing sector.",
+          "C": "Stability is exactly what such an economy lacks."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The Harrod-Domar model suggests that a developing economy will grow slowly if it has",
+      "options": {
+        "A": "A floating exchange rate system.",
+        "B": "A high savings rate that limits consumption.",
+        "C": "High levels of foreign direct investment.",
+        "D": "Too little saving to finance investment."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The Harrod-Domar model links growth directly to saving and investment. Saving provides the funds for investment in capital, investment raises productivity, and higher productivity delivers growth.<br />Where incomes are so low that households can save almost nothing, there is a <strong>savings gap</strong>: not enough domestic saving to fund the investment growth requires. This is a standard argument for foreign aid and foreign direct investment as ways of filling that gap.",
+        "distractors": {
+          "A": "The exchange rate system affects trade and stability. It plays no part in this model.",
+          "B": "The model treats a high savings rate as the route to <em>faster</em> growth, since it makes more investment possible.",
+          "C": "Inward FDI helps fill the savings gap, so it supports growth rather than holding it back."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A developing country's currency becomes overvalued during a boom in its oil exports, leaving its other export industries uncompetitive. This is best described as",
+      "options": {
+        "A": "Capital flight.",
+        "B": "Dutch disease.",
+        "C": "The savings gap.",
+        "D": "Trade diversion."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Dutch disease</strong> is the paradox that a natural resource boom can leave an economy worse off overall. Strong demand for the resource means strong demand for the currency, which appreciates — and at that stronger exchange rate, manufacturing and agricultural exports become uncompetitive and decline.<br />The economy ends up even more dependent on the single commodity, and so more exposed when its price falls.",
+        "distractors": {
+          "A": "Capital flight is financial assets leaving the country rapidly, usually because of instability. Here capital is flowing in.",
+          "C": "The savings gap is a shortage of domestic saving to fund investment. This is about the exchange rate and competitiveness.",
+          "D": "Trade diversion happens when a trading bloc's external tariff shifts trade to a higher-cost member. No bloc is involved."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows three indicators for two countries with identical income per head.<br />Using Table 1, it follows that",
+      "table": {
+        "caption": "Table 1: Development indicators",
+        "head": [
+          "Indicator",
+          "Country P",
+          "Country Q"
+        ],
+        "rows": [
+          [
+            "Real GNI per capita (PPP)",
+            "$12,000",
+            "$12,000"
+          ],
+          [
+            "Life expectancy at birth",
+            "61 years",
+            "78 years"
+          ],
+          [
+            "Mean years of schooling",
+            "5",
+            "11"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Both countries have the same level of development.",
+        "B": "Country P is likely to have the higher HDI.",
+        "C": "Country Q is likely to have the higher HDI.",
+        "D": "HDI cannot be calculated without inequality data."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The income dimension is identical, at $12,000 for both, so it cannot separate them. The other two HDI dimensions can.<br />Country Q has both a higher life expectancy — 78 years against 61 — and more than twice the mean years of schooling. Since the three dimensions are <strong>equally weighted</strong>, Q scores higher on two of three and equal on the third, so <strong>Country Q</strong> has the higher HDI.<br />This is the clearest demonstration that income alone does not measure development.",
+        "distractors": {
+          "A": "Equal income per head does not mean equal development. The two countries differ sharply on health and education.",
+          "B": "Country P is behind on both life expectancy and schooling, and level on income, so it cannot score higher.",
+          "D": "The standard HDI needs no inequality data — it uses health, education and income. It is the inequality-adjusted HDI that requires more."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-5-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A developing country receives large amounts of official development assistance in the form of soft loans. A genuine economic concern is that this may",
+      "options": {
+        "A": "Create dependency and add to the debt burden.",
+        "B": "Improve infrastructure and healthcare provision.",
+        "C": "Reduce the country's foreign currency gap.",
+        "D": "Remove the need for domestic saving entirely."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Soft loans are still loans. They have to be repaid, so they add to a debt burden that may already be diverting resources from productive investment into debt servicing — and repayments in foreign currency worsen the foreign currency gap.<br />The deeper worry is <strong>dependency</strong>: aid that arrives year after year can substitute for building domestic institutions, tax capacity and saving, so the underlying constraints on development are never addressed. Where corruption is a problem, the money may not reach its intended use at all.",
+        "distractors": {
+          "B": "Better infrastructure and healthcare are what aid is <em>for</em>. That is a hoped-for benefit, not a concern.",
+          "C": "Narrowing the foreign currency gap is another intended benefit of aid inflows, at least while the money is arriving.",
+          "D": "Aid does not remove the need for domestic saving — the concern is precisely that it may discourage the effort to build it."
+        }
+      }
+    }
+  ]
+}

@@ -5,8 +5,8 @@ standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
-**Live: 74 topics, 567 questions. AQA Microeconomics is complete; AQA
-Macroeconomics units 2.1 to 2.5 are done, leaving only 2.6.**
+**Live: 79 topics, 610 questions. AQA is complete — both Microeconomics and
+Macroeconomics. Only Edexcel remains.**
 Target: 166 topics, ~1,272 questions.
 
 **Branch:** `feature/topic-questions`, branched from `main`.
@@ -311,19 +311,9 @@ Useful things established while building, worth not rediscovering.
 
 ## Remaining work
 
-### AQA Macroeconomics — 5 topics, 43 questions still to write
-
-Units 2.1 to 2.5 are done (batches 6 to 10). Only unit 2.6 remains:
-
-| Unit | Topics and planned counts |
-| --- | --- |
-| 2.6 | 2.6.1 (7) · 2.6.2 (9) · 2.6.3 (9) · 2.6.4 (10) · 2.6.5 (8) — 43 |
-
-Expect the **calculation share to recover here**: index numbers, real vs
-nominal, the multiplier and exchange rates are all genuinely arithmetic. Unit
-2.1 confirmed this — it came in at 24% `calculation` against a ~15% target.
-
 ### Edexcel — 87 topics, 662 questions planned
+
+**This is all that is left.** AQA is finished.
 
 | Theme | Topics | Questions |
 | --- | --- | --- |
@@ -348,6 +338,9 @@ if in doubt — the guide's rule is that concision beats coverage.
   are built.**
 - **Hub and board index density.** Both list only what is live. They fill out
   per batch; no action needed.
+- **Nav sub-menu.** Both AQA board indexes now exist, but the four Edexcel ones
+  do not, so the two-level dropdown still cannot be restored. See the fuller
+  note below; revisit once Edexcel Theme 1 is live.
 - **Skill mix across AQA micro.** `applied-reasoning` finished at 64% against a
   ~40% target and `calculation` at 6% against ~15%. This is a property of the
   specification — units 1.1, 1.2, 1.5, 1.7 and 1.8 are conceptual almost
@@ -682,9 +675,78 @@ constraint on macro rather than originality against the papers:
 | Difficulty | foundation 2, standard 13, stretch 2 |
 | Sketch to solve | 1 |
 
+### Batch 11 — AQA macro 2.6 (2026-08-01)
+
+5 topics, 43 questions. **Completes AQA Macroeconomics: 25 of 25 topics and 209
+questions, exactly the figure planned.**
+
+All 43 re-derived from the stem alone with **0 mismatches**; every opportunity
+cost, current account balance, elasticity sum and exchange rate conversion
+recomputed, including all distractor values.
+
+**Originality clean at every n-gram length again**, confirming batch 10's
+finding rather than repeating a fluke. Two batches running now, both written on
+scenarios and tables rather than stock stems, have produced zero hits.
+
+Fixed during verification: 5 options shortened for length. No letter-distribution
+failures and no answer-key changes.
+
+**A verification gotcha worth knowing about.** This batch ran on a different
+calendar day from the previous one, and the removed-line guard
+
+```bash
+git diff $BASE -- revision-notes/ templates/ js/ css/ sitemap.xml | grep '^-[^-]'
+```
+
+fired on roughly 75 lines of `sitemap.xml`. It was benign: `build_questions.py
+--sitemap` rewrites the whole practice-questions block with today's `lastmod`,
+so every existing URL line is removed and re-added with a new date. Confirm it
+rather than assuming — compare the URL sets and the entries with `lastmod`
+stripped out:
+
+```python
+urls    = set(re.findall(r"<loc>(.*?)</loc>", text))
+entries = set(re.sub(r"<lastmod>[^<]*</lastmod>", "", e)
+              for e in re.findall(r"<url>.*?</url>", text))
+```
+
+Zero URLs removed and zero entries lost means it is a date change only. **Run
+the guard against `revision-notes/ templates/ js/ css/` separately** — that is
+the check that actually matters, and it stays clean.
+
+| | |
+| --- | --- |
+| Answer letters | A 9, B 12, C 11, D 11 (even would be 10.75) |
+| Skills | applied-reasoning 26, definition-in-context 9, data-table 4, calculation 4 |
+| Difficulty | foundation 5, standard 33, stretch 5 |
+| Sketch to solve | 2 |
+
 ---
 
-## AQA Macroeconomics — 20 of 25 topics
+## AQA Macroeconomics — 25 of 25 topics, complete
+
+**Final profile:**
+
+| | |
+| --- | --- |
+| Topics | 25 of 25 |
+| Questions | 209 — exactly as planned |
+| Answer letters | A 45, B 56, C 59, D 49 (even would be 52.25) |
+| Skills | applied-reasoning 111, definition-in-context 49, calculation 26, data-table 23 |
+| Difficulty | foundation 28, standard 155, stretch 26 |
+| Sketch to solve | 11 |
+
+Macro came in noticeably closer to the target skill mix than micro did:
+`calculation` at 12% and `data-table` at 11%, against 6% and 7% across micro.
+The specification is simply more quantitative — index numbers, the multiplier,
+bond yields, bank ratios, exchange rates and the balance of payments all support
+genuine arithmetic. Site-wide the two now sit at 8% each.
+
+`applied-reasoning` finished at 53% against a ~40% target, against 64% in micro.
+
+---
+
+## AQA Macroeconomics — topic list
 
 | Unit | Topic | Questions | State |
 | --- | --- | --- | --- |
@@ -708,6 +770,11 @@ constraint on macro rather than originality against the papers:
 | 2.4 | 2.4.4 The Regulation of the Financial System | 6 | Done |
 | 2.5 | 2.5.1 Fiscal Policy | 9 | Done |
 | 2.5 | 2.5.2 Supply-Side Policies | 8 | Done |
+| 2.6 | 2.6.1 Globalisation | 7 | Done |
+| 2.6 | 2.6.2 Trade | 9 | Done |
+| 2.6 | 2.6.3 The Balance of Payments | 9 | Done |
+| 2.6 | 2.6.4 Exchange Rate Systems | 10 | Done |
+| 2.6 | 2.6.5 Economic Growth and Development | 8 | Done |
 
 ---
 

@@ -1,0 +1,260 @@
+{
+  "board": "aqa",
+  "boardDir": "aqa-a2-macro",
+  "boardName": "AQA Macroeconomics",
+  "spec": "2.6.4",
+  "slug": "2-6-4-exchange-rate-systems",
+  "title": "Exchange Rate Systems",
+  "shortTitle": "Exchange Rate Systems",
+  "pageTitle": "Exchange Rate Questions — AQA A-Level Economics | Economics Academy",
+  "metaDescription": "Ten free multiple-choice questions on exchange rates for AQA A-Level Economics: floating and fixed systems, the J-curve, Marshall-Lerner and currency unions.",
+  "intro": "Ten original multiple-choice questions on exchange rate systems, written to the style and difficulty of AQA Paper 3 Section A. One asks you to sketch the diagram yourself.",
+  "notesTeaser": "Ten original multiple-choice questions on floating and fixed exchange rates, the J-curve and Marshall-Lerner condition, and currency unions, written to AQA Paper 3 Section A style.",
+  "questions": [
+    {
+      "id": "aqa-2-6-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In a floating exchange rate system, a fall in the value of a currency is called",
+      "options": {
+        "A": "A depreciation.",
+        "B": "A devaluation.",
+        "C": "A revaluation.",
+        "D": "An appreciation."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The vocabulary depends on the system. Under a <strong>floating</strong> rate the currency's value is set by market forces, so a fall is a <strong>depreciation</strong> and a rise is an appreciation.<br />Under a fixed rate the central bank sets the value deliberately, and the equivalent terms are devaluation and revaluation.",
+        "distractors": {
+          "B": "Devaluation is a deliberate reduction by the central bank under a <em>fixed</em> exchange rate. Nobody decides a depreciation.",
+          "C": "Revaluation is a deliberate increase under a fixed rate — the wrong direction and the wrong system.",
+          "D": "Appreciation is a rise in the currency's value under a floating rate."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Sketching the demand for and supply of a currency, the effect of a country raising its interest rates well above those of its trading partners is most likely to be",
+      "options": {
+        "A": "Appreciation, as exports become cheaper.",
+        "B": "Appreciation, as hot money flows in.",
+        "C": "Depreciation, as hot money flows out.",
+        "D": "Depreciation, as imports become dearer."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Higher relative interest rates make deposits in that currency more attractive to international investors. They buy the currency in order to hold those deposits, which shifts the <strong>demand curve for the currency to the right</strong> and raises its value — an <strong>appreciation</strong>.<br />These short-term flows chasing interest rate differentials are what is meant by hot money.",
+        "distractors": {
+          "A": "The direction is right but the reasoning is backwards: an appreciation makes exports <em>dearer</em> abroad, and in any case export prices are a consequence here, not a cause.",
+          "C": "Hot money flows out when domestic rates are relatively <em>low</em>. Here they have risen above those abroad.",
+          "D": "Dearer imports follow a depreciation, and a rate rise causes the opposite."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "In a country the price elasticity of demand for exports is 0.4 and the price elasticity of demand for imports is 0.5. Following a depreciation of the currency, the current account is most likely to",
+      "options": {
+        "A": "Improve, because exports become cheaper.",
+        "B": "Improve, because the elasticities sum to more than 1.",
+        "C": "Worsen, because the elasticities sum to less than 1.",
+        "D": "Worsen, because imports become cheaper."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>Marshall-Lerner condition</strong> says a depreciation improves the current account only if the combined price elasticities of demand for exports and imports are greater than 1.<br />0.4 + 0.5 = <strong>0.9</strong>, which is less than 1.<br />Demand is too unresponsive: export volumes rise a little and import volumes fall a little, but each import now costs more, so the total import bill rises by more than export earnings. The balance <strong>worsens</strong>.",
+        "distractors": {
+          "A": "Cheaper exports do raise export volumes, but by too little here to outweigh the higher cost of imports.",
+          "B": "The sum is 0.9, which is below 1. Checking that arithmetic is the whole question.",
+          "D": "A depreciation makes imports <em>dearer</em> in domestic currency, not cheaper. That is why the import bill rises."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The pound depreciates from £1 = $1.50 to £1 = $1.20. A UK export priced at £200 will now cost a buyer in the United States",
+      "options": {
+        "A": "$167",
+        "B": "$240",
+        "C": "$300",
+        "D": "$360"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Convert at the <em>new</em> rate, multiplying pounds by dollars per pound.<br />£200 × 1.20 = <strong>$240</strong>.<br />At the old rate the same export cost £200 × 1.50 = $300, so the depreciation has cut its dollar price by $60. That is the mechanism by which a weaker currency makes exports more competitive abroad.",
+        "distractors": {
+          "A": "$167 divides instead of multiplying, 200 ÷ 1.20. Dividing converts dollars into pounds, which is the wrong direction here.",
+          "C": "$300 uses the old rate of 1.50 and so ignores the depreciation entirely.",
+          "D": "$360 applies the new rate to the old dollar price, 300 × 1.20. The conversion should be applied once, to the sterling price."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Immediately after a depreciation a country's current account deficit widens, and only later begins to improve. This pattern is best described as",
+      "options": {
+        "A": "Competitive devaluation.",
+        "B": "Imported inflation.",
+        "C": "The J-curve effect.",
+        "D": "The Marshall-Lerner condition."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>J-curve</strong> traces the path over time: the balance dips before it rises, tracing the shape of the letter J.<br />In the short run, contracts already signed fix prices and quantities, and buyers on both sides take time to change their habits. Volumes barely move while each import costs more, so the deficit widens. Once volumes do adjust, exports rise and imports fall, and the balance improves.",
+        "distractors": {
+          "A": "Competitive devaluation is a government deliberately pushing its currency down to gain a trade advantage. The J-curve describes the timing of the effects, whatever caused the fall.",
+          "B": "Imported inflation is the rise in the price level caused by dearer imports. It is a real consequence of depreciation, but not this pattern.",
+          "D": "Marshall-Lerner states the elasticity condition for a depreciation to improve the balance <em>eventually</em>. The J-curve describes why the improvement is delayed even when that condition holds."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sustained depreciation of a country's currency is likely to raise its rate of inflation because",
+      "options": {
+        "A": "Exports become dearer for domestic consumers.",
+        "B": "Interest rates must be cut to defend the currency.",
+        "C": "Prices of imported goods and inputs rise.",
+        "D": "The money supply falls automatically."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A weaker currency means more domestic currency is needed to buy the same foreign goods. Imported finished goods cost consumers more directly, and imported raw materials, components and energy raise firms' costs, which they pass on.<br />That second channel shifts <strong>SRAS to the left</strong>, so this is cost-push inflation. There is a demand-pull element too, as cheaper exports raise external demand.",
+        "distractors": {
+          "A": "Exports are sold abroad. It is imports whose domestic price rises, and domestic consumers do not generally buy the country's own exports at export prices.",
+          "B": "Defending a currency calls for <em>higher</em> interest rates, to attract inflows. Under a floating rate there is no obligation to defend it at all.",
+          "D": "A depreciation does not reduce the money supply. If anything, loose monetary policy is one of its causes."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country moves from a floating to a fixed exchange rate system. The main economic cost of doing so is that it",
+      "options": {
+        "A": "Cannot use monetary policy for domestic objectives.",
+        "B": "Faces greater exchange rate volatility than before.",
+        "C": "Loses the ability to trade with other countries.",
+        "D": "Must abandon its own currency entirely."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Holding the rate at a set value means interest rates must be set at whatever level keeps the currency there. If the currency comes under pressure, rates have to rise even if the domestic economy needs them to fall.<br />So the central bank loses the ability to target <strong>domestic</strong> objectives such as inflation and unemployment. That is the price paid for the stability a fixed rate offers traders and investors, and defending the peg can also drain reserves.",
+        "distractors": {
+          "B": "A fixed rate reduces volatility — that is the point of it. Volatility is a drawback of floating.",
+          "C": "Trade continues perfectly well under a fixed rate, and the stability may encourage it.",
+          "D": "Abandoning the currency is what joining a <em>currency union</em> involves. A fixed rate keeps the currency and pegs its value."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists four events in an economy with a floating exchange rate.<br />Using Table 1, the event most likely to cause the currency to depreciate is",
+      "table": {
+        "caption": "Table 1: Four events in the economy",
+        "head": [
+          "Event",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Event 1",
+            "A rise in domestic interest rates relative to those abroad"
+          ],
+          [
+            "Event 2",
+            "A large inflow of foreign direct investment"
+          ],
+          [
+            "Event 3",
+            "A move from a current account deficit to a surplus"
+          ],
+          [
+            "Event 4",
+            "A programme of quantitative easing by the central bank"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Event 1.",
+        "B": "Event 2.",
+        "C": "Event 3.",
+        "D": "Event 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Three of the four raise <strong>demand</strong> for the currency and so cause an appreciation: higher relative interest rates attract hot money, an inflow of foreign direct investment requires the currency to be bought, and a move into current account surplus means more foreigners buying exports.<br /><strong>Quantitative easing</strong> works the other way. It increases the money supply and pushes domestic interest rates down, so the currency becomes less attractive to hold and its supply on the foreign exchange market rises — a <strong>depreciation</strong>.",
+        "distractors": {
+          "A": "Higher relative interest rates attract hot money inflows, raising demand for the currency and causing an appreciation.",
+          "B": "Foreign investors must buy the currency to invest in the country, so an FDI inflow raises demand for it.",
+          "C": "A move into current account surplus means foreign buyers need more of the currency to pay for exports, which raises its value."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q9",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two countries whose business cycles are very poorly synchronised join a currency union. The main economic risk is that",
+      "options": {
+        "A": "Exchange rate risk between them will increase.",
+        "B": "One interest rate cannot suit both economies.",
+        "C": "Trade between them will fall.",
+        "D": "Transaction costs between them will rise."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A currency union means a single currency and therefore a <strong>single monetary policy</strong>. If one member is booming while the other is in recession, the rate that suits one is wrong for the other — too loose for the booming economy, too tight for the struggling one.<br />Neither can devalue to regain competitiveness either, since they share a currency. This is why synchronised cycles, labour mobility and fiscal transfers are listed as conditions for a monetary union to work.",
+        "distractors": {
+          "A": "Sharing a currency removes exchange rate risk between members entirely. That is one of the main benefits.",
+          "C": "Lower transaction costs and price transparency tend to <em>increase</em> trade between members.",
+          "D": "Transaction costs fall, because currency no longer has to be converted between the two."
+        }
+      }
+    },
+    {
+      "id": "aqa-2-6-4-q10",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A government deliberately drives down the value of its currency in order to boost exports. Setting aside the risk of retaliation, the strongest objection is that this",
+      "options": {
+        "A": "Cuts the cost of servicing foreign-currency debt.",
+        "B": "Raises the price of the country's exports abroad.",
+        "C": "Reduces foreign demand for the country's exports.",
+        "D": "Weakens purchasing power by raising import prices."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A weaker currency makes every import dearer — food, fuel, components, finished goods. Households face higher prices for things they cannot buy domestically, so real incomes and living standards fall, and the resulting cost-push inflation may force the central bank to raise interest rates.<br />So the export gain is bought at the expense of domestic consumers. A country carrying foreign-currency debt suffers twice over, since servicing that debt also becomes more expensive.",
+        "distractors": {
+          "A": "This has it backwards. Foreign-currency debt becomes <em>more</em> expensive to service when the domestic currency weakens.",
+          "B": "A depreciation lowers the price of exports in foreign currency, which is exactly why the policy is attempted.",
+          "C": "Cheaper exports raise foreign demand rather than reducing it. That is the intended effect, not the objection."
+        }
+      }
+    }
+  ]
+}
