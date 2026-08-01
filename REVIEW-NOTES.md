@@ -606,6 +606,90 @@ set needs changing.
 
 ---
 
+# Fixes applied on 2026-08-01, at the site owner's instruction
+
+The site owner reviewed the whole findings list and gave a decision on each one.
+**Everything below has been applied.** Nothing was touched without an explicit
+instruction, per `CLAUDE.md`.
+
+| Finding | Instruction | What was changed |
+| --- | --- | --- |
+| N-Q1 | Correct the sentence | `2-1-2` now says the Claimant Count is *harder* to compare internationally, because it depends on each country's own benefit rules. The page no longer contradicts `2-3-2`. |
+| N-Q2 | Remove the cross-reference | The "covered in detail in 4.5.2 Taxation" sentence is gone from `aqa-a2-macro/2-5-1`. No Edexcel spec code now appears on any AQA page. |
+| N-Q3 | Remove the incorrect IMF reference | The fixed exchange rate definition no longer says the central bank negotiates the peg with the IMF. **Applied to the Edexcel twin `4-1-8` as well**, which carried the sentence word for word. |
+| N-Q4 | Remove the US term | "checking accounts" → "current accounts" on `2-4-1`. |
+| N-Q5 | Update to USMCA | `2-6-2` now gives USMCA (the United States-Mexico-Canada Agreement) as the free trade area example. **Applied to the Edexcel twin `4-1-5` as well.** |
+| N-Q6 | Correct all typos and slips | All seven listed instances fixed. **Five more were found on the Edexcel twins and fixed too** — see below. |
+| N-Q7 | Leave | Untouched. |
+| N-Q8 | Propose first | **Not applied.** Proposal put to the site owner. |
+| N-Q10 | Fix the figure numbers | Twelve pages renumbered. **The thirteenth was a false positive** and one page the original scan missed was found — see below. |
+| N-Q11 | Leave | Untouched. |
+| N-Q12 | Cut the over-claim | The sole traders / partnerships / limited companies sentence is gone from `3-1-1`'s alert, and its JSON-LD description rewritten to what the page teaches. |
+| N-Q13 | Cut the claim | "distinguish between explicit and implicit costs" is gone from `3-3-4`'s alert, and from its meta, OG and Twitter descriptions. |
+| N-Q14 | Propose first | **Not applied.** Proposal put to the site owner. |
+| N-Q16 | Cut the claim | "deindustrialisation in developed countries" is gone from `4-1-3`'s alert and JSON-LD description. |
+| N-Q17 | Cut the claim | `4-1-9`'s alert now promises unit labour costs and **relative export prices**, which is what the body actually delivers. **This leaves 4.1.9 Q8 unsupported — see the note below.** |
+| N-Q18 | Cut the claim | "redistribution and social protection as policy responses" is gone from `4-2-1`'s alert, and its JSON-LD description rewritten. |
+| N-Q19 | Propose first | **Not applied.** Proposal put to the site owner. |
+| N-Q20 | Cut the claims | Tax incidence and the principles of a good tax system are gone from `4-5-2`'s alert and its three meta descriptions; fiscal consolidation from `4-5-3`'s alert; capital mobility from `4-5-4`'s alert. |
+
+### Three things found while applying these
+
+**1. N-Q10 listed one page that was not broken.**
+`aqa-a2-micro/1-5-11-consumer-and-producer-surplus` was recorded as numbering its
+figures 1, 4, 5, 6, 7. It does not. Its captions run **1, 2a & 2b, 3a & 3b, 4, 5,
+6, 7** — a complete sequence using a lettered convention for the paired diagrams.
+The original scan's regex, `Figure\s+(\d+)\s*:`, cannot match `Figure 2a & 2b:`
+and silently dropped them. `edexcel-theme-1/1-2-8-producer-consumer-surplus` uses
+the same convention and was never flagged, which is the tell. **Neither page was
+touched.** Any future run of this check must allow for the lettered form.
+
+**2. N-Q10 missed a page that was broken.**
+`aqa-a2-macro/2-5-1-fiscal-policy` numbered its two figures **2 then 1** — the
+AD/AS diagram as Figure 2 and the Laffer curve as Figure 1. Now corrected to 1
+and 2. All 166 topic pages now number their figures sequentially from 1.
+
+**3. A caption on `1-1-4` describes the wrong diagram, and this was not fixed.**
+The page's second figure is `ppf-growth-decline.png`, showing the frontier
+shifting outwards and inwards. Its caption — now renumbered to Figure 2 — reads
+"Standard PPF curve showing opportunity cost through movement from C to D",
+which is a verbatim copy of Figure 1's caption and describes the *other*
+diagram. **Only the number was changed**, because rewriting the caption text is a
+content change and the instruction covered figure numbers. It needs one sentence:
+something on the order of "an outward shift showing economic growth and an inward
+shift showing decline". **This needs an explicit instruction.**
+
+### The five extra typo fixes, on the Edexcel twin pages
+
+N-Q6 audited AQA macro only, but the Edexcel twins carry the same sentences word
+for word — the same relationship that produced N5 earlier in this file. The
+instruction was to correct all typos and slips, so these were fixed too:
+
+| Page | Fixed |
+| --- | --- |
+| `edexcel-theme-2/2-6-2-demand-side-policies` | "To increases" → "To increase"; "to incentive" → "to incentivise"; "A fal in" → "A fall in"; "offseting" → "offsetting"; "signficant" ×2 |
+| `edexcel-theme-2/2-6-3-supply-side-policies` | "signficant" ×2 |
+| `edexcel-theme-3/3-4-6-monopsony` | "signficant" ×1 |
+
+A site-wide grep for all seven strings now returns nothing.
+
+### One consequence to decide on — 4.1.9 Q8
+
+Cutting N-Q17's over-claim means `4-1-9` no longer promises export market share,
+and it never taught it. **4.1.9 Q8 tests it**: "One way of judging a country's
+international competitiveness is to track its share of world exports over time. A
+falling share suggests that its goods are…"
+
+The question is still answerable — the stem defines the measure before asking
+about it, and the model answer stands alone. But a student who gets it wrong and
+returns to the notes now finds nothing at all on the topic, where previously the
+alert at least implied it was covered. **Three options**: add the short paragraph
+the original N-Q17 entry describes and restore the claim; replace Q8 with a
+question on material the page does teach; or leave it, on the basis that the stem
+is self-contained. Needs a decision.
+
+---
+
 # Found while writing the AQA macro questions — units 2.1 to 2.6 (2026-08-01)
 
 Everything below was found by reading all 25 AQA macro notes pages closely while
