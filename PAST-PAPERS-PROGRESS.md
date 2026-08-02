@@ -10,12 +10,17 @@ resume from this file, `CLAUDE.md` and `git log` alone.
 
 ## Current position
 
-**Phase 1 (data extraction) is complete and awaiting review.**
+**Phase 1 (data extraction) is complete, reviewed and signed off.**
 
-**Next action: the site owner reviews `extraction-qa-report.md`,** in particular
-section 6, which lists the two judgement calls needing sign-off (topic tagging
-decisions, and the lumpy topic coverage the volume gate exists to handle).
-Phase 2 does not start until that review lands.
+Phase 1 was reviewed by the site owner on 2 August 2026. One
+tagging change was requested and applied (labour immobility, P1 June 2018 Q6e,
+is now 3.5.2 Supply of Labour only). Future scope was confirmed at the same time
+and is recorded under "Still to do".
+
+**Next action: begin Phase 2 — the master search page.** Start with
+`js/components/question-search.js`, built from the outset as a reusable component
+taking an optional pre-filter, because Phase 3 embeds the same component on every
+topic page.
 
 ---
 
@@ -65,7 +70,7 @@ section and two `See also` lines.
 | `past-paper-questions-data/taxonomy.json`    | data (generated)    | 4 themes, 21 units, 87 topics                                                                                        |
 | `past-paper-questions-data/edexcel-a/*.json` | data (generated)    | 16 files, 7 questions each                                                                                           |
 | `past-paper-questions-data/tags.json`        | data (hand-written) | 112 entries: topics + keywords                                                                                       |
-| `extraction-qa-report.md`                    | report              | Phase 1 QA. **This is what needs review**                                                                            |
+| `extraction-qa-report.md`                    | report              | Phase 1 QA. Reviewed and signed off 2 August 2026                                                                    |
 
 ---
 
@@ -87,21 +92,27 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 
 ---
 
+## Settled
+
+- **Boundary tagging calls** (`extraction-qa-report.md` §6(a)) — reviewed
+  2 August 2026. Price discrimination, subjective happiness and streaming market
+  structure approved as tagged; labour immobility changed to 3.5.2 only.
+- **Coverage and the volume gate** (§6(b)) — approved.
+- **Future scope** (§7) — Edexcel A Paper 3 and Section A both wanted; AQA
+  wanted with a partial scope. See "Still to do".
+
 ## Open questions awaiting the owner
 
-1. **Sign-off on the four boundary tagging calls** in `extraction-qa-report.md`
-   §6(a) — price discrimination, subjective happiness, labour immobility,
-   streaming market structure.
-2. **Nav entry.** A top-level "Past Paper Questions" item needs an edit to
+1. **Nav entry.** A top-level "Past Paper Questions" item needs an edit to
    `templates/header.html` _and_ a new entry in the `pageMap` array in
    `js/components/inject-templates.js` — without the second, nothing highlights.
    Diff to be shown before applying.
-3. **Internal links** from notes pages to their topic's questions page, following
+2. **Internal links** from notes pages to their topic's questions page, following
    the additive-only pattern of `scripts/append_questions_link.py`.
-4. **Copyright.** The bank reproduces Pearson question text verbatim. The site
+3. **Copyright.** The bank reproduces Pearson question text verbatim. The site
    already hosts all 281 papers in full, so this is not a new category of
    exposure, but it is a wider one. Raised; owner's call.
-5. **Any push to `main`** — it auto-publishes to economicsacademy.co.uk.
+4. **Any push to `main`** — it auto-publishes to economicsacademy.co.uk.
 
 ---
 
@@ -136,9 +147,35 @@ links and a link back to the master page. Sitemap block written between
 convention. `Quiz`/`Question` schema.org markup implies an answer the site
 deliberately does not host, so `LearningResource` is the likelier fit.
 
-**Phase 4+ — on the owner's go-ahead only.** Paper 3, then AQA. The schema
-already carries `context`, a string `questionNumber`, `parentQuestion`,
-`choiceGroup` and a free-string `section` so neither needs a migration.
+**Phase 4+ — scope confirmed by the owner 2 August 2026; build after Phase 3.**
+The schema already carries `context`, a string `questionNumber`,
+`parentQuestion`, `choiceGroup` and a free-string `section`, so none of the
+below needs a migration.
+
+_In scope, in this order:_
+
+1. **Edexcel A Paper 3** (16 PDFs, `past-papers/edexcel/a-level/paper-3/`).
+   Confirmed wanted. Wholly context-based, so every question needs the
+   `context` extract link that Section B already uses.
+2. **Edexcel A Papers 1–2 Section A.** Not yet scheduled, but confirmed wanted
+   at a later date. Once added, those questions must flow into the topic pages —
+   which needs no new work, because the volume gate is re-evaluated on every
+   generator run, so topics currently below the gate will gain pages
+   automatically.
+3. **AQA A-Level** (`past-papers/aqa/a-level/`). Include:
+   - **Paper 1** — Section A _and_ Section B. **Section A carries extracts**, so
+     it needs `context` links.
+   - **Paper 2** — Section A _and_ Section B, same extract handling.
+   - **Paper 3** — **Section B only.** Section A is 30 multiple-choice questions
+     and is **excluded**. Section B is a case study and **needs extracts**.
+   - **AQA AS-Level is excluded for now.**
+   - AQA specimen papers (10 PDFs) remain out of scope unless asked for.
+
+_Still excluded:_ Edexcel A AS-Level, Edexcel B, OCR.
+
+Note for whoever picks this up: AQA mark tariffs and section meanings differ
+from Edexcel's, which is why `section` is a free string and `marks` a plain
+integer. Do not turn either into an enum.
 
 ---
 

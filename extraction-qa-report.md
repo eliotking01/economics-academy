@@ -8,7 +8,8 @@ Section C, 2017–2024. Generated for the past-paper question bank on
 mark-scheme page mappings independently verified. Nothing was skipped, nothing
 was guessed, and no question needs your eyes for a text problem.**
 
-Two judgement items do need your sign-off, both in section 6.
+Both judgement items raised in section 6 have since been reviewed and signed
+off; one tagging change was requested and applied.
 
 ---
 
@@ -110,7 +111,7 @@ Every row was verified; there are no unverified mappings to list.
 | `edexcel-a-p1-2018-jun-q6b` | 1     | June 2018     | B   | 6(b) | 12    | p19  | p12  | 17  | high       | 3-6-1-government-intervention, 3-4-7-contestability                                                   |
 | `edexcel-a-p1-2018-jun-q6c` | 1     | June 2018     | B   | 6(c) | 10    | p19  | p15  | 17  | high       | 3-6-1-government-intervention, 3-6-2-the-impact-of-government-intervention                            |
 | `edexcel-a-p1-2018-jun-q6d` | 1     | June 2018     | B   | 6(d) | 8     | p19  | p18  | 17  | high       | 1-2-3-price-income-cross-elasticities-of-demand                                                       |
-| `edexcel-a-p1-2018-jun-q6e` | 1     | June 2018     | B   | 6(e) | 15    | p19  | p20  | 17  | high       | 3-5-2-supply-of-labour, 1-3-1-types-of-market-failure                                                 |
+| `edexcel-a-p1-2018-jun-q6e` | 1     | June 2018     | B   | 6(e) | 15    | p19  | p20  | 17  | high       | 3-5-2-supply-of-labour                                                                                |
 | `edexcel-a-p1-2018-jun-q7`  | 1     | June 2018     | C   | 7    | 25    | p31  | p23  | —   | high       | 1-3-2-externalities, 1-3-1-types-of-market-failure                                                    |
 | `edexcel-a-p1-2018-jun-q8`  | 1     | June 2018     | C   | 8    | 25    | p31  | p27  | —   | high       | 3-4-5-monopoly, 3-4-1-efficiency                                                                      |
 | `edexcel-a-p1-2019-jun-q6a` | 1     | June 2019     | B   | 6(a) | 5     | p13  | p10  | 11  | high       | 1-1-2-positive-normative-statements                                                                   |
@@ -212,27 +213,33 @@ Every row was verified; there are no unverified mappings to list.
 | `edexcel-a-p2-2020-oct-q7`  | 2     | October 2020  | C   | 7    | 25    | p26  | p17  | —   | high       | 4-5-2-taxation, 2-6-3-supply-side-policies                                                            |
 | `edexcel-a-p2-2020-oct-q8`  | 2     | October 2020  | C   | 8    | 25    | p26  | p20  | —   | high       | 4-2-2-inequality                                                                                      |
 
-## 6. Needs your eyes
+## 6. Judgement calls — reviewed and signed off
 
-Nothing in the extraction. Two judgement calls in the tagging:
+Nothing in the extraction needed attention. Two judgement calls in the tagging
+were raised; both were reviewed by the site owner on 2 August 2026 and are now
+settled.
 
-**(a) Topic tagging is my reading of the specification, not the examiner's.**
+**(a) Boundary tagging decisions. Settled.**
 All 112 questions were tagged by hand against the 87 published Edexcel topic
-slugs. Most are unambiguous, but a few essays sit across a boundary and I made a
-call:
+slugs. Four sat across a boundary:
 
 - _Price discrimination_ (P1 June 2023 Q6e, P1 October 2020 Q6e) is tagged
   **3.4.5 Monopoly**, which is where Edexcel places it, rather than 3.3.1 Revenue.
+  **Approved as-is.**
 - _Subjective happiness_ (P2 June 2019 Q6c, P2 June 2022 Q6c) is tagged
   **2.1.1 Economic Growth**, where the specification puts national wellbeing.
-- _Labour immobility_ (P1 June 2018 Q6e) is tagged both **3.5.2 Supply of
-  Labour** and **1.3.1 Types of Market Failure**, since immobility is named as a
-  market failure in Theme 1 and as a labour supply constraint in Theme 3.
-- _Streaming market structure_ (P1 June 2023 Q6a) is tagged **3.4.4 Oligopoly**.
-  The mark scheme was not read, so this is judged from the question and the
-  extract description alone.
+  **Approved as-is.**
+- _Labour immobility_ (P1 June 2018 Q6e) was tagged both 3.5.2 Supply of Labour
+  and 1.3.1 Types of Market Failure. **Changed on review: it is now tagged
+  3.5.2 Supply of Labour only.**
+- _Streaming market structure_ (P1 June 2023 Q6a) is tagged **3.4.4 Oligopoly**,
+  judged from the question and extract description without reading the mark
+  scheme. **Approved as-is.**
 
-**(b) Coverage is lumpy, which is expected and is what the volume gate is for.**
+**(b) Coverage is lumpy, which is expected and is what the volume gate is for.
+Approved.** Section A will be added at a later date, and those questions are to
+flow into the topic pages once present — which is exactly how the gate already
+behaves, since it is re-evaluated on every generator run.
 
 - 56 of 87 topics have at least one question; **31 have none**.
 - **18 topics reach 4+ questions** and would get a generated page in Phase 3.
@@ -241,24 +248,31 @@ call:
 
 The 31 empty topics are mostly Theme 1 and Theme 2 foundation material (PPFs,
 specialisation, the multiplier, output gaps) which Edexcel examines in Section A
-short-answer questions, not in Section B or C. They will fill in if Section A and
-Paper 3 are added later. Until then no page is generated for them, so there are
-no thin pages.
+short-answer questions, not in Section B or C. Both Paper 3 and Section A are
+confirmed as wanted later (§7), and will fill most of these in. Until then no
+page is generated for them, so there are no thin pages.
 
 Run `python3 scripts/verify_past_paper_tags.py` for the full coverage histogram.
 
-## 7. Excluded from this phase
+## 7. Excluded from this phase — reviewed and confirmed
 
-Listed so you can confirm nothing was wrongly filtered.
+Listed so nothing was wrongly filtered. Reviewed by the site owner on
+2 August 2026; the "Status" column records what happens to each next.
 
-| Excluded                                 | PDFs | Reason                                  |
-| ---------------------------------------- | ---- | --------------------------------------- |
-| Edexcel A A-Level **Paper 3**            | 16   | Deferred to Phase 4                     |
-| Edexcel A **AS-Level** Papers 1–2        | 32   | A-Level only                            |
-| **Edexcel B** (`past-papers/edexcel-b/`) | 65   | Different qualification                 |
-| **AQA** (`past-papers/aqa/`)             | 90   | Phase 4+; includes 10 specimen papers   |
-| **OCR** (`past-papers/ocr/`)             | 46   | Different board                         |
-| Edexcel A Papers 1–2 **Section A**       | —    | Short-answer; not in the approved scope |
+| Excluded                                 | PDFs | Status after review                                   |
+| ---------------------------------------- | ---- | ----------------------------------------------------- |
+| Edexcel A A-Level **Paper 3**            | 16   | **Wanted.** Confirmed for Phase 4                     |
+| Edexcel A Papers 1–2 **Section A**       | —    | **Wanted later.** To flow into topic pages once added |
+| **AQA** A-Level (`past-papers/aqa/`)     | 90   | **Wanted, Phase 4+.** Partial — see below             |
+| Edexcel A **AS-Level** Papers 1–2        | 32   | Excluded                                              |
+| **AQA AS-Level**                         | —    | Excluded for now                                      |
+| **Edexcel B** (`past-papers/edexcel-b/`) | 65   | Excluded — different qualification                    |
+| **OCR** (`past-papers/ocr/`)             | 46   | Excluded — different board                            |
+
+**Confirmed AQA scope for Phase 4+:** Paper 1 and Paper 2 Sections A _and_ B
+(Section A carries extracts and so needs context links), and Paper 3 **Section B
+only** — Paper 3 Section A is 30 multiple-choice questions and is excluded, while
+Section B is a case study needing extracts.
 
 Also confirmed absent from the repo entirely: **no IAL / WEC-coded papers**, and
 **no Edexcel specimen or sample assessment materials** (the only specimen papers
