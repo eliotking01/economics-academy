@@ -1,0 +1,978 @@
+{
+  "_comment": [
+    "Hand-written topic and keyword tags, keyed by question id.",
+    "Kept separate from edexcel-a/*.json so that re-running",
+    "scripts/extract_past_paper_questions.swift can never destroy this work:",
+    "the extractor owns the machine-read fields, this file owns the judgement.",
+    "topics are slugs from taxonomy.json. keywords are what students type.",
+    "Validated by scripts/verify_past_paper_tags.py."
+  ],
+
+  "edexcel-a-p1-2017-jun-q6a": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": [
+      "concentration ratio",
+      "supermarkets",
+      "oligopoly",
+      "market share"
+    ]
+  },
+  "edexcel-a-p1-2017-jun-q6b": {
+    "topics": ["3-4-6-monopsony"],
+    "keywords": ["monopsony", "supermarkets", "buyer power", "suppliers"]
+  },
+  "edexcel-a-p1-2017-jun-q6c": {
+    "topics": ["3-6-1-government-intervention", "3-4-6-monopsony"],
+    "keywords": [
+      "monopsony",
+      "regulation",
+      "competition policy",
+      "supermarkets"
+    ]
+  },
+  "edexcel-a-p1-2017-jun-q6d": {
+    "topics": [
+      "1-3-4-information-gaps",
+      "1-2-10-alternative-views-of-consumer-behaviour"
+    ],
+    "keywords": [
+      "information gaps",
+      "irrational behaviour",
+      "food waste",
+      "market failure"
+    ]
+  },
+  "edexcel-a-p1-2017-jun-q6e": {
+    "topics": [
+      "3-1-2-business-growth",
+      "3-3-3-economies-diseconomies-of-scale"
+    ],
+    "keywords": [
+      "merger",
+      "horizontal integration",
+      "diseconomies of scale",
+      "supermarkets"
+    ]
+  },
+  "edexcel-a-p1-2017-jun-q7": {
+    "topics": [
+      "1-2-9-indirect-taxes-subsidies",
+      "1-3-2-externalities",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": [
+      "sugar tax",
+      "indirect tax",
+      "demerit goods",
+      "externalities",
+      "obesity"
+    ]
+  },
+  "edexcel-a-p1-2017-jun-q8": {
+    "topics": ["3-2-1-business-objectives"],
+    "keywords": [
+      "revenue maximisation",
+      "profit maximisation",
+      "business objectives"
+    ]
+  },
+
+  "edexcel-a-p1-2018-jun-q6a": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": [
+      "energy prices",
+      "real prices",
+      "supply and demand",
+      "gas and electricity"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q6b": {
+    "topics": ["3-6-1-government-intervention", "3-4-7-contestability"],
+    "keywords": [
+      "competition",
+      "energy market",
+      "barriers to entry",
+      "regulation"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q6c": {
+    "topics": [
+      "3-6-1-government-intervention",
+      "3-6-2-the-impact-of-government-intervention"
+    ],
+    "keywords": [
+      "profit regulation",
+      "price cap",
+      "energy suppliers",
+      "regulation"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q6d": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "price elasticity of demand",
+      "PED",
+      "electricity",
+      "elasticity over time"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q6e": {
+    "topics": ["3-5-2-supply-of-labour", "1-3-1-types-of-market-failure"],
+    "keywords": [
+      "labour immobility",
+      "geographical immobility",
+      "occupational immobility",
+      "training"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q7": {
+    "topics": ["1-3-2-externalities", "1-3-1-types-of-market-failure"],
+    "keywords": [
+      "external costs",
+      "private costs",
+      "Hinkley Point",
+      "nuclear power",
+      "externalities diagram"
+    ]
+  },
+  "edexcel-a-p1-2018-jun-q8": {
+    "topics": ["3-4-5-monopoly", "3-4-1-efficiency"],
+    "keywords": [
+      "market share",
+      "monopoly",
+      "consumer interest",
+      "Apple",
+      "smartphones"
+    ]
+  },
+
+  "edexcel-a-p1-2019-jun-q6a": {
+    "topics": ["1-1-2-positive-normative-statements"],
+    "keywords": ["positive statement", "normative statement", "value judgement"]
+  },
+  "edexcel-a-p1-2019-jun-q6b": {
+    "topics": ["3-1-2-business-growth"],
+    "keywords": ["integration", "merger", "BT", "EE", "consumer benefits"]
+  },
+  "edexcel-a-p1-2019-jun-q6c": {
+    "topics": [
+      "1-3-4-information-gaps",
+      "1-2-10-alternative-views-of-consumer-behaviour"
+    ],
+    "keywords": [
+      "information gaps",
+      "switching",
+      "consumer inertia",
+      "behavioural economics"
+    ]
+  },
+  "edexcel-a-p1-2019-jun-q6d": {
+    "topics": [
+      "3-3-4-normal-profits-supernormal-profits-losses",
+      "3-3-1-revenue"
+    ],
+    "keywords": [
+      "profit",
+      "cost and revenue diagram",
+      "BT",
+      "supernormal profit"
+    ]
+  },
+  "edexcel-a-p1-2019-jun-q6e": {
+    "topics": ["3-6-1-government-intervention"],
+    "keywords": [
+      "regulation",
+      "consumer protection",
+      "utilities",
+      "energy",
+      "telecoms"
+    ]
+  },
+  "edexcel-a-p1-2019-jun-q7": {
+    "topics": ["3-5-3-wage-determination"],
+    "keywords": [
+      "wage differentials",
+      "gender pay gap",
+      "labour market",
+      "wage determination"
+    ]
+  },
+  "edexcel-a-p1-2019-jun-q8": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": [
+      "collusion",
+      "cartel",
+      "oligopoly",
+      "price fixing",
+      "game theory"
+    ]
+  },
+
+  "edexcel-a-p1-2022-jun-q6a": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": [
+      "concentration ratio",
+      "oligopoly",
+      "coffee shops",
+      "calculation"
+    ]
+  },
+  "edexcel-a-p1-2022-jun-q6b": {
+    "topics": ["1-2-5-price-elasticity-of-supply", "1-2-6-price-determination"],
+    "keywords": [
+      "price elasticity of supply",
+      "PES",
+      "commodity prices",
+      "coffee"
+    ]
+  },
+  "edexcel-a-p1-2022-jun-q6c": {
+    "topics": ["3-2-1-business-objectives"],
+    "keywords": ["profit maximisation", "business objectives", "coffee shops"]
+  },
+  "edexcel-a-p1-2022-jun-q6d": {
+    "topics": [
+      "3-3-2-costs",
+      "3-3-4-normal-profits-supernormal-profits-losses"
+    ],
+    "keywords": ["rising costs", "profitability", "cost and revenue diagram"]
+  },
+  "edexcel-a-p1-2022-jun-q6e": {
+    "topics": ["3-4-7-contestability"],
+    "keywords": [
+      "contestable market",
+      "barriers to entry",
+      "sunk costs",
+      "coffee shops"
+    ]
+  },
+  "edexcel-a-p1-2022-jun-q7": {
+    "topics": ["3-4-5-monopoly", "3-4-1-efficiency"],
+    "keywords": [
+      "monopoly",
+      "efficiency",
+      "allocative efficiency",
+      "Tesla",
+      "electric vehicles"
+    ]
+  },
+  "edexcel-a-p1-2022-jun-q8": {
+    "topics": ["3-5-2-supply-of-labour"],
+    "keywords": [
+      "supply of labour",
+      "labour shortages",
+      "vacancies",
+      "labour market"
+    ]
+  },
+
+  "edexcel-a-p1-2023-jun-q6a": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": ["market structure", "oligopoly", "streaming", "Netflix"]
+  },
+  "edexcel-a-p1-2023-jun-q6b": {
+    "topics": [
+      "1-2-10-alternative-views-of-consumer-behaviour",
+      "1-2-1-rational-decision-making"
+    ],
+    "keywords": [
+      "rational behaviour",
+      "behavioural economics",
+      "bias",
+      "Netflix",
+      "subscriptions"
+    ]
+  },
+  "edexcel-a-p1-2023-jun-q6c": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "cross elasticity of demand",
+      "XED",
+      "substitutes",
+      "streaming"
+    ]
+  },
+  "edexcel-a-p1-2023-jun-q6d": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "external benefits",
+      "positive externalities",
+      "merit goods",
+      "education"
+    ]
+  },
+  "edexcel-a-p1-2023-jun-q6e": {
+    "topics": ["3-4-5-monopoly", "3-3-1-revenue"],
+    "keywords": ["price discrimination", "revenue", "profits", "monopoly"]
+  },
+  "edexcel-a-p1-2023-jun-q7": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "3-6-1-government-intervention"
+    ],
+    "keywords": [
+      "energy price cap",
+      "government intervention",
+      "maximum price",
+      "energy bills"
+    ]
+  },
+  "edexcel-a-p1-2023-jun-q8": {
+    "topics": [
+      "1-3-2-externalities",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": [
+      "carbon emissions",
+      "negative externalities",
+      "carbon tax",
+      "road transport"
+    ]
+  },
+
+  "edexcel-a-p1-2024-jun-q6a": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": [
+      "supply and demand",
+      "price determination",
+      "electronics",
+      "diagram"
+    ]
+  },
+  "edexcel-a-p1-2024-jun-q6b": {
+    "topics": ["3-5-2-supply-of-labour"],
+    "keywords": ["supply of labour", "labour market", "electronics industry"]
+  },
+  "edexcel-a-p1-2024-jun-q6c": {
+    "topics": ["3-3-3-economies-diseconomies-of-scale"],
+    "keywords": ["economies of scale", "average cost", "electronics"]
+  },
+  "edexcel-a-p1-2024-jun-q6d": {
+    "topics": ["3-1-2-business-growth", "3-6-1-government-intervention"],
+    "keywords": [
+      "merger",
+      "competition authorities",
+      "CMA",
+      "competition policy"
+    ]
+  },
+  "edexcel-a-p1-2024-jun-q6e": {
+    "topics": [
+      "1-3-2-externalities",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": [
+      "electronic waste",
+      "negative externalities",
+      "government intervention",
+      "recycling"
+    ]
+  },
+  "edexcel-a-p1-2024-jun-q7": {
+    "topics": [
+      "3-3-2-costs",
+      "3-3-4-normal-profits-supernormal-profits-losses"
+    ],
+    "keywords": [
+      "energy bills",
+      "rising costs",
+      "profitability",
+      "small businesses"
+    ]
+  },
+  "edexcel-a-p1-2024-jun-q8": {
+    "topics": ["3-4-7-contestability"],
+    "keywords": [
+      "contestability",
+      "barriers to entry",
+      "TikTok",
+      "market entry"
+    ]
+  },
+
+  "edexcel-a-p1-2021-nov-q6a": {
+    "topics": ["3-5-1-demand-for-labour", "3-3-2-costs"],
+    "keywords": [
+      "diminishing marginal productivity",
+      "demand for labour",
+      "cabin crew",
+      "airlines"
+    ]
+  },
+  "edexcel-a-p1-2021-nov-q6b": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "externalities",
+      "social optimum",
+      "emissions",
+      "airlines",
+      "externalities diagram"
+    ]
+  },
+  "edexcel-a-p1-2021-nov-q6c": {
+    "topics": ["3-2-1-business-objectives", "1-3-4-information-gaps"],
+    "keywords": [
+      "principal-agent problem",
+      "business objectives",
+      "Thomas Cook",
+      "asymmetric information"
+    ]
+  },
+  "edexcel-a-p1-2021-nov-q6d": {
+    "topics": [
+      "3-3-4-normal-profits-supernormal-profits-losses",
+      "1-2-9-indirect-taxes-subsidies"
+    ],
+    "keywords": ["shut-down point", "subsidy", "losses", "Thomas Cook"]
+  },
+  "edexcel-a-p1-2021-nov-q6e": {
+    "topics": [
+      "3-3-1-revenue",
+      "1-2-3-price-income-cross-elasticities-of-demand"
+    ],
+    "keywords": [
+      "pricing decision",
+      "revenue",
+      "elasticity",
+      "package holidays"
+    ]
+  },
+  "edexcel-a-p1-2021-nov-q7": {
+    "topics": ["3-5-3-wage-determination", "3-6-1-government-intervention"],
+    "keywords": [
+      "national living wage",
+      "minimum wage",
+      "labour market",
+      "social care"
+    ]
+  },
+  "edexcel-a-p1-2021-nov-q8": {
+    "topics": ["3-4-4-oligopoly"],
+    "keywords": [
+      "market concentration",
+      "oligopoly",
+      "business decision making",
+      "concentration ratio"
+    ]
+  },
+
+  "edexcel-a-p1-2020-oct-q6a": {
+    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "keywords": ["subsidy", "rail fares", "supply and demand", "diagram"]
+  },
+  "edexcel-a-p1-2020-oct-q6b": {
+    "topics": ["1-2-2-demand"],
+    "keywords": ["demand", "determinants of demand", "rail travel"]
+  },
+  "edexcel-a-p1-2020-oct-q6c": {
+    "topics": ["3-6-1-government-intervention"],
+    "keywords": [
+      "nationalisation",
+      "public ownership",
+      "rail industry",
+      "employees"
+    ]
+  },
+  "edexcel-a-p1-2020-oct-q6d": {
+    "topics": ["3-4-5-monopoly"],
+    "keywords": [
+      "natural monopoly",
+      "monopoly",
+      "rail network",
+      "economies of scale"
+    ]
+  },
+  "edexcel-a-p1-2020-oct-q6e": {
+    "topics": ["3-4-5-monopoly", "3-3-1-revenue"],
+    "keywords": [
+      "price discrimination",
+      "rail fares",
+      "consumer surplus",
+      "diagram"
+    ]
+  },
+  "edexcel-a-p1-2020-oct-q7": {
+    "topics": ["1-2-6-price-determination", "1-3-2-externalities"],
+    "keywords": [
+      "electric vehicles",
+      "derived demand",
+      "substitutes",
+      "oil",
+      "externalities"
+    ]
+  },
+  "edexcel-a-p1-2020-oct-q8": {
+    "topics": ["3-4-6-monopsony"],
+    "keywords": [
+      "monopsony",
+      "Amazon",
+      "buyer power",
+      "book retailing",
+      "suppliers"
+    ]
+  },
+
+  "edexcel-a-p2-2017-jun-q6a": {
+    "topics": ["4-1-8-exchange-rates"],
+    "keywords": ["exchange rates", "euro", "percentage change", "calculation"]
+  },
+  "edexcel-a-p2-2017-jun-q6b": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["inflation", "Eurozone", "causes of inflation", "CPI"]
+  },
+  "edexcel-a-p2-2017-jun-q6c": {
+    "topics": ["4-1-8-exchange-rates", "4-1-7-balance-of-payments"],
+    "keywords": [
+      "appreciation",
+      "current account",
+      "balance of payments",
+      "exchange rates"
+    ]
+  },
+  "edexcel-a-p2-2017-jun-q6d": {
+    "topics": ["2-6-2-demand-side-policies", "4-4-3-role-of-central-banks"],
+    "keywords": [
+      "quantitative easing",
+      "QE",
+      "monetary policy",
+      "ECB",
+      "inflation target"
+    ]
+  },
+  "edexcel-a-p2-2017-jun-q6e": {
+    "topics": ["2-6-2-demand-side-policies", "2-6-3-supply-side-policies"],
+    "keywords": [
+      "fiscal policy",
+      "supply-side policies",
+      "economic growth",
+      "Eurozone"
+    ]
+  },
+  "edexcel-a-p2-2017-jun-q7": {
+    "topics": ["4-1-6-restrictions-on-free-trade"],
+    "keywords": [
+      "protectionism",
+      "tariffs",
+      "quotas",
+      "developing countries",
+      "trade barriers"
+    ]
+  },
+  "edexcel-a-p2-2017-jun-q8": {
+    "topics": ["2-1-2-inflation", "2-3-2-short-run-aggregate-supply"],
+    "keywords": [
+      "oil prices",
+      "cost-push inflation",
+      "aggregate supply",
+      "commodity prices"
+    ]
+  },
+
+  "edexcel-a-p2-2018-jun-q6a": {
+    "topics": ["4-2-1-absolute-relative-poverty"],
+    "keywords": ["absolute poverty", "relative poverty", "poverty line"]
+  },
+  "edexcel-a-p2-2018-jun-q6b": {
+    "topics": [
+      "4-3-2-factors-influencing-growth-development",
+      "4-2-1-absolute-relative-poverty"
+    ],
+    "keywords": [
+      "absolute poverty",
+      "development",
+      "Sub-Saharan Africa",
+      "East Asia"
+    ]
+  },
+  "edexcel-a-p2-2018-jun-q6c": {
+    "topics": [
+      "4-1-1-globalisation",
+      "4-5-4-macroeconomic-policies-in-a-global-context"
+    ],
+    "keywords": [
+      "globalisation",
+      "macroeconomic policy",
+      "protectionism",
+      "inequality"
+    ]
+  },
+  "edexcel-a-p2-2018-jun-q6d": {
+    "topics": ["4-2-2-inequality"],
+    "keywords": [
+      "inequality",
+      "incentives",
+      "income distribution",
+      "Gini coefficient"
+    ]
+  },
+  "edexcel-a-p2-2018-jun-q6e": {
+    "topics": [
+      "4-4-1-role-of-financial-markets",
+      "4-3-3-strategies-influencing-growth-development"
+    ],
+    "keywords": ["financial sector", "microfinance", "development", "growth"]
+  },
+  "edexcel-a-p2-2018-jun-q7": {
+    "topics": ["2-2-4-government-expenditure", "2-4-4-the-multiplier"],
+    "keywords": [
+      "government spending",
+      "infrastructure",
+      "multiplier",
+      "aggregate demand"
+    ]
+  },
+  "edexcel-a-p2-2018-jun-q8": {
+    "topics": ["4-1-8-exchange-rates", "2-5-1-causes-of-growth"],
+    "keywords": [
+      "depreciation",
+      "exchange rates",
+      "economic growth",
+      "Brexit",
+      "sterling"
+    ]
+  },
+
+  "edexcel-a-p2-2019-jun-q6a": {
+    "topics": ["4-1-8-exchange-rates", "4-4-1-role-of-financial-markets"],
+    "keywords": ["forward markets", "currency", "hedging", "exchange rates"]
+  },
+  "edexcel-a-p2-2019-jun-q6b": {
+    "topics": ["4-1-8-exchange-rates"],
+    "keywords": ["sterling", "exchange rate", "depreciation", "UK economy"]
+  },
+  "edexcel-a-p2-2019-jun-q6c": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": [
+      "real incomes",
+      "subjective happiness",
+      "wellbeing",
+      "living standards"
+    ]
+  },
+  "edexcel-a-p2-2019-jun-q6d": {
+    "topics": [
+      "2-6-4-conflicts-between-objectives-and-policies",
+      "2-1-2-inflation"
+    ],
+    "keywords": [
+      "policy conflicts",
+      "inflation",
+      "macroeconomic objectives",
+      "trade-offs"
+    ]
+  },
+  "edexcel-a-p2-2019-jun-q6e": {
+    "topics": [
+      "4-4-2-market-failure-in-the-financial-sector",
+      "4-4-3-role-of-central-banks"
+    ],
+    "keywords": [
+      "bank bailout",
+      "financial crisis",
+      "moral hazard",
+      "central bank"
+    ]
+  },
+  "edexcel-a-p2-2019-jun-q7": {
+    "topics": [
+      "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "4-1-3-pattern-of-trade"
+    ],
+    "keywords": [
+      "trading blocs",
+      "free trade area",
+      "pattern of trade",
+      "Africa",
+      "TFTA"
+    ]
+  },
+  "edexcel-a-p2-2019-jun-q8": {
+    "topics": ["4-5-3-public-sector-finances"],
+    "keywords": ["fiscal deficit", "national debt", "budget deficit", "Japan"]
+  },
+
+  "edexcel-a-p2-2022-jun-q6a": {
+    "topics": ["4-2-2-inequality"],
+    "keywords": [
+      "Lorenz curve",
+      "Gini coefficient",
+      "income inequality",
+      "diagram"
+    ]
+  },
+  "edexcel-a-p2-2022-jun-q6b": {
+    "topics": ["4-2-2-inequality"],
+    "keywords": [
+      "income inequality",
+      "causes of inequality",
+      "UK",
+      "wage differentials"
+    ]
+  },
+  "edexcel-a-p2-2022-jun-q6c": {
+    "topics": ["2-1-1-economic-growth", "2-5-4-the-impact-of-economic-growth"],
+    "keywords": [
+      "real income",
+      "subjective happiness",
+      "wellbeing",
+      "living standards"
+    ]
+  },
+  "edexcel-a-p2-2022-jun-q6d": {
+    "topics": ["4-5-2-taxation"],
+    "keywords": ["tax revenue", "taxation", "Laffer curve", "fiscal policy"]
+  },
+  "edexcel-a-p2-2022-jun-q6e": {
+    "topics": ["2-2-4-government-expenditure", "2-6-3-supply-side-policies"],
+    "keywords": [
+      "infrastructure spending",
+      "AD/AS diagram",
+      "aggregate demand",
+      "supply-side"
+    ]
+  },
+  "edexcel-a-p2-2022-jun-q7": {
+    "topics": ["4-1-6-restrictions-on-free-trade"],
+    "keywords": [
+      "protectionism",
+      "tariffs",
+      "trade war",
+      "China",
+      "United States"
+    ]
+  },
+  "edexcel-a-p2-2022-jun-q8": {
+    "topics": ["4-1-1-globalisation"],
+    "keywords": ["globalisation", "global economy", "trade", "inequality"]
+  },
+
+  "edexcel-a-p2-2023-jun-q6a": {
+    "topics": ["4-1-5-trading-blocs-and-the-world-trade-organisation"],
+    "keywords": ["regional trade agreement", "trading blocs", "free trade"]
+  },
+  "edexcel-a-p2-2023-jun-q6b": {
+    "topics": ["4-3-2-factors-influencing-growth-development"],
+    "keywords": [
+      "transport costs",
+      "infrastructure",
+      "Africa",
+      "barriers to development"
+    ]
+  },
+  "edexcel-a-p2-2023-jun-q6c": {
+    "topics": [
+      "4-3-2-factors-influencing-growth-development",
+      "2-5-1-causes-of-growth"
+    ],
+    "keywords": [
+      "infrastructure",
+      "economic growth",
+      "transport links",
+      "Africa"
+    ]
+  },
+  "edexcel-a-p2-2023-jun-q6d": {
+    "topics": ["4-3-3-strategies-influencing-growth-development"],
+    "keywords": ["debt relief", "development strategies", "Angola"]
+  },
+  "edexcel-a-p2-2023-jun-q6e": {
+    "topics": ["4-3-3-strategies-influencing-growth-development"],
+    "keywords": [
+      "market-orientated strategies",
+      "development",
+      "Angola",
+      "trade liberalisation"
+    ]
+  },
+  "edexcel-a-p2-2023-jun-q7": {
+    "topics": ["4-1-9-international-competitiveness"],
+    "keywords": [
+      "international competitiveness",
+      "exports",
+      "supply-side policies",
+      "UK"
+    ]
+  },
+  "edexcel-a-p2-2023-jun-q8": {
+    "topics": ["2-1-2-inflation", "2-6-2-demand-side-policies"],
+    "keywords": [
+      "inflation",
+      "CPI",
+      "fiscal policy",
+      "supply-side policies",
+      "cost of living"
+    ]
+  },
+
+  "edexcel-a-p2-2024-jun-q6a": {
+    "topics": ["4-5-2-taxation"],
+    "keywords": ["progressive tax", "regressive tax", "taxation"]
+  },
+  "edexcel-a-p2-2024-jun-q6b": {
+    "topics": ["2-2-1-aggregate-demand", "4-5-2-taxation"],
+    "keywords": [
+      "income tax",
+      "fiscal drag",
+      "aggregate demand",
+      "tax thresholds"
+    ]
+  },
+  "edexcel-a-p2-2024-jun-q6c": {
+    "topics": ["4-5-3-public-sector-finances"],
+    "keywords": [
+      "fiscal deficit",
+      "national debt",
+      "public sector finances",
+      "UK"
+    ]
+  },
+  "edexcel-a-p2-2024-jun-q6d": {
+    "topics": ["2-6-2-demand-side-policies", "4-4-3-role-of-central-banks"],
+    "keywords": ["quantitative easing", "QE", "deflation", "monetary policy"]
+  },
+  "edexcel-a-p2-2024-jun-q6e": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": [
+      "supply-side policies",
+      "economic growth",
+      "productivity",
+      "UK"
+    ]
+  },
+  "edexcel-a-p2-2024-jun-q7": {
+    "topics": ["4-1-7-balance-of-payments"],
+    "keywords": [
+      "current account deficit",
+      "balance of payments",
+      "Brazil",
+      "exchange rate intervention"
+    ]
+  },
+  "edexcel-a-p2-2024-jun-q8": {
+    "topics": ["4-1-1-globalisation"],
+    "keywords": [
+      "globalisation",
+      "causes of globalisation",
+      "world trade",
+      "exports"
+    ]
+  },
+
+  "edexcel-a-p2-2021-nov-q6a": {
+    "topics": ["4-3-3-strategies-influencing-growth-development"],
+    "keywords": ["foreign aid", "Rwanda", "development", "calculation"]
+  },
+  "edexcel-a-p2-2021-nov-q6b": {
+    "topics": ["4-3-2-factors-influencing-growth-development"],
+    "keywords": ["population growth", "development", "Rwanda", "demographics"]
+  },
+  "edexcel-a-p2-2021-nov-q6c": {
+    "topics": ["4-3-3-strategies-influencing-growth-development"],
+    "keywords": ["foreign aid", "Rwanda", "development", "aid dependency"]
+  },
+  "edexcel-a-p2-2021-nov-q6d": {
+    "topics": ["4-1-6-restrictions-on-free-trade"],
+    "keywords": ["tariff", "imports", "protectionism", "Rwanda", "diagram"]
+  },
+  "edexcel-a-p2-2021-nov-q6e": {
+    "topics": ["4-3-3-strategies-influencing-growth-development"],
+    "keywords": [
+      "development strategies",
+      "industrialisation",
+      "Rwanda",
+      "manufacturing"
+    ]
+  },
+  "edexcel-a-p2-2021-nov-q7": {
+    "topics": ["2-6-2-demand-side-policies", "4-4-3-role-of-central-banks"],
+    "keywords": [
+      "quantitative easing",
+      "QE",
+      "recession",
+      "monetary policy",
+      "ECB"
+    ]
+  },
+  "edexcel-a-p2-2021-nov-q8": {
+    "topics": [
+      "2-6-4-conflicts-between-objectives-and-policies",
+      "2-5-4-the-impact-of-economic-growth"
+    ],
+    "keywords": [
+      "climate change",
+      "environment",
+      "policy conflicts",
+      "sustainability",
+      "trade-offs"
+    ]
+  },
+
+  "edexcel-a-p2-2020-oct-q6a": {
+    "topics": ["4-3-3-strategies-influencing-growth-development"],
+    "keywords": ["Fairtrade", "development", "agriculture", "cocoa farmers"]
+  },
+  "edexcel-a-p2-2020-oct-q6b": {
+    "topics": [
+      "4-3-3-strategies-influencing-growth-development",
+      "1-2-5-price-elasticity-of-supply"
+    ],
+    "keywords": [
+      "commodity prices",
+      "cocoa",
+      "farmers",
+      "development strategies"
+    ]
+  },
+  "edexcel-a-p2-2020-oct-q6c": {
+    "topics": [
+      "4-1-3-pattern-of-trade",
+      "4-3-2-factors-influencing-growth-development"
+    ],
+    "keywords": [
+      "primary product dependency",
+      "exports",
+      "Ivory Coast",
+      "commodity prices"
+    ]
+  },
+  "edexcel-a-p2-2020-oct-q6d": {
+    "topics": ["4-1-5-trading-blocs-and-the-world-trade-organisation"],
+    "keywords": [
+      "trading bloc",
+      "free trade agreement",
+      "Nigeria",
+      "protectionism"
+    ]
+  },
+  "edexcel-a-p2-2020-oct-q6e": {
+    "topics": [
+      "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "4-3-3-strategies-influencing-growth-development"
+    ],
+    "keywords": [
+      "economic integration",
+      "trading blocs",
+      "Africa",
+      "development"
+    ]
+  },
+  "edexcel-a-p2-2020-oct-q7": {
+    "topics": ["4-5-2-taxation", "2-6-3-supply-side-policies"],
+    "keywords": [
+      "tax cuts",
+      "corporation tax",
+      "income tax",
+      "economic growth",
+      "supply-side"
+    ]
+  },
+  "edexcel-a-p2-2020-oct-q8": {
+    "topics": ["4-2-2-inequality"],
+    "keywords": [
+      "income inequality",
+      "wealth inequality",
+      "Gini coefficient",
+      "Brazil"
+    ]
+  }
+}
