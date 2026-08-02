@@ -26,23 +26,14 @@ not a ninth top-level item.
 follow-ups were requested and delivered: notes-page links, a question paper link
 on every card, and an explanation of per-question pages (see "Decisions").
 
-**Phase 4 — extraction complete for both boards. AQA is not yet published.**
+**Phase 4 — complete.** Both boards are extracted, tagged and published.
 
-- **Edexcel: 192 questions from 24 papers, live** on 38 generated pages with
-  66 linked notes pages. Needs no further work.
-- **AQA: 248 questions from 24 papers, extracted and verified, untagged.**
-  They have no topic tags yet, so the build reports and skips them rather
-  than publishing them. Nothing about them appears on the site.
-- URLs are now board-scoped, `/past-paper-questions/<board>/<slug>/`.
+The bank is **440 questions from 48 papers**: Edexcel A 192 (Papers 1-3,
+Sections B and C) and AQA 248 (Papers 1-2 Sections A and B, Paper 3 Section B).
+75 generated pages, 66 of them topic pages, and 139 notes pages linking in.
 
-**Next action: tag the 248 AQA questions** against the 79 AQA topics, in
-`past-paper-questions-data/tags.json`. That is the only thing standing between
-the AQA half and publication; everything downstream of tagging already works,
-since it is the same pipeline Edexcel goes through. Expect roughly 15-20 AQA
-topics to clear the gate of four and gain a page.
-
-**Next action: the site owner decides how to handle AQA** — the options are in
-"Flagged issues" under the AQA entry. Edexcel needs no further work.
+**Next action: the site owner reviews it in Live Server**, then decides about
+merging to `main` — which publishes. Nothing is pushed.
 
 ---
 
@@ -63,25 +54,28 @@ Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.
 
 ## Decisions made, and why
 
-| Decision                      | Choice                                                                               | Why                                                                                                                                                                                                    |
-| ----------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Phase 1 scope                 | Section B **and** Section C, Papers 1–2, 2017–2024                                   | Section C alone is only 32 questions — too few to support topic pages without them being thin                                                                                                          |
-| Section B extracts            | Not reproduced; each question links to the extract page in the hosted question paper | Owner's call. Avoids reproducing several pages of stimulus per question                                                                                                                                |
-| Topic pages                   | **Volume-gated**: generated only where a topic has ≥ 4 questions                     | 87 topics against 112 questions would mean most pages carried 0–1 questions. Thin/doorway content is an SEO liability, not a win. Gate is re-evaluated on every run, so pages appear as the bank grows |
-| Branch base                   | `main`                                                                               | The owner merged `feature/topic-questions` first, so `main` now has `questions-data/` and `build_questions.py`                                                                                         |
-| URL root                      | `/past-paper-questions/`                                                             | Matches search intent; distinct from `/past-papers/` (PDFs) and `/practice-questions/` (original MCQs)                                                                                                 |
-| Topic slugs                   | Reuse the 87 existing notes slugs verbatim, spec code and all                        | No new taxonomy means no rename risk. Bare keyword slugs collide — `balance-of-payments` is both 2.1.4 and 4.1.7                                                                                       |
-| PDF tooling                   | Swift + PDFKit                                                                       | No Python PDF library, no `requirements.txt`, no venv in this repo; macOS ships PDFKit. Precedent set in `QUESTIONS_PROGRESS.md` §7                                                                    |
-| Tags separate from extraction | `tags.json` keyed by question id                                                     | Re-running the extractor must never destroy hand-tagging                                                                                                                                               |
-| Progress file name            | `PAST-PAPERS-PROGRESS.md`, not `PROGRESS.md`                                         | Matches the existing `PROJECT-LOG.md` / `QUESTIONS_PROGRESS.md` convention                                                                                                                             |
-| `CLAUDE.md`                   | Extended with one section, **not** overwritten                                       | The existing file is good and was already the project's memory                                                                                                                                         |
-| Fuzzy search                  | Custom bounded-edit-distance index, **not** Fuse.js                                  | Fuse v7 ships only `.cjs` and `.mjs`, so it would force an ES module into a site whose seven scripts are all classic — and this repo has no JS dependencies. The plan permitted this alternative       |
-| Generated page formatting     | The generator runs `npx prettier@3.9.6` over its own output                          | Otherwise every run undoes the repo's formatting and the file churns in `git diff` forever. Generating twice is now byte-identical                                                                     |
-| Topic page links              | `hasPage` == clears the gate                                                         | In Phase 2 this was a disk probe so the master page could not link to pages that did not exist yet. Phase 3 generates them in the same run, so the gate is the authority again                         |
-| Notes-page links              | All 56 tagged topics, not just the 18 with pages                                     | The 38 without a page link to `?topic=<slug>` on the master search, so every tagged topic has a useful destination                                                                                     |
-| Per-question pages            | Not built                                                                            | One paragraph and three links each is thin content, and 112 near-identical pages risks the section's quality signals. Card ids already work as anchors                                                 |
-| Structured data               | `CollectionPage` + `BreadcrumbList`, **not** `Quiz`/`Question`                       | Quiz markup expects an `acceptedAnswer` or `suggestedAnswer`. This bank deliberately does not host answers — it links to Pearson's schemes — so declaring `Question` earns no rich result and misleads |
-| Static vs rendered cards      | Both renderers emit identical markup, enforced by test                               | Topic pages ship questions as real HTML for crawlers, then the component re-renders from JSON. If the two drifted, enabling JavaScript would silently change the page                                  |
+| Decision                      | Choice                                                                               | Why                                                                                                                                                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Phase 1 scope                 | Section B **and** Section C, Papers 1–2, 2017–2024                                   | Section C alone is only 32 questions — too few to support topic pages without them being thin                                                                                                           |
+| Section B extracts            | Not reproduced; each question links to the extract page in the hosted question paper | Owner's call. Avoids reproducing several pages of stimulus per question                                                                                                                                 |
+| Topic pages                   | **Volume-gated**: generated only where a topic has ≥ 4 questions                     | 87 topics against 112 questions would mean most pages carried 0–1 questions. Thin/doorway content is an SEO liability, not a win. Gate is re-evaluated on every run, so pages appear as the bank grows  |
+| Branch base                   | `main`                                                                               | The owner merged `feature/topic-questions` first, so `main` now has `questions-data/` and `build_questions.py`                                                                                          |
+| URL root                      | `/past-paper-questions/`                                                             | Matches search intent; distinct from `/past-papers/` (PDFs) and `/practice-questions/` (original MCQs)                                                                                                  |
+| Topic slugs                   | Reuse the 87 existing notes slugs verbatim, spec code and all                        | No new taxonomy means no rename risk. Bare keyword slugs collide — `balance-of-payments` is both 2.1.4 and 4.1.7                                                                                        |
+| PDF tooling                   | Swift + PDFKit                                                                       | No Python PDF library, no `requirements.txt`, no venv in this repo; macOS ships PDFKit. Precedent set in `QUESTIONS_PROGRESS.md` §7                                                                     |
+| Tags separate from extraction | `tags.json` keyed by question id                                                     | Re-running the extractor must never destroy hand-tagging                                                                                                                                                |
+| Progress file name            | `PAST-PAPERS-PROGRESS.md`, not `PROGRESS.md`                                         | Matches the existing `PROJECT-LOG.md` / `QUESTIONS_PROGRESS.md` convention                                                                                                                              |
+| `CLAUDE.md`                   | Extended with one section, **not** overwritten                                       | The existing file is good and was already the project's memory                                                                                                                                          |
+| AQA extraction                | A second extractor, `extract_aqa_questions.py`, using pdfplumber                     | PDFKit returns AQA's pages in a scrambled reading order. pdfplumber reads the number cells by coordinate, which is exact rather than heuristic. Repo's first Python dependency, authoring-time only     |
+| Board separation              | `/past-paper-questions/<board>/...`, boards never mixed on a page                    | 37 spec codes mean different things on each board, and 11 topics share a title. A flat namespace would show two numbering systems and split search intent across duplicate pages                        |
+| HTML escaping                 | Hand-rolled `e()` in the generator, **not** `html.escape`                            | `html.escape` turns an apostrophe into `&#x27;` and the JavaScript renderer does not, so a question containing one rendered differently once JavaScript ran. The two must agree character for character |
+| Fuzzy search                  | Custom bounded-edit-distance index, **not** Fuse.js                                  | Fuse v7 ships only `.cjs` and `.mjs`, so it would force an ES module into a site whose seven scripts are all classic — and this repo has no JS dependencies. The plan permitted this alternative        |
+| Generated page formatting     | The generator runs `npx prettier@3.9.6` over its own output                          | Otherwise every run undoes the repo's formatting and the file churns in `git diff` forever. Generating twice is now byte-identical                                                                      |
+| Topic page links              | `hasPage` == clears the gate                                                         | In Phase 2 this was a disk probe so the master page could not link to pages that did not exist yet. Phase 3 generates them in the same run, so the gate is the authority again                          |
+| Notes-page links              | All 56 tagged topics, not just the 18 with pages                                     | The 38 without a page link to `?topic=<slug>` on the master search, so every tagged topic has a useful destination                                                                                      |
+| Per-question pages            | Not built                                                                            | One paragraph and three links each is thin content, and 112 near-identical pages risks the section's quality signals. Card ids already work as anchors                                                  |
+| Structured data               | `CollectionPage` + `BreadcrumbList`, **not** `Quiz`/`Question`                       | Quiz markup expects an `acceptedAnswer` or `suggestedAnswer`. This bank deliberately does not host answers — it links to Pearson's schemes — so declaring `Question` earns no rich result and misleads  |
+| Static vs rendered cards      | Both renderers emit identical markup, enforced by test                               | Topic pages ship questions as real HTML for crawlers, then the component re-renders from JSON. If the two drifted, enabling JavaScript would silently change the page                                   |
 
 ---
 
@@ -240,35 +234,15 @@ Explained to the owner and left alone 2 August 2026. Every card already has its
 id as a stable anchor, so `/past-paper-questions/3-4-5-monopoly/#edexcel-a-p1-2019-jun-q7`
 addresses a single question today. The ids are ready if this is ever revisited.
 
-**Phase 4+ — scope confirmed by the owner 2 August 2026.**
-The schema already carries `context`, a string `questionNumber`,
-`parentQuestion`, `choiceGroup` and a free-string `section`, so none of the
-below needs a migration.
+**Nothing is outstanding in the agreed scope.** What was deliberately left out,
+and would be the next thing to consider:
 
-_In scope, in this order:_
-
-1. **Edexcel A Paper 3** (16 PDFs, `past-papers/edexcel/a-level/paper-3/`).
-   Confirmed wanted. Wholly context-based, so every question needs the
-   `context` extract link that Section B already uses.
-2. **Edexcel A Papers 1–2 Section A.** Not yet scheduled, but confirmed wanted
-   at a later date. Once added, those questions must flow into the topic pages —
-   which needs no new work, because the volume gate is re-evaluated on every
-   generator run, so topics currently below the gate will gain pages
-   automatically.
-3. **AQA A-Level** (`past-papers/aqa/a-level/`). Include:
-   - **Paper 1** — Section A _and_ Section B. **Section A carries extracts**, so
-     it needs `context` links.
-   - **Paper 2** — Section A _and_ Section B, same extract handling.
-   - **Paper 3** — **Section B only.** Section A is 30 multiple-choice questions
-     and is **excluded**. Section B is a case study and **needs extracts**.
-   - **AQA AS-Level is excluded for now.**
-   - AQA specimen papers (10 PDFs) remain out of scope unless asked for.
-
-_Still excluded:_ Edexcel A AS-Level, Edexcel B, OCR.
-
-Note for whoever picks this up: AQA mark tariffs and section meanings differ
-from Edexcel's, which is why `section` is a free string and `marks` a plain
-integer. Do not turn either into an enum.
+- **Edexcel Papers 1-2 Section A** (short-answer). Confirmed wanted "at a later
+  date". Adding it needs no new mechanism: extract, tag, re-run, and the volume
+  gate gives the newly-covered topics pages by itself.
+- **AS-level, Edexcel B and OCR** remain out of scope.
+- **AQA specimen papers** (10 PDFs) remain excluded.
+- **Per-question pages** were considered and rejected; see "Decisions".
 
 ---
 
