@@ -321,17 +321,24 @@ def render_card(q, index):
             links.append(f"<span>{label}</span>")
     topic_links = " &middot; ".join(links)
 
-    ms = e(paper["markSchemeUrl"] + "#page=" + str(q["msPage"]))
+    # Question paper first: a student who wants to attempt this under exam
+    # conditions needs the question as it was printed, before anything else.
+    qp_url = e(paper["questionPaperUrl"] + "#page=" + str(q["qpPage"]))
     actions = [
-        f'<a class="ppq-action" href="{ms}" target="_blank" '
-        f'rel="noopener noreferrer">Mark scheme &mdash; p.{q["msPage"]}</a>'
+        f'<a class="ppq-action" href="{qp_url}" target="_blank" '
+        f'rel="noopener noreferrer">Question paper &mdash; p.{q["qpPage"]}</a>'
     ]
     if q["ctxPage"]:
-        qp = e(paper["questionPaperUrl"] + "#page=" + str(q["ctxPage"]))
+        ctx = e(paper["questionPaperUrl"] + "#page=" + str(q["ctxPage"]))
         actions.append(
-            f'<a class="ppq-action" href="{qp}" target="_blank" '
+            f'<a class="ppq-action" href="{ctx}" target="_blank" '
             f'rel="noopener noreferrer">View the extract &mdash; p.{q["ctxPage"]}</a>'
         )
+    ms = e(paper["markSchemeUrl"] + "#page=" + str(q["msPage"]))
+    actions.append(
+        f'<a class="ppq-action" href="{ms}" target="_blank" '
+        f'rel="noopener noreferrer">Mark scheme &mdash; p.{q["msPage"]}</a>'
+    )
     first = topics.get(q["topics"][0]) if q["topics"] else None
     if first:
         actions.append(

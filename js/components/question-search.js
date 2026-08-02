@@ -236,11 +236,13 @@
       .filter(Boolean)
       .join(" &middot; ");
 
+    // Question paper first: a student who wants to attempt this under exam
+    // conditions needs the question as it was printed, before anything else.
     var actions = [
       '<a class="ppq-action" href="' +
-        escapeHtml(msUrl) +
-        '" target="_blank" rel="noopener noreferrer">Mark scheme &mdash; p.' +
-        q.msPage +
+        escapeHtml(paper.questionPaperUrl + "#page=" + q.qpPage) +
+        '" target="_blank" rel="noopener noreferrer">Question paper &mdash; p.' +
+        q.qpPage +
         "</a>",
     ];
     if (q.ctxPage) {
@@ -252,6 +254,13 @@
           "</a>",
       );
     }
+    actions.push(
+      '<a class="ppq-action" href="' +
+        escapeHtml(msUrl) +
+        '" target="_blank" rel="noopener noreferrer">Mark scheme &mdash; p.' +
+        q.msPage +
+        "</a>",
+    );
     var first = topics[q.topics[0]];
     if (first) {
       actions.push(
@@ -541,7 +550,40 @@
       });
     }
 
+    /* ?topic=<slug> and ?theme=<n> preset a filter without locking it.
+     *
+     * This is how the 38 topics that have questions but not enough for their
+     * own page are still linked to from their revision notes: the notes page
+     * points at /past-paper-questions/?topic=<slug> and the reader lands on a
+     * filtered view they can widen. Unlike data-prefilter-*, the control stays
+     * visible and changeable.
+     */
+    function applyQueryString() {
+      var query = window.location.search;
+      if (!query || query.length < 2) return;
+      query
+        .slice(1)
+        .split("&")
+        .forEach(function (pair) {
+          var bits = pair.split("=");
+          var key = decodeURIComponent(bits[0]);
+          var value = decodeURIComponent((bits[1] || "").replace(/\+/g, " "));
+          var sel = filters[key];
+          if (!sel || !value) return;
+          // Only accept a value the control actually offers, so a stale or
+          // hand-edited URL cannot leave the page showing an empty result set
+          // with no visible reason why.
+          for (var i = 0; i < sel.options.length; i++) {
+            if (sel.options[i].value === value) {
+              sel.value = value;
+              return;
+            }
+          }
+        });
+    }
+
     populate();
+    applyQueryString();
     // A control is meaningless on a page already fixed to that value.
     function hideField(sel) {
       if (!sel) return;

@@ -192,6 +192,31 @@ check(
   cardB.indexOf(sectionB.paper.markSchemeUrl) !== -1,
 );
 check(
+  "card: the question paper link carries its own #page fragment",
+  cardB.indexOf(
+    sectionB.paper.questionPaperUrl + "#page=" + sectionB.q.qpPage,
+  ) !== -1,
+);
+check(
+  "card: the question paper link comes first, before the mark scheme",
+  cardB.indexOf("Question paper") !== -1 &&
+    cardB.indexOf("Question paper") < cardB.indexOf("Mark scheme"),
+);
+check(
+  "card: Section B carries three PDF links, Section C carries two",
+  (cardB.match(/\.pdf#page=/g) || []).length === 3 &&
+    (cardC.match(/\.pdf#page=/g) || []).length === 2,
+  "B=" +
+    (cardB.match(/\.pdf#page=/g) || []).length +
+    " C=" +
+    (cardC.match(/\.pdf#page=/g) || []).length,
+);
+check(
+  "card: the extract link and the question paper link are different pages",
+  sectionB.q.ctxPage !== sectionB.q.qpPage ||
+    cardB.indexOf("View the extract") !== -1,
+);
+check(
   "card: Section B offers the extract link",
   cardB.indexOf("View the extract") !== -1,
 );
