@@ -15,19 +15,20 @@ One tagging change was requested and applied (labour immobility, P1 June 2018
 Q6e, is now 3.5.2 Supply of Labour only). Future scope was confirmed at the same
 time and is recorded under "Still to do".
 
-**Phase 2 (master search page) — complete, not yet reviewed.**
-`/past-paper-questions/` exists and works: 112 questions, live search, six
-filters, three sorts, verified deep links into the hosted mark schemes.
+**Phase 2 (master search page) — complete, reviewed 2 August 2026.** Three bugs
+were found on review and all three are fixed: source-citation URLs polluting the
+search index, the show-more counter running negative, and the `#page=` fragment
+(see "Flagged issues" — not fixable from our side). The nav entry was approved
+and applied at the same time: a child of the existing **Past Papers** dropdown,
+not a ninth top-level item.
 
-**Next action: the site owner opens `/past-paper-questions/` in Live Server**
-and checks it looks and behaves right — this is the first part of the project
-with a visual surface, and nothing here has been seen in a browser yet. Then
-Phase 3, which generates the theme and topic pages.
+**Phase 3 (theme and topic pages) — complete, not yet reviewed.** 22 new pages
+and the sitemap block.
 
-The nav entry was approved and applied on 2 August 2026: a child of the existing
-**Past Papers** dropdown, not a ninth top-level item. `sitemap.xml` is
-deliberately still untouched — the owner chose to review one diff in Phase 3,
-when the theme and topic pages join the same block.
+**Next action: the site owner reviews the generated pages in Live Server** —
+`/past-paper-questions/theme-3/` and `/past-paper-questions/3-4-5-monopoly/` are
+representative. Then Phase 4, whose scope is already confirmed under
+"Still to do".
 
 ---
 
@@ -62,15 +63,18 @@ Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.
 | `CLAUDE.md`                   | Extended with one section, **not** overwritten                                       | The existing file is good and was already the project's memory                                                                                                                                         |
 | Fuzzy search                  | Custom bounded-edit-distance index, **not** Fuse.js                                  | Fuse v7 ships only `.cjs` and `.mjs`, so it would force an ES module into a site whose seven scripts are all classic — and this repo has no JS dependencies. The plan permitted this alternative       |
 | Generated page formatting     | The generator runs `npx prettier@3.9.6` over its own output                          | Otherwise every run undoes the repo's formatting and the file churns in `git diff` forever. Generating twice is now byte-identical                                                                     |
-| Topic page links              | `hasPage` means "exists on disk", not "is warranted"                                 | The master page cannot ship links to Phase 3 pages that do not exist yet, and the links switch on by themselves once generated. No flag to remember                                                    |
+| Topic page links              | `hasPage` == clears the gate                                                         | In Phase 2 this was a disk probe so the master page could not link to pages that did not exist yet. Phase 3 generates them in the same run, so the gate is the authority again                         |
+| Structured data               | `CollectionPage` + `BreadcrumbList`, **not** `Quiz`/`Question`                       | Quiz markup expects an `acceptedAnswer` or `suggestedAnswer`. This bank deliberately does not host answers — it links to Pearson's schemes — so declaring `Question` earns no rich result and misleads |
+| Static vs rendered cards      | Both renderers emit identical markup, enforced by test                               | Topic pages ship questions as real HTML for crawlers, then the component re-renders from JSON. If the two drifted, enabling JavaScript would silently change the page                                  |
 
 ---
 
 ## Files created
 
-Three pre-existing files have been modified, all additively, none in their
+Four pre-existing files have been modified, all additively, none in their
 prose: `CLAUDE.md` (one section, two `See also` lines), `templates/header.html`
-(one nav `<li>`) and `js/components/inject-templates.js` (one `pageMap` entry).
+(one nav `<li>`), `js/components/inject-templates.js` (one `pageMap` entry) and
+`sitemap.xml` (a new block between markers, 25 lines added, none removed).
 `verify_text_integrity.py` confirms 0 visible-text differences across all 176
 pages, and `verify_markup_integrity.py --strict` confirms 0 losses.
 
@@ -123,8 +127,22 @@ Phase 2:
 - Accessibility: all 8 form controls have matching labels, the result count is
   a polite live region, no inline styles, no `onclick`, one `h1`, controls
   hidden until the data is in.
-- **Nothing has been looked at in a browser yet.** This is the gap in Phase 2's
-  verification and the reason the next action is a Live Server check.
+- Reviewed in the browser 2 August 2026. Three bugs found and fixed.
+
+Phase 3:
+
+- 22 pages generated: 4 theme, 18 topic. Every question is real HTML in the
+  page source, not injected by script.
+- **The Python and JavaScript card renderers are byte-identical** across all
+  112 questions, checked by `test_question_search.js`. If they ever drift,
+  enabling JavaScript would silently change the page, so this is the test
+  that matters most here.
+- 23 pages: unique titles, descriptions and canonicals; one `h1` each; no
+  inline styles; **1428 internal links, 0 broken**; prettier clean.
+- All 25 generated files are **byte-identical across two generator runs**.
+- Stale pages are deleted, so the output stays a pure function of the data.
+- `sitemap.xml`: 23 URLs added between markers, 0 lines removed, still valid
+  XML with 384 URLs and no duplicates.
 
 Coverage: 56 of 87 topics have at least one question; **18 reach the gate of 4**
 and would get a page in Phase 3. The 31 empty topics are mostly Theme 1–2
@@ -158,6 +176,14 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 
 ## Flagged issues
 
+- **`#page=N` deep links are honoured by Chrome, Firefox and Edge, but not by
+  Safari.** Safari's PDF viewer ignores the fragment and opens at page 1.
+  Nothing is wrong on our side: the PDFs carry no `/OpenAction`, they are
+  linearised, and the hrefs are correct. The only cross-browser fix is to
+  render the PDFs ourselves with a vendored PDF.js (~1.4 MB), which the owner
+  judged not worth it against a repo with no dependencies. **The mitigation is
+  that every link also shows its page number as text** ("Mark scheme — p.19"),
+  so a reader can navigate manually. Reviewed and accepted 2 August 2026.
 - **Three live 404s, outside this project's scope.**
   `past-papers/edexcel-b/index.html` links three June 2023 mark schemes that are
   not on disk (A-Level papers 1, 2, 3) — 68 hrefs against 65 files.
@@ -170,15 +196,15 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 
 ## Still to do
 
-**Phase 3 — generated pages.** `scripts/build_past_paper_questions.py` renders 4
-theme pages plus every gated topic page as crawlable HTML, each embedding the
-search component pre-filtered, with breadcrumbs, unique title/meta, related-topic
-links and a link back to the master page. Sitemap block written between
-`<!-- Past Paper Questions -->` markers, matching the practice-questions
-convention. `Quiz`/`Question` schema.org markup implies an answer the site
-deliberately does not host, so `LearningResource` is the likelier fit.
+**Still open from the original brief, neither yet requested:**
 
-**Phase 4+ — scope confirmed by the owner 2 August 2026; build after Phase 3.**
+- **Internal links from the notes pages** into their topic's questions page,
+  following the additive-only pattern of `scripts/append_questions_link.py`.
+  Needs the owner's approval since it touches 87 existing pages.
+- **Per-question pages.** Deliberately not built. The stable question ids are
+  ready to become URLs (`edexcel-a-p1-2019-jun-q7`) if that is ever wanted.
+
+**Phase 4+ — scope confirmed by the owner 2 August 2026.**
 The schema already carries `context`, a string `questionNumber`,
 `parentQuestion`, `choiceGroup` and a free-string `section`, so none of the
 below needs a migration.
@@ -220,14 +246,18 @@ python3 scripts/build_past_paper_taxonomy.py
 swift scripts/extract_past_paper_questions.swift \
   past-papers/edexcel/a-level/paper-{1,2}/*question-paper.pdf
 python3 scripts/build_past_paper_questions.py
-git diff --stat past-paper-questions-data/ past-paper-questions/   # expect: nothing
+git diff --stat past-paper-questions-data/ past-paper-questions/ sitemap.xml
+# expect: nothing, unless it is a different calendar day, in which case the
+# sitemap block is rewritten with a fresh lastmod. Same caveat as the
+# practice-questions block.
 
 # verify
 swift scripts/verify_past_paper_extraction.swift   # 112 checked, all passed
 python3 scripts/verify_past_paper_tags.py          # all tag checks passed
-node scripts/test_question_search.js               # every check passed
-python3 scripts/verify_html.py past-paper-questions
-python3 scripts/verify_links.py past-paper-questions   # 0 broken
+node scripts/test_question_search.js               # every check passed,
+                                                   # including Python vs JS cards
+python3 scripts/verify_html.py past-paper-questions    # 23 files, 0 errors
+python3 scripts/verify_links.py past-paper-questions   # 1428 refs, 0 broken
 
 # prove no existing page was touched
 git diff main -- revision-notes/ templates/ js/ css/ past-papers/ sitemap.xml \
@@ -236,6 +266,14 @@ git diff main -- revision-notes/ templates/ js/ css/ past-papers/ sitemap.xml \
 
 The last command must print nothing.
 
-Then open `/past-paper-questions/` in Live Server and check: results appear,
-typing filters them, each filter narrows the count, "Clear all" resets, a mark
-scheme link opens the right page, and the layout holds on a narrow viewport.
+Then open these in Live Server:
+
+- `/past-paper-questions/` — results appear, typing filters them, each filter
+  narrows the count, "Clear all" resets, the layout holds when narrow.
+- `/past-paper-questions/theme-3/` — 38 questions, theme control hidden.
+- `/past-paper-questions/3-4-5-monopoly/` — 5 questions, topic control hidden,
+  related topics listed.
+
+With JavaScript disabled the topic and theme pages must still show every
+question: that is the crawlable content, and it is what the Python renderer
+wrote.
