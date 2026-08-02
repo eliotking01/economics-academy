@@ -64,6 +64,8 @@ Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.
 | Fuzzy search                  | Custom bounded-edit-distance index, **not** Fuse.js                                  | Fuse v7 ships only `.cjs` and `.mjs`, so it would force an ES module into a site whose seven scripts are all classic — and this repo has no JS dependencies. The plan permitted this alternative       |
 | Generated page formatting     | The generator runs `npx prettier@3.9.6` over its own output                          | Otherwise every run undoes the repo's formatting and the file churns in `git diff` forever. Generating twice is now byte-identical                                                                     |
 | Topic page links              | `hasPage` == clears the gate                                                         | In Phase 2 this was a disk probe so the master page could not link to pages that did not exist yet. Phase 3 generates them in the same run, so the gate is the authority again                         |
+| Notes-page links              | All 56 tagged topics, not just the 18 with pages                                     | The 38 without a page link to `?topic=<slug>` on the master search, so every tagged topic has a useful destination                                                                                     |
+| Per-question pages            | Not built                                                                            | One paragraph and three links each is thin content, and 112 near-identical pages risks the section's quality signals. Card ids already work as anchors                                                 |
 | Structured data               | `CollectionPage` + `BreadcrumbList`, **not** `Quiz`/`Question`                       | Quiz markup expects an `acceptedAnswer` or `suggestedAnswer`. This bank deliberately does not host answers — it links to Pearson's schemes — so declaring `Question` earns no rich result and misleads |
 | Static vs rendered cards      | Both renderers emit identical markup, enforced by test                               | Topic pages ship questions as real HTML for crawlers, then the component re-renders from JSON. If the two drifted, enabling JavaScript would silently change the page                                  |
 
@@ -144,6 +146,17 @@ Phase 3:
 - `sitemap.xml`: 23 URLs added between markers, 0 lines removed, still valid
   XML with 384 URLs and no duplicates.
 
+Follow-ups after the Phase 3 review:
+
+- Every card now links the **question paper** as well as the mark scheme, so
+  a question can be attempted in its printed form. Section B carries three
+  PDF links, Section C two.
+- **All 56 tagged notes pages** link to their past paper questions. The 18
+  with a page link there; the other 38 link to the master search filtered by
+  `?topic=`, which the component now reads.
+- Notes edits verified additive: 504 insertions, 0 deletions, 0 markup
+  losses, and each page's original visible text still intact and contiguous.
+
 Coverage: 56 of 87 topics have at least one question; **18 reach the gate of 4**
 and would get a page in Phase 3. The 31 empty topics are mostly Theme 1–2
 foundation material that Edexcel tests in Section A, not Section B or C.
@@ -196,13 +209,14 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 
 ## Still to do
 
-**Still open from the original brief, neither yet requested:**
-
-- **Internal links from the notes pages** into their topic's questions page,
-  following the additive-only pattern of `scripts/append_questions_link.py`.
-  Needs the owner's approval since it touches 87 existing pages.
-- **Per-question pages.** Deliberately not built. The stable question ids are
-  ready to become URLs (`edexcel-a-p1-2019-jun-q7`) if that is ever wanted.
+**Per-question pages — considered and deliberately not built.** A URL per
+question (`/past-paper-questions/edexcel-a-p1-2019-jun-q7/`), 112 pages today.
+Rejected because each would carry one paragraph of Pearson's text and three
+links: thin content of exactly the kind the volume gate exists to avoid, and 112
+near-identical templates risks the same quality signals across the section.
+Explained to the owner and left alone 2 August 2026. Every card already has its
+id as a stable anchor, so `/past-paper-questions/3-4-5-monopoly/#edexcel-a-p1-2019-jun-q7`
+addresses a single question today. The ids are ready if this is ever revisited.
 
 **Phase 4+ — scope confirmed by the owner 2 August 2026.**
 The schema already carries `context`, a string `questionNumber`,
