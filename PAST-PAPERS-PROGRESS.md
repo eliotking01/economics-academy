@@ -24,8 +24,10 @@ and checks it looks and behaves right — this is the first part of the project
 with a visual surface, and nothing here has been seen in a browser yet. Then
 Phase 3, which generates the theme and topic pages.
 
-Two shared-file changes are ready but **deliberately not applied**, because they
-need the diff approved first: the nav entry, and the `sitemap.xml` block.
+The nav entry was approved and applied on 2 August 2026: a child of the existing
+**Past Papers** dropdown, not a ninth top-level item. `sitemap.xml` is
+deliberately still untouched — the owner chose to review one diff in Phase 3,
+when the theme and topic pages join the same block.
 
 ---
 
@@ -66,8 +68,11 @@ Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.
 
 ## Files created
 
-Nothing pre-existing has been modified except `CLAUDE.md`, which gained one
-section and two `See also` lines.
+Three pre-existing files have been modified, all additively, none in their
+prose: `CLAUDE.md` (one section, two `See also` lines), `templates/header.html`
+(one nav `<li>`) and `js/components/inject-templates.js` (one `pageMap` entry).
+`verify_text_integrity.py` confirms 0 visible-text differences across all 176
+pages, and `verify_markup_integrity.py --strict` confirms 0 losses.
 
 | File                                         | Kind                | Notes                                                                                                                |
 | -------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -135,19 +140,19 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 - **Coverage and the volume gate** (§6(b)) — approved.
 - **Future scope** (§7) — Edexcel A Paper 3 and Section A both wanted; AQA
   wanted with a partial scope. See "Still to do".
+- **Nav placement** — approved 2 August 2026 as a child of the Past Papers
+  dropdown. Applied; both edits purely additive.
+- **Sitemap timing** — approved to wait for Phase 3, so the whole block is
+  reviewed as one diff.
 
 ## Open questions awaiting the owner
 
-1. **Nav entry.** A top-level "Past Paper Questions" item needs an edit to
-   `templates/header.html` _and_ a new entry in the `pageMap` array in
-   `js/components/inject-templates.js` — without the second, nothing highlights.
-   Diff to be shown before applying.
-2. **Internal links** from notes pages to their topic's questions page, following
+1. **Internal links** from notes pages to their topic's questions page, following
    the additive-only pattern of `scripts/append_questions_link.py`.
-3. **Copyright.** The bank reproduces Pearson question text verbatim. The site
+2. **Copyright.** The bank reproduces Pearson question text verbatim. The site
    already hosts all 281 papers in full, so this is not a new category of
    exposure, but it is a wider one. Raised; owner's call.
-4. **Any push to `main`** — it auto-publishes to economicsacademy.co.uk.
+3. **Any push to `main`** — it auto-publishes to economicsacademy.co.uk.
 
 ---
 
