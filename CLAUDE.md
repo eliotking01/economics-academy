@@ -151,12 +151,20 @@ data path.
   Kept separate so re-extraction cannot destroy it.
 - `past-paper-questions-data/taxonomy.json` — generated from the existing 87
   Edexcel topic records; the bank invents no taxonomy of its own.
+- `past-paper-questions/index.html` and `questions.json` — **generated** by
+  `scripts/build_past_paper_questions.py`. Do not hand-edit either; re-run it.
+  It runs Prettier over its own HTML, so generating twice is byte-identical.
 
 Mark scheme content is **never** extracted. Each question deep-links to the
 site's own hosted PDF at the right page.
 
 PDF work uses **Swift + PDFKit**, not Python: there is no PDF library, no
 `requirements.txt` and no venv here, but macOS ships PDFKit.
+
+Search is `js/components/question-search.js` — one reusable component used on
+the master page and, pre-filtered, on every topic page. No Fuse.js and no
+dependency: it is a small bounded-edit-distance token index. Tested by
+`node scripts/test_question_search.js`, which runs against the shipped file.
 
 ## See also
 

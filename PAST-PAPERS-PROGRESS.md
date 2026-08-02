@@ -10,17 +10,22 @@ resume from this file, `CLAUDE.md` and `git log` alone.
 
 ## Current position
 
-**Phase 1 (data extraction) is complete, reviewed and signed off.**
+**Phase 1 (data extraction) — complete, reviewed and signed off 2 August 2026.**
+One tagging change was requested and applied (labour immobility, P1 June 2018
+Q6e, is now 3.5.2 Supply of Labour only). Future scope was confirmed at the same
+time and is recorded under "Still to do".
 
-Phase 1 was reviewed by the site owner on 2 August 2026. One
-tagging change was requested and applied (labour immobility, P1 June 2018 Q6e,
-is now 3.5.2 Supply of Labour only). Future scope was confirmed at the same time
-and is recorded under "Still to do".
+**Phase 2 (master search page) — complete, not yet reviewed.**
+`/past-paper-questions/` exists and works: 112 questions, live search, six
+filters, three sorts, verified deep links into the hosted mark schemes.
 
-**Next action: begin Phase 2 — the master search page.** Start with
-`js/components/question-search.js`, built from the outset as a reusable component
-taking an optional pre-filter, because Phase 3 embeds the same component on every
-topic page.
+**Next action: the site owner opens `/past-paper-questions/` in Live Server**
+and checks it looks and behaves right — this is the first part of the project
+with a visual surface, and nothing here has been seen in a browser yet. Then
+Phase 3, which generates the theme and topic pages.
+
+Two shared-file changes are ready but **deliberately not applied**, because they
+need the diff approved first: the nav entry, and the `sitemap.xml` block.
 
 ---
 
@@ -53,6 +58,9 @@ Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.
 | Tags separate from extraction | `tags.json` keyed by question id                                                     | Re-running the extractor must never destroy hand-tagging                                                                                                                                               |
 | Progress file name            | `PAST-PAPERS-PROGRESS.md`, not `PROGRESS.md`                                         | Matches the existing `PROJECT-LOG.md` / `QUESTIONS_PROGRESS.md` convention                                                                                                                             |
 | `CLAUDE.md`                   | Extended with one section, **not** overwritten                                       | The existing file is good and was already the project's memory                                                                                                                                         |
+| Fuzzy search                  | Custom bounded-edit-distance index, **not** Fuse.js                                  | Fuse v7 ships only `.cjs` and `.mjs`, so it would force an ES module into a site whose seven scripts are all classic — and this repo has no JS dependencies. The plan permitted this alternative       |
+| Generated page formatting     | The generator runs `npx prettier@3.9.6` over its own output                          | Otherwise every run undoes the repo's formatting and the file churns in `git diff` forever. Generating twice is now byte-identical                                                                     |
+| Topic page links              | `hasPage` means "exists on disk", not "is warranted"                                 | The master page cannot ship links to Phase 3 pages that do not exist yet, and the links switch on by themselves once generated. No flag to remember                                                    |
 
 ---
 
@@ -72,6 +80,17 @@ section and two `See also` lines.
 | `past-paper-questions-data/tags.json`        | data (hand-written) | 112 entries: topics + keywords                                                                                       |
 | `extraction-qa-report.md`                    | report              | Phase 1 QA. Reviewed and signed off 2 August 2026                                                                    |
 
+Phase 2:
+
+| File                                    | Kind             | Notes                                                                                      |
+| --------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| `scripts/build_past_paper_questions.py` | generator        | Joins extraction + tags + taxonomy, writes the index and the master page. Grows in Phase 3 |
+| `js/components/question-search.js`      | component        | The reusable search/filter/results UI. Takes an optional pre-filter                        |
+| `css/pages/past-paper-questions.css`    | stylesheet       | Every rule scoped under `.past-paper-questions-page`                                       |
+| `scripts/test_question_search.js`       | test             | `node scripts/test_question_search.js`. Runs against the shipped component, not a copy     |
+| `past-paper-questions/index.html`       | page (generated) | Do not hand-edit; re-run the generator                                                     |
+| `past-paper-questions/questions.json`   | data (generated) | 88 KB, 16 KB gzipped                                                                       |
+
 ---
 
 ## Verified done
@@ -85,6 +104,22 @@ section and two `See also` lines.
 - All 22 line-wrapped source URLs repaired to well-formed URLs.
 - Page furniture, dot leaders and the rotated `DO NOT WRITE IN THIS AREA`
   margin text removed from all question text.
+
+Phase 2:
+
+- Master page generates, is well-formed, and has **0 broken links** and
+  0 broken fragments.
+- Generating twice is **byte-identical**, and the output passes
+  `prettier@3.9.6 --check` because the generator formats its own output.
+- Search tests pass against the shipped component: typo tolerance
+  ("quantitive easing" finds the same set as the correct spelling), all five
+  mark phrasings agree, AND semantics, ranking, deep-link construction,
+  HTML escaping, and Section B/C extract-link asymmetry.
+- Accessibility: all 8 form controls have matching labels, the result count is
+  a polite live region, no inline styles, no `onclick`, one `h1`, controls
+  hidden until the data is in.
+- **Nothing has been looked at in a browser yet.** This is the gap in Phase 2's
+  verification and the reason the next action is a Live Server check.
 
 Coverage: 56 of 87 topics have at least one question; **18 reach the gate of 4**
 and would get a page in Phase 3. The 31 empty topics are mostly Theme 1–2
@@ -129,15 +164,6 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 ---
 
 ## Still to do
-
-**Phase 2 — master search page.** `past-paper-questions/index.html`,
-`css/pages/past-paper-questions.css` (every rule scoped under a
-`.past-paper-questions-page` wrapper), `js/components/question-search.js` built
-as a reusable component taking an optional pre-filter, and a vendored
-`js/fuse.min.js`. Needs a crawlable intro and topic links as the JS-less
-fallback. Reuse the `.filter-topic-btn` pill idiom from
-`css/pages/macro-application.css` and the `.action-card` look from
-`css/pages/home.css`.
 
 **Phase 3 — generated pages.** `scripts/build_past_paper_questions.py` renders 4
 theme pages plus every gated topic page as crawlable HTML, each embedding the
@@ -188,14 +214,23 @@ git log --oneline main..feature/question-bank
 python3 scripts/build_past_paper_taxonomy.py
 swift scripts/extract_past_paper_questions.swift \
   past-papers/edexcel/a-level/paper-{1,2}/*question-paper.pdf
-git diff --stat past-paper-questions-data/     # expect: no changes
+python3 scripts/build_past_paper_questions.py
+git diff --stat past-paper-questions-data/ past-paper-questions/   # expect: nothing
 
 # verify
-swift scripts/verify_past_paper_extraction.swift   # expect: 112 checked, all passed
-python3 scripts/verify_past_paper_tags.py          # expect: all tag checks passed
+swift scripts/verify_past_paper_extraction.swift   # 112 checked, all passed
+python3 scripts/verify_past_paper_tags.py          # all tag checks passed
+node scripts/test_question_search.js               # every check passed
+python3 scripts/verify_html.py past-paper-questions
+python3 scripts/verify_links.py past-paper-questions   # 0 broken
 
 # prove no existing page was touched
-git diff main -- revision-notes/ templates/ js/ css/ past-papers/ | grep '^-[^-]'
+git diff main -- revision-notes/ templates/ js/ css/ past-papers/ sitemap.xml \
+  | grep '^-[^-]'
 ```
 
 The last command must print nothing.
+
+Then open `/past-paper-questions/` in Live Server and check: results appear,
+typing filters them, each filter narrows the count, "Clear all" resets, a mark
+scheme link opens the right page, and the layout holds on a narrow viewport.
