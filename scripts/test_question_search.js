@@ -244,6 +244,81 @@ check(
   hrefs.length + " topic links but " + linkedSlugs.length + " generated pages",
 );
 
+// ---- regressions found in review
+
+// A source-citation URL must not make a question searchable by words that
+// appear nowhere in the economics. The Tesla monopoly question cites
+// ".../tesla-holds-us-ev-market-losing-federal-tax-credit/" and was a hit for
+// "tax".
+function searchableBody(s) {
+  return s
+    .replace(/\(Sources?\b[^)]*\)/gi, " ")
+    .replace(/https?:\/\/\S+/g, " ");
+}
+
+// A hit is legitimate when the term is in the question's own wording, in one of
+// its topic titles, or in a hand-written keyword. Topic and keyword matches are
+// the point of tagging: "tax" should reach the indirect-taxes questions even
+// where the word itself never appears in the stem.
+function legitimateHit(q, term) {
+  const fields = [searchableBody(q.questionText)]
+    .concat(q.keywords)
+    .concat(
+      q.topics.map(
+        (s) => data.topics[s].title + " " + data.topics[s].shortTitle,
+      ),
+    );
+  return fields.join(" ").toLowerCase().indexOf(term) !== -1;
+}
+
+const taxHits = search("tax").map((r) => r.q);
+check(
+  "citations: every 'tax' hit is justified by wording, topic or keyword",
+  taxHits.every((q) => legitimateHit(q, "tax")),
+  taxHits
+    .filter((q) => !legitimateHit(q, "tax"))
+    .map((q) => q.id)
+    .join(", "),
+);
+check(
+  "citations: the Tesla monopoly question is no longer a hit for 'tax'",
+  search("tax").every((r) => r.q.id !== "edexcel-a-p1-2022-jun-q7"),
+);
+check(
+  "citations: that question is still findable by its real subject",
+  ids("monopoly efficiency").indexOf("edexcel-a-p1-2022-jun-q7") !== -1,
+);
+check(
+  "citations: stripping them did not empty any haystack",
+  index.every((r) => r.tokens.length > 5),
+);
+check(
+  "citations: questions are still findable by their own wording",
+  ids("electric vehicle market").length > 0 &&
+    ids("collusive behaviour").length > 0,
+);
+
+// The "show more" label counted below zero because .ppq-more sets display:block,
+// which beats the browser's [hidden] rule, so the button never actually hid.
+const css = fs.readFileSync(
+  path.join(ROOT, "css", "pages", "past-paper-questions.css"),
+  "utf8",
+);
+check(
+  "hidden: the component restates [hidden] so author display rules cannot win",
+  /\.past-paper-questions-page \[hidden\]\s*\{[^}]*display:\s*none\s*!important/.test(
+    css,
+  ),
+);
+check(
+  "show more: the remaining count is clamped at zero",
+  /Math\.max\(0,\s*matches\.length - shown\)/.test(source),
+);
+check(
+  "show more: shown never exceeds the number of matches",
+  /Math\.min\(shown \+ PAGE_SIZE,\s*matches\.length\)/.test(source),
+);
+
 console.log(
   failures === 0
     ? "all " + index.length + " records indexed; every check passed"

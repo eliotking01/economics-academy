@@ -19,6 +19,17 @@
   --ppq-accent: #d52349;
 }
 
+/* The script shows and hides the controls, the empty state and the "show more"
+ * button with the hidden property. An author `display` rule beats the browser's
+ * own `[hidden] { display: none }` no matter how specific it is, so any element
+ * given a display here would ignore `hidden` and stay on screen. That is not
+ * hypothetical: .ppq-more is display:block and .ppq-field is display:flex, and
+ * both were doing exactly that. Restated once, for everything in the component.
+ */
+.past-paper-questions-page [hidden] {
+  display: none !important;
+}
+
 /* ── Hero ────────────────────────────────────────────── */
 
 .past-paper-questions-page .ppq-hero {

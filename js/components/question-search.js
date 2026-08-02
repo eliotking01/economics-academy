@@ -105,6 +105,21 @@
     ];
   }
 
+  /* What of a question's text is worth searching.
+   *
+   * The displayed text is the paper's wording verbatim, source citation and
+   * all. The citation is provenance, not economics, and indexing it produces
+   * matches a student would call wrong: the URL
+   * ".../tesla-holds-us-ev-market-losing-federal-tax-credit/" made a monopoly
+   * and efficiency question a hit for "tax". Citations come out of the
+   * haystack; nothing changes on screen.
+   */
+  function searchableText(s) {
+    return String(s)
+      .replace(/\(Sources?\b[^)]*\)/gi, " ")
+      .replace(/https?:\/\/\S+/g, " ");
+  }
+
   function buildIndex(data) {
     var topics = data.topics;
     var themes = {};
@@ -114,7 +129,7 @@
 
     return data.questions.map(function (q) {
       var paper = data.papers[q.p];
-      var parts = [q.questionText];
+      var parts = [searchableText(q.questionText)];
 
       q.topics.forEach(function (slug) {
         var t = topics[slug];
@@ -477,9 +492,11 @@
       }
       if (els.empty) els.empty.hidden = matches.length !== 0;
       if (els.more) {
-        els.more.hidden = matches.length <= shown;
-        els.more.textContent =
-          "Show more (" + (matches.length - shown) + " remaining)";
+        // Clamped, so the label cannot count below zero even if the button is
+        // somehow clicked while it should be hidden.
+        var remaining = Math.max(0, matches.length - shown);
+        els.more.hidden = remaining === 0;
+        els.more.textContent = "Show more (" + remaining + " remaining)";
       }
     }
 
@@ -502,7 +519,7 @@
     if (els.sort) els.sort.addEventListener("change", run);
     if (els.more)
       els.more.addEventListener("click", function () {
-        shown += PAGE_SIZE;
+        shown = Math.min(shown + PAGE_SIZE, matches.length);
         render();
       });
     if (els.clear)
