@@ -22,13 +22,17 @@ search index, the show-more counter running negative, and the `#page=` fragment
 and applied at the same time: a child of the existing **Past Papers** dropdown,
 not a ninth top-level item.
 
-**Phase 3 (theme and topic pages) — complete, not yet reviewed.** 22 new pages
-and the sitemap block.
+**Phase 3 (theme and topic pages) — complete, reviewed 2 August 2026.** Three
+follow-ups were requested and delivered: notes-page links, a question paper link
+on every card, and an explanation of per-question pages (see "Decisions").
 
-**Next action: the site owner reviews the generated pages in Live Server** —
-`/past-paper-questions/theme-3/` and `/past-paper-questions/3-4-5-monopoly/` are
-representative. Then Phase 4, whose scope is already confirmed under
-"Still to do".
+**Phase 4 — Edexcel Paper 3 complete. AQA blocked; see "Flagged issues".**
+The bank is now **192 questions from 24 Edexcel papers**, 37 generated pages,
+66 linked notes pages. AQA extraction does not work with the current approach
+and is deliberately not half-shipped.
+
+**Next action: the site owner decides how to handle AQA** — the options are in
+"Flagged issues" under the AQA entry. Edexcel needs no further work.
 
 ---
 
@@ -188,6 +192,40 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 ---
 
 ## Flagged issues
+
+- **AQA cannot be extracted with the current approach. Not attempted further.**
+  The question papers put each question's number in a boxed cell in the left
+  margin, and PDFKit returns those boxes in the wrong reading order — the
+  numbers arrive clumped together mid-sentence ("0 1 0 2 0 3 Extract B (line 18)
+  states that…") rather than beside their questions. There is no reliable
+  delimiter between the end of an extract and the start of a question.
+
+  Measured across all 16 AQA Paper 1 and Paper 2 papers, splitting on the
+  `[N marks]` tariff markers produces 224 chunks — the right count — but
+  **35 are unusably short and 124 carry a stray question number**. That is 16%
+  outright failures and 55% contaminated, against 0% for Edexcel.
+
+  A geometry-based fix was tried and is worse: `PDFPage.characterBounds(at:)`
+  does not align with `page.string` for these files and returns garbled text
+  ("ned o e buil. Als, sa leves wil contine"). CoreGraphics also logs a
+  structural error when opening them.
+
+  **Nothing was shipped.** Contaminated question text would breach the rule that
+  nothing is invented, paraphrased or reconstructed. Three ways forward:
+
+  1. **A layout-aware extractor** that rebuilds each page from text-run
+     rectangles rather than reading order, and separates the number gutter from
+     the body column by x-position. Feasible but a real piece of work, and it
+     needs a PDF library with reliable per-run geometry — which would be this
+     repo's first runtime dependency.
+  2. **Hand-transcribe** the question text. ~300 questions across Papers 1-3.
+  3. **Leave AQA out.** Edexcel A is the board the notes cover most deeply, and
+     the bank is complete and verified for it.
+
+  Note also that AQA needs a taxonomy that does not exist yet: 79 more topics
+  across `aqa-a2-micro` (54) and `aqa-a2-macro` (25), using the site-local
+  `1.x.y` / `2.x.y` codes. That is a second, separate piece of work from the
+  extraction.
 
 - **`#page=N` deep links are honoured by Chrome, Firefox and Edge, but not by
   Safari.** Safari's PDF viewer ignores the fragment and opens at page 1.
