@@ -32,6 +32,9 @@ The bank is **440 questions from 48 papers**: Edexcel A 192 (Papers 1-3,
 Sections B and C) and AQA 248 (Papers 1-2 Sections A and B, Paper 3 Section B).
 75 generated pages, 66 of them topic pages, and 139 notes pages linking in.
 
+`/past-papers/` now carries a CTA into the bank, between the board buttons and
+the resources row.
+
 **Next action: the site owner reviews it in Live Server**, then decides about
 merging to `main` — which publishes. Nothing is pushed.
 
@@ -69,6 +72,7 @@ Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.
 | AQA extraction                | A second extractor, `extract_aqa_questions.py`, using pdfplumber                     | PDFKit returns AQA's pages in a scrambled reading order. pdfplumber reads the number cells by coordinate, which is exact rather than heuristic. Repo's first Python dependency, authoring-time only     |
 | Board separation              | `/past-paper-questions/<board>/...`, boards never mixed on a page                    | 37 spec codes mean different things on each board, and 11 topics share a title. A flat namespace would show two numbering systems and split search intent across duplicate pages                        |
 | HTML escaping                 | Hand-rolled `e()` in the generator, **not** `html.escape`                            | `html.escape` turns an apostrophe into `&#x27;` and the JavaScript renderer does not, so a question containing one rendered differently once JavaScript ran. The two must agree character for character |
+| Hub CTA count                 | Marker comments in `past-papers/index.html`, refreshed by the build                  | A hard-coded figure goes stale the moment the bank grows and nothing would flag it. Only the digits are rewritten, so the surrounding copy stays hand-written                                           |
 | Fuzzy search                  | Custom bounded-edit-distance index, **not** Fuse.js                                  | Fuse v7 ships only `.cjs` and `.mjs`, so it would force an ES module into a site whose seven scripts are all classic — and this repo has no JS dependencies. The plan permitted this alternative        |
 | Generated page formatting     | The generator runs `npx prettier@3.9.6` over its own output                          | Otherwise every run undoes the repo's formatting and the file churns in `git diff` forever. Generating twice is now byte-identical                                                                      |
 | Topic page links              | `hasPage` == clears the gate                                                         | In Phase 2 this was a disk probe so the master page could not link to pages that did not exist yet. Phase 3 generates them in the same run, so the gate is the authority again                          |
