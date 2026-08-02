@@ -148,6 +148,11 @@ function setActivePage() {
     // Add more specific patterns first
     { pattern: /^\/revision-notes(\/|$)/, page: "revision-notes" },
     { pattern: /^\/practice-questions(\/|$)/, page: "practice-questions" },
+    // The question bank lives under the Past Papers dropdown, so it lights up
+    // that parent. Listed first because it is the more specific path, though
+    // the two cannot both match: "past-papers" is not a prefix of
+    // "past-paper-questions".
+    { pattern: /^\/past-paper-questions(\/|$)/, page: "past-papers" },
     { pattern: /^\/past-papers(\/|$)/, page: "past-papers" },
     { pattern: /^\/tutoring\.html$/, page: "tutoring" },
     { pattern: /^\/marking\.html$/, page: "marking" },

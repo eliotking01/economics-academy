@@ -1,0 +1,19 @@
+# Authoring-time only. Nothing here ships: the site stays static HTML, CSS and
+# hand-written JS with no build step, exactly as before.
+#
+# Needed by scripts/extract_aqa_questions.py. AQA prints each question number in
+# a boxed cell in the left margin, and PDFKit returns those boxes detached from
+# their questions, which makes the reading order unusable. pdfplumber gives per
+# word coordinates, so the number gutter can be separated from the body column
+# by position instead of guessed at.
+#
+# Edexcel extraction does NOT need this - it uses Swift and PDFKit, which reads
+# those papers correctly. See scripts/extract_past_paper_questions.swift.
+#
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+#   .venv/bin/python scripts/extract_aqa_questions.py
+#
+# .venv/ is gitignored.
+
+pdfplumber==0.11.10

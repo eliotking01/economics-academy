@@ -1,0 +1,374 @@
+/* Past paper questions - /past-paper-questions/ and every generated topic page.
+ *
+ * Every rule is nested under .past-paper-questions-page, the wrapper class on
+ * this page's <section id="main">. Bare class names have collided across two
+ * stylesheets here before, so nothing in this file is allowed to leak.
+ *
+ * The card look is lifted from .action-card in css/pages/home.css and the
+ * control styling from the filter pills in css/pages/macro-application.css, so
+ * the section reads as part of the same site rather than a bolt-on.
+ *
+ * The :root colour tokens in revision-notes-textbook.css are for notes pages
+ * only, so hex is used throughout. Brand accent is #d52349.
+ */
+
+.past-paper-questions-page {
+  --ppq-border: #e0e0e0;
+  --ppq-bg: #f7f7f7;
+  --ppq-muted: #666;
+  --ppq-accent: #d52349;
+}
+
+/* The script shows and hides the controls, the empty state and the "show more"
+ * button with the hidden property. An author `display` rule beats the browser's
+ * own `[hidden] { display: none }` no matter how specific it is, so any element
+ * given a display here would ignore `hidden` and stay on screen. That is not
+ * hypothetical: .ppq-more is display:block and .ppq-field is display:flex, and
+ * both were doing exactly that. Restated once, for everything in the component.
+ */
+.past-paper-questions-page [hidden] {
+  display: none !important;
+}
+
+/* ── Hero ────────────────────────────────────────────── */
+
+.past-paper-questions-page .ppq-hero {
+  margin-bottom: 2rem;
+}
+
+.past-paper-questions-page .ppq-h1 {
+  margin-bottom: 0.6rem;
+}
+
+.past-paper-questions-page .ppq-intro {
+  font-size: 1.05em;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.past-paper-questions-page .ppq-hero-meta {
+  color: var(--ppq-muted);
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+/* ── Controls ────────────────────────────────────────── */
+
+.past-paper-questions-page .ppq-controls {
+  margin: 0 0 1.5rem;
+  padding: 1.2em 1.5em;
+  background: var(--ppq-bg);
+  border: 1px solid var(--ppq-border);
+  border-radius: 8px;
+}
+
+.past-paper-questions-page .ppq-search-field {
+  margin-bottom: 1em;
+}
+
+.past-paper-questions-page .ppq-search-input {
+  width: 100%;
+  padding: 0.7em 0.9em;
+  border: 1.5px solid var(--ppq-border);
+  border-radius: 6px;
+  background: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+}
+
+.past-paper-questions-page .ppq-search-input:focus {
+  border-color: var(--ppq-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(213, 35, 73, 0.15);
+}
+
+.past-paper-questions-page .ppq-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  align-items: flex-end;
+}
+
+.past-paper-questions-page .ppq-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  min-width: 0;
+  flex: 1 1 9rem;
+}
+
+.past-paper-questions-page .ppq-field label {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+  margin: 0;
+}
+
+.past-paper-questions-page .ppq-field select {
+  width: 100%;
+  padding: 0.45em 0.6em;
+  border: 1.5px solid var(--ppq-border);
+  border-radius: 20px;
+  background: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  height: auto;
+}
+
+.past-paper-questions-page .ppq-field select:focus {
+  border-color: var(--ppq-accent);
+  outline: none;
+}
+
+.past-paper-questions-page .ppq-clear {
+  flex: 0 0 auto;
+  padding: 0.45em 1.1em;
+  border: 1.5px solid var(--ppq-border);
+  border-radius: 20px;
+  background: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: #444 !important;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.past-paper-questions-page .ppq-clear:hover {
+  background: var(--ppq-border);
+  color: #333 !important;
+}
+
+/* ── Result count ────────────────────────────────────── */
+
+.past-paper-questions-page .ppq-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.past-paper-questions-page .ppq-count {
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ── Cards ───────────────────────────────────────────── */
+
+.past-paper-questions-page .ppq-results {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.past-paper-questions-page .ppq-card {
+  background: #fff;
+  border: 1px solid var(--ppq-border);
+  border-left: 3px solid var(--ppq-accent);
+  border-radius: 6px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.past-paper-questions-page .ppq-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.past-paper-questions-page .ppq-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 0.8rem;
+}
+
+.past-paper-questions-page .ppq-badge {
+  display: inline-block;
+  background: #eee;
+  color: #444;
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25em 0.6em;
+  border-radius: 3px;
+}
+
+.past-paper-questions-page .ppq-badge-paper {
+  background: #252122;
+  color: #fff;
+}
+
+.past-paper-questions-page .ppq-badge-marks {
+  background: var(--ppq-accent);
+  color: #fff;
+}
+
+.past-paper-questions-page .ppq-badge-theme {
+  background: #4caf50;
+  color: #fff;
+}
+
+/* The two specifications reuse each other's codes for different topics, so a
+   card always names its board. */
+.past-paper-questions-page .ppq-badge-board {
+  background: #1565c0;
+  color: #fff;
+}
+
+.past-paper-questions-page .ppq-question {
+  font-size: 1.02em;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  color: #252122;
+}
+
+.past-paper-questions-page .ppq-choice {
+  font-size: 0.85em;
+  color: var(--ppq-muted);
+  margin-bottom: 0.8rem;
+}
+
+.past-paper-questions-page .ppq-topics {
+  font-size: 0.85em;
+  color: var(--ppq-muted);
+  margin-bottom: 0.9rem;
+}
+
+.past-paper-questions-page .ppq-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.2em;
+  font-size: 0.9em;
+}
+
+.past-paper-questions-page .ppq-action {
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+
+.past-paper-questions-page .ppq-action:hover {
+  border-bottom-color: currentColor;
+}
+
+/* ── Empty state, errors, pagination ─────────────────── */
+
+.past-paper-questions-page .ppq-empty {
+  background: var(--ppq-bg);
+  border: 1px dashed var(--ppq-border);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--ppq-muted);
+}
+
+.past-paper-questions-page .ppq-empty p {
+  margin-bottom: 0.6rem;
+}
+
+.past-paper-questions-page .ppq-empty p:last-child {
+  margin-bottom: 0;
+}
+
+.past-paper-questions-page .ppq-error {
+  background: #fff4f6;
+  border: 1px solid var(--ppq-accent);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.past-paper-questions-page .ppq-more {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+/* ── Topic directory (the crawlable fallback) ────────── */
+
+.past-paper-questions-page .ppq-theme-block {
+  margin-bottom: 2rem;
+}
+
+.past-paper-questions-page .ppq-theme-block h3 {
+  font-size: 1.05em;
+  margin-bottom: 0.6rem;
+}
+
+.past-paper-questions-page .ppq-topic-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4em 1.5em;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.past-paper-questions-page .ppq-topic-list li {
+  padding-left: 0;
+  border-top: 1px solid #eee;
+  padding-top: 0.4em;
+  font-size: 0.92em;
+}
+
+.past-paper-questions-page .ppq-topic-count {
+  color: var(--ppq-muted);
+  font-size: 0.85em;
+}
+
+/* ── Closing CTA ─────────────────────────────────────── */
+
+.past-paper-questions-page .ppq-cta {
+  background: var(--ppq-bg);
+  border-top: 3px solid var(--ppq-accent);
+  border-radius: 6px;
+  padding: 2rem 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.past-paper-questions-page .ppq-cta h2 {
+  margin-bottom: 0.7rem;
+}
+
+.past-paper-questions-page .ppq-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-top: 1.2rem;
+}
+
+/* ── Mobile ──────────────────────────────────────────── */
+
+@media screen and (max-width: 736px) {
+  .past-paper-questions-page .ppq-controls {
+    padding: 1em;
+  }
+
+  .past-paper-questions-page .ppq-field {
+    flex: 1 1 100%;
+  }
+
+  .past-paper-questions-page .ppq-clear {
+    width: 100%;
+  }
+
+  .past-paper-questions-page .ppq-card {
+    padding: 1.1rem 1.15rem;
+  }
+
+  .past-paper-questions-page .ppq-actions {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .past-paper-questions-page .ppq-topic-list {
+    grid-template-columns: 1fr;
+  }
+}

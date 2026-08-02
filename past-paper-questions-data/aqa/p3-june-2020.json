@@ -1,0 +1,97 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 3,
+  "paperName": "Economic Principles and Issues",
+  "year": 2020,
+  "series": "June",
+  "seriesSlug": "june-2020",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p3-2020-jun-q31",
+      "section": "B",
+      "questionNumber": "31",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 10,
+      "questionText": "To what extent, if at all, do the data suggest that living standards in the UK improved between 2007 and 2017? You must use the data in Extract B to support your assessment.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 31",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+        "page": 18
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+        "page": 18
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-mark-scheme.pdf",
+        "page": 5,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2020-jun-q32",
+      "section": "B",
+      "questionNumber": "32",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain how a sustained slowdown in the world economy is likely to affect living standards in the UK.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 32",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+        "page": 18
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+        "page": 22
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-mark-scheme.pdf",
+        "page": 7,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2020-jun-q33",
+      "section": "B",
+      "questionNumber": "33",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "After considering Extract D, and the original evidence in Extracts A, B and C, would you recommend that the government implement a further substantial increase in the National Living Wage? Justify your recommendation.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 33",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+        "page": 18
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-question-paper.pdf",
+        "page": 27
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2020-mark-scheme.pdf",
+        "page": 9,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

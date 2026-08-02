@@ -1,0 +1,97 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 3,
+  "paperName": "Economic Principles and Issues",
+  "year": 2019,
+  "series": "June",
+  "seriesSlug": "june-2019",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p3-2019-jun-q31",
+      "section": "B",
+      "questionNumber": "31",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 10,
+      "questionText": "To what extent, if at all, do the data suggest that houses in the UK were more affordable in 2017 than they were in 2007? You must use the data in Extract C to support your assessment.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 31",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+        "page": 18
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+        "page": 18
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-mark-scheme.pdf",
+        "page": 5,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2019-jun-q32",
+      "section": "B",
+      "questionNumber": "32",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain the likely causes of the main changes in house prices that have taken place between 2007 and 2017.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 32",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+        "page": 18
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+        "page": 22
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-mark-scheme.pdf",
+        "page": 8,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2019-jun-q33",
+      "section": "B",
+      "questionNumber": "33",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "After considering Extract E, and the original evidence in Extracts A, B, C and D, would you recommend that the Government should increase its spending on housing? Justify your recommendation.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 33",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+        "page": 18
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-question-paper.pdf",
+        "page": 27
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2019-mark-scheme.pdf",
+        "page": 10,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}
