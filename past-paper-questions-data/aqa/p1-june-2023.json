@@ -1,0 +1,364 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 1,
+  "paperName": "Markets and Market Failure",
+  "year": 2023,
+  "series": "June",
+  "seriesSlug": "june-2023",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p1-2023-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Using the data in Extract A (Table 1), calculate the index of total car sales in 2021 if, in the base year, total car sales were 1.25 million. Give your answer to two decimal places.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 1",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 5,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract A (Table 1 and Figure 1) show that developments in the car market are the main reason for the changing demand for lithium-ion batteries in the UK.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 2",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 6,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract C (lines 3–4) states that ‘the mining, manufacturing and disposal process for batteries could soon become an environmental disaster.’ With the help of a diagram, explain why the production and sale of lithium-ion batteries might lead to market failure.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 3",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 7,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract B (lines 20–21) states that ‘all vehicle owners should be forced to pay the full costs of their driving. This would incentivise people to consider using public transport, cycling or walking.’ Evaluate policies that could be used to reduce the environmental impact of all types of car.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 4",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 9,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Use the data in Extract D (Figure 2) to calculate the difference between the mean and median rate of growth of working households’ real pre-tax earnings, over the period 1994–2017.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 5",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 10,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract D (Figure 3) show that employment is an increasingly ineffective protection against poverty.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 6",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 11,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract E (lines 19–20) states that ‘Some out-of-work benefits have not kept up with inflation, putting downward pressure on wages, contributing to the rise in in-work poverty.’ With the help of a diagram, explain how a reduction in out-of-work benefits may lead to lower wages in some labour markets.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 7",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 13,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract F (lines 1–2) states that ‘Charities and think tanks have called for action to reduce job insecurity, lower housing costs and increase earnings for low-paid workers.’ Using the extracts and your knowledge of economics, evaluate policies that could be used to reduce in-work poverty in the UK.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 8",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 15,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q9",
+      "section": "B",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain why, in long-run equilibrium, monopolistically competitive markets are neither productively nor allocatively efficient.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 17,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q10",
+      "section": "B",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Assess the view that competition policy is likely to lead to markets becoming less efficient in the long run.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 18,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q11",
+      "section": "B",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain the determinants of the supply of labour to an industry.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 16,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q12",
+      "section": "B",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Evaluate the view that labour markets work best when strong monopsony power is balanced by trade union power.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 20,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q13",
+      "section": "B",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain how market contestability affects the performance of an industry.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 21,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2023-jun-q14",
+      "section": "B",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Discuss the view that privatisation is always beneficial because it leads to improvements in efficiency.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2023-mark-scheme.pdf",
+        "page": 22,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

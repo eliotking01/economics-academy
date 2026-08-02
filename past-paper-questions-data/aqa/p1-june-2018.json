@@ -1,0 +1,364 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 1,
+  "paperName": "Markets and Market Failure",
+  "year": 2018,
+  "series": "June",
+  "seriesSlug": "june-2018",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p1-2018-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Using Extract A, calculate the ratio of customers gained to customers lost by Nationwide. Give your answer correct to one decimal place.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 1",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 6,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract A show that the market power of the Big Four banks is weakening against competition from smaller rivals.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 2",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 7,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract C (lines 10–11) states that ‘There is ample opportunity for new players to enter the sector.’ With the help of a diagram, explain how the lowering of barriers to entry in the banking market might lead to lower prices and a situation in which banks make normal profit.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 3",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 8,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract B (lines 4–6) states that ‘banks do not feel enough pressure to compete on price or quality, leading some to call for the Big Four to be split into a number of smaller banks.’ Use the extracts and your knowledge of economics to assess the view that the government should intervene further in the banking sector to promote greater competition.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 4",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 10,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Using Extract D, calculate the number of transportation and storage jobs at high risk of automation, as a percentage of those who are at high risk across all industries. Give your answer to two decimal places.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 5",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 11,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract D show that workers employed in routine, repetitive work are at greater risk from automation.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 6",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 12,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract E (lines 4–5) claims that workers in the 18th century saw wages rise in line with productivity. With the help of a diagram, explain how advances in modern technology are likely to lead to rising wages in some industries.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 7",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 13,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract E (lines 14–16) states that ‘The market economy is not going to create the jobs by itself for those workers who are most affected by the change.’ Extract F (lines 4–5) states that ‘taxing productivity-enhancing tools like robots or machines makes no economic sense.’ Use the extracts and your own knowledge of economics to evaluate whether governments should allow markets to respond freely to the opportunities and challenges presented by technological progress, without any state intervention.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 8",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 15,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q9",
+      "section": "B",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain why the use of petrol and diesel cars may be a source of market failure.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 17,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q10",
+      "section": "B",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Assess the view that regulation is a better policy for dealing with the problem of air pollution than the allocation of property rights or taxation.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 18,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q11",
+      "section": "B",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain how the Lorenz curve and Gini coefficient may be used to illustrate increasing income inequality in a country.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 14,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q12",
+      "section": "B",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Assess the view that, in the UK, the consequences of wealth inequality are more damaging than the consequences of income inequality.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 20,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q13",
+      "section": "B",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain the role of profit in a market economy.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 21,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2018-jun-q14",
+      "section": "B",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Evaluate the view that a firm making low profits must be inefficiently managed.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2018-mark-scheme.pdf",
+        "page": 22,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

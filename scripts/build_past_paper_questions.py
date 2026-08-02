@@ -25,6 +25,7 @@ import collections
 import datetime
 import html
 import json
+import re
 import pathlib
 import sys
 
@@ -48,9 +49,13 @@ def load():
     tags = json.loads((DATA / "tags.json").read_text(encoding="utf-8"))
     tags.pop("_comment", None)
 
+    # Two extractors write here: the Swift/PDFKit one for Edexcel and the
+    # pdfplumber one for AQA. Both emit the same record shape, so from this
+    # point on the board is just a field.
     papers = []
-    for path in sorted((DATA / "edexcel-a").glob("*.json")):
-        papers.append(json.loads(path.read_text(encoding="utf-8")))
+    for board_dir in ("edexcel-a", "aqa"):
+        for path in sorted((DATA / board_dir).glob("*.json")):
+            papers.append(json.loads(path.read_text(encoding="utf-8")))
     return taxonomy, tags, papers
 
 
@@ -90,6 +95,7 @@ def topic_lookup(taxonomy):
 def build(taxonomy, tags, papers):
     topics = topic_lookup(taxonomy)
     errors = []
+    untagged = []
     questions = []
 
     # Papers are held once in their own table and referenced by index. Inlining
@@ -110,16 +116,22 @@ def build(taxonomy, tags, papers):
         }
         for p in papers
     ]
+    # Keyed on board too: both specifications have a Paper 1 in the same series.
     paper_index = {
-        (p["paper"], p["seriesSlug"]): i for i, p in enumerate(paper_table)
+        (p["board"], p["paper"], p["seriesSlug"]): i
+        for i, p in enumerate(paper_table)
     }
 
     for paper in papers:
-        pi = paper_index[(paper["paper"], paper["seriesSlug"])]
+        pi = paper_index[(paper["board"], paper["paper"], paper["seriesSlug"])]
         for q in paper["questions"]:
             tag = tags.get(q["id"])
             if tag is None:
-                errors.append(f"{q['id']}: no tags entry")
+                # An extracted but untagged question is work in progress, not a
+                # fault: it is counted and named in the summary, and simply not
+                # published until someone has tagged it. A question with no
+                # topic could not be filed on a topic page anyway.
+                untagged.append(q["id"])
                 continue
 
             slugs = tag["topics"]
@@ -165,8 +177,10 @@ def build(taxonomy, tags, papers):
     questions.sort(
         key=lambda q: (
             -paper_table[q["p"]]["year"],
+            paper_table[q["p"]]["board"],
             paper_table[q["p"]]["seriesSlug"],
             paper_table[q["p"]]["paper"],
+            int(re.sub(r"\D", "", q["questionNumber"]) or 0),
             q["questionNumber"],
         )
     )
@@ -217,7 +231,7 @@ def build(taxonomy, tags, papers):
         },
         "questions": questions,
     }
-    return index, counts, gated, errors
+    return index, counts, gated, errors, untagged
 
 
 # ---------------------------------------------------------------- master page
@@ -1047,7 +1061,7 @@ def main():
     args = ap.parse_args()
 
     taxonomy, tags, papers = load()
-    index, counts, gated, errors = build(taxonomy, tags, papers)
+    index, counts, gated, errors, untagged = build(taxonomy, tags, papers)
 
     if errors:
         for e in errors:
@@ -1057,6 +1071,11 @@ def main():
     years = sorted({p["year"] for p in index["papers"]})
     marks = sorted({q["marks"] for q in index["questions"]})
     print(f"{index['count']} questions from {len(papers)} papers")
+    if untagged:
+        by_board = collections.Counter(u.split("-")[0] for u in untagged)
+        detail = ", ".join(f"{n} {b}" for b, n in sorted(by_board.items()))
+        print(f"  NOT YET PUBLISHED: {len(untagged)} extracted but untagged "
+              f"({detail})")
     print(f"  years  {years[0]}-{years[-1]}")
     print(f"  marks  {', '.join(str(m) for m in marks)}")
     print(f"  topics {len(counts)} with questions, {len(gated)} at or above the "

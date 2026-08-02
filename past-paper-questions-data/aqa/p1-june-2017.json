@@ -1,0 +1,364 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 1,
+  "paperName": "Markets and Market Failure",
+  "year": 2017,
+  "series": "June",
+  "seriesSlug": "june-2017",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p1-2017-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Using the data in Extract A (Figure 1), calculate the three-firm concentration ratio in the UK parcels delivery market. Give your answer, as a percentage, to one decimal place.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 1",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 6,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract A (Figure 2) show that the UK parcels delivery market is displaying dynamic efficiency.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 2",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 7,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract B (lines 12–14) states that ‘The Universal Postal Service obligations require Royal Mail to deliver letters and parcels to all parts of the country six days a week’. With the help of a monopoly diagram, explain how the Universal Postal Service obligations are likely to affect Royal Mail’s costs and profits.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 3",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 8,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract C (line 2) states that ‘Many competitors are using digital technology to drive innovation’. Use the extracts and your knowledge of economics to assess whether the benefits outweigh the costs when the Government privatises organisations such as Royal Mail and opens up the market to competition.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 4",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 10,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Using the data in Extract D (Figure 3), calculate the mean female labour force participation rate for the five countries listed. Give your answer to one decimal place.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 5",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 11,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract D (Figure 4) show that the degree of inequality between the pay of male and female workers is falling.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 6",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 12,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract E (lines 22–23) states that ‘The tendency for women to participate in low-productivity sectors is now a bigger factor in their low pay than discrimination’. With the help of a diagram, explain how the difference between the marginal revenue product of male and female workers might account for the lower average earnings of women.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 7",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 13,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract F (lines 19–20) notes that ‘The UK Government recognises the need to raise aspirations and attainment for girls’. Use the extracts and your knowledge of economics to evaluate the policies that government might use to reduce the gender pay gap.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 8",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 15,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q9",
+      "section": "B",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain how price and output are determined for a firm in a monopolistically competitive market, in both the short run and the long run.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 17,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q10",
+      "section": "B",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Evaluate the view that government regulation of monopolistically competitive markets is unnecessary, and that polices to encourage competition and prevent the abuse of monopoly power should focus entirely on oligopolies and monopolies.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 18,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q11",
+      "section": "B",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain the main causes of poverty in the UK.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 19,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q12",
+      "section": "B",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "To what extent can the problem of poverty in the UK be solved through the operation of market forces? Justify your answer.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 20,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q13",
+      "section": "B",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain why, in a free market, sugary drinks may be overconsumed.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 21,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p1-2017-jun-q14",
+      "section": "B",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Evaluate the view that imposing a tax is the most effective government policy for reducing the market failures arising from overconsumption of unhealthy food and drink.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-1/aqa-a-level-economics-paper-1-june-2017-mark-scheme.pdf",
+        "page": 22,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

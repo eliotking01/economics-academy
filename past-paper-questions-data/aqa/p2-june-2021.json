@@ -1,0 +1,364 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 2,
+  "paperName": "The National and International Economy",
+  "year": 2021,
+  "series": "June",
+  "seriesSlug": "june-2021",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p2-2021-jun-q1",
+      "section": "A",
+      "questionNumber": "1",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Using the data in Extract A (Figure 1), calculate the mean annual yield on long-term bonds in Greece over the years shown. Give your answer to one decimal place.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 1",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 6,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q2",
+      "section": "A",
+      "questionNumber": "2",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract A (Figures 1 and 2) show that in 2012 Greece was more likely to have a problem with its national debt than the UK.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 2",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 7,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q3",
+      "section": "A",
+      "questionNumber": "3",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract B (line 9) states: ‘The government spending cuts also severely damaged private-sector jobs.’ With the help of a diagram, explain how a reduction in government spending could increase unemployment in the private sector.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 3",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 8,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q4",
+      "section": "A",
+      "questionNumber": "4",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract C (lines 17–18) states: ‘Some argue that the UK should increase taxes rather than add to the national debt.’ Using the data in the extracts and your knowledge of economics, evaluate the view that an increase in a country’s national debt is damaging for its economy.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 4",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 2
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 3
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 10,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q5",
+      "section": "A",
+      "questionNumber": "5",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 2,
+      "questionText": "Us ing th e data in Extract D (Figure 4), calculate South Korea’s rate of inflation for the year ended 31 December 2019. Give your answer to two decimal places.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 5",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 11,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q6",
+      "section": "A",
+      "questionNumber": "6",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 4,
+      "questionText": "Explain how the data in Extract D (Figures 3 and 4) show why the South Korean central bank may have been considering a further cut in its base rate of interest.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 6",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 12,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q7",
+      "section": "A",
+      "questionNumber": "7",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 9,
+      "questionText": "Extract E (line 14) states: ‘Investment in R&D has been an important driver of economic growth and industrial progress.’ With the help of a diagram, explain how investment in research and development (R&D) can help to increase the long-run growth rate of an economy.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 7",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 13,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q8",
+      "section": "A",
+      "questionNumber": "8",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Extract F (lines 7–8) states: ‘Economists said the data reinforced the view that the slump in South Korea’s trade-reliant economy would continue beyond this year’. Using the data in the extracts and your knowledge of economics, evaluate policies which could be used to boost South Korea’s exports and increase its trade surplus.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 8",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 4
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 5
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 15,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q9",
+      "section": "B",
+      "questionNumber": "9",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain how a government or central bank can intervene to prevent the value of its currency rising.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 17,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q10",
+      "section": "B",
+      "questionNumber": "10",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Evaluate the possible impact on the cost of living and the standard of living in the UK of a sustained rise in the value of the pound sterling against other currencies, such as the euro and the US dollar.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 18,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q11",
+      "section": "B",
+      "questionNumber": "11",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain the main causes of rising consumption in an economy.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 16,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q12",
+      "section": "B",
+      "questionNumber": "12",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "To what extent do you agree that a fall in savings is beneficial for the UK economy? Justify your answer.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 6
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 20,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q13",
+      "section": "B",
+      "questionNumber": "13",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain the role of commercial banks in the economy.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 21,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p2-2021-jun-q14",
+      "section": "B",
+      "questionNumber": "14",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "Assess policies which can be used to reduce cyclical instability in the UK.",
+      "context": null,
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-question-paper.pdf",
+        "page": 7
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-2/aqa-a-level-economics-paper-2-june-2021-mark-scheme.pdf",
+        "page": 22,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

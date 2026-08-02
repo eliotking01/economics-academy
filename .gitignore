@@ -9,3 +9,6 @@ __pycache__/
 .vscode/
 *.swp
 Thumbs.db
+
+# Python virtualenv for scripts/ (see requirements.txt)
+.venv/
