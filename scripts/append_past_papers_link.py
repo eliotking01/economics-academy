@@ -132,8 +132,29 @@ def apply(index, slug, dry_run=False):
         return f"MISSING  {rel_notes}"
 
     text = page.read_text(encoding="utf-8")
+    questions = [q for q in index["questions"] if slug in q["topics"]]
+
+    # A block that is already there is refreshed, not skipped. Both halves of it
+    # go stale as the bank grows: the count and year span change, and a topic
+    # that crosses the gate needs its link repointed from ?topic= to its own
+    # page. Replacing in place keeps this a pure function of the data.
     if MARKER in text:
-        return f"skipped  {rel_notes} (already linked)"
+        block_start = text.rfind("<div", 0, text.index(MARKER))
+        block_end = find_close(text, block_start)
+        if block_end == -1:
+            return f"UNCLOSED  {rel_notes} (existing block never closes)"
+        line_start = text.rfind("\n", 0, block_start) + 1
+        indent = block_start - line_start
+        # The block template opens with a newline and the indent; the slice
+        # being compared starts at "<div", so both are stripped off.
+        fresh = block(index, slug, topic, questions, indent).lstrip("\n ")
+        current = text[block_start:block_end]
+        if current == fresh:
+            return f"current  {rel_notes}"
+        updated = text[:block_start] + fresh + text[block_end:]
+        if not dry_run:
+            page.write_text(updated, encoding="utf-8")
+        return f"{'would refresh' if dry_run else 'refreshed'} {rel_notes}"
 
     start = -1
     for anchor in ANCHORS:
@@ -151,7 +172,6 @@ def apply(index, slug, dry_run=False):
     if end == -1:
         return f"UNCLOSED  {rel_notes} (anchor div never closes)"
 
-    questions = [q for q in index["questions"] if slug in q["topics"]]
     line_start = text.rfind("\n", 0, start) + 1
     indent = start - line_start
 
@@ -187,10 +207,10 @@ def main(argv=None):
         print(result)
         if result.split()[0].isupper():
             problems += 1
-        elif result.startswith(("added", "would add")):
+        elif result.startswith(("added", "would add", "refreshed", "would refresh")):
             added += 1
 
-    print(f"\n{added} page(s) {'would be ' if args.dry_run else ''}updated, "
+    print(f"\n{added} page(s) {'would be ' if args.dry_run else ''}written, "
           f"{problems} problem(s)")
     return 1 if problems else 0
 
