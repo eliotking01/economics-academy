@@ -1000,6 +1000,30 @@ def render_topic_page(index, slug):
 # ---------------------------------------------------------------- sitemap
 
 
+HUB_PAGE = ROOT / "past-papers" / "index.html"
+HUB_COUNT_RE = re.compile(r"(<!-- ppq-count -->)\s*[\d,]+\s*(<!-- /ppq-count -->)")
+
+
+def update_hub_count(index):
+    """Refresh the question count in the past-papers hub's CTA.
+
+    That page is hand-written; this rewrites only the digits between the
+    ppq-count markers, so the copy around them stays the author's. Without it
+    the number silently goes stale the first time the bank grows, and nothing
+    would flag it.
+    """
+    if not HUB_PAGE.is_file():
+        return None
+    text = HUB_PAGE.read_text(encoding="utf-8")
+    if not HUB_COUNT_RE.search(text):
+        return None
+    new = HUB_COUNT_RE.sub(rf"\g<1>{index['count']}\g<2>", text)
+    if new == text:
+        return False
+    HUB_PAGE.write_text(new, encoding="utf-8")
+    return True
+
+
 SITEMAP_OPEN = "  <!-- Past Paper Questions -->"
 SITEMAP_CLOSE = "  <!-- /Past Paper Questions -->"
 
@@ -1163,6 +1187,12 @@ def main():
         print(f"formatted {len(written)} pages")
     else:
         print("WARNING: prettier unavailable, formatting differs from the repo")
+
+    hub = update_hub_count(index)
+    if hub is None:
+        print("WARNING: ppq-count markers not found in past-papers/index.html")
+    elif hub:
+        print(f"updated the count in past-papers/index.html to {index['count']}")
 
     if update_sitemap(index, paths):
         print(f"updated sitemap.xml ({len(paths)} URLs in the block)")
