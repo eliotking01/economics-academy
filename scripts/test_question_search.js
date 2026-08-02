@@ -157,11 +157,25 @@ check(
   data.questions.every((q) => !!data.papers[q.p]),
   "bad paper index",
 );
+// Data-response questions depend on an extract block; the Section C essays are
+// free-standing. Paper 3 is entirely data-response, so its Section A has
+// extracts too - the rule is about the question type, not the section letter.
 check(
-  "every Section B question has an extract page, every Section C has none",
+  "extracts: every data-response question has one, every Section C essay has none",
   data.questions.every((q) =>
-    q.section === "B" ? q.ctxPage !== null : q.ctxPage === null,
+    q.section === "C" ? q.ctxPage === null : q.ctxPage !== null,
   ),
+  data.questions
+    .filter((q) => (q.section === "C") === (q.ctxPage !== null))
+    .slice(0, 3)
+    .map((q) => q.id)
+    .join(", "),
+);
+check(
+  "extracts: Paper 3 Section A questions carry an extract page",
+  data.questions
+    .filter((q) => data.papers[q.p].paper === 3 && q.section === "A")
+    .every((q) => q.ctxPage !== null),
 );
 check(
   "every question has a mark scheme page",
