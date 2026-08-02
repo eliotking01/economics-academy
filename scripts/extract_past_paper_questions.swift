@@ -155,9 +155,12 @@ struct PaperMeta {
     var idStem: String
 }
 
+// The 2024 covers abbreviate two of these ("Market and Business Behaviour",
+// "Micro and Macro Economics"); the specification names are used instead.
 let paperNames = [
     1: "Markets and Business Behaviour",
     2: "The National and Global Economy",
+    3: "Microeconomics and Macroeconomics",
 ]
 
 let seriesNames = ["june": "June", "october": "October", "november": "November"]
@@ -200,7 +203,11 @@ let allocation = "(?:Knowledge|Analysis|Application|Evaluation|Indicative|The on
 ///
 /// Page 1 and 2 are skipped because the cover carries a publications code that
 /// can otherwise collide ("Question Paper Log Number 73999").
-func markSchemePage(_ pages: [String], question: String, part: String?) -> Int? {
+/// Page number, and whether the question label was matched exactly or by the
+/// looser fallback described below.
+func markSchemePage(_ pages: [String], question: String, part: String?)
+    -> (page: Int, exact: Bool)?
+{
     // Tolerate "6(a)" and "6 (a)"; reject a longer number ("7" must not hit "70").
     let label: String
     if let part = part {
@@ -211,10 +218,26 @@ func markSchemePage(_ pages: [String], question: String, part: String?) -> Int? 
 
     // The class holds a literal non-breaking space: ICU's \s does not match one.
     let byHeader = rx("Number[\\s\u{00A0}]*\(label)")
-    let byBareLabel = rx("(?m)^[ \\t]*\(label)[ \\t]+\(allocation)")
+    // \s rather than [ \t] between the label and its allocation: where a
+    // question's row spills onto a new page the allocation often wraps onto the
+    // line below the label (Paper 3 June 2024, question 1(b)).
+    let byBareLabel = rx("(?m)^[ \\t]*\(label)\\s+\(allocation)")
 
     for (i, page) in pages.enumerated() where i >= 2 {
-        if byHeader.matches(page) || byBareLabel.matches(page) { return i + 1 }
+        if byHeader.matches(page) || byBareLabel.matches(page) {
+            return (i + 1, true)
+        }
+    }
+
+    // Fallback for a scheme that drops the question number from a part heading.
+    // Paper 3 November 2021 labels question 2(d) as just "(d)". The "Number"
+    // anchor plus a bare part label is still a scheme heading and nothing else,
+    // but the match is weaker, so it is reported rather than passed off as exact.
+    if let part = part {
+        let bare = rx("Number[\\s\u{00A0}]*\\(\\s*\(part)\\s*\\)")
+        for (i, page) in pages.enumerated() where i >= 2 {
+            if bare.matches(page) { return (i + 1, false) }
+        }
     }
     return nil
 }
@@ -270,8 +293,9 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
             notes.append("answer-line leaders survived cleaning")
         }
 
-        let ms = markSchemePage(msPages, question: String(n), part: nil)
-        if ms == nil {
+        let hit = markSchemePage(msPages, question: String(n), part: nil)
+        let ms = hit?.page
+        if hit == nil {
             confidence = "low"
             notes.append("mark scheme page for Q\(n) could not be verified")
         }
@@ -290,43 +314,38 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
     return (out, problems)
 }
 
-// ------------------------------------------------------------------ section B
+// ------------------------------------------------------------- parted questions
 
-/// Section B is one data-response question, always Q6, parts (a) to (e), that
-/// depends on extracts and figures printed before it.
+/// Extract one lettered data-response question, parts (a) onwards, from a run of
+/// pages. Used for three different things, because they are the same shape:
 ///
-/// Most papers print a consolidated list of all five parts on one page. Two
-/// (Paper 2 June 2017 and June 2019) do not, and print each part above its own
-/// answer space instead. Both layouts are handled by scanning every Section B
-/// page for part openers and keeping the FIRST occurrence of each letter, which
-/// is the consolidated list where one exists and the answer page where it does not.
-func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
-    -> ([QuestionOut], [String])
-{
+///   Papers 1 and 2, Section B  - Q6, parts (a) to (e), all compulsory.
+///   Paper 3, Section A         - Q1, (a) to (c) compulsory, then (d) OR (e).
+///   Paper 3, Section B         - Q2, same again.
+///
+/// Most papers print a consolidated list of all the parts on one page. Some do
+/// not - Paper 2 June 2017 and June 2019 print each part above its own answer
+/// space instead. Both layouts are handled by scanning every page in the range
+/// for part openers and keeping the FIRST occurrence of each letter, which is
+/// the consolidated list where one exists and the answer page where it does not.
+///
+/// `choiceLetters` names parts that are alternatives to each other. They are all
+/// extracted - a student revising wants both - and share a choiceGroup so the UI
+/// can say only one was sat.
+func extractParts(
+    pages: [String], from startIdx: Int, to endIdx: Int, question qnum: String,
+    section: String, choiceLetters: [String], meta: PaperMeta, msPages: [String]
+) -> ([QuestionOut], [String]) {
     var problems: [String] = []
 
-    guard
-        let startIdx = pages.firstIndex(where: {
-            $0.contains("SECTION B") && $0.contains("before answering Question")
-        })
-    else {
-        return ([], ["Section B page not found"])
-    }
-
-    let header = pages[startIdx]
-    guard let qm = rx("before answering Question\\s+(\\d+)").firstMatch(header),
-        let qnum = qm[1]
-    else {
-        return ([], ["Section B question number not found"])
-    }
-
-    let endIdx =
-        pages.firstIndex(where: { $0.contains("SECTION C") }) ?? pages.count
-
-    // The extract block a student must read. "Extract A" is its first page; if a
-    // paper labels its stimulus differently, fall back to the Section B opener.
+    // The extract block a student must read. "Extract A" is normally its first
+    // page; some Paper 3 sections label theirs C or D, so fall back to the first
+    // page carrying any "Extract <letter>" and then to the section opener.
     let extractPage =
         (startIdx..<endIdx).first(where: { pages[$0].contains("Extract A") }).map { $0 + 1 }
+        ?? (startIdx..<endIdx).first(where: {
+            rx("Extract [A-H]\\b").matches(pages[$0])
+        }).map { $0 + 1 }
         ?? (startIdx + 1)
 
     // "(a) <text> (5)" — text is non-greedy up to the tariff in its own brackets.
@@ -334,7 +353,6 @@ func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
         "\\(([a-e])\\)\\s*(.+?)\\s*\\((\\d{1,2})\\)", [.dotMatchesLineSeparators])
 
     var seen: [String: QuestionOut] = [:]
-    var order: [String] = []
 
     for i in startIdx..<endIdx {
         let cleaned = stripFurniture(pages[i])
@@ -351,32 +369,118 @@ func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
 
             var notes: [String] = []
             var confidence = "high"
-            if body.count > 400 {
+            if body.count > 600 {
                 confidence = "low"
                 notes.append("extracted text is unusually long; may span two parts")
             }
 
             let label = "\(qnum)(\(letter))"
-            let ms = markSchemePage(msPages, question: qnum, part: letter)
-            if ms == nil {
+            let hit = markSchemePage(msPages, question: qnum, part: letter)
+            let ms = hit?.page
+            if hit == nil {
                 confidence = "low"
                 notes.append("mark scheme page for \(label) could not be verified")
+            } else if hit!.exact == false {
+                notes.append(
+                    "mark scheme heading for \(label) omits the question number; "
+                        + "matched on the bare part label")
             }
 
+            let group =
+                choiceLetters.contains(letter)
+                ? "\(meta.idStem)-q\(qnum)-choice" : nil
+
             seen[letter] = QuestionOut(
-                id: "\(meta.idStem)-q\(qnum)\(letter)", section: "B",
-                questionNumber: label, parentQuestion: qnum, choiceGroup: nil,
+                id: "\(meta.idStem)-q\(qnum)\(letter)", section: section,
+                questionNumber: label, parentQuestion: qnum, choiceGroup: group,
                 marks: marks, questionText: body, contextPage: extractPage,
                 qpPage: i + 1, msPage: ms, msVerified: ms != nil,
                 confidence: confidence, notes: notes)
-            order.append(letter)
         }
     }
 
-    let out = ["a", "b", "c", "d", "e"].compactMap { seen[$0] }
-    if out.count != 5 {
-        let missing = ["a", "b", "c", "d", "e"].filter { seen[$0] == nil }
-        problems.append("Section B: missing part(s) \(missing.joined(separator: ", "))")
+    let letters = ["a", "b", "c", "d", "e"]
+    let out = letters.compactMap { seen[$0] }
+    let expected = choiceLetters.isEmpty ? 5 : 5
+    if out.count != expected {
+        let missing = letters.filter { seen[$0] == nil }
+        problems.append(
+            "Q\(qnum): missing part(s) \(missing.joined(separator: ", "))")
+    }
+    return (out, problems)
+}
+
+/// Papers 1 and 2: Section B is a single data-response question, always Q6.
+func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
+    -> ([QuestionOut], [String])
+{
+    guard
+        let startIdx = pages.firstIndex(where: {
+            $0.contains("SECTION B") && $0.contains("before answering Question")
+        })
+    else {
+        return ([], ["Section B page not found"])
+    }
+
+    guard let qm = rx("before answering Question\\s+(\\d+)").firstMatch(pages[startIdx]),
+        let qnum = qm[1]
+    else {
+        return ([], ["Section B question number not found"])
+    }
+
+    let endIdx = pages.firstIndex(where: { $0.contains("SECTION C") }) ?? pages.count
+
+    return extractParts(
+        pages: pages, from: startIdx, to: endIdx, question: qnum, section: "B",
+        choiceLetters: [], meta: meta, msPages: msPages)
+}
+
+// ------------------------------------------------------------------ paper 3
+
+/// Paper 3 is two 50-mark case studies: Section A is Q1, Section B is Q2. Each
+/// runs (a) to (c) compulsory then a choice of (d) or (e). Uniform across all
+/// eight papers.
+func extractPaper3(pages: [String], meta: PaperMeta, msPages: [String])
+    -> ([QuestionOut], [String])
+{
+    var out: [QuestionOut] = []
+    var problems: [String] = []
+
+    // A section is located by its instruction line, not by a "SECTION x"
+    // heading. Paper 3 June 2024 prints no "SECTION B" heading above its second
+    // case study at all — the words appear only in the "TOTAL FOR SECTION B"
+    // line on the last page — so keying off the heading loses half that paper.
+    let opener = rx("before answering Question\\s+(\\d+)")
+    var starts: [(page: Int, question: String)] = []
+    for (i, page) in pages.enumerated() {
+        guard let m = opener.firstMatch(page), let n = m[1] else { continue }
+        if starts.contains(where: { $0.question == n }) { continue }
+        starts.append((i, n))
+    }
+
+    if starts.isEmpty {
+        return ([], ["Paper 3: no section openers found"])
+    }
+    if starts.count != 2 {
+        problems.append(
+            "Paper 3: expected 2 sections, found \(starts.count) "
+                + "(questions \(starts.map { $0.question }.joined(separator: ", ")))")
+    }
+
+    for (idx, start) in starts.enumerated() {
+        let end = idx + 1 < starts.count ? starts[idx + 1].page : pages.count
+        // Section A carries Q1 and Section B carries Q2 in all eight papers, but
+        // the label is derived from position rather than assumed from the number.
+        let section = idx == 0 ? "A" : "B"
+        let (qs, ps) = extractParts(
+            pages: pages, from: start.page, to: end, question: start.question,
+            section: section, choiceLetters: ["d", "e"], meta: meta, msPages: msPages)
+        out += qs
+        problems += ps
+    }
+
+    if out.count != 10 {
+        problems.append("expected 10 Paper 3 questions, got \(out.count)")
     }
     return (out, problems)
 }
@@ -511,10 +615,21 @@ for path in args {
         continue
     }
 
-    let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
-    let (c, cProblems) = extractSectionC(pages: qpPages, meta: meta, msPages: msPages)
-    let questions = b + c
-    let problems = bProblems + cProblems
+    var questions: [QuestionOut] = []
+    var problems: [String] = []
+
+    if meta.paper == 3 {
+        // Paper 3 has no Section C and its sections mean something different,
+        // which is why `section` is a free string on the record rather than an
+        // enum shared with Papers 1 and 2.
+        (questions, problems) = extractPaper3(
+            pages: qpPages, meta: meta, msPages: msPages)
+    } else {
+        let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
+        let (c, cProblems) = extractSectionC(pages: qpPages, meta: meta, msPages: msPages)
+        questions = b + c
+        problems = bProblems + cProblems
+    }
 
     let name = "p\(meta.paper)-\(meta.seriesSlug).json"
     let dest = outDir.appendingPathComponent(name)

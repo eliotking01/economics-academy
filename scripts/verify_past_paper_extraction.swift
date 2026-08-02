@@ -45,6 +45,7 @@ else {
 }
 
 var failures: [Failure] = []
+var warnings: [String] = []
 var checked = 0
 var pdfCache: [String: [String]] = [:]
 
@@ -110,10 +111,22 @@ for file in files.sorted() {
                     Failure(
                         id: id, check: "ms-page-range", detail: "p\(msPage) of \(msPages.count)"))
             } else if !squashed(msPages[msPage - 1]).contains(squashed(number)) {
-                failures.append(
-                    Failure(
-                        id: id, check: "ms-label-not-on-page",
-                        detail: "p\(msPage) does not mention \(number)"))
+                // Some schemes drop the question number from a part heading and
+                // print just "(d)". That is a real Pearson inconsistency, not an
+                // extraction error, so it is reported and not counted as a
+                // failure - but only when the bare part label is actually there.
+                let bare = number.contains("(")
+                    ? String(number[number.firstIndex(of: "(")!...]) : ""
+                if !bare.isEmpty && squashed(msPages[msPage - 1]).contains(squashed(bare)) {
+                    warnings.append(
+                        "\(id): mark scheme p\(msPage) labels this \(bare), "
+                            + "omitting the question number")
+                } else {
+                    failures.append(
+                        Failure(
+                            id: id, check: "ms-label-not-on-page",
+                            detail: "p\(msPage) does not mention \(number)"))
+                }
             }
         } else {
             failures.append(Failure(id: id, check: "ms-missing", detail: "no mark scheme recorded"))
@@ -137,6 +150,9 @@ for file in files.sorted() {
 }
 
 print("checked \(checked) questions across \(files.count) papers")
+for w in warnings {
+    print("WARN  \(w)")
+}
 if failures.isEmpty {
     print("all checks passed")
     exit(0)
