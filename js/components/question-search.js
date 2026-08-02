@@ -320,9 +320,11 @@
       filters[sel.getAttribute("data-ppq-filter")] = sel;
     });
 
-    // A topic page fixes one filter and hides its control, so the reader cannot
-    // silently navigate out of the topic whose URL they are on.
+    // A topic or theme page fixes one filter and hides its control, so the
+    // reader cannot silently filter their way out of the page they are on.
     var preTopic = root.getAttribute("data-prefilter-topic") || "";
+    var preTheme = parseInt(root.getAttribute("data-prefilter-theme"), 10);
+    if (isNaN(preTheme)) preTheme = 0;
 
     var shown = PAGE_SIZE;
     var matches = [];
@@ -405,6 +407,7 @@
       var q = record.q;
       var p = record.paper;
       if (preTopic && q.topics.indexOf(preTopic) === -1) return false;
+      if (preTheme && q.themes.indexOf(preTheme) === -1) return false;
       if (
         filters.paper &&
         filters.paper.value &&
@@ -539,11 +542,14 @@
     }
 
     populate();
-    // The topic control is meaningless on a page already fixed to one topic.
-    if (preTopic && filters.topic) {
-      var wrap = filters.topic.closest(".ppq-field");
+    // A control is meaningless on a page already fixed to that value.
+    function hideField(sel) {
+      if (!sel) return;
+      var wrap = sel.closest(".ppq-field");
       if (wrap) wrap.hidden = true;
     }
+    if (preTopic) hideField(filters.topic);
+    if (preTheme) hideField(filters.theme);
     if (els.controls) els.controls.hidden = false;
     root.classList.add("is-enhanced");
     run();

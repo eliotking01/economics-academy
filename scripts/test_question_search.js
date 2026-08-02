@@ -319,6 +319,58 @@ check(
   /Math\.min\(shown \+ PAGE_SIZE,\s*matches\.length\)/.test(source),
 );
 
+// ---- the two renderers must agree
+//
+// Topic and theme pages ship their questions as real HTML from
+// scripts/build_past_paper_questions.py, and this component then re-renders the
+// same list from JSON. If the two ever drifted, turning JavaScript on would
+// silently change the page. Compare every card from both renderers.
+
+const { execFileSync } = require("child_process");
+let pythonCards = null;
+try {
+  const out = execFileSync(
+    "python3",
+    [
+      "-c",
+      [
+        "import json,pathlib,importlib.util",
+        "spec=importlib.util.spec_from_file_location('b','scripts/build_past_paper_questions.py')",
+        "m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)",
+        "i=json.loads(pathlib.Path('past-paper-questions/questions.json').read_text())",
+        "print(json.dumps({q['id']: m.render_card(q,i) for q in i['questions']}))",
+      ].join("\n"),
+    ],
+    { cwd: ROOT, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 },
+  );
+  pythonCards = JSON.parse(out);
+} catch (err) {
+  check(
+    "renderers: python card renderer is runnable",
+    false,
+    String(err).slice(0, 120),
+  );
+}
+
+if (pythonCards) {
+  const differing = index.filter(
+    (r) => M.cardHtml(r, data.topics) !== pythonCards[r.q.id],
+  );
+  check(
+    "renderers: every card is byte-identical between Python and JavaScript",
+    differing.length === 0,
+    differing
+      .slice(0, 3)
+      .map((r) => r.q.id)
+      .join(", "),
+  );
+  check(
+    "renderers: python rendered every question",
+    Object.keys(pythonCards).length === data.questions.length,
+    Object.keys(pythonCards).length + " of " + data.questions.length,
+  );
+}
+
 console.log(
   failures === 0
     ? "all " + index.length + " records indexed; every check passed"

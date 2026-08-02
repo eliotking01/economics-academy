@@ -69,6 +69,7 @@ def topic_lookup(taxonomy):
                     "unit": unit["unit"],
                     "unitName": unit["name"],
                     "notesUrl": t["notesUrl"],
+                    "questionsUrl": t["questionsUrl"],
                 }
     return out
 
@@ -164,21 +165,23 @@ def build(taxonomy, tags, papers):
                 "slug": t["slug"],
                 "name": t["name"],
                 "fullName": t["fullName"],
+                "notesDir": t["notesDir"],
+                "notesIndexUrl": t["notesIndexUrl"],
             }
             for t in taxonomy["themes"]
         ],
         "papers": paper_table,
-        # hasPage is "a page exists on disk", not "a page is warranted". Nothing
-        # links to a topic page until it has actually been generated, so the
-        # master page can never ship a link to a Phase 3 page that is not there
-        # yet. Phase 3 generates the pages before rebuilding this index, which
-        # flips these to true without any flag to remember.
+        # hasPage and gated are the same thing now that this script generates
+        # the topic pages in the same run that writes this index. They are kept
+        # as separate fields because the UI asks "can I link there?" while the
+        # report asks "does this topic clear the gate?", and a future change
+        # could make those differ again.
         "topics": {
             slug: dict(
                 meta,
                 count=counts.get(slug, 0),
                 gated=slug in gated,
-                hasPage=(PAGE_DIR / slug / "index.html").is_file(),
+                hasPage=slug in gated,
             )
             for slug, meta in topics.items()
             if counts.get(slug, 0) > 0
@@ -202,15 +205,19 @@ def e(s):
     return html.escape(str(s), quote=True)
 
 
-def search_component(prefilter=""):
+def search_component(topic="", theme=0):
     """The search UI skeleton.
 
-    Rendered identically here and on every Phase 3 topic page; only
-    data-prefilter-topic differs. The controls ship hidden and are revealed by
-    js/components/question-search.js, so a reader without JavaScript is never
-    shown a search box that cannot work.
+    Rendered identically on the master page, the theme pages and the topic
+    pages; only the pre-filter attribute differs. The controls ship hidden and
+    are revealed by js/components/question-search.js, so a reader without
+    JavaScript is never shown a search box that cannot work.
     """
-    attr = ' data-prefilter-topic="' + e(prefilter) + '"' if prefilter else ""
+    attr = ""
+    if topic:
+        attr = ' data-prefilter-topic="' + e(topic) + '"'
+    elif theme:
+        attr = ' data-prefilter-theme="' + e(theme) + '"'
     fields = [
         ("paper", "Paper", "All papers"),
         ("theme", "Theme", "All themes"),
@@ -281,6 +288,80 @@ def search_component(prefilter=""):
           </div>"""
 
 
+def render_card(q, index):
+    """Server-rendered question card.
+
+    Must stay markup-identical to cardHtml() in js/components/question-search.js.
+    Topic and theme pages ship their questions as real HTML so crawlers and
+    readers without JavaScript get the content; the component then re-renders
+    the same list from JSON. If the two drifted, enabling JavaScript would
+    silently change the page. scripts/test_question_search.js compares the two
+    renderers over all 112 questions and fails if they diverge.
+    """
+    paper = index["papers"][q["p"]]
+    topics = index["topics"]
+
+    badges = [
+        f'<span class="ppq-badge ppq-badge-paper">Paper {paper["paper"]}</span>',
+        f'<span class="ppq-badge">{e(paper["series"] + " " + str(paper["year"]))}</span>',
+        f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} marks</span>',
+    ]
+    for n in q["themes"]:
+        badges.append(f'<span class="ppq-badge ppq-badge-theme">Theme {n}</span>')
+
+    links = []
+    for slug in q["topics"]:
+        t = topics.get(slug)
+        if not t:
+            continue
+        label = e(t["spec"] + " " + t["shortTitle"])
+        if t["hasPage"]:
+            links.append(f'<a href="/past-paper-questions/{e(slug)}/">{label}</a>')
+        else:
+            links.append(f"<span>{label}</span>")
+    topic_links = " &middot; ".join(links)
+
+    ms = e(paper["markSchemeUrl"] + "#page=" + str(q["msPage"]))
+    actions = [
+        f'<a class="ppq-action" href="{ms}" target="_blank" '
+        f'rel="noopener noreferrer">Mark scheme &mdash; p.{q["msPage"]}</a>'
+    ]
+    if q["ctxPage"]:
+        qp = e(paper["questionPaperUrl"] + "#page=" + str(q["ctxPage"]))
+        actions.append(
+            f'<a class="ppq-action" href="{qp}" target="_blank" '
+            f'rel="noopener noreferrer">View the extract &mdash; p.{q["ctxPage"]}</a>'
+        )
+    first = topics.get(q["topics"][0]) if q["topics"] else None
+    if first:
+        actions.append(
+            f'<a class="ppq-action" href="{e(first["notesUrl"])}">'
+            f'Revision notes: {e(first["spec"])}</a>'
+        )
+    if q["modelAnswer"]:
+        actions.append(
+            f'<a class="ppq-action ppq-action-model" href="{e(q["modelAnswer"])}">'
+            "Model answer</a>"
+        )
+
+    choice = ""
+    if q["choiceGroup"]:
+        choice = (
+            f'<p class="ppq-choice">One of two options in Section {e(q["section"])} '
+            "&mdash; candidates answered this <em>or</em> the other.</p>"
+        )
+
+    return (
+        f'<article class="ppq-card" id="{e(q["id"])}">'
+        f'<div class="ppq-badges">{"".join(badges)}</div>'
+        f'<p class="ppq-question">{e(q["questionText"])}</p>'
+        f"{choice}"
+        + (f'<p class="ppq-topics">{topic_links}</p>' if topic_links else "")
+        + f'<div class="ppq-actions">{"".join(actions)}</div>'
+        "</article>"
+    )
+
+
 def topic_directory(index):
     """The crawlable fallback: every topic that has questions, grouped by theme.
 
@@ -318,21 +399,60 @@ def topic_directory(index):
     return "\n".join(blocks)
 
 
-def render_index(index):
-    url = f"{SITE}/past-paper-questions/"
-    years = sorted({p["year"] for p in index["papers"]})
-    n_topics = len(index["topics"])
-    meta = (
-        f'{index["count"]} questions &middot; {years[0]}&ndash;{years[-1]} '
-        f"&middot; {n_topics} topics &middot; free, no sign-up"
+def json_ld(obj):
+    """JSON-LD indented to sit inside the page's <script> block."""
+    s = json.dumps(obj, indent=2)
+    return "\n".join("      " + line for line in s.split("\n")).strip()
+
+
+def visible_href(path):
+    """The site writes the home link as /index.html but canonicalises it as /."""
+    return "/index.html" if path == "/" else path
+
+
+def breadcrumb_html(crumbs):
+    sep = '\n            <span class="separator">&rsaquo;</span>\n            '
+    parts = []
+    for name, path in crumbs:
+        if path:
+            parts.append(f'<a href="{e(visible_href(path))}">{e(name)}</a>')
+        else:
+            parts.append(f"<span>{e(name)}</span>")
+    return sep.join(parts)
+
+
+def breadcrumb_ld(crumbs):
+    items = []
+    for i, (name, path) in enumerate(crumbs, start=1):
+        item = {"@type": "ListItem", "position": i, "name": name}
+        if path:
+            item["item"] = SITE + path
+        items.append(item)
+    return json_ld(
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": items,
+        }
     )
 
-    ld_collection = json.dumps(
+
+def page_shell(title, desc, path, crumbs, body):
+    """The head and body boilerplate every page in this section shares.
+
+    Structured data is CollectionPage plus BreadcrumbList, matching the rest of
+    the site. Deliberately NOT schema.org Quiz/Question: that markup expects an
+    acceptedAnswer or suggestedAnswer, and this bank does not host answers by
+    design - it links to Pearson's mark schemes. Declaring Question without an
+    answer earns no rich result and misrepresents the page.
+    """
+    url = SITE + path
+    collection = json_ld(
         {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Edexcel A-Level Economics past paper questions",
-            "description": DESC,
+            "name": title.split(" | ")[0],
+            "description": desc,
             "url": url,
             "inLanguage": "en-GB",
             "isPartOf": {
@@ -340,45 +460,8 @@ def render_index(index):
                 "name": "Economics Academy",
                 "url": SITE,
             },
-        },
-        indent=2,
+        }
     )
-    ld_crumbs = json.dumps(
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": f"{SITE}/",
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Past Paper Questions",
-                },
-            ],
-        },
-        indent=2,
-    )
-    ld_collection = "\n".join("      " + l for l in ld_collection.split("\n")).strip()
-    ld_crumbs = "\n".join("      " + l for l in ld_crumbs.split("\n")).strip()
-
-    # Only promise topic pages once they exist, so this copy stays true whether
-    # or not Phase 3 has run.
-    linked = sum(1 for t in index["topics"].values() if t["hasPage"])
-    if linked:
-        directory_note = (
-            "Questions are tagged against the Edexcel specification. Topics with "
-            "their own page are linked; the rest are searchable above."
-        )
-    else:
-        directory_note = (
-            "Questions are tagged against the Edexcel specification. Use the "
-            "search above to filter to any topic listed here."
-        )
 
     return f"""<!doctype html>
 <html lang="en-GB">
@@ -398,30 +481,30 @@ def render_index(index):
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>{e(TITLE)}</title>
-    <meta name="description" content="{e(DESC)}" />
+    <title>{e(title)}</title>
+    <meta name="description" content="{e(desc)}" />
 
     <link rel="canonical" href="{url}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Economics Academy" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:url" content="{url}" />
-    <meta property="og:title" content="{e(TITLE)}" />
-    <meta property="og:description" content="{e(DESC)}" />
+    <meta property="og:title" content="{e(title)}" />
+    <meta property="og:description" content="{e(desc)}" />
     <meta property="og:image" content="{SITE}/og-image.png?v=1" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="Economics Academy logo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{e(TITLE)}" />
-    <meta name="twitter:description" content="{e(DESC)}" />
+    <meta name="twitter:title" content="{e(title)}" />
+    <meta name="twitter:description" content="{e(desc)}" />
     <meta name="twitter:image" content="{SITE}/og-image.png?v=1" />
     <script type="application/ld+json">
-      {ld_collection}
+      {collection}
     </script>
     <script type="application/ld+json">
-      {ld_crumbs}
+      {breadcrumb_ld(crumbs)}
     </script>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -437,12 +520,101 @@ def render_index(index):
       <section id="main" class="past-paper-questions-page">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="/index.html">Home</a>
-            <span class="separator">&rsaquo;</span>
-            <span>Past Paper Questions</span>
+            {breadcrumb_html(crumbs)}
           </nav>
 
-          <section class="ppq-hero">
+{body}
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/components/inject-templates.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/question-search.js" defer></script>
+  </body>
+</html>
+"""
+
+
+CTA = """          <section class="ppq-cta">
+            <h2>Practising past papers is only half of it</h2>
+            <p>
+              <strong
+                >Past papers show you the question &mdash; feedback shows you the
+                marks.</strong
+              >
+              Send an essay for examiner-style marking, or work through the
+              topics you keep losing marks on with a specialist tutor.
+            </p>
+            <div class="ppq-cta-actions">
+              <a href="/revision-notes/index.html" class="button alt">Free Revision Notes</a>
+              <a href="/marking.html" class="button alt">Get Your Essays Marked</a>
+              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
+            </div>
+          </section>"""
+
+
+def question_count_phrase(n):
+    return "1 question" if n == 1 else f"{n} questions"
+
+
+def year_span(index, questions):
+    years = sorted({index["papers"][q["p"]]["year"] for q in questions})
+    if not years:
+        return ""
+    return str(years[0]) if years[0] == years[-1] else f"{years[0]}&ndash;{years[-1]}"
+
+
+def static_cards(index, questions):
+    """Questions as real HTML, so the page is complete before any script runs."""
+    return "\n".join("            " + render_card(q, index) for q in questions)
+
+
+# ---------------------------------------------------------------- master page
+
+
+def theme_links(index):
+    rows = []
+    for theme in index["themes"]:
+        n = sum(1 for q in index["questions"] if theme["theme"] in q["themes"])
+        if not n:
+            continue
+        rows.append(
+            f'                <li><a href="/past-paper-questions/{theme["slug"]}/">'
+            f'Theme {theme["theme"]}: {e(theme["name"])}</a> '
+            f'<span class="ppq-topic-count">{question_count_phrase(n)}</span></li>'
+        )
+    return "\n".join(rows)
+
+
+def render_index(index):
+    years = sorted({p["year"] for p in index["papers"]})
+    meta = (
+        f'{index["count"]} questions &middot; {years[0]}&ndash;{years[-1]} '
+        f'&middot; {len(index["topics"])} topics &middot; free, no sign-up'
+    )
+    linked = sum(1 for t in index["topics"].values() if t["hasPage"])
+    if linked:
+        note = (
+            "Questions are tagged against the Edexcel specification. Topics with "
+            "their own page are linked; the rest are searchable above."
+        )
+    else:
+        note = (
+            "Questions are tagged against the Edexcel specification. Use the "
+            "search above to filter to any topic listed here."
+        )
+
+    body = f"""          <section class="ppq-hero">
             <h1 class="ppq-h1">Edexcel A-Level Economics Past Paper Questions</h1>
             <p class="ppq-intro">
               Every Section B and Section C question from the
@@ -465,44 +637,265 @@ def render_index(index):
           </noscript>
 
           <header class="major">
+            <h2>Browse by theme</h2>
+          </header>
+          <div class="ppq-theme-block">
+            <ul class="ppq-topic-list">
+{theme_links(index)}
+            </ul>
+          </div>
+
+          <header class="major">
             <h2>Browse by topic</h2>
           </header>
-          <p>{directory_note}</p>
+          <p>{note}</p>
 
 {topic_directory(index)}
 
-          <section class="ppq-cta">
-            <h2>Practising past papers is only half of it</h2>
-            <p>
-              <strong>Past papers show you the question &mdash; feedback shows you the
-              marks.</strong> Send an essay for examiner-style marking, or work
-              through the topics you keep losing marks on with a specialist tutor.
+{CTA}"""
+
+    return page_shell(
+        TITLE,
+        DESC,
+        "/past-paper-questions/",
+        [("Home", "/"), ("Past Paper Questions", None)],
+        body,
+    )
+
+
+# ---------------------------------------------------------------- theme pages
+
+
+def render_theme_page(index, theme):
+    questions = [q for q in index["questions"] if theme["theme"] in q["themes"]]
+    path = f'/past-paper-questions/{theme["slug"]}/'
+    span = year_span(index, questions)
+    n = len(questions)
+
+    title = (
+        f'Theme {theme["theme"]} Past Paper Questions '
+        f"&mdash; Edexcel A-Level Economics | Economics Academy"
+    )
+    title = html.unescape(title)
+    desc = (
+        f'{n} Edexcel A-Level Economics past paper questions on Theme '
+        f'{theme["theme"]}: {theme["name"]}, from {span.replace("&ndash;", " to ")}. '
+        "Each links straight to the right page of the official mark scheme."
+    )
+
+    topics_in_theme = sorted(
+        (s for s, t in index["topics"].items() if t["theme"] == theme["theme"]),
+        key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")],
+    )
+    rows = []
+    for slug in topics_in_theme:
+        t = index["topics"][slug]
+        label = e(t["spec"] + " " + t["shortTitle"])
+        link = (
+            f'<a href="/past-paper-questions/{e(slug)}/">{label}</a>'
+            if t["hasPage"]
+            else label
+        )
+        rows.append(
+            f'                <li>{link} <span class="ppq-topic-count">'
+            f'{question_count_phrase(t["count"])}</span></li>'
+        )
+
+    body = f"""          <section class="ppq-hero">
+            <h1 class="ppq-h1">
+              Theme {theme["theme"]}: {e(theme["name"])} &mdash; Past Paper Questions
+            </h1>
+            <p class="ppq-intro">
+              {question_count_phrase(n)} from the Edexcel A-Level Economics A
+              (9EC0) papers, {span}, covering Theme {theme["theme"]}. Every
+              question links to the official mark scheme at the page its answer
+              begins on.
             </p>
-            <div class="ppq-cta-actions">
-              <a href="/revision-notes/index.html" class="button alt">Free Revision Notes</a>
-              <a href="/marking.html" class="button alt">Get Your Essays Marked</a>
-              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
-            </div>
+            <p class="ppq-hero-meta">
+              <a href="/revision-notes/{e(theme["notesDir"])}/index.html"
+                >Theme {theme["theme"]} revision notes</a
+              >
+              &middot;
+              <a href="/past-paper-questions/">All past paper questions</a>
+            </p>
           </section>
-        </div>
-      </section>
 
-      <!-- Footer -->
-      <div id="footer-placeholder"></div>
-    </div>
+{search_component(theme=theme["theme"])}
 
-    <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/components/inject-templates.js"></script>
-    <script src="/js/browser.min.js"></script>
-    <script src="/js/breakpoints.min.js"></script>
-    <script src="/js/util.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/components/question-search.js" defer></script>
-  </body>
-</html>
+          <header class="major">
+            <h2>Topics in Theme {theme["theme"]}</h2>
+          </header>
+          <div class="ppq-theme-block">
+            <ul class="ppq-topic-list">
+{chr(10).join(rows)}
+            </ul>
+          </div>
+
+{CTA}"""
+
+    # The component replaces the results container, so the static cards live
+    # inside it and are what a crawler or a reader without JavaScript sees.
+    body = body.replace(
+        '<div class="ppq-results" data-ppq-results></div>',
+        '<div class="ppq-results" data-ppq-results>\n'
+        + static_cards(index, questions)
+        + "\n          </div>",
+    )
+
+    crumbs = [
+        ("Home", "/"),
+        ("Past Paper Questions", "/past-paper-questions/"),
+        (f'Theme {theme["theme"]}', None),
+    ]
+    return path, page_shell(title, desc, path, crumbs, body)
+
+
+# ---------------------------------------------------------------- topic pages
+
+
+def related_topics(index, slug):
+    """Same unit first, then the rest of the theme. Only pages that exist."""
+    me = index["topics"][slug]
+    same_unit = []
+    same_theme = []
+    for other, t in index["topics"].items():
+        if other == slug or not t["hasPage"]:
+            continue
+        if t["theme"] != me["theme"]:
+            continue
+        (same_unit if t["unit"] == me["unit"] else same_theme).append(other)
+
+    key = lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]
+    ordered = sorted(same_unit, key=key) + sorted(same_theme, key=key)
+    return ordered[:6]
+
+
+def render_topic_page(index, slug):
+    t = index["topics"][slug]
+    questions = [q for q in index["questions"] if slug in q["topics"]]
+    path = f"/past-paper-questions/{slug}/"
+    span = year_span(index, questions)
+    n = len(questions)
+
+    title = f'{t["title"]} Past Paper Questions &mdash; Edexcel A-Level Economics | Economics Academy'
+    title = html.unescape(title)
+    desc = (
+        f'{n} Edexcel A-Level Economics past paper questions on {t["title"]} '
+        f'(spec {t["spec"]}), {span.replace("&ndash;", " to ")}. Each links '
+        "straight to the right page of the official mark scheme."
+    )
+    if len(desc) > 300:
+        desc = desc[:297] + "..."
+
+    related = related_topics(index, slug)
+    related_html = ""
+    if related:
+        rows = "\n".join(
+            f'                <li><a href="/past-paper-questions/{e(r)}/">'
+            f'{e(index["topics"][r]["spec"] + " " + index["topics"][r]["shortTitle"])}</a> '
+            f'<span class="ppq-topic-count">'
+            f'{question_count_phrase(index["topics"][r]["count"])}</span></li>'
+            for r in related
+        )
+        related_html = f"""
+          <header class="major">
+            <h2>Related topics</h2>
+          </header>
+          <div class="ppq-theme-block">
+            <ul class="ppq-topic-list">
+{rows}
+            </ul>
+          </div>
 """
+
+    body = f"""          <section class="ppq-hero">
+            <h1 class="ppq-h1">
+              {e(t["title"])} &mdash; Past Paper Questions
+            </h1>
+            <p class="ppq-intro">
+              {question_count_phrase(n)} on <strong>{e(t["title"])}</strong>
+              (specification {e(t["spec"])}) from the Edexcel A-Level Economics A
+              (9EC0) papers, {span}. Every question links to the official mark
+              scheme at the page its answer begins on.
+            </p>
+            <p class="ppq-hero-meta">
+              <a href="{e(t["notesUrl"])}">Revision notes: {e(t["spec"])} {e(t["shortTitle"])}</a>
+              &middot;
+              <a href="{e(t["questionsUrl"])}">Practice questions</a>
+              &middot;
+              <a href="/past-paper-questions/theme-{t["theme"]}/">Theme {t["theme"]}</a>
+              &middot;
+              <a href="/past-paper-questions/">All past paper questions</a>
+            </p>
+          </section>
+
+{search_component(topic=slug)}
+{related_html}
+{CTA}"""
+
+    body = body.replace(
+        '<div class="ppq-results" data-ppq-results></div>',
+        '<div class="ppq-results" data-ppq-results>\n'
+        + static_cards(index, questions)
+        + "\n          </div>",
+    )
+
+    crumbs = [
+        ("Home", "/"),
+        ("Past Paper Questions", "/past-paper-questions/"),
+        (f'Theme {t["theme"]}', f'/past-paper-questions/theme-{t["theme"]}/'),
+        (t["shortTitle"], None),
+    ]
+    return path, page_shell(title, desc, path, crumbs, body)
+
+
+# ---------------------------------------------------------------- sitemap
+
+
+SITEMAP_OPEN = "  <!-- Past Paper Questions -->"
+SITEMAP_CLOSE = "  <!-- /Past Paper Questions -->"
+
+
+def update_sitemap(index, paths):
+    """Rewrite the section's block in sitemap.xml, between HTML comment markers.
+
+    Same convention as the practice-questions block already in the file. The
+    block is replaced wholesale, so removing a topic page removes its entry.
+    Nothing outside the markers is touched.
+    """
+    sitemap = ROOT / "sitemap.xml"
+    text = sitemap.read_text(encoding="utf-8")
+    today = datetime.date.today().isoformat()
+
+    lines = [SITEMAP_OPEN]
+    for path in paths:
+        if path == "/past-paper-questions/":
+            priority = "0.8"
+        elif "/theme-" in path:
+            priority = "0.7"
+        else:
+            priority = "0.6"
+        lines.append(
+            f"  <url><loc>{SITE}{path}</loc><lastmod>{today}</lastmod>"
+            f"<priority>{priority}</priority></url>"
+        )
+    lines.append(SITEMAP_CLOSE)
+    block = "\n".join(lines)
+
+    if SITEMAP_OPEN in text and SITEMAP_CLOSE in text:
+        start = text.index(SITEMAP_OPEN)
+        end = text.index(SITEMAP_CLOSE) + len(SITEMAP_CLOSE)
+        new = text[:start] + block + text[end:]
+    else:
+        # First run: insert before </urlset> rather than guessing a position.
+        marker = "</urlset>"
+        idx = text.rindex(marker)
+        new = text[:idx] + block + "\n" + text[idx:]
+
+    if new != text:
+        sitemap.write_text(new, encoding="utf-8")
+        return True
+    return False
 
 
 def prettify(paths):
@@ -566,14 +959,56 @@ def main():
     size = OUT.stat().st_size
     print(f"wrote {OUT.relative_to(ROOT)} ({size / 1024:.0f} KB)")
 
+    written = [INDEX]
+    paths = ["/past-paper-questions/"]
+
     INDEX.write_text(render_index(index), encoding="utf-8")
-    if prettify([INDEX]):
-        print(f"wrote {INDEX.relative_to(ROOT)} (formatted)")
+
+    for theme in index["themes"]:
+        if not any(theme["theme"] in q["themes"] for q in index["questions"]):
+            continue
+        path, page = render_theme_page(index, theme)
+        dest = PAGE_DIR / theme["slug"] / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(page, encoding="utf-8")
+        written.append(dest)
+        paths.append(path)
+
+    for slug in sorted(gated, key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]):
+        path, page = render_topic_page(index, slug)
+        dest = PAGE_DIR / slug / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(page, encoding="utf-8")
+        written.append(dest)
+        paths.append(path)
+
+    # Anything under past-paper-questions/ that this run did not write is a page
+    # for a topic that has since dropped below the gate or been retagged. The
+    # output is meant to be a pure function of the data, so it goes.
+    keep = {p.parent for p in written}
+    removed = 0
+    for child in sorted(PAGE_DIR.iterdir()):
+        if child.is_dir() and child not in keep:
+            for f in sorted(child.rglob("*")):
+                f.unlink()
+            child.rmdir()
+            removed += 1
+
+    theme_pages = sum(1 for p in paths if "/theme-" in p)
+    topic_pages = len(paths) - theme_pages - 1
+    print(f"wrote {theme_pages} theme pages and {topic_pages} topic pages")
+    if removed:
+        print(f"removed {removed} stale page(s)")
+
+    if prettify(written):
+        print(f"formatted {len(written)} pages")
     else:
-        print(
-            f"wrote {INDEX.relative_to(ROOT)} "
-            "(WARNING: prettier unavailable, formatting differs from the repo)"
-        )
+        print("WARNING: prettier unavailable, formatting differs from the repo")
+
+    if update_sitemap(index, paths):
+        print(f"updated sitemap.xml ({len(paths)} URLs in the block)")
+    else:
+        print("sitemap.xml already up to date")
 
 
 if __name__ == "__main__":
