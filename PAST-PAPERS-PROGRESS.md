@@ -1,0 +1,164 @@
+# Past Paper Question Bank — Progress
+
+Live state file. A new session with no conversation history should be able to
+resume from this file, `CLAUDE.md` and `git log` alone.
+
+**Branch:** `feature/question-bank`, based on `main` at `6bdc559`.
+**Last updated:** 2 August 2026.
+
+---
+
+## Current position
+
+**Phase 1 (data extraction) is complete and awaiting review.**
+
+**Next action: the site owner reviews `extraction-qa-report.md`,** in particular
+section 6, which lists the two judgement calls needing sign-off (topic tagging
+decisions, and the lumpy topic coverage the volume gate exists to handle).
+Phase 2 does not start until that review lands.
+
+---
+
+## What this project is
+
+A searchable bank of real Edexcel A Level Economics A (9EC0) exam questions,
+extracted from the PDFs the site already hosts, at `/past-paper-questions/`.
+Two tiers: a master search page over the whole bank, plus a statically generated
+page per topic carrying the same search component pre-filtered.
+
+Mark schemes are **not** extracted. Each question deep-links to the site's own
+hosted mark-scheme PDF at the exact page.
+
+Approved plan: `/Users/eliotking/.claude/plans/claude-code-prompt-dreamy-turing.md`
+(scratch — the durable record is this file).
+
+---
+
+## Decisions made, and why
+
+| Decision                      | Choice                                                                               | Why                                                                                                                                                                                                    |
+| ----------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Phase 1 scope                 | Section B **and** Section C, Papers 1–2, 2017–2024                                   | Section C alone is only 32 questions — too few to support topic pages without them being thin                                                                                                          |
+| Section B extracts            | Not reproduced; each question links to the extract page in the hosted question paper | Owner's call. Avoids reproducing several pages of stimulus per question                                                                                                                                |
+| Topic pages                   | **Volume-gated**: generated only where a topic has ≥ 4 questions                     | 87 topics against 112 questions would mean most pages carried 0–1 questions. Thin/doorway content is an SEO liability, not a win. Gate is re-evaluated on every run, so pages appear as the bank grows |
+| Branch base                   | `main`                                                                               | The owner merged `feature/topic-questions` first, so `main` now has `questions-data/` and `build_questions.py`                                                                                         |
+| URL root                      | `/past-paper-questions/`                                                             | Matches search intent; distinct from `/past-papers/` (PDFs) and `/practice-questions/` (original MCQs)                                                                                                 |
+| Topic slugs                   | Reuse the 87 existing notes slugs verbatim, spec code and all                        | No new taxonomy means no rename risk. Bare keyword slugs collide — `balance-of-payments` is both 2.1.4 and 4.1.7                                                                                       |
+| PDF tooling                   | Swift + PDFKit                                                                       | No Python PDF library, no `requirements.txt`, no venv in this repo; macOS ships PDFKit. Precedent set in `QUESTIONS_PROGRESS.md` §7                                                                    |
+| Tags separate from extraction | `tags.json` keyed by question id                                                     | Re-running the extractor must never destroy hand-tagging                                                                                                                                               |
+| Progress file name            | `PAST-PAPERS-PROGRESS.md`, not `PROGRESS.md`                                         | Matches the existing `PROJECT-LOG.md` / `QUESTIONS_PROGRESS.md` convention                                                                                                                             |
+| `CLAUDE.md`                   | Extended with one section, **not** overwritten                                       | The existing file is good and was already the project's memory                                                                                                                                         |
+
+---
+
+## Files created
+
+Nothing pre-existing has been modified except `CLAUDE.md`, which gained one
+section and two `See also` lines.
+
+| File                                         | Kind                | Notes                                                                                                                |
+| -------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `scripts/build_past_paper_taxonomy.py`       | generator           | Builds `taxonomy.json` from `questions-data/` + `UNITS` in `build_questions.py`. `--check` validates without writing |
+| `scripts/extract_past_paper_questions.swift` | generator           | PDF → per-paper JSON. Deterministic. Never invents text                                                              |
+| `scripts/verify_past_paper_extraction.swift` | verifier            | Independent re-check against the PDFs, deliberately not sharing the extractor's matching logic                       |
+| `scripts/verify_past_paper_tags.py`          | verifier            | Tags vs taxonomy vs extraction, plus the topic coverage histogram                                                    |
+| `past-paper-questions-data/taxonomy.json`    | data (generated)    | 4 themes, 21 units, 87 topics                                                                                        |
+| `past-paper-questions-data/edexcel-a/*.json` | data (generated)    | 16 files, 7 questions each                                                                                           |
+| `past-paper-questions-data/tags.json`        | data (hand-written) | 112 entries: topics + keywords                                                                                       |
+| `extraction-qa-report.md`                    | report              | Phase 1 QA. **This is what needs review**                                                                            |
+
+---
+
+## Verified done
+
+- 112 questions extracted from 16 papers: 80 Section B, 32 Section C.
+- Mark tariffs exactly as expected — 16 each of 5/8/10/12/15, and 32 × 25.
+- **All 112 at high confidence. All 112 mark-scheme page mappings verified**, by
+  a second pass that does not share the extractor's matching logic. 0 failures.
+- Extraction is deterministic — two runs produce byte-identical output.
+- All 112 hand-tagged; every topic slug validated against the taxonomy.
+- All 22 line-wrapped source URLs repaired to well-formed URLs.
+- Page furniture, dot leaders and the rotated `DO NOT WRITE IN THIS AREA`
+  margin text removed from all question text.
+
+Coverage: 56 of 87 topics have at least one question; **18 reach the gate of 4**
+and would get a page in Phase 3. The 31 empty topics are mostly Theme 1–2
+foundation material that Edexcel tests in Section A, not Section B or C.
+
+---
+
+## Open questions awaiting the owner
+
+1. **Sign-off on the four boundary tagging calls** in `extraction-qa-report.md`
+   §6(a) — price discrimination, subjective happiness, labour immobility,
+   streaming market structure.
+2. **Nav entry.** A top-level "Past Paper Questions" item needs an edit to
+   `templates/header.html` _and_ a new entry in the `pageMap` array in
+   `js/components/inject-templates.js` — without the second, nothing highlights.
+   Diff to be shown before applying.
+3. **Internal links** from notes pages to their topic's questions page, following
+   the additive-only pattern of `scripts/append_questions_link.py`.
+4. **Copyright.** The bank reproduces Pearson question text verbatim. The site
+   already hosts all 281 papers in full, so this is not a new category of
+   exposure, but it is a wider one. Raised; owner's call.
+5. **Any push to `main`** — it auto-publishes to economicsacademy.co.uk.
+
+---
+
+## Flagged issues
+
+- **Three live 404s, outside this project's scope.**
+  `past-papers/edexcel-b/index.html` links three June 2023 mark schemes that are
+  not on disk (A-Level papers 1, 2, 3) — 68 hrefs against 65 files.
+- **Untracked file in the working tree:** `js/components/quiz 2.js`, which looks
+  like a Finder duplicate. Not created by this work and not touched.
+- The 2024 Paper 1 mark scheme cover carries a Pearson typo, "Market and
+  Business Behaviour". The extractor uses the correct name.
+
+---
+
+## Still to do
+
+**Phase 2 — master search page.** `past-paper-questions/index.html`,
+`css/pages/past-paper-questions.css` (every rule scoped under a
+`.past-paper-questions-page` wrapper), `js/components/question-search.js` built
+as a reusable component taking an optional pre-filter, and a vendored
+`js/fuse.min.js`. Needs a crawlable intro and topic links as the JS-less
+fallback. Reuse the `.filter-topic-btn` pill idiom from
+`css/pages/macro-application.css` and the `.action-card` look from
+`css/pages/home.css`.
+
+**Phase 3 — generated pages.** `scripts/build_past_paper_questions.py` renders 4
+theme pages plus every gated topic page as crawlable HTML, each embedding the
+search component pre-filtered, with breadcrumbs, unique title/meta, related-topic
+links and a link back to the master page. Sitemap block written between
+`<!-- Past Paper Questions -->` markers, matching the practice-questions
+convention. `Quiz`/`Question` schema.org markup implies an answer the site
+deliberately does not host, so `LearningResource` is the likelier fit.
+
+**Phase 4+ — on the owner's go-ahead only.** Paper 3, then AQA. The schema
+already carries `context`, a string `questionNumber`, `parentQuestion`,
+`choiceGroup` and a free-string `section` so neither needs a migration.
+
+---
+
+## How to sanity-check the current state
+
+```bash
+git log --oneline main..feature/question-bank
+
+# regenerate everything; nothing should change
+python3 scripts/build_past_paper_taxonomy.py
+swift scripts/extract_past_paper_questions.swift \
+  past-papers/edexcel/a-level/paper-{1,2}/*question-paper.pdf
+git diff --stat past-paper-questions-data/     # expect: no changes
+
+# verify
+swift scripts/verify_past_paper_extraction.swift   # expect: 112 checked, all passed
+python3 scripts/verify_past_paper_tags.py          # expect: all tag checks passed
+
+# prove no existing page was touched
+git diff main -- revision-notes/ templates/ js/ css/ past-papers/ | grep '^-[^-]'
+```
+
+The last command must print nothing.

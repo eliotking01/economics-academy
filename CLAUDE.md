@@ -135,10 +135,35 @@ House rules:
 - Papers: A-Level has papers 1–3, AS has 1–2; each sitting has a question paper
   and a mark scheme.
 
+## Past paper question bank
+
+In progress on `feature/question-bank`. **Read `PAST-PAPERS-PROGRESS.md` first.**
+
+A searchable bank of real Edexcel A (9EC0) exam questions, at
+`/past-paper-questions/`. Distinct from `/practice-questions/` in one decisive
+way: **it reproduces real exam question text verbatim**, where the practice
+bank's hard rule is that every question is 100% original. The two never share a
+data path.
+
+- `past-paper-questions-data/edexcel-a/*.json` — one file per paper, machine
+  written by `scripts/extract_past_paper_questions.swift`. Never hand-edit.
+- `past-paper-questions-data/tags.json` — topics and keywords, hand-written.
+  Kept separate so re-extraction cannot destroy it.
+- `past-paper-questions-data/taxonomy.json` — generated from the existing 87
+  Edexcel topic records; the bank invents no taxonomy of its own.
+
+Mark scheme content is **never** extracted. Each question deep-links to the
+site's own hosted PDF at the right page.
+
+PDF work uses **Swift + PDFKit**, not Python: there is no PDF library, no
+`requirements.txt` and no venv here, but macOS ships PDFKit.
+
 ## See also
 
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
+- `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
+- `extraction-qa-report.md` — Phase 1 extraction QA for that bank.
 - `ROADMAP.md` — planned work.
 - `QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
 - `REVIEW-NOTES.md` — problems found but not fixed, including open economics
