@@ -26,10 +26,20 @@ not a ninth top-level item.
 follow-ups were requested and delivered: notes-page links, a question paper link
 on every card, and an explanation of per-question pages (see "Decisions").
 
-**Phase 4 — Edexcel Paper 3 complete. AQA blocked; see "Flagged issues".**
-The bank is now **192 questions from 24 Edexcel papers**, 37 generated pages,
-66 linked notes pages. AQA extraction does not work with the current approach
-and is deliberately not half-shipped.
+**Phase 4 — extraction complete for both boards. AQA is not yet published.**
+
+- **Edexcel: 192 questions from 24 papers, live** on 38 generated pages with
+  66 linked notes pages. Needs no further work.
+- **AQA: 248 questions from 24 papers, extracted and verified, untagged.**
+  They have no topic tags yet, so the build reports and skips them rather
+  than publishing them. Nothing about them appears on the site.
+- URLs are now board-scoped, `/past-paper-questions/<board>/<slug>/`.
+
+**Next action: tag the 248 AQA questions** against the 79 AQA topics, in
+`past-paper-questions-data/tags.json`. That is the only thing standing between
+the AQA half and publication; everything downstream of tagging already works,
+since it is the same pipeline Edexcel goes through. Expect roughly 15-20 AQA
+topics to clear the gate of four and gain a page.
 
 **Next action: the site owner decides how to handle AQA** — the options are in
 "Flagged issues" under the AQA entry. Edexcel needs no further work.
@@ -193,47 +203,13 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 
 ## Flagged issues
 
-- **AQA extraction is solved, but needs a new tool.** PDFKit returns AQA's pages
-  in a scrambled reading order: the question numbers sit in boxed gutter cells
-  that it emits detached from their questions, sometimes clumped ("0 5 0 6")
-  and sometimes flushed after the text they belong to. Six rounds of
-  reading-order heuristics got Section A extracting correctly but never got the
-  boundaries right on more than 1 of 16 papers.
-
-  The diagnosis that mattered: **nothing is unreadable.** Mark tariffs are read
-  100% correctly (14 per paper, identical pattern across all 8 years), question
-  numbers 100% correctly (01-14 in sequence), and the question wording is
-  present and correct. It was only ever a segmentation problem.
-
-  **pdfplumber solves it exactly rather than heuristically.** AQA prints the
-  number boxes at fixed coordinates - x0=52.7 and x0=72.5 - and each pair's
-  `top` is precisely where its question starts. Cropping the body column to the
-  band between one number and the next returns clean, correctly bounded text,
-  verified against hand-checked ground truth. This is geometry, not guesswork.
-
-  **Decision needed: this would be the repo's first Python dependency.**
-  `scripts/` is stdlib-only today, deliberately. Two things soften it: the
-  dependency is authoring-time only and never ships - the site stays static
-  with no build - and the generator already shells out to `npx prettier@3.9.6`,
-  so build-time tooling is not unprecedented. It would need a
-  `requirements.txt` and a venv. PDFKit stays the tool for Edexcel, which is
-  extracted, verified and needs no rework.
-
-- **AQA needs a taxonomy decision before any of its questions can be tagged.**
-  The site has 79 AQA topics (54 micro, 25 macro) using the ratified site-local
-  `1.x.y` / `2.x.y` codes. Measured against the 87 Edexcel topics:
-
-  - **0 full slug collisions**, so nothing breaks by simply adding them.
-  - **37 spec codes mean different things on each board.** `1.1.1` is
-    "Economics as a Social Science" on Edexcel and "Economic Methodology" on
-    AQA; `1.2.2` is "Demand" vs "Imperfect Information".
-  - **11 topics share a title across boards** with different slugs - Oligopoly
-    is `3-4-4-oligopoly` and `1-5-5-oligopoly`, Perfect Competition is
-    `3-4-2-...` and `1-5-3-...`.
-
-  So a flat namespace would show a student two different "1.1.1"s and put two
-  near-identical "Oligopoly Past Paper Questions" pages into competition with
-  each other. Options and the recommendation are in the next section.
+- **AQA needed a second extractor, and now has one.** PDFKit returns AQA's
+  pages in a scrambled reading order; pdfplumber reads them by coordinate.
+  `scripts/extract_aqa_questions.py` is the result, and `requirements.txt` and
+  `.venv/` exist for it. This is the repo's first Python dependency, approved on
+  2 August 2026 on the basis that it is authoring-time only: nothing ships and
+  the site is still static with no build step. Edexcel still uses Swift and
+  PDFKit, which reads those papers correctly and needs no rework.
 
 - **`#page=N` deep links are honoured by Chrome, Firefox and Edge, but not by
   Safari.** Safari's PDF viewer ignores the fragment and opens at page 1.
