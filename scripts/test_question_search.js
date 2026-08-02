@@ -158,24 +158,42 @@ check(
   data.questions.every((q) => !!data.papers[q.p]),
   "bad paper index",
 );
-// Data-response questions depend on an extract block; the Section C essays are
-// free-standing. Paper 3 is entirely data-response, so its Section A has
-// extracts too - the rule is about the question type, not the section letter.
+// Which questions depend on a stimulus block differs by board and paper, so the
+// rule is stated rather than inferred from the section letter:
+//   Edexcel  Papers 1-2  Section B has extracts, Section C does not
+//            Paper 3     both sections are case studies
+//   AQA      Papers 1-2  Section A has extracts, Section B is free-standing essays
+//            Paper 3     Section B is a case study
+function expectsExtract(q) {
+  const paper = data.papers[q.p];
+  if (paper.board === "edexcel") return q.section !== "C";
+  if (paper.paper === 3) return true;
+  return q.section === "A";
+}
 check(
-  "extracts: every data-response question has one, every Section C essay has none",
-  data.questions.every((q) =>
-    q.section === "C" ? q.ctxPage === null : q.ctxPage !== null,
-  ),
+  "extracts: present exactly where the paper carries a stimulus block",
+  data.questions.every((q) => expectsExtract(q) === (q.ctxPage !== null)),
   data.questions
-    .filter((q) => (q.section === "C") === (q.ctxPage !== null))
+    .filter((q) => expectsExtract(q) !== (q.ctxPage !== null))
     .slice(0, 3)
     .map((q) => q.id)
     .join(", "),
 );
 check(
-  "extracts: Paper 3 Section A questions carry an extract page",
+  "extracts: AQA Section B essays are free-standing",
   data.questions
-    .filter((q) => data.papers[q.p].paper === 3 && q.section === "A")
+    .filter(
+      (q) =>
+        data.papers[q.p].board === "aqa" &&
+        data.papers[q.p].paper !== 3 &&
+        q.section === "B",
+    )
+    .every((q) => q.ctxPage === null),
+);
+check(
+  "extracts: Paper 3 case-study questions all carry one",
+  data.questions
+    .filter((q) => data.papers[q.p].paper === 3)
     .every((q) => q.ctxPage !== null),
 );
 
@@ -208,7 +226,9 @@ check(
 
 // ---- card rendering and the deep links, which are the core promise
 
-const sectionB = index.filter((r) => r.q.section === "B")[0];
+// Pick by what the card must show, not by section letter: AQA's Section B is
+// three free-standing essays with no extract, while Edexcel's has one.
+const sectionB = index.filter((r) => r.q.ctxPage !== null)[0];
 const sectionC = index.filter((r) => r.q.section === "C")[0];
 const cardB = M.cardHtml(sectionB, data.topics);
 const cardC = M.cardHtml(sectionC, data.topics);

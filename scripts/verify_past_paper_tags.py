@@ -41,9 +41,10 @@ def main():
     }
 
     questions = {}
-    for path in sorted((DATA / "edexcel-a").glob("*.json")):
-        for q in json.loads(path.read_text(encoding="utf-8"))["questions"]:
-            questions[q["id"]] = q
+    for board_dir in ("edexcel-a", "aqa"):
+        for path in sorted((DATA / board_dir).glob("*.json")):
+            for q in json.loads(path.read_text(encoding="utf-8"))["questions"]:
+                questions[q["id"]] = q
 
     tags = json.loads((DATA / "tags.json").read_text(encoding="utf-8"))
     tags.pop("_comment", None)

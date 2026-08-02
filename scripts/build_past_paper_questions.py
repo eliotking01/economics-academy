@@ -245,7 +245,20 @@ DESC = (
 
 
 def e(s):
-    return html.escape(str(s), quote=True)
+    """HTML-escape, matching escapeHtml() in question-search.js exactly.
+
+    Not html.escape: that also turns an apostrophe into &#x27;, which the
+    JavaScript does not, and the two renderers must agree character for
+    character. Attribute values here are always double-quoted, so leaving the
+    apostrophe alone is safe.
+    """
+    return (
+        str(s)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
 
 
 def search_component(topic="", board="", group=""):
