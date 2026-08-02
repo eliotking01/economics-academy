@@ -122,9 +122,14 @@
 
   function buildIndex(data) {
     var topics = data.topics;
-    var themes = {};
-    data.themes.forEach(function (t) {
-      themes[t.theme] = t;
+    var groups = {};
+    var boards = {};
+    data.boards.forEach(function (b) {
+      boards[b.board] = b;
+      b.groups.forEach(function (g) {
+        groups[g.slug] = g;
+        groupLabels[g.slug] = g.label;
+      });
     });
 
     return data.questions.map(function (q) {
@@ -135,10 +140,13 @@
         var t = topics[slug];
         if (t) parts.push(t.title, t.shortTitle, t.spec, t.unitName);
       });
-      q.themes.forEach(function (n) {
-        var th = themes[n];
-        if (th) parts.push("theme " + n, th.name);
+      q.groups.forEach(function (slug) {
+        var g = groups[slug];
+        if (g) parts.push(g.label, g.name);
       });
+      if (boards[q.board]) {
+        parts.push(boards[q.board].name, boards[q.board].qualification);
+      }
       parts.push(q.keywords.join(" "));
       parts.push(
         "paper " + paper.paper,
@@ -204,12 +212,19 @@
 
   // ---------------------------------------------------------------- render
 
+  /* Section labels by slug, filled by buildIndex. Card rendering needs them and
+   * is called with only the topics table, so they live here. */
+  var groupLabels = {};
+
   function cardHtml(record, topics) {
     var q = record.q;
     var paper = record.paper;
     var msUrl = paper.markSchemeUrl + "#page=" + q.msPage;
 
     var badges = [
+      '<span class="ppq-badge ppq-badge-board">' +
+        escapeHtml(paper.boardName) +
+        "</span>",
       '<span class="ppq-badge ppq-badge-paper">Paper ' +
         paper.paper +
         "</span>",
@@ -218,9 +233,12 @@
         "</span>",
       '<span class="ppq-badge ppq-badge-marks">' + q.marks + " marks</span>",
     ];
-    q.themes.forEach(function (n) {
+    q.groups.forEach(function (slug) {
+      var g = groupLabels[slug];
       badges.push(
-        '<span class="ppq-badge ppq-badge-theme">Theme ' + n + "</span>",
+        '<span class="ppq-badge ppq-badge-theme">' +
+          escapeHtml(g || slug) +
+          "</span>",
       );
     });
 
@@ -230,7 +248,7 @@
         if (!t) return "";
         var label = escapeHtml(t.spec + " " + t.shortTitle);
         return t.hasPage
-          ? '<a href="/past-paper-questions/' + slug + '/">' + label + "</a>"
+          ? '<a href="' + escapeHtml(t.url) + '">' + label + "</a>"
           : "<span>" + label + "</span>";
       })
       .filter(Boolean)
@@ -332,8 +350,8 @@
     // A topic or theme page fixes one filter and hides its control, so the
     // reader cannot silently filter their way out of the page they are on.
     var preTopic = root.getAttribute("data-prefilter-topic") || "";
-    var preTheme = parseInt(root.getAttribute("data-prefilter-theme"), 10);
-    if (isNaN(preTheme)) preTheme = 0;
+    var preBoard = root.getAttribute("data-prefilter-board") || "";
+    var preGroup = root.getAttribute("data-prefilter-group") || "";
 
     var shown = PAGE_SIZE;
     var matches = [];
@@ -387,25 +405,52 @@
         optionList(filters.section, sections, function (v) {
           return "Section " + v;
         });
-      if (filters.theme)
+      if (filters.board)
         optionList(
-          filters.theme,
-          data.themes.map(function (t) {
-            return t.theme;
+          filters.board,
+          data.boards.map(function (b) {
+            return b.board;
           }),
           function (v) {
-            var t = data.themes.filter(function (x) {
-              return x.theme === v;
+            var b = data.boards.filter(function (x) {
+              return x.board === v;
             })[0];
-            return "Theme " + v + (t ? ": " + t.name : "");
+            return b ? b.name : v;
           },
         );
-      if (filters.topic) {
-        var slugs = Object.keys(topics).sort(function (a, b) {
-          return topics[a].spec.localeCompare(topics[b].spec, "en", {
-            numeric: true,
+      if (filters.group) {
+        // Only the sections of the board in play, so an Edexcel page never
+        // offers "Microeconomics" and vice versa.
+        var groupList = [];
+        data.boards.forEach(function (b) {
+          if (preBoard && b.board !== preBoard) return;
+          b.groups.forEach(function (g) {
+            groupList.push(g);
           });
         });
+        optionList(
+          filters.group,
+          groupList.map(function (g) {
+            return g.slug;
+          }),
+          function (v) {
+            var g = groupList.filter(function (x) {
+              return x.slug === v;
+            })[0];
+            return g ? g.label + ": " + g.name : v;
+          },
+        );
+      }
+      if (filters.topic) {
+        var slugs = Object.keys(topics)
+          .filter(function (s) {
+            return !preBoard || topics[s].board === preBoard;
+          })
+          .sort(function (a, b) {
+            return topics[a].spec.localeCompare(topics[b].spec, "en", {
+              numeric: true,
+            });
+          });
         optionList(filters.topic, slugs, function (s) {
           return topics[s].spec + " " + topics[s].shortTitle;
         });
@@ -416,7 +461,8 @@
       var q = record.q;
       var p = record.paper;
       if (preTopic && q.topics.indexOf(preTopic) === -1) return false;
-      if (preTheme && q.themes.indexOf(preTheme) === -1) return false;
+      if (preBoard && q.board !== preBoard) return false;
+      if (preGroup && q.groups.indexOf(preGroup) === -1) return false;
       if (
         filters.paper &&
         filters.paper.value &&
@@ -442,9 +488,15 @@
       )
         return false;
       if (
-        filters.theme &&
-        filters.theme.value &&
-        q.themes.indexOf(parseInt(filters.theme.value, 10)) === -1
+        filters.board &&
+        filters.board.value &&
+        q.board !== filters.board.value
+      )
+        return false;
+      if (
+        filters.group &&
+        filters.group.value &&
+        q.groups.indexOf(filters.group.value) === -1
       )
         return false;
       if (
@@ -590,8 +642,13 @@
       var wrap = sel.closest(".ppq-field");
       if (wrap) wrap.hidden = true;
     }
-    if (preTopic) hideField(filters.topic);
-    if (preTheme) hideField(filters.theme);
+    if (preTopic) {
+      hideField(filters.topic);
+      hideField(filters.board);
+      hideField(filters.group);
+    }
+    if (preBoard) hideField(filters.board);
+    if (preGroup) hideField(filters.group);
     if (els.controls) els.controls.hidden = false;
     root.classList.add("is-enhanced");
     run();

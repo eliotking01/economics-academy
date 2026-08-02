@@ -86,7 +86,8 @@ def sentence(index, slug, topic, questions):
 
     if n == 1:
         return (
-            f"One question on {topic['title']} from the Edexcel A-Level papers, "
+            f"One question on {topic['title']} from the {topic['boardName']} "
+            f"A-Level papers, "
             f"{span}, worth {marks[0]} marks. It links straight to the page of "
             f"the official mark scheme where its answer begins."
         )
@@ -96,8 +97,9 @@ def sentence(index, slug, topic, questions):
     else:
         tariff = f"{marks[0]} to {marks[-1]} marks"
     return (
-        f"{WORDS.get(n, n)} questions on {topic['title']} from the Edexcel "
-        f"A-Level papers, {span}, {tariff}. Each one links straight to the page "
+        f"{WORDS.get(n, n)} questions on {topic['title']} from the "
+        f"{topic['boardName']} A-Level papers, {span}, {tariff}. Each one links "
+        f"straight to the page "
         f"of the official mark scheme where its answer begins."
     )
 
@@ -105,9 +107,12 @@ def sentence(index, slug, topic, questions):
 def block(index, slug, topic, questions, indent):
     pad = " " * indent
     if topic["hasPage"]:
-        href = f"/past-paper-questions/{slug}/"
+        href = topic["url"]
     else:
-        href = f"/past-paper-questions/?topic={slug}"
+        # Board too, so the filtered view opens on the right specification.
+        href = (
+            f"/past-paper-questions/?board={topic['board']}&amp;topic={slug}"
+        )
     label = f"{topic['spec']} {topic['shortTitle']}"
     return (
         f"\n"

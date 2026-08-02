@@ -126,7 +126,8 @@ check("keyword is searchable", ids("sugar tax").length > 0);
 check("spec code is searchable", ids("3.5.3").length > 0);
 check("paper is searchable", search("paper 1").length > 0);
 check("series and year are searchable", search("june 2019").length > 0);
-check("theme is searchable", search("theme 4").length > 0);
+check("section grouping is searchable", search("theme 4").length > 0);
+check("board is searchable", search("edexcel").length > 0);
 check("section is searchable", search("section c").length > 0);
 
 // ---- AND semantics and empty results
@@ -176,6 +177,25 @@ check(
   data.questions
     .filter((q) => data.papers[q.p].paper === 3 && q.section === "A")
     .every((q) => q.ctxPage !== null),
+);
+
+// Boards must stay apart: 37 spec codes mean different things on each, so a
+// question tagged across two boards would show a reader two numbering systems.
+check(
+  "boards: no question is tagged across two boards",
+  data.questions.every(
+    (q) => new Set(q.topics.map((s) => data.topics[s].board)).size === 1,
+  ),
+);
+check(
+  "boards: every topic page URL carries its board",
+  Object.values(data.topics).every((t) =>
+    t.url.startsWith("/past-paper-questions/" + t.board + "/"),
+  ),
+);
+check(
+  "boards: a question's board matches its paper's board",
+  data.questions.every((q) => q.board === data.papers[q.p].board),
 );
 check(
   "every question has a mark scheme page",

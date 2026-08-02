@@ -2,17 +2,28 @@
 """Generate past-paper-questions-data/taxonomy.json.
 
 The past-paper question bank does not invent a topic taxonomy. It reuses the
-one the site already publishes: the 87 Edexcel topic records in
-questions-data/edexcel-theme-{1..4}/*.json, grouped by the UNITS dict in
-build_questions.py, under the theme names taken from the notes index <h1>s.
+one the site already publishes: the 166 topic records in questions-data/, grouped
+by the UNITS dict in build_questions.py, under the names taken from the notes
+index <h1>s.
 
 Reusing those slugs verbatim means a past-paper topic URL is a pure function of
 the matching notes URL, so the two can never drift and nothing has to be renamed
 later.
 
-Run:  python3 scripts/build_past_paper_taxonomy.py [--check]
+Structure, mirroring how the rest of the site is organised:
 
---check validates and prints a summary without writing.
+    board (edexcel, aqa)
+      group (Edexcel: Theme 1-4; AQA: Microeconomics, Macroeconomics)
+        unit (1.1, 1.2, ...)
+          topic
+
+Boards are kept apart because the two specifications reuse each other's codes
+for different things: 1.1.1 is "Economics as a Social Science" on Edexcel and
+"Economic Methodology" on AQA, and 37 codes collide that way. Page URLs are
+therefore /past-paper-questions/<board>/<slug>/, so a reader is never shown two
+numbering systems at once.
+
+Run:  python3 scripts/build_past_paper_taxonomy.py [--check]
 
 Standard library only, in keeping with the rest of scripts/.
 """
@@ -27,24 +38,45 @@ from build_questions import UNITS, spec_key, unit_of  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 QUESTIONS_DATA = ROOT / "questions-data"
-NOTES = ROOT / "revision-notes"
 OUT = ROOT / "past-paper-questions-data" / "taxonomy.json"
 
-QUALIFICATION = "A Level Economics A (9EC0)"
+# Group names lifted from the <h1> of each notes index, so the question bank and
+# the notes call everything exactly the same thing.
+BOARDS = [
+    {
+        "board": "edexcel",
+        "name": "Edexcel",
+        "qualification": "A Level Economics A (9EC0)",
+        "papersUrl": "/past-papers/edexcel/index.html",
+        "groups": [
+            ("edexcel-theme-1", "theme-1", "Theme 1",
+             "Introduction to Markets and Market Failure"),
+            ("edexcel-theme-2", "theme-2", "Theme 2",
+             "The UK Economy — Performance and Policies"),
+            ("edexcel-theme-3", "theme-3", "Theme 3",
+             "Business Behaviour and the Labour Market"),
+            ("edexcel-theme-4", "theme-4", "Theme 4", "A Global Perspective"),
+        ],
+    },
+    {
+        "board": "aqa",
+        "name": "AQA",
+        "qualification": "A-level Economics (7136)",
+        "papersUrl": "/past-papers/aqa/index.html",
+        "groups": [
+            ("aqa-a2-micro", "microeconomics", "Microeconomics",
+             "Individuals, Firms, Markets and Market Failure"),
+            ("aqa-a2-macro", "macroeconomics", "Macroeconomics",
+             "The National and International Economy"),
+        ],
+    },
+]
 
-# Theme names lifted verbatim from the <h1> of each notes board index, so the
-# question bank and the notes call the themes exactly the same thing.
-THEMES = {
-    1: "Introduction to Markets and Market Failure",
-    2: "The UK Economy — Performance and Policies",
-    3: "Business Behaviour and the Labour Market",
-    4: "A Global Perspective",
-}
+EXPECTED = {"edexcel": 87, "aqa": 79}
 
 
-def load_topics(theme):
-    """Every topic record for one Edexcel theme, in spec order."""
-    board_dir = f"edexcel-theme-{theme}"
+def load_topics(board_dir):
+    """Every topic record for one notes directory, in spec order."""
     src = QUESTIONS_DATA / board_dir
     if not src.is_dir():
         sys.exit(f"missing {src} - is this branch based on main?")
@@ -66,65 +98,87 @@ def load_topics(theme):
             }
         )
     topics.sort(key=lambda t: spec_key(t["spec"]))
-    return board_dir, topics
+    return topics
 
 
 def build():
-    themes = []
-    seen_slugs = {}
+    boards = []
+    seen = {}
 
-    for theme in (1, 2, 3, 4):
-        board_dir, topics = load_topics(theme)
+    for spec in BOARDS:
+        groups = []
+        count = 0
+        for board_dir, slug, label, name in spec["groups"]:
+            topics = load_topics(board_dir)
+            count += len(topics)
 
-        for t in topics:
-            if t["slug"] in seen_slugs:
-                sys.exit(f"duplicate slug {t['slug']} in {board_dir}")
-            seen_slugs[t["slug"]] = t["spec"]
+            for t in topics:
+                key = (spec["board"], t["slug"])
+                if key in seen:
+                    sys.exit(f"duplicate slug {t['slug']} on {spec['board']}")
+                seen[key] = True
 
-        units = []
-        for unit_code in sorted({unit_of(t["spec"]) for t in topics}, key=spec_key):
-            meta = UNITS.get((board_dir, unit_code))
-            if meta is None:
-                sys.exit(f"UNITS has no entry for ({board_dir}, {unit_code})")
-            units.append(
+            units = []
+            for code in sorted({unit_of(t["spec"]) for t in topics}, key=spec_key):
+                meta = UNITS.get((board_dir, code))
+                if meta is None:
+                    sys.exit(f"UNITS has no entry for ({board_dir}, {code})")
+                units.append(
+                    {
+                        "unit": code,
+                        "name": meta[0],
+                        "topics": [t for t in topics if unit_of(t["spec"]) == code],
+                    }
+                )
+
+            groups.append(
                 {
-                    "unit": unit_code,
-                    "name": meta[0],
-                    "topics": [t for t in topics if unit_of(t["spec"]) == unit_code],
+                    "slug": slug,
+                    "label": label,
+                    "name": name,
+                    "fullName": f"{spec['name']} {label}: {name}"
+                    if label.startswith("Theme")
+                    else f"{spec['name']} {label}",
+                    "notesDir": board_dir,
+                    "notesIndexUrl": f"/revision-notes/{board_dir}/index.html",
+                    "units": units,
                 }
             )
 
-        themes.append(
+        if count != EXPECTED[spec["board"]]:
+            sys.exit(
+                f"{spec['board']}: expected {EXPECTED[spec['board']]} topics, "
+                f"found {count}"
+            )
+
+        boards.append(
             {
-                "theme": theme,
-                "slug": f"theme-{theme}",
-                "name": THEMES[theme],
-                "fullName": f"Edexcel Theme {theme}: {THEMES[theme]}",
-                "notesIndexUrl": f"/revision-notes/{board_dir}/index.html",
-                "notesDir": board_dir,
-                "units": units,
+                "board": spec["board"],
+                "slug": spec["board"],
+                "name": spec["name"],
+                "qualification": spec["qualification"],
+                "papersUrl": spec["papersUrl"],
+                "groups": groups,
             }
         )
 
     return {
-        "qualification": QUALIFICATION,
-        "board": "edexcel",
-        "boardName": "Edexcel",
         "source": (
             "Generated by scripts/build_past_paper_taxonomy.py from "
-            "questions-data/edexcel-theme-{1..4}/*.json and the UNITS dict in "
+            "questions-data/*/*.json and the UNITS dict in "
             "scripts/build_questions.py. Do not hand-edit."
         ),
-        "themes": themes,
+        "boards": boards,
     }
 
 
 def summarise(data):
     total = 0
-    for th in data["themes"]:
-        n = sum(len(u["topics"]) for u in th["units"])
+    for b in data["boards"]:
+        n = sum(len(u["topics"]) for g in b["groups"] for u in g["units"])
+        units = sum(len(g["units"]) for g in b["groups"])
         total += n
-        print(f"  Theme {th['theme']}: {len(th['units'])} units, {n} topics")
+        print(f"  {b['name']}: {len(b['groups'])} groups, {units} units, {n} topics")
     print(f"  total: {total} topics")
     return total
 
@@ -136,8 +190,8 @@ def main():
 
     data = build()
     total = summarise(data)
-    if total != 87:
-        sys.exit(f"expected 87 Edexcel topics, found {total}")
+    if total != sum(EXPECTED.values()):
+        sys.exit(f"expected {sum(EXPECTED.values())} topics, found {total}")
 
     if args.check:
         print("check only - nothing written")

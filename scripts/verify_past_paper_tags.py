@@ -33,9 +33,10 @@ GATE = 4  # questions a topic needs before it earns its own page in Phase 3
 def main():
     taxonomy = json.loads((DATA / "taxonomy.json").read_text(encoding="utf-8"))
     valid = {
-        t["slug"]: t
-        for th in taxonomy["themes"]
-        for u in th["units"]
+        t["slug"]: dict(t, board=b["board"], group=g["label"])
+        for b in taxonomy["boards"]
+        for g in b["groups"]
+        for u in g["units"]
         for t in u["topics"]
     }
 
@@ -84,7 +85,7 @@ def main():
     print("Topic coverage, most-tagged first:")
     for slug, n in counts.most_common():
         mark = "*" if n >= GATE else " "
-        print(f"  {mark} {n:2}  {valid[slug]['spec']:7} {valid[slug]['title']}")
+        print(f"  {mark} {n:2}  {valid[slug]['board']:8} {valid[slug]['spec']:7} {valid[slug]['title']}")
 
     untagged = [s for s in valid if s not in counts]
     print(f"\n{len(untagged)} topics have no question yet.")

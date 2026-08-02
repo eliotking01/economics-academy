@@ -55,22 +55,35 @@ def load():
 
 
 def topic_lookup(taxonomy):
-    """slug -> everything the UI needs to render a topic chip or link."""
+    """slug -> everything the UI needs to render a topic chip or link.
+
+    Keyed by slug alone, which is safe because no slug is shared between the two
+    boards. The spec CODES are shared - 37 of them mean different things on
+    Edexcel and AQA - which is why every page URL carries the board and why the
+    board travels with each topic here.
+    """
     out = {}
-    for theme in taxonomy["themes"]:
-        for unit in theme["units"]:
-            for t in unit["topics"]:
-                out[t["slug"]] = {
-                    "spec": t["spec"],
-                    "title": t["title"],
-                    "shortTitle": t["shortTitle"],
-                    "theme": theme["theme"],
-                    "themeName": theme["name"],
-                    "unit": unit["unit"],
-                    "unitName": unit["name"],
-                    "notesUrl": t["notesUrl"],
-                    "questionsUrl": t["questionsUrl"],
-                }
+    for board in taxonomy["boards"]:
+        for group in board["groups"]:
+            for unit in group["units"]:
+                for t in unit["topics"]:
+                    if t["slug"] in out:
+                        raise SystemExit(f"slug {t['slug']} used by two boards")
+                    out[t["slug"]] = {
+                        "spec": t["spec"],
+                        "title": t["title"],
+                        "shortTitle": t["shortTitle"],
+                        "board": board["board"],
+                        "boardName": board["name"],
+                        "group": group["slug"],
+                        "groupLabel": group["label"],
+                        "groupName": group["name"],
+                        "unit": unit["unit"],
+                        "unitName": unit["name"],
+                        "notesUrl": t["notesUrl"],
+                        "questionsUrl": t["questionsUrl"],
+                        "url": f"/past-paper-questions/{board['board']}/{t['slug']}/",
+                    }
     return out
 
 
@@ -89,7 +102,8 @@ def build(taxonomy, tags, papers):
             "year": p["year"],
             "series": p["series"],
             "seriesSlug": p["seriesSlug"],
-            "board": p["boardName"],
+            "board": p["board"],
+            "boardName": p["boardName"],
             "qualification": p["qualification"],
             "questionPaperUrl": p["questionPaperUrl"],
             "markSchemeUrl": p["markSchemeUrl"],
@@ -113,7 +127,12 @@ def build(taxonomy, tags, papers):
                 if slug not in topics:
                     errors.append(f"{q['id']}: unknown topic slug {slug!r}")
 
-            themes = sorted({topics[s]["theme"] for s in slugs if s in topics})
+            known = [s for s in slugs if s in topics]
+            groups = sorted({topics[s]["group"] for s in known})
+            boards = sorted({topics[s]["board"] for s in known})
+            if len(boards) > 1:
+                errors.append(
+                    f"{q['id']}: tagged across two boards ({', '.join(boards)})")
 
             if q["markScheme"] is None:
                 errors.append(f"{q['id']}: no mark scheme recorded")
@@ -129,7 +148,8 @@ def build(taxonomy, tags, papers):
                 "marks": q["marks"],
                 "questionText": q["questionText"],
                 "topics": slugs,
-                "themes": themes,
+                "board": boards[0] if boards else paper["board"],
+                "groups": groups,
                 "keywords": tag["keywords"],
                 "qpPage": q["questionPaper"]["page"],
                 "msPage": q["markScheme"]["page"],
@@ -158,17 +178,26 @@ def build(taxonomy, tags, papers):
         "generated": datetime.date.today().isoformat(),
         "count": len(questions),
         "gate": GATE,
-        "qualification": "A Level Economics A (9EC0)",
-        "themes": [
+        "boards": [
             {
-                "theme": t["theme"],
-                "slug": t["slug"],
-                "name": t["name"],
-                "fullName": t["fullName"],
-                "notesDir": t["notesDir"],
-                "notesIndexUrl": t["notesIndexUrl"],
+                "board": b["board"],
+                "name": b["name"],
+                "qualification": b["qualification"],
+                "papersUrl": b["papersUrl"],
+                "url": f"/past-paper-questions/{b['board']}/",
+                "groups": [
+                    {
+                        "slug": g["slug"],
+                        "label": g["label"],
+                        "name": g["name"],
+                        "fullName": g["fullName"],
+                        "notesIndexUrl": g["notesIndexUrl"],
+                        "url": f"/past-paper-questions/{b['board']}/{g['slug']}/",
+                    }
+                    for g in b["groups"]
+                ],
             }
-            for t in taxonomy["themes"]
+            for b in taxonomy["boards"]
         ],
         "papers": paper_table,
         # hasPage and gated are the same thing now that this script generates
@@ -205,26 +234,33 @@ def e(s):
     return html.escape(str(s), quote=True)
 
 
-def search_component(topic="", theme=0):
+def search_component(topic="", board="", group=""):
     """The search UI skeleton.
 
-    Rendered identically on the master page, the theme pages and the topic
-    pages; only the pre-filter attribute differs. The controls ship hidden and
-    are revealed by js/components/question-search.js, so a reader without
+    Rendered identically on the master page, the board and section pages and the
+    topic pages; only the pre-filter attributes differ. The controls ship hidden
+    and are revealed by js/components/question-search.js, so a reader without
     JavaScript is never shown a search box that cannot work.
     """
     attr = ""
     if topic:
+        # A topic already implies its board and section.
         attr = ' data-prefilter-topic="' + e(topic) + '"'
-    elif theme:
-        attr = ' data-prefilter-theme="' + e(theme) + '"'
+    else:
+        if board:
+            attr += ' data-prefilter-board="' + e(board) + '"'
+        if group:
+            attr += ' data-prefilter-group="' + e(group) + '"'
+    # "Section" here is the paper's section (A/B/C), distinct from the board's
+    # section grouping, which is labelled Theme or Micro/Macroeconomics.
     fields = [
+        ("board", "Board", "Both boards"),
+        ("group", "Theme / area", "All areas"),
         ("paper", "Paper", "All papers"),
-        ("theme", "Theme", "All themes"),
         ("topic", "Topic", "All topics"),
         ("marks", "Marks", "All marks"),
         ("year", "Year", "All years"),
-        ("section", "Section", "All sections"),
+        ("section", "Paper section", "All sections"),
     ]
     field_html = "\n".join(
         f"""              <div class="ppq-field">
@@ -302,12 +338,15 @@ def render_card(q, index):
     topics = index["topics"]
 
     badges = [
+        f'<span class="ppq-badge ppq-badge-board">{e(paper["boardName"])}</span>',
         f'<span class="ppq-badge ppq-badge-paper">Paper {paper["paper"]}</span>',
         f'<span class="ppq-badge">{e(paper["series"] + " " + str(paper["year"]))}</span>',
         f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} marks</span>',
     ]
-    for n in q["themes"]:
-        badges.append(f'<span class="ppq-badge ppq-badge-theme">Theme {n}</span>')
+    groups = {g["slug"]: g for b in index["boards"] for g in b["groups"]}
+    for slug in q["groups"]:
+        label = groups[slug]["label"] if slug in groups else slug
+        badges.append(f'<span class="ppq-badge ppq-badge-theme">{e(label)}</span>')
 
     links = []
     for slug in q["topics"]:
@@ -316,7 +355,7 @@ def render_card(q, index):
             continue
         label = e(t["spec"] + " " + t["shortTitle"])
         if t["hasPage"]:
-            links.append(f'<a href="/past-paper-questions/{e(slug)}/">{label}</a>')
+            links.append(f'<a href="{e(t["url"])}">{label}</a>')
         else:
             links.append(f"<span>{label}</span>")
     topic_links = " &middot; ".join(links)
@@ -367,43 +406,6 @@ def render_card(q, index):
         + f'<div class="ppq-actions">{"".join(actions)}</div>'
         "</article>"
     )
-
-
-def topic_directory(index):
-    """The crawlable fallback: every topic that has questions, grouped by theme.
-
-    This is what a crawler and a no-JS reader see, since the results list above
-    it is rendered by script on this page.
-    """
-    topics = index["topics"]
-    blocks = []
-    for theme in index["themes"]:
-        rows = sorted(
-            (s for s, t in topics.items() if t["theme"] == theme["theme"]),
-            key=lambda s: [int(p) for p in topics[s]["spec"].split(".")],
-        )
-        if not rows:
-            continue
-        items = []
-        for slug in rows:
-            t = topics[slug]
-            label = e(t["spec"] + " " + t["shortTitle"])
-            n = t["count"]
-            count = f'<span class="ppq-topic-count">{n} question{"" if n == 1 else "s"}</span>'
-            if t["hasPage"]:
-                link = f'<a href="/past-paper-questions/{e(slug)}/">{label}</a>'
-            else:
-                link = label
-            items.append(f"                <li>{link} {count}</li>")
-        blocks.append(
-            "            <div class=\"ppq-theme-block\">\n"
-            f'              <h3>Theme {theme["theme"]}: {e(theme["name"])}</h3>\n'
-            '              <ul class="ppq-topic-list">\n'
-            + "\n".join(items)
-            + "\n              </ul>\n"
-            "            </div>"
-        )
-    return "\n".join(blocks)
 
 
 def json_ld(obj):
@@ -589,45 +591,99 @@ def static_cards(index, questions):
 # ---------------------------------------------------------------- master page
 
 
-def theme_links(index):
-    rows = []
-    for theme in index["themes"]:
-        n = sum(1 for q in index["questions"] if theme["theme"] in q["themes"])
-        if not n:
+def board_of(index, slug):
+    return index["boards"][0] if not slug else next(
+        b for b in index["boards"] if b["board"] == slug
+    )
+
+
+def group_of(index, board_slug, group_slug):
+    b = board_of(index, board_slug)
+    return next(g for g in b["groups"] if g["slug"] == group_slug)
+
+
+def topics_in(index, *, board=None, group=None):
+    """Topics that have questions, in spec order, optionally filtered."""
+    out = [
+        s
+        for s, t in index["topics"].items()
+        if (board is None or t["board"] == board)
+        and (group is None or t["group"] == group)
+    ]
+    return sorted(out, key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")])
+
+
+def questions_for(index, *, board=None, group=None, topic=None):
+    out = []
+    for q in index["questions"]:
+        if topic is not None and topic not in q["topics"]:
             continue
+        if board is not None and q["board"] != board:
+            continue
+        if group is not None and group not in q["groups"]:
+            continue
+        out.append(q)
+    return out
+
+
+def topic_list_html(index, slugs, indent=16):
+    pad = " " * indent
+    rows = []
+    for slug in slugs:
+        t = index["topics"][slug]
+        label = e(t["spec"] + " " + t["shortTitle"])
+        link = f'<a href="{e(t["url"])}">{label}</a>' if t["hasPage"] else label
         rows.append(
-            f'                <li><a href="/past-paper-questions/{theme["slug"]}/">'
-            f'Theme {theme["theme"]}: {e(theme["name"])}</a> '
-            f'<span class="ppq-topic-count">{question_count_phrase(n)}</span></li>'
+            f'{pad}<li>{link} <span class="ppq-topic-count">'
+            f'{question_count_phrase(t["count"])}</span></li>'
         )
     return "\n".join(rows)
 
 
+# ---------------------------------------------------------------- master page
+
+
 def render_index(index):
     years = sorted({p["year"] for p in index["papers"]})
+    boards_with = [
+        b for b in index["boards"] if questions_for(index, board=b["board"])
+    ]
+    names = " and ".join(b["name"] for b in boards_with)
     meta = (
         f'{index["count"]} questions &middot; {years[0]}&ndash;{years[-1]} '
         f'&middot; {len(index["topics"])} topics &middot; free, no sign-up'
     )
-    linked = sum(1 for t in index["topics"].values() if t["hasPage"])
-    if linked:
-        note = (
-            "Questions are tagged against the Edexcel specification. Topics with "
-            "their own page are linked; the rest are searchable above."
-        )
-    else:
-        note = (
-            "Questions are tagged against the Edexcel specification. Use the "
-            "search above to filter to any topic listed here."
+
+    blocks = []
+    for b in boards_with:
+        rows = []
+        for g in b["groups"]:
+            n = len(questions_for(index, board=b["board"], group=g["slug"]))
+            if not n:
+                continue
+            rows.append(
+                f'                <li><a href="{e(g["url"])}">{e(g["label"])}: '
+                f'{e(g["name"])}</a> <span class="ppq-topic-count">'
+                f"{question_count_phrase(n)}</span></li>"
+            )
+        n_board = len(questions_for(index, board=b["board"]))
+        blocks.append(
+            f"""          <div class="ppq-theme-block">
+            <h3><a href="{e(b["url"])}">{e(b["name"])}</a> &mdash; {e(b["qualification"])}</h3>
+            <p>{question_count_phrase(n_board)} across {len(rows)} sections.</p>
+            <ul class="ppq-topic-list">
+{chr(10).join(rows)}
+            </ul>
+          </div>"""
         )
 
     body = f"""          <section class="ppq-hero">
-            <h1 class="ppq-h1">Edexcel A-Level Economics Past Paper Questions</h1>
+            <h1 class="ppq-h1">A-Level Economics Past Paper Questions</h1>
             <p class="ppq-intro">
-              Every Section B and Section C question from the
-              <strong>Edexcel A-Level Economics A (9EC0)</strong> papers, {years[0]}
-              to {years[-1]}, in one searchable place. Filter by topic, paper, year
-              or mark tariff, and open the official mark scheme at the right page.
+              Real exam questions from the <strong>{e(names)}</strong> A-Level
+              Economics papers, {years[0]} to {years[-1]}, in one searchable
+              place. Filter by topic, paper, year or mark tariff, and open the
+              official mark scheme at the right page.
             </p>
             <p class="ppq-hero-meta">{meta}</p>
           </section>
@@ -638,26 +694,20 @@ def render_index(index):
             <p>
               The search above needs JavaScript. Every topic is listed below, and
               all the question papers and mark schemes are available from the
-              <a href="/past-papers/edexcel/index.html">Edexcel past papers</a>
-              page.
+              <a href="/past-papers/index.html">past papers</a> pages.
             </p>
           </noscript>
 
           <header class="major">
-            <h2>Browse by theme</h2>
+            <h2>Browse by specification</h2>
           </header>
-          <div class="ppq-theme-block">
-            <ul class="ppq-topic-list">
-{theme_links(index)}
-            </ul>
-          </div>
+          <p>
+            The two specifications number their topics differently, so each board
+            keeps its own pages and its own codes. A question is never shown
+            under the other board's numbering.
+          </p>
 
-          <header class="major">
-            <h2>Browse by topic</h2>
-          </header>
-          <p>{note}</p>
-
-{topic_directory(index)}
+{chr(10).join(blocks)}
 
 {CTA}"""
 
@@ -670,89 +720,157 @@ def render_index(index):
     )
 
 
-# ---------------------------------------------------------------- theme pages
+# ------------------------------------------------------------------ board hub
 
 
-def render_theme_page(index, theme):
-    questions = [q for q in index["questions"] if theme["theme"] in q["themes"]]
-    path = f'/past-paper-questions/{theme["slug"]}/'
-    span = year_span(index, questions)
-    n = len(questions)
+def render_board_page(index, board):
+    qs = questions_for(index, board=board["board"])
+    path = board["url"]
+    span = year_span(index, qs)
+    slugs = topics_in(index, board=board["board"])
 
     title = (
-        f'Theme {theme["theme"]} Past Paper Questions '
-        f"&mdash; Edexcel A-Level Economics | Economics Academy"
+        f'{board["name"]} A-Level Economics Past Paper Questions '
+        f"| Economics Academy"
     )
-    title = html.unescape(title)
     desc = (
-        f'{n} Edexcel A-Level Economics past paper questions on Theme '
-        f'{theme["theme"]}: {theme["name"]}, from {span.replace("&ndash;", " to ")}. '
+        f'{len(qs)} {board["name"]} A-Level Economics past paper questions '
+        f'({board["qualification"]}), {span.replace("&ndash;", " to ")}. '
         "Each links straight to the right page of the official mark scheme."
     )
 
-    topics_in_theme = sorted(
-        (s for s, t in index["topics"].items() if t["theme"] == theme["theme"]),
-        key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")],
-    )
-    rows = []
-    for slug in topics_in_theme:
-        t = index["topics"][slug]
-        label = e(t["spec"] + " " + t["shortTitle"])
-        link = (
-            f'<a href="/past-paper-questions/{e(slug)}/">{label}</a>'
-            if t["hasPage"]
-            else label
-        )
-        rows.append(
-            f'                <li>{link} <span class="ppq-topic-count">'
-            f'{question_count_phrase(t["count"])}</span></li>'
+    group_rows = []
+    for g in board["groups"]:
+        n = len(questions_for(index, board=board["board"], group=g["slug"]))
+        if not n:
+            continue
+        group_rows.append(
+            f'                <li><a href="{e(g["url"])}">{e(g["label"])}: '
+            f'{e(g["name"])}</a> <span class="ppq-topic-count">'
+            f"{question_count_phrase(n)}</span></li>"
         )
 
     body = f"""          <section class="ppq-hero">
             <h1 class="ppq-h1">
-              Theme {theme["theme"]}: {e(theme["name"])} &mdash; Past Paper Questions
+              {e(board["name"])} A-Level Economics &mdash; Past Paper Questions
             </h1>
             <p class="ppq-intro">
-              {question_count_phrase(n)} from the Edexcel A-Level Economics A
-              (9EC0) papers, {span}, covering Theme {theme["theme"]}. Every
-              question links to the official mark scheme at the page its answer
-              begins on.
+              {question_count_phrase(len(qs))} from the {e(board["name"])}
+              {e(board["qualification"])} papers, {span}. Every question links to
+              the official mark scheme at the page its answer begins on.
             </p>
             <p class="ppq-hero-meta">
-              <a href="/revision-notes/{e(theme["notesDir"])}/index.html"
-                >Theme {theme["theme"]} revision notes</a
-              >
+              <a href="{e(board["papersUrl"])}">{e(board["name"])} past papers</a>
               &middot;
               <a href="/past-paper-questions/">All past paper questions</a>
             </p>
           </section>
 
-{search_component(theme=theme["theme"])}
+{search_component(board=board["board"])}
 
           <header class="major">
-            <h2>Topics in Theme {theme["theme"]}</h2>
+            <h2>Browse by section</h2>
           </header>
           <div class="ppq-theme-block">
             <ul class="ppq-topic-list">
-{chr(10).join(rows)}
+{chr(10).join(group_rows)}
+            </ul>
+          </div>
+
+          <header class="major">
+            <h2>All topics with questions</h2>
+          </header>
+          <div class="ppq-theme-block">
+            <ul class="ppq-topic-list">
+{topic_list_html(index, slugs)}
             </ul>
           </div>
 
 {CTA}"""
 
-    # The component replaces the results container, so the static cards live
-    # inside it and are what a crawler or a reader without JavaScript sees.
     body = body.replace(
         '<div class="ppq-results" data-ppq-results></div>',
         '<div class="ppq-results" data-ppq-results>\n'
-        + static_cards(index, questions)
+        + static_cards(index, qs)
         + "\n          </div>",
     )
 
     crumbs = [
         ("Home", "/"),
         ("Past Paper Questions", "/past-paper-questions/"),
-        (f'Theme {theme["theme"]}', None),
+        (board["name"], None),
+    ]
+    return path, page_shell(title, desc, path, crumbs, body)
+
+
+# ---------------------------------------------------------------- group pages
+
+
+def render_group_page(index, board, group):
+    qs = questions_for(index, board=board["board"], group=group["slug"])
+    path = group["url"]
+    span = year_span(index, qs)
+    slugs = topics_in(index, board=board["board"], group=group["slug"])
+
+    title = (
+        f'{board["name"]} {group["label"]} Past Paper Questions '
+        f"&mdash; A-Level Economics | Economics Academy"
+    )
+    title = html.unescape(title)
+    desc = (
+        f'{len(qs)} {board["name"]} A-Level Economics past paper questions on '
+        f'{group["label"]}: {group["name"]}, '
+        f'{span.replace("&ndash;", " to ")}. Each links straight to the right '
+        "page of the official mark scheme."
+    )
+    if len(desc) > 300:
+        desc = desc[:297] + "..."
+
+    body = f"""          <section class="ppq-hero">
+            <h1 class="ppq-h1">
+              {e(board["name"])} {e(group["label"])}: {e(group["name"])}
+              &mdash; Past Paper Questions
+            </h1>
+            <p class="ppq-intro">
+              {question_count_phrase(len(qs))} from the {e(board["name"])}
+              A-Level Economics papers, {span}, covering
+              {e(group["label"])}. Every question links to the official mark
+              scheme at the page its answer begins on.
+            </p>
+            <p class="ppq-hero-meta">
+              <a href="{e(group["notesIndexUrl"])}">{e(group["label"])} revision notes</a>
+              &middot;
+              <a href="{e(board["url"])}">All {e(board["name"])} questions</a>
+              &middot;
+              <a href="/past-paper-questions/">All past paper questions</a>
+            </p>
+          </section>
+
+{search_component(board=board["board"], group=group["slug"])}
+
+          <header class="major">
+            <h2>Topics in {e(group["label"])}</h2>
+          </header>
+          <div class="ppq-theme-block">
+            <ul class="ppq-topic-list">
+{topic_list_html(index, slugs)}
+            </ul>
+          </div>
+
+{CTA}"""
+
+    body = body.replace(
+        '<div class="ppq-results" data-ppq-results></div>',
+        '<div class="ppq-results" data-ppq-results>\n'
+        + static_cards(index, qs)
+        + "\n          </div>",
+    )
+
+    crumbs = [
+        ("Home", "/"),
+        ("Past Paper Questions", "/past-paper-questions/"),
+        (board["name"], board["url"]),
+        (group["label"], None),
     ]
     return path, page_shell(title, desc, path, crumbs, body)
 
@@ -761,35 +879,37 @@ def render_theme_page(index, theme):
 
 
 def related_topics(index, slug):
-    """Same unit first, then the rest of the theme. Only pages that exist."""
+    """Same unit first, then the rest of the group. Same board only."""
     me = index["topics"][slug]
-    same_unit = []
-    same_theme = []
+    same_unit, same_group = [], []
     for other, t in index["topics"].items():
         if other == slug or not t["hasPage"]:
             continue
-        if t["theme"] != me["theme"]:
+        if t["board"] != me["board"] or t["group"] != me["group"]:
             continue
-        (same_unit if t["unit"] == me["unit"] else same_theme).append(other)
+        (same_unit if t["unit"] == me["unit"] else same_group).append(other)
 
     key = lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]
-    ordered = sorted(same_unit, key=key) + sorted(same_theme, key=key)
-    return ordered[:6]
+    return (sorted(same_unit, key=key) + sorted(same_group, key=key))[:6]
 
 
 def render_topic_page(index, slug):
     t = index["topics"][slug]
-    questions = [q for q in index["questions"] if slug in q["topics"]]
-    path = f"/past-paper-questions/{slug}/"
-    span = year_span(index, questions)
-    n = len(questions)
+    board = board_of(index, t["board"])
+    group = group_of(index, t["board"], t["group"])
+    qs = questions_for(index, topic=slug)
+    path = t["url"]
+    span = year_span(index, qs)
 
-    title = f'{t["title"]} Past Paper Questions &mdash; Edexcel A-Level Economics | Economics Academy'
+    title = (
+        f'{t["title"]} Past Paper Questions &mdash; {board["name"]} A-Level '
+        f"Economics | Economics Academy"
+    )
     title = html.unescape(title)
     desc = (
-        f'{n} Edexcel A-Level Economics past paper questions on {t["title"]} '
-        f'(spec {t["spec"]}), {span.replace("&ndash;", " to ")}. Each links '
-        "straight to the right page of the official mark scheme."
+        f'{len(qs)} {board["name"]} A-Level Economics past paper questions on '
+        f'{t["title"]} (spec {t["spec"]}), {span.replace("&ndash;", " to ")}. '
+        "Each links straight to the right page of the official mark scheme."
     )
     if len(desc) > 300:
         desc = desc[:297] + "..."
@@ -797,32 +917,25 @@ def render_topic_page(index, slug):
     related = related_topics(index, slug)
     related_html = ""
     if related:
-        rows = "\n".join(
-            f'                <li><a href="/past-paper-questions/{e(r)}/">'
-            f'{e(index["topics"][r]["spec"] + " " + index["topics"][r]["shortTitle"])}</a> '
-            f'<span class="ppq-topic-count">'
-            f'{question_count_phrase(index["topics"][r]["count"])}</span></li>'
-            for r in related
-        )
         related_html = f"""
           <header class="major">
             <h2>Related topics</h2>
           </header>
           <div class="ppq-theme-block">
             <ul class="ppq-topic-list">
-{rows}
+{topic_list_html(index, related)}
             </ul>
           </div>
 """
 
     body = f"""          <section class="ppq-hero">
             <h1 class="ppq-h1">
-              {e(t["title"])} &mdash; Past Paper Questions
+              {e(t["title"])} &mdash; {e(board["name"])} Past Paper Questions
             </h1>
             <p class="ppq-intro">
-              {question_count_phrase(n)} on <strong>{e(t["title"])}</strong>
-              (specification {e(t["spec"])}) from the Edexcel A-Level Economics A
-              (9EC0) papers, {span}. Every question links to the official mark
+              {question_count_phrase(len(qs))} on <strong>{e(t["title"])}</strong>
+              ({e(board["name"])} specification {e(t["spec"])}) from the A-Level
+              Economics papers, {span}. Every question links to the official mark
               scheme at the page its answer begins on.
             </p>
             <p class="ppq-hero-meta">
@@ -830,9 +943,9 @@ def render_topic_page(index, slug):
               &middot;
               <a href="{e(t["questionsUrl"])}">Practice questions</a>
               &middot;
-              <a href="/past-paper-questions/theme-{t["theme"]}/">Theme {t["theme"]}</a>
+              <a href="{e(group["url"])}">{e(group["label"])}</a>
               &middot;
-              <a href="/past-paper-questions/">All past paper questions</a>
+              <a href="{e(board["url"])}">All {e(board["name"])} questions</a>
             </p>
           </section>
 
@@ -843,14 +956,15 @@ def render_topic_page(index, slug):
     body = body.replace(
         '<div class="ppq-results" data-ppq-results></div>',
         '<div class="ppq-results" data-ppq-results>\n'
-        + static_cards(index, questions)
+        + static_cards(index, qs)
         + "\n          </div>",
     )
 
     crumbs = [
         ("Home", "/"),
         ("Past Paper Questions", "/past-paper-questions/"),
-        (f'Theme {t["theme"]}', f'/past-paper-questions/theme-{t["theme"]}/'),
+        (board["name"], board["url"]),
+        (group["label"], group["url"]),
         (t["shortTitle"], None),
     ]
     return path, page_shell(title, desc, path, crumbs, body)
@@ -876,12 +990,8 @@ def update_sitemap(index, paths):
 
     lines = [SITEMAP_OPEN]
     for path in paths:
-        if path == "/past-paper-questions/":
-            priority = "0.8"
-        elif "/theme-" in path:
-            priority = "0.7"
-        else:
-            priority = "0.6"
+        depth = path.strip("/").count("/")
+        priority = {0: "0.8", 1: "0.75", 2: "0.7"}.get(depth, "0.6")
         lines.append(
             f"  <url><loc>{SITE}{path}</loc><lastmod>{today}</lastmod>"
             f"<priority>{priority}</priority></url>"
@@ -971,39 +1081,49 @@ def main():
 
     INDEX.write_text(render_index(index), encoding="utf-8")
 
-    for theme in index["themes"]:
-        if not any(theme["theme"] in q["themes"] for q in index["questions"]):
-            continue
-        path, page = render_theme_page(index, theme)
-        dest = PAGE_DIR / theme["slug"] / "index.html"
+    def emit(path, page):
+        # "/past-paper-questions/edexcel/theme-1/" -> edexcel/theme-1/index.html
+        rel = path.strip("/").split("/")[1:]
+        dest = PAGE_DIR.joinpath(*rel, "index.html")
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page, encoding="utf-8")
         written.append(dest)
         paths.append(path)
 
-    for slug in sorted(gated, key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]):
-        path, page = render_topic_page(index, slug)
-        dest = PAGE_DIR / slug / "index.html"
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(page, encoding="utf-8")
-        written.append(dest)
-        paths.append(path)
+    for board in index["boards"]:
+        if not questions_for(index, board=board["board"]):
+            continue
+        emit(*render_board_page(index, board))
+        for group in board["groups"]:
+            if not questions_for(index, board=board["board"], group=group["slug"]):
+                continue
+            emit(*render_group_page(index, board, group))
+
+    for slug in sorted(
+        gated, key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]
+    ):
+        emit(*render_topic_page(index, slug))
 
     # Anything under past-paper-questions/ that this run did not write is a page
     # for a topic that has since dropped below the gate or been retagged. The
     # output is meant to be a pure function of the data, so it goes.
     keep = {p.parent for p in written}
     removed = 0
-    for child in sorted(PAGE_DIR.iterdir()):
-        if child.is_dir() and child not in keep:
-            for f in sorted(child.rglob("*")):
-                f.unlink()
-            child.rmdir()
-            removed += 1
+    for child in sorted(PAGE_DIR.rglob("index.html"), reverse=True):
+        if child.parent in keep or child.parent == PAGE_DIR:
+            continue
+        child.unlink()
+        removed += 1
+    for d in sorted(PAGE_DIR.rglob("*"), reverse=True):
+        if d.is_dir() and not any(d.iterdir()):
+            d.rmdir()
 
-    theme_pages = sum(1 for p in paths if "/theme-" in p)
-    topic_pages = len(paths) - theme_pages - 1
-    print(f"wrote {theme_pages} theme pages and {topic_pages} topic pages")
+    boards = sum(1 for p in paths if p.count("/") == 3)
+    groups = sum(1 for p in paths if p.count("/") == 4 and "/theme-" in p or
+                 p.count("/") == 4 and p.rstrip("/").split("/")[-1] in
+                 {"microeconomics", "macroeconomics"})
+    topics = len(paths) - 1 - boards - groups
+    print(f"wrote {boards} board pages, {groups} section pages, {topics} topic pages")
     if removed:
         print(f"removed {removed} stale page(s)")
 
