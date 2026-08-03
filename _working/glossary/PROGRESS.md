@@ -5,8 +5,8 @@ Live state of the Glossary & Formulae build. **Read this first** after any
 never batched.
 
 - **Branch:** `feature/glossary` (off `main` at `faccb6a`)
-- **Current phase:** Phase 1 — setup
-- **Current step:** 2.1 — build `scripts/extract_glossary.py` (chip pass)
+- **Current phase:** Phase 2 — extraction & gap analysis
+- **Current step:** 2.6 — **PAUSED, awaiting Eliot's review**
 - **Last updated:** 2026-08-03
 
 ---
@@ -48,14 +48,14 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [x] 1.1 Branch `feature/glossary`, create `_working/glossary/`, write `PROGRESS.md`
 - [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `REVIEW-NOTES.md`; `ROADMAP.md` updated
 
-### Phase 2 — Extraction & gap analysis — IN PROGRESS
+### Phase 2 — Extraction & gap analysis — AWAITING REVIEW
 
-- [ ] 2.1 `scripts/extract_glossary.py` — chip pass → `glossary-data/terms.json`
-- [ ] 2.2 Append results to `inventory.md` incrementally
-- [ ] 2.3 Table-column harvest: list all candidate rows for Eliot's approval
-- [ ] 2.4 Scan both spec PDFs as a **checklist only** → `spec-checklist.md`
-- [ ] 2.5 `gap-report.md`
-- [ ] 2.6 **PAUSE — Eliot reviews inventory + gap report + table rows**
+- [x] 2.1 `scripts/extract_glossary.py` — 255 terms, 49 formulae, 0 problems
+- [x] 2.2 `inventory.md` written (rewritten whole each run — deterministic, so safer than appending)
+- [x] 2.3 9 table candidates listed with every row in `review-decisions.md` §A
+- [x] 2.4 Both specs scanned as a checklist → `spec-checklist.md`. No spec wording in the repo
+- [x] 2.5 `gap-report.md`
+- [ ] 2.6 **PAUSE — Eliot reviews. Nothing proceeds until this is answered**
 
 ### Phase 3 — Build
 
@@ -99,7 +99,22 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 
 ## Open questions awaiting Eliot
 
-_None right now._ Next decision point is **2.6**, the Phase 2 review pause.
+**Phase 2 is paused here.** Four things need answers before Phase 3 starts.
+All detail is in `review-decisions.md`; `gap-report.md` is the summary.
+
+1. **§A — which of the 9 concept-tables to harvest.** Approving `3.4.1` and
+   `1.5.10` is the important one: it is the only source of real definitions for
+   allocative, productive and dynamic efficiency, whose chips elsewhere are
+   Yes/No verdicts rather than definitions.
+2. **§B — which of the 49 formulae are worked arithmetic**, and what to call
+   them (labels currently come from the section heading).
+3. **§E — 36 terms worded differently across sources.** Align the notes, or
+   name the canonical page.
+4. **§G — confirm the curation already applied**: 41 stop-listed labels, 20
+   merges, 15 display renames. None of these changes a word of any definition.
+
+Nothing blocks me from starting Phase 3 scaffolding on the current data, but
+the term set will move once these land.
 
 ---
 
@@ -181,6 +196,13 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `CLAUDE.md` | Modified — new "How publishing works" and "Glossary & formulae" sections; 3 lines added to Layout; 1 line to See also |
 | `REVIEW-NOTES.md` | Appended — G1 (MathJax missing on `2-1-3`), G2 (`.formula-box` unstyled) |
 | `ROADMAP.md` | Modified — glossary under Now; flashcards, KaTeX migration and PDF export under Someday |
+| `scripts/extract_glossary.py` | Created — the extractor and the review-file generator |
+| `glossary-data/curation.json` | Created — hand-written judgement, no definition text |
+| `glossary-data/terms.json` | Generated — 255 terms, 49 formulae |
+| `_working/glossary/inventory.md` | Generated |
+| `_working/glossary/review-decisions.md` | Generated — the decisions needed |
+| `_working/glossary/spec-checklist.md` | Generated — per-board spec coverage |
+| `_working/glossary/gap-report.md` | Written — the summary and judgement calls |
 
 **No revision-notes topic page has been edited, and none will be.**
 
@@ -200,9 +222,11 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Step 2.1.** Write `scripts/extract_glossary.py` — the chip pass. Stdlib only.
-Reads the 166 topic pages, applies the twelve gotchas above, and writes
-`glossary-data/terms.json` plus an incremental append to `inventory.md`.
+**Wait.** Phase 2 is complete and paused at step 2.6 for Eliot's review of
+`review-decisions.md`, `gap-report.md` and `spec-checklist.md`.
 
-Support `--check` (validate and write nothing). Board attribution comes from the
-`spec-alert` line. Records key on the canonical URL, never the spec code.
+When answers come back: record them in `glossary-data/curation.json`, re-run
+`python3 scripts/extract_glossary.py`, confirm the review file has shrunk, then
+start Phase 3.1 — `scripts/build_glossary.py`, modelled on
+`scripts/build_past_paper_questions.py` with the validation discipline of
+`scripts/build_questions.py`.
