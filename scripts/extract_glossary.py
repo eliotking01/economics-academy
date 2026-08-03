@@ -623,28 +623,32 @@ def write_inventory(terms, formulae, stats, skipped):
     L += [f"| {k} | {v} |" for k, v in stats.items()]
 
     L += ["", "## Terms", "",
-          "`B` = boards defining it. `V` = distinct definition wordings across "
-          "its sources; anything above 1 is a gap-report item.", "",
-          "| Term | B | V | Sources |", "| --- | --- | ---: | --- |"]
-    for t in terms:
+          "`T` numbers match this run only — they come from the sort order and "
+          "shift as curation lands. `B` = boards defining it. `V` = distinct "
+          "definition wordings across its sources; anything above 1 is a "
+          "gap-report item.", "",
+          "| # | Term | B | V | Sources |", "| ---: | --- | --- | ---: | --- |"]
+    for i, t in enumerate(terms, 1):
         b = "".join("E" if s == "edexcel-a" else "A" for s in t["boards"])
         src = ", ".join(f"{s['groupLabel']} {s['spec']}" for s in t["sources"])
-        L.append(f"| {t['term']} | {b} | {t['definitionVariants']} | {src} |")
+        L.append(f"| **T{i}** | {t['term']} | {b} | {t['definitionVariants']} | {src} |")
 
-    L += ["", "## Display formulae", "", "| Label | LaTeX | Boards | In formula-box |",
-          "| --- | --- | --- | --- |"]
-    for f in formulae:
+    L += ["", "## Display formulae", "",
+          "`B` numbers match section B of `review-decisions.md`.", "",
+          "| # | Label | LaTeX | Boards | In formula-box |",
+          "| ---: | --- | --- | --- | --- |"]
+    for i, f in enumerate(formulae, 1):
         tex = f["latex"].replace("|", "\\|")
         b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
-        L.append(f"| {f['label']} | `{tex}` | {b} | "
+        L.append(f"| **B{i}** | {f['label']} | `{tex}` | {b} | "
                  f"{'no' if f['outsideFormulaBox'] else 'yes'} |")
 
     L += ["", "## Chips deliberately not extracted", "",
           "None of these is a term/definition pair. Listed so the decision is "
           "auditable rather than silent.", "",
-          "| Page | Reason | Chip |", "| --- | --- | --- |"]
-    for page, why, term in skipped:
-        L.append(f"| {page} | {why} | {term} |")
+          "| # | Page | Reason | Chip |", "| ---: | --- | --- | --- |"]
+    for i, (page, why, term) in enumerate(skipped, 1):
+        L.append(f"| **X{i}** | {page} | {why} | {term} |")
 
     INVENTORY.write_text("\n".join(L) + "\n", encoding="utf-8")
 
@@ -671,6 +675,23 @@ def write_review(terms, formulae, tables, curation):
          "",
          "Sections A–B are additions. C–F are corrections. G is a confirmation.",
          "",
+         "## How to reply",
+         "",
+         "Every row is numbered. Quote the numbers and nothing else — for example:",
+         "",
+         "```",
+         "A: 6 and 9 yes, rest no",
+         "B: exclude 6, 12, 15. Rename 1 to \"Aggregate Demand\"",
+         "C: 2, 5, 11 -> stop-list. Rest fine",
+         "D: all fine except 17",
+         "E: 3, 8 -> use the Edexcel wording. 14 -> exclude the 1.5.4 source",
+         "G: all confirmed except M7",
+         "```",
+         "",
+         "**The numbers are for this round only.** They come from the current sort "
+         "order, so they will shift once decisions land and the file regenerates. "
+         "Answer against this version.",
+         "",
          "---",
          "",
          f"## A. Table harvests — {len(tables) - len(approved)} of {len(tables)} still undecided",
@@ -679,11 +700,18 @@ def write_review(terms, formulae, tables, curation):
          "define terms; some are classification grids that only look like it. For "
          "each one to use, add the entry shown to `curation.tables`; for the rest, "
          "do nothing.",
-         ""]
-
-    for c in tables:
+         "",
+         "| # | Page | Table | Headers | Rows | State |",
+         "| ---: | --- | ---: | --- | ---: | --- |"]
+    for i, c in enumerate(tables, 1):
         state = "APPROVED" if (c["notesUrl"], c["table"]) in approved else "undecided"
-        L += [f"### {c['groupLabel']} {c['spec']} — table {c['table']} — **{state}**",
+        L.append(f"| **A{i}** | {c['groupLabel']} {c['spec']} | {c['table']} | "
+                 f"{' / '.join(c['headers'])} | {len(c['rows'])} | {state} |")
+    L.append("")
+
+    for i, c in enumerate(tables, 1):
+        state = "APPROVED" if (c["notesUrl"], c["table"]) in approved else "undecided"
+        L += [f"### A{i}. {c['groupLabel']} {c['spec']} — table {c['table']} — **{state}**",
               "",
               f"`{c['notesUrl']}`", "",
               "| " + " | ".join(f"{i}. {h}" for i, h in enumerate(c["headers"])) + " |",
@@ -707,12 +735,13 @@ def write_review(terms, formulae, tables, curation):
           "`curation.formulaExclude`. Labels come from the section heading the "
           "formula sits under, so most want renaming via `curation.formulaLabel`.",
           "",
-          "| id | label | LaTeX | boards | in a formula-box |",
-          "| --- | --- | --- | --- | --- |"]
-    for f in formulae:
+          "| # | label | LaTeX | boards | in a formula-box | id |",
+          "| ---: | --- | --- | --- | --- | --- |"]
+    for i, f in enumerate(formulae, 1):
         b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
-        L.append(f"| `{f['id']}` | {f['label']} | `{f['latex'].replace('|', chr(92)+'|')}` "
-                 f"| {b} | {'no' if f['outsideFormulaBox'] else 'yes'} |")
+        L.append(f"| **B{i}** | {f['label']} | "
+                 f"`{f['latex'].replace('|', chr(92) + '|')}` | {b} | "
+                 f"{'no' if f['outsideFormulaBox'] else 'yes'} | `{f['id']}` |")
 
     sections = [
         ("C", "Terms named from a section heading",
@@ -745,17 +774,22 @@ def write_review(terms, formulae, tables, curation):
     for letter, title, reason, blurb in sections:
         rows = flagged(reason)
         L += ["", "---", "", f"## {letter}. {title} — {len(rows)}", "", blurb, "",
-              "| Term | Boards | Source(s) | Definition as extracted |",
-              "| --- | --- | --- | --- |"]
-        for t in rows:
+              "| # | Term | Boards | Source(s) | Definition as extracted |",
+              "| ---: | --- | --- | --- | --- |"]
+        for i, t in enumerate(rows, 1):
             b = "".join("E" if s == "edexcel-a" else "A" for s in t["boards"])
             src = "<br>".join(f"{s['groupLabel']} {s['spec']}" for s in t["sources"])
             if letter == "E":
-                d = "<br>".join(f"*{s['spec']}* — {s['definitionHtml'][:150]}"
-                                for s in t["sources"])
+                # One line per source, each separately numbered, so a reply can
+                # name a single wording to keep or drop rather than the term.
+                d = "<br>".join(
+                    f"**{letter}{i}.{j}** *{s['groupLabel']} {s['spec']}* — "
+                    f"{s['definitionHtml'][:150]}"
+                    for j, s in enumerate(t["sources"], 1))
             else:
                 d = t["sources"][0]["definitionHtml"][:220]
-            L.append(f"| **{t['term']}** | {b} | {src} | {d.replace('|', chr(92)+'|')} |")
+            L.append(f"| **{letter}{i}** | {t['term']} | {b} | {src} | "
+                     f"{d.replace('|', chr(92) + '|')} |")
 
     L += ["", "---", "",
           "## G. Curation already applied — please confirm", "",
@@ -764,15 +798,23 @@ def write_review(terms, formulae, tables, curation):
           "any definition; they only decide what counts as a term and what it is "
           "called.", "",
           f"### Stop-listed as rhetorical labels, not terms ({len(curation['stopTerms'])})",
-          "", ", ".join(f"`{s}`" for s in curation["stopTerms"]), "",
-          f"### Merged ({len(curation['aliases'])})", "",
-          "| Variant | Merged into |", "| --- | --- |"]
-    for k, v in sorted(curation["aliases"].items()):
-        L.append(f"| {k} | {v} |")
+          "",
+          "| # | Label | # | Label | # | Label |", "| ---: | --- | ---: | --- | ---: | --- |"]
+    stops = curation["stopTerms"]
+    for i in range(0, len(stops), 3):
+        cells = []
+        for j, s in enumerate(stops[i:i + 3]):
+            cells += [f"**S{i + j + 1}**", f"`{s}`"]
+        cells += ["", ""] * (3 - len(stops[i:i + 3]))
+        L.append("| " + " | ".join(cells) + " |")
+    L += ["", f"### Merged ({len(curation['aliases'])})", "",
+          "| # | Variant | Merged into |", "| ---: | --- | --- |"]
+    for i, (k, v) in enumerate(sorted(curation["aliases"].items()), 1):
+        L.append(f"| **M{i}** | {k} | {v} |")
     L += ["", f"### Renamed for display ({len(curation['display'])})", "",
-          "| Key | Shown as |", "| --- | --- |"]
-    for k, v in sorted(curation["display"].items()):
-        L.append(f"| {k} | {v} |")
+          "| # | Key | Shown as |", "| ---: | --- | --- |"]
+    for i, (k, v) in enumerate(sorted(curation["display"].items()), 1):
+        L.append(f"| **R{i}** | {k} | {v} |")
 
     (INVENTORY.parent / "review-decisions.md").write_text(
         "\n".join(L) + "\n", encoding="utf-8")

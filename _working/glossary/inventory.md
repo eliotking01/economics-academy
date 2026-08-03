@@ -24,479 +24,481 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 
 ## Terms
 
-`B` = boards defining it. `V` = distinct definition wordings across its sources; anything above 1 is a gap-report item.
+`T` numbers match this run only — they come from the sort order and shift as curation lands. `B` = boards defining it. `V` = distinct definition wordings across its sources; anything above 1 is a gap-report item.
 
-| Term | B | V | Sources |
-| --- | --- | ---: | --- |
-| Absolute advantage | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.2 |
-| Absolute poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
-| Actual Growth | E | 2 | Theme 2 2.5.1, Theme 2 2.5.2 |
-| Aggregate Demand (AD) | AE | 1 | Macroeconomics 2.2.2, Theme 2 2.2.1 |
-| Allocative efficiency | AE | 3 | Microeconomics 1.5.3, Microeconomics 1.5.4, Microeconomics 1.5.6, Theme 3 3.4.2, Theme 3 3.4.3, Theme 3 3.4.5 |
-| Allocative inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| Altruism & Fairness | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
-| Anchoring bias | A | 1 | Microeconomics 1.2.3 |
-| Asymmetric information | AE | 3 | Microeconomics 1.2.2, Microeconomics 1.8.2, Microeconomics 1.8.6, Theme 1 1.3.1, Theme 1 1.3.4, Theme 4 4.4.2 |
-| Automatic stabilisers | E | 1 | Theme 4 4.5.3 |
-| Availability bias | A | 1 | Microeconomics 1.2.3 |
-| Average Cost (AC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Average Fixed Cost (AFC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Average Returns | A | 1 | Microeconomics 1.4.3 |
-| Average Revenue (AR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
-| Average Variable Cost (AVC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Backward integration | E | 1 | Theme 3 3.1.2 |
-| Balance Sheet | A | 1 | Macroeconomics 2.4.2 |
-| Balanced budget | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| Base year | A | 1 | Macroeconomics 2.1.3 |
-| Behavioural economic theory | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.10 |
-| Bond | A | 1 | Macroeconomics 2.4.1 |
-| Bounded rationality | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
-| Bounded self control | A | 1 | Microeconomics 1.2.3 |
-| Budget deficit | AE | 2 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| Budget surplus | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| Capital account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| Capital expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
-| Capital flight | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| Capital ratio | A | 1 | Macroeconomics 2.4.4 |
-| Capitalism | E | 1 | Theme 4 4.2.2 |
-| Central bank | A | 1 | Macroeconomics 2.4.3 |
-| Ceteris paribus | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.1 |
-| Command Economy | E | 1 | Theme 1 1.1.6 |
-| Commercial Bank | A | 1 | Macroeconomics 2.4.2 |
-| Common market | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
-| Common pool resources | A | 1 | Microeconomics 1.8.3 |
-| Comparative advantage | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.2 |
-| Competition | A | 1 | Microeconomics 1.5.1 |
-| Competition and Markets Authority (CMA) | E | 1 | Theme 3 3.6.1 |
-| Competition Policy | A | 1 | Microeconomics 1.8.7 |
-| Competitive devaluation | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
-| Complete Market Failure | A | 1 | Microeconomics 1.8.2 |
-| Composite indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| Consumer Prices Index (CPI) | A | 1 | Macroeconomics 2.1.3 |
-| Consumer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
-| Consumption | A | 1 | Macroeconomics 2.2.3 |
-| Creative destruction | A | 1 | Microeconomics 1.5.8 |
-| Credit Creation | A | 1 | Macroeconomics 2.4.2 |
-| Cross Elasticity of Demand (XED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
-| Currency union | A | 1 | Macroeconomics 2.6.4 |
-| Current Account | AE | 2 | Macroeconomics 2.1.2, Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| Current expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
-| Customs union | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
-| Cyclical (Demand-Deficient) Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Cyclical deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| Default Choice | A | 1 | Microeconomics 1.2.4 |
-| Deflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
-| Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| Demand for labour | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
-| Demand-side policies | E | 1 | Theme 2 2.6.2 |
-| A demerger | E | 1 | Theme 3 3.1.3 |
-| Demerit Goods | AE | 2 | Microeconomics 1.8.4, Microeconomics 1.8.5, Theme 1 1.3.2 |
-| Depreciation | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
-| Deregulation | A | 1 | Microeconomics 1.8.8 |
-| Diminishing Marginal Returns | AE | 1 | Microeconomics 1.4.3, Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Direct taxes | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| Discretionary fiscal policy | E | 1 | Theme 4 4.5.3 |
-| Discrimination | A | 1 | Microeconomics 1.6.7 |
-| Diseconomies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| Disinflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
-| Disposable Income | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.2 |
-| Division of Labour | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
-| Dynamic efficiency | AE | 3 | Microeconomics 1.5.3, Microeconomics 1.5.4, Microeconomics 1.5.6, Theme 3 3.4.2, Theme 3 3.4.3, Theme 3 3.4.5 |
-| Economic development | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| Economic growth | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| Economically Inactive | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Emotional Influence | E | 1 | Theme 1 1.2.1 |
-| Equality | A | 1 | Microeconomics 1.7.1 |
-| Equity | A | 1 | Microeconomics 1.7.1 |
-| Expenditure-reducing policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| Expenditure-switching policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| External economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| Externality | AE | 3 | Microeconomics 1.8.2, Microeconomics 1.8.4, Theme 1 1.3.1, Theme 1 1.3.2, Theme 4 4.4.2 |
-| Factor immobility | A | 1 | Microeconomics 1.8.6 |
-| Factors of production | E | 1 | Theme 1 1.1.3 |
-| Financial account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| First-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
-| Fiscal deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| Fiscal policy | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| Fixed Costs (FC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Fixed exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
-| Floating exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
-| Foreign currency gap | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| Forward integration | E | 1 | Theme 3 3.1.2 |
-| Framing bias | A | 1 | Microeconomics 1.2.3 |
-| Free Market Economy | E | 1 | Theme 1 1.1.6 |
-| Free trade area | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
-| Frictional Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Game theory | E | 1 | Theme 3 3.4.4 |
-| Geographical immobility | A | 1 | Microeconomics 1.8.6 |
-| Globalisation | AE | 1 | Macroeconomics 2.6.1, Theme 4 4.1.1 |
-| Government failure | AE | 1 | Microeconomics 1.8.10, Theme 1 1.4.2 |
-| Government provision | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
-| Gross Domestic Product (GDP) | AE | 2 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
-| Gross National Income (GNI) | A | 1 | Macroeconomics 2.1.4 |
-| Harrod-Domar model | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| Herding bias (social norms) | A | 1 | Microeconomics 1.2.3 |
-| Income Elasticity of Demand (YED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
-| Income inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
-| Index number | A | 1 | Macroeconomics 2.1.3 |
-| Indirect taxation | AE | 3 | Microeconomics 1.8.4, Macroeconomics 2.5.1, Theme 1 1.2.9, Theme 1 1.3.2, Theme 4 4.5.2 |
-| Inflation | AE | 2 | Macroeconomics 2.1.3, Macroeconomics 2.3.3, Theme 2 2.1.2 |
-| Information gaps | AE | 1 | Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
-| Information Provision | AE | 3 | Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.4.1 |
-| Innovation | A | 1 | Microeconomics 1.4.8 |
-| Inorganic Growth | E | 1 | Theme 3 3.1.2 |
-| Interest rates | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
-| Internal Economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| International competitiveness | E | 1 | Theme 4 4.1.9 |
-| Interventionist policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| Inventions | A | 1 | Microeconomics 1.4.8 |
-| Investment | AE | 1 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
-| Investment Bank | A | 1 | Macroeconomics 2.4.2 |
-| Labour Force | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| The Law of Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| The Law of Diminishing Marginal Utility | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| Legal/Working Monopoly | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
-| Liquidity | A | 1 | Macroeconomics 2.4.2 |
-| Liquidity ratio | A | 1 | Macroeconomics 2.4.4 |
-| Long Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
-| Long-Run Aggregate Supply (LRAS) | AE | 1 | Macroeconomics 2.2.2, Macroeconomics 2.2.6, Theme 2 2.3.1, Theme 2 2.3.3 |
-| Long-Run Growth | A | 1 | Macroeconomics 2.3.1 |
-| Loss | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
-| Managed exchange rate | E | 1 | Theme 4 4.1.8 |
-| Mandated Choice | A | 1 | Microeconomics 1.2.4 |
-| Marginal Cost (MC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Marginal Physical Product (MPP) | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
-| Marginal Returns | A | 1 | Microeconomics 1.4.3 |
-| Marginal Revenue (MR) | AE | 2 | Microeconomics 1.4.6, Microeconomics 1.6.1, Theme 3 3.3.1, Theme 3 3.5.1 |
-| Marginal Utility (MU) | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| Market Equilibrium | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
-| Market failure | AE | 2 | Microeconomics 1.8.2, Microeconomics 1.8.4, Theme 1 1.3.1, Theme 1 1.3.2 |
-| Market rigging | E | 1 | Theme 4 4.4.2 |
-| Market-based policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| Maximum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| Merit Goods | AE | 2 | Microeconomics 1.8.4, Microeconomics 1.8.5, Theme 1 1.3.2 |
-| Minimum Efficient Scale (MES) | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| Minimum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| Mixed Economy | E | 1 | Theme 1 1.1.6 |
-| Monetary policy | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
-| Monetary union | E | 1 | Theme 4 4.1.5 |
-| Money Supply | A | 1 | Macroeconomics 2.4.1 |
-| Monopoly power | A | 2 | Microeconomics 1.8.2, Microeconomics 1.8.6 |
-| Moral hazard | AE | 2 | Macroeconomics 2.4.4, Theme 4 4.4.2 |
-| The Multiplier | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
-| National debt | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| National income | AE | 2 | Macroeconomics 2.1.4, Macroeconomics 2.2.1, Theme 2 2.4.1 |
-| Natural Rate of Unemployment | A | 1 | Macroeconomics 2.3.2 |
-| Net trade | A | 1 | Macroeconomics 2.2.3 |
-| NGOs | E | 1 | Theme 4 4.3.3 |
-| Non-excludability | AE | 2 | Microeconomics 1.8.2, Microeconomics 1.8.3, Theme 1 1.3.1, Theme 1 1.3.3 |
-| Non-Renewable resources | E | 1 | Theme 1 1.1.3 |
-| Non-rivalry | AE | 2 | Microeconomics 1.8.2, Microeconomics 1.8.3, Theme 1 1.3.1, Theme 1 1.3.3 |
-| Normal profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
-| Normative statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
-| Not-for-profit organisations | E | 1 | Theme 3 3.1.1 |
-| Nudges | A | 1 | Microeconomics 1.2.4 |
-| Occupational immobility | A | 1 | Microeconomics 1.8.6 |
-| Opportunity cost | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
-| Organic Growth | E | 1 | Theme 3 3.1.2 |
-| Output Gaps | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.2 |
-| Partial Market Failure | A | 1 | Microeconomics 1.8.2 |
-| Persistent deficits | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| Persistent surpluses | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| Positive statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
-| Potential Growth | E | 1 | Theme 2 2.5.1 |
-| Price Elasticity of Demand (PED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
-| Price Elasticity of Supply (PES) | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
-| The principal-agent problem | AE | 1 | Microeconomics 1.5.2, Theme 3 3.1.1 |
-| Private benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| Private costs | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| Private sector | E | 1 | Theme 3 3.1.1 |
-| Privatisation | A | 1 | Microeconomics 1.8.8 |
-| Producer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
-| Production | A | 1 | Microeconomics 1.4.1 |
-| Production Possibility Frontier | AE | 1 | Microeconomics 1.1.5, Theme 1 1.1.4 |
-| Productive efficiency | AE | 3 | Microeconomics 1.5.3, Microeconomics 1.5.4, Microeconomics 1.5.6, Theme 3 3.4.2, Theme 3 3.4.3, Theme 3 3.4.5 |
-| Productive inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| Productive potential/capacity | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| Productivity | A | 1 | Microeconomics 1.4.1 |
-| Profit organisations | E | 1 | Theme 3 3.1.1 |
-| Profitability | A | 1 | Macroeconomics 2.4.2 |
-| Progressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| Property rights | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| Proportional Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| Public Ownership | A | 1 | Microeconomics 1.8.8 |
-| Public sector | E | 1 | Theme 3 3.1.1 |
-| Purchasing power parity (PPP) | A | 1 | Macroeconomics 2.1.4 |
-| Pure Monopoly | AE | 2 | Microeconomics 1.5.6, Microeconomics 1.8.6, Theme 3 3.4.5 |
-| Quasi-public goods | A | 1 | Microeconomics 1.8.3 |
-| Real Wage Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Regressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| Regulation | AE | 4 | Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.8, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.4.1 |
-| Regulatory Capture | AE | 2 | Microeconomics 1.8.8, Theme 3 3.6.2 |
-| Relative export prices | E | 1 | Theme 4 4.1.9 |
-| Relative poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
-| Relative unit labour costs | E | 1 | Theme 4 4.1.9 |
-| Renewable resources | E | 1 | Theme 1 1.1.3 |
-| Restricted Choice | A | 1 | Microeconomics 1.2.4 |
-| Returns to Scale | A | 1 | Microeconomics 1.4.3 |
-| Rule of Thumb/Habit | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
-| Scarcity | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
-| Seasonal Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Second-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
-| Security | A | 1 | Macroeconomics 2.4.2 |
-| Short Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
-| Short-Run Aggregate Supply (SRAS) | AE | 2 | Macroeconomics 2.2.2, Macroeconomics 2.2.5, Theme 2 2.3.1, Theme 2 2.3.2 |
-| Short-Run Growth | A | 1 | Macroeconomics 2.3.1 |
-| Single indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| Social benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| Social costs | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| Social/Community Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
-| Specialisation | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
-| Speculation | E | 1 | Theme 4 4.4.2 |
-| Static Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| Structural deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| Structural Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Subsidies | AE | 2 | Microeconomics 1.8.4, Theme 1 1.2.9, Theme 1 1.3.2 |
-| Subsidising alternatives | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2 |
-| Sunk costs | AE | 1 | Microeconomics 1.5.9, Theme 3 3.4.7 |
-| Supernormal Profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
-| Supply | AE | 1 | Microeconomics 1.3.3, Theme 1 1.2.4 |
-| Supply of Labour | AE | 1 | Microeconomics 1.6.2, Theme 3 3.5.2 |
-| Supply-side policies | AE | 3 | Macroeconomics 2.5.2, Macroeconomics 2.6.3, Theme 2 2.6.3, Theme 4 4.1.7 |
-| Systemic risk | A | 1 | Macroeconomics 2.4.4 |
-| Third-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
-| Total Cost (TC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Total Returns | A | 1 | Microeconomics 1.4.3 |
-| Total Revenue (TR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
-| Tradable pollution permits | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
-| The Trade Cycle | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.3 |
-| Trade Union | AE | 1 | Microeconomics 1.6.5, Theme 3 3.5.3 |
-| Traditional economic theory | A | 1 | Microeconomics 1.2.3 |
-| Transfer payments | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
-| Transfer pricing | E | 1 | Theme 4 4.5.4 |
-| Trend Rate Growth | E | 1 | Theme 2 2.5.2 |
-| Underemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Unemployed | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| Utility | A | 1 | Microeconomics 1.2.1 |
-| Value Judgement | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
-| Variable Costs (VC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| Wage Discrimination | A | 1 | Microeconomics 1.6.7 |
-| Wealth inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
-| X-inefficiency | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
+| # | Term | B | V | Sources |
+| ---: | --- | --- | ---: | --- |
+| **T1** | Absolute advantage | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.2 |
+| **T2** | Absolute poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
+| **T3** | Actual Growth | E | 2 | Theme 2 2.5.1, Theme 2 2.5.2 |
+| **T4** | Aggregate Demand (AD) | AE | 1 | Macroeconomics 2.2.2, Theme 2 2.2.1 |
+| **T5** | Allocative efficiency | AE | 3 | Microeconomics 1.5.3, Microeconomics 1.5.4, Microeconomics 1.5.6, Theme 3 3.4.2, Theme 3 3.4.3, Theme 3 3.4.5 |
+| **T6** | Allocative inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T7** | Altruism & Fairness | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
+| **T8** | Anchoring bias | A | 1 | Microeconomics 1.2.3 |
+| **T9** | Asymmetric information | AE | 3 | Microeconomics 1.2.2, Microeconomics 1.8.2, Microeconomics 1.8.6, Theme 1 1.3.1, Theme 1 1.3.4, Theme 4 4.4.2 |
+| **T10** | Automatic stabilisers | E | 1 | Theme 4 4.5.3 |
+| **T11** | Availability bias | A | 1 | Microeconomics 1.2.3 |
+| **T12** | Average Cost (AC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T13** | Average Fixed Cost (AFC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T14** | Average Returns | A | 1 | Microeconomics 1.4.3 |
+| **T15** | Average Revenue (AR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
+| **T16** | Average Variable Cost (AVC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T17** | Backward integration | E | 1 | Theme 3 3.1.2 |
+| **T18** | Balance Sheet | A | 1 | Macroeconomics 2.4.2 |
+| **T19** | Balanced budget | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T20** | Base year | A | 1 | Macroeconomics 2.1.3 |
+| **T21** | Behavioural economic theory | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.10 |
+| **T22** | Bond | A | 1 | Macroeconomics 2.4.1 |
+| **T23** | Bounded rationality | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
+| **T24** | Bounded self control | A | 1 | Microeconomics 1.2.3 |
+| **T25** | Budget deficit | AE | 2 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T26** | Budget surplus | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T27** | Capital account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T28** | Capital expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
+| **T29** | Capital flight | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T30** | Capital ratio | A | 1 | Macroeconomics 2.4.4 |
+| **T31** | Capitalism | E | 1 | Theme 4 4.2.2 |
+| **T32** | Central bank | A | 1 | Macroeconomics 2.4.3 |
+| **T33** | Ceteris paribus | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.1 |
+| **T34** | Command Economy | E | 1 | Theme 1 1.1.6 |
+| **T35** | Commercial Bank | A | 1 | Macroeconomics 2.4.2 |
+| **T36** | Common market | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T37** | Common pool resources | A | 1 | Microeconomics 1.8.3 |
+| **T38** | Comparative advantage | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.2 |
+| **T39** | Competition | A | 1 | Microeconomics 1.5.1 |
+| **T40** | Competition and Markets Authority (CMA) | E | 1 | Theme 3 3.6.1 |
+| **T41** | Competition Policy | A | 1 | Microeconomics 1.8.7 |
+| **T42** | Competitive devaluation | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T43** | Complete Market Failure | A | 1 | Microeconomics 1.8.2 |
+| **T44** | Composite indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T45** | Consumer Prices Index (CPI) | A | 1 | Macroeconomics 2.1.3 |
+| **T46** | Consumer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
+| **T47** | Consumption | A | 1 | Macroeconomics 2.2.3 |
+| **T48** | Creative destruction | A | 1 | Microeconomics 1.5.8 |
+| **T49** | Credit Creation | A | 1 | Macroeconomics 2.4.2 |
+| **T50** | Cross Elasticity of Demand (XED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
+| **T51** | Currency union | A | 1 | Macroeconomics 2.6.4 |
+| **T52** | Current Account | AE | 2 | Macroeconomics 2.1.2, Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T53** | Current expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
+| **T54** | Customs union | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T55** | Cyclical (Demand-Deficient) Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T56** | Cyclical deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T57** | Default Choice | A | 1 | Microeconomics 1.2.4 |
+| **T58** | Deflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
+| **T59** | Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T60** | Demand for labour | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
+| **T61** | Demand-side policies | E | 1 | Theme 2 2.6.2 |
+| **T62** | A demerger | E | 1 | Theme 3 3.1.3 |
+| **T63** | Demerit Goods | AE | 2 | Microeconomics 1.8.4, Microeconomics 1.8.5, Theme 1 1.3.2 |
+| **T64** | Depreciation | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
+| **T65** | Deregulation | A | 1 | Microeconomics 1.8.8 |
+| **T66** | Diminishing Marginal Returns | AE | 1 | Microeconomics 1.4.3, Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T67** | Direct taxes | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T68** | Discretionary fiscal policy | E | 1 | Theme 4 4.5.3 |
+| **T69** | Discrimination | A | 1 | Microeconomics 1.6.7 |
+| **T70** | Diseconomies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T71** | Disinflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
+| **T72** | Disposable Income | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.2 |
+| **T73** | Division of Labour | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
+| **T74** | Dynamic efficiency | AE | 3 | Microeconomics 1.5.3, Microeconomics 1.5.4, Microeconomics 1.5.6, Theme 3 3.4.2, Theme 3 3.4.3, Theme 3 3.4.5 |
+| **T75** | Economic development | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T76** | Economic growth | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T77** | Economically Inactive | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T78** | Emotional Influence | E | 1 | Theme 1 1.2.1 |
+| **T79** | Equality | A | 1 | Microeconomics 1.7.1 |
+| **T80** | Equity | A | 1 | Microeconomics 1.7.1 |
+| **T81** | Expenditure-reducing policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T82** | Expenditure-switching policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T83** | External economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T84** | Externality | AE | 3 | Microeconomics 1.8.2, Microeconomics 1.8.4, Theme 1 1.3.1, Theme 1 1.3.2, Theme 4 4.4.2 |
+| **T85** | Factor immobility | A | 1 | Microeconomics 1.8.6 |
+| **T86** | Factors of production | E | 1 | Theme 1 1.1.3 |
+| **T87** | Financial account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T88** | First-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
+| **T89** | Fiscal deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T90** | Fiscal policy | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T91** | Fixed Costs (FC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T92** | Fixed exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T93** | Floating exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T94** | Foreign currency gap | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T95** | Forward integration | E | 1 | Theme 3 3.1.2 |
+| **T96** | Framing bias | A | 1 | Microeconomics 1.2.3 |
+| **T97** | Free Market Economy | E | 1 | Theme 1 1.1.6 |
+| **T98** | Free trade area | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T99** | Frictional Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T100** | Game theory | E | 1 | Theme 3 3.4.4 |
+| **T101** | Geographical immobility | A | 1 | Microeconomics 1.8.6 |
+| **T102** | Globalisation | AE | 1 | Macroeconomics 2.6.1, Theme 4 4.1.1 |
+| **T103** | Government failure | AE | 1 | Microeconomics 1.8.10, Theme 1 1.4.2 |
+| **T104** | Government provision | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
+| **T105** | Gross Domestic Product (GDP) | AE | 2 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
+| **T106** | Gross National Income (GNI) | A | 1 | Macroeconomics 2.1.4 |
+| **T107** | Harrod-Domar model | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T108** | Herding bias (social norms) | A | 1 | Microeconomics 1.2.3 |
+| **T109** | Income Elasticity of Demand (YED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
+| **T110** | Income inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
+| **T111** | Index number | A | 1 | Macroeconomics 2.1.3 |
+| **T112** | Indirect taxation | AE | 3 | Microeconomics 1.8.4, Macroeconomics 2.5.1, Theme 1 1.2.9, Theme 1 1.3.2, Theme 4 4.5.2 |
+| **T113** | Inflation | AE | 2 | Macroeconomics 2.1.3, Macroeconomics 2.3.3, Theme 2 2.1.2 |
+| **T114** | Information gaps | AE | 1 | Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
+| **T115** | Information Provision | AE | 3 | Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.4.1 |
+| **T116** | Innovation | A | 1 | Microeconomics 1.4.8 |
+| **T117** | Inorganic Growth | E | 1 | Theme 3 3.1.2 |
+| **T118** | Interest rates | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
+| **T119** | Internal Economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T120** | International competitiveness | E | 1 | Theme 4 4.1.9 |
+| **T121** | Interventionist policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T122** | Inventions | A | 1 | Microeconomics 1.4.8 |
+| **T123** | Investment | AE | 1 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
+| **T124** | Investment Bank | A | 1 | Macroeconomics 2.4.2 |
+| **T125** | Labour Force | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T126** | The Law of Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T127** | The Law of Diminishing Marginal Utility | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T128** | Legal/Working Monopoly | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
+| **T129** | Liquidity | A | 1 | Macroeconomics 2.4.2 |
+| **T130** | Liquidity ratio | A | 1 | Macroeconomics 2.4.4 |
+| **T131** | Long Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T132** | Long-Run Aggregate Supply (LRAS) | AE | 1 | Macroeconomics 2.2.2, Macroeconomics 2.2.6, Theme 2 2.3.1, Theme 2 2.3.3 |
+| **T133** | Long-Run Growth | A | 1 | Macroeconomics 2.3.1 |
+| **T134** | Loss | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
+| **T135** | Managed exchange rate | E | 1 | Theme 4 4.1.8 |
+| **T136** | Mandated Choice | A | 1 | Microeconomics 1.2.4 |
+| **T137** | Marginal Cost (MC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T138** | Marginal Physical Product (MPP) | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
+| **T139** | Marginal Returns | A | 1 | Microeconomics 1.4.3 |
+| **T140** | Marginal Revenue (MR) | AE | 2 | Microeconomics 1.4.6, Microeconomics 1.6.1, Theme 3 3.3.1, Theme 3 3.5.1 |
+| **T141** | Marginal Utility (MU) | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T142** | Market Equilibrium | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
+| **T143** | Market failure | AE | 2 | Microeconomics 1.8.2, Microeconomics 1.8.4, Theme 1 1.3.1, Theme 1 1.3.2 |
+| **T144** | Market rigging | E | 1 | Theme 4 4.4.2 |
+| **T145** | Market-based policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T146** | Maximum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T147** | Merit Goods | AE | 2 | Microeconomics 1.8.4, Microeconomics 1.8.5, Theme 1 1.3.2 |
+| **T148** | Minimum Efficient Scale (MES) | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T149** | Minimum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T150** | Mixed Economy | E | 1 | Theme 1 1.1.6 |
+| **T151** | Monetary policy | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
+| **T152** | Monetary union | E | 1 | Theme 4 4.1.5 |
+| **T153** | Money Supply | A | 1 | Macroeconomics 2.4.1 |
+| **T154** | Monopoly power | A | 2 | Microeconomics 1.8.2, Microeconomics 1.8.6 |
+| **T155** | Moral hazard | AE | 2 | Macroeconomics 2.4.4, Theme 4 4.4.2 |
+| **T156** | The Multiplier | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
+| **T157** | National debt | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T158** | National income | AE | 2 | Macroeconomics 2.1.4, Macroeconomics 2.2.1, Theme 2 2.4.1 |
+| **T159** | Natural Rate of Unemployment | A | 1 | Macroeconomics 2.3.2 |
+| **T160** | Net trade | A | 1 | Macroeconomics 2.2.3 |
+| **T161** | NGOs | E | 1 | Theme 4 4.3.3 |
+| **T162** | Non-excludability | AE | 2 | Microeconomics 1.8.2, Microeconomics 1.8.3, Theme 1 1.3.1, Theme 1 1.3.3 |
+| **T163** | Non-Renewable resources | E | 1 | Theme 1 1.1.3 |
+| **T164** | Non-rivalry | AE | 2 | Microeconomics 1.8.2, Microeconomics 1.8.3, Theme 1 1.3.1, Theme 1 1.3.3 |
+| **T165** | Normal profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
+| **T166** | Normative statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
+| **T167** | Not-for-profit organisations | E | 1 | Theme 3 3.1.1 |
+| **T168** | Nudges | A | 1 | Microeconomics 1.2.4 |
+| **T169** | Occupational immobility | A | 1 | Microeconomics 1.8.6 |
+| **T170** | Opportunity cost | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
+| **T171** | Organic Growth | E | 1 | Theme 3 3.1.2 |
+| **T172** | Output Gaps | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.2 |
+| **T173** | Partial Market Failure | A | 1 | Microeconomics 1.8.2 |
+| **T174** | Persistent deficits | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T175** | Persistent surpluses | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T176** | Positive statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
+| **T177** | Potential Growth | E | 1 | Theme 2 2.5.1 |
+| **T178** | Price Elasticity of Demand (PED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
+| **T179** | Price Elasticity of Supply (PES) | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T180** | The principal-agent problem | AE | 1 | Microeconomics 1.5.2, Theme 3 3.1.1 |
+| **T181** | Private benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T182** | Private costs | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T183** | Private sector | E | 1 | Theme 3 3.1.1 |
+| **T184** | Privatisation | A | 1 | Microeconomics 1.8.8 |
+| **T185** | Producer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
+| **T186** | Production | A | 1 | Microeconomics 1.4.1 |
+| **T187** | Production Possibility Frontier | AE | 1 | Microeconomics 1.1.5, Theme 1 1.1.4 |
+| **T188** | Productive efficiency | AE | 3 | Microeconomics 1.5.3, Microeconomics 1.5.4, Microeconomics 1.5.6, Theme 3 3.4.2, Theme 3 3.4.3, Theme 3 3.4.5 |
+| **T189** | Productive inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T190** | Productive potential/capacity | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T191** | Productivity | A | 1 | Microeconomics 1.4.1 |
+| **T192** | Profit organisations | E | 1 | Theme 3 3.1.1 |
+| **T193** | Profitability | A | 1 | Macroeconomics 2.4.2 |
+| **T194** | Progressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T195** | Property rights | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T196** | Proportional Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T197** | Public Ownership | A | 1 | Microeconomics 1.8.8 |
+| **T198** | Public sector | E | 1 | Theme 3 3.1.1 |
+| **T199** | Purchasing power parity (PPP) | A | 1 | Macroeconomics 2.1.4 |
+| **T200** | Pure Monopoly | AE | 2 | Microeconomics 1.5.6, Microeconomics 1.8.6, Theme 3 3.4.5 |
+| **T201** | Quasi-public goods | A | 1 | Microeconomics 1.8.3 |
+| **T202** | Real Wage Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T203** | Regressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T204** | Regulation | AE | 4 | Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.8, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.4.1 |
+| **T205** | Regulatory Capture | AE | 2 | Microeconomics 1.8.8, Theme 3 3.6.2 |
+| **T206** | Relative export prices | E | 1 | Theme 4 4.1.9 |
+| **T207** | Relative poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
+| **T208** | Relative unit labour costs | E | 1 | Theme 4 4.1.9 |
+| **T209** | Renewable resources | E | 1 | Theme 1 1.1.3 |
+| **T210** | Restricted Choice | A | 1 | Microeconomics 1.2.4 |
+| **T211** | Returns to Scale | A | 1 | Microeconomics 1.4.3 |
+| **T212** | Rule of Thumb/Habit | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
+| **T213** | Scarcity | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
+| **T214** | Seasonal Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T215** | Second-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
+| **T216** | Security | A | 1 | Macroeconomics 2.4.2 |
+| **T217** | Short Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T218** | Short-Run Aggregate Supply (SRAS) | AE | 2 | Macroeconomics 2.2.2, Macroeconomics 2.2.5, Theme 2 2.3.1, Theme 2 2.3.2 |
+| **T219** | Short-Run Growth | A | 1 | Macroeconomics 2.3.1 |
+| **T220** | Single indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T221** | Social benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T222** | Social costs | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T223** | Social/Community Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
+| **T224** | Specialisation | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
+| **T225** | Speculation | E | 1 | Theme 4 4.4.2 |
+| **T226** | Static Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T227** | Structural deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T228** | Structural Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T229** | Subsidies | AE | 2 | Microeconomics 1.8.4, Theme 1 1.2.9, Theme 1 1.3.2 |
+| **T230** | Subsidising alternatives | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2 |
+| **T231** | Sunk costs | AE | 1 | Microeconomics 1.5.9, Theme 3 3.4.7 |
+| **T232** | Supernormal Profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
+| **T233** | Supply | AE | 1 | Microeconomics 1.3.3, Theme 1 1.2.4 |
+| **T234** | Supply of Labour | AE | 1 | Microeconomics 1.6.2, Theme 3 3.5.2 |
+| **T235** | Supply-side policies | AE | 3 | Macroeconomics 2.5.2, Macroeconomics 2.6.3, Theme 2 2.6.3, Theme 4 4.1.7 |
+| **T236** | Systemic risk | A | 1 | Macroeconomics 2.4.4 |
+| **T237** | Third-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
+| **T238** | Total Cost (TC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T239** | Total Returns | A | 1 | Microeconomics 1.4.3 |
+| **T240** | Total Revenue (TR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
+| **T241** | Tradable pollution permits | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
+| **T242** | The Trade Cycle | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.3 |
+| **T243** | Trade Union | AE | 1 | Microeconomics 1.6.5, Theme 3 3.5.3 |
+| **T244** | Traditional economic theory | A | 1 | Microeconomics 1.2.3 |
+| **T245** | Transfer payments | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
+| **T246** | Transfer pricing | E | 1 | Theme 4 4.5.4 |
+| **T247** | Trend Rate Growth | E | 1 | Theme 2 2.5.2 |
+| **T248** | Underemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T249** | Unemployed | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T250** | Utility | A | 1 | Microeconomics 1.2.1 |
+| **T251** | Value Judgement | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
+| **T252** | Variable Costs (VC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T253** | Wage Discrimination | A | 1 | Microeconomics 1.6.7 |
+| **T254** | Wealth inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
+| **T255** | X-inefficiency | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
 
 ## Display formulae
 
-| Label | LaTeX | Boards | In formula-box |
-| --- | --- | --- | --- |
-| What Is Aggregate Demand? | `AD = C + I + G + (X - M)` | AE | yes |
-| Calculation Methods | `GDP = C + I + G + (X - M)` | E | yes |
-| Calculation Methods | `GDP = Wages + Rent + Interest + Profit` | E | no |
-| Equilibrium in the Circular Flow | `I + G + X = S + T + M` | AE | yes |
-| Equilibrium in the Circular Flow | `J = W` | AE | yes |
-| Calculating the Multiplier | `M = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5` | AE | yes |
-| Calculating the Multiplier | `M = \frac{1}{1 - MPC}` | AE | yes |
-| Calculating the Multiplier | `M = \frac{1}{MPS + MPT + MPM}` | AE | yes |
-| Calculating the Multiplier | `M = \frac{1}{MPW}` | AE | yes |
-| The Quantity Theory of Money | `M \times V = P \times Q` | A | yes |
-| The Marginal Revenue Product Theory | `MRP = MPP \times MR` | AE | no |
-| Interpreting Index Numbers | `\frac{115 - 105}{105} \times 100 = 9.5\%` | A | yes |
-| Concentration Ratios | `\frac{\text{Total revenue of top } n \text{ firms}}{\text{Total market revenue}} \times 100` | AE | no |
-| Economic Growth Indicators | `\text{% Change in Real GDP} = \text{% Change in Nominal GDP} - \text{Inflation Rate}` | A | yes |
-| Interpreting Index Numbers | `\text{% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes |
-| The Structure of a Commercial Bank's Balance Sheet | `\text{Assets} = \text{Liabilities} + \text{Capital}` | A | yes |
-| Marginal, Average, and Total Returns | `\text{Average Returns} = \frac{\text{Total Output}}{\text{Inputs}}` | A | yes |
-| Calculating Bond Yield | `\text{Bond Yield} \, (\%) = \frac{\text{Annual Coupon Payment}}{\text{Market Price of Bond}} \times 100` | A | yes |
-| Worked Example: Calculating a Weighted CPI | `\text{CPI} = \frac{106{,}800}{1{,}000} = 106.8` | A | yes |
-| Inflation Indicators | `\text{CPI} = \frac{\text{Cost of Basket in Current Year}}{\text{Cost of Basket in Base Year}} \times 100` | A | yes |
-| How It's Calculated | `\text{CPI} = \frac{\text{Price of basket in current year}} {\text{Price of basket in base year}} \times 100` | E | yes |
-| The Capital Ratio | `\text{Capital ratio} = \frac{\text{Capital}}{\text{Risk-weighted assets}} \times 100` | A | yes |
-| Unemployment Indicators | `\text{Employment Rate} = \frac{\text{Number of Employed People}}{\text{Working-Age Population}} \times 100` | A | yes |
-| The Government Budget and National Debt | `\text{Fiscal Deficit} : \text{Government Spending} > \text{Tax Revenue}` | AE | no |
-| Key Measures of National Income | `\text{GNI} = \text{GDP} + \text{Net Income from Abroad}` | A | yes |
-| Measuring Inequality: Lorenz Curve and Gini Coefficient | `\text{Gini Coefficient} = \frac{A}{A + B}` | AE | no |
-| The Government Budget and National Debt | `\text{Government Budget} = \text{Taxation Revenue} - \text{Government Spending}` | AE | no |
-| Calculating an Index Number | `\text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100` | A | yes |
-| How It's Calculated | `\text{Inflation Rate} = \frac{\text{CPI Year2 - CPI Year1}} {\text{CPI Year1}} \times 100` | E | yes |
-| Inflation Indicators | `\text{Inflation Rate} = \frac{\text{CPI in Current Year} - \text{CPI in Previous Year}}{\text{CPI in Previous Year}} \times 100` | A | yes |
-| From CPI to the Inflation Rate | `\text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100` | A | yes |
-| Productivity | `\text{Labour Productivity} = \frac{\text{Output}}{\text{Number of Workers}}` | A | yes |
-| The Liquidity Ratio | `\text{Liquidity ratio} = \frac{\text{Liquid assets}}{\text{Total assets}} \times 100` | A | yes |
-| Marginal, Average, and Total Returns | `\text{Marginal Returns} = \frac{\Delta \text{Total Output}}{\Delta \text{Inputs}}` | A | yes |
-| What Is National Income and How Is It Measured? | `\text{National Output} \equiv \text{National Income} \equiv \text{National Expenditure}` | A | yes |
-| Output Gaps | `\text{Output Gap} = \text{Y} - \text{Yfe}` | AE | yes |
-| Price Elasticity of Demand (PED) | `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` | AE | yes |
-| J-Curve and Marshall-Lerner Condition | `\text{PED}_{X} + \text{PED}_{M} > 1` | AE | yes |
-| Definition and Calculation | `\text{PES} = \frac{\%\Delta Q_S}{\%\Delta P}` | AE | yes |
-| Key Definitions | `\text{Profit} = \text{Total Revenue} - \text{Total Costs}` | A | yes |
-| Economic Growth Indicators | `\text{Real GDP per capita} = \frac{\text{Real GDP}}{\text{Population}}` | A | yes |
-| Definition and Calculation | `\text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100` | E | no |
-| Unemployment Indicators | `\text{Unemployment Rate} = \frac{\text{Number of Unemployed People}}{\text{Labour Force}} \times 100` | A | yes |
-| Trade Unions | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes |
-| Definition and Measures | `\text{Unit Labour Costs} = \frac{\text{Total Labour Costs}}{\text{Total Output}}` | E | no |
-| Why Weighting Matters | `\text{Weighted Price Index (CPI)} = \frac{\sum (\text{Weight} \times \text{Price Index})}{\sum \text{Weights}}` | A | yes |
-| Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes |
-| Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes |
-| What Is the Multiplier? | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes |
+`B` numbers match section B of `review-decisions.md`.
+
+| # | Label | LaTeX | Boards | In formula-box |
+| ---: | --- | --- | --- | --- |
+| **B1** | What Is Aggregate Demand? | `AD = C + I + G + (X - M)` | AE | yes |
+| **B2** | Calculation Methods | `GDP = C + I + G + (X - M)` | E | yes |
+| **B3** | Calculation Methods | `GDP = Wages + Rent + Interest + Profit` | E | no |
+| **B4** | Equilibrium in the Circular Flow | `I + G + X = S + T + M` | AE | yes |
+| **B5** | Equilibrium in the Circular Flow | `J = W` | AE | yes |
+| **B6** | Calculating the Multiplier | `M = \frac{1}{1 - 0.8} = \frac{1}{0.2} = 5` | AE | yes |
+| **B7** | Calculating the Multiplier | `M = \frac{1}{1 - MPC}` | AE | yes |
+| **B8** | Calculating the Multiplier | `M = \frac{1}{MPS + MPT + MPM}` | AE | yes |
+| **B9** | Calculating the Multiplier | `M = \frac{1}{MPW}` | AE | yes |
+| **B10** | The Quantity Theory of Money | `M \times V = P \times Q` | A | yes |
+| **B11** | The Marginal Revenue Product Theory | `MRP = MPP \times MR` | AE | no |
+| **B12** | Interpreting Index Numbers | `\frac{115 - 105}{105} \times 100 = 9.5\%` | A | yes |
+| **B13** | Concentration Ratios | `\frac{\text{Total revenue of top } n \text{ firms}}{\text{Total market revenue}} \times 100` | AE | no |
+| **B14** | Economic Growth Indicators | `\text{% Change in Real GDP} = \text{% Change in Nominal GDP} - \text{Inflation Rate}` | A | yes |
+| **B15** | Interpreting Index Numbers | `\text{% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes |
+| **B16** | The Structure of a Commercial Bank's Balance Sheet | `\text{Assets} = \text{Liabilities} + \text{Capital}` | A | yes |
+| **B17** | Marginal, Average, and Total Returns | `\text{Average Returns} = \frac{\text{Total Output}}{\text{Inputs}}` | A | yes |
+| **B18** | Calculating Bond Yield | `\text{Bond Yield} \, (\%) = \frac{\text{Annual Coupon Payment}}{\text{Market Price of Bond}} \times 100` | A | yes |
+| **B19** | Worked Example: Calculating a Weighted CPI | `\text{CPI} = \frac{106{,}800}{1{,}000} = 106.8` | A | yes |
+| **B20** | Inflation Indicators | `\text{CPI} = \frac{\text{Cost of Basket in Current Year}}{\text{Cost of Basket in Base Year}} \times 100` | A | yes |
+| **B21** | How It's Calculated | `\text{CPI} = \frac{\text{Price of basket in current year}} {\text{Price of basket in base year}} \times 100` | E | yes |
+| **B22** | The Capital Ratio | `\text{Capital ratio} = \frac{\text{Capital}}{\text{Risk-weighted assets}} \times 100` | A | yes |
+| **B23** | Unemployment Indicators | `\text{Employment Rate} = \frac{\text{Number of Employed People}}{\text{Working-Age Population}} \times 100` | A | yes |
+| **B24** | The Government Budget and National Debt | `\text{Fiscal Deficit} : \text{Government Spending} > \text{Tax Revenue}` | AE | no |
+| **B25** | Key Measures of National Income | `\text{GNI} = \text{GDP} + \text{Net Income from Abroad}` | A | yes |
+| **B26** | Measuring Inequality: Lorenz Curve and Gini Coefficient | `\text{Gini Coefficient} = \frac{A}{A + B}` | AE | no |
+| **B27** | The Government Budget and National Debt | `\text{Government Budget} = \text{Taxation Revenue} - \text{Government Spending}` | AE | no |
+| **B28** | Calculating an Index Number | `\text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100` | A | yes |
+| **B29** | How It's Calculated | `\text{Inflation Rate} = \frac{\text{CPI Year2 - CPI Year1}} {\text{CPI Year1}} \times 100` | E | yes |
+| **B30** | Inflation Indicators | `\text{Inflation Rate} = \frac{\text{CPI in Current Year} - \text{CPI in Previous Year}}{\text{CPI in Previous Year}} \times 100` | A | yes |
+| **B31** | From CPI to the Inflation Rate | `\text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100` | A | yes |
+| **B32** | Productivity | `\text{Labour Productivity} = \frac{\text{Output}}{\text{Number of Workers}}` | A | yes |
+| **B33** | The Liquidity Ratio | `\text{Liquidity ratio} = \frac{\text{Liquid assets}}{\text{Total assets}} \times 100` | A | yes |
+| **B34** | Marginal, Average, and Total Returns | `\text{Marginal Returns} = \frac{\Delta \text{Total Output}}{\Delta \text{Inputs}}` | A | yes |
+| **B35** | What Is National Income and How Is It Measured? | `\text{National Output} \equiv \text{National Income} \equiv \text{National Expenditure}` | A | yes |
+| **B36** | Output Gaps | `\text{Output Gap} = \text{Y} - \text{Yfe}` | AE | yes |
+| **B37** | Price Elasticity of Demand (PED) | `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` | AE | yes |
+| **B38** | J-Curve and Marshall-Lerner Condition | `\text{PED}_{X} + \text{PED}_{M} > 1` | AE | yes |
+| **B39** | Definition and Calculation | `\text{PES} = \frac{\%\Delta Q_S}{\%\Delta P}` | AE | yes |
+| **B40** | Key Definitions | `\text{Profit} = \text{Total Revenue} - \text{Total Costs}` | A | yes |
+| **B41** | Economic Growth Indicators | `\text{Real GDP per capita} = \frac{\text{Real GDP}}{\text{Population}}` | A | yes |
+| **B42** | Definition and Calculation | `\text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100` | E | no |
+| **B43** | Unemployment Indicators | `\text{Unemployment Rate} = \frac{\text{Number of Unemployed People}}{\text{Labour Force}} \times 100` | A | yes |
+| **B44** | Trade Unions | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes |
+| **B45** | Definition and Measures | `\text{Unit Labour Costs} = \frac{\text{Total Labour Costs}}{\text{Total Output}}` | E | no |
+| **B46** | Why Weighting Matters | `\text{Weighted Price Index (CPI)} = \frac{\sum (\text{Weight} \times \text{Price Index})}{\sum \text{Weights}}` | A | yes |
+| **B47** | Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes |
+| **B48** | Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes |
+| **B49** | What Is the Multiplier? | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes |
 
 ## Chips deliberately not extracted
 
 None of these is a term/definition pair. Listed so the decision is auditable rather than silent.
 
-| Page | Reason | Chip |
-| --- | --- | --- |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
-| revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
-| revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html | mid-sentence highlight | marginal propensity to consume (MPC) |
-| revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html | mid-sentence highlight | accelerator effect |
-| revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html | stop-listed label | What it shows |
-| revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html | stop-listed label | Reason |
-| revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html | stop-listed label | Limitation |
-| revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html | mid-sentence highlight | Laffer Curve |
-| revision-notes/aqa-a2-macro/2-6-2-trade.html | stop-listed label | Opportunity cost of 1 computer chip |
-| revision-notes/aqa-a2-macro/2-6-2-trade.html | stop-listed label | Opportunity cost of 1 T-shirt |
-| revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | pattern of trade |
-| revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | tariff |
-| revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | quota |
-| revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | World Trade Organisation (WTO) |
-| revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html | mid-sentence highlight | balance of payments (BoP) |
-| revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html | mid-sentence highlight | J-curve |
-| revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html | mid-sentence highlight | Marshall-Lerner condition |
-| revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html | mid-sentence highlight | Human Development Index |
-| revision-notes/aqa-a2-micro/1-2-2-imperfect-information.html | mid-sentence highlight | information gaps |
-| revision-notes/aqa-a2-micro/1-4-3-the-law-of-diminishing-returns-and-returns-to-scale.html | mid-sentence highlight | law of diminishing returns |
-| revision-notes/aqa-a2-micro/1-4-3-the-law-of-diminishing-returns-and-returns-to-scale.html | mid-sentence highlight | returns to scale |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Assumed objective |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Rule |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Objective |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Rule |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Objective |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Rule |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Cause |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Possible solutions |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Objective |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
-| revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Result |
-| revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html | chip with no definition text | Prices |
-| revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html | chip with no definition text | Quality |
-| revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html | chip with no definition text | Choice |
-| revision-notes/aqa-a2-micro/1-5-5-oligopoly.html | stop-listed label | Calculation |
-| revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html | mid-sentence highlight | natural monopoly |
-| revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html | mid-sentence highlight | contestable market |
-| revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html | mid-sentence highlight | limit pricing |
-| revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html | mid-sentence highlight | allocatively efficient |
-| revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html | mid-sentence highlight | dynamic efficiency |
-| revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html | mid-sentence highlight | dynamic efficiency |
-| revision-notes/aqa-a2-micro/1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment.html | mid-sentence highlight | competitive market: |
-| revision-notes/aqa-a2-micro/1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment.html | mid-sentence highlight | monopsony: |
-| revision-notes/aqa-a2-micro/1-6-6-the-national-minimum-wage.html | mid-sentence highlight | national minimum wage (NMW) |
-| revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html | mid-sentence highlight | Lorenz curve |
-| revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html | mid-sentence highlight | Gini coefficient |
-| revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html | mid-sentence highlight | Kuznets Curve |
-| revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html | mid-sentence highlight | price mechanism |
-| revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html | mid-sentence highlight | free rider problem |
-| revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html | mid-sentence highlight | tragedy of the commons |
-| revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html | mid-sentence highlight | information gaps |
-| revision-notes/aqa-a2-micro/1-8-7-competition-policy.html | mid-sentence highlight | Competition and Markets Authority (CMA) |
-| revision-notes/aqa-a2-micro/1-8-7-competition-policy.html | mid-sentence highlight | European Commission (EC) |
-| revision-notes/aqa-a2-micro/1-8-10-government-failure.html | mid-sentence highlight | imperfect information |
-| revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html | mid-sentence highlight | price mechanism |
-| revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html | chip with no definition text | Types of Indirect Tax |
-| revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | rational |
-| revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | herding |
-| revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | habits |
-| revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | consumer inertia |
-| revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | bounded rationality |
-| revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | nudges |
-| revision-notes/edexcel-theme-1/1-3-3-public-goods.html | mid-sentence highlight | free rider problem |
-| revision-notes/edexcel-theme-1/1-3-4-information-gaps.html | mid-sentence highlight | information gaps |
-| revision-notes/edexcel-theme-1/1-4-2-government-failure.html | mid-sentence highlight | imperfect information |
-| revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html | mid-sentence highlight | Balance of Payments (BoP): |
-| revision-notes/edexcel-theme-2/2-2-2-consumption.html | mid-sentence highlight | marginal propensity to consume (MPC) |
-| revision-notes/edexcel-theme-2/2-2-2-consumption.html | mid-sentence highlight | marginal propensity to save (MPS) |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
-| revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
-| revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html | stop-listed label | What it shows |
-| revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html | stop-listed label | Reason |
-| revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html | stop-listed label | Limitation |
-| revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html | stop-listed label | Cause |
-| revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html | stop-listed label | Possible solutions |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Assumed objective |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Rule |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Objective |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Rule |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Objective |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Rule |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Objective |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
-| revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Result |
-| revision-notes/edexcel-theme-3/3-4-1-efficiency.html | mid-sentence highlight | allocatively efficient |
-| revision-notes/edexcel-theme-3/3-4-1-efficiency.html | mid-sentence highlight | dynamic efficiency |
-| revision-notes/edexcel-theme-3/3-4-1-efficiency.html | mid-sentence highlight | dynamic efficiency |
-| revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html | chip with no definition text | Prices |
-| revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html | chip with no definition text | Quality |
-| revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html | chip with no definition text | Choice |
-| revision-notes/edexcel-theme-3/3-4-4-oligopoly.html | stop-listed label | Calculation |
-| revision-notes/edexcel-theme-3/3-4-5-monopoly.html | mid-sentence highlight | natural monopoly |
-| revision-notes/edexcel-theme-3/3-4-6-monopsony.html | mid-sentence highlight | monopsony |
-| revision-notes/edexcel-theme-3/3-4-7-contestability.html | mid-sentence highlight | contestable market |
-| revision-notes/edexcel-theme-3/3-4-7-contestability.html | mid-sentence highlight | limit pricing |
-| revision-notes/edexcel-theme-3/3-5-3-wage-determination.html | mid-sentence highlight | competitive market: |
-| revision-notes/edexcel-theme-3/3-5-3-wage-determination.html | mid-sentence highlight | monopsony: |
-| revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | chip with no definition text | Causes |
-| revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | stop-listed label | Result |
-| revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | stop-listed label | Problem |
-| revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | stop-listed label | Result |
-| revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html | stop-listed label | Opportunity cost of 1 computer chip |
-| revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html | stop-listed label | Opportunity cost of 1 T-shirt |
-| revision-notes/edexcel-theme-4/4-1-3-pattern-of-trade.html | mid-sentence highlight | pattern of trade |
-| revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | mid-sentence highlight | terms of trade (ToT) |
-| revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Interpretation |
-| revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential benefit |
-| revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential cost |
-| revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential cost |
-| revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential benefit |
-| revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html | mid-sentence highlight | World Trade Organisation (WTO) |
-| revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html | mid-sentence highlight | tariff |
-| revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html | mid-sentence highlight | quota |
-| revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html | mid-sentence highlight | balance of payments (BoP) |
-| revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html | mid-sentence highlight | J-curve |
-| revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html | mid-sentence highlight | Marshall-Lerner condition |
-| revision-notes/edexcel-theme-4/4-2-2-inequality.html | mid-sentence highlight | Lorenz curve |
-| revision-notes/edexcel-theme-4/4-2-2-inequality.html | mid-sentence highlight | Gini coefficient |
-| revision-notes/edexcel-theme-4/4-2-2-inequality.html | mid-sentence highlight | Kuznets Curve |
-| revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html | mid-sentence highlight | Human Development Index |
-| revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html | mid-sentence highlight | Lewis model |
-| revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html | mid-sentence highlight | World Bank |
-| revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html | mid-sentence highlight | IMF |
-| revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html | mid-sentence highlight | lender of last resort |
-| revision-notes/edexcel-theme-4/4-5-2-taxation.html | mid-sentence highlight | Laffer Curve |
+| # | Page | Reason | Chip |
+| ---: | --- | --- | --- |
+| **X1** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X2** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X3** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X4** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X5** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X6** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X7** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X8** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X9** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X10** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X11** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X12** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X13** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Aim |
+| **X14** | revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html | stop-listed label | Why it matters |
+| **X15** | revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html | mid-sentence highlight | marginal propensity to consume (MPC) |
+| **X16** | revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html | mid-sentence highlight | accelerator effect |
+| **X17** | revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html | stop-listed label | What it shows |
+| **X18** | revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html | stop-listed label | Reason |
+| **X19** | revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html | stop-listed label | Limitation |
+| **X20** | revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html | mid-sentence highlight | Laffer Curve |
+| **X21** | revision-notes/aqa-a2-macro/2-6-2-trade.html | stop-listed label | Opportunity cost of 1 computer chip |
+| **X22** | revision-notes/aqa-a2-macro/2-6-2-trade.html | stop-listed label | Opportunity cost of 1 T-shirt |
+| **X23** | revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | pattern of trade |
+| **X24** | revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | tariff |
+| **X25** | revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | quota |
+| **X26** | revision-notes/aqa-a2-macro/2-6-2-trade.html | mid-sentence highlight | World Trade Organisation (WTO) |
+| **X27** | revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html | mid-sentence highlight | balance of payments (BoP) |
+| **X28** | revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html | mid-sentence highlight | J-curve |
+| **X29** | revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html | mid-sentence highlight | Marshall-Lerner condition |
+| **X30** | revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html | mid-sentence highlight | Human Development Index |
+| **X31** | revision-notes/aqa-a2-micro/1-2-2-imperfect-information.html | mid-sentence highlight | information gaps |
+| **X32** | revision-notes/aqa-a2-micro/1-4-3-the-law-of-diminishing-returns-and-returns-to-scale.html | mid-sentence highlight | law of diminishing returns |
+| **X33** | revision-notes/aqa-a2-micro/1-4-3-the-law-of-diminishing-returns-and-returns-to-scale.html | mid-sentence highlight | returns to scale |
+| **X34** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Assumed objective |
+| **X35** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
+| **X36** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Rule |
+| **X37** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Objective |
+| **X38** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
+| **X39** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Rule |
+| **X40** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Objective |
+| **X41** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
+| **X42** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Rule |
+| **X43** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Cause |
+| **X44** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Possible solutions |
+| **X45** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Objective |
+| **X46** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Why? |
+| **X47** | revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html | stop-listed label | Result |
+| **X48** | revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html | chip with no definition text | Prices |
+| **X49** | revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html | chip with no definition text | Quality |
+| **X50** | revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html | chip with no definition text | Choice |
+| **X51** | revision-notes/aqa-a2-micro/1-5-5-oligopoly.html | stop-listed label | Calculation |
+| **X52** | revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html | mid-sentence highlight | natural monopoly |
+| **X53** | revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html | mid-sentence highlight | contestable market |
+| **X54** | revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html | mid-sentence highlight | limit pricing |
+| **X55** | revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html | mid-sentence highlight | allocatively efficient |
+| **X56** | revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html | mid-sentence highlight | dynamic efficiency |
+| **X57** | revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html | mid-sentence highlight | dynamic efficiency |
+| **X58** | revision-notes/aqa-a2-micro/1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment.html | mid-sentence highlight | competitive market: |
+| **X59** | revision-notes/aqa-a2-micro/1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment.html | mid-sentence highlight | monopsony: |
+| **X60** | revision-notes/aqa-a2-micro/1-6-6-the-national-minimum-wage.html | mid-sentence highlight | national minimum wage (NMW) |
+| **X61** | revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html | mid-sentence highlight | Lorenz curve |
+| **X62** | revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html | mid-sentence highlight | Gini coefficient |
+| **X63** | revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html | mid-sentence highlight | Kuznets Curve |
+| **X64** | revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html | mid-sentence highlight | price mechanism |
+| **X65** | revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html | mid-sentence highlight | free rider problem |
+| **X66** | revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html | mid-sentence highlight | tragedy of the commons |
+| **X67** | revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html | mid-sentence highlight | information gaps |
+| **X68** | revision-notes/aqa-a2-micro/1-8-7-competition-policy.html | mid-sentence highlight | Competition and Markets Authority (CMA) |
+| **X69** | revision-notes/aqa-a2-micro/1-8-7-competition-policy.html | mid-sentence highlight | European Commission (EC) |
+| **X70** | revision-notes/aqa-a2-micro/1-8-10-government-failure.html | mid-sentence highlight | imperfect information |
+| **X71** | revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html | mid-sentence highlight | price mechanism |
+| **X72** | revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html | chip with no definition text | Types of Indirect Tax |
+| **X73** | revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | rational |
+| **X74** | revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | herding |
+| **X75** | revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | habits |
+| **X76** | revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | consumer inertia |
+| **X77** | revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | bounded rationality |
+| **X78** | revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html | mid-sentence highlight | nudges |
+| **X79** | revision-notes/edexcel-theme-1/1-3-3-public-goods.html | mid-sentence highlight | free rider problem |
+| **X80** | revision-notes/edexcel-theme-1/1-3-4-information-gaps.html | mid-sentence highlight | information gaps |
+| **X81** | revision-notes/edexcel-theme-1/1-4-2-government-failure.html | mid-sentence highlight | imperfect information |
+| **X82** | revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html | mid-sentence highlight | Balance of Payments (BoP): |
+| **X83** | revision-notes/edexcel-theme-2/2-2-2-consumption.html | mid-sentence highlight | marginal propensity to consume (MPC) |
+| **X84** | revision-notes/edexcel-theme-2/2-2-2-consumption.html | mid-sentence highlight | marginal propensity to save (MPS) |
+| **X85** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X86** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X87** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X88** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X89** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X90** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X91** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X92** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X93** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X94** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X95** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X96** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X97** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Aim |
+| **X98** | revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html | stop-listed label | Why it matters |
+| **X99** | revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html | stop-listed label | What it shows |
+| **X100** | revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html | stop-listed label | Reason |
+| **X101** | revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html | stop-listed label | Limitation |
+| **X102** | revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html | stop-listed label | Cause |
+| **X103** | revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html | stop-listed label | Possible solutions |
+| **X104** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Assumed objective |
+| **X105** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
+| **X106** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Rule |
+| **X107** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Objective |
+| **X108** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
+| **X109** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Rule |
+| **X110** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Objective |
+| **X111** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
+| **X112** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Rule |
+| **X113** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Objective |
+| **X114** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Why? |
+| **X115** | revision-notes/edexcel-theme-3/3-2-1-business-objectives.html | stop-listed label | Result |
+| **X116** | revision-notes/edexcel-theme-3/3-4-1-efficiency.html | mid-sentence highlight | allocatively efficient |
+| **X117** | revision-notes/edexcel-theme-3/3-4-1-efficiency.html | mid-sentence highlight | dynamic efficiency |
+| **X118** | revision-notes/edexcel-theme-3/3-4-1-efficiency.html | mid-sentence highlight | dynamic efficiency |
+| **X119** | revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html | chip with no definition text | Prices |
+| **X120** | revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html | chip with no definition text | Quality |
+| **X121** | revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html | chip with no definition text | Choice |
+| **X122** | revision-notes/edexcel-theme-3/3-4-4-oligopoly.html | stop-listed label | Calculation |
+| **X123** | revision-notes/edexcel-theme-3/3-4-5-monopoly.html | mid-sentence highlight | natural monopoly |
+| **X124** | revision-notes/edexcel-theme-3/3-4-6-monopsony.html | mid-sentence highlight | monopsony |
+| **X125** | revision-notes/edexcel-theme-3/3-4-7-contestability.html | mid-sentence highlight | contestable market |
+| **X126** | revision-notes/edexcel-theme-3/3-4-7-contestability.html | mid-sentence highlight | limit pricing |
+| **X127** | revision-notes/edexcel-theme-3/3-5-3-wage-determination.html | mid-sentence highlight | competitive market: |
+| **X128** | revision-notes/edexcel-theme-3/3-5-3-wage-determination.html | mid-sentence highlight | monopsony: |
+| **X129** | revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | chip with no definition text | Causes |
+| **X130** | revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | stop-listed label | Result |
+| **X131** | revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | stop-listed label | Problem |
+| **X132** | revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html | stop-listed label | Result |
+| **X133** | revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html | stop-listed label | Opportunity cost of 1 computer chip |
+| **X134** | revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html | stop-listed label | Opportunity cost of 1 T-shirt |
+| **X135** | revision-notes/edexcel-theme-4/4-1-3-pattern-of-trade.html | mid-sentence highlight | pattern of trade |
+| **X136** | revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | mid-sentence highlight | terms of trade (ToT) |
+| **X137** | revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Interpretation |
+| **X138** | revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential benefit |
+| **X139** | revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential cost |
+| **X140** | revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential cost |
+| **X141** | revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html | stop-listed label | Potential benefit |
+| **X142** | revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html | mid-sentence highlight | World Trade Organisation (WTO) |
+| **X143** | revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html | mid-sentence highlight | tariff |
+| **X144** | revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html | mid-sentence highlight | quota |
+| **X145** | revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html | mid-sentence highlight | balance of payments (BoP) |
+| **X146** | revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html | mid-sentence highlight | J-curve |
+| **X147** | revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html | mid-sentence highlight | Marshall-Lerner condition |
+| **X148** | revision-notes/edexcel-theme-4/4-2-2-inequality.html | mid-sentence highlight | Lorenz curve |
+| **X149** | revision-notes/edexcel-theme-4/4-2-2-inequality.html | mid-sentence highlight | Gini coefficient |
+| **X150** | revision-notes/edexcel-theme-4/4-2-2-inequality.html | mid-sentence highlight | Kuznets Curve |
+| **X151** | revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html | mid-sentence highlight | Human Development Index |
+| **X152** | revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html | mid-sentence highlight | Lewis model |
+| **X153** | revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html | mid-sentence highlight | World Bank |
+| **X154** | revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html | mid-sentence highlight | IMF |
+| **X155** | revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html | mid-sentence highlight | lender of last resort |
+| **X156** | revision-notes/edexcel-theme-4/4-5-2-taxation.html | mid-sentence highlight | Laffer Curve |

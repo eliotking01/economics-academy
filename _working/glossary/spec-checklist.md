@@ -11,6 +11,9 @@ brief, and the PDFs are to be deleted when this project ends.
 | `UNDEFINED` | The notes discuss it, but no `key-definition` chip names it | **add a chip to the notes**, then re-extract |
 | `ABSENT` | The phrase appears nowhere in that board's notes | **write the content**, or confirm it is out of scope |
 
+Actionable rows are numbered so you can quote them: `E`n for Edexcel A,
+`Q`n for AQA, `QS`n for a quantitative skill.
+
 **Read `ABSENT` with an eye.** Matching is on the exact phrase, tolerant of
 singular/plural only. A concept the notes teach under different wording will
 show as `ABSENT` — `complementary goods` is one: the Edexcel notes discuss
@@ -28,38 +31,66 @@ complements, but never with that phrase.
 The calculations this board's specification requires students to be able
 to make. A glossary of formulae should cover every one.
 
-| Required calculation | Status | Glossary entry |
-| --- | --- | --- |
-| ratios and fractions | `ABSENT` | — |
-| percentage change | `UNDEFINED` | — |
-| percentage point change | `ABSENT` | — |
-| mean | `UNDEFINED` | — |
-| median | `UNDEFINED` | — |
-| quantiles | `ABSENT` | — |
-| index number | `UNDEFINED` | — |
-| total cost | `DEFINED` | Total Cost (TC) |
-| average cost | `DEFINED` | Average Cost (AC) |
-| marginal cost | `DEFINED` | Marginal Cost (MC) |
-| total revenue | `DEFINED` | Total Revenue (TR) |
-| average revenue | `DEFINED` | Average Revenue (AR) |
-| marginal revenue | `DEFINED` | Marginal Revenue (MR) |
-| profit | `DEFINED` | Normal profit |
-| real terms conversion | `ABSENT` | — |
-| price elasticity of demand | `DEFINED` | Price Elasticity of Demand (PED) |
-| income elasticity of demand | `DEFINED` | Income Elasticity of Demand (YED) |
-| cross elasticity of demand | `DEFINED` | Cross Elasticity of Demand (XED) |
-| price elasticity of supply | `DEFINED` | Price Elasticity of Supply (PES) |
-| rate of change versus level | `ABSENT` | — |
-| composite indicator | `DEFINED` | Composite indicators |
-| seasonally adjusted figures | `ABSENT` | — |
+| # | Required calculation | Status | Glossary entry |
+| ---: | --- | --- | --- |
+| **EQS1** | ratios and fractions | `ABSENT` | — |
+| **EQS2** | percentage change | `UNDEFINED` | — |
+| **EQS3** | percentage point change | `ABSENT` | — |
+| **EQS4** | mean | `UNDEFINED` | — |
+| **EQS5** | median | `UNDEFINED` | — |
+| **EQS6** | quantiles | `ABSENT` | — |
+| **EQS7** | index number | `UNDEFINED` | — |
+| — | total cost | `DEFINED` | Total Cost (TC) |
+| — | average cost | `DEFINED` | Average Cost (AC) |
+| — | marginal cost | `DEFINED` | Marginal Cost (MC) |
+| — | total revenue | `DEFINED` | Total Revenue (TR) |
+| — | average revenue | `DEFINED` | Average Revenue (AR) |
+| — | marginal revenue | `DEFINED` | Marginal Revenue (MR) |
+| — | profit | `DEFINED` | Normal profit |
+| **EQS8** | real terms conversion | `ABSENT` | — |
+| — | price elasticity of demand | `DEFINED` | Price Elasticity of Demand (PED) |
+| — | income elasticity of demand | `DEFINED` | Income Elasticity of Demand (YED) |
+| — | cross elasticity of demand | `DEFINED` | Cross Elasticity of Demand (XED) |
+| — | price elasticity of supply | `DEFINED` | Price Elasticity of Supply (PES) |
+| **EQS9** | rate of change versus level | `ABSENT` | — |
+| — | composite indicator | `DEFINED` | Composite indicators |
+| **EQS10** | seasonally adjusted figures | `ABSENT` | — |
 
 ### Absent from the notes — 5
 
-`complementary goods`, `creative destruction`, `hysteresis`, `private good`, `quasi-public good`
+| # | Spec term | # | Spec term | # | Spec term |
+| ---: | --- | ---: | --- | ---: | --- |
+| **EA1** | `complementary goods` | **EA2** | `creative destruction` | **EA3** | `hysteresis` |
+| **EA4** | `private good` | **EA5** | `quasi-public good` |  |  |
 
 ### In the notes, but never defined — 70
 
-`aggregate supply`, `balance of payments`, `barriers to entry`, `capital goods`, `circular flow of income`, `claimant count`, `competition policy`, `concentration ratio`, `consumer goods`, `contestable market`, `cost-benefit analysis`, `current account deficit`, `deregulation`, `derived demand`, `diminishing marginal utility`, `economies of scale`, `elasticity`, `equilibrium price`, `excess demand`, `excess supply`, `exchange rate`, `external benefit`, `external cost`, `free rider problem`, `functions of money`, `geographical immobility`, `gini coefficient`, `human development index`, `intervention`, `j-curve effect`, `labour productivity`, `laffer curve`, `law of diminishing returns`, `lorenz curve`, `marginal propensity to consume`, `marginal propensity to import`, `marginal propensity to save`, `marginal propensity to tax`, `marginal revenue product`, `monopoly`, `monopsony`, `natural monopoly`, `negative externality`, `nominal gdp`, `occupational immobility`, `oligopoly`, `perfect competition`, `phillips curve`, `positive externality`, `price discrimination`, `price mechanism`, `privatisation`, `productivity`, `profit maximisation`, `public good`, `purchasing power parity`, `quantitative easing`, `quota`, `rational decision making`, `real gdp`, `real income`, `returns to scale`, `subsidy`, `supply-side policy`, `sustainable development`, `tariff`, `terms of trade`, `trading bloc`, `unemployment rate`, `welfare loss`
+| # | Spec term | # | Spec term | # | Spec term |
+| ---: | --- | ---: | --- | ---: | --- |
+| **EU1** | `aggregate supply` | **EU2** | `balance of payments` | **EU3** | `barriers to entry` |
+| **EU4** | `capital goods` | **EU5** | `circular flow of income` | **EU6** | `claimant count` |
+| **EU7** | `competition policy` | **EU8** | `concentration ratio` | **EU9** | `consumer goods` |
+| **EU10** | `contestable market` | **EU11** | `cost-benefit analysis` | **EU12** | `current account deficit` |
+| **EU13** | `deregulation` | **EU14** | `derived demand` | **EU15** | `diminishing marginal utility` |
+| **EU16** | `economies of scale` | **EU17** | `elasticity` | **EU18** | `equilibrium price` |
+| **EU19** | `excess demand` | **EU20** | `excess supply` | **EU21** | `exchange rate` |
+| **EU22** | `external benefit` | **EU23** | `external cost` | **EU24** | `free rider problem` |
+| **EU25** | `functions of money` | **EU26** | `geographical immobility` | **EU27** | `gini coefficient` |
+| **EU28** | `human development index` | **EU29** | `intervention` | **EU30** | `j-curve effect` |
+| **EU31** | `labour productivity` | **EU32** | `laffer curve` | **EU33** | `law of diminishing returns` |
+| **EU34** | `lorenz curve` | **EU35** | `marginal propensity to consume` | **EU36** | `marginal propensity to import` |
+| **EU37** | `marginal propensity to save` | **EU38** | `marginal propensity to tax` | **EU39** | `marginal revenue product` |
+| **EU40** | `monopoly` | **EU41** | `monopsony` | **EU42** | `natural monopoly` |
+| **EU43** | `negative externality` | **EU44** | `nominal gdp` | **EU45** | `occupational immobility` |
+| **EU46** | `oligopoly` | **EU47** | `perfect competition` | **EU48** | `phillips curve` |
+| **EU49** | `positive externality` | **EU50** | `price discrimination` | **EU51** | `price mechanism` |
+| **EU52** | `privatisation` | **EU53** | `productivity` | **EU54** | `profit maximisation` |
+| **EU55** | `public good` | **EU56** | `purchasing power parity` | **EU57** | `quantitative easing` |
+| **EU58** | `quota` | **EU59** | `rational decision making` | **EU60** | `real gdp` |
+| **EU61** | `real income` | **EU62** | `returns to scale` | **EU63** | `subsidy` |
+| **EU64** | `supply-side policy` | **EU65** | `sustainable development` | **EU66** | `tariff` |
+| **EU67** | `terms of trade` | **EU68** | `trading bloc` | **EU69** | `unemployment rate` |
+| **EU70** | `welfare loss` |  |  |  |  |
 
 ### Defined — 60
 
@@ -138,35 +169,62 @@ to make. A glossary of formulae should cover every one.
 The calculations this board's specification requires students to be able
 to make. A glossary of formulae should cover every one.
 
-| Required calculation | Status | Glossary entry |
-| --- | --- | --- |
-| ratios and fractions | `ABSENT` | — |
-| percentage change | `UNDEFINED` | — |
-| percentage point change | `ABSENT` | — |
-| mean | `UNDEFINED` | — |
-| median | `UNDEFINED` | — |
-| quantiles | `ABSENT` | — |
-| index number | `DEFINED` | Index number |
-| total cost | `DEFINED` | Total Cost (TC) |
-| average cost | `DEFINED` | Average Cost (AC) |
-| marginal cost | `DEFINED` | Marginal Cost (MC) |
-| total revenue | `DEFINED` | Total Revenue (TR) |
-| average revenue | `DEFINED` | Average Revenue (AR) |
-| marginal revenue | `DEFINED` | Marginal Revenue (MR) |
-| profit | `DEFINED` | Normal profit |
-| real terms conversion | `ABSENT` | — |
-| price elasticity of demand | `DEFINED` | Price Elasticity of Demand (PED) |
-| income elasticity of demand | `DEFINED` | Income Elasticity of Demand (YED) |
-| cross elasticity of demand | `DEFINED` | Cross Elasticity of Demand (XED) |
-| price elasticity of supply | `DEFINED` | Price Elasticity of Supply (PES) |
+| # | Required calculation | Status | Glossary entry |
+| ---: | --- | --- | --- |
+| **QQS1** | ratios and fractions | `ABSENT` | — |
+| **QQS2** | percentage change | `UNDEFINED` | — |
+| **QQS3** | percentage point change | `ABSENT` | — |
+| **QQS4** | mean | `UNDEFINED` | — |
+| **QQS5** | median | `UNDEFINED` | — |
+| **QQS6** | quantiles | `ABSENT` | — |
+| — | index number | `DEFINED` | Index number |
+| — | total cost | `DEFINED` | Total Cost (TC) |
+| — | average cost | `DEFINED` | Average Cost (AC) |
+| — | marginal cost | `DEFINED` | Marginal Cost (MC) |
+| — | total revenue | `DEFINED` | Total Revenue (TR) |
+| — | average revenue | `DEFINED` | Average Revenue (AR) |
+| — | marginal revenue | `DEFINED` | Marginal Revenue (MR) |
+| — | profit | `DEFINED` | Normal profit |
+| **QQS7** | real terms conversion | `ABSENT` | — |
+| — | price elasticity of demand | `DEFINED` | Price Elasticity of Demand (PED) |
+| — | income elasticity of demand | `DEFINED` | Income Elasticity of Demand (YED) |
+| — | cross elasticity of demand | `DEFINED` | Cross Elasticity of Demand (XED) |
+| — | price elasticity of supply | `DEFINED` | Price Elasticity of Supply (PES) |
 
 ### Absent from the notes — 7
 
-`command economy`, `cost-benefit analysis`, `free market economy`, `hysteresis`, `mixed economy`, `sustainable development`, `terms of trade`
+| # | Spec term | # | Spec term | # | Spec term |
+| ---: | --- | ---: | --- | ---: | --- |
+| **QA1** | `command economy` | **QA2** | `cost-benefit analysis` | **QA3** | `free market economy` |
+| **QA4** | `hysteresis` | **QA5** | `mixed economy` | **QA6** | `sustainable development` |
+| **QA7** | `terms of trade` |  |  |  |  |
 
 ### In the notes, but never defined — 64
 
-`aggregate supply`, `automatic stabilisers`, `balance of payments`, `barriers to entry`, `capital goods`, `circular flow of income`, `claimant count`, `complementary goods`, `concentration ratio`, `consumer goods`, `contestable market`, `current account deficit`, `derived demand`, `diminishing marginal utility`, `economies of scale`, `elasticity`, `equilibrium price`, `excess demand`, `excess supply`, `exchange rate`, `external benefit`, `external cost`, `factors of production`, `free rider problem`, `functions of money`, `game theory`, `gini coefficient`, `human development index`, `intervention`, `j-curve effect`, `labour productivity`, `laffer curve`, `law of diminishing returns`, `lorenz curve`, `marginal propensity to consume`, `marginal propensity to import`, `marginal propensity to save`, `marginal propensity to tax`, `marginal revenue product`, `monopoly`, `monopsony`, `natural monopoly`, `negative externality`, `nominal gdp`, `oligopoly`, `perfect competition`, `phillips curve`, `positive externality`, `price discrimination`, `price mechanism`, `private good`, `profit maximisation`, `public good`, `quantitative easing`, `quota`, `rational decision making`, `real gdp`, `real income`, `subsidy`, `supply-side policy`, `tariff`, `trading bloc`, `unemployment rate`, `welfare loss`
+| # | Spec term | # | Spec term | # | Spec term |
+| ---: | --- | ---: | --- | ---: | --- |
+| **QU1** | `aggregate supply` | **QU2** | `automatic stabilisers` | **QU3** | `balance of payments` |
+| **QU4** | `barriers to entry` | **QU5** | `capital goods` | **QU6** | `circular flow of income` |
+| **QU7** | `claimant count` | **QU8** | `complementary goods` | **QU9** | `concentration ratio` |
+| **QU10** | `consumer goods` | **QU11** | `contestable market` | **QU12** | `current account deficit` |
+| **QU13** | `derived demand` | **QU14** | `diminishing marginal utility` | **QU15** | `economies of scale` |
+| **QU16** | `elasticity` | **QU17** | `equilibrium price` | **QU18** | `excess demand` |
+| **QU19** | `excess supply` | **QU20** | `exchange rate` | **QU21** | `external benefit` |
+| **QU22** | `external cost` | **QU23** | `factors of production` | **QU24** | `free rider problem` |
+| **QU25** | `functions of money` | **QU26** | `game theory` | **QU27** | `gini coefficient` |
+| **QU28** | `human development index` | **QU29** | `intervention` | **QU30** | `j-curve effect` |
+| **QU31** | `labour productivity` | **QU32** | `laffer curve` | **QU33** | `law of diminishing returns` |
+| **QU34** | `lorenz curve` | **QU35** | `marginal propensity to consume` | **QU36** | `marginal propensity to import` |
+| **QU37** | `marginal propensity to save` | **QU38** | `marginal propensity to tax` | **QU39** | `marginal revenue product` |
+| **QU40** | `monopoly` | **QU41** | `monopsony` | **QU42** | `natural monopoly` |
+| **QU43** | `negative externality` | **QU44** | `nominal gdp` | **QU45** | `oligopoly` |
+| **QU46** | `perfect competition` | **QU47** | `phillips curve` | **QU48** | `positive externality` |
+| **QU49** | `price discrimination` | **QU50** | `price mechanism` | **QU51** | `private good` |
+| **QU52** | `profit maximisation` | **QU53** | `public good` | **QU54** | `quantitative easing` |
+| **QU55** | `quota` | **QU56** | `rational decision making` | **QU57** | `real gdp` |
+| **QU58** | `real income` | **QU59** | `subsidy` | **QU60** | `supply-side policy` |
+| **QU61** | `tariff` | **QU62** | `trading bloc` | **QU63** | `unemployment rate` |
+| **QU64** | `welfare loss` |  |  |  |  |
 
 ### Defined — 64
 

@@ -5,11 +5,17 @@ notes page has been edited — every item is something for you to decide or writ
 
 Three companion files:
 
-| File | What it holds |
-| --- | --- |
-| `inventory.md` | All 255 extracted terms and 49 formulae, with sources |
-| `review-decisions.md` | Questions the extractor refused to answer — tables, formulae, ambiguous chips |
-| `spec-checklist.md` | Per-board specification coverage, term by term |
+| File | What it holds | Numbered as |
+| --- | --- | --- |
+| `inventory.md` | All 255 extracted terms and 49 formulae, with sources | `T`n terms, `B`n formulae, `X`n skipped chips |
+| `review-decisions.md` | Questions the extractor refused to answer — tables, formulae, ambiguous chips | `A`n–`F`n by section, plus `S`/`M`/`R`n in §G |
+| `spec-checklist.md` | Per-board specification coverage, term by term | `E`… Edexcel A, `Q`… AQA, `…QS`n quantitative skills |
+
+Every actionable row in those three files carries a number, so a reply can quote
+numbers rather than restate terms. `review-decisions.md` opens with a worked
+example of the reply format. **The numbers are for this round only** — they come
+from the current sort order and shift once decisions land and the files
+regenerate.
 
 This file is the summary and the judgement calls. It answers the brief's three
 questions: (a) required by a spec but missing from the notes, (b) defined

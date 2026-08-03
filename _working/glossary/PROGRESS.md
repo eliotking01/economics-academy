@@ -101,6 +101,8 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 
 **Phase 2 is paused here.** Four things need answers before Phase 3 starts.
 All detail is in `review-decisions.md`; `gap-report.md` is the summary.
+Every actionable row across the three files is numbered — `review-decisions.md`
+opens with the reply format. Numbers are per-run and shift once curation lands.
 
 1. **§A — which of the 9 concept-tables to harvest.** Approving `3.4.1` and
    `1.5.10` is the important one: it is the only source of real definitions for
