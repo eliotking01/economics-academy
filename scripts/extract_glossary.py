@@ -333,6 +333,72 @@ def chips_on(root: Node, ctx, stop, problems):
     return kept, skipped
 
 
+DEF_COLUMN_WORDS = ("definition", "meaning", "what it means", "description")
+
+
+def tables_on(root: Node, ctx):
+    """concept-tables that carry a definition column, with their rows.
+
+    A handful of terms are defined only in a comparison table - the factors of
+    production, and the three efficiency types, whose chips elsewhere are Yes/No
+    verdicts rather than definitions. Harvesting a table means choosing which
+    column is the term and which is the definition, which is a judgement, so
+    nothing here is used until it appears in curation["tables"]. Until then
+    every candidate is listed in the review file with all of its rows.
+    """
+    out = []
+    index = 0
+    for node in walk(root):
+        if node.tag != "table" or "concept-table" not in node.cls():
+            continue
+        this, index = index, index + 1
+        head = find(node, "thead")
+        if head is None:
+            continue
+        headers = [squash(text_of(th)) for th in walk(head) if th.tag == "th"]
+        if not any(w in h.lower() for h in headers for w in DEF_COLUMN_WORDS):
+            continue
+        rows = []
+        for tr in walk(node):
+            if tr.tag != "tr":
+                continue
+            cells = [c for c in tr.children if c.tag in ("td", "th")]
+            if cells and all(c.tag == "td" for c in cells):
+                rows.append([html_of(c.children) for c in cells])
+        out.append({"table": this, "headers": headers, "rows": rows, **ctx})
+    return out
+
+
+def harvest_tables(candidates, approved, stop):
+    """Turn the approved (page, table, term column, definition column) into terms."""
+    index = {(a["notesUrl"], a["table"]): a for a in approved}
+    kept = []
+    for c in candidates:
+        a = index.get((c["notesUrl"], c["table"]))
+        if a is None:
+            continue
+        for row in c["rows"]:
+            if max(a["termColumn"], a["definitionColumn"]) >= len(row):
+                continue
+            term = squash(re.sub(r"<[^>]+>", "", row[a["termColumn"]]))
+            definition = row[a["definitionColumn"]]
+            if not term or not definition or canonical_key(term) in stop:
+                continue
+            kept.append({
+                "term": term,
+                "key": canonical_key(term),
+                "definitionHtml": definition,
+                "definitionText": squash(re.sub(r"<[^>]+>", "", definition)),
+                "heading": "",
+                "origin": "table",
+                "fromHeading": False,
+                "chipHasColon": True,
+                **{k: v for k, v in c.items()
+                   if k not in ("table", "headers", "rows")},
+            })
+    return kept
+
+
 def formulae_on(root: Node, ctx):
     """Display formulae only.
 
@@ -401,7 +467,7 @@ def build():
                   for k, v in curation.get("preferredSources", {}).items()}
     boards = board_index()
 
-    term_records, formula_records = [], []
+    term_records, formula_records, table_candidates = [], [], []
     skipped_all, inline_count, page_count = [], 0, 0
 
     for notes_dir in sorted(boards):
@@ -422,7 +488,11 @@ def build():
             skipped_all.extend((ctx["sourceFile"], why, t)
                                for why, t, _ in skipped)
             formula_records.extend(formulae_on(body, ctx))
+            table_candidates.extend(tables_on(body, ctx))
             inline_count += len(INLINE_TEX_RE.findall(text_of(body)))
+
+    term_records.extend(
+        harvest_tables(table_candidates, curation.get("tables", []), stop))
 
     # Apply alias merges before grouping, so a curated alias genuinely unifies.
     for r in term_records:
@@ -457,7 +527,7 @@ def build():
             "key": key,
             "letter": letter_of(pretty),
             "boards": sorted({s["board"] for s in srcs}),
-            "origin": "chip",
+            "origin": sorted({s["origin"] for s in srcs}),
             "definitionVariants": len(variants),
             "review": review,
             "sources": [{
@@ -468,6 +538,7 @@ def build():
                 "topic": s["topic"],
                 "notesUrl": s["notesUrl"],
                 "termAsWritten": s["term"],
+                "origin": s["origin"],
                 "definitionHtml": s["definitionHtml"],
             } for s in srcs],   # already ranked: curated preference, then board
         })
@@ -483,6 +554,8 @@ def build():
         seen[t["id"]] = t["term"]
 
     formulae = []
+    f_exclude = set(curation.get("formulaExclude", []))
+    f_label = curation.get("formulaLabel", {})
     for key, entry in sorted(merge(formula_records).items()):
         srcs = entry["sources"]
         formulae.append({
@@ -507,6 +580,9 @@ def build():
         used[base] = used.get(base, 0) + 1
         if used[base] > 1:
             f["id"] = f"{base}-{used[base]}"
+    for f in formulae:
+        f["label"] = f_label.get(f["id"], f["label"])
+    formulae = [f for f in formulae if f["id"] not in f_exclude]
 
     stats = {
         "pages": page_count,
@@ -518,10 +594,14 @@ def build():
         "termsNeedingReview": sum(1 for t in terms if t["review"]),
         "displayFormulae": len(formula_records),
         "uniqueFormulae": len(formulae),
+        "formulaeExcludedByCuration": len(f_exclude),
+        "tableCandidates": len(table_candidates),
+        "tablesApproved": len(curation.get("tables", [])),
+        "termsFromTables": sum(1 for r in term_records if r["origin"] == "table"),
         "inlineFormulaeNotExtracted": inline_count,
         "chipsSkipped": len(skipped_all),
     }
-    return terms, formulae, stats, skipped_all, problems
+    return terms, formulae, stats, skipped_all, problems, table_candidates, curation
 
 
 # ---------------------------------------------------------------- output
@@ -569,13 +649,142 @@ def write_inventory(terms, formulae, stats, skipped):
     INVENTORY.write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
+def write_review(terms, formulae, tables, curation):
+    """Everything the extractor refused to decide, in one reviewable file.
+
+    Regenerated on every run, so it shrinks as decisions land in curation.json.
+    An empty section means that class of question is settled.
+    """
+    approved = {(a["notesUrl"], a["table"]) for a in curation.get("tables", [])}
+
+    def flagged(reason):
+        # Substring, not prefix: the variant-count reason reads "3 different
+        # wordings across its sources" and leads with the count.
+        return [t for t in terms if any(reason in r for r in t["review"])]
+
+    L = ["# Glossary — decisions needed",
+         "",
+         "Generated by `scripts/extract_glossary.py`. Every item here is a question "
+         "about **which text is a definition**, never about what a definition should "
+         "say. Record answers in `glossary-data/curation.json` and re-run; this file "
+         "shrinks as they land.",
+         "",
+         "Sections A–B are additions. C–F are corrections. G is a confirmation.",
+         "",
+         "---",
+         "",
+         f"## A. Table harvests — {len(tables) - len(approved)} of {len(tables)} still undecided",
+         "",
+         "These `concept-table`s carry a definition-style column. Some genuinely "
+         "define terms; some are classification grids that only look like it. For "
+         "each one to use, add the entry shown to `curation.tables`; for the rest, "
+         "do nothing.",
+         ""]
+
+    for c in tables:
+        state = "APPROVED" if (c["notesUrl"], c["table"]) in approved else "undecided"
+        L += [f"### {c['groupLabel']} {c['spec']} — table {c['table']} — **{state}**",
+              "",
+              f"`{c['notesUrl']}`", "",
+              "| " + " | ".join(f"{i}. {h}" for i, h in enumerate(c["headers"])) + " |",
+              "| " + " | ".join("---" for _ in c["headers"]) + " |"]
+        for row in c["rows"]:
+            L.append("| " + " | ".join(x.replace("|", "\\|")[:120] for x in row) + " |")
+        # Suggest the column whose own header says it holds definitions, rather
+        # than assuming column 1 - on the efficiency tables that is column 2,
+        # and column 1 holds the condition.
+        def_col = next((i for i, h in enumerate(c["headers"]) if i > 0
+                        and any(w in h.lower() for w in DEF_COLUMN_WORDS)), 1)
+        L += ["", "```json",
+              json.dumps({"notesUrl": c["notesUrl"], "table": c["table"],
+                          "termColumn": 0, "definitionColumn": def_col}),
+              "```", ""]
+
+    L += ["---", "",
+          f"## B. Formulae — {len(formulae)} extracted", "",
+          "Every display formula in the notes. Some are worked arithmetic from an "
+          "example rather than a formula to learn — add those ids to "
+          "`curation.formulaExclude`. Labels come from the section heading the "
+          "formula sits under, so most want renaming via `curation.formulaLabel`.",
+          "",
+          "| id | label | LaTeX | boards | in a formula-box |",
+          "| --- | --- | --- | --- | --- |"]
+    for f in formulae:
+        b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
+        L.append(f"| `{f['id']}` | {f['label']} | `{f['latex'].replace('|', chr(92)+'|')}` "
+                 f"| {b} | {'no' if f['outsideFormulaBox'] else 'yes'} |")
+
+    sections = [
+        ("C", "Terms named from a section heading",
+         "term taken from a section heading",
+         "The chip said only `Definition:`, so the term had to come from the "
+         "heading above it — and headings are written as prose. The definition "
+         "is untouched; only the name needs deciding. Fix by adding an entry to "
+         "`curation.aliases` (to merge into an existing term) or "
+         "`curation.display` (to rename it)."),
+        ("D", "Chips without a colon",
+         "chip has no colon",
+         "The notes signal a definition with a trailing colon on the chip. These "
+         "have none. Most are still definitions written as a sentence "
+         "(\"Globalisation is the increasing integration…\") and are fine as they "
+         "stand. A few are the term used as a sentence subject rather than "
+         "defined — add those to `curation.stopTerms`."),
+        ("E", "Terms worded differently across their sources",
+         "different wordings",
+         "The same term is defined more than once and the wordings differ. Either "
+         "align them in the notes, or name the page whose wording is canonical in "
+         "`curation.preferredSources`. Where a source is not a definition at all "
+         "— the three efficiency types are labelled Yes/No against each market "
+         "structure — put it in `curation.excludeSources` instead."),
+        ("F", "Definitions that run on into a list",
+         "definition ends in a colon",
+         "The definition ends mid-thought because the rest of it is the bulleted "
+         "list that follows, which the extractor does not take. Either reword the "
+         "notes page so the definition is self-contained, or accept the short form."),
+    ]
+    for letter, title, reason, blurb in sections:
+        rows = flagged(reason)
+        L += ["", "---", "", f"## {letter}. {title} — {len(rows)}", "", blurb, "",
+              "| Term | Boards | Source(s) | Definition as extracted |",
+              "| --- | --- | --- | --- |"]
+        for t in rows:
+            b = "".join("E" if s == "edexcel-a" else "A" for s in t["boards"])
+            src = "<br>".join(f"{s['groupLabel']} {s['spec']}" for s in t["sources"])
+            if letter == "E":
+                d = "<br>".join(f"*{s['spec']}* — {s['definitionHtml'][:150]}"
+                                for s in t["sources"])
+            else:
+                d = t["sources"][0]["definitionHtml"][:220]
+            L.append(f"| **{t['term']}** | {b} | {src} | {d.replace('|', chr(92)+'|')} |")
+
+    L += ["", "---", "",
+          "## G. Curation already applied — please confirm", "",
+          "These were decided from the evidence and are live in "
+          "`glossary-data/curation.json`. None of them changes a single word of "
+          "any definition; they only decide what counts as a term and what it is "
+          "called.", "",
+          f"### Stop-listed as rhetorical labels, not terms ({len(curation['stopTerms'])})",
+          "", ", ".join(f"`{s}`" for s in curation["stopTerms"]), "",
+          f"### Merged ({len(curation['aliases'])})", "",
+          "| Variant | Merged into |", "| --- | --- |"]
+    for k, v in sorted(curation["aliases"].items()):
+        L.append(f"| {k} | {v} |")
+    L += ["", f"### Renamed for display ({len(curation['display'])})", "",
+          "| Key | Shown as |", "| --- | --- |"]
+    for k, v in sorted(curation["display"].items()):
+        L.append(f"| {k} | {v} |")
+
+    (INVENTORY.parent / "review-decisions.md").write_text(
+        "\n".join(L) + "\n", encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true",
                     help="validate and report, write nothing")
     args = ap.parse_args()
 
-    terms, formulae, stats, skipped, problems = build()
+    terms, formulae, stats, skipped, problems, tables, curation = build()
 
     for k, v in stats.items():
         print(f"  {k:32} {v}")
@@ -599,6 +808,7 @@ def main():
         "formulae": formulae,
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     write_inventory(terms, formulae, stats, skipped)
+    write_review(terms, formulae, tables, curation)
     print(f"\nwrote {TERMS_OUT.relative_to(ROOT)}")
     print(f"wrote {INVENTORY.relative_to(ROOT)}")
     return 1 if problems else 0

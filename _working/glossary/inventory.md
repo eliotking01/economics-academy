@@ -15,6 +15,10 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | termsNeedingReview | 84 |
 | displayFormulae | 72 |
 | uniqueFormulae | 49 |
+| formulaeExcludedByCuration | 0 |
+| tableCandidates | 9 |
+| tablesApproved | 0 |
+| termsFromTables | 0 |
 | inlineFormulaeNotExtracted | 162 |
 | chipsSkipped | 156 |
 
