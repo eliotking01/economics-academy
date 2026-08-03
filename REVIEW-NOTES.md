@@ -1457,3 +1457,46 @@ good tax system are genuinely missing and would need writing.
 
 **No question in the unit depends on any of the missing material.** All four sets
 were written to what the bodies teach.
+
+---
+
+# Found while building the glossary — Phase 0 discovery (2026-08-03)
+
+Two pre-existing faults surfaced by scanning all 166 topic pages for definitions
+and formulae. Neither is caused by the glossary work and neither is fixed here,
+per the house rule. Both are markup faults, not economics.
+
+## G1 — `2-1-3-employment-unemployment` has LaTeX but never loads MathJax
+
+`revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html` contains
+`\[ … \]` display formulae but does not include the MathJax configuration and
+script block that the other 125 LaTeX-bearing pages carry. Its formulae render
+on the live site as literal `\[ \text{...} \]`.
+
+It is the **only** page in this state. The distribution across the 166 pages is
+125 pages with both MathJax and LaTeX, 40 with neither, and this one with LaTeX
+and no loader. No page loads MathJax without needing it.
+
+**Fix:** paste the standard MathJax block — verbatim from any sibling page, it is
+byte-identical across all 125 — immediately after the page's own stylesheet link
+and before the JSON-LD. No wording changes.
+
+## G2 — `.formula-box` has no CSS rule anywhere in `css/`
+
+`CLAUDE.md` documents `formula-box` as a component of
+`revision-notes-textbook.css` with the contract "Centred MathJax display". There
+is no such rule. `grep -rn "formula-box" --include='*.css'` returns nothing.
+
+All **51** instances across 29 pages currently render as an unstyled `<div>` —
+no centring, no background, no spacing. The `<!-- prettier-ignore -->` guard in
+front of each one is doing its job, so the LaTeX is intact; only the styling was
+never written. Compare `.revision-notes-content .key-definition`, which *is*
+styled, at line 112 of that stylesheet.
+
+Worth noting the sibling asymmetry: the two display formulae that sit in
+`<p><strong>` rather than in a `formula-box` (`4-1-4-terms-of-trade` and
+`4-1-9-international-competitiveness`) therefore look no worse than the 51 that
+use the documented component.
+
+**Fix:** either add the rule the documentation already promises, or amend the
+documentation. A decision either way, not an oversight.

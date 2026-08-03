@@ -24,6 +24,19 @@ markup integrity) exist and can be run on demand. Nothing runs them
 automatically. Prettier 3.9.6 has been used via `npx prettier@3.9.6`; it is not
 installed and there is no config.
 
+## How publishing works
+
+`main` is served by GitHub Pages with **the default Jekyll build** — there is no
+`.nojekyll` and no `_config.yml`. Two consequences that are not obvious:
+
+- **Everything tracked in the repo is public.** Root markdown is served too:
+  `/PROJECT-LOG.md` and `/PROJECT-LOG.html` both return 200. Anything committed
+  is on the site.
+- **Directories beginning with `_` are excluded**, by Jekyll's own rule. That is
+  what makes `_working/` a safe place for build-time working files. **Adding a
+  `.nojekyll` file would immediately expose every `_` directory** — if that is
+  ever wanted, move `_working/` out of the repo first.
+
 ## Layout
 
 ```
@@ -37,6 +50,9 @@ css/pages/<page>.css                                            one per page
 js/components/, js/data/                                        hand-written; the rest is vendor
 images/diagrams/                                                300 note diagrams
 raw-notes/edexcel/<spec-code>.md                                markdown source for converted notes
+revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
+glossary-data/                                                  glossary source of truth
+_working/glossary/                                              build-time working files, not published
 ```
 
 Root holds the commercial and utility pages: `index`, `tutoring`, `marking`,
@@ -166,8 +182,42 @@ the master page and, pre-filtered, on every topic page. No Fuse.js and no
 dependency: it is a small bounded-edit-distance token index. Tested by
 `node scripts/test_question_search.js`, which runs against the shipped file.
 
+## Glossary & formulae
+
+In progress on `feature/glossary`. **Read `_working/glossary/PROGRESS.md` first.**
+
+Every definition and formula a student needs, one page per exam board, at
+`/revision-notes/glossary/{edexcel-a,aqa}/` with a board selector at
+`/revision-notes/glossary/`.
+
+**The definitions are the notes' own words.** Nothing here is written, rewritten
+or paraphrased: every entry is lifted verbatim from the
+`<span class="key-definition">` chip and the paragraph that follows it on a topic
+page, and `scripts/verify_glossary.py` re-reads the notes and fails if a shipped
+definition no longer appears in its source page. A term that reads badly is fixed
+**in the notes**, then re-extracted — never edited in the glossary.
+
+- `glossary-data/terms.json` — **generated** by `scripts/extract_glossary.py`
+  from the notes HTML. Never hand-edit.
+- `glossary-data/curation.json` — hand-written judgement: the non-term stop-list,
+  display casing, alias merges, approved table harvests. Kept separate so
+  re-extraction cannot destroy it, exactly as `tags.json` is for the past papers.
+- `revision-notes/glossary/**/index.html` — **generated** by
+  `scripts/build_glossary.py`. Do not hand-edit; re-run it. It runs Prettier over
+  its own HTML, so generating twice is byte-identical.
+
+Formulae are **KaTeX pre-rendered to static HTML at build time**, with KaTeX's
+CSS and woff2 fonts self-hosted in `css/vendor/katex/`. The notes pages still use
+MathJax 3, so the same formula looks slightly different in the two places. Every
+emitted KaTeX block needs `<!-- prettier-ignore -->` before it or Prettier
+reflows it and the build stops being idempotent.
+
+The full glossary is real HTML in the page, not fetched — it must be readable
+with JavaScript off. `js/components/glossary-filter.js` only enhances.
+
 ## See also
 
+- `_working/glossary/PROGRESS.md` — live state of the glossary build.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
 - `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.

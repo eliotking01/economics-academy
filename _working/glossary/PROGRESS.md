@@ -6,7 +6,7 @@ never batched.
 
 - **Branch:** `feature/glossary` (off `main` at `faccb6a`)
 - **Current phase:** Phase 1 — setup
-- **Current step:** 1.2 — record conventions in `CLAUDE.md`, log two bugs in `REVIEW-NOTES.md`
+- **Current step:** 2.1 — build `scripts/extract_glossary.py` (chip pass)
 - **Last updated:** 2026-08-03
 
 ---
@@ -43,12 +43,12 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [x] Measure the actual definition and formula content (see Numbers below)
 - [x] Report findings
 
-### Phase 1 — Setup — IN PROGRESS
+### Phase 1 — Setup — COMPLETE
 
 - [x] 1.1 Branch `feature/glossary`, create `_working/glossary/`, write `PROGRESS.md`
-- [ ] 1.2 `CLAUDE.md` additions; log two pre-existing bugs in `REVIEW-NOTES.md`
+- [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `REVIEW-NOTES.md`; `ROADMAP.md` updated
 
-### Phase 2 — Extraction & gap analysis
+### Phase 2 — Extraction & gap analysis — IN PROGRESS
 
 - [ ] 2.1 `scripts/extract_glossary.py` — chip pass → `glossary-data/terms.json`
 - [ ] 2.2 Append results to `inventory.md` incrementally
@@ -178,6 +178,9 @@ Per-board chip split: Edexcel 267, AQA 293.
 | Path | State |
 | --- | --- |
 | `_working/glossary/PROGRESS.md` | Created (this file) |
+| `CLAUDE.md` | Modified — new "How publishing works" and "Glossary & formulae" sections; 3 lines added to Layout; 1 line to See also |
+| `REVIEW-NOTES.md` | Appended — G1 (MathJax missing on `2-1-3`), G2 (`.formula-box` unstyled) |
+| `ROADMAP.md` | Modified — glossary under Now; flashcards, KaTeX migration and PDF export under Someday |
 
 **No revision-notes topic page has been edited, and none will be.**
 
@@ -197,15 +200,9 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Step 1.2.** Apply the `CLAUDE.md` additions (a Glossary section; the Jekyll
-`_`-prefix publishing fact) and log the two pre-existing bugs found in Phase 0
-to `REVIEW-NOTES.md`:
+**Step 2.1.** Write `scripts/extract_glossary.py` — the chip pass. Stdlib only.
+Reads the 166 topic pages, applies the twelve gotchas above, and writes
+`glossary-data/terms.json` plus an incremental append to `inventory.md`.
 
-1. `revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html` contains
-   LaTeX but never loads MathJax, so its formulae render as raw `\[ … \]` on the
-   live site.
-2. `.formula-box` has **no CSS rule anywhere** in `css/`, despite `CLAUDE.md`
-   documenting it as a component of `revision-notes-textbook.css`. All 51
-   instances currently render as an unstyled `div`.
-
-Then commit and move to Phase 2.
+Support `--check` (validate and write nothing). Board attribution comes from the
+`spec-alert` line. Records key on the canonical URL, never the spec code.
