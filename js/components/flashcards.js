@@ -267,7 +267,9 @@
     mount.appendChild(progress);
     mount.appendChild(stage);
     mount.appendChild(summary);
-    mount.appendChild(printsheet);
+    /* On the root, not the mount: print CSS hides the whole mount, and a
+     * printsheet inside it would vanish with it. */
+    root.appendChild(printsheet);
 
     /* ---- rendering */
 
