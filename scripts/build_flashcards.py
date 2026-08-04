@@ -79,11 +79,23 @@ def json_ld(obj, indent="      ") -> str:
     return "\n".join(indent + line for line in s.split("\n")).strip()
 
 
+def normalise(s: str) -> str:
+    """Whitespace-normalise text for the verbatim comparison.
+
+    Stripping tags leaves stray spaces where markup sat mid-sentence
+    ("actually <strong>pay</strong>." becomes "pay ."), so spaces before
+    closing punctuation and after an opening bracket are tightened on both
+    sides of the comparison.
+    """
+    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+([.,;:!?)\]])", r"\1", s)
+    return re.sub(r"([(\[])\s+", r"\1", s)
+
+
 def page_text(path: Path) -> str:
     """A notes page as normalised plain text, for the verbatim check."""
     text = path.read_text(encoding="utf-8")
-    text = re.sub(r"<[^>]+>", " ", text)
-    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+    return normalise(html.unescape(re.sub(r"<[^>]+>", " ", text)))
 
 
 def page_h1(path: Path) -> str:
@@ -211,7 +223,7 @@ def validate_deck(deck, path, errors):
             elif notes_page.is_file():
                 if notes_page not in page_cache:
                     page_cache[notes_page] = page_text(notes_page)
-                needle = re.sub(r"\s+", " ", verbatim).strip()
+                needle = normalise(verbatim)
                 if needle not in page_cache[notes_page]:
                     errors.append(f"{where}: verbatim text no longer appears "
                                   f"on {notes_page.name}")
@@ -627,6 +639,14 @@ def main():
     for path in deck_files:
         deck = json.loads(path.read_text(encoding="utf-8"))
         validate_deck(deck, path, errors)
+        # Deck order is spec order, whatever order the cards were authored
+        # in. The sort is stable, so cards sharing a spec code keep their
+        # authored order.
+        try:
+            deck["cards"].sort(
+                key=lambda c: tuple(int(p) for p in c["specCode"].split(".")))
+        except (KeyError, ValueError):
+            pass  # already reported by validation
         decks.append((path, deck))
     if errors:
         for err in errors:

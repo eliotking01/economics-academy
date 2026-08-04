@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Consumer and producer surplus at equilibrium</title>
+  <desc id="d">Supply and demand cross at price P and quantity Q. Consumer surplus is the triangle above P and below the demand curve; producer surplus is the triangle below P and above the supply curve. Together they are the community surplus.</desc>
+  <!-- geometry
+       intersections: 290,330
+       on-curve: 100,140
+  -->
+  <!-- shaded surpluses -->
+  <path d="M100 140 L290 330 L100 330 Z" fill="#1d70b8" fill-opacity="0.15"/>
+  <path d="M100 330 L290 330 L100 520 Z" fill="#0f7b6c" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="330" x2="290" y2="330" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="290" y1="330" x2="290" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="100" y1="140" x2="480" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="520" x2="550" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- annotations -->
+  <text x="158" y="280" font-size="22" fill="#333333" text-anchor="middle">Consumer</text>
+  <text x="158" y="306" font-size="22" fill="#333333" text-anchor="middle">surplus</text>
+  <text x="160" y="390" font-size="22" fill="#333333" text-anchor="middle">Producer</text>
+  <text x="160" y="416" font-size="22" fill="#333333" text-anchor="middle">surplus</text>
+  <!-- labels -->
+  <text x="558" y="64" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="492" y="508" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="92" y="338" font-size="24" fill="#333333" text-anchor="end">P</text>
+  <text x="290" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+</svg>

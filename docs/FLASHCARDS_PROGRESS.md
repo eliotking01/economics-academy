@@ -8,13 +8,14 @@ _Last updated: 2026-08-04._
 
 ## Current state
 
-On branch `flashcards-feature`. Style guide LOCKED (proof diagrams approved
-2026-08-04, after Eliot caught a guide-alignment defect that visual self-QA
-missed — see the geometry-checker entry below). Builder, player, hub and
-deck page all work end-to-end; content **batch 1 (22 cards, vertical slice
-across all seven card types) is awaiting Eliot's review**. Player screenshots
-in `_working/flashcards/player-qa/`. Not yet done: batches 2+, remaining ~13
-diagrams, AQA variants, nav/sitemap integration, final QA pass.
+On branch `flashcards-feature`. Style guide LOCKED. Batch 1 (22 cards)
+approved by Eliot 2026-08-04; visual redesign onto the practice-questions
+palette approved the same day. **Batch 2 (19 cards + 4 new diagrams,
+subtopics 1.1.4 and 1.2.1–1.2.8) is awaiting Eliot's review.** Deck now 41
+cards / 16 topics. Player screenshots in `_working/flashcards/player-qa/`.
+Not yet done: batch 3 (1.2.10, 1.3.x, 1.4.x — roughly 30 cards and the
+min/max price, subsidy and tax-revenue diagrams), AQA variant cards,
+nav/sitemap integration, final QA pass.
 
 Useful QA technique: to screenshot player states, copy the built deck page
 into `_working/`, append a script that clicks `.fc-step`/`.fc-card`, serve
@@ -96,14 +97,16 @@ DevTools device mode in the QA pass.
 
 ## Next steps
 
-1. Eliot reviews content batch 1 (`flashcards-data/edexcel-a/theme-1.json`,
-   22 cards). Facts flagged for his spot-check: Soft Drinks Industry Levy
-   rates and the "sugar fell by over a third" claim; the Smith/Hayek/Marx
-   attributions on 1.1.5–1.1.6 cards.
-2. Batches 2+: remaining Theme 1 subtopics (~90 more cards), authored
-   subtopic-by-subtopic; suspected notes errors go to docs/CONTENT_ISSUES.md,
-   never fixed directly.
-3. Remaining ~13 diagrams through the locked QA loop; AQA variant cards.
+1. Eliot reviews batch 2 (cards `edexcel-a-1-1-4-diagram-01` through
+   `edexcel-a-1-2-8-diagram-01` in `flashcards-data/edexcel-a/theme-1.json`)
+   and the four new diagrams (ppf-basic, supply-curve-shift,
+   market-equilibrium, consumer-producer-surplus-equilibrium). Batch 1 facts
+   (SDIL, Smith/Hayek/Marx) were approved with batch 1.
+2. Batch 3: 1.2.10, 1.3.x, 1.4.x (~30 cards; diagrams: min price, max price,
+   subsidy incidence, indirect-tax government revenue, elastic/inelastic
+   incidence variant). Suspected notes errors go to docs/CONTENT_ISSUES.md.
+3. AQA variant cards (the boards' genuine differences; use the glossary's 42
+   variant-definition terms to find them mechanically).
 4. Integration: nav + inject-templates.js pageMap, revision-notes hub card,
    sitemap.xml, notes-page links (separate commit, needs explicit approval —
    standing rule 1).

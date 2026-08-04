@@ -76,6 +76,61 @@ def path_vertices(d):
     return list(zip(nums[0::2], nums[1::2]))
 
 
+def sample_path_segments(d):
+    """A stroked curve path (absolute M/L/Q/C) as a sampled polyline.
+
+    Bezier curves are flattened to short segments so point-on-curve checks
+    work on curved diagrams (the PPF) exactly as they do on straight lines.
+    Returns None if the path uses anything else.
+    """
+    tokens = re.findall(r"[MLQCZz]|-?\d+(?:\.\d+)?", d)
+    segments = []
+    point = start = None
+    i = 0
+
+    def bezier(points, steps):
+        prev = points[0]
+        for k in range(1, steps + 1):
+            t = k / steps
+            work = list(points)
+            while len(work) > 1:
+                work = [((1 - t) * a[0] + t * b[0], (1 - t) * a[1] + t * b[1])
+                        for a, b in zip(work, work[1:])]
+            segments.append((prev[0], prev[1], work[0][0], work[0][1]))
+            prev = work[0]
+
+    while i < len(tokens):
+        cmd = tokens[i]
+        if cmd == "M":
+            point = start = (float(tokens[i + 1]), float(tokens[i + 2]))
+            i += 3
+        elif cmd == "L" and point:
+            nxt = (float(tokens[i + 1]), float(tokens[i + 2]))
+            segments.append((point[0], point[1], nxt[0], nxt[1]))
+            point = nxt
+            i += 3
+        elif cmd == "Q" and point:
+            ctrl = (float(tokens[i + 1]), float(tokens[i + 2]))
+            end = (float(tokens[i + 3]), float(tokens[i + 4]))
+            bezier([point, ctrl, end], 48)
+            point = end
+            i += 5
+        elif cmd == "C" and point:
+            c1 = (float(tokens[i + 1]), float(tokens[i + 2]))
+            c2 = (float(tokens[i + 3]), float(tokens[i + 4]))
+            end = (float(tokens[i + 5]), float(tokens[i + 6]))
+            bezier([point, c1, c2, end], 64)
+            point = end
+            i += 7
+        elif cmd in ("Z", "z") and point and start:
+            segments.append((point[0], point[1], start[0], start[1]))
+            point = start
+            i += 1
+        else:
+            return None
+    return segments
+
+
 def declared_points(path):
     """Parse the '<!-- geometry ... -->' comment. Returns two point lists."""
     with open(path, encoding="utf-8") as fh:
@@ -97,6 +152,7 @@ def declared_points(path):
 def check_file(path):
     tree = ET.parse(path)
     curves, axes, guides, checks = [], [], [], []
+    curve_ids = []  # parallel to curves: which drawn curve each segment is
 
     for el in tree.iter():
         tag = el.tag.replace(SVG_NS, "")
@@ -106,6 +162,7 @@ def check_file(path):
                 guides.append(seg)
             elif el.get("stroke-width") == "3.5":
                 curves.append(seg)
+                curve_ids.append(id(el))
             elif el.get("stroke") == "#333333" and el.get("stroke-width") == "2.5":
                 axes.append(seg)
         elif tag == "rect" and el.get("fill-opacity"):
@@ -113,6 +170,13 @@ def check_file(path):
             w, h = float(el.get("width")), float(el.get("height"))
             for cx, cy in ((x, y), (x + w, y), (x, y + h), (x + w, y + h)):
                 checks.append(("rect corner", cx, cy))
+        elif tag == "path" and el.get("stroke-width") == "3.5":
+            segs = sample_path_segments(el.get("d", ""))
+            if segs is None:
+                print("  NOTE  curve path could not be parsed; not checked")
+            else:
+                curves.extend(segs)
+                curve_ids.extend([id(el)] * len(segs))
         elif tag == "path" and el.get("fill-opacity"):
             verts = path_vertices(el.get("d", ""))
             if verts is None:
@@ -128,8 +192,10 @@ def check_file(path):
 
     print(f"{os.path.relpath(path, REPO)}")
     for i, a in enumerate(curves):
-        for b in curves[i + 1:]:
-            p = seg_intersection(a, b)
+        for j in range(i + 1, len(curves)):
+            if curve_ids[i] == curve_ids[j]:
+                continue  # segments of one sampled path meet at their joints
+            p = seg_intersection(a, curves[j])
             if p:
                 print(f"  curves cross at ({p[0]:.1f}, {p[1]:.1f})")
 

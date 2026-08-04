@@ -6,7 +6,7 @@
   "themeName": "Theme 1: Introduction to Markets and Market Failure",
   "deckId": "edexcel-a-theme-1",
   "deckTitle": "Edexcel A-Level Economics Theme 1 Flashcards",
-  "count": 22,
+  "count": 41,
   "topics": [
     {
       "subtopic": "1-1-1-economics-as-a-social-science",
@@ -34,7 +34,7 @@
       "specCode": "1.1.4",
       "title": "Production Possibility Frontiers",
       "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
-      "count": 1
+      "count": 2
     },
     {
       "subtopic": "1-1-5-specialisation-division-of-labour",
@@ -51,6 +51,13 @@
       "count": 2
     },
     {
+      "subtopic": "1-2-1-rational-decision-making",
+      "specCode": "1.2.1",
+      "title": "Rational Decision Making",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html",
+      "count": 1
+    },
+    {
       "subtopic": "1-2-2-demand",
       "specCode": "1.2.2",
       "title": "Demand",
@@ -63,6 +70,41 @@
       "title": "Price, Income and Cross Elasticities of Demand",
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
       "count": 3
+    },
+    {
+      "subtopic": "1-2-4-supply",
+      "specCode": "1.2.4",
+      "title": "Supply",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-4-supply.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-2-5-price-elasticity-of-supply",
+      "specCode": "1.2.5",
+      "title": "Price Elasticity of Supply",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-2-6-price-determination",
+      "specCode": "1.2.6",
+      "title": "Price Determination",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+      "count": 4
+    },
+    {
+      "subtopic": "1-2-7-price-mechanism",
+      "specCode": "1.2.7",
+      "title": "The Price Mechanism",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-2-8-producer-consumer-surplus",
+      "specCode": "1.2.8",
+      "title": "Producer and Consumer Surplus",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html",
+      "count": 4
     },
     {
       "subtopic": "1-2-9-indirect-taxes-subsidies",
@@ -186,6 +228,23 @@
       "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html"
     },
     {
+      "id": "edexcel-a-1-1-4-diagram-01",
+      "specCode": "1.1.4",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-4-production-possibility-frontiers",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "ppf",
+        "diagram"
+      ],
+      "front": "<p>Sketch a <strong>PPF</strong> and mark an efficient point, an inefficient point and an unattainable point. Where is opportunity cost shown?</p>",
+      "back": "<p>Points on the frontier (A, C, D, B) are productively efficient — all resources are fully employed. E, inside the frontier, is inefficient; F, outside it, is currently unattainable. Moving from C to D gains consumer goods at the opportunity cost of the capital goods given up.</p>",
+      "svgRef": "/images/diagrams/svg/ppf-basic.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+      "svgAlt": "Concave production possibility frontier for capital and consumer goods with efficient points A, C, D and B on the curve, inefficient point E inside it and unattainable point F outside it"
+    },
+    {
       "id": "edexcel-a-1-1-5-def-01",
       "specCode": "1.1.5",
       "topic": "1.1 Nature of economics",
@@ -246,6 +305,21 @@
       "notesUrl": "/revision-notes/edexcel-theme-1/1-1-6-types-of-economies.html"
     },
     {
+      "id": "edexcel-a-1-2-1-def-01",
+      "specCode": "1.2.1",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-1-rational-decision-making",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "rationality"
+      ],
+      "front": "<p>What does it mean to assume economic agents are <strong>rational</strong>?</p>",
+      "back": "<p>Traditional economic theory assumes agents act <strong>rationally</strong> — each aims to maximise their own objective: consumers maximise <strong>utility</strong>, firms maximise <strong>profit</strong>, and governments maximise <strong>social welfare</strong>.</p><p>Theme 1 also asks you to challenge this assumption — see 1.2.10 on alternative views of consumer behaviour.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html"
+    },
+    {
       "id": "edexcel-a-1-2-2-def-01",
       "specCode": "1.2.2",
       "topic": "1.2 How markets work",
@@ -257,6 +331,39 @@
       ],
       "front": "<p>Define <strong>demand</strong>.</p>",
       "back": "<p><strong>Demand</strong> — the quantity of a good/service consumers are willing and able to buy at a given price in a given time period.</p><p><em>Willing and able</em> — desire without purchasing power is not demand.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html"
+    },
+    {
+      "id": "edexcel-a-1-2-2-diagram-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "demand",
+        "diagram"
+      ],
+      "front": "<p>Sketch the effect of an <strong>increase in demand</strong> on the demand curve, marking the quantities at the original price.</p>",
+      "back": "<p>D1 shifts right to D2, caused by a change in a non-price factor — incomes, the price of substitutes or complements, tastes, or population. At the unchanged price P1, quantity demanded rises from Q1 to Q2.</p>",
+      "svgRef": "/images/diagrams/svg/demand-curve-shift.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
+      "svgAlt": "Demand curve D1 shifting right to D2, with quantity demanded rising from Q1 to Q2 at the unchanged price P1"
+    },
+    {
+      "id": "edexcel-a-1-2-2-chain-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "demand",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does a rise in consumer incomes affect the market for a normal good?</p>",
+      "back": "<p>Incomes rise, so consumers’ purchasing power rises. At every price they are now willing and able to buy more, shifting demand right from D1 to D2. At the original price there is briefly excess demand, which bids the price up until the market reaches a new equilibrium at a higher price and quantity.</p><p>For an <em>inferior</em> good the chain runs the other way — higher incomes shift demand left.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html"
     },
@@ -309,21 +416,273 @@
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
     },
     {
-      "id": "edexcel-a-1-2-2-diagram-01",
-      "specCode": "1.2.2",
+      "id": "edexcel-a-1-2-4-def-01",
+      "specCode": "1.2.4",
       "topic": "1.2 How markets work",
-      "subtopic": "1-2-2-demand",
+      "subtopic": "1-2-4-supply",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "supply"
+      ],
+      "front": "<p>Define <strong>supply</strong>.</p>",
+      "back": "<p><strong>Supply</strong> — the quantity of a good/service producers are willing and able to produce/sell at a given price in a given time period.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-4-supply.html"
+    },
+    {
+      "id": "edexcel-a-1-2-4-diagram-01",
+      "specCode": "1.2.4",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-4-supply",
       "cardType": "diagram",
       "difficulty": "standard",
       "tags": [
-        "demand",
+        "supply",
         "diagram"
       ],
-      "front": "<p>Sketch the effect of an <strong>increase in demand</strong> on the demand curve, marking the quantities at the original price.</p>",
-      "back": "<p>D1 shifts right to D2, caused by a change in a non-price factor — incomes, the price of substitutes or complements, tastes, or population. At the unchanged price P1, quantity demanded rises from Q1 to Q2.</p>",
-      "svgRef": "/images/diagrams/svg/demand-curve-shift.svg",
-      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
-      "svgAlt": "Demand curve D1 shifting right to D2, with quantity demanded rising from Q1 to Q2 at the unchanged price P1"
+      "front": "<p>Sketch the effect of an <strong>increase in supply</strong> on the supply curve, marking the quantities at the original price.</p>",
+      "back": "<p>S1 shifts right to S2, caused by a non-price factor — a technological advance, lower costs of production, or a subsidy. At the unchanged price P, quantity supplied rises from Q1 to Q2. A shift left from S2 to S1 could be caused by an increase in costs of production.</p>",
+      "svgRef": "/images/diagrams/svg/supply-curve-shift.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-4-supply.html",
+      "svgAlt": "Supply curve S1 shifting right to S2, with quantity supplied rising from Q1 to Q2 at the unchanged price P"
+    },
+    {
+      "id": "edexcel-a-1-2-4-chain-01",
+      "specCode": "1.2.4",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-4-supply",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "supply",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: why does the supply curve slope upwards?</p>",
+      "back": "<p>When the price of a good rises, producing it becomes more profitable at the margin. Existing firms are incentivised to expand output, and in time new firms are attracted into the market. Quantity supplied therefore rises with price — an upward-sloping supply curve.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-4-supply.html"
+    },
+    {
+      "id": "edexcel-a-1-2-5-def-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-5-price-elasticity-of-supply",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "elasticity",
+        "supply"
+      ],
+      "front": "<p>Define <strong>price elasticity of supply</strong> (PES), and state why it differs between the short run and the long run.</p>",
+      "back": "<p><strong>PES</strong> measures the responsiveness of quantity supplied to a change in the good's price.</p><p>In the <strong>short run</strong> at least one factor of production is fixed, so supply is more price inelastic; in the <strong>long run</strong> all factors are variable, so supply is more price elastic.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html"
+    },
+    {
+      "id": "edexcel-a-1-2-5-formula-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-5-price-elasticity-of-supply",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "elasticity",
+        "formula"
+      ],
+      "front": "<p>State the formula for <strong>price elasticity of supply</strong>.</p>",
+      "back": "<p>PES is positive, because supply curves slope upwards: elastic if greater than 1, inelastic if less than 1.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mtext>PES</mtext><mo>=</mo><mfrac><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><mtext>QS</mtext></mrow><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><mtext>P</mtext></mrow></mfrac></mrow><annotation encoding=\"application/x-tex\">\\text{PES} = \\frac{\\%\\Delta \\text{QS}}{\\%\\Delta \\text{P}}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord text\"><span class=\"mord\">PES</span></span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:2.1686em;vertical-align:-0.7416em;\"></span><span class=\"mord\"><span class=\"mopen nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.427em;\"><span style=\"top:-2.314em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord text\"><span class=\"mord\">P</span></span></span></span><span style=\"top:-3.23em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"frac-line\" style=\"border-bottom-width:0.04em;\"></span></span><span style=\"top:-3.677em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord text\"><span class=\"mord\">QS</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.7416em;\"><span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-1-2-5-calc-01",
+      "specCode": "1.2.5",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-5-price-elasticity-of-supply",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "elasticity",
+        "calculation"
+      ],
+      "front": "<p>The price of a good rises from £20.00 to £23.00 and quantity supplied rises from 400 to 430 units. Calculate the <strong>PES</strong>.</p>",
+      "back": "<p>%Δ QS = +30 ÷ 400 × 100 = <strong>+7.5%</strong></p><p>%Δ P = +£3 ÷ £20 × 100 = <strong>+15%</strong></p><p>PES = +7.5% ÷ +15% = <strong>+0.5</strong></p><p>Supply is price inelastic here — firms cannot easily expand output in response to the higher price, as is typical in the short run.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html"
+    },
+    {
+      "id": "edexcel-a-1-2-6-def-01",
+      "specCode": "1.2.6",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-6-price-determination",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "equilibrium"
+      ],
+      "front": "<p>Define <strong>market equilibrium</strong>.</p>",
+      "back": "<p><strong>Market equilibrium</strong> — the point where market demand equals market supply.</p><p>At the equilibrium price there is neither a shortage nor a surplus, so the price has no tendency to change.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html"
+    },
+    {
+      "id": "edexcel-a-1-2-6-diagram-01",
+      "specCode": "1.2.6",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-6-price-determination",
+      "cardType": "diagram",
+      "difficulty": "foundation",
+      "tags": [
+        "equilibrium",
+        "diagram"
+      ],
+      "front": "<p>Sketch a market in <strong>equilibrium</strong>, labelling the equilibrium price and quantity.</p>",
+      "back": "<p>Supply and demand intersect at the equilibrium: price P and quantity Q, marked with dashed lines to each axis. At any other price, excess demand or excess supply moves the market back towards this point.</p>",
+      "svgRef": "/images/diagrams/svg/market-equilibrium.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+      "svgAlt": "Supply and demand curves crossing at equilibrium price P and quantity Q, marked with dashed lines to the axes"
+    },
+    {
+      "id": "edexcel-a-1-2-6-def-02",
+      "specCode": "1.2.6",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-6-price-determination",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "equilibrium"
+      ],
+      "front": "<p>Distinguish <strong>excess demand</strong> from <strong>excess supply</strong>.</p>",
+      "back": "<p><strong>Excess demand</strong> — at a price below equilibrium, quantity demanded exceeds quantity supplied: a shortage.</p><p><strong>Excess supply</strong> — at a price above equilibrium, quantity supplied exceeds quantity demanded: a surplus.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html"
+    },
+    {
+      "id": "edexcel-a-1-2-6-chain-01",
+      "specCode": "1.2.6",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-6-price-determination",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "equilibrium",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does the market eliminate excess demand?</p>",
+      "back": "<p>At a price below equilibrium, quantity demanded exceeds quantity supplied. Competing buyers bid the price up. The rising price causes an extension of supply and a contraction of demand, narrowing the shortage, until the market returns to equilibrium where demand once again equals supply.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html"
+    },
+    {
+      "id": "edexcel-a-1-2-7-def-01",
+      "specCode": "1.2.7",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-7-price-mechanism",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "price-mechanism"
+      ],
+      "front": "<p>Name and define the <strong>three functions of the price mechanism</strong>.</p>",
+      "back": "<ul><li><strong>Rationing</strong> — prices allocate scarce resources to those willing and able to pay.</li><li><strong>Incentive</strong> — price changes motivate producers: high prices encourage more supply, low prices less.</li><li><strong>Signalling</strong> — prices convey information about where resources are needed: a rising price signals scarcity and high demand.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html"
+    },
+    {
+      "id": "edexcel-a-1-2-7-chain-01",
+      "specCode": "1.2.7",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-7-price-mechanism",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "price-mechanism",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: consumer tastes shift towards a good. How does the price mechanism reallocate resources?</p>",
+      "back": "<p>Demand shifts right, creating excess demand at the old price, so the price rises. The higher price <em>signals</em> scarcity, <em>rations</em> the good to those willing and able to pay, and <em>incentivises</em> producers to expand output. Resources are drawn into this market from less profitable uses — reallocation with no central direction.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html"
+    },
+    {
+      "id": "edexcel-a-1-2-7-eval-01",
+      "specCode": "1.2.7",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-7-price-mechanism",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "price-mechanism",
+        "evaluation"
+      ],
+      "front": "<p><strong>Evaluate</strong>: the price mechanism allocates resources efficiently. What are the key evaluation points?</p>",
+      "back": "<ul><li><strong>For</strong> — no central planner is needed; prices aggregate dispersed information and adjust continuously.</li><li><strong>Externalities</strong> — prices reflect private, not social, costs and benefits, so markets over- or under-provide.</li><li><strong>Public goods</strong> — non-excludability means the mechanism fails to provide them at all.</li><li><strong>Equity</strong> — rationing by willingness <em>and ability</em> to pay can price the poorest out of essentials.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html"
+    },
+    {
+      "id": "edexcel-a-1-2-8-def-01",
+      "specCode": "1.2.8",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-8-producer-consumer-surplus",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "surplus"
+      ],
+      "front": "<p>Define <strong>consumer surplus</strong>.</p>",
+      "back": "<p><strong>Consumer surplus</strong> — the difference between what a consumer is willing to pay (their valuation) and what they actually pay. It is a measure of consumer welfare/benefit.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html"
+    },
+    {
+      "id": "edexcel-a-1-2-8-def-02",
+      "specCode": "1.2.8",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-8-producer-consumer-surplus",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "surplus"
+      ],
+      "front": "<p>Define <strong>producer surplus</strong>.</p>",
+      "back": "<p><strong>Producer surplus</strong> — the difference between the price a producer is willing to accept (their cost of supply) and the price they actually receive. It is a measure of producer welfare/profit.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html"
+    },
+    {
+      "id": "edexcel-a-1-2-8-def-03",
+      "specCode": "1.2.8",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-8-producer-consumer-surplus",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "surplus"
+      ],
+      "front": "<p>Define <strong>community surplus</strong> (social surplus).</p>",
+      "back": "<p><strong>Community surplus</strong> is the sum of consumer and producer surplus. It represents the total welfare in the market, and is maximised at the free-market equilibrium.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html"
+    },
+    {
+      "id": "edexcel-a-1-2-8-diagram-01",
+      "specCode": "1.2.8",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-8-producer-consumer-surplus",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "surplus",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>consumer surplus</strong> and <strong>producer surplus</strong> on a supply and demand diagram.</p>",
+      "back": "<p>At equilibrium price P and quantity Q: consumer surplus is the triangle <em>above</em> P and below the demand curve; producer surplus is the triangle <em>below</em> P and above the supply curve. Together they form the community surplus — the market's total welfare.</p>",
+      "svgRef": "/images/diagrams/svg/consumer-producer-surplus-equilibrium.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html",
+      "svgAlt": "Supply and demand diagram with the consumer surplus triangle shaded above price P under the demand curve, and the producer surplus triangle shaded below P above the supply curve"
     },
     {
       "id": "edexcel-a-1-2-9-diagram-01",
@@ -341,56 +700,6 @@
       "svgRef": "/images/diagrams/svg/indirect-tax-incidence.svg",
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
       "svgAlt": "Supply and demand diagram with supply shifted left to S plus tax, showing the consumer burden between P1 and P2 and the producer burden between P3 and P1, up to the new quantity Q2"
-    },
-    {
-      "id": "edexcel-a-1-3-2-diagram-01",
-      "specCode": "1.3.2",
-      "topic": "1.3 Market failure",
-      "subtopic": "1-3-2-externalities",
-      "cardType": "diagram",
-      "difficulty": "standard",
-      "tags": [
-        "externalities",
-        "market-failure",
-        "diagram"
-      ],
-      "front": "<p>Draw the <strong>welfare loss</strong> caused by a negative production externality.</p>",
-      "back": "<p>Producers face only their private costs, so external costs are ignored and MSC lies above MPC. The market produces at Q1, where MPC = MPB, but the social optimum is Q2, where MSC = MSB. The shaded triangle between the two is the welfare loss from over-production.</p>",
-      "svgRef": "/images/diagrams/svg/overproduction.svg",
-      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
-      "svgAlt": "Externality diagram with MSC above S equals MPC and D equals MPB equals MSB, showing market output Q1 beyond the social optimum Q2 and a shaded welfare loss triangle"
-    },
-    {
-      "id": "edexcel-a-1-2-2-chain-01",
-      "specCode": "1.2.2",
-      "topic": "1.2 How markets work",
-      "subtopic": "1-2-2-demand",
-      "cardType": "chain",
-      "difficulty": "standard",
-      "tags": [
-        "demand",
-        "chain-of-reasoning"
-      ],
-      "front": "<p>Build the <strong>chain of reasoning</strong>: how does a rise in consumer incomes affect the market for a normal good?</p>",
-      "back": "<p>Incomes rise, so consumers’ purchasing power rises. At every price they are now willing and able to buy more, shifting demand right from D1 to D2. At the original price there is briefly excess demand, which bids the price up until the market reaches a new equilibrium at a higher price and quantity.</p><p>For an <em>inferior</em> good the chain runs the other way — higher incomes shift demand left.</p>",
-      "svgRef": null,
-      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html"
-    },
-    {
-      "id": "edexcel-a-1-3-2-chain-01",
-      "specCode": "1.3.2",
-      "topic": "1.3 Market failure",
-      "subtopic": "1-3-2-externalities",
-      "cardType": "chain",
-      "difficulty": "stretch",
-      "tags": [
-        "externalities",
-        "chain-of-reasoning"
-      ],
-      "front": "<p>Build the <strong>chain of reasoning</strong>: why does a free market over-produce a good with negative production externalities?</p>",
-      "back": "<p>Producers base output decisions only on their private costs. External costs — pollution, congestion — fall on third parties and never enter the firm’s calculation, so MPC understates MSC. The market price is therefore too low and output settles at Q1, beyond the social optimum Q2, creating a welfare loss on every unit in between.</p>",
-      "svgRef": null,
-      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html"
     },
     {
       "id": "edexcel-a-1-2-9-eval-01",
@@ -424,6 +733,40 @@
       "back": "<p>The UK <strong>Soft Drinks Industry Levy</strong> (April 2018) charges 18p per litre on drinks with 5–8g of sugar per 100ml, and 24p per litre above 8g.</p><p>Application point: manufacturers reformulated to duck the thresholds — the sugar content of taxed drinks fell by over a third — so the levy worked mainly through <em>supply-side</em> reformulation rather than the price mechanism alone.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html"
+    },
+    {
+      "id": "edexcel-a-1-3-2-diagram-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a negative production externality.</p>",
+      "back": "<p>Producers face only their private costs, so external costs are ignored and MSC lies above MPC. The market produces at Q1, where MPC = MPB, but the social optimum is Q2, where MSC = MSB. The shaded triangle between the two is the welfare loss from over-production.</p>",
+      "svgRef": "/images/diagrams/svg/overproduction.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+      "svgAlt": "Externality diagram with MSC above S equals MPC and D equals MPB equals MSB, showing market output Q1 beyond the social optimum Q2 and a shaded welfare loss triangle"
+    },
+    {
+      "id": "edexcel-a-1-3-2-chain-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "externalities",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: why does a free market over-produce a good with negative production externalities?</p>",
+      "back": "<p>Producers base output decisions only on their private costs. External costs — pollution, congestion — fall on third parties and never enter the firm’s calculation, so MPC understates MSC. The market price is therefore too low and output settles at Q1, beyond the social optimum Q2, creating a welfare loss on every unit in between.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html"
     }
   ]
 }
