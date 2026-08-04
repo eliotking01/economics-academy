@@ -239,6 +239,58 @@ reflows it and the build stops being idempotent.
 The full glossary is real HTML in the page, not fetched — it must be readable
 with JavaScript off. `js/components/glossary-filter.js` only enhances.
 
+## Flashcards
+
+In progress on `flashcards-feature`. **Read `docs/FLASHCARDS_PROGRESS.md`
+first.**
+
+Interactive revision flashcards at `/flashcards/`, one deck per board per
+theme, with Leitner spaced repetition in localStorage. Pilot: Edexcel Theme 1
+plus AQA variant cards. Supersedes ROADMAP's "flashcard mode on the glossary"
+idea.
+
+- `flashcards-data/<board>/<theme>.json` — hand-authored source of truth,
+  excluded from publishing. Card text is card-optimised prose cross-checked
+  against `glossary-data/terms.json` and the specs; where a notes chip
+  definition is already tight it is reused verbatim and tagged
+  `origin="notes-verbatim"`.
+- `flashcards/**` and `flashcards/data/*.json` — **generated** by
+  `scripts/build_flashcards.py`. Do not hand-edit; re-run it. Cards with
+  `premium: true` never enter the public payloads.
+- `images/diagrams/svg/` — hand-authored SVG diagrams for diagram cards, per
+  `docs/DIAGRAM_STYLE.md`. Each is verified against its ground-truth PNG in
+  `images/diagrams/` and self-QA'd via a headless-Chrome render before review.
+- `js/components/flashcards.js` — progressive enhancement over static sample
+  cards; the deck JSON is fetched at runtime (question-search.js pattern).
+
+### Architectural note
+
+Future freemium will use Stripe payment links, which cannot gate static
+content by themselves. Premium gating will eventually require a lightweight
+auth/delivery layer (e.g. Cloudflare Workers) serving premium JSON. Nothing in
+this feature may assume client-side-only paywalling is sufficient; the premium
+flag in the data schema exists so premium cards can later be excluded from
+public payloads without restructuring. If the repo is public, premium content
+ultimately cannot live in this repo at all. (The repo **is** public.)
+
+### Standing rules
+
+1. Never edit any existing written content on the site without my explicit
+   approval in chat. You may always ask.
+2. All flashcard content must be exam-board accurate. Where Edexcel A and AQA
+   define or treat a concept differently, create separate board-specific cards
+   and diagram variants.
+3. The data model and code must remain freemium-ready per the ARCHITECTURAL
+   NOTE in CLAUDE.md.
+4. Every generated diagram must be verified against the existing diagram image
+   (visually inspected, never trusted by filename) and its caption in the notes,
+   must follow docs/DIAGRAM_STYLE.md, and must pass the SVG-to-PNG self-QA
+   visual check before being presented for approval.
+5. Update docs/FLASHCARDS_PROGRESS.md before ending any session and whenever
+   context is running long, so a fresh session can resume seamlessly.
+6. Present significant decisions as options with a recommendation; wait for my
+   choice.
+
 ## See also
 
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
@@ -247,6 +299,10 @@ with JavaScript off. `js/components/glossary-filter.js` only enhances.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
 - `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
+- `docs/FLASHCARDS_PROGRESS.md` — live state of the flashcards build.
+- `docs/DIAGRAM_STYLE.md` — the locked SVG diagram style guide.
+- `docs/CONTENT_ISSUES.md` — suspected notes errors found while writing cards;
+  logged for approval, never fixed unilaterally.
 - `extraction-qa-report.md` — Phase 1 extraction QA for that bank.
 - `ROADMAP.md` — planned work.
 - `QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.

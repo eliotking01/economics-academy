@@ -19,15 +19,17 @@ errors. Findings, not intentions.
   authored definitions in `_working/glossary/authored-review.md` — they are the
   only entries on the site that are not the notes' own words.
 
+- **Interactive flashcards** (`/flashcards/`), in progress on
+  `flashcards-feature` — see `docs/FLASHCARDS_PROGRESS.md`. Supersedes the
+  "flashcard mode on the glossary" idea that used to sit under Someday: the
+  glossary's extracted terms (`glossary-data/terms.json`) are folded in as the
+  cross-check source for definition cards.
+
 ## Next
 
 _Nothing recorded yet._
 
 ## Someday
-
-- **Flashcard / self-test mode on the glossary.** Explicitly out of scope for
-  v1. The data model already supports it: `glossary-data/terms.json` holds term,
-  definition and source separately, so a test mode needs no re-extraction.
 - **Migrate the revision notes from MathJax to KaTeX.** The glossary
   pre-renders KaTeX at build time; the 125 LaTeX-bearing notes pages still load
   MathJax 3 from a CDN. Until they converge, the same formula looks slightly
