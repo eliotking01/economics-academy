@@ -1,0 +1,927 @@
+{
+  "_comment": [
+    "Definitions written for the glossary, not lifted from the notes.",
+    "",
+    "Everything else in the glossary reproduces the revision notes word for word.",
+    "These do not, and they are the ONLY entries that do not. They exist because",
+    "the notes teach the concept without ever defining it, and the specification",
+    "requires it. Every one is tagged origin=\"authored\" through to the page, and",
+    "is excluded from the verbatim check in scripts/verify_glossary.py because",
+    "there is nothing in the notes for it to match.",
+    "",
+    "This file is meant to shrink. Add the definition to its notes page as a",
+    "key-definition chip and the extractor picks it up; the entry here then",
+    "becomes a duplicate, which the build reports as an error so it gets removed.",
+    "",
+    "term       what to call it",
+    "boards     which boards' specifications require it",
+    "definition the definition. UK English, A-Level register, plain and precise",
+    "notes      board -> the topic page that teaches the concept, for the link"
+  ],
+  "terms": [
+    {
+      "term": "Aggregate Supply",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The total output of goods and services that firms in an economy are willing and able to supply at each price level in a given period.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html"
+      }
+    },
+    {
+      "term": "Automatic Stabilisers",
+      "boards": [
+        "aqa"
+      ],
+      "definition": "Features of government spending and taxation that dampen the economic cycle without any deliberate decision, as tax receipts fall and benefit payments rise automatically in a downturn.",
+      "notes": {
+        "aqa": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
+      }
+    },
+    {
+      "term": "Balance of Payments",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A record of all financial transactions between one country and the rest of the world over a period, made up of the current account, the capital account and the financial account.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html"
+      }
+    },
+    {
+      "term": "Barriers to Entry",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Obstacles that make it difficult for new firms to enter a market, such as high sunk costs, patents, brand loyalty or control of a key input. They allow existing firms to sustain supernormal profit.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-1-market-structures.html"
+      }
+    },
+    {
+      "term": "Capital Goods",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Goods bought by firms to produce other goods and services, such as machinery, tools and factories, rather than to satisfy consumer wants directly.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html"
+      }
+    },
+    {
+      "term": "Circular Flow of Income",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The model showing income moving between households and firms, with <strong>injections</strong> from investment, government spending and exports, and <strong>withdrawals</strong> through saving, taxation and imports.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html"
+      }
+    },
+    {
+      "term": "Claimant Count",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A measure of unemployment based on the number of people claiming unemployment-related benefits. It usually gives a lower figure than the Labour Force Survey, because not everyone seeking work claims.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+      }
+    },
+    {
+      "term": "Competition Policy",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "Government and regulator action to promote competition and protect consumers, covering merger control, action against anti-competitive practices and the regulation of monopoly power.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-6-1-government-intervention.html"
+      }
+    },
+    {
+      "term": "Complementary Goods",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Goods bought and used together, so that a fall in the price of one raises demand for the other. They have a <strong>negative cross elasticity of demand</strong>.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html"
+      }
+    },
+    {
+      "term": "Concentration Ratio",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The share of total market output or revenue held by the largest firms in a market. A five-firm concentration ratio of 80% means the five largest firms account for 80% of the market.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-4-oligopoly.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-5-oligopoly.html"
+      }
+    },
+    {
+      "term": "Consumer Goods",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Goods and services bought by households to satisfy wants directly, rather than to produce something else.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html"
+      }
+    },
+    {
+      "term": "Contestable Market",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A market in which barriers to entry and exit are low and sunk costs are minimal, so the <strong>threat</strong> of new entry keeps incumbent firms from earning supernormal profit.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-7-contestability.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html"
+      }
+    },
+    {
+      "term": "Cost-Benefit Analysis",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "A method of appraising a project by valuing all its social costs and social benefits, not only the private ones, and proceeding where social benefit exceeds social cost.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html"
+      }
+    },
+    {
+      "term": "Current Account Deficit",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A position in which the money leaving a country to pay for imports, income and transfers exceeds the money entering it, so the current account balance is negative.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html"
+      }
+    },
+    {
+      "term": "Deregulation",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "The removal of legal barriers and rules governing a market, intended to increase competition and efficiency by making entry easier.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html"
+      }
+    },
+    {
+      "term": "Derived Demand",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Demand for a good or factor that arises not for its own sake but because it is needed to produce something else. Demand for labour is derived from demand for the output that labour produces.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html"
+      }
+    },
+    {
+      "term": "Economies of Scale",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The fall in <strong>long-run average cost</strong> as a firm increases its scale of output. Internal economies come from the growth of the firm itself; external economies come from the growth of the industry.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html"
+      }
+    },
+    {
+      "term": "Elasticity",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A measure of how responsive one variable is to a change in another, calculated as the percentage change in the first divided by the percentage change in the second.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-4-price-elasticity-of-supply.html"
+      }
+    },
+    {
+      "term": "Equilibrium Price",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The price at which the quantity demanded equals the quantity supplied, so there is no tendency for price to change. It is also called the <strong>market-clearing price</strong>.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html"
+      }
+    },
+    {
+      "term": "Excess Demand",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The amount by which quantity demanded exceeds quantity supplied when price is <strong>below</strong> equilibrium, creating a shortage that puts upward pressure on price.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html"
+      }
+    },
+    {
+      "term": "Excess Supply",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The amount by which quantity supplied exceeds quantity demanded when price is <strong>above</strong> equilibrium, creating a surplus that puts downward pressure on price.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html"
+      }
+    },
+    {
+      "term": "Exchange Rate",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The price of one currency expressed in terms of another. It determines the domestic price of imports and the foreign price of exports.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html"
+      }
+    },
+    {
+      "term": "External Benefit",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The benefit of an economic activity that accrues to third parties rather than to the producer or consumer, measured as social benefit minus private benefit.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+      }
+    },
+    {
+      "term": "External Cost",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The cost of an economic activity that falls on third parties rather than on the producer or consumer, measured as social cost minus private cost.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+      }
+    },
+    {
+      "term": "Factors of Production",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The resources used to produce goods and services: <strong>land</strong>, <strong>labour</strong>, <strong>capital</strong> and <strong>enterprise</strong>.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html"
+      }
+    },
+    {
+      "term": "Free Rider Problem",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The problem that, because a public good is non-excludable, people can consume it without paying. Firms therefore cannot charge for it and the free market fails to provide it.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+      }
+    },
+    {
+      "term": "Functions of Money",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The four roles money performs: a <strong>medium of exchange</strong>, a <strong>measure of value</strong>, a <strong>store of value</strong> and a <strong>method of deferred payment</strong>.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-4-2-specialisation-division-of-labour-and-exchange.html"
+      }
+    },
+    {
+      "term": "Game Theory",
+      "boards": [
+        "aqa"
+      ],
+      "definition": "The study of how interdependent firms make decisions when the best choice for each depends on what rivals do. It is used to explain collusion and price rigidity in oligopoly.",
+      "notes": {
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-5-oligopoly.html"
+      }
+    },
+    {
+      "term": "Geographical Immobility",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "The barriers that stop workers moving between areas to take up work, such as housing costs, family ties and regional differences in the cost of living.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-5-2-supply-of-labour.html"
+      }
+    },
+    {
+      "term": "Gini Coefficient",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A measure of income or wealth inequality derived from the Lorenz curve, running from <strong>0</strong> for perfect equality to <strong>1</strong> for perfect inequality.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html"
+      }
+    },
+    {
+      "term": "Human Development Index",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A composite measure of development combining life expectancy, mean and expected years of schooling, and gross national income per head, scored between <strong>0</strong> and <strong>1</strong>.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html"
+      }
+    },
+    {
+      "term": "Index number",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "A figure expressing the value of a variable relative to a <strong>base year</strong>, which is set to 100. An index of 112 means the value is 12% above its base-year level.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+      }
+    },
+    {
+      "term": "Intervention",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Government action to correct market failure or to change the outcome a free market would produce, through measures such as taxation, subsidies, regulation and direct provision.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
+      }
+    },
+    {
+      "term": "J-Curve Effect",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The pattern by which a depreciation first <strong>worsens</strong> the current account, because contracts and habits fix quantities in the short run, and only improves it once demand has had time to respond.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html"
+      }
+    },
+    {
+      "term": "Labour Productivity",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Output per worker, or output per hour worked, over a given period. It is the main measure of how efficiently labour is being used.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-4-1-production-and-productivity.html"
+      }
+    },
+    {
+      "term": "Laffer Curve",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The curve showing that tax revenue rises with the tax rate up to a point and falls beyond it, because very high rates discourage work, encourage avoidance and shrink the tax base.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
+      }
+    },
+    {
+      "term": "Lorenz Curve",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A diagram plotting the cumulative share of income against the cumulative share of population. The further the curve lies below the 45-degree line of perfect equality, the greater the inequality.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html"
+      }
+    },
+    {
+      "term": "Marginal Revenue Product",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The extra revenue a firm gains from employing one more unit of a factor, found by multiplying its marginal physical product by marginal revenue. It is the firm's demand curve for labour.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-6-1-the-demand-for-labour-marginal-productivity-theory.html"
+      }
+    },
+    {
+      "term": "Median",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The middle value when data are ranked in order, so that half the values lie above it and half below. Median income is often preferred to mean income because it is not pulled upwards by a few very high earners.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html"
+      }
+    },
+    {
+      "term": "Monopoly",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A market structure in which a single firm supplies the whole market. In UK competition law a firm with a market share of <strong>25% or more</strong> is treated as having monopoly power.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html"
+      }
+    },
+    {
+      "term": "Monopsony",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A market with a single or dominant <strong>buyer</strong>, which can use its buying power to force down the price it pays - for example an employer that is the main purchaser of labour in a local market.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-6-monopsony.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-6-4-wage-determination-imperfectly-competitive-labour-markets.html"
+      }
+    },
+    {
+      "term": "Natural Monopoly",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A market in which economies of scale are so large relative to demand that one firm can supply the whole market at a lower average cost than two or more could. Water and rail infrastructure are examples.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html"
+      }
+    },
+    {
+      "term": "Negative Externality",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A cost imposed on a <strong>third party</strong> not involved in the transaction, so social cost exceeds private cost and the market over-produces relative to the socially optimal level.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+      }
+    },
+    {
+      "term": "Nominal GDP",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Gross domestic product measured at <strong>current prices</strong>, with no adjustment for inflation. It rises when prices rise even if output has not changed.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+      }
+    },
+    {
+      "term": "Occupational Immobility",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "The barriers that stop workers moving between jobs or industries, usually because they lack the skills, qualifications or training the new occupation requires.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-5-2-supply-of-labour.html"
+      }
+    },
+    {
+      "term": "Oligopoly",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A market structure dominated by a few large firms, with high barriers to entry and <strong>interdependence</strong>, so each firm must consider how rivals will react to its decisions.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-4-oligopoly.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-5-oligopoly.html"
+      }
+    },
+    {
+      "term": "Percentage Point Change",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The difference between two percentages, found by subtracting one from the other. A rise in interest rates from 4% to 6% is a rise of <strong>two percentage points</strong>, but a 50% increase - the two are not interchangeable.",
+      "group": {
+        "edexcel-a": "theme-2",
+        "aqa": "macroeconomics"
+      }
+    },
+    {
+      "term": "Perfect Competition",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A market structure with many buyers and sellers, an identical product, perfect information and no barriers to entry, in which firms are <strong>price takers</strong> and earn only normal profit in the long run.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html"
+      }
+    },
+    {
+      "term": "Phillips Curve",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The curve showing the short-run inverse relationship between unemployment and the rate of inflation. In the long run it is taken to be vertical at the natural rate of unemployment.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html"
+      }
+    },
+    {
+      "term": "Positive Externality",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A benefit received by a <strong>third party</strong> not involved in the transaction, so social benefit exceeds private benefit and the market under-produces relative to the socially optimal level.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+      }
+    },
+    {
+      "term": "Price Discrimination",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Charging different prices to different consumers for the same good, where the price difference does not reflect a difference in costs. It requires market power, the ability to separate consumers and different price elasticities of demand.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-7-price-discrimination.html"
+      }
+    },
+    {
+      "term": "Price Mechanism",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The way changing prices allocate scarce resources in a free market, through the <strong>rationing</strong>, <strong>incentive</strong> and <strong>signalling</strong> functions of price.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html"
+      }
+    },
+    {
+      "term": "Private Good",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A good that is <strong>rival</strong> and <strong>excludable</strong>, so one person's consumption prevents another's and non-payers can be shut out. Most goods traded in markets are private goods.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+      }
+    },
+    {
+      "term": "Privatisation",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "The transfer of assets or services from the public sector to the private sector, on the argument that the profit motive raises efficiency.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-6-1-government-intervention.html"
+      }
+    },
+    {
+      "term": "Productivity",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "Output per unit of input per period of time. Rising productivity means more output from the same resources, which lowers unit costs.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html"
+      }
+    },
+    {
+      "term": "Profit Maximisation",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The objective of producing at the level of output where marginal cost equals marginal revenue, so that the gap between total revenue and total cost is at its greatest.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html"
+      }
+    },
+    {
+      "term": "Public Good",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A good that is <strong>non-rival</strong> and <strong>non-excludable</strong>, so it will not be provided by the free market. National defence and street lighting are examples.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+      }
+    },
+    {
+      "term": "Purchasing power parity (PPP)",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "An exchange rate that equalises the cost of an identical basket of goods between two countries. It is used to compare living standards more fairly than market exchange rates allow.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
+      }
+    },
+    {
+      "term": "Quantiles",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Values that divide a distribution into equal-sized groups when the data are ranked in order. Quartiles divide it into four groups and deciles into ten; they are used to describe how income is spread.",
+      "group": {
+        "edexcel-a": "theme-4",
+        "aqa": "microeconomics"
+      }
+    },
+    {
+      "term": "Quantitative Easing",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A monetary policy in which the central bank creates money electronically to buy financial assets, mainly government bonds, in order to raise their price, lower yields and increase lending.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html"
+      }
+    },
+    {
+      "term": "Quota",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A physical limit on the quantity of a good that may be imported over a period. It restricts supply and so raises the domestic price.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-2-trade.html"
+      }
+    },
+    {
+      "term": "Rate of Change",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "How fast a variable is growing, as opposed to its <strong>level</strong>. Inflation falling is a fall in the rate of change of prices, not a fall in prices themselves.",
+      "group": {
+        "edexcel-a": "theme-2"
+      }
+    },
+    {
+      "term": "Rational Decision Making",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The assumption that economic agents weigh up costs and benefits and choose the option that maximises their own welfare - consumers maximising utility and firms maximising profit.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html"
+      }
+    },
+    {
+      "term": "Real GDP",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Gross domestic product adjusted for inflation, so that it measures the change in the <strong>volume</strong> of output rather than the change in prices. It is the measure used to judge economic growth.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
+      }
+    },
+    {
+      "term": "Real Income",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Income adjusted for inflation, measuring the quantity of goods and services it will actually buy. Real income falls when prices rise faster than nominal income.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html"
+      }
+    },
+    {
+      "term": "Returns to Scale",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "How output responds when <strong>all</strong> factors of production are increased together in the long run. Returns are increasing, constant or decreasing as output rises by more than, the same as, or less than the inputs.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-3/3-3-2-costs.html"
+      }
+    },
+    {
+      "term": "Seasonally Adjusted Figures",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "Data from which the regular within-year pattern has been removed, so that the underlying trend can be seen. Retail sales are seasonally adjusted to stop the December peak being read as growth.",
+      "group": {
+        "edexcel-a": "theme-2"
+      }
+    },
+    {
+      "term": "Subsidy",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A payment from government to producers that lowers their costs, shifting supply to the right so that output rises and price falls. It is used to encourage goods with positive externalities.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html"
+      }
+    },
+    {
+      "term": "Sustainable Development",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "Development that meets the needs of the present without reducing the ability of future generations to meet their own needs, by not depleting the natural capital growth depends on.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html"
+      }
+    },
+    {
+      "term": "Tariff",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A tax on imported goods, which raises their price to domestic consumers, reduces the quantity imported and raises revenue for the government.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-2-trade.html"
+      }
+    },
+    {
+      "term": "Terms of Trade",
+      "boards": [
+        "edexcel-a"
+      ],
+      "definition": "The ratio of a country's export prices to its import prices, expressed as an index. An improvement means each unit of exports buys more imports.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html"
+      }
+    },
+    {
+      "term": "Trading Bloc",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A group of countries that agree to reduce or remove trade barriers between themselves, ranging from a free trade area through a customs union to a single market.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-6-2-trade.html"
+      }
+    },
+    {
+      "term": "Unemployment Rate",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The number of people unemployed as a percentage of the <strong>labour force</strong> - that is, of those in work plus those unemployed and actively seeking work.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+      }
+    },
+    {
+      "term": "Welfare Loss",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "The loss of social welfare that arises when output is not at the socially optimal level, shown as the shaded triangle between the marginal social cost and marginal social benefit curves. Also called <strong>deadweight loss</strong>.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+      }
+    }
+  ],
+  "formulae": [
+    {
+      "label": "Percentage Change",
+      "boards": [
+        "edexcel-a"
+      ],
+      "latex": "\\text{\\% Change} = \\frac{\\text{New Value} - \\text{Old Value}}{\\text{Old Value}} \\times 100",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+      }
+    },
+    {
+      "label": "Index Number",
+      "boards": [
+        "edexcel-a"
+      ],
+      "latex": "\\text{Index Number} = \\frac{\\text{Value in Current Year}}{\\text{Value in Base Year}} \\times 100",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+      }
+    },
+    {
+      "label": "Mean",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "latex": "\\text{Mean} = \\frac{\\text{Sum of the Values}}{\\text{Number of Values}}",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
+      }
+    },
+    {
+      "label": "Converting to Real Terms",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "latex": "\\text{Real Value} = \\text{Nominal Value} \\times \\frac{\\text{Base Year Index}}{\\text{Current Year Index}}",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+        "aqa": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+      }
+    }
+  ]
+}

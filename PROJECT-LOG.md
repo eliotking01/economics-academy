@@ -204,3 +204,64 @@ page is touched, per `CLAUDE.md`.
 `PLAN-enrichment-aqa-macro.md`, `PLAN-enrichment-edexcel-theme-1.md`,
 `PLAN-enrichment-edexcel-theme-2.md`, `PLAN-enrichment-edexcel-theme-3.md`,
 `PLAN-enrichment-edexcel-theme-4.md`.
+
+---
+
+## 5. Glossary & formulae, 3–4 August 2026
+
+Every definition and formula a student needs, one page per exam board, at
+`/revision-notes/glossary/`. Branch `feature/glossary`. **Built and verified;
+not merged**, so nothing is live.
+
+| | |
+| --- | ---: |
+| Terms | **325** |
+| …Edexcel A / AQA | 269 / 290 |
+| Formulae | **34** |
+| …Edexcel A / AQA | 22 / 31 |
+| Extracted verbatim from the notes | 251 |
+| Written for the glossary | 74 |
+
+**How it works.** `scripts/extract_glossary.py` reads the 166 topic pages and
+writes `glossary-data/terms.json`; `scripts/build_glossary.py` renders the three
+pages, owns its `sitemap.xml` block and runs Prettier over its own output, so
+regenerating is byte-identical. Formulae are pre-rendered with KaTeX at build
+time, so the pages carry no maths JavaScript and work with JavaScript off.
+
+**The rule, and its one exception.** Definitions are the notes' own words,
+lifted verbatim. `scripts/verify_glossary.py` re-reads each notes page and fails
+if a shipped definition is no longer in it — the check is independent of the
+extractor, and was tested by tampering with a definition. The exception is
+`glossary-data/authored.json`: 74 definitions written to fill gaps the notes
+never covered, tagged `origin="authored"` through to the page, exempt from that
+check and counted separately so the exemption stays visible.
+
+**Judgement is kept out of the extractor** and in `glossary-data/curation.json`,
+which the scripts only read — the same split as `tags.json` against
+`taxonomy.json`. It holds the stop-list of rhetorical chip labels, merges,
+display names, and which sources to prefer or exclude.
+
+### What it found in the notes
+
+- **G3, fixed:** two AQA formulae wrote `%` unescaped. `%` begins a comment in
+  TeX, so they rendered broken on the live notes pages too. Three characters.
+- **Allocative, productive and dynamic efficiency had no definition anywhere.**
+  On six market-structure pages the chip introduces a Yes/No verdict about that
+  structure. Approving the two efficiency tables fixed all three.
+- **The four marginal propensities were undefined** while four multiplier
+  formulae depended on them. The multiplier tables supplied them.
+- **G1 and G2 remain open** — `2-1-3-employment-unemployment` has LaTeX but
+  never loads MathJax, and `.formula-box` has no CSS rule at all.
+
+### Still flagged
+
+- **The 74 authored definitions need their economics checked** —
+  `_working/glossary/authored-review.md`, 132 wordings.
+- **Links from the 166 topic pages** were deliberately deferred (P3a/P3b in
+  `_working/glossary/integration-proposals.md`). The nav item, the hub button
+  and the three gallery pages are done.
+- Sections C, D and F of `review-decisions.md` were never answered and took
+  their defaults: 16 heading-derived names, 33 chips without a colon, 6
+  definitions that run on into a list.
+
+Live state: `_working/glossary/PROGRESS.md`.

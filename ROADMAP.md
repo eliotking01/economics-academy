@@ -13,7 +13,11 @@ errors. Findings, not intentions.
 
 ## Now
 
-_Nothing recorded yet._
+- **Merge `feature/glossary`.** Built and verified; merging is what publishes
+  325 terms and 34 formulae across three pages. Deliberately left manual,
+  because `main` auto-publishes. Before merging, check the economics of the 74
+  authored definitions in `_working/glossary/authored-review.md` — they are the
+  only entries on the site that are not the notes' own words.
 
 ## Next
 
@@ -21,4 +25,15 @@ _Nothing recorded yet._
 
 ## Someday
 
-_Nothing recorded yet._
+- **Flashcard / self-test mode on the glossary.** Explicitly out of scope for
+  v1. The data model already supports it: `glossary-data/terms.json` holds term,
+  definition and source separately, so a test mode needs no re-extraction.
+- **Migrate the revision notes from MathJax to KaTeX.** The glossary
+  pre-renders KaTeX at build time; the 125 LaTeX-bearing notes pages still load
+  MathJax 3 from a CDN. Until they converge, the same formula looks slightly
+  different in the two places. Converging would also drop a CDN dependency and
+  make formulae render with JavaScript off site-wide.
+- **A downloadable PDF glossary per board.** Deliberately not in v1 — it needs a
+  headless browser or a PDF library on a repo with no build dependencies, and
+  becomes a second artefact that drifts from the page. The print stylesheet
+  covers Cmd+P. Revisit if students ask for it.

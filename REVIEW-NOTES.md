@@ -1457,3 +1457,134 @@ good tax system are genuinely missing and would need writing.
 
 **No question in the unit depends on any of the missing material.** All four sets
 were written to what the bodies teach.
+
+---
+
+# Found while building the glossary — Phase 0 discovery (2026-08-03)
+
+Two pre-existing faults surfaced by scanning all 166 topic pages for definitions
+and formulae. Neither is caused by the glossary work and neither is fixed here,
+per the house rule. Both are markup faults, not economics.
+
+## G1 — `2-1-3-employment-unemployment` had LaTeX but never loaded MathJax — **FIXED**
+
+`revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html` contains
+`\[ … \]` display formulae but does not include the MathJax configuration and
+script block that the other 125 LaTeX-bearing pages carry. Its formulae render
+on the live site as literal `\[ \text{...} \]`.
+
+It is the **only** page in this state. The distribution across the 166 pages is
+125 pages with both MathJax and LaTeX, 40 with neither, and this one with LaTeX
+and no loader. No page loads MathJax without needing it.
+
+**Fix:** paste the standard MathJax block — verbatim from any sibling page, it is
+byte-identical across all 125 — immediately after the page's own stylesheet link
+and before the JSON-LD. No wording changes.
+
+## G2 — `.formula-box` had no CSS rule anywhere in `css/` — **FIXED**
+
+`CLAUDE.md` documents `formula-box` as a component of
+`revision-notes-textbook.css` with the contract "Centred MathJax display". There
+is no such rule. `grep -rn "formula-box" --include='*.css'` returns nothing.
+
+All **51** instances across 29 pages currently render as an unstyled `<div>` —
+no centring, no background, no spacing. The `<!-- prettier-ignore -->` guard in
+front of each one is doing its job, so the LaTeX is intact; only the styling was
+never written. Compare `.revision-notes-content .key-definition`, which *is*
+styled, at line 112 of that stylesheet.
+
+Worth noting the sibling asymmetry: the two display formulae that sit in
+`<p><strong>` rather than in a `formula-box` (`4-1-4-terms-of-trade` and
+`4-1-9-international-competitiveness`) therefore look no worse than the 51 that
+use the documented component.
+
+**Fix:** either add the rule the documentation already promises, or amend the
+documentation. A decision either way, not an oversight.
+
+## G3 — two formulae wrote `%` unescaped, so they did not render — **FIXED**
+
+Found when the glossary generator pre-rendered every formula through KaTeX with
+`throwOnError` on. Two fail, and they fail for a reason that applies equally to
+MathJax on the notes pages: **`%` begins a comment in TeX.** Everything after it
+on the line is discarded, so the formula never closes its brace.
+
+| Page | Line | LaTeX as written |
+| --- | ---: | --- |
+| `aqa-a2-macro/2-1-2-macroeconomic-indicators.html` | 199 | `\text{% Change in Real GDP} = \text{% Change in Nominal GDP} - \text{Inflation Rate}` |
+| `aqa-a2-macro/2-1-3-uses-of-index-numbers.html` | 304 | `\text{% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` |
+
+**These are rendering broken on the live site today**, not only in the glossary.
+
+It is a typo rather than a convention: the notes write `\%` correctly in **39**
+other places, including `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` on the
+same board. These are the only two that miss it.
+
+**Fix:** change `%` to `\%` in three places across those two lines. No wording
+changes. Then remove `f-economic-growth-indicators` and
+`f-interpreting-index-numbers-2` from `formulaExclude` in
+`glossary-data/curation.json` and re-run the generator.
+
+**Fixed on 2026-08-04, on instruction.** Three `%` became `\%` across those two
+lines; no wording changed. Both formulae now render on their notes pages and in
+the AQA glossary, which goes from 27 formulae to 29. Percentage change is QS2 on
+both specifications, so it was the more valuable of the two.
+
+One thing this uncovered downstream: glossary formula ids were the section
+heading slug plus a positional counter, and formulae are sorted by their LaTeX.
+Adding a backslash moved one formula past another, the counter landed on the
+wrong one, and two curated labels silently swapped. Ids are now the heading slug
+plus a short hash of the LaTeX, so an id depends only on the formula it names.
+
+---
+
+# G1, G2 and the Section F fragments — fixed 4 August 2026, on instruction
+
+## G1 — fixed
+
+The standard MathJax configuration and loader block was inserted into
+`revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html`, copied
+byte-identically from its sibling `2-1-2-inflation.html` and placed in the same
+position every other LaTeX page uses — after the page stylesheet, before the
+JSON-LD. Confirmed in headless Chrome: **31 rendered MathJax containers, zero
+unrendered `\frac` left**. No visible wording changed; the addition is entirely
+inside `<script>`.
+
+A site-wide re-scan confirms **no page anywhere now carries LaTeX without
+MathJax**.
+
+Worth recording: the block is *not* byte-identical across the site. There are
+**three** variants, on 79, 18 and 10 pages. Copying from a sibling in the same
+directory sidesteps the question, but a future consolidation would have three
+things to reconcile, not one.
+
+## G2 — fixed
+
+`.revision-notes-content .formula-box` now exists in
+`css/pages/revision-notes-textbook.css`, where `CLAUDE.md` always said it did.
+All 51 instances across 29 pages had been rendering as an unstyled `div`.
+
+The rule uses the stylesheet's own tokens — `--light-bg`, `--border-light`,
+`--secondary-blue` — so it sits with `worked-example` and `exam-tip` rather than
+beside them. A long formula scrolls inside its own box rather than widening the
+page, the box does not break across a printed page, and the paragraphs inside it
+are spaced, since a box may hold a label, the formula and a gloss.
+
+## Section F — definitions that ran on into a list
+
+Five glossary definitions ended on a colon because the rest of them was the
+bulleted list that follows on the notes page. **No notes wording was changed.**
+The extractor now:
+
+- captures the `<ul>` that immediately follows, where there is one, so
+  `Quasi-public goods` and `Partial Market Failure` read as whole definitions;
+- otherwise drops the trailing clause that only introduces content the glossary
+  cannot show — `Competition` loses "The main market structures include:" and
+  nothing else. Removal only.
+
+One residue could not be fixed either way: the Edexcel `1.1.3` chip for
+**Factors of production** is a bare fragment followed by a table, not a list.
+That source is excluded in `curation.json` and the authored definition now
+covers both boards. **The Edexcel notes page still reads
+"Factors of production: the resources used to produce goods and services:"
+followed by a table** — correct in context on the page, but worth a look if you
+ever want that chip to stand alone.

@@ -1,0 +1,573 @@
+/*
+ * Glossary & formulae - /revision-notes/glossary/
+ *
+ * Every rule is nested under .glossary-page, the wrapper class on this page's
+ * <section id="main">, per the house convention. Bare class names have already
+ * collided across two stylesheets here.
+ *
+ * Colours are hex, not the :root tokens in revision-notes-textbook.css - those
+ * are for the notes pages only. The brand accent is #d52349. Body and muted
+ * greys are borrowed from css/pages/practice-questions.css so the section reads
+ * as part of the site.
+ */
+
+.glossary-page {
+  --gl-accent: #d52349;
+  --gl-body: #5d5d5d;
+  --gl-muted: #6b6b6b; /* 5.7:1 on #f7f7f7 - the inherited #7f888f is 3.4:1 */
+  --gl-border: #e0e0e0;
+  --gl-rule: #d3d9df;
+  --gl-card: #ffffff;
+}
+
+/*
+ * The UA rule for [hidden] is display:none, but any author display rule beats
+ * it. The filter toggles entries with .hidden = true, so without this they
+ * would stay on screen. css/pages/past-paper-questions.css documents the same
+ * trap.
+ */
+.glossary-page [hidden] {
+  display: none !important;
+}
+
+/* ---------------------------------------------------------------- breadcrumb
+ * Restated because the inherited #7f888f fails AA on #main's #f7f7f7.
+ */
+.glossary-page .breadcrumb {
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  color: var(--gl-muted);
+}
+
+.glossary-page .breadcrumb a {
+  color: #b91d3c;
+  text-decoration: underline;
+}
+
+.glossary-page .breadcrumb a:hover {
+  color: var(--gl-accent);
+}
+
+.glossary-page .breadcrumb .separator {
+  color: #9aa3aa;
+}
+
+/* Long words in a definition, and the KaTeX boxes, must never widen the page.
+ * The body scrolling sideways on a phone is the failure this prevents. */
+.glossary-page .gl-entry,
+.glossary-page .gl-text,
+.glossary-page .gl-def-list,
+.glossary-page .gl-source,
+.glossary-page .gl-also {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------------------------- hero */
+
+.glossary-page .gl-hero {
+  margin-bottom: 2.5em;
+}
+
+/* main.css leaves an <h1> inside #main at body size; the notes hub sizes its
+ * own with .notes-h1. Same treatment here rather than borrowing that class,
+ * which belongs to a different stylesheet. */
+.glossary-page .gl-hero h1 {
+  margin-bottom: 0.4em;
+  font-size: 2.4em;
+  line-height: 1.2;
+}
+
+.glossary-page .gl-intro {
+  max-width: 46em;
+  color: var(--gl-body);
+  line-height: 1.7;
+}
+
+.glossary-page .gl-stats {
+  margin-top: 1em;
+  font-size: 0.95em;
+  color: var(--gl-muted);
+}
+
+.glossary-page .gl-stats strong {
+  color: var(--gl-accent);
+}
+
+.glossary-page .gl-stats a {
+  margin-left: 0.6em;
+  color: #b91d3c;
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------- controls */
+
+.glossary-page .gl-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: flex-end;
+  padding: 1.25em;
+  margin-bottom: 1em;
+  background: var(--gl-card);
+  border: 1px solid var(--gl-border);
+  border-radius: 4px;
+}
+
+.glossary-page .gl-field {
+  display: flex;
+  flex: 1 1 16em;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.glossary-page .gl-field label {
+  font-size: 0.85em;
+  font-weight: 700;
+  color: var(--gl-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.glossary-page .gl-field input,
+.glossary-page .gl-field select {
+  width: 100%;
+  height: 2.75em;
+  padding: 0 0.75em;
+  font-size: 1em;
+  color: #333;
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+}
+
+.glossary-page .gl-field input:focus,
+.glossary-page .gl-field select:focus,
+.glossary-page .gl-clear:focus,
+.glossary-page .gl-atoz a:focus,
+.glossary-page .gl-clear-inline:focus {
+  outline: 3px solid var(--gl-accent);
+  outline-offset: 2px;
+}
+
+.glossary-page .gl-clear {
+  height: 2.75em;
+  padding: 0 1.25em;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #3f3f3f; /* 9.6:1 on #ececec - grey-on-white read as disabled */
+  cursor: pointer;
+  background: #ececec;
+  border: 1px solid #b5b5b5;
+  border-radius: 3px;
+}
+
+.glossary-page .gl-clear:hover {
+  color: #fff;
+  background: var(--gl-accent);
+  border-color: var(--gl-accent);
+}
+
+.glossary-page .gl-count {
+  margin-bottom: 1.5em;
+  font-size: 0.9em;
+  color: var(--gl-muted);
+}
+
+.glossary-page .gl-noscript p,
+.glossary-page .gl-empty {
+  padding: 1em 1.25em;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+  color: var(--gl-body);
+  background: #fff8e6;
+  border-left: 4px solid #e0a800;
+}
+
+.glossary-page .gl-clear-inline {
+  padding: 0;
+  font: inherit;
+  color: #b91d3c;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------- A to Z */
+
+.glossary-page .gl-atoz {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+  padding-bottom: 1.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--gl-rule);
+}
+
+.glossary-page .gl-atoz a,
+.glossary-page .gl-atoz span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2em;
+  height: 2.2em;
+  font-size: 0.95em;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.glossary-page .gl-atoz a {
+  color: #fff;
+  text-decoration: none;
+  background: var(--gl-accent);
+}
+
+.glossary-page .gl-atoz a:hover {
+  background: #a81b39;
+}
+
+/* Letters with no entries stay in place, greyed, so the strip does not reflow
+ * between the two boards. */
+.glossary-page .gl-atoz span {
+  color: #9aa3aa;
+  background: #ececec;
+}
+
+/* ---------------------------------------------------------------- formulae */
+
+.glossary-page .gl-formulae {
+  margin-bottom: 3em;
+}
+
+.glossary-page .gl-formulae-intro {
+  max-width: 46em;
+  color: var(--gl-body);
+}
+
+/* A formula is as wide as it is; 20em columns clipped the longer ones. These
+ * columns fit two per row on a desktop and one below 980px. min-width: 0 is
+ * load-bearing - a grid item defaults to min-width: auto, so without it a wide
+ * formula pushes the column out and the whole page scrolls sideways. */
+.glossary-page .gl-formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 28em), 1fr));
+  gap: 1.25em;
+}
+
+.glossary-page .gl-formula {
+  min-width: 0;
+  padding: 1.25em;
+  background: var(--gl-card);
+  border: 1px solid var(--gl-border);
+  border-top: 3px solid var(--gl-accent);
+  border-radius: 4px;
+}
+
+.glossary-page .gl-formula-name {
+  margin-bottom: 0.6em;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+}
+
+/* KaTeX sets its own font size; hold it to the page's scale and let a long
+ * formula scroll inside its own box rather than widening the page. */
+.glossary-page .gl-math {
+  max-width: 100%;
+  padding: 0.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.glossary-page .gl-math .katex-display {
+  margin: 0;
+}
+
+.glossary-page .gl-math .katex {
+  font-size: 1em;
+}
+
+/* ---------------------------------------------------------------- entries */
+
+.glossary-page .gl-letter {
+  margin-bottom: 2.5em;
+  scroll-margin-top: 1em;
+}
+
+.glossary-page .gl-letter-head {
+  padding-bottom: 0.2em;
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  color: var(--gl-accent);
+  border-bottom: 2px solid var(--gl-rule);
+}
+
+.glossary-page .gl-list {
+  margin: 0;
+}
+
+/* dl > div > dt + dd is valid HTML5 and gives the filter a single node to
+ * toggle per entry. */
+.glossary-page .gl-entry {
+  padding: 1.1em 1.25em;
+  margin-bottom: 0.75em;
+  background: var(--gl-card);
+  border: 1px solid var(--gl-border);
+  border-left: 3px solid var(--gl-accent);
+  border-radius: 3px;
+  scroll-margin-top: 1em;
+}
+
+.glossary-page .gl-entry:target {
+  border-left-width: 6px;
+  box-shadow: 0 0 0 3px rgba(213, 35, 73, 0.18);
+}
+
+.glossary-page .gl-term {
+  margin-bottom: 0.35em;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.glossary-page .gl-def {
+  margin: 0;
+  margin-left: 0;
+}
+
+.glossary-page .gl-text {
+  margin-bottom: 0.5em;
+  color: var(--gl-body);
+  line-height: 1.65;
+}
+
+/* The list that completes a definition which ends on a colon in the notes. It
+ * cannot live inside the <p>, so it sits after it inside the <dd>. */
+.glossary-page .gl-def-list {
+  margin: 0 0 0.6em 0;
+}
+
+.glossary-page .gl-def-list ul {
+  margin: 0;
+  padding-left: 1.3em;
+  list-style: disc;
+}
+
+.glossary-page .gl-def-list li {
+  padding-left: 0.2em;
+  color: var(--gl-body);
+  line-height: 1.6;
+}
+
+/* The list that completes a definition which ends on a colon in the notes. */
+.glossary-page .gl-def-list {
+  margin: 0 0 0.6em 0;
+}
+
+.glossary-page .gl-def-list ul {
+  margin: 0;
+  padding-left: 1.3em;
+  list-style: disc;
+}
+
+.glossary-page .gl-def-list li {
+  padding-left: 0.2em;
+  color: var(--gl-body);
+  line-height: 1.6;
+}
+
+.glossary-page .gl-source,
+.glossary-page .gl-also {
+  margin-bottom: 0;
+  font-size: 0.85em;
+  color: var(--gl-muted);
+}
+
+.glossary-page .gl-source a,
+.glossary-page .gl-also a {
+  color: #b91d3c;
+  text-decoration: underline;
+}
+
+/* Shown instead of a source link on the handful of entries whose concept the
+ * specification requires but no notes page covers yet. */
+.glossary-page .gl-nopage {
+  font-style: italic;
+  color: #8a6d00;
+}
+
+.glossary-page .gl-group {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  margin-right: 0.5em;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #fff;
+  background: #7a7a7a;
+  border-radius: 2px;
+}
+
+.glossary-page .gl-mark {
+  padding: 0 0.1em;
+  font-weight: 700;
+  color: inherit;
+  background: #ffe9b3;
+}
+
+/* ---------------------------------------------------------------- landing */
+
+.glossary-page .gl-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+  gap: 1.5em;
+  margin-bottom: 3em;
+}
+
+.glossary-page .gl-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75em;
+  background: var(--gl-card);
+  border: 1px solid var(--gl-border);
+  border-top: 4px solid var(--gl-accent);
+  border-radius: 4px;
+}
+
+.glossary-page .gl-card h2 {
+  margin-bottom: 0.3em;
+  font-size: 1.3em;
+}
+
+.glossary-page .gl-card h2 a {
+  color: #2f2f2f;
+  text-decoration: none;
+  border: 0;
+}
+
+.glossary-page .gl-card h2 a:hover {
+  color: var(--gl-accent);
+}
+
+.glossary-page .gl-card-count {
+  margin-bottom: 0.8em;
+  font-size: 0.9em;
+  color: var(--gl-muted);
+}
+
+.glossary-page .gl-card-count strong {
+  color: var(--gl-accent);
+}
+
+.glossary-page .gl-card p {
+  color: var(--gl-body);
+  line-height: 1.65;
+}
+
+.glossary-page .gl-card-button {
+  margin-top: auto;
+}
+
+.glossary-page .gl-more-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+}
+
+/* ---------------------------------------------------------------- mobile */
+
+@media screen and (max-width: 736px) {
+  .glossary-page .gl-controls {
+    padding: 1em;
+  }
+
+  .glossary-page .gl-field {
+    flex-basis: 100%;
+  }
+
+  .glossary-page .gl-clear {
+    width: 100%;
+  }
+
+  /* The strip scrolls sideways rather than wrapping to four rows. */
+  .glossary-page .gl-atoz {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .glossary-page .gl-atoz a,
+  .glossary-page .gl-atoz span {
+    flex: 0 0 auto;
+  }
+
+  .glossary-page .gl-formula-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glossary-page .gl-entry {
+    padding: 0.9em 1em;
+  }
+}
+
+/* ---------------------------------------------------------------- print
+ *
+ * A glossary is the one page on this site a student actually prints. Drop
+ * everything that is not a definition, and keep entries off page breaks.
+ */
+
+@media print {
+  .glossary-page .gl-controls,
+  .glossary-page .gl-count,
+  .glossary-page .gl-atoz,
+  .glossary-page .gl-empty,
+  .glossary-page .gl-noscript,
+  .glossary-page .gl-stats a,
+  .glossary-page .breadcrumb,
+  .glossary-page .gl-more {
+    display: none !important;
+  }
+
+  .glossary-page .gl-entry,
+  .glossary-page .gl-formula {
+    padding: 0.4em 0;
+    margin-bottom: 0.35em;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .glossary-page .gl-letter,
+  .glossary-page .gl-formula-grid {
+    break-inside: auto;
+  }
+
+  .glossary-page .gl-letter-head {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .glossary-page .gl-formula-grid {
+    display: block;
+  }
+
+  /* The spec code is the useful part on paper; the link target is not. */
+  .glossary-page .gl-source a,
+  .glossary-page .gl-also a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .glossary-page .gl-group {
+    color: #000;
+    background: none;
+    border: 1px solid #999;
+  }
+
+  .glossary-page .gl-text,
+  .glossary-page .gl-source {
+    color: #000;
+  }
+}
