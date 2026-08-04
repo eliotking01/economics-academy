@@ -1,0 +1,259 @@
+{
+  "generated": "2026-08-04",
+  "board": "aqa",
+  "boardName": "AQA",
+  "theme": "micro",
+  "themeName": "Microeconomics",
+  "deckId": "aqa-micro",
+  "deckTitle": "AQA A-Level Economics Microeconomics Flashcards",
+  "count": 13,
+  "topics": [
+    {
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "specCode": "1.2.3",
+      "title": "1.2.3 Aspects of Behavioural Economic Theory",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html",
+      "count": 4
+    },
+    {
+      "subtopic": "1-2-4-behavioural-economics-and-economic-policy",
+      "specCode": "1.2.4",
+      "title": "1.2.4 Behavioural Economics and Economic Policy",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-8-2-the-meaning-of-market-failure",
+      "specCode": "1.8.2",
+      "title": "1.8.2 The Meaning of Market Failure",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
+      "count": 1
+    },
+    {
+      "subtopic": "1-8-3-public-goods-private-goods-and-quasi-public-goods",
+      "specCode": "1.8.3",
+      "title": "1.8.3 Public Goods, Private Goods and Quasi-Public Goods",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "specCode": "1.8.4",
+      "title": "1.8.4 Positive and Negative Externalities in Consumption and Production",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-8-5-merit-and-demerit-goods",
+      "specCode": "1.8.5",
+      "title": "1.8.5 Merit and Demerit Goods",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html",
+      "count": 2
+    }
+  ],
+  "cards": [
+    {
+      "id": "aqa-1-2-3-def-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "behavioural"
+      ],
+      "front": "<p>Define <strong>bounded rationality</strong>.</p>",
+      "back": "<p><strong>Bounded rationality</strong> — the idea that individuals are limited in their ability to make rational decisions due to a lack of information, time or ability to process information.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html"
+    },
+    {
+      "id": "aqa-1-2-3-def-02",
+      "specCode": "1.2.3",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "behavioural"
+      ],
+      "front": "<p>Define <strong>bounded self-control</strong>.</p>",
+      "back": "<p><strong>Bounded self-control</strong> — the idea that individuals may not always act in their own best interests due to a lack of self control.</p><p>Example: knowing a gym habit pays off but failing to keep it — the reasoning behind commitment devices.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html"
+    },
+    {
+      "id": "aqa-1-2-3-def-03",
+      "specCode": "1.2.3",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "behavioural"
+      ],
+      "front": "<p>Define <strong>anchoring bias</strong>.</p>",
+      "back": "<p><strong>Anchoring bias</strong> — the idea that individuals may be influenced by the first piece of information they receive when making a decision, even if it is not relevant or accurate.</p><p>Example: a £100 product discounted to £80 reads as a bargain, judged against the anchor rather than rivals' prices.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html"
+    },
+    {
+      "id": "aqa-1-2-3-def-04",
+      "specCode": "1.2.3",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "behavioural"
+      ],
+      "front": "<p>Name the other <strong>behavioural biases</strong> in AQA's specification, beyond anchoring.</p>",
+      "back": "<ul><li><strong>Availability bias</strong> — judging by the information that comes to mind most easily.</li><li><strong>Framing bias</strong> — swayed by how information is presented ('90% fat free' vs '10% fat').</li><li><strong>Herding (social norms)</strong> — following others' choices rather than deciding independently.</li><li><strong>Rules of thumb</strong> — habitual shortcuts that save effort but can miss better options.</li><li><strong>Altruism</strong> — choices made to benefit others, not to maximise own utility.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html"
+    },
+    {
+      "id": "aqa-1-2-4-def-01",
+      "specCode": "1.2.4",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-4-behavioural-economics-and-economic-policy",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "behavioural"
+      ],
+      "front": "<p>Define a <strong>nudge</strong>.</p>",
+      "back": "<p><strong>Nudges</strong> — a concept in behavioural economics that refers to subtle interventions or changes in the choice architecture that influence people's behaviour in a predictable way without restricting their freedom of choice.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html"
+    },
+    {
+      "id": "aqa-1-2-4-app-01",
+      "specCode": "1.2.4",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-4-behavioural-economics-and-economic-policy",
+      "cardType": "application",
+      "difficulty": "stretch",
+      "tags": [
+        "behavioural",
+        "application",
+        "uk"
+      ],
+      "front": "<p>Give a <strong>real-world example</strong> of a nudge used in UK economic policy.</p>",
+      "back": "<p><strong>Workplace pension auto-enrolment</strong> (rolled out from 2012): the default was switched from opt-in to opt-out. Freedom of choice was untouched, but participation among eligible private-sector employees roughly doubled to nearly nine in ten.</p><p>Application point: changing the default exploited inertia — a textbook nudge working at national scale.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html"
+    },
+    {
+      "id": "aqa-1-8-2-def-01",
+      "specCode": "1.8.2",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-2-the-meaning-of-market-failure",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "market-failure"
+      ],
+      "front": "<p>Distinguish <strong>partial</strong> from <strong>complete</strong> market failure.</p>",
+      "back": "<p><strong>Partial market failure</strong> — the market provides the good, but in the wrong quantity: merit goods are under-provided, demerit goods over-provided.</p><p><strong>Complete market failure</strong> — when the market fails to provide a good or service at all e.g. public goods like national defence or street lighting: a missing market.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html"
+    },
+    {
+      "id": "aqa-1-8-3-def-01",
+      "specCode": "1.8.3",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-3-public-goods-private-goods-and-quasi-public-goods",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "public-goods"
+      ],
+      "front": "<p>Define a <strong>quasi-public good</strong>.</p>",
+      "back": "<p>A <strong>quasi-public good</strong> has some but not all of the characteristics of a public good — it is partially non-excludable or partially non-rival.</p><p>Examples: roads (excludable via tolls, rival when congested) and beaches. AQA expects you to place goods on the spectrum rather than in boxes.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+    },
+    {
+      "id": "aqa-1-8-3-def-02",
+      "specCode": "1.8.3",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-3-public-goods-private-goods-and-quasi-public-goods",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "public-goods"
+      ],
+      "front": "<p>Define <strong>common pool resources</strong>, and the problem they suffer.</p>",
+      "back": "<p><strong>Common pool resources</strong> — natural resources that are non-excludable but rivalrous, such as fish in the ocean or grazing land.</p><p>Because no one can be excluded but each use depletes the stock, they are over-exploited — the tragedy of the commons.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+    },
+    {
+      "id": "aqa-1-8-4-diagram-01",
+      "specCode": "1.8.4",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a negative production externality.</p>",
+      "back": "<p>Producers face only their private costs, so external costs are ignored and MSC lies above MPC. The market produces at Q1, where MPC = MPB, but the social optimum is Q2, where MSC = MSB. The shaded triangle between the two is the welfare loss from over-production.</p>",
+      "svgRef": "/images/diagrams/svg/overproduction.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "svgAlt": "Externality diagram with MSC above S equals MPC and D equals MPB equals MSB, showing market output Q1 beyond the social optimum Q2 and a shaded welfare loss triangle"
+    },
+    {
+      "id": "aqa-1-8-4-diagram-02",
+      "specCode": "1.8.4",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a positive consumption externality.</p>",
+      "back": "<p>Consumers count only their private benefits, so MSB lies above D=MPB. The market consumes at Q1, where MPB = MPC, but the social optimum is Q2, where MSB = MSC. The shaded triangle is the welfare loss from under-consumption.</p>",
+      "svgRef": "/images/diagrams/svg/underconsumption.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "svgAlt": "Externality diagram with MSB above D equals MPB and S equals MPC equals MSC, showing market output Q1 below the social optimum Q2 and a shaded welfare loss triangle"
+    },
+    {
+      "id": "aqa-1-8-5-def-01",
+      "specCode": "1.8.5",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-5-merit-and-demerit-goods",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "market-failure"
+      ],
+      "front": "<p>Define <strong>merit goods</strong>.</p>",
+      "back": "<p><strong>Merit goods</strong> — goods that exhibit positive externalities in their consumption or production, and are therefore under-provided by the market. Examples include education, healthcare, and public libraries.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html"
+    },
+    {
+      "id": "aqa-1-8-5-def-02",
+      "specCode": "1.8.5",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-5-merit-and-demerit-goods",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "market-failure"
+      ],
+      "front": "<p>Define <strong>demerit goods</strong>.</p>",
+      "back": "<p><strong>Demerit goods</strong> — goods that exhibit negative externalities in their consumption or production, and are therefore over-provided by the market. Examples include tobacco, alcohol, and sugary food.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html"
+    }
+  ]
+}
