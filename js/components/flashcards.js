@@ -320,11 +320,13 @@
         Math.round(((position + 1) / queue.length) * 100) + "%";
       meta.innerHTML =
         item.specCode +
-        " &middot; " +
+        ' <span class="fc-chip">' +
         item.cardType +
-        " &middot; " +
+        '</span><span class="fc-chip fc-chip-' +
         item.difficulty +
-        ' &middot; <a href="' +
+        '">' +
+        item.difficulty +
+        '</span> &middot; <a href="' +
         item.notesUrl +
         '">Read the notes</a>';
     }
