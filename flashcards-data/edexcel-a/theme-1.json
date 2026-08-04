@@ -1423,6 +1423,536 @@
         "notesPage": "/revision-notes/edexcel-theme-1/1-4-2-government-failure.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-a-1-1-1-def-02",
+      "specCode": "1.1.1",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-1-economics-as-a-social-science",
+      "cardType": "definition",
+      "front": "<p>Why is economics a <strong>social science</strong>, and why do economists build models?</p>",
+      "back": "<p>Economics studies human behaviour, so unlike natural sciences it cannot run controlled laboratory experiments. Economists instead build <strong>models</strong> — deliberate simplifications of reality — and test them against evidence, holding other factors constant (<em>ceteris paribus</em>) to isolate one relationship at a time.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-1-2-def-03",
+      "specCode": "1.1.2",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-2-positive-normative-statements",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>value judgement</strong>.</p>",
+      "back": "<p><strong>Value judgement</strong> — a view about what is morally or subjectively important. These judgements underpin all normative statements.</p><p>Exam link: economic policy always rests on value judgements about whose welfare matters most.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-2-positive-normative-statements.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a view about what is morally or subjectively important. These judgements underpin all normative statements."
+      }
+    },
+    {
+      "id": "edexcel-a-1-1-3-def-04",
+      "specCode": "1.1.3",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-3-the-economic-problem",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>renewable</strong> from <strong>non-renewable</strong> resources.</p>",
+      "back": "<p><strong>Renewable resources</strong> can be replenished over time (wind power, solar energy, forests), so their use can be sustainable.</p><p><strong>Non-renewable resources</strong> — finite and cannot be replenished once depleted (e.g., oil, coal, natural gas). Their use involves a high opportunity cost for future generations.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["economic-problem"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Finite and cannot be replenished once depleted (e.g., oil, coal, natural gas). Their use involves a high opportunity cost for future generations."
+      }
+    },
+    {
+      "id": "edexcel-a-1-1-4-diagram-02",
+      "specCode": "1.1.4",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-4-production-possibility-frontiers",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>economic growth</strong> and <strong>economic decline</strong> on a PPF, and give a cause of each.</p>",
+      "back": "<p>An outward shift from PPF1 to PPF2 shows economic growth — the economy can produce more of both goods. Causes: investment in capital, technological advance, a larger or better-educated workforce, discovery of resources.</p><p>An inward shift from PPF1 to PPF3 shows decline — natural disaster, war, or resource depletion.</p>",
+      "svgRef": "/images/diagrams/svg/ppf-growth-decline.svg",
+      "svgAlt": "Three concentric production possibility frontiers with an outward shift from PPF1 to PPF2 showing growth and an inward shift from PPF1 to PPF3 showing decline",
+      "difficulty": "standard",
+      "tags": ["ppf", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-1-5-eval-01",
+      "specCode": "1.1.5",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-5-specialisation-division-of-labour",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong> the division of labour. Give advantages and disadvantages.</p>",
+      "back": "<ul><li><strong>For</strong> — workers become highly skilled at one task, raising productivity; time is saved switching between tasks; workers can be matched to their strengths; supports use of specialist machinery.</li><li><strong>Against</strong> — repetitive work breeds boredom and lower motivation; workers' skills narrow, raising the risk of structural unemployment; over-dependence on each stage makes production vulnerable to disruption.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["specialisation", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-1-6-def-03",
+      "specCode": "1.1.6",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-6-types-of-economies",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>mixed economy</strong>.</p>",
+      "back": "<p>A <strong>mixed economy</strong> combines market allocation with government intervention: most resources are allocated by the price mechanism, while the state provides public goods, corrects market failures and redistributes income.</p><p>Every real economy is mixed — economies differ only in where they sit on the spectrum.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["economic-systems"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-6-types-of-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-1-6-eval-01",
+      "specCode": "1.1.6",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-6-types-of-economies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong>: free market versus command economy. Give the key points each way.</p>",
+      "back": "<ul><li><strong>Free market</strong> — prices allocate resources efficiently without a planner; competition drives innovation and choice. But: inequality, externalities ignored, public goods unprovided.</li><li><strong>Command</strong> — can direct resources to social priorities and limit inequality. But: information and incentive problems, shortages and surpluses, little innovation.</li><li>In practice the debate is about the <em>mix</em> — where intervention improves on the market and where it fails.</li></ul>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["economic-systems", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-1-6-types-of-economies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-2-def-02",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "definition",
+      "front": "<p>State the <strong>law of demand</strong>.</p>",
+      "back": "<p><strong>The law of demand</strong> — there is an inverse relationship between price and quantity demanded (QD). As price rises, QD falls (ceteris paribus).</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["demand"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "There is an inverse relationship between price and quantity demanded (QD). As price rises, QD falls (ceteris paribus)."
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-2-def-03",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>marginal utility</strong>, and explain how <strong>diminishing marginal utility</strong> underpins the demand curve.</p>",
+      "back": "<p><strong>Marginal utility (MU)</strong> — the extra satisfaction from consuming one more unit.</p><p>Each additional unit typically adds <em>less</em> satisfaction than the last. Because extra units are worth less to the consumer, they will only buy more at lower prices — which is why the demand curve slopes downwards.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["demand"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The extra satisfaction from consuming one more unit."
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-2-def-04",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "definition",
+      "front": "<p>List the main <strong>conditions of demand</strong> — the non-price factors that shift the demand curve.</p>",
+      "back": "<ul><li><strong>Incomes</strong> — more for normal goods, less for inferior goods.</li><li><strong>Prices of related goods</strong> — substitutes and complements.</li><li><strong>Tastes and fashions</strong>, including advertising.</li><li><strong>Population</strong> size and structure.</li><li><strong>Expectations</strong> of future prices.</li></ul><p>Any of these shifts the whole curve; a change in the good's own price only moves along it.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["demand"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-def-04",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "definition",
+      "front": "<p>Give the <strong>PED value ranges</strong> and what each means.</p>",
+      "back": "<ul><li><strong>0</strong> — perfectly inelastic: quantity does not respond at all.</li><li><strong>0 to −1</strong> — price inelastic: quantity changes proportionally less than price.</li><li><strong>−1</strong> — unit elastic: proportional changes are equal.</li><li><strong>−1 to −∞</strong> — price elastic: quantity changes proportionally more than price.</li><li><strong>−∞</strong> — perfectly elastic: any price rise loses all demand.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-def-05",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "definition",
+      "front": "<p>What <strong>determines</strong> whether a good's demand is price elastic or inelastic?</p>",
+      "back": "<ul><li><strong>Availability of substitutes</strong> — the strongest factor: close substitutes make demand elastic.</li><li><strong>Proportion of income</strong> spent on the good — big-ticket items are more elastic.</li><li><strong>Necessity or luxury</strong> — necessities are inelastic.</li><li><strong>Addictiveness</strong> — habit-forming goods are inelastic.</li><li><strong>Time period</strong> — demand becomes more elastic over time as consumers find alternatives.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-chain-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: a firm sells a good with price inelastic demand. What happens to its total revenue if it raises the price?</p>",
+      "back": "<p>Because demand is price inelastic, the percentage fall in quantity demanded is smaller than the percentage rise in price. The revenue gained on each remaining unit outweighs the revenue lost from the units no longer sold, so <strong>total revenue rises</strong>.</p><p>The reverse holds for elastic demand — cutting the price raises revenue. This is why PED is central to firms' pricing decisions.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["elasticity", "chain-of-reasoning"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-calc-02",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "calculation",
+      "front": "<p>The price of Good B rises by 10%, and the quantity demanded of Good A rises by 5%. Calculate the <strong>XED</strong> and state the relationship between the goods.</p>",
+      "back": "<p>XED = %Δ QD of A ÷ %Δ P of B = +5% ÷ +10% = <strong>+0.5</strong></p><p>The positive sign means the goods are <strong>substitutes</strong>; at 0.5 they are fairly weak ones — consumers switch, but not aggressively.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "calculation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-4-def-02",
+      "specCode": "1.2.4",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-4-supply",
+      "cardType": "definition",
+      "front": "<p>List the main <strong>conditions of supply</strong> — the non-price factors that shift the supply curve.</p>",
+      "back": "<ul><li><strong>Costs of production</strong> — wages, raw materials, energy.</li><li><strong>Technology</strong> — advances shift supply right.</li><li><strong>Indirect taxes and subsidies</strong>.</li><li><strong>Number of sellers</strong> in the market.</li><li><strong>Supply shocks</strong> — weather and disease, especially for agricultural goods.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-4-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-5-def-02",
+      "specCode": "1.2.5",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-5-price-elasticity-of-supply",
+      "cardType": "definition",
+      "front": "<p>What <strong>determines</strong> whether supply is price elastic or inelastic?</p>",
+      "back": "<ul><li><strong>Spare capacity</strong> — idle machines and workers make supply elastic.</li><li><strong>Stocks</strong> — goods that can be stored can be released quickly.</li><li><strong>Factor mobility</strong> — how easily labour and capital can be switched into production.</li><li><strong>Time period</strong> — supply is inelastic in the short run and more elastic in the long run, when all factors are variable.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-6-diagram-02",
+      "specCode": "1.2.6",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-6-price-determination",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>excess demand</strong> on a supply and demand diagram, and how the market corrects it.</p>",
+      "back": "<p>At P1, below the equilibrium Pe, quantity demanded Qd exceeds quantity supplied Qs — the bracketed gap is the shortage. Competing buyers bid the price up (the arrows), causing an extension of supply and a contraction of demand until the market returns to Pe and Qe.</p>",
+      "svgRef": "/images/diagrams/svg/excess-demand.svg",
+      "svgAlt": "Supply and demand diagram with a price below equilibrium, showing excess demand between Qs and Qd and arrows along both curves pointing up towards equilibrium",
+      "difficulty": "standard",
+      "tags": ["equilibrium", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-6-diagram-03",
+      "specCode": "1.2.6",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-6-price-determination",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>excess supply</strong> on a supply and demand diagram, and how the market corrects it.</p>",
+      "back": "<p>At P1, above the equilibrium Pe, quantity supplied Qs exceeds quantity demanded Qd — the bracketed gap is the surplus. Unsold stock pushes the price down (the arrows), causing a contraction of supply and an extension of demand until the market returns to Pe and Qe.</p>",
+      "svgRef": "/images/diagrams/svg/excess-supply.svg",
+      "svgAlt": "Supply and demand diagram with a price above equilibrium, showing excess supply between Qd and Qs and arrows along both curves pointing down towards equilibrium",
+      "difficulty": "standard",
+      "tags": ["equilibrium", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-9-diagram-03",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "diagram",
+      "front": "<p>Show the <strong>government revenue</strong> raised by a specific indirect tax.</p>",
+      "back": "<p>The tax shifts supply from S to S+Tax and output falls to Q2. Revenue = tax per unit (P2 to P3) × quantity sold (Q2) — the shaded rectangle. Note that revenue is earned only on the Q2 units still traded, which is why taxes on price inelastic goods raise the most.</p>",
+      "svgRef": "/images/diagrams/svg/indirect-tax-gov-revenue.svg",
+      "svgAlt": "Indirect tax diagram with the rectangle between P3 and P2 up to quantity Q2 shaded to show government tax revenue",
+      "difficulty": "standard",
+      "tags": ["indirect-tax", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-9-diagram-04",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "diagram",
+      "front": "<p>Show the incidence of an indirect tax when demand is <strong>price inelastic</strong>.</p>",
+      "back": "<p>With a steep (inelastic) demand curve, the price rises most of the way to the full tax: consumers bear the larger burden (P1 to P2) and producers the smaller (P3 to P1). Quantity falls only slightly — which is why governments tax inelastic goods like fuel and cigarettes: consumption barely falls and revenue is high.</p>",
+      "svgRef": "/images/diagrams/svg/indirect-tax-inelastic-demand.svg",
+      "svgAlt": "Indirect tax diagram with a steep demand curve, showing a large consumer burden, a small producer burden and only a small fall in quantity",
+      "difficulty": "stretch",
+      "tags": ["indirect-tax", "elasticity", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-9-diagram-05",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "diagram",
+      "front": "<p>Show the incidence of an indirect tax when demand is <strong>price elastic</strong>.</p>",
+      "back": "<p>With a shallow (elastic) demand curve, producers cannot pass the tax on: the price rises only slightly (P1 to P2), so producers bear the larger burden (P3 to P1) and quantity falls sharply from Q1 to Q2. Taxing elastic goods cuts consumption effectively but raises little revenue.</p>",
+      "svgRef": "/images/diagrams/svg/indirect-tax-elastic-demand.svg",
+      "svgAlt": "Indirect tax diagram with a shallow demand curve, showing a small consumer burden, a large producer burden and a large fall in quantity",
+      "difficulty": "stretch",
+      "tags": ["indirect-tax", "elasticity", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-9-eval-02",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong>: subsidising a good with positive externalities. What are the key evaluation points?</p>",
+      "back": "<ul><li><strong>Opportunity cost</strong> — the subsidy is funded by taxpayers; the money has alternative uses.</li><li><strong>Elasticity matters</strong> — with inelastic demand, output barely rises and the subsidy mostly lifts producer revenue.</li><li><strong>Dependency</strong> — firms may come to rely on the subsidy rather than cutting costs.</li><li><strong>Setting the level</strong> — the external benefit is hard to measure, so the subsidy may over- or under-correct.</li></ul>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["subsidy", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-eval-02",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong>: a minimum price on a demerit good. What are the key evaluation points?</p>",
+      "back": "<ul><li><strong>PED is decisive</strong> — if demand is inelastic (alcohol for dependent drinkers), consumption falls little.</li><li><strong>Regressive</strong> — the higher price takes a larger share of low incomes.</li><li><strong>Surplus problem</strong> — in goods markets a binding floor leaves unsold output unless the government buys it.</li><li><strong>Producer support</strong> — unlike a tax, the higher price accrues to sellers, not the state: no revenue to fund treatment or offsets.</li><li><strong>Substitution</strong> — consumers may switch to untaxed or illicit alternatives.</li></ul>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["price-controls", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-eval-03",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong>: tradable pollution permits. What are the key evaluation points?</p>",
+      "back": "<ul><li><strong>Quantity certainty</strong> — the cap fixes total emissions directly, unlike a tax.</li><li><strong>Efficiency</strong> — firms with the cheapest abatement cut most and sell spare permits, minimising the total cost of reduction.</li><li><strong>Price volatility</strong> — the permit price can swing, weakening investment incentives.</li><li><strong>Setting the cap</strong> — too generous and the price collapses; monitoring and enforcement are costly.</li><li><strong>Leakage</strong> — production may relocate to countries without a scheme.</li></ul>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["intervention", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-app-02",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "application",
+      "front": "<p>Give a <strong>real-world example</strong> of tradable pollution permits in use in the UK.</p>",
+      "back": "<p>The <strong>UK Emissions Trading Scheme</strong> (UK ETS, launched January 2021 after leaving the EU scheme) caps emissions from energy-intensive industry, electricity generation and domestic aviation, with the cap tightening over time.</p><p>Application point: the cap guarantees the quantity of emissions while the permit price does the rationing — the textbook mechanism operating at national scale.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["intervention", "application", "uk"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-2-chain-01",
+      "specCode": "1.4.2",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-2-government-failure",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how could a well-intentioned subsidy end in government failure?</p>",
+      "back": "<p>The government cannot observe the true external benefit, so it sets the subsidy by estimate. Set too high, it pulls resources beyond the social optimum and the excess spending carries an opportunity cost elsewhere. Meanwhile the subsidised price distorts the signals other producers rely on, and firms lobby to keep the payment long after any justification has gone. The intervention can end up creating a larger welfare loss than the market failure it targeted — government failure.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["government-failure", "chain-of-reasoning"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-2-government-failure.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }

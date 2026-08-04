@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Excess supply</title>
+  <desc id="d">At a price P1 set above the equilibrium price Pe, quantity supplied QS exceeds quantity demanded QD. The horizontal gap between them is excess supply — a surplus — and the arrows along the curves show the price falling back towards equilibrium.</desc>
+  <!-- geometry
+       intersections: 360,300
+       on-curve: 300,240 420,240
+  -->
+  <defs>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <!-- guides -->
+  <line x1="100" y1="300" x2="360" y2="300" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="360" y1="300" x2="360" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="240" x2="420" y2="240" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="300" y1="240" x2="300" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="420" y1="240" x2="420" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="170" y1="490" x2="590" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="110" x2="550" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- adjustment arrows -->
+  <line x1="310" y1="250" x2="340" y2="280" stroke="#333333" stroke-width="2.5" marker-end="url(#arrow-dark)"/>
+  <line x1="410" y1="250" x2="380" y2="280" stroke="#333333" stroke-width="2.5" marker-end="url(#arrow-dark)"/>
+  <!-- surplus bracket -->
+  <line x1="300" y1="225" x2="420" y2="225" stroke="#333333" stroke-width="2"/>
+  <line x1="300" y1="219" x2="300" y2="231" stroke="#333333" stroke-width="2"/>
+  <line x1="420" y1="219" x2="420" y2="231" stroke="#333333" stroke-width="2"/>
+  <text x="360" y="205" font-size="22" fill="#333333" text-anchor="middle">Excess supply</text>
+  <!-- labels -->
+  <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="558" y="498" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="92" y="248" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="92" y="308" font-size="24" fill="#333333" text-anchor="end">Pe</text>
+  <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Qd</text>
+  <text x="360" y="552" font-size="24" fill="#333333" text-anchor="middle">Qe</text>
+  <text x="420" y="552" font-size="24" fill="#333333" text-anchor="middle">Qs</text>
+</svg>

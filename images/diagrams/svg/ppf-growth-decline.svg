@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Shifts of the production possibility frontier</title>
+  <desc id="d">Three concentric production possibility frontiers. An outward shift from PPF1 to PPF2 shows economic growth — more of both goods can be produced. An inward shift from PPF1 to PPF3 shows economic decline.</desc>
+  <!-- geometry
+       on-curve: 422.5,290 482.5,232.5 362.5,347.5
+  -->
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d52349"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0f7b6c"/>
+    </marker>
+  </defs>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Capital goods</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Consumer goods</text>
+  <!-- curves -->
+  <path d="M100 270 Q430 300 490 520" fill="none" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M100 190 Q510 225 570 520" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M100 110 Q590 150 650 520" fill="none" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- shift arrows -->
+  <line x1="545" y1="405" x2="605" y2="405" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <line x1="520" y1="360" x2="460" y2="360" stroke="#0f7b6c" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <!-- labels -->
+  <text x="408" y="505" font-size="24" font-weight="700" fill="#0f7b6c">PPF3</text>
+  <text x="488" y="505" font-size="24" font-weight="700" fill="#1d70b8">PPF1</text>
+  <text x="658" y="505" font-size="24" font-weight="700" fill="#d52349">PPF2</text>
+</svg>
