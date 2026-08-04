@@ -3,17 +3,17 @@
   "site": "https://economicsacademy.co.uk",
   "stats": {
     "pages": 166,
-    "termsExtracted": 476,
-    "uniqueTerms": 255,
-    "termsOnBothBoards": 157,
-    "termsWithVariantDefinitions": 36,
-    "termsNeedingReview": 84,
+    "termsExtracted": 500,
+    "uniqueTerms": 263,
+    "termsOnBothBoards": 164,
+    "termsWithVariantDefinitions": 31,
+    "termsNeedingReview": 79,
     "displayFormulae": 72,
-    "uniqueFormulae": 49,
-    "formulaeExcludedByCuration": 0,
+    "uniqueFormulae": 28,
+    "formulaeExcludedByCuration": 21,
     "tableCandidates": 9,
-    "tablesApproved": 0,
-    "termsFromTables": 0,
+    "tablesApproved": 6,
+    "termsFromTables": 24,
     "inlineFormulaeNotExtracted": 162,
     "chipsSkipped": 156
   },
@@ -181,7 +181,7 @@
     },
     {
       "id": "allocative-efficiency",
-      "term": "Allocative efficiency",
+      "term": "Allocative Efficiency",
       "key": "allocative efficiency",
       "letter": "A",
       "boards": [
@@ -189,78 +189,32 @@
         "edexcel-a"
       ],
       "origin": [
-        "chip"
+        "table"
       ],
-      "definitionVariants": 3,
-      "review": [
-        "3 different wordings across its sources"
-      ],
+      "definitionVariants": 1,
+      "review": [],
       "sources": [
         {
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.5.3",
-          "topic": "Perfect Competition",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html",
-          "termAsWritten": "Allocative efficiency",
-          "origin": "chip",
-          "definitionHtml": "Yes - Firms in perfect competition produce where \\( MC = AR \\), ensuring that resources are allocated efficiently."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.5.4",
-          "topic": "Monopolistic Competition",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html",
-          "termAsWritten": "Allocative efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce where \\( P = MC \\), so resources are not allocated efficiently"
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.5.6",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
-          "termAsWritten": "Allocative efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce where \\( AR = MC \\), so resources are not allocated efficiently and there is a welfare loss to society."
+          "spec": "1.5.10",
+          "topic": "Market Structure, Static Efficiency, Dynamic Efficiency and Resource Allocation",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html",
+          "termAsWritten": "Allocative Efficiency",
+          "origin": "table",
+          "definitionHtml": "Resources are allocated to produce the <strong>optimal mix of goods and services</strong> that meet the wants and needs of society, maximising <strong>society's welfare</strong>."
         },
         {
           "board": "edexcel-a",
           "group": "theme-3",
           "groupLabel": "Theme 3",
-          "spec": "3.4.2",
-          "topic": "Perfect Competition",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html",
-          "termAsWritten": "Allocative efficiency",
-          "origin": "chip",
-          "definitionHtml": "Yes - Firms in perfect competition produce where \\( MC = AR \\), ensuring that resources are allocated efficiently."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-3",
-          "groupLabel": "Theme 3",
-          "spec": "3.4.3",
-          "topic": "Monopolistic Competition",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html",
-          "termAsWritten": "Allocative efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce where \\( P = MC \\), so resources are not allocated efficiently"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-3",
-          "groupLabel": "Theme 3",
-          "spec": "3.4.5",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
-          "termAsWritten": "Allocative efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce where \\( AR = MC \\), so resources are not allocated efficiently and there is a welfare loss to society."
+          "spec": "3.4.1",
+          "topic": "Efficiency",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-1-efficiency.html",
+          "termAsWritten": "Allocative Efficiency",
+          "origin": "table",
+          "definitionHtml": "Resources are allocated to produce the <strong>optimal mix of goods and services</strong> that meet the wants and needs of society, maximising <strong>society's welfare</strong>."
         }
       ]
     },
@@ -383,23 +337,11 @@
       "origin": [
         "chip"
       ],
-      "definitionVariants": 3,
+      "definitionVariants": 2,
       "review": [
-        "3 different wordings across its sources",
-        "definition ends in a colon - it runs on into a list"
+        "2 different wordings across its sources"
       ],
       "sources": [
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.2.2",
-          "topic": "Imperfect Information",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-2-2-imperfect-information.html",
-          "termAsWritten": "Asymmetric information",
-          "origin": "chip",
-          "definitionHtml": "a situation where one party in a transaction has more or better information than the other."
-        },
         {
           "board": "aqa",
           "group": "microeconomics",
@@ -410,6 +352,28 @@
           "termAsWritten": "Asymmetric information",
           "origin": "chip",
           "definitionHtml": "when one party in a transaction has more or better information than the other, distorting the market outcome."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.1",
+          "topic": "Types of market failure",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
+          "termAsWritten": "Asymmetric information",
+          "origin": "chip",
+          "definitionHtml": "when one party in a transaction has more or better information than the other, distorting the market outcome."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.2.2",
+          "topic": "Imperfect Information",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-2-2-imperfect-information.html",
+          "termAsWritten": "Asymmetric information",
+          "origin": "chip",
+          "definitionHtml": "a situation where one party in a transaction has more or better information than the other."
         },
         {
           "board": "aqa",
@@ -426,34 +390,12 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
-          "spec": "1.3.1",
-          "topic": "Types of market failure",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
-          "termAsWritten": "Asymmetric information",
-          "origin": "chip",
-          "definitionHtml": "when one party in a transaction has more or better information than the other, distorting the market outcome."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
           "spec": "1.3.4",
           "topic": "Information gaps",
           "notesUrl": "/revision-notes/edexcel-theme-1/1-3-4-information-gaps.html",
           "termAsWritten": "Asymmetric information",
           "origin": "chip",
           "definitionHtml": "a situation where one party in a transaction has more or better information than the other."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-4",
-          "groupLabel": "Theme 4",
-          "spec": "4.4.2",
-          "topic": "Market Failure in the Financial Sector",
-          "notesUrl": "/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html",
-          "termAsWritten": "Asymmetric information",
-          "origin": "chip",
-          "definitionHtml": "occurs when one party in a transaction has more or better information than the other. In financial markets, this can lead to market failure in the following ways:"
         }
       ]
     },
@@ -820,16 +762,13 @@
       "key": "behavioural economics",
       "letter": "B",
       "boards": [
-        "aqa",
-        "edexcel-a"
+        "aqa"
       ],
       "origin": [
         "chip"
       ],
-      "definitionVariants": 2,
-      "review": [
-        "2 different wordings across its sources"
-      ],
+      "definitionVariants": 1,
+      "review": [],
       "sources": [
         {
           "board": "aqa",
@@ -841,17 +780,6 @@
           "termAsWritten": "Behavioural economic theory",
           "origin": "chip",
           "definitionHtml": "the assumption that individuals are not always rational decision makers and that their decisions may be influenced by a range of psychological and social factors, which may lead to them making decisions that do not maximise their utility."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
-          "spec": "1.2.10",
-          "topic": "Alternative views of consumer behaviour",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html",
-          "termAsWritten": "Behavioural economics",
-          "origin": "chip",
-          "definitionHtml": "challenges this view, arguing that consumers are often <strong>irrational</strong> and that their choices are systematically influenced by psychological biases and <strong>rules of thumb</strong>."
         }
       ]
     },
@@ -1027,6 +955,45 @@
           "termAsWritten": "Budget surplus",
           "origin": "chip",
           "definitionHtml": "\\( T &gt; G \\). This means tax revenue is greater than government spending, so the surplus can be used to repay debt."
+        }
+      ]
+    },
+    {
+      "id": "capital",
+      "term": "Capital",
+      "key": "capital",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.3",
+          "topic": "Economic Resources",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+          "termAsWritten": "Capital",
+          "origin": "table",
+          "definitionHtml": "Manufactured/Man-made resources"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.3",
+          "topic": "The economic problem",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+          "termAsWritten": "Capital",
+          "origin": "table",
+          "definitionHtml": "Manufactured/Man-made resources"
         }
       ]
     },
@@ -1841,7 +1808,7 @@
     },
     {
       "id": "current-account",
-      "term": "Current Account",
+      "term": "Current account",
       "key": "current account",
       "letter": "C",
       "boards": [
@@ -1851,22 +1818,9 @@
       "origin": [
         "chip"
       ],
-      "definitionVariants": 2,
-      "review": [
-        "2 different wordings across its sources"
-      ],
+      "definitionVariants": 1,
+      "review": [],
       "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "groupLabel": "Macroeconomics",
-          "spec": "2.1.2",
-          "topic": "Macroeconomic Indicators",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
-          "termAsWritten": "Current Account",
-          "origin": "chip",
-          "definitionHtml": "The part of the Balance of Payments that records trade in goods and services, income flows, and current transfers."
-        },
         {
           "board": "aqa",
           "group": "macroeconomics",
@@ -2276,23 +2230,23 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Demerit good",
-          "origin": "chip",
-          "definitionHtml": "a good that generates negative externalities, imposing costs on society beyond the private costs incurred by the producer."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.5",
           "topic": "Merit and Demerit Goods",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html",
           "termAsWritten": "Demerit goods",
           "origin": "chip",
           "definitionHtml": "goods that exhibit negative externalities in their consumption or production, and are therefore over-provided by the market. Examples include tobacco, alcohol, and sugary food."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Demerit good",
+          "origin": "chip",
+          "definitionHtml": "a good that generates negative externalities, imposing costs on society beyond the private costs incurred by the producer."
         },
         {
           "board": "edexcel-a",
@@ -2682,7 +2636,7 @@
     },
     {
       "id": "dynamic-efficiency",
-      "term": "Dynamic efficiency",
+      "term": "Dynamic Efficiency",
       "key": "dynamic efficiency",
       "letter": "D",
       "boards": [
@@ -2690,78 +2644,32 @@
         "edexcel-a"
       ],
       "origin": [
-        "chip"
+        "table"
       ],
-      "definitionVariants": 3,
-      "review": [
-        "3 different wordings across its sources"
-      ],
+      "definitionVariants": 1,
+      "review": [],
       "sources": [
         {
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.5.3",
-          "topic": "Perfect Competition",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html",
-          "termAsWritten": "Dynamic efficiency",
-          "origin": "chip",
-          "definitionHtml": "No - Firms in perfect competition earn only normal profit in the long run, which may limit their ability to invest in research and development."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.5.4",
-          "topic": "Monopolistic Competition",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html",
-          "termAsWritten": "Dynamic efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> have the ability to innovate or improve efficiency, as it earns only normal profit in the long run. However, firms are able to earn supernormal profit in the short run, which may allow them to invest in research and development to a some extent."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.5.6",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
-          "termAsWritten": "Dynamic efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>Yes -</strong> The firm may have the ability to innovate or improve efficiency, as it earns supernormal profit in the long run."
+          "spec": "1.5.10",
+          "topic": "Market Structure, Static Efficiency, Dynamic Efficiency and Resource Allocation",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html",
+          "termAsWritten": "Dynamic Efficiency",
+          "origin": "table",
+          "definitionHtml": "Firms can reinvest supernormal profits into <strong>research and development</strong>, leading to <strong>innovation</strong> and improved quality products and productive efficiency over time."
         },
         {
           "board": "edexcel-a",
           "group": "theme-3",
           "groupLabel": "Theme 3",
-          "spec": "3.4.2",
-          "topic": "Perfect Competition",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html",
-          "termAsWritten": "Dynamic efficiency",
-          "origin": "chip",
-          "definitionHtml": "No - Firms in perfect competition earn only normal profit in the long run, which may limit their ability to invest in research and development."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-3",
-          "groupLabel": "Theme 3",
-          "spec": "3.4.3",
-          "topic": "Monopolistic Competition",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html",
-          "termAsWritten": "Dynamic efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> have the ability to innovate or improve efficiency, as it earns only normal profit in the long run. However, firms are able to earn supernormal profit in the short run, which may allow them to invest in research and development to a some extent."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-3",
-          "groupLabel": "Theme 3",
-          "spec": "3.4.5",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
-          "termAsWritten": "Dynamic efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>Yes -</strong> The firm may have the ability to innovate or improve efficiency, as it earns supernormal profit in the long run."
+          "spec": "3.4.1",
+          "topic": "Efficiency",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-1-efficiency.html",
+          "termAsWritten": "Dynamic Efficiency",
+          "origin": "table",
+          "definitionHtml": "Firms can reinvest supernormal profits into <strong>research and development</strong>, leading to <strong>innovation</strong> and improved quality products and productive efficiency over time."
         }
       ]
     },
@@ -2910,6 +2818,45 @@
           "termAsWritten": "Emotional Influence",
           "origin": "chip",
           "definitionHtml": "Choices swayed by marketing, impulse, or brand loyalty."
+        }
+      ]
+    },
+    {
+      "id": "enterprise",
+      "term": "Enterprise",
+      "key": "enterprise",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.3",
+          "topic": "Economic Resources",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+          "termAsWritten": "Enterprise",
+          "origin": "table",
+          "definitionHtml": "Risk-taking to start/expand a business"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.3",
+          "topic": "The economic problem",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+          "termAsWritten": "Enterprise",
+          "origin": "table",
+          "definitionHtml": "Risk-taking to start/expand a business"
         }
       ]
     },
@@ -3102,22 +3049,11 @@
       "origin": [
         "chip"
       ],
-      "definitionVariants": 3,
+      "definitionVariants": 2,
       "review": [
-        "3 different wordings across its sources"
+        "2 different wordings across its sources"
       ],
       "sources": [
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.2",
-          "topic": "The Meaning of Market Failure",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
-          "termAsWritten": "Externalities",
-          "origin": "chip",
-          "definitionHtml": "spillover effects on third parties not involved in the original transaction. These effects are not considered by consumers and producers in their decision to consume or produce."
-        },
         {
           "board": "aqa",
           "group": "microeconomics",
@@ -3133,17 +3069,6 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
-          "spec": "1.3.1",
-          "topic": "Types of market failure",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
-          "termAsWritten": "Externalities",
-          "origin": "chip",
-          "definitionHtml": "spillover effects on third parties not involved in the original transaction. These effects are not considered by consumers and producers in their decision to consume or produce."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
           "spec": "1.3.2",
           "topic": "Externalities",
           "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
@@ -3152,15 +3077,26 @@
           "definitionHtml": "a positive or negative spillover effect that affects a <strong>third party</strong> not directly involved in the economic transaction. Also known as external costs or external benefits."
         },
         {
-          "board": "edexcel-a",
-          "group": "theme-4",
-          "groupLabel": "Theme 4",
-          "spec": "4.4.2",
-          "topic": "Market Failure in the Financial Sector",
-          "notesUrl": "/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html",
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.2",
+          "topic": "The Meaning of Market Failure",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
           "termAsWritten": "Externalities",
           "origin": "chip",
-          "definitionHtml": "are costs or benefits that affect third parties who are not directly involved in a transaction. In financial markets, <a href=\"/revision-notes/edexcel-theme-1/1-3-2-externalities.html\">negative externalities</a> can arise when the actions of financial institutions or investors have wider economic consequences."
+          "definitionHtml": "spillover effects on third parties not involved in the original transaction. These effects are not considered by consumers and producers in their decision to consume or produce."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.1",
+          "topic": "Types of market failure",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
+          "termAsWritten": "Externalities",
+          "origin": "chip",
+          "definitionHtml": "spillover effects on third parties not involved in the original transaction. These effects are not considered by consumers and producers in their decision to consume or produce."
         }
       ]
     },
@@ -4123,8 +4059,8 @@
       ]
     },
     {
-      "id": "indirect-taxation",
-      "term": "Indirect taxation",
+      "id": "indirect-taxes",
+      "term": "Indirect Taxes",
       "key": "indirect taxes",
       "letter": "I",
       "boards": [
@@ -4134,34 +4070,12 @@
       "origin": [
         "chip"
       ],
-      "definitionVariants": 3,
+      "definitionVariants": 2,
       "review": [
         "term taken from a section heading, needs naming",
-        "3 different wordings across its sources"
+        "2 different wordings across its sources"
       ],
       "sources": [
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Indirect taxation",
-          "origin": "chip",
-          "definitionHtml": "increases firms costs of production, shifting the MPC=S curve up towards the MSC, internalising the external cost, for example a carbon tax."
-        },
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "groupLabel": "Macroeconomics",
-          "spec": "2.5.1",
-          "topic": "Fiscal Policy",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
-          "termAsWritten": "Indirect taxes",
-          "origin": "chip",
-          "definitionHtml": "are levied on <strong>spending</strong>, such as VAT and excise duties."
-        },
         {
           "board": "edexcel-a",
           "group": "theme-1",
@@ -4174,15 +4088,15 @@
           "definitionHtml": "A tax levied on <strong>goods and services</strong> when they are purchased, such as VAT or sugar tax. It is paid <strong>indirectly</strong> by the consumer via the producer, so affects the supply curve rather than the demand curve."
         },
         {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
-          "spec": "1.3.2",
-          "topic": "Externalities",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
-          "termAsWritten": "Indirect taxation",
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.5.1",
+          "topic": "Fiscal Policy",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+          "termAsWritten": "Indirect taxes",
           "origin": "chip",
-          "definitionHtml": "increases firms costs of production, shifting the MPC=S curve up towards the MSC, internalising the external cost, for example a carbon tax."
+          "definitionHtml": "are levied on <strong>spending</strong>, such as VAT and excise duties."
         },
         {
           "board": "edexcel-a",
@@ -4218,23 +4132,23 @@
           "board": "aqa",
           "group": "macroeconomics",
           "groupLabel": "Macroeconomics",
-          "spec": "2.1.3",
-          "topic": "Uses of Index Numbers",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
-          "termAsWritten": "Inflation",
-          "origin": "chip",
-          "definitionHtml": "A sustained rise in the general price level. It is measured as the <strong>annual percentage change</strong> in the CPI."
-        },
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "groupLabel": "Macroeconomics",
           "spec": "2.3.3",
           "topic": "Inflation",
           "notesUrl": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html",
           "termAsWritten": "Inflation",
           "origin": "chip",
           "definitionHtml": "A <strong>sustained increase</strong> in the general/average price level of goods and services in an economy."
+        },
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.1.3",
+          "topic": "Uses of Index Numbers",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+          "termAsWritten": "Inflation",
+          "origin": "chip",
+          "definitionHtml": "A sustained rise in the general price level. It is measured as the <strong>annual percentage change</strong> in the CPI."
         },
         {
           "board": "edexcel-a",
@@ -4320,39 +4234,6 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Information provision (negative advertising)",
-          "origin": "chip",
-          "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Information provision (positive advertising)",
-          "origin": "chip",
-          "definitionHtml": "the government can provide information about the benefits of certain goods, such as public health campaigns about the importance of vaccination. This can shift the D=MPB curve up, increasing demand for the merit good."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Information provision (negative advertising)",
-          "origin": "chip",
-          "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.9",
           "topic": "Government intervention in markets",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
@@ -4364,6 +4245,50 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
+          "spec": "1.4.1",
+          "topic": "Government intervention in markets",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+          "termAsWritten": "Information provision",
+          "origin": "chip",
+          "definitionHtml": "the government can provide information about the benefits/costs of certain goods, such as public health campaigns about the importance of vaccinations or the health costs of smoking. This can increase/decrease the D=MPB curve, internalising the externality."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Information provision (negative advertising)",
+          "origin": "chip",
+          "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Information provision (positive advertising)",
+          "origin": "chip",
+          "definitionHtml": "the government can provide information about the benefits of certain goods, such as public health campaigns about the importance of vaccination. This can shift the D=MPB curve up, increasing demand for the merit good."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Information provision (negative advertising)",
+          "origin": "chip",
+          "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
           "spec": "1.3.2",
           "topic": "Externalities",
           "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
@@ -4392,17 +4317,6 @@
           "termAsWritten": "Information provision (negative advertising)",
           "origin": "chip",
           "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
-          "spec": "1.4.1",
-          "topic": "Government intervention in markets",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
-          "termAsWritten": "Information provision",
-          "origin": "chip",
-          "definitionHtml": "the government can provide information about the benefits/costs of certain goods, such as public health campaigns about the importance of vaccinations or the health costs of smoking. This can increase/decrease the D=MPB curve, internalising the externality."
         }
       ]
     },
@@ -4704,6 +4618,45 @@
       ]
     },
     {
+      "id": "labour",
+      "term": "Labour",
+      "key": "labour",
+      "letter": "L",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.3",
+          "topic": "Economic Resources",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+          "termAsWritten": "Labour",
+          "origin": "table",
+          "definitionHtml": "Human effort"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.3",
+          "topic": "The economic problem",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+          "termAsWritten": "Labour",
+          "origin": "table",
+          "definitionHtml": "Human effort"
+        }
+      ]
+    },
+    {
       "id": "labour-force",
       "term": "Labour Force",
       "key": "labour force",
@@ -4739,6 +4692,45 @@
           "termAsWritten": "Labour Force",
           "origin": "chip",
           "definitionHtml": "The total of those in employment and those unemployed who are actively seeking work."
+        }
+      ]
+    },
+    {
+      "id": "land",
+      "term": "Land",
+      "key": "land",
+      "letter": "L",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.3",
+          "topic": "Economic Resources",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+          "termAsWritten": "Land",
+          "origin": "table",
+          "definitionHtml": "Natural resources"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.3",
+          "topic": "The economic problem",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+          "termAsWritten": "Land",
+          "origin": "table",
+          "definitionHtml": "Natural resources"
         }
       ]
     },
@@ -5269,17 +5261,6 @@
           "definitionHtml": "<strong>\\( \\frac{\\Delta TR}{\\Delta Q} \\)</strong>. This is the <strong>additional revenue</strong> from selling one more unit."
         },
         {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.6.1",
-          "topic": "Demand for Labour, Marginal Productivity Theory",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-6-1-the-demand-for-labour-marginal-productivity-theory.html",
-          "termAsWritten": "Marginal Revenue (MR)",
-          "origin": "chip",
-          "definitionHtml": "The <strong>extra revenue</strong> gained from selling that extra output."
-        },
-        {
           "board": "edexcel-a",
           "group": "theme-3",
           "groupLabel": "Theme 3",
@@ -5289,6 +5270,17 @@
           "termAsWritten": "Marginal Revenue (MR)",
           "origin": "chip",
           "definitionHtml": "<strong>\\( \\frac{\\Delta TR}{\\Delta Q} \\)</strong>. This is the <strong>additional revenue</strong> from selling one more unit."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.6.1",
+          "topic": "Demand for Labour, Marginal Productivity Theory",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-6-1-the-demand-for-labour-marginal-productivity-theory.html",
+          "termAsWritten": "Marginal Revenue (MR)",
+          "origin": "chip",
+          "definitionHtml": "The <strong>extra revenue</strong> gained from selling that extra output."
         },
         {
           "board": "edexcel-a",
@@ -5410,17 +5402,6 @@
           "definitionHtml": "when the free market, through the price mechanism, fails to allocate scarce resources efficiently, leading to a social welfare loss."
         },
         {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Market failure",
-          "origin": "chip",
-          "definitionHtml": "when the free market fails to allocate resources efficiently, leading to a <strong>welfare loss</strong>. Externalities are a core cause of market failure."
-        },
-        {
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
@@ -5430,6 +5411,17 @@
           "termAsWritten": "Market failure",
           "origin": "chip",
           "definitionHtml": "when the free market, through the price mechanism, fails to allocate scarce resources efficiently, leading to a social welfare loss."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Market failure",
+          "origin": "chip",
+          "definitionHtml": "when the free market fails to allocate resources efficiently, leading to a <strong>welfare loss</strong>. Externalities are a core cause of market failure."
         },
         {
           "board": "edexcel-a",
@@ -5572,23 +5564,23 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Merit good",
-          "origin": "chip",
-          "definitionHtml": "a good that generates positive externalities, benefiting society beyond the private benefits received by the consumer."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.5",
           "topic": "Merit and Demerit Goods",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html",
           "termAsWritten": "Merit goods",
           "origin": "chip",
           "definitionHtml": "goods that exhibit <a href=\"/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html\">positive externalities</a> in their consumption or production, and are therefore under-provided by the market. Examples include education, healthcare, and public libraries."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Merit good",
+          "origin": "chip",
+          "definitionHtml": "a good that generates positive externalities, benefiting society beyond the private benefits received by the consumer."
         },
         {
           "board": "edexcel-a",
@@ -5823,23 +5815,23 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.2",
-          "topic": "The Meaning of Market Failure",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
-          "termAsWritten": "Monopoly power",
-          "origin": "chip",
-          "definitionHtml": "when a firm has significant market power, allowing it to set prices above competitive levels."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.6",
           "topic": "Market Imperfections",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html",
           "termAsWritten": "Monopoly power",
           "origin": "chip",
           "definitionHtml": "is the ability of a firm to set prices above the competitive level due to a lack of competition. Any firm with 25% or more market share is considered to have monopoly power."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.2",
+          "topic": "The Meaning of Market Failure",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
+          "termAsWritten": "Monopoly power",
+          "origin": "chip",
+          "definitionHtml": "when a firm has significant market power, allowing it to set prices above competitive levels."
         }
       ]
     },
@@ -5882,6 +5874,162 @@
           "termAsWritten": "Moral hazard",
           "origin": "chip",
           "definitionHtml": "occurs when individuals or institutions take on excessive risk because they do not bear the full consequences of their actions. In financial markets, this can lead to market failure in the following ways:"
+        }
+      ]
+    },
+    {
+      "id": "marginal-propensity-to-consume-mpc",
+      "term": "Marginal Propensity to Consume (MPC)",
+      "key": "mpc",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+          "termAsWritten": "MPC",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>spent</strong> on domestic goods and services."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+          "termAsWritten": "MPC",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>spent</strong> on domestic goods and services."
+        }
+      ]
+    },
+    {
+      "id": "marginal-propensity-to-import-mpm",
+      "term": "Marginal Propensity to Import (MPM)",
+      "key": "mpm",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+          "termAsWritten": "MPM",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>spent on imports</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+          "termAsWritten": "MPM",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>spent on imports</strong>."
+        }
+      ]
+    },
+    {
+      "id": "marginal-propensity-to-save-mps",
+      "term": "Marginal Propensity to Save (MPS)",
+      "key": "mps",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+          "termAsWritten": "MPS",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>saved</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+          "termAsWritten": "MPS",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>saved</strong>."
+        }
+      ]
+    },
+    {
+      "id": "marginal-propensity-to-tax-mpt",
+      "term": "Marginal Propensity to Tax (MPT)",
+      "key": "mpt",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "table"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+          "termAsWritten": "MPT",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>paid in tax</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.4",
+          "topic": "The Multiplier",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+          "termAsWritten": "MPT",
+          "origin": "table",
+          "definitionHtml": "The proportion of extra income <strong>paid in tax</strong>."
         }
       ]
     },
@@ -6121,17 +6269,6 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.2",
-          "topic": "The Meaning of Market Failure",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
-          "termAsWritten": "Non-excludability",
-          "origin": "chip",
-          "definitionHtml": "it is impossible to prevent non-payers from consuming the good once it is provided."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.3",
           "topic": "Public Goods, Private Goods and Quasi-Public Goods",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
@@ -6143,9 +6280,20 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
-          "spec": "1.3.1",
-          "topic": "Types of market failure",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
+          "spec": "1.3.3",
+          "topic": "Public goods",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "termAsWritten": "Non-excludability",
+          "origin": "chip",
+          "definitionHtml": "it is <strong>impossible or extremely costly to prevent non-payers</strong> from consuming the good once it is provided."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.2",
+          "topic": "The Meaning of Market Failure",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
           "termAsWritten": "Non-excludability",
           "origin": "chip",
           "definitionHtml": "it is impossible to prevent non-payers from consuming the good once it is provided."
@@ -6154,12 +6302,12 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
-          "spec": "1.3.3",
-          "topic": "Public goods",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "spec": "1.3.1",
+          "topic": "Types of market failure",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
           "termAsWritten": "Non-excludability",
           "origin": "chip",
-          "definitionHtml": "it is <strong>impossible or extremely costly to prevent non-payers</strong> from consuming the good once it is provided."
+          "definitionHtml": "it is impossible to prevent non-payers from consuming the good once it is provided."
         }
       ]
     },
@@ -6211,17 +6359,6 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.2",
-          "topic": "The Meaning of Market Failure",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
-          "termAsWritten": "Non-rivalry",
-          "origin": "chip",
-          "definitionHtml": "one person's consumption does not reduce the amount available for others."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.3",
           "topic": "Public Goods, Private Goods and Quasi-Public Goods",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
@@ -6233,9 +6370,20 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
-          "spec": "1.3.1",
-          "topic": "Types of market failure",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
+          "spec": "1.3.3",
+          "topic": "Public goods",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "termAsWritten": "Non-rivalry",
+          "origin": "chip",
+          "definitionHtml": "one person's consumption <strong>does not reduce the amount available</strong> for others."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.2",
+          "topic": "The Meaning of Market Failure",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
           "termAsWritten": "Non-rivalry",
           "origin": "chip",
           "definitionHtml": "one person's consumption does not reduce the amount available for others."
@@ -6244,12 +6392,12 @@
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
-          "spec": "1.3.3",
-          "topic": "Public goods",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "spec": "1.3.1",
+          "topic": "Types of market failure",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
           "termAsWritten": "Non-rivalry",
           "origin": "chip",
-          "definitionHtml": "one person's consumption <strong>does not reduce the amount available</strong> for others."
+          "definitionHtml": "one person's consumption does not reduce the amount available for others."
         }
       ]
     },
@@ -7054,7 +7202,7 @@
     },
     {
       "id": "productive-efficiency",
-      "term": "Productive efficiency",
+      "term": "Productive Efficiency",
       "key": "productive efficiency",
       "letter": "P",
       "boards": [
@@ -7062,78 +7210,32 @@
         "edexcel-a"
       ],
       "origin": [
-        "chip"
+        "table"
       ],
-      "definitionVariants": 3,
-      "review": [
-        "3 different wordings across its sources"
-      ],
+      "definitionVariants": 1,
+      "review": [],
       "sources": [
         {
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.5.3",
-          "topic": "Perfect Competition",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html",
-          "termAsWritten": "Productive efficiency",
-          "origin": "chip",
-          "definitionHtml": "Yes - Firms in perfect competition produce at the minimum point of the average cost curve, where \\( AC = MC \\)."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.5.4",
-          "topic": "Monopolistic Competition",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html",
-          "termAsWritten": "Productive efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce at the minimum point of the AC curve, resources are not fully utilised."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.5.6",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
-          "termAsWritten": "Productive efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce at the lowest point of the AC curve, so it is not producing at minimum cost."
+          "spec": "1.5.10",
+          "topic": "Market Structure, Static Efficiency, Dynamic Efficiency and Resource Allocation",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html",
+          "termAsWritten": "Productive Efficiency",
+          "origin": "table",
+          "definitionHtml": "Resources are used in the most efficient way possible, minimising <strong>costs of production</strong> and maximising <strong>output</strong>."
         },
         {
           "board": "edexcel-a",
           "group": "theme-3",
           "groupLabel": "Theme 3",
-          "spec": "3.4.2",
-          "topic": "Perfect Competition",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html",
-          "termAsWritten": "Productive efficiency",
-          "origin": "chip",
-          "definitionHtml": "Yes - Firms in perfect competition produce at the minimum point of the average cost curve, where \\( AC = MC \\)."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-3",
-          "groupLabel": "Theme 3",
-          "spec": "3.4.3",
-          "topic": "Monopolistic Competition",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-3-monopolistic-competition.html",
-          "termAsWritten": "Productive efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce at the minimum point of the AC curve, resources are not fully utilised."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-3",
-          "groupLabel": "Theme 3",
-          "spec": "3.4.5",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
-          "termAsWritten": "Productive efficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>No -</strong> The firm does <strong>not</strong> produce at the lowest point of the AC curve, so it is not producing at minimum cost."
+          "spec": "3.4.1",
+          "topic": "Efficiency",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-1-efficiency.html",
+          "termAsWritten": "Productive Efficiency",
+          "origin": "table",
+          "definitionHtml": "Resources are used in the most efficient way possible, minimising <strong>costs of production</strong> and maximising <strong>output</strong>."
         }
       ]
     },
@@ -7515,23 +7617,23 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.5.6",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
-          "termAsWritten": "Pure Monopoly",
-          "origin": "chip",
-          "definitionHtml": "a market structure where there is a single seller of a product with no close substitutes. For example, a local water company like Thames Water."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.6",
           "topic": "Market Imperfections",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html",
           "termAsWritten": "Pure Monopoly",
           "origin": "chip",
           "definitionHtml": "a market structure where a single firm is the sole producer of a good or service with no close substitutes. Pure Monopolies have complete monopoly power and can set prices without concern for competition."
+        },
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.6",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
+          "termAsWritten": "Pure Monopoly",
+          "origin": "chip",
+          "definitionHtml": "a market structure where there is a single seller of a product with no close substitutes. For example, a local water company like Thames Water."
         },
         {
           "board": "edexcel-a",
@@ -7674,67 +7776,12 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Regulation and legislation",
-          "origin": "chip",
-          "definitionHtml": "ban/limit the production or consumption of goods that generate negative externalities, or other regulations that decrease production."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Regulation and legislation",
-          "origin": "chip",
-          "definitionHtml": "requiring the consumption of certain merit goods, such as compulsory education or healthcare."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
           "spec": "1.8.8",
           "topic": "Public Ownership, Privatisation, Regulation and Deregulation of Markets",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets.html",
           "termAsWritten": "Regulation",
           "origin": "chip",
           "definitionHtml": "Refers to the imposition of rules and standards by the government or regulatory bodies to control the behaviour of firms and protect consumers, workers, and the environment. Regulation can take various forms, such as price controls, quality standards, safety regulations, and environmental regulations."
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.9",
-          "topic": "Government intervention in markets",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
-          "termAsWritten": "Regulation and legislation",
-          "origin": "chip",
-          "definitionHtml": "bans/limits on the production of demerit goods or requiring the consumption of merit goods. This can increase/decrease the S=MPC or D=MPB curve, internalising the externality."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
-          "spec": "1.3.2",
-          "topic": "Externalities",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
-          "termAsWritten": "Regulation and legislation",
-          "origin": "chip",
-          "definitionHtml": "ban/limit the production or consumption of goods that generate negative externalities, or other regulations that decrease production."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
-          "spec": "1.3.2",
-          "topic": "Externalities",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
-          "termAsWritten": "Regulation and legislation",
-          "origin": "chip",
-          "definitionHtml": "requiring the consumption of certain merit goods, such as compulsory education or healthcare."
         },
         {
           "board": "edexcel-a",
@@ -7746,6 +7793,28 @@
           "termAsWritten": "Regulation and legislation",
           "origin": "chip",
           "definitionHtml": "bans/limits on the production of demerit goods or requiring the consumption of merit goods. This can increase/decrease the S=MPC or D=MPB curve, internalising the externality."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "Regulation and legislation",
+          "origin": "chip",
+          "definitionHtml": "ban/limit the production or consumption of goods that generate negative externalities, or other regulations that decrease production."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "Regulation and legislation",
+          "origin": "chip",
+          "definitionHtml": "requiring the consumption of certain merit goods, such as compulsory education or healthcare."
         }
       ]
     },
@@ -8200,6 +8269,17 @@
       ],
       "sources": [
         {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.3.1",
+          "topic": "Aggregate Supply",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html",
+          "termAsWritten": "Short-Run Aggregate Supply (SRAS)",
+          "origin": "chip",
+          "definitionHtml": "Short-run aggregate supply is the total planned output of goods and services in an economy at a given price level in a period where <strong>at least one factor of production is fixed</strong>, such as the capital stock or technology."
+        },
+        {
           "board": "aqa",
           "group": "macroeconomics",
           "groupLabel": "Macroeconomics",
@@ -8220,17 +8300,6 @@
           "termAsWritten": "The SRAS Curve: A Recap",
           "origin": "chip",
           "definitionHtml": "Short-run aggregate supply is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "groupLabel": "Theme 2",
-          "spec": "2.3.1",
-          "topic": "Aggregate Supply",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html",
-          "termAsWritten": "Short-Run Aggregate Supply (SRAS)",
-          "origin": "chip",
-          "definitionHtml": "Short-run aggregate supply is the total planned output of goods and services in an economy at a given price level in a period where <strong>at least one factor of production is fixed</strong>, such as the capital stock or technology."
         },
         {
           "board": "edexcel-a",
@@ -8634,17 +8703,6 @@
       ],
       "sources": [
         {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Subsidies",
-          "origin": "chip",
-          "definitionHtml": "provide financial incentives for producers to increase output, shifting S=MSC downward and internalising the positive externality."
-        },
-        {
           "board": "edexcel-a",
           "group": "theme-1",
           "groupLabel": "Theme 1",
@@ -8656,12 +8714,12 @@
           "definitionHtml": "A <strong>per-unit payment</strong> from the government to producers to <strong>lower their costs of production</strong>."
         },
         {
-          "board": "edexcel-a",
-          "group": "theme-1",
-          "groupLabel": "Theme 1",
-          "spec": "1.3.2",
-          "topic": "Externalities",
-          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
           "termAsWritten": "Subsidies",
           "origin": "chip",
           "definitionHtml": "provide financial incentives for producers to increase output, shifting S=MSC downward and internalising the positive externality."
@@ -8901,9 +8959,9 @@
       "origin": [
         "chip"
       ],
-      "definitionVariants": 3,
+      "definitionVariants": 2,
       "review": [
-        "3 different wordings across its sources"
+        "2 different wordings across its sources"
       ],
       "sources": [
         {
@@ -8918,17 +8976,6 @@
           "definitionHtml": "Policies that aim to <strong>increase the productive potential/capacity</strong> of the economy by shifting the <strong>long-run aggregate supply (LRAS)</strong> curve to the right."
         },
         {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "groupLabel": "Macroeconomics",
-          "spec": "2.6.3",
-          "topic": "The Balance of Payments",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
-          "termAsWritten": "Supply-side policies",
-          "origin": "chip",
-          "definitionHtml": "These aim to increase the competitiveness of domestic industries and boost exports. Examples include investment in education and training, research and development, and infrastructure."
-        },
-        {
           "board": "edexcel-a",
           "group": "theme-2",
           "groupLabel": "Theme 2",
@@ -8938,17 +8985,6 @@
           "termAsWritten": "Supply-side policies",
           "origin": "chip",
           "definitionHtml": "Policies that aim to <strong>increase the productive potential/capacity</strong> of the economy by shifting the <strong><a href=\"/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html\">long-run aggregate supply</a> (LRAS)</strong> curve to the right."
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-4",
-          "groupLabel": "Theme 4",
-          "spec": "4.1.7",
-          "topic": "Balance of Payments",
-          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
-          "termAsWritten": "Supply-side policies",
-          "origin": "chip",
-          "definitionHtml": "These aim to increase the competitiveness of domestic industries and boost exports. Examples include investment in education and training, research and development, and infrastructure."
         }
       ]
     },
@@ -9629,7 +9665,7 @@
     },
     {
       "id": "x-inefficiency",
-      "term": "X-inefficiency",
+      "term": "X-Inefficiency",
       "key": "x-inefficiency",
       "letter": "X",
       "boards": [
@@ -9637,7 +9673,7 @@
         "edexcel-a"
       ],
       "origin": [
-        "chip"
+        "table"
       ],
       "definitionVariants": 1,
       "review": [],
@@ -9646,23 +9682,23 @@
           "board": "aqa",
           "group": "microeconomics",
           "groupLabel": "Microeconomics",
-          "spec": "1.5.6",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
-          "termAsWritten": "X-inefficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>Possible -</strong> The firm may have less incentive to minimise costs due to lack of competition, leading to inefficiency. Whether this occurs depends whether the monopoly is pure or legal, and the level of competition in the market."
+          "spec": "1.5.10",
+          "topic": "Market Structure, Static Efficiency, Dynamic Efficiency and Resource Allocation",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-10-market-structure-efficiency-resource-allocation.html",
+          "termAsWritten": "X-Inefficiency",
+          "origin": "table",
+          "definitionHtml": "A <strong>lack of competition</strong> or <strong>lack of profit incentive</strong> causes a firm to become organisationally slack (lazy), leading to higher ATC."
         },
         {
           "board": "edexcel-a",
           "group": "theme-3",
           "groupLabel": "Theme 3",
-          "spec": "3.4.5",
-          "topic": "Monopoly",
-          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
-          "termAsWritten": "X-inefficiency",
-          "origin": "chip",
-          "definitionHtml": "<strong>Possible -</strong> The firm may have less incentive to minimise costs due to lack of competition, leading to inefficiency. Whether this occurs depends whether the monopoly is pure or legal, and the level of competition in the market."
+          "spec": "3.4.1",
+          "topic": "Efficiency",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-1-efficiency.html",
+          "termAsWritten": "X-Inefficiency",
+          "origin": "table",
+          "definitionHtml": "A <strong>lack of competition</strong> or <strong>lack of profit incentive</strong> causes a firm to become organisationally slack (lazy), leading to higher ATC."
         }
       ]
     }
@@ -9671,7 +9707,7 @@
     {
       "id": "f-what-is-aggregate-demand",
       "latex": "AD = C + I + G + (X - M)",
-      "label": "What Is Aggregate Demand?",
+      "label": "Aggregate Demand",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9695,111 +9731,9 @@
       ]
     },
     {
-      "id": "f-calculation-methods",
-      "latex": "GDP = C + I + G + (X - M)",
-      "label": "Calculation Methods",
-      "boards": [
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.1.1",
-          "topic": "Economic Growth",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
-        }
-      ]
-    },
-    {
-      "id": "f-calculation-methods-2",
-      "latex": "GDP = Wages + Rent + Interest + Profit",
-      "label": "Calculation Methods",
-      "boards": [
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": true,
-      "sources": [
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.1.1",
-          "topic": "Economic Growth",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
-        }
-      ]
-    },
-    {
-      "id": "f-equilibrium-in-the-circular-flow",
-      "latex": "I + G + X = S + T + M",
-      "label": "Equilibrium in the Circular Flow",
-      "boards": [
-        "aqa",
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.2.1",
-          "topic": "The Circular Flow of Income",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.4.1",
-          "topic": "National Income",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.4.2",
-          "topic": "Injections and Withdrawals",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html"
-        }
-      ]
-    },
-    {
-      "id": "f-equilibrium-in-the-circular-flow-2",
-      "latex": "J = W",
-      "label": "Equilibrium in the Circular Flow",
-      "boards": [
-        "aqa",
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.2.1",
-          "topic": "The Circular Flow of Income",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.4.1",
-          "topic": "National Income",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.4.2",
-          "topic": "Injections and Withdrawals",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html"
-        }
-      ]
-    },
-    {
       "id": "f-calculating-the-multiplier",
       "latex": "M = \\frac{1}{1 - 0.8} = \\frac{1}{0.2} = 5",
-      "label": "Calculating the Multiplier",
+      "label": "The Multiplier - worked example",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9825,7 +9759,7 @@
     {
       "id": "f-calculating-the-multiplier-2",
       "latex": "M = \\frac{1}{1 - MPC}",
-      "label": "Calculating the Multiplier",
+      "label": "The Multiplier, from the MPC",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9851,7 +9785,7 @@
     {
       "id": "f-calculating-the-multiplier-3",
       "latex": "M = \\frac{1}{MPS + MPT + MPM}",
-      "label": "Calculating the Multiplier",
+      "label": "The Multiplier, from the withdrawals",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9877,7 +9811,7 @@
     {
       "id": "f-calculating-the-multiplier-4",
       "latex": "M = \\frac{1}{MPW}",
-      "label": "Calculating the Multiplier",
+      "label": "The Multiplier, from the MPW",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9921,7 +9855,7 @@
     {
       "id": "f-the-marginal-revenue-product-theory",
       "latex": "MRP = MPP \\times MR",
-      "label": "The Marginal Revenue Product Theory",
+      "label": "Marginal Revenue Product",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9945,27 +9879,9 @@
       ]
     },
     {
-      "id": "f-interpreting-index-numbers",
-      "latex": "\\frac{115 - 105}{105} \\times 100 = 9.5\\%",
-      "label": "Interpreting Index Numbers",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.3",
-          "topic": "Uses of Index Numbers",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
-        }
-      ]
-    },
-    {
       "id": "f-concentration-ratios",
       "latex": "\\frac{\\text{Total revenue of top } n \\text{ firms}}{\\text{Total market revenue}} \\times 100",
-      "label": "Concentration Ratios",
+      "label": "Concentration Ratio",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -9991,7 +9907,7 @@
     {
       "id": "f-economic-growth-indicators",
       "latex": "\\text{% Change in Real GDP} = \\text{% Change in Nominal GDP} - \\text{Inflation Rate}",
-      "label": "Economic Growth Indicators",
+      "label": "Real GDP Growth",
       "boards": [
         "aqa"
       ],
@@ -10007,63 +9923,9 @@
       ]
     },
     {
-      "id": "f-interpreting-index-numbers-2",
-      "latex": "\\text{% Change} = \\frac{\\text{New Index} - \\text{Old Index}}{\\text{Old Index}} \\times 100",
-      "label": "Interpreting Index Numbers",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.3",
-          "topic": "Uses of Index Numbers",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
-        }
-      ]
-    },
-    {
-      "id": "f-the-structure-of-a-commercial-bank-s-balance-sheet",
-      "latex": "\\text{Assets} = \\text{Liabilities} + \\text{Capital}",
-      "label": "The Structure of a Commercial Bank's Balance Sheet",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.4.2",
-          "topic": "Commercial Banks and Investment Banks",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html"
-        }
-      ]
-    },
-    {
-      "id": "f-marginal-average-and-total-returns",
-      "latex": "\\text{Average Returns} = \\frac{\\text{Total Output}}{\\text{Inputs}}",
-      "label": "Marginal, Average, and Total Returns",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "spec": "1.4.3",
-          "topic": "The Law of Diminishing Returns and Returns to Scale",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-4-3-the-law-of-diminishing-returns-and-returns-to-scale.html"
-        }
-      ]
-    },
-    {
       "id": "f-calculating-bond-yield",
       "latex": "\\text{Bond Yield} \\, (\\%) = \\frac{\\text{Annual Coupon Payment}}{\\text{Market Price of Bond}} \\times 100",
-      "label": "Calculating Bond Yield",
+      "label": "Bond Yield",
       "boards": [
         "aqa"
       ],
@@ -10079,81 +9941,9 @@
       ]
     },
     {
-      "id": "f-worked-example-calculating-a-weighted-cpi",
-      "latex": "\\text{CPI} = \\frac{106{,}800}{1{,}000} = 106.8",
-      "label": "Worked Example: Calculating a Weighted CPI",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.3",
-          "topic": "Uses of Index Numbers",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
-        }
-      ]
-    },
-    {
-      "id": "f-inflation-indicators",
-      "latex": "\\text{CPI} = \\frac{\\text{Cost of Basket in Current Year}}{\\text{Cost of Basket in Base Year}} \\times 100",
-      "label": "Inflation Indicators",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.2",
-          "topic": "Macroeconomic Indicators",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
-        }
-      ]
-    },
-    {
-      "id": "f-how-it-s-calculated",
-      "latex": "\\text{CPI} = \\frac{\\text{Price of basket in current year}} {\\text{Price of basket in base year}} \\times 100",
-      "label": "How It's Calculated",
-      "boards": [
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.1.2",
-          "topic": "Inflation",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
-        }
-      ]
-    },
-    {
-      "id": "f-the-capital-ratio",
-      "latex": "\\text{Capital ratio} = \\frac{\\text{Capital}}{\\text{Risk-weighted assets}} \\times 100",
-      "label": "The Capital Ratio",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.4.4",
-          "topic": "Regulation of the Financial System",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html"
-        }
-      ]
-    },
-    {
       "id": "f-unemployment-indicators",
       "latex": "\\text{Employment Rate} = \\frac{\\text{Number of Employed People}}{\\text{Working-Age Population}} \\times 100",
-      "label": "Unemployment Indicators",
+      "label": "Employment Rate",
       "boards": [
         "aqa"
       ],
@@ -10171,7 +9961,7 @@
     {
       "id": "f-the-government-budget-and-national-debt",
       "latex": "\\text{Fiscal Deficit} : \\text{Government Spending} > \\text{Tax Revenue}",
-      "label": "The Government Budget and National Debt",
+      "label": "Fiscal Deficit",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -10195,27 +9985,9 @@
       ]
     },
     {
-      "id": "f-key-measures-of-national-income",
-      "latex": "\\text{GNI} = \\text{GDP} + \\text{Net Income from Abroad}",
-      "label": "Key Measures of National Income",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.4",
-          "topic": "Uses of National Income Data",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
-        }
-      ]
-    },
-    {
       "id": "f-measuring-inequality-lorenz-curve-and-gini-coefficient",
       "latex": "\\text{Gini Coefficient} = \\frac{A}{A + B}",
-      "label": "Measuring Inequality: Lorenz Curve and Gini Coefficient",
+      "label": "Gini Coefficient",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -10241,7 +10013,7 @@
     {
       "id": "f-the-government-budget-and-national-debt-2",
       "latex": "\\text{Government Budget} = \\text{Taxation Revenue} - \\text{Government Spending}",
-      "label": "The Government Budget and National Debt",
+      "label": "Government Budget",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -10267,7 +10039,7 @@
     {
       "id": "f-calculating-an-index-number",
       "latex": "\\text{Index Number} = \\frac{\\text{Value in Current Year}}{\\text{Value in Base Year}} \\times 100",
-      "label": "Calculating an Index Number",
+      "label": "Index Number",
       "boards": [
         "aqa"
       ],
@@ -10283,45 +10055,9 @@
       ]
     },
     {
-      "id": "f-how-it-s-calculated-2",
-      "latex": "\\text{Inflation Rate} = \\frac{\\text{CPI Year2 - CPI Year1}} {\\text{CPI Year1}} \\times 100",
-      "label": "How It's Calculated",
-      "boards": [
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.1.2",
-          "topic": "Inflation",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
-        }
-      ]
-    },
-    {
-      "id": "f-inflation-indicators-2",
-      "latex": "\\text{Inflation Rate} = \\frac{\\text{CPI in Current Year} - \\text{CPI in Previous Year}}{\\text{CPI in Previous Year}} \\times 100",
-      "label": "Inflation Indicators",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.2",
-          "topic": "Macroeconomic Indicators",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
-        }
-      ]
-    },
-    {
       "id": "f-from-cpi-to-the-inflation-rate",
       "latex": "\\text{Inflation Rate} = \\frac{\\text{CPI this year} - \\text{CPI last year}}{\\text{CPI last year}} \\times 100",
-      "label": "From CPI to the Inflation Rate",
+      "label": "Inflation Rate",
       "boards": [
         "aqa"
       ],
@@ -10339,7 +10075,7 @@
     {
       "id": "f-productivity",
       "latex": "\\text{Labour Productivity} = \\frac{\\text{Output}}{\\text{Number of Workers}}",
-      "label": "Productivity",
+      "label": "Labour Productivity",
       "boards": [
         "aqa"
       ],
@@ -10351,86 +10087,6 @@
           "spec": "1.4.1",
           "topic": "Production & Productivity",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-4-1-production-and-productivity.html"
-        }
-      ]
-    },
-    {
-      "id": "f-the-liquidity-ratio",
-      "latex": "\\text{Liquidity ratio} = \\frac{\\text{Liquid assets}}{\\text{Total assets}} \\times 100",
-      "label": "The Liquidity Ratio",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.4.4",
-          "topic": "Regulation of the Financial System",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html"
-        }
-      ]
-    },
-    {
-      "id": "f-marginal-average-and-total-returns-2",
-      "latex": "\\text{Marginal Returns} = \\frac{\\Delta \\text{Total Output}}{\\Delta \\text{Inputs}}",
-      "label": "Marginal, Average, and Total Returns",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "spec": "1.4.3",
-          "topic": "The Law of Diminishing Returns and Returns to Scale",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-4-3-the-law-of-diminishing-returns-and-returns-to-scale.html"
-        }
-      ]
-    },
-    {
-      "id": "f-what-is-national-income-and-how-is-it-measured",
-      "latex": "\\text{National Output} \\equiv \\text{National Income} \\equiv \\text{National Expenditure}",
-      "label": "What Is National Income and How Is It Measured?",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.4",
-          "topic": "Uses of National Income Data",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
-        }
-      ]
-    },
-    {
-      "id": "f-output-gaps",
-      "latex": "\\text{Output Gap} = \\text{Y} - \\text{Yfe}",
-      "label": "Output Gaps",
-      "boards": [
-        "aqa",
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.3.1",
-          "topic": "Economic Growth and the Economic Cycle",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.5.2",
-          "topic": "Output Gaps",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html"
         }
       ]
     },
@@ -10463,7 +10119,7 @@
     {
       "id": "f-j-curve-and-marshall-lerner-condition",
       "latex": "\\text{PED}_{X} + \\text{PED}_{M} > 1",
-      "label": "J-Curve and Marshall-Lerner Condition",
+      "label": "Marshall-Lerner Condition",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -10489,7 +10145,7 @@
     {
       "id": "f-definition-and-calculation",
       "latex": "\\text{PES} = \\frac{\\%\\Delta Q_S}{\\%\\Delta P}",
-      "label": "Definition and Calculation",
+      "label": "Price Elasticity of Supply (PES)",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -10515,7 +10171,7 @@
     {
       "id": "f-key-definitions",
       "latex": "\\text{Profit} = \\text{Total Revenue} - \\text{Total Costs}",
-      "label": "Key Definitions",
+      "label": "Profit",
       "boards": [
         "aqa"
       ],
@@ -10533,7 +10189,7 @@
     {
       "id": "f-economic-growth-indicators-2",
       "latex": "\\text{Real GDP per capita} = \\frac{\\text{Real GDP}}{\\text{Population}}",
-      "label": "Economic Growth Indicators",
+      "label": "Real GDP per Capita",
       "boards": [
         "aqa"
       ],
@@ -10558,7 +10214,7 @@
     {
       "id": "f-definition-and-calculation-2",
       "latex": "\\text{Terms of Trade Index} = \\left( \\frac{\\text{Index of Average Export Prices}}{\\text{Index of Average Import Prices}} \\right) \\times 100",
-      "label": "Definition and Calculation",
+      "label": "Terms of Trade Index",
       "boards": [
         "edexcel-a"
       ],
@@ -10576,7 +10232,7 @@
     {
       "id": "f-unemployment-indicators-2",
       "latex": "\\text{Unemployment Rate} = \\frac{\\text{Number of Unemployed People}}{\\text{Labour Force}} \\times 100",
-      "label": "Unemployment Indicators",
+      "label": "Unemployment Rate",
       "boards": [
         "aqa"
       ],
@@ -10594,7 +10250,7 @@
     {
       "id": "f-trade-unions",
       "latex": "\\text{Union Density} = \\frac{\\text{Number of Union Members}}{\\text{Total Workforce}} \\times 100",
-      "label": "Trade Unions",
+      "label": "Union Density",
       "boards": [
         "aqa",
         "edexcel-a"
@@ -10614,42 +10270,6 @@
           "spec": "3.5.3",
           "topic": "Wage Determination",
           "notesUrl": "/revision-notes/edexcel-theme-3/3-5-3-wage-determination.html"
-        }
-      ]
-    },
-    {
-      "id": "f-definition-and-measures",
-      "latex": "\\text{Unit Labour Costs} = \\frac{\\text{Total Labour Costs}}{\\text{Total Output}}",
-      "label": "Definition and Measures",
-      "boards": [
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": true,
-      "sources": [
-        {
-          "board": "edexcel-a",
-          "group": "theme-4",
-          "spec": "4.1.9",
-          "topic": "International Competitiveness",
-          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html"
-        }
-      ]
-    },
-    {
-      "id": "f-why-weighting-matters",
-      "latex": "\\text{Weighted Price Index (CPI)} = \\frac{\\sum (\\text{Weight} \\times \\text{Price Index})}{\\sum \\text{Weights}}",
-      "label": "Why Weighting Matters",
-      "boards": [
-        "aqa"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.1.3",
-          "topic": "Uses of Index Numbers",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
         }
       ]
     },
@@ -10708,7 +10328,7 @@
     {
       "id": "f-what-is-the-multiplier",
       "latex": "k = \\frac{\\text{Final Change in Real GDP/NI}} {\\text{ Injection}}",
-      "label": "What Is the Multiplier?",
+      "label": "The Multiplier",
       "boards": [
         "aqa",
         "edexcel-a"

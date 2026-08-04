@@ -6,7 +6,7 @@ never batched.
 
 - **Branch:** `feature/glossary` (off `main` at `faccb6a`)
 - **Current phase:** Phase 2 — extraction & gap analysis
-- **Current step:** 2.6 — **PAUSED, awaiting Eliot's review**
+- **Current step:** 3.1 — `scripts/build_glossary.py`
 - **Last updated:** 2026-08-03
 
 ---
@@ -48,16 +48,16 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [x] 1.1 Branch `feature/glossary`, create `_working/glossary/`, write `PROGRESS.md`
 - [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `REVIEW-NOTES.md`; `ROADMAP.md` updated
 
-### Phase 2 — Extraction & gap analysis — AWAITING REVIEW
+### Phase 2 — Extraction & gap analysis — COMPLETE
 
 - [x] 2.1 `scripts/extract_glossary.py` — 255 terms, 49 formulae, 0 problems
 - [x] 2.2 `inventory.md` written (rewritten whole each run — deterministic, so safer than appending)
 - [x] 2.3 9 table candidates listed with every row in `review-decisions.md` §A
 - [x] 2.4 Both specs scanned as a checklist → `spec-checklist.md`. No spec wording in the repo
 - [x] 2.5 `gap-report.md`
-- [ ] 2.6 **PAUSE — Eliot reviews. Nothing proceeds until this is answered**
+- [x] 2.6 Reviewed and answered. A, B, E, G decided; C, D, F left to defaults
 
-### Phase 3 — Build
+### Phase 3 — Build — IN PROGRESS
 
 - [ ] 3.1 `scripts/build_glossary.py`
 - [ ] 3.2 Vendor KaTeX (CSS + woff2 only) into `css/vendor/katex/`
@@ -99,24 +99,25 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 
 ## Open questions awaiting Eliot
 
-**Phase 2 is paused here.** Four things need answers before Phase 3 starts.
-All detail is in `review-decisions.md`; `gap-report.md` is the summary.
-Every actionable row across the three files is numbered — `review-decisions.md`
-opens with the reply format. Numbers are per-run and shift once curation lands.
+Nothing blocking. Five things flagged for a decision when convenient, all
+recorded in the round-two report:
 
-1. **§A — which of the 9 concept-tables to harvest.** Approving `3.4.1` and
-   `1.5.10` is the important one: it is the only source of real definitions for
-   allocative, productive and dynamic efficiency, whose chips elsewhere are
-   Yes/No verdicts rather than definitions.
-2. **§B — which of the 49 formulae are worked arithmetic**, and what to call
-   them (labels currently come from the section heading).
-3. **§E — 36 terms worded differently across sources.** Align the notes, or
-   name the canonical page.
-4. **§G — confirm the curation already applied**: 41 stop-listed labels, 20
-   merges, 15 display renames. None of these changes a word of any definition.
+1. **B6 kept but B12/B19 excluded** — B6 is `M = 1/(1 - 0.8) = 1/0.2 = 5`,
+   worked arithmetic of the same kind as the two that were excluded. Probably
+   a slip in a run of consecutive numbers.
+2. **Percentage change now has no formula** — B15 was excluded. It is QS2 on
+   both specifications and was the headline gap-report finding.
+3. **CPI now has no formula** — B20, B21 and B46 were all excluded.
+4. **Five more formulae dropped** that state a real relationship: Output Gap
+   (B36), GNI (B25), Unit Labour Costs (B45), Capital Ratio (B22), Liquidity
+   Ratio (B33).
+5. **Three notes gaps found while deciding E** — Edexcel has no general
+   definition of Regulation, AQA none of Subsidies, and Edexcel's merit/demerit
+   good wording puts the external cost on the producer. See `e-decisions.md`.
 
-Nothing blocks me from starting Phase 3 scaffolding on the current data, but
-the term set will move once these land.
+Also worth a sentence back: what did **"not sure students will use these
+labels"** refer to? Read as the section G stop-list, it agrees with removing
+them. If it meant the display renames (R1-R15), say so and they change.
 
 ---
 
@@ -205,6 +206,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `_working/glossary/review-decisions.md` | Generated — the decisions needed |
 | `_working/glossary/spec-checklist.md` | Generated — per-board spec coverage |
 | `_working/glossary/gap-report.md` | Written — the summary and judgement calls |
+| `_working/glossary/e-decisions.md` | Written — every section E judgement and its reason |
 
 **No revision-notes topic page has been edited, and none will be.**
 
@@ -224,11 +226,12 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Wait.** Phase 2 is complete and paused at step 2.6 for Eliot's review of
-`review-decisions.md`, `gap-report.md` and `spec-checklist.md`.
+**Step 3.1** — `scripts/build_glossary.py`, modelled on
+`scripts/build_past_paper_questions.py` (f-string page shell, its own sitemap
+block between markers, runs Prettier over its own output, deletes stale pages)
+with the validation discipline of `scripts/build_questions.py` (collect every
+failure, write nothing if any).
 
-When answers come back: record them in `glossary-data/curation.json`, re-run
-`python3 scripts/extract_glossary.py`, confirm the review file has shrunk, then
-start Phase 3.1 — `scripts/build_glossary.py`, modelled on
-`scripts/build_past_paper_questions.py` with the validation discipline of
-`scripts/build_questions.py`.
+Data is settled: **263 terms, 28 formulae**, 6 tables harvested, 21 formulae
+excluded, 28 relabelled, 11 terms with sources excluded, 20 with a preferred
+source.
