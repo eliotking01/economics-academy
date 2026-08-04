@@ -97,6 +97,8 @@ BOARDS = {
     },
 }
 
+INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)
+
 LANDING_META = (
     "Free A-Level Economics glossary. Choose your exam board for every "
     "definition and formula you need, taken word for word from our Edexcel and "
@@ -115,9 +117,31 @@ def e(s: str) -> str:
     return html.escape(s, quote=True)
 
 
+def tex_to_text(s: str) -> str:
+    """Reduce inline LaTeX to readable text. JSON-LD descriptions only.
+
+    A schema.org description is a plain-text field, so `\\( AC = \\frac{TC}{Q}
+    \\)` cannot go in it as written - a crawler would index the backslashes.
+    This turns it into "AC = TC/Q".
+
+    Scoped deliberately: the visible page always shows the real KaTeX, and this
+    never touches it. It runs on the description field and nowhere else.
+    """
+    def one(m):
+        t = m.group(1)
+        t = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"\1/\2", t)
+        t = re.sub(r"\\text\{([^{}]*)\}", r"\1", t)
+        t = (t.replace(r"\times", "x").replace(r"\%", "%")
+              .replace(r"\Delta", "change in").replace(r"\infty", "infinity"))
+        t = re.sub(r"\\[a-zA-Z]+", " ", t)
+        return re.sub(r"\s+", " ", t.replace("{", "").replace("}", "")).strip()
+    return INLINE_TEX.sub(one, s)
+
+
 def plain(fragment: str) -> str:
     """Fragment -> plain text, for JSON-LD and meta descriptions."""
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", fragment)).strip()
+    return re.sub(r"\s+", " ",
+                  tex_to_text(re.sub(r"<[^>]+>", "", fragment))).strip()
 
 
 def json_ld(obj, indent="      ") -> str:
@@ -138,14 +162,31 @@ def katex(latex_list):
     which KaTeX marks aria-hidden - a screen reader would then find nothing at
     all where the formula is. The MathML is what assistive technology reads.
     """
+    return _katex(latex_list, True)
+
+
+def render_inline_maths(definition: str, inline_map) -> str:
+    """Swap \\( ... \\) inside a definition for pre-rendered KaTeX.
+
+    Fifteen definitions state their formula inline - "Average Cost (AC):
+    \\( AC = \\frac{TC}{Q} \\)". The glossary pages carry no maths JavaScript,
+    so without this those definitions display their LaTeX source to the reader.
+    Display formulae are handled separately; only the inline form appears here.
+    """
+    return INLINE_TEX.sub(
+        lambda m: inline_map[html.unescape(m.group(1)).strip()], definition)
+
+
+def _katex(latex_list, display):
     if not latex_list:
         return []
     script = (
         'const katex=require(process.argv[1]);'
+        'const display=process.argv[2]==="1";'
         'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{'
         'try{'
         'const out=JSON.parse(s).map(t=>katex.renderToString(t,'
-        '{displayMode:true,throwOnError:true,strict:false}));'
+        '{displayMode:display,throwOnError:true,strict:false}));'
         'process.stdout.write(JSON.stringify({ok:true,html:out}));'
         '}catch(err){'
         'process.stdout.write(JSON.stringify({ok:false,error:String(err.message||err)}));'
@@ -153,7 +194,7 @@ def katex(latex_list):
     )
     try:
         r = subprocess.run(
-            ["node", "-e", script, str(KATEX_JS)],
+            ["node", "-e", script, str(KATEX_JS), "1" if display else "0"],
             input=json.dumps(latex_list), capture_output=True,
             text=True, check=True, cwd=ROOT,
         )
@@ -358,7 +399,7 @@ def source_for(term, board):
     return next(s for s in term["sources"] if s["board"] == board)
 
 
-def entry_html(term, board):
+def entry_html(term, board, inline_map):
     s = source_for(term, board)
     groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
     others = [x for x in term["sources"]
@@ -377,7 +418,7 @@ def entry_html(term, board):
               >
                 <dt class="gl-term">{e(term['term'])}</dt>
                 <dd class="gl-def">
-                  <p class="gl-text">{s['definitionHtml']}</p>
+                  <p class="gl-text">{render_inline_maths(s['definitionHtml'], inline_map)}</p>
                   <p class="gl-source">
                     <span class="gl-group">{e(s['groupLabel'])}</span>
                     <a href="{e(s['notesUrl'])}">{e(s['spec'])} {e(s['topic'])}</a>
@@ -406,7 +447,7 @@ def formula_html(f, board, rendered, groups):
             </div>"""
 
 
-def render_board(data, board, groups, rendered_map):
+def render_board(data, board, groups, rendered_map, inline_map):
     meta = BOARDS[board]
     terms = [t for t in data["terms"] if board in t["boards"]]
     formulae = [f for f in data["formulae"] if board in f["boards"]]
@@ -440,7 +481,8 @@ def render_board(data, board, groups, rendered_map):
     for L in LETTERS:
         if not by_letter[L]:
             continue
-        entries = "\n".join(entry_html(t, board) for t in by_letter[L])
+        entries = "\n".join(
+                entry_html(t, board, inline_map) for t in by_letter[L])
         sections.append(f"""          <section class="gl-letter" id="letter-{L.lower()}">
             <h2 class="gl-letter-head">{L}</h2>
             <dl class="gl-list">
@@ -448,7 +490,7 @@ def render_board(data, board, groups, rendered_map):
             </dl>
           </section>""")
     if other:
-        entries = "\n".join(entry_html(t, board) for t in other)
+        entries = "\n".join(entry_html(t, board, inline_map) for t in other)
         sections.append(f"""          <section class="gl-letter" id="letter-other">
             <h2 class="gl-letter-head">Other</h2>
             <dl class="gl-list">
@@ -739,6 +781,12 @@ def main():
     try:
         latex = [f["latex"] for f in data["formulae"]]
         rendered_map = dict(zip(latex, katex(latex)))
+        inline = sorted({
+            html.unescape(m).strip()
+            for t in data["terms"] for s in t["sources"]
+            for m in INLINE_TEX.findall(s["definitionHtml"])
+        })
+        inline_map = dict(zip(inline, _katex(inline, False)))
     except BuildError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
@@ -746,7 +794,16 @@ def main():
     pages = {OUT_DIR / "index.html": render_landing(data)}
     for board in BOARDS:
         pages[OUT_DIR / BOARDS[board]["slug"] / "index.html"] = \
-            render_board(data, board, groups, rendered_map)
+            render_board(data, board, groups, rendered_map, inline_map)
+
+    for path, source in pages.items():
+        leftover = re.search(r"\\\(|\\\[", source)
+        if leftover:
+            i = leftover.start()
+            print(f"error: {path.name} still contains raw LaTeX at "
+                  f"{source[i:i + 60]!r} - it was not pre-rendered",
+                  file=sys.stderr)
+            return 1
 
     for b in BOARDS:
         n = sum(1 for t in data["terms"] if b in t["boards"])

@@ -143,16 +143,23 @@ def main():
     try:
         latex = [f["latex"] for f in data["formulae"]]
         rendered = dict(zip(latex, bg.katex(latex)))
+        import html as _h
+        inline = sorted({
+            _h.unescape(m).strip()
+            for t in data["terms"] for src in t["sources"]
+            for m in bg.INLINE_TEX.findall(src["definitionHtml"])
+        })
+        inline_map = dict(zip(inline, bg._katex(inline, False)))
     except bg.BuildError as exc:
         fails.append(f"[3] {exc}")
-        rendered = None
+        rendered = inline_map = None
 
     pages = {}
     if rendered is not None:
         pages[GLOSSARY / "index.html"] = bg.render_landing(data)
         for board in bg.BOARDS:
             pages[GLOSSARY / bg.BOARDS[board]["slug"] / "index.html"] = \
-                bg.render_board(data, board, groups, rendered)
+                bg.render_board(data, board, groups, rendered, inline_map)
         for path, expected in pages.items():
             actual = path.read_text(encoding="utf-8")
             # Prettier reformats the generator's output, so compare the text
@@ -185,6 +192,15 @@ def main():
                              f"{board} source")
     print(f"  4. anchors unique and complete                      "
           f"{'ok' if dup_total == 0 else str(dup_total) + ' duplicates'}")
+
+    # No page may show LaTeX source to a reader. Fifteen definitions state
+    # their formula inline, and the pages carry no maths JavaScript.
+    for board, d in BOARD_DIR.items():
+        src = (GLOSSARY / d / "index.html").read_text(encoding="utf-8")
+        for m in re.finditer(r"\\\(|\\\[", src):
+            fails.append(f"[4] {d}: raw LaTeX on the page at "
+                         f"{src[m.start():m.start() + 50]!r}")
+            break
 
     # ---- 5. JSON-LD ---------------------------------------------------------
     ld_checked = 0
