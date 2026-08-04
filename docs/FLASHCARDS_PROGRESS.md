@@ -8,17 +8,15 @@ _Last updated: 2026-08-04._
 
 ## Current state
 
-On branch `flashcards-feature`. Style guide LOCKED. Batches 1 (22 cards) and
-2 (19 cards + 4 diagrams) approved by Eliot 2026-08-04. **Batch 3 (28 cards
-+ 4 diagrams: max-price, min-price, subsidy-incidence, underconsumption) is
-awaiting Eliot's review** — it completes coverage of every Theme 1 subtopic:
-deck now 69 cards / all 22 topics. Two notes caption errors found during
-diagram work are logged in docs/CONTENT_ISSUES.md awaiting his decision
-(max/min price captions describe a tax). Not yet done: batch 4 to reach the
-planned density (~110 cards: PED determinants/revenue relationship, more
-chains/evals/apps, and the 5 remaining planned diagrams — excess-demand,
-excess-supply, ppf-growth, indirect-tax-gov-revenue, elastic/inelastic
-incidence), AQA variant cards, nav/sitemap integration, final QA pass.
+On branch `flashcards-feature`. Style guide LOCKED. Batches 1–3 approved by
+Eliot 2026-08-04; the two max/min price caption errors he approved are fixed
+on the notes page and closed in docs/CONTENT_ISSUES.md. **Batch 4 (26 cards
++ 6 diagrams) is awaiting Eliot's review.** Deck now 95 cards / all 22
+subtopics: 52 definitions (25 builder-verified verbatim), 17 diagrams, 8
+evaluations, 8 chains, 4 formulae, 3 calculations, 3 applications. The
+two-panel elastic/inelastic incidence PNG became two single-panel SVG cards.
+Remaining: AQA variant cards, nav/sitemap integration (notes-page links need
+separate approval), final QA pass.
 
 Useful QA technique: to screenshot player states, copy the built deck page
 into `_working/`, append a script that clicks `.fc-step`/`.fc-card`, serve
