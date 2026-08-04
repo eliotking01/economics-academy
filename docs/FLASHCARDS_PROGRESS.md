@@ -8,11 +8,21 @@ _Last updated: 2026-08-04._
 
 ## Current state
 
-Scaffolding done on branch `flashcards-feature`. The three style-guide proof
-diagrams are built, self-QA'd and **awaiting Eliot's visual approval** — that
-approval locks docs/DIAGRAM_STYLE.md. SVGs in `images/diagrams/svg/`, their
-headless-Chrome QA renders in `_working/flashcards/diagram-qa/`. No builder,
-player or card content exists yet.
+On branch `flashcards-feature`. Style guide LOCKED (proof diagrams approved
+2026-08-04, after Eliot caught a guide-alignment defect that visual self-QA
+missed — see the geometry-checker entry below). Builder, player, hub and
+deck page all work end-to-end; content **batch 1 (22 cards, vertical slice
+across all seven card types) is awaiting Eliot's review**. Player screenshots
+in `_working/flashcards/player-qa/`. Not yet done: batches 2+, remaining ~13
+diagrams, AQA variants, nav/sitemap integration, final QA pass.
+
+Useful QA technique: to screenshot player states, copy the built deck page
+into `_working/`, append a script that clicks `.fc-step`/`.fc-card`, serve
+the repo root with `python3 -m http.server`, and shoot it with headless
+Chrome (`--virtual-time-budget=6000`). At mobile widths headless Chrome
+shows the same right-edge overflow on existing quiz pages as on flashcards
+pages — site baseline, not a flashcards regression; check real devices via
+DevTools device mode in the QA pass.
 
 ## Decisions made (with reasons)
 
@@ -86,23 +96,20 @@ player or card content exists yet.
 
 ## Next steps
 
-1. Three style-guide proof diagrams (demand shift; indirect tax incidence;
-   negative production externality, ground truth `overproduction.png`) through
-   the full self-QA loop → present to Eliot → lock docs/DIAGRAM_STYLE.md.
-2. `scripts/build_flashcards.py`: schema validation, KaTeX pre-render (reuse
-   build_glossary.py's invocation), Prettier idempotency, premium filtering,
-   notes-verbatim verification.
-3. Player: `js/components/flashcards.js`, `css/pages/flashcards.css`
-   (scoped under `.flashcards-page`), hub + deck landing templates.
-4. Theme 1 content subtopic-by-subtopic; Eliot reviews in ~20-card batches.
-   Suspected notes errors go to docs/CONTENT_ISSUES.md, never fixed directly.
-5. Remaining ~13 diagrams; AQA variant cards.
-6. Integration: nav + inject-templates.js pageMap, revision-notes hub card,
+1. Eliot reviews content batch 1 (`flashcards-data/edexcel-a/theme-1.json`,
+   22 cards). Facts flagged for his spot-check: Soft Drinks Industry Levy
+   rates and the "sugar fell by over a third" claim; the Smith/Hayek/Marx
+   attributions on 1.1.5–1.1.6 cards.
+2. Batches 2+: remaining Theme 1 subtopics (~90 more cards), authored
+   subtopic-by-subtopic; suspected notes errors go to docs/CONTENT_ISSUES.md,
+   never fixed directly.
+3. Remaining ~13 diagrams through the locked QA loop; AQA variant cards.
+4. Integration: nav + inject-templates.js pageMap, revision-notes hub card,
    sitemap.xml, notes-page links (separate commit, needs explicit approval —
    standing rule 1).
-7. QA pass (mobile, JSON validity, SEO tags, performance, keyboard/screen
-   reader, print incl. SVGs, GA4 DebugView, verify scripts, build idempotency
-   run-twice-diff-empty).
+5. QA pass (real-device/DevTools mobile, JSON validity, SEO tags,
+   performance, keyboard/screen reader, print incl. SVGs, GA4 DebugView,
+   verify scripts, build idempotency run-twice-diff-empty).
 
 ## Open questions
 

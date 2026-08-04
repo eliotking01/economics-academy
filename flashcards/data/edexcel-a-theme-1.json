@@ -1,0 +1,429 @@
+{
+  "generated": "2026-08-04",
+  "board": "edexcel-a",
+  "boardName": "Edexcel A",
+  "theme": "theme-1",
+  "themeName": "Theme 1: Introduction to Markets and Market Failure",
+  "deckId": "edexcel-a-theme-1",
+  "deckTitle": "Edexcel A-Level Economics Theme 1 Flashcards",
+  "count": 22,
+  "topics": [
+    {
+      "subtopic": "1-1-1-economics-as-a-social-science",
+      "specCode": "1.1.1",
+      "title": "Economics as a Social Science",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+      "count": 1
+    },
+    {
+      "subtopic": "1-1-2-positive-normative-statements",
+      "specCode": "1.1.2",
+      "title": "Positive and Normative Statements",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-2-positive-normative-statements.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-1-3-the-economic-problem",
+      "specCode": "1.1.3",
+      "title": "The Economic Problem",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-1-4-production-possibility-frontiers",
+      "specCode": "1.1.4",
+      "title": "Production Possibility Frontiers",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+      "count": 1
+    },
+    {
+      "subtopic": "1-1-5-specialisation-division-of-labour",
+      "specCode": "1.1.5",
+      "title": "Specialisation and the Division of Labour",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-1-6-types-of-economies",
+      "specCode": "1.1.6",
+      "title": "Types of Economies",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-6-types-of-economies.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-2-2-demand",
+      "specCode": "1.2.2",
+      "title": "Demand",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "specCode": "1.2.3",
+      "title": "Price, Income and Cross Elasticities of Demand",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "specCode": "1.2.9",
+      "title": "Indirect Taxes and Subsidies",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-3-2-externalities",
+      "specCode": "1.3.2",
+      "title": "Externalities",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+      "count": 2
+    }
+  ],
+  "cards": [
+    {
+      "id": "edexcel-a-1-1-1-def-01",
+      "specCode": "1.1.1",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-1-economics-as-a-social-science",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "methodology"
+      ],
+      "front": "<p>What does <strong>ceteris paribus</strong> mean, and why do economists rely on it?</p>",
+      "back": "<p><strong>Ceteris paribus</strong> — a Latin phrase meaning ‘all other things being equal’ or ‘all other factors held constant’.</p><p>Economists cannot run laboratory experiments, so they isolate the effect of one variable by assuming all others stay constant.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-1-economics-as-a-social-science.html"
+    },
+    {
+      "id": "edexcel-a-1-1-2-def-01",
+      "specCode": "1.1.2",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-2-positive-normative-statements",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "methodology"
+      ],
+      "front": "<p>Define a <strong>positive statement</strong>.</p>",
+      "back": "<p>A <strong>positive statement</strong> is an objective statement about what is, was or will be, which can be tested against evidence and shown to be true or false.</p><p>Example: ‘A rise in the minimum wage will increase unemployment’ — testable, whether or not it turns out to be true.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-2-positive-normative-statements.html"
+    },
+    {
+      "id": "edexcel-a-1-1-2-def-02",
+      "specCode": "1.1.2",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-2-positive-normative-statements",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "methodology"
+      ],
+      "front": "<p>Define a <strong>normative statement</strong>.</p>",
+      "back": "<p>A <strong>normative statement</strong> is a subjective statement of opinion about what ought to be, resting on a value judgement, so it cannot be proved true or false.</p><p>Watch for the signal words in exam extracts: <em>should</em>, <em>ought</em>, <em>fair</em>, <em>too much</em>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-2-positive-normative-statements.html"
+    },
+    {
+      "id": "edexcel-a-1-1-3-def-01",
+      "specCode": "1.1.3",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-3-the-economic-problem",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "economic-problem"
+      ],
+      "front": "<p>Define <strong>scarcity</strong> — the basic economic problem.</p>",
+      "back": "<p><strong>Scarcity</strong> — when there are finite resources (e.g., land, labour, capital) but infinite human wants and needs.</p><p>Scarcity forces every economic agent to make choices, and every choice carries an opportunity cost.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html"
+    },
+    {
+      "id": "edexcel-a-1-1-3-def-02",
+      "specCode": "1.1.3",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-3-the-economic-problem",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "economic-problem"
+      ],
+      "front": "<p>Define <strong>opportunity cost</strong>.</p>",
+      "back": "<p><strong>Opportunity cost</strong> — the value of the next best alternative foregone when making an economic decision.</p><p>It is the <em>next best</em> alternative that counts, not everything given up.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html"
+    },
+    {
+      "id": "edexcel-a-1-1-3-def-03",
+      "specCode": "1.1.3",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-3-the-economic-problem",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "economic-problem"
+      ],
+      "front": "<p>Name and define the four <strong>factors of production</strong>.</p>",
+      "back": "<p>The <strong>factors of production</strong> are the resources used to produce goods and services:</p><ul><li><strong>Land</strong> — all natural resources.</li><li><strong>Labour</strong> — the human workforce.</li><li><strong>Capital</strong> — man-made aids to production, such as machinery and factories.</li><li><strong>Enterprise</strong> — the entrepreneurship that organises the other factors and bears the risk.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html"
+    },
+    {
+      "id": "edexcel-a-1-1-4-def-01",
+      "specCode": "1.1.4",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-4-production-possibility-frontiers",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "ppf"
+      ],
+      "front": "<p>Define a <strong>production possibility frontier</strong> (PPF).</p>",
+      "back": "<p>A <strong>production possibility frontier</strong> shows the maximum combinations of two goods or services an economy can produce when all its resources are fully and efficiently employed.</p><p>Points inside the frontier mean unemployed or inefficiently used resources; points beyond it are currently unattainable.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html"
+    },
+    {
+      "id": "edexcel-a-1-1-5-def-01",
+      "specCode": "1.1.5",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-5-specialisation-division-of-labour",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "specialisation"
+      ],
+      "front": "<p>Define <strong>specialisation</strong>.</p>",
+      "back": "<p><strong>Specialisation</strong> — occurs when individuals, firms, regions, or countries concentrate on producing a specific good or service.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html"
+    },
+    {
+      "id": "edexcel-a-1-1-5-def-02",
+      "specCode": "1.1.5",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-5-specialisation-division-of-labour",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "specialisation"
+      ],
+      "front": "<p>Define the <strong>division of labour</strong>.</p>",
+      "back": "<p><strong>Division of labour</strong> — a form of specialisation where the production process is split into separate tasks, with each worker assigned a specific, repetitive task - this enables the worker to become highly skilled and efficient at that task.</p><p>Associated with Adam Smith’s pin factory.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html"
+    },
+    {
+      "id": "edexcel-a-1-1-6-def-01",
+      "specCode": "1.1.6",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-6-types-of-economies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "economic-systems"
+      ],
+      "front": "<p>Define a <strong>free market economy</strong>.</p>",
+      "back": "<p>A <strong>free market economy</strong> is one in which resources are allocated by the price mechanism, with supply and demand determining what is produced, how, and for whom — with minimal government intervention.</p><p>Associated with Adam Smith’s ‘invisible hand’ and with Hayek; no pure free market exists in practice.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-6-types-of-economies.html"
+    },
+    {
+      "id": "edexcel-a-1-1-6-def-02",
+      "specCode": "1.1.6",
+      "topic": "1.1 Nature of economics",
+      "subtopic": "1-1-6-types-of-economies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "economic-systems"
+      ],
+      "front": "<p>Define a <strong>command economy</strong>.</p>",
+      "back": "<p>A <strong>command economy</strong> is one in which the state owns the means of production and allocates resources through central planning, deciding what is produced and at what price.</p><p>Associated with Karl Marx; in practice it suffers information and incentive problems.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-1-6-types-of-economies.html"
+    },
+    {
+      "id": "edexcel-a-1-2-2-def-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "demand"
+      ],
+      "front": "<p>Define <strong>demand</strong>.</p>",
+      "back": "<p><strong>Demand</strong> — the quantity of a good/service consumers are willing and able to buy at a given price in a given time period.</p><p><em>Willing and able</em> — desire without purchasing power is not demand.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html"
+    },
+    {
+      "id": "edexcel-a-1-2-3-def-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "elasticity"
+      ],
+      "front": "<p>Define <strong>price elasticity of demand</strong> (PED).</p>",
+      "back": "<p><strong>PED</strong> measures the responsiveness of quantity demanded to a change in the good's own price.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+    },
+    {
+      "id": "edexcel-a-1-2-3-formula-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "elasticity",
+        "formula"
+      ],
+      "front": "<p>State the formula for <strong>price elasticity of demand</strong>.</p>",
+      "back": "<p>Because demand curves slope downwards, PED is negative — interpret its absolute size: elastic if greater than 1, inelastic if less than 1.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mtext>PED</mtext><mo>=</mo><mfrac><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><mtext>QD</mtext></mrow><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><mtext>P</mtext></mrow></mfrac></mrow><annotation encoding=\"application/x-tex\">\\text{PED} = \\frac{\\%\\Delta \\text{QD}}{\\%\\Delta \\text{P}}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord text\"><span class=\"mord\">PED</span></span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:2.1686em;vertical-align:-0.7416em;\"></span><span class=\"mord\"><span class=\"mopen nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.427em;\"><span style=\"top:-2.314em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord text\"><span class=\"mord\">P</span></span></span></span><span style=\"top:-3.23em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"frac-line\" style=\"border-bottom-width:0.04em;\"></span></span><span style=\"top:-3.677em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord text\"><span class=\"mord\">QD</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.7416em;\"><span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-1-2-3-calc-01",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "elasticity",
+        "calculation"
+      ],
+      "front": "<p>The price of a good rises from £8.00 to £10.00 and quantity demanded falls from 200 to 150 units. Calculate the <strong>PED</strong>.</p>",
+      "back": "<p>%Δ QD = −50 ÷ 200 × 100 = <strong>−25%</strong></p><p>%Δ P = +£2 ÷ £8 × 100 = <strong>+25%</strong></p><p>PED = −25% ÷ +25% = <strong>−1.0</strong></p><p>The percentage fall in quantity exactly matches the percentage rise in price — demand is unit elastic over this price range.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+    },
+    {
+      "id": "edexcel-a-1-2-2-diagram-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "demand",
+        "diagram"
+      ],
+      "front": "<p>Sketch the effect of an <strong>increase in demand</strong> on the demand curve, marking the quantities at the original price.</p>",
+      "back": "<p>D1 shifts right to D2, caused by a change in a non-price factor — incomes, the price of substitutes or complements, tastes, or population. At the unchanged price P1, quantity demanded rises from Q1 to Q2.</p>",
+      "svgRef": "/images/diagrams/svg/demand-curve-shift.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
+      "svgAlt": "Demand curve D1 shifting right to D2, with quantity demanded rising from Q1 to Q2 at the unchanged price P1"
+    },
+    {
+      "id": "edexcel-a-1-2-9-diagram-01",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "indirect-tax",
+        "diagram"
+      ],
+      "front": "<p>Draw how the burden of a <strong>specific (per-unit) indirect tax</strong> is split between consumers and producers.</p>",
+      "back": "<p>The tax shifts supply left from S to S+Tax. The market price rises from P1 to P2 — the consumer burden — while producers keep only P3 after remitting the tax, so P1 to P3 is the producer burden. Output falls from Q1 to Q2.</p><p>The more price inelastic demand is, the larger the share of the burden consumers bear.</p>",
+      "svgRef": "/images/diagrams/svg/indirect-tax-incidence.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+      "svgAlt": "Supply and demand diagram with supply shifted left to S plus tax, showing the consumer burden between P1 and P2 and the producer burden between P3 and P1, up to the new quantity Q2"
+    },
+    {
+      "id": "edexcel-a-1-3-2-diagram-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a negative production externality.</p>",
+      "back": "<p>Producers face only their private costs, so external costs are ignored and MSC lies above MPC. The market produces at Q1, where MPC = MPB, but the social optimum is Q2, where MSC = MSB. The shaded triangle between the two is the welfare loss from over-production.</p>",
+      "svgRef": "/images/diagrams/svg/overproduction.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+      "svgAlt": "Externality diagram with MSC above S equals MPC and D equals MPB equals MSB, showing market output Q1 beyond the social optimum Q2 and a shaded welfare loss triangle"
+    },
+    {
+      "id": "edexcel-a-1-2-2-chain-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-2-demand",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "demand",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does a rise in consumer incomes affect the market for a normal good?</p>",
+      "back": "<p>Incomes rise, so consumers’ purchasing power rises. At every price they are now willing and able to buy more, shifting demand right from D1 to D2. At the original price there is briefly excess demand, which bids the price up until the market reaches a new equilibrium at a higher price and quantity.</p><p>For an <em>inferior</em> good the chain runs the other way — higher incomes shift demand left.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html"
+    },
+    {
+      "id": "edexcel-a-1-3-2-chain-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "externalities",
+        "chain-of-reasoning"
+      ],
+      "front": "<p>Build the <strong>chain of reasoning</strong>: why does a free market over-produce a good with negative production externalities?</p>",
+      "back": "<p>Producers base output decisions only on their private costs. External costs — pollution, congestion — fall on third parties and never enter the firm’s calculation, so MPC understates MSC. The market price is therefore too low and output settles at Q1, beyond the social optimum Q2, creating a welfare loss on every unit in between.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html"
+    },
+    {
+      "id": "edexcel-a-1-2-9-eval-01",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "indirect-tax",
+        "evaluation"
+      ],
+      "front": "<p><strong>Evaluate</strong>: an indirect tax is an effective way to cut consumption of a demerit good. What are the key evaluation points?</p>",
+      "back": "<ul><li><strong>PED is decisive</strong> — if demand is price inelastic, as for addictive goods such as cigarettes, quantity falls little and the tax mainly raises revenue.</li><li><strong>Regressive burden</strong> — indirect taxes take a larger share of low incomes.</li><li><strong>Unintended consequences</strong> — black markets and cross-border shopping can grow.</li><li><strong>Setting the rate</strong> — the external cost is hard to measure, so the tax may over- or under-correct.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html"
+    },
+    {
+      "id": "edexcel-a-1-2-9-app-01",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "application",
+      "difficulty": "standard",
+      "tags": [
+        "indirect-tax",
+        "application",
+        "uk"
+      ],
+      "front": "<p>Give a <strong>real-world example</strong> of an indirect tax used to correct a market failure in the UK.</p>",
+      "back": "<p>The UK <strong>Soft Drinks Industry Levy</strong> (April 2018) charges 18p per litre on drinks with 5–8g of sugar per 100ml, and 24p per litre above 8g.</p><p>Application point: manufacturers reformulated to duck the thresholds — the sugar content of taxed drinks fell by over a third — so the levy worked mainly through <em>supply-side</em> reformulation rather than the price mechanism alone.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html"
+    }
+  ]
+}
