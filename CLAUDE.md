@@ -36,6 +36,15 @@ installed and there is no config.
   what makes `_working/` a safe place for build-time working files. **Adding a
   `.nojekyll` file would immediately expose every `_` directory** — if that is
   ever wanted, move `_working/` out of the repo first.
+- **Jekyll runs Liquid over every markdown file, before Markdown.** A stray
+  `{%` opens a tag that never closes and **the whole deploy fails** — not the
+  page, the deploy. Backticks do not protect it: Liquid runs first and has no
+  idea what a code span is. This has happened once, on a line quoting the LaTeX
+  `\text{` followed by an unescaped `%`. Wrap such text in
+  `{% raw %}` … `{% endraw %}`, and run `python3 scripts/verify_liquid.py`,
+  which reproduces Liquid 4.0.4's behaviour and was cross-checked against it.
+  The site's own HTML is safe — it has no front matter, so Jekyll copies it
+  verbatim without rendering.
 
 ## Layout
 

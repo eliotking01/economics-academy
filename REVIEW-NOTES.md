@@ -1508,10 +1508,16 @@ Found when the glossary generator pre-rendered every formula through KaTeX with
 MathJax on the notes pages: **`%` begins a comment in TeX.** Everything after it
 on the line is discarded, so the formula never closes its brace.
 
+Quoting the broken LaTeX below needs `{% raw %}`: GitHub Pages runs Liquid over
+every markdown file in this repo **before** Markdown, and `{%` opens a Liquid
+tag. Backticks do not protect it — **this exact line failed the Pages build**,
+which fails the whole deploy rather than one page. Guarded now by
+`python3 scripts/verify_liquid.py`.
+
 | Page | Line | LaTeX as written |
 | --- | ---: | --- |
-| `aqa-a2-macro/2-1-2-macroeconomic-indicators.html` | 199 | `\text{% Change in Real GDP} = \text{% Change in Nominal GDP} - \text{Inflation Rate}` |
-| `aqa-a2-macro/2-1-3-uses-of-index-numbers.html` | 304 | `\text{% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` |
+| `aqa-a2-macro/2-1-2-macroeconomic-indicators.html` | 199 | {% raw %}`\text{% Change in Real GDP} = \text{% Change in Nominal GDP} - \text{Inflation Rate}`{% endraw %} |
+| `aqa-a2-macro/2-1-3-uses-of-index-numbers.html` | 304 | {% raw %}`\text{% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100`{% endraw %} |
 
 **These are rendering broken on the live site today**, not only in the glossary.
 
