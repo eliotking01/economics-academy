@@ -8,15 +8,22 @@ _Last updated: 2026-08-04._
 
 ## Current state
 
-On branch `flashcards-feature`. Style guide LOCKED. Batches 1–3 approved by
-Eliot 2026-08-04; the two max/min price caption errors he approved are fixed
-on the notes page and closed in docs/CONTENT_ISSUES.md. **Batch 4 (26 cards
-+ 6 diagrams) is awaiting Eliot's review.** Deck now 95 cards / all 22
-subtopics: 52 definitions (25 builder-verified verbatim), 17 diagrams, 8
-evaluations, 8 chains, 4 formulae, 3 calculations, 3 applications. The
-two-panel elastic/inelastic incidence PNG became two single-panel SVG cards.
-Remaining: AQA variant cards, nav/sitemap integration (notes-page links need
-separate approval), final QA pass.
+On branch `flashcards-feature`. Style guide LOCKED. Batches 1–4 approved
+(2026-08-04); caption fixes shipped. Edexcel Theme 1 deck: 95 cards / 22
+subtopics. **AQA micro starter deck (13 cards, 6 topics — the concepts AQA
+names that Edexcel does not, plus AQA's verbatim definitions) awaits
+Eliot's review**, as does the proposed notes-page links change (markup in
+the chat; standing rule 1). Integration is live on the branch: nav
+dropdown entry, inject-templates pageMap (flashcards light up Revision
+Notes), notes-hub button, sitemap section — verify_html/links pass over
+182 pages including all three flashcard pages.
+
+QA still open (mostly needs a real browser): print preview of "Print this
+deck" (the headless print-to-pdf check was inconclusive — beforeprint may
+not fire there; the button path is code-verified), GA4 DebugView once
+deployed, keyboard/screen-reader spot check, DevTools device-mode mobile.
+Automated checks all green and continuously re-run: geometry (17 SVGs),
+HTML, links, glossary, Liquid, build idempotency.
 
 Useful QA technique: to screenshot player states, copy the built deck page
 into `_working/`, append a script that clicks `.fc-step`/`.fc-card`, serve
