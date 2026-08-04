@@ -1,0 +1,65 @@
+# GitHub Pages build configuration.
+#
+# The site is hand-written static HTML. Jekyll renders none of it: no page has
+# front matter, so every .html file is copied verbatim. Jekyll is in the loop
+# only because GitHub Pages puts it there.
+#
+# What it *was* doing, left to itself, is publishing this repo's working files
+# as web pages. /REVIEW-NOTES.html, /CLAUDE.md, /PROJECT-LOG.html,
+# /scripts/build_glossary.py, /raw-notes/... were all live and crawlable. This
+# file stops that, for two reasons:
+#
+#   1. They are internal. REVIEW-NOTES.md in particular is a public list of
+#      known content errors on this very site.
+#   2. Jekyll runs Liquid over every markdown file BEFORE Markdown, so a stray
+#      "{%" anywhere in them fails the whole deploy - not the page, the deploy.
+#      That has already happened once. Excluding them removes the class.
+#
+# Checked before writing this: no served .html, .css, .js, .xml or .webmanifest
+# references any excluded path. The only runtime fetches on the site are
+# /templates/header.html and /templates/footer.html, which stay.
+#
+# WARNING: `exclude` REPLACES Jekyll's default list rather than adding to it,
+# which is why the defaults are repeated below. Anything deleted from this list
+# becomes public again.
+
+exclude:
+  # Jekyll's own defaults, restated because setting `exclude` overrides them.
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+
+  # Build-time only. Generated output lives elsewhere and is served normally;
+  # these are the inputs and the tooling.
+  - scripts/
+  - glossary-data/
+  - questions-data/
+  - past-paper-questions-data/
+  - raw-notes/
+
+  # Internal documentation and working notes.
+  - docs/
+  - CLAUDE.md
+  - NEW-CONTENT-LOG.md
+  - PAST-PAPERS-PROGRESS.md
+  - PROJECT-LOG.md
+  - QUESTIONS_GUIDE.md
+  - QUESTIONS_PROGRESS.md
+  - README.md
+  - README.txt
+  - REVIEW-NOTES.md
+  - ROADMAP.md
+  - extraction-qa-report.md
+  - requirements.txt
+
+  # Already excluded by Jekyll's rule that anything starting with "_" is
+  # skipped. Listed so the intent survives if that ever changes.
+  - _working/
+
+# Deliberately NOT excluded, so the change is a decision rather than a habit:
+#   templates/                 fetched at runtime by inject-templates.js
+#   past-paper-questions/      questions.json is fetched by question-search.js
+#   specificiations/           the exam-board PDFs; removing them from the site
+#                              is a separate call, and was left as one
+#   LICENSE.txt, old-logos-archive/, webfonts/, logo/, images/

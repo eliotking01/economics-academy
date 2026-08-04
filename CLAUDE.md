@@ -29,13 +29,29 @@ installed and there is no config.
 `main` is served by GitHub Pages with **the default Jekyll build** — there is no
 `.nojekyll` and no `_config.yml`. Two consequences that are not obvious:
 
-- **Everything tracked in the repo is public.** Root markdown is served too:
-  `/PROJECT-LOG.md` and `/PROJECT-LOG.html` both return 200. Anything committed
-  is on the site.
+- **`_config.yml` decides what is published.** It exists only to hold an
+  `exclude` list, which keeps the repo's working files off the site: `scripts/`,
+  `raw-notes/`, `docs/`, the three `*-data/` directories and the root markdown.
+  Before it, `/REVIEW-NOTES.html`, `/CLAUDE.md` and `/scripts/build_glossary.py`
+  were all live. **`exclude` replaces Jekyll's defaults rather than adding to
+  them**, so the defaults are restated in the file; anything deleted from that
+  list becomes public again.
+- **Still public by decision:** `templates/` and `past-paper-questions/` are
+  fetched at runtime and must stay; `specificiations/` holds the exam-board
+  PDFs and is a separate call.
 - **Directories beginning with `_` are excluded**, by Jekyll's own rule. That is
   what makes `_working/` a safe place for build-time working files. **Adding a
   `.nojekyll` file would immediately expose every `_` directory** — if that is
   ever wanted, move `_working/` out of the repo first.
+- **Jekyll runs Liquid over every markdown file, before Markdown.** A stray
+  `{%` opens a tag that never closes and **the whole deploy fails** — not the
+  page, the deploy. Backticks do not protect it: Liquid runs first and has no
+  idea what a code span is. This has happened once, on a line quoting the LaTeX
+  `\text{` followed by an unescaped `%`. Wrap such text in
+  `{% raw %}` … `{% endraw %}`, and run `python3 scripts/verify_liquid.py`,
+  which reproduces Liquid 4.0.4's behaviour and was cross-checked against it.
+  The site's own HTML is safe — it has no front matter, so Jekyll copies it
+  verbatim without rendering.
 
 ## Layout
 
