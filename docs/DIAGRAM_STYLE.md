@@ -54,7 +54,9 @@ the PNG where they conflict; conflicts are logged in docs/CONTENT_ISSUES.md.
   "Quantity". Market-specific variants ("Price of labour (W)", "Real GDP")
   follow the ground truth.
 - Curve naming matches the notes captions: `D`, `D1`, `S`, `S1` — plain
-  digits, no Unicode subscripts.
+  digits, no Unicode subscripts. Curve identity labels use a compact equals
+  with no spaces (`S=MPC`, `D=MPB=MSB`), matching the notes' PNGs — and long
+  right-hand labels must be width-checked against the 800px canvas edge.
 - Axis value labels are `P`, `P1`, `Q`, `Q1` at the guide-line feet, 24px.
 - Minimum clearance: 8px between any label and any stroke it does not name;
   curve labels sit just past the curve's end, right of the plot area.
@@ -96,5 +98,8 @@ ground-truth PNG's name where one exists (`demand-curve-shift.svg` beside
    labelled and the labels name the right curves; shaded areas cover exactly
    the region claimed; arrows point the right way.
 3. Repeat at `--window-size=400,300` and confirm labels are still legible at
-   mobile scale.
+   mobile scale. Headless Chrome reserves scrollbar width at this size, so a
+   ~15px right-edge crop in the render is an artifact, not an SVG fault —
+   judge label legibility only. (In pages the SVG is an `<img>` and scales
+   correctly.)
 4. Only then present for approval, in batches.

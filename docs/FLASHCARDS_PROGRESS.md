@@ -8,9 +8,11 @@ _Last updated: 2026-08-04._
 
 ## Current state
 
-Scaffolding in progress on branch `flashcards-feature`. No builder, player,
-content or diagrams exist yet. Next gate: the three style-guide proof diagrams
-go to Eliot for visual approval before anything else is built.
+Scaffolding done on branch `flashcards-feature`. The three style-guide proof
+diagrams are built, self-QA'd and **awaiting Eliot's visual approval** — that
+approval locks docs/DIAGRAM_STYLE.md. SVGs in `images/diagrams/svg/`, their
+headless-Chrome QA renders in `_working/flashcards/diagram-qa/`. No builder,
+player or card content exists yet.
 
 ## Decisions made (with reasons)
 
@@ -64,6 +66,13 @@ go to Eliot for visual approval before anything else is built.
   added to `_config.yml` exclude; ROADMAP updated (glossary flashcard idea
   superseded); this file, docs/DIAGRAM_STYLE.md (draft), docs/CONTENT_ISSUES.md
   created.
+- 2026-08-04 — Proof diagrams: `demand-curve-shift.svg`,
+  `indirect-tax-incidence.svg`, `overproduction.svg` authored from visual
+  inspection of their ground-truth PNGs + notes captions, rendered via
+  headless Chrome at 800×600 and 400×300, one defect caught and fixed in
+  self-QA (clipped `D=MPB=MSB` label). Style guide gained two rulings from
+  the loop: compact-equals curve identity labels, and the known mobile-render
+  scrollbar artifact.
 
 ## Next steps
 
