@@ -6,7 +6,7 @@ never batched.
 
 - **Branch:** `feature/glossary` (off `main` at `faccb6a`)
 - **Current phase:** Phase 2 — extraction & gap analysis
-- **Current step:** 4.3 — **PAUSED**, integration proposals await sign-off
+- **Current step:** 5 — handover; manual QA is Eliot's
 - **Last updated:** 2026-08-03
 
 ---
@@ -66,16 +66,16 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [x] 3.5 `js/components/glossary-filter.js`
 - [x] 3.6 `scripts/verify_glossary.py` — 5 checks, all passing
 
-### Phase 4 — SEO & integration — IN PROGRESS
+### Phase 4 — SEO & integration — COMPLETE
 
 - [x] 4.1 JSON-LD: `DefinedTermSet` / `DefinedTerm` + `BreadcrumbList` — 427 terms, all anchors resolve
 - [x] 4.2 Sitemap block between `<!-- Glossary -->` markers
-- [x] 4.3 Proposals written to `integration-proposals.md`. **Nothing applied**
+- [x] 4.3 P1, P2a and P3c approved and applied. P3a/P3b deferred by choice
 
-### Phase 5 — QA & handover
+### Phase 5 — QA & handover — IN PROGRESS
 
-- [ ] 5.1 Verify scripts, idempotence, HTML, links
-- [ ] 5.2 Manual: 3 widths, JS disabled, keyboard, print preview
+- [x] 5.1 All verifiers pass; rebuild byte-identical; 0 text removed, 0 markup lost
+- [ ] 5.2 Manual, **for Eliot**: real phone, JS disabled, keyboard, print preview, Rich Results
 - [ ] 5.3 Summary + handover
 
 ---
@@ -217,6 +217,10 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `js/components/glossary-filter.js` | Created |
 | `revision-notes/glossary/{,edexcel-a/,aqa/}index.html` | **Generated** |
 | `sitemap.xml` | Modified — new Glossary block, 3 URLs |
+| `templates/header.html` | Modified — P1, one `<li>` |
+| `revision-notes/index.html` | Modified — P2a, col-4→col-3 ×3 plus a fourth button |
+| `revision-notes/{micro,macro}economics-diagrams.html` | Modified — P3c, one button in the existing `.notes-cta` |
+| `revision-notes/macro-application/index.html` | Modified — P3c, a new minimal `.notes-cta` |
 
 **No revision-notes topic page has been edited, and none will be.**
 
