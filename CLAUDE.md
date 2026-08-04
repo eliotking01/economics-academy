@@ -226,6 +226,8 @@ with JavaScript off. `js/components/glossary-filter.js` only enhances.
 ## See also
 
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
+- `_working/glossary/authored-review.md` — the 74 authored definitions, the
+  only entries on the site that are not the notes' own words.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
 - `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.

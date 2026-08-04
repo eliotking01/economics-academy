@@ -10,7 +10,7 @@ Three companion files:
 
 | File | What it holds | Numbered as |
 | --- | --- | --- |
-| `inventory.md` | All 255 extracted terms and 49 formulae, with sources | `T`n terms, `B`n formulae, `X`n skipped chips |
+| `inventory.md` | All extracted terms and formulae, with sources | `T`n terms, `B`n formulae, `X`n skipped chips |
 | `review-decisions.md` | Questions the extractor refused to answer — tables, formulae, ambiguous chips | `A`n–`F`n by section, plus `S`/`M`/`R`n in §G |
 | `spec-checklist.md` | Per-board specification coverage, term by term | `E`… Edexcel A, `Q`… AQA, `…QS`n quantitative skills |
 
@@ -32,7 +32,8 @@ inconsistently, (c) ambiguous or borderline.
 | --- | ---: | ---: | ---: |
 | Topic pages scanned | 87 | 79 | 166 |
 | Definitions extracted | 245 | 231 | 476 |
-| Unique terms | — | — | **255** |
+| Unique terms, at the time of this report | — | — | **255** |
+| Unique terms now, after the fills | 269 | 290 | **325** |
 | Terms on both boards | — | — | 157 |
 | Display formulae | — | — | 49 |
 | Spec terms checked | 135 | 135 | — |

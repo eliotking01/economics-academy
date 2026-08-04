@@ -13,10 +13,11 @@ errors. Findings, not intentions.
 
 ## Now
 
-- **Glossary & formulae.** One page per exam board at
-  `/revision-notes/glossary/`, generated from the notes' own definitions.
-  In progress on `feature/glossary` — live state in
-  `_working/glossary/PROGRESS.md`.
+- **Merge `feature/glossary`.** Built and verified; merging is what publishes
+  325 terms and 34 formulae across three pages. Deliberately left manual,
+  because `main` auto-publishes. Before merging, check the economics of the 74
+  authored definitions in `_working/glossary/authored-review.md` — they are the
+  only entries on the site that are not the notes' own words.
 
 ## Next
 
