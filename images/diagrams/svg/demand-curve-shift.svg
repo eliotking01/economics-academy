@@ -1,6 +1,9 @@
 <svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="t">Shift of the demand curve</title>
   <desc id="d">A demand curve D1 shifts right to D2, showing an increase in demand. At the unchanged price P1, quantity demanded rises from Q1 to Q2. A shift from D2 back to D1 would show a decrease in demand.</desc>
+  <!-- geometry
+       on-curve: 330,300 490,300
+  -->
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#d52349"/>

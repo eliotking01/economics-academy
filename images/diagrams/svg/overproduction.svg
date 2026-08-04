@@ -1,6 +1,10 @@
 <svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="t">Negative externality of production</title>
   <desc id="d">Marginal social cost lies above marginal private cost. The free market produces at Q1 where S equals MPC crosses D, but the social optimum is at Q2 where MSC crosses D. The shaded triangle between MSC and D up to Q1 is the social welfare loss from over-production.</desc>
+  <!-- geometry
+       intersections: 360,300 300,240
+       on-curve: 360,180
+  -->
   <!-- welfare loss triangle -->
   <path d="M300 240 L360 180 L360 300 Z" fill="#767676" fill-opacity="0.25"/>
   <!-- guides -->
@@ -14,7 +18,7 @@
   <text x="32" y="50" font-size="26" fill="#333333">Costs, Benefits</text>
   <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
   <!-- curves -->
-  <line x1="170" y1="110" x2="610" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="110" x2="550" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="170" y1="490" x2="590" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="170" y1="370" x2="470" y2="70" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
   <!-- annotation -->
@@ -23,7 +27,7 @@
   <!-- labels -->
   <text x="478" y="64" font-size="26" font-weight="700" fill="#0f7b6c">MSC</text>
   <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S=MPC</text>
-  <text x="618" y="498" font-size="26" font-weight="700" fill="#1d70b8">D=MPB=MSB</text>
+  <text x="558" y="498" font-size="26" font-weight="700" fill="#1d70b8">D=MPB=MSB</text>
   <text x="92" y="248" font-size="24" fill="#333333" text-anchor="end">P2</text>
   <text x="92" y="308" font-size="24" fill="#333333" text-anchor="end">P1</text>
   <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Q2</text>

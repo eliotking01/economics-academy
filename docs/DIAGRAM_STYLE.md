@@ -37,6 +37,11 @@ the PNG where they conflict; conflicts are logged in docs/CONTENT_ISSUES.md.
 - Curves: 3.5px, `stroke-linecap="round"`. Straight-line curves are `<line>`/
   `<path>` with no curvature — A-Level convention draws D and S straight;
   Keynesian AS and genuinely curved relationships use smooth paths.
+- **Geometry is computed, never eyeballed.** Straight curves default to exact
+  45° screen slopes (|Δx| = |Δy|); every intersection a guide marks is
+  derived algebraically from the curve endpoints before the guides are drawn.
+  The first proof batch shipped a demand curve at slope 0.86 against guides
+  computed for slope 1, and every marker sat ~12px off — visual QA missed it.
 - Guide lines: 2px, `stroke-dasharray="6 5"`.
 - Shift arrows: 2.5px in the shifted curve's colour, with an arrowhead
   `<marker>`, drawn between the curves roughly mid-way along them.
@@ -90,13 +95,20 @@ ground-truth PNG's name where one exists (`demand-curve-shift.svg` beside
 
 ## Self-QA loop (standing rule 4)
 
+0. Declare the diagram's economics in a `<!-- geometry -->` comment —
+   `intersections:` points that must lie on two curves, `on-curve:` points
+   that must lie on one — then run
+   `python3 scripts/verify_diagram_geometry.py`; zero flags required. The
+   declaration is mandatory: the checker fails any SVG without one.
 1. Render:
    `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless
    --screenshot=<out>.png --window-size=800,600 --hide-scrollbars <file>.svg`
 2. Read the PNG back visually. Check: no overlapping or clipped labels;
-   intersections land where the guide lines say they do; every curve is
-   labelled and the labels name the right curves; shaded areas cover exactly
-   the region claimed; arrows point the right way.
+   every curve is labelled and the labels name the right curves; shaded areas
+   cover exactly the region claimed; arrows point the right way. For
+   intersections, additionally render zoomed close-ups (copy the SVG with a
+   cropped `viewBox` around each junction) — full-size renders hide a 10px
+   miss.
 3. Repeat at `--window-size=400,300` and confirm labels are still legible at
    mobile scale. Headless Chrome reserves scrollbar width at this size, so a
    ~15px right-edge crop in the render is an artifact, not an SVG fault —

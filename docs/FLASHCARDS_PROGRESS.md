@@ -73,6 +73,16 @@ player or card content exists yet.
   self-QA (clipped `D=MPB=MSB` label). Style guide gained two rulings from
   the loop: compact-equals curve identity labels, and the known mobile-render
   scrollbar artifact.
+- 2026-08-04 — **Eliot's review caught what visual self-QA missed**: in the
+  tax and externality diagrams the demand curve ran at slope 0.86 while every
+  guide position assumed slope 1, so intersection markers and the welfare
+  triangle sat ~12px off the true crossings. Fixed (all straight curves now
+  exact 45°). Countermeasures now locked into the style guide:
+  `scripts/verify_diagram_geometry.py` (stdlib; every diagram declares its
+  intended intersections in a `<!-- geometry -->` comment and the checker
+  proves each one lies on the curves — regression-tested against the buggy
+  version, which it flags), plus zoomed-viewBox close-up renders of every
+  junction in the visual pass.
 
 ## Next steps
 
