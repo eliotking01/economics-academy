@@ -1,9 +1,10 @@
 # Diagram style guide (SVG flashcard diagrams)
 
-**Status: DRAFT** — locked once the three proof diagrams (demand shift,
-indirect tax incidence, negative production externality) are approved. After
-that, every diagram follows this file; changes to it require re-checking every
-shipped SVG.
+**Status: LOCKED** (Eliot approved the three proof diagrams — demand shift,
+indirect tax incidence, negative production externality — on 2026-08-04,
+including the palette, the shift arrow, in-diagram welfare-loss labelling and
+compact curve identities). Every diagram follows this file; changes to it
+require re-checking every shipped SVG.
 
 Ground truth: each SVG is drawn from visual inspection of its existing PNG in
 `images/diagrams/` **and** the figure caption on the notes page that uses it —
