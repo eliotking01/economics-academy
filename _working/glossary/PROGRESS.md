@@ -6,7 +6,7 @@ never batched.
 
 - **Branch:** `feature/glossary` (off `main` at `faccb6a`)
 - **Current phase:** Phase 2 — extraction & gap analysis
-- **Current step:** 5 — handover; manual QA is Eliot's
+- **Current step:** 6 complete — gaps filled; manual QA is Eliot's
 - **Last updated:** 2026-08-03
 
 ---
@@ -218,6 +218,8 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `revision-notes/glossary/{,edexcel-a/,aqa/}index.html` | **Generated** |
 | `sitemap.xml` | Modified — new Glossary block, 3 URLs |
 | `revision-notes/aqa-a2-macro/2-1-{2,3}-*.html` | Modified — G3, three `%`→`\%`, no wording change |
+| `glossary-data/authored.json` | Created — 74 authored definitions, 4 formulae |
+| `_working/glossary/authored-review.md` | Generated — the economics to check |
 | `templates/header.html` | Modified — P1, one `<li>` |
 | `revision-notes/index.html` | Modified — P2a, col-4→col-3 ×3 plus a fourth button |
 | `revision-notes/{micro,macro}economics-diagrams.html` | Modified — P3c, one button in the existing `.notes-cta` |
@@ -241,14 +243,18 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Wait on the integration proposals** in `integration-proposals.md` — P1 (nav
-item), P2 (hub button), P3 (topic-page links). None is applied.
+**Nothing.** Phase 6 is complete: every gap the report listed is filled.
 
-Everything else is built and verified. Remaining QA that needs a human:
+Waiting on Eliot:
 
-- the three pages on a real phone, and with JavaScript disabled
-- keyboard-only through the A-Z strip, search box and topic filter
-- print preview on both board pages
-- the JSON-LD through Google's Rich Results test
+1. **Check the economics** in `_working/glossary/authored-review.md` — 132
+   authored wordings across 74 terms. These are the only entries on the site
+   that are not the notes' own words.
+2. Manual QA — real phone, JavaScript off, keyboard-only, print preview, and the
+   JSON-LD through Google's Rich Results test.
+3. Merge to `main`, which is what publishes it.
+4. The spec PDFs are still live at `economicsacademy.co.uk/specificiations/`.
 
-G3 is fixed: the two `%` formulae now render, and AQA carries 29 formulae.
+The intended direction of travel for `authored.json` is downwards: each entry
+moved into its notes page as a `key-definition` chip becomes extracted, and the
+build then errors until the authored copy is removed.

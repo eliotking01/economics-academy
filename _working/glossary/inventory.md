@@ -8,13 +8,15 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | Measure | Count |
 | --- | ---: |
 | pages | 166 |
-| termsExtracted | 500 |
-| uniqueTerms | 263 |
-| termsOnBothBoards | 164 |
-| termsWithVariantDefinitions | 31 |
-| termsNeedingReview | 79 |
-| displayFormulae | 72 |
-| uniqueFormulae | 31 |
+| authoredTerms | 74 |
+| authoredFormulae | 4 |
+| termsExtracted | 632 |
+| uniqueTerms | 325 |
+| termsOnBothBoards | 234 |
+| termsWithVariantDefinitions | 43 |
+| termsNeedingReview | 90 |
+| displayFormulae | 78 |
+| uniqueFormulae | 34 |
 | formulaeExcludedByCuration | 18 |
 | tableCandidates | 9 |
 | tablesApproved | 6 |
@@ -32,265 +34,327 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **T2** | Absolute poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
 | **T3** | Actual Growth | E | 2 | Theme 2 2.5.1, Theme 2 2.5.2 |
 | **T4** | Aggregate Demand (AD) | AE | 1 | Macroeconomics 2.2.2, Theme 2 2.2.1 |
-| **T5** | Allocative Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| **T6** | Allocative inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| **T7** | Altruism & Fairness | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
-| **T8** | Anchoring bias | A | 1 | Microeconomics 1.2.3 |
-| **T9** | Asymmetric information | AE | 2 | Microeconomics 1.8.2, Theme 1 1.3.1, Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
-| **T10** | Automatic stabilisers | E | 1 | Theme 4 4.5.3 |
-| **T11** | Availability bias | A | 1 | Microeconomics 1.2.3 |
-| **T12** | Average Cost (AC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T13** | Average Fixed Cost (AFC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T14** | Average Returns | A | 1 | Microeconomics 1.4.3 |
-| **T15** | Average Revenue (AR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
-| **T16** | Average Variable Cost (AVC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T17** | Backward integration | E | 1 | Theme 3 3.1.2 |
-| **T18** | Balance Sheet | A | 1 | Macroeconomics 2.4.2 |
-| **T19** | Balanced budget | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| **T20** | Base year | A | 1 | Macroeconomics 2.1.3 |
-| **T21** | Behavioural economic theory | A | 1 | Microeconomics 1.2.3 |
-| **T22** | Bond | A | 1 | Macroeconomics 2.4.1 |
-| **T23** | Bounded rationality | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
-| **T24** | Bounded self control | A | 1 | Microeconomics 1.2.3 |
-| **T25** | Budget deficit | AE | 2 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| **T26** | Budget surplus | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| **T27** | Capital | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
-| **T28** | Capital account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T29** | Capital expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
-| **T30** | Capital flight | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| **T31** | Capital ratio | A | 1 | Macroeconomics 2.4.4 |
-| **T32** | Capitalism | E | 1 | Theme 4 4.2.2 |
-| **T33** | Central bank | A | 1 | Macroeconomics 2.4.3 |
-| **T34** | Ceteris paribus | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.1 |
-| **T35** | Command Economy | E | 1 | Theme 1 1.1.6 |
-| **T36** | Commercial Bank | A | 1 | Macroeconomics 2.4.2 |
-| **T37** | Common market | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
-| **T38** | Common pool resources | A | 1 | Microeconomics 1.8.3 |
-| **T39** | Comparative advantage | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.2 |
-| **T40** | Competition | A | 1 | Microeconomics 1.5.1 |
-| **T41** | Competition and Markets Authority (CMA) | E | 1 | Theme 3 3.6.1 |
-| **T42** | Competition Policy | A | 1 | Microeconomics 1.8.7 |
-| **T43** | Competitive devaluation | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
-| **T44** | Complete Market Failure | A | 1 | Microeconomics 1.8.2 |
-| **T45** | Composite indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| **T46** | Consumer Prices Index (CPI) | A | 1 | Macroeconomics 2.1.3 |
-| **T47** | Consumer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
-| **T48** | Consumption | A | 1 | Macroeconomics 2.2.3 |
-| **T49** | Creative destruction | A | 1 | Microeconomics 1.5.8 |
-| **T50** | Credit Creation | A | 1 | Macroeconomics 2.4.2 |
-| **T51** | Cross Elasticity of Demand (XED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
-| **T52** | Currency union | A | 1 | Macroeconomics 2.6.4 |
-| **T53** | Current account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T54** | Current expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
-| **T55** | Customs union | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
-| **T56** | Cyclical (Demand-Deficient) Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T57** | Cyclical deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| **T58** | Default Choice | A | 1 | Microeconomics 1.2.4 |
-| **T59** | Deflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
-| **T60** | Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| **T61** | Demand for labour | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
-| **T62** | Demand-side policies | E | 1 | Theme 2 2.6.2 |
-| **T63** | A demerger | E | 1 | Theme 3 3.1.3 |
-| **T64** | Demerit Goods | AE | 2 | Microeconomics 1.8.5, Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T65** | Depreciation | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
-| **T66** | Deregulation | A | 1 | Microeconomics 1.8.8 |
-| **T67** | Diminishing Marginal Returns | AE | 1 | Microeconomics 1.4.3, Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T68** | Direct taxes | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| **T69** | Discretionary fiscal policy | E | 1 | Theme 4 4.5.3 |
-| **T70** | Discrimination | A | 1 | Microeconomics 1.6.7 |
-| **T71** | Diseconomies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| **T72** | Disinflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
-| **T73** | Disposable Income | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.2 |
-| **T74** | Division of Labour | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
-| **T75** | Dynamic Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| **T76** | Economic development | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| **T77** | Economic growth | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| **T78** | Economically Inactive | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T79** | Emotional Influence | E | 1 | Theme 1 1.2.1 |
-| **T80** | Enterprise | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
-| **T81** | Equality | A | 1 | Microeconomics 1.7.1 |
-| **T82** | Equity | A | 1 | Microeconomics 1.7.1 |
-| **T83** | Expenditure-reducing policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T84** | Expenditure-switching policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T85** | External economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| **T86** | Externality | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2, Microeconomics 1.8.2, Theme 1 1.3.1 |
-| **T87** | Factor immobility | A | 1 | Microeconomics 1.8.6 |
-| **T88** | Factors of production | E | 1 | Theme 1 1.1.3 |
-| **T89** | Financial account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T90** | First-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
-| **T91** | Fiscal deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| **T92** | Fiscal policy | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
-| **T93** | Fixed Costs (FC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T94** | Fixed exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
-| **T95** | Floating exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
-| **T96** | Foreign currency gap | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| **T97** | Forward integration | E | 1 | Theme 3 3.1.2 |
-| **T98** | Framing bias | A | 1 | Microeconomics 1.2.3 |
-| **T99** | Free Market Economy | E | 1 | Theme 1 1.1.6 |
-| **T100** | Free trade area | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
-| **T101** | Frictional Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T102** | Game theory | E | 1 | Theme 3 3.4.4 |
-| **T103** | Geographical immobility | A | 1 | Microeconomics 1.8.6 |
-| **T104** | Globalisation | AE | 1 | Macroeconomics 2.6.1, Theme 4 4.1.1 |
-| **T105** | Government failure | AE | 1 | Microeconomics 1.8.10, Theme 1 1.4.2 |
-| **T106** | Government provision | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
-| **T107** | Gross Domestic Product (GDP) | AE | 2 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
-| **T108** | Gross National Income (GNI) | A | 1 | Macroeconomics 2.1.4 |
-| **T109** | Harrod-Domar model | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| **T110** | Herding bias (social norms) | A | 1 | Microeconomics 1.2.3 |
-| **T111** | Income Elasticity of Demand (YED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
-| **T112** | Income inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
-| **T113** | Index number | A | 1 | Macroeconomics 2.1.3 |
-| **T114** | Indirect Taxes | AE | 2 | Theme 1 1.2.9, Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| **T115** | Inflation | AE | 2 | Macroeconomics 2.3.3, Macroeconomics 2.1.3, Theme 2 2.1.2 |
-| **T116** | Information gaps | AE | 1 | Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
-| **T117** | Information Provision | AE | 3 | Microeconomics 1.8.9, Theme 1 1.4.1, Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.3.2 |
-| **T118** | Innovation | A | 1 | Microeconomics 1.4.8 |
-| **T119** | Inorganic Growth | E | 1 | Theme 3 3.1.2 |
-| **T120** | Interest rates | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
-| **T121** | Internal Economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| **T122** | International competitiveness | E | 1 | Theme 4 4.1.9 |
-| **T123** | Interventionist policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| **T124** | Inventions | A | 1 | Microeconomics 1.4.8 |
-| **T125** | Investment | AE | 1 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
-| **T126** | Investment Bank | A | 1 | Macroeconomics 2.4.2 |
-| **T127** | Labour | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
-| **T128** | Labour Force | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T129** | Land | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
-| **T130** | The Law of Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| **T131** | The Law of Diminishing Marginal Utility | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| **T132** | Legal/Working Monopoly | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
-| **T133** | Liquidity | A | 1 | Macroeconomics 2.4.2 |
-| **T134** | Liquidity ratio | A | 1 | Macroeconomics 2.4.4 |
-| **T135** | Long Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
-| **T136** | Long-Run Aggregate Supply (LRAS) | AE | 1 | Macroeconomics 2.2.2, Macroeconomics 2.2.6, Theme 2 2.3.1, Theme 2 2.3.3 |
-| **T137** | Long-Run Growth | A | 1 | Macroeconomics 2.3.1 |
-| **T138** | Loss | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
-| **T139** | Managed exchange rate | E | 1 | Theme 4 4.1.8 |
-| **T140** | Mandated Choice | A | 1 | Microeconomics 1.2.4 |
-| **T141** | Marginal Cost (MC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T142** | Marginal Physical Product (MPP) | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
-| **T143** | Marginal Returns | A | 1 | Microeconomics 1.4.3 |
-| **T144** | Marginal Revenue (MR) | AE | 2 | Microeconomics 1.4.6, Theme 3 3.3.1, Microeconomics 1.6.1, Theme 3 3.5.1 |
-| **T145** | Marginal Utility (MU) | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
-| **T146** | Market Equilibrium | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
-| **T147** | Market failure | AE | 2 | Microeconomics 1.8.2, Theme 1 1.3.1, Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T148** | Market rigging | E | 1 | Theme 4 4.4.2 |
-| **T149** | Market-based policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| **T150** | Maximum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T151** | Merit Goods | AE | 2 | Microeconomics 1.8.5, Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T152** | Minimum Efficient Scale (MES) | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| **T153** | Minimum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T154** | Mixed Economy | E | 1 | Theme 1 1.1.6 |
-| **T155** | Monetary policy | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
-| **T156** | Monetary union | E | 1 | Theme 4 4.1.5 |
-| **T157** | Money Supply | A | 1 | Macroeconomics 2.4.1 |
-| **T158** | Monopoly power | A | 2 | Microeconomics 1.8.6, Microeconomics 1.8.2 |
-| **T159** | Moral hazard | AE | 2 | Macroeconomics 2.4.4, Theme 4 4.4.2 |
-| **T160** | Marginal Propensity to Consume (MPC) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
-| **T161** | Marginal Propensity to Import (MPM) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
-| **T162** | Marginal Propensity to Save (MPS) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
-| **T163** | Marginal Propensity to Tax (MPT) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
-| **T164** | The Multiplier | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
-| **T165** | National debt | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| **T166** | National income | AE | 2 | Macroeconomics 2.1.4, Macroeconomics 2.2.1, Theme 2 2.4.1 |
-| **T167** | Natural Rate of Unemployment | A | 1 | Macroeconomics 2.3.2 |
-| **T168** | Net trade | A | 1 | Macroeconomics 2.2.3 |
-| **T169** | NGOs | E | 1 | Theme 4 4.3.3 |
-| **T170** | Non-excludability | AE | 2 | Microeconomics 1.8.3, Theme 1 1.3.3, Microeconomics 1.8.2, Theme 1 1.3.1 |
-| **T171** | Non-Renewable resources | E | 1 | Theme 1 1.1.3 |
-| **T172** | Non-rivalry | AE | 2 | Microeconomics 1.8.3, Theme 1 1.3.3, Microeconomics 1.8.2, Theme 1 1.3.1 |
-| **T173** | Normal profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
-| **T174** | Normative statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
-| **T175** | Not-for-profit organisations | E | 1 | Theme 3 3.1.1 |
-| **T176** | Nudges | A | 1 | Microeconomics 1.2.4 |
-| **T177** | Occupational immobility | A | 1 | Microeconomics 1.8.6 |
-| **T178** | Opportunity cost | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
-| **T179** | Organic Growth | E | 1 | Theme 3 3.1.2 |
-| **T180** | Output Gaps | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.2 |
-| **T181** | Partial Market Failure | A | 1 | Microeconomics 1.8.2 |
-| **T182** | Persistent deficits | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T183** | Persistent surpluses | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
-| **T184** | Positive statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
-| **T185** | Potential Growth | E | 1 | Theme 2 2.5.1 |
-| **T186** | Price Elasticity of Demand (PED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
-| **T187** | Price Elasticity of Supply (PES) | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
-| **T188** | The principal-agent problem | AE | 1 | Microeconomics 1.5.2, Theme 3 3.1.1 |
-| **T189** | Private benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T190** | Private costs | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T191** | Private sector | E | 1 | Theme 3 3.1.1 |
-| **T192** | Privatisation | A | 1 | Microeconomics 1.8.8 |
-| **T193** | Producer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
-| **T194** | Production | A | 1 | Microeconomics 1.4.1 |
-| **T195** | Production Possibility Frontier | AE | 1 | Microeconomics 1.1.5, Theme 1 1.1.4 |
-| **T196** | Productive Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| **T197** | Productive inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| **T198** | Productive potential/capacity | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| **T199** | Productivity | A | 1 | Microeconomics 1.4.1 |
-| **T200** | Profit organisations | E | 1 | Theme 3 3.1.1 |
-| **T201** | Profitability | A | 1 | Macroeconomics 2.4.2 |
-| **T202** | Progressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| **T203** | Property rights | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
-| **T204** | Proportional Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| **T205** | Public Ownership | A | 1 | Microeconomics 1.8.8 |
-| **T206** | Public sector | E | 1 | Theme 3 3.1.1 |
-| **T207** | Purchasing power parity (PPP) | A | 1 | Macroeconomics 2.1.4 |
-| **T208** | Pure Monopoly | AE | 2 | Microeconomics 1.8.6, Microeconomics 1.5.6, Theme 3 3.4.5 |
-| **T209** | Quasi-public goods | A | 1 | Microeconomics 1.8.3 |
-| **T210** | Real Wage Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T211** | Regressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
-| **T212** | Regulation | AE | 4 | Microeconomics 1.8.8, Theme 1 1.4.1, Theme 1 1.3.2, Theme 1 1.3.2 |
-| **T213** | Regulatory Capture | AE | 2 | Microeconomics 1.8.8, Theme 3 3.6.2 |
-| **T214** | Relative export prices | E | 1 | Theme 4 4.1.9 |
-| **T215** | Relative poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
-| **T216** | Relative unit labour costs | E | 1 | Theme 4 4.1.9 |
-| **T217** | Renewable resources | E | 1 | Theme 1 1.1.3 |
-| **T218** | Restricted Choice | A | 1 | Microeconomics 1.2.4 |
-| **T219** | Returns to Scale | A | 1 | Microeconomics 1.4.3 |
-| **T220** | Rule of Thumb/Habit | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
-| **T221** | Scarcity | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
-| **T222** | Seasonal Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T223** | Second-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
-| **T224** | Security | A | 1 | Macroeconomics 2.4.2 |
-| **T225** | Short Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
-| **T226** | Short-Run Aggregate Supply (SRAS) | AE | 2 | Theme 2 2.3.1, Macroeconomics 2.2.2, Macroeconomics 2.2.5, Theme 2 2.3.2 |
-| **T227** | Short-Run Growth | A | 1 | Macroeconomics 2.3.1 |
-| **T228** | Single indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
-| **T229** | Social benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T230** | Social costs | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
-| **T231** | Social/Community Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
-| **T232** | Specialisation | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
-| **T233** | Speculation | E | 1 | Theme 4 4.4.2 |
-| **T234** | Static Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
-| **T235** | Structural deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
-| **T236** | Structural Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T237** | Subsidies | AE | 2 | Theme 1 1.2.9, Microeconomics 1.8.4 |
-| **T238** | Subsidising alternatives | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2 |
-| **T239** | Sunk costs | AE | 1 | Microeconomics 1.5.9, Theme 3 3.4.7 |
-| **T240** | Supernormal Profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
-| **T241** | Supply | AE | 1 | Microeconomics 1.3.3, Theme 1 1.2.4 |
-| **T242** | Supply of Labour | AE | 1 | Microeconomics 1.6.2, Theme 3 3.5.2 |
-| **T243** | Supply-side policies | AE | 2 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| **T244** | Systemic risk | A | 1 | Macroeconomics 2.4.4 |
-| **T245** | Third-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
-| **T246** | Total Cost (TC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T247** | Total Returns | A | 1 | Microeconomics 1.4.3 |
-| **T248** | Total Revenue (TR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
-| **T249** | Tradable pollution permits | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
-| **T250** | The Trade Cycle | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.3 |
-| **T251** | Trade Union | AE | 1 | Microeconomics 1.6.5, Theme 3 3.5.3 |
-| **T252** | Traditional economic theory | A | 1 | Microeconomics 1.2.3 |
-| **T253** | Transfer payments | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
-| **T254** | Transfer pricing | E | 1 | Theme 4 4.5.4 |
-| **T255** | Trend Rate Growth | E | 1 | Theme 2 2.5.2 |
-| **T256** | Underemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T257** | Unemployed | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T258** | Utility | A | 1 | Microeconomics 1.2.1 |
-| **T259** | Value Judgement | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
-| **T260** | Variable Costs (VC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
-| **T261** | Wage Discrimination | A | 1 | Microeconomics 1.6.7 |
-| **T262** | Wealth inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
-| **T263** | X-Inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T5** | Aggregate Supply | AE | 1 | Macroeconomics 2.2.2, Theme 2 2.3.1 |
+| **T6** | Allocative Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T7** | Allocative inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T8** | Altruism & Fairness | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
+| **T9** | Anchoring bias | A | 1 | Microeconomics 1.2.3 |
+| **T10** | Asymmetric information | AE | 2 | Microeconomics 1.8.2, Theme 1 1.3.1, Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
+| **T11** | Automatic Stabilisers | AE | 2 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T12** | Availability bias | A | 1 | Microeconomics 1.2.3 |
+| **T13** | Average Cost (AC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T14** | Average Fixed Cost (AFC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T15** | Average Returns | A | 1 | Microeconomics 1.4.3 |
+| **T16** | Average Revenue (AR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
+| **T17** | Average Variable Cost (AVC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T18** | Backward integration | E | 1 | Theme 3 3.1.2 |
+| **T19** | Balance of Payments | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T20** | Balance Sheet | A | 1 | Macroeconomics 2.4.2 |
+| **T21** | Balanced budget | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T22** | Barriers to Entry | AE | 1 | Microeconomics 1.5.1, Theme 3 3.4.5 |
+| **T23** | Base year | A | 1 | Macroeconomics 2.1.3 |
+| **T24** | Behavioural economic theory | A | 1 | Microeconomics 1.2.3 |
+| **T25** | Bond | A | 1 | Macroeconomics 2.4.1 |
+| **T26** | Bounded rationality | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
+| **T27** | Bounded self control | A | 1 | Microeconomics 1.2.3 |
+| **T28** | Budget deficit | AE | 2 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T29** | Budget surplus | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T30** | Capital | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
+| **T31** | Capital account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T32** | Capital expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
+| **T33** | Capital flight | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T34** | Capital Goods | AE | 1 | Microeconomics 1.1.5, Theme 1 1.1.4 |
+| **T35** | Capital ratio | A | 1 | Macroeconomics 2.4.4 |
+| **T36** | Capitalism | E | 1 | Theme 4 4.2.2 |
+| **T37** | Central bank | A | 1 | Macroeconomics 2.4.3 |
+| **T38** | Ceteris paribus | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.1 |
+| **T39** | Circular Flow of Income | AE | 1 | Macroeconomics 2.2.1, Theme 2 2.4.1 |
+| **T40** | Claimant Count | AE | 1 | Macroeconomics 2.1.2, Theme 2 2.1.3 |
+| **T41** | Command Economy | E | 1 | Theme 1 1.1.6 |
+| **T42** | Commercial Bank | A | 1 | Macroeconomics 2.4.2 |
+| **T43** | Common market | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T44** | Common pool resources | A | 1 | Microeconomics 1.8.3 |
+| **T45** | Comparative advantage | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.2 |
+| **T46** | Competition | A | 1 | Microeconomics 1.5.1 |
+| **T47** | Competition and Markets Authority (CMA) | E | 1 | Theme 3 3.6.1 |
+| **T48** | Competition Policy | AE | 2 | Microeconomics 1.8.7, Theme 3 3.6.1 |
+| **T49** | Competitive devaluation | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T50** | Complementary Goods | AE | 1 | Microeconomics 1.3.6, Theme 1 1.2.3 |
+| **T51** | Complete Market Failure | A | 1 | Microeconomics 1.8.2 |
+| **T52** | Composite indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T53** | Concentration Ratio | AE | 1 | Microeconomics 1.5.5, Theme 3 3.4.4 |
+| **T54** | Consumer Goods | AE | 1 | Microeconomics 1.1.5, Theme 1 1.1.4 |
+| **T55** | Consumer Prices Index (CPI) | A | 1 | Macroeconomics 2.1.3 |
+| **T56** | Consumer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
+| **T57** | Consumption | A | 1 | Macroeconomics 2.2.3 |
+| **T58** | Contestable Market | AE | 1 | Microeconomics 1.5.9, Theme 3 3.4.7 |
+| **T59** | Cost-Benefit Analysis | E | 1 | Theme 1 1.4.1 |
+| **T60** | Creative destruction | A | 1 | Microeconomics 1.5.8 |
+| **T61** | Credit Creation | A | 1 | Macroeconomics 2.4.2 |
+| **T62** | Cross Elasticity of Demand (XED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
+| **T63** | Currency union | A | 1 | Macroeconomics 2.6.4 |
+| **T64** | Current account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T65** | Current Account Deficit | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T66** | Current expenditure | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
+| **T67** | Customs union | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T68** | Cyclical (Demand-Deficient) Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T69** | Cyclical deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T70** | Default Choice | A | 1 | Microeconomics 1.2.4 |
+| **T71** | Deflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
+| **T72** | Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T73** | Demand for labour | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
+| **T74** | Demand-side policies | E | 1 | Theme 2 2.6.2 |
+| **T75** | A demerger | E | 1 | Theme 3 3.1.3 |
+| **T76** | Demerit Goods | AE | 2 | Microeconomics 1.8.5, Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T77** | Depreciation | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
+| **T78** | Deregulation | AE | 2 | Microeconomics 1.8.8, Theme 2 2.6.3 |
+| **T79** | Derived Demand | AE | 1 | Microeconomics 1.3.6, Theme 3 3.5.1 |
+| **T80** | Diminishing Marginal Returns | AE | 1 | Microeconomics 1.4.3, Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T81** | Direct taxes | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T82** | Discretionary fiscal policy | E | 1 | Theme 4 4.5.3 |
+| **T83** | Discrimination | A | 1 | Microeconomics 1.6.7 |
+| **T84** | Diseconomies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T85** | Disinflation | AE | 1 | Macroeconomics 2.3.3, Theme 2 2.1.2 |
+| **T86** | Disposable Income | AE | 2 | Macroeconomics 2.2.3, Theme 2 2.2.2 |
+| **T87** | Division of Labour | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
+| **T88** | Dynamic Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T89** | Economic development | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T90** | Economic growth | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T91** | Economically Inactive | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T92** | Economies of Scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T93** | Elasticity | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T94** | Emotional Influence | E | 1 | Theme 1 1.2.1 |
+| **T95** | Enterprise | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
+| **T96** | Equality | A | 1 | Microeconomics 1.7.1 |
+| **T97** | Equilibrium Price | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
+| **T98** | Equity | A | 1 | Microeconomics 1.7.1 |
+| **T99** | Excess Demand | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
+| **T100** | Excess Supply | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
+| **T101** | Exchange Rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T102** | Expenditure-reducing policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T103** | Expenditure-switching policies | AE | 2 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T104** | External Benefit | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T105** | External Cost | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T106** | External economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T107** | Externality | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2, Microeconomics 1.8.2, Theme 1 1.3.1 |
+| **T108** | Factor immobility | A | 1 | Microeconomics 1.8.6 |
+| **T109** | Factors of Production | AE | 2 | Microeconomics 1.1.3, Theme 1 1.1.3 |
+| **T110** | Financial account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T111** | First-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
+| **T112** | Fiscal deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T113** | Fiscal policy | AE | 1 | Macroeconomics 2.5.1, Theme 2 2.6.2 |
+| **T114** | Fixed Costs (FC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T115** | Fixed exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T116** | Floating exchange rate | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T117** | Foreign currency gap | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T118** | Forward integration | E | 1 | Theme 3 3.1.2 |
+| **T119** | Framing bias | A | 1 | Microeconomics 1.2.3 |
+| **T120** | Free Market Economy | E | 1 | Theme 1 1.1.6 |
+| **T121** | Free Rider Problem | AE | 1 | Microeconomics 1.8.3, Theme 1 1.3.3 |
+| **T122** | Free trade area | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T123** | Frictional Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T124** | Functions of Money | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
+| **T125** | Game Theory | AE | 2 | Microeconomics 1.5.5, Theme 3 3.4.4 |
+| **T126** | Geographical immobility | AE | 2 | Microeconomics 1.8.6, Theme 3 3.5.2 |
+| **T127** | Gini Coefficient | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
+| **T128** | Globalisation | AE | 1 | Macroeconomics 2.6.1, Theme 4 4.1.1 |
+| **T129** | Government failure | AE | 1 | Microeconomics 1.8.10, Theme 1 1.4.2 |
+| **T130** | Government provision | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
+| **T131** | Gross Domestic Product (GDP) | AE | 2 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
+| **T132** | Gross National Income (GNI) | A | 1 | Macroeconomics 2.1.4 |
+| **T133** | Harrod-Domar model | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T134** | Herding bias (social norms) | A | 1 | Microeconomics 1.2.3 |
+| **T135** | Human Development Index | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T136** | Income Elasticity of Demand (YED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
+| **T137** | Income inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
+| **T138** | Index number | AE | 2 | Macroeconomics 2.1.3, Theme 2 2.1.2 |
+| **T139** | Indirect Taxes | AE | 2 | Theme 1 1.2.9, Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T140** | Inflation | AE | 2 | Macroeconomics 2.3.3, Macroeconomics 2.1.3, Theme 2 2.1.2 |
+| **T141** | Information gaps | AE | 1 | Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
+| **T142** | Information Provision | AE | 3 | Microeconomics 1.8.9, Theme 1 1.4.1, Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.3.2 |
+| **T143** | Innovation | A | 1 | Microeconomics 1.4.8 |
+| **T144** | Inorganic Growth | E | 1 | Theme 3 3.1.2 |
+| **T145** | Interest rates | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
+| **T146** | Internal Economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T147** | International competitiveness | E | 1 | Theme 4 4.1.9 |
+| **T148** | Intervention | AE | 1 | Microeconomics 1.8.9, Theme 3 3.6.2 |
+| **T149** | Interventionist policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T150** | Inventions | A | 1 | Microeconomics 1.4.8 |
+| **T151** | Investment | AE | 1 | Macroeconomics 2.2.3, Theme 2 2.2.3 |
+| **T152** | Investment Bank | A | 1 | Macroeconomics 2.4.2 |
+| **T153** | J-Curve Effect | AE | 1 | Macroeconomics 2.6.4, Theme 4 4.1.8 |
+| **T154** | Labour | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
+| **T155** | Labour Force | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T156** | Labour Productivity | AE | 1 | Microeconomics 1.4.1, Theme 3 3.5.1 |
+| **T157** | Laffer Curve | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T158** | Land | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
+| **T159** | The Law of Demand | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T160** | The Law of Diminishing Marginal Utility | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T161** | Legal/Working Monopoly | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
+| **T162** | Liquidity | A | 1 | Macroeconomics 2.4.2 |
+| **T163** | Liquidity ratio | A | 1 | Macroeconomics 2.4.4 |
+| **T164** | Long Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T165** | Long-Run Aggregate Supply (LRAS) | AE | 1 | Macroeconomics 2.2.2, Macroeconomics 2.2.6, Theme 2 2.3.1, Theme 2 2.3.3 |
+| **T166** | Long-Run Growth | A | 1 | Macroeconomics 2.3.1 |
+| **T167** | Lorenz Curve | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
+| **T168** | Loss | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
+| **T169** | Managed exchange rate | E | 1 | Theme 4 4.1.8 |
+| **T170** | Mandated Choice | A | 1 | Microeconomics 1.2.4 |
+| **T171** | Marginal Cost (MC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T172** | Marginal Physical Product (MPP) | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
+| **T173** | Marginal Returns | A | 1 | Microeconomics 1.4.3 |
+| **T174** | Marginal Revenue (MR) | AE | 2 | Microeconomics 1.4.6, Theme 3 3.3.1, Microeconomics 1.6.1, Theme 3 3.5.1 |
+| **T175** | Marginal Revenue Product | AE | 1 | Microeconomics 1.6.1, Theme 3 3.5.1 |
+| **T176** | Marginal Utility (MU) | AE | 1 | Microeconomics 1.3.1, Theme 1 1.2.2 |
+| **T177** | Market Equilibrium | AE | 1 | Microeconomics 1.3.5, Theme 1 1.2.6 |
+| **T178** | Market failure | AE | 2 | Microeconomics 1.8.2, Theme 1 1.3.1, Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T179** | Market rigging | E | 1 | Theme 4 4.4.2 |
+| **T180** | Market-based policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T181** | Maximum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T182** | Median | AE | 1 | Microeconomics 1.7.1, Theme 4 4.3.1 |
+| **T183** | Merit Goods | AE | 2 | Microeconomics 1.8.5, Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T184** | Minimum Efficient Scale (MES) | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
+| **T185** | Minimum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T186** | Mixed Economy | E | 1 | Theme 1 1.1.6 |
+| **T187** | Monetary policy | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
+| **T188** | Monetary union | E | 1 | Theme 4 4.1.5 |
+| **T189** | Money Supply | A | 1 | Macroeconomics 2.4.1 |
+| **T190** | Monopoly | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
+| **T191** | Monopoly power | A | 2 | Microeconomics 1.8.6, Microeconomics 1.8.2 |
+| **T192** | Monopsony | AE | 1 | Microeconomics 1.6.4, Theme 3 3.4.6 |
+| **T193** | Moral hazard | AE | 2 | Macroeconomics 2.4.4, Theme 4 4.4.2 |
+| **T194** | Marginal Propensity to Consume (MPC) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
+| **T195** | Marginal Propensity to Import (MPM) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
+| **T196** | Marginal Propensity to Save (MPS) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
+| **T197** | Marginal Propensity to Tax (MPT) | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
+| **T198** | The Multiplier | AE | 1 | Macroeconomics 2.2.4, Theme 2 2.4.4 |
+| **T199** | National debt | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T200** | National income | AE | 2 | Macroeconomics 2.1.4, Macroeconomics 2.2.1, Theme 2 2.4.1 |
+| **T201** | Natural Monopoly | AE | 1 | Microeconomics 1.5.6, Theme 3 3.4.5 |
+| **T202** | Natural Rate of Unemployment | A | 1 | Macroeconomics 2.3.2 |
+| **T203** | Negative Externality | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T204** | Net trade | A | 1 | Macroeconomics 2.2.3 |
+| **T205** | NGOs | E | 1 | Theme 4 4.3.3 |
+| **T206** | Nominal GDP | AE | 1 | Macroeconomics 2.1.2, Theme 2 2.1.1 |
+| **T207** | Non-excludability | AE | 2 | Microeconomics 1.8.3, Theme 1 1.3.3, Microeconomics 1.8.2, Theme 1 1.3.1 |
+| **T208** | Non-Renewable resources | E | 1 | Theme 1 1.1.3 |
+| **T209** | Non-rivalry | AE | 2 | Microeconomics 1.8.3, Theme 1 1.3.3, Microeconomics 1.8.2, Theme 1 1.3.1 |
+| **T210** | Normal profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
+| **T211** | Normative statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
+| **T212** | Not-for-profit organisations | E | 1 | Theme 3 3.1.1 |
+| **T213** | Nudges | A | 1 | Microeconomics 1.2.4 |
+| **T214** | Occupational immobility | AE | 2 | Microeconomics 1.8.6, Theme 3 3.5.2 |
+| **T215** | Oligopoly | AE | 1 | Microeconomics 1.5.5, Theme 3 3.4.4 |
+| **T216** | Opportunity cost | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
+| **T217** | Organic Growth | E | 1 | Theme 3 3.1.2 |
+| **T218** | Output Gaps | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.2 |
+| **T219** | Partial Market Failure | A | 1 | Microeconomics 1.8.2 |
+| **T220** | Percentage Point Change | AE | 1 | Macroeconomics , Theme 2  |
+| **T221** | Perfect Competition | AE | 1 | Microeconomics 1.5.3, Theme 3 3.4.2 |
+| **T222** | Persistent deficits | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T223** | Persistent surpluses | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
+| **T224** | Phillips Curve | AE | 1 | Macroeconomics 2.3.4, Theme 2 2.6.4 |
+| **T225** | Positive Externality | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T226** | Positive statements | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
+| **T227** | Potential Growth | E | 1 | Theme 2 2.5.1 |
+| **T228** | Price Discrimination | AE | 1 | Microeconomics 1.5.7, Theme 3 3.4.5 |
+| **T229** | Price Elasticity of Demand (PED) | AE | 1 | Microeconomics 1.3.2, Theme 1 1.2.3 |
+| **T230** | Price Elasticity of Supply (PES) | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T231** | Price Mechanism | AE | 1 | Microeconomics 1.8.1, Theme 1 1.2.7 |
+| **T232** | The principal-agent problem | AE | 1 | Microeconomics 1.5.2, Theme 3 3.1.1 |
+| **T233** | Private benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T234** | Private costs | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T235** | Private Good | AE | 1 | Microeconomics 1.8.3, Theme 1 1.3.3 |
+| **T236** | Private sector | E | 1 | Theme 3 3.1.1 |
+| **T237** | Privatisation | AE | 2 | Microeconomics 1.8.8, Theme 3 3.6.1 |
+| **T238** | Producer Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
+| **T239** | Production | A | 1 | Microeconomics 1.4.1 |
+| **T240** | Production Possibility Frontier | AE | 1 | Microeconomics 1.1.5, Theme 1 1.1.4 |
+| **T241** | Productive Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T242** | Productive inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T243** | Productive potential/capacity | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T244** | Productivity | AE | 2 | Microeconomics 1.4.1, Theme 2 2.6.3 |
+| **T245** | Profit Maximisation | AE | 1 | Microeconomics 1.5.2, Theme 3 3.2.1 |
+| **T246** | Profit organisations | E | 1 | Theme 3 3.1.1 |
+| **T247** | Profitability | A | 1 | Macroeconomics 2.4.2 |
+| **T248** | Progressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T249** | Property rights | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.2 |
+| **T250** | Proportional Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T251** | Public Good | AE | 1 | Microeconomics 1.8.3, Theme 1 1.3.3 |
+| **T252** | Public Ownership | A | 1 | Microeconomics 1.8.8 |
+| **T253** | Public sector | E | 1 | Theme 3 3.1.1 |
+| **T254** | Purchasing power parity (PPP) | AE | 2 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
+| **T255** | Pure Monopoly | AE | 2 | Microeconomics 1.8.6, Microeconomics 1.5.6, Theme 3 3.4.5 |
+| **T256** | Quantiles | AE | 1 | Microeconomics , Theme 4  |
+| **T257** | Quantitative Easing | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
+| **T258** | Quasi-public goods | A | 1 | Microeconomics 1.8.3 |
+| **T259** | Quota | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T260** | Rate of Change | E | 1 | Theme 2  |
+| **T261** | Rational Decision Making | AE | 1 | Microeconomics 1.2.1, Theme 1 1.2.1 |
+| **T262** | Real GDP | AE | 1 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
+| **T263** | Real Income | AE | 1 | Macroeconomics 2.2.3, Theme 2 2.1.2 |
+| **T264** | Real Wage Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T265** | Regressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T266** | Regulation | AE | 4 | Microeconomics 1.8.8, Theme 1 1.4.1, Theme 1 1.3.2, Theme 1 1.3.2 |
+| **T267** | Regulatory Capture | AE | 2 | Microeconomics 1.8.8, Theme 3 3.6.2 |
+| **T268** | Relative export prices | E | 1 | Theme 4 4.1.9 |
+| **T269** | Relative poverty | AE | 1 | Microeconomics 1.7.2, Theme 4 4.2.1 |
+| **T270** | Relative unit labour costs | E | 1 | Theme 4 4.1.9 |
+| **T271** | Renewable resources | E | 1 | Theme 1 1.1.3 |
+| **T272** | Restricted Choice | A | 1 | Microeconomics 1.2.4 |
+| **T273** | Returns to Scale | AE | 2 | Microeconomics 1.4.3, Theme 3 3.3.2 |
+| **T274** | Rule of Thumb/Habit | AE | 2 | Microeconomics 1.2.3, Theme 1 1.2.1 |
+| **T275** | Scarcity | AE | 1 | Microeconomics 1.1.4, Theme 1 1.1.3 |
+| **T276** | Seasonal Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T277** | Seasonally Adjusted Figures | E | 1 | Theme 2  |
+| **T278** | Second-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
+| **T279** | Security | A | 1 | Macroeconomics 2.4.2 |
+| **T280** | Short Run | AE | 1 | Microeconomics 1.3.4, Theme 1 1.2.5 |
+| **T281** | Short-Run Aggregate Supply (SRAS) | AE | 2 | Theme 2 2.3.1, Macroeconomics 2.2.2, Macroeconomics 2.2.5, Theme 2 2.3.2 |
+| **T282** | Short-Run Growth | A | 1 | Macroeconomics 2.3.1 |
+| **T283** | Single indicators | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.1 |
+| **T284** | Social benefits | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T285** | Social costs | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T286** | Social/Community Surplus | AE | 1 | Microeconomics 1.5.11, Theme 1 1.2.8 |
+| **T287** | Specialisation | AE | 1 | Microeconomics 1.4.2, Theme 1 1.1.5 |
+| **T288** | Speculation | E | 1 | Theme 4 4.4.2 |
+| **T289** | Static Efficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
+| **T290** | Structural deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
+| **T291** | Structural Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T292** | Subsidies | AE | 2 | Theme 1 1.2.9, Microeconomics 1.8.4 |
+| **T293** | Subsidising alternatives | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2 |
+| **T294** | Subsidy | AE | 1 | Microeconomics 1.3.3, Theme 1 1.2.9 |
+| **T295** | Sunk costs | AE | 1 | Microeconomics 1.5.9, Theme 3 3.4.7 |
+| **T296** | Supernormal Profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
+| **T297** | Supply | AE | 1 | Microeconomics 1.3.3, Theme 1 1.2.4 |
+| **T298** | Supply of Labour | AE | 1 | Microeconomics 1.6.2, Theme 3 3.5.2 |
+| **T299** | Supply-side policies | AE | 2 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
+| **T300** | Sustainable Development | AE | 1 | Macroeconomics 2.6.5, Theme 4 4.3.3 |
+| **T301** | Systemic risk | A | 1 | Macroeconomics 2.4.4 |
+| **T302** | Tariff | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.6 |
+| **T303** | Terms of Trade | E | 1 | Theme 4 4.1.4 |
+| **T304** | Third-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
+| **T305** | Total Cost (TC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T306** | Total Returns | A | 1 | Microeconomics 1.4.3 |
+| **T307** | Total Revenue (TR) | AE | 1 | Microeconomics 1.4.6, Theme 3 3.3.1 |
+| **T308** | Tradable pollution permits | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.9, Theme 1 1.3.2, Theme 1 1.4.1 |
+| **T309** | The Trade Cycle | AE | 1 | Macroeconomics 2.3.1, Theme 2 2.5.3 |
+| **T310** | Trade Union | AE | 1 | Microeconomics 1.6.5, Theme 3 3.5.3 |
+| **T311** | Trading Bloc | AE | 1 | Macroeconomics 2.6.2, Theme 4 4.1.5 |
+| **T312** | Traditional economic theory | A | 1 | Microeconomics 1.2.3 |
+| **T313** | Transfer payments | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.1 |
+| **T314** | Transfer pricing | E | 1 | Theme 4 4.5.4 |
+| **T315** | Trend Rate Growth | E | 1 | Theme 2 2.5.2 |
+| **T316** | Underemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T317** | Unemployed | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
+| **T318** | Unemployment Rate | AE | 1 | Macroeconomics 2.1.2, Theme 2 2.1.3 |
+| **T319** | Utility | A | 1 | Microeconomics 1.2.1 |
+| **T320** | Value Judgement | AE | 1 | Microeconomics 1.1.1, Theme 1 1.1.2 |
+| **T321** | Variable Costs (VC) | AE | 1 | Microeconomics 1.4.4, Theme 3 3.3.2 |
+| **T322** | Wage Discrimination | A | 1 | Microeconomics 1.6.7 |
+| **T323** | Wealth inequality | AE | 1 | Microeconomics 1.7.1, Theme 4 4.2.2 |
+| **T324** | Welfare Loss | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T325** | X-Inefficiency | AE | 1 | Microeconomics 1.5.10, Theme 3 3.4.1 |
 
 ## Display formulae
 
@@ -313,22 +377,25 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **B13** | Gross National Income (GNI) | `\text{GNI} = \text{GDP} + \text{Net Income from Abroad}` | A | yes |
 | **B14** | Gini Coefficient | `\text{Gini Coefficient} = \frac{A}{A + B}` | AE | no |
 | **B15** | Government Budget | `\text{Government Budget} = \text{Taxation Revenue} - \text{Government Spending}` | AE | no |
-| **B16** | Index Number | `\text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100` | A | yes |
+| **B16** | Index Number | `\text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100` | AE | yes |
 | **B17** | Inflation Rate | `\text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100` | A | yes |
 | **B18** | Labour Productivity | `\text{Labour Productivity} = \frac{\text{Output}}{\text{Number of Workers}}` | A | yes |
-| **B19** | Price Elasticity of Demand (PED) | `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` | AE | yes |
-| **B20** | Marshall-Lerner Condition | `\text{PED}_{X} + \text{PED}_{M} > 1` | AE | yes |
-| **B21** | Price Elasticity of Supply (PES) | `\text{PES} = \frac{\%\Delta Q_S}{\%\Delta P}` | AE | yes |
-| **B22** | Profit | `\text{Profit} = \text{Total Revenue} - \text{Total Costs}` | A | yes |
-| **B23** | Real GDP per Capita | `\text{Real GDP per capita} = \frac{\text{Real GDP}}{\text{Population}}` | A | yes |
-| **B24** | Terms of Trade Index | `\text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100` | E | no |
-| **B25** | Unemployment Rate | `\text{Unemployment Rate} = \frac{\text{Number of Unemployed People}}{\text{Labour Force}} \times 100` | A | yes |
-| **B26** | Union Density | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes |
-| **B27** | Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes |
-| **B28** | Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes |
-| **B29** | Real GDP Growth | `\text{\% Change in Real GDP} = \text{\% Change in Nominal GDP} - \text{Inflation Rate}` | A | yes |
-| **B30** | Percentage Change | `\text{\% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes |
-| **B31** | The Multiplier | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes |
+| **B19** | Mean | `\text{Mean} = \frac{\text{Sum of the Values}}{\text{Number of Values}}` | AE | yes |
+| **B20** | Price Elasticity of Demand (PED) | `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` | AE | yes |
+| **B21** | Marshall-Lerner Condition | `\text{PED}_{X} + \text{PED}_{M} > 1` | AE | yes |
+| **B22** | Price Elasticity of Supply (PES) | `\text{PES} = \frac{\%\Delta Q_S}{\%\Delta P}` | AE | yes |
+| **B23** | Profit | `\text{Profit} = \text{Total Revenue} - \text{Total Costs}` | A | yes |
+| **B24** | Real GDP per Capita | `\text{Real GDP per capita} = \frac{\text{Real GDP}}{\text{Population}}` | A | yes |
+| **B25** | Converting to Real Terms | `\text{Real Value} = \text{Nominal Value} \times \frac{\text{Base Year Index}}{\text{Current Year Index}}` | AE | yes |
+| **B26** | Terms of Trade Index | `\text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100` | E | no |
+| **B27** | Unemployment Rate | `\text{Unemployment Rate} = \frac{\text{Number of Unemployed People}}{\text{Labour Force}} \times 100` | A | yes |
+| **B28** | Union Density | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes |
+| **B29** | Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes |
+| **B30** | Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes |
+| **B31** | Real GDP Growth | `\text{\% Change in Real GDP} = \text{\% Change in Nominal GDP} - \text{Inflation Rate}` | A | yes |
+| **B32** | Percentage Change | `\text{\% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes |
+| **B33** | Percentage Change | `\text{\% Change} = \frac{\text{New Value} - \text{Old Value}}{\text{Old Value}} \times 100` | E | yes |
+| **B34** | The Multiplier | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes |
 
 ## Chips deliberately not extracted
 

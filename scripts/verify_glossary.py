@@ -10,9 +10,12 @@ is the check that catches it.
 
 Five checks, in order of what they would catch:
 
-  1. Every definition on a glossary page appears verbatim in the notes page it
-     cites. Done by comparing plain text, independently of the extractor, so a
-     bug in extract_glossary.py cannot make this pass.
+  1. Every EXTRACTED definition appears verbatim in the notes page it cites.
+     Done by comparing plain text, independently of the extractor, so a bug in
+     extract_glossary.py cannot make this pass. Entries from
+     glossary-data/authored.json are exempt by definition - they were written
+     for the glossary because no notes page defines the concept - and are
+     counted separately so the exemption stays visible.
   2. glossary-data/terms.json is current - re-extracting produces the same data.
   3. Every generated page is current - rebuilding produces the same HTML.
   4. Every cited notes page exists, and every anchor id on a page is unique.
@@ -94,8 +97,14 @@ def main():
     # ---- 1. every definition is still in the notes page it cites -----------
     cache = {}
     checked = 0
+    authored = 0
     for t in data["terms"]:
         for s in t["sources"]:
+            # Authored definitions have nothing in the notes to match - that is
+            # what makes them authored. They are counted, not checked.
+            if s.get("origin") == "authored":
+                authored += 1
+                continue
             path = ROOT / s["notesUrl"].lstrip("/")
             if not path.is_file():
                 fails.append(f"[1] {t['term']}: {s['notesUrl']} does not exist")
@@ -111,7 +120,8 @@ def main():
                     f"      glossary says: {needle[:110]}"
                 )
     print(f"  1. definitions still verbatim in their notes page   "
-          f"{checked - len([f for f in fails if f.startswith('[1]')])}/{checked}")
+          f"{checked - len([f for f in fails if f.startswith('[1]')])}/{checked}"
+          f"   ({authored} authored, not applicable)")
 
     # ---- 2. terms.json is current -----------------------------------------
     terms, formulae, stats, _skipped, problems = eg.build()[:5]

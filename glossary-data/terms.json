@@ -3,13 +3,15 @@
   "site": "https://economicsacademy.co.uk",
   "stats": {
     "pages": 166,
-    "termsExtracted": 500,
-    "uniqueTerms": 263,
-    "termsOnBothBoards": 164,
-    "termsWithVariantDefinitions": 31,
-    "termsNeedingReview": 79,
-    "displayFormulae": 72,
-    "uniqueFormulae": 31,
+    "authoredTerms": 74,
+    "authoredFormulae": 4,
+    "termsExtracted": 632,
+    "uniqueTerms": 325,
+    "termsOnBothBoards": 234,
+    "termsWithVariantDefinitions": 43,
+    "termsNeedingReview": 90,
+    "displayFormulae": 78,
+    "uniqueFormulae": 34,
     "formulaeExcludedByCuration": 18,
     "tableCandidates": 9,
     "tablesApproved": 6,
@@ -176,6 +178,45 @@
           "termAsWritten": "What Is Aggregate Demand?",
           "origin": "chip",
           "definitionHtml": "Aggregate demand is the total demand for all goods and services in an economy at a given average price level and in a given time period."
+        }
+      ]
+    },
+    {
+      "id": "aggregate-supply",
+      "term": "Aggregate Supply",
+      "key": "aggregate supply",
+      "letter": "A",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.2",
+          "topic": "Aggregate Demand and Aggregate Supply Analysis",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
+          "termAsWritten": "Aggregate Supply",
+          "origin": "authored",
+          "definitionHtml": "The total output of goods and services that firms in an economy are willing and able to supply at each price level in a given period."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.3.1",
+          "topic": "Aggregate Supply",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html",
+          "termAsWritten": "Aggregate Supply",
+          "origin": "authored",
+          "definitionHtml": "The total output of goods and services that firms in an economy are willing and able to supply at each price level in a given period."
         }
       ]
     },
@@ -401,18 +442,33 @@
     },
     {
       "id": "automatic-stabilisers",
-      "term": "Automatic stabilisers",
+      "term": "Automatic Stabilisers",
       "key": "automatic stabilisers",
       "letter": "A",
       "boards": [
+        "aqa",
         "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.5.1",
+          "topic": "Fiscal Policy",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+          "termAsWritten": "Automatic Stabilisers",
+          "origin": "authored",
+          "definitionHtml": "Features of government spending and taxation that dampen the economic cycle without any deliberate decision, as tax receipts fall and benefit payments rise automatically in a downturn."
+        },
         {
           "board": "edexcel-a",
           "group": "theme-4",
@@ -664,6 +720,45 @@
       ]
     },
     {
+      "id": "balance-of-payments",
+      "term": "Balance of Payments",
+      "key": "balance of payments",
+      "letter": "B",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.3",
+          "topic": "The Balance of Payments",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
+          "termAsWritten": "Balance of Payments",
+          "origin": "authored",
+          "definitionHtml": "A record of all financial transactions between one country and the rest of the world over a period, made up of the current account, the capital account and the financial account."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.7",
+          "topic": "Balance of Payments",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
+          "termAsWritten": "Balance of Payments",
+          "origin": "authored",
+          "definitionHtml": "A record of all financial transactions between one country and the rest of the world over a period, made up of the current account, the capital account and the financial account."
+        }
+      ]
+    },
+    {
       "id": "balance-sheet",
       "term": "Balance Sheet",
       "key": "balance sheet",
@@ -726,6 +821,45 @@
           "termAsWritten": "Balanced budget",
           "origin": "chip",
           "definitionHtml": "\\( G = T \\)."
+        }
+      ]
+    },
+    {
+      "id": "barriers-to-entry",
+      "term": "Barriers to Entry",
+      "key": "barriers to entry",
+      "letter": "B",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.1",
+          "topic": "Market Structures",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-1-market-structures.html",
+          "termAsWritten": "Barriers to Entry",
+          "origin": "authored",
+          "definitionHtml": "Obstacles that make it difficult for new firms to enter a market, such as high sunk costs, patents, brand loyalty or control of a key input. They allow existing firms to sustain supernormal profit."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.5",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+          "termAsWritten": "Barriers to Entry",
+          "origin": "authored",
+          "definitionHtml": "Obstacles that make it difficult for new firms to enter a market, such as high sunk costs, patents, brand loyalty or control of a key input. They allow existing firms to sustain supernormal profit."
         }
       ]
     },
@@ -1117,6 +1251,45 @@
       ]
     },
     {
+      "id": "capital-goods",
+      "term": "Capital Goods",
+      "key": "capital goods",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.5",
+          "topic": "Production Possibility Diagrams",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
+          "termAsWritten": "Capital Goods",
+          "origin": "authored",
+          "definitionHtml": "Goods bought by firms to produce other goods and services, such as machinery, tools and factories, rather than to satisfy consumer wants directly."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.4",
+          "topic": "Production Possibility Frontiers",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+          "termAsWritten": "Capital Goods",
+          "origin": "authored",
+          "definitionHtml": "Goods bought by firms to produce other goods and services, such as machinery, tools and factories, rather than to satisfy consumer wants directly."
+        }
+      ]
+    },
+    {
       "id": "capital-ratio",
       "term": "Capital ratio",
       "key": "capital ratio",
@@ -1235,6 +1408,84 @@
           "termAsWritten": "Ceteris paribus",
           "origin": "chip",
           "definitionHtml": "A Latin phrase meaning ‘all other things being equal’ or ‘all other factors held constant’."
+        }
+      ]
+    },
+    {
+      "id": "circular-flow-of-income",
+      "term": "Circular Flow of Income",
+      "key": "circular flow of income",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.1",
+          "topic": "The Circular Flow of Income",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html",
+          "termAsWritten": "Circular Flow of Income",
+          "origin": "authored",
+          "definitionHtml": "The model showing income moving between households and firms, with <strong>injections</strong> from investment, government spending and exports, and <strong>withdrawals</strong> through saving, taxation and imports."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.1",
+          "topic": "National Income",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html",
+          "termAsWritten": "Circular Flow of Income",
+          "origin": "authored",
+          "definitionHtml": "The model showing income moving between households and firms, with <strong>injections</strong> from investment, government spending and exports, and <strong>withdrawals</strong> through saving, taxation and imports."
+        }
+      ]
+    },
+    {
+      "id": "claimant-count",
+      "term": "Claimant Count",
+      "key": "claimant count",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.1.2",
+          "topic": "Macroeconomic Indicators",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+          "termAsWritten": "Claimant Count",
+          "origin": "authored",
+          "definitionHtml": "A measure of unemployment based on the number of people claiming unemployment-related benefits. It usually gives a lower figure than the Labour Force Survey, because not everyone seeking work claims."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.3",
+          "topic": "Employment and Unemployment",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
+          "termAsWritten": "Claimant Count",
+          "origin": "authored",
+          "definitionHtml": "A measure of unemployment based on the number of people claiming unemployment-related benefits. It usually gives a lower figure than the Labour Force Survey, because not everyone seeking work claims."
         }
       ]
     },
@@ -1459,13 +1710,17 @@
       "key": "competition policy",
       "letter": "C",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -1477,6 +1732,17 @@
           "termAsWritten": "Competition Policy",
           "origin": "chip",
           "definitionHtml": "Government interventions aimed at improving competitiveness in markets, and ensuring that consumer interests are protected."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.6.1",
+          "topic": "Government Intervention",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-6-1-government-intervention.html",
+          "termAsWritten": "Competition Policy",
+          "origin": "authored",
+          "definitionHtml": "Government and regulator action to promote competition and protect consumers, covering merger control, action against anti-competitive practices and the regulation of monopoly power."
         }
       ]
     },
@@ -1518,6 +1784,45 @@
           "termAsWritten": "Competitive devaluation",
           "origin": "chip",
           "definitionHtml": "is when a government deliberately pushes down the value of its currency to make exports cheaper and gain a trade advantage."
+        }
+      ]
+    },
+    {
+      "id": "complementary-goods",
+      "term": "Complementary Goods",
+      "key": "complementary goods",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.6",
+          "topic": "The interrelationship between markets",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html",
+          "termAsWritten": "Complementary Goods",
+          "origin": "authored",
+          "definitionHtml": "Goods bought and used together, so that a fall in the price of one raises demand for the other. They have a <strong>negative cross elasticity of demand</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.3",
+          "topic": "Price, Income and Cross Elasticities of Demand",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+          "termAsWritten": "Complementary Goods",
+          "origin": "authored",
+          "definitionHtml": "Goods bought and used together, so that a fall in the price of one raises demand for the other. They have a <strong>negative cross elasticity of demand</strong>."
         }
       ]
     },
@@ -1586,6 +1891,84 @@
           "termAsWritten": "Composite indicators",
           "origin": "chip",
           "definitionHtml": "combine several single indicators into one index to provide a more rounded view of development."
+        }
+      ]
+    },
+    {
+      "id": "concentration-ratio",
+      "term": "Concentration Ratio",
+      "key": "concentration ratio",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.5",
+          "topic": "Oligopoly",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-5-oligopoly.html",
+          "termAsWritten": "Concentration Ratio",
+          "origin": "authored",
+          "definitionHtml": "The share of total market output or revenue held by the largest firms in a market. A five-firm concentration ratio of 80% means the five largest firms account for 80% of the market."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.4",
+          "topic": "Oligopoly",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-4-oligopoly.html",
+          "termAsWritten": "Concentration Ratio",
+          "origin": "authored",
+          "definitionHtml": "The share of total market output or revenue held by the largest firms in a market. A five-firm concentration ratio of 80% means the five largest firms account for 80% of the market."
+        }
+      ]
+    },
+    {
+      "id": "consumer-goods",
+      "term": "Consumer Goods",
+      "key": "consumer goods",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.5",
+          "topic": "Production Possibility Diagrams",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
+          "termAsWritten": "Consumer Goods",
+          "origin": "authored",
+          "definitionHtml": "Goods and services bought by households to satisfy wants directly, rather than to produce something else."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.4",
+          "topic": "Production Possibility Frontiers",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
+          "termAsWritten": "Consumer Goods",
+          "origin": "authored",
+          "definitionHtml": "Goods and services bought by households to satisfy wants directly, rather than to produce something else."
         }
       ]
     },
@@ -1679,6 +2062,72 @@
           "termAsWritten": "Consumption",
           "origin": "chip",
           "definitionHtml": "Spending by households on goods and services. It is the largest component of aggregate demand."
+        }
+      ]
+    },
+    {
+      "id": "contestable-market",
+      "term": "Contestable Market",
+      "key": "contestable market",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.9",
+          "topic": "Contestability",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html",
+          "termAsWritten": "Contestable Market",
+          "origin": "authored",
+          "definitionHtml": "A market in which barriers to entry and exit are low and sunk costs are minimal, so the <strong>threat</strong> of new entry keeps incumbent firms from earning supernormal profit."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.7",
+          "topic": "Contestability",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-7-contestability.html",
+          "termAsWritten": "Contestable Market",
+          "origin": "authored",
+          "definitionHtml": "A market in which barriers to entry and exit are low and sunk costs are minimal, so the <strong>threat</strong> of new entry keeps incumbent firms from earning supernormal profit."
+        }
+      ]
+    },
+    {
+      "id": "cost-benefit-analysis",
+      "term": "Cost-Benefit Analysis",
+      "key": "cost-benefit analysis",
+      "letter": "C",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.4.1",
+          "topic": "Government intervention in markets",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+          "termAsWritten": "Cost-Benefit Analysis",
+          "origin": "authored",
+          "definitionHtml": "A method of appraising a project by valuing all its social costs and social benefits, not only the private ones, and proceeding where social benefit exceeds social cost."
         }
       ]
     },
@@ -1842,6 +2291,45 @@
           "termAsWritten": "Current account",
           "origin": "chip",
           "definitionHtml": "Records trade in goods and services, primary income, and secondary income."
+        }
+      ]
+    },
+    {
+      "id": "current-account-deficit",
+      "term": "Current Account Deficit",
+      "key": "current account deficit",
+      "letter": "C",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.3",
+          "topic": "The Balance of Payments",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
+          "termAsWritten": "Current Account Deficit",
+          "origin": "authored",
+          "definitionHtml": "A position in which the money leaving a country to pay for imports, income and transfers exceeds the money entering it, so the current account balance is negative."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.7",
+          "topic": "Balance of Payments",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
+          "termAsWritten": "Current Account Deficit",
+          "origin": "authored",
+          "definitionHtml": "A position in which the money leaving a country to pay for imports, income and transfers exceeds the money entering it, so the current account balance is negative."
         }
       ]
     },
@@ -2308,13 +2796,17 @@
       "key": "deregulation",
       "letter": "D",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -2326,6 +2818,56 @@
           "termAsWritten": "Deregulation",
           "origin": "chip",
           "definitionHtml": "Refers to the removal or reduction of government regulations and restrictions on businesses and industries. Deregulation aims to promote competition, efficiency, and innovation in the market."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.6.3",
+          "topic": "Supply-Side Policies",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
+          "termAsWritten": "Deregulation",
+          "origin": "authored",
+          "definitionHtml": "The removal of legal barriers and rules governing a market, intended to increase competition and efficiency by making entry easier."
+        }
+      ]
+    },
+    {
+      "id": "derived-demand",
+      "term": "Derived Demand",
+      "key": "derived demand",
+      "letter": "D",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.6",
+          "topic": "The interrelationship between markets",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html",
+          "termAsWritten": "Derived Demand",
+          "origin": "authored",
+          "definitionHtml": "Demand for a good or factor that arises not for its own sake but because it is needed to produce something else. Demand for labour is derived from demand for the output that labour produces."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.5.1",
+          "topic": "Demand for Labour",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
+          "termAsWritten": "Derived Demand",
+          "origin": "authored",
+          "definitionHtml": "Demand for a good or factor that arises not for its own sake but because it is needed to produce something else. Demand for labour is derived from demand for the output that labour produces."
         }
       ]
     },
@@ -2795,6 +3337,84 @@
       ]
     },
     {
+      "id": "economies-of-scale",
+      "term": "Economies of Scale",
+      "key": "economies of scale",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.4.5",
+          "topic": "Economies and Diseconomies of Scale",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html",
+          "termAsWritten": "Economies of Scale",
+          "origin": "authored",
+          "definitionHtml": "The fall in <strong>long-run average cost</strong> as a firm increases its scale of output. Internal economies come from the growth of the firm itself; external economies come from the growth of the industry."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.3.3",
+          "topic": "Economies and Diseconomies of Scale",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
+          "termAsWritten": "Economies of Scale",
+          "origin": "authored",
+          "definitionHtml": "The fall in <strong>long-run average cost</strong> as a firm increases its scale of output. Internal economies come from the growth of the firm itself; external economies come from the growth of the industry."
+        }
+      ]
+    },
+    {
+      "id": "elasticity",
+      "term": "Elasticity",
+      "key": "elasticity",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.4",
+          "topic": "Price Elasticity of Supply (PES)",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-4-price-elasticity-of-supply.html",
+          "termAsWritten": "Elasticity",
+          "origin": "authored",
+          "definitionHtml": "A measure of how responsive one variable is to a change in another, calculated as the percentage change in the first divided by the percentage change in the second."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.5",
+          "topic": "Price Elasticity of Supply (PES)",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html",
+          "termAsWritten": "Elasticity",
+          "origin": "authored",
+          "definitionHtml": "A measure of how responsive one variable is to a change in another, calculated as the percentage change in the first divided by the percentage change in the second."
+        }
+      ]
+    },
+    {
       "id": "emotional-influence",
       "term": "Emotional Influence",
       "key": "emotional influence",
@@ -2888,6 +3508,45 @@
       ]
     },
     {
+      "id": "equilibrium-price",
+      "term": "Equilibrium Price",
+      "key": "equilibrium price",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.5",
+          "topic": "The Determination of Equilibrium Market Prices",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+          "termAsWritten": "Equilibrium Price",
+          "origin": "authored",
+          "definitionHtml": "The price at which the quantity demanded equals the quantity supplied, so there is no tendency for price to change. It is also called the <strong>market-clearing price</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.6",
+          "topic": "Price Determination",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+          "termAsWritten": "Equilibrium Price",
+          "origin": "authored",
+          "definitionHtml": "The price at which the quantity demanded equals the quantity supplied, so there is no tendency for price to change. It is also called the <strong>market-clearing price</strong>."
+        }
+      ]
+    },
+    {
       "id": "equity",
       "term": "Equity",
       "key": "equity",
@@ -2911,6 +3570,123 @@
           "termAsWritten": "Equity",
           "origin": "chip",
           "definitionHtml": "Everyone receives a \"fair\" share of resources. This is subjective and open to debate."
+        }
+      ]
+    },
+    {
+      "id": "excess-demand",
+      "term": "Excess Demand",
+      "key": "excess demand",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.5",
+          "topic": "The Determination of Equilibrium Market Prices",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+          "termAsWritten": "Excess Demand",
+          "origin": "authored",
+          "definitionHtml": "The amount by which quantity demanded exceeds quantity supplied when price is <strong>below</strong> equilibrium, creating a shortage that puts upward pressure on price."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.6",
+          "topic": "Price Determination",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+          "termAsWritten": "Excess Demand",
+          "origin": "authored",
+          "definitionHtml": "The amount by which quantity demanded exceeds quantity supplied when price is <strong>below</strong> equilibrium, creating a shortage that puts upward pressure on price."
+        }
+      ]
+    },
+    {
+      "id": "excess-supply",
+      "term": "Excess Supply",
+      "key": "excess supply",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.5",
+          "topic": "The Determination of Equilibrium Market Prices",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+          "termAsWritten": "Excess Supply",
+          "origin": "authored",
+          "definitionHtml": "The amount by which quantity supplied exceeds quantity demanded when price is <strong>above</strong> equilibrium, creating a surplus that puts downward pressure on price."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.6",
+          "topic": "Price Determination",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
+          "termAsWritten": "Excess Supply",
+          "origin": "authored",
+          "definitionHtml": "The amount by which quantity supplied exceeds quantity demanded when price is <strong>above</strong> equilibrium, creating a surplus that puts downward pressure on price."
+        }
+      ]
+    },
+    {
+      "id": "exchange-rate",
+      "term": "Exchange Rate",
+      "key": "exchange rate",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.4",
+          "topic": "Exchange Rate Systems",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
+          "termAsWritten": "Exchange Rate",
+          "origin": "authored",
+          "definitionHtml": "The price of one currency expressed in terms of another. It determines the domestic price of imports and the foreign price of exports."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.8",
+          "topic": "Exchange Rates",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+          "termAsWritten": "Exchange Rate",
+          "origin": "authored",
+          "definitionHtml": "The price of one currency expressed in terms of another. It determines the domestic price of imports and the foreign price of exports."
         }
       ]
     },
@@ -2993,6 +3769,84 @@
           "termAsWritten": "Expenditure-switching policies",
           "origin": "chip",
           "definitionHtml": "These aim to switch demand away from imports and towards domestically produced goods and services. Examples include <a href=\"/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html\">tariffs</a>, quotas, and devaluation of the currency."
+        }
+      ]
+    },
+    {
+      "id": "external-benefit",
+      "term": "External Benefit",
+      "key": "external benefit",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "External Benefit",
+          "origin": "authored",
+          "definitionHtml": "The benefit of an economic activity that accrues to third parties rather than to the producer or consumer, measured as social benefit minus private benefit."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "External Benefit",
+          "origin": "authored",
+          "definitionHtml": "The benefit of an economic activity that accrues to third parties rather than to the producer or consumer, measured as social benefit minus private benefit."
+        }
+      ]
+    },
+    {
+      "id": "external-cost",
+      "term": "External Cost",
+      "key": "external cost",
+      "letter": "E",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "External Cost",
+          "origin": "authored",
+          "definitionHtml": "The cost of an economic activity that falls on third parties rather than on the producer or consumer, measured as social cost minus private cost."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "External Cost",
+          "origin": "authored",
+          "definitionHtml": "The cost of an economic activity that falls on third parties rather than on the producer or consumer, measured as social cost minus private cost."
         }
       ]
     },
@@ -3131,20 +3985,34 @@
     },
     {
       "id": "factors-of-production",
-      "term": "Factors of production",
+      "term": "Factors of Production",
       "key": "factors of production",
       "letter": "F",
       "boards": [
+        "aqa",
         "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
+      "definitionVariants": 2,
       "review": [
+        "2 different wordings across its sources",
         "definition ends in a colon - it runs on into a list"
       ],
       "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.1.3",
+          "topic": "Economic Resources",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+          "termAsWritten": "Factors of Production",
+          "origin": "authored",
+          "definitionHtml": "The resources used to produce goods and services: <strong>land</strong>, <strong>labour</strong>, <strong>capital</strong> and <strong>enterprise</strong>."
+        },
         {
           "board": "edexcel-a",
           "group": "theme-1",
@@ -3542,6 +4410,45 @@
       ]
     },
     {
+      "id": "free-rider-problem",
+      "term": "Free Rider Problem",
+      "key": "free rider problem",
+      "letter": "F",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.3",
+          "topic": "Public Goods, Private Goods and Quasi-Public Goods",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
+          "termAsWritten": "Free Rider Problem",
+          "origin": "authored",
+          "definitionHtml": "The problem that, because a public good is non-excludable, people can consume it without paying. Firms therefore cannot charge for it and the free market fails to provide it."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.3",
+          "topic": "Public goods",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "termAsWritten": "Free Rider Problem",
+          "origin": "authored",
+          "definitionHtml": "The problem that, because a public good is non-excludable, people can consume it without paying. Firms therefore cannot charge for it and the free market fails to provide it."
+        }
+      ]
+    },
+    {
       "id": "free-trade-area",
       "term": "Free trade area",
       "key": "free trade area",
@@ -3620,19 +4527,73 @@
       ]
     },
     {
-      "id": "game-theory",
-      "term": "Game theory",
-      "key": "game theory",
-      "letter": "G",
+      "id": "functions-of-money",
+      "term": "Functions of Money",
+      "key": "functions of money",
+      "letter": "F",
       "boards": [
+        "aqa",
         "edexcel-a"
       ],
       "origin": [
-        "chip"
+        "authored"
       ],
       "definitionVariants": 1,
       "review": [],
       "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.4.2",
+          "topic": "Specialisation, Division of Labour and Exchange",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-4-2-specialisation-division-of-labour-and-exchange.html",
+          "termAsWritten": "Functions of Money",
+          "origin": "authored",
+          "definitionHtml": "The four roles money performs: a <strong>medium of exchange</strong>, a <strong>measure of value</strong>, a <strong>store of value</strong> and a <strong>method of deferred payment</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.1.5",
+          "topic": "Specialisation and the division of labour",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+          "termAsWritten": "Functions of Money",
+          "origin": "authored",
+          "definitionHtml": "The four roles money performs: a <strong>medium of exchange</strong>, a <strong>measure of value</strong>, a <strong>store of value</strong> and a <strong>method of deferred payment</strong>."
+        }
+      ]
+    },
+    {
+      "id": "game-theory",
+      "term": "Game Theory",
+      "key": "game theory",
+      "letter": "G",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored",
+        "chip"
+      ],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.5",
+          "topic": "Oligopoly",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-5-oligopoly.html",
+          "termAsWritten": "Game Theory",
+          "origin": "authored",
+          "definitionHtml": "The study of how interdependent firms make decisions when the best choice for each depends on what rivals do. It is used to explain collusion and price rigidity in oligopoly."
+        },
         {
           "board": "edexcel-a",
           "group": "theme-3",
@@ -3652,13 +4613,17 @@
       "key": "geographical immobility",
       "letter": "G",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -3670,6 +4635,56 @@
           "termAsWritten": "Geographical immobility",
           "origin": "chip",
           "definitionHtml": "when workers are unable to move to areas with higher wages due to housing costs, family commitments, or other factors."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.5.2",
+          "topic": "Supply of Labour",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-5-2-supply-of-labour.html",
+          "termAsWritten": "Geographical Immobility",
+          "origin": "authored",
+          "definitionHtml": "The barriers that stop workers moving between areas to take up work, such as housing costs, family ties and regional differences in the cost of living."
+        }
+      ]
+    },
+    {
+      "id": "gini-coefficient",
+      "term": "Gini Coefficient",
+      "key": "gini coefficient",
+      "letter": "G",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.7.1",
+          "topic": "The Distribution of Income and Wealth",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html",
+          "termAsWritten": "Gini Coefficient",
+          "origin": "authored",
+          "definitionHtml": "A measure of income or wealth inequality derived from the Lorenz curve, running from <strong>0</strong> for perfect equality to <strong>1</strong> for perfect inequality."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.2.2",
+          "topic": "Inequality",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+          "termAsWritten": "Gini Coefficient",
+          "origin": "authored",
+          "definitionHtml": "A measure of income or wealth inequality derived from the Lorenz curve, running from <strong>0</strong> for perfect equality to <strong>1</strong> for perfect inequality."
         }
       ]
     },
@@ -3950,6 +4965,45 @@
       ]
     },
     {
+      "id": "human-development-index",
+      "term": "Human Development Index",
+      "key": "human development index",
+      "letter": "H",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.5",
+          "topic": "Economic Growth and Development",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+          "termAsWritten": "Human Development Index",
+          "origin": "authored",
+          "definitionHtml": "A composite measure of development combining life expectancy, mean and expected years of schooling, and gross national income per head, scored between <strong>0</strong> and <strong>1</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.3.1",
+          "topic": "Measures of Development",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html",
+          "termAsWritten": "Human Development Index",
+          "origin": "authored",
+          "definitionHtml": "A composite measure of development combining life expectancy, mean and expected years of schooling, and gross national income per head, scored between <strong>0</strong> and <strong>1</strong>."
+        }
+      ]
+    },
+    {
       "id": "income-elasticity-of-demand-yed",
       "term": "Income Elasticity of Demand (YED)",
       "key": "income elasticity of demand (yed)",
@@ -4037,13 +5091,17 @@
       "key": "index number",
       "letter": "I",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -4055,6 +5113,17 @@
           "termAsWritten": "Index number",
           "origin": "chip",
           "definitionHtml": "A number used to express the value of a variable relative to a chosen <strong>base value</strong>, which is set equal to <strong>100</strong>. Index numbers make it easy to compare how a variable has changed over time and to express those changes in percentage terms."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.2",
+          "topic": "Inflation",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+          "termAsWritten": "Index number",
+          "origin": "authored",
+          "definitionHtml": "A figure expressing the value of a variable relative to a <strong>base year</strong>, which is set to 100. An index of 112 means the value is 12% above its base-year level."
         }
       ]
     },
@@ -4486,6 +5555,45 @@
       ]
     },
     {
+      "id": "intervention",
+      "term": "Intervention",
+      "key": "intervention",
+      "letter": "I",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.9",
+          "topic": "Government intervention in markets",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
+          "termAsWritten": "Intervention",
+          "origin": "authored",
+          "definitionHtml": "Government action to correct market failure or to change the outcome a free market would produce, through measures such as taxation, subsidies, regulation and direct provision."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.6.2",
+          "topic": "The Impact of Government Intervention",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html",
+          "termAsWritten": "Intervention",
+          "origin": "authored",
+          "definitionHtml": "Government action to correct market failure or to change the outcome a free market would produce, through measures such as taxation, subsidies, regulation and direct provision."
+        }
+      ]
+    },
+    {
       "id": "interventionist-policies",
       "term": "Interventionist policies",
       "key": "interventionist policies",
@@ -4618,6 +5726,45 @@
       ]
     },
     {
+      "id": "j-curve-effect",
+      "term": "J-Curve Effect",
+      "key": "j-curve effect",
+      "letter": "J",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.4",
+          "topic": "Exchange Rate Systems",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
+          "termAsWritten": "J-Curve Effect",
+          "origin": "authored",
+          "definitionHtml": "The pattern by which a depreciation first <strong>worsens</strong> the current account, because contracts and habits fix quantities in the short run, and only improves it once demand has had time to respond."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.8",
+          "topic": "Exchange Rates",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+          "termAsWritten": "J-Curve Effect",
+          "origin": "authored",
+          "definitionHtml": "The pattern by which a depreciation first <strong>worsens</strong> the current account, because contracts and habits fix quantities in the short run, and only improves it once demand has had time to respond."
+        }
+      ]
+    },
+    {
       "id": "labour",
       "term": "Labour",
       "key": "labour",
@@ -4692,6 +5839,84 @@
           "termAsWritten": "Labour Force",
           "origin": "chip",
           "definitionHtml": "The total of those in employment and those unemployed who are actively seeking work."
+        }
+      ]
+    },
+    {
+      "id": "labour-productivity",
+      "term": "Labour Productivity",
+      "key": "labour productivity",
+      "letter": "L",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.4.1",
+          "topic": "Production & Productivity",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-4-1-production-and-productivity.html",
+          "termAsWritten": "Labour Productivity",
+          "origin": "authored",
+          "definitionHtml": "Output per worker, or output per hour worked, over a given period. It is the main measure of how efficiently labour is being used."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.5.1",
+          "topic": "Demand for Labour",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
+          "termAsWritten": "Labour Productivity",
+          "origin": "authored",
+          "definitionHtml": "Output per worker, or output per hour worked, over a given period. It is the main measure of how efficiently labour is being used."
+        }
+      ]
+    },
+    {
+      "id": "laffer-curve",
+      "term": "Laffer Curve",
+      "key": "laffer curve",
+      "letter": "L",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.5.1",
+          "topic": "Fiscal Policy",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+          "termAsWritten": "Laffer Curve",
+          "origin": "authored",
+          "definitionHtml": "The curve showing that tax revenue rises with the tax rate up to a point and falls beyond it, because very high rates discourage work, encourage avoidance and shrink the tax base."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.5.2",
+          "topic": "Taxation",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+          "termAsWritten": "Laffer Curve",
+          "origin": "authored",
+          "definitionHtml": "The curve showing that tax revenue rises with the tax rate up to a point and falls beyond it, because very high rates discourage work, encourage avoidance and shrink the tax base."
         }
       ]
     },
@@ -5035,6 +6260,45 @@
       ]
     },
     {
+      "id": "lorenz-curve",
+      "term": "Lorenz Curve",
+      "key": "lorenz curve",
+      "letter": "L",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.7.1",
+          "topic": "The Distribution of Income and Wealth",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html",
+          "termAsWritten": "Lorenz Curve",
+          "origin": "authored",
+          "definitionHtml": "A diagram plotting the cumulative share of income against the cumulative share of population. The further the curve lies below the 45-degree line of perfect equality, the greater the inequality."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.2.2",
+          "topic": "Inequality",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+          "termAsWritten": "Lorenz Curve",
+          "origin": "authored",
+          "definitionHtml": "A diagram plotting the cumulative share of income against the cumulative share of population. The further the curve lies below the 45-degree line of perfect equality, the greater the inequality."
+        }
+      ]
+    },
+    {
       "id": "loss",
       "term": "Loss",
       "key": "loss",
@@ -5296,6 +6560,45 @@
       ]
     },
     {
+      "id": "marginal-revenue-product",
+      "term": "Marginal Revenue Product",
+      "key": "marginal revenue product",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.6.1",
+          "topic": "Demand for Labour, Marginal Productivity Theory",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-6-1-the-demand-for-labour-marginal-productivity-theory.html",
+          "termAsWritten": "Marginal Revenue Product",
+          "origin": "authored",
+          "definitionHtml": "The extra revenue a firm gains from employing one more unit of a factor, found by multiplying its marginal physical product by marginal revenue. It is the firm's demand curve for labour."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.5.1",
+          "topic": "Demand for Labour",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
+          "termAsWritten": "Marginal Revenue Product",
+          "origin": "authored",
+          "definitionHtml": "The extra revenue a firm gains from employing one more unit of a factor, found by multiplying its marginal physical product by marginal revenue. It is the firm's demand curve for labour."
+        }
+      ]
+    },
+    {
       "id": "marginal-utility-mu",
       "term": "Marginal Utility (MU)",
       "key": "marginal utility (mu)",
@@ -5540,6 +6843,45 @@
           "termAsWritten": "Maximum price",
           "origin": "chip",
           "definitionHtml": "this decreases the price of the demerit good, causing an expansion in D=MPC."
+        }
+      ]
+    },
+    {
+      "id": "median",
+      "term": "Median",
+      "key": "median",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.7.1",
+          "topic": "The Distribution of Income and Wealth",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html",
+          "termAsWritten": "Median",
+          "origin": "authored",
+          "definitionHtml": "The middle value when data are ranked in order, so that half the values lie above it and half below. Median income is often preferred to mean income because it is not pulled upwards by a few very high earners."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.3.1",
+          "topic": "Measures of Development",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html",
+          "termAsWritten": "Median",
+          "origin": "authored",
+          "definitionHtml": "The middle value when data are ranked in order, so that half the values lie above it and half below. Median income is often preferred to mean income because it is not pulled upwards by a few very high earners."
         }
       ]
     },
@@ -5796,6 +7138,45 @@
       ]
     },
     {
+      "id": "monopoly",
+      "term": "Monopoly",
+      "key": "monopoly",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.6",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
+          "termAsWritten": "Monopoly",
+          "origin": "authored",
+          "definitionHtml": "A market structure in which a single firm supplies the whole market. In UK competition law a firm with a market share of <strong>25% or more</strong> is treated as having monopoly power."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.5",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+          "termAsWritten": "Monopoly",
+          "origin": "authored",
+          "definitionHtml": "A market structure in which a single firm supplies the whole market. In UK competition law a firm with a market share of <strong>25% or more</strong> is treated as having monopoly power."
+        }
+      ]
+    },
+    {
       "id": "monopoly-power",
       "term": "Monopoly power",
       "key": "monopoly power",
@@ -5832,6 +7213,45 @@
           "termAsWritten": "Monopoly power",
           "origin": "chip",
           "definitionHtml": "when a firm has significant market power, allowing it to set prices above competitive levels."
+        }
+      ]
+    },
+    {
+      "id": "monopsony",
+      "term": "Monopsony",
+      "key": "monopsony",
+      "letter": "M",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.6.4",
+          "topic": "The Determination of Relative Wage rates and Levels of Employment in Imperfectly Competitive Labour Markets",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-6-4-wage-determination-imperfectly-competitive-labour-markets.html",
+          "termAsWritten": "Monopsony",
+          "origin": "authored",
+          "definitionHtml": "A market with a single or dominant <strong>buyer</strong>, which can use its buying power to force down the price it pays - for example an employer that is the main purchaser of labour in a local market."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.6",
+          "topic": "Monopsony",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-6-monopsony.html",
+          "termAsWritten": "Monopsony",
+          "origin": "authored",
+          "definitionHtml": "A market with a single or dominant <strong>buyer</strong>, which can use its buying power to force down the price it pays - for example an employer that is the main purchaser of labour in a local market."
         }
       ]
     },
@@ -6166,6 +7586,45 @@
       ]
     },
     {
+      "id": "natural-monopoly",
+      "term": "Natural Monopoly",
+      "key": "natural monopoly",
+      "letter": "N",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.6",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
+          "termAsWritten": "Natural Monopoly",
+          "origin": "authored",
+          "definitionHtml": "A market in which economies of scale are so large relative to demand that one firm can supply the whole market at a lower average cost than two or more could. Water and rail infrastructure are examples."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.5",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+          "termAsWritten": "Natural Monopoly",
+          "origin": "authored",
+          "definitionHtml": "A market in which economies of scale are so large relative to demand that one firm can supply the whole market at a lower average cost than two or more could. Water and rail infrastructure are examples."
+        }
+      ]
+    },
+    {
       "id": "natural-rate-of-unemployment",
       "term": "Natural Rate of Unemployment",
       "key": "natural rate of unemployment",
@@ -6189,6 +7648,45 @@
           "termAsWritten": "Natural Rate of Unemployment",
           "origin": "chip",
           "definitionHtml": "The level of unemployment that exists when the economy is <strong>at full employment</strong>, consisting of frictional and structural unemployment."
+        }
+      ]
+    },
+    {
+      "id": "negative-externality",
+      "term": "Negative Externality",
+      "key": "negative externality",
+      "letter": "N",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Negative Externality",
+          "origin": "authored",
+          "definitionHtml": "A cost imposed on a <strong>third party</strong> not involved in the transaction, so social cost exceeds private cost and the market over-produces relative to the socially optimal level."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "Negative Externality",
+          "origin": "authored",
+          "definitionHtml": "A cost imposed on a <strong>third party</strong> not involved in the transaction, so social cost exceeds private cost and the market over-produces relative to the socially optimal level."
         }
       ]
     },
@@ -6245,6 +7743,45 @@
           "termAsWritten": "NGOs",
           "origin": "chip",
           "definitionHtml": "are non-profit organisations that operate independently of governments. They often focus on specific development issues such as education, healthcare, or human rights. NGOs can provide aid, implement development projects, and advocate for policy changes to support sustainable development."
+        }
+      ]
+    },
+    {
+      "id": "nominal-gdp",
+      "term": "Nominal GDP",
+      "key": "nominal gdp",
+      "letter": "N",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.1.2",
+          "topic": "Macroeconomic Indicators",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+          "termAsWritten": "Nominal GDP",
+          "origin": "authored",
+          "definitionHtml": "Gross domestic product measured at <strong>current prices</strong>, with no adjustment for inflation. It rises when prices rise even if output has not changed."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.1",
+          "topic": "Economic Growth",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+          "termAsWritten": "Nominal GDP",
+          "origin": "authored",
+          "definitionHtml": "Gross domestic product measured at <strong>current prices</strong>, with no adjustment for inflation. It rises when prices rise even if output has not changed."
         }
       ]
     },
@@ -6539,13 +8076,17 @@
       "key": "occupational immobility",
       "letter": "O",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -6557,6 +8098,56 @@
           "termAsWritten": "Occupational immobility",
           "origin": "chip",
           "definitionHtml": "when workers are unable to move between different occupations due to a lack of skills or qualifications."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.5.2",
+          "topic": "Supply of Labour",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-5-2-supply-of-labour.html",
+          "termAsWritten": "Occupational Immobility",
+          "origin": "authored",
+          "definitionHtml": "The barriers that stop workers moving between jobs or industries, usually because they lack the skills, qualifications or training the new occupation requires."
+        }
+      ]
+    },
+    {
+      "id": "oligopoly",
+      "term": "Oligopoly",
+      "key": "oligopoly",
+      "letter": "O",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.5",
+          "topic": "Oligopoly",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-5-oligopoly.html",
+          "termAsWritten": "Oligopoly",
+          "origin": "authored",
+          "definitionHtml": "A market structure dominated by a few large firms, with high barriers to entry and <strong>interdependence</strong>, so each firm must consider how rivals will react to its decisions."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.4",
+          "topic": "Oligopoly",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-4-oligopoly.html",
+          "termAsWritten": "Oligopoly",
+          "origin": "authored",
+          "definitionHtml": "A market structure dominated by a few large firms, with high barriers to entry and <strong>interdependence</strong>, so each firm must consider how rivals will react to its decisions."
         }
       ]
     },
@@ -6699,6 +8290,84 @@
       ]
     },
     {
+      "id": "percentage-point-change",
+      "term": "Percentage Point Change",
+      "key": "percentage point change",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "",
+          "topic": "",
+          "notesUrl": "",
+          "termAsWritten": "Percentage Point Change",
+          "origin": "authored",
+          "definitionHtml": "The difference between two percentages, found by subtracting one from the other. A rise in interest rates from 4% to 6% is a rise of <strong>two percentage points</strong>, but a 50% increase - the two are not interchangeable."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "",
+          "topic": "",
+          "notesUrl": "",
+          "termAsWritten": "Percentage Point Change",
+          "origin": "authored",
+          "definitionHtml": "The difference between two percentages, found by subtracting one from the other. A rise in interest rates from 4% to 6% is a rise of <strong>two percentage points</strong>, but a 50% increase - the two are not interchangeable."
+        }
+      ]
+    },
+    {
+      "id": "perfect-competition",
+      "term": "Perfect Competition",
+      "key": "perfect competition",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.3",
+          "topic": "Perfect Competition",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html",
+          "termAsWritten": "Perfect Competition",
+          "origin": "authored",
+          "definitionHtml": "A market structure with many buyers and sellers, an identical product, perfect information and no barriers to entry, in which firms are <strong>price takers</strong> and earn only normal profit in the long run."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.2",
+          "topic": "Perfect Competition",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html",
+          "termAsWritten": "Perfect Competition",
+          "origin": "authored",
+          "definitionHtml": "A market structure with many buyers and sellers, an identical product, perfect information and no barriers to entry, in which firms are <strong>price takers</strong> and earn only normal profit in the long run."
+        }
+      ]
+    },
+    {
       "id": "persistent-deficits",
       "term": "Persistent deficits",
       "key": "persistent deficits",
@@ -6777,6 +8446,84 @@
       ]
     },
     {
+      "id": "phillips-curve",
+      "term": "Phillips Curve",
+      "key": "phillips curve",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.3.4",
+          "topic": "Possible Conflicts Between Macroeconomic Policy Objectives",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
+          "termAsWritten": "Phillips Curve",
+          "origin": "authored",
+          "definitionHtml": "The curve showing the short-run inverse relationship between unemployment and the rate of inflation. In the long run it is taken to be vertical at the natural rate of unemployment."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.6.4",
+          "topic": "Conflicts Between Objectives and Policies",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html",
+          "termAsWritten": "Phillips Curve",
+          "origin": "authored",
+          "definitionHtml": "The curve showing the short-run inverse relationship between unemployment and the rate of inflation. In the long run it is taken to be vertical at the natural rate of unemployment."
+        }
+      ]
+    },
+    {
+      "id": "positive-externality",
+      "term": "Positive Externality",
+      "key": "positive externality",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Positive Externality",
+          "origin": "authored",
+          "definitionHtml": "A benefit received by a <strong>third party</strong> not involved in the transaction, so social benefit exceeds private benefit and the market under-produces relative to the socially optimal level."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "Positive Externality",
+          "origin": "authored",
+          "definitionHtml": "A benefit received by a <strong>third party</strong> not involved in the transaction, so social benefit exceeds private benefit and the market under-produces relative to the socially optimal level."
+        }
+      ]
+    },
+    {
       "id": "positive-statements",
       "term": "Positive statements",
       "key": "positive statements",
@@ -6839,6 +8586,45 @@
           "termAsWritten": "Potential Growth",
           "origin": "chip",
           "definitionHtml": "An increase in the economy's <strong>productive capacity</strong>. This is the <strong>maximum possible output</strong> the economy could produce if all resources were fully employed."
+        }
+      ]
+    },
+    {
+      "id": "price-discrimination",
+      "term": "Price Discrimination",
+      "key": "price discrimination",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.7",
+          "topic": "Price Discrimination",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-7-price-discrimination.html",
+          "termAsWritten": "Price Discrimination",
+          "origin": "authored",
+          "definitionHtml": "Charging different prices to different consumers for the same good, where the price difference does not reflect a difference in costs. It requires market power, the ability to separate consumers and different price elasticities of demand."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.4.5",
+          "topic": "Monopoly",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-4-5-monopoly.html",
+          "termAsWritten": "Price Discrimination",
+          "origin": "authored",
+          "definitionHtml": "Charging different prices to different consumers for the same good, where the price difference does not reflect a difference in costs. It requires market power, the ability to separate consumers and different price elasticities of demand."
         }
       ]
     },
@@ -6919,6 +8705,45 @@
           "termAsWritten": "Price Elasticity of Supply (PES)",
           "origin": "chip",
           "definitionHtml": "Measures the <strong>responsiveness of quantity supplied</strong> to a change in the good's own price. It helps us understand how easily, quickly or cheaply producers can increase output when the price rises."
+        }
+      ]
+    },
+    {
+      "id": "price-mechanism",
+      "term": "Price Mechanism",
+      "key": "price mechanism",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.1",
+          "topic": "How markets and prices allocate resources",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html",
+          "termAsWritten": "Price Mechanism",
+          "origin": "authored",
+          "definitionHtml": "The way changing prices allocate scarce resources in a free market, through the <strong>rationing</strong>, <strong>incentive</strong> and <strong>signalling</strong> functions of price."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.7",
+          "topic": "Price Mechanism",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+          "termAsWritten": "Price Mechanism",
+          "origin": "authored",
+          "definitionHtml": "The way changing prices allocate scarce resources in a free market, through the <strong>rationing</strong>, <strong>incentive</strong> and <strong>signalling</strong> functions of price."
         }
       ]
     },
@@ -7042,6 +8867,45 @@
       ]
     },
     {
+      "id": "private-good",
+      "term": "Private Good",
+      "key": "private good",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.3",
+          "topic": "Public Goods, Private Goods and Quasi-Public Goods",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
+          "termAsWritten": "Private Good",
+          "origin": "authored",
+          "definitionHtml": "A good that is <strong>rival</strong> and <strong>excludable</strong>, so one person's consumption prevents another's and non-payers can be shut out. Most goods traded in markets are private goods."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.3",
+          "topic": "Public goods",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "termAsWritten": "Private Good",
+          "origin": "authored",
+          "definitionHtml": "A good that is <strong>rival</strong> and <strong>excludable</strong>, so one person's consumption prevents another's and non-payers can be shut out. Most goods traded in markets are private goods."
+        }
+      ]
+    },
+    {
       "id": "private-sector",
       "term": "Private sector",
       "key": "private sector",
@@ -7074,13 +8938,17 @@
       "key": "privatisation",
       "letter": "P",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -7092,6 +8960,17 @@
           "termAsWritten": "Privatisation",
           "origin": "chip",
           "definitionHtml": "Refers to the transfer of ownership of enterprises from the government to the private sector. It aims to increase efficiency, promote competition, and reduce the financial burden on the government."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.6.1",
+          "topic": "Government Intervention",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-6-1-government-intervention.html",
+          "termAsWritten": "Privatisation",
+          "origin": "authored",
+          "definitionHtml": "The transfer of assets or services from the public sector to the private sector, on the argument that the profit motive raises efficiency."
         }
       ]
     },
@@ -7323,13 +9202,17 @@
       "key": "productivity",
       "letter": "P",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -7341,6 +9224,56 @@
           "termAsWritten": "Productivity",
           "origin": "chip",
           "definitionHtml": "A measure of the efficiency of production, typically measuring the output produced per unit of input used."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.6.3",
+          "topic": "Supply-Side Policies",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
+          "termAsWritten": "Productivity",
+          "origin": "authored",
+          "definitionHtml": "Output per unit of input per period of time. Rising productivity means more output from the same resources, which lowers unit costs."
+        }
+      ]
+    },
+    {
+      "id": "profit-maximisation",
+      "term": "Profit Maximisation",
+      "key": "profit maximisation",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.5.2",
+          "topic": "The Objectives of Firms",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-5-2-the-objectives-of-firms.html",
+          "termAsWritten": "Profit Maximisation",
+          "origin": "authored",
+          "definitionHtml": "The objective of producing at the level of output where marginal cost equals marginal revenue, so that the gap between total revenue and total cost is at its greatest."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.2.1",
+          "topic": "Business Objectives",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
+          "termAsWritten": "Profit Maximisation",
+          "origin": "authored",
+          "definitionHtml": "The objective of producing at the level of output where marginal cost equals marginal revenue, so that the gap between total revenue and total cost is at its greatest."
         }
       ]
     },
@@ -7516,6 +9449,45 @@
       ]
     },
     {
+      "id": "public-good",
+      "term": "Public Good",
+      "key": "public good",
+      "letter": "P",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.3",
+          "topic": "Public Goods, Private Goods and Quasi-Public Goods",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
+          "termAsWritten": "Public Good",
+          "origin": "authored",
+          "definitionHtml": "A good that is <strong>non-rival</strong> and <strong>non-excludable</strong>, so it will not be provided by the free market. National defence and street lighting are examples."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.3",
+          "topic": "Public goods",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+          "termAsWritten": "Public Good",
+          "origin": "authored",
+          "definitionHtml": "A good that is <strong>non-rival</strong> and <strong>non-excludable</strong>, so it will not be provided by the free market. National defence and street lighting are examples."
+        }
+      ]
+    },
+    {
       "id": "public-ownership",
       "term": "Public Ownership",
       "key": "public ownership",
@@ -7575,13 +9547,17 @@
       "key": "purchasing power parity (ppp)",
       "letter": "P",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -7593,6 +9569,17 @@
           "termAsWritten": "Purchasing power parity (PPP)",
           "origin": "chip",
           "definitionHtml": "An exchange rate that equalises the price of an identical basket of goods and services between two countries. It reflects how much a currency can actually <strong>buy</strong> within its own economy, rather than what it trades for on foreign exchange markets."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.1",
+          "topic": "Economic Growth",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+          "termAsWritten": "Purchasing power parity (PPP)",
+          "origin": "authored",
+          "definitionHtml": "An exchange rate that equalises the cost of an identical basket of goods between two countries. It is used to compare living standards more fairly than market exchange rates allow."
         }
       ]
     },
@@ -7649,6 +9636,84 @@
       ]
     },
     {
+      "id": "quantiles",
+      "term": "Quantiles",
+      "key": "quantiles",
+      "letter": "Q",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "",
+          "topic": "",
+          "notesUrl": "",
+          "termAsWritten": "Quantiles",
+          "origin": "authored",
+          "definitionHtml": "Values that divide a distribution into equal-sized groups when the data are ranked in order. Quartiles divide it into four groups and deciles into ten; they are used to describe how income is spread."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "",
+          "topic": "",
+          "notesUrl": "",
+          "termAsWritten": "Quantiles",
+          "origin": "authored",
+          "definitionHtml": "Values that divide a distribution into equal-sized groups when the data are ranked in order. Quartiles divide it into four groups and deciles into ten; they are used to describe how income is spread."
+        }
+      ]
+    },
+    {
+      "id": "quantitative-easing",
+      "term": "Quantitative Easing",
+      "key": "quantitative easing",
+      "letter": "Q",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.4.3",
+          "topic": "Central Banks and Monetary Policy",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
+          "termAsWritten": "Quantitative Easing",
+          "origin": "authored",
+          "definitionHtml": "A monetary policy in which the central bank creates money electronically to buy financial assets, mainly government bonds, in order to raise their price, lower yields and increase lending."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.6.2",
+          "topic": "Demand-Side Policies",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html",
+          "termAsWritten": "Quantitative Easing",
+          "origin": "authored",
+          "definitionHtml": "A monetary policy in which the central bank creates money electronically to buy financial assets, mainly government bonds, in order to raise their price, lower yields and increase lending."
+        }
+      ]
+    },
+    {
       "id": "quasi-public-goods",
       "term": "Quasi-public goods",
       "key": "quasi-public goods",
@@ -7674,6 +9739,189 @@
           "termAsWritten": "Quasi-public goods",
           "origin": "chip",
           "definitionHtml": "goods that are either:"
+        }
+      ]
+    },
+    {
+      "id": "quota",
+      "term": "Quota",
+      "key": "quota",
+      "letter": "Q",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.2",
+          "topic": "Trade",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+          "termAsWritten": "Quota",
+          "origin": "authored",
+          "definitionHtml": "A physical limit on the quantity of a good that may be imported over a period. It restricts supply and so raises the domestic price."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.5",
+          "topic": "Trading Blocs and the World Trade Organisation",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html",
+          "termAsWritten": "Quota",
+          "origin": "authored",
+          "definitionHtml": "A physical limit on the quantity of a good that may be imported over a period. It restricts supply and so raises the domestic price."
+        }
+      ]
+    },
+    {
+      "id": "rate-of-change",
+      "term": "Rate of Change",
+      "key": "rate of change",
+      "letter": "R",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "",
+          "topic": "",
+          "notesUrl": "",
+          "termAsWritten": "Rate of Change",
+          "origin": "authored",
+          "definitionHtml": "How fast a variable is growing, as opposed to its <strong>level</strong>. Inflation falling is a fall in the rate of change of prices, not a fall in prices themselves."
+        }
+      ]
+    },
+    {
+      "id": "rational-decision-making",
+      "term": "Rational Decision Making",
+      "key": "rational decision making",
+      "letter": "R",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.2.1",
+          "topic": "Consumer Behaviour",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html",
+          "termAsWritten": "Rational Decision Making",
+          "origin": "authored",
+          "definitionHtml": "The assumption that economic agents weigh up costs and benefits and choose the option that maximises their own welfare - consumers maximising utility and firms maximising profit."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.1",
+          "topic": "Rational decision making",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html",
+          "termAsWritten": "Rational Decision Making",
+          "origin": "authored",
+          "definitionHtml": "The assumption that economic agents weigh up costs and benefits and choose the option that maximises their own welfare - consumers maximising utility and firms maximising profit."
+        }
+      ]
+    },
+    {
+      "id": "real-gdp",
+      "term": "Real GDP",
+      "key": "real gdp",
+      "letter": "R",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.1.4",
+          "topic": "Uses of National Income Data",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html",
+          "termAsWritten": "Real GDP",
+          "origin": "authored",
+          "definitionHtml": "Gross domestic product adjusted for inflation, so that it measures the change in the <strong>volume</strong> of output rather than the change in prices. It is the measure used to judge economic growth."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.1",
+          "topic": "Economic Growth",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+          "termAsWritten": "Real GDP",
+          "origin": "authored",
+          "definitionHtml": "Gross domestic product adjusted for inflation, so that it measures the change in the <strong>volume</strong> of output rather than the change in prices. It is the measure used to judge economic growth."
+        }
+      ]
+    },
+    {
+      "id": "real-income",
+      "term": "Real Income",
+      "key": "real income",
+      "letter": "R",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.2.3",
+          "topic": "The Determinants of Aggregate Demand",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html",
+          "termAsWritten": "Real Income",
+          "origin": "authored",
+          "definitionHtml": "Income adjusted for inflation, measuring the quantity of goods and services it will actually buy. Real income falls when prices rise faster than nominal income."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.2",
+          "topic": "Inflation",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+          "termAsWritten": "Real Income",
+          "origin": "authored",
+          "definitionHtml": "Income adjusted for inflation, measuring the quantity of goods and services it will actually buy. Real income falls when prices rise faster than nominal income."
         }
       ]
     },
@@ -8015,13 +10263,17 @@
       "key": "returns to scale",
       "letter": "R",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "origin": [
+        "authored",
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -8033,6 +10285,17 @@
           "termAsWritten": "Returns to Scale",
           "origin": "chip",
           "definitionHtml": "a concept that describes how output changes if all inputs are increased proportionally. This can only occur in the long run, when all factors of production are variable."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-3",
+          "groupLabel": "Theme 3",
+          "spec": "3.3.2",
+          "topic": "Costs",
+          "notesUrl": "/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+          "termAsWritten": "Returns to Scale",
+          "origin": "authored",
+          "definitionHtml": "How output responds when <strong>all</strong> factors of production are increased together in the long run. Returns are increasing, constant or decreasing as output rises by more than, the same as, or less than the inputs."
         }
       ]
     },
@@ -8152,6 +10415,33 @@
           "termAsWritten": "Seasonal Unemployment",
           "origin": "chip",
           "definitionHtml": "Caused by fluctuations in demand for certain types of labour at different times of the year. For example, a ski instructor may be unemployed during the summer months when there is no demand for skiing lessons."
+        }
+      ]
+    },
+    {
+      "id": "seasonally-adjusted-figures",
+      "term": "Seasonally Adjusted Figures",
+      "key": "seasonally adjusted figures",
+      "letter": "S",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "",
+          "topic": "",
+          "notesUrl": "",
+          "termAsWritten": "Seasonally Adjusted Figures",
+          "origin": "authored",
+          "definitionHtml": "Data from which the regular within-year pattern has been removed, so that the underlying trend can be seen. Retail sales are seasonally adjusted to stop the December peak being read as growth."
         }
       ]
     },
@@ -8788,6 +11078,45 @@
       ]
     },
     {
+      "id": "subsidy",
+      "term": "Subsidy",
+      "key": "subsidy",
+      "letter": "S",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.3.3",
+          "topic": "The Determinants of the Supply of Goods and Services",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html",
+          "termAsWritten": "Subsidy",
+          "origin": "authored",
+          "definitionHtml": "A payment from government to producers that lowers their costs, shifting supply to the right so that output rises and price falls. It is used to encourage goods with positive externalities."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.2.9",
+          "topic": "Indirect taxes and subsidies",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+          "termAsWritten": "Subsidy",
+          "origin": "authored",
+          "definitionHtml": "A payment from government to producers that lowers their costs, shifting supply to the right so that output rises and price falls. It is used to encourage goods with positive externalities."
+        }
+      ]
+    },
+    {
       "id": "sunk-costs",
       "term": "Sunk costs",
       "key": "sunk costs",
@@ -8989,6 +11318,45 @@
       ]
     },
     {
+      "id": "sustainable-development",
+      "term": "Sustainable Development",
+      "key": "sustainable development",
+      "letter": "S",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.5",
+          "topic": "Economic Growth and Development",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+          "termAsWritten": "Sustainable Development",
+          "origin": "authored",
+          "definitionHtml": "Development that meets the needs of the present without reducing the ability of future generations to meet their own needs, by not depleting the natural capital growth depends on."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.3.3",
+          "topic": "Strategies Influencing Growth and Development",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
+          "termAsWritten": "Sustainable Development",
+          "origin": "authored",
+          "definitionHtml": "Development that meets the needs of the present without reducing the ability of future generations to meet their own needs, by not depleting the natural capital growth depends on."
+        }
+      ]
+    },
+    {
       "id": "systemic-risk",
       "term": "Systemic risk",
       "key": "systemic risk",
@@ -9012,6 +11380,72 @@
           "termAsWritten": "Systemic risk",
           "origin": "chip",
           "definitionHtml": "The risk that the failure of one financial institution triggers the failure of others and a wider financial crisis."
+        }
+      ]
+    },
+    {
+      "id": "tariff",
+      "term": "Tariff",
+      "key": "tariff",
+      "letter": "T",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.2",
+          "topic": "Trade",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+          "termAsWritten": "Tariff",
+          "origin": "authored",
+          "definitionHtml": "A tax on imported goods, which raises their price to domestic consumers, reduces the quantity imported and raises revenue for the government."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.6",
+          "topic": "Restrictions on Free Trade",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html",
+          "termAsWritten": "Tariff",
+          "origin": "authored",
+          "definitionHtml": "A tax on imported goods, which raises their price to domestic consumers, reduces the quantity imported and raises revenue for the government."
+        }
+      ]
+    },
+    {
+      "id": "terms-of-trade",
+      "term": "Terms of Trade",
+      "key": "terms of trade",
+      "letter": "T",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.4",
+          "topic": "Terms of Trade",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html",
+          "termAsWritten": "Terms of Trade",
+          "origin": "authored",
+          "definitionHtml": "The ratio of a country's export prices to its import prices, expressed as an index. An improvement means each unit of exports buys more imports."
         }
       ]
     },
@@ -9291,6 +11725,45 @@
       ]
     },
     {
+      "id": "trading-bloc",
+      "term": "Trading Bloc",
+      "key": "trading bloc",
+      "letter": "T",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.6.2",
+          "topic": "Trade",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+          "termAsWritten": "Trading Bloc",
+          "origin": "authored",
+          "definitionHtml": "A group of countries that agree to reduce or remove trade barriers between themselves, ranging from a free trade area through a customs union to a single market."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.1.5",
+          "topic": "Trading Blocs and the World Trade Organisation",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html",
+          "termAsWritten": "Trading Bloc",
+          "origin": "authored",
+          "definitionHtml": "A group of countries that agree to reduce or remove trade barriers between themselves, ranging from a free trade area through a customs union to a single market."
+        }
+      ]
+    },
+    {
       "id": "traditional-economic-theory",
       "term": "Traditional economic theory",
       "key": "traditional economic theory",
@@ -9491,6 +11964,45 @@
       ]
     },
     {
+      "id": "unemployment-rate",
+      "term": "Unemployment Rate",
+      "key": "unemployment rate",
+      "letter": "U",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "groupLabel": "Macroeconomics",
+          "spec": "2.1.2",
+          "topic": "Macroeconomic Indicators",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+          "termAsWritten": "Unemployment Rate",
+          "origin": "authored",
+          "definitionHtml": "The number of people unemployed as a percentage of the <strong>labour force</strong> - that is, of those in work plus those unemployed and actively seeking work."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.1.3",
+          "topic": "Employment and Unemployment",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
+          "termAsWritten": "Unemployment Rate",
+          "origin": "authored",
+          "definitionHtml": "The number of people unemployed as a percentage of the <strong>labour force</strong> - that is, of those in work plus those unemployed and actively seeking work."
+        }
+      ]
+    },
+    {
       "id": "utility",
       "term": "Utility",
       "key": "utility",
@@ -9660,6 +12172,45 @@
           "termAsWritten": "Wealth inequality",
           "origin": "chip",
           "definitionHtml": "is the unequal distribution of <strong>assets</strong>, such as property, shares, and savings. Wealth is a <strong>stock</strong> of monetary value at a point in time."
+        }
+      ]
+    },
+    {
+      "id": "welfare-loss",
+      "term": "Welfare Loss",
+      "key": "welfare loss",
+      "letter": "W",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "origin": [
+        "authored"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.8.4",
+          "topic": "Positive and Negative Externalities in Consumption and Production",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+          "termAsWritten": "Welfare Loss",
+          "origin": "authored",
+          "definitionHtml": "The loss of social welfare that arises when output is not at the socially optimal level, shown as the shaded triangle between the marginal social cost and marginal social benefit curves. Also called <strong>deadweight loss</strong>."
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-1",
+          "groupLabel": "Theme 1",
+          "spec": "1.3.2",
+          "topic": "Externalities",
+          "notesUrl": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+          "termAsWritten": "Welfare Loss",
+          "origin": "authored",
+          "definitionHtml": "The loss of social welfare that arises when output is not at the socially optimal level, shown as the shaded triangle between the marginal social cost and marginal social benefit curves. Also called <strong>deadweight loss</strong>."
         }
       ]
     },
@@ -10051,7 +12602,8 @@
       "latex": "\\text{Index Number} = \\frac{\\text{Value in Current Year}}{\\text{Value in Base Year}} \\times 100",
       "label": "Index Number",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "outsideFormulaBox": false,
       "sources": [
@@ -10061,6 +12613,13 @@
           "spec": "2.1.3",
           "topic": "Uses of Index Numbers",
           "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "spec": "2.1.2",
+          "topic": "Inflation",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
         }
       ]
     },
@@ -10097,6 +12656,32 @@
           "spec": "1.4.1",
           "topic": "Production & Productivity",
           "notesUrl": "/revision-notes/aqa-a2-micro/1-4-1-production-and-productivity.html"
+        }
+      ]
+    },
+    {
+      "id": "f-mean",
+      "latex": "\\text{Mean} = \\frac{\\text{Sum of the Values}}{\\text{Number of Values}}",
+      "label": "Mean",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.3",
+          "topic": "Uses of Index Numbers",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "spec": "2.1.2",
+          "topic": "Inflation",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
         }
       ]
     },
@@ -10218,6 +12803,32 @@
           "spec": "2.1.4",
           "topic": "Uses of National Income Data",
           "notesUrl": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
+        }
+      ]
+    },
+    {
+      "id": "f-converting-to-real-terms",
+      "latex": "\\text{Real Value} = \\text{Nominal Value} \\times \\frac{\\text{Base Year Index}}{\\text{Current Year Index}}",
+      "label": "Converting to Real Terms",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.2",
+          "topic": "Macroeconomic Indicators",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+        },
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "spec": "2.1.1",
+          "topic": "Economic Growth",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
         }
       ]
     },
@@ -10368,6 +12979,24 @@
           "spec": "2.1.3",
           "topic": "Uses of Index Numbers",
           "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
+        }
+      ]
+    },
+    {
+      "id": "f-percentage-change",
+      "latex": "\\text{\\% Change} = \\frac{\\text{New Value} - \\text{Old Value}}{\\text{Old Value}} \\times 100",
+      "label": "Percentage Change",
+      "boards": [
+        "edexcel-a"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "spec": "2.1.2",
+          "topic": "Inflation",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
         }
       ]
     },

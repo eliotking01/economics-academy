@@ -1,7 +1,10 @@
 # Glossary gap report
 
-For your manual review. **Nothing in here has been acted on**, and no revision
-notes page has been edited — every item is something for you to decide or write.
+**Superseded in part, 4 August 2026.** On instruction, the gaps below have been
+filled by authored definitions in `glossary-data/authored.json` — 74 terms and
+4 formulae, listed for review in `authored-review.md`. No revision notes page
+was edited to do it. This file is kept as the record of what was missing and
+why, with two corrections marked **CORRECTION** below.
 
 Three companion files:
 
@@ -53,7 +56,7 @@ a decision that it is out of scope.
 
 | Concept | Edexcel A | AQA | Note |
 | --- | --- | --- | --- |
-| **hysteresis** | absent | absent | Named by both specs, in neither set of notes. The clearest single gap on the site |
+| **hysteresis** | absent | absent | **CORRECTION:** it is named by *neither* specification. `grep -ic hysteresis` returns 0 against both PDFs in full. The original claim came from my hand-sifted vocabulary list, not from the spec text. **Not added** — no specification asks for it |
 | **terms of trade** | defined | **absent** | The Edexcel notes have a whole page (4.1.4). AQA macro has `2-6-2-trade.html` but never mentions the terms of trade |
 | **cost–benefit analysis** | in notes | **absent** | One Edexcel page mentions it; no AQA page does |
 | **creative destruction** | **absent** | in notes | The reverse: AQA has it, Edexcel does not |
@@ -68,7 +71,19 @@ The three economic-systems entries are worth one decision rather than three: AQA
 A-level does not examine economic systems the way Edexcel Theme 1 does, so their
 absence from the AQA notes may be entirely correct.
 
-### A2. Quantitative skills with no formula in the glossary
+**CORRECTION and outcome.** Each of the ten was re-checked against that board's
+own specification text before anything was written. Only **private good** turned
+out to be required and missing — Edexcel 1.3.3, "Distinction between public and
+private goods" — and it was added. The other nine appear nowhere in the
+specification of the board that lacks them, and were deliberately **not** added:
+`command economy`, `free market economy` and `mixed economy` are absent from the
+AQA A-level content (confirming the hunch above); `terms of trade` and
+`cost-benefit analysis` are likewise absent from AQA; `creative destruction` and
+`quasi-public goods` are absent from Edexcel; `hysteresis` from both; and
+`complementary goods` was a wording artefact, since the Edexcel notes discuss
+complements throughout.
+
+### A2. Quantitative skills with no formula in the glossary — **now filled**
 
 Both specs require these calculations. The glossary can only show a formula the
 notes already state, so each of these needs a `formula-box` adding to a notes
@@ -86,14 +101,24 @@ page before it can appear.
 | rate of change vs level of a variable | absent | *(Edexcel QS10 only)* |
 | seasonally adjusted figures | absent | *(Edexcel QS12 only)* |
 
-**Percentage change is the notable one.** It is QS2 on both specs, it is used
+**Outcome.** Percentage change and index number were recovered from the notes
+once the two unescaped `%` characters were fixed (G3). Four more were written:
+the percentage-change formula for Edexcel, `Mean`, `Converting to Real Terms`,
+and `Index number` for Edexcel. Four concepts that no page covers at all —
+`Percentage Point Change`, `Quantiles`, `Seasonally Adjusted Figures` and
+`Rate of Change` — ship as definitions with **no source link**, and say so on
+the page, rather than pointing a student at a page that does not cover them.
+`ratios and fractions` was not added: it is a mathematical skill rather than an
+economics term.
+
+**Percentage change was the notable one.** It is QS2 on both specs, it is used
 throughout the notes, and no page states it as a formula. Edexcel's QS10–12 —
 rate of change against level, composite indicators, seasonally adjusted figures —
 are Edexcel-only and only composite indicators is covered.
 
 Cost, revenue, profit, elasticity and index numbers are all fully covered.
 
-### A3. In the notes but never defined — 70 Edexcel, 64 AQA
+### A3. In the notes but never defined — 70 Edexcel, 64 AQA — **now filled**
 
 The largest category and the cheapest to fix: the notes teach these, but no
 `<span class="key-definition">` chip names them, so the extractor cannot see
@@ -101,8 +126,16 @@ them. Adding a chip to the page that already explains the concept is a
 formatting change, not a wording change, and re-running the extractor picks it
 up with no further work.
 
-Full lists are in `spec-checklist.md`. The ones I would do first, because they
-are core vocabulary a student would expect a glossary to have:
+**All of these now have a definition**, written for the glossary and listed in
+`authored-review.md`. Eight of the reported gaps were false — the term was
+already defined under a fuller name, such as `Marginal Propensity to Consume
+(MPC)` and `Gross Domestic Product (GDP)` — and three more were duplicates of an
+existing entry under different wording (`diminishing marginal utility` of
+`The Law of Diminishing Marginal Utility`, `law of diminishing returns` of
+`Diminishing Marginal Returns`, `supply-side policy` of `Supply-side policies`).
+
+Full lists are in `spec-checklist.md`. The ones prioritised, because they are
+core vocabulary a student would expect a glossary to have:
 
 > `perfect competition`, `oligopoly`, `monopsony`, `natural monopoly`,
 > `barriers to entry`, `contestable market`, `price discrimination`,

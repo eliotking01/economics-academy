@@ -353,6 +353,13 @@
   text-decoration: underline;
 }
 
+/* Shown instead of a source link on the handful of entries whose concept the
+ * specification requires but no notes page covers yet. */
+.glossary-page .gl-nopage {
+  font-style: italic;
+  color: #8a6d00;
+}
+
 .glossary-page .gl-group {
   display: inline-block;
   padding: 0.15em 0.55em;

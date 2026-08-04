@@ -232,7 +232,7 @@ def validate(data, groups):
         for s in t["sources"]:
             if s["board"] not in BOARDS:
                 errs.append(f"{where}: unknown board '{s['board']}'")
-            if not (ROOT / s["notesUrl"].lstrip("/")).is_file():
+            if s["notesUrl"] and not (ROOT / s["notesUrl"].lstrip("/")).is_file():
                 errs.append(f"{where}: notesUrl does not exist - {s['notesUrl']}")
             if s["group"] not in groups:
                 errs.append(f"{where}: unknown group '{s['group']}'")
@@ -399,6 +399,20 @@ def source_for(term, board):
     return next(s for s in term["sources"] if s["board"] == board)
 
 
+def source_link(s):
+    """The 'where this is taught' line.
+
+    An authored entry for a concept no page covers yet has no notesUrl, and
+    says so rather than linking somewhere that does not cover it.
+    """
+    group = f'<span class="gl-group">{e(s["groupLabel"])}</span>'
+    if not s.get("notesUrl"):
+        return (group + '\n                    <span class="gl-nopage"'
+                '>Not yet covered in the revision notes</span>')
+    return (group + f'\n                    <a href="{e(s["notesUrl"])}"'
+            f'>{e(s["spec"])} {e(s["topic"])}</a>')
+
+
 def entry_html(term, board, inline_map):
     s = source_for(term, board)
     groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
@@ -415,14 +429,12 @@ def entry_html(term, board, inline_map):
                 id="{e(term['id'])}"
                 data-term="{e(term['term'].lower())}"
                 data-groups="{e(' '.join(groups))}"
+                data-origin="{e(s.get('origin', 'notes'))}"
               >
                 <dt class="gl-term">{e(term['term'])}</dt>
                 <dd class="gl-def">
                   <p class="gl-text">{render_inline_maths(s['definitionHtml'], inline_map)}</p>
-                  <p class="gl-source">
-                    <span class="gl-group">{e(s['groupLabel'])}</span>
-                    <a href="{e(s['notesUrl'])}">{e(s['spec'])} {e(s['topic'])}</a>
-                  </p>{also}
+                  <p class="gl-source">{source_link(s)}</p>{also}
                 </dd>
               </div>"""
 

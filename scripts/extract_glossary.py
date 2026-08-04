@@ -51,6 +51,7 @@ NOTES = ROOT / "revision-notes"
 DATA = ROOT / "glossary-data"
 TAXONOMY = ROOT / "past-paper-questions-data" / "taxonomy.json"
 CURATION = DATA / "curation.json"
+AUTHORED = DATA / "authored.json"
 TERMS_OUT = DATA / "terms.json"
 INVENTORY = ROOT / "_working" / "glossary" / "inventory.md"
 
@@ -439,6 +440,7 @@ def formulae_on(root: Node, ctx):
                 "latex": latex,
                 "key": squash(re.sub(r"\s+", " ", latex)),
                 "label": heading,
+                "origin": "notes",
                 # Gotcha 7: two display formulae live in <p><strong>, outside
                 # any formula-box. Recorded so the gap report can show them.
                 "inFormulaBox": "formula-box" in (node.parent.cls() if node.parent else "")
@@ -449,6 +451,92 @@ def formulae_on(root: Node, ctx):
 
 
 # ---------------------------------------------------------------- merge
+
+def load_authored(page_ctx, problems):
+    """The authored layer: definitions written for the glossary, not lifted.
+
+    Everything else in this file reproduces the notes word for word. These do
+    not - they cover concepts the notes teach without ever defining, and the
+    specification requires. They are kept in their own file, tagged
+    origin="authored" all the way through to the page, and excluded from the
+    verbatim check in verify_glossary.py, because there is nothing in the notes
+    for them to match.
+
+    Each entry names the notes page that teaches the concept, and borrows that
+    page's real board, unit and topic metadata, so an authored entry links and
+    files exactly like an extracted one. The page must exist and must belong to
+    the board claimed, or the build fails.
+
+    The intent is that this file shrinks: once a definition is added to its
+    notes page as a key-definition chip, the extractor picks it up and the
+    entry here becomes a duplicate, which is reported as an error.
+    """
+    if not AUTHORED.is_file():
+        return [], []
+    data = json.loads(AUTHORED.read_text(encoding="utf-8"))
+    terms, formulae = [], []
+
+    # group slug -> a representative context, for entries with no page to cite
+    by_group = {}
+    for ctx in page_ctx.values():
+        by_group.setdefault((ctx["board"], ctx["group"]), ctx)
+
+    for entry in data.get("terms", []):
+        for board in entry["boards"]:
+            url = entry.get("notes", {}).get(board)
+            if url:
+                ctx = page_ctx.get(url)
+                if ctx is None:
+                    problems.append(f"authored '{entry['term']}': {url} is not a "
+                                    f"topic page")
+                    continue
+                if ctx["board"] != board:
+                    problems.append(f"authored '{entry['term']}': {url} is a "
+                                    f"{ctx['board']} page, not {board}")
+                    continue
+            else:
+                # No page teaches this yet - four quantitative-skills concepts
+                # are in both specifications and on no page. Rather than link a
+                # student to a page that does not cover it, the entry ships with
+                # no source link and says so.
+                group = entry.get("group", {}).get(board)
+                base = by_group.get((board, group))
+                if base is None:
+                    problems.append(f"authored '{entry['term']}': needs either a "
+                                    f"notes page or a valid group for {board}")
+                    continue
+                ctx = {**base, "spec": "", "topic": "", "notesUrl": "",
+                       "sourceFile": "", "h1": ""}
+            terms.append({
+                "term": entry["term"],
+                "key": canonical_key(entry["term"]),
+                "definitionHtml": entry["definition"],
+                "definitionText": re.sub(r"<[^>]+>", "", entry["definition"]),
+                "heading": "",
+                "origin": "authored",
+                "fromHeading": False,
+                "chipHasColon": True,
+                **ctx,
+            })
+
+    for entry in data.get("formulae", []):
+        for board in entry["boards"]:
+            url = entry["notes"].get(board)
+            ctx = page_ctx.get(url) if url else None
+            if ctx is None or ctx["board"] != board:
+                problems.append(f"authored formula '{entry['label']}': bad notes "
+                                f"page for {board} - {url}")
+                continue
+            formulae.append({
+                "latex": entry["latex"],
+                "key": squash(entry["latex"]),
+                "label": entry["label"],
+                "inFormulaBox": True,
+                "origin": "authored",
+                **ctx,
+            })
+    return terms, formulae
+
 
 def merge(records):
     """Group per-page records into one entry per key, keeping every source."""
@@ -477,6 +565,7 @@ def build():
     boards = board_index()
 
     term_records, formula_records, table_candidates = [], [], []
+    page_ctx = {}
     skipped_all, inline_count, page_count = [], 0, 0
 
     for notes_dir in sorted(boards):
@@ -492,6 +581,7 @@ def build():
                 continue
             body = next((n for n in walk(root)
                          if "notes-container" in n.cls()), root)
+            page_ctx[ctx["notesUrl"]] = ctx
             kept, skipped = chips_on(body, ctx, stop, problems)
             term_records.extend(kept)
             skipped_all.extend((ctx["sourceFile"], why, t)
@@ -502,6 +592,17 @@ def build():
 
     term_records.extend(
         harvest_tables(table_candidates, curation.get("tables", []), stop))
+
+    authored, authored_formulae = load_authored(page_ctx, problems)
+    extracted_keys = {(r["key"], r["board"]) for r in term_records}
+    for r in authored:
+        if (r["key"], r["board"]) in extracted_keys:
+            problems.append(
+                f"authored.json defines '{r['term']}' for {r['board']}, but the "
+                f"notes now define it too. Remove it from authored.json - the "
+                f"notes are the better source")
+    term_records.extend(authored)
+    formula_records.extend(authored_formulae)
 
     # Apply alias merges before grouping, so a curated alias genuinely unifies.
     for r in term_records:
@@ -603,6 +704,8 @@ def build():
 
     stats = {
         "pages": page_count,
+        "authoredTerms": len({r["key"] for r in authored}),
+        "authoredFormulae": len({f["key"] for f in authored_formulae}),
         "termsExtracted": len(term_records),
         "uniqueTerms": len(terms),
         "termsOnBothBoards": sum(1 for t in terms if len(t["boards"]) > 1),
@@ -837,6 +940,70 @@ def write_review(terms, formulae, tables, curation):
         "\n".join(L) + "\n", encoding="utf-8")
 
 
+def write_authored_review(terms, formulae):
+    """Every authored definition, for review of the economics.
+
+    These are the only entries on the site that are not the notes' own words,
+    so they are the only ones whose economics needs checking by a person.
+    """
+    # One row per authored SOURCE, not per term. A term can be authored for one
+    # board and lifted from a chip on the other - only the authored half needs
+    # its economics checked, and showing the term's first source would display
+    # the chip instead.
+    auth = [(t, s) for t in terms for s in t["sources"]
+            if s.get("origin") == "authored"]
+    af = [f for f in formulae if any(s.get("origin") == "authored"
+                                     for s in f["sources"])]
+    L = ["# Authored definitions — for review",
+         "",
+         "Generated by `scripts/extract_glossary.py` from "
+         "`glossary-data/authored.json`.",
+         "",
+         f"**{len(auth)} definitions and {len(af)} formulae written for the "
+         "glossary.** Everything else on the site is the revision notes' own "
+         "wording, lifted verbatim. These are not: they cover concepts the "
+         "notes teach without defining, or that a specification requires and no "
+         "page covers.",
+         "",
+         "**This is the list whose economics needs checking.** Correct anything "
+         "wrong in `glossary-data/authored.json` and re-run the extractor and "
+         "the builder.",
+         "",
+         "Better still, move one into its notes page as a `key-definition` "
+         "chip: the extractor then picks it up, the entry here becomes a "
+         "duplicate, and the build tells you to delete it. That is the intended "
+         "direction of travel.",
+         "",
+         "`B` = the board this wording is for. Entries marked **no page** are required by "
+         "a specification but covered by no notes page, so they ship without a "
+         "source link and say so on the page.",
+         "",
+         "| # | Term | B | Definition | Where it links |",
+         "| ---: | --- | --- | --- | --- |"]
+    for i, (t, src) in enumerate(
+            sorted(auth, key=lambda x: (x[0]["term"].lower(), x[1]["board"])), 1):
+        b = "E" if src["board"] == "edexcel-a" else "A"
+        where = (f"{src['groupLabel']} {src['spec']}" if src["notesUrl"]
+                 else "**no page**")
+        other = [o for o in t["sources"] if o.get("origin") != "authored"]
+        if other:
+            where += (" · the other board defines this itself, so only this "
+                      "wording is authored")
+        d = src["definitionHtml"].replace("|", "\\|")
+        L.append(f"| **W{i}** | {t['term']} | {b} | {d} | {where} |")
+
+    if af:
+        L += ["", "## Authored formulae", "",
+              "| # | Label | LaTeX | B |", "| ---: | --- | --- | --- |"]
+        for i, f in enumerate(sorted(af, key=lambda x: x["label"].lower()), 1):
+            b = "".join("E" if s == "edexcel-a" else "A" for s in f["boards"])
+            L.append(f"| **F{i}** | {f['label']} | "
+                     f"`{f['latex'].replace('|', chr(92) + '|')}` | {b} |")
+
+    (INVENTORY.parent / "authored-review.md").write_text(
+        "\n".join(L) + "\n", encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true",
@@ -868,6 +1035,7 @@ def main():
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     write_inventory(terms, formulae, stats, skipped)
     write_review(terms, formulae, tables, curation)
+    write_authored_review(terms, formulae)
     print(f"\nwrote {TERMS_OUT.relative_to(ROOT)}")
     print(f"wrote {INVENTORY.relative_to(ROOT)}")
     return 1 if problems else 0

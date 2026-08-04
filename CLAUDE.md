@@ -190,8 +190,8 @@ Every definition and formula a student needs, one page per exam board, at
 `/revision-notes/glossary/{edexcel-a,aqa}/` with a board selector at
 `/revision-notes/glossary/`.
 
-**The definitions are the notes' own words.** Nothing here is written, rewritten
-or paraphrased: every entry is lifted verbatim from the
+**The definitions are the notes' own words, with one declared exception.** Every
+entry except those in `glossary-data/authored.json` is lifted verbatim from the
 `<span class="key-definition">` chip and the paragraph that follows it on a topic
 page, and `scripts/verify_glossary.py` re-reads the notes and fails if a shipped
 definition no longer appears in its source page. A term that reads badly is fixed
@@ -202,6 +202,14 @@ definition no longer appears in its source page. A term that reads badly is fixe
 - `glossary-data/curation.json` — hand-written judgement: the non-term stop-list,
   display casing, alias merges, approved table harvests. Kept separate so
   re-extraction cannot destroy it, exactly as `tags.json` is for the past papers.
+- `glossary-data/authored.json` — the **one exception** to the rule above.
+  Definitions written for the glossary, covering concepts the notes teach without
+  ever defining and that a specification requires. Tagged `origin="authored"`
+  through to the page and exempt from the verbatim check, because there is
+  nothing in the notes for them to match. **The file is meant to shrink:** move a
+  definition into its notes page as a chip and the extractor picks it up, at
+  which point the build errors until the authored copy is deleted. Reviewed in
+  `_working/glossary/authored-review.md`.
 - `revision-notes/glossary/**/index.html` — **generated** by
   `scripts/build_glossary.py`. Do not hand-edit; re-run it. It runs Prettier over
   its own HTML, so generating twice is byte-identical.
