@@ -14,8 +14,8 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | termsWithVariantDefinitions | 31 |
 | termsNeedingReview | 79 |
 | displayFormulae | 72 |
-| uniqueFormulae | 29 |
-| formulaeExcludedByCuration | 20 |
+| uniqueFormulae | 31 |
+| formulaeExcludedByCuration | 18 |
 | tableCandidates | 9 |
 | tablesApproved | 6 |
 | termsFromTables | 24 |
@@ -326,7 +326,9 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **B26** | Union Density | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes |
 | **B27** | Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes |
 | **B28** | Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes |
-| **B29** | The Multiplier | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes |
+| **B29** | Real GDP Growth | `\text{\% Change in Real GDP} = \text{\% Change in Nominal GDP} - \text{Inflation Rate}` | A | yes |
+| **B30** | Percentage Change | `\text{\% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes |
+| **B31** | The Multiplier | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes |
 
 ## Chips deliberately not extracted
 

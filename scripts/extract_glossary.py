@@ -36,6 +36,8 @@ for the AQA PDF extractor and is not used here.
 from __future__ import annotations
 
 import argparse
+import collections
+import hashlib
 import html
 import json
 import pathlib
@@ -580,13 +582,21 @@ def build():
             } for s in sorted(srcs, key=lambda s: (s["board"], s["spec"]))],
         })
 
-    # Formula ids are derived from a heading and collide readily; make unique.
-    used = {}
+    # Formula ids come from the section heading, and one heading often carries
+    # several formulae, so they collide. Disambiguate with a short hash OF THE
+    # FORMULA, never with a positional counter.
+    #
+    # A counter was the first attempt and it silently mislabelled two formulae.
+    # Records are sorted by their LaTeX, so escaping a stray % - a one-character
+    # correction on a notes page - moved one formula past another, the -2 suffix
+    # landed on the wrong one, and the curated labels for "Real GDP Growth" and
+    # "Real GDP per Capita" swapped. Hashing the LaTeX makes an id depend only
+    # on the formula it names, so an unrelated edit cannot move it.
+    base_count = collections.Counter(f["id"] for f in formulae)
     for f in formulae:
-        base = f["id"]
-        used[base] = used.get(base, 0) + 1
-        if used[base] > 1:
-            f["id"] = f"{base}-{used[base]}"
+        if base_count[f["id"]] > 1:
+            digest = hashlib.sha1(f["latex"].encode("utf-8")).hexdigest()[:4]
+            f["id"] = f"{f['id']}-{digest}"
     for f in formulae:
         f["label"] = f_label.get(f["id"], f["label"])
     formulae = [f for f in formulae if f["id"] not in f_exclude]

@@ -217,6 +217,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `js/components/glossary-filter.js` | Created |
 | `revision-notes/glossary/{,edexcel-a/,aqa/}index.html` | **Generated** |
 | `sitemap.xml` | Modified — new Glossary block, 3 URLs |
+| `revision-notes/aqa-a2-macro/2-1-{2,3}-*.html` | Modified — G3, three `%`→`\%`, no wording change |
 | `templates/header.html` | Modified — P1, one `<li>` |
 | `revision-notes/index.html` | Modified — P2a, col-4→col-3 ×3 plus a fourth button |
 | `revision-notes/{micro,macro}economics-diagrams.html` | Modified — P3c, one button in the existing `.notes-cta` |
@@ -250,5 +251,4 @@ Everything else is built and verified. Remaining QA that needs a human:
 - print preview on both board pages
 - the JSON-LD through Google's Rich Results test
 
-Still parked: the two `%` formulae (G3). One character on each of two notes
-lines brings back percentage change and real GDP growth.
+G3 is fixed: the two `%` formulae now render, and AQA carries 29 formulae.

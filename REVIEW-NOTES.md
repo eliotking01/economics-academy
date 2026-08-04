@@ -1501,7 +1501,7 @@ use the documented component.
 **Fix:** either add the rule the documentation already promises, or amend the
 documentation. A decision either way, not an oversight.
 
-## G3 — two formulae write `%` unescaped, so they do not render
+## G3 — two formulae wrote `%` unescaped, so they did not render — **FIXED**
 
 Found when the glossary generator pre-rendered every formula through KaTeX with
 `throwOnError` on. Two fail, and they fail for a reason that applies equally to
@@ -1524,6 +1524,13 @@ changes. Then remove `f-economic-growth-indicators` and
 `f-interpreting-index-numbers-2` from `formulaExclude` in
 `glossary-data/curation.json` and re-run the generator.
 
-Worth noting what this costs while it stands: **percentage change is QS2 on both
-specifications** and, with these two parked, no formula for it appears anywhere
-in the glossary.
+**Fixed on 2026-08-04, on instruction.** Three `%` became `\%` across those two
+lines; no wording changed. Both formulae now render on their notes pages and in
+the AQA glossary, which goes from 27 formulae to 29. Percentage change is QS2 on
+both specifications, so it was the more valuable of the two.
+
+One thing this uncovered downstream: glossary formula ids were the section
+heading slug plus a positional counter, and formulae are sorted by their LaTeX.
+Adding a backslash moved one formula past another, the counter landed on the
+wrong one, and two curated labels silently swapped. Ids are now the heading slug
+plus a short hash of the LaTeX, so an id depends only on the formula it names.

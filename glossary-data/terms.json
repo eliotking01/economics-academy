@@ -9,8 +9,8 @@
     "termsWithVariantDefinitions": 31,
     "termsNeedingReview": 79,
     "displayFormulae": 72,
-    "uniqueFormulae": 29,
-    "formulaeExcludedByCuration": 20,
+    "uniqueFormulae": 31,
+    "formulaeExcludedByCuration": 18,
     "tableCandidates": 9,
     "tablesApproved": 6,
     "termsFromTables": 24,
@@ -9731,7 +9731,7 @@
       ]
     },
     {
-      "id": "f-calculating-the-multiplier-2",
+      "id": "f-calculating-the-multiplier-6354",
       "latex": "M = \\frac{1}{1 - MPC}",
       "label": "The Multiplier, from the MPC",
       "boards": [
@@ -9757,7 +9757,7 @@
       ]
     },
     {
-      "id": "f-calculating-the-multiplier-3",
+      "id": "f-calculating-the-multiplier-67cf",
       "latex": "M = \\frac{1}{MPS + MPT + MPM}",
       "label": "The Multiplier, from the withdrawals",
       "boards": [
@@ -9783,7 +9783,7 @@
       ]
     },
     {
-      "id": "f-calculating-the-multiplier-4",
+      "id": "f-calculating-the-multiplier-5f62",
       "latex": "M = \\frac{1}{MPW}",
       "label": "The Multiplier, from the MPW",
       "boards": [
@@ -9897,7 +9897,7 @@
       ]
     },
     {
-      "id": "f-inflation-indicators",
+      "id": "f-inflation-indicators-51c0",
       "latex": "\\text{CPI} = \\frac{\\text{Cost of Basket in Current Year}}{\\text{Cost of Basket in Base Year}} \\times 100",
       "label": "Consumer Prices Index (CPI)",
       "boards": [
@@ -9915,7 +9915,7 @@
       ]
     },
     {
-      "id": "f-how-it-s-calculated",
+      "id": "f-how-it-s-calculated-b6a4",
       "latex": "\\text{CPI} = \\frac{\\text{Price of basket in current year}} {\\text{Price of basket in base year}} \\times 100",
       "label": "Consumer Prices Index (CPI)",
       "boards": [
@@ -9933,7 +9933,7 @@
       ]
     },
     {
-      "id": "f-unemployment-indicators",
+      "id": "f-unemployment-indicators-2bb1",
       "latex": "\\text{Employment Rate} = \\frac{\\text{Number of Employed People}}{\\text{Working-Age Population}} \\times 100",
       "label": "Employment Rate",
       "boards": [
@@ -9951,7 +9951,7 @@
       ]
     },
     {
-      "id": "f-the-government-budget-and-national-debt",
+      "id": "f-the-government-budget-and-national-debt-8c71",
       "latex": "\\text{Fiscal Deficit} : \\text{Government Spending} > \\text{Tax Revenue}",
       "label": "Fiscal Deficit",
       "boards": [
@@ -10021,7 +10021,7 @@
       ]
     },
     {
-      "id": "f-the-government-budget-and-national-debt-2",
+      "id": "f-the-government-budget-and-national-debt-9950",
       "latex": "\\text{Government Budget} = \\text{Taxation Revenue} - \\text{Government Spending}",
       "label": "Government Budget",
       "boards": [
@@ -10153,7 +10153,7 @@
       ]
     },
     {
-      "id": "f-definition-and-calculation",
+      "id": "f-definition-and-calculation-ce0b",
       "latex": "\\text{PES} = \\frac{\\%\\Delta Q_S}{\\%\\Delta P}",
       "label": "Price Elasticity of Supply (PES)",
       "boards": [
@@ -10197,7 +10197,7 @@
       ]
     },
     {
-      "id": "f-economic-growth-indicators-2",
+      "id": "f-economic-growth-indicators-6cfc",
       "latex": "\\text{Real GDP per capita} = \\frac{\\text{Real GDP}}{\\text{Population}}",
       "label": "Real GDP per Capita",
       "boards": [
@@ -10222,7 +10222,7 @@
       ]
     },
     {
-      "id": "f-definition-and-calculation-2",
+      "id": "f-definition-and-calculation-01b0",
       "latex": "\\text{Terms of Trade Index} = \\left( \\frac{\\text{Index of Average Export Prices}}{\\text{Index of Average Import Prices}} \\right) \\times 100",
       "label": "Terms of Trade Index",
       "boards": [
@@ -10240,7 +10240,7 @@
       ]
     },
     {
-      "id": "f-unemployment-indicators-2",
+      "id": "f-unemployment-indicators-49bb",
       "latex": "\\text{Unemployment Rate} = \\frac{\\text{Number of Unemployed People}}{\\text{Labour Force}} \\times 100",
       "label": "Unemployment Rate",
       "boards": [
@@ -10332,6 +10332,42 @@
           "spec": "1.2.3",
           "topic": "Price, Income and Cross Elasticities of Demand",
           "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+        }
+      ]
+    },
+    {
+      "id": "f-economic-growth-indicators-7213",
+      "latex": "\\text{\\% Change in Real GDP} = \\text{\\% Change in Nominal GDP} - \\text{Inflation Rate}",
+      "label": "Real GDP Growth",
+      "boards": [
+        "aqa"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.2",
+          "topic": "Macroeconomic Indicators",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+        }
+      ]
+    },
+    {
+      "id": "f-interpreting-index-numbers-8399",
+      "latex": "\\text{\\% Change} = \\frac{\\text{New Index} - \\text{Old Index}}{\\text{Old Index}} \\times 100",
+      "label": "Percentage Change",
+      "boards": [
+        "aqa"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.3",
+          "topic": "Uses of Index Numbers",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
         }
       ]
     },
