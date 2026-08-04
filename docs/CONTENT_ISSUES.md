@@ -30,7 +30,8 @@ Format per entry:
   below the equilibrium price, showing the resulting excess demand
   (shortage) between Qs and Qd."
 - **Confidence** — high (standard theory; the diagram itself confirms).
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-04; corrected in the
+  "fix: correct the max/min price figure captions" commit).
 
 ## 2. Minimum-price figure caption has the same copy-paste error
 
@@ -43,4 +44,5 @@ Format per entry:
   above the equilibrium price, showing the resulting excess supply
   (surplus) between Qd and Qs."
 - **Confidence** — high.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-04; corrected in the
+  "fix: correct the max/min price figure captions" commit).
