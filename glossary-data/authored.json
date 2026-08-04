@@ -302,10 +302,12 @@
     {
       "term": "Factors of Production",
       "boards": [
-        "aqa"
+        "aqa",
+        "edexcel-a"
       ],
       "definition": "The resources used to produce goods and services: <strong>land</strong>, <strong>labour</strong>, <strong>capital</strong> and <strong>enterprise</strong>.",
       "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html",
         "aqa": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html"
       }
     },

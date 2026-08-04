@@ -60,6 +60,8 @@ SITE = "https://economicsacademy.co.uk"
 # Inline markup kept inside a definition. Everything else is unwrapped to its
 # text: the glossary reproduces the notes' words, not their layout.
 KEEP = {"strong", "em", "sub", "sup", "a", "br"}
+# Allowed only inside a captured continuation list, never in a paragraph.
+LIST_KEEP = KEEP | {"li"}
 VOID = {"br", "img", "hr", "input", "meta", "link", "source", "area", "base",
         "col", "embed", "param", "track", "wbr"}
 
@@ -163,6 +165,63 @@ def html_of(nodes) -> str:
         else:
             out.append(html_of(n.children))
     return squash("".join(out))
+
+
+def following_list(node: Node):
+    """The <ul>/<ol> immediately after this block, if there is one.
+
+    A handful of definitions end on a colon because the rest of them is the
+    bulleted list that follows - "Quasi-public goods: goods that are either:".
+    Read on its own the definition is a fragment, so the list is captured with
+    it. Still the notes' own words; only the reach changes.
+    """
+    parent = node.parent
+    if parent is None:
+        return None
+    kids = [c for c in parent.children if c.tag or squash(c.text or "")]
+    try:
+        i = kids.index(node)
+    except ValueError:
+        return None
+    for nxt in kids[i + 1:]:
+        if nxt.tag in ("ul", "ol"):
+            return nxt
+        if nxt.tag is None:
+            continue
+        return None
+    return None
+
+
+def list_html(node: Node) -> str:
+    """Serialise a continuation list.
+
+    Items are joined with a space, not butted together, so that the generator's
+    output flattens to the same text as the file after Prettier has reformatted
+    it. Without the space "…fossil fuels.Under-provision…" and
+    "…fossil fuels. Under-provision…" differ, and verify_glossary reports the
+    page as out of date on every run.
+    """
+    items = [f"<li>{html_of(c.children)}</li>"
+             for c in node.children if c.tag == "li"]
+    return f"<ul>{' '.join(items)}</ul>" if items else ""
+
+
+def trim_dangling(definition: str) -> str:
+    """Drop a trailing clause that only introduces content the glossary cannot
+    show - "...with various market structures in between. The main market
+    structures include:" loses the second sentence, and nothing else.
+
+    Removal only. Nothing is added or reworded.
+    """
+    text = re.sub(r"<[^>]+>", "", definition)
+    if not text.rstrip().endswith(":"):
+        return definition
+    cut = definition.rstrip()
+    # Walk back to the end of the previous sentence.
+    m = list(re.finditer(r"\.\s", cut))
+    if not m:
+        return definition
+    return cut[: m[-1].end()].strip()
 
 
 def walk(node: Node):
@@ -321,11 +380,23 @@ def chips_on(root: Node, ctx, stop, problems):
             skipped.append(("stop-listed label", term, node))
             continue
 
+        # A definition ending on a colon is a fragment. Take the list that
+        # completes it where there is one; otherwise drop the dangling clause.
+        definition_list = ""
+        if squash(re.sub(r"<[^>]+>", "", definition)).endswith(":"):
+            lst = following_list(node)
+            if lst is not None:
+                definition_list = list_html(lst)
+            else:
+                definition = trim_dangling(definition)
+
         kept.append({
             "term": term,
             "key": canonical_key(term),
             "definitionHtml": definition,
-            "definitionText": squash("".join(text_of(c) for c in after)),
+            "definitionListHtml": definition_list,
+            # From the definition as kept, so a trim is reflected here too.
+            "definitionText": squash(re.sub(r"<[^>]+>", "", definition)),
             "heading": heading,
             "origin": "chip",
             "fromHeading": from_heading,
@@ -399,6 +470,7 @@ def harvest_tables(candidates, approved, stop):
                 "key": canonical_key(term),
                 "definitionHtml": definition,
                 "definitionText": squash(re.sub(r"<[^>]+>", "", definition)),
+                "definitionListHtml": "",
                 "heading": "",
                 "origin": "table",
                 "fromHeading": False,
@@ -512,6 +584,7 @@ def load_authored(page_ctx, problems):
                 "key": canonical_key(entry["term"]),
                 "definitionHtml": entry["definition"],
                 "definitionText": re.sub(r"<[^>]+>", "", entry["definition"]),
+                "definitionListHtml": "",
                 "heading": "",
                 "origin": "authored",
                 "fromHeading": False,
@@ -593,7 +666,18 @@ def build():
     term_records.extend(
         harvest_tables(table_candidates, curation.get("tables", []), stop))
 
+    # Order matters here. Aliases first, so a merge is seen; then exclusions, so
+    # a source curation has dropped is gone before anything else looks at it;
+    # only then the authored layer, whose duplicate check must not fire against
+    # a source that is no longer in play.
+    for r in term_records:
+        r["key"] = aliases.get(r["key"], r["key"])
+    term_records = [r for r in term_records
+                    if r["notesUrl"] not in exclude_src.get(r["key"], ())]
+
     authored, authored_formulae = load_authored(page_ctx, problems)
+    for r in authored:
+        r["key"] = aliases.get(r["key"], r["key"])
     extracted_keys = {(r["key"], r["board"]) for r in term_records}
     for r in authored:
         if (r["key"], r["board"]) in extracted_keys:
@@ -604,17 +688,12 @@ def build():
     term_records.extend(authored)
     formula_records.extend(authored_formulae)
 
-    # Apply alias merges before grouping, so a curated alias genuinely unifies.
-    for r in term_records:
-        r["key"] = aliases.get(r["key"], r["key"])
-
     terms = []
     for key, entry in sorted(merge(term_records).items()):
-        srcs = [s for s in entry["sources"]
-                if s["notesUrl"] not in exclude_src.get(key, ())]
-        if not srcs:
-            problems.append(f"every source for '{key}' is excluded by curation")
-            continue
+        # Exclusions were applied before the authored layer was merged in, so
+        # that an authored entry can deliberately replace an excluded chip on
+        # the same page. Filtering again here would drop it.
+        srcs = entry["sources"]
         rank = prefer_src.get(key, [])
         srcs.sort(key=lambda s: (rank.index(s["notesUrl"])
                                  if s["notesUrl"] in rank else len(rank),
@@ -628,7 +707,8 @@ def build():
             review.append("chip has no colon - confirm this is a definition")
         if len(variants) > 1:
             review.append(f"{len(variants)} different wordings across its sources")
-        if any(s["definitionText"].rstrip().endswith(":") for s in srcs):
+        if any(s["definitionText"].rstrip().endswith(":")
+               and not s.get("definitionListHtml") for s in srcs):
             review.append("definition ends in a colon - it runs on into a list")
 
         terms.append({
@@ -650,6 +730,7 @@ def build():
                 "termAsWritten": s["term"],
                 "origin": s["origin"],
                 "definitionHtml": s["definitionHtml"],
+                "definitionListHtml": s.get("definitionListHtml", ""),
             } for s in srcs],   # already ranked: curated preference, then board
         })
 

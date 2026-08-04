@@ -460,6 +460,50 @@
   border-bottom: none;
 }
 
+/* Formula Box - centred MathJax display
+ *
+ * Documented in CLAUDE.md as a component of this stylesheet, but the rule was
+ * never written: all 51 instances across 29 pages rendered as an unstyled div.
+ * Logged as G2 in REVIEW-NOTES.md and fixed here.
+ *
+ * A long formula scrolls inside its own box rather than widening the page, and
+ * the box never breaks across a printed page.
+ */
+.revision-notes-content .formula-box {
+  margin: 1.5em 0;
+  padding: 1.2em 1.4em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--secondary-blue);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* The box may hold a label, the formula and a gloss, so its paragraphs are
+ * spaced rather than run together. */
+.revision-notes-content .formula-box p {
+  margin: 0 0 0.6em 0;
+}
+
+.revision-notes-content .formula-box p:last-child {
+  margin-bottom: 0;
+}
+
+.revision-notes-content .formula-box strong {
+  color: var(--primary-blue);
+}
+
+@media print {
+  .revision-notes-content .formula-box {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+}
+
 /* Calculation Tables - Inside Worked Examples */
 .revision-notes-content .calculation-table {
   width: 100%;

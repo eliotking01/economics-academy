@@ -56,6 +56,8 @@ LETTERS = [chr(c) for c in range(ord("A"), ord("Z") + 1)]
 # this set; restated here so the generator fails loudly rather than emitting
 # something unexpected into a page.
 ALLOWED = re.compile(r"</?(?:strong|em|sub|sup)>|<br />|<a href=\"[^\"]*\">|</a>")
+# A definition may be completed by the list that follows it in the notes.
+ALLOWED_LIST = re.compile(r"</?(?:ul|li|strong|em|sub|sup)>|<a href=\"[^\"]*\">|</a>")
 
 BOARDS = {
     "edexcel-a": {
@@ -236,6 +238,11 @@ def validate(data, groups):
                 errs.append(f"{where}: notesUrl does not exist - {s['notesUrl']}")
             if s["group"] not in groups:
                 errs.append(f"{where}: unknown group '{s['group']}'")
+            if s.get("definitionListHtml"):
+                lst = ALLOWED_LIST.sub("", s["definitionListHtml"])
+                if "<" in lst or ">" in lst:
+                    errs.append(f"{where}: continuation list carries markup "
+                                f"that is not allowed - {lst[:80]}")
             stripped = ALLOWED.sub("", s["definitionHtml"])
             if "<" in stripped or ">" in stripped:
                 errs.append(f"{where}: definition carries markup that is not "
@@ -415,6 +422,14 @@ def source_link(s):
 
 def entry_html(term, board, inline_map):
     s = source_for(term, board)
+    # Five definitions end on a colon because the rest of them is the bulleted
+    # list that follows on the notes page. The list is carried across so the
+    # entry reads as a whole; it cannot sit inside the <p>.
+    dlist = ""
+    if s.get("definitionListHtml"):
+        dlist = ('\n                  <div class="gl-def-list">'
+                 + render_inline_maths(s["definitionListHtml"], inline_map)
+                 + "</div>")
     groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
     others = [x for x in term["sources"]
               if x["board"] == board and x is not s]
@@ -433,7 +448,7 @@ def entry_html(term, board, inline_map):
               >
                 <dt class="gl-term">{e(term['term'])}</dt>
                 <dd class="gl-def">
-                  <p class="gl-text">{render_inline_maths(s['definitionHtml'], inline_map)}</p>
+                  <p class="gl-text">{render_inline_maths(s['definitionHtml'], inline_map)}</p>{dlist}
                   <p class="gl-source">{source_link(s)}</p>{also}
                 </dd>
               </div>"""

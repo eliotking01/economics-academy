@@ -111,7 +111,10 @@ def main():
                 continue
             if path not in cache:
                 cache[path] = page_text(eg, path)
-            needle = flatten(s["definitionHtml"])
+            # The continuation list is part of the definition, so it is checked
+            # against the notes too.
+            needle = flatten(s["definitionHtml"]
+                             + " " + s.get("definitionListHtml", ""))
             checked += 1
             if needle and needle not in cache[path]:
                 fails.append(

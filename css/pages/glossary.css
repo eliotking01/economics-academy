@@ -56,6 +56,7 @@
  * The body scrolling sideways on a phone is the failure this prevents. */
 .glossary-page .gl-entry,
 .glossary-page .gl-text,
+.glossary-page .gl-def-list,
 .glossary-page .gl-source,
 .glossary-page .gl-also {
   min-width: 0;
@@ -338,6 +339,41 @@
   margin-bottom: 0.5em;
   color: var(--gl-body);
   line-height: 1.65;
+}
+
+/* The list that completes a definition which ends on a colon in the notes. It
+ * cannot live inside the <p>, so it sits after it inside the <dd>. */
+.glossary-page .gl-def-list {
+  margin: 0 0 0.6em 0;
+}
+
+.glossary-page .gl-def-list ul {
+  margin: 0;
+  padding-left: 1.3em;
+  list-style: disc;
+}
+
+.glossary-page .gl-def-list li {
+  padding-left: 0.2em;
+  color: var(--gl-body);
+  line-height: 1.6;
+}
+
+/* The list that completes a definition which ends on a colon in the notes. */
+.glossary-page .gl-def-list {
+  margin: 0 0 0.6em 0;
+}
+
+.glossary-page .gl-def-list ul {
+  margin: 0;
+  padding-left: 1.3em;
+  list-style: disc;
+}
+
+.glossary-page .gl-def-list li {
+  padding-left: 0.2em;
+  color: var(--gl-body);
+  line-height: 1.6;
 }
 
 .glossary-page .gl-source,

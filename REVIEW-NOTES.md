@@ -1466,7 +1466,7 @@ Two pre-existing faults surfaced by scanning all 166 topic pages for definitions
 and formulae. Neither is caused by the glossary work and neither is fixed here,
 per the house rule. Both are markup faults, not economics.
 
-## G1 — `2-1-3-employment-unemployment` has LaTeX but never loads MathJax
+## G1 — `2-1-3-employment-unemployment` had LaTeX but never loaded MathJax — **FIXED**
 
 `revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html` contains
 `\[ … \]` display formulae but does not include the MathJax configuration and
@@ -1481,7 +1481,7 @@ and no loader. No page loads MathJax without needing it.
 byte-identical across all 125 — immediately after the page's own stylesheet link
 and before the JSON-LD. No wording changes.
 
-## G2 — `.formula-box` has no CSS rule anywhere in `css/`
+## G2 — `.formula-box` had no CSS rule anywhere in `css/` — **FIXED**
 
 `CLAUDE.md` documents `formula-box` as a component of
 `revision-notes-textbook.css` with the contract "Centred MathJax display". There
@@ -1534,3 +1534,57 @@ heading slug plus a positional counter, and formulae are sorted by their LaTeX.
 Adding a backslash moved one formula past another, the counter landed on the
 wrong one, and two curated labels silently swapped. Ids are now the heading slug
 plus a short hash of the LaTeX, so an id depends only on the formula it names.
+
+---
+
+# G1, G2 and the Section F fragments — fixed 4 August 2026, on instruction
+
+## G1 — fixed
+
+The standard MathJax configuration and loader block was inserted into
+`revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html`, copied
+byte-identically from its sibling `2-1-2-inflation.html` and placed in the same
+position every other LaTeX page uses — after the page stylesheet, before the
+JSON-LD. Confirmed in headless Chrome: **31 rendered MathJax containers, zero
+unrendered `\frac` left**. No visible wording changed; the addition is entirely
+inside `<script>`.
+
+A site-wide re-scan confirms **no page anywhere now carries LaTeX without
+MathJax**.
+
+Worth recording: the block is *not* byte-identical across the site. There are
+**three** variants, on 79, 18 and 10 pages. Copying from a sibling in the same
+directory sidesteps the question, but a future consolidation would have three
+things to reconcile, not one.
+
+## G2 — fixed
+
+`.revision-notes-content .formula-box` now exists in
+`css/pages/revision-notes-textbook.css`, where `CLAUDE.md` always said it did.
+All 51 instances across 29 pages had been rendering as an unstyled `div`.
+
+The rule uses the stylesheet's own tokens — `--light-bg`, `--border-light`,
+`--secondary-blue` — so it sits with `worked-example` and `exam-tip` rather than
+beside them. A long formula scrolls inside its own box rather than widening the
+page, the box does not break across a printed page, and the paragraphs inside it
+are spaced, since a box may hold a label, the formula and a gloss.
+
+## Section F — definitions that ran on into a list
+
+Five glossary definitions ended on a colon because the rest of them was the
+bulleted list that follows on the notes page. **No notes wording was changed.**
+The extractor now:
+
+- captures the `<ul>` that immediately follows, where there is one, so
+  `Quasi-public goods` and `Partial Market Failure` read as whole definitions;
+- otherwise drops the trailing clause that only introduces content the glossary
+  cannot show — `Competition` loses "The main market structures include:" and
+  nothing else. Removal only.
+
+One residue could not be fixed either way: the Edexcel `1.1.3` chip for
+**Factors of production** is a bare fragment followed by a table, not a list.
+That source is excluded in `curation.json` and the authored definition now
+covers both boards. **The Edexcel notes page still reads
+"Factors of production: the resources used to produce goods and services:"
+followed by a table** — correct in context on the page, but worth a look if you
+ever want that chip to stand alone.

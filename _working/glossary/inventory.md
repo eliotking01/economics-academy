@@ -10,11 +10,11 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | pages | 166 |
 | authoredTerms | 74 |
 | authoredFormulae | 4 |
-| termsExtracted | 632 |
+| termsExtracted | 600 |
 | uniqueTerms | 325 |
 | termsOnBothBoards | 234 |
-| termsWithVariantDefinitions | 43 |
-| termsNeedingReview | 90 |
+| termsWithVariantDefinitions | 42 |
+| termsNeedingReview | 86 |
 | displayFormulae | 78 |
 | uniqueFormulae | 34 |
 | formulaeExcludedByCuration | 18 |
@@ -138,7 +138,7 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **T106** | External economies of scale | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
 | **T107** | Externality | AE | 2 | Microeconomics 1.8.4, Theme 1 1.3.2, Microeconomics 1.8.2, Theme 1 1.3.1 |
 | **T108** | Factor immobility | A | 1 | Microeconomics 1.8.6 |
-| **T109** | Factors of Production | AE | 2 | Microeconomics 1.1.3, Theme 1 1.1.3 |
+| **T109** | Factors of Production | AE | 1 | Microeconomics 1.1.3, Theme 1 1.1.3 |
 | **T110** | Financial account | AE | 1 | Macroeconomics 2.6.3, Theme 4 4.1.7 |
 | **T111** | First-degree price discrimination | A | 1 | Microeconomics 1.5.7 |
 | **T112** | Fiscal deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
