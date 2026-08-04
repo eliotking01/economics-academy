@@ -8,14 +8,17 @@ _Last updated: 2026-08-04._
 
 ## Current state
 
-On branch `flashcards-feature`. Style guide LOCKED. Batch 1 (22 cards)
-approved by Eliot 2026-08-04; visual redesign onto the practice-questions
-palette approved the same day. **Batch 2 (19 cards + 4 new diagrams,
-subtopics 1.1.4 and 1.2.1–1.2.8) is awaiting Eliot's review.** Deck now 41
-cards / 16 topics. Player screenshots in `_working/flashcards/player-qa/`.
-Not yet done: batch 3 (1.2.10, 1.3.x, 1.4.x — roughly 30 cards and the
-min/max price, subsidy and tax-revenue diagrams), AQA variant cards,
-nav/sitemap integration, final QA pass.
+On branch `flashcards-feature`. Style guide LOCKED. Batches 1 (22 cards) and
+2 (19 cards + 4 diagrams) approved by Eliot 2026-08-04. **Batch 3 (28 cards
++ 4 diagrams: max-price, min-price, subsidy-incidence, underconsumption) is
+awaiting Eliot's review** — it completes coverage of every Theme 1 subtopic:
+deck now 69 cards / all 22 topics. Two notes caption errors found during
+diagram work are logged in docs/CONTENT_ISSUES.md awaiting his decision
+(max/min price captions describe a tax). Not yet done: batch 4 to reach the
+planned density (~110 cards: PED determinants/revenue relationship, more
+chains/evals/apps, and the 5 remaining planned diagrams — excess-demand,
+excess-supply, ppf-growth, indirect-tax-gov-revenue, elastic/inelastic
+incidence), AQA variant cards, nav/sitemap integration, final QA pass.
 
 Useful QA technique: to screenshot player states, copy the built deck page
 into `_working/`, append a script that clicks `.fc-step`/`.fc-card`, serve

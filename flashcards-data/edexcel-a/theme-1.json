@@ -847,6 +847,582 @@
         "notesPage": "/revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "edexcel-a-1-2-3-def-02",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>income elasticity of demand</strong> (YED).</p>",
+      "back": "<p><strong>YED</strong> measures the responsiveness of quantity demanded to a change in consumer income.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["elasticity"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "YED measures the responsiveness of quantity demanded to a change in consumer income."
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-formula-02",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>income elasticity of demand</strong>, and what its sign tells you.</p>",
+      "back": "<p>The sign classifies the good: <strong>positive</strong> for a normal good, <strong>negative</strong> for an inferior good — and a YED greater than 1 marks a luxury.</p>",
+      "formula": "\\text{YED} = \\frac{\\%\\Delta \\text{QD}}{\\%\\Delta \\text{Y}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-def-03",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "definition",
+      "front": "<p>Define <strong>cross elasticity of demand</strong> (XED).</p>",
+      "back": "<p><strong>XED</strong> measures the responsiveness of quantity demanded for Good A to a change in the price of Good B.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["elasticity"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "XED measures the responsiveness of quantity demanded for Good A to a change in the price of Good B."
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-3-formula-03",
+      "specCode": "1.2.3",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-3-price-income-cross-elasticities-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>cross elasticity of demand</strong>, and what its sign tells you.</p>",
+      "back": "<p>The sign reveals the relationship: <strong>positive</strong> for substitutes (a dearer rival raises demand for A), <strong>negative</strong> for complements, and near zero for unrelated goods.</p>",
+      "formula": "\\text{XED} = \\frac{\\%\\Delta \\text{QD}_{A}}{\\%\\Delta \\text{P}_{B}}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-9-def-01",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>subsidy</strong>.</p>",
+      "back": "<p>A <strong>subsidy</strong> is a payment from the government to producers, usually per unit of output, that lowers their costs of production and increases supply — typically granted to goods with positive externalities.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["subsidy"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-9-diagram-02",
+      "specCode": "1.2.9",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-9-indirect-taxes-subsidies",
+      "cardType": "diagram",
+      "front": "<p>Draw how the benefit of a <strong>per-unit subsidy</strong> is split between consumers and producers.</p>",
+      "back": "<p>The subsidy shifts supply right from S to S+Subsidy. The market price falls from P1 to P2 — the consumer gain — while producers receive P3, the market price plus the subsidy, so P1 to P3 is the producer gain. Output rises from Q1 to Q2.</p><p>As with a tax, elasticities decide the split: the more price inelastic demand is, the more of the subsidy reaches consumers as a lower price.</p>",
+      "svgRef": "/images/diagrams/svg/subsidy-incidence.svg",
+      "svgAlt": "Supply and demand diagram with supply shifted right to S plus subsidy, showing the consumer gain between P2 and P1 and the producer gain between P1 and P3, up to the new quantity Q2",
+      "difficulty": "standard",
+      "tags": ["subsidy", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-10-def-01",
+      "specCode": "1.2.10",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-10-alternative-views-of-consumer-behaviour",
+      "cardType": "definition",
+      "front": "<p>How does <strong>behavioural economics</strong> challenge the assumption of rational decision making?</p>",
+      "back": "<p><strong>Behavioural economics</strong> challenges this view, arguing that consumers are often irrational and that their choices are systematically influenced by psychological biases and rules of thumb.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["behavioural"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Behavioural economics challenges this view, arguing that consumers are often irrational and that their choices are systematically influenced by psychological biases and rules of thumb."
+      }
+    },
+    {
+      "id": "edexcel-a-1-2-10-def-02",
+      "specCode": "1.2.10",
+      "topic": "1.2 How markets work",
+      "subtopic": "1-2-10-alternative-views-of-consumer-behaviour",
+      "cardType": "definition",
+      "front": "<p>Give the specification's three <strong>reasons why consumers may not behave rationally</strong>.</p>",
+      "back": "<ul><li><strong>Influence of other people's behaviour</strong> — herd behaviour and social norms shape choices.</li><li><strong>Habitual behaviour</strong> — defaults and routines persist even against a consumer's own interest.</li><li><strong>Consumer weakness at computation</strong> — people struggle to calculate and compare complex prices, deals and probabilities.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["behavioural"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-1-def-01",
+      "specCode": "1.3.1",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-1-types-of-market-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market failure</strong>.</p>",
+      "back": "<p><strong>Market failure</strong> — when the free market, through the price mechanism, fails to allocate scarce resources efficiently, leading to a social welfare loss.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["market-failure"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when the free market, through the price mechanism, fails to allocate scarce resources efficiently, leading to a social welfare loss."
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-1-def-02",
+      "specCode": "1.3.1",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-1-types-of-market-failure",
+      "cardType": "definition",
+      "front": "<p>Name the specification's three <strong>types of market failure</strong>.</p>",
+      "back": "<ul><li><strong>Externalities</strong> — spillover costs or benefits on third parties that the market ignores.</li><li><strong>Under-provision of public goods</strong> — non-excludability means markets fail to supply them.</li><li><strong>Information gaps</strong> — buyers or sellers lack the information for efficient decisions.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["market-failure"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-2-def-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>externality</strong>.</p>",
+      "back": "<p><strong>Externality</strong> — a positive or negative spillover effect that affects a third party not directly involved in the economic transaction. Also known as external costs or external benefits.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["externalities"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a positive or negative spillover effect that affects a third party not directly involved in the economic transaction. Also known as external costs or external benefits."
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-2-def-02",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>merit good</strong>.</p>",
+      "back": "<p><strong>Merit good</strong> — a good that generates positive externalities, benefiting society beyond the private benefits received by the consumer.</p><p>Examples: education, healthcare, vaccinations. Markets under-provide them.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["externalities"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a good that generates positive externalities, benefiting society beyond the private benefits received by the consumer."
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-2-def-03",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>demerit good</strong>.</p>",
+      "back": "<p><strong>Demerit good</strong> — a good that generates negative externalities, imposing costs on society beyond the private costs incurred by the producer.</p><p>Examples: cigarettes, alcohol, gambling. Markets over-provide them.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["externalities"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a good that generates negative externalities, imposing costs on society beyond the private costs incurred by the producer."
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-2-def-04",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "definition",
+      "front": "<p>State the relationship between <strong>private</strong>, <strong>external</strong> and <strong>social</strong> costs and benefits.</p>",
+      "back": "<p><strong>Social cost = private cost + external cost.</strong> Private costs fall on the producers in the transaction; external costs spill over onto third parties.</p><p><strong>Social benefit = private benefit + external benefit</strong>, on the consumption side. Externality diagrams are built from exactly these gaps: MSC above MPC, or MSB above MPB.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["externalities"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-2-diagram-02",
+      "specCode": "1.3.2",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-2-externalities",
+      "cardType": "diagram",
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a positive consumption externality.</p>",
+      "back": "<p>Consumers count only their private benefits, so MSB lies above D=MPB. The market consumes at Q1, where MPB = MPC, but the social optimum is Q2, where MSB = MSC. The shaded triangle is the welfare loss from under-consumption — the net social benefit forgone on the units between Q1 and Q2.</p>",
+      "svgRef": "/images/diagrams/svg/underconsumption.svg",
+      "svgAlt": "Externality diagram with MSB above D equals MPB and S equals MPC equals MSC, showing market output Q1 below the social optimum Q2 and a shaded welfare loss triangle",
+      "difficulty": "standard",
+      "tags": ["externalities", "market-failure", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-3-def-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-3-public-goods",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>public good</strong> and its two characteristics.</p>",
+      "back": "<p>A <strong>public good</strong> is both:</p><ul><li><strong>Non-excludable</strong> — it is impossible or extremely costly to prevent non-payers from consuming the good once it is provided.</li><li><strong>Non-rival</strong> — one person's consumption does not reduce the amount available for others.</li></ul><p>Examples: street lighting, national defence, flood defences.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["public-goods"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-3-def-02",
+      "specCode": "1.3.3",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-3-public-goods",
+      "cardType": "definition",
+      "front": "<p>Explain the <strong>free rider problem</strong>, and what it does to the market for public goods.</p>",
+      "back": "<p>Because a public good is non-excludable, people can benefit without paying — they <strong>free ride</strong> on others' provision. If everyone reasons this way, no one pays, firms cannot charge, and the market fails to provide the good at all: a <strong>missing market</strong>. This is why public goods are typically state-provided and funded through taxation.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["public-goods"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-3-public-goods.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-4-def-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-4-information-gaps",
+      "cardType": "definition",
+      "front": "<p>Define <strong>asymmetric information</strong>.</p>",
+      "back": "<p><strong>Asymmetric information</strong> — a situation where one party in a transaction has more or better information than the other.</p><p>The wider category is an <strong>information gap</strong>: any party lacking the information needed to make an informed decision.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["information-gaps"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-4-information-gaps.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a situation where one party in a transaction has more or better information than the other."
+      }
+    },
+    {
+      "id": "edexcel-a-1-3-4-chain-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Market failure",
+      "subtopic": "1-3-4-information-gaps",
+      "cardType": "chain",
+      "front": "<p>Build the <strong>chain of reasoning</strong>: how does asymmetric information cause market failure in the used-car market?</p>",
+      "back": "<p>Sellers know a car's true condition; buyers do not. Unable to tell good cars from bad, buyers only offer an average price. That price undervalues good cars, so their owners withdraw them from sale, raising the share of bad cars — which pushes offers lower still. Trades that would benefit both sides never happen: a misallocation of resources driven purely by the information gap.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["information-gaps", "chain-of-reasoning"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-3-4-information-gaps.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-def-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>maximum price</strong>. Where must it be set to have any effect?</p>",
+      "back": "<p>A <strong>maximum price</strong> (price ceiling) is a legal limit above which the price may not rise, set on goods deemed essential — for example rent controls.</p><p>It only binds if set <strong>below</strong> the equilibrium price; above it, the market equilibrium is unaffected.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["price-controls"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-diagram-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "diagram",
+      "front": "<p>Draw the effect of a <strong>maximum price</strong> set below the equilibrium price.</p>",
+      "back": "<p>At Pmax, quantity demanded rises to Qd while quantity supplied falls to Qs — excess demand of Qd minus Qs. Quantity traded falls from Q1 to Qs, and the shortage must be rationed some other way: queues, waiting lists, or black markets.</p>",
+      "svgRef": "/images/diagrams/svg/max-price.svg",
+      "svgAlt": "Supply and demand diagram with a maximum price line below equilibrium, showing quantity supplied Qs below quantity demanded Qd and the resulting shortage",
+      "difficulty": "standard",
+      "tags": ["price-controls", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-def-02",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>minimum price</strong>. Where must it be set to have any effect?</p>",
+      "back": "<p>A <strong>minimum price</strong> (price floor) is a legal limit below which the price may not fall — for example minimum unit pricing for alcohol, or a minimum wage in the labour market.</p><p>It only binds if set <strong>above</strong> the equilibrium price; below it, the market equilibrium is unaffected.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["price-controls"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-diagram-02",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "diagram",
+      "front": "<p>Draw the effect of a <strong>minimum price</strong> set above the equilibrium price.</p>",
+      "back": "<p>At Pmin, quantity supplied rises to Qs while quantity demanded falls to Qd — excess supply of Qs minus Qd. Quantity traded falls from Q1 to Qd, and the surplus persists unless the government buys it up or producers cut output.</p>",
+      "svgRef": "/images/diagrams/svg/min-price.svg",
+      "svgAlt": "Supply and demand diagram with a minimum price line above equilibrium, showing quantity demanded Qd below quantity supplied Qs and the resulting surplus",
+      "difficulty": "standard",
+      "tags": ["price-controls", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-def-03",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "definition",
+      "front": "<p>How do <strong>tradable pollution permits</strong> work?</p>",
+      "back": "<p><strong>Tradable pollution permits</strong> — the government can set a cap on total emissions and auction permits that firms must purchase to emit pollutants. These can then be traded on a secondary market.</p><p>The cap fixes the quantity of pollution; the permit price internalises the external cost and rewards firms that cut emissions cheaply, since they can sell spare permits.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["intervention", "externalities"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the government can set a cap on total emissions and auction permits that firms must purchase to emit pollutants. These can then be traded on a secondary market."
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-eval-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "evaluation",
+      "front": "<p><strong>Evaluate</strong>: a maximum price makes an essential good affordable. What are the key evaluation points?</p>",
+      "back": "<ul><li><strong>Shortage</strong> — the ceiling creates excess demand; those who cannot buy at Pmax may be worse off than at the market price.</li><li><strong>Elasticities matter</strong> — the more elastic supply and demand, the larger the shortage.</li><li><strong>Black markets</strong> — unmet demand invites illegal resale above Pmax.</li><li><strong>Non-price rationing</strong> — queues and waiting lists allocate the good by luck or connections rather than need.</li><li><strong>Long run</strong> — depressed prices deter investment in supply (a common critique of rent controls).</li></ul>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["price-controls", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-1-app-01",
+      "specCode": "1.4.1",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-1-government-intervention-in-markets",
+      "cardType": "application",
+      "front": "<p>Give a <strong>real-world example</strong> of a minimum price operating in a UK market.</p>",
+      "back": "<p>The UK <strong>National Living Wage</strong> — £12.21 an hour for workers aged 21 and over from April 2025 — is a minimum price in the labour market.</p><p>Application point: where it binds above the equilibrium wage, theory predicts excess labour supply; in practice UK employment effects have been small, which examiners reward you for weighing against the diagram's prediction.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["price-controls", "application", "uk"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-2-def-01",
+      "specCode": "1.4.2",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-2-government-failure",
+      "cardType": "definition",
+      "front": "<p>Define <strong>government failure</strong>.</p>",
+      "back": "<p><strong>Government failure</strong> — when government intervention to correct a market failure results in a larger net welfare loss or a less efficient allocation of resources than before the intervention.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["government-failure"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-2-government-failure.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when government intervention to correct a market failure results in a larger net welfare loss or a less efficient allocation of resources than before the intervention."
+      }
+    },
+    {
+      "id": "edexcel-a-1-4-2-def-02",
+      "specCode": "1.4.2",
+      "topic": "1.4 Government intervention",
+      "subtopic": "1-4-2-government-failure",
+      "cardType": "definition",
+      "front": "<p>Give the specification's four <strong>causes of government failure</strong>.</p>",
+      "back": "<ul><li><strong>Distortion of price signals</strong> — intervention (subsidies, price controls) stops prices reflecting scarcity.</li><li><strong>Unintended consequences</strong> — agents respond in ways policymakers did not predict, such as black markets.</li><li><strong>Excessive administrative costs</strong> — running the intervention can outweigh the welfare it recovers.</li><li><strong>Information gaps</strong> — governments, like markets, must decide without full information, so they can set taxes, subsidies or targets at the wrong level.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["government-failure"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-04",
+      "source": {
+        "notesPage": "/revision-notes/edexcel-theme-1/1-4-2-government-failure.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }

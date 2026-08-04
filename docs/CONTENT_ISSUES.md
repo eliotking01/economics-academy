@@ -17,4 +17,30 @@ Format per entry:
 
 ---
 
-_No issues logged yet._
+## 1. Maximum-price figure caption describes a tax, not a price ceiling
+
+- **Location** — `revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html`,
+  Figure 3 caption (`max-price.png`).
+- **Issue** — the caption reads "showing the shift in supply, the new
+  equilibrium, and the government revenue generated". A maximum price shifts
+  no curve and raises no government revenue; the figure itself correctly
+  shows a price ceiling below equilibrium with excess demand. The wording
+  appears copy-pasted from the indirect-tax figure caption.
+- **Proposed correction** — "Figure 3: The impact of a maximum price set
+  below the equilibrium price, showing the resulting excess demand
+  (shortage) between Qs and Qd."
+- **Confidence** — high (standard theory; the diagram itself confirms).
+- **Status** — open.
+
+## 2. Minimum-price figure caption has the same copy-paste error
+
+- **Location** — same page, Figure 4 caption (`min-price.png`).
+- **Issue** — identical wording problem: "the shift in supply, the new
+  equilibrium, and the government revenue generated" describes neither a
+  minimum price nor the figure, which correctly shows a price floor above
+  equilibrium with excess supply.
+- **Proposed correction** — "Figure 4: The impact of a minimum price set
+  above the equilibrium price, showing the resulting excess supply
+  (surplus) between Qd and Qs."
+- **Confidence** — high.
+- **Status** — open.
