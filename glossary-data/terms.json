@@ -9,8 +9,8 @@
     "termsWithVariantDefinitions": 31,
     "termsNeedingReview": 79,
     "displayFormulae": 72,
-    "uniqueFormulae": 28,
-    "formulaeExcludedByCuration": 21,
+    "uniqueFormulae": 31,
+    "formulaeExcludedByCuration": 18,
     "tableCandidates": 9,
     "tablesApproved": 6,
     "termsFromTables": 24,
@@ -9731,32 +9731,6 @@
       ]
     },
     {
-      "id": "f-calculating-the-multiplier",
-      "latex": "M = \\frac{1}{1 - 0.8} = \\frac{1}{0.2} = 5",
-      "label": "The Multiplier - worked example",
-      "boards": [
-        "aqa",
-        "edexcel-a"
-      ],
-      "outsideFormulaBox": false,
-      "sources": [
-        {
-          "board": "aqa",
-          "group": "macroeconomics",
-          "spec": "2.2.4",
-          "topic": "The Multiplier",
-          "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html"
-        },
-        {
-          "board": "edexcel-a",
-          "group": "theme-2",
-          "spec": "2.4.4",
-          "topic": "The Multiplier",
-          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html"
-        }
-      ]
-    },
-    {
       "id": "f-calculating-the-multiplier-2",
       "latex": "M = \\frac{1}{1 - MPC}",
       "label": "The Multiplier, from the MPC",
@@ -9923,6 +9897,24 @@
       ]
     },
     {
+      "id": "f-interpreting-index-numbers-2",
+      "latex": "\\text{% Change} = \\frac{\\text{New Index} - \\text{Old Index}}{\\text{Old Index}} \\times 100",
+      "label": "Percentage Change",
+      "boards": [
+        "aqa"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.3",
+          "topic": "Uses of Index Numbers",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
+        }
+      ]
+    },
+    {
       "id": "f-calculating-bond-yield",
       "latex": "\\text{Bond Yield} \\, (\\%) = \\frac{\\text{Annual Coupon Payment}}{\\text{Market Price of Bond}} \\times 100",
       "label": "Bond Yield",
@@ -9937,6 +9929,42 @@
           "spec": "2.4.1",
           "topic": "The Structure of Financial Markets and Financial Assets",
           "notesUrl": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html"
+        }
+      ]
+    },
+    {
+      "id": "f-inflation-indicators",
+      "latex": "\\text{CPI} = \\frac{\\text{Cost of Basket in Current Year}}{\\text{Cost of Basket in Base Year}} \\times 100",
+      "label": "Consumer Prices Index (CPI)",
+      "boards": [
+        "aqa"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.2",
+          "topic": "Macroeconomic Indicators",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+        }
+      ]
+    },
+    {
+      "id": "f-how-it-s-calculated",
+      "latex": "\\text{CPI} = \\frac{\\text{Price of basket in current year}} {\\text{Price of basket in base year}} \\times 100",
+      "label": "Consumer Prices Index (CPI)",
+      "boards": [
+        "edexcel-a"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "spec": "2.1.2",
+          "topic": "Inflation",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
         }
       ]
     },
@@ -9981,6 +10009,24 @@
           "spec": "4.5.3",
           "topic": "Public Sector Finances",
           "notesUrl": "/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html"
+        }
+      ]
+    },
+    {
+      "id": "f-key-measures-of-national-income",
+      "latex": "\\text{GNI} = \\text{GDP} + \\text{Net Income from Abroad}",
+      "label": "Gross National Income (GNI)",
+      "boards": [
+        "aqa"
+      ],
+      "outsideFormulaBox": false,
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "macroeconomics",
+          "spec": "2.1.4",
+          "topic": "Uses of National Income Data",
+          "notesUrl": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
         }
       ]
     },

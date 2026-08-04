@@ -278,18 +278,15 @@
     }
   ],
   "formulaExclude": [
+    "f-calculating-the-multiplier",
     "f-calculation-methods",
     "f-calculation-methods-2",
     "f-definition-and-measures",
     "f-equilibrium-in-the-circular-flow",
     "f-equilibrium-in-the-circular-flow-2",
-    "f-how-it-s-calculated",
     "f-how-it-s-calculated-2",
-    "f-inflation-indicators",
     "f-inflation-indicators-2",
     "f-interpreting-index-numbers",
-    "f-interpreting-index-numbers-2",
-    "f-key-measures-of-national-income",
     "f-marginal-average-and-total-returns",
     "f-marginal-average-and-total-returns-2",
     "f-output-gaps",
@@ -302,7 +299,6 @@
   ],
   "formulaLabel": {
     "f-what-is-aggregate-demand": "Aggregate Demand",
-    "f-calculating-the-multiplier": "The Multiplier - worked example",
     "f-calculating-the-multiplier-2": "The Multiplier, from the MPC",
     "f-calculating-the-multiplier-3": "The Multiplier, from the withdrawals",
     "f-calculating-the-multiplier-4": "The Multiplier, from the MPW",
@@ -328,7 +324,11 @@
     "f-trade-unions": "Union Density",
     "f-cross-elasticity-of-demand-xed": "Cross Elasticity of Demand (XED)",
     "f-income-elasticity-of-demand-yed": "Income Elasticity of Demand (YED)",
-    "f-what-is-the-multiplier": "The Multiplier"
+    "f-what-is-the-multiplier": "The Multiplier",
+    "f-interpreting-index-numbers-2": "Percentage Change",
+    "f-inflation-indicators": "Consumer Prices Index (CPI)",
+    "f-how-it-s-calculated": "Consumer Prices Index (CPI)",
+    "f-key-measures-of-national-income": "Gross National Income (GNI)"
   },
   "formulaTerms": {}
 }
