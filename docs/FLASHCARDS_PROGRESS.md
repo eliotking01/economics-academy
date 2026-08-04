@@ -10,20 +10,37 @@ _Last updated: 2026-08-04._
 
 On branch `flashcards-feature`. Style guide LOCKED. Batches 1–4 approved
 (2026-08-04); caption fixes shipped. Edexcel Theme 1 deck: 95 cards / 22
-subtopics. **AQA micro starter deck (13 cards, 6 topics — the concepts AQA
-names that Edexcel does not, plus AQA's verbatim definitions) awaits
-Eliot's review**, as does the proposed notes-page links change (markup in
-the chat; standing rule 1). Integration is live on the branch: nav
+subtopics. AQA micro starter deck (13 cards, 6 topics) **approved by Eliot
+2026-08-04**. Notes-page links block **approved and shipped**: every Theme
+1 topic page now carries a "Revise this topic with flashcards" block
+directly after its "Test yourself on this topic" block, deep-linking to
+the deck via `?topic=<page-slug>` (the deck's subtopic values equal the
+notes page slugs). Hand-edited per page, additions only — text/markup
+integrity verified against HEAD. Integration is live on the branch: nav
 dropdown entry, inject-templates pageMap (flashcards light up Revision
-Notes), notes-hub button, sitemap section — verify_html/links pass over
-182 pages including all three flashcard pages.
+Notes), notes-hub button, sitemap section.
 
-QA still open (mostly needs a real browser): print preview of "Print this
-deck" (the headless print-to-pdf check was inconclusive — beforeprint may
-not fire there; the button path is code-verified), GA4 DebugView once
-deployed, keyboard/screen-reader spot check, DevTools device-mode mobile.
+**Print bug found by Eliot and fixed.** "Print this deck" produced a PDF
+with no cards: the printsheet was appended inside `[data-fc-mount]`, and
+the print CSS hides the whole mount (`.fc-player.is-printing .fc-mount`),
+taking the printsheet down with it. Fix: the printsheet is appended to the
+player root as a sibling of the mount (flashcards.js). Verified end to end
+headlessly this time: a `_working/` copy of the deck page with
+`window.print` stubbed and the button clicked, rendered via Chrome
+`--print-to-pdf` — 51-page PDF, all 95 cards present (PDFKit text
+extraction + visual page renders; proof PNGs in
+`_working/flashcards/print-qa/`). Diagram cards print with their SVGs at
+the 300px cap. Note for future print QA: PDF text extraction sees CSS
+`text-transform: uppercase` output, so probe for "ANSWER" not "Answer".
+
+QA still open (needs a real browser/deploy): one real print-dialog check
+to close the loop on the fix, GA4 DebugView once deployed,
+keyboard/screen-reader spot check, DevTools device-mode mobile.
 Automated checks all green and continuously re-run: geometry (17 SVGs),
-HTML, links, glossary, Liquid, build idempotency.
+HTML, links, glossary, Liquid, text/markup integrity, build idempotency.
+Optional follow-up, needs approval first: a variant links block for the
+six AQA micro notes pages the starter deck covers (the approved wording
+says "Theme 1 deck", so AQA needs its own wording).
 
 Useful QA technique: to screenshot player states, copy the built deck page
 into `_working/`, append a script that clicks `.fc-step`/`.fc-card`, serve
@@ -103,24 +120,26 @@ DevTools device mode in the QA pass.
   version, which it flags), plus zoomed-viewBox close-up renders of every
   junction in the visual pass.
 
+- 2026-08-04 — Card batches 1–4 (95 cards, 17 SVGs) and the AQA starter
+  deck (13 cards) all approved by Eliot. Integration shipped: nav,
+  pageMap, hub button, sitemap.
+- 2026-08-04 — Print-this-deck bug (empty PDF) diagnosed and fixed —
+  printsheet moved out of the print-hidden mount; verified via headless
+  print-to-PDF with PDFKit text extraction and visual renders.
+- 2026-08-04 — Approved "Revise this topic with flashcards" block added to
+  all 22 Theme 1 topic pages, each deep-linking `?topic=<page-slug>`.
+  Hand-edited; verify_html, verify_links, text/markup integrity all green.
+
 ## Next steps
 
-1. Eliot reviews batch 2 (cards `edexcel-a-1-1-4-diagram-01` through
-   `edexcel-a-1-2-8-diagram-01` in `flashcards-data/edexcel-a/theme-1.json`)
-   and the four new diagrams (ppf-basic, supply-curve-shift,
-   market-equilibrium, consumer-producer-surplus-equilibrium). Batch 1 facts
-   (SDIL, Smith/Hayek/Marx) were approved with batch 1.
-2. Batch 3: 1.2.10, 1.3.x, 1.4.x (~30 cards; diagrams: min price, max price,
-   subsidy incidence, indirect-tax government revenue, elastic/inelastic
-   incidence variant). Suspected notes errors go to docs/CONTENT_ISSUES.md.
-3. AQA variant cards (the boards' genuine differences; use the glossary's 42
-   variant-definition terms to find them mechanically).
-4. Integration: nav + inject-templates.js pageMap, revision-notes hub card,
-   sitemap.xml, notes-page links (separate commit, needs explicit approval —
+1. Remaining QA, mostly browser/deploy-bound: real print-dialog check,
+   GA4 DebugView after deploy, keyboard/screen-reader spot check, DevTools
+   device-mode mobile.
+2. Decide whether the six AQA micro notes pages covered by the starter
+   deck get their own links block (needs approved AQA wording first —
    standing rule 1).
-5. QA pass (real-device/DevTools mobile, JSON validity, SEO tags,
-   performance, keyboard/screen reader, print incl. SVGs, GA4 DebugView,
-   verify scripts, build idempotency run-twice-diff-empty).
+3. When Eliot is happy: PR `flashcards-feature` → `main` (confirm before
+   any push — main auto-publishes).
 
 ## Open questions
 
