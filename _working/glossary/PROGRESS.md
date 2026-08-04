@@ -6,7 +6,7 @@ never batched.
 
 - **Branch:** `feature/glossary` (off `main` at `faccb6a`)
 - **Current phase:** Phase 2 — extraction & gap analysis
-- **Current step:** 3.1 — `scripts/build_glossary.py`
+- **Current step:** 4.3 — nav and internal links, **propose only**
 - **Last updated:** 2026-08-03
 
 ---
@@ -57,19 +57,19 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [x] 2.5 `gap-report.md`
 - [x] 2.6 Reviewed and answered. A, B, E, G decided; C, D, F left to defaults
 
-### Phase 3 — Build — IN PROGRESS
+### Phase 3 — Build — COMPLETE
 
-- [ ] 3.1 `scripts/build_glossary.py`
-- [ ] 3.2 Vendor KaTeX (CSS + woff2 only) into `css/vendor/katex/`
-- [ ] 3.3 The three pages
-- [ ] 3.4 `css/pages/glossary.css` (incl. print block)
-- [ ] 3.5 `js/components/glossary-filter.js`
-- [ ] 3.6 `scripts/verify_glossary.py`
+- [x] 3.1 `scripts/build_glossary.py`
+- [x] 3.2 KaTeX vendored: `css/vendor/katex/` for the browser, `scripts/vendor/katex.min.js` for the build
+- [x] 3.3 The three pages
+- [x] 3.4 `css/pages/glossary.css` incl. the print block
+- [x] 3.5 `js/components/glossary-filter.js`
+- [x] 3.6 `scripts/verify_glossary.py` — 5 checks, all passing
 
-### Phase 4 — SEO & integration
+### Phase 4 — SEO & integration — IN PROGRESS
 
-- [ ] 4.1 JSON-LD: `DefinedTermSet` / `DefinedTerm` + `BreadcrumbList`
-- [ ] 4.2 Sitemap block
+- [x] 4.1 JSON-LD: `DefinedTermSet` / `DefinedTerm` + `BreadcrumbList` — 427 terms, all anchors resolve
+- [x] 4.2 Sitemap block between `<!-- Glossary -->` markers
 - [ ] 4.3 **PROPOSE ONLY** — nav `<li>`, "More Free Resources" button, notes→glossary links
 
 ### Phase 5 — QA & handover
@@ -207,6 +207,14 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `_working/glossary/spec-checklist.md` | Generated — per-board spec coverage |
 | `_working/glossary/gap-report.md` | Written — the summary and judgement calls |
 | `_working/glossary/e-decisions.md` | Written — every section E judgement and its reason |
+| `scripts/build_glossary.py` | Created — generator |
+| `scripts/verify_glossary.py` | Created — the anti-drift check |
+| `scripts/vendor/katex.min.js` + `README.md` | Created — build-time only, not served |
+| `css/vendor/katex/katex.min.css` + `fonts/*.woff2` | Created — 20 woff2, 296KB |
+| `css/pages/glossary.css` | Created — scoped under `.glossary-page` |
+| `js/components/glossary-filter.js` | Created |
+| `revision-notes/glossary/{,edexcel-a/,aqa/}index.html` | **Generated** |
+| `sitemap.xml` | Modified — new Glossary block, 3 URLs |
 
 **No revision-notes topic page has been edited, and none will be.**
 
@@ -226,12 +234,13 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Step 3.1** — `scripts/build_glossary.py`, modelled on
-`scripts/build_past_paper_questions.py` (f-string page shell, its own sitemap
-block between markers, runs Prettier over its own output, deletes stale pages)
-with the validation discipline of `scripts/build_questions.py` (collect every
-failure, write nothing if any).
+**Step 4.3 — propose only, implement nothing without sign-off.** Three
+additive changes to existing files:
 
-Data is settled: **263 terms, 28 formulae**, 6 tables harvested, 21 formulae
-excluded, 28 relabelled, 11 terms with sources excluded, 20 with a preferred
-source.
+1. `templates/header.html` — a Glossary `<li>` in the Revision Notes dropdown.
+2. `revision-notes/index.html` — a fourth button in "More Free Resources".
+   Note that block uses inline `style="width: 100%"`, against house rules; a
+   fourth button either matches the existing three or the block gets a class.
+3. Internal links from notes pages to the glossary — a list to approve.
+
+Then Phase 5: QA at three widths, JS off, keyboard, print preview.

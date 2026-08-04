@@ -198,6 +198,13 @@ def canonical_key(term: str) -> str:
 
 
 def letter_of(term: str) -> str:
+    """Which A-Z section a term files under.
+
+    Called with the canonical key, not the display name, so a leading article
+    is ignored - "The Law of Demand" files under L and "A demerger" under D,
+    the way any index or library catalogue treats them. The display name keeps
+    its article.
+    """
     for ch in term:
         if ch.isalpha():
             return ch.upper()
@@ -525,7 +532,7 @@ def build():
             "id": slugify(pretty),
             "term": pretty,
             "key": key,
-            "letter": letter_of(pretty),
+            "letter": letter_of(key),
             "boards": sorted({s["board"] for s in srcs}),
             "origin": sorted({s["origin"] for s in srcs}),
             "definitionVariants": len(variants),

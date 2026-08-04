@@ -19,7 +19,13 @@
     "formulaLabel    formula id -> the name to show instead of its heading",
     "formulaTerms    formula id -> the term id it belongs to",
     "excludeSources   key -> notesUrls whose chip is not a definition of it",
-    "preferredSources key -> notesUrls whose wording is canonical, best first"
+    "preferredSources key -> notesUrls whose wording is canonical, best first",
+    "",
+    "BLOCKED, not rejected: f-economic-growth-indicators (Real GDP Growth) and",
+    "f-interpreting-index-numbers-2 (Percentage Change) are excluded only because",
+    "their LaTeX writes % unescaped, which TeX reads as a comment. See G3 in",
+    "REVIEW-NOTES.md. Change % to \\% on the two notes pages and remove these two",
+    "ids from formulaExclude and they render."
   ],
   "stopTerms": [
     "aim",
@@ -282,11 +288,13 @@
     "f-calculation-methods",
     "f-calculation-methods-2",
     "f-definition-and-measures",
+    "f-economic-growth-indicators",
     "f-equilibrium-in-the-circular-flow",
     "f-equilibrium-in-the-circular-flow-2",
     "f-how-it-s-calculated-2",
     "f-inflation-indicators-2",
     "f-interpreting-index-numbers",
+    "f-interpreting-index-numbers-2",
     "f-marginal-average-and-total-returns",
     "f-marginal-average-and-total-returns-2",
     "f-output-gaps",

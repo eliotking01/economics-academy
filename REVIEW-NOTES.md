@@ -1500,3 +1500,30 @@ use the documented component.
 
 **Fix:** either add the rule the documentation already promises, or amend the
 documentation. A decision either way, not an oversight.
+
+## G3 — two formulae write `%` unescaped, so they do not render
+
+Found when the glossary generator pre-rendered every formula through KaTeX with
+`throwOnError` on. Two fail, and they fail for a reason that applies equally to
+MathJax on the notes pages: **`%` begins a comment in TeX.** Everything after it
+on the line is discarded, so the formula never closes its brace.
+
+| Page | Line | LaTeX as written |
+| --- | ---: | --- |
+| `aqa-a2-macro/2-1-2-macroeconomic-indicators.html` | 199 | `\text{% Change in Real GDP} = \text{% Change in Nominal GDP} - \text{Inflation Rate}` |
+| `aqa-a2-macro/2-1-3-uses-of-index-numbers.html` | 304 | `\text{% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` |
+
+**These are rendering broken on the live site today**, not only in the glossary.
+
+It is a typo rather than a convention: the notes write `\%` correctly in **39**
+other places, including `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` on the
+same board. These are the only two that miss it.
+
+**Fix:** change `%` to `\%` in three places across those two lines. No wording
+changes. Then remove `f-economic-growth-indicators` and
+`f-interpreting-index-numbers-2` from `formulaExclude` in
+`glossary-data/curation.json` and re-run the generator.
+
+Worth noting what this costs while it stands: **percentage change is QS2 on both
+specifications** and, with these two parked, no formula for it appears anywhere
+in the glossary.
