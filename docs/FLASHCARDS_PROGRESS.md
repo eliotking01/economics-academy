@@ -28,14 +28,14 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **92 ✅ · 3 🟡 · 71 ❌** of 166 units.
+Tally (2026-08-05): **95 ✅ · 0 🟡 · 71 ❌** of 166 units.
 Cards shipped: 374 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 62 AQA macro + 25 Edexcel Theme 3). Approved through Theme
-3 sections 3.1–3.2. **Theme 3 batch 2 (12 cards, sections
-3.3.1–3.3.3, with 5 new cost/revenue SVGs) is built and integrated
-but AWAITS ELIOT'S REVIEW.** SVG diagrams shipped: 54. No open
-content issues. Unit 3.3.4 (profits/shut-down) is deliberately held
-for batch 3, where its diagrams open the market-structure set.
+Theme 2 + 62 AQA macro + 25 Edexcel Theme 3), **all approved by
+Eliot** (Theme 3 batch 2 approved 2026-08-05, including the
+combined-panel revenue adaptation). SVG diagrams shipped: 54. No
+open content issues. Unit 3.3.4 (profits/shut-down) is deliberately
+held for the next batch, where its diagrams open the
+market-structure set.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -119,9 +119,9 @@ in phase 7) is underway.
 | 3.1.2 Business growth | ✅ | 2 definition, 1 evaluation |
 | 3.1.3 Demergers | ✅ | 1 definition, 1 evaluation |
 | 3.2.1 Business objectives | ✅ | 2 definition, 3 diagram |
-| 3.3.1 Revenue | 🟡 review | 1 definition, 1 formula, 2 diagram |
-| 3.3.2 Costs | 🟡 review | 1 formula, 1 calculation, 2 diagram |
-| 3.3.3 Economies & diseconomies of scale | 🟡 review | 2 definition, 1 diagram, 1 evaluation |
+| 3.3.1 Revenue | ✅ | 1 definition, 1 formula, 2 diagram |
+| 3.3.2 Costs | ✅ | 1 formula, 1 calculation, 2 diagram |
+| 3.3.3 Economies & diseconomies of scale | ✅ | 2 definition, 1 diagram, 1 evaluation |
 | 3.3.4 Normal profits, supernormal profits & losses | ❌ |
 | 3.4.1 Efficiency | ❌ |
 | 3.4.2 Perfect competition | ❌ |
@@ -508,21 +508,43 @@ Useful QA techniques:
   computed; zero geometry flags. Matrix: 92 ✅ · 3 🟡 · 71 ❌; 374
   cards, 54 SVGs.
 
+- 2026-08-05 — **Theme 3 batch 2 approved by Eliot** (same day),
+  including the combined-panel revenue adaptation. Sections
+  3.3.1–3.3.3 flipped to ✅. Session ended here by Eliot's request;
+  the Next steps block below is the resume point, with the reusable
+  firm-diagram geometry recorded for batch 3.
+
 ## Next steps (a fresh session starts here)
 
-1. **Get Theme 3 batch 2 approved** (12 cards, sections 3.3.1–3.3.3,
-   presented 2026-08-05). Adaptation to flag: both revenue
-   ground-truth PNGs are two-panel; the SVGs combine each into one
-   panel (AR/MR + TR on shared axes), per the approved lras-shift
-   precedent.
-2. **Theme 3 batch 3: 3.3.4 + section 3.4 start** (supernormal
-   profit, loss and shut-down diagrams — ground truths
-   supernormal-profit.png, loss.png, short-run-shutdown-condition.png
-   on the 3-3-4 page, not yet inspected — then efficiency and perfect
-   competition). The firm-diagram base (profit-max.svg) plus the new
-   shaded-area idiom is the template for all market-structure
-   equilibria. Then 3.5 labour, 3.6 intervention, AQA 1.4–1.6
-   (phase 5), Theme 4 (phase 6), AQA remainder (phase 7).
+1. **Theme 3 batch 3: 3.3.4 + section 3.4 start.** Unit 3.3.4 needs
+   the supernormal-profit, loss and short-run shut-down diagrams —
+   ground truths `supernormal-profit.png`, `loss.png` and
+   `short-run-shutdown-condition.png` on the 3-3-4 page, NOT yet
+   visually inspected (do that first). Chips already captured:
+   normal profit (TR = TC, break-even, counted as a cost), supernormal
+   (TR > TC), loss (TR < TC); profit-max rule MC = MR; the short-run
+   shut-down rule is price below minimum AVC (long-run: below AC).
+   Then 3.4.1 efficiency and 3.4.2 perfect competition. After 3.4:
+   3.5 labour, 3.6 intervention, AQA 1.4–1.6 (phase 5), Theme 4
+   (phase 6), AQA remainder (phase 7).
+2. **Reusable firm-diagram base** (used by profit-max/revenue-max/
+   sales-max and short-run-costs; reuse for 3.3.4's shaded diagrams
+   and every 3.4 market-structure equilibrium): axes titles "Cost,
+   revenue"/"Quantity" ("Costs" for pure cost diagrams; wide y-titles
+   go on ONE line at y=40, above the axis top). Curves: D=AR
+   (160,130)→(620,475) slope 0.75; MR (160,130)→(420,520) slope 1.5
+   (twice AR, same intercept, ending ON the axis where MR = 0); MC
+   path `M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379
+   505,300 Q 513,265 530,150`; AC path `M 300,330 Q 380,405 470,405 Q
+   560,405 620,330` (min at 470,405, on MC exactly); AVC path (in
+   short-run-costs.svg) has its min at (425,457.5), on MC exactly.
+   Known crossings: MC×MR = (393.1,479.6); AC×AR = (518.6,399); AR at
+   x is 0.75x+10. Objective/equilibrium markers: circle r=7 #d52349.
+   Shaded areas for profit/loss rectangles: the guide corners P and C
+   at the chosen Q are exact — use lowercase relative path commands
+   for any shaded shape with curved edges so the checker skips its
+   control points (trade-cycle precedent); plain rectangles can use
+   `<rect fill-opacity>`, whose corners the checker verifies.
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
