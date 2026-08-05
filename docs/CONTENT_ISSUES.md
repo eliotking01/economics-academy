@@ -60,7 +60,9 @@ Format per entry:
   below the equilibrium price, showing the resulting excess demand
   (shortage)." (mirrors the approved Edexcel wording).
 - **Confidence** — high (same figure, same error class as the approved fix).
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-05; applied with the
+  Edexcel twin's approved wording verbatim, including the "between Qs
+  and Qd" clause).
 
 ## 4. AQA minimum-price figure caption, same error
 
@@ -73,7 +75,9 @@ Format per entry:
   above the equilibrium price, showing the resulting excess supply
   (surplus)."
 - **Confidence** — high.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-05; applied with the
+  Edexcel twin's approved wording verbatim, including the "between Qd
+  and Qs" clause).
 
 ## 5. AQA subsidy figure caption says "an subsidy" and "government revenue"
 
@@ -86,4 +90,4 @@ Format per entry:
   market, showing the shift in supply, the new equilibrium, and the
   government expenditure incurred."
 - **Confidence** — high.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-05; applied as proposed).
