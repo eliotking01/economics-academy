@@ -6,7 +6,7 @@
   "themeName": "Theme 2: The UK Economy - Performance and Policies",
   "deckId": "edexcel-a-theme-2",
   "deckTitle": "Edexcel A-Level Economics Theme 2 Flashcards",
-  "count": 55,
+  "count": 73,
   "topics": [
     {
       "subtopic": "2-1-1-economic-growth",
@@ -91,6 +91,34 @@
       "title": "Long-Run Aggregate Supply",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
       "count": 7
+    },
+    {
+      "subtopic": "2-4-1-national-income",
+      "specCode": "2.4.1",
+      "title": "National Income",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html",
+      "count": 3
+    },
+    {
+      "subtopic": "2-4-2-injections-withdrawals",
+      "specCode": "2.4.2",
+      "title": "Injections and Withdrawals",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html",
+      "count": 4
+    },
+    {
+      "subtopic": "2-4-3-equilibrium-levels-of-real-national-output",
+      "specCode": "2.4.3",
+      "title": "Equilibrium Levels of Real National Output",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html",
+      "count": 5
+    },
+    {
+      "subtopic": "2-4-4-the-multiplier",
+      "specCode": "2.4.4",
+      "title": "The Multiplier",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+      "count": 6
     }
   ],
   "cards": [
@@ -958,6 +986,308 @@
       "back": "<p>The Edexcel six: <strong>technological advances</strong>; <strong>changes in relative productivity</strong>; <strong>changes in education and skills</strong>; <strong>changes in government regulations</strong>; <strong>demographic changes and migration</strong>; <strong>competition policy</strong>.</p><p>Each works by changing the quantity or quality of the factors of production. The policies that target them are supply-side policies (2.6.3).</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-4-1-diagram-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-1-national-income",
+      "cardType": "diagram",
+      "difficulty": "foundation",
+      "tags": [
+        "national-income",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>circular flow of income</strong> for a simple two-agent economy.</p>",
+      "back": "<p>Households and firms are linked by two pairs of flows. <strong>Real flows</strong>: households provide the factors of production — land, labour, capital, enterprise — and firms provide goods and services.</p><p><strong>Money flows</strong>: firms pay income — rent, wages, interest, profit — and households return it as consumer expenditure, which becomes firms' revenue. Income circulates continuously between the two.</p>",
+      "svgRef": "/images/diagrams/svg/circular-flow-of-income.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html",
+      "svgAlt": "Circular flow between firms and households: factors of production and expenditure flow to firms, goods and services and income flow to households"
+    },
+    {
+      "id": "edexcel-a-2-4-1-def-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-1-national-income",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "national-income",
+        "measurement"
+      ],
+      "front": "<p>Define <strong>national income</strong>, and state the three ways of measuring it.</p>",
+      "back": "<p><strong>National income</strong> — the total value of output, expenditure, and income generated in an economy over a period of time, usually a year.</p><p>Measured three ways, which in theory give the same total: the <strong>output</strong> method (value of all goods and services produced), the <strong>income</strong> method (all incomes earned) and the <strong>expenditure</strong> method (all spending, C + I + G + (X − M)).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html"
+    },
+    {
+      "id": "edexcel-a-2-4-1-def-02",
+      "specCode": "2.4.1",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-1-national-income",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "national-income"
+      ],
+      "front": "<p>Distinguish <strong>income</strong> from <strong>wealth</strong>.</p>",
+      "back": "<p><strong>Income</strong> is a <strong>flow</strong> — money received over a period of time, such as wages or interest.</p><p><strong>Wealth</strong> is a <strong>stock</strong> — assets that can generate income, such as property or savings. The two interact: wealth generates income, and saved income adds to wealth — but a high income does not guarantee high wealth, or vice versa.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-1-national-income.html"
+    },
+    {
+      "id": "edexcel-a-2-4-2-def-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-2-injections-withdrawals",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "national-income"
+      ],
+      "front": "<p>Name the three <strong>injections</strong> into the circular flow, with their sources.</p>",
+      "back": "<p>Additions of new spending that expand the flow: <strong>investment (I)</strong> — firms' spending on capital goods, sourced from the financial sector; <strong>government spending (G)</strong> — public-sector spending on state-provided goods and services; <strong>exports (X)</strong> — revenue from foreign buyers of domestic output.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html"
+    },
+    {
+      "id": "edexcel-a-2-4-2-def-02",
+      "specCode": "2.4.2",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-2-injections-withdrawals",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "national-income"
+      ],
+      "front": "<p>Name the three <strong>withdrawals</strong> from the circular flow, with their destinations.</p>",
+      "back": "<p>Incomes not spent on domestic output, shrinking the flow: <strong>savings (S)</strong> — income placed in banks or pensions (the financial sector); <strong>taxation (T)</strong> — income paid to the government; <strong>imports (M)</strong> — spending that flows overseas. Also called leakages.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html"
+    },
+    {
+      "id": "edexcel-a-2-4-2-formula-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-2-injections-withdrawals",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "formula"
+      ],
+      "front": "<p>State the condition for <strong>equilibrium in the circular flow</strong>, and what happens away from it.</p>",
+      "back": "<p>National income is in equilibrium when total injections equal total withdrawals. If <strong>injections exceed withdrawals</strong>, the circular flow expands and national income grows; if <strong>withdrawals exceed injections</strong>, it contracts and the economy moves towards recession.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>I</mi><mo>+</mo><mi>G</mi><mo>+</mo><mi>X</mi><mo>=</mo><mi>S</mi><mo>+</mo><mi>T</mi><mo>+</mo><mi>M</mi></mrow><annotation encoding=\"application/x-tex\">I + G + X = S + T + M</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07847em;\">I</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\">G</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07847em;\">X</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.05764em;\">S</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">T</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">M</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-2-4-2-diagram-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-2-injections-withdrawals",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>extended circular flow</strong>, showing injections and withdrawals.</p>",
+      "back": "<p>Extending the model to include the government, the financial sector and foreign trade adds flows that change the size of the circular flow: injections — <strong>investment, government spending, exports</strong> — enter it, and withdrawals — <strong>savings, taxation, imports</strong> — leave it.</p><p>The economy grows when the money entering exceeds the money leaking out.</p>",
+      "svgRef": "/images/diagrams/svg/circular-flow-of-income-injections-withdrawals.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html",
+      "svgAlt": "Circular flow between firms and households with government spending, investment and exports entering, and taxation, savings and imports leaving"
+    },
+    {
+      "id": "edexcel-a-2-4-3-def-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-3-equilibrium-levels-of-real-national-output",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "aggregate-demand",
+        "aggregate-supply"
+      ],
+      "front": "<p>Define <strong>short-run and long-run macroeconomic equilibrium</strong>.</p>",
+      "back": "<p><strong>Short-run equilibrium</strong> occurs where AD = SRAS, determining the actual price level and real national output.</p><p><strong>Long-run equilibrium</strong> divides the schools: in the classical view it occurs only where AD = SRAS = LRAS at full employment Yfe — deviations self-correct through wages and prices. In the Keynesian view the economy can settle in equilibrium <strong>below</strong> Yfe, with unemployment persisting unless demand is stimulated.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html"
+    },
+    {
+      "id": "edexcel-a-2-4-3-diagram-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-3-equilibrium-levels-of-real-national-output",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-demand",
+        "aggregate-supply",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>rise in AD in the classical model</strong>.</p>",
+      "back": "<p>Against a vertical LRAS, a rightward shift of AD (AD1 to AD2) raises the price level from PL1 to PL2 but leaves output unchanged at <strong>Yfe</strong>.</p><p>In the classical long run, demand management cannot raise real output — extra demand is purely inflationary, because the economy is already at full employment.</p>",
+      "svgRef": "/images/diagrams/svg/classical-ad-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html",
+      "svgAlt": "AD1 shifting right to AD2 against a vertical LRAS1 curve, raising the price level from PL1 to PL2 with output fixed at Yfe"
+    },
+    {
+      "id": "edexcel-a-2-4-3-diagram-02",
+      "specCode": "2.4.3",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-3-equilibrium-levels-of-real-national-output",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-demand",
+        "aggregate-supply",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>rise in AD in the Keynesian model</strong>.</p>",
+      "back": "<p>With spare capacity, a rightward shift of AD (AD1 to AD2) along the L-shaped curve delivers a <strong>large rise in output</strong> (Y1 to Y2) for only a modest rise in the price level (PL1 to PL2), still short of full capacity Yfe.</p><p>The effect of any AD shift depends on <strong>where the economy sits on the curve</strong>: flat section — mostly output; vertical section — mostly prices.</p>",
+      "svgRef": "/images/diagrams/svg/keynesian-ad-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html",
+      "svgAlt": "AD1 shifting right to AD2 along an L-shaped Keynesian LRAS1 curve, raising output strongly from Y1 to Y2 with a modest price level rise, below Yfe"
+    },
+    {
+      "id": "edexcel-a-2-4-3-diagram-03",
+      "specCode": "2.4.3",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-3-equilibrium-levels-of-real-national-output",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "growth",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>rise in LRAS in the classical model</strong>.</p>",
+      "back": "<p>LRAS1 shifts right to LRAS2 along the AD curve: potential output rises from Yfe1 to Yfe2 and the price level <strong>falls</strong> from PL1 to PL2.</p><p>Long-run growth in productive capacity delivers more output at lower prices — the classical case for supply-side improvement over demand stimulus.</p>",
+      "svgRef": "/images/diagrams/svg/classical-lras-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html",
+      "svgAlt": "Vertical LRAS1 shifting right to LRAS2 along a downward-sloping AD curve, raising output from Yfe1 to Yfe2 and lowering the price level from PL1 to PL2"
+    },
+    {
+      "id": "edexcel-a-2-4-3-diagram-04",
+      "specCode": "2.4.3",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-3-equilibrium-levels-of-real-national-output",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "growth",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>rise in LRAS in the Keynesian model</strong>.</p>",
+      "back": "<p>The whole L-shaped curve shifts right (LRAS1 to LRAS2) along AD: equilibrium output rises from Y1 to Y2 and the price level falls from PL1 to PL2.</p><p>The gain is largest when the economy was operating near the <strong>vertical section</strong> of the old curve — where capacity, not demand, was the binding constraint.</p>",
+      "svgRef": "/images/diagrams/svg/keynesian-lras-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html",
+      "svgAlt": "Keynesian L-shaped LRAS1 shifting right to LRAS2 along a downward-sloping AD curve, raising output from Y1 to Y2 and lowering the price level from PL1 to PL2"
+    },
+    {
+      "id": "edexcel-a-2-4-4-def-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-4-the-multiplier",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "national-income",
+        "multiplier"
+      ],
+      "front": "<p>Define <strong>the multiplier</strong>, and state the multiplier ratio.</p>",
+      "back": "<p><strong>The multiplier</strong> is the process by which an initial injection, such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP.</p><p>The <strong>multiplier ratio</strong> k = final change in real GDP ÷ initial injection. If a £2 billion increase in government spending raises GDP by £6 billion, the multiplier is 3.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html"
+    },
+    {
+      "id": "edexcel-a-2-4-4-chain-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-4-the-multiplier",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "multiplier"
+      ],
+      "front": "<p>Explain the <strong>multiplier process</strong>, step by step.</p>",
+      "back": "<p>An initial injection — say the government builds a hospital — becomes <strong>income</strong> for builders and architects. They spend a proportion of it, set by their <strong>marginal propensity to consume</strong>, and that spending becomes income for others, who spend a proportion in turn.</p><p>Each round is smaller than the last, so the total rise in national income converges on a <strong>multiple of the original injection</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html"
+    },
+    {
+      "id": "edexcel-a-2-4-4-def-02",
+      "specCode": "2.4.4",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-4-the-multiplier",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "multiplier"
+      ],
+      "front": "<p>Define the four <strong>marginal propensities</strong>, and the relationship between them.</p>",
+      "back": "<p>Each shows what happens to an extra pound of income: <strong>MPC</strong> — the proportion spent on domestic goods and services; <strong>MPS</strong> — the proportion saved; <strong>MPT</strong> — the proportion paid in tax; <strong>MPM</strong> — the proportion spent on imports.</p><p><strong>MPC + MPS + MPT + MPM = 1</strong>, because every extra pound is either consumed, saved, taxed or spent on imports.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html"
+    },
+    {
+      "id": "edexcel-a-2-4-4-formula-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-4-the-multiplier",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "multiplier",
+        "formula"
+      ],
+      "front": "<p>State the two <strong>multiplier formulae</strong>, and what makes the multiplier large or small.</p>",
+      "back": "<p>Using consumption: 1 ÷ (1 − MPC). Using withdrawals: 1 ÷ MPW, where MPW = MPS + MPT + MPM. The two agree because 1 − MPC = MPW.</p><p>The size of the multiplier depends on <strong>leakages</strong>: a higher MPC means a larger multiplier; higher saving, taxation or imports shrink it. Spare capacity and confidence also strengthen the effect in practice.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>M</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\">/</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−</mo><mi>M</mi><mi>P</mi><mi>C</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\">/</mi><mi>M</mi><mi>P</mi><mi>W</mi></mrow><annotation encoding=\"application/x-tex\">M = 1/(1 - MPC) = 1/MPW</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">M</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord\">1/</span><span class=\"mopen\">(</span><span class=\"mord\">1</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">MPC</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord\">1/</span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">MP</span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">W</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-2-4-4-calc-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-4-the-multiplier",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "multiplier",
+        "calculation"
+      ],
+      "front": "<p>In an economy, households save 15p, pay 20p in tax and spend 5p on imports out of every extra £1 of income. Investment rises by £3 billion. Calculate the <strong>multiplier and the final change in real GDP</strong>.</p>",
+      "back": "<p>MPW = 0.15 + 0.20 + 0.05 = <strong>0.4</strong></p><p>Multiplier = 1 ÷ 0.4 = <strong>2.5</strong></p><p>Final change in real GDP = £3bn × 2.5 = <strong>£7.5 billion</strong></p><p>Every leakage counts: MPC here is 1 − 0.4 = 0.6, and 1 ÷ (1 − 0.6) gives the same 2.5 — using the saving figure alone would overstate the multiplier badly.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html"
+    },
+    {
+      "id": "edexcel-a-2-4-4-diagram-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 National income",
+      "subtopic": "2-4-4-the-multiplier",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "national-income",
+        "multiplier",
+        "diagram"
+      ],
+      "front": "<p>Show the <strong>multiplier effect</strong> on an AD/AS diagram.</p>",
+      "back": "<p>The initial injection shifts AD from AD1 to AD2; the induced rounds of consumer spending carry it further to <strong>AD3</strong>. Real GDP rises from Y1 to Y2 and then Y3 — a total rise larger than the initial injection alone would give.</p><p>Note the price effect: as the economy climbs the Keynesian curve towards capacity, more of each shift feeds prices (PL1 to PL3) and less feeds output.</p>",
+      "svgRef": "/images/diagrams/svg/multiplier.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
+      "svgAlt": "AD shifting right from AD1 to AD2 and then AD3 along a Keynesian LRAS1 curve, raising real GDP from Y1 to Y2 to Y3 and the price level from PL1 to PL3"
     }
   ]
 }

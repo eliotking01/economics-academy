@@ -28,16 +28,15 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **60 ✅ · 0 🟡 · 106 ❌** of 166 units.
-Cards shipped: 239 (95 Edexcel Theme 1 + 89 AQA micro + 55 Edexcel
-Theme 2), **all approved by Eliot** (batch 3 approved 2026-08-05; its
-follow-on Keynesian-shift card was authored to Eliot's explicit "add a
-Keynesian variant, I'd like both included" instruction). SVG diagrams
-shipped: 30 (all geometry-verified; twelve are shared with the AQA
-deck; four are AQA-only; the AD/AS family is nine strong — ad-shift,
-sras-movements, sras-shift, sras-shift-left, ad-shift-right,
-lras-classical, lras-keynesian, lras-shift, lras-shift-keynesian —
-each drawn from its ground-truth PNG on the 2-1-2/2-3-x notes pages).
+Tally (2026-08-05): **60 ✅ · 4 🟡 · 102 ❌** of 166 units.
+Cards shipped: 257 (95 Edexcel Theme 1 + 89 AQA micro + 73 Edexcel
+Theme 2). Approved through section 2.3; **batch 4 (18 cards, all of
+section 2.4, with 7 new SVGs) is built and integrated but AWAITS
+ELIOT'S REVIEW.** SVG diagrams shipped: 37 (all geometry-verified;
+twelve shared with the AQA deck; four AQA-only). The AD/AS family is
+now sixteen strong, and batch 4 adds a new schematic class: the two
+circular-flow diagrams (ring + directional arrows, teal injections in,
+red withdrawals out — a palette extension awaiting Eliot's approval).
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -52,9 +51,11 @@ wording) and `subsidy-gov-expenditure.svg` (attached to
 **Phase 2 (Edexcel Theme 2) is underway** — sections 2.1–2.3 done and
 approved (batch 3 approved 2026-08-05, including the lras-shift
 decision: **both** a classical and a Keynesian shift diagram ship, as
-separate cards); sections 2.4–2.6 remain (~45–55 cards; circular flow,
-equilibrium output, multiplier, output gaps, trade cycle). See Next
-steps for the resume point.
+separate cards). Batch 4 (section 2.4 complete: circular flow,
+injections/withdrawals, equilibrium output in both models, the
+multiplier) is authored, QA'd and built — **awaiting review**.
+CONTENT_ISSUES #6 (multiplier.png caption names two AD curves, figure
+draws three) is **open** for Eliot. Sections 2.5–2.6 remain (8 units).
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -83,7 +84,7 @@ steps for the resume point.
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 55 cards so far; 24 units)
+### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 73 cards so far; 24 units)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
@@ -99,10 +100,10 @@ steps for the resume point.
 | 2.3.1 Aggregate supply | ✅ | 3 definition, 1 diagram |
 | 2.3.2 Short-run aggregate supply | ✅ | 1 definition, 1 diagram, 2 chain |
 | 2.3.3 Long-run aggregate supply | ✅ | 2 definition, 4 diagram, 1 evaluation |
-| 2.4.1 National income | ❌ |
-| 2.4.2 Injections & withdrawals | ❌ |
-| 2.4.3 Equilibrium levels of real national output | ❌ |
-| 2.4.4 The multiplier | ❌ |
+| 2.4.1 National income | 🟡 review | 2 definition, 1 diagram |
+| 2.4.2 Injections & withdrawals | 🟡 review | 2 definition, 1 formula, 1 diagram |
+| 2.4.3 Equilibrium levels of real national output | 🟡 review | 1 definition, 4 diagram |
+| 2.4.4 The multiplier | 🟡 review | 2 definition, 1 chain, 1 formula, 1 calculation, 1 diagram |
 | 2.5.1 Causes of growth | ❌ |
 | 2.5.2 Output gaps | ❌ |
 | 2.5.3 Trade cycle | ❌ |
@@ -314,7 +315,7 @@ content and follow in phase 5 of the approved order.
 
 On branch `flashcards-feature`, clean tree. Style guide LOCKED
 (docs/DIAGRAM_STYLE.md). Automated checks all green and continuously
-re-run: geometry (29 SVGs), HTML, links, glossary, Liquid, text/markup
+re-run: geometry (37 SVGs), HTML, links, glossary, Liquid, text/markup
 integrity, build idempotency.
 
 QA still open (needs a real browser/deploy): real print-dialog check to
@@ -397,14 +398,30 @@ Useful QA techniques:
   verifiers green; build idempotent.
   Matrix: 57 ✅ · 3 🟡 · 106 ❌; 238 cards, 29 SVGs, three decks.
 
+- 2026-08-05 — **Theme 2 batch 4 authored and built, awaiting review**:
+  18 cards completing section 2.4 (circular flow, injections &
+  withdrawals with the J=W equilibrium formula, classical vs Keynesian
+  equilibrium with all four AD/LRAS shift diagrams, and the multiplier
+  with formulae, an original calculation and the three-AD diagram) plus
+  seven SVGs, each drawn from visual inspection of its ground-truth PNG
+  and through the full self-QA loop (zero geometry flags, junction
+  close-ups all exact, mobile legible). The two circular-flow SVGs open
+  a schematic diagram class (no axes; ring + directional arrows; teal
+  injections, red withdrawals — palette extension to confirm with
+  Eliot). CONTENT_ISSUES #6 logged (multiplier.png caption/figure
+  mismatch), left open. Matrix: 60 ✅ · 4 🟡 · 102 ❌; 257 cards, 37
+  SVGs.
+
 ## Next steps (a fresh session starts here)
 
-1. **Theme 2 batch 4: section 2.4** (4 units: national income /
-   circular flow, injections & withdrawals, equilibrium real national
-   output, the multiplier — with formulae 1/(1−MPC) and 1/MPW and a
-   multiplier calculation card). Diagrams: circular flow, AD/AS
-   equilibrium (2.4.3) — draw from the ground-truth PNGs on the 2-4-x
-   pages, never by filename.
+1. **Get batch 4 approved.** 18 cards (2.4.1–2.4.4) + 7 SVGs
+   (circular-flow-of-income, …-injections-withdrawals,
+   classical-ad-shift-right, keynesian-ad-shift-right,
+   classical-lras-shift-right, keynesian-lras-shift-right, multiplier)
+   are built and presented. Two items for Eliot inside that review:
+   the circular-flow palette choice (teal injections in / red
+   withdrawals out) and CONTENT_ISSUES #6 (multiplier caption).
+   On approval flip 2.4.x to ✅.
 2. **Theme 2 batch 5: sections 2.5–2.6** (8 units; output gaps, trade
    cycle, policy diagrams). That completes Theme 2, after which:
    AQA macro T2-mirrors (phase 3).

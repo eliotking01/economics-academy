@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">An increase in long-run aggregate supply in the Keynesian model</title>
+  <desc id="d">A Keynesian L-shaped LRAS1 curve shifts right to LRAS2 along a downward-sloping AD curve. Equilibrium output rises from Y1 to Y2 and the price level falls from PL1 to PL2.</desc>
+  <!-- geometry
+       intersections: 400,335 451.3,386.3
+  -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d52349"/>
+    </marker>
+  </defs>
+  <!-- guides -->
+  <line x1="100" y1="335" x2="400" y2="335" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="400" y1="335" x2="400" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="386.3" x2="451.3" y2="386.3" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="451.3" y1="386.3" x2="451.3" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="32" y="78" font-size="26" fill="#333333">level</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Real GDP</text>
+  <!-- curves -->
+  <path d="M 100,400 L 250,400 Q 350,400 400,335 Q 430,292 430,200 L 430,110" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 250,400 L 370,400 Q 470,400 520,335 Q 550,292 550,200 L 550,110" fill="none" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="270" y1="205" x2="540" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="455" y1="170" x2="525" y2="170" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- labels -->
+  <text x="430" y="88" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="middle">LRAS1</text>
+  <text x="550" y="88" font-size="26" font-weight="700" fill="#d52349" text-anchor="middle">LRAS2</text>
+  <text x="548" y="483" font-size="26" font-weight="700" fill="#1d70b8">AD</text>
+  <text x="92" y="343" font-size="24" fill="#333333" text-anchor="end">PL1</text>
+  <text x="92" y="394" font-size="24" fill="#333333" text-anchor="end">PL2</text>
+  <text x="400" y="552" font-size="24" fill="#333333" text-anchor="middle">Y1</text>
+  <text x="451" y="552" font-size="24" fill="#333333" text-anchor="middle">Y2</text>
+</svg>

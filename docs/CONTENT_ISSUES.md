@@ -91,3 +91,22 @@ Format per entry:
   government expenditure incurred."
 - **Confidence** — high.
 - **Status** — fixed (approved by Eliot 2026-08-05; applied as proposed).
+
+## 6. Multiplier figure caption describes two AD curves; the figure draws three
+
+- **Location** — `revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html`,
+  Figure 1 caption (`multiplier.png`).
+- **Issue** — the caption reads "An initial increase in aggregate demand
+  (AD) from AD1 to AD2 leads to a larger increase in real GDP from Y1 to
+  Y2 due to the multiplier process." The figure itself draws **three**
+  curves — AD1, AD2 and AD3, with feet Y1, Y2, Y3 and price levels PL1 to
+  PL3 — where AD2 to AD3 is the induced multiplier stage the caption never
+  mentions. As written the caption describes a two-curve diagram.
+- **Proposed correction** — "Figure 1: The multiplier effect on an AD/AS
+  diagram. An initial injection shifts aggregate demand from AD1 to AD2,
+  and the induced rounds of spending carry it further to AD3, so the
+  final rise in real GDP (Y1 to Y3) is larger than the initial injection
+  alone."
+- **Confidence** — high that caption and figure disagree (three curves
+  are plainly drawn); the proposed wording is one way to fix it.
+- **Status** — open.
