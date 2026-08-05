@@ -28,14 +28,13 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **64 ✅ · 8 🟡 · 94 ❌** of 166 units.
+Tally (2026-08-05): **72 ✅ · 0 🟡 · 94 ❌** of 166 units.
 Cards shipped: 287 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2). Approved through section 2.4 (batch 4 approved 2026-08-05,
-with the circular-flow palette and the CONTENT_ISSUES #6 caption
-fix). **Batch 5 (30 cards, sections 2.5–2.6 — ALL remaining Theme 2
-units — with 6 new SVGs) is built and integrated but AWAITS ELIOT'S
-REVIEW.** SVG diagrams shipped: 43 (all geometry-verified; twelve
-shared with the AQA deck; four AQA-only).
+Theme 2), **all approved by Eliot** — batch 5 approved 2026-08-05,
+completing **Edexcel Theme 2 in full** (103 cards, 24/24 units,
+including the spec-sourced MPC card). SVG diagrams shipped: 43 (all
+geometry-verified; twelve shared with the AQA deck; four AQA-only).
+Phase 3 (AQA macro deck, T2-mirror sections first) is underway.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -51,10 +50,9 @@ wording) and `subsidy-gov-expenditure.svg` (attached to
 approved (batch 3 approved 2026-08-05, including the lras-shift
 decision: **both** a classical and a Keynesian shift diagram ship, as
 separate cards). Batch 4 approved 2026-08-05; CONTENT_ISSUES #6 approved and fixed
-the same day. Batch 5 (sections 2.5–2.6, 30 cards + 6 SVGs: output
-gaps in both models, trade cycle, PPF growth variants, Phillips
-curve) is authored, QA'd and built — **awaiting review**. On its
-approval Theme 2 is COMPLETE and phase 3 (AQA macro mirrors) begins.
+the same day. Batch 5 approved 2026-08-05 — **Theme 2 is COMPLETE**. Phase 3
+(AQA macro deck: T2-mirror sections 2.1–2.3 and 2.5, then the rest
+in phase 7) is underway.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -83,7 +81,7 @@ approval Theme 2 is COMPLETE and phase 3 (AQA macro mirrors) begins.
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 103 cards; 24 units)
+### Edexcel A (9EC0) — Theme 2 ✅ (deck `edexcel-a-theme-2`, 103 cards; 24 units, all approved)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
@@ -103,14 +101,14 @@ approval Theme 2 is COMPLETE and phase 3 (AQA macro mirrors) begins.
 | 2.4.2 Injections & withdrawals | ✅ | 2 definition, 1 formula, 1 diagram |
 | 2.4.3 Equilibrium levels of real national output | ✅ | 1 definition, 4 diagram |
 | 2.4.4 The multiplier | ✅ | 2 definition, 1 chain, 1 formula, 1 calculation, 1 diagram |
-| 2.5.1 Causes of growth | 🟡 review | 1 definition, 2 diagram, 1 chain |
-| 2.5.2 Output gaps | 🟡 review | 1 definition, 3 diagram, 1 evaluation |
-| 2.5.3 Trade cycle | 🟡 review | 2 definition, 1 diagram |
-| 2.5.4 The impact of economic growth | 🟡 review | 2 evaluation |
-| 2.6.1 Possible macroeconomic objectives | 🟡 review | 1 definition, 1 evaluation |
-| 2.6.2 Demand-side policies | 🟡 review | 4 definition, 1 chain, 1 diagram, 1 evaluation |
-| 2.6.3 Supply-side policies | 🟡 review | 2 definition, 1 diagram, 1 evaluation |
-| 2.6.4 Conflicts between objectives and policies | 🟡 review | 1 definition, 1 diagram, 1 evaluation |
+| 2.5.1 Causes of growth | ✅ | 1 definition, 2 diagram, 1 chain |
+| 2.5.2 Output gaps | ✅ | 1 definition, 3 diagram, 1 evaluation |
+| 2.5.3 Trade cycle | ✅ | 2 definition, 1 diagram |
+| 2.5.4 The impact of economic growth | ✅ | 2 evaluation |
+| 2.6.1 Possible macroeconomic objectives | ✅ | 1 definition, 1 evaluation |
+| 2.6.2 Demand-side policies | ✅ | 4 definition, 1 chain, 1 diagram, 1 evaluation |
+| 2.6.3 Supply-side policies | ✅ | 2 definition, 1 diagram, 1 evaluation |
+| 2.6.4 Conflicts between objectives and policies | ✅ | 1 definition, 1 diagram, 1 evaluation |
 
 ### Edexcel A (9EC0) — Theme 3 ❌ (no deck; 20 units)
 
