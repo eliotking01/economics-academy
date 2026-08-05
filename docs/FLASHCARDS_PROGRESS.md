@@ -28,13 +28,12 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **52 ✅ · 5 🟡 · 109 ❌** of 166 units.
+Tally (2026-08-05): **57 ✅ · 0 🟡 · 109 ❌** of 166 units.
 Cards shipped: 222 (95 Edexcel Theme 1 + 89 AQA micro + 38 Edexcel
-Theme 2). SVG diagrams shipped: 22 (all geometry-verified; twelve are
-shared with the AQA deck; four are AQA-only; ad-shift is the first of
-the AD/AS family, drawn from ad-shift.png on the demand-curve-shift
-idiom). Theme 2 batch 2 (17 cards, all of section 2.2) is authored and
-built — **awaiting Eliot's review**.
+Theme 2), **all approved by Eliot** — nothing awaiting review. SVG
+diagrams shipped: 22 (all geometry-verified; twelve are shared with the
+AQA deck; four are AQA-only; ad-shift is the first of the AD/AS family,
+drawn from ad-shift.png on the demand-curve-shift idiom).
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -46,14 +45,10 @@ max/min/subsidy captions, fixed with the Edexcel twin's approved
 wording) and `subsidy-gov-expenditure.svg` (attached to
 `aqa-1-8-9-diagram-04`). No open content issues.
 
-**Phase 2 (Edexcel Theme 2) is underway** — section 2.1 done; sections
-2.2–2.6 remain (~80–90 cards, the AD/AS SVG family, circular flow,
-output gaps, trade cycle, multiplier). Standing notes: the 2.1.1
-"national happiness" card is spec-sourced because the notes never cover
-that bullet (a future notes addition); demand-pull/cost-push diagram
-cards for 2.1.2 get added when the AD/AS SVGs exist; Theme 2 notes-page
-links need an approved wording variant ("Theme 2 deck") before any
-notes page is touched.
+**Phase 2 (Edexcel Theme 2) is underway** — sections 2.1 and 2.2 done
+and approved; sections 2.3–2.6 remain (~60–75 cards; the SRAS/LRAS
+diagrams, circular flow, equilibrium output, multiplier, output gaps,
+trade cycle). See Next steps for the resume point.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -82,7 +77,7 @@ notes page is touched.
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 21 cards so far; 24 units)
+### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 38 cards so far; 24 units)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
@@ -90,11 +85,11 @@ notes page is touched.
 | 2.1.2 Inflation | ✅ | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation |
 | 2.1.3 Employment & unemployment | ✅ | 4 definition, 1 calculation, 1 evaluation |
 | 2.1.4 Balance of payments | ✅ | 2 definition, 1 calculation, 1 chain |
-| 2.2.1 Aggregate demand | 🟡 review | 2 definition, 1 formula, 1 calculation, 1 diagram |
-| 2.2.2 Consumption | 🟡 review | 3 definition |
-| 2.2.3 Investment | 🟡 review | 2 definition, 2 chain |
-| 2.2.4 Government expenditure | 🟡 review | 1 definition, 1 chain |
-| 2.2.5 Net trade | 🟡 review | 2 definition, 1 chain |
+| 2.2.1 Aggregate demand | ✅ | 2 definition, 1 formula, 1 calculation, 1 diagram |
+| 2.2.2 Consumption | ✅ | 3 definition |
+| 2.2.3 Investment | ✅ | 2 definition, 2 chain |
+| 2.2.4 Government expenditure | ✅ | 1 definition, 1 chain |
+| 2.2.5 Net trade | ✅ | 2 definition, 1 chain |
 | 2.3.1 Aggregate supply | ❌ |
 | 2.3.2 Short-run aggregate supply | ❌ |
 | 2.3.3 Long-run aggregate supply | ❌ |
@@ -365,28 +360,67 @@ Useful QA techniques:
 - 2026-08-05 — Full-scope re-grounding: coverage matrix built from a repo
   audit (decks, SVGs, pages, wiring); this file restructured around the
   FULL PROJECT SCOPE statement.
+- 2026-08-05 — Build order approved (Option A, paired mirrors; single
+  deck per AQA side). **Phase 1 built and approved**: AQA micro batches
+  1–3 (76 new cards — sections 1.1–1.3 complete, 1.2/1.8 top-ups,
+  1.5.11, 1.8 complete) with three new SVGs (total-utility,
+  underproduction, overconsumption completing the externality quadrants).
+  CONTENT_ISSUES 3–5 (AQA 1.8.9 captions) approved and fixed;
+  subsidy-gov-expenditure.svg drawn and attached.
+- 2026-08-05 — **Phase 2 started and approved through section 2.2**:
+  `edexcel-a-theme-2` deck created (sitemap entry added, hub automatic);
+  batch 1 (21 cards, section 2.1) and batch 2 (17 cards, section 2.2,
+  with ad-shift.svg opening the AD/AS family) both approved by Eliot.
+  Matrix: 57 ✅ · 0 🟡 · 109 ❌; 222 cards, 22 SVGs, three decks.
 
-## Next steps
+## Next steps (a fresh session starts here)
 
-1. **Eliot chooses the build order** for the 138 ❌ / 6 🟡 remaining units
-   (roadmap options proposed in chat 2026-08-05; recommendation: paired
-   mirrors — an Edexcel theme, then immediately its AQA mirror sections).
-   Also pending his call: AQA deck granularity (recommend keeping the single
-   `aqa-micro` deck and one future `aqa-macro` deck, matching the shipped
-   URLs) and AQA notes-page links wording.
-2. Build per the approved order under the standing rules: every card
-   verified against the official spec, board-specific cards and diagram
-   variants where the boards differ, diagrams per docs/DIAGRAM_STYLE.md with
-   geometry declarations and SVG-to-PNG self-QA, content presented in
-   ~20-card batches for review, suspected notes errors to
-   docs/CONTENT_ISSUES.md, sitemap/SEO updated as decks ship, small frequent
-   commits, coverage matrix updated every session.
-3. Browser/deploy-bound QA (see Working state) once Eliot is ready.
+1. **Theme 2 batch 3: section 2.3 (aggregate supply, 3 units).** The big
+   AD/AS diagram batch: SRAS movement/shift, classical vs Keynesian LRAS —
+   draw each SVG from its ground-truth PNG on the 2-3-x notes pages
+   (visually inspected, never by filename), per docs/DIAGRAM_STYLE.md with
+   geometry declarations and zoomed junction renders. Once AD/AS
+   equilibrium SVGs exist, also add the deferred demand-pull and cost-push
+   diagram cards to 2.1.2 (ground truths `ad-shift-right.png` and
+   `sras-shift-left.png` on the 2-1-2-inflation page).
+2. **Theme 2 batches 4–5: sections 2.4–2.6** (12 units, ~45–55 cards;
+   diagrams: circular flow, injections/withdrawals, equilibrium output,
+   multiplier, output gaps, trade cycle). That completes Theme 2.
+3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
+   macro deck). Create `flashcards-data/aqa/macro.json` (deckId
+   `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
+   auto-discovers it; add the sitemap entry for
+   `/flashcards/aqa/macro/`. Then Edexcel Theme 3 (phase 4), AQA 1.4–1.6
+   (phase 5), Theme 4 (phase 6), AQA remainder (phase 7).
+4. Present each ~20-card batch for Eliot's review; matrix rows stay
+   🟡 review until he approves.
+
+Session know-how a fresh chat needs:
+
+- `verify_html.py`/`verify_links.py` default to `revision-notes/` only —
+  run them as `python3 scripts/verify_html.py flashcards revision-notes`
+  to cover the flashcard pages (183 pages currently).
+- Spec text comes out of `specificiations/*.pdf` with a small Swift +
+  PDFKit script (macOS has no pdftotext; the house rule is Swift+PDFKit
+  for PDF work). AQA 7136 A-level content starts ~p32 (4.1.x) and ~p45
+  (4.1.8); Edexcel 9EC0 Theme 2 starts p26.
+- The builder auto-discovers any `flashcards-data/<board>/<theme>.json`;
+  hub cards are automatic, sitemap entries are manual.
+- Verbatim cards: `source.verbatim` must appear in the notes page after
+  tag-stripping (tags become spaces) and whitespace-normalisation — copy
+  the exact punctuation, including curly quotes where the page has them.
 
 ## Open questions
 
-- Build order, AQA deck granularity, AQA links wording — all awaiting
-  Eliot (see Next steps 1).
+- **Notes-page links wording** for Theme 2 pages and AQA pages: the
+  approved block says "Theme 1 deck", so each new deck needs Eliot to
+  approve a wording variant before any notes page is edited (standing
+  rule 1). Ask when a deck's coverage justifies it.
+- The 2.1.1 national-happiness card is spec-sourced; the notes never
+  cover that bullet — a candidate notes addition for Eliot someday.
+- Browser/deploy-bound QA still open: real print-dialog check, GA4
+  DebugView after deploy, keyboard/screen-reader spot check, DevTools
+  device-mode mobile.
 - Deferred by design: typed-answer mode (`acceptableAnswers` stays empty),
   premium delivery layer (out of scope until freemium), whether notes pages
   later swap their PNGs for the SVG library.
