@@ -28,15 +28,14 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **64 ✅ · 0 🟡 · 102 ❌** of 166 units.
-Cards shipped: 257 (95 Edexcel Theme 1 + 89 AQA micro + 73 Edexcel
-Theme 2), **all approved by Eliot** (batch 4 approved 2026-08-05,
-together with the circular-flow schematic palette — teal injections
-in, red withdrawals out, now documented in DIAGRAM_STYLE.md — and the
-CONTENT_ISSUES #6 caption fix, applied). SVG diagrams shipped: 37
-(all geometry-verified; twelve shared with the AQA deck; four
-AQA-only; sixteen in the AD/AS family plus the two circular-flow
-schematics).
+Tally (2026-08-05): **64 ✅ · 8 🟡 · 94 ❌** of 166 units.
+Cards shipped: 287 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
+Theme 2). Approved through section 2.4 (batch 4 approved 2026-08-05,
+with the circular-flow palette and the CONTENT_ISSUES #6 caption
+fix). **Batch 5 (30 cards, sections 2.5–2.6 — ALL remaining Theme 2
+units — with 6 new SVGs) is built and integrated but AWAITS ELIOT'S
+REVIEW.** SVG diagrams shipped: 43 (all geometry-verified; twelve
+shared with the AQA deck; four AQA-only).
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -51,11 +50,11 @@ wording) and `subsidy-gov-expenditure.svg` (attached to
 **Phase 2 (Edexcel Theme 2) is underway** — sections 2.1–2.3 done and
 approved (batch 3 approved 2026-08-05, including the lras-shift
 decision: **both** a classical and a Keynesian shift diagram ship, as
-separate cards). Batch 4 (section 2.4 complete: circular flow,
-injections/withdrawals, equilibrium output in both models, the
-multiplier) approved 2026-08-05. CONTENT_ISSUES #6 approved and fixed
-the same day. Sections 2.5–2.6 remain (8 units) — batch 5, in
-progress.
+separate cards). Batch 4 approved 2026-08-05; CONTENT_ISSUES #6 approved and fixed
+the same day. Batch 5 (sections 2.5–2.6, 30 cards + 6 SVGs: output
+gaps in both models, trade cycle, PPF growth variants, Phillips
+curve) is authored, QA'd and built — **awaiting review**. On its
+approval Theme 2 is COMPLETE and phase 3 (AQA macro mirrors) begins.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -84,7 +83,7 @@ progress.
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 73 cards so far; 24 units)
+### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 103 cards; 24 units)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
@@ -104,14 +103,14 @@ progress.
 | 2.4.2 Injections & withdrawals | ✅ | 2 definition, 1 formula, 1 diagram |
 | 2.4.3 Equilibrium levels of real national output | ✅ | 1 definition, 4 diagram |
 | 2.4.4 The multiplier | ✅ | 2 definition, 1 chain, 1 formula, 1 calculation, 1 diagram |
-| 2.5.1 Causes of growth | ❌ |
-| 2.5.2 Output gaps | ❌ |
-| 2.5.3 Trade cycle | ❌ |
-| 2.5.4 The impact of economic growth | ❌ |
-| 2.6.1 Possible macroeconomic objectives | ❌ |
-| 2.6.2 Demand-side policies | ❌ |
-| 2.6.3 Supply-side policies | ❌ |
-| 2.6.4 Conflicts between objectives and policies | ❌ |
+| 2.5.1 Causes of growth | 🟡 review | 1 definition, 2 diagram, 1 chain |
+| 2.5.2 Output gaps | 🟡 review | 1 definition, 3 diagram, 1 evaluation |
+| 2.5.3 Trade cycle | 🟡 review | 2 definition, 1 diagram |
+| 2.5.4 The impact of economic growth | 🟡 review | 2 evaluation |
+| 2.6.1 Possible macroeconomic objectives | 🟡 review | 1 definition, 1 evaluation |
+| 2.6.2 Demand-side policies | 🟡 review | 4 definition, 1 chain, 1 diagram, 1 evaluation |
+| 2.6.3 Supply-side policies | 🟡 review | 2 definition, 1 diagram, 1 evaluation |
+| 2.6.4 Conflicts between objectives and policies | 🟡 review | 1 definition, 1 diagram, 1 evaluation |
 
 ### Edexcel A (9EC0) — Theme 3 ❌ (no deck; 20 units)
 
@@ -315,7 +314,7 @@ content and follow in phase 5 of the approved order.
 
 On branch `flashcards-feature`, clean tree. Style guide LOCKED
 (docs/DIAGRAM_STYLE.md). Automated checks all green and continuously
-re-run: geometry (37 SVGs), HTML, links, glossary, Liquid, text/markup
+re-run: geometry (43 SVGs), HTML, links, glossary, Liquid, text/markup
 integrity, build idempotency.
 
 QA still open (needs a real browser/deploy): real print-dialog check to
@@ -412,12 +411,30 @@ Useful QA techniques:
   mismatch), left open. Matrix: 60 ✅ · 4 🟡 · 102 ❌; 257 cards, 37
   SVGs.
 
+- 2026-08-05 — **Theme 2 batch 5 authored and built, awaiting review**:
+  30 cards covering ALL of sections 2.5–2.6 (causes of growth with both
+  PPF diagrams, output gaps in classical and Keynesian models, trade
+  cycle, impact of growth, the seven objectives, monetary/fiscal policy
+  with QE and the MPC, supply-side policies, conflicts with the SRPC)
+  and six new SVGs (ppf-short-run-growth, negative-output-gap-classical
+  and -keynesian, positive-output-gap-classical, trade-cycle — first
+  use of shaded boom/recession lenses, teal/red per the approved
+  schematic palette — and short-run-phillips-curve), all through the
+  full self-QA loop with zero geometry flags. Four batch-4 SVGs and
+  ppf-growth-decline are reused on policy/growth cards. The MPC card
+  (2-6-2-def-04) is spec-sourced: the notes never cover the Monetary
+  Policy Committee (see Open questions). Matrix: 64 ✅ · 8 🟡 · 94 ❌;
+  287 cards, 43 SVGs.
+
 ## Next steps (a fresh session starts here)
 
-1. **Theme 2 batch 5: sections 2.5–2.6** (8 units; output gaps, trade
-   cycle, policy diagrams — draw from the ground-truth PNGs on the
-   2-5-x/2-6-x pages, never by filename). That completes Theme 2,
-   after which: AQA macro T2-mirrors (phase 3).
+1. **Get batch 5 approved** (30 cards + 6 SVGs, presented
+   2026-08-05). On approval flip the eight 2.5/2.6 rows to ✅ —
+   **Theme 2 is then complete** — and start phase 3: AQA macro
+   T2-mirrors (create `flashcards-data/aqa/macro.json`, deckId
+   `aqa-macro`, mirror the micro deck's header; builder
+   auto-discovers; add the sitemap entry for
+   `/flashcards/aqa/macro/`).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
@@ -450,6 +467,12 @@ Session know-how a fresh chat needs:
   rule 1). Ask when a deck's coverage justifies it.
 - The 2.1.1 national-happiness card is spec-sourced; the notes never
   cover that bullet — a candidate notes addition for Eliot someday.
+- Likewise the 2.6.2 MPC card (edexcel-a-2-6-2-def-04): spec 2.6.2g
+  requires the role of the Bank of England's Monetary Policy
+  Committee, but the 2-6-2 notes page never mentions it. Card is
+  spec-sourced; a notes addition is the eventual fix. Spec 2.6.2h
+  (Great Depression / 2008 policy responses) is likewise uncovered by
+  the notes; only QE's 2008 context made it into a card.
 - Browser/deploy-bound QA still open: real print-dialog check, GA4
   DebugView after deploy, keyboard/screen-reader spot check, DevTools
   device-mode mobile.

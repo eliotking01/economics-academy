@@ -6,7 +6,7 @@
   "themeName": "Theme 2: The UK Economy - Performance and Policies",
   "deckId": "edexcel-a-theme-2",
   "deckTitle": "Edexcel A-Level Economics Theme 2 Flashcards",
-  "count": 73,
+  "count": 103,
   "topics": [
     {
       "subtopic": "2-1-1-economic-growth",
@@ -119,6 +119,62 @@
       "title": "The Multiplier",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
       "count": 6
+    },
+    {
+      "subtopic": "2-5-1-causes-of-growth",
+      "specCode": "2.5.1",
+      "title": "Causes of Growth",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html",
+      "count": 4
+    },
+    {
+      "subtopic": "2-5-2-output-gaps",
+      "specCode": "2.5.2",
+      "title": "Output Gaps",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html",
+      "count": 5
+    },
+    {
+      "subtopic": "2-5-3-trade-cycle",
+      "specCode": "2.5.3",
+      "title": "The Trade Cycle",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-3-trade-cycle.html",
+      "count": 3
+    },
+    {
+      "subtopic": "2-5-4-the-impact-of-economic-growth",
+      "specCode": "2.5.4",
+      "title": "The Impact of Economic Growth",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-4-the-impact-of-economic-growth.html",
+      "count": 2
+    },
+    {
+      "subtopic": "2-6-1-possible-macroeconomic-objectives",
+      "specCode": "2.6.1",
+      "title": "Possible Macroeconomic Objectives",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html",
+      "count": 2
+    },
+    {
+      "subtopic": "2-6-2-demand-side-policies",
+      "specCode": "2.6.2",
+      "title": "Demand-Side Policies",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html",
+      "count": 7
+    },
+    {
+      "subtopic": "2-6-3-supply-side-policies",
+      "specCode": "2.6.3",
+      "title": "Supply-Side Policies",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
+      "count": 4
+    },
+    {
+      "subtopic": "2-6-4-conflicts-between-objectives-and-policies",
+      "specCode": "2.6.4",
+      "title": "Conflicts Between Objectives and Policies",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html",
+      "count": 3
     }
   ],
   "cards": [
@@ -1288,6 +1344,494 @@
       "svgRef": "/images/diagrams/svg/multiplier.svg",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-4-4-the-multiplier.html",
       "svgAlt": "AD shifting right from AD1 to AD2 and then AD3 along a Keynesian LRAS1 curve, raising real GDP from Y1 to Y2 to Y3 and the price level from PL1 to PL3"
+    },
+    {
+      "id": "edexcel-a-2-5-1-def-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-1-causes-of-growth",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "growth"
+      ],
+      "front": "<p>Distinguish the causes of <strong>short-run and long-run economic growth</strong>.</p>",
+      "back": "<p><strong>Short-run (actual) growth</strong> is caused by a rise in aggregate demand — any of C, I, G or X − M — or in SRAS. The economy moves closer to its existing productive potential.</p><p><strong>Long-run (potential) growth</strong> is caused by a rise in the quantity or quality of the factors of production, expanding productive capacity — LRAS and the PPF shift outward.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-5-1-diagram-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-1-causes-of-growth",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "growth",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>short-run growth</strong> on a PPF diagram.</p>",
+      "back": "<p>The economy moves from point X, inside the frontier, to point Y, closer to it — putting unemployed resources to work raises actual output.</p><p>The frontier itself does not move: potential output is unchanged, which is what makes this <strong>actual</strong> rather than potential growth.</p>",
+      "svgRef": "/images/diagrams/svg/ppf-short-run-growth.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html",
+      "svgAlt": "Production possibility frontier with the economy moving from point X inside the frontier to point Y closer to it"
+    },
+    {
+      "id": "edexcel-a-2-5-1-diagram-02",
+      "specCode": "2.5.1",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-1-causes-of-growth",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "growth",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>long-run growth</strong> on a PPF diagram.</p>",
+      "back": "<p>The whole frontier shifts outward (PPF1 to PPF2): the economy can produce more of <strong>both</strong> goods, because its productive potential has increased — the same story as LRAS shifting right.</p><p>An inward shift (to PPF3) shows economic decline, for example after a war or natural disaster destroys capacity.</p>",
+      "svgRef": "/images/diagrams/svg/ppf-growth-decline.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html",
+      "svgAlt": "Production possibility frontier shifting outward from PPF1 to PPF2 showing growth, with an inward shift to PPF3 showing decline"
+    },
+    {
+      "id": "edexcel-a-2-5-1-chain-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-1-causes-of-growth",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "growth",
+        "trade"
+      ],
+      "front": "<p>Explain <strong>export-led growth</strong>, with an example and a risk.</p>",
+      "back": "<p>A strategy where growth is driven mainly by a sustained rise in <strong>exports</strong>: rising exports raise AD directly in the short run, and the income and investment they generate then improve productive capacity in the long run. China's rapid growth from the 1990s to the 2010s is the standard example.</p><p>The risk: dependence on global demand leaves the economy vulnerable to external shocks.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-5-2-def-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-2-output-gaps",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "growth",
+        "output-gaps"
+      ],
+      "front": "<p>Define an <strong>output gap</strong>, and distinguish actual growth from the trend rate.</p>",
+      "back": "<p><strong>An output gap</strong> is the difference between the actual level of real GDP and the potential level of real GDP — output at full capacity. Actual above potential is a <strong>positive</strong> gap; below it, a <strong>negative</strong> (recessionary) gap.</p><p><strong>Actual growth</strong> is the yearly change in real GDP; the <strong>trend rate</strong> is the long-term average, measured over ten years or more. Growth above trend builds inflationary pressure; below trend, unemployment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html"
+    },
+    {
+      "id": "edexcel-a-2-5-2-diagram-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-2-output-gaps",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "output-gaps",
+        "diagram"
+      ],
+      "front": "<p>Show a <strong>negative output gap</strong> in the classical model.</p>",
+      "back": "<p>AD and SRAS intersect at Y1, to the <strong>left</strong> of the vertical LRAS at Yfe: actual output is below potential. The gap Yfe − Y1 is spare capacity — unemployed workers and idle machines — putting downward pressure on prices.</p><p>In the classical view this is temporary: wages and prices adjust and the economy returns to Yfe.</p>",
+      "svgRef": "/images/diagrams/svg/negative-output-gap-classical.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html",
+      "svgAlt": "AD and SRAS intersecting at output Y1 and price level PL1, left of the vertical LRAS curve at Yfe, showing a negative output gap"
+    },
+    {
+      "id": "edexcel-a-2-5-2-diagram-02",
+      "specCode": "2.5.2",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-2-output-gaps",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "output-gaps",
+        "diagram"
+      ],
+      "front": "<p>Show a <strong>negative output gap</strong> in the Keynesian model.</p>",
+      "back": "<p>AD crosses the L-shaped LRAS on its elastic section, at Y1 below full capacity Yfe. The economy is in <strong>equilibrium with spare capacity</strong>.</p><p>The Keynesian point: this can persist — there is no automatic return to Yfe, so unemployment can last until demand is stimulated.</p>",
+      "svgRef": "/images/diagrams/svg/negative-output-gap-keynesian.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html",
+      "svgAlt": "AD crossing an L-shaped Keynesian LRAS curve at output Y1 and price level PL1, below full-capacity output Yfe"
+    },
+    {
+      "id": "edexcel-a-2-5-2-diagram-03",
+      "specCode": "2.5.2",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-2-output-gaps",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "output-gaps",
+        "diagram"
+      ],
+      "front": "<p>Show a <strong>positive output gap</strong> in the classical model.</p>",
+      "back": "<p>AD and SRAS intersect at Y1, to the <strong>right</strong> of LRAS at Yfe: actual output temporarily exceeds potential, with factors of production overworked — overtime hours, machinery run beyond normal capacity.</p><p>This is an <strong>inflationary gap</strong>: it cannot last, and prices are bid upward as the economy strains beyond Yfe.</p>",
+      "svgRef": "/images/diagrams/svg/positive-output-gap-classical.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html",
+      "svgAlt": "AD and SRAS intersecting at output Y1 and price level PL1, right of the vertical LRAS curve at Yfe, showing a positive output gap"
+    },
+    {
+      "id": "edexcel-a-2-5-2-eval-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-2-output-gaps",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "output-gaps",
+        "evaluation"
+      ],
+      "front": "<p>Why are output gaps <strong>difficult to measure</strong>?</p>",
+      "back": "<p>Because <strong>potential GDP is not directly observable</strong> — it must be estimated from models, and different models give significantly different answers.</p><p>Changes in technology, labour-force participation and the capital stock keep moving potential output itself, so the size (and even the sign) of the gap at any moment is uncertain. This matters: policy set on a mismeasured gap can destabilise rather than stabilise.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-2-output-gaps.html"
+    },
+    {
+      "id": "edexcel-a-2-5-3-def-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-3-trade-cycle",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "trade-cycle"
+      ],
+      "front": "<p>Define the <strong>trade cycle</strong>, and name its four phases.</p>",
+      "back": "<p><strong>The trade cycle</strong> is the fluctuation in real GDP over time, with periods of boom and recession, as actual GDP rises and falls around the long-term trend rate of growth.</p><p>Four phases: <strong>boom</strong> (peak, above trend); <strong>recession</strong> (downturn — a technical recession is two consecutive quarters of negative growth); <strong>slump</strong> (trough, largest negative gap); <strong>recovery</strong> (expansion back towards trend).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-3-trade-cycle.html"
+    },
+    {
+      "id": "edexcel-a-2-5-3-diagram-01",
+      "specCode": "2.5.3",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-3-trade-cycle",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "trade-cycle",
+        "output-gaps",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>trade cycle</strong>.</p>",
+      "back": "<p>Actual real GDP fluctuates around the upward-sloping <strong>trend rate of growth</strong>, which traces the path of potential output (LRAS). Above the trend the economy runs a <strong>positive output gap</strong> (boom); below it, a <strong>negative output gap</strong> (recession); the turning points are the downturn and the recovery.</p><p>The fluctuations around the trend mainly reflect changes in aggregate demand.</p>",
+      "svgRef": "/images/diagrams/svg/trade-cycle.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-3-trade-cycle.html",
+      "svgAlt": "Real GDP fluctuating around a rising trend line, above it in a boom and below it in a recession, with downturn and recovery marked"
+    },
+    {
+      "id": "edexcel-a-2-5-3-def-02",
+      "specCode": "2.5.3",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-3-trade-cycle",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "trade-cycle"
+      ],
+      "front": "<p>Contrast the <strong>characteristics of a boom and a recession</strong>.</p>",
+      "back": "<p><strong>Boom</strong>: high and rising real GDP; low unemployment; demand-pull inflation; a positive output gap; high confidence and investment; rising tax revenue.</p><p><strong>Recession</strong>: falling real GDP; rising unemployment; low or falling inflation; a negative output gap; low confidence and investment; falling tax revenue — which is why deficits widen in downturns.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-3-trade-cycle.html"
+    },
+    {
+      "id": "edexcel-a-2-5-4-eval-01",
+      "specCode": "2.5.4",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-4-the-impact-of-economic-growth",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "growth",
+        "evaluation"
+      ],
+      "front": "<p>State the main <strong>benefits of economic growth</strong> for consumers, firms and the government.</p>",
+      "back": "<p><strong>Consumers</strong> — higher real incomes and living standards, lower absolute poverty, more employment. <strong>Firms</strong> — higher demand, confidence, investment and profits. <strong>Government</strong> — rising tax receipts (income tax, corporation tax, VAT) and lower welfare spending.</p><p>Higher incomes and profits can also fund better environmental technology — growth is not automatically dirty.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-4-the-impact-of-economic-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-5-4-eval-02",
+      "specCode": "2.5.4",
+      "topic": "2.5 Economic growth",
+      "subtopic": "2-5-4-the-impact-of-economic-growth",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "growth",
+        "evaluation"
+      ],
+      "front": "<p>State the main <strong>costs of economic growth</strong>, and the debate they feed.</p>",
+      "back": "<p>Demand-pull <strong>inflation</strong>; <strong>worsened inequality</strong> when gains are uneven; <strong>environmental damage</strong> — pollution, resource depletion, biodiversity loss; worse work-life balance; a worsening <strong>current account</strong> as imports rise; congestion and housing pressure; more consumption of demerit goods.</p><p>Hence the modern debate: should governments target growth itself, or broader measures of societal well-being?</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-5-4-the-impact-of-economic-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-6-1-def-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-1-possible-macroeconomic-objectives",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "objectives"
+      ],
+      "front": "<p>List the <strong>seven macroeconomic objectives</strong>, with the UK's usual targets.</p>",
+      "back": "<p><strong>Economic growth</strong> (sustainable, around 2–3%); <strong>low unemployment</strong> (near full employment, around 4–5%, allowing for frictional unemployment); <strong>low and stable inflation</strong> (CPI target of 2%); <strong>balance of payments equilibrium</strong> on the current account; <strong>balanced government budget</strong> over the cycle; <strong>greater income equality</strong> (often measured by the Gini coefficient); <strong>protection of the environment</strong> (for example net-zero commitments).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html"
+    },
+    {
+      "id": "edexcel-a-2-6-1-eval-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-1-possible-macroeconomic-objectives",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "objectives",
+        "evaluation"
+      ],
+      "front": "<p>Why do governments <strong>not pursue every objective at once</strong>?</p>",
+      "back": "<p>Because the objectives <strong>trade off</strong> against each other: improving one often worsens another — faster growth can raise inflation, imports and emissions; redistribution can blunt incentives. Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances (inflation-fighting in 2022–23; jobs and demand in 2008–09).</p><p>Note the targets are also judgements: complete equality and zero unemployment are not desirable, so \"low\" and \"greater\" are deliberate wordings.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-1-possible-macroeconomic-objectives.html"
+    },
+    {
+      "id": "edexcel-a-2-6-2-def-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "policy"
+      ],
+      "front": "<p>Define <strong>demand-side policies</strong>, and distinguish the two types.</p>",
+      "back": "<p><strong>Demand-side policies</strong> are policies used by the government or central bank to shift the aggregate demand (AD) curve in order to achieve macroeconomic objectives such as low inflation, low unemployment, and economic growth.</p><p><strong>Monetary policy</strong> — managed by the independent Bank of England: interest rates and the money supply. <strong>Fiscal policy</strong> — managed by the government: government spending (G) and taxation (T).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-2-chain-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "monetary-policy"
+      ],
+      "front": "<p>Trace how a <strong>cut in interest rates</strong> raises aggregate demand.</p>",
+      "back": "<p>A lower base rate makes borrowing cheaper and saving less rewarding. <strong>Consumption</strong> rises as credit is cheaper and mortgage payments fall, freeing disposable income; <strong>investment</strong> rises as more projects clear the cheaper cost of borrowing. Both are components of AD, so AD shifts right.</p><p>Raising rates runs the chain in reverse — the standard tool for cooling inflation.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-2-def-02",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "monetary-policy"
+      ],
+      "front": "<p>What is <strong>quantitative easing</strong>, and how does it work?</p>",
+      "back": "<p><strong>QE</strong> is the central bank creating new money (digitally) and using it to buy government bonds from financial institutions. The banks' liquidity rises, giving them the incentive to expand lending; to lend more they lower interest rates, so borrowing, spending and AD rise.</p><p>It is the tool for when the base rate is already near its 0% lower bound and further cuts have little effect — as after the 2008 financial crisis.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-2-def-03",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "fiscal-policy"
+      ],
+      "front": "<p>Distinguish <strong>budget deficit, surplus and balance</strong>, and <strong>direct from indirect taxes</strong>.</p>",
+      "back": "<p><strong>Deficit</strong>: G &gt; T — the government must borrow, adding to the national debt. <strong>Surplus</strong>: T &gt; G — the excess can repay debt. <strong>Balanced</strong>: G = T.</p><p><strong>Direct taxes</strong> are levied on income and profits — income tax, corporation tax, National Insurance. <strong>Indirect taxes</strong> are levied on spending — VAT and duties — and are paid via the seller.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-2-def-04",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "monetary-policy"
+      ],
+      "front": "<p>What is the role of the Bank of England's <strong>Monetary Policy Committee</strong>?</p>",
+      "back": "<p>The <strong>MPC</strong> is the committee that sets UK monetary policy: it decides the official interest rate (Bank Rate) and the scale of asset purchases (QE), meeting regularly through the year.</p><p>Its mandate is the Government's <strong>2% CPI inflation target</strong>, but it operates <strong>independently</strong> of government — independence, granted in 1997, makes the commitment to low inflation credible.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-2-diagram-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of <strong>expansionary demand-side policy</strong> on an AD/AS diagram.</p>",
+      "back": "<p>Rate cuts, QE, higher G or lower T all shift AD right (AD1 to AD2). With <strong>spare capacity</strong> (Keynesian section shown), output rises strongly from Y1 to Y2 for only a modest price rise — the policy case for stimulus in a downturn.</p><p>Near full capacity the classical result takes over: the same shift mostly raises the price level. Where the economy sits on the curve decides which you get.</p>",
+      "svgRef": "/images/diagrams/svg/keynesian-ad-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html",
+      "svgAlt": "AD1 shifting right to AD2 along an L-shaped Keynesian LRAS1 curve, raising output strongly from Y1 to Y2 with a modest price level rise, below Yfe"
+    },
+    {
+      "id": "edexcel-a-2-6-2-eval-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-2-demand-side-policies",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "policy",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>weaknesses of demand-side policies</strong>.</p>",
+      "back": "<p><strong>Time lags</strong> — monetary policy can take up to two years to bite (fixed-rate mortgages delay the pass-through; investment takes time to plan). <strong>Liquidity trap</strong> — near the 0% lower bound, further cuts do little, forcing resort to QE. <strong>Asset price bubbles</strong> — cheap money can inflate housing and stock markets.</p><p>Fiscal stimulus adds a further cost: deficits accumulate into debt, constraining future policy. And any stimulus risks overshooting into inflation.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-3-def-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-3-supply-side-policies",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "policy",
+        "supply-side"
+      ],
+      "front": "<p>Define <strong>supply-side policies</strong>, and distinguish the two approaches.</p>",
+      "back": "<p><strong>Supply-side policies</strong> aim to increase the productive potential of the economy, shifting the LRAS curve to the right.</p><p><strong>Market-based</strong> policies increase capacity by <strong>removing government intervention</strong> — lower taxes, deregulation, privatisation. <strong>Interventionist</strong> policies increase capacity <strong>through government spending</strong> — education, training, infrastructure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-3-def-02",
+      "specCode": "2.6.3",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-3-supply-side-policies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "supply-side"
+      ],
+      "front": "<p>Give a <strong>supply-side policy for each aim</strong> in the specification.</p>",
+      "back": "<p><strong>Incentives</strong> — cut income tax so work pays (though top-rate cuts can be regressive, and some workers reduce hours instead). <strong>Competition</strong> — deregulation and privatisation, lowering barriers to entry. <strong>Labour-market reform</strong> — more flexible hiring and working arrangements. <strong>Skills</strong> — spending on education and training. <strong>Infrastructure</strong> — investment in transport, energy and digital networks.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-3-diagram-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-3-supply-side-policies",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "supply-side",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of <strong>successful supply-side policy</strong> on an AD/AS diagram.</p>",
+      "back": "<p>By improving the quantity or quality of the factors of production, the policy shifts LRAS right (LRAS1 to LRAS2): output rises from Yfe1 to Yfe2 while the price level <strong>falls</strong> — growth without inflation, which is why supply-side policy conflicts least with the other objectives.</p><p>On the Keynesian model the same shift only raises output if the economy is near capacity — with a deep negative output gap, extra capacity sits unused.</p>",
+      "svgRef": "/images/diagrams/svg/classical-lras-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
+      "svgAlt": "Vertical LRAS1 shifting right to LRAS2 along a downward-sloping AD curve, raising output from Yfe1 to Yfe2 and lowering the price level from PL1 to PL2"
+    },
+    {
+      "id": "edexcel-a-2-6-3-eval-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-3-supply-side-policies",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "policy",
+        "supply-side",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>strengths and weaknesses of supply-side policies</strong>.</p>",
+      "back": "<p><strong>Strengths</strong>: they raise capacity, so growth is sustainable and non-inflationary, and long-run competitiveness improves.</p><p><strong>Weaknesses</strong>: long <strong>time lags</strong> (education takes a generation to pay off); interventionist policies are expensive for the public finances; market-based policies can worsen <strong>inequality</strong>; and none of them help when the problem is deficient demand — extra capacity is useless in a slump.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-4-def-01",
+      "specCode": "2.6.4",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-4-conflicts-between-objectives-and-policies",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "objectives",
+        "policy"
+      ],
+      "front": "<p>State the main <strong>trade-offs between macroeconomic objectives</strong>.</p>",
+      "back": "<p><strong>Growth vs inflation</strong> — demand-led growth pulls prices up. <strong>Growth vs the environment</strong> — more production means more emissions and resource use. <strong>Growth vs equality</strong> — gains often accrue to higher earners first. <strong>Growth vs the current account</strong> — rising incomes suck in imports.</p><p>And the classic: <strong>low unemployment vs low inflation</strong>, captured by the short-run Phillips curve.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html"
+    },
+    {
+      "id": "edexcel-a-2-6-4-diagram-01",
+      "specCode": "2.6.4",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-4-conflicts-between-objectives-and-policies",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "objectives",
+        "policy",
+        "diagram"
+      ],
+      "front": "<p>Draw and explain the <strong>short-run Phillips curve</strong>.</p>",
+      "back": "<p>The SRPC shows a <strong>trade-off between unemployment and inflation</strong>: moving along the curve, lower unemployment comes with higher inflation. The reason is demand-pull — lower unemployment raises average incomes and consumer spending, bidding prices up.</p><p>The limitation is in the name: the trade-off holds only in the <strong>short run</strong>.</p>",
+      "svgRef": "/images/diagrams/svg/short-run-phillips-curve.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html",
+      "svgAlt": "Short-run Phillips curve convex to the origin, showing lower unemployment paired with higher inflation"
+    },
+    {
+      "id": "edexcel-a-2-6-4-eval-01",
+      "specCode": "2.6.4",
+      "topic": "2.6 Macroeconomic objectives and policies",
+      "subtopic": "2-6-4-conflicts-between-objectives-and-policies",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "policy",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the main <strong>policy conflicts and trade-offs</strong>.</p>",
+      "back": "<p><strong>Monetary</strong>: higher rates curb inflation by cutting AD — but the same cut hits investment and growth. <strong>Fiscal</strong>: expansionary policy boosts short-run growth but widens the deficit and debt, constraining future policy. <strong>Supply-side</strong>: market-based reforms buy efficiency at the cost of equity, while interventionist ones reduce inequality but cost more and work slowly.</p><p>Good evaluation names the trade-off, then argues which side matters more in the given context.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-6-4-conflicts-between-objectives-and-policies.html"
     }
   ]
 }
