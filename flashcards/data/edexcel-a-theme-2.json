@@ -6,7 +6,7 @@
   "themeName": "Theme 2: The UK Economy - Performance and Policies",
   "deckId": "edexcel-a-theme-2",
   "deckTitle": "Edexcel A-Level Economics Theme 2 Flashcards",
-  "count": 54,
+  "count": 55,
   "topics": [
     {
       "subtopic": "2-1-1-economic-growth",
@@ -90,7 +90,7 @@
       "specCode": "2.3.3",
       "title": "Long-Run Aggregate Supply",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
-      "count": 6
+      "count": 7
     }
   ],
   "cards": [
@@ -919,11 +919,29 @@
         "growth",
         "diagram"
       ],
-      "front": "<p>Show <strong>long-run economic growth</strong> on an LRAS diagram.</p>",
+      "front": "<p>Show <strong>long-run economic growth</strong> on a classical LRAS diagram.</p>",
       "back": "<p>Growth in productive capacity shifts LRAS outward (LRAS1 to LRAS2), raising full-employment output from Yfe1 to Yfe2 — the same story as an outward PPF shift.</p><p>It comes from anything that improves the <strong>quantity or quality</strong> of the factors of production: investment in capital, technology, a larger or better-skilled workforce.</p>",
       "svgRef": "/images/diagrams/svg/lras-shift.svg",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
       "svgAlt": "Vertical LRAS1 curve shifting right to LRAS2, raising full-employment output from Yfe1 to Yfe2"
+    },
+    {
+      "id": "edexcel-a-2-3-3-diagram-04",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "growth",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>long-run economic growth</strong> on a Keynesian LRAS diagram.</p>",
+      "back": "<p>The whole L-shaped curve shifts right (LRAS1 to LRAS2): the vertical full-capacity section moves from Yfe1 to Yfe2, so the economy can reach a higher level of real output before inflationary pressure sets in.</p><p>The causes are the same as on the classical diagram — anything that improves the quantity or quality of the factors of production.</p>",
+      "svgRef": "/images/diagrams/svg/lras-shift-keynesian.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
+      "svgAlt": "Keynesian L-shaped LRAS1 curve shifting right to LRAS2, raising full-capacity output from Yfe1 to Yfe2"
     },
     {
       "id": "edexcel-a-2-3-3-def-02",

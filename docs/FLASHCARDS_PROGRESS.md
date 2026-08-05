@@ -28,16 +28,16 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **57 ✅ · 3 🟡 · 106 ❌** of 166 units.
-Cards shipped: 238 (95 Edexcel Theme 1 + 89 AQA micro + 54 Edexcel
-Theme 2). **Batch 3 (16 cards: all of section 2.3 plus the two deferred
-2.1.2 inflation diagram cards) is built and integrated but AWAITS
-ELIOT'S REVIEW** — everything earlier is approved. SVG diagrams
-shipped: 29 (all geometry-verified; twelve are shared with the AQA
-deck; four are AQA-only; the AD/AS family is now eight strong —
-ad-shift, sras-movements, sras-shift, sras-shift-left, ad-shift-right,
-lras-classical, lras-keynesian, lras-shift — each drawn from its
-ground-truth PNG on the 2-1-2/2-3-x notes pages).
+Tally (2026-08-05): **60 ✅ · 0 🟡 · 106 ❌** of 166 units.
+Cards shipped: 239 (95 Edexcel Theme 1 + 89 AQA micro + 55 Edexcel
+Theme 2), **all approved by Eliot** (batch 3 approved 2026-08-05; its
+follow-on Keynesian-shift card was authored to Eliot's explicit "add a
+Keynesian variant, I'd like both included" instruction). SVG diagrams
+shipped: 30 (all geometry-verified; twelve are shared with the AQA
+deck; four are AQA-only; the AD/AS family is nine strong — ad-shift,
+sras-movements, sras-shift, sras-shift-left, ad-shift-right,
+lras-classical, lras-keynesian, lras-shift, lras-shift-keynesian —
+each drawn from its ground-truth PNG on the 2-1-2/2-3-x notes pages).
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -49,11 +49,12 @@ max/min/subsidy captions, fixed with the Edexcel twin's approved
 wording) and `subsidy-gov-expenditure.svg` (attached to
 `aqa-1-8-9-diagram-04`). No open content issues.
 
-**Phase 2 (Edexcel Theme 2) is underway** — sections 2.1 and 2.2 done
-and approved; section 2.3 (batch 3, 16 cards + 7 SVGs) is authored,
-QA'd and built, **awaiting Eliot's review**; sections 2.4–2.6 remain
-(~45–55 cards; circular flow, equilibrium output, multiplier, output
-gaps, trade cycle). See Next steps for the resume point.
+**Phase 2 (Edexcel Theme 2) is underway** — sections 2.1–2.3 done and
+approved (batch 3 approved 2026-08-05, including the lras-shift
+decision: **both** a classical and a Keynesian shift diagram ship, as
+separate cards); sections 2.4–2.6 remain (~45–55 cards; circular flow,
+equilibrium output, multiplier, output gaps, trade cycle). See Next
+steps for the resume point.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -82,12 +83,12 @@ gaps, trade cycle). See Next steps for the resume point.
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 54 cards so far; 24 units)
+### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 55 cards so far; 24 units)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
 | 2.1.1 Economic growth | ✅ | 3 definition, 1 formula, 1 evaluation |
-| 2.1.2 Inflation | ✅ | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation, 2 diagram (the 2 diagram cards are batch 3, 🟡 review) |
+| 2.1.2 Inflation | ✅ | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation, 2 diagram |
 | 2.1.3 Employment & unemployment | ✅ | 4 definition, 1 calculation, 1 evaluation |
 | 2.1.4 Balance of payments | ✅ | 2 definition, 1 calculation, 1 chain |
 | 2.2.1 Aggregate demand | ✅ | 2 definition, 1 formula, 1 calculation, 1 diagram |
@@ -95,9 +96,9 @@ gaps, trade cycle). See Next steps for the resume point.
 | 2.2.3 Investment | ✅ | 2 definition, 2 chain |
 | 2.2.4 Government expenditure | ✅ | 1 definition, 1 chain |
 | 2.2.5 Net trade | ✅ | 2 definition, 1 chain |
-| 2.3.1 Aggregate supply | 🟡 review | 3 definition, 1 diagram |
-| 2.3.2 Short-run aggregate supply | 🟡 review | 1 definition, 1 diagram, 2 chain |
-| 2.3.3 Long-run aggregate supply | 🟡 review | 2 definition, 3 diagram, 1 evaluation |
+| 2.3.1 Aggregate supply | ✅ | 3 definition, 1 diagram |
+| 2.3.2 Short-run aggregate supply | ✅ | 1 definition, 1 diagram, 2 chain |
+| 2.3.3 Long-run aggregate supply | ✅ | 2 definition, 4 diagram, 1 evaluation |
 | 2.4.1 National income | ❌ |
 | 2.4.2 Injections & withdrawals | ❌ |
 | 2.4.3 Equilibrium levels of real national output | ❌ |
@@ -376,7 +377,12 @@ Useful QA techniques:
   `edexcel-a-theme-2` deck created (sitemap entry added, hub automatic);
   batch 1 (21 cards, section 2.1) and batch 2 (17 cards, section 2.2,
   with ad-shift.svg opening the AD/AS family) both approved by Eliot.
-- 2026-08-05 — **Theme 2 batch 3 authored and built, awaiting review**:
+- 2026-08-05 — **Theme 2 batch 3 approved by Eliot** (same day), with one
+  amendment: he chose to ship **both** LRAS-shift variants, so
+  `lras-shift-keynesian.svg` was drawn from the left panel of
+  lras-shift.png (same self-QA loop) and card
+  `edexcel-a-2-3-3-diagram-04` added; the classical card's front gained
+  the word "classical" to keep the pair distinct. Batch as built:
   16 cards (section 2.3 complete — 4 + 4 + 6 across the three units —
   plus the two deferred 2.1.2 demand-pull/cost-push diagram cards) and
   seven SVGs (sras-movements, sras-shift, lras-classical,
@@ -393,16 +399,15 @@ Useful QA techniques:
 
 ## Next steps (a fresh session starts here)
 
-1. **Get batch 3 approved.** Batch 3 (section 2.3 + the two 2.1.2
-   diagram cards) is built and presented; Eliot has not yet reviewed
-   it. Outstanding decision for him: `lras-shift.svg` draws only the
-   classical panel of the two-panel `lras-shift.png` ground truth
-   (recommended); alternative is a second Keynesian-shift SVG. On
-   approval flip 2.3.1–2.3.3 to ✅, drop the 🟡 note on 2.1.2, and
-   record the lras-shift decision here.
-2. **Theme 2 batches 4–5: sections 2.4–2.6** (12 units, ~45–55 cards;
-   diagrams: circular flow, injections/withdrawals, equilibrium output,
-   multiplier, output gaps, trade cycle). That completes Theme 2.
+1. **Theme 2 batch 4: section 2.4** (4 units: national income /
+   circular flow, injections & withdrawals, equilibrium real national
+   output, the multiplier — with formulae 1/(1−MPC) and 1/MPW and a
+   multiplier calculation card). Diagrams: circular flow, AD/AS
+   equilibrium (2.4.3) — draw from the ground-truth PNGs on the 2-4-x
+   pages, never by filename.
+2. **Theme 2 batch 5: sections 2.5–2.6** (8 units; output gaps, trade
+   cycle, policy diagrams). That completes Theme 2, after which:
+   AQA macro T2-mirrors (phase 3).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
