@@ -28,9 +28,19 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **22 ✅ · 6 🟡 · 138 ❌** of 166 units.
-Cards shipped: 108 (95 Edexcel Theme 1 + 13 AQA micro starter). SVG
-diagrams shipped: 17 (all geometry-verified; 2 reused by the AQA deck).
+Tally (2026-08-05): **22 ✅ · 13 🟡 · 131 ❌** of 166 units.
+Cards shipped: 132 (95 Edexcel Theme 1 + 37 AQA micro). SVG diagrams
+shipped: 18 (all geometry-verified; ppf-basic, ppf-growth-decline and the
+two externality SVGs are shared with the AQA deck; total-utility is the
+first AQA-only SVG).
+
+Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
+(AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
+1.4–1.6 → Edexcel T4 → AQA remainder), single deck per AQA side.
+Batch 1 of phase 1 (24 cards, units 1.1.1–1.1.5, 1.2.1, 1.2.2) is
+authored, built and committed — **awaiting Eliot's review**, so those
+seven units are 🟡 not ✅. The 1.2.3/1.2.4 density top-ups are deferred
+to batch 2.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -147,13 +157,13 @@ verbatim definitions — so even its six units are 🟡, not at density.
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
-| 1.1.1 Economic methodology | ❌ | |
-| 1.1.2 Nature & purpose of economic activity | ❌ | |
-| 1.1.3 Economic resources | ❌ | |
-| 1.1.4 Scarcity, choice & the allocation of resources | ❌ | |
-| 1.1.5 Production possibility diagrams | ❌ | |
-| 1.2.1 Consumer behaviour | ❌ | |
-| 1.2.2 Imperfect information | ❌ | |
+| 1.1.1 Economic methodology | 🟡 review | 5 definition |
+| 1.1.2 Nature & purpose of economic activity | 🟡 review | 2 definition |
+| 1.1.3 Economic resources | 🟡 review | 3 definition |
+| 1.1.4 Scarcity, choice & the allocation of resources | 🟡 review | 2 definition, 1 chain |
+| 1.1.5 Production possibility diagrams | 🟡 review | 1 definition, 2 diagram, 1 chain |
+| 1.2.1 Consumer behaviour | 🟡 review | 4 definition, 1 diagram |
+| 1.2.2 Imperfect information | 🟡 review | 1 definition, 1 chain |
 | 1.2.3 Aspects of behavioural economic theory | 🟡 | 4 definition |
 | 1.2.4 Behavioural economics & economic policy | 🟡 | 1 definition, 1 application |
 | 1.3.1 Determinants of demand | ❌ | |

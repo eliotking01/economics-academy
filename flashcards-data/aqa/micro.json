@@ -9,6 +9,498 @@
   "intro": "Revise AQA microeconomics with interactive flashcards written to the AQA (7136) specification, starting with the concepts AQA examines in its own terms — behavioural economic theory, the varieties of market failure and AQA's own definitions of shared ideas. Flip each card to check yourself, rate how well you knew it, and the deck brings back the cards you found hard. Every card links to the revision notes page that teaches it, and the deck is growing.",
   "cards": [
     {
+      "id": "aqa-1-1-1-def-01",
+      "specCode": "1.1.1",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-1-economic-methodology",
+      "cardType": "definition",
+      "front": "<p>Why is economics a <strong>social science</strong>, and how does its methodology differ from the natural sciences?</p>",
+      "back": "<p>Economics applies the scientific method — observation, hypothesis formation, testing, refinement — to <strong>human behaviour</strong> and societies.</p><p>Unlike the natural sciences it cannot run controlled laboratory experiments, so economists build <strong>models</strong> resting on simplifying assumptions and test them against real-world data. Different assumptions can lead economists to different conclusions from the same data.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-1-economic-methodology.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-1-def-02",
+      "specCode": "1.1.1",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-1-economic-methodology",
+      "cardType": "definition",
+      "front": "<p>Define <strong>ceteris paribus</strong>, and explain why economists rely on it.</p>",
+      "back": "<p><strong>Ceteris paribus</strong> — a Latin phrase meaning ‘all other things being equal’ or ‘all other factors held constant’.</p><p>It lets economists isolate the causal relationship between two variables — the law of demand holds ceteris paribus. In reality ‘other things’ are rarely constant, a key limitation of economic models.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-1-economic-methodology.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A Latin phrase meaning ‘all other things being equal’ or ‘all other factors held constant’."
+      }
+    },
+    {
+      "id": "aqa-1-1-1-def-03",
+      "specCode": "1.1.1",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-1-economic-methodology",
+      "cardType": "definition",
+      "front": "<p>Define <strong>positive statements</strong>.</p>",
+      "back": "<p><strong>Positive statements</strong> — objective statements that describe 'what is', 'what was', or 'what will be' in the economy.</p><p>They are based on empirical evidence and can be tested or falsified — \"the UK's inflation rate is 3.2%\" can be checked against the data.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-1-economic-methodology.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Objective statements that describe 'what is', 'what was', or 'what will be' in the economy."
+      }
+    },
+    {
+      "id": "aqa-1-1-1-def-04",
+      "specCode": "1.1.1",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-1-economic-methodology",
+      "cardType": "definition",
+      "front": "<p>Define <strong>normative statements</strong>.</p>",
+      "back": "<p><strong>Normative statements</strong> — subjective statements that express an opinion or a value judgement about what ought to be.</p><p>They rest on opinions, ethics and beliefs, so they cannot be tested or proven false — \"the government should increase spending on the NHS\" is a matter of debate, not data.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-1-economic-methodology.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Subjective statements that express an opinion or a value judgement about what ought to be."
+      }
+    },
+    {
+      "id": "aqa-1-1-1-def-05",
+      "specCode": "1.1.1",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-1-economic-methodology",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>value judgement</strong>, and explain how value judgements influence economic policy.</p>",
+      "back": "<p><strong>Value judgement</strong> — a view about what is morally or subjectively important. These judgements underpin all normative statements.</p><p>AQA emphasises that people's views on the best option are influenced both by the positive consequences of different decisions and by moral and political judgements — for example, whether a government prioritises efficiency or equality.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["methodology"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-1-economic-methodology.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a view about what is morally or subjectively important."
+      }
+    },
+    {
+      "id": "aqa-1-1-2-def-01",
+      "specCode": "1.1.2",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-2-the-nature-and-purpose-of-economic-activity",
+      "cardType": "definition",
+      "front": "<p>What is the <strong>central purpose of economic activity</strong>? Distinguish needs from wants.</p>",
+      "back": "<p>The central purpose of economic activity is the production of goods and services to satisfy <strong>needs</strong> and <strong>wants</strong>.</p><p><strong>Needs</strong> — basic requirements for human survival, such as food, water and shelter. <strong>Wants</strong> — desires for goods and services that improve quality of life, such as entertainment and travel.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["economic-problem"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-2-the-nature-and-purpose-of-economic-activity.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-2-def-02",
+      "specCode": "1.1.2",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-2-the-nature-and-purpose-of-economic-activity",
+      "cardType": "definition",
+      "front": "<p>State the <strong>three key economic decisions</strong> every economy must make.</p>",
+      "back": "<ul><li><strong>What to produce</strong> — which goods and services, given consumer demand and available resources.</li><li><strong>How to produce</strong> — the production methods, technology and resource mix.</li><li><strong>Who is to benefit</strong> — how the goods and services produced are distributed among the population.</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["economic-problem"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-2-the-nature-and-purpose-of-economic-activity.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-3-def-01",
+      "specCode": "1.1.3",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-3-economic-resources",
+      "cardType": "definition",
+      "front": "<p>Name and define the <strong>four factors of production</strong>.</p>",
+      "back": "<ul><li><strong>Land</strong> — natural resources, e.g. oil, wood.</li><li><strong>Labour</strong> — human effort, e.g. baristas in a coffee shop.</li><li><strong>Capital</strong> — man-made resources used in production, e.g. printers, laptops.</li><li><strong>Enterprise</strong> — risk-taking to start or expand a business.</li></ul><p>All four are combined to produce goods (tangible) and services (intangible).</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["factors-of-production"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-3-def-02",
+      "specCode": "1.1.3",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-3-economic-resources",
+      "cardType": "definition",
+      "front": "<p>Match each <strong>factor of production</strong> to its <strong>factor reward</strong>.</p>",
+      "back": "<ul><li><strong>Land</strong> → rent</li><li><strong>Labour</strong> → wages</li><li><strong>Capital</strong> → interest</li><li><strong>Enterprise</strong> → profit</li></ul>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["factors-of-production"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-3-def-03",
+      "specCode": "1.1.3",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-3-economic-resources",
+      "cardType": "definition",
+      "front": "<p>Why is the <strong>environment</strong> a scarce resource? Distinguish renewable from non-renewable resources.</p>",
+      "back": "<p>The environment provides essential goods and services — clean air, water, fertile land — and overconsumption can leave it degraded, harming future economic activity, so it must be managed sustainably.</p><p><strong>Non-renewable resources</strong> cannot be replaced once used (fossil fuels, minerals). <strong>Renewable resources</strong> replenish naturally (forests, fish stocks) but can still become scarce if overused or mismanaged.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["factors-of-production"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-3-economic-resources.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-4-def-01",
+      "specCode": "1.1.4",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-4-scarcity-choice-and-the-allocation-of-resources",
+      "cardType": "definition",
+      "front": "<p>Define <strong>scarcity</strong> — the fundamental economic problem.</p>",
+      "back": "<p><strong>Scarcity</strong> — when there are finite resources (e.g., land, labour, capital) but infinite human wants and needs.</p><p>Because of scarcity, choices must be made about how to allocate limited resources between competing uses — economics is the study of how those choices are made.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["economic-problem"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-4-scarcity-choice-and-the-allocation-of-resources.html",
+        "origin": "notes-verbatim",
+        "verbatim": "when there are finite resources (e.g., land, labour, capital) but infinite human wants and needs."
+      }
+    },
+    {
+      "id": "aqa-1-1-4-def-02",
+      "specCode": "1.1.4",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-4-scarcity-choice-and-the-allocation-of-resources",
+      "cardType": "definition",
+      "front": "<p>Define <strong>opportunity cost</strong>.</p>",
+      "back": "<p><strong>Opportunity cost</strong> — the value of the next best alternative foregone when making an economic decision.</p><p>It measures the real cost of any choice: the opportunity cost of a government spending more on healthcare is the education or defence spending given up.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["opportunity-cost"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-4-scarcity-choice-and-the-allocation-of-resources.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the value of the next best alternative foregone when making an economic decision."
+      }
+    },
+    {
+      "id": "aqa-1-1-4-chain-01",
+      "specCode": "1.1.4",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-4-scarcity-choice-and-the-allocation-of-resources",
+      "cardType": "chain",
+      "front": "<p>Build the chain of reasoning: how does <strong>scarcity</strong> lead to <strong>opportunity cost</strong> for every economic agent?</p>",
+      "back": "<p>Resources are finite while wants are unlimited, so there is <strong>scarcity</strong>. Scarcity forces every agent to <strong>choose</strong> between competing uses of resources, and every choice sacrifices the next best alternative — an <strong>opportunity cost</strong>.</p><p>Consumer: a video game bought is a cinema ticket foregone. Producer: a factory making cars cannot make bicycles. Government: more healthcare spending means less for education or defence.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["economic-problem", "opportunity-cost"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-4-scarcity-choice-and-the-allocation-of-resources.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-5-def-01",
+      "specCode": "1.1.5",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-5-production-possibility-diagrams",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>production possibility frontier</strong> (PPF).</p>",
+      "back": "<p><strong>Production possibility frontier</strong> — a curve that shows the maximum potential output combinations of two goods or services an economy can achieve when all its resources are fully and efficiently employed.</p><p>The axes are typically capital goods and consumer goods; the AQA specification calls these production possibility diagrams.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["ppf"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A curve that shows the maximum potential output combinations of two goods or services an economy can achieve when all its resources are fully and efficiently employed."
+      }
+    },
+    {
+      "id": "aqa-1-1-5-diagram-01",
+      "specCode": "1.1.5",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-5-production-possibility-diagrams",
+      "cardType": "diagram",
+      "front": "<p>Interpret the <strong>points on a production possibility diagram</strong>: on, inside and outside the frontier.</p>",
+      "back": "<p>Points on the frontier (A, C, D, B) are <strong>productively efficient</strong> — all resources fully and efficiently used. Point E inside the frontier means <strong>unemployed or inefficiently used resources</strong>: more of both goods is possible at zero opportunity cost. Point F outside is <strong>currently unattainable</strong> with existing resources and technology. A movement along the frontier, such as C to D, shows the <strong>opportunity cost</strong> of producing more consumer goods.</p>",
+      "svgRef": "/images/diagrams/svg/ppf-basic.svg",
+      "svgAlt": "Concave production possibility frontier for capital and consumer goods with points A, C, D and B on the curve, E inside it and F outside it",
+      "difficulty": "standard",
+      "tags": ["ppf", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-5-diagram-02",
+      "specCode": "1.1.5",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-5-production-possibility-diagrams",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>economic growth and decline</strong> on a production possibility diagram, with causes of each.</p>",
+      "back": "<p>An <strong>outward shift</strong> (PPF1 to PPF2) shows economic growth — an increase in the quantity or quality of the factors of production: immigration, new resource discoveries, better education and training, technological advance. An <strong>inward shift</strong> (PPF1 to PPF3) shows economic decline — natural disasters destroying capital, war, or long-term unemployment eroding skills.</p>",
+      "svgRef": "/images/diagrams/svg/ppf-growth-decline.svg",
+      "svgAlt": "Three concentric production possibility frontiers: an outward shift to PPF2 showing growth and an inward shift to PPF3 showing decline",
+      "difficulty": "standard",
+      "tags": ["ppf", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-1-5-chain-01",
+      "specCode": "1.1.5",
+      "topic": "1.1 Economic methodology and the economic problem",
+      "subtopic": "1-1-5-production-possibility-diagrams",
+      "cardType": "chain",
+      "front": "<p>Why are <strong>all points on the PPF productively efficient</strong>, but <strong>not all allocatively efficient</strong>?</p>",
+      "back": "<p>Every point on the frontier uses all resources fully — none are wasted — so each is productively efficient. But <strong>allocative efficiency</strong> requires the particular combination of goods that maximises society's welfare, and only one point on the frontier does that — and we cannot know exactly which.</p><p>We can still say allocative efficiency improves when more of one good is produced without less of the other — for example, moving from E inside the frontier to C on it.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["ppf", "efficiency"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-1-def-01",
+      "specCode": "1.2.1",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-1-consumer-behaviour",
+      "cardType": "definition",
+      "front": "<p>What does it mean for economic agents to act <strong>rationally</strong>, and what does each agent maximise?</p>",
+      "back": "<p><strong>Rationality</strong> — making the choice with the highest expected net benefit, in the agent's self-interest.</p><ul><li><strong>Consumers</strong> maximise utility.</li><li><strong>Firms</strong> maximise profit.</li><li><strong>Workers</strong> maximise net welfare from employment.</li><li><strong>Governments</strong> maximise social welfare.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["consumer-behaviour"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-1-def-02",
+      "specCode": "1.2.1",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-1-consumer-behaviour",
+      "cardType": "definition",
+      "front": "<p>Define <strong>utility</strong>, distinguishing <strong>total</strong> from <strong>marginal</strong> utility.</p>",
+      "back": "<p><strong>Utility</strong> — the satisfaction or happiness a consumer derives from consuming goods and services.</p><p><strong>Total utility</strong> — the total satisfaction from consuming a given quantity. <strong>Marginal utility</strong> — the additional satisfaction from consuming one more unit.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["consumer-behaviour", "utility"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The satisfaction or happiness a consumer derives from consuming goods and services."
+      }
+    },
+    {
+      "id": "aqa-1-2-1-def-03",
+      "specCode": "1.2.1",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-1-consumer-behaviour",
+      "cardType": "definition",
+      "front": "<p>State the <strong>hypothesis of diminishing marginal utility</strong>, and its link to the demand curve.</p>",
+      "back": "<p>As a consumer consumes more units of a good, the additional satisfaction (marginal utility) from each extra unit eventually falls.</p><p>AQA expects you to know that diminishing marginal utility <strong>supports a downward-sloping demand curve</strong> — extra units give less satisfaction, so consumers only buy more at lower prices. (The equi-marginal principle is not required.)</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["consumer-behaviour", "utility"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-1-diagram-01",
+      "specCode": "1.2.1",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-1-consumer-behaviour",
+      "cardType": "diagram",
+      "front": "<p>Draw the <strong>total utility curve</strong>, and mark where marginal utility is zero.</p>",
+      "back": "<p>Total utility rises steeply for the first units, then at a decreasing rate as marginal utility diminishes. It is <strong>maximised where marginal utility is zero</strong> — the flat top between units 3 and 4. Beyond that, marginal utility is negative and total utility falls: a fifth slice of cake makes you worse off.</p>",
+      "svgRef": "/images/diagrams/svg/total-utility.svg",
+      "svgAlt": "Total utility curve rising at a decreasing rate to a flat maximum between quantities three and four, then falling to quantity five",
+      "difficulty": "standard",
+      "tags": ["consumer-behaviour", "utility", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-1-def-04",
+      "specCode": "1.2.1",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-1-consumer-behaviour",
+      "cardType": "definition",
+      "front": "<p>What does <strong>\"marginal\"</strong> mean in economics, and why is the margin important for decision making?</p>",
+      "back": "<p><strong>Marginal</strong> — the additional or incremental change resulting from one more unit of a good, service or resource.</p><p>Decisions are made at the margin: consumers compare the marginal utility of one more unit with the price they must pay; firms compare marginal revenue with marginal cost to decide whether producing another unit is profitable.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["consumer-behaviour"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-1-consumer-behaviour.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-2-def-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-2-imperfect-information",
+      "cardType": "definition",
+      "front": "<p>Define <strong>information gaps</strong> and <strong>asymmetric information</strong>.</p>",
+      "back": "<p><strong>Information gaps</strong> — a situation where one party lacks the information needed to make an informed decision.</p><p><strong>Asymmetric information</strong> — a situation where one party in a transaction has more or better information than the other.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["information"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-2-imperfect-information.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a situation where one party in a transaction has more or better information than the other."
+      }
+    },
+    {
+      "id": "aqa-1-2-2-chain-01",
+      "specCode": "1.2.2",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-2-imperfect-information",
+      "cardType": "chain",
+      "front": "<p>Build the chain of reasoning: how does <strong>asymmetric information</strong> lead to <strong>market failure</strong>?</p>",
+      "back": "<p>One party knows more than the other, so the less-informed party cannot judge true value or quality. Their decisions no longer maximise utility or profit, resources are misallocated, and the result can be <strong>market failure</strong>.</p><p>Example: a used-car seller hides known defects; the buyer overpays and loses utility. AQA flags imperfect information as a potential source of market failure in its own right.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["information", "market-failure"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-2-imperfect-information.html",
+        "origin": "card-authored"
+      }
+    },
+    {
       "id": "aqa-1-2-3-def-01",
       "specCode": "1.2.3",
       "topic": "1.2 Individual economic decision making",

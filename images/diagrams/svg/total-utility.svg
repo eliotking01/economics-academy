@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Total utility curve</title>
+  <desc id="d">Total utility rising at a decreasing rate as quantity consumed increases from zero, reaching a maximum between the third and fourth units where marginal utility is zero, then falling as further units carry negative marginal utility.</desc>
+  <!-- geometry
+       on-curve: 100,520 195,300 290,160 385,120 480,120 575,190
+  -->
+  <!-- guides -->
+  <line x1="195" y1="300" x2="195" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="290" y1="160" x2="290" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="385" y1="120" x2="385" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="480" y1="120" x2="480" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="575" y1="190" x2="575" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Total utility</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curve -->
+  <path d="M100 520 L195 300 L290 160 L385 120 L480 120 L575 190" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="589" y="184" font-size="26" font-weight="700" fill="#1d70b8">TU</text>
+  <!-- quantity labels -->
+  <text x="100" y="552" font-size="24" fill="#333333" text-anchor="middle">0</text>
+  <text x="195" y="552" font-size="24" fill="#333333" text-anchor="middle">1</text>
+  <text x="290" y="552" font-size="24" fill="#333333" text-anchor="middle">2</text>
+  <text x="385" y="552" font-size="24" fill="#333333" text-anchor="middle">3</text>
+  <text x="480" y="552" font-size="24" fill="#333333" text-anchor="middle">4</text>
+  <text x="575" y="552" font-size="24" fill="#333333" text-anchor="middle">5</text>
+</svg>
