@@ -128,4 +128,6 @@ Format per entry:
   alone."
 - **Confidence** — high (same figure, same error class as the approved
   fix).
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-05; applied with the
+  Edexcel twin's approved wording verbatim; text/markup integrity
+  confirmed the caption was the only change).

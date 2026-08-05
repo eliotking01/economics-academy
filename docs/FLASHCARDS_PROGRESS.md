@@ -28,14 +28,12 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **72 ✅ · 10 🟡 · 84 ❌** of 166 units.
+Tally (2026-08-05): **82 ✅ · 0 🟡 · 84 ❌** of 166 units.
 Cards shipped: 323 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 36 AQA macro). Approved through Theme 2. **AQA macro
-batches 1 and 2 (36 cards: sections 2.1 and 2.2 complete, deck
-`aqa-macro` live) are built and integrated but BOTH AWAIT ELIOT'S
-REVIEW.** SVG diagrams shipped: 44 (ad-movements.svg new in batch 2;
-seven shared SVGs reused on AQA macro cards). CONTENT_ISSUES #7
-(AQA multiplier caption, twin of the fixed #6) is **open**.
+Theme 2 + 36 AQA macro), **all approved by Eliot** (AQA macro
+batches 1 and 2 approved 2026-08-05; CONTENT_ISSUES #7 approved and
+fixed the same day with the Edexcel twin's wording). SVG diagrams
+shipped: 44. No open content issues.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -229,16 +227,16 @@ content and follow in phase 5 of the approved order.
 
 | Unit | Status |
 | --- | --- |
-| 2.1.1 Objectives of government economic policy | 🟡 review | 2 definition, 1 evaluation |
-| 2.1.2 Macroeconomic indicators | 🟡 review | 3 definition, 1 formula |
-| 2.1.3 Uses of index numbers | 🟡 review | 2 definition, 1 formula, 1 calculation |
-| 2.1.4 Uses of national income data | 🟡 review | 3 definition, 1 evaluation |
-| 2.2.1 Circular flow of income | 🟡 review | 2 definition, 1 diagram |
-| 2.2.2 AD/AS analysis | 🟡 review | 1 definition, 3 diagram, 1 chain |
-| 2.2.3 Determinants of aggregate demand | 🟡 review | 3 definition, 1 chain |
-| 2.2.4 Aggregate demand & the level of economic activity | 🟡 review | 1 definition, 1 formula, 1 diagram |
-| 2.2.5 Determinants of short-run aggregate supply | 🟡 review | 1 definition, 1 diagram |
-| 2.2.6 Determinants of long-run aggregate supply | 🟡 review | 2 definition, 2 diagram |
+| 2.1.1 Objectives of government economic policy | ✅ | 2 definition, 1 evaluation |
+| 2.1.2 Macroeconomic indicators | ✅ | 3 definition, 1 formula |
+| 2.1.3 Uses of index numbers | ✅ | 2 definition, 1 formula, 1 calculation |
+| 2.1.4 Uses of national income data | ✅ | 3 definition, 1 evaluation |
+| 2.2.1 Circular flow of income | ✅ | 2 definition, 1 diagram |
+| 2.2.2 AD/AS analysis | ✅ | 1 definition, 3 diagram, 1 chain |
+| 2.2.3 Determinants of aggregate demand | ✅ | 3 definition, 1 chain |
+| 2.2.4 Aggregate demand & the level of economic activity | ✅ | 1 definition, 1 formula, 1 diagram |
+| 2.2.5 Determinants of short-run aggregate supply | ✅ | 1 definition, 1 diagram |
+| 2.2.6 Determinants of long-run aggregate supply | ✅ | 2 definition, 2 diagram |
 | 2.3.1 Economic growth & the economic cycle | ❌ |
 | 2.3.2 Employment & unemployment | ❌ |
 | 2.3.3 Inflation & deflation | ❌ |
@@ -450,18 +448,18 @@ Useful QA techniques:
   (spec 4.2.2.3); covered on cards from the spec. Matrix: 72 ✅ ·
   10 🟡 · 84 ❌; 323 cards, 44 SVGs.
 
+- 2026-08-05 — **AQA macro batches 1–2 approved by Eliot** (same
+  day). CONTENT_ISSUES #7 approved and fixed with the Edexcel twin's
+  wording; integrity checks confirmed the caption was the only
+  change. Sections 2.1–2.2 flipped to ✅.
+
 ## Next steps (a fresh session starts here)
 
-1. **Get AQA macro batches 1–2 approved** (15 + 21 cards, sections
-   2.1–2.2, both presented 2026-08-05), plus a verdict on
-   CONTENT_ISSUES #7 (AQA multiplier caption — twin of the approved
-   Edexcel fix). Board differences honoured: AQA's FOUR main
-   objectives framing; the multiplier calculated from MPC only
-   (aqa-2-2-4-formula-01 says so explicitly); AQA's own SRAS/LRAS
-   determinant lists; the accelerator and saving-vs-investment
-   distinction (AQA-only content).
-2. **AQA macro batches 3–4: sections 2.3 and 2.5** (the remaining
-   T2-mirrors, 6 units). Then Edexcel Theme 3 (phase 4).
+1. **AQA macro batch 3: sections 2.3 and 2.5** (the remaining
+   T2-mirrors, 6 units: growth & the economic cycle, employment &
+   unemployment, inflation & deflation, conflicts, fiscal policy,
+   supply-side policies — AQA spec 4.2.3 and 4.2.5). Then Edexcel
+   Theme 3 (phase 4).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
