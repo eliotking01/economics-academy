@@ -749,6 +749,539 @@
         "notesPage": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "aqa-2-3-1-def-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-1-economic-growth-and-the-economic-cycle",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>short-run from long-run growth</strong>, and their determinants.</p>",
+      "back": "<p><strong>Short-run (actual) growth</strong> — a rise in real GDP, caused by an increase in AD (any of C, I, G, X − M) or in SRAS through lower production costs. The economy moves closer to its existing potential.</p><p><strong>Long-run growth</strong> — a rise in productive capacity, the <strong>trend rate of growth</strong> of real national output over time; on diagrams, LRAS and the PPF shift outward.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["growth"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-1-diagram-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-1-economic-growth-and-the-economic-cycle",
+      "cardType": "diagram",
+      "front": "<p>Draw the <strong>economic cycle</strong>, and name the indicators that identify its phases.</p>",
+      "back": "<p>Actual real GDP fluctuates around the rising trend rate of growth: <strong>boom</strong> above trend, then downturn, <strong>recession</strong> below trend, then recovery.</p><p>To place an economy in the cycle, AQA expects a range of indicators read together: <strong>real GDP growth, inflation, unemployment and investment</strong> — booms pair fast growth with rising inflation and investment; recessions the reverse.</p>",
+      "svgRef": "/images/diagrams/svg/trade-cycle.svg",
+      "svgAlt": "Real GDP fluctuating around a rising trend line, above it in a boom and below it in a recession, with downturn and recovery marked",
+      "difficulty": "standard",
+      "tags": ["growth", "economic-cycle", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-1-diagram-02",
+      "specCode": "2.3.1",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-1-economic-growth-and-the-economic-cycle",
+      "cardType": "diagram",
+      "front": "<p>Show a <strong>positive output gap</strong>, and its meaning.</p>",
+      "back": "<p>AD and SRAS intersect at Y1, to the right of LRAS at Yfe: real GDP is <strong>above the economy's productive potential</strong> — overtime, factors overworked — which is what defines a positive output gap.</p><p>A negative gap is the mirror case, real GDP below potential. Gap positions map onto the cycle: positive in booms, negative in recessions.</p>",
+      "svgRef": "/images/diagrams/svg/positive-output-gap-classical.svg",
+      "svgAlt": "AD and SRAS intersecting at output Y1 right of the vertical LRAS curve at Yfe, showing a positive output gap",
+      "difficulty": "standard",
+      "tags": ["output-gaps", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-1-eval-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-1-economic-growth-and-the-economic-cycle",
+      "cardType": "evaluation",
+      "front": "<p>What causes <strong>cyclical instability</strong>?</p>",
+      "back": "<p>Beyond ordinary demand-side and supply-side shocks — domestic and global — AQA names four amplifiers: <strong>excessive growth in credit and debt</strong>; <strong>asset price bubbles</strong>; <strong>destabilising speculation</strong>; and <strong>animal spirits or herding</strong>, where confidence swings feed on themselves.</p><p>Each can turn a shock into a cycle: cheap credit inflates a bubble, herding sustains it, and the correction delivers the downturn.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["economic-cycle", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-1-eval-02",
+      "specCode": "2.3.1",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-1-economic-growth-and-the-economic-cycle",
+      "cardType": "evaluation",
+      "front": "<p>Weigh the <strong>costs and benefits of economic growth</strong>.</p>",
+      "back": "<p><strong>Benefits</strong> — higher real incomes and living standards, more employment, higher tax revenue and business investment.</p><p><strong>Costs</strong> — demand-pull inflation, inequality where gains are uneven, and environmental damage: pollution, emissions, resource depletion. AQA expects a view on <strong>sustainability</strong> — whether today's growth compromises the environment and resources future generations depend on.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["growth", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-2-def-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-2-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Define <strong>unemployed</strong>, the <strong>labour force</strong> and <strong>economic inactivity</strong>.</p>",
+      "back": "<p><strong>Unemployed</strong> — of working age, without work, but willing and able to work and actively seeking employment. The <strong>labour force</strong> is the total of those in employment and those unemployed who are actively seeking work.</p><p><strong>Economically inactive</strong> — people of working age not seeking work: full-time students, early retirees, the long-term sick, discouraged workers.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["unemployment"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The total of those in employment and those unemployed who are actively seeking work."
+      }
+    },
+    {
+      "id": "aqa-2-3-2-def-02",
+      "specCode": "2.3.2",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-2-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Contrast the UK's two <strong>measures of unemployment</strong>.</p>",
+      "back": "<p>The <strong>Labour Force Survey</strong> (ILO measure) — a household survey counting those without work who are available to start within two weeks and have sought work in the last four weeks; internationally comparable.</p><p>The <strong>claimant count</strong> — the number claiming unemployment-related benefits. The LFS is usually the higher figure, since many who are genuinely unemployed are not eligible for, or do not claim, benefits.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["unemployment", "measurement"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-2-def-03",
+      "specCode": "2.3.2",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-2-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Name and define the <strong>four types of unemployment</strong> in the AQA specification.</p>",
+      "back": "<p><strong>Frictional</strong> — short-term, between jobs. <strong>Structural</strong> — a mismatch between workers' skills and available jobs, often from technological change. <strong>Seasonal</strong> — demand for some labour fluctuates across the year. <strong>Cyclical</strong> — demand-deficient unemployment in a downturn, linked to a negative output gap.</p><p>The cause decides the cure: demand-side policy treats cyclical unemployment; supply-side policy treats structural and frictional.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["unemployment"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-2-def-04",
+      "specCode": "2.3.2",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-2-employment-and-unemployment",
+      "cardType": "definition",
+      "front": "<p>Define <strong>real wage unemployment</strong> and the <strong>natural rate of unemployment</strong>.</p>",
+      "back": "<p><strong>Real wage unemployment</strong> occurs when wages are set above the market-clearing level, leaving an excess supply of labour — possible causes include minimum wage laws and trade union negotiations.</p><p>The <strong>natural rate of unemployment</strong> is the unemployment that remains at full employment: the frictional and structural components that never fully disappear. Supply-side factors set it, and it fixes where LRAS — and the long-run Phillips curve — stand.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["unemployment"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Occurs when wages are set above the market-clearing level, leading to excess supply of labour. This can be caused by minimum wage laws or trade union negotiations."
+      }
+    },
+    {
+      "id": "aqa-2-3-2-eval-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-2-employment-and-unemployment",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the <strong>consequences of unemployment</strong>.</p>",
+      "back": "<p><strong>For individuals</strong> — lower income and living standards, skills and experience decay that makes re-employment harder, and damage to mental and physical health.</p><p><strong>For the economy</strong> — lost output and lower AD, higher welfare spending and lower tax revenue for the government, and wasted productive potential. The evaluation point: the right policy response depends entirely on the cause — stimulus cures cyclical unemployment but not structural.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["unemployment", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-3-def-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-3-inflation-and-deflation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>inflation, deflation and disinflation</strong>.</p>",
+      "back": "<p><strong>Inflation</strong> — a sustained increase in the general/average price level of goods and services in an economy. <strong>Deflation</strong> — a sustained decrease in the price level: a negative inflation rate. <strong>Disinflation</strong> — a fall in the <strong>rate</strong> of inflation: prices still rising, more slowly.</p><p>AQA's trap: <strong>deflationary policies</strong> are policies that reduce AD — they do not necessarily cause deflation.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["inflation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A sustained increase in the general/average price level of goods and services in an economy."
+      }
+    },
+    {
+      "id": "aqa-2-3-3-diagram-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-3-inflation-and-deflation",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>demand-pull inflation</strong> on an AD/AS diagram.</p>",
+      "back": "<p>AD shifts right (AD1 to AD2) — rising consumer spending, credit growth, fiscal stimulus — along an unchanged SRAS: the price level rises from PL1 to PL2 as output rises from Y1 to Y2.</p><p>Prices are pulled up by excess demand, strongest as the economy nears capacity.</p>",
+      "svgRef": "/images/diagrams/svg/ad-shift-right.svg",
+      "svgAlt": "Aggregate demand shifting right from AD1 to AD2 along the SRAS curve, raising the price level from PL1 to PL2 and real GDP from Y1 to Y2",
+      "difficulty": "standard",
+      "tags": ["inflation", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-3-diagram-02",
+      "specCode": "2.3.3",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-3-inflation-and-deflation",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>cost-push inflation</strong>, and how world prices feed it.</p>",
+      "back": "<p>An economy-wide rise in production costs shifts SRAS left (SRAS1 to SRAS2) along AD: the price level rises from PL1 to PL2 while output falls from Y1 to Y2.</p><p>This is the channel for imported inflation: rising <strong>world commodity prices</strong> — oil, gas, food — and inflation in other economies raise UK firms' costs, so domestic inflation can arrive from abroad.</p>",
+      "svgRef": "/images/diagrams/svg/sras-shift-left.svg",
+      "svgAlt": "Short-run aggregate supply shifting left from SRAS1 to SRAS2 along the AD curve, raising the price level from PL1 to PL2 while real GDP falls from Y1 to Y2",
+      "difficulty": "standard",
+      "tags": ["inflation", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-3-formula-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-3-inflation-and-deflation",
+      "cardType": "formula",
+      "front": "<p>State <strong>Fisher's equation of exchange</strong>, and the Quantity Theory of Money.</p>",
+      "back": "<p>M is the money supply, V the velocity of circulation, P the price level and Q real output — so PQ is nominal national income.</p><p>The <strong>Quantity Theory</strong> (the monetarist model): if V and Q are stable, growth in the money supply feeds directly into the price level — inflation is \"always and everywhere a monetary phenomenon\", and controlling the money supply is the key to price stability. Expectations matter too: if people expect inflation, wage and price setting deliver it.</p>",
+      "formula": "M × V = P × Q",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["inflation", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-3-eval-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-3-inflation-and-deflation",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the consequences of <strong>inflation and deflation</strong>.</p>",
+      "back": "<p><strong>Inflation</strong> erodes purchasing power (hitting fixed incomes hardest), erodes savings, creates uncertainty that deters investment, and harms competitiveness if UK prices rise faster than rivals'.</p><p><strong>Deflation</strong> can be worse: households delay spending expecting lower prices, the real burden of debt rises, and falling revenues force firms to cut jobs — a self-reinforcing spiral. Low and stable inflation, not zero, is the target for a reason.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["inflation", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-4-def-01",
+      "specCode": "2.3.4",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+      "cardType": "definition",
+      "front": "<p>How do <strong>output gaps relate to unemployment and inflationary pressure</strong>?</p>",
+      "back": "<p>A <strong>negative output gap</strong> means spare capacity: cyclical unemployment rises and inflationary pressure eases. A <strong>positive output gap</strong> means the economy is straining beyond potential: unemployment is low but demand-pull inflation builds.</p><p>This single mechanism underlies most objective conflicts — policy that closes one gap usually opens pressure somewhere else, at least in the short run.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["objectives", "output-gaps"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-4-diagram-01",
+      "specCode": "2.3.4",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+      "cardType": "diagram",
+      "front": "<p>Draw and explain the <strong>short-run Phillips curve</strong>.</p>",
+      "back": "<p>The SRPC shows a short-run <strong>trade-off between unemployment and inflation</strong>: lower unemployment raises incomes and spending, bidding prices up (demand-pull).</p><p>Policy reading: demand management can buy lower unemployment at the price of higher inflation — but only in the short run, while inflation expectations lag behind actual inflation.</p>",
+      "svgRef": "/images/diagrams/svg/short-run-phillips-curve.svg",
+      "svgAlt": "Short-run Phillips curve convex to the origin, showing lower unemployment paired with higher inflation",
+      "difficulty": "standard",
+      "tags": ["objectives", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-3-4-diagram-02",
+      "specCode": "2.3.4",
+      "topic": "2.3 Economic performance",
+      "subtopic": "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives",
+      "cardType": "diagram",
+      "front": "<p>Draw and explain the <strong>long-run Phillips curve</strong>.</p>",
+      "back": "<p>In the long run the Phillips curve is <strong>vertical at the natural rate of unemployment</strong>: expectations adjust to actual inflation, so stimulating demand just shifts the short-run curve up (SRPC1 to SRPC2) — same unemployment, higher inflation (2% to 5%).</p><p>The monetarist/supply-side conclusion: no long-run trade-off, so the objectives are compatible in the long run — demand policy should target inflation, and only <strong>supply-side policy can lower the NRU itself</strong>.</p>",
+      "svgRef": "/images/diagrams/svg/long-run-phillips-curve.svg",
+      "svgAlt": "Vertical long-run Phillips curve at the natural rate of unemployment, crossed by SRPC1 at 2 percent inflation and the higher SRPC2 at 5 percent",
+      "difficulty": "stretch",
+      "tags": ["objectives", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-1-def-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "definition",
+      "front": "<p>Define <strong>fiscal policy</strong>, and its expansionary and contractionary forms.</p>",
+      "back": "<p><strong>Fiscal policy</strong> is the government's manipulation of government spending (G) and taxation (T) to meet macroeconomic objectives — with microeconomic functions too, such as correcting market failures and changing incentives.</p><p><strong>Expansionary</strong>: raise G, cut T — AD rises. <strong>Contractionary</strong>: cut G, raise T — AD falls. Spending on education, infrastructure and R&D also works on the supply side, shifting LRAS.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["policy", "fiscal-policy"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-1-def-02",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "definition",
+      "front": "<p>Distinguish the <strong>types of public expenditure</strong>, and why governments levy taxes.</p>",
+      "back": "<p><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines). <strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure. <strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</p><p>Taxes exist to fund this spending, manage AD, correct market failures and redistribute income.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["policy", "fiscal-policy"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-1-def-03",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>progressive, proportional and regressive taxes</strong>.</p>",
+      "back": "<p><strong>Progressive</strong> — the average tax rate rises with income (UK income tax). <strong>Proportional</strong> — the same rate at every income. <strong>Regressive</strong> — the average rate falls as income rises, taking a bigger share from the poor (duties, VAT in practice).</p><p>The principles of taxation ask taxes to be <strong>equitable</strong>, efficient, certain and convenient — the mix of direct taxes (on income and profits) and indirect taxes (on spending) is judged against these.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["policy", "fiscal-policy"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-1-def-04",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "definition",
+      "front": "<p>Distinguish the <strong>deficit from the debt</strong>, and <strong>cyclical from structural deficits</strong> — and what is the OBR?</p>",
+      "back": "<p>The <strong>fiscal deficit</strong> is one year's gap between spending and tax revenue; the <strong>national debt</strong> is the accumulation of past deficits. A <strong>cyclical deficit</strong> widens in recessions and narrows in booms as revenue and welfare spending swing; a <strong>structural deficit</strong> persists even at potential output — the harder problem, unfixed by growth.</p><p>The <strong>Office for Budget Responsibility</strong> provides independent forecasts of the public finances, monitors fiscal policy, and publishes analysis that keeps governments transparent and accountable.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["policy", "fiscal-policy"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A deficit that exists even when the economy is operating at its potential output, indicating a fundamental imbalance between government spending and taxation that is not related to the economic cycle."
+      }
+    },
+    {
+      "id": "aqa-2-5-1-diagram-01",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "diagram",
+      "front": "<p>Draw and explain the <strong>Laffer curve</strong>.</p>",
+      "back": "<p>Total tax revenue against the tax rate: revenue is zero at 0% (nothing taxed) and at 100% (no incentive to earn), so revenue is maximised at some intermediate rate. Beyond it, higher rates <strong>reduce</strong> revenue — the higher rate t2 raises less (R2) than the lower rate t1 does (R1) — because incentives to work and invest shrink and avoidance grows.</p><p>A strong evaluation of any tax rise: the revenue gain assumes behaviour does not change.</p>",
+      "svgRef": "/images/diagrams/svg/laffer-curve.svg",
+      "svgAlt": "Dome-shaped Laffer curve of tax revenue against the tax rate, with revenue R1 at rate t1 higher than revenue R2 at the higher rate t2",
+      "difficulty": "stretch",
+      "tags": ["policy", "fiscal-policy", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-2-def-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-2-supply-side-policies",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>supply-side policies</strong> from <strong>supply-side improvements</strong>.</p>",
+      "back": "<p><strong>Supply-side policies</strong> are government measures to raise the economy's productive potential, shifting LRAS right. <strong>Supply-side improvements</strong> are the capacity gains themselves — and AQA stresses they often originate in the <strong>private sector</strong>, through productivity gains, innovation and investment, independently of government.</p><p>Policy divides into <strong>market-based</strong> (removing intervention) and <strong>interventionist</strong> (government spending) approaches.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["policy", "supply-side"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-2-supply-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-2-def-02",
+      "specCode": "2.5.2",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-2-supply-side-policies",
+      "cardType": "definition",
+      "front": "<p>Give AQA's examples of <strong>free-market and interventionist supply-side policies</strong>, and their effect on the natural rate.</p>",
+      "back": "<p><strong>Free-market</strong>: tax cuts to sharpen incentives, privatisation, deregulation, labour-market reforms. <strong>Interventionist</strong>: government spending on education and training, industrial policy, subsidising research and development.</p><p>By improving skills, mobility and incentives, both routes can lower the <strong>natural rate of unemployment</strong> — the frictional and structural core that demand policy cannot touch — while raising potential output and the trend growth rate.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["policy", "supply-side"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-2-supply-side-policies.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-5-2-diagram-01",
+      "specCode": "2.5.2",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-2-supply-side-policies",
+      "cardType": "diagram",
+      "front": "<p>Show the effect of <strong>successful supply-side policy</strong>, and its reach across the objectives.</p>",
+      "back": "<p>LRAS shifts right (LRAS1 to LRAS2): output rises from Yfe1 to Yfe2 while the price level falls — growth without inflation.</p><p>That reach is the appeal: more output, downward price pressure, a lower natural rate of unemployment, and stronger competitiveness improving the current account. The costs are time and — for interventionist policies — money.</p>",
+      "svgRef": "/images/diagrams/svg/classical-lras-shift-right.svg",
+      "svgAlt": "Vertical LRAS1 shifting right to LRAS2 along a downward-sloping AD curve, raising output from Yfe1 to Yfe2 and lowering the price level from PL1 to PL2",
+      "difficulty": "standard",
+      "tags": ["policy", "supply-side", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-5-2-supply-side-policies.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }
