@@ -1,0 +1,371 @@
+{
+  "generated": "2026-08-05",
+  "board": "edexcel-a",
+  "boardName": "Edexcel A",
+  "theme": "theme-2",
+  "themeName": "Theme 2: The UK Economy - Performance and Policies",
+  "deckId": "edexcel-a-theme-2",
+  "deckTitle": "Edexcel A-Level Economics Theme 2 Flashcards",
+  "count": 21,
+  "topics": [
+    {
+      "subtopic": "2-1-1-economic-growth",
+      "specCode": "2.1.1",
+      "title": "Economic Growth",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+      "count": 5
+    },
+    {
+      "subtopic": "2-1-2-inflation",
+      "specCode": "2.1.2",
+      "title": "Inflation",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+      "count": 6
+    },
+    {
+      "subtopic": "2-1-3-employment-unemployment",
+      "specCode": "2.1.3",
+      "title": "Employment and Unemployment",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
+      "count": 6
+    },
+    {
+      "subtopic": "2-1-4-balance-of-payments",
+      "specCode": "2.1.4",
+      "title": "Balance of Payments",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html",
+      "count": 4
+    }
+  ],
+  "cards": [
+    {
+      "id": "edexcel-a-2-1-1-def-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-1-economic-growth",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "growth",
+        "measurement"
+      ],
+      "front": "<p>Define <strong>GDP</strong>, and distinguish actual from potential growth.</p>",
+      "back": "<p><strong>Gross Domestic Product</strong> — the total monetary value of all final goods and services produced within a country's borders in a given year: the primary measure of economic activity.</p><p><strong>Actual growth</strong> is a rise in real GDP — producing more than last year. <strong>Potential growth</strong> is a rise in productive capacity — what the economy could produce at full employment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-1-1-formula-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-1-economic-growth",
+      "cardType": "formula",
+      "difficulty": "foundation",
+      "tags": [
+        "growth",
+        "formula"
+      ],
+      "front": "<p>State the <strong>expenditure approach</strong> to measuring GDP.</p>",
+      "back": "<p>Consumption + Investment + Government spending + Net exports. The income approach — summing wages, rent, interest and profit — must reach the same total, because every pound spent is a pound of income for someone.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>G</mi><mi>D</mi><mi>P</mi><mo>=</mo><mi>C</mi><mo>+</mo><mi>I</mi><mo>+</mo><mi>G</mi><mo>+</mo><mo stretchy=\"false\">(</mo><mi>X</mi><mo>−</mo><mi>M</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">GDP = C + I + G + (X - M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">G</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">D</span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">P</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">C</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07847em;\">I</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\">G</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.07847em;\">X</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">M</span><span class=\"mclose\">)</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-2-1-1-def-02",
+      "specCode": "2.1.1",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-1-economic-growth",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "growth",
+        "measurement"
+      ],
+      "front": "<p>Distinguish <strong>real vs nominal</strong> GDP, <strong>total vs per capita</strong>, and define <strong>GNI</strong>.</p>",
+      "back": "<p><strong>Nominal GDP</strong> is measured at current prices; <strong>real GDP</strong> is adjusted for inflation, showing the true change in the volume of output — the measure of growth (value vs volume). <strong>GDP per capita</strong> divides real GDP by population — the better guide to average living standards.</p><p><strong>GNI</strong> — GDP plus net income from abroad, such as profits sent home by citizens overseas minus income flowing out to foreign owners.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-1-1-def-03",
+      "specCode": "2.1.1",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-1-economic-growth",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "growth",
+        "measurement"
+      ],
+      "front": "<p>What are <strong>purchasing power parities</strong> (PPPs), and why are they used?</p>",
+      "back": "<p><strong>PPP</strong> — a conversion factor that accounts for differences in the cost of living between countries, adjusting income figures to show how much a standard basket of goods can be bought locally.</p><p>PPP-adjusted figures make international comparisons of real living standards meaningful: £1,000 buys far more in some countries than others, so raw exchange-rate conversions mislead.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-1-1-eval-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-1-economic-growth",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "growth",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>limitations of GDP</strong> for comparing living standards, and the national happiness evidence.</p>",
+      "back": "<p>GDP per capita masks <strong>inequality</strong>; excludes <strong>unpaid work</strong>, leisure and environmental quality; counts welfare-reducing 'bads' like pollution clean-up; struggles with <strong>quality improvements</strong>; and misses the informal economy.</p><p>Hence the spec's interest in <strong>national wellbeing</strong>: the UK measures subjective happiness alongside GDP, and rising real incomes raise reported happiness only weakly beyond a point.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-1-economic-growth.html"
+    },
+    {
+      "id": "edexcel-a-2-1-2-def-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "inflation"
+      ],
+      "front": "<p>Define <strong>inflation</strong>, <strong>deflation</strong> and <strong>disinflation</strong>.</p>",
+      "back": "<p><strong>Inflation</strong> — a sustained increase in the general/average price level of goods and services in an economy.</p><p><strong>Deflation</strong> — a sustained decrease in the general price level: a negative inflation rate. <strong>Disinflation</strong> — a decrease in the rate of inflation: prices still rising, but more slowly.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+    },
+    {
+      "id": "edexcel-a-2-1-2-formula-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "formula"
+      ],
+      "front": "<p>How is UK inflation measured with the <strong>CPI</strong>? State the inflation-rate formula.</p>",
+      "back": "<p>A representative basket of around 700 goods and services, <strong>weighted</strong> by each item's share of household spending, is priced monthly; the basket's cost is expressed as an index against a base year set to 100. The Bank of England's target is CPI inflation of 2%.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mtext>Inflation rate</mtext><mo>=</mo><mfrac><mrow><msub><mtext>CPI</mtext><mtext>year 2</mtext></msub><mo>−</mo><msub><mtext>CPI</mtext><mtext>year 1</mtext></msub></mrow><msub><mtext>CPI</mtext><mtext>year 1</mtext></msub></mfrac><mo>×</mo><mn>100</mn></mrow><annotation encoding=\"application/x-tex\">\\text{Inflation rate} = \\frac{\\text{CPI}_{\\text{year 2}} - \\text{CPI}_{\\text{year 1}}}{\\text{CPI}_{\\text{year 1}}} \\times 100</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6944em;\"></span><span class=\"mord text\"><span class=\"mord\">Inflation rate</span></span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:2.3324em;vertical-align:-0.9721em;\"></span><span class=\"mord\"><span class=\"mopen nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.3603em;\"><span style=\"top:-2.314em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord text\"><span class=\"mord\">CPI</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3011em;\"><span style=\"top:-2.55em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord text mtight\"><span class=\"mord mtight\">year 1</span></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2861em;\"><span></span></span></span></span></span></span></span></span><span style=\"top:-3.23em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"frac-line\" style=\"border-bottom-width:0.04em;\"></span></span><span style=\"top:-3.677em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord text\"><span class=\"mord\">CPI</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3011em;\"><span style=\"top:-2.55em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord text mtight\"><span class=\"mord mtight\">year 2</span></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2861em;\"><span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mord\"><span class=\"mord text\"><span class=\"mord\">CPI</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3011em;\"><span style=\"top:-2.55em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord text mtight\"><span class=\"mord mtight\">year 1</span></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2861em;\"><span></span></span></span></span></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.9721em;\"><span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">×</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">100</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-2-1-2-calc-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "calculation"
+      ],
+      "front": "<p>A basket costs £480 in the 2023 base year, £504 in 2024 and £524.16 in 2025. Calculate the <strong>CPI for each year and the inflation rate</strong> for 2024 and 2025.</p>",
+      "back": "<p>CPI: 2023 = 100; 2024 = 504 ÷ 480 × 100 = <strong>105</strong>; 2025 = 524.16 ÷ 480 × 100 = <strong>109.2</strong></p><p>Inflation 2024 = (105 − 100) ÷ 100 × 100 = <strong>5%</strong></p><p>Inflation 2025 = (109.2 − 105) ÷ 105 × 100 = <strong>4%</strong></p><p>Inflation fell yet the basket still costs more — disinflation, not deflation. Each year's rate is measured against the previous year's index, not the base year.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+    },
+    {
+      "id": "edexcel-a-2-1-2-def-02",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "inflation"
+      ],
+      "front": "<p>State the <strong>limitations of the CPI</strong>, and how the <strong>RPI</strong> differs.</p>",
+      "back": "<p>CPI's average basket may not represent particular households (pensioners, students); it ignores regional variation; it lags quality improvements and consumers' substitution to cheaper alternatives; and it rests on sample surveys.</p><p><strong>RPI</strong> includes housing costs such as mortgage interest and council tax, generally yields a higher rate, and is not the UK's official target measure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+    },
+    {
+      "id": "edexcel-a-2-1-2-chain-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "inflation"
+      ],
+      "front": "<p>Explain the three <strong>causes of inflation</strong> in the Edexcel specification.</p>",
+      "back": "<p><strong>Demand-pull</strong> — anything raising C, I, G or X−M shifts AD right and pulls the price level up. <strong>Cost-push</strong> — higher production costs (commodity prices, wages, indirect taxes, a weaker currency) shift SRAS left, raising prices while cutting output.</p><p><strong>Money supply growth</strong> — excessive growth (e.g. quantitative easing) fuels both: cheaper borrowing boosts spending, and a depreciating currency raises import costs. A <strong>wage-price spiral</strong> can then sustain inflation after the original cause fades.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+    },
+    {
+      "id": "edexcel-a-2-1-2-eval-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>effects of inflation</strong> on consumers, firms, the government and workers.</p>",
+      "back": "<p><strong>Consumers</strong> — real incomes and the value of savings erode, hitting living standards. <strong>Firms</strong> — uncertainty discourages investment, higher inflation than trading partners erodes international competitiveness, and menu costs mount.</p><p><strong>Government</strong> — index-linked pensions and benefits cost more, widening the deficit. <strong>Workers</strong> — real wages fall unless pay keeps pace, prompting the wage demands that can spiral.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+    },
+    {
+      "id": "edexcel-a-2-1-3-def-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-3-employment-unemployment",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "unemployment"
+      ],
+      "front": "<p>Define <strong>unemployed</strong>, the <strong>labour force</strong> and <strong>economically inactive</strong>.</p>",
+      "back": "<p><strong>Unemployed</strong> — an individual of working age who is without work, but is willing and able to work, and is actively seeking employment.</p><p><strong>Labour force</strong> — those in employment plus the unemployed actively seeking work. <strong>Economically inactive</strong> — working-age people not seeking work: full-time students, early retirees, the long-term sick, discouraged workers.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html"
+    },
+    {
+      "id": "edexcel-a-2-1-3-calc-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-3-employment-unemployment",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "unemployment",
+        "calculation"
+      ],
+      "front": "<p>A working-age population of 40 million has 26m in employment, 2m unemployed and 12m economically inactive. Calculate the <strong>unemployment rate and the employment rate</strong>.</p>",
+      "back": "<p>Labour force = 26m + 2m = <strong>28m</strong></p><p>Unemployment rate = 2 ÷ 28 × 100 = <strong>7.1%</strong></p><p>Employment rate = 26 ÷ 40 × 100 = <strong>65%</strong></p><p>The two rates use different denominators — the labour force versus the whole working-age population — which is why they do not sum to 100%: the 12 million inactive appear in neither.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html"
+    },
+    {
+      "id": "edexcel-a-2-1-3-def-02",
+      "specCode": "2.1.3",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-3-employment-unemployment",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "unemployment",
+        "measurement"
+      ],
+      "front": "<p>Contrast the UK's two <strong>measures of unemployment</strong>.</p>",
+      "back": "<p><strong>ILO / Labour Force Survey</strong> — the internationally comparable household survey: unemployed means without work, available to start within two weeks, and actively seeking in the last four.</p><p><strong>Claimant Count</strong> — the number claiming unemployment-related benefits such as Jobseeker's Allowance. Usually lower than the LFS, since not all unemployed people claim.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html"
+    },
+    {
+      "id": "edexcel-a-2-1-3-def-03",
+      "specCode": "2.1.3",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-3-employment-unemployment",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "unemployment"
+      ],
+      "front": "<p>Name and define the <strong>five causes of unemployment</strong> in the Edexcel specification.</p>",
+      "back": "<ul><li><strong>Structural</strong> — skills mismatch as industries decline or technology shifts (coal mining regions).</li><li><strong>Cyclical (demand-deficient)</strong> — a lack of aggregate demand in downturns (2008).</li><li><strong>Frictional</strong> — short spells between jobs.</li><li><strong>Seasonal</strong> — demand for labour varies through the year (ski instructors in summer).</li><li><strong>Real wage inflexibility</strong> — wages held above the market-clearing level create excess labour supply.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html"
+    },
+    {
+      "id": "edexcel-a-2-1-3-def-04",
+      "specCode": "2.1.3",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-3-employment-unemployment",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "unemployment"
+      ],
+      "front": "<p>Define <strong>underemployment</strong>, and distinguish it from unemployment.</p>",
+      "back": "<p><strong>Underemployment</strong> — when workers are in jobs that underutilise their skills, or want to work more hours than they do — a qualified teacher working part-time as a barista.</p><p>Unlike the unemployed they have work, so they appear in the employment figures — a waste of productive potential hidden inside the statistics.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html"
+    },
+    {
+      "id": "edexcel-a-2-1-3-eval-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-3-employment-unemployment",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "unemployment",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>effects of unemployment</strong>, and the significance of migration and skills.</p>",
+      "back": "<p><strong>Individuals</strong> — lower incomes and living standards, skills erode, health suffers. <strong>Government and society</strong> — lower tax revenue and higher welfare spending widen the deficit; social costs rise. <strong>Firms</strong> — weaker sales, though a larger labour pool can lower hiring costs.</p><p><strong>Migration</strong> cuts unemployment where migrants fill shortages, and migrants' spending creates jobs; competition can raise unemployment in particular low-skilled sectors. Skills determine who escapes structural unemployment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html"
+    },
+    {
+      "id": "edexcel-a-2-1-4-def-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-4-balance-of-payments",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "balance-of-payments"
+      ],
+      "front": "<p>Define the <strong>balance of payments</strong>, and name its three accounts.</p>",
+      "back": "<p><strong>Balance of payments</strong> — a record of all financial transactions between a country and the rest of the world. It must always balance: total credits equal total debits.</p><p><strong>Current account</strong> — trade and income flows. <strong>Capital account</strong> — capital transfers and non-produced assets (small, often ignored). <strong>Financial account</strong> — cross-border investment flows (FDI, portfolio investment, reserves), which finance the current account balance.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-2-1-4-def-02",
+      "specCode": "2.1.4",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-4-balance-of-payments",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "balance-of-payments"
+      ],
+      "front": "<p>Name the <strong>four components of the current account</strong>.</p>",
+      "back": "<ul><li><strong>Trade in goods</strong> (visible balance) — exports credit, imports debit.</li><li><strong>Trade in services</strong> (invisible balance) — banking, tourism, insurance.</li><li><strong>Primary income</strong> — net investment income: dividends, interest, FDI profits.</li><li><strong>Secondary income</strong> — net transfers with nothing exchanged: aid, pensions, remittances.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-2-1-4-calc-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-4-balance-of-payments",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "balance-of-payments",
+        "calculation"
+      ],
+      "front": "<p>Goods: credits £320bn, debits £410bn. Services: £290bn, £210bn. Primary income: £95bn, £120bn. Secondary income: £20bn, £35bn. Calculate the <strong>current account balance</strong>.</p>",
+      "back": "<p>Goods: 320 − 410 = <strong>−£90bn</strong></p><p>Services: 290 − 210 = <strong>+£80bn</strong></p><p>Primary income: 95 − 120 = <strong>−£25bn</strong>; secondary income: 20 − 35 = <strong>−£15bn</strong></p><p>Balance = −90 + 80 − 25 − 15 = <strong>−£50bn deficit</strong>. The services surplus partly offsets the goods deficit — quoting goods alone would overstate the deficit by £40bn.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-2-1-4-chain-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-4-balance-of-payments",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "balance-of-payments"
+      ],
+      "front": "<p>What causes a <strong>current account deficit</strong>, and how does correcting one conflict with other objectives?</p>",
+      "back": "<p>Causes: high consumer spending and low saving pulling in imports; weak competitiveness and low productivity; a strong currency; slowdown in export markets; structural issues such as deindustrialisation.</p><p>Corrections trade off against other objectives — cutting demand through fiscal or monetary tightening slows growth and raises unemployment; supply-side improvement works but slowly and at a cost. Economies are interconnected through trade, so one country's deficit is another's surplus.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html"
+    }
+  ]
+}

@@ -28,12 +28,22 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **22 ✅ · 26 🟡 · 118 ❌** of 166 units.
-Cards shipped: 184 (95 Edexcel Theme 1 + 89 AQA micro). SVG diagrams
-shipped: 21 (all geometry-verified; twelve are shared with the AQA deck;
-total-utility, underproduction, overconsumption and
-subsidy-gov-expenditure are AQA-only — the middle two complete the four
-externality quadrants).
+Tally (2026-08-05): **22 ✅ · 30 🟡 · 114 ❌** of 166 units.
+Cards shipped: 205 (95 Edexcel Theme 1 + 89 AQA micro + 21 Edexcel
+Theme 2). SVG diagrams shipped: 21 (all geometry-verified; twelve are
+shared with the AQA deck; total-utility, underproduction,
+overconsumption and subsidy-gov-expenditure are AQA-only — the middle
+two complete the four externality quadrants).
+
+**Phase 2 (Edexcel Theme 2) is underway.** The `edexcel-a-theme-2` deck
+exists (builder auto-discovered it; hub and sitemap carry the new page)
+and its batch 1 covers all of section 2.1 — awaiting review. Deferred by
+design: AD/AS diagram cards for 2.1.2's demand-pull/cost-push figures
+wait until the AD/AS SVG family is drawn with the 2.2/2.3 batches; the
+2.1.1 "national happiness" spec bullet has no notes coverage, so that
+card is spec-sourced (flagged for Eliot); Theme 2 notes-page links need
+an approved wording variant ("Theme 2 deck") before any notes page is
+touched.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -79,14 +89,14 @@ classical vs Keynesian LRAS, output gaps, trade cycle, multiplier).
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 ❌ (no deck; 24 units)
+### Edexcel A (9EC0) — Theme 2 (deck `edexcel-a-theme-2`, 21 cards so far; 24 units)
 
-| Unit | Status |
-| --- | --- |
-| 2.1.1 Economic growth | ❌ |
-| 2.1.2 Inflation | ❌ |
-| 2.1.3 Employment & unemployment | ❌ |
-| 2.1.4 Balance of payments | ❌ |
+| Unit | Status | Cards by type |
+| --- | --- | --- |
+| 2.1.1 Economic growth | 🟡 review | 3 definition, 1 formula, 1 evaluation |
+| 2.1.2 Inflation | 🟡 review | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation |
+| 2.1.3 Employment & unemployment | 🟡 review | 4 definition, 1 calculation, 1 evaluation |
+| 2.1.4 Balance of payments | 🟡 review | 2 definition, 1 calculation, 1 chain |
 | 2.2.1 Aggregate demand | ❌ |
 | 2.2.2 Consumption | ❌ |
 | 2.2.3 Investment | ❌ |
