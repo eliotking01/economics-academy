@@ -28,39 +28,31 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **22 ✅ · 30 🟡 · 114 ❌** of 166 units.
+Tally (2026-08-05): **52 ✅ · 0 🟡 · 114 ❌** of 166 units.
 Cards shipped: 205 (95 Edexcel Theme 1 + 89 AQA micro + 21 Edexcel
 Theme 2). SVG diagrams shipped: 21 (all geometry-verified; twelve are
 shared with the AQA deck; total-utility, underproduction,
 overconsumption and subsidy-gov-expenditure are AQA-only — the middle
 two complete the four externality quadrants).
 
-**Phase 2 (Edexcel Theme 2) is underway.** The `edexcel-a-theme-2` deck
-exists (builder auto-discovered it; hub and sitemap carry the new page)
-and its batch 1 covers all of section 2.1 — awaiting review. Deferred by
-design: AD/AS diagram cards for 2.1.2's demand-pull/cost-push figures
-wait until the AD/AS SVG family is drawn with the 2.2/2.3 batches; the
-2.1.1 "national happiness" spec bullet has no notes coverage, so that
-card is spec-sourced (flagged for Eliot); Theme 2 notes-page links need
-an approved wording variant ("Theme 2 deck") before any notes page is
-touched.
-
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
 1.4–1.6 → Edexcel T4 → AQA remainder), single deck per AQA side.
-**Phase 1 is fully authored** across three batches, all **awaiting
-Eliot's review** (units stay 🟡 until he approves): batch 1 (24 cards —
-1.1, 1.2.1–1.2.2), batch 2 (24 — 1.2 top-ups + section 1.3), batch 3
-(28 — 1.5.11 + section 1.8 complete, with two new externality SVGs).
-2026-08-05, Eliot approved and applied: CONTENT_ISSUES 3–5 (the AQA
-1.8.9 max/min/subsidy captions) are fixed on the page using the Edexcel
-twin's approved wording; and `subsidy-gov-expenditure.svg` is drawn,
-self-QA'd and attached to the subsidy card (now `aqa-1-8-9-diagram-04`).
-No open content issues.
+**Phase 1 (AQA batches 1–3, 89 cards) and Theme 2 batch 1 (21 cards) are
+all approved by Eliot, 2026-08-05** — 30 units flipped to ✅. Also
+approved and applied the same day: CONTENT_ISSUES 3–5 (the AQA 1.8.9
+max/min/subsidy captions, fixed with the Edexcel twin's approved
+wording) and `subsidy-gov-expenditure.svg` (attached to
+`aqa-1-8-9-diagram-04`). No open content issues.
 
-Phase 2 next (needs no further approval on order): Edexcel Theme 2,
-~100–110 cards in ~4 batches, ~12–15 new diagrams (circular flow, AD/AS,
-classical vs Keynesian LRAS, output gaps, trade cycle, multiplier).
+**Phase 2 (Edexcel Theme 2) is underway** — section 2.1 done; sections
+2.2–2.6 remain (~80–90 cards, the AD/AS SVG family, circular flow,
+output gaps, trade cycle, multiplier). Standing notes: the 2.1.1
+"national happiness" card is spec-sourced because the notes never cover
+that bullet (a future notes addition); demand-pull/cost-push diagram
+cards for 2.1.2 get added when the AD/AS SVGs exist; Theme 2 notes-page
+links need an approved wording variant ("Theme 2 deck") before any
+notes page is touched.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -93,10 +85,10 @@ classical vs Keynesian LRAS, output gaps, trade cycle, multiplier).
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
-| 2.1.1 Economic growth | 🟡 review | 3 definition, 1 formula, 1 evaluation |
-| 2.1.2 Inflation | 🟡 review | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation |
-| 2.1.3 Employment & unemployment | 🟡 review | 4 definition, 1 calculation, 1 evaluation |
-| 2.1.4 Balance of payments | 🟡 review | 2 definition, 1 calculation, 1 chain |
+| 2.1.1 Economic growth | ✅ | 3 definition, 1 formula, 1 evaluation |
+| 2.1.2 Inflation | ✅ | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation |
+| 2.1.3 Employment & unemployment | ✅ | 4 definition, 1 calculation, 1 evaluation |
+| 2.1.4 Balance of payments | ✅ | 2 definition, 1 calculation, 1 chain |
 | 2.2.1 Aggregate demand | ❌ |
 | 2.2.2 Consumption | ❌ |
 | 2.2.3 Investment | ❌ |
@@ -169,29 +161,29 @@ classical vs Keynesian LRAS, output gaps, trade cycle, multiplier).
 | 4.5.3 Public sector finances | ❌ |
 | 4.5.4 Macroeconomic policies in a global context | ❌ |
 
-### AQA (7136) — micro, site codes 1.x.y ≙ spec 4.1.x (deck `aqa-micro`, 13 cards so far; 54 units)
+### AQA (7136) — micro, site codes 1.x.y ≙ spec 4.1.x (deck `aqa-micro`, 89 cards; 54 units)
 
-The 13-card starter deck (approved 2026-08-04) deliberately carried only
-board-difference cards — AQA-named concepts Edexcel lacks, plus AQA's
-verbatim definitions — so even its six units are 🟡, not at density.
+Sections 1.1–1.3, 1.5.11 and 1.8 are complete and approved (phase 1,
+2026-08-05). Sections 1.4–1.7 (minus 1.5.11) mirror Edexcel Theme 3
+content and follow in phase 5 of the approved order.
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
-| 1.1.1 Economic methodology | 🟡 review | 5 definition |
-| 1.1.2 Nature & purpose of economic activity | 🟡 review | 2 definition |
-| 1.1.3 Economic resources | 🟡 review | 3 definition |
-| 1.1.4 Scarcity, choice & the allocation of resources | 🟡 review | 2 definition, 1 chain |
-| 1.1.5 Production possibility diagrams | 🟡 review | 1 definition, 2 diagram, 1 chain |
-| 1.2.1 Consumer behaviour | 🟡 review | 4 definition, 1 diagram |
-| 1.2.2 Imperfect information | 🟡 review | 1 definition, 1 chain |
-| 1.2.3 Aspects of behavioural economic theory | 🟡 review | 6 definition |
-| 1.2.4 Behavioural economics & economic policy | 🟡 review | 3 definition, 1 application |
-| 1.3.1 Determinants of demand | 🟡 review | 1 definition, 1 diagram |
-| 1.3.2 PED, YED, XED | 🟡 review | 1 definition, 3 formula, 1 calculation, 1 chain |
-| 1.3.3 Determinants of supply | 🟡 review | 1 definition, 1 diagram |
-| 1.3.4 Price elasticity of supply | 🟡 review | 1 definition, 1 formula, 1 calculation |
-| 1.3.5 Determination of equilibrium market prices | 🟡 review | 1 definition, 2 diagram, 1 chain |
-| 1.3.6 Interrelationship between markets | 🟡 review | 3 definition |
+| 1.1.1 Economic methodology | ✅ | 5 definition |
+| 1.1.2 Nature & purpose of economic activity | ✅ | 2 definition |
+| 1.1.3 Economic resources | ✅ | 3 definition |
+| 1.1.4 Scarcity, choice & the allocation of resources | ✅ | 2 definition, 1 chain |
+| 1.1.5 Production possibility diagrams | ✅ | 1 definition, 2 diagram, 1 chain |
+| 1.2.1 Consumer behaviour | ✅ | 4 definition, 1 diagram |
+| 1.2.2 Imperfect information | ✅ | 1 definition, 1 chain |
+| 1.2.3 Aspects of behavioural economic theory | ✅ | 6 definition |
+| 1.2.4 Behavioural economics & economic policy | ✅ | 3 definition, 1 application |
+| 1.3.1 Determinants of demand | ✅ | 1 definition, 1 diagram |
+| 1.3.2 PED, YED, XED | ✅ | 1 definition, 3 formula, 1 calculation, 1 chain |
+| 1.3.3 Determinants of supply | ✅ | 1 definition, 1 diagram |
+| 1.3.4 Price elasticity of supply | ✅ | 1 definition, 1 formula, 1 calculation |
+| 1.3.5 Determination of equilibrium market prices | ✅ | 1 definition, 2 diagram, 1 chain |
+| 1.3.6 Interrelationship between markets | ✅ | 3 definition |
 | 1.4.1 Production & productivity | ❌ | |
 | 1.4.2 Specialisation, division of labour & exchange | ❌ | |
 | 1.4.3 Law of diminishing returns & returns to scale | ❌ | |
@@ -210,7 +202,7 @@ verbatim definitions — so even its six units are 🟡, not at density.
 | 1.5.8 Dynamics of competition | ❌ | |
 | 1.5.9 Contestable & non-contestable markets | ❌ | |
 | 1.5.10 Market structure, efficiency & resource allocation | ❌ | |
-| 1.5.11 Consumer & producer surplus | 🟡 review | 1 definition, 1 diagram, 1 chain |
+| 1.5.11 Consumer & producer surplus | ✅ | 1 definition, 1 diagram, 1 chain |
 | 1.6.1 Demand for labour, marginal productivity theory | ❌ | |
 | 1.6.2 Influences upon the supply of labour | ❌ | |
 | 1.6.3 Wage determination: perfectly competitive labour markets | ❌ | |
@@ -221,16 +213,16 @@ verbatim definitions — so even its six units are 🟡, not at density.
 | 1.7.1 Distribution of income & wealth | ❌ | |
 | 1.7.2 The problem of poverty | ❌ | |
 | 1.7.3 Government policies: poverty & income distribution | ❌ | |
-| 1.8.1 How markets & prices allocate resources | 🟡 review | 2 definition, 1 evaluation |
-| 1.8.2 The meaning of market failure | 🟡 review | 3 definition |
-| 1.8.3 Public, private & quasi-public goods | 🟡 review | 3 definition |
-| 1.8.4 Positive & negative externalities | 🟡 review | 2 definition, 4 diagram |
-| 1.8.5 Merit & demerit goods | 🟡 review | 3 definition |
-| 1.8.6 Market imperfections | 🟡 review | 2 definition |
-| 1.8.7 Competition policy | 🟡 review | 1 definition |
-| 1.8.8 Public ownership, privatisation, regulation & deregulation | 🟡 review | 3 definition |
-| 1.8.9 Government intervention in markets | 🟡 review | 2 definition, 4 diagram |
-| 1.8.10 Government failure | 🟡 review | 1 definition, 1 chain |
+| 1.8.1 How markets & prices allocate resources | ✅ | 2 definition, 1 evaluation |
+| 1.8.2 The meaning of market failure | ✅ | 3 definition |
+| 1.8.3 Public, private & quasi-public goods | ✅ | 3 definition |
+| 1.8.4 Positive & negative externalities | ✅ | 2 definition, 4 diagram |
+| 1.8.5 Merit & demerit goods | ✅ | 3 definition |
+| 1.8.6 Market imperfections | ✅ | 2 definition |
+| 1.8.7 Competition policy | ✅ | 1 definition |
+| 1.8.8 Public ownership, privatisation, regulation & deregulation | ✅ | 3 definition |
+| 1.8.9 Government intervention in markets | ✅ | 2 definition, 4 diagram |
+| 1.8.10 Government failure | ✅ | 1 definition, 1 chain |
 
 ### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x ❌ (no deck; 25 units)
 
