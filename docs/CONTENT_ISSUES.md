@@ -109,4 +109,6 @@ Format per entry:
   alone."
 - **Confidence** — high that caption and figure disagree (three curves
   are plainly drawn); the proposed wording is one way to fix it.
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-05; applied as proposed
+  in the batch-4 approval commit; text/markup integrity confirmed the
+  caption was the only change).

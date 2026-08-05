@@ -28,15 +28,15 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **60 ✅ · 4 🟡 · 102 ❌** of 166 units.
+Tally (2026-08-05): **64 ✅ · 0 🟡 · 102 ❌** of 166 units.
 Cards shipped: 257 (95 Edexcel Theme 1 + 89 AQA micro + 73 Edexcel
-Theme 2). Approved through section 2.3; **batch 4 (18 cards, all of
-section 2.4, with 7 new SVGs) is built and integrated but AWAITS
-ELIOT'S REVIEW.** SVG diagrams shipped: 37 (all geometry-verified;
-twelve shared with the AQA deck; four AQA-only). The AD/AS family is
-now sixteen strong, and batch 4 adds a new schematic class: the two
-circular-flow diagrams (ring + directional arrows, teal injections in,
-red withdrawals out — a palette extension awaiting Eliot's approval).
+Theme 2), **all approved by Eliot** (batch 4 approved 2026-08-05,
+together with the circular-flow schematic palette — teal injections
+in, red withdrawals out, now documented in DIAGRAM_STYLE.md — and the
+CONTENT_ISSUES #6 caption fix, applied). SVG diagrams shipped: 37
+(all geometry-verified; twelve shared with the AQA deck; four
+AQA-only; sixteen in the AD/AS family plus the two circular-flow
+schematics).
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -53,9 +53,9 @@ approved (batch 3 approved 2026-08-05, including the lras-shift
 decision: **both** a classical and a Keynesian shift diagram ship, as
 separate cards). Batch 4 (section 2.4 complete: circular flow,
 injections/withdrawals, equilibrium output in both models, the
-multiplier) is authored, QA'd and built — **awaiting review**.
-CONTENT_ISSUES #6 (multiplier.png caption names two AD curves, figure
-draws three) is **open** for Eliot. Sections 2.5–2.6 remain (8 units).
+multiplier) approved 2026-08-05. CONTENT_ISSUES #6 approved and fixed
+the same day. Sections 2.5–2.6 remain (8 units) — batch 5, in
+progress.
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -100,10 +100,10 @@ draws three) is **open** for Eliot. Sections 2.5–2.6 remain (8 units).
 | 2.3.1 Aggregate supply | ✅ | 3 definition, 1 diagram |
 | 2.3.2 Short-run aggregate supply | ✅ | 1 definition, 1 diagram, 2 chain |
 | 2.3.3 Long-run aggregate supply | ✅ | 2 definition, 4 diagram, 1 evaluation |
-| 2.4.1 National income | 🟡 review | 2 definition, 1 diagram |
-| 2.4.2 Injections & withdrawals | 🟡 review | 2 definition, 1 formula, 1 diagram |
-| 2.4.3 Equilibrium levels of real national output | 🟡 review | 1 definition, 4 diagram |
-| 2.4.4 The multiplier | 🟡 review | 2 definition, 1 chain, 1 formula, 1 calculation, 1 diagram |
+| 2.4.1 National income | ✅ | 2 definition, 1 diagram |
+| 2.4.2 Injections & withdrawals | ✅ | 2 definition, 1 formula, 1 diagram |
+| 2.4.3 Equilibrium levels of real national output | ✅ | 1 definition, 4 diagram |
+| 2.4.4 The multiplier | ✅ | 2 definition, 1 chain, 1 formula, 1 calculation, 1 diagram |
 | 2.5.1 Causes of growth | ❌ |
 | 2.5.2 Output gaps | ❌ |
 | 2.5.3 Trade cycle | ❌ |
@@ -414,17 +414,10 @@ Useful QA techniques:
 
 ## Next steps (a fresh session starts here)
 
-1. **Get batch 4 approved.** 18 cards (2.4.1–2.4.4) + 7 SVGs
-   (circular-flow-of-income, …-injections-withdrawals,
-   classical-ad-shift-right, keynesian-ad-shift-right,
-   classical-lras-shift-right, keynesian-lras-shift-right, multiplier)
-   are built and presented. Two items for Eliot inside that review:
-   the circular-flow palette choice (teal injections in / red
-   withdrawals out) and CONTENT_ISSUES #6 (multiplier caption).
-   On approval flip 2.4.x to ✅.
-2. **Theme 2 batch 5: sections 2.5–2.6** (8 units; output gaps, trade
-   cycle, policy diagrams). That completes Theme 2, after which:
-   AQA macro T2-mirrors (phase 3).
+1. **Theme 2 batch 5: sections 2.5–2.6** (8 units; output gaps, trade
+   cycle, policy diagrams — draw from the ground-truth PNGs on the
+   2-5-x/2-6-x pages, never by filename). That completes Theme 2,
+   after which: AQA macro T2-mirrors (phase 3).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder

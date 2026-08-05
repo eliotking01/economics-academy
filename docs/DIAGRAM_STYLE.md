@@ -81,6 +81,23 @@ Every SVG starts:
 The card record's alt text (used on the `<img>`) describes the same content;
 `<title>`/`<desc>` make the file self-describing when opened directly.
 
+## Schematic flow diagrams (no axes)
+
+Approved by Eliot 2026-08-05 with the circular-flow pair. For diagrams
+that are boxes/rings and arrows rather than curves on axes:
+
+- The flow itself (the ring) is an original curve: `#1d70b8` at 3.5px,
+  with short 3.5px directional stubs carrying arrowhead markers laid
+  over it.
+- Flows **entering** the system (injections) are dark teal `#0f7b6c`;
+  flows **leaving** it (withdrawals) are the brand accent `#d52349` —
+  both 2.5px with matching arrowhead markers, like shift arrows.
+- Agent names (Firms, Households) are 26px bold `#333333`; all other
+  labels 24px, same clearance rules as axis diagrams.
+- The `<!-- geometry -->` comment is still mandatory; declare no points
+  and state why (`schematic flow diagram: no axis geometry to declare`).
+  The visual pass carries the QA weight for this class.
+
 ## Board variants
 
 Where Edexcel A and AQA conventions differ (e.g. AQA's emphasis on the
