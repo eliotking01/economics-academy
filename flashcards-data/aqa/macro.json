@@ -314,6 +314,441 @@
         "origin": "notes-verbatim",
         "verbatim": "An exchange rate that equalises the price of an identical basket of goods and services between two countries. It reflects how much a currency can actually buy within its own economy, rather than what it trades for on foreign exchange markets."
       }
+    },
+    {
+      "id": "aqa-2-2-1-def-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-1-the-circular-flow-of-income",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>nominal from real income</strong>, and explain what real national income indicates.</p>",
+      "back": "<p><strong>Nominal income</strong> is measured at current prices; <strong>real income</strong> strips out inflation, so it reflects what income can actually buy.</p><p>Rising <strong>real national income</strong> is the key indicator of economic performance: it means the economy is genuinely producing more, not just charging higher prices for the same output.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["national-income"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-1-diagram-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-1-the-circular-flow-of-income",
+      "cardType": "diagram",
+      "front": "<p>Draw the <strong>circular flow of income</strong> for a simple two-agent economy.</p>",
+      "back": "<p>Households and firms are linked by two pairs of flows. <strong>Real flows</strong>: households provide the factors of production — land, labour, capital, enterprise — and firms provide goods and services.</p><p><strong>Money flows</strong>: firms pay income — rent, wages, interest, profit — and households return it as consumer expenditure, which becomes firms' revenue. The same flow measured at any point gives income = output = expenditure.</p>",
+      "svgRef": "/images/diagrams/svg/circular-flow-of-income.svg",
+      "svgAlt": "Circular flow between firms and households: factors of production and expenditure flow to firms, goods and services and income flow to households",
+      "difficulty": "foundation",
+      "tags": ["national-income", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-1-def-02",
+      "specCode": "2.2.1",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-1-the-circular-flow-of-income",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>injections from withdrawals</strong>, and state the equilibrium condition.</p>",
+      "back": "<p><strong>Injections</strong> — investment, government spending, exports — add new spending to the circular flow; <strong>withdrawals</strong> — savings, taxation, imports — leak income out of it. National income is in <strong>equilibrium</strong> when injections equal withdrawals; if injections exceed withdrawals the flow expands, and if withdrawals exceed injections it contracts.</p><p><strong>Full employment income</strong> is the level of national income at which all resources are fully employed — equilibrium need not occur there.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["national-income"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-2-def-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "cardType": "definition",
+      "front": "<p>Define <strong>aggregate demand</strong>, and give the relative importance of its components.</p>",
+      "back": "<p><strong>Aggregate demand</strong> is the total demand for all goods and services in an economy at a given average price level and in a given time period: AD = C + I + G + (X − M).</p><p>Consumption is the largest component at around 60% of AD; government spending around 25%; investment around 14% — the most volatile; net exports are small and often negative for the UK.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["aggregate-demand"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Aggregate demand is the total demand for all goods and services in an economy at a given average price level and in a given time period."
+      }
+    },
+    {
+      "id": "aqa-2-2-2-diagram-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "cardType": "diagram",
+      "front": "<p>What causes a <strong>movement along</strong> the AD curve?</p>",
+      "back": "<p>Only a change in the <strong>average price level</strong>: a fall from PL1 to PL2 moves the economy along the curve from A to B, raising real GDP demanded from Y1 to Y2 — the inverse relationship the downward slope shows.</p><p>Any change in a determinant of AD other than the price level shifts the whole curve instead.</p>",
+      "svgRef": "/images/diagrams/svg/ad-movements.svg",
+      "svgAlt": "Downward-sloping AD curve with a movement from point A at price level PL1 and output Y1 to point B at PL2 and Y2",
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-2-diagram-02",
+      "specCode": "2.2.2",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "cardType": "diagram",
+      "front": "<p>Show a <strong>shift of the AD curve</strong>, and name what causes one.</p>",
+      "back": "<p>A change in any determinant of AD other than the price level — consumer or business confidence, interest rates, government policy, incomes abroad — changes total planned spending at <strong>every</strong> price level, shifting the curve (AD1 to AD2 for an increase, back for a decrease).</p><p>At the unchanged price level PL, real GDP demanded rises from Y1 to Y2.</p>",
+      "svgRef": "/images/diagrams/svg/ad-shift.svg",
+      "svgAlt": "Aggregate demand curve shifting right from AD1 to AD2, raising real GDP from Y1 to Y2 at price level PL",
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-2-diagram-03",
+      "specCode": "2.2.2",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "cardType": "diagram",
+      "front": "<p>Use an AD/AS diagram to show <strong>macroeconomic equilibrium</strong> below full employment.</p>",
+      "back": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>This is the AQA-required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>",
+      "svgRef": "/images/diagrams/svg/negative-output-gap-classical.svg",
+      "svgAlt": "AD and SRAS intersecting at output Y1 and price level PL1, left of the vertical LRAS curve at Yfe",
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "aggregate-supply", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-2-chain-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
+      "cardType": "chain",
+      "front": "<p>How do <strong>demand-side and supply-side shocks</strong> affect the macroeconomy?</p>",
+      "back": "<p>A <strong>demand-side shock</strong> — a financial crisis collapsing confidence, a slump in export markets — shifts AD suddenly: output and the price level move in the <strong>same</strong> direction.</p><p>A <strong>supply-side shock</strong> — an oil price spike, a pandemic disrupting production — shifts SRAS: output and the price level move in <strong>opposite</strong> directions, the harder case for policy. Global events reach the domestic economy through both routes.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "aggregate-supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-3-def-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-3-the-determinants-of-aggregate-demand",
+      "cardType": "definition",
+      "front": "<p>What determines <strong>consumption</strong>, and how are MPC and MPS related?</p>",
+      "back": "<p><strong>Consumption</strong> — household spending on goods and services, the largest component of AD — is determined primarily by <strong>disposable income</strong>: income after direct taxes plus transfer payments.</p><p>Extra disposable income splits between spending and saving: the <strong>MPC</strong> is the proportion spent, the <strong>MPS</strong> the proportion saved, so MPC + MPS = 1. Spend £80 of an extra £100 and your MPC is 0.8.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["aggregate-demand", "consumption"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-3-def-02",
+      "specCode": "2.2.3",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-3-the-determinants-of-aggregate-demand",
+      "cardType": "definition",
+      "front": "<p>Beyond income, what influences <strong>consumption and saving</strong>?</p>",
+      "back": "<p><strong>Interest rates</strong> — higher rates raise the cost of borrowing and the reward for saving, cutting consumption and raising saving. <strong>Confidence</strong> — optimism about future income increases spending and borrowing; pessimism increases precautionary saving. <strong>Wealth effects</strong> — rising house or share prices make households spend more; falling wealth does the reverse.</p><p>The determinants of saving are the mirror image of the determinants of consumption — the same forces push the two shares in opposite directions.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "consumption"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-3-def-03",
+      "specCode": "2.2.3",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-3-the-determinants-of-aggregate-demand",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>gross from net investment</strong>, and <strong>saving from investment</strong>.</p>",
+      "back": "<p><strong>Investment</strong> is spending by firms on capital goods. <strong>Depreciation</strong> is the loss of value of capital goods over time due to wear and tear or obsolescence — so net investment = gross investment − depreciation: only net investment expands the capital stock.</p><p>In economics <strong>saving is not investment</strong>: saving is household income not spent; investment is firms' spending on capital. The financial sector channels one into the other.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "investment"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The loss of value of capital goods over time due to wear and tear or obsolescence."
+      }
+    },
+    {
+      "id": "aqa-2-2-3-chain-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-3-the-determinants-of-aggregate-demand",
+      "cardType": "chain",
+      "front": "<p>Explain the <strong>accelerator effect</strong>.</p>",
+      "back": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD. AQA does not require accelerator calculations.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["aggregate-demand", "investment"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a rise in the rate of economic growth results in a larger percentage rise in investment"
+      }
+    },
+    {
+      "id": "aqa-2-2-4-def-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-4-aggregate-demand-and-the-level-of-economic-activity",
+      "cardType": "definition",
+      "front": "<p>Define <strong>the multiplier</strong>, and state the multiplier ratio.</p>",
+      "back": "<p><strong>The multiplier</strong> is the process by which an initial injection, such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP: the injection becomes income, a proportion is spent (per the MPC), becomes further income, and so on.</p><p>The <strong>ratio</strong>: k = final change in real GDP ÷ initial injection — a £2bn injection producing a £6bn rise in GDP means k = 3.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["multiplier"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The multiplier is the process by which an initial injection , such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP."
+      }
+    },
+    {
+      "id": "aqa-2-2-4-formula-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-4-aggregate-demand-and-the-level-of-economic-activity",
+      "cardType": "formula",
+      "front": "<p>How does AQA require you to <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>",
+      "back": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. (AQA states that calculations from the marginal propensities to withdraw will not be expected — that is Edexcel territory.)</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>",
+      "formula": "M = 1/(1 - MPC)",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["multiplier", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-4-diagram-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-4-aggregate-demand-and-the-level-of-economic-activity",
+      "cardType": "diagram",
+      "front": "<p>Show the <strong>multiplier effect</strong> on an AD/AS diagram.</p>",
+      "back": "<p>The initial injection shifts AD from AD1 to AD2; the induced rounds of consumer spending carry it further to <strong>AD3</strong>. Real GDP rises from Y1 to Y2 and then Y3 — a total rise larger than the initial injection alone would give.</p><p>As the economy climbs towards capacity, more of each shift feeds the price level (PL1 to PL3) and less feeds output — the multiplier is most powerful with spare capacity.</p>",
+      "svgRef": "/images/diagrams/svg/multiplier.svg",
+      "svgAlt": "AD shifting right from AD1 to AD2 and then AD3 along a Keynesian LRAS1 curve, raising real GDP from Y1 to Y2 to Y3 and the price level from PL1 to PL3",
+      "difficulty": "standard",
+      "tags": ["multiplier", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-5-def-01",
+      "specCode": "2.2.5",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-5-determinants-of-short-run-aggregate-supply",
+      "cardType": "definition",
+      "front": "<p>Define <strong>SRAS</strong>, and name the cost changes AQA says shift it.</p>",
+      "back": "<p><strong>Short-run aggregate supply</strong> is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed. It slopes upward because higher output brings rising unit costs, so firms need higher prices.</p><p>AQA's named shift factors: <strong>money wage rates, raw material prices, business taxation and productivity</strong> — anything changing production costs across the economy.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["aggregate-supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Short-run aggregate supply is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed."
+      }
+    },
+    {
+      "id": "aqa-2-2-5-diagram-01",
+      "specCode": "2.2.5",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-5-determinants-of-short-run-aggregate-supply",
+      "cardType": "diagram",
+      "front": "<p>Show the effect of a <strong>fall in production costs</strong> on SRAS.</p>",
+      "back": "<p>SRAS shifts right (SRAS1 to SRAS2): firms supply more at <strong>every given price level</strong>, so at the unchanged price level PL output rises from Y1 to Y2.</p><p>Causes on the AQA list: lower money wage rates, cheaper raw materials, lighter business taxation, higher productivity. Rising costs shift the curve left instead — the anatomy of a supply-side shock.</p>",
+      "svgRef": "/images/diagrams/svg/sras-shift.svg",
+      "svgAlt": "SRAS1 shifting right to SRAS2, raising real GDP supplied from Y1 to Y2 at the unchanged price level PL",
+      "difficulty": "standard",
+      "tags": ["aggregate-supply", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-6-def-01",
+      "specCode": "2.2.6",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-6-determinants-of-long-run-aggregate-supply",
+      "cardType": "definition",
+      "front": "<p>Define <strong>LRAS</strong>, and what the position of the vertical curve represents.</p>",
+      "back": "<p><strong>Long-run aggregate supply</strong> is the total potential output of an economy when all factors of production are fully and efficiently employed — the economy's productive capacity.</p><p>The position of the vertical LRAS curve represents the <strong>normal capacity level of output</strong>; shifts in LRAS are long-run growth or decline, equivalent to the PPF moving.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["aggregate-supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Long-run aggregate supply is the total potential output of an economy when all factors of production are fully and efficiently employed."
+      }
+    },
+    {
+      "id": "aqa-2-2-6-def-02",
+      "specCode": "2.2.6",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-6-determinants-of-long-run-aggregate-supply",
+      "cardType": "definition",
+      "front": "<p>Name AQA's <strong>fundamental determinants of LRAS</strong>.</p>",
+      "back": "<p><strong>Technology, productivity, attitudes, enterprise, factor mobility and economic incentives</strong> — the AQA list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>AQA also stresses the <strong>institutional structure</strong> of the economy — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["aggregate-supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-6-diagram-01",
+      "specCode": "2.2.6",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-6-determinants-of-long-run-aggregate-supply",
+      "cardType": "diagram",
+      "front": "<p>Draw and explain the <strong>Keynesian AS curve</strong>.</p>",
+      "back": "<p>The curve AQA names explicitly: L-shaped, with three phases — <strong>perfectly elastic</strong> at low output, where spare capacity lets firms expand without raising prices; <strong>upward sloping</strong> as resources grow scarce; <strong>vertical</strong> at full capacity Yfe, where extra demand only raises prices.</p><p>It embodies the Keynesian belief that the economy can sit below full employment for a long time.</p>",
+      "svgRef": "/images/diagrams/svg/lras-keynesian.svg",
+      "svgAlt": "L-shaped Keynesian LRAS curve: flat at low output, sloping upward as capacity nears, vertical at full-capacity output Yfe",
+      "difficulty": "standard",
+      "tags": ["aggregate-supply", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-2-6-diagram-02",
+      "specCode": "2.2.6",
+      "topic": "2.2 How the macroeconomy works",
+      "subtopic": "2-2-6-determinants-of-long-run-aggregate-supply",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>underlying economic growth</strong> on an AD/AS diagram.</p>",
+      "back": "<p>Underlying (long-run) growth is a <strong>rightward shift of the LRAS curve</strong>, from LRAS1 to LRAS2: normal capacity output rises from Yfe1 to Yfe2.</p><p>It is driven by the fundamental determinants — technology, productivity, enterprise, factor mobility, incentives — improving the quantity or quality of what the economy can produce.</p>",
+      "svgRef": "/images/diagrams/svg/lras-shift.svg",
+      "svgAlt": "Vertical LRAS1 curve shifting right to LRAS2, raising full-employment output from Yfe1 to Yfe2",
+      "difficulty": "standard",
+      "tags": ["aggregate-supply", "growth", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }

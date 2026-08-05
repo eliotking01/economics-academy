@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Movement along the aggregate demand curve</title>
+  <desc id="d">A downward-sloping aggregate demand curve AD. A fall in the price level from PL1 to PL2 moves the economy along the curve from point A to point B, raising real GDP demanded from Y1 to Y2.</desc>
+  <!-- geometry
+       on-curve: 300,270 430,400
+  -->
+  <!-- guides -->
+  <line x1="100" y1="270" x2="300" y2="270" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="300" y1="270" x2="300" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="400" x2="430" y2="400" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="430" y1="400" x2="430" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="32" y="78" font-size="26" fill="#333333">level</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Real GDP</text>
+  <!-- curves -->
+  <line x1="170" y1="140" x2="490" y2="460" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="498" y="470" font-size="26" font-weight="700" fill="#1d70b8">AD</text>
+  <text x="312" y="254" font-size="24" fill="#333333">A</text>
+  <text x="442" y="388" font-size="24" fill="#333333">B</text>
+  <text x="92" y="278" font-size="24" fill="#333333" text-anchor="end">PL1</text>
+  <text x="92" y="408" font-size="24" fill="#333333" text-anchor="end">PL2</text>
+  <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Y1</text>
+  <text x="430" y="552" font-size="24" fill="#333333" text-anchor="middle">Y2</text>
+</svg>

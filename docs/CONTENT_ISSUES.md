@@ -112,3 +112,20 @@ Format per entry:
 - **Status** — fixed (approved by Eliot 2026-08-05; applied as proposed
   in the batch-4 approval commit; text/markup integrity confirmed the
   caption was the only change).
+
+## 7. AQA multiplier figure caption has the same two-vs-three-curve mismatch as the fixed Edexcel one
+
+- **Location** — `revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html`,
+  Figure 1 caption (`multiplier.png`).
+- **Issue** — identical to issue 6 (fixed on the Edexcel twin 2.4.4 with
+  Eliot's approval): the caption describes "AD1 to AD2 ... Y1 to Y2",
+  but the figure draws three curves (AD1, AD2, AD3) with Y1/Y2/Y3.
+- **Proposed correction** — the Edexcel twin's approved wording
+  verbatim: "Figure 1: The multiplier effect on an AD/AS diagram. An
+  initial injection shifts aggregate demand from AD1 to AD2, and the
+  induced rounds of spending carry it further to AD3, so the final
+  rise in real GDP (Y1 to Y3) is larger than the initial injection
+  alone."
+- **Confidence** — high (same figure, same error class as the approved
+  fix).
+- **Status** — open.

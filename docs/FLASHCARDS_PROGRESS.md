@@ -28,12 +28,14 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **72 ✅ · 4 🟡 · 90 ❌** of 166 units.
-Cards shipped: 302 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 15 AQA macro). Approved through Theme 2 (batch 5 approved
-2026-08-05 — Theme 2 complete). **AQA macro batch 1 (15 cards,
-section 2.1, deck `aqa-macro` created) is built and integrated but
-AWAITS ELIOT'S REVIEW.** SVG diagrams shipped: 43.
+Tally (2026-08-05): **72 ✅ · 10 🟡 · 84 ❌** of 166 units.
+Cards shipped: 323 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
+Theme 2 + 36 AQA macro). Approved through Theme 2. **AQA macro
+batches 1 and 2 (36 cards: sections 2.1 and 2.2 complete, deck
+`aqa-macro` live) are built and integrated but BOTH AWAIT ELIOT'S
+REVIEW.** SVG diagrams shipped: 44 (ad-movements.svg new in batch 2;
+seven shared SVGs reused on AQA macro cards). CONTENT_ISSUES #7
+(AQA multiplier caption, twin of the fixed #6) is **open**.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -223,7 +225,7 @@ content and follow in phase 5 of the approved order.
 | 1.8.9 Government intervention in markets | ✅ | 2 definition, 4 diagram |
 | 1.8.10 Government failure | ✅ | 1 definition, 1 chain |
 
-### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x (deck `aqa-macro`, 15 cards; 25 units)
+### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x (deck `aqa-macro`, 36 cards; 25 units)
 
 | Unit | Status |
 | --- | --- |
@@ -231,12 +233,12 @@ content and follow in phase 5 of the approved order.
 | 2.1.2 Macroeconomic indicators | 🟡 review | 3 definition, 1 formula |
 | 2.1.3 Uses of index numbers | 🟡 review | 2 definition, 1 formula, 1 calculation |
 | 2.1.4 Uses of national income data | 🟡 review | 3 definition, 1 evaluation |
-| 2.2.1 Circular flow of income | ❌ |
-| 2.2.2 AD/AS analysis | ❌ |
-| 2.2.3 Determinants of aggregate demand | ❌ |
-| 2.2.4 Aggregate demand & the level of economic activity | ❌ |
-| 2.2.5 Determinants of short-run aggregate supply | ❌ |
-| 2.2.6 Determinants of long-run aggregate supply | ❌ |
+| 2.2.1 Circular flow of income | 🟡 review | 2 definition, 1 diagram |
+| 2.2.2 AD/AS analysis | 🟡 review | 1 definition, 3 diagram, 1 chain |
+| 2.2.3 Determinants of aggregate demand | 🟡 review | 3 definition, 1 chain |
+| 2.2.4 Aggregate demand & the level of economic activity | 🟡 review | 1 definition, 1 formula, 1 diagram |
+| 2.2.5 Determinants of short-run aggregate supply | 🟡 review | 1 definition, 1 diagram |
+| 2.2.6 Determinants of long-run aggregate supply | 🟡 review | 2 definition, 2 diagram |
 | 2.3.1 Economic growth & the economic cycle | ❌ |
 | 2.3.2 Employment & unemployment | ❌ |
 | 2.3.3 Inflation & deflation | ❌ |
@@ -433,17 +435,33 @@ Useful QA techniques:
   the spec on aqa-2-1-2-def-03). Matrix: 72 ✅ · 4 🟡 · 90 ❌; 302
   cards, 43 SVGs, four decks.
 
+- 2026-08-05 — **AQA macro batch 2 authored and built, awaiting
+  review**: 21 cards completing section 2.2 (circular flow, AD/AS
+  analysis, determinants of AD with the accelerator, the multiplier in
+  AQA's MPC-only framing, SRAS/LRAS determinants with AQA's own lists
+  and the Keynesian AS curve). One new SVG — ad-movements.svg, drawn
+  from ad-movements.png on the sras-movements idiom, full QA loop —
+  and seven reuses from the shared library (circular flow, ad-shift,
+  negative-output-gap-classical, multiplier, sras-shift,
+  lras-keynesian, lras-shift), each checked against the PNG its AQA
+  page actually displays. CONTENT_ISSUES #7 logged (AQA 2-2-4
+  multiplier caption, twin of fixed #6) — open. Notes gaps: 2-2-3 has
+  no explicit determinants-of-saving or saving-vs-investment section
+  (spec 4.2.2.3); covered on cards from the spec. Matrix: 72 ✅ ·
+  10 🟡 · 84 ❌; 323 cards, 44 SVGs.
+
 ## Next steps (a fresh session starts here)
 
-1. **Get AQA macro batch 1 approved** (15 cards, section 2.1,
-   presented 2026-08-05). The deck `aqa-macro` exists (builder
-   auto-discovered it; sitemap entry added; hub automatic). Board
-   differences honoured so far: AQA's FOUR main objectives framing,
-   and (upcoming, 2.2.4) AQA calculates the multiplier from MPC only
-   — never MPW.
-2. **AQA macro batches 2–4: sections 2.2, 2.3, 2.5** (the remaining
-   T2-mirrors, ~12 units; AD/AS diagrams reuse the shared SVG
-   library where conventions match). Then Edexcel Theme 3 (phase 4).
+1. **Get AQA macro batches 1–2 approved** (15 + 21 cards, sections
+   2.1–2.2, both presented 2026-08-05), plus a verdict on
+   CONTENT_ISSUES #7 (AQA multiplier caption — twin of the approved
+   Edexcel fix). Board differences honoured: AQA's FOUR main
+   objectives framing; the multiplier calculated from MPC only
+   (aqa-2-2-4-formula-01 says so explicitly); AQA's own SRAS/LRAS
+   determinant lists; the accelerator and saving-vs-investment
+   distinction (AQA-only content).
+2. **AQA macro batches 3–4: sections 2.3 and 2.5** (the remaining
+   T2-mirrors, 6 units). Then Edexcel Theme 3 (phase 4).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
