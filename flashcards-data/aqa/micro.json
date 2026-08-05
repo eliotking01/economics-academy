@@ -584,6 +584,48 @@
       }
     },
     {
+      "id": "aqa-1-2-3-def-05",
+      "specCode": "1.2.3",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "cardType": "definition",
+      "front": "<p>Contrast <strong>traditional</strong> and <strong>behavioural</strong> economic theory.</p>",
+      "back": "<p><strong>Traditional economic theory</strong> — the assumption that individuals are rational decision makers who endeavour to maximise their utility.</p><p><strong>Behavioural economic theory</strong> — the assumption that individuals are not always rational decision makers and that their decisions may be influenced by a range of psychological and social factors, which may lead to them making decisions that do not maximise their utility.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["behavioural"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the assumption that individuals are not always rational decision makers and that their decisions may be influenced by a range of psychological and social factors, which may lead to them making decisions that do not maximise their utility."
+      }
+    },
+    {
+      "id": "aqa-1-2-3-def-06",
+      "specCode": "1.2.3",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-3-aspects-of-behavioural-economic-theory",
+      "cardType": "definition",
+      "front": "<p>Define <strong>altruism</strong>, and explain why it matters in behavioural economics.</p>",
+      "back": "<p><strong>Altruism</strong> — the idea that individuals may make decisions that are not in their own best interests, but are intended to benefit others, e.g. donating to charity or volunteering.</p><p>Together with perceptions of fairness, altruism shows choices are not driven purely by self-interest — 'irrational' under traditional theory, yet it can produce positive outcomes such as social cohesion and a sense of community.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["behavioural"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the idea that individuals may make decisions that are not in their own best interests, but are intended to benefit others. e.g. donating to charity or volunteering."
+      }
+    },
+    {
       "id": "aqa-1-2-4-def-01",
       "specCode": "1.2.4",
       "topic": "1.2 Individual economic decision making",
@@ -621,6 +663,459 @@
       "lastVerified": "2026-08-04",
       "source": {
         "notesPage": "/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-4-def-02",
+      "specCode": "1.2.4",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-4-behavioural-economics-and-economic-policy",
+      "cardType": "definition",
+      "front": "<p>Define <strong>choice architecture</strong> and <strong>framing</strong>.</p>",
+      "back": "<p><strong>Choice architecture / framing</strong> — the design of different ways in which choices can be presented to consumers to influence their decision-making and behaviour towards making rational decisions.</p><p>How options are laid out — order, wording, defaults — changes what people choose even when the options themselves are unchanged. Firms use it too: Netflix makes its premium plan the default at sign-up.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["behavioural"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-2-4-def-03",
+      "specCode": "1.2.4",
+      "topic": "1.2 Individual economic decision making",
+      "subtopic": "1-2-4-behavioural-economics-and-economic-policy",
+      "cardType": "definition",
+      "front": "<p>Name and define AQA's <strong>three types of choice</strong> in choice architecture.</p>",
+      "back": "<ul><li><strong>Default choice</strong> — making the desired option the one automatically selected if the consumer does not make an active choice, e.g. organ-donation opt-out systems.</li><li><strong>Restricted choice</strong> — limiting the number of options to simplify decisions and reduce choice overload, e.g. a simplified restaurant menu.</li><li><strong>Mandated choice</strong> — requiring consumers to make the desired choice legally, e.g. third-party car insurance.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["behavioural"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Making the desired option the option that is automatically selected if the consumer does not make an active choice. e.g. organ donation opt-out systems."
+      }
+    },
+    {
+      "id": "aqa-1-3-1-def-01",
+      "specCode": "1.3.1",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "cardType": "definition",
+      "front": "<p>Define <strong>demand</strong>, and state the law of demand.</p>",
+      "back": "<p><strong>Demand</strong> — the quantity of a good/service consumers are willing and able to buy at a given price in a given time period. Desire alone is not demand: effective demand needs both willingness and ability to pay.</p><p><strong>Law of demand</strong> — there is an inverse relationship between price and quantity demanded, ceteris paribus.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["demand"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The quantity of a good/service consumers are willing and able to buy at a given price in a given time period."
+      }
+    },
+    {
+      "id": "aqa-1-3-1-diagram-01",
+      "specCode": "1.3.1",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-1-the-determinants-of-the-demand-for-goods-and-services",
+      "cardType": "diagram",
+      "front": "<p>Distinguish a <strong>movement along</strong> the demand curve from a <strong>shift</strong> of it.</p>",
+      "back": "<p>A <strong>movement along</strong> the curve is caused only by a change in the good's own price — an extension when price falls, a contraction when it rises. A <strong>shift</strong> (D1 to D2) is caused by a non-price factor: real incomes (normal vs inferior goods), tastes and advertising, the price of substitutes or complements, or population changes.</p>",
+      "svgRef": "/images/diagrams/svg/demand-curve-shift.svg",
+      "svgAlt": "Demand curve shifting right from D1 to D2, raising quantity from Q1 to Q2 at price P1",
+      "difficulty": "standard",
+      "tags": ["demand", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-2-formula-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>price elasticity of demand</strong> (PED), and how to interpret its value.</p>",
+      "back": "<p>PED is negative for a normal demand curve — classify on the magnitude: 0 = perfectly inelastic; between 0 and 1 = relatively inelastic; 1 = unitary; above 1 = relatively elastic; infinity = perfectly elastic.</p>",
+      "formula": "\\text{PED} = \\frac{\\%\\Delta Q_D}{\\%\\Delta P}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-2-calc-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "cardType": "calculation",
+      "front": "<p>A coffee shop raises the price of a latte from £3.00 to £3.60 and weekly sales fall from 500 to 450 cups. Calculate the <strong>PED</strong>, and state what happens to revenue.</p>",
+      "back": "<p>%Δ QD = −50 ÷ 500 × 100 = <strong>−10%</strong></p><p>%Δ P = +£0.60 ÷ £3.00 × 100 = <strong>+20%</strong></p><p>PED = −10% ÷ +20% = <strong>−0.5</strong> — relatively inelastic.</p><p>Quantity fell proportionally less than price rose, so total revenue rises, from £1,500 to £1,620.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "calculation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-2-def-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "cardType": "definition",
+      "front": "<p>List the <strong>determinants of PED</strong>.</p>",
+      "back": "<ul><li><strong>Number and closeness of substitutes</strong> — more substitutes, more elastic.</li><li><strong>Necessity vs luxury</strong> — necessities inelastic, luxuries elastic.</li><li><strong>Addictiveness</strong> — addictive goods (cigarettes) are inelastic.</li><li><strong>Proportion of income</strong> — big-ticket goods are more elastic.</li><li><strong>Time period</strong> — demand is more inelastic in the short run, more elastic in the long run as consumers find alternatives.</li></ul>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-2-formula-02",
+      "specCode": "1.3.2",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>income elasticity of demand</strong> (YED), and the three classifications.</p>",
+      "back": "<ul><li>YED above 1 — normal luxury good (income elastic), e.g. holidays.</li><li>YED between 0 and 1 — normal necessity (income inelastic), e.g. food.</li><li>YED below 0 — inferior good, e.g. budget brands, bus travel.</li></ul>",
+      "formula": "\\text{YED} = \\frac{\\%\\Delta Q_D}{\\%\\Delta Y}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-2-formula-03",
+      "specCode": "1.3.2",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "cardType": "formula",
+      "front": "<p>State the formula for <strong>cross elasticity of demand</strong> (XED), and what its sign shows.</p>",
+      "back": "<p>XED above 0 — substitutes (Coke and Pepsi): a rise in the price of B raises demand for A. XED below 0 — complements (printers and ink). XED = 0 — unrelated goods. The further from zero, the stronger the relationship.</p>",
+      "formula": "\\text{XED} = \\frac{\\%\\Delta Q_{D_A}}{\\%\\Delta P_B}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-2-chain-01",
+      "specCode": "1.3.2",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-2-price-income-and-cross-elasticities-of-demand",
+      "cardType": "chain",
+      "front": "<p>Build the chain of reasoning: how should a firm use <strong>PED</strong> to set prices for revenue?</p>",
+      "back": "<p>If demand is <strong>inelastic</strong> (magnitude below 1), quantity falls proportionally less than price rises, so <strong>raising price</strong> increases total revenue. If demand is <strong>elastic</strong> (above 1), quantity responds more than proportionally, so <strong>lowering price</strong> increases revenue.</p><p>The same logic guides governments: taxing inelastic goods (cigarettes) raises revenue with only a small fall in quantity; subsidising elastic goods (green technology) triggers a large rise in consumption.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-3-def-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+      "cardType": "definition",
+      "front": "<p>Define <strong>supply</strong>, and state the law of supply.</p>",
+      "back": "<p><strong>Supply</strong> — the quantity of a good/service producers are willing and able to produce/sell at a given price in a given time period.</p><p><strong>Law of supply</strong> — a positive relationship between price and quantity supplied, ceteris paribus: higher prices raise potential profit margins, giving firms an incentive to expand output.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The quantity of a good/service producers are willing and able to produce/sell at a given price in a given time period."
+      }
+    },
+    {
+      "id": "aqa-1-3-3-diagram-01",
+      "specCode": "1.3.3",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-3-the-determinants-of-the-supply-of-goods-and-services",
+      "cardType": "diagram",
+      "front": "<p>Distinguish a <strong>movement along</strong> the supply curve from a <strong>shift</strong> of it.</p>",
+      "back": "<p>A <strong>movement along</strong> the curve comes only from a change in the good's own price — an extension when price rises, a contraction when it falls. A <strong>shift</strong> (S1 to S2) comes from a non-price factor changing costs or capacity: production costs, indirect taxes, subsidies, technology, the number of firms in the market, or external shocks.</p>",
+      "svgRef": "/images/diagrams/svg/supply-curve-shift.svg",
+      "svgAlt": "Supply curve shifting right from S1 to S2, raising quantity from Q1 to Q2 at price P",
+      "difficulty": "standard",
+      "tags": ["supply", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-4-formula-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-4-price-elasticity-of-supply",
+      "cardType": "formula",
+      "front": "<p>Define <strong>price elasticity of supply</strong> (PES), with its formula and value ranges.</p>",
+      "back": "<p><strong>PES</strong> — measures the responsiveness of quantity supplied to a change in the good's own price: how easily, quickly or cheaply producers can increase output when the price rises.</p><p>0 = perfectly inelastic (vertical supply curve); between 0 and 1 = relatively inelastic; above 1 = relatively elastic; infinity = perfectly elastic (horizontal).</p>",
+      "formula": "\\text{PES} = \\frac{\\%\\Delta Q_S}{\\%\\Delta P}",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "formula", "supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-4-price-elasticity-of-supply.html",
+        "origin": "notes-verbatim",
+        "verbatim": "Measures the responsiveness of quantity supplied to a change in the good's own price. It helps us understand how easily, quickly or cheaply producers can increase output when the price rises."
+      }
+    },
+    {
+      "id": "aqa-1-3-4-calc-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-4-price-elasticity-of-supply",
+      "cardType": "calculation",
+      "front": "<p>A t-shirt maker produces 4,000 shirts a month. Price rises from £8 to £10. In the short run output reaches 4,400; in the long run, 6,000. Calculate <strong>PES</strong> in each case.</p>",
+      "back": "<p>%Δ P = +£2 ÷ £8 × 100 = <strong>+25%</strong></p><p>Short run: %Δ QS = 400 ÷ 4,000 × 100 = +10%, so PES = 10 ÷ 25 = <strong>0.4</strong> — relatively inelastic.</p><p>Long run: %Δ QS = 2,000 ÷ 4,000 × 100 = +50%, so PES = 50 ÷ 25 = <strong>2.0</strong> — relatively elastic.</p><p>The identical price change gives different elasticities — time to respond is the key determinant of PES.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "calculation", "supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-4-price-elasticity-of-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-4-def-01",
+      "specCode": "1.3.4",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-4-price-elasticity-of-supply",
+      "cardType": "definition",
+      "front": "<p>List the <strong>determinants of PES</strong>, and define the short run and long run.</p>",
+      "back": "<p><strong>Time</strong> is the main determinant. Others: spare production capacity, ease of storing stocks, mobility of factors of production, complexity of production, the marginal cost of extra units, and the availability of raw materials.</p><p><strong>Short run</strong> — at least one factor of production is fixed, so supply is more price inelastic. <strong>Long run</strong> — all factors are variable, so supply is more price elastic.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["elasticity", "supply"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-4-price-elasticity-of-supply.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-5-def-01",
+      "specCode": "1.3.5",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-5-the-determination-of-equilibrium-market-prices",
+      "cardType": "definition",
+      "front": "<p>Define <strong>market equilibrium</strong>, the equilibrium price and the equilibrium quantity.</p>",
+      "back": "<p><strong>Market equilibrium</strong> — the point where market demand equals market supply.</p><p>The <strong>equilibrium (market-clearing) price</strong> is the price at which there is no excess demand or supply — the market clears. The <strong>equilibrium quantity</strong> is the amount bought and sold at that price.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["equilibrium"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The point where market demand equals market supply."
+      }
+    },
+    {
+      "id": "aqa-1-3-5-diagram-01",
+      "specCode": "1.3.5",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-5-the-determination-of-equilibrium-market-prices",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>excess demand</strong> on a supply and demand diagram, and how the market corrects it.</p>",
+      "back": "<p>At P1, below the equilibrium Pe, quantity demanded Qd exceeds quantity supplied Qs — the bracketed gap is the shortage. Competing buyers bid the price up (the arrows), causing an extension of supply and a contraction of demand until the market returns to Pe and Qe.</p>",
+      "svgRef": "/images/diagrams/svg/excess-demand.svg",
+      "svgAlt": "Supply and demand diagram with price P1 below equilibrium Pe, showing the excess demand gap between Qs and Qd and arrows converging on equilibrium",
+      "difficulty": "standard",
+      "tags": ["equilibrium", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-5-diagram-02",
+      "specCode": "1.3.5",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-5-the-determination-of-equilibrium-market-prices",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>excess supply</strong> on a supply and demand diagram, and how the market corrects it.</p>",
+      "back": "<p>At P1, above the equilibrium Pe, quantity supplied Qs exceeds quantity demanded Qd — the bracketed gap is the surplus. Sellers with unsold stock cut prices (the arrows), causing a contraction of supply and an extension of demand until the market returns to Pe and Qe.</p>",
+      "svgRef": "/images/diagrams/svg/excess-supply.svg",
+      "svgAlt": "Supply and demand diagram with price P1 above equilibrium Pe, showing the excess supply gap between Qd and Qs and arrows converging on equilibrium",
+      "difficulty": "standard",
+      "tags": ["equilibrium", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-5-chain-01",
+      "specCode": "1.3.5",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-5-the-determination-of-equilibrium-market-prices",
+      "cardType": "chain",
+      "front": "<p>Predict the effect on <strong>equilibrium price and quantity</strong> of each of the four curve shifts.</p>",
+      "back": "<ul><li><strong>Demand increase</strong> (product becomes fashionable): D shifts right; excess demand at the old price; price rises to the new equilibrium — P and Q both higher.</li><li><strong>Demand decrease</strong> (real incomes fall, normal good): D shifts left; excess supply; price falls — P and Q both lower.</li><li><strong>Supply increase</strong> (subsidy or new technology): S shifts right; excess supply; price falls — P lower, Q higher.</li><li><strong>Supply decrease</strong> (higher raw-material costs): S shifts left; excess demand; price rises — P higher, Q lower.</li></ul><p>Naming the disequilibrium step is what earns the analysis marks.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["equilibrium"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-6-def-01",
+      "specCode": "1.3.6",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-6-the-interrelationship-between-markets",
+      "cardType": "definition",
+      "front": "<p>Define <strong>joint demand</strong> and <strong>competitive demand</strong>.</p>",
+      "back": "<p><strong>Joint demand</strong> — two goods demanded and consumed together (complementary goods), e.g. cars and petrol: a rise in the price of cars reduces the demand for petrol.</p><p><strong>Competitive demand</strong> — two or more goods usable for the same purpose (substitute goods), e.g. butter and margarine: a rise in the price of butter raises the demand for margarine.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["markets"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-6-def-02",
+      "specCode": "1.3.6",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-6-the-interrelationship-between-markets",
+      "cardType": "definition",
+      "front": "<p>Define <strong>composite demand</strong> and <strong>joint supply</strong>.</p>",
+      "back": "<p><strong>Composite demand</strong> — an input demanded for multiple production purposes but usable for only one at a time, e.g. milk for cheese or butter: a rise in the demand for cheese cuts the supply of butter.</p><p><strong>Joint supply</strong> — two goods produced from the same source or process, e.g. beef and leather: a rise in the demand for beef raises the supply of leather as a by-product.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["markets"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-1-3-6-def-03",
+      "specCode": "1.3.6",
+      "topic": "1.3 Price determination in a competitive market",
+      "subtopic": "1-3-6-the-interrelationship-between-markets",
+      "cardType": "definition",
+      "front": "<p>Define <strong>derived demand</strong>, with an example.</p>",
+      "back": "<p><strong>Derived demand</strong> — when the demand for a good is determined by the demand for another good.</p><p>The demand for steel is derived from the demand for cars; the demand for bricklayers is derived from the demand for houses — a fall in house-building cuts the demand for bricklayers. AQA expects you to trace a change in one market through to its related markets.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["markets"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html",
         "origin": "card-authored"
       }
     },
