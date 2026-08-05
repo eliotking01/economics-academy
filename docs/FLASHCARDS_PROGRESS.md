@@ -28,13 +28,13 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **82 ✅ · 6 🟡 · 78 ❌** of 166 units.
+Tally (2026-08-05): **88 ✅ · 0 🟡 · 78 ❌** of 166 units.
 Cards shipped: 349 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 62 AQA macro). Approved through AQA macro section 2.2.
-**AQA macro batch 3 (26 cards, sections 2.3 and 2.5 — the LAST
-T2-mirrors — with 2 new SVGs) is built and integrated but AWAITS
-ELIOT'S REVIEW.** SVG diagrams shipped: 46 (long-run-phillips-curve
-and laffer-curve new). No open content issues.
+Theme 2 + 62 AQA macro), **all approved by Eliot** (AQA macro batch 3
+approved 2026-08-05 — **phase 3, the AQA macro T2-mirrors, is
+COMPLETE**: 16/25 macro units, sections 2.4 and 2.6 reserved for
+phase 7). SVG diagrams shipped: 46. No open content issues. Phase 4
+(Edexcel Theme 3) is underway.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -238,16 +238,16 @@ content and follow in phase 5 of the approved order.
 | 2.2.4 Aggregate demand & the level of economic activity | ✅ | 1 definition, 1 formula, 1 diagram |
 | 2.2.5 Determinants of short-run aggregate supply | ✅ | 1 definition, 1 diagram |
 | 2.2.6 Determinants of long-run aggregate supply | ✅ | 2 definition, 2 diagram |
-| 2.3.1 Economic growth & the economic cycle | 🟡 review | 1 definition, 2 diagram, 2 evaluation |
-| 2.3.2 Employment & unemployment | 🟡 review | 4 definition, 1 evaluation |
-| 2.3.3 Inflation & deflation | 🟡 review | 1 definition, 2 diagram, 1 formula, 1 evaluation |
-| 2.3.4 Conflicts between macroeconomic policy objectives | 🟡 review | 1 definition, 2 diagram |
+| 2.3.1 Economic growth & the economic cycle | ✅ | 1 definition, 2 diagram, 2 evaluation |
+| 2.3.2 Employment & unemployment | ✅ | 4 definition, 1 evaluation |
+| 2.3.3 Inflation & deflation | ✅ | 1 definition, 2 diagram, 1 formula, 1 evaluation |
+| 2.3.4 Conflicts between macroeconomic policy objectives | ✅ | 1 definition, 2 diagram |
 | 2.4.1 Structure of financial markets & financial assets | ❌ |
 | 2.4.2 Commercial banks & investment banks | ❌ |
 | 2.4.3 Central banks & monetary policy | ❌ |
 | 2.4.4 Regulation of the financial system | ❌ |
-| 2.5.1 Fiscal policy | 🟡 review | 4 definition, 1 diagram |
-| 2.5.2 Supply-side policies | 🟡 review | 2 definition, 1 diagram |
+| 2.5.1 Fiscal policy | ✅ | 4 definition, 1 diagram |
+| 2.5.2 Supply-side policies | ✅ | 2 definition, 1 diagram |
 | 2.6.1 Globalisation | ❌ |
 | 2.6.2 Trade | ❌ |
 | 2.6.3 The balance of payments | ❌ |
@@ -468,18 +468,17 @@ Useful QA techniques:
   its AQA page displays. Matrix: 82 ✅ · 6 🟡 · 78 ❌; 349 cards, 46
   SVGs.
 
+- 2026-08-05 — **AQA macro batch 3 approved by Eliot** (same day) —
+  phase 3 complete. Sections 2.3 and 2.5 flipped to ✅.
+
 ## Next steps (a fresh session starts here)
 
-1. **Get AQA macro batch 3 approved** (26 cards, sections 2.3 and
-   2.5, presented 2026-08-05). On approval the AQA macro T2-mirrors
-   (phase 3) are complete: 16 of the deck's 25 units done, with
-   sections 2.4 (financial markets) and 2.6 (international) left for
-   phase 7.
-2. **Phase 4: Edexcel Theme 3** (20 units, no deck yet). Create
+1. **Phase 4: Edexcel Theme 3** (20 units). Create
    `flashcards-data/edexcel-a/theme-3.json` mirroring the theme-2
    header; sitemap entry for `/flashcards/edexcel-a/theme-3/`. The
    big micro diagram set: cost/revenue curves and the four market
-   structures.
+   structures. Then AQA 1.4–1.6 (phase 5), Theme 4 (phase 6), AQA
+   remainder (phase 7).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder
