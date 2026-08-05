@@ -28,15 +28,14 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **88 ✅ · 4 🟡 · 74 ❌** of 166 units.
+Tally (2026-08-05): **92 ✅ · 0 🟡 · 74 ❌** of 166 units.
 Cards shipped: 362 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 62 AQA macro + 13 Edexcel Theme 3). Approved through phase
-3. **Theme 3 batch 1 (13 cards, sections 3.1–3.2, deck
-`edexcel-a-theme-3` created with sitemap entry) is built and
-integrated but AWAITS ELIOT'S REVIEW.** SVG diagrams shipped: 49 —
-the firm-diagram family (profit-max, revenue-max, sales-max) opens
-phase 4. CONTENT_ISSUES #8 ("choose to satisficing" grammar on
-3-2-1) is **open**.
+Theme 2 + 62 AQA macro + 13 Edexcel Theme 3), **all approved by
+Eliot** (Theme 3 batch 1 approved 2026-08-05, including both
+firm-diagram adaptations: the unlabelled ground-truth curve omitted,
+markers at exact rule crossings; CONTENT_ISSUES #8 approved and
+fixed the same day). SVG diagrams shipped: 49. No open content
+issues.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -116,10 +115,10 @@ in phase 7) is underway.
 
 | Unit | Status |
 | --- | --- |
-| 3.1.1 Sizes & types of firms | 🟡 review | 3 definition |
-| 3.1.2 Business growth | 🟡 review | 2 definition, 1 evaluation |
-| 3.1.3 Demergers | 🟡 review | 1 definition, 1 evaluation |
-| 3.2.1 Business objectives | 🟡 review | 2 definition, 3 diagram |
+| 3.1.1 Sizes & types of firms | ✅ | 3 definition |
+| 3.1.2 Business growth | ✅ | 2 definition, 1 evaluation |
+| 3.1.3 Demergers | ✅ | 1 definition, 1 evaluation |
+| 3.2.1 Business objectives | ✅ | 2 definition, 3 diagram |
 | 3.3.1 Revenue | ❌ |
 | 3.3.2 Costs | ❌ |
 | 3.3.3 Economies & diseconomies of scale | ❌ |
@@ -490,17 +489,13 @@ Useful QA techniques:
   CONTENT_ISSUES #8 logged ("choose to satisficing" ×2 on 3-2-1),
   open. Matrix: 88 ✅ · 4 🟡 · 74 ❌; 362 cards, 49 SVGs, five decks.
 
+- 2026-08-05 — **Theme 3 batch 1 approved by Eliot** (same day),
+  including the firm-diagram adaptations. CONTENT_ISSUES #8 approved
+  and fixed. Sections 3.1–3.2 flipped to ✅.
+
 ## Next steps (a fresh session starts here)
 
-1. **Get Theme 3 batch 1 approved** (13 cards, sections 3.1–3.2,
-   presented 2026-08-05), plus a verdict on CONTENT_ISSUES #8
-   ("choose to satisficing"). Review notes for Eliot inside that
-   batch: the firm-diagram SVGs draw the four LABELLED curves and
-   omit the small UNLABELLED U-curve present in the three
-   ground-truth PNGs (it fails the style guide's every-curve-labelled
-   rule); and the profit-max marker is placed at the true MC=MR
-   crossing, which the hand-drawn PNG only approximates.
-2. **Theme 3 batches 2+: section 3.3** (revenue, costs, economies of
+1. **Theme 3 batch 2: section 3.3** (revenue, costs, economies of
    scale, profit/shut-down — the cost-curve diagram programme:
    TR/AR/MR, SRAC/LRAC, shut-down points), then 3.4 market
    structures, 3.5 labour market, 3.6 intervention. The firm-diagram

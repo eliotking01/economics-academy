@@ -144,4 +144,6 @@ Format per entry:
   satisficing" with "choose to satisfice", leaving the rest of each
   sentence unchanged.
 - **Confidence** — high (grammar only; no economics change).
-- **Status** — open.
+- **Status** — fixed (approved by Eliot 2026-08-05; both instances
+  corrected; text/markup integrity confirmed the two words were the
+  only change).
