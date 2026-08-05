@@ -28,13 +28,12 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **72 ✅ · 0 🟡 · 94 ❌** of 166 units.
-Cards shipped: 287 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2), **all approved by Eliot** — batch 5 approved 2026-08-05,
-completing **Edexcel Theme 2 in full** (103 cards, 24/24 units,
-including the spec-sourced MPC card). SVG diagrams shipped: 43 (all
-geometry-verified; twelve shared with the AQA deck; four AQA-only).
-Phase 3 (AQA macro deck, T2-mirror sections first) is underway.
+Tally (2026-08-05): **72 ✅ · 4 🟡 · 90 ❌** of 166 units.
+Cards shipped: 302 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
+Theme 2 + 15 AQA macro). Approved through Theme 2 (batch 5 approved
+2026-08-05 — Theme 2 complete). **AQA macro batch 1 (15 cards,
+section 2.1, deck `aqa-macro` created) is built and integrated but
+AWAITS ELIOT'S REVIEW.** SVG diagrams shipped: 43.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -224,14 +223,14 @@ content and follow in phase 5 of the approved order.
 | 1.8.9 Government intervention in markets | ✅ | 2 definition, 4 diagram |
 | 1.8.10 Government failure | ✅ | 1 definition, 1 chain |
 
-### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x ❌ (no deck; 25 units)
+### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x (deck `aqa-macro`, 15 cards; 25 units)
 
 | Unit | Status |
 | --- | --- |
-| 2.1.1 Objectives of government economic policy | ❌ |
-| 2.1.2 Macroeconomic indicators | ❌ |
-| 2.1.3 Uses of index numbers | ❌ |
-| 2.1.4 Uses of national income data | ❌ |
+| 2.1.1 Objectives of government economic policy | 🟡 review | 2 definition, 1 evaluation |
+| 2.1.2 Macroeconomic indicators | 🟡 review | 3 definition, 1 formula |
+| 2.1.3 Uses of index numbers | 🟡 review | 2 definition, 1 formula, 1 calculation |
+| 2.1.4 Uses of national income data | 🟡 review | 3 definition, 1 evaluation |
 | 2.2.1 Circular flow of income | ❌ |
 | 2.2.2 AD/AS analysis | ❌ |
 | 2.2.3 Determinants of aggregate demand | ❌ |
@@ -424,15 +423,27 @@ Useful QA techniques:
   Policy Committee (see Open questions). Matrix: 64 ✅ · 8 🟡 · 94 ❌;
   287 cards, 43 SVGs.
 
+- 2026-08-05 — **Phase 3 opened: AQA macro deck created** with batch 1
+  (15 cards, section 2.1 complete: objectives in AQA's four-main
+  framing, indicators, index numbers with an original weighted-CPI
+  calculation, national income data with PPP — five notes-verbatim
+  cards). Deck auto-discovered by the builder, sitemap entry added,
+  hub automatic. Notes gaps found: 2-1-2 lists productivity in its
+  spec-alert but has no productivity section (covered lightly from
+  the spec on aqa-2-1-2-def-03). Matrix: 72 ✅ · 4 🟡 · 90 ❌; 302
+  cards, 43 SVGs, four decks.
+
 ## Next steps (a fresh session starts here)
 
-1. **Get batch 5 approved** (30 cards + 6 SVGs, presented
-   2026-08-05). On approval flip the eight 2.5/2.6 rows to ✅ —
-   **Theme 2 is then complete** — and start phase 3: AQA macro
-   T2-mirrors (create `flashcards-data/aqa/macro.json`, deckId
-   `aqa-macro`, mirror the micro deck's header; builder
-   auto-discovers; add the sitemap entry for
-   `/flashcards/aqa/macro/`).
+1. **Get AQA macro batch 1 approved** (15 cards, section 2.1,
+   presented 2026-08-05). The deck `aqa-macro` exists (builder
+   auto-discovered it; sitemap entry added; hub automatic). Board
+   differences honoured so far: AQA's FOUR main objectives framing,
+   and (upcoming, 2.2.4) AQA calculates the multiplier from MPC only
+   — never MPW.
+2. **AQA macro batches 2–4: sections 2.2, 2.3, 2.5** (the remaining
+   T2-mirrors, ~12 units; AD/AS diagrams reuse the shared SVG
+   library where conventions match). Then Edexcel Theme 3 (phase 4).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder

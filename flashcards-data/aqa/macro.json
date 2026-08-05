@@ -1,0 +1,319 @@
+{
+  "board": "aqa",
+  "boardName": "AQA",
+  "theme": "macro",
+  "themeName": "Macroeconomics",
+  "deckId": "aqa-macro",
+  "deckTitle": "AQA A-Level Economics Macroeconomics Flashcards",
+  "metaDescription": "Free interactive flashcards for AQA A-Level Economics macroeconomics: policy objectives, index numbers, national income, AD/AS analysis and diagrams, with spaced repetition.",
+  "intro": "Revise AQA macroeconomics with interactive flashcards written to the AQA (7136) specification — the objectives AQA names, its index-number and national-income measurement toolkit, and AD/AS analysis in AQA's own framing. Flip each card to check yourself, rate how well you knew it, and the deck brings back the cards you found hard. Every card links to the revision notes page that teaches it, and the deck is growing.",
+  "cards": [
+    {
+      "id": "aqa-2-1-1-def-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-1-the-objectives-of-government-economic-policy",
+      "cardType": "definition",
+      "front": "<p>State the <strong>four main objectives</strong> of government macroeconomic policy in the AQA specification.</p>",
+      "back": "<p><strong>Economic growth</strong>; <strong>price stability</strong> (low and stable inflation — the UK's 2% CPI target); <strong>minimising unemployment</strong>; and a <strong>stable balance of payments on current account</strong>.</p><p>AQA also expects awareness of further objectives — balancing the government budget, a more equitable distribution of income, and environmental protection — and that the importance attached to each objective changes over time.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["objectives"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-1-def-02",
+      "specCode": "2.1.1",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-1-the-objectives-of-government-economic-policy",
+      "cardType": "definition",
+      "front": "<p>Give the UK's usual <strong>targets for growth, unemployment and inflation</strong>, and why each matters.</p>",
+      "back": "<p><strong>Growth</strong> — sustainable, around 2–3%: raises incomes, living standards, employment and tax revenue. <strong>Unemployment</strong> — near full employment, around 4–5%, allowing for frictional unemployment: maximises output and reduces poverty. <strong>Inflation</strong> — the 2% CPI target: certainty for consumers and firms, protects savings, supports competitiveness.</p><p>The current account aim is a sustainable position — only a small surplus or deficit.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["objectives"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-1-eval-01",
+      "specCode": "2.1.1",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-1-the-objectives-of-government-economic-policy",
+      "cardType": "evaluation",
+      "front": "<p>Why can the macroeconomic objectives <strong>conflict, at least in the short run</strong>?</p>",
+      "back": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23. AQA flags exactly this: the importance attached to objectives changes over time.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["objectives", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-2-def-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-2-macroeconomic-indicators",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>nominal GDP, real GDP and real GDP per capita</strong>.</p>",
+      "back": "<p><strong>Nominal GDP</strong> values output at current prices; <strong>real GDP</strong> adjusts for inflation, valuing output at constant prices — approximately, % change in real GDP = % change in nominal GDP − inflation.</p><p><strong>Real GDP per capita</strong> divides real GDP by the population: average output per person, the better starting point for living standards.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["indicators", "measurement"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-2-def-02",
+      "specCode": "2.1.2",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-2-macroeconomic-indicators",
+      "cardType": "definition",
+      "front": "<p>How does the <strong>RPI differ from the CPI</strong>?</p>",
+      "back": "<p>Both track the average change in prices of a basket of goods and services and are used to calculate the inflation rate. The <strong>RPI additionally includes housing costs</strong> — mortgage interest payments and council tax — which the CPI leaves out.</p><p>RPI therefore usually runs higher than CPI, and the CPI is the measure targeted by the Bank of England.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["indicators", "inflation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-2-formula-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-2-macroeconomic-indicators",
+      "cardType": "formula",
+      "front": "<p>State the formulas for the <strong>unemployment rate and the employment rate</strong>.</p>",
+      "back": "<p>The <strong>unemployment rate</strong> is the percentage of the <strong>labour force</strong> unemployed and actively seeking work. The <strong>employment rate</strong> is the percentage of the <strong>working-age population</strong> in work.</p><p>The denominators differ — someone economically inactive is in neither numerator, so the two rates can move independently.</p>",
+      "formula": "Unemployment rate = Unemployed / Labour force × 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["indicators", "unemployment", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-2-def-03",
+      "specCode": "2.1.2",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-2-macroeconomic-indicators",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining spec indicator.</p>",
+      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator on the AQA list is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["indicators", "balance-of-payments"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The part of the Balance of Payments that records trade in goods and services, income flows, and current transfers."
+      }
+    },
+    {
+      "id": "aqa-2-1-3-def-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-3-uses-of-index-numbers",
+      "cardType": "definition",
+      "front": "<p>Define an <strong>index number</strong> and the <strong>base year</strong>.</p>",
+      "back": "<p>An <strong>index number</strong> expresses the value of a variable relative to a chosen base value, which is set equal to 100. The <strong>base year</strong> is the reference year all others are compared against.</p><p>Index numbers turn awkward raw figures — thousands of prices, GDP in billions — into one easy series, and they track not just prices but real GDP, wages, productivity and share prices such as the FTSE 100.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["index-numbers", "measurement"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A number used to express the value of a variable relative to a chosen base value , which is set equal to 100 ."
+      }
+    },
+    {
+      "id": "aqa-2-1-3-formula-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-3-uses-of-index-numbers",
+      "cardType": "formula",
+      "front": "<p>State the <strong>index number formula</strong>, and interpret an index of 115.</p>",
+      "back": "<p>An index of <strong>115</strong> means the variable is 15% higher than in the base year; an index of 92 means 8% lower. The percentage change reads straight off the index <strong>only against the base year</strong> — comparing 115 with 105 is a rise of 115 ÷ 105, about 9.5%, not 10 points.</p>",
+      "formula": "Index number = Value in current year / Value in base year × 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["index-numbers", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-3-def-02",
+      "specCode": "2.1.3",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-3-uses-of-index-numbers",
+      "cardType": "definition",
+      "front": "<p>Why does the CPI use <strong>weights</strong>, and what do the 'average family' and the 'basket' mean?</p>",
+      "back": "<p>The CPI prices a <strong>basket of goods and services</strong> chosen to represent the spending of the <strong>average family</strong>. Each category gets a <strong>weight</strong> reflecting its share of household spending, so a 10% rise in a heavily-weighted item (housing) moves the index far more than the same rise in a lightly-weighted one (tea bags).</p><p>The weighted index is the sum of weight × price index across categories, divided by the total weight.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["index-numbers", "inflation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-3-calc-01",
+      "specCode": "2.1.3",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-3-uses-of-index-numbers",
+      "cardType": "calculation",
+      "front": "<p>A simplified basket has three categories with weights out of 1,000: housing 400 (price index 108), transport 350 (index 104), food 250 (index 112). Calculate the <strong>weighted CPI</strong> and interpret it.</p>",
+      "back": "<p>Weight × index: housing 400 × 108 = 43,200; transport 350 × 104 = 36,400; food 250 × 112 = 28,000.</p><p>Total = 107,600; divide by total weight: 107,600 ÷ 1,000 = <strong>107.6</strong></p><p>Prices across the basket average <strong>7.6% above the base year</strong>. Food rose fastest (12%), but the heavily-weighted housing category matters more to the overall index — that is what weighting does.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["index-numbers", "calculation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-4-def-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-4-uses-of-national-income-data",
+      "cardType": "definition",
+      "front": "<p>Define <strong>national income</strong>, and state the national income identity.</p>",
+      "back": "<p><strong>National income</strong> is the total value of all goods and services produced in an economy over a given period. It can be measured in three equivalent ways — as total output, total income, or total expenditure — because one person's spending is another person's income, and all income is ultimately earned by producing output.</p><p>Hence the identity: <strong>national output ≡ national income ≡ national expenditure</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["national-income", "measurement"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The total value of all goods and services produced in an economy over a given period. It can be measured in three equivalent ways - as total output, total income, or total expenditure - because one person's spending is another person's income, and all income is ultimately earned by producing output."
+      }
+    },
+    {
+      "id": "aqa-2-1-4-def-02",
+      "specCode": "2.1.4",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-4-uses-of-national-income-data",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>GDP from GNI</strong>.</p>",
+      "back": "<p><strong>GDP</strong> measures the value of everything produced <strong>within a country's borders</strong>, regardless of who owns the factors of production.</p><p><strong>GNI</strong> (also called GNP) is GDP plus <strong>net income from abroad</strong> — income earned by residents from overseas assets, minus income earned by foreign residents from domestic assets. For countries with large overseas holdings or heavy inward investment, the two diverge noticeably.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["national-income", "measurement"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html",
+        "origin": "notes-verbatim",
+        "verbatim": "GDP plus net income from abroad - the income earned by a country's residents from overseas assets, minus the income earned by foreign residents from assets located domestically."
+      }
+    },
+    {
+      "id": "aqa-2-1-4-eval-01",
+      "specCode": "2.1.4",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-4-uses-of-national-income-data",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the <strong>limitations of national income data</strong> for comparing living standards.</p>",
+      "back": "<p>Even real GDP per capita hides much: <strong>income distribution</strong> (an average conceals inequality); the <strong>informal economy</strong> (subsistence farming, unpaid care, the hidden economy go unrecorded — a big understatement in developing countries); <strong>quality of life</strong> (health, leisure, freedom); <strong>negative externalities</strong> (polluting output still counts); the <strong>composition of output</strong> (defence spending raises GDP without raising welfare); and <strong>data reliability</strong> across countries.</p><p>The fullest single comparison is real GDP per capita at PPP; broader indices such as the HDI add health and education.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["national-income", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-1-4-def-03",
+      "specCode": "2.1.4",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-4-uses-of-national-income-data",
+      "cardType": "definition",
+      "front": "<p>What is <strong>purchasing power parity</strong>, and why does it matter for international comparisons?</p>",
+      "back": "<p><strong>PPP</strong> is an exchange rate that equalises the price of an identical basket of goods and services between two countries — what a currency actually buys at home, not what it trades for on foreign exchange markets.</p><p>Market rates mislead because they are driven by currency demand and supply, and because non-traded goods — housing, haircuts, restaurant meals — tend to be cheaper in lower-income countries. Comparing incomes at market rates therefore understates living standards in poorer economies.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["national-income", "measurement"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-05",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html",
+        "origin": "notes-verbatim",
+        "verbatim": "An exchange rate that equalises the price of an identical basket of goods and services between two countries. It reflects how much a currency can actually buy within its own economy, rather than what it trades for on foreign exchange markets."
+      }
+    }
+  ]
+}
