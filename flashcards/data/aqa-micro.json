@@ -1496,19 +1496,20 @@
       "svgAlt": "Demand and supply diagram with the supply curve shifted left to S plus Tax, consumer price P2, producer receipt P3, and the government revenue rectangle shaded between them up to Q2"
     },
     {
-      "id": "aqa-1-8-9-def-02",
+      "id": "aqa-1-8-9-diagram-04",
       "specCode": "1.8.9",
       "topic": "1.8 Market failure and government intervention",
       "subtopic": "1-8-9-government-intervention-in-markets",
-      "cardType": "definition",
+      "cardType": "diagram",
       "difficulty": "standard",
       "tags": [
         "intervention"
       ],
-      "front": "<p>How does a <strong>subsidy</strong> correct a positive externality, and what are its drawbacks?</p>",
-      "back": "<p>A subsidy lowers producers' costs, shifting S=MPC right: price falls, output rises towards the social optimum, internalising the external benefit. The cost to the government is the subsidy per unit times the new output.</p><p>Evaluation: firms can become subsidy-reliant and inefficient, and the spending carries an opportunity cost — the funds could have gone to other public services.</p>",
-      "svgRef": null,
-      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
+      "front": "<p>Show the effect of a <strong>subsidy</strong>, including the cost to the government.</p>",
+      "back": "<p>The subsidy lowers producers' costs, shifting S right to S+Subsidy: output rises from Q1 to Q2, consumers pay the lower price P2, producers receive P3 on the original supply curve, and the rectangle (P3 − P2) × Q2 is <strong>government expenditure</strong> — internalising the external benefit.</p><p>Evaluation: firms can become subsidy-reliant and inefficient, and the spending carries an opportunity cost — the funds could have gone to other public services.</p>",
+      "svgRef": "/images/diagrams/svg/subsidy-gov-expenditure.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
+      "svgAlt": "Demand and supply diagram with the supply curve shifted right to S plus Subsidy, consumer price P2, producer receipt P3, and the government expenditure rectangle shaded between them up to Q2"
     },
     {
       "id": "aqa-1-8-9-diagram-02",
