@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Movement along the short-run aggregate supply curve</title>
+  <desc id="d">An upward-sloping short-run aggregate supply curve SRAS. A rise in the price level from PL1 to PL2 moves the economy along the curve from point A to point B, raising real GDP supplied from Y1 to Y2.</desc>
+  <!-- geometry
+       on-curve: 300,330 460,170
+  -->
+  <!-- guides -->
+  <line x1="100" y1="330" x2="300" y2="330" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="300" y1="330" x2="300" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="170" x2="460" y2="170" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="170" x2="460" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="32" y="78" font-size="26" fill="#333333">level</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Real GDP</text>
+  <!-- curves -->
+  <line x1="170" y1="460" x2="530" y2="100" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="538" y="94" font-size="26" font-weight="700" fill="#1d70b8">SRAS</text>
+  <text x="288" y="314" font-size="24" fill="#333333" text-anchor="end">A</text>
+  <text x="448" y="154" font-size="24" fill="#333333" text-anchor="end">B</text>
+  <text x="92" y="338" font-size="24" fill="#333333" text-anchor="end">PL1</text>
+  <text x="92" y="178" font-size="24" fill="#333333" text-anchor="end">PL2</text>
+  <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Y1</text>
+  <text x="460" y="552" font-size="24" fill="#333333" text-anchor="middle">Y2</text>
+</svg>

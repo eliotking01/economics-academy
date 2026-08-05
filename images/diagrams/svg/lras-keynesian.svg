@@ -1,0 +1,20 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Keynesian long-run aggregate supply curve</title>
+  <desc id="d">An L-shaped aggregate supply curve: perfectly elastic at low output where there is large spare capacity, upward sloping as the economy approaches capacity, and vertical at full-capacity output Yfe.</desc>
+  <!-- geometry
+       on-curve: 300,400 520,200 520,110
+  -->
+  <!-- guides -->
+  <line x1="520" y1="200" x2="520" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="32" y="78" font-size="26" fill="#333333">level</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Real GDP</text>
+  <!-- curves -->
+  <path d="M 100,400 L 300,400 Q 430,400 485,332 Q 520,288 520,200 L 520,110" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="532" y="116" font-size="26" font-weight="700" fill="#1d70b8">LRAS</text>
+  <text x="520" y="552" font-size="24" fill="#333333" text-anchor="middle">Yfe</text>
+</svg>

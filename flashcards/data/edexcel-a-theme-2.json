@@ -6,7 +6,7 @@
   "themeName": "Theme 2: The UK Economy - Performance and Policies",
   "deckId": "edexcel-a-theme-2",
   "deckTitle": "Edexcel A-Level Economics Theme 2 Flashcards",
-  "count": 38,
+  "count": 54,
   "topics": [
     {
       "subtopic": "2-1-1-economic-growth",
@@ -20,7 +20,7 @@
       "specCode": "2.1.2",
       "title": "Inflation",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
-      "count": 6
+      "count": 8
     },
     {
       "subtopic": "2-1-3-employment-unemployment",
@@ -70,6 +70,27 @@
       "title": "Net Trade",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-2-5-net-trade.html",
       "count": 3
+    },
+    {
+      "subtopic": "2-3-1-aggregate-supply",
+      "specCode": "2.3.1",
+      "title": "Aggregate Supply",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html",
+      "count": 4
+    },
+    {
+      "subtopic": "2-3-2-short-run-aggregate-supply",
+      "specCode": "2.3.2",
+      "title": "Short-Run Aggregate Supply",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-2-short-run-aggregate-supply.html",
+      "count": 4
+    },
+    {
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "specCode": "2.3.3",
+      "title": "Long-Run Aggregate Supply",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
+      "count": 6
     }
   ],
   "cards": [
@@ -231,6 +252,40 @@
       "back": "<p><strong>Demand-pull</strong> — anything raising C, I, G or X−M shifts AD right and pulls the price level up. <strong>Cost-push</strong> — higher production costs (commodity prices, wages, indirect taxes, a weaker currency) shift SRAS left, raising prices while cutting output.</p><p><strong>Money supply growth</strong> — excessive growth (e.g. quantitative easing) fuels both: cheaper borrowing boosts spending, and a depreciating currency raises import costs. A <strong>wage-price spiral</strong> can then sustain inflation after the original cause fades.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html"
+    },
+    {
+      "id": "edexcel-a-2-1-2-diagram-01",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>demand-pull inflation</strong> on an AD/AS diagram.</p>",
+      "back": "<p>Aggregate demand shifts right (AD1 to AD2) — from rising consumer spending, investment, government spending or net exports — while SRAS is unchanged. The equilibrium moves up the SRAS curve: the price level rises from PL1 to PL2 as output rises from Y1 to Y2.</p><p>Prices are <strong>pulled up by excess demand</strong>, which is why demand-pull inflation strengthens as the economy nears full capacity.</p>",
+      "svgRef": "/images/diagrams/svg/ad-shift-right.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+      "svgAlt": "Aggregate demand shifting right from AD1 to AD2 along the SRAS curve, raising the price level from PL1 to PL2 and real GDP from Y1 to Y2"
+    },
+    {
+      "id": "edexcel-a-2-1-2-diagram-02",
+      "specCode": "2.1.2",
+      "topic": "2.1 Measures of economic performance",
+      "subtopic": "2-1-2-inflation",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "inflation",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>cost-push inflation</strong> on an AD/AS diagram.</p>",
+      "back": "<p>An economy-wide rise in production costs — dearer oil or raw materials, higher wages, a depreciation raising import prices — shifts short-run aggregate supply left (SRAS1 to SRAS2), while AD is unchanged. The price level rises from PL1 to PL2 and output falls from Y1 to Y2.</p><p>Costs <strong>push prices up</strong> even as output shrinks — unlike demand-pull, inflation and output move in opposite directions.</p>",
+      "svgRef": "/images/diagrams/svg/sras-shift-left.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-1-2-inflation.html",
+      "svgAlt": "Short-run aggregate supply shifting left from SRAS1 to SRAS2 along the AD curve, raising the price level from PL1 to PL2 while real GDP falls from Y1 to Y2"
     },
     {
       "id": "edexcel-a-2-1-2-eval-01",
@@ -661,6 +716,230 @@
       "back": "<p><strong>Real incomes</strong> — rising domestic incomes pull in imports (worsening); rising foreign incomes lift exports (improving). <strong>World economy</strong> — global growth lifts export demand, and for an open economy like the UK it is often the most important short-run driver.</p><p><strong>Protectionism</strong> — tariffs and quotas cut imports, but invite retaliation against exports and raise prices at home. <strong>Non-price competitiveness</strong> — quality, branding and innovation decide who wins the trade that prices don't.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-2/2-2-5-net-trade.html"
+    },
+    {
+      "id": "edexcel-a-2-3-1-def-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-1-aggregate-supply",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "aggregate-supply"
+      ],
+      "front": "<p>Define <strong>short-run aggregate supply</strong> (SRAS).</p>",
+      "back": "<p><strong>Short-run aggregate supply</strong> is the total planned output of goods and services in an economy at a given price level in a period where at least one factor of production is fixed, such as the capital stock or technology.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-1-diagram-01",
+      "specCode": "2.3.1",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-1-aggregate-supply",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "diagram"
+      ],
+      "front": "<p>Why does the <strong>SRAS curve slope upward</strong>?</p>",
+      "back": "<p>In the short run, producing more means <strong>rising unit costs</strong> — overtime wages, less efficient machinery pressed into service. Firms need higher prices to make the extra output worthwhile, so quantity supplied rises with the price level.</p><p>A rise in the price level from PL1 to PL2 is a <strong>movement along</strong> the curve (A to B), raising real GDP supplied from Y1 to Y2.</p>",
+      "svgRef": "/images/diagrams/svg/sras-movements.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html",
+      "svgAlt": "Upward-sloping SRAS curve with a movement from point A at price level PL1 and output Y1 to point B at PL2 and Y2"
+    },
+    {
+      "id": "edexcel-a-2-3-1-def-02",
+      "specCode": "2.3.1",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-1-aggregate-supply",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply"
+      ],
+      "front": "<p>Distinguish a <strong>movement along</strong> the SRAS curve from a <strong>shift</strong> of it.</p>",
+      "back": "<p>A <strong>movement along</strong> SRAS is caused only by a change in the average price level, other things constant — firms change their level of output in response to the price level.</p><p>A <strong>shift</strong> of the whole curve is caused by a change in any condition of SRAS — production costs changing for firms across the economy — altering the output supplied at every given price level.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-1-def-03",
+      "specCode": "2.3.1",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-1-aggregate-supply",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply"
+      ],
+      "front": "<p>Explain the <strong>relationship between SRAS and LRAS</strong>.</p>",
+      "back": "<p><strong>SRAS</strong> shows what firms <strong>will produce</strong> at different price levels while at least one factor is fixed. <strong>LRAS</strong> shows what the economy <strong>can produce</strong> at maximum potential — its productive capacity.</p><p>In the long run the economy tends towards the LRAS level of output; SRAS shocks are temporary adjustments around that trend. Long-run growth is an outward shift of LRAS.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-1-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-2-def-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-2-short-run-aggregate-supply",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "aggregate-supply"
+      ],
+      "front": "<p>State the <strong>factors that shift SRAS</strong> in the Edexcel specification.</p>",
+      "back": "<p>Three cost factors: <strong>changes in costs of raw materials and energy</strong>, <strong>changes in exchange rates</strong> and <strong>changes in tax rates</strong> (indirect taxes raise costs; subsidies work in reverse).</p><p>All operate through production costs — falling costs shift SRAS right, rising costs shift it left. Supply shocks such as natural disasters or sudden oil-price moves act the same way.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-2-short-run-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-2-diagram-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-2-short-run-aggregate-supply",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>fall in production costs</strong> on SRAS.</p>",
+      "back": "<p>SRAS shifts right (SRAS1 to SRAS2): firms are willing to supply more at <strong>every given price level</strong>, so at the unchanged price level PL, output rises from Y1 to Y2.</p><p>Causes include cheaper raw materials or energy, an appreciation cutting import costs, lower indirect taxes or new subsidies. A rise in costs shifts the curve left instead.</p>",
+      "svgRef": "/images/diagrams/svg/sras-shift.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-2-short-run-aggregate-supply.html",
+      "svgAlt": "SRAS1 shifting right to SRAS2, raising real GDP supplied from Y1 to Y2 at the unchanged price level PL"
+    },
+    {
+      "id": "edexcel-a-2-3-2-chain-01",
+      "specCode": "2.3.2",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-2-short-run-aggregate-supply",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply"
+      ],
+      "front": "<p>Explain how a <strong>depreciation of the pound</strong> affects SRAS.</p>",
+      "back": "<p>A depreciation makes imported raw materials and energy <strong>more expensive in sterling</strong>, raising production costs for firms across the economy. SRAS shifts left, giving a higher price level together with lower real output.</p><p>An appreciation has the opposite effect: cheaper imported inputs, SRAS shifts right.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-2-short-run-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-2-chain-02",
+      "specCode": "2.3.2",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-2-short-run-aggregate-supply",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "inflation"
+      ],
+      "front": "<p>What is a <strong>cost-push shock</strong>? Trace its effect on output and prices.</p>",
+      "back": "<p>A <strong>cost-push shock</strong> is a sudden economy-wide rise in production costs, such as a sharp rise in oil prices. SRAS shifts left, and the result is a higher price level together with lower real output.</p><p>The same mechanism working over time — production costs rising across the economy — is the origin of <strong>cost-push inflation</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-2-short-run-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-3-def-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "aggregate-supply"
+      ],
+      "front": "<p>Define <strong>long-run aggregate supply</strong> (LRAS).</p>",
+      "back": "<p><strong>Long-run aggregate supply</strong> is the total potential output of an economy when all factors of production are fully and efficiently employed. It represents the economy's <strong>productive capacity</strong>.</p><p>Shifts in LRAS represent long-run growth or decline — equivalent to an outward or inward shift of the production possibility frontier.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-3-diagram-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "diagram"
+      ],
+      "front": "<p>Draw and explain the <strong>classical LRAS curve</strong>.</p>",
+      "back": "<p>Classical economists hold that in the long run the economy <strong>always adjusts to full employment</strong>, so potential output depends on the quantity and quality of the factors of production — not the price level. LRAS is <strong>perfectly inelastic</strong>: vertical at full-employment output Yfe.</p><p>Any change in AD therefore changes only the price level (PL1 to PL2) in the long run, not real output.</p>",
+      "svgRef": "/images/diagrams/svg/lras-classical.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
+      "svgAlt": "Vertical classical LRAS curve at full-employment output Yfe, with price levels PL1 and PL2 marked to show output unchanged"
+    },
+    {
+      "id": "edexcel-a-2-3-3-diagram-02",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "diagram"
+      ],
+      "front": "<p>Draw and explain the <strong>Keynesian LRAS curve</strong>.</p>",
+      "back": "<p>Keynesians argue the economy can sit <strong>below full employment for a long time</strong>, so the curve is L-shaped with three phases: <strong>perfectly elastic</strong> at low output, where spare capacity lets firms expand without raising prices; <strong>upward sloping</strong> as resources grow scarcer and rising costs are passed on; and <strong>vertical</strong> at full capacity Yfe, where extra demand only raises prices.</p>",
+      "svgRef": "/images/diagrams/svg/lras-keynesian.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
+      "svgAlt": "L-shaped Keynesian LRAS curve: flat at low output, sloping upward as capacity nears, vertical at full-capacity output Yfe"
+    },
+    {
+      "id": "edexcel-a-2-3-3-eval-01",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "aggregate-supply",
+        "evaluation"
+      ],
+      "front": "<p>Why does the <strong>shape of LRAS</strong> matter for policy?</p>",
+      "back": "<p>The disagreement is over whether demand can raise long-run output. In the <strong>classical</strong> view the economy self-corrects to full employment, so boosting AD only raises the price level — governments should work on the supply side.</p><p>In the <strong>Keynesian</strong> view the economy can stay below full employment, so with spare capacity a rise in AD raises real output with little inflation — a case for demand-side stimulus in a downturn. Which model fits depends on how close the economy is to capacity.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html"
+    },
+    {
+      "id": "edexcel-a-2-3-3-diagram-03",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "growth",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>long-run economic growth</strong> on an LRAS diagram.</p>",
+      "back": "<p>Growth in productive capacity shifts LRAS outward (LRAS1 to LRAS2), raising full-employment output from Yfe1 to Yfe2 — the same story as an outward PPF shift.</p><p>It comes from anything that improves the <strong>quantity or quality</strong> of the factors of production: investment in capital, technology, a larger or better-skilled workforce.</p>",
+      "svgRef": "/images/diagrams/svg/lras-shift.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html",
+      "svgAlt": "Vertical LRAS1 curve shifting right to LRAS2, raising full-employment output from Yfe1 to Yfe2"
+    },
+    {
+      "id": "edexcel-a-2-3-3-def-02",
+      "specCode": "2.3.3",
+      "topic": "2.3 Aggregate supply (AS)",
+      "subtopic": "2-3-3-long-run-aggregate-supply",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-supply",
+        "growth"
+      ],
+      "front": "<p>List the <strong>factors that shift LRAS</strong>.</p>",
+      "back": "<p>The Edexcel six: <strong>technological advances</strong>; <strong>changes in relative productivity</strong>; <strong>changes in education and skills</strong>; <strong>changes in government regulations</strong>; <strong>demographic changes and migration</strong>; <strong>competition policy</strong>.</p><p>Each works by changing the quantity or quality of the factors of production. The policies that target them are supply-side policies (2.6.3).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-3-3-long-run-aggregate-supply.html"
     }
   ]
 }
