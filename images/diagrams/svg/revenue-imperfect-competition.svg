@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Revenue for a firm in imperfect competition</title>
+  <desc id="d">A price-making firm must lower its price to sell more, so average revenue slopes downward and marginal revenue lies below it at twice the slope. Total revenue rises at a decreasing rate, peaks at the quantity where marginal revenue reaches zero, and then falls.</desc>
+  <!-- geometry
+       on-curve: 420,180 420,520
+  -->
+  <!-- guides -->
+  <line x1="420" y1="180" x2="420" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="160" y1="130" x2="620" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="130" x2="420" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 100,520 Q 260,180 420,180 Q 580,180 640,320" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="632" y="483" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="433" y="505" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="652" y="328" font-size="26" font-weight="700" fill="#1d70b8">TR</text>
+  <text x="420" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+</svg>

@@ -28,14 +28,14 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **92 ✅ · 0 🟡 · 74 ❌** of 166 units.
-Cards shipped: 362 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 62 AQA macro + 13 Edexcel Theme 3), **all approved by
-Eliot** (Theme 3 batch 1 approved 2026-08-05, including both
-firm-diagram adaptations: the unlabelled ground-truth curve omitted,
-markers at exact rule crossings; CONTENT_ISSUES #8 approved and
-fixed the same day). SVG diagrams shipped: 49. No open content
-issues.
+Tally (2026-08-05): **92 ✅ · 3 🟡 · 71 ❌** of 166 units.
+Cards shipped: 374 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
+Theme 2 + 62 AQA macro + 25 Edexcel Theme 3). Approved through Theme
+3 sections 3.1–3.2. **Theme 3 batch 2 (12 cards, sections
+3.3.1–3.3.3, with 5 new cost/revenue SVGs) is built and integrated
+but AWAITS ELIOT'S REVIEW.** SVG diagrams shipped: 54. No open
+content issues. Unit 3.3.4 (profits/shut-down) is deliberately held
+for batch 3, where its diagrams open the market-structure set.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -111,7 +111,7 @@ in phase 7) is underway.
 | 2.6.3 Supply-side policies | ✅ | 2 definition, 1 diagram, 1 evaluation |
 | 2.6.4 Conflicts between objectives and policies | ✅ | 1 definition, 1 diagram, 1 evaluation |
 
-### Edexcel A (9EC0) — Theme 3 (deck `edexcel-a-theme-3`, 13 cards; 20 units)
+### Edexcel A (9EC0) — Theme 3 (deck `edexcel-a-theme-3`, 25 cards; 20 units)
 
 | Unit | Status |
 | --- | --- |
@@ -119,9 +119,9 @@ in phase 7) is underway.
 | 3.1.2 Business growth | ✅ | 2 definition, 1 evaluation |
 | 3.1.3 Demergers | ✅ | 1 definition, 1 evaluation |
 | 3.2.1 Business objectives | ✅ | 2 definition, 3 diagram |
-| 3.3.1 Revenue | ❌ |
-| 3.3.2 Costs | ❌ |
-| 3.3.3 Economies & diseconomies of scale | ❌ |
+| 3.3.1 Revenue | 🟡 review | 1 definition, 1 formula, 2 diagram |
+| 3.3.2 Costs | 🟡 review | 1 formula, 1 calculation, 2 diagram |
+| 3.3.3 Economies & diseconomies of scale | 🟡 review | 2 definition, 1 diagram, 1 evaluation |
 | 3.3.4 Normal profits, supernormal profits & losses | ❌ |
 | 3.4.1 Efficiency | ❌ |
 | 3.4.2 Perfect competition | ❌ |
@@ -493,15 +493,36 @@ Useful QA techniques:
   including the firm-diagram adaptations. CONTENT_ISSUES #8 approved
   and fixed. Sections 3.1–3.2 flipped to ✅.
 
+- 2026-08-05 — **Theme 3 batch 2 authored and built, awaiting
+  review**: 12 cards covering revenue (TR/AR/MR with both market
+  types and the PED total-revenue rule), costs (the seven measures,
+  an original cost-schedule calculation where MC meets AC at £15,
+  short-run curves, the LRAC envelope) and economies of scale (six
+  internal types, MES diagram, internal vs external, diseconomies).
+  Five new SVGs: revenue-perfect-competition and
+  revenue-imperfect-competition (each combining its two-panel ground
+  truth into one panel), short-run-costs (MC through the exact minima
+  of BOTH AVC and AC), long-run-costs (LRAC envelope, SRAC2 kissing
+  the minimum exactly, SRACs in teal as second-original curves) and
+  economies-of-scale (MES + annotation arrows). All crossings
+  computed; zero geometry flags. Matrix: 92 ✅ · 3 🟡 · 71 ❌; 374
+  cards, 54 SVGs.
+
 ## Next steps (a fresh session starts here)
 
-1. **Theme 3 batch 2: section 3.3** (revenue, costs, economies of
-   scale, profit/shut-down — the cost-curve diagram programme:
-   TR/AR/MR, SRAC/LRAC, shut-down points), then 3.4 market
-   structures, 3.5 labour market, 3.6 intervention. The firm-diagram
-   base (profit-max.svg) is the template for the market-structure
-   equilibria. Then AQA 1.4–1.6 (phase 5), Theme 4 (phase 6), AQA
-   remainder (phase 7).
+1. **Get Theme 3 batch 2 approved** (12 cards, sections 3.3.1–3.3.3,
+   presented 2026-08-05). Adaptation to flag: both revenue
+   ground-truth PNGs are two-panel; the SVGs combine each into one
+   panel (AR/MR + TR on shared axes), per the approved lras-shift
+   precedent.
+2. **Theme 3 batch 3: 3.3.4 + section 3.4 start** (supernormal
+   profit, loss and shut-down diagrams — ground truths
+   supernormal-profit.png, loss.png, short-run-shutdown-condition.png
+   on the 3-3-4 page, not yet inspected — then efficiency and perfect
+   competition). The firm-diagram base (profit-max.svg) plus the new
+   shaded-area idiom is the template for all market-structure
+   equilibria. Then 3.5 labour, 3.6 intervention, AQA 1.4–1.6
+   (phase 5), Theme 4 (phase 6), AQA remainder (phase 7).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId
    `aqa-macro`, theme `macro` — mirror the micro deck's header), builder

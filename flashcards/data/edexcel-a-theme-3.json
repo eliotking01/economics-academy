@@ -6,7 +6,7 @@
   "themeName": "Theme 3: Business Behaviour and the Labour Market",
   "deckId": "edexcel-a-theme-3",
   "deckTitle": "Edexcel A-Level Economics Theme 3 Flashcards",
-  "count": 13,
+  "count": 25,
   "topics": [
     {
       "subtopic": "3-1-1-sizes-types-of-firms",
@@ -35,6 +35,27 @@
       "title": "Business Objectives",
       "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
       "count": 5
+    },
+    {
+      "subtopic": "3-3-1-revenue",
+      "specCode": "3.3.1",
+      "title": "Revenue",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-1-revenue.html",
+      "count": 4
+    },
+    {
+      "subtopic": "3-3-2-costs",
+      "specCode": "3.3.2",
+      "title": "Costs",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+      "count": 4
+    },
+    {
+      "subtopic": "3-3-3-economies-diseconomies-of-scale",
+      "specCode": "3.3.3",
+      "title": "Economies and Diseconomies of Scale",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
+      "count": 4
     }
   ],
   "cards": [
@@ -240,6 +261,203 @@
       "back": "<p>Because of the <strong>principal-agent problem</strong>: managers may prefer higher salaries, job security or perks, and choose a profit level acceptable to shareholders while meeting their own goals. In small firms, owners may satisfice to protect work-life balance.</p><p>On the diagram, a satisficing firm's output and price sit <strong>between</strong> the profit-maximising and sales-maximising positions — enough profit to satisfy, not the maximum available.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html"
+    },
+    {
+      "id": "edexcel-a-3-3-1-formula-01",
+      "specCode": "3.3.1",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-1-revenue",
+      "cardType": "formula",
+      "difficulty": "foundation",
+      "tags": [
+        "revenue",
+        "formula"
+      ],
+      "front": "<p>Define and give the formulas for <strong>total, average and marginal revenue</strong>.</p>",
+      "back": "<p><strong>TR</strong> = P × Q, the firm's total earnings from sales. <strong>AR</strong> = TR ÷ Q — which simplifies to the price per unit, so the AR curve <strong>is the firm's demand curve</strong>. <strong>MR</strong> = ΔTR ÷ ΔQ, the additional revenue from selling one more unit.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-1-revenue.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>T</mi><mi>R</mi><mo>=</mo><mi>P</mi><mo>×</mo><mi>Q</mi><mo separator=\"true\">;</mo><mi>A</mi><mi>R</mi><mo>=</mo><mi>T</mi><mi>R</mi><mi mathvariant=\"normal\">/</mi><mi>Q</mi><mo separator=\"true\">;</mo><mi>M</mi><mi>R</mi><mo>=</mo><mi mathvariant=\"normal\">Δ</mi><mi>T</mi><mi>R</mi><mi mathvariant=\"normal\">/</mi><mi mathvariant=\"normal\">Δ</mi><mi>Q</mi></mrow><annotation encoding=\"application/x-tex\">TR = P × Q;  AR = TR/Q;  MR = ΔTR/ΔQ</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.00773em;\">TR</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">P</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">×</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8778em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\">Q</span><span class=\"mpunct\">;</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mord mathnormal\" style=\"margin-right:0.00773em;\">R</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.00773em;\">TR</span><span class=\"mord\">/</span><span class=\"mord mathnormal\">Q</span><span class=\"mpunct\">;</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.00773em;\">MR</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord\">Δ</span><span class=\"mord mathnormal\" style=\"margin-right:0.00773em;\">TR</span><span class=\"mord\">/Δ</span><span class=\"mord mathnormal\">Q</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-3-3-1-diagram-01",
+      "specCode": "3.3.1",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-1-revenue",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "revenue",
+        "diagram"
+      ],
+      "front": "<p>Show the <strong>revenue curves in perfect competition</strong>.</p>",
+      "back": "<p>Firms are <strong>price takers</strong>, selling every unit at the market price, so demand is perfectly elastic: <strong>D = AR = MR = P</strong>, one horizontal line.</p><p>With price fixed, total revenue rises at a <strong>constant rate</strong> — a straight ray from the origin.</p>",
+      "svgRef": "/images/diagrams/svg/revenue-perfect-competition.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-1-revenue.html",
+      "svgAlt": "Horizontal line at price P labelled D=AR=MR=P, with a straight total revenue ray rising from the origin"
+    },
+    {
+      "id": "edexcel-a-3-3-1-diagram-02",
+      "specCode": "3.3.1",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-1-revenue",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "revenue",
+        "diagram"
+      ],
+      "front": "<p>Show the <strong>revenue curves in imperfect competition</strong>.</p>",
+      "back": "<p>Firms are <strong>price makers</strong> but must cut price to sell more, so AR (the demand curve) slopes down and <strong>MR lies below AR</strong> — in a linear diagram, twice as steep.</p><p>TR therefore rises at a decreasing rate, <strong>peaks exactly where MR = 0</strong> (quantity Q), and falls beyond it as MR turns negative.</p>",
+      "svgRef": "/images/diagrams/svg/revenue-imperfect-competition.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-1-revenue.html",
+      "svgAlt": "Downward-sloping AR with a steeper MR crossing the quantity axis at Q, and a total revenue curve peaking directly above Q"
+    },
+    {
+      "id": "edexcel-a-3-3-1-def-01",
+      "specCode": "3.3.1",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-1-revenue",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "revenue",
+        "elasticity"
+      ],
+      "front": "<p>State the <strong>total revenue rule</strong> linking PED to pricing decisions.</p>",
+      "back": "<p>If demand is <strong>price elastic</strong> (PED &gt; 1), cutting price raises TR and raising price lowers it. If demand is <strong>price inelastic</strong> (PED &lt; 1), raising price raises TR. At <strong>unitary elasticity</strong> (PED = 1), price changes leave TR unchanged.</p><p>On the imperfect-competition diagram: demand is elastic above the TR peak, inelastic beyond it — MR = 0 marks the boundary.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-1-revenue.html"
+    },
+    {
+      "id": "edexcel-a-3-3-2-formula-01",
+      "specCode": "3.3.2",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-2-costs",
+      "cardType": "formula",
+      "difficulty": "foundation",
+      "tags": [
+        "costs",
+        "formula"
+      ],
+      "front": "<p>Define the <strong>seven cost measures</strong> in the specification.</p>",
+      "back": "<p><strong>Fixed costs</strong> do not vary with output (rent, salaries); <strong>variable costs</strong> vary directly with it (raw materials, hourly wages). <strong>TC</strong> = TFC + TVC.</p><p>The averages divide by output: <strong>AC</strong> = TC ÷ Q, <strong>AFC</strong> = TFC ÷ Q, <strong>AVC</strong> = TVC ÷ Q. <strong>MC</strong> = ΔTC ÷ ΔQ — the additional cost of producing one more unit.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>T</mi><mi>C</mi><mo>=</mo><mi>T</mi><mi>F</mi><mi>C</mi><mo>+</mo><mi>T</mi><mi>V</mi><mi>C</mi><mo separator=\"true\">;</mo><mi>A</mi><mi>C</mi><mo>=</mo><mi>T</mi><mi>C</mi><mi mathvariant=\"normal\">/</mi><mi>Q</mi><mo separator=\"true\">;</mo><mi>M</mi><mi>C</mi><mo>=</mo><mi mathvariant=\"normal\">Δ</mi><mi>T</mi><mi>C</mi><mi mathvariant=\"normal\">/</mi><mi mathvariant=\"normal\">Δ</mi><mi>Q</mi></mrow><annotation encoding=\"application/x-tex\">TC = TFC + TVC;  AC = TC/Q;  MC = ΔTC/ΔQ</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">TC</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">TFC</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8778em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">T</span><span class=\"mord mathnormal\" style=\"margin-right:0.22222em;\">V</span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">C</span><span class=\"mpunct\">;</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">C</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">TC</span><span class=\"mord\">/</span><span class=\"mord mathnormal\">Q</span><span class=\"mpunct\">;</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">MC</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord\">Δ</span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">TC</span><span class=\"mord\">/Δ</span><span class=\"mord mathnormal\">Q</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-3-3-2-calc-01",
+      "specCode": "3.3.2",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-2-costs",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "costs",
+        "calculation"
+      ],
+      "front": "<p>A firm has fixed costs of £200. Variable costs are £80 at 10 units, £140 at 20, £250 at 30 and £400 at 40. Calculate <strong>TC and AC at each output, and MC between each step</strong>.</p>",
+      "back": "<p>TC = 200 + TVC: <strong>280, 340, 450, 600</strong></p><p>AC = TC ÷ Q: 280 ÷ 10 = <strong>£28</strong>; 340 ÷ 20 = <strong>£17</strong>; 450 ÷ 30 = <strong>£15</strong>; 600 ÷ 40 = <strong>£15</strong></p><p>MC = ΔTC ÷ ΔQ: (340 − 280) ÷ 10 = <strong>£6</strong>; then <strong>£11</strong>; then <strong>£15</strong></p><p>Note where AC stops falling: between 30 and 40 units MC equals AC at £15 — average cost bottoms out exactly where marginal cost catches it.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-2-costs.html"
+    },
+    {
+      "id": "edexcel-a-3-3-2-diagram-01",
+      "specCode": "3.3.2",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-2-costs",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "costs",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>short-run cost curves</strong>, and explain their shapes.</p>",
+      "back": "<p><strong>Diminishing marginal productivity</strong> shapes them all: with at least one factor fixed, extra workers eventually add less and less output, so MC falls briefly then rises — and the average curves are U-shaped.</p><p><strong>MC cuts both AVC and AC at their minimum points</strong>: while MC is below an average it drags it down, once above it pulls it up. AFC falls continuously as fixed costs spread over more units.</p>",
+      "svgRef": "/images/diagrams/svg/short-run-costs.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+      "svgAlt": "J-shaped MC curve cutting the AVC and AC curves at their minimum points, with AFC falling continuously"
+    },
+    {
+      "id": "edexcel-a-3-3-2-diagram-02",
+      "specCode": "3.3.2",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-2-costs",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "costs",
+        "diagram"
+      ],
+      "front": "<p>Show the relationship between <strong>short-run and long-run average cost curves</strong>.</p>",
+      "back": "<p>Each SRAC curve represents one <strong>scale of plant</strong> — fixed in the short run. In the long run all factors are variable, so the firm can choose any plant size: the <strong>LRAC is the envelope</strong> of the SRAC curves, touching each from below.</p><p>Moving down the LRAC means growing onto bigger, cheaper plants (economies of scale); beyond the minimum, further scale raises average costs.</p>",
+      "svgRef": "/images/diagrams/svg/long-run-costs.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+      "svgAlt": "U-shaped LRAC curve as the envelope of three short-run average cost curves, with SRAC2 touching at the LRAC minimum"
+    },
+    {
+      "id": "edexcel-a-3-3-3-def-01",
+      "specCode": "3.3.3",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-3-economies-diseconomies-of-scale",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale"
+      ],
+      "front": "<p>Name the six types of <strong>internal economies of scale</strong>.</p>",
+      "back": "<p><strong>Purchasing</strong> — bulk-buying discounts; <strong>technical</strong> — large-scale machinery affordable only at volume; <strong>managerial</strong> — specialist managers; <strong>financial</strong> — cheaper borrowing as lenders see less risk; <strong>marketing</strong> — advertising spread over more units; <strong>risk-bearing</strong> — diversification across products and markets.</p><p>All are reasons within the business why average costs fall as output grows — they drive the LRAC's falling section.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html"
+    },
+    {
+      "id": "edexcel-a-3-3-3-diagram-01",
+      "specCode": "3.3.3",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-3-economies-diseconomies-of-scale",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>economies and diseconomies of scale</strong> on the LRAC curve, and mark the MES.</p>",
+      "back": "<p>The falling section is <strong>economies of scale</strong>; the rising section is <strong>diseconomies</strong>, where size breeds bureaucracy, communication failures and weaker coordination.</p><p>The <strong>minimum efficient scale</strong> is the lowest output at which the lowest possible long-run average cost is reached — the bottom of the curve. Its position matters for market structure: a high MES leaves room for only a few efficient firms.</p>",
+      "svgRef": "/images/diagrams/svg/economies-of-scale.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
+      "svgAlt": "U-shaped LRAC curve with the economies-of-scale section falling, diseconomies rising, and the minimum efficient scale marked at the bottom"
+    },
+    {
+      "id": "edexcel-a-3-3-3-def-02",
+      "specCode": "3.3.3",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-3-economies-diseconomies-of-scale",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale"
+      ],
+      "front": "<p>Distinguish <strong>internal from external economies of scale</strong>.</p>",
+      "back": "<p><strong>Internal</strong> economies arise within the business — its own scale lowers its own average costs (purchasing power, technical scale, and the rest).</p><p><strong>External</strong> economies arise outside the business: the whole industry's growth lowers costs for every firm in it — a skilled local labour pool, specialist suppliers clustering nearby, shared infrastructure. Internal economies move a firm along its LRAC; external economies shift the whole curve down.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html"
+    },
+    {
+      "id": "edexcel-a-3-3-3-eval-01",
+      "specCode": "3.3.3",
+      "topic": "3.3 Revenues, costs and profits",
+      "subtopic": "3-3-3-economies-diseconomies-of-scale",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "economies-of-scale",
+        "evaluation"
+      ],
+      "front": "<p>Why do <strong>diseconomies of scale</strong> set in?</p>",
+      "back": "<p>Size itself becomes the cost driver: <strong>communication</strong> stretches across more layers and sites; <strong>coordination and control</strong> weaken as management grows remote from operations; <strong>motivation</strong> falls when workers feel like small parts of a vast machine; and bureaucracy multiplies.</p><p>This is why growth is not automatically profitable — and why some firms demerge to get back below the point where average costs turn upward.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html"
     }
   ]
 }
