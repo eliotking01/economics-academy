@@ -1,0 +1,245 @@
+{
+  "generated": "2026-08-05",
+  "board": "edexcel-a",
+  "boardName": "Edexcel A",
+  "theme": "theme-3",
+  "themeName": "Theme 3: Business Behaviour and the Labour Market",
+  "deckId": "edexcel-a-theme-3",
+  "deckTitle": "Edexcel A-Level Economics Theme 3 Flashcards",
+  "count": 13,
+  "topics": [
+    {
+      "subtopic": "3-1-1-sizes-types-of-firms",
+      "specCode": "3.1.1",
+      "title": "Sizes and Types of Firms",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html",
+      "count": 3
+    },
+    {
+      "subtopic": "3-1-2-business-growth",
+      "specCode": "3.1.2",
+      "title": "Business Growth",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-2-business-growth.html",
+      "count": 3
+    },
+    {
+      "subtopic": "3-1-3-demergers",
+      "specCode": "3.1.3",
+      "title": "Demergers",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-3-demergers.html",
+      "count": 2
+    },
+    {
+      "subtopic": "3-2-1-business-objectives",
+      "specCode": "3.2.1",
+      "title": "Business Objectives",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
+      "count": 5
+    }
+  ],
+  "cards": [
+    {
+      "id": "edexcel-a-3-1-1-def-01",
+      "specCode": "3.1.1",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-1-sizes-types-of-firms",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "business-growth"
+      ],
+      "front": "<p>Why do <strong>firms grow</strong> — and why do some stay small?</p>",
+      "back": "<p>The underlying incentive is <strong>profit</strong>. Growth brings economies of scale, market power over prices and suppliers, easier access to finance, and stronger brand recognition.</p><p>Firms stay small because of <strong>diseconomies of scale</strong>, market conditions (niche or fiercely competitive markets), or <strong>owner preference</strong> — keeping control and a manageable lifestyle over expansion.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html"
+    },
+    {
+      "id": "edexcel-a-3-1-1-def-02",
+      "specCode": "3.1.1",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-1-sizes-types-of-firms",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "business-growth"
+      ],
+      "front": "<p>Explain the <strong>principal-agent problem</strong> and the divorce of ownership and control.</p>",
+      "back": "<p>In large firms the owners (shareholders) do not run the business — managers do. This <strong>separation of ownership and control</strong> means managers may pursue their own objectives — higher salaries, sales maximisation, perks — instead of the owners' goal of profit maximisation.</p><p>Solutions align incentives: <strong>performance-related pay</strong>, bonuses and stock options that make managers gain when shareholders do.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html"
+    },
+    {
+      "id": "edexcel-a-3-1-1-def-03",
+      "specCode": "3.1.1",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-1-sizes-types-of-firms",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "business-growth"
+      ],
+      "front": "<p>Distinguish <strong>public from private sector</strong>, and <strong>profit from not-for-profit</strong> organisations.</p>",
+      "back": "<p><strong>Public sector</strong> — owned and funded by the government, usually to provide services in the public interest (the NHS). <strong>Private sector</strong> — owned by individuals or shareholders, usually profit-motivated.</p><p><strong>Profit organisations</strong> aim to generate financial returns for owners; <strong>not-for-profit</strong> organisations, such as charities, reinvest any surplus in their social purpose instead.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html"
+    },
+    {
+      "id": "edexcel-a-3-1-2-def-01",
+      "specCode": "3.1.2",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-2-business-growth",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "business-growth"
+      ],
+      "front": "<p>Distinguish <strong>organic from inorganic growth</strong>.</p>",
+      "back": "<p><strong>Organic growth</strong> is growth generated from within the business using its own resources — new products, new locations, more market share. Slower, but controlled.</p><p><strong>Inorganic growth</strong> is growth achieved through mergers or takeovers of other businesses — faster, but riskier: integration can fail, cultures can clash, and the price paid may exceed the value gained.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-2-business-growth.html"
+    },
+    {
+      "id": "edexcel-a-3-1-2-def-02",
+      "specCode": "3.1.2",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-2-business-growth",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "business-growth"
+      ],
+      "front": "<p>Distinguish <strong>horizontal, vertical and conglomerate integration</strong>.</p>",
+      "back": "<p><strong>Horizontal</strong> — merging with a competitor at the same stage of production (two car manufacturers), raising market share. <strong>Vertical</strong> — merging along the supply chain: <strong>backward</strong> with a supplier (a car maker buying a tyre maker) to secure inputs; <strong>forward</strong> with a distributor to secure outlets and margin.</p><p><strong>Conglomerate</strong> — merging with an unrelated business, spreading risk across markets.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-2-business-growth.html"
+    },
+    {
+      "id": "edexcel-a-3-1-2-eval-01",
+      "specCode": "3.1.2",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-2-business-growth",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "business-growth",
+        "evaluation"
+      ],
+      "front": "<p>What <strong>constrains business growth</strong>?</p>",
+      "back": "<p><strong>Market size</strong> — niche or saturated markets cap expansion, pushing firms to internationalise. <strong>Access to finance</strong> — smaller firms look riskier, so borrowing is harder and dearer. <strong>Owner objectives</strong> — lifestyle goals or satisficing over rapid growth.</p><p><strong>Regulation</strong> — competition policy (the CMA) can block mergers that create too much market power, and rules on demerit goods can cap whole markets.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-2-business-growth.html"
+    },
+    {
+      "id": "edexcel-a-3-1-3-def-01",
+      "specCode": "3.1.3",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-3-demergers",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "business-growth"
+      ],
+      "front": "<p>What is a <strong>demerger</strong>, and why do firms demerge?</p>",
+      "back": "<p><strong>A demerger is when a large firm splits into two or more separate, independent businesses</strong> — the opposite of a merger.</p><p>Reasons: reduce <strong>diseconomies of scale</strong>; increase focus on the core business; resolve culture clashes from an earlier merger; shed loss-making divisions; raise capital; or <strong>regulatory pressure</strong> — the CMA can force a demerger to cut monopoly power.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-3-demergers.html"
+    },
+    {
+      "id": "edexcel-a-3-1-3-eval-01",
+      "specCode": "3.1.3",
+      "topic": "3.1 Business growth",
+      "subtopic": "3-1-3-demergers",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "business-growth",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>impacts of a demerger</strong> on the business, workers and consumers.</p>",
+      "back": "<p><strong>Business</strong> — lower average costs and sharper focus, against transition costs and lost synergies. <strong>Workers</strong> — better conditions and career paths in focused firms, against redundancies and transition uncertainty.</p><p><strong>Consumers</strong> — more competition can mean lower prices and better service; but smaller firms may lose scale economies, which can push costs and prices the other way.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-1-3-demergers.html"
+    },
+    {
+      "id": "edexcel-a-3-2-1-def-01",
+      "specCode": "3.2.1",
+      "topic": "3.2 Business objectives",
+      "subtopic": "3-2-1-business-objectives",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "business-objectives"
+      ],
+      "front": "<p>Name the <strong>four business objectives</strong> in the Edexcel specification, with their rules.</p>",
+      "back": "<p><strong>Profit maximisation</strong> — the traditional assumption, maximising shareholder returns: produce where <strong>MC = MR</strong>. <strong>Revenue maximisation</strong> — for market share or scale economies: <strong>MR = 0</strong>. <strong>Sales maximisation</strong> — grow volume while breaking even: <strong>AC = AR</strong>.</p><p><strong>Satisficing</strong> — a satisfactory rather than maximum profit, balancing shareholders against managers' own objectives (the principal-agent problem); output and price lie between the profit-max and sales-max positions.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html"
+    },
+    {
+      "id": "edexcel-a-3-2-1-diagram-01",
+      "specCode": "3.2.1",
+      "topic": "3.2 Business objectives",
+      "subtopic": "3-2-1-business-objectives",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "business-objectives",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>profit maximisation</strong> on a firm diagram.</p>",
+      "back": "<p>Profit is maximised at the output Q where <strong>MC = MR</strong>: below Q each extra unit adds more revenue than cost; beyond Q it adds more cost than revenue.</p><p>Read the price P off the <strong>AR curve</strong> at Q and average cost C off the <strong>AC curve</strong> — with P above C, the gap times Q is supernormal profit.</p>",
+      "svgRef": "/images/diagrams/svg/profit-max.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
+      "svgAlt": "Firm diagram with the profit-maximising point marked where MC crosses MR at output Q, price P read from AR and average cost C from AC"
+    },
+    {
+      "id": "edexcel-a-3-2-1-diagram-02",
+      "specCode": "3.2.1",
+      "topic": "3.2 Business objectives",
+      "subtopic": "3-2-1-business-objectives",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "business-objectives",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>revenue maximisation</strong> on a firm diagram.</p>",
+      "back": "<p>Total revenue is maximised at the output where <strong>MR = 0</strong> — the point where MR crosses the quantity axis. Up to Q every unit still adds revenue; beyond it, MR is negative and revenue falls.</p><p>Firms may choose this to build market share or reach scale economies — output is higher and price lower than at profit max, and profit is sacrificed while revenue peaks.</p>",
+      "svgRef": "/images/diagrams/svg/revenue-max.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
+      "svgAlt": "Firm diagram with the revenue-maximising point marked where MR crosses the quantity axis at output Q, price P read from AR"
+    },
+    {
+      "id": "edexcel-a-3-2-1-diagram-03",
+      "specCode": "3.2.1",
+      "topic": "3.2 Business objectives",
+      "subtopic": "3-2-1-business-objectives",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "business-objectives",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>sales maximisation</strong> on a firm diagram.</p>",
+      "back": "<p>The largest output a firm can sell <strong>without making a loss</strong> is where <strong>AC = AR</strong>: price just equals average cost, so the firm breaks even and earns only normal profit.</p><p>Motives: market share, clearing stock, or <strong>limit pricing</strong> — a price too low for potential entrants to match profitably. Output is the highest of the three objectives, price the lowest.</p>",
+      "svgRef": "/images/diagrams/svg/sales-max.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
+      "svgAlt": "Firm diagram with the sales-maximising point marked where AC crosses AR at output Q, with price equal to average cost"
+    },
+    {
+      "id": "edexcel-a-3-2-1-def-02",
+      "specCode": "3.2.1",
+      "topic": "3.2 Business objectives",
+      "subtopic": "3-2-1-business-objectives",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "business-objectives"
+      ],
+      "front": "<p>Why might a firm <strong>satisfice</strong> rather than maximise profit?</p>",
+      "back": "<p>Because of the <strong>principal-agent problem</strong>: managers may prefer higher salaries, job security or perks, and choose a profit level acceptable to shareholders while meeting their own goals. In small firms, owners may satisfice to protect work-life balance.</p><p>On the diagram, a satisficing firm's output and price sit <strong>between</strong> the profit-maximising and sales-maximising positions — enough profit to satisfy, not the maximum available.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html"
+    }
+  ]
+}

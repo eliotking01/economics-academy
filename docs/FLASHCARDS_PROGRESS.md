@@ -28,13 +28,15 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **88 ✅ · 0 🟡 · 78 ❌** of 166 units.
-Cards shipped: 349 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
-Theme 2 + 62 AQA macro), **all approved by Eliot** (AQA macro batch 3
-approved 2026-08-05 — **phase 3, the AQA macro T2-mirrors, is
-COMPLETE**: 16/25 macro units, sections 2.4 and 2.6 reserved for
-phase 7). SVG diagrams shipped: 46. No open content issues. Phase 4
-(Edexcel Theme 3) is underway.
+Tally (2026-08-05): **88 ✅ · 4 🟡 · 74 ❌** of 166 units.
+Cards shipped: 362 (95 Edexcel Theme 1 + 89 AQA micro + 103 Edexcel
+Theme 2 + 62 AQA macro + 13 Edexcel Theme 3). Approved through phase
+3. **Theme 3 batch 1 (13 cards, sections 3.1–3.2, deck
+`edexcel-a-theme-3` created with sitemap entry) is built and
+integrated but AWAITS ELIOT'S REVIEW.** SVG diagrams shipped: 49 —
+the firm-diagram family (profit-max, revenue-max, sales-max) opens
+phase 4. CONTENT_ISSUES #8 ("choose to satisficing" grammar on
+3-2-1) is **open**.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -110,14 +112,14 @@ in phase 7) is underway.
 | 2.6.3 Supply-side policies | ✅ | 2 definition, 1 diagram, 1 evaluation |
 | 2.6.4 Conflicts between objectives and policies | ✅ | 1 definition, 1 diagram, 1 evaluation |
 
-### Edexcel A (9EC0) — Theme 3 ❌ (no deck; 20 units)
+### Edexcel A (9EC0) — Theme 3 (deck `edexcel-a-theme-3`, 13 cards; 20 units)
 
 | Unit | Status |
 | --- | --- |
-| 3.1.1 Sizes & types of firms | ❌ |
-| 3.1.2 Business growth | ❌ |
-| 3.1.3 Demergers | ❌ |
-| 3.2.1 Business objectives | ❌ |
+| 3.1.1 Sizes & types of firms | 🟡 review | 3 definition |
+| 3.1.2 Business growth | 🟡 review | 2 definition, 1 evaluation |
+| 3.1.3 Demergers | 🟡 review | 1 definition, 1 evaluation |
+| 3.2.1 Business objectives | 🟡 review | 2 definition, 3 diagram |
 | 3.3.1 Revenue | ❌ |
 | 3.3.2 Costs | ❌ |
 | 3.3.3 Economies & diseconomies of scale | ❌ |
@@ -471,13 +473,39 @@ Useful QA techniques:
 - 2026-08-05 — **AQA macro batch 3 approved by Eliot** (same day) —
   phase 3 complete. Sections 2.3 and 2.5 flipped to ✅.
 
+- 2026-08-05 — **Phase 4 opened: Theme 3 deck created** with batch 1
+  (13 cards, sections 3.1–3.2: firm growth and the principal-agent
+  problem, integration types, demergers, and the four business
+  objectives with their rules). The **firm-diagram family** ships its
+  first three SVGs (profit-max, revenue-max, sales-max): shared
+  canonical layout — D=AR, MR at twice the slope from the same
+  intercept, J-shaped MC=S through AC's exact minimum (470,405), all
+  crossings computed algebraically. Two self-QA catches: MC initially
+  crossed AC on its falling arm (economically wrong — caught by
+  reading the verifier's crossing list, not the render); and wide
+  two-line axis titles crossed the y-axis stroke (fixed here and on
+  laffer-curve by single-line titles above the axis top). The
+  unlabelled fifth curve in the ground-truth PNGs is deliberately
+  omitted (fails the every-curve-labelled rule) — flagged for Eliot.
+  CONTENT_ISSUES #8 logged ("choose to satisficing" ×2 on 3-2-1),
+  open. Matrix: 88 ✅ · 4 🟡 · 74 ❌; 362 cards, 49 SVGs, five decks.
+
 ## Next steps (a fresh session starts here)
 
-1. **Phase 4: Edexcel Theme 3** (20 units). Create
-   `flashcards-data/edexcel-a/theme-3.json` mirroring the theme-2
-   header; sitemap entry for `/flashcards/edexcel-a/theme-3/`. The
-   big micro diagram set: cost/revenue curves and the four market
-   structures. Then AQA 1.4–1.6 (phase 5), Theme 4 (phase 6), AQA
+1. **Get Theme 3 batch 1 approved** (13 cards, sections 3.1–3.2,
+   presented 2026-08-05), plus a verdict on CONTENT_ISSUES #8
+   ("choose to satisficing"). Review notes for Eliot inside that
+   batch: the firm-diagram SVGs draw the four LABELLED curves and
+   omit the small UNLABELLED U-curve present in the three
+   ground-truth PNGs (it fails the style guide's every-curve-labelled
+   rule); and the profit-max marker is placed at the true MC=MR
+   crossing, which the hand-drawn PNG only approximates.
+2. **Theme 3 batches 2+: section 3.3** (revenue, costs, economies of
+   scale, profit/shut-down — the cost-curve diagram programme:
+   TR/AR/MR, SRAC/LRAC, shut-down points), then 3.4 market
+   structures, 3.5 labour market, 3.6 intervention. The firm-diagram
+   base (profit-max.svg) is the template for the market-structure
+   equilibria. Then AQA 1.4–1.6 (phase 5), Theme 4 (phase 6), AQA
    remainder (phase 7).
 3. **Phase 3: AQA macro T2-mirrors** (sections 2.1–2.3, 2.5 of the AQA
    macro deck). Create `flashcards-data/aqa/macro.json` (deckId

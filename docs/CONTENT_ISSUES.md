@@ -131,3 +131,17 @@ Format per entry:
 - **Status** — fixed (approved by Eliot 2026-08-05; applied with the
   Edexcel twin's approved wording verbatim; text/markup integrity
   confirmed the caption was the only change).
+
+## 8. Business-objectives page says "choose to satisficing" twice
+
+- **Location** — `revision-notes/edexcel-theme-3/3-2-1-business-objectives.html`,
+  Satisficing section.
+- **Issue** — grammar: "they may choose to satisficing — achieving a
+  level of profit..." and later "owners may also choose to satisficing
+  to balance work-life priorities". The verb form should be
+  "satisfice".
+- **Proposed correction** — replace both instances of "choose to
+  satisficing" with "choose to satisfice", leaving the rest of each
+  sentence unchanged.
+- **Confidence** — high (grammar only; no economics change).
+- **Status** — open.

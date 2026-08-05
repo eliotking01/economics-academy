@@ -12,8 +12,7 @@
   <!-- axes -->
   <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
   <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
-  <text x="32" y="50" font-size="26" fill="#333333">Total tax</text>
-  <text x="32" y="78" font-size="26" fill="#333333">revenue (£)</text>
+  <text x="32" y="40" font-size="26" fill="#333333">Total tax revenue (£)</text>
   <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Tax rate (%)</text>
   <!-- curves -->
   <path d="M 140,460 Q 220,300 330,220 Q 385,180 460,180 Q 492,180 515,248 Q 538,316 585,460" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
