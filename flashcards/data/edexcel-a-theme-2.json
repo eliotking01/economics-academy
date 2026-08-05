@@ -6,7 +6,7 @@
   "themeName": "Theme 2: The UK Economy - Performance and Policies",
   "deckId": "edexcel-a-theme-2",
   "deckTitle": "Edexcel A-Level Economics Theme 2 Flashcards",
-  "count": 21,
+  "count": 38,
   "topics": [
     {
       "subtopic": "2-1-1-economic-growth",
@@ -35,6 +35,41 @@
       "title": "Balance of Payments",
       "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html",
       "count": 4
+    },
+    {
+      "subtopic": "2-2-1-aggregate-demand",
+      "specCode": "2.2.1",
+      "title": "Aggregate Demand",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+      "count": 5
+    },
+    {
+      "subtopic": "2-2-2-consumption",
+      "specCode": "2.2.2",
+      "title": "Consumption",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-2-consumption.html",
+      "count": 3
+    },
+    {
+      "subtopic": "2-2-3-investment",
+      "specCode": "2.2.3",
+      "title": "Investment",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-3-investment.html",
+      "count": 4
+    },
+    {
+      "subtopic": "2-2-4-government-expenditure",
+      "specCode": "2.2.4",
+      "title": "Government Expenditure",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-4-government-expenditure.html",
+      "count": 2
+    },
+    {
+      "subtopic": "2-2-5-net-trade",
+      "specCode": "2.2.5",
+      "title": "Net Trade",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-5-net-trade.html",
+      "count": 3
     }
   ],
   "cards": [
@@ -366,6 +401,266 @@
       "back": "<p>Causes: high consumer spending and low saving pulling in imports; weak competitiveness and low productivity; a strong currency; slowdown in export markets; structural issues such as deindustrialisation.</p><p>Corrections trade off against other objectives — cutting demand through fiscal or monetary tightening slows growth and raises unemployment; supply-side improvement works but slowly and at a cost. Economies are interconnected through trade, so one country's deficit is another's surplus.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-2/2-1-4-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-2-2-1-def-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-1-aggregate-demand",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "aggregate-demand"
+      ],
+      "front": "<p>Define <strong>aggregate demand</strong>, and explain why the AD curve slopes downward.</p>",
+      "back": "<p><strong>Aggregate demand</strong> — the total demand for all goods and services in an economy at a given average price level and in a given time period.</p><p>It slopes downward because a lower price level: raises the real value of money (<strong>wealth effect</strong>); lowers interest rates, encouraging borrowing (<strong>interest rate effect</strong>); and makes exports cheaper and imports dearer (<strong>international trade effect</strong>).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html"
+    },
+    {
+      "id": "edexcel-a-2-2-1-formula-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-1-aggregate-demand",
+      "cardType": "formula",
+      "difficulty": "foundation",
+      "tags": [
+        "aggregate-demand",
+        "formula"
+      ],
+      "front": "<p>State the <strong>components of aggregate demand</strong>.</p>",
+      "back": "<p><strong>C</strong> — consumption: household spending on goods and services. <strong>I</strong> — investment: firms' spending on capital goods. <strong>G</strong> — government spending on state-provided goods and services, <strong>excluding</strong> transfer payments such as benefits. <strong>(X − M)</strong> — exports minus imports.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>A</mi><mi>D</mi><mo>=</mo><mi>C</mi><mo>+</mo><mi>I</mi><mo>+</mo><mi>G</mi><mo>+</mo><mo stretchy=\"false\">(</mo><mi>X</mi><mo>−</mo><mi>M</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">AD = C + I + G + (X - M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">D</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">C</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07847em;\">I</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\">G</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\" style=\"margin-right:0.07847em;\">X</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">M</span><span class=\"mclose\">)</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-2-2-1-def-02",
+      "specCode": "2.2.1",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-1-aggregate-demand",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-demand"
+      ],
+      "front": "<p>Rank the <strong>components of AD by relative importance</strong> in the UK.</p>",
+      "back": "<ul><li><strong>Consumption</strong> — around 60%, the largest component, so consumer confidence and incomes move AD most.</li><li><strong>Government spending</strong> — around 25%, set by fiscal policy.</li><li><strong>Investment</strong> — around 14%, the most volatile component.</li><li><strong>Net exports</strong> — small and often negative, roughly 1% or less.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html"
+    },
+    {
+      "id": "edexcel-a-2-2-1-calc-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-1-aggregate-demand",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-demand",
+        "calculation"
+      ],
+      "front": "<p>C = £1,200bn, I = £280bn, G = £500bn, X = £640bn, M = £660bn. Calculate <strong>aggregate demand</strong>.</p>",
+      "back": "<p>AD = 1,200 + 280 + 500 + (640 − 660) = <strong>£1,960bn</strong></p><p>Net trade is negative (−£20bn) because imports exceed exports, so it is subtracted. The shares match the UK pattern: consumption 61%, government 26%, investment 14%, net trade −1%.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html"
+    },
+    {
+      "id": "edexcel-a-2-2-1-diagram-01",
+      "specCode": "2.2.1",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-1-aggregate-demand",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "aggregate-demand",
+        "diagram"
+      ],
+      "front": "<p>Distinguish a <strong>movement along</strong> the AD curve from a <strong>shift</strong> of it.</p>",
+      "back": "<p>A <strong>movement along</strong> AD is caused only by a change in the average price level, other factors constant. A <strong>shift</strong> (AD1 to AD2) is caused by a change in any determinant other than the price level — C, I, G or X − M — changing total planned expenditure at every price level.</p>",
+      "svgRef": "/images/diagrams/svg/ad-shift.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+      "svgAlt": "Aggregate demand curve shifting right from AD1 to AD2, raising real GDP from Y1 to Y2 at price level PL"
+    },
+    {
+      "id": "edexcel-a-2-2-2-def-01",
+      "specCode": "2.2.2",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-2-consumption",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "consumption"
+      ],
+      "front": "<p>Define <strong>disposable income</strong>, and state its role in consumption.</p>",
+      "back": "<p><strong>Disposable income</strong> — income available for spending after direct taxes, such as income tax, and after adding government transfer payments, such as benefits.</p><p>It is the primary determinant of consumption — households can only spend what they have available — and disposable income is split between consumption and saving.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-2-consumption.html"
+    },
+    {
+      "id": "edexcel-a-2-2-2-def-02",
+      "specCode": "2.2.2",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-2-consumption",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "consumption"
+      ],
+      "front": "<p>Define the <strong>marginal propensity to consume</strong> (MPC) and the <strong>marginal propensity to save</strong> (MPS).</p>",
+      "back": "<p><strong>MPC</strong> — the proportion of an increase in disposable income that is spent on consumption. <strong>MPS</strong> — the proportion of an increase in disposable income that is saved.</p><p>If a household spends £80 of an extra £100, the MPC is 0.8. A rise in the MPC means a fall in the MPS — every extra pound is either spent or saved.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-2-consumption.html"
+    },
+    {
+      "id": "edexcel-a-2-2-2-def-03",
+      "specCode": "2.2.2",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-2-consumption",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "consumption"
+      ],
+      "front": "<p>Beyond disposable income, what <strong>influences consumption</strong>?</p>",
+      "back": "<ul><li><strong>Interest rates</strong> — higher rates raise borrowing costs and the reward for saving, cutting consumption.</li><li><strong>Consumer confidence</strong> — optimism about future income encourages spending and borrowing.</li><li><strong>Wealth effects</strong> — rising house prices or share values encourage spending.</li><li><strong>Income distribution</strong> — lower-income households have a higher MPC, so a more equal distribution raises total consumption.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-2-consumption.html"
+    },
+    {
+      "id": "edexcel-a-2-2-3-def-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-3-investment",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "investment"
+      ],
+      "front": "<p>Distinguish <strong>gross from net investment</strong>, and define depreciation.</p>",
+      "back": "<p><strong>Gross investment</strong> — total spending on capital goods. <strong>Net investment</strong> — gross investment minus depreciation: the true addition to the capital stock, which is what raises productive potential.</p><p><strong>Depreciation</strong> — the loss of value of capital goods over time due to wear and tear, obsolescence, or other factors. A firm spending £1m on machinery while £200,000 of capital wears out makes £800,000 of net investment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-3-investment.html"
+    },
+    {
+      "id": "edexcel-a-2-2-3-def-02",
+      "specCode": "2.2.3",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-3-investment",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "investment"
+      ],
+      "front": "<p>List the <strong>influences on investment</strong> in the Edexcel specification.</p>",
+      "back": "<ul><li><strong>The rate of economic growth</strong> — growth raises expected demand.</li><li><strong>Business expectations and confidence</strong> — and Keynes' <strong>'animal spirits'</strong>: sentiment and intuition, not just calculation.</li><li><strong>Demand for exports</strong> — export orders justify new capacity.</li><li><strong>Interest rates</strong> — cheaper borrowing makes more projects viable.</li><li><strong>Access to credit</strong> — willing lenders matter as much as the rate.</li><li><strong>Government and regulations</strong> — tax incentives or restrictions.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-3-investment.html"
+    },
+    {
+      "id": "edexcel-a-2-2-3-chain-01",
+      "specCode": "2.2.3",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-3-investment",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "investment"
+      ],
+      "front": "<p>Explain the <strong>accelerator effect</strong>.</p>",
+      "back": "<p>Investment depends on the <strong>change</strong> in the rate of economic growth, not its level. When growth accelerates, firms run short of capacity and must invest in new capital to meet the extra demand; when growth merely continues at the same rate, existing capacity suffices and investment need not rise at all.</p><p>This helps explain why investment is the most volatile component of AD.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-3-investment.html"
+    },
+    {
+      "id": "edexcel-a-2-2-3-chain-02",
+      "specCode": "2.2.3",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-3-investment",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "investment"
+      ],
+      "front": "<p>Explain the <strong>dual impact of investment</strong> on the economy.</p>",
+      "back": "<p><strong>Short run</strong> — investment is a component of AD, so more of it raises demand, stimulating growth and employment.</p><p><strong>Long run</strong> — investment adds to the capital stock, raising the economy's productive potential and shifting <strong>LRAS</strong> right, which supports non-inflationary growth. The same spending works on both sides of the AD/AS diagram.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-3-investment.html"
+    },
+    {
+      "id": "edexcel-a-2-2-4-def-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-4-government-expenditure",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "government-spending"
+      ],
+      "front": "<p>What are the <strong>main influences on government expenditure</strong>?</p>",
+      "back": "<p><strong>The trade cycle</strong> — spending rises automatically in downturns as welfare claims grow, and falls in booms.</p><p><strong>Fiscal policy</strong> — discretionary choices: <strong>expansionary</strong> policy raises G (infrastructure, education) to boost AD, growth and jobs; <strong>contractionary</strong> policy cuts G to cool inflation or close a deficit. Political priorities and demographics (an ageing population) shape the mix.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-4-government-expenditure.html"
+    },
+    {
+      "id": "edexcel-a-2-2-4-chain-01",
+      "specCode": "2.2.4",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-4-government-expenditure",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "government-spending"
+      ],
+      "front": "<p>Explain how <strong>automatic stabilisers</strong> work over the trade cycle.</p>",
+      "back": "<p><strong>Recession</strong> — welfare claims rise and tax revenues fall, so government spending rises automatically: a fiscal stimulus that supports AD without any policy decision.</p><p><strong>Boom</strong> — welfare claims fall and tax revenues rise, so spending falls: an automatic contraction that cools the economy. The stabilisers dampen the cycle in both directions.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-4-government-expenditure.html"
+    },
+    {
+      "id": "edexcel-a-2-2-5-def-01",
+      "specCode": "2.2.5",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-5-net-trade",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "net-trade"
+      ],
+      "front": "<p>Define <strong>net trade</strong>, and list its main influences.</p>",
+      "back": "<p><strong>Net trade</strong> — exports minus imports (X − M). A surplus (X &gt; M) adds to aggregate demand; a deficit (X &lt; M) subtracts from it.</p><p>Influences: real incomes at home and abroad, exchange rates, the state of the world economy, the degree of protectionism, and non-price factors such as quality, branding and innovation.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-5-net-trade.html"
+    },
+    {
+      "id": "edexcel-a-2-2-5-chain-01",
+      "specCode": "2.2.5",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-5-net-trade",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "net-trade"
+      ],
+      "front": "<p>How does a <strong>currency depreciation</strong> affect the trade balance? Name the two qualifications.</p>",
+      "back": "<p>A depreciation makes exports cheaper and imports dearer, improving the trade balance — but only if the <strong>Marshall-Lerner condition</strong> holds: the combined price elasticities of demand for exports and imports must exceed one.</p><p>And not immediately: demand is inelastic in the short run, so the balance often <strong>worsens before improving</strong> — the <strong>J-curve effect</strong>, after the shape the trade balance traces over time.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-5-net-trade.html"
+    },
+    {
+      "id": "edexcel-a-2-2-5-def-02",
+      "specCode": "2.2.5",
+      "topic": "2.2 Aggregate demand (AD)",
+      "subtopic": "2-2-5-net-trade",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "net-trade"
+      ],
+      "front": "<p>How do <strong>real incomes, the world economy and protectionism</strong> move the trade balance?</p>",
+      "back": "<p><strong>Real incomes</strong> — rising domestic incomes pull in imports (worsening); rising foreign incomes lift exports (improving). <strong>World economy</strong> — global growth lifts export demand, and for an open economy like the UK it is often the most important short-run driver.</p><p><strong>Protectionism</strong> — tariffs and quotas cut imports, but invite retaliation against exports and raise prices at home. <strong>Non-price competitiveness</strong> — quality, branding and innovation decide who wins the trade that prices don't.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-2/2-2-5-net-trade.html"
     }
   ]
 }

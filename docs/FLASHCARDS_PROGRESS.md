@@ -28,12 +28,13 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **52 ✅ · 0 🟡 · 114 ❌** of 166 units.
-Cards shipped: 205 (95 Edexcel Theme 1 + 89 AQA micro + 21 Edexcel
-Theme 2). SVG diagrams shipped: 21 (all geometry-verified; twelve are
-shared with the AQA deck; total-utility, underproduction,
-overconsumption and subsidy-gov-expenditure are AQA-only — the middle
-two complete the four externality quadrants).
+Tally (2026-08-05): **52 ✅ · 5 🟡 · 109 ❌** of 166 units.
+Cards shipped: 222 (95 Edexcel Theme 1 + 89 AQA micro + 38 Edexcel
+Theme 2). SVG diagrams shipped: 22 (all geometry-verified; twelve are
+shared with the AQA deck; four are AQA-only; ad-shift is the first of
+the AD/AS family, drawn from ad-shift.png on the demand-curve-shift
+idiom). Theme 2 batch 2 (17 cards, all of section 2.2) is authored and
+built — **awaiting Eliot's review**.
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
@@ -89,11 +90,11 @@ notes page is touched.
 | 2.1.2 Inflation | ✅ | 2 definition, 1 formula, 1 calculation, 1 chain, 1 evaluation |
 | 2.1.3 Employment & unemployment | ✅ | 4 definition, 1 calculation, 1 evaluation |
 | 2.1.4 Balance of payments | ✅ | 2 definition, 1 calculation, 1 chain |
-| 2.2.1 Aggregate demand | ❌ |
-| 2.2.2 Consumption | ❌ |
-| 2.2.3 Investment | ❌ |
-| 2.2.4 Government expenditure | ❌ |
-| 2.2.5 Net trade | ❌ |
+| 2.2.1 Aggregate demand | 🟡 review | 2 definition, 1 formula, 1 calculation, 1 diagram |
+| 2.2.2 Consumption | 🟡 review | 3 definition |
+| 2.2.3 Investment | 🟡 review | 2 definition, 2 chain |
+| 2.2.4 Government expenditure | 🟡 review | 1 definition, 1 chain |
+| 2.2.5 Net trade | 🟡 review | 2 definition, 1 chain |
 | 2.3.1 Aggregate supply | ❌ |
 | 2.3.2 Short-run aggregate supply | ❌ |
 | 2.3.3 Long-run aggregate supply | ❌ |
