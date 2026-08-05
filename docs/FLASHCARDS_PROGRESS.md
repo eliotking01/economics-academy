@@ -28,20 +28,29 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-05): **22 ✅ · 19 🟡 · 125 ❌** of 166 units.
-Cards shipped: 156 (95 Edexcel Theme 1 + 61 AQA micro). SVG diagrams
-shipped: 18 (all geometry-verified; eight are shared with the AQA deck —
-the two PPFs, the two externality diagrams, demand/supply shifts and the
-two excess diagrams; total-utility is the first AQA-only SVG).
+Tally (2026-08-05): **22 ✅ · 26 🟡 · 118 ❌** of 166 units.
+Cards shipped: 184 (95 Edexcel Theme 1 + 89 AQA micro). SVG diagrams
+shipped: 20 (all geometry-verified; twelve are shared with the AQA deck;
+total-utility, underproduction and overconsumption are AQA-only — the
+last two complete the four externality quadrants).
 
 Build order approved by Eliot 2026-08-05: **Option A, paired mirrors**
 (AQA T1-mirrors → Edexcel T2 → AQA macro T2-mirrors → Edexcel T3 → AQA
 1.4–1.6 → Edexcel T4 → AQA remainder), single deck per AQA side.
-Phase 1 batches, both **awaiting Eliot's review** (units stay 🟡 until he
-approves): batch 1 (24 cards — 1.1.1–1.1.5, 1.2.1, 1.2.2) and batch 2
-(24 cards — 1.2.3/1.2.4 density top-ups plus all of section 1.3).
-Phase 1's remaining units for batch 3: 1.8 completion (1.8.1,
-1.8.6–1.8.10 plus 1.8.2–1.8.5 top-ups) and 1.5.11.
+**Phase 1 is fully authored** across three batches, all **awaiting
+Eliot's review** (units stay 🟡 until he approves): batch 1 (24 cards —
+1.1, 1.2.1–1.2.2), batch 2 (24 — 1.2 top-ups + section 1.3), batch 3
+(28 — 1.5.11 + section 1.8 complete, with two new externality SVGs).
+Known gap, deliberate: `subsidy-gov-expenditure.png` (AQA 1.8.9 Figure 2)
+has no SVG yet — the subsidy card ships without a diagram until it is
+drawn. Three caption errors on the AQA 1.8.9 page are logged in
+docs/CONTENT_ISSUES.md (issues 3–5, the max/min/subsidy captions —
+same class as the fixed Edexcel 1.4.1 pair); cards use corrected
+descriptions.
+
+Phase 2 next (needs no further approval on order): Edexcel Theme 2,
+~100–110 cards in ~4 batches, ~12–15 new diagrams (circular flow, AD/AS,
+classical vs Keynesian LRAS, output gaps, trade cycle, multiplier).
 
 ### Edexcel A (9EC0) — Theme 1 ✅ (deck `edexcel-a-theme-1`, 95 cards, 17 diagrams)
 
@@ -191,7 +200,7 @@ verbatim definitions — so even its six units are 🟡, not at density.
 | 1.5.8 Dynamics of competition | ❌ | |
 | 1.5.9 Contestable & non-contestable markets | ❌ | |
 | 1.5.10 Market structure, efficiency & resource allocation | ❌ | |
-| 1.5.11 Consumer & producer surplus | ❌ | |
+| 1.5.11 Consumer & producer surplus | 🟡 review | 1 definition, 1 diagram, 1 chain |
 | 1.6.1 Demand for labour, marginal productivity theory | ❌ | |
 | 1.6.2 Influences upon the supply of labour | ❌ | |
 | 1.6.3 Wage determination: perfectly competitive labour markets | ❌ | |
@@ -202,16 +211,16 @@ verbatim definitions — so even its six units are 🟡, not at density.
 | 1.7.1 Distribution of income & wealth | ❌ | |
 | 1.7.2 The problem of poverty | ❌ | |
 | 1.7.3 Government policies: poverty & income distribution | ❌ | |
-| 1.8.1 How markets & prices allocate resources | ❌ | |
-| 1.8.2 The meaning of market failure | 🟡 | 1 definition |
-| 1.8.3 Public, private & quasi-public goods | 🟡 | 2 definition |
-| 1.8.4 Positive & negative externalities | 🟡 | 2 diagram |
-| 1.8.5 Merit & demerit goods | 🟡 | 2 definition |
-| 1.8.6 Market imperfections | ❌ | |
-| 1.8.7 Competition policy | ❌ | |
-| 1.8.8 Public ownership, privatisation, regulation & deregulation | ❌ | |
-| 1.8.9 Government intervention in markets | ❌ | |
-| 1.8.10 Government failure | ❌ | |
+| 1.8.1 How markets & prices allocate resources | 🟡 review | 2 definition, 1 evaluation |
+| 1.8.2 The meaning of market failure | 🟡 review | 3 definition |
+| 1.8.3 Public, private & quasi-public goods | 🟡 review | 3 definition |
+| 1.8.4 Positive & negative externalities | 🟡 review | 2 definition, 4 diagram |
+| 1.8.5 Merit & demerit goods | 🟡 review | 3 definition |
+| 1.8.6 Market imperfections | 🟡 review | 2 definition |
+| 1.8.7 Competition policy | 🟡 review | 1 definition |
+| 1.8.8 Public ownership, privatisation, regulation & deregulation | 🟡 review | 3 definition |
+| 1.8.9 Government intervention in markets | 🟡 review | 3 definition, 3 diagram |
+| 1.8.10 Government failure | 🟡 review | 1 definition, 1 chain |
 
 ### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x ❌ (no deck; 25 units)
 

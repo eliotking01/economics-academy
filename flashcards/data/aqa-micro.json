@@ -6,7 +6,7 @@
   "themeName": "Microeconomics",
   "deckId": "aqa-micro",
   "deckTitle": "AQA A-Level Economics Microeconomics Flashcards",
-  "count": 61,
+  "count": 89,
   "topics": [
     {
       "subtopic": "1-1-1-economic-methodology",
@@ -114,31 +114,80 @@
       "count": 3
     },
     {
+      "subtopic": "1-5-11-consumer-and-producer-surplus",
+      "specCode": "1.5.11",
+      "title": "1.5.11 Consumer and Producer Surplus",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-8-1-how-markets-and-prices-allocate-resources",
+      "specCode": "1.8.1",
+      "title": "1.8.1 How Markets and Prices Allocate Resources",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html",
+      "count": 3
+    },
+    {
       "subtopic": "1-8-2-the-meaning-of-market-failure",
       "specCode": "1.8.2",
       "title": "1.8.2 The Meaning of Market Failure",
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html",
-      "count": 1
+      "count": 3
     },
     {
       "subtopic": "1-8-3-public-goods-private-goods-and-quasi-public-goods",
       "specCode": "1.8.3",
       "title": "1.8.3 Public Goods, Private Goods and Quasi-Public Goods",
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
-      "count": 2
+      "count": 3
     },
     {
       "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
       "specCode": "1.8.4",
       "title": "1.8.4 Positive and Negative Externalities in Consumption and Production",
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-      "count": 2
+      "count": 6
     },
     {
       "subtopic": "1-8-5-merit-and-demerit-goods",
       "specCode": "1.8.5",
       "title": "1.8.5 Merit and Demerit Goods",
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-8-6-market-imperfections",
+      "specCode": "1.8.6",
+      "title": "1.8.6 Market Imperfections",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html",
+      "count": 2
+    },
+    {
+      "subtopic": "1-8-7-competition-policy",
+      "specCode": "1.8.7",
+      "title": "1.8.7 Competition Policy",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-7-competition-policy.html",
+      "count": 1
+    },
+    {
+      "subtopic": "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets",
+      "specCode": "1.8.8",
+      "title": "1.8.8 Public Ownership, Privatisation, Regulation and Deregulation of Markets",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets.html",
+      "count": 3
+    },
+    {
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "specCode": "1.8.9",
+      "title": "1.8.9 Government Intervention in Markets",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
+      "count": 6
+    },
+    {
+      "subtopic": "1-8-10-government-failure",
+      "specCode": "1.8.10",
+      "title": "1.8.10 Government Failure",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-10-government-failure.html",
       "count": 2
     }
   ],
@@ -989,6 +1038,100 @@
       "notesUrl": "/revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html"
     },
     {
+      "id": "aqa-1-5-11-def-01",
+      "specCode": "1.5.11",
+      "topic": "1.5 Perfect competition, imperfectly competitive markets and monopoly",
+      "subtopic": "1-5-11-consumer-and-producer-surplus",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "surplus"
+      ],
+      "front": "<p>Define <strong>consumer surplus</strong> and <strong>producer surplus</strong>.</p>",
+      "back": "<p><strong>Consumer surplus</strong> — the difference between what a consumer is willing to pay (their valuation) and what they actually pay. A measure of consumer welfare.</p><p><strong>Producer surplus</strong> — the difference between the price a producer is willing to accept (their cost of supply) and the price they actually receive. A measure of producer welfare.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html"
+    },
+    {
+      "id": "aqa-1-5-11-diagram-01",
+      "specCode": "1.5.11",
+      "topic": "1.5 Perfect competition, imperfectly competitive markets and monopoly",
+      "subtopic": "1-5-11-consumer-and-producer-surplus",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "surplus",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>consumer and producer surplus</strong> on a supply and demand diagram.</p>",
+      "back": "<p><strong>Consumer surplus</strong> is the area below the demand curve and above the price line; <strong>producer surplus</strong> is the area above the supply curve and below the price line. Their sum is the <strong>social (community) surplus</strong> — total welfare — and it is maximised at the free-market equilibrium: any move away from it creates a welfare loss.</p>",
+      "svgRef": "/images/diagrams/svg/consumer-producer-surplus-equilibrium.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html",
+      "svgAlt": "Supply and demand diagram with consumer surplus shaded between the demand curve and the price line and producer surplus between the price line and the supply curve"
+    },
+    {
+      "id": "aqa-1-5-11-chain-01",
+      "specCode": "1.5.11",
+      "topic": "1.5 Perfect competition, imperfectly competitive markets and monopoly",
+      "subtopic": "1-5-11-consumer-and-producer-surplus",
+      "cardType": "chain",
+      "difficulty": "stretch",
+      "tags": [
+        "surplus",
+        "monopoly"
+      ],
+      "front": "<p>Apply <strong>surplus analysis</strong>: what happens to consumer and producer surplus under monopoly and under price discrimination?</p>",
+      "back": "<p><strong>Monopoly</strong> restricts output and raises price: consumer surplus shrinks, part transfers to producer surplus, and the rest becomes a <strong>deadweight welfare loss</strong> — the application AQA names in the specification.</p><p><strong>Price discrimination</strong> converts consumer surplus into producer surplus: inelastic customers pay more and lose surplus, elastic customers pay less and gain, and overall consumer surplus falls.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html"
+    },
+    {
+      "id": "aqa-1-8-1-def-01",
+      "specCode": "1.8.1",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-1-how-markets-and-prices-allocate-resources",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "price-mechanism"
+      ],
+      "front": "<p>What is the <strong>price mechanism</strong>?</p>",
+      "back": "<p>The <strong>price mechanism</strong> — the interaction of demand and supply in a free market, which determines the prices by which scarce resources are allocated between competing wants and needs. Adam Smith called the process the 'invisible hand'.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html"
+    },
+    {
+      "id": "aqa-1-8-1-def-02",
+      "specCode": "1.8.1",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-1-how-markets-and-prices-allocate-resources",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "price-mechanism"
+      ],
+      "front": "<p>Name and explain the <strong>three functions of the price mechanism</strong>.</p>",
+      "back": "<ul><li><strong>Rationing</strong> — prices allocate scarce goods to those willing and able to pay: a high price rations limited concert tickets.</li><li><strong>Incentive</strong> — high prices raise profitability and motivate producers to supply more; low prices push resources elsewhere.</li><li><strong>Signalling</strong> — prices convey information: a rising price signals scarcity and high demand to producers.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html"
+    },
+    {
+      "id": "aqa-1-8-1-eval-01",
+      "specCode": "1.8.1",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-1-how-markets-and-prices-allocate-resources",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "price-mechanism",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>price mechanism</strong> as a way of allocating resources.</p>",
+      "back": "<p><strong>For:</strong> it allocates resources to their most valued uses, adjusts quickly to changing conditions, and the profit motive drives innovation and efficiency — all without central direction.</p><p><strong>Against:</strong> those with low incomes can be priced out (the mechanism is impersonal), it ignores externalities, public goods and information gaps, and it can prioritise short-term profit. AQA also asks whether extending markets into new areas — paying for blood donation, say — changes the nature of the activity itself.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html"
+    },
+    {
       "id": "aqa-1-8-2-def-01",
       "specCode": "1.8.2",
       "topic": "1.8 Market failure and government intervention",
@@ -1000,6 +1143,36 @@
       ],
       "front": "<p>Distinguish <strong>partial</strong> from <strong>complete</strong> market failure.</p>",
       "back": "<p><strong>Partial market failure</strong> — the market provides the good, but in the wrong quantity: merit goods are under-provided, demerit goods over-provided.</p><p><strong>Complete market failure</strong> — when the market fails to provide a good or service at all e.g. public goods like national defence or street lighting: a missing market.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html"
+    },
+    {
+      "id": "aqa-1-8-2-def-02",
+      "specCode": "1.8.2",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-2-the-meaning-of-market-failure",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "market-failure"
+      ],
+      "front": "<p>Define <strong>market failure</strong>.</p>",
+      "back": "<p><strong>Market failure</strong> — when the free market, through the price mechanism, fails to allocate scarce resources efficiently, leading to a social welfare loss.</p><p>The result is a loss of allocative efficiency: resources are misallocated from society's point of view.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html"
+    },
+    {
+      "id": "aqa-1-8-2-def-03",
+      "specCode": "1.8.2",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-2-the-meaning-of-market-failure",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "market-failure"
+      ],
+      "front": "<p>List the <strong>causes of market failure</strong> AQA names.</p>",
+      "back": "<ul><li><strong>Externalities</strong> — spillover costs or benefits the market ignores.</li><li><strong>Public goods</strong> — non-excludability leaves markets missing entirely.</li><li><strong>Merit and demerit goods</strong> — under- and over-provision, worsened by imperfect information.</li><li><strong>Monopoly and other market imperfections</strong> — restricted output, factor immobility.</li><li><strong>Inequalities in the distribution of income and wealth</strong>.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html"
     },
@@ -1030,6 +1203,21 @@
       ],
       "front": "<p>Define <strong>common pool resources</strong>, and the problem they suffer.</p>",
       "back": "<p><strong>Common pool resources</strong> — natural resources that are non-excludable but rivalrous, such as fish in the ocean or grazing land.</p><p>Because no one can be excluded but each use depletes the stock, they are over-exploited — the tragedy of the commons.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+    },
+    {
+      "id": "aqa-1-8-3-def-03",
+      "specCode": "1.8.3",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-3-public-goods-private-goods-and-quasi-public-goods",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "public-goods"
+      ],
+      "front": "<p>Define the <strong>two characteristics of a pure public good</strong>, and the problem they create for the free market.</p>",
+      "back": "<p><strong>Non-excludability</strong> — it is impossible or extremely costly to prevent non-payers from consuming the good once it is provided. <strong>Non-rivalry</strong> — one person's consumption does not reduce the amount available for others.</p><p>Because non-payers cannot be excluded, everyone waits for someone else to pay — the <strong>free rider problem</strong>. With no way to charge, firms have no profit incentive and the good goes unprovided: complete market failure, which is why the state provides public goods through taxation. Technological change can shift the boundary — subscription streaming made television excludable.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
     },
@@ -1070,6 +1258,73 @@
       "svgAlt": "Externality diagram with MSB above D equals MPB and S equals MPC equals MSC, showing market output Q1 below the social optimum Q2 and a shaded welfare loss triangle"
     },
     {
+      "id": "aqa-1-8-4-def-01",
+      "specCode": "1.8.4",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "externalities",
+        "market-failure"
+      ],
+      "front": "<p>Define an <strong>externality</strong>, and explain why the absence of property rights causes them.</p>",
+      "back": "<p><strong>Externality</strong> — a positive or negative spillover effect that affects a third party not directly involved in the economic transaction. Also known as external costs or external benefits.</p><p>AQA links externalities to missing <strong>property rights</strong>: no one owns the air or the ocean, so no one can charge a polluter for using them — the cost never enters the market price, and production and consumption decisions ignore it.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+    },
+    {
+      "id": "aqa-1-8-4-def-02",
+      "specCode": "1.8.4",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "externalities"
+      ],
+      "front": "<p>Define <strong>private, external and social costs and benefits</strong>, and state the two identities.</p>",
+      "back": "<p><strong>Private costs and benefits</strong> fall on those directly in the transaction; <strong>external costs and benefits</strong> fall on third parties; <strong>social costs and benefits</strong> are the totals for society.</p><p><strong>MSC = MPC + MEC</strong> and <strong>MSB = MPB + MEB</strong>. Externality diagrams are built from these identities: the gap between a private curve and its social twin is the externality.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+    },
+    {
+      "id": "aqa-1-8-4-diagram-03",
+      "specCode": "1.8.4",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a positive production externality.</p>",
+      "back": "<p>Producers count only their private costs, but production benefits third parties — a beekeeper's bees pollinating nearby crops — so MSC lies below S=MPC. The market produces at Q1, where MPC = MPB, but the social optimum is Q2, where MSC = MSB. The shaded triangle between D and MSC is the welfare loss from under-production.</p>",
+      "svgRef": "/images/diagrams/svg/underproduction.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "svgAlt": "Externality diagram with MSC below S equals MPC and D equals MPB equals MSB, showing market output Q1 below the social optimum Q2 and a shaded welfare loss triangle"
+    },
+    {
+      "id": "aqa-1-8-4-diagram-04",
+      "specCode": "1.8.4",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-4-positive-and-negative-externalities-in-consumption-and-production",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "externalities",
+        "market-failure",
+        "diagram"
+      ],
+      "front": "<p>Draw the <strong>welfare loss</strong> caused by a negative consumption externality.</p>",
+      "back": "<p>Consumers count only their private benefits, but consumption harms third parties — second-hand smoke — so MSB lies below D=MPB. The market consumes at Q1, where MPB = MPC, but the social optimum is Q2, where MSB = MSC. The shaded triangle between the supply curve and MSB is the welfare loss from over-consumption.</p>",
+      "svgRef": "/images/diagrams/svg/overconsumption.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "svgAlt": "Externality diagram with MSB below D equals MPB and S equals MPC equals MSC, showing market output Q1 beyond the social optimum Q2 and a shaded welfare loss triangle"
+    },
+    {
       "id": "aqa-1-8-5-def-01",
       "specCode": "1.8.5",
       "topic": "1.8 Market failure and government intervention",
@@ -1098,6 +1353,241 @@
       "back": "<p><strong>Demerit goods</strong> — goods that exhibit negative externalities in their consumption or production, and are therefore over-provided by the market. Examples include tobacco, alcohol, and sugary food.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html"
+    },
+    {
+      "id": "aqa-1-8-5-def-03",
+      "specCode": "1.8.5",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-5-merit-and-demerit-goods",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "market-failure"
+      ],
+      "front": "<p>Why is the classification of <strong>merit and demerit goods</strong> a value judgement, and how does imperfect information cause their mis-provision?</p>",
+      "back": "<p>The labels rest on a <strong>value judgement</strong> and can change over time — alcohol was once treated as a merit good; vaccinations were once distrusted. AQA also notes that not every good with consumption externalities is a merit or demerit good.</p><p><strong>Imperfect information</strong> compounds the problem: consumers underestimate the long-term benefits of fruit and vegetables (under-consumption) and the health risks of smoking (over-consumption).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html"
+    },
+    {
+      "id": "aqa-1-8-6-def-01",
+      "specCode": "1.8.6",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-6-market-imperfections",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "market-failure",
+        "monopoly"
+      ],
+      "front": "<p>Define <strong>monopoly power</strong> and <strong>pure monopoly</strong>, and explain why monopoly power causes market failure.</p>",
+      "back": "<p><strong>Monopoly power</strong> — the ability of a firm to set prices above the competitive level due to a lack of competition; any firm with 25% or more market share is considered to have it. A <strong>pure monopoly</strong> is a single seller of a good with no close substitutes.</p><p>Restricting output to raise price sacrifices allocative efficiency, transfers surplus from consumers to the firm, and creates a deadweight welfare loss.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html"
+    },
+    {
+      "id": "aqa-1-8-6-def-02",
+      "specCode": "1.8.6",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-6-market-imperfections",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "market-failure",
+        "labour"
+      ],
+      "front": "<p>Define <strong>factor immobility</strong>, and distinguish geographical from occupational immobility.</p>",
+      "back": "<p><strong>Factor immobility</strong> — the inability of factors of production to move freely between different uses or locations, so resources are not put to their most productive use.</p><p><strong>Geographical immobility</strong> — workers cannot move to areas with higher wages, due to housing costs or family commitments. <strong>Occupational immobility</strong> — workers cannot move between occupations for lack of skills or qualifications. Both cause shortages and surpluses of labour — a market failure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html"
+    },
+    {
+      "id": "aqa-1-8-7-def-01",
+      "specCode": "1.8.7",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-7-competition-policy",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "competition-policy"
+      ],
+      "front": "<p>Define <strong>competition policy</strong>: its aims, enforcers and tools.</p>",
+      "back": "<p><strong>Competition policy</strong> — government interventions aimed at improving competitiveness in markets and protecting consumer interests (lower prices, higher quality, greater choice) by preventing collusion, abuse of monopoly power and restrictions on market entry.</p><p>Enforced by the <strong>Competition and Markets Authority</strong> in the UK and the European Commission in the EU. Tools: price, profit and quality regulation, blocking or conditioning mergers, breaking up monopolies, and measures that promote entry. Detailed competition law is not required.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-7-competition-policy.html"
+    },
+    {
+      "id": "aqa-1-8-8-def-01",
+      "specCode": "1.8.8",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "ownership"
+      ],
+      "front": "<p>Define <strong>public ownership</strong> and <strong>privatisation</strong>, and their predicted outcomes for a natural monopoly.</p>",
+      "back": "<p><strong>Public ownership</strong> — ownership of enterprises by the government (nationalisation takes private firms into state hands), aiming to provide essential services and control natural monopolies. <strong>Privatisation</strong> — the transfer of ownership from the government to the private sector, aiming at efficiency, competition and a lighter fiscal burden.</p><p>On the natural-monopoly diagram, the state prices at the allocatively efficient point (AR = LRMC): lower price, higher output, more consumer surplus. A private owner profit-maximises (MR = MC): higher price, lower output, higher profit.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets.html"
+    },
+    {
+      "id": "aqa-1-8-8-def-02",
+      "specCode": "1.8.8",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "ownership",
+        "competition-policy"
+      ],
+      "front": "<p>Define <strong>regulation</strong> and <strong>deregulation</strong>, with UK examples.</p>",
+      "back": "<p><strong>Regulation</strong> — rules and standards imposed by government or regulators to control firms' behaviour and protect consumers, workers and the environment — Ofgem (energy), Ofcom (communications), the FCA (finance).</p><p><strong>Deregulation</strong> — removing or reducing such rules to promote competition, efficiency and innovation — the 1980s opening of the airline industry and of BT's network to competitors brought lower prices and better service.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets.html"
+    },
+    {
+      "id": "aqa-1-8-8-def-03",
+      "specCode": "1.8.8",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "ownership",
+        "evaluation"
+      ],
+      "front": "<p>Define <strong>regulatory capture</strong>, and its causes.</p>",
+      "back": "<p><strong>Regulatory capture</strong> — when regulatory agencies are dominated or influenced by the industries they are supposed to regulate, so regulation ends up serving the industry rather than the public interest.</p><p>Causes: close relationships between regulator and industry, 'revolving door' employment between the two, and lobbying. It is a standard evaluation point against regulation as a remedy for market failure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-8-public-ownership-privatisation-regulation-and-deregulation-of-markets.html"
+    },
+    {
+      "id": "aqa-1-8-9-def-01",
+      "specCode": "1.8.9",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "intervention"
+      ],
+      "front": "<p>Why do <strong>governments intervene</strong> in markets, and with what tools?</p>",
+      "back": "<p>To correct market failure, raise revenue, promote equity, and support firms — reflecting the government's range of objectives in a mixed economy.</p><p>The AQA toolkit: <strong>indirect taxation, subsidies, price controls (maximum and minimum prices), state provision, regulation, the extension of property rights and tradable pollution permits</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
+    },
+    {
+      "id": "aqa-1-8-9-diagram-01",
+      "specCode": "1.8.9",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "intervention",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of an <strong>indirect tax</strong>, including the government revenue raised.</p>",
+      "back": "<p>The tax raises producers' costs, shifting S to S+Tax: output falls from Q1 to Q2, consumers pay P2, producers keep P3, and the rectangle (P2 − P3) × Q2 is <strong>government revenue</strong>. A specific tax shifts the curve in parallel; an ad valorem tax pivots it.</p><p>Evaluation: with inelastic demand (cigarettes) revenue is large but consumption barely falls, and indirect taxes are regressive.</p>",
+      "svgRef": "/images/diagrams/svg/indirect-tax-gov-revenue.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
+      "svgAlt": "Demand and supply diagram with the supply curve shifted left to S plus Tax, consumer price P2, producer receipt P3, and the government revenue rectangle shaded between them up to Q2"
+    },
+    {
+      "id": "aqa-1-8-9-def-02",
+      "specCode": "1.8.9",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "intervention"
+      ],
+      "front": "<p>How does a <strong>subsidy</strong> correct a positive externality, and what are its drawbacks?</p>",
+      "back": "<p>A subsidy lowers producers' costs, shifting S=MPC right: price falls, output rises towards the social optimum, internalising the external benefit. The cost to the government is the subsidy per unit times the new output.</p><p>Evaluation: firms can become subsidy-reliant and inefficient, and the spending carries an opportunity cost — the funds could have gone to other public services.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
+    },
+    {
+      "id": "aqa-1-8-9-diagram-02",
+      "specCode": "1.8.9",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "intervention",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>maximum price</strong> set below equilibrium.</p>",
+      "back": "<p>A price ceiling below equilibrium (Pmax) causes a contraction of supply to Qs and an extension of demand to Qd — <strong>excess demand of Qd − Qs</strong>. Intended to keep essentials such as rent affordable, but the shortage brings queues, rationing and black markets, and producers may cut quality.</p>",
+      "svgRef": "/images/diagrams/svg/max-price.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
+      "svgAlt": "Supply and demand diagram with a maximum price line below the equilibrium, quantity supplied Qs below quantity demanded Qd, showing a shortage"
+    },
+    {
+      "id": "aqa-1-8-9-diagram-03",
+      "specCode": "1.8.9",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "intervention",
+        "diagram"
+      ],
+      "front": "<p>Show the effect of a <strong>minimum price</strong> set above equilibrium.</p>",
+      "back": "<p>A price floor above equilibrium (Pmin) causes an extension of supply to Qs and a contraction of demand to Qd — <strong>excess supply of Qs − Qd</strong>. Used to guarantee producer incomes or deter demerit-good consumption (minimum alcohol pricing), but the surplus may need costly government purchase and storage, and black markets can undercut it.</p>",
+      "svgRef": "/images/diagrams/svg/min-price.svg",
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html",
+      "svgAlt": "Supply and demand diagram with a minimum price line above the equilibrium, quantity demanded Qd below quantity supplied Qs, showing a surplus"
+    },
+    {
+      "id": "aqa-1-8-9-def-03",
+      "specCode": "1.8.9",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-9-government-intervention-in-markets",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "intervention"
+      ],
+      "front": "<p>Explain AQA's <strong>other intervention methods</strong>: pollution permits, state provision and information provision.</p>",
+      "back": "<p><strong>Tradable pollution permits</strong> — the government caps total emissions and auctions permits that firms must buy to pollute, raising polluters' costs (S=MPC shifts up) and rewarding clean technology; enforcement is costly and small firms can be squeezed out.</p><p><strong>State provision</strong> — direct supply of merit goods like education and healthcare, available regardless of ability to pay, at an opportunity cost. <strong>Information provision</strong> — campaigns shift D=MPB towards the social optimum, but only work if consumers respond.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
+    },
+    {
+      "id": "aqa-1-8-10-def-01",
+      "specCode": "1.8.10",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-10-government-failure",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "government-failure"
+      ],
+      "front": "<p>Define <strong>government failure</strong>.</p>",
+      "back": "<p><strong>Government failure</strong> — when government intervention to correct a market failure results in a larger net welfare loss or a less efficient allocation of resources than before the intervention.</p><p>In short, the cost of the intervention outweighs its benefit. Its possibility means intervention will not necessarily improve welfare even where market failure exists.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-10-government-failure.html"
+    },
+    {
+      "id": "aqa-1-8-10-chain-01",
+      "specCode": "1.8.10",
+      "topic": "1.8 Market failure and government intervention",
+      "subtopic": "1-8-10-government-failure",
+      "cardType": "chain",
+      "difficulty": "standard",
+      "tags": [
+        "government-failure"
+      ],
+      "front": "<p>Build the chain of reasoning: what are the <strong>causes of government failure</strong>?</p>",
+      "back": "<ul><li><strong>Distorted price signals</strong> — price controls disrupt the market's signalling and incentive functions: a minimum alcohol price can create a surplus and black markets.</li><li><strong>Unintended consequences</strong> — agents respond in ways that undermine the aim: restricting cigarette sales pushed demand towards disposable vapes.</li><li><strong>Excessive administrative costs</strong> — enforcement can cost more than the welfare gain it buys.</li><li><strong>Information gaps</strong> — governments are boundedly rational too: a cigarette tax set too high causes under-consumption and a fresh welfare loss.</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-micro/1-8-10-government-failure.html"
     }
   ]
 }

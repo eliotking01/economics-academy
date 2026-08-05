@@ -46,3 +46,44 @@ Format per entry:
 - **Confidence** — high.
 - **Status** — fixed (approved by Eliot 2026-08-04; corrected in the
   "fix: correct the max/min price figure captions" commit).
+
+## 3. AQA maximum-price figure caption has the same tax copy-paste error as the fixed Edexcel one
+
+- **Location** — `revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html`,
+  Figure 3 caption (`max-price.png`).
+- **Issue** — identical to issue 1 (fixed on the Edexcel twin 1.4.1 with
+  Eliot's approval): the caption reads "showing the shift in supply, the
+  new equilibrium, and the government revenue generated". A maximum price
+  shifts no curve and raises no revenue; the figure correctly shows a
+  ceiling below equilibrium with excess demand.
+- **Proposed correction** — "Figure 3: The impact of a maximum price set
+  below the equilibrium price, showing the resulting excess demand
+  (shortage)." (mirrors the approved Edexcel wording).
+- **Confidence** — high (same figure, same error class as the approved fix).
+- **Status** — open.
+
+## 4. AQA minimum-price figure caption, same error
+
+- **Location** — same page, Figure 4 caption (`min-price.png`).
+- **Issue** — identical to issue 2: "the shift in supply, the new
+  equilibrium, and the government revenue generated" describes neither a
+  minimum price nor the figure, which shows a floor above equilibrium with
+  excess supply.
+- **Proposed correction** — "Figure 4: The impact of a minimum price set
+  above the equilibrium price, showing the resulting excess supply
+  (surplus)."
+- **Confidence** — high.
+- **Status** — open.
+
+## 5. AQA subsidy figure caption says "an subsidy" and "government revenue"
+
+- **Location** — same page, Figure 2 caption (`subsidy-gov-expenditure.png`).
+- **Issue** — "The impact of an subsidy on a market, showing the shift in
+  supply, the new equilibrium, and the government revenue generated."
+  Grammar ("an subsidy"), and a subsidy is government **expenditure**, not
+  revenue — the figure's shaded rectangle is the cost to the government.
+- **Proposed correction** — "Figure 2: The impact of a subsidy on a
+  market, showing the shift in supply, the new equilibrium, and the
+  government expenditure incurred."
+- **Confidence** — high.
+- **Status** — open.
