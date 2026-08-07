@@ -508,18 +508,46 @@ def source_link(s):
             f'>{e(s["spec"])} {e(s["topic"])}</a>')
 
 
+def ld_description(term, board, rules, approved):
+    """The DefinedTerm description: the same words the page shows.
+
+    Where the list carries the meaning, "e.g. USMCA" on its own would be a
+    useless description, so the list is folded in - as a sentence, since
+    structured data takes plain text and cannot show bullets.
+    """
+    s = source_for(term, board)
+    text = plain(capitalise(term["id"],
+                            rewrite(term["id"], s["definitionHtml"], rules),
+                            approved))
+    if s.get("listIsDefinition") and s.get("definitionListHtml"):
+        items = [plain(i) for i in
+                 re.findall(r"<li>(.*?)</li>", s["definitionListHtml"], re.S)]
+        if items:
+            text = "; ".join(i.rstrip(".") for i in items) + f". {text}"
+    return text
+
+
 def entry_html(term, board, inline_map, approved, rules):
     s = source_for(term, board)
     definition = rewrite(term["id"], s["definitionHtml"], rules)
     definition = capitalise(term["id"], definition, approved)
-    # Five definitions end on a colon because the rest of them is the bulleted
+    # Some definitions end on a colon because the rest of them is the bulleted
     # list that follows on the notes page. The list is carried across so the
     # entry reads as a whole; it cannot sit inside the <p>.
+    #
+    # Order depends on which half is the definition. Normally the paragraph
+    # opens the sentence and the list finishes it, so the paragraph leads. For
+    # the five trading-bloc terms it is the other way round - the paragraph is
+    # only "e.g. USMCA" and the list carries the meaning - so the list leads and
+    # the example follows it.
     dlist = ""
     if s.get("definitionListHtml"):
-        dlist = ('\n                  <div class="gl-def-list">'
+        dlist = ('<div class="gl-def-list">'
                  + render_inline_maths(s["definitionListHtml"], inline_map)
                  + "</div>")
+    text = f'<p class="gl-text">{render_inline_maths(definition, inline_map)}</p>'
+    body = [dlist, text] if s.get("listIsDefinition") else [text, dlist]
+    body_html = "\n                  ".join(p for p in body if p)
     groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
     others = [x for x in term["sources"]
               if x["board"] == board and x is not s]
@@ -538,7 +566,7 @@ def entry_html(term, board, inline_map, approved, rules):
               >
                 <dt class="gl-term">{e(term['term'])}</dt>
                 <dd class="gl-def">
-                  <p class="gl-text">{render_inline_maths(definition, inline_map)}</p>{dlist}
+                  {body_html}
                   <p class="gl-source">{source_link(s)}</p>{also}
                 </dd>
               </div>"""
@@ -729,9 +757,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
                 "@type": "DefinedTerm",
                 "@id": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "name": t["term"],
-                "description": plain(capitalise(t["id"], rewrite(
-                    t["id"], source_for(t, board)["definitionHtml"], rules),
-                    approved)),
+                "description": ld_description(t, board, rules, approved),
                 "url": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "inDefinedTermSet":
                     f"{SITE}/revision-notes/glossary/{meta['slug']}/#glossary",

@@ -396,11 +396,18 @@ def chips_on(root: Node, ctx, stop, problems, attach=frozenset()):
         # trailing colon would take it. Still the notes' own words, and still
         # covered by the verbatim check, which reads the list too.
         definition_list = ""
+        list_is_definition = False
         dangling = squash(re.sub(r"<[^>]+>", "", definition)).endswith(":")
-        if dangling or canonical_key(term) in attach:
+        attached = canonical_key(term) in attach
+        if dangling or attached:
             lst = following_list(node)
             if lst is not None:
                 definition_list = list_html(lst)
+                # For an attachList chip the list IS the definition and the
+                # paragraph is only an example, so the page renders it first.
+                # For a colon-ended one the paragraph opens the sentence the
+                # list finishes, and the order has to stay as written.
+                list_is_definition = attached and not dangling
             elif dangling:
                 definition = trim_dangling(definition)
 
@@ -409,6 +416,7 @@ def chips_on(root: Node, ctx, stop, problems, attach=frozenset()):
             "key": canonical_key(term),
             "definitionHtml": definition,
             "definitionListHtml": definition_list,
+            "listIsDefinition": list_is_definition,
             # From the definition as kept, so a trim is reflected here too.
             "definitionText": squash(re.sub(r"<[^>]+>", "", definition)),
             "heading": heading,
@@ -747,6 +755,7 @@ def build():
                 "origin": s["origin"],
                 "definitionHtml": s["definitionHtml"],
                 "definitionListHtml": s.get("definitionListHtml", ""),
+                "listIsDefinition": s.get("listIsDefinition", False),
             } for s in srcs],   # already ranked: curated preference, then board
         })
 

@@ -104,7 +104,12 @@ Five fixes, one commit each, on `fix/glossary-polish`.
       characteristics were the `<ul>` underneath, which the extractor skipped
       because the text does not end on a colon. New `curation.json` →
       `attachList` names them and the list is taken as part of the definition.
-      **No wording written**, and the verbatim check covers the list.
+      **No wording written**, and the verbatim check covers the list. The list
+      renders **before** the example (Eliot's call): the extractor sets
+      `listIsDefinition` on the source, and `entry_html` orders the two on it.
+      The JSON-LD description folds the list in as a sentence, since "e.g.
+      USMCA" alone was useless as structured data. A duplicated `.gl-def-list`
+      block in `glossary.css` was removed at the same time.
 - [x] 7.6 **`Maximum Price` and `Minimum Price` given real definitions** (D17).
       Both notes pages already define them properly under
       `<strong>Effect:</strong>`, which is not a chip and so was invisible to
