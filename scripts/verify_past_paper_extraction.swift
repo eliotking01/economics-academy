@@ -37,11 +37,19 @@ func opening(_ text: String, words: Int) -> String {
 }
 
 let fm = FileManager.default
-let dataDir = "past-paper-questions-data/edexcel-a"
-guard let files = try? fm.contentsOfDirectory(atPath: dataDir).filter({ $0.hasSuffix(".json") })
-else {
-    FileHandle.standardError.write("cannot read \(dataDir)\n".data(using: .utf8)!)
-    exit(2)
+// Both Edexcel qualifications. They are separate directories because 9EC0 and
+// 8EC0 each have a Paper 1 in the same series, so the filenames collide.
+let dataDirs = [
+    "past-paper-questions-data/edexcel-a",
+    "past-paper-questions-data/edexcel-a-as",
+]
+var files: [(dir: String, name: String)] = []
+for dir in dataDirs {
+    guard let names = try? fm.contentsOfDirectory(atPath: dir) else {
+        FileHandle.standardError.write("cannot read \(dir)\n".data(using: .utf8)!)
+        exit(2)
+    }
+    files += names.filter { $0.hasSuffix(".json") }.sorted().map { (dir, $0) }
 }
 
 var failures: [Failure] = []
@@ -58,8 +66,8 @@ func pages(_ url: String) -> [String]? {
     return p
 }
 
-for file in files.sorted() {
-    guard let raw = try? Data(contentsOf: URL(fileURLWithPath: "\(dataDir)/\(file)")),
+for (dir, file) in files {
+    guard let raw = try? Data(contentsOf: URL(fileURLWithPath: "\(dir)/\(file)")),
         let root = try? JSONSerialization.jsonObject(with: raw) as? [String: Any],
         let questions = root["questions"] as? [[String: Any]]
     else {

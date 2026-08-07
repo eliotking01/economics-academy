@@ -211,6 +211,39 @@ def crop_text(crop) -> str:
     )
 
 
+# A hyphenated word broken across a line break: joining the lines leaves the
+# hyphen with a space after it ("self- correcting"). Both sides must be
+# lower-case letters, which rules out a dash between clauses and a hyphen before
+# a capitalised proper noun.
+HYPHEN_BREAK_RE = re.compile(r"(?<=[a-z])-\s+(?=[a-z])")
+# ...except the suspended-hyphen construction, where the space is correct and
+# the word really has been left hanging: "short- and long-run", "pre- or
+# post-tax". Joining those would corrupt real wording, so they are excepted by
+# the conjunction that follows.
+SUSPENDED_HYPHEN_RE = re.compile(r"(?<=[a-z])-\s+(?=(?:and|or|to)\b)")
+
+
+def rejoin_hyphenation(text: str) -> str:
+    """Repair a word the PDF broke across a line, leaving the suspended
+    hyphen alone.
+
+    One occurrence in the 248 AQA questions extracted so far - "self-
+    correcting" in aqa-p2-2018-jun-q3. Fixed here rather than in the JSON
+    because the data has to stay a pure function of the extractor.
+    """
+    keep = {m.start() for m in SUSPENDED_HYPHEN_RE.finditer(text)}
+    out = []
+    cursor = 0
+    for m in HYPHEN_BREAK_RE.finditer(text):
+        if m.start() in keep:
+            continue
+        out.append(text[cursor : m.start()])
+        out.append("-")
+        cursor = m.end()
+    out.append(text[cursor:])
+    return "".join(out)
+
+
 def clean(text: str) -> str:
     text = FURNITURE_RE.sub(" ", text or "")
     # Anything before the last source attribution is stimulus, not question
@@ -226,7 +259,8 @@ def clean(text: str) -> str:
     tariff = TARIFF_CUT_RE.search(text)
     if tariff:
         text = text[: tariff.start()]
-    return re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text).strip()
+    return rejoin_hyphenation(text)
 
 
 def extract_questions(pdf, first_q: int, expected: list[int]):

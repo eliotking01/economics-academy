@@ -52,8 +52,13 @@ def load():
     # Two extractors write here: the Swift/PDFKit one for Edexcel and the
     # pdfplumber one for AQA. Both emit the same record shape, so from this
     # point on the board is just a field.
+    #
+    # Edexcel spans two qualifications in two directories - 9EC0 and 8EC0 each
+    # have a Paper 1 in the same series, so one directory would mean colliding
+    # filenames. They share a board, and their questions mix freely from here on:
+    # the qualification is a field and a badge, not a separate namespace.
     papers = []
-    for board_dir in ("edexcel-a", "aqa"):
+    for board_dir in ("edexcel-a", "edexcel-a-as", "aqa"):
         for path in sorted((DATA / board_dir).glob("*.json")):
             papers.append(json.loads(path.read_text(encoding="utf-8")))
     return taxonomy, tags, papers
@@ -111,19 +116,26 @@ def build(taxonomy, tags, papers):
             "board": p["board"],
             "boardName": p["boardName"],
             "qualification": p["qualification"],
+            "level": p["level"],
+            # Short form for the card badge. The full qualification string is
+            # too long to sit in a row of chips on a phone.
+            "levelLabel": "AS Level" if p["level"] == "as-level" else "A Level",
             "questionPaperUrl": p["questionPaperUrl"],
             "markSchemeUrl": p["markSchemeUrl"],
         }
         for p in papers
     ]
-    # Keyed on board too: both specifications have a Paper 1 in the same series.
+    # Keyed on board AND level: all three of Edexcel A Level, Edexcel AS and AQA
+    # have a Paper 1 in the same series, so board alone is not unique.
     paper_index = {
-        (p["board"], p["paper"], p["seriesSlug"]): i
+        (p["board"], p["level"], p["paper"], p["seriesSlug"]): i
         for i, p in enumerate(paper_table)
     }
 
     for paper in papers:
-        pi = paper_index[(paper["board"], paper["paper"], paper["seriesSlug"])]
+        pi = paper_index[
+            (paper["board"], paper["level"], paper["paper"], paper["seriesSlug"])
+        ]
         for q in paper["questions"]:
             tag = tags.get(q["id"])
             if tag is None:
@@ -150,6 +162,11 @@ def build(taxonomy, tags, papers):
                 errors.append(f"{q['id']}: no mark scheme recorded")
                 continue
 
+            # Whitelist, not a copy. `sourceAttribution` is deliberately absent:
+            # Pearson's citation for a Section C stimulus is provenance, not
+            # question wording, so it stays in the extraction data and out of
+            # the payload - which keeps it out of the card and out of the search
+            # index without anything having to filter it later.
             entry = {
                 "id": q["id"],
                 "p": pi,
@@ -282,6 +299,11 @@ def search_component(topic="", board="", group=""):
     # section grouping, which is labelled Theme or Micro/Macroeconomics.
     fields = [
         ("board", "Board", "Both boards"),
+        # Defaults to showing both, per the owner's decision: an AS question is
+        # still a real question on a Theme 1-2 topic, and hiding it by default
+        # would make the Theme 1-2 pages look emptier than they are. The badge
+        # does the disambiguating; this narrows.
+        ("level", "Qualification", "AS and A Level"),
         ("group", "Theme / area", "All areas"),
         ("paper", "Paper", "All papers"),
         ("topic", "Topic", "All topics"),
@@ -364,8 +386,14 @@ def render_card(q, index):
     paper = index["papers"][q["p"]]
     topics = index["topics"]
 
+    # The qualification badge sits second, straight after the board, because an
+    # A Level student who revises from an AS question without noticing gets a
+    # distorted picture of the demand. It is on every card, in the static HTML,
+    # not applied by script after load.
     badges = [
         f'<span class="ppq-badge ppq-badge-board">{e(paper["boardName"])}</span>',
+        f'<span class="ppq-badge ppq-badge-level ppq-badge-level-{e(paper["level"])}">'
+        f'{e(paper["levelLabel"])}</span>',
         f'<span class="ppq-badge ppq-badge-paper">Paper {paper["paper"]}</span>',
         f'<span class="ppq-badge">{e(paper["series"] + " " + str(paper["year"]))}</span>',
         f'<span class="ppq-badge ppq-badge-marks">{q["marks"]} marks</span>',

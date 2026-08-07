@@ -3168,5 +3168,798 @@
       "infrastructure",
       "supply-side"
     ]
+  },
+  "edexcel-as-p1-2016-jun-q6a": {
+    "topics": ["1-2-5-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "housing", "new housing", "PES"]
+  },
+  "edexcel-as-p1-2016-jun-q6b": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-2-6-price-determination"
+    ],
+    "keywords": [
+      "Help to Buy",
+      "housing market",
+      "rented properties",
+      "government intervention"
+    ]
+  },
+  "edexcel-as-p1-2016-jun-q6c": {
+    "topics": ["1-2-8-producer-consumer-surplus"],
+    "keywords": ["producer surplus", "housing", "demand", "surplus diagram"]
+  },
+  "edexcel-as-p1-2016-jun-q6d": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": ["house prices", "percentage change", "calculation"]
+  },
+  "edexcel-as-p1-2016-jun-q6e": {
+    "topics": ["1-2-7-price-mechanism"],
+    "keywords": [
+      "price mechanism",
+      "rationing",
+      "signalling",
+      "incentives",
+      "housing"
+    ]
+  },
+  "edexcel-as-p1-2016-jun-q6f": {
+    "topics": ["1-4-1-government-intervention-in-markets"],
+    "keywords": [
+      "government intervention",
+      "housing market",
+      "microeconomic effects"
+    ]
+  },
+  "edexcel-as-p1-2016-jun-q6g": {
+    "topics": [
+      "1-3-3-public-goods",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": [
+      "public goods",
+      "flood defence",
+      "state provision",
+      "non-excludable"
+    ]
+  },
+  "edexcel-as-p1-2017-jun-q6a": {
+    "topics": ["1-2-2-demand", "1-4-1-government-intervention-in-markets"],
+    "keywords": ["tobacco", "advertising ban", "revenue", "demand diagram"]
+  },
+  "edexcel-as-p1-2017-jun-q6b": {
+    "topics": ["1-2-1-rational-decision-making"],
+    "keywords": [
+      "rational behaviour",
+      "e-cigarettes",
+      "consumer choice",
+      "utility"
+    ]
+  },
+  "edexcel-as-p1-2017-jun-q6c": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "cross elasticity of demand",
+      "substitutes",
+      "XED",
+      "e-cigarettes"
+    ]
+  },
+  "edexcel-as-p1-2017-jun-q6d": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["price elasticity of demand", "PED", "calculation", "tobacco"]
+  },
+  "edexcel-as-p1-2017-jun-q6e": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "price elasticity of demand",
+      "PED",
+      "addiction",
+      "substitutes"
+    ]
+  },
+  "edexcel-as-p1-2017-jun-q6f": {
+    "topics": ["1-1-6-types-of-economies", "1-3-1-types-of-market-failure"],
+    "keywords": ["free market", "demerit good", "market failure", "cigarettes"]
+  },
+  "edexcel-as-p1-2017-jun-q6g": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-2-9-indirect-taxes-subsidies"
+    ],
+    "keywords": [
+      "government intervention",
+      "indirect tax",
+      "cigarettes",
+      "demerit good"
+    ]
+  },
+  "edexcel-as-p1-2018-jun-q6a": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": [
+      "uranium",
+      "price determination",
+      "supply and demand",
+      "commodity price"
+    ]
+  },
+  "edexcel-as-p1-2018-jun-q6b": {
+    "topics": ["1-2-5-price-elasticity-of-supply"],
+    "keywords": ["price elasticity of supply", "uranium", "PES", "mining"]
+  },
+  "edexcel-as-p1-2018-jun-q6c": {
+    "topics": [
+      "1-3-4-information-gaps",
+      "1-2-10-alternative-views-of-consumer-behaviour"
+    ],
+    "keywords": [
+      "information gaps",
+      "switching",
+      "energy suppliers",
+      "consumer inertia"
+    ]
+  },
+  "edexcel-as-p1-2018-jun-q6d": {
+    "topics": ["1-1-3-the-economic-problem"],
+    "keywords": [
+      "renewable resources",
+      "non-renewable",
+      "scarcity",
+      "factors of production"
+    ]
+  },
+  "edexcel-as-p1-2018-jun-q6e": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": ["energy market", "supply and demand", "producers", "consumers"]
+  },
+  "edexcel-as-p1-2018-jun-q6f": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "external costs",
+      "nuclear power",
+      "over-provision",
+      "externalities"
+    ]
+  },
+  "edexcel-as-p1-2018-jun-q6g": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities"
+    ],
+    "keywords": [
+      "government intervention",
+      "carbon emissions",
+      "externalities",
+      "pollution"
+    ]
+  },
+  "edexcel-as-p1-2019-jun-q6a": {
+    "topics": ["1-1-3-the-economic-problem"],
+    "keywords": [
+      "economic problem",
+      "scarcity",
+      "health care",
+      "opportunity cost"
+    ]
+  },
+  "edexcel-as-p1-2019-jun-q6b": {
+    "topics": ["1-3-4-information-gaps"],
+    "keywords": [
+      "asymmetric information",
+      "information gaps",
+      "market failure",
+      "health"
+    ]
+  },
+  "edexcel-as-p1-2019-jun-q6c": {
+    "topics": ["1-3-3-public-goods"],
+    "keywords": ["public goods", "public parks", "non-rival", "non-excludable"]
+  },
+  "edexcel-as-p1-2019-jun-q6d": {
+    "topics": ["1-4-1-government-intervention-in-markets"],
+    "keywords": [
+      "revenue calculation",
+      "GP charges",
+      "health care",
+      "calculation"
+    ]
+  },
+  "edexcel-as-p1-2019-jun-q6e": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": [
+      "private hospitals",
+      "supply and demand",
+      "price determination"
+    ]
+  },
+  "edexcel-as-p1-2019-jun-q6f": {
+    "topics": ["1-4-1-government-intervention-in-markets"],
+    "keywords": [
+      "excess demand",
+      "government intervention",
+      "health care",
+      "rationing"
+    ]
+  },
+  "edexcel-as-p1-2019-jun-q6g": {
+    "topics": ["1-1-6-types-of-economies", "1-3-1-types-of-market-failure"],
+    "keywords": [
+      "free market",
+      "health care",
+      "market failure",
+      "private provision"
+    ]
+  },
+  "edexcel-as-p1-2022-jun-q6a": {
+    "topics": [
+      "1-2-6-price-determination",
+      "1-4-1-government-intervention-in-markets"
+    ],
+    "keywords": ["total allowable catch", "cod", "supply and demand", "quota"]
+  },
+  "edexcel-as-p1-2022-jun-q6b": {
+    "topics": ["1-2-1-rational-decision-making"],
+    "keywords": [
+      "rational behaviour",
+      "fishing",
+      "profit maximisation",
+      "firms"
+    ]
+  },
+  "edexcel-as-p1-2022-jun-q6c": {
+    "topics": ["1-1-6-types-of-economies"],
+    "keywords": ["free market economy", "private ownership", "property rights"]
+  },
+  "edexcel-as-p1-2022-jun-q6d": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "cross elasticity of demand",
+      "complements",
+      "XED",
+      "calculation"
+    ]
+  },
+  "edexcel-as-p1-2022-jun-q6e": {
+    "topics": [
+      "1-1-5-specialisation-division-of-labour",
+      "1-1-4-production-possibility-frontiers"
+    ],
+    "keywords": [
+      "specialisation",
+      "production possibility frontier",
+      "PPF",
+      "fishing"
+    ]
+  },
+  "edexcel-as-p1-2022-jun-q6f": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "external costs",
+      "over-fishing",
+      "socially optimum",
+      "externalities"
+    ]
+  },
+  "edexcel-as-p1-2022-jun-q6g": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities"
+    ],
+    "keywords": [
+      "government intervention",
+      "over-fishing",
+      "market failure",
+      "tradable permits"
+    ]
+  },
+  "edexcel-as-p1-2023-jun-q6a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": ["price elasticity of demand", "total revenue", "PED"]
+  },
+  "edexcel-as-p1-2023-jun-q6b": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "external benefits",
+      "public service broadcasting",
+      "positive externalities"
+    ]
+  },
+  "edexcel-as-p1-2023-jun-q6c": {
+    "topics": ["1-3-3-public-goods"],
+    "keywords": ["public goods", "television", "non-rival", "non-excludable"]
+  },
+  "edexcel-as-p1-2023-jun-q6d": {
+    "topics": [
+      "1-2-3-price-income-cross-elasticities-of-demand",
+      "1-2-2-demand"
+    ],
+    "keywords": [
+      "substitutes",
+      "complementary goods",
+      "cross elasticity",
+      "XED"
+    ]
+  },
+  "edexcel-as-p1-2023-jun-q6e": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": ["streaming", "supply and demand", "price determination"]
+  },
+  "edexcel-as-p1-2023-jun-q6f": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities"
+    ],
+    "keywords": [
+      "government intervention",
+      "environmental damage",
+      "externalities"
+    ]
+  },
+  "edexcel-as-p1-2023-jun-q6g": {
+    "topics": ["1-1-6-types-of-economies", "1-3-1-types-of-market-failure"],
+    "keywords": ["free market", "television", "market failure", "provision"]
+  },
+  "edexcel-as-p1-2024-jun-q6a": {
+    "topics": ["1-4-2-government-failure"],
+    "keywords": ["unintended consequence", "government failure", "plastic tax"]
+  },
+  "edexcel-as-p1-2024-jun-q6b": {
+    "topics": [
+      "1-2-1-rational-decision-making",
+      "1-2-10-alternative-views-of-consumer-behaviour"
+    ],
+    "keywords": [
+      "irrational behaviour",
+      "carrier bags",
+      "behavioural economics",
+      "habit"
+    ]
+  },
+  "edexcel-as-p1-2024-jun-q6c": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "income elasticity of demand",
+      "YED",
+      "normal good",
+      "calculation"
+    ]
+  },
+  "edexcel-as-p1-2024-jun-q6d": {
+    "topics": ["1-2-2-demand", "1-4-1-government-intervention-in-markets"],
+    "keywords": ["incentives", "demand", "reusable cups", "nudge"]
+  },
+  "edexcel-as-p1-2024-jun-q6e": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": ["private costs", "external costs", "plastic", "externalities"]
+  },
+  "edexcel-as-p1-2024-jun-q6f": {
+    "topics": ["1-2-9-indirect-taxes-subsidies"],
+    "keywords": [
+      "indirect tax",
+      "plastic packaging",
+      "tax incidence",
+      "diagram"
+    ]
+  },
+  "edexcel-as-p1-2024-jun-q6g": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-3-2-externalities"
+    ],
+    "keywords": [
+      "government intervention",
+      "plastic waste",
+      "market failure",
+      "regulation"
+    ]
+  },
+  "edexcel-as-p1-2020-oct-q6a": {
+    "topics": ["1-2-3-price-income-cross-elasticities-of-demand"],
+    "keywords": [
+      "price elasticity of demand",
+      "higher education",
+      "tuition fees",
+      "PED"
+    ]
+  },
+  "edexcel-as-p1-2020-oct-q6b": {
+    "topics": ["1-2-7-price-mechanism", "1-1-3-the-economic-problem"],
+    "keywords": [
+      "allocation of resources",
+      "drop-out rates",
+      "opportunity cost"
+    ]
+  },
+  "edexcel-as-p1-2020-oct-q6c": {
+    "topics": ["1-3-2-externalities"],
+    "keywords": [
+      "private benefit",
+      "external benefit",
+      "higher education",
+      "externalities"
+    ]
+  },
+  "edexcel-as-p1-2020-oct-q6d": {
+    "topics": ["1-4-1-government-intervention-in-markets"],
+    "keywords": ["student loans", "percentage change", "calculation"]
+  },
+  "edexcel-as-p1-2020-oct-q6e": {
+    "topics": ["1-2-6-price-determination"],
+    "keywords": ["tuition fees", "price determination", "universities"]
+  },
+  "edexcel-as-p1-2020-oct-q6f": {
+    "topics": ["1-1-6-types-of-economies", "1-3-1-types-of-market-failure"],
+    "keywords": ["free market", "education", "market failure", "provision"]
+  },
+  "edexcel-as-p1-2020-oct-q6g": {
+    "topics": [
+      "1-4-1-government-intervention-in-markets",
+      "1-4-2-government-failure"
+    ],
+    "keywords": [
+      "government intervention",
+      "market failure",
+      "education",
+      "government failure"
+    ]
+  },
+  "edexcel-as-p2-2016-jun-q6a": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["real income", "inflation", "nominal", "purchasing power"]
+  },
+  "edexcel-as-p2-2016-jun-q6b": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": [
+      "real income",
+      "consumption",
+      "consumer spending",
+      "households"
+    ]
+  },
+  "edexcel-as-p2-2016-jun-q6c": {
+    "topics": ["2-2-1-aggregate-demand", "2-2-5-net-trade"],
+    "keywords": ["exchange rate", "aggregate demand", "sterling", "net trade"]
+  },
+  "edexcel-as-p2-2016-jun-q6d": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["inflation rate", "falling inflation", "CPI", "causes"]
+  },
+  "edexcel-as-p2-2016-jun-q6e": {
+    "topics": ["2-1-2-inflation", "2-6-2-demand-side-policies"],
+    "keywords": ["deflation", "MPC", "monetary policy", "inflation target"]
+  },
+  "edexcel-as-p2-2016-jun-q6f": {
+    "topics": ["2-6-2-demand-side-policies", "2-1-2-inflation"],
+    "keywords": ["MPC", "monetary policy", "inflation target", "interest rates"]
+  },
+  "edexcel-as-p2-2016-jun-q6g": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": [
+      "demand-side policies",
+      "financial crisis",
+      "fiscal policy",
+      "monetary policy"
+    ]
+  },
+  "edexcel-as-p2-2017-jun-q6a": {
+    "topics": ["2-2-5-net-trade"],
+    "keywords": ["net trade", "exports", "imports", "aggregate demand"]
+  },
+  "edexcel-as-p2-2017-jun-q6b": {
+    "topics": ["2-1-4-balance-of-payments", "2-2-5-net-trade"],
+    "keywords": [
+      "trade deficit",
+      "balance of payments",
+      "competitiveness",
+      "current account"
+    ]
+  },
+  "edexcel-as-p2-2017-jun-q6c": {
+    "topics": ["2-2-3-investment"],
+    "keywords": ["investment", "business confidence", "aggregate demand"]
+  },
+  "edexcel-as-p2-2017-jun-q6d": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": [
+      "GDP per capita",
+      "purchasing power parity",
+      "economic growth",
+      "Germany"
+    ]
+  },
+  "edexcel-as-p2-2017-jun-q6e": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": [
+      "productivity",
+      "supply-side policies",
+      "training",
+      "infrastructure"
+    ]
+  },
+  "edexcel-as-p2-2017-jun-q6f": {
+    "topics": ["2-5-4-the-impact-of-economic-growth"],
+    "keywords": [
+      "benefits of economic growth",
+      "living standards",
+      "costs of growth"
+    ]
+  },
+  "edexcel-as-p2-2017-jun-q6g": {
+    "topics": ["2-5-3-trade-cycle"],
+    "keywords": ["recession", "trade cycle", "economic cycle", "downturn"]
+  },
+  "edexcel-as-p2-2018-jun-q6a": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": [
+      "claimant count",
+      "ILO",
+      "unemployment measures",
+      "labour force survey"
+    ]
+  },
+  "edexcel-as-p2-2018-jun-q6b": {
+    "topics": ["2-2-1-aggregate-demand", "2-2-2-consumption"],
+    "keywords": [
+      "house prices",
+      "wealth effect",
+      "aggregate demand",
+      "AD/AS diagram"
+    ]
+  },
+  "edexcel-as-p2-2018-jun-q6c": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": ["savings", "households", "consumption", "interest rates"]
+  },
+  "edexcel-as-p2-2018-jun-q6d": {
+    "topics": ["2-4-4-the-multiplier"],
+    "keywords": [
+      "multiplier",
+      "marginal propensity to consume",
+      "MPC",
+      "withdrawals"
+    ]
+  },
+  "edexcel-as-p2-2018-jun-q6e": {
+    "topics": ["2-1-3-employment-unemployment"],
+    "keywords": ["migration", "employment", "unemployment", "labour market"]
+  },
+  "edexcel-as-p2-2018-jun-q6f": {
+    "topics": ["2-6-3-supply-side-policies", "2-1-3-employment-unemployment"],
+    "keywords": ["employment rate", "supply-side policies", "government policy"]
+  },
+  "edexcel-as-p2-2018-jun-q6g": {
+    "topics": ["2-1-2-inflation", "2-6-1-possible-macroeconomic-objectives"],
+    "keywords": [
+      "high inflation",
+      "macroeconomic objectives",
+      "policy conflict"
+    ]
+  },
+  "edexcel-as-p2-2019-jun-q6a": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["exchange rate", "imported inflation", "cost-push", "sterling"]
+  },
+  "edexcel-as-p2-2019-jun-q6b": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["effects of inflation", "inflation", "real incomes", "savers"]
+  },
+  "edexcel-as-p2-2019-jun-q6c": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["CPI", "basket of goods", "inflation measurement", "weights"]
+  },
+  "edexcel-as-p2-2019-jun-q6d": {
+    "topics": ["2-2-5-net-trade", "2-1-1-economic-growth"],
+    "keywords": ["exports", "net trade", "economic growth", "AD/AS diagram"]
+  },
+  "edexcel-as-p2-2019-jun-q6e": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": [
+      "GDP",
+      "living standards",
+      "limitations of GDP",
+      "developing countries"
+    ]
+  },
+  "edexcel-as-p2-2019-jun-q6f": {
+    "topics": ["2-6-2-demand-side-policies", "2-1-2-inflation"],
+    "keywords": [
+      "interest rates",
+      "monetary policy",
+      "inflation control",
+      "MPC"
+    ]
+  },
+  "edexcel-as-p2-2019-jun-q6g": {
+    "topics": ["2-6-4-conflicts-between-objectives-and-policies"],
+    "keywords": [
+      "policy conflicts",
+      "macroeconomic objectives",
+      "economic growth",
+      "trade-offs"
+    ]
+  },
+  "edexcel-as-p2-2022-jun-q6a": {
+    "topics": ["2-2-3-investment"],
+    "keywords": ["investment", "capital", "aggregate demand"]
+  },
+  "edexcel-as-p2-2022-jun-q6b": {
+    "topics": ["2-2-3-investment"],
+    "keywords": [
+      "influences on investment",
+      "business confidence",
+      "interest rates"
+    ]
+  },
+  "edexcel-as-p2-2022-jun-q6c": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": [
+      "GDP",
+      "living standards",
+      "limitations of GDP",
+      "comparisons over time"
+    ]
+  },
+  "edexcel-as-p2-2022-jun-q6d": {
+    "topics": ["2-1-1-economic-growth"],
+    "keywords": [
+      "economic growth",
+      "international comparison",
+      "GDP",
+      "forecast"
+    ]
+  },
+  "edexcel-as-p2-2022-jun-q6e": {
+    "topics": ["2-5-3-trade-cycle"],
+    "keywords": ["recession", "trade cycle", "negative growth", "downturn"]
+  },
+  "edexcel-as-p2-2022-jun-q6f": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": [
+      "fiscal policy",
+      "recession",
+      "demand-side policies",
+      "government spending"
+    ]
+  },
+  "edexcel-as-p2-2022-jun-q6g": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": ["supply-side policies", "productivity", "long-run growth"]
+  },
+  "edexcel-as-p2-2023-jun-q6a": {
+    "topics": ["2-1-4-balance-of-payments"],
+    "keywords": [
+      "balance of trade",
+      "goods and services",
+      "balance of payments"
+    ]
+  },
+  "edexcel-as-p2-2023-jun-q6b": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["CPI", "inflation measurement", "weights", "basket of goods"]
+  },
+  "edexcel-as-p2-2023-jun-q6c": {
+    "topics": ["2-2-5-net-trade"],
+    "keywords": ["exports", "net trade", "aggregate demand", "UK economy"]
+  },
+  "edexcel-as-p2-2023-jun-q6d": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": [
+      "causes of inflation",
+      "cost-push",
+      "demand-pull",
+      "inflation rate"
+    ]
+  },
+  "edexcel-as-p2-2023-jun-q6e": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["effects of inflation", "consumers", "workers", "real wages"]
+  },
+  "edexcel-as-p2-2023-jun-q6f": {
+    "topics": ["2-2-5-net-trade", "2-1-4-balance-of-payments"],
+    "keywords": ["net trade balance", "exports", "imports", "competitiveness"]
+  },
+  "edexcel-as-p2-2023-jun-q6g": {
+    "topics": ["2-6-2-demand-side-policies", "2-1-2-inflation"],
+    "keywords": [
+      "interest rates",
+      "monetary policy",
+      "inflation control",
+      "MPC"
+    ]
+  },
+  "edexcel-as-p2-2024-jun-q6a": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["inflation rate", "CPI", "price level"]
+  },
+  "edexcel-as-p2-2024-jun-q6b": {
+    "topics": ["2-2-1-aggregate-demand", "2-2-2-consumption"],
+    "keywords": [
+      "real wages",
+      "aggregate demand",
+      "consumption",
+      "AD/AS diagram"
+    ]
+  },
+  "edexcel-as-p2-2024-jun-q6c": {
+    "topics": ["2-5-3-trade-cycle"],
+    "keywords": [
+      "recession",
+      "trade cycle",
+      "characteristics",
+      "negative growth"
+    ]
+  },
+  "edexcel-as-p2-2024-jun-q6d": {
+    "topics": ["2-1-2-inflation"],
+    "keywords": ["exchange rate", "imported inflation", "sterling", "cost-push"]
+  },
+  "edexcel-as-p2-2024-jun-q6e": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": ["MPC", "base rate", "monetary policy", "interest rates"]
+  },
+  "edexcel-as-p2-2024-jun-q6f": {
+    "topics": [
+      "2-6-4-conflicts-between-objectives-and-policies",
+      "2-6-2-demand-side-policies"
+    ],
+    "keywords": [
+      "policy conflicts",
+      "expansionary policy",
+      "macroeconomic objectives"
+    ]
+  },
+  "edexcel-as-p2-2024-jun-q6g": {
+    "topics": [
+      "2-6-1-possible-macroeconomic-objectives",
+      "2-6-2-demand-side-policies"
+    ],
+    "keywords": [
+      "MPC",
+      "macroeconomic objectives",
+      "monetary policy",
+      "inflation target"
+    ]
+  },
+  "edexcel-as-p2-2020-oct-q6a": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": ["balanced budget", "fiscal policy", "government budget"]
+  },
+  "edexcel-as-p2-2020-oct-q6b": {
+    "topics": ["2-2-1-aggregate-demand", "2-2-5-net-trade"],
+    "keywords": ["exchange rate", "aggregate demand", "sterling", "net trade"]
+  },
+  "edexcel-as-p2-2020-oct-q6c": {
+    "topics": ["2-2-2-consumption"],
+    "keywords": ["consumption", "households", "real income", "influences"]
+  },
+  "edexcel-as-p2-2020-oct-q6d": {
+    "topics": ["2-2-1-aggregate-demand", "2-2-2-consumption"],
+    "keywords": [
+      "consumption",
+      "aggregate demand",
+      "AD/AS diagram",
+      "multiplier"
+    ]
+  },
+  "edexcel-as-p2-2020-oct-q6e": {
+    "topics": ["2-5-1-causes-of-growth", "2-3-3-long-run-aggregate-supply"],
+    "keywords": [
+      "trend growth",
+      "long-run aggregate supply",
+      "productive potential"
+    ]
+  },
+  "edexcel-as-p2-2020-oct-q6f": {
+    "topics": ["2-6-3-supply-side-policies"],
+    "keywords": ["supply-side policies", "economic growth", "productivity"]
+  },
+  "edexcel-as-p2-2020-oct-q6g": {
+    "topics": ["2-6-2-demand-side-policies"],
+    "keywords": [
+      "budget deficit",
+      "fiscal policy",
+      "austerity",
+      "government borrowing"
+    ]
   }
 }
