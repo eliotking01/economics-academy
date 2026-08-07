@@ -14,12 +14,18 @@ and merges himself.
 
 ## STATUS
 
-**IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
-complete. **Phase 2 is COMPLETE — all four issues (A, B, C, D) are done
-across all six decks**: 265 cards edited across 13 batches, plus 6 cards split
-in two. The deck total is now **671 cards** (was 665). Nothing is blocked.
-Remaining: **Phase 3 verification** — end-to-end player testing, print
-stylesheet, GA4, reduced motion, and the screenshot review.
+**COMPLETE.** All three phases are done and verified.
+
+- Phase 0 — re-grounded, rendering investigated, tooling built.
+- Phase 1 — all 665 cards audited for issues A–D.
+- Phase 2 — **all four issues fixed across all six decks**: 265 cards edited
+  across 13 batches, plus 6 cards split in two. Deck total **671** (was 665).
+- Phase 3 — audits re-run at zero/reviewed-floor, JSON valid, build idempotent,
+  **54/54 end-to-end functional checks pass**, print output verified as a real
+  PDF, GA4 events verified, reduced motion verified, and **0 of 671 card faces
+  overflow at either width**.
+
+The branch is ready for Eliot's review and merge. Nothing is outstanding.
 
 ## RENDERING FINDINGS
 
@@ -519,19 +525,75 @@ cards so far", `aqa-micro` 89, `aqa-macro` 62), so they now read 95 / 106 / 97 /
 84 / 185 / 104 with a 671 tally. Dated log entries in that file were left as the
 historical record they are.
 
+## PHASE 3 — VERIFICATION RESULTS (2026-08-07)
+
+**1. Audits re-run.** A = 17, B = **0**, C = 117, D = 29 across 671 cards.
+Every non-zero figure is the hand-reviewed false-positive floor, named per deck
+in the batch log — no unfixed defect remains. The final board-reference sweep,
+run independently of `audit.py` over card text in both the sources and the
+built payloads, returns **0** hits for
+`edexcel|aqa|ocr|specification|spec|exam board`.
+
+**2. JSON validated.** 12 files (6 sources + 6 built payloads), 0 errors. The
+builder's own schema validation passes on every card, which is what proves the
+six new split cards carry a valid board, cardType, difficulty, specCode,
+subtopic and source.
+
+**3. Visual review.** Screenshots at 390px and 1280px of a 14-card sample —
+**every card type × both boards**, choosing the longest and most-bulleted back
+in each combination — plus the longest card in the whole set
+(`aqa-2-6-5-def-03`, 15 bullets across three lists). Inspected for overflow,
+clipping, cramped bullets and broken line breaks; all clean. Measured
+mechanically as well: **0 of 671 backs and 0 of 671 fronts overflow** at either
+width (was 556 and 154 before the pass).
+
+**4. End-to-end functional testing — 54/54 checks pass**, driving the real
+player through its own DOM (`functional.py`): flip by click and by space,
+`aria-expanded` and `aria-hidden` tracking, rate buttons appearing only when
+flipped, arrow-key navigation, keys 1 and 2 (including being correctly ignored
+before the flip), **the "again" re-queue growing the queue by one while "got
+it" does not**, Leitner boxes written under the v2 prefix with no v1 keys,
+swipe left/right and a short drag correctly not counting, shuffle preserving
+every card and returning to card 1, the session summary with its percentage and
+box counts, "Study again", the key-index global reset, and diagram cards
+referencing SVGs with alt text.
+
+**5. Print stylesheet.** Rendered to a real PDF (63 pages) and inspected: the
+new bullet lists print with markers and correct grouping, multi-paragraph backs
+survive (202 `<p>` over 106 cards), SVG diagrams render, and `break-inside:
+avoid` still keeps each card whole. Text extracted with Swift + PDFKit to
+confirm content is really present, not just laid out.
+
+**6. GA4.** `gtag` stubbed and calls recorded: `card_flip`, `card_rated`,
+`deck_print`, `deck_start` and `deck_complete` all fire with their expected
+parameters — `card_flip` carries board/theme/deck_id/card_id/card_type, and
+`card_rated` carries the rating and the new box.
+
+**7. Reduced motion.** Verified under `--force-prefers-reduced-motion`: the
+flip transition is disabled, 3D is flattened, the answer crossfades by opacity
+instead of rotating — **and the grid-cell height fix still applies**, so
+answers do not clip on that path either.
+
+**8. No regressions elsewhere.** `verify_html` 186 files / 0 errors,
+`verify_links` 5,410 internal refs / 0 broken, `verify_liquid` 93 files / 0
+problems, `verify_glossary` exit 0, and the build is byte-idempotent across
+every generated file. `git diff main...HEAD -- revision-notes/ glossary-data/`
+is **empty** — this pass touched no revision notes and no glossary data, as
+required.
+
 ## NEXT STEPS
 
-**Phase 3 verification** — nothing else outstanding in Phase 2.
+None. The pass is complete and the branch is ready for review.
 
-1. Re-run `audit.py` (A/B/D/C all at their reviewed floors) and validate JSON.
-2. Screenshot a substantial sample: every card type, both boards, several
-   themes, longest and most-bulleted backs, at 390px and 1280px. Inspect for
-   overflow, clipping, cramped bullets and broken breaks.
-3. Test end-to-end in a browser: flip, shuffle, again/got-it and the re-queue,
-   session summary, localStorage reset, keyboard shortcuts, swipe,
-   `prefers-reduced-motion`, and SVG diagram cards.
-4. Check the print stylesheet now that bullets and multi-line backs exist.
-5. Confirm GA4 events still fire.
+For Eliot, when reviewing:
+
+1. The **TRIMMED LISTS LOG** above is the one content-loss decision —
+   "congestion and housing pressure" removed from `edexcel-a-2-5-4-eval-02`.
+2. Four CSS changes to `css/pages/flashcards.css`: the grid-cell card height
+   (the big one, approved), the 1em block gap inside cards, the `p + ul`
+   pull-up, and list-item spacing.
+3. Six new cards from the Issue C splits, and the localStorage bump to `:v2:`.
+4. `main` auto-publishes on push — merge when you are ready, not before.
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
