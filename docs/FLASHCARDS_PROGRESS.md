@@ -1238,6 +1238,25 @@ Useful QA techniques:
   HTML is untouched and the build stays byte-idempotent.
   Verified by headless-Chrome renders at 1280px and 400px.
 
+- 2026-08-07 — **Content-quality QA pass, on branch
+  `flashcards-qa-fixes`** (full record: docs/QA_FIXES_PROGRESS.md).
+  Four issues fixed across all six decks: merged points split onto
+  their own lines, exam board references removed from visible card
+  text, long inline lists bulleted at six, and six multi-focus cards
+  split in two. **265 cards edited, 6 split; the deck total is now
+  671.** No economics wording was changed — every clause is the
+  original text, re-split — with one logged exception (a
+  seven-item list on `edexcel-a-2-5-4-eval-02` trimmed to six) and
+  four small joins rewritten where a split half lost its antecedent.
+  A **pre-existing rendering defect was found and fixed**: card faces
+  were absolutely positioned in a fixed-height box, so 556 of 665
+  answers (84%) were clipped at 390px and 154 at 1280px. The faces now
+  stack in one grid cell; 0 of 671 overflow at either width.
+  localStorage bumped to `ea-flashcards:v2:` because the card-id set
+  changed. Verified by 54/54 end-to-end functional checks, a real print
+  PDF, GA4 event capture and reduced-motion emulation. **No revision
+  notes or glossary data were touched.**
+
 ## Outstanding tasks for Eliot (the authoring is done)
 
 1. **Commit and merge** (Eliot doing this manually, his call
