@@ -111,21 +111,26 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
-| A — merged points on one line | in progress | 206 cards (229 blocks) | 2 | `edexcel-a-theme-1` **done (0 left)**. Next: `edexcel-a-theme-2`. |
-| B — exam board references | not started | 47 cards (64 mentions) | 0 | — |
+| A — merged points on one line | in progress | 206 cards | 37 | Themes 1 and 2 **done**. Next: `edexcel-a-theme-3` (34 cards). |
+| B — exam board references | in progress | 47 cards (64 mentions) | 6 | Only the 6 that sat on cards already open for A/D. Next: the remaining 41, as their own pass after A/D. |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
-| D — long inline lists | in progress | 67 cards (76 lists) | 4 | `edexcel-a-theme-1` **done**; its 2 remaining hits are judged false positives and deliberately left (see below). Next: `edexcel-a-theme-2`. |
+| D — long inline lists | in progress | 67 cards | 11 | Themes 1 and 2 **done**. Next: `edexcel-a-theme-3` (6 cards). |
 
-Per deck, cards remaining:
+Per deck, cards **remaining** (re-run `audit.py` to refresh):
 
 | Deck | A | B | C | D |
 | --- | --- | --- | --- | --- |
-| `edexcel-a-theme-1` | **0** | 3 | 13 | 2 (both false positives, left) |
-| `edexcel-a-theme-2` | 36 | 7 | 28 | 12 |
+| `edexcel-a-theme-1` | **0** | 3 | 13 | 2 (false positives, left) |
+| `edexcel-a-theme-2` | **1** (false positive, left) | 1 | 28 | 5 (false positives, left) |
 | `edexcel-a-theme-3` | 34 | 2 | 12 | 6 |
 | `edexcel-a-theme-4` | 43 | 0 | 1 | 12 |
 | `aqa-micro` | 43 | 17 | 37 | 15 |
 | `aqa-macro` | 48 | 18 | 32 | 16 |
+
+A residual count above zero does **not** mean unfinished work — Themes 1 and 2
+are complete for A and D, and what remains in them is the set of detector hits
+read by hand and judged not to be defects. They are named in the batch log so a
+future session does not re-examine them.
 
 **The D count fell from 168 cards to 67 when the detector was tightened after
 the Theme 1 calibration batch.** The first version split sentences on commas,
@@ -192,7 +197,12 @@ Every card where a list was cut to six bullets, with exactly what was removed �
 
 | Card | Kept | Removed | Why |
 | --- | --- | --- | --- |
-| _(none yet)_ | | | |
+| `edexcel-a-2-5-4-eval-02` — costs of economic growth | Demand-pull inflation · worsened inequality · environmental damage (pollution, resource depletion, biodiversity loss) · a worsening current account · worse work-life balance · more consumption of demerit goods | **"congestion and housing pressure"** | The list ran to seven. Spec 2.5.4 frames the costs of growth around consumers, firms, the government, current and future living standards and the environment. Congestion and housing pressure is the only one of the seven with no distinct home in that framing — it is a local symptom already carried by "environmental damage" and "worse work-life balance" — and it is the least often credited in mark schemes. Everything else in the list maps to a named spec strand. |
+
+**One card deliberately keeps seven bullets:** `edexcel-a-2-6-1-def-01` asks for
+"the **seven** macroeconomic objectives", so capping it at six would make the
+card contradict its own question. The six-bullet cap is a limit on trimming
+long prose lists, not a reason to drop content the question explicitly counts.
 
 ## DECISIONS MADE
 
@@ -253,17 +263,110 @@ away from the sentence setting them up. Scoped rules now pull the list up and
 give `<li>`s a little breathing room, on card faces, static samples and the
 print sheet alike.
 
+**Batch 2 — `edexcel-a-theme-2` sections 2.1–2.3, issues A and D
+(2026-08-07).** 22 cards edited.
+
+A (16): inflation/deflation/disinflation onto three lines (the example Eliot
+named); actual vs potential growth; nominal vs real GDP; gross vs net
+investment; MPC vs MPS; SRAS vs LRAS; the three balance-of-payments accounts;
+the four AD components; the stakeholder effects of inflation and of
+unemployment; the three causes of inflation; government expenditure's fiscal
+choices; the trade-balance drivers; the three Keynesian LRAS phases; the CPI
+calculation rebuilt as one step per line.
+
+D (6): GDP's limitations, current-account deficit causes, net trade
+influences, the SRAS shift factors.
+
+**Batch 3 — `edexcel-a-theme-2` sections 2.3–2.6, issues A and D
+(2026-08-07).** 21 cards edited, completing the deck.
+
+A (17): the LRAS six; the circular flow's real and money flows; the three
+injections and three withdrawals; the extended flow; the four marginal
+propensities; the multiplier ratio and its example; the benefits of growth;
+demand-side policy's two types; the interest-rate chain; deficit/surplus/
+balance and direct vs indirect taxes; the weaknesses of demand-side policy;
+supply-side policy's two approaches and its five aims; the four objective
+trade-offs; the three policy conflicts.
+
+D (4): the trade cycle's four phases; boom vs recession characteristics
+(six bullets each, nothing trimmed); the costs of growth (**trimmed — see
+TRIMMED LISTS LOG**); the seven objectives.
+
+Read and left alone across both batches: `edexcel-a-2-1-3-def-01`
+("full-time students, early retirees, the long-term sick, discouraged
+workers" is an examples clause inside a definition), `edexcel-a-2-2-1-calc-01`
+(the question stem's data, and a four-share figure list),
+`edexcel-a-2-4-1-diagram-01` ("land, labour, capital, enterprise" and "rent,
+wages, interest, profit" belong inside their sentences),
+`edexcel-a-2-4-4-def-01` (an examples clause), `edexcel-a-2-5-1-diagram-01`
+(appositive commas, not a list) and `edexcel-a-2-2-3-def-02` (one bullet with
+a bolded phrase mid-way, not two merged points).
+
 ## NEXT STEPS
 
-1. Issue A + D on `edexcel-a-theme-2` — 36 A-cards and 12 D-cards. Work in
-   ~20-card batches: batch 2 = the first ~20 A/D cards in deck order.
-2. Then Themes 3 and 4, then `aqa-micro`, then `aqa-macro`, same treatment.
-3. Then Issue B (47 cards; listing from `audit.py --issue B --show`).
+1. **Issue A + D on `edexcel-a-theme-3`** — 34 A-cards and 6 D-cards. Dump the
+   cards with the snippet in HOW TO RESUME below, hand-author the replacements
+   into `_working/flashcards/qa/edits/batch-04.json`, apply, `touch.py`,
+   rebuild, re-audit, screenshot, commit.
+2. Then Theme 4 (43 A, 12 D), `aqa-micro` (43 A, 15 D), `aqa-macro` (48 A,
+   16 D), same treatment.
+3. Then Issue B: the 41 remaining cards (`audit.py --issue B --show`). Almost
+   all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
-   the localStorage prefix `ea-flashcards:v1:` → `:v2:`, and update card counts
-   in deck landing pages, the hub, meta descriptions and the
-   FLASHCARDS_PROGRESS coverage matrix.
+   the localStorage prefix `ea-flashcards:v1:` → `:v2:` in
+   `js/components/flashcards.js`, and update card counts in deck landing pages,
+   the hub, meta descriptions and the FLASHCARDS_PROGRESS coverage matrix.
 5. Then Phase 3 verification.
+
+## HOW TO RESUME
+
+```bash
+python3 -m http.server 8899 &                        # tools need this
+python3 _working/flashcards/qa/audit.py              # where things stand
+python3 _working/flashcards/qa/audit.py --issue A --show --deck edexcel-a-theme-3
+```
+
+To dump the full text of a deck's outstanding A/D cards, ready to edit:
+
+```bash
+python3 - <<'PY'
+import json, subprocess
+DECK = "edexcel-a-theme-3"
+ids = set()
+for issue in ("A", "D"):
+    out = subprocess.run(["python3", "_working/flashcards/qa/audit.py",
+                          "--issue", issue, "--deck", DECK],
+                         capture_output=True, text=True).stdout
+    for line in out.splitlines():
+        parts = line.split()
+        if len(parts) == 2 and not line.startswith("issue"):
+            ids.add(parts[1])
+path = {"edexcel-a-theme-3": "flashcards-data/edexcel-a/theme-3.json"}[DECK]
+deck = json.load(open(path))
+sel = [c for c in deck["cards"] if c["id"] in ids]
+sel.sort(key=lambda c: [int(x) for x in c["specCode"].split(".")])
+for card in sel:
+    print("=" * 74)
+    print(card["id"], "|", card["cardType"])
+    print("F:", card["front"])
+    print("B:", card["back"])
+PY
+```
+
+Then the loop for every batch:
+
+```bash
+python3 _working/flashcards/qa/apply.py _working/flashcards/qa/edits/batch-NN.json
+python3 _working/flashcards/qa/touch.py <every id edited>
+python3 scripts/build_flashcards.py
+python3 _working/flashcards/qa/audit.py
+python3 _working/flashcards/qa/shoot.py <a few ids> --side back --tag batch-NN
+python3 scripts/verify_html.py flashcards revision-notes
+```
+
+Edit files live in `_working/flashcards/qa/edits/`. `apply.py` refuses to run
+unless every `old` matches byte for byte, and proves afterwards that nothing
+outside the named fields moved — so a stale or mistyped `old` costs nothing.
 
 ## OPEN QUESTIONS FOR ME
 
