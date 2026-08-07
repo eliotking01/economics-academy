@@ -111,21 +111,31 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
-| A — merged points on one line | not started | 206 cards (229 blocks) | 0 | — |
+| A — merged points on one line | in progress | 206 cards (229 blocks) | 2 | `edexcel-a-theme-1` **done (0 left)**. Next: `edexcel-a-theme-2`. |
 | B — exam board references | not started | 47 cards (64 mentions) | 0 | — |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
-| D — long inline lists | not started | 168 cards (187 lists) | 0 | — |
+| D — long inline lists | in progress | 67 cards (76 lists) | 4 | `edexcel-a-theme-1` **done**; its 2 remaining hits are judged false positives and deliberately left (see below). Next: `edexcel-a-theme-2`. |
 
-Per deck:
+Per deck, cards remaining:
 
 | Deck | A | B | C | D |
 | --- | --- | --- | --- | --- |
-| `edexcel-a-theme-1` | 2 | 3 | 13 | 17 |
-| `edexcel-a-theme-2` | 36 | 7 | 28 | 25 |
-| `edexcel-a-theme-3` | 34 | 2 | 12 | 19 |
-| `edexcel-a-theme-4` | 43 | 0 | 1 | 26 |
-| `aqa-micro` | 43 | 17 | 37 | 43 |
-| `aqa-macro` | 48 | 18 | 32 | 38 |
+| `edexcel-a-theme-1` | **0** | 3 | 13 | 2 (both false positives, left) |
+| `edexcel-a-theme-2` | 36 | 7 | 28 | 12 |
+| `edexcel-a-theme-3` | 34 | 2 | 12 | 6 |
+| `edexcel-a-theme-4` | 43 | 0 | 1 | 12 |
+| `aqa-micro` | 43 | 17 | 37 | 15 |
+| `aqa-macro` | 48 | 18 | 32 | 16 |
+
+**The D count fell from 168 cards to 67 when the detector was tightened after
+the Theme 1 calibration batch.** The first version split sentences on commas,
+which counts clauses rather than list items, so ordinary prose ("The market
+produces at Q1, where MPC = MPB, but the social optimum is Q2, where MSC =
+MSB.") read as a four-item list. Three corrections, all in
+`audit.py:list_runs()`: parenthetical examples are stripped before scanning;
+a segment opening with a subordinator or a participle breaks the run instead of
+extending it (`NOT_AN_ITEM`); and the atomic/substantive test uses the median
+item length, not the mean. Spot-checked against Theme 1 by hand afterwards.
 
 Notes on what the numbers mean:
 
@@ -206,31 +216,62 @@ Every card where a list was cut to six bullets, with exactly what was removed �
   one-pass QA tool, not a standing verifier like `scripts/verify_*.py`, and
   `_working/` is already the unpublished home for build-time working files.
 
+## BATCH LOG
+
+**Batch 1 — `edexcel-a-theme-1`, issues A and D (2026-08-07).** 6 cards edited,
+2 candidates read and deliberately left. Deck now audits A=0, D=2 (both the
+left-alone false positives).
+
+| Card | What changed |
+| --- | --- |
+| `edexcel-a-1-2-3-formula-02` | A — the YED sign rules ran together in one sentence; now two labelled bullets plus the luxury threshold on its own line. |
+| `edexcel-a-1-2-3-formula-03` | A — the three XED sign rules ran together; now three labelled bullets. |
+| `edexcel-a-1-2-2-diagram-01` | D — the four non-price demand factors were inline inside the shift sentence; now a lead-in line, four bullets, and the price/quantity reading on its own line. |
+| `edexcel-a-1-2-4-diagram-01` | D — the same treatment for the three supply shift factors, kept parallel with its demand twin above; the leftward-shift sentence also split onto its own line. |
+| `edexcel-a-1-1-4-diagram-02` | D — the four causes of growth bulleted; "outward shift"/"inward shift" bolded to match the AQA twin card. |
+| `edexcel-a-1-1-5-eval-01` | D — two `<li>`s each crammed 3–4 semicolon-separated points; now a **For** heading with 4 bullets and an **Against** heading with 3. |
+
+Read and left alone, with reasons (Eliot's check on my judgement):
+
+- `edexcel-a-1-1-5-def-01` — "individuals, firms, regions, or countries" is the
+  subject of a definition sentence, not a list of revision points.
+- `edexcel-a-1-1-4-diagram-01` — "E, inside the frontier, is inefficient; F,
+  outside it, is currently unattainable" is prose; the commas are appositive.
+- `edexcel-a-1-1-3-def-01`, `edexcel-a-1-1-3-def-04`, `edexcel-a-1-4-1-app-02`,
+  `edexcel-a-1-3-1-def-01`, `edexcel-a-1-3-3-def-02`, `edexcel-a-1-4-1-diagram-01`,
+  `edexcel-a-1-1-2-def-02` and others — flagged only by the first, loose
+  version of the D detector; all ordinary prose or parenthetical examples. They
+  no longer flag.
+
+No economics wording was changed in any of the six: every clause is the
+original text, re-split across lines. No list exceeded six items, so the
+TRIMMED LISTS LOG is still empty.
+
+A CSS follow-up came out of the visual check: a lead-in `<p>` and the `<ul>` it
+introduces were 2em apart (the site-wide block margin), so the bullets floated
+away from the sentence setting them up. Scoped rules now pull the list up and
+give `<li>`s a little breathing room, on card faces, static samples and the
+print sheet alike.
+
 ## NEXT STEPS
 
-1. **Blocked**: get Eliot's answer on the card-height side effect (see OPEN
-   QUESTIONS) before any content editing begins. The CSS change is already in
-   the working tree and is trivially reversible.
-2. Then Issue A + D together, deck by deck in ~20-card batches, starting with
-   `edexcel-a-theme-1` (2 A-cards, 17 D-cards — the smallest deck, a good
-   calibration batch). Present before/after for each batch.
-3. Then Issue B (47 cards, listing already produced by
-   `audit.py --issue B --show`).
+1. Issue A + D on `edexcel-a-theme-2` — 36 A-cards and 12 D-cards. Work in
+   ~20-card batches: batch 2 = the first ~20 A/D cards in deck order.
+2. Then Themes 3 and 4, then `aqa-micro`, then `aqa-macro`, same treatment.
+3. Then Issue B (47 cards; listing from `audit.py --issue B --show`).
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
-   the localStorage prefix, and update card counts in deck landing pages, the
-   hub, meta descriptions and the FLASHCARDS_PROGRESS coverage matrix.
+   the localStorage prefix `ea-flashcards:v1:` → `:v2:`, and update card counts
+   in deck landing pages, the hub, meta descriptions and the
+   FLASHCARDS_PROGRESS coverage matrix.
 5. Then Phase 3 verification.
 
 ## OPEN QUESTIONS FOR ME
 
-1. **The card is now as tall as its answer.** Fixing the clipping means the
-   question side of a card is as tall as its answer side, so a one-line
-   question can sit vertically centred in a tall panel. Three ways to go:
-   (a) accept it — CSS-only, no layout jump on flip, card size stays put;
-   (b) add JS so the card resizes to whichever face is showing, animating with
-   the flip — nicer, but new code and a possible jitter mid-flip;
-   (c) revert and keep the scrolling fixed-height card, which means answers
-   stay cut off. Recommendation: (a).
+None outstanding. Answered so far:
+
+1. **The card is now as tall as its answer** — Eliot chose (a) accept it,
+   2026-08-07: CSS-only, no layout jump on flip, no new JS. A short question
+   therefore sits vertically centred in a panel sized by its answer.
 
 ## Untracked oddity, not touched
 

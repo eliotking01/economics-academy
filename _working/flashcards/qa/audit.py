@@ -42,6 +42,13 @@ MID_STRONG = re.compile(r"(?<=[.;:!?])\s+<strong>")
 # A3: two or more worked arithmetic steps sharing a block.
 CALC_STEP = re.compile(r"=\s*(?:<strong>)?[-−£$]?\d")
 
+# Segment openers that mark ordinary prose rather than a parallel list item.
+NOT_AN_ITEM = {
+    "where", "but", "so", "which", "because", "though", "although", "while",
+    "since", "if", "when", "as", "yet", "however", "whereas", "that", "who",
+    "unless", "and", "then", "with", "leaving", "meaning", "not", "rather",
+}
+
 VERBS = (r"define|defin(?:e|ing)|explain|evaluate|state|list|show|calculate|"
          r"describe|distinguish|compare|contrast|assess|analyse|outline|give|"
          r"name|draw|identify")
@@ -81,15 +88,24 @@ def list_runs(text):
     """
     runs = []
     for sentence in re.split(r"(?<=[.!?])\s+", text):
+        # Parenthetical examples are not lists to bullet: "(e.g., oil, coal,
+        # natural gas)" and "(A, C, D, B)" would otherwise read as four items.
+        scan = re.sub(r"\([^)]*\)", "", sentence)
         for sep in (";", ","):
-            parts = [p.strip() for p in re.split(re.escape(sep), sentence)
+            parts = [p.strip() for p in re.split(re.escape(sep), scan)
                      if p.strip()]
             if len(parts) < 4:
                 continue
-            best = []
-            run = []
+            best, run = [], []
             for part in parts:
-                if len(part.split()) <= 14:
+                # A list item is a parallel phrase. A segment opening with a
+                # subordinator or a participle is a clause of ordinary prose
+                # ("where MSC = MSB", "leading to a welfare loss"), and its
+                # presence breaks the run rather than extending it.
+                first = part.split()[0].lower().strip("—–-")
+                clause = first in NOT_AN_ITEM or (
+                    first.endswith("ing") and len(part.split()) > 2)
+                if len(part.split()) <= 14 and not clause:
                     run.append(part)
                     if len(run) > len(best):
                         best = list(run)
@@ -97,8 +113,9 @@ def list_runs(text):
                     run = []
             if len(best) < 4:
                 continue
-            words = sum(len(p.split()) for p in best) / len(best)
-            kind = "substantive" if words > 3 else "atomic"
+            lengths = sorted(len(p.split()) for p in best)
+            median = lengths[len(lengths) // 2]
+            kind = "substantive" if median >= 3 else "atomic"
             runs.append((sep, len(best), kind, sentence))
             break
     return runs

@@ -321,6 +321,28 @@
   margin-bottom: 0;
 }
 
+/* A lead-in line and the list it introduces are one unit. The site's 2em
+ * block gap otherwise leaves the bullets floating away from the sentence
+ * that sets them up. Card faces, static samples and the print sheet all
+ * carry the same authored HTML, so all three are scoped here. */
+.flashcards-page .fc-face p + ul,
+.flashcards-page .fc-sample-back p + ul,
+.flashcards-page .fc-print-back p + ul {
+  margin-top: -1.35em;
+}
+
+.flashcards-page .fc-face li,
+.flashcards-page .fc-sample-back li,
+.flashcards-page .fc-print-back li {
+  margin-bottom: 0.4em;
+}
+
+.flashcards-page .fc-face li:last-child,
+.flashcards-page .fc-sample-back li:last-child,
+.flashcards-page .fc-print-back li:last-child {
+  margin-bottom: 0;
+}
+
 .flashcards-page .fc-card:focus-visible {
   outline: 3px solid var(--fc-secondary);
   outline-offset: 3px;
