@@ -168,10 +168,27 @@
   border-color: var(--gl-accent);
 }
 
+/* Says what the box searches before a student finds out by getting nothing. */
+.glossary-page .gl-help {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--gl-muted);
+}
+
 .glossary-page .gl-count {
   margin-bottom: 1.5em;
   font-size: 0.9em;
   color: var(--gl-muted);
+}
+
+/*
+ * The ranked results list. Search orders by match quality, which means the
+ * matches cannot stay inside their A-Z sections - they are moved in here and
+ * put back when the box is cleared. Styled to match a letter section so the
+ * page does not appear to change shape.
+ */
+.glossary-page .gl-results {
+  margin-bottom: 2.5em;
 }
 
 .glossary-page .gl-noscript p,
@@ -341,25 +358,10 @@
   line-height: 1.65;
 }
 
-/* The list that completes a definition which ends on a colon in the notes. It
- * cannot live inside the <p>, so it sits after it inside the <dd>. */
-.glossary-page .gl-def-list {
-  margin: 0 0 0.6em 0;
-}
-
-.glossary-page .gl-def-list ul {
-  margin: 0;
-  padding-left: 1.3em;
-  list-style: disc;
-}
-
-.glossary-page .gl-def-list li {
-  padding-left: 0.2em;
-  color: var(--gl-body);
-  line-height: 1.6;
-}
-
-/* The list that completes a definition which ends on a colon in the notes. */
+/* The list that completes a definition in the notes. It cannot live inside the
+ * <p>, so it is a sibling inside the <dd> - before the paragraph where the list
+ * is the definition and the paragraph only an example, after it otherwise.
+ * (This block was duplicated verbatim; the second copy was removed 2026-08-07.) */
 .glossary-page .gl-def-list {
   margin: 0 0 0.6em 0;
 }
@@ -396,6 +398,17 @@
   color: #8a6d00;
 }
 
+/*
+ * The theme tag. Filled with the brand accent rather than a grey, so it reads
+ * as part of the site and not as disabled chrome. #fff on #d52349 is 5.04:1,
+ * which passes AA for normal text; the grey it replaced was #fff on #7a7a7a at
+ * 4.29:1, which did not. One accent for every theme on purpose - a colour per
+ * theme would imply a meaning the tag does not carry.
+ *
+ * Green was the other candidate and lost twice over: #4caf50 is 2.78:1 with
+ * white text, and it already means "correct" on this site - it is the tick
+ * glyph in css/main.css.
+ */
 .glossary-page .gl-group {
   display: inline-block;
   padding: 0.15em 0.55em;
@@ -403,7 +416,7 @@
   font-size: 0.9em;
   font-weight: 700;
   color: #fff;
-  background: #7a7a7a;
+  background: var(--gl-accent);
   border-radius: 2px;
 }
 
@@ -560,6 +573,8 @@
     text-decoration: none;
   }
 
+  /* On paper the accent fill is wasted ink, and browsers drop backgrounds by
+   * default anyway - which would leave white text on white. Outlined instead. */
   .glossary-page .gl-group {
     color: #000;
     background: none;

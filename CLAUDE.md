@@ -78,6 +78,24 @@ Names are lowercase kebab-case throughout. Topic pages are
 `1-2-3-short-title-slug.html` — spec code with dots as hyphens. Paper PDFs are
 `{board}-{level}-economics-paper-{n}-{month}-{year}-{question-paper|mark-scheme}.pdf`.
 
+### Where a new feature's URL goes
+
+**A feature nests under the section it belongs to; only a standalone tool sits
+at root.** The glossary is `/revision-notes/glossary/` because it is a glossary
+of the notes' own terms. `/flashcards/` and `/practice-questions/` are at root
+because they stand on their own.
+
+**Decide this once, before the URLs ship.** GitHub Pages cannot issue a 301 —
+there is no `_redirects`, `netlify.toml`, `vercel.json` or `.htaccess` here, and
+the default Jekyll build offers nothing equivalent. A meta-refresh or JS
+redirect is the only option, both pass authority unreliably, and the stub pages
+then have to stay in the repo permanently. Evaluated for the glossary on
+2026-08-07 and rejected on exactly that basis; see `_working/glossary/PROGRESS.md`.
+
+Nesting has one incidental benefit: `inject-templates.js` highlights the nav
+item by path prefix, so a page under `/revision-notes/` needs no new rule.
+`/flashcards/` needed its own line for that reason.
+
 ## How a page is assembled
 
 Standalone HTML. No includes, no partials, no build. Header and footer are
@@ -206,15 +224,26 @@ Every definition and formula a student needs, one page per exam board, at
 `/revision-notes/glossary/{edexcel-a,aqa}/` with a board selector at
 `/revision-notes/glossary/`.
 
-**The definitions are the notes' own words, with one declared exception.** Every
+**The definitions are the notes' own words, with two declared exceptions.** Every
 entry except those in `glossary-data/authored.json` is lifted verbatim from the
 `<span class="key-definition">` chip and the paragraph that follows it on a topic
 page, and `scripts/verify_glossary.py` re-reads the notes and fails if a shipped
-definition no longer appears in its source page. A term that reads badly is fixed
-**in the notes**, then re-extracted — never edited in the glossary.
+definition no longer appears in its source page. The second exception is the
+`rewrite` block in `curation.json`, which edits the **lead-in** of 46 definitions
+at render time — see "Capitalisation and lead-in rewrites" below.
+
+Outside those two, a term that reads badly is fixed **in the notes**, then
+re-extracted — never edited in the glossary. Both exceptions are counted on
+every `verify_glossary.py` run so neither goes quiet.
 
 - `glossary-data/terms.json` — **generated** by `scripts/extract_glossary.py`
   from the notes HTML. Never hand-edit.
+- **When a definition reads badly, look on the page before writing anything.**
+  Three separate cases here turned out to have the real definition already in
+  the notes, just somewhere the extractor could not reach: under a plain
+  `<strong>Effect:</strong>` instead of a chip (`Maximum Price`), or in the
+  `<ul>` below the chip (the five trading blocs). `excludeSources` +
+  `authored.json`, and `attachList`, fixed both without inventing a word.
 - `glossary-data/curation.json` — hand-written judgement: the non-term stop-list,
   display casing, alias merges, approved table harvests. Kept separate so
   re-extraction cannot destroy it, exactly as `tags.json` is for the past papers.
@@ -238,6 +267,40 @@ reflows it and the build stops being idempotent.
 
 The full glossary is real HTML in the page, not fetched — it must be readable
 with JavaScript off. `js/components/glossary-filter.js` only enhances.
+
+**Search matches the term name only**, ranked exact → prefix → word start →
+contains → fuzzy. `SEARCH_FIELDS` in that file is the whole of that decision.
+Ranking needs the order to change, so a query moves the matches into one flat
+list and hides the A–Z; clearing puts them back. A topic filter alone reorders
+nothing and leaves the A–Z in place.
+
+**Capitalisation and lead-in rewrites are applied at render time**, from
+`curation.json`, never in `terms.json` — the data has to stay byte-identical to
+the notes or the verbatim check stops meaning anything.
+
+- `capitalise` — definitions the notes wrote as `Term: definition` get their
+  first letter upper-cased. 58 wordings.
+- `rewrite` — **the second declared exception to "the notes' own words"**, after
+  `authored.json`. 46 definitions the notes wrote with the term as the sentence
+  subject (*"Globalisation is the increasing integration…"*) have their lead-in
+  replaced so they read as definitions. Instructed by Eliot on 2026-08-07,
+  explicitly overriding the rule that such a definition is fixed in the notes
+  and re-extracted. A rule replaces a **leading substring only**; 39 of the 46
+  merely drop a lead-in and invent no word, and the 7 that do are marked `adds`
+  or `not-a-definition`. The build **fails** if `from` is no longer how the
+  definition opens, so rewording a notes page cannot silently re-point a rule.
+
+`scripts/check_glossary_capitalisation.py` classifies and reports both.
+`verify_glossary.py` check 6 fails on any lower-case start nobody has ruled on;
+check 7 keeps every rewrite anchored and prints how many are shown.
+
+Because of this, **check 1 proves the extraction is faithful, not the page.**
+Do not describe the glossary as word-for-word without that qualification — the
+board pages' own intro was reworded on 2026-08-07 for the same reason.
+
+There is **no synonyms or alternative-names field.** Abbreviations only match
+because the notes put them in the term (`Price Elasticity of Demand (PED)`), and
+the tokeniser splits on the brackets.
 
 ## Flashcards
 
@@ -294,7 +357,7 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 ## See also
 
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
-- `_working/glossary/authored-review.md` — the 74 authored definitions, the
+- `_working/glossary/authored-review.md` — the 76 authored definitions, the
   only entries on the site that are not the notes' own words.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**

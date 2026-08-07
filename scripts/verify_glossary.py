@@ -3,12 +3,17 @@
 
     python3 scripts/verify_glossary.py
 
-The glossary reproduces definitions from the revision notes word for word. That
-is only true on the day it is generated: edit a notes page afterwards and the
-glossary silently becomes a quotation of something that no longer exists. This
-is the check that catches it.
+The glossary reproduces definitions from the revision notes. That is only true
+on the day it is generated: edit a notes page afterwards and the glossary
+silently becomes a quotation of something that no longer exists. This is the
+check that catches it.
 
-Five checks, in order of what they would catch:
+Two declared exceptions, both counted on every run so neither goes quiet:
+glossary-data/authored.json, written for the glossary because the notes never
+define the concept; and the "rewrite" block in curation.json, which edits the
+lead-in of 46 definitions the notes wrote as sentence fragments. See check 7.
+
+Seven checks, in order of what they would catch:
 
   1. Every EXTRACTED definition appears verbatim in the notes page it cites.
      Done by comparing plain text, independently of the extractor, so a bug in
@@ -20,6 +25,15 @@ Five checks, in order of what they would catch:
   3. Every generated page is current - rebuilding produces the same HTML.
   4. Every cited notes page exists, and every anchor id on a page is unique.
   5. Every DefinedTerm in the JSON-LD points at an id that exists on the page.
+  6. Every definition that starts on a lower-case letter has been ruled on in
+     curation.json - capitalised at render time, or deliberately left. A new
+     notes chip cannot reintroduce the inconsistency unnoticed.
+  7. Every rewrite in curation.json still matches how its definition opens.
+     46 definitions are DISPLAYED with an edited lead-in so they read as
+     definitions rather than sentence fragments - the one place the glossary
+     does not show the notes' own words. Check 1 still proves the extraction is
+     faithful; this proves the rewrites are still pointed at the text they were
+     reviewed against, and prints how many carry invented wording.
 
 Exits non-zero on any failure. Standard library only.
 """
@@ -238,6 +252,68 @@ def main():
                     fails.append(f"[5] {d}: DefinedTerm '{dt['name']}' has an "
                                  f"empty description")
     print(f"  5. JSON-LD terms resolve to real anchors            {ld_checked} checked")
+
+    # ---- 6. capitalisation is decided, not defaulted -----------------------
+    # A definition lifted out of its notes chip opens on a lower-case letter.
+    # Which ones are capitalised at render time is a decision recorded in
+    # curation.json; this fails when a new one appears that nobody has ruled on,
+    # so writing a new notes chip cannot quietly reintroduce the inconsistency.
+    cap = load("check_glossary_capitalisation")
+    cap_rows = cap.classify(data)
+    curation = json.loads((ROOT / "glossary-data" / "curation.json")
+                          .read_text(encoding="utf-8"))
+    block = curation.get("capitalise", {})
+    rules = curation.get("rewrite", {}).get("entries", {})
+    accounted = (set(block.get("apply", {})) | set(block.get("leave", {}))
+                 | set(rules))
+    unruled = [r for r in cap_rows
+               if bg.cap_key(r["id"], r["html"]) not in accounted]
+    for r in sorted(unruled, key=lambda r: r["id"])[:20]:
+        fails.append(f"[6] {r['id']} ({r['board']} {r['spec']}) starts lower-case "
+                     f"and is not in curation.json \"capitalise\": {r['text'][:70]}")
+    if len(unruled) > 20:
+        fails.append(f"[6] ...and {len(unruled) - 20} more. Run "
+                     f"scripts/check_glossary_capitalisation.py --approve")
+    print(f"  6. lower-case starts all ruled on                   "
+          f"{len(cap_rows) - len(unruled)}/{len(cap_rows)}   "
+          f"({len(block.get('apply', {}))} capitalised at render time)")
+
+    # ---- 7. the rewrites still apply, and stay visible ----------------------
+    # Check 1 proves the EXTRACTION is faithful to the notes. It cannot prove
+    # the rendered page is, because these definitions are deliberately displayed
+    # with an edited lead-in. So: every rule must still match how its definition
+    # opens (a reworded notes chip must break the build, not be papered over),
+    # and the count is printed every run so the departure never goes quiet.
+    live = {}
+    for t in data["terms"]:
+        for s in t["sources"]:
+            live[bg.cap_key(t["id"], s["definitionHtml"])] = s["definitionHtml"]
+    orphaned = added = 0
+    for key, rule in sorted(rules.items()):
+        if key not in live:
+            orphaned += 1
+            fails.append(f"[7] rewrite for '{rule['term']}' matches no current "
+                         f"definition - the notes have changed. Re-review it, or "
+                         f"delete the rule if the notes are fixed at source")
+        elif not live[key].startswith(rule["from"]):
+            fails.append(f"[7] rewrite for '{rule['term']}' no longer applies: "
+                         f"the definition opens {live[key][:50]!r}")
+    # A term can have several sources and only one is displayed, so a rule can
+    # be correct and still change nothing a reader sees. Count what is actually
+    # on the page - overstating the departure is as unhelpful as hiding it.
+    displayed = set()
+    for board in bg.BOARDS:
+        for t in data["terms"]:
+            if board not in t["boards"]:
+                continue
+            key = bg.cap_key(t["id"], bg.source_for(t, board)["definitionHtml"])
+            if key in rules:
+                displayed.add(key)
+    added = sum(1 for k in displayed
+                if rules[k].get("kind") in ("adds", "not-a-definition"))
+    print(f"  7. rewritten definitions still anchored             "
+          f"{len(rules) - orphaned}/{len(rules)}   "
+          f"({len(displayed)} shown, of which {added} carry added wording)")
 
     if fails:
         print(f"\n{len(fails)} failure(s):", file=sys.stderr)

@@ -4,10 +4,11 @@ Live state of the Glossary & Formulae build. **Read this first** after any
 `/clear`. Updated immediately after every completed step, approval or decision —
 never batched.
 
-- **Branch:** `feature/glossary` (off `main` at `faccb6a`)
-- **Current phase:** Phase 2 — extraction & gap analysis
-- **Current step:** 6 complete — gaps filled; manual QA is Eliot's
-- **Last updated:** 2026-08-03
+- **Branch:** `fix/glossary-polish` (off `main` at `11e763a`). The build itself
+  merged to `main` on 2026-08-04 and is live.
+- **Current phase:** Phase 7 — post-launch fixes
+- **Current step:** all five fixes applied; manual QA is Eliot's
+- **Last updated:** 2026-08-07
 
 ---
 
@@ -78,6 +79,45 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [ ] 5.2 Manual, **for Eliot**: real phone, JS disabled, keyboard, print preview, Rich Results
 - [ ] 5.3 Summary + handover
 
+### Phase 7 — post-launch fixes — COMPLETE (2026-08-07)
+
+Five fixes, one commit each, on `fix/glossary-polish`.
+
+- [x] 7.1 **Capitalisation.** 58 approved wordings (95 records) capitalised at
+      render time. The 79 fragment records were left alone here and handled
+      separately in 7.5. New `scripts/check_glossary_capitalisation.py`, new
+      verifier check 6.
+- [x] 7.2 **Theme tags** recoloured grey → `--gl-accent` (`#d52349`). Fixed an
+      existing AA failure: white on `#7a7a7a` is 4.29:1, on `#d52349` 5.04:1.
+      Print unchanged (outlined, no fill).
+- [x] 7.3 **Search matches the term only**, ranked, with a flat results list
+      while a query is active. Verified end-to-end in headless Chrome.
+- [x] 7.4 **URL move evaluated and rejected.** Stays at
+      `/revision-notes/glossary/`. Convention recorded in `CLAUDE.md`.
+- [x] 7.5 **Fragment definitions rewritten at render time** (D16), notes
+      untouched. 46 rules in `curation.json` → `rewrite`; new verifier check 7;
+      "word for word" claims reworded on all three pages and in the meta
+      descriptions, since they had stopped being true.
+- [x] 7.7 **The 8 `e.g.` chips resolved** (D18). `Free trade area`,
+      `Customs union`, `Common market`, `Monetary union` and `Currency union`
+      gave an example where a definition was expected — the defining
+      characteristics were the `<ul>` underneath, which the extractor skipped
+      because the text does not end on a colon. New `curation.json` →
+      `attachList` names them and the list is taken as part of the definition.
+      **No wording written**, and the verbatim check covers the list. The list
+      renders **before** the example (Eliot's call): the extractor sets
+      `listIsDefinition` on the source, and `entry_html` orders the two on it.
+      The JSON-LD description folds the list in as a sentence, since "e.g.
+      USMCA" alone was useless as structured data. A duplicated `.gl-def-list`
+      block in `glossary.css` was removed at the same time.
+- [x] 7.6 **`Maximum Price` and `Minimum Price` given real definitions** (D17).
+      Both notes pages already define them properly under
+      `<strong>Effect:</strong>`, which is not a chip and so was invisible to
+      the extractor. The externalities-page chips are dropped via
+      `excludeSources` and the definitions added to `authored.json`, adapted
+      from those pages' own Purpose/Effect wording. 44 rewrite rules remain; the
+      two `not-a-definition` ones are gone.
+
 ---
 
 ## Decisions approved by Eliot
@@ -94,6 +134,14 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 | D8 | **A–Z is the primary order**, theme is a filter + per-entry metadata | Listing every term twice under two orderings would double the page and confuse the anchors. Flagged in the plan as reversible to a view toggle if Eliot prefers |
 | D9 | **No downloadable PDF in v1** — print stylesheet only | Would need a headless browser or PDF library on a repo with zero build deps, and becomes a second artefact that drifts. Cmd+P covers it |
 | D10 | Flashcards / self-test **out of scope for v1** | Set in the brief. To be recorded in `ROADMAP.md` |
+| D11 | Capitalisation applied **at render time from `curation.json`**, never in `terms.json` | `terms.json` is generated and must stay byte-identical to the notes, or check 1 stops meaning anything. Keyed on term id + a hash of the wording, so rewording a notes chip lapses the approval instead of silently carrying it to text nobody approved |
+| D12 | Fragments are **not** capitalised and **not** reworded | "Globalisation is the increasing integration" would become "Is the increasing integration". Rewording is a wording change, which is Eliot's alone. **Superseded by D16 on 2026-08-07** |
+| D13 | Theme tags take **one accent for all themes**, `#d52349` | A colour per theme would imply a meaning the tag does not carry. Green lost twice: `#4caf50` is 2.78:1 with white text, and already means "correct" as the tick glyph in `main.css` |
+| D14 | Search matches the **term only**, ranked, results flattened while querying | Matching definitions buried the Demand entry under every definition mentioning demand. Ranking requires the order to change, so A-Z gives way during a query and returns on clear |
+| D15 | Glossary **stays at `/revision-notes/glossary/`** | GitHub Pages cannot 301. Meta-refresh or JS redirect would be the only option, both pass authority unreliably, and the stubs would live in the repo forever. URL depth is a weak signal and the pages were 3 days old — the gain did not cover the cost. Confirms D2 |
+| D18 | The five trading-bloc chips take their **following list** as the definition | They give an example, not a definition — but the defining characteristics are already on the page, in the `<ul>` under the chip. `following_list()` only fired on a trailing colon, so curation names them in `attachList` instead. Same mechanism, same words, wider reach. Preferred over authoring, which would have duplicated content the notes already carry |
+| D17 | `Maximum Price` / `Minimum Price` moved to **`authored.json`**, their externalities-page chips excluded | Instructed by Eliot on 2026-08-07: replace the non-definitions with the real thing. Both government-intervention pages already define them, but under `<strong>Effect:</strong>` rather than a `key-definition` chip, so the extractor cannot reach the wording. This is the path `extract_glossary.py` was already built for — exclusions are applied *before* the authored layer precisely so an authored entry can replace an excluded chip. The definitions are adapted from those pages' own Purpose/Effect wording and link to them per board |
+| D16 | **Fragment definitions are rewritten at render time**, notes untouched | Instructed by Eliot on 2026-08-07, explicitly overriding D12 and the CLAUDE.md rule that a badly-reading definition is fixed in the notes. Kept as narrow as possible: a rule replaces a **leading substring only**, 39 of 46 invent no word, and the build fails if `from` stops matching so a reworded notes page cannot silently re-point a rule. This is the **second** declared departure from "the notes' own words", after `authored.json` |
 
 ---
 
@@ -210,7 +258,9 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `_working/glossary/integration-proposals.md` | Written — P1-P4, awaiting sign-off |
 | `scripts/test_glossary_filter.js` | Created — filter tests + markup contract |
 | `scripts/build_glossary.py` | Created — generator |
-| `scripts/verify_glossary.py` | Created — the anti-drift check |
+| `scripts/verify_glossary.py` | Created — the anti-drift check; check 6 added 2026-08-07 |
+| `scripts/check_glossary_capitalisation.py` | Created 2026-08-07 — classifies, reports, `--approve`, `--check` |
+| `_working/glossary/capitalisation-report.md` | Generated 2026-08-07 — the 206 lower-case starts |
 | `scripts/vendor/katex.min.js` + `README.md` | Created — build-time only, not served |
 | `css/vendor/katex/katex.min.css` + `fonts/*.woff2` | Created — 20 woff2, 296KB |
 | `css/pages/glossary.css` | Created — scoped under `.glossary-page` |
@@ -218,7 +268,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `revision-notes/glossary/{,edexcel-a/,aqa/}index.html` | **Generated** |
 | `sitemap.xml` | Modified — new Glossary block, 3 URLs |
 | `revision-notes/aqa-a2-macro/2-1-{2,3}-*.html` | Modified — G3, three `%`→`\%`, no wording change |
-| `glossary-data/authored.json` | Created — 74 authored definitions, 4 formulae |
+| `glossary-data/authored.json` | Created — 76 authored definitions, 4 formulae (Maximum/Minimum Price added 2026-08-07) |
 | `_working/glossary/authored-review.md` | Generated — the economics to check |
 | `templates/header.html` | Modified — P1, one `<li>` |
 | `revision-notes/index.html` | Modified — P2a, col-4→col-3 ×3 plus a fourth button |
@@ -229,7 +279,53 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ---
 
+## Synonyms — worth building, not built
+
+**The glossary data has no synonyms or alternative-names field.**
+`curation.json`'s `aliases` merges duplicate *spellings* during extraction and
+never reaches the page.
+
+This matters more now search is term-only. An abbreviation only matches because
+the notes happen to put it in the term itself — `Price Elasticity of Demand
+(PED)` tokenises to include `ped`, so "PED", "GDP", "AD", "YED" and "XED" all
+work by luck of house style rather than by design. Student shorthand that is
+**not** in any term string matches nothing at all: `PPF`, `PPC`, `MRP`, `MPC`
+where the term is written out, and any term whose common abbreviation the notes
+never bracket.
+
+The shape it would take: a `synonyms` array per term in `curation.json` (so
+re-extraction cannot destroy it), emitted as a `data-synonyms` attribute and
+concatenated into `termTokens` by `buildIndex`. Ranked below a real term match.
+Roughly an hour, no new dependency.
+
+Not built — no instruction to.
+
+---
+
 ## Outstanding for Eliot (carried to handover)
+
+- **`Maximum Price` and `Minimum Price` now carry real definitions** — done
+  2026-08-07, see 7.6. Check the economics: they are **W70/W71** and **W74/W75**
+  in `authored-review.md`.
+- **Three rewrites add a word**, the only new wording in the glossary outside
+  `authored.json`. Worth a read: `Composite indicators` and `Single indicators`
+  gained "Indicators that", `Non-excludability` (×2) gained "Where", and
+  `Information Provision` has "educate" → "Educating". All marked `adds` in
+  `curation.json`, all listed in the report.
+- **3 rules are inert** — `Information Provision`, `Non-excludability` and
+  `Regulation` have a rule for a source that is not the one displayed on either
+  board, so they change nothing a reader sees. Harmless, and correct if the
+  preferred source ever changes. Check 7 reports shown vs total.
+- ~~8 chips are examples, not definitions~~ **Resolved 2026-08-07, see 7.7.**
+  All five trading-bloc terms had their defining characteristics in the list
+  underneath the chip; the extractor now takes it. Nothing was written.
+- **2 unclassified**, both `Regulation`. Same report.
+- **The pages no longer claim "word for word".** The board intros, the landing
+  page and the meta descriptions said each definition was taken word for word
+  from the notes, which stopped being true for these 46. Reworded to "comes
+  from" / "taken from". The landing page also said "Nothing here is written for
+  the glossary", which was already false — `authored.json` has 76 — and that
+  sentence is gone.
 
 - **The spec PDFs are live on the public site.** `faccb6a "added specs"`
   committed `specificiations/{aqa-spec,edexcel-a-spec}.pdf`, and both return
@@ -243,9 +339,14 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Nothing.** Phase 6 is complete: every gap the report listed is filled.
+**Nothing.** Phase 7 is complete: all four post-launch fixes are applied and
+committed on `fix/glossary-polish`, which is **not merged** — merging is what
+publishes it.
 
 Waiting on Eliot:
+
+0. Review and merge `fix/glossary-polish`, then check the four fixes on the live
+   site. The 79 fragments above are the only content decision outstanding.
 
 1. **Check the economics** in `_working/glossary/authored-review.md` — 132
    authored wordings across 74 terms. These are the only entries on the site

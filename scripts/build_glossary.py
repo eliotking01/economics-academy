@@ -32,6 +32,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import hashlib
 import html
 import json
 import pathlib
@@ -69,12 +70,12 @@ BOARDS = {
         "intro": (
             "Every key term and formula you need for <strong>Edexcel A-Level "
             "Economics A (9EC0)</strong>, covering Themes 1 to 4. Each "
-            "definition is taken word for word from the revision notes on this "
-            "site, and links back to the topic page it came from."
+            "definition comes from the revision notes on this site, and links "
+            "back to the topic page it came from."
         ),
         "meta": (
             "Every key term and formula for Edexcel A-Level Economics (9EC0), "
-            "taken word for word from our Theme 1-4 revision notes. Search, "
+            "taken from our Theme 1-4 revision notes. Search, "
             "browse A-Z or print."
         ),
     },
@@ -87,13 +88,12 @@ BOARDS = {
         "intro": (
             "Every key term and formula you need for <strong>AQA A-Level "
             "Economics (7136)</strong>, covering microeconomics and "
-            "macroeconomics. Each definition is taken word for word from the "
-            "revision notes on this site, and links back to the topic page it "
-            "came from."
+            "macroeconomics. Each definition comes from the revision notes on "
+            "this site, and links back to the topic page it came from."
         ),
         "meta": (
             "Every key term and formula for AQA A-Level Economics (7136), taken "
-            "word for word from our microeconomics and macroeconomics revision "
+            "from our microeconomics and macroeconomics revision "
             "notes. Search or print."
         ),
     },
@@ -101,9 +101,97 @@ BOARDS = {
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)
 
+# ------------------------------------------------------------ capitalisation
+#
+# The notes write a definition as the continuation of its chip - "Absolute
+# advantage: a situation in which ..." - so lifted out and set under a heading
+# it opens on a lower-case letter. Capitalising the first letter is a
+# presentation change, and it is made HERE, at render time, for exactly that
+# reason: glossary-data/terms.json stays byte-identical to the notes, so
+# verify_glossary.py's verbatim check keeps meaning what it says.
+#
+# Which records get it is not a judgement this script makes. It reads the
+# approved list from curation.json, where scripts/check_glossary_capitalisation.py
+# put it. Definitions that need the term as their grammatical subject
+# ("Globalisation is the increasing integration ...") are NOT on that list, and
+# are fixed in the notes or not at all.
+
+CURATION = DATA.parent / "curation.json"
+
+# A definition record has no stable id - a term can carry several sources on one
+# page - so approval is keyed on the wording itself. Reword the notes and the
+# key changes, the approval lapses, and --check asks for it again. That is the
+# intended behaviour, not a limitation.
+FIRST_LETTER = re.compile(r"^(\s*(?:<[^>]+>\s*)*)([a-z])")
+
+
+def cap_key(term_id: str, definition_html: str) -> str:
+    digest = hashlib.sha1(definition_html.encode("utf-8")).hexdigest()[:8]
+    return f"{term_id}:{digest}"
+
+
+def approved_capitalisations() -> set:
+    cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    return set(cur.get("capitalise", {}).get("apply", {}))
+
+
+def capitalise(term_id: str, fragment: str, approved: set) -> str:
+    """Upper-case the definition's first letter, if that record is approved.
+
+    The first letter is not always the first character: a definition may open
+    inside a <strong>, so the tags are stepped over rather than counted.
+    """
+    if cap_key(term_id, fragment) not in approved:
+        return fragment
+    return FIRST_LETTER.sub(lambda m: m.group(1) + m.group(2).upper(),
+                            fragment, count=1)
+
+
+# ---------------------------------------------------------------- rewrites
+#
+# THE ONE PLACE THE GLOSSARY DOES NOT SHOW THE NOTES' OWN WORDS.
+#
+# 46 definitions read as fragments because the notes made the term the subject
+# of the sentence - "Globalisation is the increasing integration ...". Under a
+# heading that leaves "is the increasing integration ...". Eliot asked on
+# 2026-08-07 for these to read correctly in the glossary WITHOUT the notes being
+# edited, which is a deliberate, instructed departure from the rule in CLAUDE.md
+# that a badly-reading definition is fixed in the notes and re-extracted.
+#
+# It is kept as narrow as it can be:
+#
+#   - A rewrite replaces a LEADING SUBSTRING and nothing else. 39 of the 46 only
+#     drop a lead-in and capitalise the next word, so no word is invented. The
+#     seven that do not are marked "adds" or "not-a-definition" in curation.json.
+#   - "from" must still be the start of the extracted definition. Change the
+#     notes and the build stops, rather than quietly applying a rewrite to text
+#     it was never reviewed against. That is the anti-drift property the
+#     verbatim check gives everything else.
+#   - terms.json is untouched, so check 1 keeps proving the EXTRACTION is
+#     faithful. What it no longer proves is that the rendered page is - which is
+#     what check 7 in verify_glossary.py exists to make visible.
+
+
+def rewrites() -> dict:
+    cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    return cur.get("rewrite", {}).get("entries", {})
+
+
+def rewrite(term_id: str, fragment: str, table: dict) -> str:
+    rule = table.get(cap_key(term_id, fragment))
+    if not rule:
+        return fragment
+    if not fragment.startswith(rule["from"]):
+        raise BuildError(
+            f"rewrite for '{term_id}' no longer applies: the notes now open "
+            f"{fragment[:60]!r}, not {rule['from']!r}. Re-review it in "
+            f"glossary-data/curation.json, or delete the rule if the notes have "
+            f"been fixed at source.")
+    return rule["to"] + fragment[len(rule["from"]):]
+
 LANDING_META = (
     "Free A-Level Economics glossary. Choose your exam board for every "
-    "definition and formula you need, taken word for word from our Edexcel and "
+    "definition and formula you need, taken from our Edexcel and "
     "AQA revision notes."
 )
 
@@ -420,16 +508,46 @@ def source_link(s):
             f'>{e(s["spec"])} {e(s["topic"])}</a>')
 
 
-def entry_html(term, board, inline_map):
+def ld_description(term, board, rules, approved):
+    """The DefinedTerm description: the same words the page shows.
+
+    Where the list carries the meaning, "e.g. USMCA" on its own would be a
+    useless description, so the list is folded in - as a sentence, since
+    structured data takes plain text and cannot show bullets.
+    """
     s = source_for(term, board)
-    # Five definitions end on a colon because the rest of them is the bulleted
+    text = plain(capitalise(term["id"],
+                            rewrite(term["id"], s["definitionHtml"], rules),
+                            approved))
+    if s.get("listIsDefinition") and s.get("definitionListHtml"):
+        items = [plain(i) for i in
+                 re.findall(r"<li>(.*?)</li>", s["definitionListHtml"], re.S)]
+        if items:
+            text = "; ".join(i.rstrip(".") for i in items) + f". {text}"
+    return text
+
+
+def entry_html(term, board, inline_map, approved, rules):
+    s = source_for(term, board)
+    definition = rewrite(term["id"], s["definitionHtml"], rules)
+    definition = capitalise(term["id"], definition, approved)
+    # Some definitions end on a colon because the rest of them is the bulleted
     # list that follows on the notes page. The list is carried across so the
     # entry reads as a whole; it cannot sit inside the <p>.
+    #
+    # Order depends on which half is the definition. Normally the paragraph
+    # opens the sentence and the list finishes it, so the paragraph leads. For
+    # the five trading-bloc terms it is the other way round - the paragraph is
+    # only "e.g. USMCA" and the list carries the meaning - so the list leads and
+    # the example follows it.
     dlist = ""
     if s.get("definitionListHtml"):
-        dlist = ('\n                  <div class="gl-def-list">'
+        dlist = ('<div class="gl-def-list">'
                  + render_inline_maths(s["definitionListHtml"], inline_map)
                  + "</div>")
+    text = f'<p class="gl-text">{render_inline_maths(definition, inline_map)}</p>'
+    body = [dlist, text] if s.get("listIsDefinition") else [text, dlist]
+    body_html = "\n                  ".join(p for p in body if p)
     groups = sorted({x["group"] for x in term["sources"] if x["board"] == board})
     others = [x for x in term["sources"]
               if x["board"] == board and x is not s]
@@ -448,7 +566,7 @@ def entry_html(term, board, inline_map):
               >
                 <dt class="gl-term">{e(term['term'])}</dt>
                 <dd class="gl-def">
-                  <p class="gl-text">{render_inline_maths(s['definitionHtml'], inline_map)}</p>{dlist}
+                  {body_html}
                   <p class="gl-source">{source_link(s)}</p>{also}
                 </dd>
               </div>"""
@@ -476,6 +594,8 @@ def formula_html(f, board, rendered, groups):
 
 def render_board(data, board, groups, rendered_map, inline_map):
     meta = BOARDS[board]
+    approved = approved_capitalisations()
+    rules = rewrites()
     terms = [t for t in data["terms"] if board in t["boards"]]
     formulae = [f for f in data["formulae"] if board in f["boards"]]
     # Sort on the canonical key so a leading article is ignored here too,
@@ -509,7 +629,8 @@ def render_board(data, board, groups, rendered_map, inline_map):
         if not by_letter[L]:
             continue
         entries = "\n".join(
-                entry_html(t, board, inline_map) for t in by_letter[L])
+                entry_html(t, board, inline_map, approved, rules)
+                for t in by_letter[L])
         sections.append(f"""          <section class="gl-letter" id="letter-{L.lower()}">
             <h2 class="gl-letter-head">{L}</h2>
             <dl class="gl-list">
@@ -517,7 +638,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </dl>
           </section>""")
     if other:
-        entries = "\n".join(entry_html(t, board, inline_map) for t in other)
+        entries = "\n".join(entry_html(t, board, inline_map, approved, rules) for t in other)
         sections.append(f"""          <section class="gl-letter" id="letter-other">
             <h2 class="gl-letter-head">Other</h2>
             <dl class="gl-list">
@@ -567,14 +688,18 @@ def render_board(data, board, groups, rendered_map, inline_map):
           <div class="gl-search" data-glossary-search>
             <form class="gl-controls" data-gl-controls hidden>
               <div class="gl-field">
-                <label for="gl-query">Search this glossary</label>
+                <label for="gl-query">Search key terms</label>
                 <input
                   type="search"
                   id="gl-query"
                   data-gl-query
-                  placeholder="Try elasticity, or PED"
+                  placeholder="Search key terms - try elasticity, or PED"
                   autocomplete="off"
+                  aria-describedby="gl-query-help"
                 />
+                <p class="gl-help" id="gl-query-help">
+                  Searches term names, not definition text.
+                </p>
               </div>
               <div class="gl-field">
                 <label for="gl-group">Filter by topic</label>
@@ -599,11 +724,19 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </nav>
 
             <p class="gl-empty" data-gl-empty hidden>
-              No entries match. Try a shorter search, or
+              No key terms match <strong data-gl-echo></strong>. Search looks at
+              term names only, not definition text - so a topic that is not
+              itself a key term will not be found. Try a shorter term, jump to a
+              letter above, or
               <button type="button" class="gl-clear-inline" data-gl-clear>
-                clear the filters</button
+                clear the search</button
               >.
             </p>
+
+            <section class="gl-results" data-gl-results hidden>
+              <h2 class="gl-letter-head">Best matches</h2>
+              <dl class="gl-list"></dl>
+            </section>
 {formula_block}
 {chr(10).join(sections)}
           </div>"""
@@ -624,7 +757,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
                 "@type": "DefinedTerm",
                 "@id": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "name": t["term"],
-                "description": plain(source_for(t, board)["definitionHtml"]),
+                "description": ld_description(t, board, rules, approved),
                 "url": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "inDefinedTermSet":
                     f"{SITE}/revision-notes/glossary/{meta['slug']}/#glossary",
@@ -680,8 +813,7 @@ def render_landing(data):
               specification asks for.
             </p>
             <p class="gl-intro">
-              Nothing here is written for the glossary. Every definition is taken
-              word for word from the
+              Every definition comes from the
               <a href="/revision-notes/index.html">revision notes</a> on this
               site, and links back to the topic page it came from.
             </p>
