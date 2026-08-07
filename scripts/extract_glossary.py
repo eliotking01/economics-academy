@@ -333,8 +333,13 @@ def page_meta(root: Node, path: pathlib.Path, meta, problems):
     }
 
 
-def chips_on(root: Node, ctx, stop, problems):
-    """Every term and definition on one page, plus what was deliberately skipped."""
+def chips_on(root: Node, ctx, stop, problems, attach=frozenset()):
+    """Every term and definition on one page, plus what was deliberately skipped.
+
+    `attach` is the set of canonical keys whose following list completes the
+    definition even though the chip's text does not end on a colon - see the
+    comment at the bottom of this function.
+    """
     kept, skipped = [], []
     heading = ""
 
@@ -382,12 +387,21 @@ def chips_on(root: Node, ctx, stop, problems):
 
         # A definition ending on a colon is a fragment. Take the list that
         # completes it where there is one; otherwise drop the dangling clause.
+        #
+        # Five trading-bloc chips need the same treatment for a different
+        # reason: they give an example where a definition is expected - "Free
+        # trade area: e.g. USMCA" - and the defining characteristics are the
+        # bulleted list underneath. There is no punctuation that says so, so
+        # curation names them in attachList and the list is taken exactly as a
+        # trailing colon would take it. Still the notes' own words, and still
+        # covered by the verbatim check, which reads the list too.
         definition_list = ""
-        if squash(re.sub(r"<[^>]+>", "", definition)).endswith(":"):
+        dangling = squash(re.sub(r"<[^>]+>", "", definition)).endswith(":")
+        if dangling or canonical_key(term) in attach:
             lst = following_list(node)
             if lst is not None:
                 definition_list = list_html(lst)
-            else:
+            elif dangling:
                 definition = trim_dangling(definition)
 
         kept.append({
@@ -635,6 +649,8 @@ def build():
                    for k, v in curation.get("excludeSources", {}).items()}
     prefer_src = {canonical_key(k): list(v)
                   for k, v in curation.get("preferredSources", {}).items()}
+    # Chips whose following list is the definition - see chips_on().
+    attach = {canonical_key(k) for k in curation.get("attachList", [])}
     boards = board_index()
 
     term_records, formula_records, table_candidates = [], [], []
@@ -655,7 +671,7 @@ def build():
             body = next((n for n in walk(root)
                          if "notes-container" in n.cls()), root)
             page_ctx[ctx["notesUrl"]] = ctx
-            kept, skipped = chips_on(body, ctx, stop, problems)
+            kept, skipped = chips_on(body, ctx, stop, problems, attach)
             term_records.extend(kept)
             skipped_all.extend((ctx["sourceFile"], why, t)
                                for why, t, _ in skipped)

@@ -98,6 +98,13 @@ Five fixes, one commit each, on `fix/glossary-polish`.
       untouched. 46 rules in `curation.json` → `rewrite`; new verifier check 7;
       "word for word" claims reworded on all three pages and in the meta
       descriptions, since they had stopped being true.
+- [x] 7.7 **The 8 `e.g.` chips resolved** (D18). `Free trade area`,
+      `Customs union`, `Common market`, `Monetary union` and `Currency union`
+      gave an example where a definition was expected — the defining
+      characteristics were the `<ul>` underneath, which the extractor skipped
+      because the text does not end on a colon. New `curation.json` →
+      `attachList` names them and the list is taken as part of the definition.
+      **No wording written**, and the verbatim check covers the list.
 - [x] 7.6 **`Maximum Price` and `Minimum Price` given real definitions** (D17).
       Both notes pages already define them properly under
       `<strong>Effect:</strong>`, which is not a chip and so was invisible to
@@ -127,6 +134,7 @@ Five fixes, one commit each, on `fix/glossary-polish`.
 | D13 | Theme tags take **one accent for all themes**, `#d52349` | A colour per theme would imply a meaning the tag does not carry. Green lost twice: `#4caf50` is 2.78:1 with white text, and already means "correct" as the tick glyph in `main.css` |
 | D14 | Search matches the **term only**, ranked, results flattened while querying | Matching definitions buried the Demand entry under every definition mentioning demand. Ranking requires the order to change, so A-Z gives way during a query and returns on clear |
 | D15 | Glossary **stays at `/revision-notes/glossary/`** | GitHub Pages cannot 301. Meta-refresh or JS redirect would be the only option, both pass authority unreliably, and the stubs would live in the repo forever. URL depth is a weak signal and the pages were 3 days old — the gain did not cover the cost. Confirms D2 |
+| D18 | The five trading-bloc chips take their **following list** as the definition | They give an example, not a definition — but the defining characteristics are already on the page, in the `<ul>` under the chip. `following_list()` only fired on a trailing colon, so curation names them in `attachList` instead. Same mechanism, same words, wider reach. Preferred over authoring, which would have duplicated content the notes already carry |
 | D17 | `Maximum Price` / `Minimum Price` moved to **`authored.json`**, their externalities-page chips excluded | Instructed by Eliot on 2026-08-07: replace the non-definitions with the real thing. Both government-intervention pages already define them, but under `<strong>Effect:</strong>` rather than a `key-definition` chip, so the extractor cannot reach the wording. This is the path `extract_glossary.py` was already built for — exclusions are applied *before* the authored layer precisely so an authored entry can replace an excluded chip. The definitions are adapted from those pages' own Purpose/Effect wording and link to them per board |
 | D16 | **Fragment definitions are rewritten at render time**, notes untouched | Instructed by Eliot on 2026-08-07, explicitly overriding D12 and the CLAUDE.md rule that a badly-reading definition is fixed in the notes. Kept as narrow as possible: a rule replaces a **leading substring only**, 39 of 46 invent no word, and the build fails if `from` stops matching so a reworded notes page cannot silently re-point a rule. This is the **second** declared departure from "the notes' own words", after `authored.json` |
 
@@ -303,9 +311,9 @@ Not built — no instruction to.
   `Regulation` have a rule for a source that is not the one displayed on either
   board, so they change nothing a reader sees. Harmless, and correct if the
   preferred source ever changes. Check 7 reports shown vs total.
-- **8 chips are examples, not definitions** (`Common market :: e.g. European
-  Union (EU)`). Report, "Not a definition". Not touched — an example cannot be
-  reworded into a definition, so this needs your wording.
+- ~~8 chips are examples, not definitions~~ **Resolved 2026-08-07, see 7.7.**
+  All five trading-bloc terms had their defining characteristics in the list
+  underneath the chip; the extractor now takes it. Nothing was written.
 - **2 unclassified**, both `Regulation`. Same report.
 - **The pages no longer claim "word for word".** The board intros, the landing
   page and the meta descriptions said each definition was taken word for word

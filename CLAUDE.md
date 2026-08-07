@@ -238,6 +238,12 @@ every `verify_glossary.py` run so neither goes quiet.
 
 - `glossary-data/terms.json` — **generated** by `scripts/extract_glossary.py`
   from the notes HTML. Never hand-edit.
+- **When a definition reads badly, look on the page before writing anything.**
+  Three separate cases here turned out to have the real definition already in
+  the notes, just somewhere the extractor could not reach: under a plain
+  `<strong>Effect:</strong>` instead of a chip (`Maximum Price`), or in the
+  `<ul>` below the chip (the five trading blocs). `excludeSources` +
+  `authored.json`, and `attachList`, fixed both without inventing a word.
 - `glossary-data/curation.json` — hand-written judgement: the non-term stop-list,
   display casing, alias merges, approved table harvests. Kept separate so
   re-extraction cannot destroy it, exactly as `tags.json` is for the past papers.

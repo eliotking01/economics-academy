@@ -121,7 +121,13 @@ def classify(data):
             elif src["origin"] == "authored":
                 bucket, reason = "authored", "written for the glossary"
             elif lead in ("e.g", "eg", "i.e", "ie"):
-                bucket, reason = "notdef", "an example, not a definition"
+                # An example where a definition was expected. Resolved when the
+                # notes' own list underneath has been attached to it.
+                if src.get("definitionListHtml"):
+                    bucket, reason = ("example",
+                                      "an example, completed by the notes' list")
+                else:
+                    bucket, reason = "notdef", "an example, not a definition"
             elif not colons.get((src["notesUrl"], src["termAsWritten"],
                                  src["definitionHtml"]), True):
                 bucket, reason = "fragment", "no colon: the term is the subject"
@@ -170,9 +176,18 @@ BUCKETS = [
      "wording in the glossary outside `authored.json`.\n\n"
      "The `now` line below is what the **notes** say. What the page shows is "
      "the `to` value of the rule."),
+    ("example", "Example plus the notes' own defining list — resolved",
+     "The chip gives an example where a definition was expected — `Free trade "
+     "area: e.g. USMCA` — and the defining characteristics are the bulleted "
+     "list underneath it on the page. Those chips are named in "
+     "`curation.json` → `attachList`, so the extractor takes the list as part "
+     "of the definition, exactly as a trailing colon would make it. Still the "
+     "notes' own words, and the verbatim check reads the list too. The "
+     "lower-case `e.g.` is left alone deliberately."),
     ("notdef", "Not a definition",
-     "These are examples that were chipped as if they were definitions. "
-     "Capitalisation is not the problem with them."),
+     "These are examples that were chipped as if they were definitions, with "
+     "nothing on the page to complete them. Capitalisation is not the problem "
+     "with them."),
     ("symbol", "Intentional — leave alone",
      "These open on notation rather than a word. Nothing to change."),
     ("authored", "Authored entries",
