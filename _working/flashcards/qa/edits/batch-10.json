@@ -1,0 +1,176 @@
+[
+  {
+    "id": "aqa-2-1-1-def-01",
+    "field": "front",
+    "old": "<p>State the <strong>four main objectives</strong> of government macroeconomic policy in the AQA specification.</p>",
+    "new": "<p>State the <strong>four main objectives</strong> of government macroeconomic policy.</p>"
+  },
+  {
+    "id": "aqa-2-1-1-def-01",
+    "field": "back",
+    "old": "<p><strong>Economic growth</strong>; <strong>price stability</strong> (low and stable inflation — the UK's 2% CPI target); <strong>minimising unemployment</strong>; and a <strong>stable balance of payments on current account</strong>.</p><p>AQA also expects awareness of further objectives — balancing the government budget, a more equitable distribution of income, and environmental protection — and that the importance attached to each objective changes over time.</p>",
+    "new": "<ul><li><strong>Economic growth</strong>.</li><li><strong>Price stability</strong> (low and stable inflation — the UK's 2% CPI target).</li><li><strong>Minimising unemployment</strong>.</li><li>A <strong>stable balance of payments on current account</strong>.</li></ul><p>Be aware of further objectives too — balancing the government budget, a more equitable distribution of income, and environmental protection — and that the importance attached to each objective changes over time.</p>"
+  },
+  {
+    "id": "aqa-2-1-1-def-02",
+    "field": "back",
+    "old": "<p><strong>Growth</strong> — sustainable, around 2–3%: raises incomes, living standards, employment and tax revenue. <strong>Unemployment</strong> — near full employment, around 4–5%, allowing for frictional unemployment: maximises output and reduces poverty. <strong>Inflation</strong> — the 2% CPI target: certainty for consumers and firms, protects savings, supports competitiveness.</p><p>The current account aim is a sustainable position — only a small surplus or deficit.</p>",
+    "new": "<ul><li><strong>Growth</strong> — sustainable, around 2–3%: raises incomes, living standards, employment and tax revenue.</li><li><strong>Unemployment</strong> — near full employment, around 4–5%, allowing for frictional unemployment: maximises output and reduces poverty.</li><li><strong>Inflation</strong> — the 2% CPI target: certainty for consumers and firms, protects savings, supports competitiveness.</li></ul><p>The current account aim is a sustainable position — only a small surplus or deficit.</p>"
+  },
+  {
+    "id": "aqa-2-1-2-def-01",
+    "field": "back",
+    "old": "<p><strong>Nominal GDP</strong> values output at current prices; <strong>real GDP</strong> adjusts for inflation, valuing output at constant prices — approximately, % change in real GDP = % change in nominal GDP − inflation.</p><p><strong>Real GDP per capita</strong> divides real GDP by the population: average output per person, the better starting point for living standards.</p>",
+    "new": "<p><strong>Nominal GDP</strong> values output at current prices.</p><p><strong>Real GDP</strong> adjusts for inflation, valuing output at constant prices — approximately, % change in real GDP = % change in nominal GDP − inflation.</p><p><strong>Real GDP per capita</strong> divides real GDP by the population: average output per person, the better starting point for living standards.</p>"
+  },
+  {
+    "id": "aqa-2-1-3-calc-01",
+    "field": "back",
+    "old": "<p>Weight × index: housing 400 × 108 = 43,200; transport 350 × 104 = 36,400; food 250 × 112 = 28,000.</p><p>Total = 107,600; divide by total weight: 107,600 ÷ 1,000 = <strong>107.6</strong></p><p>Prices across the basket average <strong>7.6% above the base year</strong>. Food rose fastest (12%), but the heavily-weighted housing category matters more to the overall index — that is what weighting does.</p>",
+    "new": "<p>Weight × index:</p><ul><li>Housing 400 × 108 = 43,200</li><li>Transport 350 × 104 = 36,400</li><li>Food 250 × 112 = 28,000</li></ul><p>Total = 107,600</p><p>Divide by total weight: 107,600 ÷ 1,000 = <strong>107.6</strong></p><p>Prices across the basket average <strong>7.6% above the base year</strong>. Food rose fastest (12%), but the heavily-weighted housing category matters more to the overall index — that is what weighting does.</p>"
+  },
+  {
+    "id": "aqa-2-1-4-eval-01",
+    "field": "back",
+    "old": "<p>Even real GDP per capita hides much: <strong>income distribution</strong> (an average conceals inequality); the <strong>informal economy</strong> (subsistence farming, unpaid care, the hidden economy go unrecorded — a big understatement in developing countries); <strong>quality of life</strong> (health, leisure, freedom); <strong>negative externalities</strong> (polluting output still counts); the <strong>composition of output</strong> (defence spending raises GDP without raising welfare); and <strong>data reliability</strong> across countries.</p><p>The fullest single comparison is real GDP per capita at PPP; broader indices such as the HDI add health and education.</p>",
+    "new": "<p>Even real GDP per capita hides much:</p><ul><li><strong>Income distribution</strong> (an average conceals inequality).</li><li>The <strong>informal economy</strong> (subsistence farming, unpaid care, the hidden economy go unrecorded — a big understatement in developing countries).</li><li><strong>Quality of life</strong> (health, leisure, freedom).</li><li><strong>Negative externalities</strong> (polluting output still counts).</li><li>The <strong>composition of output</strong> (defence spending raises GDP without raising welfare).</li><li><strong>Data reliability</strong> across countries.</li></ul><p>The fullest single comparison is real GDP per capita at PPP; broader indices such as the HDI add health and education.</p>"
+  },
+  {
+    "id": "aqa-2-2-1-def-01",
+    "field": "back",
+    "old": "<p><strong>Nominal income</strong> is measured at current prices; <strong>real income</strong> strips out inflation, so it reflects what income can actually buy.</p><p>Rising <strong>real national income</strong> is the key indicator of economic performance: it means the economy is genuinely producing more, not just charging higher prices for the same output.</p>",
+    "new": "<ul><li><strong>Nominal income</strong> is measured at current prices.</li><li><strong>Real income</strong> strips out inflation, so it reflects what income can actually buy.</li></ul><p>Rising <strong>real national income</strong> is the key indicator of economic performance: it means the economy is genuinely producing more, not just charging higher prices for the same output.</p>"
+  },
+  {
+    "id": "aqa-2-2-1-diagram-01",
+    "field": "back",
+    "old": "<p>Households and firms are linked by two pairs of flows. <strong>Real flows</strong>: households provide the factors of production — land, labour, capital, enterprise — and firms provide goods and services.</p><p><strong>Money flows</strong>: firms pay income — rent, wages, interest, profit — and households return it as consumer expenditure, which becomes firms' revenue. The same flow measured at any point gives income = output = expenditure.</p>",
+    "new": "<p>Households and firms are linked by two pairs of flows.</p><p><strong>Real flows</strong>: households provide the factors of production — land, labour, capital, enterprise — and firms provide goods and services.</p><p><strong>Money flows</strong>: firms pay income — rent, wages, interest, profit — and households return it as consumer expenditure, which becomes firms' revenue.</p><p>The same flow measured at any point gives income = output = expenditure.</p>"
+  },
+  {
+    "id": "aqa-2-2-1-def-02",
+    "field": "back",
+    "old": "<p><strong>Injections</strong> — investment, government spending, exports — add new spending to the circular flow; <strong>withdrawals</strong> — savings, taxation, imports — leak income out of it. National income is in <strong>equilibrium</strong> when injections equal withdrawals; if injections exceed withdrawals the flow expands, and if withdrawals exceed injections it contracts.</p><p><strong>Full employment income</strong> is the level of national income at which all resources are fully employed — equilibrium need not occur there.</p>",
+    "new": "<ul><li><strong>Injections</strong> — investment, government spending, exports — add new spending to the circular flow.</li><li><strong>Withdrawals</strong> — savings, taxation, imports — leak income out of it.</li></ul><p>National income is in <strong>equilibrium</strong> when injections equal withdrawals; if injections exceed withdrawals the flow expands, and if withdrawals exceed injections it contracts.</p><p><strong>Full employment income</strong> is the level of national income at which all resources are fully employed — equilibrium need not occur there.</p>"
+  },
+  {
+    "id": "aqa-2-2-2-def-01",
+    "field": "back",
+    "old": "<p><strong>Aggregate demand</strong> is the total demand for all goods and services in an economy at a given average price level and in a given time period: AD = C + I + G + (X − M).</p><p>Consumption is the largest component at around 60% of AD; government spending around 25%; investment around 14% — the most volatile; net exports are small and often negative for the UK.</p>",
+    "new": "<p><strong>Aggregate demand</strong> is the total demand for all goods and services in an economy at a given average price level and in a given time period: AD = C + I + G + (X − M).</p><ul><li>Consumption is the largest component at around 60% of AD.</li><li>Government spending around 25%.</li><li>Investment around 14% — the most volatile.</li><li>Net exports are small and often negative for the UK.</li></ul>"
+  },
+  {
+    "id": "aqa-2-2-3-def-01",
+    "field": "back",
+    "old": "<p><strong>Consumption</strong> — household spending on goods and services, the largest component of AD — is determined primarily by <strong>disposable income</strong>: income after direct taxes plus transfer payments.</p><p>Extra disposable income splits between spending and saving: the <strong>MPC</strong> is the proportion spent, the <strong>MPS</strong> the proportion saved, so MPC + MPS = 1. Spend £80 of an extra £100 and your MPC is 0.8.</p>",
+    "new": "<p><strong>Consumption</strong> — household spending on goods and services, the largest component of AD — is determined primarily by <strong>disposable income</strong>: income after direct taxes plus transfer payments.</p><p>Extra disposable income splits between spending and saving:</p><ul><li>The <strong>MPC</strong> is the proportion spent.</li><li>The <strong>MPS</strong> is the proportion saved.</li></ul><p>So MPC + MPS = 1. Spend £80 of an extra £100 and your MPC is 0.8.</p>"
+  },
+  {
+    "id": "aqa-2-2-3-def-02",
+    "field": "back",
+    "old": "<p><strong>Interest rates</strong> — higher rates raise the cost of borrowing and the reward for saving, cutting consumption and raising saving. <strong>Confidence</strong> — optimism about future income increases spending and borrowing; pessimism increases precautionary saving. <strong>Wealth effects</strong> — rising house or share prices make households spend more; falling wealth does the reverse.</p><p>The determinants of saving are the mirror image of the determinants of consumption — the same forces push the two shares in opposite directions.</p>",
+    "new": "<ul><li><strong>Interest rates</strong> — higher rates raise the cost of borrowing and the reward for saving, cutting consumption and raising saving.</li><li><strong>Confidence</strong> — optimism about future income increases spending and borrowing; pessimism increases precautionary saving.</li><li><strong>Wealth effects</strong> — rising house or share prices make households spend more; falling wealth does the reverse.</li></ul><p>The determinants of saving are the mirror image of the determinants of consumption — the same forces push the two shares in opposite directions.</p>"
+  },
+  {
+    "id": "aqa-2-2-3-def-03",
+    "field": "back",
+    "old": "<p><strong>Investment</strong> is spending by firms on capital goods. <strong>Depreciation</strong> is the loss of value of capital goods over time due to wear and tear or obsolescence — so net investment = gross investment − depreciation: only net investment expands the capital stock.</p><p>In economics <strong>saving is not investment</strong>: saving is household income not spent; investment is firms' spending on capital. The financial sector channels one into the other.</p>",
+    "new": "<p><strong>Investment</strong> is spending by firms on capital goods.</p><p><strong>Depreciation</strong> is the loss of value of capital goods over time due to wear and tear or obsolescence — so net investment = gross investment − depreciation: only net investment expands the capital stock.</p><p>In economics <strong>saving is not investment</strong>: saving is household income not spent; investment is firms' spending on capital. The financial sector channels one into the other.</p>"
+  },
+  {
+    "id": "aqa-2-2-4-def-01",
+    "field": "back",
+    "old": "<p><strong>The multiplier</strong> is the process by which an initial injection, such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP: the injection becomes income, a proportion is spent (per the MPC), becomes further income, and so on.</p><p>The <strong>ratio</strong>: k = final change in real GDP ÷ initial injection — a £2bn injection producing a £6bn rise in GDP means k = 3.</p>",
+    "new": "<p><strong>The multiplier</strong> is the process by which an initial injection, such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP: the injection becomes income, a proportion is spent (per the MPC), becomes further income, and so on.</p><p>The <strong>ratio</strong>: k = final change in real GDP ÷ initial injection.</p><p>A £2bn injection producing a £6bn rise in GDP means k = 3.</p>"
+  },
+  {
+    "id": "aqa-2-2-5-def-01",
+    "field": "front",
+    "old": "<p>Define <strong>SRAS</strong>, and name the cost changes AQA says shift it.</p>",
+    "new": "<p>Define <strong>SRAS</strong>, and name the cost changes that shift it.</p>"
+  },
+  {
+    "id": "aqa-2-2-5-def-01",
+    "field": "back",
+    "old": "<p><strong>Short-run aggregate supply</strong> is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed. It slopes upward because higher output brings rising unit costs, so firms need higher prices.</p><p>AQA's named shift factors: <strong>money wage rates, raw material prices, business taxation and productivity</strong> — anything changing production costs across the economy.</p>",
+    "new": "<p><strong>Short-run aggregate supply</strong> is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed. It slopes upward because higher output brings rising unit costs, so firms need higher prices.</p><p>The named shift factors:</p><ul><li><strong>Money wage rates</strong>.</li><li><strong>Raw material prices</strong>.</li><li><strong>Business taxation</strong>.</li><li><strong>Productivity</strong>.</li></ul><p>Anything changing production costs across the economy.</p>"
+  },
+  {
+    "id": "aqa-2-2-5-diagram-01",
+    "field": "back",
+    "old": "<p>SRAS shifts right (SRAS1 to SRAS2): firms supply more at <strong>every given price level</strong>, so at the unchanged price level PL output rises from Y1 to Y2.</p><p>Causes on the AQA list: lower money wage rates, cheaper raw materials, lighter business taxation, higher productivity. Rising costs shift the curve left instead — the anatomy of a supply-side shock.</p>",
+    "new": "<p>SRAS shifts right (SRAS1 to SRAS2): firms supply more at <strong>every given price level</strong>, so at the unchanged price level PL output rises from Y1 to Y2.</p><p>Causes:</p><ul><li>Lower money wage rates.</li><li>Cheaper raw materials.</li><li>Lighter business taxation.</li><li>Higher productivity.</li></ul><p>Rising costs shift the curve left instead — the anatomy of a supply-side shock.</p>"
+  },
+  {
+    "id": "aqa-2-2-6-diagram-01",
+    "field": "back",
+    "old": "<p>The curve AQA names explicitly: L-shaped, with three phases — <strong>perfectly elastic</strong> at low output, where spare capacity lets firms expand without raising prices; <strong>upward sloping</strong> as resources grow scarce; <strong>vertical</strong> at full capacity Yfe, where extra demand only raises prices.</p><p>It embodies the Keynesian belief that the economy can sit below full employment for a long time.</p>",
+    "new": "<p>An L-shaped curve with three phases:</p><ul><li><strong>Perfectly elastic</strong> at low output, where spare capacity lets firms expand without raising prices.</li><li><strong>Upward sloping</strong> as resources grow scarce.</li><li><strong>Vertical</strong> at full capacity Yfe, where extra demand only raises prices.</li></ul><p>It embodies the Keynesian belief that the economy can sit below full employment for a long time.</p>"
+  },
+  {
+    "id": "aqa-2-3-1-diagram-01",
+    "field": "back",
+    "old": "<p>Actual real GDP fluctuates around the rising trend rate of growth: <strong>boom</strong> above trend, then downturn, <strong>recession</strong> below trend, then recovery.</p><p>To place an economy in the cycle, AQA expects a range of indicators read together: <strong>real GDP growth, inflation, unemployment and investment</strong> — booms pair fast growth with rising inflation and investment; recessions the reverse.</p>",
+    "new": "<p>Actual real GDP fluctuates around the rising trend rate of growth: <strong>boom</strong> above trend, then downturn, <strong>recession</strong> below trend, then recovery.</p><p>To place an economy in the cycle, read a range of indicators together:</p><ul><li><strong>Real GDP growth</strong>.</li><li><strong>Inflation</strong>.</li><li><strong>Unemployment</strong>.</li><li><strong>Investment</strong>.</li></ul><p>Booms pair fast growth with rising inflation and investment; recessions the reverse.</p>"
+  },
+  {
+    "id": "aqa-2-3-1-eval-01",
+    "field": "back",
+    "old": "<p>Beyond ordinary demand-side and supply-side shocks — domestic and global — AQA names four amplifiers: <strong>excessive growth in credit and debt</strong>; <strong>asset price bubbles</strong>; <strong>destabilising speculation</strong>; and <strong>animal spirits or herding</strong>, where confidence swings feed on themselves.</p><p>Each can turn a shock into a cycle: cheap credit inflates a bubble, herding sustains it, and the correction delivers the downturn.</p>",
+    "new": "<p>Beyond ordinary demand-side and supply-side shocks — domestic and global — four amplifiers:</p><ul><li><strong>Excessive growth in credit and debt</strong>.</li><li><strong>Asset price bubbles</strong>.</li><li><strong>Destabilising speculation</strong>.</li><li><strong>Animal spirits or herding</strong>, where confidence swings feed on themselves.</li></ul><p>Each can turn a shock into a cycle: cheap credit inflates a bubble, herding sustains it, and the correction delivers the downturn.</p>"
+  },
+  {
+    "id": "aqa-2-3-1-eval-02",
+    "field": "back",
+    "old": "<p><strong>Benefits</strong> — higher real incomes and living standards, more employment, higher tax revenue and business investment.</p><p><strong>Costs</strong> — demand-pull inflation, inequality where gains are uneven, and environmental damage: pollution, emissions, resource depletion. AQA expects a view on <strong>sustainability</strong> — whether today's growth compromises the environment and resources future generations depend on.</p>",
+    "new": "<p><strong>Benefits</strong> — higher real incomes and living standards, more employment, higher tax revenue and business investment.</p><p><strong>Costs</strong> — demand-pull inflation, inequality where gains are uneven, and environmental damage: pollution, emissions, resource depletion.</p><p>Be ready with a view on <strong>sustainability</strong> — whether today's growth compromises the environment and resources future generations depend on.</p>"
+  },
+  {
+    "id": "aqa-2-3-2-def-01",
+    "field": "back",
+    "old": "<p><strong>Unemployed</strong> — of working age, without work, but willing and able to work and actively seeking employment. The <strong>labour force</strong> is the total of those in employment and those unemployed who are actively seeking work.</p><p><strong>Economically inactive</strong> — people of working age not seeking work: full-time students, early retirees, the long-term sick, discouraged workers.</p>",
+    "new": "<p><strong>Unemployed</strong> — of working age, without work, but willing and able to work and actively seeking employment.</p><p>The <strong>labour force</strong> is the total of those in employment and those unemployed who are actively seeking work.</p><p><strong>Economically inactive</strong> — people of working age not seeking work: full-time students, early retirees, the long-term sick, discouraged workers.</p>"
+  },
+  {
+    "id": "aqa-2-3-2-def-03",
+    "field": "front",
+    "old": "<p>Name and define the <strong>four types of unemployment</strong> in the AQA specification.</p>",
+    "new": "<p>Name and define the <strong>four types of unemployment</strong>.</p>"
+  },
+  {
+    "id": "aqa-2-3-2-def-03",
+    "field": "back",
+    "old": "<p><strong>Frictional</strong> — short-term, between jobs. <strong>Structural</strong> — a mismatch between workers' skills and available jobs, often from technological change. <strong>Seasonal</strong> — demand for some labour fluctuates across the year. <strong>Cyclical</strong> — demand-deficient unemployment in a downturn, linked to a negative output gap.</p><p>The cause decides the cure: demand-side policy treats cyclical unemployment; supply-side policy treats structural and frictional.</p>",
+    "new": "<ul><li><strong>Frictional</strong> — short-term, between jobs.</li><li><strong>Structural</strong> — a mismatch between workers' skills and available jobs, often from technological change.</li><li><strong>Seasonal</strong> — demand for some labour fluctuates across the year.</li><li><strong>Cyclical</strong> — demand-deficient unemployment in a downturn, linked to a negative output gap.</li></ul><p>The cause decides the cure: demand-side policy treats cyclical unemployment; supply-side policy treats structural and frictional.</p>"
+  },
+  {
+    "id": "aqa-2-3-3-def-01",
+    "field": "back",
+    "old": "<p><strong>Inflation</strong> — a sustained increase in the general/average price level of goods and services in an economy. <strong>Deflation</strong> — a sustained decrease in the price level: a negative inflation rate. <strong>Disinflation</strong> — a fall in the <strong>rate</strong> of inflation: prices still rising, more slowly.</p><p>AQA's trap: <strong>deflationary policies</strong> are policies that reduce AD — they do not necessarily cause deflation.</p>",
+    "new": "<p><strong>Inflation</strong> — a sustained increase in the general/average price level of goods and services in an economy.</p><p><strong>Deflation</strong> — a sustained decrease in the price level: a negative inflation rate.</p><p><strong>Disinflation</strong> — a fall in the <strong>rate</strong> of inflation: prices still rising, more slowly.</p><p>A common trap: <strong>deflationary policies</strong> are policies that reduce AD — they do not necessarily cause deflation.</p>"
+  },
+  {
+    "id": "aqa-2-4-1-def-01",
+    "field": "back",
+    "old": "<p>Four functions: a <strong>medium of exchange</strong>, a <strong>unit of account</strong> for comparing value, a <strong>store of value</strong> for deferring consumption, and a <strong>standard of deferred payment</strong> for settling debts over time.</p><p>Six characteristics make something work as money: <strong>durability, portability, divisibility, uniformity, acceptability</strong> and <strong>limited supply</strong> — the last is what protects its value from inflation.</p>",
+    "new": "<p>Four functions:</p><ul><li>A <strong>medium of exchange</strong>.</li><li>A <strong>unit of account</strong> for comparing value.</li><li>A <strong>store of value</strong> for deferring consumption.</li><li>A <strong>standard of deferred payment</strong> for settling debts over time.</li></ul><p>Six characteristics make something work as money:</p><ul><li><strong>Durability</strong>.</li><li><strong>Portability</strong>.</li><li><strong>Divisibility</strong>.</li><li><strong>Uniformity</strong>.</li><li><strong>Acceptability</strong>.</li><li><strong>Limited supply</strong> — the last is what protects its value from inflation.</li></ul>"
+  },
+  {
+    "id": "aqa-2-4-1-def-02",
+    "field": "back",
+    "old": "<p><strong>Money supply</strong>: the total amount of money available in an economy at a particular point in time.</p><p><strong>Narrow money</strong> (M1): the most liquid forms — cash and demand deposits, readily available for transactions. <strong>Broad money</strong> (M2, M3…): narrow money plus less liquid forms such as savings accounts and time deposits — the total money supply, liquid and less liquid alike.</p>",
+    "new": "<p><strong>Money supply</strong>: the total amount of money available in an economy at a particular point in time.</p><ul><li><strong>Narrow money</strong> (M1): the most liquid forms — cash and demand deposits, readily available for transactions.</li><li><strong>Broad money</strong> (M2, M3…): narrow money plus less liquid forms such as savings accounts and time deposits — the total money supply, liquid and less liquid alike.</li></ul>"
+  },
+  {
+    "id": "aqa-2-4-1-def-03",
+    "field": "back",
+    "old": "<p>The <strong>money market</strong>: short-term borrowing and lending, typically a year or less — how firms and governments manage short-term funding. The <strong>capital market</strong>: long-term borrowing and lending beyond a year — where bonds and shares raise capital for investment and expansion.</p><p>The <strong>foreign exchange market</strong>: where currencies are bought and sold, letting firms manage exchange-rate risk. Together they channel savings into investment across the wider economy.</p>",
+    "new": "<ul><li>The <strong>money market</strong>: short-term borrowing and lending, typically a year or less — how firms and governments manage short-term funding.</li><li>The <strong>capital market</strong>: long-term borrowing and lending beyond a year — where bonds and shares raise capital for investment and expansion.</li><li>The <strong>foreign exchange market</strong>: where currencies are bought and sold, letting firms manage exchange-rate risk.</li></ul><p>Together they channel savings into investment across the wider economy.</p>"
+  },
+  {
+    "id": "aqa-2-4-1-formula-01",
+    "field": "back",
+    "old": "<p><strong>Bond</strong>: a tradable debt security issued by a government or a firm in order to borrow money — UK government bonds are <strong>gilts</strong>. The <strong>coupon</strong> is the fixed annual interest payment as a percentage of the £100 face value; <strong>maturity</strong> is the date the face value is repaid in one lump sum.</p><p><strong>Bond yield (%) = annual coupon payment ÷ market price × 100</strong>. The coupon is fixed, so when the market price falls the yield rises — and vice versa.</p>",
+    "new": "<p><strong>Bond</strong>: a tradable debt security issued by a government or a firm in order to borrow money — UK government bonds are <strong>gilts</strong>.</p><ul><li>The <strong>coupon</strong> is the fixed annual interest payment as a percentage of the £100 face value.</li><li><strong>Maturity</strong> is the date the face value is repaid in one lump sum.</li></ul><p><strong>Bond yield (%) = annual coupon payment ÷ market price × 100</strong>. The coupon is fixed, so when the market price falls the yield rises — and vice versa.</p>"
+  }
+]

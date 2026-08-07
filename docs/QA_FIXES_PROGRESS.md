@@ -15,10 +15,10 @@ and merges himself.
 ## STATUS
 
 **IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
-complete. Phase 2 under way: **issues A and D are finished for all four Edexcel
-decks AND `aqa-micro`** (183 cards edited across 9 batches, all committed).
-Nothing is blocked. Remaining: A and D on `aqa-macro` (the last deck), then all
-of B, then all of C, then Phase 3 verification.
+complete. Phase 2 under way: **issues A and D are COMPLETE across all six
+decks** (240 cards edited across 12 batches, all committed). Nothing is
+blocked. Remaining: all of B (25 cards), then all of C, then Phase 3
+verification.
 
 ## RENDERING FINDINGS
 
@@ -121,10 +121,10 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
-| A — merged points on one line | in progress | 206 cards | 144 | Five of six decks done. Next: `aqa-macro` (48 cards) — the last. |
-| B — exam board references | in progress | 47 cards (64 mentions) | 11 | Only those sitting on cards already open for A/D. Next: the remaining 36, of which 18 are `aqa-macro` and 14 `aqa-micro`. |
+| A — merged points on one line | **DONE** | 206 cards | 189 | All six decks. The 17 residual hits are hand-reviewed false positives, named per deck in the batch log. |
+| B — exam board references | in progress | 47 cards (64 mentions) | 22 | Fixed opportunistically on cards already open for A/D. **Next: the remaining 25 cards / 34 mentions** — 14 in `aqa-micro`, 7 in `aqa-macro`, 3 in Theme 1, 1 in Theme 2. |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
-| D — long inline lists | in progress | 67 cards | 29 | Five of six decks done. Next: `aqa-macro` (16 cards) — the last. |
+| D — long inline lists | **DONE** | 67 cards | 51 | All six decks. The 29 residual hits are hand-reviewed false positives. |
 
 Per deck, cards **remaining** (re-run `audit.py` to refresh):
 
@@ -135,12 +135,14 @@ Per deck, cards **remaining** (re-run `audit.py` to refresh):
 | `edexcel-a-theme-3` | **5** (false positives, left) | **0** | 12 | 3 (false positives, left) |
 | `edexcel-a-theme-4` | **4** (false positives, left) | **0** | 1 | 7 (false positives, left) |
 | `aqa-micro` | **4** (false positives, left) | 14 | 37 | 5 (false positives, left) |
-| `aqa-macro` | 48 | 18 | 32 | 16 |
+| `aqa-macro` | **3** (false positives, left) | 7 | 32 | 7 (false positives, left) |
 
-A residual count above zero does **not** mean unfinished work — every deck bar
-`aqa-macro` is complete for A and D, and what remains in them is the set of detector hits
-read by hand and judged not to be defects. They are named in the batch log so a
-future session does not re-examine them.
+A residual count above zero does **not** mean unfinished work. **Every deck is
+complete for A and D.** What remains is the set of detector hits read by hand and
+judged not to be defects — bolded terms mid-sentence, examples clauses,
+appositive commas, and figures whose thousands separators the comma-splitter
+reads as list items. They are named per deck in the batch log so a future
+session does not re-examine them.
 
 **The D count fell from 168 cards to 67 when the detector was tightened after
 the Theme 1 calibration batch.** The first version split sentences on commas,
@@ -411,13 +413,54 @@ Read and left alone in `aqa-micro`: `aqa-1-4-7-def-01`, `aqa-1-5-6-diagram-02`,
 `aqa-1-6-2-def-01`, `aqa-1-6-2-def-03`, `aqa-1-1-1-def-01`, `aqa-1-3-4-calc-01`,
 `aqa-1-4-2-def-01`, `aqa-1-7-1-def-01` and `aqa-1-7-2-def-01`.
 
+**Batches 10, 11 and 12 — `aqa-macro`, issues A and D (2026-08-07).** 57 cards
+edited, completing the deck and with it **every deck**. Batch 10 (26 cards,
+2.1–2.4.1): the four objectives and UK targets, nominal/real/per-capita GDP, the
+weighted CPI calculation, the limitations of national income data, real income,
+the circular flow, injections vs withdrawals, AD's component shares,
+consumption's determinants and the other influences, gross vs net investment,
+the multiplier ratio, SRAS and its shift factors, the Keynesian AS curve, the
+economic cycle and its indicators, cyclical instability's four amplifiers, the
+costs and benefits of growth, the unemployment definitions and four types,
+inflation/deflation/disinflation, money's functions and characteristics, the
+money supply, the three financial markets, and bonds. Batch 11 (29 cards,
+2.4.2–2.6.5): commercial vs investment banks, the balance sheet, the three bank
+objectives, credit creation, the central bank's functions and transmission
+channels, the monetary-policy evaluation, the liquidity and capital ratios,
+systemic risk vs moral hazard, fiscal policy and public expenditure, the three
+tax structures, supply-side policies vs improvements and their examples,
+globalisation's drivers and consequences, comparative advantage, trade's
+benefits and costs, customs unions, the BoP set with its calculation, exchange
+rates and the J-curve, currency unions, growth vs development, the barriers, and
+the development strategies. Batch 12 (2 cards) bulleted two lists first left as
+prose on review.
+
+B fixed on nine `aqa-macro` cards already open for A/D — "in the AQA
+specification" (×2), "AQA also expects", "AQA's named shift factors", "Causes on
+the AQA list", "The curve AQA names explicitly", "AQA expects a range of
+indicators", "AQA names four amplifiers", "AQA expects a view on
+sustainability", "AQA's trap", "AQA stresses" and "Give AQA's examples".
+
+**One card regrouped rather than trimmed:** `aqa-2-6-5-def-02` listed **ten**
+economic barriers to development. Rather than drop four spec-relevant barriers,
+related pairs were combined into single bullets — foreign currency gap with
+capital flight, demographics with debt servicing, credit access with
+infrastructure, education with property rights — giving six bullets with
+**nothing removed**. Same technique as `edexcel-a-4-3-1-def-04`.
+
+Read and left alone in `aqa-macro`: `aqa-2-2-3-def-01`, `aqa-2-3-1-diagram-01`,
+`aqa-2-6-2-diagram-01`, `aqa-2-1-1-def-02`, `aqa-2-1-3-calc-01`,
+`aqa-2-2-1-diagram-01`, `aqa-2-2-4-def-01`, `aqa-2-3-2-def-01`,
+`aqa-2-4-2-def-01` and `aqa-2-6-3-calc-01`.
+
 ## NEXT STEPS
 
-1. **Issue A + D on `aqa-macro`** — 48 A-cards and 16 D-cards, the last deck.
-   Dump the cards with the snippet in HOW TO RESUME below (change `DECK` to
-   `aqa-macro`), hand-author into
-   `_working/flashcards/qa/edits/batch-10.json`, apply, `touch.py`, rebuild,
-   re-audit, screenshot, commit. Expect three batches.
+1. **Issue B — the remaining 25 cards.** Run
+   `python3 _working/flashcards/qa/audit.py --issue B --show` for the full
+   listing with the exact offending words. Nearly all are AQA cards saying
+   "AQA" where the deck title already says so. Rewrite naturally rather than
+   deleting the word and leaving a gap; board metadata, deck titles, page
+   headings, nav and SEO text must NOT change — visible card text only.
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump

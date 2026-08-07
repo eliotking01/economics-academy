@@ -1,0 +1,182 @@
+[
+  {
+    "id": "aqa-2-4-2-def-01",
+    "field": "back",
+    "old": "<p><strong>Commercial bank</strong>: a bank that accepts deposits from households and firms, makes loans to them, and provides a payments system — profiting from the interest rate spread. Its three functions: <strong>accepting deposits</strong> (sight and time accounts), <strong>lending</strong>, and <strong>providing a payments mechanism</strong>.</p><p><strong>Investment bank</strong>: takes no public deposits; it underwrites share and bond issues, advises on takeovers and trades securities for large firms, governments and institutions — higher risk, funded from wholesale markets. Many banks do both, which raises systemic risk.</p>",
+    "new": "<p><strong>Commercial bank</strong>: a bank that accepts deposits from households and firms, makes loans to them, and provides a payments system — profiting from the interest rate spread.</p><p>Its three functions:</p><ul><li><strong>Accepting deposits</strong> (sight and time accounts).</li><li><strong>Lending</strong>.</li><li><strong>Providing a payments mechanism</strong>.</li></ul><p><strong>Investment bank</strong>: takes no public deposits; it underwrites share and bond issues, advises on takeovers and trades securities for large firms, governments and institutions — higher risk, funded from wholesale markets.</p><p>Many banks do both, which raises systemic risk.</p>"
+  },
+  {
+    "id": "aqa-2-4-2-def-02",
+    "field": "back",
+    "old": "<p><strong>Assets = Liabilities + Capital</strong>, always. <strong>Deposits are liabilities</strong> — the bank owes them back to customers; <strong>loans are assets</strong> — borrowers owe them to the bank. Getting that backwards is the classic error.</p><p>Liabilities: customer deposits (largest), bonds issued and wholesale borrowing. Assets, in <strong>descending order of liquidity</strong>: cash and central-bank balances, bills, then loans and advances — the least liquid but most profitable, and normally the largest.</p>",
+    "new": "<p><strong>Assets = Liabilities + Capital</strong>, always.</p><ul><li><strong>Deposits are liabilities</strong> — the bank owes them back to customers.</li><li><strong>Loans are assets</strong> — borrowers owe them to the bank.</li></ul><p>Getting that backwards is the classic error.</p><p>Liabilities: customer deposits (largest), bonds issued and wholesale borrowing.</p><p>Assets, in <strong>descending order of liquidity</strong>: cash and central-bank balances, bills, then loans and advances — the least liquid but most profitable, and normally the largest.</p>"
+  },
+  {
+    "id": "aqa-2-4-2-def-03",
+    "field": "back",
+    "old": "<p><strong>Liquidity</strong> (meet withdrawals on demand — survival), <strong>profitability</strong> (maximise returns for shareholders) and <strong>security</strong> (minimise losses from bad debts).</p><p>The central conflict is <strong>liquidity vs profitability</strong>: the most liquid assets earn the least, the most profitable are the least liquid — too little liquidity risks a <strong>bank run</strong>, too much sacrifices profit. And <strong>profitability vs security</strong>: higher returns come only from riskier lending, whose defaults can wipe out the bank's capital.</p>",
+    "new": "<ul><li><strong>Liquidity</strong> (meet withdrawals on demand — survival).</li><li><strong>Profitability</strong> (maximise returns for shareholders).</li><li><strong>Security</strong> (minimise losses from bad debts).</li></ul><p>The central conflict is <strong>liquidity vs profitability</strong>: the most liquid assets earn the least, the most profitable are the least liquid — too little liquidity risks a <strong>bank run</strong>, too much sacrifices profit.</p><p>And <strong>profitability vs security</strong>: higher returns come only from riskier lending, whose defaults can wipe out the bank's capital.</p>"
+  },
+  {
+    "id": "aqa-2-4-2-def-04",
+    "field": "back",
+    "old": "<p><strong>Credit creation</strong>: the process by which commercial banks make loans that create new bank deposits, thereby increasing the money supply. A new loan <strong>credits the borrower's account with a new deposit</strong> — banks do not merely lend out savers' money.</p><p>It rests on <strong>fractional reserve banking</strong>: only a fraction of deposits is ever withdrawn at once, so banks hold a fraction as reserves and lend the rest; each loan becomes someone else's deposit and the cycle repeats, multiplying deposits. Credit growth drives AD — and excessive growth feeds inflation and asset bubbles.</p>",
+    "new": "<p><strong>Credit creation</strong>: the process by which commercial banks make loans that create new bank deposits, thereby increasing the money supply.</p><p>A new loan <strong>credits the borrower's account with a new deposit</strong> — banks do not merely lend out savers' money.</p><p>It rests on <strong>fractional reserve banking</strong>: only a fraction of deposits is ever withdrawn at once, so banks hold a fraction as reserves and lend the rest; each loan becomes someone else's deposit and the cycle repeats, multiplying deposits.</p><p>Credit growth drives AD — and excessive growth feeds inflation and asset bubbles.</p>"
+  },
+  {
+    "id": "aqa-2-4-3-def-01",
+    "field": "back",
+    "old": "<p><strong>Central bank</strong>: a national bank that provides financial and banking services for a country's government and commercial banks — in the UK, the <strong>Bank of England</strong>.</p><p>Its functions: <strong>issuing currency</strong>, <strong>managing the money supply</strong>, <strong>setting interest rates</strong>, acting as <strong>lender of last resort</strong> in crises, and <strong>regulating and supervising banks</strong>.</p>",
+    "new": "<p><strong>Central bank</strong>: a national bank that provides financial and banking services for a country's government and commercial banks — in the UK, the <strong>Bank of England</strong>.</p><p>Its functions:</p><ul><li><strong>Issuing currency</strong>.</li><li><strong>Managing the money supply</strong>.</li><li><strong>Setting interest rates</strong>.</li><li>Acting as <strong>lender of last resort</strong> in crises.</li><li><strong>Regulating and supervising banks</strong>.</li></ul>"
+  },
+  {
+    "id": "aqa-2-4-3-def-02",
+    "field": "back",
+    "old": "<p>The MPC's rate changes reach AD through three channels. <strong>Consumption</strong>: cheaper borrowing, less reward for saving, and variable-rate mortgage holders keep more disposable income. <strong>Investment</strong>: firms' cost of borrowing falls, so more projects pay.</p><p><strong>Net exports</strong>: lower returns send <strong>hot money</strong> abroad, the extra supply of pounds depreciates the currency, exports cheapen and imports dearen. All three raise AD — and a rate rise runs the whole mechanism in reverse.</p>",
+    "new": "<p>The MPC's rate changes reach AD through three channels:</p><ul><li><strong>Consumption</strong>: cheaper borrowing, less reward for saving, and variable-rate mortgage holders keep more disposable income.</li><li><strong>Investment</strong>: firms' cost of borrowing falls, so more projects pay.</li><li><strong>Net exports</strong>: lower returns send <strong>hot money</strong> abroad, the extra supply of pounds depreciates the currency, exports cheapen and imports dearen.</li></ul><p>All three raise AD — and a rate rise runs the whole mechanism in reverse.</p>"
+  },
+  {
+    "id": "aqa-2-4-3-eval-01",
+    "field": "back",
+    "old": "<p><strong>Time lags</strong> — effects can take up to two years; fixed-rate borrowers feel nothing at first. The <strong>liquidity trap</strong> — near the zero lower bound, further cuts change little, which is why QE exists at all.</p><p><strong>Asset price bubbles</strong> — cheap money inflates housing and shares, and bursting bubbles bring crises. And <strong>confidence</strong> — in a recession, households save the windfall and firms delay investment regardless of the rate. Monetary policy pulls on a string it cannot push.</p>",
+    "new": "<ul><li><strong>Time lags</strong> — effects can take up to two years; fixed-rate borrowers feel nothing at first.</li><li>The <strong>liquidity trap</strong> — near the zero lower bound, further cuts change little, which is why QE exists at all.</li><li><strong>Asset price bubbles</strong> — cheap money inflates housing and shares, and bursting bubbles bring crises.</li><li><strong>Confidence</strong> — in a recession, households save the windfall and firms delay investment regardless of the rate.</li></ul><p>Monetary policy pulls on a string it cannot push.</p>"
+  },
+  {
+    "id": "aqa-2-4-4-formula-01",
+    "field": "back",
+    "old": "<p><strong>Liquidity ratio</strong>: the proportion of a bank's assets that are held in liquid form, such as cash, reserves at the central bank and easily marketable securities — liquid assets ÷ total assets × 100. It guards against <strong>illiquidity</strong>: being unable to meet withdrawals, the bank-run failure of borrowing short and lending long.</p><p><strong>Capital ratio</strong>: capital ÷ risk-weighted assets × 100. Capital absorbs losses when borrowers default; once losses exceed it, the bank is <strong>insolvent</strong>.</p>",
+    "new": "<p><strong>Liquidity ratio</strong>: the proportion of a bank's assets that are held in liquid form, such as cash, reserves at the central bank and easily marketable securities — liquid assets ÷ total assets × 100.</p><p>It guards against <strong>illiquidity</strong>: being unable to meet withdrawals, the bank-run failure of borrowing short and lending long.</p><p><strong>Capital ratio</strong>: capital ÷ risk-weighted assets × 100.</p><p>Capital absorbs losses when borrowers default; once losses exceed it, the bank is <strong>insolvent</strong>.</p>"
+  },
+  {
+    "id": "aqa-2-4-4-eval-01",
+    "field": "back",
+    "old": "<p><strong>Systemic risk</strong>: the risk that the failure of one financial institution triggers the failure of others and a wider financial crisis — interbank lending, shared assets and confidence spread failure by contagion (Lehman Brothers, 2008). <strong>Moral hazard</strong>: too-big-to-fail banks take excessive risks expecting bailouts (RBS and Lloyds).</p><p>The trade-off: the tools that contain systemic risk — deposit insurance, lender of last resort, bailouts — are the very tools that create moral hazard; and the capital and liquidity rules that make banks safer also restrict credit creation and growth. Regulators can fully eliminate neither risk.</p>",
+    "new": "<p><strong>Systemic risk</strong>: the risk that the failure of one financial institution triggers the failure of others and a wider financial crisis — interbank lending, shared assets and confidence spread failure by contagion (Lehman Brothers, 2008).</p><p><strong>Moral hazard</strong>: too-big-to-fail banks take excessive risks expecting bailouts (RBS and Lloyds).</p><p>The trade-off: the tools that contain systemic risk — deposit insurance, lender of last resort, bailouts — are the very tools that create moral hazard; and the capital and liquidity rules that make banks safer also restrict credit creation and growth.</p><p>Regulators can fully eliminate neither risk.</p>"
+  },
+  {
+    "id": "aqa-2-5-1-def-01",
+    "field": "back",
+    "old": "<p><strong>Fiscal policy</strong> is the government's manipulation of government spending (G) and taxation (T) to meet macroeconomic objectives — with microeconomic functions too, such as correcting market failures and changing incentives.</p><p><strong>Expansionary</strong>: raise G, cut T — AD rises. <strong>Contractionary</strong>: cut G, raise T — AD falls. Spending on education, infrastructure and R&D also works on the supply side, shifting LRAS.</p>",
+    "new": "<p><strong>Fiscal policy</strong> is the government's manipulation of government spending (G) and taxation (T) to meet macroeconomic objectives — with microeconomic functions too, such as correcting market failures and changing incentives.</p><ul><li><strong>Expansionary</strong>: raise G, cut T — AD rises.</li><li><strong>Contractionary</strong>: cut G, raise T — AD falls.</li></ul><p>Spending on education, infrastructure and R&D also works on the supply side, shifting LRAS.</p>"
+  },
+  {
+    "id": "aqa-2-5-1-def-02",
+    "field": "back",
+    "old": "<p><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines). <strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure. <strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</p><p>Taxes exist to fund this spending, manage AD, correct market failures and redistribute income.</p>",
+    "new": "<ul><li><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines).</li><li><strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure.</li><li><strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</li></ul><p>Taxes exist to fund this spending, manage AD, correct market failures and redistribute income.</p>"
+  },
+  {
+    "id": "aqa-2-5-1-def-03",
+    "field": "back",
+    "old": "<p><strong>Progressive</strong> — the average tax rate rises with income (UK income tax). <strong>Proportional</strong> — the same rate at every income. <strong>Regressive</strong> — the average rate falls as income rises, taking a bigger share from the poor (duties, VAT in practice).</p><p>The principles of taxation ask taxes to be <strong>equitable</strong>, efficient, certain and convenient — the mix of direct taxes (on income and profits) and indirect taxes (on spending) is judged against these.</p>",
+    "new": "<ul><li><strong>Progressive</strong> — the average tax rate rises with income (UK income tax).</li><li><strong>Proportional</strong> — the same rate at every income.</li><li><strong>Regressive</strong> — the average rate falls as income rises, taking a bigger share from the poor (duties, VAT in practice).</li></ul><p>The principles of taxation ask taxes to be <strong>equitable</strong>, efficient, certain and convenient — the mix of direct taxes (on income and profits) and indirect taxes (on spending) is judged against these.</p>"
+  },
+  {
+    "id": "aqa-2-5-2-def-01",
+    "field": "back",
+    "old": "<p><strong>Supply-side policies</strong> are government measures to raise the economy's productive potential, shifting LRAS right. <strong>Supply-side improvements</strong> are the capacity gains themselves — and AQA stresses they often originate in the <strong>private sector</strong>, through productivity gains, innovation and investment, independently of government.</p><p>Policy divides into <strong>market-based</strong> (removing intervention) and <strong>interventionist</strong> (government spending) approaches.</p>",
+    "new": "<p><strong>Supply-side policies</strong> are government measures to raise the economy's productive potential, shifting LRAS right.</p><p><strong>Supply-side improvements</strong> are the capacity gains themselves — and they often originate in the <strong>private sector</strong>, through productivity gains, innovation and investment, independently of government.</p><p>Policy divides into <strong>market-based</strong> (removing intervention) and <strong>interventionist</strong> (government spending) approaches.</p>"
+  },
+  {
+    "id": "aqa-2-5-2-def-02",
+    "field": "front",
+    "old": "<p>Give AQA's examples of <strong>free-market and interventionist supply-side policies</strong>, and their effect on the natural rate.</p>",
+    "new": "<p>Give examples of <strong>free-market and interventionist supply-side policies</strong>, and their effect on the natural rate.</p>"
+  },
+  {
+    "id": "aqa-2-5-2-def-02",
+    "field": "back",
+    "old": "<p><strong>Free-market</strong>: tax cuts to sharpen incentives, privatisation, deregulation, labour-market reforms. <strong>Interventionist</strong>: government spending on education and training, industrial policy, subsidising research and development.</p><p>By improving skills, mobility and incentives, both routes can lower the <strong>natural rate of unemployment</strong> — the frictional and structural core that demand policy cannot touch — while raising potential output and the trend growth rate.</p>",
+    "new": "<ul><li><strong>Free-market</strong>: tax cuts to sharpen incentives, privatisation, deregulation, labour-market reforms.</li><li><strong>Interventionist</strong>: government spending on education and training, industrial policy, subsidising research and development.</li></ul><p>By improving skills, mobility and incentives, both routes can lower the <strong>natural rate of unemployment</strong> — the frictional and structural core that demand policy cannot touch — while raising potential output and the trend growth rate.</p>"
+  },
+  {
+    "id": "aqa-2-6-1-def-02",
+    "field": "back",
+    "old": "<p><strong>Trade liberalisation</strong> — falling tariffs and quotas (China's WTO entry in 2001 transformed its trade); <strong>advances in transport and communication technology</strong>; the growth of <strong>MNCs</strong> building global supply chains (Apple, Amazon, Unilever); and <strong>containerisation</strong>, which slashed shipping costs and time.</p><p>Plus the <strong>deregulation of financial markets</strong> in the 1990s freeing capital flows, and <strong>global institutions</strong> — the WTO, IMF and World Bank — promoting free trade and investment.</p>",
+    "new": "<ul><li><strong>Trade liberalisation</strong> — falling tariffs and quotas (China's WTO entry in 2001 transformed its trade).</li><li><strong>Advances in transport and communication technology</strong>.</li><li>The growth of <strong>MNCs</strong> building global supply chains (Apple, Amazon, Unilever).</li><li><strong>Containerisation</strong>, which slashed shipping costs and time.</li><li>The <strong>deregulation of financial markets</strong> in the 1990s freeing capital flows.</li><li><strong>Global institutions</strong> — the WTO, IMF and World Bank — promoting free trade and investment.</li></ul>"
+  },
+  {
+    "id": "aqa-2-6-1-eval-01",
+    "field": "back",
+    "old": "<p><strong>Consumers</strong>: lower prices, more variety and quality — against cultural imperialism and import-quality concerns. <strong>Workers</strong>: jobs and rising wages in developing countries — against job losses where production relocates. <strong>Firms</strong>: bigger markets, cheaper inputs and economies of scale — against fiercer competition and fragile supply chains.</p><p><strong>Governments</strong>: growth and tax revenue — against inequality and exposure to external shocks. The <strong>environment</strong> mostly loses: more production, transport, emissions and resource exploitation.</p>",
+    "new": "<ul><li><strong>Consumers</strong>: lower prices, more variety and quality — against cultural imperialism and import-quality concerns.</li><li><strong>Workers</strong>: jobs and rising wages in developing countries — against job losses where production relocates.</li><li><strong>Firms</strong>: bigger markets, cheaper inputs and economies of scale — against fiercer competition and fragile supply chains.</li><li><strong>Governments</strong>: growth and tax revenue — against inequality and exposure to external shocks.</li><li>The <strong>environment</strong> mostly loses: more production, transport, emissions and resource exploitation.</li></ul>"
+  },
+  {
+    "id": "aqa-2-6-2-diagram-01",
+    "field": "back",
+    "old": "<p>Germany's PPF runs from 150mn T-shirts to <strong>20mn chips</strong>; Vietnam's from <strong>200mn T-shirts</strong> to 10mn chips — each has an absolute advantage in one good. Opportunity costs: a chip costs Germany <strong>7.5 T-shirts</strong> but Vietnam <strong>20</strong>; a T-shirt costs Vietnam <strong>0.05 chips</strong> but Germany 0.13.</p><p>Each specialises where its opportunity cost is <strong>lower</strong>: fully specialised, they produce <strong>20m chips and 200mn T-shirts</strong> — beating the 15m and 175mn made without specialisation — and by trading, both consume <strong>beyond their own PPFs</strong>.</p>",
+    "new": "<p>Germany's PPF runs from 150mn T-shirts to <strong>20mn chips</strong>; Vietnam's from <strong>200mn T-shirts</strong> to 10mn chips — each has an absolute advantage in one good.</p><p>Opportunity costs:</p><ul><li>A chip costs Germany <strong>7.5 T-shirts</strong> but Vietnam <strong>20</strong>.</li><li>A T-shirt costs Vietnam <strong>0.05 chips</strong> but Germany 0.13.</li></ul><p>Each specialises where its opportunity cost is <strong>lower</strong>: fully specialised, they produce <strong>20m chips and 200mn T-shirts</strong> — beating the 15m and 175mn made without specialisation — and by trading, both consume <strong>beyond their own PPFs</strong>.</p>"
+  },
+  {
+    "id": "aqa-2-6-2-def-02",
+    "field": "back",
+    "old": "<p><strong>Benefits</strong>: efficiency from specialising at lower opportunity cost, higher global output, lower prices, greater variety, economies of scale and growth. <strong>Costs</strong>: import dependency, job losses in uncompetitive industries, inequality, environmental damage and worker exploitation where standards are low.</p><p>The <strong>pattern of trade</strong> — what is traded and with whom — shifts with comparative advantage (UK manufacturing's decline), <strong>emerging economies</strong>, trade blocs and agreements (Brexit), and <strong>relative exchange rates</strong>.</p>",
+    "new": "<p><strong>Benefits</strong>: efficiency from specialising at lower opportunity cost, higher global output, lower prices, greater variety, economies of scale and growth.</p><p><strong>Costs</strong>: import dependency, job losses in uncompetitive industries, inequality, environmental damage and worker exploitation where standards are low.</p><p>The <strong>pattern of trade</strong> — what is traded and with whom — shifts with comparative advantage (UK manufacturing's decline), <strong>emerging economies</strong>, trade blocs and agreements (Brexit), and <strong>relative exchange rates</strong>.</p>"
+  },
+  {
+    "id": "aqa-2-6-2-def-04",
+    "field": "back",
+    "old": "<p>A <strong>customs union</strong> (e.g. MERCOSUR) removes tariffs and quotas between members and adds a <strong>common external tariff</strong>; a free trade area lacks the common tariff, a common market (the EU) adds free movement of labour and capital.</p><p><strong>Trade creation</strong>: trade shifts to a lower-cost producer inside the bloc — welfare rises. <strong>Trade diversion</strong>: it shifts from a cheaper outsider to a dearer member — welfare falls. The <strong>WTO</strong> promotes trade liberalisation as negotiating forum and dispute court — in tension with blocs that favour their members.</p>",
+    "new": "<p>A <strong>customs union</strong> (e.g. MERCOSUR) removes tariffs and quotas between members and adds a <strong>common external tariff</strong>; a free trade area lacks the common tariff, a common market (the EU) adds free movement of labour and capital.</p><p><strong>Trade creation</strong>: trade shifts to a lower-cost producer inside the bloc — welfare rises.</p><p><strong>Trade diversion</strong>: it shifts from a cheaper outsider to a dearer member — welfare falls.</p><p>The <strong>WTO</strong> promotes trade liberalisation as negotiating forum and dispute court — in tension with blocs that favour their members.</p>"
+  },
+  {
+    "id": "aqa-2-6-3-def-01",
+    "field": "back",
+    "old": "<p><strong>Balance of payments (BoP)</strong>: records all financial transactions between a country and the rest of the world. Inflows are credits, outflows debits.</p><p>The <strong>current account</strong>: trade in goods and services, primary income (profits, interest, dividends) and secondary income (aid, remittances). The <strong>capital account</strong>: minor capital transfers such as debt forgiveness. The <strong>financial account</strong>: FDI, portfolio investment and reserve changes — and since the BoP must balance, a current account deficit is financed by a capital and financial account surplus.</p>",
+    "new": "<p><strong>Balance of payments (BoP)</strong>: records all financial transactions between a country and the rest of the world. Inflows are credits, outflows debits.</p><ul><li>The <strong>current account</strong>: trade in goods and services, primary income (profits, interest, dividends) and secondary income (aid, remittances).</li><li>The <strong>capital account</strong>: minor capital transfers such as debt forgiveness.</li><li>The <strong>financial account</strong>: FDI, portfolio investment and reserve changes.</li></ul><p>Since the BoP must balance, a current account deficit is financed by a capital and financial account surplus.</p>"
+  },
+  {
+    "id": "aqa-2-6-3-calc-01",
+    "field": "back",
+    "old": "<p>Goods: 240 − 330 = <strong>−£90bn</strong>. Services: 280 − 205 = <strong>+£75bn</strong>. Primary income: 55 − 70 = <strong>−£15bn</strong>. Secondary income: 30 − 40 = <strong>−£10bn</strong>.</p><p>Balance: −90 + 75 − 15 − 10 = <strong>−£40bn</strong> — a current account deficit, with the services surplus offsetting more than half the goods deficit. Always net all four components.</p>",
+    "new": "<ul><li>Goods: 240 − 330 = <strong>−£90bn</strong></li><li>Services: 280 − 205 = <strong>+£75bn</strong></li><li>Primary income: 55 − 70 = <strong>−£15bn</strong></li><li>Secondary income: 30 − 40 = <strong>−£10bn</strong></li></ul><p>Balance: −90 + 75 − 15 − 10 = <strong>−£40bn</strong> — a current account deficit, with the services surplus offsetting more than half the goods deficit.</p><p>Always net all four components.</p>"
+  },
+  {
+    "id": "aqa-2-6-3-def-02",
+    "field": "back",
+    "old": "<p>Causes: <strong>low competitiveness</strong> (weak productivity or high inflation against rivals), a <strong>strong exchange rate</strong>, <strong>high domestic demand</strong> sucking in imports, and <strong>structural decline</strong> such as a shrinking manufacturing base.</p><p><strong>Persistent deficits</strong> build foreign debt and can trigger currency depreciation and weaker FDI as confidence erodes; <strong>persistent surpluses</strong> feed inflation and over-reliance on exports, leaving the economy exposed to global downturns.</p>",
+    "new": "<p>Causes:</p><ul><li><strong>Low competitiveness</strong> (weak productivity or high inflation against rivals).</li><li>A <strong>strong exchange rate</strong>.</li><li><strong>High domestic demand</strong> sucking in imports.</li><li><strong>Structural decline</strong> such as a shrinking manufacturing base.</li></ul><p><strong>Persistent deficits</strong> build foreign debt and can trigger currency depreciation and weaker FDI as confidence erodes.</p><p><strong>Persistent surpluses</strong> feed inflation and over-reliance on exports, leaving the economy exposed to global downturns.</p>"
+  },
+  {
+    "id": "aqa-2-6-3-eval-01",
+    "field": "back",
+    "old": "<p><strong>Expenditure-switching</strong> (tariffs, quotas, devaluation) redirects demand towards domestic output — quick, but invites retaliation and raises consumer prices. <strong>Expenditure-reducing</strong> (contractionary fiscal policy, higher interest rates) cuts demand and imports together — at the price of slower growth and higher unemployment.</p><p><strong>Supply-side policies</strong> (education, R&amp;D, infrastructure) rebuild export competitiveness — the durable fix, but slow and costly. Each route trades the current account against other macro objectives.</p>",
+    "new": "<ul><li><strong>Expenditure-switching</strong> (tariffs, quotas, devaluation) redirects demand towards domestic output — quick, but invites retaliation and raises consumer prices.</li><li><strong>Expenditure-reducing</strong> (contractionary fiscal policy, higher interest rates) cuts demand and imports together — at the price of slower growth and higher unemployment.</li><li><strong>Supply-side policies</strong> (education, R&amp;D, infrastructure) rebuild export competitiveness — the durable fix, but slow and costly.</li></ul><p>Each route trades the current account against other macro objectives.</p>"
+  },
+  {
+    "id": "aqa-2-6-4-diagram-01",
+    "field": "back",
+    "old": "<p>Higher demand for the currency shifts <strong>D1 right to D2</strong> along the supply curve: the exchange rate rises from <strong>P1 to P2</strong>. Demand rises with <strong>higher relative interest rates</strong> (hot money), <strong>lower relative inflation</strong>, a <strong>current account surplus</strong>, <strong>FDI inflows</strong> and bullish <strong>speculation</strong>.</p><p>Supply moves it the other way: <strong>QE</strong> and speculative selling expand the currency's supply and depreciate it.</p>",
+    "new": "<p>Higher demand for the currency shifts <strong>D1 right to D2</strong> along the supply curve: the exchange rate rises from <strong>P1 to P2</strong>.</p><p>Demand rises with:</p><ul><li><strong>Higher relative interest rates</strong> (hot money).</li><li><strong>Lower relative inflation</strong>.</li><li>A <strong>current account surplus</strong>.</li><li><strong>FDI inflows</strong>.</li><li>Bullish <strong>speculation</strong>.</li></ul><p>Supply moves it the other way: <strong>QE</strong> and speculative selling expand the currency's supply and depreciate it.</p>"
+  },
+  {
+    "id": "aqa-2-6-4-diagram-02",
+    "field": "back",
+    "old": "<p>After a depreciation the current account <strong>worsens first</strong>: contracts fix prices in the short run and consumers are slow to switch, so PEDx and PEDm are inelastic. Only as they adjust does the balance <strong>improve through the long run</strong> — tracing a J.</p><p>The <strong>Marshall-Lerner condition</strong>: a depreciation improves the current account only if <strong>PEDx + PEDm &gt; 1</strong>. If combined demand is inelastic, it worsens instead.</p>",
+    "new": "<p>After a depreciation the current account <strong>worsens first</strong>: contracts fix prices in the short run and consumers are slow to switch, so PEDx and PEDm are inelastic.</p><p>Only as they adjust does the balance <strong>improve through the long run</strong> — tracing a J.</p><p>The <strong>Marshall-Lerner condition</strong>: a depreciation improves the current account only if <strong>PEDx + PEDm &gt; 1</strong>. If combined demand is inelastic, it worsens instead.</p>"
+  },
+  {
+    "id": "aqa-2-6-4-def-02",
+    "field": "back",
+    "old": "<p>A <strong>currency union</strong> (the Eurozone) adds a single currency to a common market. Success needs <strong>synchronised business cycles</strong>, <strong>labour mobility</strong>, <strong>fiscal transfers</strong> to cushion shocked regions, and <strong>mobility of capital</strong>.</p><p>For members: lower transaction costs, price transparency, more trade and investment, no exchange-rate risk. Against: the loss of <strong>independent monetary policy</strong> and exchange-rate flexibility — leaving members exposed when <strong>asymmetric shocks</strong> hit.</p>",
+    "new": "<p>A <strong>currency union</strong> (the Eurozone) adds a single currency to a common market. Success needs:</p><ul><li><strong>Synchronised business cycles</strong>.</li><li><strong>Labour mobility</strong>.</li><li><strong>Fiscal transfers</strong> to cushion shocked regions.</li><li><strong>Mobility of capital</strong>.</li></ul><p>For members: lower transaction costs, price transparency, more trade and investment, no exchange-rate risk.</p><p>Against: the loss of <strong>independent monetary policy</strong> and exchange-rate flexibility — leaving members exposed when <strong>asymmetric shocks</strong> hit.</p>"
+  },
+  {
+    "id": "aqa-2-6-5-def-01",
+    "field": "back",
+    "old": "<p><strong>Economic growth</strong>: the narrower concept, measured by rises in real GDP. <strong>Economic development</strong>: a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life.</p><p>Measures: <strong>single indicators</strong> (infant mortality, literacy) give partial pictures; <strong>composite indicators</strong> combine them — the UN's <strong>HDI</strong> weights health (life expectancy), education (schooling years) and income (real GNI per capita at PPP) equally, scoring 0 to 1.</p>",
+    "new": "<p><strong>Economic growth</strong>: the narrower concept, measured by rises in real GDP.</p><p><strong>Economic development</strong>: a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life.</p><p>Measures:</p><ul><li><strong>Single indicators</strong> (infant mortality, literacy) give partial pictures.</li><li><strong>Composite indicators</strong> combine them — the UN's <strong>HDI</strong> weights health (life expectancy), education (schooling years) and income (real GNI per capita at PPP) equally, scoring 0 to 1.</li></ul>"
+  },
+  {
+    "id": "aqa-2-6-5-def-02",
+    "field": "back",
+    "old": "<p><strong>Economic</strong>: primary product dependency (volatile prices, Dutch disease); the <strong>savings gap</strong> — the Harrod-Domar model ties growth to savings and investment; the <strong>foreign currency gap</strong>; <strong>capital flight</strong>; demographics; debt servicing; poor access to credit; weak infrastructure; inadequate education and skills; and the <strong>absence of property rights</strong>, which kills the incentive to invest.</p><p><strong>Non-economic</strong>: corruption, poor governance and instability, conflict, and geography.</p>",
+    "new": "<p><strong>Economic</strong></p><ul><li>Primary product dependency (volatile prices, Dutch disease).</li><li>The <strong>savings gap</strong> — the Harrod-Domar model ties growth to savings and investment.</li><li>The <strong>foreign currency gap</strong> and <strong>capital flight</strong>.</li><li>Demographics and debt servicing.</li><li>Poor access to credit and weak infrastructure.</li><li>Inadequate education and skills, and the <strong>absence of property rights</strong>, which kills the incentive to invest.</li></ul><p><strong>Non-economic</strong>: corruption, poor governance and instability, conflict, and geography.</p>"
+  },
+  {
+    "id": "aqa-2-6-5-def-03",
+    "field": "back",
+    "old": "<p><strong>Market-orientated</strong>: trade liberalisation, FDI promotion, subsidy removal, floating exchange rates, microfinance, privatisation — free market forces drive development. <strong>Interventionist</strong>: human capital investment, protectionism, managed exchange rates, infrastructure, joint ventures, buffer stocks — the state corrects market failure.</p><p><strong>Aid</strong> comes as <strong>humanitarian aid</strong> (emergency relief), <strong>debt relief</strong> (freeing resources for investment) and <strong>Official Development Assistance</strong> — soft loans and grants, effective unless dependency or corruption blunts them.</p>",
+    "new": "<p><strong>Market-orientated</strong> — free market forces drive development:</p><ul><li>Trade liberalisation.</li><li>FDI promotion.</li><li>Subsidy removal.</li><li>Floating exchange rates.</li><li>Microfinance.</li><li>Privatisation.</li></ul><p><strong>Interventionist</strong> — the state corrects market failure:</p><ul><li>Human capital investment.</li><li>Protectionism.</li><li>Managed exchange rates.</li><li>Infrastructure.</li><li>Joint ventures.</li><li>Buffer stocks.</li></ul><p><strong>Aid</strong> comes in three forms:</p><ul><li><strong>Humanitarian aid</strong> (emergency relief).</li><li><strong>Debt relief</strong> (freeing resources for investment).</li><li><strong>Official Development Assistance</strong> — soft loans and grants, effective unless dependency or corruption blunts them.</li></ul>"
+  }
+]
