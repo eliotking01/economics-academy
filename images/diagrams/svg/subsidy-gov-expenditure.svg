@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Government expenditure on a subsidy</title>
+  <desc id="d">A per-unit subsidy shifts supply right from S to S plus subsidy. Consumers pay the lower price P2, producers receive P3 on the original supply curve, and the shaded rectangle between P3 and P2 up to the new quantity Q2 is the government's expenditure: the subsidy per unit multiplied by the quantity sold.</desc>
+  <!-- geometry
+       intersections: 300,240 360,300
+       on-curve: 360,180
+  -->
+  <!-- expenditure rectangle -->
+  <rect x="100" y="180" width="260" height="120" fill="#d52349" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="180" x2="360" y2="180" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="240" x2="300" y2="240" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="300" x2="360" y2="300" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="300" y1="240" x2="300" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="360" y1="180" x2="360" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="170" y1="110" x2="550" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="370" x2="470" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="490" x2="590" y2="70" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- annotations -->
+  <text x="175" y="232" font-size="22" fill="#333333" text-anchor="middle">Government</text>
+  <text x="175" y="258" font-size="22" fill="#333333" text-anchor="middle">expenditure</text>
+  <!-- labels -->
+  <text x="478" y="64" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="598" y="62" font-size="26" font-weight="700" fill="#d52349">S+Subsidy</text>
+  <text x="558" y="498" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="92" y="188" font-size="24" fill="#333333" text-anchor="end">P3</text>
+  <text x="92" y="248" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="92" y="308" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="360" y="552" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+</svg>

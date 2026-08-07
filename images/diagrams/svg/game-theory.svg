@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The prisoner's dilemma payoff matrix for two colluding firms</title>
+  <desc id="d">A two-by-two payoff matrix for Samsung and Apple, each choosing a high or low price, with profits in billions of pounds. Both choosing high prices, the collusive outcome shaded teal, earns each firm 150 billion. If one firm undercuts with a low price it earns 200 billion while the other earns 50 billion. Undercutting is therefore the dominant strategy, and both end at the Nash equilibrium, shaded red, where both charge low prices and each earns only 100 billion.</desc>
+  <!-- geometry
+       schematic payoff matrix: no axis geometry to declare
+  -->
+  <!-- cell shading: collusion (teal), Nash equilibrium (red) -->
+  <rect x="250" y="150" width="180" height="150" fill="#0f7b6c" fill-opacity="0.15"/>
+  <rect x="430" y="300" width="180" height="150" fill="#d52349" fill-opacity="0.15"/>
+  <!-- grid -->
+  <line x1="250" y1="150" x2="610" y2="150" stroke="#333333" stroke-width="2.5"/>
+  <line x1="250" y1="450" x2="610" y2="450" stroke="#333333" stroke-width="2.5"/>
+  <line x1="250" y1="150" x2="250" y2="450" stroke="#333333" stroke-width="2.5"/>
+  <line x1="610" y1="150" x2="610" y2="450" stroke="#333333" stroke-width="2.5"/>
+  <line x1="430" y1="150" x2="430" y2="450" stroke="#333333" stroke-width="2.5"/>
+  <line x1="250" y1="300" x2="610" y2="300" stroke="#333333" stroke-width="2.5"/>
+  <!-- cell diagonals -->
+  <line x1="250" y1="150" x2="430" y2="300" stroke="#333333" stroke-width="2"/>
+  <line x1="430" y1="150" x2="610" y2="300" stroke="#333333" stroke-width="2"/>
+  <line x1="250" y1="300" x2="430" y2="450" stroke="#333333" stroke-width="2"/>
+  <line x1="430" y1="300" x2="610" y2="450" stroke="#333333" stroke-width="2"/>
+  <!-- headers -->
+  <text x="430" y="80" font-size="26" font-weight="700" fill="#333333" text-anchor="middle">Apple</text>
+  <text x="340" y="130" font-size="24" fill="#333333" text-anchor="middle">High Price</text>
+  <text x="520" y="130" font-size="24" fill="#333333" text-anchor="middle">Low Price</text>
+  <text x="60" y="308" font-size="26" font-weight="700" fill="#333333">Samsung</text>
+  <text x="238" y="232" font-size="24" fill="#333333" text-anchor="end">High Price</text>
+  <text x="238" y="382" font-size="24" fill="#333333" text-anchor="end">Low Price</text>
+  <text x="238" y="110" font-size="24" fill="#333333" text-anchor="end">Profits £bn</text>
+  <!-- payoffs: Apple top-right, Samsung bottom-left of each cell -->
+  <text x="418" y="195" font-size="24" fill="#333333" text-anchor="end">£150bn</text>
+  <text x="262" y="282" font-size="24" fill="#333333">£150bn</text>
+  <text x="598" y="195" font-size="24" fill="#333333" text-anchor="end">£200bn</text>
+  <text x="442" y="282" font-size="24" fill="#333333">£50bn</text>
+  <text x="418" y="345" font-size="24" fill="#333333" text-anchor="end">£50bn</text>
+  <text x="262" y="432" font-size="24" fill="#333333">£200bn</text>
+  <text x="598" y="345" font-size="24" fill="#333333" text-anchor="end">£100bn</text>
+  <text x="442" y="432" font-size="24" fill="#333333">£100bn</text>
+</svg>

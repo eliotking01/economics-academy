@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Indirect tax incidence</title>
+  <desc id="d">A specific per-unit indirect tax shifts supply left from S to S plus tax. The price consumers pay rises from P1 to P2, output falls from Q1 to Q2, and the price producers keep falls to P3. The consumer burden is the rectangle between P1 and P2 up to Q2; the producer burden is the rectangle between P3 and P1 up to Q2.</desc>
+  <!-- geometry
+       intersections: 360,300 300,240
+       on-curve: 300,360
+  -->
+  <!-- shaded burdens -->
+  <rect x="100" y="240" width="200" height="60" fill="#1d70b8" fill-opacity="0.15"/>
+  <rect x="100" y="300" width="200" height="60" fill="#0f7b6c" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="240" x2="300" y2="240" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="300" x2="360" y2="300" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="360" x2="300" y2="360" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="300" y1="240" x2="300" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="360" y1="300" x2="360" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="170" y1="110" x2="550" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="490" x2="590" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="370" x2="470" y2="70" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="478" y="64" font-size="26" font-weight="700" fill="#d52349">S+Tax</text>
+  <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="558" y="498" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="92" y="248" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="92" y="308" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="92" y="368" font-size="24" fill="#333333" text-anchor="end">P3</text>
+  <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <text x="360" y="552" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="180" y="264" font-size="22" fill="#333333" text-anchor="middle">Consumer</text>
+  <text x="180" y="290" font-size="22" fill="#333333" text-anchor="middle">burden</text>
+  <text x="150" y="322" font-size="22" fill="#333333" text-anchor="middle">Producer</text>
+  <text x="150" y="347" font-size="22" fill="#333333" text-anchor="middle">burden</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Outward shift of long-run aggregate supply</title>
+  <desc id="d">A vertical LRAS1 curve shifts right to LRAS2, raising full-employment output from Yfe1 to Yfe2. This is an increase in the economy's productive capacity, equivalent to an outward shift of the production possibility frontier.</desc>
+  <!-- geometry
+       on-curve: 360,300 520,300
+  -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d52349"/>
+    </marker>
+  </defs>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="32" y="78" font-size="26" fill="#333333">level</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Real GDP</text>
+  <!-- curves -->
+  <line x1="360" y1="100" x2="360" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="520" y1="100" x2="520" y2="520" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="390" y1="170" x2="490" y2="170" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- labels -->
+  <text x="360" y="88" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="middle">LRAS1</text>
+  <text x="520" y="88" font-size="26" font-weight="700" fill="#d52349" text-anchor="middle">LRAS2</text>
+  <text x="360" y="552" font-size="24" fill="#333333" text-anchor="middle">Yfe1</text>
+  <text x="520" y="552" font-size="24" fill="#333333" text-anchor="middle">Yfe2</text>
+</svg>

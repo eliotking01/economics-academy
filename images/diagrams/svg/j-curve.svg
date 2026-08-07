@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The J-curve effect</title>
+  <desc id="d">The J-curve plots the net trade balance against time. Starting in deficit, a depreciation at the first dashed line initially deepens the deficit because export and import demand are price inelastic in the short run; the balance bottoms out at the second dashed line and then improves through the long run, crossing into surplus as consumers and firms adjust.</desc>
+  <!-- geometry
+       intersections: 560,300
+       on-curve: 270,390 400,470
+  -->
+  <!-- guides -->
+  <line x1="270" y1="110" x2="270" y2="540" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="400" y1="110" x2="400" y2="540" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="130" y1="60" x2="130" y2="540" stroke="#333333" stroke-width="2.5"/>
+  <line x1="130" y1="300" x2="690" y2="300" stroke="#333333" stroke-width="2.5"/>
+  <text x="122" y="308" font-size="24" fill="#333333" text-anchor="end">Net Trade</text>
+  <text x="708" y="335" font-size="26" fill="#333333" text-anchor="end">Time</text>
+  <text x="145" y="95" font-size="26" fill="#333333">Surplus (X&gt;M)</text>
+  <text x="145" y="528" font-size="26" fill="#333333">Deficit (X&lt;M)</text>
+  <!-- curves -->
+  <path d="M 150,390 L 270,390 C 320,460 350,470 400,470 C 470,470 530,400 560,300 C 575,250 590,210 610,175" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="622" y="170" font-size="26" font-weight="700" fill="#1d70b8">J-Curve</text>
+  <text x="278" y="74" font-size="24" fill="#333333">Depreciation occurs</text>
+  <text x="335" y="568" font-size="24" fill="#333333" text-anchor="middle">Short run</text>
+  <text x="470" y="568" font-size="24" fill="#333333" text-anchor="middle">Long run</text>
+</svg>

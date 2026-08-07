@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">A trade union countering a monopsony employer</title>
+  <desc id="d">A monopsony labour market with supply S=AC, the steeper marginal cost of labour MCL, and demand D=MRP. Without a union the monopsonist hires Qm at the low wage Wm. A trade union negotiates the wage W(TU) at the competitive level: the red effective labour cost line runs flat at W(TU) out to Qc, where it meets the supply curve, then jumps vertically up to the original MCL. The flat section makes the marginal cost of extra workers constant, so employment rises from Qm to Qc while the wage rises from Wm to W(TU) — a bilateral monopoly outcome.</desc>
+  <!-- geometry
+       intersections: 300,240 355,295
+       on-curve: 300,350 355,130
+  -->
+  <!-- guides -->
+  <line x1="100" y1="240" x2="300" y2="240" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="350" x2="300" y2="350" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="300" y1="240" x2="300" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="355" y1="295" x2="355" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Wages</text>
+  <text x="708" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity of Labour</text>
+  <!-- curves -->
+  <line x1="190" y1="460" x2="560" y2="90" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="190" y1="460" x2="390" y2="60" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="180" y1="120" x2="550" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 100,295 L 355,295 L 355,130 L 390,60" fill="none" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="398" y="66" font-size="26" font-weight="700" fill="#1d70b8">MCL</text>
+  <text x="570" y="96" font-size="26" font-weight="700" fill="#1d70b8">S=AC</text>
+  <text x="562" y="496" font-size="26" font-weight="700" fill="#1d70b8">D=MRP</text>
+  <text x="92" y="248" font-size="24" fill="#333333" text-anchor="end">W1</text>
+  <text x="92" y="303" font-size="24" font-weight="700" fill="#d52349" text-anchor="end">W(TU)</text>
+  <text x="92" y="358" font-size="24" fill="#333333" text-anchor="end">Wm</text>
+  <text x="300" y="552" font-size="24" fill="#333333" text-anchor="middle">Qm</text>
+  <text x="355" y="552" font-size="24" fill="#333333" text-anchor="middle">Qc</text>
+</svg>

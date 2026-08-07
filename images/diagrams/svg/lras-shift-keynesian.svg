@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Outward shift of the Keynesian long-run aggregate supply curve</title>
+  <desc id="d">A Keynesian L-shaped LRAS1 curve shifts right to LRAS2, raising full-capacity output from Yfe1 to Yfe2. The economy can reach a higher level of real GDP before becoming vertical, showing an increase in productive capacity.</desc>
+  <!-- geometry
+       on-curve: 200,400 430,200 550,200
+  -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d52349"/>
+    </marker>
+  </defs>
+  <!-- guides -->
+  <line x1="430" y1="200" x2="430" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="550" y1="200" x2="550" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="32" y="78" font-size="26" fill="#333333">level</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Real GDP</text>
+  <!-- curves -->
+  <path d="M 100,400 L 250,400 Q 350,400 400,335 Q 430,292 430,200 L 430,110" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 250,400 L 370,400 Q 470,400 520,335 Q 550,292 550,200 L 550,110" fill="none" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="455" y1="170" x2="525" y2="170" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- labels -->
+  <text x="430" y="88" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="middle">LRAS1</text>
+  <text x="550" y="88" font-size="26" font-weight="700" fill="#d52349" text-anchor="middle">LRAS2</text>
+  <text x="430" y="552" font-size="24" fill="#333333" text-anchor="middle">Yfe1</text>
+  <text x="550" y="552" font-size="24" fill="#333333" text-anchor="middle">Yfe2</text>
+</svg>

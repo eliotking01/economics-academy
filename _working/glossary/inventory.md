@@ -13,8 +13,8 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | termsExtracted | 600 |
 | uniqueTerms | 325 |
 | termsOnBothBoards | 234 |
-| termsWithVariantDefinitions | 42 |
-| termsNeedingReview | 86 |
+| termsWithVariantDefinitions | 43 |
+| termsNeedingReview | 87 |
 | displayFormulae | 78 |
 | uniqueFormulae | 34 |
 | formulaeExcludedByCuration | 18 |
@@ -294,7 +294,7 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **T262** | Real GDP | AE | 1 | Macroeconomics 2.1.4, Theme 2 2.1.1 |
 | **T263** | Real Income | AE | 1 | Macroeconomics 2.2.3, Theme 2 2.1.2 |
 | **T264** | Real Wage Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
-| **T265** | Regressive Tax | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
+| **T265** | Regressive Tax | AE | 2 | Macroeconomics 2.5.1, Theme 4 4.5.2 |
 | **T266** | Regulation | AE | 4 | Microeconomics 1.8.8, Theme 1 1.4.1, Theme 1 1.3.2, Theme 1 1.3.2 |
 | **T267** | Regulatory Capture | AE | 2 | Microeconomics 1.8.8, Theme 3 3.6.2 |
 | **T268** | Relative export prices | E | 1 | Theme 4 4.1.9 |

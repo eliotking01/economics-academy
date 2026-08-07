@@ -147,6 +147,10 @@ function setActivePage() {
   const pageMap = [
     // Add more specific patterns first
     { pattern: /^\/revision-notes(\/|$)/, page: "revision-notes" },
+    // Flashcards live at /flashcards/ but belong to the notes offering, so
+    // they light up the Revision Notes nav item - the same way the question
+    // bank lights up Past Papers.
+    { pattern: /^\/flashcards(\/|$)/, page: "revision-notes" },
     { pattern: /^\/practice-questions(\/|$)/, page: "practice-questions" },
     // The question bank lives under the Past Papers dropdown, so it lights up
     // that parent. Listed first because it is the more specific path, though

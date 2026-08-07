@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Indirect tax with price elastic demand</title>
+  <desc id="d">A per-unit indirect tax when demand is price elastic: the demand curve is shallow, so the price rises only a little from P1 to P2 and producers bear most of the burden — the larger rectangle between P3 and P1. Quantity falls sharply from Q1 to Q2.</desc>
+  <!-- geometry
+       intersections: 360,300 270,270
+       on-curve: 270,390
+  -->
+  <!-- burdens: consumer above P1, producer below (colour roles as on the base tax diagram) -->
+  <rect x="100" y="270" width="170" height="30" fill="#1d70b8" fill-opacity="0.15"/>
+  <rect x="100" y="300" width="170" height="90" fill="#0f7b6c" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="270" x2="270" y2="270" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="300" x2="360" y2="300" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="390" x2="270" y2="390" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="270" y1="270" x2="270" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="360" y1="300" x2="360" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Price</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="180" y1="240" x2="630" y2="390" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="490" x2="590" y2="70" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="170" y1="370" x2="470" y2="70" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="478" y="64" font-size="26" font-weight="700" fill="#d52349">S+Tax</text>
+  <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="638" y="400" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="92" y="278" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="92" y="308" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="92" y="398" font-size="24" fill="#333333" text-anchor="end">P3</text>
+  <text x="270" y="552" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <text x="360" y="552" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+</svg>

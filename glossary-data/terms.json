@@ -8,8 +8,8 @@
     "termsExtracted": 600,
     "uniqueTerms": 325,
     "termsOnBothBoards": 234,
-    "termsWithVariantDefinitions": 42,
-    "termsNeedingReview": 86,
+    "termsWithVariantDefinitions": 43,
+    "termsNeedingReview": 87,
     "displayFormulae": 78,
     "uniqueFormulae": 34,
     "formulaeExcludedByCuration": 18,
@@ -5923,7 +5923,7 @@
           "notesUrl": "/revision-notes/aqa-a2-micro/1-4-8-technological-change.html",
           "termAsWritten": "Inventions",
           "origin": "chip",
-          "definitionHtml": "the creation entirely new and original products, processes or ideas that have not existed before.",
+          "definitionHtml": "the creation of entirely new and original products, processes or ideas that have not existed before.",
           "definitionListHtml": ""
         }
       ]
@@ -8792,7 +8792,7 @@
           "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
           "termAsWritten": "Persistent deficits",
           "origin": "chip",
-          "definitionHtml": "a persistent current account deficit can lead to a build-up of foreign debt, which may be require higher taxes or spending cuts in the long term. It can also lead to a loss of confidence in the domestic currency resulting in depreciation and reduced Foreign Direct Investment (FDI) inflows.",
+          "definitionHtml": "a persistent current account deficit can lead to a build-up of foreign debt, which may require higher taxes or spending cuts in the long term. It can also lead to a loss of confidence in the domestic currency resulting in depreciation and reduced Foreign Direct Investment (FDI) inflows.",
           "definitionListHtml": ""
         },
         {
@@ -8804,7 +8804,7 @@
           "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
           "termAsWritten": "Persistent deficits",
           "origin": "chip",
-          "definitionHtml": "a persistent current account deficit can lead to a build-up of foreign debt, which may be require higher taxes or spending cuts in the long term. It can also lead to a loss of confidence in the domestic currency resulting in depreciation and reduced Foreign Direct Investment (FDI) inflows.",
+          "definitionHtml": "a persistent current account deficit can lead to a build-up of foreign debt, which may require higher taxes or spending cuts in the long term. It can also lead to a loss of confidence in the domestic currency resulting in depreciation and reduced Foreign Direct Investment (FDI) inflows.",
           "definitionListHtml": ""
         }
       ]
@@ -10453,8 +10453,10 @@
       "origin": [
         "chip"
       ],
-      "definitionVariants": 1,
-      "review": [],
+      "definitionVariants": 2,
+      "review": [
+        "2 different wordings across its sources"
+      ],
       "sources": [
         {
           "board": "aqa",
@@ -10477,7 +10479,7 @@
           "notesUrl": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
           "termAsWritten": "Regressive Tax",
           "origin": "chip",
-          "definitionHtml": "A tax where where the <strong>percentage of income paid in tax falls</strong> as income rises. Examples include VAT and demerit good taxes e.g. tobacco and alcohol duties.",
+          "definitionHtml": "A tax where the <strong>percentage of income paid in tax falls</strong> as income rises. Examples include VAT and demerit good taxes e.g. tobacco and alcohol duties.",
           "definitionListHtml": ""
         }
       ]
@@ -10588,7 +10590,7 @@
           "notesUrl": "/revision-notes/edexcel-theme-3/3-6-2-the-impact-of-government-intervention.html",
           "termAsWritten": "Regulatory Capture",
           "origin": "chip",
-          "definitionHtml": "Regulatory capture occurs when regulated firms gain too much influence over the regulators and shape the rules in their own favour rather than in consumers interest.",
+          "definitionHtml": "Regulatory capture occurs when regulated firms gain too much influence over the regulators and shape the rules in their own favour rather than in consumers' interests.",
           "definitionListHtml": ""
         }
       ]
@@ -10647,7 +10649,7 @@
           "notesUrl": "/revision-notes/aqa-a2-micro/1-7-2-the-problem-of-poverty.html",
           "termAsWritten": "Relative poverty",
           "origin": "chip",
-          "definitionHtml": "exists when household income is <strong>below a certain proportion of median income</strong> in an economy,",
+          "definitionHtml": "exists when household income is <strong>below a certain proportion of median income</strong> in an economy.",
           "definitionListHtml": ""
         },
         {
@@ -10659,7 +10661,7 @@
           "notesUrl": "/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html",
           "termAsWritten": "Relative poverty",
           "origin": "chip",
-          "definitionHtml": "exists when household income is <strong>below a certain proportion of median income</strong> in an economy,",
+          "definitionHtml": "exists when household income is <strong>below a certain proportion of median income</strong> in an economy.",
           "definitionListHtml": ""
         }
       ]

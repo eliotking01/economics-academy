@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Short-run and long-run average cost curves</title>
+  <desc id="d">A U-shaped long-run average cost curve as the envelope of three short-run average cost curves, each representing a different scale of plant. SRAC2 touches the LRAC at its minimum; SRAC1 and SRAC3 touch it on the falling and rising sections.</desc>
+  <!-- geometry
+       intersections: 400,460 229.6,366.4 570.4,366.4
+  -->
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Costs</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <path d="M 140,200 Q 240,460 400,460 Q 560,460 660,200" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 180,310 Q 229.2,422.8 280,310" fill="none" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 340,400 Q 400,520 460,400" fill="none" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 520,310 Q 570.8,422.8 620,310" fill="none" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="640" y="160" font-size="26" font-weight="700" fill="#1d70b8">LRAC</text>
+  <text x="240" y="286" font-size="24" font-weight="700" fill="#0f7b6c" text-anchor="middle">SRAC1</text>
+  <text x="400" y="376" font-size="24" font-weight="700" fill="#0f7b6c" text-anchor="middle">SRAC2</text>
+  <text x="570" y="286" font-size="24" font-weight="700" fill="#0f7b6c" text-anchor="middle">SRAC3</text>
+</svg>

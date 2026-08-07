@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The circular flow of income</title>
+  <desc id="d">A circular flow between firms at the top and households at the bottom. Up the left side, households provide factors of production — land, labour, capital and enterprise — and expenditure on goods and services flows to firms. Down the right side, firms provide goods and services and pay income — rent, wages, interest and profit — to households.</desc>
+  <!-- geometry
+       schematic flow diagram: no axis geometry to declare
+  -->
+  <defs>
+    <marker id="arrowb" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1d70b8"/>
+    </marker>
+  </defs>
+  <!-- flow ring -->
+  <circle cx="410" cy="300" r="195" fill="none" stroke="#1d70b8" stroke-width="3.5"/>
+  <line x1="215" y1="328" x2="215" y2="272" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowb)"/>
+  <line x1="605" y1="272" x2="605" y2="328" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowb)"/>
+  <!-- agents -->
+  <text x="410" y="88" font-size="26" font-weight="700" fill="#333333" text-anchor="middle">Firms</text>
+  <text x="410" y="532" font-size="26" font-weight="700" fill="#333333" text-anchor="middle">Households</text>
+  <!-- left outside: real flow from households -->
+  <text x="32" y="196" font-size="24" fill="#333333">Factors of</text>
+  <text x="32" y="224" font-size="24" fill="#333333">production</text>
+  <text x="32" y="252" font-size="24" fill="#333333">- Land</text>
+  <text x="32" y="280" font-size="24" fill="#333333">- Labour</text>
+  <text x="32" y="308" font-size="24" fill="#333333">- Capital</text>
+  <text x="32" y="336" font-size="24" fill="#333333">- Enterprise</text>
+  <!-- left inside: money flow to firms -->
+  <text x="250" y="262" font-size="24" fill="#333333">Expenditure</text>
+  <text x="250" y="290" font-size="24" fill="#333333">on goods</text>
+  <text x="250" y="318" font-size="24" fill="#333333">and services</text>
+  <!-- right inside: real flow from firms -->
+  <text x="572" y="276" font-size="24" fill="#333333" text-anchor="end">Goods and</text>
+  <text x="572" y="304" font-size="24" fill="#333333" text-anchor="end">services</text>
+  <!-- right outside: money flow to households -->
+  <text x="636" y="196" font-size="24" fill="#333333">Income</text>
+  <text x="636" y="224" font-size="24" fill="#333333">- Rent</text>
+  <text x="636" y="252" font-size="24" fill="#333333">- Wages</text>
+  <text x="636" y="280" font-size="24" fill="#333333">- Interest</text>
+  <text x="636" y="308" font-size="24" fill="#333333">- Profit</text>
+</svg>

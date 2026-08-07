@@ -1,0 +1,40 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The extended circular flow of income with injections and withdrawals</title>
+  <desc id="d">A circular flow between firms at the top and households at the bottom. Three injections enter the flow on the left — government spending, investment and exports. Three withdrawals leave the flow on the right — taxation, savings and imports.</desc>
+  <!-- geometry
+       schematic flow diagram: no axis geometry to declare
+  -->
+  <defs>
+    <marker id="arrowb" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1d70b8"/>
+    </marker>
+    <marker id="arrowt" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0f7b6c"/>
+    </marker>
+    <marker id="arrowr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d52349"/>
+    </marker>
+  </defs>
+  <!-- flow ring -->
+  <circle cx="430" cy="300" r="170" fill="none" stroke="#1d70b8" stroke-width="3.5"/>
+  <line x1="260" y1="326" x2="260" y2="274" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowb)"/>
+  <line x1="600" y1="274" x2="600" y2="326" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowb)"/>
+  <!-- agents -->
+  <text x="430" y="108" font-size="26" font-weight="700" fill="#333333" text-anchor="middle">Firms</text>
+  <text x="430" y="506" font-size="26" font-weight="700" fill="#333333" text-anchor="middle">Households</text>
+  <!-- injections (in, left) -->
+  <line x1="216" y1="133" x2="297" y2="173" stroke="#0f7b6c" stroke-width="2.5" marker-end="url(#arrowt)"/>
+  <text x="206" y="110" font-size="24" fill="#333333" text-anchor="end">Government</text>
+  <text x="206" y="138" font-size="24" fill="#333333" text-anchor="end">spending</text>
+  <line x1="155" y1="300" x2="245" y2="300" stroke="#0f7b6c" stroke-width="2.5" marker-end="url(#arrowt)"/>
+  <text x="145" y="308" font-size="24" fill="#333333" text-anchor="end">Investment</text>
+  <line x1="216" y1="467" x2="297" y2="427" stroke="#0f7b6c" stroke-width="2.5" marker-end="url(#arrowt)"/>
+  <text x="206" y="480" font-size="24" fill="#333333" text-anchor="end">Exports</text>
+  <!-- withdrawals (out, right) -->
+  <line x1="563" y1="173" x2="644" y2="133" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrowr)"/>
+  <text x="654" y="128" font-size="24" fill="#333333">Taxation</text>
+  <line x1="615" y1="300" x2="690" y2="300" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrowr)"/>
+  <text x="700" y="308" font-size="24" fill="#333333">Savings</text>
+  <line x1="563" y1="427" x2="644" y2="467" stroke="#d52349" stroke-width="2.5" marker-end="url(#arrowr)"/>
+  <text x="654" y="480" font-size="24" fill="#333333">Imports</text>
+</svg>

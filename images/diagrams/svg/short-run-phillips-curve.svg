@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The short-run Phillips curve</title>
+  <desc id="d">A curve convex to the origin, steep at low unemployment and flattening at high unemployment, showing the short-run trade-off between unemployment and inflation: lower unemployment comes with higher inflation.</desc>
+  <!-- geometry
+       on-curve: 170,80 320,410 640,465
+  -->
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Inflation (%)</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Unemployment (%)</text>
+  <!-- curves -->
+  <path d="M 170,80 Q 175,330 320,410 Q 375,440 640,465" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="652" y="473" font-size="26" font-weight="700" fill="#1d70b8">SRPC</text>
+</svg>

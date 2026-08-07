@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Market and individual labour supply curves</title>
+  <desc id="d">Two panels. In the left market panel the labour supply curve S(L)=AC slopes upward: a rise in the wage from W1 to W2 raises the quantity of labour supplied from Q1 to Q2. In the right individual panel the supply curve rises to a maximum at wage W2 and then bends backwards: beyond that wage the income effect outweighs the substitution effect, so the individual chooses fewer hours.</desc>
+  <!-- geometry
+       on-curve: 160,380 240,300 545,375 633,265
+  -->
+  <!-- guides -->
+  <line x1="70" y1="380" x2="160" y2="380" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="160" y1="380" x2="160" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="70" y1="300" x2="240" y2="300" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="240" y1="300" x2="240" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="375" x2="545" y2="375" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="545" y1="375" x2="545" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="265" x2="633" y2="265" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="633" y1="265" x2="633" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes: market panel -->
+  <line x1="70" y1="120" x2="70" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="70" y1="460" x2="370" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="34" y="84" font-size="26" fill="#333333">Wages</text>
+  <text x="370" y="492" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- axes: individual panel -->
+  <line x1="460" y1="120" x2="460" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="460" y1="460" x2="760" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="760" y="492" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- panel titles -->
+  <text x="220" y="112" font-size="24" fill="#333333" text-anchor="middle">Market</text>
+  <text x="610" y="112" font-size="24" fill="#333333" text-anchor="middle">Individual</text>
+  <!-- curves -->
+  <line x1="100" y1="440" x2="320" y2="220" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 475,445 L 615,305 Q 633,287 633,265 Q 633,243 603,231" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="328" y="216" font-size="26" font-weight="700" fill="#1d70b8">S(L)=AC</text>
+  <text x="585" y="215" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="end">S(L)</text>
+  <text x="62" y="388" font-size="24" fill="#333333" text-anchor="end">W1</text>
+  <text x="62" y="308" font-size="24" fill="#333333" text-anchor="end">W2</text>
+  <text x="160" y="492" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="240" y="492" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <text x="452" y="383" font-size="24" fill="#333333" text-anchor="end">W1</text>
+  <text x="452" y="273" font-size="24" fill="#333333" text-anchor="end">W2</text>
+  <text x="545" y="492" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="633" y="492" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+</svg>

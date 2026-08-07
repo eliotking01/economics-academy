@@ -1,0 +1,24 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The trade cycle</title>
+  <desc id="d">Actual real GDP fluctuates around a rising trend rate of growth. Above the trend the economy is in a boom; it then turns down through a downturn into a recession below the trend, before a recovery returns it to the trend line.</desc>
+  <!-- geometry
+       intersections: 100,430 400,280 610,175
+  -->
+  <!-- shaded gaps -->
+  <path d="M 100,430 q 150,-165 300,-150 z" fill="#0f7b6c" fill-opacity="0.15"/>
+  <path d="M 400,280 q 105,10 210,-105 z" fill="#d52349" fill-opacity="0.15"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Real GDP</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Time</text>
+  <!-- curves -->
+  <line x1="100" y1="430" x2="640" y2="160" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 100,430 Q 250,265 400,280 Q 505,290 610,175" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="700" y="146" font-size="26" font-weight="700" fill="#0f7b6c" text-anchor="end">Trend rate of growth</text>
+  <text x="250" y="290" font-size="24" fill="#333333" text-anchor="middle">Boom</text>
+  <text x="390" y="244" font-size="24" fill="#333333" text-anchor="middle">Downturn</text>
+  <text x="505" y="320" font-size="24" fill="#333333" text-anchor="middle">Recession</text>
+  <text x="620" y="200" font-size="24" fill="#333333">Recovery</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Efficiency in imperfect competition</title>
+  <desc id="d">A firm with market power produces at the output Q where MC crosses MR, with the price P read off AR above average cost C, shading a supernormal profit rectangle. The productively efficient point at the minimum of AC and the allocatively efficient point where AR crosses MC both lie beyond Q, so the firm is productively and allocatively inefficient, but the supernormal profit gives the potential for dynamic efficiency.</desc>
+  <!-- geometry
+       intersections: 470,405 485,373.7
+       on-curve: 393.1,304.8 393.1,390.6
+  -->
+  <!-- shaded supernormal profit -->
+  <rect x="100" y="304.8" width="293.1" height="85.8" fill="#0f7b6c" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="304.8" x2="393.1" y2="304.8" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="390.6" x2="393.1" y2="390.6" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="393.1" y1="304.8" x2="393.1" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="160" y1="130" x2="620" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="130" x2="420" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="470" cy="405" r="7" fill="#0f7b6c"/>
+  <circle cx="485" cy="373.7" r="7" fill="#d52349"/>
+  <!-- in-diagram key -->
+  <circle cx="552" cy="203" r="7" fill="#0f7b6c"/>
+  <text x="566" y="210" font-size="24" fill="#333333">Productive: MC=AC</text>
+  <circle cx="552" cy="239" r="7" fill="#d52349"/>
+  <text x="566" y="246" font-size="24" fill="#333333">Allocative: AR=MC</text>
+  <!-- labels -->
+  <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
+  <text x="630" y="324" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
+  <text x="632" y="483" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="428" y="510" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="313" font-size="24" fill="#333333" text-anchor="end">P</text>
+  <text x="92" y="398" font-size="24" fill="#333333" text-anchor="end">C</text>
+  <text x="393" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+</svg>

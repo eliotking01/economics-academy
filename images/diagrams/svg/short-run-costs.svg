@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Short-run cost curves</title>
+  <desc id="d">Four short-run cost curves: a J-shaped marginal cost curve cutting both the average variable cost and average total cost curves at their minimum points, and an average fixed cost curve falling continuously as output rises.</desc>
+  <!-- geometry
+       intersections: 470,405 425,457.5
+  -->
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Costs</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 280,395 Q 350,457.5 425,457.5 Q 500,457.5 570,390" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 150,340 Q 230,460 350,485 Q 470,505 630,508" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC</text>
+  <text x="630" y="324" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
+  <text x="582" y="404" font-size="26" font-weight="700" fill="#1d70b8">AVC</text>
+  <text x="642" y="510" font-size="26" font-weight="700" fill="#1d70b8">AFC</text>
+</svg>

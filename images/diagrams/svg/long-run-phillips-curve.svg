@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The long-run Phillips curve</title>
+  <desc id="d">A vertical long-run Phillips curve at the natural rate of unemployment, crossed by two short-run Phillips curves. SRPC1 crosses at 2% inflation and the higher SRPC2 at 5%, showing that in the long run unemployment returns to the natural rate whatever the inflation rate: there is no long-run trade-off.</desc>
+  <!-- geometry
+       intersections: 430,420 430,280
+  -->
+  <!-- guides -->
+  <line x1="100" y1="420" x2="430" y2="420" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="280" x2="430" y2="280" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Inflation (%)</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Unemployment (%)</text>
+  <!-- curves -->
+  <line x1="430" y1="80" x2="430" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 240,120 Q 250,340 430,420 Q 490,447 620,455" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 330,85 Q 345,230 430,280 Q 481,310 640,345" fill="none" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="430" y="64" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="middle">LRPC</text>
+  <text x="632" y="463" font-size="26" font-weight="700" fill="#1d70b8">SRPC1</text>
+  <text x="652" y="353" font-size="26" font-weight="700" fill="#d52349">SRPC2</text>
+  <text x="92" y="428" font-size="24" fill="#333333" text-anchor="end">2%</text>
+  <text x="92" y="288" font-size="24" fill="#333333" text-anchor="end">5%</text>
+  <text x="430" y="552" font-size="24" fill="#333333" text-anchor="middle">NRU</text>
+</svg>

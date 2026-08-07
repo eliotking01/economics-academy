@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Sales maximisation on a firm diagram</title>
+  <desc id="d">A firm diagram with downward-sloping D=AR and MR curves, a rising MC=S curve and a U-shaped AC curve. Sales are maximised without a loss at the output Q where AC equals AR, so price equals average cost and the firm breaks even with only normal profit.</desc>
+  <!-- geometry
+       intersections: 518.6,399 470,405
+  -->
+  <!-- guides -->
+  <line x1="100" y1="399" x2="518.6" y2="399" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="518.6" y1="399" x2="518.6" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="160" y1="130" x2="620" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="130" x2="420" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="518.6" cy="399" r="7" fill="#d52349"/>
+  <!-- labels -->
+  <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
+  <text x="630" y="324" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
+  <text x="632" y="483" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="433" y="505" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="407" font-size="24" fill="#333333" text-anchor="end">P,C</text>
+  <text x="519" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+</svg>
