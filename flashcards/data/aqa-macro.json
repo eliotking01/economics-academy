@@ -227,7 +227,7 @@
         "evaluation"
       ],
       "front": "<p>Why can the macroeconomic objectives <strong>conflict, at least in the short run</strong>?</p>",
-      "back": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23. AQA flags exactly this: the importance attached to objectives changes over time.</p>",
+      "back": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23.</p><p>That is the point to carry: the importance attached to objectives changes over time.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html"
     },
@@ -292,8 +292,8 @@
         "indicators",
         "balance-of-payments"
       ],
-      "front": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining spec indicator.</p>",
-      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator on the AQA list is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
+      "front": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining indicator.</p>",
+      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
     },
@@ -535,7 +535,7 @@
         "diagram"
       ],
       "front": "<p>Use an AD/AS diagram to show <strong>macroeconomic equilibrium</strong> below full employment.</p>",
-      "back": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>This is the AQA-required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>",
+      "back": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>That is the required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>",
       "svgRef": "/images/diagrams/svg/negative-output-gap-classical.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
       "svgAlt": "AD and SRAS intersecting at output Y1 and price level PL1, left of the vertical LRAS curve at Yfe"
@@ -616,7 +616,7 @@
         "investment"
       ],
       "front": "<p>Explain the <strong>accelerator effect</strong>.</p>",
-      "back": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD. AQA does not require accelerator calculations.</p>",
+      "back": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD.</p><p>Accelerator calculations are not required.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html"
     },
@@ -646,8 +646,8 @@
         "multiplier",
         "formula"
       ],
-      "front": "<p>How does AQA require you to <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>",
-      "back": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. (AQA states that calculations from the marginal propensities to withdraw will not be expected — that is Edexcel territory.)</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>",
+      "front": "<p>How do you <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>",
+      "back": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. Calculations from the marginal propensities to withdraw are not expected.</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
       "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>M</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\">/</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−</mo><mi>M</mi><mi>P</mi><mi>C</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">M = 1/(1 - MPC)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">M</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord\">1/</span><span class=\"mopen\">(</span><span class=\"mord\">1</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">MPC</span><span class=\"mclose\">)</span></span></span></span></span>"
@@ -726,8 +726,8 @@
       "tags": [
         "aggregate-supply"
       ],
-      "front": "<p>Name AQA's <strong>fundamental determinants of LRAS</strong>.</p>",
-      "back": "<p><strong>Technology, productivity, attitudes, enterprise, factor mobility and economic incentives</strong> — the AQA list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>AQA also stresses the <strong>institutional structure</strong> of the economy — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>",
+      "front": "<p>Name the <strong>fundamental determinants of LRAS</strong>.</p>",
+      "back": "<ul><li><strong>Technology</strong>.</li><li><strong>Productivity</strong>.</li><li><strong>Attitudes</strong>.</li><li><strong>Enterprise</strong>.</li><li><strong>Factor mobility</strong>.</li><li><strong>Economic incentives</strong>.</li></ul><p>The list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>The <strong>institutional structure</strong> of the economy matters too — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html"
     },
@@ -1261,7 +1261,7 @@
         "monetary-policy",
         "diagram"
       ],
-      "front": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the AQA macro objectives.</p>",
+      "front": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the macro objectives.</p>",
       "back": "<p>AD shifts right from AD1 to AD2: real GDP rises Y1 to Y2 and the price level PL1 to PL2 — <strong>growth up, unemployment down</strong> (derived demand for labour), <strong>inflation up</strong>; the weaker pound helps net trade. On the classical curve at full employment, the same shift raises only the price level.</p><p>Watch the distribution effects: cheap money inflates asset prices, favouring the asset-rich — and higher consumption strains environmental sustainability.</p>",
       "svgRef": "/images/diagrams/svg/keynesian-ad-shift-right.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",

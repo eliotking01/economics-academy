@@ -15,9 +15,10 @@ and merges himself.
 ## STATUS
 
 **IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
-complete. Phase 2 under way: **issues A and D are COMPLETE across all six
-decks** (240 cards edited across 12 batches, all committed). Nothing is
-blocked. Remaining: all of B (25 cards), then all of C, then Phase 3
+complete. Phase 2 under way: **issues A, B and D are COMPLETE across all six
+decks** (265 cards edited across 13 batches, all committed). Nothing is
+blocked. Remaining: **issue C** (hand-filter the 123 candidates, split the
+confirmed ones, bump the localStorage key, update card counts), then Phase 3
 verification.
 
 ## RENDERING FINDINGS
@@ -122,7 +123,7 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
 | A — merged points on one line | **DONE** | 206 cards | 189 | All six decks. The 17 residual hits are hand-reviewed false positives, named per deck in the batch log. |
-| B — exam board references | in progress | 47 cards (64 mentions) | 22 | Fixed opportunistically on cards already open for A/D. **Next: the remaining 25 cards / 34 mentions** — 14 in `aqa-micro`, 7 in `aqa-macro`, 3 in Theme 1, 1 in Theme 2. |
+| B — exam board references | **DONE** | 47 cards (64 mentions) | 47 | All six decks audit **0**. An independent regex sweep over card text in both the sources and the built payloads returns 0 hits for `edexcel\|aqa\|ocr\|specification\|spec\|exam board`. |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
 | D — long inline lists | **DONE** | 67 cards | 51 | All six decks. The 29 residual hits are hand-reviewed false positives. |
 
@@ -130,12 +131,12 @@ Per deck, cards **remaining** (re-run `audit.py` to refresh):
 
 | Deck | A | B | C | D |
 | --- | --- | --- | --- | --- |
-| `edexcel-a-theme-1` | **0** | 3 | 13 | 2 (false positives, left) |
-| `edexcel-a-theme-2` | **1** (false positive, left) | 1 | 28 | 5 (false positives, left) |
+| `edexcel-a-theme-1` | **0** | **0** | 13 | 2 (false positives, left) |
+| `edexcel-a-theme-2` | **1** (false positive, left) | **0** | 28 | 5 (false positives, left) |
 | `edexcel-a-theme-3` | **5** (false positives, left) | **0** | 12 | 3 (false positives, left) |
 | `edexcel-a-theme-4` | **4** (false positives, left) | **0** | 1 | 7 (false positives, left) |
-| `aqa-micro` | **4** (false positives, left) | 14 | 37 | 5 (false positives, left) |
-| `aqa-macro` | **3** (false positives, left) | 7 | 32 | 7 (false positives, left) |
+| `aqa-micro` | **4** (false positives, left) | **0** | 37 | 5 (false positives, left) |
+| `aqa-macro` | **3** (false positives, left) | **0** | 32 | 7 (false positives, left) |
 
 A residual count above zero does **not** mean unfinished work. **Every deck is
 complete for A and D.** What remains is the set of detector hits read by hand and
@@ -453,14 +454,36 @@ Read and left alone in `aqa-macro`: `aqa-2-2-3-def-01`, `aqa-2-3-1-diagram-01`,
 `aqa-2-2-1-diagram-01`, `aqa-2-2-4-def-01`, `aqa-2-3-2-def-01`,
 `aqa-2-4-2-def-01` and `aqa-2-6-3-calc-01`.
 
+**Batch 13 — issue B, all decks (2026-08-07).** The 25 cards still carrying a
+board reference after the A/D pass. Every one was **rewritten, not just
+truncated** — "AQA flags exactly this" became "That is the point to carry",
+"AQA expects you to trace a change" became "Be ready to trace a change", "the
+application AQA names in the specification" was dropped as redundant, and the
+four Edexcel fronts saying "the specification's three/four/five …" now simply
+say "the three/four/five …". `aqa-2-2-4-formula-01` also lost a cross-board
+reference: an AQA card that said the withdrawal-propensity method "is Edexcel
+territory". `aqa-2-2-6-def-02`'s six LRAS determinants were bulleted at the
+same time.
+
+Combined with the 22 fixed opportunistically during the A/D pass, that is all
+47. Verified two ways: `audit.py` reports **B = 0** for every deck, and an
+independent sweep of card text in both the sources and the built payloads finds
+**0** matches for `edexcel|aqa|ocr|specification|spec|exam board`. Deck-level
+`board` values, `deckTitle`s, page headings, nav and SEO text are untouched —
+confirmed by printing them after the pass.
+
 ## NEXT STEPS
 
-1. **Issue B — the remaining 25 cards.** Run
-   `python3 _working/flashcards/qa/audit.py --issue B --show` for the full
-   listing with the exact offending words. Nearly all are AQA cards saying
-   "AQA" where the deck title already says so. Rewrite naturally rather than
-   deleting the word and leaving a gap; board metadata, deck titles, page
-   headings, nav and SEO text must NOT change — visible card text only.
+1. **Issue C — the last content issue.** Hand-filter the 123 candidates from
+   `audit.py --issue C --show`: most are single-focus questions with a natural
+   two-clause phrasing ("Define national income, and state the identity") that
+   must NOT be split. Split only cards testing genuinely distinct revision
+   areas — the named example is `edexcel-a-2-1-3-eval-01` ("Evaluate the
+   effects of unemployment, and the significance of migration and skills").
+   Follow the ID SCHEME above, bump the localStorage prefix
+   `ea-flashcards:v1:` → `:v2:` in `js/components/flashcards.js`, and update
+   card counts on deck landing pages, the hub, meta descriptions and the
+   FLASHCARDS_PROGRESS coverage matrix.
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
