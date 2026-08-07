@@ -259,8 +259,12 @@
   color: #5d5d5d !important;
 }
 
+/* The two faces are stacked in a single grid cell rather than absolutely
+ * positioned, so the card's height is the taller face's natural height
+ * instead of a fixed box the answer scrolls inside. */
 .flashcards-page .fc-card-inner {
-  display: block;
+  display: grid;
+  grid-template: 1fr / 1fr;
   position: relative;
   width: 100%;
   min-height: 340px;
@@ -274,8 +278,7 @@
 
 .flashcards-page .fc-face {
   display: block;
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border: 1px solid var(--fc-border);
@@ -284,7 +287,6 @@
   background: #ffffff;
   box-shadow: 0 4px 16px rgba(26, 62, 114, 0.1);
   padding: 1.5em 1.75em;
-  overflow-y: auto;
 }
 
 .flashcards-page .fc-front {
@@ -316,6 +318,40 @@
 
 .flashcards-page .fc-back p:last-child,
 .flashcards-page .fc-back ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Card text is a short, dense unit, not a page of prose: the site-wide 2em
+ * block gap spreads a four-line answer over a screen and pushes separated
+ * points and calculation steps far apart. Card faces, static samples and the
+ * print sheet all carry the same authored HTML, so all three are scoped
+ * together here and below. */
+.flashcards-page .fc-face p,
+.flashcards-page .fc-face ul,
+.flashcards-page .fc-sample-back p,
+.flashcards-page .fc-sample-back ul,
+.flashcards-page .fc-print-back p,
+.flashcards-page .fc-print-back ul {
+  margin-bottom: 1em;
+}
+
+/* A lead-in line and the list it introduces are one unit, so the list is
+ * pulled closer than the gap between two separate points. */
+.flashcards-page .fc-face p + ul,
+.flashcards-page .fc-sample-back p + ul,
+.flashcards-page .fc-print-back p + ul {
+  margin-top: -0.65em;
+}
+
+.flashcards-page .fc-face li,
+.flashcards-page .fc-sample-back li,
+.flashcards-page .fc-print-back li {
+  margin-bottom: 0.4em;
+}
+
+.flashcards-page .fc-face li:last-child,
+.flashcards-page .fc-sample-back li:last-child,
+.flashcards-page .fc-print-back li:last-child {
   margin-bottom: 0;
 }
 

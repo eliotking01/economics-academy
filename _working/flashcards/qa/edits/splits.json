@@ -1,0 +1,85 @@
+[
+  {
+    "id": "edexcel-a-2-1-3-eval-01",
+    "front_old": "<p>Evaluate the <strong>effects of unemployment</strong>, and the significance of migration and skills.</p>",
+    "back_old": "<ul><li><strong>Individuals</strong> — lower incomes and living standards, skills erode, health suffers.</li><li><strong>Government and society</strong> — lower tax revenue and higher welfare spending widen the deficit; social costs rise.</li><li><strong>Firms</strong> — weaker sales, though a larger labour pool can lower hiring costs.</li></ul><p><strong>Migration</strong> cuts unemployment where migrants fill shortages, and migrants' spending creates jobs; competition can raise unemployment in particular low-skilled sectors.</p><p>Skills determine who escapes structural unemployment.</p>",
+    "front": "<p>Evaluate the <strong>effects of unemployment</strong> on individuals, government and firms.</p>",
+    "back": "<ul><li><strong>Individuals</strong> — lower incomes and living standards, skills erode, health suffers.</li><li><strong>Government and society</strong> — lower tax revenue and higher welfare spending widen the deficit; social costs rise.</li><li><strong>Firms</strong> — weaker sales, though a larger labour pool can lower hiring costs.</li></ul>",
+    "new": {
+      "id": "edexcel-a-2-1-3-eval-02",
+      "front": "<p>Why do <strong>migration and skills</strong> matter for unemployment?</p>",
+      "back": "<p><strong>Migration</strong> cuts unemployment where migrants fill shortages, and migrants' spending creates jobs; competition can raise unemployment in particular low-skilled sectors.</p><p>Skills determine who escapes structural unemployment.</p>",
+      "tags": ["unemployment", "migration", "evaluation"]
+    }
+  },
+  {
+    "id": "edexcel-a-2-1-1-eval-01",
+    "front_old": "<p>Evaluate the <strong>limitations of GDP</strong> for comparing living standards, and the national happiness evidence.</p>",
+    "back_old": "<ul><li>GDP per capita masks <strong>inequality</strong>.</li><li>It excludes <strong>unpaid work</strong>, leisure and environmental quality.</li><li>It counts welfare-reducing 'bads' like pollution clean-up.</li><li>It struggles with <strong>quality improvements</strong>.</li><li>It misses the informal economy.</li></ul><p>Hence the interest in <strong>national wellbeing</strong>: the UK measures subjective happiness alongside GDP, and rising real incomes raise reported happiness only weakly beyond a point.</p>",
+    "front": "<p>Evaluate the <strong>limitations of GDP</strong> for comparing living standards.</p>",
+    "back": "<ul><li>GDP per capita masks <strong>inequality</strong>.</li><li>It excludes <strong>unpaid work</strong>, leisure and environmental quality.</li><li>It counts welfare-reducing 'bads' like pollution clean-up.</li><li>It struggles with <strong>quality improvements</strong>.</li><li>It misses the informal economy.</li></ul>",
+    "new": {
+      "id": "edexcel-a-2-1-1-eval-02",
+      "front": "<p>What does the <strong>national happiness</strong> evidence add to GDP?</p>",
+      "back": "<p><strong>National wellbeing</strong> is measured alongside GDP: the UK tracks subjective happiness, and rising real incomes raise reported happiness only weakly beyond a point.</p>",
+      "tags": ["growth", "wellbeing", "evaluation"]
+    }
+  },
+  {
+    "id": "edexcel-a-2-1-4-chain-01",
+    "front_old": "<p>What causes a <strong>current account deficit</strong>, and how does correcting one conflict with other objectives?</p>",
+    "back_old": "<p>Causes:</p><ul><li>High consumer spending and low saving pulling in imports.</li><li>Weak competitiveness and low productivity.</li><li>A strong currency.</li><li>Slowdown in export markets.</li><li>Structural issues such as deindustrialisation.</li></ul><p>Corrections trade off against other objectives — cutting demand through fiscal or monetary tightening slows growth and raises unemployment; supply-side improvement works but slowly and at a cost.</p><p>Economies are interconnected through trade, so one country's deficit is another's surplus.</p>",
+    "front": "<p>What causes a <strong>current account deficit</strong>?</p>",
+    "back": "<p>Causes:</p><ul><li>High consumer spending and low saving pulling in imports.</li><li>Weak competitiveness and low productivity.</li><li>A strong currency.</li><li>Slowdown in export markets.</li><li>Structural issues such as deindustrialisation.</li></ul><p>Economies are interconnected through trade, so one country's deficit is another's surplus.</p>",
+    "new": {
+      "id": "edexcel-a-2-1-4-eval-01",
+      "cardType": "evaluation",
+      "front": "<p>How does <strong>correcting a current account deficit</strong> conflict with other objectives?</p>",
+      "back": "<p>Corrections trade off against other objectives — cutting demand through fiscal or monetary tightening slows growth and raises unemployment; supply-side improvement works but slowly and at a cost.</p>",
+      "tags": ["balance-of-payments", "evaluation"]
+    }
+  },
+  {
+    "id": "aqa-2-1-2-def-03",
+    "front_old": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining indicator.</p>",
+    "back_old": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
+    "front": "<p>Define the <strong>current account</strong> of the balance of payments.</p>",
+    "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p>",
+    "new": {
+      "id": "aqa-2-1-2-def-04",
+      "front": "<p>Define <strong>productivity</strong> as a macroeconomic indicator.</p>",
+      "back": "<p><strong>Productivity</strong> is output per worker (or per hour worked). It drives long-run growth and competitiveness.</p>",
+      "tags": ["indicators", "productivity"],
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
+        "origin": "card-authored"
+      }
+    }
+  },
+  {
+    "id": "aqa-2-5-1-def-02",
+    "front_old": "<p>Distinguish the <strong>types of public expenditure</strong>, and why governments levy taxes.</p>",
+    "back_old": "<ul><li><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines).</li><li><strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure.</li><li><strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</li></ul><p>Taxes exist to fund this spending, manage AD, correct market failures and redistribute income.</p>",
+    "front": "<p>Distinguish the <strong>types of public expenditure</strong>.</p>",
+    "back": "<ul><li><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines).</li><li><strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure.</li><li><strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</li></ul>",
+    "new": {
+      "id": "aqa-2-5-1-def-05",
+      "front": "<p>Why do governments <strong>levy taxes</strong>?</p>",
+      "back": "<p>Taxes exist to fund public spending, manage AD, correct market failures and redistribute income.</p>",
+      "tags": ["policy", "taxation"]
+    }
+  },
+  {
+    "id": "aqa-1-8-5-def-03",
+    "front_old": "<p>Why is the classification of <strong>merit and demerit goods</strong> a value judgement, and how does imperfect information cause their mis-provision?</p>",
+    "back_old": "<p>The labels rest on a <strong>value judgement</strong> and can change over time — alcohol was once treated as a merit good; vaccinations were once distrusted.</p><p>Note too that not every good with consumption externalities is a merit or demerit good.</p><p><strong>Imperfect information</strong> compounds the problem: consumers underestimate the long-term benefits of fruit and vegetables (under-consumption) and the health risks of smoking (over-consumption).</p>",
+    "front": "<p>Why is the classification of <strong>merit and demerit goods</strong> a value judgement?</p>",
+    "back": "<p>The labels rest on a <strong>value judgement</strong> and can change over time — alcohol was once treated as a merit good; vaccinations were once distrusted.</p><p>Note too that not every good with consumption externalities is a merit or demerit good.</p>",
+    "new": {
+      "id": "aqa-1-8-5-def-04",
+      "front": "<p>How does <strong>imperfect information</strong> cause the mis-provision of merit and demerit goods?</p>",
+      "back": "<p><strong>Imperfect information</strong>: consumers underestimate the long-term benefits of fruit and vegetables (under-consumption) and the health risks of smoking (over-consumption).</p>",
+      "tags": ["market-failure", "information"]
+    }
+  }
+]

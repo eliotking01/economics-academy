@@ -343,7 +343,7 @@
         "diagram"
       ],
       "front": "<p>Show <strong>economic growth</strong> and <strong>economic decline</strong> on a PPF, and give a cause of each.</p>",
-      "back": "<p>An outward shift from PPF1 to PPF2 shows economic growth — the economy can produce more of both goods. Causes: investment in capital, technological advance, a larger or better-educated workforce, discovery of resources.</p><p>An inward shift from PPF1 to PPF3 shows decline — natural disaster, war, or resource depletion.</p>",
+      "back": "<p>An <strong>outward shift</strong> from PPF1 to PPF2 shows economic growth — the economy can produce more of both goods. Causes:</p><ul><li>Investment in capital.</li><li>Technological advance.</li><li>A larger or better-educated workforce.</li><li>Discovery of resources.</li></ul><p>An <strong>inward shift</strong> from PPF1 to PPF3 shows decline — natural disaster, war, or resource depletion.</p>",
       "svgRef": "/images/diagrams/svg/ppf-growth-decline.svg",
       "notesUrl": "/revision-notes/edexcel-theme-1/1-1-4-production-possibility-frontiers.html",
       "svgAlt": "Three concentric production possibility frontiers with an outward shift from PPF1 to PPF2 showing growth and an inward shift from PPF1 to PPF3 showing decline"
@@ -390,7 +390,7 @@
         "evaluation"
       ],
       "front": "<p><strong>Evaluate</strong> the division of labour. Give advantages and disadvantages.</p>",
-      "back": "<ul><li><strong>For</strong> — workers become highly skilled at one task, raising productivity; time is saved switching between tasks; workers can be matched to their strengths; supports use of specialist machinery.</li><li><strong>Against</strong> — repetitive work breeds boredom and lower motivation; workers' skills narrow, raising the risk of structural unemployment; over-dependence on each stage makes production vulnerable to disruption.</li></ul>",
+      "back": "<p><strong>For</strong></p><ul><li>Workers become highly skilled at one task, raising productivity.</li><li>Time is saved switching between tasks.</li><li>Workers can be matched to their strengths.</li><li>Supports use of specialist machinery.</li></ul><p><strong>Against</strong></p><ul><li>Repetitive work breeds boredom and lower motivation.</li><li>Workers' skills narrow, raising the risk of structural unemployment.</li><li>Over-dependence on each stage makes production vulnerable to disruption.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html"
     },
@@ -497,7 +497,7 @@
         "diagram"
       ],
       "front": "<p>Sketch the effect of an <strong>increase in demand</strong> on the demand curve, marking the quantities at the original price.</p>",
-      "back": "<p>D1 shifts right to D2, caused by a change in a non-price factor — incomes, the price of substitutes or complements, tastes, or population. At the unchanged price P1, quantity demanded rises from Q1 to Q2.</p>",
+      "back": "<p>D1 shifts right to D2, caused by a change in a non-price factor:</p><ul><li>Incomes.</li><li>The price of substitutes or complements.</li><li>Tastes.</li><li>Population.</li></ul><p>At the unchanged price P1, quantity demanded rises from Q1 to Q2.</p>",
       "svgRef": "/images/diagrams/svg/demand-curve-shift.svg",
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
       "svgAlt": "Demand curve D1 shifting right to D2, with quantity demanded rising from Q1 to Q2 at the unchanged price P1"
@@ -638,7 +638,7 @@
         "formula"
       ],
       "front": "<p>State the formula for <strong>income elasticity of demand</strong>, and what its sign tells you.</p>",
-      "back": "<p>The sign classifies the good: <strong>positive</strong> for a normal good, <strong>negative</strong> for an inferior good — and a YED greater than 1 marks a luxury.</p>",
+      "back": "<p>The sign classifies the good:</p><ul><li><strong>Positive</strong> — a normal good.</li><li><strong>Negative</strong> — an inferior good.</li></ul><p>A YED greater than 1 marks a luxury.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
       "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mtext>YED</mtext><mo>=</mo><mfrac><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><mtext>QD</mtext></mrow><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><mtext>Y</mtext></mrow></mfrac></mrow><annotation encoding=\"application/x-tex\">\\text{YED} = \\frac{\\%\\Delta \\text{QD}}{\\%\\Delta \\text{Y}}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord text\"><span class=\"mord\">YED</span></span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:2.1686em;vertical-align:-0.7416em;\"></span><span class=\"mord\"><span class=\"mopen nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.427em;\"><span style=\"top:-2.314em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord text\"><span class=\"mord\">Y</span></span></span></span><span style=\"top:-3.23em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"frac-line\" style=\"border-bottom-width:0.04em;\"></span></span><span style=\"top:-3.677em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord text\"><span class=\"mord\">QD</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.7416em;\"><span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span></span></span></span></span>"
@@ -670,7 +670,7 @@
         "formula"
       ],
       "front": "<p>State the formula for <strong>cross elasticity of demand</strong>, and what its sign tells you.</p>",
-      "back": "<p>The sign reveals the relationship: <strong>positive</strong> for substitutes (a dearer rival raises demand for A), <strong>negative</strong> for complements, and near zero for unrelated goods.</p>",
+      "back": "<p>The sign reveals the relationship:</p><ul><li><strong>Positive</strong> — substitutes (a dearer rival raises demand for A).</li><li><strong>Negative</strong> — complements.</li><li><strong>Near zero</strong> — unrelated goods.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
       "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mtext>XED</mtext><mo>=</mo><mfrac><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><msub><mtext>QD</mtext><mi>A</mi></msub></mrow><mrow><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">Δ</mi><msub><mtext>P</mtext><mi>B</mi></msub></mrow></mfrac></mrow><annotation encoding=\"application/x-tex\">\\text{XED} = \\frac{\\%\\Delta \\text{QD}_{A}}{\\%\\Delta \\text{P}_{B}}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord text\"><span class=\"mord\">XED</span></span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:2.263em;vertical-align:-0.836em;\"></span><span class=\"mord\"><span class=\"mopen nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.427em;\"><span style=\"top:-2.314em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord\"><span class=\"mord text\"><span class=\"mord\">P</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3283em;\"><span style=\"top:-2.55em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mathnormal mtight\" style=\"margin-right:0.05017em;\">B</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.15em;\"><span></span></span></span></span></span></span></span></span><span style=\"top:-3.23em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"frac-line\" style=\"border-bottom-width:0.04em;\"></span></span><span style=\"top:-3.677em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">%Δ</span><span class=\"mord\"><span class=\"mord text\"><span class=\"mord\">QD</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2342em;\"><span style=\"top:-2.4559em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mathnormal mtight\">A</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2441em;\"><span></span></span></span></span></span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.836em;\"><span></span></span></span></span></span><span class=\"mclose nulldelimiter\"></span></span></span></span></span></span>"
@@ -764,7 +764,7 @@
         "diagram"
       ],
       "front": "<p>Sketch the effect of an <strong>increase in supply</strong> on the supply curve, marking the quantities at the original price.</p>",
-      "back": "<p>S1 shifts right to S2, caused by a non-price factor — a technological advance, lower costs of production, or a subsidy. At the unchanged price P, quantity supplied rises from Q1 to Q2. A shift left from S2 to S1 could be caused by an increase in costs of production.</p>",
+      "back": "<p>S1 shifts right to S2, caused by a non-price factor:</p><ul><li>A technological advance.</li><li>Lower costs of production.</li><li>A subsidy.</li></ul><p>At the unchanged price P, quantity supplied rises from Q1 to Q2.</p><p>A shift left from S2 to S1 could be caused by an increase in costs of production.</p>",
       "svgRef": "/images/diagrams/svg/supply-curve-shift.svg",
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-4-supply.html",
       "svgAlt": "Supply curve S1 shifting right to S2, with quantity supplied rising from Q1 to Q2 at the unchanged price P"
@@ -1247,7 +1247,7 @@
       "tags": [
         "behavioural"
       ],
-      "front": "<p>Give the specification's three <strong>reasons why consumers may not behave rationally</strong>.</p>",
+      "front": "<p>Give the three <strong>reasons why consumers may not behave rationally</strong>.</p>",
       "back": "<ul><li><strong>Influence of other people's behaviour</strong> — herd behaviour and social norms shape choices.</li><li><strong>Habitual behaviour</strong> — defaults and routines persist even against a consumer's own interest.</li><li><strong>Consumer weakness at computation</strong> — people struggle to calculate and compare complex prices, deals and probabilities.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html"
@@ -1277,7 +1277,7 @@
       "tags": [
         "market-failure"
       ],
-      "front": "<p>Name the specification's three <strong>types of market failure</strong>.</p>",
+      "front": "<p>Name the three <strong>types of market failure</strong>.</p>",
       "back": "<ul><li><strong>Externalities</strong> — spillover costs or benefits on third parties that the market ignores.</li><li><strong>Under-provision of public goods</strong> — non-excludability means markets fail to supply them.</li><li><strong>Information gaps</strong> — buyers or sellers lack the information for efficient decisions.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html"
@@ -1642,7 +1642,7 @@
       "tags": [
         "government-failure"
       ],
-      "front": "<p>Give the specification's four <strong>causes of government failure</strong>.</p>",
+      "front": "<p>Give the four <strong>causes of government failure</strong>.</p>",
       "back": "<ul><li><strong>Distortion of price signals</strong> — intervention (subsidies, price controls) stops prices reflecting scarcity.</li><li><strong>Unintended consequences</strong> — agents respond in ways policymakers did not predict, such as black markets.</li><li><strong>Excessive administrative costs</strong> — running the intervention can outweigh the welfare it recovers.</li><li><strong>Information gaps</strong> — governments, like markets, must decide without full information, so they can set taxes, subsidies or targets at the wrong level.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/edexcel-theme-1/1-4-2-government-failure.html"

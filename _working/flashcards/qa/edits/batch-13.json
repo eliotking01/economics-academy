@@ -1,0 +1,170 @@
+[
+  {
+    "id": "aqa-2-1-1-eval-01",
+    "field": "back",
+    "old": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23. AQA flags exactly this: the importance attached to objectives changes over time.</p>",
+    "new": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23.</p><p>That is the point to carry: the importance attached to objectives changes over time.</p>"
+  },
+  {
+    "id": "aqa-2-1-2-def-03",
+    "field": "front",
+    "old": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining spec indicator.</p>",
+    "new": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining indicator.</p>"
+  },
+  {
+    "id": "aqa-2-1-2-def-03",
+    "field": "back",
+    "old": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator on the AQA list is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
+    "new": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>"
+  },
+  {
+    "id": "aqa-2-2-2-diagram-03",
+    "field": "back",
+    "old": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>This is the AQA-required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>",
+    "new": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>That is the required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>"
+  },
+  {
+    "id": "aqa-2-2-3-chain-01",
+    "field": "back",
+    "old": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD. AQA does not require accelerator calculations.</p>",
+    "new": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD.</p><p>Accelerator calculations are not required.</p>"
+  },
+  {
+    "id": "aqa-2-2-4-formula-01",
+    "field": "front",
+    "old": "<p>How does AQA require you to <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>",
+    "new": "<p>How do you <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>"
+  },
+  {
+    "id": "aqa-2-2-4-formula-01",
+    "field": "back",
+    "old": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. (AQA states that calculations from the marginal propensities to withdraw will not be expected — that is Edexcel territory.)</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>",
+    "new": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. Calculations from the marginal propensities to withdraw are not expected.</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>"
+  },
+  {
+    "id": "aqa-2-2-6-def-02",
+    "field": "front",
+    "old": "<p>Name AQA's <strong>fundamental determinants of LRAS</strong>.</p>",
+    "new": "<p>Name the <strong>fundamental determinants of LRAS</strong>.</p>"
+  },
+  {
+    "id": "aqa-2-2-6-def-02",
+    "field": "back",
+    "old": "<p><strong>Technology, productivity, attitudes, enterprise, factor mobility and economic incentives</strong> — the AQA list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>AQA also stresses the <strong>institutional structure</strong> of the economy — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>",
+    "new": "<ul><li><strong>Technology</strong>.</li><li><strong>Productivity</strong>.</li><li><strong>Attitudes</strong>.</li><li><strong>Enterprise</strong>.</li><li><strong>Factor mobility</strong>.</li><li><strong>Economic incentives</strong>.</li></ul><p>The list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>The <strong>institutional structure</strong> of the economy matters too — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>"
+  },
+  {
+    "id": "aqa-2-4-3-diagram-01",
+    "field": "front",
+    "old": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the AQA macro objectives.</p>",
+    "new": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the macro objectives.</p>"
+  },
+  {
+    "id": "aqa-1-1-1-def-05",
+    "field": "back",
+    "old": "<p><strong>Value judgement</strong> — a view about what is morally or subjectively important. These judgements underpin all normative statements.</p><p>AQA emphasises that people's views on the best option are influenced both by the positive consequences of different decisions and by moral and political judgements — for example, whether a government prioritises efficiency or equality.</p>",
+    "new": "<p><strong>Value judgement</strong> — a view about what is morally or subjectively important. These judgements underpin all normative statements.</p><p>People's views on the best option are influenced both by the positive consequences of different decisions and by moral and political judgements — for example, whether a government prioritises efficiency or equality.</p>"
+  },
+  {
+    "id": "aqa-1-1-5-def-01",
+    "field": "back",
+    "old": "<p><strong>Production possibility frontier</strong> — a curve that shows the maximum potential output combinations of two goods or services an economy can achieve when all its resources are fully and efficiently employed.</p><p>The axes are typically capital goods and consumer goods; the AQA specification calls these production possibility diagrams.</p>",
+    "new": "<p><strong>Production possibility frontier</strong> — a curve that shows the maximum potential output combinations of two goods or services an economy can achieve when all its resources are fully and efficiently employed.</p><p>The axes are typically capital goods and consumer goods; these are also called production possibility diagrams.</p>"
+  },
+  {
+    "id": "aqa-1-2-1-def-03",
+    "field": "back",
+    "old": "<p>As a consumer consumes more units of a good, the additional satisfaction (marginal utility) from each extra unit eventually falls.</p><p>AQA expects you to know that diminishing marginal utility <strong>supports a downward-sloping demand curve</strong> — extra units give less satisfaction, so consumers only buy more at lower prices. (The equi-marginal principle is not required.)</p>",
+    "new": "<p>As a consumer consumes more units of a good, the additional satisfaction (marginal utility) from each extra unit eventually falls.</p><p>Diminishing marginal utility <strong>supports a downward-sloping demand curve</strong> — extra units give less satisfaction, so consumers only buy more at lower prices. (The equi-marginal principle is not required.)</p>"
+  },
+  {
+    "id": "aqa-1-2-2-chain-01",
+    "field": "back",
+    "old": "<p>One party knows more than the other, so the less-informed party cannot judge true value or quality. Their decisions no longer maximise utility or profit, resources are misallocated, and the result can be <strong>market failure</strong>.</p><p>Example: a used-car seller hides known defects; the buyer overpays and loses utility. AQA flags imperfect information as a potential source of market failure in its own right.</p>",
+    "new": "<p>One party knows more than the other, so the less-informed party cannot judge true value or quality. Their decisions no longer maximise utility or profit, resources are misallocated, and the result can be <strong>market failure</strong>.</p><p>Example: a used-car seller hides known defects; the buyer overpays and loses utility.</p><p>Imperfect information is a potential source of market failure in its own right.</p>"
+  },
+  {
+    "id": "aqa-1-2-3-def-04",
+    "field": "front",
+    "old": "<p>Name the other <strong>behavioural biases</strong> in AQA's specification, beyond anchoring.</p>",
+    "new": "<p>Name the other <strong>behavioural biases</strong>, beyond anchoring.</p>"
+  },
+  {
+    "id": "aqa-1-2-4-def-03",
+    "field": "front",
+    "old": "<p>Name and define AQA's <strong>three types of choice</strong> in choice architecture.</p>",
+    "new": "<p>Name and define the <strong>three types of choice</strong> in choice architecture.</p>"
+  },
+  {
+    "id": "aqa-1-3-6-def-03",
+    "field": "back",
+    "old": "<p><strong>Derived demand</strong> — when the demand for a good is determined by the demand for another good.</p><p>The demand for steel is derived from the demand for cars; the demand for bricklayers is derived from the demand for houses — a fall in house-building cuts the demand for bricklayers. AQA expects you to trace a change in one market through to its related markets.</p>",
+    "new": "<p><strong>Derived demand</strong> — when the demand for a good is determined by the demand for another good.</p><p>The demand for steel is derived from the demand for cars; the demand for bricklayers is derived from the demand for houses — a fall in house-building cuts the demand for bricklayers.</p><p>Be ready to trace a change in one market through to its related markets.</p>"
+  },
+  {
+    "id": "aqa-1-5-11-chain-01",
+    "field": "back",
+    "old": "<p><strong>Monopoly</strong> restricts output and raises price: consumer surplus shrinks, part transfers to producer surplus, and the rest becomes a <strong>deadweight welfare loss</strong> — the application AQA names in the specification.</p><p><strong>Price discrimination</strong> converts consumer surplus into producer surplus: inelastic customers pay more and lose surplus, elastic customers pay less and gain, and overall consumer surplus falls.</p>",
+    "new": "<p><strong>Monopoly</strong> restricts output and raises price: consumer surplus shrinks, part transfers to producer surplus, and the rest becomes a <strong>deadweight welfare loss</strong>.</p><p><strong>Price discrimination</strong> converts consumer surplus into producer surplus: inelastic customers pay more and lose surplus, elastic customers pay less and gain, and overall consumer surplus falls.</p>"
+  },
+  {
+    "id": "aqa-1-8-1-eval-01",
+    "field": "back",
+    "old": "<p><strong>For:</strong> it allocates resources to their most valued uses, adjusts quickly to changing conditions, and the profit motive drives innovation and efficiency — all without central direction.</p><p><strong>Against:</strong> those with low incomes can be priced out (the mechanism is impersonal), it ignores externalities, public goods and information gaps, and it can prioritise short-term profit. AQA also asks whether extending markets into new areas — paying for blood donation, say — changes the nature of the activity itself.</p>",
+    "new": "<p><strong>For:</strong> it allocates resources to their most valued uses, adjusts quickly to changing conditions, and the profit motive drives innovation and efficiency — all without central direction.</p><p><strong>Against:</strong> those with low incomes can be priced out (the mechanism is impersonal), it ignores externalities, public goods and information gaps, and it can prioritise short-term profit.</p><p>There is also the question of whether extending markets into new areas — paying for blood donation, say — changes the nature of the activity itself.</p>"
+  },
+  {
+    "id": "aqa-1-8-2-def-03",
+    "field": "front",
+    "old": "<p>List the <strong>causes of market failure</strong> AQA names.</p>",
+    "new": "<p>List the <strong>causes of market failure</strong>.</p>"
+  },
+  {
+    "id": "aqa-1-8-3-def-01",
+    "field": "back",
+    "old": "<p>A <strong>quasi-public good</strong> has some but not all of the characteristics of a public good — it is partially non-excludable or partially non-rival.</p><p>Examples: roads (excludable via tolls, rival when congested) and beaches. AQA expects you to place goods on the spectrum rather than in boxes.</p>",
+    "new": "<p>A <strong>quasi-public good</strong> has some but not all of the characteristics of a public good — it is partially non-excludable or partially non-rival.</p><p>Examples: roads (excludable via tolls, rival when congested) and beaches.</p><p>Place goods on the spectrum rather than in boxes.</p>"
+  },
+  {
+    "id": "aqa-1-8-4-def-01",
+    "field": "back",
+    "old": "<p><strong>Externality</strong> — a positive or negative spillover effect that affects a third party not directly involved in the economic transaction. Also known as external costs or external benefits.</p><p>AQA links externalities to missing <strong>property rights</strong>: no one owns the air or the ocean, so no one can charge a polluter for using them — the cost never enters the market price, and production and consumption decisions ignore it.</p>",
+    "new": "<p><strong>Externality</strong> — a positive or negative spillover effect that affects a third party not directly involved in the economic transaction. Also known as external costs or external benefits.</p><p>Externalities trace back to missing <strong>property rights</strong>: no one owns the air or the ocean, so no one can charge a polluter for using them — the cost never enters the market price, and production and consumption decisions ignore it.</p>"
+  },
+  {
+    "id": "aqa-1-8-5-def-03",
+    "field": "back",
+    "old": "<p>The labels rest on a <strong>value judgement</strong> and can change over time — alcohol was once treated as a merit good; vaccinations were once distrusted. AQA also notes that not every good with consumption externalities is a merit or demerit good.</p><p><strong>Imperfect information</strong> compounds the problem: consumers underestimate the long-term benefits of fruit and vegetables (under-consumption) and the health risks of smoking (over-consumption).</p>",
+    "new": "<p>The labels rest on a <strong>value judgement</strong> and can change over time — alcohol was once treated as a merit good; vaccinations were once distrusted.</p><p>Note too that not every good with consumption externalities is a merit or demerit good.</p><p><strong>Imperfect information</strong> compounds the problem: consumers underestimate the long-term benefits of fruit and vegetables (under-consumption) and the health risks of smoking (over-consumption).</p>"
+  },
+  {
+    "id": "aqa-1-7-1-formula-01",
+    "field": "back",
+    "old": "<p><strong>Gini coefficient = A ÷ (A + B)</strong>: the area between the line of perfect equality and the Lorenz curve (A), as a ratio of the total area under the line of perfect equality (A + B).</p><p><strong>0</strong> means perfect equality, <strong>1</strong> means perfect inequality — so a higher Gini coefficient means greater inequality. AQA asks you to <strong>interpret</strong> the coefficient, not calculate it from data.</p>",
+    "new": "<p><strong>Gini coefficient = A ÷ (A + B)</strong>: the area between the line of perfect equality and the Lorenz curve (A), as a ratio of the total area under the line of perfect equality (A + B).</p><p><strong>0</strong> means perfect equality, <strong>1</strong> means perfect inequality — so a higher Gini coefficient means greater inequality.</p><p>You are asked to <strong>interpret</strong> the coefficient, not calculate it from data.</p>"
+  },
+  {
+    "id": "edexcel-a-1-2-10-def-02",
+    "field": "front",
+    "old": "<p>Give the specification's three <strong>reasons why consumers may not behave rationally</strong>.</p>",
+    "new": "<p>Give the three <strong>reasons why consumers may not behave rationally</strong>.</p>"
+  },
+  {
+    "id": "edexcel-a-1-3-1-def-02",
+    "field": "front",
+    "old": "<p>Name the specification's three <strong>types of market failure</strong>.</p>",
+    "new": "<p>Name the three <strong>types of market failure</strong>.</p>"
+  },
+  {
+    "id": "edexcel-a-1-4-2-def-02",
+    "field": "front",
+    "old": "<p>Give the specification's four <strong>causes of government failure</strong>.</p>",
+    "new": "<p>Give the four <strong>causes of government failure</strong>.</p>"
+  },
+  {
+    "id": "edexcel-a-2-1-3-def-03",
+    "field": "front",
+    "old": "<p>Name and define the <strong>five causes of unemployment</strong> in the Edexcel specification.</p>",
+    "new": "<p>Name and define the <strong>five causes of unemployment</strong>.</p>"
+  }
+]

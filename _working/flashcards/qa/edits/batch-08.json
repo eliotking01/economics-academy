@@ -1,0 +1,122 @@
+[
+  {
+    "id": "aqa-1-1-1-def-01",
+    "field": "back",
+    "old": "<p>Economics applies the scientific method — observation, hypothesis formation, testing, refinement — to <strong>human behaviour</strong> and societies.</p><p>Unlike the natural sciences it cannot run controlled laboratory experiments, so economists build <strong>models</strong> resting on simplifying assumptions and test them against real-world data. Different assumptions can lead economists to different conclusions from the same data.</p>",
+    "new": "<p>Economics applies the scientific method — observation, hypothesis formation, testing, refinement — to <strong>human behaviour</strong> and societies.</p><p>Unlike the natural sciences it cannot run controlled laboratory experiments, so economists build <strong>models</strong> resting on simplifying assumptions and test them against real-world data.</p><p>Different assumptions can lead economists to different conclusions from the same data.</p>"
+  },
+  {
+    "id": "aqa-1-1-2-def-01",
+    "field": "back",
+    "old": "<p>The central purpose of economic activity is the production of goods and services to satisfy <strong>needs</strong> and <strong>wants</strong>.</p><p><strong>Needs</strong> — basic requirements for human survival, such as food, water and shelter. <strong>Wants</strong> — desires for goods and services that improve quality of life, such as entertainment and travel.</p>",
+    "new": "<p>The central purpose of economic activity is the production of goods and services to satisfy <strong>needs</strong> and <strong>wants</strong>.</p><ul><li><strong>Needs</strong> — basic requirements for human survival, such as food, water and shelter.</li><li><strong>Wants</strong> — desires for goods and services that improve quality of life, such as entertainment and travel.</li></ul>"
+  },
+  {
+    "id": "aqa-1-1-3-def-03",
+    "field": "back",
+    "old": "<p>The environment provides essential goods and services — clean air, water, fertile land — and overconsumption can leave it degraded, harming future economic activity, so it must be managed sustainably.</p><p><strong>Non-renewable resources</strong> cannot be replaced once used (fossil fuels, minerals). <strong>Renewable resources</strong> replenish naturally (forests, fish stocks) but can still become scarce if overused or mismanaged.</p>",
+    "new": "<p>The environment provides essential goods and services — clean air, water, fertile land — and overconsumption can leave it degraded, harming future economic activity, so it must be managed sustainably.</p><ul><li><strong>Non-renewable resources</strong> cannot be replaced once used (fossil fuels, minerals).</li><li><strong>Renewable resources</strong> replenish naturally (forests, fish stocks) but can still become scarce if overused or mismanaged.</li></ul>"
+  },
+  {
+    "id": "aqa-1-1-5-diagram-01",
+    "field": "back",
+    "old": "<p>Points on the frontier (A, C, D, B) are <strong>productively efficient</strong> — all resources fully and efficiently used. Point E inside the frontier means <strong>unemployed or inefficiently used resources</strong>: more of both goods is possible at zero opportunity cost. Point F outside is <strong>currently unattainable</strong> with existing resources and technology. A movement along the frontier, such as C to D, shows the <strong>opportunity cost</strong> of producing more consumer goods.</p>",
+    "new": "<ul><li>Points on the frontier (A, C, D, B) are <strong>productively efficient</strong> — all resources fully and efficiently used.</li><li>Point E inside the frontier means <strong>unemployed or inefficiently used resources</strong>: more of both goods is possible at zero opportunity cost.</li><li>Point F outside is <strong>currently unattainable</strong> with existing resources and technology.</li></ul><p>A movement along the frontier, such as C to D, shows the <strong>opportunity cost</strong> of producing more consumer goods.</p>"
+  },
+  {
+    "id": "aqa-1-2-1-def-02",
+    "field": "back",
+    "old": "<p><strong>Utility</strong> — the satisfaction or happiness a consumer derives from consuming goods and services.</p><p><strong>Total utility</strong> — the total satisfaction from consuming a given quantity. <strong>Marginal utility</strong> — the additional satisfaction from consuming one more unit.</p>",
+    "new": "<p><strong>Utility</strong> — the satisfaction or happiness a consumer derives from consuming goods and services.</p><ul><li><strong>Total utility</strong> — the total satisfaction from consuming a given quantity.</li><li><strong>Marginal utility</strong> — the additional satisfaction from consuming one more unit.</li></ul>"
+  },
+  {
+    "id": "aqa-1-3-1-diagram-01",
+    "field": "back",
+    "old": "<p>A <strong>movement along</strong> the curve is caused only by a change in the good's own price — an extension when price falls, a contraction when it rises. A <strong>shift</strong> (D1 to D2) is caused by a non-price factor: real incomes (normal vs inferior goods), tastes and advertising, the price of substitutes or complements, or population changes.</p>",
+    "new": "<p>A <strong>movement along</strong> the curve is caused only by a change in the good's own price — an extension when price falls, a contraction when it rises.</p><p>A <strong>shift</strong> (D1 to D2) is caused by a non-price factor:</p><ul><li>Real incomes (normal vs inferior goods).</li><li>Tastes and advertising.</li><li>The price of substitutes or complements.</li><li>Population changes.</li></ul>"
+  },
+  {
+    "id": "aqa-1-3-2-formula-01",
+    "field": "back",
+    "old": "<p>PED is negative for a normal demand curve — classify on the magnitude: 0 = perfectly inelastic; between 0 and 1 = relatively inelastic; 1 = unitary; above 1 = relatively elastic; infinity = perfectly elastic.</p>",
+    "new": "<p>PED is negative for a normal demand curve — classify on the magnitude:</p><ul><li>0 = perfectly inelastic.</li><li>Between 0 and 1 = relatively inelastic.</li><li>1 = unitary.</li><li>Above 1 = relatively elastic.</li><li>Infinity = perfectly elastic.</li></ul>"
+  },
+  {
+    "id": "aqa-1-3-3-diagram-01",
+    "field": "back",
+    "old": "<p>A <strong>movement along</strong> the curve comes only from a change in the good's own price — an extension when price rises, a contraction when it falls. A <strong>shift</strong> (S1 to S2) comes from a non-price factor changing costs or capacity: production costs, indirect taxes, subsidies, technology, the number of firms in the market, or external shocks.</p>",
+    "new": "<p>A <strong>movement along</strong> the curve comes only from a change in the good's own price — an extension when price rises, a contraction when it falls.</p><p>A <strong>shift</strong> (S1 to S2) comes from a non-price factor changing costs or capacity:</p><ul><li>Production costs.</li><li>Indirect taxes.</li><li>Subsidies.</li><li>Technology.</li><li>The number of firms in the market.</li><li>External shocks.</li></ul>"
+  },
+  {
+    "id": "aqa-1-3-4-formula-01",
+    "field": "back",
+    "old": "<p><strong>PES</strong> — measures the responsiveness of quantity supplied to a change in the good's own price: how easily, quickly or cheaply producers can increase output when the price rises.</p><p>0 = perfectly inelastic (vertical supply curve); between 0 and 1 = relatively inelastic; above 1 = relatively elastic; infinity = perfectly elastic (horizontal).</p>",
+    "new": "<p><strong>PES</strong> — measures the responsiveness of quantity supplied to a change in the good's own price: how easily, quickly or cheaply producers can increase output when the price rises.</p><ul><li>0 = perfectly inelastic (vertical supply curve).</li><li>Between 0 and 1 = relatively inelastic.</li><li>Above 1 = relatively elastic.</li><li>Infinity = perfectly elastic (horizontal).</li></ul>"
+  },
+  {
+    "id": "aqa-1-3-4-def-01",
+    "field": "back",
+    "old": "<p><strong>Time</strong> is the main determinant. Others: spare production capacity, ease of storing stocks, mobility of factors of production, complexity of production, the marginal cost of extra units, and the availability of raw materials.</p><p><strong>Short run</strong> — at least one factor of production is fixed, so supply is more price inelastic. <strong>Long run</strong> — all factors are variable, so supply is more price elastic.</p>",
+    "new": "<p><strong>Time</strong> is the main determinant. Others:</p><ul><li>Spare production capacity.</li><li>Ease of storing stocks.</li><li>Mobility of factors of production.</li><li>Complexity of production.</li><li>The marginal cost of extra units.</li><li>The availability of raw materials.</li></ul><p><strong>Short run</strong> — at least one factor of production is fixed, so supply is more price inelastic.</p><p><strong>Long run</strong> — all factors are variable, so supply is more price elastic.</p>"
+  },
+  {
+    "id": "aqa-1-4-1-formula-01",
+    "field": "back",
+    "old": "<p><strong>Productivity</strong> measures the efficiency of production: output per unit of input. <strong>Labour productivity</strong> is output per worker (or per worker per hour).</p><p>Higher productivity means lower costs per unit, higher profits and a competitive edge — which is why it recurs across the whole specification.</p>",
+    "new": "<p><strong>Productivity</strong> measures the efficiency of production: output per unit of input.</p><p><strong>Labour productivity</strong> is output per worker (or per worker per hour).</p><p>Higher productivity means lower costs per unit, higher profits and a competitive edge — which is why it recurs throughout the course.</p>"
+  },
+  {
+    "id": "aqa-1-4-3-def-02",
+    "field": "back",
+    "old": "<p><strong>Marginal returns</strong>: the extra output from one more unit of a variable factor (ΔTotal output ÷ ΔInputs). <strong>Average returns</strong>: output per unit of the variable factor. <strong>Total returns</strong>: total output.</p><p>In the short run, adding a variable factor to a fixed one eventually yields <strong>smaller and smaller additions to output</strong> — more bartenders behind a fixed bar get in each other's way. This is what makes the <strong>MC curve</strong> fall and then rise.</p>",
+    "new": "<ul><li><strong>Marginal returns</strong>: the extra output from one more unit of a variable factor (ΔTotal output ÷ ΔInputs).</li><li><strong>Average returns</strong>: output per unit of the variable factor.</li><li><strong>Total returns</strong>: total output.</li></ul><p>In the short run, adding a variable factor to a fixed one eventually yields <strong>smaller and smaller additions to output</strong> — more bartenders behind a fixed bar get in each other's way.</p><p>This is what makes the <strong>MC curve</strong> fall and then rise.</p>"
+  },
+  {
+    "id": "aqa-1-4-3-def-03",
+    "field": "back",
+    "old": "<p>In the long run all factors are variable, so the firm can change its whole scale. <strong>Increasing returns to scale</strong>: output rises more than proportionately to inputs. <strong>Constant</strong>: proportionately. <strong>Decreasing</strong>: less than proportionately.</p><p>Returns to scale underpin economies and diseconomies of scale — the long-run counterpart to the short run's diminishing returns.</p>",
+    "new": "<p>In the long run all factors are variable, so the firm can change its whole scale.</p><ul><li><strong>Increasing returns to scale</strong>: output rises more than proportionately to inputs.</li><li><strong>Constant</strong>: proportionately.</li><li><strong>Decreasing</strong>: less than proportionately.</li></ul><p>Returns to scale underpin economies and diseconomies of scale — the long-run counterpart to the short run's diminishing returns.</p>"
+  },
+  {
+    "id": "aqa-1-4-4-formula-01",
+    "field": "back",
+    "old": "<p><strong>Fixed costs</strong> do not vary with output (rent, salaries); <strong>variable costs</strong> do (materials, hourly wages). <strong>TC</strong> = TFC + TVC.</p><p>The averages divide by output: <strong>AC</strong> = TC ÷ Q, <strong>AFC</strong> = TFC ÷ Q, <strong>AVC</strong> = TVC ÷ Q. <strong>MC</strong> = ΔTC ÷ ΔQ — the cost of one more unit, and the curve that drives all the others.</p>",
+    "new": "<ul><li><strong>Fixed costs</strong> do not vary with output (rent, salaries).</li><li><strong>Variable costs</strong> do (materials, hourly wages).</li><li><strong>TC</strong> = TFC + TVC.</li></ul><p>The averages divide by output:</p><ul><li><strong>AC</strong> = TC ÷ Q.</li><li><strong>AFC</strong> = TFC ÷ Q.</li><li><strong>AVC</strong> = TVC ÷ Q.</li></ul><p><strong>MC</strong> = ΔTC ÷ ΔQ — the cost of one more unit, and the curve that drives all the others.</p>"
+  },
+  {
+    "id": "aqa-1-4-4-calc-01",
+    "field": "back",
+    "old": "<p>TC = 150 + TVC: <strong>240, 300, 390, 540</strong></p><p>AC = TC ÷ Q: 240 ÷ 10 = <strong>£24</strong>; 300 ÷ 20 = <strong>£15</strong>; 390 ÷ 30 = <strong>£13</strong>; 540 ÷ 40 = <strong>£13.50</strong></p><p>MC = ΔTC ÷ ΔQ: (300 − 240) ÷ 10 = <strong>£6</strong>; then <strong>£9</strong>; then <strong>£15</strong></p><p>AC bottoms at £13 and turns upward between 30 and 40 units — exactly where MC (£15) rises above it.</p>",
+    "new": "<p>TC = 150 + TVC: <strong>240, 300, 390, 540</strong></p><p>AC = TC ÷ Q:</p><ul><li>240 ÷ 10 = <strong>£24</strong></li><li>300 ÷ 20 = <strong>£15</strong></li><li>390 ÷ 30 = <strong>£13</strong></li><li>540 ÷ 40 = <strong>£13.50</strong></li></ul><p>MC = ΔTC ÷ ΔQ:</p><ul><li>(300 − 240) ÷ 10 = <strong>£6</strong></li><li>then <strong>£9</strong></li><li>then <strong>£15</strong></li></ul><p>AC bottoms at £13 and turns upward between 30 and 40 units — exactly where MC (£15) rises above it.</p>"
+  },
+  {
+    "id": "aqa-1-4-5-def-02",
+    "field": "back",
+    "old": "<p>Size itself raises average costs: <strong>communication and managerial</strong> strain (messages distorted across layers), <strong>motivational</strong> problems (workers feel unnoticed — the principal-agent link) and <strong>geographical</strong> coordination across distant sites.</p><p>They are <strong>not diminishing returns</strong>: diseconomies are a long-run phenomenon of scale with all factors variable, while diminishing returns is a short-run law that needs a fixed factor.</p>",
+    "new": "<p>Size itself raises average costs:</p><ul><li><strong>Communication and managerial</strong> strain (messages distorted across layers).</li><li><strong>Motivational</strong> problems (workers feel unnoticed — the principal-agent link).</li><li><strong>Geographical</strong> coordination across distant sites.</li></ul><p>They are <strong>not diminishing returns</strong>: diseconomies are a long-run phenomenon of scale with all factors variable, while diminishing returns is a short-run law that needs a fixed factor.</p>"
+  },
+  {
+    "id": "aqa-1-4-6-formula-01",
+    "field": "back",
+    "old": "<p><strong>TR</strong> = P × Q, the firm's total earnings. <strong>AR</strong> = TR ÷ Q — the price per unit, so the AR curve <strong>is the firm's demand curve</strong>. <strong>MR</strong> = ΔTR ÷ ΔQ, the extra revenue from one more unit.</p>",
+    "new": "<ul><li><strong>TR</strong> = P × Q, the firm's total earnings.</li><li><strong>AR</strong> = TR ÷ Q — the price per unit, so the AR curve <strong>is the firm's demand curve</strong>.</li><li><strong>MR</strong> = ΔTR ÷ ΔQ, the extra revenue from one more unit.</li></ul>"
+  },
+  {
+    "id": "aqa-1-4-7-def-01",
+    "field": "back",
+    "old": "<p><strong>Normal profit</strong> is the minimum profit required to keep a firm in the industry: <strong>TR = TC</strong>, the break-even point — counted as a cost, because it is the entrepreneur's opportunity cost of staying. <strong>Abnormal (supernormal) profit</strong> is anything above that (TR &gt; TC); a <strong>loss</strong> is TR &lt; TC.</p><p>Profit is maximised at the output where <strong>MC = MR</strong>.</p>",
+    "new": "<p><strong>Normal profit</strong> is the minimum profit required to keep a firm in the industry: <strong>TR = TC</strong>, the break-even point — counted as a cost, because it is the entrepreneur's opportunity cost of staying.</p><p><strong>Abnormal (supernormal) profit</strong> is anything above that (TR &gt; TC); a <strong>loss</strong> is TR &lt; TC.</p><p>Profit is maximised at the output where <strong>MC = MR</strong>.</p>"
+  },
+  {
+    "id": "aqa-1-4-7-def-02",
+    "field": "back",
+    "old": "<p>Profit is the market's engine: an <strong>incentive</strong> for entrepreneurs to take risks, a <strong>signal</strong> drawing resources to where they are most valued, a source of <strong>reinvestment</strong> that funds growth and innovation, a <strong>driver of competition</strong> pushing prices down and quality up, and the <strong>reward to investors</strong> for the capital they risk.</p>",
+    "new": "<p>Profit is the market's engine:</p><ul><li>An <strong>incentive</strong> for entrepreneurs to take risks.</li><li>A <strong>signal</strong> drawing resources to where they are most valued.</li><li>A source of <strong>reinvestment</strong> that funds growth and innovation.</li><li>A <strong>driver of competition</strong> pushing prices down and quality up.</li><li>The <strong>reward to investors</strong> for the capital they risk.</li></ul>"
+  },
+  {
+    "id": "aqa-1-5-5-def-02",
+    "field": "back",
+    "old": "<p>Collusion is firms agreeing — formally or informally — to <strong>restrict supply and raise price</strong>, acting like a monopoly to earn supernormal profit. <strong>Overt collusion</strong> is a formal agreement (a cartel): illegal and provable in court, as when British Airways and Virgin Atlantic fixed fuel surcharges in 2007.</p><p><strong>Tacit collusion</strong> is an informal understanding, often via <strong>price leadership</strong> — the market leader sets a price and rivals follow. Same outcome, far harder to prove.</p>",
+    "new": "<p>Collusion is firms agreeing — formally or informally — to <strong>restrict supply and raise price</strong>, acting like a monopoly to earn supernormal profit.</p><p><strong>Overt collusion</strong> is a formal agreement (a cartel): illegal and provable in court, as when British Airways and Virgin Atlantic fixed fuel surcharges in 2007.</p><p><strong>Tacit collusion</strong> is an informal understanding, often via <strong>price leadership</strong> — the market leader sets a price and rivals follow. Same outcome, far harder to prove.</p>"
+  }
+]

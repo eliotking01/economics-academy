@@ -6,7 +6,7 @@
   "themeName": "Macroeconomics",
   "deckId": "aqa-macro",
   "deckTitle": "AQA A-Level Economics Macroeconomics Flashcards",
-  "count": 102,
+  "count": 104,
   "topics": [
     {
       "subtopic": "2-1-1-the-objectives-of-government-economic-policy",
@@ -20,7 +20,7 @@
       "specCode": "2.1.2",
       "title": "2.1.2 Macroeconomic Indicators",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
-      "count": 4
+      "count": 5
     },
     {
       "subtopic": "2-1-3-uses-of-index-numbers",
@@ -139,7 +139,7 @@
       "specCode": "2.5.1",
       "title": "2.5.1 Fiscal Policy",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
-      "count": 5
+      "count": 6
     },
     {
       "subtopic": "2-5-2-supply-side-policies",
@@ -195,8 +195,8 @@
       "tags": [
         "objectives"
       ],
-      "front": "<p>State the <strong>four main objectives</strong> of government macroeconomic policy in the AQA specification.</p>",
-      "back": "<p><strong>Economic growth</strong>; <strong>price stability</strong> (low and stable inflation — the UK's 2% CPI target); <strong>minimising unemployment</strong>; and a <strong>stable balance of payments on current account</strong>.</p><p>AQA also expects awareness of further objectives — balancing the government budget, a more equitable distribution of income, and environmental protection — and that the importance attached to each objective changes over time.</p>",
+      "front": "<p>State the <strong>four main objectives</strong> of government macroeconomic policy.</p>",
+      "back": "<ul><li><strong>Economic growth</strong>.</li><li><strong>Price stability</strong> (low and stable inflation — the UK's 2% CPI target).</li><li><strong>Minimising unemployment</strong>.</li><li>A <strong>stable balance of payments on current account</strong>.</li></ul><p>Be aware of further objectives too — balancing the government budget, a more equitable distribution of income, and environmental protection — and that the importance attached to each objective changes over time.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html"
     },
@@ -211,7 +211,7 @@
         "objectives"
       ],
       "front": "<p>Give the UK's usual <strong>targets for growth, unemployment and inflation</strong>, and why each matters.</p>",
-      "back": "<p><strong>Growth</strong> — sustainable, around 2–3%: raises incomes, living standards, employment and tax revenue. <strong>Unemployment</strong> — near full employment, around 4–5%, allowing for frictional unemployment: maximises output and reduces poverty. <strong>Inflation</strong> — the 2% CPI target: certainty for consumers and firms, protects savings, supports competitiveness.</p><p>The current account aim is a sustainable position — only a small surplus or deficit.</p>",
+      "back": "<ul><li><strong>Growth</strong> — sustainable, around 2–3%: raises incomes, living standards, employment and tax revenue.</li><li><strong>Unemployment</strong> — near full employment, around 4–5%, allowing for frictional unemployment: maximises output and reduces poverty.</li><li><strong>Inflation</strong> — the 2% CPI target: certainty for consumers and firms, protects savings, supports competitiveness.</li></ul><p>The current account aim is a sustainable position — only a small surplus or deficit.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html"
     },
@@ -227,7 +227,7 @@
         "evaluation"
       ],
       "front": "<p>Why can the macroeconomic objectives <strong>conflict, at least in the short run</strong>?</p>",
-      "back": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23. AQA flags exactly this: the importance attached to objectives changes over time.</p>",
+      "back": "<p>Policies that improve one objective often worsen another: stimulating growth and employment raises demand-pull inflation and pulls in imports; squeezing inflation with higher interest rates slows growth and costs jobs.</p><p>Governments therefore <strong>prioritise</strong>, and the priority shifts with circumstances — jobs and demand after 2008, inflation in 2022–23.</p><p>That is the point to carry: the importance attached to objectives changes over time.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html"
     },
@@ -243,7 +243,7 @@
         "measurement"
       ],
       "front": "<p>Distinguish <strong>nominal GDP, real GDP and real GDP per capita</strong>.</p>",
-      "back": "<p><strong>Nominal GDP</strong> values output at current prices; <strong>real GDP</strong> adjusts for inflation, valuing output at constant prices — approximately, % change in real GDP = % change in nominal GDP − inflation.</p><p><strong>Real GDP per capita</strong> divides real GDP by the population: average output per person, the better starting point for living standards.</p>",
+      "back": "<p><strong>Nominal GDP</strong> values output at current prices.</p><p><strong>Real GDP</strong> adjusts for inflation, valuing output at constant prices — approximately, % change in real GDP = % change in nominal GDP − inflation.</p><p><strong>Real GDP per capita</strong> divides real GDP by the population: average output per person, the better starting point for living standards.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
     },
@@ -292,8 +292,24 @@
         "indicators",
         "balance-of-payments"
       ],
-      "front": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining spec indicator.</p>",
-      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator on the AQA list is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
+      "front": "<p>Define the <strong>current account</strong> of the balance of payments.</p>",
+      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+    },
+    {
+      "id": "aqa-2-1-2-def-04",
+      "specCode": "2.1.2",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-2-macroeconomic-indicators",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "indicators",
+        "productivity"
+      ],
+      "front": "<p>Define <strong>productivity</strong> as a macroeconomic indicator.</p>",
+      "back": "<p><strong>Productivity</strong> is output per worker (or per hour worked). It drives long-run growth and competitiveness.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
     },
@@ -358,7 +374,7 @@
         "calculation"
       ],
       "front": "<p>A simplified basket has three categories with weights out of 1,000: housing 400 (price index 108), transport 350 (index 104), food 250 (index 112). Calculate the <strong>weighted CPI</strong> and interpret it.</p>",
-      "back": "<p>Weight × index: housing 400 × 108 = 43,200; transport 350 × 104 = 36,400; food 250 × 112 = 28,000.</p><p>Total = 107,600; divide by total weight: 107,600 ÷ 1,000 = <strong>107.6</strong></p><p>Prices across the basket average <strong>7.6% above the base year</strong>. Food rose fastest (12%), but the heavily-weighted housing category matters more to the overall index — that is what weighting does.</p>",
+      "back": "<p>Weight × index:</p><ul><li>Housing 400 × 108 = 43,200</li><li>Transport 350 × 104 = 36,400</li><li>Food 250 × 112 = 28,000</li></ul><p>Total = 107,600</p><p>Divide by total weight: 107,600 ÷ 1,000 = <strong>107.6</strong></p><p>Prices across the basket average <strong>7.6% above the base year</strong>. Food rose fastest (12%), but the heavily-weighted housing category matters more to the overall index — that is what weighting does.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html"
     },
@@ -406,7 +422,7 @@
         "evaluation"
       ],
       "front": "<p>Evaluate the <strong>limitations of national income data</strong> for comparing living standards.</p>",
-      "back": "<p>Even real GDP per capita hides much: <strong>income distribution</strong> (an average conceals inequality); the <strong>informal economy</strong> (subsistence farming, unpaid care, the hidden economy go unrecorded — a big understatement in developing countries); <strong>quality of life</strong> (health, leisure, freedom); <strong>negative externalities</strong> (polluting output still counts); the <strong>composition of output</strong> (defence spending raises GDP without raising welfare); and <strong>data reliability</strong> across countries.</p><p>The fullest single comparison is real GDP per capita at PPP; broader indices such as the HDI add health and education.</p>",
+      "back": "<p>Even real GDP per capita hides much:</p><ul><li><strong>Income distribution</strong> (an average conceals inequality).</li><li>The <strong>informal economy</strong> (subsistence farming, unpaid care, the hidden economy go unrecorded — a big understatement in developing countries).</li><li><strong>Quality of life</strong> (health, leisure, freedom).</li><li><strong>Negative externalities</strong> (polluting output still counts).</li><li>The <strong>composition of output</strong> (defence spending raises GDP without raising welfare).</li><li><strong>Data reliability</strong> across countries.</li></ul><p>The fullest single comparison is real GDP per capita at PPP; broader indices such as the HDI add health and education.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
     },
@@ -437,7 +453,7 @@
         "national-income"
       ],
       "front": "<p>Distinguish <strong>nominal from real income</strong>, and explain what real national income indicates.</p>",
-      "back": "<p><strong>Nominal income</strong> is measured at current prices; <strong>real income</strong> strips out inflation, so it reflects what income can actually buy.</p><p>Rising <strong>real national income</strong> is the key indicator of economic performance: it means the economy is genuinely producing more, not just charging higher prices for the same output.</p>",
+      "back": "<ul><li><strong>Nominal income</strong> is measured at current prices.</li><li><strong>Real income</strong> strips out inflation, so it reflects what income can actually buy.</li></ul><p>Rising <strong>real national income</strong> is the key indicator of economic performance: it means the economy is genuinely producing more, not just charging higher prices for the same output.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html"
     },
@@ -453,7 +469,7 @@
         "diagram"
       ],
       "front": "<p>Draw the <strong>circular flow of income</strong> for a simple two-agent economy.</p>",
-      "back": "<p>Households and firms are linked by two pairs of flows. <strong>Real flows</strong>: households provide the factors of production — land, labour, capital, enterprise — and firms provide goods and services.</p><p><strong>Money flows</strong>: firms pay income — rent, wages, interest, profit — and households return it as consumer expenditure, which becomes firms' revenue. The same flow measured at any point gives income = output = expenditure.</p>",
+      "back": "<p>Households and firms are linked by two pairs of flows.</p><p><strong>Real flows</strong>: households provide the factors of production — land, labour, capital, enterprise — and firms provide goods and services.</p><p><strong>Money flows</strong>: firms pay income — rent, wages, interest, profit — and households return it as consumer expenditure, which becomes firms' revenue.</p><p>The same flow measured at any point gives income = output = expenditure.</p>",
       "svgRef": "/images/diagrams/svg/circular-flow-of-income.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html",
       "svgAlt": "Circular flow between firms and households: factors of production and expenditure flow to firms, goods and services and income flow to households"
@@ -469,7 +485,7 @@
         "national-income"
       ],
       "front": "<p>Distinguish <strong>injections from withdrawals</strong>, and state the equilibrium condition.</p>",
-      "back": "<p><strong>Injections</strong> — investment, government spending, exports — add new spending to the circular flow; <strong>withdrawals</strong> — savings, taxation, imports — leak income out of it. National income is in <strong>equilibrium</strong> when injections equal withdrawals; if injections exceed withdrawals the flow expands, and if withdrawals exceed injections it contracts.</p><p><strong>Full employment income</strong> is the level of national income at which all resources are fully employed — equilibrium need not occur there.</p>",
+      "back": "<ul><li><strong>Injections</strong> — investment, government spending, exports — add new spending to the circular flow.</li><li><strong>Withdrawals</strong> — savings, taxation, imports — leak income out of it.</li></ul><p>National income is in <strong>equilibrium</strong> when injections equal withdrawals; if injections exceed withdrawals the flow expands, and if withdrawals exceed injections it contracts.</p><p><strong>Full employment income</strong> is the level of national income at which all resources are fully employed — equilibrium need not occur there.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-1-the-circular-flow-of-income.html"
     },
@@ -484,7 +500,7 @@
         "aggregate-demand"
       ],
       "front": "<p>Define <strong>aggregate demand</strong>, and give the relative importance of its components.</p>",
-      "back": "<p><strong>Aggregate demand</strong> is the total demand for all goods and services in an economy at a given average price level and in a given time period: AD = C + I + G + (X − M).</p><p>Consumption is the largest component at around 60% of AD; government spending around 25%; investment around 14% — the most volatile; net exports are small and often negative for the UK.</p>",
+      "back": "<p><strong>Aggregate demand</strong> is the total demand for all goods and services in an economy at a given average price level and in a given time period: AD = C + I + G + (X − M).</p><ul><li>Consumption is the largest component at around 60% of AD.</li><li>Government spending around 25%.</li><li>Investment around 14% — the most volatile.</li><li>Net exports are small and often negative for the UK.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html"
     },
@@ -535,7 +551,7 @@
         "diagram"
       ],
       "front": "<p>Use an AD/AS diagram to show <strong>macroeconomic equilibrium</strong> below full employment.</p>",
-      "back": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>This is the AQA-required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>",
+      "back": "<p><strong>Short-run equilibrium</strong> is where AD crosses SRAS — here at output Y1 and price level PL1. With the LRAS curve at Yfe to the right, this equilibrium leaves a negative output gap: the economy is in balance, but below its full-employment output.</p><p>That is the required use of AD/AS analysis: reading off output and the price level, then judging the position against LRAS.</p>",
       "svgRef": "/images/diagrams/svg/negative-output-gap-classical.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-2-aggregate-demand-and-aggregate-supply-analysis.html",
       "svgAlt": "AD and SRAS intersecting at output Y1 and price level PL1, left of the vertical LRAS curve at Yfe"
@@ -568,7 +584,7 @@
         "consumption"
       ],
       "front": "<p>What determines <strong>consumption</strong>, and how are MPC and MPS related?</p>",
-      "back": "<p><strong>Consumption</strong> — household spending on goods and services, the largest component of AD — is determined primarily by <strong>disposable income</strong>: income after direct taxes plus transfer payments.</p><p>Extra disposable income splits between spending and saving: the <strong>MPC</strong> is the proportion spent, the <strong>MPS</strong> the proportion saved, so MPC + MPS = 1. Spend £80 of an extra £100 and your MPC is 0.8.</p>",
+      "back": "<p><strong>Consumption</strong> — household spending on goods and services, the largest component of AD — is determined primarily by <strong>disposable income</strong>: income after direct taxes plus transfer payments.</p><p>Extra disposable income splits between spending and saving:</p><ul><li>The <strong>MPC</strong> is the proportion spent.</li><li>The <strong>MPS</strong> is the proportion saved.</li></ul><p>So MPC + MPS = 1. Spend £80 of an extra £100 and your MPC is 0.8.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html"
     },
@@ -584,7 +600,7 @@
         "consumption"
       ],
       "front": "<p>Beyond income, what influences <strong>consumption and saving</strong>?</p>",
-      "back": "<p><strong>Interest rates</strong> — higher rates raise the cost of borrowing and the reward for saving, cutting consumption and raising saving. <strong>Confidence</strong> — optimism about future income increases spending and borrowing; pessimism increases precautionary saving. <strong>Wealth effects</strong> — rising house or share prices make households spend more; falling wealth does the reverse.</p><p>The determinants of saving are the mirror image of the determinants of consumption — the same forces push the two shares in opposite directions.</p>",
+      "back": "<ul><li><strong>Interest rates</strong> — higher rates raise the cost of borrowing and the reward for saving, cutting consumption and raising saving.</li><li><strong>Confidence</strong> — optimism about future income increases spending and borrowing; pessimism increases precautionary saving.</li><li><strong>Wealth effects</strong> — rising house or share prices make households spend more; falling wealth does the reverse.</li></ul><p>The determinants of saving are the mirror image of the determinants of consumption — the same forces push the two shares in opposite directions.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html"
     },
@@ -600,7 +616,7 @@
         "investment"
       ],
       "front": "<p>Distinguish <strong>gross from net investment</strong>, and <strong>saving from investment</strong>.</p>",
-      "back": "<p><strong>Investment</strong> is spending by firms on capital goods. <strong>Depreciation</strong> is the loss of value of capital goods over time due to wear and tear or obsolescence — so net investment = gross investment − depreciation: only net investment expands the capital stock.</p><p>In economics <strong>saving is not investment</strong>: saving is household income not spent; investment is firms' spending on capital. The financial sector channels one into the other.</p>",
+      "back": "<p><strong>Investment</strong> is spending by firms on capital goods.</p><p><strong>Depreciation</strong> is the loss of value of capital goods over time due to wear and tear or obsolescence — so net investment = gross investment − depreciation: only net investment expands the capital stock.</p><p>In economics <strong>saving is not investment</strong>: saving is household income not spent; investment is firms' spending on capital. The financial sector channels one into the other.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html"
     },
@@ -616,7 +632,7 @@
         "investment"
       ],
       "front": "<p>Explain the <strong>accelerator effect</strong>.</p>",
-      "back": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD. AQA does not require accelerator calculations.</p>",
+      "back": "<p>The accelerator effect is the idea that a rise in the <strong>rate</strong> of economic growth results in a larger percentage rise in investment: firms invest in new capital to meet higher expected demand, and that investment further boosts AD and growth.</p><p>It works in reverse too — a slowdown in growth produces a larger percentage fall in investment, which is part of why investment is the most volatile component of AD.</p><p>Accelerator calculations are not required.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-3-the-determinants-of-aggregate-demand.html"
     },
@@ -631,7 +647,7 @@
         "multiplier"
       ],
       "front": "<p>Define <strong>the multiplier</strong>, and state the multiplier ratio.</p>",
-      "back": "<p><strong>The multiplier</strong> is the process by which an initial injection, such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP: the injection becomes income, a proportion is spent (per the MPC), becomes further income, and so on.</p><p>The <strong>ratio</strong>: k = final change in real GDP ÷ initial injection — a £2bn injection producing a £6bn rise in GDP means k = 3.</p>",
+      "back": "<p><strong>The multiplier</strong> is the process by which an initial injection, such as an increase in government spending, investment, or exports, leads to a larger final increase in national income and real GDP: the injection becomes income, a proportion is spent (per the MPC), becomes further income, and so on.</p><p>The <strong>ratio</strong>: k = final change in real GDP ÷ initial injection.</p><p>A £2bn injection producing a £6bn rise in GDP means k = 3.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html"
     },
@@ -646,8 +662,8 @@
         "multiplier",
         "formula"
       ],
-      "front": "<p>How does AQA require you to <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>",
-      "back": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. (AQA states that calculations from the marginal propensities to withdraw will not be expected — that is Edexcel territory.)</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>",
+      "front": "<p>How do you <strong>calculate the multiplier</strong>, and why does the MPC set its size?</p>",
+      "back": "<p>From the MPC <strong>only</strong>: if MPC = 0.75, the multiplier is 1 ÷ 0.25 = <strong>4</strong>. Calculations from the marginal propensities to withdraw are not expected.</p><p>The MPC governs the magnitude because it fixes how much of each round of income is re-spent: a higher MPC means less leaks away each round, so the rounds shrink more slowly and the total effect is larger.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-4-aggregate-demand-and-the-level-of-economic-activity.html",
       "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>M</mi><mo>=</mo><mn>1</mn><mi mathvariant=\"normal\">/</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−</mo><mi>M</mi><mi>P</mi><mi>C</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">M = 1/(1 - MPC)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">M</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord\">1/</span><span class=\"mopen\">(</span><span class=\"mord\">1</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">MPC</span><span class=\"mclose\">)</span></span></span></span></span>"
@@ -679,8 +695,8 @@
       "tags": [
         "aggregate-supply"
       ],
-      "front": "<p>Define <strong>SRAS</strong>, and name the cost changes AQA says shift it.</p>",
-      "back": "<p><strong>Short-run aggregate supply</strong> is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed. It slopes upward because higher output brings rising unit costs, so firms need higher prices.</p><p>AQA's named shift factors: <strong>money wage rates, raw material prices, business taxation and productivity</strong> — anything changing production costs across the economy.</p>",
+      "front": "<p>Define <strong>SRAS</strong>, and name the cost changes that shift it.</p>",
+      "back": "<p><strong>Short-run aggregate supply</strong> is the total planned output of goods and services in an economy at a given price level, assuming that at least one factor of production, such as capital or technology, is fixed. It slopes upward because higher output brings rising unit costs, so firms need higher prices.</p><p>The named shift factors:</p><ul><li><strong>Money wage rates</strong>.</li><li><strong>Raw material prices</strong>.</li><li><strong>Business taxation</strong>.</li><li><strong>Productivity</strong>.</li></ul><p>Anything changing production costs across the economy.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html"
     },
@@ -696,7 +712,7 @@
         "diagram"
       ],
       "front": "<p>Show the effect of a <strong>fall in production costs</strong> on SRAS.</p>",
-      "back": "<p>SRAS shifts right (SRAS1 to SRAS2): firms supply more at <strong>every given price level</strong>, so at the unchanged price level PL output rises from Y1 to Y2.</p><p>Causes on the AQA list: lower money wage rates, cheaper raw materials, lighter business taxation, higher productivity. Rising costs shift the curve left instead — the anatomy of a supply-side shock.</p>",
+      "back": "<p>SRAS shifts right (SRAS1 to SRAS2): firms supply more at <strong>every given price level</strong>, so at the unchanged price level PL output rises from Y1 to Y2.</p><p>Causes:</p><ul><li>Lower money wage rates.</li><li>Cheaper raw materials.</li><li>Lighter business taxation.</li><li>Higher productivity.</li></ul><p>Rising costs shift the curve left instead — the anatomy of a supply-side shock.</p>",
       "svgRef": "/images/diagrams/svg/sras-shift.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html",
       "svgAlt": "SRAS1 shifting right to SRAS2, raising real GDP supplied from Y1 to Y2 at the unchanged price level PL"
@@ -726,8 +742,8 @@
       "tags": [
         "aggregate-supply"
       ],
-      "front": "<p>Name AQA's <strong>fundamental determinants of LRAS</strong>.</p>",
-      "back": "<p><strong>Technology, productivity, attitudes, enterprise, factor mobility and economic incentives</strong> — the AQA list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>AQA also stresses the <strong>institutional structure</strong> of the economy — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>",
+      "front": "<p>Name the <strong>fundamental determinants of LRAS</strong>.</p>",
+      "back": "<ul><li><strong>Technology</strong>.</li><li><strong>Productivity</strong>.</li><li><strong>Attitudes</strong>.</li><li><strong>Enterprise</strong>.</li><li><strong>Factor mobility</strong>.</li><li><strong>Economic incentives</strong>.</li></ul><p>The list is broader than a factors-of-production checklist, reaching into how willing and able an economy is to use what it has.</p><p>The <strong>institutional structure</strong> of the economy matters too — notably a banking system that channels funds into business investment — as a determinant of aggregate supply.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html"
     },
@@ -743,7 +759,7 @@
         "diagram"
       ],
       "front": "<p>Draw and explain the <strong>Keynesian AS curve</strong>.</p>",
-      "back": "<p>The curve AQA names explicitly: L-shaped, with three phases — <strong>perfectly elastic</strong> at low output, where spare capacity lets firms expand without raising prices; <strong>upward sloping</strong> as resources grow scarce; <strong>vertical</strong> at full capacity Yfe, where extra demand only raises prices.</p><p>It embodies the Keynesian belief that the economy can sit below full employment for a long time.</p>",
+      "back": "<p>An L-shaped curve with three phases:</p><ul><li><strong>Perfectly elastic</strong> at low output, where spare capacity lets firms expand without raising prices.</li><li><strong>Upward sloping</strong> as resources grow scarce.</li><li><strong>Vertical</strong> at full capacity Yfe, where extra demand only raises prices.</li></ul><p>It embodies the Keynesian belief that the economy can sit below full employment for a long time.</p>",
       "svgRef": "/images/diagrams/svg/lras-keynesian.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-2-6-determinants-of-long-run-aggregate-supply.html",
       "svgAlt": "L-shaped Keynesian LRAS curve: flat at low output, sloping upward as capacity nears, vertical at full-capacity output Yfe"
@@ -794,7 +810,7 @@
         "diagram"
       ],
       "front": "<p>Draw the <strong>economic cycle</strong>, and name the indicators that identify its phases.</p>",
-      "back": "<p>Actual real GDP fluctuates around the rising trend rate of growth: <strong>boom</strong> above trend, then downturn, <strong>recession</strong> below trend, then recovery.</p><p>To place an economy in the cycle, AQA expects a range of indicators read together: <strong>real GDP growth, inflation, unemployment and investment</strong> — booms pair fast growth with rising inflation and investment; recessions the reverse.</p>",
+      "back": "<p>Actual real GDP fluctuates around the rising trend rate of growth: <strong>boom</strong> above trend, then downturn, <strong>recession</strong> below trend, then recovery.</p><p>To place an economy in the cycle, read a range of indicators together:</p><ul><li><strong>Real GDP growth</strong>.</li><li><strong>Inflation</strong>.</li><li><strong>Unemployment</strong>.</li><li><strong>Investment</strong>.</li></ul><p>Booms pair fast growth with rising inflation and investment; recessions the reverse.</p>",
       "svgRef": "/images/diagrams/svg/trade-cycle.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
       "svgAlt": "Real GDP fluctuating around a rising trend line, above it in a boom and below it in a recession, with downturn and recovery marked"
@@ -828,7 +844,7 @@
         "evaluation"
       ],
       "front": "<p>What causes <strong>cyclical instability</strong>?</p>",
-      "back": "<p>Beyond ordinary demand-side and supply-side shocks — domestic and global — AQA names four amplifiers: <strong>excessive growth in credit and debt</strong>; <strong>asset price bubbles</strong>; <strong>destabilising speculation</strong>; and <strong>animal spirits or herding</strong>, where confidence swings feed on themselves.</p><p>Each can turn a shock into a cycle: cheap credit inflates a bubble, herding sustains it, and the correction delivers the downturn.</p>",
+      "back": "<p>Beyond ordinary demand-side and supply-side shocks — domestic and global — four amplifiers:</p><ul><li><strong>Excessive growth in credit and debt</strong>.</li><li><strong>Asset price bubbles</strong>.</li><li><strong>Destabilising speculation</strong>.</li><li><strong>Animal spirits or herding</strong>, where confidence swings feed on themselves.</li></ul><p>Each can turn a shock into a cycle: cheap credit inflates a bubble, herding sustains it, and the correction delivers the downturn.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html"
     },
@@ -844,7 +860,7 @@
         "evaluation"
       ],
       "front": "<p>Weigh the <strong>costs and benefits of economic growth</strong>.</p>",
-      "back": "<p><strong>Benefits</strong> — higher real incomes and living standards, more employment, higher tax revenue and business investment.</p><p><strong>Costs</strong> — demand-pull inflation, inequality where gains are uneven, and environmental damage: pollution, emissions, resource depletion. AQA expects a view on <strong>sustainability</strong> — whether today's growth compromises the environment and resources future generations depend on.</p>",
+      "back": "<p><strong>Benefits</strong> — higher real incomes and living standards, more employment, higher tax revenue and business investment.</p><p><strong>Costs</strong> — demand-pull inflation, inequality where gains are uneven, and environmental damage: pollution, emissions, resource depletion.</p><p>Be ready with a view on <strong>sustainability</strong> — whether today's growth compromises the environment and resources future generations depend on.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html"
     },
@@ -859,7 +875,7 @@
         "unemployment"
       ],
       "front": "<p>Define <strong>unemployed</strong>, the <strong>labour force</strong> and <strong>economic inactivity</strong>.</p>",
-      "back": "<p><strong>Unemployed</strong> — of working age, without work, but willing and able to work and actively seeking employment. The <strong>labour force</strong> is the total of those in employment and those unemployed who are actively seeking work.</p><p><strong>Economically inactive</strong> — people of working age not seeking work: full-time students, early retirees, the long-term sick, discouraged workers.</p>",
+      "back": "<p><strong>Unemployed</strong> — of working age, without work, but willing and able to work and actively seeking employment.</p><p>The <strong>labour force</strong> is the total of those in employment and those unemployed who are actively seeking work.</p><p><strong>Economically inactive</strong> — people of working age not seeking work: full-time students, early retirees, the long-term sick, discouraged workers.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html"
     },
@@ -889,8 +905,8 @@
       "tags": [
         "unemployment"
       ],
-      "front": "<p>Name and define the <strong>four types of unemployment</strong> in the AQA specification.</p>",
-      "back": "<p><strong>Frictional</strong> — short-term, between jobs. <strong>Structural</strong> — a mismatch between workers' skills and available jobs, often from technological change. <strong>Seasonal</strong> — demand for some labour fluctuates across the year. <strong>Cyclical</strong> — demand-deficient unemployment in a downturn, linked to a negative output gap.</p><p>The cause decides the cure: demand-side policy treats cyclical unemployment; supply-side policy treats structural and frictional.</p>",
+      "front": "<p>Name and define the <strong>four types of unemployment</strong>.</p>",
+      "back": "<ul><li><strong>Frictional</strong> — short-term, between jobs.</li><li><strong>Structural</strong> — a mismatch between workers' skills and available jobs, often from technological change.</li><li><strong>Seasonal</strong> — demand for some labour fluctuates across the year.</li><li><strong>Cyclical</strong> — demand-deficient unemployment in a downturn, linked to a negative output gap.</li></ul><p>The cause decides the cure: demand-side policy treats cyclical unemployment; supply-side policy treats structural and frictional.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html"
     },
@@ -936,7 +952,7 @@
         "inflation"
       ],
       "front": "<p>Define <strong>inflation, deflation and disinflation</strong>.</p>",
-      "back": "<p><strong>Inflation</strong> — a sustained increase in the general/average price level of goods and services in an economy. <strong>Deflation</strong> — a sustained decrease in the price level: a negative inflation rate. <strong>Disinflation</strong> — a fall in the <strong>rate</strong> of inflation: prices still rising, more slowly.</p><p>AQA's trap: <strong>deflationary policies</strong> are policies that reduce AD — they do not necessarily cause deflation.</p>",
+      "back": "<p><strong>Inflation</strong> — a sustained increase in the general/average price level of goods and services in an economy.</p><p><strong>Deflation</strong> — a sustained decrease in the price level: a negative inflation rate.</p><p><strong>Disinflation</strong> — a fall in the <strong>rate</strong> of inflation: prices still rising, more slowly.</p><p>A common trap: <strong>deflationary policies</strong> are policies that reduce AD — they do not necessarily cause deflation.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-3-3-inflation-and-deflation.html"
     },
@@ -1069,7 +1085,7 @@
         "money"
       ],
       "front": "<p>What are the <strong>functions and characteristics of money</strong>?</p>",
-      "back": "<p>Four functions: a <strong>medium of exchange</strong>, a <strong>unit of account</strong> for comparing value, a <strong>store of value</strong> for deferring consumption, and a <strong>standard of deferred payment</strong> for settling debts over time.</p><p>Six characteristics make something work as money: <strong>durability, portability, divisibility, uniformity, acceptability</strong> and <strong>limited supply</strong> — the last is what protects its value from inflation.</p>",
+      "back": "<p>Four functions:</p><ul><li>A <strong>medium of exchange</strong>.</li><li>A <strong>unit of account</strong> for comparing value.</li><li>A <strong>store of value</strong> for deferring consumption.</li><li>A <strong>standard of deferred payment</strong> for settling debts over time.</li></ul><p>Six characteristics make something work as money:</p><ul><li><strong>Durability</strong>.</li><li><strong>Portability</strong>.</li><li><strong>Divisibility</strong>.</li><li><strong>Uniformity</strong>.</li><li><strong>Acceptability</strong>.</li><li><strong>Limited supply</strong> — the last is what protects its value from inflation.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html"
     },
@@ -1085,7 +1101,7 @@
         "money"
       ],
       "front": "<p>Define the <strong>money supply</strong> — and distinguish <strong>narrow money</strong> from <strong>broad money</strong>.</p>",
-      "back": "<p><strong>Money supply</strong>: the total amount of money available in an economy at a particular point in time.</p><p><strong>Narrow money</strong> (M1): the most liquid forms — cash and demand deposits, readily available for transactions. <strong>Broad money</strong> (M2, M3…): narrow money plus less liquid forms such as savings accounts and time deposits — the total money supply, liquid and less liquid alike.</p>",
+      "back": "<p><strong>Money supply</strong>: the total amount of money available in an economy at a particular point in time.</p><ul><li><strong>Narrow money</strong> (M1): the most liquid forms — cash and demand deposits, readily available for transactions.</li><li><strong>Broad money</strong> (M2, M3…): narrow money plus less liquid forms such as savings accounts and time deposits — the total money supply, liquid and less liquid alike.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html"
     },
@@ -1100,7 +1116,7 @@
         "financial-markets"
       ],
       "front": "<p>Distinguish the <strong>money market</strong>, the <strong>capital market</strong> and the <strong>foreign exchange market</strong>.</p>",
-      "back": "<p>The <strong>money market</strong>: short-term borrowing and lending, typically a year or less — how firms and governments manage short-term funding. The <strong>capital market</strong>: long-term borrowing and lending beyond a year — where bonds and shares raise capital for investment and expansion.</p><p>The <strong>foreign exchange market</strong>: where currencies are bought and sold, letting firms manage exchange-rate risk. Together they channel savings into investment across the wider economy.</p>",
+      "back": "<ul><li>The <strong>money market</strong>: short-term borrowing and lending, typically a year or less — how firms and governments manage short-term funding.</li><li>The <strong>capital market</strong>: long-term borrowing and lending beyond a year — where bonds and shares raise capital for investment and expansion.</li><li>The <strong>foreign exchange market</strong>: where currencies are bought and sold, letting firms manage exchange-rate risk.</li></ul><p>Together they channel savings into investment across the wider economy.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html"
     },
@@ -1132,7 +1148,7 @@
         "formula"
       ],
       "front": "<p>Define a <strong>bond</strong>, its <strong>coupon</strong> and <strong>maturity</strong> — and state the <strong>yield</strong> formula.</p>",
-      "back": "<p><strong>Bond</strong>: a tradable debt security issued by a government or a firm in order to borrow money — UK government bonds are <strong>gilts</strong>. The <strong>coupon</strong> is the fixed annual interest payment as a percentage of the £100 face value; <strong>maturity</strong> is the date the face value is repaid in one lump sum.</p><p><strong>Bond yield (%) = annual coupon payment ÷ market price × 100</strong>. The coupon is fixed, so when the market price falls the yield rises — and vice versa.</p>",
+      "back": "<p><strong>Bond</strong>: a tradable debt security issued by a government or a firm in order to borrow money — UK government bonds are <strong>gilts</strong>.</p><ul><li>The <strong>coupon</strong> is the fixed annual interest payment as a percentage of the £100 face value.</li><li><strong>Maturity</strong> is the date the face value is repaid in one lump sum.</li></ul><p><strong>Bond yield (%) = annual coupon payment ÷ market price × 100</strong>. The coupon is fixed, so when the market price falls the yield rises — and vice versa.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
       "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>B</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>y</mi><mi>i</mi><mi>e</mi><mi>l</mi><mi>d</mi><mo stretchy=\"false\">(</mo></mrow><annotation encoding=\"application/x-tex\">Bond yield (%) = annual coupon payment ÷ market price of bond × 100</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.05017em;\">B</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">n</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">y</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span><span class=\"mord mathnormal\">d</span><span class=\"mopen\">(</span></span></span></span></span>"
@@ -1166,7 +1182,7 @@
         "banking"
       ],
       "front": "<p>Distinguish a <strong>commercial bank</strong> from an <strong>investment bank</strong>.</p>",
-      "back": "<p><strong>Commercial bank</strong>: a bank that accepts deposits from households and firms, makes loans to them, and provides a payments system — profiting from the interest rate spread. Its three functions: <strong>accepting deposits</strong> (sight and time accounts), <strong>lending</strong>, and <strong>providing a payments mechanism</strong>.</p><p><strong>Investment bank</strong>: takes no public deposits; it underwrites share and bond issues, advises on takeovers and trades securities for large firms, governments and institutions — higher risk, funded from wholesale markets. Many banks do both, which raises systemic risk.</p>",
+      "back": "<p><strong>Commercial bank</strong>: a bank that accepts deposits from households and firms, makes loans to them, and provides a payments system — profiting from the interest rate spread.</p><p>Its three functions:</p><ul><li><strong>Accepting deposits</strong> (sight and time accounts).</li><li><strong>Lending</strong>.</li><li><strong>Providing a payments mechanism</strong>.</li></ul><p><strong>Investment bank</strong>: takes no public deposits; it underwrites share and bond issues, advises on takeovers and trades securities for large firms, governments and institutions — higher risk, funded from wholesale markets.</p><p>Many banks do both, which raises systemic risk.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html"
     },
@@ -1182,7 +1198,7 @@
         "banking"
       ],
       "front": "<p>Describe the structure of a <strong>commercial bank's balance sheet</strong>.</p>",
-      "back": "<p><strong>Assets = Liabilities + Capital</strong>, always. <strong>Deposits are liabilities</strong> — the bank owes them back to customers; <strong>loans are assets</strong> — borrowers owe them to the bank. Getting that backwards is the classic error.</p><p>Liabilities: customer deposits (largest), bonds issued and wholesale borrowing. Assets, in <strong>descending order of liquidity</strong>: cash and central-bank balances, bills, then loans and advances — the least liquid but most profitable, and normally the largest.</p>",
+      "back": "<p><strong>Assets = Liabilities + Capital</strong>, always.</p><ul><li><strong>Deposits are liabilities</strong> — the bank owes them back to customers.</li><li><strong>Loans are assets</strong> — borrowers owe them to the bank.</li></ul><p>Getting that backwards is the classic error.</p><p>Liabilities: customer deposits (largest), bonds issued and wholesale borrowing.</p><p>Assets, in <strong>descending order of liquidity</strong>: cash and central-bank balances, bills, then loans and advances — the least liquid but most profitable, and normally the largest.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html"
     },
@@ -1198,7 +1214,7 @@
         "banking"
       ],
       "front": "<p>What are a commercial bank's <strong>three objectives</strong> — and how do they conflict?</p>",
-      "back": "<p><strong>Liquidity</strong> (meet withdrawals on demand — survival), <strong>profitability</strong> (maximise returns for shareholders) and <strong>security</strong> (minimise losses from bad debts).</p><p>The central conflict is <strong>liquidity vs profitability</strong>: the most liquid assets earn the least, the most profitable are the least liquid — too little liquidity risks a <strong>bank run</strong>, too much sacrifices profit. And <strong>profitability vs security</strong>: higher returns come only from riskier lending, whose defaults can wipe out the bank's capital.</p>",
+      "back": "<ul><li><strong>Liquidity</strong> (meet withdrawals on demand — survival).</li><li><strong>Profitability</strong> (maximise returns for shareholders).</li><li><strong>Security</strong> (minimise losses from bad debts).</li></ul><p>The central conflict is <strong>liquidity vs profitability</strong>: the most liquid assets earn the least, the most profitable are the least liquid — too little liquidity risks a <strong>bank run</strong>, too much sacrifices profit.</p><p>And <strong>profitability vs security</strong>: higher returns come only from riskier lending, whose defaults can wipe out the bank's capital.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html"
     },
@@ -1214,7 +1230,7 @@
         "banking"
       ],
       "front": "<p>How do <strong>banks create credit</strong>?</p>",
-      "back": "<p><strong>Credit creation</strong>: the process by which commercial banks make loans that create new bank deposits, thereby increasing the money supply. A new loan <strong>credits the borrower's account with a new deposit</strong> — banks do not merely lend out savers' money.</p><p>It rests on <strong>fractional reserve banking</strong>: only a fraction of deposits is ever withdrawn at once, so banks hold a fraction as reserves and lend the rest; each loan becomes someone else's deposit and the cycle repeats, multiplying deposits. Credit growth drives AD — and excessive growth feeds inflation and asset bubbles.</p>",
+      "back": "<p><strong>Credit creation</strong>: the process by which commercial banks make loans that create new bank deposits, thereby increasing the money supply.</p><p>A new loan <strong>credits the borrower's account with a new deposit</strong> — banks do not merely lend out savers' money.</p><p>It rests on <strong>fractional reserve banking</strong>: only a fraction of deposits is ever withdrawn at once, so banks hold a fraction as reserves and lend the rest; each loan becomes someone else's deposit and the cycle repeats, multiplying deposits.</p><p>Credit growth drives AD — and excessive growth feeds inflation and asset bubbles.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html"
     },
@@ -1230,7 +1246,7 @@
         "central-banks"
       ],
       "front": "<p>Define a <strong>central bank</strong> — and its main functions.</p>",
-      "back": "<p><strong>Central bank</strong>: a national bank that provides financial and banking services for a country's government and commercial banks — in the UK, the <strong>Bank of England</strong>.</p><p>Its functions: <strong>issuing currency</strong>, <strong>managing the money supply</strong>, <strong>setting interest rates</strong>, acting as <strong>lender of last resort</strong> in crises, and <strong>regulating and supervising banks</strong>.</p>",
+      "back": "<p><strong>Central bank</strong>: a national bank that provides financial and banking services for a country's government and commercial banks — in the UK, the <strong>Bank of England</strong>.</p><p>Its functions:</p><ul><li><strong>Issuing currency</strong>.</li><li><strong>Managing the money supply</strong>.</li><li><strong>Setting interest rates</strong>.</li><li>Acting as <strong>lender of last resort</strong> in crises.</li><li><strong>Regulating and supervising banks</strong>.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html"
     },
@@ -1246,7 +1262,7 @@
         "central-banks"
       ],
       "front": "<p>How does a cut in <strong>interest rates</strong> feed through to aggregate demand?</p>",
-      "back": "<p>The MPC's rate changes reach AD through three channels. <strong>Consumption</strong>: cheaper borrowing, less reward for saving, and variable-rate mortgage holders keep more disposable income. <strong>Investment</strong>: firms' cost of borrowing falls, so more projects pay.</p><p><strong>Net exports</strong>: lower returns send <strong>hot money</strong> abroad, the extra supply of pounds depreciates the currency, exports cheapen and imports dearen. All three raise AD — and a rate rise runs the whole mechanism in reverse.</p>",
+      "back": "<p>The MPC's rate changes reach AD through three channels:</p><ul><li><strong>Consumption</strong>: cheaper borrowing, less reward for saving, and variable-rate mortgage holders keep more disposable income.</li><li><strong>Investment</strong>: firms' cost of borrowing falls, so more projects pay.</li><li><strong>Net exports</strong>: lower returns send <strong>hot money</strong> abroad, the extra supply of pounds depreciates the currency, exports cheapen and imports dearen.</li></ul><p>All three raise AD — and a rate rise runs the whole mechanism in reverse.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html"
     },
@@ -1261,7 +1277,7 @@
         "monetary-policy",
         "diagram"
       ],
-      "front": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the AQA macro objectives.</p>",
+      "front": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the macro objectives.</p>",
       "back": "<p>AD shifts right from AD1 to AD2: real GDP rises Y1 to Y2 and the price level PL1 to PL2 — <strong>growth up, unemployment down</strong> (derived demand for labour), <strong>inflation up</strong>; the weaker pound helps net trade. On the classical curve at full employment, the same shift raises only the price level.</p><p>Watch the distribution effects: cheap money inflates asset prices, favouring the asset-rich — and higher consumption strains environmental sustainability.</p>",
       "svgRef": "/images/diagrams/svg/keynesian-ad-shift-right.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
@@ -1295,7 +1311,7 @@
         "evaluation"
       ],
       "front": "<p>Evaluate the effectiveness of <strong>interest rate cuts and QE</strong>.</p>",
-      "back": "<p><strong>Time lags</strong> — effects can take up to two years; fixed-rate borrowers feel nothing at first. The <strong>liquidity trap</strong> — near the zero lower bound, further cuts change little, which is why QE exists at all.</p><p><strong>Asset price bubbles</strong> — cheap money inflates housing and shares, and bursting bubbles bring crises. And <strong>confidence</strong> — in a recession, households save the windfall and firms delay investment regardless of the rate. Monetary policy pulls on a string it cannot push.</p>",
+      "back": "<ul><li><strong>Time lags</strong> — effects can take up to two years; fixed-rate borrowers feel nothing at first.</li><li>The <strong>liquidity trap</strong> — near the zero lower bound, further cuts change little, which is why QE exists at all.</li><li><strong>Asset price bubbles</strong> — cheap money inflates housing and shares, and bursting bubbles bring crises.</li><li><strong>Confidence</strong> — in a recession, households save the windfall and firms delay investment regardless of the rate.</li></ul><p>Monetary policy pulls on a string it cannot push.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html"
     },
@@ -1328,7 +1344,7 @@
         "formula"
       ],
       "front": "<p>Define the <strong>liquidity ratio</strong> and <strong>capital ratio</strong> — and which failure does each guard against?</p>",
-      "back": "<p><strong>Liquidity ratio</strong>: the proportion of a bank's assets that are held in liquid form, such as cash, reserves at the central bank and easily marketable securities — liquid assets ÷ total assets × 100. It guards against <strong>illiquidity</strong>: being unable to meet withdrawals, the bank-run failure of borrowing short and lending long.</p><p><strong>Capital ratio</strong>: capital ÷ risk-weighted assets × 100. Capital absorbs losses when borrowers default; once losses exceed it, the bank is <strong>insolvent</strong>.</p>",
+      "back": "<p><strong>Liquidity ratio</strong>: the proportion of a bank's assets that are held in liquid form, such as cash, reserves at the central bank and easily marketable securities — liquid assets ÷ total assets × 100.</p><p>It guards against <strong>illiquidity</strong>: being unable to meet withdrawals, the bank-run failure of borrowing short and lending long.</p><p><strong>Capital ratio</strong>: capital ÷ risk-weighted assets × 100.</p><p>Capital absorbs losses when borrowers default; once losses exceed it, the bank is <strong>insolvent</strong>.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html",
       "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>L</mi><mi>i</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>d</mi><mi>i</mi><mi>t</mi><mi>y</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mo>=</mo><mi>l</mi><mi>i</mi><mi>q</mi><mi>u</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi><mo>÷</mo><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi><mo>×</mo><mn>100</mn><mo separator=\"true\">;</mo><mi>C</mi><mi>a</mi><mi>p</mi><mi>i</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mo>=</mo><mi>c</mi><mi>a</mi><mi>p</mi><mi>i</mi><mi>t</mi><mi>a</mi><mi>l</mi><mo>÷</mo><mi>r</mi><mi>i</mi><mi>s</mi><mi>k</mi><mo>−</mo><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi>e</mi><mi>d</mi><mi>a</mi><mi>s</mi><mi>s</mi><mi>e</mi><mi>t</mi><mi>s</mi><mo>×</mo><mn>100</mn></mrow><annotation encoding=\"application/x-tex\">Liquidity ratio = liquid assets ÷ total assets × 100; Capital ratio = capital ÷ risk-weighted assets × 100</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\">L</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">q</span><span class=\"mord mathnormal\">u</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">yr</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">o</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">q</span><span class=\"mord mathnormal\">u</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">sse</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">s</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">÷</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7778em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">sse</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">s</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">×</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord\">100</span><span class=\"mpunct\">;</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.07153em;\">C</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">p</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">r</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">o</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\">c</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">p</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">÷</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7778em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">r</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">s</span><span class=\"mord mathnormal\" style=\"margin-right:0.03148em;\">k</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">−</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.02691em;\">w</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">g</span><span class=\"mord mathnormal\">h</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">sse</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">s</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">×</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">100</span></span></span></span></span>"
@@ -1346,7 +1362,7 @@
         "evaluation"
       ],
       "front": "<p>Explain <strong>systemic risk</strong> and <strong>moral hazard</strong> — and why regulating them involves a trade-off.</p>",
-      "back": "<p><strong>Systemic risk</strong>: the risk that the failure of one financial institution triggers the failure of others and a wider financial crisis — interbank lending, shared assets and confidence spread failure by contagion (Lehman Brothers, 2008). <strong>Moral hazard</strong>: too-big-to-fail banks take excessive risks expecting bailouts (RBS and Lloyds).</p><p>The trade-off: the tools that contain systemic risk — deposit insurance, lender of last resort, bailouts — are the very tools that create moral hazard; and the capital and liquidity rules that make banks safer also restrict credit creation and growth. Regulators can fully eliminate neither risk.</p>",
+      "back": "<p><strong>Systemic risk</strong>: the risk that the failure of one financial institution triggers the failure of others and a wider financial crisis — interbank lending, shared assets and confidence spread failure by contagion (Lehman Brothers, 2008).</p><p><strong>Moral hazard</strong>: too-big-to-fail banks take excessive risks expecting bailouts (RBS and Lloyds).</p><p>The trade-off: the tools that contain systemic risk — deposit insurance, lender of last resort, bailouts — are the very tools that create moral hazard; and the capital and liquidity rules that make banks safer also restrict credit creation and growth.</p><p>Regulators can fully eliminate neither risk.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html"
     },
@@ -1362,7 +1378,7 @@
         "fiscal-policy"
       ],
       "front": "<p>Define <strong>fiscal policy</strong>, and its expansionary and contractionary forms.</p>",
-      "back": "<p><strong>Fiscal policy</strong> is the government's manipulation of government spending (G) and taxation (T) to meet macroeconomic objectives — with microeconomic functions too, such as correcting market failures and changing incentives.</p><p><strong>Expansionary</strong>: raise G, cut T — AD rises. <strong>Contractionary</strong>: cut G, raise T — AD falls. Spending on education, infrastructure and R&D also works on the supply side, shifting LRAS.</p>",
+      "back": "<p><strong>Fiscal policy</strong> is the government's manipulation of government spending (G) and taxation (T) to meet macroeconomic objectives — with microeconomic functions too, such as correcting market failures and changing incentives.</p><ul><li><strong>Expansionary</strong>: raise G, cut T — AD rises.</li><li><strong>Contractionary</strong>: cut G, raise T — AD falls.</li></ul><p>Spending on education, infrastructure and R&D also works on the supply side, shifting LRAS.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
     },
@@ -1377,8 +1393,24 @@
         "policy",
         "fiscal-policy"
       ],
-      "front": "<p>Distinguish the <strong>types of public expenditure</strong>, and why governments levy taxes.</p>",
-      "back": "<p><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines). <strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure. <strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</p><p>Taxes exist to fund this spending, manage AD, correct market failures and redistribute income.</p>",
+      "front": "<p>Distinguish the <strong>types of public expenditure</strong>.</p>",
+      "back": "<ul><li><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines).</li><li><strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure.</li><li><strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
+    },
+    {
+      "id": "aqa-2-5-1-def-05",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "taxation"
+      ],
+      "front": "<p>Why do governments <strong>levy taxes</strong>?</p>",
+      "back": "<p>Taxes exist to fund public spending, manage AD, correct market failures and redistribute income.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
     },
@@ -1394,7 +1426,7 @@
         "fiscal-policy"
       ],
       "front": "<p>Distinguish <strong>progressive, proportional and regressive taxes</strong>.</p>",
-      "back": "<p><strong>Progressive</strong> — the average tax rate rises with income (UK income tax). <strong>Proportional</strong> — the same rate at every income. <strong>Regressive</strong> — the average rate falls as income rises, taking a bigger share from the poor (duties, VAT in practice).</p><p>The principles of taxation ask taxes to be <strong>equitable</strong>, efficient, certain and convenient — the mix of direct taxes (on income and profits) and indirect taxes (on spending) is judged against these.</p>",
+      "back": "<ul><li><strong>Progressive</strong> — the average tax rate rises with income (UK income tax).</li><li><strong>Proportional</strong> — the same rate at every income.</li><li><strong>Regressive</strong> — the average rate falls as income rises, taking a bigger share from the poor (duties, VAT in practice).</li></ul><p>The principles of taxation ask taxes to be <strong>equitable</strong>, efficient, certain and convenient — the mix of direct taxes (on income and profits) and indirect taxes (on spending) is judged against these.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
     },
@@ -1444,7 +1476,7 @@
         "supply-side"
       ],
       "front": "<p>Distinguish <strong>supply-side policies</strong> from <strong>supply-side improvements</strong>.</p>",
-      "back": "<p><strong>Supply-side policies</strong> are government measures to raise the economy's productive potential, shifting LRAS right. <strong>Supply-side improvements</strong> are the capacity gains themselves — and AQA stresses they often originate in the <strong>private sector</strong>, through productivity gains, innovation and investment, independently of government.</p><p>Policy divides into <strong>market-based</strong> (removing intervention) and <strong>interventionist</strong> (government spending) approaches.</p>",
+      "back": "<p><strong>Supply-side policies</strong> are government measures to raise the economy's productive potential, shifting LRAS right.</p><p><strong>Supply-side improvements</strong> are the capacity gains themselves — and they often originate in the <strong>private sector</strong>, through productivity gains, innovation and investment, independently of government.</p><p>Policy divides into <strong>market-based</strong> (removing intervention) and <strong>interventionist</strong> (government spending) approaches.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-2-supply-side-policies.html"
     },
@@ -1459,8 +1491,8 @@
         "policy",
         "supply-side"
       ],
-      "front": "<p>Give AQA's examples of <strong>free-market and interventionist supply-side policies</strong>, and their effect on the natural rate.</p>",
-      "back": "<p><strong>Free-market</strong>: tax cuts to sharpen incentives, privatisation, deregulation, labour-market reforms. <strong>Interventionist</strong>: government spending on education and training, industrial policy, subsidising research and development.</p><p>By improving skills, mobility and incentives, both routes can lower the <strong>natural rate of unemployment</strong> — the frictional and structural core that demand policy cannot touch — while raising potential output and the trend growth rate.</p>",
+      "front": "<p>Give examples of <strong>free-market and interventionist supply-side policies</strong>, and their effect on the natural rate.</p>",
+      "back": "<ul><li><strong>Free-market</strong>: tax cuts to sharpen incentives, privatisation, deregulation, labour-market reforms.</li><li><strong>Interventionist</strong>: government spending on education and training, industrial policy, subsidising research and development.</li></ul><p>By improving skills, mobility and incentives, both routes can lower the <strong>natural rate of unemployment</strong> — the frictional and structural core that demand policy cannot touch — while raising potential output and the trend growth rate.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-2-supply-side-policies.html"
     },
@@ -1508,7 +1540,7 @@
         "globalisation"
       ],
       "front": "<p>What has <strong>driven globalisation over the last 50 years</strong>?</p>",
-      "back": "<p><strong>Trade liberalisation</strong> — falling tariffs and quotas (China's WTO entry in 2001 transformed its trade); <strong>advances in transport and communication technology</strong>; the growth of <strong>MNCs</strong> building global supply chains (Apple, Amazon, Unilever); and <strong>containerisation</strong>, which slashed shipping costs and time.</p><p>Plus the <strong>deregulation of financial markets</strong> in the 1990s freeing capital flows, and <strong>global institutions</strong> — the WTO, IMF and World Bank — promoting free trade and investment.</p>",
+      "back": "<ul><li><strong>Trade liberalisation</strong> — falling tariffs and quotas (China's WTO entry in 2001 transformed its trade).</li><li><strong>Advances in transport and communication technology</strong>.</li><li>The growth of <strong>MNCs</strong> building global supply chains (Apple, Amazon, Unilever).</li><li><strong>Containerisation</strong>, which slashed shipping costs and time.</li><li>The <strong>deregulation of financial markets</strong> in the 1990s freeing capital flows.</li><li><strong>Global institutions</strong> — the WTO, IMF and World Bank — promoting free trade and investment.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-1-globalisation.html"
     },
@@ -1524,7 +1556,7 @@
         "evaluation"
       ],
       "front": "<p>Evaluate the <strong>consequences of globalisation</strong> across its stakeholders.</p>",
-      "back": "<p><strong>Consumers</strong>: lower prices, more variety and quality — against cultural imperialism and import-quality concerns. <strong>Workers</strong>: jobs and rising wages in developing countries — against job losses where production relocates. <strong>Firms</strong>: bigger markets, cheaper inputs and economies of scale — against fiercer competition and fragile supply chains.</p><p><strong>Governments</strong>: growth and tax revenue — against inequality and exposure to external shocks. The <strong>environment</strong> mostly loses: more production, transport, emissions and resource exploitation.</p>",
+      "back": "<ul><li><strong>Consumers</strong>: lower prices, more variety and quality — against cultural imperialism and import-quality concerns.</li><li><strong>Workers</strong>: jobs and rising wages in developing countries — against job losses where production relocates.</li><li><strong>Firms</strong>: bigger markets, cheaper inputs and economies of scale — against fiercer competition and fragile supply chains.</li><li><strong>Governments</strong>: growth and tax revenue — against inequality and exposure to external shocks.</li><li>The <strong>environment</strong> mostly loses: more production, transport, emissions and resource exploitation.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-1-globalisation.html"
     },
@@ -1555,7 +1587,7 @@
         "diagram"
       ],
       "front": "<p>Show <strong>comparative advantage</strong> using two countries' PPFs.</p>",
-      "back": "<p>Germany's PPF runs from 150mn T-shirts to <strong>20mn chips</strong>; Vietnam's from <strong>200mn T-shirts</strong> to 10mn chips — each has an absolute advantage in one good. Opportunity costs: a chip costs Germany <strong>7.5 T-shirts</strong> but Vietnam <strong>20</strong>; a T-shirt costs Vietnam <strong>0.05 chips</strong> but Germany 0.13.</p><p>Each specialises where its opportunity cost is <strong>lower</strong>: fully specialised, they produce <strong>20m chips and 200mn T-shirts</strong> — beating the 15m and 175mn made without specialisation — and by trading, both consume <strong>beyond their own PPFs</strong>.</p>",
+      "back": "<p>Germany's PPF runs from 150mn T-shirts to <strong>20mn chips</strong>; Vietnam's from <strong>200mn T-shirts</strong> to 10mn chips — each has an absolute advantage in one good.</p><p>Opportunity costs:</p><ul><li>A chip costs Germany <strong>7.5 T-shirts</strong> but Vietnam <strong>20</strong>.</li><li>A T-shirt costs Vietnam <strong>0.05 chips</strong> but Germany 0.13.</li></ul><p>Each specialises where its opportunity cost is <strong>lower</strong>: fully specialised, they produce <strong>20m chips and 200mn T-shirts</strong> — beating the 15m and 175mn made without specialisation — and by trading, both consume <strong>beyond their own PPFs</strong>.</p>",
       "svgRef": "/images/diagrams/svg/comparative-advantage.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
       "svgAlt": "Two straight-line PPFs for computer chips and T-shirts crossing on shared axes: Germany's runs from 150 million T-shirts to 20 million chips, Vietnam's from 200 million T-shirts to 10 million chips"
@@ -1571,7 +1603,7 @@
         "trade"
       ],
       "front": "<p>What are the <strong>benefits and costs of international trade</strong> — and what changes the <strong>pattern of trade</strong>?</p>",
-      "back": "<p><strong>Benefits</strong>: efficiency from specialising at lower opportunity cost, higher global output, lower prices, greater variety, economies of scale and growth. <strong>Costs</strong>: import dependency, job losses in uncompetitive industries, inequality, environmental damage and worker exploitation where standards are low.</p><p>The <strong>pattern of trade</strong> — what is traded and with whom — shifts with comparative advantage (UK manufacturing's decline), <strong>emerging economies</strong>, trade blocs and agreements (Brexit), and <strong>relative exchange rates</strong>.</p>",
+      "back": "<p><strong>Benefits</strong></p><ul><li>Efficiency from specialising at lower opportunity cost.</li><li>Higher global output.</li><li>Lower prices.</li><li>Greater variety.</li><li>Economies of scale and growth.</li></ul><p><strong>Costs</strong></p><ul><li>Import dependency.</li><li>Job losses in uncompetitive industries.</li><li>Inequality.</li><li>Environmental damage.</li><li>Worker exploitation where standards are low.</li></ul><p>The <strong>pattern of trade</strong> — what is traded and with whom — shifts with comparative advantage (UK manufacturing's decline), <strong>emerging economies</strong>, trade blocs and agreements (Brexit), and <strong>relative exchange rates</strong>.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-2-trade.html"
     },
@@ -1621,7 +1653,7 @@
         "trading-blocs"
       ],
       "front": "<p>What is a <strong>customs union</strong> — and what are trade creation, trade diversion and the WTO's role?</p>",
-      "back": "<p>A <strong>customs union</strong> (e.g. MERCOSUR) removes tariffs and quotas between members and adds a <strong>common external tariff</strong>; a free trade area lacks the common tariff, a common market (the EU) adds free movement of labour and capital.</p><p><strong>Trade creation</strong>: trade shifts to a lower-cost producer inside the bloc — welfare rises. <strong>Trade diversion</strong>: it shifts from a cheaper outsider to a dearer member — welfare falls. The <strong>WTO</strong> promotes trade liberalisation as negotiating forum and dispute court — in tension with blocs that favour their members.</p>",
+      "back": "<p>A <strong>customs union</strong> (e.g. MERCOSUR) removes tariffs and quotas between members and adds a <strong>common external tariff</strong>; a free trade area lacks the common tariff, a common market (the EU) adds free movement of labour and capital.</p><p><strong>Trade creation</strong>: trade shifts to a lower-cost producer inside the bloc — welfare rises.</p><p><strong>Trade diversion</strong>: it shifts from a cheaper outsider to a dearer member — welfare falls.</p><p>The <strong>WTO</strong> promotes trade liberalisation as negotiating forum and dispute court — in tension with blocs that favour their members.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-2-trade.html"
     },
@@ -1636,7 +1668,7 @@
         "balance-of-payments"
       ],
       "front": "<p>Define the <strong>balance of payments</strong> — and what does each account record?</p>",
-      "back": "<p><strong>Balance of payments (BoP)</strong>: records all financial transactions between a country and the rest of the world. Inflows are credits, outflows debits.</p><p>The <strong>current account</strong>: trade in goods and services, primary income (profits, interest, dividends) and secondary income (aid, remittances). The <strong>capital account</strong>: minor capital transfers such as debt forgiveness. The <strong>financial account</strong>: FDI, portfolio investment and reserve changes — and since the BoP must balance, a current account deficit is financed by a capital and financial account surplus.</p>",
+      "back": "<p><strong>Balance of payments (BoP)</strong>: records all financial transactions between a country and the rest of the world. Inflows are credits, outflows debits.</p><ul><li>The <strong>current account</strong>: trade in goods and services, primary income (profits, interest, dividends) and secondary income (aid, remittances).</li><li>The <strong>capital account</strong>: minor capital transfers such as debt forgiveness.</li><li>The <strong>financial account</strong>: FDI, portfolio investment and reserve changes.</li></ul><p>Since the BoP must balance, a current account deficit is financed by a capital and financial account surplus.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html"
     },
@@ -1652,7 +1684,7 @@
         "calculation"
       ],
       "front": "<p>A country records: trade in goods — credits £240bn, debits £330bn; services — £280bn, £205bn; primary income — £55bn, £70bn; secondary income — £30bn, £40bn. Calculate the <strong>current account balance</strong>.</p>",
-      "back": "<p>Goods: 240 − 330 = <strong>−£90bn</strong>. Services: 280 − 205 = <strong>+£75bn</strong>. Primary income: 55 − 70 = <strong>−£15bn</strong>. Secondary income: 30 − 40 = <strong>−£10bn</strong>.</p><p>Balance: −90 + 75 − 15 − 10 = <strong>−£40bn</strong> — a current account deficit, with the services surplus offsetting more than half the goods deficit. Always net all four components.</p>",
+      "back": "<ul><li>Goods: 240 − 330 = <strong>−£90bn</strong></li><li>Services: 280 − 205 = <strong>+£75bn</strong></li><li>Primary income: 55 − 70 = <strong>−£15bn</strong></li><li>Secondary income: 30 − 40 = <strong>−£10bn</strong></li></ul><p>Balance: −90 + 75 − 15 − 10 = <strong>−£40bn</strong> — a current account deficit, with the services surplus offsetting more than half the goods deficit.</p><p>Always net all four components.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html"
     },
@@ -1667,7 +1699,7 @@
         "balance-of-payments"
       ],
       "front": "<p>What causes a <strong>current account deficit</strong> — and why do persistent imbalances matter?</p>",
-      "back": "<p>Causes: <strong>low competitiveness</strong> (weak productivity or high inflation against rivals), a <strong>strong exchange rate</strong>, <strong>high domestic demand</strong> sucking in imports, and <strong>structural decline</strong> such as a shrinking manufacturing base.</p><p><strong>Persistent deficits</strong> build foreign debt and can trigger currency depreciation and weaker FDI as confidence erodes; <strong>persistent surpluses</strong> feed inflation and over-reliance on exports, leaving the economy exposed to global downturns.</p>",
+      "back": "<p>Causes:</p><ul><li><strong>Low competitiveness</strong> (weak productivity or high inflation against rivals).</li><li>A <strong>strong exchange rate</strong>.</li><li><strong>High domestic demand</strong> sucking in imports.</li><li><strong>Structural decline</strong> such as a shrinking manufacturing base.</li></ul><p><strong>Persistent deficits</strong> build foreign debt and can trigger currency depreciation and weaker FDI as confidence erodes.</p><p><strong>Persistent surpluses</strong> feed inflation and over-reliance on exports, leaving the economy exposed to global downturns.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html"
     },
@@ -1683,7 +1715,7 @@
         "evaluation"
       ],
       "front": "<p>Evaluate the <strong>three policy routes for correcting a current account deficit</strong>.</p>",
-      "back": "<p><strong>Expenditure-switching</strong> (tariffs, quotas, devaluation) redirects demand towards domestic output — quick, but invites retaliation and raises consumer prices. <strong>Expenditure-reducing</strong> (contractionary fiscal policy, higher interest rates) cuts demand and imports together — at the price of slower growth and higher unemployment.</p><p><strong>Supply-side policies</strong> (education, R&amp;D, infrastructure) rebuild export competitiveness — the durable fix, but slow and costly. Each route trades the current account against other macro objectives.</p>",
+      "back": "<ul><li><strong>Expenditure-switching</strong> (tariffs, quotas, devaluation) redirects demand towards domestic output — quick, but invites retaliation and raises consumer prices.</li><li><strong>Expenditure-reducing</strong> (contractionary fiscal policy, higher interest rates) cuts demand and imports together — at the price of slower growth and higher unemployment.</li><li><strong>Supply-side policies</strong> (education, R&amp;D, infrastructure) rebuild export competitiveness — the durable fix, but slow and costly.</li></ul><p>Each route trades the current account against other macro objectives.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html"
     },
@@ -1714,7 +1746,7 @@
         "diagram"
       ],
       "front": "<p>Show what makes a floating currency <strong>appreciate</strong> — and what moves the demand and supply of it.</p>",
-      "back": "<p>Higher demand for the currency shifts <strong>D1 right to D2</strong> along the supply curve: the exchange rate rises from <strong>P1 to P2</strong>. Demand rises with <strong>higher relative interest rates</strong> (hot money), <strong>lower relative inflation</strong>, a <strong>current account surplus</strong>, <strong>FDI inflows</strong> and bullish <strong>speculation</strong>.</p><p>Supply moves it the other way: <strong>QE</strong> and speculative selling expand the currency's supply and depreciate it.</p>",
+      "back": "<p>Higher demand for the currency shifts <strong>D1 right to D2</strong> along the supply curve: the exchange rate rises from <strong>P1 to P2</strong>.</p><p>Demand rises with:</p><ul><li><strong>Higher relative interest rates</strong> (hot money).</li><li><strong>Lower relative inflation</strong>.</li><li>A <strong>current account surplus</strong>.</li><li><strong>FDI inflows</strong>.</li><li>Bullish <strong>speculation</strong>.</li></ul><p>Supply moves it the other way: <strong>QE</strong> and speculative selling expand the currency's supply and depreciate it.</p>",
       "svgRef": "/images/diagrams/svg/exchange-rate-appreciation.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
       "svgAlt": "Currency market diagram with demand for the currency shifting right from D1 to D2 along a fixed supply curve, raising the exchange rate from P1 to P2"
@@ -1731,7 +1763,7 @@
         "diagram"
       ],
       "front": "<p>Show the <strong>J-curve</strong> — and state the <strong>Marshall-Lerner condition</strong>.</p>",
-      "back": "<p>After a depreciation the current account <strong>worsens first</strong>: contracts fix prices in the short run and consumers are slow to switch, so PEDx and PEDm are inelastic. Only as they adjust does the balance <strong>improve through the long run</strong> — tracing a J.</p><p>The <strong>Marshall-Lerner condition</strong>: a depreciation improves the current account only if <strong>PEDx + PEDm &gt; 1</strong>. If combined demand is inelastic, it worsens instead.</p>",
+      "back": "<p>After a depreciation the current account <strong>worsens first</strong>: contracts fix prices in the short run and consumers are slow to switch, so PEDx and PEDm are inelastic.</p><p>Only as they adjust does the balance <strong>improve through the long run</strong> — tracing a J.</p><p>The <strong>Marshall-Lerner condition</strong>: a depreciation improves the current account only if <strong>PEDx + PEDm &gt; 1</strong>. If combined demand is inelastic, it worsens instead.</p>",
       "svgRef": "/images/diagrams/svg/j-curve.svg",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
       "svgAlt": "J-curve diagram of the net trade balance against time: after a depreciation the deficit deepens in the short run, bottoms out, then improves into surplus in the long run"
@@ -1748,7 +1780,7 @@
         "trading-blocs"
       ],
       "front": "<p>What makes a <strong>currency union</strong> succeed — and what does membership cost?</p>",
-      "back": "<p>A <strong>currency union</strong> (the Eurozone) adds a single currency to a common market. Success needs <strong>synchronised business cycles</strong>, <strong>labour mobility</strong>, <strong>fiscal transfers</strong> to cushion shocked regions, and <strong>mobility of capital</strong>.</p><p>For members: lower transaction costs, price transparency, more trade and investment, no exchange-rate risk. Against: the loss of <strong>independent monetary policy</strong> and exchange-rate flexibility — leaving members exposed when <strong>asymmetric shocks</strong> hit.</p>",
+      "back": "<p>A <strong>currency union</strong> (the Eurozone) adds a single currency to a common market. Success needs:</p><ul><li><strong>Synchronised business cycles</strong>.</li><li><strong>Labour mobility</strong>.</li><li><strong>Fiscal transfers</strong> to cushion shocked regions.</li><li><strong>Mobility of capital</strong>.</li></ul><p>For members:</p><ul><li>Lower transaction costs.</li><li>Price transparency.</li><li>More trade and investment.</li><li>No exchange-rate risk.</li></ul><p>Against: the loss of <strong>independent monetary policy</strong> and exchange-rate flexibility — leaving members exposed when <strong>asymmetric shocks</strong> hit.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html"
     },
@@ -1763,7 +1795,7 @@
         "development"
       ],
       "front": "<p>Distinguish <strong>growth</strong> from <strong>development</strong> — and how is development measured?</p>",
-      "back": "<p><strong>Economic growth</strong>: the narrower concept, measured by rises in real GDP. <strong>Economic development</strong>: a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life.</p><p>Measures: <strong>single indicators</strong> (infant mortality, literacy) give partial pictures; <strong>composite indicators</strong> combine them — the UN's <strong>HDI</strong> weights health (life expectancy), education (schooling years) and income (real GNI per capita at PPP) equally, scoring 0 to 1.</p>",
+      "back": "<p><strong>Economic growth</strong>: the narrower concept, measured by rises in real GDP.</p><p><strong>Economic development</strong>: a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life.</p><p>Measures:</p><ul><li><strong>Single indicators</strong> (infant mortality, literacy) give partial pictures.</li><li><strong>Composite indicators</strong> combine them — the UN's <strong>HDI</strong> weights health (life expectancy), education (schooling years) and income (real GNI per capita at PPP) equally, scoring 0 to 1.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html"
     },
@@ -1794,7 +1826,7 @@
         "development"
       ],
       "front": "<p>What are the main <strong>barriers to growth and development</strong>?</p>",
-      "back": "<p><strong>Economic</strong>: primary product dependency (volatile prices, Dutch disease); the <strong>savings gap</strong> — the Harrod-Domar model ties growth to savings and investment; the <strong>foreign currency gap</strong>; <strong>capital flight</strong>; demographics; debt servicing; poor access to credit; weak infrastructure; inadequate education and skills; and the <strong>absence of property rights</strong>, which kills the incentive to invest.</p><p><strong>Non-economic</strong>: corruption, poor governance and instability, conflict, and geography.</p>",
+      "back": "<p><strong>Economic</strong></p><ul><li>Primary product dependency (volatile prices, Dutch disease).</li><li>The <strong>savings gap</strong> — the Harrod-Domar model ties growth to savings and investment.</li><li>The <strong>foreign currency gap</strong> and <strong>capital flight</strong>.</li><li>Demographics and debt servicing.</li><li>Poor access to credit and weak infrastructure.</li><li>Inadequate education and skills, and the <strong>absence of property rights</strong>, which kills the incentive to invest.</li></ul><p><strong>Non-economic</strong>: corruption, poor governance and instability, conflict, and geography.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html"
     },
@@ -1809,7 +1841,7 @@
         "development"
       ],
       "front": "<p>Compare <strong>market-orientated and interventionist strategies</strong> for development — and the role of <strong>aid</strong>.</p>",
-      "back": "<p><strong>Market-orientated</strong>: trade liberalisation, FDI promotion, subsidy removal, floating exchange rates, microfinance, privatisation — free market forces drive development. <strong>Interventionist</strong>: human capital investment, protectionism, managed exchange rates, infrastructure, joint ventures, buffer stocks — the state corrects market failure.</p><p><strong>Aid</strong> comes as <strong>humanitarian aid</strong> (emergency relief), <strong>debt relief</strong> (freeing resources for investment) and <strong>Official Development Assistance</strong> — soft loans and grants, effective unless dependency or corruption blunts them.</p>",
+      "back": "<p><strong>Market-orientated</strong> — free market forces drive development:</p><ul><li>Trade liberalisation.</li><li>FDI promotion.</li><li>Subsidy removal.</li><li>Floating exchange rates.</li><li>Microfinance.</li><li>Privatisation.</li></ul><p><strong>Interventionist</strong> — the state corrects market failure:</p><ul><li>Human capital investment.</li><li>Protectionism.</li><li>Managed exchange rates.</li><li>Infrastructure.</li><li>Joint ventures.</li><li>Buffer stocks.</li></ul><p><strong>Aid</strong> comes in three forms:</p><ul><li><strong>Humanitarian aid</strong> (emergency relief).</li><li><strong>Debt relief</strong> (freeing resources for investment).</li><li><strong>Official Development Assistance</strong> — soft loans and grants, effective unless dependency or corruption blunts them.</li></ul>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html"
     },

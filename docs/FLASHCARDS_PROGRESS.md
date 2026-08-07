@@ -28,16 +28,18 @@ Status: ✅ = cards authored to plan density, approved by Eliot, built and
 integrated · 🟡 = some approved cards exist but the unit is below density ·
 ❌ = no cards.
 
-Tally (2026-08-06): **166 ✅ · 0 🟡 · 0 ❌ of 166 units — THE
+Tally (2026-08-07): **166 ✅ · 0 🟡 · 0 ❌ of 166 units — THE
 COVERAGE MATRIX IS COMPLETE.** All seven phases of the approved
 Option A build order are authored, reviewed and approved: six
-decks, 665 cards, 83 SVGs. Phase 7 approved 2026-08-06; content
+decks, **671 cards** (665 authored, plus 6 created by the
+2026-08-07 QA pass splitting multi-focus cards — see
+docs/QA_FIXES_PROGRESS.md), 83 SVGs. Phase 7 approved 2026-08-06; content
 issues #34–36 fixed the same day (the #35 chip was a glossary
 source — glossary re-extracted and rebuilt, exits 0). All 36
 logged content issues are resolved (34 fixed, #17 rejected,
 none open). **What remains is NOT authoring — see "Outstanding
 tasks for Eliot" below.**
-**The AQA MICRO DECK IS COMPLETE — all 54 units ✅ (184 cards)**
+**The AQA MICRO DECK IS COMPLETE — all 54 units ✅ (185 cards)**
 (phase 5 batch 4 approved 2026-08-06, Kuznets card ratified in;
 content issues #21–22 fixed the same day, with the glossary
 re-extracted and rebuilt for #21's Relative poverty chip).
@@ -52,7 +54,7 @@ carries superseded numbers; never use it as ground truth, the
 SVG is authoritative**). **#26 (gallery blurb describes the
 absolute-in-both case the figure no longer shows) is OPEN.**
 Remaining after Theme 4: AQA macro 2.4 + 2.6 (9 units, phase 7).
-**Edexcel Themes 1, 2 and 3 are COMPLETE** (95 + 103 + 97 cards),
+**Edexcel Themes 1, 2 and 3 are COMPLETE** (95 + 106 + 97 cards),
 and AQA micro sections 1.1–1.6 plus 1.8 are done — only 1.7
 remains on the micro side. Cards shipped: 529 (295 Edexcel +
 172 AQA micro + 62 AQA macro), **all approved by Eliot** (phase 5
@@ -113,7 +115,7 @@ in phase 7) is underway.
 | 1.4.1 Government intervention in markets | ✅ | 3 definition, 2 diagram, 3 evaluation, 2 application |
 | 1.4.2 Government failure | ✅ | 2 definition, 1 chain |
 
-### Edexcel A (9EC0) — Theme 2 ✅ (deck `edexcel-a-theme-2`, 103 cards; 24 units, all approved)
+### Edexcel A (9EC0) — Theme 2 ✅ (deck `edexcel-a-theme-2`, 106 cards; 24 units, all approved)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
@@ -167,7 +169,7 @@ in phase 7) is underway.
 | 3.6.1 Government intervention | ✅ | 5 definition, 1 diagram, 1 evaluation |
 | 3.6.2 The impact of government intervention | ✅ | 2 definition, 1 evaluation |
 
-### Edexcel A (9EC0) — Theme 4 (deck `edexcel-a-theme-4`, 18 cards so far; 21 units)
+### Edexcel A (9EC0) — Theme 4 ✅ (deck `edexcel-a-theme-4`, 84 cards; 21 units, all approved)
 
 | Unit | Status | Cards by type |
 | --- | --- | --- |
@@ -193,7 +195,7 @@ in phase 7) is underway.
 | 4.5.3 Public sector finances | ✅ | 3 definition, 1 evaluation |
 | 4.5.4 Macroeconomic policies in a global context | ✅ | 2 definition, 1 evaluation |
 
-### AQA (7136) — micro, site codes 1.x.y ≙ spec 4.1.x (deck `aqa-micro`, 89 cards; 54 units)
+### AQA (7136) — micro, site codes 1.x.y ≙ spec 4.1.x (deck `aqa-micro`, 185 cards; 54 units)
 
 Sections 1.1–1.3, 1.5.11 and 1.8 are complete and approved (phase 1,
 2026-08-05); sections 1.4 and 1.5 followed as phase 5 batches 1–2
@@ -257,7 +259,7 @@ awaiting review); 1.7 remains.
 | 1.8.9 Government intervention in markets | ✅ | 2 definition, 4 diagram |
 | 1.8.10 Government failure | ✅ | 1 definition, 1 chain |
 
-### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x (deck `aqa-macro`, 62 cards; 25 units)
+### AQA (7136) — macro, site codes 2.x.y ≙ spec 4.2.x (deck `aqa-macro`, 104 cards; 25 units)
 
 | Unit | Status |
 | --- | --- |
@@ -335,7 +337,9 @@ awaiting review); 1.7 remains.
   docs/DIAGRAM_STYLE.md.
 - **Self-QA renders use headless Google Chrome** (150 installed). No
   rsvg-convert/ImageMagick/Inkscape on this machine.
-- **localStorage follows quiz.js verbatim**: `ea-flashcards:v1:` prefix,
+- **localStorage follows quiz.js verbatim**: `ea-flashcards:v2:` prefix
+  (bumped from `:v1:` by the 2026-08-07 QA pass, which split six cards and so
+  changed the card-id set — see docs/QA_FIXES_PROGRESS.md),
   availability probe, key index for global reset.
 - **GA4 events** (site's first custom events): `deck_start`, `card_flip`,
   `card_rated`, `deck_complete`, `deck_print`, all with `board`/`theme`/
@@ -1233,6 +1237,25 @@ Useful QA techniques:
   its underline shrink-to-fit). CSS-only — the generated hub
   HTML is untouched and the build stays byte-idempotent.
   Verified by headless-Chrome renders at 1280px and 400px.
+
+- 2026-08-07 — **Content-quality QA pass, on branch
+  `flashcards-qa-fixes`** (full record: docs/QA_FIXES_PROGRESS.md).
+  Four issues fixed across all six decks: merged points split onto
+  their own lines, exam board references removed from visible card
+  text, long inline lists bulleted at six, and six multi-focus cards
+  split in two. **265 cards edited, 6 split; the deck total is now
+  671.** No economics wording was changed — every clause is the
+  original text, re-split — with one logged exception (a
+  seven-item list on `edexcel-a-2-5-4-eval-02` trimmed to six) and
+  four small joins rewritten where a split half lost its antecedent.
+  A **pre-existing rendering defect was found and fixed**: card faces
+  were absolutely positioned in a fixed-height box, so 556 of 665
+  answers (84%) were clipped at 390px and 154 at 1280px. The faces now
+  stack in one grid cell; 0 of 671 overflow at either width.
+  localStorage bumped to `ea-flashcards:v2:` because the card-id set
+  changed. Verified by 54/54 end-to-end functional checks, a real print
+  PDF, GA4 event capture and reduced-motion emulation. **No revision
+  notes or glossary data were touched.**
 
 ## Outstanding tasks for Eliot (the authoring is done)
 
