@@ -21,22 +21,39 @@
  *   data-gl-clear         reset button; may appear more than once
  *   data-gl-count         <p role="status" aria-live="polite">
  *   data-gl-empty         shown when nothing matches
+ *   data-gl-results       <section>, empty at rest; ranked matches move into it
+ *   data-gl-echo          <span> inside the empty state, filled with the query
  *
  * Entries carry data-term (the term, lowercased) and data-groups (space
  * separated slugs). The searchable text is read from the DOM, so the page and
  * the index cannot drift.
+ *
+ * Search matches the TERM ONLY - see SEARCH_FIELDS. Two behaviours follow from
+ * that and are deliberate:
+ *
+ *   - Results are ranked by match quality rather than left in A-Z order, so
+ *     "demand" puts Demand first. Ranking needs the order to change, so during
+ *     a search the matches are lifted out of their letter sections into one
+ *     flat list and the A-Z strip is hidden. Clearing the box puts them back.
+ *   - A concept that is not itself a term name returns nothing, so the empty
+ *     state says what is searched rather than just "no results".
  */
 (function () {
   "use strict";
 
   // ---------------------------------------------------------------- text
 
+  /* Accents are stripped as well as case folded, so "laissez-faire" is found by
+   * typing it without the accent it does not have and by typing one it does. */
   function normalise(s) {
-    return String(s)
+    var out = String(s)
       .toLowerCase()
       .replace(/[‘’]/g, "'")
       .replace(/[“”]/g, '"')
       .replace(/[–—−]/g, "-");
+    return out.normalize
+      ? out.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      : out;
   }
 
   /* Tokens are alphanumeric only, so "25-marker" and "25 marker" and "25marker"
@@ -85,45 +102,114 @@
     return 2;
   }
 
+  // ---------------------------------------------------------------- scoring
+
+  /* Which text the query is matched against.
+   *
+   * TERM ONLY, deliberately. Matching definitions too meant that searching
+   * "demand" buried the entry called Demand under every definition that
+   * mentions the word in passing - which is most of them.
+   *
+   * The record still carries definition tokens, and scoring reads its field
+   * list rather than a hard-coded one, so an "also search definitions" toggle
+   * is a change to this constant and nothing else. Not built: nobody has asked
+   * for it, and a term-only glossary search is the behaviour students expect.
+   */
+  var SEARCH_FIELDS = ["term"];
+
+  function fieldTokens(record, fields) {
+    if (fields.length === 1 && fields[0] === "term") return record.termTokens;
+    var out = [];
+    for (var i = 0; i < fields.length; i++) {
+      out = out.concat(record[fields[i] + "Tokens"] || []);
+    }
+    return out;
+  }
+
+  /* Rank tiers, best first. A record's rank is the WEAKEST tier any of its
+   * query tokens managed, so "price elast" cannot rank above an exact hit on
+   * the strength of its first word alone.
+   *
+   *   0  exact       the whole term is the query
+   *   1  prefix      the term starts with the query
+   *   2  word start  some word in the term starts with the query
+   *   3  contains    the query appears somewhere in the term
+   *   4  fuzzy       within the allowed edit distance - "elasitcity"
+   *
+   * -1 means no match at all: every query token must hit something, or the
+   * record is out. Ties are broken alphabetically by the caller, which sorts on
+   * the record's position in a page already ordered A-Z.
+   */
+  var NO_MATCH = -1;
+
+  function score(record, query, queryTokens, fields) {
+    if (!query) return 0;
+    var haystack =
+      fields.length === 1 && fields[0] === "term"
+        ? record.termText
+        : fieldTokens(record, fields).join(" ");
+    if (haystack === query) return 0;
+    if (haystack.indexOf(query) === 0) return 1;
+
+    var tokens = fieldTokens(record, fields);
+    var rank = 2;
+    for (var i = 0; i < queryTokens.length; i++) {
+      var q = queryTokens[i];
+      var tier = NO_MATCH;
+      for (var j = 0; j < tokens.length; j++) {
+        if (tokens[j] === q || tokens[j].indexOf(q) === 0) {
+          tier = 2;
+          break;
+        }
+      }
+      if (tier === NO_MATCH && q.length > 3 && haystack.indexOf(q) !== -1) {
+        tier = 3;
+      }
+      if (tier === NO_MATCH) {
+        var max = allowedEdits(q);
+        for (var k = 0; max > 0 && k < tokens.length; k++) {
+          if (withinDistance(tokens[k], q, max)) {
+            tier = 4;
+            break;
+          }
+        }
+      }
+      if (tier === NO_MATCH) return NO_MATCH;
+      if (tier > rank) rank = tier;
+    }
+    return rank;
+  }
+
   // ---------------------------------------------------------------- index
 
-  /* One record per entry. The term is weighted above the definition: a student
-   * typing "demand" wants the entry called Demand first, not the forty
-   * definitions that mention demand in passing. */
+  /* One record per entry, in document order - which is already A-Z, so a stable
+   * sort by rank leaves alphabetical order inside each tier for free.
+   *
+   * home is the list an entry lives in at rest. A ranked search lifts the
+   * matches out into one flat list; restoring appends them to home in record
+   * order, which is the order the page had them in. */
   function buildIndex(root) {
     var nodes = root.querySelectorAll("[data-term]");
     var records = [];
-    Array.prototype.forEach.call(nodes, function (node) {
+    Array.prototype.forEach.call(nodes, function (node, i) {
       var term = node.getAttribute("data-term") || "";
       var body = node.querySelector(".gl-text, .gl-formula-name");
       var text = body ? body.textContent : "";
       records.push({
         node: node,
+        order: i,
         groups: (node.getAttribute("data-groups") || "").split(/\s+/),
+        termText: normalise(term),
         termTokens: tokenise(term),
-        allTokens: tokenise(term + " " + text),
+        definitionTokens: tokenise(text),
         section: node.closest(".gl-letter, .gl-formulae"),
+        /* Formulae live in a grid of their own and are never reordered; only
+         * the A-Z entries are movable. */
+        movable: node.className.indexOf("gl-entry") !== -1,
+        home: node.parentNode,
       });
     });
     return records;
-  }
-
-  /* AND across the query's tokens: every token must hit something, or the
-   * record is out. Exact and prefix hits on the term score highest. */
-  function matches(record, queryTokens) {
-    for (var i = 0; i < queryTokens.length; i++) {
-      var q = queryTokens[i];
-      var max = allowedEdits(q);
-      var hit = false;
-      for (var j = 0; j < record.allTokens.length && !hit; j++) {
-        var t = record.allTokens[j];
-        if (t === q || t.indexOf(q) === 0) hit = true;
-        else if (q.length > 3 && t.indexOf(q) !== -1) hit = true;
-        else if (max > 0 && withinDistance(t, q, max)) hit = true;
-      }
-      if (!hit) return false;
-    }
-    return true;
   }
 
   // ---------------------------------------------------------------- component
@@ -135,27 +221,65 @@
     var count = root.querySelector("[data-gl-count]");
     var empty = root.querySelector("[data-gl-empty]");
     var clears = root.querySelectorAll("[data-gl-clear]");
+    var results = root.querySelector("[data-gl-results]");
+    var resultsList = results ? results.querySelector(".gl-list") : null;
+    var atoz = root.querySelector(".gl-atoz");
+    var echo = root.querySelector("[data-gl-echo]");
     var records = buildIndex(root);
     var total = records.length;
 
     if (!records.length) return;
 
+    /* Put every movable entry back where the page had it. Records are in
+     * document order, so appending them in turn restores that order exactly. */
+    function restore() {
+      records.forEach(function (r) {
+        if (r.movable && r.node.parentNode !== r.home)
+          r.home.appendChild(r.node);
+      });
+    }
+
     function apply() {
-      var q = input ? input.value.trim() : "";
+      var raw = input ? input.value : "";
+      var q = normalise(raw.trim());
       var group = select ? select.value : "";
       var tokens = q ? tokenise(q) : [];
+      var ranked = [];
       var shown = 0;
 
       records.forEach(function (r) {
-        var ok = true;
-        if (group && r.groups.indexOf(group) === -1) ok = false;
-        if (ok && tokens.length && !matches(r, tokens)) ok = false;
+        var ok = !group || r.groups.indexOf(group) !== -1;
+        var rank = 0;
+        if (ok && q) {
+          rank = score(r, q, tokens, SEARCH_FIELDS);
+          if (rank === NO_MATCH) ok = false;
+        }
         r.node.hidden = !ok;
-        if (ok) shown++;
+        if (ok) {
+          shown++;
+          if (q && r.movable) ranked.push({ r: r, rank: rank });
+        }
       });
 
+      /* With a query the A-Z ordering is what we are trying to get away from,
+       * so the matches move into one flat list, best first. Without one the
+       * page goes back to being an A-Z glossary. */
+      if (q && resultsList) {
+        ranked.sort(function (a, b) {
+          return a.rank - b.rank || a.r.order - b.r.order;
+        });
+        ranked.forEach(function (x) {
+          resultsList.appendChild(x.r.node);
+        });
+      } else {
+        restore();
+      }
+      if (results) results.hidden = !q || ranked.length === 0;
+      if (atoz) atoz.hidden = !!q;
+
       /* A letter heading with nothing under it reads as a bug, so hide any
-       * section whose entries are all filtered out. */
+       * section whose entries are all filtered out. During a ranked search the
+       * letter sections are empty by construction and all go. */
       var sections = root.querySelectorAll(".gl-letter, .gl-formulae");
       Array.prototype.forEach.call(sections, function (sec) {
         var live = sec.querySelectorAll("[data-term]:not([hidden])");
@@ -165,11 +289,13 @@
       if (count) {
         if (!q && !group) {
           count.textContent = total + " entries";
+        } else if (shown === 0) {
+          count.textContent = "No entries match";
         } else {
-          count.textContent =
-            shown + " of " + total + " entries" + (shown === 0 ? "" : " shown");
+          count.textContent = shown + " of " + total + " entries shown";
         }
       }
+      if (echo) echo.textContent = raw.trim();
       if (empty) empty.hidden = shown !== 0;
       updateAtoZ(root);
     }
@@ -215,7 +341,10 @@
     Array.prototype.forEach.call(links, function (a) {
       var id = a.getAttribute("href").slice(1);
       var section = document.getElementById(id);
-      a.setAttribute("aria-disabled", section && section.hidden ? "true" : "false");
+      a.setAttribute(
+        "aria-disabled",
+        section && section.hidden ? "true" : "false",
+      );
     });
   }
 

@@ -615,14 +615,18 @@ def render_board(data, board, groups, rendered_map, inline_map):
           <div class="gl-search" data-glossary-search>
             <form class="gl-controls" data-gl-controls hidden>
               <div class="gl-field">
-                <label for="gl-query">Search this glossary</label>
+                <label for="gl-query">Search key terms</label>
                 <input
                   type="search"
                   id="gl-query"
                   data-gl-query
-                  placeholder="Try elasticity, or PED"
+                  placeholder="Search key terms - try elasticity, or PED"
                   autocomplete="off"
+                  aria-describedby="gl-query-help"
                 />
+                <p class="gl-help" id="gl-query-help">
+                  Searches term names, not definition text.
+                </p>
               </div>
               <div class="gl-field">
                 <label for="gl-group">Filter by topic</label>
@@ -647,11 +651,19 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </nav>
 
             <p class="gl-empty" data-gl-empty hidden>
-              No entries match. Try a shorter search, or
+              No key terms match <strong data-gl-echo></strong>. Search looks at
+              term names only, not definition text - so a topic that is not
+              itself a key term will not be found. Try a shorter term, jump to a
+              letter above, or
               <button type="button" class="gl-clear-inline" data-gl-clear>
-                clear the filters</button
+                clear the search</button
               >.
             </p>
+
+            <section class="gl-results" data-gl-results hidden>
+              <h2 class="gl-letter-head">Best matches</h2>
+              <dl class="gl-list"></dl>
+            </section>
 {formula_block}
 {chr(10).join(sections)}
           </div>"""

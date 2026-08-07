@@ -168,10 +168,27 @@
   border-color: var(--gl-accent);
 }
 
+/* Says what the box searches before a student finds out by getting nothing. */
+.glossary-page .gl-help {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--gl-muted);
+}
+
 .glossary-page .gl-count {
   margin-bottom: 1.5em;
   font-size: 0.9em;
   color: var(--gl-muted);
+}
+
+/*
+ * The ranked results list. Search orders by match quality, which means the
+ * matches cannot stay inside their A-Z sections - they are moved in here and
+ * put back when the box is cleared. Styled to match a letter section so the
+ * page does not appear to change shape.
+ */
+.glossary-page .gl-results {
+  margin-bottom: 2.5em;
 }
 
 .glossary-page .gl-noscript p,
