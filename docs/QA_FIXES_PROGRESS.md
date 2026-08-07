@@ -15,10 +15,10 @@ and merges himself.
 ## STATUS
 
 **IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
-complete. Phase 2 under way: **issues A and D are finished for ALL FOUR
-EDEXCEL DECKS** (134 cards edited across 7 batches, all committed). Nothing is
-blocked. Remaining: A and D on `aqa-micro` and `aqa-macro`, then all of B, then
-all of C, then Phase 3 verification.
+complete. Phase 2 under way: **issues A and D are finished for all four Edexcel
+decks AND `aqa-micro`** (183 cards edited across 9 batches, all committed).
+Nothing is blocked. Remaining: A and D on `aqa-macro` (the last deck), then all
+of B, then all of C, then Phase 3 verification.
 
 ## RENDERING FINDINGS
 
@@ -121,10 +121,10 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
-| A — merged points on one line | in progress | 206 cards | 105 | **All four Edexcel decks done.** Next: `aqa-micro` (43 cards), then `aqa-macro` (48). |
-| B — exam board references | in progress | 47 cards (64 mentions) | 8 | Only those sitting on cards already open for A/D — the Edexcel decks are now clean bar 4 mentions. Next: the remaining 39, nearly all AQA. |
+| A — merged points on one line | in progress | 206 cards | 144 | Five of six decks done. Next: `aqa-macro` (48 cards) — the last. |
+| B — exam board references | in progress | 47 cards (64 mentions) | 11 | Only those sitting on cards already open for A/D. Next: the remaining 36, of which 18 are `aqa-macro` and 14 `aqa-micro`. |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
-| D — long inline lists | in progress | 67 cards | 19 | **All four Edexcel decks done.** Next: `aqa-micro` (15 cards), then `aqa-macro` (16). |
+| D — long inline lists | in progress | 67 cards | 29 | Five of six decks done. Next: `aqa-macro` (16 cards) — the last. |
 
 Per deck, cards **remaining** (re-run `audit.py` to refresh):
 
@@ -134,11 +134,11 @@ Per deck, cards **remaining** (re-run `audit.py` to refresh):
 | `edexcel-a-theme-2` | **1** (false positive, left) | 1 | 28 | 5 (false positives, left) |
 | `edexcel-a-theme-3` | **5** (false positives, left) | **0** | 12 | 3 (false positives, left) |
 | `edexcel-a-theme-4` | **4** (false positives, left) | **0** | 1 | 7 (false positives, left) |
-| `aqa-micro` | 43 | 17 | 37 | 15 |
+| `aqa-micro` | **4** (false positives, left) | 14 | 37 | 5 (false positives, left) |
 | `aqa-macro` | 48 | 18 | 32 | 16 |
 
-A residual count above zero does **not** mean unfinished work — all four Edexcel
-decks are complete for A and D, and what remains in them is the set of detector hits
+A residual count above zero does **not** mean unfinished work — every deck bar
+`aqa-macro` is complete for A and D, and what remains in them is the set of detector hits
 read by hand and judged not to be defects. They are named in the batch log so a
 future session does not re-examine them.
 
@@ -374,14 +374,50 @@ Read and left alone in Theme 4: `edexcel-a-4-1-2-diagram-01`,
 and `edexcel-a-4-3-3-def-04` — bolded terms mid-sentence, examples clauses, and
 figures whose thousands separators the comma-splitter reads as list items.
 
+**Batches 8 and 9 — `aqa-micro`, issues A and D (2026-08-07).** 49 cards
+edited across the two, completing the deck. Batch 8 (20 cards, 1.1–1.5.5):
+economics as a social science, needs vs wants, renewable vs non-renewable, the
+PPD points, total vs marginal utility, demand and supply movement-vs-shift with
+their factor lists, the PED and PES value ranges, the PES determinants, labour
+productivity, marginal/average/total returns, returns to scale, the seven cost
+measures and the cost calculation, diseconomies, TR/AR/MR, normal vs abnormal
+profit, the five roles of profit, and overt vs tacit collusion. Batch 9 (29
+cards, 1.5.5–1.8): the kinked demand curve, monopoly efficiency, natural
+monopoly, the three degrees of price discrimination, contestability, the four
+efficiency types and both efficiency diagrams, consumer and producer surplus,
+MRP, the labour supply set (definition, shift factors, immobility), imperfect
+labour markets and the monopsony diagram, the NMW evaluation, wage
+discrimination's conditions and impacts, the income/wealth distribution set,
+poverty's consequences and the policies against it, public goods, the
+private/external/social identities, factor immobility, public ownership vs
+privatisation, and the intervention toolkit.
+
+**Where a card has an Edexcel twin the two now carry the same structure**, per
+the house rule that twins match: the kinked demand curve, monopoly efficiency,
+natural monopoly, contestability, both efficiency diagrams, MRP, labour supply
+shift factors, immobility, the NMW evaluation, the inequality causes, and the
+seven cost measures with its calculation.
+
+B fixed on three cards already open for A/D: "which is why it recurs across the
+whole specification" → "throughout the course"; "The AQA toolkit" → "The
+toolkit"; and "Explain AQA's other intervention methods" → "Explain the other
+intervention methods".
+
+No list needed trimming. The longest — the PES determinants, the supply shift
+factors, the inequality causes, the anti-poverty policies and the intervention
+toolkit — all sit at exactly six.
+
+Read and left alone in `aqa-micro`: `aqa-1-4-7-def-01`, `aqa-1-5-6-diagram-02`,
+`aqa-1-6-2-def-01`, `aqa-1-6-2-def-03`, `aqa-1-1-1-def-01`, `aqa-1-3-4-calc-01`,
+`aqa-1-4-2-def-01`, `aqa-1-7-1-def-01` and `aqa-1-7-2-def-01`.
+
 ## NEXT STEPS
 
-1. **Issue A + D on `aqa-micro`** — 43 A-cards and 15 D-cards. Dump the cards
-   with the snippet in HOW TO RESUME below (change `DECK` to `aqa-micro`),
-   hand-author the replacements into `_working/flashcards/qa/edits/batch-08.json`,
-   apply, `touch.py`, rebuild, re-audit, screenshot, commit. Expect three
-   batches.
-2. Then `aqa-macro` (48 A, 16 D), same treatment.
+1. **Issue A + D on `aqa-macro`** — 48 A-cards and 16 D-cards, the last deck.
+   Dump the cards with the snippet in HOW TO RESUME below (change `DECK` to
+   `aqa-macro`), hand-author into
+   `_working/flashcards/qa/edits/batch-10.json`, apply, `touch.py`, rebuild,
+   re-audit, screenshot, commit. Expect three batches.
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
@@ -395,7 +431,7 @@ figures whose thousands separators the comma-splitter reads as list items.
 ```bash
 python3 -m http.server 8899 &                        # tools need this
 python3 _working/flashcards/qa/audit.py              # where things stand
-python3 _working/flashcards/qa/audit.py --issue A --show --deck aqa-micro
+python3 _working/flashcards/qa/audit.py --issue A --show --deck aqa-macro
 ```
 
 To dump the full text of a deck's outstanding A/D cards, ready to edit:
@@ -403,7 +439,7 @@ To dump the full text of a deck's outstanding A/D cards, ready to edit:
 ```bash
 python3 - <<'PY'
 import json, subprocess
-DECK = "aqa-micro"
+DECK = "aqa-macro"
 ids = set()
 for issue in ("A", "D"):
     out = subprocess.run(["python3", "_working/flashcards/qa/audit.py",
