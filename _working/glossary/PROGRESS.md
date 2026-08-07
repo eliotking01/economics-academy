@@ -98,6 +98,13 @@ Five fixes, one commit each, on `fix/glossary-polish`.
       untouched. 46 rules in `curation.json` → `rewrite`; new verifier check 7;
       "word for word" claims reworded on all three pages and in the meta
       descriptions, since they had stopped being true.
+- [x] 7.6 **`Maximum Price` and `Minimum Price` given real definitions** (D17).
+      Both notes pages already define them properly under
+      `<strong>Effect:</strong>`, which is not a chip and so was invisible to
+      the extractor. The externalities-page chips are dropped via
+      `excludeSources` and the definitions added to `authored.json`, adapted
+      from those pages' own Purpose/Effect wording. 44 rewrite rules remain; the
+      two `not-a-definition` ones are gone.
 
 ---
 
@@ -120,6 +127,7 @@ Five fixes, one commit each, on `fix/glossary-polish`.
 | D13 | Theme tags take **one accent for all themes**, `#d52349` | A colour per theme would imply a meaning the tag does not carry. Green lost twice: `#4caf50` is 2.78:1 with white text, and already means "correct" as the tick glyph in `main.css` |
 | D14 | Search matches the **term only**, ranked, results flattened while querying | Matching definitions buried the Demand entry under every definition mentioning demand. Ranking requires the order to change, so A-Z gives way during a query and returns on clear |
 | D15 | Glossary **stays at `/revision-notes/glossary/`** | GitHub Pages cannot 301. Meta-refresh or JS redirect would be the only option, both pass authority unreliably, and the stubs would live in the repo forever. URL depth is a weak signal and the pages were 3 days old — the gain did not cover the cost. Confirms D2 |
+| D17 | `Maximum Price` / `Minimum Price` moved to **`authored.json`**, their externalities-page chips excluded | Instructed by Eliot on 2026-08-07: replace the non-definitions with the real thing. Both government-intervention pages already define them, but under `<strong>Effect:</strong>` rather than a `key-definition` chip, so the extractor cannot reach the wording. This is the path `extract_glossary.py` was already built for — exclusions are applied *before* the authored layer precisely so an authored entry can replace an excluded chip. The definitions are adapted from those pages' own Purpose/Effect wording and link to them per board |
 | D16 | **Fragment definitions are rewritten at render time**, notes untouched | Instructed by Eliot on 2026-08-07, explicitly overriding D12 and the CLAUDE.md rule that a badly-reading definition is fixed in the notes. Kept as narrow as possible: a rule replaces a **leading substring only**, 39 of 46 invent no word, and the build fails if `from` stops matching so a reworded notes page cannot silently re-point a rule. This is the **second** declared departure from "the notes' own words", after `authored.json` |
 
 ---
@@ -247,7 +255,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `revision-notes/glossary/{,edexcel-a/,aqa/}index.html` | **Generated** |
 | `sitemap.xml` | Modified — new Glossary block, 3 URLs |
 | `revision-notes/aqa-a2-macro/2-1-{2,3}-*.html` | Modified — G3, three `%`→`\%`, no wording change |
-| `glossary-data/authored.json` | Created — 74 authored definitions, 4 formulae |
+| `glossary-data/authored.json` | Created — 76 authored definitions, 4 formulae (Maximum/Minimum Price added 2026-08-07) |
 | `_working/glossary/authored-review.md` | Generated — the economics to check |
 | `templates/header.html` | Modified — P1, one `<li>` |
 | `revision-notes/index.html` | Modified — P2a, col-4→col-3 ×3 plus a fourth button |
@@ -283,14 +291,10 @@ Not built — no instruction to.
 
 ## Outstanding for Eliot (carried to handover)
 
-- **Two rewrites still need real definitions**, not a lead-in fix. `Maximum
-  price` and `Minimum price` are marked `not-a-definition` in `curation.json`:
-  the notes text states an *effect*, not what the term means — "This decreases
-  the price of the demerit good, causing an expansion in D=MPC." No rewording
-  produces a definition from that. They are capitalised only; **nothing was
-  invented.** Either write the definition into the notes as a chip, or add one
-  to `authored.json`.
-- **Five rewrites add a word**, the only new wording in the glossary outside
+- **`Maximum Price` and `Minimum Price` now carry real definitions** — done
+  2026-08-07, see 7.6. Check the economics: they are **W70/W71** and **W74/W75**
+  in `authored-review.md`.
+- **Three rewrites add a word**, the only new wording in the glossary outside
   `authored.json`. Worth a read: `Composite indicators` and `Single indicators`
   gained "Indicators that", `Non-excludability` (×2) gained "Where", and
   `Information Provision` has "educate" → "Educating". All marked `adds` in
@@ -307,7 +311,7 @@ Not built — no instruction to.
   page and the meta descriptions said each definition was taken word for word
   from the notes, which stopped being true for these 46. Reworded to "comes
   from" / "taken from". The landing page also said "Nothing here is written for
-  the glossary", which was already false — `authored.json` has 74 — and that
+  the glossary", which was already false — `authored.json` has 76 — and that
   sentence is gone.
 
 - **The spec PDFs are live on the public site.** `faccb6a "added specs"`

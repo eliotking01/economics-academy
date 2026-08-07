@@ -351,7 +351,7 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 ## See also
 
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
-- `_working/glossary/authored-review.md` — the 74 authored definitions, the
+- `_working/glossary/authored-review.md` — the 76 authored definitions, the
   only entries on the site that are not the notes' own words.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**

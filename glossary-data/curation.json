@@ -173,6 +173,14 @@
     ],
     "factors of production": [
       "/revision-notes/edexcel-theme-1/1-1-3-the-economic-problem.html"
+    ],
+    "maximum price": [
+      "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "/revision-notes/edexcel-theme-1/1-3-2-externalities.html"
+    ],
+    "minimum price": [
+      "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
+      "/revision-notes/edexcel-theme-1/1-3-2-externalities.html"
     ]
   },
   "preferredSources": {
@@ -646,26 +654,12 @@
         "kind": "lead-in",
         "reads": "When individuals or institutions manipulate financial markets for their own benefit, often"
       },
-      "maximum-price:be382f4f": {
-        "term": "Maximum price",
-        "from": "this",
-        "to": "This",
-        "kind": "not-a-definition",
-        "reads": "This decreases the price of the demerit good, causing an expansion in D=MPC."
-      },
       "minimum-efficient-scale-mes:63f75562": {
         "term": "Minimum Efficient Scale (MES)",
         "from": "is the",
         "to": "The",
         "kind": "lead-in",
         "reads": "The lowest level of output at which a firm can achieve the lowest possible average total c"
-      },
-      "minimum-price:2693c66e": {
-        "term": "Minimum price",
-        "from": "this",
-        "to": "This",
-        "kind": "not-a-definition",
-        "reads": "This increases the price of the demerit good, causing a contraction in D=MPC."
       },
       "monopoly-power:501a9392": {
         "term": "Monopoly power",

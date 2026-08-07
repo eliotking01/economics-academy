@@ -462,6 +462,18 @@
       }
     },
     {
+      "term": "Maximum Price",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A legal maximum price set <strong>below</strong> the equilibrium price, used to make essential goods and services such as food or rent more affordable for consumers. It causes a contraction in supply and an expansion in demand, leading to excess demand in the market.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
+      }
+    },
+    {
       "term": "Median",
       "boards": [
         "aqa",
@@ -471,6 +483,18 @@
       "notes": {
         "edexcel-a": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html",
         "aqa": "/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html"
+      }
+    },
+    {
+      "term": "Minimum Price",
+      "boards": [
+        "aqa",
+        "edexcel-a"
+      ],
+      "definition": "A legal minimum price set <strong>above</strong> the equilibrium price, used to guarantee income for producers such as farmers, or to discourage consumption of demerit goods. It causes an expansion in supply and a contraction in demand, leading to excess supply in the market.",
+      "notes": {
+        "edexcel-a": "/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
+        "aqa": "/revision-notes/aqa-a2-micro/1-8-9-government-intervention-in-markets.html"
       }
     },
     {

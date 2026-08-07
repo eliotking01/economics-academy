@@ -8,7 +8,7 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | Measure | Count |
 | --- | ---: |
 | pages | 166 |
-| authoredTerms | 74 |
+| authoredTerms | 76 |
 | authoredFormulae | 4 |
 | termsExtracted | 600 |
 | uniqueTerms | 325 |
@@ -210,11 +210,11 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **T178** | Market failure | AE | 2 | Microeconomics 1.8.2, Theme 1 1.3.1, Microeconomics 1.8.4, Theme 1 1.3.2 |
 | **T179** | Market rigging | E | 1 | Theme 4 4.4.2 |
 | **T180** | Market-based policies | AE | 1 | Macroeconomics 2.5.2, Theme 2 2.6.3 |
-| **T181** | Maximum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T181** | Maximum Price | AE | 1 | Microeconomics 1.8.9, Theme 1 1.4.1 |
 | **T182** | Median | AE | 1 | Microeconomics 1.7.1, Theme 4 4.3.1 |
 | **T183** | Merit Goods | AE | 2 | Microeconomics 1.8.5, Microeconomics 1.8.4, Theme 1 1.3.2 |
 | **T184** | Minimum Efficient Scale (MES) | AE | 1 | Microeconomics 1.4.5, Theme 3 3.3.3 |
-| **T185** | Minimum price | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2 |
+| **T185** | Minimum Price | AE | 1 | Microeconomics 1.8.9, Theme 1 1.4.1 |
 | **T186** | Mixed Economy | E | 1 | Theme 1 1.1.6 |
 | **T187** | Monetary policy | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
 | **T188** | Monetary union | E | 1 | Theme 4 4.1.5 |
