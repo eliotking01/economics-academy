@@ -99,6 +99,42 @@ func repairURLs(_ s: String) -> String {
 /// Runs of the dotted answer-line leaders, plus any line made only of dots.
 let dotLeader = rx("\\.{6,}[\\s\\.]*")
 
+/// Pearson's provenance note, printed under the stimulus paragraph of a
+/// Section C question: `(Source adapted from: https://...)`, and three other
+/// orderings of the same words. It is where the stimulus came from, not part of
+/// what the candidate is asked to do, so it is lifted out into its own field
+/// rather than left in the middle of the question.
+///
+/// The URL is required, which is what keeps ordinary prose safe - these
+/// questions use the word freely ("a source of market failure"), and none of
+/// those sit in brackets around a link. `[^()]` rather than `.` so a citation
+/// can never swallow a later bracket.
+///
+/// Run after repairURLs, so a citation whose URL wrapped across a line is one
+/// span by the time this sees it. Mirrors `clean()` in extract_aqa_questions.py,
+/// which drops AQA's equivalent `Sources:` line.
+let attribution = rx("\\(\\s*Sources?\\b[^()]*https?://[^()]*\\)")
+
+/// Returns the text without its citation, and the citation itself.
+func stripAttribution(_ s: String) -> (text: String, attribution: String?) {
+    let ns = s as NSString
+    let all = attribution.matches(in: s, range: NSRange(location: 0, length: ns.length))
+    guard !all.isEmpty else { return (s, nil) }
+
+    let found = all.map { ns.substring(with: $0.range) }.joined(separator: " ")
+    var out = attribution.stringByReplacingMatches(
+        in: s, range: NSRange(location: 0, length: ns.length), withTemplate: " ")
+    // The citation sits between the stimulus and the question sentence, so
+    // taking it out leaves two spaces mid-string and one at the end.
+    out = rx("\\s{2,}").stringByReplacingMatches(
+        in: out, range: NSRange(location: 0, length: (out as NSString).length),
+        withTemplate: " ")
+    out = rx("\\s+([.,;:!?])").stringByReplacingMatches(
+        in: out, range: NSRange(location: 0, length: (out as NSString).length),
+        withTemplate: "$1")
+    return (out.trimmingCharacters(in: .whitespacesAndNewlines), found)
+}
+
 func stripFurniture(_ raw: String) -> String {
     var s = raw
     for r in furniture {
@@ -123,6 +159,13 @@ func normalise(_ raw: String) -> String {
     s = rx("\\s{2,}").stringByReplacingMatches(
         in: s, range: NSRange(location: 0, length: (s as NSString).length), withTemplate: " ")
     s = repairURLs(s)
+    // A lone full stop left behind by the answer-line leaders. The leader run is
+    // stripped by dotLeader, but where the PDF spaces the first dot away from
+    // the rest ("workers. . . . . . . . .") that first one survives on its own.
+    // Only ever removed at the very end of the text, so an ellipsis or a
+    // decimal point mid-sentence cannot be touched.
+    s = rx("\\s+\\.\\s*$").stringByReplacingMatches(
+        in: s, range: NSRange(location: 0, length: (s as NSString).length), withTemplate: "")
     return s.trimmingCharacters(in: .whitespacesAndNewlines)
 }
 
@@ -136,6 +179,10 @@ struct QuestionOut {
     var choiceGroup: String?
     var marks: Int
     var questionText: String
+    /// Pearson's citation for the stimulus, lifted out of questionText. Kept so
+    /// the provenance is not destroyed, but never emitted into questions.json,
+    /// so it stays out of the card and out of the search index.
+    var sourceAttribution: String?
     var contextPage: Int?
     var qpPage: Int
     var msPage: Int?
@@ -153,6 +200,12 @@ struct PaperMeta {
     var qpPath: String
     var msPath: String
     var idStem: String
+    var qualification: String
+    /// "a-level" or "as-level". Drives the output directory as well as the
+    /// record, because both qualifications have a Paper 1 in the same series and
+    /// the filenames would otherwise collide.
+    var level: String
+    var isAS: Bool { level == "as-level" }
 }
 
 // The 2024 covers abbreviate two of these ("Market and Business Behaviour",
@@ -163,24 +216,41 @@ let paperNames = [
     3: "Microeconomics and Macroeconomics",
 ]
 
+/// 8EC0 is a different qualification with different papers, not a subset of
+/// 9EC0: two papers, both named differently from their A Level counterparts.
+/// Taken from the covers. The 2016 covers set them in sentence case; the
+/// specification's title case is used, matching how paperNames treats 9EC0.
+let asPaperNames = [
+    1: "Introduction to Markets and Market Failure",
+    2: "The UK Economy – Performance and Policies",
+]
+
 let seriesNames = ["june": "June", "october": "October", "november": "November"]
 
 func parseMeta(_ path: String) -> PaperMeta? {
     let file = (path as NSString).lastPathComponent
+    let isAS = path.contains("/as-level/")
     guard
         let m = rx("paper-(\\d)-([a-z]+)-(\\d{4})-question-paper\\.pdf$").firstMatch(file),
         let paper = Int(m[1]!), let year = Int(m[3]!),
-        let seriesName = seriesNames[m[2]!], let paperName = paperNames[paper]
+        let seriesName = seriesNames[m[2]!],
+        let paperName = (isAS ? asPaperNames : paperNames)[paper]
     else { return nil }
 
     let seriesSlug = "\(m[2]!)-\(year)"
     let msPath = path.replacingOccurrences(
         of: "-question-paper.pdf", with: "-mark-scheme.pdf")
     let short = String(seriesName.lowercased().prefix(3))
+    // "edexcel-as-" rather than "edexcel-a-as-": the ids are the visible anchor
+    // on every card, and the two stems have to be told apart at a glance.
+    let stem = isAS ? "edexcel-as" : "edexcel-a"
     return PaperMeta(
         paper: paper, paperName: paperName, year: year, series: seriesName,
         seriesSlug: seriesSlug, qpPath: path, msPath: msPath,
-        idStem: "edexcel-a-p\(paper)-\(year)-\(short)")
+        idStem: "\(stem)-p\(paper)-\(year)-\(short)",
+        qualification: isAS
+            ? "AS Level Economics A (8EC0)" : "A Level Economics A (9EC0)",
+        level: isAS ? "as-level" : "a-level")
 }
 
 // ------------------------------------------------------------------ mark scheme
@@ -281,6 +351,11 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
         body = rx("^\(n)\\s+").stringByReplacingMatches(
             in: body, range: NSRange(location: 0, length: (body as NSString).length),
             withTemplate: "")
+        // Section C is where Pearson prints the citation, between the stimulus
+        // and the instruction. Lift it out before the length checks below, so
+        // confidence reflects the question rather than the URL padding it.
+        let cited = stripAttribution(body)
+        body = cited.text
 
         var notes: [String] = []
         var confidence = "high"
@@ -304,6 +379,7 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
             QuestionOut(
                 id: "\(meta.idStem)-q\(n)", section: "C", questionNumber: String(n),
                 parentQuestion: nil, choiceGroup: group, marks: 25, questionText: body,
+                sourceAttribution: cited.attribution,
                 contextPage: nil, qpPage: idx + 1, msPage: ms, msVerified: ms != nil,
                 confidence: confidence, notes: notes))
     }
@@ -332,9 +408,15 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
 /// `choiceLetters` names parts that are alternatives to each other. They are all
 /// extracted - a student revising wants both - and share a choiceGroup so the UI
 /// can say only one was sat.
+///
+/// `letters` is the full run of parts the question is expected to have. 9EC0
+/// runs (a) to (e) everywhere; 8EC0 Section B runs (a) to (g), because AS keeps
+/// its 20-mark essay choice inside Section B instead of splitting it out into a
+/// Section C the way the A Level does.
 func extractParts(
     pages: [String], from startIdx: Int, to endIdx: Int, question qnum: String,
-    section: String, choiceLetters: [String], meta: PaperMeta, msPages: [String]
+    section: String, choiceLetters: [String], letters: [String] = ["a", "b", "c", "d", "e"],
+    meta: PaperMeta, msPages: [String]
 ) -> ([QuestionOut], [String]) {
     var problems: [String] = []
 
@@ -349,8 +431,11 @@ func extractParts(
         ?? (startIdx + 1)
 
     // "(a) <text> (5)" — text is non-greedy up to the tariff in its own brackets.
+    // The class is built from `letters` so an AS paper's (f) and (g) are seen
+    // and an A Level paper's are still ignored.
     let partRe = rx(
-        "\\(([a-e])\\)\\s*(.+?)\\s*\\((\\d{1,2})\\)", [.dotMatchesLineSeparators])
+        "\\(([\(letters.first ?? "a")-\(letters.last ?? "e")])\\)\\s*(.+?)\\s*\\((\\d{1,2})\\)",
+        [.dotMatchesLineSeparators])
 
     var seen: [String: QuestionOut] = [:]
 
@@ -361,7 +446,12 @@ func extractParts(
                 let marks = Int(marksStr), seen[letter] == nil
             else { continue }
 
-            let body = normalise(rawBody)
+            // Section B keeps its citations on the extract pages, which are not
+            // extracted, so this finds nothing on 9EC0 today. Applied anyway:
+            // it costs one pass and means a paper that does print one inline
+            // cannot reintroduce the problem.
+            let cited = stripAttribution(normalise(rawBody))
+            let body = cited.text
             // A match spanning a page break can swallow the next part; reject
             // bodies that still contain another part opener or a stray tariff.
             if body.isEmpty || body.count < 15 { continue }
@@ -393,16 +483,15 @@ func extractParts(
             seen[letter] = QuestionOut(
                 id: "\(meta.idStem)-q\(qnum)\(letter)", section: section,
                 questionNumber: label, parentQuestion: qnum, choiceGroup: group,
-                marks: marks, questionText: body, contextPage: extractPage,
+                marks: marks, questionText: body, sourceAttribution: cited.attribution,
+                contextPage: extractPage,
                 qpPage: i + 1, msPage: ms, msVerified: ms != nil,
                 confidence: confidence, notes: notes)
         }
     }
 
-    let letters = ["a", "b", "c", "d", "e"]
     let out = letters.compactMap { seen[$0] }
-    let expected = choiceLetters.isEmpty ? 5 : 5
-    if out.count != expected {
+    if out.count != letters.count {
         let missing = letters.filter { seen[$0] == nil }
         problems.append(
             "Q\(qnum): missing part(s) \(missing.joined(separator: ", "))")
@@ -428,11 +517,20 @@ func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
         return ([], ["Section B question number not found"])
     }
 
-    let endIdx = pages.firstIndex(where: { $0.contains("SECTION C") }) ?? pages.count
+    // 9EC0 Section B ends where Section C begins. 8EC0 has no Section C - the
+    // section runs to the end of the paper - and its last two parts are the
+    // 20-mark either/or, which the A Level prints as Section C instead.
+    let endIdx =
+        meta.isAS
+        ? pages.count
+        : (pages.firstIndex(where: { $0.contains("SECTION C") }) ?? pages.count)
 
     return extractParts(
         pages: pages, from: startIdx, to: endIdx, question: qnum, section: "B",
-        choiceLetters: [], meta: meta, msPages: msPages)
+        choiceLetters: meta.isAS ? ["f", "g"] : [],
+        letters: meta.isAS
+            ? ["a", "b", "c", "d", "e", "f", "g"] : ["a", "b", "c", "d", "e"],
+        meta: meta, msPages: msPages)
 }
 
 // ------------------------------------------------------------------ paper 3
@@ -518,10 +616,10 @@ func emit(meta: PaperMeta, questions: [QuestionOut], problems: [String]) -> Stri
 
     var lines: [String] = []
     lines.append("{")
-    lines.append("  \"qualification\": \"A Level Economics A (9EC0)\",")
+    lines.append("  \"qualification\": \"\(jsonEscape(meta.qualification))\",")
     lines.append("  \"board\": \"edexcel\",")
     lines.append("  \"boardName\": \"Edexcel\",")
-    lines.append("  \"level\": \"a-level\",")
+    lines.append("  \"level\": \"\(meta.level)\",")
     lines.append("  \"paper\": \(meta.paper),")
     lines.append("  \"paperName\": \"\(jsonEscape(meta.paperName))\",")
     lines.append("  \"year\": \(meta.year),")
@@ -544,6 +642,11 @@ func emit(meta: PaperMeta, questions: [QuestionOut], problems: [String]) -> Stri
         f.append("      \"choiceGroup\": " + (q.choiceGroup.map { "\"\($0)\"" } ?? "null"))
         f.append("      \"marks\": \(q.marks)")
         f.append("      \"questionText\": \"\(jsonEscape(q.questionText))\"")
+        // Omitted entirely when there is no citation, so the 420 questions that
+        // never had one keep the shape they already have on disk.
+        if let attr = q.sourceAttribution {
+            f.append("      \"sourceAttribution\": \"\(jsonEscape(attr))\"")
+        }
         if let cp = q.contextPage {
             f.append(
                 "      \"context\": { \"type\": \"extracts\", "
@@ -592,8 +695,15 @@ guard !args.isEmpty else {
     exit(2)
 }
 
-let outDir = URL(fileURLWithPath: "past-paper-questions-data/edexcel-a")
-try? FileManager.default.createDirectory(at: outDir, withIntermediateDirectories: true)
+// Two directories, because both qualifications have a Paper 1 in the same
+// series and "p1-june-2017.json" would otherwise mean two different papers.
+let outDirs = [
+    "a-level": URL(fileURLWithPath: "past-paper-questions-data/edexcel-a"),
+    "as-level": URL(fileURLWithPath: "past-paper-questions-data/edexcel-a-as"),
+]
+for dir in outDirs.values {
+    try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+}
 
 var exitCode: Int32 = 0
 
@@ -624,6 +734,11 @@ for path in args {
         // enum shared with Papers 1 and 2.
         (questions, problems) = extractPaper3(
             pages: qpPages, meta: meta, msPages: msPages)
+    } else if meta.isAS {
+        // 8EC0 has no Section C at all. Its Section B carries the whole of the
+        // paper bar Section A: Q6(a) to (g), 60 of the 80 marks.
+        (questions, problems) = extractSectionB(
+            pages: qpPages, meta: meta, msPages: msPages)
     } else {
         let (b, bProblems) = extractSectionB(pages: qpPages, meta: meta, msPages: msPages)
         let (c, cProblems) = extractSectionC(pages: qpPages, meta: meta, msPages: msPages)
@@ -632,7 +747,7 @@ for path in args {
     }
 
     let name = "p\(meta.paper)-\(meta.seriesSlug).json"
-    let dest = outDir.appendingPathComponent(name)
+    let dest = outDirs[meta.level]!.appendingPathComponent(name)
     try! emit(meta: meta, questions: questions, problems: problems)
         .write(to: dest, atomically: true, encoding: .utf8)
 

@@ -144,9 +144,7 @@
         var g = groups[slug];
         if (g) parts.push(g.label, g.name);
       });
-      if (boards[q.board]) {
-        parts.push(boards[q.board].name, boards[q.board].qualification);
-      }
+      if (boards[q.board]) parts.push(boards[q.board].name);
       parts.push(q.keywords.join(" "));
       parts.push(
         "paper " + paper.paper,
@@ -156,6 +154,12 @@
         paper.series + " " + paper.year,
         "section " + q.section,
         paper.board,
+        // The qualification comes from the PAPER, not the board: Edexcel now
+        // spans 9EC0 and 8EC0, so the board-level string would label every AS
+        // question "A Level". "AS" and "A Level" are both indexed so either
+        // spelling of the query finds the right set.
+        paper.qualification,
+        paper.levelLabel,
       );
       parts.push(markTokens(q.marks).join(" "));
 
@@ -221,9 +225,18 @@
     var paper = record.paper;
     var msUrl = paper.markSchemeUrl + "#page=" + q.msPage;
 
+    // The qualification badge sits second, straight after the board, because an
+    // A Level student who revises from an AS question without noticing gets a
+    // distorted picture of the demand. Must stay identical to render_card() in
+    // scripts/build_past_paper_questions.py.
     var badges = [
       '<span class="ppq-badge ppq-badge-board">' +
         escapeHtml(paper.boardName) +
+        "</span>",
+      '<span class="ppq-badge ppq-badge-level ppq-badge-level-' +
+        escapeHtml(paper.level) +
+        '">' +
+        escapeHtml(paper.levelLabel) +
         "</span>",
       '<span class="ppq-badge ppq-badge-paper">Paper ' +
         paper.paper +
@@ -375,12 +388,14 @@
       var years = [];
       var marks = [];
       var sections = [];
+      var levels = [];
       data.questions.forEach(function (q) {
         var p = data.papers[q.p];
         if (papers.indexOf(p.paper) === -1) papers.push(p.paper);
         if (years.indexOf(p.year) === -1) years.push(p.year);
         if (marks.indexOf(q.marks) === -1) marks.push(q.marks);
         if (sections.indexOf(q.section) === -1) sections.push(q.section);
+        if (levels.indexOf(p.level) === -1) levels.push(p.level);
       });
       papers.sort();
       years.sort().reverse();
@@ -388,6 +403,10 @@
         return a - b;
       });
       sections.sort();
+      // "a-level" before "as-level" happens to be alphabetical, and is also the
+      // order a student expects: the qualification most of them are sitting
+      // comes first.
+      levels.sort();
 
       if (filters.paper)
         optionList(filters.paper, papers, function (v) {
@@ -404,6 +423,10 @@
       if (filters.section)
         optionList(filters.section, sections, function (v) {
           return "Section " + v;
+        });
+      if (filters.level)
+        optionList(filters.level, levels, function (v) {
+          return v === "as-level" ? "AS Level only" : "A Level only";
         });
       if (filters.board)
         optionList(
@@ -491,6 +514,13 @@
         filters.board &&
         filters.board.value &&
         q.board !== filters.board.value
+      )
+        return false;
+      // Empty value means both qualifications, which is the default.
+      if (
+        filters.level &&
+        filters.level.value &&
+        p.level !== filters.level.value
       )
         return false;
       if (

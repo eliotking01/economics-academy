@@ -189,14 +189,56 @@ House rules:
 
 In progress on `feature/question-bank`. **Read `PAST-PAPERS-PROGRESS.md` first.**
 
-A searchable bank of real Edexcel A (9EC0) exam questions, at
-`/past-paper-questions/`. Distinct from `/practice-questions/` in one decisive
-way: **it reproduces real exam question text verbatim**, where the practice
-bank's hard rule is that every question is 100% original. The two never share a
-data path.
+A searchable bank of real exam questions, at `/past-paper-questions/`. Distinct
+from `/practice-questions/` in one decisive way: **it reproduces real exam
+question text verbatim**, where the practice bank's hard rule is that every
+question is 100% original. The two never share a data path.
 
-- `past-paper-questions-data/edexcel-a/*.json` — one file per paper, machine
-  written by `scripts/extract_past_paper_questions.swift`. Never hand-edit.
+### Scope
+
+| In scope | Out of scope, permanently |
+| --- | --- |
+| Edexcel A **A Level** (9EC0), Papers 1–3 | **Section A, every board and qualification.** Do not extract it |
+| Edexcel A **AS Level** (8EC0), Papers 1–2 | **AQA AS papers.** When AQA extends, A Level only |
+| AQA A Level (7136) | Edexcel B, OCR, AQA specimen papers |
+
+**8EC0 has no Section C** — verified from all 16 papers, not from the
+specification. It is Section A (Q1–5, 20 marks) and Section B (Q6, 60 marks).
+Section B is `Q6(a)–(g)`: (a)–(e) compulsory then **(f) OR (g)**, with (e)
+always 15 and (f)/(g) always 20. So AS **merges what the A Level splits** —
+(a)–(e) is 9EC0's Section B, (f)/(g) is 9EC0's Section C, but AS keeps both
+inside Section B against the same extract block. Stored as `section: "B"`, as
+printed. Do not invent a Section C for it.
+
+Unlike 9EC0 Section C, **every AS part carries a `ctxPage`**, because the
+essay choice sits under the Q6 extracts rather than having its own stimulus.
+
+**Duplicates across qualifications: keep both, never collapse.** Checked at the
+outset — 0 exact and 0 near-duplicates across 112 AS × 192 A Level, the maximum
+being 0.754 on shared formulaic stems. If one ever appears, both entries stay
+and both are labelled; a collapsed entry would hide that a question was set at
+two different demands.
+
+**Every card carries a qualification badge** (`AS Level` / `A Level`) in the
+static HTML, not applied by script. AS and A Level are **mixed in one list** on
+topic pages and both show by default on the master page; a `Qualification`
+filter narrows. The badge is doing all the disambiguation, so it is never
+optional.
+
+- `past-paper-questions-data/edexcel-a/*.json` and `edexcel-a-as/*.json` — one
+  file per paper, machine written by `scripts/extract_past_paper_questions.swift`.
+  Never hand-edit. **Two directories because both qualifications have a Paper 1
+  in the same series**, so `p1-june-2017.json` would otherwise name two
+  different papers. They share a board and mix freely from the build onwards.
+- **Source attributions are stripped at extraction**, not afterwards. Pearson
+  prints `(Source adapted from: https://…)` under the Section C stimulus;
+  `stripAttribution()` lifts it into a `sourceAttribution` field, which the
+  build's field whitelist deliberately never emits into `questions.json`, so it
+  stays out of the card and the search index. `scripts/strip_source_attributions.py`
+  is the re-runnable safety net over data already on disk and should report
+  **0 changes** — that agreement is the test. It edits the JSON as text, because
+  both extractors hand-write theirs and a `json.dumps` round-trip would reformat
+  all 64 files and break build idempotence.
 - `past-paper-questions-data/tags.json` — topics and keywords, hand-written.
   Kept separate so re-extraction cannot destroy it.
 - `past-paper-questions-data/taxonomy.json` — generated from the existing 87
@@ -367,6 +409,8 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 - `docs/CONTENT_ISSUES.md` — suspected notes errors found while writing cards;
   logged for approval, never fixed unilaterally.
 - `extraction-qa-report.md` — Phase 1 extraction QA for that bank.
+- `_working/question-bank/as-extraction-qa.md` — QA for the Edexcel AS (8EC0)
+  extraction, including the duplicate analysis that found none.
 - `ROADMAP.md` — planned work.
 - `QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
 - `REVIEW-NOTES.md` — problems found but not fixed, including open economics

@@ -224,6 +224,25 @@
   color: #fff;
 }
 
+/* AS and A Level questions sit in the same list, so the badge is the only thing
+   telling them apart. AS gets the warm colour because it is the one a reader
+   must not mistake: an A Level student revising from a 20-mark AS essay without
+   noticing gets a distorted sense of the demand.
+
+   The badge row is bold uppercase at 0.68em, which is small text, so both need
+   4.5:1 against their own background. White on #37474f is 9.65:1 and white on
+   #875300 is 6.43:1. A lighter goldenrod was tried first and reached only
+   3.25:1 - it looked fine and would have failed a contrast audit. */
+.past-paper-questions-page .ppq-badge-level-a-level {
+  background: #37474f;
+  color: #fff;
+}
+
+.past-paper-questions-page .ppq-badge-level-as-level {
+  background: #875300;
+  color: #fff;
+}
+
 .past-paper-questions-page .ppq-question {
   font-size: 1.02em;
   line-height: 1.6;

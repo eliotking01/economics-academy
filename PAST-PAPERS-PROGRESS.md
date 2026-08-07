@@ -3,8 +3,198 @@
 Live state file. A new session with no conversation history should be able to
 resume from this file, `CLAUDE.md` and `git log` alone.
 
-**Branch:** `feature/question-bank`, based on `main` at `6bdc559`.
-**Last updated:** 2 August 2026.
+**Branch:** `feature/question-bank-as-level`, based on `main` at `523888d`.
+**Last updated:** 7 August 2026.
+
+> `feature/question-bank` was merged to `main` in PR #7 and is fully contained
+> in it — `git log main..feature/question-bank` is empty. Everything described
+> below as "Phase 1–4" is live on the site.
+
+---
+
+## Session of 7 August 2026 — audit, cleanup, AS Level
+
+Three tasks, in order: (1) audit the PDF page-link code, (2) strip source
+attributions from question text, (3) add Edexcel AS (8EC0) Sections B and C.
+
+### Task 1 — PDF page-link audit: PASS, no defect found
+
+Inspection only, no code changed. Every check below was run against the shipped
+files and the 281 hosted PDFs.
+
+| Check | Result |
+| --- | --- |
+| `#page=N` present on all three link types | Pass — question paper, extract and mark scheme all carry it |
+| Fragment not URL-encoded | Pass — 0 occurrences of `%23page` anywhere in the generated output |
+| `download` attribute | Pass — none in the repo |
+| Same-origin | Pass — every href is root-relative `/past-papers/…` |
+| JS intercepting the click | Pass — nothing binds a handler to card links |
+| Stored numbers are physical 1-based indices | Pass — verified by content on all 440 questions |
+| Any page number out of range | Pass — 0 of 1,229 references exceed their PDF's page count |
+| Fragment syntax consistent across link types | Pass — one shared expression per renderer |
+| Question paper / mark scheme / extract share a code path | Pass — one function each side, no drift |
+| Python and JS renderers agree | Pass — enforced by `test_question_search.js` |
+| PDFs force page 1 via `/OpenAction` | Pass — 0 of 281 PDFs carry one |
+
+Also established, because it bears on the symptom: printed folio numbers and
+physical indices coincide in these papers (the cover is physical 1 and prints no
+number), so a printed-vs-physical mix-up could not produce the symptom even in
+principle. 151 of the 281 PDFs are not linearised, which delays first paint but
+does not drop the fragment.
+
+Conclusion reported to the owner: the code is correct, and the Chrome-on-macOS
+behaviour is environmental. The most likely cause is Chrome's
+**"Download PDFs instead of automatically opening them in Chrome"** setting,
+which bypasses the built-in viewer entirely and so ignores `#page=`.
+
+### Task 2 — source attributions moved out of question text: DONE
+
+Approved by the owner on the dry run, then applied. **20 questions, 11 files,
+all Edexcel A Section C.** AQA had none: its extractor already dropped them.
+
+Four variants existed, all bracketed and all carrying a URL — `(Source adapted
+from: <URL>)` ×12, `(Source: adapted from <URL>)` ×5, `(Source: <URL>)` ×2,
+`(Sources: adapted from <URL> and <URL>)` ×1. There is **no** bare `Source: X`
+and no unbracketed `Adapted from X`. 19 sat mid-text between the stimulus and
+the instruction; 1 was trailing. All 20 removals are pure deletions — verified
+mechanically, not by eye — so no orphaned bracket, dangling punctuation or
+doubled space arose to clean up.
+
+The text is preserved in a new `sourceAttribution` field on the question.
+`build_past_paper_questions.py` builds its payload from an explicit whitelist,
+so the field never reaches `questions.json`, the card or the search index; a
+comment there records that as a decision rather than an accident.
+
+**The extractors are the fix, not the script.** `stripAttribution()` in
+`extract_past_paper_questions.swift` does it at source and emits the field, so
+re-extraction cannot reintroduce a citation and the AS papers never carry one.
+`scripts/strip_source_attributions.py` remains as a re-runnable safety net over
+data already on disk; with the extractor fixed it reports **0 changes**, and
+that agreement is the test.
+
+The script is **format-preserving on purpose**. A first version round-tripped
+through `json.dumps` and would have reformatted all 48 files — both extractors
+hand-write their JSON as raw UTF-8 with `context`/`questionPaper`/`markScheme`
+on one line each, so the next extractor run would have reverted it and
+`git diff` after regeneration would never have been empty again. Caught by a
+round-trip test before anything was written.
+
+Also fixed, at the owner's request: `aqa-p2-2018-jun-q3` read `self- correcting`
+where the PDF broke the word across a line. `rejoin_hyphenation()` in the AQA
+extractor repairs it, guarded against the suspended hyphen — `short- and
+long-run`, `pre- or post-tax` — where the space is correct. One character
+changed across 248 AQA questions.
+
+Other artefacts, **reported and deliberately not touched**: none found. No
+`(Total for Question N = X marks)`, no `TOTAL FOR SECTION`, no `Turn over`, no
+copyright lines, no dot leaders, no page-footer codes, no doubled spaces, no
+stray newlines, no unbalanced brackets. The extraction was cleaner than
+expected; the hyphenation break was the only other defect in 440 questions.
+
+Verified after re-extraction: `verify_past_paper_extraction.swift` 192 checked,
+all passed; `verify_past_paper_tags.py` all tag checks passed. Page
+regeneration is deliberately deferred to the end of Task 3 so the site rebuilds
+once.
+
+### Task 3b — AS extraction and integration: DONE
+
+**112 questions from 16 papers, all high confidence, all page mappings
+verified.** Full QA in `_working/question-bank/as-extraction-qa.md`.
+
+The bank is now **552 questions from 64 papers**: Edexcel A Level 192, Edexcel
+AS 112, AQA 248. 90 generated pages, up from 75. **15 topics reach the volume
+gate only because AS is included** and get a page for the first time — the
+Theme 1–2 foundation topics the original phase noted as empty because Edexcel
+tests them in Section A at A Level. Topics with no question fall 27 → 15.
+
+What changed, and why:
+
+- `extract_past_paper_questions.swift` handles both qualifications. `parseMeta`
+  reads the level off the path; `extractParts` takes the run of part letters so
+  AS can be (a)–(g) while the A Level stays (a)–(e); Section B ends at the end
+  of the paper for AS, since there is no Section C to stop at.
+- **Two data directories**, `edexcel-a` and `edexcel-a-as`. Both qualifications
+  have a Paper 1 in the same series, so one directory would mean colliding
+  filenames. `paper_index` in the build is now keyed on level too, for the same
+  reason.
+- A **qualification badge on every card**, second in the row, in the static HTML
+  and not applied by script. Both renderers changed together and
+  `test_question_search.js` confirms they still agree across all 552.
+- A **`Qualification` filter**, defaulting to both, per the owner's decision.
+- The **board record's `qualification` was silently wrong** once Edexcel spanned
+  two qualifications. The badge and the search haystack now read the per-paper
+  value.
+- **A contrast failure was caught before it shipped.** The first AS badge colour
+  reached only 3.25:1 against white at 0.68em bold — it looked fine. Replaced
+  with `#875300` at 6.43:1.
+- Two questions carried a **stray trailing full stop** left by the answer-line
+  leaders; fixed in `normalise()`, end-of-string only.
+
+Verified: 304 Edexcel questions re-checked by the independent verifier, all
+passed; all tag checks passed; 552 records indexed with every search check
+passing; 90 files well-formed; 11,678 internal refs and 0 broken; two build runs
+byte-identical; Prettier clean; sitemap 461 URLs with no duplicates.
+
+`tags.json` grew 440 → 552 entries, **793 insertions and 0 deletions**. No
+existing page prose was altered anywhere: the only edit to a hand-written page
+is the question count between the markers in `past-papers/index.html`, which the
+build owns.
+
+### Task 3a — Edexcel AS (8EC0) inventory and structure: signed off 7 August 2026
+
+**Inventory.** 16 sittings, Papers 1 and 2, **every one a complete QP + MS pair**,
+32 files. June 2016, 2017, 2018, 2019, October 2020, June 2022, 2023, 2024. No
+June 2020 or June 2021 (COVID), and **no November 2021** — the A Level has that
+sitting, AS does not. Nothing is missing its pair.
+
+**8EC0 has no Section C.** Verified from all 16 PDFs, not from memory. The paper
+is Section A (Questions 1–5, 20 marks) and Section B (Question 6, 60 marks),
+total 80. So the instruction "Sections B and C" has no referent on this
+qualification, and the concrete meaning proposed is **all of Section B**.
+
+Section B is identical in shape across all 16 papers: **Q6(a)–(g)**, (a)–(e)
+compulsory then **(f) OR (g)**. Tariffs: (e) is always 15, (f) and (g) always
+20; (a)–(d) permute 4/5/6/10 (Paper 1 opens on 5, Paper 2 on 4) and always sum
+to 25. **112 questions**, 16 papers × 7 parts.
+
+AS Section B therefore **merges what the A Level splits**: (a)–(e) is the
+data-response that 9EC0 calls Section B, and (f)/(g) is the extended essay that
+9EC0 calls Section C — except that AS keeps it inside Section B, attached to the
+same extract block.
+
+**No Paper 3.** AS is two papers. Paper names differ from the A Level and are
+taken from the covers: Paper 1 *Introduction to Markets and Market Failure*,
+Paper 2 *The UK Economy – Performance and Policies*.
+
+**Duplicates: none.** The premise that Edexcel reuses questions between 8EC0 and
+9EC0 is **not supported by the data**. Across 112 AS × 192 A Level comparisons:
+0 exact, 0 near (≥0.90), 0 strong (≥0.80). The maximum was 0.754, and every
+match at that level is a shared formulaic stem — *"With reference to Extract A,
+assess the likely…"* — over different economics. Confirmed a second way, by rare
+content-word overlap: the highest Jaccard was 0.556 and the shared words were
+all generic (*aggregate, demand, supply*). Six AS-internal pairs scored above
+0.85; all are the stem *"With reference to Figure 1, explain the term ‘X’"* with
+a different X each year. **Nothing to collapse.** A policy is still recorded so
+the question does not have to be reopened.
+
+**Extracts.** AS follows the existing policy unchanged: the extract block is not
+reproduced, and each question links to its page in the hosted question paper.
+One AS-specific difference, and it is the opposite of what the A Level does:
+9EC0 Section C carries its own short stimulus and no extract link (`ctxPage`
+null), whereas **AS (f)/(g) sit under the Q6 extract block like every other
+part**, so all seven AS parts get a `ctxPage`.
+
+**Taxonomy: no additions needed.** AS covers Themes 1 and 2 only, and both are
+already in the 87-topic taxonomy. No new slugs, so no permanent-URL risk. This
+should also lift a number of the 31 currently-empty Theme 1–2 topics over the
+volume gate of 4, giving them topic pages for the first time.
+
+**Filters and payload.** The marks filter is derived from the data rather than
+hard-coded, so the new 4, 6 and 20 tariffs appear by themselves. `questions.json`
+goes from 353 KB / 51 KB gzipped to roughly 443 KB / 64 KB. One thing that does
+need changing: `qualification` currently sits on the **board** record as a single
+string, and Edexcel would now span two qualifications — the badge must read the
+per-paper `qualification`, which is already there and already correct.
 
 ---
 

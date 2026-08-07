@@ -41,7 +41,7 @@ def main():
     }
 
     questions = {}
-    for board_dir in ("edexcel-a", "aqa"):
+    for board_dir in ("edexcel-a", "edexcel-a-as", "aqa"):
         for path in sorted((DATA / board_dir).glob("*.json")):
             for q in json.loads(path.read_text(encoding="utf-8"))["questions"]:
                 questions[q["id"]] = q
