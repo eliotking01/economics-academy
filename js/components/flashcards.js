@@ -8,7 +8,7 @@
  * hand over.
  *
  * Spaced repetition is a three-box Leitner system per deck, persisted in
- * localStorage under "ea-flashcards:v1:" with the same guarded-storage
+ * localStorage under "ea-flashcards:v2:" with the same guarded-storage
  * helpers as quiz.js. Box 1 is due every session, box 2 every second, box 3
  * every third. "Again" sends a card back to box 1 and requeues it later in
  * the same session; "Got it" promotes it.
@@ -23,7 +23,11 @@
 (function () {
   "use strict";
 
-  var STORE_PREFIX = "ea-flashcards:v1:";
+  /* v2: the 2026-08-07 QA pass split six cards in two, so the card-id set a
+   * saved deck record refers to has changed. Bumping the prefix orphans the
+   * v1 records rather than half-matching them; the feature has no users yet,
+   * so there is nothing to migrate. INDEX_KEY follows automatically. */
+  var STORE_PREFIX = "ea-flashcards:v2:";
   var INDEX_KEY = STORE_PREFIX + "index";
   var BOX_INTERVALS = { 1: 1, 2: 2, 3: 3 };
   var REQUEUE_GAP = 5;

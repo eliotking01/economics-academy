@@ -15,11 +15,11 @@ and merges himself.
 ## STATUS
 
 **IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
-complete. Phase 2 under way: **issues A, B and D are COMPLETE across all six
-decks** (265 cards edited across 13 batches, all committed). Nothing is
-blocked. Remaining: **issue C** (hand-filter the 123 candidates, split the
-confirmed ones, bump the localStorage key, update card counts), then Phase 3
-verification.
+complete. **Phase 2 is COMPLETE — all four issues (A, B, C, D) are done
+across all six decks**: 265 cards edited across 13 batches, plus 6 cards split
+in two. The deck total is now **671 cards** (was 665). Nothing is blocked.
+Remaining: **Phase 3 verification** — end-to-end player testing, print
+stylesheet, GA4, reduced motion, and the screenshot review.
 
 ## RENDERING FINDINGS
 
@@ -124,7 +124,7 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 | --- | --- | --- | --- | --- |
 | A — merged points on one line | **DONE** | 206 cards | 189 | All six decks. The 17 residual hits are hand-reviewed false positives, named per deck in the batch log. |
 | B — exam board references | **DONE** | 47 cards (64 mentions) | 47 | All six decks audit **0**. An independent regex sweep over card text in both the sources and the built payloads returns 0 hits for `edexcel\|aqa\|ocr\|specification\|spec\|exam board`. |
-| C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
+| C — multiple revision points | **DONE** | 123 candidates → **6 confirmed** | 6 split | All 123 read by hand. The 117 not split are single-focus questions with a natural two-clause phrasing; splitting them would have wrecked good cards. |
 | D — long inline lists | **DONE** | 67 cards | 51 | All six decks. The 29 residual hits are hand-reviewed false positives. |
 
 Per deck, cards **remaining** (re-run `audit.py` to refresh):
@@ -472,18 +472,66 @@ independent sweep of card text in both the sources and the built payloads finds
 `board` values, `deckTitle`s, page headings, nav and SEO text are untouched —
 confirmed by printing them after the pass.
 
+**Batch 14 — issue C, the splits (2026-08-07).** All 123 candidates read by
+hand; **6 confirmed** and split, 117 left alone. The 117 are single-focus
+questions whose phrasing happens to contain "and" — "Define national income,
+and state the national income identity", "Draw and explain the Keynesian AS
+curve", "Define SRAS, and name the cost changes that shift it". Splitting those
+would have produced half-cards on one revision point each.
+
+The six that genuinely tested two areas:
+
+| Original (narrowed) | New card | Why it was two areas |
+| --- | --- | --- |
+| `edexcel-a-2-1-3-eval-01` — effects of unemployment | `edexcel-a-2-1-3-eval-02` — migration and skills | Eliot's named example. Unemployment's effects and the significance of migration are separate spec bullets. |
+| `edexcel-a-2-1-1-eval-01` — limitations of GDP | `edexcel-a-2-1-1-eval-02` — the national happiness evidence | National wellbeing is its own spec bullet, and the card for it was spec-sourced in the first place. |
+| `edexcel-a-2-1-4-chain-01` — causes of a deficit | `edexcel-a-2-1-4-eval-01` — how correcting one conflicts with other objectives | Causes sit in 2.1.4; the policy trade-off is 2.6.4 material. The new card changes type to `evaluation`, so it takes `eval-01` — the first free number in its **new** type group. |
+| `aqa-2-1-2-def-03` — the current account | `aqa-2-1-2-def-04` — productivity as an indicator | Two unrelated indicators bolted together; the front literally said "and name the remaining indicator". |
+| `aqa-2-5-1-def-02` — types of public expenditure | `aqa-2-5-1-def-05` — why governments levy taxes | Spending and taxation are distinct revision areas. |
+| `aqa-1-8-5-def-03` — why the classification is a value judgement | `aqa-1-8-5-def-04` — how imperfect information causes mis-provision | Two distinct mechanisms, two distinct exam questions. |
+
+**`aqa-2-1-2-def-03` was `notes-verbatim`.** Its verbatim sentence is the
+current-account definition, which stayed on the original card, so the builder's
+verbatim check still passes. The new productivity card is `card-authored`.
+
+Wording: each half keeps its original text. Four small joins were rewritten
+because the sentence lost its antecedent — "Hence the interest in national
+wellbeing" → "National wellbeing is measured alongside GDP"; "Taxes exist to
+fund **this** spending" → "**public** spending"; "The final indicator is
+productivity — output per worker — which drives…" → "Productivity is output per
+worker. It drives…"; and "Imperfect information **compounds the problem**:" →
+"Imperfect information:". No economics changed.
+
+Every new card carries the correct board (deck), theme (deck), topic, subtopic,
+cardType, tags and difficulty — the builder validates all of these and passed.
+
+**localStorage bumped** `ea-flashcards:v1:` → `ea-flashcards:v2:` in
+`js/components/flashcards.js`, with the reason in a comment. `INDEX_KEY` derives
+from the prefix so it follows automatically. No migration, no user-facing
+notice — the feature has no users.
+
+**Card counts updated everywhere and verified consistent**: deck landing pages
+and the hub are regenerated by the builder (checked: source, built payload and
+hub all agree, 671 total); `metaDescription` fields never quoted counts so
+needed no change; and the FLASHCARDS_PROGRESS coverage matrix headers were
+corrected — several were stale from earlier phases (Theme 4 still said "18
+cards so far", `aqa-micro` 89, `aqa-macro` 62), so they now read 95 / 106 / 97 /
+84 / 185 / 104 with a 671 tally. Dated log entries in that file were left as the
+historical record they are.
+
 ## NEXT STEPS
 
-1. **Issue C — the last content issue.** Hand-filter the 123 candidates from
-   `audit.py --issue C --show`: most are single-focus questions with a natural
-   two-clause phrasing ("Define national income, and state the identity") that
-   must NOT be split. Split only cards testing genuinely distinct revision
-   areas — the named example is `edexcel-a-2-1-3-eval-01` ("Evaluate the
-   effects of unemployment, and the significance of migration and skills").
-   Follow the ID SCHEME above, bump the localStorage prefix
-   `ea-flashcards:v1:` → `:v2:` in `js/components/flashcards.js`, and update
-   card counts on deck landing pages, the hub, meta descriptions and the
-   FLASHCARDS_PROGRESS coverage matrix.
+**Phase 3 verification** — nothing else outstanding in Phase 2.
+
+1. Re-run `audit.py` (A/B/D/C all at their reviewed floors) and validate JSON.
+2. Screenshot a substantial sample: every card type, both boards, several
+   themes, longest and most-bulleted backs, at 390px and 1280px. Inspect for
+   overflow, clipping, cramped bullets and broken breaks.
+3. Test end-to-end in a browser: flip, shuffle, again/got-it and the re-queue,
+   session summary, localStorage reset, keyboard shortcuts, swipe,
+   `prefers-reduced-motion`, and SVG diagram cards.
+4. Check the print stylesheet now that bullets and multi-line backs exist.
+5. Confirm GA4 events still fire.
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump

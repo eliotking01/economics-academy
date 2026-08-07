@@ -6,7 +6,7 @@
   "themeName": "Macroeconomics",
   "deckId": "aqa-macro",
   "deckTitle": "AQA A-Level Economics Macroeconomics Flashcards",
-  "count": 102,
+  "count": 104,
   "topics": [
     {
       "subtopic": "2-1-1-the-objectives-of-government-economic-policy",
@@ -20,7 +20,7 @@
       "specCode": "2.1.2",
       "title": "2.1.2 Macroeconomic Indicators",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html",
-      "count": 4
+      "count": 5
     },
     {
       "subtopic": "2-1-3-uses-of-index-numbers",
@@ -139,7 +139,7 @@
       "specCode": "2.5.1",
       "title": "2.5.1 Fiscal Policy",
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html",
-      "count": 5
+      "count": 6
     },
     {
       "subtopic": "2-5-2-supply-side-policies",
@@ -292,8 +292,24 @@
         "indicators",
         "balance-of-payments"
       ],
-      "front": "<p>Define the <strong>current account</strong> of the balance of payments, and name the remaining indicator.</p>",
-      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p><p>The final indicator is <strong>productivity</strong> — output per worker (or per hour worked) — which drives long-run growth and competitiveness.</p>",
+      "front": "<p>Define the <strong>current account</strong> of the balance of payments.</p>",
+      "back": "<p>The <strong>balance of payments</strong> records all transactions between a country and the rest of the world; the <strong>current account</strong> is the part that records trade in goods and services, income flows, and current transfers.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+    },
+    {
+      "id": "aqa-2-1-2-def-04",
+      "specCode": "2.1.2",
+      "topic": "2.1 The measurement of macroeconomic performance",
+      "subtopic": "2-1-2-macroeconomic-indicators",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "indicators",
+        "productivity"
+      ],
+      "front": "<p>Define <strong>productivity</strong> as a macroeconomic indicator.</p>",
+      "back": "<p><strong>Productivity</strong> is output per worker (or per hour worked). It drives long-run growth and competitiveness.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
     },
@@ -1377,8 +1393,24 @@
         "policy",
         "fiscal-policy"
       ],
-      "front": "<p>Distinguish the <strong>types of public expenditure</strong>, and why governments levy taxes.</p>",
-      "back": "<ul><li><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines).</li><li><strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure.</li><li><strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</li></ul><p>Taxes exist to fund this spending, manage AD, correct market failures and redistribute income.</p>",
+      "front": "<p>Distinguish the <strong>types of public expenditure</strong>.</p>",
+      "back": "<ul><li><strong>Current expenditure</strong> — day-to-day spending on public-sector wages and consumables (teachers' pay, medicines).</li><li><strong>Capital expenditure</strong> — long-term investment in assets such as infrastructure.</li><li><strong>Transfer payments</strong> — payments with no output in return, such as benefits and pensions (excluded from G in AD).</li></ul>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
+    },
+    {
+      "id": "aqa-2-5-1-def-05",
+      "specCode": "2.5.1",
+      "topic": "2.5 Fiscal policy and supply-side policies",
+      "subtopic": "2-5-1-fiscal-policy",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "policy",
+        "taxation"
+      ],
+      "front": "<p>Why do governments <strong>levy taxes</strong>?</p>",
+      "back": "<p>Taxes exist to fund public spending, manage AD, correct market failures and redistribute income.</p>",
       "svgRef": null,
       "notesUrl": "/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html"
     },
