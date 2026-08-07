@@ -4,10 +4,11 @@ Live state of the Glossary & Formulae build. **Read this first** after any
 `/clear`. Updated immediately after every completed step, approval or decision —
 never batched.
 
-- **Branch:** `feature/glossary` (off `main` at `faccb6a`)
-- **Current phase:** Phase 2 — extraction & gap analysis
-- **Current step:** 6 complete — gaps filled; manual QA is Eliot's
-- **Last updated:** 2026-08-03
+- **Branch:** `fix/glossary-polish` (off `main` at `11e763a`). The build itself
+  merged to `main` on 2026-08-04 and is live.
+- **Current phase:** Phase 7 — post-launch fixes
+- **Current step:** all four fixes applied; manual QA is Eliot's
+- **Last updated:** 2026-08-07
 
 ---
 
@@ -78,6 +79,21 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 - [ ] 5.2 Manual, **for Eliot**: real phone, JS disabled, keyboard, print preview, Rich Results
 - [ ] 5.3 Summary + handover
 
+### Phase 7 — post-launch fixes — COMPLETE (2026-08-07)
+
+Four fixes, one commit each, on `fix/glossary-polish`.
+
+- [x] 7.1 **Capitalisation.** 58 approved wordings (95 records) capitalised at
+      render time. 79 fragments left alone — see below. New
+      `scripts/check_glossary_capitalisation.py`, new verifier check 6.
+- [x] 7.2 **Theme tags** recoloured grey → `--gl-accent` (`#d52349`). Fixed an
+      existing AA failure: white on `#7a7a7a` is 4.29:1, on `#d52349` 5.04:1.
+      Print unchanged (outlined, no fill).
+- [x] 7.3 **Search matches the term only**, ranked, with a flat results list
+      while a query is active. Verified end-to-end in headless Chrome.
+- [x] 7.4 **URL move evaluated and rejected.** Stays at
+      `/revision-notes/glossary/`. Convention recorded in `CLAUDE.md`.
+
 ---
 
 ## Decisions approved by Eliot
@@ -94,6 +110,11 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 | D8 | **A–Z is the primary order**, theme is a filter + per-entry metadata | Listing every term twice under two orderings would double the page and confuse the anchors. Flagged in the plan as reversible to a view toggle if Eliot prefers |
 | D9 | **No downloadable PDF in v1** — print stylesheet only | Would need a headless browser or PDF library on a repo with zero build deps, and becomes a second artefact that drifts. Cmd+P covers it |
 | D10 | Flashcards / self-test **out of scope for v1** | Set in the brief. To be recorded in `ROADMAP.md` |
+| D11 | Capitalisation applied **at render time from `curation.json`**, never in `terms.json` | `terms.json` is generated and must stay byte-identical to the notes, or check 1 stops meaning anything. Keyed on term id + a hash of the wording, so rewording a notes chip lapses the approval instead of silently carrying it to text nobody approved |
+| D12 | Fragments are **not** capitalised and **not** reworded | "Globalisation is the increasing integration" would become "Is the increasing integration". Rewording is a wording change, which is Eliot's alone |
+| D13 | Theme tags take **one accent for all themes**, `#d52349` | A colour per theme would imply a meaning the tag does not carry. Green lost twice: `#4caf50` is 2.78:1 with white text, and already means "correct" as the tick glyph in `main.css` |
+| D14 | Search matches the **term only**, ranked, results flattened while querying | Matching definitions buried the Demand entry under every definition mentioning demand. Ranking requires the order to change, so A-Z gives way during a query and returns on clear |
+| D15 | Glossary **stays at `/revision-notes/glossary/`** | GitHub Pages cannot 301. Meta-refresh or JS redirect would be the only option, both pass authority unreliably, and the stubs would live in the repo forever. URL depth is a weak signal and the pages were 3 days old — the gain did not cover the cost. Confirms D2 |
 
 ---
 
@@ -210,7 +231,9 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `_working/glossary/integration-proposals.md` | Written — P1-P4, awaiting sign-off |
 | `scripts/test_glossary_filter.js` | Created — filter tests + markup contract |
 | `scripts/build_glossary.py` | Created — generator |
-| `scripts/verify_glossary.py` | Created — the anti-drift check |
+| `scripts/verify_glossary.py` | Created — the anti-drift check; check 6 added 2026-08-07 |
+| `scripts/check_glossary_capitalisation.py` | Created 2026-08-07 — classifies, reports, `--approve`, `--check` |
+| `_working/glossary/capitalisation-report.md` | Generated 2026-08-07 — the 206 lower-case starts |
 | `scripts/vendor/katex.min.js` + `README.md` | Created — build-time only, not served |
 | `css/vendor/katex/katex.min.css` + `fonts/*.woff2` | Created — 20 woff2, 296KB |
 | `css/pages/glossary.css` | Created — scoped under `.glossary-page` |
@@ -229,7 +252,44 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ---
 
+## Synonyms — worth building, not built
+
+**The glossary data has no synonyms or alternative-names field.**
+`curation.json`'s `aliases` merges duplicate *spellings* during extraction and
+never reaches the page.
+
+This matters more now search is term-only. An abbreviation only matches because
+the notes happen to put it in the term itself — `Price Elasticity of Demand
+(PED)` tokenises to include `ped`, so "PED", "GDP", "AD", "YED" and "XED" all
+work by luck of house style rather than by design. Student shorthand that is
+**not** in any term string matches nothing at all: `PPF`, `PPC`, `MRP`, `MPC`
+where the term is written out, and any term whose common abbreviation the notes
+never bracket.
+
+The shape it would take: a `synonyms` array per term in `curation.json` (so
+re-extraction cannot destroy it), emitted as a `data-synonyms` attribute and
+concatenated into `termTokens` by `buildIndex`. Ranked below a real term match.
+Roughly an hour, no new dependency.
+
+Not built — no instruction to.
+
+---
+
 ## Outstanding for Eliot (carried to handover)
+
+- **79 fragment definitions** are lower-case and stay that way until their notes
+  chip is reworded. Every one is listed in
+  `_working/glossary/capitalisation-report.md` under "Fragment", with its notes
+  page linked. The notes read `Globalisation is the increasing integration…`,
+  so the extracted definition begins on a verb and capitalising it would give
+  `Is the increasing integration…`. **Rewording is a content change and has not
+  been made.** The fix per entry is to repunctuate the chip in the notes as
+  `Globalisation:` and re-run
+  `extract_glossary.py` → `check_glossary_capitalisation.py --approve` →
+  `build_glossary.py`.
+- **8 chips are examples, not definitions** (`Common market :: e.g. European
+  Union (EU)`). Same report, "Not a definition". Also a content decision.
+- **2 unclassified**, both `Regulation`. Same report.
 
 - **The spec PDFs are live on the public site.** `faccb6a "added specs"`
   committed `specificiations/{aqa-spec,edexcel-a-spec}.pdf`, and both return
@@ -243,9 +303,14 @@ Per-board chip split: Edexcel 267, AQA 293.
 
 ## Exact next action
 
-**Nothing.** Phase 6 is complete: every gap the report listed is filled.
+**Nothing.** Phase 7 is complete: all four post-launch fixes are applied and
+committed on `fix/glossary-polish`, which is **not merged** — merging is what
+publishes it.
 
 Waiting on Eliot:
+
+0. Review and merge `fix/glossary-polish`, then check the four fixes on the live
+   site. The 79 fragments above are the only content decision outstanding.
 
 1. **Check the economics** in `_working/glossary/authored-review.md` — 132
    authored wordings across 74 terms. These are the only entries on the site

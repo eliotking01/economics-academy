@@ -78,6 +78,24 @@ Names are lowercase kebab-case throughout. Topic pages are
 `1-2-3-short-title-slug.html` — spec code with dots as hyphens. Paper PDFs are
 `{board}-{level}-economics-paper-{n}-{month}-{year}-{question-paper|mark-scheme}.pdf`.
 
+### Where a new feature's URL goes
+
+**A feature nests under the section it belongs to; only a standalone tool sits
+at root.** The glossary is `/revision-notes/glossary/` because it is a glossary
+of the notes' own terms. `/flashcards/` and `/practice-questions/` are at root
+because they stand on their own.
+
+**Decide this once, before the URLs ship.** GitHub Pages cannot issue a 301 —
+there is no `_redirects`, `netlify.toml`, `vercel.json` or `.htaccess` here, and
+the default Jekyll build offers nothing equivalent. A meta-refresh or JS
+redirect is the only option, both pass authority unreliably, and the stub pages
+then have to stay in the repo permanently. Evaluated for the glossary on
+2026-08-07 and rejected on exactly that basis; see `_working/glossary/PROGRESS.md`.
+
+Nesting has one incidental benefit: `inject-templates.js` highlights the nav
+item by path prefix, so a page under `/revision-notes/` needs no new rule.
+`/flashcards/` needed its own line for that reason.
+
 ## How a page is assembled
 
 Standalone HTML. No includes, no partials, no build. Header and footer are
@@ -238,6 +256,25 @@ reflows it and the build stops being idempotent.
 
 The full glossary is real HTML in the page, not fetched — it must be readable
 with JavaScript off. `js/components/glossary-filter.js` only enhances.
+
+**Search matches the term name only**, ranked exact → prefix → word start →
+contains → fuzzy. `SEARCH_FIELDS` in that file is the whole of that decision.
+Ranking needs the order to change, so a query moves the matches into one flat
+list and hides the A–Z; clearing puts them back. A topic filter alone reorders
+nothing and leaves the A–Z in place.
+
+**Capitalisation is applied at render time**, from `curation.json`'s
+`capitalise` block, never in `terms.json` — the data has to stay byte-identical
+to the notes or the verbatim check stops meaning anything. Definitions the notes
+wrote as `Term: definition` get their first letter capitalised; those needing the
+term as their subject (*"Globalisation is the increasing integration…"*) do not,
+and are fixed in the notes or not at all. `scripts/check_glossary_capitalisation.py`
+classifies and reports; `verify_glossary.py` check 6 fails on any lower-case
+start nobody has ruled on.
+
+There is **no synonyms or alternative-names field.** Abbreviations only match
+because the notes put them in the term (`Price Elasticity of Demand (PED)`), and
+the tokeniser splits on the brackets.
 
 ## Flashcards
 
