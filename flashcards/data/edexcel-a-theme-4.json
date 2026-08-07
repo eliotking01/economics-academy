@@ -1,0 +1,1479 @@
+{
+  "generated": "2026-08-07",
+  "board": "edexcel-a",
+  "boardName": "Edexcel A",
+  "theme": "theme-4",
+  "themeName": "Theme 4: A Global Perspective",
+  "deckId": "edexcel-a-theme-4",
+  "deckTitle": "Edexcel A-Level Economics Theme 4 Flashcards",
+  "count": 84,
+  "topics": [
+    {
+      "subtopic": "4-1-1-globalisation",
+      "specCode": "4.1.1",
+      "title": "Globalisation",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-1-globalisation.html",
+      "count": 4
+    },
+    {
+      "subtopic": "4-1-2-specialisation-trade",
+      "specCode": "4.1.2",
+      "title": "Specialisation and Trade",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html",
+      "count": 5
+    },
+    {
+      "subtopic": "4-1-3-pattern-of-trade",
+      "specCode": "4.1.3",
+      "title": "Pattern of Trade",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-3-pattern-of-trade.html",
+      "count": 2
+    },
+    {
+      "subtopic": "4-1-4-terms-of-trade",
+      "specCode": "4.1.4",
+      "title": "Terms of Trade",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html",
+      "count": 3
+    },
+    {
+      "subtopic": "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "specCode": "4.1.5",
+      "title": "Trading Blocs and the World Trade Organisation",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html",
+      "count": 4
+    },
+    {
+      "subtopic": "4-1-6-restrictions-on-free-trade",
+      "specCode": "4.1.6",
+      "title": "Restrictions on Free Trade",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html",
+      "count": 4
+    },
+    {
+      "subtopic": "4-1-7-balance-of-payments",
+      "specCode": "4.1.7",
+      "title": "Balance of Payments",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html",
+      "count": 5
+    },
+    {
+      "subtopic": "4-1-8-exchange-rates",
+      "specCode": "4.1.8",
+      "title": "Exchange Rates",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+      "count": 7
+    },
+    {
+      "subtopic": "4-1-9-international-competitiveness",
+      "specCode": "4.1.9",
+      "title": "International Competitiveness",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html",
+      "count": 5
+    },
+    {
+      "subtopic": "4-2-1-absolute-relative-poverty",
+      "specCode": "4.2.1",
+      "title": "Absolute and Relative Poverty",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html",
+      "count": 3
+    },
+    {
+      "subtopic": "4-2-2-inequality",
+      "specCode": "4.2.2",
+      "title": "Inequality",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+      "count": 7
+    },
+    {
+      "subtopic": "4-3-1-measures-of-development",
+      "specCode": "4.3.1",
+      "title": "Measures of Development",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html",
+      "count": 5
+    },
+    {
+      "subtopic": "4-3-2-factors-influencing-growth-development",
+      "specCode": "4.3.2",
+      "title": "Factors Influencing Growth and Development",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html",
+      "count": 5
+    },
+    {
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "specCode": "4.3.3",
+      "title": "Strategies Influencing Growth and Development",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
+      "count": 6
+    },
+    {
+      "subtopic": "4-4-1-role-of-financial-markets",
+      "specCode": "4.4.1",
+      "title": "Role of Financial Markets",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-1-role-of-financial-markets.html",
+      "count": 1
+    },
+    {
+      "subtopic": "4-4-2-market-failure-in-the-financial-sector",
+      "specCode": "4.4.2",
+      "title": "Market Failure in the Financial Sector",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html",
+      "count": 3
+    },
+    {
+      "subtopic": "4-4-3-role-of-central-banks",
+      "specCode": "4.4.3",
+      "title": "Role of Central Banks",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html",
+      "count": 2
+    },
+    {
+      "subtopic": "4-5-1-public-expenditure",
+      "specCode": "4.5.1",
+      "title": "Public Expenditure",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html",
+      "count": 3
+    },
+    {
+      "subtopic": "4-5-2-taxation",
+      "specCode": "4.5.2",
+      "title": "Taxation",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+      "count": 3
+    },
+    {
+      "subtopic": "4-5-3-public-sector-finances",
+      "specCode": "4.5.3",
+      "title": "Public Sector Finances",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html",
+      "count": 4
+    },
+    {
+      "subtopic": "4-5-4-macroeconomic-policies-in-a-global-context",
+      "specCode": "4.5.4",
+      "title": "Macroeconomic Policies in a Global Context",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html",
+      "count": 3
+    }
+  ],
+  "cards": [
+    {
+      "id": "edexcel-a-4-1-1-def-01",
+      "specCode": "4.1.1",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-1-globalisation",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "globalisation"
+      ],
+      "front": "<p>Define <strong>globalisation</strong> — and what characterises it?</p>",
+      "back": "<p><strong>Globalisation</strong>: the increasing integration and interdependence of the world's economies.</p><p>Its characteristics: increased <strong>free trade</strong> in goods and services across borders; increased <strong>foreign direct investment (FDI)</strong> and capital flows; increased <strong>foreign ownership of firms</strong> through multinational and transnational corporations; and increased <strong>freedom of movement of labour</strong> between countries.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-1-globalisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-1-def-02",
+      "specCode": "4.1.1",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-1-globalisation",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "globalisation"
+      ],
+      "front": "<p>What factors have driven <strong>globalisation over the last 50 years</strong>?</p>",
+      "back": "<p><strong>Trade liberalisation</strong> — falling tariffs and quotas (China's WTO entry in 2001 transformed its trade); <strong>advances in transport and communication technology</strong>; the growth of <strong>MNCs</strong> building global supply chains (Apple, Amazon, Unilever); and <strong>containerisation</strong>, which slashed shipping costs and time.</p><p>Plus the <strong>deregulation of financial markets</strong> in the 1990s freeing capital flows, and <strong>global institutions</strong> — the WTO, IMF and World Bank — promoting free trade and investment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-1-globalisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-1-eval-01",
+      "specCode": "4.1.1",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-1-globalisation",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "globalisation",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the impact of globalisation on <strong>consumers and workers</strong>.</p>",
+      "back": "<p><strong>Consumers</strong> gain lower prices, greater variety and better quality from competition — but face cultural imperialism, quality concerns over imports, and less choice long-term if domestic firms close.</p><p><strong>Workers</strong> gain employment opportunities in developing countries and higher wages where skills are scarce — but lose jobs in developed countries as production relocates, and free movement of labour can mean lower wages and job insecurity for some.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-1-globalisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-1-eval-02",
+      "specCode": "4.1.1",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-1-globalisation",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "globalisation",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the impact of globalisation on <strong>firms, governments and the environment</strong>.</p>",
+      "back": "<p><strong>Domestic firms</strong> gain larger markets, imported inputs, skilled labour, economies of scale and foreign capital — but face fiercer competition, costlier skilled labour and fragile global supply chains.</p><p><strong>Governments and the economy</strong>: growth, tax revenue and jobs on one side; income inequality, exposure to external shocks, and two-way pressure on the balance of payments and inflation on the other. The <strong>environment</strong> loses: more production, transport, emissions and resource exploitation.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-1-globalisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-2-def-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-2-specialisation-trade",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "trade"
+      ],
+      "front": "<p>Distinguish <strong>absolute advantage</strong> from <strong>comparative advantage</strong>.</p>",
+      "back": "<p><strong>Absolute advantage</strong>: a country can produce more of a good with the same resources than another country — a matter of productivity and efficiency.</p><p><strong>Comparative advantage</strong>: a country can produce a good at a lower opportunity cost than another country. The theory of comparative advantage says countries should specialise where their opportunity cost is lowest — raising the efficiency of resource allocation and total global output.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-2-diagram-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-2-specialisation-trade",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "diagram"
+      ],
+      "front": "<p>Show <strong>comparative advantage</strong> using two countries' PPFs.</p>",
+      "back": "<p>Germany's PPF runs from 150mn T-shirts to <strong>20mn chips</strong>; Vietnam's from <strong>200mn T-shirts</strong> to 10mn chips — each has an absolute advantage in one good. Opportunity costs: a chip costs Germany <strong>7.5 T-shirts</strong> but Vietnam <strong>20</strong>; a T-shirt costs Vietnam <strong>0.05 chips</strong> but Germany 0.13.</p><p>Each specialises where its opportunity cost is <strong>lower</strong>: fully specialised, they produce <strong>20m chips and 200mn T-shirts</strong> — beating the 15m and 175mn made without specialisation — and by trading, both consume <strong>beyond their own PPFs</strong>.</p>",
+      "svgRef": "/images/diagrams/svg/comparative-advantage.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html",
+      "svgAlt": "Two straight-line PPFs for computer chips and T-shirts crossing on shared axes: Germany's runs from 150 million T-shirts to 20 million chips, Vietnam's from 200 million T-shirts to 10 million chips"
+    },
+    {
+      "id": "edexcel-a-4-1-2-calc-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-2-specialisation-trade",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "calculation"
+      ],
+      "front": "<p>Country A can make <strong>40m cars or 80m tonnes of wheat</strong>; Country B can make <strong>10m cars or 60m tonnes of wheat</strong>. Calculate each opportunity cost — who should specialise in what?</p>",
+      "back": "<p>Opportunity cost of a car: A gives up 80 ÷ 40 = <strong>2 tonnes</strong>; B gives up 60 ÷ 10 = <strong>6 tonnes</strong>. Of a tonne of wheat: A gives up 0.5 cars; B gives up 10 ÷ 60 ≈ <strong>0.17 cars</strong>.</p><p>A has the lower opportunity cost in <strong>cars</strong>, B in <strong>wheat</strong> — so A specialises in cars and B in wheat, even though A has an absolute advantage in both.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-2-def-02",
+      "specCode": "4.1.2",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-2-specialisation-trade",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "trade"
+      ],
+      "front": "<p>What are the <strong>assumptions of the comparative advantage model</strong>?</p>",
+      "back": "<p><strong>Zero transport costs</strong>; <strong>perfect knowledge</strong> of prices, technology and resources; <strong>factor mobility within countries</strong>, so resources can switch industries freely; <strong>constant returns to scale</strong>, so doubling inputs doubles outputs; and <strong>no trade barriers</strong> — no tariffs or quotas.</p><p>Each assumption is a limitation: where transport is costly, factors are immobile or barriers exist, the predicted gains from specialisation shrink.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-2-eval-01",
+      "specCode": "4.1.2",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-2-specialisation-trade",
+      "cardType": "evaluation",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate <strong>specialisation and trade</strong> in an international context.</p>",
+      "back": "<p><strong>For</strong>: production at lower opportunity cost raises efficiency and global output; competition lowers prices; consumers get variety; access to bigger markets drives growth, innovation and investment.</p><p><strong>Against</strong>: dependency on imports for essentials leaves countries exposed to supply-chain shocks; uncompetitive domestic industries shed jobs; gains split unevenly between skilled and unskilled workers and between countries; more production and transport damages the environment; and lower labour standards abroad can mean worker exploitation.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-2-specialisation-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-3-def-01",
+      "specCode": "4.1.3",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-3-pattern-of-trade",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "trade"
+      ],
+      "front": "<p>Define the <strong>pattern of trade</strong>.</p>",
+      "back": "<p>The <strong>pattern of trade</strong>: the changing composition and direction of a country's exports and imports.</p><p>It answers two questions — <strong>what</strong> goods and services a country trades, and <strong>with which countries</strong> it trades them.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-3-pattern-of-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-3-def-02",
+      "specCode": "4.1.3",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-3-pattern-of-trade",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "trade"
+      ],
+      "front": "<p>What factors <strong>change the pattern of trade</strong> over time?</p>",
+      "back": "<p><strong>Comparative advantage</strong> shifts — the UK's loss of it in manufacturing turned manufactured goods from exports into imports. <strong>Emerging economies</strong> — the rise of China and India has claimed a growing share of world exports and imports.</p><p><strong>Trade blocs and bilateral agreements</strong> redirect trade between members — the UK's exit from the EU cut EU trade and raised non-EU trade. And <strong>relative exchange rates</strong>: a depreciation of the pound makes UK exports more competitive, raising exports and cutting imports.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-3-pattern-of-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-4-formula-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-4-terms-of-trade",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "formula"
+      ],
+      "front": "<p>State the <strong>terms of trade</strong> formula — and what does a rise in the index mean?</p>",
+      "back": "<p>The <strong>terms of trade (ToT)</strong> measures the relative price of a country's exports compared with its imports:</p><p><strong>ToT index = (index of average export prices ÷ index of average import prices) × 100</strong>.</p><p>A <strong>rise</strong> means each unit of exports buys more imports — an <strong>improvement</strong>; a fall means it buys fewer — a <strong>deterioration</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>T</mi><mi>e</mi><mi>r</mi><mi>m</mi><mi>s</mi><mi>o</mi><mi>f</mi><mi>t</mi><mi>r</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>x</mi><mo>=</mo><mo stretchy=\"false\">(</mo><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>x</mi><mi>o</mi><mi>f</mi><mi>a</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>c</mi><mi>e</mi><mi>s</mi><mo>÷</mo><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>x</mi><mi>o</mi><mi>f</mi><mi>a</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>i</mi><mi>m</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>c</mi><mi>e</mi><mi>s</mi><mo stretchy=\"false\">)</mo><mo>×</mo><mn>100</mn></mrow><annotation encoding=\"application/x-tex\">Terms of trade index = (index of average export prices ÷ index of average import prices) × 100</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.13889em;\">T</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">er</span><span class=\"mord mathnormal\">m</span><span class=\"mord mathnormal\">so</span><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">r</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">in</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">x</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">in</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">x</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">v</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">er</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">g</span><span class=\"mord mathnormal\">ee</span><span class=\"mord mathnormal\">x</span><span class=\"mord mathnormal\">p</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">or</span><span class=\"mord mathnormal\">tp</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">r</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">ces</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">÷</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\">in</span><span class=\"mord mathnormal\">d</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">x</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">f</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">v</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">er</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">g</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">im</span><span class=\"mord mathnormal\">p</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">or</span><span class=\"mord mathnormal\">tp</span><span class=\"mord mathnormal\" style=\"margin-right:0.02778em;\">r</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">ces</span><span class=\"mclose\">)</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">×</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6444em;\"></span><span class=\"mord\">100</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-4-1-4-calc-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-4-terms-of-trade",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "calculation"
+      ],
+      "front": "<p>A country's export price index rises from 100 to <strong>108</strong> while its import price index rises from 100 to <strong>120</strong>. Calculate the new <strong>terms of trade</strong> — improvement or deterioration?</p>",
+      "back": "<p>ToT = (108 ÷ 120) × 100 = <strong>90</strong>.</p><p>A fall from the base of 100 is a <strong>deterioration</strong>: export prices rose, but import prices rose faster, so each unit of exports now buys fewer imports. What moves the terms of trade is the <strong>ratio</strong> of the two indices — not the direction of either one alone.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-4-eval-01",
+      "specCode": "4.1.4",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-4-terms-of-trade",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "trade",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the impact of a <strong>change in the terms of trade</strong>.</p>",
+      "back": "<p>The effects hinge on the <strong>PED of exports</strong>. An <strong>improvement</strong> lets each unit of exports buy more imports, potentially raising living standards — but if export demand is <strong>elastic</strong>, dearer exports lose so much volume that export revenue, the current account and GDP all suffer.</p><p>A <strong>deterioration</strong> cuts what exports can buy — but with elastic demand, cheaper exports can raise sales enough to lift export revenue, GDP and employment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-5-def-01",
+      "specCode": "4.1.5",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "trade",
+        "trading-blocs"
+      ],
+      "front": "<p>Name the <strong>four types of trading bloc</strong> in rising order of integration.</p>",
+      "back": "<p><strong>Free trade area</strong> (USMCA): members remove tariffs and quotas between themselves; each keeps its own trade policy with non-members. <strong>Customs union</strong> (MERCOSUR): adds a <strong>common external tariff</strong>.</p><p><strong>Common market</strong> (EU): adds <strong>free movement of factors of production</strong> — labour and capital. <strong>Monetary union</strong> (Eurozone): adds a <strong>single currency</strong>. Each step surrenders more national policy control.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-5-def-02",
+      "specCode": "4.1.5",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "trading-blocs"
+      ],
+      "front": "<p>Distinguish <strong>trade creation</strong> from <strong>trade diversion</strong> — and what else do regional trade agreements bring?</p>",
+      "back": "<p><strong>Trade creation</strong>: trade shifts from a high-cost domestic producer to a lower-cost producer in another member country — efficiency and welfare rise. <strong>Trade diversion</strong>: trade shifts from a lower-cost producer <em>outside</em> the bloc to a higher-cost producer within it — efficiency and welfare fall.</p><p>Other benefits: economies of scale, competition, consumer choice, political cooperation. Other costs: loss of sovereignty, unequal gains between members, and dependency on the bloc.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-5-def-03",
+      "specCode": "4.1.5",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "trade",
+        "trading-blocs"
+      ],
+      "front": "<p>What conditions make a <strong>monetary union successful</strong>?</p>",
+      "back": "<p><strong>Synchronised business cycles</strong>, so one interest rate suits all members when shocks hit; <strong>labour mobility</strong>, so workers can move to where the jobs are; <strong>fiscal transfers</strong>, so a central budget can support regions a shock hurts; and <strong>mobility of capital and finance</strong> to follow investment opportunities across the union.</p><p>The Eurozone is the reference case — and its strains trace to these conditions holding only partially.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-5-def-04",
+      "specCode": "4.1.5",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-5-trading-blocs-and-the-world-trade-organisation",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "trade",
+        "trading-blocs"
+      ],
+      "front": "<p>What is the <strong>role of the WTO</strong> — and how can it conflict with trading blocs?</p>",
+      "back": "<p>The <strong>World Trade Organisation</strong> promotes <strong>trade liberalisation</strong> and oversees global trade rules: a <strong>negotiating forum</strong> for reducing tariffs and quotas internationally, and a <strong>dispute settlement</strong> body that acts as a court between member countries.</p><p>The tension: regional blocs <strong>favour their members</strong>, which cuts against the WTO's broader aim of non-discrimination in global trade.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html"
+    },
+    {
+      "id": "edexcel-a-4-1-6-def-01",
+      "specCode": "4.1.6",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-6-restrictions-on-free-trade",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "protectionism"
+      ],
+      "front": "<p>Why do governments <strong>restrict free trade</strong>?</p>",
+      "back": "<p>To protect <strong>infant industries</strong> until they can compete; <strong>strategic industries</strong> vital to national security; <strong>sunset industries</strong> in decline, buying workers time to transition; and <strong>jobs</strong> in high-employment sectors.</p><p>Also to prevent <strong>dumping</strong> — foreign producers selling below cost to grab market share — to improve the <strong>balance of payments</strong> by cutting imports, and to enforce <strong>environmental and labour standards</strong> on what enters the country.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-6-def-02",
+      "specCode": "4.1.6",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-6-restrictions-on-free-trade",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "protectionism"
+      ],
+      "front": "<p>Name the <strong>four methods of protectionism</strong>.</p>",
+      "back": "<p><strong>Tariff</strong>: a tax on imports. It raises the price of imported goods, making domestic goods relatively cheaper. <strong>Quota</strong>: a physical limit on how much of a good can be imported, restricting supply and raising the import price.</p><p><strong>Subsidies to domestic producers</strong>: lower domestic production costs so home firms can compete with imports. <strong>Non-tariff barriers</strong>: product standards, health and safety rules and administrative procedures that make importing harder and costlier.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-6-diagram-01",
+      "specCode": "4.1.6",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-6-restrictions-on-free-trade",
+      "cardType": "diagram",
+      "difficulty": "stretch",
+      "tags": [
+        "protectionism",
+        "diagram"
+      ],
+      "front": "<p>Show the <strong>impact of a tariff</strong> — prices, quantities and the three areas.</p>",
+      "back": "<p>The tariff lifts the world supply price from <strong>P1 (Sworld)</strong> to <strong>P2 (Sworld+tariff)</strong>: domestic output extends from Q1 to <strong>Q2</strong>, consumption contracts from Q4 to <strong>Q3</strong>, and imports shrink from Q4 − Q1 to <strong>Q3 − Q2</strong>.</p><p>The <strong>green</strong> area is the gain in domestic producer surplus, the <strong>purple</strong> rectangle is government tariff revenue, and the two <strong>red</strong> triangles are the net welfare loss — consumer surplus destroyed that nobody captures.</p>",
+      "svgRef": "/images/diagrams/svg/tariff.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html",
+      "svgAlt": "Tariff diagram with domestic supply and demand and two horizontal world supply lines: the tariff raises the price from P1 to P2, with a green producer surplus gain, a purple tariff revenue rectangle and two red welfare loss triangles"
+    },
+    {
+      "id": "edexcel-a-4-1-6-eval-01",
+      "specCode": "4.1.6",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-6-restrictions-on-free-trade",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "protectionism",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate <strong>protectionist policies</strong>.</p>",
+      "back": "<p>Their effect depends on the <strong>elasticity of import demand</strong> — inelastic demand means tariffs barely cut imports — and on whether <strong>domestic producers can actually expand</strong> to replace them; if not, prices simply rise further.</p><p>Then the risks: <strong>retaliation</strong> from trading partners escalating into trade wars that hurt both sides, and the <strong>long-run cost</strong> — sheltering inefficient firms dulls the incentive to innovate and lift productivity.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html"
+    },
+    {
+      "id": "edexcel-a-4-1-7-def-01",
+      "specCode": "4.1.7",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-7-balance-of-payments",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "balance-of-payments"
+      ],
+      "front": "<p>Define the <strong>balance of payments</strong> — and what does each account record?</p>",
+      "back": "<p><strong>Balance of payments (BoP)</strong>: records all financial transactions between a country and the rest of the world. Inflows are credits, outflows debits.</p><p>The <strong>current account</strong>: trade in goods and services, primary income (profits, interest, dividends) and secondary income (aid, remittances). The <strong>capital account</strong>: minor capital transfers such as debt forgiveness. The <strong>financial account</strong>: FDI, portfolio investment and changes in foreign exchange reserves.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-4-1-7-calc-01",
+      "specCode": "4.1.7",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-7-balance-of-payments",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "balance-of-payments",
+        "calculation"
+      ],
+      "front": "<p>A country records: trade in goods — credits £260bn, debits £340bn; services — £310bn, £250bn; primary income — £75bn, £60bn; secondary income — £25bn, £45bn. Calculate the <strong>current account balance</strong>.</p>",
+      "back": "<p>Goods: 260 − 340 = <strong>−£80bn</strong>. Services: 310 − 250 = <strong>+£60bn</strong>. Primary income: 75 − 60 = <strong>+£15bn</strong>. Secondary income: 25 − 45 = <strong>−£20bn</strong>.</p><p>Balance: −80 + 60 + 15 − 20 = <strong>−£25bn</strong> — a current account deficit. The goods deficit is partly offset by surpluses on services and primary income: always net all four components.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-4-1-7-def-02",
+      "specCode": "4.1.7",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-7-balance-of-payments",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "balance-of-payments"
+      ],
+      "front": "<p>What causes a <strong>current account deficit</strong> — and how is one financed?</p>",
+      "back": "<p>Causes: <strong>low competitiveness</strong> (dearer or poorer-quality domestic goods), a <strong>strong exchange rate</strong> (cheap imports, dear exports), <strong>high domestic demand</strong> sucking in imports, and <strong>structural factors</strong> such as a long-term decline in manufacturing.</p><p>Since the balance of payments must always balance, a current account deficit (X &lt; M) is financed by a <strong>surplus on the capital and financial accounts</strong> — and vice versa for a surplus.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-4-1-7-eval-01",
+      "specCode": "4.1.7",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-7-balance-of-payments",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "balance-of-payments",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>three policy routes for reducing a current account deficit</strong>.</p>",
+      "back": "<p><strong>Expenditure-switching</strong> (tariffs, quotas, devaluation) redirects demand towards domestic output — effective short-term, but risks retaliation and higher consumer prices. <strong>Expenditure-reducing</strong> (contractionary fiscal policy, higher interest rates) cuts overall demand and with it imports — at the cost of slower growth and higher unemployment.</p><p><strong>Supply-side policies</strong> (education, R&amp;D, infrastructure) rebuild export competitiveness — the durable fix, but slow and expensive.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-4-1-7-def-03",
+      "specCode": "4.1.7",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-7-balance-of-payments",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "balance-of-payments"
+      ],
+      "front": "<p>Why do <strong>persistent global imbalances</strong> matter?</p>",
+      "back": "<p><strong>Persistent deficits</strong> build up foreign debt — eventually demanding higher taxes or spending cuts — and can erode confidence in the currency, bringing depreciation and weaker FDI inflows.</p><p><strong>Persistent surpluses</strong> feed inflationary pressure through high aggregate demand, and breed over-reliance on exports — leaving the economy exposed to global recessions and swings in trading partners' demand.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-7-balance-of-payments.html"
+    },
+    {
+      "id": "edexcel-a-4-1-8-def-01",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "exchange-rates"
+      ],
+      "front": "<p>Name the <strong>three exchange rate systems</strong> — and the vocabulary for a rise or fall in each.</p>",
+      "back": "<p><strong>Floating</strong>: an exchange rate system determined by market forces of demand and supply for a currency, with no government intervention — the currency <strong>appreciates</strong> or <strong>depreciates</strong>. <strong>Fixed</strong>: the central bank fixes the currency's value, often pegging it to another currency — the bank <strong>revalues</strong> or <strong>devalues</strong>.</p><p><strong>Managed</strong>: fixed within a range, floating inside it. Market-driven moves are appreciation/depreciation; deliberate central-bank moves are revaluation/devaluation.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html"
+    },
+    {
+      "id": "edexcel-a-4-1-8-diagram-01",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "diagram"
+      ],
+      "front": "<p>Show an <strong>appreciation</strong> of a floating currency — and what shifts the demand for it?</p>",
+      "back": "<p>Higher demand for the currency shifts <strong>D1 right to D2</strong> along the fixed supply curve: the exchange rate rises from <strong>P1 to P2</strong> — an appreciation.</p><p>Demand rises with <strong>higher relative interest rates</strong> (hot money inflows), <strong>lower relative inflation</strong>, a <strong>current account surplus</strong>, <strong>FDI inflows</strong>, and <strong>speculation</strong> that the currency will strengthen.</p>",
+      "svgRef": "/images/diagrams/svg/exchange-rate-appreciation.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+      "svgAlt": "Currency market diagram with demand for the currency shifting right from D1 to D2 along a fixed supply curve, raising the exchange rate from P1 to P2"
+    },
+    {
+      "id": "edexcel-a-4-1-8-diagram-02",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates",
+        "diagram"
+      ],
+      "front": "<p>Show a <strong>depreciation</strong> of a floating currency — and what shifts the supply of it?</p>",
+      "back": "<p>Higher supply of the currency shifts <strong>S1 right to S2</strong> along the fixed demand curve: the exchange rate falls from <strong>P1 to P2</strong> — a depreciation.</p><p>Supply rises with <strong>quantitative easing</strong> (an expanded money supply) and with sales of the currency — including <strong>speculative selling</strong> when investors expect it to weaken; changes in <strong>foreign currency reserves</strong> also move the rate.</p>",
+      "svgRef": "/images/diagrams/svg/exchange-rate-depreciation.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+      "svgAlt": "Currency market diagram with the supply of the currency shifting right from S1 to S2 along a fixed demand curve, lowering the exchange rate from P1 to P2"
+    },
+    {
+      "id": "edexcel-a-4-1-8-def-02",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates"
+      ],
+      "front": "<p>How do <strong>central banks intervene</strong> in currency markets?</p>",
+      "back": "<p><strong>Buying or selling the currency</strong>: buying its own currency raises demand and causes a revaluation; selling increases supply and causes a devaluation.</p><p><strong>Interest rates</strong>: raising them attracts <strong>hot money</strong> inflows and revalues the currency; cutting them triggers outflows and devalues it. These are the tools that hold a fixed or managed system at its target.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html"
+    },
+    {
+      "id": "edexcel-a-4-1-8-def-03",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "exchange-rates"
+      ],
+      "front": "<p>Define <strong>competitive devaluation</strong> — and its risks.</p>",
+      "back": "<p><strong>Competitive devaluation</strong>: when a government deliberately pushes down the value of its currency to make exports cheaper and gain a trade advantage.</p><p>The risks: <strong>retaliation</strong> — rivals devalue too, a \"currency war\" that shrinks global trade; <strong>imported inflation</strong> — dearer imports cut consumers' purchasing power; and a heavier <strong>foreign-denominated debt burden</strong>, threatening financial instability.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html"
+    },
+    {
+      "id": "edexcel-a-4-1-8-eval-01",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "exchange-rates",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the impact of a <strong>depreciation</strong> across the macro objectives.</p>",
+      "back": "<p>Cheaper exports and dearer imports tend to <strong>improve the current account</strong>, <strong>boost growth</strong> and <strong>cut unemployment</strong> in export industries — the mirror image of an appreciation.</p><p>The costs: <strong>imported inflation</strong> plus demand-pull pressure from rising export demand, and <strong>lower living standards</strong> as import prices erode purchasing power. Which effect dominates depends on the economy's trade exposure and the elasticities of export and import demand.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html"
+    },
+    {
+      "id": "edexcel-a-4-1-8-diagram-03",
+      "specCode": "4.1.8",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-8-exchange-rates",
+      "cardType": "diagram",
+      "difficulty": "stretch",
+      "tags": [
+        "exchange-rates",
+        "diagram"
+      ],
+      "front": "<p>Show the <strong>J-curve</strong> — and state the <strong>Marshall-Lerner condition</strong>.</p>",
+      "back": "<p>After a depreciation the current account <strong>worsens first</strong>: contracts fix prices in the short run and consumers are slow to switch, so PEDx and PEDm are inelastic. Only as they adjust does the balance <strong>improve through the long run</strong> — tracing a J.</p><p>The <strong>Marshall-Lerner condition</strong>: a depreciation improves the current account only if <strong>PEDx + PEDm &gt; 1</strong>. If combined demand is inelastic, it worsens instead.</p>",
+      "svgRef": "/images/diagrams/svg/j-curve.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html",
+      "svgAlt": "J-curve diagram of the net trade balance against time: after a depreciation the deficit deepens in the short run, bottoms out, then improves into surplus in the long run"
+    },
+    {
+      "id": "edexcel-a-4-1-9-def-01",
+      "specCode": "4.1.9",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-9-international-competitiveness",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "competitiveness"
+      ],
+      "front": "<p>Define <strong>international competitiveness</strong> — and how is it measured?</p>",
+      "back": "<p><strong>International competitiveness</strong>: the ability of a country's goods and services to compete successfully in global markets.</p><p>Two key measures, both <strong>relative</strong> to rivals: <strong>relative unit labour costs</strong> — rising faster than competitors' signals weakening competitiveness — and <strong>relative export prices</strong>, where higher prices than competitors' usually mean the same.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html"
+    },
+    {
+      "id": "edexcel-a-4-1-9-formula-01",
+      "specCode": "4.1.9",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-9-international-competitiveness",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "competitiveness",
+        "formula"
+      ],
+      "front": "<p>State the <strong>unit labour costs</strong> formula — and how is it read?</p>",
+      "back": "<p><strong>Unit labour costs = total labour costs ÷ total output</strong>.</p><p>It measures the labour cost of each unit produced, so it captures wages <strong>and</strong> productivity together: wages can rise without harming competitiveness if output per worker rises as fast. What matters is unit labour costs <strong>relative to competitors</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>U</mi><mi>n</mi><mi>i</mi><mi>t</mi><mi>l</mi><mi>a</mi><mi>b</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>c</mi><mi>o</mi><mi>s</mi><mi>t</mi><mi>s</mi><mo>=</mo><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>a</mi><mi>b</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>c</mi><mi>o</mi><mi>s</mi><mi>t</mi><mi>s</mi><mo>÷</mo><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>p</mi><mi>u</mi><mi>t</mi></mrow><annotation encoding=\"application/x-tex\">Unit labour costs = total labour costs ÷ total output</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6944em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.10903em;\">U</span><span class=\"mord mathnormal\">ni</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">tl</span><span class=\"mord mathnormal\">ab</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">u</span><span class=\"mord mathnormal\">rcos</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">s</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7778em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">ll</span><span class=\"mord mathnormal\">ab</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">u</span><span class=\"mord mathnormal\">rcos</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">s</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">÷</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">t</span><span class=\"mord mathnormal\">a</span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span><span class=\"mord mathnormal\">o</span><span class=\"mord mathnormal\">u</span><span class=\"mord mathnormal\">tp</span><span class=\"mord mathnormal\">u</span><span class=\"mord mathnormal\">t</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-4-1-9-calc-01",
+      "specCode": "4.1.9",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-9-international-competitiveness",
+      "cardType": "calculation",
+      "difficulty": "standard",
+      "tags": [
+        "competitiveness",
+        "calculation"
+      ],
+      "front": "<p>Country A spends <strong>£5.4m</strong> on labour to produce <strong>900 units</strong>; Country B spends <strong>£6.5m</strong> to produce <strong>1,000 units</strong>. Compare their <strong>unit labour costs</strong>.</p>",
+      "back": "<p>A: 5,400,000 ÷ 900 = <strong>£6,000</strong> per unit. B: 6,500,000 ÷ 1,000 = <strong>£6,500</strong> per unit.</p><p>B's total wage bill is larger, but so is its output — yet B's unit labour cost is still about <strong>8% higher</strong>, so on this measure A is the more cost-competitive. Total labour spending alone says nothing: only cost <strong>per unit</strong> does.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html"
+    },
+    {
+      "id": "edexcel-a-4-1-9-def-02",
+      "specCode": "4.1.9",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-9-international-competitiveness",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "competitiveness"
+      ],
+      "front": "<p>What <strong>factors influence international competitiveness</strong>?</p>",
+      "back": "<p><strong>Cost factors</strong>: relative unit labour costs, the <strong>exchange rate</strong> (a weaker currency cheapens exports), relative <strong>inflation</strong>, and <strong>productivity</strong>, which lowers cost per unit.</p><p><strong>Non-cost factors</strong>: <strong>innovation and technology</strong>, <strong>quality and branding</strong> that command premium prices, and <strong>infrastructure and logistics</strong> — transport, energy and digital networks that keep firms efficient.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html"
+    },
+    {
+      "id": "edexcel-a-4-1-9-eval-01",
+      "specCode": "4.1.9",
+      "topic": "4.1 International economics",
+      "subtopic": "4-1-9-international-competitiveness",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "competitiveness",
+        "evaluation"
+      ],
+      "front": "<p>Why does <strong>international competitiveness</strong> matter — and what happens when it is lost?</p>",
+      "back": "<p><strong>Competitive</strong>: exports grow, improving the current account; growth and investment strengthen; export industries expand employment.</p><p><strong>Uncompetitive</strong>: the same channels run in reverse — falling exports worsen the current account, growth and investment slow, and export industries shed jobs, risking a persistent deficit. Because competitiveness is <strong>relative</strong>, standing still while rivals improve is itself a decline.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html"
+    },
+    {
+      "id": "edexcel-a-4-2-1-def-01",
+      "specCode": "4.2.1",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-1-absolute-relative-poverty",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "poverty"
+      ],
+      "front": "<p>Distinguish <strong>absolute poverty</strong> from <strong>relative poverty</strong>.</p>",
+      "back": "<p><strong>Absolute poverty</strong>: individuals cannot afford the basic necessities for survival, such as food, water, shelter, and healthcare — measured against a fixed international threshold, e.g. the World Bank's poverty line of <strong>$2.15 per day</strong> (2022 PPP).</p><p><strong>Relative poverty</strong>: household income falls below a set proportion of <strong>median income</strong> in an economy — in the UK, below <strong>60% of median household income</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html"
+    },
+    {
+      "id": "edexcel-a-4-2-1-def-02",
+      "specCode": "4.2.1",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-1-absolute-relative-poverty",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "poverty"
+      ],
+      "front": "<p>What changes <strong>absolute poverty</strong>?</p>",
+      "back": "<p><strong>Economic growth</strong> in developing countries raises incomes and employment, pulling people over the fixed threshold. <strong>Government policies</strong> — welfare benefits, subsidies and public services — support the poorest directly.</p><p><strong>Global factors</strong> — trade, foreign aid and investment — shape poverty in developing countries, while <strong>natural disasters and conflicts</strong> push it the other way by destroying livelihoods and infrastructure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html"
+    },
+    {
+      "id": "edexcel-a-4-2-1-def-03",
+      "specCode": "4.2.1",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-1-absolute-relative-poverty",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "poverty"
+      ],
+      "front": "<p>What changes <strong>relative poverty</strong>?</p>",
+      "back": "<p>Because relative poverty is measured against <strong>median income</strong>, it moves with the income distribution: the <strong>skills gap</strong> in education drives wage disparities; <strong>demographic changes</strong> — ageing populations, shifting household composition — alter who falls below the line.</p><p><strong>Government tax and welfare policy</strong> redistributes income directly, and <strong>labour market changes</strong> — unemployment, underemployment and low wages — push relative poverty up.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html"
+    },
+    {
+      "id": "edexcel-a-4-2-2-def-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "inequality"
+      ],
+      "front": "<p>Distinguish <strong>income inequality</strong> from <strong>wealth inequality</strong>.</p>",
+      "back": "<p><strong>Income inequality</strong>: the unequal distribution of earnings, such as wages, rent, interest, and profit. Income is a <strong>flow</strong> of money over a period of time.</p><p><strong>Wealth inequality</strong>: the unequal distribution of assets, such as property, shares, and savings. Wealth is a <strong>stock</strong> of monetary value at a point in time.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html"
+    },
+    {
+      "id": "edexcel-a-4-2-2-diagram-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "diagram",
+      "difficulty": "standard",
+      "tags": [
+        "inequality",
+        "diagram"
+      ],
+      "front": "<p>Show how the <strong>Lorenz curve</strong> illustrates inequality.</p>",
+      "back": "<p>The Lorenz curve plots the <strong>cumulative percentage of total income or wealth</strong> against the <strong>cumulative percentage of the population</strong>. The 45° diagonal is the <strong>line of perfect equality</strong> — everyone has the same; the Lorenz curve shows the actual distribution.</p><p>The <strong>further the curve bows from the diagonal, the greater the inequality</strong>. Area A (between the two) against area A + B (everything under the diagonal) gives the Gini coefficient.</p>",
+      "svgRef": "/images/diagrams/svg/lorenz-curve.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+      "svgAlt": "Lorenz curve diagram with a 45 degree line of perfect equality, the Lorenz curve bowing below it, area A between the two lines and area B beneath the Lorenz curve"
+    },
+    {
+      "id": "edexcel-a-4-2-2-formula-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "formula",
+      "difficulty": "standard",
+      "tags": [
+        "inequality",
+        "formula"
+      ],
+      "front": "<p>How is the <strong>Gini coefficient</strong> calculated from the Lorenz curve — and how is it read?</p>",
+      "back": "<p><strong>Gini coefficient = A ÷ (A + B)</strong>: the area between the line of perfect equality and the Lorenz curve (A), as a ratio of the total area under the line of perfect equality (A + B).</p><p><strong>0</strong> means perfect equality, <strong>1</strong> means perfect inequality — so a higher Gini coefficient means greater inequality.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+      "formulaHtml": "<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>G</mi><mi>i</mi><mi>n</mi><mi>i</mi><mi>c</mi><mi>o</mi><mi>e</mi><mi>f</mi><mi>f</mi><mi>i</mi><mi>c</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>=</mo><mi>A</mi><mo>÷</mo><mo stretchy=\"false\">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo stretchy=\"false\">)</mo></mrow><annotation encoding=\"application/x-tex\">Gini coefficient = A ÷ (A + B)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\">G</span><span class=\"mord mathnormal\">ini</span><span class=\"mord mathnormal\">coe</span><span class=\"mord mathnormal\" style=\"margin-right:0.10764em;\">ff</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">c</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\">e</span><span class=\"mord mathnormal\">n</span><span class=\"mord mathnormal\">t</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">÷</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">(</span><span class=\"mord mathnormal\">A</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.05017em;\">B</span><span class=\"mclose\">)</span></span></span></span></span>"
+    },
+    {
+      "id": "edexcel-a-4-2-2-def-02",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "inequality"
+      ],
+      "front": "<p>What causes <strong>income and wealth inequality</strong>?</p>",
+      "back": "<p><strong>Education and skills</strong> — unequal access drives wage disparities. The <strong>tax system</strong> — progressive taxation redistributes towards lower incomes. <strong>Welfare payments</strong> — support the disposable income of the poorest. The <strong>minimum wage</strong> — lifts the lowest earners. <strong>Trade unions</strong> — negotiate better pay for low- and middle-income workers.</p><p>And the <strong>distribution of assets</strong> itself: who already holds property and financial investments shapes the income they generate.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html"
+    },
+    {
+      "id": "edexcel-a-4-2-2-diagram-02",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "diagram",
+      "difficulty": "stretch",
+      "tags": [
+        "inequality",
+        "diagram"
+      ],
+      "front": "<p>What does the <strong>Kuznets curve</strong> hypothesise about development and inequality?</p>",
+      "back": "<p>As an economy develops, inequality <strong>first rises and then falls</strong> after a turning point — an inverted U against real GDP per capita.</p><p>Early on, <strong>urbanisation and industrialisation</strong> raise inequality: those in the industrial sector out-earn those left in agriculture. As development continues, <strong>education, social mobility and government intervention</strong> — progressive taxation and welfare — pull inequality back down.</p>",
+      "svgRef": "/images/diagrams/svg/kuznets-curve.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html",
+      "svgAlt": "Kuznets curve diagram: an inverted U of income inequality against economic development, peaking at the dashed boundary between developing and developed economies"
+    },
+    {
+      "id": "edexcel-a-4-2-2-def-03",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "inequality"
+      ],
+      "front": "<p>What is the <strong>significance of capitalism for inequality</strong>?</p>",
+      "back": "<p><strong>Capitalism</strong>: an economic system based on private ownership of the factors of production with the aim of generating profit.</p><p>It rewards individuals by their ability to generate profit, so disparities in income and wealth follow — and they compound: those who <strong>own capital</strong> accumulate wealth more easily than those who rely solely on wages. Some inequality is thus built into capitalism's incentive structure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html"
+    },
+    {
+      "id": "edexcel-a-4-2-2-eval-01",
+      "specCode": "4.2.2",
+      "topic": "4.2 Poverty and inequality",
+      "subtopic": "4-2-2-inequality",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "inequality",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate: does <strong>inequality</strong> help or harm an economy?</p>",
+      "back": "<p><strong>Benefits</strong>: some inequality creates <strong>incentives</strong> to work, innovate and take risks; encourages investment in <strong>human capital</strong>; and rewards contribution, aiding <strong>efficient resource allocation</strong>.</p><p><strong>Costs</strong>: extreme inequality <strong>demotivates</strong> those who see the system as unfair; entrenches <strong>social immobility</strong> where the disadvantaged cannot access education and opportunity; and widens <strong>health and living-standard disparities</strong>. The question is not whether to have inequality but how much.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-2-2-inequality.html"
+    },
+    {
+      "id": "edexcel-a-4-3-1-def-01",
+      "specCode": "4.3.1",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-1-measures-of-development",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Distinguish <strong>economic growth</strong> from <strong>economic development</strong>.</p>",
+      "back": "<p><strong>Economic growth</strong> is the narrower concept, measured by increases in <strong>real GDP</strong>.</p><p><strong>Economic development</strong>: a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life — non-material factors such as health, education and equality. Growth does not automatically mean development.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-1-def-02",
+      "specCode": "4.3.1",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-1-measures-of-development",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Distinguish <strong>single</strong> from <strong>composite</strong> indicators of development.</p>",
+      "back": "<p><strong>Single indicators</strong> measure one aspect of development — the infant mortality rate, literacy rate, or access to clean water. Useful for specific comparisons, but each gives only a <strong>partial picture</strong>.</p><p><strong>Composite indicators</strong> combine several single indicators into one index for a more rounded view — the HDI is the leading example.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-1-def-03",
+      "specCode": "4.3.1",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-1-measures-of-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>What are the <strong>three dimensions of the HDI</strong> — and how is it scored?</p>",
+      "back": "<p>The UN's <strong>Human Development Index</strong> combines three equally weighted elements: <strong>health</strong> (life expectancy at birth), <strong>education</strong> (mean years of schooling for adults, expected years for children) and <strong>income</strong> (real GNI per capita at <strong>PPP</strong>, adjusting for cost-of-living differences).</p><p>Countries score between <strong>0 and 1</strong> — Norway 0.961, Niger 0.394 — with higher scores meaning higher human development.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-1-eval-01",
+      "specCode": "4.3.1",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-1-measures-of-development",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "development",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>HDI</strong> as a measure of development.</p>",
+      "back": "<p><strong>For</strong>: a composite measure capturing more than income; enables international comparisons; puts health and education alongside GDP.</p><p><strong>Against</strong>: it hides <strong>inequality</strong> within countries — two countries with the same HDI can distribute opportunity very differently; ignores <strong>sustainability</strong> and the environment; and rests on <strong>data quality</strong> that is often unreliable in developing countries — life expectancy figures are estimates.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-1-def-04",
+      "specCode": "4.3.1",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-1-measures-of-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Name <strong>other indicators of development</strong> beyond the HDI.</p>",
+      "back": "<p>The <strong>Multidimensional Poverty Index (MPI)</strong> across health, education and living standards; the <strong>Inequality-adjusted HDI (IHDI)</strong>, discounting the HDI for inequality; <strong>GNI per capita</strong>; and <strong>access to clean water and sanitation</strong>.</p><p>Plus <strong>environmental indicators</strong> (emissions, deforestation, biodiversity loss — is development sustainable?), the <strong>Human Poverty Index</strong> and the <strong>Social Progress Index</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-2-def-01",
+      "specCode": "4.3.2",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-2-factors-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>How does <strong>primary product dependency</strong> hold back development?</p>",
+      "back": "<p>An economy reliant on exporting raw materials or agricultural products faces <strong>price volatility</strong> — commodity prices swing, so export revenues are unstable — and a <strong>limited ability to add value</strong>, capping long-run growth in real GDP.</p><p>It also risks <strong>Dutch disease</strong>: a primary-product boom drives the currency up, pricing the country's other exports out of world markets.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-2-def-02",
+      "specCode": "4.3.2",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-2-factors-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>What is the <strong>savings gap</strong> — and what does the <strong>Harrod-Domar model</strong> say about it?</p>",
+      "back": "<p>The <strong>savings gap</strong>: the difference between the savings available for investment in an economy and the amount needed to achieve the desired rate of growth.</p><p>The <strong>Harrod-Domar model</strong> suggests that economic growth is directly related to the level of savings and investment in an economy: a higher savings rate funds more investment in capital goods, raising productivity and growth — so a savings gap traps poor countries in low growth.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-2-def-03",
+      "specCode": "4.3.2",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-2-factors-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Define the <strong>foreign currency gap</strong> and <strong>capital flight</strong>.</p>",
+      "back": "<p><strong>Foreign currency gap</strong>: occurs when a country does not have enough foreign currency to pay for essential imports — machinery, technology, raw materials — often because reserves are drained by <strong>debt payments</strong> or a persistent <strong>trade deficit</strong>.</p><p><strong>Capital flight</strong>: the rapid outflow of financial assets and capital driven by economic or political instability, stripping the economy of funds for domestic investment.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-2-def-04",
+      "specCode": "4.3.2",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-2-factors-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>What <strong>other economic factors</strong> influence growth and development?</p>",
+      "back": "<p><strong>Demographics</strong> — rapid population growth strains resources, ageing shrinks the workforce. <strong>Debt</strong> — servicing it diverts resources from investment and scares off FDI. <strong>Access to credit and banking</strong> — without it, individuals and firms cannot fund productive investment. <strong>Infrastructure</strong> — poor transport, communication and energy raise costs and cut off markets.</p><p><strong>Education and skills</strong> build the human capital growth needs — and an <strong>absence of property rights</strong> undermines it all: without secure legal ownership, why invest or innovate?</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-2-def-05",
+      "specCode": "4.3.2",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-2-factors-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>What <strong>non-economic factors</strong> influence growth and development?</p>",
+      "back": "<p><strong>Corruption</strong> — diverts resources from productive investment, distorts decisions and raises costs. <strong>Poor governance and political instability</strong> — create uncertainty, deter foreign investment and waste resources.</p><p><strong>Conflict and war</strong> — destroy physical capital and can set development back decades. And <strong>geography</strong> — being landlocked or facing difficult terrain raises transport costs and weakens trade competitiveness.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-3-def-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Name the six <strong>market-orientated development strategies</strong>.</p>",
+      "back": "<p><strong>Trade liberalisation</strong> (cut tariffs, grow through trade), <strong>promotion of FDI</strong> (foreign capital, technology and expertise), <strong>removal of government subsidies</strong> (efficiency and freed spending), <strong>floating exchange rates</strong> (self-correcting trade imbalances), <strong>microfinance</strong> (small loans for those outside banking), and <strong>privatisation</strong> (profit incentives for efficiency).</p><p>All rely on <strong>free market forces</strong> and the private sector to drive development.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-3-def-02",
+      "specCode": "4.3.3",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Name the six <strong>interventionist development strategies</strong>.</p>",
+      "back": "<p><strong>Development of human capital</strong> (education and healthcare), <strong>protectionism</strong> (shelter domestic industries while they grow), <strong>managed exchange rates</strong> (stability for exporters and investors), <strong>infrastructure development</strong> (transport, energy, communications), <strong>joint ventures with global companies</strong> (investment and technology transfer), and <strong>buffer stock schemes</strong> (stabilise commodity prices).</p><p>All are government-led actions designed to <strong>correct market failure</strong> and direct development.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-3-diagram-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "cardType": "diagram",
+      "difficulty": "stretch",
+      "tags": [
+        "development",
+        "diagram"
+      ],
+      "front": "<p>Show how a <strong>buffer stock scheme</strong> stabilises a commodity price.</p>",
+      "back": "<p>The scheme defends a band between <strong>Pmax and Pmin</strong>. In a normal year S1 sets P1 inside the band. A <strong>good harvest</strong> (S2) would push the price to P2, below the floor — so the scheme <strong>buys stock</strong>, moving supply back towards S1. A <strong>bad harvest</strong> (S3) would send the price to P3, above the ceiling — so it <strong>sells stock</strong>.</p><p>Stable prices smooth producers' incomes, encouraging investment in the sector — if the scheme can afford to hold the stock and judges the band well.</p>",
+      "svgRef": "/images/diagrams/svg/buffer-stocks.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
+      "svgAlt": "Commodity market diagram with demand, three supply curves and a price band: a good harvest pushes the price below the floor so the scheme buys stock, a bad harvest pushes it above the ceiling so the scheme sells, keeping the price between Pmax and Pmin"
+    },
+    {
+      "id": "edexcel-a-4-3-3-def-03",
+      "specCode": "4.3.3",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>What does the <strong>Lewis model</strong> say about industrialisation — and what are its limits?</p>",
+      "back": "<p>The <strong>Lewis model</strong>: explains how labour from the agricultural sector can be transferred to the industrial sector, leading to economic growth and development — industry adds more value, raising real national income and living standards.</p><p>Its limits: it <strong>assumes surplus agricultural labour</strong>, which may not exist, and ignores industrialisation's negative externalities — environmental degradation and social inequality. Related routes: <strong>tourism</strong> (foreign exchange, but fragile) and <strong>primary industries</strong> (comparative advantage, but volatile).</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-3-eval-01",
+      "specCode": "4.3.3",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "development",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate <strong>Fairtrade, foreign aid and debt relief</strong> as development strategies.</p>",
+      "back": "<p><strong>Fairtrade</strong> guarantees minimum prices and premiums, raising producer incomes — but reaches few producers, and higher consumer prices limit demand. <strong>Aid</strong> (grants, soft loans, humanitarian support) funds vital projects — but can create dependency, be misallocated, or serve donors' political agendas.</p><p><strong>Debt relief</strong> frees resources for development and improves creditworthiness — but leaves structural problems untouched, and without fiscal discipline new debt simply accumulates.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-3-3-def-04",
+      "specCode": "4.3.3",
+      "topic": "4.3 Emerging and developing economies",
+      "subtopic": "4-3-3-strategies-influencing-growth-development",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "development"
+      ],
+      "front": "<p>Contrast the roles of the <strong>World Bank</strong>, the <strong>IMF</strong> and <strong>NGOs</strong> in development.</p>",
+      "back": "<p>The <strong>World Bank</strong> aims to reduce poverty through <strong>long-term loans</strong> for infrastructure and development projects, plus technical assistance. The <strong>IMF</strong> promotes global financial stability with <strong>short-term loans</strong> for balance-of-payments crises — usually with conditions, such as structural adjustment programmes and austerity.</p><p><strong>NGOs</strong> — non-profits independent of governments, like Oxfam — deliver aid, run development projects and advocate on specific issues such as education, healthcare and human rights.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html"
+    },
+    {
+      "id": "edexcel-a-4-4-1-def-01",
+      "specCode": "4.4.1",
+      "topic": "4.4 The financial sector",
+      "subtopic": "4-4-1-role-of-financial-markets",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "financial-sector"
+      ],
+      "front": "<p>What are the <strong>five functions of financial markets</strong>?</p>",
+      "back": "<p><strong>Facilitate saving</strong> — deposits, bonds and equities let households and firms earn a return and accumulate wealth (and, per Harrod-Domar, savings fund growth). <strong>Lend to businesses and individuals</strong> for investment and consumption. <strong>Facilitate the exchange of goods and services</strong> through money and payment systems.</p><p><strong>Provide forward markets</strong> in currencies and commodities, letting firms <strong>hedge</strong> price risk. And <strong>provide a market for equities</strong>, so firms can raise capital by issuing shares.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-1-role-of-financial-markets.html"
+    },
+    {
+      "id": "edexcel-a-4-4-2-def-01",
+      "specCode": "4.4.2",
+      "topic": "4.4 The financial sector",
+      "subtopic": "4-4-2-market-failure-in-the-financial-sector",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "financial-sector",
+        "market-failure"
+      ],
+      "front": "<p>How do <strong>asymmetric information</strong> and <strong>externalities</strong> cause financial market failure?</p>",
+      "back": "<p><strong>Asymmetric information</strong> — one party knows more than the other: lenders cannot tell high-risk from low-risk borrowers (<strong>adverse selection</strong>, raising rates and choking lending), and consumers misjudge products they do not understand, from payday loans to complex investments.</p><p><strong>Negative externalities</strong> — excessive risk-taking by banks imposes costs on third parties: the 2008 collapse of Lehman Brothers triggered a global recession and widespread job losses.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html"
+    },
+    {
+      "id": "edexcel-a-4-4-2-def-02",
+      "specCode": "4.4.2",
+      "topic": "4.4 The financial sector",
+      "subtopic": "4-4-2-market-failure-in-the-financial-sector",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "financial-sector",
+        "market-failure"
+      ],
+      "front": "<p>Define <strong>moral hazard</strong>, <strong>speculation</strong> and <strong>market rigging</strong> in the financial sector.</p>",
+      "back": "<p><strong>Moral hazard</strong>: occurs when individuals or institutions take on excessive risk because they do not bear the full consequences of their actions — banks expecting <strong>bailouts</strong>, or the insured taking chances they otherwise would not.</p><p><strong>Speculation</strong>: buying assets purely expecting prices to rise, inflating <strong>bubbles</strong> that burst into instability. <strong>Market rigging</strong>: manipulating markets for private gain — the <strong>LIBOR scandal</strong> — distorting prices and destroying trust.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html"
+    },
+    {
+      "id": "edexcel-a-4-4-2-def-03",
+      "specCode": "4.4.2",
+      "topic": "4.4 The financial sector",
+      "subtopic": "4-4-2-market-failure-in-the-financial-sector",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "financial-sector",
+        "market-failure"
+      ],
+      "front": "<p>What are the <strong>consequences of financial market failure</strong> for the wider economy?</p>",
+      "back": "<p><strong>Systemic risk</strong> — trouble in one institution spreads through the whole system into financial crisis. <strong>Loss of confidence</strong> — collapsing trust brings bank runs and panic.</p><p><strong>Real economic damage</strong> — recession, unemployment and lost output follow financial failure. And <strong>inequity</strong> — taxpayers end up bearing the cost of bailing out private institutions.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html"
+    },
+    {
+      "id": "edexcel-a-4-4-3-def-01",
+      "specCode": "4.4.3",
+      "topic": "4.4 The financial sector",
+      "subtopic": "4-4-3-role-of-central-banks",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "financial-sector",
+        "central-banks"
+      ],
+      "front": "<p>What are the <strong>key functions of a central bank</strong>?</p>",
+      "back": "<p><strong>Implementing monetary policy</strong> — the Bank of England's MPC sets interest rates (and QE at the zero lower bound) to meet the government's 2% CPI inflation target. <strong>Banker to the government</strong> — managing its accounts and issuing its debt.</p><p><strong>Banker to the banks</strong> — central banks act as a lender of last resort to commercial banks and other financial institutions in times of financial stress, providing emergency funding in a liquidity crisis. And <strong>regulating the banking system</strong>.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html"
+    },
+    {
+      "id": "edexcel-a-4-4-3-def-02",
+      "specCode": "4.4.3",
+      "topic": "4.4 The financial sector",
+      "subtopic": "4-4-3-role-of-central-banks",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "financial-sector",
+        "central-banks"
+      ],
+      "front": "<p>How does the <strong>Bank of England regulate</strong> the banking system?</p>",
+      "back": "<p>Through two arms. The <strong>Prudential Regulation Authority (PRA)</strong> sets rules for individual banks — minimum <strong>capital and liquidity</strong> requirements, tested against shocks by <strong>stress tests</strong>.</p><p>The <strong>Financial Policy Committee (FPC)</strong> watches the system as a whole, deploying <strong>macroprudential tools</strong> — such as loan-to-value limits — against excessive credit growth and asset bubbles that could threaten financial stability.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html"
+    },
+    {
+      "id": "edexcel-a-4-5-1-def-01",
+      "specCode": "4.5.1",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-1-public-expenditure",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "fiscal-policy"
+      ],
+      "front": "<p>Distinguish the <strong>three types of public expenditure</strong>.</p>",
+      "back": "<p><strong>Current expenditure</strong>: day-to-day spending on public sector wages, such as payments to teachers and nurses, and on the consumption of goods and services such as medicines and utilities.</p><p><strong>Capital expenditure</strong>: long-term investment in infrastructure — roads, hospitals, schools — raising productive potential. <strong>Transfer payments</strong>: payments with <strong>no good or service received in return</strong> — pensions, benefits, subsidies — which redistribute income but do not directly add to GDP.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html"
+    },
+    {
+      "id": "edexcel-a-4-5-1-def-02",
+      "specCode": "4.5.1",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-1-public-expenditure",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "fiscal-policy"
+      ],
+      "front": "<p>Why do the <strong>size and composition of public expenditure</strong> change over time?</p>",
+      "back": "<p><strong>Economic growth</strong> lifts tax revenue and cuts transfer payments, freeing spending for services. <strong>Demographic change</strong> — an ageing population — raises pension and healthcare spending. <strong>Political priorities</strong> shift money between sectors.</p><p><strong>External shocks</strong> — recessions, pandemics — force up transfers and stimulus. And <strong>technological change</strong> alters what public services cost and need, such as digital infrastructure.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html"
+    },
+    {
+      "id": "edexcel-a-4-5-1-eval-01",
+      "specCode": "4.5.1",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-1-public-expenditure",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "fiscal-policy",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the significance of <strong>public expenditure as a share of GDP</strong>.</p>",
+      "back": "<p><strong>For a bigger state</strong>: infrastructure, education and health spending raise productivity and LRAS; services and transfers lift living standards and <strong>equality</strong>.</p><p><strong>Against</strong>: <strong>crowding out</strong> — government borrowing bids up interest rates, squeezing private investment and consumption — and higher spending eventually means <strong>higher taxes</strong>, cutting disposable income. The verdict turns on what the money buys: capital spending that grows the economy, or current spending that must be financed forever.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html"
+    },
+    {
+      "id": "edexcel-a-4-5-2-def-01",
+      "specCode": "4.5.2",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-2-taxation",
+      "cardType": "definition",
+      "difficulty": "foundation",
+      "tags": [
+        "fiscal-policy",
+        "taxation"
+      ],
+      "front": "<p>Distinguish <strong>progressive, proportional and regressive</strong> taxes — and how do direct and indirect taxes map onto them?</p>",
+      "back": "<p><strong>Progressive</strong>: a tax where the percentage of income paid in tax rises as income rises — income tax, inheritance tax. <strong>Proportional</strong>: the percentage stays constant at every income. <strong>Regressive</strong>: the percentage falls as income rises — VAT and duties on tobacco and alcohol.</p><p><strong>Direct taxes</strong> (on income or profits: income tax, corporation tax, National Insurance) tend to be progressive; <strong>indirect taxes</strong> (on spending: VAT, excise duties) tend to be regressive.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html"
+    },
+    {
+      "id": "edexcel-a-4-5-2-diagram-01",
+      "specCode": "4.5.2",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-2-taxation",
+      "cardType": "diagram",
+      "difficulty": "stretch",
+      "tags": [
+        "fiscal-policy",
+        "taxation",
+        "diagram"
+      ],
+      "front": "<p>Show the <strong>Laffer curve</strong> — and why can a higher tax rate raise <em>less</em> revenue?</p>",
+      "back": "<p>Revenue is zero at a 0% tax rate <em>and</em> at 100%: in between, revenue rises to a peak and then falls. Raising the rate from <strong>t1 to t2</strong> cuts revenue from <strong>R1 to R2</strong>.</p><p>Beyond the peak, higher rates <strong>blunt incentives to work and invest</strong>, drive <strong>avoidance and evasion</strong>, and push skilled workers and capital abroad — <strong>brain drain and capital flight</strong> — shrinking the tax base faster than the rate rises.</p>",
+      "svgRef": "/images/diagrams/svg/laffer-curve.svg",
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+      "svgAlt": "Laffer curve: total tax revenue rises with the tax rate to a peak and then falls, with the rise from t1 to t2 cutting revenue from R1 to R2"
+    },
+    {
+      "id": "edexcel-a-4-5-2-eval-01",
+      "specCode": "4.5.2",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-2-taxation",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "fiscal-policy",
+        "taxation",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>economic effects of raising taxes</strong>.</p>",
+      "back": "<p>Higher income tax weakens <strong>incentives to work</strong>, shrinking labour supply; but progressive taxes narrow <strong>income inequality</strong>, while regressive ones widen it. Lower disposable income cuts consumption, so <strong>real output and employment</strong> fall; higher indirect taxes raise costs and feed <strong>cost-push inflation</strong>.</p><p>The <strong>trade balance</strong> can go either way — less consumption means fewer imports, but weaker domestic production invites them back. And higher corporation tax deters <strong>FDI</strong>, while cuts attract it.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-2-taxation.html"
+    },
+    {
+      "id": "edexcel-a-4-5-3-def-01",
+      "specCode": "4.5.3",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-3-public-sector-finances",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "fiscal-policy"
+      ],
+      "front": "<p>Distinguish <strong>automatic stabilisers</strong> from <strong>discretionary fiscal policy</strong>.</p>",
+      "back": "<p><strong>Automatic stabilisers</strong>: non-discretionary changes in government spending and taxation that occur automatically in response to changes in economic activity, helping to stabilise the economic cycle without the government intervening. In a <strong>boom</strong>, tax revenue rises and welfare spending falls; in a <strong>recession</strong>, the reverse — the deficit widens and cushions demand by itself.</p><p><strong>Discretionary fiscal policy</strong>: deliberate changes in spending and taxation to influence economic activity.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html"
+    },
+    {
+      "id": "edexcel-a-4-5-3-def-02",
+      "specCode": "4.5.3",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-3-public-sector-finances",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "fiscal-policy"
+      ],
+      "front": "<p>Distinguish a <strong>fiscal deficit</strong> from the <strong>national debt</strong> — and cyclical from structural deficits.</p>",
+      "back": "<p>A <strong>fiscal deficit</strong>: government spending exceeds taxation revenue in a given period — it resets each year. The <strong>national debt</strong>: the total amount of money that a government owes to creditors — the accumulation of past deficits and surpluses over time.</p><p>A <strong>cyclical deficit</strong> follows the economic cycle, widening in recession and narrowing in boom. A <strong>structural deficit</strong> persists even at potential output — a fundamental imbalance the cycle will not fix.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html"
+    },
+    {
+      "id": "edexcel-a-4-5-3-def-03",
+      "specCode": "4.5.3",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-3-public-sector-finances",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "fiscal-policy"
+      ],
+      "front": "<p>What influences the <strong>size of fiscal deficits and the national debt</strong>?</p>",
+      "back": "<p><strong>Economic growth</strong> — strong growth lifts tax revenue and trims welfare spending. <strong>Interest rates</strong> — higher rates raise the cost of servicing existing debt. <strong>Government spending priorities</strong> and <strong>taxation policy</strong> set the balance directly.</p><p>Then the pressures: <strong>demographic change</strong> (ageing populations demand more welfare and healthcare) and <strong>external shocks</strong> — crises, pandemics, disasters — that force spending up as revenue falls.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html"
+    },
+    {
+      "id": "edexcel-a-4-5-3-eval-01",
+      "specCode": "4.5.3",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-3-public-sector-finances",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "fiscal-policy",
+        "evaluation"
+      ],
+      "front": "<p>Why do <strong>large deficits and high national debt</strong> matter?</p>",
+      "back": "<p><strong>Economic stability</strong> — eroding confidence raises borrowing costs and deters investment; persistent deficits risk <strong>credit-rating downgrades</strong> and, at the limit, a debt crisis. <strong>Intergenerational equity</strong> — future taxpayers inherit the repayments.</p><p><strong>Inflation</strong> — financing deficits by printing money debases the currency. And <strong>policy flexibility</strong> — a heavily indebted government has little fiscal room left when the next shock arrives.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html"
+    },
+    {
+      "id": "edexcel-a-4-5-4-def-01",
+      "specCode": "4.5.4",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-4-macroeconomic-policies-in-a-global-context",
+      "cardType": "definition",
+      "difficulty": "standard",
+      "tags": [
+        "fiscal-policy",
+        "global-economy"
+      ],
+      "front": "<p>What policies address <strong>fiscal deficits and debt</strong>, and <strong>poverty and inequality</strong>, in a global context?</p>",
+      "back": "<p><strong>Deficits and debt</strong>: fiscal <strong>austerity</strong> (spending cuts, tax rises) to restore confidence; <strong>structural reforms</strong> — labour markets, pensions, public-service efficiency — to grow revenue; and <strong>debt restructuring</strong> with creditors: longer repayment, lower rates, or partial write-off.</p><p><strong>Poverty and inequality</strong>: progressive taxation, social welfare programmes, and investment in education and healthcare to raise social mobility.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html"
+    },
+    {
+      "id": "edexcel-a-4-5-4-def-02",
+      "specCode": "4.5.4",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-4-macroeconomic-policies-in-a-global-context",
+      "cardType": "definition",
+      "difficulty": "stretch",
+      "tags": [
+        "fiscal-policy",
+        "global-economy"
+      ],
+      "front": "<p>How can governments <strong>control global companies</strong> — and what limits them?</p>",
+      "back": "<p>Tools: <strong>regulation</strong> (antitrust, environmental and labour standards), <strong>taxation</strong> — including rules against <strong>transfer pricing</strong>, where an MNC prices sales between its own subsidiaries to shift profits into low-tax jurisdictions — and <strong>international cooperation</strong> through the OECD and UN.</p><p>The limits: global firms can <strong>relocate</strong> to friendlier regimes, exploit <strong>regulatory arbitrage</strong> between countries, and effective control ultimately requires international coordination no single government can impose.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html"
+    },
+    {
+      "id": "edexcel-a-4-5-4-eval-01",
+      "specCode": "4.5.4",
+      "topic": "4.5 Role of the state in the macroeconomy",
+      "subtopic": "4-5-4-macroeconomic-policies-in-a-global-context",
+      "cardType": "evaluation",
+      "difficulty": "stretch",
+      "tags": [
+        "fiscal-policy",
+        "global-economy",
+        "evaluation"
+      ],
+      "front": "<p>Evaluate the <strong>problems facing policymakers</strong> in a global economy.</p>",
+      "back": "<p><strong>Inaccurate information</strong> — policy is set on data and forecasts that are often wrong or incomplete, producing unintended consequences. <strong>Risks and uncertainties</strong> — economic shocks, geopolitical events and shifting global markets defy prediction.</p><p>And an <strong>inability to control external shocks</strong> — global crises arrive regardless of domestic policy; governments can only respond, with monetary, fiscal and exchange-rate tools whose effects come with lags. Policy in an interconnected world is damage limitation as much as control.</p>",
+      "svgRef": null,
+      "notesUrl": "/revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html"
+    }
+  ]
+}

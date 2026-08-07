@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The impact of a tariff</title>
+  <desc id="d">A tariff diagram with domestic supply and demand curves and two horizontal world supply lines, Sworld and Sworld plus tariff. The tariff raises the price from P1 to P2: domestic output rises from Q1 to Q2, consumption falls from Q4 to Q3 and imports shrink from Q4 minus Q1 to Q3 minus Q2. The green area is the gain in domestic producer surplus, the purple rectangle is government tariff revenue, and the two red triangles are the net welfare loss.</desc>
+  <!-- geometry
+       intersections: 250,380 330,300 430,300 510,380 380,250
+  -->
+  <!-- shaded areas -->
+  <path d="M 100,300 L 330,300 L 250,380 L 100,380 Z" fill="#2e8540" fill-opacity="0.2" stroke="none"/>
+  <rect x="330" y="300" width="100" height="80" fill="#6929c4" fill-opacity="0.15" stroke="none"/>
+  <path d="M 250,380 L 330,300 L 330,380 Z" fill="#d52349" fill-opacity="0.15" stroke="none"/>
+  <path d="M 430,300 L 510,380 L 430,380 Z" fill="#d52349" fill-opacity="0.15" stroke="none"/>
+  <!-- guides -->
+  <line x1="250" y1="380" x2="250" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="330" y1="300" x2="330" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="430" y1="300" x2="430" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="510" y1="380" x2="510" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="690" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Price</text>
+  <text x="708" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="150" y1="480" x2="570" y2="60" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="190" y1="60" x2="640" y2="510" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="380" x2="610" y2="380" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="300" x2="610" y2="300" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="582" y="68" font-size="26" font-weight="700" fill="#1d70b8">Sdomestic</text>
+  <text x="652" y="516" font-size="26" font-weight="700" fill="#1d70b8">Ddomestic</text>
+  <text x="618" y="308" font-size="26" font-weight="700" fill="#0f7b6c">Sworld+tariff</text>
+  <text x="618" y="388" font-size="26" font-weight="700" fill="#0f7b6c">Sworld</text>
+  <text x="92" y="308" font-size="24" fill="#333333" text-anchor="end">P2</text>
+  <text x="92" y="388" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="250" y="552" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="330" y="552" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <text x="430" y="552" font-size="24" fill="#333333" text-anchor="middle">Q3</text>
+  <text x="510" y="552" font-size="24" fill="#333333" text-anchor="middle">Q4</text>
+</svg>

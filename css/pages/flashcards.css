@@ -507,14 +507,19 @@
 
 .flashcards-page .fc-board {
   margin-top: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25em;
+  align-items: stretch;
 }
 
 .flashcards-page .fc-board h2 {
-  display: inline-block;
+  grid-column: 1 / -1;
+  justify-self: start;
   color: var(--fc-primary);
   border-bottom: 3px solid var(--fc-teal);
   padding-bottom: 0.2em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0;
 }
 
 .flashcards-page .fc-deck-card {
@@ -524,8 +529,7 @@
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(26, 62, 114, 0.06);
   padding: 1.25em 1.5em;
-  margin: 0.75em 0;
-  max-width: 480px;
+  margin: 0;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -555,6 +559,10 @@
 @media screen and (max-width: 736px) {
   .flashcards-page header.major h1 {
     font-size: 1.6em;
+  }
+
+  .flashcards-page .fc-board {
+    grid-template-columns: 1fr;
   }
 
   .flashcards-page .fc-player {

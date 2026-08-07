@@ -1282,6 +1282,826 @@
         "notesPage": "/revision-notes/aqa-a2-macro/2-5-2-supply-side-policies.html",
         "origin": "card-authored"
       }
+    },
+    {
+      "id": "aqa-2-4-1-def-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "cardType": "definition",
+      "front": "<p>What are the <strong>functions and characteristics of money</strong>?</p>",
+      "back": "<p>Four functions: a <strong>medium of exchange</strong>, a <strong>unit of account</strong> for comparing value, a <strong>store of value</strong> for deferring consumption, and a <strong>standard of deferred payment</strong> for settling debts over time.</p><p>Six characteristics make something work as money: <strong>durability, portability, divisibility, uniformity, acceptability</strong> and <strong>limited supply</strong> — the last is what protects its value from inflation.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["financial-markets", "money"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-1-def-02",
+      "specCode": "2.4.1",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>money supply</strong> — and distinguish <strong>narrow money</strong> from <strong>broad money</strong>.</p>",
+      "back": "<p><strong>Money supply</strong>: the total amount of money available in an economy at a particular point in time.</p><p><strong>Narrow money</strong> (M1): the most liquid forms — cash and demand deposits, readily available for transactions. <strong>Broad money</strong> (M2, M3…): narrow money plus less liquid forms such as savings accounts and time deposits — the total money supply, liquid and less liquid alike.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["financial-markets", "money"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The total amount of money available in an economy at a particular point in time."
+      }
+    },
+    {
+      "id": "aqa-2-4-1-def-03",
+      "specCode": "2.4.1",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "cardType": "definition",
+      "front": "<p>Distinguish the <strong>money market</strong>, the <strong>capital market</strong> and the <strong>foreign exchange market</strong>.</p>",
+      "back": "<p>The <strong>money market</strong>: short-term borrowing and lending, typically a year or less — how firms and governments manage short-term funding. The <strong>capital market</strong>: long-term borrowing and lending beyond a year — where bonds and shares raise capital for investment and expansion.</p><p>The <strong>foreign exchange market</strong>: where currencies are bought and sold, letting firms manage exchange-rate risk. Together they channel savings into investment across the wider economy.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["financial-markets"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-1-def-04",
+      "specCode": "2.4.1",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>debt</strong> from <strong>equity</strong> as ways for a firm to raise finance.</p>",
+      "back": "<p><strong>Debt</strong>: borrowed funds — bank loans or corporate bonds — that must be repaid with interest. Interest is tax-deductible and ownership is not diluted, and debt can be the cheaper source of finance.</p><p><strong>Equity</strong>: funds raised by issuing shares. Shareholders become part-owners entitled to dividends from profits — no repayment obligation, a long-term source of capital, but ownership is diluted. Firms raise finance by issuing shares, issuing corporate bonds, or borrowing from a bank.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["financial-markets"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-1-formula-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "cardType": "formula",
+      "front": "<p>Define a <strong>bond</strong>, its <strong>coupon</strong> and <strong>maturity</strong> — and state the <strong>yield</strong> formula.</p>",
+      "back": "<p><strong>Bond</strong>: a tradable debt security issued by a government or a firm in order to borrow money — UK government bonds are <strong>gilts</strong>. The <strong>coupon</strong> is the fixed annual interest payment as a percentage of the £100 face value; <strong>maturity</strong> is the date the face value is repaid in one lump sum.</p><p><strong>Bond yield (%) = annual coupon payment ÷ market price × 100</strong>. The coupon is fixed, so when the market price falls the yield rises — and vice versa.</p>",
+      "formula": "Bond yield (%) = annual coupon payment ÷ market price of bond × 100",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["financial-markets", "bonds", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A tradable debt security issued by a government or a firm in order to borrow money."
+      }
+    },
+    {
+      "id": "aqa-2-4-1-calc-01",
+      "specCode": "2.4.1",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-1-the-structure-of-financial-markets-and-financial-assets",
+      "cardType": "calculation",
+      "front": "<p>A gilt has a <strong>£100 face value</strong> and a <strong>4% coupon</strong>. Calculate its yield at a market price of <strong>£80</strong> and at <strong>£160</strong> — what does this show?</p>",
+      "back": "<p>The coupon is fixed at <strong>£4 a year</strong>. At £80: 4 ÷ 80 × 100 = <strong>5%</strong>. At £160: 4 ÷ 160 × 100 = <strong>2.5%</strong>.</p><p>The <strong>inverse relationship</strong> between bond prices and yields: the same £4 is a bigger return on a cheaper bond. When market interest rates rise, existing bonds' fixed coupons look unattractive, their prices fall — and their yields rise to match the market.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["financial-markets", "bonds", "calculation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-1-the-structure-of-financial-markets-and-financial-assets.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-2-def-01",
+      "specCode": "2.4.2",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-2-commercial-banks-and-investment-banks",
+      "cardType": "definition",
+      "front": "<p>Distinguish a <strong>commercial bank</strong> from an <strong>investment bank</strong>.</p>",
+      "back": "<p><strong>Commercial bank</strong>: a bank that accepts deposits from households and firms, makes loans to them, and provides a payments system — profiting from the interest rate spread. Its three functions: <strong>accepting deposits</strong> (sight and time accounts), <strong>lending</strong>, and <strong>providing a payments mechanism</strong>.</p><p><strong>Investment bank</strong>: takes no public deposits; it underwrites share and bond issues, advises on takeovers and trades securities for large firms, governments and institutions — higher risk, funded from wholesale markets. Many banks do both, which raises systemic risk.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["financial-markets", "banking"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A bank that accepts deposits from households and firms, makes loans to them, and provides a payments system."
+      }
+    },
+    {
+      "id": "aqa-2-4-2-def-02",
+      "specCode": "2.4.2",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-2-commercial-banks-and-investment-banks",
+      "cardType": "definition",
+      "front": "<p>Describe the structure of a <strong>commercial bank's balance sheet</strong>.</p>",
+      "back": "<p><strong>Assets = Liabilities + Capital</strong>, always. <strong>Deposits are liabilities</strong> — the bank owes them back to customers; <strong>loans are assets</strong> — borrowers owe them to the bank. Getting that backwards is the classic error.</p><p>Liabilities: customer deposits (largest), bonds issued and wholesale borrowing. Assets, in <strong>descending order of liquidity</strong>: cash and central-bank balances, bills, then loans and advances — the least liquid but most profitable, and normally the largest.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["financial-markets", "banking"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-2-def-03",
+      "specCode": "2.4.2",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-2-commercial-banks-and-investment-banks",
+      "cardType": "definition",
+      "front": "<p>What are a commercial bank's <strong>three objectives</strong> — and how do they conflict?</p>",
+      "back": "<p><strong>Liquidity</strong> (meet withdrawals on demand — survival), <strong>profitability</strong> (maximise returns for shareholders) and <strong>security</strong> (minimise losses from bad debts).</p><p>The central conflict is <strong>liquidity vs profitability</strong>: the most liquid assets earn the least, the most profitable are the least liquid — too little liquidity risks a <strong>bank run</strong>, too much sacrifices profit. And <strong>profitability vs security</strong>: higher returns come only from riskier lending, whose defaults can wipe out the bank's capital.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["financial-markets", "banking"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-2-def-04",
+      "specCode": "2.4.2",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-2-commercial-banks-and-investment-banks",
+      "cardType": "definition",
+      "front": "<p>How do <strong>banks create credit</strong>?</p>",
+      "back": "<p><strong>Credit creation</strong>: the process by which commercial banks make loans that create new bank deposits, thereby increasing the money supply. A new loan <strong>credits the borrower's account with a new deposit</strong> — banks do not merely lend out savers' money.</p><p>It rests on <strong>fractional reserve banking</strong>: only a fraction of deposits is ever withdrawn at once, so banks hold a fraction as reserves and lend the rest; each loan becomes someone else's deposit and the cycle repeats, multiplying deposits. Credit growth drives AD — and excessive growth feeds inflation and asset bubbles.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["financial-markets", "banking"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-2-commercial-banks-and-investment-banks.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The process by which commercial banks make loans that create new bank deposits, thereby increasing the money supply."
+      }
+    },
+    {
+      "id": "aqa-2-4-3-def-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-3-central-banks-and-monetary-policy",
+      "cardType": "definition",
+      "front": "<p>Define a <strong>central bank</strong> — and its main functions.</p>",
+      "back": "<p><strong>Central bank</strong>: a national bank that provides financial and banking services for a country's government and commercial banks — in the UK, the <strong>Bank of England</strong>.</p><p>Its functions: <strong>issuing currency</strong>, <strong>managing the money supply</strong>, <strong>setting interest rates</strong>, acting as <strong>lender of last resort</strong> in crises, and <strong>regulating and supervising banks</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["monetary-policy", "central-banks"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
+        "origin": "notes-verbatim",
+        "verbatim": "A national bank that provides financial and banking services for a country's government and commercial banks."
+      }
+    },
+    {
+      "id": "aqa-2-4-3-def-02",
+      "specCode": "2.4.3",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-3-central-banks-and-monetary-policy",
+      "cardType": "definition",
+      "front": "<p>How does a cut in <strong>interest rates</strong> feed through to aggregate demand?</p>",
+      "back": "<p>The MPC's rate changes reach AD through three channels. <strong>Consumption</strong>: cheaper borrowing, less reward for saving, and variable-rate mortgage holders keep more disposable income. <strong>Investment</strong>: firms' cost of borrowing falls, so more projects pay.</p><p><strong>Net exports</strong>: lower returns send <strong>hot money</strong> abroad, the extra supply of pounds depreciates the currency, exports cheapen and imports dearen. All three raise AD — and a rate rise runs the whole mechanism in reverse.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["monetary-policy", "central-banks"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-3-diagram-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-3-central-banks-and-monetary-policy",
+      "cardType": "diagram",
+      "front": "<p>Show the impact of <strong>expansionary monetary policy</strong> on the AQA macro objectives.</p>",
+      "back": "<p>AD shifts right from AD1 to AD2: real GDP rises Y1 to Y2 and the price level PL1 to PL2 — <strong>growth up, unemployment down</strong> (derived demand for labour), <strong>inflation up</strong>; the weaker pound helps net trade. On the classical curve at full employment, the same shift raises only the price level.</p><p>Watch the distribution effects: cheap money inflates asset prices, favouring the asset-rich — and higher consumption strains environmental sustainability.</p>",
+      "svgRef": "/images/diagrams/svg/keynesian-ad-shift-right.svg",
+      "svgAlt": "Keynesian AS curve with aggregate demand shifting right from AD1 to AD2, raising real GDP from Y1 to Y2 and the price level from PL1 to PL2 below full employment output Yfe",
+      "difficulty": "standard",
+      "tags": ["monetary-policy", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-3-def-03",
+      "specCode": "2.4.3",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-3-central-banks-and-monetary-policy",
+      "cardType": "definition",
+      "front": "<p>How does <strong>quantitative easing</strong> work — and name the four channels of the <strong>transmission mechanism</strong>.</p>",
+      "back": "<p><strong>QE</strong>: the central bank creates new money and buys government bonds from financial institutions; the banks' liquidity rises, so to lend it out they cut commercial interest rates — and the lower rates stimulate C, I and (X−M) just as a Bank Rate cut would.</p><p>The transmission mechanism's four channels: the <strong>interest rate channel</strong>, the <strong>credit channel</strong> (availability of lending), the <strong>exchange rate channel</strong> (hot money and the currency), and the <strong>asset price channel</strong> (wealth effects on consumption).</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["monetary-policy", "central-banks"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-3-eval-01",
+      "specCode": "2.4.3",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-3-central-banks-and-monetary-policy",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the effectiveness of <strong>interest rate cuts and QE</strong>.</p>",
+      "back": "<p><strong>Time lags</strong> — effects can take up to two years; fixed-rate borrowers feel nothing at first. The <strong>liquidity trap</strong> — near the zero lower bound, further cuts change little, which is why QE exists at all.</p><p><strong>Asset price bubbles</strong> — cheap money inflates housing and shares, and bursting bubbles bring crises. And <strong>confidence</strong> — in a recession, households save the windfall and firms delay investment regardless of the rate. Monetary policy pulls on a string it cannot push.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["monetary-policy", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-4-def-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-4-the-regulation-of-the-financial-system",
+      "cardType": "definition",
+      "front": "<p>Who <strong>regulates the UK financial system</strong> — and what does each body do?</p>",
+      "back": "<p>Within the Bank of England: the <strong>Prudential Regulation Authority (PRA)</strong> sets capital and liquidity standards for individual banks and runs stress tests; the <strong>Financial Policy Committee (FPC)</strong> watches the whole system, deploying macroprudential tools such as loan-to-value limits.</p><p>The <strong>Financial Conduct Authority (FCA)</strong> polices conduct: protecting consumers, promoting competition, and holding institutions to rules on fair treatment and disclosure.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["financial-markets", "regulation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-4-4-formula-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-4-the-regulation-of-the-financial-system",
+      "cardType": "formula",
+      "front": "<p>Define the <strong>liquidity ratio</strong> and <strong>capital ratio</strong> — and which failure does each guard against?</p>",
+      "back": "<p><strong>Liquidity ratio</strong>: the proportion of a bank's assets that are held in liquid form, such as cash, reserves at the central bank and easily marketable securities — liquid assets ÷ total assets × 100. It guards against <strong>illiquidity</strong>: being unable to meet withdrawals, the bank-run failure of borrowing short and lending long.</p><p><strong>Capital ratio</strong>: capital ÷ risk-weighted assets × 100. Capital absorbs losses when borrowers default; once losses exceed it, the bank is <strong>insolvent</strong>.</p>",
+      "formula": "Liquidity ratio = liquid assets ÷ total assets × 100; Capital ratio = capital ÷ risk-weighted assets × 100",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["financial-markets", "regulation", "formula"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The proportion of a bank's assets that are held in liquid form, such as cash, reserves at the central bank and easily marketable securities."
+      }
+    },
+    {
+      "id": "aqa-2-4-4-eval-01",
+      "specCode": "2.4.4",
+      "topic": "2.4 Financial markets and monetary policy",
+      "subtopic": "2-4-4-the-regulation-of-the-financial-system",
+      "cardType": "evaluation",
+      "front": "<p>Explain <strong>systemic risk</strong> and <strong>moral hazard</strong> — and why regulating them involves a trade-off.</p>",
+      "back": "<p><strong>Systemic risk</strong>: the risk that the failure of one financial institution triggers the failure of others and a wider financial crisis — interbank lending, shared assets and confidence spread failure by contagion (Lehman Brothers, 2008). <strong>Moral hazard</strong>: too-big-to-fail banks take excessive risks expecting bailouts (RBS and Lloyds).</p><p>The trade-off: the tools that contain systemic risk — deposit insurance, lender of last resort, bailouts — are the very tools that create moral hazard; and the capital and liquidity rules that make banks safer also restrict credit creation and growth. Regulators can fully eliminate neither risk.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["financial-markets", "regulation", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-4-4-the-regulation-of-the-financial-system.html",
+        "origin": "notes-verbatim",
+        "verbatim": "The risk that the failure of one financial institution triggers the failure of others and a wider financial crisis."
+      }
+    },
+    {
+      "id": "aqa-2-6-1-def-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-1-globalisation",
+      "cardType": "definition",
+      "front": "<p>Define <strong>globalisation</strong> — and what characterises it?</p>",
+      "back": "<p><strong>Globalisation</strong>: the increasing integration and interdependence of the world's economies.</p><p>Its characteristics: increased <strong>free trade</strong> in goods and services across borders; increased <strong>foreign direct investment (FDI)</strong> and capital flows; increased <strong>foreign ownership of firms</strong> through multinational and transnational corporations; and increased <strong>freedom of movement of labour</strong> between countries.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["globalisation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-1-globalisation.html",
+        "origin": "notes-verbatim",
+        "verbatim": "the increasing integration and interdependence of the world's economies."
+      }
+    },
+    {
+      "id": "aqa-2-6-1-def-02",
+      "specCode": "2.6.1",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-1-globalisation",
+      "cardType": "definition",
+      "front": "<p>What has <strong>driven globalisation over the last 50 years</strong>?</p>",
+      "back": "<p><strong>Trade liberalisation</strong> — falling tariffs and quotas (China's WTO entry in 2001 transformed its trade); <strong>advances in transport and communication technology</strong>; the growth of <strong>MNCs</strong> building global supply chains (Apple, Amazon, Unilever); and <strong>containerisation</strong>, which slashed shipping costs and time.</p><p>Plus the <strong>deregulation of financial markets</strong> in the 1990s freeing capital flows, and <strong>global institutions</strong> — the WTO, IMF and World Bank — promoting free trade and investment.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["globalisation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-1-globalisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-1-eval-01",
+      "specCode": "2.6.1",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-1-globalisation",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the <strong>consequences of globalisation</strong> across its stakeholders.</p>",
+      "back": "<p><strong>Consumers</strong>: lower prices, more variety and quality — against cultural imperialism and import-quality concerns. <strong>Workers</strong>: jobs and rising wages in developing countries — against job losses where production relocates. <strong>Firms</strong>: bigger markets, cheaper inputs and economies of scale — against fiercer competition and fragile supply chains.</p><p><strong>Governments</strong>: growth and tax revenue — against inequality and exposure to external shocks. The <strong>environment</strong> mostly loses: more production, transport, emissions and resource exploitation.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["globalisation", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-1-globalisation.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-2-def-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-2-trade",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>absolute advantage</strong> from <strong>comparative advantage</strong>.</p>",
+      "back": "<p><strong>Absolute advantage</strong>: a country can produce more of a good with the same resources than another country — productivity and efficiency.</p><p><strong>Comparative advantage</strong>: a country can produce a good at a lower opportunity cost than another country. The theory says countries should specialise where their opportunity cost is lowest — raising the efficiency of resource allocation and total global output.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["trade"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a situation in which a country can produce a good at a lower opportunity cost than another country."
+      }
+    },
+    {
+      "id": "aqa-2-6-2-diagram-01",
+      "specCode": "2.6.2",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-2-trade",
+      "cardType": "diagram",
+      "front": "<p>Show <strong>comparative advantage</strong> using two countries' PPFs.</p>",
+      "back": "<p>Germany's PPF runs from 150mn T-shirts to <strong>20mn chips</strong>; Vietnam's from <strong>200mn T-shirts</strong> to 10mn chips — each has an absolute advantage in one good. Opportunity costs: a chip costs Germany <strong>7.5 T-shirts</strong> but Vietnam <strong>20</strong>; a T-shirt costs Vietnam <strong>0.05 chips</strong> but Germany 0.13.</p><p>Each specialises where its opportunity cost is <strong>lower</strong>: fully specialised, they produce <strong>20m chips and 200mn T-shirts</strong> — beating the 15m and 175mn made without specialisation — and by trading, both consume <strong>beyond their own PPFs</strong>.</p>",
+      "svgRef": "/images/diagrams/svg/comparative-advantage.svg",
+      "svgAlt": "Two straight-line PPFs for computer chips and T-shirts crossing on shared axes: Germany's runs from 150 million T-shirts to 20 million chips, Vietnam's from 200 million T-shirts to 10 million chips",
+      "difficulty": "standard",
+      "tags": ["trade", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-2-def-02",
+      "specCode": "2.6.2",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-2-trade",
+      "cardType": "definition",
+      "front": "<p>What are the <strong>benefits and costs of international trade</strong> — and what changes the <strong>pattern of trade</strong>?</p>",
+      "back": "<p><strong>Benefits</strong>: efficiency from specialising at lower opportunity cost, higher global output, lower prices, greater variety, economies of scale and growth. <strong>Costs</strong>: import dependency, job losses in uncompetitive industries, inequality, environmental damage and worker exploitation where standards are low.</p><p>The <strong>pattern of trade</strong> — what is traded and with whom — shifts with comparative advantage (UK manufacturing's decline), <strong>emerging economies</strong>, trade blocs and agreements (Brexit), and <strong>relative exchange rates</strong>.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["trade"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-2-diagram-02",
+      "specCode": "2.6.2",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-2-trade",
+      "cardType": "diagram",
+      "front": "<p>Show the <strong>impact of a tariff</strong> — prices, quantities and the three areas.</p>",
+      "back": "<p>The tariff lifts the world supply price from <strong>P1 (Sworld)</strong> to <strong>P2 (Sworld+tariff)</strong>: domestic output extends from Q1 to <strong>Q2</strong>, consumption contracts from Q4 to <strong>Q3</strong>, and imports shrink from Q4 − Q1 to <strong>Q3 − Q2</strong>.</p><p>The <strong>green</strong> area is the gain in domestic producer surplus, the <strong>purple</strong> rectangle is government tariff revenue, and the two <strong>red</strong> triangles are the net welfare loss. Protection's other faces — quotas, subsidies to domestic producers, non-tariff barriers — shift the same surpluses without the revenue.</p>",
+      "svgRef": "/images/diagrams/svg/tariff.svg",
+      "svgAlt": "Tariff diagram with domestic supply and demand and two horizontal world supply lines: the tariff raises the price from P1 to P2, with a green producer surplus gain, a purple tariff revenue rectangle and two red welfare loss triangles",
+      "difficulty": "stretch",
+      "tags": ["trade", "protectionism", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-2-def-03",
+      "specCode": "2.6.2",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-2-trade",
+      "cardType": "definition",
+      "front": "<p>Why do countries turn to <strong>protectionism</strong> — and with what consequences?</p>",
+      "back": "<p>Reasons: protecting <strong>infant</strong>, <strong>strategic</strong> and <strong>sunset industries</strong> and the <strong>jobs</strong> in them; preventing <strong>dumping</strong>; improving the <strong>balance of payments</strong>; and enforcing environmental and labour standards.</p><p>Consequences: higher consumer prices and restricted choice, <strong>retaliation</strong> escalating into trade wars, and sheltered inefficiency — protection blunts the incentives to innovate. Its bite also depends on import demand elasticity and whether domestic producers can actually expand.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["trade", "protectionism"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-2-def-04",
+      "specCode": "2.6.2",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-2-trade",
+      "cardType": "definition",
+      "front": "<p>What is a <strong>customs union</strong> — and what are trade creation, trade diversion and the WTO's role?</p>",
+      "back": "<p>A <strong>customs union</strong> (e.g. MERCOSUR) removes tariffs and quotas between members and adds a <strong>common external tariff</strong>; a free trade area lacks the common tariff, a common market (the EU) adds free movement of labour and capital.</p><p><strong>Trade creation</strong>: trade shifts to a lower-cost producer inside the bloc — welfare rises. <strong>Trade diversion</strong>: it shifts from a cheaper outsider to a dearer member — welfare falls. The <strong>WTO</strong> promotes trade liberalisation as negotiating forum and dispute court — in tension with blocs that favour their members.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["trade", "trading-blocs"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-2-trade.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-3-def-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-3-the-balance-of-payments",
+      "cardType": "definition",
+      "front": "<p>Define the <strong>balance of payments</strong> — and what does each account record?</p>",
+      "back": "<p><strong>Balance of payments (BoP)</strong>: records all financial transactions between a country and the rest of the world. Inflows are credits, outflows debits.</p><p>The <strong>current account</strong>: trade in goods and services, primary income (profits, interest, dividends) and secondary income (aid, remittances). The <strong>capital account</strong>: minor capital transfers such as debt forgiveness. The <strong>financial account</strong>: FDI, portfolio investment and reserve changes — and since the BoP must balance, a current account deficit is financed by a capital and financial account surplus.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["balance-of-payments"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
+        "origin": "notes-verbatim",
+        "verbatim": "records all financial transactions between a country and the rest of the world."
+      }
+    },
+    {
+      "id": "aqa-2-6-3-calc-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-3-the-balance-of-payments",
+      "cardType": "calculation",
+      "front": "<p>A country records: trade in goods — credits £240bn, debits £330bn; services — £280bn, £205bn; primary income — £55bn, £70bn; secondary income — £30bn, £40bn. Calculate the <strong>current account balance</strong>.</p>",
+      "back": "<p>Goods: 240 − 330 = <strong>−£90bn</strong>. Services: 280 − 205 = <strong>+£75bn</strong>. Primary income: 55 − 70 = <strong>−£15bn</strong>. Secondary income: 30 − 40 = <strong>−£10bn</strong>.</p><p>Balance: −90 + 75 − 15 − 10 = <strong>−£40bn</strong> — a current account deficit, with the services surplus offsetting more than half the goods deficit. Always net all four components.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["balance-of-payments", "calculation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-3-def-02",
+      "specCode": "2.6.3",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-3-the-balance-of-payments",
+      "cardType": "definition",
+      "front": "<p>What causes a <strong>current account deficit</strong> — and why do persistent imbalances matter?</p>",
+      "back": "<p>Causes: <strong>low competitiveness</strong> (weak productivity or high inflation against rivals), a <strong>strong exchange rate</strong>, <strong>high domestic demand</strong> sucking in imports, and <strong>structural decline</strong> such as a shrinking manufacturing base.</p><p><strong>Persistent deficits</strong> build foreign debt and can trigger currency depreciation and weaker FDI as confidence erodes; <strong>persistent surpluses</strong> feed inflation and over-reliance on exports, leaving the economy exposed to global downturns.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["balance-of-payments"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-3-eval-01",
+      "specCode": "2.6.3",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-3-the-balance-of-payments",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the <strong>three policy routes for correcting a current account deficit</strong>.</p>",
+      "back": "<p><strong>Expenditure-switching</strong> (tariffs, quotas, devaluation) redirects demand towards domestic output — quick, but invites retaliation and raises consumer prices. <strong>Expenditure-reducing</strong> (contractionary fiscal policy, higher interest rates) cuts demand and imports together — at the price of slower growth and higher unemployment.</p><p><strong>Supply-side policies</strong> (education, R&amp;D, infrastructure) rebuild export competitiveness — the durable fix, but slow and costly. Each route trades the current account against other macro objectives.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["balance-of-payments", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-4-def-01",
+      "specCode": "2.6.4",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-4-exchange-rate-systems",
+      "cardType": "definition",
+      "front": "<p>Compare <strong>floating and fixed exchange rate systems</strong>.</p>",
+      "back": "<p><strong>Floating</strong>: an exchange rate system determined by market forces of demand and supply for a currency, with no government intervention. For: automatic current-account adjustment, monetary policy freed for domestic goals, no costly intervention. Against: volatility deters trade and investment, depreciation imports inflation, speculation.</p><p><strong>Fixed</strong>: the central bank holds a set value by buying or selling currency and moving interest rates. For: stability for trade and investment, less imported inflation and speculation. Against: costly intervention, monetary policy captured by the peg, and over- or under-valuation distorting trade.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["exchange-rates"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
+        "origin": "notes-verbatim",
+        "verbatim": "an exchange rate system determined by market forces of demand and supply for a currency, with no government intervention."
+      }
+    },
+    {
+      "id": "aqa-2-6-4-diagram-01",
+      "specCode": "2.6.4",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-4-exchange-rate-systems",
+      "cardType": "diagram",
+      "front": "<p>Show what makes a floating currency <strong>appreciate</strong> — and what moves the demand and supply of it.</p>",
+      "back": "<p>Higher demand for the currency shifts <strong>D1 right to D2</strong> along the supply curve: the exchange rate rises from <strong>P1 to P2</strong>. Demand rises with <strong>higher relative interest rates</strong> (hot money), <strong>lower relative inflation</strong>, a <strong>current account surplus</strong>, <strong>FDI inflows</strong> and bullish <strong>speculation</strong>.</p><p>Supply moves it the other way: <strong>QE</strong> and speculative selling expand the currency's supply and depreciate it.</p>",
+      "svgRef": "/images/diagrams/svg/exchange-rate-appreciation.svg",
+      "svgAlt": "Currency market diagram with demand for the currency shifting right from D1 to D2 along a fixed supply curve, raising the exchange rate from P1 to P2",
+      "difficulty": "standard",
+      "tags": ["exchange-rates", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-4-diagram-02",
+      "specCode": "2.6.4",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-4-exchange-rate-systems",
+      "cardType": "diagram",
+      "front": "<p>Show the <strong>J-curve</strong> — and state the <strong>Marshall-Lerner condition</strong>.</p>",
+      "back": "<p>After a depreciation the current account <strong>worsens first</strong>: contracts fix prices in the short run and consumers are slow to switch, so PEDx and PEDm are inelastic. Only as they adjust does the balance <strong>improve through the long run</strong> — tracing a J.</p><p>The <strong>Marshall-Lerner condition</strong>: a depreciation improves the current account only if <strong>PEDx + PEDm &gt; 1</strong>. If combined demand is inelastic, it worsens instead.</p>",
+      "svgRef": "/images/diagrams/svg/j-curve.svg",
+      "svgAlt": "J-curve diagram of the net trade balance against time: after a depreciation the deficit deepens in the short run, bottoms out, then improves into surplus in the long run",
+      "difficulty": "stretch",
+      "tags": ["exchange-rates", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-4-def-02",
+      "specCode": "2.6.4",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-4-exchange-rate-systems",
+      "cardType": "definition",
+      "front": "<p>What makes a <strong>currency union</strong> succeed — and what does membership cost?</p>",
+      "back": "<p>A <strong>currency union</strong> (the Eurozone) adds a single currency to a common market. Success needs <strong>synchronised business cycles</strong>, <strong>labour mobility</strong>, <strong>fiscal transfers</strong> to cushion shocked regions, and <strong>mobility of capital</strong>.</p><p>For members: lower transaction costs, price transparency, more trade and investment, no exchange-rate risk. Against: the loss of <strong>independent monetary policy</strong> and exchange-rate flexibility — leaving members exposed when <strong>asymmetric shocks</strong> hit.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["exchange-rates", "trading-blocs"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-5-def-01",
+      "specCode": "2.6.5",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-5-economic-growth-and-development",
+      "cardType": "definition",
+      "front": "<p>Distinguish <strong>growth</strong> from <strong>development</strong> — and how is development measured?</p>",
+      "back": "<p><strong>Economic growth</strong>: the narrower concept, measured by rises in real GDP. <strong>Economic development</strong>: a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life.</p><p>Measures: <strong>single indicators</strong> (infant mortality, literacy) give partial pictures; <strong>composite indicators</strong> combine them — the UN's <strong>HDI</strong> weights health (life expectancy), education (schooling years) and income (real GNI per capita at PPP) equally, scoring 0 to 1.</p>",
+      "svgRef": null,
+      "difficulty": "foundation",
+      "tags": ["development"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+        "origin": "notes-verbatim",
+        "verbatim": "a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life."
+      }
+    },
+    {
+      "id": "aqa-2-6-5-eval-01",
+      "specCode": "2.6.5",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-5-economic-growth-and-development",
+      "cardType": "evaluation",
+      "front": "<p>Evaluate the <strong>HDI</strong> as a measure of development.</p>",
+      "back": "<p><strong>For</strong>: a composite measure capturing more than income; enables international comparisons; puts health and education alongside GDP.</p><p><strong>Against</strong>: it hides <strong>inequality</strong> within countries; ignores <strong>sustainability</strong> and the environment; and rests on <strong>data quality</strong> that is often unreliable in developing countries. Alternatives fill the gaps — the MPI, the inequality-adjusted IHDI, and environmental indicators.</p>",
+      "svgRef": null,
+      "difficulty": "stretch",
+      "tags": ["development", "evaluation"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-5-def-02",
+      "specCode": "2.6.5",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-5-economic-growth-and-development",
+      "cardType": "definition",
+      "front": "<p>What are the main <strong>barriers to growth and development</strong>?</p>",
+      "back": "<p><strong>Economic</strong>: primary product dependency (volatile prices, Dutch disease); the <strong>savings gap</strong> — the Harrod-Domar model ties growth to savings and investment; the <strong>foreign currency gap</strong>; <strong>capital flight</strong>; demographics; debt servicing; poor access to credit; weak infrastructure; inadequate education and skills; and the <strong>absence of property rights</strong>, which kills the incentive to invest.</p><p><strong>Non-economic</strong>: corruption, poor governance and instability, conflict, and geography.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["development"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-5-def-03",
+      "specCode": "2.6.5",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-5-economic-growth-and-development",
+      "cardType": "definition",
+      "front": "<p>Compare <strong>market-orientated and interventionist strategies</strong> for development — and the role of <strong>aid</strong>.</p>",
+      "back": "<p><strong>Market-orientated</strong>: trade liberalisation, FDI promotion, subsidy removal, floating exchange rates, microfinance, privatisation — free market forces drive development. <strong>Interventionist</strong>: human capital investment, protectionism, managed exchange rates, infrastructure, joint ventures, buffer stocks — the state corrects market failure.</p><p><strong>Aid</strong> comes as <strong>humanitarian aid</strong> (emergency relief), <strong>debt relief</strong> (freeing resources for investment) and <strong>Official Development Assistance</strong> — soft loans and grants, effective unless dependency or corruption blunts them.</p>",
+      "svgRef": null,
+      "difficulty": "standard",
+      "tags": ["development"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+        "origin": "card-authored"
+      }
+    },
+    {
+      "id": "aqa-2-6-5-diagram-01",
+      "specCode": "2.6.5",
+      "topic": "2.6 The international economy",
+      "subtopic": "2-6-5-economic-growth-and-development",
+      "cardType": "diagram",
+      "front": "<p>Show how a <strong>buffer stock scheme</strong> stabilises a commodity price.</p>",
+      "back": "<p>The scheme defends a band between <strong>Pmax and Pmin</strong>. In a normal year S1 sets P1 inside the band. A <strong>good harvest</strong> (S2) would push the price to P2, below the floor — so the scheme <strong>buys stock</strong>. A <strong>bad harvest</strong> (S3) would send the price to P3, above the ceiling — so it <strong>sells stock</strong>.</p><p>Stable prices smooth farm incomes and encourage investment — if the scheme can afford the stockpile and sets the band well.</p>",
+      "svgRef": "/images/diagrams/svg/buffer-stocks.svg",
+      "svgAlt": "Commodity market diagram with demand, three supply curves and a price band: a good harvest pushes the price below the floor so the scheme buys stock, a bad harvest pushes it above the ceiling so the scheme sells, keeping the price between Pmax and Pmin",
+      "difficulty": "stretch",
+      "tags": ["development", "diagram"],
+      "premium": false,
+      "acceptableAnswers": [],
+      "version": 1,
+      "lastVerified": "2026-08-06",
+      "source": {
+        "notesPage": "/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
+        "origin": "card-authored"
+      }
     }
   ]
 }

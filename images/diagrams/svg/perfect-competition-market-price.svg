@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The market price and the price-taking firm in perfect competition</title>
+  <desc id="d">Two panels. In the left market panel, straight supply and demand curves cross to set the market price P1 at quantity Q1. In the right firm panel, the individual firm faces a perfectly elastic horizontal demand curve at P1, so demand, average revenue and marginal revenue are the same line.</desc>
+  <!-- geometry
+       intersections: 220,310
+       on-curve: 460,310
+  -->
+  <!-- guides -->
+  <line x1="70" y1="310" x2="460" y2="310" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="220" y1="310" x2="220" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes: market panel -->
+  <line x1="70" y1="120" x2="70" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="70" y1="460" x2="370" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="34" y="100" font-size="26" fill="#333333">Price</text>
+  <text x="370" y="492" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- axes: firm panel -->
+  <line x1="460" y1="120" x2="460" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="460" y1="460" x2="760" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="394" y="100" font-size="26" fill="#333333">Revenue</text>
+  <text x="760" y="492" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves: market panel -->
+  <line x1="110" y1="420" x2="330" y2="200" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="110" y1="200" x2="330" y2="420" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- curves: firm panel -->
+  <line x1="460" y1="310" x2="600" y2="310" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="338" y="196" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="338" y="428" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="612" y="318" font-size="26" font-weight="700" fill="#1d70b8">D=AR=MR=P1</text>
+  <text x="62" y="318" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="452" y="302" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="220" y="492" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+</svg>

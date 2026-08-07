@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Collusion in oligopoly against the competitive outcome</title>
+  <desc id="d">A firm diagram comparing collusion with competition. Colluding firms restrict output to Qcoll, where MC crosses MR, and charge the higher price Pcoll read off the demand curve; the competitive outcome is at Qcomp, where MC crosses the demand curve, with the lower price Pcomp. The shaded triangle between the demand curve and MC from Qcoll to Qcomp is the deadweight welfare loss from collusion.</desc>
+  <!-- geometry
+       intersections: 393.1,479.6 485,373.7 470,405
+       on-curve: 393.1,304.8
+  -->
+  <!-- shaded deadweight loss -->
+  <path d="M 393.1,304.8 l 0,174.77 q 38.45,-19.03 76.9,-74.57 q 7.59,-10.96 15,-31.32 z" fill="#767676" fill-opacity="0.25"/>
+  <!-- guides -->
+  <line x1="100" y1="304.8" x2="393.1" y2="304.8" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="373.7" x2="485" y2="373.7" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="393.1" y1="304.8" x2="393.1" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="485" y1="373.7" x2="485" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="160" y1="130" x2="620" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="130" x2="420" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
+  <text x="630" y="324" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
+  <text x="632" y="483" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="428" y="510" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="313" font-size="24" fill="#333333" text-anchor="end">Pcoll</text>
+  <text x="92" y="382" font-size="24" fill="#333333" text-anchor="end">Pcomp</text>
+  <text x="393.1" y="552" font-size="24" fill="#333333" text-anchor="middle">Qcoll</text>
+  <text x="485" y="552" font-size="24" fill="#333333" text-anchor="middle">Qcomp</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">A loss on a firm diagram</title>
+  <desc id="d">A firm diagram with downward-sloping D=AR and MR curves, a rising MC=S curve and a U-shaped AC curve sitting above the demand curve. The firm produces at the loss-minimising output Q where MC crosses MR; the average cost C read off AC sits above the price P read off AR, and the rectangle between C and P up to Q is shaded as the loss.</desc>
+  <!-- geometry
+       intersections: 393.1,479.6 505,300
+       on-curve: 393.1,268.8 393.1,304.8
+  -->
+  <!-- shaded loss -->
+  <rect x="100" y="268.8" width="293.1" height="36" fill="#d52349" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="268.8" x2="393.1" y2="268.8" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="304.8" x2="393.1" y2="304.8" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="393.1" y1="268.8" x2="393.1" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="160" y1="130" x2="620" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="130" x2="420" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 335,225 Q 415,300 505,300 Q 595,300 655,225" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="393.1" cy="479.6" r="7" fill="#d52349"/>
+  <!-- labels -->
+  <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
+  <text x="665" y="219" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
+  <text x="632" y="483" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="428" y="510" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="277" font-size="24" fill="#333333" text-anchor="end">C</text>
+  <text x="92" y="313" font-size="24" fill="#333333" text-anchor="end">P</text>
+  <text x="393" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+</svg>

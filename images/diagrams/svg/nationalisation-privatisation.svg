@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Natural monopoly: private profit maximisation against public P=MC pricing</title>
+  <desc id="d">A natural monopoly whose long-run average cost falls over the entire range of market demand, with long-run marginal cost below it. A private profit-maximising monopoly produces Qp, where MR crosses LRMC, and charges the high price Pp with average cost Cp, shown by the grey guides. A nationalised firm pricing at P=MC produces the much larger output Qn at the lower price Pn, shown by the red guides, but Pn lies below average cost Cn, so it makes a loss requiring subsidy.</desc>
+  <!-- geometry
+       intersections: 430,340 560,395
+       on-curve: 430,200 430,280 560,330
+  -->
+  <!-- guides: private (grey) -->
+  <line x1="100" y1="200" x2="430" y2="200" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="280" x2="430" y2="280" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="430" y1="200" x2="430" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- guides: nationalised (red) -->
+  <line x1="100" y1="330" x2="560" y2="330" stroke="#d52349" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="395" x2="560" y2="395" stroke="#d52349" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="560" y1="330" x2="560" y2="520" stroke="#d52349" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="337" y1="60.5" x2="628" y2="497" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="337" y1="60.5" x2="490.2" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 240,120 Q 340,300 430,340 Q 490,366.7 560,395 Q 620,419 680,427" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 300,100 Q 380,240 430,280 Q 480,320 560,330 Q 630,339 688,343" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="696" y="349" font-size="26" font-weight="700" fill="#1d70b8">LRAC</text>
+  <text x="690" y="435" font-size="26" font-weight="700" fill="#1d70b8">LRMC</text>
+  <text x="638" y="505" font-size="26" font-weight="700" fill="#1d70b8">AR</text>
+  <text x="494" y="549" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="208" font-size="24" fill="#333333" text-anchor="end">Pp</text>
+  <text x="92" y="288" font-size="24" fill="#333333" text-anchor="end">Cp</text>
+  <text x="92" y="338" font-size="24" fill="#333333" text-anchor="end">Cn</text>
+  <text x="92" y="403" font-size="24" fill="#333333" text-anchor="end">Pn</text>
+  <text x="430" y="552" font-size="24" fill="#333333" text-anchor="middle">Qp</text>
+  <text x="560" y="552" font-size="24" fill="#333333" text-anchor="middle">Qn</text>
+</svg>
