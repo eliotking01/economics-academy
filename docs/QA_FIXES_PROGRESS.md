@@ -14,8 +14,11 @@ and merges himself.
 
 ## STATUS
 
-**IN PROGRESS** — Phase 0 and Phase 1 (audit) complete. No content edited yet;
-blocked on one decision (see OPEN QUESTIONS).
+**IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
+complete. Phase 2 under way: **issues A and D are finished for Edexcel Themes
+1, 2 and 3** (83 cards edited across 5 batches, all committed). Nothing is
+blocked. Remaining: A and D on Theme 4 and both AQA decks, then all of B, then
+all of C, then Phase 3 verification.
 
 ## RENDERING FINDINGS
 
@@ -67,10 +70,17 @@ either width.** The 3D flip, `backface-visibility`, the reduced-motion
 crossfade branch and the print sheet (which uses separate `.fc-print-*` nodes,
 not `.fc-face`) are all untouched by it.
 
-**Known side effect, and the open decision:** because both faces share one grid
-cell, the card is now as tall as its taller face — so a short question sits
-vertically centred in a tall card whose height is set by its answer. See OPEN
-QUESTIONS.
+**Known side effect, accepted by Eliot 2026-08-07:** because both faces share
+one grid cell, the card is as tall as its taller face — so a short question
+sits vertically centred in a card whose height is set by its answer. The
+alternative (JS resizing the card on flip) was offered and declined in favour
+of the CSS-only fix.
+
+**Two later spacing changes, same file, both from visual checks:** card text
+uses a 1em block gap rather than the site-wide 2em (which spread a four-line
+answer over a screen and pushed calculation steps far apart), and a `<ul>`
+directly after a `<p>` is pulled up so a lead-in line and its list read as one
+unit. Both scoped to `.fc-face`, `.fc-sample-back` and `.fc-print-back`.
 
 ## TOOLING
 
@@ -111,10 +121,10 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
-| A — merged points on one line | in progress | 206 cards | 37 | Themes 1 and 2 **done**. Next: `edexcel-a-theme-3` (34 cards). |
-| B — exam board references | in progress | 47 cards (64 mentions) | 6 | Only the 6 that sat on cards already open for A/D. Next: the remaining 41, as their own pass after A/D. |
+| A — merged points on one line | in progress | 206 cards | 66 | Themes 1, 2 and 3 **done**. Next: `edexcel-a-theme-4` (43 cards). |
+| B — exam board references | in progress | 47 cards (64 mentions) | 8 | Only those sitting on cards already open for A/D. Next: the remaining 39, as their own pass after A/D. |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
-| D — long inline lists | in progress | 67 cards | 11 | Themes 1 and 2 **done**. Next: `edexcel-a-theme-3` (6 cards). |
+| D — long inline lists | in progress | 67 cards | 14 | Themes 1, 2 and 3 **done**. Next: `edexcel-a-theme-4` (12 cards). |
 
 Per deck, cards **remaining** (re-run `audit.py` to refresh):
 
@@ -122,13 +132,13 @@ Per deck, cards **remaining** (re-run `audit.py` to refresh):
 | --- | --- | --- | --- | --- |
 | `edexcel-a-theme-1` | **0** | 3 | 13 | 2 (false positives, left) |
 | `edexcel-a-theme-2` | **1** (false positive, left) | 1 | 28 | 5 (false positives, left) |
-| `edexcel-a-theme-3` | 34 | 2 | 12 | 6 |
+| `edexcel-a-theme-3` | **5** (false positives, left) | **0** | 12 | 3 (false positives, left) |
 | `edexcel-a-theme-4` | 43 | 0 | 1 | 12 |
 | `aqa-micro` | 43 | 17 | 37 | 15 |
 | `aqa-macro` | 48 | 18 | 32 | 16 |
 
-A residual count above zero does **not** mean unfinished work — Themes 1 and 2
-are complete for A and D, and what remains in them is the set of detector hits
+A residual count above zero does **not** mean unfinished work — Themes 1, 2 and
+3 are complete for A and D, and what remains in them is the set of detector hits
 read by hand and judged not to be defects. They are named in the batch log so a
 future session does not re-examine them.
 
@@ -302,15 +312,42 @@ wages, interest, profit" belong inside their sentences),
 (appositive commas, not a list) and `edexcel-a-2-2-3-def-02` (one bullet with
 a bolded phrase mid-way, not two merged points).
 
+**Batch 4 — `edexcel-a-theme-3` sections 3.1–3.4.4, issues A and D
+(2026-08-07).** 18 cards edited. A: the principal-agent split; public vs
+private and profit vs not-for-profit; the three integration types; the four
+growth constraints; the demerger impacts; the four business objectives;
+TR/AR/MR; the seven cost measures; the cost calculation rebuilt one step per
+line; the six internal economies; the causes of diseconomies; efficiency in
+perfect competition and under market power; monopolistic competition's
+consumer impact; overt vs tacit collusion; the kinked demand curve's two
+segments; the three types of price competition. D: the six demerger reasons.
+B: two fronts ("in the Edexcel specification", "in the specification").
+
+**Batch 5 — `edexcel-a-theme-3` sections 3.4.5–3.6, issues A and D
+(2026-08-07).** 17 cards edited, completing the deck. A: monopoly efficiency's
+four verdicts; the monopoly and monopsony stakeholder sets; the natural-monopoly
+regulator dilemma; competition vs contestability; limit pricing; MRP's two
+parts; wage-elasticity conditions; labour supply shift factors; geographical vs
+occupational immobility; the minimum-wage evaluation; the privatisation
+for/against; the five intervention yardsticks; regulatory capture's two causes;
+the four limits of intervention. D: the six entry barriers; the supplier and
+employee protection lists.
+
+Read and left alone in Theme 3: `edexcel-a-3-1-1-def-02`,
+`edexcel-a-3-1-2-def-02`, `edexcel-a-3-3-1-diagram-01`,
+`edexcel-a-3-4-1-def-01`, `edexcel-a-3-4-5-diagram-03`,
+`edexcel-a-3-4-4-def-03`, `edexcel-a-3-4-6-def-01` and
+`edexcel-a-3-4-7-diagram-01` — bolded terms mid-sentence and atomic example
+lists, not merged points or revision lists.
+
 ## NEXT STEPS
 
-1. **Issue A + D on `edexcel-a-theme-3`** — 34 A-cards and 6 D-cards. Dump the
-   cards with the snippet in HOW TO RESUME below, hand-author the replacements
-   into `_working/flashcards/qa/edits/batch-04.json`, apply, `touch.py`,
-   rebuild, re-audit, screenshot, commit.
-2. Then Theme 4 (43 A, 12 D), `aqa-micro` (43 A, 15 D), `aqa-macro` (48 A,
-   16 D), same treatment.
-3. Then Issue B: the 41 remaining cards (`audit.py --issue B --show`). Almost
+1. **Issue A + D on `edexcel-a-theme-4`** — 43 A-cards and 12 D-cards. Dump the
+   cards with the snippet in HOW TO RESUME below (change `DECK`), hand-author
+   the replacements into `_working/flashcards/qa/edits/batch-06.json`, apply,
+   `touch.py`, rebuild, re-audit, screenshot, commit. Expect two batches.
+2. Then `aqa-micro` (43 A, 15 D) and `aqa-macro` (48 A, 16 D), same treatment.
+3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
    the localStorage prefix `ea-flashcards:v1:` → `:v2:` in
@@ -323,7 +360,7 @@ a bolded phrase mid-way, not two merged points).
 ```bash
 python3 -m http.server 8899 &                        # tools need this
 python3 _working/flashcards/qa/audit.py              # where things stand
-python3 _working/flashcards/qa/audit.py --issue A --show --deck edexcel-a-theme-3
+python3 _working/flashcards/qa/audit.py --issue A --show --deck edexcel-a-theme-4
 ```
 
 To dump the full text of a deck's outstanding A/D cards, ready to edit:
@@ -331,7 +368,7 @@ To dump the full text of a deck's outstanding A/D cards, ready to edit:
 ```bash
 python3 - <<'PY'
 import json, subprocess
-DECK = "edexcel-a-theme-3"
+DECK = "edexcel-a-theme-4"
 ids = set()
 for issue in ("A", "D"):
     out = subprocess.run(["python3", "_working/flashcards/qa/audit.py",
@@ -341,7 +378,12 @@ for issue in ("A", "D"):
         parts = line.split()
         if len(parts) == 2 and not line.startswith("issue"):
             ids.add(parts[1])
-path = {"edexcel-a-theme-3": "flashcards-data/edexcel-a/theme-3.json"}[DECK]
+path = {"edexcel-a-theme-1": "flashcards-data/edexcel-a/theme-1.json",
+        "edexcel-a-theme-2": "flashcards-data/edexcel-a/theme-2.json",
+        "edexcel-a-theme-3": "flashcards-data/edexcel-a/theme-3.json",
+        "edexcel-a-theme-4": "flashcards-data/edexcel-a/theme-4.json",
+        "aqa-micro": "flashcards-data/aqa/micro.json",
+        "aqa-macro": "flashcards-data/aqa/macro.json"}[DECK]
 deck = json.load(open(path))
 sel = [c for c in deck["cards"] if c["id"] in ids]
 sel.sort(key=lambda c: [int(x) for x in c["specCode"].split(".")])
