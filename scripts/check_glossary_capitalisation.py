@@ -134,6 +134,7 @@ def classify(data):
             rows.append({
                 "id": term["id"], "term": term["term"], "board": src["board"],
                 "spec": src["spec"], "url": src["notesUrl"], "text": text,
+                "html": src["definitionHtml"],
                 "bucket": bucket, "reason": reason, "lead": lead,
             })
     return rows
@@ -220,14 +221,64 @@ def write_report(rows) -> None:
     REPORT.write_text("\n".join(out) + "\n", encoding="utf-8")
 
 
+def write_curation(rows) -> int:
+    """Record the classification as the approved list in curation.json.
+
+    Both lists are keyed on the wording, so a reworded notes chip drops off and
+    has to be approved again. The value is the label a human reads - the key on
+    its own says nothing.
+    """
+    bg = load("build_glossary")
+    cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    apply_, leave = {}, {}
+    for r in rows:
+        key = bg.cap_key(r["id"], r["html"])
+        label = f"{r['term']} - {r['text'][:60]}"
+        (apply_ if r["bucket"] == "clean" else leave)[key] = label
+    cur["capitalise"] = {
+        "_comment": [
+            "Which glossary definitions have their first letter capitalised at",
+            "render time, by scripts/build_glossary.py. Nothing else about the",
+            "wording changes, and glossary-data/terms.json is not touched - it",
+            "stays byte-identical to the notes so the verbatim check still means",
+            "what it says.",
+            "",
+            "apply  definitions the notes wrote as 'Term: definition'. Under a",
+            "       heading they open on a noun phrase and read as complete.",
+            "leave  definitions that need the term as their grammatical subject",
+            "       ('Globalisation is the increasing integration ...'), plus",
+            "       those opening on notation. Capitalising these would produce",
+            "       'Is the increasing integration ...'. They are fixed in the",
+            "       notes or not at all.",
+            "",
+            "Keyed on term id + a hash of the wording, so rewording the notes",
+            "lapses the approval and --check asks for it again.",
+            "",
+            "Regenerate with: python3 scripts/check_glossary_capitalisation.py --approve",
+        ],
+        "apply": dict(sorted(apply_.items(), key=lambda kv: kv[1].lower())),
+        "leave": dict(sorted(leave.items(), key=lambda kv: kv[1].lower())),
+    }
+    CURATION.write_text(json.dumps(cur, indent=2, ensure_ascii=False) + "\n",
+                        encoding="utf-8")
+    print(f"wrote {CURATION.relative_to(ROOT)}: "
+          f"{len(apply_)} to capitalise, {len(leave)} left alone")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true",
                     help="validate only: fail on an unaccounted lower-case start")
+    ap.add_argument("--approve", action="store_true",
+                    help="write the classification into curation.json")
     args = ap.parse_args()
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
     rows = classify(data)
+
+    if args.approve:
+        return write_curation(rows)
 
     if not args.check:
         write_report(rows)
@@ -243,13 +294,13 @@ def main() -> int:
     # --check: everything must be accounted for. A record is accounted for when
     # it is on the approved capitalisation list, or on the list of known
     # exceptions - which is what stops a new notes chip slipping through.
+    bg = load("build_glossary")
     cur = json.loads(CURATION.read_text(encoding="utf-8"))
     cap = cur.get("capitalise", {})
-    approved = set(cap.get("apply", []))
-    known = set(cap.get("leave", []))
+    accounted = set(cap.get("apply", {})) | set(cap.get("leave", {}))
     fails = []
     for r in rows:
-        if r["id"] in approved or r["id"] in known:
+        if bg.cap_key(r["id"], r["html"]) in accounted:
             continue
         fails.append(f"{r['id']} ({r['board']} {r['spec']}): {r['bucket']} - "
                      f"{r['text'][:80]}")

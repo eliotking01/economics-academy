@@ -32,6 +32,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import hashlib
 import html
 import json
 import pathlib
@@ -100,6 +101,51 @@ BOARDS = {
 }
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)
+
+# ------------------------------------------------------------ capitalisation
+#
+# The notes write a definition as the continuation of its chip - "Absolute
+# advantage: a situation in which ..." - so lifted out and set under a heading
+# it opens on a lower-case letter. Capitalising the first letter is a
+# presentation change, and it is made HERE, at render time, for exactly that
+# reason: glossary-data/terms.json stays byte-identical to the notes, so
+# verify_glossary.py's verbatim check keeps meaning what it says.
+#
+# Which records get it is not a judgement this script makes. It reads the
+# approved list from curation.json, where scripts/check_glossary_capitalisation.py
+# put it. Definitions that need the term as their grammatical subject
+# ("Globalisation is the increasing integration ...") are NOT on that list, and
+# are fixed in the notes or not at all.
+
+CURATION = DATA.parent / "curation.json"
+
+# A definition record has no stable id - a term can carry several sources on one
+# page - so approval is keyed on the wording itself. Reword the notes and the
+# key changes, the approval lapses, and --check asks for it again. That is the
+# intended behaviour, not a limitation.
+FIRST_LETTER = re.compile(r"^(\s*(?:<[^>]+>\s*)*)([a-z])")
+
+
+def cap_key(term_id: str, definition_html: str) -> str:
+    digest = hashlib.sha1(definition_html.encode("utf-8")).hexdigest()[:8]
+    return f"{term_id}:{digest}"
+
+
+def approved_capitalisations() -> set:
+    cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    return set(cur.get("capitalise", {}).get("apply", {}))
+
+
+def capitalise(term_id: str, fragment: str, approved: set) -> str:
+    """Upper-case the definition's first letter, if that record is approved.
+
+    The first letter is not always the first character: a definition may open
+    inside a <strong>, so the tags are stepped over rather than counted.
+    """
+    if cap_key(term_id, fragment) not in approved:
+        return fragment
+    return FIRST_LETTER.sub(lambda m: m.group(1) + m.group(2).upper(),
+                            fragment, count=1)
 
 LANDING_META = (
     "Free A-Level Economics glossary. Choose your exam board for every "
@@ -420,8 +466,9 @@ def source_link(s):
             f'>{e(s["spec"])} {e(s["topic"])}</a>')
 
 
-def entry_html(term, board, inline_map):
+def entry_html(term, board, inline_map, approved):
     s = source_for(term, board)
+    definition = capitalise(term["id"], s["definitionHtml"], approved)
     # Five definitions end on a colon because the rest of them is the bulleted
     # list that follows on the notes page. The list is carried across so the
     # entry reads as a whole; it cannot sit inside the <p>.
@@ -448,7 +495,7 @@ def entry_html(term, board, inline_map):
               >
                 <dt class="gl-term">{e(term['term'])}</dt>
                 <dd class="gl-def">
-                  <p class="gl-text">{render_inline_maths(s['definitionHtml'], inline_map)}</p>{dlist}
+                  <p class="gl-text">{render_inline_maths(definition, inline_map)}</p>{dlist}
                   <p class="gl-source">{source_link(s)}</p>{also}
                 </dd>
               </div>"""
@@ -476,6 +523,7 @@ def formula_html(f, board, rendered, groups):
 
 def render_board(data, board, groups, rendered_map, inline_map):
     meta = BOARDS[board]
+    approved = approved_capitalisations()
     terms = [t for t in data["terms"] if board in t["boards"]]
     formulae = [f for f in data["formulae"] if board in f["boards"]]
     # Sort on the canonical key so a leading article is ignored here too,
@@ -509,7 +557,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
         if not by_letter[L]:
             continue
         entries = "\n".join(
-                entry_html(t, board, inline_map) for t in by_letter[L])
+                entry_html(t, board, inline_map, approved) for t in by_letter[L])
         sections.append(f"""          <section class="gl-letter" id="letter-{L.lower()}">
             <h2 class="gl-letter-head">{L}</h2>
             <dl class="gl-list">
@@ -517,7 +565,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </dl>
           </section>""")
     if other:
-        entries = "\n".join(entry_html(t, board, inline_map) for t in other)
+        entries = "\n".join(entry_html(t, board, inline_map, approved) for t in other)
         sections.append(f"""          <section class="gl-letter" id="letter-other">
             <h2 class="gl-letter-head">Other</h2>
             <dl class="gl-list">
@@ -624,7 +672,8 @@ def render_board(data, board, groups, rendered_map, inline_map):
                 "@type": "DefinedTerm",
                 "@id": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "name": t["term"],
-                "description": plain(source_for(t, board)["definitionHtml"]),
+                "description": plain(capitalise(
+                    t["id"], source_for(t, board)["definitionHtml"], approved)),
                 "url": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "inDefinedTermSet":
                     f"{SITE}/revision-notes/glossary/{meta['slug']}/#glossary",
