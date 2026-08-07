@@ -7,7 +7,7 @@ never batched.
 - **Branch:** `fix/glossary-polish` (off `main` at `11e763a`). The build itself
   merged to `main` on 2026-08-04 and is live.
 - **Current phase:** Phase 7 — post-launch fixes
-- **Current step:** all four fixes applied; manual QA is Eliot's
+- **Current step:** all five fixes applied; manual QA is Eliot's
 - **Last updated:** 2026-08-07
 
 ---
@@ -81,11 +81,12 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 
 ### Phase 7 — post-launch fixes — COMPLETE (2026-08-07)
 
-Four fixes, one commit each, on `fix/glossary-polish`.
+Five fixes, one commit each, on `fix/glossary-polish`.
 
 - [x] 7.1 **Capitalisation.** 58 approved wordings (95 records) capitalised at
-      render time. 79 fragments left alone — see below. New
-      `scripts/check_glossary_capitalisation.py`, new verifier check 6.
+      render time. The 79 fragment records were left alone here and handled
+      separately in 7.5. New `scripts/check_glossary_capitalisation.py`, new
+      verifier check 6.
 - [x] 7.2 **Theme tags** recoloured grey → `--gl-accent` (`#d52349`). Fixed an
       existing AA failure: white on `#7a7a7a` is 4.29:1, on `#d52349` 5.04:1.
       Print unchanged (outlined, no fill).
@@ -93,6 +94,10 @@ Four fixes, one commit each, on `fix/glossary-polish`.
       while a query is active. Verified end-to-end in headless Chrome.
 - [x] 7.4 **URL move evaluated and rejected.** Stays at
       `/revision-notes/glossary/`. Convention recorded in `CLAUDE.md`.
+- [x] 7.5 **Fragment definitions rewritten at render time** (D16), notes
+      untouched. 46 rules in `curation.json` → `rewrite`; new verifier check 7;
+      "word for word" claims reworded on all three pages and in the meta
+      descriptions, since they had stopped being true.
 
 ---
 
@@ -111,10 +116,11 @@ Four fixes, one commit each, on `fix/glossary-polish`.
 | D9 | **No downloadable PDF in v1** — print stylesheet only | Would need a headless browser or PDF library on a repo with zero build deps, and becomes a second artefact that drifts. Cmd+P covers it |
 | D10 | Flashcards / self-test **out of scope for v1** | Set in the brief. To be recorded in `ROADMAP.md` |
 | D11 | Capitalisation applied **at render time from `curation.json`**, never in `terms.json` | `terms.json` is generated and must stay byte-identical to the notes, or check 1 stops meaning anything. Keyed on term id + a hash of the wording, so rewording a notes chip lapses the approval instead of silently carrying it to text nobody approved |
-| D12 | Fragments are **not** capitalised and **not** reworded | "Globalisation is the increasing integration" would become "Is the increasing integration". Rewording is a wording change, which is Eliot's alone |
+| D12 | Fragments are **not** capitalised and **not** reworded | "Globalisation is the increasing integration" would become "Is the increasing integration". Rewording is a wording change, which is Eliot's alone. **Superseded by D16 on 2026-08-07** |
 | D13 | Theme tags take **one accent for all themes**, `#d52349` | A colour per theme would imply a meaning the tag does not carry. Green lost twice: `#4caf50` is 2.78:1 with white text, and already means "correct" as the tick glyph in `main.css` |
 | D14 | Search matches the **term only**, ranked, results flattened while querying | Matching definitions buried the Demand entry under every definition mentioning demand. Ranking requires the order to change, so A-Z gives way during a query and returns on clear |
 | D15 | Glossary **stays at `/revision-notes/glossary/`** | GitHub Pages cannot 301. Meta-refresh or JS redirect would be the only option, both pass authority unreliably, and the stubs would live in the repo forever. URL depth is a weak signal and the pages were 3 days old — the gain did not cover the cost. Confirms D2 |
+| D16 | **Fragment definitions are rewritten at render time**, notes untouched | Instructed by Eliot on 2026-08-07, explicitly overriding D12 and the CLAUDE.md rule that a badly-reading definition is fixed in the notes. Kept as narrow as possible: a rule replaces a **leading substring only**, 39 of 46 invent no word, and the build fails if `from` stops matching so a reworded notes page cannot silently re-point a rule. This is the **second** declared departure from "the notes' own words", after `authored.json` |
 
 ---
 
@@ -277,19 +283,32 @@ Not built — no instruction to.
 
 ## Outstanding for Eliot (carried to handover)
 
-- **79 fragment definitions** are lower-case and stay that way until their notes
-  chip is reworded. Every one is listed in
-  `_working/glossary/capitalisation-report.md` under "Fragment", with its notes
-  page linked. The notes read `Globalisation is the increasing integration…`,
-  so the extracted definition begins on a verb and capitalising it would give
-  `Is the increasing integration…`. **Rewording is a content change and has not
-  been made.** The fix per entry is to repunctuate the chip in the notes as
-  `Globalisation:` and re-run
-  `extract_glossary.py` → `check_glossary_capitalisation.py --approve` →
-  `build_glossary.py`.
+- **Two rewrites still need real definitions**, not a lead-in fix. `Maximum
+  price` and `Minimum price` are marked `not-a-definition` in `curation.json`:
+  the notes text states an *effect*, not what the term means — "This decreases
+  the price of the demerit good, causing an expansion in D=MPC." No rewording
+  produces a definition from that. They are capitalised only; **nothing was
+  invented.** Either write the definition into the notes as a chip, or add one
+  to `authored.json`.
+- **Five rewrites add a word**, the only new wording in the glossary outside
+  `authored.json`. Worth a read: `Composite indicators` and `Single indicators`
+  gained "Indicators that", `Non-excludability` (×2) gained "Where", and
+  `Information Provision` has "educate" → "Educating". All marked `adds` in
+  `curation.json`, all listed in the report.
+- **3 rules are inert** — `Information Provision`, `Non-excludability` and
+  `Regulation` have a rule for a source that is not the one displayed on either
+  board, so they change nothing a reader sees. Harmless, and correct if the
+  preferred source ever changes. Check 7 reports shown vs total.
 - **8 chips are examples, not definitions** (`Common market :: e.g. European
-  Union (EU)`). Same report, "Not a definition". Also a content decision.
+  Union (EU)`). Report, "Not a definition". Not touched — an example cannot be
+  reworded into a definition, so this needs your wording.
 - **2 unclassified**, both `Regulation`. Same report.
+- **The pages no longer claim "word for word".** The board intros, the landing
+  page and the meta descriptions said each definition was taken word for word
+  from the notes, which stopped being true for these 46. Reworded to "comes
+  from" / "taken from". The landing page also said "Nothing here is written for
+  the glossary", which was already false — `authored.json` has 74 — and that
+  sentence is gone.
 
 - **The spec PDFs are live on the public site.** `faccb6a "added specs"`
   committed `specificiations/{aqa-spec,edexcel-a-spec}.pdf`, and both return

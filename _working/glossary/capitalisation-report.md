@@ -410,284 +410,380 @@ The notes wrote these as `Term: definition`, and the definition opens on a noun 
 - **why** opens on "a", a complete phrase
 
 
-## Fragment — needs fixing in the notes
+## Fragment — rewritten at render time
 
-The definition needs the term in front of it to parse: the notes wrote `Globalisation is the increasing integration ...`, so the extracted text starts on a verb. Capitalising gives `Is the increasing integration ...`. **Do not capitalise these.** Each is fixed by rewording its notes chip and re-extracting — Eliot's call, not a scripted change.
+The definition needs the term in front of it to parse: the notes wrote `Globalisation is the increasing integration ...`, so the extracted text starts on a verb and capitalising it would give `Is the increasing integration ...`.
+
+These are **not** capitalised. Each has a rule in `curation.json` under `rewrite` that replaces its lead-in when the page is generated, so the glossary reads correctly while the notes are left alone. 39 only drop a lead-in and capitalise the next word — no word is invented. The rest are marked `adds` or `not-a-definition` in that file and are the only new wording in the glossary outside `authored.json`.
+
+The `now` line below is what the **notes** say. What the page shows is the `to` value of the rule.
 
 ### A demerger
 
 - **id** `a-demerger` · **notes** [edexcel-a 3.1.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-1-3-demergers.html)
 - **now** is when a large firm splits into two or more separate, independent businesses.
+- **shown** When a large firm splits into two or more separate, independent businesses.
+- **rule** `lead-in` — `is when` → `When`
 - **why** no colon: the term is the subject
 
 ### Absolute poverty
 
 - **id** `absolute-poverty` · **notes** [aqa 1.7.2](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-7-2-the-problem-of-poverty.html), [edexcel-a 4.2.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html)
 - **now** exists when individuals cannot afford the basic necessities for survival, such as food, water, shelter, and healthcare.
+- **shown** When individuals cannot afford the basic necessities for survival, such as food, water, sh
+- **rule** `lead-in` — `exists when` → `When`
 - **why** no colon: the term is the subject
 
 ### Capital expenditure
 
 - **id** `capital-expenditure` · **notes** [aqa 2.5.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html), [edexcel-a 4.5.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html)
 - **now** is long-term investment in infrastructure and assets such as roads, hospitals, and schools.
+- **shown** Long-term investment in infrastructure and assets such as roads, hospitals, and schools.
+- **rule** `lead-in` — `is long-term` → `Long-term`
 - **why** no colon: the term is the subject
 
 ### Capitalism
 
 - **id** `capitalism` · **notes** [edexcel-a 4.2.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-2-2-inequality.html)
 - **now** is an economic system based on private ownership of the factors of production with the aim of generating profit.
+- **shown** An economic system based on private ownership of the factors of production with the aim of
+- **rule** `lead-in` — `is an` → `An`
 - **why** no colon: the term is the subject
 
 ### Competition
 
 - **id** `competition` · **notes** [aqa 1.5.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-1-market-structures.html)
 - **now** refers to the number of businesses in a market and the degree of rivalry between them. The spectrum of competition ranges from perfect competition to pure monopoly, with various market structures in between.
+- **shown** The number of businesses in a market and the degree of rivalry between them. The spectrum 
+- **rule** `lead-in` — `refers to the` → `The`
 - **why** opens on "refers", which needs the term
 
 ### Competitive devaluation
 
 - **id** `competitive-devaluation` · **notes** [aqa 2.6.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html), [edexcel-a 4.1.8](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html)
 - **now** is when a government deliberately pushes down the value of its currency to make exports cheaper and gain a trade advantage.
+- **shown** When a government deliberately pushes down the value of its currency to make exports cheap
+- **rule** `lead-in` — `is when` → `When`
 - **why** no colon: the term is the subject
 
 ### Composite indicators
 
 - **id** `composite-indicators` · **notes** [aqa 2.6.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html), [edexcel-a 4.3.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html)
 - **now** combine several single indicators into one index to provide a more rounded view of development.
+- **shown** Indicators that combine several single indicators into one index to provide a more rounded
+- **rule** `adds` — `combine` → `Indicators that combine`
 - **why** no colon: the term is the subject
 
 ### Creative destruction
 
 - **id** `creative-destruction` · **notes** [aqa 1.5.8](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-8-the-dynamics-of-competition-and-competitive-market-processes.html)
 - **now** is a process in which new innovations and technologies replace older ones, leading to the destruction of existing businesses and industries.
+- **shown** A process in which new innovations and technologies replace older ones, leading to the des
+- **rule** `lead-in` — `is a` → `A`
 - **why** no colon: the term is the subject
 
 ### Current expenditure
 
 - **id** `current-expenditure` · **notes** [aqa 2.5.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html), [edexcel-a 4.5.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html)
 - **now** is day-to-day spending on public sector wages, such as payments to teachers and nurses, and on the consumption of goods and services such as medicines and utilities.
+- **shown** Day-to-day spending on public sector wages, such as payments to teachers and nurses, and o
+- **rule** `lead-in` — `is day-to-day` → `Day-to-day`
 - **why** no colon: the term is the subject
 
 ### Demand for labour
 
 - **id** `demand-for-labour` · **notes** [aqa 1.6.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-6-1-the-demand-for-labour-marginal-productivity-theory.html), [edexcel-a 3.5.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html)
 - **now** refers to the quantity of workers that firms are willing and able to employ at a given wage rate.
+- **shown** The quantity of workers that firms are willing and able to employ at a given wage rate.
+- **rule** `lead-in` — `refers to the` → `The`
 - **why** no colon: the term is the subject
 
 ### Demand-side policies
 
 - **id** `demand-side-policies` · **notes** [edexcel-a 2.6.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html)
 - **now** are policies used by the government or central bank to shift the aggregate demand (AD) curve in order to achieve macroeconomic objectives such as low inflation, low unemployment, and economic growth.
+- **shown** Policies used by the government or central bank to shift the aggregate demand (AD) curve i
+- **rule** `lead-in` — `are policies` → `Policies`
 - **why** no colon: the term is the subject
 
 ### Direct taxes
 
 - **id** `direct-taxes` · **notes** [aqa 2.5.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html), [edexcel-a 4.5.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-2-taxation.html)
 - **now** are levied on income or profits, such as income tax, corporation tax, and National Insurance.
+- **shown** Levied on income or profits, such as income tax, corporation tax, and National Insurance.
+- **rule** `lead-in` — `are levied` → `Levied`
 - **why** no colon: the term is the subject
 
 ### Diseconomies of scale
 
 - **id** `diseconomies-of-scale` · **notes** [aqa 1.4.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html), [edexcel-a 3.3.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html)
 - **now** are the reasons why ATC starts to increase as the size/output of a business becomes too large. These are internal to the firm and cause LRAC to rise.
+- **shown** The reasons why ATC starts to increase as the size/output of a business becomes too large.
+- **rule** `lead-in` — `are the` → `The`
 - **why** no colon: the term is the subject
 
 ### Economic development
 
 - **id** `economic-development` · **notes** [aqa 2.6.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html), [edexcel-a 4.3.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html)
 - **now** is a broader concept. It includes economic growth but also considers improvements in living standards, welfare, and quality of life.
+- **shown** A broader concept. It includes economic growth but also considers improvements in living s
+- **rule** `lead-in` — `is a` → `A`
 - **why** no colon: the term is the subject
 
 ### Economic growth
 
 - **id** `economic-growth` · **notes** [aqa 2.6.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html), [edexcel-a 4.3.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html)
 - **now** is a narrower concept that is measured by increases in real GDP.
+- **shown** A narrower concept that is measured by increases in real GDP.
+- **rule** `lead-in` — `is a` → `A`
 - **why** no colon: the term is the subject
 
 ### External economies of scale
 
 - **id** `external-economies-of-scale` · **notes** [aqa 1.4.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html), [edexcel-a 3.3.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html)
 - **now** are the reasons outside of the business why as size/output of all firms in an entire industry increases. They are external to the individual firm and cause the LRAC curve to shift downwards for all firms in the industry, reducing costs.
+- **shown** The reasons outside of the business why as size/output of all firms in an entire industry 
+- **rule** `lead-in` — `are the` → `The`
 - **why** no colon: the term is the subject
 
 ### Factor immobility
 
 - **id** `factor-immobility` · **notes** [aqa 1.8.6](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html)
 - **now** refers to the inability of factors of production (land, labour, capital, and entrepreneurship) to move freely between different uses or locations.
+- **shown** The inability of factors of production (land, labour, capital, and entrepreneurship) to mo
+- **rule** `lead-in` — `refers to the` → `The`
 - **why** no colon: the term is the subject
 
 ### First-degree price discrimination
 
 - **id** `first-degree-price-discrimination` · **notes** [aqa 1.5.7](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-7-price-discrimination.html)
 - **now** occurs when a firm charges each consumer the maximum price they are willing to pay, capturing all consumer surplus as profit e.g. auctions.
+- **shown** When a firm charges each consumer the maximum price they are willing to pay, capturing all
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** no colon: the term is the subject
 
 ### Globalisation
 
 - **id** `globalisation` · **notes** [aqa 2.6.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-1-globalisation.html), [edexcel-a 4.1.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-1-1-globalisation.html)
 - **now** is the increasing integration and interdependence of the world's economies.
+- **shown** The increasing integration and interdependence of the world's economies.
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 ### Income inequality
 
 - **id** `income-inequality` · **notes** [aqa 1.7.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html), [edexcel-a 4.2.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-2-2-inequality.html)
 - **now** is the unequal distribution of earnings, such as wages, rent, interest, and profit. Income is a flow of money over a period of time.
+- **shown** The unequal distribution of earnings, such as wages, rent, interest, and profit. Income is
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 ### Indirect Taxes
 
 - **id** `indirect-taxes` · **notes** [aqa 2.5.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html), [edexcel-a 4.5.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-2-taxation.html)
 - **now** are levied on spending, such as VAT and excise duties.
+- **shown** Levied on spending, such as VAT and excise duties.
+- **rule** `lead-in` — `are levied` → `Levied`
 - **why** no colon: the term is the subject
 
 ### Information Provision
 
 - **id** `information-provision` · **notes** [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html), [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html), [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html), [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html)
 - **now** educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good.
+- **shown** Educating consumers about the negative externalities associated with certain goods, such a
+- **rule** `adds` — `educate` → `Educating`
 - **why** opens on "educate", which needs the term
 
 ### Internal Economies of scale
 
 - **id** `internal-economies-of-scale` · **notes** [aqa 1.4.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html), [edexcel-a 3.3.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html)
 - **now** the reasons within a business why Average Total Costs fall as size/output of the business increase. These are internal to the firm and cause LRAC to fall.
+- **shown** The reasons within a business why Average Total Costs fall as size/output of the business 
+- **rule** `lead-in` — `the` → `The`
 - **why** no colon: the term is the subject
 
 ### International competitiveness
 
 - **id** `international-competitiveness` · **notes** [edexcel-a 4.1.9](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-1-9-international-competitiveness.html)
 - **now** is the ability of a country's goods and services to compete successfully in global markets.
+- **shown** The ability of a country's goods and services to compete successfully in global markets.
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 ### Market rigging
 
 - **id** `market-rigging` · **notes** [edexcel-a 4.4.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html)
 - **now** occurs when individuals or institutions manipulate financial markets for their own benefit, often at the expense of other market participants. This can lead to market failure by distorting prices and reducing trust in the financial system.
+- **shown** When individuals or institutions manipulate financial markets for their own benefit, often
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** no colon: the term is the subject
 
 ### Maximum price
 
 - **id** `maximum-price` · **notes** [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html), [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html)
 - **now** this decreases the price of the demerit good, causing an expansion in D=MPC.
+- **shown** This decreases the price of the demerit good, causing an expansion in D=MPC.
+- **rule** `not-a-definition` — `this` → `This`
 - **why** opens on "this", which needs the term
 
 ### Minimum Efficient Scale (MES)
 
 - **id** `minimum-efficient-scale-mes` · **notes** [aqa 1.4.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html), [edexcel-a 3.3.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html)
 - **now** is the lowest level of output at which a firm can achieve the lowest possible average total cost in the long run.
+- **shown** The lowest level of output at which a firm can achieve the lowest possible average total c
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 ### Minimum price
 
 - **id** `minimum-price` · **notes** [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html), [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html)
 - **now** this increases the price of the demerit good, causing a contraction in D=MPC.
+- **shown** This increases the price of the demerit good, causing a contraction in D=MPC.
+- **rule** `not-a-definition` — `this` → `This`
 - **why** opens on "this", which needs the term
 
 ### Monopoly power
 
 - **id** `monopoly-power` · **notes** [aqa 1.8.6](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-6-market-imperfections.html)
 - **now** is the ability of a firm to set prices above the competitive level due to a lack of competition. Any firm with 25% or more market share is considered to have monopoly power.
+- **shown** The ability of a firm to set prices above the competitive level due to a lack of competiti
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 ### Moral hazard
 
 - **id** `moral-hazard` · **notes** [edexcel-a 4.4.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html)
 - **now** occurs when individuals or institutions take on excessive risk because they do not bear the full consequences of their actions. In financial markets, this can lead to market failure in the following ways:
+- **shown** When individuals or institutions take on excessive risk because they do not bear the full 
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** no colon: the term is the subject
 
 ### NGOs
 
 - **id** `ngos` · **notes** [edexcel-a 4.3.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html)
 - **now** are non-profit organisations that operate independently of governments. They often focus on specific development issues such as education, healthcare, or human rights. NGOs can provide aid, implement development projects, and advocate for policy changes to support sustainable development.
+- **shown** Non-profit organisations that operate independently of governments. They often focus on sp
+- **rule** `lead-in` — `are non-profit` → `Non-profit`
 - **why** no colon: the term is the subject
 
 ### Non-excludability
 
 - **id** `non-excludability` · **notes** [aqa 1.8.3](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html), [edexcel-a 1.3.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-3-public-goods.html)
 - **now** it is impossible or extremely costly to prevent non-payers from consuming the good once it is provided.
+- **shown** Where it is impossible or extremely costly to prevent non-payers from consuming the good o
+- **rule** `adds` — `it is` → `Where it is`
 - **why** opens on "it", which needs the term
 
 ### Non-excludability
 
 - **id** `non-excludability` · **notes** [aqa 1.8.2](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html), [edexcel-a 1.3.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-1-types-of-market-failure.html)
 - **now** it is impossible to prevent non-payers from consuming the good once it is provided.
+- **shown** Where it is impossible to prevent non-payers from consuming the good once it is provided.
+- **rule** `adds` — `it is` → `Where it is`
 - **why** opens on "it", which needs the term
 
 ### Regulation
 
 - **id** `regulation` · **notes** [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html)
 - **now** requiring the consumption of certain merit goods, such as compulsory education or healthcare.
+- **shown** Requiring the consumption of certain merit goods, such as compulsory education or healthca
+- **rule** `lead-in` — `requiring` → `Requiring`
 - **why** opens on "requiring", which needs the term
 
 ### Relative poverty
 
 - **id** `relative-poverty` · **notes** [aqa 1.7.2](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-7-2-the-problem-of-poverty.html), [edexcel-a 4.2.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-2-1-absolute-relative-poverty.html)
 - **now** exists when household income is below a certain proportion of median income in an economy.
+- **shown** When household income is below a certain proportion of median income in an economy.
+- **rule** `lead-in` — `exists when` → `When`
 - **why** no colon: the term is the subject
 
 ### Second-degree price discrimination
 
 - **id** `second-degree-price-discrimination` · **notes** [aqa 1.5.7](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-7-price-discrimination.html)
 - **now** occurs when a firm charges different prices based on the quantity purchased or the version of the product, such as bulk discounts or premium versions. Also known as Purchasing Economies of Scale.
+- **shown** When a firm charges different prices based on the quantity purchased or the version of the
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** no colon: the term is the subject
 
 ### Single indicators
 
 - **id** `single-indicators` · **notes** [aqa 2.6.5](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html), [edexcel-a 4.3.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-1-measures-of-development.html)
 - **now** measure one aspect of development, such as the infant mortality rate, literacy rate, or access to clean water.
+- **shown** Indicators that measure one aspect of development, such as the infant mortality rate, lite
+- **rule** `adds` — `measure` → `Indicators that measure`
 - **why** no colon: the term is the subject
 
 ### Speculation
 
 - **id** `speculation` · **notes** [edexcel-a 4.4.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html)
 - **now** occurs when investors buy assets with the expectation that their prices will rise, rather than based on the underlying value of the asset. This can lead to market bubbles, where asset prices become detached from their fundamental value, and can eventually burst, causing widespread financial instability and loss of wealth to individuals.
+- **shown** When investors buy assets with the expectation that their prices will rise, rather than ba
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** no colon: the term is the subject
 
 ### Subsidies
 
 - **id** `subsidies` · **notes** [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html)
 - **now** provide financial incentives for producers to increase output, shifting S=MSC downward and internalising the positive externality.
+- **shown** Financial incentives for producers to increase output, shifting S=MSC downward and interna
+- **rule** `lead-in` — `provide financial` → `Financial`
 - **why** opens on "provide", which needs the term
 
 ### Subsidising alternatives
 
 - **id** `subsidising-alternatives` · **notes** [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html), [aqa 1.8.4](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html), [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html), [edexcel-a 1.3.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html)
 - **now** provide financial incentives for consumers to choose goods or services that have positive externalities, such as subsidies for public transport or renewable energy. This reduces demand for the demerit good as consumers switch to the subsidised alternatives.
+- **shown** Financial incentives for consumers to choose goods or services that have positive external
+- **rule** `lead-in` — `provide financial` → `Financial`
 - **why** opens on "provide", which needs the term
 
 ### Sunk costs
 
 - **id** `sunk-costs` · **notes** [aqa 1.5.9](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-9-contestable-and-non-contestable-markets.html), [edexcel-a 3.4.7](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-4-7-contestability.html)
 - **now** are costs that cannot be recovered if a firm leaves the market.
+- **shown** Costs that cannot be recovered if a firm leaves the market.
+- **rule** `lead-in` — `are costs` → `Costs`
 - **why** no colon: the term is the subject
 
 ### Supply of Labour
 
 - **id** `supply-of-labour` · **notes** [aqa 1.6.2](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-6-2-influence-upon-the-supply-of-labour-to-different-markets.html), [edexcel-a 3.5.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-5-2-supply-of-labour.html)
 - **now** is the quantity of workers willing and able to work at a given wage rate.
+- **shown** The quantity of workers willing and able to work at a given wage rate.
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 ### Third-degree price discrimination
 
 - **id** `third-degree-price-discrimination` · **notes** [aqa 1.5.7](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-7-price-discrimination.html)
 - **now** occurs when a firm charges different prices to different consumer groups based on characteristics such as age, location, or income e.g. train tickets.
+- **shown** When a firm charges different prices to different consumer groups based on characteristics
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** no colon: the term is the subject
 
 ### Transfer payments
 
 - **id** `transfer-payments` · **notes** [aqa 2.5.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html), [edexcel-a 4.5.1](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-1-public-expenditure.html)
 - **now** are payments where no good or service is received in return, such as pensions, unemployment benefits, and subsidies.
+- **shown** Payments where no good or service is received in return, such as pensions, unemployment be
+- **rule** `lead-in` — `are payments` → `Payments`
 - **why** no colon: the term is the subject
 
 ### Underemployment
 
 - **id** `underemployment` · **notes** [aqa 2.3.2](https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-3-2-employment-and-unemployment.html), [edexcel-a 2.1.3](https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html)
 - **now** occurs when workers are in jobs that underutilise their skills or when they want to work more hours than they currently do. For example, a qualified teacher working part-time as a barista due to a lack of teaching vacancies is underemployed.
+- **shown** When workers are in jobs that underutilise their skills or when they want to work more hou
+- **rule** `lead-in` — `occurs when` → `When`
 - **why** opens on "occurs", which needs the term
 
 ### Wealth inequality
 
 - **id** `wealth-inequality` · **notes** [aqa 1.7.1](https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-7-1-the-distribution-of-income-and-wealth.html), [edexcel-a 4.2.2](https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-2-2-inequality.html)
 - **now** is the unequal distribution of assets, such as property, shares, and savings. Wealth is a stock of monetary value at a point in time.
+- **shown** The unequal distribution of assets, such as property, shares, and savings. Wealth is a sto
+- **rule** `lead-in` — `is the` → `The`
 - **why** no colon: the term is the subject
 
 

@@ -70,12 +70,12 @@ BOARDS = {
         "intro": (
             "Every key term and formula you need for <strong>Edexcel A-Level "
             "Economics A (9EC0)</strong>, covering Themes 1 to 4. Each "
-            "definition is taken word for word from the revision notes on this "
-            "site, and links back to the topic page it came from."
+            "definition comes from the revision notes on this site, and links "
+            "back to the topic page it came from."
         ),
         "meta": (
             "Every key term and formula for Edexcel A-Level Economics (9EC0), "
-            "taken word for word from our Theme 1-4 revision notes. Search, "
+            "taken from our Theme 1-4 revision notes. Search, "
             "browse A-Z or print."
         ),
     },
@@ -88,13 +88,12 @@ BOARDS = {
         "intro": (
             "Every key term and formula you need for <strong>AQA A-Level "
             "Economics (7136)</strong>, covering microeconomics and "
-            "macroeconomics. Each definition is taken word for word from the "
-            "revision notes on this site, and links back to the topic page it "
-            "came from."
+            "macroeconomics. Each definition comes from the revision notes on "
+            "this site, and links back to the topic page it came from."
         ),
         "meta": (
             "Every key term and formula for AQA A-Level Economics (7136), taken "
-            "word for word from our microeconomics and macroeconomics revision "
+            "from our microeconomics and macroeconomics revision "
             "notes. Search or print."
         ),
     },
@@ -147,9 +146,52 @@ def capitalise(term_id: str, fragment: str, approved: set) -> str:
     return FIRST_LETTER.sub(lambda m: m.group(1) + m.group(2).upper(),
                             fragment, count=1)
 
+
+# ---------------------------------------------------------------- rewrites
+#
+# THE ONE PLACE THE GLOSSARY DOES NOT SHOW THE NOTES' OWN WORDS.
+#
+# 46 definitions read as fragments because the notes made the term the subject
+# of the sentence - "Globalisation is the increasing integration ...". Under a
+# heading that leaves "is the increasing integration ...". Eliot asked on
+# 2026-08-07 for these to read correctly in the glossary WITHOUT the notes being
+# edited, which is a deliberate, instructed departure from the rule in CLAUDE.md
+# that a badly-reading definition is fixed in the notes and re-extracted.
+#
+# It is kept as narrow as it can be:
+#
+#   - A rewrite replaces a LEADING SUBSTRING and nothing else. 39 of the 46 only
+#     drop a lead-in and capitalise the next word, so no word is invented. The
+#     seven that do not are marked "adds" or "not-a-definition" in curation.json.
+#   - "from" must still be the start of the extracted definition. Change the
+#     notes and the build stops, rather than quietly applying a rewrite to text
+#     it was never reviewed against. That is the anti-drift property the
+#     verbatim check gives everything else.
+#   - terms.json is untouched, so check 1 keeps proving the EXTRACTION is
+#     faithful. What it no longer proves is that the rendered page is - which is
+#     what check 7 in verify_glossary.py exists to make visible.
+
+
+def rewrites() -> dict:
+    cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    return cur.get("rewrite", {}).get("entries", {})
+
+
+def rewrite(term_id: str, fragment: str, table: dict) -> str:
+    rule = table.get(cap_key(term_id, fragment))
+    if not rule:
+        return fragment
+    if not fragment.startswith(rule["from"]):
+        raise BuildError(
+            f"rewrite for '{term_id}' no longer applies: the notes now open "
+            f"{fragment[:60]!r}, not {rule['from']!r}. Re-review it in "
+            f"glossary-data/curation.json, or delete the rule if the notes have "
+            f"been fixed at source.")
+    return rule["to"] + fragment[len(rule["from"]):]
+
 LANDING_META = (
     "Free A-Level Economics glossary. Choose your exam board for every "
-    "definition and formula you need, taken word for word from our Edexcel and "
+    "definition and formula you need, taken from our Edexcel and "
     "AQA revision notes."
 )
 
@@ -466,9 +508,10 @@ def source_link(s):
             f'>{e(s["spec"])} {e(s["topic"])}</a>')
 
 
-def entry_html(term, board, inline_map, approved):
+def entry_html(term, board, inline_map, approved, rules):
     s = source_for(term, board)
-    definition = capitalise(term["id"], s["definitionHtml"], approved)
+    definition = rewrite(term["id"], s["definitionHtml"], rules)
+    definition = capitalise(term["id"], definition, approved)
     # Five definitions end on a colon because the rest of them is the bulleted
     # list that follows on the notes page. The list is carried across so the
     # entry reads as a whole; it cannot sit inside the <p>.
@@ -524,6 +567,7 @@ def formula_html(f, board, rendered, groups):
 def render_board(data, board, groups, rendered_map, inline_map):
     meta = BOARDS[board]
     approved = approved_capitalisations()
+    rules = rewrites()
     terms = [t for t in data["terms"] if board in t["boards"]]
     formulae = [f for f in data["formulae"] if board in f["boards"]]
     # Sort on the canonical key so a leading article is ignored here too,
@@ -557,7 +601,8 @@ def render_board(data, board, groups, rendered_map, inline_map):
         if not by_letter[L]:
             continue
         entries = "\n".join(
-                entry_html(t, board, inline_map, approved) for t in by_letter[L])
+                entry_html(t, board, inline_map, approved, rules)
+                for t in by_letter[L])
         sections.append(f"""          <section class="gl-letter" id="letter-{L.lower()}">
             <h2 class="gl-letter-head">{L}</h2>
             <dl class="gl-list">
@@ -565,7 +610,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </dl>
           </section>""")
     if other:
-        entries = "\n".join(entry_html(t, board, inline_map, approved) for t in other)
+        entries = "\n".join(entry_html(t, board, inline_map, approved, rules) for t in other)
         sections.append(f"""          <section class="gl-letter" id="letter-other">
             <h2 class="gl-letter-head">Other</h2>
             <dl class="gl-list">
@@ -684,8 +729,9 @@ def render_board(data, board, groups, rendered_map, inline_map):
                 "@type": "DefinedTerm",
                 "@id": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "name": t["term"],
-                "description": plain(capitalise(
-                    t["id"], source_for(t, board)["definitionHtml"], approved)),
+                "description": plain(capitalise(t["id"], rewrite(
+                    t["id"], source_for(t, board)["definitionHtml"], rules),
+                    approved)),
                 "url": f"{SITE}/revision-notes/glossary/{meta['slug']}/#{t['id']}",
                 "inDefinedTermSet":
                     f"{SITE}/revision-notes/glossary/{meta['slug']}/#glossary",
@@ -741,8 +787,7 @@ def render_landing(data):
               specification asks for.
             </p>
             <p class="gl-intro">
-              Nothing here is written for the glossary. Every definition is taken
-              word for word from the
+              Every definition comes from the
               <a href="/revision-notes/index.html">revision notes</a> on this
               site, and links back to the topic page it came from.
             </p>

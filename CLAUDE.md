@@ -224,12 +224,17 @@ Every definition and formula a student needs, one page per exam board, at
 `/revision-notes/glossary/{edexcel-a,aqa}/` with a board selector at
 `/revision-notes/glossary/`.
 
-**The definitions are the notes' own words, with one declared exception.** Every
+**The definitions are the notes' own words, with two declared exceptions.** Every
 entry except those in `glossary-data/authored.json` is lifted verbatim from the
 `<span class="key-definition">` chip and the paragraph that follows it on a topic
 page, and `scripts/verify_glossary.py` re-reads the notes and fails if a shipped
-definition no longer appears in its source page. A term that reads badly is fixed
-**in the notes**, then re-extracted — never edited in the glossary.
+definition no longer appears in its source page. The second exception is the
+`rewrite` block in `curation.json`, which edits the **lead-in** of 46 definitions
+at render time — see "Capitalisation and lead-in rewrites" below.
+
+Outside those two, a term that reads badly is fixed **in the notes**, then
+re-extracted — never edited in the glossary. Both exceptions are counted on
+every `verify_glossary.py` run so neither goes quiet.
 
 - `glossary-data/terms.json` — **generated** by `scripts/extract_glossary.py`
   from the notes HTML. Never hand-edit.
@@ -263,14 +268,29 @@ Ranking needs the order to change, so a query moves the matches into one flat
 list and hides the A–Z; clearing puts them back. A topic filter alone reorders
 nothing and leaves the A–Z in place.
 
-**Capitalisation is applied at render time**, from `curation.json`'s
-`capitalise` block, never in `terms.json` — the data has to stay byte-identical
-to the notes or the verbatim check stops meaning anything. Definitions the notes
-wrote as `Term: definition` get their first letter capitalised; those needing the
-term as their subject (*"Globalisation is the increasing integration…"*) do not,
-and are fixed in the notes or not at all. `scripts/check_glossary_capitalisation.py`
-classifies and reports; `verify_glossary.py` check 6 fails on any lower-case
-start nobody has ruled on.
+**Capitalisation and lead-in rewrites are applied at render time**, from
+`curation.json`, never in `terms.json` — the data has to stay byte-identical to
+the notes or the verbatim check stops meaning anything.
+
+- `capitalise` — definitions the notes wrote as `Term: definition` get their
+  first letter upper-cased. 58 wordings.
+- `rewrite` — **the second declared exception to "the notes' own words"**, after
+  `authored.json`. 46 definitions the notes wrote with the term as the sentence
+  subject (*"Globalisation is the increasing integration…"*) have their lead-in
+  replaced so they read as definitions. Instructed by Eliot on 2026-08-07,
+  explicitly overriding the rule that such a definition is fixed in the notes
+  and re-extracted. A rule replaces a **leading substring only**; 39 of the 46
+  merely drop a lead-in and invent no word, and the 7 that do are marked `adds`
+  or `not-a-definition`. The build **fails** if `from` is no longer how the
+  definition opens, so rewording a notes page cannot silently re-point a rule.
+
+`scripts/check_glossary_capitalisation.py` classifies and reports both.
+`verify_glossary.py` check 6 fails on any lower-case start nobody has ruled on;
+check 7 keeps every rewrite anchored and prints how many are shown.
+
+Because of this, **check 1 proves the extraction is faithful, not the page.**
+Do not describe the glossary as word-for-word without that qualification — the
+board pages' own intro was reworded on 2026-08-07 for the same reason.
 
 There is **no synonyms or alternative-names field.** Abbreviations only match
 because the notes put them in the term (`Price Elasticity of Demand (PED)`), and

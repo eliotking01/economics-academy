@@ -422,8 +422,6 @@
       "value-judgement:580a2438": "Value Judgement - a view about what is morally or subjectively important. Thes"
     },
     "leave": {
-      "a-demerger:b05d76ee": "A demerger - is when a large firm splits into two or more separate, indep",
-      "absolute-poverty:1a25d8f1": "Absolute poverty - exists when individuals cannot afford the basic necessities ",
       "average-cost-ac:be3c67c4": "Average Cost (AC) - \\( AC = \\frac{TC}{Q} \\)",
       "average-fixed-cost-afc:487cf691": "Average Fixed Cost (AFC) - \\( AFC = \\frac{TFC}{Q} \\)",
       "average-revenue-ar:0de68d8e": "Average Revenue (AR) - \\( \\frac{TR}{Q} \\). This is the price per unit and also the ",
@@ -432,61 +430,369 @@
       "budget-deficit:cc0dcfe5": "Budget deficit - \\( G > T \\). This means government spending is greater than ",
       "budget-deficit:509b824b": "Budget deficit - \\( G > T \\). This means government spending is greater than ",
       "budget-surplus:8d8103c6": "Budget surplus - \\( T > G \\). This means tax revenue is greater than governme",
-      "capital-expenditure:1cf37c60": "Capital expenditure - is long-term investment in infrastructure and assets such as",
-      "capitalism:9da784a8": "Capitalism - is an economic system based on private ownership of the fact",
       "common-market:220a822f": "Common market - e.g. European Union (EU)",
-      "competition:0efcf9b5": "Competition - refers to the number of businesses in a market and the degre",
-      "competitive-devaluation:bdb350b0": "Competitive devaluation - is when a government deliberately pushes down the value of i",
-      "composite-indicators:d5366a12": "Composite indicators - combine several single indicators into one index to provide ",
-      "creative-destruction:f7d21bdb": "Creative destruction - is a process in which new innovations and technologies repla",
       "currency-union:b15d047e": "Currency union - e.g. Eurozone",
-      "current-expenditure:cbbf93c0": "Current expenditure - is day-to-day spending on public sector wages, such as payme",
       "customs-union:3f7e2c69": "Customs union - e.g. MERCOSUR (Southern Common Market)",
-      "demand-for-labour:27f6413c": "Demand for labour - refers to the quantity of workers that firms are willing and",
-      "demand-side-policies:f2668209": "Demand-side policies - are policies used by the government or central bank to shift",
-      "direct-taxes:87cff698": "Direct taxes - are levied on income or profits, such as income tax, corpora",
-      "diseconomies-of-scale:05b522f2": "Diseconomies of scale - are the reasons why ATC starts to increase as the size/outpu",
-      "economic-development:b9118033": "Economic development - is a broader concept. It includes economic growth but also c",
-      "economic-growth:41f130b4": "Economic growth - is a narrower concept that is measured by increases in real ",
-      "external-economies-of-scale:d55f4daf": "External economies of scale - are the reasons outside of the business why as size/output o",
-      "factor-immobility:4717904d": "Factor immobility - refers to the inability of factors of production (land, labo",
-      "first-degree-price-discrimination:c16a0af9": "First-degree price discrimination - occurs when a firm charges each consumer the maximum price t",
       "free-trade-area:44367f7c": "Free trade area - e.g. USMCA (the United States-Mexico-Canada Agreement)",
-      "globalisation:18b7976f": "Globalisation - is the increasing integration and interdependence of the wor",
-      "income-inequality:ced2d6e0": "Income inequality - is the unequal distribution of earnings, such as wages, rent",
-      "indirect-taxes:8a76d1c0": "Indirect Taxes - are levied on spending, such as VAT and excise duties.",
-      "information-provision:af4d114f": "Information Provision - educate consumers about the negative externalities associate",
-      "internal-economies-of-scale:42dfc42d": "Internal Economies of scale - the reasons within a business why Average Total Costs fall a",
-      "international-competitiveness:e17f5c78": "International competitiveness - is the ability of a country's goods and services to compete ",
       "marginal-cost-mc:b970a036": "Marginal Cost (MC) - \\( \\frac{\\Delta TC}{\\Delta Q} \\), which is the additional co",
       "marginal-revenue-mr:8b1a00bc": "Marginal Revenue (MR) - \\( \\frac{\\Delta TR}{\\Delta Q} \\). This is the additional rev",
-      "market-rigging:0e75f200": "Market rigging - occurs when individuals or institutions manipulate financial",
-      "maximum-price:be382f4f": "Maximum price - this decreases the price of the demerit good, causing an exp",
-      "minimum-efficient-scale-mes:63f75562": "Minimum Efficient Scale (MES) - is the lowest level of output at which a firm can achieve th",
-      "minimum-price:2693c66e": "Minimum price - this increases the price of the demerit good, causing a cont",
       "monetary-union:b15d047e": "Monetary union - e.g. Eurozone",
-      "monopoly-power:501a9392": "Monopoly power - is the ability of a firm to set prices above the competitive",
-      "moral-hazard:b231c94b": "Moral hazard - occurs when individuals or institutions take on excessive ri",
-      "ngos:71295bb5": "NGOs - are non-profit organisations that operate independently of g",
-      "non-excludability:5a0ea07b": "Non-excludability - it is impossible or extremely costly to prevent non-payers f",
-      "non-excludability:77d27ecd": "Non-excludability - it is impossible to prevent non-payers from consuming the go",
       "regulation:166ad4f6": "Regulation - ban/limit the production or consumption of goods that genera",
       "regulation:bfdd5473": "Regulation - bans/limits on the production of demerit goods or requiring ",
-      "regulation:52070acb": "Regulation - requiring the consumption of certain merit goods, such as co",
-      "relative-poverty:4515e054": "Relative poverty - exists when household income is below a certain proportion o",
-      "second-degree-price-discrimination:4ad7775b": "Second-degree price discrimination - occurs when a firm charges different prices based on the qua",
-      "single-indicators:866e5f72": "Single indicators - measure one aspect of development, such as the infant mortal",
-      "speculation:419bc7f1": "Speculation - occurs when investors buy assets with the expectation that t",
-      "subsidies:a703923d": "Subsidies - provide financial incentives for producers to increase outpu",
-      "subsidising-alternatives:bedd5672": "Subsidising alternatives - provide financial incentives for consumers to choose goods o",
-      "sunk-costs:516308d3": "Sunk costs - are costs that cannot be recovered if a firm leaves the mark",
-      "supply-of-labour:bd120352": "Supply of Labour - is the quantity of workers willing and able to work at a giv",
-      "third-degree-price-discrimination:a0a3dc71": "Third-degree price discrimination - occurs when a firm charges different prices to different con",
       "total-cost-tc:e4a43fee": "Total Cost (TC) - \\( TC = TFC + TVC \\)",
-      "total-revenue-tr:8a0d6f00": "Total Revenue (TR) - \\( P \\times Q \\)",
-      "transfer-payments:c2253ac3": "Transfer payments - are payments where no good or service is received in return,",
-      "underemployment:e853a856": "Underemployment - occurs when workers are in jobs that underutilise their skil",
-      "wealth-inequality:17e1c329": "Wealth inequality - is the unequal distribution of assets, such as property, sha"
+      "total-revenue-tr:8a0d6f00": "Total Revenue (TR) - \\( P \\times Q \\)"
+    }
+  },
+  "rewrite": {
+    "_comment": [
+      "The one place the glossary does not show the notes' own words.",
+      "",
+      "46 definitions read as fragments because the notes made the term the",
+      "subject of the sentence - 'Globalisation is the increasing integration...'.",
+      "Under a heading that leaves 'is the increasing integration...'. Eliot asked",
+      "on 2026-08-07 for these to read correctly in the glossary without the notes",
+      "being edited.",
+      "",
+      "A rule replaces a LEADING SUBSTRING of the extracted definition and nothing",
+      "else. build_glossary.py stops if 'from' is no longer how the definition",
+      "opens, so rewording the notes cannot silently re-point a rule at text it was",
+      "never reviewed against.",
+      "",
+      "kind:",
+      "  lead-in           drops a lead-in and capitalises the next word.",
+      "                    NO WORD IS INVENTED. 39 of the 46.",
+      "  adds              a word had to be added or changed, because dropping the",
+      "                    lead-in leaves a broken phrase. 5 of the 46 - the only",
+      "                    new wording in the glossary outside authored.json.",
+      "  not-a-definition  the notes text states an effect, not a definition of the",
+      "                    term. Capitalised only; nothing invented. Still needs a",
+      "                    real definition writing - see PROGRESS.md.",
+      "",
+      "Delete a rule once its notes chip is fixed at source and re-extracted."
+    ],
+    "entries": {
+      "a-demerger:b05d76ee": {
+        "term": "A demerger",
+        "from": "is when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When a large firm splits into two or more separate, independent businesses."
+      },
+      "absolute-poverty:1a25d8f1": {
+        "term": "Absolute poverty",
+        "from": "exists when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When individuals cannot afford the basic necessities for survival, such as food, water, sh"
+      },
+      "capital-expenditure:1cf37c60": {
+        "term": "Capital expenditure",
+        "from": "is long-term",
+        "to": "Long-term",
+        "kind": "lead-in",
+        "reads": "Long-term investment in infrastructure and assets such as roads, hospitals, and schools."
+      },
+      "capitalism:9da784a8": {
+        "term": "Capitalism",
+        "from": "is an",
+        "to": "An",
+        "kind": "lead-in",
+        "reads": "An economic system based on private ownership of the factors of production with the aim of"
+      },
+      "competition:0efcf9b5": {
+        "term": "Competition",
+        "from": "refers to the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The number of businesses in a market and the degree of rivalry between them. The spectrum "
+      },
+      "competitive-devaluation:bdb350b0": {
+        "term": "Competitive devaluation",
+        "from": "is when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When a government deliberately pushes down the value of its currency to make exports cheap"
+      },
+      "composite-indicators:d5366a12": {
+        "term": "Composite indicators",
+        "from": "combine",
+        "to": "Indicators that combine",
+        "kind": "adds",
+        "reads": "Indicators that combine several single indicators into one index to provide a more rounded"
+      },
+      "creative-destruction:f7d21bdb": {
+        "term": "Creative destruction",
+        "from": "is a",
+        "to": "A",
+        "kind": "lead-in",
+        "reads": "A process in which new innovations and technologies replace older ones, leading to the des"
+      },
+      "current-expenditure:cbbf93c0": {
+        "term": "Current expenditure",
+        "from": "is day-to-day",
+        "to": "Day-to-day",
+        "kind": "lead-in",
+        "reads": "Day-to-day spending on public sector wages, such as payments to teachers and nurses, and o"
+      },
+      "demand-for-labour:27f6413c": {
+        "term": "Demand for labour",
+        "from": "refers to the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The quantity of workers that firms are willing and able to employ at a given wage rate."
+      },
+      "demand-side-policies:f2668209": {
+        "term": "Demand-side policies",
+        "from": "are policies",
+        "to": "Policies",
+        "kind": "lead-in",
+        "reads": "Policies used by the government or central bank to shift the aggregate demand (AD) curve i"
+      },
+      "direct-taxes:87cff698": {
+        "term": "Direct taxes",
+        "from": "are levied",
+        "to": "Levied",
+        "kind": "lead-in",
+        "reads": "Levied on income or profits, such as income tax, corporation tax, and National Insurance."
+      },
+      "diseconomies-of-scale:05b522f2": {
+        "term": "Diseconomies of scale",
+        "from": "are the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The reasons why ATC starts to increase as the size/output of a business becomes too large."
+      },
+      "economic-development:b9118033": {
+        "term": "Economic development",
+        "from": "is a",
+        "to": "A",
+        "kind": "lead-in",
+        "reads": "A broader concept. It includes economic growth but also considers improvements in living s"
+      },
+      "economic-growth:41f130b4": {
+        "term": "Economic growth",
+        "from": "is a",
+        "to": "A",
+        "kind": "lead-in",
+        "reads": "A narrower concept that is measured by increases in real GDP."
+      },
+      "external-economies-of-scale:d55f4daf": {
+        "term": "External economies of scale",
+        "from": "are the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The reasons outside of the business why as size/output of all firms in an entire industry "
+      },
+      "factor-immobility:4717904d": {
+        "term": "Factor immobility",
+        "from": "refers to the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The inability of factors of production (land, labour, capital, and entrepreneurship) to mo"
+      },
+      "first-degree-price-discrimination:c16a0af9": {
+        "term": "First-degree price discrimination",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When a firm charges each consumer the maximum price they are willing to pay, capturing all"
+      },
+      "globalisation:18b7976f": {
+        "term": "Globalisation",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The increasing integration and interdependence of the world's economies."
+      },
+      "income-inequality:ced2d6e0": {
+        "term": "Income inequality",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The unequal distribution of earnings, such as wages, rent, interest, and profit. Income is"
+      },
+      "indirect-taxes:8a76d1c0": {
+        "term": "Indirect Taxes",
+        "from": "are levied",
+        "to": "Levied",
+        "kind": "lead-in",
+        "reads": "Levied on spending, such as VAT and excise duties."
+      },
+      "information-provision:af4d114f": {
+        "term": "Information Provision",
+        "from": "educate",
+        "to": "Educating",
+        "kind": "adds",
+        "reads": "Educating consumers about the negative externalities associated with certain goods, such a"
+      },
+      "internal-economies-of-scale:42dfc42d": {
+        "term": "Internal Economies of scale",
+        "from": "the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The reasons within a business why Average Total Costs fall as size/output of the business "
+      },
+      "international-competitiveness:e17f5c78": {
+        "term": "International competitiveness",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The ability of a country's goods and services to compete successfully in global markets."
+      },
+      "market-rigging:0e75f200": {
+        "term": "Market rigging",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When individuals or institutions manipulate financial markets for their own benefit, often"
+      },
+      "maximum-price:be382f4f": {
+        "term": "Maximum price",
+        "from": "this",
+        "to": "This",
+        "kind": "not-a-definition",
+        "reads": "This decreases the price of the demerit good, causing an expansion in D=MPC."
+      },
+      "minimum-efficient-scale-mes:63f75562": {
+        "term": "Minimum Efficient Scale (MES)",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The lowest level of output at which a firm can achieve the lowest possible average total c"
+      },
+      "minimum-price:2693c66e": {
+        "term": "Minimum price",
+        "from": "this",
+        "to": "This",
+        "kind": "not-a-definition",
+        "reads": "This increases the price of the demerit good, causing a contraction in D=MPC."
+      },
+      "monopoly-power:501a9392": {
+        "term": "Monopoly power",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The ability of a firm to set prices above the competitive level due to a lack of competiti"
+      },
+      "moral-hazard:b231c94b": {
+        "term": "Moral hazard",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When individuals or institutions take on excessive risk because they do not bear the full "
+      },
+      "ngos:71295bb5": {
+        "term": "NGOs",
+        "from": "are non-profit",
+        "to": "Non-profit",
+        "kind": "lead-in",
+        "reads": "Non-profit organisations that operate independently of governments. They often focus on sp"
+      },
+      "non-excludability:5a0ea07b": {
+        "term": "Non-excludability",
+        "from": "it is",
+        "to": "Where it is",
+        "kind": "adds",
+        "reads": "Where it is impossible or extremely costly to prevent non-payers from consuming the good o"
+      },
+      "non-excludability:77d27ecd": {
+        "term": "Non-excludability",
+        "from": "it is",
+        "to": "Where it is",
+        "kind": "adds",
+        "reads": "Where it is impossible to prevent non-payers from consuming the good once it is provided."
+      },
+      "regulation:52070acb": {
+        "term": "Regulation",
+        "from": "requiring",
+        "to": "Requiring",
+        "kind": "lead-in",
+        "reads": "Requiring the consumption of certain merit goods, such as compulsory education or healthca"
+      },
+      "relative-poverty:4515e054": {
+        "term": "Relative poverty",
+        "from": "exists when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When household income is below a certain proportion of median income in an economy."
+      },
+      "second-degree-price-discrimination:4ad7775b": {
+        "term": "Second-degree price discrimination",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When a firm charges different prices based on the quantity purchased or the version of the"
+      },
+      "single-indicators:866e5f72": {
+        "term": "Single indicators",
+        "from": "measure",
+        "to": "Indicators that measure",
+        "kind": "adds",
+        "reads": "Indicators that measure one aspect of development, such as the infant mortality rate, lite"
+      },
+      "speculation:419bc7f1": {
+        "term": "Speculation",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When investors buy assets with the expectation that their prices will rise, rather than ba"
+      },
+      "subsidies:a703923d": {
+        "term": "Subsidies",
+        "from": "provide financial",
+        "to": "Financial",
+        "kind": "lead-in",
+        "reads": "Financial incentives for producers to increase output, shifting S=MSC downward and interna"
+      },
+      "subsidising-alternatives:bedd5672": {
+        "term": "Subsidising alternatives",
+        "from": "provide financial",
+        "to": "Financial",
+        "kind": "lead-in",
+        "reads": "Financial incentives for consumers to choose goods or services that have positive external"
+      },
+      "sunk-costs:516308d3": {
+        "term": "Sunk costs",
+        "from": "are costs",
+        "to": "Costs",
+        "kind": "lead-in",
+        "reads": "Costs that cannot be recovered if a firm leaves the market."
+      },
+      "supply-of-labour:bd120352": {
+        "term": "Supply of Labour",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The quantity of workers willing and able to work at a given wage rate."
+      },
+      "third-degree-price-discrimination:a0a3dc71": {
+        "term": "Third-degree price discrimination",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When a firm charges different prices to different consumer groups based on characteristics"
+      },
+      "transfer-payments:c2253ac3": {
+        "term": "Transfer payments",
+        "from": "are payments",
+        "to": "Payments",
+        "kind": "lead-in",
+        "reads": "Payments where no good or service is received in return, such as pensions, unemployment be"
+      },
+      "underemployment:e853a856": {
+        "term": "Underemployment",
+        "from": "occurs when",
+        "to": "When",
+        "kind": "lead-in",
+        "reads": "When workers are in jobs that underutilise their skills or when they want to work more hou"
+      },
+      "wealth-inequality:17e1c329": {
+        "term": "Wealth inequality",
+        "from": "is the",
+        "to": "The",
+        "kind": "lead-in",
+        "reads": "The unequal distribution of assets, such as property, shares, and savings. Wealth is a sto"
+      }
     }
   }
 }

@@ -12,8 +12,9 @@ definition starts on a lower-case letter.
 Most of those want nothing more than the first letter capitalised. Some do not:
 where the notes wrote "Globalisation is the increasing integration ...", the
 term is the sentence's subject and the extracted text is a fragment. Capitalising
-that produces "Is the increasing integration ...". Those have to be fixed in the
-notes, not here.
+that produces "Is the increasing integration ...". Those instead get a rewrite
+rule in curation.json, which replaces the lead-in when the page is generated -
+see the "rewrite" block there and check 7 in verify_glossary.py.
 
 Two mechanical signals separate the two, and neither is a judgement about
 wording:
@@ -25,8 +26,8 @@ wording:
      needs the term in front of it to parse.
 
 Nothing here edits a definition. It classifies and reports; the capitalisation
-itself is applied at render time by scripts/build_glossary.py, from the
-allow-list in glossary-data/curation.json.
+and the rewrites are both applied at render time by scripts/build_glossary.py,
+from glossary-data/curation.json.
 
 --check exits non-zero when a lower-case definition is not accounted for by
 curation.json, so a newly written notes chip cannot reintroduce this silently.
@@ -156,12 +157,19 @@ BUCKETS = [
      "The notes wrote these as `Term: definition`, and the definition opens on a "
      "noun phrase. Capitalising the first letter changes nothing else and leaves "
      "a complete glossary entry. **These are the ones to approve.**"),
-    ("fragment", "Fragment — needs fixing in the notes",
+    ("fragment", "Fragment — rewritten at render time",
      "The definition needs the term in front of it to parse: the notes wrote "
      "`Globalisation is the increasing integration ...`, so the extracted text "
-     "starts on a verb. Capitalising gives `Is the increasing integration ...`. "
-     "**Do not capitalise these.** Each is fixed by rewording its notes chip and "
-     "re-extracting — Eliot's call, not a scripted change."),
+     "starts on a verb and capitalising it would give `Is the increasing "
+     "integration ...`.\n\n"
+     "These are **not** capitalised. Each has a rule in `curation.json` under "
+     "`rewrite` that replaces its lead-in when the page is generated, so the "
+     "glossary reads correctly while the notes are left alone. 39 only drop a "
+     "lead-in and capitalise the next word — no word is invented. The rest are "
+     "marked `adds` or `not-a-definition` in that file and are the only new "
+     "wording in the glossary outside `authored.json`.\n\n"
+     "The `now` line below is what the **notes** say. What the page shows is "
+     "the `to` value of the rule."),
     ("notdef", "Not a definition",
      "These are examples that were chipped as if they were definitions. "
      "Capitalisation is not the problem with them."),
@@ -175,6 +183,9 @@ BUCKETS = [
 
 
 def write_report(rows) -> None:
+    bg = load("build_glossary")
+    rules = json.loads(CURATION.read_text(encoding="utf-8")) \
+        .get("rewrite", {}).get("entries", {})
     merged = group(rows)
     n = len(rows)
     out = [
@@ -214,6 +225,14 @@ def write_report(rows) -> None:
             out.append(f"- **now** {r['text']}")
             if key == "clean":
                 out.append(f"- **proposed** {proposed}")
+            if key == "fragment":
+                rule = rules.get(bg.cap_key(r["id"], r["html"]))
+                if rule:
+                    out.append(f"- **shown** {rule['reads']}")
+                    out.append(f"- **rule** `{rule['kind']}` — "
+                               f"`{rule['from']}` → `{rule['to']}`")
+                else:
+                    out.append("- **shown** unchanged — no rewrite rule")
             out.append(f"- **why** {r['reason']}")
             out.append("")
 
@@ -230,9 +249,14 @@ def write_curation(rows) -> int:
     """
     bg = load("build_glossary")
     cur = json.loads(CURATION.read_text(encoding="utf-8"))
+    # A record with a rewrite rule is accounted for by that rule; listing it
+    # here as well would say it was left alone, which is no longer true.
+    rules = cur.get("rewrite", {}).get("entries", {})
     apply_, leave = {}, {}
     for r in rows:
         key = bg.cap_key(r["id"], r["html"])
+        if key in rules:
+            continue
         label = f"{r['term']} - {r['text'][:60]}"
         (apply_ if r["bucket"] == "clean" else leave)[key] = label
     cur["capitalise"] = {
@@ -297,7 +321,8 @@ def main() -> int:
     bg = load("build_glossary")
     cur = json.loads(CURATION.read_text(encoding="utf-8"))
     cap = cur.get("capitalise", {})
-    accounted = set(cap.get("apply", {})) | set(cap.get("leave", {}))
+    accounted = (set(cap.get("apply", {})) | set(cap.get("leave", {}))
+                 | set(cur.get("rewrite", {}).get("entries", {})))
     fails = []
     for r in rows:
         if bg.cap_key(r["id"], r["html"]) in accounted:
