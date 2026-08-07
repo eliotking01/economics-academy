@@ -15,9 +15,9 @@ and merges himself.
 ## STATUS
 
 **IN PROGRESS** — Phase 0 (re-ground, rendering, tooling) and Phase 1 (audit)
-complete. Phase 2 under way: **issues A and D are finished for Edexcel Themes
-1, 2 and 3** (83 cards edited across 5 batches, all committed). Nothing is
-blocked. Remaining: A and D on Theme 4 and both AQA decks, then all of B, then
+complete. Phase 2 under way: **issues A and D are finished for ALL FOUR
+EDEXCEL DECKS** (134 cards edited across 7 batches, all committed). Nothing is
+blocked. Remaining: A and D on `aqa-micro` and `aqa-macro`, then all of B, then
 all of C, then Phase 3 verification.
 
 ## RENDERING FINDINGS
@@ -121,10 +121,10 @@ Counts are cards affected, from `audit.py` over all 665 cards in all six decks.
 
 | Issue | Status | Found | Fixed | Stopped at |
 | --- | --- | --- | --- | --- |
-| A — merged points on one line | in progress | 206 cards | 66 | Themes 1, 2 and 3 **done**. Next: `edexcel-a-theme-4` (43 cards). |
-| B — exam board references | in progress | 47 cards (64 mentions) | 8 | Only those sitting on cards already open for A/D. Next: the remaining 39, as their own pass after A/D. |
+| A — merged points on one line | in progress | 206 cards | 105 | **All four Edexcel decks done.** Next: `aqa-micro` (43 cards), then `aqa-macro` (48). |
+| B — exam board references | in progress | 47 cards (64 mentions) | 8 | Only those sitting on cards already open for A/D — the Edexcel decks are now clean bar 4 mentions. Next: the remaining 39, nearly all AQA. |
 | C — multiple revision points | not started | 123 candidates, to be hand-filtered | 0 | — |
-| D — long inline lists | in progress | 67 cards | 14 | Themes 1, 2 and 3 **done**. Next: `edexcel-a-theme-4` (12 cards). |
+| D — long inline lists | in progress | 67 cards | 19 | **All four Edexcel decks done.** Next: `aqa-micro` (15 cards), then `aqa-macro` (16). |
 
 Per deck, cards **remaining** (re-run `audit.py` to refresh):
 
@@ -133,12 +133,12 @@ Per deck, cards **remaining** (re-run `audit.py` to refresh):
 | `edexcel-a-theme-1` | **0** | 3 | 13 | 2 (false positives, left) |
 | `edexcel-a-theme-2` | **1** (false positive, left) | 1 | 28 | 5 (false positives, left) |
 | `edexcel-a-theme-3` | **5** (false positives, left) | **0** | 12 | 3 (false positives, left) |
-| `edexcel-a-theme-4` | 43 | 0 | 1 | 12 |
+| `edexcel-a-theme-4` | **4** (false positives, left) | **0** | 1 | 7 (false positives, left) |
 | `aqa-micro` | 43 | 17 | 37 | 15 |
 | `aqa-macro` | 48 | 18 | 32 | 16 |
 
-A residual count above zero does **not** mean unfinished work — Themes 1, 2 and
-3 are complete for A and D, and what remains in them is the set of detector hits
+A residual count above zero does **not** mean unfinished work — all four Edexcel
+decks are complete for A and D, and what remains in them is the set of detector hits
 read by hand and judged not to be defects. They are named in the batch log so a
 future session does not re-examine them.
 
@@ -340,13 +340,48 @@ Read and left alone in Theme 3: `edexcel-a-3-1-1-def-02`,
 `edexcel-a-3-4-7-diagram-01` — bolded terms mid-sentence and atomic example
 lists, not merged points or revision lists.
 
+**Batches 6 and 7 — `edexcel-a-theme-4`, issues A and D (2026-08-07).** 51
+cards edited across the two, completing the deck and with it **every Edexcel
+deck**. Batch 6 (24 cards, 4.1 trade): globalisation's six drivers, the
+comparative-advantage figures and calculation, the model's five assumptions,
+specialisation for/against, the four pattern-of-trade factors, the terms-of-trade
+cases, the four trading blocs, trade creation vs diversion, the monetary-union
+conditions, the reasons for and methods of protectionism, the BoP accounts and
+calculation, deficit causes and the three policy routes, the three exchange-rate
+systems, appreciation drivers, competitive devaluation's risks, the depreciation
+costs, the J-curve and Marshall-Lerner, and the two competitiveness measures.
+Batch 7 (27 cards, 4.1.9–4.5): unit labour costs, cost vs non-cost
+competitiveness, the poverty drivers, inequality's six causes, the HDI's three
+dimensions and the other indicators, economic and non-economic development
+factors, the six interventionist strategies, the Lewis model's limits, Fairtrade
+/ aid / debt relief, World Bank vs IMF vs NGOs, the five financial-market
+functions, moral hazard / speculation / market rigging, the consequences of
+financial failure, the central bank's four functions, the three types of public
+expenditure and what changes them, the spending-share evaluation, progressive /
+proportional / regressive taxes, deficit vs debt and cyclical vs structural, the
+deficit influences, why debt matters, the global policy toolkit, controlling
+global companies, and the policymaker's problems.
+
+No list needed trimming in either batch. Where a card ran to seven points
+(4.1.6's reasons for protection, 4.3.1's other indicators) the original's own
+two-group structure was kept, so both lists sit under the cap and nothing was
+dropped.
+
+Read and left alone in Theme 4: `edexcel-a-4-1-2-diagram-01`,
+`edexcel-a-4-4-2-def-02`, `edexcel-a-4-5-1-def-01`, `edexcel-a-4-5-2-def-01`,
+`edexcel-a-4-1-1-eval-02`, `edexcel-a-4-1-4-eval-01`, `edexcel-a-4-1-7-calc-01`,
+`edexcel-a-4-1-9-calc-01`, `edexcel-a-4-2-1-def-01`, `edexcel-a-4-2-2-def-01`
+and `edexcel-a-4-3-3-def-04` — bolded terms mid-sentence, examples clauses, and
+figures whose thousands separators the comma-splitter reads as list items.
+
 ## NEXT STEPS
 
-1. **Issue A + D on `edexcel-a-theme-4`** — 43 A-cards and 12 D-cards. Dump the
-   cards with the snippet in HOW TO RESUME below (change `DECK`), hand-author
-   the replacements into `_working/flashcards/qa/edits/batch-06.json`, apply,
-   `touch.py`, rebuild, re-audit, screenshot, commit. Expect two batches.
-2. Then `aqa-micro` (43 A, 15 D) and `aqa-macro` (48 A, 16 D), same treatment.
+1. **Issue A + D on `aqa-micro`** — 43 A-cards and 15 D-cards. Dump the cards
+   with the snippet in HOW TO RESUME below (change `DECK` to `aqa-micro`),
+   hand-author the replacements into `_working/flashcards/qa/edits/batch-08.json`,
+   apply, `touch.py`, rebuild, re-audit, screenshot, commit. Expect three
+   batches.
+2. Then `aqa-macro` (48 A, 16 D), same treatment.
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
@@ -360,7 +395,7 @@ lists, not merged points or revision lists.
 ```bash
 python3 -m http.server 8899 &                        # tools need this
 python3 _working/flashcards/qa/audit.py              # where things stand
-python3 _working/flashcards/qa/audit.py --issue A --show --deck edexcel-a-theme-4
+python3 _working/flashcards/qa/audit.py --issue A --show --deck aqa-micro
 ```
 
 To dump the full text of a deck's outstanding A/D cards, ready to edit:
@@ -368,7 +403,7 @@ To dump the full text of a deck's outstanding A/D cards, ready to edit:
 ```bash
 python3 - <<'PY'
 import json, subprocess
-DECK = "edexcel-a-theme-4"
+DECK = "aqa-micro"
 ids = set()
 for issue in ("A", "D"):
     out = subprocess.run(["python3", "_working/flashcards/qa/audit.py",
