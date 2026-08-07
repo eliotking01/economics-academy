@@ -594,6 +594,8 @@ For Eliot, when reviewing:
    pull-up, and list-item spacing.
 3. Six new cards from the Issue C splits, and the localStorage bump to `:v2:`.
 4. `main` auto-publishes on push — merge when you are ready, not before.
+5. `js/components/quiz 2.js` — a tracked, unreferenced, byte-identical
+   duplicate of `quiz.js`, deliberately left for you (see the section below).
 3. Then Issue B: the 39 remaining cards (`audit.py --issue B --show`). Almost
    all are AQA cards saying "AQA" where the deck already says so.
 4. Then Issue C: hand-filter the 123 candidates, split the confirmed ones, bump
@@ -665,10 +667,39 @@ None outstanding. Answered so far:
    2026-08-07: CSS-only, no layout jump on flip, no new JS. A short question
    therefore sits vertically centred in a panel sized by its answer.
 
-## Untracked oddity, not touched
+## Stray directories — removed 2026-08-07
 
-`flashcards-data/aqa 2/`, `flashcards-data/edexcel-a 2/`, `flashcards/aqa 2/`,
-`flashcards/data 2/` and `flashcards/edexcel-a 2/` are **empty** directories
-dated 2026-08-07, almost certainly a Finder/sync duplication artefact. Git does
-not track empty directories, so the tree still reports clean. Left alone —
-deleting them is Eliot's call.
+Nine empty directories with a `" 2"` suffix (a Finder/sync duplication artefact)
+were removed at Eliot's request:
+
+```
+flashcards/data 2/            flashcards-data/aqa 2/
+flashcards/aqa 2/             flashcards-data/edexcel-a 2/
+flashcards/edexcel-a 2/       past-paper-questions/aqa 2/
+_working/flashcards/print-qa 2/   _working/flashcards/player-qa 2/
+_working/flashcards/diagram-qa 2/
+```
+
+Checked before deleting, all nine: **recursively empty** including hidden files;
+**untracked** by git (0 tracked files each); **referenced nowhere** in any `.py`,
+`.js`, `.html`, `.json`, `.yml`, `.md`, `.xml`, `.css` or `.swift` file; and not
+recreated by `build_flashcards.py` or `build_past_paper_questions.py` on a
+re-run. Removed with `rmdir`, not `rm -rf`, so the command would have failed
+rather than destroyed anything had a file been present. Empty directories
+produce nothing for Jekyll to serve, so there was no site impact either way.
+
+## STILL OUTSTANDING — `js/components/quiz 2.js`, Eliot's call
+
+Found while checking the directories, **not touched**. It is a
+**byte-identical duplicate** of `js/components/quiz.js` (12,279 bytes,
+`diff` reports no difference) and **no page references it** — `quiz.js` is
+loaded by 173 pages, `quiz 2.js` by none.
+
+The reason it was left alone: **it is tracked in git**, so deleting it is a
+content change to the repository rather than the cleanup of a stray empty
+directory, and it sits outside this pass's scope. Note that
+`PAST-PAPERS-PROGRESS.md` line 223 describes it as "untracked in the working
+tree" — that is now out of date; it has since been committed.
+
+It is dead weight and safe to delete, but that is Eliot's decision, on a branch
+of his choosing.
