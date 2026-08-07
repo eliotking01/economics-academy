@@ -396,6 +396,17 @@
   color: #8a6d00;
 }
 
+/*
+ * The theme tag. Filled with the brand accent rather than a grey, so it reads
+ * as part of the site and not as disabled chrome. #fff on #d52349 is 5.04:1,
+ * which passes AA for normal text; the grey it replaced was #fff on #7a7a7a at
+ * 4.29:1, which did not. One accent for every theme on purpose - a colour per
+ * theme would imply a meaning the tag does not carry.
+ *
+ * Green was the other candidate and lost twice over: #4caf50 is 2.78:1 with
+ * white text, and it already means "correct" on this site - it is the tick
+ * glyph in css/main.css.
+ */
 .glossary-page .gl-group {
   display: inline-block;
   padding: 0.15em 0.55em;
@@ -403,7 +414,7 @@
   font-size: 0.9em;
   font-weight: 700;
   color: #fff;
-  background: #7a7a7a;
+  background: var(--gl-accent);
   border-radius: 2px;
 }
 
@@ -560,6 +571,8 @@
     text-decoration: none;
   }
 
+  /* On paper the accent fill is wasted ink, and browsers drop backgrounds by
+   * default anyway - which would leave white text on white. Outlined instead. */
   .glossary-page .gl-group {
     color: #000;
     background: none;
