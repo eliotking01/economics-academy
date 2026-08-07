@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>flashcards QA frame</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #b0b6bd;
+      }
+      #wrap {
+        display: inline-block;
+        background: #ffffff;
+      }
+      iframe {
+        display: block;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap"><iframe id="f"></iframe></div>
+    <script>
+      /* QA harness. An iframe's own viewport is exactly its CSS width, so
+       * media queries inside it fire at the width we ask for - which
+       * --window-size does not reliably do on this machine. */
+      var p = new URLSearchParams(location.search);
+      var w = parseInt(p.get("w") || "390", 10);
+      var h = parseInt(p.get("h") || "1200", 10);
+      var f = document.getElementById("f");
+      f.style.width = w + "px";
+      f.style.height = h + "px";
+      f.src = p.get("src");
+      f.addEventListener("load", function () {
+        document.title =
+          "frame " + f.contentDocument.documentElement.clientWidth;
+      });
+      /* measure.py runs inside the iframe but --dump-dom only serialises the
+       * top-level document, so results come back out by postMessage. */
+      window.addEventListener("message", function (event) {
+        if (!event.data || event.data.qa !== "measure") return;
+        var sink = document.createElement("pre");
+        sink.id = "qa-measure";
+        sink.textContent = event.data.rows;
+        document.body.appendChild(sink);
+      });
+    </script>
+  </body>
+</html>

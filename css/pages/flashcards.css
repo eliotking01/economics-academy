@@ -259,8 +259,12 @@
   color: #5d5d5d !important;
 }
 
+/* The two faces are stacked in a single grid cell rather than absolutely
+ * positioned, so the card's height is the taller face's natural height
+ * instead of a fixed box the answer scrolls inside. */
 .flashcards-page .fc-card-inner {
-  display: block;
+  display: grid;
+  grid-template: 1fr / 1fr;
   position: relative;
   width: 100%;
   min-height: 340px;
@@ -274,8 +278,7 @@
 
 .flashcards-page .fc-face {
   display: block;
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border: 1px solid var(--fc-border);
@@ -284,7 +287,6 @@
   background: #ffffff;
   box-shadow: 0 4px 16px rgba(26, 62, 114, 0.1);
   padding: 1.5em 1.75em;
-  overflow-y: auto;
 }
 
 .flashcards-page .fc-front {
