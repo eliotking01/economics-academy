@@ -18,10 +18,11 @@ accidental `noindex`, correct host and protocol canonicalisation.
 
 There is **one structural defect**, and it is significant:
 
-> Every internal link to a hub page points at `/x/index.html`, which returns 200.
-> The canonical URL `/x/` has zero internal inbound links. 20 of 21 hub pages are
-> affected, they carry ~81% of the site's clicks, and Google is currently ranking
-> both halves of ten of them as separate URLs.
+> Every internal link to a hub page in `revision-notes/`, `practice-questions/`
+> and `past-papers/` points at `/x/index.html`, which returns 200. The canonical
+> URL `/x/` has zero internal inbound links. 20 hub pages are affected, they
+> carry ~81% of the site's clicks, and Google is currently ranking both halves of
+> ten of them as separate URLs.
 
 Everything else is a short tail. The most urgent tail item is 7 wrong canonicals
 in `practice-questions/` — urgent not because it is large, but because it sits
@@ -52,10 +53,13 @@ return "/index.html" if path == "/" else path
 
 ### Evidence
 
-A link crawl following only static HTML reached 701 URLs but **could not reach
-20 of the 21 hub pages at their canonical URL at all** — it found the
-`/index.html` twin every time. The canonical form's only discovery path is the
-sitemap, which has not been processed.
+A link crawl following only static HTML reached 701 URLs. Of the 121
+directory-form pages, 101 were reached at their canonical URL and **20 were not
+reachable there at all** — it found the `/index.html` twin every time. Those 20
+are the hubs of `revision-notes/`, `practice-questions/` and `past-papers/`; the
+newer `flashcards/`, `past-paper-questions/` and `revision-notes/glossary/`
+sections already link canonically. The canonical form's only discovery path for
+those 20 is the sitemap, which has not been processed.
 
 Google is already indexing both halves. From `seo/performance-pages.csv`:
 
