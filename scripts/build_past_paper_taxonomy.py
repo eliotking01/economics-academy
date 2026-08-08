@@ -47,7 +47,7 @@ BOARDS = [
         "board": "edexcel",
         "name": "Edexcel",
         "qualification": "A Level Economics A (9EC0)",
-        "papersUrl": "/past-papers/edexcel/index.html",
+        "papersUrl": "/past-papers/edexcel/",
         "groups": [
             ("edexcel-theme-1", "theme-1", "Theme 1",
              "Introduction to Markets and Market Failure"),
@@ -62,7 +62,7 @@ BOARDS = [
         "board": "aqa",
         "name": "AQA",
         "qualification": "A-level Economics (7136)",
-        "papersUrl": "/past-papers/aqa/index.html",
+        "papersUrl": "/past-papers/aqa/",
         "groups": [
             ("aqa-a2-micro", "microeconomics", "Microeconomics",
              "Individuals, Firms, Markets and Market Failure"),
@@ -140,7 +140,7 @@ def build():
                     if label.startswith("Theme")
                     else f"{spec['name']} {label}",
                     "notesDir": board_dir,
-                    "notesIndexUrl": f"/revision-notes/{board_dir}/index.html",
+                    "notesIndexUrl": f"/revision-notes/{board_dir}/",
                     "units": units,
                 }
             )

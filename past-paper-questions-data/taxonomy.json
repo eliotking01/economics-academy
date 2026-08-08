@@ -6,7 +6,7 @@
       "slug": "edexcel",
       "name": "Edexcel",
       "qualification": "A Level Economics A (9EC0)",
-      "papersUrl": "/past-papers/edexcel/index.html",
+      "papersUrl": "/past-papers/edexcel/",
       "groups": [
         {
           "slug": "theme-1",
@@ -14,7 +14,7 @@
           "name": "Introduction to Markets and Market Failure",
           "fullName": "Edexcel Theme 1: Introduction to Markets and Market Failure",
           "notesDir": "edexcel-theme-1",
-          "notesIndexUrl": "/revision-notes/edexcel-theme-1/index.html",
+          "notesIndexUrl": "/revision-notes/edexcel-theme-1/",
           "units": [
             {
               "unit": "1.1",
@@ -224,7 +224,7 @@
           "name": "The UK Economy — Performance and Policies",
           "fullName": "Edexcel Theme 2: The UK Economy — Performance and Policies",
           "notesDir": "edexcel-theme-2",
-          "notesIndexUrl": "/revision-notes/edexcel-theme-2/index.html",
+          "notesIndexUrl": "/revision-notes/edexcel-theme-2/",
           "units": [
             {
               "unit": "2.1",
@@ -462,7 +462,7 @@
           "name": "Business Behaviour and the Labour Market",
           "fullName": "Edexcel Theme 3: Business Behaviour and the Labour Market",
           "notesDir": "edexcel-theme-3",
-          "notesIndexUrl": "/revision-notes/edexcel-theme-3/index.html",
+          "notesIndexUrl": "/revision-notes/edexcel-theme-3/",
           "units": [
             {
               "unit": "3.1",
@@ -668,7 +668,7 @@
           "name": "A Global Perspective",
           "fullName": "Edexcel Theme 4: A Global Perspective",
           "notesDir": "edexcel-theme-4",
-          "notesIndexUrl": "/revision-notes/edexcel-theme-4/index.html",
+          "notesIndexUrl": "/revision-notes/edexcel-theme-4/",
           "units": [
             {
               "unit": "4.1",
@@ -877,7 +877,7 @@
       "slug": "aqa",
       "name": "AQA",
       "qualification": "A-level Economics (7136)",
-      "papersUrl": "/past-papers/aqa/index.html",
+      "papersUrl": "/past-papers/aqa/",
       "groups": [
         {
           "slug": "microeconomics",
@@ -885,7 +885,7 @@
           "name": "Individuals, Firms, Markets and Market Failure",
           "fullName": "AQA Microeconomics",
           "notesDir": "aqa-a2-micro",
-          "notesIndexUrl": "/revision-notes/aqa-a2-micro/index.html",
+          "notesIndexUrl": "/revision-notes/aqa-a2-micro/",
           "units": [
             {
               "unit": "1.1",
@@ -1375,7 +1375,7 @@
           "name": "The National and International Economy",
           "fullName": "AQA Macroeconomics",
           "notesDir": "aqa-a2-macro",
-          "notesIndexUrl": "/revision-notes/aqa-a2-macro/index.html",
+          "notesIndexUrl": "/revision-notes/aqa-a2-macro/",
           "units": [
             {
               "unit": "2.1",
