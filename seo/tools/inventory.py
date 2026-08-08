@@ -93,20 +93,43 @@ def url_for(path: str) -> str:
     return f"{SITE}/{path}"
 
 
-def read_sitemap() -> dict:
-    root = ET.parse(REPO / "sitemap.xml").getroot()
-    urls = []
+def _urlset(path: Path) -> list[dict]:
+    root = ET.parse(path).getroot()
+    out = []
     for u in root.findall("sm:url", SITEMAP_NS):
-        loc = u.findtext("sm:loc", default="", namespaces=SITEMAP_NS).strip()
-        lastmod = u.findtext("sm:lastmod", default="", namespaces=SITEMAP_NS).strip()
-        urls.append({"loc": loc, "lastmod": lastmod})
+        out.append({
+            "loc": u.findtext("sm:loc", default="", namespaces=SITEMAP_NS).strip(),
+            "lastmod": u.findtext("sm:lastmod", default="", namespaces=SITEMAP_NS).strip(),
+            "sitemap": path.relative_to(REPO).as_posix(),
+        })
+    return out
+
+
+def read_sitemap() -> dict:
+    """Every URL in the sitemap, following a sitemap index if there is one."""
+    root = ET.parse(REPO / "sitemap.xml").getroot()
+    is_index = root.tag.endswith("sitemapindex")
+    children: list[str] = []
+    urls: list[dict] = []
+
+    if is_index:
+        for sm in root.findall("sm:sitemap", SITEMAP_NS):
+            loc = sm.findtext("sm:loc", default="", namespaces=SITEMAP_NS).strip()
+            rel = loc.replace(f"{SITE}/", "")
+            children.append(rel)
+            if (REPO / rel).exists():
+                urls.extend(_urlset(REPO / rel))
+    else:
+        urls = _urlset(REPO / "sitemap.xml")
+
     return {
         "count": len(urls),
         "urls": urls,
+        "children": children,
         "with_lastmod": sum(1 for u in urls if u["lastmod"]),
         "index_html_variants": [u["loc"] for u in urls if u["loc"].endswith("index.html")],
         "non_https": [u["loc"] for u in urls if not u["loc"].startswith("https://")],
-        "is_index": root.tag.endswith("sitemapindex"),
+        "is_index": is_index,
     }
 
 
@@ -166,7 +189,10 @@ def build() -> dict:
     sitemap = read_sitemap()
     gsc = read_gsc()
 
+    # The sitemap carries the PDFs as well as the pages, so both belong in the
+    # expected set or every PDF reads as a stale sitemap entry.
     expected = {url_for(p) for p in indexable}
+    expected |= {f"{SITE}/{p}" for p in published_pdfs}
     in_sitemap = {u["loc"] for u in sitemap["urls"]}
     gsc_urls = {r["url"] for r in gsc}
 

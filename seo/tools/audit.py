@@ -296,7 +296,10 @@ class Audit:
         for page in self.pages:
             if url_for(page) not in in_sitemap:
                 self.add("sitemap-missing", page, "indexable page absent from sitemap.xml")
+        # PDFs are in the sitemap by decision; they are not HTML pages, so they
+        # would otherwise all read as stale entries here.
         expected = {url_for(p) for p in self.pages}
+        expected |= {f"{SITE}/{p}" for p in self.inv["pdf_paths"]}
         for u in in_sitemap - expected:
             self.findings.append({
                 "defect_class": "sitemap-stale", "page": "", "url": u,
@@ -328,21 +331,33 @@ class Audit:
                 self.add("orphan", page, "no inbound internal link outside the runtime nav")
 
     def rule_variants(self):
-        """Duplicate URL variants both returning 200, from the live probe."""
+        """Duplicate URL variants both returning 200, from the live probe.
+
+        Reads seo/01-variants.csv, produced by seo/tools/probe_variants.py. That
+        file records a status per variant kind but not the URL it probed, so the
+        URL is reconstructed here from the same rule the prober used.
+        """
         f = REPO / "seo" / "01-variants.csv"
         if not f.exists():
             return
+        from probe_variants import variants_for  # local: needs no network
+
         for r in csv.DictReader(f.open(encoding="utf-8")):
             page = r["page"]
             live = [k for k in ("dir", "dir_index", "html", "extensionless")
                     if str(r.get(f"{k}_status", "")) == "200"]
-            if len(live) > 1:
-                canonical_kind = "dir" if page.endswith("index.html") else "html"
-                extra = [k for k in live if k != canonical_kind]
-                for k in extra:
-                    self.add("duplicate-url-variant", page,
-                             f"{r[f'{k}_url']} also returns 200 alongside {url_for(page)}",
-                             variant_kind=k, variant_url=r[f"{k}_url"])
+            if len(live) < 2:
+                continue
+            canonical_kind = "dir" if page.endswith("index.html") else "html"
+            vs = variants_for(page)
+            for k in live:
+                if k == canonical_kind or k not in vs:
+                    continue
+                scheme, host, path = vs[k]
+                self.add("duplicate-url-variant", page,
+                         f"{scheme}://{host}{path} also returns 200 "
+                         f"alongside {url_for(page)}",
+                         variant_kind=k, variant_url=f"{scheme}://{host}{path}")
 
     # ------------------------------------------------------------------- run
     def run(self):
