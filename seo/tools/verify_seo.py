@@ -205,6 +205,89 @@ def main() -> int:
         bad.append("robots.txt does not name the sitemap")
     check("10 robots.txt blocks nothing and names the sitemap", bad)
 
+    # ------------------------------------------------- 11-14: architecture
+    # Added by the seo/architecture-pass work. These lock in what Task A and
+    # Task B established so a future edit cannot quietly undo it.
+    #
+    # The link graph is built by seo/tools/link_graph.py, which is the single
+    # definition of an edge, a board and a topic page. Restating any of that
+    # here would let the two drift apart.
+    from link_graph import Graph, board_of  # noqa: E402
+
+    g = Graph()
+
+    # 11 --------------------------------------------------------------------
+    # Depth is measured on the RENDERED graph, because the header and footer
+    # are fetched at runtime and Googlebot renders. The static graph bottoms
+    # out at 4 and always will while the nav is injected.
+    depths = g.depths(rendered=True)
+    bad = [f"{p} at depth {depths[p]}" for p in g.pages
+           if p in depths and depths[p] > 3]
+    bad += [f"{p} unreachable from the homepage" for p in g.pages
+            if p not in depths]
+    check("11 every page within 3 clicks of the homepage (rendered)", bad,
+          f"max depth {max(depths.values())}")
+
+    # 12 --------------------------------------------------------------------
+    # Three pages sit below the bar for reasons that are correct, so they are
+    # named rather than the bar being lowered to 2:
+    #   3-2-1-business-objectives is the only topic alone in its unit, so it
+    #     has no siblings to link it;
+    #   the two glossary board pages are reached from the glossary hub and
+    #     from each other, which is the whole of their intended entry path.
+    THIN_BY_DESIGN = {
+        "practice-questions/edexcel-theme-3/3-2-1-business-objectives.html",
+        "revision-notes/glossary/aqa/index.html",
+        "revision-notes/glossary/edexcel-a/index.html",
+    }
+    inbound = g.inbound(rendered=True)
+    bad = [f"{p} has {inbound[p]} inbound" for p in g.pages
+           if inbound[p] < 3 and p not in THIN_BY_DESIGN]
+    check("12 every page has 3+ inbound internal links (rendered)", bad,
+          f"{len(THIN_BY_DESIGN)} allowed exceptions")
+
+    # 13 --------------------------------------------------------------------
+    # The highest-risk failure mode in the whole architecture pass. Edexcel
+    # and AQA share the X.Y.Z topic-code format and 37 bare codes collide
+    # outright - 1.1.1 is "Economics as a Social Science" on Edexcel and
+    # "Economic Methodology" on AQA. A cross-board link resolves to a real
+    # page, 404s nothing and passes every other assertion here; the only
+    # symptom is a student sent to the wrong board's content.
+    #
+    # The two allowed pairs are the glossary's own board selector, which is
+    # the one place on the site where crossing boards is the point.
+    BOARD_SWITCHER = {
+        ("revision-notes/glossary/aqa/index.html",
+         "revision-notes/glossary/edexcel-a/index.html"),
+        ("revision-notes/glossary/edexcel-a/index.html",
+         "revision-notes/glossary/aqa/index.html"),
+    }
+    bad = []
+    for page in g.pages:
+        src = board_of(page)
+        if not src:
+            continue
+        for target, anchor in g.out[page]:
+            dst = board_of(target)
+            if dst and dst != src and (page, target) not in BOARD_SWITCHER:
+                bad.append(f"{page} -> {target} ({src} -> {dst}) {anchor!r}")
+    check("13 no link crosses an exam board", bad,
+          f"{len(BOARD_SWITCHER)} allowed: the glossary board selector")
+
+    # 14 --------------------------------------------------------------------
+    # Assertion 8 already proves every JSON-LD block parses. This proves the
+    # one type that still earns a rich result is actually present. The
+    # homepage is excluded because a homepage is the root of the trail.
+    bad = []
+    for page in pages:
+        if page == "index.html":
+            continue
+        blocks = parsed[page].jsonld
+        if not any("BreadcrumbList" in b for b in blocks):
+            bad.append(page)
+    check("14 every indexable page below the homepage has a BreadcrumbList",
+          bad, f"{len(pages) - 1} pages")
+
     # ---------------------------------------------------------------- report
     width = max(len(n) for n, _, _, _ in results)
     failed = 0

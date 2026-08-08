@@ -533,6 +533,64 @@
   margin-top: 1.2em;
 }
 
+/* ---------------------------------------------------------------- related */
+
+/* The "keep going" block: past-paper questions on this topic, then the
+   neighbouring topics in the same unit. Added because practice-questions was
+   the only section on the site with no lateral links at all - 0 of 166 pages
+   linked to a sibling, against 53.6% in the notes and 100% in
+   past-paper-questions. See seo/07-link-graph.md. */
+
+.quiz-page .quiz-related {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid var(--quiz-border);
+}
+
+.quiz-page .quiz-related h2 {
+  margin-bottom: 0.6em;
+  font-size: 1.15em;
+  color: var(--quiz-primary);
+}
+
+.quiz-page .quiz-related-papers {
+  margin-bottom: 1.1em;
+}
+
+.quiz-page .quiz-related-lead {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: var(--quiz-primary);
+}
+
+.quiz-page .quiz-related-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.75em;
+}
+
+.quiz-page .quiz-related-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-page .quiz-related-list a {
+  display: inline-block;
+  padding: 0.35em 0.8em;
+  border: 1px solid var(--quiz-border);
+  border-radius: 3px;
+  font-size: 0.92em;
+  text-decoration: none;
+}
+
+.quiz-page .quiz-related-list a:hover,
+.quiz-page .quiz-related-list a:focus {
+  border-color: #d52349;
+}
+
 /* -------------------------------------------------------------------- cta */
 
 .quiz-page .quiz-cta {

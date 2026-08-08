@@ -17,10 +17,9 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css/main.css reaches the web fonts through an @import, so the browser
-         cannot discover fonts.gstatic.com until main.css has parsed and the
-         imported sheet has come back. Warming both origins here shortens that
-         chain and cuts the font-swap layout shift. -->
+    <!-- The font stylesheet is linked in <head> below, so the preload scanner
+         finds it immediately. gstatic is still a second origin, discovered only
+         once that stylesheet parses, so warming both here still pays. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Price Mechanism Questions — AQA A-Level Economics | Economics Academy</title>
@@ -62,6 +61,7 @@
         "assesses": "How Markets and Prices Allocate Resources",
         "provider": {
           "@type": "EducationalOrganization",
+          "@id": "https://economicsacademy.co.uk/#organization",
           "name": "Economics Academy",
           "url": "https://economicsacademy.co.uk"
         },
@@ -359,6 +359,16 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so
+         neither request could start until main.css had parsed. The order below
+         matches the old @import order, so the cascade is unchanged.
+         See seo/09-web-vitals-baseline.md. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+    />
     <link rel="stylesheet" href="/css/main.css" />
 
     <link rel="stylesheet" href="/css/pages/quiz.css" />
@@ -1113,6 +1123,40 @@
                 <a href="/revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html" class="button alt">Back to the notes</a>
               </div>
             </div>
+
+            <nav class="quiz-related" aria-labelledby="quiz-related-heading">
+              <h2 id="quiz-related-heading">Keep going on this topic</h2>
+              <p class="quiz-related-papers">
+                <a href="/past-paper-questions/?board=aqa&amp;topic=1-8-1-how-markets-and-prices-allocate-resources"
+                  >2 real exam questions on The Price Mechanism</a
+                >
+                from the past papers, each linked to the page of the mark
+                scheme where its answer begins.
+              </p>
+              <p class="quiz-related-lead">Other topics in The Market Mechanism, Market Failure and Government Intervention in Markets:</p>
+              <ul class="quiz-related-list">
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-8-2-the-meaning-of-market-failure.html"
+                    >1.8.2 The Meaning of Market Failure</a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html"
+                    >1.8.3 Public and Private Goods</a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html"
+                    >1.8.4 Externalities</a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-8-5-merit-and-demerit-goods.html"
+                    >1.8.5 Merit and Demerit Goods</a
+                  >
+                </li>
+              </ul>
+            </nav>
 
             <div class="quiz-cta">
               <p>Ready to go further?</p>

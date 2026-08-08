@@ -45,6 +45,18 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Styles -->
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so
+         neither request could start until main.css had parsed. The order below
+         matches the old @import order, so the cascade is unchanged.
+         See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+    />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/home.css" />
 
@@ -60,49 +72,24 @@
       {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
+        "@id": "https://economicsacademy.co.uk/#organization",
         "name": "Economics Academy",
         "url": "https://economicsacademy.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://economicsacademy.co.uk/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
         "description": "Free A-Level Economics revision notes and past papers for Edexcel, AQA, and OCR, plus expert 1-on-1 tutoring and paper marking.",
-        "sameAs": "https://tutorful.co.uk/tutors/qlorq3vr",
+        "sameAs": ["https://tutorful.co.uk/tutors/qlorq3vr"],
         "founder": {
           "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
           "name": "Eliot King",
           "jobTitle": "A-Level Economics Tutor",
           "url": "https://economicsacademy.co.uk/about.html"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "20"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Tilla S." },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Great tutor, helpful and knowledgeable, helped me improve from a C to an A for A level economics."
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "William E." },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Eliot was my tutor for 4 months in the lead up to my A level economics exam. He was excellent in helping me with my essay exam technique and his knowledge was invaluable. I would have no hesitation in recommending him."
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Lucie G." },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Eliot has been tutoring my son over the Summer after he struggled with his mock exams. My son feels much more confident with his economics A level work and has been rewarded with an outstanding grade for his recent test. Highly recommended."
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Sam W." },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Eliot has really engaged our son in Economics and makes the topics relatable. We are absolutely delighted to have found a brilliant tutor who our son relates to and can learn from."
-          }
-        ]
+        }
       }
     ]
     </script>

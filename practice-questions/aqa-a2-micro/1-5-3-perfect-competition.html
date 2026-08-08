@@ -17,10 +17,9 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css/main.css reaches the web fonts through an @import, so the browser
-         cannot discover fonts.gstatic.com until main.css has parsed and the
-         imported sheet has come back. Warming both origins here shortens that
-         chain and cuts the font-swap layout shift. -->
+    <!-- The font stylesheet is linked in <head> below, so the preload scanner
+         finds it immediately. gstatic is still a second origin, discovered only
+         once that stylesheet parses, so warming both here still pays. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Perfect Competition Questions — AQA A-Level Economics | Economics Academy</title>
@@ -62,6 +61,7 @@
         "assesses": "Perfect Competition",
         "provider": {
           "@type": "EducationalOrganization",
+          "@id": "https://economicsacademy.co.uk/#organization",
           "name": "Economics Academy",
           "url": "https://economicsacademy.co.uk"
         },
@@ -441,6 +441,16 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so
+         neither request could start until main.css had parsed. The order below
+         matches the old @import order, so the cascade is unchanged.
+         See seo/09-web-vitals-baseline.md. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+    />
     <link rel="stylesheet" href="/css/main.css" />
 
     <link rel="stylesheet" href="/css/pages/quiz.css" />
@@ -1383,6 +1393,40 @@
                 <a href="/revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html" class="button alt">Back to the notes</a>
               </div>
             </div>
+
+            <nav class="quiz-related" aria-labelledby="quiz-related-heading">
+              <h2 id="quiz-related-heading">Keep going on this topic</h2>
+              <p class="quiz-related-papers">
+                <a href="/past-paper-questions/?board=aqa&amp;topic=1-5-3-perfect-competition"
+                  >1 real exam question on Perfect Competition</a
+                >
+                from the past papers, each linked to the page of the mark
+                scheme where its answer begins.
+              </p>
+              <p class="quiz-related-lead">Other topics in Perfect Competition, Imperfectly Competitive Markets and Monopoly:</p>
+              <ul class="quiz-related-list">
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-5-1-market-structures.html"
+                    >1.5.1 Market Structures</a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-5-2-the-objectives-of-firms.html"
+                    >1.5.2 The Objectives of Firms</a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-5-4-monopolistic-competition.html"
+                    >1.5.4 Monopolistic Competition</a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/aqa-a2-micro/1-5-5-oligopoly.html"
+                    >1.5.5 Oligopoly</a
+                  >
+                </li>
+              </ul>
+            </nav>
 
             <div class="quiz-cta">
               <p>Ready to go further?</p>

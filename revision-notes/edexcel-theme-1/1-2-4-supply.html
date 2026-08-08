@@ -77,6 +77,7 @@
           "name": "Edexcel A-Level Economics Theme 1: Introduction to Markets and Market Failure",
           "provider": {
             "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
@@ -86,6 +87,18 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so
+         neither request could start until main.css had parsed. The order below
+         matches the old @import order, so the cascade is unchanged.
+         See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+    />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
 
@@ -379,6 +392,9 @@
                 >Revise 1.2.4 with flashcards</a
               >
             </div>
+            <p class="notes-diagrams-link">
+              Every Theme 1 and Theme 3 diagram in one place: <a href="/revision-notes/microeconomics-diagrams.html">Microeconomics Diagrams</a>.
+            </p>
           </div>
         </div>
       </section>

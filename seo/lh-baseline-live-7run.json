@@ -1,0 +1,233 @@
+{
+  "homepage": {
+    "url": "/",
+    "runs": 7,
+    "score": 0.88,
+    "LCP": 3036.72,
+    "CLS": 0.020439597402702025,
+    "TBT": 74.00000000000045,
+    "FCP": 3036.72,
+    "SI": 3036.72,
+    "bytes": 414323,
+    "blocking_ms": 750,
+    "chain_len": 4,
+    "chain_ms": 595.9650000333786,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        768
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/inject-templates.js",
+        2485,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.min.js",
+        41662,
+        451
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        13423,
+        150
+      ]
+    ]
+  },
+  "section-hub": {
+    "url": "/revision-notes/",
+    "runs": 7,
+    "score": 0.78,
+    "LCP": 4254.279,
+    "CLS": 0,
+    "TBT": 72,
+    "FCP": 3435.684,
+    "SI": 3435.684,
+    "bytes": 411361,
+    "blocking_ms": 935,
+    "chain_len": 4,
+    "chain_ms": 556.0469999909401,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        803
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.min.js",
+        41685,
+        805
+      ],
+      [
+        "https://economicsacademy.co.uk/js/util.js",
+        3474,
+        161
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        13276,
+        322
+      ]
+    ]
+  },
+  "notes-topic": {
+    "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+    "runs": 7,
+    "score": 0.85,
+    "LCP": 3039.5154999999995,
+    "CLS": 0.10154784586962062,
+    "TBT": 231.99999999999955,
+    "FCP": 1789.0935,
+    "SI": 2059.817724432347,
+    "bytes": 911095,
+    "blocking_ms": 920,
+    "chain_len": 2,
+    "chain_ms": 608.4799999594688,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        819
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.min.js",
+        41787,
+        493
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        13274,
+        164
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        9519,
+        164
+      ]
+    ]
+  },
+  "practice-questions": {
+    "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+    "runs": 7,
+    "score": 0.99,
+    "LCP": 1790.4220000000003,
+    "CLS": 0.020292642208751807,
+    "TBT": 36.50000000000023,
+    "FCP": 1790.4220000000003,
+    "SI": 1790.4220000000003,
+    "bytes": 506465,
+    "blocking_ms": 940,
+    "chain_len": 4,
+    "chain_ms": 415.53899997472763,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/js/jquery.min.js",
+        41679,
+        339
+      ],
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        782
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        13249,
+        170
+      ],
+      [
+        "https://economicsacademy.co.uk/js/breakpoints.min.js",
+        1224,
+        170
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        9516,
+        170
+      ]
+    ]
+  },
+  "past-paper-questions": {
+    "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+    "runs": 7,
+    "score": 0.75,
+    "LCP": 1797.3745,
+    "CLS": 0.6350883165714151,
+    "TBT": 75,
+    "FCP": 1789.2160000000001,
+    "SI": 1789.2160000000001,
+    "bytes": 532208,
+    "blocking_ms": 932,
+    "chain_len": 4,
+    "chain_ms": 418.9399999976158,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2974,
+        812
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.dropotron.min.js",
+        2720,
+        164
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.min.js",
+        41671,
+        327
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        13280,
+        164
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        9539,
+        164
+      ]
+    ]
+  },
+  "flashcards": {
+    "url": "/flashcards/edexcel-a/theme-1/",
+    "runs": 7,
+    "score": 0.7,
+    "LCP": 5226.8155,
+    "CLS": 0,
+    "TBT": 50.423000000000684,
+    "FCP": 4312.482499999999,
+    "SI": 4312.482499999999,
+    "bytes": 513334,
+    "blocking_ms": 1664,
+    "chain_len": 4,
+    "chain_ms": 533.2339999675751,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        802
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.min.js",
+        41687,
+        331
+      ],
+      [
+        "https://economicsacademy.co.uk/js/jquery.dropotron.min.js",
+        2704,
+        165
+      ],
+      [
+        "https://economicsacademy.co.uk/css/pages/flashcards.css",
+        3953,
+        165
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        13413,
+        165
+      ]
+    ]
+  }
+}

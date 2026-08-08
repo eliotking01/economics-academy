@@ -691,6 +691,10 @@ def render_jsonld_quiz(topic):
         "assesses": topic["title"],
         "provider": {
             "@type": "EducationalOrganization",
+            # Same @id on every restatement of the organisation across the
+            # site, so the 354 copies read as one entity rather than 354
+            # lookalikes. See seo/08-structured-data.md.
+            "@id": f"{SITE}/#organization",
             "name": "Economics Academy",
             "url": SITE,
         },
@@ -709,7 +713,7 @@ def jsonld_block(data, indent):
     )
 
 
-def render_page(topic):
+def render_page(topic, siblings=(), ppq=None):
     url = SITE + page_url(topic)
     board_label = BOARD_LABELS[topic["board"]]
     papers_href, papers_label = PAST_PAPERS[topic["board"]]
@@ -791,7 +795,7 @@ def render_page(topic):
               </div>
             </div>
 
-            <div class="quiz-cta">
+{render_related(topic, siblings, ppq)}            <div class="quiz-cta">
               <p>Ready to go further?</p>
               <a href="{notes}" class="button alt"
                 >Revision Notes: {topic['shortTitle']}</a
@@ -852,10 +856,9 @@ def shell(
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css/main.css reaches the web fonts through an @import, so the browser
-         cannot discover fonts.gstatic.com until main.css has parsed and the
-         imported sheet has come back. Warming both origins here shortens that
-         chain and cuts the font-swap layout shift. -->
+    <!-- The font stylesheet is linked in <head> below, so the preload scanner
+         finds it immediately. gstatic is still a second origin, discovered only
+         once that stylesheet parses, so warming both here still pays. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>{attr(title)}</title>
@@ -881,6 +884,16 @@ def shell(
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so
+         neither request could start until main.css had parsed. The order below
+         matches the old @import order, so the cascade is unchanged.
+         See seo/09-web-vitals-baseline.md. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+    />
     <link rel="stylesheet" href="/css/main.css" />
 
     <link rel="stylesheet" href="{css}" />{head_extra}
@@ -930,6 +943,116 @@ def breadcrumb_jsonld(trail):
 def unit_of(spec):
     """1.3.2 -> 1.3"""
     return ".".join(spec.split(".")[:2])
+
+
+PPQ_INDEX = ROOT / "past-paper-questions" / "questions.json"
+
+
+def load_pastpaper_topics():
+    """practice-question page URL -> that topic's past-paper-questions record.
+
+    Joined on questionsUrl, which is a full site path, so the match is exact
+    and CANNOT cross an exam board. No topic code is ever compared: 37 codes
+    exist on both boards and mean different topics - 1.1.1 is "Economics as a
+    Social Science" on Edexcel and "Economic Methodology" on AQA. Matching on
+    one would resolve to a real page, 404 nothing, and quietly send students to
+    the wrong board.
+
+    Absent index -> empty map -> no past-paper link is emitted anywhere. The
+    build still succeeds, because this section is additive.
+    """
+    if not PPQ_INDEX.is_file():
+        return {}
+    data = json.loads(PPQ_INDEX.read_text(encoding="utf-8"))
+    out = {}
+    for slug, rec in data.get("topics", {}).items():
+        if rec.get("questionsUrl"):
+            out[rec["questionsUrl"]] = dict(rec, slug=slug)
+    return out
+
+
+def siblings_for(topic, by_unit, limit=4):
+    """Up to `limit` other topics from the same unit on the SAME board.
+
+    Keyed on (boardDir, unit), and boardDir carries the board, so a cross-board
+    sibling is not representable. Never keyed on the unit code alone - "1.2" is
+    a real unit on both boards.
+
+    The window is centred on this topic so the list reads as neighbouring
+    specification points rather than always the first four in the unit.
+    """
+    peers = by_unit.get((topic["boardDir"], unit_of(topic["spec"])), [])
+    if len(peers) <= 1:
+        return []
+    peers = sorted(peers, key=lambda t: spec_key(t["spec"]))
+    i = next(n for n, t in enumerate(peers) if t["slug"] == topic["slug"])
+    lo, hi = i, i + 1
+    picked = []
+    while len(picked) < limit and (lo > 0 or hi < len(peers)):
+        if lo > 0:
+            lo -= 1
+            picked.append(peers[lo])
+        if len(picked) < limit and hi < len(peers):
+            picked.append(peers[hi])
+            hi += 1
+    return sorted(picked, key=lambda t: spec_key(t["spec"]))[:limit]
+
+
+def render_related(topic, siblings, ppq):
+    """The 'keep going' block: past-paper questions, then sibling topics.
+
+    Added because practice-questions was the one section with no lateral links
+    at all - 0 of 166 pages linked to a sibling, against 53.6% in the notes and
+    100% in past-paper-questions. See seo/07-link-graph.md.
+
+    The past-paper anchor is deliberately a descriptive sentence rather than
+    "{spec} {shortTitle}": the past-paper index pages already point at these
+    topics with that exact string, up to 68 times each, and repeating it here
+    would deepen an anchor-text monoculture rather than add anything.
+    """
+    if not ppq and not siblings:
+        return ""
+
+    parts = ['            <nav class="quiz-related" aria-labelledby="quiz-related-heading">',
+             '              <h2 id="quiz-related-heading">Keep going on this topic</h2>']
+
+    if ppq:
+        if ppq["hasPage"]:
+            href = ppq["url"]
+        else:
+            href = f"/past-paper-questions/?board={ppq['board']}&amp;topic={ppq['slug']}"
+        n = ppq["count"]
+        noun = "question" if n == 1 else "questions"
+        parts += [
+            '              <p class="quiz-related-papers">',
+            f'                <a href="{href}"',
+            f'                  >{n} real exam {noun} on {ppq["shortTitle"]}</a',
+            "                >",
+            "                from the past papers, each linked to the page of the mark",
+            "                scheme where its answer begins.",
+            "              </p>",
+        ]
+
+    if siblings:
+        # UNITS is the same grouping the board index pages print, lifted from
+        # the notes, so the heading here matches what the student saw there.
+        unit = UNITS.get((topic["boardDir"], unit_of(topic["spec"])))
+        lead = (f"Other topics in {unit[0]}:" if unit
+                else "Other topics in this unit:")
+        parts += [f'              <p class="quiz-related-lead">{lead}</p>',
+                  '              <ul class="quiz-related-list">']
+        for s in siblings:
+            parts += [
+                "                <li>",
+                f'                  <a href="{page_url(s)}"',
+                f'                    >{s["spec"]} {s["shortTitle"]}</a',
+                "                  >",
+                "                </li>",
+            ]
+        parts.append("              </ul>")
+
+    parts.append("            </nav>")
+    return "\n".join(parts) + "\n\n"
 
 
 def render_cta_strip(text, actions):
@@ -1310,10 +1433,27 @@ def main(argv=None):
         print(f"OK - {len(topics)} set(s), {total} questions, nothing written")
         return 0
 
+    # Siblings are built from EVERY set on disk, not from `topics`, so a
+    # partial run (`build_questions.py aqa-a2-micro/1-3-2.json`) still emits
+    # the same related-topics list a full run would. Without this a partial
+    # rebuild would silently drop links to sets it was not asked to write.
+    all_topics, _ = load(sorted(DATA_DIR.glob("*/*.json")))
+    by_unit = {}
+    for t in all_topics:
+        by_unit.setdefault((t["boardDir"], unit_of(t["spec"])), []).append(t)
+    pastpapers = load_pastpaper_topics()
+
     for topic in topics:
         out = OUT_DIR / topic["boardDir"] / f"{topic['slug']}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(render_page(topic), encoding="utf-8")
+        out.write_text(
+            render_page(
+                topic,
+                siblings_for(topic, by_unit),
+                pastpapers.get(page_url(topic)),
+            ),
+            encoding="utf-8",
+        )
         print(f"wrote {out.relative_to(ROOT)} ({len(topic['questions'])} questions)")
 
     # The hub and the board indexes list everything, so they can only be

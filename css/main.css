@@ -1,6 +1,9 @@
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
-
+/* The two @import rules that used to open this file - fontawesome and
+   the Google Fonts stylesheet - are now <link> tags in every page's
+   <head>, immediately before this file, in the same order. An @import
+   here is invisible to the preload scanner and cost 782-834 ms of
+   render-blocking time on every page measured. Do not put them back.
+   See seo/09-web-vitals-baseline.md and seo/tools/fix_font_loading.py. */
 /*
 	Dopetrope by HTML5 UP
 	html5up.net | @ajlkn

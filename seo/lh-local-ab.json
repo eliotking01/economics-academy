@@ -1,0 +1,888 @@
+{
+  "local_before": {
+    "homepage": {
+      "url": "/",
+      "runs": 5,
+      "score": 0.82,
+      "LCP": 3609.0112000000004,
+      "CLS": 0.021079110998560066,
+      "TBT": 36.5,
+      "FCP": 3609.0112000000004,
+      "SI": 3609.0112000000004,
+      "bytes": 686776,
+      "blocking_ms": 2825,
+      "chain_len": 4,
+      "chain_ms": 280.8889999985695,
+      "blocking": [
+        [
+          "http://localhost:8801/js/main.js",
+          775,
+          172
+        ],
+        [
+          "http://localhost:8801/js/components/reviews-render.js",
+          1399,
+          172
+        ],
+        [
+          "http://localhost:8801/js/data/reviews.js",
+          3581,
+          172
+        ],
+        [
+          "http://localhost:8801/js/util.js",
+          13136,
+          472
+        ],
+        [
+          "http://localhost:8801/js/breakpoints.min.js",
+          4965,
+          322
+        ],
+        [
+          "http://localhost:8801/js/browser.min.js",
+          3657,
+          322
+        ],
+        [
+          "http://localhost:8801/js/components/inject-templates.js",
+          6214,
+          472
+        ],
+        [
+          "http://localhost:8801/js/jquery.dropotron.min.js",
+          11158,
+          622
+        ],
+        [
+          "http://localhost:8801/css/main.css",
+          49970,
+          1372
+        ],
+        [
+          "http://localhost:8801/css/pages/home.css",
+          5927,
+          472
+        ],
+        [
+          "http://localhost:8801/js/jquery.min.js",
+          168214,
+          3772
+        ],
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          813
+        ],
+        [
+          "http://localhost:8801/css/fontawesome-all.min.css",
+          71236,
+          1522
+        ]
+      ]
+    },
+    "section-hub": {
+      "url": "/revision-notes/",
+      "runs": 5,
+      "score": 0.87,
+      "LCP": 3152.9632999999994,
+      "CLS": 0.03192508015350186,
+      "TBT": 12.999999999999545,
+      "FCP": 3152.3248000000003,
+      "SI": 3152.3248000000003,
+      "bytes": 676087,
+      "blocking_ms": 2381,
+      "chain_len": 4,
+      "chain_ms": 260.0159999728203,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          807
+        ],
+        [
+          "http://localhost:8801/js/jquery.min.js",
+          168214,
+          2551
+        ],
+        [
+          "http://localhost:8801/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8801/js/browser.min.js",
+          3657,
+          301
+        ],
+        [
+          "http://localhost:8801/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8801/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8801/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8801/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8801/css/main.css",
+          49970,
+          1201
+        ],
+        [
+          "http://localhost:8801/css/fontawesome-all.min.css",
+          71236,
+          1051
+        ],
+        [
+          "http://localhost:8801/css/pages/revision-notes.css",
+          1521,
+          301
+        ]
+      ]
+    },
+    "notes-topic": {
+      "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+      "runs": 5,
+      "score": 0.8,
+      "LCP": 3605.6942,
+      "CLS": 0.10154784586962062,
+      "TBT": 82,
+      "FCP": 3452.4628,
+      "SI": 3452.4628,
+      "bytes": 1201088,
+      "blocking_ms": 2507,
+      "chain_len": 2,
+      "chain_ms": 460.4039999842644,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2974,
+          814
+        ],
+        [
+          "http://localhost:8801/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8801/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8801/js/jquery.min.js",
+          168214,
+          2701
+        ],
+        [
+          "http://localhost:8801/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8801/js/browser.min.js",
+          3657,
+          301
+        ],
+        [
+          "http://localhost:8801/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8801/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8801/css/pages/revision-notes-textbook.css",
+          21240,
+          901
+        ],
+        [
+          "http://localhost:8801/css/main.css",
+          49970,
+          1351
+        ],
+        [
+          "http://localhost:8801/css/fontawesome-all.min.css",
+          71236,
+          1051
+        ]
+      ]
+    },
+    "practice-questions": {
+      "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+      "runs": 5,
+      "score": 0.82,
+      "LCP": 3603.9640000000004,
+      "CLS": 0.021207172319633375,
+      "TBT": 10,
+      "FCP": 3603.3467,
+      "SI": 3603.3467,
+      "bytes": 827356,
+      "blocking_ms": 2667,
+      "chain_len": 4,
+      "chain_ms": 238.12599992752075,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          808
+        ],
+        [
+          "http://localhost:8801/js/main.js",
+          775,
+          152
+        ],
+        [
+          "http://localhost:8801/js/util.js",
+          13136,
+          452
+        ],
+        [
+          "http://localhost:8801/js/breakpoints.min.js",
+          4965,
+          302
+        ],
+        [
+          "http://localhost:8801/js/browser.min.js",
+          3657,
+          302
+        ],
+        [
+          "http://localhost:8801/js/jquery.min.js",
+          168214,
+          2702
+        ],
+        [
+          "http://localhost:8801/js/components/inject-templates.js",
+          6214,
+          452
+        ],
+        [
+          "http://localhost:8801/js/jquery.dropotron.min.js",
+          11158,
+          602
+        ],
+        [
+          "http://localhost:8801/css/fontawesome-all.min.css",
+          71236,
+          1052
+        ],
+        [
+          "http://localhost:8801/css/pages/quiz.css",
+          14026,
+          752
+        ],
+        [
+          "http://localhost:8801/css/main.css",
+          49970,
+          1202
+        ]
+      ]
+    },
+    "past-paper-questions": {
+      "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+      "runs": 5,
+      "score": 0.6,
+      "LCP": 3609.4700999999995,
+      "CLS": 0.6601960184497969,
+      "TBT": 9,
+      "FCP": 3452.9871999999996,
+      "SI": 3452.9871999999996,
+      "bytes": 1215102,
+      "blocking_ms": 2517,
+      "chain_len": 4,
+      "chain_ms": 255.9520000219345,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          805
+        ],
+        [
+          "http://localhost:8801/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8801/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8801/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8801/js/jquery.min.js",
+          168214,
+          2551
+        ],
+        [
+          "http://localhost:8801/js/browser.min.js",
+          3657,
+          301
+        ],
+        [
+          "http://localhost:8801/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8801/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8801/css/main.css",
+          49970,
+          1201
+        ],
+        [
+          "http://localhost:8801/css/pages/past-paper-questions.css",
+          10028,
+          601
+        ],
+        [
+          "http://localhost:8801/css/fontawesome-all.min.css",
+          71236,
+          1051
+        ]
+      ]
+    },
+    "flashcards": {
+      "url": "/flashcards/edexcel-a/theme-1/",
+      "runs": 5,
+      "score": 0.8,
+      "LCP": 3753.1975499999994,
+      "CLS": 0.020074116492871268,
+      "TBT": 8,
+      "FCP": 3753.1975499999994,
+      "SI": 3753.1975499999994,
+      "bytes": 911246,
+      "blocking_ms": 2967,
+      "chain_len": 4,
+      "chain_ms": 264.90299993753433,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          803
+        ],
+        [
+          "http://localhost:8801/js/util.js",
+          13136,
+          452
+        ],
+        [
+          "http://localhost:8801/js/jquery.min.js",
+          168214,
+          3002
+        ],
+        [
+          "http://localhost:8801/js/main.js",
+          775,
+          152
+        ],
+        [
+          "http://localhost:8801/js/breakpoints.min.js",
+          4965,
+          302
+        ],
+        [
+          "http://localhost:8801/js/jquery.dropotron.min.js",
+          11158,
+          602
+        ],
+        [
+          "http://localhost:8801/js/browser.min.js",
+          3657,
+          152
+        ],
+        [
+          "http://localhost:8801/js/components/inject-templates.js",
+          6214,
+          452
+        ],
+        [
+          "http://localhost:8801/css/vendor/katex/katex.min.css",
+          21913,
+          1052
+        ],
+        [
+          "http://localhost:8801/css/main.css",
+          49970,
+          1502
+        ],
+        [
+          "http://localhost:8801/css/fontawesome-all.min.css",
+          71236,
+          1202
+        ],
+        [
+          "http://localhost:8801/css/pages/flashcards.css",
+          15960,
+          752
+        ]
+      ]
+    }
+  },
+  "local_after": {
+    "homepage": {
+      "url": "/",
+      "runs": 5,
+      "score": 0.84,
+      "LCP": 3452.7920999999997,
+      "CLS": 0.020836683574073592,
+      "TBT": 10,
+      "FCP": 3452.5345,
+      "SI": 3452.5345,
+      "bytes": 686169,
+      "blocking_ms": 2678,
+      "chain_len": 3,
+      "chain_ms": 233.66899996995926,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          811
+        ],
+        [
+          "http://localhost:8802/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8802/js/components/reviews-render.js",
+          1399,
+          151
+        ],
+        [
+          "http://localhost:8802/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8802/js/data/reviews.js",
+          3581,
+          151
+        ],
+        [
+          "http://localhost:8802/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8802/js/jquery.min.js",
+          168214,
+          2851
+        ],
+        [
+          "http://localhost:8802/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8802/js/browser.min.js",
+          3657,
+          151
+        ],
+        [
+          "http://localhost:8802/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8802/css/pages/home.css",
+          5927,
+          451
+        ],
+        [
+          "http://localhost:8802/css/main.css",
+          50144,
+          1501
+        ],
+        [
+          "http://localhost:8802/css/fontawesome-all.min.css",
+          71236,
+          1801
+        ]
+      ]
+    },
+    "section-hub": {
+      "url": "/revision-notes/",
+      "runs": 5,
+      "score": 0.91,
+      "LCP": 2852.5704,
+      "CLS": 0.03297063925402761,
+      "TBT": 8,
+      "FCP": 2852.5704,
+      "SI": 2852.5704,
+      "bytes": 677619,
+      "blocking_ms": 2081,
+      "chain_len": 3,
+      "chain_ms": 241.4170000553131,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2974,
+          836
+        ],
+        [
+          "http://localhost:8802/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8802/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8802/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8802/js/jquery.min.js",
+          168214,
+          2251
+        ],
+        [
+          "http://localhost:8802/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8802/js/browser.min.js",
+          3657,
+          151
+        ],
+        [
+          "http://localhost:8802/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8802/css/pages/revision-notes.css",
+          1521,
+          301
+        ],
+        [
+          "http://localhost:8802/css/main.css",
+          50144,
+          1501
+        ],
+        [
+          "http://localhost:8802/css/fontawesome-all.min.css",
+          71236,
+          1651
+        ]
+      ]
+    },
+    "notes-topic": {
+      "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+      "runs": 5,
+      "score": 0.83,
+      "LCP": 3306.1468999999997,
+      "CLS": 0.10155144456390361,
+      "TBT": 83.00000000000091,
+      "FCP": 3152.7646,
+      "SI": 3152.7646,
+      "bytes": 1202966,
+      "blocking_ms": 2205,
+      "chain_len": 2,
+      "chain_ms": 447.42099994421005,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          811
+        ],
+        [
+          "http://localhost:8802/js/main.js",
+          775,
+          152
+        ],
+        [
+          "http://localhost:8802/js/util.js",
+          13136,
+          452
+        ],
+        [
+          "http://localhost:8802/js/jquery.min.js",
+          168214,
+          2402
+        ],
+        [
+          "http://localhost:8802/js/breakpoints.min.js",
+          4965,
+          302
+        ],
+        [
+          "http://localhost:8802/js/browser.min.js",
+          3657,
+          152
+        ],
+        [
+          "http://localhost:8802/js/components/inject-templates.js",
+          6214,
+          452
+        ],
+        [
+          "http://localhost:8802/css/pages/revision-notes-textbook.css",
+          21796,
+          902
+        ],
+        [
+          "http://localhost:8802/css/main.css",
+          50144,
+          1502
+        ],
+        [
+          "http://localhost:8802/js/jquery.dropotron.min.js",
+          11158,
+          602
+        ],
+        [
+          "http://localhost:8802/css/fontawesome-all.min.css",
+          71236,
+          1802
+        ]
+      ]
+    },
+    "practice-questions": {
+      "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+      "runs": 5,
+      "score": 0.84,
+      "LCP": 3452.9602,
+      "CLS": 0.021207172319633375,
+      "TBT": 9.999999999999545,
+      "FCP": 3302.0257,
+      "SI": 3302.0257,
+      "bytes": 830691,
+      "blocking_ms": 2210,
+      "chain_len": 3,
+      "chain_ms": 263.811999976635,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2974,
+          823
+        ],
+        [
+          "http://localhost:8802/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8802/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8802/js/jquery.min.js",
+          168214,
+          2401
+        ],
+        [
+          "http://localhost:8802/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8802/css/fontawesome-all.min.css",
+          71236,
+          1801
+        ],
+        [
+          "http://localhost:8802/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8802/js/browser.min.js",
+          3657,
+          151
+        ],
+        [
+          "http://localhost:8802/css/pages/quiz.css",
+          15349,
+          751
+        ],
+        [
+          "http://localhost:8802/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8802/css/main.css",
+          50144,
+          1501
+        ]
+      ]
+    },
+    "past-paper-questions": {
+      "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+      "runs": 5,
+      "score": 0.62,
+      "LCP": 3302.5479,
+      "CLS": 0.6682466993567983,
+      "TBT": 9,
+      "FCP": 3302.332,
+      "SI": 3302.332,
+      "bytes": 1215947,
+      "blocking_ms": 2366,
+      "chain_len": 3,
+      "chain_ms": 255.9559999704361,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2983,
+          818
+        ],
+        [
+          "http://localhost:8802/js/main.js",
+          775,
+          151
+        ],
+        [
+          "http://localhost:8802/js/util.js",
+          13136,
+          451
+        ],
+        [
+          "http://localhost:8802/js/breakpoints.min.js",
+          4965,
+          301
+        ],
+        [
+          "http://localhost:8802/js/browser.min.js",
+          3657,
+          151
+        ],
+        [
+          "http://localhost:8802/js/jquery.min.js",
+          168214,
+          2401
+        ],
+        [
+          "http://localhost:8802/js/components/inject-templates.js",
+          6214,
+          451
+        ],
+        [
+          "http://localhost:8802/js/jquery.dropotron.min.js",
+          11158,
+          601
+        ],
+        [
+          "http://localhost:8802/css/pages/past-paper-questions.css",
+          10028,
+          601
+        ],
+        [
+          "http://localhost:8802/css/main.css",
+          50144,
+          1501
+        ],
+        [
+          "http://localhost:8802/css/fontawesome-all.min.css",
+          71236,
+          1801
+        ]
+      ]
+    },
+    "flashcards": {
+      "url": "/flashcards/edexcel-a/theme-1/",
+      "runs": 5,
+      "score": 0.83,
+      "LCP": 3607.6259999999997,
+      "CLS": 0.020074116492871268,
+      "TBT": 17,
+      "FCP": 3452.3526999999995,
+      "SI": 3452.3526999999995,
+      "bytes": 911700,
+      "blocking_ms": 2666,
+      "chain_len": 3,
+      "chain_ms": 257.0849999785423,
+      "blocking": [
+        [
+          "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+          2974,
+          808
+        ],
+        [
+          "http://localhost:8802/js/breakpoints.min.js",
+          4965,
+          302
+        ],
+        [
+          "http://localhost:8802/js/main.js",
+          775,
+          152
+        ],
+        [
+          "http://localhost:8802/js/util.js",
+          13136,
+          452
+        ],
+        [
+          "http://localhost:8802/js/jquery.min.js",
+          168214,
+          2552
+        ],
+        [
+          "http://localhost:8802/js/browser.min.js",
+          3657,
+          152
+        ],
+        [
+          "http://localhost:8802/js/jquery.dropotron.min.js",
+          11158,
+          602
+        ],
+        [
+          "http://localhost:8802/js/components/inject-templates.js",
+          6214,
+          302
+        ],
+        [
+          "http://localhost:8802/css/pages/flashcards.css",
+          15960,
+          752
+        ],
+        [
+          "http://localhost:8802/css/vendor/katex/katex.min.css",
+          21913,
+          1052
+        ],
+        [
+          "http://localhost:8802/css/fontawesome-all.min.css",
+          71236,
+          1952
+        ],
+        [
+          "http://localhost:8802/css/main.css",
+          50144,
+          1652
+        ]
+      ]
+    }
+  }
+}
