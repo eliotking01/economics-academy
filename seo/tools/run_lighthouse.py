@@ -107,7 +107,16 @@ def main() -> int:
     ap.add_argument("--out", required=True, help="directory for raw JSON reports")
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--only", help="run a single label from PAGES")
+    # A local origin makes an A/B possible before anything is deployed: serve
+    # the pre-change commit on one port and the working tree on another, and
+    # the difference is attributable to the change rather than to the day.
+    # The site's own assets stop being realistic, but the font chain - which
+    # is what the CWV work altered - still resolves to the real third-party
+    # origins, so the thing being measured survives.
+    ap.add_argument("--base", default=SITE,
+                    help=f"origin to measure (default {SITE})")
     args = ap.parse_args()
+    site = args.base.rstrip("/")
 
     outdir = Path(args.out)
     outdir.mkdir(parents=True, exist_ok=True)
@@ -115,7 +124,7 @@ def main() -> int:
 
     results: dict[str, dict] = {}
     for label, path in pages:
-        url = SITE + path
+        url = site + path
         print(f"\n{label}  {url}", file=sys.stderr)
         rows = []
         for n in range(1, args.runs + 1):

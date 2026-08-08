@@ -1,5 +1,37 @@
 # Phase 9 — Core Web Vitals baseline
 
+> ## ⚠️ Superseded in part — read this first
+>
+> The medians in this document came from **3 runs per URL**. Re-running the
+> identical method at **7 runs against the same unchanged deployed code** gave
+> materially different answers:
+>
+> | Page | 3-run LCP | 7-run LCP | 3-run perf | 7-run perf |
+> | --- | ---: | ---: | ---: | ---: |
+> | homepage | 4.73 s | **3.04 s** | 72 | **88** |
+> | notes-topic | 6.84 s | **3.04 s** | 61 | **85** |
+> | practice-questions | 5.08 s | **1.79 s** | 69 | **99** |
+> | past-paper-questions | 4.98 s | **1.80 s** | 72 | **75** |
+>
+> The runs are **bimodal**, not noisy — each page clusters around ~1.6 s and
+> ~5–8 s, so the median reports whichever mode won rather than the page's
+> speed. `notes-topic` at 7 runs: 7.3, 8.0, 1.7, 7.1, 1.8, 3.0, 3.0.
+>
+> **So the absolute timings below are not trustworthy, and the verdict "LCP
+> 4.7–6.8 s, performance 61–72, poor" was wrong** — it was reading noise. Lab
+> medians over the CDN are not a usable instrument for this site.
+>
+> What survives, because it comes from the request trace rather than a timing
+> median: the 4-deep critical chain, the Google Fonts stylesheet being the
+> largest render-blocking item on 6 of 6 pages, and the 190 pages with no
+> preconnect. Those were all real and all fixed.
+>
+> The attributable measurement is the **local A/B in
+> `seo/10-architecture-verification.md`**, which removes the CDN, has a
+> run-to-run spread of 0.00–0.16 s, and shows the change is worth
+> −0.15 to −0.31 s of LCP and −10.5% render-blocking.
+
+
 Measured **before any page in this pass was modified**, so a later regression can
 be attributed. Reproduce with:
 
