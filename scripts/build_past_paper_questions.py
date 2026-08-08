@@ -253,7 +253,10 @@ def build(taxonomy, tags, papers):
 
 # ---------------------------------------------------------------- master page
 
-TITLE = "Edexcel A-Level Economics Past Paper Questions | Economics Academy"
+# The master page covers every board in the bank, so its title must not name
+# one. Naming Edexcel here made it byte-identical to the Edexcel board page's
+# generated title and gave the site its only pair of duplicate titles.
+TITLE = "A-Level Economics Past Paper Questions | Edexcel & AQA | Economics Academy"
 DESC = (
     "Search every Edexcel A-Level Economics (9EC0) Section B and Section C past "
     "paper question from 2017 to 2024. Filter by topic, paper, year and marks, "
@@ -470,8 +473,14 @@ def json_ld(obj):
 
 
 def visible_href(path):
-    """The site writes the home link as /index.html but canonicalises it as /."""
-    return "/index.html" if path == "/" else path
+    """Links are written in canonical form - the same URL the page canonicalises to.
+
+    This used to return "/index.html" for the home link, because that was the
+    site's convention. Both forms return 200 on GitHub Pages, so the convention
+    was creating a duplicate URL for every hub page and splitting its ranking
+    signals across the two.
+    """
+    return path
 
 
 def breadcrumb_html(crumbs):
@@ -620,7 +629,7 @@ CTA = """          <section class="ppq-cta">
               topics you keep losing marks on with a specialist tutor.
             </p>
             <div class="ppq-cta-actions">
-              <a href="/revision-notes/index.html" class="button alt">Free Revision Notes</a>
+              <a href="/revision-notes/" class="button alt">Free Revision Notes</a>
               <a href="/marking.html" class="button alt">Get Your Essays Marked</a>
               <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
             </div>
@@ -749,7 +758,7 @@ def render_index(index):
             <p>
               The search above needs JavaScript. Every topic is listed below, and
               all the question papers and mark schemes are available from the
-              <a href="/past-papers/index.html">past papers</a> pages.
+              <a href="/past-papers/">past papers</a> pages.
             </p>
           </noscript>
 
