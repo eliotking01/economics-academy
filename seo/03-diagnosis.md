@@ -106,10 +106,21 @@ identical, and that the `href=` count is unchanged.
 
 ### Root cause
 
-`scripts/build_questions.py` emits `canonical = …/index.html` for every
-`practice-questions/**/index.html`, while `sitemap.xml` lists `…/`. Confirmed
-live: fetching `https://economicsacademy.co.uk/practice-questions/` returns a
-page whose canonical points *away from itself*.
+`scripts/build_questions.py` builds these pages and constructs their canonical
+URL with the `index.html` suffix, in exactly two places:
+
+```python
+997:   url = f"{SITE}/practice-questions/{board_dir}/index.html"   # 6 board hubs
+1095:  url = f"{SITE}/practice-questions/index.html"               # the master hub
+```
+
+That `url` feeds `rel=canonical` and `og:url`. Meanwhile `sitemap.xml` lists
+`…/`. Confirmed live: fetching `https://economicsacademy.co.uk/practice-questions/`
+returns a page whose canonical points *away from itself*.
+
+(Note the script's docstring claims "Board index pages and the hub are built by a
+later phase; this script currently emits topic pages and the sitemap block."
+That is out of date — it builds them. Worth correcting while in there.)
 
 ### Why this ranks above its size
 
