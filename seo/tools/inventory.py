@@ -180,6 +180,7 @@ def build() -> dict:
         "indexable": sorted(indexable),
         "pdfs_total": len(pdfs),
         "pdfs_published": len(published_pdfs),
+        "pdf_paths": sorted(published_pdfs),
         "sitemap": sitemap,
         "gsc": gsc,
         "expected_urls": sorted(expected),
