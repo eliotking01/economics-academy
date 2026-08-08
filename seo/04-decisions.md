@@ -13,10 +13,13 @@ Tick a box or tell me in chat.
 **What:** rewrite every `href="/x/index.html"` → `href="/x/"` and
 `href="/index.html"` → `href="/"`. 1,300 links across 458 files.
 
-**Why:** 20 of your 21 hub pages currently have **zero internal links at their
-canonical URL** — a crawler following links only ever reaches the `/index.html`
-twin, which returns 200. Google is ranking both halves of ten pages, splitting
-**1,000 clicks and 44,809 impressions** (81% of clicks, 64% of impressions).
+**Why:** the 20 hub pages of `revision-notes/`, `practice-questions/` and
+`past-papers/` currently have **zero internal links at their canonical URL** — a
+crawler following links only ever reaches the `/index.html` twin, which returns
+200. (Your newer `flashcards/`, `past-paper-questions/` and glossary sections
+already link canonically, so this is a legacy convention, not a policy.) Google
+is ranking both halves of ten pages, splitting **1,000 clicks and 44,809
+impressions** — 81% of clicks and 64% of impressions.
 
 **This exceeds the 20-file bulk threshold, so it needs your sign-off.**
 
