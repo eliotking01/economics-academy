@@ -17,10 +17,9 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css/main.css reaches the web fonts through an @import, so the browser
-         cannot discover fonts.gstatic.com until main.css has parsed and the
-         imported sheet has come back. Warming both origins here shortens that
-         chain and cuts the font-swap layout shift. -->
+    <!-- The font stylesheet is linked in <head> below, so the preload scanner
+         finds it immediately. gstatic is still a second origin, discovered only
+         once that stylesheet parses, so warming both here still pays. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Purpose of Economic Activity Questions — AQA A-Level Economics | Economics Academy</title>
