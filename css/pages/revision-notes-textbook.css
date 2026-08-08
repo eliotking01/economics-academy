@@ -923,3 +923,16 @@
 .revision-notes-content .notes-questions-link .button {
   margin: 0;
 }
+
+/* One quiet line back to the diagram gallery that features this page. The
+   galleries link out to 47 notes pages and, before this, none linked back;
+   they were earning 4,083 impressions on a single inbound link each, and that
+   link was the runtime-injected header. See seo/07-link-graph.md.
+
+   Deliberately a plain sentence, not another boxed block - the page already
+   carries four of those and a fifth would swamp the end of it. */
+.revision-notes-content .notes-diagrams-link {
+  margin-top: 1.5em;
+  font-size: 0.95em;
+  text-align: center;
+}
