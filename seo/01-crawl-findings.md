@@ -98,12 +98,30 @@ reported in `seo/02-sitewide-defects.md` instead.
 
 ## Duplicate URL variants both returning 200
 
-Confirmed by direct probe, not inferred:
+Probed on **every one of the 463 pages**, six variants each — 2,598 requests.
+Not inferred, not sampled:
+
+| Variant | 200 | 301 | 404 |
+| --- | ---: | ---: | ---: |
+| `/<dir>/` | 121 | – | – |
+| `/<dir>/index.html` | **121** | – | 342 |
+| `/<path>.html` | 342 | – | – |
+| `/<path>` (extensionless) | **342** | 120 | – |
+| `https://www.…` | – | **463** | – |
+| `http://…` | – | **463** | – |
+
+**Every page on the site returns 200 at exactly two URLs. 463 pages, 926 URLs.**
 
 | Page form | Canonical | Duplicate also 200 | Pages | Internally linked? |
 | --- | --- | --- | ---: | --- |
 | `<dir>/index.html` | `/<dir>/` | `/<dir>/index.html` | 121 | **Yes — 1,300 links** |
-| `<path>.html` | `/<path>.html` | `/<path>` | 340 | No — zero links |
+| `<path>.html` | `/<path>.html` | `/<path>` | 342 | No — zero links |
+
+Host and protocol canonicalisation is perfect: 463/463 on both `www.` and
+`http://`, no exceptions, no protocol downgrades.
+
+All **283 PDFs return 200** (`seo/01-pdfs.csv`), which is what qualified them
+for the sitemap.
 
 Requesting a directory without its trailing slash (`/revision-notes`) correctly
 301s to `/revision-notes/`. `http://`, `http://www.` and `https://www.` all 301
