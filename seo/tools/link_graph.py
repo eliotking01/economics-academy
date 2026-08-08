@@ -382,6 +382,11 @@ def main() -> int:
 
     def is_topic_page(t: str) -> bool:
         parts = Path(t).parts
+        # The glossary board pages sit at /revision-notes/glossary/<board>/ and
+        # match the shape below, but they are one page per board, not per
+        # topic. Counting them inflated every revision-notes denominator by 1.
+        if "glossary" in parts:
+            return False
         if parts[-1] == "index.html":
             return len(parts) == 4      # /section/board/topic-slug/index.html
         return len(parts) == 3          # /section/board/topic.html
