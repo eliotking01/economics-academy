@@ -26,3 +26,10 @@ seo/lh-*/
 # legitimately ends in " <number>.<ext>".
 * [0-9].*
 * [0-9][0-9].*
+
+# Organisation & consistency audit working files. Ignored rather than excluded
+# in _config.yml, because these are a different kind of file from seo/: they are
+# a running list of this site's own structural defects, with the evidence. The
+# repo is public, so "not published" is not the same as "not readable" - only
+# "not committed" is. Delete _audit/ when the roadmap it produces is done.
+_audit/
