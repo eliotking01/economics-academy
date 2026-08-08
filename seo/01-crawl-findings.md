@@ -19,11 +19,11 @@ difference turns out to be the most important result in this report.**
 
 ---
 
-## Headline: 20 of 21 hub pages are never linked at their canonical URL
+## Headline: the site's 20 highest-value hub pages are never linked at their canonical URL
 
 The link crawl reached 701 URLs. Of the 463 real pages, **22 were unreachable by
 following static links.** Two are `404.html` and `confirmation.html` — correctly
-`noindex` and correctly unlinked. The other **20 are the site's hub pages**:
+`noindex` and correctly unlinked. The other **20 are hub pages**:
 
 ```
 /revision-notes/                      /practice-questions/
@@ -41,6 +41,26 @@ following static links.** Two are `404.html` and `confirmation.html` — correct
 For every one of them, the crawler reached the `…/index.html` twin instead. The
 canonical URL — the one in `sitemap.xml`, the one each page's own `rel=canonical`
 names — has **zero internal inbound links anywhere on the site.**
+
+### The split is exactly along the old/new section boundary
+
+Of the 121 directory-form pages, **101 are reached at their canonical URL and 20
+are not**, and the division is not random:
+
+| Section | Linked canonically? |
+| --- | --- |
+| `flashcards/` (7) | ✅ yes — `templates/header.html` uses `/flashcards/` |
+| `past-paper-questions/` (91) | ✅ yes — uses `/past-paper-questions/` |
+| `revision-notes/glossary/` (3) | ✅ yes — uses `/revision-notes/glossary/` |
+| `/` (homepage) | ✅ yes — breadcrumbs use `<a href="/">`, though 93 links still use `/index.html` |
+| **`revision-notes/` hubs (8)** | ❌ **no** |
+| **`practice-questions/` hubs (7)** | ❌ **no** |
+| **`past-papers/` hubs (5)** | ❌ **no** |
+
+The three newest sections already follow the canonical convention. The three
+oldest do not — and those are the ones carrying the traffic. This is a legacy
+convention that newer work has already moved away from, which makes fixing it
+a consolidation rather than a change of direction.
 
 This is worse than "some links use the wrong form". It means:
 

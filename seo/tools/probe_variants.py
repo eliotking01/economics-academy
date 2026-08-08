@@ -160,8 +160,9 @@ def main() -> int:
     print(f"== variant probe: {len(pages)} pages", file=sys.stderr, flush=True)
     for i, page in enumerate(pages, 1):
         row = {"page": page, "canonical_url": url_for(page)}
+        vs = variants_for(page)
         for kind in KINDS:
-            v = variants_for(page).get(kind)
+            v = vs.get(kind)
             if not v:
                 row[f"{kind}_status"] = ""
                 row[f"{kind}_location"] = ""
@@ -171,7 +172,7 @@ def main() -> int:
             row[f"{kind}_status"] = status
             row[f"{kind}_location"] = loc
         rows.append(row)
-        if i % 25 == 0 or i == len(pages):
+        if i % 10 == 0 or i == len(pages):
             el = time.monotonic() - t0
             print(f"  [{i:>4}/{len(pages)}] {el:6.0f}s elapsed, "
                   f"{pool.requests} requests, {i/el*60:.0f} pages/min",
