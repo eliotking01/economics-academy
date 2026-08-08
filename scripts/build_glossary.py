@@ -871,6 +871,7 @@ SITEMAP_CLOSE = "  <!-- /Glossary -->"
 
 
 def update_sitemap(paths):
+    """UNUSED. scripts/build_sitemap.py owns the sitemap now: it enumerates pages from the filesystem and takes lastmod from git, so a generator stamping today's date into its own block would undo that."""
     today = datetime.date.today().isoformat()
     lines = [SITEMAP_OPEN]
     for p in paths:
@@ -980,7 +981,7 @@ def main():
 
     urls = ["/revision-notes/glossary/"] + [
         f"/revision-notes/glossary/{BOARDS[b]['slug']}/" for b in BOARDS]
-    print("  sitemap " + ("updated" if update_sitemap(urls) else "already current"))
+    print(f"  {len(urls)} page URLs; run scripts/build_sitemap.py for the sitemap")
     if not prettify(list(pages)):
         print("  WARNING: prettier unavailable, formatting differs from the repo")
     return 0

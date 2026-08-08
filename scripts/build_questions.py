@@ -13,13 +13,13 @@ Generated pages are committed to the repo; hosting stays plain static.
 Usage:
     python3 scripts/build_questions.py                 # build everything
     python3 scripts/build_questions.py --check         # validate only
-    python3 scripts/build_questions.py --sitemap       # also refresh sitemap.xml
+    python3 scripts/build_sitemap.py                   # the sitemap, separately
     python3 scripts/build_questions.py aqa-a2-micro/1-3-2.json   # one topic
 
 Exit status is non-zero if any set fails validation.
 
-This script emits the topic pages, the six board index pages, the hub, and
-the sitemap block.
+This script emits the topic pages, the six board index pages and the hub. The
+sitemap is built separately by scripts/build_sitemap.py.
 
 URLs are written in canonical form: a directory page is linked and
 canonicalised as /practice-questions/<board>/, never .../index.html. Both
@@ -1217,6 +1217,7 @@ def spec_key(spec):
 
 
 def update_sitemap(topics):
+    """UNUSED. scripts/build_sitemap.py owns the sitemap now: it enumerates pages from the filesystem and takes lastmod from git, so a generator stamping today's date into its own block would undo that."""
     """Insert or refresh the practice-questions block. Purely additive to
     every line outside the block's own markers."""
     today = datetime.date.today().isoformat()
@@ -1337,8 +1338,7 @@ def main(argv=None):
     print(f"wrote {hub.relative_to(ROOT)}")
 
     if args.sitemap:
-        update_sitemap(topics)
-        print(f"updated {SITEMAP.relative_to(ROOT)}")
+        print("--sitemap is retired; run scripts/build_sitemap.py instead")
 
     print(f"\n{len(topics)} set(s), {total} questions")
     return 0

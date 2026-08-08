@@ -1066,7 +1066,10 @@ SITEMAP_CLOSE = "  <!-- /Past Paper Questions -->"
 
 
 def update_sitemap(index, paths):
-    """Rewrite the section's block in sitemap.xml, between HTML comment markers.
+    """UNUSED. scripts/build_sitemap.py owns the sitemap now: it enumerates pages from the filesystem and takes lastmod from git, so a generator stamping today's date into its own block would undo that.
+
+    Kept for reference: it rewrote this section's block in sitemap.xml between
+    HTML comment markers, stamping every entry with the date it ran.
 
     Same convention as the practice-questions block already in the file. The
     block is replaced wholesale, so removing a topic page removes its entry.
@@ -1231,10 +1234,8 @@ def main():
     elif hub:
         print(f"updated the count in past-papers/index.html to {index['count']}")
 
-    if update_sitemap(index, paths):
-        print(f"updated sitemap.xml ({len(paths)} URLs in the block)")
-    else:
-        print("sitemap.xml already up to date")
+    # The sitemap is built separately - see the note on update_sitemap().
+    print(f"{len(paths)} page URLs; run scripts/build_sitemap.py to refresh the sitemap")
 
 
 if __name__ == "__main__":
