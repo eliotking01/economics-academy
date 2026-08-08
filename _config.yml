@@ -41,6 +41,11 @@ exclude:
 
   # Internal documentation and working notes.
   - docs/
+  # The SEO audit: its own reports, the crawl output, and the Search Console
+  # exports. Exactly the category this file exists to keep off the site - the
+  # exports list every URL Google has judged, and 00-inventory.md names the
+  # site's own defects.
+  - seo/
   - CLAUDE.md
   - NEW-CONTENT-LOG.md
   - PAST-PAPERS-PROGRESS.md
