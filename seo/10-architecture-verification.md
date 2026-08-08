@@ -210,6 +210,61 @@ the opportunity estimate implied.
 
 ---
 
+## 5a. Post-deploy re-measurement — done
+
+Merged as PR #15 and deployed. The live re-run in §7 step 1 has been executed:
+`seo/lh-live-after-7run.json`, 7 runs, identical method.
+
+**The structural change is confirmed live:**
+
+| Page | Critical chain before | after |
+| --- | ---: | ---: |
+| homepage | 4 | **3** |
+| section-hub | 4 | **3** |
+| notes-topic | 2 | 2 |
+| practice-questions | 4 | **3** |
+| past-paper-questions | 4 | **3** |
+| flashcards | 4 | **3** |
+
+**4 → 3 on five of six pages**, reproducing the local A/B exactly. This is read
+from the request trace rather than a timing median, so it is the reliable
+result — the `@import` hoist did on the real CDN what it did on localhost.
+
+### ⚠️ The live LCP numbers still cannot be used, and they look better than they are
+
+| Page | LCP before | LCP after |
+| --- | ---: | ---: |
+| homepage | 3.04 s | 1.79 s |
+| section-hub | 4.25 s | 1.84 s |
+| notes-topic | 3.04 s | 1.83 s |
+| flashcards | 5.23 s | 1.82 s |
+
+**Do not read this as a 1–3 second win.** The bimodality documented in §5 is
+unchanged. Post-deploy `notes-topic` across its 7 runs:
+
+```
+6.91, 1.87, 1.77, 1.93, 1.79, 1.83, 1.81      spread 5.14 s
+```
+
+Spreads are 3.15–5.14 s, the same two clusters at ~1.8 s and ~5 s. The
+post-deploy runs simply landed in the fast cluster more often. Render-blocking
+moved the *other* way on five of six pages (+5 to +203 ms, −708 ms on
+flashcards, −5.1% net), which is the same noise pointing the opposite direction.
+
+**Nothing about live LCP is attributable.** The local A/B in §5 — spread
+0.00–0.16 s, −0.15 to −0.31 s LCP, −10.5% render-blocking, consistent on all six
+pages — remains the only measurement of what the change was worth.
+
+### Raw reports are not committed
+
+A 6-page 7-run pass writes 42 JSON files and 23 MB. Only the medians are kept
+(`seo/lh-live-after-7run.json`, 5.9 KB), matching how the pre-deploy runs were
+handled. `.gitignore` carries `seo/lh-*/` so future runs are not staged by
+accident; the trailing slash matches the output directories only, never the
+`seo/lh-*.json` medians beside them. The per-run reports are regenerable.
+
+---
+
 ## 6. What was deliberately NOT done
 
 - **Assertion 15, `<img>` width and height.** Blocked, not forgotten. The three
@@ -247,13 +302,12 @@ Nothing. `main` auto-publishes, so the merge **is** the deploy. Confirm first.
 
 ### Immediately after deploying
 
-1. **Re-run the live Lighthouse baseline**, so the after-numbers are on the real
-   CDN rather than localhost:
+1. ~~**Re-run the live Lighthouse baseline**~~ — **done, see §5a.** The chain
+   depth confirmed 4 → 3 on five of six pages; the bimodality persisted exactly
+   as predicted, so the LCP medians were not usable.
    ```
    python3 seo/tools/run_lighthouse.py --out seo/lh-live-after --runs 7
    ```
-   Expect the bimodality to persist. Compare **render-blocking totals and chain
-   depth**, not LCP medians.
 
 2. **Spot-check in the Rich Results Test** — these five, in this order:
    ```

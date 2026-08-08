@@ -13,6 +13,13 @@ Thumbs.db
 # Python virtualenv for scripts/ (see requirements.txt)
 .venv/
 
+# Raw Lighthouse output. run_lighthouse.py writes one JSON report per page per
+# run, and a 6-page 7-run pass is 42 files and 23 MB. Only the medians are
+# worth keeping, and those are committed alongside as seo/lh-*.json - the
+# trailing slash here matches the output DIRECTORIES only, never those files.
+# The per-run reports are regenerable: re-run the script.
+seo/lh-*/
+
 # Finder / iCloud duplicate copies ("file 2.py", "file 3.csv"). 33 of these
 # accumulated during the SEO work and five reached git, including a
 # js/components/quiz 2.js that was being served publicly. Nothing in this repo
