@@ -44,6 +44,12 @@ SITE = "https://economicsacademy.co.uk"
 HREF_RE = re.compile(r'href="([^"]*)"')
 ANY_HREF = re.compile(r"href=")
 
+# BreadcrumbList JSON-LD carries the same URLs as the visible breadcrumb, in a
+# "item" field rather than an href. Google renders breadcrumbs in the SERP from
+# this, so leaving it pointing at /x/index.html would keep reinforcing the
+# duplicate even after every visible link was fixed.
+ITEM_RE = re.compile(r'("item":\s*)"([^"]*)"')
+
 
 def canonicalise(value: str) -> str:
     """Return the canonical form of one href value, or it unchanged."""
@@ -69,7 +75,7 @@ def canonicalise(value: str) -> str:
 def rewrite(text: str) -> tuple[str, int]:
     n = 0
 
-    def sub(m: re.Match) -> str:
+    def sub_href(m: re.Match) -> str:
         nonlocal n
         old = m.group(1)
         new = canonicalise(old)
@@ -78,12 +84,27 @@ def rewrite(text: str) -> tuple[str, int]:
             return f'href="{new}"'
         return m.group(0)
 
-    return HREF_RE.sub(sub, text), n
+    def sub_item(m: re.Match) -> str:
+        nonlocal n
+        old = m.group(2)
+        new = canonicalise(old)
+        if new != old:
+            n += 1
+            return f'{m.group(1)}"{new}"'
+        return m.group(0)
+
+    text = HREF_RE.sub(sub_href, text)
+    text = ITEM_RE.sub(sub_item, text)
+    return text, n
 
 
 def strip_hrefs(text: str) -> str:
-    """Everything except href values - the invariant that must not change."""
-    return HREF_RE.sub('href=""', text)
+    """Everything except href and JSON-LD item values.
+
+    This is the invariant: blanking these out of the old and the new text must
+    leave two identical strings, which proves nothing outside a URL moved.
+    """
+    return ITEM_RE.sub(r'\1""', HREF_RE.sub('href=""', text))
 
 
 def targets(include_scripts: bool) -> list[Path]:
@@ -118,9 +139,12 @@ def main() -> int:
         if strip_hrefs(old) != strip_hrefs(new):
             failed.append((rel, "content outside href changed"))
             continue
-        # invariant 2: no link gained or lost
+        # invariant 2: no link or breadcrumb entry gained or lost
         if len(ANY_HREF.findall(old)) != len(ANY_HREF.findall(new)):
             failed.append((rel, "href count changed"))
+            continue
+        if len(ITEM_RE.findall(old)) != len(ITEM_RE.findall(new)):
+            failed.append((rel, "JSON-LD item count changed"))
             continue
 
         changed.append((rel, n))
