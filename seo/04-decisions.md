@@ -41,6 +41,16 @@ A file failing either is skipped and reported, not written.
 
 Dry run over the working tree: **458 files, 1,300 rewrites, 0 failures.**
 
+### One trap, already found
+
+1,300 = 1,293 `<a href>` links **+ 7 `<link rel="canonical">` hrefs** — the same
+seven wrong canonicals from D2. `og:url` is a `<meta content="…">`, not an
+`href`, so the rewrite would fix the canonical and leave `og:url` still pointing
+at `…/index.html`, creating seven *new* mismatches that do not exist today.
+
+So the ordering matters: **fix `build_questions.py` (D2) and regenerate first,
+then run the link rewrite.** I will do it in that order.
+
 ### Real sample diff — `revision-notes/edexcel-theme-1/1-2-2-demand.html`
 
 ```diff
