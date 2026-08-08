@@ -691,6 +691,10 @@ def render_jsonld_quiz(topic):
         "assesses": topic["title"],
         "provider": {
             "@type": "EducationalOrganization",
+            # Same @id on every restatement of the organisation across the
+            # site, so the 354 copies read as one entity rather than 354
+            # lookalikes. See seo/08-structured-data.md.
+            "@id": f"{SITE}/#organization",
             "name": "Economics Academy",
             "url": SITE,
         },

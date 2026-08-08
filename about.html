@@ -48,6 +48,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
       "name": "Eliot King",
       "jobTitle": "A-Level Economics Tutor",
       "url": "https://economicsacademy.co.uk/about.html",
@@ -68,10 +69,30 @@
       },
       "worksFor": {
         "@type": "EducationalOrganization",
+        "@id": "https://economicsacademy.co.uk/#organization",
         "name": "Economics Academy",
         "url": "https://economicsacademy.co.uk"
       }
     }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About"
+          }
+        ]
+      }
     </script>
 
     <!-- Linked here rather than @imported from main.css: an @import inside a

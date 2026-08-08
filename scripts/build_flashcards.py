@@ -490,6 +490,9 @@ def deck_page(deck, cards, topics):
             "name": f"{deck['boardName']} A-Level Economics",
             "provider": {
                 "@type": "EducationalOrganization",
+                # Same @id everywhere the organisation is restated across the
+                # site; see seo/08-structured-data.md.
+                "@id": f"{SITE}/#organization",
                 "name": "Economics Academy",
                 "url": SITE,
             },

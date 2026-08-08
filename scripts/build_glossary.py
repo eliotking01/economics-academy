@@ -760,7 +760,10 @@ def render_board(data, board, groups, rendered_map, inline_map):
         "url": f"{SITE}/revision-notes/glossary/{meta['slug']}/",
         "inLanguage": "en-GB",
         "educationalLevel": "A-Level",
+        # The @id is the same on every restatement of the organisation across
+        # the site; see seo/08-structured-data.md.
         "publisher": {"@type": "EducationalOrganization",
+                      "@id": f"{SITE}/#organization",
                       "name": "Economics Academy", "url": SITE},
         "hasDefinedTerm": [
             {
