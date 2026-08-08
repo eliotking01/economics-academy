@@ -1,31 +1,16 @@
 # What to do in Search Console, in what order
 
-Nothing here is deployed yet. **Step 0 is yours.**
+## Step 0 — Deploy ✅ done
 
----
+Verified live on 2026-08-08:
 
-## Step 0 — Deploy (you, before anything else)
-
-The work is on branch `seo/indexing-fixes`. Nothing has been pushed and `main`
-is untouched, so the live site is still running the old code.
-
-```
-git checkout main
-git merge seo/indexing-fixes
-git push          # main auto-publishes to economicsacademy.co.uk
-```
-
-Then wait for the GitHub Pages build (usually 1–2 minutes) and confirm three
-URLs by eye before touching Search Console:
-
-| URL | Expect |
+| Check | Result |
 | --- | --- |
-| `https://economicsacademy.co.uk/practice-questions/` | canonical points at itself, not `…/index.html` |
-| `https://economicsacademy.co.uk/sitemap.xml` | a `<sitemapindex>` listing 7 sitemaps |
-| `https://economicsacademy.co.uk/sitemaps/pdfs.xml` | 283 PDF URLs |
-
-If the sitemap index 404s, the `sitemaps/` directory did not publish — check it
-is not caught by `_config.yml`'s `exclude` list.
+| `/practice-questions/` canonical | points at itself, no longer `…/index.html` |
+| `/revision-notes/` source | **0** `index.html` links |
+| Edexcel B June 2023 mark-scheme links | **0** remaining |
+| `/sitemap.xml` | `<sitemapindex>`, `application/xml` |
+| all 7 children (`/sitemaps/*.xml`) | `<urlset>`, `application/xml` |
 
 ---
 

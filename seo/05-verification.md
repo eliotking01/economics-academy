@@ -14,7 +14,8 @@ python3 scripts/verify_liquid.py
 python3 scripts/build_sitemap.py --check
 ```
 
-**Nothing is deployed.** 25 commits on `seo/indexing-fixes`; `main` is untouched.
+**Deployed and verified live on 2026-08-08** - see Step 0 of
+`seo/06-gsc-checklist.md` for the live spot-checks.
 
 ---
 
@@ -142,4 +143,5 @@ confirms the new markdown contains no `{%`, so the deploy was never at risk.
 ## Next
 
 `seo/06-gsc-checklist.md`: what to do in Search Console, in what order, and what
-to expect. **Step 0 is the deploy, and it is yours to make.**
+to expect. The deploy is done; the two validations that will pass can be started
+immediately.
