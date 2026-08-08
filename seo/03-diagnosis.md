@@ -156,6 +156,32 @@ No stubs.** (Ground rule 6.)
 
 ---
 
+## D3b — The generators stamp build dates into `sitemap.xml`
+
+**Explains GSC reason:** none directly — but it is why `lastmod` is not
+trustworthy, and it will actively fight the Phase 4 sitemap fix.
+
+Verified by running each generator against a clean tree and diffing:
+
+| Generator | HTML output | Side effects |
+| --- | --- | --- |
+| `scripts/build_questions.py` | **byte-identical** (173 pages) | none |
+| `scripts/build_past_paper_questions.py` | **byte-identical** (90 pages) | rewrites 90 `<lastmod>` entries in `sitemap.xml` to today, and `questions.json`'s `"generated"` field |
+
+That is the mechanism behind Phase 0's observation that 440 of 461 `lastmod`
+values are just three build dates. A page untouched since May is advertised to
+Google as modified today, so Google learns to ignore the field entirely.
+
+**Consequence for Phase 4:** regenerating `sitemap.xml` with git-derived
+`lastmod` is not enough on its own. `build_past_paper_questions.py` must stop
+writing `lastmod` into the sitemap, or the next run of it silently reverts 90
+entries to the build date. Same for `build_questions.py --sitemap`.
+
+**Fixable in code? Yes.** Have the sitemap builder own `lastmod` exclusively and
+remove the date-stamping from the generators.
+
+---
+
 ## D4 — Duplicate title
 
 **Explains GSC reason:** none.
@@ -330,7 +356,7 @@ first crawl of the 419 undiscovered pages.
 | 1 | **Fix the 7 `practice-questions` canonicals** | A | 7 hubs + 173 below | first-crawl risk | XS | `build_questions.py` |
 | 2 | **Rewrite 1,300 links to canonical form** | **B1** | 458 | **44,809** | M | 458 files + 5 sources |
 | 3 | **Fix the 5 link sources** so #2 survives a rebuild | A | — | — | S | 4 generators + `header.html` |
-| 4 | **Regenerate `sitemap.xml` as a sitemap index**, git `lastmod`, + PDF sitemap | A | 461 + 283 | discovery of 340 unseen pages | M | `sitemap.xml`, `sitemaps/*.xml` |
+| 4 | **Regenerate `sitemap.xml` as a sitemap index**, git `lastmod`, + PDF sitemap — and stop the generators stamping build dates into it (D3b) | A | 461 + 283 | discovery of 340 unseen pages | M | `sitemap.xml`, `sitemaps/*.xml`, `build_past_paper_questions.py`, `build_questions.py` |
 | 5 | **Remove 3 dead PDF links** | A | 1 | — | XS | `past-papers/edexcel-b/index.html` |
 | 6 | **Fix the duplicate title** | A | 2 | — | XS | `build_past_paper_questions.py` |
 | 7 | **Add JSON-LD + fix og/twitter titles** | A | 3 | — | XS | 3 hand-written files |
