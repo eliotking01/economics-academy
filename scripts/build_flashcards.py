@@ -509,7 +509,7 @@ def deck_page(deck, cards, topics):
                 The interactive deck needs JavaScript. Without it, the sample
                 cards below still work, and every definition on them comes
                 from our
-                <a href="/revision-notes/{notes_dir}/index.html">{e(deck["themeName"])} revision notes</a>.
+                <a href="/revision-notes/{notes_dir}/">{e(deck["themeName"])} revision notes</a>.
               </p>
             </noscript>
             <div class="fc-samples" data-fc-samples>
@@ -532,10 +532,10 @@ def deck_page(deck, cards, topics):
           </section>
 
           <section class="fc-cta">
-            <a href="/revision-notes/{notes_dir}/index.html" class="button">
+            <a href="/revision-notes/{notes_dir}/" class="button">
               Read the {e(deck["themeName"].split(":")[0])} notes
             </a>
-            <a href="/practice-questions/{notes_dir}/index.html" class="button">
+            <a href="/practice-questions/{notes_dir}/" class="button">
               Try the practice questions
             </a>
           </section>"""
@@ -593,10 +593,10 @@ def hub_page(decks):
           </p>
 {chr(10).join(sections)}
           <section class="fc-cta">
-            <a href="/revision-notes/index.html" class="button">
+            <a href="/revision-notes/" class="button">
               Browse the revision notes
             </a>
-            <a href="/practice-questions/index.html" class="button">
+            <a href="/practice-questions/" class="button">
               Try the practice questions
             </a>
           </section>"""

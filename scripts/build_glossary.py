@@ -66,7 +66,7 @@ BOARDS = {
         "name": "Edexcel A",
         "long": "Edexcel A-Level Economics A",
         "taxonomy": "edexcel",
-        "notesUrl": "/revision-notes/index.html",
+        "notesUrl": "/revision-notes/",
         "intro": (
             "Every key term and formula you need for <strong>Edexcel A-Level "
             "Economics A (9EC0)</strong>, covering Themes 1 to 4. Each "
@@ -84,7 +84,7 @@ BOARDS = {
         "name": "AQA",
         "long": "AQA A-Level Economics",
         "taxonomy": "aqa",
-        "notesUrl": "/revision-notes/index.html",
+        "notesUrl": "/revision-notes/",
         "intro": (
             "Every key term and formula you need for <strong>AQA A-Level "
             "Economics (7136)</strong>, covering microeconomics and "
@@ -667,7 +667,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
 """
 
     other_board = "aqa" if board == "edexcel-a" else "edexcel-a"
-    crumbs = [("Home", "/"), ("Revision Notes", "/revision-notes/index.html"),
+    crumbs = [("Home", "/"), ("Revision Notes", "/revision-notes/"),
               ("Glossary", "/revision-notes/glossary/"),
               (BOARDS[board]["name"], None)]
 
@@ -783,7 +783,7 @@ def render_landing(data):
             sum(1 for t in data["terms"] if b in t["boards"]),
             sum(1 for f in data["formulae"] if b in f["boards"]),
         )
-    crumbs = [("Home", "/"), ("Revision Notes", "/revision-notes/index.html"),
+    crumbs = [("Home", "/"), ("Revision Notes", "/revision-notes/"),
               ("Glossary", None)]
 
     cards = []
@@ -814,7 +814,7 @@ def render_landing(data):
             </p>
             <p class="gl-intro">
               Every definition comes from the
-              <a href="/revision-notes/index.html">revision notes</a> on this
+              <a href="/revision-notes/">revision notes</a> on this
               site, and links back to the topic page it came from.
             </p>
           </header>
@@ -828,13 +828,13 @@ def render_landing(data):
               <h2>While you are revising</h2>
             </header>
             <div class="gl-more-links">
-              <a href="/practice-questions/index.html" class="button"
+              <a href="/practice-questions/" class="button"
                 >Practice Questions</a
               >
               <a href="/past-paper-questions/" class="button"
                 >Search Past Paper Questions</a
               >
-              <a href="/revision-notes/index.html" class="button"
+              <a href="/revision-notes/" class="button"
                 >Revision Notes</a
               >
             </div>
