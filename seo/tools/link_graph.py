@@ -422,23 +422,26 @@ def main() -> int:
     # reciprocity: does a topic page link to any SIBLING topic page, or only
     # up to its hub? Pure hub-and-spoke gives a crawler one path in and one
     # path out and concentrates every signal on the index page.
+    # A past-paper-questions topic page IS ".../<slug>/index.html", so an
+    # earlier version of this check that excluded every index.html counted 0
+    # lateral links there and reported a gap that does not exist. Sibling-ness
+    # is decided by is_topic_page, the same rule the coverage table uses.
     P("\n=== reciprocity: lateral sibling links (static) ===")
     for sec in ("revision-notes", "practice-questions", "past-paper-questions"):
         topics = [p for p in g.pages if Path(p).parts[0] == sec
-                  and Path(p).name != "index.html" or
-                  (Path(p).parts[0] == sec and Path(p).name == "index.html"
-                   and len(Path(p).parts) == 4)]
-        topics = [p for p in topics if board_of(p)]
+                  and is_topic_page(p) and board_of(p)]
         if not topics:
             continue
-        lateral = 0
+        lateral = edges = 0
         for p in topics:
             sibs = {t for t, _ in g.out[p]
-                    if t != p and Path(t).parts[0] == sec and board_of(t) == board_of(p)
-                    and Path(t).name != "index.html"}
+                    if t != p and Path(t).parts[0] == sec
+                    and board_of(t) == board_of(p) and is_topic_page(t)}
             lateral += bool(sibs)
+            edges += len(sibs)
         P(f"   {sec:22} {lateral:3d}/{len(topics):3d} pages link to a sibling"
-          f"  {lateral/len(topics)*100:5.1f}%")
+          f"  {lateral/len(topics)*100:5.1f}%   {edges} edges,"
+          f" mean {edges/len(topics):.1f} per page")
 
     # link-starved pages that already earn impressions - the top priority
     P("\n=== pages earning impressions, ranked by how few inbound links they have ===")

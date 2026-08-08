@@ -53,22 +53,26 @@ Affected, all Edexcel:
   only. No prose touched, no block added or removed.
 - **Cost**: 0 new links. It re-points 15 existing ones.
 
-## 3. Lateral sibling links in the two question sections · **your call**
+## 3. Lateral sibling links · **practice-questions only** · approved
 
-Both are **pure hub-and-spoke: 0/166 and 0/87**. Structurally this is the
-biggest finding, and it applies to exactly the 263 never-crawled pages.
+> **Scope corrected before applying.** I first reported this as affecting both
+> question sections, 0/166 and 0/87. The past-paper-questions figure was a
+> measurement bug — a ppq topic page is `…/<slug>/index.html` and my sibling
+> check excluded every `index.html`. That section already links laterally on
+> **100% of pages, averaging 9.2 sibling links each**, because it carries a
+> topic list in the page.
+>
+> **past-paper-questions therefore gets nothing.** Adding to it would duplicate
+> what is there and push well past a sensible link count. The change is 166
+> pages, not 253.
 
-A "related topics" block of 3–4 links to sibling topics in the same unit, same
-board, would give each page a lateral path and let unit structure express
-itself. `revision-notes` already does this at 53.6%.
+practice-questions is genuinely **0/166**. A "related topics" block of 3–4 links
+to sibling topics in the same unit, same board, gives each page a lateral path
+and lets the unit structure express itself. `revision-notes` does this at 53.6%
+and `past-paper-questions` at 100%; practice-questions is the outlier.
 
-**Why it is your call and not a recommendation:** it adds 3–4 links to 253
-generated pages, it is the largest change proposed anywhere in this pass, and
-its benefit is a genuine but unmeasurable bet on how Google reads the section.
-The cheaper options 1, 2 and 4 do not depend on it.
-
-If yes, I would take siblings from the same unit in the topic map — never by
-code proximity, since `1.2.1` and `1.2.2` are the same unit on both boards and
+Siblings come from the same `unit` in the topic map — **never by code
+proximity**, since `1.2.1` and `1.2.2` are the same unit on *both* boards and
 that is exactly how a cross-board link would slip in.
 
 ## 4. The four link-starved pages that already earn impressions · **recommend doing**

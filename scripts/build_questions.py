@@ -709,7 +709,7 @@ def jsonld_block(data, indent):
     )
 
 
-def render_page(topic):
+def render_page(topic, siblings=(), ppq=None):
     url = SITE + page_url(topic)
     board_label = BOARD_LABELS[topic["board"]]
     papers_href, papers_label = PAST_PAPERS[topic["board"]]
@@ -791,7 +791,7 @@ def render_page(topic):
               </div>
             </div>
 
-            <div class="quiz-cta">
+{render_related(topic, siblings, ppq)}            <div class="quiz-cta">
               <p>Ready to go further?</p>
               <a href="{notes}" class="button alt"
                 >Revision Notes: {topic['shortTitle']}</a
@@ -939,6 +939,116 @@ def breadcrumb_jsonld(trail):
 def unit_of(spec):
     """1.3.2 -> 1.3"""
     return ".".join(spec.split(".")[:2])
+
+
+PPQ_INDEX = ROOT / "past-paper-questions" / "questions.json"
+
+
+def load_pastpaper_topics():
+    """practice-question page URL -> that topic's past-paper-questions record.
+
+    Joined on questionsUrl, which is a full site path, so the match is exact
+    and CANNOT cross an exam board. No topic code is ever compared: 37 codes
+    exist on both boards and mean different topics - 1.1.1 is "Economics as a
+    Social Science" on Edexcel and "Economic Methodology" on AQA. Matching on
+    one would resolve to a real page, 404 nothing, and quietly send students to
+    the wrong board.
+
+    Absent index -> empty map -> no past-paper link is emitted anywhere. The
+    build still succeeds, because this section is additive.
+    """
+    if not PPQ_INDEX.is_file():
+        return {}
+    data = json.loads(PPQ_INDEX.read_text(encoding="utf-8"))
+    out = {}
+    for slug, rec in data.get("topics", {}).items():
+        if rec.get("questionsUrl"):
+            out[rec["questionsUrl"]] = dict(rec, slug=slug)
+    return out
+
+
+def siblings_for(topic, by_unit, limit=4):
+    """Up to `limit` other topics from the same unit on the SAME board.
+
+    Keyed on (boardDir, unit), and boardDir carries the board, so a cross-board
+    sibling is not representable. Never keyed on the unit code alone - "1.2" is
+    a real unit on both boards.
+
+    The window is centred on this topic so the list reads as neighbouring
+    specification points rather than always the first four in the unit.
+    """
+    peers = by_unit.get((topic["boardDir"], unit_of(topic["spec"])), [])
+    if len(peers) <= 1:
+        return []
+    peers = sorted(peers, key=lambda t: spec_key(t["spec"]))
+    i = next(n for n, t in enumerate(peers) if t["slug"] == topic["slug"])
+    lo, hi = i, i + 1
+    picked = []
+    while len(picked) < limit and (lo > 0 or hi < len(peers)):
+        if lo > 0:
+            lo -= 1
+            picked.append(peers[lo])
+        if len(picked) < limit and hi < len(peers):
+            picked.append(peers[hi])
+            hi += 1
+    return sorted(picked, key=lambda t: spec_key(t["spec"]))[:limit]
+
+
+def render_related(topic, siblings, ppq):
+    """The 'keep going' block: past-paper questions, then sibling topics.
+
+    Added because practice-questions was the one section with no lateral links
+    at all - 0 of 166 pages linked to a sibling, against 53.6% in the notes and
+    100% in past-paper-questions. See seo/07-link-graph.md.
+
+    The past-paper anchor is deliberately a descriptive sentence rather than
+    "{spec} {shortTitle}": the past-paper index pages already point at these
+    topics with that exact string, up to 68 times each, and repeating it here
+    would deepen an anchor-text monoculture rather than add anything.
+    """
+    if not ppq and not siblings:
+        return ""
+
+    parts = ['            <nav class="quiz-related" aria-labelledby="quiz-related-heading">',
+             '              <h2 id="quiz-related-heading">Keep going on this topic</h2>']
+
+    if ppq:
+        if ppq["hasPage"]:
+            href = ppq["url"]
+        else:
+            href = f"/past-paper-questions/?board={ppq['board']}&amp;topic={ppq['slug']}"
+        n = ppq["count"]
+        noun = "question" if n == 1 else "questions"
+        parts += [
+            '              <p class="quiz-related-papers">',
+            f'                <a href="{href}"',
+            f'                  >{n} real exam {noun} on {ppq["shortTitle"]}</a',
+            "                >",
+            "                from the past papers, each linked to the page of the mark",
+            "                scheme where its answer begins.",
+            "              </p>",
+        ]
+
+    if siblings:
+        # UNITS is the same grouping the board index pages print, lifted from
+        # the notes, so the heading here matches what the student saw there.
+        unit = UNITS.get((topic["boardDir"], unit_of(topic["spec"])))
+        lead = (f"Other topics in {unit[0]}:" if unit
+                else "Other topics in this unit:")
+        parts += [f'              <p class="quiz-related-lead">{lead}</p>',
+                  '              <ul class="quiz-related-list">']
+        for s in siblings:
+            parts += [
+                "                <li>",
+                f'                  <a href="{page_url(s)}"',
+                f'                    >{s["spec"]} {s["shortTitle"]}</a',
+                "                  >",
+                "                </li>",
+            ]
+        parts.append("              </ul>")
+
+    parts.append("            </nav>")
+    return "\n".join(parts) + "\n\n"
 
 
 def render_cta_strip(text, actions):
@@ -1319,10 +1429,27 @@ def main(argv=None):
         print(f"OK - {len(topics)} set(s), {total} questions, nothing written")
         return 0
 
+    # Siblings are built from EVERY set on disk, not from `topics`, so a
+    # partial run (`build_questions.py aqa-a2-micro/1-3-2.json`) still emits
+    # the same related-topics list a full run would. Without this a partial
+    # rebuild would silently drop links to sets it was not asked to write.
+    all_topics, _ = load(sorted(DATA_DIR.glob("*/*.json")))
+    by_unit = {}
+    for t in all_topics:
+        by_unit.setdefault((t["boardDir"], unit_of(t["spec"])), []).append(t)
+    pastpapers = load_pastpaper_topics()
+
     for topic in topics:
         out = OUT_DIR / topic["boardDir"] / f"{topic['slug']}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(render_page(topic), encoding="utf-8")
+        out.write_text(
+            render_page(
+                topic,
+                siblings_for(topic, by_unit),
+                pastpapers.get(page_url(topic)),
+            ),
+            encoding="utf-8",
+        )
         print(f"wrote {out.relative_to(ROOT)} ({len(topic['questions'])} questions)")
 
     # The hub and the board indexes list everything, so they can only be

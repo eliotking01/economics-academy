@@ -93,24 +93,31 @@ practice → ppq, which is **zero**.
 
 ---
 
-## Reciprocity: both question sections are pure hub-and-spoke
+## Reciprocity: practice-questions is pure hub-and-spoke
 
 Pages linking to **any sibling topic page in the same section and same board**:
 
-| Section | Lateral links |
-| --- | ---: |
-| revision-notes | 90/168 **53.6%** |
-| **practice-questions** | **0/166 — 0.0%** |
-| **past-paper-questions** | **0/87 — 0.0%** |
+| Section | Pages with ≥1 sibling link | Sibling edges | Mean per page |
+| --- | ---: | ---: | ---: |
+| revision-notes | 90/168 **53.6%** | 293 | 1.7 |
+| **practice-questions** | **0/166 — 0.0%** | **0** | **0.0** |
+| past-paper-questions | 87/87 **100.0%** | 801 | 9.2 |
 
-**This is the most consequential structural finding in the pass.** A crawler
-arriving at a practice-question page has exactly one way onward that is not the
-hub. Every signal funnels back to the board index, all 166 topic pages sit at
-the same depth with the same 2 inbound links, and nothing in the structure says
-any one of them matters more than another.
+> **Corrected.** An earlier version of this table reported past-paper-questions
+> at **0/87**. That was an artefact: the check excluded every `index.html`, and
+> a ppq topic page *is* `…/<slug>/index.html`, so every sibling was filtered
+> out. The section in fact links laterally on **every** page, averaging 9.2
+> sibling links — it already carries a full topic list in the page. The metric
+> in `link_graph.py` now uses the same `is_topic_page` rule as the coverage
+> table, so the two cannot disagree again.
 
-It applies to precisely the 263 pages Google has never crawled, and it is the
-thing most likely to get them treated as an undifferentiated block.
+So the gap is **practice-questions alone**. A crawler arriving at a
+practice-question page has exactly one way onward that is not the hub. All 166
+topic pages sit at the same depth with the same 2 inbound links, and nothing in
+the structure says any one of them matters more than another.
+
+That is 166 of the never-crawled pages, not 263. past-paper-questions needs
+nothing here and should not be touched.
 
 ---
 
