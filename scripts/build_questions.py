@@ -18,8 +18,13 @@ Usage:
 
 Exit status is non-zero if any set fails validation.
 
-Board index pages and the hub are built by a later phase; this script
-currently emits topic pages and the sitemap block.
+This script emits the topic pages, the six board index pages, the hub, and
+the sitemap block.
+
+URLs are written in canonical form: a directory page is linked and
+canonicalised as /practice-questions/<board>/, never .../index.html. Both
+forms return 200 on GitHub Pages, so linking the index.html variant creates a
+duplicate URL that competes with the canonical one.
 """
 
 from __future__ import annotations
@@ -53,8 +58,8 @@ SKILL_LABELS = {
 }
 
 PAST_PAPERS = {
-    "aqa": ("/past-papers/aqa/index.html", "AQA Past Papers"),
-    "edexcel": ("/past-papers/edexcel/index.html", "Edexcel Past Papers"),
+    "aqa": ("/past-papers/aqa/", "AQA Past Papers"),
+    "edexcel": ("/past-papers/edexcel/", "Edexcel Past Papers"),
 }
 BOARD_LABELS = {"aqa": "AQA", "edexcel": "Edexcel"}
 
@@ -726,9 +731,9 @@ def render_page(topic):
           <nav class="breadcrumb">
             <a href="/">Home</a>
             <span class="separator">&rsaquo;</span>
-            <a href="/practice-questions/index.html">Practice Questions</a>
+            <a href="/practice-questions/">Practice Questions</a>
             <span class="separator">&rsaquo;</span>
-            <a href="/practice-questions/{topic['boardDir']}/index.html"
+            <a href="/practice-questions/{topic['boardDir']}/"
               >{topic['boardName']}</a
             >
             <span class="separator">&rsaquo;</span>
@@ -807,10 +812,10 @@ def render_page(topic):
         breadcrumb=breadcrumb_jsonld(
             [
                 ("Home", "/"),
-                ("Practice Questions", "/practice-questions/index.html"),
+                ("Practice Questions", "/practice-questions/"),
                 (
                     topic["boardName"],
-                    f"/practice-questions/{topic['boardDir']}/index.html",
+                    f"/practice-questions/{topic['boardDir']}/",
                 ),
                 (f"{topic['spec']} {topic['title']}", None),
             ]
@@ -994,7 +999,7 @@ def render_board_index(board_dir, topics):
     papers_href, papers_label = PAST_PAPERS[board]
     count = sum(len(t["questions"]) for t in topics)
     topic_word = "topic" if len(topics) == 1 else "topics"
-    url = f"{SITE}/practice-questions/{board_dir}/index.html"
+    url = f"{SITE}/practice-questions/{board_dir}/"
 
     title = f"{name} Practice Questions — {label} A-Level Economics | Economics Academy"
     desc = (
@@ -1015,7 +1020,7 @@ def render_board_index(board_dir, topics):
           <nav class="breadcrumb">
             <a href="/">Home</a>
             <span class="separator">&rsaquo;</span>
-            <a href="/practice-questions/index.html">Practice Questions</a>
+            <a href="/practice-questions/">Practice Questions</a>
             <span class="separator">&rsaquo;</span>
             <span>{name}</span>
           </nav>
@@ -1046,7 +1051,7 @@ def render_board_index(board_dir, topics):
     "<strong>Getting these wrong?</strong> Work through the topic with an expert "
     "tutor, or send an essay for detailed examiner-style marking.",
     [
-        (f"/revision-notes/{board_dir}/index.html", " alt", "Read the Notes"),
+        (f"/revision-notes/{board_dir}/", " alt", "Read the Notes"),
         (papers_href, " alt", papers_label),
         ("/tutoring.html", "", "Book a Free Intro Call"),
     ],
@@ -1078,7 +1083,7 @@ def render_board_index(board_dir, topics):
         breadcrumb=breadcrumb_jsonld(
             [
                 ("Home", "/"),
-                ("Practice Questions", "/practice-questions/index.html"),
+                ("Practice Questions", "/practice-questions/"),
                 (name, None),
             ]
         ),
@@ -1092,7 +1097,7 @@ def render_hub(by_board):
     total = sum(len(t["questions"]) for ts in by_board.values() for t in ts)
     topic_count = sum(len(ts) for ts in by_board.values())
     topic_word = "topic" if topic_count == 1 else "topics"
-    url = f"{SITE}/practice-questions/index.html"
+    url = f"{SITE}/practice-questions/"
 
     title = (
         "A-Level Economics Practice Questions — AQA and Edexcel "
@@ -1117,7 +1122,7 @@ def render_hub(by_board):
                 topics_n = len(by_board[d])
                 buttons.append(
                     f"""                <a
-                  href="/practice-questions/{d}/index.html"
+                  href="/practice-questions/{d}/"
                   class="button {cls}pq-board-button"
                 >
                   {HUB_LABELS[d]}
@@ -1169,7 +1174,7 @@ def render_hub(by_board):
     "Send yours for examiner-style marking, or work through the tricky topics "
     "with a specialist tutor.",
     [
-        ("/revision-notes/index.html", " alt", "Free Revision Notes"),
+        ("/revision-notes/", " alt", "Free Revision Notes"),
         ("/marking.html", " alt", "Get Your Essays Marked"),
         ("/tutoring.html", "", "Book a Free Intro Call"),
     ],
