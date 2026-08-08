@@ -11,18 +11,18 @@ fetched at runtime by js/components/inject-templates.js, so a link crawl that
 does not execute JavaScript sees only the links written into each page's static
 HTML. Comparing the two sets shows what a non-rendering crawler can reach.
 
-Then a VARIANT PROBE per page records which of /path/, /path/index.html,
-/path.html, /path, http:// and www. return 200 / 301 / 404. That establishes the
-real duplication surface on GitHub Pages rather than assuming it.
+The URL-variant probe lives in seo/tools/probe_variants.py, not here: urllib
+opens a fresh TCP+TLS connection per request, which costs ~13s per page across
+~2,300 probes. That tool uses pooled keep-alive connections and does the same
+work in a few minutes over 3 connections instead of 2,300.
 
 Politeness: ~2 requests/second, custom User-Agent, retry with backoff on 429 and
 5xx. Stdlib only, matching the repo's existing scripts/verify_*.py convention.
 
 Usage:
-    python3 seo/tools/crawl.py                    # full: crawl + inventory + variants
-    python3 seo/tools/crawl.py --no-variants      # skip the variant probe
+    python3 seo/tools/crawl.py                    # link crawl + inventory fetch
     python3 seo/tools/crawl.py --limit 25         # smoke test
-    python3 seo/tools/crawl.py --out seo/01-crawl.csv
+    python3 seo/tools/probe_variants.py           # then the variant + PDF probe
 """
 
 from __future__ import annotations
@@ -306,43 +306,10 @@ def link_crawl(seeds: list[str], limit: int | None) -> tuple[dict, dict]:
     return seen, dict(inbound)
 
 
-VARIANT_SUFFIXES = ("dir", "dir_index", "html", "extensionless", "http", "www")
-
-
-def variants_for(page_path: str) -> dict[str, str]:
-    """The URL variants worth probing for one repo path."""
-    if page_path == "index.html":
-        base = "/"
-        return {"dir": f"{SITE}/", "dir_index": f"{SITE}/index.html",
-                "http": "http://economicsacademy.co.uk/",
-                "www": "https://www.economicsacademy.co.uk/"}
-    if page_path.endswith("/index.html"):
-        d = "/" + page_path[: -len("index.html")]
-        return {
-            "dir": f"{SITE}{d}",
-            "dir_index": f"{SITE}{d}index.html",
-            "extensionless": f"{SITE}{d.rstrip('/')}",
-            "http": f"http://economicsacademy.co.uk{d}",
-            "www": f"https://www.economicsacademy.co.uk{d}",
-        }
-    p = "/" + page_path
-    return {
-        "html": f"{SITE}{p}",
-        "extensionless": f"{SITE}{p[:-len('.html')]}",
-        "dir_index": f"{SITE}{p[:-len('.html')]}/index.html",
-        "http": f"http://economicsacademy.co.uk{p}",
-        "www": f"https://www.economicsacademy.co.uk{p}",
-    }
-
-
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="seo/01-crawl.csv")
-    ap.add_argument("--variants-out", default="seo/01-variants.csv")
     ap.add_argument("--json-out", default="seo/01-crawl.json")
-    ap.add_argument("--pdfs-out", default="seo/01-pdfs.csv")
-    ap.add_argument("--no-variants", action="store_true")
-    ap.add_argument("--no-pdfs", action="store_true")
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
 
@@ -402,71 +369,9 @@ def main() -> int:
         w.writerows(rows)
     print(f"wrote {out} ({len(rows)} rows)", file=sys.stderr, flush=True)
 
-    # --------------------------------------------------------------- variants
-    vrows = []
-    if not args.no_variants:
-        targets = pages[: args.limit] if args.limit else pages
-        print(f"== pass 3: variant probe ({len(targets)} pages)", file=sys.stderr, flush=True)
-        for i, page in enumerate(sorted(targets), 1):
-            vs = variants_for(page)
-            row = {"page": page, "canonical_url": url_for(page)}
-            for kind in VARIANT_SUFFIXES:
-                u = vs.get(kind)
-                if not u:
-                    row[f"{kind}_url"] = ""
-                    row[f"{kind}_status"] = ""
-                    continue
-                r = fetch(u, method="HEAD", follow=False)
-                if r["status"] == 405 or r["status"] == 0:
-                    r = fetch(u, follow=False)
-                row[f"{kind}_url"] = u
-                row[f"{kind}_status"] = r["status"]
-                if r["chain"]:
-                    row[f"{kind}_status"] = f"{r['status']}->{r['chain'][-1][2]}"
-            vrows.append(row)
-            print(f"  [var {i:>4}/{len(targets)}] {page}", file=sys.stderr, flush=True)
-
-        vout = REPO / args.variants_out
-        with vout.open("w", newline="", encoding="utf-8") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(vrows[0].keys()))
-            w.writeheader()
-            w.writerows(vrows)
-        print(f"wrote {vout} ({len(vrows)} rows)", file=sys.stderr, flush=True)
-
-    # ------------------------------------------------------------------- PDFs
-    # Phase 4 puts these in a sitemap, and a sitemap may only contain URLs that
-    # return 200, so every one is checked rather than sampled.
-    prows = []
-    if not args.no_pdfs:
-        pdfs = [p for p in inv["pdf_paths"]]
-        if args.limit:
-            pdfs = pdfs[: args.limit]
-        print(f"== pass 4: PDF status ({len(pdfs)} files)", file=sys.stderr, flush=True)
-        for i, p in enumerate(sorted(pdfs), 1):
-            u = f"{SITE}/{p}"
-            r = fetch(u, method="HEAD", follow=False)
-            if r["status"] in (0, 405):
-                r = fetch(u, follow=False)
-            prows.append({
-                "path": p, "url": u, "status": r["status"],
-                "content_type": r["headers"].get("Content-Type", ""),
-                "content_length": r["headers"].get("Content-Length", ""),
-                "error": r["error"],
-            })
-            print(f"  [pdf {i:>4}/{len(pdfs)}] {r['status']} {p}",
-                  file=sys.stderr, flush=True)
-        pout = REPO / args.pdfs_out
-        with pout.open("w", newline="", encoding="utf-8") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(prows[0].keys()))
-            w.writeheader()
-            w.writerows(prows)
-        print(f"wrote {pout} ({len(prows)} rows)", file=sys.stderr, flush=True)
-
     jout = REPO / args.json_out
     jout.write_text(json.dumps({
         "crawl": rows,
-        "variants": vrows,
-        "pdfs": prows,
         "link_crawl_reached": sorted(reached_by_link_crawl),
         "inventory_only": sorted(todo),
         "inbound": inbound,
