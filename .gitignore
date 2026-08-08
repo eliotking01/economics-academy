@@ -12,3 +12,10 @@ Thumbs.db
 
 # Python virtualenv for scripts/ (see requirements.txt)
 .venv/
+
+# Finder / iCloud duplicate copies ("file 2.py", "file 3.csv"). 33 of these
+# accumulated during the SEO work and five reached git, including a
+# js/components/quiz 2.js that was being served publicly. Nothing in this repo
+# legitimately ends in " <number>.<ext>".
+* [0-9].*
+* [0-9][0-9].*
