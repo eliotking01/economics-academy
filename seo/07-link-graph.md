@@ -235,3 +235,55 @@ Notes ↔ practice additionally share **byte-identical filenames**, 166/166.
 `seo/07b-link-decisions.md` holds what needs your decision. Nothing landed below
 high confidence, so that file is about **what to link**, not about resolving
 ambiguity.
+
+---
+
+## After A2 — what the approved changes did
+
+Items 1, 2, 3 and 4a applied. Re-run `python3 seo/tools/link_graph.py`.
+
+| Measure | Before | After |
+| --- | ---: | ---: |
+| pages with < 3 inbound links (static) | 94 | **8** |
+| pages with < 3 inbound links (rendered) | 89 | **3** |
+| practice → past-paper-questions (any) | 0/166 | **151/166** |
+| practice → past-paper-questions (topic page) | 0/166 | **81/166** |
+| practice-questions lateral sibling links | 0/166 | **165/166**, mean 3.3 |
+| notes → ppq topic pages, Edexcel | 32/87 36.8% | **45/87 51.7%** |
+| ppq topic pages with a direct notes link | 66/87 | **79/87** |
+| `microeconomics-diagrams.html` inbound | 1 | **27** |
+| `macroeconomics-diagrams.html` inbound | 1 | **22** |
+| **cross-board links introduced** | — | **0** |
+
+Unchanged, by design: max depth (3 rendered / 4 static), 0 orphans, and
+past-paper-questions' own lateral linking, which was already at 100%.
+
+### The 8 pages still under 3 static inbound links
+
+| Page | static | rendered |
+| --- | ---: | ---: |
+| `past-papers/edexcel-b/` | 1 | 463 |
+| `past-papers/ocr/` | 1 | 463 |
+| `privacy.html` | 1 | 463 |
+| `faq.html` | 2 | 464 |
+| `revision-notes/macro-application/` | 2 | 464 |
+| `practice-questions/edexcel-theme-3/3-2-1-business-objectives.html` | 2 | 2 |
+| `revision-notes/glossary/aqa/` | 2 | 2 |
+| `revision-notes/glossary/edexcel-a/` | 2 | 2 |
+
+The first five are well linked once the header renders, and are only low in the
+static graph. The last three are genuinely low in **both**:
+
+- **`3-2-1-business-objectives`** is the only topic alone in its unit, so it has
+  no siblings to link. Not a defect.
+- **The two glossary board pages** are reached from the glossary hub and each
+  other. Left alone deliberately — the board switcher between them is the site's
+  only intentional cross-board link, and the 566 KB pages do not need more
+  crawl priority.
+
+### Cross-board assertion
+
+**2 cross-board links exist sitewide, both pre-existing and both intentional** —
+the glossary's own board switcher (`Switch to the Edexcel A glossary` and its
+mirror). Verified present at the pre-pass commit `0875e28`. **This pass
+introduced none**, and 0 AQA pages link to either Edexcel-scoped diagram gallery.
