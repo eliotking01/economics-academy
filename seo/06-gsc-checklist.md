@@ -96,6 +96,9 @@ fade, not to be refreshed.
 
 ## Step 3 — Do nothing for two weeks
 
+(Step 4's two validations are the exception - start them now, they run in the
+background and need nothing further from you.)
+
 This is the hardest step and the most important. Re-submitting, re-requesting or
 changing things again during consolidation makes the signal noisier, not
 stronger.
@@ -111,15 +114,39 @@ stronger.
 - **Total indexed pages may briefly fall** as duplicates are dropped before the
   461 canonical pages are all discovered.
 
-## Step 4 — Validate the fixed issues (day 14)
+## Step 4 — Validate, but only the two issues that will pass
 
-**Indexing → Pages.** For each of these, click the issue then **Validate Fix**:
+A **failed** validation is worse than never starting one: it resets, and you run
+the whole ~2-week cycle again. So only validate what has actually been fixed at
+the URL Google will re-crawl.
 
-| Issue | Rows | What validation should find |
-| --- | ---: | --- |
-| Excluded by 'noindex' tag | 26 | **All pass.** Already fixed before this work — those pages have carried no robots meta since 2026-07-30. Nothing to do but let Google re-check. |
-| Not found (404) | 10 | **1 passes** (the Edexcel B mark scheme, now unlinked). **6 stay 404 and should** — `/revision-notes/aqa-as-micro/*` is a deleted section. Mark those as intended; do not create stubs. |
-| Alternate page with proper canonical tag | 9 | Do **not** validate this one yet. It will get worse before it gets better (see Step 3). Leave it until day 45. |
+**Indexing → Pages**, click the issue, then **Validate Fix**:
+
+| Issue | Rows | When | Why |
+| --- | ---: | --- | --- |
+| **Excluded by 'noindex' tag** | 26 | **Now** | All 26 checked live: HTTP 200, no robots meta. Fixed by commit `203f6bd` on 2026-07-30, so this does not depend on the recent deploy at all. Will pass. |
+| **Redirect error** | 1 | **Now** | `/past-paper-questions` returns a clean HTTP/2 301 to `/past-paper-questions/` — no chain, no protocol downgrade. Will pass. |
+| **Not found (404)** | 10 | **Never** | See below. |
+| **Alternate page with proper canonical tag** | 9 | **~day 45** | It will climb before it falls (Step 3). Validating now would fail. |
+
+### Do not validate "Not found (404)"
+
+Checked live: **all 10 still return 404, and correctly so.** Nine are
+`/revision-notes/aqa-as-micro/*` and `aqa-a-micro/*` — a deleted section — and
+the tenth is an Edexcel B mark scheme that does not exist.
+
+Removing the link to that PDF was still the right fix, because it stops Google
+rediscovering the URL. But **GSC validates the URL, not the links pointing at
+it**, so the response code is unchanged and validation would fail.
+
+Leave this issue alone. Google drops persistent 404s from the report by itself
+over a few months. Do not create stub pages for correctly-deleted URLs.
+
+### Nothing to validate
+
+The 76 PDF rows (`crawled-currently-not-indexed`, `duplicate-without-user-selected-canonical`)
+and the 7 HTML pages under "Crawled – currently not indexed" have no technical
+defect to re-check. See group C of `seo/03-diagnosis.md`.
 
 ## Step 5 — First real read (day 30)
 
