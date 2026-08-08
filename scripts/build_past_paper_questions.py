@@ -582,6 +582,16 @@ def page_shell(title, desc, path, crumbs, body):
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so
+         neither request could start until main.css had parsed. The order below
+         matches the old @import order, so the cascade is unchanged.
+         See seo/09-web-vitals-baseline.md. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+    />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/past-paper-questions.css" />
   </head>
