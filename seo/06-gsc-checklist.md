@@ -33,23 +33,39 @@ is not caught by `_config.yml`'s `exclude` list.
 
 **Indexing → Sitemaps.**
 
-1. Submit `sitemap.xml`. It is now an index, so Google will discover all seven
-   children from it. You do **not** need to submit them individually — but do it
-   anyway, because Search Console then reports coverage per sitemap, which is
-   the whole reason for splitting them:
-
-   ```
-   sitemaps/core.xml
-   sitemaps/revision-notes.xml
-   sitemaps/practice-questions.xml
-   sitemaps/past-paper-questions.xml
-   sitemaps/past-papers.xml
-   sitemaps/flashcards.xml
-   sitemaps/pdfs.xml
-   ```
+1. **Submit `sitemap.xml`, and nothing else.** It is now an index. Google reads
+   it, discovers all seven children, and lists each child as its own row in the
+   Sitemaps report with its own discovered and indexed counts. **That is where
+   the per-section visibility comes from — the index structure, not from
+   submitting each child by hand.** Submitting them individually is optional and
+   changes nothing about the reporting.
 
 2. Leave the previously submitted `sitemap.xml` entry in place — it is the same
    URL, now serving an index. Nothing to remove.
+
+### If you do submit a child and get "Invalid sitemap address"
+
+The box already contains your property prefix as greyed-out text, so you type
+only the remainder, **with no leading slash**:
+
+```
+sitemaps/core.xml          correct
+/sitemaps/core.xml         becomes https://economicsacademy.co.uk//sitemaps/core.xml
+```
+
+That doubled slash is the usual cause of that message.
+
+If the box shows *no* greyed-out prefix, the property is a **Domain** property
+(verified by DNS) rather than a URL-prefix one, and there is nothing to append
+to — paste the full URL instead:
+
+```
+https://economicsacademy.co.uk/sitemaps/core.xml
+```
+
+Confirmed live and serving `application/xml`: `/sitemap.xml` returns a
+`<sitemapindex>`, and each of the seven children returns a `<urlset>`. A
+rejection at this point is an input-format problem, not a hosting one.
 
 **Expect:** status "Success" within a few hours to a few days, with a discovered
 URL count. The count Google reports may lag the real 744 for a week or more;
