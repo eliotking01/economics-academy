@@ -66,7 +66,15 @@ exclude:
 # Deliberately NOT excluded, so the change is a decision rather than a habit:
 #   templates/                 fetched at runtime by inject-templates.js
 #   past-paper-questions/      questions.json is fetched by question-search.js
-#   LICENSE.txt, old-logos-archive/, webfonts/, logo/, images/
+#   LICENSE.txt, old-logos-archive/, webfonts/, images/
+#   logo/                      UNDECIDED, kept published for now. The current
+#                              brand kit - 8 files - and NOTHING on the site
+#                              references any of them: the header is text, not
+#                              an image. So it is served purely so the URLs
+#                              exist. That may be worth keeping (a stable link
+#                              to hand someone) or may be an oversight; Eliot
+#                              was not sure on 2026-08-09 and chose to leave it.
+#                              Revisit rather than assume it is deliberate.
 #
 # specificiations/ used to be listed here, as the separate call this file said
 # it was. Eliot made that call on 2026-08-08: the two exam-board specification
