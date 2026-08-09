@@ -305,6 +305,40 @@ def write_curation(rows) -> int:
     return 0
 
 
+def unclassified_exit(rows) -> int:
+    """Non-zero while anything sits in the `unknown` bucket.
+
+    This script used to exit 0 while reporting "2 Unclassified - needs a look",
+    writing them into _working/glossary/capitalisation-report.md, which is
+    unpublished and in nobody's path. They sat there from the day the glossary
+    was built. A check that identifies work and then reports success cannot
+    cause the work to happen - it is a queue nobody is subscribed to.
+
+    Deliberately NOT given a suppression list, unlike
+    verify_published_surface.py's KNOWN. There, the exception is a decision
+    already taken with a scheduled fix. Here, the whole finding is that
+    acknowledging these without acting on them is the failure mode, so the only
+    way to make this exit 0 is to classify them. PH10-063.
+    """
+    unknown = [r for r in rows if r["bucket"] == "unknown"]
+    if not unknown:
+        return 0
+    # stdout is block-buffered when piped, stderr is not: without this the
+    # failure lands above the bucket counts it refers to.
+    sys.stdout.flush()
+    print(f"\nFAIL: {len(unknown)} definition(s) are unclassified and have been "
+          f"waiting since the glossary was built:", file=sys.stderr)
+    for r in sorted(unknown, key=lambda r: (r["id"], r["board"])):
+        print(f"  - {r['id']} ({r['board']} {r['spec']}): {r['text'][:90]}",
+              file=sys.stderr)
+    print("\nClassify each one, then re-run. The routes, in the order the "
+          "glossary's conventions prefer them: fix the wording in the notes page "
+          "and re-extract; exclude the source in curation.json and add a "
+          "`rewrite` rule; or author a definition in authored.json. Logged as G4 "
+          "in REVIEW-NOTES.md. PH10-063.", file=sys.stderr)
+    return 1
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true",
@@ -328,7 +362,7 @@ def main() -> int:
         for key, title, _ in BUCKETS:
             if counts.get(key):
                 print(f"  {counts[key]:>4}  {title}")
-        return 0
+        return unclassified_exit(rows)
 
     # --check: everything must be accounted for. A record is accounted for when
     # it is on the approved capitalisation list, or on the list of known
@@ -352,7 +386,11 @@ def main() -> int:
         print("\nRun without --check to regenerate the report.", file=sys.stderr)
         return 1
     print(f"capitalisation: {len(rows)} lower-case start(s), all accounted for")
-    return 0
+    # "Accounted for" above means listed in curation.json. That is a different
+    # question from "classified": the two Regulation definitions ARE listed, and
+    # the classifier still cannot tell what to do with them because their
+    # leading word matches neither list. Both have to hold. PH10-063.
+    return unclassified_exit(rows)
 
 
 if __name__ == "__main__":

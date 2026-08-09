@@ -205,8 +205,12 @@ def build(taxonomy, tags, papers):
     counts = collections.Counter(s for q in questions for s in q["topics"])
     gated = sorted(s for s, n in counts.items() if n >= GATE)
 
+    # No build-date stamp. It made every rebuild produce a diff even when
+    # nothing about the data had changed, so "re-run and check git diff is
+    # empty" - the only cheap way to tell a real change from a no-op - did not
+    # work. Nothing ever read the field. Same defect be3ec19 fixed for the
+    # sitemap's <lastmod>; the JSON payloads were missed. PH09b-025.
     index = {
-        "generated": datetime.date.today().isoformat(),
         "count": len(questions),
         "gate": GATE,
         "boards": [
@@ -1178,7 +1182,11 @@ def prettify(paths):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true", help="validate, write nothing")
+    ap.add_argument(
+        "--check",
+        action="store_true",
+        help="validate the INPUTS and write nothing. This does not check that committed output is current - use scripts/verify_generated.py for that",
+    )
     args = ap.parse_args()
 
     taxonomy, tags, papers = load()

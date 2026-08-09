@@ -1402,7 +1402,11 @@ def load(paths):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("sources", nargs="*", help="paths relative to questions-data/")
-    parser.add_argument("--check", action="store_true", help="validate, write nothing")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="validate the INPUTS and write nothing. This does not check that committed output is current - use scripts/verify_generated.py for that",
+    )
     parser.add_argument("--sitemap", action="store_true", help="refresh sitemap.xml")
     args = parser.parse_args(argv)
 

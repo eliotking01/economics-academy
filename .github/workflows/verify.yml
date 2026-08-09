@@ -1,0 +1,130 @@
+# Verification only. This workflow NEVER builds and NEVER deploys.
+#
+# That is not a style preference, it is the entire basis on which it was
+# approved (DECISIONS.md D18, answering Q19). GitHub Pages continues to serve
+# from the `main` branch with its own default Jekyll build, and _config.yml's
+# `exclude` list remains the only thing deciding what is published. A workflow
+# that only reads cannot break the site; the worst case is a red tick.
+#
+# DO NOT add a build step, a deploy step, or `actions/deploy-pages`. Switching
+# Pages to Actions-based deployment disables _config.yml's `exclude`, which is
+# the only thing keeping scripts/, raw-notes/, docs/, seo/ and the root markdown
+# off the live site. DO-NOT-BREAK.md says so in as many words.
+#
+# Every check below was run locally and exits 0 before being added. A workflow
+# that is red from its first run gets ignored within a week and then protects
+# nothing - which is exactly why verify_liquid.py could not be added until
+# PH00-011 was fixed (Wave 1 item 1.2, DECISIONS.md D31).
+#
+# PH10-062, delivering D18/Q19.
+
+name: verify
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # The fast suite: ~15 s, no network beyond the checkout, no dependencies
+  # past Python 3 and Node.
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # verify_text_integrity and verify_markup_integrity diff against a
+          # ref. A shallow clone has no HEAD~1 and they would error.
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: HTML well-formedness
+        run: python3 scripts/verify_html.py
+      - name: Internal links and fragments
+        run: python3 scripts/verify_links.py
+      - name: Glossary is faithful to the notes
+        run: python3 scripts/verify_glossary.py
+      - name: Past-paper tags
+        run: python3 scripts/verify_past_paper_tags.py
+      - name: Diagram geometry
+        run: python3 scripts/verify_diagram_geometry.py
+      - name: SEO assertions
+        run: python3 seo/tools/verify_seo.py
+
+      # Guards the one failure mode that takes down the whole site rather than
+      # one page: a stray Liquid tag in published markdown fails the entire
+      # Pages build. Safe to run here only since PH00-011 was fixed - it now
+      # parses _config.yml's exclude list and checks the 1 markdown file Jekyll
+      # actually renders, instead of 124 it does not.
+      - name: Liquid syntax in published markdown
+        run: python3 scripts/verify_liquid.py
+
+      # Closes the class PH10-060 belongs to: a non-HTML file inside a published
+      # directory, invisible to every other tool because they all glob *.html.
+      - name: Nothing unexpected on the published surface
+        run: python3 scripts/verify_published_surface.py
+
+      # Must report 0. Both extractors strip attributions at extraction, so
+      # disagreement here means one of them let something through.
+      - name: No source attributions in question text
+        run: python3 scripts/strip_source_attributions.py
+
+      # Closes PH01-017: the sitemap drifts because nothing re-runs the builder
+      # after a commit. Note this exits non-zero on drift; the "nothing written"
+      # line it prints is unconditional and is not a pass signal.
+      - name: Sitemap is current
+        run: python3 scripts/build_sitemap.py --check
+
+      - name: Question search component
+        run: node scripts/test_question_search.js
+      - name: Glossary filter component
+        run: node scripts/test_glossary_filter.js
+
+      # Economics prose is never altered by a formatting or structural change.
+      # These two are what make that claim checkable rather than asserted.
+      - name: Visible text unchanged since the previous commit
+        run: python3 scripts/verify_text_integrity.py HEAD~1
+      - name: Markup not silently lost since the previous commit
+        run: python3 scripts/verify_markup_integrity.py HEAD~1 --strict
+
+  # Separate job: slower (~30 s), and the only one that needs the network, for
+  # `npx prettier` and the glossary's KaTeX pre-render. Isolated so a flaky npx
+  # cannot mask the fast suite above.
+  generated:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Runs every generator inside a throwaway worktree of HEAD and asks git
+      # what moved. Answers the question no per-generator --check can: is the
+      # committed output still what its source produces? PH09b-026.
+      - name: Committed generated output is current
+        run: python3 scripts/verify_generated.py
+
+# DELIBERATELY ABSENT, and each for a reason:
+#
+#   scripts/check_glossary_capitalisation.py
+#     Exits non-zero while the two Regulation definitions are unclassified
+#     (PH10-063, logged as G4 in REVIEW-NOTES.md). That is intentional - the
+#     whole point of Wave 1 item 1.6 is that the queue should not be silent -
+#     but it is a CONTENT decision and not something a workflow can resolve.
+#     Add this once the two are ruled on. Same judgement that kept
+#     verify_liquid.py out until PH00-011 was fixed.
+#
+#   scripts/convert_raw_notes.py
+#     Must not be run at all. Its page template predates seven SEO commits and
+#     would emit a page with no canonical, no social cards, no structured data
+#     and no web fonts. PH06-027, and in DO-NOT-BREAK.md.

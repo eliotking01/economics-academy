@@ -674,8 +674,10 @@ def main():
         display_map, swap_inline = render_maths(deck)
         cards = public_cards(deck, display_map, swap_inline)
         topics = deck_topics(deck, cards)
+        # No build-date stamp - see PH09b-025 and the note in
+        # build_past_paper_questions.py. It made every rebuild diff against a
+        # clean tree while nothing read the value.
         payload = {
-            "generated": dt.date.today().isoformat(),
             "board": deck["board"],
             "boardName": deck["boardName"],
             "theme": deck["theme"],

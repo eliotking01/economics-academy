@@ -59,9 +59,10 @@ exclude:
   - extraction-qa-report.md
   - requirements.txt
 
-  # Already excluded by Jekyll's rule that anything starting with "_" is
-  # skipped. Listed so the intent survives if that ever changes.
+  # Already excluded by Jekyll's rule that anything starting with "_" or "."
+  # is skipped. Listed so the intent survives if that ever changes.
   - _working/
+  - .github/
 
 # Deliberately NOT excluded, so the change is a decision rather than a habit:
 #   templates/                 fetched at runtime by inject-templates.js
