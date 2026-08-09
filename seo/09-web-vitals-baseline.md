@@ -30,6 +30,51 @@
 > `seo/10-architecture-verification.md`**, which removes the CDN, has a
 > run-to-run spread of 0.00–0.16 s, and shows the change is worth
 > −0.15 to −0.31 s of LCP and −10.5% render-blocking.
+>
+> ### The CLS claim below is also wrong · added 2026-08-09
+>
+> This document states three times that **CLS is 0.000 on all six pages** and
+> that "no layout-shift problem exists" (lines 104, 223, 253). That came from
+> the same 3-run measurement, and the 7-run replacements — both committed in
+> this repo — disagree:
+>
+> | Page | 3-run (this doc) | `lh-baseline-live-7run.json` | `lh-live-after-7run.json` |
+> | --- | ---: | ---: | ---: |
+> | homepage | 0.000 | 0.020 | 0.021 |
+> | section-hub | 0.000 | 0.000 | 0.022 |
+> | **notes-topic** | 0.000 | **0.102** | **0.110** |
+> | practice-questions | 0.000 | 0.020 | 0.021 |
+> | **past-paper-questions** | 0.000 | **0.635** | **0.253** |
+> | flashcards | 0.000 | 0.000 | 0.020 |
+>
+> Google's thresholds are ≤0.1 good, >0.25 poor. **Two page families are over
+> it.** The architecture pass genuinely improved past-paper-questions from 0.635
+> to 0.253 — the work was directionally right — but it is still 2.5× the
+> threshold, and that page carries the lowest Lighthouse performance score on the
+> site (0.76 against 0.95–0.99 everywhere else).
+>
+> **The mechanism on the past-paper-questions pages is identified.**
+> `.ppq-controls` ships with the `hidden` attribute; nothing in
+> `css/pages/past-paper-questions.css` reserves height for it; and
+> `js/components/question-search.js:682` reveals it only inside the `.then()` of
+> a `fetch` for `questions.json`, which is **414 KB**. A padded, bordered filter
+> panel therefore appears after a network round trip and pushes every result card
+> down.
+>
+> **The notes-topic 0.110 has no identified cause.** It is stable across both
+> 7-run sets (0.102 → 0.110), so it is pre-existing rather than a regression.
+> Lighthouse's `layout-shift-elements` audit detail would name it; those raw
+> reports were deliberately not kept (`8c8034b`). Re-run
+> `seo/tools/run_lighthouse.py` and read that one audit before proposing
+> anything — do not guess.
+>
+> So **"What is NOT wrong" below is wrong about CLS**, and the two entries that
+> justify a decision on the grounds of "CLS already 0.000" (row 5 of the fix
+> table, and the dropped MathJax→KaTeX swap) rest on a number that does not hold.
+> Neither decision necessarily changes — MathJax is still async and still not the
+> cause — but the stated basis does.
+>
+> Found by the organisation audit, 2026-08-09, finding PH08-035.
 
 
 Measured **before any page in this pass was modified**, so a later regression can
@@ -101,7 +146,11 @@ proxy and is reported instead. TBT is fine everywhere (0–226 ms against a 200 
 Stated plainly, because they were in the pre-measurement note and acting on them
 would have wasted effort:
 
-1. **"MathJax is a common cause of CLS."** ❌ **CLS is 0.000 on all six pages**,
+1. **"MathJax is a common cause of CLS."** ❌ — but **this reasoning is
+   superseded; see the CLS note in the banner above. CLS is not 0.000.** The
+   conclusion about MathJax specifically still stands (it is async and is not the
+   cause), but it was reached from a wrong measurement. Original text follows.
+   ❌ **CLS is 0.000 on all six pages**,
    including the MathJax page. There is no layout-shift problem on this site at
    all. The reason is structural: jQuery and `inject-templates.js` are synchronous
    scripts, so the header/footer injection completes *before* first paint rather
@@ -220,7 +269,7 @@ MathJax loads `async`, so it is **not** render-blocking. It costs 292 KB and
 | **2** | **Add font `preconnect` to the 190 pages missing it** | **190** | LH flags 213–309 ms on exactly those pages | Script, additive `<head>` lines | Low |
 | **3** | Trim Google Fonts cuts (5 Source Sans Pro weights, 2 Merriweather) | 463 | 263 KB font payload; LCP is text | Audit which cuts CSS uses | Low, but visual |
 | **4** | `loading="lazy"` on the 94 remaining notes images | 94 | Bandwidth only — not LCP | Script | Low |
-| **5** | `width`/`height` on 3 images (`about.html` ×2, `tutoring.html` ×1) | 3 | CLS already 0.000 | Trivial | None |
+| **5** | `width`/`height` on 3 images (`about.html` ×2, `tutoring.html` ×1) | 3 | ~~CLS already 0.000~~ — **basis wrong, see the CLS note in the banner. Homepage CLS is 0.021, and these 3 images are on root pages** | Trivial | None |
 | — | ~~WebP conversion of 112 diagram PNGs~~ | — | **Not the LCP element. Dropped.** | — | — |
 | — | ~~Swap MathJax for KaTeX~~ | — | **Async, 0 CLS. Not justified.** | — | — |
 
@@ -250,7 +299,11 @@ they will move rankings.
 
 Recorded so it is not re-investigated:
 
-- **CLS: 0.000 on all six pages.** No layout-shift problem exists.
+- ~~**CLS: 0.000 on all six pages.** No layout-shift problem exists.~~
+  **WRONG — retracted 2026-08-09.** The 7-run data gives past-paper-questions
+  **0.253** and notes-topic **0.110**, against a 0.1 threshold. A layout-shift
+  problem does exist, on two page families. See the CLS note in the banner at the
+  top of this document, and finding PH08-035.
 - **TBT: 0–226 ms.** No interactivity problem.
 - **TTFB ~100 ms.** GitHub Pages' CDN is fine.
 - **Only 2 stylesheets per page**, both small.
