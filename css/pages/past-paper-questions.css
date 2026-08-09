@@ -298,6 +298,26 @@
   margin-bottom: 0;
 }
 
+/* The panel ships visible and disabled so it holds its final height from first
+   paint - see build_past_paper_questions.py and PH08-035. While aria-busy is
+   set it is waiting for questions.json, so it is dimmed to read as "loading"
+   rather than "broken". question-search.js drops the attribute when the data
+   lands, and leaves it in place if the fetch fails. */
+.past-paper-questions-page .ppq-controls[aria-busy="true"] {
+  opacity: 0.55;
+}
+
+.past-paper-questions-page .ppq-controls[aria-busy="true"] * {
+  cursor: progress;
+}
+
+/* Only ever rendered with scripting off, so it can never flash for anyone else. */
+.past-paper-questions-page .ppq-noscript {
+  margin: 0 0 1em;
+  font-size: 0.9em;
+  color: var(--ppq-muted);
+}
+
 .past-paper-questions-page .ppq-error {
   background: #fff4f6;
   border: 1px solid var(--ppq-accent);

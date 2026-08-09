@@ -285,19 +285,45 @@ def search_component(topic="", board="", group=""):
     """The search UI skeleton.
 
     Rendered identically on the master page, the board and section pages and the
-    topic pages; only the pre-filter attributes differ. The controls ship hidden
-    and are revealed by js/components/question-search.js, so a reader without
-    JavaScript is never shown a search box that cannot work.
+    topic pages; only the pre-filter attributes differ.
+
+    The controls ship VISIBLE and disabled, and question-search.js enables them
+    once questions.json has loaded. They used to ship `hidden` and be revealed
+    by the script, which meant a padded, bordered, nine-field panel appeared
+    after a 414 KB network round trip and pushed every result card down the
+    page - a measured CLS of 0.253, against Google's 0.1 threshold, and the
+    worst Core Web Vital on the site. PH08-035.
+
+    Nothing in CSS could fix that: the component enforces
+    `[hidden] { display: none !important }`, and a min-height on a display:none
+    element reserves no space at all.
+
+    Two things follow, and both matter for the layout to be stable:
+
+    - The fields a pre-filtered page fixes are marked `hidden` HERE, in the
+      served HTML, not by the script afterwards. Hiding them later would shrink
+      the panel after first paint and simply move the shift rather than remove
+      it.
+    - A reader without JavaScript now sees the panel rather than nothing, so a
+      <noscript> note says why it is inert. The question list below it is static
+      HTML and works with scripting off exactly as before.
     """
     attr = ""
+    # A control is meaningless on a page already fixed to that value, so the
+    # page ships without it. Mirrors what question-search.js used to do at
+    # runtime; doing it here keeps the panel one fixed height from first paint.
+    fixed = set()
     if topic:
         # A topic already implies its board and section.
         attr = ' data-prefilter-topic="' + e(topic) + '"'
+        fixed |= {"topic", "board", "group"}
     else:
         if board:
             attr += ' data-prefilter-board="' + e(board) + '"'
+            fixed.add("board")
         if group:
             attr += ' data-prefilter-group="' + e(group) + '"'
+            fixed.add("group")
     # "Section" here is the paper's section (A/B/C), distinct from the board's
     # section grouping, which is labelled Theme or Micro/Macroeconomics.
     fields = [
@@ -315,15 +341,22 @@ def search_component(topic="", board="", group=""):
         ("section", "Paper section", "All sections"),
     ]
     field_html = "\n".join(
-        f"""              <div class="ppq-field">
+        f"""              <div class="ppq-field"{' hidden' if k in fixed else ''}>
                 <label for="ppq-{k}">{lbl}</label>
-                <select id="ppq-{k}" data-ppq-filter="{k}" data-ppq-all="{all_}"></select>
+                <select id="ppq-{k}" data-ppq-filter="{k}" data-ppq-all="{all_}" disabled></select>
               </div>"""
         for k, lbl, all_ in fields
     )
 
     return f"""          <div class="ppq-search" data-question-search{attr}>
-            <form class="ppq-controls" data-ppq-controls hidden>
+            <form class="ppq-controls" data-ppq-controls aria-busy="true">
+              <noscript>
+                <p class="ppq-noscript">
+                  These filters need JavaScript. Every question is still listed
+                  below, grouped by topic, and all the paper and mark scheme
+                  links work.
+                </p>
+              </noscript>
               <div class="ppq-search-field">
                 <label class="sr-only" for="ppq-query">Search past paper questions</label>
                 <input
@@ -334,19 +367,20 @@ def search_component(topic="", board="", group=""):
                   placeholder="Search questions, topics or keywords&hellip;"
                   autocomplete="off"
                   spellcheck="false"
+                  disabled
                 />
               </div>
               <div class="ppq-fields">
 {field_html}
                 <div class="ppq-field">
                   <label for="ppq-sort">Sort</label>
-                  <select id="ppq-sort" data-ppq-sort>
+                  <select id="ppq-sort" data-ppq-sort disabled>
                     <option value="relevance">Relevance</option>
                     <option value="newest">Newest first</option>
                     <option value="marks">Marks (high to low)</option>
                   </select>
                 </div>
-                <button type="button" class="ppq-clear" data-ppq-clear>Clear all</button>
+                <button type="button" class="ppq-clear" data-ppq-clear disabled>Clear all</button>
               </div>
             </form>
 
