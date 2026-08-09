@@ -666,22 +666,33 @@
 
     populate();
     applyQueryString();
-    // A control is meaningless on a page already fixed to that value.
-    function hideField(sel) {
-      if (!sel) return;
-      var wrap = sel.closest(".ppq-field");
-      if (wrap) wrap.hidden = true;
-    }
-    if (preTopic) {
-      hideField(filters.topic);
-      hideField(filters.board);
-      hideField(filters.group);
-    }
-    if (preBoard) hideField(filters.board);
-    if (preGroup) hideField(filters.group);
-    if (els.controls) els.controls.hidden = false;
+    // The panel is already on screen and already the right height - the page
+    // shipped it that way, with the fields this page fixes marked hidden in the
+    // HTML. All that is left is to make it usable.
+    setControlsEnabled(root, true);
     root.classList.add("is-enhanced");
     run();
+  }
+
+  // ---------------------------------------------------------------- enabling
+
+  // The filter panel ships visible and disabled, so it occupies its final
+  // height from first paint and nothing moves when the data lands. It used to
+  // ship `hidden` and be revealed here, after a 414 KB fetch, which measured
+  // CLS 0.253 - the worst Core Web Vital on the site. PH08-035.
+  //
+  // Enabled only once the data is in, because until then the selects have no
+  // options and the search index does not exist, so the controls would look
+  // ready and do nothing.
+  function setControlsEnabled(root, on) {
+    var controls = root.querySelector("[data-ppq-controls]");
+    if (!controls) return;
+    var fields = controls.querySelectorAll("input, select, button");
+    Array.prototype.forEach.call(fields, function (el) {
+      el.disabled = !on;
+    });
+    if (on) controls.removeAttribute("aria-busy");
+    else controls.setAttribute("aria-busy", "true");
   }
 
   // ---------------------------------------------------------------- boot
@@ -706,8 +717,12 @@
       })
       .catch(function () {
         // Leave the page exactly as served: the static question list and the
-        // links to the PDFs all still work without this script.
+        // links to the PDFs all still work without this script. The controls
+        // stay disabled - they shipped that way and there is no index to drive
+        // them - and the error note says so. Showing the note is the only
+        // change, so this path causes no layout shift either.
         Array.prototype.forEach.call(roots, function (root) {
+          setControlsEnabled(root, false);
           var note = root.querySelector("[data-ppq-error]");
           if (note) note.hidden = false;
         });

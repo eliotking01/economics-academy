@@ -186,7 +186,14 @@
             data-question-search
             data-prefilter-topic="2-2-3-investment"
           >
-            <form class="ppq-controls" data-ppq-controls hidden>
+            <form class="ppq-controls" data-ppq-controls aria-busy="true">
+              <noscript>
+                <p class="ppq-noscript">
+                  These filters need JavaScript. Every question is still listed
+                  below, grouped by topic, and all the paper and mark scheme
+                  links work.
+                </p>
+              </noscript>
               <div class="ppq-search-field">
                 <label class="sr-only" for="ppq-query"
                   >Search past paper questions</label
@@ -199,15 +206,17 @@
                   placeholder="Search questions, topics or keywords&hellip;"
                   autocomplete="off"
                   spellcheck="false"
+                  disabled
                 />
               </div>
               <div class="ppq-fields">
-                <div class="ppq-field">
+                <div class="ppq-field" hidden>
                   <label for="ppq-board">Board</label>
                   <select
                     id="ppq-board"
                     data-ppq-filter="board"
                     data-ppq-all="Both boards"
+                    disabled
                   ></select>
                 </div>
                 <div class="ppq-field">
@@ -216,14 +225,16 @@
                     id="ppq-level"
                     data-ppq-filter="level"
                     data-ppq-all="AS and A Level"
+                    disabled
                   ></select>
                 </div>
-                <div class="ppq-field">
+                <div class="ppq-field" hidden>
                   <label for="ppq-group">Theme / area</label>
                   <select
                     id="ppq-group"
                     data-ppq-filter="group"
                     data-ppq-all="All areas"
+                    disabled
                   ></select>
                 </div>
                 <div class="ppq-field">
@@ -232,14 +243,16 @@
                     id="ppq-paper"
                     data-ppq-filter="paper"
                     data-ppq-all="All papers"
+                    disabled
                   ></select>
                 </div>
-                <div class="ppq-field">
+                <div class="ppq-field" hidden>
                   <label for="ppq-topic">Topic</label>
                   <select
                     id="ppq-topic"
                     data-ppq-filter="topic"
                     data-ppq-all="All topics"
+                    disabled
                   ></select>
                 </div>
                 <div class="ppq-field">
@@ -248,6 +261,7 @@
                     id="ppq-marks"
                     data-ppq-filter="marks"
                     data-ppq-all="All marks"
+                    disabled
                   ></select>
                 </div>
                 <div class="ppq-field">
@@ -256,6 +270,7 @@
                     id="ppq-year"
                     data-ppq-filter="year"
                     data-ppq-all="All years"
+                    disabled
                   ></select>
                 </div>
                 <div class="ppq-field">
@@ -264,17 +279,18 @@
                     id="ppq-section"
                     data-ppq-filter="section"
                     data-ppq-all="All sections"
+                    disabled
                   ></select>
                 </div>
                 <div class="ppq-field">
                   <label for="ppq-sort">Sort</label>
-                  <select id="ppq-sort" data-ppq-sort>
+                  <select id="ppq-sort" data-ppq-sort disabled>
                     <option value="relevance">Relevance</option>
                     <option value="newest">Newest first</option>
                     <option value="marks">Marks (high to low)</option>
                   </select>
                 </div>
-                <button type="button" class="ppq-clear" data-ppq-clear>
+                <button type="button" class="ppq-clear" data-ppq-clear disabled>
                   Clear all
                 </button>
               </div>
