@@ -145,15 +145,24 @@ def main():
               "page it is on.", file=sys.stderr)
         return 1
 
-    # A checker that checks nothing passes for the wrong reason. Every markdown
-    # file being excluded is possible - and would mean this guard is dead - so
-    # say so loudly rather than printing a green 0.
+    # The empty set is now the CORRECT state, and is asserted elsewhere.
+    #
+    # This used to fail when there was nothing to check, on the grounds that a
+    # checker which checks nothing passes for the wrong reason (D31). That was
+    # right while nothing else watched the published surface. It stopped being
+    # right when scripts/verify_published_surface.py landed: `.md` is not in its
+    # ALLOWED_SUFFIXES, so any markdown file appearing in a published directory
+    # fails THAT check, by name, before it can ever reach Jekyll.
+    #
+    # So the guarantee moved rather than disappeared, and this script is now a
+    # latent guard: dormant while the published surface has no markdown on it,
+    # and immediately useful the moment a deliberate exception puts one there.
+    # Deleting it would throw away the only thing that then checks its syntax.
     if not files:
-        print("No markdown reaches the Jekyll build at all, so this check "
-              "proved nothing. If that is intended, this script is now dead "
-              "code; if not, _config.yml's exclude list has grown too broad.",
-              file=sys.stderr)
-        return 1
+        print("Nothing to check: no markdown reaches the Jekyll build. That is "
+              "asserted by scripts/verify_published_surface.py, which fails on "
+              "any .md inside a published directory - so this is a real pass, "
+              "not an empty one.")
     return 0
 
 

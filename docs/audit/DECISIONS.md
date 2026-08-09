@@ -588,3 +588,36 @@ rather than absorbed as a red tick.
 **Consequence: Wave 1 step 1.4's precondition is met.** `DO-NOT-BREAK.md`'s
 "do not add this to CI before PH00-011 is fixed" is discharged, and its entry is
 struck through and replaced rather than deleted.
+
+### D32 — `verify_liquid.py` passes on an empty set · **amends D31**
+
+Eliot, 2026-08-09, approving PH11 section 4b:
+*"Yes move macro-application-uk-sa.md"*.
+
+That move took the last published markdown file off the site, so
+`verify_liquid.py` had nothing left to check — and D31 had deliberately made it
+**fail** in exactly that case, on the grounds that a checker which checks nothing
+passes for the wrong reason. D31 flagged this interaction in advance rather than
+letting it surface as an unexplained red tick. Here is the resolution.
+
+**The empty set is now the correct state, and something else asserts it.** When
+D31 was written nothing watched the published surface, so "no markdown" was
+indistinguishable from "the exclude list quietly swallowed everything". Wave 1
+item 1.5 changed that: `.md` is not in `verify_published_surface.py`'s
+`ALLOWED_SUFFIXES`, so any markdown file inside a published directory fails that
+check, by name, before Jekyll could ever render it. Verified both ways — a
+planted `revision-notes/probe.md` exits 1, removing it returns to 0.
+
+So the guarantee moved rather than disappeared, and `verify_liquid.py` becomes a
+**latent guard**: dormant while the published surface carries no markdown, and
+immediately useful the moment a deliberate exception puts one there. Deleting it
+— the other option D31 named — would throw away the only thing that then checks
+that file's Liquid syntax, against a failure mode that takes down the whole
+deploy rather than one page.
+
+Both scripts now say this in comments, each pointing at the other, so neither
+looks like dead code to the next reader.
+
+**What did not change.** The hazard itself is untouched: Liquid still runs over
+any published markdown before Markdown, and one stray `{%` still fails the entire
+Pages build. `DO-NOT-BREAK.md`'s entry stands.

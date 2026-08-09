@@ -65,6 +65,11 @@ GENERATORS = [
     "build_past_paper_taxonomy.py",
     "build_past_paper_questions.py",
     "build_questions.py",
+    # extract_glossary.py writes glossary-data/terms.json from the notes HTML,
+    # and build_glossary.py renders that. Both are generated and committed, so
+    # both belong here - and the extractor has to run first or the build would
+    # be checked against a stale extraction.
+    "extract_glossary.py",
     "build_glossary.py",
     "build_flashcards.py",
     "build_sitemap.py",
