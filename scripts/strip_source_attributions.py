@@ -188,7 +188,18 @@ def main():
 
     if not args.apply:
         print("dry run - nothing written. Re-run with --apply.")
+        # Non-zero when a dry run finds anything to do. Both extractors strip
+        # attributions at extraction, so this script is the safety net over data
+        # already on disk and 0 is the expected answer - CLAUDE.md calls that
+        # agreement the test. Without this it printed the disagreement and
+        # exited 0, which in a CI workflow is a check that cannot fail.
+        if total:
+            print(f"\nFAIL: {total} question(s) still carry a source "
+                  f"attribution in their questionText. Re-run with --apply, or "
+                  f"fix the extractor that let them through.", file=sys.stderr)
+            return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
