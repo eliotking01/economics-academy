@@ -66,6 +66,23 @@ exclude:
 # Deliberately NOT excluded, so the change is a decision rather than a habit:
 #   templates/                 fetched at runtime by inject-templates.js
 #   past-paper-questions/      questions.json is fetched by question-search.js
-#   specificiations/           the exam-board PDFs; removing them from the site
-#                              is a separate call, and was left as one
-#   LICENSE.txt, old-logos-archive/, webfonts/, logo/, images/
+#   LICENSE.txt, old-logos-archive/, webfonts/, images/
+#   logo/                      UNDECIDED, kept published for now. The current
+#                              brand kit - 8 files - and NOTHING on the site
+#                              references any of them: the header is text, not
+#                              an image. So it is served purely so the URLs
+#                              exist. That may be worth keeping (a stable link
+#                              to hand someone) or may be an oversight; Eliot
+#                              was not sure on 2026-08-09 and chose to leave it.
+#                              Revisit rather than assume it is deliberate.
+#
+# specificiations/ used to be listed here, as the separate call this file said
+# it was. Eliot made that call on 2026-08-08: the two exam-board specification
+# PDFs are Pearson and AQA copyright and were deleted from the repo rather than
+# excluded, because excluding them would leave the files in the working tree
+# and in git history while only hiding them from the site. Nothing linked to
+# them - the directory was unreferenced by every .html, .css and .js on the
+# site - so removing them cost no internal links. The two URLs now 404, which
+# is intended; they had no GSC impressions and appeared in no indexation
+# export. Re-run scripts/build_sitemap.py after any such deletion: it enumerates
+# from the filesystem, so it drops the URLs by itself.

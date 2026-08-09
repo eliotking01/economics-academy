@@ -18,8 +18,19 @@ bug:
 The fix is to wrap the offending text in `{% raw %}` ... `{% endraw %}`.
 
 Only markdown is at risk. The site's HTML has no front matter, so Jekyll copies
-it verbatim without rendering. Directories beginning with `_` are excluded from
-the build entirely, which is why `_working/` is skipped here too.
+it verbatim without rendering.
+
+And only markdown Jekyll actually *reads* is at risk. Anything in `_config.yml`'s
+`exclude` list is never opened by the build, so its contents cannot fail a deploy
+however malformed they are. This script consults that list rather than keeping a
+skip list of its own - it did keep one once, knowing only Jekyll's `_`-prefix
+rule, and the result was PH00-011: `seo/05-verification.md` reported as a deploy
+risk for months while being excluded from the build, on a line that was itself
+documenting this checker. A guard that cries wolf gets ignored, and then it is
+not a guard.
+
+The exclude list is parsed by `build_sitemap.py` and imported here rather than
+restated. Two copies of the list would drift; two callers of one parser cannot.
 
 Standard library only. This reimplements enough of Liquid 4's tokeniser to
 reproduce the failure; it was checked against the real Liquid 4.0.4, the version
@@ -34,6 +45,11 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+# Sibling in scripts/. Imported for its _config.yml `exclude` parser and its
+# publish rule, so this checker and the sitemap agree on what Jekyll builds.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import build_sitemap  # noqa: E402
 
 # Liquid::TemplateParser - non-greedy, so each opener takes the nearest closer.
 TOKEN = re.compile(r"(\{%-?.*?-?%\}|\{\{-?.*?-?\}\})", re.S)
@@ -50,11 +66,22 @@ RAW_CLOSE = re.compile(r"\A(.*)\{%-?\s*(\w+)\s*(.*?)-?%\}\Z", re.S)
 
 
 def rendered_files():
-    """Every markdown file GitHub Pages will run Liquid over."""
+    """Every markdown file GitHub Pages will run Liquid over.
+
+    Returns (rendered, skipped). `build_sitemap.published()` applies both rules
+    that matter - Jekyll's `_`-prefix rule and `_config.yml`'s `exclude` - so
+    there is one definition of "published" in the repo rather than two.
+
+    splitlines() rather than split(): this repo has had Finder duplicates named
+    "notes 2.md" appear on disk, and a whitespace split would tear one filename
+    into two nonexistent ones.
+    """
+    ex = build_sitemap.excludes()
     out = subprocess.run(["git", "ls-files", "*.md"], cwd=ROOT,
                          capture_output=True, text=True, check=True).stdout
-    return [ROOT / f for f in out.split()
-            if not any(part.startswith("_") for part in pathlib.Path(f).parts)]
+    tracked = [f for f in out.splitlines() if f]
+    rendered = [f for f in tracked if build_sitemap.published(f, ex)]
+    return [ROOT / f for f in rendered], len(tracked) - len(rendered)
 
 
 def check(path: pathlib.Path):
@@ -99,7 +126,7 @@ def check(path: pathlib.Path):
 
 
 def main():
-    files = rendered_files()
+    files, skipped = rendered_files()
     bad = 0
     for path in files:
         for line, msg in check(path):
@@ -107,11 +134,27 @@ def main():
             where = f"{path.relative_to(ROOT)}:{line}" if line else \
                     str(path.relative_to(ROOT))
             print(f"  {where}: {msg}", file=sys.stderr)
-    print(f"\n{len(files)} markdown files checked, {bad} problem(s)")
+
+    for path in files:
+        print(f"  checked  {path.relative_to(ROOT)}")
+    print(f"\n{len(files)} markdown file(s) checked, {bad} problem(s)"
+          f"  [{skipped} excluded from the Jekyll build, not at risk]")
+
     if bad:
         print("A Liquid error fails the whole GitHub Pages deploy, not just the "
               "page it is on.", file=sys.stderr)
-    return 1 if bad else 0
+        return 1
+
+    # A checker that checks nothing passes for the wrong reason. Every markdown
+    # file being excluded is possible - and would mean this guard is dead - so
+    # say so loudly rather than printing a green 0.
+    if not files:
+        print("No markdown reaches the Jekyll build at all, so this check "
+              "proved nothing. If that is intended, this script is now dead "
+              "code; if not, _config.yml's exclude list has grown too broad.",
+              file=sys.stderr)
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
