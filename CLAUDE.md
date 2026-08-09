@@ -24,10 +24,17 @@ markup integrity) exist and can be run on demand. Nothing runs them
 automatically. Prettier 3.9.6 has been used via `npx prettier@3.9.6`; it is not
 installed and there is no config.
 
+**Where a number in this file is one a script computes, cite the script, not the
+value.** Counts here have drifted before and the drift is invisible: this file
+said the `rewrite` block covered 46 definitions while `verify_glossary.py` check
+7 printed `44/44` on every run for weeks, and nothing compared them. A number
+that cannot go stale beats a number that is right today. PH10-061.
+
 ## How publishing works
 
 `main` is served by GitHub Pages with **the default Jekyll build** — there is no
-`.nojekyll` and no `_config.yml`. Two consequences that are not obvious:
+`.nojekyll`, and there is a `_config.yml` that exists only to hold an `exclude`
+list. Two consequences that are not obvious:
 
 - **`_config.yml` decides what is published.** It exists only to hold an
   `exclude` list, which keeps the repo's working files off the site: `scripts/`,
@@ -64,7 +71,7 @@ templates/{header,footer}.html                                  injected at runt
 css/main.css                                                    site-wide
 css/pages/<page>.css                                            one per page
 js/components/, js/data/                                        hand-written; the rest is vendor
-images/diagrams/                                                300 note diagrams
+images/diagrams/                                                112 note diagram PNGs (+83 SVGs in svg/)
 raw-notes/edexcel/<spec-code>.md                                markdown source for converted notes
 revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
 glossary-data/                                                  glossary source of truth
@@ -271,8 +278,9 @@ entry except those in `glossary-data/authored.json` is lifted verbatim from the
 `<span class="key-definition">` chip and the paragraph that follows it on a topic
 page, and `scripts/verify_glossary.py` re-reads the notes and fails if a shipped
 definition no longer appears in its source page. The second exception is the
-`rewrite` block in `curation.json`, which edits the **lead-in** of 46 definitions
-at render time — see "Capitalisation and lead-in rewrites" below.
+`rewrite` block in `curation.json`, which edits the **lead-in** of a set of
+definitions at render time — `verify_glossary.py` check 7 prints how many — see
+"Capitalisation and lead-in rewrites" below.
 
 Outside those two, a term that reads badly is fixed **in the notes**, then
 re-extracted — never edited in the glossary. Both exceptions are counted on
@@ -321,16 +329,18 @@ nothing and leaves the A–Z in place.
 the notes or the verbatim check stops meaning anything.
 
 - `capitalise` — definitions the notes wrote as `Term: definition` get their
-  first letter upper-cased. 58 wordings.
+  first letter upper-cased. `verify_glossary.py` check 6 prints the count.
 - `rewrite` — **the second declared exception to "the notes' own words"**, after
-  `authored.json`. 46 definitions the notes wrote with the term as the sentence
+  `authored.json`. Definitions the notes wrote with the term as the sentence
   subject (*"Globalisation is the increasing integration…"*) have their lead-in
   replaced so they read as definitions. Instructed by Eliot on 2026-08-07,
   explicitly overriding the rule that such a definition is fixed in the notes
-  and re-extracted. A rule replaces a **leading substring only**; 39 of the 46
-  merely drop a lead-in and invent no word, and the 7 that do are marked `adds`
-  or `not-a-definition`. The build **fails** if `from` is no longer how the
-  definition opens, so rewording a notes page cannot silently re-point a rule.
+  and re-extracted. A rule replaces a **leading substring only**; most merely
+  drop a lead-in and invent no word, and the few that do are marked `adds` or
+  `not-a-definition`. `verify_glossary.py` check 7 prints both counts — how many
+  are anchored and how many carry added wording. The build **fails** if `from`
+  is no longer how the definition opens, so rewording a notes page cannot
+  silently re-point a rule.
 
 `scripts/check_glossary_capitalisation.py` classifies and reports both.
 `verify_glossary.py` check 6 fails on any lower-case start nobody has ruled on;
@@ -399,8 +409,10 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 ## See also
 
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
-- `_working/glossary/authored-review.md` — the 76 authored definitions, the
-  only entries on the site that are not the notes' own words.
+- `_working/glossary/authored-review.md` — the 76 authored **terms**, the only
+  entries on the site that are not the notes' own words. `verify_glossary.py`
+  check 1 reports 137, which is the same set counted as term-page instances:
+  most appear on both board pages. Two units, both true — say which you mean.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
 - `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
