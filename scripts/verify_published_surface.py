@@ -56,15 +56,15 @@ ALLOWED_NAMES = {
     "LICENSE.txt",
 }
 
-# Known and accepted for now, each with the reason and where it is tracked.
+# Known and accepted exceptions, each with the reason and where it is tracked.
 # Printed on EVERY run rather than passing silently - a suppressed exception
 # that nobody sees is how PH10-060 lasted eleven phases in the first place.
-KNOWN = {
-    "revision-notes/macro-application/macro-application-uk-sa.md":
-        "PH10-060: source markdown for macro-application/index.html, served at "
-        "its own URL. Scheduled to move to raw-notes/ by PH11 section 4b, which "
-        "needs no _config.yml change because raw-notes/ is already excluded.",
-}
+#
+# Currently empty, and worth keeping that way. Its one entry - PH10-060's
+# macro-application-uk-sa.md - was resolved by moving the file to raw-notes/
+# rather than by leaving it listed here, which is what the RESOLVED branch below
+# exists to push for.
+KNOWN: dict[str, str] = {}
 
 
 def published_files():
