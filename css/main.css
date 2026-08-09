@@ -3461,3 +3461,72 @@ ul.social li a.fa-google-plus:hover {
   margin-bottom: 1rem;
   color: #3b82f6; /* Modern blue color, adjust as needed */
 }
+
+/* ==========================================================================
+   Site chrome: the two runtime-injected templates
+   ==========================================================================
+   templates/header.html and templates/footer.html became <header id="header">
+   and <footer id="footer">, so the site finally has banner and contentinfo
+   landmarks. PH08-037.
+
+   Changing the element from <section> brought the theme's bare `header {}`,
+   `header > p {}` and `footer {}` rules into scope for the first time - they
+   had never matched the site chrome before. Everything in this block either
+   neutralises one of those or carries a declaration that used to be an inline
+   style attribute on the footer.
+
+   Placed at the end of the file on purpose. An inline style beats a media
+   query, so the ex-inline `padding: 2em 0` was overriding all three responsive
+   #footer paddings above (:2459, :2614, :3120). Moving it into a rule those
+   could override would change how the footer looks. They are dead today;
+   reconciling them is a separate change, not this one. */
+
+#header {
+  /* Neutralises `header { margin: 0 0 1.5em 0 }` and its 736px variant. */
+  margin: 0;
+}
+
+#header > p {
+  /* Neutralises `header > p`, which would italicise the tagline and reflow it. */
+  font-style: normal;
+  margin: 0 0 2em 0;
+  padding-bottom: 0;
+}
+
+#header .site-title {
+  /* Same, for the site title, which is also a direct child paragraph. */
+  font-style: normal;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#footer {
+  /* `margin` neutralises `footer { margin: 2.25em 0 0 0 }`; the rest were the
+     inline style attribute on the element itself. */
+  margin: 0;
+  padding: 2em 0;
+  background: #2f2f2f;
+  text-align: center;
+}
+
+#footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+  font-size: 0.9em;
+}
+
+#footer .footer-links li {
+  display: inline;
+  margin: 0 1em;
+}
+
+#footer .footer-links a {
+  /* Beats `#footer a { color: #c5c4c4 }` at :2475, as the inline style did. */
+  color: #ccc;
+}
+
+#footer .footer-copyright {
+  font-size: 0.8em;
+  color: #999;
+}

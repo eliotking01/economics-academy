@@ -1,26 +1,19 @@
-<section
-  id="footer"
-  style="padding: 2em 0; background: #2f2f2f; text-align: center"
->
+<!-- templates/footer.html
+     A <footer> element, not a <section>: this is the site's contentinfo
+     landmark and there was none anywhere on the site. The id is unchanged
+     because every rule in css/main.css targets #footer. PH08-037.
+     The 11 inline style attributes that used to be here are now in
+     css/main.css, under the classes below. -->
+<footer id="footer">
   <div class="container">
-    <ul
-      style="list-style: none; padding: 0; margin: 0 0 1em 0; font-size: 0.9em"
-    >
-      <li style="display: inline; margin: 0 1em">
-        <a href="/about.html" style="color: #ccc">About</a>
-      </li>
-      <li style="display: inline; margin: 0 1em">
-        <a href="/contact.html" style="color: #ccc">Contact</a>
-      </li>
-      <li style="display: inline; margin: 0 1em">
-        <a href="/faq.html" style="color: #ccc">FAQs</a>
-      </li>
-      <li style="display: inline; margin: 0 1em">
-        <a href="/privacy.html" style="color: #ccc">Privacy</a>
-      </li>
+    <ul class="footer-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/faq.html">FAQs</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
     </ul>
-    <p style="font-size: 0.8em; color: #999">
+    <p class="footer-copyright">
       &copy; 2026 Economics Academy. All rights reserved.
     </p>
   </div>
-</section>
+</footer>

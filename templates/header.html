@@ -1,6 +1,9 @@
 <!-- templates/header.html -->
 <a href="#main" class="skip-to-content">Skip to main content</a>
-<section id="header">
+<!-- A <header> element, not a <section>: this is the site's banner landmark and
+     there was none anywhere on the site. The id is unchanged because every rule
+     in css/main.css targets #header. PH08-037. -->
+<header id="header">
   <!-- Deliberately a paragraph, not a top-level heading. This template is
        injected above every page's own heading, so a heading here made the
        document outline open with the site name on all 463 pages and put
@@ -129,4 +132,4 @@
       <li data-page="contact"><a href="/contact.html">Contact</a></li>
     </ul>
   </nav>
-</section>
+</header>
