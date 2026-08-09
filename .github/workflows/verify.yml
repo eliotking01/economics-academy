@@ -82,6 +82,12 @@ jobs:
       - name: Sitemap is current
         run: python3 scripts/build_sitemap.py --check
 
+      # Fails while any glossary definition is unclassified. It was held out of
+      # this workflow while the two Regulation definitions were open (PH10-063);
+      # Eliot ruled on them, so it is green and joins.
+      - name: Every glossary definition is classified
+        run: python3 scripts/check_glossary_capitalisation.py --check
+
       - name: Question search component
         run: node scripts/test_question_search.js
       - name: Glossary filter component
@@ -114,15 +120,7 @@ jobs:
       - name: Committed generated output is current
         run: python3 scripts/verify_generated.py
 
-# DELIBERATELY ABSENT, and each for a reason:
-#
-#   scripts/check_glossary_capitalisation.py
-#     Exits non-zero while the two Regulation definitions are unclassified
-#     (PH10-063, logged as G4 in REVIEW-NOTES.md). That is intentional - the
-#     whole point of Wave 1 item 1.6 is that the queue should not be silent -
-#     but it is a CONTENT decision and not something a workflow can resolve.
-#     Add this once the two are ruled on. Same judgement that kept
-#     verify_liquid.py out until PH00-011 was fixed.
+# DELIBERATELY ABSENT:
 #
 #   scripts/convert_raw_notes.py
 #     Must not be run at all. Its page template predates seven SEO commits and
