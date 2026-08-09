@@ -1182,7 +1182,11 @@ def prettify(paths):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true", help="validate, write nothing")
+    ap.add_argument(
+        "--check",
+        action="store_true",
+        help="validate the INPUTS and write nothing. This does not check that committed output is current - use scripts/verify_generated.py for that",
+    )
     args = ap.parse_args()
 
     taxonomy, tags, papers = load()
