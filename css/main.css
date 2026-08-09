@@ -3500,6 +3500,16 @@ ul.social li a.fa-google-plus:hover {
   padding-bottom: 0;
 }
 
+#header .site-title a {
+  /* The title text is a link. While the title was an <h1> this came free from
+     `h1 a, h2 a, ... { color: inherit; text-decoration: none }` at :295. A <p>
+     does not match that rule, so the link fell through to the generic
+     `a { color: #d52349; text-decoration: underline }` at :313 and the site
+     name rendered pink and underlined. Restated here for the same effect. */
+  color: inherit;
+  text-decoration: none;
+}
+
 #footer {
   /* `margin` neutralises `footer { margin: 2.25em 0 0 0 }`; the rest were the
      inline style attribute on the element itself. */
