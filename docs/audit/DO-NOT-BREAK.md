@@ -37,18 +37,19 @@ whole deploy, not the page. Backticks do not protect it. `_audit/` is gitignored
 so its markdown never reaches the Jekyll build — but if that ever changes, run
 `python3 scripts/verify_liquid.py`.
 
-> **Added 2026-08-09, D30. That condition has now materialised.** The audit is
-> committed at `docs/audit/`, so its 21 markdown files are tracked and
-> `verify_liquid.py` scans them — it selects on `git ls-files "*.md"` minus
-> `_`-prefixed paths and **does not read `_config.yml`'s `exclude`**, which is
-> the root cause of PH00-011. Seven audit files discuss the Liquid tag-open hazard in prose
-> and are therefore flagged, taking the script from **1 problem to 8**.
+> **Added 2026-08-09, D30; RESOLVED the same day by D31.** Committing the audit
+> to `docs/audit/` put 18 more markdown files in front of `verify_liquid.py` and
+> took it from 1 problem to 8 — all of them prose *about* the hazard, in files
+> Jekyll never renders. That was PH00-011's false positive reproduced eight-fold,
+> and it is now fixed at the root: the checker parses `_config.yml`'s `exclude`.
 >
-> **No deploy risk is created.** `docs/` is in `exclude`, exactly as `seo/` is,
-> so Jekyll never renders any of them — these are the same false positive as
-> PH00-011's, in the same class, for the same reason. Wave 1 step 1.2 (teach the
-> checker to parse `exclude`) closes all eight at once. Until then the expected
-> count is **8, not 1**.
+> **The current expected state is `0 problems`, exit `0`** — see D31 and the
+> suite listing at the foot of this file. What it now checks is the **1**
+> markdown file Jekyll actually renders,
+> `revision-notes/macro-application/macro-application-uk-sa.md`, which is
+> PH10-060 and is proposed for `raw-notes/` by PH11 §4b. **If that move happens,
+> the file count goes to 0 and the script deliberately fails**, on the grounds
+> that a checker with nothing to check is dead code rather than a pass.
 
 ---
 
@@ -406,11 +407,19 @@ They have already been applied once and the site has moved on since; a no-flag
 re-run must stay harmless. Contrast `convert_raw_notes.py`, which has no guard —
 PH06-027.
 
-**`verify_liquid.py` exits 1 and that is the expected state.** PH00-011 is a
+~~**`verify_liquid.py` exits 1 and that is the expected state.** PH00-011 is a
 pre-existing false positive. Do NOT add this script to a CI workflow before
 PH00-011 is fixed: a workflow that is red from its first run gets ignored, and
 then it protects nothing. If it ever reports 0, something changed; if 2, look at
-what was added.
+what was added.~~
+
+**RESOLVED 2026-08-09, D31 — PH00-011 is fixed. `verify_liquid.py` now exits 0,
+and that is the expected state.** It parses `_config.yml`'s `exclude` (importing
+`build_sitemap.excludes()` rather than restating the list) and checks only the
+markdown Jekyll actually renders: **1 file, 0 problems, 133 excluded**. The
+precondition on Wave 1 step 1.4 is therefore met — this script may now join the
+CI workflow. If it ever reports a problem, that is a **real** deploy risk, which
+is the whole point of the fix.
 
 **Every enumeration tool in this repo globs `*.html`.** `lib.published_html()`,
 `lib.pages()`, `build_sitemap.py` and `verify_links.py` all do. So
@@ -459,7 +468,7 @@ python3 scripts/verify_html.py
 python3 scripts/verify_links.py
 python3 scripts/verify_text_integrity.py <before-ref>
 python3 scripts/verify_markup_integrity.py <before-ref> --strict
-python3 scripts/verify_liquid.py          # expect exactly 1 problem until PH00-011
+python3 scripts/verify_liquid.py          # 1 file checked, 0 problems, exit 0 (D31)
 python3 scripts/verify_glossary.py
 python3 seo/tools/verify_seo.py           # 14/14
 python3 scripts/build_sitemap.py --check  # "nothing written"

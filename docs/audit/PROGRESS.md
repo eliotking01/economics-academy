@@ -109,8 +109,14 @@ Run on `8c8034b` before any audit work:
 | `verify_links.py` | 179 pages, 5,329 internal refs, **0 broken hrefs, 0 broken fragments** |
 | `verify_liquid.py` | 106 files, **1 problem — exits 1**. Pre-existing false positive, finding PH00-011 |
 
-`verify_liquid.py` failing is the **expected** state today. If it ever reports 0,
-someone has changed something; if it reports 2, look at what was added.
+~~`verify_liquid.py` failing is the **expected** state today. If it ever reports 0,
+someone has changed something; if it reports 2, look at what was added.~~
+
+**Superseded 2026-08-09 by D31.** The table above is the baseline as measured on
+`8c8034b` and stays as a record. PH00-011 has since been fixed: `verify_liquid.py`
+parses `_config.yml`'s `exclude` and now reports **1 file checked, 0 problems,
+exit 0**. Reporting 0 is no longer a signal that something changed — it is the
+pass condition. A problem now means a genuine deploy risk.
 
 ---
 

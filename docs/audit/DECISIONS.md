@@ -539,3 +539,52 @@ the correct state. Both are struck through with the replacement check beside the
 **Rollback.** `git revert` the move commit. The files return to `_audit/` and the
 `.gitignore` line comes back in the same operation. Nothing published changes in
 either direction, because `docs/` was excluded throughout.
+
+### D31 — PH00-011 fixed: `verify_liquid.py` parses `_config.yml`'s `exclude`
+
+Eliot, 2026-08-09: **"Continue with your recommendation."** Wave 1 step 1.2 pulled
+forward ahead of the push, because D30's move took the checker from 1 false
+positive to 8 and pushing a verifier that is red for reasons nobody can act on is
+how a guard stops being read.
+
+**Done ahead of Wave 1 step 1.1.** The strict order in PH11 §2 exists because 1.4
+(the CI workflow) must not land before 1.2; 1.1 (the build-date stamp) is
+independent of both. Nothing was skipped that 1.2 depended on.
+
+**The fix is the one PH00-011 asked for.** `rendered_files()` knew only Jekyll's
+`_`-prefix rule, because `exclude:` did not exist when it was written
+(`fba7c7c` 2026-08-04, `d085317` 2026-08-08). It now imports
+`build_sitemap.excludes()` and `build_sitemap.published()` rather than restating
+the list — PH00-011 warned that a private skip list "recreates the same drift one
+commit later", and two callers of one parser cannot drift at all. Both live in
+`scripts/`, both stdlib-only, and `build_sitemap.py` is import-safe.
+
+| | before | after |
+| --- | ---: | ---: |
+| markdown files checked | 124 | **1** |
+| problems reported | 8 | **0** |
+| exit code | 1 | **0** |
+
+The one file it still checks is
+`revision-notes/macro-application/macro-application-uk-sa.md` — the only markdown
+GitHub Pages renders. PH00-011 predicted exactly two such files; `.codex/` became
+`docs/` under D14, leaving one, which is what the parser independently finds.
+
+**Verified in both directions, not just the happy one.** A planted stray `{%` in
+`revision-notes/` is caught and exits 1; the identical fault in `docs/` is
+correctly ignored and exits 0. Cross-checked against a second implementation:
+`build_sitemap.published()` and the audit's own `lib.is_published()` agree on all
+134 tracked markdown files, 0 disagreements.
+
+**New failure mode, deliberate.** If the set of rendered markdown ever becomes
+empty the script **fails** rather than printing a green zero, because a check
+that checks nothing is dead code, not a pass. **This interacts with PH11 §4b**,
+which proposes moving `macro-application-uk-sa.md` into `raw-notes/`: doing that
+takes the count to 0 and this script starts failing by design. When 4b lands,
+either delete `verify_liquid.py` or keep it as a guard against markdown
+reappearing on the published surface — that is a decision, and it should be made
+rather than absorbed as a red tick.
+
+**Consequence: Wave 1 step 1.4's precondition is met.** `DO-NOT-BREAK.md`'s
+"do not add this to CI before PH00-011 is fixed" is discharged, and its entry is
+struck through and replaced rather than deleted.
