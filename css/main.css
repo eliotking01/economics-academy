@@ -246,7 +246,7 @@ body,
 input,
 textarea,
 select {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   color: #5d5d5d;
   font-size: 14pt;
@@ -2239,12 +2239,16 @@ ul.social li a.fa-google-plus:hover {
   text-align: center;
 }
 
-#header h1 {
+/* The site title. A <p class="site-title">, not an <h1> - see the comment in
+   templates/header.html. `margin: 0` restores what the <h1> had: the theme
+   gives a <p> a 2em bottom margin and gave that heading none. */
+#header .site-title {
   color: #252122;
   font-weight: 900;
   font-size: 2.5em;
   letter-spacing: -0.035em;
   line-height: 1;
+  margin: 0;
 }
 
 /* Nav */
@@ -3060,7 +3064,7 @@ ul.social li a.fa-google-plus:hover {
     padding: 2em 0;
   }
 
-  #header h1 {
+  #header .site-title {
     color: #252122;
     font-weight: 900;
     font-size: 1.75em;
@@ -3456,4 +3460,83 @@ ul.social li a.fa-google-plus:hover {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #3b82f6; /* Modern blue color, adjust as needed */
+}
+
+/* ==========================================================================
+   Site chrome: the two runtime-injected templates
+   ==========================================================================
+   templates/header.html and templates/footer.html became <header id="header">
+   and <footer id="footer">, so the site finally has banner and contentinfo
+   landmarks. PH08-037.
+
+   Changing the element from <section> brought the theme's bare `header {}`,
+   `header > p {}` and `footer {}` rules into scope for the first time - they
+   had never matched the site chrome before. Everything in this block either
+   neutralises one of those or carries a declaration that used to be an inline
+   style attribute on the footer.
+
+   Placed at the end of the file on purpose. An inline style beats a media
+   query, so the ex-inline `padding: 2em 0` was overriding all three responsive
+   #footer paddings above (:2459, :2614, :3120). Moving it into a rule those
+   could override would change how the footer looks. They are dead today;
+   reconciling them is a separate change, not this one. */
+
+#header {
+  /* Neutralises `header { margin: 0 0 1.5em 0 }` and its 736px variant. */
+  margin: 0;
+}
+
+#header > p {
+  /* Neutralises `header > p`, which would italicise the tagline and reflow it. */
+  font-style: normal;
+  margin: 0 0 2em 0;
+  padding-bottom: 0;
+}
+
+#header .site-title {
+  /* Same, for the site title, which is also a direct child paragraph. */
+  font-style: normal;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#header .site-title a {
+  /* The title text is a link. While the title was an <h1> this came free from
+     `h1 a, h2 a, ... { color: inherit; text-decoration: none }` at :295. A <p>
+     does not match that rule, so the link fell through to the generic
+     `a { color: #d52349; text-decoration: underline }` at :313 and the site
+     name rendered pink and underlined. Restated here for the same effect. */
+  color: inherit;
+  text-decoration: none;
+}
+
+#footer {
+  /* `margin` neutralises `footer { margin: 2.25em 0 0 0 }`; the rest were the
+     inline style attribute on the element itself. */
+  margin: 0;
+  padding: 2em 0;
+  background: #2f2f2f;
+  text-align: center;
+}
+
+#footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+  font-size: 0.9em;
+}
+
+#footer .footer-links li {
+  display: inline;
+  margin: 0 1em;
+}
+
+#footer .footer-links a {
+  /* Beats `#footer a { color: #c5c4c4 }` at :2475, as the inline style did. */
+  color: #ccc;
+}
+
+#footer .footer-copyright {
+  font-size: 0.8em;
+  color: #999;
 }

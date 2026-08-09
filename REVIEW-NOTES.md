@@ -1594,3 +1594,50 @@ covers both boards. **The Edexcel notes page still reads
 "Factors of production: the resources used to produce goods and services:"
 followed by a table** — correct in context on the page, but worth a look if you
 ever want that chip to stand alone.
+
+---
+
+# Found by the audit — logged, not fixed (2026-08-09)
+
+## G4 — `Regulation` is defined twice, from two notes pages, and neither reads as a definition
+
+Surfaced by `scripts/check_glossary_capitalisation.py`, which classifies every
+glossary definition by how it opens and has been reporting these two as
+**"Unclassified — needs a look"** since the glossary was built. It wrote them to
+`_working/glossary/capitalisation-report.md` and exited **0**, so nothing ever
+came of it. That silence is the governance half of the finding and is being fixed
+separately; this entry is the content half. PH10-063.
+
+**Both are real, both are live, and no wording has been changed here.**
+
+| Source | The definition as the glossary shows it |
+| --- | --- |
+| edexcel-a **1.3.2** `1-3-2-externalities.html` | "ban/limit the production or consumption of goods that generate negative externalities, or other regulations that decrease production." |
+| edexcel-a **1.4.1** `1-4-1-government-intervention-in-markets.html` | "bans/limits on the production of demerit goods or requiring the consumption of merit goods. This can increase/decrease the S=MPC or D=MPB curve, internalising the externality." |
+
+Two problems, and the second is the one that matters:
+
+1. **Neither opens as a definition of the term.** Both start with the *instrument*
+   ("ban/limit…", "bans/limits on…") rather than saying what regulation *is*, so
+   the glossary entry reads as a sentence fragment. This is the same shape as the
+   Section F cases above, and the `capitalise` and `rewrite` blocks in
+   `curation.json` exist for exactly this — but neither rule fits, which is why
+   the script could not classify them.
+2. **The same term is defined twice, from two different pages.** The glossary has
+   one entry per term, so these two compete. They are not the same claim: 1.3.2
+   is about negative externalities, 1.4.1 about merit and demerit goods and the
+   curve shift. Whichever wins, a student sees one and not the other.
+
+**Not fixed, because the fix is a content decision and the rule is that the notes'
+own words are not altered without explicit instruction.** The options, in the
+order the glossary's own conventions prefer them:
+
+- **Fix it in the notes and re-extract** — the standing rule. Give one of the two
+  pages a `key-definition` chip that opens on a noun phrase ("Regulation is …"),
+  and exclude the other source in `curation.json`.
+- **Exclude one source and add a `rewrite` rule** for the survivor's lead-in.
+- **Author a definition** in `authored.json` covering both, and exclude both
+  sources — the same route taken for `Maximum Price` and the trading blocs.
+
+Worth noting the third option makes `authored.json` grow, and CLAUDE.md says that
+file "is meant to shrink".

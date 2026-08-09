@@ -1,7 +1,17 @@
 <!-- templates/header.html -->
 <a href="#main" class="skip-to-content">Skip to main content</a>
-<section id="header">
-  <h1><a href="/">Economics Academy</a></h1>
+<!-- A <header> element, not a <section>: this is the site's banner landmark and
+     there was none anywhere on the site. The id is unchanged because every rule
+     in css/main.css targets #header. PH08-037. -->
+<header id="header">
+  <!-- Deliberately a paragraph, not a top-level heading. This template is
+       injected above every page's own heading, so a heading here made the
+       document outline open with the site name on all 463 pages and put
+       "Economics Academy" ahead of the page title for anyone navigating by
+       heading. Styled by #header .site-title. PH08-036.
+       No literal tag names in this comment: several tools in this repo count
+       headings by grepping the raw source. -->
+  <p class="site-title"><a href="/">Economics Academy</a></p>
   <p>The Home of A-Level Economics.</p>
 
   <nav id="nav">
@@ -52,11 +62,14 @@
           <li>
             <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
           </li>
-          <li>
-            <a href="/flashcards/">Flashcards</a>
-          </li>
         </ul>
       </li>
+      <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+           that a feature nests under the section it belongs to and only a
+           standalone tool sits at root; the URL had already declared it
+           standalone while the nav presented it as a Revision Notes sub-item.
+           PH07-057. -->
+      <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
       <li data-page="practice-questions">
         <a href="/practice-questions/">Practice Questions</a>
         <ul>
@@ -122,4 +135,4 @@
       <li data-page="contact"><a href="/contact.html">Contact</a></li>
     </ul>
   </nav>
-</section>
+</header>

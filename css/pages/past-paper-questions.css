@@ -121,6 +121,7 @@
 .past-paper-questions-page .ppq-field select:focus {
   border-color: var(--ppq-accent);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(213, 35, 73, 0.15);
 }
 
 .past-paper-questions-page .ppq-clear {
