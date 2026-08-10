@@ -1142,6 +1142,105 @@ scripted selector prefix mangled the comments in `contact.css` on the first
 attempt — the "never bulk-rewrite with a script" rule earns its place on CSS as
 well as prose.
 
+### 4.9 done. The contradiction was real and both documents survive it
+
+**`seo/07b-link-decisions.md` §5's "449" and "275" are PAGE counts, not link
+counts.** That is what made the two documents look incompatible. Measured before
+writing anything: **449 pages / 455 links** to `tutoring.html`, **275 pages /
+276 links** to `marking.html` — §5's figures are still exactly current, so it
+could not be dismissed as stale.
+
+**The fact that settles it is in neither document: 444 of those 455 tutoring
+links read `Book a Free Intro Call`.** 97.6%, across 8 distinct anchors. §5's
+*next* bullet declines reusing an anchor string precisely because "adding more
+deepens a monoculture". So ten more of the same string is the thing §5 objects
+to, and ten links carrying new anchor text is not. §5 was written against the
+*bulk* proposals in the same document — items 1–3 were 166- and 253-page sweeps.
+
+| | before | after |
+| --- | ---: | ---: |
+| pages linking `tutoring.html` | 449 | **459** |
+| pages linking `marking.html` | 275 | **285** |
+| distinct tutoring anchors | 8 | **10** |
+| distinct marking anchors | 7 | **9** |
+| published pages with no commercial link | 13 | **2** |
+
+**PH07-058 says ten pages; there were thirteen.** The three it missed are
+`privacy.html` and `confirmation.html`, both correctly excluded, and
+**`revision-notes/macro-application/index.html`** — the only 1 of 176 notes
+pages with no link to a paid service. That page already *had* a `notes-cta`;
+it was one button long. It now matches the two diagram galleries button for
+button, which also answers the board question the component contract raises:
+a page with no board points at `/past-papers/`, the hub, exactly as they do.
+
+Both generators only, no generated HTML hand-edited; `glossary.css` 108/0 and
+`flashcards.css` 125/0 unscoped; both new blocks hidden in `@media print`;
+three consecutive runs of each generator hash identically, deck JSON included.
+
+**Caught by rendering rather than reading:** the notes CTA's `#f8f8f8` panel is
+invisible on these pages. It works on a topic page because `.notes-container` is
+white; the glossary and flashcards blocks sit directly on `#main`, which
+`css/main.css` paints `#f7f7f7`, so the block drew as a red bar floating in the
+page with no panel at all. Both are white with a border. `macro-application`
+kept `#f8f8f8` and is correct, because it *is* on a `.notes-container`.
+
+### `verify_text_integrity.py` was wrong in both directions
+
+Found while doing 4.9, and the two errors had been hiding each other because the
+step had never been anything but green — checked over the last 15 commits on
+`main`, all exit 0.
+
+- **14 hand-written published pages were never compared:** the 9 root pages and
+  the 5 `past-papers/` hubs. The root pages are the commercial surface, so the
+  wording most worth protecting was the wording nobody checked.
+  `templates/header.html` and `footer.html` were out too, and every nav label on
+  all 463 pages comes from them.
+- **The 3 generated glossary pages were compared**, which is the one place a
+  legitimate change routinely appears. Their wording already has a stronger
+  guarantee: `verify_glossary.py` check 1 and `verify_generated.py`.
+
+Now 192 hand-written pages, enumerating through `build_sitemap.published()` like
+`verify_liquid.py` and `verify_css_load_order.py`. Five modes tested by
+breaking each.
+
+### An approved content change now declares itself
+
+4.9 opened a gap and closed it. `verify_text_integrity.py` cannot tell an
+approved content change from prose tampering, and had no way to be told — so it
+went **red on correct work**, which the workflow's own comment says is exactly
+how a check gets ignored and then protects nothing. Wave 5 is nothing but
+approved content changes and Wave 3's relabelling is another, so it would have
+been red more often than green.
+
+A commit that means to change visible text now names the pages it changes:
+
+```
+Text-Change: revision-notes/macro-application/index.html
+```
+
+one line per path, reason in the commit body. Three properties make it a
+declaration rather than an off switch:
+
+- **It lives in a commit message**, so it applies to exactly that commit and
+  cannot be left on by accident. There is no file to forget to revert.
+- **It is per path.** Declaring one page and changing the wording of another
+  still fails — that is the accident being guarded against, and it is the
+  property a blanket flag would not have.
+- **It is in `git log` forever**, so the record of every deliberate wording
+  change is the history itself.
+
+Trailers are collected across the whole range, not one commit, because the case
+that matters is a **merge**: CI compares the merge commit against `main`'s
+previous tip, and the declarations sit on the commits being merged. A
+declaration for a file that did not move is reported, never failed — a commit
+message cannot be amended once pushed, so a stale trailer must not wedge the
+workflow.
+
+Five behaviours tested on throwaway branches. Two first came back green for the
+wrong reason — one edit landed in an `alt` attribute, which is not visible text,
+and one merged a branch holding a deliberately-bad commit. **Both were harness
+bugs**, and both are why the harness now asserts that every edit applied.
+
 ### A verifier for the defect 4.1 found by hand
 
 `scripts/verify_image_dimensions.py`, 18th step in the workflow. Nothing
@@ -1203,7 +1302,7 @@ from 1000–1024 to 850.
 | 4.4 font fallback metrics | **done, live** |
 | 4.5 breakpoints | **done, live** |
 | 4.6 scope the bare selectors | **done** — textbook sheet 132/0; contact/tutoring declined, measured; `verify_css_load_order.py` added |
-| 4.9 CTA on the glossary and flashcards generators | not started |
+| 4.9 CTA on the glossary and flashcards generators | **done** — 11 pages, new anchor text; `verify_text_integrity.py` scope fixed |
 | 4.7, 4.8 | **held until after the GSC re-measure, ≈2026-09-22** |
 | 4.10 jQuery/dropotron removal | **gated on Wave 2 Phase 7** |
 

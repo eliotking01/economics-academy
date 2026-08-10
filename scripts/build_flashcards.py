@@ -418,6 +418,21 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
 """
 
 
+# PH07-058, Wave 4.9. See the matching note in build_glossary.py: flashcards
+# and the glossary were the only two families with no body link to a paid
+# service, and the injected footer needs JavaScript. The anchor text is new on
+# purpose - 444 of 455 links to tutoring.html already read "Book a Free Intro
+# Call", and seo/07b-link-decisions.md §5 declines deepening exactly that.
+SERVICES_CTA = """
+          <section class="fc-services-cta">
+            <p>Recall is the easy half — the marks are in the application.</p>
+            <a href="/marking.html" class="button alt"
+              >Have a practice paper marked</a
+            >
+            <a href="/tutoring.html" class="button">Book a tutoring session</a>
+          </section>"""
+
+
 def breadcrumb_html(crumbs, indent=10):
     pad = " " * indent
     parts = []
@@ -551,7 +566,8 @@ def deck_page(deck, cards, topics):
             <a href="/practice-questions/{notes_dir}/" class="button">
               Try the practice questions
             </a>
-          </section>"""
+          </section>
+{SERVICES_CTA}"""
     return page_shell(
         title=deck["deckTitle"],
         desc=deck["metaDescription"],
@@ -612,7 +628,8 @@ def hub_page(decks):
             <a href="/practice-questions/" class="button">
               Try the practice questions
             </a>
-          </section>"""
+          </section>
+{SERVICES_CTA}"""
     return page_shell(
         title="A-Level Economics Flashcards | Economics Academy",
         desc="Free interactive A-Level Economics flashcards for Edexcel A "
