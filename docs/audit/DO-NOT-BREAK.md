@@ -292,6 +292,34 @@ aspect ratio needs no HTML edit; one that changes it by even a rounding step mus
 update all 295 `<img>` tags in the same commit, or layout shift appears where
 there is none today. PH08-034.
 
+> **Done 2026-08-10, Wave 4.1, and the count is 293 not 295.** All 112 PNGs were
+> re-encoded to a 64-colour palette in place — same filenames, **same pixel
+> dimensions**, so no HTML edit was needed and none was made. 26.21 → 5.41 MiB.
+> Three things worth keeping:
+>
+> - **The resize was dropped, deliberately.** The palette does 79.4% alone;
+>   1600px takes it to 81.7%, which is 0.61 MiB sitewide, against rewriting 293
+>   `<img>` tags and softening every diagram on a 2× display — the notes
+>   container is ~1088 CSS px, so 2176 device px, and the sources are
+>   2200–3600px. Resampling to 2200px measured **larger** than not resizing.
+>   Do not re-propose the resize without new evidence.
+> - **Never quantise these with fast-octree.** It is smaller (4.48 MiB) and it
+>   maps the white background to `(254,254,254)` on all 112, putting every
+>   diagram in a faint grey rectangle. Median cut keeps pure white on 112/112
+>   and `scripts/reencode_diagrams.py` aborts if any file loses it.
+> - **`scripts/reencode_diagrams.py` skips files already converted, and must
+>   keep doing so.** Median cut is not idempotent: without the guard a second
+>   `--apply` rewrote 37 of 112 files to the same total size and different
+>   bytes. It is the only script in the repo needing a non-stdlib package
+>   (Pillow), it is a one-off conversion rather than a build step, and it is
+>   **not** in the CI workflow.
+>
+> **One pre-existing defect was found and fixed by the same check.**
+> `long-run-growth-ad-lras.png` was declared `1667x593` on
+> `revision-notes/macroeconomics-diagrams.html` against `3030x1454` on disk —
+> the one tag of 293 that disagreed with its file. All 293 now agree, and that
+> is worth re-checking after anything touches `images/diagrams/`.
+
 ## Numbers added by P8
 
 | Assertion | Value | Command |

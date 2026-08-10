@@ -773,6 +773,7 @@ The audit is finished and the roadmap is being built.
 | 1.6 | Capitalisation check fails on unclassified | PH10-063 | |
 | 1.4 | `.github/workflows/verify.yml`, 15 steps, read-only | PH10-062 | |
 | 4b | `macro-application-uk-sa.md` → `raw-notes/` | PH10-060 | D32 |
+| 4.1 | 112 diagram PNGs to a 64-colour palette, 26.21 → 5.41 MiB | PH08-034, D25 | |
 | — | `Regulation` defined on the Edexcel glossary page | PH10-063 | |
 
 **Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
@@ -811,6 +812,56 @@ Recorded because the same habit will be needed for Waves 2–5.
 - **Measure the element the reader sees, not its container.** 0.5 measured
   `.site-title` — correct throughout — while the `<a>` inside it went pink and
   underlined, because the theme styles `h1 a` and not `p a`.
+
+### 4.1 done. The palette is the whole saving; the resize is not
+
+**26.21 MiB → 5.41 MiB, 79.4%, same filenames and same pixel dimensions, 0 HTML
+edits.** Mean image weight on the 95 pages carrying a diagram: **709 KB → 146
+KB**. Heaviest page, the microeconomics gallery: **11.3 MB → 2.4 MB**.
+`scripts/reencode_diagrams.py --apply`, dry run by default.
+
+**D25's two gates, both answered by measurement.**
+
+- **No diagram needs a non-white backdrop, and the question is moot.** All 112
+  are RGBA with **zero** non-opaque pixels — nothing is composited against the
+  page at all. Twelve have one corner at 250–254 grey, which is render noise.
+- **Quantisation is invisible on the shaded diagrams.** `j-curve` and
+  `perfect-competition-short-run-supernormal-profit` are indistinguishable at
+  display width. The worst-error window of the worst file (`trade-union`, 4,867
+  source colours) is indistinguishable at 2×: 1,424 of 120,000 pixels differ by
+  more than 16, all on antialiased edges. The whole microeconomics gallery page,
+  rendered, has **0** pixels differing by more than 8 of 255.
+
+**Two departures from the roadmap line, both forced by the measurement.**
+
+1. **No resize to 1600px.** The palette alone is 79.4%; adding the resize gives
+   81.7% — 0.61 MiB across the whole site. It would cost 293 `<img>` rewrites
+   and sharpness on every 2× display: the notes container is ~1088 CSS px, so
+   2176 device px, and the sources are 2200–3600px today. Resampling to 2200px
+   measured **larger** than not resizing, because Lanczos invents intermediate
+   colours the palette then spends entries on. **The resize is not where the
+   saving comes from.**
+2. **~3.2 MB is not reachable here.** That figure assumes pngquant/libimagequant,
+   which is not installed and which Pillow does not carry. Pillow's fast-octree
+   does reach 4.48 MiB and was rejected: it maps white to `(254,254,254)` on all
+   112, which would put every diagram in a faint grey rectangle. Median cut
+   keeps pure white on 112/112.
+
+**Not idempotent until it was made so.** Median cut re-quantises a converted
+file to different bytes; before the skip guard a second `--apply` rewrote 37 of
+112 files to the same total size. That is PH09b-025's failure mode in a new
+place.
+
+**One pre-existing defect found by the same check and fixed.**
+`long-run-growth-ad-lras.png` declared `1667x593` on
+`revision-notes/macroeconomics-diagrams.html` against `3030x1454` on disk — the
+one tag of 293 disagreeing with its file, reserving a box 35% too short. All 293
+now agree.
+
+**Still open, not decided here:** 11 of the 112 diagrams are referenced by
+nothing (3.1 MiB before, 0.6 MiB now) and are published. They were re-encoded
+with the rest. Whether they should exist at all is a published-surface question
+of the same kind as D28's `logo/`, and is nobody's call but Eliot's.
 
 ## Open, not started
 
