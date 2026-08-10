@@ -1,14 +1,39 @@
 #!/usr/bin/env python3
 """Prove that a commit changed no visible wording.
 
-Extracts the plain text of every note page at two commits, normalises
-whitespace, and diffs. Used to gate the formatting and emphasis commits,
-where the rule is that markup may change but not a single word.
+Extracts the plain text of every hand-written published page at two commits,
+normalises whitespace, and diffs. Used to gate the formatting and emphasis
+commits, where the rule is that markup may change but not a single word.
 
 Script, style and comment content is dropped, since none of it is visible
 text. Everything else - including the contents of inline elements such as
 <strong> and <em> - is kept, so moving a tag boundary across a word would
 still be caught.
+
+WHAT IS COMPARED, AND WHY IT IS NOT SIMPLY revision-notes/
+
+Until Wave 4.9 this walked `revision-notes/` and nothing else. That was wrong
+in both directions, and the two errors hid each other:
+
+  * 14 hand-written published pages were never compared - the 9 root pages
+    (index, tutoring, marking, about, faq, contact, privacy, confirmation,
+    404) and the 5 past-papers/ hub pages. The root pages are the commercial
+    surface, so the wording most worth protecting was the wording nobody was
+    checking. templates/header.html and footer.html were out too, and every
+    nav label on all 463 pages comes from them.
+
+  * The 3 generated glossary pages WERE compared, and they are the one place
+    where a legitimate change routinely shows up: regenerate, and the diff is
+    the generator's output rather than anybody's edit. Their wording already
+    has a stronger guarantee than this script can give - verify_glossary.py
+    check 1 re-reads the notes and fails if a shipped definition is no longer
+    in its source page, and verify_generated.py proves the committed output is
+    exactly what the source produces. A third, weaker check over the same
+    files buys nothing and goes red on a correct commit.
+
+So: every published page EXCEPT the four generated families. Coverage goes
+from 179 files (3 of them generated) to 192 hand-written ones. If a generated
+page's wording is wrong, the two checks named above are what catch it.
 
 Usage:
     python3 scripts/verify_text_integrity.py <before-ref> [<after-ref>]
@@ -24,7 +49,25 @@ import subprocess
 import sys
 from html.parser import HTMLParser
 
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+# Sibling in scripts/, for its _config.yml `exclude` parser and publish rule -
+# the same import verify_liquid.py and verify_css_load_order.py use, so all
+# three agree with the sitemap about what Jekyll actually builds.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import build_sitemap  # noqa: E402
+
 SKIP = {"script", "style"}
+
+# Generated families. Fix the source or the generator and re-run; their text is
+# guaranteed by verify_generated.py, and the glossary's additionally by
+# verify_glossary.py check 1. See the module docstring.
+GENERATED = (
+    "revision-notes/glossary/",
+    "practice-questions/",
+    "past-paper-questions/",
+    "flashcards/",
+)
 
 
 class TextExtractor(HTMLParser):
@@ -68,13 +111,29 @@ def read_at(ref, path):
 
 
 def list_files(ref):
+    """Every hand-written published .html at `ref`, or in the working tree.
+
+    The publish rule is read from today's _config.yml on both sides on
+    purpose: this compares two revisions of the same site, so the question is
+    what is published now, not what a past exclude list said.
+    """
     if ref is None:
-        return sorted(str(p) for p in pathlib.Path("revision-notes").rglob("*.html"))
-    out = subprocess.run(
-        ["git", "ls-tree", "-r", "--name-only", ref, "revision-notes"],
-        capture_output=True, text=True, check=True,
-    ).stdout.split()
-    return sorted(f for f in out if f.endswith(".html"))
+        out = subprocess.run(
+            ["git", "ls-files", "*.html"], cwd=ROOT,
+            capture_output=True, text=True, check=True,
+        ).stdout.split()
+    else:
+        out = subprocess.run(
+            ["git", "ls-tree", "-r", "--name-only", ref],
+            capture_output=True, text=True, check=True,
+        ).stdout.split()
+    ex = build_sitemap.excludes()
+    return sorted(
+        f for f in out
+        if f.endswith(".html")
+        and build_sitemap.published(f, ex)
+        and not f.startswith(GENERATED)
+    )
 
 
 def main(argv):
