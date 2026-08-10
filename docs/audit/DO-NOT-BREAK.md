@@ -299,6 +299,27 @@ Already recorded above as fetched at runtime. P8 proposes *adding* per-topic
 payloads beside it, never replacing it: the master search page needs the full
 index. PH08-046.
 
+> **Done 2026-08-10, Wave 4.3, and the master payload is untouched.** 81
+> per-topic payloads now sit at
+> `past-paper-questions/<board>/<slug>/questions.json`, median 9.6 KB against
+> the 413.7 KB those pages used to fetch. All 90 files are generated — do not
+> hand-edit any of them, re-run `scripts/build_past_paper_questions.py`.
+>
+> - **The master, board and section pages must keep fetching the full index.**
+>   Their Topic filter is live and lists every topic on the board, which a
+>   per-topic payload cannot supply. Only pages with `data-prefilter-topic`
+>   carry `data-src`.
+> - **`papers` in a per-topic payload is a sparse list, and the nulls are
+>   load-bearing.** `question-search.js` reads `data.papers[q.p]` where `q.p`
+>   is an index into it (`:136`, `:393`). Re-packing the list to drop the nulls
+>   would re-point every question at the wrong paper, silently, with no error
+>   and plausible-looking output. It saves about 300 bytes. Do not do it.
+> - **`topics` carries every tag on every included question**, not just the
+>   page's own topic, because each card renders a link per tag.
+> - The stale-output sweep at the end of the generator deletes per-topic
+>   payloads by the same rule as pages, and skips `PAGE_DIR` itself — that
+>   guard is what stops it deleting the master `questions.json`.
+
 **`4db232c` is not to be reversed by anything in PH08-033.** Removing
 FontAwesome's render-blocking chain and reducing FontAwesome's *size* are
 different changes. The two `@import` rules stay out of `css/main.css`; the

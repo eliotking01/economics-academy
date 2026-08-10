@@ -285,11 +285,17 @@ def e(s):
     )
 
 
-def search_component(topic="", board="", group=""):
+def search_component(topic="", board="", group="", src=""):
     """The search UI skeleton.
 
     Rendered identically on the master page, the board and section pages and the
-    topic pages; only the pre-filter attributes differ.
+    topic pages; only the pre-filter attributes and `data-src` differ.
+
+    `src` overrides the payload the component fetches. A topic page has no use
+    for the other 537 questions and fetching them cost it 413.7 KB, so it
+    points at its own payload instead - a median of 9.6 KB. The master page and
+    the board and section pages leave it empty and get the full index, which is
+    what they need: their Topic filter lists every topic on the board.
 
     The controls ship VISIBLE and disabled, and question-search.js enables them
     once questions.json has loaded. They used to ship `hidden` and be revealed
@@ -312,14 +318,16 @@ def search_component(topic="", board="", group=""):
       <noscript> note says why it is inert. The question list below it is static
       HTML and works with scripting off exactly as before.
     """
-    attr = ""
+    attr = ' data-src="' + e(src) + '"' if src else ""
     # A control is meaningless on a page already fixed to that value, so the
     # page ships without it. Mirrors what question-search.js used to do at
     # runtime; doing it here keeps the panel one fixed height from first paint.
     fixed = set()
     if topic:
         # A topic already implies its board and section.
-        attr = ' data-prefilter-topic="' + e(topic) + '"'
+        # `+=`, not `=`: this used to overwrite whatever attr already held,
+        # which silently dropped data-src on exactly the pages that need it.
+        attr += ' data-prefilter-topic="' + e(topic) + '"'
         fixed |= {"topic", "board", "group"}
     else:
         if board:
@@ -1005,6 +1013,45 @@ def related_topics(index, slug):
     return (sorted(same_unit, key=key) + sorted(same_group, key=key))[:6]
 
 
+def topic_payload(index, slug):
+    """The search payload for one topic page: same shape, a fraction of the size.
+
+    The full index is 413.7 KB and every one of the 81 topic pages fetched it
+    to use a median of 15 questions. This is the same object with three fields
+    narrowed. PH08-046.
+
+    `papers` stays a **sparse list**, with `None` in every slot the page does
+    not reference, because `question-search.js` addresses it as `data.papers[q.p]`
+    - `q.p` is an index into it, so re-packing the list would silently
+    re-point every question at the wrong paper. Nulls cost about 300 bytes and
+    keep the indexing exactly as it is. Verified: the component never iterates
+    `papers`, only subscripts it (question-search.js:136 and :393).
+
+    `topics` keeps every topic any included question is tagged with, not just
+    this one, because the cards render a link per tag. The Topic filter, which
+    is the other consumer of that field, is hidden on a topic page.
+
+    One deliberate behaviour change: `populate()` builds the Paper, Year,
+    Marks, Section and Qualification dropdowns from the payload, so they now
+    offer only values that exist on the page. A topic page used to list all 9
+    years when a mean of 4.9 have questions, and all 3 papers when a mean of
+    1.7 do; picking one of the others returned nothing. Those options are gone.
+    """
+    questions = questions_for(index, topic=slug)
+    used_papers = {q["p"] for q in questions}
+    used_topics = sorted({t for q in questions for t in q["topics"]})
+    return {
+        "count": len(questions),
+        "gate": index["gate"],
+        "boards": index["boards"],
+        "papers": [p if i in used_papers else None
+                   for i, p in enumerate(index["papers"])],
+        "topics": {t: index["topics"][t] for t in used_topics
+                   if t in index["topics"]},
+        "questions": questions,
+    }
+
+
 def render_topic_page(index, slug):
     t = index["topics"][slug]
     board = board_of(index, t["board"])
@@ -1061,7 +1108,7 @@ def render_topic_page(index, slug):
             </p>
           </section>
 
-{search_component(topic=slug)}
+{search_component(topic=slug, src=path + "questions.json")}
 {related_html}
 {CTA}"""
 
@@ -1225,6 +1272,7 @@ def main():
     print(f"wrote {OUT.relative_to(ROOT)} ({size / 1024:.0f} KB)")
 
     written = [INDEX]
+    payloads = []
     paths = ["/past-paper-questions/"]
 
     INDEX.write_text(render_index(index), encoding="utf-8")
@@ -1247,10 +1295,23 @@ def main():
                 continue
             emit(*render_group_page(index, board, group))
 
+    payload_bytes = 0
     for slug in sorted(
         gated, key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]
     ):
-        emit(*render_topic_page(index, slug))
+        path, page = render_topic_page(index, slug)
+        emit(path, page)
+        # Written beside the page it serves, minified for the same reason the
+        # master payload is: nobody reads it, the browser fetches it.
+        rel = path.strip("/").split("/")[1:]
+        dest = PAGE_DIR.joinpath(*rel, "questions.json")
+        dest.write_text(
+            json.dumps(topic_payload(index, slug), ensure_ascii=False,
+                       separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        payloads.append(dest)
+        payload_bytes += dest.stat().st_size
 
     # Anything under past-paper-questions/ that this run did not write is a page
     # for a topic that has since dropped below the gate or been retagged. The
@@ -1259,6 +1320,16 @@ def main():
     removed = 0
     for child in sorted(PAGE_DIR.rglob("index.html"), reverse=True):
         if child.parent in keep or child.parent == PAGE_DIR:
+            continue
+        child.unlink()
+        removed += 1
+    # Per-topic payloads go the same way, and by the same rule. The guard on
+    # PAGE_DIR is what keeps the master past-paper-questions/questions.json,
+    # which is not one of these and must stay published - it is what the
+    # master, board and section pages fetch.
+    kept_payloads = set(payloads)
+    for child in sorted(PAGE_DIR.rglob("questions.json"), reverse=True):
+        if child in kept_payloads or child.parent == PAGE_DIR:
             continue
         child.unlink()
         removed += 1
@@ -1272,6 +1343,13 @@ def main():
                  {"microeconomics", "macroeconomics"})
     topics = len(paths) - 1 - boards - groups
     print(f"wrote {boards} board pages, {groups} section pages, {topics} topic pages")
+    if payloads:
+        sizes = sorted(p.stat().st_size for p in payloads)
+        print(f"wrote {len(payloads)} per-topic payloads, "
+              f"{payload_bytes / 1024:.0f} KB total, "
+              f"median {sizes[len(sizes) // 2] / 1024:.1f} KB, "
+              f"largest {sizes[-1] / 1024:.1f} KB "
+              f"(each replaces a {size / 1024:.0f} KB fetch)")
     if removed:
         print(f"removed {removed} stale page(s)")
 

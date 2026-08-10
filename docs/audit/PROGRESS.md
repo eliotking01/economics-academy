@@ -777,6 +777,7 @@ The audit is finished and the roadmap is being built.
 | — | `Regulation` defined on the Edexcel glossary page | PH10-063 | |
 | 4.4 | `size-adjust` fallbacks in `main.css`; the two `ch` measures dropped | PH08-041, PH08-035 | |
 | 4.2 | FontAwesome subset: stylesheet 69.4 KB → 2.9 KB, fonts 2.79 MiB → 1.5 KB | PH08-033 | |
+| 4.3 | Per-topic ppq payloads, 413.7 KB → 9.6 KB median on 81 pages | PH08-046 | |
 
 **Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
 fixed both times; it is now guarded.
@@ -981,12 +982,57 @@ constructor — it is not the same thing as `subset.Options.recalc_timestamp`.
 Caught by hashing three consecutive runs, which is now worth doing to anything
 here that writes a file.
 
+### 4.3 done. 81 topic pages stop fetching the whole bank
+
+Each of the 81 topic pages fetched the full **413.7 KB** index to use a median
+of 15 questions. Each now fetches its own payload, written beside it by
+`build_past_paper_questions.py`:
+
+| | |
+| --- | --- |
+| median | **9.6 KB** |
+| largest | 26.0 KB — `1-3-2-externalities`, 23 questions |
+| total across all 81 | 907 KB, against 32.7 MiB of repeated full payload |
+
+**`past-paper-questions/questions.json` is untouched and still published**, as
+DO-NOT-BREAK requires. The master page, the 2 board pages and the 6 section
+pages still fetch it and must — their Topic filter lists every topic on the
+board. Only the 81 pages carrying `data-prefilter-topic` get a payload, and
+only those carry `data-src`.
+
+**Two things that would have broken it, both checked before writing code.**
+
+- **`papers` stays a sparse list**, `null` in every unreferenced slot.
+  `question-search.js` addresses it as `data.papers[q.p]` — `q.p` is an
+  *index*, so re-packing the list would silently re-point every question at
+  the wrong paper. The nulls cost about 300 bytes. Confirmed the component
+  only ever subscripts that field and never iterates it
+  (`question-search.js:136`, `:393`).
+- **`topics` keeps every topic any included question is tagged with**, not just
+  the page's own, because each card renders a link per tag.
+
+**One deliberate behaviour change.** `populate()` builds the Paper, Year,
+Marks, Section and Qualification dropdowns from the payload, so they now offer
+only values that exist on the page. A topic page used to list all 9 years where
+a mean of **4.9** have questions, and all 3 papers where a mean of **1.7** do;
+choosing one of the others returned nothing. Those dead options are gone.
+Otherwise the rendered page is **pixel-identical** — 0 differing pixels at
+1000px.
+
+**The CLS half of this item was already closed by 4.4**, which took the
+past-paper-questions page to 0.009 / 0.014 / 0.021 with the residual being the
+header injection. 4.3 is weight only.
+
+**Caught in passing:** `search_component()` assigned rather than appended to
+`attr` in the topic branch, so `data-src` was silently dropped on exactly the
+pages that needed it. The first run wrote 81 payloads that nothing fetched.
+
 ## Open, not started
 
 - **Wave 2** — the build step, D18's `page_shell.py`. Needs its own session.
 - **Wave 3** — `boards.json` and the Edexcel A labels. **Blocked on the GSC
   re-measure.**
-- **Wave 4** — 4.3, 4.5, 4.6, 4.9 runnable now. **4.7 and 4.8 are
+- **Wave 4** — 4.5, 4.6, 4.9 runnable now. **4.7 and 4.8 are
   held until after the GSC re-measure** — they change internal-linking signals
   into the pages that re-measure is about. **4.10 is gated on Wave 2 Phase 7.**
 - **Wave 5** — content and editorial, each item needing explicit approval.
