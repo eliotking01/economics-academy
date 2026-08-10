@@ -4,7 +4,8 @@
 Nothing below needs the site re-crawled — the scripts in `docs/audit/scripts/`
 reproduce every figure in seconds.
 
-Last updated: **2026-08-09**. **THE AUDIT IS COMPLETE.**
+Last updated: **2026-08-10**. **THE AUDIT IS COMPLETE**; implementation is
+under way — jump to `# HANDOVER` at the end of this file for the current state.
 
 ---
 
@@ -780,6 +781,7 @@ The audit is finished and the roadmap is being built.
 | 4.3 | Per-topic ppq payloads, 413.7 KB → 9.6 KB median on 81 pages | PH08-046 | |
 | 4.5 | 18 media queries 768 → 767, pairing with the nav boundary | PH07-059 | |
 | — | `verify_image_dimensions.py`; 3 root photos gain dimensions | PH08-034 | |
+| — | Nav fits one line at every desktop width (Flashcards made it 9 items) | — | |
 
 **Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
 fixed both times; it is now guarded.
@@ -1080,6 +1082,95 @@ how `macroeconomics-diagrams.html` shipped a box 35% too short. Pure stdlib —
 it reads the PNG, JPEG, GIF, WEBP and SVG headers itself. Both failure modes
 tested by breaking them. **3 root photographs** gained dimensions in the same
 commit, because a check that is red on its first run gets ignored.
+
+### The nav, after Flashcards made it nine items
+
+Not a roadmap item — raised by Eliot on 2026-08-10. Nine top-level items need
+**1045px** for one line; below that the nav wrapped, worst at 1000–1024 where
+eight sat on the first row and **"Contact" was orphaned** on the second. That is
+the half-screen width of a 1920 display.
+
+**44% of the nav's 1018px was horizontal padding and margin** — 19.2px each side
+of every link plus 5.6px of margin, against 571px of text. One compact tier
+below 1100px (padding `0.5em`, margin `0.15em`, type `0.875em`) fits all nine on
+one line from **768px up**. Vertical padding is untouched, so the link height and
+tap target are unchanged, and ≥1100px is byte-identical CSS.
+
+Two alternatives were measured and rejected: raising the hamburger breakpoint to
+~1100 hides the nav from laptop users **and** drags all 18 of 4.5's breakpoints
+with it; tightening spacing without the type change only relocated the orphan
+from 1000–1024 to 850.
+
+---
+
+# HANDOVER — 2026-08-10
+
+**Everything below `main` is merged, pushed and live.** CI (`verify`) and
+`pages build and deployment` both green on every push this session.
+
+## What a fresh session needs to know
+
+1. **Read this file's IMPLEMENTATION section, then `DO-NOT-BREAK.md`.** The
+   register gained five annotated entries today (4.1, 4.2, 4.3, 4.4, 4.5); each
+   says what was done and what must not be undone.
+2. **The roadmap is not reliable on detail.** Of the five Wave 4 items done
+   today, **four** were wrong as written and were corrected by measurement:
+   4.1's resize buys 0.61 MiB and costs sharpness; 4.2's "20 icons" is 15, one
+   family of three; 4.3's CLS benefit was already spent by 4.4; and **4.5's
+   premise is simply false** — the chrome does not switch at 736. Measure before
+   implementing, and say so when the item is wrong.
+3. **Two non-stdlib dependencies now exist**, both one-off, neither in CI:
+   Pillow (`reencode_diagrams.py`) and fonttools + brotli
+   (`subset_fontawesome.py`). Everything the workflow runs is stdlib-only.
+4. **The workflow is 18 steps.** Two are new today: `verify_icons.py` and
+   `verify_image_dimensions.py`.
+
+## Wave 4 state
+
+| Item | State |
+| --- | --- |
+| 4.1 diagram re-encode | **done, live** |
+| 4.2 FontAwesome subset | **done, live** |
+| 4.3 per-topic ppq payloads | **done, live** |
+| 4.4 font fallback metrics | **done, live** |
+| 4.5 breakpoints | **done, live** |
+| 4.6 scope the bare selectors | **next, not started** — Eliot's go-ahead required |
+| 4.9 CTA on the glossary and flashcards generators | not started |
+| 4.7, 4.8 | **held until after the GSC re-measure, ≈2026-09-22** |
+| 4.10 jQuery/dropotron removal | **gated on Wave 2 Phase 7** |
+
+## The traps this session actually hit
+
+- **`build_sitemap.py --check` prints "nothing written" and exits 1.** Hit twice.
+  Read the exit code and grep `WOULD CHANGE`. Editing any HTML moves its git
+  `lastmod`, so regenerate the sitemap and amend it into the *same* commit.
+- **Three generators were not idempotent until made so.** Median-cut
+  quantisation re-quantises differently (fixed with a skip guard); fontTools
+  stamps `head.modified` unless `recalcTimestamp=False` is on the **`TTFont`
+  constructor**, not on `subset.Options`. That is PH09b-025's failure mode
+  turning up twice more. **Hash three consecutive runs of anything that writes.**
+- **A subset font fails silently.** faq.html shipped 30 invisible `+` icons for
+  months. `verify_icons.py` exists for that and all four of its checks were
+  tested by deliberately breaking them.
+- **Cold-load MathJax rendering varies between runs.** Two renders of *unchanged*
+  CSS differed by 60,726 pixels in one formula. Cause UNKNOWN. Do not attribute
+  a MathJax pixel diff to a change without ruling this out first — this session
+  did, and had to withdraw it.
+- **zsh does not word-split unquoted variables.** A `for u in $PAGES` sweep ran
+  once on a bogus URL and quietly produced a meaningless "0 differences".
+- **Measure the element the reader sees.** A `search_component()` bug assigned
+  rather than appended to `attr`, silently dropping `data-src` on the 81 pages
+  that needed it; the first run wrote 81 payloads nothing fetched.
+
+## Unchanged and still true
+
+- **Dated dependency ≈2026-09-22**, the day-45 GSC re-measure. PH05-019/020/021
+  and PH03-049 step 2 are blocked on it, and Wave 3's relabelling must not land
+  before it.
+- **Wave 2** (the build step, D18's `page_shell.py`) needs its own session.
+- **Wave 5** is content and editorial; each item needs explicit approval.
+- **11 of the 112 diagrams are referenced by nothing** and are published. A
+  published-surface decision for Eliot, of the same kind as D28's `logo/`.
 
 ## Open, not started
 
