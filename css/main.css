@@ -242,11 +242,38 @@ body.is-preload *:after {
   transition: none !important;
 }
 
+/* Metric-matched fallback fonts.
+
+   Merriweather renders 8.4% wider than Georgia and 18% wider than the default
+   serif, so a paragraph laid out in the fallback re-wraps the moment the web
+   font swaps in. That reflow was the largest layout shift on every page type
+   that did not already have these rules - everything below the reflowed
+   paragraph moves down. size-adjust makes the fallback occupy the same advance
+   width, so the swap changes glyph shapes without moving a line. Both ratios
+   were measured in-browser against the real fonts.
+
+   These lived in css/pages/quiz.css and reached the 166 practice-question
+   pages only. They are here so all 463 pages get them; quiz.css still names
+   both families and every page that loads it loads this file first. They are
+   named so that nothing picks them up by accident - a stack has to ask. */
+
+@font-face {
+  font-family: "Merriweather Fallback";
+  src: local("Georgia");
+  size-adjust: 108.44%;
+}
+
+@font-face {
+  font-family: "Source Sans Pro Fallback";
+  src: local("Arial");
+  size-adjust: 90.73%;
+}
+
 body,
 input,
 textarea,
 select {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-weight: 300;
   color: #5d5d5d;
   font-size: 14pt;

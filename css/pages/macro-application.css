@@ -11,7 +11,7 @@
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-weight: 700;
   text-align: center;
   border-bottom-style: solid;
@@ -82,7 +82,7 @@
   border: 1.5px solid var(--border-light);
   border-radius: 20px;
   background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.875em;
   font-weight: 600;
   cursor: pointer;
@@ -111,7 +111,7 @@
 /* ── Country section headings ───────────────────────────── */
 
 .country-heading {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.5em;
   color: var(--primary-blue);
@@ -156,7 +156,7 @@
 /* Section headings here are h3: restore the former h3 treatment. */
 .revision-notes-content h3 {
   color: var(--primary-blue);
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.8em;
   margin: 2em 0 1em 0;
@@ -185,7 +185,7 @@
 /* Sub-headings here are h4: restore the former h4 treatment. */
 .revision-notes-content h4 {
   color: var(--secondary-blue);
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-weight: 600;
   font-size: 1.4em;
   margin: 1.8em 0 0.8em 0;

@@ -1,27 +1,7 @@
-/* Metric-matched fallback fonts.
-
-   Merriweather renders 8.4% wider than Georgia and 18% wider than the default
-   serif, so a paragraph laid out in the fallback re-wraps the moment the web
-   font swaps in. That reflow, on the intro paragraph, was this page's largest
-   layout shift - everything below it moved down. size-adjust makes the
-   fallback occupy the same advance width, so the swap changes glyph shapes
-   without moving a line. Both ratios were measured in-browser against the
-   real fonts.
-
-   @font-face cannot be scoped to .quiz-page, but these families are named so
-   that nothing else on the site can pick them up. */
-
-@font-face {
-  font-family: "Merriweather Fallback";
-  src: local("Georgia");
-  size-adjust: 108.44%;
-}
-
-@font-face {
-  font-family: "Source Sans Pro Fallback";
-  src: local("Arial");
-  size-adjust: 90.73%;
-}
+/* The "Merriweather Fallback" and "Source Sans Pro Fallback" families named
+   in the stacks below are declared in css/main.css, which every page loading
+   this file loads first. They were declared here originally and reached only
+   these 166 pages; they now reach all 463. Do not re-declare them here. */
 
 /* Practice questions - shared by every page under /practice-questions/.
    Every rule is nested under .quiz-page, the wrapper class on <section id="main">,
