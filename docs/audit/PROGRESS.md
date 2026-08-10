@@ -776,6 +776,7 @@ The audit is finished and the roadmap is being built.
 | 4.1 | 112 diagram PNGs to a 64-colour palette, 26.21 → 5.41 MiB | PH08-034, D25 | |
 | — | `Regulation` defined on the Edexcel glossary page | PH10-063 | |
 | 4.4 | `size-adjust` fallbacks in `main.css`; the two `ch` measures dropped | PH08-041, PH08-035 | |
+| 4.2 | FontAwesome subset: stylesheet 69.4 KB → 2.9 KB, fonts 2.79 MiB → 1.5 KB | PH08-033 | |
 
 **Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
 fixed both times; it is now guarded.
@@ -918,12 +919,74 @@ nothing (3.1 MiB before, 0.6 MiB now) and are published. They were re-encoded
 with the rest. Whether they should exist at all is a published-surface question
 of the same kind as D28's `logo/`, and is nobody's call but Eliot's.
 
+### 4.2 done. One family, one weight, 15 glyphs
+
+| | before | after |
+| --- | --- | --- |
+| `css/fontawesome-all.min.css` | 69.4 KB | **2.9 KB** — render-blocking in the `<head>` of all 463 pages |
+| `webfonts/` | 2.79 MiB | **1.5 KB** (1,580 bytes) |
+
+Same filename, so **no `<head>` was touched** and `4db232c` stands: still a
+direct `<link>` in every page, ahead of the font stylesheet, and the two
+`@import` rules stay out of `css/main.css`.
+
+**The site's Font Awesome usage is far smaller than the roadmap's "20 icons".**
+The markup is the theme's `.icon` convention, never Font Awesome's own: **0**
+uses of `fas`/`far`/`fab`/`fal`/`fad`, **0** utility classes (`fa-2x`, `fa-fw`,
+`fa-spin`), and 476 of 480 HTML files contain no `fa-` class at all. Of 1,458
+icon rules, 15 are reachable; of three font families, one is. Brands (1.06 MiB)
+was entirely unused — the six `ul.social li a.fa-*` rules in `main.css` that
+look like users are background-colour rules for a social list the site has
+never had.
+
+**Who actually downloads the font, measured across 12 pages:**
+
+| viewport | pages fetching `fa-solid-900.woff2` |
+| --- | --- |
+| 1280px | **4** — homepage, faq, contact, marking |
+| 500px | **all 12** |
+
+The mobile difference is one glyph: `#titleBar .toggle:before` is
+`content: "\f0c9"` at weight 900 — the hamburger. That single character is why
+459 otherwise icon-free pages pulled 76.4 KB on a phone. Correcting an earlier
+claim in this file's history: it was never *every* page on desktop.
+
+**One visible change, and it is a fix.** `faq.html` had 30
+`class="icon fa-plus"` spans with no `solid`, asking for weight 400, where
+`plus` is a solid-only glyph in Free 5. They rendered **nothing** — the
+accordion has had no open/close indicator, and the JS has been toggling between
+two invisible states. Dropping the Regular face leaves one face in the family,
+so weight matching falls 400 → 900 and the `+`/`−` appears. The 30 spans now
+say `solid` so that the fix does not depend on the family having exactly one
+face. Pixel-verified: only the 13px column the icons sit in changes;
+`contact.html`, `index.html`, `marking.html` and the mobile hamburger are 0
+differing pixels, and the homepage's 140 differing pixels are sub-glyph
+antialiasing, identical at 4×.
+
+**`scripts/verify_icons.py` is in the workflow**, because a subset font fails
+silently and the FAQ is the proof of how long that goes unnoticed. Stdlib only,
+four failure modes, each tested by breaking it deliberately: a class with no
+rule; a CSS `content` the subset lacks; a rule whose glyph is not in the font;
+the font replaced without re-running. The third needs to read the woff2, which
+needs brotli, so the subsetter writes `_working/fontawesome/subset-manifest.txt`
+and the checker compares against that.
+
+**Two dependencies now, both one-off, neither in CI:** Pillow for 4.1's
+`reencode_diagrams.py`, fonttools + brotli for 4.2's `subset_fontawesome.py`.
+Both default to dry run.
+
+**PH09b-025's failure mode turned up for the third time.** The subsetter was not
+deterministic until `recalcTimestamp=False` moved onto the `TTFont`
+constructor — it is not the same thing as `subset.Options.recalc_timestamp`.
+Caught by hashing three consecutive runs, which is now worth doing to anything
+here that writes a file.
+
 ## Open, not started
 
 - **Wave 2** — the build step, D18's `page_shell.py`. Needs its own session.
 - **Wave 3** — `boards.json` and the Edexcel A labels. **Blocked on the GSC
   re-measure.**
-- **Wave 4** — 4.2, 4.3, 4.5, 4.6, 4.9 runnable now. **4.7 and 4.8 are
+- **Wave 4** — 4.3, 4.5, 4.6, 4.9 runnable now. **4.7 and 4.8 are
   held until after the GSC re-measure** — they change internal-linking signals
   into the pages that re-measure is about. **4.10 is gated on Wave 2 Phase 7.**
 - **Wave 5** — content and editorial, each item needing explicit approval.
