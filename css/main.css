@@ -2325,6 +2325,25 @@ ul.social li a.fa-google-plus:hover {
   font-weight: 700;
 }
 
+/* The nav needs 1045px to sit on one line. Below that it wrapped, and the
+   split was worst at 1000-1024px - eight items on the first row and a single
+   orphaned "Contact" on the second - which is exactly the half-screen width of
+   a 1920 or 2048 display. 44% of the nav's 1018px was horizontal padding and
+   margin, so tightening those, and nothing else, buys the whole gap.
+
+   Vertical padding is deliberately untouched: it sets the link's height and
+   therefore its tap target. Only the horizontal values move. */
+@media screen and (max-width: 1099px) {
+  #nav > ul > li {
+    margin: 0 0.15em;
+  }
+
+  #nav > ul > li > a {
+    padding: 0.6em 0.5em;
+    font-size: 0.875em;
+  }
+}
+
 /* Mobile-first: hide nav by default, show button */
 #nav {
   display: none;
