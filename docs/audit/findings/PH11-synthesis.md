@@ -69,6 +69,13 @@ which this site drifts.
 
 ## 2. The roadmap
 
+> **STATUS, 2026-08-10. Wave 0 and Wave 1 are COMPLETE, merged and live.**
+> Also done: the `docs/audit/` move (§5 option a, D30) and §4b's markdown move.
+> `PROGRESS.md`'s IMPLEMENTATION section is the authoritative state, including
+> five places where the items below turned out to be wrong on contact — most
+> importantly **0.1, whose stated fix could not work at all**.
+> Next: Wave 4's asset work, which is unblocked and needs no build step.
+
 Ordered by **what unblocks what**, then by impact ÷ (effort × risk). Every item
 cites its finding. Nothing here changes a URL except the two items in §4, which
 carry rollback plans.
