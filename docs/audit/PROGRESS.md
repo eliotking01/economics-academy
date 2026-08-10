@@ -774,6 +774,7 @@ The audit is finished and the roadmap is being built.
 | 1.4 | `.github/workflows/verify.yml`, 15 steps, read-only | PH10-062 | |
 | 4b | `macro-application-uk-sa.md` → `raw-notes/` | PH10-060 | D32 |
 | — | `Regulation` defined on the Edexcel glossary page | PH10-063 | |
+| 4.4 | `size-adjust` fallbacks in `main.css`; the two `ch` measures dropped | PH08-041, PH08-035 | |
 
 **Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
 fixed both times; it is now guarded.
@@ -812,21 +813,69 @@ Recorded because the same habit will be needed for Waves 2–5.
   `.site-title` — correct throughout — while the `<a>` inside it went pink and
   underlined, because the theme styles `h1 a` and not `p a`.
 
+## Wave 4 — in progress, started 2026-08-10
+
+### 4.4 done. PH08-035 is fully closed, both halves
+
+The roadmap's one-line version — move the `size-adjust` `@font-face` rules from
+`quiz.css` to `main.css` — is necessary and **not sufficient**. Two additions
+were needed and both were found by measuring, not by reading:
+
+1. **An `@font-face` is inert until a `font-family` stack names it.** Only
+   `quiz.css` did. `main.css`'s base stack was `"Source Sans Pro", sans-serif`
+   and 13 rules in `revision-notes-textbook.css` said `font-family:
+   "Source Sans Pro"` with no fallback at all. Moving the declarations alone
+   would have measured as no change on the other 297 pages.
+2. **`ch` is the one reflow `size-adjust` cannot absorb.** It is the advance of
+   "0" alone; `size-adjust` matches *average* advance width. `.ppq-intro`'s
+   `max-width: 60ch` is 442.5px in Source Sans Pro and 466.0px in the fallback,
+   so the paragraph gained a line on swap. Fixing (1) without (2) took
+   past-paper-questions **from 0.086 to 0.307 at 736px** — a real regression,
+   caught before it shipped. Both `ch` measures are now `em`.
+
+CLS, measured locally in headless Chrome with the shipped CSS. **Fonts as the
+only moving part** (JS suppressed, so neither the header injection nor
+`question-search.js` is in the number), median of two runs, 1280/800/736:
+
+| page | before | after |
+| --- | --- | --- |
+| notes-topic | 0.026 / 0.144 / 0.131 | 0.001 / 0.002 / 0.001 |
+| past-paper-questions | 0.023 / 0.003 / 0.065 | 0.000 / 0.001 / 0.001 |
+| homepage | 0.002 / 0.004 / 0.024 | 0.001 / 0.003 / 0.002 |
+| practice-questions | 0.001 / 0.001 / 0.001 | 0.001 / 0.001 / 0.001 |
+
+Whole page, JS on, median of three:
+
+| page | before | after |
+| --- | --- | --- |
+| notes-topic | 0.037 / 0.024 / **0.157** | 0.009 / 0.015 / 0.021 |
+| past-paper-questions | 0.052 / 0.089 / 0.086 | 0.009 / 0.014 / 0.021 |
+| practice-questions | 0.010 / 0.018 / 0.022 | 0.009 / 0.015 / 0.021 |
+
+**PH08-035's notes-topic 0.110 was UNKNOWN and is now answered: web-font
+reflow, the same cause as the past-paper-questions page.** All four page types
+now sit on one residual — 0.009 / 0.015 / 0.021 — and that residual is
+`section#main` moving when `inject-templates.js` swaps the header in. **That is
+Wave 2 phase 7 and nothing in Wave 4 will touch it.**
+
+Two side-effects, both checked rather than assumed:
+
+- With the web font loaded the past-paper-questions page is **pixel-identical**
+  before and after, at 1280 and 736.
+- On a **cold** load MathJax typesets against whatever font is on screen, so
+  notes pages render maths 1–2px differently. The new fallback's ex-height is
+  **5.98%** off Merriweather where the old one was **19.19%** off, so the
+  cold-load rendering moved towards the warm-cache rendering, not away from it.
+
 ## Open, not started
 
 - **Wave 2** — the build step, D18's `page_shell.py`. Needs its own session.
 - **Wave 3** — `boards.json` and the Edexcel A labels. **Blocked on the GSC
   re-measure.**
-- **Wave 4** — asset and speed work. 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9
-  are all runnable now; **4.10 is gated on Wave 2 Phase 7**.
+- **Wave 4** — 4.1, 4.2, 4.3, 4.5, 4.6, 4.9 runnable now. **4.7 and 4.8 are
+  held until after the GSC re-measure** — they change internal-linking signals
+  into the pages that re-measure is about. **4.10 is gated on Wave 2 Phase 7.**
 - **Wave 5** — content and editorial, each item needing explicit approval.
-
-**A measurement is already waiting for 4.4.** The past-paper-questions page still
-reads CLS ~0.127 at 800px after 0.1, and the cause is identified: web-font
-reflow. Suppressing the Google Fonts stylesheet takes the same page to
-**0.007 / 0.012 / 0.020** at 1280/800/736. That is PH08-041 item 3 — the
-`size-adjust` fallback metrics that live in `quiz.css` and reach 173 pages but
-not these. 4.4 moves them to `main.css` and should close it.
 
 ## Dated dependency — ≈2026-09-22
 
