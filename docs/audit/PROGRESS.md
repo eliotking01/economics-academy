@@ -778,6 +778,8 @@ The audit is finished and the roadmap is being built.
 | 4.4 | `size-adjust` fallbacks in `main.css`; the two `ch` measures dropped | PH08-041, PH08-035 | |
 | 4.2 | FontAwesome subset: stylesheet 69.4 KB → 2.9 KB, fonts 2.79 MiB → 1.5 KB | PH08-033 | |
 | 4.3 | Per-topic ppq payloads, 413.7 KB → 9.6 KB median on 81 pages | PH08-046 | |
+| 4.5 | 18 media queries 768 → 767, pairing with the nav boundary | PH07-059 | |
+| — | `verify_image_dimensions.py`; 3 root photos gain dimensions | PH08-034 | |
 
 **Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
 fixed both times; it is now guarded.
@@ -865,10 +867,21 @@ Two side-effects, both checked rather than assumed:
 
 - With the web font loaded the past-paper-questions page is **pixel-identical**
   before and after, at 1280 and 736.
-- On a **cold** load MathJax typesets against whatever font is on screen, so
-  notes pages render maths 1–2px differently. The new fallback's ex-height is
-  **5.98%** off Merriweather where the old one was **19.19%** off, so the
-  cold-load rendering moved towards the warm-cache rendering, not away from it.
+- On a **cold** load MathJax typesets against whatever font is on screen. The
+  new fallback's ex-height is **5.98%** off Merriweather where the old one was
+  **19.19%** off, so a cold-load formula should render closer to the
+  warm-cache one, not further away.
+
+  **CORRECTED 2026-08-10, while measuring 4.5.** This originally said the notes
+  pages "render maths 1–2px differently" and attributed an observed pixel diff
+  to the change. That attribution was not established: two renders of the
+  **same, unchanged** CSS were later found to differ by 60,726 pixels in a
+  MathJax formula, so cold-load MathJax output varies between runs on its own.
+  The ex-height figures above were measured independently and stand; the 4.4
+  CLS result stands, three runs per point with tight variance. Only the
+  pixel-diff attribution was overstated. **Cause of the variance: UNKNOWN** —
+  MathJax loads from jsDelivr and races the web font, which is the obvious
+  suspect and was not confirmed.
 
 ### 4.1 done. The palette is the whole saving; the resize is not
 
@@ -1026,6 +1039,47 @@ header injection. 4.3 is weight only.
 **Caught in passing:** `search_component()` assigned rather than appended to
 `attr` in the topic branch, so `data-src` was silently dropped on exactly the
 pages that needed it. The first run wrote 81 payloads that nothing fetched.
+
+### 4.5 done — but not the change the roadmap asked for
+
+**The roadmap's premise is wrong and the record should say so.** 4.5 says to
+take `revision-notes-textbook.css` from 768 to 736 first, because PH07-059
+records the page chrome as switching at 736. **It does not.** The nav switches
+at 767/768 — `css/main.css:2334` puts the desktop `#nav` behind
+`min-width: 768px` and `:2346` puts the mobile `#navPanel` behind
+`max-width: 767px`. `main.css` runs **two tiers, both real**: 767/768 for the
+nav, header and `#header-placeholder`, and 736 for `.container`, the row grid
+and body sizing. `revision-notes-textbook.css` at 768 was already aligned with
+the nav tier.
+
+The 768 → 736 change was made, measured and **reverted**: outside 737–768 it
+changed nothing, and inside that band it put full-size desktop notes underneath
+a hamburger nav — creating the mismatch PH07-059 feared rather than removing
+it. A screenshot at 752px settled it.
+
+**The real defect was one pixel wide.** At exactly 768 the desktop nav shows
+(`min-width: 768px`) *and* the content is mobile-styled (`max-width: 768px`).
+768 is iPad portrait. **18 media queries across 11 stylesheets** moved to
+`max-width: 767px`; both `min-width: 768px` rules were left alone, so the
+pairing is now exclusive everywhere.
+
+Measured on ten pages at 767 / 768 / 769: **767 and 769 pixel-identical before
+and after on all ten**; 768 changes on eight, and now differs from 769 by only
+the 12k–31k pixels a 1px reflow costs, against 167k–494k from 767. Before, the
+768 render sat apart from both neighbours.
+
+**The 736 tier was deliberately left alone.** Reconciling it with 767 means
+changing the inherited theme's own breakpoints on all 463 pages, and nothing
+measured says it is broken.
+
+### A verifier for the defect 4.1 found by hand
+
+`scripts/verify_image_dimensions.py`, 18th step in the workflow. Nothing
+compared an `<img>`'s declared dimensions with the file's real ones, which is
+how `macroeconomics-diagrams.html` shipped a box 35% too short. Pure stdlib —
+it reads the PNG, JPEG, GIF, WEBP and SVG headers itself. Both failure modes
+tested by breaking them. **3 root photographs** gained dimensions in the same
+commit, because a check that is red on its first run gets ignored.
 
 ## Open, not started
 
