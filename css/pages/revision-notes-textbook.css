@@ -410,7 +410,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .revision-notes-content .notes-container {
     padding: 2em 1.5em;
     border-radius: 0;
@@ -547,7 +547,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .revision-notes-content .calculation-table tr td:first-child {
     width: 40%;
   }
@@ -594,7 +594,7 @@
 }
 
 /* Responsive adjustments for diagrams */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .diagram-figure {
     margin: 1.5em auto;
     max-width: 95%;
@@ -644,7 +644,7 @@
 
 /* Add these new media queries and mobile-specific styles to your existing CSS */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* General mobile adjustments */
   .revision-notes-content .notes-container {
     padding: 1.5em;
@@ -742,7 +742,7 @@
   }
 
   /* Mobile-specific table styles */
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .revision-notes-content .table-container {
       position: relative;
       width: 100%;

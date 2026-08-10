@@ -2331,6 +2331,11 @@ ul.social li a.fa-google-plus:hover {
 }
 
 /* Show the navigation menu at half-screen sizes and above */
+/* 768 is the theme's nav boundary: the desktop #nav shows at >=768 and the
+   mobile #navPanel at <=767. Every `max-width` that means "mobile" pairs
+   with this and so is 767, not 768. It was 768 in eleven stylesheets, which
+   made 768px exactly - iPad portrait - the one width that got the desktop
+   nav above mobile-styled content. PH07-059. */
 @media screen and (min-width: 768px) {
   #nav {
     display: block !important;
@@ -3399,7 +3404,7 @@ ul.social li a.fa-google-plus:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Profile Section */
   .profile-highlight .col-4,
   .profile-highlight .col-8 {

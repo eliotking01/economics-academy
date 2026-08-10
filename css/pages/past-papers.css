@@ -23,7 +23,7 @@
   font-size: 0.95em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .papers-h1 {
     font-size: 1.9em;
   }
@@ -41,7 +41,7 @@
   text-align: center;
   white-space: nowrap;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .exam-board-buttons {
     grid-template-columns: 1fr;
   }
@@ -73,7 +73,7 @@
   font-size: 0.98em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .papers-search-cta {
     padding: 1.5rem 1.15rem;
   }
