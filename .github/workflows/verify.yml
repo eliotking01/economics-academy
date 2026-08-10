@@ -72,6 +72,13 @@ jobs:
       # brotli.
       - name: Icons are all in the Font Awesome subset
         run: python3 scripts/verify_icons.py
+      # Images are max-width: 100%, so the browser uses width/height only for
+      # the aspect ratio - it reserves a box of that shape before the bytes
+      # arrive. macroeconomics-diagrams.html declared a box 35% too short for
+      # one diagram and nothing noticed, because nothing compared the two.
+      # Stdlib: it reads the PNG/JPEG/GIF/WEBP/SVG headers itself.
+      - name: Image dimensions match the files
+        run: python3 scripts/verify_image_dimensions.py
       - name: SEO assertions
         run: python3 seo/tools/verify_seo.py
 
