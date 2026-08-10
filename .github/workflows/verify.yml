@@ -35,9 +35,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # verify_text_integrity and verify_markup_integrity diff against a
-          # ref. A shallow clone has no HEAD~1 and they would error.
-          fetch-depth: 2
+          # FULL history, not a shallow clone, and not fetch-depth: 2.
+          #
+          # Two reasons. verify_text_integrity and verify_markup_integrity diff
+          # against HEAD~1, which needs at least 2. And build_sitemap.py takes
+          # every <lastmod> from `git log -1 -- <path>`, which in a shallow clone
+          # cannot see the commit that last touched most files - so it computes
+          # different dates from the ones committed and reports WOULD CHANGE on
+          # 7 files. That is what failed on this workflow's first run.
+          #
+          # Reproduced locally to be sure rather than guessed: a `--depth 2`
+          # clone of this repo reports 7 WOULD CHANGE, a full clone reports 0.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -107,6 +116,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history for the same reason: this job runs build_sitemap.py,
+          # which derives every <lastmod> from git. It also needs a real clone
+          # because verify_generated.py creates a `git worktree`.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
