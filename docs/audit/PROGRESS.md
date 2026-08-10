@@ -744,3 +744,94 @@ writes nothing:
 
 **They are read-only by construction and were never given write access to a site
 file.**
+
+---
+
+# IMPLEMENTATION — started 2026-08-09
+
+The audit is finished and the roadmap is being built.
+**`findings/PH11-synthesis.md` §2 is the plan; this section is the state.**
+
+## Done, merged to `main`, live
+
+| Wave | Item | Finding | Commit |
+| --- | --- | --- | --- |
+| — | Audit moved to `docs/audit/`, committed | PH11 §5 | D30 |
+| 1.2 | `verify_liquid.py` parses `_config.yml`'s `exclude` | PH00-011 | D31 |
+| 0.2 | FontAwesome `font-display: block` → `swap` | PH08-033 | |
+| 0.3 | Generic `sans-serif` fallback on the base stack | PH08-041.1 | |
+| 0.4 | Focus rings on the colour-only `:focus` rules | PH08-040 | |
+| 0.5 | Site title is a paragraph; one `<h1>` per page | PH08-036 | |
+| 0.6 | `<header>`/`<footer>` landmarks; 11 inline styles → CSS | PH08-037 | |
+| 0.7 | Flashcards promoted to a top-level nav item | PH07-057 | |
+| 0.8 | CLAUDE.md counts corrected; cite commands | PH10-061 | |
+| 0.9 | The two `Regulation` definitions logged as G4 | PH10-063 | |
+| 0.1 | ppq filter panel ships visible; CLS 0.245 → 0.012 | PH08-035 | |
+| 1.1 | Build-date stamp dropped from 7 JSON payloads | PH09b-025 | |
+| 1.3 | `verify_generated.py` | PH09b-026 | |
+| 1.5 | `verify_published_surface.py` | PH10-060 | |
+| 1.6 | Capitalisation check fails on unclassified | PH10-063 | |
+| 1.4 | `.github/workflows/verify.yml`, 15 steps, read-only | PH10-062 | |
+| 4b | `macro-application-uk-sa.md` → `raw-notes/` | PH10-060 | D32 |
+| — | `Regulation` defined on the Edexcel glossary page | PH10-063 | |
+
+**Wave 0 and Wave 1 are complete.** PH01-017 was hit twice during the work and
+fixed both times; it is now guarded.
+
+## Five things the roadmap got wrong, each found by measuring
+
+Recorded because the same habit will be needed for Waves 2–5.
+
+1. **0.1's stated fix could not work.** A `min-height` on `.ppq-controls`
+   reserves nothing: the element ships `hidden` and the component enforces
+   `[hidden] { display: none !important }`. The intermediate fix that looked
+   right — revealing early from JS — improved 1280px and took 736px from 0.318
+   to **0.799**, because the panel is 811px at mobile. Measured, rejected, not
+   shipped.
+2. **0.2 was a change, not an addition.** All three `@font-face` rules already
+   had `font-display`, set to `block`, which *is* the FOIT.
+3. **0.4 had two offenders, not three.** `contact.css` already carried a ring and
+   is byte-identical to the audit baseline; the finding's table row is wrong.
+4. **0.6's trap was the reverse of the one recorded.** There are no
+   `section#header` selectors. The danger was that changing the element brings
+   the theme's bare `header {}`, `header > p {}` and `footer {}` rules into scope
+   for the first time.
+5. **PH10-063 is Edexcel-only.** AQA already had a real definition from a chip
+   actually titled "Regulation".
+
+## Three traps worth carrying forward
+
+- **`build_sitemap.py --check` prints "nothing written" on both paths.** It is
+  not a pass signal. Read the exit code and look for `WOULD CHANGE`. Misreading
+  it shipped a stale sitemap for one commit.
+- **Local green does not imply CI green.** The workflow failed on its first run
+  while all 15 steps passed locally, because `actions/checkout` clones shallowly
+  and `build_sitemap.py` reads `lastmod` from `git log`. Fixed with
+  `fetch-depth: 0`, reproduced with `git clone --depth 2` first.
+- **Measure the element the reader sees, not its container.** 0.5 measured
+  `.site-title` — correct throughout — while the `<a>` inside it went pink and
+  underlined, because the theme styles `h1 a` and not `p a`.
+
+## Open, not started
+
+- **Wave 2** — the build step, D18's `page_shell.py`. Needs its own session.
+- **Wave 3** — `boards.json` and the Edexcel A labels. **Blocked on the GSC
+  re-measure.**
+- **Wave 4** — asset and speed work. 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9
+  are all runnable now; **4.10 is gated on Wave 2 Phase 7**.
+- **Wave 5** — content and editorial, each item needing explicit approval.
+
+**A measurement is already waiting for 4.4.** The past-paper-questions page still
+reads CLS ~0.127 at 800px after 0.1, and the cause is identified: web-font
+reflow. Suppressing the Google Fonts stylesheet takes the same page to
+**0.007 / 0.012 / 0.020** at 1280/800/736. That is PH08-041 item 3 — the
+`size-adjust` fallback metrics that live in `quiz.css` and reach 173 pages but
+not these. 4.4 moves them to `main.css` and should close it.
+
+## Dated dependency — ≈2026-09-22
+
+Unchanged. **PH05-019, PH05-020, PH05-021 and PH03-049 step 2 cannot be honestly
+concluded before the day-45 GSC re-measure**, and Wave 3's relabelling must not
+land before it: it rewrites the breadcrumb on 166 notes pages, and PH05's central
+lesson is that a change made nine days before an export made that export
+unreadable.

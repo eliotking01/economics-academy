@@ -16,13 +16,39 @@ tutoring and marking. Solo project, no team.
 
 ## Tooling
 
-No build, no test, no lint, no CI, no `package.json`. There is nothing to run.
-Changes are verified by opening the page — Live Server in VSCode.
+No build step for the site's own pages, no lint, no `package.json`. Changes are
+still verified by opening the page — Live Server in VSCode.
 
-`scripts/verify_*.py` (stdlib-only: HTML well-formedness, links, text integrity,
-markup integrity) exist and can be run on demand. Nothing runs them
-automatically. Prettier 3.9.6 has been used via `npx prettier@3.9.6`; it is not
-installed and there is no config.
+**There is CI.** `.github/workflows/verify.yml` runs the whole verification
+suite on every push and pull request. It is **verification only and must never
+gain a build or deploy step** — switching Pages to Actions-based deployment
+disables `_config.yml`'s `exclude`, which is the only thing keeping working
+files off the live site. Approved on exactly that basis.
+
+Two things it needs that are easy to break:
+
+- **`fetch-depth: 0`.** `build_sitemap.py` reads every `<lastmod>` from
+  `git log -1 -- <path>`, which a shallow clone cannot answer, and two checks
+  diff against `HEAD~1`. A shallow clone fails the workflow, not the site.
+- **Both jobs need `node`**, for Prettier and the glossary's KaTeX pre-render.
+
+The verifiers are all stdlib-only and can still be run by hand:
+
+```
+python3 scripts/verify_generated.py          # every generator, output vs source
+python3 scripts/verify_published_surface.py  # nothing unexpected is served
+python3 scripts/verify_liquid.py             # a stray {%…%} fails the DEPLOY
+python3 scripts/build_sitemap.py --check     # read the EXIT CODE, see below
+```
+
+**`build_sitemap.py --check` prints "nothing written" on both paths.** It is not
+a pass signal — it means "this run wrote nothing". The pass signal is exit 0 and
+no `WOULD CHANGE` lines. Misreading it once already let a stale sitemap ship.
+
+Prettier 3.9.6 is used via `npx prettier@3.9.6`; it is not installed and there is
+no config. Two generators run it over their own output, which is why committed
+output is `prettier(render)` and why `verify_generated.py` compares by
+regenerating rather than by rendering into memory.
 
 **Where a number in this file is one a script computes, cite the script, not the
 value.** Counts here have drifted before and the drift is invisible: this file
@@ -408,6 +434,12 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 
 ## See also
 
+- **`docs/audit/` — the eleven-phase organisation audit and the roadmap being
+  built from it. Start at `docs/audit/findings/PH11-synthesis.md` for what to do
+  next, `docs/audit/PROGRESS.md` for what is already done, and
+  `docs/audit/DO-NOT-BREAK.md` before touching anything. `DECISIONS.md` is
+  append-only, D1–D32.** Excluded from publishing; readable in the public repo,
+  on the same judgement as `REVIEW-NOTES.md`.
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
 - `_working/glossary/authored-review.md` — the 76 authored **terms**, the only
   entries on the site that are not the notes' own words. `verify_glossary.py`
