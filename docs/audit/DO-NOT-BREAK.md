@@ -482,6 +482,30 @@ Bootstrap's (992/768/576). Do not "tidy" one value in isolation — check which
 system the sheet belongs to first, with `link_depth.py`-style measurement rather
 than by eye. PH07-059.
 
+> **Amended 2026-08-10, Wave 4.5. The claim that "the page chrome switches at
+> 736" is wrong, and acting on it makes the site worse.** Measured:
+>
+> - **The nav switches at 767/768.** `css/main.css:2334` puts the desktop `#nav`
+>   behind `min-width: 768px`; `:2346` puts the mobile `#navPanel` behind
+>   `max-width: 767px`. `#header-placeholder` and the 34-rule "narrow" block are
+>   on the same tier.
+> - **736 is a second, real tier** governing `.container`, the row grid and body
+>   sizing. Both tiers are live at once. There is no single "chrome breakpoint".
+> - `revision-notes-textbook.css` at 768 was **already aligned** with the nav
+>   tier. Moving it to 736 was tried and reverted: it puts full-size desktop
+>   notes under a hamburger nav between 737 and 768.
+>
+> **What was actually done:** all 18 `max-width: 768px` queries moved to
+> `max-width: 767px`, so every "mobile" query pairs exclusively with the nav's
+> `min-width: 768px`. Before that, 768px exactly — iPad portrait — was the one
+> width showing the desktop nav above mobile-styled content. **Do not
+> reintroduce a `max-width: 768px`;** use 767, or the pairing breaks again at
+> one real device width. `min-width: 768px` stays as it is in both places.
+>
+> **The 736 tier is deliberately untouched.** Reconciling it with 767 means
+> changing the inherited theme's own breakpoints on all 463 pages, and nothing
+> measured says it is broken.
+
 **Print styles are deliberately partial.** Only `revision-notes-textbook.css`,
 `glossary.css` and `flashcards.css` have `@media print`, covering 179 pages. The
 practice-question and past-paper-question families are interactive surfaces whose
