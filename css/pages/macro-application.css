@@ -227,7 +227,7 @@
   content: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Matches the tighter title spacing the textbook CSS applies here. */
   .revision-notes-content .notes-container > header.major h1 {
     margin: 0 0 0.3em 0;

@@ -17,7 +17,7 @@
   line-height: 1.7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .contact-h1 {
     font-size: 1.9em;
   }
@@ -248,7 +248,7 @@ input[type="reset"] {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .contact-card {
     padding: 20px;
   }
