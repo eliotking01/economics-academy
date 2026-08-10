@@ -486,6 +486,35 @@
   gap: 0.75em;
 }
 
+/* The paid services. Deliberately its own block rather than two more buttons
+   in .gl-more-links: those are free resources and this is not, and mixing
+   them puts a paid button in a row a student reads as free. Matches the
+   notes pages' .notes-cta, which is the pattern every other family already
+   converts through. PH07-058, Wave 4.9. */
+/* --gl-card, not the notes CTA's #f8f8f8. That value works there because a
+   topic page's .notes-container is white; here the block sits directly on
+   #main, which css/main.css paints #f7f7f7, so #f8f8f8 renders as no panel at
+   all - just a red bar floating in the page. Checked by rendering it. */
+.glossary-page .gl-services-cta {
+  margin-top: 2.5em;
+  padding: 1.5em;
+  background: var(--gl-card);
+  border: 1px solid var(--gl-border);
+  border-left: 4px solid var(--gl-accent);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.glossary-page .gl-services-cta p {
+  margin: 0 0 1em;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.glossary-page .gl-services-cta .button {
+  margin: 0.3em;
+}
+
 /* ---------------------------------------------------------------- mobile */
 
 @media screen and (max-width: 736px) {
@@ -536,7 +565,8 @@
   .glossary-page .gl-noscript,
   .glossary-page .gl-stats a,
   .glossary-page .breadcrumb,
-  .glossary-page .gl-more {
+  .glossary-page .gl-more,
+  .glossary-page .gl-services-cta {
     display: none !important;
   }
 

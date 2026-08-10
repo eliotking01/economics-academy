@@ -477,6 +477,28 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
 """
 
 
+# PH07-058, Wave 4.9. The glossary was one of two families with no body link
+# to a paid service at all - the injected footer was the only route, and that
+# needs JavaScript, so with scripting off these pages had none.
+#
+# The anchor text is deliberately NOT the notes pages' "Book a Free Intro
+# Call" / "Get Essays Marked". seo/07b-link-decisions.md §5 declines more
+# links to tutoring.html and marking.html, and its stated reason is that they
+# are already the most-linked pages; the bullet after it declines reusing an
+# anchor string because "adding more deepens a monoculture". Measured before
+# writing this: 444 of 455 links to tutoring.html read "Book a Free Intro
+# Call" - 97.6%, 8 distinct anchors across the whole site. Ten more of the
+# same string would be exactly what §5's third bullet objects to. Two new
+# anchors here, two more in build_flashcards.py, take tutoring to 10 distinct
+# and marking to 9. Do not "harmonise" these with the notes CTA.
+SERVICES_CTA = """
+          <section class="gl-services-cta">
+            <p>Ready to use these terms in an answer?</p>
+            <a href="/marking.html" class="button alt">Have an essay marked</a>
+            <a href="/tutoring.html" class="button">Book a 1-on-1 session</a>
+          </section>"""
+
+
 def breadcrumb_html(crumbs, indent=10):
     pad = " " * indent
     parts = []
@@ -749,7 +771,8 @@ def render_board(data, board, groups, rendered_map, inline_map):
             </section>
 {formula_block}
 {chr(10).join(sections)}
-          </div>"""
+          </div>
+{SERVICES_CTA}"""
 
     ld = json_ld({
         "@context": "https://schema.org",
@@ -851,7 +874,8 @@ def render_landing(data):
                 >Revision Notes</a
               >
             </div>
-          </section>"""
+          </section>
+{SERVICES_CTA}"""
 
     ld = json_ld({
         "@context": "https://schema.org",
