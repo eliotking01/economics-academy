@@ -563,14 +563,14 @@
 }
 
 /* Diagram/Image Styling for Revision Notes */
-.diagram-figure {
+.revision-notes-content .diagram-figure {
   margin: 2em auto;
   text-align: center;
   max-width: 800px; /* Maximum width for textbook-style diagrams */
   width: 100%;
 }
 
-.diagram-image {
+.revision-notes-content .diagram-image {
   max-width: 100%;
   height: auto;
   display: block;
@@ -582,7 +582,7 @@
   padding: 10px;
 }
 
-.diagram-caption {
+.revision-notes-content .diagram-caption {
   margin-top: 0.75em;
   font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.95em;
@@ -595,34 +595,34 @@
 
 /* Responsive adjustments for diagrams */
 @media (max-width: 767px) {
-  .diagram-figure {
+  .revision-notes-content .diagram-figure {
     margin: 1.5em auto;
     max-width: 95%;
   }
 
-  .diagram-image {
+  .revision-notes-content .diagram-image {
     padding: 8px;
     border-width: 1px;
   }
 
-  .diagram-caption {
+  .revision-notes-content .diagram-caption {
     font-size: 0.9em;
     padding: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .diagram-figure {
+  .revision-notes-content .diagram-figure {
     margin: 1em auto;
     max-width: 100%;
   }
 
-  .diagram-image {
+  .revision-notes-content .diagram-image {
     padding: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   }
 
-  .diagram-caption {
+  .revision-notes-content .diagram-caption {
     font-size: 0.85em;
   }
 }
@@ -791,7 +791,7 @@
   }
 
   /* Breadcrumb navigation */
-  .breadcrumb {
+  .revision-notes-content .breadcrumb {
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -799,7 +799,7 @@
     margin-bottom: 1.5em;
   }
 
-  .breadcrumb .separator {
+  .revision-notes-content .breadcrumb .separator {
     margin: 0 0.3em;
   }
 }
