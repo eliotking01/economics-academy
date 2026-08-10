@@ -275,6 +275,25 @@ font arrives. They look like dead code and are not. If they move to `css/main.cs
 so all 463 pages get them — which P8 recommends — they must not be dropped on the
 way. PH08-041.
 
+> **Done 2026-08-10, Wave 4.4.** Both rules are now in `css/main.css`, declared
+> once, immediately above the base `body, input, textarea, select` stack.
+> `quiz.css` keeps every `"… Fallback"` name in its stacks and carries a comment
+> saying where they are declared. Two things learned doing it, both load-bearing:
+>
+> - **An `@font-face` is inert until a stack names it.** Moving the declarations
+>   alone would have changed nothing on the other 297 pages. Every stack that
+>   renders text now lists the matched fallback before the generic, including 13
+>   rules in `revision-notes-textbook.css` that named `"Source Sans Pro"` with no
+>   fallback of any kind.
+> - **Never size an element in `ch` on this site.** `ch` is the advance of "0"
+>   alone, so the element's own width changes when the font swaps — the one
+>   reflow `size-adjust` cannot absorb, because it matches *average* advance
+>   width. `.ppq-intro`'s `60ch` was 442.5px in Source Sans Pro and 466.0px in
+>   the fallback and took the past-paper-questions page to CLS 0.288 at 736px.
+>   Both uses are now `em`: `60ch → 28.73em` and `72ch → 34.48em`, from Source
+>   Sans Pro's own ch/em ratio of 0.4789, so the rendered measure is unchanged.
+>   `grep -rn '[0-9]ch\b' css/` must stay empty outside `css/vendor/katex/`.
+
 **`past-paper-questions/questions.json` stays published at its current path.**
 Already recorded above as fetched at runtime. P8 proposes *adding* per-topic
 payloads beside it, never replacing it: the master search page needs the full

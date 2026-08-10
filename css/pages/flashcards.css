@@ -65,8 +65,13 @@
   border-bottom: 3px solid var(--fc-teal);
 }
 
+/* 34.48em, not 72ch, for the reason given at .ppq-intro in
+   css/pages/past-paper-questions.css: `ch` makes the element's own width
+   depend on the font, so the paragraph re-wraps when the web font arrives.
+   72 x Source Sans Pro's ch/em ratio of 0.4789 is the same rendered measure
+   in every font. */
 .flashcards-page .fc-intro {
-  max-width: 72ch;
+  max-width: 34.48em;
   font-size: 1.05em;
 }
 

@@ -40,10 +40,18 @@
   margin-bottom: 0.6rem;
 }
 
+/* The measure was 60ch, which makes the element's own width depend on the
+   font: `ch` is the advance of "0" alone, and the metric-matched fallback in
+   css/main.css matches average advance width instead. Measured at this
+   element's font-size, 60ch is 442.5px in Source Sans Pro and 466.0px in the
+   fallback, so the paragraph re-wrapped when the web font arrived - the
+   largest layout shift on the page, CLS 0.288 at 736px. 28.73em is the same
+   442.5px in every font: 60 x Source Sans Pro's own ch/em ratio of 0.4789.
+   The rendered measure is unchanged for a reader who has the web font. */
 .past-paper-questions-page .ppq-intro {
   font-size: 1.05em;
   line-height: 1.6;
-  max-width: 60ch;
+  max-width: 28.73em;
 }
 
 .past-paper-questions-page .ppq-hero-meta {
@@ -72,7 +80,7 @@
   border: 1.5px solid var(--ppq-border);
   border-radius: 6px;
   background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 1em;
 }
 
@@ -110,7 +118,7 @@
   border: 1.5px solid var(--ppq-border);
   border-radius: 20px;
   background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.875em;
   font-weight: 600;
   color: #444;
@@ -130,7 +138,7 @@
   border: 1.5px solid var(--ppq-border);
   border-radius: 20px;
   background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.875em;
   font-weight: 600;
   color: #444 !important;
