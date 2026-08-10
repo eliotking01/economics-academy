@@ -320,6 +320,28 @@ index. PH08-046.
 >   payloads by the same rule as pages, and skips `PAGE_DIR` itself — that
 >   guard is what stops it deleting the master `questions.json`.
 
+**`contact.css` and `tutoring.css` keep their bare selectors, and
+`css/main.css` must stay linked first.** Wave 4.6 scoped
+`revision-notes-textbook.css` and **declined these two, measured**: on both
+pages `main.css` is currently *winning*, so scoping reverses the design rather
+than removing a dependency. contact.html loses 120px of form height and its
+`select`/`textarea` stop matching its text inputs; tutoring.html's
+`#contactModal` is a **sibling** of `section#main`, so `.tutoring-page .modal`
+matches nothing and the modal drops from `position: fixed` to `static`, putting
+the enquiry form inline on the page. `:where()` scoping is cascade-neutral (0 of
+281 and 0 of 362 elements changed) but buys only the census metric, since the
+specificity is unchanged.
+
+> **The guard is `scripts/verify_css_load_order.py`, the workflow's 19th step,
+> and it must stay there.** Load order is now an invariant, not an accident. It
+> asserts `css/main.css` precedes every `css/pages/*.css` (462/462), that
+> `4db232c`'s order fontawesome → Google Fonts → main.css holds (462/462, which
+> nothing checked before), and that
+> `revision-notes/macro-application/index.html` is the **only** page loading two
+> page sheets. **Wave 2's `page_shell.py` is the thing this exists for** — a
+> generated `<head>` that emits the same links in a different order breaks two
+> commercial pages with no error and no failed request.
+
 **`4db232c` is not to be reversed by anything in PH08-033.** Removing
 FontAwesome's render-blocking chain and reducing FontAwesome's *size* are
 different changes. The two `@import` rules stay out of `css/main.css`; the
