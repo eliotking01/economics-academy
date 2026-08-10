@@ -64,6 +64,14 @@ jobs:
         run: python3 scripts/verify_past_paper_tags.py
       - name: Diagram geometry
         run: python3 scripts/verify_diagram_geometry.py
+      # The Font Awesome stylesheet and font are both subsets, and a subset
+      # font fails silently - a missing glyph renders as nothing at all. That
+      # is how faq.html's 30 accordion icons stayed invisible until a pixel
+      # diff found them in Wave 4.2. Stdlib only; it reads the manifest the
+      # subsetter writes rather than opening the woff2, which would need
+      # brotli.
+      - name: Icons are all in the Font Awesome subset
+        run: python3 scripts/verify_icons.py
       - name: SEO assertions
         run: python3 seo/tools/verify_seo.py
 
