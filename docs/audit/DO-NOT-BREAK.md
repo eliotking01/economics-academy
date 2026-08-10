@@ -106,6 +106,18 @@ two generators previously stamped build dates and were fixed (`be3ec19`).
 topic-chip anchor string; and raising notes→ppq coverage above 76%/92%. Each has
 a reason. Re-propose only with new evidence.
 
+> **Amended 2026-08-10, Wave 4.9. The "449 inbound" and "275" are PAGE counts,
+> not link counts** — 449 pages / 455 links and 275 / 276, re-measured and
+> still exactly right. 4.9 added a CTA to 11 pages that had none, taking them
+> to 459 and 285, and it does **not** overturn §5. What reconciles them is a
+> number in neither document: **444 of the 455 tutoring links read
+> `Book a Free Intro Call`** — 97.6%, 8 distinct anchors — and §5's own next
+> bullet declines reusing an anchor string because it "deepens a monoculture".
+> So the rule that survives is about the **anchor**, not the count: any future
+> link to `tutoring.html` or `marking.html` must carry new anchor text, and a
+> bulk sweep repeating an existing string is still declined. 4.9 used four new
+> ones and took the distinct counts to 10 and 9.
+
 **`seo/tools/verify_seo.py` carries 4 permanent assertions** added in `53a3e54`.
 It must keep passing.
 
@@ -162,6 +174,25 @@ touching the prose is not, in any circumstance.
 
 **Never bulk-rewrite prose with a script.** Scripted paragraph rebuilds have
 silently destroyed `<a>` tags in this repo before.
+
+> **Added 2026-08-10, Wave 4.9.** `verify_text_integrity.py` is what makes the
+> sentence above checkable rather than asserted, and it now compares **192
+> hand-written published pages** — every published page except the four
+> generated families. It used to walk `revision-notes/` alone, which left the
+> 9 root pages, the 5 `past-papers/` hubs and both `templates/` files
+> unchecked, and wasted three slots on generated glossary pages whose wording
+> `verify_glossary.py` check 1 and `verify_generated.py` already guarantee.
+>
+> **A deliberate wording change declares itself with a `Text-Change:` commit
+> trailer**, one line per path. Do not replace this with a flag, an env var or
+> a skip file: the whole point is that the declaration lives in a commit
+> message, so it applies to exactly one commit, cannot be left on by accident,
+> and stays in `git log` as the record. **It is per path** — declaring one page
+> and changing another still fails, and that is the accident being guarded
+> against. Trailers are collected across the whole commit range so a merge
+> inherits the declarations of what it merges; CI compares a merge against
+> `main`'s previous tip, so without that every merge of a content change would
+> be red.
 
 **Generated output is not hand-editable.** `revision-notes/glossary/**`,
 `practice-questions/**`, `past-paper-questions/index.html` +
