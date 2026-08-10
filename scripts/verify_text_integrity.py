@@ -35,11 +35,25 @@ So: every published page EXCEPT the four generated families. Coverage goes
 from 179 files (3 of them generated) to 192 hand-written ones. If a generated
 page's wording is wrong, the two checks named above are what catch it.
 
+DELIBERATE CHANGES DECLARE THEMSELVES
+
+A wording change that was approved is not the failure this exists to catch;
+an accidental one is. A commit whose visible text changes on purpose names
+the pages it changes:
+
+    Text-Change: revision-notes/macro-application/index.html
+
+one line per path, reason in the commit body. See declared() for why that is
+a declaration rather than an off switch. A commit that declares one page and
+changes the wording of another still fails.
+
 Usage:
     python3 scripts/verify_text_integrity.py <before-ref> [<after-ref>]
 
 <after-ref> defaults to the working tree. Exit status is non-zero if any
-file's visible text differs.
+file's visible text differs without being declared. Note that a run against
+uncommitted work has no commit message to read, so declare-then-commit is
+the order; a red run before committing is expected.
 """
 
 import difflib
@@ -136,6 +150,48 @@ def list_files(ref):
     )
 
 
+TRAILER = re.compile(r"^Text-Change:\s*(\S+)", re.M)
+
+
+def declared(before, after):
+    """Paths declared by a `Text-Change:` trailer in the range's commits.
+
+    A deliberate wording change is not the failure this script exists to
+    catch - accidental ones are. Wave 5 is nothing but approved content
+    changes, Wave 3's relabelling is another, and 4.9 added CTA copy to
+    eleven pages; with no way to say so, the step goes red on correct work
+    and is ignored within a week. So a commit may declare the files whose
+    visible text it means to change:
+
+        Text-Change: revision-notes/macro-application/index.html
+
+    one line per path, with the reason in the commit body where it belongs.
+
+    Three properties make this a declaration rather than a switch:
+
+      * It lives in a commit message, so it applies to exactly that commit
+        and cannot be left on by accident. There is no file to forget to
+        revert.
+      * It is per PATH. A commit that declares one page and changes the
+        wording of another still fails, which is the accident being guarded
+        against.
+      * It is visible in `git log` forever, so the record of every
+        deliberate wording change is the history itself.
+
+    Trailers are collected across the whole range, so a merge commit is
+    covered by the declarations of the commits it merges - which is the case
+    that matters, since CI compares a merge against main's previous tip.
+    """
+    rng = f"{before}..{after or 'HEAD'}"
+    out = subprocess.run(
+        ["git", "log", "--format=%B", rng], cwd=ROOT,
+        capture_output=True, text=True,
+    )
+    if out.returncode != 0:
+        return set()
+    return set(TRAILER.findall(out.stdout))
+
+
 def main(argv):
     if len(argv) < 2:
         print(__doc__)
@@ -143,6 +199,7 @@ def main(argv):
     before = argv[1]
     after = argv[2] if len(argv) > 2 else None
 
+    allowed = declared(before, after)
     files = list_files(before)
     differing = []
     missing = []
@@ -157,8 +214,11 @@ def main(argv):
         if a != b:
             differing.append((path, a, b))
 
+    undeclared = [d for d in differing if d[0] not in allowed]
+
     for path, a, b in differing:
-        print(f"\n=== {path}")
+        state = "DECLARED" if path in allowed else "UNDECLARED"
+        print(f"\n=== {path}  [{state}]")
         for line in list(difflib.unified_diff(
             a.split(" "), b.split(" "), lineterm="", n=6
         ))[:40]:
@@ -169,11 +229,28 @@ def main(argv):
         f"{after or 'working tree'}"
     )
     print(f"  visible text differs: {len(differing)}")
+    if allowed:
+        print(f"  declared by a Text-Change: trailer: {len(allowed)}")
+        # A declaration for a file that did not move is stale rather than
+        # dangerous - a copied trailer, or a change reverted later in the
+        # range. Say so; do not fail, because a commit message cannot be
+        # amended once it is pushed.
+        for path in sorted(allowed - {d[0] for d in differing}):
+            print(f"    declared but unchanged: {path}")
+    if undeclared:
+        print(f"  UNDECLARED: {len(undeclared)}")
+        print(
+            "\nVisible wording changed on a page no commit in this range "
+            "declared.\nIf the change is deliberate and approved, say so in "
+            "the commit message:\n\n    Text-Change: <path>\n\n"
+            "one line per path, reason in the body. If it is not deliberate, "
+            "this is\nthe accident the check exists to catch."
+        )
     if missing:
         print(f"  absent from the later revision: {len(missing)}")
         for m in missing:
             print(f"    {m}")
-    return 1 if differing else 0
+    return 1 if undeclared else 0
 
 
 if __name__ == "__main__":
