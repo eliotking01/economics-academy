@@ -304,6 +304,35 @@ FontAwesome's render-blocking chain and reducing FontAwesome's *size* are
 different changes. The two `@import` rules stay out of `css/main.css`; the
 stylesheet stays a direct `<link>` in every `<head>`, in order.
 
+> **Done 2026-08-10, Wave 4.2, and `4db232c` is intact** — same filename, same
+> `<link>`, same position, no `<head>` touched. Stylesheet 69.4 KB → 2.9 KB,
+> `webfonts/` 2.79 MiB → 1.5 KB.
+>
+> - **`css/fontawesome-all.min.css` is a subset and its name is a lie.** 15 of
+>   1,458 icon rules, one `@font-face` of three. Renaming it would mean editing
+>   463 `<head>` blocks to gain nothing, so it keeps the name and says so in a
+>   comment at the top. Do not "restore" the full file.
+> - **`webfonts/fa-solid-900.woff2` is generated.** The full font is
+>   `_working/fontawesome/fa-solid-900.woff2`, unpublished, and
+>   `scripts/subset_fontawesome.py --apply` regenerates the shipped one from
+>   it. Adding an icon is: add the `.fa-x:before` rule to the stylesheet, re-run
+>   the subsetter, commit both. There is no second glyph list — the subsetter
+>   reads the stylesheet.
+> - **`scripts/verify_icons.py` must stay in the workflow.** A subset font
+>   fails silently: the glyph renders as nothing, with no error anywhere. That
+>   is exactly how faq.html's 30 accordion `+` icons stayed invisible until a
+>   pixel diff found them. All four of its checks were tested by deliberately
+>   breaking each one.
+> - **`recalcTimestamp=False` goes on the `TTFont` constructor**, not on
+>   `subset.Options`. Without it `head.modified` is stamped with the current
+>   time and two runs a second apart give different bytes — PH09b-025 again,
+>   for the third time. Hash three consecutive runs of anything here that
+>   writes a file.
+> - Two one-off, non-stdlib dependencies now exist and neither is in CI:
+>   **Pillow** (`reencode_diagrams.py`) and **fonttools + brotli**
+>   (`subset_fontawesome.py`). Everything the workflow runs is still
+>   stdlib-only, and must stay that way.
+
 **Diagram `width`/`height` attributes encode the file's true aspect ratio.** All
 211 notes images carry the intrinsic pixel dimensions, and `max-width: 100%`
 means browsers use them only for the ratio. A re-encode that preserves the exact
