@@ -33,6 +33,7 @@ exclude:
   # Build-time only. Generated output lives elsewhere and is served normally;
   # these are the inputs and the tooling.
   - scripts/
+  - boards-data/
   - glossary-data/
   - questions-data/
   - past-paper-questions-data/

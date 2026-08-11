@@ -42,6 +42,7 @@ python3 scripts/verify_icons.py              # the Font Awesome subset covers ev
 python3 scripts/verify_image_dimensions.py   # every <img> width/height matches its file
 python3 scripts/verify_css_load_order.py     # main.css is linked before every page stylesheet
 python3 scripts/verify_page_shell.py         # the <head>, wrapper and script tail have not drifted
+python3 scripts/verify_boards.py             # boards.json still matches the four hardcoded structures
 python3 scripts/build_sitemap.py --check     # read the EXIT CODE, see below
 ```
 
@@ -87,7 +88,7 @@ list. Two consequences that are not obvious:
 
 - **`_config.yml` decides what is published.** It exists only to hold an
   `exclude` list, which keeps the repo's working files off the site: `scripts/`,
-  `raw-notes/`, `docs/`, the three `*-data/` directories and the root markdown.
+  `raw-notes/`, `docs/`, the five `*-data/` directories and the root markdown.
   Before it, `/REVIEW-NOTES.html`, `/CLAUDE.md` and `/scripts/build_glossary.py`
   were all live. **`exclude` replaces Jekyll's defaults rather than adding to
   them**, so the defaults are restated in the file; anything deleted from that
@@ -124,6 +125,7 @@ images/diagrams/                                                112 note diagram
 raw-notes/edexcel/<spec-code>.md                                markdown source for converted notes
 revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
 glossary-data/                                                  glossary source of truth
+boards-data/boards.json                                         canonical board identity, read by nothing yet
 _working/glossary/                                              build-time working files, not published
 ```
 

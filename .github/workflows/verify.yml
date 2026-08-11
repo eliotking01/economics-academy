@@ -98,6 +98,14 @@ jobs:
       # declared. PH06 section 3 Phase 1.
       - name: Page shell has not drifted
         run: python3 scripts/verify_page_shell.py
+      # Wave 3.1. boards-data/boards.json is a transcription of the four
+      # hardcoded board structures and nothing imports it yet. This is PH09's
+      # migration step 1 - add the record, change nothing, prove equivalence -
+      # and it is what will say a generator's swap changed no output when the
+      # swap is made. The code wins any disagreement: a slug is a live URL and
+      # a name is visible text.
+      - name: boards.json still matches the generators
+        run: python3 scripts/verify_boards.py
 
       - name: SEO assertions
         run: python3 seo/tools/verify_seo.py
