@@ -87,7 +87,13 @@ def family_of(path: str) -> str:
     return "root"
 
 
-HAND_WRITTEN = ("root", "notes-topic", "notes-hub", "notes-other", "past-papers")
+# Families no generator writes. notes-topic and notes-hub left this list in
+# Wave 2 Phases 5 and 3 - build_notes_pages.py renders all 173 of them from
+# notes-data/ - and the header line below went on printing "190 of them
+# hand-written" for every run afterwards. It is 17: the 9 root pages, the 5
+# past-papers/ hubs and the 3 revision-notes/ non-topic pages. scripts/
+# bake_templates.py owns exactly this set.
+HAND_WRITTEN = ("root", "notes-other", "past-papers")
 
 # ---- check 1 -------------------------------------------------------------
 # pages, distinct <head> skeletons, body shells, script tails, stylesheet sets.
@@ -302,6 +308,31 @@ KNOWN_BREADCRUMB_DISAGREEMENT = {
     "revision-notes/macro-application/index.html":
         "the JSON-LD opens with Home and the visible trail does not",
 }
+
+
+# ---- check 9 -------------------------------------------------------------
+# Wave 2 Phase 7. The header and footer are baked into the page at build time
+# rather than fetched by inject-templates.js, so templates/header.html is now
+# copied into 463 files instead of being read once by the browser.
+#
+# That trade is only safe while the 463 copies are provably the same file.
+# This is what makes it provable: lift the block back out of every page,
+# remove the uniform indent and the one class="current" the page adds, and
+# require what is left to be templates/header.html byte for byte. A nav edit
+# that reaches 462 pages fails here rather than shipping.
+#
+# It is deliberately byte-exact rather than tolerant. page_shell.bake() emits
+# the template verbatim and never reformats it - that is why the four
+# generators that run Prettier bake AFTER it - so there is no legitimate
+# reason for a single byte to differ, and a check that forgave whitespace
+# would forgive a Prettier run that had quietly rewrapped a nav label.
+BAKED_TEMPLATES = ("templates/header.html", "templates/footer.html")
+EXPECTED_BAKED = 463
+
+# The one thing a page is allowed to add: setActivePage() used to do this at
+# runtime and the build does it now. Ten variants across 463 pages - nine nav
+# items plus the four pages that highlight nothing.
+CURRENT_CLASS = re.compile(r'(<li data-page="[^"]+") class="current">')
 
 
 # --------------------------------------------------------------------------
@@ -792,6 +823,52 @@ def main() -> int:
              f"{agree} agree with their JSON-LD, "
              f"{len(KNOWN_BREADCRUMB_DISAGREEMENT)} known exception")
 
+    # ---------------------------------------------------------- check 9
+    r.section("=== 9. The baked header and footer are the template, exactly ===")
+    for name in BAKED_TEMPLATES:
+        want = (ROOT / name).read_text(encoding="utf-8")
+        begin, end = f"<!-- BEGIN {name} ", f"<!-- END {name} -->"
+        baked, wrong, missing = 0, [], []
+        for p in paths:
+            text = src[p]
+            b = text.find(begin)
+            if b == -1:
+                missing.append(p)
+                continue
+            e = text.find(end, b)
+            if e == -1:
+                wrong.append(f"{p}: {begin.strip()} with no closing marker")
+                continue
+            line_start = text.rfind("\n", 0, b) + 1
+            pad = text[line_start:b]
+            inner = text[text.index("\n", b) + 1: text.rfind("\n", b, e) + 1]
+            got = "\n".join(
+                ln[len(pad):] if ln.startswith(pad) else ln
+                for ln in inner.rstrip("\n").split("\n")) + "\n"
+            got = CURRENT_CLASS.sub(r"\1>", got)
+            baked += 1
+            if got != want:
+                wrong.append(p)
+        if missing:
+            r.bad(f"{len(missing)} page(s) do not carry {name}", *missing[:6])
+        if wrong:
+            r.bad(f"{len(wrong)} page(s) carry a {name} that is not the "
+                  f"template", *wrong[:6])
+        if baked != EXPECTED_BAKED:
+            r.bad(f"{name} baked into {baked} pages, expected "
+                  f"{EXPECTED_BAKED}")
+        elif not wrong and not missing:
+            r.ok(f"{name} is byte-identical on all {baked} pages")
+
+    # Nothing may go back to fetching it at runtime, on any page.
+    left = [p for p in paths if 'id="header-placeholder"' in src[p]
+            or 'id="footer-placeholder"' in src[p]]
+    if left:
+        r.bad(f"{len(left)} published page(s) still carry a runtime "
+              f"placeholder", *left[:6])
+    else:
+        r.ok(f"0 published pages still fetch a template at runtime")
+
     # ---------------------------------------------------------- report
     r.section(None)
     print()
@@ -806,7 +883,7 @@ def main() -> int:
             print(f"  {p}", file=sys.stderr)
         return 1
     print(f"page shell is as recorded: {len(paths)} pages, "
-          f"{len(EXPECTED_FAMILIES)} families, 8 checks")
+          f"{len(EXPECTED_FAMILIES)} families, 9 checks")
     return 0
 
 
