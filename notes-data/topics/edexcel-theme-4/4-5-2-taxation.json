@@ -1,0 +1,99 @@
+{
+  "path": "revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+  "head": {
+    "title": "Edexcel A-Level Economics 4.5.2 Taxation",
+    "description": "Revision notes for Edexcel A-Level Economics 4.5.2. Covers progressive, proportional and regressive taxes, direct and indirect taxes, and the Laffer curve. With diagrams.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+      "title": "Edexcel A-Level Economics 4.5.2 Taxation",
+      "description": "Revision notes for Edexcel A-Level Economics 4.5.2. Covers progressive, proportional and regressive taxes, direct and indirect taxes, and the Laffer curve. With diagrams.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Edexcel A-Level Economics 4.5.2 Taxation",
+      "description": "Revision notes for Edexcel A-Level Economics 4.5.2. Covers progressive, proportional and regressive taxes, direct and indirect taxes, and the Laffer curve. With diagrams.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": true,
+    "extraPreconnects": [],
+    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ],\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n          processEscapes: true,\n          autoload: {\n            color: [],\n            ams: [\"boldsymbol\"],\n          },\n        },\n        options: {\n          skipHtmlTags: [\"script\", \"noscript\", \"style\", \"textarea\", \"pre\"],\n        },\n      };\n    </script>",
+    "headStyle": null,
+    "mathjax": "no-id",
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Taxation",
+        "description": "Free Edexcel A-Level Economics revision notes on taxation — direct and indirect taxes, progressive, regressive and proportional taxes, the Laffer curve, and the effects of taxation for Theme 4.5.2.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-2-taxation.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel A-Level Economics Theme 4: A Global Perspective",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel Theme 4: A Global Perspective",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "4.5.2 Taxation",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-2-taxation.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}
