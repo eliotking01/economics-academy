@@ -112,98 +112,10 @@ function initNavigation() {
   }
 }
 
-// Function to inject templates and set active page
-function injectTemplates() {
-  // Wave 2 Phase 7 bakes templates/header.html and templates/footer.html into
-  // each page at build time, so a baked page has no placeholder to replace,
-  // nothing to fetch, and already carries its own "current" class. Both forms
-  // have to work at once while the migration runs a family at a time, and a
-  // baked page must not be left without a mobile nav panel: initNavigation()
-  // is what builds it, and it is the one part of this file that is not about
-  // injection at all.
-  var header = document.getElementById("header-placeholder");
-  var footer = document.getElementById("footer-placeholder");
-
-  if (!header) {
-    // Baked. The nav is in the DOM already, so there is no fetch to wait for
-    // and no 50ms guess to make.
-    initNavigation();
-  } else {
-    fetch("/templates/header.html")
-      .then((response) => response.text())
-      .then((data) => {
-        header.outerHTML = data;
-        setActivePage();
-
-        // Initialize navigation after slight delay to ensure DOM is ready
-        setTimeout(initNavigation, 50);
-      })
-      .catch((error) => {
-        console.error("Error loading header:", error);
-      });
-  }
-
-  // Inject footer
-  if (footer) {
-    fetch("/templates/footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        footer.outerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Error loading footer:", error);
-      });
-  }
-}
-
-// Improved setActivePage function with better path matching
-function setActivePage() {
-  const path = window.location.pathname;
-
-  // Create a mapping of URL patterns to page identifiers
-  const pageMap = [
-    // Add more specific patterns first
-    { pattern: /^\/revision-notes(\/|$)/, page: "revision-notes" },
-    // Flashcards is a top-level nav item, matching its root URL, so it lights
-    // itself up. It used to point at "revision-notes" because the nav nested it
-    // there while the URL said otherwise - the special case existed only to
-    // paper over that disagreement. PH07-057.
-    { pattern: /^\/flashcards(\/|$)/, page: "flashcards" },
-    { pattern: /^\/practice-questions(\/|$)/, page: "practice-questions" },
-    // The question bank lives under the Past Papers dropdown, so it lights up
-    // that parent. Listed first because it is the more specific path, though
-    // the two cannot both match: "past-papers" is not a prefix of
-    // "past-paper-questions".
-    { pattern: /^\/past-paper-questions(\/|$)/, page: "past-papers" },
-    { pattern: /^\/past-papers(\/|$)/, page: "past-papers" },
-    { pattern: /^\/tutoring\.html$/, page: "tutoring" },
-    { pattern: /^\/marking\.html$/, page: "marking" },
-    { pattern: /^\/about\.html$/, page: "about" },
-    { pattern: /^\/contact\.html$/, page: "contact" },
-    { pattern: /^\/(index\.html)?$/, page: "home" }, // Matches both / and /index.html
-  ];
-
-  // Find current page by checking patterns in order
-  let currentPage = "";
-  for (const { pattern, page } of pageMap) {
-    if (pattern.test(path)) {
-      currentPage = page;
-      break;
-    }
-  }
-
-  // Set active class
-  if (currentPage) {
-    const activeElement = document.querySelector(
-      `[data-page="${currentPage}"]`
-    );
-    if (activeElement) {
-      activeElement.classList.add("current");
-    }
-  }
-}
-
-// Run when DOM is loaded and jQuery is ready
+// Run when DOM is loaded and jQuery is ready. The header and footer are in
+// the page already - Wave 2 Phase 7 bakes them in at build time - so there is
+// nothing to fetch and nothing to wait for, and this runs at DOMContentLoaded
+// instead of 50ms after two network round trips came back.
 $(function () {
-  injectTemplates();
+  initNavigation();
 });

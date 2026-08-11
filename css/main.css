@@ -205,19 +205,17 @@ html {
   border: 0;
 }
 
-/* Reserve header height before JS injection (prevents CLS) */
+/* The two #header-placeholder rules that used to sit here reserved 240px
+   (120px below 767px) for a header that arrived after two fetches. Wave 2
+   Phase 7 bakes the header into the page, so no page has that element any
+   more and the reservation has nothing to reserve. It was also never exact:
+   an approximate reservation for a header of a different real height is what
+   Wave 4.4 identified as the last of the CLS residual, after it had taken the
+   four page types to 0.009 / 0.015 / 0.021.
 
-#header-placeholder {
-  min-height: 240px;
-}
-
-/* On mobile the injected header is much shorter — reduce reserved space to
-   avoid a large blank area on slow connections */
-@media screen and (max-width: 767px) {
-  #header-placeholder {
-    min-height: 120px;
-  }
-}
+   verify_page_shell.py check 9 asserts 0 published pages carry a placeholder,
+   so if one ever comes back the check fails before the missing reservation
+   could matter. */
 
 *,
 *:before,
