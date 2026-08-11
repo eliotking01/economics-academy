@@ -56,6 +56,15 @@ python3 scripts/subset_fontawesome.py --apply   # fonttools + brotli
 
 Everything the workflow runs is stdlib-only and must stay that way.
 
+**The `<head>` is generated for 454 of the 463 pages** by `scripts/page_shell.py`,
+which all five generators import. The 9 root pages still carry their own and are
+permanently out of scope (`docs/audit/DECISIONS.md` D34). The 173 notes pages
+(166 topic + 7 hub) are rendered by `scripts/build_notes_pages.py` from
+`notes-data/`, which holds a verbatim byte slice of each page's content plus its
+lifted metadata — **do not hand-edit a notes page, edit the slice and re-run**.
+`scripts/extract_notes_pages.py` is the one-off that created them and defaults to
+a dry run.
+
 **Three published assets are generated and must not be hand-edited:**
 `css/fontawesome-all.min.css` is a **subset**, not the full library, despite the
 name — it is kept so that 463 `<head>` blocks do not have to change;
@@ -88,7 +97,8 @@ list. Two consequences that are not obvious:
 
 - **`_config.yml` decides what is published.** It exists only to hold an
   `exclude` list, which keeps the repo's working files off the site: `scripts/`,
-  `raw-notes/`, `docs/`, the five `*-data/` directories and the root markdown.
+  `raw-notes/`, `docs/`, the seven `*-data/` directories (including
+  `boards-data/` and `notes-data/`) and the root markdown.
   Before it, `/REVIEW-NOTES.html`, `/CLAUDE.md` and `/scripts/build_glossary.py`
   were all live. **`exclude` replaces Jekyll's defaults rather than adding to
   them**, so the defaults are restated in the file; anything deleted from that
@@ -113,7 +123,7 @@ list. Two consequences that are not obvious:
 ## Layout
 
 ```
-revision-notes/{edexcel-theme-1..4,aqa-a2-micro,aqa-a2-macro}/  166 topic pages, each dir has index.html
+revision-notes/{edexcel-theme-1..4,aqa-a2-micro,aqa-a2-macro}/  166 topic pages, each dir has index.html - GENERATED
 revision-notes/{macro,micro}economics-diagrams.html             diagram galleries
 revision-notes/macro-application/                               real-world data page
 past-papers/{aqa,edexcel,edexcel-b,ocr}/{a-level,as-level}/paper-N/   281 PDFs, index.html per board
@@ -126,6 +136,7 @@ raw-notes/edexcel/<spec-code>.md                                markdown source 
 revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
 glossary-data/                                                  glossary source of truth
 boards-data/boards.json                                         canonical board identity, read by nothing yet
+notes-data/{hubs,topics/<board-dir>}/                           byte slice + metadata for the 173 generated notes pages
 _working/glossary/                                              build-time working files, not published
 ```
 

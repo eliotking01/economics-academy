@@ -1318,128 +1318,202 @@ from 1000–1024 to 850.
 
 ---
 
-# HANDOVER — 2026-08-11. NEXT UP IS WAVE 2
+### Wave 2 done, 2026-08-11, except Phases 4 and 7
 
-**Everything below `main` is merged, pushed and live.** CI (`verify`) and
-`pages build and deployment` both green on every push. **Waves 0, 1 and 4 are
-complete.**
+**Six phases in sixteen commits. The `<head>` now exists once, in
+`scripts/page_shell.py`, for 454 of the 463 pages.**
+
+| Phase | What | Result |
+| --- | --- | --- |
+| 0 | `compare_trees.py`, ten assertions | 32 self-test cases, each assertion broken on purpose |
+| 1 | `verify_page_shell.py` | 8 checks, 20th workflow step, 17 failure modes tested |
+| 2 | `page_shell.py` + `boards.json` + `verify_boards.py` | wired into nothing; 25 board assertions |
+| 3 | pilot: 7 notes hubs | all ten assertions; 7/7 at D33's criterion |
+| 5 | 166 notes topic pages, six sub-phases | **192 deletions, 0 insertions, 0 words of prose** |
+| 6 | all four existing generators absorbed | 273 pages; the `<head>` exists once |
+| 4 | root pages | **declined, D34** |
+| 7 | bake header/footer | **not started; unblocks 4.10** |
+
+Phase 5, sub-phase by sub-phase — every change a blank line:
+
+```
+edexcel-theme-3   20 pages    0 lines      aqa-a2-macro   25 pages   48 deletions
+edexcel-theme-4   21 pages    5 deletions  aqa-a2-micro   54 pages  108 deletions
+edexcel-theme-1   22 pages   15 deletions
+edexcel-theme-2   24 pages   16 deletions  166 pages, 192 deletions, 0 insertions
+```
+
+Phase 6, one commit per generator: flashcards 7 pages / 21 deletions, glossary 3
+/ 9, past-paper-questions 90 / 90, questions 173 / **6,747 insertions and 2,074
+deletions**. That last one is the only absorbed generator that never ran
+Prettier, so `page_shell`'s 80-column wrapping rewrapped every long tag: 173/173
+still identical at D33's criterion, +0.24% bytes, and gzip removes it on the
+wire. It was taken deliberately rather than leaving 37% of the site outside the
+shared `<head>`.
+
+**Assertion 2 reported 0 differing files across all 465 on every one of the
+eleven migration runs.** `verify_text_integrity.py` agrees: 0 across 192 pages,
+every commit.
+
+#### Four numbers the roadmap got wrong, and one I got wrong myself
+
+1. **PH11's `loading="lazy"` row is "33 pages / 94 images".** Measured: 96
+   images across **96** pages, one each, and on all 96 the one lacking it is the
+   **first image on the page**. Zero pages depart from it. It is not drift with
+   stragglers, it is a convention held 96 times out of 96 — `d7bba50` added
+   `loading="lazy"` to the *second* image of a two-image page and left the first,
+   because a lazy first image delays the LCP candidate. **Applying that row as
+   written would reverse it on 96 pages.** `verify_page_shell.py` check 7 now
+   asserts the convention.
+2. **PH06 section 1.1 names only 15 of the 18 self-disagreeing pages.**
+   `contact.html`, `faq.html` and `marking.html` are missing from its list, and
+   one of the 18 is `twitter:description` rather than `og:description`. The
+   count was right; the list was short.
+3. **PH08-039 counted the MathJax `<script>` tag's `id` and never looked at the
+   config beneath it.** There are **three** distinct config bodies across the 126
+   pages that load it — 89 / 18 / 19. Variant 2, on 19 pages, is not cosmetic:
+   it drops `processEscapes`, `autoload` **and** `options.skipHtmlTags`, so those
+   19 pages let MathJax typeset inside `<pre>`, `<style>` and `<textarea>`.
+   Normalising the tag is smaller than the work.
+4. **PH11's "111 board literals" is 113, in 11 scripts.** Close enough to act on;
+   recorded so the next count starts from a measured figure.
+5. **Mine: Phase 2 reported `L1 = 0/190` and I drew a conclusion from it.** The 0
+   was a bug in my own selftest — see D33's correction. The real figure is
+   61/190, so byte-identical migration *is* reachable for a third of the corpus.
+   The Prettier measurement underneath it was independent and stands.
+
+#### Wave 3.1 landed with Wave 2
+
+`boards-data/boards.json` + `scripts/verify_boards.py`, 25 assertions against all
+four hardcoded structures, in the workflow. **Nothing imports it yet** — that is
+PH09's migration step 1, deliberately. Measuring it turned up something PH09 did
+not anticipate: **group names need the same per-consumer treatment as slugs**,
+because Theme 2 reaches published output as three different strings. See
+DO-NOT-BREAK.
+
+---
+
+# HANDOVER — 2026-08-11. NEXT UP IS WAVE 2 PHASE 7
+
+**Everything below is merged to `main`, pushed and live.** CI green on every
+push. **Waves 0, 1, 4 are complete; Wave 2 is complete except Phase 7; Wave 3.1
+is done.**
 
 ## What a fresh session needs to know
 
 1. **Read this file's IMPLEMENTATION section, then `DO-NOT-BREAK.md`.** The
-   register gained seven annotated entries across 4.1–4.6 and 4.9; each says
-   what was done and what must not be undone.
-2. **The roadmap is reliable on direction and unreliable on detail.** Of the
-   **seven** Wave 4 items attempted, **six** were wrong as written and were
-   corrected by measurement: 4.1's resize buys 0.61 MiB and costs sharpness;
-   4.2's "20 icons" is 15, one family of three; 4.3's CLS benefit was already
-   spent by 4.4; **4.5's premise is simply false** — the chrome does not switch
-   at 736; **4.6's "no HTML change is needed" is false for both pages it
-   names**, and scoping them reverses the design rather than removing a
-   dependency; and **4.9's "ten pages" was thirteen**. Measure before
-   implementing, and say so when the item is wrong.
-3. **Three counts were re-derived on 2026-08-11 before Wave 2** — see "Three
-   counts checked" in IMPLEMENTATION. One of the three was **not** wrong, which
-   is the point: suspicion is not measurement either.
-4. **Two non-stdlib dependencies now exist**, both one-off, neither in CI:
-   Pillow (`reencode_diagrams.py`) and fonttools + brotli
-   (`subset_fontawesome.py`). Everything the workflow runs is stdlib-only.
-5. **The workflow is 19 steps.** Four are new since Wave 4 began:
-   `verify_icons.py`, `verify_image_dimensions.py`, `verify_css_load_order.py`
-   and — not new but materially changed — `verify_text_integrity.py`.
-6. **An approved wording change declares itself** with a `Text-Change: <path>`
-   commit trailer. A Wave 2 migration phase must **never** need one: migration
-   is byte-identical by construction, so if that check goes red during one, it
-   is a real failure and the trailer is not the answer.
-7. **`verify_css_load_order.py` exists for Wave 2.** `contact.css` and
-   `tutoring.css` keep bare selectors, and what keeps those two pages correct is
-   that `css/main.css` is linked first. A generated `<head>` that emits the same
-   links in a different order breaks both silently.
+   register gained a whole "build step" block on 2026-08-11 — what
+   `page_shell.py` lifts and why none of it is tidiness waiting to happen.
+2. **`DECISIONS.md` is D1–D34.** D33 fixes the migration criterion; D34 puts the
+   9 root pages permanently out of scope.
+3. **The workflow is 21 steps**, two new since Wave 4: `verify_page_shell.py`
+   and `verify_boards.py`.
+4. **The `<head>` exists once**, in `scripts/page_shell.py`, for 454 of 463
+   pages. All five generators import it. The 9 root pages are the exception, by
+   decision.
+5. **`compare_trees.py` is the gate for any further migration.** Ten assertions,
+   32 self-test cases. It still lives in `docs/audit/scripts/harness/`; PH06
+   says it moves to `scripts/` and joins the workflow, and that has not been
+   done.
+6. **The roadmap is reliable on direction and unreliable on detail** — five more
+   numbers were wrong this session, one of them mine. Measure first, and say so
+   when an item is wrong on contact.
 
-## Wave 4 state
+## Wave 2 state
 
-| Item | State |
+| Phase | State |
 | --- | --- |
-| 4.1 diagram re-encode | **done, live** |
-| 4.2 FontAwesome subset | **done, live** |
-| 4.3 per-topic ppq payloads | **done, live** |
-| 4.4 font fallback metrics | **done, live** |
-| 4.5 breakpoints | **done, live** |
-| 4.6 scope the bare selectors | **done** — textbook sheet 132/0; contact/tutoring declined, measured; `verify_css_load_order.py` added |
-| 4.9 CTA on the glossary and flashcards generators | **done** — 11 pages, new anchor text; `verify_text_integrity.py` scope fixed |
-| 4.7, 4.8 | **held until after the GSC re-measure, ≈2026-09-22** |
-| 4.10 jQuery/dropotron removal | **gated on Wave 2 Phase 7** |
+| 0 harness | **done** |
+| 1 `verify_page_shell.py` | **done, in CI** |
+| 2 `page_shell.py`, `boards.json` | **done** |
+| 3 pilot, 7 notes hubs | **done** |
+| 5 166 notes topic pages | **done, all six sub-phases** |
+| 6 four generators absorbed | **done** |
+| 4 root pages | **declined permanently, D34** |
+| 7 bake header/footer | **NEXT** |
 
-## The traps this session actually hit
+## Phase 7, and why it is worth doing
 
-- **`build_sitemap.py --check` prints "nothing written" and exits 1.** Hit twice.
-  Read the exit code and grep `WOULD CHANGE`. Editing any HTML moves its git
-  `lastmod`, so regenerate the sitemap and amend it into the *same* commit.
-- **Three generators were not idempotent until made so.** Median-cut
-  quantisation re-quantises differently (fixed with a skip guard); fontTools
-  stamps `head.modified` unless `recalcTimestamp=False` is on the **`TTFont`
-  constructor**, not on `subset.Options`. That is PH09b-025's failure mode
-  turning up twice more. **Hash three consecutive runs of anything that writes.**
-- **A subset font fails silently.** faq.html shipped 30 invisible `+` icons for
-  months. `verify_icons.py` exists for that and all four of its checks were
-  tested by deliberately breaking them.
-- **Cold-load MathJax rendering varies between runs.** Two renders of *unchanged*
-  CSS differed by 60,726 pixels in one formula. Cause UNKNOWN. Do not attribute
-  a MathJax pixel diff to a change without ruling this out first — this session
-  did, and had to withdraw it.
-- **zsh does not word-split unquoted variables.** A `for u in $PAGES` sweep ran
-  once on a bogus URL and quietly produced a meaningless "0 differences".
-- **Measure the element the reader sees.** A `search_component()` bug assigned
-  rather than appended to `attr`, silently dropping `data-src` on the 81 pages
-  that needed it; the first run wrote 81 payloads nothing fetched.
+Baking `templates/header.html` and `footer.html` into the pages at build time,
+instead of fetching them at runtime with `inject-templates.js`.
 
-## Unchanged and still true
+- **P3 ruled it proceeds on its own merits**, not as a link-equity fix —
+  PH03-049 established it is not one.
+- **It unblocks 4.10**, the largest performance win left: jQuery + dropotron are
+  **175 KB and 325–500 ms of render-blocking on every page**, and
+  `inject-templates.js` is one of jQuery's three consumers. Removing it first
+  turns a high-risk rewrite into a moderate one.
+- **It should also close the last CLS residual.** Wave 4.4 took all four page
+  types to 0.009 / 0.015 / 0.021 and identified the remainder as `section#main`
+  moving when the header is injected. Nothing in Wave 4 could touch it.
 
-- **Dated dependency ≈2026-09-22**, the day-45 GSC re-measure. PH05-019/020/021
-  and PH03-049 step 2 are blocked on it, and Wave 3's relabelling must not land
-  before it.
-- **Wave 2** (the build step, D18's `page_shell.py`) needs its own session.
-- **Wave 5** is content and editorial; each item needs explicit approval.
-- **10 of the 112 diagrams are referenced by nothing** and are published. A
-  published-surface decision for Eliot, of the same kind as D28's `logo/`.
-  **This said 11 and was never 11** — see "Three counts checked" below.
+**The trade to make knowingly:** editing the nav becomes a rebuild rather than a
+1-file edit. D18 accepted that in principle.
+
+**Two things to check before starting.** 454 pages are generated and would pick
+the baked header up on rebuild; the 9 root pages are not, and would need it
+written in. And `verify_page_shell.py` check 2 pins the seven-script tail — when
+`inject-templates.js` leaves, that constant changes and the check is what proves
+every page went with it.
 
 ## Open, not started
 
 **Runnable now**
 
-- **Wave 2 — the build step, D18's `page_shell.py`. This is the next session**,
-  and the only large piece unblocked. Seven phases, plan of record in
-  `PH06-html-architecture.md` §3. Phase 7 is unblocked: P3 ruled it proceeds on
-  its own merits, **not** as a link-equity fix.
-- **Wave 3.1–3.3** — `boards.json`, the 111 board literals, and `(board, spec)`
-  keying. **`boards.json` is also Wave 2 Phase 2's deliverable**, so do them
-  together or they get built twice. **3.4 is blocked**, see below.
-- **Wave 5.1–5.4** — content and editorial, each item needing explicit approval
-  every time. 5.5 is closed. Note the 5 SVGs with no ground-truth PNG.
+- **Wave 2 Phase 7**, above.
+- **Wave 3.2 and 3.3** — repoint the **113** board literals in 11 scripts at
+  `boards.json`, one generator per commit with output proved unmoved, then key
+  everything on `(board, spec)`. **3.4 is blocked** until the GSC re-measure.
+- **Wave 5.1–5.4** — content and editorial, each needing explicit approval every
+  time. Note the 5 SVGs with no ground-truth PNG.
+- **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
+  PH06 section 3.
+
+**Deliberate normalisations now cheap, each its own commit**
+
+All are 1 edit for 454 pages now, and each needs its own harness run:
+`aria-label="Breadcrumb"` (341), `<main id="main">` keeping the id (462), the
+three MathJax config variants, the two preconnect lineages, the decorative
+comments the shell currently lifts. **`loading="lazy"` is NOT on this list** —
+see the correction above.
 
 **Decisions for Eliot, not tasks**
 
-- **`logo/` and `old-logos-archive/`** — 31 tracked files, still published and
-  serving 200, 0 references and 0 GSC rows. `_config.yml` records them as
-  UNDECIDED since 2026-08-09. Rollback plan in PH11 §4a.
+- **`logo/` and `old-logos-archive/`** — 31 tracked files, published, 0
+  references, 0 GSC rows. UNDECIDED since 2026-08-09.
 - **The 10 unreferenced diagrams**, 608 KB, published and referenced by nothing.
+- **PH06-031's three malformed notes pages.** All three are now migrated and
+  none is fixed; the exclusion from D18 stands, and fixing them means editing
+  inside prose regions.
 
 **Blocked until ≈2026-09-22, the day-45 GSC re-measure**
 
-- **4.7 and 4.8**, and **Wave 3.4** — all three change internal-linking or
-  labelling signals into the pages that re-measure is about.
-- PH05-019/020/021 and PH03-049 step 2.
+- **4.7, 4.8 and Wave 3.4**, and PH05-019/020/021 and PH03-049 step 2.
 
 **Blocked on Wave 2 Phase 7**
 
-- **4.10** — jQuery + dropotron removal, 175 KB and 325–500 ms render-blocking
-  on every page. The biggest single performance win left.
+- **4.10** — jQuery + dropotron removal.
+
+## The traps this session hit
+
+- **A selftest that could never pass.** `L1 = 0/190` was my own off-by-two: the
+  captured `<head>` ends with the two spaces indenting `</head>` and the
+  comparison stripped only newlines. It produced a confident, wrong conclusion
+  in a written report. **A measurement that returns exactly 0 deserves one check
+  that it can ever return anything else.**
+- **Read the diff, not just the harness.** Two of my own bugs — a
+  trailing-whitespace line and a doubled blank line — passed all ten assertions,
+  because they are whitespace and the assertions are deliberately blind to it.
+- **The test suite caught its own fixture drift.** `a1-source-dir-published`
+  used `notes-data/` as its example of an *un*excluded directory, and Phase 3
+  legitimately excluded it. The paired case expecting the opposite result is
+  what made it visible.
+- **`.git` is a FILE in a linked worktree**, not a directory.
+- **A stale `.git/index.lock`** with no git process running blocked a commit for
+  70 minutes' worth of confusion.
 
 ## Dated dependency — ≈2026-09-22
 
-Unchanged. **PH05-019, PH05-020, PH05-021 and PH03-049 step 2 cannot be honestly
-concluded before the day-45 GSC re-measure**, and Wave 3's relabelling must not
-land before it: it rewrites the breadcrumb on 166 notes pages, and PH05's central
-lesson is that a change made nine days before an export made that export
-unreadable.
+Unchanged. PH05-019, PH05-020, PH05-021 and PH03-049 step 2 cannot be honestly
+concluded before the day-45 GSC re-measure, and Wave 3.4's relabelling must not
+land before it.

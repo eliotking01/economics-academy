@@ -612,6 +612,79 @@ browser gets is `css/vendor/katex/`. It is vendored rather than fetched because
 been right all along. PH10-061. Prefer citing the command over restating the
 number.
 
+## The build step (added by Wave 2, 2026-08-11)
+
+**`notes-data/` and `boards-data/` are source, and `_config.yml`'s `exclude` is
+the only thing keeping them off the site.** Both went into that list in the same
+commit that created them, per the rule above. `compare_trees.py` assertion 1 is
+what proves it: the published URL set stayed at 463 pages while the tree gained
+over 300 files.
+
+**`scripts/page_shell.py` owns the `<head>` for 454 of the 463 pages.** All five
+generators import it. A change there reaches every page on the next rebuild,
+which is the point — and is also why it must not grow page-specific behaviour.
+Everything that varies per page is passed in as a value.
+
+> **The values it lifts are not tidiness waiting to happen.** Each was measured
+> and each would rewrite pages if "normalised" without a decision:
+>
+> - **Two preconnect lineages.** All 273 generated pages put the font
+>   preconnect **before** `<title>`; all 190 hand-written pages put it after the
+>   favicons. Earlier is better for the preload scanner, so the generated
+>   families are right and the hand-written ones are the laggards. Do not
+>   "align" them without measuring LCP.
+> - **Two explanatory comments.** The `4db232c` note is universal, 463/463.
+>   `build_questions.py` writes a second one above its early preconnect on 173
+>   pages. Both are correct; rewording either is a change nobody asked for.
+> - **JSON-LD escaping differs by generator.** `build_past_paper_questions.py`
+>   emits `\u2014` where the notes carry a literal em dash, on 87 pages. Both
+>   are valid and parse identically. `jsonldAsciiEscaped` records which.
+> - **The favicon trio moves**, on 17 of 463 pages, varying *inside* four
+>   families. It is per page, not per family.
+>
+> **Two defects `page_shell.py` had and must not regain.** It filtered
+> stylesheets to `/css/pages/`, which silently dropped
+> `/css/vendor/katex/katex.min.css` and would have removed formula styling from
+> 10 pages. And its `<style>` capture matched the `<style>` **inside** a
+> `<noscript>`, emitting DO-NOT-BREAK's six protected blocks twice. Neither was
+> reachable from the hand-written pages; both were found by measuring the
+> generated ones before editing them.
+
+**The content is moved by slicing bytes. It is never parsed and re-serialised.**
+`extract_notes_pages.py` finds two offsets and copies what is between them, which
+is why all three of PH06-031's malformed pages migrated untouched. **No generated
+notes page is run through Prettier**, deliberately: Prettier is a
+parse-and-re-serialise, and reflowing a slice containing prose can move a line
+break across an inline tag boundary and turn `<strong>word</strong>s` into
+"word s". Do not add it.
+
+**`docs/audit/scripts/harness/compare_trees.py` is the gate, and its test suite
+is what makes it evidence.** 32 cases break each of the ten assertions on
+purpose, and **eleven of them expect a PASS** — pinning what each assertion is
+deliberately blind to, each paired with the assertion that covers it. An
+assertion that fires on everything is as useless as one that fires on nothing.
+Do not delete the passing cases as redundant.
+
+**Assertion 10 requires NEW to be a git tree and fails without one.** Seven of
+the fourteen verifiers it runs enumerate through `git ls-files`. Running the
+other seven and reporting a pass is exactly the "green for the wrong reason"
+this harness exists to prevent.
+
+**`verify_page_shell.py`'s EXPECTED tables fail on a count going DOWN as well as
+up.** An improvement is welcome and must be declared: change the page and the
+number in the same commit, so the diff records what improved. `--show` reprints
+the tables for reseeding.
+
+**`boards-data/boards.json` records names per consumer, not one canonical name.**
+Theme 2 reaches published output as three different strings — em dash in
+`taxonomy.json` and the notes hub `<h1>`, hyphen in the flashcards decks, and the
+short form in practice-questions. Collapsing them would silently rewrite visible
+text on a whole page family. `verify_boards.py` compares the record against the
+code and **the code wins**: a disagreement means the transcription is wrong.
+
+**Nothing imports `boards.json` yet.** Wave 3.2 repoints the 113 board literals
+in 11 scripts, one generator per commit, each with its output proved unmoved.
+
 ---
 
 # FINALISED — Phase 11, 2026-08-09
