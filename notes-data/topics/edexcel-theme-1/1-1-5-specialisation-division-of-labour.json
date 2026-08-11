@@ -1,0 +1,99 @@
+{
+  "path": "revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+  "head": {
+    "title": "Edexcel A-Level Economics 1.1.5 Division of Labour",
+    "description": "Free Edexcel A-Level Economics revision notes (1.1.5). Covers Adam Smith's pin factory, the gains and drawbacks of specialising, and the functions of money.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+      "title": "Edexcel A-Level Economics 1.1.5 Division of Labour",
+      "description": "Free Edexcel A-Level Economics revision notes (1.1.5). Covers Adam Smith's pin factory, the gains and drawbacks of specialising, and the functions of money.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Edexcel A-Level Economics 1.1.5 Division of Labour",
+      "description": "Free Edexcel A-Level Economics revision notes (1.1.5). Covers Adam Smith's pin factory, the gains and drawbacks of specialising, and the functions of money.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": false,
+    "extraPreconnects": [],
+    "mathjaxConfig": null,
+    "headStyle": null,
+    "mathjax": null,
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Specialisation and the Division of Labour",
+        "description": "Free Edexcel A-Level Economics revision notes on specialisation and the division of labour — Adam Smith's pin factory, advantages and disadvantages, and the functions of money for Theme 1.1.5.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel A-Level Economics Theme 1: Introduction to Markets and Market Failure",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel Theme 1: Introduction to Markets and Market Failure",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "1.1.5 Specialisation & the Division of Labour",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}
