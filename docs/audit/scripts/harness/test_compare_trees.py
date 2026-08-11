@@ -141,17 +141,20 @@ def case_list():
         dict(name="a1-page-removed", only="1", expect="FAIL",
              mutate=lambda o, n, t: remove_file(n, ABOUT),
              why="a missing page and a moved page look the same to a crawler"),
+        # NOT notes-data/, which Wave 2 Phase 3 legitimately excluded on
+        # 2026-08-11 - this case then passed and the suite caught its own
+        # fixture drift, which is the whole reason for the paired case below.
         dict(name="a1-source-dir-published", only="1", expect="FAIL",
              mutate=lambda o, n, t: add_file(
-                 n, "notes-data/edexcel-theme-1/1-1-1.html", "<p>slice</p>\n"),
+                 n, "topic-data/edexcel-theme-1/1-1-1.html", "<p>slice</p>\n"),
              why="PH06's named risk: a build's source directory reaching the "
                  "live site because _config.yml was not updated"),
         dict(name="a1-source-dir-excluded", only="1", expect="PASS",
              mutate=lambda o, n, t: (
-                 add_file(n, "notes-data/edexcel-theme-1/1-1-1.html",
+                 add_file(n, "topic-data/edexcel-theme-1/1-1-1.html",
                           "<p>slice</p>\n"),
                  edit(n, "_config.yml", "  - scripts/",
-                      "  - notes-data/\n  - scripts/"),
+                      "  - topic-data/\n  - scripts/"),
              ),
              why="the same directory, excluded in the same commit, is invisible "
                  "to the published surface - which is the rule DO-NOT-BREAK sets"),
