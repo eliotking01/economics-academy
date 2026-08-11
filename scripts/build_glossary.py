@@ -41,6 +41,9 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+# Wave 2 Phase 6. page_shell.py owns the <head> for every family now.
+import page_shell as shell  # noqa: E402
 DATA = ROOT / "glossary-data" / "terms.json"
 TAXONOMY = ROOT / "past-paper-questions-data" / "taxonomy.json"
 OUT_DIR = ROOT / "revision-notes" / "glossary"
@@ -368,9 +371,14 @@ def validate(data, groups):
 # ---------------------------------------------------------------- page shell
 
 def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
-    """The common page skeleton, in the same head order as every other page."""
+    """The common page skeleton. The <head> comes from scripts/page_shell.py.
+
+    Wave 2 Phase 6. This function's <head> was byte-identical to
+    build_flashcards.py's bar the stylesheet name, which is the duplication
+    the whole wave exists to remove.
+    """
     url = f"{SITE}{path}"
-    crumb_ld = json_ld({
+    crumb_ld = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -379,74 +387,36 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
               "item": f"{SITE}{href}" if href else None}.items() if v is not None}
             for i, (name, href) in enumerate(crumbs, 1)
         ],
+    }
+    sheets = ["/css/pages/glossary.css"]
+    if katex_css:
+        sheets.append("/css/vendor/katex/katex.min.css")
+    head = shell.render_head({
+        "title": e(title),
+        "description": e(desc),
+        "canonical": url,
+        "preconnectEarly": True,
+        "faviconsAfterCanonical": True,
+        "ogComment": True,
+        "sdComment": True,
+        "og": {
+            "type": "website", "siteName": "Economics Academy",
+            "locale": "en_GB", "url": url,
+            "title": e(title), "description": e(desc),
+            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
+            "image:type": "image/png", "image:alt": "Economics Academy logo",
+        },
+        "twitter": {
+            "card": "summary_large_image", "title": e(title),
+            "description": e(desc), "image": OG_IMAGE,
+        },
+        "jsonldBeforeIcons": [jsonld, crumb_ld],
+        "pageStylesheets": sheets,
     })
-    katex_link = ('\n    <link rel="stylesheet" href="/css/vendor/katex/katex.min.css" />'
-                  if katex_css else "")
     return f"""<!doctype html>
 <html lang="en-GB">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={GTAG}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {{
-        dataLayer.push(arguments);
-      }}
-      gtag("js", new Date());
-
-      gtag("config", "{GTAG}");
-    </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>{e(title)}</title>
-    <meta name="description" content="{e(desc)}" />
-    <link rel="canonical" href="{url}" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Economics Academy" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:url" content="{url}" />
-    <meta property="og:title" content="{e(title)}" />
-    <meta property="og:description" content="{e(desc)}" />
-    <meta property="og:image" content="{OG_IMAGE}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="1200" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Economics Academy logo" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{e(title)}" />
-    <meta name="twitter:description" content="{e(desc)}" />
-    <meta name="twitter:image" content="{OG_IMAGE}" />
-
-    <!-- Structured data -->
-    <script type="application/ld+json">
-      {jsonld}
-    </script>
-    <script type="application/ld+json">
-      {crumb_ld}
-    </script>
-
-    <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
-    />
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/glossary.css" />{katex_link}
+{head}
   </head>
   <body class="is-preload">
     <div id="page-wrapper">
@@ -774,7 +744,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
           </div>
 {SERVICES_CTA}"""
 
-    ld = json_ld({
+    ld = {
         "@context": "https://schema.org",
         "@type": "DefinedTermSet",
         "@id": f"{SITE}/revision-notes/glossary/{meta['slug']}/#glossary",
@@ -800,7 +770,7 @@ def render_board(data, board, groups, rendered_map, inline_map):
             }
             for t in terms
         ],
-    })
+    }
 
     return page_shell(
         title=f"{meta['long']} Glossary — Key Terms & Formulae | Economics Academy",
@@ -877,7 +847,7 @@ def render_landing(data):
           </section>
 {SERVICES_CTA}"""
 
-    ld = json_ld({
+    ld = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "A-Level Economics Glossary",
@@ -891,7 +861,7 @@ def render_landing(data):
              "url": f"{SITE}/revision-notes/glossary/{m['slug']}/"}
             for m in BOARDS.values()
         ],
-    })
+    }
 
     return page_shell(
         title="A-Level Economics Glossary — Key Terms & Formulae | Economics Academy",
