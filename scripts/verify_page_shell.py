@@ -119,38 +119,51 @@ EXPECTED_FAMILIES = {
 }
 
 # ---- check 2 -------------------------------------------------------------
-# CLAUDE.md: "the seven-script tail (jquery, dropotron, inject-templates,
-# browser, breakpoints, util, main)". Measured: it is not merely one tail per
-# family, it is the same seven in the same order as the FIRST seven scripts on
-# all 463 pages, with six families appending their own. That is the stronger
-# statement, so it is the one asserted.
-SEVEN_SCRIPT_TAIL = (
-    "/js/jquery.min.js",
-    "/js/jquery.dropotron.min.js",
-    "/js/components/inject-templates.js",
+# Measured: it is not merely one tail per family, it is the same scripts in the
+# same order as the FIRST scripts on all 463 pages, with six families appending
+# their own. That is the stronger statement, so it is the one asserted.
+#
+# Wave 4.10 took this from seven to four. jquery.min.js, jquery.dropotron.min.js
+# and util.js are deleted from the repo; inject-templates.js became nav.js, the
+# rename D35 declined in Phase 7 because it edited 463 pages to gain a filename
+# and which cost nothing here, where the tail was being rewritten on all 463
+# anyway. **This is what proved the change reached every page**: 463 of 463
+# carry the new tail and 0 carry any of the three removed scripts.
+#
+# Restated here as a literal ON PURPOSE. It is not imported from
+# page_shell.SCRIPT_TAIL, though that is now where the generators get it: a
+# check that reads the value it is checking agrees with any value, including a
+# wrong one. Changing the tail has to change both, in the same commit - the
+# build_past_paper_taxonomy.py EXPECTED pattern.
+SCRIPT_TAIL = (
+    "/js/components/nav.js",
     "/js/browser.min.js",
     "/js/breakpoints.min.js",
-    "/js/util.js",
     "/js/main.js",
 )
 
-# The third entry survived Wave 2 Phase 7 unchanged, and that is deliberate.
-# inject-templates.js stopped injecting anything when the header and footer
-# moved into the pages at build time - what is left is the mobile nav panel and
-# the dropotron init - but renaming it edits 463 pages to gain a better
-# filename, which is the trade css/fontawesome-all.min.css already declined
-# (DO-NOT-BREAK, Wave 4.2). The file says so at the top. Wave 4.10 rewrites it
-# and the tail together, and the rename is free there.
+# Scripts this check must never see again. A page that kept one would still
+# pass the ordering test above, because that filters to tail members and these
+# are not members any more - so it is asserted separately rather than assumed.
+REMOVED_SCRIPTS = (
+    "/js/jquery.min.js",
+    "/js/jquery.dropotron.min.js",
+    "/js/util.js",
+    "/js/components/inject-templates.js",
+)
+
 #
-# So check 2 is NOT what proved Phase 7 reached every page - check 9 is, and it
-# is the stronger statement: the whole nav block, byte-identical to
-# templates/header.html, on all 463.
+# What a page may load after the four, and how many pages may do so.
 #
-# What a page may load after the seven, and how many pages may do so. jQuery
-# and dropotron leave with Wave 4.10, which is gated on migration Phase 7; when
-# they go, the tuple above shortens and this check is what proves every page
-# went with it.
-EXPECTED_INTERLEAVED = ["index.html"]
+# EXPECTED_INTERLEAVED was ["index.html"] until Wave 4.10 and is now empty,
+# which is an improvement declared rather than absorbed. index.html put
+# reviews.js and reviews-render.js between util.js and main.js; util.js is
+# deleted, and bake_templates.sync_script_tail() re-emits the tail first and a
+# page's own scripts after it, so the two review scripts now follow main.js.
+# Nothing depends on the old position: reviews-render.js waits for
+# DOMContentLoaded and reads `reviews` from js/data/reviews.js, which still
+# precedes it. This check is what noticed.
+EXPECTED_INTERLEAVED = []
 
 EXPECTED_EXTRA_SCRIPTS = {
     "/js/components/quiz.js": 173,
@@ -593,42 +606,53 @@ def main() -> int:
                  f"{got[3]} tail / {got[4]} css")
 
     # ---------------------------------------------------------- check 2
-    r.section("\n=== 2. The seven-script tail ===")
-    wrong_order, interleaved = [], []
+    n = len(SCRIPT_TAIL)
+    r.section(f"\n=== 2. The {n}-script tail ===")
+    wrong_order, interleaved, kept_removed = [], [], collections.Counter()
     extra = collections.Counter()
     for p in paths:
         seq = parsed[p].scripts
-        if tuple(s for s in seq if s in SEVEN_SCRIPT_TAIL) != SEVEN_SCRIPT_TAIL:
+        if tuple(s for s in seq if s in SCRIPT_TAIL) != SCRIPT_TAIL:
             wrong_order.append(p)
-        if tuple(seq[:7]) != SEVEN_SCRIPT_TAIL:
+        if tuple(seq[:n]) != SCRIPT_TAIL:
             interleaved.append(p)
         for s in seq:
-            if s not in SEVEN_SCRIPT_TAIL:
+            if s not in SCRIPT_TAIL:
                 extra[s] += 1
+            if s in REMOVED_SCRIPTS:
+                kept_removed[s] += 1
     if args.show:
         print("   ", dict(extra), "interleaved:", interleaved)
     if wrong_order:
-        r.bad(f"{len(wrong_order)} page(s) do not carry the seven scripts once "
+        r.bad(f"{len(wrong_order)} page(s) do not carry the {n} scripts once "
               f"each, in order", *wrong_order[:6])
     else:
-        r.ok(f"the same seven scripts, in the same order, on all "
+        r.ok(f"the same {n} scripts, in the same order, on all "
              f"{len(paths)} pages")
-    # index.html puts its two review scripts between util.js and main.js
-    # rather than after main.js. Nothing else does. Named rather than tolerated,
-    # so a second page adopting the habit fails.
+    # Wave 4.10. Asserted separately because the ordering test above filters to
+    # tail members, and these are not members any more - a page that still
+    # loaded jQuery would sail through it.
+    if kept_removed:
+        r.bad(f"{sum(kept_removed.values())} page(s) still load a script "
+              f"Wave 4.10 removed: {dict(kept_removed)}")
+    else:
+        r.ok(f"0 of {len(paths)} pages load jquery, dropotron, util.js or "
+             f"inject-templates.js")
+    # index.html puts its two review scripts before main.js rather than after.
+    # Nothing else does. Named rather than tolerated, so a second page adopting
+    # the habit fails.
     if interleaved != EXPECTED_INTERLEAVED:
-        r.bad(f"pages inserting a script inside the seven: "
+        r.bad(f"pages inserting a script inside the tail: "
               f"{EXPECTED_INTERLEAVED} -> {interleaved}")
     else:
-        r.ok(f"{len(interleaved)} page inserts its own scripts inside the "
-             f"seven, and it is the expected one")
+        r.ok(f"{len(interleaved)} pages insert a script inside the tail")
     if dict(extra) != EXPECTED_EXTRA_SCRIPTS:
         for k in sorted(set(extra) | set(EXPECTED_EXTRA_SCRIPTS)):
             a, b = EXPECTED_EXTRA_SCRIPTS.get(k, 0), extra.get(k, 0)
             if a != b:
                 r.bad(f"page-specific script {k}: {a} -> {b} pages")
     else:
-        r.ok(f"{len(extra)} page-specific scripts beyond the seven, all "
+        r.ok(f"{len(extra)} page-specific scripts beyond the tail, all "
              f"expected")
 
     # ---------------------------------------------------------- check 3

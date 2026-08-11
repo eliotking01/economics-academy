@@ -86,8 +86,27 @@ def resolve(source, templates):
     return source
 
 
+# The script tail, which is chrome rather than markup and is checked far more
+# precisely elsewhere.
+#
+# Wave 4.10 is why. It took the tail from seven scripts to four on all 463
+# pages, and this check reported 895 losses across the 173 notes pages -
+# every one of them true, and every one of them the change itself.
+# body_of() cuts at <div class="notes-container">, which is above the tail,
+# so the tail has always been inside the profiled region.
+#
+# Removing it here is not a relaxation, because verify_page_shell.py check 2
+# makes a strictly stronger statement about the same bytes: the exact tuple
+# page_shell.SCRIPT_TAIL, in that order, as the FIRST scripts on 463 of 463
+# pages, with each family's own extra script counted to the page in
+# EXPECTED_EXTRA_SCRIPTS. "No <script> count went down" is the weaker claim of
+# the two. What this check exists for is an <a> or a key-definition span
+# vanishing out of the prose, and it still sees every one of those.
+SCRIPT_SRC = re.compile(r'[ \t]*<script src="[^"]*"( defer)?></script>\n?')
+
+
 def profile(source, templates):
-    body = body_of(resolve(source, templates))
+    body = SCRIPT_SRC.sub("", body_of(resolve(source, templates)))
     counts = collections.Counter(TAG.findall(body))
     counts["span.key-definition"] = len(re.findall(r'class="key-definition"', body))
     refs = collections.Counter(REF.findall(body))

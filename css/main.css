@@ -2290,9 +2290,14 @@ ul.social li a.fa-google-plus:hover {
   display: inline-block;
   font-style: italic;
   margin: 0 0.35em 0 0.35em;
+  /* The dropdown is positioned against this. Wave 4.10. */
+  position: relative;
 }
 
-#nav > ul > li > ul {
+/* Hidden by default and revealed by the "Desktop dropdowns" block below, at
+   >=768px only. Below that the whole #nav is display:none and the mobile
+   #navPanel is what shows, so these must never appear there. */
+#nav ul ul {
   display: none;
 }
 
@@ -2376,54 +2381,153 @@ ul.social li a.fa-google-plus:hover {
   }
 }
 
-.dropotron {
-  border-radius: 5px;
-  background-color: #252122;
-  background-color: rgba(34, 30, 31, 0.98);
-  padding: 1.25em 1.5em 1.25em 1.5em;
-  font-style: italic;
-  min-width: 13em;
-  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  margin-top: -1.25em;
-  margin-left: -1px;
-  list-style: none;
-}
+/* Desktop dropdowns
+   -----------------
+   Wave 4.10. These rules replace jquery.dropotron.min.js, which built a
+   body-level <ul class="dropotron level-N"> per submenu at page load and
+   positioned it with inline styles on hover.
 
-.dropotron a,
-.dropotron span {
-  color: #aaa;
-  text-decoration: none;
-  -moz-transition: color 0.25s ease-in-out;
-  -webkit-transition: color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out;
-  transition: color 0.25s ease-in-out;
-}
+   The submenus were always in the page - <nav id="nav"> carries them in
+   templates/header.html and every one of the 463 baked copies - so nothing in
+   the markup changed. What changed is that they are now revealed by CSS
+   rather than cloned by 175 KB of JavaScript, which means the dropdowns work
+   with scripting off, which they never did before.
 
-.dropotron li {
-  padding: 0.25em 0 0.25em 0;
-}
+   Geometry measured off the old implementation rather than guessed, so the
+   menu lands where it used to: appended to the <li>, centred on it, its top
+   edge 2em below the item, 13em minimum width, and the arrow 9px above.
+   js/components/nav.js adds the two things CSS cannot do - tap-to-open on a
+   touch device wide enough to get this nav, and Escape - and adds them on
+   top, so it is an enhancement rather than a dependency.
 
-.dropotron li:hover > a,
-.dropotron li:hover > span {
-  color: #fff;
-}
+   Scoped to >=768px on purpose. Below that #nav is display:none and the
+   mobile #navPanel is what shows; a dropdown appearing there would be a
+   second navigation stacked on the first. */
 
-.dropotron.level-0 {
-  margin-top: 2em;
-}
+@media screen and (min-width: 768px) {
+  #nav ul ul {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    min-width: 13em;
+    margin: 0;
+    padding: 1.25em 1.5em 1.25em 1.5em;
+    list-style: none;
+    text-align: left;
+    font-style: italic;
+    border-radius: 5px;
+    background-color: #252122;
+    background-color: rgba(34, 30, 31, 0.98);
+    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+    /* Hidden by opacity and visibility rather than display, because display
+       cannot be transitioned and because a display:none subtree is invisible
+       to :focus-within, which is what makes these keyboard-reachable. The
+       visibility delay is what lets the fade-out finish before the menu stops
+       taking hit tests. */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+  }
 
-.dropotron.level-0:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  margin-left: -10px;
-  top: -9px;
-  border-left: solid 10px transparent;
-  border-right: solid 10px transparent;
-  border-bottom: solid 10px #252122;
-  border-bottom-color: rgba(34, 30, 31, 0.98);
+  /* Level 0: centred under its own item, 2em clear of it. */
+  #nav > ul > li > ul {
+    top: 100%;
+    left: 50%;
+    margin-top: 2em;
+    transform: translateX(-50%);
+  }
+
+  #nav > ul > li > ul:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: -9px;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px #252122;
+    border-bottom-color: rgba(34, 30, 31, 0.98);
+  }
+
+  /* The 2em gap is dead space the pointer has to cross, and crossing it used
+     to close the menu - dropotron papered over that with a 250 ms hide delay.
+     This bridges it instead: an invisible strip filling the gap, inside the
+     submenu, so hovering it keeps both the submenu and its <li> hovered. */
+  #nav > ul > li > ul:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2em;
+    height: 2em;
+  }
+
+  /* Level 1: alongside its parent item rather than below it. */
+  #nav ul ul li {
+    position: relative;
+    padding: 0.25em 0 0.25em 0;
+  }
+
+  #nav ul ul ul {
+    top: -1.25em;
+    left: 100%;
+    margin-left: 1.5em;
+  }
+
+  #nav ul ul ul:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 1.5em;
+    border-top: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    border-right: solid 10px #252122;
+    border-right-color: rgba(34, 30, 31, 0.98);
+  }
+
+  #nav ul ul ul:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 1.5em;
+  }
+
+  #nav ul ul a,
+  #nav ul ul span {
+    color: #aaa;
+    text-decoration: none;
+    -moz-transition: color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+  }
+
+  #nav ul ul li:hover > a,
+  #nav ul ul li:hover > span,
+  #nav ul ul a:focus-visible {
+    color: #fff;
+  }
+
+  #nav ul ul a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  /* Open. `.nav-open` is added by js/components/nav.js for touch; the other
+     two need no script at all. */
+  #nav li:hover > ul,
+  #nav li:focus-within > ul,
+  #nav li.nav-open > ul {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0s;
+  }
 }
 
 /* Intro */

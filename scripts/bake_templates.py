@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bake the header and footer into the published pages no generator owns.
+"""Bake the header, footer and script tail into the pages no generator owns.
 
     python3 scripts/bake_templates.py            # dry run, writes nothing
     python3 scripts/bake_templates.py --apply
@@ -11,6 +11,12 @@ them, so without this Phase 7 would half-land: two of those 17 are
 /past-papers/edexcel-b/ and /past-papers/ocr/, which between them earn 291
 clicks and 21,131 impressions - more than anything on the site outside the
 homepage - and they would have kept a nav that needs JavaScript.
+
+**Wave 4.10 added the script tail**, for exactly the same reason. The tail
+went from seven scripts to four; the other 446 pages take it from
+page_shell.SCRIPT_TAIL on a rebuild, and without this these 17 would have
+gone on requesting a jQuery that is no longer in the repo. Same two pages,
+same argument, same answer.
 
     root         9   index, tutoring, marking, about, faq, contact, privacy,
                      confirmation, 404. Permanently out of scope for the
@@ -43,6 +49,7 @@ from __future__ import annotations
 
 import argparse
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -58,6 +65,56 @@ UNGENERATED = ("root", "past-papers", "notes-other")
 # these over - or a new hand-written page appears - the count moves and this
 # script says so instead of quietly doing different work.
 EXPECTED = 17
+
+
+# Scripts that used to be in the tail and are not any more. Declared, because
+# the sync below has to be able to tell "a stale tail entry, delete it" from
+# "this page's own script, leave it alone" - index.html carries reviews.js and
+# reviews-render.js inside its tail and always has.
+#
+# Wave 4.10 emptied this of jQuery, dropotron and util.js and renamed
+# inject-templates.js to nav.js. Anything removed from page_shell.SCRIPT_TAIL
+# in future belongs here in the same commit, or these 17 pages keep loading it
+# after the other 446 have stopped.
+LEGACY_TAIL = (
+    "/js/jquery.min.js",
+    "/js/jquery.dropotron.min.js",
+    "/js/components/inject-templates.js",
+    "/js/util.js",
+)
+
+SCRIPT_RE = re.compile(r'^([ \t]*)<script src="([^"]+)"></script>$')
+
+
+def sync_script_tail(text: str) -> str:
+    """Rewrite the page's script tail from page_shell.SCRIPT_TAIL.
+
+    The region runs from the first `<script src>` naming a current or former
+    tail entry to the last. Inside it, current entries are re-emitted in
+    SCRIPT_TAIL's order, former entries are dropped, and anything else is the
+    page's own and is kept, in its original order, after them.
+
+    Line-based and anchored on exact tags, so it cannot touch anything else on
+    the page - the same property the header bake has, and for the same reason.
+    """
+    lines = text.split("\n")
+    known = set(page_shell.SCRIPT_TAIL) | set(LEGACY_TAIL)
+
+    hits = [i for i, ln in enumerate(lines)
+            if (m := SCRIPT_RE.match(ln)) and m.group(2) in known]
+    if not hits:
+        return text
+    first, last = hits[0], hits[-1]
+    indent = SCRIPT_RE.match(lines[first]).group(1)
+
+    # Everything in the region that is neither a current nor a former tail
+    # entry: index.html's two review scripts, and nothing else today.
+    theirs = [ln for ln in lines[first:last + 1]
+              if not ((m := SCRIPT_RE.match(ln)) and m.group(2) in known)]
+
+    rebuilt = [f'{indent}<script src="{s}"></script>'
+               for s in page_shell.SCRIPT_TAIL] + theirs
+    return "\n".join(lines[:first] + rebuilt + lines[last + 1:])
 
 
 def targets() -> list[str]:
@@ -92,7 +149,7 @@ def main() -> int:
     for rel in paths:
         path = ROOT / rel
         before = path.read_text(encoding="utf-8")
-        after = page_shell.bake(before, rel)
+        after = sync_script_tail(page_shell.bake(before, rel))
         if after == before:
             already += 1
             continue
