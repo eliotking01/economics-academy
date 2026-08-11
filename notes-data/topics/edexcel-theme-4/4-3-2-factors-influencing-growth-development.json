@@ -1,0 +1,99 @@
+{
+  "path": "revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html",
+  "head": {
+    "title": "Edexcel A-Level Economics 4.3.2 Influences on Development",
+    "description": "Edexcel A-Level Economics 4.3.2 revision notes. Covers the economic and non-economic factors behind development. With key definitions and evaluation points.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html",
+      "title": "Edexcel A-Level Economics 4.3.2 Influences on Development",
+      "description": "Edexcel A-Level Economics 4.3.2 revision notes. Covers the economic and non-economic factors behind development. With key definitions and evaluation points.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Edexcel A-Level Economics 4.3.2 Influences on Development",
+      "description": "Edexcel A-Level Economics 4.3.2 revision notes. Covers the economic and non-economic factors behind development. With key definitions and evaluation points.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": false,
+    "extraPreconnects": [],
+    "mathjaxConfig": null,
+    "headStyle": null,
+    "mathjax": null,
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Factors Influencing Growth and Development",
+        "description": "Free Edexcel A-Level Economics revision notes on factors influencing growth and development — physical geography, institutions, investment, human capital, and trade for Theme 4.3.2.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel A-Level Economics Theme 4: A Global Perspective",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel Theme 4: A Global Perspective",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "4.3.2 Factors Influencing Growth and Development",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

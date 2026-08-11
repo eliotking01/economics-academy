@@ -39,6 +39,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+# Wave 2 Phase 6. The <head> is no longer written here; page_shell.py owns it
+# for every family, so a change to the social cards or the script tail is one
+# edit rather than five. What stays local is everything below </head>.
+import page_shell as shell  # noqa: E402
+
 DATA_DIR = ROOT / "flashcards-data"
 OUT_DIR = ROOT / "flashcards"
 KATEX_JS = ROOT / "scripts" / "vendor" / "katex.min.js"
@@ -309,9 +315,15 @@ def deck_topics(deck, cards):
 # ------------------------------------------------------------- page shells
 
 def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
-    """The common page skeleton, in the same head order as every other page."""
+    """The common page skeleton. The <head> comes from scripts/page_shell.py.
+
+    Wave 2 Phase 6. Everything above </head> used to be a 65-line f-string
+    here, duplicating what four other generators and 190 hand-written pages
+    also carried. It is now one call, and the values below are the whole of
+    what this family contributes to its own <head>.
+    """
     url = f"{SITE}{path}"
-    crumb_ld = json_ld({
+    crumb_ld = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -320,74 +332,43 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
               "item": f"{SITE}{href}" if href else None}.items() if v is not None}
             for i, (name, href) in enumerate(crumbs, 1)
         ],
+    }
+    sheets = ["/css/pages/flashcards.css"]
+    if katex_css:
+        # Self-hosted KaTeX, for the formula cards. page_shell keeps every
+        # stylesheet after main.css in order; an earlier version of it filtered
+        # to /css/pages/ and would have dropped this one silently.
+        sheets.append("/css/vendor/katex/katex.min.css")
+    head = shell.render_head({
+        "title": e(title),
+        "description": e(desc),
+        "canonical": url,
+        # This family puts the font preconnect before <title> and the favicon
+        # trio straight after the canonical. Both are recorded rather than
+        # chosen: reconciling them with the hand-written pages is a separate
+        # normalisation.
+        "preconnectEarly": True,
+        "faviconsAfterCanonical": True,
+        "ogComment": True,
+        "sdComment": True,
+        "og": {
+            "type": "website", "siteName": "Economics Academy",
+            "locale": "en_GB", "url": url,
+            "title": e(title), "description": e(desc),
+            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
+            "image:type": "image/png", "image:alt": "Economics Academy logo",
+        },
+        "twitter": {
+            "card": "summary_large_image", "title": e(title),
+            "description": e(desc), "image": OG_IMAGE,
+        },
+        "jsonldBeforeIcons": [jsonld, crumb_ld],
+        "pageStylesheets": sheets,
     })
-    katex_link = ('\n    <link rel="stylesheet" href="/css/vendor/katex/katex.min.css" />'
-                  if katex_css else "")
     return f"""<!doctype html>
 <html lang="en-GB">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={GTAG}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {{
-        dataLayer.push(arguments);
-      }}
-      gtag("js", new Date());
-
-      gtag("config", "{GTAG}");
-    </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>{e(title)}</title>
-    <meta name="description" content="{e(desc)}" />
-    <link rel="canonical" href="{url}" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Economics Academy" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:url" content="{url}" />
-    <meta property="og:title" content="{e(title)}" />
-    <meta property="og:description" content="{e(desc)}" />
-    <meta property="og:image" content="{OG_IMAGE}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="1200" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Economics Academy logo" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{e(title)}" />
-    <meta name="twitter:description" content="{e(desc)}" />
-    <meta name="twitter:image" content="{OG_IMAGE}" />
-
-    <!-- Structured data -->
-    <script type="application/ld+json">
-      {jsonld}
-    </script>
-    <script type="application/ld+json">
-      {crumb_ld}
-    </script>
-
-    <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
-    />
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/flashcards.css" />{katex_link}
+{head}
   </head>
   <body class="is-preload">
     <div id="page-wrapper">
@@ -491,7 +472,7 @@ def deck_page(deck, cards, topics):
         f' <span class="fc-topic-count">{t["count"]} card'
         f'{"s" if t["count"] != 1 else ""}</span></li>'
         for t in topics)
-    ld = json_ld({
+    ld = {
         "@context": "https://schema.org",
         "@type": "LearningResource",
         "name": deck["deckTitle"],
@@ -512,7 +493,7 @@ def deck_page(deck, cards, topics):
                 "url": SITE,
             },
         },
-    })
+    }
     body = f"""{breadcrumb_html(crumbs)}
           <header class="major">
             <h1>{e(deck["deckTitle"])}</h1>
@@ -582,7 +563,7 @@ def deck_page(deck, cards, topics):
 def hub_page(decks):
     path = "/flashcards/"
     crumbs = [("Home", "/"), ("Flashcards", None)]
-    ld = json_ld({
+    ld = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "A-Level Economics Flashcards",
@@ -590,7 +571,7 @@ def hub_page(decks):
                        "Edexcel A and AQA, with spaced repetition.",
         "url": f"{SITE}{path}",
         "inLanguage": "en-GB",
-    })
+    }
     sections = []
     for board_name in sorted({d["deck"]["boardName"] for d in decks}):
         deck_cards = "\n".join(

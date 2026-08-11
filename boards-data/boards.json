@@ -1,0 +1,140 @@
+{
+  "_what_this_is": "Canonical board identity, answering PH09-022. Four generators each define what a board is, in four different shapes, and no two agree on the identifier. This is the one record they read instead.",
+
+  "_governing_constraint": "THIS FILE RECORDS WHAT THE SLUGS AND NAMES ALREADY ARE. IT DOES NOT CHANGE ANY OF THEM. Every value below was read out of the current repo and is byte-identical to the literal it replaces. A slug is a live URL and GitHub Pages cannot issue a 301; a name is visible text, and visible text is never altered without explicit approval.",
+
+  "_why_slugs_and_names_are_maps": "PH09's design made `slugs` a map because one board is spelled three ways across three families and all three are correct - the URLs are frozen. Measured on 2026-08-11, the same is true of GROUP NAMES, which PH09 did not anticipate: Theme 2 reaches published output as three different strings. `The UK Economy — Performance and Policies` (em dash) in taxonomy.json and the notes hub <h1>, `The UK Economy - Performance and Policies` (hyphen) in the flashcards decks, and `The UK Economy` in practice-questions. Collapsing those to one canonical name would silently rewrite visible text on a whole page family. So names are recorded per consumer too, and the differences are data rather than a bug to tidy.",
+
+  "_adding_a_board": "Add an entry here, create the notes pages and source data, re-run the generators, add the nav entries in templates/header.html. `expectedTopics` keeps build_past_paper_taxonomy.py's loud-failure guard: a board whose data does not match its declaration fails rather than emitting a short taxonomy.",
+
+  "boards": {
+    "edexcel-a": {
+      "names": {
+        "short": "Edexcel",
+        "display": "Edexcel A",
+        "long": "Edexcel A-Level Economics A",
+        "qualification": "A Level Economics A (9EC0)"
+      },
+      "slugs": {
+        "pastPapers": "edexcel",
+        "questionBank": "edexcel",
+        "taxonomy": "edexcel",
+        "glossary": "edexcel-a",
+        "flashcards": "edexcel-a",
+        "dataDir": "edexcel-a"
+      },
+      "papersUrl": "/past-papers/edexcel/",
+      "notesUrl": "/revision-notes/",
+      "specCodesAreReal": true,
+      "expectedTopics": 87,
+      "groups": [
+        {
+          "notesDir": "edexcel-theme-1",
+          "taxonomySlug": "theme-1",
+          "flashcardsSlug": "theme-1",
+          "label": "Theme 1",
+          "names": {
+            "taxonomy": "Introduction to Markets and Market Failure",
+            "flashcards": "Introduction to Markets and Market Failure",
+            "practiceQuestions": "Introduction to Markets and Market Failure",
+            "practiceQuestionsLabel": "Edexcel Theme 1",
+            "practiceQuestionsButton": "Theme 1: Introduction to Markets and Market Failure"
+          }
+        },
+        {
+          "notesDir": "edexcel-theme-2",
+          "taxonomySlug": "theme-2",
+          "flashcardsSlug": "theme-2",
+          "label": "Theme 2",
+          "names": {
+            "taxonomy": "The UK Economy — Performance and Policies",
+            "flashcards": "The UK Economy - Performance and Policies",
+            "practiceQuestions": "The UK Economy - Performance and Policies",
+            "practiceQuestionsLabel": "Edexcel Theme 2",
+            "practiceQuestionsButton": "Theme 2: The UK Economy"
+          }
+        },
+        {
+          "notesDir": "edexcel-theme-3",
+          "taxonomySlug": "theme-3",
+          "flashcardsSlug": "theme-3",
+          "label": "Theme 3",
+          "names": {
+            "taxonomy": "Business Behaviour and the Labour Market",
+            "flashcards": "Business Behaviour and the Labour Market",
+            "practiceQuestions": "Business Behaviour and the Labour Market",
+            "practiceQuestionsLabel": "Edexcel Theme 3",
+            "practiceQuestionsButton": "Theme 3: Business Behaviour and the Labour Market"
+          }
+        },
+        {
+          "notesDir": "edexcel-theme-4",
+          "taxonomySlug": "theme-4",
+          "flashcardsSlug": "theme-4",
+          "label": "Theme 4",
+          "names": {
+            "taxonomy": "A Global Perspective",
+            "flashcards": "A Global Perspective",
+            "practiceQuestions": "A Global Perspective",
+            "practiceQuestionsLabel": "Edexcel Theme 4",
+            "practiceQuestionsButton": "Theme 4: A Global Perspective"
+          }
+        }
+      ]
+    },
+
+    "aqa": {
+      "names": {
+        "short": "AQA",
+        "display": "AQA",
+        "long": "AQA A-Level Economics",
+        "qualification": "A-level Economics (7136)"
+      },
+      "slugs": {
+        "pastPapers": "aqa",
+        "questionBank": "aqa",
+        "taxonomy": "aqa",
+        "glossary": "aqa",
+        "flashcards": "aqa",
+        "dataDir": "aqa"
+      },
+      "papersUrl": "/past-papers/aqa/",
+      "notesUrl": "/revision-notes/",
+      "specCodesAreReal": false,
+      "_specCodesAreReal_why": "AQA notes use site-local codes 1.x.y and 2.x.y, deliberately not the real 7136 codes 4.1.x and 4.2.x. Ratified in CLAUDE.md, do not 'fix' them. The consequence PH09-023 records is that this puts them in the same namespace as Edexcel's real codes: 37 of 129 codes are claimed by both boards with different meanings, so a spec code is never a key on its own. Always (board, spec).",
+      "expectedTopics": 79,
+      "groups": [
+        {
+          "notesDir": "aqa-a2-micro",
+          "taxonomySlug": "microeconomics",
+          "flashcardsSlug": "micro",
+          "label": "Microeconomics",
+          "names": {
+            "taxonomy": "Individuals, Firms, Markets and Market Failure",
+            "flashcards": "Individuals, Firms, Markets and Market Failure",
+            "practiceQuestions": "Individuals, Firms, Markets and Market Failure",
+            "practiceQuestionsLabel": "AQA Microeconomics",
+            "practiceQuestionsButton": "Micro: Individuals, Firms, Markets and Market Failure"
+          }
+        },
+        {
+          "notesDir": "aqa-a2-macro",
+          "taxonomySlug": "macroeconomics",
+          "flashcardsSlug": "macro",
+          "label": "Macroeconomics",
+          "names": {
+            "taxonomy": "The National and International Economy",
+            "flashcards": "The National and International Economy",
+            "practiceQuestions": "The National and International Economy",
+            "practiceQuestionsLabel": "AQA Macroeconomics",
+            "practiceQuestionsButton": "Macro: The National and International Economy"
+          }
+        }
+      ]
+    }
+  },
+
+  "_pastPapersOnly": "Edexcel B and OCR have past papers on the site and no notes, no glossary, no flashcards and no question bank. They are not boards in this file's sense - nothing generates anything for them - and past-papers/edexcel-b/ and past-papers/ocr/ are hand-written pages. Recorded here so that their absence reads as a decision.",
+
+  "_notWiredInYet": "Nothing imports this file. scripts/verify_boards.py asserts it reproduces all four hardcoded structures byte-for-byte, which is PH09's migration step 1: add the record, change nothing, prove equivalence. Repointing the generators is step 2 onwards and is a separate commit per generator, each verified by its output not moving."
+}

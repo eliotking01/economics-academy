@@ -1,0 +1,99 @@
+{
+  "path": "revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+  "head": {
+    "title": "Edexcel A-Level Economics 1.2.7 The Price Mechanism",
+    "description": "Free Edexcel A-Level Economics revision notes (1.2.7). Covers the rationing, incentive and signalling functions and how prices allocate scarce resources.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+      "title": "Edexcel A-Level Economics 1.2.7 The Price Mechanism",
+      "description": "Free Edexcel A-Level Economics revision notes (1.2.7). Covers the rationing, incentive and signalling functions and how prices allocate scarce resources.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Edexcel A-Level Economics 1.2.7 The Price Mechanism",
+      "description": "Free Edexcel A-Level Economics revision notes (1.2.7). Covers the rationing, incentive and signalling functions and how prices allocate scarce resources.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": true,
+    "extraPreconnects": [],
+    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ], // Both $...$ and \\(...\\)\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n          processEscapes: true, // Allows \\_ in text\n          autoload: {\n            color: [],\n            ams: [\"boldsymbol\"], // For \\mathbf{}\n          },\n        },\n        options: {\n          skipHtmlTags: [\"script\", \"noscript\", \"style\", \"textarea\", \"pre\"],\n        },\n      };\n    </script>",
+    "headStyle": null,
+    "mathjax": "no-id",
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "The Price Mechanism",
+        "description": "Free Edexcel A-Level Economics revision notes on the price mechanism — signalling, incentive, and rationing functions, Adam Smith's invisible hand, and real-world applications for Theme 1.2.7.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel A-Level Economics Theme 1: Introduction to Markets and Market Failure",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel Theme 1: Introduction to Markets and Market Failure",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "1.2.7 Price Mechanism",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

@@ -621,3 +621,79 @@ looks like dead code to the next reader.
 **What did not change.** The hazard itself is untouched: Liquid still runs over
 any published markdown before Markdown, and one stray `{%` still fails the entire
 Pages build. `DO-NOT-BREAK.md`'s entry stands.
+
+---
+
+## 2026-08-11 · Wave 2 checkpoint
+
+### D33 — Migration equality is "same tags, order and values", not byte-identity
+
+Eliot, 2026-08-11, choosing Option A when the two were put to him.
+
+**PH06 section 3's stated exit criterion — "190/190 heads reproduced
+byte-identical" — was never reachable, and that is a fact about the committed
+files rather than about any implementation.** Only **6 of the 190** hand-written
+pages are byte-identical to their own Prettier output: the site's HTML has never
+been run through Prettier, and only the generators run it, over their own
+output. All 190 were put through Prettier 3.9.6 in a scratch tree to check, and
+the 166 notes pages' 13 distinct byte-level `<head>` formats stayed at 13.
+
+So a migrated page must instead carry **the same tags, in the same order, with
+the same values; only whitespace may differ.** That is what the ten assertions
+already check — nine of them are whitespace-insensitive, and the tenth
+(assertion 3, LaTeX byte-exact) covers the content slice, which is copied
+verbatim and never reformatted.
+
+**The rejected alternative was to Prettier-format every page first**, in a
+separate commit, so that byte-identity became meaningful afterwards. Declined
+because it front-loads the exact operation the harness exists to guard — a bulk
+automated rewrite of 166 pages of prose — and does it *before* the safety net
+applies. CLAUDE.md's own rule is that scripted prose rewrites have destroyed
+`<a>` tags in this repo before.
+
+**A comment is not whitespace.** Where the shell would have dropped a decorative
+`<!-- ==== -->` divider from 2 pages or a `<!-- Scoped styles -->` note from 1,
+the divider and the note were lifted and re-emitted instead. Dropping them stays
+available as a later normalisation and remains Eliot's call.
+
+**In practice the criterion was met with room to spare.** 61 of the 190
+hand-written pages migrated byte-identically anyway, including all 20 of
+`edexcel-theme-3`, and every non-identical page differs by blank lines alone —
+192 deletions and 0 insertions across the whole of Phase 5.
+
+> **Correction, recorded because it changed a conclusion.** Phase 2 reported
+> `L1 = 0/190` and concluded byte-identity was unreachable *by any
+> implementation*. The 0 was a bug in the selftest: the captured `<head>` region
+> ends with the two spaces that indent `</head>`, and the comparison used
+> `.strip("\n")`, which could never match. Corrected, the figure is 61/190. The
+> conclusion about Prettier stands and was measured independently; the stronger
+> claim did not.
+
+### D34 — The 9 root pages are permanently out of scope for the shell migration
+
+Eliot, 2026-08-11: **"Leave it out of scope."**
+
+Migration Phase 4 proposed moving the 9 root pages, 3 notes-other pages and the
+notes index onto `page_shell.py`. The root pages are declined outright.
+
+**They are nine pages, not a family.** `page_anatomy.py` measures 9 distinct
+`<head>` shapes, 9 body shells, 3 script tails and 9 stylesheet sets across 9
+pages — every one different, which is correct: `index`, `tutoring`, `marking`,
+`about`, `faq`, `contact`, `privacy`, `confirmation` and `404` do nine different
+jobs. They are also the only pages `page_shell` cannot reproduce at D33's
+criterion: 5 of 9, against 459 of 463 sitewide.
+
+Templating them would mean modelling nine one-off shapes in a shared module to
+save nine duplicated `<head>` blocks — the cost of the abstraction exceeding what
+it removes. The commercial pages are also the highest-value surface on the site
+and the one place a silent regression is least acceptable.
+
+**Consequence, accepted.** A future sitewide `<head>` change is 1 edit for 454
+pages and 9 hand edits for the rest. `verify_page_shell.py` check 4 already holds
+the root pages to CLAUDE.md's required-`<head>` list, so the 9 are watched even
+though they are not generated.
+
+**Not decided here:** the 3 `notes-other` pages and the notes index. Two of the
+three already reproduce at D33's criterion, and the two diagram galleries carry
+the other two head `<style>` blocks. They remain available if wanted; nothing
+depends on them.

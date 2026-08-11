@@ -1,0 +1,814 @@
+#!/usr/bin/env python3
+"""Pin the shape of every page's shell, so drift has to declare itself.
+
+    python3 scripts/verify_page_shell.py
+    python3 scripts/verify_page_shell.py --show    # print the shapes, don't judge
+
+WHY THIS EXISTS
+---------------
+463 pages carry the same ~2.5 KB of `<head>`, body wrapper and script tail, and
+nothing compares them. Phase 6 measured what that costs: 18 pages disagree with
+themselves on a `<head>` field they write twice, 28 load the identical MathJax
+asset with different markup, 341 breadcrumbs lack an `aria-label` the newest
+100 have. None of it is visible, none of it is caught, and all of it arrived
+one hand-written page at a time.
+
+This is Wave 2 Phase 1 - "harden in place" - and PH06 section 3 calls it **the
+cheapest 80% of the value in that document, worth doing even if the migration
+is rejected**. It does not template anything. It writes down what the shell
+looks like today and fails if that changes without the table below changing in
+the same commit.
+
+THE EXPECTED TABLES ARE THE POINT
+---------------------------------
+Every count here is a literal, in the spirit of
+`build_past_paper_taxonomy.py`'s `EXPECTED = {"edexcel": 87, "aqa": 79}`, which
+DO-NOT-BREAK keeps precisely because it "makes adding a board fail loudly
+rather than silently emit a short taxonomy".
+
+So a count going DOWN fails too. An improvement is welcome and must be
+declared: change the page and the number together, and the diff then says what
+was improved. A verifier that quietly congratulates you is one that cannot tell
+an improvement from an accident.
+
+EVERY NUMBER BELOW WAS MEASURED ON 2026-08-11, NOT COPIED
+---------------------------------------------------------
+Seven of PH06's eight figures survived re-derivation unchanged. One did not,
+and it is recorded at check 7, because acting on it as written would have made
+the site worse.
+
+Standard library only, and deliberately self-contained: `docs/audit/scripts/`
+is audit material and is excluded from publishing, so a check the workflow runs
+must not import from it. The tokeniser below is `page_anatomy.py`'s method,
+reimplemented here for that reason.
+"""
+
+from __future__ import annotations
+
+import argparse
+import collections
+import html as htmllib
+import json
+import pathlib
+import re
+import subprocess
+import sys
+from html.parser import HTMLParser
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import build_sitemap  # noqa: E402  - for its _config.yml exclude parser
+
+RUNTIME_PARTIALS = {"templates/header.html", "templates/footer.html"}
+
+
+# --------------------------------------------------------------------------
+# Families, as Phase 0 defined them in 00-INVENTORY.md section 4
+# --------------------------------------------------------------------------
+
+def family_of(path: str) -> str:
+    if path.startswith("revision-notes/glossary/"):
+        return "glossary"
+    if path.startswith("revision-notes/"):
+        rest = path[len("revision-notes/"):]
+        if rest.endswith("/index.html") and rest.count("/") == 1:
+            return "notes-hub"
+        if "/" not in rest:
+            return "notes-other"
+        return "notes-topic"
+    if path.startswith("practice-questions/"):
+        return "mcq-hub" if path.endswith("/index.html") else "mcq-topic"
+    if path.startswith("past-paper-questions/"):
+        return "ppq"
+    if path.startswith("past-papers/"):
+        return "past-papers"
+    if path.startswith("flashcards/"):
+        return "flashcards"
+    return "root"
+
+
+HAND_WRITTEN = ("root", "notes-topic", "notes-hub", "notes-other", "past-papers")
+
+# ---- check 1 -------------------------------------------------------------
+# pages, distinct <head> skeletons, body shells, script tails, stylesheet sets.
+# "Distinct" means: strip every word of text, keep tag + id + class, and count
+# how many different strings come out. Two pages with one skeleton differ only
+# in words.
+#
+# notes-topic's 4 and root's 9/9/3/9 are PH06 section 1.2's table, re-derived
+# here and unchanged. root SHOULD be 9 different pages - they are nine
+# different pages, not a family.
+EXPECTED_FAMILIES = {
+    # family:        (pages, heads, shells, tails, css sets)
+    "root":          (9, 9, 9, 3, 9),
+    "notes-topic":   (166, 4, 1, 1, 1),
+    "notes-hub":     (7, 2, 2, 1, 2),
+    "notes-other":   (3, 2, 3, 1, 2),
+    "past-papers":   (5, 2, 2, 1, 2),
+    "mcq-topic":     (166, 1, 1, 1, 1),
+    "mcq-hub":       (7, 2, 2, 1, 1),
+    "ppq":           (90, 1, 3, 1, 1),
+    "flashcards":    (7, 2, 2, 1, 2),
+    "glossary":      (3, 2, 2, 1, 2),
+}
+
+# ---- check 2 -------------------------------------------------------------
+# CLAUDE.md: "the seven-script tail (jquery, dropotron, inject-templates,
+# browser, breakpoints, util, main)". Measured: it is not merely one tail per
+# family, it is the same seven in the same order as the FIRST seven scripts on
+# all 463 pages, with six families appending their own. That is the stronger
+# statement, so it is the one asserted.
+SEVEN_SCRIPT_TAIL = (
+    "/js/jquery.min.js",
+    "/js/jquery.dropotron.min.js",
+    "/js/components/inject-templates.js",
+    "/js/browser.min.js",
+    "/js/breakpoints.min.js",
+    "/js/util.js",
+    "/js/main.js",
+)
+
+# What a page may load after the seven, and how many pages may do so. jQuery
+# and dropotron leave with Wave 4.10, which is gated on migration Phase 7; when
+# they go, the tuple above shortens and this check is what proves every page
+# went with it.
+EXPECTED_INTERLEAVED = ["index.html"]
+
+EXPECTED_EXTRA_SCRIPTS = {
+    "/js/components/quiz.js": 173,
+    "/js/components/question-search.js": 90,
+    "/js/components/flashcards.js": 7,
+    "/js/components/glossary-filter.js": 3,
+    "/js/data/reviews.js": 1,
+    "/js/components/reviews-render.js": 1,
+    "https://assets.calendly.com/assets/external/widget.js": 1,
+}
+
+# ---- check 3 -------------------------------------------------------------
+# Fields a page writes twice must agree with themselves. PH06-029 found 18 that
+# do not, all hand-written, none generated - a generator cannot disagree with
+# itself. Each is a deliberately shortened social variant, so each is named
+# rather than counted, and the field is named too: seventeen are og:description
+# and exactly one is twitter:description.
+#
+# PH06 section 1.1's prose enumerates only 15 of these 18 - contact.html,
+# faq.html and marking.html are missing from its list. The count 18 was right;
+# the list was short. This is the list.
+KNOWN_SELF_DISAGREEMENT = {
+    "about.html": ("og:description", "shortened social variant"),
+    "contact.html": ("og:description", "shortened social variant"),
+    "faq.html": ("og:description", "shortened social variant"),
+    "index.html": ("og:description", "shortened social variant"),
+    "marking.html": ("og:description", "shortened social variant"),
+    "tutoring.html": ("og:description", "shortened social variant"),
+    "past-papers/index.html": ("og:description", "shortened social variant"),
+    "past-papers/aqa/index.html": ("og:description", "shortened social variant"),
+    "past-papers/edexcel/index.html": ("og:description", "shortened social variant"),
+    "past-papers/edexcel-b/index.html": ("og:description", "shortened social variant"),
+    "past-papers/ocr/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/aqa-a2-macro/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/aqa-a2-micro/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/edexcel-theme-2/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/edexcel-theme-3/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/edexcel-theme-4/index.html": ("og:description", "shortened social variant"),
+    "revision-notes/macro-application/index.html": (
+        "twitter:description",
+        "the only one of the 18 that is twitter: rather than og:",
+    ),
+}
+
+# ---- check 4 -------------------------------------------------------------
+# CLAUDE.md's "a new page needs" list, as a census rather than a rule, because
+# the rule is not true of every page and pretending otherwise ships a red
+# check. 404.html and confirmation.html are noindex utility pages and carry
+# almost none of the social furniture, correctly.
+HEAD_REQUIREMENTS = {
+    "gtag": r"googletagmanager\.com/gtag/js\?id=G-YVCNRW4QH6",
+    "lang=en-GB": r'<html[^>]+lang="en-GB"',
+    "title": r"<title[^>]*>.+?</title>",
+    "meta description": r'<meta[^>]+name="description"[^>]+content="[^"]+"',
+    "canonical": r'<link[^>]+rel="canonical"[^>]+href="https://economicsacademy\.co\.uk',
+    "og:title": r'property="og:title"',
+    "og:description": r'property="og:description"',
+    "og:url": r'property="og:url"',
+    "og:image": r'property="og:image"',
+    "twitter:card": r'name="twitter:card"',
+    "twitter:title": r'name="twitter:title"',
+    "twitter:description": r'name="twitter:description"',
+    "favicon": r'rel="icon"[^>]+href="/favicon\.ico"',
+    "manifest": r'rel="manifest"',
+    "/css/main.css": r'<link rel="stylesheet" href="/css/main\.css"',
+    "a page stylesheet": r'<link rel="stylesheet" href="/css/pages/[^"]+\.css"',
+    "JSON-LD": r'type="application/ld\+json"',
+}
+
+# Pages permitted to be missing each, named. Anything not named here fails.
+HEAD_EXEMPT = {
+    "canonical": {"404.html", "confirmation.html"},
+    "og:title": {"404.html", "confirmation.html"},
+    "og:description": {"404.html", "confirmation.html"},
+    "og:url": {"404.html", "confirmation.html"},
+    "og:image": {"404.html", "confirmation.html", "privacy.html"},
+    "twitter:card": {"404.html", "confirmation.html"},
+    "JSON-LD": {"404.html", "confirmation.html"},
+    "a page stylesheet": {"404.html"},
+    # The 21 older hand-written pages that never gained a twitter: title or
+    # description. twitter:card is present on 19 of them and Twitter falls back
+    # to the og: tags, so nothing is broken - but a generated <head> that
+    # ADDED them would be a change to what 21 pages emit, and that has to be a
+    # decision rather than a side effect.
+    "twitter:title": {
+        "404.html", "about.html", "confirmation.html", "contact.html",
+        "faq.html", "index.html", "marking.html", "privacy.html",
+        "tutoring.html",
+        "past-papers/index.html", "past-papers/aqa/index.html",
+        "past-papers/edexcel/index.html", "past-papers/edexcel-b/index.html",
+        "past-papers/ocr/index.html",
+        "revision-notes/index.html",
+        "revision-notes/aqa-a2-macro/index.html",
+        "revision-notes/aqa-a2-micro/index.html",
+        "revision-notes/edexcel-theme-1/index.html",
+        "revision-notes/edexcel-theme-2/index.html",
+        "revision-notes/edexcel-theme-3/index.html",
+        "revision-notes/edexcel-theme-4/index.html",
+    },
+}
+HEAD_EXEMPT["twitter:description"] = HEAD_EXEMPT["twitter:title"]
+
+# ---- checks 5 and 6 ------------------------------------------------------
+# The four <head> shapes among the 166 notes pages, and what tells them apart.
+# PH06 section 1.2's split, re-derived unchanged: 97 / 40 / 28 / 1.
+EXPECTED_NOTES_HEAD_SHAPES = {
+    "mathjax with id": 97,
+    "no mathjax": 40,
+    "mathjax without id": 28,
+    "mathjax with id + a <style> block": 1,
+}
+
+# The content spine is the ordered list of direct children of
+# div.notes-container, with runs of identical siblings collapsed - because
+# "six sections here and four there" is content length, not structural drift.
+# 9 shapes across 166 pages; shapes 1-6 are the same page with different
+# optional trailing blocks, and 7-9 are the three malformed pages.
+EXPECTED_NOTES_SPINES = 9
+EXPECTED_SPINE_COUNTS = (95, 29, 15, 11, 7, 6, 1, 1, 1)
+
+# PH06-031. Explicitly EXCLUDED from D18's approval: the fixes sit inside prose
+# regions and need their own instruction, every time. Named so that a FOURTH
+# malformed page fails this check instead of hiding among them.
+MALFORMED_NOTES_PAGES = {
+    "revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html":
+        "prose sitting directly in .notes-container, outside any <section>",
+    "revision-notes/aqa-a2-micro/1-1-2-the-nature-and-purpose-of-economic-activity.html":
+        "an <h2> before the spec-alert, which is meant to open every topic page",
+    "revision-notes/aqa-a2-micro/1-6-3-wage-determination-perfectly-competitive-labour-markets.html":
+        "prose sitting directly in .notes-container, outside any <section>",
+}
+
+# ---- check 7 -------------------------------------------------------------
+# THE ONE NUMBER PH06 AND PH11 GET WRONG, and the reason this check asserts a
+# convention rather than a count.
+#
+# PH11 section 2's Wave 2 table lists 'loading="lazy"' as a normalisation over
+# "33 pages / 94 images", sourced from seo/09-web-vitals-baseline.md item 4.
+# Measured 2026-08-11 across all 463 pages:
+#
+#     104 pages carry an <img>; 309 images; 213 already lazy
+#     96 images lack loading=, spread over 96 pages - ONE EACH
+#     on all 96, the one that lacks it is the FIRST image on the page
+#     0 pages depart from that pattern
+#
+# So "33 pages" is wrong - it is 96 (94 notes-topic + 2 root photographs). More
+# importantly the item's premise is wrong: this is not drift with 94 stragglers,
+# it is a convention applied 96 times out of 96. Commit d7bba50 added
+# loading="lazy" to the SECOND image of a two-image page and deliberately left
+# the first, which is the standard rule - a lazy first image delays the LCP
+# candidate. "Adding loading=lazy to the 94 images lacking it" would reverse it
+# on 96 pages.
+#
+# The 8 pages where every image is lazy are the two diagram galleries and the
+# six flashcard decks, where the first image is not a plausible LCP element.
+EXPECTED_IMAGE_PAGES = 104
+EXPECTED_IMAGES = 309
+EXPECTED_FIRST_EAGER = 96
+EXPECTED_ALL_LAZY = 8
+
+# ---- check 8 -------------------------------------------------------------
+# Every page with a breadcrumb writes it twice, visible <nav> and JSON-LD
+# BreadcrumbList. 440 of 441 agree, by hand, with nothing checking. PH06-030.
+EXPECTED_BREADCRUMB = {"visible": 441, "with aria-label": 100, "agree": 440}
+KNOWN_BREADCRUMB_DISAGREEMENT = {
+    "revision-notes/macro-application/index.html":
+        "the JSON-LD opens with Home and the visible trail does not",
+}
+
+
+# --------------------------------------------------------------------------
+# Tokeniser - page_anatomy.py's method, reimplemented so that a workflow check
+# does not import from docs/audit/, which is excluded from publishing and is a
+# record rather than a dependency.
+# --------------------------------------------------------------------------
+
+VOID = {"meta", "link", "br", "hr", "img", "input", "source", "col", "area"}
+
+
+class Shell(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.head: list[str] = []
+        self.body: list[tuple[int, str]] = []
+        self.scripts: list[str] = []
+        self.in_head = self.in_body = False
+        self.depth = 0
+        self.head_style_blocks = 0
+        self.imgs: list[bool] = []          # True if the tag carries loading=
+
+    @staticmethod
+    def _tok(tag, attrs):
+        d = dict(attrs)
+        bits = [tag]
+        if d.get("id"):
+            bits.append("#" + d["id"])
+        if d.get("class"):
+            bits.append("." + ".".join(sorted(d["class"].split())))
+        if tag == "meta":
+            bits.append("[" + (d.get("name") or d.get("property")
+                               or ("charset" if "charset" in d else "?")) + "]")
+        elif tag == "link":
+            bits.append("[" + (d.get("rel") or "?") + "]")
+            if d.get("rel") == "stylesheet":
+                bits.append("=" + (d.get("href") or ""))
+        elif tag == "script":
+            if d.get("src"):
+                bits.append("=" + d["src"] + (" defer" if "defer" in d else ""))
+            elif d.get("type") == "application/ld+json":
+                bits.append("[ld+json]")
+            else:
+                bits.append("[inline]")
+        return "".join(bits)
+
+    def handle_starttag(self, tag, attrs):
+        d = dict(attrs)
+        if tag == "head":
+            self.in_head = True
+            return
+        if tag == "body":
+            self.in_body, self.in_head, self.depth = True, False, 0
+            return
+        if self.in_head:
+            self.head.append(self._tok(tag, attrs))
+            if tag == "style":
+                self.head_style_blocks += 1
+            return
+        if not self.in_body:
+            return
+        self.body.append((self.depth, self._tok(tag, attrs)))
+        if tag == "script" and d.get("src"):
+            self.scripts.append(d["src"])
+        if tag == "img":
+            self.imgs.append("loading" in d)
+        if tag not in VOID:
+            self.depth += 1
+
+    def handle_endtag(self, tag):
+        if tag == "head":
+            self.in_head = False
+            return
+        if self.in_body and tag not in VOID:
+            self.depth = max(0, self.depth - 1)
+
+    # -- derived shapes
+    def head_shape(self) -> str:
+        return "|".join(self.head)
+
+    def body_shell(self) -> str:
+        return "|".join(t for d, t in self.body if d <= 3)
+
+    def script_tail(self) -> str:
+        return "|".join(t for d, t in self.body
+                        if t.startswith("script=") and d <= 2)
+
+    def css_set(self) -> str:
+        return "|".join(t for t in self.head if t.startswith("link[stylesheet]"))
+
+    def spine(self, needle: str) -> list[str] | None:
+        start = base = None
+        for i, (d, t) in enumerate(self.body):
+            if needle in t:
+                start, base = i, d
+                break
+        if start is None:
+            return None
+        out = []
+        for d, t in self.body[start + 1:]:
+            if d <= base:
+                break
+            if d == base + 1:
+                out.append(t)
+        return out
+
+
+def collapse(spine: list[str]) -> str:
+    """Collapse runs of identical siblings.
+
+    Six <section>s and four <section>s are the same shape carrying different
+    amounts of prose. Without this the 166 notes pages have 38 spines and the
+    number measures how long each page is, which is not drift.
+    """
+    out = []
+    for t in spine:
+        if not out or out[-1] != t:
+            out.append(t)
+    return "|".join(out)
+
+
+# --------------------------------------------------------------------------
+# Field extraction for check 3
+# --------------------------------------------------------------------------
+
+META = re.compile(r"<meta\b([^>]*?)/?>", re.I)
+ATTR = re.compile(r'([\w:.-]+)\s*=\s*"([^"]*)"')
+TITLE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
+
+# Trios a page writes the same value into more than once. PH06 section 1.1:
+# <title> == og:title == twitter:title on 463/463, and description ==
+# og:description == twitter:description on 445.
+TRIOS = [
+    ("title", ["og:title", "twitter:title"]),
+    ("description", ["og:description", "twitter:description"]),
+]
+
+
+def head_values(source: str) -> dict[str, str]:
+    out: dict[str, str] = {}
+    m = TITLE.search(source)
+    if m:
+        out["title"] = " ".join(m.group(1).split())
+    for raw in META.findall(source):
+        a = {k.lower(): v for k, v in ATTR.findall(raw)}
+        key = (a.get("name") or a.get("property") or "").lower()
+        if key:
+            out.setdefault(key, " ".join(a.get("content", "").split()))
+    return out
+
+
+# --------------------------------------------------------------------------
+# Reporting
+# --------------------------------------------------------------------------
+
+class Report:
+    def __init__(self):
+        self.problems: list[str] = []
+        self.lines: list[str] = []
+
+    def ok(self, line: str) -> None:
+        self.lines.append(f"  ok    {line}")
+
+    def bad(self, line: str, *detail: str) -> None:
+        self.lines.append(f"  FAIL  {line}")
+        for d in detail:
+            self.lines.append(f"          {d}")
+        self.problems.append(line)
+
+    def section(self, heading: str | None) -> None:
+        """Drain the pending results, then open the next check's heading.
+
+        Collecting every line and printing at the end put all eight headings
+        above all forty results, which is unreadable at exactly the moment it
+        matters.
+        """
+        for line in self.lines:
+            print(line)
+        self.lines = []
+        if heading:
+            print(heading)
+
+def pages() -> list[str]:
+    ex = build_sitemap.excludes()
+    out = subprocess.run(["git", "ls-files", "*.html"], cwd=ROOT,
+                         capture_output=True, text=True, check=True).stdout.split()
+    return sorted(f for f in out
+                  if build_sitemap.published(f, ex) and f not in RUNTIME_PARTIALS)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--show", action="store_true",
+                    help="print the measured shapes and exit 0, for reseeding "
+                         "the tables after a deliberate change")
+    args = ap.parse_args()
+
+    paths = pages()
+    src = {p: (ROOT / p).read_text(encoding="utf-8", errors="replace")
+           for p in paths}
+    parsed: dict[str, Shell] = {}
+    for p in paths:
+        s = Shell()
+        s.feed(src[p])
+        s.close()
+        parsed[p] = s
+
+    fam = collections.defaultdict(list)
+    for p in paths:
+        fam[family_of(p)].append(p)
+
+    r = Report()
+    print(f"{len(paths)} published pages, "
+          f"{sum(len(fam[f]) for f in HAND_WRITTEN)} of them hand-written\n")
+
+    # ---------------------------------------------------------- check 1
+    r.section("=== 1. One shell per family ===")
+    measured = {}
+    for f, ps in sorted(fam.items()):
+        heads = {parsed[p].head_shape() for p in ps}
+        shells = {parsed[p].body_shell() for p in ps}
+        tails = {parsed[p].script_tail() for p in ps}
+        csss = {parsed[p].css_set() for p in ps}
+        measured[f] = (len(ps), len(heads), len(shells), len(tails), len(csss))
+    if args.show:
+        for f, v in sorted(measured.items()):
+            print(f'    "{f}": {v},')
+    unknown = sorted(set(measured) - set(EXPECTED_FAMILIES))
+    if unknown:
+        r.bad(f"{len(unknown)} unknown page family/families: {', '.join(unknown)}",
+              "Add it to EXPECTED_FAMILIES with its measured shape counts.")
+    for f, want in sorted(EXPECTED_FAMILIES.items()):
+        got = measured.get(f)
+        if got is None:
+            r.bad(f"{f}: family has vanished")
+        elif got != want:
+            names = ("pages", "head shapes", "body shells", "script tails",
+                     "stylesheet sets")
+            diff = ", ".join(f"{n} {a}->{b}" for n, a, b in zip(names, want, got)
+                             if a != b)
+            r.bad(f"{f}: {diff}",
+                  "If that is an improvement, change EXPECTED_FAMILIES in the "
+                  "same commit so the diff records it.")
+        else:
+            r.ok(f"{f:12} {got[0]:4} pages, {got[1]} head / {got[2]} shell / "
+                 f"{got[3]} tail / {got[4]} css")
+
+    # ---------------------------------------------------------- check 2
+    r.section("\n=== 2. The seven-script tail ===")
+    wrong_order, interleaved = [], []
+    extra = collections.Counter()
+    for p in paths:
+        seq = parsed[p].scripts
+        if tuple(s for s in seq if s in SEVEN_SCRIPT_TAIL) != SEVEN_SCRIPT_TAIL:
+            wrong_order.append(p)
+        if tuple(seq[:7]) != SEVEN_SCRIPT_TAIL:
+            interleaved.append(p)
+        for s in seq:
+            if s not in SEVEN_SCRIPT_TAIL:
+                extra[s] += 1
+    if args.show:
+        print("   ", dict(extra), "interleaved:", interleaved)
+    if wrong_order:
+        r.bad(f"{len(wrong_order)} page(s) do not carry the seven scripts once "
+              f"each, in order", *wrong_order[:6])
+    else:
+        r.ok(f"the same seven scripts, in the same order, on all "
+             f"{len(paths)} pages")
+    # index.html puts its two review scripts between util.js and main.js
+    # rather than after main.js. Nothing else does. Named rather than tolerated,
+    # so a second page adopting the habit fails.
+    if interleaved != EXPECTED_INTERLEAVED:
+        r.bad(f"pages inserting a script inside the seven: "
+              f"{EXPECTED_INTERLEAVED} -> {interleaved}")
+    else:
+        r.ok(f"{len(interleaved)} page inserts its own scripts inside the "
+             f"seven, and it is the expected one")
+    if dict(extra) != EXPECTED_EXTRA_SCRIPTS:
+        for k in sorted(set(extra) | set(EXPECTED_EXTRA_SCRIPTS)):
+            a, b = EXPECTED_EXTRA_SCRIPTS.get(k, 0), extra.get(k, 0)
+            if a != b:
+                r.bad(f"page-specific script {k}: {a} -> {b} pages")
+    else:
+        r.ok(f"{len(extra)} page-specific scripts beyond the seven, all "
+             f"expected")
+
+    # ---------------------------------------------------------- check 3
+    r.section("\n=== 3. A <head> field written twice agrees with itself ===")
+    disagree = {}
+    for p in paths:
+        v = head_values(src[p])
+        for base, others in TRIOS:
+            if base not in v:
+                continue
+            for o in others:
+                if o in v and v[o] != v[base]:
+                    disagree.setdefault(p, set()).add(o)
+    for p in sorted(disagree):
+        fields = sorted(disagree[p])
+        known = KNOWN_SELF_DISAGREEMENT.get(p)
+        if known and [known[0]] == fields:
+            continue
+        r.bad(f"{p} disagrees with itself on {', '.join(fields)}",
+              "Every duplicated <head> field is meant to agree. If this one is "
+              "a deliberate social variant, add it to "
+              "KNOWN_SELF_DISAGREEMENT with the reason.")
+    for p, (field, why) in sorted(KNOWN_SELF_DISAGREEMENT.items()):
+        if field not in disagree.get(p, set()):
+            r.bad(f"{p} no longer disagrees on {field}",
+                  "Good - now delete its entry from KNOWN_SELF_DISAGREEMENT "
+                  "in the same commit.")
+    r.ok(f"{len(disagree)} pages disagree with themselves, all "
+         f"{len(KNOWN_SELF_DISAGREEMENT)} declared "
+         f"({sum(1 for f, _ in KNOWN_SELF_DISAGREEMENT.values() if f.startswith('og:'))} "
+         f"og:description, "
+         f"{sum(1 for f, _ in KNOWN_SELF_DISAGREEMENT.values() if f.startswith('twitter:'))} "
+         f"twitter:description)")
+
+    # ---------------------------------------------------------- check 4
+    r.section("\n=== 4. The <head> furniture CLAUDE.md requires ===")
+    for name, pattern in HEAD_REQUIREMENTS.items():
+        rx = re.compile(pattern, re.S)
+        missing = {p for p in paths if not rx.search(src[p])}
+        exempt = HEAD_EXEMPT.get(name, set())
+        undeclared = sorted(missing - exempt)
+        gained = sorted(exempt - missing)
+        if undeclared:
+            r.bad(f"{name}: missing from {len(undeclared)} undeclared page(s)",
+                  *undeclared[:8])
+        elif gained:
+            r.bad(f"{name}: {len(gained)} page(s) now carry it that were "
+                  f"exempt", *gained[:8],
+                  "Delete them from HEAD_EXEMPT in the same commit.")
+        else:
+            r.ok(f"{name:22} {len(paths) - len(missing):4}/{len(paths)}"
+                 + (f"   ({len(exempt)} declared exempt)" if exempt else ""))
+
+    # ---------------------------------------------------------- check 5
+    r.section("\n=== 5. notes-topic: the four <head> shapes ===")
+    nt = sorted(fam["notes-topic"])
+    labels = collections.Counter()
+    for p in nt:
+        s = parsed[p]
+        has_mj = any("mathjax" in t.lower() for t in s.head)
+        with_id = any("mathjax" in t.lower() and "#MathJax-script" in t
+                      for t in s.head)
+        if not has_mj:
+            labels["no mathjax"] += 1
+        elif not with_id:
+            labels["mathjax without id"] += 1
+        elif s.head_style_blocks:
+            labels["mathjax with id + a <style> block"] += 1
+        else:
+            labels["mathjax with id"] += 1
+    if args.show:
+        print("   ", dict(labels))
+    shapes = {parsed[p].head_shape() for p in nt}
+    if len(shapes) != len(EXPECTED_NOTES_HEAD_SHAPES):
+        r.bad(f"notes-topic has {len(shapes)} <head> shapes, expected "
+              f"{len(EXPECTED_NOTES_HEAD_SHAPES)}")
+    for label, want in EXPECTED_NOTES_HEAD_SHAPES.items():
+        got = labels.get(label, 0)
+        if got != want:
+            r.bad(f"notes-topic '{label}': {want} -> {got} pages")
+        else:
+            r.ok(f"{label:36} {got:4} pages")
+
+    # ---------------------------------------------------------- check 6
+    r.section("\n=== 6. notes-topic: the content spine ===")
+    spines = collections.Counter()
+    by_spine = collections.defaultdict(list)
+    for p in nt:
+        sp = parsed[p].spine("notes-container")
+        if sp is None:
+            r.bad(f"{p} has no div.notes-container",
+                  "The content region is what a template slices between. It is "
+                  "present exactly once on 166/166 today.")
+            continue
+        k = collapse(sp)
+        spines[k] += 1
+        by_spine[k].append(p)
+    counts = tuple(n for _, n in spines.most_common())
+    if args.show:
+        for k, n in spines.most_common():
+            print(f"    {n:4}  {k}")
+    if len(spines) != EXPECTED_NOTES_SPINES or counts != EXPECTED_SPINE_COUNTS:
+        r.bad(f"notes-topic spines: {EXPECTED_NOTES_SPINES} shapes "
+              f"{EXPECTED_SPINE_COUNTS} -> {len(spines)} shapes {counts}")
+    else:
+        r.ok(f"{EXPECTED_NOTES_SPINES} spine shapes over {len(nt)} pages, "
+             f"{counts}")
+    # The three singletons must be exactly the three known malformed pages.
+    singles = {by_spine[k][0] for k, n in spines.items() if n == 1}
+    if singles != set(MALFORMED_NOTES_PAGES):
+        r.bad("the one-page spines are not the three known malformed pages",
+              f"expected: {', '.join(sorted(MALFORMED_NOTES_PAGES))}",
+              f"measured: {', '.join(sorted(singles))}",
+              "PH06-031 is EXCLUDED from D18's approval - those three need "
+              "their own instruction. A fourth is a new defect.")
+    else:
+        r.ok(f"the {len(singles)} one-page spines are the known malformed "
+             f"pages, and no others")
+
+    # ---------------------------------------------------------- check 7
+    r.section("\n=== 7. The image loading convention ===")
+    with_imgs = [p for p in paths if parsed[p].imgs]
+    total = sum(len(parsed[p].imgs) for p in with_imgs)
+    first_eager, all_lazy, odd = 0, 0, []
+    for p in with_imgs:
+        lz = parsed[p].imgs
+        if all(lz):
+            all_lazy += 1
+        elif not lz[0] and all(lz[1:]):
+            first_eager += 1
+        else:
+            odd.append(p)
+    if odd:
+        r.bad(f"{len(odd)} page(s) break the loading= convention", *odd[:8],
+              "Every page is either all-lazy or first-eager-rest-lazy. A lazy "
+              "first image delays the LCP candidate, which is why d7bba50 "
+              "left it off.")
+    else:
+        r.ok(f"{len(with_imgs)} pages, {total} images: {first_eager} "
+             f"first-eager-rest-lazy, {all_lazy} all-lazy, 0 exceptions")
+    for label, got, want in (("pages with images", len(with_imgs), EXPECTED_IMAGE_PAGES),
+                             ("images", total, EXPECTED_IMAGES),
+                             ("first-eager pages", first_eager, EXPECTED_FIRST_EAGER),
+                             ("all-lazy pages", all_lazy, EXPECTED_ALL_LAZY)):
+        if got != want:
+            r.bad(f"{label}: {want} -> {got}")
+
+    # ---------------------------------------------------------- check 8
+    r.section("\n=== 8. Both breadcrumb copies stay in step ===")
+    # Two groups: the opening tag's attributes, then the inner HTML. One group
+    # spanning both leaks aria-label="Breadcrumb" into the crumb list, which
+    # took the agreement count from 440 to 0 and looked like a site problem.
+    NAV = re.compile(
+        r'<nav\b([^>]*\bclass="[^"]*\bbreadcrumb\b[^"]*"[^>]*)>(.*?)</nav>',
+        re.S | re.I)
+    LD = re.compile(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>',
+                    re.S | re.I)
+    SEPARATOR = re.compile(r'<span class="separator">[^<]*</span>')
+    visible = aria = agree = 0
+    mismatched = {}
+    for p in paths:
+        m = NAV.search(src[p])
+        if not m:
+            continue
+        visible += 1
+        if 'aria-label="Breadcrumb"' in m.group(1):
+            aria += 1
+        # Split on the separator span and strip tags from each crumb, which is
+        # notes_drift.py's method - a crumb can be a bare word or a whole
+        # <a><span>, and pulling text nodes out instead gets 161 of 441 right.
+        seen = [" ".join(htmllib.unescape(re.sub(r"<[^>]+>", " ", chunk)).split())
+                for chunk in SEPARATOR.split(m.group(2))]
+        seen = [x for x in seen if x]
+        want = None
+        for block in LD.findall(src[p]):
+            try:
+                data = json.loads(block)
+            except ValueError:
+                continue
+            for node in (data if isinstance(data, list) else [data]):
+                if isinstance(node, dict) and node.get("@type") == "BreadcrumbList":
+                    want = [i.get("name") for i in node.get("itemListElement", [])]
+        if want is None:
+            continue
+        if [x for x in seen if x] == want:
+            agree += 1
+        else:
+            mismatched[p] = (seen, want)
+    for p in sorted(mismatched):
+        if p in KNOWN_BREADCRUMB_DISAGREEMENT:
+            continue
+        r.bad(f"{p}: the two breadcrumb copies disagree",
+              f"visible: {mismatched[p][0]}", f"json-ld: {mismatched[p][1]}")
+    for p in KNOWN_BREADCRUMB_DISAGREEMENT:
+        if p not in mismatched:
+            r.bad(f"{p} breadcrumbs now agree",
+                  "Good - delete its entry from "
+                  "KNOWN_BREADCRUMB_DISAGREEMENT in the same commit.")
+    got = {"visible": visible, "with aria-label": aria, "agree": agree}
+    if got != EXPECTED_BREADCRUMB:
+        r.bad(f"breadcrumb census {EXPECTED_BREADCRUMB} -> {got}")
+    else:
+        r.ok(f"{visible} visible breadcrumbs, {aria} with aria-label, "
+             f"{agree} agree with their JSON-LD, "
+             f"{len(KNOWN_BREADCRUMB_DISAGREEMENT)} known exception")
+
+    # ---------------------------------------------------------- report
+    r.section(None)
+    print()
+    sys.stdout.flush()
+    if args.show:
+        print("--show: tables printed, nothing judged")
+        return 0
+    if r.problems:
+        print(f"FAIL: {len(r.problems)} problem(s) with the page shell:",
+              file=sys.stderr)
+        for p in r.problems:
+            print(f"  {p}", file=sys.stderr)
+        return 1
+    print(f"page shell is as recorded: {len(paths)} pages, "
+          f"{len(EXPECTED_FAMILIES)} families, 8 checks")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

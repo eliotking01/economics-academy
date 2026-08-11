@@ -1,0 +1,7 @@
+{
+  "_what_this_is": "The allowlist for compare_trees.py assertion 5. A <head> field may differ between OLD and NEW only if the page and the field appear here with a written reason. Empty means nothing may change, which is the state Wave 2 migration phases must run in: migration is byte-identical by construction, so a head field that moves during one is a real failure.",
+  "_shape": "changes: { \"<repo-relative page path>\": { \"<field>\": \"<reason>\" } }. Fields are named as compare_trees.head_fields() emits them: lang, title, canonical, meta:description, meta:robots, og:*, twitter:*.",
+  "_no_globs": "Deliberately no patterns. One entry may not excuse a family. The eighteen pages of PH06-029 are eighteen entries with eighteen reasons.",
+  "_when_to_add": "Only for a deliberate normalisation, and only in the separate commit that makes it - never in the commit that migrates a family. DO-NOT-BREAK.md: migration is byte-identical, improvements come after, so that a harness failure is unambiguous.",
+  "changes": {}
+}

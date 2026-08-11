@@ -1,0 +1,99 @@
+{
+  "path": "revision-notes/edexcel-theme-3/3-3-2-costs.html",
+  "head": {
+    "title": "Edexcel A-Level Economics 3.3.2 Costs",
+    "description": "Free Edexcel A-Level Economics revision notes (3.3.2). Covers the main cost measures, the shape of the curves, and the MC, AVC, AC and LRAC relationships.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+      "title": "Edexcel A-Level Economics 3.3.2 Costs",
+      "description": "Free Edexcel A-Level Economics revision notes (3.3.2). Covers the main cost measures, the shape of the curves, and the MC, AVC, AC and LRAC relationships.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Edexcel A-Level Economics 3.3.2 Costs",
+      "description": "Free Edexcel A-Level Economics revision notes (3.3.2). Covers the main cost measures, the shape of the curves, and the MC, AVC, AC and LRAC relationships.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": false,
+    "extraPreconnects": [],
+    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ],\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n        },\n      };\n    </script>",
+    "headStyle": null,
+    "mathjax": "with-id",
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Costs",
+        "description": "Free Edexcel A-Level Economics revision notes on costs — fixed and variable costs, total, average, and marginal costs, short-run and long-run cost curves for Theme 3.3.2.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-2-costs.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel A-Level Economics Theme 3: Business Behaviour and the Labour Market",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel Theme 3: Business Behaviour and the Labour Market",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "3.3.2 Costs",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-2-costs.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

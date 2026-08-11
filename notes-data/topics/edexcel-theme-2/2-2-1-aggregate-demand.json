@@ -1,0 +1,98 @@
+{
+  "path": "revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+  "head": {
+    "title": "Edexcel A-Level Economics 2.2.1 Aggregate Demand",
+    "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.1. Covers the AD formula, the relative weight of each component, and movements versus shifts of AD.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+      "title": "Edexcel A-Level Economics 2.2.1 Aggregate Demand",
+      "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.1. Covers the AD formula, the relative weight of each component, and movements versus shifts of AD.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Edexcel A-Level Economics 2.2.1 Aggregate Demand",
+      "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.1. Covers the AD formula, the relative weight of each component, and movements versus shifts of AD.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": true,
+    "extraPreconnects": [],
+    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ],\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n          processEscapes: true,\n          autoload: {\n            color: [],\n            ams: [\"boldsymbol\"],\n          },\n        },\n        options: {\n          skipHtmlTags: [\"script\", \"noscript\", \"style\", \"textarea\", \"pre\"],\n        },\n      };\n    </script>",
+    "headStyle": null,
+    "mathjax": "no-id",
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Aggregate Demand",
+        "description": "Free Edexcel A-Level Economics revision notes on aggregate demand — the AD formula (C+I+G+X-M), components of AD, shifts in the AD curve, and AD/AS diagram analysis for Theme 2.2.1.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel A-Level Economics Theme 2: The UK Economy — Performance and Policies",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel Theme 2: The UK Economy - Performance and Policies",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "2.2.1 Aggregate Demand"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "path": "revision-notes/macro-application/index.html",
+  "head": {
+    "title": "Macroeconomic Application | A-Level Economics Revision Notes | Economics Academy",
+    "description": "Real-world UK and South Africa macroeconomic data and worked examples for A-Level Economics. Use application points on growth, inflation, unemployment, trade, inequality, and policy in essays and data responses.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/macro-application/",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/macro-application/",
+      "title": "Macroeconomic Application | A-Level Economics Revision Notes | Economics Academy",
+      "description": "Real-world UK and South Africa macroeconomic data and worked examples for A-Level Economics. Use application points on growth, inflation, unemployment, trade, inequality, and policy in essays and data responses.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": true,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Macroeconomic Application | A-Level Economics Revision Notes | Economics Academy",
+      "description": "Real-world UK and South Africa macroeconomic data and worked examples for A-Level Economics.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css",
+      "/css/pages/macro-application.css?v=2"
+    ],
+    "mathjaxComment": false,
+    "extraPreconnects": [],
+    "mathjaxConfig": null,
+    "headStyle": null,
+    "mathjax": null,
+    "jsonldBeforeIcons": [],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Macroeconomic Application",
+        "description": "Real-world UK and South Africa macroeconomic data and worked examples for A-Level Economics. Use application points on growth, inflation, unemployment, trade, inequality, and policy in essays and data responses.",
+        "url": "https://economicsacademy.co.uk/revision-notes/macro-application/",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "A-Level Economics Revision Notes",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Macroeconomic Application",
+            "item": "https://economicsacademy.co.uk/revision-notes/macro-application/"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": "<!-- end .container -->",
+    "endMainComment": "<!-- end #main -->",
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <div id=\"header-placeholder\"></div>\n\n",
+    "afterMain": "\n\n      <div id=\"footer-placeholder\"></div>\n    </div><!-- end #page-wrapper -->\n\n",
+    "afterScripts": "\n    <script>\n    (function () {\n      'use strict';\n\n      var activeCountry = 'all';\n      var activeTopic = null;\n\n      var countryBtns = Array.prototype.slice.call(document.querySelectorAll('.filter-country-btn'));\n      var topicBtns   = Array.prototype.slice.call(document.querySelectorAll('.filter-topic-btn'));\n      var sections    = Array.prototype.slice.call(document.querySelectorAll('.application-section'));\n\n      function applyFilter() {\n        var ukSection = document.getElementById('uk-section');\n        var saSection = document.getElementById('sa-section');\n\n        // Show/hide entire country blocks\n        if (ukSection) ukSection.style.display = (activeCountry === 'all' || activeCountry === 'uk') ? '' : 'none';\n        if (saSection) saSection.style.display = (activeCountry === 'all' || activeCountry === 'sa') ? '' : 'none';\n\n        // Show/hide topic sections within the visible country block\n        sections.forEach(function (s) {\n          s.style.display = (!activeTopic || s.dataset.topic === activeTopic) ? '' : 'none';\n        });\n\n        // Show/hide topic chips: only visible when a single country is selected\n        topicBtns.forEach(function (b) {\n          b.style.display = (activeCountry !== 'all' && b.dataset.forCountry === activeCountry) ? '' : 'none';\n        });\n      }\n\n      countryBtns.forEach(function (btn) {\n        btn.addEventListener('click', function () {\n          activeCountry = btn.dataset.country;\n          activeTopic   = null;\n          countryBtns.forEach(function (b) { b.classList.remove('is-active'); });\n          btn.classList.add('is-active');\n          topicBtns.forEach(function (b) { b.classList.remove('is-active'); });\n          applyFilter();\n        });\n      });\n\n      topicBtns.forEach(function (btn) {\n        btn.addEventListener('click', function () {\n          var t = btn.dataset.topic;\n          if (activeTopic === t) {\n            activeTopic = null;\n            btn.classList.remove('is-active');\n          } else {\n            activeTopic = t;\n            topicBtns.forEach(function (b) { b.classList.remove('is-active'); });\n            btn.classList.add('is-active');\n          }\n          applyFilter();\n        });\n      });\n\n      // Set initial state\n      applyFilter();\n    }());\n    </script>\n\n  </body>\n</html>\n"
+  }
+}
