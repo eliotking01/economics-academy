@@ -260,7 +260,7 @@ def render_head(v: dict) -> str:
         out.append(tag("link", [("rel", "stylesheet"), ("href", href)]))
 
     # ---- MathJax
-    if v.get("headStyle"):
+    if v.get("headStyle") and not v.get("headStyleAfterMathjax"):
         out.append(v["headStyle"])
     if v.get("mathjax"):
         # The config body is LIFTED when the caller supplies one, so that the
@@ -279,6 +279,8 @@ def render_head(v: dict) -> str:
             attrs = [("src", src), ("async", None)]
         out.append(tag("script", attrs, void=False) + "</script>")
 
+    if v.get("headStyle") and v.get("headStyleAfterMathjax"):
+        out.append(v["headStyle"])
     if v.get("sdComment") and not v.get("jsonldBeforeIcons"):
         out.append("    <!-- Structured data -->")
     for block in v.get("jsonldAfterStyles", []):
@@ -404,8 +406,16 @@ def extract(source: str) -> dict:
     ]
     mc = re.search(r"[ \t]*<script>\s*window\.MathJax\s*=.*?</script>", h, re.S)
     v["mathjaxConfig"] = mc.group(0) if mc else None
-    st = re.search(r"[ \t]*<style>.*?</style>", h, re.S)
+    # The <style> block is captured with the comment that introduces it, and
+    # with its position relative to MathJax: on 1-5-1 it sits AFTER the MathJax
+    # script, and emitting it before would reorder the head. PH08-042 records
+    # the block itself as a violation to move into a stylesheet later; that is
+    # a normalisation with its own commit, not something to do while migrating.
+    st = re.search(r"[ \t]*(?:<!--[^>]*-->\n[ \t]*)?<style>.*?</style>", h, re.S)
     v["headStyle"] = st.group(0) if st else None
+    if st:
+        mj = re.search(r"<script[^>]*mathjax", h, re.I)
+        v["headStyleAfterMathjax"] = bool(mj and st.start() > mj.start())
     v["mathjax"] = None
     for raw in MJ_SRC.findall(h):
         a = {k.lower(): v2 for k, v2 in ATTR.findall(raw)}
