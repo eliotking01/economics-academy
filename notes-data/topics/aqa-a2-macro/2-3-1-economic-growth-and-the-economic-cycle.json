@@ -1,0 +1,98 @@
+{
+  "path": "revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+  "head": {
+    "title": "AQA A-Level Economics 2.3.1 Economic Growth and the Cycle",
+    "description": "Free AQA A-Level Economics revision notes (2.3.1). Covers short-run versus long-run growth, the phases of the cycle, output gaps and the costs of growth.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+      "title": "AQA A-Level Economics 2.3.1 Economic Growth and the Cycle",
+      "description": "Free AQA A-Level Economics revision notes (2.3.1). Covers short-run versus long-run growth, the phases of the cycle, output gaps and the costs of growth.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "AQA A-Level Economics 2.3.1 Economic Growth and the Cycle",
+      "description": "Free AQA A-Level Economics revision notes (2.3.1). Covers short-run versus long-run growth, the phases of the cycle, output gaps and the costs of growth.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-textbook.css"
+    ],
+    "mathjaxComment": true,
+    "extraPreconnects": [],
+    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ], // Both $...$ and \\(...\\)\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n          processEscapes: true, // Allows \\_ in text\n          autoload: {\n            color: [],\n            ams: [\"boldsymbol\"], // For \\mathbf{}\n          },\n        },\n        options: {\n          skipHtmlTags: [\"script\", \"noscript\", \"style\", \"textarea\", \"pre\"],\n        },\n      };\n    </script>",
+    "headStyle": null,
+    "mathjax": "with-id",
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Economic Growth and the Economic Cycle",
+        "description": "Free AQA A-Level Economics revision notes on Economic Growth and the Economic Cycle - learn about short-run and long-run growth, the economic cycle, output gaps, and the role of government in stabilising the economy.",
+        "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "AQA A-Level Economics: The National and International Economy",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AQA Macroeconomics",
+            "item": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "2.3.1 Economic Growth and the Economic Cycle"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

@@ -183,6 +183,15 @@ def render_head(v: dict) -> str:
                f'{" " * INDENT}</title>')
     out.append(tag("meta", [("name", "description"), ("content", v["description"])]))
 
+    # A decorative <!-- ==== --> divider sits between the description and the
+    # canonical on exactly 2 of 463 pages. It is invisible to a reader and a
+    # crawler, and the template exists to remove drift like it - but Eliot's
+    # Option A criterion is "same tags, same order, same values, only
+    # whitespace may differ", and a comment is a token rather than whitespace.
+    # So it is lifted and re-emitted, and dropping it stays a decision for
+    # Eliot to make rather than one made silently here.
+    if v.get("dividerAfterDescription"):
+        out.append(v["dividerAfterDescription"])
     if v.get("robots"):
         out.append(tag("meta", [("name", "robots"), ("content", v["robots"])]))
     if v.get("canonical"):
@@ -342,6 +351,10 @@ def extract(source: str) -> dict:
     v["description"] = metas.get("description", "")
     if "robots" in metas:
         v["robots"] = metas["robots"]
+    div = re.search(r'/>\n(\s*<!--\s*=+\s*-->)\n\s*<link[^>]*rel="canonical"',
+                    h, re.S)
+    if div:
+        v["dividerAfterDescription"] = div.group(1)
 
     for raw in LINK.findall(h):
         a = {k.lower(): v2 for k, v2 in ATTR.findall(raw)}
