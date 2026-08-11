@@ -134,6 +134,18 @@ SEVEN_SCRIPT_TAIL = (
     "/js/main.js",
 )
 
+# The third entry survived Wave 2 Phase 7 unchanged, and that is deliberate.
+# inject-templates.js stopped injecting anything when the header and footer
+# moved into the pages at build time - what is left is the mobile nav panel and
+# the dropotron init - but renaming it edits 463 pages to gain a better
+# filename, which is the trade css/fontawesome-all.min.css already declined
+# (DO-NOT-BREAK, Wave 4.2). The file says so at the top. Wave 4.10 rewrites it
+# and the tail together, and the rename is free there.
+#
+# So check 2 is NOT what proved Phase 7 reached every page - check 9 is, and it
+# is the stronger statement: the whole nav block, byte-identical to
+# templates/header.html, on all 463.
+#
 # What a page may load after the seven, and how many pages may do so. jQuery
 # and dropotron leave with Wave 4.10, which is gated on migration Phase 7; when
 # they go, the tuple above shortens and this check is what proves every page
