@@ -150,6 +150,17 @@ unambiguous:
 | `convert_raw_notes.py` replaced by `page_shell.py` | — | **PH06-027** |
 | Full organisation node (`logo`, `description`, `sameAs`) on the 5 entity-home pages, pointing at the root `android-chrome-512x512.png` | 5 | PH04-055, D29 |
 
+> **Amended 2026-08-11, before Wave 2 started.** Two numbers in the table above
+> were re-derived and one has moved:
+>
+> - **"333 authored inline `style=` across 45 files" is now 322 across 44.**
+>   `templates/footer.html` was PH08-042's 45th file and carries 11 of the 333;
+>   **Wave 0.6 already converted it** in `be92eb2`. Do not go looking for it.
+>   D18's "44 hand-written pages" happens to match the new total but is a
+>   different set — it predates PH08-042's correction of 44 to 45.
+> - The other rows were not re-checked. **Re-derive every one before building on
+>   it**, per PH10-061; measured, not copied.
+
 **Migration Phase 7 (baking the header/footer) is unblocked.** P3 ruled: proceed
 on its own merits — one source of truth for the nav, no runtime fetch, and it
 removes one of jQuery's three consumers — but **not** as a link-equity fix,
@@ -203,6 +214,18 @@ hypothesis and it may already be closed.
 | 5.3 | Swap, per board directory, updating all 231 `width`/`height` pairs in the same commit | PH08-047 | The aspect ratio changes on 76 of 78 |
 | 5.4 | The 3 structurally malformed notes pages | PH06-031 | Edits inside prose regions. **Explicitly excluded from D18's approval** |
 | 5.5 | Rule on the two `Regulation` glossary definitions | PH10-063 | Content, logged not fixed |
+
+> **Amended 2026-08-11.** Two corrections to the table above:
+>
+> - **"78 SVG/PNG pairs" is right**, and was re-checked rather than assumed:
+>   83 SVGs exist, 78 have a same-named PNG. But the other **5 have no PNG at
+>   all** — `exchange-rate-{appreciation,depreciation}`,
+>   `indirect-tax-{elastic,inelastic}-demand`, `lras-shift-keynesian` — so 5.1's
+>   method, "verify against the ground-truth PNG", has nothing to verify those
+>   five against. They need their own answer before 5.3 swaps anything.
+> - **5.5 is CLOSED**, confirmed by Eliot on 2026-08-11. `Regulation` is defined
+>   on the Edexcel glossary page, and `check_glossary_capitalisation.py --check`
+>   is in the workflow and green. **Wave 5 is 5.1–5.4.**
 
 **5.1–5.3 are a project, not a task.** Route (c) was chosen (D25): 4.1 delivers
 88% of the weight saving now, and this wave keeps all of its value for later.
