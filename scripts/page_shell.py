@@ -106,14 +106,18 @@ def tag(name: str, attrs: list[tuple[str, str | None]], indent: int = INDENT,
     return "\n".join(lines)
 
 
-def ldjson(obj, indent: int = INDENT + 2) -> str:
+def ldjson(obj, indent: int = INDENT + 2, ascii_escape: bool = False) -> str:
     """A JSON-LD block, serialised the way the notes pages carry it.
 
     json.dumps(indent=2) re-indented, key order preserved from the object, and
-    the script tags at the head's own indent. ensure_ascii is off because the
-    pages carry real em dashes and pound signs rather than escapes.
+    the script tags at the head's own indent.
+
+    The escaping style is LIFTED rather than chosen. The notes pages carry
+    real em dashes and pound signs; build_past_paper_questions.py escapes them
+    as \\u2014 on 87 pages. Both are valid JSON-LD and both parse to the same
+    data, so picking one would rewrite 87 pages for no reader-visible gain.
     """
-    body = json.dumps(obj, indent=2, ensure_ascii=False)
+    body = json.dumps(obj, indent=2, ensure_ascii=ascii_escape)
     body = "\n".join(" " * indent + line for line in body.splitlines())
     pad = " " * INDENT
     return (f'{pad}<script type="application/ld+json">\n'
@@ -171,10 +175,27 @@ OG_IMAGE = f"{SITE}/og-image.png?v=1"
 
 def render_head(v: dict) -> str:
     """The <head> for one page, from its values. Returns the inner HTML."""
+    esc = v.get("jsonldAsciiEscaped", False)
     out: list[str] = [GTAG]
     out.append(tag("meta", [("charset", "utf-8")]))
     out.append(tag("meta", [("name", "viewport"),
                             ("content", "width=device-width, initial-scale=1")]))
+    # Two lineages, measured on 2026-08-11 and split perfectly: all 273
+    # generated pages put the font preconnect pair BEFORE <title>, all 190
+    # hand-written pages put it after the favicons. Earlier is better - the
+    # preload scanner finds it sooner - so this is the generated families
+    # being right rather than drift, and reconciling the two is a
+    # normalisation with its own commit. The shell emits whichever the page
+    # already has.
+    #
+    # The "Linked here rather than @imported" note recording 4db232c is
+    # separate and universal: it sits before the stylesheet links on 463/463.
+    # build_questions.py additionally writes its own note above the early
+    # preconnect on its 173 pages, which is lifted rather than reworded.
+    if v.get("preconnectEarly"):
+        if v.get("earlyPreconnectComment"):
+            out.append(v["earlyPreconnectComment"])
+        out.append(PRECONNECT)
 
     title = v["title"]
     one = f'{" " * INDENT}<title>{title}</title>'
@@ -196,6 +217,10 @@ def render_head(v: dict) -> str:
         out.append(tag("meta", [("name", "robots"), ("content", v["robots"])]))
     if v.get("canonical"):
         out.append(tag("link", [("rel", "canonical"), ("href", v["canonical"])]))
+    # The flashcards and glossary pages put the favicon trio here, ahead of
+    # the Open Graph block, rather than after the structured data.
+    if v.get("faviconsAfterCanonical"):
+        out.append(FAVICONS)
 
     # ---- Open Graph
     og = v.get("og", {})
@@ -243,13 +268,28 @@ def render_head(v: dict) -> str:
     # The comment introduces whichever JSON-LD group the page actually has.
     # macro-application puts both blocks after the stylesheets, so keying it to
     # the "before" group alone silently dropped its comment.
-    if v.get("sdComment") and v.get("jsonldBeforeIcons"):
-        out.append("    <!-- Structured data -->")
-    for block in v.get("jsonldBeforeIcons", []):
-        out.append(ldjson(block))
-    out.append(FAVICONS)
+    # 17 of 463 pages put the favicon trio ahead of the first JSON-LD block
+    # and 446 put it after. Not a family split - it varies inside notes-hub,
+    # notes-other, past-papers and root - so it is a per-page fact, lifted.
+    def _jsonld_before():
+        out2 = []
+        if v.get("sdComment") and v.get("jsonldBeforeIcons"):
+            out2.append("    <!-- Structured data -->")
+        for block in v.get("jsonldBeforeIcons", []):
+            out2.append(ldjson(block, ascii_escape=esc))
+        return out2
+
+    if v.get("faviconsAfterCanonical"):
+        out += _jsonld_before()
+    elif v.get("faviconsBeforeJsonld"):
+        out.append(FAVICONS)
+        out += _jsonld_before()
+    else:
+        out += _jsonld_before()
+        out.append(FAVICONS)
     out.append(HOIST_COMMENT)
-    out.append(PRECONNECT)
+    if not v.get("preconnectEarly"):
+        out.append(PRECONNECT)
     for href in v.get("extraPreconnects", []):
         out.append(tag("link", [("rel", "preconnect"), ("href", href)]))
     out.append(tag("link", [("rel", "stylesheet"),
@@ -258,6 +298,12 @@ def render_head(v: dict) -> str:
     out.append(tag("link", [("rel", "stylesheet"), ("href", "/css/main.css")]))
     for href in v.get("pageStylesheets", []):
         out.append(tag("link", [("rel", "stylesheet"), ("href", href)]))
+    # DO-NOT-BREAK: the six <noscript> blocks on the practice-questions hubs
+    # re-open an accordion that CSS collapses and quiz.js re-opens, so with
+    # scripting off the topic links would be unreachable. Lifted verbatim,
+    # never rebuilt.
+    if v.get("headNoscript"):
+        out.append(v["headNoscript"])
 
     # ---- MathJax
     if v.get("headStyle") and not v.get("headStyleAfterMathjax"):
@@ -284,7 +330,7 @@ def render_head(v: dict) -> str:
     if v.get("sdComment") and not v.get("jsonldBeforeIcons"):
         out.append("    <!-- Structured data -->")
     for block in v.get("jsonldAfterStyles", []):
-        out.append(ldjson(block))
+        out.append(ldjson(block, ascii_escape=esc))
     return "\n".join(out)
 
 
@@ -390,12 +436,26 @@ def extract(source: str) -> dict:
         if "twitter:image" in metas:
             v["twitter"]["image"] = metas["twitter:image"]
 
-    v["pageStylesheets"] = [
-        a["href"] for a in
-        ({k.lower(): v2 for k, v2 in ATTR.findall(raw)} for raw in LINK.findall(h))
-        if a.get("rel") == "stylesheet" and a.get("href", "").startswith("/css/pages/")
-    ]
+    # Every stylesheet after main.css, not just /css/pages/. The flashcards
+    # and glossary pages self-host KaTeX at /css/vendor/katex/, and a filter
+    # keyed to /css/pages/ dropped it silently - which would have removed the
+    # formula styling from 10 pages had they been migrated on that code.
+    # verify_css_load_order.py holds main.css first at 462/462; this preserves
+    # whatever follows it, in order.
+    sheets = [a.get("href", "") for a in
+              ({k.lower(): v2 for k, v2 in ATTR.findall(raw)}
+               for raw in LINK.findall(h))
+              if a.get("rel") == "stylesheet"]
+    v["pageStylesheets"] = sheets[sheets.index("/css/main.css") + 1:] \
+        if "/css/main.css" in sheets else []
 
+    t, pc = h.find("<title"), h.find('rel="preconnect"')
+    v["preconnectEarly"] = 0 <= pc < t
+    ec = re.search(r"[ \t]*<!--(?:(?!-->).)*?The font stylesheet"
+                   r"(?:(?!-->).)*?-->", h, re.S)
+    v["earlyPreconnectComment"] = ec.group(0) if ec else None
+    ns = re.search(r"[ \t]*<noscript>.*?</noscript>", h, re.S)
+    v["headNoscript"] = ns.group(0) if ns else None
     v["mathjaxComment"] = "<!-- MathJax Configuration -->" in h
     v["extraPreconnects"] = [
         a["href"] for a in
@@ -411,10 +471,15 @@ def extract(source: str) -> dict:
     # script, and emitting it before would reorder the head. PH08-042 records
     # the block itself as a violation to move into a stylesheet later; that is
     # a normalisation with its own commit, not something to do while migrating.
-    st = re.search(r"[ \t]*(?:<!--[^>]*-->\n[ \t]*)?<style>.*?</style>", h, re.S)
+    # Search with the <noscript> blocks removed: DO-NOT-BREAK's six
+    # practice-questions hubs carry a <style> INSIDE their <noscript>, and
+    # matching it here emitted the block a second time outside the noscript.
+    h_no_ns = re.sub(r"<noscript>.*?</noscript>", "", h, flags=re.S)
+    st = re.search(r"[ \t]*(?:<!--[^>]*-->\n[ \t]*)?<style>.*?</style>",
+                   h_no_ns, re.S)
     v["headStyle"] = st.group(0) if st else None
     if st:
-        mj = re.search(r"<script[^>]*mathjax", h, re.I)
+        mj = re.search(r"<script[^>]*mathjax", h_no_ns, re.I)
         v["headStyleAfterMathjax"] = bool(mj and st.start() > mj.start())
     v["mathjax"] = None
     for raw in MJ_SRC.findall(h):
@@ -436,6 +501,13 @@ def extract(source: str) -> dict:
         (before if m.start() < css_at else after).append(obj)
     v["jsonldBeforeIcons"] = before
     v["jsonldAfterStyles"] = after
+    ic = h.find('rel="icon"')
+    og1 = h.find('property="og:')
+    ld1 = h.find("application/ld+json")
+    v["faviconsAfterCanonical"] = 0 <= ic < og1 if og1 >= 0 else False
+    v["faviconsBeforeJsonld"] = 0 <= ic < ld1
+    v["jsonldAsciiEscaped"] = any(
+        "\\u" in m.group(1) for m in LD.finditer(h))
     return v
 
 
