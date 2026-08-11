@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Slice the 7 notes-hub pages into notes-data/hubs/. One-off, dry run by default.
+"""Slice a notes family into notes-data/. One-off, dry run by default.
 
-    python3 scripts/extract_notes_hubs.py            # report, write nothing
-    python3 scripts/extract_notes_hubs.py --apply    # write notes-data/hubs/
+    python3 scripts/extract_notes_pages.py hubs                 # report only
+    python3 scripts/extract_notes_pages.py edexcel-theme-3 --apply
 
-Wave 2 Phase 3, the pilot. Pairs with scripts/build_notes_hubs.py, which
-renders the pages back from what this writes.
+Wave 2 Phases 3 and 5. Pairs with scripts/build_notes_pages.py, which renders
+the pages back from what this writes. One board directory at a time, smallest
+first, each its own commit and its own harness run - so a rollback is
+`git revert` of one sub-phase and the other five directories are untouched.
 
 THE ONE RULE THAT MATTERS
 -------------------------
@@ -48,7 +50,18 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import page_shell  # noqa: E402
 import verify_page_shell as shell_check  # noqa: E402
 
-OUT = ROOT / "notes-data" / "hubs"
+DATA = ROOT / "notes-data"
+
+# The families this can slice. "hubs" is the 7 board index pages (Phase 3);
+# the rest are the six notes-topic board directories (Phase 5), listed here so
+# that a typo names nothing rather than silently matching nothing.
+FAMILIES = {
+    "hubs": lambda p: shell_check.family_of(p) == "notes-hub",
+}
+for _d in ("edexcel-theme-1", "edexcel-theme-2", "edexcel-theme-3",
+           "edexcel-theme-4", "aqa-a2-macro", "aqa-a2-micro"):
+    FAMILIES[_d] = (lambda d: lambda p: (
+        shell_check.family_of(p) == "notes-topic" and p.split("/")[1] == d))(_d)
 
 # <div class="container"> ... </div> </section>, with the optional end-marker
 # comments macro-application carries. Two capture groups so those comments are
@@ -63,8 +76,15 @@ SEVEN_END = '    <script src="/js/main.js"></script>\n'
 
 
 def slug_of(path: str) -> str:
-    """revision-notes/edexcel-theme-1/index.html -> edexcel-theme-1."""
-    return path[len("revision-notes/"):-len("/index.html")]
+    """The data file's stem: the page's own name, minus .html.
+
+    A hub is revision-notes/<dir>/index.html and becomes <dir>; a topic page
+    is revision-notes/<dir>/<spec>-<slug>.html and becomes <spec>-<slug>,
+    inside a directory named after its board.
+    """
+    rest = path[len("revision-notes/"):]
+    return rest[:-len("/index.html")] if rest.endswith("/index.html") \
+        else rest.split("/", 1)[1][:-len(".html")]
 
 
 def carve(path: str, source: str) -> dict:
@@ -111,15 +131,20 @@ def carve(path: str, source: str) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("family", choices=sorted(FAMILIES),
+                    help="hubs, or one notes board directory")
     ap.add_argument("--apply", action="store_true", help="write the files")
     args = ap.parse_args()
 
-    hubs = [p for p in shell_check.pages()
-            if shell_check.family_of(p) == "notes-hub"]
-    print(f"{len(hubs)} notes-hub pages\n")
+    keep = FAMILIES[args.family]
+    out = DATA / ("hubs" if args.family == "hubs" else f"topics/{args.family}")
+    pages = [p for p in shell_check.pages() if keep(p)]
+    if not pages:
+        raise SystemExit(f"{args.family}: matched no pages.")
+    print(f"{len(pages)} pages in {args.family}\n")
 
     carved = []
-    for p in hubs:
+    for p in pages:
         src = (ROOT / p).read_text(encoding="utf-8")
         rec = carve(p, src)
         carved.append(rec)
@@ -130,14 +155,14 @@ def main() -> int:
         print(f"\ndry run, nothing written. Re-run with --apply.")
         return 0
 
-    OUT.mkdir(parents=True, exist_ok=True)
+    out.mkdir(parents=True, exist_ok=True)
     for rec in carved:
         slug = slug_of(rec["path"])
-        (OUT / f"{slug}.html").write_text(rec.pop("slice"), encoding="utf-8")
-        (OUT / f"{slug}.json").write_text(
+        (out / f"{slug}.html").write_text(rec.pop("slice"), encoding="utf-8")
+        (out / f"{slug}.json").write_text(
             json.dumps(rec, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8")
-    print(f"\nwrote {2 * len(carved)} files to {OUT.relative_to(ROOT)}")
+    print(f"\nwrote {2 * len(carved)} files to {out.relative_to(ROOT)}")
     print("notes-data/ must be in _config.yml's exclude in this same commit.")
     return 0
 

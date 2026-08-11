@@ -504,7 +504,14 @@ def main() -> int:
                     d.pop(k, None)
             if v1 == v2:
                 stats[fam]["L0"] += 1
-            if committed.strip("\n") == rendered:
+            # The captured group runs from just after <head> to just before
+            # </head>, so it opens with a newline and closes with the two
+            # spaces that indent </head>. An earlier version compared
+            # committed.strip("\n") against the render, which leaves those two
+            # spaces in place and could therefore NEVER match - it reported
+            # L1 = 0/190 for the whole corpus, which was a bug in this file
+            # rather than a fact about the pages. Corrected 2026-08-11.
+            if committed == "\n" + rendered + "\n  ":
                 stats[fam]["L1"] += 1
             if args.prettier:
                 a, b = prettier(committed, tmp), prettier(rendered, tmp)

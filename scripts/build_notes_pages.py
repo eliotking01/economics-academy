@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
-"""Render the 7 notes-hub pages from notes-data/hubs/. Wave 2 Phase 3.
+"""Render the migrated notes pages from notes-data/. Wave 2 Phases 3 and 5.
 
-    python3 scripts/build_notes_hubs.py
-    python3 scripts/build_notes_hubs.py --check    # compare, write nothing
-    python3 scripts/build_notes_hubs.py --out DIR  # build somewhere else
+    python3 scripts/build_notes_pages.py
+    python3 scripts/build_notes_pages.py --check    # compare, write nothing
+    python3 scripts/build_notes_pages.py --out DIR  # build somewhere else
 
 The <head> comes from scripts/page_shell.py, which is the point of the whole
-wave: after this, changing the header on these pages is one edit rather than
-seven. The page body is the byte slice the extractor took, emitted verbatim.
+wave: changing the header on every migrated page becomes one edit. The page
+body is the byte slice the extractor took, emitted verbatim.
+
+Every family lives under notes-data/ and is found by globbing rather than by
+being listed, so adding a board directory is an extraction and a rebuild, with
+no edit here. Each record carries its own `path`, so this file needs no
+knowledge of where a family lives.
 
 WHAT THIS DELIBERATELY DOES NOT DO
 ----------------------------------
@@ -41,7 +46,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import page_shell  # noqa: E402
 
-DATA = ROOT / "notes-data" / "hubs"
+DATA = ROOT / "notes-data"
 
 SEVEN_SCRIPTS = "\n".join(
     f'    <script src="{s}"></script>' for s in (
@@ -82,9 +87,9 @@ def render(rec: dict, slice_html: str) -> str:
 def build() -> dict[str, str]:
     """Every page this generator owns, path -> rendered bytes."""
     pages: dict[str, str] = {}
-    for meta in sorted(DATA.glob("*.json")):
+    for meta in sorted(DATA.rglob("*.json")):
         rec = json.loads(meta.read_text(encoding="utf-8"))
-        slice_html = (DATA / f"{meta.stem}.html").read_text(encoding="utf-8")
+        slice_html = meta.with_suffix(".html").read_text(encoding="utf-8")
         pages[rec["path"]] = render(rec, slice_html)
     return pages
 
@@ -116,7 +121,7 @@ def main() -> int:
         dest = out_root / p
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(body, encoding="utf-8")
-    print(f"wrote {len(pages)} notes-hub pages into {out_root}")
+    print(f"wrote {len(pages)} notes pages into {out_root}")
     return 0
 
 
