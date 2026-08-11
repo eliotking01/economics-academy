@@ -363,6 +363,164 @@ MATHJAX_CONFIG_BODY = '''    <script>
 
 
 # --------------------------------------------------------------------------
+# The header and footer, baked in. Wave 2 Phase 7.
+# --------------------------------------------------------------------------
+#
+# Until Phase 7 the nav did not exist in any page's source: every one of the
+# 463 pages carried an empty <div id="header-placeholder"></div> and
+# inject-templates.js fetched templates/header.html at runtime and replaced it.
+# That cost two round trips per page, a nav no crawler and no reader with
+# scripting off ever saw, and the last of Wave 4.4's CLS residual - the
+# placeholder reserved an approximate 240px and the real header is never
+# exactly 240px tall.
+#
+# templates/header.html and templates/footer.html are still the single source
+# of truth and are still published. What changed is when they are read: build
+# time rather than page load. The trade, re-confirmed by Eliot on 2026-08-11
+# under D18: editing the nav is now edit-the-template-and-rebuild.
+#
+# The block is emitted VERBATIM, indented as a whole and wrapped in markers.
+# Byte-identity with the template file is what verify_page_shell.py check 9
+# asserts on all 463 pages, and it is the only thing standing between one nav
+# and 463 slowly diverging copies of one.
+
+HEADER_TEMPLATE = ROOT / "templates" / "header.html"
+FOOTER_TEMPLATE = ROOT / "templates" / "footer.html"
+
+HEADER_PLACEHOLDER = '<div id="header-placeholder"></div>'
+FOOTER_PLACEHOLDER = '<div id="footer-placeholder"></div>'
+
+BEGIN = "<!-- BEGIN {name} - baked at build time; edit the template, not this -->"
+END = "<!-- END {name} -->"
+
+# setActivePage()'s pageMap, moved here out of inject-templates.js when the
+# highlight stopped being applied at runtime. Order matters: the first match
+# wins, exactly as the `for` loop in that function did. The comments are the
+# ones that travelled with it, because both record a decision.
+PAGE_MAP = [
+    (r"^/revision-notes(/|$)", "revision-notes"),
+    # Flashcards is a top-level nav item matching its root URL, so it lights
+    # itself up. PH07-057.
+    (r"^/flashcards(/|$)", "flashcards"),
+    (r"^/practice-questions(/|$)", "practice-questions"),
+    # The question bank lives under the Past Papers dropdown, so it lights up
+    # that parent. Listed first because it is the more specific path, though
+    # the two cannot both match: "past-papers" is not a prefix of
+    # "past-paper-questions".
+    (r"^/past-paper-questions(/|$)", "past-papers"),
+    (r"^/past-papers(/|$)", "past-papers"),
+    (r"^/tutoring\.html$", "tutoring"),
+    (r"^/marking\.html$", "marking"),
+    (r"^/about\.html$", "about"),
+    (r"^/contact\.html$", "contact"),
+    (r"^/(index\.html)?$", "home"),
+]
+
+
+def url_path(rel: str) -> str:
+    """window.location.pathname for the page at this repo-relative path."""
+    if rel == "index.html":
+        return "/"
+    if rel.endswith("/index.html"):
+        return "/" + rel[: -len("index.html")]
+    return "/" + rel
+
+
+def active_page(rel: str) -> str:
+    """Which nav item this page highlights, or "" for none.
+
+    Four published pages match nothing and highlight nothing: 404, privacy,
+    faq and confirmation. That was true of setActivePage() too - it left
+    currentPage as "" and added no class.
+    """
+    path = url_path(rel)
+    for pattern, page in PAGE_MAP:
+        if re.search(pattern, path):
+            return page
+    return ""
+
+
+def _indent_block(text: str, pad: str) -> str:
+    """Indent every non-empty line by pad.
+
+    Non-empty only. Indenting a blank line leaves trailing whitespace, which
+    every one of the harness's ten assertions is blind to - PROGRESS.md
+    records a trailing-whitespace bug that passed all ten.
+    """
+    return "\n".join(pad + ln if ln.strip() else ln
+                     for ln in text.rstrip("\n").split("\n"))
+
+
+def _block(name: str, template: str, pad: str, active: str) -> str:
+    body = template
+    if active:
+        marker = f'<li data-page="{active}">'
+        if marker not in body:
+            raise SystemExit(
+                f"page_shell.bake: no {marker} in {name}. The nav item a page "
+                f"highlights must exist in the template."
+            )
+        body = body.replace(
+            marker, f'<li data-page="{active}" class="current">', 1)
+    return (f"{pad}{BEGIN.format(name=name)}\n"
+            f"{_indent_block(body, pad)}\n"
+            f"{pad}{END.format(name=name)}")
+
+
+def _replace(html: str, placeholder: str, name: str, block_for) -> str:
+    """Swap in the baked block, whether or not one is already there.
+
+    Two forms are accepted so that a nav edit is a re-run rather than a revert
+    and a re-run: the original empty placeholder, and a block this function
+    wrote earlier. scripts/bake_templates.py depends on the second - it syncs
+    the 17 pages no generator owns, and it has to be runnable twice.
+    """
+    at = html.find(placeholder)
+    if at != -1:
+        line_start = html.rfind("\n", 0, at) + 1
+        pad = html[line_start:at]
+        if pad.strip():          # something else shares the line
+            pad = ""
+        return html[:line_start] + block_for(pad) + html[at + len(placeholder):]
+
+    begin, end = BEGIN.format(name=name), END.format(name=name)
+    b = html.find(begin)
+    if b == -1:
+        raise SystemExit(
+            f"page_shell.bake: neither {placeholder} nor {begin} found. "
+            f"Every page carries one or the other."
+        )
+    e = html.find(end, b)
+    if e == -1:
+        raise SystemExit(f"page_shell.bake: {begin} with no matching {end}.")
+    line_start = html.rfind("\n", 0, b) + 1
+    pad = html[line_start:b]
+    if pad.strip():
+        pad = ""
+    return html[:line_start] + block_for(pad) + html[e + len(end):]
+
+
+def bake(html: str, rel: str) -> str:
+    """The finished page with templates/header.html and footer.html in it.
+
+    Called by all five generators immediately before writing, and by
+    scripts/bake_templates.py for the 17 published pages no generator owns.
+    It runs AFTER Prettier on the generators that use it: the block goes in
+    verbatim so that it stays byte-comparable with the template it came from,
+    and Prettier would re-wrap it.
+    """
+    header = HEADER_TEMPLATE.read_text(encoding="utf-8")
+    footer = FOOTER_TEMPLATE.read_text(encoding="utf-8")
+    active = active_page(rel)
+    html = _replace(
+        html, HEADER_PLACEHOLDER, "templates/header.html",
+        lambda pad: _block("templates/header.html", header, pad, active))
+    return _replace(
+        html, FOOTER_PLACEHOLDER, "templates/footer.html",
+        lambda pad: _block("templates/footer.html", footer, pad, ""))
+
+
+# --------------------------------------------------------------------------
 # Extraction - the selftest's inverse
 # --------------------------------------------------------------------------
 

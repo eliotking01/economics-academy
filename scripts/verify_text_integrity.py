@@ -47,6 +47,26 @@ one line per path, reason in the commit body. See declared() for why that is
 a declaration rather than an off switch. A commit that declares one page and
 changes the wording of another still fails.
 
+THE HEADER AND FOOTER COUNT AS THE PAGE'S OWN TEXT
+
+A page carrying <div id="header-placeholder"></div> displays the header's
+words - inject-templates.js replaces that div with templates/header.html
+before the reader sees anything. So the honest comparison has always been
+"page text plus header text plus footer text", and reading the source alone
+understated it by the whole of the nav on all 463 pages.
+
+That never mattered while every page was the same shape. Wave 2 Phase 7 bakes
+both templates into the source, which changes what the source says on every
+page while changing nothing a reader sees - so comparing raw source text
+across that commit would report 463 changed pages, all of them false. Rather
+than declare 463 paths and turn the check off for the one commit it most
+needs to be on for, visible() splices the templates in wherever a placeholder
+is found. Both sides of the diff then say what the reader gets, which is the
+question this script is asking.
+
+Once no page carries a placeholder the branch stops firing. It is left in
+because it remains the correct description of any page that has one.
+
 Usage:
     python3 scripts/verify_text_integrity.py <before-ref> [<after-ref>]
 
@@ -111,6 +131,26 @@ def extract(source):
     p.feed(source)
     p.close()
     return p.text()
+
+
+PLACEHOLDERS = (
+    ('<div id="header-placeholder"></div>', "templates/header.html"),
+    ('<div id="footer-placeholder"></div>', "templates/footer.html"),
+)
+
+
+def visible(source, templates):
+    """A page's text as the reader gets it, placeholders resolved.
+
+    `templates` maps template path -> its source AT THE SAME REF. Reading them
+    from the working tree instead would be a trap: reword the nav and every
+    one of the 190 pages would report a text change, burying the one real
+    diff - templates/header.html's own - in 190 false ones.
+    """
+    for placeholder, path in PLACEHOLDERS:
+        if placeholder in source:
+            source = source.replace(placeholder, templates.get(path) or "", 1)
+    return extract(source)
 
 
 def read_at(ref, path):
@@ -204,13 +244,18 @@ def main(argv):
     differing = []
     missing = []
 
+    # One read each, per side, rather than per page.
+    old_templates = {p: read_at(before, p) for _, p in PLACEHOLDERS}
+    new_templates = {p: read_at(after, p) for _, p in PLACEHOLDERS}
+
     for path in files:
         old = read_at(before, path)
         new = read_at(after, path)
         if new is None:
             missing.append(path)
             continue
-        a, b = extract(old), extract(new)
+        a = visible(old, old_templates)
+        b = visible(new, new_templates)
         if a != b:
             differing.append((path, a, b))
 

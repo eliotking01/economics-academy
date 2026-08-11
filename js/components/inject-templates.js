@@ -114,29 +114,46 @@ function initNavigation() {
 
 // Function to inject templates and set active page
 function injectTemplates() {
-  // Inject header
-  fetch("/templates/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header-placeholder").outerHTML = data;
-      setActivePage();
+  // Wave 2 Phase 7 bakes templates/header.html and templates/footer.html into
+  // each page at build time, so a baked page has no placeholder to replace,
+  // nothing to fetch, and already carries its own "current" class. Both forms
+  // have to work at once while the migration runs a family at a time, and a
+  // baked page must not be left without a mobile nav panel: initNavigation()
+  // is what builds it, and it is the one part of this file that is not about
+  // injection at all.
+  var header = document.getElementById("header-placeholder");
+  var footer = document.getElementById("footer-placeholder");
 
-      // Initialize navigation after slight delay to ensure DOM is ready
-      setTimeout(initNavigation, 50);
-    })
-    .catch((error) => {
-      console.error("Error loading header:", error);
-    });
+  if (!header) {
+    // Baked. The nav is in the DOM already, so there is no fetch to wait for
+    // and no 50ms guess to make.
+    initNavigation();
+  } else {
+    fetch("/templates/header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        header.outerHTML = data;
+        setActivePage();
+
+        // Initialize navigation after slight delay to ensure DOM is ready
+        setTimeout(initNavigation, 50);
+      })
+      .catch((error) => {
+        console.error("Error loading header:", error);
+      });
+  }
 
   // Inject footer
-  fetch("/templates/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer-placeholder").outerHTML = data;
-    })
-    .catch((error) => {
-      console.error("Error loading footer:", error);
-    });
+  if (footer) {
+    fetch("/templates/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        footer.outerHTML = data;
+      })
+      .catch((error) => {
+        console.error("Error loading footer:", error);
+      });
+  }
 }
 
 // Improved setActivePage function with better path matching
