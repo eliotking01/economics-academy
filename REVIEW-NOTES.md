@@ -1641,3 +1641,61 @@ order the glossary's own conventions prefer them:
 
 Worth noting the third option makes `authored.json` grow, and CLAUDE.md says that
 file "is meant to shrink".
+
+---
+
+## Three found by Wave 4.10, none fixed, all deliberate
+
+Found while removing jQuery and dropotron on 2026-08-11. Logged rather than
+fixed, because each is outside what that wave was authorised to change.
+
+### 1. `#navPanel` is `aria-hidden="true"` while holding 32 focusable links
+
+`js/components/nav.js` builds the mobile panel and toggles
+`aria-hidden` on it, which is what `inject-templates.js` did before it. The
+panel is also off-canvas by `transform` when closed, not `display: none`, so
+its 32 links stay in the tab order the whole time.
+
+Both halves are wrong in the same way, and they were wrong before 4.10:
+
+- **`aria-hidden="true"` on an element containing focusable descendants** is a
+  conformance failure in ARIA 1.2 and Chrome logs it. A screen-reader user can
+  tab to a link the accessibility tree says is not there.
+- **A closed off-canvas panel that is still tabbable** means a keyboard user on
+  a phone tabs through 32 invisible links before reaching the page.
+
+The fix is `inert` on the panel when closed, and dropping `aria-hidden`
+entirely — `inert` does both jobs and is supported everywhere current. It was
+**not** done in 4.10 on purpose: that wave's evidence is a rendered
+before/after comparison showing the panel identical, and changing its
+attributes would have changed the thing being compared. It is a small, clean
+commit on its own, and it needs its own before/after.
+
+### 2. `browser.min.js` and `breakpoints.min.js` are effectively dead
+
+Both survive on all 463 pages in the four-script tail. Neither needs jQuery,
+which is why 4.10 left them; but measured across the whole repo:
+
+- **`browser` has zero call sites.** Nothing anywhere reads `browser.name`,
+  `browser.mobile`, `browser.canUse` or any other member.
+- **`breakpoints` has one**, `js/main.js`'s config call, which registers the
+  five named breakpoints and then no listener. Nothing calls
+  `breakpoints.active()`, and the library writes no class and touches no DOM
+  (`grep -o 'classList\|className' js/breakpoints.min.js` is empty).
+
+Together they are 8,236 bytes raw, **2,141 gzipped, on every page**. Removing
+them is a tail change: `page_shell.SCRIPT_TAIL`, `verify_page_shell.SCRIPT_TAIL`,
+`bake_templates.LEGACY_TAIL`, then the five generators and
+`bake_templates.py --apply`. Held over because 4.10 was already a sitewide nav
+change and two causes for one regression is one too many.
+
+### 3. `_working/flashcards/qa/` requests three files that no longer exist
+
+Those 12 frozen QA pages carry the old seven-script tail, so they now request
+`jquery.min.js`, `jquery.dropotron.min.js` and `util.js`, which 4.10 deleted.
+They are **unpublished** — `_working/` is excluded by Jekyll's `_`-prefix rule
+— so no reader can reach them, and DO-NOT-BREAK already records that they were
+left carrying header placeholders after Wave 2 Phase 7 for the same reason:
+they are a record of what the flashcards work looked like, and rebuilding them
+would make them a record of something else. Noted so that nobody opens one,
+finds a broken nav, and goes looking for a bug in the live site.
