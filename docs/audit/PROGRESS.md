@@ -1498,10 +1498,11 @@ check 9 does not cover.
 
 # HANDOVER — 2026-08-11. WAVE 2 IS COMPLETE. NEXT UP IS 4.10
 
-**Waves 0, 1, 2, 4 are complete, and Wave 3.1 is done.** Everything up to and
-including `4421f26` is merged to `main`, pushed and live, CI green. **Wave 2
-Phase 7 is on branch `wave2-phase7`, six commits, not yet merged** — awaiting
-Eliot's confirmation to push, per the standing rule.
+**Waves 0, 1, 2, 4 are complete, and Wave 3.1 is done.** Everything is merged
+to `main`, pushed and live. Wave 2 Phase 7 merged as `a8d8510` on 2026-08-11,
+six commits from `wave2-phase7`; `verify` and `pages build and deployment` both
+green on it, and the live site was checked afterwards — 4 pages across 4 types
+serve the baked nav with no placeholder and the right item highlighted.
 
 ## What a fresh session needs to know
 
