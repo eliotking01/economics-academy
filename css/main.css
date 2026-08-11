@@ -2276,10 +2276,23 @@ ul.social li a.fa-google-plus:hover {
   margin: 0;
 }
 
-/* Nav */
+/* Nav
+   ---
+   Wave 4.10 rewrote this section twice: once to replace dropotron with CSS,
+   and once - here - to redesign the bar itself, on Eliot's instruction of
+   2026-08-11.
+
+   NO LABEL, HREF OR STRUCTURE CHANGED. templates/header.html is untouched and
+   so are the 463 baked copies of it. Everything below is presentation: what
+   the same nine links and three submenus look like.
+
+   The system is two states built from the brand accent #d52349, replacing a
+   flat grey hover box and a solid red pill that between them shared no visual
+   language: hover/focus tints the item, current fills it. Colours are hex, not
+   custom properties - the :root tokens belong to the notes and stay there. */
 
 #nav {
-  margin: 2.5em 0 0 0;
+  margin: 2.25em 0 0 0;
 }
 
 #nav > ul {
@@ -2288,28 +2301,31 @@ ul.social li a.fa-google-plus:hover {
 
 #nav > ul > li {
   display: inline-block;
-  font-style: italic;
-  margin: 0 0.35em 0 0.35em;
-  /* The dropdown is positioned against this. Wave 4.10. */
+  margin: 0 0.15em;
+  /* The dropdown is positioned against this. */
   position: relative;
 }
 
-/* Hidden by default and revealed by the "Desktop dropdowns" block below, at
-   >=768px only. Below that the whole #nav is display:none and the mobile
-   #navPanel is what shows, so these must never appear there. */
+/* Hidden by default; revealed by the "Desktop dropdowns" block below, at
+   >=768px only. Below that #nav is display:none and the mobile #navPanel is
+   what shows, so a submenu must never appear there. */
 #nav ul ul {
   display: none;
 }
 
 #nav > ul > li > a {
-  border-radius: 5px;
-  color: #5d5d5d;
+  display: inline-block;
+  border-radius: 4px;
+  color: #4a4a4a;
+  /* Not italic. The theme italicises every nav item, which is its editorial
+     voice applied to a piece of UI; upright is easier to scan and the site
+     title above it is upright already. */
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.005em;
   text-decoration: none;
-  padding: 0.6em 1.2em 0.6em 1.2em;
-  -moz-transition: background-color 0.25s ease-in-out;
-  -webkit-transition: background-color 0.25s ease-in-out;
-  -ms-transition: background-color 0.25s ease-in-out;
-  transition: background-color 0.25s ease-in-out;
+  padding: 0.55em 0.95em;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 #nav > ul > li > a:focus-visible {
@@ -2317,15 +2333,57 @@ ul.social li a.fa-google-plus:hover {
   outline-offset: 2px;
 }
 
+/* Hover, keyboard focus, and a dropdown held open by tap all read the same,
+   because they are the same thing to a reader: this is the item I am on. */
 #nav > ul > li:hover > a,
-#nav > ul > li.active > a {
-  background: #f3f3f3;
+#nav > ul > li:focus-within > a,
+#nav > ul > li.nav-open > a {
+  background: #fbe9ed;
+  color: #b01d3c;
 }
 
+/* Where you are. Filled rather than tinted, so it never competes with hover.
+   The weight is written into the page at build time (page_shell.PAGE_MAP), not
+   applied by script, because 700 changes the item's width - DO-NOT-BREAK. */
 #nav > ul > li.current > a {
   background: #d52349;
-  color: #fff !important;
+  color: #fff;
   font-weight: 700;
+}
+
+#nav > ul > li.current > a:hover,
+#nav > ul > li.current:hover > a,
+#nav > ul > li.current:focus-within > a {
+  background: #b01d3c;
+  color: #fff;
+}
+
+/* The three items that open a submenu say so. Drawn in CSS rather than set in
+   Font Awesome: the shipped stylesheet and font are a SUBSET, so a new glyph
+   means editing the stylesheet and re-running scripts/subset_fontawesome.py,
+   and a missed step renders nothing at all with no error (DO-NOT-BREAK,
+   Wave 4.2). :has() is unsupported in nothing current, and where it is
+   unsupported the chevron is simply absent. */
+#nav > ul > li:has(> ul) > a:after {
+  content: "";
+  display: inline-block;
+  width: 0.36em;
+  height: 0.36em;
+  margin: -0.2em 0 0 0.5em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  opacity: 0.65;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+#nav > ul > li:has(> ul):hover > a:after,
+#nav > ul > li:has(> ul):focus-within > a:after,
+#nav > ul > li:has(> ul).nav-open > a:after {
+  transform: rotate(-135deg);
+  margin-top: 0.1em;
+  opacity: 1;
 }
 
 /* The nav needs 1045px to sit on one line. Below that it wrapped, and the
@@ -2338,11 +2396,11 @@ ul.social li a.fa-google-plus:hover {
    therefore its tap target. Only the horizontal values move. */
 @media screen and (max-width: 1099px) {
   #nav > ul > li {
-    margin: 0 0.15em;
+    margin: 0 0.05em;
   }
 
   #nav > ul > li > a {
-    padding: 0.6em 0.5em;
+    padding: 0.55em 0.5em;
     font-size: 0.875em;
   }
 }
@@ -2383,58 +2441,64 @@ ul.social li a.fa-google-plus:hover {
 
 /* Desktop dropdowns
    -----------------
-   Wave 4.10. These rules replace jquery.dropotron.min.js, which built a
-   body-level <ul class="dropotron level-N"> per submenu at page load and
-   positioned it with inline styles on hover.
+   These rules replace jquery.dropotron.min.js, which cloned every submenu into
+   a body-level <ul class="dropotron level-N"> at page load - 11 of them, 23
+   duplicated links, on all 463 pages - and positioned them with inline styles
+   on hover. The submenus were always in templates/header.html and in every
+   baked copy, so no markup changed: they are revealed here instead, which
+   means the dropdowns work with scripting off, which they never did.
 
-   The submenus were always in the page - <nav id="nav"> carries them in
-   templates/header.html and every one of the 463 baked copies - so nothing in
-   the markup changed. What changed is that they are now revealed by CSS
-   rather than cloned by 175 KB of JavaScript, which means the dropdowns work
-   with scripting off, which they never did before.
+   js/components/nav.js adds only what CSS cannot: tap-to-open on a touch
+   device wide enough to get this nav, and Escape. Both add .nav-open on top of
+   what these rules already do, so switching that file off leaves working
+   dropdowns.
 
-   Geometry measured off the old implementation rather than guessed, so the
-   menu lands where it used to: appended to the <li>, centred on it, its top
-   edge 2em below the item, 13em minimum width, and the arrow 9px above.
-   js/components/nav.js adds the two things CSS cannot do - tap-to-open on a
-   touch device wide enough to get this nav, and Escape - and adds them on
-   top, so it is an enhancement rather than a dependency.
+   The panel is light now rather than the theme's near-black. The site is a
+   white one and every other surface on it - cards, tables, the notes
+   container - is light; a black slab hanging off a white header was the one
+   piece of furniture that belonged to a different site.
 
-   Scoped to >=768px on purpose. Below that #nav is display:none and the
-   mobile #navPanel is what shows; a dropdown appearing there would be a
-   second navigation stacked on the first. */
+   Scoped to >=768px: below that #nav is display:none, and a dropdown there
+   would be a second navigation stacked on the first. */
 
 @media screen and (min-width: 768px) {
   #nav ul ul {
     display: block;
     position: absolute;
     z-index: 1000;
-    min-width: 13em;
+    min-width: 14em;
     margin: 0;
-    padding: 1.25em 1.5em 1.25em 1.5em;
+    padding: 0.5em 0;
     list-style: none;
     text-align: left;
-    font-style: italic;
-    border-radius: 5px;
-    background-color: #252122;
-    background-color: rgba(34, 30, 31, 0.98);
-    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
-    /* Hidden by opacity and visibility rather than display, because display
-       cannot be transitioned and because a display:none subtree is invisible
-       to :focus-within, which is what makes these keyboard-reachable. The
-       visibility delay is what lets the fade-out finish before the menu stops
-       taking hit tests. */
+    font-style: normal;
+    background: #fff;
+    border: solid 1px #e6e6e6;
+    border-radius: 6px;
+    box-shadow: 0 10px 28px rgba(37, 33, 34, 0.16);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+    transform: translateY(-4px);
+    transform-origin: top center;
+    /* Hidden by opacity and visibility rather than display: display cannot be
+       transitioned, and a display:none subtree is invisible to :focus-within,
+       which is what makes these reachable from the keyboard. The visibility
+       delay lets the fade finish before the panel stops taking hit tests. */
+    transition: opacity 0.18s ease-in-out, transform 0.18s ease-in-out,
+      visibility 0s linear 0.18s;
   }
 
-  /* Level 0: centred under its own item, 2em clear of it. */
+  /* Level 0: centred under its own item.
+     translateX(-50%), never margin-left: -50%. A percentage margin resolves
+     against the CONTAINING BLOCK - the <li> - not against the panel's own
+     width, which put the panel 32px right of the item it belongs to. The
+     lift-in below therefore has to carry the centring with it, which is why
+     every transform in this block names both axes. */
   #nav > ul > li > ul {
     top: 100%;
     left: 50%;
-    margin-top: 2em;
-    transform: translateX(-50%);
+    margin-top: 0.7em;
+    transform: translateX(-50%) translateY(-4px);
   }
 
   #nav > ul > li > ul:before {
@@ -2442,50 +2506,44 @@ ul.social li a.fa-google-plus:hover {
     display: block;
     position: absolute;
     left: 50%;
-    margin-left: -10px;
-    top: -9px;
-    border-left: solid 10px transparent;
-    border-right: solid 10px transparent;
-    border-bottom: solid 10px #252122;
-    border-bottom-color: rgba(34, 30, 31, 0.98);
+    margin-left: -7px;
+    top: -7px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-left: solid 1px #e6e6e6;
+    border-top: solid 1px #e6e6e6;
+    transform: rotate(45deg);
   }
 
-  /* The 2em gap is dead space the pointer has to cross, and crossing it used
-     to close the menu - dropotron papered over that with a 250 ms hide delay.
-     This bridges it instead: an invisible strip filling the gap, inside the
-     submenu, so hovering it keeps both the submenu and its <li> hovered. */
+  /* The gap between item and panel is dead space the pointer has to cross, and
+     crossing it closes the menu - dropotron papered over that with a 250 ms
+     hide delay. This bridges it: an invisible strip filling the gap, inside
+     the submenu, so hovering it keeps both the submenu and its <li> hovered. */
   #nav > ul > li > ul:after {
     content: "";
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-    top: -2em;
-    height: 2em;
+    top: -0.7em;
+    height: 0.7em;
+  }
+
+  #nav ul ul li {
+    position: relative;
+    padding: 0;
   }
 
   /* Level 1: alongside its parent item rather than below it. */
-  #nav ul ul li {
-    position: relative;
-    padding: 0.25em 0 0.25em 0;
-  }
-
   #nav ul ul ul {
-    top: -1.25em;
+    top: -0.5em;
     left: 100%;
-    margin-left: 1.5em;
+    margin-left: 0.5em;
   }
 
   #nav ul ul ul:before {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 100%;
-    top: 1.5em;
-    border-top: solid 10px transparent;
-    border-bottom: solid 10px transparent;
-    border-right: solid 10px #252122;
-    border-right-color: rgba(34, 30, 31, 0.98);
+    display: none;
   }
 
   #nav ul ul ul:after {
@@ -2495,41 +2553,73 @@ ul.social li a.fa-google-plus:hover {
     top: 0;
     bottom: 0;
     right: 100%;
-    width: 1.5em;
+    width: 0.5em;
+    height: auto;
   }
 
-  #nav ul ul a,
-  #nav ul ul span {
-    color: #aaa;
+  #nav ul ul a {
+    display: block;
+    /* 44px at the base 16px, so a finger on an iPad has a real target
+       (WCAG 2.5.5). The old menu gave these rows 28px. */
+    padding: 0.75em 1.25em;
+    color: #4a4a4a;
+    font-weight: 400;
     text-decoration: none;
-    -moz-transition: color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out;
-    transition: color 0.25s ease-in-out;
+    border-left: solid 3px transparent;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
   }
 
   #nav ul ul li:hover > a,
-  #nav ul ul li:hover > span,
+  #nav ul ul li:focus-within > a,
+  #nav ul ul li.nav-open > a,
   #nav ul ul a:focus-visible {
-    color: #fff;
+    background: #fbe9ed;
+    color: #b01d3c;
+    border-left-color: #d52349;
   }
 
   #nav ul ul a:focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
+    outline: 2px solid #d52349;
+    outline-offset: -2px;
   }
 
-  /* Open. `.nav-open` is added by js/components/nav.js for touch; the other
-     two need no script at all. */
+  /* An item that itself opens a submenu, marked the same way the bar is. */
+  #nav ul ul li:has(> ul) > a:after {
+    content: "";
+    float: right;
+    width: 0.34em;
+    height: 0.34em;
+    margin: 0.42em 0 0 0;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    opacity: 0.55;
+  }
+
+  #nav ul ul li:has(> ul):hover > a:after {
+    opacity: 1;
+  }
+
+  /* Open. .nav-open is added by js/components/nav.js for touch; the other two
+     need no script at all. */
   #nav li:hover > ul,
   #nav li:focus-within > ul,
   #nav li.nav-open > ul {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.2s ease-in-out, visibility 0s linear 0s;
+    transform: translateY(0);
+    transition: opacity 0.18s ease-in-out, transform 0.18s ease-in-out,
+      visibility 0s linear 0s;
+  }
+
+  /* Level 0 keeps its centring in the open state too. */
+  #nav > ul > li:hover > ul,
+  #nav > ul > li:focus-within > ul,
+  #nav > ul > li.nav-open > ul {
+    transform: translateX(-50%) translateY(0);
   }
 }
-
 /* Intro */
 
 #intro {
@@ -2998,15 +3088,40 @@ ul.social li a.fa-google-plus:hover {
     box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
   }
 
+  /* Upright, for the same reason the bar is: these are UI labels, not the
+     theme's editorial voice. The left border is transparent so that the
+     current item's accent bar below costs no reflow when it appears. */
   #navPanel .link {
     display: block;
-    color: #888;
+    color: #999;
     text-decoration: none;
     height: 44px;
     line-height: 44px;
     border-top: solid 1px rgba(255, 255, 255, 0.05);
-    padding: 0 1em 0 1em;
-    font-style: italic;
+    border-left: solid 3px transparent;
+    padding: 0 1em 0 calc(1em - 3px);
+    font-style: normal;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+
+  /* Wave 4.10. The panel had no "you are here" indicator at all: the desktop
+     bar has had one since the beginning, and on a phone - which is most of
+     this site's traffic - there was nothing. js/components/nav.js copies the
+     class off the baked <li class="current">, so both navigations are marked
+     from one source rather than from two rules that can disagree. */
+  #navPanel .link.current {
+    color: #fff;
+    background: rgba(213, 35, 73, 0.16);
+    border-left-color: #d52349;
+  }
+
+  #navPanel .link:active {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  #navPanel .link:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    outline-offset: -3px;
   }
 
   #navPanel .link:first-child {

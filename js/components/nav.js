@@ -57,6 +57,16 @@
       var d = depthOf(src);
       var a = document.createElement("a");
       a.className = "link depth-" + d;
+      // Wave 4.10: the panel had no "you are here" at all - the desktop bar
+      // has carried a highlight since the beginning and the mobile one never
+      // did. Read off the SAME truth, the class page_shell.PAGE_MAP writes
+      // into the page at build time, rather than re-deriving it from the URL
+      // and risking a second, disagreeing rule. Direct parent only: the
+      // current <li> contains its whole submenu, so `closest` would mark
+      // eleven links instead of one.
+      if (src.parentElement && src.parentElement.matches("li.current")) {
+        a.className += " current";
+      }
       // Copied only when present and non-empty, as navList() did: an <a>
       // with no href must not gain href="".
       var target = src.getAttribute("target");
