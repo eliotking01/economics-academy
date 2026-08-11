@@ -697,3 +697,69 @@ though they are not generated.
 three already reproduce at D33's criterion, and the two diagram galleries carry
 the other two head `<style>` blocks. They remain available if wanted; nothing
 depends on them.
+
+---
+
+## 2026-08-11 · Wave 2 Phase 7
+
+### D35 — The header and footer are baked in, and editing the nav is now a rebuild
+
+Eliot, 2026-08-11, re-confirming D18's trade once it was put concretely:
+**"Yes, proceed."** The question asked was the honest one — after this lands,
+changing one nav label means editing `templates/header.html`, running the
+rebuild, and committing about 463 changed files.
+
+`js/components/inject-templates.js` no longer fetches anything. The header and
+footer are written into all 463 pages at build time, by `page_shell.bake()` for
+the 446 generated pages and `scripts/bake_templates.py` for the other 17.
+
+**What it bought, all measured rather than argued:**
+
+- **The nav exists without JavaScript**, on every page, for the first time.
+- **CLS.** Four page types at two viewports, headless Chrome with a
+  PerformanceObserver: 1400px went 0.0253 → 0.0037 (index), 0.0223 → 0.0034
+  (tutoring), 0.0224 → 0.0022 (ocr), 0.0234 → 0.0021 (notes). Three repeats of
+  the notes page show the *before* figure is bimodal — 0.0241, 0.0024, 0.0240 —
+  because it depended on whether two fetches beat first paint. Baking removed a
+  race, not a constant.
+- **4.10 is unblocked**, though not for the reason PH08-043 gives. See below.
+
+**What it cost:** a median **+1,217 bytes gzipped per page**, +23.5%, 654 KiB
+across the site, against two fewer round trips per page and the CLS above.
+Measured across all 463 before starting.
+
+**The 17 pages were the decision.** 446 pages are generated and pick the header
+up on a rebuild. The other 17 are not, and the three options were put: sync them
+with a re-runnable script, leave them fetching, or hand-edit them. Eliot chose
+the script. Leaving them would have half-landed the phase and left
+`/past-papers/edexcel-b/` and `/past-papers/ocr/` — 291 clicks and 21,131
+impressions between them, PH03-049 — as the only pages on the site whose
+navigation still needed JavaScript.
+
+**D34 is not overridden.** It puts the 9 root pages permanently out of scope for
+the `<head>` migration, on the ground that they are nine one-off `<head>`
+shapes. Their `<head>` is untouched. What changed is the body, where all nine
+are identical to the other 454.
+
+**The rename was declined.** `inject-templates.js` injects nothing now. Renaming
+it to `nav.js` was built and put through the harness — assertions 1, 4 and 8
+fail, each exactly and only the rename, and the other seven pass. It edits 463
+pages and changes a published asset URL to gain a filename, which is the trade
+`css/fontawesome-all.min.css` settled the other way in Wave 4.2. Wave 4.10
+rewrites the file and the script tail together, and the rename is free there.
+
+**Two numbers were wrong and are corrected.** The `<head>` is generated for
+**446** of 463 pages, not 454 — that figure was `463 − 9` from D34 rather than a
+measurement, and it appeared in D34 itself, CLAUDE.md, DO-NOT-BREAK.md and four
+places in PROGRESS.md. And `verify_page_shell.py` had been printing "190 of them
+hand-written" on every CI run since Phases 3 and 5 made the notes pages
+generated; it is 17.
+
+**PH08-043 is wrong on detail and 4.10 must not be planned from it as written.**
+It says the runtime fetch leaving takes one of jQuery's three consumers with it.
+Counted before touching anything: 9 of the file's 11 jQuery calls are in
+`initNavigation()`, 2 are the bootstrap, and the fetch and the nav highlight
+used **none** — both were already vanilla. The file shrank from 209 lines to
+121 and still needs jQuery. What 4.10 actually inherits is better than the
+finding promised: one file that is nothing but nav plumbing, with no async
+injection ordering to preserve.

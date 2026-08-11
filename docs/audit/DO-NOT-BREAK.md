@@ -32,6 +32,18 @@ Deleting any line publishes that path. Before this list existed,
 must stay published.** They are fetched at runtime. Excluding `templates/`
 removes navigation from all 463 pages.
 
+> **Amended 2026-08-11, Wave 2 Phase 7. `templates/` is no longer fetched, and
+> it still stays published.** The header and footer are baked into every page
+> at build time, so nothing requests those two URLs any more and excluding them
+> would break nothing. They stay for a different and weaker reason: they are two
+> live URLs, this site cannot issue a 301, and removing a published URL is a
+> decision in its own right that nobody has needed to make. **They remain the
+> single source of truth for the nav** — `page_shell.bake()` and
+> `scripts/bake_templates.py` both read them from disk at build time — so
+> deleting or renaming them still breaks the build, just not the site. The rest
+> of the sentence above is unchanged: `questions.json` and the flashcard decks
+> are still fetched.
+
 **Liquid runs over every markdown file before Markdown.** A stray `{%` fails the
 whole deploy, not the page. Backticks do not protect it. `_audit/` is gitignored
 so its markdown never reaches the Jekyll build — but if that ever changes, run
@@ -620,8 +632,17 @@ commit that created them, per the rule above. `compare_trees.py` assertion 1 is
 what proves it: the published URL set stayed at 463 pages while the tree gained
 over 300 files.
 
-**`scripts/page_shell.py` owns the `<head>` for 454 of the 463 pages.** All five
-generators import it. A change there reaches every page on the next rebuild,
+**`scripts/page_shell.py` owns the `<head>` for 446 of the 463 pages.** All five
+generators import it.
+
+> **Corrected 2026-08-11, Wave 2 Phase 7. It was written as 454 here, in
+> CLAUDE.md, in PROGRESS.md and in D34, and it was never measured** — it is
+> `463 − 9`, taken from D34's decision about the root pages. **17 pages are not
+> generated:** the 9 root pages, the 5 `past-papers/` hubs and the 3
+> `revision-notes/` non-topic pages. No generator writes the last 8; PH06
+> planned the past-papers hubs as the Phase 3 pilot and the notes hubs were
+> migrated instead. `verify_page_shell.py` prints the split on its first line,
+> so cite the script. A change there reaches every page on the next rebuild,
 which is the point — and is also why it must not grow page-specific behaviour.
 Everything that varies per page is passed in as a value.
 
@@ -684,6 +705,60 @@ code and **the code wins**: a disagreement means the transcription is wrong.
 
 **Nothing imports `boards.json` yet.** Wave 3.2 repoints the 113 board literals
 in 11 scripts, one generator per commit, each with its output proved unmoved.
+
+## The baked header and footer (added by Wave 2 Phase 7, 2026-08-11)
+
+**`templates/header.html` is now copied into 463 files, and
+`verify_page_shell.py` check 9 is the only thing keeping them one file.** It
+lifts the block back out of every page, removes the uniform indent and the one
+`class="current"` the page adds, and requires what is left to equal the
+template **byte for byte**. It also asserts 0 published pages still carry a
+runtime placeholder. Do not make it tolerant of whitespace: `page_shell.bake()`
+emits the template verbatim and never reformats it, so there is no legitimate
+reason for a byte to differ, and a forgiving check would forgive a Prettier run
+that had quietly rewrapped a nav label.
+
+**Editing the nav is a rebuild.** Edit the template, run the five generators,
+run `scripts/bake_templates.py --apply`, run `build_sitemap.py`. Running only
+one half leaves the site with two different navs and check 9 fails. The command
+sequence is in CLAUDE.md. Accepted by Eliot on 2026-08-11, re-confirming D18.
+
+**The bake runs AFTER Prettier, never before.** Prettier is a
+parse-and-re-serialise; run over the block it rewraps the nav's markup and the
+block stops being byte-comparable with its template, which is check 9's whole
+basis. `build_notes_pages.py` bakes inside `render()` instead, because it
+deliberately runs no Prettier at all.
+
+**`scripts/bake_templates.py` carries `EXPECTED = 17` and refuses to run if the
+page set has moved.** Same property as `build_past_paper_taxonomy.py`'s
+`EXPECTED` dict: a new hand-written page must be declared rather than silently
+skipped. A skipped page is a page with no navigation.
+
+**The `class="current"` is written at build time and must stay that way.**
+`#nav > ul > li.current > a` sets `font-weight: 700`, which changes that item's
+width, so applying the highlight after load is itself a layout shift. It cost
+nothing while the whole nav arrived at once; on a baked page it would be a new
+shift. `PAGE_MAP` in `page_shell.py` is the rule list, moved there verbatim
+from `setActivePage()`.
+
+**`js/components/inject-templates.js` injects nothing and keeps its name.**
+Renaming it to `nav.js` was built, harnessed and reverted: it edits 463 pages
+and changes a published asset URL to gain a filename, which is the trade
+`css/fontawesome-all.min.css` already declined above. Wave 4.10 rewrites the
+file and the script tail together and the rename is free there. **Check 2 is
+therefore NOT what proves Phase 7 reached every page — check 9 is.**
+
+**PH08-043 is wrong on detail, and 4.10 should not be planned from it.** It
+says removing the runtime fetch removes one of jQuery's three consumers. It
+does not: of the file's 11 jQuery calls, 9 are in `initNavigation()` and 2 are
+the bootstrap; the fetch and the nav highlight were already vanilla and used
+none. What Phase 7 actually leaves for 4.10 is a 121-line file that is nothing
+but nav plumbing, with no async injection sequence to preserve.
+
+**`_working/flashcards/qa/`'s QA pages still carry placeholders** and now show
+an empty div where the header was. They are unpublished frozen records of the
+flashcards work. Baking them would create copies of the nav that check 9 does
+not cover, which is the drift this phase removed. Left alone deliberately.
 
 ---
 
