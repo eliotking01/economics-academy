@@ -189,6 +189,13 @@ def main():
                 bg.render_board(data, board, groups, rendered, inline_map)
         for path, expected in pages.items():
             actual = path.read_text(encoding="utf-8")
+            # Wave 2 Phase 7: the generator bakes the header and footer in
+            # after Prettier, so the committed page carries them and a
+            # freshly rendered one does not. Bake the expectation rather than
+            # stripping the page - the question is whether the committed file
+            # is what the generator produces, and the generator produces this.
+            expected = bg.shell.bake(
+                expected, path.relative_to(ROOT).as_posix())
             # Prettier reformats the generator's output, so compare the text
             # rather than the bytes - wording is what must not drift.
             if flatten(expected) != flatten(actual):

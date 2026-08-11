@@ -500,6 +500,28 @@ def _replace(html: str, placeholder: str, name: str, block_for) -> str:
     return html[:line_start] + block_for(pad) + html[e + len(end):]
 
 
+def bake_files(paths, root: pathlib.Path | None = None) -> int:
+    """Bake already-written pages in place. Returns how many changed.
+
+    The four generators that run Prettier call this AFTER it, never before.
+    Prettier is a parse-and-re-serialise: run over the baked block it rewraps
+    the nav's markup, and the block stops being byte-comparable with the
+    template it came from - which is the whole of verify_page_shell.py's
+    check 9. Baking last also keeps the two runs of a generator identical,
+    because the input Prettier sees never contains the block.
+    """
+    root = root or ROOT
+    changed = 0
+    for path in paths:
+        path = pathlib.Path(path)
+        before = path.read_text(encoding="utf-8")
+        after = bake(before, path.resolve().relative_to(root).as_posix())
+        if after != before:
+            path.write_text(after, encoding="utf-8")
+            changed += 1
+    return changed
+
+
 def bake(html: str, rel: str) -> str:
     """The finished page with templates/header.html and footer.html in it.
 

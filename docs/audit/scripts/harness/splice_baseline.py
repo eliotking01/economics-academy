@@ -33,8 +33,15 @@ The `current` mapping below is transcribed from the `pageMap` array in
 `js/components/inject-templates.js`, in order, because that array is what
 ships today. It is not imported from anywhere.
 
+**The baseline must cover exactly what the commit bakes, and no more.**
+Phase 7 lands a family at a time, so a baseline spliced over all 463 pages
+would report the not-yet-baked ones as differing - a failure that means
+"this commit did not do the next commit's work". Pass --only to scope it.
+With no --only it splices every published page, which is the right baseline
+once the last family has landed.
+
 Usage:
-    python3 splice_baseline.py <old-tree> <output-tree>
+    python3 splice_baseline.py <old-tree> <output-tree> [--only PREFIX ...]
 """
 
 import pathlib
@@ -79,8 +86,14 @@ def active_page(rel: str) -> str:
 
 
 def main(argv) -> int:
+    only = []
+    while "--only" in argv:
+        i = argv.index("--only")
+        only.append(argv[i + 1])
+        del argv[i:i + 2]
     if len(argv) != 2:
-        print(__doc__.strip().splitlines()[-1])
+        print("usage: splice_baseline.py <old-tree> <output-tree> "
+              "[--only PREFIX ...]")
         return 2
     old, out = pathlib.Path(argv[0]), pathlib.Path(argv[1])
     if out.exists():
@@ -109,6 +122,8 @@ def main(argv) -> int:
         if rel.startswith("templates/"):
             continue
         if not build_sitemap.published(rel, excludes):
+            continue
+        if only and not any(rel.startswith(p) for p in only):
             continue
         f = out / rel
         src = f.read_text(encoding="utf-8")

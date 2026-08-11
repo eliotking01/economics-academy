@@ -710,6 +710,9 @@ def main():
     if not run_prettier(html_paths):
         print("  WARNING: prettier unavailable, formatting differs from "
               "the repo")
+    # Wave 2 Phase 7. After Prettier, never before - see shell.bake_files().
+    print(f"  baked the header and footer into "
+          f"{shell.bake_files(html_paths)} page(s)")
     return 0
 
 

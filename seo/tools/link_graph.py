@@ -22,6 +22,16 @@ divs. So there are two different true answers to "how deep is this page":
 Reporting one number would be misleading in whichever direction it was picked,
 so every depth and orphan figure below is given both ways.
 
+    Wave 2 Phase 7, 2026-08-11: the header and footer are now baked into the
+    page at build time, so on a baked page the two graphs converge - the nav's
+    links really are in the source, and the static figure rises to meet the
+    rendered one. That convergence is the point of the phase and must stay
+    visible here, so `out` keeps reading everything the page contains. What is
+    tracked separately is which of those links came from the site chrome:
+    `Graph.chrome[page]`. A nav that offers every board is a menu, not a page
+    sending a student to the wrong board's content, and verify_seo.py's
+    assertion 13 is about the second.
+
 THE CROSS-BOARD HAZARD
 ----------------------
 Edexcel uses official spec codes; AQA uses the site owner's own scheme. They
@@ -128,13 +138,35 @@ class Graph:
 
         self.out: dict[str, list[tuple[str, str]]] = {}   # page -> [(target, anchor)]
         self.pdf_links: dict[str, list[str]] = {}
+        # The subset of out[page] that came from the baked header or footer.
+        self.chrome: dict[str, set[tuple[str, str]]] = {}
         for p in self.all_html + TEMPLATES:
-            self.out[p], self.pdf_links[p] = self._edges(p)
+            self.out[p], self.pdf_links[p], self.chrome[p] = self._edges(p)
 
         self.tmpl_targets = sorted({t for tp in TEMPLATES for t, _ in self.out[tp]})
 
-    def _edges(self, page: str) -> tuple[list[tuple[str, str]], list[str]]:
+    def _chrome_spans(self, page: str) -> list[tuple[int, int]]:
+        """Character ranges of the baked header and footer blocks.
+
+        Empty on a page that still carries the runtime placeholders, which is
+        every page before Wave 2 Phase 7 and none after it.
+        """
+        spans = []
+        for name in ("templates/header.html", "templates/footer.html"):
+            begin = f"<!-- BEGIN {name} "
+            end = f"<!-- END {name} -->"
+            b = self.text[page].find(begin)
+            if b == -1:
+                continue
+            e = self.text[page].find(end, b)
+            if e != -1:
+                spans.append((b, e + len(end)))
+        return spans
+
+    def _edges(self, page: str):
         edges, pdfs = [], []
+        chrome: set[tuple[str, str]] = set()
+        spans = self._chrome_spans(page)
         for m in ANCHOR_RE.finditer(self.text[page]):
             href = HREF_RE.search(m.group(1))
             if not href:
@@ -150,8 +182,11 @@ class Graph:
             if target in self.pdfs:
                 pdfs.append(target)
             elif target != page:
-                edges.append((target, text_of(m.group(2))))
-        return edges, pdfs
+                edge = (target, text_of(m.group(2)))
+                edges.append(edge)
+                if any(a <= m.start() < b for a, b in spans):
+                    chrome.add(edge)
+        return edges, pdfs, chrome
 
     def adjacency(self, rendered: bool) -> dict[str, set[str]]:
         adj = {p: {t for t, _ in self.out[p]} for p in self.all_html}

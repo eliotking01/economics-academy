@@ -65,7 +65,11 @@ def render(rec: dict, slice_html: str) -> str:
     b = rec["body"]
     end_container = b.get("endContainerComment") or ""
     end_main = b.get("endMainComment") or ""
-    return (
+    # Wave 2 Phase 7 bakes the header and footer in. This is the one generator
+    # with nothing to sequence the bake after, because it deliberately does not
+    # run Prettier (see above), so it happens here rather than post-write - and
+    # --check keeps comparing like with like as a result.
+    return page_shell.bake(
         "<!doctype html>\n"
         '<html lang="en-GB">\n'
         "  <head>\n"
@@ -80,7 +84,8 @@ def render(rec: dict, slice_html: str) -> str:
         f"      </section>{end_main}"
         f"{b['afterMain']}"
         f"{SEVEN_SCRIPTS}\n"
-        f"{b['afterScripts']}"
+        f"{b['afterScripts']}",
+        rec["path"],
     )
 
 

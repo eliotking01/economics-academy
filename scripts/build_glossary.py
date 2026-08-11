@@ -996,6 +996,9 @@ def main():
     print(f"  {len(urls)} page URLs; run scripts/build_sitemap.py for the sitemap")
     if not prettify(list(pages)):
         print("  WARNING: prettier unavailable, formatting differs from the repo")
+    # Wave 2 Phase 7. After Prettier, never before - see shell.bake_files().
+    print(f"  baked the header and footer into "
+          f"{shell.bake_files(list(pages))} page(s)")
     return 0
 
 
