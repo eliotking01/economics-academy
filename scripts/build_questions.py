@@ -38,6 +38,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+# Wave 2 Phase 6, the last of the five. page_shell.py owns the <head>.
+import page_shell as page_shell_mod  # noqa: E402
 DATA_DIR = ROOT / "questions-data"
 OUT_DIR = ROOT / "practice-questions"
 NOTES_DIR = ROOT / "revision-notes"
@@ -703,14 +706,16 @@ def render_jsonld_quiz(topic):
 
 
 def jsonld_block(data, indent):
-    pad = " " * indent
-    body = json.dumps(data, indent=2, ensure_ascii=False)
-    body = "\n".join(pad + "  " + line for line in body.splitlines())
-    return (
-        f'{pad}<script type="application/ld+json">\n'
-        f"{body}\n"
-        f"{pad}</script>"
-    )
+    """Kept as the identity on `data`.
+
+    Wave 2 Phase 6: page_shell.ldjson() does the serialising now, and it
+    produced byte-identical output to what this used to - json.dumps(indent=2)
+    re-indented by six, inside script tags at four. The function survives so
+    the three call sites read unchanged and the `indent` argument stays
+    documented as having only ever been 4.
+    """
+    assert indent == 4, f"only indent=4 was ever used, got {indent}"
+    return data
 
 
 def render_page(topic, siblings=(), ppq=None):
@@ -832,72 +837,50 @@ def render_page(topic, siblings=(), ppq=None):
 
 
 
+EARLY_PRECONNECT_COMMENT = """    <!-- The font stylesheet is linked in <head> below, so the preload scanner
+         finds it immediately. gstatic is still a second origin, discovered only
+         once that stylesheet parses, so warming both here still pays. -->"""
+
+
 def shell(
     *, title, desc, url, css, jsonld, breadcrumb, body, scripts="",
     og_type="website", head_extra="",
 ):
-    """The common page skeleton. Same head order as a notes topic page."""
+    """The common page skeleton. The <head> comes from scripts/page_shell.py.
+
+    Wave 2 Phase 6. Two things about this family's <head> are its own and are
+    passed as values rather than reworded: it puts the font preconnect before
+    <title> under its own explanatory comment, and its six hub pages carry a
+    <noscript> block that DO-NOT-BREAK protects - the accordion collapses in
+    CSS and quiz.js reopens it, so with scripting off the topic links would be
+    unreachable without it.
+    """
+    head = page_shell_mod.render_head({
+        "title": attr(title),
+        "description": attr(desc),
+        "canonical": url,
+        "preconnectEarly": True,
+        "earlyPreconnectComment": EARLY_PRECONNECT_COMMENT,
+        "og": {
+            "type": og_type, "siteName": "Economics Academy",
+            "locale": "en_GB", "url": url,
+            "title": attr(title), "description": attr(desc),
+            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
+            "image:type": "image/png", "image:alt": "Economics Academy logo",
+        },
+        "twitter": {
+            "card": "summary_large_image", "title": attr(title),
+            "description": attr(desc), "image": OG_IMAGE,
+        },
+        "jsonldBeforeIcons": [jsonld],
+        "jsonldAfterStyles": [breadcrumb],
+        "pageStylesheets": [css],
+        "headNoscript": head_extra or None,
+    })
     return f"""<!doctype html>
 <html lang="en-GB">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {{
-        dataLayer.push(arguments);
-      }}
-      gtag("js", new Date());
-
-      gtag("config", "{GA_ID}");
-    </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The font stylesheet is linked in <head> below, so the preload scanner
-         finds it immediately. gstatic is still a second origin, discovered only
-         once that stylesheet parses, so warming both here still pays. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>{attr(title)}</title>
-    <meta name="description" content="{attr(desc)}" />
-
-    <link rel="canonical" href="{url}" />
-    <meta property="og:type" content="{og_type}" />
-    <meta property="og:site_name" content="Economics Academy" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:url" content="{url}" />
-    <meta property="og:title" content="{attr(title)}" />
-    <meta property="og:description" content="{attr(desc)}" />
-    <meta property="og:image" content="{OG_IMAGE}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="1200" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Economics Academy logo" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{attr(title)}" />
-    <meta name="twitter:description" content="{attr(desc)}" />
-    <meta name="twitter:image" content="{OG_IMAGE}" />
-{jsonld}
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
-    />
-    <link rel="stylesheet" href="/css/main.css" />
-
-    <link rel="stylesheet" href="{css}" />{head_extra}
-{breadcrumb}
+{head}
   </head>
   <body class="is-preload">
     <div id="page-wrapper">
