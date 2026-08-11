@@ -1,0 +1,87 @@
+{
+  "path": "revision-notes/aqa-a2-macro/index.html",
+  "head": {
+    "title": "AQA A-Level Macroeconomics Revision Notes | National &amp; International Economy | Economics Academy",
+    "description": "Free AQA A-Level Economics macroeconomics revision notes — macroeconomic performance, AD and AS, financial markets, fiscal and supply-side policies, and the international economy. Every topic covered, with links to detailed notes on each subtopic.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/",
+    "og": {
+      "type": "website",
+      "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/",
+      "title": "AQA A-Level Macroeconomics Revision Notes | National &amp; International Economy | Economics Academy",
+      "description": "Free AQA A-Level Economics macroeconomics revision notes — macroeconomic performance, AD and AS, financial markets, fiscal and supply-side policies, and the international economy. Every topic covered.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": true,
+    "sdComment": true,
+    "twitter": {
+      "card": "summary_large_image",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-topics.css"
+    ],
+    "mathjaxComment": false,
+    "extraPreconnects": [],
+    "mathjaxConfig": null,
+    "headStyle": null,
+    "mathjax": null,
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "AQA A-Level Macroeconomics Revision Notes: The National and International Economy",
+        "description": "Free A-Level Economics revision notes for AQA macroeconomics, covering macroeconomic performance, aggregate demand and supply, economic performance, financial markets, fiscal and supply-side policies, and the international economy.",
+        "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "AQA A-Level Economics",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AQA Macroeconomics"
+          }
+        ]
+      }
+    ],
+    "jsonldAfterStyles": []
+  },
+  "body": {
+    "mainAttrs": "",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "\n    <script>\n      // Each topic heading is a <button>, so the panel can be opened from the\n      // keyboard. The whole card stays clickable as well, via the delegated\n      // handler below; clicks that originate on the button are ignored there\n      // so a single tap does not toggle twice.\n      document.addEventListener(\"DOMContentLoaded\", function () {\n        document.querySelectorAll(\".topic-item\").forEach(function (item) {\n          const button = item.querySelector(\".topic-toggle\");\n          const panel = item.querySelector(\".subtopic-list\");\n          const icon = item.querySelector(\".toggle-icon\");\n          if (!button || !panel) return;\n\n          function toggle() {\n            const isOpen = panel.style.display === \"block\";\n            panel.style.display = isOpen ? \"none\" : \"block\";\n            button.setAttribute(\"aria-expanded\", isOpen ? \"false\" : \"true\");\n            if (icon) icon.textContent = isOpen ? \"+\" : \"-\";\n          }\n\n          button.addEventListener(\"click\", function (event) {\n            event.stopPropagation();\n            toggle();\n          });\n\n          item.addEventListener(\"click\", function (event) {\n            // Let subtopic links navigate without toggling the panel shut.\n            if (event.target.closest(\"a\")) return;\n            toggle();\n          });\n        });\n      });\n    </script>\n  </body>\n</html>\n"
+  }
+}

@@ -504,14 +504,29 @@ def a4_markup(old: Tree, new: Tree, cfg, shared: list[str]) -> Result:
     return r
 
 
+def _flat(values: list[str]) -> list[str]:
+    return [" ".join(v.split()) for v in values]
+
+
 def a5_head(old: Tree, new: Tree, cfg, shared: list[str], allow: dict) -> Result:
     r = Result(5, "<head> field equality")
     bad = 0
+    ws_only = 0
     used = set()
     for path in shared:
         a, b = head_fields(old.read(path)), head_fields(new.read(path))
         for key in sorted(set(a) | set(b)):
             if a.get(key, []) == b.get(key, []):
+                continue
+            # A <title> Prettier wrapped across two lines and the same title on
+            # one line are the same title: HTML collapses whitespace inside a
+            # text node, and so does every crawler. Comparing the raw bytes
+            # here compares formatting rather than the field. Said out loud
+            # rather than passed silently, because a check that quietly
+            # forgives things stops meaning anything.
+            if _flat(a.get(key, [])) == _flat(b.get(key, [])):
+                ws_only += 1
+                r.note(f"    whitespace only: {path} [{key}]")
                 continue
             reason = allow.get(path, {}).get(key)
             if reason:
@@ -525,6 +540,8 @@ def a5_head(old: Tree, new: Tree, cfg, shared: list[str], allow: dict) -> Result
     for p, k in sorted(declared - used):
         r.note(f"    declared but unchanged: {p} [{k}]")
     r.summary = f"{len(shared)} files, {bad} undeclared changes"
+    if ws_only:
+        r.summary += f", {ws_only} differing by whitespace only"
     if declared:
         r.summary += f", {len(declared)} allowlisted"
     return r

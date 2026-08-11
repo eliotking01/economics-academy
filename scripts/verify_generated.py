@@ -62,6 +62,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # Order matters. The taxonomy feeds the question bank, and the sitemap
 # enumerates the filesystem, so it can only be right once every page exists.
 GENERATORS = [
+    # Wave 2 Phase 3. The 7 notes-hub pages are generated from notes-data/hubs/
+    # by page_shell.py; it runs first because nothing else depends on it and
+    # the sitemap at the end has to see whatever it wrote.
+    "build_notes_hubs.py",
     "build_past_paper_taxonomy.py",
     "build_past_paper_questions.py",
     "build_questions.py",

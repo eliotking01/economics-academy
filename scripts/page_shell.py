@@ -231,7 +231,10 @@ def render_head(v: dict) -> str:
                                     ("content", tw["image"])]))
 
     # ---- structured data, favicons, stylesheets
-    if v.get("jsonldBeforeIcons") and v.get("sdComment"):
+    # The comment introduces whichever JSON-LD group the page actually has.
+    # macro-application puts both blocks after the stylesheets, so keying it to
+    # the "before" group alone silently dropped its comment.
+    if v.get("sdComment") and v.get("jsonldBeforeIcons"):
         out.append("    <!-- Structured data -->")
     for block in v.get("jsonldBeforeIcons", []):
         out.append(ldjson(block))
@@ -267,6 +270,8 @@ def render_head(v: dict) -> str:
             attrs = [("src", src), ("async", None)]
         out.append(tag("script", attrs, void=False) + "</script>")
 
+    if v.get("sdComment") and not v.get("jsonldBeforeIcons"):
+        out.append("    <!-- Structured data -->")
     for block in v.get("jsonldAfterStyles", []):
         out.append(ldjson(block))
     return "\n".join(out)
