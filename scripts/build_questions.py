@@ -1430,6 +1430,7 @@ def main(argv=None):
         by_unit.setdefault((t["boardDir"], unit_of(t["spec"])), []).append(t)
     pastpapers = load_pastpaper_topics()
 
+    written = []
     for topic in topics:
         out = OUT_DIR / topic["boardDir"] / f"{topic['slug']}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -1441,11 +1442,18 @@ def main(argv=None):
             ),
             encoding="utf-8",
         )
+        written.append(out)
         print(f"wrote {out.relative_to(ROOT)} ({len(topic['questions'])} questions)")
 
     # The hub and the board indexes list everything, so they can only be
     # rebuilt from a full run. A partial run leaves them as they were.
     if args.sources:
+        # Wave 2 Phase 7. This generator is the one that never ran Prettier,
+        # so there is nothing to sequence after - but the partial-build path
+        # writes pages too, and a page written without the header would be a
+        # page with no navigation.
+        print(f"baked the header and footer into "
+              f"{page_shell_mod.bake_files(written)} page(s)")
         print("\npartial build - hub, board indexes and sitemap left untouched")
         print(f"{len(topics)} set(s), {total} questions")
         return 0
@@ -1458,11 +1466,17 @@ def main(argv=None):
         out = OUT_DIR / board_dir / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render_board_index(board_dir, board_topics), encoding="utf-8")
+        written.append(out)
         print(f"wrote {out.relative_to(ROOT)} ({len(board_topics)} topics)")
 
     hub = OUT_DIR / "index.html"
     hub.write_text(render_hub(by_board), encoding="utf-8")
+    written.append(hub)
     print(f"wrote {hub.relative_to(ROOT)}")
+
+    # Wave 2 Phase 7.
+    print(f"baked the header and footer into "
+          f"{page_shell_mod.bake_files(written)} page(s)")
 
     if args.sitemap:
         print("--sitemap is retired; run scripts/build_sitemap.py instead")

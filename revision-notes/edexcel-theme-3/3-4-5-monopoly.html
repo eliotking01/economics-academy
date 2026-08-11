@@ -156,7 +156,146 @@
   <body class="is-preload">
     <div id="page-wrapper">
       <!-- Header -->
-      <div id="header-placeholder"></div>
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
 
       <!-- Main Content -->
       <section id="main" class="revision-notes-content">
@@ -554,7 +693,27 @@
       </section>
 
       <!-- Footer -->
-      <div id="footer-placeholder"></div>
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
     </div>
 
     <!-- Scripts -->

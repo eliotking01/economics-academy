@@ -256,6 +256,14 @@ def main() -> int:
     #
     # The two allowed pairs are the glossary's own board selector, which is
     # the one place on the site where crossing boards is the point.
+    #
+    # Links inside the baked header and footer are not this check's subject.
+    # The nav offers every board from every page and always has - before
+    # Wave 2 Phase 7 it was injected at runtime, so it was invisible here, and
+    # baking it in put 3,887 menu entries in front of an assertion written
+    # about content links. Excluding the chrome keeps the assertion at full
+    # strength for the thing it was written to catch: a page's own prose
+    # linking a student to the other board's version of a topic.
     BOARD_SWITCHER = {
         ("revision-notes/glossary/aqa/index.html",
          "revision-notes/glossary/edexcel-a/index.html"),
@@ -267,12 +275,16 @@ def main() -> int:
         src = board_of(page)
         if not src:
             continue
+        chrome = g.chrome.get(page, set())
         for target, anchor in g.out[page]:
+            if (target, anchor) in chrome:
+                continue
             dst = board_of(target)
             if dst and dst != src and (page, target) not in BOARD_SWITCHER:
                 bad.append(f"{page} -> {target} ({src} -> {dst}) {anchor!r}")
     check("13 no link crosses an exam board", bad,
-          f"{len(BOARD_SWITCHER)} allowed: the glossary board selector")
+          f"{len(BOARD_SWITCHER)} allowed: the glossary board selector, "
+          f"plus the site nav")
 
     # 14 --------------------------------------------------------------------
     # Assertion 8 already proves every JSON-LD block parses. This proves the

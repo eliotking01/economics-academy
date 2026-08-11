@@ -58,8 +58,36 @@ def list_files(ref):
     return sorted(f for f in out if f.endswith(".html"))
 
 
-def profile(source):
-    body = body_of(source)
+PLACEHOLDERS = (
+    ('<div id="header-placeholder"></div>', "templates/header.html"),
+    ('<div id="footer-placeholder"></div>', "templates/footer.html"),
+)
+
+
+def resolve(source, templates):
+    """The page as the browser assembles it, placeholders replaced.
+
+    Same reasoning as verify_text_integrity.visible(), and the same trap
+    avoided: `templates` must hold the template text AT THE SAME REF, or a nav
+    edit reports on every page instead of on the template.
+
+    Wave 2 Phase 7 is what made this necessary. body_of() cuts at
+    <div class="notes-container">, which sits below the header, so the 173
+    notes pages never saw the placeholders either way - but the three glossary
+    pages have no notes-container, so their whole document is profiled, and
+    baking correctly showed <div> going 366 -> 365: two placeholder divs out,
+    the footer's one container div in. A true report of an intended change,
+    which is exactly what this check should not be spending its credibility
+    on.
+    """
+    for placeholder, path in PLACEHOLDERS:
+        if placeholder in source:
+            source = source.replace(placeholder, templates.get(path) or "", 1)
+    return source
+
+
+def profile(source, templates):
+    body = body_of(resolve(source, templates))
     counts = collections.Counter(TAG.findall(body))
     counts["span.key-definition"] = len(re.findall(r'class="key-definition"', body))
     refs = collections.Counter(REF.findall(body))
@@ -76,11 +104,14 @@ def main(argv):
 
     problems = 0
     gains = 0
+    old_templates = {p: read_at(before, p) for _, p in PLACEHOLDERS}
+    new_templates = {p: read_at(after, p) for _, p in PLACEHOLDERS}
     for path in list_files(before):
         old, new = read_at(before, path), read_at(after, path)
         if new is None:
             continue
-        (oc, orefs), (nc, nrefs) = profile(old), profile(new)
+        (oc, orefs) = profile(old, old_templates)
+        (nc, nrefs) = profile(new, new_templates)
 
         if not strict:
             for tag in STRUCTURAL:

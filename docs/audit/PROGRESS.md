@@ -1321,7 +1321,7 @@ from 1000–1024 to 850.
 ### Wave 2 done, 2026-08-11, except Phases 4 and 7
 
 **Six phases in sixteen commits. The `<head>` now exists once, in
-`scripts/page_shell.py`, for 454 of the 463 pages.**
+`scripts/page_shell.py`, for 446 of the 463 pages.**
 
 | Phase | What | Result |
 | --- | --- | --- |
@@ -1393,11 +1393,115 @@ DO-NOT-BREAK.
 
 ---
 
-# HANDOVER — 2026-08-11. NEXT UP IS WAVE 2 PHASE 7
+### Wave 2 Phase 7 done, 2026-08-11. Wave 2 is complete
 
-**Everything below is merged to `main`, pushed and live.** CI green on every
-push. **Waves 0, 1, 4 are complete; Wave 2 is complete except Phase 7; Wave 3.1
-is done.**
+**The nav is in the source of all 463 pages.** Six commits. `inject-templates.js`
+fetched `templates/header.html` and `templates/footer.html` at page load and
+swapped them into two placeholder divs; they are baked in at build time now.
+
+| Commit | What |
+| --- | --- |
+| 1/6 | tooling and the nav script tolerate both forms. No page changed |
+| 2/6 | the five generators bake. **446** pages |
+| 3/6 | `bake_templates.py` syncs the **17** no generator owns; check 9 pins all 463 |
+| 4/6 | the fetch, the highlight and the placeholder's CLS reservation deleted |
+| 5/6 | the rename to `nav.js` measured and declined |
+| 6/6 | documents, and the corrections below |
+
+**Both of the two things the brief said to check first were wrong.**
+
+1. **It is 446 generated and 17 not, never 454 and 9.** The "454" is `463 − 9`,
+   taken from D34's decision about the root pages rather than measured, and it
+   was in D34, CLAUDE.md, DO-NOT-BREAK.md and four places here. The uncounted 8
+   are the 5 `past-papers/` hubs — PH06 planned them as the Phase 3 pilot and
+   the notes hubs were migrated instead — and the 3 `revision-notes/` non-topic
+   pages, which D34 explicitly left undecided. The build confirms it unprompted:
+   446 baked, 17 published pages still holding a placeholder.
+2. **`inject-templates.js` did not leave, so check 2 did not change.** Counting
+   `$(` per function before touching anything: 9 of its 11 jQuery calls are in
+   `initNavigation()`, 2 are the bootstrap, and `injectTemplates()` and
+   `setActivePage()` used **zero** — both were already `fetch`,
+   `getElementById`, `querySelector` and `classList`. So **PH08-043 is wrong on
+   detail**: removing the fetch removed no jQuery consumer. The file went 209
+   lines to 121 and still needs jQuery. Check 2 is neither weakened nor updated;
+   **check 9 is what proves the phase reached every page**, and it is stronger —
+   the whole nav block, byte-identical to the template, on 463 of 463.
+
+**A third wrong number, this one in a verifier's own output.**
+`verify_page_shell.py` has printed "463 published pages, 190 of them
+hand-written" on every CI run since Phases 3 and 5 made the notes pages
+generated. It is 17, and it is now the same 17 `bake_templates.py` owns.
+
+**What it bought.** The nav exists without JavaScript for the first time.
+CLS measured in headless Chrome over a threaded server, four page types, two
+viewports, the same PerformanceObserver probe injected into both sides:
+
+```
+1400px   index    0.0253 -> 0.0037      390px   index    0.0220 -> 0.0018
+         tutoring 0.0223 -> 0.0034              tutoring 0.0388 -> 0.0181
+         ocr      0.0224 -> 0.0022              ocr      0.0246 -> 0.0056
+         notes    0.0234 -> 0.0021              notes    0.0028 -> 0.0026
+```
+
+Three repeats of the notes page at 1400px give **before** 0.0241, 0.0024, 0.0240
+and **after** 0.0032, 0.0021, 0.0027 — the before figure is bimodal because it
+depended on whether the two fetches beat first paint. **Baking removed a race,
+not a constant**, which is the more useful way to say it. Lab numbers; CrUX is
+the real one.
+
+**What it cost.** Median **+1,217 bytes gzipped per page**, +23.5%, 654 KiB
+sitewide, measured across all 463 before starting. And a nav edit is now a
+rebuild — D18's trade, re-confirmed by Eliot when it was put concretely.
+
+**The gate, and why assertion 2 needed re-pointing rather than relaxing.**
+Baking changes the visible text of every page's *source* while changing nothing
+a reader sees, so `compare_trees.py` assertion 2 and `verify_text_integrity.py`
+would both have gone red on all 463 by design. Weakening either was the wrong
+answer. Instead the comparison is re-pointed at **OLD-spliced** — OLD with the
+templates pasted in at the placeholders, which is byte-for-byte what
+`outerHTML = data` builds in the browser — by
+`docs/audit/scripts/harness/splice_baseline.py`, deliberately a *second*
+implementation so a bug in `bake()` cannot cancel itself out. Checked against
+OLD it reports 463 of 465 files differing, which is the proof it can return
+something other than zero. All ten assertions then passed on both page commits.
+
+**Three checks the bake walked into, all fixed rather than relaxed.**
+
+- **`verify_seo` assertion 13, "no link crosses an exam board", went to 3,887
+  failures.** The nav offers every board from every page and always has — at
+  runtime, where the check could not see it. Baking made a menu look like
+  content links. `link_graph.Graph.chrome` now records which edges came from the
+  baked block and 13 skips them; the static/rendered distinction the graph
+  reports is untouched, because the two converging is the point of the phase.
+- **`verify_glossary` check 3** renders in memory and compares; it bakes the
+  expectation now.
+- **`verify_markup_integrity --strict`** reported `<div>` 366 → 365 on the three
+  glossary pages and was right: two placeholder divs out, the footer's one
+  container div in. It resolves placeholders before profiling now, the same
+  treatment `verify_text_integrity` got.
+
+Each of the three, and check 9, was proved still able to fail by breaking it.
+
+**Verified by rendering, not only by asserting.** `4421f26` and the finished
+branch served side by side and rendered in headless Chrome: every href in the
+desktop nav and the mobile panel, the nav's visible text, which item carries
+`current`, the `#titleBar`, and every footer link — identical on all 10 pages
+tested, covering every page type. The comparison was then proved capable of
+failing by retyping one nav label.
+
+**Left alone deliberately:** `_working/flashcards/qa/`'s QA pages keep their
+placeholders and now show an empty div where the header was. They are
+unpublished frozen records; baking them would create copies of the nav that
+check 9 does not cover.
+
+---
+
+# HANDOVER — 2026-08-11. WAVE 2 IS COMPLETE. NEXT UP IS 4.10
+
+**Waves 0, 1, 2, 4 are complete, and Wave 3.1 is done.** Everything up to and
+including `4421f26` is merged to `main`, pushed and live, CI green. **Wave 2
+Phase 7 is on branch `wave2-phase7`, six commits, not yet merged** — awaiting
+Eliot's confirmation to push, per the standing rule.
 
 ## What a fresh session needs to know
 
@@ -1407,17 +1511,21 @@ is done.**
 2. **`DECISIONS.md` is D1–D34.** D33 fixes the migration criterion; D34 puts the
    9 root pages permanently out of scope.
 3. **The workflow is 21 steps**, two new since Wave 4: `verify_page_shell.py`
-   and `verify_boards.py`.
-4. **The `<head>` exists once**, in `scripts/page_shell.py`, for 454 of 463
-   pages. All five generators import it. The 9 root pages are the exception, by
-   decision.
+   and `verify_boards.py`. `verify_page_shell.py` now has **9** checks; check 9
+   is what keeps 463 copies of the nav identical to `templates/header.html`.
+4. **The `<head>` exists once**, in `scripts/page_shell.py`, for 446 of 463
+   pages. All five generators import it. **17 pages are not generated**, not 9 —
+   the "454" was `463 − 9` and was never measured. See D35.
 5. **`compare_trees.py` is the gate for any further migration.** Ten assertions,
    32 self-test cases. It still lives in `docs/audit/scripts/harness/`; PH06
    says it moves to `scripts/` and joins the workflow, and that has not been
    done.
-6. **The roadmap is reliable on direction and unreliable on detail** — five more
-   numbers were wrong this session, one of them mine. Measure first, and say so
-   when an item is wrong on contact.
+6. **The roadmap is reliable on direction and unreliable on detail.** Wave 2
+   found five wrong numbers, one of them mine; Phase 7 found three more, and
+   **two of the three were the two things its own brief said to check first**.
+   Measure first, and say so when an item is wrong on contact.
+7. **Editing the nav is now a rebuild.** The command sequence is in CLAUDE.md.
+   Running half of it leaves two different navs on the site and check 9 fails.
 
 ## Wave 2 state
 
@@ -1430,7 +1538,7 @@ is done.**
 | 5 166 notes topic pages | **done, all six sub-phases** |
 | 6 four generators absorbed | **done** |
 | 4 root pages | **declined permanently, D34** |
-| 7 bake header/footer | **NEXT** |
+| 7 bake header/footer | **done, 6 commits, D35** |
 
 ## Phase 7, and why it is worth doing
 
@@ -1456,11 +1564,25 @@ written in. And `verify_page_shell.py` check 2 pins the seven-script tail — wh
 `inject-templates.js` leaves, that constant changes and the check is what proves
 every page went with it.
 
+> **Both turned out to be wrong, and both were found by measuring first.** It is
+> 446 generated and **17** not — the 5 `past-papers/` hubs and the 3
+> `revision-notes/` non-topic pages were never counted. And
+> `inject-templates.js` did not leave: its fetch code used zero jQuery, so the
+> file shrank rather than disappearing, check 2 is unchanged, and the new
+> check 9 is what proves the phase reached all 463. See below.
+
 ## Open, not started
 
 **Runnable now**
 
-- **Wave 2 Phase 7**, above.
+- **4.10 — jQuery + dropotron removal.** No longer blocked. Read D35 first:
+  **PH08-043 is wrong on detail** and planning from it as written will mislead.
+  Removing the runtime fetch removed no jQuery consumer, because the fetch was
+  already vanilla. What 4.10 inherits is `js/components/inject-templates.js` at
+  121 lines, all of it nav plumbing — `$("#nav").navList()` from `util.js`, the
+  dropotron init, and the mobile panel's handlers — with no async injection
+  ordering to preserve. The rename to `nav.js` is declined until this wave and
+  is free inside it, since the script tail is being rewritten anyway.
 - **Wave 3.2 and 3.3** — repoint the **113** board literals in 11 scripts at
   `boards.json`, one generator per commit with output proved unmoved, then key
   everything on `(board, spec)`. **3.4 is blocked** until the GSC re-measure.
@@ -1471,7 +1593,8 @@ every page went with it.
 
 **Deliberate normalisations now cheap, each its own commit**
 
-All are 1 edit for 454 pages now, and each needs its own harness run:
+All are 1 edit for 446 pages now — plus 17 hand-written ones — and each needs
+its own harness run:
 `aria-label="Breadcrumb"` (341), `<main id="main">` keeping the id (462), the
 three MathJax config variants, the two preconnect lineages, the decorative
 comments the shell currently lifts. **`loading="lazy"` is NOT on this list** —
@@ -1489,10 +1612,6 @@ see the correction above.
 **Blocked until ≈2026-09-22, the day-45 GSC re-measure**
 
 - **4.7, 4.8 and Wave 3.4**, and PH05-019/020/021 and PH03-049 step 2.
-
-**Blocked on Wave 2 Phase 7**
-
-- **4.10** — jQuery + dropotron removal.
 
 ## The traps this session hit
 

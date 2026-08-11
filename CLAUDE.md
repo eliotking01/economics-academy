@@ -56,14 +56,39 @@ python3 scripts/subset_fontawesome.py --apply   # fonttools + brotli
 
 Everything the workflow runs is stdlib-only and must stay that way.
 
-**The `<head>` is generated for 454 of the 463 pages** by `scripts/page_shell.py`,
-which all five generators import. The 9 root pages still carry their own and are
-permanently out of scope (`docs/audit/DECISIONS.md` D34). The 173 notes pages
-(166 topic + 7 hub) are rendered by `scripts/build_notes_pages.py` from
-`notes-data/`, which holds a verbatim byte slice of each page's content plus its
-lifted metadata — **do not hand-edit a notes page, edit the slice and re-run**.
-`scripts/extract_notes_pages.py` is the one-off that created them and defaults to
-a dry run.
+**The `<head>` is generated for 446 of the 463 pages** by `scripts/page_shell.py`,
+which all five generators import. **17 pages are not generated**, not 9: the 9
+root pages (permanently out of scope, `docs/audit/DECISIONS.md` D34), the 5
+`past-papers/` hubs and the 3 `revision-notes/` non-topic pages. The figure
+"454" appeared here and in three other documents until 2026-08-11; it was
+`463 − 9` rather than a measurement, and no generator writes the missing 8.
+Re-derive it with `python3 scripts/verify_page_shell.py`, whose first line
+prints the split. The 173 notes pages (166 topic + 7 hub) are rendered by
+`scripts/build_notes_pages.py` from `notes-data/`, which holds a verbatim byte
+slice of each page's content plus its lifted metadata — **do not hand-edit a
+notes page, edit the slice and re-run**. `scripts/extract_notes_pages.py` is the
+one-off that created them and defaults to a dry run.
+
+**The header and footer are baked into all 463 pages at build time.** They are
+no longer fetched by `js/components/inject-templates.js`; that file now only
+builds the mobile nav panel and starts dropotron, and keeps its name on purpose
+(see the comment at the top of it). `templates/header.html` and
+`templates/footer.html` are still the single source of truth and are still
+published. **Editing the nav is now a rebuild, not a one-file edit:**
+
+```
+# edit templates/header.html, then:
+python3 scripts/build_notes_pages.py && python3 scripts/build_past_paper_questions.py \
+  && python3 scripts/build_questions.py && python3 scripts/build_glossary.py \
+  && python3 scripts/build_flashcards.py     # the 446 generated pages
+python3 scripts/bake_templates.py --apply    # the other 17; dry run without --apply
+python3 scripts/build_sitemap.py             # lastmod moved on every page you changed
+```
+
+`verify_page_shell.py` **check 9** is what makes the 463 copies safe: it lifts
+the block back out of every page and requires it to equal the template byte for
+byte, and asserts 0 pages still carry a runtime placeholder. A nav edit that
+reaches 462 pages fails there rather than shipping.
 
 **Three published assets are generated and must not be hand-edited:**
 `css/fontawesome-all.min.css` is a **subset**, not the full library, despite the
@@ -103,9 +128,11 @@ list. Two consequences that are not obvious:
   were all live. **`exclude` replaces Jekyll's defaults rather than adding to
   them**, so the defaults are restated in the file; anything deleted from that
   list becomes public again.
-- **Still public by decision:** `templates/` and `past-paper-questions/` are
-  fetched at runtime and must stay; `specificiations/` holds the exam-board
-  PDFs and is a separate call.
+- **Still public by decision:** `past-paper-questions/` is fetched at runtime
+  and must stay. `templates/` is **no longer fetched** — Wave 2 Phase 7 bakes it
+  in at build time — and stays published anyway, because unpublishing it removes
+  two live URLs and that is a separate decision nobody has needed to make.
+  `specificiations/` holds the exam-board PDFs and is a separate call.
 - **Directories beginning with `_` are excluded**, by Jekyll's own rule. That is
   what makes `_working/` a safe place for build-time working files. **Adding a
   `.nojekyll` file would immediately expose every `_` directory** — if that is
@@ -161,22 +188,27 @@ redirect is the only option, both pass authority unreliably, and the stub pages
 then have to stay in the repo permanently. Evaluated for the glossary on
 2026-08-07 and rejected on exactly that basis; see `_working/glossary/PROGRESS.md`.
 
-Nesting has one incidental benefit: `inject-templates.js` highlights the nav
-item by path prefix, so a page under `/revision-notes/` needs no new rule.
-`/flashcards/` needed its own line for that reason.
+Nesting has one incidental benefit: the nav highlight is chosen by path prefix,
+so a page under `/revision-notes/` needs no new rule. `/flashcards/` needed its
+own line for that reason. The rule list is `PAGE_MAP` in `scripts/page_shell.py`
+— it moved there from `inject-templates.js` in Wave 2 Phase 7, when the
+`class="current"` started being written at build time.
 
 ## How a page is assembled
 
-Standalone HTML. No includes, no partials, no build. Header and footer are
-fetched at runtime by `js/components/inject-templates.js` and swapped into
-`<div id="header-placeholder">` and `<div id="footer-placeholder">`. Everything
-else is duplicated per file.
+Standalone HTML, no includes and no partials. The header and footer are baked
+into every page from `templates/header.html` and `templates/footer.html` at
+build time — `page_shell.bake()` for the 446 generated pages,
+`scripts/bake_templates.py` for the other 17. Nothing is fetched at page load.
+Everything else is duplicated per file.
 
 A new page needs: the gtag block, `<html lang="en-GB">`, title, meta
 description, canonical, OG and Twitter cards, JSON-LD, the favicon/manifest set,
-`/css/main.css`, its own `/css/pages/<page>.css`, and the seven-script tail
-(jquery, dropotron, inject-templates, browser, breakpoints, util, main). Add it
-to `sitemap.xml`. Topic pages carry two JSON-LD blocks — `LearningResource` and
+`/css/main.css`, its own `/css/pages/<page>.css`, the seven-script tail
+(jquery, dropotron, inject-templates, browser, breakpoints, util, main) and the
+baked header and footer blocks. Add it to `sitemap.xml`. If it is hand-written
+rather than generated, add it to `bake_templates.py`'s `EXPECTED` count in the
+same commit, or that script refuses to run. Topic pages carry two JSON-LD blocks — `LearningResource` and
 `BreadcrumbList` — and load MathJax 3 from jsDelivr only if they use `\( … \)`.
 
 ## Conventions
