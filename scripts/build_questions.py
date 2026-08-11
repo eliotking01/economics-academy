@@ -830,7 +830,7 @@ def render_page(topic, siblings=(), ppq=None):
             ]
         ),
         body=body,
-        scripts='\n    <script src="/js/components/quiz.js" defer></script>',
+        scripts=("/js/components/quiz.js",),
         og_type="article",
     )
 
@@ -843,7 +843,7 @@ EARLY_PRECONNECT_COMMENT = """    <!-- The font stylesheet is linked in <head> b
 
 
 def shell(
-    *, title, desc, url, css, jsonld, breadcrumb, body, scripts="",
+    *, title, desc, url, css, jsonld, breadcrumb, body, scripts=(),
     og_type="website", head_extra="",
 ):
     """The common page skeleton. The <head> comes from scripts/page_shell.py.
@@ -894,13 +894,7 @@ def shell(
     </div>
 
     <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/components/inject-templates.js"></script>
-    <script src="/js/browser.min.js"></script>
-    <script src="/js/breakpoints.min.js"></script>
-    <script src="/js/util.js"></script>
-    <script src="/js/main.js"></script>{scripts}
+{page_shell_mod.script_tail(scripts)}
   </body>
 </html>
 """
@@ -1194,7 +1188,7 @@ def render_board_index(board_dir, topics):
             ]
         ),
         body=body,
-        scripts='\n    <script src="/js/components/quiz.js" defer></script>',
+        scripts=("/js/components/quiz.js",),
         head_extra=NOSCRIPT_ACCORDION,
     )
 
@@ -1311,7 +1305,7 @@ def render_hub(by_board):
         ),
         breadcrumb=breadcrumb_jsonld([("Home", "/"), ("Practice Questions", None)]),
         body=body,
-        scripts='\n    <script src="/js/components/quiz.js" defer></script>',
+        scripts=("/js/components/quiz.js",),
     )
 
 

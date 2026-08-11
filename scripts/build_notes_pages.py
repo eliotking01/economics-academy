@@ -48,17 +48,10 @@ import page_shell  # noqa: E402
 
 DATA = ROOT / "notes-data"
 
-SEVEN_SCRIPTS = "\n".join(
-    f'    <script src="{s}"></script>' for s in (
-        "/js/jquery.min.js",
-        "/js/jquery.dropotron.min.js",
-        "/js/components/inject-templates.js",
-        "/js/browser.min.js",
-        "/js/breakpoints.min.js",
-        "/js/util.js",
-        "/js/main.js",
-    )
-)
+# Wave 4.10: the tail is page_shell.SCRIPT_TAIL now, declared once for all
+# five generators. The name is kept because it is what the f-string below
+# interpolates and renaming it would touch this generator for no gain.
+SEVEN_SCRIPTS = page_shell.script_tail()
 
 
 def render(rec: dict, slice_html: str) -> str:

@@ -363,6 +363,52 @@ MATHJAX_CONFIG_BODY = '''    <script>
 
 
 # --------------------------------------------------------------------------
+# The script tail. Wave 4.10.
+# --------------------------------------------------------------------------
+#
+# It was written out as a literal in five generators and, for the 17 pages no
+# generator owns, in the pages themselves. Nothing compared the five: the only
+# thing holding them together was verify_page_shell.py check 2, which reads
+# the OUTPUT and so can only report a divergence that has already shipped to
+# some pages and not others.
+#
+# One tuple here, imported by all five. Changing the tail is now one edit and
+# a rebuild - the same trade D35 made for the nav itself, and for the same
+# reason. This commit changes no output: the tuple is today's seven scripts in
+# today's order, and running the five generators over a clean tree is what
+# says so.
+#
+# verify_page_shell.py check 2 deliberately does NOT import this. It restates
+# the tail as its own literal, so that changing the tail has to change a
+# second, independent place in the same commit - the build_past_paper_taxonomy
+# EXPECTED pattern. A check that imported the constant it is checking would
+# agree with any value, including a wrong one.
+
+SCRIPT_TAIL = (
+    "/js/jquery.min.js",
+    "/js/jquery.dropotron.min.js",
+    "/js/components/inject-templates.js",
+    "/js/browser.min.js",
+    "/js/breakpoints.min.js",
+    "/js/util.js",
+    "/js/main.js",
+)
+
+
+def script_tail(extra: "tuple[str, ...]" = (), indent: int = 4) -> str:
+    """The `<script src>` block, one tag per line, at the given indent.
+
+    `extra` is the page's own component script, which always carries `defer`
+    and always comes last: quiz.js, flashcards.js, glossary-filter.js and
+    question-search.js each enhance a page that already works without them.
+    """
+    pad = " " * indent
+    lines = [f'{pad}<script src="{s}"></script>' for s in SCRIPT_TAIL]
+    lines += [f'{pad}<script src="{s}" defer></script>' for s in extra]
+    return "\n".join(lines)
+
+
+# --------------------------------------------------------------------------
 # The header and footer, baked in. Wave 2 Phase 7.
 # --------------------------------------------------------------------------
 #
