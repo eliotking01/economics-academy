@@ -88,6 +88,16 @@ jobs:
       # change it - silently, with no error and no failed request.
       - name: Stylesheet load order
         run: python3 scripts/verify_css_load_order.py
+      # Wave 2 Phase 1. 463 pages carry the same ~2.5 KB of <head>, wrapper and
+      # script tail and nothing compared them, which is how 18 pages came to
+      # disagree with themselves on a field they write twice and 28 came to
+      # load the identical MathJax asset with different markup. This writes
+      # today's shape down as literals - the build_past_paper_taxonomy.py
+      # EXPECTED pattern - so drift has to change a number in the same commit.
+      # A count going DOWN fails too: an improvement is welcome and must be
+      # declared. PH06 section 3 Phase 1.
+      - name: Page shell has not drifted
+        run: python3 scripts/verify_page_shell.py
 
       - name: SEO assertions
         run: python3 seo/tools/verify_seo.py

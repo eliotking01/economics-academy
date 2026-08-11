@@ -41,6 +41,7 @@ python3 scripts/verify_liquid.py             # a stray {%…%} fails the DEPLOY
 python3 scripts/verify_icons.py              # the Font Awesome subset covers every icon used
 python3 scripts/verify_image_dimensions.py   # every <img> width/height matches its file
 python3 scripts/verify_css_load_order.py     # main.css is linked before every page stylesheet
+python3 scripts/verify_page_shell.py         # the <head>, wrapper and script tail have not drifted
 python3 scripts/build_sitemap.py --check     # read the EXIT CODE, see below
 ```
 
