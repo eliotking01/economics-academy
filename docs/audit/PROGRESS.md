@@ -1241,6 +1241,54 @@ wrong reason — one edit landed in an `alt` attribute, which is not visible tex
 and one merged a branch holding a deliberately-bad commit. **Both were harness
 bugs**, and both are why the harness now asserts that every edit applied.
 
+### Three counts checked before Wave 2, and only two were wrong
+
+Checked because Wave 2 will be built on numbers written during the audit, and
+PH10-061's lesson is that a written count goes stale invisibly. **One of the
+three I suspected was not wrong at all**, which is worth as much as the two
+that were.
+
+**1. The unreferenced diagrams were never 11.** `asset_census.py` section 6
+reports **10**. Applying the same rule at `91e5d53`, the commit that wrote the
+"11", also gives **10** — so this is an error at the time of writing, not
+drift. The 10 are `comparative-advantage`, `consumer-producer-surplus-`
+`{competitive,monopoly}`, `game-theory`, `lras-classical-keynesian-ad-shift`,
+`lras-{classical,keynesian}-shift`, `supply-of-labour` and
+`trade-union-{competitive,monopsony}`, 608 KB in total.
+
+**2. "78 SVG/PNG pairs" is correct and is not a drift.** There are **83** SVGs,
+of which **78 have a same-named PNG** — exactly what PH11 §5.1 claims. The
+other **5 have no PNG at all**: `exchange-rate-{appreciation,depreciation}`,
+`indirect-tax-{elastic,inelastic}-demand`, `lras-shift-keynesian`. That matters
+for 5.1, whose method is "verify each SVG against its ground-truth PNG" — for
+those five there is nothing to verify against, and 5.1 needs a different answer
+for them. **PH11 was right; the suspicion was wrong.**
+
+**3. The inline-style figure is stale, but not for the reason it looked.**
+PH11 §2's Wave 2 row says "333 authored inline `style=` → classes across 45
+files". Re-measured today with PH08-042's own method — which reproduces its
+1,187 KaTeX count exactly, so the method is right — it is **322 across 44
+files**. The missing 11 are `templates/footer.html`, which PH08-042 identified
+as the 45th file, and which **Wave 0.6 already converted** in `be92eb2`. So the
+row would send Wave 2 after work that is done. D18's "44 hand-written pages"
+now matches the current count by coincidence rather than by measurement: it is
+a different set of 44.
+
+**A tooling note found doing this.** `asset_census.py` cannot be run inside a
+linked `git worktree`. It locates the repo root by walking up for a `.git`
+**directory**, and a linked worktree has a `.git` **file**, so it walks past the
+worktree and chdirs somewhere with no site HTML — reporting 0 of everything
+rather than failing. That is D30's breakage in a new place. `verify_generated.py`
+does use a worktree, but the generators find their root from `__file__` and are
+unaffected.
+
+### 5.5 is closed
+
+Eliot confirmed on 2026-08-11 that the two `Regulation` glossary definitions are
+settled. `Regulation` is defined on the Edexcel page (PH10-063, in the Wave 0
+table above), `check_glossary_capitalisation.py --check` is the 13th step of the
+workflow and green, and no definition is unclassified. **Wave 5 is now 5.1–5.4.**
+
 ### A verifier for the defect 4.1 found by hand
 
 `scripts/verify_image_dimensions.py`, 18th step in the workflow. Nothing
@@ -1270,27 +1318,43 @@ from 1000–1024 to 850.
 
 ---
 
-# HANDOVER — 2026-08-10
+# HANDOVER — 2026-08-11. NEXT UP IS WAVE 2
 
 **Everything below `main` is merged, pushed and live.** CI (`verify`) and
-`pages build and deployment` both green on every push this session.
+`pages build and deployment` both green on every push. **Waves 0, 1 and 4 are
+complete.**
 
 ## What a fresh session needs to know
 
 1. **Read this file's IMPLEMENTATION section, then `DO-NOT-BREAK.md`.** The
-   register gained five annotated entries today (4.1, 4.2, 4.3, 4.4, 4.5); each
-   says what was done and what must not be undone.
-2. **The roadmap is not reliable on detail.** Of the five Wave 4 items done
-   today, **four** were wrong as written and were corrected by measurement:
-   4.1's resize buys 0.61 MiB and costs sharpness; 4.2's "20 icons" is 15, one
-   family of three; 4.3's CLS benefit was already spent by 4.4; and **4.5's
-   premise is simply false** — the chrome does not switch at 736. Measure before
+   register gained seven annotated entries across 4.1–4.6 and 4.9; each says
+   what was done and what must not be undone.
+2. **The roadmap is reliable on direction and unreliable on detail.** Of the
+   **seven** Wave 4 items attempted, **six** were wrong as written and were
+   corrected by measurement: 4.1's resize buys 0.61 MiB and costs sharpness;
+   4.2's "20 icons" is 15, one family of three; 4.3's CLS benefit was already
+   spent by 4.4; **4.5's premise is simply false** — the chrome does not switch
+   at 736; **4.6's "no HTML change is needed" is false for both pages it
+   names**, and scoping them reverses the design rather than removing a
+   dependency; and **4.9's "ten pages" was thirteen**. Measure before
    implementing, and say so when the item is wrong.
-3. **Two non-stdlib dependencies now exist**, both one-off, neither in CI:
+3. **Three counts were re-derived on 2026-08-11 before Wave 2** — see "Three
+   counts checked" in IMPLEMENTATION. One of the three was **not** wrong, which
+   is the point: suspicion is not measurement either.
+4. **Two non-stdlib dependencies now exist**, both one-off, neither in CI:
    Pillow (`reencode_diagrams.py`) and fonttools + brotli
    (`subset_fontawesome.py`). Everything the workflow runs is stdlib-only.
-4. **The workflow is 19 steps.** Three are new: `verify_icons.py`,
-   `verify_image_dimensions.py` and `verify_css_load_order.py`.
+5. **The workflow is 19 steps.** Four are new since Wave 4 began:
+   `verify_icons.py`, `verify_image_dimensions.py`, `verify_css_load_order.py`
+   and — not new but materially changed — `verify_text_integrity.py`.
+6. **An approved wording change declares itself** with a `Text-Change: <path>`
+   commit trailer. A Wave 2 migration phase must **never** need one: migration
+   is byte-identical by construction, so if that check goes red during one, it
+   is a real failure and the trailer is not the answer.
+7. **`verify_css_load_order.py` exists for Wave 2.** `contact.css` and
+   `tutoring.css` keep bare selectors, and what keeps those two pages correct is
+   that `css/main.css` is linked first. A generated `<head>` that emits the same
+   links in a different order breaks both silently.
 
 ## Wave 4 state
 
@@ -1336,18 +1400,41 @@ from 1000–1024 to 850.
   before it.
 - **Wave 2** (the build step, D18's `page_shell.py`) needs its own session.
 - **Wave 5** is content and editorial; each item needs explicit approval.
-- **11 of the 112 diagrams are referenced by nothing** and are published. A
+- **10 of the 112 diagrams are referenced by nothing** and are published. A
   published-surface decision for Eliot, of the same kind as D28's `logo/`.
+  **This said 11 and was never 11** — see "Three counts checked" below.
 
 ## Open, not started
 
-- **Wave 2** — the build step, D18's `page_shell.py`. Needs its own session.
-- **Wave 3** — `boards.json` and the Edexcel A labels. **Blocked on the GSC
-  re-measure.**
-- **Wave 4** — 4.5, 4.6, 4.9 runnable now. **4.7 and 4.8 are
-  held until after the GSC re-measure** — they change internal-linking signals
-  into the pages that re-measure is about. **4.10 is gated on Wave 2 Phase 7.**
-- **Wave 5** — content and editorial, each item needing explicit approval.
+**Runnable now**
+
+- **Wave 2 — the build step, D18's `page_shell.py`. This is the next session**,
+  and the only large piece unblocked. Seven phases, plan of record in
+  `PH06-html-architecture.md` §3. Phase 7 is unblocked: P3 ruled it proceeds on
+  its own merits, **not** as a link-equity fix.
+- **Wave 3.1–3.3** — `boards.json`, the 111 board literals, and `(board, spec)`
+  keying. **`boards.json` is also Wave 2 Phase 2's deliverable**, so do them
+  together or they get built twice. **3.4 is blocked**, see below.
+- **Wave 5.1–5.4** — content and editorial, each item needing explicit approval
+  every time. 5.5 is closed. Note the 5 SVGs with no ground-truth PNG.
+
+**Decisions for Eliot, not tasks**
+
+- **`logo/` and `old-logos-archive/`** — 31 tracked files, still published and
+  serving 200, 0 references and 0 GSC rows. `_config.yml` records them as
+  UNDECIDED since 2026-08-09. Rollback plan in PH11 §4a.
+- **The 10 unreferenced diagrams**, 608 KB, published and referenced by nothing.
+
+**Blocked until ≈2026-09-22, the day-45 GSC re-measure**
+
+- **4.7 and 4.8**, and **Wave 3.4** — all three change internal-linking or
+  labelling signals into the pages that re-measure is about.
+- PH05-019/020/021 and PH03-049 step 2.
+
+**Blocked on Wave 2 Phase 7**
+
+- **4.10** — jQuery + dropotron removal, 175 KB and 325–500 ms render-blocking
+  on every page. The biggest single performance win left.
 
 ## Dated dependency — ≈2026-09-22
 
