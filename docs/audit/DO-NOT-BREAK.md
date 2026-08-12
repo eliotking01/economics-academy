@@ -577,12 +577,31 @@ practice-question and past-paper-question families are interactive surfaces whos
 printed form is pointless, and the actual printable content is the PDFs.
 Considered and declined by P7 §6; do not raise it as a gap.
 
-**`logo/` and `old-logos-archive/` are repo storage, not published assets** —
+~~**`logo/` and `old-logos-archive/` are repo storage, not published assets** —
 Eliot, 2026-08-09, D28. 30 files, 2.4 MB, **0** references anywhere on the site and
 **0** rows in any GSC export. The recommendation is to exclude both in
-`_config.yml`. Do not point `EducationalOrganization.logo` at them; use the
-root `android-chrome-512x512.png`, which is already published and already named in
+`_config.yml`.~~ **Do not point `EducationalOrganization.logo` at them; use the
+root `android-chrome-512x512.png`,** which is already published and already named in
 `site.webmanifest`. D29.
+
+> **SUPERSEDED 2026-08-12, D38. Both directories are DELETED** — 31 files, not
+> 30, and 2.47 MB — after Eliot confirmed he holds the originals elsewhere,
+> which was the only thing keeping them here. The `EducationalOrganization.logo`
+> sentence above still stands and is now unconditional: the root
+> `android-chrome-512x512.png` is the target, and there is no longer anything
+> else to point at. The 31st file was
+> `old-logos-archive/favicon-assets/site.webmanifest`, a second live manifest
+> nobody had found — PH10-060's class again.
+
+**Four "unreferenced" diagram PNGs are the ground truth for a live SVG, and a
+census cannot see that.** `comparative-advantage`, `game-theory`,
+`trade-union-competitive` and `trade-union-monopsony` are named by no `<img>`
+on any page, so `asset_census.py 6` lists them as referenced by nothing — but
+each has a same-named SVG in `images/diagrams/svg/`, and the flashcards rule
+above is that every SVG is verified against its ground-truth PNG. Wave 5.1 is
+that verification for all 78 pairs. **Deleting these four would take 5.1 from 5
+unverifiable SVGs to 9**, with no error at any point. D38 deleted the other six
+and kept these; do not re-propose them on the strength of the census line.
 
 ## Tooling (added by P10)
 

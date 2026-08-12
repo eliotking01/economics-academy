@@ -894,3 +894,52 @@ after the pages are committed, because the date comes from `git log`.
 holds 15 HTML files of which 14 carry the old tail, not 12. CLAUDE.md's
 written-out four-script list is replaced by a pointer to the constant, because
 a list written out in prose is what went stale twice in one file on one day.
+
+---
+
+## 2026-08-12 · post-4.11 cleanup
+
+### D38 — `logo/` and `old-logos-archive/` are deleted; six of the ten unreferenced diagrams go and four stay · **supersedes D28, D13 and PH11 §4a**
+
+Eliot, 2026-08-12, closing both of the two standing "decisions for Eliot, not
+tasks": **"I have the logos files saved elsewhere, so feel free to do what is
+required with this to optimise (delete if needed)"** and **"do whatever is
+optimal with the unused diagrams (delete if needed)."**
+
+**The logo directories are deleted, and that is a stronger action than PH11 §4a
+recommended.** §4a proposed *excluding* them in `_config.yml` and said so on one
+ground: the repo was their safekeeping, so the files had to stay. Eliot holding
+copies elsewhere removes that ground, and with it the reason to prefer the
+weaker option. 31 files, 2.47 MB. D28's evidence was re-derived first and still
+holds: 0 references from any published file, 0 rows in any GSC export, absent
+from every sitemap. **Deleting and excluding differ only in what a checkout
+carries** — the blobs stay in history either way, so this is reversible with one
+`git revert` and D27's rule against rewriting history is untouched.
+
+**One number was wrong and one file was a finding nobody had made.** D28 says
+"30 files, 2.4 MB"; it is **31**. The 31st is
+`old-logos-archive/favicon-assets/site.webmanifest` — a second, stale
+`site.webmanifest`, live at its own URL, which is precisely PH10-060's class: a
+non-HTML file inside a published directory, invisible to every enumeration tool
+because they all glob `*.html`.
+
+**Four of the ten "unreferenced" diagrams are not unreferenced in the sense that
+matters, and only one check finds it.** DO-NOT-BREAK's flashcards rule is that
+every hand-drawn SVG is verified against its ground-truth PNG in
+`images/diagrams/`, and Wave 5.1's entire method is verifying all 78 SVG/PNG
+pairs. `comparative-advantage`, `game-theory`, `trade-union-competitive` and
+`trade-union-monopsony` each have a same-named SVG referenced by 10, 5, 4 and 4
+published files. Deleting those PNGs would have taken 5.1 from **5**
+unverifiable SVGs to **9**, silently, months from now. They are kept, 358 KB,
+and the reason is recorded in DO-NOT-BREAK so that the next census does not
+propose it again.
+
+**The other six are deleted**, 250 KB: no SVG twin, no reference of any kind.
+Diagram PNGs 112 → 106; "images referenced by nothing" 43 → 7.
+
+**A third case was found and deliberately NOT swept up.** The root
+`favicon-16x16.png`, `favicon-32x32.png` and `favicon-48x48.png`, 4 KB, are
+named by no `<link>` and are not in `site.webmanifest`. Browsers probe
+`/favicon.ico` by convention but never those three, so they are probably dead —
+and "probably" is why they get their own decision rather than riding along on
+this one.

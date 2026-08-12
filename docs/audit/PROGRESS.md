@@ -1728,13 +1728,21 @@ would imply it is maintained.
 
 ---
 
-# HANDOVER — 2026-08-12. 4.10 IS LIVE; 4.11 IS DONE AND UNMERGED
+# HANDOVER — 2026-08-12. 4.10 AND 4.11 ARE BOTH LIVE
 
-**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, Wave 4.10 is merged, and
-Wave 4.11 is on the branch `wave4-11`, three commits off `1c19cd7`, pushed and
-NOT merged.** Everything before 4.11 is on `main`, pushed and live. Wave 4.10
-merged as **`ff4c726`** on 2026-08-12, five commits from `wave4-10`; `verify`
-and `pages build and deployment` are both green on it.
+**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, and Waves 4.10 and 4.11 are
+both merged and live.** Wave 4.10 merged as **`ff4c726`**, Wave 4.11 as
+**`e513e49`**, both on 2026-08-12; `verify` and `pages build and deployment`
+are green on each.
+
+**Checked on the live site after 4.11**, five page types: every one serves
+`/js/components/nav.js` and `/js/main.js` and nothing else from the tail;
+`/js/browser.min.js` and `/js/breakpoints.min.js` both return **404**; the
+served `nav.js` and `main.js` are **byte-identical to `origin/main`**, so the
+rendered evidence taken before the merge carries over; the live `nav.js` sets
+`aria-hidden` **0** times and the live `main.js` calls `breakpoints(` **0**
+times; `sitemap.xml` reads 2026-08-12 on six of its seven children, `pdfs.xml`
+correctly unmoved.
 
 **Checked on the live site afterwards**, 5 pages across 5 types: all serve
 `/js/components/nav.js`, none mentions jQuery, `util.js` or
@@ -1743,12 +1751,10 @@ and `/js/jquery.min.js`, `/js/jquery.dropotron.min.js` and `/js/util.js` all
 return 404 — which is correct, because nothing references them.
 
 ```
-wave4-11, off 1c19cd7, NOT merged:
-        wave4.11(3/3): the documents
+e513e49 Merge wave4-11: the closed mobile nav is inert, and two dead scripts are gone
+74c6360 wave4.11(3/3): the documents, and three more numbers that were wrong
 256914c wave4.11(2/2): browser.min.js and breakpoints.min.js leave all 463 pages
 f8c4a94 wave4.11(1/2): the closed mobile nav leaves the tab order
-
-main:
 1c19cd7 docs: 4.10 is merged as ff4c726 and live, and one sentence was wrong
 ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
 4e75234 wave4.10(5/5): the documents, and three numbers that were wrong
@@ -1785,24 +1791,53 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
 
 **Runnable now**
 
-- **Wave 3.2 and 3.3** — repoint the **113** board literals in 11 scripts at
+- **Wave 3.2 and 3.3** — repoint the board literals in the generators at
   `boards.json`, one generator per commit with output proved unmoved, then key
   everything on `(board, spec)`. **3.4 is blocked** until the GSC re-measure.
+  **The two documents disagree on the size and neither has been re-derived:**
+  this file says **113 literals across 11 scripts**, `PH11-synthesis.md` §2
+  says **111 across 9 generators**. Measuring that is the first job of that
+  session, not a number to plan from.
 - **Wave 5.1–5.4** — content and editorial, each needing explicit approval.
 - **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
   PH06 section 3. `render_nav.py` needs Chrome, so it stays out.
 
-**Deliberate normalisations, each its own commit**
+**Deliberate normalisations, each its own commit.** All eleven re-measured on
+2026-08-12 against `e513e49`; these are today's numbers, not the roadmap's.
 
-`aria-label="Breadcrumb"` (341), `<main id="main">` keeping the id (462), the
-three MathJax config variants (89/19/18 — the 19 drop `skipHtmlTags`, so it is
-not cosmetic), the two preconnect lineages (190 after `<title>`, 273 before).
+| Item | Now | Finding |
+| --- | --- | --- |
+| `aria-label="Breadcrumb"` | 441 visible, 100 have it, **341** do not | PH06-030 |
+| `<section id="main">` → `<main id="main">`, keeping the `id` | **462** vs 1 | PH06-032 |
+| MathJax config | **4** distinct on 127 pages (89/19/18/1); **126** still carry `["$","$"]` | PH08-039 |
+| Preconnect lineage | **273** before `<title>`, **190** after | Wave 2 |
+| 3 real `<style>` blocks → `css/pages/` | 9 blocks: **6** protected `<noscript>`, **3** real | PH08-042 |
+| 322 authored inline `style=` → classes | **322 across 44 files**, of 1,509 total | PH08-042 |
+| Visible breadcrumb where only JSON-LD declares one | **19** | PH04-053 |
+| `EducationalOrganization` | on **354** of 463 | PH04-052 |
+| `WebSite` node removed from non-homepage | on **100** pages | PH04-052 |
+| `inLanguage` → `en-GB` | **179** nodes say `en`, 274 say `en-GB` | PH04-054 |
+| Full organisation node on the 5 entity-homes | on **1** page | PH04-055, D29 |
+
+**`loading="lazy"` is DONE and is not in that list.** 104 pages, 309 images:
+96 first-eager-rest-lazy, 8 all-lazy, 0 exceptions — the roadmap's "33 pages /
+94 images" describes a state that no longer exists.
+
+**`convert_raw_notes.py` replaced by `page_shell.py`** is the last piece of
+Wave 2 and is still open. PH06-027.
 
 **Decisions for Eliot, not tasks**
 
-- **`logo/` and `old-logos-archive/`** — 31 tracked files, published, 0
-  references, 0 GSC rows. UNDECIDED since 2026-08-09.
-- **The 10 unreferenced diagrams**, 608 KB.
+- ~~**`logo/` and `old-logos-archive/`**~~ — **CLOSED 2026-08-12, D38. Deleted**,
+  31 files and 2.47 MB, after Eliot confirmed he holds copies elsewhere.
+- ~~**The 10 unreferenced diagrams**~~ — **CLOSED 2026-08-12, D38. Six deleted,
+  four kept**: `comparative-advantage`, `game-theory` and
+  `trade-union-{competitive,monopsony}` are the ground truth for live SVGs and
+  Wave 5.1 needs them.
+- **The 3 root `favicon-{16,32,48}x{16,32,48}.png`**, 4 KB, referenced by no
+  `<link>` and not in `site.webmanifest`. New, found while closing the two
+  above; almost certainly dead, which is why it needs its own answer rather
+  than being swept into that commit.
 - **PH06-031's three malformed notes pages.**
 
 **Blocked until ≈2026-09-22, the day-45 GSC re-measure**
