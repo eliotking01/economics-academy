@@ -43,6 +43,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # Wave 2 Phase 6. The <head> is no longer written here; page_shell.py owns it
 # for every family, so a change to the social cards or the script tail is one
 # edit rather than five. What stays local is everything below </head>.
+import board_data  # noqa: E402
 import page_shell as shell  # noqa: E402
 
 DATA_DIR = ROOT / "flashcards-data"
@@ -58,15 +59,20 @@ CARD_TYPES = {"definition", "formula", "calculation", "diagram", "chain",
 DIFFICULTIES = {"foundation", "standard", "stretch"}
 ORIGINS = {"notes-verbatim", "card-authored"}
 
-# (board, theme) -> the revision-notes directory that teaches it. AQA decks,
-# when they arrive, use the site-local 1.x.y / 2.x.y codes - see CLAUDE.md.
+# (board, theme) -> the revision-notes directory that teaches it, from
+# boards-data/boards.json rather than restated here - Wave 3.2, PH09-022.
+#
+# The AQA decks use the site-local 1.x.y / 2.x.y codes, not the real 7136
+# codes - ratified in CLAUDE.md, and `specCodesAreReal: false` in the record is
+# where that now reads as data rather than prose.
+#
+# This generator takes NO NAME from the record. A deck's title is its own, in
+# flashcards-data/<board>/<theme>.json, and Theme 2's is the HYPHEN spelling
+# where taxonomy.json and the notes hub carry an em dash. boards.json records
+# both, per consumer, and nothing here may reconcile them.
 NOTES_DIRS = {
-    ("edexcel-a", "theme-1"): "edexcel-theme-1",
-    ("edexcel-a", "theme-2"): "edexcel-theme-2",
-    ("edexcel-a", "theme-3"): "edexcel-theme-3",
-    ("edexcel-a", "theme-4"): "edexcel-theme-4",
-    ("aqa", "micro"): "aqa-a2-micro",
-    ("aqa", "macro"): "aqa-a2-macro",
+    (board["slugs"]["flashcards"], group["flashcardsSlug"]): group["notesDir"]
+    for _key, board, group in board_data.groups()
 }
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)

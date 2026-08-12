@@ -47,6 +47,9 @@ import unicodedata
 from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import board_data  # noqa: E402
+
 NOTES = ROOT / "revision-notes"
 DATA = ROOT / "glossary-data"
 TAXONOMY = ROOT / "past-paper-questions-data" / "taxonomy.json"
@@ -65,8 +68,31 @@ LIST_KEEP = KEEP | {"li"}
 VOID = {"br", "img", "hr", "input", "meta", "link", "source", "area", "base",
         "col", "embed", "param", "track", "wbr"}
 
+# Board identity, from boards-data/boards.json - Wave 3.2, PH09-022. Three
+# translations used to be written out here as two-board ternaries, each of which
+# silently assumed there would only ever be two boards.
+#
+# GLOSSARY_OF_TAXONOMY  the taxonomy calls Edexcel A "edexcel" and the glossary
+#                       calls it "edexcel-a". That bridge is the field
+#                       PH09-022 pointed at: build_glossary.py carried it as a
+#                       key called `taxonomy` because something had to hold it.
+# GLOSSARY_OF_SHORTNAME the word a spec-alert actually prints - "Specification
+#                       Coverage: Edexcel unit 1.1.1" - mapped to the same key.
+GLOSSARY_OF_TAXONOMY = {b["slugs"]["taxonomy"]: b["slugs"]["glossary"]
+                        for b in board_data.load().values()}
+GLOSSARY_OF_SHORTNAME = {b["names"]["short"]: b["slugs"]["glossary"]
+                         for b in board_data.load().values()}
+
+# Longest name first. Alternation in `re` is ordered and the first branch that
+# matches wins, so a board whose short name is a prefix of another's would
+# shadow it - "Edexcel" would swallow the start of "Edexcel B" and report the
+# wrong board. Nothing collides today; sorting means nothing has to notice when
+# something does.
 SPEC_ALERT_RE = re.compile(
-    r"Specification Coverage:\s*(AQA|Edexcel)\s+unit\s+([\d.]+)\s*"
+    r"Specification Coverage:\s*("
+    + "|".join(re.escape(n) for n in
+               sorted(GLOSSARY_OF_SHORTNAME, key=len, reverse=True))
+    + r")\s+unit\s+([\d.]+)\s*"
     r"(?:[-–—]\s*)?(.*?)\.(?:\s|$)",
     re.S,
 )
@@ -285,9 +311,14 @@ def board_index():
     tax = json.loads(TAXONOMY.read_text(encoding="utf-8"))
     out = {}
     for b in tax["boards"]:
+        if b["slug"] not in GLOSSARY_OF_TAXONOMY:
+            sys.exit(f"taxonomy.json has board {b['slug']!r}, which "
+                     f"boards-data/boards.json does not record as a "
+                     f"slugs.taxonomy. Re-run build_past_paper_taxonomy.py, or "
+                     f"declare the board in the record.")
         for g in b["groups"]:
             out[g["notesDir"]] = {
-                "board": "edexcel-a" if b["slug"] == "edexcel" else b["slug"],
+                "board": GLOSSARY_OF_TAXONOMY[b["slug"]],
                 "boardName": b["name"],
                 "qualification": b.get("qualification", ""),
                 "group": g["slug"],
@@ -315,7 +346,7 @@ def page_meta(root: Node, path: pathlib.Path, meta, problems):
         problems.append(f"{rel}: spec-alert does not parse")
         return None
 
-    stated = "edexcel-a" if m.group(1) == "Edexcel" else "aqa"
+    stated = GLOSSARY_OF_SHORTNAME[m.group(1)]
     if stated != meta["board"]:
         problems.append(
             f"{rel}: spec-alert says {m.group(1)} but the file is in "

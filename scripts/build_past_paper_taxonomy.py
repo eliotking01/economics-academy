@@ -34,45 +34,41 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import board_data  # noqa: E402
 from build_questions import UNITS, spec_key, unit_of  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 QUESTIONS_DATA = ROOT / "questions-data"
 OUT = ROOT / "past-paper-questions-data" / "taxonomy.json"
 
-# Group names lifted from the <h1> of each notes index, so the question bank and
-# the notes call everything exactly the same thing.
+# Read from boards-data/boards.json rather than restated here - Wave 3.2,
+# PH09-022. The shape below is unchanged and is still this generator's own: the
+# record hands back fields by name and each consumer assembles what it needs.
+#
+# `names.taxonomy` is the field that matters. Theme 2 is "The UK Economy —
+# Performance and Policies" with an em dash HERE and in the notes hub <h1>, and
+# with a hyphen in the flashcards decks. Both are correct and neither may be
+# swapped for the other; taxonomy.json is what this file writes, so it takes
+# the taxonomy spelling.
 BOARDS = [
     {
-        "board": "edexcel",
-        "name": "Edexcel",
-        "qualification": "A Level Economics A (9EC0)",
-        "papersUrl": "/past-papers/edexcel/",
+        "board": b["slugs"]["taxonomy"],
+        "name": b["names"]["short"],
+        "qualification": b["names"]["qualification"],
+        "papersUrl": b["papersUrl"],
         "groups": [
-            ("edexcel-theme-1", "theme-1", "Theme 1",
-             "Introduction to Markets and Market Failure"),
-            ("edexcel-theme-2", "theme-2", "Theme 2",
-             "The UK Economy — Performance and Policies"),
-            ("edexcel-theme-3", "theme-3", "Theme 3",
-             "Business Behaviour and the Labour Market"),
-            ("edexcel-theme-4", "theme-4", "Theme 4", "A Global Perspective"),
+            (g["notesDir"], g["taxonomySlug"], g["label"], g["names"]["taxonomy"])
+            for g in b["groups"]
         ],
-    },
-    {
-        "board": "aqa",
-        "name": "AQA",
-        "qualification": "A-level Economics (7136)",
-        "papersUrl": "/past-papers/aqa/",
-        "groups": [
-            ("aqa-a2-micro", "microeconomics", "Microeconomics",
-             "Individuals, Firms, Markets and Market Failure"),
-            ("aqa-a2-macro", "macroeconomics", "Macroeconomics",
-             "The National and International Economy"),
-        ],
-    },
+    }
+    for b in board_data.load().values()
 ]
 
-EXPECTED = {"edexcel": 87, "aqa": 79}
+# The loud-failure guard PH09-022 singled out as worth preserving: a board whose
+# data does not match its declaration fails here rather than silently emitting a
+# short taxonomy. The declaration moved into the record; the property did not.
+EXPECTED = {b["slugs"]["taxonomy"]: b["expectedTopics"]
+            for b in board_data.load().values()}
 
 
 def load_topics(board_dir):
@@ -112,11 +108,35 @@ def build():
             topics = load_topics(board_dir)
             count += len(topics)
 
+            # A slug is minted here and nowhere else, so both ways it can go
+            # wrong are caught here - Wave 3.3, PH09-023.
+            #
+            # The second one is the reason a spec code is never a key on its
+            # own. A slug is spec-code + title, and both halves are shared
+            # across the two boards already: 37 of 129 codes appear on both,
+            # and 11 titles do. They have simply never yet coincided on the
+            # same topic - the closest a shared code comes is 1.1.3, "The
+            # Economic Problem" against "Economic Resources", 0.579 similar.
+            #
+            # If they ever did, past-paper-questions/questions.json would merge
+            # two boards' questions under one key with no error, and the search
+            # index would serve AQA questions on an Edexcel topic page. The
+            # old guard was keyed on (board, slug) and could not see it: it
+            # built a taxonomy carrying a duplicated slug and exited 0.
             for t in topics:
-                key = (spec["board"], t["slug"])
-                if key in seen:
+                prior = seen.get(t["slug"])
+                if prior == spec["board"]:
                     sys.exit(f"duplicate slug {t['slug']} on {spec['board']}")
-                seen[key] = True
+                if prior is not None:
+                    sys.exit(
+                        f"slug {t['slug']!r} is claimed by both {prior} and "
+                        f"{spec['board']}. A slug is spec-code + title, so the "
+                        f"two boards have given spec {t['spec']} the same "
+                        f"title. Nothing downstream keys on the board, so this "
+                        f"would merge their questions silently - rename the "
+                        f"topic on one board rather than removing this check."
+                    )
+                seen[t["slug"]] = spec["board"]
 
             units = []
             for code in sorted({unit_of(t["spec"]) for t in topics}, key=spec_key):

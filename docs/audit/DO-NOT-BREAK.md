@@ -170,6 +170,28 @@ code the same title would merge their questions under one key with no error.
 Do not "simplify" a topic key by dropping the spec-code prefix from a slug — that
 prefix is what is keeping the namespace unique.
 
+> **Amended 2026-08-12, Wave 3.3, D39. "By accident" is right, and it is two
+> accidents, not one.** Both halves of a collision already occur independently:
+> **37** of 129 spec codes sit on both boards, and **11** titles are used by
+> both — on different codes. **0** shared codes share a title, and the closest
+> pair is 0.579 (`1.1.3`, "The Economic Problem" against "Economic Resources").
+>
+> **The guard is now where slugs are minted**, in
+> `build_past_paper_taxonomy.build()`. Its old `seen[(board, slug)]` key could
+> not see a cross-board collision by construction — measured, it built a
+> taxonomy of 166 topics carrying a duplicated slug and exited **0**. Both the
+> within-board duplicate and the cross-board collision now fail there, with
+> different messages. **`build_past_paper_questions.topic_lookup`'s
+> `SystemExit` stays and is not redundant:** it protects a different file's
+> assumption, and both guards were proved to fire and to stay silent on the
+> real 166.
+>
+> **PH09-023's "22 phantom disagreements" is not reproducible.** A spec-only
+> join gives **37** walking `questions-data/` alphabetically and **0** walking
+> it reversed — the count is directory-walk order, and the 0 is the dangerous
+> reading. Seven of the eight topic-keyed structures were already keyed
+> correctly before this wave.
+
 **Flashcard IDs are effectively immutable.** Leitner spaced-repetition state is
 keyed on card ID in `localStorage`. Renaming an ID resets a student's progress
 silently. PH09-024.
@@ -219,9 +241,17 @@ generated files. Re-extraction must never write to them.
 
 **The glossary's verbatim guarantee is narrower than it sounds.**
 `verify_glossary.py` check 1 proves the *extraction* is faithful, not the page —
-`curation.json`'s `rewrite` block edits 46 lead-ins at render time and
-`authored.json` holds 76 definitions the notes never gave. Do not describe the
+`curation.json`'s `rewrite` block edits lead-ins at render time and
+`authored.json` holds definitions the notes never gave. Do not describe the
 glossary as word-for-word without that qualification.
+
+> **Amended 2026-08-12, Wave 3.2. The two counts were removed rather than
+> updated, because both had gone stale and this entry is PH10-061's own
+> subject.** They were 46 and 76; re-derived on 2026-08-12 they are
+> `rewrite.entries` **43** and `authored.json`'s `terms` **77**, and check 1
+> reports **138** authored *instances* — the same set counted per term-page,
+> which is a different unit from the 77. Run
+> `python3 scripts/verify_glossary.py`; checks 1, 6 and 7 print all of it.
 
 **AQA notes use site-local spec codes `1.x.y`/`2.x.y`,** deliberately not the real
 AQA 7136 codes (`4.1.x`/`4.2.x`). Ratified. Do not "fix" them.
@@ -639,9 +669,15 @@ browser gets is `css/vendor/katex/`. It is vendored rather than fetched because
 `npx --package` does not put the module on `NODE_PATH`. Upgrade both together.
 
 **Where CLAUDE.md states a count a verifier computes, the verifier wins.**
-`verify_glossary.py` check 7 prints `44/44` and CLAUDE.md says 46; the script has
-been right all along. PH10-061. Prefer citing the command over restating the
-number.
+`verify_glossary.py` check 7 and CLAUDE.md disagreed; the script has been right
+all along. PH10-061. Prefer citing the command over restating the number.
+
+> **Amended 2026-08-12, Wave 3.2, and the amendment is the point.** This entry
+> recorded the check as printing `44/44` against CLAUDE.md's 46. It prints
+> **`43/43`** today — so the number written down to illustrate a stale number
+> had itself gone stale, in the register that warns about it. The rule survives
+> and the figure is deleted rather than replaced: cite
+> `python3 scripts/verify_glossary.py`.
 
 ## The build step (added by Wave 2, 2026-08-11)
 
@@ -722,8 +758,50 @@ short form in practice-questions. Collapsing them would silently rewrite visible
 text on a whole page family. `verify_boards.py` compares the record against the
 code and **the code wins**: a disagreement means the transcription is wrong.
 
-**Nothing imports `boards.json` yet.** Wave 3.2 repoints the 113 board literals
-in 11 scripts, one generator per commit, each with its output proved unmoved.
+~~**Nothing imports `boards.json` yet.** Wave 3.2 repoints the 113 board literals
+in 11 scripts, one generator per commit, each with its output proved unmoved.~~
+
+> **SUPERSEDED 2026-08-12, Wave 3.2, D39. Five generators read it now**, through
+> `scripts/board_data.py`. The 113 was unreproducible and so was
+> `PH11-synthesis.md` §2's 111: the real edit surface was **107** board-data
+> literals in 5 scripts. Cite `python3 scripts/verify_boards.py`, not a number.
+>
+> **`scripts/verify_boards.py` keeps a second copy of the record, and removing
+> it disarms the check.** Its four code comparisons are now circular for every
+> swapped generator — they ask whether `boards.json` agrees with a structure
+> `boards.json` produced, and agree with any value including a wrong one. Check
+> 0 compares the record against `PINNED`, an independent restatement of all 82
+> leaves in a deliberately different shape. Same argument as
+> `verify_page_shell` check 2 not importing `SCRIPT_TAIL`. **Changing a board
+> name or slug is a two-file commit**; `--show` reprints the table. Do not
+> "remove the duplication".
+>
+> **`scripts/board_data.py` must never grow a canonical accessor.** It hands
+> back the record and lets each caller name the field it wants, because a
+> helper meaning "the name of a group" is exactly the collapse the paragraph
+> above forbids. All three of Theme 2's spellings are live and were each proved
+> to reach a different page family: `names.taxonomy` (em dash) →
+> `taxonomy.json`, `names.flashcards` (hyphen) → the decks,
+> `names.practiceQuestionsButton` ("Theme 2: The UK Economy") → the hub button.
+>
+> **`board_data.EXPECTED_KEYS` and `EXPECTED_NOTES_DIRS` exist because the
+> record's ORDER is published output.** `build_questions.BOARD_ORDER` is the
+> group order's index and it sorts the topics on every board index page, so a
+> reordered `boards.json` would silently reorder a page. Same property as
+> `build_past_paper_taxonomy.EXPECTED`.
+>
+> **Five recorded fields are read by no code** — `slugs.questionBank`,
+> `slugs.dataDir`, `specCodesAreReal`, each group's `names.flashcards`, and
+> `build_glossary`'s board-level `notesUrl`, which is dead in that generator and
+> was dead before the wave. `PINNED` stops them drifting against the record;
+> nothing proves they still match what they were transcribed from.
+> **`slugs.dataDir` is also incomplete** — Edexcel A has two past-paper data
+> directories, `edexcel-a` and `edexcel-a-as`, and the record names one.
+> **CLOSED 2026-08-12, D40: it stays that way.** Recording the second means
+> inventing a shape the record does not have, and Eliot judged a second AS-Level
+> board unlikely. The hardcoded triple in `build_past_paper_questions.py:64` and
+> `verify_past_paper_tags.py:44` is the correct home for that list. Do not
+> "fix" it.
 
 ## The baked header and footer (added by Wave 2 Phase 7, 2026-08-11)
 

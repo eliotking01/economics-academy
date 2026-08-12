@@ -943,3 +943,141 @@ named by no `<link>` and are not in `site.webmanifest`. Browsers probe
 `/favicon.ico` by convention but never those three, so they are probably dead —
 and "probably" is why they get their own decision rather than riding along on
 this one.
+
+---
+
+## 2026-08-12 · Wave 3.2 and 3.3
+
+### D39 — `boards.json` is load-bearing; the check keeps an independent copy; a slug collision fails where slugs are minted
+
+Eliot, 2026-08-12, commissioning the wave and then answering the one question it
+raised. On the check: **"Go with Option A and leave the folder question."**
+
+**Wave 3.2 in one sentence: five generators stopped restating what a board is
+and started reading `boards-data/boards.json`, and no published byte moved.**
+Seven commits, **0** published files changed at any point, all ten
+`compare_trees.py` assertions passing on every one of them — unlike Waves 4.10
+and 4.11, where assertions 1, 4 and 8 failing *was* the report.
+
+**Option A, and why it was a real question.** Before this wave
+`verify_boards.py` compared the record against the four hardcoded structures,
+with the code winning. Once a generator reads the record that comparison is
+circular — it asks whether `boards.json` agrees with a structure `boards.json`
+just produced, and it agrees with any value, including a wrong one, while still
+printing green. `PINNED` restates all **82** leaves as an independent literal in
+a flat dotted-path shape, so changing a board name or slug now has to change two
+files in one commit. This is `verify_page_shell.SCRIPT_TAIL` and
+`build_past_paper_taxonomy.EXPECTED`, the same pattern for the same reason.
+
+The rejected alternative was deleting the check and relying on
+`verify_generated.py`. Declined because that catches a **forgotten rebuild**,
+not a **wrong value**: edit the record, re-run the generators, commit, and it
+goes green with every page rewritten.
+
+**Proved able to fail before being trusted, four ways.** A one-sided value
+change, an unpinned new field, and a removed pinned field each exit 1; the same
+change made in both files exits 0. The first probe was the em-dash → hyphen
+collapse on Theme 2 — the exact accident DO-NOT-BREAK names as the likeliest way
+to get this wave wrong.
+
+**The roadmap's size for this wave was unreproducible, both versions.**
+`PROGRESS.md` said 113 literals across 11 scripts; `PH11-synthesis.md` §2 said
+111 across 9 generators. PH01-012's per-script table was tested at the commit it
+names, `d220ad0`, against six mechanical definitions: totals 154, 52, 204, 156,
+176 and 120, none of them 111, and the closest matching only 4 of the 9 rows. It
+was hand-counted under an unstated rule. The real edit surface was **107**
+board-data literals in 5 scripts, and removing them took **64** literal-nodes
+off those files.
+
+**The roadmap said one two-board ternary. There were three.** PH01-012 and PH11
+name `build_glossary.py:679`, now `:664`. `extract_glossary.py:290` and `:318`
+were never counted, and `:290` is PH09-022's own bridge in a second location —
+the finding pointed at `build_glossary.py`'s `taxonomy` field without recording
+that the inverse was written out elsewhere. Six further `"E" if s ==
+"edexcel-a" else "A"` ternaries render an unpublished `_working/` report and are
+deliberately left.
+
+**Two regexes were board lists in disguise**, `extract_glossary.SPEC_ALERT_RE`
+and `build_questions.ID_RE`. Both are generated now, **longest name first**,
+because `re` alternation is ordered and a slug that is a prefix of another would
+shadow it. Both were proved equivalent to the literal they replace rather than
+assumed: identical match groups on 179 of 179 notes files, and 0 differences
+across all 1,267 real question IDs.
+
+**Wave 3.3 was mostly already done, and saying so is the finding.** Seven of the
+eight topic-keyed structures already carried the board in the key or were scoped
+to one board; `siblings_for`'s docstring already explained why, and
+`topic_lookup` already held the cross-board assertion PH09-023 proposed as its
+cheap interim. That is the `loading="lazy"` case again.
+
+**The one real gap was at the source.** Slugs are minted in
+`build_past_paper_taxonomy.build()` and nowhere else, and its guard was keyed on
+`(board, slug)`, which cannot see a cross-board collision by construction —
+measured, it built a taxonomy of 166 topics carrying a duplicated slug and
+exited 0. Both cases now fail where the slug is made.
+`build_past_paper_questions.topic_lookup`'s guard stays, is not redundant, and
+was proved to fire for the first time.
+
+**PH09-023's "22 phantom disagreements" is not reproducible and the real number
+is worse.** A spec-only join gives **37** apparent title disagreements walking
+`questions-data/` alphabetically and **0** walking it reversed. The count is
+directory order. The 0 is the dangerous reading: joined that way the data looks
+clean while being silently wrong on 37 of 129 codes.
+
+**And the namespace is safe by coincidence twice over, not by design.**
+PH09-023 says the safety rests on two boards never giving one spec code the same
+title. Both halves already occur independently: **37** of 129 codes sit on both
+boards, and **11** titles are used by both — on different codes. **0** shared
+codes share a title, and the closest pair is 0.579. That is the case for the
+guard, not against it.
+
+**What stayed hardcoded, and it is a line rather than an omission.** Prose that
+names a board is page copy, not board identity: `build_glossary`'s `intro` and
+`meta`, `build_questions`' `HUB_SECTIONS` year groups and hub copy,
+`build_flashcards`' meta descriptions. `boards.json` records what a board is
+called and where it lives, and no more.
+
+**Deferred, not overlooked.** `slugs.dataDir` is a single value where
+`build_past_paper_questions.py` and `verify_past_paper_tags.py` both walk three
+directories, because Edexcel A has two — `edexcel-a` and `edexcel-a-as`.
+Recording that is a schema extension rather than a transcription, and Eliot held
+it back for its own piece of work. `questions.json`'s topic keys stay bare
+slugs, per DO-NOT-BREAK.
+
+**Five fields are recorded and read by no code:** `slugs.questionBank`,
+`slugs.dataDir`, `specCodesAreReal`, each group's `names.flashcards`, and
+`build_glossary`'s board-level `notesUrl`, which is copied into `BOARDS` and
+consumed by no template — dead before this wave and found by a probe that
+correctly moved nothing. `PINNED` stops all five drifting against the record;
+nothing proves they still match the sources they were transcribed from.
+
+### D40 — `slugs.dataDir` stays as it is; the AS-Level folder is not recorded · **closes the question D39 deferred**
+
+Eliot, 2026-08-12, after the trade was put to him plainly: **"I now believe I am
+unlikely to add AQA AS-Level, so leave it."**
+
+**What was deferred.** `boards-data/boards.json` records one `dataDir` per
+board. Edexcel A actually has two — `past-paper-questions-data/edexcel-a` (24
+papers) and `edexcel-a-as` (16) — because one board offers two qualifications,
+9EC0 and 8EC0, and both have a Paper 1 in the same series, so one directory
+would mean colliding filenames. AQA has one (24). Two scripts type the list of
+three out by hand:
+`build_past_paper_questions.py:64` and `verify_past_paper_tags.py:44`.
+
+**Why it is closed rather than done.** Recording it means inventing a shape the
+record does not have — either a board holding a list of directories, or a
+notion of *qualification* beneath a board. That is design, not transcription,
+and Wave 3.2's entire safety argument was that it transcribed. The only payoff
+was the day a second board gained an AS-Level tier, and Eliot's judgement is
+that day is unlikely to come.
+
+**What that costs, stated so nobody re-derives it as a defect.**
+`slugs.dataDir` is now permanently a field that is recorded, pinned, and
+**wrong for one of the two boards** in the sense that it is incomplete. It is
+read by no code, so nothing acts on it. A future session finding it should read
+this entry rather than "fixing" it: the hardcoded triple in those two scripts is
+the correct place for that list, and it is deliberate.
+
+**If AQA AS ever does arrive**, the work is: add its data directory, extend the
+record with whatever shape is right *then*, and repoint those two scripts —
+about half a day, and no worse for having waited.

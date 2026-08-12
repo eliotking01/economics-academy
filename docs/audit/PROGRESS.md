@@ -1384,9 +1384,15 @@ every commit.
 
 #### Wave 3.1 landed with Wave 2
 
-`boards-data/boards.json` + `scripts/verify_boards.py`, 25 assertions against all
-four hardcoded structures, in the workflow. **Nothing imports it yet** — that is
-PH09's migration step 1, deliberately. Measuring it turned up something PH09 did
+`boards-data/boards.json` + `scripts/verify_boards.py`, in the workflow, against
+all four hardcoded structures. **Nothing imports it yet** — that is PH09's
+migration step 1, deliberately.
+
+> **Corrected 2026-08-12, Wave 3.2. The "25 assertions" was never right** — the
+> script printed **28** from the day it landed, and prints **111** now that it
+> also pins the record. Cite `python3 scripts/verify_boards.py | grep -c "^  ok"`.
+> **"Nothing imports it" stopped being true in `da269f7`**; five generators read
+> it now. Measuring it turned up something PH09 did
 not anticipate: **group names need the same per-consumer treatment as slugs**,
 because Theme 2 reaches published output as three different strings. See
 DO-NOT-BREAK.
@@ -1635,6 +1641,111 @@ attributes the change to the branch commit, not to the merge.
 
 ---
 
+### Wave 3.2 and 3.3 done, 2026-08-12. boards.json is load-bearing, and no page moved
+
+Seven commits. **0 published bytes changed on any of them**, and all ten
+`compare_trees.py` assertions passed on every one — the opposite of 4.10 and
+4.11, where 1, 4 and 8 failing was the report. D39.
+
+| Commit | What | Literals |
+| --- | --- | --- |
+| 1/6 | `verify_boards.py` gains `PINNED`, 82 leaves, before anything reads the record | — |
+| 2/6 | `scripts/board_data.py` + `build_past_paper_taxonomy.py` | 44 |
+| 3/6 | `build_flashcards.NOTES_DIRS` | 18 |
+| 4/6 | `extract_glossary.py`, two ternaries + `SPEC_ALERT_RE` | 6 |
+| 5/6 | `build_glossary.BOARDS` + **the** ternary | 12 |
+| 6/6 | `build_questions.py`, four structures + `ID_RE`, 173 pages | 40 |
+| 3.3 | the cross-board slug guard, where slugs are minted | — |
+
+**The wave's size was unreproducible in both documents, and that was the first
+job.** This file said 113 literals across 11 scripts; `PH11-synthesis.md` §2
+said 111 across 9 generators. PH01-012's per-script table was tested at the
+commit it names, `d220ad0`, under six mechanical definitions: **154, 52, 204,
+156, 176, 120** — none is 111, and the best matches 4 of its 9 rows. It was
+hand-counted under a rule nobody wrote down. Measured properly: **191** board
+literals across **12** scripts by a stated rule, of which the actual edit
+surface is **107** board-data literals in **5** scripts. Removing them took
+**64** literal-nodes off those files.
+
+**The check had to be re-armed before the first swap, and that is 1/6.** Once a
+generator reads `boards.json`, `verify_boards.py`'s code comparison is circular
+— it agrees with any value, including a wrong one, while printing green. Eliot
+chose `PINNED` over dropping the check for `verify_generated.py`, which catches
+a forgotten rebuild but not a wrong value. **Proved able to fail four ways**
+before being trusted, and the first probe was the em-dash → hyphen collapse on
+Theme 2 — the exact accident DO-NOT-BREAK names as the likeliest way to get this
+wave wrong.
+
+**Every swap was proved WIRED, not merely unbroken**, by editing one field in
+`boards.json` alone and watching the output move: `taxonomy.json`
+`d81c071ff1ad → 9669c651a2d6`, the glossary pages `bf93541117f9 → 1aebc72cf02d`,
+the 173 practice pages `a7ca30041a6b → d0340a0e0a04`. A swap still reading its
+old literal would look identical to a correct one from the output alone.
+
+**Theme 2's three spellings are now demonstrably distinct**, each proved to
+reach a different page family. That is what `boards.json` exists for and it was
+the single largest risk in the wave.
+
+**The roadmap said one two-board ternary. There were three.** PH11 and PH01-012
+name `build_glossary.py:679`, now `:664`. `extract_glossary.py:290` and `:318`
+were never counted, and `:290` is PH09-022's own bridge in a second location.
+Six more render an unpublished `_working/` report and are left.
+
+**Two regexes were board lists in disguise** — `SPEC_ALERT_RE` and `ID_RE` —
+both now generated longest-name-first, because `re` alternation is ordered.
+Proved equivalent rather than assumed: identical match groups on **179 of 179**
+notes files, and **0** differences across all **1,267** question IDs.
+
+**Wave 3.3 was mostly already done.** Seven of the eight topic-keyed structures
+already carried the board or were scoped to one; `siblings_for`'s docstring
+already explained why and `topic_lookup` already held PH09-023's proposed
+assertion. **The `loading="lazy"` case again**, and worth expecting a third
+time.
+
+The one real gap was at the source: `build_past_paper_taxonomy`'s
+`seen[(board, slug)]` cannot see a cross-board collision **by construction** —
+measured, it built 166 topics carrying a duplicated slug and exited **0**.
+
+**PH09-023's "22 phantom disagreements" is not reproducible and the truth is
+worse:** a spec-only join gives **37** walking `questions-data/` alphabetically
+and **0** walking it reversed. The 0 is the dangerous reading. And the namespace
+is safe by coincidence twice over — **37** of 129 codes sit on both boards,
+**11** titles are used by both, **0** overlap, closest pair 0.579.
+
+**Six wrong numbers besides the wave size**, three of them about the glossary
+and one of them inside the register's own warning about wrong numbers:
+
+| Claimed | Actually |
+| --- | --- |
+| `verify_boards.py` has 25 assertions | 28 before the wave, 111 after |
+| `rewrite` edits 46 lead-ins | `rewrite.entries` is **43** |
+| check 7 prints `44/44` (PH10-061, DO-NOT-BREAK) | **43/43** — the stale-number example went stale |
+| `authored.json` holds 76 definitions | **77** terms |
+| check 1 reports 137 authored | **138** instances |
+| one two-board ternary | **three** |
+
+**Five recorded fields are read by no code**, one of them found by a probe that
+correctly moved nothing: `slugs.questionBank`, `slugs.dataDir`,
+`specCodesAreReal`, each group's `names.flashcards`, and `build_glossary`'s
+board-level `notesUrl` — copied into `BOARDS` and consumed by no template, dead
+before this wave.
+
+**Closed by Eliot, D40, not overlooked.** `slugs.dataDir` names one directory
+where two generators walk three, because Edexcel A has `edexcel-a` and
+`edexcel-a-as`. Recording the second is a schema extension rather than a
+transcription, and its only payoff was a second board gaining an AS-Level tier —
+which Eliot judges unlikely. **It stays as it is, permanently**; the hardcoded
+triple in those two scripts is the right home for that list.
+`questions.json`'s topic keys stay bare slugs, per DO-NOT-BREAK.
+
+**`--family scripts/` is the right harness invocation for this kind of wave.**
+Without it assertion 8 fails on every commit that edits a script, which is every
+commit here. Checked independently rather than trusted:
+`git diff --name-only 3a01a86..HEAD` is scripts and documents only, **0**
+published files.
+
+---
+
 ### Wave 4.11 done, 2026-08-12. The two things 4.10 logged and left
 
 Two commits, both small, both from `REVIEW-NOTES.md`'s "Three found by Wave
@@ -1728,12 +1839,19 @@ would imply it is maintained.
 
 ---
 
-# HANDOVER — 2026-08-12. 4.10 AND 4.11 ARE BOTH LIVE
+# HANDOVER — 2026-08-12. WAVE 3 IS COMPLETE EXCEPT 3.4
 
-**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, and Waves 4.10 and 4.11 are
-both merged and live.** Wave 4.10 merged as **`ff4c726`**, Wave 4.11 as
-**`e513e49`**, both on 2026-08-12; `verify` and `pages build and deployment`
-are green on each.
+**Waves 0, 1, 2, 4 are complete, Wave 3 is done except 3.4, and Waves 4.10 and
+4.11 are merged and live.** Wave 4.10 merged as **`ff4c726`**, Wave 4.11 as
+**`e513e49`**, the post-4.11 cleanup as **`3a01a86`**, all on 2026-08-12;
+`verify` and `pages build and deployment` are green on each.
+
+**Waves 3.2 and 3.3 are seven commits on `wave3-2-3`, off `3a01a86`** — see the
+section above and D39. **0 published bytes changed on any commit** and all ten
+harness assertions passed on every one. `boards-data/boards.json` is read by
+five generators now; `scripts/board_data.py` is the loader and
+`verify_boards.py`'s `PINNED` is what keeps the check honest. **3.4 stays
+blocked** until the day-45 GSC re-measure.
 
 **Checked on the live site after 4.11**, five page types: every one serves
 `/js/components/nav.js` and `/js/main.js` and nothing else from the tail;
@@ -1751,6 +1869,14 @@ and `/js/jquery.min.js`, `/js/jquery.dropotron.min.js` and `/js/util.js` all
 return 404 — which is correct, because nothing references them.
 
 ```
+6ad6ab2 wave3.3: (board, spec) was already the key almost everywhere
+145490d wave3.2(6/6): the largest one, 173 pages, and not a byte of any moves
+8388f3f wave3.2(5/6): the glossary pages, and the ternary the roadmap named
+04bc4ba wave3.2(4/6): the glossary extractor, and a regex that was a board list
+b6e683b wave3.2(3/6): the flashcard decks, where Theme 2 takes the hyphen
+da269f7 wave3.2(2/6): boards.json becomes load-bearing, taxonomy.json does not move
+66f712b wave3.2(1/6): the check gets its own copy, before anything reads the record
+3a01a86 Merge post-4.11-cleanup: the two standing decisions are closed
 e513e49 Merge wave4-11: the closed mobile nav is inert, and two dead scripts are gone
 74c6360 wave4.11(3/3): the documents, and three more numbers that were wrong
 256914c wave4.11(2/2): browser.min.js and breakpoints.min.js leave all 463 pages
@@ -1784,20 +1910,22 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
    could see 4.11's first commit.
 6. **The roadmap is reliable on direction and unreliable on detail.** Wave 2
    found five wrong numbers, Phase 7 three, 4.10 three more plus one nobody had
-   measured, and 4.11 three — **two of those three were in 4.10's own writing**,
-   which is the case for re-deriving even a number this file wrote yesterday.
+   measured, 4.11 three — **two of those three were in 4.10's own writing** —
+   and Wave 3.2 seven, **including the figure DO-NOT-BREAK and CLAUDE.md both
+   printed to illustrate the danger of stale figures**. Re-derive even a number
+   this file wrote yesterday.
+7. **Twice now the roadmap has described work already done.** `loading="lazy"`
+   in the table above, and seven of Wave 3.3's eight structures. Measure what
+   exists before planning to build it; expect a third case.
 
 ## Open, not started
 
 **Runnable now**
 
-- **Wave 3.2 and 3.3** — repoint the board literals in the generators at
-  `boards.json`, one generator per commit with output proved unmoved, then key
-  everything on `(board, spec)`. **3.4 is blocked** until the GSC re-measure.
-  **The two documents disagree on the size and neither has been re-derived:**
-  this file says **113 literals across 11 scripts**, `PH11-synthesis.md` §2
-  says **111 across 9 generators**. Measuring that is the first job of that
-  session, not a number to plan from.
+- ~~**Wave 3.2 and 3.3**~~ — **DONE 2026-08-12, D39**, seven commits on
+  `wave3-2-3`. Neither document's size was reproducible; the real edit surface
+  was **107** board-data literals in **5** scripts. **3.4 is still blocked**
+  until the GSC re-measure.
 - **Wave 5.1–5.4** — content and editorial, each needing explicit approval.
 - **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
   PH06 section 3. `render_nav.py` needs Chrome, so it stays out.

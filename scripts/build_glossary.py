@@ -42,6 +42,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import board_data  # noqa: E402
 # Wave 2 Phase 6. page_shell.py owns the <head> for every family now.
 import page_shell as shell  # noqa: E402
 DATA = ROOT / "glossary-data" / "terms.json"
@@ -63,13 +64,17 @@ ALLOWED = re.compile(r"</?(?:strong|em|sub|sup)>|<br />|<a href=\"[^\"]*\">|</a>
 # A definition may be completed by the list that follows it in the notes.
 ALLOWED_LIST = re.compile(r"</?(?:ul|li|strong|em|sub|sup)>|<a href=\"[^\"]*\">|</a>")
 
-BOARDS = {
+# The hero paragraph and meta description for each board page. These are PAGE
+# COPY, not board identity, and they stay here on purpose: boards.json records
+# what a board is called and where it lives, not what a page says about it.
+# Every other field below now comes from the record - Wave 3.2, PH09-022.
+#
+# The `taxonomy` key was PH09-022's own exhibit: a field whose only job was to
+# bridge this generator's board key to another's, proving the need for a
+# canonical identity while solving it privately where nothing else could reach.
+# It is still here, and it is now a lookup rather than a translation.
+BOARD_COPY = {
     "edexcel-a": {
-        "slug": "edexcel-a",
-        "name": "Edexcel A",
-        "long": "Edexcel A-Level Economics A",
-        "taxonomy": "edexcel",
-        "notesUrl": "/revision-notes/",
         "intro": (
             "Every key term and formula you need for <strong>Edexcel A-Level "
             "Economics A (9EC0)</strong>, covering Themes 1 to 4. Each "
@@ -83,11 +88,6 @@ BOARDS = {
         ),
     },
     "aqa": {
-        "slug": "aqa",
-        "name": "AQA",
-        "long": "AQA A-Level Economics",
-        "taxonomy": "aqa",
-        "notesUrl": "/revision-notes/",
         "intro": (
             "Every key term and formula you need for <strong>AQA A-Level "
             "Economics (7136)</strong>, covering microeconomics and "
@@ -101,6 +101,28 @@ BOARDS = {
         ),
     },
 }
+
+BOARDS = {}
+for _b in board_data.load().values():
+    _slug = _b["slugs"]["glossary"]
+    if _slug not in BOARD_COPY:
+        sys.exit(f"boards.json records glossary board {_slug!r} and BOARD_COPY "
+                 f"has no intro or meta for it. A board page cannot be built "
+                 f"without both - add the copy here, in this file.")
+    BOARDS[_slug] = {
+        "slug": _slug,
+        "name": _b["names"]["display"],
+        "long": _b["names"]["long"],
+        "taxonomy": _b["slugs"]["taxonomy"],
+        "notesUrl": _b["notesUrl"],
+        **BOARD_COPY[_slug],
+    }
+
+_orphaned = sorted(set(BOARD_COPY) - set(BOARDS))
+if _orphaned:
+    sys.exit(f"BOARD_COPY has page copy for {_orphaned}, which boards.json "
+             f"does not record as a glossary board. Delete it, or add the "
+             f"board to the record.")
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)
 
@@ -661,7 +683,22 @@ def render_board(data, board, groups, rendered_map, inline_map):
           </section>
 """
 
-    other_board = "aqa" if board == "edexcel-a" else "edexcel-a"
+    # PH01-012's exhibit: this was `"aqa" if board == "edexcel-a" else
+    # "edexcel-a"`, which silently assumes there will only ever be two boards -
+    # a third would have been sent to Edexcel A's glossary from every page, and
+    # never linked to from anywhere.
+    #
+    # The hero renders ONE "Switch to the ... glossary" link, so two boards is
+    # what this template can express. That assumption is now stated and checked
+    # rather than buried in a ternary; a third board fails here, loudly, in the
+    # one place that has to be redesigned to accept it.
+    others = [b for b in BOARDS if b != board]
+    if len(others) != 1:
+        sys.exit(f"the glossary hero links to 'the other board' and boards.json "
+                 f"records {len(BOARDS)}, so there are {len(others)} of them. "
+                 f"That link and this page's header need a design decision "
+                 f"before a third board can ship.")
+    other_board = others[0]
     crumbs = [("Home", "/"), ("Revision Notes", "/revision-notes/"),
               ("Glossary", "/revision-notes/glossary/"),
               (BOARDS[board]["name"], None)]

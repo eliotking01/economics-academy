@@ -42,7 +42,7 @@ python3 scripts/verify_icons.py              # the Font Awesome subset covers ev
 python3 scripts/verify_image_dimensions.py   # every <img> width/height matches its file
 python3 scripts/verify_css_load_order.py     # main.css is linked before every page stylesheet
 python3 scripts/verify_page_shell.py         # the <head>, wrapper and script tail have not drifted
-python3 scripts/verify_boards.py             # boards.json still matches the four hardcoded structures
+python3 scripts/verify_boards.py             # boards.json matches its pinned copy AND the code
 python3 scripts/build_sitemap.py --check     # read the EXIT CODE, see below
 ```
 
@@ -96,6 +96,27 @@ the block back out of every page and requires it to equal the template byte for
 byte, and asserts 0 pages still carry a runtime placeholder. A nav edit that
 reaches 462 pages fails there rather than shipping.
 
+**What an exam board is called and where it lives is recorded once**, in
+`boards-data/boards.json`, and five generators read it through
+`scripts/board_data.py` — Wave 3.2, D39. **Editing a board name or slug is a
+two-file commit:** `verify_boards.py` keeps an independent restatement of the
+whole record in `PINNED`, because its comparison against the generators is
+circular now that they read it. `--show` reprints the table.
+
+**The record holds a name PER CONSUMER, and collapsing them rewrites live
+pages.** Theme 2 ships as three different strings — `names.taxonomy` with an em
+dash in `taxonomy.json` and the notes hub `<h1>`, `names.flashcards` with a
+hyphen in the decks, and `names.practiceQuestionsButton` as "Theme 2: The UK
+Economy" on the practice-questions hub. All three are correct. `board_data.py`
+therefore hands back the record and never a canonical "name of a group"; do not
+give it one. **Its group order is published output too** — `BOARD_ORDER` is that
+order's index and it sorts every board index page — which is what
+`board_data.EXPECTED_NOTES_DIRS` is guarding.
+
+Prose that names a board is page copy, not board identity, and stays in the
+generator that prints it: `build_glossary.BOARD_COPY`,
+`build_questions.HUB_SECTIONS` and the hub's own meta description.
+
 **Three published assets are generated and must not be hand-edited:**
 `css/fontawesome-all.min.css` is a **subset**, not the full library, despite the
 name — it is kept so that 463 `<head>` blocks do not have to change;
@@ -117,8 +138,11 @@ regenerating rather than by rendering into memory.
 **Where a number in this file is one a script computes, cite the script, not the
 value.** Counts here have drifted before and the drift is invisible: this file
 said the `rewrite` block covered 46 definitions while `verify_glossary.py` check
-7 printed `44/44` on every run for weeks, and nothing compared them. A number
-that cannot go stale beats a number that is right today. PH10-061.
+7 printed a different figure on every run for weeks, and nothing compared them.
+**That check printed `44/44` when PH10-061 was written and prints `43/43`
+today** — the number written down to illustrate a stale number had itself gone
+stale, here and in DO-NOT-BREAK, which is the strongest case for the rule there
+is. A number that cannot go stale beats a number that is right today. PH10-061.
 
 ## How publishing works
 
@@ -168,7 +192,7 @@ images/diagrams/                                                112 note diagram
 raw-notes/edexcel/<spec-code>.md                                markdown source for converted notes
 revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
 glossary-data/                                                  glossary source of truth
-boards-data/boards.json                                         canonical board identity, read by nothing yet
+boards-data/boards.json                                         canonical board identity, read by 5 generators via scripts/board_data.py
 notes-data/{hubs,topics/<board-dir>}/                           byte slice + metadata for the 173 generated notes pages
 _working/glossary/                                              build-time working files, not published
 ```
@@ -520,13 +544,16 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
   built from it. Start at `docs/audit/findings/PH11-synthesis.md` for what to do
   next, `docs/audit/PROGRESS.md` for what is already done, and
   `docs/audit/DO-NOT-BREAK.md` before touching anything. `DECISIONS.md` is
-  append-only, D1–D32.** Excluded from publishing; readable in the public repo,
+  append-only, D1–D39.** Excluded from publishing; readable in the public repo,
   on the same judgement as `REVIEW-NOTES.md`.
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
-- `_working/glossary/authored-review.md` — the 76 authored **terms**, the only
-  entries on the site that are not the notes' own words. `verify_glossary.py`
-  check 1 reports 137, which is the same set counted as term-page instances:
-  most appear on both board pages. Two units, both true — say which you mean.
+- `_working/glossary/authored-review.md` — the authored **terms**, the only
+  entries on the site that are not the notes' own words. Two units are in play
+  and both are true, so say which you mean: `authored.json`'s `terms` list, and
+  the same set counted as term-page instances, most appearing on both board
+  pages. **Cite `python3 scripts/verify_glossary.py` check 1 for the second** —
+  the pair was written here as 76 and 137 and re-derived on 2026-08-12 as 77
+  and 138.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
 - `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
