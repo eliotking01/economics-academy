@@ -22,6 +22,11 @@ So this serves the tree over HTTP and drives real Chrome at it.
     titleBar  the toggle button's tag, id, class and aria-*
     footer    every <a> in the footer, and the skip link
     counts    element tallies that would move if a rewrite dropped something
+    tabbable  how many of the panel's links can take focus, closed and open.
+              Added by Wave 4.11: `inert` changes no markup, no link, no class
+              and no transform, so every other field above is blind to it -
+              two trees differing only by whether a closed panel is reachable
+              from the keyboard would compare identical without this
 
 **How the probe gets in.** Chrome 132 removed `--headless=old` and with it
 `--repl`, so there is no stdlib way to evaluate an expression in the page:
@@ -131,6 +136,25 @@ PROBE_JS = r"""
     }));
     return true;
   }
+  // Is this link reachable from the keyboard? focus() is refused on an inert
+  // subtree exactly as it is on a display:none one, so this answers the tab
+  // order question without sending real Tab keys, which headless Chrome
+  // cannot do: --dump-dom is the only channel out and there is no --repl.
+  // It returns BOTH numbers - how many links there are and how many can be
+  // focused - so "0 focusable" is always accompanied by the count it is 0 of.
+  function focusTally(root) {
+    var links = [].slice.call(root.querySelectorAll("a"));
+    var n = 0;
+    for (var i = 0; i < links.length; i++) {
+      links[i].focus();
+      if (document.activeElement === links[i]) n++;
+    }
+    if (document.activeElement && document.activeElement.blur) {
+      document.activeElement.blur();
+    }
+    return { links: links.length, focusable: n };
+  }
+
   function panelState(tag) {
     var panel = document.querySelector("#navPanel");
     var btn = document.querySelector("#titleBar button, #titleBar a.toggle");
@@ -138,6 +162,7 @@ PROBE_JS = r"""
       step: tag,
       bodyClass: document.body.classList.contains("navPanel-visible"),
       ariaHidden: panel ? panel.getAttribute("aria-hidden") : null,
+      inert: panel ? panel.hasAttribute("inert") : null,
       ariaExpanded: btn ? btn.getAttribute("aria-expanded") : null,
       btnLabel: btn ? btn.getAttribute("aria-label") : null,
       // The panel slides in from translateX(-275px). Read the COMPUTED
@@ -231,6 +256,7 @@ PROBE_JS = r"""
         role: panel.getAttribute("role"),
         label: panel.getAttribute("aria-label"),
         hidden: panel.getAttribute("aria-hidden"),
+        inert: panel.hasAttribute("inert"),
       } : null,
       titleBar: btn ? {
         tag: btn.tagName,
@@ -270,6 +296,30 @@ PROBE_JS = r"""
     await wait(50);
 
     out.interact = window.innerWidth >= 768 ? await desktop() : await mobile();
+
+    // The tab order, closed -> open -> closed, on one run of one page.
+    //
+    // Deliberately three readings rather than one. A closed-panel figure of 0
+    // proves nothing on its own - display:none, a missing panel and a broken
+    // probe all give 0 too - so it is only ever reported beside the open
+    // figure taken seconds later by the same loop. That is the CLS lesson
+    // from 4.10 applied here: a measurement that cannot return a second value
+    // is not a measurement.
+    //
+    // Below 768px only, because that is the only width where the panel is
+    // displayed at all; above it #navPanel is display:none and every reading
+    // would be 0 for a reason that has nothing to do with what is being
+    // tested. Runs last, after interact, which leaves the panel closed.
+    out.tabbable = null;
+    var tbtn = document.querySelector("#titleBar button, #titleBar a.toggle");
+    if (panel && tbtn && window.innerWidth < 768) {
+      var t = { closed: focusTally(panel) };
+      tbtn.click(); await wait(400);
+      t.open = focusTally(panel);
+      tbtn.click(); await wait(400);
+      t.closedAgain = focusTally(panel);
+      out.tabbable = t;
+    }
 
     var pre = document.createElement("pre");
     pre.id = "__probe";

@@ -118,20 +118,31 @@
     panel.id = "navPanel";
     panel.setAttribute("role", "navigation");
     panel.setAttribute("aria-label", "Mobile navigation");
-    panel.setAttribute("aria-hidden", "true");
+    // `inert`, not aria-hidden="true". The panel is moved off-canvas by
+    // transform, never display:none - the slide has to be animatable - so
+    // when it was merely aria-hidden its 32 links stayed in the tab order the
+    // whole time, and a keyboard user on a phone tabbed through all 32 before
+    // reaching the page. aria-hidden was also the wrong half of the answer on
+    // its own: ARIA 1.2 makes aria-hidden="true" on an element containing
+    // focusable descendants a conformance failure, and Chrome logs it, so a
+    // screen reader could reach a link the accessibility tree said was not
+    // there. `inert` does both jobs from one attribute - out of the tab order
+    // AND out of the accessibility tree - which is why aria-hidden goes
+    // rather than being kept alongside it. REVIEW-NOTES.md item 1.
+    panel.setAttribute("inert", "");
     panel.appendChild(navList(nav));
     body.appendChild(panel);
 
     function open() {
       body.classList.add("navPanel-visible");
-      panel.setAttribute("aria-hidden", "false");
+      panel.removeAttribute("inert");
       btn.setAttribute("aria-expanded", "true");
       btn.setAttribute("aria-label", "Close navigation menu");
     }
 
     function close() {
       body.classList.remove("navPanel-visible");
-      panel.setAttribute("aria-hidden", "true");
+      panel.setAttribute("inert", "");
       btn.setAttribute("aria-expanded", "false");
       btn.setAttribute("aria-label", "Open navigation menu");
     }

@@ -1644,12 +1644,16 @@ file "is meant to shrink".
 
 ---
 
-## Three found by Wave 4.10, none fixed, all deliberate
+## Three found by Wave 4.10, none fixed by it, all deliberate
 
 Found while removing jQuery and dropotron on 2026-08-11. Logged rather than
 fixed, because each is outside what that wave was authorised to change.
 
-### 1. `#navPanel` is `aria-hidden="true"` while holding 32 focusable links
+**Item 1 was fixed on 2026-08-12** and the record of it is kept below rather
+than deleted, because the measurement is the interesting part. Items 2 and 3
+are unchanged.
+
+### 1. `#navPanel` is `aria-hidden="true"` while holding 32 focusable links — FIXED 2026-08-12
 
 `js/components/nav.js` builds the mobile panel and toggles
 `aria-hidden` on it, which is what `inject-templates.js` did before it. The
@@ -1670,6 +1674,34 @@ entirely — `inert` does both jobs and is supported everywhere current. It was
 before/after comparison showing the panel identical, and changing its
 attributes would have changed the thing being compared. It is a small, clean
 commit on its own, and it needs its own before/after.
+
+**Done 2026-08-12, and the before/after is the whole report.** One file,
+`js/components/nav.js`; no page rebuilt, no HTML changed, no CSS changed.
+`render_nav.py` gained the two fields that could see it — `panelAttrs.inert`
+and a `tabbable` tally that focuses every panel link in turn and counts how
+many accept it, which is the tab-order question asked in the one way headless
+Chrome can answer it. Nothing else in that harness could tell the two trees
+apart: `inert` changes no markup, no link, no class and no transform.
+
+- **The defect, measured on 10 pages rather than argued: 32 of 32 links
+  focusable with the panel shut**, on all 10 at 390px. Now **0 of 32**.
+- **Open is still 32 of 32**, on the same run, seconds later, from the same
+  loop — which is what stops the 0 being the kind of zero that means the probe
+  is broken. Closed → open → closed again reads 0 / 32 / 0.
+- 23 of 23 captures differ in `panelAttrs` and nothing else: `hidden` `"true"`
+  → absent, `inert` absent → present. `nav`, `panel`, `navCurrent`,
+  `navDisplay`, `titleBar`, `skipLink`, `footer` and `counts` are identical on
+  23 of 23.
+- The six-step mobile cycle is unchanged in every field but those two: toggle,
+  Escape with focus returning to the button (10 of 10), click-outside and
+  swipe-left all still work, and the panel's computed transform still moves
+  −275px ↔ 0 on every cycle.
+- **The one trade, stated:** a browser without `inert` (Firefox before 112,
+  Safari before 15.5, Chrome before 102) now gets a closed panel that is
+  neither hidden from assistive technology nor removed from the tab order,
+  where before it was falsely marked hidden and still tabbable. No feature
+  detection and no `aria-hidden` fallback, because reinstating `aria-hidden`
+  conditionally reinstates the conformance failure for exactly those users.
 
 ### 2. `browser.min.js` and `breakpoints.min.js` are effectively dead
 
