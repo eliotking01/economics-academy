@@ -1623,20 +1623,34 @@ The desktop bar has had a highlight since the beginning and the phone had
 nothing. `nav.js` copies the class off the baked `<li class="current">` rather
 than re-deriving it from the URL, so the two navigations cannot disagree.
 
-**The sitemap did not need regenerating, and that is luck rather than a
-property.** Every `lastmod` is a date, Phase 7 landed on 2026-08-11 and so did
-this; `build_sitemap.py --check` exits 0 with 0 `WOULD CHANGE`. Work continuing
-past midnight will need it.
+**The sitemap did not need regenerating**, and the reason is worth stating
+correctly, because the first version of this paragraph got it wrong. `lastmod`
+is the date of the **commit that last touched the file**, not the date the
+check runs. Phase 7 landed on 2026-08-11 and every commit of this wave is dated
+2026-08-11 too, so all 463 pages still carry that date and
+`build_sitemap.py --check` exits 0 with 0 `WOULD CHANGE` — re-run on 2026-08-12,
+after the merge, and it still does. What moves `lastmod` is a commit on a new
+day, not a clock passing midnight. A merge commit does not move it either: git
+attributes the change to the branch commit, not to the merge.
 
 ---
 
-# HANDOVER — 2026-08-11. WAVE 4.10 IS COMPLETE AND UNMERGED
+# HANDOVER — 2026-08-12. WAVE 4.10 IS COMPLETE, MERGED AND LIVE
 
-**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, and Wave 4.10 is done on the
-branch `wave4-10`** — four commits off `58281ce`, **not pushed and not merged**.
-Everything before it is merged and live.
+**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, and Wave 4.10 is merged.**
+Everything is on `main`, pushed and live. Wave 4.10 merged as **`ff4c726`** on
+2026-08-12, five commits from `wave4-10`; `verify` and `pages build and
+deployment` are both green on it.
+
+**Checked on the live site afterwards**, 5 pages across 5 types: all serve
+`/js/components/nav.js`, none mentions jQuery, `util.js` or
+`inject-templates.js`, all carry the baked nav block and a highlighted item,
+and `/js/jquery.min.js`, `/js/jquery.dropotron.min.js` and `/js/util.js` all
+return 404 — which is correct, because nothing references them.
 
 ```
+ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
+4e75234 wave4.10(5/5): the documents, and three numbers that were wrong
 687b9e8 wave4.10(4/n): redesign the nav bar, not only the dropdowns
 198c6b0 wave4.10(3/n): jQuery, dropotron and util.js leave all 463 pages
 488769a wave4.10(2/n): the script tail is declared once. No output moves
