@@ -108,11 +108,35 @@ def build():
             topics = load_topics(board_dir)
             count += len(topics)
 
+            # A slug is minted here and nowhere else, so both ways it can go
+            # wrong are caught here - Wave 3.3, PH09-023.
+            #
+            # The second one is the reason a spec code is never a key on its
+            # own. A slug is spec-code + title, and both halves are shared
+            # across the two boards already: 37 of 129 codes appear on both,
+            # and 11 titles do. They have simply never yet coincided on the
+            # same topic - the closest a shared code comes is 1.1.3, "The
+            # Economic Problem" against "Economic Resources", 0.579 similar.
+            #
+            # If they ever did, past-paper-questions/questions.json would merge
+            # two boards' questions under one key with no error, and the search
+            # index would serve AQA questions on an Edexcel topic page. The
+            # old guard was keyed on (board, slug) and could not see it: it
+            # built a taxonomy carrying a duplicated slug and exited 0.
             for t in topics:
-                key = (spec["board"], t["slug"])
-                if key in seen:
+                prior = seen.get(t["slug"])
+                if prior == spec["board"]:
                     sys.exit(f"duplicate slug {t['slug']} on {spec['board']}")
-                seen[key] = True
+                if prior is not None:
+                    sys.exit(
+                        f"slug {t['slug']!r} is claimed by both {prior} and "
+                        f"{spec['board']}. A slug is spec-code + title, so the "
+                        f"two boards have given spec {t['spec']} the same "
+                        f"title. Nothing downstream keys on the board, so this "
+                        f"would merge their questions silently - rename the "
+                        f"topic on one board rather than removing this check."
+                    )
+                seen[t["slug"]] = spec["board"]
 
             units = []
             for code in sorted({unit_of(t["spec"]) for t in topics}, key=spec_key):
