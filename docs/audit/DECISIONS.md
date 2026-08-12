@@ -834,3 +834,63 @@ that kept jQuery would have passed it. `verify_markup_integrity --strict`
 skips `<script src>` tags, on the ground that check 2 makes a strictly stronger
 statement about the same bytes; it was proved still able to fail by deleting
 one `<a>` from inside a notes body.
+
+---
+
+## 2026-08-12 · Wave 4.11
+
+### D37 — The closed mobile panel is `inert`; `browser.min.js` and `breakpoints.min.js` are deleted
+
+Eliot, 2026-08-12, commissioning both in one brief: *"THIS SESSION IS TWO SMALL
+COMMITS"* — `inert` on the closed `#navPanel` dropping `aria-hidden`, then the
+removal of the two dead libraries. Both had been found by Wave 4.10, logged in
+`REVIEW-NOTES.md`, and deliberately left out of it.
+
+**They were kept as two commits because they share nothing.** One is an
+accessibility fix in a script that no page rebuild touches; the other is a
+sitewide script-tail change that rewrites 463 files. Landing them together
+would have given one regression two candidate causes, which is the reason 4.10
+gave for not doing the second in the first place.
+
+**`inert` replaces `aria-hidden`, it does not join it.** The panel is moved
+off-canvas by `transform` rather than `display: none`, because the slide has to
+be animatable, so its 32 links stayed in the tab order while it was shut — and
+`aria-hidden="true"` on an element with focusable descendants is an ARIA 1.2
+conformance failure that Chrome logs. `inert` answers both. **The declined
+alternative was a feature-detected `aria-hidden` fallback** for browsers
+without `inert` (Firefox < 112, Safari < 15.5, Chrome < 102): declined because
+it would reinstate for exactly those users the conformance failure the change
+removes, and because two code paths would leave the one the harness does not
+drive untested.
+
+**The harness was extended rather than trusted.** `inert` changes no markup, no
+link, no class and no transform, so every field `render_nav.py` recorded was
+blind to it — 23 of 23 captures would have compared identical. It gained
+`panelAttrs.inert` and a `tabbable` tally: **32 of 32 panel links focusable
+with the panel shut before, 0 of 32 after, and 32 of 32 open in both**, on 10
+pages at 390px. The open figure is taken by the same loop seconds later,
+because a zero with no companion is what 4.10's CLS probe produced for a
+deliberate 200px shift.
+
+**The two libraries went for a reason unlike the three 4.10 deleted.** Neither
+needed jQuery. Neither had a caller: `browser` **zero** call sites anywhere,
+`breakpoints` **one**, `js/main.js`'s config call, which named four widths no
+listener ever read back. Neither writes a class or inserts a node. 8,236 B raw,
+**2,141 gzipped, off all 463 pages**, plus two fewer requests.
+
+**Assertions 1, 4 and 8 fail again, and again that is the report.** 4's 1,389
+losses are exactly 463 × 3 with zero unexpected lines; 8's 480 files are
+463 HTML + 7 sitemap XML + 2 js deleted + 2 js edited + 3 scripts + 2 root
+markdown + 1 harness. Rendered against the first commit, the second moves one
+field on 23 of 23: `counts.script`, −2.
+
+**This is the first wave to need the sitemap regenerated for the reason 4.10
+had to correct itself about.** Every page was last touched on 2026-08-11 and is
+touched again on 2026-08-12, so 467 `lastmod`s move. It can only be generated
+after the pages are committed, because the date comes from `git log`.
+
+**Three more numbers were wrong, two of them written by 4.10.** The
+`breakpoints({…})` call named four widths, not five. `_working/flashcards/qa/`
+holds 15 HTML files of which 14 carry the old tail, not 12. CLAUDE.md's
+written-out four-script list is replaced by a pointer to the constant, because
+a list written out in prose is what went stale twice in one file on one day.

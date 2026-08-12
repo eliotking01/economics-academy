@@ -1635,12 +1635,106 @@ attributes the change to the branch commit, not to the merge.
 
 ---
 
-# HANDOVER — 2026-08-12. WAVE 4.10 IS COMPLETE, MERGED AND LIVE
+### Wave 4.11 done, 2026-08-12. The two things 4.10 logged and left
 
-**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, and Wave 4.10 is merged.**
-Everything is on `main`, pushed and live. Wave 4.10 merged as **`ff4c726`** on
-2026-08-12, five commits from `wave4-10`; `verify` and `pages build and
-deployment` are both green on it.
+Two commits, both small, both from `REVIEW-NOTES.md`'s "Three found by Wave
+4.10". They are unrelated to each other and were kept apart on purpose.
+
+| Commit | What |
+| --- | --- |
+| 1/2 | `inert` on the closed `#navPanel`, `aria-hidden` dropped. **One file** |
+| 2/2 | `browser.min.js` and `breakpoints.min.js` deleted; the tail is two scripts |
+
+**1/2 changed no page and needed to change none.** The panel is built by
+script at DOMContentLoaded, so the fix reaches all 463 pages without any of
+them moving a byte — `git diff --stat` naming three files is a stronger
+statement than any harness run, and `compare_trees.py` has nothing to say
+about it.
+
+**The harness could not see the change at all, and that is the interesting
+part.** `inert` changes no markup, no link, no class and no transform, so
+every field `render_nav.py` recorded was blind to it. It gained two:
+`panelAttrs.inert`, and a `tabbable` tally that focuses each panel link in
+turn and counts how many accept it — the tab-order question asked the only way
+headless Chrome can answer it, since `--dump-dom` is the one channel out and
+Chrome 132 removed `--repl`. Both trees were captured with the same probe.
+
+```
+tabbable, closed -> open -> closed, all 10 pages at 390px
+  before   32/32   32/32   32/32
+  after     0/32   32/32    0/32
+```
+
+**The open reading is what makes the zero worth anything.** Same loop, same
+page, seconds later. That is this wave's application of 4.10's CLS lesson, and
+the same rule caught a second measurement here: a probe reporting **0 JS
+errors** on 12 captures was only believed after a deliberate `ReferenceError`
+proved it could report one.
+
+`panelAttrs` differs on 23 of 23 captures and nothing else does; the six-step
+mobile cycle differs only in those two attributes, with Escape still returning
+focus to the button on 10 of 10 and the transform still moving −275px ↔ 0.
+**The one trade, stated rather than buried:** a browser with no `inert`
+(Firefox < 112, Safari < 15.5, Chrome < 102) gets a closed panel that is
+neither hidden from assistive technology nor out of the tab order, where
+before it was falsely marked hidden and tabbable anyway. No `aria-hidden`
+fallback, because keeping it for those users reinstates for them exactly the
+conformance failure being removed.
+
+**2/2 is the four-file tail edit 4.10 established**, and both call-site counts
+held on re-derivation: `browser` zero, `breakpoints` one. 8,236 B raw,
+**2,141 gzipped, off every one of 463 pages**, plus two fewer requests; the
+page HTML itself shrinks 18–20 B gzipped.
+
+**926 deleted lines and 0 added, across 463 HTML files** — 462 at four-space
+indent plus `marking.html` at six, every one a `<script src>`. The 173
+`notes-data/` slices are untouched, correctly: they hold content, not the tail.
+
+**Assertions 1, 4 and 8 fail, the same three as 4.10, each decomposed.**
+1: two assets removed, none added. 4: **1,389 losses = 463 × 3** — one
+`<script>` count down by 2 and two lost `src`s per page — with **0 additions
+and 0 unexpected lines**. 8: **480 files** = 463 HTML + 7 sitemap XML + 2 js
+deleted + 2 js edited + 3 scripts + 2 root markdown + 1 harness, nothing
+unexplained. **9 passes**: a full rebuild in a clean worktree wrote zero
+changes. **10 passes**: 14/14.
+
+**Rendered against 1/2's own capture, commit 2/2 moves exactly one field on 23
+of 23** — `counts.script`, −2 everywhere, with `a`, `img` and `li` all
+unmoved. `tabbable` and `interact` are identical, so 1/2's fix survives 2/2.
+`body.is-preload` still comes off at load+100 ms, both globals are
+`undefined`, and 0 pages request a script that is not on disk.
+
+**Check 2 was proved able to fail rather than read.** Re-adding one
+`browser.min.js` tag to `about.html` turns it red three ways while the
+ordering test beside it stays green — which is the exact reason DO-NOT-BREAK
+gives for that assertion existing as its own line.
+
+**This is the sitemap case 4.10 described, arriving.** Every page was last
+touched on 2026-08-11 and is touched again on 2026-08-12, so 467 `lastmod`s
+move — 461 page URLs plus 6 of the 7 index children, `pdfs.xml` correctly
+unmoved. It can only be generated **after** the pages are committed, because
+the date comes from `git log`, so it is folded in by amend.
+
+**Three more numbers were wrong, two of them in 4.10's own writing.** The
+`breakpoints({…})` call named **four** widths, not five. `_working/flashcards/qa/`
+holds **15** HTML files of which **14** carry the old tail, not 12 — they now
+request five deleted files, not three. CLAUDE.md's written-out four-script
+list is replaced by a pointer to `page_shell.SCRIPT_TAIL`, because a list
+written out in prose is what went stale twice in one file on one day.
+
+**Left alone deliberately:** `scripts/convert_raw_notes.py` still emits both
+tags. It must not be run as-is anyway (PH06-027), and editing two lines of it
+would imply it is maintained.
+
+---
+
+# HANDOVER — 2026-08-12. 4.10 IS LIVE; 4.11 IS DONE AND UNMERGED
+
+**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, Wave 4.10 is merged, and
+Wave 4.11 is on the branch `wave4-11`, three commits off `1c19cd7`, pushed and
+NOT merged.** Everything before 4.11 is on `main`, pushed and live. Wave 4.10
+merged as **`ff4c726`** on 2026-08-12, five commits from `wave4-10`; `verify`
+and `pages build and deployment` are both green on it.
 
 **Checked on the live site afterwards**, 5 pages across 5 types: all serve
 `/js/components/nav.js`, none mentions jQuery, `util.js` or
@@ -1649,6 +1743,13 @@ and `/js/jquery.min.js`, `/js/jquery.dropotron.min.js` and `/js/util.js` all
 return 404 — which is correct, because nothing references them.
 
 ```
+wave4-11, off 1c19cd7, NOT merged:
+        wave4.11(3/3): the documents
+256914c wave4.11(2/2): browser.min.js and breakpoints.min.js leave all 463 pages
+f8c4a94 wave4.11(1/2): the closed mobile nav leaves the tab order
+
+main:
+1c19cd7 docs: 4.10 is merged as ff4c726 and live, and one sentence was wrong
 ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
 4e75234 wave4.10(5/5): the documents, and three numbers that were wrong
 687b9e8 wave4.10(4/n): redesign the nav bar, not only the dropdowns
@@ -1662,18 +1763,23 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
 1. **Read `DO-NOT-BREAK.md` first.** It gained a whole "The navigation, without
    jQuery" block on 2026-08-11 — what `nav.js` may and may not take over from
    CSS, why check 2 does not import the constant it checks, and four things
-   about driving headless Chrome that cost hours each.
-2. **`DECISIONS.md` is D1–D36.** D36 is this wave.
-3. **The workflow is 21 steps** and all 21 are green on `687b9e8`.
-4. **The script tail is four scripts** and is declared in
-   `page_shell.SCRIPT_TAIL`. `verify_page_shell.SCRIPT_TAIL` restates it
-   independently on purpose; `bake_templates.LEGACY_TAIL` is how the 17
-   hand-written pages lose a script the other 446 have already lost.
+   about driving headless Chrome that cost hours each. 4.11 added to it.
+2. **`DECISIONS.md` is D1–D37.** D37 is Wave 4.11.
+3. **The workflow is 21 steps** and all 21 are green on `256914c`.
+4. **The script tail is two scripts** — `nav.js` and `main.js` — and the count
+   is the wrong thing to remember: **cite `page_shell.SCRIPT_TAIL`**, which is
+   where it is declared. It was seven until 2026-08-11 and four until
+   2026-08-12. `verify_page_shell.SCRIPT_TAIL` restates it independently on
+   purpose; `bake_templates.LEGACY_TAIL` is how the 17 hand-written pages lose
+   a script the other 446 have already lost.
 5. **`render_nav.py` is the gate for anything touching the nav**, and
    `compare_trees.py` cannot replace it: the mobile panel exists in no file.
+   It now also records the panel's tab order, which is the only field that
+   could see 4.11's first commit.
 6. **The roadmap is reliable on direction and unreliable on detail.** Wave 2
-   found five wrong numbers, Phase 7 three, this wave three more plus one
-   nobody had measured. Re-derive, and say so when an item is wrong.
+   found five wrong numbers, Phase 7 three, 4.10 three more plus one nobody had
+   measured, and 4.11 three — **two of those three were in 4.10's own writing**,
+   which is the case for re-deriving even a number this file wrote yesterday.
 
 ## Open, not started
 
@@ -1682,12 +1788,6 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
 - **Wave 3.2 and 3.3** — repoint the **113** board literals in 11 scripts at
   `boards.json`, one generator per commit with output proved unmoved, then key
   everything on `(board, spec)`. **3.4 is blocked** until the GSC re-measure.
-- **Remove `browser.min.js` and `breakpoints.min.js`**, 2,141 B gzipped per
-  page. Zero and one call sites respectively; `REVIEW-NOTES.md` has the
-  measurement. It is a tail change, so it is the same four-file edit 4.10 made.
-- **`inert` on the closed `#navPanel`**, dropping `aria-hidden`. A real
-  conformance failure, pre-dating 4.10, deliberately not folded into it —
-  `REVIEW-NOTES.md`.
 - **Wave 5.1–5.4** — content and editorial, each needing explicit approval.
 - **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
   PH06 section 3. `render_nav.py` needs Chrome, so it stays out.
