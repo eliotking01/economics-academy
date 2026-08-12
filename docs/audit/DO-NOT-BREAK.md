@@ -760,6 +760,86 @@ an empty div where the header was. They are unpublished frozen records of the
 flashcards work. Baking them would create copies of the nav that check 9 does
 not cover, which is the drift this phase removed. Left alone deliberately.
 
+## The navigation, without jQuery (added by Wave 4.10, 2026-08-11)
+
+**`page_shell.SCRIPT_TAIL` is the one declaration of the script tail, and
+`verify_page_shell.py` check 2 deliberately does NOT import it.** Check 2
+restates the same four scripts as its own literal, so changing the tail has to
+change two files in the same commit — the `build_past_paper_taxonomy.py`
+`EXPECTED` pattern. A check that reads the value it is checking agrees with any
+value, including a wrong one. Do not "remove the duplication".
+
+**Check 2 also asserts that 0 of 463 pages load jquery, dropotron, util.js or
+inject-templates.js, and that assertion is not redundant.** The ordering test
+beside it filters the page's scripts to tail members, and those four are not
+members any more — so a page that still loaded jQuery would pass the ordering
+test in silence. Removing anything from `SCRIPT_TAIL` means adding it to
+`REMOVED_SCRIPTS` here and to `bake_templates.LEGACY_TAIL`, or the 17
+hand-written pages keep loading it after the other 446 have stopped.
+
+**`scripts/bake_templates.py` owns the script tail on the 17 pages no generator
+writes, as well as the header and footer.** Same argument as Wave 2 Phase 7:
+without it `/past-papers/edexcel-b/` and `/past-papers/ocr/` — 291 clicks and
+21,131 impressions between them, PH03-049 — would have gone on requesting a
+jQuery that is no longer in the repo.
+
+**The desktop dropdowns are CSS, and `js/components/nav.js` is an enhancement
+on top of them, never a dependency.** `:hover` and `:focus-within` open the
+menus; `nav.js` adds `.nav-open` for touch and handles Escape. That ordering is
+what makes the dropdowns work with scripting off — which they never did under
+dropotron — so do not move the opening logic into the script.
+
+**`transform: translateX(-50%)` centres the dropdown, never `margin-left:
+-50%`.** A percentage margin resolves against the containing block — the `<li>`
+— not against the panel's own width, and the panel sat 32px right of its item.
+Because the open/close lift also uses `transform`, every transform in that
+block names both axes; changing one and not the other un-centres the menu.
+
+**The invisible `:after` strip above each level-0 dropdown is load-bearing.**
+It bridges the gap between the nav item and the panel. Without it the pointer
+leaves both elements on the way down and the menu closes; dropotron papered
+over the same problem with a 250 ms hide delay. Shrink the gap and the strip
+together, or not at all.
+
+**The chevrons are drawn in CSS on purpose.** `css/fontawesome-all.min.css` and
+`webfonts/fa-solid-900.woff2` are subsets, and a subset font renders a missing
+glyph as nothing at all, with no error — the failure mode recorded above from
+Wave 4.2. A CSS chevron needs no glyph and no re-run of the subsetter. It is
+selected with `:has()`; where that is unsupported the chevron is simply absent,
+which is the correct degradation.
+
+**The mobile panel's `current` class is copied off the baked
+`<li class="current">`, not re-derived from the URL.** `PAGE_MAP` in
+`page_shell.py` decides which nav item is current, at build time; `nav.js`
+reads that decision rather than making a second one. A URL-matching rule in the
+script would be a second source of truth that can disagree with the first on
+exactly the pages where it matters. It reads the **direct parent only** — the
+current `<li>` contains its whole submenu, so `closest()` marks eleven links
+instead of one.
+
+**`docs/audit/scripts/harness/render_nav.py` is what covers behaviour, and
+`compare_trees.py` cannot replace it.** The ten assertions read committed bytes;
+the mobile `#navPanel` exists in no file, being built from `#nav` at
+DOMContentLoaded. All ten assertions pass on a site whose menu no longer opens.
+Four things it records that were learned the hard way and must not be undone:
+
+- `subprocess.run()` cannot be used to drive Chrome. It writes the DOM and does
+  not exit — its updater and crash-handler children inherit the stdout pipe —
+  and it hangs on `data:text/html,<h1>hi</h1>` as readily as on a real page,
+  intermittently. Poll a file, then kill the process group, swallowing
+  `PermissionError` as well as `ProcessLookupError`.
+- A single-threaded `http.server` deadlocks against Chrome's parallel
+  connections and every page times out.
+- Chrome's animation clock does not advance under `--virtual-time-budget`, so
+  `getComputedStyle` during a transition returns the FROM value forever, and
+  **no `layout-shift` entry is ever generated**. A CLS probe run that way
+  reported 0.0000 for a deliberate 200px shift. The nav probe disables
+  transitions before interacting; anything measuring CLS must abandon virtual
+  time and POST its result back to the server instead.
+- dropotron answered only the FIRST synthetic hover of a page. A loop over the
+  three openers reported "no dropdown" for two of them and would have passed by
+  being blind rather than by being right.
+
 ---
 
 # FINALISED — Phase 11, 2026-08-09

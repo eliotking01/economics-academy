@@ -69,12 +69,13 @@ slice of each page's content plus its lifted metadata — **do not hand-edit a
 notes page, edit the slice and re-run**. `scripts/extract_notes_pages.py` is the
 one-off that created them and defaults to a dry run.
 
-**The header and footer are baked into all 463 pages at build time.** They are
-no longer fetched by `js/components/inject-templates.js`; that file now only
-builds the mobile nav panel and starts dropotron, and keeps its name on purpose
-(see the comment at the top of it). `templates/header.html` and
-`templates/footer.html` are still the single source of truth and are still
-published. **Editing the nav is now a rebuild, not a one-file edit:**
+**The header and footer are baked into all 463 pages at build time.** Nothing
+is fetched at page load. `js/components/nav.js` builds the mobile `#navPanel`
+and `#titleBar` from `#nav` and adds the two things CSS cannot do for the
+desktop dropdowns; the dropdowns themselves are CSS, so they work with
+scripting off. `templates/header.html` and `templates/footer.html` are still
+the single source of truth and are still published. **Editing the nav is a
+rebuild, not a one-file edit:**
 
 ```
 # edit templates/header.html, then:
@@ -84,6 +85,11 @@ python3 scripts/build_notes_pages.py && python3 scripts/build_past_paper_questio
 python3 scripts/bake_templates.py --apply    # the other 17; dry run without --apply
 python3 scripts/build_sitemap.py             # lastmod moved on every page you changed
 ```
+
+`bake_templates.py` also owns the **script tail** on those 17, from Wave 4.10.
+The other 446 take it from `page_shell.SCRIPT_TAIL`, which is the one place the
+tail is declared; `verify_page_shell.py` check 2 restates it as an independent
+literal, so changing the tail has to change two files in the same commit.
 
 `verify_page_shell.py` **check 9** is what makes the 463 copies safe: it lifts
 the block back out of every page and requires it to equal the template byte for
@@ -154,7 +160,7 @@ revision-notes/{edexcel-theme-1..4,aqa-a2-micro,aqa-a2-macro}/  166 topic pages,
 revision-notes/{macro,micro}economics-diagrams.html             diagram galleries
 revision-notes/macro-application/                               real-world data page
 past-papers/{aqa,edexcel,edexcel-b,ocr}/{a-level,as-level}/paper-N/   281 PDFs, index.html per board
-templates/{header,footer}.html                                  injected at runtime
+templates/{header,footer}.html                                  baked in at build time
 css/main.css                                                    site-wide
 css/pages/<page>.css                                            one per page
 js/components/, js/data/                                        hand-written; the rest is vendor
@@ -191,7 +197,7 @@ then have to stay in the repo permanently. Evaluated for the glossary on
 Nesting has one incidental benefit: the nav highlight is chosen by path prefix,
 so a page under `/revision-notes/` needs no new rule. `/flashcards/` needed its
 own line for that reason. The rule list is `PAGE_MAP` in `scripts/page_shell.py`
-— it moved there from `inject-templates.js` in Wave 2 Phase 7, when the
+— it moved there from the nav script in Wave 2 Phase 7, when the
 `class="current"` started being written at build time.
 
 ## How a page is assembled
@@ -204,9 +210,10 @@ Everything else is duplicated per file.
 
 A new page needs: the gtag block, `<html lang="en-GB">`, title, meta
 description, canonical, OG and Twitter cards, JSON-LD, the favicon/manifest set,
-`/css/main.css`, its own `/css/pages/<page>.css`, the seven-script tail
-(jquery, dropotron, inject-templates, browser, breakpoints, util, main) and the
-baked header and footer blocks. Add it to `sitemap.xml`. If it is hand-written
+`/css/main.css`, its own `/css/pages/<page>.css`, the four-script tail
+(`nav.js`, `browser.min.js`, `breakpoints.min.js`, `main.js` — cite
+`page_shell.SCRIPT_TAIL`, not this list) and the baked header and footer
+blocks. Add it to `sitemap.xml`. If it is hand-written
 rather than generated, add it to `bake_templates.py`'s `EXPECTED` count in the
 same commit, or that script refuses to run. Topic pages carry two JSON-LD blocks — `LearningResource` and
 `BreadcrumbList` — and load MathJax 3 from jsDelivr only if they use `\( … \)`.

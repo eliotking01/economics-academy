@@ -763,3 +763,74 @@ used **none** — both were already vanilla. The file shrank from 209 lines to
 121 and still needs jQuery. What 4.10 actually inherits is better than the
 finding promised: one file that is nothing but nav plumbing, with no async
 injection ordering to preserve.
+
+---
+
+## 2026-08-11 · Wave 4.10
+
+### D36 — jQuery, dropotron and util.js are gone; the desktop dropdowns are CSS; the nav bar is redesigned
+
+Eliot, 2026-08-11, in two instructions. First, on the dropdown replacement:
+**"I am happy to give you creative freedom here. I am not that attached to the
+current look of the desktop dropdowns so I give you full creative licence to
+improve the UX of these, just ensure it matches the brand."** Then, after the
+removal landed: **"You also have licence to improve the nav bar so that changes
+encompass the entire nav bar, not just the dropdowns."**
+
+**What left, measured before deleting anything:** `jquery.min.js` (168,019 B,
+40,276 gzipped), `jquery.dropotron.min.js` (10,964 / 2,368) and `util.js`
+(12,942 / 3,247), on all 463 pages. `inject-templates.js` became
+`js/components/nav.js` — the rename D35 declined in Phase 7 on the ground that
+it edited 463 pages to gain a filename, and which cost nothing here because the
+script tail was being rewritten on all 463 regardless. **Net −43,265 bytes
+gzipped per page**, after the CSS the replacement added.
+
+**PH08-043 was wrong on detail in a second way, beyond the one D35 recorded.**
+It lists `util.js` as a jQuery consumer with 22 calls, which is true and
+misleading: of its four exports only `navList()` had a caller anywhere on the
+site. `panel()`, `placeholder()` and `$.prioritize` had **zero**, so 349 of its
+490 lines were dead and the live part is about 30 lines, now inlined in
+`nav.js`. Eliot chose deleting the file over porting it.
+
+**dropotron was duplicating the navigation into every page.** Rendered and
+counted: 11 `.dropotron` menus built at page load, and the document's `<a>`
+count fell from 118 to 95 with no link lost — 23 duplicated anchors and 23
+duplicated list items, on every one of 463 pages, in front of every crawler.
+Nothing had recorded this and nothing was looking for it.
+
+**The dropdowns are CSS now, and therefore work with scripting off**, which
+they never did. The submenus were always in `templates/header.html`; no markup
+changed. `nav.js` adds only what CSS cannot — tap-to-open at a width that gets
+the desktop nav, and Escape — and adds it as a class on top of `:hover` and
+`:focus-within`, so switching the file off leaves working dropdowns.
+
+**The redesign is presentation only.** No label, href or structure moved;
+`templates/header.html` is untouched and check 9 is unmoved. Upright instead of
+italic; one accent language for hover, focus and open where there had been a
+grey box and a red pill sharing nothing; a chevron on the three items that open
+a submenu; a light dropdown card instead of the theme's near-black slab; 44px
+rows instead of 28. **The one non-cosmetic part: the mobile panel had no "you
+are here" indicator at all** — the desktop bar has had one since the beginning
+— and `nav.js` now copies it off the baked `<li class="current">` rather than
+re-deriving it, so the two navigations cannot disagree.
+
+**What it cost:** `css/main.css` 55,270 → 63,450 bytes, 11,477 → 14,323
+gzipped. **+2,846 B per page, and CSS is render-blocking where the script tail
+was not.** That is the one number moving the wrong way and it is 6% of what the
+wave removed.
+
+**Three assertions of `compare_trees.py` fail, and that is the intended
+report.** 1, 4 and 8 — the same three D35 predicted for the rename, now also
+covering three deletions. Each was decomposed rather than waved through:
+assertion 4's 2,315 losses are exactly 463 × 4 removed `src`s plus 463
+`<script>` counts down by exactly 3, with **zero** unexpected lines; assertion
+8's 474 differing files are **463 HTML differing only in `<script src>` lines**
+plus `css/main.css`, `js/main.js` and nine unpublished scripts.
+
+**Two verifiers were taught, not relaxed.** `verify_page_shell` check 2 keeps
+its independent literal and gained a second assertion — 0 of 463 pages load any
+removed script — because the ordering test filters to tail members and a page
+that kept jQuery would have passed it. `verify_markup_integrity --strict`
+skips `<script src>` tags, on the ground that check 2 makes a strictly stronger
+statement about the same bytes; it was proved still able to fail by deleting
+one `<a>` from inside a notes body.

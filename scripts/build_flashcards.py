@@ -386,14 +386,7 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
     </div>
 
     <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/components/inject-templates.js"></script>
-    <script src="/js/browser.min.js"></script>
-    <script src="/js/breakpoints.min.js"></script>
-    <script src="/js/util.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/components/flashcards.js" defer></script>
+{shell.script_tail(("/js/components/flashcards.js",))}
   </body>
 </html>
 """

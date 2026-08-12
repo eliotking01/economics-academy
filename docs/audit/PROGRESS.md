@@ -1496,144 +1496,209 @@ check 9 does not cover.
 
 ---
 
-# HANDOVER — 2026-08-11. WAVE 2 IS COMPLETE. NEXT UP IS 4.10
+### Wave 4.10 done, 2026-08-11. jQuery and dropotron are gone
 
-**Waves 0, 1, 2, 4 are complete, and Wave 3.1 is done.** Everything is merged
-to `main`, pushed and live. Wave 2 Phase 7 merged as `a8d8510` on 2026-08-11,
-six commits from `wave2-phase7`; `verify` and `pages build and deployment` both
-green on it, and the live site was checked afterwards — 4 pages across 4 types
-serve the baked nav with no placeholder and the right item highlighted.
+**188 KB of source and 45,891 gzipped bytes per page, removed from all 463.**
+Four commits.
+
+| Commit | What |
+| --- | --- |
+| 1/4 | `render_nav.py` — the nav rendered in a browser and compared. No site file |
+| 2/4 | the script tail declared once, in `page_shell.SCRIPT_TAIL`. No output moved |
+| 3/4 | jQuery, dropotron and `util.js` deleted; `inject-templates.js` → `nav.js` |
+| 4/4 | the nav bar redesigned — presentation only, no page rebuilt |
+
+```
+js/jquery.min.js             168,019 B   40,276 gzipped   deleted
+js/jquery.dropotron.min.js    10,964 B    2,368           deleted
+js/util.js                    12,942 B    3,247           deleted
+js/components/nav.js                      3,197           new
+css/main.css                  +8,180 B   +2,846           the CSS replacement
+                                        ---------
+                            NET per page  -43,265 B gzipped
+```
+
+**Three more numbers in the roadmap were wrong.** The pattern holds.
+
+1. **`inject-templates.js` was 141 lines, not 121.** 121 is what is left after
+   its own 20-line header comment. Both D35 and the brief repeated it.
+2. **PH08-043 lists `util.js` as a jQuery consumer with 22 calls**, which is
+   true and misleading. Of its four exports only `navList()` had a caller
+   anywhere on the site; `panel()`, `placeholder()` and `$.prioritize` had
+   **zero**. 349 of 490 lines were dead, and the live part is about 30 lines.
+   Deleting the file was cheaper than porting it, and Eliot chose that.
+3. **`breakpoints.min.js` has one call site and `browser.min.js` has zero.**
+   Both are jQuery-free, so neither was in 4.10's scope; both are dead weight
+   (2,141 B gzipped per page) and are logged in `REVIEW-NOTES.md`.
+
+**And one nobody had measured at all: dropotron was duplicating the navigation
+into every page.** It built 11 `.dropotron` menus at page load, and the
+document's `<a>` count falls 118 → 95 with no link lost — **23 duplicated
+anchors and 23 duplicated list items on every one of 463 pages**, in front of
+every crawler. It is the most useful thing the render harness found and no
+bytes-based check could have seen it.
+
+**The dropdowns are CSS now, and work with scripting off.** The submenus were
+always in `templates/header.html`; nothing in the markup changed. `nav.js` adds
+only tap-to-open and Escape, as a class on top of `:hover` and
+`:focus-within`, so switching the file off leaves working dropdowns.
+
+**What the assertions said, and why three of them failing is the report.**
+Assertions 1, 4 and 8 fail — the three D35 predicted for the rename, now also
+carrying three deletions. Each was decomposed rather than asserted benign:
+
+- **4**: 2,315 losses = 463 × 4 removed `src`s + 463 `<script>` counts down by
+  exactly 3. **Zero** unexpected lines.
+- **8**: 474 files differ = **463 HTML differing only in `<script src>` lines**,
+  plus `css/main.css`, `js/main.js` and nine unpublished scripts.
+- **1**: 4 assets removed, 1 added. The intended swap.
+
+**Rendered, not only asserted.** 10 pages × 2 viewports plus the three
+dropdowns, `4421f26`-style: `nav`, `panel`, `navCurrent`, `navDisplay`,
+`titleBar`, `panelAttrs`, `skipLink`, `footer` **and `interact`** identical on
+23 of 23 captures; only `counts` differs, by exactly −23 `<a>`, −23 `<li>`, −3
+`<script>` everywhere. `interact` covers what no assertion can: each dropdown
+opened and its visible links recorded, and on mobile the toggle, Escape with
+focus returning to the button, click-outside and swipe-left, with the panel's
+computed transform moving −275px ↔ 0 on every cycle. The comparison was proved
+able to fail by retyping one nav label, and three consecutive captures of
+`main` are byte-identical.
+
+**Four measurement bugs, all found by insisting a zero can be non-zero.**
+
+- **The CLS probe reported 0.0000 for a deliberate 200px layout shift.** Chrome's
+  animation clock does not advance under `--virtual-time-budget`, so no
+  `layout-shift` entry is ever generated — and without virtual time the probe's
+  result lands after `--dump-dom` has dumped. Rebuilt to POST back to the
+  server; it reports 0.1444 for the same shift, which is what makes the real
+  zeros worth anything.
+- **`getComputedStyle` reported the panel at `translateX(-275px)` open and shut
+  alike**, and `getBoundingClientRect().left` reported −275 in both states, for
+  the same reason. The probe disables transitions before interacting.
+- **dropotron answers only the FIRST synthetic hover of a page.** A loop over
+  the three openers reported "no dropdown" for two of them; it would have passed
+  by being blind.
+- **`subprocess.run()` cannot drive Chrome.** It writes the DOM and does not
+  exit, because its updater children inherit the stdout pipe — intermittently,
+  after four successful captures.
+
+**What moved, and what did not.** Script bytes per page 205.3 KB → 22.3 KB.
+Under a Slow 4G transfer model (1.6 Mbit/s, 150 ms RTT, applied identically to
+both trees) DOMContentLoaded falls **693–836 ms** on all four page types at both
+viewports. **On localhost nothing moves at all** — FCP, DCL and load all inside
+run-to-run noise, because the scripts sit at the end of `<body>` and there is no
+wire to save. **CLS was 0.0000 before and after**: Phase 7 had already taken it
+there. **FCP is about 20 ms worse**, entirely because `css/main.css` grew; the
++68 ms first seen was the 8 KB chunk quantisation of the throttle, and 1 KB
+chunks give +20 ms against the 18.7 ms the byte growth predicts.
+
+**Two verifiers were taught rather than relaxed.** `verify_page_shell` check 2
+keeps its independent literal and gained a second assertion — 0 of 463 pages
+load a removed script — because the ordering test filters to tail members and a
+page that kept jQuery would have sailed through it. `verify_markup_integrity
+--strict` reported 895 true losses and now skips `<script src>` tags, on the
+ground that check 2 makes a strictly stronger statement about the same bytes;
+proved still able to fail by deleting one `<a>` from inside a notes body.
+
+**Check 2 also caught the one incidental change.** `index.html` put its two
+review scripts between `util.js` and `main.js`; `util.js` is gone and the tail
+is re-emitted before a page's own scripts, so they follow `main.js` now.
+`EXPECTED_INTERLEAVED` went `["index.html"]` → `[]`, declared in the same
+commit.
+
+**The redesign, commit 4/4.** Eliot: *"You also have licence to improve the nav
+bar so that changes encompass the entire nav bar, not just the dropdowns."*
+Presentation only — no label, href or structure moved, `templates/header.html`
+untouched, check 9 unmoved, no page rebuilt. Upright rather than italic; one
+accent language for hover, focus and open where a grey box and a red pill
+shared nothing; a chevron on the three items that open a submenu, drawn in CSS
+because the Font Awesome subset would otherwise need re-running; a light
+dropdown card instead of the theme's near-black slab; 44px rows instead of 28.
+The rendered comparison against 3/4 shows **`panel` as the only field that
+differs, on 23 of 23, and the difference is one link gaining `current`** — the
+right one every time.
+
+**The one genuinely new behaviour: the mobile panel now says where you are.**
+The desktop bar has had a highlight since the beginning and the phone had
+nothing. `nav.js` copies the class off the baked `<li class="current">` rather
+than re-deriving it from the URL, so the two navigations cannot disagree.
+
+**The sitemap did not need regenerating, and that is luck rather than a
+property.** Every `lastmod` is a date, Phase 7 landed on 2026-08-11 and so did
+this; `build_sitemap.py --check` exits 0 with 0 `WOULD CHANGE`. Work continuing
+past midnight will need it.
+
+---
+
+# HANDOVER — 2026-08-11. WAVE 4.10 IS COMPLETE AND UNMERGED
+
+**Waves 0, 1, 2, 4 are complete, Wave 3.1 is done, and Wave 4.10 is done on the
+branch `wave4-10`** — four commits off `58281ce`, **not pushed and not merged**.
+Everything before it is merged and live.
+
+```
+687b9e8 wave4.10(4/n): redesign the nav bar, not only the dropdowns
+198c6b0 wave4.10(3/n): jQuery, dropotron and util.js leave all 463 pages
+488769a wave4.10(2/n): the script tail is declared once. No output moves
+70e00cd wave4.10(1/n): render the nav in a browser, because the assertions cannot
+```
 
 ## What a fresh session needs to know
 
-1. **Read this file's IMPLEMENTATION section, then `DO-NOT-BREAK.md`.** The
-   register gained a whole "build step" block on 2026-08-11 — what
-   `page_shell.py` lifts and why none of it is tidiness waiting to happen.
-2. **`DECISIONS.md` is D1–D34.** D33 fixes the migration criterion; D34 puts the
-   9 root pages permanently out of scope.
-3. **The workflow is 21 steps**, two new since Wave 4: `verify_page_shell.py`
-   and `verify_boards.py`. `verify_page_shell.py` now has **9** checks; check 9
-   is what keeps 463 copies of the nav identical to `templates/header.html`.
-4. **The `<head>` exists once**, in `scripts/page_shell.py`, for 446 of 463
-   pages. All five generators import it. **17 pages are not generated**, not 9 —
-   the "454" was `463 − 9` and was never measured. See D35.
-5. **`compare_trees.py` is the gate for any further migration.** Ten assertions,
-   32 self-test cases. It still lives in `docs/audit/scripts/harness/`; PH06
-   says it moves to `scripts/` and joins the workflow, and that has not been
-   done.
+1. **Read `DO-NOT-BREAK.md` first.** It gained a whole "The navigation, without
+   jQuery" block on 2026-08-11 — what `nav.js` may and may not take over from
+   CSS, why check 2 does not import the constant it checks, and four things
+   about driving headless Chrome that cost hours each.
+2. **`DECISIONS.md` is D1–D36.** D36 is this wave.
+3. **The workflow is 21 steps** and all 21 are green on `687b9e8`.
+4. **The script tail is four scripts** and is declared in
+   `page_shell.SCRIPT_TAIL`. `verify_page_shell.SCRIPT_TAIL` restates it
+   independently on purpose; `bake_templates.LEGACY_TAIL` is how the 17
+   hand-written pages lose a script the other 446 have already lost.
+5. **`render_nav.py` is the gate for anything touching the nav**, and
+   `compare_trees.py` cannot replace it: the mobile panel exists in no file.
 6. **The roadmap is reliable on direction and unreliable on detail.** Wave 2
-   found five wrong numbers, one of them mine; Phase 7 found three more, and
-   **two of the three were the two things its own brief said to check first**.
-   Measure first, and say so when an item is wrong on contact.
-7. **Editing the nav is now a rebuild.** The command sequence is in CLAUDE.md.
-   Running half of it leaves two different navs on the site and check 9 fails.
-
-## Wave 2 state
-
-| Phase | State |
-| --- | --- |
-| 0 harness | **done** |
-| 1 `verify_page_shell.py` | **done, in CI** |
-| 2 `page_shell.py`, `boards.json` | **done** |
-| 3 pilot, 7 notes hubs | **done** |
-| 5 166 notes topic pages | **done, all six sub-phases** |
-| 6 four generators absorbed | **done** |
-| 4 root pages | **declined permanently, D34** |
-| 7 bake header/footer | **done, 6 commits, D35** |
-
-## Phase 7, and why it is worth doing
-
-Baking `templates/header.html` and `footer.html` into the pages at build time,
-instead of fetching them at runtime with `inject-templates.js`.
-
-- **P3 ruled it proceeds on its own merits**, not as a link-equity fix —
-  PH03-049 established it is not one.
-- **It unblocks 4.10**, the largest performance win left: jQuery + dropotron are
-  **175 KB and 325–500 ms of render-blocking on every page**, and
-  `inject-templates.js` is one of jQuery's three consumers. Removing it first
-  turns a high-risk rewrite into a moderate one.
-- **It should also close the last CLS residual.** Wave 4.4 took all four page
-  types to 0.009 / 0.015 / 0.021 and identified the remainder as `section#main`
-  moving when the header is injected. Nothing in Wave 4 could touch it.
-
-**The trade to make knowingly:** editing the nav becomes a rebuild rather than a
-1-file edit. D18 accepted that in principle.
-
-**Two things to check before starting.** 454 pages are generated and would pick
-the baked header up on rebuild; the 9 root pages are not, and would need it
-written in. And `verify_page_shell.py` check 2 pins the seven-script tail — when
-`inject-templates.js` leaves, that constant changes and the check is what proves
-every page went with it.
-
-> **Both turned out to be wrong, and both were found by measuring first.** It is
-> 446 generated and **17** not — the 5 `past-papers/` hubs and the 3
-> `revision-notes/` non-topic pages were never counted. And
-> `inject-templates.js` did not leave: its fetch code used zero jQuery, so the
-> file shrank rather than disappearing, check 2 is unchanged, and the new
-> check 9 is what proves the phase reached all 463. See below.
+   found five wrong numbers, Phase 7 three, this wave three more plus one
+   nobody had measured. Re-derive, and say so when an item is wrong.
 
 ## Open, not started
 
 **Runnable now**
 
-- **4.10 — jQuery + dropotron removal.** No longer blocked. Read D35 first:
-  **PH08-043 is wrong on detail** and planning from it as written will mislead.
-  Removing the runtime fetch removed no jQuery consumer, because the fetch was
-  already vanilla. What 4.10 inherits is `js/components/inject-templates.js` at
-  121 lines, all of it nav plumbing — `$("#nav").navList()` from `util.js`, the
-  dropotron init, and the mobile panel's handlers — with no async injection
-  ordering to preserve. The rename to `nav.js` is declined until this wave and
-  is free inside it, since the script tail is being rewritten anyway.
 - **Wave 3.2 and 3.3** — repoint the **113** board literals in 11 scripts at
   `boards.json`, one generator per commit with output proved unmoved, then key
   everything on `(board, spec)`. **3.4 is blocked** until the GSC re-measure.
-- **Wave 5.1–5.4** — content and editorial, each needing explicit approval every
-  time. Note the 5 SVGs with no ground-truth PNG.
+- **Remove `browser.min.js` and `breakpoints.min.js`**, 2,141 B gzipped per
+  page. Zero and one call sites respectively; `REVIEW-NOTES.md` has the
+  measurement. It is a tail change, so it is the same four-file edit 4.10 made.
+- **`inert` on the closed `#navPanel`**, dropping `aria-hidden`. A real
+  conformance failure, pre-dating 4.10, deliberately not folded into it —
+  `REVIEW-NOTES.md`.
+- **Wave 5.1–5.4** — content and editorial, each needing explicit approval.
 - **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
-  PH06 section 3.
+  PH06 section 3. `render_nav.py` needs Chrome, so it stays out.
 
-**Deliberate normalisations now cheap, each its own commit**
+**Deliberate normalisations, each its own commit**
 
-All are 1 edit for 446 pages now — plus 17 hand-written ones — and each needs
-its own harness run:
 `aria-label="Breadcrumb"` (341), `<main id="main">` keeping the id (462), the
-three MathJax config variants, the two preconnect lineages, the decorative
-comments the shell currently lifts. **`loading="lazy"` is NOT on this list** —
-see the correction above.
+three MathJax config variants (89/19/18 — the 19 drop `skipHtmlTags`, so it is
+not cosmetic), the two preconnect lineages (190 after `<title>`, 273 before).
 
 **Decisions for Eliot, not tasks**
 
 - **`logo/` and `old-logos-archive/`** — 31 tracked files, published, 0
   references, 0 GSC rows. UNDECIDED since 2026-08-09.
-- **The 10 unreferenced diagrams**, 608 KB, published and referenced by nothing.
-- **PH06-031's three malformed notes pages.** All three are now migrated and
-  none is fixed; the exclusion from D18 stands, and fixing them means editing
-  inside prose regions.
+- **The 10 unreferenced diagrams**, 608 KB.
+- **PH06-031's three malformed notes pages.**
 
 **Blocked until ≈2026-09-22, the day-45 GSC re-measure**
 
-- **4.7, 4.8 and Wave 3.4**, and PH05-019/020/021 and PH03-049 step 2.
+4.7, 4.8, Wave 3.4, PH05-019/020/021 and PH03-049 step 2.
 
-## The traps this session hit
+## One stale line found in passing, not this wave's to fix
 
-- **A selftest that could never pass.** `L1 = 0/190` was my own off-by-two: the
-  captured `<head>` ends with the two spaces indenting `</head>` and the
-  comparison stripped only newlines. It produced a confident, wrong conclusion
-  in a written report. **A measurement that returns exactly 0 deserves one check
-  that it can ever return anything else.**
-- **Read the diff, not just the harness.** Two of my own bugs — a
-  trailing-whitespace line and a doubled blank line — passed all ten assertions,
-  because they are whitespace and the assertions are deliberately blind to it.
-- **The test suite caught its own fixture drift.** `a1-source-dir-published`
-  used `notes-data/` as its example of an *un*excluded directory, and Phase 3
-  legitimately excluded it. The paired case expecting the opposite result is
-  what made it visible.
-- **`.git` is a FILE in a linked worktree**, not a directory.
-- **A stale `.git/index.lock`** with no git process running blocked a commit for
-  70 minutes' worth of confusion.
-
-## Dated dependency — ≈2026-09-22
-
-Unchanged. PH05-019, PH05-020, PH05-021 and PH03-049 step 2 cannot be honestly
-concluded before the day-45 GSC re-measure, and Wave 3.4's relabelling must not
-land before it.
+`DO-NOT-BREAK.md`'s `verify_liquid.py` note says the script "deliberately
+fails" if it has 0 files to check. `79f75de` moved the last published markdown
+to `raw-notes/`, so it now checks 0 files, exits 0, and prints a justification
+naming `verify_published_surface.py` as what makes that a real pass. The
+script is right and the register's paragraph is stale.
