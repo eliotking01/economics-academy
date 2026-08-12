@@ -1081,3 +1081,53 @@ the correct place for that list, and it is deliberate.
 **If AQA AS ever does arrive**, the work is: add its data directory, extend the
 record with whatever shape is right *then*, and repoint those two scripts —
 about half a day, and no worse for having waited.
+
+### D41 — The three root `favicon-{16,32,48}` PNGs are deleted · **closes the last item D38 left open**
+
+Eliot, 2026-08-12: **"Delete them."** D38 found them while closing the logo and
+diagram questions and deliberately did not sweep them up, on the grounds that
+"probably dead" deserved its own answer.
+
+**They are not probably dead, they are provably redundant, and the proof is
+one nobody had done.** `favicon.ico` — linked from all 463 pages — is 3,971
+bytes and **bundles three images inside it**, at exactly the three sizes in
+question:
+
+```
+                inside favicon.ico      the loose PNG
+    16x16              647 bytes            657 bytes
+    32x32            1,301 bytes          1,316 bytes
+    48x48            1,969 bytes          1,975 bytes
+```
+
+They are the same icons, packaged twice: once in the `.ico` every page requests,
+once loose where nothing does. That is a stronger statement than "unreferenced",
+and it is the one D38's diagram case says to look for — **ask what depends on a
+file, not what links to it.** Here nothing depends on them either, because the
+thing that would need them already contains them.
+
+**Evidence, re-derived before deleting.** 0 references from any file in the
+repo, published or not, other than three audit documents discussing them. 0 rows
+in any of the 8 `seo/gsc-exports/` CSVs. Absent from `site.webmanifest`, which
+names only the two `android-chrome` icons. Absent from every sitemap. Browsers
+probe `/favicon.ico` by convention and never guess at `/favicon-32x32.png`.
+3,948 bytes.
+
+**This removes three published URLs**, which is why it is a decision and why it
+is not in Wave 3.2's branch. Only the third such removal in the audit, after
+D12's specification PDFs and D38's files. Both prior cases are the precedent:
+the blobs stay in git history, so `git revert` restores them.
+
+**Checked afterwards rather than assumed:** 1,908 root-absolute asset references
+across the published HTML, **0** now pointing at a file that does not exist —
+and that check was proved able to fail by deleting `favicon.ico` itself, which
+took it to 1 and named the URL. `verify_links.py`, `verify_published_surface.py`,
+`verify_html.py` and `asset_census.py 1 4` all still pass, and
+`build_sitemap.py --check` reports 0 `WOULD CHANGE`, correctly: the three were
+never in a sitemap.
+
+**Kept, and not to be re-proposed:** `favicon.ico`, `apple-touch-icon.png`,
+`android-chrome-192x192.png`, `android-chrome-512x512.png` and
+`site.webmanifest`. All five are referenced, and
+`android-chrome-512x512.png` is additionally D29's target for
+`EducationalOrganization.logo`.
