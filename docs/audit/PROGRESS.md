@@ -1962,10 +1962,10 @@ Wave 2 and is still open. PH06-027.
   four kept**: `comparative-advantage`, `game-theory` and
   `trade-union-{competitive,monopsony}` are the ground truth for live SVGs and
   Wave 5.1 needs them.
-- **The 3 root `favicon-{16,32,48}x{16,32,48}.png`**, 4 KB, referenced by no
-  `<link>` and not in `site.webmanifest`. New, found while closing the two
-  above; almost certainly dead, which is why it needs its own answer rather
-  than being swept into that commit.
+- ~~**The 3 root `favicon-{16,32,48}x{16,32,48}.png`**~~ — **CLOSED 2026-08-12,
+  D41. Deleted**, 3,948 bytes. Not merely unreferenced: `favicon.ico` bundles
+  those exact three sizes inside itself, so they were the same icons packaged
+  twice. Three published URLs removed, on its own branch.
 - **PH06-031's three malformed notes pages.**
 
 **Blocked until ≈2026-09-22, the day-45 GSC re-measure**
