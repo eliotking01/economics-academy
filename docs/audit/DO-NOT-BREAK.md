@@ -797,6 +797,11 @@ in 11 scripts, one generator per commit, each with its output proved unmoved.~~
 > nothing proves they still match what they were transcribed from.
 > **`slugs.dataDir` is also incomplete** — Edexcel A has two past-paper data
 > directories, `edexcel-a` and `edexcel-a-as`, and the record names one.
+> **CLOSED 2026-08-12, D40: it stays that way.** Recording the second means
+> inventing a shape the record does not have, and Eliot judged a second AS-Level
+> board unlikely. The hardcoded triple in `build_past_paper_questions.py:64` and
+> `verify_past_paper_tags.py:44` is the correct home for that list. Do not
+> "fix" it.
 
 ## The baked header and footer (added by Wave 2 Phase 7, 2026-08-11)
 

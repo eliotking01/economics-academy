@@ -1050,3 +1050,34 @@ slugs, per DO-NOT-BREAK.
 consumed by no template — dead before this wave and found by a probe that
 correctly moved nothing. `PINNED` stops all five drifting against the record;
 nothing proves they still match the sources they were transcribed from.
+
+### D40 — `slugs.dataDir` stays as it is; the AS-Level folder is not recorded · **closes the question D39 deferred**
+
+Eliot, 2026-08-12, after the trade was put to him plainly: **"I now believe I am
+unlikely to add AQA AS-Level, so leave it."**
+
+**What was deferred.** `boards-data/boards.json` records one `dataDir` per
+board. Edexcel A actually has two — `past-paper-questions-data/edexcel-a` (24
+papers) and `edexcel-a-as` (16) — because one board offers two qualifications,
+9EC0 and 8EC0, and both have a Paper 1 in the same series, so one directory
+would mean colliding filenames. AQA has one (24). Two scripts type the list of
+three out by hand:
+`build_past_paper_questions.py:64` and `verify_past_paper_tags.py:44`.
+
+**Why it is closed rather than done.** Recording it means inventing a shape the
+record does not have — either a board holding a list of directories, or a
+notion of *qualification* beneath a board. That is design, not transcription,
+and Wave 3.2's entire safety argument was that it transcribed. The only payoff
+was the day a second board gained an AS-Level tier, and Eliot's judgement is
+that day is unlikely to come.
+
+**What that costs, stated so nobody re-derives it as a defect.**
+`slugs.dataDir` is now permanently a field that is recorded, pinned, and
+**wrong for one of the two boards** in the sense that it is incomplete. It is
+read by no code, so nothing acts on it. A future session finding it should read
+this entry rather than "fixing" it: the hardcoded triple in those two scripts is
+the correct place for that list, and it is deliberate.
+
+**If AQA AS ever does arrive**, the work is: add its data directory, extend the
+record with whatever shape is right *then*, and repoint those two scripts —
+about half a day, and no worse for having waited.

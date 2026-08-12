@@ -1730,11 +1730,13 @@ correctly moved nothing: `slugs.questionBank`, `slugs.dataDir`,
 board-level `notesUrl` — copied into `BOARDS` and consumed by no template, dead
 before this wave.
 
-**Deferred by Eliot, not overlooked.** `slugs.dataDir` names one directory where
-two generators walk three, because Edexcel A has `edexcel-a` and
-`edexcel-a-as`. Recording that is a schema extension rather than a
-transcription, so it gets its own piece of work. `questions.json`'s topic keys
-stay bare slugs, per DO-NOT-BREAK.
+**Closed by Eliot, D40, not overlooked.** `slugs.dataDir` names one directory
+where two generators walk three, because Edexcel A has `edexcel-a` and
+`edexcel-a-as`. Recording the second is a schema extension rather than a
+transcription, and its only payoff was a second board gaining an AS-Level tier —
+which Eliot judges unlikely. **It stays as it is, permanently**; the hardcoded
+triple in those two scripts is the right home for that list.
+`questions.json`'s topic keys stay bare slugs, per DO-NOT-BREAK.
 
 **`--family scripts/` is the right harness invocation for this kind of wave.**
 Without it assertion 8 fails on every commit that edits a script, which is every
