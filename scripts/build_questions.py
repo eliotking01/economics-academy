@@ -39,6 +39,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import board_data  # noqa: E402
 # Wave 2 Phase 6, the last of the five. page_shell.py owns the <head>.
 import page_shell as page_shell_mod  # noqa: E402
 DATA_DIR = ROOT / "questions-data"
@@ -60,29 +61,32 @@ SKILL_LABELS = {
     "definition-in-context": "Definition in context",
 }
 
+# All four structures below come from boards-data/boards.json - Wave 3.2,
+# PH09-022. This file held five of them and was PH01-012's largest single count.
 PAST_PAPERS = {
-    "aqa": ("/past-papers/aqa/", "AQA Past Papers"),
-    "edexcel": ("/past-papers/edexcel/", "Edexcel Past Papers"),
+    b["slugs"]["pastPapers"]:
+        (b["papersUrl"], f"{b['names']['short']} Past Papers")
+    for b in board_data.load().values()
 }
-BOARD_LABELS = {"aqa": "AQA", "edexcel": "Edexcel"}
+BOARD_LABELS = {b["slugs"]["pastPapers"]: b["names"]["short"]
+                for b in board_data.load().values()}
 
 # Display order and copy for the hub and the board index pages. Mirrors the
 # order the notes use in templates/header.html.
+#
+# THE ORDER IS THE OUTPUT. BOARD_ORDER below is this list's index, and it sorts
+# the topics on every board index page, so the record's group order reaches
+# published pages directly. board_data.EXPECTED_NOTES_DIRS is what makes
+# changing it a declared act rather than a silent reordering.
+#
+# `practiceQuestions` is the third of Theme 2's three spellings - the HYPHEN
+# form, which this family shares with the flashcards decks and taxonomy.json
+# does not.
 BOARDS = [
-    (
-        "edexcel-theme-1",
-        "Edexcel Theme 1",
-        "Introduction to Markets and Market Failure",
-    ),
-    ("edexcel-theme-2", "Edexcel Theme 2", "The UK Economy - Performance and Policies"),
-    ("edexcel-theme-3", "Edexcel Theme 3", "Business Behaviour and the Labour Market"),
-    ("edexcel-theme-4", "Edexcel Theme 4", "A Global Perspective"),
-    (
-        "aqa-a2-micro",
-        "AQA Microeconomics",
-        "Individuals, Firms, Markets and Market Failure",
-    ),
-    ("aqa-a2-macro", "AQA Macroeconomics", "The National and International Economy"),
+    (group["notesDir"],
+     group["names"]["practiceQuestionsLabel"],
+     group["names"]["practiceQuestions"])
+    for _key, _board, group in board_data.groups()
 ]
 BOARD_ORDER = {d: i for i, (d, _, _) in enumerate(BOARDS)}
 
@@ -105,15 +109,27 @@ HUB_SECTIONS = [
 ]
 
 # Button labels on the hub, matching the wording on revision-notes/index.html.
-HUB_LABELS = {
-    "edexcel-theme-1": "Theme 1: Introduction to Markets and Market Failure",
-    "edexcel-theme-2": "Theme 2: The UK Economy",
-    "edexcel-theme-3": "Theme 3: Business Behaviour and the Labour Market",
-    "edexcel-theme-4": "Theme 4: A Global Perspective",
-    "aqa-a2-micro": "Micro: Individuals, Firms, Markets and Market Failure",
-    "aqa-a2-macro": "Macro: The National and International Economy",
-}
+# Theme 2's is "Theme 2: The UK Economy" - the SHORT form, and the reason
+# boards.json records a group's name five times over rather than once.
+HUB_LABELS = {group["notesDir"]: group["names"]["practiceQuestionsButton"]
+              for _key, _board, group in board_data.groups()}
 BOARD_BLURB = {d: b for d, _, b in BOARDS}
+
+# HUB_SECTIONS is NOT in the record and is not meant to be: which themes are
+# Year 1 and which are Year 2 is a teaching grouping, not board identity, and
+# putting it in boards.json would mean inventing a field rather than recording
+# one. But a board added to the record now reaches four structures on this page
+# automatically and this one not at all, which would drop it off the hub with no
+# error. So the two are reconciled here instead.
+_hub_dirs = [d for _h, gs in HUB_SECTIONS for _label, ds, _cls in gs for d in ds]
+_recorded = [g["notesDir"] for _k, _b, g in board_data.groups()]
+if sorted(_hub_dirs) != sorted(_recorded):
+    sys.exit(
+        f"HUB_SECTIONS lists {sorted(_hub_dirs)} and boards.json records "
+        f"{sorted(_recorded)}. Every board reaches the practice-questions hub "
+        f"through HUB_SECTIONS, so a group missing here is a group missing "
+        f"from the page - add it to the right year group."
+    )
 
 # Unit groupings, lifted verbatim from the notes board index pages so the
 # questions index mirrors them exactly. Keyed by (boardDir, unit code),
@@ -294,7 +310,14 @@ US_SPELLINGS = [
 ]
 US_SPELLING_RE = re.compile(r"\b(" + "|".join(US_SPELLINGS) + r")\b", re.IGNORECASE)
 
-ID_RE = re.compile(r"^(aqa|edexcel)-\d+(?:-\d+)*-q\d+$")
+# A question ID is {board}-{spec}-q{n}, so its first component is a board slug.
+# Longest first, for the reason extract_glossary.SPEC_ALERT_RE gives: `re`
+# alternation is ordered, so a slug that is a prefix of another would shadow it.
+ID_RE = re.compile(
+    r"^("
+    + "|".join(re.escape(s) for s in sorted(BOARD_LABELS, key=len, reverse=True))
+    + r")-\d+(?:-\d+)*-q\d+$"
+)
 
 
 NOSCRIPT_ACCORDION = """
