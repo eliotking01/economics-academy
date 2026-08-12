@@ -210,10 +210,10 @@ Everything else is duplicated per file.
 
 A new page needs: the gtag block, `<html lang="en-GB">`, title, meta
 description, canonical, OG and Twitter cards, JSON-LD, the favicon/manifest set,
-`/css/main.css`, its own `/css/pages/<page>.css`, the four-script tail
-(`nav.js`, `browser.min.js`, `breakpoints.min.js`, `main.js` — cite
-`page_shell.SCRIPT_TAIL`, not this list) and the baked header and footer
-blocks. Add it to `sitemap.xml`. If it is hand-written
+`/css/main.css`, its own `/css/pages/<page>.css`, the script tail (**cite
+`page_shell.SCRIPT_TAIL`** — it is two scripts today, was four until
+2026-08-12 and seven until 2026-08-11, and a list written out here goes stale
+without anything noticing) and the baked header and footer blocks. Add it to `sitemap.xml`. If it is hand-written
 rather than generated, add it to `bake_templates.py`'s `EXPECTED` count in the
 same commit, or that script refuses to run. Topic pages carry two JSON-LD blocks — `LearningResource` and
 `BreadcrumbList` — and load MathJax 3 from jsDelivr only if they use `\( … \)`.

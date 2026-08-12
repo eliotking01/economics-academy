@@ -769,13 +769,48 @@ change two files in the same commit — the `build_past_paper_taxonomy.py`
 `EXPECTED` pattern. A check that reads the value it is checking agrees with any
 value, including a wrong one. Do not "remove the duplication".
 
-**Check 2 also asserts that 0 of 463 pages load jquery, dropotron, util.js or
-inject-templates.js, and that assertion is not redundant.** The ordering test
-beside it filters the page's scripts to tail members, and those four are not
-members any more — so a page that still loaded jQuery would pass the ordering
-test in silence. Removing anything from `SCRIPT_TAIL` means adding it to
-`REMOVED_SCRIPTS` here and to `bake_templates.LEGACY_TAIL`, or the 17
+**Check 2 also asserts that 0 of 463 pages load anything in
+`REMOVED_SCRIPTS`, and that assertion is not redundant.** The ordering test
+beside it filters the page's scripts to tail members, and removed scripts are
+not members any more — so a page that still loaded jQuery would pass the
+ordering test in silence. Removing anything from `SCRIPT_TAIL` means adding it
+to `REMOVED_SCRIPTS` here and to `bake_templates.LEGACY_TAIL`, or the 17
 hand-written pages keep loading it after the other 446 have stopped.
+
+> **Amended 2026-08-12, Wave 4.11.** The list was four and is six, and the
+> line check 2 prints now counts `REMOVED_SCRIPTS` instead of naming its
+> members — the sentence that named four went stale the moment two were added,
+> which is the same failure this register records for CLAUDE.md's counts.
+> **Proved able to fail rather than read:** re-adding one `browser.min.js` tag
+> to `about.html` turns check 2 red three ways while the ordering test beside
+> it stays green, which is this paragraph demonstrated rather than asserted.
+
+**The script tail is two scripts, and the number is the wrong thing to
+remember.** Seven until 2026-08-11, four until 2026-08-12, two now. Cite
+`page_shell.SCRIPT_TAIL`. Removing one is a **four-file** edit —
+`page_shell.SCRIPT_TAIL`, `verify_page_shell.SCRIPT_TAIL`,
+`verify_page_shell.REMOVED_SCRIPTS`, `bake_templates.LEGACY_TAIL` — then the
+five generators, `bake_templates.py --apply`, and `build_sitemap.py`.
+
+**The closed `#navPanel` is `inert`, not `aria-hidden="true"`, and the two must
+not both be set.** Wave 4.11, D37. The panel is off-canvas by `transform`
+rather than `display: none` because the slide is animated, so before this its
+32 links stayed in the tab order the whole time it was shut, while
+`aria-hidden="true"` on an element with focusable descendants was an ARIA 1.2
+conformance failure Chrome logs. `inert` removes it from both the tab order and
+the accessibility tree. **Do not add an `aria-hidden` fallback for browsers
+without `inert`:** that reinstates the conformance failure for exactly those
+users, and it was declined on that ground rather than overlooked.
+
+**`render_nav.py`'s `tabbable` field is the only thing that can see that**, and
+anything touching the panel's open/close must keep it honest. `inert` changes
+no markup, no link, no class and no transform, so all ten of the harness's
+other fields compared identical across the change. `tabbable` focuses each
+panel link in turn and counts how many accept it, **closed then open then
+closed again on the same run** — 0/32, 32/32, 0/32 today. The middle reading is
+not decoration: without it the zero is indistinguishable from a broken probe,
+which is exactly what the `render_nav.py` entry at the end of this section
+records happening to a CLS measurement.
 
 **`scripts/bake_templates.py` owns the script tail on the 17 pages no generator
 writes, as well as the header and footer.** Same argument as Wave 2 Phase 7:

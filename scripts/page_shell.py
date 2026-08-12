@@ -388,11 +388,19 @@ MATHJAX_CONFIG_BODY = '''    <script>
 # which is the rename D35 declined in Phase 7 on the ground that it edited 463
 # pages to gain a filename - free here, because the tail was being rewritten
 # on all 463 anyway.
+#
+# Wave 4.11 takes it from four to two, and this pair went for a different
+# reason from those three: not that they needed jQuery - neither did - but
+# that nothing on the site called either of them. Re-counted across every
+# tracked file before deleting anything: browser.min.js had ZERO call sites,
+# and breakpoints.min.js had exactly ONE, js/main.js's config call, which
+# named four widths that no listener ever read back. Neither writes a class
+# or inserts a node - browser.js's only DOM call is a detached <div> inside
+# canUse(), which nothing calls - so removing them changes no rendered page.
+# 8,236 B raw, 2,141 gzipped, on every one of 463 pages.
 
 SCRIPT_TAIL = (
     "/js/components/nav.js",
-    "/js/browser.min.js",
-    "/js/breakpoints.min.js",
     "/js/main.js",
 )
 

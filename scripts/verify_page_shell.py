@@ -130,6 +130,10 @@ EXPECTED_FAMILIES = {
 # anyway. **This is what proved the change reached every page**: 463 of 463
 # carry the new tail and 0 carry any of the three removed scripts.
 #
+# Wave 4.11 took it from four to two: browser.min.js had zero call sites
+# anywhere on the site and breakpoints.min.js had one, js/main.js's config
+# call, which named four widths no listener ever read back.
+#
 # Restated here as a literal ON PURPOSE. It is not imported from
 # page_shell.SCRIPT_TAIL, though that is now where the generators get it: a
 # check that reads the value it is checking agrees with any value, including a
@@ -137,8 +141,6 @@ EXPECTED_FAMILIES = {
 # build_past_paper_taxonomy.py EXPECTED pattern.
 SCRIPT_TAIL = (
     "/js/components/nav.js",
-    "/js/browser.min.js",
-    "/js/breakpoints.min.js",
     "/js/main.js",
 )
 
@@ -150,6 +152,8 @@ REMOVED_SCRIPTS = (
     "/js/jquery.dropotron.min.js",
     "/js/util.js",
     "/js/components/inject-templates.js",
+    "/js/browser.min.js",
+    "/js/breakpoints.min.js",
 )
 
 #
@@ -632,12 +636,16 @@ def main() -> int:
     # Wave 4.10. Asserted separately because the ordering test above filters to
     # tail members, and these are not members any more - a page that still
     # loaded jQuery would sail through it.
+    #
+    # The message counts REMOVED_SCRIPTS rather than naming them, because
+    # 4.11 added two to the list and the sentence that named four went stale
+    # the moment it did.
     if kept_removed:
-        r.bad(f"{sum(kept_removed.values())} page(s) still load a script "
-              f"Wave 4.10 removed: {dict(kept_removed)}")
+        r.bad(f"{sum(kept_removed.values())} page(s) still load a script that "
+              f"has been removed from the tail: {dict(kept_removed)}")
     else:
-        r.ok(f"0 of {len(paths)} pages load jquery, dropotron, util.js or "
-             f"inject-templates.js")
+        r.ok(f"0 of {len(paths)} pages load any of the "
+             f"{len(REMOVED_SCRIPTS)} removed scripts")
     # index.html puts its two review scripts before main.js rather than after.
     # Nothing else does. Named rather than tolerated, so a second page adopting
     # the habit fails.

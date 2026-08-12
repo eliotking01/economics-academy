@@ -1644,12 +1644,17 @@ file "is meant to shrink".
 
 ---
 
-## Three found by Wave 4.10, none fixed, all deliberate
+## Three found by Wave 4.10, none fixed by it, all deliberate
 
 Found while removing jQuery and dropotron on 2026-08-11. Logged rather than
 fixed, because each is outside what that wave was authorised to change.
 
-### 1. `#navPanel` is `aria-hidden="true"` while holding 32 focusable links
+**Items 1 and 2 were fixed on 2026-08-12** and the records of them are kept
+below rather than deleted, because the measurements are the interesting part.
+**Item 3 got worse by design** — fixing item 2 deleted two more files those
+frozen QA pages ask for — and two of its own numbers turned out to be wrong.
+
+### 1. `#navPanel` is `aria-hidden="true"` while holding 32 focusable links — FIXED 2026-08-12
 
 `js/components/nav.js` builds the mobile panel and toggles
 `aria-hidden` on it, which is what `inject-templates.js` did before it. The
@@ -1671,7 +1676,35 @@ before/after comparison showing the panel identical, and changing its
 attributes would have changed the thing being compared. It is a small, clean
 commit on its own, and it needs its own before/after.
 
-### 2. `browser.min.js` and `breakpoints.min.js` are effectively dead
+**Done 2026-08-12, and the before/after is the whole report.** One file,
+`js/components/nav.js`; no page rebuilt, no HTML changed, no CSS changed.
+`render_nav.py` gained the two fields that could see it — `panelAttrs.inert`
+and a `tabbable` tally that focuses every panel link in turn and counts how
+many accept it, which is the tab-order question asked in the one way headless
+Chrome can answer it. Nothing else in that harness could tell the two trees
+apart: `inert` changes no markup, no link, no class and no transform.
+
+- **The defect, measured on 10 pages rather than argued: 32 of 32 links
+  focusable with the panel shut**, on all 10 at 390px. Now **0 of 32**.
+- **Open is still 32 of 32**, on the same run, seconds later, from the same
+  loop — which is what stops the 0 being the kind of zero that means the probe
+  is broken. Closed → open → closed again reads 0 / 32 / 0.
+- 23 of 23 captures differ in `panelAttrs` and nothing else: `hidden` `"true"`
+  → absent, `inert` absent → present. `nav`, `panel`, `navCurrent`,
+  `navDisplay`, `titleBar`, `skipLink`, `footer` and `counts` are identical on
+  23 of 23.
+- The six-step mobile cycle is unchanged in every field but those two: toggle,
+  Escape with focus returning to the button (10 of 10), click-outside and
+  swipe-left all still work, and the panel's computed transform still moves
+  −275px ↔ 0 on every cycle.
+- **The one trade, stated:** a browser without `inert` (Firefox before 112,
+  Safari before 15.5, Chrome before 102) now gets a closed panel that is
+  neither hidden from assistive technology nor removed from the tab order,
+  where before it was falsely marked hidden and still tabbable. No feature
+  detection and no `aria-hidden` fallback, because reinstating `aria-hidden`
+  conditionally reinstates the conformance failure for exactly those users.
+
+### 2. `browser.min.js` and `breakpoints.min.js` are effectively dead — FIXED 2026-08-12
 
 Both survive on all 463 pages in the four-script tail. Neither needs jQuery,
 which is why 4.10 left them; but measured across the whole repo:
@@ -1679,7 +1712,7 @@ which is why 4.10 left them; but measured across the whole repo:
 - **`browser` has zero call sites.** Nothing anywhere reads `browser.name`,
   `browser.mobile`, `browser.canUse` or any other member.
 - **`breakpoints` has one**, `js/main.js`'s config call, which registers the
-  five named breakpoints and then no listener. Nothing calls
+  four named breakpoints and then no listener. Nothing calls
   `breakpoints.active()`, and the library writes no class and touches no DOM
   (`grep -o 'classList\|className' js/breakpoints.min.js` is empty).
 
@@ -1689,10 +1722,24 @@ them is a tail change: `page_shell.SCRIPT_TAIL`, `verify_page_shell.SCRIPT_TAIL`
 `bake_templates.py --apply`. Held over because 4.10 was already a sitewide nav
 change and two causes for one regression is one too many.
 
-### 3. `_working/flashcards/qa/` requests three files that no longer exist
+**Done 2026-08-12.** Both counts re-derived first and both held: 0 call sites
+for `browser`, 1 for `breakpoints`, and 1,087 + 1,054 = 2,141 gzipped bytes.
+**One number in the paragraph above was wrong and is corrected in place: the
+config call named FOUR widths, not five** — `xlarge`, `large`, `medium`,
+`small`. The four-file edit was exactly as written. 463 pages changed, **926
+deleted lines and 0 added**, every one of them a `<script src>` for one of the
+two files; the tail is two scripts now.
 
-Those 12 frozen QA pages carry the old seven-script tail, so they now request
-`jquery.min.js`, `jquery.dropotron.min.js` and `util.js`, which 4.10 deleted.
+### 3. `_working/flashcards/qa/` requests five files that no longer exist
+
+**Was three until 2026-08-12; `browser.min.js` and `breakpoints.min.js` joined
+the list when item 2 was fixed. And the page count was wrong: it is 14, not
+12** — there are 15 HTML files in that directory and 14 carry the old
+seven-script tail, `frame.html` being the exception.
+
+Those 14 frozen QA pages carry the old seven-script tail, so they now request
+`jquery.min.js`, `jquery.dropotron.min.js`, `util.js`, `browser.min.js` and
+`breakpoints.min.js`, which 4.10 and 4.11 deleted.
 They are **unpublished** — `_working/` is excluded by Jekyll's `_`-prefix rule
 — so no reader can reach them, and DO-NOT-BREAK already records that they were
 left carrying header placeholders after Wave 2 Phase 7 for the same reason:
