@@ -37,6 +37,26 @@ page family, which needs explicit approval and a `Text-Change:` trailer, every
 time. So names are recorded per consumer, exactly as slugs are, and this check
 compares each against the consumer that uses it.
 
+WHY THERE IS A SECOND COPY OF THE RECORD IN THIS FILE
+-----------------------------------------------------
+Wave 3.2 points the generators at boards.json. From that moment the four
+comparisons below are circular for any generator that has been swapped: they
+ask whether boards.json agrees with a structure boards.json just produced, and
+the answer is yes for every value, including a wrong one. A check that cannot
+fail protects nothing, and it protects nothing while still printing green.
+
+So `PINNED` restates all 82 leaves of the record as an independent literal, in
+a deliberately different shape - a flat dotted-path map against the file's
+nested objects and arrays - and check 0 compares the two. This is
+`verify_page_shell.SCRIPT_TAIL` and `build_past_paper_taxonomy.EXPECTED`, the
+same pattern for the same reason: changing a board name or slug now has to
+change two files in the same commit, so it cannot happen by accident. Do not
+"remove the duplication" by deriving one from the other.
+
+It was seeded from boards.json on 2026-08-12, when the 28 code comparisons
+below were green on all four structures, so it is anchored to what the
+generators said before any of them was touched. `--show` reprints it.
+
 Standard library only.
 """
 
@@ -50,6 +70,141 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BOARDS_JSON = ROOT / "boards-data" / "boards.json"
+
+# Every leaf of boards-data/boards.json, restated. See the docstring: this is
+# the independent copy that keeps check 0 meaningful once the generators read
+# the file instead of declaring their own structures. Keys are dotted paths;
+# `_`-prefixed keys in the record are commentary and are not pinned.
+#
+# A slug is a live URL and GitHub Pages issues no 301. A name is visible text.
+# Changing either here without changing boards-data/boards.json - or the other
+# way round - is meant to fail.
+PINNED = {
+    "edexcel-a.names.short": "Edexcel",
+    "edexcel-a.names.display": "Edexcel A",
+    "edexcel-a.names.long": "Edexcel A-Level Economics A",
+    "edexcel-a.names.qualification": "A Level Economics A (9EC0)",
+    "edexcel-a.slugs.pastPapers": "edexcel",
+    "edexcel-a.slugs.questionBank": "edexcel",
+    "edexcel-a.slugs.taxonomy": "edexcel",
+    "edexcel-a.slugs.glossary": "edexcel-a",
+    "edexcel-a.slugs.flashcards": "edexcel-a",
+    "edexcel-a.slugs.dataDir": "edexcel-a",
+    "edexcel-a.papersUrl": "/past-papers/edexcel/",
+    "edexcel-a.notesUrl": "/revision-notes/",
+    "edexcel-a.specCodesAreReal": True,
+    "edexcel-a.expectedTopics": 87,
+    "edexcel-a.groups.0.notesDir": "edexcel-theme-1",
+    "edexcel-a.groups.0.taxonomySlug": "theme-1",
+    "edexcel-a.groups.0.flashcardsSlug": "theme-1",
+    "edexcel-a.groups.0.label": "Theme 1",
+    "edexcel-a.groups.0.names.taxonomy":
+        "Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.flashcards":
+        "Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.practiceQuestions":
+        "Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.practiceQuestionsLabel": "Edexcel Theme 1",
+    "edexcel-a.groups.0.names.practiceQuestionsButton":
+        "Theme 1: Introduction to Markets and Market Failure",
+    "edexcel-a.groups.1.notesDir": "edexcel-theme-2",
+    "edexcel-a.groups.1.taxonomySlug": "theme-2",
+    "edexcel-a.groups.1.flashcardsSlug": "theme-2",
+    "edexcel-a.groups.1.label": "Theme 2",
+    # Theme 2 is the em-dash/hyphen/short-form case the docstring describes.
+    # These three differ on purpose and must not be collapsed.
+    "edexcel-a.groups.1.names.taxonomy":
+        "The UK Economy — Performance and Policies",
+    "edexcel-a.groups.1.names.flashcards":
+        "The UK Economy - Performance and Policies",
+    "edexcel-a.groups.1.names.practiceQuestions":
+        "The UK Economy - Performance and Policies",
+    "edexcel-a.groups.1.names.practiceQuestionsLabel": "Edexcel Theme 2",
+    "edexcel-a.groups.1.names.practiceQuestionsButton":
+        "Theme 2: The UK Economy",
+    "edexcel-a.groups.2.notesDir": "edexcel-theme-3",
+    "edexcel-a.groups.2.taxonomySlug": "theme-3",
+    "edexcel-a.groups.2.flashcardsSlug": "theme-3",
+    "edexcel-a.groups.2.label": "Theme 3",
+    "edexcel-a.groups.2.names.taxonomy":
+        "Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.flashcards":
+        "Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.practiceQuestions":
+        "Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.practiceQuestionsLabel": "Edexcel Theme 3",
+    "edexcel-a.groups.2.names.practiceQuestionsButton":
+        "Theme 3: Business Behaviour and the Labour Market",
+    "edexcel-a.groups.3.notesDir": "edexcel-theme-4",
+    "edexcel-a.groups.3.taxonomySlug": "theme-4",
+    "edexcel-a.groups.3.flashcardsSlug": "theme-4",
+    "edexcel-a.groups.3.label": "Theme 4",
+    "edexcel-a.groups.3.names.taxonomy": "A Global Perspective",
+    "edexcel-a.groups.3.names.flashcards": "A Global Perspective",
+    "edexcel-a.groups.3.names.practiceQuestions": "A Global Perspective",
+    "edexcel-a.groups.3.names.practiceQuestionsLabel": "Edexcel Theme 4",
+    "edexcel-a.groups.3.names.practiceQuestionsButton":
+        "Theme 4: A Global Perspective",
+    "aqa.names.short": "AQA",
+    "aqa.names.display": "AQA",
+    "aqa.names.long": "AQA A-Level Economics",
+    "aqa.names.qualification": "A-level Economics (7136)",
+    "aqa.slugs.pastPapers": "aqa",
+    "aqa.slugs.questionBank": "aqa",
+    "aqa.slugs.taxonomy": "aqa",
+    "aqa.slugs.glossary": "aqa",
+    "aqa.slugs.flashcards": "aqa",
+    "aqa.slugs.dataDir": "aqa",
+    "aqa.papersUrl": "/past-papers/aqa/",
+    "aqa.notesUrl": "/revision-notes/",
+    "aqa.specCodesAreReal": False,
+    "aqa.expectedTopics": 79,
+    "aqa.groups.0.notesDir": "aqa-a2-micro",
+    "aqa.groups.0.taxonomySlug": "microeconomics",
+    "aqa.groups.0.flashcardsSlug": "micro",
+    "aqa.groups.0.label": "Microeconomics",
+    "aqa.groups.0.names.taxonomy":
+        "Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.flashcards":
+        "Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.practiceQuestions":
+        "Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.practiceQuestionsLabel": "AQA Microeconomics",
+    "aqa.groups.0.names.practiceQuestionsButton":
+        "Micro: Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.1.notesDir": "aqa-a2-macro",
+    "aqa.groups.1.taxonomySlug": "macroeconomics",
+    "aqa.groups.1.flashcardsSlug": "macro",
+    "aqa.groups.1.label": "Macroeconomics",
+    "aqa.groups.1.names.taxonomy": "The National and International Economy",
+    "aqa.groups.1.names.flashcards": "The National and International Economy",
+    "aqa.groups.1.names.practiceQuestions":
+        "The National and International Economy",
+    "aqa.groups.1.names.practiceQuestionsLabel": "AQA Macroeconomics",
+    "aqa.groups.1.names.practiceQuestionsButton":
+        "Macro: The National and International Economy",
+}
+
+
+def flatten(obj, prefix: str = "") -> dict:
+    """Every leaf of the record as a dotted path, commentary keys dropped.
+
+    Deliberately flat, where boards.json is nested: the pinned copy has to be
+    a restatement rather than the same shape twice, or a wrong value could be
+    pasted into both without looking wrong in either.
+    """
+    out: dict = {}
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k.startswith("_"):
+                continue
+            out.update(flatten(v, f"{prefix}.{k}" if prefix else k))
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            out.update(flatten(v, f"{prefix}.{i}"))
+    else:
+        out[prefix] = obj
+    return out
 
 
 def load_module(name: str):
@@ -70,23 +225,58 @@ class Check:
     def __init__(self):
         self.bad: list[str] = []
 
-    def eq(self, label: str, record, code) -> None:
+    def eq(self, label: str, record, code, right: str = "the code") -> None:
         if record == code:
             print(f"  ok    {label}")
         else:
             print(f"  FAIL  {label}")
             print(f"          boards.json: {record!r}")
-            print(f"          the code   : {code!r}")
+            print(f"          {right:<11}: {code!r}")
             self.bad.append(label)
 
 
+def show(flat: dict) -> None:
+    """Reprint PINNED for reseeding, the verify_page_shell.py --show pattern."""
+    print("PINNED = {")
+    for k, v in flat.items():
+        print(f"    {k!r}: {v!r},")
+    print("}")
+
+
 def main() -> int:
-    argparse.ArgumentParser(description=__doc__.splitlines()[0]).parse_args()
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--show", action="store_true",
+                    help="reprint PINNED from boards.json and exit")
+    args = ap.parse_args()
 
     data = json.loads(BOARDS_JSON.read_text(encoding="utf-8"))["boards"]
+    flat = flatten(data)
+    if args.show:
+        show(flat)
+        return 0
+
     c = Check()
 
-    print(f"{BOARDS_JSON.relative_to(ROOT)} vs the four hardcoded structures\n")
+    # ------------------------------------------------- check 0: the pinned copy
+    #
+    # The only comparison here that stays meaningful after a generator reads
+    # boards.json. Everything below it compares the record against code that
+    # may now be deriving itself from the record.
+    print("=== the pinned restatement in this file ===")
+    missing = sorted(set(PINNED) - set(flat))
+    extra = sorted(set(flat) - set(PINNED))
+    for k in missing:
+        c.bad.append(f"pinned but no longer in boards.json: {k}")
+        print(f"  FAIL  pinned but no longer in boards.json: {k}")
+    for k in extra:
+        c.bad.append(f"in boards.json but not pinned: {k}")
+        print(f"  FAIL  in boards.json but not pinned: {k}")
+    if not missing and not extra:
+        print(f"  ok    all {len(PINNED)} leaves are pinned, and only those")
+        for k in PINNED:
+            c.eq(f"pinned {k}", flat[k], PINNED[k], right="PINNED")
+
+    print(f"\n{BOARDS_JSON.relative_to(ROOT)} vs the four hardcoded structures\n")
 
     # ---------------------------------------------------- build_glossary.py
     print("=== build_glossary.py BOARDS ===")
@@ -172,16 +362,24 @@ def main() -> int:
     print()
     sys.stdout.flush()
     if c.bad:
-        print(f"FAIL: boards.json disagrees with the code in "
-              f"{len(c.bad)} place(s):", file=sys.stderr)
+        print(f"FAIL: {len(c.bad)} disagreement(s):", file=sys.stderr)
         for b in c.bad:
             print(f"  {b}", file=sys.stderr)
+        if any(b.startswith("pinned") or "pinned" in b for b in c.bad):
+            print("\nboards.json and this file's PINNED copy disagree. That is "
+                  "the guard working: a board name or slug is meant to be "
+                  "changed in both, in one commit, on purpose. If the change "
+                  "was intended, update PINNED - `--show` reprints it - and "
+                  "say in the commit message what moved and why. If it was "
+                  "not intended, revert boards.json.", file=sys.stderr)
         print("\nboards.json is a transcription of what the generators already "
-              "say, so a disagreement means the transcription is wrong. Fix "
-              "boards.json, not the generator - changing a slug changes a live "
-              "URL and changing a name changes visible text.", file=sys.stderr)
+              "say, so a disagreement with the code means the transcription is "
+              "wrong. Fix boards.json, not the generator - changing a slug "
+              "changes a live URL and changing a name changes visible text.",
+              file=sys.stderr)
         return 1
-    print("boards.json reproduces all four hardcoded structures exactly")
+    print(f"boards.json matches its {len(PINNED)}-leaf pinned copy and "
+          f"reproduces all four hardcoded structures exactly")
     return 0
 
 
