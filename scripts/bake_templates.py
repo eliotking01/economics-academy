@@ -16,7 +16,7 @@ homepage - and they would have kept a nav that needs JavaScript.
 went from seven scripts to four; the other 446 pages take it from
 page_shell.SCRIPT_TAIL on a rebuild, and without this these 17 would have
 gone on requesting a jQuery that is no longer in the repo. Same two pages,
-same argument, same answer.
+same argument, same answer. Wave 4.11 took it from four to two the same way.
 
     root         9   index, tutoring, marking, about, faq, contact, privacy,
                      confirmation, 404. Permanently out of scope for the
@@ -76,11 +76,18 @@ EXPECTED = 17
 # inject-templates.js to nav.js. Anything removed from page_shell.SCRIPT_TAIL
 # in future belongs here in the same commit, or these 17 pages keep loading it
 # after the other 446 have stopped.
+#
+# Wave 4.11 added browser.min.js and breakpoints.min.js, which is that rule
+# being followed rather than restated: both files are deleted from the repo, so
+# without these two lines /past-papers/edexcel-b/ and /past-papers/ocr/ would
+# request two 404s on every page view.
 LEGACY_TAIL = (
     "/js/jquery.min.js",
     "/js/jquery.dropotron.min.js",
     "/js/components/inject-templates.js",
     "/js/util.js",
+    "/js/browser.min.js",
+    "/js/breakpoints.min.js",
 )
 
 SCRIPT_RE = re.compile(r'^([ \t]*)<script src="([^"]+)"></script>$')

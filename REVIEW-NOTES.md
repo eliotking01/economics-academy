@@ -1649,9 +1649,10 @@ file "is meant to shrink".
 Found while removing jQuery and dropotron on 2026-08-11. Logged rather than
 fixed, because each is outside what that wave was authorised to change.
 
-**Item 1 was fixed on 2026-08-12** and the record of it is kept below rather
-than deleted, because the measurement is the interesting part. Items 2 and 3
-are unchanged.
+**Items 1 and 2 were fixed on 2026-08-12** and the records of them are kept
+below rather than deleted, because the measurements are the interesting part.
+**Item 3 got worse by design** — fixing item 2 deleted two more files those
+frozen QA pages ask for — and two of its own numbers turned out to be wrong.
 
 ### 1. `#navPanel` is `aria-hidden="true"` while holding 32 focusable links — FIXED 2026-08-12
 
@@ -1703,7 +1704,7 @@ apart: `inert` changes no markup, no link, no class and no transform.
   detection and no `aria-hidden` fallback, because reinstating `aria-hidden`
   conditionally reinstates the conformance failure for exactly those users.
 
-### 2. `browser.min.js` and `breakpoints.min.js` are effectively dead
+### 2. `browser.min.js` and `breakpoints.min.js` are effectively dead — FIXED 2026-08-12
 
 Both survive on all 463 pages in the four-script tail. Neither needs jQuery,
 which is why 4.10 left them; but measured across the whole repo:
@@ -1711,7 +1712,7 @@ which is why 4.10 left them; but measured across the whole repo:
 - **`browser` has zero call sites.** Nothing anywhere reads `browser.name`,
   `browser.mobile`, `browser.canUse` or any other member.
 - **`breakpoints` has one**, `js/main.js`'s config call, which registers the
-  five named breakpoints and then no listener. Nothing calls
+  four named breakpoints and then no listener. Nothing calls
   `breakpoints.active()`, and the library writes no class and touches no DOM
   (`grep -o 'classList\|className' js/breakpoints.min.js` is empty).
 
@@ -1721,10 +1722,24 @@ them is a tail change: `page_shell.SCRIPT_TAIL`, `verify_page_shell.SCRIPT_TAIL`
 `bake_templates.py --apply`. Held over because 4.10 was already a sitewide nav
 change and two causes for one regression is one too many.
 
-### 3. `_working/flashcards/qa/` requests three files that no longer exist
+**Done 2026-08-12.** Both counts re-derived first and both held: 0 call sites
+for `browser`, 1 for `breakpoints`, and 1,087 + 1,054 = 2,141 gzipped bytes.
+**One number in the paragraph above was wrong and is corrected in place: the
+config call named FOUR widths, not five** — `xlarge`, `large`, `medium`,
+`small`. The four-file edit was exactly as written. 463 pages changed, **926
+deleted lines and 0 added**, every one of them a `<script src>` for one of the
+two files; the tail is two scripts now.
 
-Those 12 frozen QA pages carry the old seven-script tail, so they now request
-`jquery.min.js`, `jquery.dropotron.min.js` and `util.js`, which 4.10 deleted.
+### 3. `_working/flashcards/qa/` requests five files that no longer exist
+
+**Was three until 2026-08-12; `browser.min.js` and `breakpoints.min.js` joined
+the list when item 2 was fixed. And the page count was wrong: it is 14, not
+12** — there are 15 HTML files in that directory and 14 carry the old
+seven-script tail, `frame.html` being the exception.
+
+Those 14 frozen QA pages carry the old seven-script tail, so they now request
+`jquery.min.js`, `jquery.dropotron.min.js`, `util.js`, `browser.min.js` and
+`breakpoints.min.js`, which 4.10 and 4.11 deleted.
 They are **unpublished** — `_working/` is excluded by Jekyll's `_`-prefix rule
 — so no reader can reach them, and DO-NOT-BREAK already records that they were
 left carrying header placeholders after Wave 2 Phase 7 for the same reason:
