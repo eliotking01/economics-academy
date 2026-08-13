@@ -760,7 +760,7 @@ def render_page(topic, siblings=(), ppq=None):
 
     body = f"""      <section id="main" class="quiz-page">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">&rsaquo;</span>
             <a href="/practice-questions/">Practice Questions</a>
@@ -1140,7 +1140,7 @@ def render_board_index(board_dir, topics):
 
     body = f"""      <section id="main" class="practice-questions-page">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">&rsaquo;</span>
             <a href="/practice-questions/">Practice Questions</a>

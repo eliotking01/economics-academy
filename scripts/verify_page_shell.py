@@ -346,7 +346,19 @@ EXPECTED_ALL_LAZY = 8
 # ---- check 8 -------------------------------------------------------------
 # Every page with a breadcrumb writes it twice, visible <nav> and JSON-LD
 # BreadcrumbList. 440 of 441 agree, by hand, with nothing checking. PH06-030.
-EXPECTED_BREADCRUMB = {"visible": 441, "with aria-label": 100, "agree": 440}
+#
+# "with aria-label" WAS 100 and is 441 from 2026-08-13 - a count going UP,
+# declared here in the same commit that moved it. The 100 were the three
+# newest generated families and the 341 were everything older, which PH06-030
+# calls "the clean picture of how this repo drifts: a convention improved, and
+# only the pages behind a generator received the improvement". There is no
+# longer an older half.
+#
+# `agree` stays at 440 deliberately. The aria-label lives on the <nav> opening
+# tag and check 8 reads that separately from the crumb list, so it cannot
+# affect agreement - and the one disagreeing page is PH06-030's, listed in
+# KNOWN_BREADCRUMB_DISAGREEMENT below, which is a different normalisation.
+EXPECTED_BREADCRUMB = {"visible": 441, "with aria-label": 441, "agree": 440}
 KNOWN_BREADCRUMB_DISAGREEMENT = {
     "revision-notes/macro-application/index.html":
         "the JSON-LD opens with Home and the visible trail does not",
