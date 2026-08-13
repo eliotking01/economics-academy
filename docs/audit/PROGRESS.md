@@ -1839,7 +1839,99 @@ would imply it is maintained.
 
 ---
 
-# HANDOVER — 2026-08-12. WAVE 3 IS COMPLETE EXCEPT 3.4
+### The eleven normalisations, 2026-08-13. Eight shipped, one dropped, one declined
+
+Thirteen commits. D42. **Eight of the eleven shipped, `f` is untouched, and
+two did not survive being measured** — which is the wave's result rather than
+a footnote.
+
+| Commit | Item | Pages |
+| --- | --- | ---: |
+| 1/11 | `inLanguage` → `en-GB` | 179 nodes |
+| — | harness: the verdict was a side effect of printing | 0 |
+| 2/11 | `EducationalOrganization`, 354 → 461 | 107 |
+| 3/11 | the complete organisation node, 1 → 5 | 4 |
+| 4/11 | one MathJax markup; `$…$` gone | 126 |
+| 5/11 | breadcrumb `aria-label`, 100 → 441 | 341 |
+| 6/11 | 3 real `<style>` blocks → `css/pages/` | 3 |
+| — | `verify_markup_integrity` gains `Markup-Change:` | 0 |
+| 7/11 | `<main id="main">`, id survives on 463 | 462 |
+| 8/11 | visible breadcrumb where only JSON-LD had one | 19 |
+| 8b/11 | the last breadcrumb disagreement | 1 |
+| 9/11 | preconnect: measured, NOT shipped | 0 |
+| — | documents | 0 |
+
+**Item `i` was dropped, not deferred, and it is the wave's best find.**
+PH04-052 asks for 99 `WebSite` nodes to be deleted as site-level entities
+occupying the publisher's slot. **1 is a top-level entity and 99 are the value
+of an `isPartOf` property** — the standard way a page says it belongs to a
+site, which does not compete with `publisher`. DO-NOT-BREAK already protects
+the identical construction one property along, in its `Course` entry, and
+nobody had connected the two. Deleting them would have stripped correct markup
+from 99 pages against an existing register entry.
+
+**Item `d` was declined on evidence.** Every page carries its preconnect inside
+the first **4,145 gzipped bytes**, and **439 of 463 documents fit entirely**
+inside TCP's ~14,600-byte initial congestion window — both positions arrive in
+the same burst, so there is no round trip to save. The browser probe FAILED in
+three configurations, unable to tell *no preconnect* from *preconnect*, and is
+committed saying so. Its `none` variant existed from the first run precisely so
+a null could be believed; it is what proved the null could not be.
+
+**Two verifiers were repaired because this wave hit their absence.**
+`compare_trees.py` printed **PASS over a real failure** at `--max-report 0`, on
+6 of 10 assertions — the capped detail line was what set the verdict. And its
+own suite was **31 of 32**: `a7-link-lost` replaced the page's only
+`/tutoring.html` link when it was written, and Phase 7's baked nav gave every
+page a second one two waves ago, so the case had proved nothing since.
+`verify_markup_integrity.py` had no `Markup-Change:` trailer, so an approved
+structural change would have turned CI red on correct work.
+
+**Predictions were stated per commit and one was wrong.** Assertion 1 was
+predicted to pass on 6/11 and failed — a new stylesheet is a new published URL,
+which I should have seen. Everything else decomposed exactly: 6 on 179/107/4,
+3 on 37, 2 on 19, 4 on 462 losses and 462 additions.
+
+**Assertion 3 moved once, on 4/11, and it had to.** The canonical MathJax
+config's trailing comment contains a literal `\(...\)`, which assertion 3
+cannot tell from a formula. It moves whichever wording is chosen; 37 is the
+minimum. **0 of 126 pages changed a LaTeX span inside `<body>`**, which is the
+measurement that matters and was taken separately.
+
+**Six `EXPECTED` tables went down or up and every one was declared in the
+commit that moved it:** head shapes 4 → 3 → 2, "mathjax without id" 28 → 0,
+the `<style>` label 1 → 0, breadcrumb 100 → 441 → 460 labelled and 440 → 460
+agreeing, `TWO_SHEET_PAGES` 1 → 3 named paths.
+
+**Seven wrong numbers**, all found before building on them: the MathJax split
+(3 configs on 126, not 4 on 127 — the phantom fourth is check 5's head-shape
+table, a different measurement), `page_shell.py`'s own comment (37 and 19, not
+33 and 18), the preconnect attribution (173 of the 190 "hand-written" late
+pages are generated), "the reference form the other 354 use" (six roles, not
+one), the `WebSite` substance, the harness suite's 32, and one of mine — the
+two gallery `<style>` blocks are the same LENGTH, not byte-identical, `macro`
+and `micro` both being five letters.
+
+**The rendered pages were checked, not assumed.** Three pages carrying a new
+breadcrumb were screenshotted in headless Chrome and looked at: the trail sits
+in the grey band under the nav, styled by `css/main.css:3450`, exactly like the
+441 that already had one.
+
+---
+
+# HANDOVER — 2026-08-13. TEN OF THE ELEVEN NORMALISATIONS ARE SETTLED
+
+**The eleven normalisations are settled except `f`.** Thirteen commits on
+`wave-normalisations`, D42: eight shipped, `i` DROPPED as a misreading of its
+own finding, `d` MEASURED and declined. `f` — 322 authored inline `style=`
+across 44 files — is the only one left and wants its own session, because 32
+of those 44 files are generated and the 1,187 KaTeX styles beside them must be
+excluded by construction.
+
+**Two verifiers were repaired on the way**, both because this wave hit their
+absence: `compare_trees.py` printed PASS over a real failure at
+`--max-report 0` on 6 of 10 assertions, and its own suite was 31 of 32;
+`verify_markup_integrity.py` had no `Markup-Change:` trailer.
 
 **Waves 0, 1, 2, 4 are complete, Wave 3 is done except 3.4, and Waves 4.10 and
 4.11 are merged and live.** Wave 4.10 merged as **`ff4c726`**, Wave 4.11 as
@@ -1914,9 +2006,12 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
    and Wave 3.2 seven, **including the figure DO-NOT-BREAK and CLAUDE.md both
    printed to illustrate the danger of stale figures**. Re-derive even a number
    this file wrote yesterday.
-7. **Twice now the roadmap has described work already done.** `loading="lazy"`
-   in the table above, and seven of Wave 3.3's eight structures. Measure what
-   exists before planning to build it; expect a third case.
+7. **Twice the roadmap described work already done, and once it described work
+   that should not be done at all.** `loading="lazy"`, seven of Wave 3.3's
+   eight structures, and now item `i` — 99 `WebSite` nodes the finding read as
+   top-level entities and which are `isPartOf` references. Measure what exists
+   before planning to build it, and read the evidence a finding cites rather
+   than its conclusion.
 
 ## Open, not started
 
@@ -1930,22 +2025,24 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
 - **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
   PH06 section 3. `render_nav.py` needs Chrome, so it stays out.
 
-**Deliberate normalisations, each its own commit.** All eleven re-measured on
-2026-08-12 against `e513e49`; these are today's numbers, not the roadmap's.
+**Deliberate normalisations — TEN OF ELEVEN SETTLED 2026-08-13, D42.** Eight
+shipped, `i` dropped as a misreading, `d` measured and declined. **Only `f`
+remains.** The table below is kept as the record of what was measured; do not
+re-derive from the roadmap, re-derive from the tree.
 
-| Item | Now | Finding |
-| --- | --- | --- |
-| `aria-label="Breadcrumb"` | 441 visible, 100 have it, **341** do not | PH06-030 |
-| `<section id="main">` → `<main id="main">`, keeping the `id` | **462** vs 1 | PH06-032 |
-| MathJax config | **4** distinct on 127 pages (89/19/18/1); **126** still carry `["$","$"]` | PH08-039 |
-| Preconnect lineage | **273** before `<title>`, **190** after | Wave 2 |
-| 3 real `<style>` blocks → `css/pages/` | 9 blocks: **6** protected `<noscript>`, **3** real | PH08-042 |
-| 322 authored inline `style=` → classes | **322 across 44 files**, of 1,509 total | PH08-042 |
-| Visible breadcrumb where only JSON-LD declares one | **19** | PH04-053 |
-| `EducationalOrganization` | on **354** of 463 | PH04-052 |
-| `WebSite` node removed from non-homepage | on **100** pages | PH04-052 |
-| `inLanguage` → `en-GB` | **179** nodes say `en`, 274 say `en-GB` | PH04-054 |
-| Full organisation node on the 5 entity-homes | on **1** page | PH04-055, D29 |
+| Item | Recorded 2026-08-12 | Re-derived 2026-08-13 | Outcome |
+| --- | --- | --- | --- |
+| `aria-label="Breadcrumb"` | 341 lack it | 341 — held | **SHIPPED**, 441/441 |
+| `<main id="main">` | 462 vs 1 | 462 — held | **SHIPPED**, id on 463 |
+| MathJax config | 4 distinct on 127; 126 carry `$…$` | **3 on 126; all 126** | **SHIPPED**, one markup |
+| Preconnect lineage | 273 before, 190 after | counts held, **attribution wrong** | **DECLINED**, measured |
+| 3 real `<style>` blocks | 6 protected, 3 real | held | **SHIPPED**, 0 real left |
+| 322 inline `style=` | 322 across 44, of 1,509 | held | **NOT STARTED** |
+| Visible breadcrumb | 19 | 19 — held | **SHIPPED**, +macro-application |
+| `EducationalOrganization` | on 354 of 463 | held | **SHIPPED**, 461 |
+| `WebSite` off non-homepage | on 100 pages | **99 are `isPartOf` refs** | **DROPPED**, D42 |
+| `inLanguage` → `en-GB` | 179 say `en` | 179 — held | **SHIPPED**, 453 en-GB |
+| Full organisation node | on 1 page | held | **SHIPPED**, 5 |
 
 **`loading="lazy"` is DONE and is not in that list.** 104 pages, 309 images:
 96 first-eager-rest-lazy, 8 all-lazy, 0 exceptions — the roadmap's "33 pages /

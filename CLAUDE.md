@@ -256,8 +256,11 @@ same commit, or that script refuses to run. Topic pages carry two JSON-LD blocks
 
 **CSS**
 
-- One stylesheet per page in `css/pages/`, named after the page.
-- Scope it: put a wrapper class on the page's `<section id="main">` and nest
+- One stylesheet per page in `css/pages/`, named after the page. Three pages
+  load two: `macro-application` and the two diagram galleries, which share
+  `revision-notes-diagrams.css`. `verify_css_load_order.py` names them; a
+  fourth fails there.
+- Scope it: put a wrapper class on the page's `<main id="main">` and nest
   every rule under it — `.revision-notes-content .notes-cta { … }`. Bare class
   names have already collided across two files.
 - `:root` colour tokens live in `revision-notes-textbook.css` and are for notes

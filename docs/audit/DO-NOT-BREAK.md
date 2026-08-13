@@ -306,14 +306,44 @@ migration is exactly the operation that would "helpfully" factor them out.
 `<main id="main">`, the `id` must survive, or every page loses its skip link
 silently. 462 pages are affected; only `index.html` uses `<main>` today. PH06-032.
 
+> **DONE 2026-08-13, wave-norm(7/11), and the id survived on 463 of 463.** All
+> 462 are `<main id="main">` now. The condition above was the whole risk and it
+> was checked BEFORE editing, not after: 10 `#main` rules in `css/main.css`,
+> **none** written `section#main`, and **0** references to `#main` in any
+> hand-written `js/`. Nothing had ever selected on the tag.
+>
+> **The closer was matched by NESTING DEPTH, not indentation.** The wrapper
+> holds up to 13 nested `<section>`s (`privacy.html`), so "the `</section>` at
+> six spaces" is a guess that is wrong on most pages.
+>
+> **The sentence above is what to keep.** The id is still the coupling and it
+> is still silent when broken; `asset_census.py 8` holds it at 0 pages with a
+> missing `#main` target.
+
 **The MCQ teaser on a notes page is a copy of `notesTeaser` in
 `questions-data/`.** Identical on 166/166 today, placed there by
 `append_questions_link.py`, and nothing checks it stays that way. Do not edit
 either copy in isolation. PH06-028.
 
 **Both breadcrumb copies must stay in step.** Every page with a breadcrumb writes
-it twice — visible `<nav>` and `BreadcrumbList` JSON-LD. 440 of 441 agree;
-`revision-notes/macro-application/index.html` is the one that does not. PH06-030.
+it twice — visible `<nav>` and `BreadcrumbList` JSON-LD. PH06-030.
+
+> **CLOSED 2026-08-13, wave-norm(5/11), (8/11) and (8b/11). Both halves.**
+> `aria-label="Breadcrumb"` is on all of them, not 100 of 441; the 19 pages
+> that declared a trail only in JSON-LD now render one; and
+> `macro-application`, the single page whose two copies disagreed, agrees.
+> **460 visible, 460 labelled, 460 agreeing, and
+> `KNOWN_BREADCRUMB_DISAGREEMENT` is EMPTY.**
+>
+> **The empty dict is kept, not deleted.** The loop still runs over it, so a
+> future deliberate mismatch has somewhere to be declared, and the per-page
+> comparison is what catches an accidental one. Proved still able to fail with
+> the exception gone: rewording one crumb turns check 8 red.
+>
+> **Every one of the 19 new trails was BUILT FROM THAT PAGE'S OWN
+> `BreadcrumbList`**, names copied verbatim, so the two copies cannot disagree
+> — which is why `agree` rose by exactly the same 19 as `visible`. Any future
+> page must do the same. Cite `python3 scripts/verify_page_shell.py` check 8.
 
 **Any new source directory goes into `_config.yml`'s `exclude` in the same commit
 that creates it.** A build step means new source files in the repo, and this repo
@@ -704,11 +734,32 @@ Everything that varies per page is passed in as a value.
 > **The values it lifts are not tidiness waiting to happen.** Each was measured
 > and each would rewrite pages if "normalised" without a decision:
 >
-> - **Two preconnect lineages.** All 273 generated pages put the font
+> - **Two preconnect lineages.** ~~All 273 generated pages put the font
 >   preconnect **before** `<title>`; all 190 hand-written pages put it after the
 >   favicons. Earlier is better for the preload scanner, so the generated
->   families are right and the hand-written ones are the laggards. Do not
+>   families are right and the hand-written ones are the laggards.~~ Do not
 >   "align" them without measuring LCP.
+>
+>   **MEASURED 2026-08-13 AND DELIBERATELY NOT ALIGNED. The counts hold and
+>   both of the sentences around them were wrong.** "Hand-written" is wrong:
+>   173 of the 190 late pages are GENERATED, by `build_notes_pages.py` — the
+>   split was written in Wave 2 and Phases 3 and 5 made the notes pages
+>   generated underneath it. It is a per-page value,
+>   `page_shell.preconnectEarly`, not a property of being generated.
+>
+>   **And "earlier is better" does not survive measurement here.** Every one
+>   of the 463 pages carries its preconnect inside the first **4,145 gzipped
+>   bytes**, either lineage, and **439 of 463 documents fit ENTIRELY** inside
+>   TCP's ~14,600-byte initial congestion window. Both positions arrive in the
+>   same burst, so there is no round trip between them to save. The largest
+>   page, the AQA glossary at 70,907 B gzipped, still has its preconnect at
+>   byte 325; its overflow is body, not head.
+>
+>   `docs/audit/scripts/harness/measure_preconnect.py` computes that and is
+>   the evidence. **Its browser probe FAILED and its numbers must not be
+>   cited** — in three configurations it could not distinguish *no preconnect*
+>   from *preconnect*, so it cannot speak to where one sits. The script says so
+>   itself and is kept for what it records about driving Chrome.
 > - **Two explanatory comments.** The `4db232c` note is universal, 463/463.
 >   `build_questions.py` writes a second one above its early preconnect on 173
 >   pages. Both are correct; rewording either is a change nobody asked for.
@@ -735,8 +786,8 @@ break across an inline tag boundary and turn `<strong>word</strong>s` into
 "word s". Do not add it.
 
 **`docs/audit/scripts/harness/compare_trees.py` is the gate, and its test suite
-is what makes it evidence.** 32 cases break each of the ten assertions on
-purpose, and **eleven of them expect a PASS** — pinning what each assertion is
+is what makes it evidence.** 39 cases break each of the ten assertions on
+purpose, and **twelve of them expect a PASS** — pinning what each assertion is
 deliberately blind to, each paired with the assertion that covers it. An
 assertion that fires on everything is as useless as one that fires on nothing.
 Do not delete the passing cases as redundant.
@@ -971,6 +1022,52 @@ Four things it records that were learned the hard way and must not be undone:
 - dropotron answered only the FIRST synthetic hover of a page. A loop over the
   three openers reported "no dropdown" for two of them and would have passed by
   being blind rather than by being right.
+
+## The deliberate normalisations (added by wave-norm, 2026-08-13)
+
+**`page_shell.ORGANISATION_REF` is the one declaration of the publisher, and
+callers name the PROPERTY.** Four generators emit it. There is deliberately no
+helper meaning "the publisher bit of a page", because the right property
+depends on the node it attaches to: 105 of the 107 pages take `publisher`, and
+`marking.html` and `tutoring.html` are `Service` nodes taking `provider`,
+which is what `Service` defines for the same relationship. Same argument as
+`board_data.py` never growing a canonical accessor.
+
+**`isPartOf` references are NOT page entities, and that rule now covers two
+properties, not one.** The register already said it of the 179 `Course` nodes.
+PH04-052 asks for the 99 `WebSite` nodes to be deleted on the grounds that
+they are site-level entities occupying the publisher's slot. **Measured: 1 is
+a top-level entity — `index.html` — and 99 are the value of an `isPartOf`
+property**, which is the standard way for a page to say it belongs to a site
+and does not compete with `publisher`. `privacy.html` carries both, correctly.
+**Item (i) is dropped, D42.** Do not re-propose it from the finding's wording.
+
+**`verify_markup_integrity.py` has a `Markup-Change:` trailer, and it declares
+a PATH, not a TAG.** Same three properties as `Text-Change:` and for the same
+reason — a commit-message declaration applies to exactly one commit, cannot be
+left on by accident, and stays in `git log`. A declared path still PRINTS
+every loss; it is not silenced, only not counted. A commit that means to drop
+one `<section>` and also drops an `<a>` from the same page still fails.
+
+**The three real `<style>` blocks are gone and the six protected ones are all
+that remain.** 0 real, 6 inside `<noscript>`. The two diagram galleries share
+`css/pages/revision-notes-diagrams.css` — they were the same file twice, 3,502
+bytes each, differing only in `.macro-` against `.micro-`, so each rule carries
+both scopes rather than being duplicated. **The `.comp-spectrum` rules were
+scoped to `.revision-notes-content` on the way into
+`revision-notes-textbook.css`**, because a bare class name in a sheet 179 pages
+load is the collision the house rule exists to prevent.
+
+**One MathJax markup on 126 pages, and `$…$` is not a delimiter anywhere.**
+D23. `page_shell.MATHJAX_CONFIG_BODY` is the only config and every
+`notes-data` record has `mathjaxConfig: null`. `displayMath`'s `["$$","$$"]`
+deliberately stays: pairing needs two ADJACENT dollars and there are none
+among the 8 literal `$` on the site, all of which are currency.
+
+**`verify_page_shell.py` check 5 counts POPULATED labels, not labels.** The
+`<style>` label is held at 0 as a tripwire for a block coming back, and
+counting it would demand a shape that is meant not to exist. Proved live in
+both directions.
 
 ---
 
