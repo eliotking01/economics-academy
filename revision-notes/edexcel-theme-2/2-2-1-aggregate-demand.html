@@ -71,7 +71,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "Edexcel A-Level Economics Theme 2: The UK Economy — Performance and Policies",
@@ -106,17 +106,16 @@
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\(", "\\)"],
-          ],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\[", "\\]"],
           ],
-          processEscapes: true,
+          processEscapes: true, // Allows \_ in text
           autoload: {
             color: [],
-            ams: ["boldsymbol"],
+            ams: ["boldsymbol"], // For \mathbf{}
           },
         },
         options: {
@@ -125,8 +124,9 @@
       };
     </script>
     <script
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+      id="MathJax-script"
       async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
     <script type="application/ld+json">
       {
@@ -305,9 +305,9 @@
       <!-- END templates/header.html -->
 
       <!-- Main Content -->
-      <section id="main" class="revision-notes-content">
+      <main id="main" class="revision-notes-content">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">›</span>
             <a href="/revision-notes/">Revision Notes</a>
@@ -637,7 +637,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->

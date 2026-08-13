@@ -71,7 +71,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "AQA A-Level Economics: Individual Markets and Market Failure",
@@ -106,9 +106,8 @@
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\(", "\\)"],
-          ], // Both $...$ and \(...\)
+          ], // \(...\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\[", "\\]"],
@@ -305,9 +304,9 @@
       </header>
       <!-- END templates/header.html -->
 
-      <section id="main" class="revision-notes-content">
+      <main id="main" class="revision-notes-content">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">›</span>
             <a href="/revision-notes/">Revision Notes</a>
@@ -580,7 +579,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->

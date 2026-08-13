@@ -113,6 +113,55 @@ def profile(source, templates):
     return counts, refs
 
 
+TRAILER = re.compile(r"^Markup-Change:\s*(\S+)", re.M)
+
+
+def declared(before, after):
+    """Paths declared by a `Markup-Change:` trailer in the range's commits.
+
+    THIS IS verify_text_integrity.declared(), FOR STRUCTURE INSTEAD OF WORDS,
+    and it exists for the same reason. That script gained `Text-Change:`
+    because Wave 5 is nothing but approved content changes and a step that
+    goes red on correct work is ignored within a week. This one had no
+    equivalent, so a DELIBERATE structural change had no way to say so -
+    found on 2026-08-13, when `<section id="main">` became `<main id="main">`
+    on 462 pages (PH06-032, approved in D18's Q20) and this check reported
+    four legitimate `<section>` losses with no way to declare them.
+
+        Markup-Change: revision-notes/index.html
+
+    one line per path, reason in the commit body.
+
+    The three properties that make it a declaration rather than a switch are
+    the ones DO-NOT-BREAK records for its sibling, and they are why this is a
+    trailer rather than a flag, an env var or a skip file:
+
+      * It lives in a commit message, so it applies to exactly that commit
+        and cannot be left on by accident. There is no file to forget.
+      * It is per PATH. Declaring one page and destroying markup on another
+        still fails, which is the accident being guarded against.
+      * It stays in `git log` forever, so the record is the history itself.
+
+    Collected across the whole range, so a merge inherits the declarations of
+    what it merges - CI compares a merge against main's previous tip, and
+    without that every merge of a structural change would be red.
+
+    IT DECLARES A PATH, NOT A TAG. A commit that means to drop one <section>
+    from a page and also drops an <a> from it is still reported, because the
+    <a> loss prints on the same path and the count still rises. The
+    declaration says "this file's structure moves on purpose"; it does not
+    say which parts, and it must not be read as blanket permission.
+    """
+    rng = f"{before}..{after or 'HEAD'}"
+    out = subprocess.run(
+        ["git", "log", "--format=%B", rng],
+        capture_output=True, text=True,
+    )
+    if out.returncode != 0:
+        return set()
+    return set(TRAILER.findall(out.stdout))
+
+
 def main(argv):
     args = [a for a in argv[1:] if not a.startswith("--")]
     strict = "--strict" in argv
@@ -123,6 +172,8 @@ def main(argv):
 
     problems = 0
     gains = 0
+    allowed = declared(before, after)
+    allowed_hit, undeclared_paths = set(), set()
     old_templates = {p: read_at(before, p) for _, p in PLACEHOLDERS}
     new_templates = {p: read_at(after, p) for _, p in PLACEHOLDERS}
     for path in list_files(before):
@@ -139,21 +190,48 @@ def main(argv):
 
         # Only a DROP is a problem. Enrichment legitimately adds elements, and
         # flagging those buries the losses that matter.
+        # A declared path still PRINTS every loss. It is not silenced, it is
+        # only not counted as a problem - so the diff of what a deliberate
+        # structural change actually did stays in the CI log.
+        note = "DECL " if path in allowed else "TAG  "
         for tag in sorted(set(oc) | set(nc)):
             was, now = oc.get(tag, 0), nc.get(tag, 0)
             if now < was:
-                problems += 1
-                print(f"TAG   {path}: <{tag}> {was} -> {now}")
+                if path in allowed:
+                    allowed_hit.add(path)
+                else:
+                    problems += 1
+                    undeclared_paths.add(path)
+                print(f"{note}  {path}: <{tag}> {was} -> {now}")
             elif now > was:
                 gains += 1
 
         for ref in sorted(orefs):
             if orefs[ref] > nrefs.get(ref, 0):
-                problems += 1
-                print(f"REF   {path}: lost {ref!r}")
+                if path in allowed:
+                    allowed_hit.add(path)
+                else:
+                    problems += 1
+                    undeclared_paths.add(path)
+                print(f"{note}  {path}: lost {ref!r}")
 
     print(f"\ncompared {before} -> {after or 'working tree'}: "
           f"{problems} losses, {gains} additions (additions are not problems)")
+    if allowed:
+        print(f"  declared by a Markup-Change: trailer: {len(allowed)}")
+        # Stale rather than dangerous: a copied trailer, or a change reverted
+        # later in the range. Say so, do not fail - a commit message cannot be
+        # amended once it is pushed.
+        for path in sorted(allowed - allowed_hit):
+            print(f"    declared but unchanged: {path}")
+    if problems:
+        print(
+            "\nMarkup was lost on a page no commit in this range declared.\n"
+            "If the change is deliberate and approved, say so in the commit "
+            "message:\n\n    Markup-Change: <path>\n\none line per path, "
+            "reason in the body. If it is not deliberate, this is\nthe "
+            "accident the check exists to catch."
+        )
     return 1 if problems else 0
 
 

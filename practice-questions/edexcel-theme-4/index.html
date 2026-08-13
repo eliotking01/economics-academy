@@ -81,6 +81,12 @@
           "@type": "WebSite",
           "name": "Economics Academy",
           "url": "https://economicsacademy.co.uk"
+        },
+        "publisher": {
+          "@type": "EducationalOrganization",
+          "@id": "https://economicsacademy.co.uk/#organization",
+          "name": "Economics Academy",
+          "url": "https://economicsacademy.co.uk"
         }
       }
     </script>
@@ -287,9 +293,9 @@
       </header>
       <!-- END templates/header.html -->
 
-      <section id="main" class="practice-questions-page">
+      <main id="main" class="practice-questions-page">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">&rsaquo;</span>
             <a href="/practice-questions/">Practice Questions</a>
@@ -716,7 +722,7 @@
             </div>
           </section>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->

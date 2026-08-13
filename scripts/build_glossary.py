@@ -445,11 +445,11 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
       <!-- Header -->
       <div id="header-placeholder"></div>
 
-      <section id="main" class="glossary-page">
+      <main id="main" class="glossary-page">
         <div class="container">
 {body}
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <div id="footer-placeholder"></div>
@@ -885,6 +885,7 @@ def render_landing(data):
         "url": f"{SITE}/revision-notes/glossary/",
         "inLanguage": "en-GB",
         "isPartOf": {"@type": "WebSite", "name": "Economics Academy", "url": SITE},
+        "publisher": shell.ORGANISATION_REF,
         "hasPart": [
             {"@type": "DefinedTermSet",
              "name": f"{m['long']} Glossary",

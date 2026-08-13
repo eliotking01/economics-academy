@@ -39,8 +39,8 @@ THE THREE CHECKS
    chain; DO-NOT-BREAK.md records that it must not be reversed, and until now
    only the *presence* of those links was checked, never their order.
 
-3. Exactly one page loads two `css/pages/*.css` sheets, and it is
-   `revision-notes/macro-application/index.html`. PH08-038's finding that
+3. Only named pages load two `css/pages/*.css` sheets - three of them since
+   2026-08-13, see TWO_SHEET_PAGES below. PH08-038's finding that
    unscoped page sheets are safe depends on this: two of them on one page
    would fight each other, and load order would decide that too. A second
    such page fails here rather than being discovered by eye. Deliberately a
@@ -74,8 +74,25 @@ MAIN = "/css/main.css"
 PAGE_DIR = "/css/pages/"
 
 # Check 3. Two page sheets on one page is a collision the scoping house rule
-# exists to prevent; this is the one place it happens and it is deliberate.
-TWO_SHEET_PAGES = {"revision-notes/macro-application/index.html"}
+# exists to prevent; these are the places it happens and each is deliberate.
+#
+# WAS ONE PATH until 2026-08-13. The two diagram galleries joined it when
+# PH08-042's 136-line <style> block came out of their <head> and became
+# css/pages/revision-notes-diagrams.css - a count going UP, declared in the
+# commit that moved it.
+#
+# The collision this check exists to catch cannot happen on those two: BOTH
+# their sheets are scoped, revision-notes-textbook.css under
+# .revision-notes-content and the new one under .macro-diagrams-page /
+# .micro-diagrams-page, and their <section id="main"> carries both classes.
+# PH08-038's concern is two UNSCOPED sheets, where load order silently
+# decides. Named paths rather than a count, in the spirit of
+# EXPECTED = {"edexcel": 87, "aqa": 79} in build_past_paper_taxonomy.py.
+TWO_SHEET_PAGES = {
+    "revision-notes/macro-application/index.html",
+    "revision-notes/macroeconomics-diagrams.html",
+    "revision-notes/microeconomics-diagrams.html",
+}
 
 
 def tracked(*globs: str) -> list[pathlib.Path]:

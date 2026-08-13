@@ -71,7 +71,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-5-1-demand-for-labour.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "Edexcel A-Level Economics Theme 3: Business Behaviour and the Labour Market",
@@ -101,17 +101,25 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\(", "\\)"],
-          ],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\[", "\\]"],
           ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
         },
       };
     </script>
@@ -298,9 +306,9 @@
       <!-- END templates/header.html -->
 
       <!-- Main Content -->
-      <section id="main" class="revision-notes-content">
+      <main id="main" class="revision-notes-content">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">›</span>
             <a href="/revision-notes/">Revision Notes</a>
@@ -563,7 +571,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->

@@ -581,6 +581,7 @@ def page_shell(title, desc, path, crumbs, body):
             "name": "Economics Academy",
             "url": SITE,
         },
+        "publisher": shell.ORGANISATION_REF,
     }
     head = shell.render_head({
         "title": e(title),
@@ -617,7 +618,7 @@ def page_shell(title, desc, path, crumbs, body):
       <!-- Header -->
       <div id="header-placeholder"></div>
 
-      <section id="main" class="past-paper-questions-page">
+      <main id="main" class="past-paper-questions-page">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             {breadcrumb_html(crumbs)}
@@ -625,7 +626,7 @@ def page_shell(title, desc, path, crumbs, body):
 
 {body}
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <div id="footer-placeholder"></div>

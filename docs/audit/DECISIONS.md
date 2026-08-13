@@ -1131,3 +1131,86 @@ never in a sitemap.
 `site.webmanifest`. All five are referenced, and
 `android-chrome-512x512.png` is additionally D29's target for
 `EducationalOrganization.logo`.
+
+---
+
+## 2026-08-13 · The deliberate normalisations
+
+### D42 — Eight of the eleven ship; one is dropped as a misreading; one is measured and declined
+
+Eliot, 2026-08-13, commissioning the wave and then answering the four
+questions it raised, each with the trade put plainly. **Option A on all four.**
+
+**The wave in one sentence: eleven normalisations approved in D18's Q20 and
+carried since, re-measured against the live tree before any of them was
+built — and three of the eleven did not survive the measurement.**
+
+| Item | Outcome |
+| --- | --- |
+| `inLanguage` → `en-GB` | shipped, 179 nodes |
+| `EducationalOrganization` | shipped, 107 pages, 354 → 461 |
+| Full organisation node | shipped, 4 pages, 1 → 5 |
+| MathJax convergence + `$…$` | shipped, 126 pages |
+| breadcrumb `aria-label` | shipped, 341 pages |
+| 3 real `<style>` blocks | shipped, 10,114 B out of the HTML |
+| `<main id="main">` | shipped, 462 pages |
+| visible breadcrumb | shipped, 19 pages + macro-application |
+| **`WebSite` removal** | **DROPPED — the finding misreads its own evidence** |
+| **preconnect lineage** | **MEASURED AND DECLINED — no round trip to save** |
+| 322 inline `style=` | not started; its own session |
+
+**The `WebSite` item is dropped because PH04-052 reads nested references as
+top-level entities.** It asks for 99 `WebSite` nodes to be deleted, calling
+them site-level entities that "occupy the slot where the publisher should be".
+Measured: **1 is a top-level entity and 99 are the value of an `isPartOf`
+property**. `isPartOf` is how a page says it belongs to a site; it does not
+compete with `publisher`, and `privacy.html` has carried both side by side all
+along. DO-NOT-BREAK already protects the identical construction one property
+along — "the 179 `Course` nodes are `isPartOf` references, not page entities…
+an automated validator will flag these; **it is wrong**". Deleting the 99 would
+have removed correct markup from 99 pages against an existing register entry
+nobody had connected to it.
+
+**The preconnect item is declined on evidence, which is what the register
+asked for.** It forbids aligning the two lineages without measuring LCP.
+Measured: every page carries its preconnect inside the first **4,145 gzipped
+bytes**, and **439 of 463 documents fit entirely** inside TCP's ~14,600-byte
+initial congestion window, so both positions arrive in the same burst. There
+is no round trip between them to save. Two sentences around the counts were
+also wrong: 173 of the 190 "hand-written" late pages are generated.
+
+**The browser probe failed and is committed saying so.** Three configurations,
+and in each it could not distinguish *no preconnect* from *preconnect* — so by
+its own stated rule it cannot speak to where one sits. Kept because it records
+what does not work. This is 4.11's rule applied in advance rather than in
+hindsight: the `none` variant existed from the first run precisely so that a
+null could be believed, and it is what proved the null could not be.
+
+**Two pieces of tooling were built because the wave hit their absence.**
+`compare_trees.py` printed **PASS over a real failure** at `--max-report 0` on
+six of ten assertions, because the capped detail line was what set the verdict;
+its suite was also 31 of 32, not 32, `a7-link-lost` having been silently
+disarmed by Phase 7's baked nav two waves earlier. And
+`verify_markup_integrity.py` had no `Markup-Change:` trailer, so an approved
+structural change had no way to declare itself and would have turned CI red on
+correct work — the exact failure `Text-Change:` was written to prevent.
+
+**The four questions, all answered A.** The publisher node is copied from
+`index.html` verbatim and nothing is invented — the footer links no social
+accounts, and a LinkedIn exists but has never been referenced on the site, so
+it stays out until a URL is given. Breadcrumb wording is lifted from each
+page's own `BreadcrumbList`, so the two copies cannot disagree. The preconnect
+is measured before acting, and the measurement is what declined it. The two
+gallery `<style>` blocks share one file.
+
+**PH06-030 is closed on both halves**, including `macro-application`, which
+was outside the eleven and was approved separately once it was the only page
+left out of step.
+
+**Seven roadmap numbers were wrong**, every one found by measuring first: the
+MathJax split (4 configs on 127 pages; it is 3 on 126), a third figure inside
+`page_shell.py`'s own comment (33 and 18; they are 37 and 19), the preconnect
+attribution, "the reference form the other 354 pages use" (there are six
+roles, not one), the `WebSite` substance, the harness suite's 32, and one of
+mine — I called the two gallery blocks byte-identical when they are the same
+LENGTH, `macro` and `micro` both being five letters.

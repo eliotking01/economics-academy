@@ -77,6 +77,33 @@ SITE = "https://economicsacademy.co.uk"
 BOARDS = json.loads(
     (ROOT / "boards-data" / "boards.json").read_text(encoding="utf-8"))["boards"]
 
+# The publisher, as a reference. Declared once here because four generators
+# emit it and Wave 3.2 spent seven commits removing exactly this kind of
+# restated literal. It is the form the other 353 pages already carry;
+# index.html holds the one COMPLETE node this @id points at, and PH04-055 is
+# what puts the full node on the five entity-homes.
+#
+# @id references are the correct linked-data pattern and are NOT resolved
+# across pages by search engines - which is why the reference has to be on the
+# page at all rather than being left implicit. DO-NOT-BREAK, PH04-055.
+#
+# A caller names the PROPERTY it hangs this off; there is deliberately no
+# helper meaning "the publisher bit of a page", because the right property
+# depends on the node it attaches to. 105 of the 107 pages PH04-052 covers
+# take `publisher`, the standard CreativeWork property; marking.html and
+# tutoring.html are `Service` nodes and take `provider`, which is Service's
+# own property for the same relationship. Same argument as board_data.py
+# never growing a canonical accessor.
+#
+# Proved WIRED rather than merely unbroken: changing "Economics Academy" here
+# alone moved all 99 generated pages, 99 of 99.
+ORGANISATION_REF = {
+    "@type": "EducationalOrganization",
+    "@id": f"{SITE}/#organization",
+    "name": "Economics Academy",
+    "url": SITE,
+}
+
 PRINT_WIDTH = 80   # Prettier's default, and CLAUDE.md pins Prettier 3.9.6
 INDENT = 4         # inside <head>
 
@@ -334,17 +361,33 @@ def render_head(v: dict) -> str:
     return "\n".join(out)
 
 
-# The MathJax configuration, as the 97 baseline pages carry it. The variants
-# are the finding: 33 pages drop the trailing comments, 18 drop `autoload`.
-# Emitting one config is what removes that, and it is a Phase 5 normalisation
-# with its own commit, not something this module decides.
+# THE MathJax configuration. Every page carrying MathJax now emits exactly
+# this, and no notes-data record overrides it - `mathjaxConfig` is null on all
+# of them, so the `or MATHJAX_CONFIG_BODY` fallback below is the only path.
+#
+# Three configs existed until 2026-08-13, and the variants were the finding:
+# 37 pages dropped the three trailing comments and 19 of those also dropped
+# `processEscapes`, `autoload` and `options.skipHtmlTags` entirely. (This
+# comment said 33 and 18; both were wrong, and re-deriving them is what found
+# it. Cite the diff, not a number.)
+#
+# `["$", "$"]` IS GONE FROM inlineMath, and that is D23 rather than tidying.
+# PH08-039 found a PPP table cell reading `₹6,000 ÷ $120 = <strong>₹50 =
+# $1</strong>` - two dollar signs inside one element, which MathJax 3 was
+# entitled to pair and typeset as mathematics. Eliot checked the rendered page
+# and it was correct, so the hazard was latent rather than live; the delimiter
+# is removed anyway so that it stays latent for every future page that
+# mentions a dollar figure. Re-derived 2026-08-13: 8 literal `$` on the whole
+# site, on 2 pages, every one of them currency.
+#
+# `displayMath`'s `["$$", "$$"]` is deliberately LEFT. D23 and PH08-039 both
+# name inlineMath only, pairing needs two ADJACENT dollars, and there are none.
 MATHJAX_CONFIG_BODY = '''    <script>
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\\\(", "\\\\)"],
-          ], // Both $...$ and \\(...\\)
+          ], // \\(...\\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\\\[", "\\\\]"],

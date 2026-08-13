@@ -107,7 +107,15 @@ HAND_WRITTEN = ("root", "notes-other", "past-papers")
 EXPECTED_FAMILIES = {
     # family:        (pages, heads, shells, tails, css sets)
     "root":          (9, 9, 9, 3, 9),
-    "notes-topic":   (166, 4, 1, 1, 1),
+    # 4 head shapes until 2026-08-13, then 3 when PH08-039's MathJax
+    # convergence removed the "without id" markup, then 2 when PH08-042's
+    # <style> block left 1-5-1-market-structures. 166 pages, one <head>
+    # shape between them except for which of the two MathJax states they are
+    # in. Declared here as well as at check 5 ON PURPOSE - the two counts are
+    # measured by different code (this one tokenises the whole <head>, check
+    # 5 classifies by MathJax markup), so a change moving only one of them
+    # would be a real disagreement rather than a missed edit.
+    "notes-topic":   (166, 2, 1, 1, 1),
     "notes-hub":     (7, 2, 2, 1, 2),
     "notes-other":   (3, 2, 3, 1, 2),
     "past-papers":   (5, 2, 2, 1, 2),
@@ -272,13 +280,24 @@ HEAD_EXEMPT = {
 HEAD_EXEMPT["twitter:description"] = HEAD_EXEMPT["twitter:title"]
 
 # ---- checks 5 and 6 ------------------------------------------------------
-# The four <head> shapes among the 166 notes pages, and what tells them apart.
-# PH06 section 1.2's split, re-derived unchanged: 97 / 40 / 28 / 1.
+# The <head> shapes among the 166 notes pages, and what tells them apart.
+#
+# WAS FOUR SHAPES, 97 / 40 / 28 / 1, which was PH06 section 1.2's split
+# re-derived unchanged. It is THREE from 2026-08-13, and the count going down
+# is an improvement declared here rather than absorbed: PH08-039's MathJax
+# convergence removed the "without id" shape entirely, so its 28 pages joined
+# the 97 and made 125.
+#
+# AND TWO from later the same day, which the paragraph above predicted in
+# as many words: PH08-042's 30-line <style> block left
+# 1-5-1-market-structures for css/pages/revision-notes-textbook.css, so its
+# page stopped being a shape of its own and joined the 125. The label is kept
+# in the table with a 0 rather than deleted, because a <style> block coming
+# BACK to a notes page is exactly what this check should catch.
 EXPECTED_NOTES_HEAD_SHAPES = {
-    "mathjax with id": 97,
+    "mathjax with id": 126,
     "no mathjax": 40,
-    "mathjax without id": 28,
-    "mathjax with id + a <style> block": 1,
+    "mathjax with id + a <style> block": 0,
 }
 
 # The content spine is the ordered list of direct children of
@@ -332,11 +351,41 @@ EXPECTED_ALL_LAZY = 8
 # ---- check 8 -------------------------------------------------------------
 # Every page with a breadcrumb writes it twice, visible <nav> and JSON-LD
 # BreadcrumbList. 440 of 441 agree, by hand, with nothing checking. PH06-030.
-EXPECTED_BREADCRUMB = {"visible": 441, "with aria-label": 100, "agree": 440}
-KNOWN_BREADCRUMB_DISAGREEMENT = {
-    "revision-notes/macro-application/index.html":
-        "the JSON-LD opens with Home and the visible trail does not",
-}
+#
+# "with aria-label" WAS 100 and is 441 from 2026-08-13 - a count going UP,
+# declared here in the same commit that moved it. The 100 were the three
+# newest generated families and the 341 were everything older, which PH06-030
+# calls "the clean picture of how this repo drifts: a convention improved, and
+# only the pages behind a generator received the improvement". There is no
+# longer an older half.
+#
+# `agree` stays at 440 deliberately. The aria-label lives on the <nav> opening
+# tag and check 8 reads that separately from the crumb list, so it cannot
+# affect agreement - and the one disagreeing page is PH06-030's, listed in
+# KNOWN_BREADCRUMB_DISAGREEMENT below, which is a different normalisation.
+# `visible` WAS 441 and is 460 from 2026-08-13: PH04-053's 19 pages declared a
+# BreadcrumbList in JSON-LD and rendered no trail at all, which is markup
+# describing content that is not on the page - and, more to the point, left
+# /past-papers/ocr/ and /past-papers/edexcel-b/ with no way back up. They earn
+# 291 clicks and 21,131 impressions between them on ONE inbound link each
+# (PH03-049), so they are the least affordable pages on the site to strand.
+#
+# Each trail was BUILT FROM THAT PAGE'S OWN BreadcrumbList, names copied
+# verbatim, so `agree` rose by the same 19 as `visible` - 440 -> 459 - and the
+# one page still disagreeing is PH06-030's, declared below.
+#
+# `agree` IS 460 OF 460 FROM 2026-08-13 and the exception below is empty.
+# macro-application's visible trail opened at "Revision Notes" while its
+# JSON-LD opened at "Home" - PH06-030's other half, found by P6 comparing
+# extracted names and again by P4 parsing the JSON-LD, and carried here as a
+# declared exception ever since. One line in its notes-data slice closed it.
+EXPECTED_BREADCRUMB = {"visible": 460, "with aria-label": 460, "agree": 460}
+
+# EMPTY, AND KEPT. The loop below still runs over it, so re-declaring a page
+# here is how a future deliberate mismatch would be recorded - and the
+# per-page comparison above is what fails when an accidental one appears. An
+# empty dict is the strongest state this can be in, not a dead variable.
+KNOWN_BREADCRUMB_DISAGREEMENT: dict[str, str] = {}
 
 
 # ---- check 9 -------------------------------------------------------------
@@ -734,9 +783,14 @@ def main() -> int:
     if args.show:
         print("   ", dict(labels))
     shapes = {parsed[p].head_shape() for p in nt}
-    if len(shapes) != len(EXPECTED_NOTES_HEAD_SHAPES):
+    # Against the labels EXPECTED still gives pages to, not the number of
+    # labels. A label held at 0 is a tripwire for a shape coming BACK - the
+    # <style> block is the live example - and counting it here would demand a
+    # shape that is meant not to exist.
+    want_shapes = sum(1 for n in EXPECTED_NOTES_HEAD_SHAPES.values() if n)
+    if len(shapes) != want_shapes:
         r.bad(f"notes-topic has {len(shapes)} <head> shapes, expected "
-              f"{len(EXPECTED_NOTES_HEAD_SHAPES)}")
+              f"{want_shapes}")
     for label, want in EXPECTED_NOTES_HEAD_SHAPES.items():
         got = labels.get(label, 0)
         if got != want:

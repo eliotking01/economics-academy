@@ -381,11 +381,11 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
       <!-- Header -->
       <div id="header-placeholder"></div>
 
-      <section id="main" class="flashcards-page">
+      <main id="main" class="flashcards-page">
         <div class="container">
 {body}
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <div id="footer-placeholder"></div>
@@ -570,6 +570,7 @@ def hub_page(decks):
                        "Edexcel A and AQA, with spaced repetition.",
         "url": f"{SITE}{path}",
         "inLanguage": "en-GB",
+        "publisher": shell.ORGANISATION_REF,
     }
     sections = []
     for board_name in sorted({d["deck"]["boardName"] for d in decks}):

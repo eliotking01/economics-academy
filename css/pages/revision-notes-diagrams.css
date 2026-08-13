@@ -1,0 +1,176 @@
+/* Diagram galleries: /revision-notes/macroeconomics-diagrams.html and
+   /revision-notes/microeconomics-diagrams.html.
+
+   PH08-042. This was a 136-line <style> block in the <head> of BOTH pages -
+   a whole page stylesheet living in the HTML, against the house rule, and
+   two of the site's three real <style> blocks. (The other six are inside
+   <noscript> on the practice-questions hubs and are load-bearing; do not
+   touch them.)
+
+   THE TWO BLOCKS WERE THE SAME FILE TWICE. 3,502 bytes each, 42 lines
+   differing, and every difference is `.macro-diagrams-page` against
+   `.micro-diagrams-page` - substitute one for the other and they are equal.
+   So each rule is written once here carrying both scopes rather than
+   duplicated. That is cascade-neutral: a grouped selector has exactly the
+   specificity of either selector alone.
+
+   It loads AFTER revision-notes-textbook.css on both pages, which is where
+   the <style> block sat, so the cascade is unchanged. Those two pages then
+   join macro-application as the only ones loading two page stylesheets -
+   verify_css_load_order.py holds that at 3. */
+
+.macro-diagrams-page .diagram-intro,
+.micro-diagrams-page .diagram-intro {
+  max-width: 860px;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+
+.macro-diagrams-page .topic-jump-list,
+.micro-diagrams-page .topic-jump-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75em;
+  margin: 2em 0 3em;
+  padding: 0;
+  list-style: none;
+}
+
+.macro-diagrams-page .topic-jump-list li,
+.micro-diagrams-page .topic-jump-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.macro-diagrams-page .topic-jump-list li:before,
+.micro-diagrams-page .topic-jump-list li:before {
+  content: none;
+}
+
+.macro-diagrams-page .topic-jump-list a,
+.micro-diagrams-page .topic-jump-list a {
+  display: block;
+  height: 100%;
+  padding: 0.8em 0.95em;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--light-bg);
+  color: var(--primary-blue);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.macro-diagrams-page .topic-jump-list a:hover,
+.micro-diagrams-page .topic-jump-list a:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+}
+
+.macro-diagrams-page .diagram-topic,
+.micro-diagrams-page .diagram-topic {
+  margin-top: 3em;
+  scroll-margin-top: 2em;
+}
+
+.macro-diagrams-page .diagram-topic:first-of-type,
+.micro-diagrams-page .diagram-topic:first-of-type {
+  margin-top: 1em;
+}
+
+.macro-diagrams-page .diagram-grid,
+.micro-diagrams-page .diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+  align-items: start;
+}
+
+.macro-diagrams-page .diagram-card,
+.micro-diagrams-page .diagram-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  padding: 1.25em;
+}
+
+.macro-diagrams-page .diagram-card h4,
+.micro-diagrams-page .diagram-card h4 {
+  margin: 0.75em 0 0.75em;
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+.macro-diagrams-page .diagram-card p,
+.micro-diagrams-page .diagram-card p {
+  font-size: 0.98em;
+  margin-bottom: 1em;
+}
+
+.macro-diagrams-page .diagram-card__meta,
+.micro-diagrams-page .diagram-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 0.25em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.macro-diagrams-page .diagram-card__meta span,
+.micro-diagrams-page .diagram-card__meta span {
+  background: rgba(42, 137, 152, 0.08);
+  border-left: 3px solid var(--accent-teal);
+  color: var(--secondary-blue);
+  padding: 0.25em 0.5em;
+}
+
+.macro-diagrams-page .diagram-card .diagram-figure,
+.micro-diagrams-page .diagram-card .diagram-figure {
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+.macro-diagrams-page .diagram-card .diagram-image,
+.micro-diagrams-page .diagram-card .diagram-image {
+  width: 100%;
+  height: auto;
+}
+
+.macro-diagrams-page .diagram-card .diagram-caption,
+.micro-diagrams-page .diagram-card .diagram-caption {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.macro-diagrams-page .exam-note,
+.micro-diagrams-page .exam-note {
+  border-left: 4px solid var(--exam-green);
+  background: rgba(39, 174, 96, 0.07);
+  padding: 0.8em 1em;
+  border-radius: 0 8px 8px 0;
+}
+
+.macro-diagrams-page .source-link,
+.micro-diagrams-page .source-link {
+  margin-bottom: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .macro-diagrams-page .diagram-grid,
+  .micro-diagrams-page .diagram-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .macro-diagrams-page .topic-jump-list,
+  .micro-diagrams-page .topic-jump-list {
+    grid-template-columns: 1fr;
+  }
+}

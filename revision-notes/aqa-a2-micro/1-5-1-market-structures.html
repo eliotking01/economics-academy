@@ -71,7 +71,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-1-market-structures.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "AQA A-Level Economics: Individual Markets and Market Failure",
@@ -106,9 +106,8 @@
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\(", "\\)"],
-          ], // Both $...$ and \(...\)
+          ], // \(...\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\[", "\\]"],
@@ -129,123 +128,6 @@
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
-    <!-- Scoped styles: competition spectrum diagram (1.5.1 only) -->
-    <style>
-      .comp-spectrum {
-        margin: 1.75rem 0 2rem;
-      }
-      .comp-spectrum__track {
-        list-style: none;
-        margin: 0 0 1.25rem;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-      }
-      .comp-spectrum__step {
-        position: relative;
-        background: var(--light-bg, #f8fafc);
-        border: 1px solid var(--border-light, #e2e8f0);
-        border-top: 4px solid var(--step-color);
-        border-radius: 8px;
-        padding: 1rem 0.85rem;
-        text-align: center;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-      }
-      /* Chevron connector between cards */
-      .comp-spectrum__step::after {
-        content: "\203A";
-        position: absolute;
-        right: -1.1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.6rem;
-        line-height: 1;
-        font-weight: 700;
-        color: #94a3b8;
-      }
-      .comp-spectrum__step:last-child::after {
-        display: none;
-      }
-      .comp-spectrum__name {
-        display: block;
-        font-weight: 700;
-        font-size: 0.98rem;
-        line-height: 1.25;
-        color: var(--primary-blue, #1a3e72);
-      }
-      .comp-spectrum__firms {
-        display: block;
-        margin-top: 0.35rem;
-        font-size: 0.82rem;
-        color: #5d5d5d;
-      }
-      .comp-spectrum__step--1 {
-        --step-color: #27ae60;
-      }
-      .comp-spectrum__step--2 {
-        --step-color: #9acd32;
-      }
-      .comp-spectrum__step--3 {
-        --step-color: #f57c00;
-      }
-      .comp-spectrum__step--4 {
-        --step-color: #c2185b;
-      }
-      /* Override the shared ".revision-notes-content ol > li" counter styling
-         for this component only (removes the "1." "2." numbering + its indent). */
-      .revision-notes-content .comp-spectrum__step {
-        padding-left: 0.85rem;
-        margin-bottom: 0;
-      }
-      .revision-notes-content .comp-spectrum__step::before {
-        content: none;
-      }
-      .comp-spectrum__axis {
-        display: flex;
-        align-items: center;
-        gap: 0.9rem;
-      }
-      .comp-spectrum__axis-label {
-        font-size: 0.78rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: #64748b;
-        white-space: nowrap;
-      }
-      .comp-spectrum__rail {
-        flex: 1;
-        height: 4px;
-        border-radius: 2px;
-        background: linear-gradient(
-          to right,
-          #27ae60,
-          #9acd32,
-          #f57c00,
-          #c2185b
-        );
-      }
-      @media (max-width: 600px) {
-        .comp-spectrum__track {
-          grid-template-columns: 1fr;
-        }
-        .comp-spectrum__step {
-          border-top: 1px solid var(--border-light, #e2e8f0);
-          border-left: 4px solid var(--step-color);
-        }
-        /* Chevron rotates to point down the stacked column */
-        .comp-spectrum__step::after {
-          top: auto;
-          right: 50%;
-          bottom: -1.3rem;
-          transform: translateX(50%) rotate(90deg);
-        }
-        .comp-spectrum__axis {
-          display: none;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -422,9 +304,9 @@
       </header>
       <!-- END templates/header.html -->
 
-      <section id="main" class="revision-notes-content">
+      <main id="main" class="revision-notes-content">
         <div class="container">
-          <nav class="breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
             <span class="separator">›</span>
             <a href="/revision-notes/">Revision Notes</a>
@@ -574,7 +456,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->

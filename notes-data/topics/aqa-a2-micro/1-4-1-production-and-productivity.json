@@ -30,7 +30,7 @@
     ],
     "mathjaxComment": true,
     "extraPreconnects": [],
-    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ], // Both $...$ and \\(...\\)\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n          processEscapes: true, // Allows \\_ in text\n          autoload: {\n            color: [],\n            ams: [\"boldsymbol\"], // For \\mathbf{}\n          },\n        },\n        options: {\n          skipHtmlTags: [\"script\", \"noscript\", \"style\", \"textarea\", \"pre\"],\n        },\n      };\n    </script>",
+    "mathjaxConfig": null,
     "headStyle": null,
     "mathjax": "with-id",
     "jsonldBeforeIcons": [
@@ -42,7 +42,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-1-production-and-productivity.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "AQA A-Level Economics: Individual Markets and Market Failure",

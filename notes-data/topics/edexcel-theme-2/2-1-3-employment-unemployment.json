@@ -30,9 +30,9 @@
     ],
     "mathjaxComment": true,
     "extraPreconnects": [],
-    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ], // Both $...$ and \\(...\\)\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n          processEscapes: true, // Allows \\_ in text\n          autoload: {\n            color: [],\n            ams: [\"boldsymbol\"], // For \\mathbf{}\n          },\n        },\n        options: {\n          skipHtmlTags: [\"script\", \"noscript\", \"style\", \"textarea\", \"pre\"],\n        },\n      };\n    </script>",
+    "mathjaxConfig": null,
     "headStyle": null,
-    "mathjax": "no-id",
+    "mathjax": "with-id",
     "jsonldBeforeIcons": [
       {
         "@context": "https://schema.org",
@@ -42,7 +42,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "Edexcel A-Level Economics Theme 2: The UK Economy — Performance and Policies",

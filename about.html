@@ -78,6 +78,32 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "@id": "https://economicsacademy.co.uk/#organization",
+        "name": "Economics Academy",
+        "url": "https://economicsacademy.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://economicsacademy.co.uk/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Free A-Level Economics revision notes and past papers for Edexcel, AQA, and OCR, plus expert 1-on-1 tutoring and paper marking.",
+        "sameAs": [
+          "https://tutorful.co.uk/tutors/qlorq3vr"
+        ],
+        "founder": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
           {
@@ -254,8 +280,14 @@
       </header>
       <!-- END templates/header.html -->
       <!-- Main Content -->
-      <section id="main">
+      <main id="main">
         <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">&rsaquo;</span>
+            <span>About</span>
+          </nav>
+
           <!-- Profile Section -->
           <section class="profile-highlight">
             <div class="row">
@@ -477,7 +509,7 @@
             </ul>
           </section>
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->

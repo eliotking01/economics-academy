@@ -28,9 +28,9 @@
     "pageStylesheets": [
       "/css/pages/revision-notes-textbook.css"
     ],
-    "mathjaxComment": false,
+    "mathjaxComment": true,
     "extraPreconnects": [],
-    "mathjaxConfig": "    <script>\n      window.MathJax = {\n        tex: {\n          inlineMath: [\n            [\"$\", \"$\"],\n            [\"\\\\(\", \"\\\\)\"],\n          ],\n          displayMath: [\n            [\"$$\", \"$$\"],\n            [\"\\\\[\", \"\\\\]\"],\n          ],\n        },\n      };\n    </script>",
+    "mathjaxConfig": null,
     "headStyle": null,
     "mathjax": "with-id",
     "jsonldBeforeIcons": [
@@ -42,7 +42,7 @@
         "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-2-1-business-objectives.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
-        "inLanguage": "en",
+        "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "Course",
           "name": "Edexcel A-Level Economics Theme 3: Business Behaviour and the Labour Market",
