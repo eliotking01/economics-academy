@@ -373,11 +373,19 @@ EXPECTED_ALL_LAZY = 8
 # Each trail was BUILT FROM THAT PAGE'S OWN BreadcrumbList, names copied
 # verbatim, so `agree` rose by the same 19 as `visible` - 440 -> 459 - and the
 # one page still disagreeing is PH06-030's, declared below.
-EXPECTED_BREADCRUMB = {"visible": 460, "with aria-label": 460, "agree": 459}
-KNOWN_BREADCRUMB_DISAGREEMENT = {
-    "revision-notes/macro-application/index.html":
-        "the JSON-LD opens with Home and the visible trail does not",
-}
+#
+# `agree` IS 460 OF 460 FROM 2026-08-13 and the exception below is empty.
+# macro-application's visible trail opened at "Revision Notes" while its
+# JSON-LD opened at "Home" - PH06-030's other half, found by P6 comparing
+# extracted names and again by P4 parsing the JSON-LD, and carried here as a
+# declared exception ever since. One line in its notes-data slice closed it.
+EXPECTED_BREADCRUMB = {"visible": 460, "with aria-label": 460, "agree": 460}
+
+# EMPTY, AND KEPT. The loop below still runs over it, so re-declaring a page
+# here is how a future deliberate mismatch would be recorded - and the
+# per-page comparison above is what fails when an accidental one appears. An
+# empty dict is the strongest state this can be in, not a dead variable.
+KNOWN_BREADCRUMB_DISAGREEMENT: dict[str, str] = {}
 
 
 # ---- check 9 -------------------------------------------------------------
