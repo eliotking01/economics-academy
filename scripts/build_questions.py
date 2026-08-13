@@ -1277,6 +1277,12 @@ def render_hub(by_board):
 
     body = f"""      <main id="main" class="practice-questions-page">
         <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">&rsaquo;</span>
+            <span>Practice Questions</span>
+          </nav>
+
           <section class="pq-hero">
             <h1 class="pq-h1">Free A-Level Economics Practice Questions</h1>
             <p class="pq-intro">

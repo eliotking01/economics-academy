@@ -363,7 +363,17 @@ EXPECTED_ALL_LAZY = 8
 # tag and check 8 reads that separately from the crumb list, so it cannot
 # affect agreement - and the one disagreeing page is PH06-030's, listed in
 # KNOWN_BREADCRUMB_DISAGREEMENT below, which is a different normalisation.
-EXPECTED_BREADCRUMB = {"visible": 441, "with aria-label": 441, "agree": 440}
+# `visible` WAS 441 and is 460 from 2026-08-13: PH04-053's 19 pages declared a
+# BreadcrumbList in JSON-LD and rendered no trail at all, which is markup
+# describing content that is not on the page - and, more to the point, left
+# /past-papers/ocr/ and /past-papers/edexcel-b/ with no way back up. They earn
+# 291 clicks and 21,131 impressions between them on ONE inbound link each
+# (PH03-049), so they are the least affordable pages on the site to strand.
+#
+# Each trail was BUILT FROM THAT PAGE'S OWN BreadcrumbList, names copied
+# verbatim, so `agree` rose by the same 19 as `visible` - 440 -> 459 - and the
+# one page still disagreeing is PH06-030's, declared below.
+EXPECTED_BREADCRUMB = {"visible": 460, "with aria-label": 460, "agree": 459}
 KNOWN_BREADCRUMB_DISAGREEMENT = {
     "revision-notes/macro-application/index.html":
         "the JSON-LD opens with Home and the visible trail does not",
