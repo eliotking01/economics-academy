@@ -1970,16 +1970,62 @@ never been written; it exists now and runs on import.
 
 ---
 
-# HANDOVER — 2026-08-13. ALL ELEVEN NORMALISATIONS ARE SETTLED
+### The three audit follow-ups, 2026-08-13. Two were aimed at the wrong thing
 
-**D18 Q20's approved normalisations are finished.** Twenty-one commits over two
-branches: `wave-normalisations` (D42, ten items) and
-`wave-norm-inline-styles` (D43, item `f`). Nine shipped, `i` DROPPED as a
-misreading of its own finding, `d` MEASURED and declined.
+Three commits on `audit-followups`, D44 and D45. **0 published bytes changed.**
 
-**`wave-norm-inline-styles` is NOT merged.** Eight commits, branched off
-`68a9b23`, 22/22 workflow steps green on its tip. Merging needs Eliot's
-approval, as does any push.
+| Commit | Item | Outcome |
+| --- | --- | --- |
+| `c359c11` | Wave 4.7 | **NOT closed.** The metric changed meaning |
+| `7b07ced` | `compare_trees.py` → `scripts/` | moved; the SUITE joins CI, not the comparison |
+| `6d2cb88` | PH06-027 | **DELETED, not repaired.** 942 lines |
+
+**Wave 4.7 was reported as already done and that was wrong.** `link_depth.py`
+prints 0 pages at depth ≥ 4 — PH03-048's exact target — only because Phase 7
+baked the nav into every page, making its RAW graph identical to INJECTED
+(`{0:1, 1:29, 2:350, 3:81}` both ways). A third **CONTENT** graph is now
+printed: **253 pages at depth ≥ 4**, depth 1 exactly the four pages
+DO-NOT-BREAK names. PH03-048's 8 prescribed links do not exist. **The register
+was never stale; the script changed under it.**
+
+**`compare_trees.py` cannot be a workflow step**, measured: assertion 8 asserts
+everything outside `--family` is byte-identical, so with no `--family` it is
+red on any commit touching any file. **Its 39-case suite is the 23rd step
+instead** — and that is the half that had silently rotted to 31 of 32.
+
+**PH06-027 is closed by deletion.** Its inputs measured **0 of 73** in sync
+with their live pages (worst 38%), and it wrote into a path
+`build_notes_pages.py` now generates. Repairing the `<head>` would have made
+correct markup around stale content. `notes_drift.py` section 5 is now its
+tripwire, asserting the script's absence.
+
+---
+
+# HANDOVER — 2026-08-13. THE AUDIT ROADMAP IS DOWN TO ITS DATED AND CONTENT WORK
+
+**Everything runnable is done.** Waves 0–4 are complete except the five items
+held for the GSC re-measure; Wave 5 is content and needs approval per item.
+D18 Q20's eleven normalisations are finished (D42, D43); the three follow-ups
+are finished (D44, D45).
+
+**What is left, and there is nothing else:**
+
+| | Item | Gate |
+| --- | --- | --- |
+| **Dated** | Wave 3.4, 4.7, 4.8, PH05-019/020/021, PH03-049 step 2 | ≈2026-09-22, D45 |
+| **Content** | Wave 5.1–5.3, the 78 SVG/PNG diagram pairs | Eliot, per item |
+| **Content** | Wave 5.4 / PH06-031, the 3 malformed notes pages | Eliot, explicitly outside D18 |
+
+**The five dated items are a MEASUREMENT hold, not a risk hold — D45.** They
+change board display labels, the AQA `<h1>` prefix and internal linking, all
+of which Google is re-crawling; acting first would mean changing the thing
+being measured. Nothing decays and the date is the only gate.
+
+**Wave 5.1–5.3 has a precondition nobody has answered:** 83 SVGs exist, 78 have
+a ground-truth PNG, and **5 have none** — `exchange-rate-{appreciation,
+depreciation}`, `indirect-tax-{elastic,inelastic}-demand`,
+`lras-shift-keynesian`. 5.1's method is "verify against the PNG", so those five
+need their own answer before 5.3 swaps anything.
 
 **Two verifiers were repaired on the way**, both because this wave hit their
 absence: `compare_trees.py` printed PASS over a real failure at
@@ -2041,9 +2087,10 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
    jQuery" block on 2026-08-11 — what `nav.js` may and may not take over from
    CSS, why check 2 does not import the constant it checks, and four things
    about driving headless Chrome that cost hours each. 4.11 added to it.
-2. **`DECISIONS.md` is D1–D44.** D42 is the ten normalisations, D43 is item
-   (f), D44 is the three follow-ups — and two of those three were aimed at the
-   wrong thing, which is the pattern worth carrying forward.
+2. **`DECISIONS.md` is D1–D45.** D42 the ten normalisations, D43 item (f),
+   D44 the three follow-ups, D45 why the five dated items are held. **Two of
+   D44's three were aimed at the wrong thing** — that is the pattern worth
+   carrying forward, not the outcomes.
 3. **The workflow is 23 steps** — cite the file, not the number; it was 21
    until 2026-08-13, when `verify_inline_styles.py` and then
    `test_compare_trees.py` joined.
@@ -2142,15 +2189,25 @@ stays as historical drafts; `notes_drift.py` section 5 is now the tripwire.
 
 4.7, 4.8, Wave 3.4, PH05-019/020/021 and PH03-049 step 2.
 
+**Why all five are blocked — Eliot, 2026-08-13, D45.** It had never been
+written down, and PH11's own dated-dependency section names only three of the
+five, which is what left 4.7 and 4.8 unexplained through five waves:
+
+> "These are blocked because they all touch things Google is currently
+> re-crawling — board display labels, the AQA `<h1>` spec-code prefix,
+> internal linking. Acting before the re-measure would mean changing the thing
+> you're about to measure, and you'd lose the ability to tell whether an
+> improvement came from the earlier SEO work or the new change."
+
+**A measurement-integrity hold, not a risk hold.** Nothing on the list is
+dangerous and nothing decays. **The date is the only gate** — the re-measure
+is itself the evidence needed to start any of them.
+
 **4.7 was reported as already done on 2026-08-13 and that was wrong** — see
 D44. `link_depth.py` shows 0 pages at depth ≥ 4 only because Phase 7's baked
 nav made its RAW graph identical to INJECTED. On the CONTENT graph the script
 now also prints, **253 pages sit at depth ≥ 4** and PH03-048's 8 prescribed
-links do not exist. **Why 4.7 and 4.8 are on this list is still not recorded
-anywhere** — no DECISIONS entry, and PH11's own dated-dependency section names
-only PH05-019/020/021 and PH03-049 step 2. The only coherent reason is that
-both change internal linking or anchor text and would contaminate the day-45
-read; that is an inference, not a decision, and Eliot has not confirmed it.
+links do not exist.
 
 ## One stale line found in passing, not this wave's to fix
 

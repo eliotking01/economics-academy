@@ -1376,3 +1376,38 @@ after the move `REPO` would be `parents[1]`; it is `parents[0]`, because
 `HARNESS` is the directory holding the file. The "cannot find the repo root …
 fix REPO" guard beneath it is what would have caught that, and is why it is
 there.
+
+### D45 — Why the five dated items are blocked, recorded at last
+
+Eliot, 2026-08-13, asked directly because the reason existed in conversation
+and **in no document**. D44 had to record my inference instead, flagged as one.
+This replaces it with his words:
+
+> "These are blocked because they all touch things Google is currently
+> re-crawling — board display labels, the AQA `<h1>` spec-code prefix,
+> internal linking. Acting before the re-measure would mean changing the thing
+> you're about to measure, and you'd lose the ability to tell whether an
+> improvement came from the earlier SEO work or the new change. That's the only
+> reason for the date."
+
+**The five: Wave 3.4, 4.7, 4.8, PH05-019/020/021, PH03-049 step 2.** Blocked
+until ≈2026-09-22, the day-45 GSC re-measure.
+
+**This is a measurement-integrity hold, not a risk hold.** Nothing on the list
+is dangerous and nothing decays; each is deferred so that one experiment stays
+readable. Two consequences worth stating, because they decide what the
+unblocking looks like:
+
+- **The date is the only gate.** No further evidence is needed to start any of
+  them once the re-measure is taken — the re-measure *is* the evidence.
+- **It explains why the list is wider than PH11's own "dated dependency"
+  section**, which names only PH05-019/020, PH05-021 and PH03-049 step 2.
+  3.4 (board display labels), 4.7 (8 new internal links) and 4.8 (166 anchor
+  texts) are on the list for the same reason without PH11 saying so, and that
+  gap is what left 4.7 and 4.8 unexplained through five waves.
+
+**PH05-019/020 has a second, independent reason** already recorded in PH11 and
+unaffected by this: all 26 AQA "excluded by noindex" URLs had the tag removed
+on 2026-07-30, nine days before the export, so the window is contaminated and
+any duplication conclusion drawn from it is unsound — including one drawn from
+the audit's own similarity numbers.
