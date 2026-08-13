@@ -98,17 +98,25 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\(", "\\)"],
-          ],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\[", "\\]"],
           ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
         },
       };
     </script>

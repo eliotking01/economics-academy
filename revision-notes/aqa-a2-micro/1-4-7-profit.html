@@ -100,9 +100,8 @@
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\(", "\\)"],
-          ], // Both $...$ and \(...\)
+          ], // \(...\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\[", "\\]"],

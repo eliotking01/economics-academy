@@ -361,17 +361,33 @@ def render_head(v: dict) -> str:
     return "\n".join(out)
 
 
-# The MathJax configuration, as the 97 baseline pages carry it. The variants
-# are the finding: 33 pages drop the trailing comments, 18 drop `autoload`.
-# Emitting one config is what removes that, and it is a Phase 5 normalisation
-# with its own commit, not something this module decides.
+# THE MathJax configuration. Every page carrying MathJax now emits exactly
+# this, and no notes-data record overrides it - `mathjaxConfig` is null on all
+# of them, so the `or MATHJAX_CONFIG_BODY` fallback below is the only path.
+#
+# Three configs existed until 2026-08-13, and the variants were the finding:
+# 37 pages dropped the three trailing comments and 19 of those also dropped
+# `processEscapes`, `autoload` and `options.skipHtmlTags` entirely. (This
+# comment said 33 and 18; both were wrong, and re-deriving them is what found
+# it. Cite the diff, not a number.)
+#
+# `["$", "$"]` IS GONE FROM inlineMath, and that is D23 rather than tidying.
+# PH08-039 found a PPP table cell reading `₹6,000 ÷ $120 = <strong>₹50 =
+# $1</strong>` - two dollar signs inside one element, which MathJax 3 was
+# entitled to pair and typeset as mathematics. Eliot checked the rendered page
+# and it was correct, so the hazard was latent rather than live; the delimiter
+# is removed anyway so that it stays latent for every future page that
+# mentions a dollar figure. Re-derived 2026-08-13: 8 literal `$` on the whole
+# site, on 2 pages, every one of them currency.
+#
+# `displayMath`'s `["$$", "$$"]` is deliberately LEFT. D23 and PH08-039 both
+# name inlineMath only, pairing needs two ADJACENT dollars, and there are none.
 MATHJAX_CONFIG_BODY = '''    <script>
       window.MathJax = {
         tex: {
           inlineMath: [
-            ["$", "$"],
             ["\\\\(", "\\\\)"],
-          ], // Both $...$ and \\(...\\)
+          ], // \\(...\\) only - the $...$ delimiter was removed, D23
           displayMath: [
             ["$$", "$$"],
             ["\\\\[", "\\\\]"],

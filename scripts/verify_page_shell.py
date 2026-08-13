@@ -107,7 +107,12 @@ HAND_WRITTEN = ("root", "notes-other", "past-papers")
 EXPECTED_FAMILIES = {
     # family:        (pages, heads, shells, tails, css sets)
     "root":          (9, 9, 9, 3, 9),
-    "notes-topic":   (166, 4, 1, 1, 1),
+    # 4 head shapes until 2026-08-13; PH08-039's MathJax convergence took it
+    # to 3. Declared here as well as at check 5 ON PURPOSE - the two counts
+    # are measured by different code (this one tokenises the whole <head>,
+    # check 5 classifies by MathJax markup), so a change that moved only one
+    # of them would be a real disagreement rather than a missed edit.
+    "notes-topic":   (166, 3, 1, 1, 1),
     "notes-hub":     (7, 2, 2, 1, 2),
     "notes-other":   (3, 2, 3, 1, 2),
     "past-papers":   (5, 2, 2, 1, 2),
@@ -272,12 +277,21 @@ HEAD_EXEMPT = {
 HEAD_EXEMPT["twitter:description"] = HEAD_EXEMPT["twitter:title"]
 
 # ---- checks 5 and 6 ------------------------------------------------------
-# The four <head> shapes among the 166 notes pages, and what tells them apart.
-# PH06 section 1.2's split, re-derived unchanged: 97 / 40 / 28 / 1.
+# The <head> shapes among the 166 notes pages, and what tells them apart.
+#
+# WAS FOUR SHAPES, 97 / 40 / 28 / 1, which was PH06 section 1.2's split
+# re-derived unchanged. It is THREE from 2026-08-13, and the count going down
+# is an improvement declared here rather than absorbed: PH08-039's MathJax
+# convergence removed the "without id" shape entirely, so its 28 pages joined
+# the 97 and made 125.
+#
+# The one <style> page stays its own shape and is NOT a fourth MathJax
+# variant - it is PH08-042's 30-line block on 1-5-1-market-structures, which
+# is a separate normalisation with its own commit. When that block moves to
+# CSS this becomes two shapes and 126.
 EXPECTED_NOTES_HEAD_SHAPES = {
-    "mathjax with id": 97,
+    "mathjax with id": 125,
     "no mathjax": 40,
-    "mathjax without id": 28,
     "mathjax with id + a <style> block": 1,
 }
 
