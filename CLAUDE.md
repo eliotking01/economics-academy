@@ -70,6 +70,15 @@ slice of each page's content plus its lifted metadata — **do not hand-edit a
 notes page, edit the slice and re-run**. `scripts/extract_notes_pages.py` is the
 one-off that created them and defaults to a dry run.
 
+**A NEW topic page is a slice plus its metadata JSON, then a rebuild** — there
+is no markdown-to-page path any more. `scripts/convert_raw_notes.py` was
+deleted on 2026-08-13 (D44): it wrote a whole page into a path
+`build_notes_pages.py` now generates, and its 73 markdown sources in
+`raw-notes/` measured **0 of 73** still in sync with their live pages, worst
+case 38% word overlap. Those files stay as historical drafts and are not a
+build input. Do not restore the script to "fix" its `<head>`; the `<head>` was
+never the problem, and `page_shell.py` owns it now anyway.
+
 **The header and footer are baked into all 463 pages at build time.** Nothing
 is fetched at page load. `js/components/nav.js` builds the mobile `#navPanel`
 and `#titleBar` from `#nav` and adds the two things CSS cannot do for the
@@ -190,7 +199,7 @@ css/main.css                                                    site-wide
 css/pages/<page>.css                                            one per page
 js/components/, js/data/                                        hand-written; the rest is vendor
 images/diagrams/                                                112 note diagram PNGs (+83 SVGs in svg/)
-raw-notes/edexcel/<spec-code>.md                                markdown source for converted notes
+raw-notes/edexcel/<spec-code>.md                                HISTORICAL drafts, 0 of 73 in sync - see below
 revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
 glossary-data/                                                  glossary source of truth
 boards-data/boards.json                                         canonical board identity, read by 5 generators via scripts/board_data.py

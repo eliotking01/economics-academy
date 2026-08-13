@@ -176,28 +176,29 @@ def breadcrumb_drift():
 # ------------------------------------------------- 5. the stale notes template
 
 def stale_template():
-    src = open("scripts/convert_raw_notes.py", encoding="utf-8").read()
-    i = src.find('return f"""<!doctype html>')
-    tpl = src[i:src.find("def resolve_paths")]
-    live = lib.read("revision-notes/edexcel-theme-1/1-1-1-economics-as-a-social-science.html")
-    print("\n=== 5. scripts/convert_raw_notes.py already contains a full page template ===")
-    print(f"  template found at scripts/convert_raw_notes.py:{src[:i].count(chr(10)) + 1}, "
-          f"{len(tpl)} bytes")
-    print(f"  {'feature':32} {'template':>9} {'live page':>10}")
-    for label, needle in [
-        ('lang="en-GB"', 'lang="en-GB"'),
-        ("canonical", 'rel="canonical"'),
-        ("og: tags", "og:"),
-        ("twitter: tags", "twitter:"),
-        ("JSON-LD blocks", "ld+json"),
-        ("LearningResource", "LearningResource"),
-        ("BreadcrumbList", "BreadcrumbList"),
-        ("hoisted font/fontawesome css", "fontawesome-all.min.css"),
-        ("preconnect", 'rel="preconnect"'),
-        ("notes-cta", 'class="notes-cta"'),
-        ("notes-questions-link", "notes-questions-link"),
-    ]:
-        print(f"  {label:32} {tpl.count(needle):>9} {live.count(needle):>10}")
+    """PH06-027 is CLOSED by deletion, and this section is now its tripwire.
+
+    It used to lift the page template out of scripts/convert_raw_notes.py and
+    count how many of eleven `<head>` features it was missing against a live
+    page. That was the evidence for PH06-027. On 2026-08-13 the script was
+    deleted rather than repaired, D44, so there is no template left to measure
+    - and a section that silently prints nothing is how a closed finding comes
+    back. So it asserts the absence instead.
+    """
+    import os
+    print("\n=== 5. the stale notes template (PH06-027, closed by deletion) ===")
+    if not os.path.exists("scripts/convert_raw_notes.py"):
+        print("  scripts/convert_raw_notes.py: absent, as expected since D44.")
+        print("  A new topic page is a notes-data/ slice plus its metadata JSON,")
+        print("  rendered by scripts/build_notes_pages.py through page_shell.py.")
+        return
+    print("  scripts/convert_raw_notes.py IS BACK.")
+    print("  It was deleted on 2026-08-13 (D44) because it wrote a whole page")
+    print("  into a path that build_notes_pages.py now generates, from sources")
+    print("  measured 0-of-73 in sync with their live pages. If it has been")
+    print("  restored deliberately, re-read D44 first: the <head> was never the")
+    print("  real problem.")
+    raise SystemExit(1)
 
 
 # ------------------------------------------------------ 6. cost of a change

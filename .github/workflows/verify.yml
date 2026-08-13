@@ -219,6 +219,8 @@ jobs:
 #     Markup-Change: do for 2 and 4. Its test suite runs instead, above.
 #
 #   scripts/convert_raw_notes.py
-#     Must not be run at all. Its page template predates seven SEO commits and
-#     would emit a page with no canonical, no social cards, no structured data
-#     and no web fonts. PH06-027, and in DO-NOT-BREAK.md.
+#     DELETED on 2026-08-13, D44, rather than repaired. It wrote a whole page
+#     into a path build_notes_pages.py now generates, from markdown sources
+#     measured 0-of-73 in sync with their live pages. PH06-027 asked for its
+#     <head> to be fixed; the <head> was never the problem. notes_drift.py
+#     section 5 now asserts its absence.

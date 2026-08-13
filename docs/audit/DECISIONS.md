@@ -1306,3 +1306,73 @@ is a tag); assertion 5 **passed** where I predicted it would move, because
 `head_fields()` reads only `lang`, `title`, `meta:*`, `og:*`, `twitter:*` and
 `rel="canonical"` and is structurally blind to a stylesheet link; and I did not
 anticipate the `--body-only` gap at all.
+
+### D44 — Three audit follow-ups: 4.7 reopened, the harness moves, `convert_raw_notes.py` is deleted
+
+Eliot, 2026-08-13, after item (f) merged. Three items were picked off the
+remaining list. **Two of the three turned out to be aimed at the wrong thing**,
+and both were measured before anything was built.
+
+**Wave 4.7 is NOT already done, and I said it was.** `link_depth.py` reports
+**0 pages at click depth ≥ 4**, which is exactly PH03-048's target — so I
+reported the item as closed. It is not. Wave 2 Phase 7 baked the header and
+footer into all 463 pages, and `link_depth.py`'s "RAW" graph meant "the page's
+own links, WITHOUT the nav" **only because the nav used to be fetched at
+runtime**. Now every template link is in every page's HTML, so RAW and INJECTED
+are **numerically identical** — `{0:1, 1:29, 2:350, 3:81}` — and the pair went
+on printing as though it were two measurements. PH03-048's own prescription is
+8 links and **none of them exists**, checked link by link.
+
+A **third graph, CONTENT**, is added rather than the pair being reinterpreted,
+because a metric that changes meaning silently is worse than one that is
+missing. On it: **253 pages at depth ≥ 4**, and depth 1 is **exactly the four
+pages DO-NOT-BREAK names**. Both answers are true: SERVED is honest for
+**discovery** (max depth 3 with JavaScript off, which Phase 7 bought), CONTENT
+is honest for **link equity**, because search engines discount sitewide
+boilerplate. **The register was never stale** — the script changed under it.
+4.7 stays open and stays blocked on the day-45 re-measure.
+
+**`compare_trees.py` moves to `scripts/`, and its SUITE is what joins CI —
+not the comparison.** PH06 section 3 asks for the move; PROGRESS carried "and
+add it to the workflow" alongside it. The comparison cannot be a per-commit
+step: **assertion 8 asserts everything outside `--family` is byte-identical**,
+so with no `--family` it fails on any commit that changes any file — measured
+on a docs-only commit, where 1–7 and 10 passed and 8 flagged both files. A
+check that is always red protects nothing.
+
+The **suite** needs no second tree, and it is the half that actually rotted:
+31 of 32 for two waves, because Phase 7's baked nav gave every page a second
+`/tutoring.html` link and disarmed `a7-link-lost`. 39 cases, ~2m30s, in the
+second job. **Option A on the follow-up question: no declaration mechanism is
+built** for assertions 1, 3, 5, 6 and 7. The comparison stays a manual
+per-wave gate, which is how it has been used successfully for five waves.
+
+**`scripts/convert_raw_notes.py` is DELETED, not repaired. Option A.** PH06-027
+asks for its page template to be replaced by `page_shell.py`. Two measurements
+make that the wrong fix:
+
+- **It writes a whole page into a path that is now generated.**
+  `build_notes_pages.py` renders all 173 notes pages from `notes-data/`, so its
+  output would be overwritten by the next build, with `verify_generated.py` red
+  in between.
+- **Its inputs are 0 of 73 in sync with their live pages.** Every markdown
+  source was compared against the page carrying its spec code: **not one
+  reached 95% word coverage, and the worst is 38%**. The pages are descendants
+  of those drafts, edited well past them. Running it would overwrite a live
+  page with an older draft — a content change, needing approval every time.
+
+Repairing it would have produced correct markup around stale content in a path
+that regenerates. **This is the third time the roadmap has described work that
+should not be done at all**, after `loading="lazy"` and item (i).
+
+`raw-notes/` **stays**, all 73 files, unpublished, as the historical drafts
+they are. A new topic page is a `notes-data/` slice plus its metadata JSON,
+rendered through `page_shell.py`. `notes_drift.py` section 5 was PH06-027's
+evidence and is now its tripwire: it asserts the script's **absence** and exits
+1 if it returns, proved both ways.
+
+**One wrong number, in the moved script's own comment.** It predicted that
+after the move `REPO` would be `parents[1]`; it is `parents[0]`, because
+`HARNESS` is the directory holding the file. The "cannot find the repo root …
+fix REPO" guard beneath it is what would have caught that, and is why it is
+there.

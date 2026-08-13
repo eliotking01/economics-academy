@@ -287,13 +287,43 @@ Re-check with the commands given. All measured 2026-08-08 on `8c8034b`.
 
 ## HTML architecture (added by P6)
 
-**`scripts/convert_raw_notes.py` must not be run as-is.** Its page template
+~~**`scripts/convert_raw_notes.py` must not be run as-is.** Its page template
 (line 785) predates seven SEO commits: it emits no canonical, no `og:`/`twitter:`
 tags, neither JSON-LD block, `lang="en"` instead of `en-GB`, no `notes-cta`, and
 — because `4db232c` removed the two `@import` rules from `css/main.css` — **no web
 fonts and no FontAwesome**. CLAUDE.md names `raw-notes/` as the source for
 converted notes without recording this. 73 markdown sources are still sitting
-there. PH06-027.
+there. PH06-027.~~
+
+> **CLOSED 2026-08-13, D44. THE SCRIPT IS DELETED, not repaired, and the
+> `<head>` was never the real problem.** PH06-027 asks for its template to be
+> replaced by `page_shell.py`. Measured before building, two things make that
+> the wrong fix:
+>
+> - **It writes a whole page into a path that is now GENERATED.**
+>   `build_notes_pages.py` renders all 173 notes pages from `notes-data/`, so
+>   anything it wrote would be overwritten by the next build and
+>   `verify_generated.py` would be red in between. A corrected `<head>` does
+>   not change that.
+> - **Its inputs are 0 of 73 in sync with their live pages.** Every markdown
+>   source was compared against the page carrying its spec code; **not one
+>   reached 95% word coverage and the worst is 38%**. The pages are descendants
+>   of those drafts and have been edited well past them. Running the script
+>   would overwrite a live page with an older draft — a **content change**,
+>   which needs explicit approval every time.
+>
+> So repairing it would have produced correct markup around stale content, in
+> a path that regenerates. **Third time the roadmap has described work that
+> should not be done at all**, after `loading="lazy"` and item (i).
+>
+> **`raw-notes/` stays**, all 73 files, unpublished, as the historical drafts
+> they are. **A new topic page is a `notes-data/` slice plus its metadata JSON,
+> rendered by `scripts/build_notes_pages.py`** — `page_shell.py` owns the
+> `<head>`, so the whole class of defect this entry described cannot recur.
+>
+> `notes_drift.py` section 5 was the evidence for PH06-027 and is now its
+> tripwire: it asserts the script's **absence** and exits 1 if it returns.
+> Proved both ways.
 
 **The `spec-alert` and `notes-cta` blocks stay per-page, never in a shared
 layout.** P5 measured them as the load-bearing board differentiation on the 22
@@ -693,8 +723,9 @@ and kept these; do not re-propose them on the strength of the census line.
 `fix_font_loading.py`, `fix_links.py`, `fix_structured_data.py`,
 `add_diagram_gallery_links.py`, `upgrade_pastpaper_links.py`. Keep it that way.
 They have already been applied once and the site has moved on since; a no-flag
-re-run must stay harmless. Contrast `convert_raw_notes.py`, which has no guard —
-PH06-027.
+re-run must stay harmless. ~~Contrast `convert_raw_notes.py`, which has no guard
+— PH06-027.~~ **That script was deleted on 2026-08-13, D44**; the contrast it
+drew is now history rather than a live hazard.
 
 ~~**`verify_liquid.py` exits 1 and that is the expected state.** PH00-011 is a
 pre-existing false positive. Do NOT add this script to a CI workflow before

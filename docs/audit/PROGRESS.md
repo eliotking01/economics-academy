@@ -2041,10 +2041,12 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
    jQuery" block on 2026-08-11 — what `nav.js` may and may not take over from
    CSS, why check 2 does not import the constant it checks, and four things
    about driving headless Chrome that cost hours each. 4.11 added to it.
-2. **`DECISIONS.md` is D1–D43.** D42 is the ten normalisations, D43 is item (f).
-3. **The workflow is 22 steps** — cite the file, not the number; it was 21
-   until 2026-08-13, when `verify_inline_styles.py` joined. All 22 are green
-   on `wave-norm-inline-styles`.
+2. **`DECISIONS.md` is D1–D44.** D42 is the ten normalisations, D43 is item
+   (f), D44 is the three follow-ups — and two of those three were aimed at the
+   wrong thing, which is the pattern worth carrying forward.
+3. **The workflow is 23 steps** — cite the file, not the number; it was 21
+   until 2026-08-13, when `verify_inline_styles.py` and then
+   `test_compare_trees.py` joined.
 4. **The script tail is two scripts** — `nav.js` and `main.js` — and the count
    is the wrong thing to remember: **cite `page_shell.SCRIPT_TAIL`**, which is
    where it is declared. It was seven until 2026-08-11 and four until
@@ -2077,12 +2079,15 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
   was **107** board-data literals in **5** scripts. **3.4 is still blocked**
   until the GSC re-measure.
 - **Wave 5.1–5.4** — content and editorial, each needing explicit approval.
-- **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
-  PH06 section 3. `render_nav.py` needs Chrome, so it stays out — and
-  `computed_style_diff.py` now does too, for the same reason. **Both are
-  covering things the ten assertions cannot see, and item (f) proved it twice
-  in one commit**, so if `compare_trees.py` ever moves, that argument is what
-  should be written down beside it rather than "Chrome is awkward".
+- ~~**Move `compare_trees.py` into `scripts/`** and add it to the workflow~~ —
+  **DONE 2026-08-13, D44**, and only half of it was possible. The move
+  happened, with `test_compare_trees.py` and `intentional-changes.json`. **The
+  SUITE is the workflow's 23rd step; the comparison is not a step and cannot
+  be** — assertion 8 asserts everything outside `--family` is byte-identical,
+  so with no `--family` it is red on any commit that changes any file. A
+  declaration mechanism for assertions 1, 3, 5, 6 and 7 was offered and
+  **declined for now**; the comparison stays a manual per-wave gate.
+  `render_nav.py` and `computed_style_diff.py` need Chrome and stay out.
 
 **Deliberate normalisations — ALL ELEVEN SETTLED 2026-08-13, D42 and D43.**
 Nine shipped, `i` dropped as a misreading, `d` measured and declined. **Item
@@ -2109,8 +2114,15 @@ what was measured; do not re-derive from the roadmap, re-derive from the tree.
 96 first-eager-rest-lazy, 8 all-lazy, 0 exceptions — the roadmap's "33 pages /
 94 images" describes a state that no longer exists.
 
-**`convert_raw_notes.py` replaced by `page_shell.py`** is the last piece of
-Wave 2 and is still open. PH06-027.
+~~**`convert_raw_notes.py` replaced by `page_shell.py`** is the last piece of
+Wave 2 and is still open. PH06-027.~~ **CLOSED 2026-08-13, D44 — the script is
+DELETED, not repaired.** It wrote a whole page into a path
+`build_notes_pages.py` now generates, and its 73 markdown sources measured
+**0 of 73** still in sync with their live pages, worst case 38% word overlap.
+Repairing the `<head>` would have produced correct markup around stale content
+in a path that regenerates. Third time the roadmap has described work that
+should not be done at all, after `loading="lazy"` and item (i). `raw-notes/`
+stays as historical drafts; `notes_drift.py` section 5 is now the tripwire.
 
 **Decisions for Eliot, not tasks**
 
@@ -2129,6 +2141,16 @@ Wave 2 and is still open. PH06-027.
 **Blocked until ≈2026-09-22, the day-45 GSC re-measure**
 
 4.7, 4.8, Wave 3.4, PH05-019/020/021 and PH03-049 step 2.
+
+**4.7 was reported as already done on 2026-08-13 and that was wrong** — see
+D44. `link_depth.py` shows 0 pages at depth ≥ 4 only because Phase 7's baked
+nav made its RAW graph identical to INJECTED. On the CONTENT graph the script
+now also prints, **253 pages sit at depth ≥ 4** and PH03-048's 8 prescribed
+links do not exist. **Why 4.7 and 4.8 are on this list is still not recorded
+anywhere** — no DECISIONS entry, and PH11's own dated-dependency section names
+only PH05-019/020/021 and PH03-049 step 2. The only coherent reason is that
+both change internal linking or anchor text and would contaminate the day-45
+read; that is an inference, not a decision, and Eliot has not confirmed it.
 
 ## One stale line found in passing, not this wave's to fix
 
