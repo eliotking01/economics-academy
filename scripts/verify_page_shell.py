@@ -107,12 +107,15 @@ HAND_WRITTEN = ("root", "notes-other", "past-papers")
 EXPECTED_FAMILIES = {
     # family:        (pages, heads, shells, tails, css sets)
     "root":          (9, 9, 9, 3, 9),
-    # 4 head shapes until 2026-08-13; PH08-039's MathJax convergence took it
-    # to 3. Declared here as well as at check 5 ON PURPOSE - the two counts
-    # are measured by different code (this one tokenises the whole <head>,
-    # check 5 classifies by MathJax markup), so a change that moved only one
-    # of them would be a real disagreement rather than a missed edit.
-    "notes-topic":   (166, 3, 1, 1, 1),
+    # 4 head shapes until 2026-08-13, then 3 when PH08-039's MathJax
+    # convergence removed the "without id" markup, then 2 when PH08-042's
+    # <style> block left 1-5-1-market-structures. 166 pages, one <head>
+    # shape between them except for which of the two MathJax states they are
+    # in. Declared here as well as at check 5 ON PURPOSE - the two counts are
+    # measured by different code (this one tokenises the whole <head>, check
+    # 5 classifies by MathJax markup), so a change moving only one of them
+    # would be a real disagreement rather than a missed edit.
+    "notes-topic":   (166, 2, 1, 1, 1),
     "notes-hub":     (7, 2, 2, 1, 2),
     "notes-other":   (3, 2, 3, 1, 2),
     "past-papers":   (5, 2, 2, 1, 2),
@@ -285,14 +288,16 @@ HEAD_EXEMPT["twitter:description"] = HEAD_EXEMPT["twitter:title"]
 # convergence removed the "without id" shape entirely, so its 28 pages joined
 # the 97 and made 125.
 #
-# The one <style> page stays its own shape and is NOT a fourth MathJax
-# variant - it is PH08-042's 30-line block on 1-5-1-market-structures, which
-# is a separate normalisation with its own commit. When that block moves to
-# CSS this becomes two shapes and 126.
+# AND TWO from later the same day, which the paragraph above predicted in
+# as many words: PH08-042's 30-line <style> block left
+# 1-5-1-market-structures for css/pages/revision-notes-textbook.css, so its
+# page stopped being a shape of its own and joined the 125. The label is kept
+# in the table with a 0 rather than deleted, because a <style> block coming
+# BACK to a notes page is exactly what this check should catch.
 EXPECTED_NOTES_HEAD_SHAPES = {
-    "mathjax with id": 125,
+    "mathjax with id": 126,
     "no mathjax": 40,
-    "mathjax with id + a <style> block": 1,
+    "mathjax with id + a <style> block": 0,
 }
 
 # The content spine is the ordered list of direct children of
@@ -760,9 +765,14 @@ def main() -> int:
     if args.show:
         print("   ", dict(labels))
     shapes = {parsed[p].head_shape() for p in nt}
-    if len(shapes) != len(EXPECTED_NOTES_HEAD_SHAPES):
+    # Against the labels EXPECTED still gives pages to, not the number of
+    # labels. A label held at 0 is a tripwire for a shape coming BACK - the
+    # <style> block is the live example - and counting it here would demand a
+    # shape that is meant not to exist.
+    want_shapes = sum(1 for n in EXPECTED_NOTES_HEAD_SHAPES.values() if n)
+    if len(shapes) != want_shapes:
         r.bad(f"notes-topic has {len(shapes)} <head> shapes, expected "
-              f"{len(EXPECTED_NOTES_HEAD_SHAPES)}")
+              f"{want_shapes}")
     for label, want in EXPECTED_NOTES_HEAD_SHAPES.items():
         got = labels.get(label, 0)
         if got != want:
