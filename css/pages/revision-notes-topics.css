@@ -111,6 +111,21 @@
   outline-offset: 2px;
 }
 
+/* The closing "Ready to Put These Notes to Work?" block, on all six board
+   hubs. Wave-norm item (f): was style="margin-top: 3em; text-align: center",
+   written six times in six notes-data slices.
+
+   Deliberately NOT the same class as revision-notes.css's .notes-index-cta,
+   which looks identical and is not: /revision-notes/ opens its equivalent
+   block at 4em, not 3em. One class with two values would have to live in one
+   sheet and be overridden in the other, which is the load-order dependency
+   verify_css_load_order.py exists to keep out. Two names, two sheets, two
+   pages sets, no interaction. */
+.notes-hub-cta {
+  margin-top: 3em;
+  text-align: center;
+}
+
 @media screen and (max-width: 736px) {
   /* main.css drops h2-h6 to 1.25em here, so the compensation above must not
      hold the old h3 size at mobile widths. */

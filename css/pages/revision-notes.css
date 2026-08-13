@@ -79,3 +79,12 @@
   margin: 2em 0;
   text-align: center;
 }
+
+/* The closing "More Free Resources" block. Wave-norm item (f): was
+   style="margin-top: 4em; text-align: center". 4em, not the 3em of the six
+   board hubs' .notes-hub-cta - see the note there for why they stay two
+   classes rather than one. */
+.notes-index-cta {
+  margin-top: 4em;
+  text-align: center;
+}
