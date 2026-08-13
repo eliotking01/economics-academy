@@ -538,6 +538,30 @@ PH03-048 is 8 links from 2 pages, and why the intuitive version (each notes boar
 hub → its practice twin) moves only 6 pages. Do not "improve" the fix by moving
 those links to the board hubs; measure it with `link_depth.py 1` first.
 
+> **Amended 2026-08-13. The sentence above is still exactly right, and the
+> script stopped being able to say so.** Wave 2 Phase 7 baked the header and
+> footer into all 463 pages, so `link_depth.py`'s "RAW" graph — which meant
+> "the page's own links, WITHOUT the nav", only because the nav used to be
+> fetched at runtime — now already contains every template link. **RAW and
+> INJECTED became numerically identical**, `{0:1, 1:29, 2:350, 3:81}`, and the
+> pair went on printing as though it were two measurements.
+>
+> **So PH03-048 reads as SOLVED — 0 pages at depth ≥ 4 — while nothing was
+> done about it.** Its own prescription is 8 links and **none of them exists**;
+> checked link by link, not inferred.
+>
+> `link_depth.py 1` now prints a **third graph, CONTENT**, which is the baked
+> blocks removed and is what "raw" used to mean. On it: **253 pages at depth
+> ≥ 4**, and **depth 1 is exactly the four pages named above**. Both answers
+> are true and they answer different questions — SERVED is the honest one for
+> **discovery** (max depth 3 with JavaScript off, which Phase 7 bought), CONTENT
+> is the honest one for **link equity**, because search engines discount
+> sitewide boilerplate. **Cite which graph.**
+>
+> The third graph was added rather than the pair reinterpreted: **a metric that
+> changes meaning silently is worse than one that is missing.** Wave 4.7 stays
+> open.
+
 **`/past-papers/edexcel-b/` and `/past-papers/ocr/` have one raw inbound link
 each, and that is not a defect to fix by linking.** They earn 291 clicks and
 21,131 impressions between them — the most on the site outside the homepage — and

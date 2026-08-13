@@ -32,6 +32,33 @@ os.chdir(ROOT)
 TEMPLATES = ["templates/header.html", "templates/footer.html"]
 PAGES = lib.pages()
 
+# Wave 2 Phase 7 baked templates/header.html and templates/footer.html into
+# all 463 pages, and that quietly broke this section's whole premise.
+#
+# "RAW" meant "the page's own links, WITHOUT the nav" only because the nav was
+# fetched at runtime. Now it is in every page's HTML, so raw already contains
+# every template link and the two graphs below are numerically IDENTICAL -
+# {0:1, 1:29, 2:350, 3:81} both ways, measured 2026-08-13. The pair still
+# printed, and still looked like two measurements.
+#
+# PH03-048's question - are pages stranded deep when JavaScript does not run -
+# therefore reads as SOLVED (0 pages at depth >= 4) when nothing was done about
+# it. Both answers are true and they are answers to different questions:
+#
+#   SERVED   every anchor in the HTML. What a crawler with no JS actually
+#            follows, so the honest answer for DISCOVERY: max depth 3, and
+#            Phase 7 is what bought that.
+#   CONTENT  the same minus the baked blocks. What "raw" used to mean, and the
+#            honest answer for LINK EQUITY, because search engines discount
+#            sitewide boilerplate: 253 pages at depth >= 4, and only 4 at
+#            depth 1 - the exact four DO-NOT-BREAK names.
+#
+# So the third graph is added rather than the pair being reinterpreted. A
+# metric that changes meaning silently is worse than one that is missing.
+BAKED_BLOCK = re.compile(
+    r"<!-- BEGIN templates/(header|footer)\.html.*?"
+    r"<!-- END templates/\1\.html -->", re.S)
+
 # url -> canonical page path, for both the /dir/ and /dir/index.html forms
 URL_TO_PAGE = {}
 for _p in PAGES:
@@ -43,21 +70,40 @@ for _t in TEMPLATES:
     TEMPLATE_TARGETS |= lib.links_from(_t)
 
 
-def out_edges(page, injected):
-    """Pages this page links to. `injected` adds the runtime header/footer."""
+def content_links(page):
+    """The page's own links with the baked header and footer removed.
+
+    Not `set(links_from(page)) - TEMPLATE_TARGETS`: the nav links to
+    /revision-notes/ and a notes page may link there in its own prose too, and
+    subtracting targets would throw the real link away with the boilerplate.
+    The BLOCK is removed from the text, then the remainder is parsed.
+    """
+    text = BAKED_BLOCK.sub("", lib.read(page))
+    out = set()
+    for href in lib.ANCHOR.findall(text):
+        t = lib.resolve(href, page)
+        if t in URL_TO_PAGE:
+            out.add(URL_TO_PAGE[t])
+    return out
+
+
+def out_edges(page, mode):
+    """Pages this page links to, under one of the three graphs above."""
+    if mode == "content":
+        return content_links(page)
     targets = set(lib.links_from(page))
-    if injected:
+    if mode == "injected":
         targets |= TEMPLATE_TARGETS
     return {URL_TO_PAGE[t] for t in targets if t in URL_TO_PAGE}
 
 
-def bfs(injected):
+def bfs(mode):
     start = "index.html"
     depth = {start: 0}
     queue = collections.deque([start])
     while queue:
         cur = queue.popleft()
-        for nxt in out_edges(cur, injected):
+        for nxt in out_edges(cur, mode):
             if nxt not in depth:
                 depth[nxt] = depth[cur] + 1
                 queue.append(nxt)
@@ -69,9 +115,14 @@ def bfs(injected):
 
 def s1_depth():
     print("=== 1. Click depth from / ===\n")
-    for injected in (False, True):
-        label = "INJECTED (header/footer counted)" if injected else "RAW (no JavaScript)"
-        depth = bfs(injected)
+    modes = (
+        ("raw", "SERVED (every anchor in the HTML; == INJECTED since Phase 7)"),
+        ("injected", "INJECTED (header/footer counted)"),
+        ("content", "CONTENT (baked header/footer REMOVED - what 'raw' meant "
+                    "before Phase 7)"),
+    )
+    for mode, label in modes:
+        depth = bfs(mode)
         hist = collections.Counter(depth.values())
         unreached = [p for p in PAGES if p not in depth]
         print(f"-- {label} --")
@@ -79,7 +130,18 @@ def s1_depth():
         for d in sorted(hist):
             print(f"   depth {d}: {hist[d]:>4} pages")
         print(f"   UNREACHED: {len(unreached)}  {unreached[:6]}")
-        if not injected:
+        if mode == "content":
+            deep = sorted(p for p, d in depth.items() if d >= 4)
+            print(f"   pages at depth >= 4: {len(deep)}")
+            for p in deep[:10]:
+                print(f"      {depth[p]}  {p}")
+            if len(deep) > 10:
+                print(f"      ... and {len(deep)-10} more")
+            print(f"   depth 1: {sorted(p for p, d in depth.items() if d == 1)}")
+            print("   ^ PH03-048's real surface. DO-NOT-BREAK's 'only four pages"
+                  " sit at\n     raw click depth 1' is about THIS graph and is "
+                  "still exactly right.")
+        if mode == "raw":
             deep = sorted(p for p, d in depth.items() if d >= 4)
             print(f"   pages at depth >= 4: {len(deep)}")
             for p in deep[:25]:
