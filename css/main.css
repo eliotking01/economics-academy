@@ -1879,6 +1879,19 @@ button.large,
   padding: 0.75em 1.5em 0.75em 1.5em;
 }
 
+/* Fill the containing grid column. Wave-norm item (f): this was written as
+   style="width: 100%" on 47 anchors across 9 pages and 4 page stylesheets,
+   which is one declaration duplicated 47 times rather than a page-specific
+   style. It is a modifier on a site-wide component, so it is declared beside
+   the other modifiers, on the .button selector alone as .primary is.
+
+   `.fit` is HTML5 UP's own word for this and the sheet already uses it once,
+   at .profile-highlight .image.fit. The two do not collide - each needs its
+   own base class - and they mean the same thing. */
+.button.fit {
+  width: 100%;
+}
+
 /* Image */
 
 .image {

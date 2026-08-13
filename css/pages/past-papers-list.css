@@ -105,6 +105,14 @@
 .paper-info {
   flex-grow: 1;
 }
+/* The paper's title line, under the sitting date. Wave-norm item (f): this
+   was style="font-size: 0.9em; color: #666" repeated on 142 divs across the
+   four board hubs - 45 + 40 + 34 + 23 - which is one style written 142 times.
+   Every .paper-info on all four pages is exactly <strong> then this div. */
+.paper-subtitle {
+  font-size: 0.9em;
+  color: #666;
+}
 .paper-actions {
   display: flex;
   gap: 1em;
@@ -242,6 +250,13 @@
 .year-toggle-btn:focus-visible {
   outline: 2px solid #4caf50;
   outline-offset: 2px;
+}
+
+/* The closing "Need Help With These Papers?" block, on all four board hubs.
+   Wave-norm item (f): was style="margin-top: 3em; text-align: center". */
+.papers-cta {
+  margin-top: 3em;
+  text-align: center;
 }
 
 @media screen and (max-width: 736px) {

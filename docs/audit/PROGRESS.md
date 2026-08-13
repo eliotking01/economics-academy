@@ -1919,14 +1919,67 @@ in the grey band under the nav, styled by `css/main.css:3450`, exactly like the
 
 ---
 
-# HANDOVER — 2026-08-13. TEN OF THE ELEVEN NORMALISATIONS ARE SETTLED
+### Item (f), 2026-08-13. The last normalisation, and the probe that found two regressions
 
-**The eleven normalisations are settled except `f`.** Thirteen commits on
-`wave-normalisations`, D42: eight shipped, `i` DROPPED as a misreading of its
-own finding, `d` MEASURED and declined. `f` — 322 authored inline `style=`
-across 44 files — is the only one left and wants its own session, because 32
-of those 44 files are generated and the 1,187 KaTeX styles beside them must be
-excluded by construction.
+Eight commits on `wave-norm-inline-styles`, D43. **322 authored inline
+`style=` attributes to 0**, across 44 files; the 1,187 KaTeX ones untouched.
+
+| Commit | What | Files |
+| --- | --- | ---: |
+| 1/n | `computed_style_diff.py`, the cascade gate | 0 |
+| 2/n | one `.button.fit` in `main.css`, before anything uses it | 0 |
+| 3/n | the 5 past-papers hubs, 161 attributes | 6 |
+| 4/n | 6 notes hubs + `/revision-notes/`, through the slices | 15 |
+| 5/n | 96 `<th>` column widths, 26 slices | 53 |
+| 6/n | the last 35, and `css/pages/404.css` | 12 |
+| 7/n | `verify_inline_styles.py`, the workflow's 22nd step | 3 |
+| — | `lib.py` was 173 files wrong | 1 |
+
+**Every recorded number held** — the first item in the wave where none moved.
+1,509 total, 1,187 KaTeX, 322 authored on 44 files, and the family, property
+and `notes-data` splits all re-derived unchanged. Two independent methods
+agreed at 1,509.
+
+**TWO OF THE LAST 35 ATTRIBUTES MOVED THE RENDERED PAGE AND ALL TEN ASSERTIONS
+PASSED BOTH.** `tutoring.html` lost 44px to a `(0,1,1)`
+`section > :last-child` reset; `404.html` gained 14.67px per row to a `(1,2,1)`
+`#main .row > div[class*="col-"]`. An inline style outranks every class
+selector, so extracting one is never a rename — `compare_trees` assertion 4
+fires only on LOSSES, and an attribute becoming a class loses nothing.
+`computed_style_diff.py` was built first for exactly this and is what found
+both.
+
+**The probe failed its own selftest on its first run.** Both trees served
+under path prefixes on one origin sent both iframes to the same
+`/css/main.css`, because every asset path here is root-absolute — so it
+reported 0 differences on a tree with a declaration deliberately appended to
+`main.css`. It could not have failed. **And the second regression was
+invisible until `--body-only` existed:** one new `<head>` `<link>` shifted
+every element index, so 404.html was SKIPPED with `element count 199 -> 200`
+inside a run whose last line said PASS.
+
+**PH08-042 is still wrong on one claim:** "no generated page carries an
+authored inline style". 32 of the 44 files are generated, holding 120
+attributes in `notes-data/**`. It went stale when Wave 2 made the notes pages
+generated.
+
+**`lib.py` was two `exclude` entries short of `_config.yml`**, so
+`lib.pages()` returned 636 rather than 463 and `link_graph.py` listed 173
+phantom orphans. Its comment promised a `verify_matches_config()` that had
+never been written; it exists now and runs on import.
+
+---
+
+# HANDOVER — 2026-08-13. ALL ELEVEN NORMALISATIONS ARE SETTLED
+
+**D18 Q20's approved normalisations are finished.** Twenty-one commits over two
+branches: `wave-normalisations` (D42, ten items) and
+`wave-norm-inline-styles` (D43, item `f`). Nine shipped, `i` DROPPED as a
+misreading of its own finding, `d` MEASURED and declined.
+
+**`wave-norm-inline-styles` is NOT merged.** Eight commits, branched off
+`68a9b23`, 22/22 workflow steps green on its tip. Merging needs Eliot's
+approval, as does any push.
 
 **Two verifiers were repaired on the way**, both because this wave hit their
 absence: `compare_trees.py` printed PASS over a real failure at
@@ -1988,8 +2041,10 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
    jQuery" block on 2026-08-11 — what `nav.js` may and may not take over from
    CSS, why check 2 does not import the constant it checks, and four things
    about driving headless Chrome that cost hours each. 4.11 added to it.
-2. **`DECISIONS.md` is D1–D37.** D37 is Wave 4.11.
-3. **The workflow is 21 steps** and all 21 are green on `256914c`.
+2. **`DECISIONS.md` is D1–D43.** D42 is the ten normalisations, D43 is item (f).
+3. **The workflow is 22 steps** — cite the file, not the number; it was 21
+   until 2026-08-13, when `verify_inline_styles.py` joined. All 22 are green
+   on `wave-norm-inline-styles`.
 4. **The script tail is two scripts** — `nav.js` and `main.js` — and the count
    is the wrong thing to remember: **cite `page_shell.SCRIPT_TAIL`**, which is
    where it is declared. It was seven until 2026-08-11 and four until
@@ -2023,12 +2078,18 @@ ff4c726 Merge wave4-10: jQuery and dropotron are gone from all 463 pages
   until the GSC re-measure.
 - **Wave 5.1–5.4** — content and editorial, each needing explicit approval.
 - **Move `compare_trees.py` into `scripts/`** and add it to the workflow, per
-  PH06 section 3. `render_nav.py` needs Chrome, so it stays out.
+  PH06 section 3. `render_nav.py` needs Chrome, so it stays out — and
+  `computed_style_diff.py` now does too, for the same reason. **Both are
+  covering things the ten assertions cannot see, and item (f) proved it twice
+  in one commit**, so if `compare_trees.py` ever moves, that argument is what
+  should be written down beside it rather than "Chrome is awkward".
 
-**Deliberate normalisations — TEN OF ELEVEN SETTLED 2026-08-13, D42.** Eight
-shipped, `i` dropped as a misreading, `d` measured and declined. **Only `f`
-remains.** The table below is kept as the record of what was measured; do not
-re-derive from the roadmap, re-derive from the tree.
+**Deliberate normalisations — ALL ELEVEN SETTLED 2026-08-13, D42 and D43.**
+Nine shipped, `i` dropped as a misreading, `d` measured and declined. **Item
+`f` was the last and is done**, on `wave-norm-inline-styles`: 322 authored
+inline styles to 0, the 1,187 KaTeX ones untouched and now pinned per page by
+`scripts/verify_inline_styles.py`. The table below is kept as the record of
+what was measured; do not re-derive from the roadmap, re-derive from the tree.
 
 | Item | Recorded 2026-08-12 | Re-derived 2026-08-13 | Outcome |
 | --- | --- | --- | --- |
@@ -2037,7 +2098,7 @@ re-derive from the roadmap, re-derive from the tree.
 | MathJax config | 4 distinct on 127; 126 carry `$…$` | **3 on 126; all 126** | **SHIPPED**, one markup |
 | Preconnect lineage | 273 before, 190 after | counts held, **attribution wrong** | **DECLINED**, measured |
 | 3 real `<style>` blocks | 6 protected, 3 real | held | **SHIPPED**, 0 real left |
-| 322 inline `style=` | 322 across 44, of 1,509 | held | **NOT STARTED** |
+| 322 inline `style=` | 322 across 44, of 1,509 | **held, every figure** | **SHIPPED**, 0 authored |
 | Visible breadcrumb | 19 | 19 — held | **SHIPPED**, +macro-application |
 | `EducationalOrganization` | on 354 of 463 | held | **SHIPPED**, 461 |
 | `WebSite` off non-homepage | on 100 pages | **99 are `isPartOf` refs** | **DROPPED**, D42 |

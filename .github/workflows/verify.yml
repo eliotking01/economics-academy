@@ -88,6 +88,19 @@ jobs:
       # change it - silently, with no error and no failed request.
       - name: Stylesheet load order
         run: python3 scripts/verify_css_load_order.py
+      # Wave-norm item (f), D18 Q20 item 6. 322 authored inline style=
+      # attributes across 44 files went into CSS classes; this holds the count
+      # at 0, because a zero nothing asserts drifts back - and those 322
+      # accumulated one hand-written page at a time with nothing watching.
+      #
+      # It also PINS the 1,187 KaTeX offsets, per page, which is the half that
+      # matters more: they are build output positioning every glyph on the two
+      # glossary pages and five flashcard decks, DO-NOT-BREAK names them among
+      # the four entries hardest to resist undoing, and a sweep for inline
+      # styles hits them first. Classification is by construction - inside a
+      # class token beginning "katex" - never by page path.
+      - name: No authored inline styles, and KaTeX output intact
+        run: python3 scripts/verify_inline_styles.py
       # Wave 2 Phase 1. 463 pages carry the same ~2.5 KB of <head>, wrapper and
       # script tail and nothing compared them, which is how 18 pages came to
       # disagree with themselves on a field they write twice and 28 came to

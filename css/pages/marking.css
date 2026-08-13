@@ -208,3 +208,35 @@
     margin-bottom: 1em;
   }
 }
+
+/* Wave-norm item (f): five inline styles from marking.html.
+
+   THE PANEL'S `display: none` IS THE ONE THAT NEEDED CHECKING. The inline
+   script at the foot of the page does `paymentSelection.style.display =
+   "block"` when a service is picked. It only ever WRITES that property and
+   never reads it back - grepped, and #payment-selection appears in exactly
+   two places in the repo, this element and that one assignment - so a class
+   here is safe: the style attribute JavaScript sets outranks any selector.
+   Do NOT add !important to this rule; that is the one change that would
+   break the panel, silently, and only for a buyer mid-purchase. */
+.marking-payment-panel {
+  display: none;
+  margin-top: 2em;
+}
+
+.marking-faq {
+  margin-top: 3em;
+}
+
+.marking-cta-actions {
+  text-align: center;
+}
+
+.marking-cta-actions-spaced {
+  margin-top: 2em;
+}
+
+/* The second of the two closing buttons, spaced off the first. */
+.marking-cta-second {
+  margin-left: 1em;
+}

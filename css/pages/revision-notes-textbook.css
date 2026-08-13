@@ -330,6 +330,59 @@
   letter-spacing: 0.5px;
 }
 
+/* Column widths for concept-table headers.
+   ---------------------------------------------------------------------
+   Wave-norm item (f). These were 96 style="width: N%" attributes on 96
+   <th> elements across 26 notes-topic pages - 35 tables, 13 distinct width
+   tuples, 11 distinct percentages. There is no shared style hiding in
+   there to extract: the width is per-table data, so what these classes buy
+   is a census that can be pinned at 0 rather than a style declared once.
+   Eliot chose that trade knowingly on 2026-08-13; a half-swept item is one
+   no verifier can ever hold at zero.
+
+   SCOPED, and doubly so. This sheet is loaded by 179 pages, and a bare
+   .width-25 in it is exactly the collision the house rule exists to
+   prevent - the wave before this one found .comp-spectrum doing it. So
+   every rule is under .revision-notes-content AND qualified to
+   .concept-table th, which is the only place any of them is used. The
+   specificity is (0,3,1), above the (0,2,1) of the th rule above, so these
+   win the width argument and nothing else.
+
+   Add a percentage here before using it; an unmatched class is silent. */
+.revision-notes-content .concept-table th.width-15 {
+  width: 15%;
+}
+.revision-notes-content .concept-table th.width-20 {
+  width: 20%;
+}
+.revision-notes-content .concept-table th.width-25 {
+  width: 25%;
+}
+.revision-notes-content .concept-table th.width-30 {
+  width: 30%;
+}
+.revision-notes-content .concept-table th.width-35 {
+  width: 35%;
+}
+.revision-notes-content .concept-table th.width-40 {
+  width: 40%;
+}
+.revision-notes-content .concept-table th.width-45 {
+  width: 45%;
+}
+.revision-notes-content .concept-table th.width-50 {
+  width: 50%;
+}
+.revision-notes-content .concept-table th.width-55 {
+  width: 55%;
+}
+.revision-notes-content .concept-table th.width-70 {
+  width: 70%;
+}
+.revision-notes-content .concept-table th.width-75 {
+  width: 75%;
+}
+
 .revision-notes-content .concept-table td {
   padding: 1em 1.5em;
   border-bottom: 1px solid var(--border-light);
