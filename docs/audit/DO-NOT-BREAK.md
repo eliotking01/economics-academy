@@ -809,12 +809,41 @@ parse-and-re-serialise, and reflowing a slice containing prose can move a line
 break across an inline tag boundary and turn `<strong>word</strong>s` into
 "word s". Do not add it.
 
-**`docs/audit/scripts/harness/compare_trees.py` is the gate, and its test suite
+**`scripts/compare_trees.py` is the gate, and its test suite
 is what makes it evidence.** 39 cases break each of the ten assertions on
 purpose, and **twelve of them expect a PASS** — pinning what each assertion is
 deliberately blind to, each paired with the assertion that covers it. An
 assertion that fires on everything is as useless as one that fires on nothing.
 Do not delete the passing cases as redundant.
+
+> **Moved to `scripts/` on 2026-08-13**, with `test_compare_trees.py` and
+> `intentional-changes.json`, per PH06 section 3 — "the harness moves to
+> `scripts/` when the first family migrates, so it becomes a permanent
+> verifier rather than a one-off". Every family has migrated.
+>
+> **THE SUITE IS NOW A WORKFLOW STEP AND `compare_trees.py` ITSELF IS NOT, and
+> that is measured rather than a compromise.** PROGRESS.md carried the move and
+> the workflow step as one task. The comparison cannot be a per-commit step:
+> **assertion 8 asserts that everything outside `--family` is byte-identical**,
+> so with no `--family` it fails on any commit that changes any file — measured
+> on a docs-only commit, where 1–7 and 10 passed and 8 flagged both changed
+> files. A check that is always red protects nothing, which is the argument
+> that kept `verify_liquid.py` out of CI until PH00-011 was fixed.
+>
+> The **suite** needs no second tree, and it is the thing that actually rotted:
+> 31 of 32 for two waves, undetected, because Phase 7's baked nav gave every
+> page a second `/tutoring.html` link and disarmed `a7-link-lost`. ~2m30s, so
+> it sits in the second job beside `verify_generated.py`.
+>
+> Making the comparison a per-commit gate needs a declaration mechanism for
+> assertions 1, 3, 5, 6 and 7 — the `Text-Change:`/`Markup-Change:` trailer
+> pattern extended — which is a design decision and is recorded as one rather
+> than invented.
+>
+> **The comment in the script predicting its own new path said `parents[1]`;
+> it is `parents[0]`.** `HARNESS` is the directory holding the file. The guard
+> underneath — "cannot find the repo root … fix REPO" — is what would have
+> caught it, and is why that guard is there.
 
 **Assertion 10 requires NEW to be a git tree and fails without one.** Seven of
 the fourteen verifiers it runs enumerate through `git ls-files`. Running the
@@ -1196,6 +1225,7 @@ python3 scripts/verify_markup_integrity.py <before-ref> --strict
 python3 scripts/verify_liquid.py          # 1 file checked, 0 problems, exit 0 (D31)
 python3 scripts/verify_glossary.py
 python3 scripts/verify_inline_styles.py   # 0 authored; 1,187 KaTeX on 7 pages
+python3 scripts/test_compare_trees.py     # 39 cases, ~2m30s; the harness's own suite
 python3 seo/tools/verify_seo.py           # 14/14
 python3 scripts/build_sitemap.py --check  # "nothing written"
 node scripts/test_question_search.js

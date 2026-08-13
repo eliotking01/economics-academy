@@ -190,7 +190,33 @@ jobs:
       - name: Committed generated output is current
         run: python3 scripts/verify_generated.py
 
+      # The harness's own suite: 39 cases that break each of compare_trees.py's
+      # ten assertions on purpose, twelve of which expect a PASS to pin what
+      # each assertion is deliberately blind to. ~2m30s, which is why it is in
+      # this job rather than the fast one.
+      #
+      # DO-NOT-BREAK: the suite "is what makes it evidence". It had silently
+      # rotted to 31 of 32 - a7-link-lost replaced the page's only
+      # /tutoring.html link when it was written, and Phase 7's baked nav gave
+      # every page a second one two waves later, so the case had proved nothing
+      # since. Nothing noticed until it was run deliberately. THAT is the
+      # failure this step exists to catch.
+      #
+      # compare_trees.py ITSELF is deliberately not a step. Assertion 8 asserts
+      # that everything outside --family is byte-identical, so with no --family
+      # it fails on any commit that changes any file - measured, including a
+      # docs-only one. A check that is always red protects nothing.
+      - name: The comparison harness still detects what it claims to
+        run: python3 scripts/test_compare_trees.py
+
 # DELIBERATELY ABSENT:
+#
+#   scripts/compare_trees.py
+#     Moved into scripts/ on 2026-08-13 per PH06 section 3, and still not a
+#     step. It compares two TREES; assertion 8 is red on every commit without
+#     a --family declaration, and assertions 1, 3, 5, 6 and 7 have no
+#     declaration mechanism for a deliberate change the way Text-Change: and
+#     Markup-Change: do for 2 and 4. Its test suite runs instead, above.
 #
 #   scripts/convert_raw_notes.py
 #     Must not be run at all. Its page template predates seven SEO commits and
