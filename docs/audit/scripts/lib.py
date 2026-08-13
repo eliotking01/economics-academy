@@ -14,6 +14,7 @@ Site vs published vs served:
               visits
 """
 
+import pathlib
 import posixpath
 import re
 import subprocess
@@ -21,11 +22,33 @@ from functools import lru_cache
 
 SITE = "https://economicsacademy.co.uk"
 
-# Mirrors the `exclude:` list in _config.yml. Kept as a literal rather than
-# parsed from the YAML because there is no yaml module guaranteed here and the
-# list is stable; verify_matches_config() below fails loudly if it drifts.
+# docs/audit/scripts/lib.py -> the repo root.
+REPO = pathlib.Path(__file__).resolve().parents[3]
+
+# Mirrors the `exclude:` list in _config.yml.
+#
+# THIS WENT STALE AND NOTHING NOTICED - found 2026-08-13, during item (f)'s
+# measurement. `boards-data/` and `notes-data/` were added to _config.yml by
+# Waves 2 and 3.2 and never added here, so `published_html()` returned 638
+# where the real published surface is 465, and `pages()` returned 636 rather
+# than 463. `link_graph.py` printed "published pages: 636" and listed 173
+# phantom orphans; `metadata_census.py`, `asset_census.py`, `structured_data.py`
+# and `link_depth.py` all read through the same function, and four of them back
+# DO-NOT-BREAK's "Numbers that must not regress" table. None is in CI, which is
+# why it survived.
+#
+# The comment here claimed "verify_matches_config() below fails loudly if it
+# drifts". THAT FUNCTION WAS NEVER WRITTEN. It is written now, and every
+# consumer calls it on import, so the list cannot silently disagree again.
+#
+# The right fix is not to re-transcribe the list. `scripts/build_sitemap.py`
+# PARSES _config.yml - DO-NOT-BREAK's rule is "copy that pattern rather than
+# adding skip lists" - but docs/audit/scripts/ is deliberately standalone and
+# read-only, so the literal stays and is CHECKED against the file instead.
 EXCLUDED_PREFIXES = (
     "scripts/",
+    "boards-data/",
+    "notes-data/",
     "glossary-data/",
     "questions-data/",
     "past-paper-questions-data/",
@@ -55,6 +78,59 @@ EXCLUDED_FILES = {
 def tracked(pattern="*"):
     out = subprocess.check_output(["git", "ls-files", pattern], text=True)
     return [line for line in out.splitlines() if line]
+
+
+def verify_matches_config():
+    """Fail loudly if the two lists above have drifted from `_config.yml`.
+
+    The comment on EXCLUDED_PREFIXES promised this function for months and it
+    did not exist, which is exactly how the list came to be two entries short
+    of the real thing while eight scripts read through it. It is called on
+    import, below, so no consumer can opt out by forgetting.
+
+    Only entries that could change a publish decision are compared. Jekyll's
+    restated defaults (Gemfile, node_modules, vendor/) are in `_config.yml`
+    and not here because nothing tracked matches them; they are ignored rather
+    than being a permanent false alarm.
+    """
+    cfg = REPO / "_config.yml"
+    if not cfg.exists():                      # pragma: no cover
+        raise SystemExit(f"lib.py: cannot find {cfg}")
+
+    listed, in_exclude = [], False
+    for raw in cfg.read_text(encoding="utf-8").splitlines():
+        if raw.startswith("exclude:"):
+            in_exclude = True
+            continue
+        if in_exclude:
+            if raw[:1] not in (" ", "-", "", "#") and not raw.startswith("  "):
+                break                          # a new top-level key
+            s = raw.strip()
+            if s.startswith("- "):
+                listed.append(s[2:].strip())
+
+    ignore = {"Gemfile", "Gemfile.lock", "node_modules", "vendor/", ".github/"}
+    want_prefixes = {e for e in listed if e.endswith("/")} - ignore
+    want_files = {e for e in listed if not e.endswith("/")} - ignore
+
+    have_prefixes = {p for p in EXCLUDED_PREFIXES if p != "_"}
+    # "_working/" is covered by the bare "_" rule rather than being listed.
+    have_prefixes |= {p for p in want_prefixes if p.startswith("_")}
+
+    missing = want_prefixes - have_prefixes
+    extra = have_prefixes - want_prefixes
+    missing_f = want_files - EXCLUDED_FILES
+    extra_f = EXCLUDED_FILES - want_files
+    if missing or extra or missing_f or extra_f:
+        lines = ["docs/audit/scripts/lib.py disagrees with _config.yml:"]
+        for label, s in (("in _config.yml, not in lib.py", missing | missing_f),
+                         ("in lib.py, not in _config.yml", extra | extra_f)):
+            if s:
+                lines.append(f"  {label}: {', '.join(sorted(s))}")
+        lines.append("  `exclude` is the only thing keeping working files off "
+                     "the site, so a disagreement here means every count this "
+                     "module produces is measuring the wrong file set.")
+        raise SystemExit("\n".join(lines))
 
 
 def is_published(path):
@@ -137,3 +213,9 @@ def links_from(path):
         if target:
             out.add(target)
     return out
+
+
+# Called on import, so that no consumer can opt out by forgetting. The whole
+# point of the check is that it fires for the eight scripts that read through
+# this module, not only for whoever remembers to ask.
+verify_matches_config()
