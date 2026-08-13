@@ -445,11 +445,11 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
       <!-- Header -->
       <div id="header-placeholder"></div>
 
-      <section id="main" class="glossary-page">
+      <main id="main" class="glossary-page">
         <div class="container">
 {body}
         </div>
-      </section>
+      </main>
 
       <!-- Footer -->
       <div id="footer-placeholder"></div>

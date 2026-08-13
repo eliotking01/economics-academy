@@ -70,11 +70,11 @@ def render(rec: dict, slice_html: str) -> str:
         "  </head>\n"
         '  <body class="is-preload">\n'
         f"{b['beforeMain']}"
-        f'      <section id="main"{b["mainAttrs"]}>\n'
+        f'      <main id="main"{b["mainAttrs"]}>\n'
         '        <div class="container">\n'
         f"{slice_html}"
         f"\n        </div>{end_container}\n"
-        f"      </section>{end_main}"
+        f"      </main>{end_main}"
         f"{b['afterMain']}"
         f"{SEVEN_SCRIPTS}\n"
         f"{b['afterScripts']}",

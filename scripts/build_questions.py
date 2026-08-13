@@ -758,7 +758,7 @@ def render_page(topic, siblings=(), ppq=None):
         for n, q in enumerate(topic["questions"], start=1)
     )
 
-    body = f"""      <section id="main" class="quiz-page">
+    body = f"""      <main id="main" class="quiz-page">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
@@ -833,7 +833,7 @@ def render_page(topic, siblings=(), ppq=None):
             </div>
           </div>
         </div>
-      </section>"""
+      </main>"""
 
     return shell(
         title=topic["pageTitle"],
@@ -1138,7 +1138,7 @@ def render_board_index(board_dir, topics):
         for i, u in enumerate(sorted(by_unit, key=spec_key), start=1)
     )
 
-    body = f"""      <section id="main" class="practice-questions-page">
+    body = f"""      <main id="main" class="practice-questions-page">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
@@ -1180,7 +1180,7 @@ def render_board_index(board_dir, topics):
     ],
 )}
         </div>
-      </section>"""
+      </main>"""
 
     return shell(
         title=title,
@@ -1275,7 +1275,7 @@ def render_hub(by_board):
           </div>"""
         )
 
-    body = f"""      <section id="main" class="practice-questions-page">
+    body = f"""      <main id="main" class="practice-questions-page">
         <div class="container">
           <section class="pq-hero">
             <h1 class="pq-h1">Free A-Level Economics Practice Questions</h1>
@@ -1304,7 +1304,7 @@ def render_hub(by_board):
     ],
 )}
         </div>
-      </section>"""
+      </main>"""
 
     return shell(
         title=title,
