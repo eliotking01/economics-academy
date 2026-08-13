@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Ten assertions over two copies of this site. Wave 2 Phase 0.
 
-    python3 docs/audit/scripts/harness/compare_trees.py OLD NEW [options]
+    python3 scripts/compare_trees.py OLD NEW [options]
 
 WHAT THIS IS FOR
 ----------------
@@ -63,9 +63,33 @@ WHAT IT DELIBERATELY DOES NOT DO
   * No writes, to either tree, ever.
   * No network, unless --prettier is passed, which nothing in CI does.
 
-Standard library only, so that it can move to `scripts/` and join the workflow
-when the first family migrates - which PH06 section 3 says it should, so that
-it becomes a permanent verifier rather than a one-off.
+Standard library only. It lives in `scripts/` from 2026-08-13, per PH06
+section 3, now that every family has migrated.
+
+IT IS NOT A WORKFLOW STEP, AND THAT WAS MEASURED RATHER THAN ASSUMED.
+PROGRESS.md carried "move it into scripts/ AND add it to the workflow" as one
+task. The first half is done; the second does not work, for a reason that is
+structural rather than fixable by configuration:
+
+**Assertion 8 fails on any commit that changes any file** unless `--family`
+names it, because that is precisely its job - "everything outside the
+migrating family is byte-identical". Run with no `--family` over HEAD~1 ->
+HEAD it flags every file the commit touched, including a docs-only commit.
+Measured on 2026-08-13: assertions 1-7 and 10 passed, 8 failed on 2 changed
+files, 9 skipped for want of a --twice tree. **A blanket step would be red on
+every commit, and a check that is always red protects nothing** - the same
+argument that kept verify_liquid.py out of CI until PH00-011 was fixed.
+
+What IS in the workflow is `scripts/test_compare_trees.py`, which needs no
+second tree: 39 cases that break each assertion on purpose. DO-NOT-BREAK says
+the suite "is what makes it evidence", and it had silently rotted to 31 of 32
+before anyone ran it deliberately. That is the failure a CI step can catch.
+
+Making the comparison itself a per-commit gate needs a declaration mechanism
+for assertions 1, 3, 5, 6 and 7 - the `Text-Change:`/`Markup-Change:` trailer
+pattern, extended - which is a design decision, not a configuration one. It
+is written up in PROGRESS.md as a decision for Eliot rather than being
+invented here.
 """
 
 from __future__ import annotations
@@ -82,10 +106,16 @@ import sys
 import unicodedata
 
 HARNESS = pathlib.Path(__file__).resolve().parent
-# docs/audit/scripts/harness -> the repo this script is checked into. It moves
-# to scripts/ when the first family migrates (PH06 section 3), at which point
-# this is parents[1]; the assertion below is what will say so.
-REPO = HARNESS.parents[3]
+# MOVED to scripts/ on 2026-08-13, per PH06 section 3 - "the harness lives in
+# _audit/ during the audit and moves to scripts/ when the first family
+# migrates, so it becomes a permanent verifier rather than a one-off". All the
+# families have migrated.
+#
+# The comment this replaces said the new value would be `parents[1]`. It is
+# `parents[0]`: HARNESS is the DIRECTORY holding this file, so from
+# docs/audit/scripts/harness it was parents[3] and from scripts/ it is the
+# parent itself. Off by one, and the guard below is what would have caught it.
+REPO = HARNESS.parents[0]
 if not (REPO / "scripts" / "build_sitemap.py").exists():  # pragma: no cover
     raise SystemExit(
         f"cannot find the repo root from {HARNESS}; expected "

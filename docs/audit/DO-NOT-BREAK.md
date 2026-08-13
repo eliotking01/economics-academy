@@ -287,13 +287,43 @@ Re-check with the commands given. All measured 2026-08-08 on `8c8034b`.
 
 ## HTML architecture (added by P6)
 
-**`scripts/convert_raw_notes.py` must not be run as-is.** Its page template
+~~**`scripts/convert_raw_notes.py` must not be run as-is.** Its page template
 (line 785) predates seven SEO commits: it emits no canonical, no `og:`/`twitter:`
 tags, neither JSON-LD block, `lang="en"` instead of `en-GB`, no `notes-cta`, and
 — because `4db232c` removed the two `@import` rules from `css/main.css` — **no web
 fonts and no FontAwesome**. CLAUDE.md names `raw-notes/` as the source for
 converted notes without recording this. 73 markdown sources are still sitting
-there. PH06-027.
+there. PH06-027.~~
+
+> **CLOSED 2026-08-13, D44. THE SCRIPT IS DELETED, not repaired, and the
+> `<head>` was never the real problem.** PH06-027 asks for its template to be
+> replaced by `page_shell.py`. Measured before building, two things make that
+> the wrong fix:
+>
+> - **It writes a whole page into a path that is now GENERATED.**
+>   `build_notes_pages.py` renders all 173 notes pages from `notes-data/`, so
+>   anything it wrote would be overwritten by the next build and
+>   `verify_generated.py` would be red in between. A corrected `<head>` does
+>   not change that.
+> - **Its inputs are 0 of 73 in sync with their live pages.** Every markdown
+>   source was compared against the page carrying its spec code; **not one
+>   reached 95% word coverage and the worst is 38%**. The pages are descendants
+>   of those drafts and have been edited well past them. Running the script
+>   would overwrite a live page with an older draft — a **content change**,
+>   which needs explicit approval every time.
+>
+> So repairing it would have produced correct markup around stale content, in
+> a path that regenerates. **Third time the roadmap has described work that
+> should not be done at all**, after `loading="lazy"` and item (i).
+>
+> **`raw-notes/` stays**, all 73 files, unpublished, as the historical drafts
+> they are. **A new topic page is a `notes-data/` slice plus its metadata JSON,
+> rendered by `scripts/build_notes_pages.py`** — `page_shell.py` owns the
+> `<head>`, so the whole class of defect this entry described cannot recur.
+>
+> `notes_drift.py` section 5 was the evidence for PH06-027 and is now its
+> tripwire: it asserts the script's **absence** and exits 1 if it returns.
+> Proved both ways.
 
 **The `spec-alert` and `notes-cta` blocks stay per-page, never in a shared
 layout.** P5 measured them as the load-bearing board differentiation on the 22
@@ -538,6 +568,30 @@ PH03-048 is 8 links from 2 pages, and why the intuitive version (each notes boar
 hub → its practice twin) moves only 6 pages. Do not "improve" the fix by moving
 those links to the board hubs; measure it with `link_depth.py 1` first.
 
+> **Amended 2026-08-13. The sentence above is still exactly right, and the
+> script stopped being able to say so.** Wave 2 Phase 7 baked the header and
+> footer into all 463 pages, so `link_depth.py`'s "RAW" graph — which meant
+> "the page's own links, WITHOUT the nav", only because the nav used to be
+> fetched at runtime — now already contains every template link. **RAW and
+> INJECTED became numerically identical**, `{0:1, 1:29, 2:350, 3:81}`, and the
+> pair went on printing as though it were two measurements.
+>
+> **So PH03-048 reads as SOLVED — 0 pages at depth ≥ 4 — while nothing was
+> done about it.** Its own prescription is 8 links and **none of them exists**;
+> checked link by link, not inferred.
+>
+> `link_depth.py 1` now prints a **third graph, CONTENT**, which is the baked
+> blocks removed and is what "raw" used to mean. On it: **253 pages at depth
+> ≥ 4**, and **depth 1 is exactly the four pages named above**. Both answers
+> are true and they answer different questions — SERVED is the honest one for
+> **discovery** (max depth 3 with JavaScript off, which Phase 7 bought), CONTENT
+> is the honest one for **link equity**, because search engines discount
+> sitewide boilerplate. **Cite which graph.**
+>
+> The third graph was added rather than the pair reinterpreted: **a metric that
+> changes meaning silently is worse than one that is missing.** Wave 4.7 stays
+> open.
+
 **`/past-papers/edexcel-b/` and `/past-papers/ocr/` have one raw inbound link
 each, and that is not a defect to fix by linking.** They earn 291 clicks and
 21,131 impressions between them — the most on the site outside the homepage — and
@@ -669,8 +723,9 @@ and kept these; do not re-propose them on the strength of the census line.
 `fix_font_loading.py`, `fix_links.py`, `fix_structured_data.py`,
 `add_diagram_gallery_links.py`, `upgrade_pastpaper_links.py`. Keep it that way.
 They have already been applied once and the site has moved on since; a no-flag
-re-run must stay harmless. Contrast `convert_raw_notes.py`, which has no guard —
-PH06-027.
+re-run must stay harmless. ~~Contrast `convert_raw_notes.py`, which has no guard
+— PH06-027.~~ **That script was deleted on 2026-08-13, D44**; the contrast it
+drew is now history rather than a live hazard.
 
 ~~**`verify_liquid.py` exits 1 and that is the expected state.** PH00-011 is a
 pre-existing false positive. Do NOT add this script to a CI workflow before
@@ -785,12 +840,41 @@ parse-and-re-serialise, and reflowing a slice containing prose can move a line
 break across an inline tag boundary and turn `<strong>word</strong>s` into
 "word s". Do not add it.
 
-**`docs/audit/scripts/harness/compare_trees.py` is the gate, and its test suite
+**`scripts/compare_trees.py` is the gate, and its test suite
 is what makes it evidence.** 39 cases break each of the ten assertions on
 purpose, and **twelve of them expect a PASS** — pinning what each assertion is
 deliberately blind to, each paired with the assertion that covers it. An
 assertion that fires on everything is as useless as one that fires on nothing.
 Do not delete the passing cases as redundant.
+
+> **Moved to `scripts/` on 2026-08-13**, with `test_compare_trees.py` and
+> `intentional-changes.json`, per PH06 section 3 — "the harness moves to
+> `scripts/` when the first family migrates, so it becomes a permanent
+> verifier rather than a one-off". Every family has migrated.
+>
+> **THE SUITE IS NOW A WORKFLOW STEP AND `compare_trees.py` ITSELF IS NOT, and
+> that is measured rather than a compromise.** PROGRESS.md carried the move and
+> the workflow step as one task. The comparison cannot be a per-commit step:
+> **assertion 8 asserts that everything outside `--family` is byte-identical**,
+> so with no `--family` it fails on any commit that changes any file — measured
+> on a docs-only commit, where 1–7 and 10 passed and 8 flagged both changed
+> files. A check that is always red protects nothing, which is the argument
+> that kept `verify_liquid.py` out of CI until PH00-011 was fixed.
+>
+> The **suite** needs no second tree, and it is the thing that actually rotted:
+> 31 of 32 for two waves, undetected, because Phase 7's baked nav gave every
+> page a second `/tutoring.html` link and disarmed `a7-link-lost`. ~2m30s, so
+> it sits in the second job beside `verify_generated.py`.
+>
+> Making the comparison a per-commit gate needs a declaration mechanism for
+> assertions 1, 3, 5, 6 and 7 — the `Text-Change:`/`Markup-Change:` trailer
+> pattern extended — which is a design decision and is recorded as one rather
+> than invented.
+>
+> **The comment in the script predicting its own new path said `parents[1]`;
+> it is `parents[0]`.** `HARNESS` is the directory holding the file. The guard
+> underneath — "cannot find the repo root … fix REPO" — is what would have
+> caught it, and is why that guard is there.
 
 **Assertion 10 requires NEW to be a git tree and fails without one.** Seven of
 the fourteen verifiers it runs enumerate through `git ls-files`. Running the
@@ -1172,6 +1256,7 @@ python3 scripts/verify_markup_integrity.py <before-ref> --strict
 python3 scripts/verify_liquid.py          # 1 file checked, 0 problems, exit 0 (D31)
 python3 scripts/verify_glossary.py
 python3 scripts/verify_inline_styles.py   # 0 authored; 1,187 KaTeX on 7 pages
+python3 scripts/test_compare_trees.py     # 39 cases, ~2m30s; the harness's own suite
 python3 seo/tools/verify_seo.py           # 14/14
 python3 scripts/build_sitemap.py --check  # "nothing written"
 node scripts/test_question_search.js

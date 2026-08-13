@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Break each of compare_trees.py's ten assertions on purpose, and check it notices.
 
-    python3 docs/audit/scripts/harness/test_compare_trees.py
-    python3 docs/audit/scripts/harness/test_compare_trees.py --case a4-anchor-stripped
-    python3 docs/audit/scripts/harness/test_compare_trees.py --keep
+    python3 scripts/test_compare_trees.py
+    python3 scripts/test_compare_trees.py --case a4-anchor-stripped
+    python3 scripts/test_compare_trees.py --keep
 
 WHY THIS EXISTS
 ---------------
@@ -48,7 +48,10 @@ import sys
 import tempfile
 
 HARNESS = pathlib.Path(__file__).resolve().parent
-REPO = HARNESS.parents[3]
+# scripts/ since 2026-08-13, with compare_trees.py. Was parents[3] from
+# docs/audit/scripts/harness; HARNESS is the directory, so it is now the
+# parent itself.
+REPO = HARNESS.parents[0]
 COMPARE = HARNESS / "compare_trees.py"
 
 # Fixtures, each chosen for a property the case depends on.
