@@ -1,0 +1,48 @@
+/* 404.html
+   ---------------------------------------------------------------------
+   Wave-norm item (f). 404.html was the ONE published page carrying no page
+   stylesheet at all - verify_page_shell.py named it as the sole exemption
+   from CLAUDE.md's "a new page needs ... its own /css/pages/<page>.css".
+   That is why its 15 inline styles had nowhere to go, and why they were the
+   only ones in the item that needed a file rather than a rule.
+
+   The exemption is deleted from verify_page_shell.HEAD_EXEMPT in the same
+   commit that adds this file, so the improvement is declared rather than
+   absorbed. One published URL is ADDED, /css/pages/404.css; nothing is
+   removed, so DO-NOT-BREAK's frozen-URL rule is untouched.
+
+   Bare selectors, like every other sheet in this directory, and every name
+   here is prefixed `error-` and was unused anywhere on the site before this
+   file existed. Only 404.html loads it. */
+
+.error-panel {
+  text-align: center;
+  padding: 3em 1em 4em;
+}
+
+/* Both rows of shortcut links. The first also opens a gap under the
+   heading, which is the only thing separating the two. */
+.error-links {
+  justify-content: center;
+  gap: 1em;
+}
+
+.error-links-top {
+  margin-top: 2em;
+}
+
+/* #main .row > div.error-link-col, and every part of that selector is
+   carrying weight. css/main.css:3415 sets
+   `#main .row > div[class*="col-"] { margin-bottom: 2em }` at specificity
+   (1,2,1), and these columns match it. A plain `.error-link-col` is (0,1,0);
+   an ID in the winning selector beats any number of bare classes, however
+   many you add, so the 1em quietly became 2em and each row of links grew
+   14.67px. The inline style this replaced outranked that rule; the class has
+   to match its shape to draw level, and then win on load order, which
+   verify_css_load_order.py is what guarantees.
+
+   Caught by computed_style_diff.py --body-only. Do not shorten this
+   selector. */
+#main .row > div.error-link-col {
+  margin-bottom: 1em;
+}

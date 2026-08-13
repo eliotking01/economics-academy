@@ -309,3 +309,53 @@
     font-size: 1.25em;
   }
 }
+
+/* Wave-norm item (f): ten inline styles from tutoring.html.
+
+   THE CALENDLY BLOCK IS THE ONE TO BE CAREFUL WITH. `min-width: 320px;
+   height: 700px; max-width: 100%` is Calendly's own documented embed
+   snippet, copied inline as they publish it. The <div> is ours and the
+   class is only their hook, so CSS applies to it identically - but if that
+   embed is ever re-pasted from Calendly's site it will arrive carrying the
+   style attribute again, and the inline would then win over this rule. If
+   the widget ever looks wrong, check for a re-pasted style attribute first.
+
+   `.enquire-button` is untouched: tutoring.js binds to it. */
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+  max-width: 100%;
+}
+
+/* .row.tutoring-intro-row, NOT .tutoring-intro-row, and the compound is
+   load-bearing. This div is the last child of its <section>, and main.css
+   carries `section > :last-child { margin-bottom: 0 }` - a trailing-space
+   reset at specificity (0,1,1). A lone class is (0,1,0) and LOSES to it, so
+   the 3em silently became 0 and the block below moved up 44px. The inline
+   style this replaced outranked the reset; the class has to earn the same
+   result, and .row.tutoring-intro-row at (0,2,0) does.
+
+   Caught by computed_style_diff.py, not by any of the ten assertions - it is
+   the exact failure that probe was built for. Do not "simplify" this to one
+   class. */
+.row.tutoring-intro-row {
+  align-items: flex-start;
+  margin-bottom: 3em;
+}
+
+.tutoring-actions {
+  text-align: center;
+}
+
+.tutoring-actions-spaced {
+  margin-top: 2em;
+}
+
+/* The Tutorful link sits closer to the block above it than the others do. */
+.tutoring-actions-tutorful {
+  margin-top: 1.5em;
+}
+
+.tutoring-faq {
+  margin-top: 3em;
+}

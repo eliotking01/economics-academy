@@ -317,3 +317,13 @@
     padding-left: 2.2em;
   }
 }
+
+/* Wave-norm item (f): two inline styles from faq.html's closing CTA. */
+.faq-cta-box {
+  text-align: center;
+}
+
+/* The second of the two buttons, spaced off the first. */
+.faq-cta-second {
+  margin-left: 1em;
+}

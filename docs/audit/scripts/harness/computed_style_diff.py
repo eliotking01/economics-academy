@@ -106,6 +106,7 @@ DRIVER = """<!doctype html>
 <script>
 const PAGES = __PAGES__;
 const OLD = __OLD_ORIGIN__, NEW = __NEW_ORIGIN__;
+const SCOPE = __SCOPE__;
 const results = [];
 
 function frame(src) {
@@ -156,8 +157,8 @@ async function one(page) {
                   '--disable-web-security?';
       return res;
     }
-    const ea = a.contentDocument.querySelectorAll('*');
-    const eb = b.contentDocument.querySelectorAll('*');
+    const ea = a.contentDocument.querySelectorAll(SCOPE);
+    const eb = b.contentDocument.querySelectorAll(SCOPE);
     res.elements = ea.length;
     if (ea.length !== eb.length) {
       res.error = 'element count ' + ea.length + ' -> ' + eb.length;
@@ -359,6 +360,17 @@ def main() -> int:
     ap.add_argument("--height", type=int, default=900)
     ap.add_argument("--timeout", type=float, default=600)
     ap.add_argument("--max-report", type=int, default=15)
+    ap.add_argument("--body-only", action="store_true",
+                    help="compare `body *` instead of `*`. For a page that "
+                         "DELIBERATELY gains or loses a <head> element - a new "
+                         "stylesheet link, say. Elements are aligned by "
+                         "document index, so one extra <link> shifts every "
+                         "index after it and the page cannot be compared at "
+                         "all. Head elements render nothing, so dropping them "
+                         "loses no coverage of what a reader sees; it does "
+                         "mean the <head> change itself is NOT checked here, "
+                         "and compare_trees assertions 1 and 5 are what cover "
+                         "that.")
     ap.add_argument("--selftest", action="store_true",
                     help="inject one declaration into a COPY of NEW's "
                          "css/main.css and require this script to see it")
@@ -410,6 +422,7 @@ def main() -> int:
         DRIVER.replace("__PAGES__", json.dumps(pages))
               .replace("__OLD_ORIGIN__", json.dumps(origins["old"]))
               .replace("__NEW_ORIGIN__", json.dumps(origins["new"]))
+              .replace("__SCOPE__", json.dumps("body *" if args.body_only else "*"))
               .replace("__W__", str(args.width))
               .replace("__H__", str(args.height)))
 

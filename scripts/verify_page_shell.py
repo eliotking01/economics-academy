@@ -255,7 +255,14 @@ HEAD_EXEMPT = {
     "og:image": {"404.html", "confirmation.html", "privacy.html"},
     "twitter:card": {"404.html", "confirmation.html"},
     "JSON-LD": {"404.html", "confirmation.html"},
-    "a page stylesheet": {"404.html"},
+    # WAS {"404.html"} until 2026-08-13 and is now EMPTY - a count going down,
+    # declared here in the commit that moved it. 404.html was the one
+    # published page with no page stylesheet, which is why wave-norm item (f)
+    # had nowhere to put its 15 inline styles; css/pages/404.css now exists
+    # and every one of the 463 pages carries a sheet of its own. Kept as an
+    # empty set rather than deleted, so a page LOSING its stylesheet is
+    # reported here rather than silently tolerated.
+    "a page stylesheet": set(),
     # The 21 older hand-written pages that never gained a twitter: title or
     # description. twitter:card is present on 19 of them and Twitter falls back
     # to the og: tags, so nothing is broken - but a generated <head> that

@@ -67,3 +67,15 @@
     align-items: flex-start;
   }
 }
+
+/* Wave-norm item (f): two inline styles from about.html.
+   The portrait's rounding is main.css's `.profile-highlight .image.fit img`
+   rule, which this <img> cannot use - it sits in a plain `.image.fit` span
+   outside any .profile-highlight, which is why it was written inline. */
+.about-portrait {
+  border-radius: 4px;
+}
+
+.about-bio-row {
+  padding-top: 0.5em;
+}
