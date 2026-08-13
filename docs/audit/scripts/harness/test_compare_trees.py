@@ -254,11 +254,23 @@ def case_list():
                  "the file moved, so nothing is invisible"),
 
         # ---- 7  internal links ----------------------------------------------
+        # WAS href="/tutoring.html" and SILENTLY STOPPED PROVING ANYTHING on
+        # 2026-08-11, when Wave 2 Phase 7 (ecbf683) baked the header into all
+        # 463 pages: the nav carries a second /tutoring.html link, edit()
+        # replaces the first occurrence only, and internal_links() returns a
+        # SET - so the target never left it and assertion 7 was right to
+        # report no loss. The case went red on 2026-08-13 and was found to
+        # have been vacuous for two waves. The MCQ teaser link is the fixture
+        # now: exactly one on the page, and no nav item points at it.
         dict(name="a7-link-lost", only="7", expect="FAIL",
              mutate=lambda o, n, t: edit(
-                 n, NOTES, 'href="/tutoring.html"',
+                 n, NOTES,
+                 'href="/practice-questions/edexcel-theme-1/'
+                 '1-1-1-economics-as-a-social-science.html"',
                  'href="https://example.com/"'),
-             why="links may be added and never lost"),
+             why="links may be added and never lost. 5 other pages link to "
+                 "that target, so removing this one cannot trip the orphan "
+                 "limit instead and pass for the wrong reason"),
         dict(name="a7-broken-target", only="7", expect="FAIL",
              mutate=lambda o, n, t: edit(
                  n, NOTES, '<div class="notes-cta">',
@@ -324,6 +336,58 @@ def case_list():
              why="build_sitemap.py --check prints 'nothing written' on BOTH "
                  "paths. The pass signal is the exit code, and this is the "
                  "case that proves the harness reads it"),
+
+        # ---- the verdict must not depend on the display cap ---------------
+        # Found on 2026-08-13: `--max-report 0` made six of the ten assertions
+        # print PASS over a real failure, because the capped DETAIL LINE was
+        # what set the status. Assertion 6 reported PASS and "179 files
+        # differ" in the same breath. One case per affected assertion, each
+        # reusing a mutation proved to fail above, so a regression here cannot
+        # be mistaken for fixture drift.
+        dict(name="cap0-a3-still-fails", only="3", expect="FAIL",
+             args=["--max-report", "0"],
+             mutate=lambda o, n, t: edit(
+                 n, INDEX, r"\times 100 = 100 \)", r"\times 100  = 100 \)"),
+             why="a3 at cap 0: the verdict is not a side effect of printing"),
+        dict(name="cap0-a4-still-fails", only="4", expect="FAIL",
+             args=["--max-report", "0"],
+             mutate=lambda o, n, t: edit(
+                 n, NOTES,
+                 '<a href="/marking.html" class="button alt">Get Essays Marked</a>',
+                 "Get Essays Marked"),
+             why="a4 at cap 0"),
+        dict(name="cap0-a6-still-fails", only="6", expect="FAIL",
+             args=["--max-report", "0"],
+             mutate=lambda o, n, t: edit(
+                 n, NOTES, '"inLanguage": "en-GB"', '"inLanguage": "en"'),
+             why="a6 at cap 0 - the assertion and the mutation that exposed "
+                 "this, wave-norm(1/11)"),
+        dict(name="cap0-a7-still-fails", only="7", expect="FAIL",
+             args=["--max-report", "0"],
+             mutate=lambda o, n, t: edit(
+                 n, NOTES,
+                 'href="/practice-questions/edexcel-theme-1/'
+                 '1-1-1-economics-as-a-social-science.html"',
+                 'href="https://example.com/"'),
+             why="a7 at cap 0"),
+        dict(name="cap0-a8-still-fails", only="8", expect="FAIL",
+             args=["--max-report", "0"],
+             mutate=lambda o, n, t: edit(
+                 n, PPF, 'alt="Production possibility frontier showing',
+                 'alt="PPF showing'),
+             why="a8 at cap 0. It was already correct, by way of an '... and "
+                 "N more' line rather than by design; it now goes through the "
+                 "same method as the other nine"),
+        dict(name="cap0-a9-still-fails", only="9", expect="FAIL",
+             args=["--max-report", "0"], twice=True,
+             mutate=lambda o, n, t: edit(
+                 t, ABOUT, "<title>", "<title >"),
+             why="a9 at cap 0"),
+        dict(name="cap0-clean-still-passes", only="1,2,3,4,5,6,7,8",
+             args=["--max-report", "0"], expect="PASS",
+             mutate=lambda o, n, t: None,
+             why="the pair to the six above. Making the verdict independent "
+                 "of the cap must not make an unchanged tree fail"),
     ]
 
 
@@ -362,6 +426,7 @@ def run_case(case, old, new, third, tmp) -> tuple[bool, str]:
         cmd.append("--no-verifiers")
     for f in case.get("family", []):
         cmd += ["--family", f]
+    cmd += case.get("args", [])
     if case.get("twice"):
         cmd += ["--twice", str(third)]
 

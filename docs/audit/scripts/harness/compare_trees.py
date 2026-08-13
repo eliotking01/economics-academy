@@ -372,6 +372,31 @@ class Result:
         self.status = "FAIL"
         self.details.append(line)
 
+    def capped(self, n: int, cap: int, line: str) -> None:
+        """The nth failure of this assertion. Verdict now; detail only if n <= cap.
+
+        THE VERDICT MUST NOT DEPEND ON THE DISPLAY CAP, and for six of the ten
+        assertions it used to. Each wrote
+
+            bad += 1
+            if bad <= cfg.max_report:
+                r.fail(...)
+
+        so the DETAIL LINE was what set the status. At `--max-report 0` they
+        recorded nothing and printed PASS - with the differing count sitting
+        in the summary directly underneath the word PASS. Found on 2026-08-13
+        running assertion 6 over a real 179-file change, which reported PASS
+        and "179 files differ" together.
+
+        Assertions 2 and 8 escaped only by accident: each already had an
+        "... and N more" line that fires unconditionally. Those lines stay,
+        because they carry the residual count, but they are no longer what
+        makes those two correct.
+        """
+        self.status = "FAIL"
+        if n <= cap:
+            self.details.append(line)
+
     def skip(self, why: str) -> None:
         self.status = "SKIP"
         self.summary = why
@@ -448,8 +473,8 @@ def a2_text(old: Tree, new: Tree, cfg, shared: list[str]) -> Result:
             r.note(f"    NFC-only difference: {path}")
             continue
         differing += 1
+        r.capped(differing, cfg.max_report, f"{path}")
         if differing <= cfg.max_report:
-            r.fail(f"{path}")
             for line in list(difflib.unified_diff(
                     a.split(" "), b.split(" "), lineterm="", n=4))[:20]:
                 r.note(f"      {line}")
@@ -470,8 +495,9 @@ def a3_latex(old: Tree, new: Tree, cfg, shared: list[str]) -> Result:
         total += len(a)
         if a != b:
             bad += 1
+            r.capped(bad, cfg.max_report,
+                     f"{path}: {len(a)} spans -> {len(b)}")
             if bad <= cfg.max_report:
-                r.fail(f"{path}: {len(a)} spans -> {len(b)}")
                 for line in list(difflib.unified_diff(
                         a, b, lineterm="", n=1))[:12]:
                     r.note(f"      {line}")
@@ -490,15 +516,14 @@ def a4_markup(old: Tree, new: Tree, cfg, shared: list[str]) -> Result:
             was, now = oc.get(tag, 0), nc.get(tag, 0)
             if now < was:
                 losses += 1
-                if losses <= cfg.max_report:
-                    r.fail(f"{path}: <{tag}> {was} -> {now}")
+                r.capped(losses, cfg.max_report,
+                         f"{path}: <{tag}> {was} -> {now}")
             elif now > was:
                 gains += 1
         for ref in sorted(orefs):
             if orefs[ref] > nrefs.get(ref, 0):
                 losses += 1
-                if losses <= cfg.max_report:
-                    r.fail(f"{path}: lost {ref!r}")
+                r.capped(losses, cfg.max_report, f"{path}: lost {ref!r}")
     r.summary = (f"{losses} losses, {gains} additions "
                  f"(additions are not failures)")
     return r
@@ -534,8 +559,9 @@ def a5_head(old: Tree, new: Tree, cfg, shared: list[str], allow: dict) -> Result
                 r.note(f"    ALLOWED {path} [{key}]: {reason}")
                 continue
             bad += 1
-            if bad <= cfg.max_report:
-                r.fail(f"{path} [{key}]: {a.get(key, [])!r} -> {b.get(key, [])!r}")
+            r.capped(bad, cfg.max_report,
+                     f"{path} [{key}]: {a.get(key, [])!r} -> "
+                     f"{b.get(key, [])!r}")
     declared = {(p, k) for p, fields in allow.items() for k in fields}
     for p, k in sorted(declared - used):
         r.note(f"    declared but unchanged: {p} [{k}]")
@@ -563,8 +589,9 @@ def a6_jsonld(old: Tree, new: Tree, cfg, shared: list[str]) -> Result:
             continue
         if a != b:
             bad += 1
+            r.capped(bad, cfg.max_report,
+                     f"{path}: {len(a)} blocks -> {len(b)}")
             if bad <= cfg.max_report:
-                r.fail(f"{path}: {len(a)} blocks -> {len(b)}")
                 for line in list(difflib.unified_diff(
                         a, b, lineterm="", n=0))[:8]:
                     r.note(f"      {line[:300]}")
@@ -585,9 +612,8 @@ def a7_links(old: Tree, new: Tree, cfg, shared: list[str]) -> Result:
         added += len(b - a)
         if missing:
             lost += len(missing)
-            if lost <= cfg.max_report:
-                for t in sorted(missing):
-                    r.fail(f"{path}: lost link to {t}")
+            for t in sorted(missing):
+                r.capped(lost, cfg.max_report, f"{path}: lost link to {t}")
 
     resolvable: set[str] = set()
     for f in new.published:
@@ -631,13 +657,11 @@ def a8_bytes(old: Tree, new: Tree, cfg) -> Result:
     for f in outside:
         if f not in old.fileset:
             bad += 1
-            if bad <= cfg.max_report:
-                r.fail(f"only in NEW: {f}")
+            r.capped(bad, cfg.max_report, f"only in NEW: {f}")
             continue
         if f not in new.fileset:
             bad += 1
-            if bad <= cfg.max_report:
-                r.fail(f"only in OLD: {f}")
+            r.capped(bad, cfg.max_report, f"only in OLD: {f}")
             continue
         if old.read_bytes(f) != new.read_bytes(f):
             if cfg.prettier and f.endswith(".html") and \
@@ -645,8 +669,7 @@ def a8_bytes(old: Tree, new: Tree, cfg) -> Result:
                 r.note(f"    identical after Prettier: {f}")
                 continue
             bad += 1
-            if bad <= cfg.max_report:
-                r.fail(f"bytes differ: {f}")
+            r.capped(bad, cfg.max_report, f"bytes differ: {f}")
     if bad > cfg.max_report:
         r.fail(f"... and {bad - cfg.max_report} more")
     r.summary = (f"{len(outside)} files outside "
@@ -664,13 +687,11 @@ def a9_idempotent(new: Tree, cfg) -> Result:
     for f in sorted(new.fileset | second.fileset):
         if f not in new.fileset or f not in second.fileset:
             bad += 1
-            if bad <= cfg.max_report:
-                r.fail(f"present in only one build: {f}")
+            r.capped(bad, cfg.max_report, f"present in only one build: {f}")
             continue
         if new.read_bytes(f) != second.read_bytes(f):
             bad += 1
-            if bad <= cfg.max_report:
-                r.fail(f"second build differs: {f}")
+            r.capped(bad, cfg.max_report, f"second build differs: {f}")
     r.summary = f"{len(new.files)} files, {bad} differ between two builds"
     return r
 
