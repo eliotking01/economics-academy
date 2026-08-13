@@ -1069,6 +1069,64 @@ among the 8 literal `$` on the site, all of which are currency.
 counting it would demand a shape that is meant not to exist. Proved live in
 both directions.
 
+## Inline styles, after item (f) (added 2026-08-13)
+
+**The 1,187 KaTeX inline styles survived the sweep and are now ASSERTED, not
+merely avoided.** `scripts/verify_inline_styles.py` is the workflow's 9th step
+and pins them **per page** across the 7 pages that carry them — the two
+glossary pages and five flashcard decks — so one page losing 20 while another
+gains 20 cannot cancel out. Classification is **by construction**: an
+attribute is KaTeX output if it sits inside an element whose class list holds a
+token beginning `katex`. Never by page path. All four of its failure paths were
+tested by breaking each one deliberately. Cite the script, not the 1,187.
+
+**AUTHORED INLINE STYLES ARE 0 AND THAT IS AN ASSERTION.** 322 across 44 files
+became 0 on 2026-08-13. There is deliberately no allowlist: CLAUDE.md admits no
+exception, so the right shape is a bare zero, and a genuine need for one is a
+`DECISIONS.md` entry plus a named exception here — not a number to nudge.
+
+**EXTRACTING AN INLINE STYLE IS NOT A RENAME, AND `compare_trees.py` CANNOT
+SEE THE DIFFERENCE.** An inline style outranks every class selector, so the
+class can lose to a rule the attribute was beating. Assertion 4 fires only on
+LOSSES and an attribute becoming a class is a loss of nothing; assertions 2, 3,
+6 and 7 never look at CSS. **Two of item (f)'s last 35 attributes moved the
+rendered page and all ten assertions passed both:**
+
+- `tutoring.html` lost 44px. `css/main.css`'s `section > :last-child {
+  margin-bottom: 0 }` is **(0,1,1)**; a lone class is (0,1,0) and loses. Fixed
+  as `.row.tutoring-intro-row`.
+- `404.html` gained 14.67px per link row, the other way. `css/main.css:3415`'s
+  `#main .row > div[class*="col-"]` is **(1,2,1)**, and **no number of bare
+  classes beats a selector containing an ID.** Fixed as
+  `#main .row > div.error-link-col`.
+
+Both rules carry a comment saying so. **Do not "simplify" either selector.**
+
+**`docs/audit/scripts/harness/computed_style_diff.py` is what measures it**,
+and `compare_trees.py` cannot replace it — same relationship as `render_nav.py`
+for the mobile panel. It serves each tree from **its own origin** and compares
+every computed property on every element in a real browser. Four things it
+records, each of which cost a false result:
+
+- **One origin per tree is the whole thing.** Every asset path here is
+  root-absolute, so serving both trees under path prefixes on one origin sends
+  both iframes to the *same* `/css/main.css` and the probe reports 0
+  differences whatever changed. That is what its `--selftest` caught on the
+  first run. Two origins means cross-origin frames, hence
+  `--disable-web-security`, hence `--user-data-dir` being mandatory.
+- **`--hide-scrollbars` and a resolver rule refusing every host but
+  127.0.0.1.** Without them `.container`'s `margin: 0 auto` resolved
+  differently on two IDENTICAL trees, because Calendly's arrival time decided
+  the page height and so whether there was a scrollbar.
+- **`--body-only` for a page that deliberately gains a `<head>` element.**
+  Elements align by document index, so 404.html's one new `<link>` shifted
+  every index and the page was SKIPPED with `element count 199 -> 200` — an
+  uncompared page inside a run whose last line said PASS. That is
+  `--max-report 0` again. The second regression above was invisible until this
+  existed.
+- **Run `--selftest` whenever the answer is 0.** It appends one declaration to
+  a copy of NEW's `main.css` and requires the probe to see it.
+
 ---
 
 # FINALISED — Phase 11, 2026-08-09
@@ -1086,6 +1144,18 @@ undo:
 2. **The 1,187 KaTeX inline styles and the 6 `<noscript>` `<style>` blocks are
    build output.** An inline-style sweep against PH00-008 will hit both unless it
    excludes them by construction.
+
+   > **THE SWEEP HAPPENED, 2026-08-13, and this entry held.** Item (f) took
+   > authored inline styles 322 → 0 and touched **none** of the 1,187: they are
+   > still on the same 7 pages, count unchanged, and are now asserted per page
+   > by `scripts/verify_inline_styles.py` rather than merely left alone. The
+   > exclusion was by construction — a `katex` class token — exactly as this
+   > entry demanded, and it was sensitivity-checked four ways before being
+   > believed, because "0 authored on the KaTeX pages" is a zero that has to be
+   > earned. The six `<noscript>` blocks were never in scope; the three real
+   > `<style>` blocks went in the previous wave. **See "Inline styles, after
+   > item (f)" above for what the sweep cost — two silent cascade regressions,
+   > both invisible to all ten harness assertions.**
 3. **`_config.yml`'s `exclude` is the only thing keeping working files off the
    site**, and it replaces Jekyll's defaults rather than adding to them.
 4. **`<section id="main">` → `<main id="main">` must keep the `id`.** 462 pages,
@@ -1101,6 +1171,7 @@ python3 scripts/verify_text_integrity.py <before-ref>
 python3 scripts/verify_markup_integrity.py <before-ref> --strict
 python3 scripts/verify_liquid.py          # 1 file checked, 0 problems, exit 0 (D31)
 python3 scripts/verify_glossary.py
+python3 scripts/verify_inline_styles.py   # 0 authored; 1,187 KaTeX on 7 pages
 python3 seo/tools/verify_seo.py           # 14/14
 python3 scripts/build_sitemap.py --check  # "nothing written"
 node scripts/test_question_search.js

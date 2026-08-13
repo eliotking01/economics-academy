@@ -1214,3 +1214,95 @@ attribution, "the reference form the other 354 pages use" (there are six
 roles, not one), the `WebSite` substance, the harness suite's 32, and one of
 mine — I called the two gallery blocks byte-identical when they are the same
 LENGTH, `macro` and `micro` both being five letters.
+
+### D43 — Item (f) ships complete: 322 inline styles to 0, and two silent regressions on the way
+
+Eliot, 2026-08-13, answering the three questions the measurement raised.
+**Option A on all three.** This closes the eleventh and last of D18 Q20's
+approved normalisations; D42 settled the other ten.
+
+**The measurement came first, and for once every recorded number held.** 1,509
+inline `style=` attributes on the published surface, 1,187 KaTeX, **322
+authored across 44 files** — and the family split, the property split (width
+143, font-size 142, colour 142, margin-top 20, text-align 19) and the 120-in-32
+`notes-data` figure all re-derived unchanged. Two independent methods agreed at
+1,509. **This is the first item in the wave where nothing moved.**
+
+**PH08-042's own figures are stale and reconcile exactly.** It records 333
+across 45 files; the 45th was `templates/footer.html` with 11, moved into CSS
+by `be92eb2` in Wave 0. 333 − 11 = 322, 45 − 1 = 44. **One claim in it is still
+wrong:** "no generated page carries an authored inline style". **32 of the 44
+files are generated** — 26 notes-topic and 6 notes-hub, holding 120 attributes
+inside `notes-data/**` slices. It went stale when Wave 2 Phases 3 and 5 made
+the notes pages generated underneath it.
+
+**The three decisions.**
+
+- **The 96 `<th>` column widths were moved, knowing what that buys.** 35
+  tables, 13 width tuples, 11 percentages: the width is per-table data, so
+  `style="width: 25%"` becomes `class="width-25"` and the same fact is spelled
+  differently. It is not more maintainable. It was put in those words and
+  chosen anyway, because **a half-swept item is one no verifier can ever hold
+  at zero** — the argument that also keeps `verify_page_shell` check 5's
+  `<style>` label at 0 and `KNOWN_BREADCRUMB_DISAGREEMENT` empty. The rules are
+  scoped twice, `.revision-notes-content .concept-table th.width-N`, because
+  a bare `.width-25` in a sheet 179 pages load is the collision the house rule
+  exists to prevent.
+- **404.html gets `css/pages/404.css`.** It was the one published page with no
+  page stylesheet, which is why its 15 attributes had nowhere to go.
+  `verify_page_shell`'s `HEAD_EXEMPT["a page stylesheet"]` goes from
+  `{"404.html"}` to empty and check 4 reads **463/463**. One published URL
+  added, none removed.
+- **One `.button.fit` in `css/main.css`**, a modifier on the site-wide button
+  component beside `.alt`, `.primary` and `.large`, replacing the same
+  declaration written inline 47 times across 9 pages and 4 stylesheets.
+
+**THE RESULT THAT MATTERS IS NOT THE COUNT. Two of the last 35 attributes
+moved the rendered page, and all ten harness assertions passed both.**
+
+- `tutoring.html` **lost 44px**: `css/main.css`'s `section > :last-child {
+  margin-bottom: 0 }` is specificity **(0,1,1)** and a lone class is (0,1,0).
+- `404.html` **gained 14.67px per link row**, the other direction:
+  `css/main.css:3415`'s `#main .row > div[class*="col-"]` is **(1,2,1)**, and
+  no number of bare classes beats a selector containing an ID.
+
+In both, the inline outranked a real rule and the class did not. **That is the
+whole risk of this item and it was stated before any of it was written** —
+`compare_trees` assertion 4 fires only on losses, and an attribute becoming a
+class is a loss of nothing; assertions 2, 3, 6 and 7 never look at CSS. So
+`computed_style_diff.py` was built first, in the wave's opening commit, and it
+is what found both.
+
+**That probe failed its own selftest on its first run, and the failure was
+real.** Serving both trees under path prefixes on one origin sent both iframes
+to the *same* `/css/main.css`, because every asset path here is root-absolute
+— so it reported "0 differences" on a tree with a declaration deliberately
+appended to `main.css`. **It could not have failed.** One origin per tree fixed
+it. A second false positive, on two identical trees, traced to Calendly's
+arrival time deciding whether there was a scrollbar. **And the 404.html
+regression was invisible until `--body-only` existed:** the probe aligns
+elements by index, so one new `<head>` `<link>` made it skip the page entirely
+with `element count 199 -> 200`, inside a run whose final line said PASS. Same
+shape as `compare_trees` printing PASS at `--max-report 0` in D42.
+
+**`scripts/verify_inline_styles.py` is the workflow's 22nd step** and is what
+the `<th>` trade was made for. It holds authored styles at 0 with no allowlist,
+and **pins the 1,187 KaTeX offsets per page across all 7**, by construction
+rather than by path. All four of its failure paths were tested by breaking each
+one.
+
+**One thing found in passing and fixed.** `docs/audit/scripts/lib.py`'s
+`exclude` literal was two entries short of `_config.yml` — `boards-data/` and
+`notes-data/` — so `lib.pages()` returned **636 instead of 463**, counting the
+173 notes-data slices as pages, and `link_graph.py` reported 173 phantom
+orphans. Eight audit scripts read through it and four of them back
+DO-NOT-BREAK's "Numbers that must not regress" table. **The comment on that
+list promised a `verify_matches_config()` that had never been written.** It is
+written now, parses `_config.yml`, and runs on import.
+
+**Three of my own predictions were wrong**, all in the direction of the harness
+seeing less than I said: assertion 4 showed 1 addition rather than 0 (a `<link>`
+is a tag); assertion 5 **passed** where I predicted it would move, because
+`head_fields()` reads only `lang`, `title`, `meta:*`, `og:*`, `twitter:*` and
+`rel="canonical"` and is structurally blind to a stylesheet link; and I did not
+anticipate the `--body-only` gap at all.
