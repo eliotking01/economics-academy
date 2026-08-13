@@ -77,6 +77,33 @@ SITE = "https://economicsacademy.co.uk"
 BOARDS = json.loads(
     (ROOT / "boards-data" / "boards.json").read_text(encoding="utf-8"))["boards"]
 
+# The publisher, as a reference. Declared once here because four generators
+# emit it and Wave 3.2 spent seven commits removing exactly this kind of
+# restated literal. It is the form the other 353 pages already carry;
+# index.html holds the one COMPLETE node this @id points at, and PH04-055 is
+# what puts the full node on the five entity-homes.
+#
+# @id references are the correct linked-data pattern and are NOT resolved
+# across pages by search engines - which is why the reference has to be on the
+# page at all rather than being left implicit. DO-NOT-BREAK, PH04-055.
+#
+# A caller names the PROPERTY it hangs this off; there is deliberately no
+# helper meaning "the publisher bit of a page", because the right property
+# depends on the node it attaches to. 105 of the 107 pages PH04-052 covers
+# take `publisher`, the standard CreativeWork property; marking.html and
+# tutoring.html are `Service` nodes and take `provider`, which is Service's
+# own property for the same relationship. Same argument as board_data.py
+# never growing a canonical accessor.
+#
+# Proved WIRED rather than merely unbroken: changing "Economics Academy" here
+# alone moved all 99 generated pages, 99 of 99.
+ORGANISATION_REF = {
+    "@type": "EducationalOrganization",
+    "@id": f"{SITE}/#organization",
+    "name": "Economics Academy",
+    "url": SITE,
+}
+
 PRINT_WIDTH = 80   # Prettier's default, and CLAUDE.md pins Prettier 3.9.6
 INDENT = 4         # inside <head>
 

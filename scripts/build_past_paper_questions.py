@@ -581,6 +581,7 @@ def page_shell(title, desc, path, crumbs, body):
             "name": "Economics Academy",
             "url": SITE,
         },
+        "publisher": shell.ORGANISATION_REF,
     }
     head = shell.render_head({
         "title": e(title),

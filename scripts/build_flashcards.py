@@ -570,6 +570,7 @@ def hub_page(decks):
                        "Edexcel A and AQA, with spaced repetition.",
         "url": f"{SITE}{path}",
         "inLanguage": "en-GB",
+        "publisher": shell.ORGANISATION_REF,
     }
     sections = []
     for board_name in sorted({d["deck"]["boardName"] for d in decks}):

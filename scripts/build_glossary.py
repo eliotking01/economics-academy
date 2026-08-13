@@ -885,6 +885,7 @@ def render_landing(data):
         "url": f"{SITE}/revision-notes/glossary/",
         "inLanguage": "en-GB",
         "isPartOf": {"@type": "WebSite", "name": "Economics Academy", "url": SITE},
+        "publisher": shell.ORGANISATION_REF,
         "hasPart": [
             {"@type": "DefinedTermSet",
              "name": f"{m['long']} Glossary",
