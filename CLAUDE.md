@@ -41,6 +41,7 @@ python3 scripts/verify_liquid.py             # a stray {%…%} fails the DEPLOY
 python3 scripts/verify_icons.py              # the Font Awesome subset covers every icon used
 python3 scripts/verify_image_dimensions.py   # every <img> width/height matches its file
 python3 scripts/verify_css_load_order.py     # main.css is linked before every page stylesheet
+python3 scripts/verify_inline_styles.py      # 0 authored style= attributes; KaTeX's are pinned per page
 python3 scripts/verify_page_shell.py         # the <head>, wrapper and script tail have not drifted
 python3 scripts/verify_boards.py             # boards.json matches its pinned copy AND the code
 python3 scripts/build_sitemap.py --check     # read the EXIT CODE, see below
@@ -265,7 +266,16 @@ same commit, or that script refuses to run. Topic pages carry two JSON-LD blocks
   names have already collided across two files.
 - `:root` colour tokens live in `revision-notes-textbook.css` and are for notes
   only. Elsewhere use hex. The brand accent is `#d52349`.
-- No inline `style` attributes — extract a class.
+- No inline `style` attributes — extract a class. **0 authored ones remain and
+  `verify_inline_styles.py` holds it there;** the 1,187 that show up in a grep
+  are KaTeX build output on 7 pages and must never be touched. **Extracting one
+  is not a rename: an inline style outranks every class selector, so the class
+  can lose to a rule the attribute was beating.** Two of wave-norm item (f)'s
+  last 35 did exactly that — a `(0,1,1)` `section > :last-child` reset and a
+  `(1,2,1)` `#main .row > div[class*="col-"]` — and every harness assertion
+  passed both. Prove it with
+  `python3 docs/audit/scripts/harness/computed_style_diff.py OLD NEW`, which
+  compares every computed property on every element in a real browser.
 
 **Prose**
 
