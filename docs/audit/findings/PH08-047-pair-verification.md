@@ -301,8 +301,8 @@ axes 120–460, panel titles at y=112.
 | --- | --- |
 | `perfect-competition-short-run-supernormal-profit` | **DONE**, `7f89f3d` |
 | `perfect-competition-short-run-loss` | **DONE**, `7f89f3d` |
-| `price-discrimination` | **OPEN** — needs a *third* panel, the combined market |
-| `short-run-shutdown-condition` | **OPEN** — needs the do-not-shut-down case |
+| `price-discrimination` | **DONE differently**, `49a423f` — see below |
+| `short-run-shutdown-condition` | **DONE**, `49a423f` |
 
 **The method for the two that are done, and the one to reuse.** The firm panel
 is **transformed, not redrawn**: `x' = 460 + (x-100)/2`, a **uniform** half
@@ -331,3 +331,31 @@ shared y=492.
   An economics rewrite, not a diagram fix. Needs its own instruction.
 - **Wave 5.2, 5.3, 5.4.** 5.3 is still gated: it cannot proceed as a sweep while
   any panel-drop is open.
+
+## All four panel-drops are closed, and one took the other route
+
+`short-run-shutdown-condition` gained its second panel. Both panels are the same
+drawing at a uniform half scale, so MC, AVC and ATC are **identical** between
+them — which is the point, because the two cases differ *only* in the height of
+demand. The keep-operating panel's AR and MR were **solved, not drawn**: they
+share an intercept with MR at twice AR's slope, and the pair chosen puts MR
+through MC at Q=460 with price 45.2 above AVC and 111.9 below ATC.
+
+**`price-discrimination` took the separate-diagram route, and that was measured
+rather than preferred.** Three panels on the locked 800×600 canvas gives 205px
+each: the panel titles do not fit on one line, there is nowhere to put the
+`AC=MC` label that is not over a curve, and at 400×300 each panel would be about
+100px wide. The existing two-panel file is unchanged;
+`price-discrimination-combined-market.svg` is new.
+
+Its single price is **fixed by the construction, not chosen**: MR bisects the
+horizontal distance under a straight AR, so P is the midpoint of the AR intercept
+and the cost line — (165+380)/2 = **272.5** — whatever slope AR takes. That sits
+between the **265** and **280** of the two sub-markets, which is the comparison
+the pair exists to make.
+
+**The new SVG is referenced by nothing.** A new diagram needs a flashcard to
+consume it, and writing one is content work needing Eliot's approval, so no card
+was added. Until one exists it is an unreferenced asset of exactly the class D38
+had to adjudicate — recorded here rather than left for a future census to
+rediscover and propose deleting.
