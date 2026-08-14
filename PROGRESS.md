@@ -88,10 +88,17 @@ harming its revision-notes ranking, and never risk marking.html's #1.
       generators, 0 files would change) and both integrity checks against
       HEAD~1 with the Text-Change trailers recognised.
 
-**STATE: work complete, branch ready for Eliot's review. Not pushed —
-nothing publishes until Eliot merges to main.** Remaining work is Eliot's:
-see OWNER-TODO.md (re-indexing requests, Tutorful price update, tutoring
-agreement document, optional Google Business Profile).
+**STATE: MERGED AND LIVE.** Eliot approved in chat and the branch was
+merged to main (merge commit e09cdef) and pushed on 2026-08-14. Both
+workflows succeeded — verify CI (the Text-Change trailers were accepted)
+and the Pages deployment — and the live site was spot-checked: new title,
+£65/£35 prices, group section, updated FAQ and home card all serving.
+
+Remaining work is Eliot's: see OWNER-TODO.md — request re-indexing of
+tutoring.html, /, and faq.html in Search Console NOW (day-0 item), update
+the Tutorful profile price, put group billing detail in the tutoring
+agreement document, optional Google Business Profile. Measure against the
+baseline (position 26.27, 440 impressions) at the ~2026-09-22 GSC check.
 
 ## Merge instructions (for Eliot)
 
