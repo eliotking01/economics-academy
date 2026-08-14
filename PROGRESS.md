@@ -7,11 +7,17 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ## 1. Home page revamp — branch `home-page-revamp`
 
-**STATE: BUILT, VERIFIED AND CONNECTED — awaiting Eliot's review/merge
-only.** The newsletter form posts to Kit form **9803307** (ID supplied by
-Eliot 2026-08-14; endpoint sanity-checked live, GET returns 200). Nothing is
-live until the merge, which must be a **merge commit, not a squash** — the
-first commit carries Text-Change trailers CI reads.
+**STATE: MERGED AND LIVE.** Eliot approved in chat and the branch was merged
+to main (merge commit `f53b7fe`, --no-ff) and pushed on 2026-08-14. Both
+workflows succeeded — verify CI (the two Text-Change trailers were accepted
+across the merge range) and the Pages deployment — and the live site was
+spot-checked: new H1, Kit form 9803307, board tiles, static testimonials and
+the privacy additions all serving, `<title>` byte-identical, old review
+scripts gone. The newsletter form posts to Kit form **9803307** (endpoint
+sanity-checked, GET 200). Remaining work is Eliot's — see OWNER-TODO.md:
+GSC re-indexing of `/` and `/privacy.html`, a live test signup, the Kit
+double-opt-in glance. Measure the page against its baseline (223 clicks,
+2,463 impressions, position 17.35) at the ~2026-09-22 GSC check.
 
 ### The brief (approved 2026-08-14, all four plan questions answered yes)
 
