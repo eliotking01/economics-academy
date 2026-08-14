@@ -1546,3 +1546,61 @@ say so in the finding and on the sheet. They are not measurements.
 **5.3's gate is unchanged and now visibly unreachable today.** It is gated on
 these 21 *and* on `comparative-advantage`, which Eliot put out of scope for this
 session, so no amount of 5.2 work would have unblocked it.
+
+---
+
+## 2026-08-14 · Wave 5.3
+
+### D48 — The swap is deferred, and the two constraints it was deferred FOR were both wrong
+
+Eliot, 2026-08-14, choosing the recommended default: **record and hold** until
+Wave 5.2's 21 diagrams exist. No page was changed. Evidence in
+`PH08-047c-the-swap.md`; the probe is
+`docs/audit/scripts/harness/measure_diagram_render.py`.
+
+**PH08-047's "798 px of white against 1,118 px" does not reproduce, and this
+entry supersedes D46's repetition of it.** Measured at viewports 980, 1100,
+1280, 1440, 1680 and 1920, the SVG already on `3-4-4-oligopoly.html` and the two
+PNGs beside it render at **exactly 800 px each**, because
+`revision-notes-textbook.css:622` caps `.diagram-figure` at `max-width: 800px` —
+a rule that predates the finding. **The 1,118 is the `.notes-container`**, the
+image's great-grandparent, which the ancestor chain prints. There is no 29%
+shrinkage.
+
+**So both of the constraints 5.3 was said to face dissolve.** PH08-047 step 3's
+prescription — declare the viewBox — is correct, and is also the **only**
+declaration `verify_image_dimensions.py` accepts, because `DIAGRAM_STYLE.md`
+forbids an absolute `width`/`height` on the `<svg>` and the checker falls back
+to the viewBox. There was never an attribute decision to take.
+
+**The real constraint is the opposite: every swapped diagram gets TALLER.**
+Measured by swapping two PNGs on that page — `collusion` **+104.7 px**,
+`kinked-demand-curve` **+92.7 px**, width unchanged. Every viewBox is 4:3
+against PNGs near 1.5, which is D46's "aspect changes on 77 of 78" seen from the
+page's side. No layout shift, since the box is declared; the pages just get
+longer, and the widest diagrams grow most — `price-discrimination` from about
+231 px tall to 583 px.
+
+**Weight is real and is not the reason.** The 78 swappable pairs are 3.77 MiB of
+PNG against 192 KiB of SVG, 95% lighter — but Wave 4.1 already took all 112 PNGs
+26.21 → 5.41 MiB, so this is ~3.6 MiB sitewide rather than a speed problem. The
+case for 5.3 is **consistency with the flashcards**, and it should be argued on
+that or not at all.
+
+**What decided it: a swap today would make the site look less considered.**
+5.2 drew nothing, so 64 `<img>` on 30 pages have no SVG to move to, and
+**20 pages would show blue and black diagrams side by side** — including both
+diagram galleries and five Theme 1 topic pages. Every page is internally
+consistent today. 5.3 is worth doing once, after the 21 exist, rather than in
+two halves.
+
+**`comparative-advantage` is a defect, not the binding gate.** Its SVG is
+already live in the notes on 3 pages, so it sits on the site whatever 5.3 does.
+The binding gate is the 21 undrawn diagrams.
+
+**A number in this session's own opening summary was wrong and is corrected
+here.** The 798/1,118 pair was restated as established fact before it was
+measured. That is the failure this project keeps recording about roadmap
+numbers, reproduced once more by the person warning about it, and it is the
+argument for `measure_diagram_render.py` existing rather than the figure being
+written down again.
