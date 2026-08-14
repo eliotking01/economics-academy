@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wave 5.2 &mdash; which diagrams are actually missing</title>
+<style>
+:root{--ink:#1a202c;--mute:#5a6572;--line:#e2e8f0;--bg:#f7f8fa;--card:#fff;
+      --accent:#d52349;--ok:#0f7b6c;--warn:#b45309}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+     font:16px/1.55 "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+header.sheet{position:sticky;top:0;z-index:20;background:var(--card);
+     border-bottom:1px solid var(--line);padding:14px 22px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+header.sheet h1{margin:0 0 4px;font-size:19px;letter-spacing:-.01em}
+header.sheet p{margin:0;font-size:13.5px;color:var(--mute);max-width:110ch}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.bar button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid var(--line);
+     background:#fff;border-radius:6px;cursor:pointer}
+.bar button:hover{border-color:var(--mute)}
+#tally{font-size:13px;color:var(--mute);margin-left:auto;font-variant-numeric:tabular-nums}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2.group{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);
+     margin:30px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h2.group:first-child{margin-top:0}
+.row{background:var(--card);border:1px solid var(--line);border-radius:10px;
+     padding:16px 18px;margin-bottom:18px;scroll-margin-top:150px}
+.row.done-draw{border-left:5px solid var(--accent)}
+.row.done-skip{border-left:5px solid var(--ok)}
+.row.done-later{border-left:5px solid var(--warn)}
+.rowhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.rowhead .n{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.rowhead h3{margin:0;font-size:17px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.chip{font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.chip.panels{background:#fff7ed;border-color:#fdba74;color:#9a3412}
+.chip.p1{background:#f0fdf4;border-color:#86efac;color:#166534}
+.chip.covered{background:#ecfdf5;border-color:#6ee7b7;color:#065f46}
+.chip.inferred{background:#fef2f2;border-color:#fca5a5;color:#991b1b}
+.note{font-size:13.5px;background:#fffbeb;border:1px solid #fde68a;border-radius:7px;
+      padding:9px 12px;margin:0 0 12px}
+.note.covered{background:#ecfdf5;border-color:#a7f3d0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.pane{min-width:0}
+.pane h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.pane .meta{font-size:12px;color:var(--mute);margin:0 0 8px;font-variant-numeric:tabular-nums}
+.imgwrap{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;
+     display:flex;align-items:center;justify-content:center;min-height:120px;cursor:zoom-in}
+.imgwrap img{max-width:100%;max-height:340px;height:auto;display:block}
+body.big .imgwrap img{max-height:none;width:100%}
+.stack{display:flex;flex-direction:column;gap:10px}
+.caps{margin-top:14px;border-top:1px dashed var(--line);padding-top:11px}
+.caps h4{margin:0 0 7px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.cap{font-size:14px;margin:0 0 9px;padding-left:11px;border-left:3px solid var(--line)}
+.cap .where{display:block;font-size:11.5px;color:var(--mute);margin-top:2px;
+     font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.verdict{margin-top:13px;border-top:1px dashed var(--line);padding-top:11px;
+     display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.verdict label{font-size:14px;display:inline-flex;align-items:center;gap:5px;
+     padding:5px 11px;border:1px solid var(--line);border-radius:99px;cursor:pointer}
+.verdict label:hover{border-color:var(--mute)}
+.verdict input{margin:0}
+.verdict textarea{flex:1 1 320px;min-width:220px;font:inherit;font-size:13.5px;
+     padding:6px 9px;border:1px solid var(--line);border-radius:6px;resize:vertical}
+dialog{border:none;border-radius:10px;padding:0;max-width:96vw;max-height:96vh;
+     box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(0,0,0,.65)}
+dialog img{display:block;max-width:96vw;max-height:92vh}
+dialog .close{position:absolute;top:8px;right:12px;font-size:22px;background:#fff;
+     border:1px solid var(--line);border-radius:6px;cursor:pointer;padding:2px 10px}
+#exportbox{width:100%;height:260px;font:12.5px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+     padding:10px;border:1px solid var(--line);border-radius:8px}
+@media (max-width:900px){.pair{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="sheet">
+  <h1>Wave 5.2 &mdash; the 28 diagram PNGs with no same-named SVG</h1>
+  <p>The roadmap calls these &ldquo;28 missing diagrams&rdquo;. My proposal is that
+     <strong>6 are already drawn</strong> under different filenames,
+     <strong>1 is drawn as part of something larger</strong>, and
+     <strong>21 are real gaps</strong>. Every row is a claim to confirm or
+     overturn. The cost driver is the <strong>panel count</strong>, not the file width:
+     three of the narrowest files here are four- and five-panel grids.</p>
+  <div class="bar">
+    <button id="big" type="button">Toggle full size</button>
+    <button id="next" type="button">Next undecided</button>
+    <button id="export" type="button">Export verdicts</button>
+    <span id="tally"></span>
+  </div>
+</header>
+<main>
+<h2 class="group">Already drawn under other filenames &mdash; nothing to draw (proposal) &mdash; 6</h2>
+<section class="row" data-stem="exchange-rates">
+  <div class="rowhead">
+    <span class="n">01 / 28</span>
+    <h3>exchange-rates.png</h3>
+    <span class="chip covered">proposed: covered</span><span class="chip panels">2 panels</span><span class="chip">aspect 2.719</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note covered">Eliot named which panel each SVG takes in the 5.1 review: appreciation is the right-hand panel, depreciation the left. Both passed as faithful (PH08-047 rows 19 and 20).</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3540&times;1302</p>
+      <div class="imgwrap"><img src="/images/diagrams/exchange-rates.png"
+        width="3540" height="1302" alt="exchange-rates" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">exchange-rate-appreciation.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/exchange-rate-appreciation.svg" width="800" height="600" alt="exchange-rate-appreciation SVG" loading="lazy"></div></div><div><p class="meta">exchange-rate-depreciation.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/exchange-rate-depreciation.svg" width="800" height="600" alt="exchange-rate-depreciation SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: In the left panel, an increase in the supply of the currency (S1 to S2) lowers the exchange rate from P1 to P2 — a depreciation. In the right panel, an increase in demand for the currency (D1 to D2) raises the exchange rate from P1 to P2 — an appreciation.<span class="where">revision-notes/aqa-a2-macro/2-6-4-exchange-rate-systems.html, revision-notes/edexcel-theme-4/4-1-8-exchange-rates.html</span></p><p class="cap">Shows appreciation after demand for the currency rises and depreciation after supply of the currency rises.<span class="where">revision-notes/macroeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-exchange-rates" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-exchange-rates" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-exchange-rates" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="Indirect-tax-incidence-elastic-inelastic">
+  <div class="rowhead">
+    <span class="n">02 / 28</span>
+    <h3>Indirect-tax-incidence-elastic-inelastic.png</h3>
+    <span class="chip covered">proposed: covered</span><span class="chip panels">2 panels</span><span class="chip">aspect 2.191</span><span class="chip">2 pages</span>
+  </div>
+  <p class="note covered">Both panels drawn, both passed as faithful in 5.1 (rows 22 and 25).</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">2180&times;995</p>
+      <div class="imgwrap"><img src="/images/diagrams/Indirect-tax-incidence-elastic-inelastic.png"
+        width="2180" height="995" alt="Indirect-tax-incidence-elastic-inelastic" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">indirect-tax-elastic-demand.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/indirect-tax-elastic-demand.svg" width="800" height="600" alt="indirect-tax-elastic-demand SVG" loading="lazy"></div></div><div><p class="meta">indirect-tax-inelastic-demand.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/indirect-tax-inelastic-demand.svg" width="800" height="600" alt="indirect-tax-inelastic-demand SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Compares the effect of an indirect tax when demand is price inelastic and price elastic.<span class="where">revision-notes/microeconomics-diagrams.html</span></p><p class="cap">Figure 2: The impact of an indirect tax when demand is price inelastic vs. price elastic.<span class="where">revision-notes/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-Indirect-tax-incidence-elastic-inelastic" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-Indirect-tax-incidence-elastic-inelastic" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-Indirect-tax-incidence-elastic-inelastic" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="trade-union">
+  <div class="rowhead">
+    <span class="n">03 / 28</span>
+    <h3>trade-union.png</h3>
+    <span class="chip covered">proposed: covered</span><span class="chip panels">2 panels</span><span class="chip">aspect 2.468</span><span class="chip">2 pages</span>
+  </div>
+  <p class="note covered">Both panels drawn. The monopsony one was a 5.1 `differs` and has been repaired. Note the two single-panel PNGs are the ground truth DO-NOT-BREAK protects from deletion.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3544&times;1436</p>
+      <div class="imgwrap"><img src="/images/diagrams/trade-union.png"
+        width="3544" height="1436" alt="trade-union" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">trade-union-competitive.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/trade-union-competitive.svg" width="800" height="600" alt="trade-union-competitive SVG" loading="lazy"></div></div><div><p class="meta">trade-union-monopsony.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/trade-union-monopsony.svg" width="800" height="600" alt="trade-union-monopsony SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Trade Unions have different impacts on labour markets depending on whether the market is competitive or a monopsony.<span class="where">revision-notes/aqa-a2-micro/1-6-5-the-influence-of-trade-unions-in-determining-wages-and-levels-of-employment.html</span></p><p class="cap">Figure 3: Trade Unions have different impacts on labour markets depending on whether the market is competitive or a monopsony.<span class="where">revision-notes/edexcel-theme-3/3-5-3-wage-determination.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-trade-union" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-trade-union" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-trade-union" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="ad-shift-right-classical-keynesian">
+  <div class="rowhead">
+    <span class="n">04 / 28</span>
+    <h3>ad-shift-right-classical-keynesian.png</h3>
+    <span class="chip covered">proposed: covered</span><span class="chip panels">2 panels</span><span class="chip">aspect 2.724</span><span class="chip">4 pages</span>
+  </div>
+  <p class="note covered">Checked panel by panel while building this sheet. Left panel is Keynesian, right is classical; both SVGs carry the same PL1/PL2, Y1/Y2/Yfe, AD1/AD2 and LRAS1 labels as the panel they draw.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3574&times;1312</p>
+      <div class="imgwrap"><img src="/images/diagrams/ad-shift-right-classical-keynesian.png"
+        width="3574" height="1312" alt="ad-shift-right-classical-keynesian" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">keynesian-ad-shift-right.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/keynesian-ad-shift-right.svg" width="800" height="600" alt="keynesian-ad-shift-right SVG" loading="lazy"></div></div><div><p class="meta">classical-ad-shift-right.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/classical-ad-shift-right.svg" width="800" height="600" alt="classical-ad-shift-right SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: AD/AS Diagram - Expansionary Policy<span class="where">revision-notes/aqa-a2-macro/2-4-3-central-banks-and-monetary-policy.html, revision-notes/aqa-a2-macro/2-5-1-fiscal-policy.html, revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html</span></p><p class="cap">Figure 2: AD/AS Diagram - Expansionary Policy<span class="where">revision-notes/edexcel-theme-2/2-6-2-demand-side-policies.html</span></p><p class="cap">Shows AD shifting right under expansionary fiscal or monetary policy.<span class="where">revision-notes/macroeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-ad-shift-right-classical-keynesian" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-ad-shift-right-classical-keynesian" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-ad-shift-right-classical-keynesian" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="long-run-growth-ad-lras">
+  <div class="rowhead">
+    <span class="n">05 / 28</span>
+    <h3>long-run-growth-ad-lras.png</h3>
+    <span class="chip covered">proposed: covered</span><span class="chip panels">2 panels</span><span class="chip">aspect 2.084</span><span class="chip">1 page</span>
+  </div>
+  <p class="note covered">Checked panel by panel. Both draw LRAS1 to LRAS2 against a fixed AD, classical and Keynesian. The Keynesian SVG labels the outputs Y1/Y2 where the PNG says Yfe1/Yfe2 - a label difference, not a different diagram. This is also the PNG whose declared size Wave 4.1 found wrong.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3030&times;1454</p>
+      <div class="imgwrap"><img src="/images/diagrams/long-run-growth-ad-lras.png"
+        width="3030" height="1454" alt="long-run-growth-ad-lras" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">classical-lras-shift-right.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/classical-lras-shift-right.svg" width="800" height="600" alt="classical-lras-shift-right SVG" loading="lazy"></div></div><div><p class="meta">keynesian-lras-shift-right.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/keynesian-lras-shift-right.svg" width="800" height="600" alt="keynesian-lras-shift-right SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Shows LRAS shifting right, increasing the economy&#x27;s productive potential.<span class="where">revision-notes/macroeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-long-run-growth-ad-lras" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-long-run-growth-ad-lras" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-long-run-growth-ad-lras" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="sras-ad-shift-right">
+  <div class="rowhead">
+    <span class="n">06 / 28</span>
+    <h3>sras-ad-shift-right.png</h3>
+    <span class="chip covered">proposed: covered</span><span class="chip p1">1 panel</span><span class="chip">aspect 1.501</span><span class="chip">4 pages</span>
+  </div>
+  <p class="note covered">Single-panel PNG and the SVG is the same diagram: SRAS fixed, AD1 to AD2, PL1 to PL2, Y1 to Y2. The filenames disagree and the economics does not.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">2458&times;1638</p>
+      <div class="imgwrap"><img src="/images/diagrams/sras-ad-shift-right.png"
+        width="2458" height="1638" alt="sras-ad-shift-right" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">ad-shift-right.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/ad-shift-right.svg" width="800" height="600" alt="ad-shift-right SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Short-Run Growth on AD/AS Diagram. An increase in aggregate demand (AD) from AD1 to AD2 leads to a higher real GDP (Y1 to Y2) and a higher price level (P1 to P2) in the short run. This represents actual growth as the economy moves closer to its productive potential, but it does not increase the long-term capacity of the economy.<span class="where">revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html, revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html</span></p><p class="cap">Figure 3: An increase in AD (AD1 to AD2) in the SRAS-AD model leads to a higher price level (P1 to P2) and an increase in output (Y1 to Y2) in the short run.<span class="where">revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html</span></p><p class="cap">Shows AD increasing, raising real GDP and the price level in the short run.<span class="where">revision-notes/macroeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-sras-ad-shift-right" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-sras-ad-shift-right" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-sras-ad-shift-right" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section><h2 class="group">Drawn, but the SVG teaches more than the PNG &mdash; your call &mdash; 1</h2>
+<section class="row" data-stem="ppf-long-run-growth">
+  <div class="rowhead">
+    <span class="n">07 / 28</span>
+    <h3>ppf-long-run-growth.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.586</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note covered">The SVG draws PPF1 outward to PPF2 AND inward to PPF3. It contains this diagram and adds the decline case. Your call whether the notes' figure, whose caption is only about the outward shift, is served by a drawing that also shows a contraction.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">2664&times;1680</p>
+      <div class="imgwrap"><img src="/images/diagrams/ppf-long-run-growth.png"
+        width="2664" height="1680" alt="ppf-long-run-growth" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Already drawn</h4>
+      <div class="stack"><div><p class="meta">ppf-growth-decline.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/ppf-growth-decline.svg" width="800" height="600" alt="ppf-growth-decline SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 4: Long-Run Growth on PPF Diagram. The production possibility frontier shifts outward from PPF1 to PPF2, indicating an increase in the economy&#x27;s productive potential. The economy can now produce more of both goods without sacrificing the production of either good, which represents sustainable long-term growth.<span class="where">revision-notes/aqa-a2-macro/2-3-1-economic-growth-and-the-economic-cycle.html, revision-notes/edexcel-theme-2/2-5-1-causes-of-growth.html</span></p><p class="cap">Shows the PPF shifting outward as productive potential increases.<span class="where">revision-notes/macroeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-ppf-long-run-growth" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-ppf-long-run-growth" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-ppf-long-run-growth" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section><h2 class="group">Nothing drawn covers this &mdash; needs drawing (proposal) &mdash; 21</h2>
+<section class="row" data-stem="price-elasticity-demand-ranges">
+  <div class="rowhead">
+    <span class="n">08 / 28</span>
+    <h3>price-elasticity-demand-ranges.png</h3>
+    <span class="chip panels">5 panels</span><span class="chip">aspect 1.559</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">FIVE panels: perfectly inelastic, relatively inelastic, unitary, perfectly elastic, relatively elastic. On a 1.559 aspect - the width screen would have called this cheap. D46 measured three panels on the locked 800x600 canvas at 205px each and rejected it for price-discrimination; five is not drawable there at all.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1885&times;1209</p>
+      <div class="imgwrap"><img src="/images/diagrams/price-elasticity-demand-ranges.png"
+        width="1885" height="1209" alt="price-elasticity-demand-ranges" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Price Elasticity of Demand ranges. Shows how the slope of the demand curve varies from vertical (perfectly inelastic, PED=0) to horizontal (perfectly elastic, PED=∞).<span class="where">revision-notes/aqa-a2-micro/1-3-2-price-income-and-cross-elasticities-of-demand.html, revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html</span></p><p class="cap">Shows how demand curve steepness relates to price elasticity of demand.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-price-elasticity-demand-ranges" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-price-elasticity-demand-ranges" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-price-elasticity-demand-ranges" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="price-elasticity-supply-ranges">
+  <div class="rowhead">
+    <span class="n">09 / 28</span>
+    <h3>price-elasticity-supply-ranges.png</h3>
+    <span class="chip panels">4 panels</span><span class="chip">aspect 1.146</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">FOUR panels in a 2x2 grid, on the NARROWEST aspect of all 28 (1.146). Same canvas problem as the row above.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1476&times;1288</p>
+      <div class="imgwrap"><img src="/images/diagrams/price-elasticity-supply-ranges.png"
+        width="1476" height="1288" alt="price-elasticity-supply-ranges" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Price Elasticity of Supply ranges. Shows how the slope of the supply curve varies from vertical (perfectly inelastic, PES=0) to horizontal (perfectly elastic, PES=∞).<span class="where">revision-notes/aqa-a2-micro/1-3-4-price-elasticity-of-supply.html, revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html</span></p><p class="cap">Shows how supply curve steepness relates to price elasticity of supply.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-price-elasticity-supply-ranges" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-price-elasticity-supply-ranges" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-price-elasticity-supply-ranges" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="shifts-in-equilibrium">
+  <div class="rowhead">
+    <span class="n">10 / 28</span>
+    <h3>shifts-in-equilibrium.png</h3>
+    <span class="chip panels">4 panels</span><span class="chip">aspect 1.202</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">FOUR panels in a 2x2 grid: demand rises, demand falls, supply rises, supply falls. 1.202 aspect. The caption calls it a practice template.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1563&times;1300</p>
+      <div class="imgwrap"><img src="/images/diagrams/shifts-in-equilibrium.png"
+        width="1563" height="1300" alt="shifts-in-equilibrium" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 4: A single set of axes to model the four scenarios below. Practise drawing the shift, identifying the initial disequilibrium, and showing the new equilibrium P and Q.<span class="where">revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html, revision-notes/edexcel-theme-1/1-2-6-price-determination.html</span></p><p class="cap">Gives a template for showing how demand or supply shifts change equilibrium price and quantity.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-shifts-in-equilibrium" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-shifts-in-equilibrium" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-shifts-in-equilibrium" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="ad-lras-equilibrium">
+  <div class="rowhead">
+    <span class="n">11 / 28</span>
+    <h3>ad-lras-equilibrium.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.745</span><span class="chip">2 pages</span>
+  </div>
+  <p class="note">The two candidate SVGs draw the LRAS CURVE ALONE - no AD curve and no equilibrium. The PNG's whole point is where AD meets LRAS at PL1. Not covered; checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3568&times;1300</p>
+      <div class="imgwrap"><img src="/images/diagrams/ad-lras-equilibrium.png"
+        width="3568" height="1300" alt="ad-lras-equilibrium" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">lras-classical.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/lras-classical.svg" width="800" height="600" alt="lras-classical SVG" loading="lazy"></div></div><div><p class="meta">lras-keynesian.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/lras-keynesian.svg" width="800" height="600" alt="lras-keynesian SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: The AD-LRAS model illustrates the different views of long-run equilibrium. The Classical model has a vertical LRAS, while the Keynesian model has an L-shaped LRAS, allowing for equilibrium at various output levels depending on AD.<span class="where">revision-notes/edexcel-theme-2/2-4-3-equilibrium-levels-of-real-national-output.html</span></p><p class="cap">Shows equilibrium where AD intersects LRAS in Classical and Keynesian models.<span class="where">revision-notes/macroeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-ad-lras-equilibrium" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-ad-lras-equilibrium" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-ad-lras-equilibrium" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="perfect-competition-profit-to-longrun">
+  <div class="rowhead">
+    <span class="n">12 / 28</span>
+    <h3>perfect-competition-profit-to-longrun.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.721</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">The candidate draws the SHORT run - supernormal profit shaded. This PNG draws the ADJUSTMENT to long run: entry shifts market supply S1 to S2, price falls to P2, and the firm ends at P2,C2 with AC minimum on MC. Different economics. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3602&times;1324</p>
+      <div class="imgwrap"><img src="/images/diagrams/perfect-competition-profit-to-longrun.png"
+        width="3602" height="1324" alt="perfect-competition-profit-to-longrun" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">perfect-competition-short-run-supernormal-profit.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/perfect-competition-short-run-supernormal-profit.svg" width="800" height="600" alt="perfect-competition-short-run-supernormal-profit SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 4: The adjustment process from short-run supernormal profit to long-run equilibrium in perfect competition. The firm&#x27;s demand curve shifts down as new firms enter, eliminating supernormal profit and reaching the long-run equilibrium where \( P = AR = AC = MC \).<span class="where">revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html, revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html</span></p><p class="cap">Shows entry shifting the firm&#x27;s demand curve down until only normal profit remains.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-perfect-competition-profit-to-longrun" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-perfect-competition-profit-to-longrun" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-perfect-competition-profit-to-longrun" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="perfect-competition-loss-to-longrun">
+  <div class="rowhead">
+    <span class="n">13 / 28</span>
+    <h3>perfect-competition-loss-to-longrun.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.740</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">Same relationship as the row above, the other way: exit shifts supply left, price rises to P2, losses are eliminated. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3398&times;1240</p>
+      <div class="imgwrap"><img src="/images/diagrams/perfect-competition-loss-to-longrun.png"
+        width="3398" height="1240" alt="perfect-competition-loss-to-longrun" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">perfect-competition-short-run-loss.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/perfect-competition-short-run-loss.svg" width="800" height="600" alt="perfect-competition-short-run-loss SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 5: The adjustment process from short-run loss to long-run equilibrium in perfect competition. The firm&#x27;s demand curve shifts up as firms exit, eliminating losses and reaching the long-run equilibrium where \( P = AR = AC = MC \).<span class="where">revision-notes/aqa-a2-micro/1-5-3-perfect-competition.html, revision-notes/edexcel-theme-3/3-4-2-perfect-competition.html</span></p><p class="cap">Shows exit shifting the firm&#x27;s demand curve up until normal profit returns.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-perfect-competition-loss-to-longrun" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-perfect-competition-loss-to-longrun" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-perfect-competition-loss-to-longrun" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="consumer-producer-surplus-competitive-monopoly">
+  <div class="rowhead">
+    <span class="n">14 / 28</span>
+    <h3>consumer-producer-surplus-competitive-monopoly.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.264</span><span class="chip">1 page</span>
+  </div>
+  <p class="note">Two panels comparing the surplus split under competition and under monopoly, with MR and Qm/Qc. The candidate is the plain equilibrium diagram with no monopoly panel. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1666&times;736</p>
+      <div class="imgwrap"><img src="/images/diagrams/consumer-producer-surplus-competitive-monopoly.png"
+        width="1666" height="736" alt="consumer-producer-surplus-competitive-monopoly" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">consumer-producer-surplus-equilibrium.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/consumer-producer-surplus-equilibrium.svg" width="800" height="600" alt="consumer-producer-surplus-equilibrium SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 4: Consumer and producer surplus in a perfectly competitive market (left) and in a monopoly (right).<span class="where">revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-consumer-producer-surplus-competitive-monopoly" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-consumer-producer-surplus-competitive-monopoly" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-consumer-producer-surplus-competitive-monopoly" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="consumer-producer-surplus-price-discrimination-after">
+  <div class="rowhead">
+    <span class="n">15 / 28</span>
+    <h3>consumer-producer-surplus-price-discrimination-after.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.677</span><span class="chip">1 page</span>
+  </div>
+  <p class="note">Two panels, one per sub-market, with the surplus transferred to the producer. Checked by eye. Related to the new `price-discrimination-combined-market.svg`, which D46 says is yours to place - flagged, not proposed.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3212&times;1200</p>
+      <div class="imgwrap"><img src="/images/diagrams/consumer-producer-surplus-price-discrimination-after.png"
+        width="3212" height="1200" alt="consumer-producer-surplus-price-discrimination-after" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 7: Consumer and producer surplus after price discrimination.<span class="where">revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-consumer-producer-surplus-price-discrimination-after" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-consumer-producer-surplus-price-discrimination-after" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-consumer-producer-surplus-price-discrimination-after" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="surplus-demand-increase">
+  <div class="rowhead">
+    <span class="n">16 / 28</span>
+    <h3>surplus-demand-increase.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.423</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">Panels 3a and 3b: the same demand shift with consumer surplus shaded in one and producer surplus in the other. Lettered points A-G. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">2200&times;908</p>
+      <div class="imgwrap"><img src="/images/diagrams/surplus-demand-increase.png"
+        width="2200" height="908" alt="surplus-demand-increase" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 3a &amp;amp; 3b: An outward shift of the demand curve from D1 to D2. In 3a, the new consumer surplus area is shaded. In 3b, the new, larger producer surplus area is shaded.<span class="where">revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html, revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html</span></p><p class="cap">Shows how an outward shift of demand changes consumer and producer surplus.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-surplus-demand-increase" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-surplus-demand-increase" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-surplus-demand-increase" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="surplus-supply-increase">
+  <div class="rowhead">
+    <span class="n">17 / 28</span>
+    <h3>surplus-supply-increase.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.299</span><span class="chip">3 pages</span><span class="chip inferred">panel count INFERRED, not viewed</span>
+  </div>
+  <p class="note">Panels 2a and 2b, the supply-side twin of the row above. Panel count inferred from that twin and from the caption's '2a & 2b', not viewed.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">2221&times;966</p>
+      <div class="imgwrap"><img src="/images/diagrams/surplus-supply-increase.png"
+        width="2221" height="966" alt="surplus-supply-increase" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 2a &amp;amp; 2b: An outward shift of the supply curve from S1 to S2. In 2a, the new, larger consumer surplus area is shaded. In 2b, the new producer surplus area is shaded<span class="where">revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html, revision-notes/edexcel-theme-1/1-2-8-producer-consumer-surplus.html</span></p><p class="cap">Shows how an outward shift of supply changes consumer and producer surplus.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-surplus-supply-increase" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-surplus-supply-increase" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-surplus-supply-increase" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="joint-demand">
+  <div class="rowhead">
+    <span class="n">18 / 28</span>
+    <h3>joint-demand.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 1.973</span><span class="chip">1 page</span>
+  </div>
+  <p class="note">Two panels, Cars and Petrol, with a titled header. One of five figures on a single AQA page. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3074&times;1558</p>
+      <div class="imgwrap"><img src="/images/diagrams/joint-demand.png"
+        width="3074" height="1558" alt="joint-demand" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Joint Demand - when two goods are demanded/consumed together, a change in the price of one good will affect the demand for the other good.<span class="where">revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-joint-demand" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-joint-demand" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-joint-demand" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="composite-demand">
+  <div class="rowhead">
+    <span class="n">19 / 28</span>
+    <h3>composite-demand.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.023</span><span class="chip">1 page</span>
+  </div>
+  <p class="note">Two panels, Cheese and Butter. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3046&times;1506</p>
+      <div class="imgwrap"><img src="/images/diagrams/composite-demand.png"
+        width="3046" height="1506" alt="composite-demand" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 3: Composite Demand - when a good is demanded for multiple purposes, a change in the demand for one use will affect the supply for the alternative use.<span class="where">revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-composite-demand" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-composite-demand" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-composite-demand" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="joint-supply">
+  <div class="rowhead">
+    <span class="n">20 / 28</span>
+    <h3>joint-supply.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 2.038</span><span class="chip">1 page</span><span class="chip inferred">panel count INFERRED, not viewed</span>
+  </div>
+  <p class="note">Panel count inferred from the four other figures on the same page, not viewed.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3078&times;1510</p>
+      <div class="imgwrap"><img src="/images/diagrams/joint-supply.png"
+        width="3078" height="1510" alt="joint-supply" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 5: Joint Supply - when two goods are produced together, a change in the supply of one good will affect the supply of the other good.<span class="where">revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-joint-supply" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-joint-supply" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-joint-supply" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="derived-demand">
+  <div class="rowhead">
+    <span class="n">21 / 28</span>
+    <h3>derived-demand.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 1.968</span><span class="chip">1 page</span><span class="chip inferred">panel count INFERRED, not viewed</span>
+  </div>
+  <p class="note">Panel count inferred from its four page-mates, not viewed.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">3050&times;1550</p>
+      <div class="imgwrap"><img src="/images/diagrams/derived-demand.png"
+        width="3050" height="1550" alt="derived-demand" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 4: Derived Demand - when the demand for a good depends on the demand for another good, a change in the demand for the latter will affect the demand for the former.<span class="where">revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-derived-demand" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-derived-demand" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-derived-demand" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="competitive-demand">
+  <div class="rowhead">
+    <span class="n">22 / 28</span>
+    <h3>competitive-demand.png</h3>
+    <span class="chip panels">2 panels</span><span class="chip">aspect 1.935</span><span class="chip">1 page</span><span class="chip inferred">panel count INFERRED, not viewed</span>
+  </div>
+  <p class="note">Panel count inferred from its four page-mates, not viewed.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">2968&times;1534</p>
+      <div class="imgwrap"><img src="/images/diagrams/competitive-demand.png"
+        width="2968" height="1534" alt="competitive-demand" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 2: Competitive Demand - when two goods are demanded as alternatives, a change in the price for one good will affect the demand for the other good.<span class="where">revision-notes/aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-competitive-demand" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-competitive-demand" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-competitive-demand" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="demand-curve-movement">
+  <div class="rowhead">
+    <span class="n">23 / 28</span>
+    <h3>demand-curve-movement.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.352</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">The candidate draws a SHIFT, D1 to D2. This PNG draws a MOVEMENT ALONG a single curve, points A and B, extension and contraction. Different concept, and the one students most often confuse. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1731&times;1280</p>
+      <div class="imgwrap"><img src="/images/diagrams/demand-curve-movement.png"
+        width="1731" height="1280" alt="demand-curve-movement" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">demand-curve-shift.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/demand-curve-shift.svg" width="800" height="600" alt="demand-curve-shift SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Standard downward-sloping demand curve (D1) showing movements along the curve. A movement from point B to A shows a &#x27;Contraction in QD&#x27; due to price rise. A movement from point A to B shows an &#x27;Extension in QD&#x27; due to price fall.<span class="where">revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html, revision-notes/edexcel-theme-1/1-2-2-demand.html</span></p><p class="cap">Shows an extension or contraction in quantity demanded caused by a change in the good&#x27;s own price.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-demand-curve-movement" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-demand-curve-movement" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-demand-curve-movement" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="supply-curve-movement">
+  <div class="rowhead">
+    <span class="n">24 / 28</span>
+    <h3>supply-curve-movement.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.256</span><span class="chip">3 pages</span><span class="chip inferred">panel count INFERRED, not viewed</span>
+  </div>
+  <p class="note">Same relationship as the row above, on the supply side. Inferred from that twin and from the caption's 'Extension in QS'.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1536&times;1223</p>
+      <div class="imgwrap"><img src="/images/diagrams/supply-curve-movement.png"
+        width="1536" height="1223" alt="supply-curve-movement" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">supply-curve-shift.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/supply-curve-shift.svg" width="800" height="600" alt="supply-curve-shift SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Standard upward-sloping supply curve (S1) showing movements along the curve. A movement from point A to B shows an &#x27;Extension in QS&#x27; due to a price rise. A movement from point B to A shows a &#x27;Contraction in QS&#x27; due to a price fall.<span class="where">revision-notes/aqa-a2-micro/1-3-3-the-determinants-of-the-supply-of-goods-and-services.html, revision-notes/edexcel-theme-1/1-2-4-supply.html</span></p><p class="cap">Shows an extension or contraction in quantity supplied caused by a change in the good&#x27;s own price.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-supply-curve-movement" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-supply-curve-movement" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-supply-curve-movement" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="demand-increase">
+  <div class="rowhead">
+    <span class="n">25 / 28</span>
+    <h3>demand-increase.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.282</span><span class="chip">3 pages</span>
+  </div>
+  <p class="note">The candidate has no supply curve and no equilibrium: it shows D1 to D2 at one price. This PNG shows the shift meeting S and moving equilibrium from P1,Q1 to P2,Q2. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1563&times;1219</p>
+      <div class="imgwrap"><img src="/images/diagrams/demand-increase.png"
+        width="1563" height="1219" alt="demand-increase" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">demand-curve-shift.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/demand-curve-shift.svg" width="800" height="600" alt="demand-curve-shift SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 1: Increase in demand for a product (D1 to D2), leading to a higher equilibrium price (P1 to P2) and quantity (Q1 to Q2).<span class="where">revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html, revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html</span></p><p class="cap">Shows demand shifting right, causing a higher equilibrium price and quantity.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-demand-increase" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-demand-increase" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-demand-increase" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="supply-increase">
+  <div class="rowhead">
+    <span class="n">26 / 28</span>
+    <h3>supply-increase.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.261</span><span class="chip">3 pages</span><span class="chip inferred">panel count INFERRED, not viewed</span>
+  </div>
+  <p class="note">Supply-side twin of the row above. Inferred, not viewed.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1577&times;1251</p>
+      <div class="imgwrap"><img src="/images/diagrams/supply-increase.png"
+        width="1577" height="1251" alt="supply-increase" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG &mdash; is it the same diagram?</h4>
+      <div class="stack"><div><p class="meta">supply-curve-shift.svg &mdash; viewBox 800&times;600</p><div class="imgwrap"><img src="/images/diagrams/svg/supply-curve-shift.svg" width="800" height="600" alt="supply-curve-shift SVG" loading="lazy"></div></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 2: Increase in supply for a product (S1 to S2), leading to a lower equilibrium price (P1 to P2) and a higher quantity (Q1 to Q2).<span class="where">revision-notes/aqa-a2-micro/1-8-1-how-markets-and-prices-allocate-resources.html, revision-notes/edexcel-theme-1/1-2-7-price-mechanism.html</span></p><p class="cap">Shows supply shifting right, causing a lower equilibrium price and higher quantity.<span class="where">revision-notes/microeconomics-diagrams.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-supply-increase" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-supply-increase" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-supply-increase" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="consumer-producer-surplus-price-discrimination-before">
+  <div class="rowhead">
+    <span class="n">27 / 28</span>
+    <h3>consumer-producer-surplus-price-discrimination-before.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.504</span><span class="chip">1 page</span>
+  </div>
+  <p class="note">One panel despite its 1.504 aspect - the drawing sits left with the MC=AC=S line running out to the right. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1796&times;1194</p>
+      <div class="imgwrap"><img src="/images/diagrams/consumer-producer-surplus-price-discrimination-before.png"
+        width="1796" height="1194" alt="consumer-producer-surplus-price-discrimination-before" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 6: Consumer and producer surplus before price discrimination.<span class="where">revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-consumer-producer-surplus-price-discrimination-before" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-consumer-producer-surplus-price-discrimination-before" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-consumer-producer-surplus-price-discrimination-before" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+<section class="row" data-stem="net-welfare-loss-monopoly">
+  <div class="rowhead">
+    <span class="n">28 / 28</span>
+    <h3>net-welfare-loss-monopoly.png</h3>
+    <span class="chip p1">1 panel</span><span class="chip">aspect 1.254</span><span class="chip">1 page</span>
+  </div>
+  <p class="note">One panel, one shaded triangle between Qm and Qc. The cheapest row on the list. Checked by eye.</p>
+  <div class="pair">
+    <div class="pane">
+      <h4>The PNG in the notes today</h4>
+      <p class="meta">1908&times;1522</p>
+      <div class="imgwrap"><img src="/images/diagrams/net-welfare-loss-monopoly.png"
+        width="1908" height="1522" alt="net-welfare-loss-monopoly" loading="lazy"></div>
+    </div>
+    <div class="pane">
+      <h4>Nearest drawn SVG</h4>
+      <div class="stack"><div class="imgwrap"><p class="meta">No SVG on the site is a candidate for this figure.</p></div></div>
+    </div>
+  </div>
+  <div class="caps">
+    <h4>How the notes caption it</h4>
+    <p class="cap">Figure 5: Net welfare loss in a monopoly compared to a perfectly competitive market.<span class="where">revision-notes/aqa-a2-micro/1-5-11-consumer-and-producer-surplus.html</span></p>
+  </div>
+  <div class="verdict">
+    <label><input type="radio" name="v-net-welfare-loss-monopoly" value="draw"> Needs drawing</label>
+    <label><input type="radio" name="v-net-welfare-loss-monopoly" value="skip"> Already covered</label>
+    <label><input type="radio" name="v-net-welfare-loss-monopoly" value="later"> Not now</label>
+    <textarea rows="1" placeholder="Note (optional)"></textarea>
+  </div>
+</section>
+</main>
+<dialog id="zoom"><button class="close" type="button">&times;</button><img alt=""></dialog>
+<dialog id="exportdlg"><button class="close" type="button">&times;</button>
+  <textarea id="exportbox" readonly></textarea></dialog>
+<script>const TOTAL=28;
+const KEY='wave52-diagram-gaps';
+const state=JSON.parse(localStorage.getItem(KEY)||'{}');
+function paint(stem){
+  const el=document.querySelector('[data-stem="'+stem+'"]');
+  if(!el)return;
+  el.classList.remove('done-draw','done-skip','done-later');
+  const v=state[stem]&&state[stem].v;
+  if(v==='draw')el.classList.add('done-draw');
+  else if(v==='skip')el.classList.add('done-skip');
+  else if(v==='later')el.classList.add('done-later');
+}
+function tally(){
+  let d=0,s=0,l=0;
+  for(const k in state){const v=state[k].v;if(v==='draw')d++;else if(v==='skip')s++;else if(v==='later')l++;}
+  document.getElementById('tally').textContent=
+    d+' draw \u00b7 '+s+' already covered \u00b7 '+l+' later \u00b7 '+(TOTAL-d-s-l)+' left of '+TOTAL;
+}
+function save(){localStorage.setItem(KEY,JSON.stringify(state));tally();}
+document.addEventListener('change',e=>{
+  const r=e.target.closest('[data-stem]');if(!r)return;
+  const stem=r.dataset.stem;
+  state[stem]=state[stem]||{};
+  if(e.target.type==='radio')state[stem].v=e.target.value;
+  paint(stem);save();
+});
+document.addEventListener('input',e=>{
+  if(e.target.tagName!=='TEXTAREA')return;
+  const r=e.target.closest('[data-stem]');if(!r)return;
+  state[r.dataset.stem]=state[r.dataset.stem]||{};
+  state[r.dataset.stem].note=e.target.value;save();
+});
+document.addEventListener('click',e=>{
+  const w=e.target.closest('.imgwrap');
+  if(w){const d=document.getElementById('zoom');
+    d.querySelector('img').src=w.querySelector('img').getAttribute('src');d.showModal();}
+});
+function restore(){
+  for(const stem in state){
+    const r=document.querySelector('[data-stem="'+stem+'"]');if(!r)continue;
+    const s=state[stem];
+    if(s.v){const i=r.querySelector('input[value="'+s.v+'"]');if(i)i.checked=true;}
+    if(s.note){const t=r.querySelector('textarea');if(t)t.value=s.note;}
+    paint(stem);
+  }
+  tally();
+}
+function exportAll(){
+  const lines=['# Wave 5.2 verdicts','','# stem | verdict | note'];
+  document.querySelectorAll('[data-stem]').forEach(r=>{
+    const stem=r.dataset.stem,s=state[stem]||{};
+    lines.push(stem+' | '+(s.v||'NOT REVIEWED')+' | '+((s.note||'').replace(/\n/g,' ')));
+  });
+  const d=document.getElementById('exportdlg');
+  d.querySelector('textarea').value=lines.join('\n');
+  d.showModal();d.querySelector('textarea').select();
+}
+function jumpNext(){
+  const rows=[...document.querySelectorAll('[data-stem]')];
+  const next=rows.find(r=>!(state[r.dataset.stem]&&state[r.dataset.stem].v));
+  if(next)next.scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  restore();
+  document.getElementById('big').addEventListener('click',()=>document.body.classList.toggle('big'));
+  document.getElementById('export').addEventListener('click',exportAll);
+  document.getElementById('next').addEventListener('click',jumpNext);
+  document.querySelectorAll('dialog .close').forEach(b=>
+    b.addEventListener('click',()=>b.closest('dialog').close()));
+});
+</script>
+</body>
+</html>

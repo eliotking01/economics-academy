@@ -1489,3 +1489,60 @@ in scope exactly like a published page. Fixed in `c0f8e76`; it never reached
 **Wave 5.3 is no longer gated on the panel-drops** — all four are closed — but it
 is still gated on `comparative-advantage` and on the 28 diagrams Wave 5.2 would
 draw.
+
+---
+
+## 2026-08-14 · Wave 5.2
+
+### D47 — "28 missing diagrams" is 21, six were already drawn, and the width screen inverts
+
+Eliot, 2026-08-14, after the side-by-side sheet was built: **take the
+measurement and draw nothing**, and **leave the three grid diagrams as PNGs and
+decide separately**. Both recorded as his words rather than inferred.
+
+**The roadmap's 28 is `106 − 78`, not a count of anything missing.** Looked at,
+it is **6 already drawn** under other filenames, **1 drawn as part of a larger
+diagram**, and **21 real gaps** carrying 43 panels. `PH08-047b-missing-diagrams.md`
+holds the per-file record and `_working/diagram-review/gaps.py` is the sheet.
+
+**Nothing a student sees depends on any of the 21.** The public flashcard
+payloads reference **83** SVGs and none of these 28 stems, so a new SVG reaches
+a student only through a new flashcard or through 5.3's swap. That is why
+drawing them was declined today rather than deferred for cost.
+
+**The six already drawn are panel splits under mismatched names** —
+`exchange-rates`, `Indirect-tax-incidence-elastic-inelastic`, `trade-union`,
+`ad-shift-right-classical-keynesian`, `long-run-growth-ad-lras` and
+`sras-ad-shift-right`. The first three are Eliot's own 5.1 verdicts; the last
+three were checked panel by panel. `ppf-long-run-growth` is a seventh and is
+left open: `ppf-growth-decline.svg` draws the notes' figure **and** a
+contraction the caption never mentions.
+
+**A shared filename prefix means nothing.** `demand-curve-shift` is a shift and
+`demand-curve-movement` is a movement along one curve; `lras-classical` and
+`lras-keynesian` draw the LRAS curve with no AD and no equilibrium, where
+`ad-lras-equilibrium` exists to show where the two meet. Both were settled by
+looking, not by name.
+
+**The result that inverts a rule: aspect ratio predicts panel count for the 83
+pairs and NOT for these 28.** `price-elasticity-demand-ranges` is 1.559 aspect
+and **five** panels; `price-elasticity-supply-ranges` is **1.146**, the
+narrowest of all 28, and **four**; `shifts-in-equilibrium` is 1.202 and four.
+All three sit below D46's 1.9 line and all three are the most expensive rows on
+the list — **a width screen would have called the three hardest diagrams
+cheap.** Count the panels per file, by looking.
+
+**Those same three cannot be drawn under the current rules at all.** D46
+measured three panels on the locked 800×600 canvas at 205px each and rejected
+it; four and five are worse. Drawing them needs a second canvas size in
+`DIAGRAM_STYLE.md` — whose locked status requires re-checking all **84** shipped
+SVGs — or 13 one-panel files that leave no drawing matching the notes' figure.
+Eliot chose neither. They stay as PNGs, and this entry is what stops a future
+census reading three unpaired PNGs as an oversight.
+
+**Six of the 21 panel counts are inferred from a twin rather than viewed**, and
+say so in the finding and on the sheet. They are not measurements.
+
+**5.3's gate is unchanged and now visibly unreachable today.** It is gated on
+these 21 *and* on `comparative-advantage`, which Eliot put out of scope for this
+session, so no amount of 5.2 work would have unblocked it.
