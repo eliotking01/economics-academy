@@ -17,7 +17,7 @@
   <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
   <!-- curves -->
   <line x1="100" y1="445" x2="600" y2="445" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 260,440 Q 320,512 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <circle cx="437.9" cy="445" r="7" fill="#d52349"/>
   <!-- labels -->

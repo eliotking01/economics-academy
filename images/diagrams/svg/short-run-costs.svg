@@ -10,7 +10,7 @@
   <text x="32" y="50" font-size="26" fill="#333333">Costs</text>
   <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
   <!-- curves -->
-  <path d="M 260,440 Q 320,460 380,440 Q 425,425 470,360 Q 490,330 510,250 Q 520,210 535,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 260,395 Q 320,467 380,440 Q 425,425 470,360 Q 490,330 510,250 Q 520,210 535,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <path d="M 300,285 Q 380,360 470,360 Q 560,360 620,285" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <path d="M 280,350 Q 350,412.5 425,412.5 Q 500,412.5 570,345" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <path d="M 150,300 Q 235,455 350,485 Q 470,505 630,508" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
