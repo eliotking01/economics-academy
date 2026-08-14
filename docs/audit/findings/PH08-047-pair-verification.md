@@ -250,3 +250,84 @@ the ground-truth file's aspect ratio; every SVG viewBox is 1.333.
 | 81 | `underconsumption` | same name | 1.360 | faithful | amend | Welfare loss should point to the shaded region, not the corner of the triangle. |
 | 82 | `underproduction` | same name | 1.486 | faithful | amend | Welfare loss should point to the shaded region, not the corner of the triangle. |
 | 83 | `wage-determination` | same name | 1.569 | faithful | — | — |
+
+---
+
+# The repairs — state as of 2026-08-14
+
+On branch `wave5-1-diagram-review`, off `31dcc4e`. **Nothing pushed, nothing
+merged.** All 23 workflow steps green after every commit.
+
+**All 16 "clean" repairs are DONE**, across 20 SVG files and three commits:
+
+- **`6a2ae7c`** — the 6 label and annotation defects. The four welfare-loss
+  leaders ended *at* a vertex, three of them outside the shading entirely; each
+  now ends at the triangle's centroid. The two efficiency keys went to two lines
+  per entry because `Productive efficiency: MC=AC` measures **321px** at 24px
+  and would have run **112px past the 800px canvas**. Eliot chose
+  `Supernormal profit / → dynamic efficiency` over naming the box after its
+  consequence.
+- **`8fc02da`** — four of the five curve-shape amendments.
+- **`94301ce`** — the MC blade, and the kinked curve.
+
+**The blade decision is the one worth carrying forward.** Eliot flagged the
+hockey-stick shape on `collusion` alone, but that MC path is shared **byte-for-
+byte across 13 SVGs**, 12 of which he had just marked faithful. He chose to
+apply it to all 13. Only each file's **first segment** changes, so every
+declared intersection in every file is untouched and
+`verify_diagram_geometry.py` stays at 83 files, 0 flags. All 13 were rendered
+and read individually, because the blade raises MC's left end 45px into space
+occupied by something different in each.
+
+**One thing I broke and fixed** — `c0f8e76`. The 5.1 review sheet added 166
+`<img>` tags with no `width`/`height` and turned the workflow's 7th step red.
+`verify_image_dimensions.py` enumerates through `git ls-files`, so `_working/`
+is in scope, exactly like a published page. It never reached `main`.
+
+## The four panel-drops
+
+Eliot delegated the choice between a second panel and a second diagram, and the
+answer is a second **panel** — not for layout reasons but because **each of
+these SVGs is referenced by an existing flashcard**. A second file would leave
+that card still showing half the figure, and adding a card is flashcards content
+work needing its own approval. The panel repairs the card that already exists.
+
+**The two-panel layout was not invented for this.** Three SVGs already use it on
+the 800×600 canvas, and `supply-of-labour-market-individual` — passed as
+faithful in this very review — is the exemplar: panels at x 70–370 and 460–760,
+axes 120–460, panel titles at y=112.
+
+| Diagram | State |
+| --- | --- |
+| `perfect-competition-short-run-supernormal-profit` | **DONE**, `7f89f3d` |
+| `perfect-competition-short-run-loss` | **DONE**, `7f89f3d` |
+| `price-discrimination` | **OPEN** — needs a *third* panel, the combined market |
+| `short-run-shutdown-condition` | **OPEN** — needs the do-not-shut-down case |
+
+**The method for the two that are done, and the one to reuse.** The firm panel
+is **transformed, not redrawn**: `x' = 460 + (x-100)/2`, a **uniform** half
+scale. Uniform is the whole point — DIAGRAM_STYLE requires exact 45° slopes and
+computed intersections, and a non-uniform squeeze breaks both. The MC/AC
+tangency transforms exactly instead of being re-eyeballed. The market panel is
+drawn natively, and a dashed line carries P1 across the gap to the firm's
+horizontal demand curve — the carry-across is the teaching point the
+single-panel version could not make.
+
+`perfect-competition-short-run-loss` needed an extra **60px lift** on top of the
+transform: its price line is low in the original, and mapping it straight down
+squashed the market equilibrium against the axis with no room for S and D. The
+ground-truth PNG puts that price line mid-panel. A lift is a translation, so
+nothing moves relative to anything else.
+
+**Axis titles moved to their own row at y=524** on both, because the firm's `Q1`
+label sits near the right of its panel and collided with `Quantity` at the
+shared y=492.
+
+## Still not started, and why
+
+- **`comparative-advantage`** — Eliot's verdict asks for Germany to hold the
+  absolute advantage in both goods. That reverses `CONTENT_ISSUES.md` #26 and
+  changes every figure in the worked example on `4-1-2` and `2-6-2`, in prose.
+  An economics rewrite, not a diagram fix. Needs its own instruction.
+- **Wave 5.2, 5.3, 5.4.** 5.3 is still gated: it cannot proceed as a sweep while
+  any panel-drop is open.
