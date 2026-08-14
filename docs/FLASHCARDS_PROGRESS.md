@@ -1397,3 +1397,33 @@ Session know-how a fresh chat needs:
 - Deferred by design: typed-answer mode (`acceptableAnswers` stays empty),
   premium delivery layer (out of scope until freemium), whether notes pages
   later swap their PNGs for the SVG library.
+
+## 2026-08-14 — Wave 5.1 repaired 21 live diagrams; one new SVG awaits a card
+
+Eliot verified all 83 SVG/PNG pairs (audit Wave 5.1, D46). **21 SVGs carried a
+defect and every one was already live in the public deck payloads** — none
+premium-gated, 41 cards, all 6 decks. All 21 are now repaired on `main`; the
+card records themselves are untouched, because only the SVG files changed and
+every `viewBox` stayed 800×600.
+
+Worth knowing for future card work:
+
+- **The MC curve changed shape on 13 decks' diagrams at once.** That path is
+  shared byte-for-byte across 13 SVGs and now carries a hockey-stick blade. Any
+  new cost diagram should match it.
+- **Four SVGs gained a second panel** —
+  `perfect-competition-short-run-{supernormal-profit,loss}` and
+  `short-run-shutdown-condition` (plus `price-discrimination`, handled
+  differently). Their alt text in the deck JSON still describes the single-panel
+  version and **should be revisited when those cards are next edited**.
+- **`lras-shift.svg` drawing only the classical panel is now ratified** — the
+  decision this file recorded as "pending Eliot" on 2026-08-05 and never closed.
+
+**OPEN, deliberately: `images/diagrams/svg/price-discrimination-combined-market.svg`
+has no card.** It is the counterfactual to third-degree price discrimination —
+one demand curve, one price, a smaller profit rectangle than the two sub-markets
+added together. Eliot, 2026-08-14: *"Leave the combined-market flash card for
+now, but keep the diagram stored so I can implement this into flashcards and
+notes in my own time."* Its single price of 272.5 sits deliberately between the
+265 and 280 of `price-discrimination.svg`'s two sub-markets, so the two diagrams
+are meant to be read as a pair.

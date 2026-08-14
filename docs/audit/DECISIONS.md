@@ -1411,3 +1411,81 @@ unaffected by this: all 26 AQA "excluded by noindex" URLs had the tag removed
 on 2026-07-30, nine days before the export, so the window is contaminated and
 any duplication conclusion drawn from it is unsound — including one drawn from
 the audit's own similarity numbers.
+
+---
+
+## 2026-08-14 · Wave 5.1
+
+### D46 — The 83 pairs are verified, 21 were defective and LIVE, and the repairs shipped
+
+Eliot verified all 83 SVG/PNG pairs himself on 2026-08-14, from a side-by-side
+sheet built for the purpose, then answered five questions as the repairs ran.
+**Coverage was checked, not assumed: 83 verdicts against 83 files, 0 gaps and 0
+strays.** 70 faithful, 12 differs, 1 recorded `unsure` and then explained as
+deliberately correct.
+
+**The finding was aimed one step short of the real result.** PH08-047 asked
+whether the SVGs could replace the notes' PNGs. They can, for 71 of 83. But 21
+carried a defect **already live** in the public flashcard payloads — none
+premium-gated, 41 cards, all 6 decks — so the list stood whether or not Wave 5.3
+ever happened. Two were economics rather than cosmetics (the `j-curve`'s
+Surplus/Deficit on the wrong side of the axis, and
+`normal-profit-imperfect-competition`'s AC minimum not at its MC crossing), and
+`verify_diagram_geometry.py` passed all 83 throughout, so nothing was ever going
+to catch them. **A checker that validates declared points cannot see a point
+nobody declared.**
+
+**PH08-047 found one SVG dropping a panel. There were four.** Aspect ratio
+predicts that class and nothing else: 35% of pairs at ≥1.9 differ against 9%
+below it, and 6 of the 12 problems sit on narrow PNGs, down to 1.392.
+
+**Two of its numbers did not survive**, both re-derived at the finding's own
+commit as well as at HEAD: "2 of 78 agree within 2%" is **1 of 78**, so the
+aspect changes on 77 not 76; and "231 tags across 94 pages" pairs a right number
+with a wrong one — **295 tags across 95 pages**, of which **231 across 85** have
+a same-named SVG. D25 repeats the same pair for the WebP route, where the
+correct figure is 295.
+
+**Five decisions Eliot made as it ran:**
+
+- **The MC hockey-stick blade applies to all 13**, not to `collusion` alone. That
+  path is shared byte-for-byte across 13 SVGs, 12 of which he had just marked
+  faithful, so fixing one would have left a student seeing two different MC
+  curves across the micro pages. Only each file's first segment changes, so every
+  declared intersection is untouched.
+- **`kinked-demand-curve`'s labels move so MC can extend.** The obvious extension
+  cut through the words "Price inelastic demand"; the label slid 58px down the
+  D=AR line it names, and D=AR moved above its curve end.
+- **The shaded box on `efficiency-imperfect-competition` reads "Supernormal
+  profit → dynamic efficiency"**, not "Dynamic efficiency" — the box is named for
+  what it is, with the link stated, rather than named after its consequence.
+- **The panel-drops gain a PANEL, not a second file** — because each SVG is
+  referenced by an existing flashcard, so a second file would leave that card
+  still showing half the figure.
+- **`price-discrimination` is the exception and took a separate diagram**, which
+  Eliot had offered. Measured: three panels on the locked 800×600 canvas gives
+  205px each, the titles do not fit on one line, there is nowhere for the `AC=MC`
+  label that is not over a curve, and each panel would be ~100px wide on mobile.
+
+**`images/diagrams/svg/price-discrimination-combined-market.svg` is new and is
+referenced by nothing.** Eliot, 2026-08-14: *"Leave the combined-market flash
+card for now, but keep the diagram stored so I can implement this into flashcards
+and notes in my own time."* It is therefore a **deliberately** unreferenced
+asset — the class D38 had to adjudicate — and this entry is what stops a future
+census proposing its deletion.
+
+**`comparative-advantage` is recorded and NOT acted on.** Eliot's verdict asks
+for Germany to hold the absolute advantage in both goods, which reverses
+`CONTENT_ISSUES.md` #26 and changes every figure in the worked example on
+`4-1-2` and its AQA twin `2-6-2` — in prose. An economics rewrite, not a diagram
+fix, and it needs its own instruction.
+
+**One defect was introduced and caught by the suite.** The review sheet added 166
+`<img>` tags with no `width`/`height` and turned the workflow's 7th step red;
+`verify_image_dimensions.py` enumerates through `git ls-files`, so `_working/` is
+in scope exactly like a published page. Fixed in `c0f8e76`; it never reached
+`main`.
+
+**Wave 5.3 is no longer gated on the panel-drops** — all four are closed — but it
+is still gated on `comparative-advantage` and on the 28 diagrams Wave 5.2 would
+draw.

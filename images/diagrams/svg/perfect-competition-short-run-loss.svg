@@ -1,30 +1,55 @@
 <svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="t">Short-run loss in perfect competition</title>
-  <desc id="d">A perfectly competitive firm faces a horizontal demand curve D=AR=MR at the market price P1. It produces at the output Q1 where the rising MC=S curve crosses the price line; average cost C1 read off the U-shaped AC curve lies above the price, and the rectangle between C1 and P1 up to Q1 is shaded as the loss.</desc>
+  <desc id="d">Two panels. In the left market panel, supply and demand cross to set the market price P1 at output Q1. In the right firm panel, that same price is the firm's horizontal demand curve D=AR=MR=P1, carried across by the dashed line. The firm produces at the output Q1 where the rising MC=S curve crosses the price line; average cost C1 read off the U-shaped AC curve lies above the price, and the rectangle between C1 and P1 up to Q1 is shaded as the loss.</desc>
   <!-- geometry
-       intersections: 437.9,445
-       on-curve: 437.9,402.6
+       intersections: 220,362.5 628.95,362.5
+       on-curve: 628.95,341.3
   -->
+  <!-- The firm panel is the previous single-panel drawing mapped through
+       x' = 460 + (x-100)/2, y' = 140 + y/2 - a UNIFORM half scale and then a
+       translation, so every slope and the MC/AC tangency transform exactly.
+       The extra 60px lift puts the price line mid-panel, as the ground-truth
+       PNG has it, instead of squashed against the axis. -->
   <!-- shaded loss -->
-  <rect x="100" y="402.6" width="337.9" height="42.4" fill="#d52349" fill-opacity="0.15"/>
-  <!-- guides -->
-  <line x1="100" y1="402.6" x2="437.9" y2="402.6" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <line x1="437.9" y1="402.6" x2="437.9" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <!-- axes -->
-  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
-  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
-  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
-  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
-  <!-- curves -->
-  <line x1="100" y1="445" x2="600" y2="445" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M 260,485 Q 320,505 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="437.9" cy="445" r="7" fill="#d52349"/>
-  <!-- labels -->
-  <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
-  <text x="630" y="324" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
-  <text x="612" y="453" font-size="26" font-weight="700" fill="#1d70b8">D=AR=MR=P1</text>
-  <text x="92" y="410" font-size="24" fill="#333333" text-anchor="end">C1</text>
-  <text x="92" y="453" font-size="24" fill="#333333" text-anchor="end">P1</text>
-  <text x="437.9" y="552" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <rect x="460" y="341.3" width="168.95" height="21.2" fill="#d52349" fill-opacity="0.15"/>
+  <!-- the market price carried across to the firm -->
+  <line x1="70" y1="362.5" x2="460" y2="362.5" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- guides: market panel -->
+  <line x1="220" y1="362.5" x2="220" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- guides: firm panel -->
+  <line x1="460" y1="341.3" x2="628.95" y2="341.3" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="628.95" y1="362.5" x2="628.95" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes: market panel -->
+  <line x1="70" y1="120" x2="70" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="70" y1="460" x2="370" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="34" y="84" font-size="26" fill="#333333">Price</text>
+  <text x="370" y="524" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- axes: firm panel -->
+  <line x1="460" y1="120" x2="460" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="460" y1="460" x2="760" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="424" y="84" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="760" y="524" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- panel titles -->
+  <text x="220" y="112" font-size="24" fill="#333333" text-anchor="middle">Market</text>
+  <text x="610" y="112" font-size="24" fill="#333333" text-anchor="middle">Firm</text>
+  <!-- curves: market panel -->
+  <line x1="140" y1="442.5" x2="330" y2="252.5" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="140" y1="282.5" x2="310" y2="452.5" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- curves: firm panel -->
+  <line x1="460" y1="362.5" x2="710" y2="362.5" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 540,360 Q 570,396 600,382.5 Q 622.5,375 645,342.5 Q 654,329.5 662.5,290 Q 666.5,272.5 675,215" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 560,305 Q 600,342.5 645,342.5 Q 690,342.5 720,305" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="628.95" cy="362.5" r="7" fill="#d52349"/>
+  <!-- labels: market panel -->
+  <text x="338" y="246" font-size="26" font-weight="700" fill="#1d70b8">S</text>
+  <text x="318" y="462" font-size="26" font-weight="700" fill="#1d70b8">D</text>
+  <text x="62" y="370" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="220" y="492" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <!-- labels: firm panel -->
+  <text x="466" y="420" font-size="26" font-weight="700" fill="#1d70b8">D=AR=MR=P1</text>
+  <text x="681" y="208" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
+  <text x="726" y="312" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
+  <text x="452" y="349" font-size="24" fill="#333333" text-anchor="end">C1</text>
+  <text x="452" y="370" font-size="24" fill="#333333" text-anchor="end">P1</text>
+  <text x="628.95" y="492" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
 </svg>

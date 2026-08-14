@@ -23,8 +23,8 @@
   <text x="250" y="270" font-size="24" fill="#333333">Economies</text>
   <text x="250" y="298" font-size="24" fill="#333333">of scale</text>
   <line x1="530" y1="390" x2="590" y2="310" stroke="#333333" stroke-width="2.5" marker-end="url(#arrowg)"/>
-  <text x="500" y="270" font-size="24" fill="#333333">Diseconomies</text>
-  <text x="500" y="298" font-size="24" fill="#333333">of scale</text>
+  <text x="460" y="270" font-size="24" fill="#333333">Diseconomies</text>
+  <text x="460" y="298" font-size="24" fill="#333333">of scale</text>
   <!-- labels -->
   <text x="640" y="160" font-size="26" font-weight="700" fill="#1d70b8">LRAC</text>
   <text x="400" y="552" font-size="24" fill="#333333" text-anchor="middle">MES</text>

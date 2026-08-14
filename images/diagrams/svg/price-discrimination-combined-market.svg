@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The combined market with no price discrimination</title>
+  <desc id="d">The counterfactual to third-degree price discrimination. One demand curve for the whole market, with marginal revenue at twice its slope and a horizontal AC=MC cost line. The firm sells the output Q where MR meets MC and charges the single price P to everyone. The shaded rectangle between P and C is the profit, which is smaller than the two sub-market profits added together.</desc>
+  <!-- geometry
+       intersections: 355.45,380
+       on-curve: 355.45,272.5
+  -->
+  <!-- The single price is fixed by the construction, not chosen: MR bisects the
+       horizontal distance under a straight AR, so P is the midpoint of the AR
+       intercept and the cost line - (165+380)/2 = 272.5 - whatever slope AR
+       takes. 272.5 sits between the 265 and 280 of price-discrimination.svg's
+       two sub-markets, which is the comparison the pair exists to make. -->
+  <!-- shaded profit -->
+  <rect x="100" y="272.5" width="255.45" height="107.5" fill="#0f7b6c" fill-opacity="0.15"/>
+  <!-- guides -->
+  <line x1="100" y1="272.5" x2="355.45" y2="272.5" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="355.45" y1="272.5" x2="355.45" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="100" y1="380" x2="700" y2="380" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="165" x2="640" y2="429" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="160" y1="165" x2="482.7" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="355.45" cy="380" r="7" fill="#d52349"/>
+  <!-- labels -->
+  <text x="700" y="370" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="end">AC=MC</text>
+  <text x="648" y="437" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="490" y="515" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="280" font-size="24" fill="#333333" text-anchor="end">P</text>
+  <text x="92" y="388" font-size="24" fill="#333333" text-anchor="end">C</text>
+  <text x="355.45" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+</svg>

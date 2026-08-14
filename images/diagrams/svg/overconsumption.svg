@@ -23,7 +23,7 @@
   <line x1="170" y1="110" x2="550" y2="490" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
   <!-- annotation -->
   <text x="520" y="300" font-size="24" fill="#333333">Welfare loss</text>
-  <line x1="515" y1="295" x2="428" y2="247" stroke="#333333" stroke-width="1.5"/>
+  <line x1="515" y1="295" x2="402" y2="300" stroke="#333333" stroke-width="1.5"/>
   <!-- labels -->
   <text x="598" y="62" font-size="26" font-weight="700" fill="#1d70b8">S=MPC=MSC</text>
   <text x="628" y="448" font-size="26" font-weight="700" fill="#1d70b8">D=MPB</text>
