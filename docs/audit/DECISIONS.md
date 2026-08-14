@@ -1489,3 +1489,188 @@ in scope exactly like a published page. Fixed in `c0f8e76`; it never reached
 **Wave 5.3 is no longer gated on the panel-drops** — all four are closed — but it
 is still gated on `comparative-advantage` and on the 28 diagrams Wave 5.2 would
 draw.
+
+---
+
+## 2026-08-14 · Wave 5.2
+
+### D47 — "28 missing diagrams" is 21, six were already drawn, and the width screen inverts
+
+Eliot, 2026-08-14, after the side-by-side sheet was built: **take the
+measurement and draw nothing**, and **leave the three grid diagrams as PNGs and
+decide separately**. Both recorded as his words rather than inferred.
+
+**The roadmap's 28 is `106 − 78`, not a count of anything missing.** Looked at,
+it is **6 already drawn** under other filenames, **1 drawn as part of a larger
+diagram**, and **21 real gaps** carrying 43 panels. `PH08-047b-missing-diagrams.md`
+holds the per-file record and `_working/diagram-review/gaps.py` is the sheet.
+
+**Nothing a student sees depends on any of the 21.** The public flashcard
+payloads reference **83** SVGs and none of these 28 stems, so a new SVG reaches
+a student only through a new flashcard or through 5.3's swap. That is why
+drawing them was declined today rather than deferred for cost.
+
+**The six already drawn are panel splits under mismatched names** —
+`exchange-rates`, `Indirect-tax-incidence-elastic-inelastic`, `trade-union`,
+`ad-shift-right-classical-keynesian`, `long-run-growth-ad-lras` and
+`sras-ad-shift-right`. The first three are Eliot's own 5.1 verdicts; the last
+three were checked panel by panel. `ppf-long-run-growth` is a seventh and is
+left open: `ppf-growth-decline.svg` draws the notes' figure **and** a
+contraction the caption never mentions.
+
+**A shared filename prefix means nothing.** `demand-curve-shift` is a shift and
+`demand-curve-movement` is a movement along one curve; `lras-classical` and
+`lras-keynesian` draw the LRAS curve with no AD and no equilibrium, where
+`ad-lras-equilibrium` exists to show where the two meet. Both were settled by
+looking, not by name.
+
+**The result that inverts a rule: aspect ratio predicts panel count for the 83
+pairs and NOT for these 28.** `price-elasticity-demand-ranges` is 1.559 aspect
+and **five** panels; `price-elasticity-supply-ranges` is **1.146**, the
+narrowest of all 28, and **four**; `shifts-in-equilibrium` is 1.202 and four.
+All three sit below D46's 1.9 line and all three are the most expensive rows on
+the list — **a width screen would have called the three hardest diagrams
+cheap.** Count the panels per file, by looking.
+
+**Those same three cannot be drawn under the current rules at all.** D46
+measured three panels on the locked 800×600 canvas at 205px each and rejected
+it; four and five are worse. Drawing them needs a second canvas size in
+`DIAGRAM_STYLE.md` — whose locked status requires re-checking all **84** shipped
+SVGs — or 13 one-panel files that leave no drawing matching the notes' figure.
+Eliot chose neither. They stay as PNGs, and this entry is what stops a future
+census reading three unpaired PNGs as an oversight.
+
+**Six of the 21 panel counts are inferred from a twin rather than viewed**, and
+say so in the finding and on the sheet. They are not measurements.
+
+**5.3's gate is unchanged and now visibly unreachable today.** It is gated on
+these 21 *and* on `comparative-advantage`, which Eliot put out of scope for this
+session, so no amount of 5.2 work would have unblocked it.
+
+---
+
+## 2026-08-14 · Wave 5.3
+
+### D48 — The swap is deferred, and the two constraints it was deferred FOR were both wrong
+
+Eliot, 2026-08-14, choosing the recommended default: **record and hold** until
+Wave 5.2's 21 diagrams exist. No page was changed. Evidence in
+`PH08-047c-the-swap.md`; the probe is
+`docs/audit/scripts/harness/measure_diagram_render.py`.
+
+**PH08-047's "798 px of white against 1,118 px" does not reproduce, and this
+entry supersedes D46's repetition of it.** Measured at viewports 980, 1100,
+1280, 1440, 1680 and 1920, the SVG already on `3-4-4-oligopoly.html` and the two
+PNGs beside it render at **exactly 800 px each**, because
+`revision-notes-textbook.css:622` caps `.diagram-figure` at `max-width: 800px` —
+a rule that predates the finding. **The 1,118 is the `.notes-container`**, the
+image's great-grandparent, which the ancestor chain prints. There is no 29%
+shrinkage.
+
+**So both of the constraints 5.3 was said to face dissolve.** PH08-047 step 3's
+prescription — declare the viewBox — is correct, and is also the **only**
+declaration `verify_image_dimensions.py` accepts, because `DIAGRAM_STYLE.md`
+forbids an absolute `width`/`height` on the `<svg>` and the checker falls back
+to the viewBox. There was never an attribute decision to take.
+
+**The real constraint is the opposite: every swapped diagram gets TALLER.**
+Measured by swapping two PNGs on that page — `collusion` **+104.7 px**,
+`kinked-demand-curve` **+92.7 px**, width unchanged. Every viewBox is 4:3
+against PNGs near 1.5, which is D46's "aspect changes on 77 of 78" seen from the
+page's side. No layout shift, since the box is declared; the pages just get
+longer, and the widest diagrams grow most — `price-discrimination` from about
+231 px tall to 583 px.
+
+**Weight is real and is not the reason.** The 78 swappable pairs are 3.77 MiB of
+PNG against 192 KiB of SVG, 95% lighter — but Wave 4.1 already took all 112 PNGs
+26.21 → 5.41 MiB, so this is ~3.6 MiB sitewide rather than a speed problem. The
+case for 5.3 is **consistency with the flashcards**, and it should be argued on
+that or not at all.
+
+**What decided it: a swap today would make the site look less considered.**
+5.2 drew nothing, so 64 `<img>` on 30 pages have no SVG to move to, and
+**20 pages would show blue and black diagrams side by side** — including both
+diagram galleries and five Theme 1 topic pages. Every page is internally
+consistent today. 5.3 is worth doing once, after the 21 exist, rather than in
+two halves.
+
+**`comparative-advantage` is a defect, not the binding gate.** Its SVG is
+already live in the notes on 3 pages, so it sits on the site whatever 5.3 does.
+The binding gate is the 21 undrawn diagrams.
+
+**A number in this session's own opening summary was wrong and is corrected
+here.** The 798/1,118 pair was restated as established fact before it was
+measured. That is the failure this project keeps recording about roadmap
+numbers, reproduced once more by the person warning about it, and it is the
+argument for `measure_diagram_render.py` existing rather than the figure being
+written down again.
+
+---
+
+## 2026-08-14 · Wave 5.4
+
+### D49 — PH06-031 is CLOSED: the three malformed notes pages, approved per page
+
+Eliot, 2026-08-14, approving **all three individually** — which is what D18
+required, having explicitly excluded them because the fixes sit inside prose
+regions and the standing rule is that economics content is never touched
+without approval, every time.
+
+**PH06-031 was smaller than the finding says, and two of its five sub-items
+were already done.** Re-derived before starting: **0** `<style>` blocks remain
+in `revision-notes/`, and MathJax `id` is **126/126**. Three pages remained.
+
+- **`aqa-a2-macro/2-1-2`** — `</section>` closed after the Balance of Payments
+  definition, leaving **42 lines** of Current Account material outside any
+  section.
+- **`aqa-a2-micro/1-6-3`** — `</section>` closed after the figure, leaving **34
+  lines**, including the sentence that interprets that figure.
+- **`aqa-a2-micro/1-1-2`** — an `<h2>` sat between the `<h1>` and the
+  spec-alert, which is meant to open every topic page.
+
+**Both `</section>` pages had exactly one sensible fix, and it was checked
+rather than assumed.** On 2-1-2 the loose content is all Current Account
+material under the section's own `<h2>`. On 1-6-3 the loose block is headed
+`<h3>` — a **sub**-heading of the section's existing `<h2>`. So in neither case
+was there a second section to invent.
+
+**Not cosmetic, and measured — because nothing else could have seen it.** None
+of `compare_trees.py`'s ten assertions looks at CSS, and
+`verify_text_integrity.py` **does not cover these pages at all**: it excludes
+all four generated families, notes included. `computed_style_diff.py` over 591
+elements at 485 properties each found that on 2-1-2 and 1-6-3 the **only**
+elements changed are the `<section>`, growing to hold its content (782.9 →
+1173.7 px on 1-6-3), and the height cascade above it. Not one `<p>`, `<ul>`,
+`<h3>`, margin, font or colour moved. All three pages get **shorter**: −36.65,
+−7.33 and −10.27 px.
+
+**1-1-2 could not be index-aligned and the probe said so.** The `<h2>`
+deliberately moves in document order, so element indices shift and
+`computed_style_diff.py` reports tag mismatches past index 131 rather than
+style differences — the same limitation its `--body-only` note records. Two
+things were measured instead: the heading is **identical in all 18 computed
+properties** checked (26.4 px, weight 700, `rgb(26,62,114)`, margins 52.8/26.4,
+box 1050×84.48), its only changed property being its parent; and the page's
+text is **361 words before and 361 after, 0 added and 0 lost**, with the
+sequence diverging at one index where six words relocate.
+
+**`compare_trees.py` failed on assertion 2 and that was predicted in advance.**
+1 of 465 files differs — 1-1-2 — and the other nine assertions pass, including
+markup integrity at 0 losses, idempotence over 1,986 files and all 14 verifiers
+in NEW. Assertion 2 cannot distinguish a reordering from a rewrite; the
+word-multiset comparison above is what does.
+
+**`verify_page_shell.py` check 6 went red on the improvement, which is what it
+is for.** DO-NOT-BREAK: these tables fail on a count going **down** as well as
+up, and an improvement is declared by changing the page and the number in the
+same commit. **9 shapes (95, 29, 15, 11, 7, 6, 1, 1, 1) → 6 shapes (97, 29, 16,
+11, 7, 6).** Every notes page is now one of six shapes and **none has a shape of
+its own**.
+
+**`MALFORMED_NOTES_PAGES` is emptied rather than deleted, and does more work
+empty than it did full.** The check asserts that the set of one-page spines
+**equals** it, so at zero it asserts that no notes page has a shape of its own,
+and any new one fails — where before, a fourth could only be told apart from
+the three. Same argument as `KNOWN_BREADCRUMB_DISAGREEMENT` staying as an empty
+dict in check 8. Proved able to fail by putting the `<h2>` back: 6 shapes → 7,
+with the singleton named.

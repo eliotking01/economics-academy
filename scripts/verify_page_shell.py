@@ -310,22 +310,30 @@ EXPECTED_NOTES_HEAD_SHAPES = {
 # The content spine is the ordered list of direct children of
 # div.notes-container, with runs of identical siblings collapsed - because
 # "six sections here and four there" is content length, not structural drift.
-# 9 shapes across 166 pages; shapes 1-6 are the same page with different
-# optional trailing blocks, and 7-9 are the three malformed pages.
-EXPECTED_NOTES_SPINES = 9
-EXPECTED_SPINE_COUNTS = (95, 29, 15, 11, 7, 6, 1, 1, 1)
+# 6 shapes across 166 pages, and every one of them is the same page with a
+# different set of optional trailing blocks. There are no singletons.
+#
+# Reseeded 2026-08-14, Wave 5.4, from 9 shapes (95, 29, 15, 11, 7, 6, 1, 1, 1).
+# The three ones were PH06-031's three malformed pages; each has been repaired
+# and has merged into the shape it always should have had - 95 -> 97 took the
+# two pages whose </section> closed early, and 15 -> 16 took the page whose
+# <h2> sat above the spec-alert. DO-NOT-BREAK: these tables fail on a count
+# going DOWN as well as up, and an improvement is DECLARED by changing the page
+# and the number in the same commit, so the diff records what improved.
+EXPECTED_NOTES_SPINES = 6
+EXPECTED_SPINE_COUNTS = (97, 29, 16, 11, 7, 6)
 
-# PH06-031. Explicitly EXCLUDED from D18's approval: the fixes sit inside prose
-# regions and need their own instruction, every time. Named so that a FOURTH
-# malformed page fails this check instead of hiding among them.
-MALFORMED_NOTES_PAGES = {
-    "revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html":
-        "prose sitting directly in .notes-container, outside any <section>",
-    "revision-notes/aqa-a2-micro/1-1-2-the-nature-and-purpose-of-economic-activity.html":
-        "an <h2> before the spec-alert, which is meant to open every topic page",
-    "revision-notes/aqa-a2-micro/1-6-3-wage-determination-perfectly-competitive-labour-markets.html":
-        "prose sitting directly in .notes-container, outside any <section>",
-}
+# PH06-031, CLOSED 2026-08-14 by Wave 5.4, approved per page by Eliot - D18 had
+# explicitly excluded these three because the fixes sit inside prose regions.
+#
+# THE EMPTY DICT IS KEPT, NOT DELETED, and it is doing more work empty than it
+# did full. The check below asserts that the set of one-page spines EQUALS this
+# set, so at zero it now says "no notes page has a shape of its own" - any new
+# malformed page fails, where before a fourth could only be told apart from the
+# three. Same argument as KNOWN_BREADCRUMB_DISAGREEMENT being kept empty in
+# check 8: the structure is where a future deliberate exception gets declared,
+# and the comparison is what catches an accidental one.
+MALFORMED_NOTES_PAGES: dict[str, str] = {}
 
 # ---- check 7 -------------------------------------------------------------
 # THE ONE NUMBER PH06 AND PH11 GET WRONG, and the reason this check asserts a
@@ -832,14 +840,18 @@ def main() -> int:
     # The three singletons must be exactly the three known malformed pages.
     singles = {by_spine[k][0] for k, n in spines.items() if n == 1}
     if singles != set(MALFORMED_NOTES_PAGES):
-        r.bad("the one-page spines are not the three known malformed pages",
-              f"expected: {', '.join(sorted(MALFORMED_NOTES_PAGES))}",
-              f"measured: {', '.join(sorted(singles))}",
-              "PH06-031 is EXCLUDED from D18's approval - those three need "
-              "their own instruction. A fourth is a new defect.")
+        r.bad("the set of one-page spines is not the declared one",
+              f"declared: {', '.join(sorted(MALFORMED_NOTES_PAGES)) or '(none)'}",
+              f"measured: {', '.join(sorted(singles)) or '(none)'}",
+              "A notes page with a shape of its own is a structural defect. "
+              "PH06-031's three were repaired in Wave 5.4 and the declared set "
+              "is now empty, so any new one fails here. A deliberate exception "
+              "goes in MALFORMED_NOTES_PAGES with a reason.")
+    elif singles:
+        r.ok(f"the {len(singles)} one-page spines are the declared ones, "
+             f"and no others")
     else:
-        r.ok(f"the {len(singles)} one-page spines are the known malformed "
-             f"pages, and no others")
+        r.ok("no notes page has a spine shape of its own")
 
     # ---------------------------------------------------------- check 7
     r.section("\n=== 7. The image loading convention ===")

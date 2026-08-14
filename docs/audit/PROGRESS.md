@@ -2216,3 +2216,128 @@ fails" if it has 0 files to check. `79f75de` moved the last published markdown
 to `raw-notes/`, so it now checks 0 files, exits 0, and prints a justification
 naming `verify_published_surface.py` as what makes that a real pass. The
 script is right and the register's paragraph is stale.
+
+---
+
+# HANDOVER — 2026-08-14. WAVE 5 IS DONE EXCEPT THE DRAWING
+
+**Read this section first. It supersedes the 2026-08-13 handover above**, which
+is kept for its reasoning.
+
+Waves **5.1, 5.2, 5.3 and 5.4 are all closed** — D46, D47, D48, D49. Two of them
+closed by *deciding not to act*, on measurements that contradicted the finding
+they were priced from. **PH06-031 is CLOSED.** `DECISIONS.md` is **D1–D49**.
+
+## What is left, and there is nothing else
+
+| | Item | Gate |
+| --- | --- | --- |
+| **Dated** | Wave 3.4, 4.7, 4.8, PH05-019/020/021, PH03-049 step 2 | ≈2026-09-22, D45 |
+| **Content** | Draw the 21 missing diagrams | Eliot, D47 |
+| **Content** | The grid-canvas decision — 3 diagrams the locked canvas cannot hold | Eliot, D47 |
+| **Content** | `ppf-long-run-growth` — is the superset SVG acceptable coverage? | Eliot, D47 |
+| **Content** | `comparative-advantage` — a prose rewrite on two pages | Eliot, D46 |
+| **Content** | Wave 5.3, the swap — 231 tags on 85 pages | gated on the two rows above |
+| **Content** | Place `price-discrimination-combined-market.svg` | Eliot's own, D46 |
+
+**Nothing is blocked on tooling and nothing is blocked on measurement any
+more.** Every remaining item is either a date or a decision only Eliot can take.
+
+### The five dated items — unchanged, D45
+
+A **measurement-integrity hold, not a risk hold.** They change board display
+labels, the AQA `<h1>` prefix and internal linking, all of which Google is
+re-crawling. Nothing decays; the re-measure is itself the evidence needed to
+start any of them. **4.7 is NOT done** despite `link_depth.py`'s SERVED graph
+saying 0 pages at depth ≥ 4 — on the CONTENT graph, 253 pages sit at depth ≥ 4
+and PH03-048's 8 prescribed links do not exist.
+
+### Drawing the 21 — start from `PH08-047b-missing-diagrams.md`
+
+**The roadmap's "28 missing diagrams" is 21.** Six were already drawn under
+other filenames as panel splits, and one (`ppf-long-run-growth`) is drawn as
+part of a larger figure. The 21 carry **43 panels**, and the review sheet that
+settles each row is `_working/diagram-review/gaps.py` → `gaps.html`.
+
+**Of the 21: 18 fit the locked 800×600 canvas (38 panels) and 3 do not.** The
+three are `price-elasticity-demand-ranges` (**five** panels),
+`price-elasticity-supply-ranges` (**four**) and `shifts-in-equilibrium`
+(**four**). D46 measured three panels on that canvas at 205px each and rejected
+it, so four and five are not drawable there. **Eliot's decision, 2026-08-14:
+leave them as PNGs and decide the canvas separately** — the options are a second
+canvas size in `DIAGRAM_STYLE.md`, whose locked status requires re-checking all
+84 shipped SVGs, or 13 one-panel files that leave no drawing matching the
+notes' figure.
+
+**Six of the 21 panel counts are inferred from a twin rather than viewed**, and
+are flagged in red on the sheet. Confirm them before pricing that work.
+
+**Drawing a diagram does not put it in front of a student.** The flashcard
+payloads reference 83 SVGs and none of these stems, so each new SVG needs either
+a flashcard (content work, its own approval) or Wave 5.3's swap.
+
+### `comparative-advantage` — the one that is a prose rewrite
+
+Eliot's 5.1 verdict asks for **Germany to hold the absolute advantage in both
+goods.** That reverses `CONTENT_ISSUES.md` #26 and changes **every figure** in
+the worked example on `4-1-2-specialisation-trade.html` and its AQA twin
+`2-6-2-trade.html` — Germany 10m chips / 75mn T-shirts, Vietnam 5m / 100mn,
+opportunity costs 7.5, 20, 0.13, 0.05 and a 15m / 175mn global total — plus
+three figcaptions and the macro gallery blurb. **Its SVG is already live in the
+notes on 3 pages**, so this is a defect sitting on the site, not merely a
+blocker. It needs its own explicit instruction and its own session.
+
+### Wave 5.3 — measured, and NOT for the reasons the roadmap gives
+
+**Both constraints PH08-047 recorded were wrong; see D48 and
+`PH08-047c-the-swap.md`.** There is no 29% shrinkage — a swapped SVG and the
+PNG it replaces render at **exactly the same width**, because
+`revision-notes-textbook.css:622` caps `.diagram-figure` at `max-width: 800px`.
+The "1,118 px" in that finding is the `.notes-container`, the image's
+great-grandparent. So declaring the viewBox is correct *and* is the only thing
+`verify_image_dimensions.py` accepts.
+
+**The real cost is height:** every swapped diagram gets roughly **100 px
+taller**, because every viewBox is 4:3 against PNGs near 1.5. No layout shift —
+the box is declared — the pages just get longer.
+
+**Weight is not the argument.** 3.77 MiB of PNG against 192 KiB of SVG on the 78
+pairs, but Wave 4.1 already took the whole set 26.21 → 5.41 MiB. **The honest
+case is consistency with the flashcards**, and it should be made on that.
+
+**Do it once, not twice.** Until the 21 exist, a sweep leaves **20 pages showing
+blue and black diagrams side by side**, including both galleries. Today every
+page is internally consistent.
+
+## What a fresh session needs to know, updated
+
+Items 1–7 of the 2026-08-13 list still hold. Four more:
+
+8. **`DECISIONS.md` is D1–D49.** D46 the 83 pairs and 21 live defects, D47 the
+   diagram recount, D48 the swap and its two wrong constraints, D49 PH06-031.
+9. **`verify_page_shell.py` check 6 now asserts that NO notes page has a spine
+   shape of its own.** `MALFORMED_NOTES_PAGES` is an **empty dict that must not
+   be deleted** — the check compares the one-page spines against it, so at zero
+   it is stronger than it was full. 6 shapes: (97, 29, 16, 11, 7, 6).
+10. **`docs/audit/scripts/harness/measure_diagram_render.py` is new**, and joins
+    `render_nav.py` and `computed_style_diff.py` as a probe for something no
+    static checker can see. It is what caught PH08-047's width error. Not in CI;
+    it needs Chrome.
+11. **The roadmap is reliable on direction and unreliable on detail — and so is
+    this file.** Wave 5.2 found that aspect ratio predicts panel count for 5.1's
+    83 pairs and **the opposite** for these 28: the narrowest file of all 28
+    (1.146) is a four-panel grid. Wave 5.3 found that a measurement written
+    **the previous day** had read the wrong element — **and it was restated as
+    fact at the start of the session that then disproved it.** Re-derive.
+
+## Two loose ends that are nobody's task yet
+
+- **`DO-NOT-BREAK.md`'s `verify_liquid.py` note is stale** — it says the script
+  "deliberately fails" at 0 files. `79f75de` moved the last published markdown
+  to `raw-notes/`, so it checks 0, exits 0, and prints a justification naming
+  `verify_published_surface.py`. The script is right; the paragraph is not.
+  Carried forward from the 2026-08-13 handover, still true.
+- **Stale git worktrees** may sit under `/private/var/folders/.../harness-test-*`
+  from an interrupted `test_compare_trees.py` run. Harmless, in a temp dir;
+  `git worktree list` shows them and `git worktree prune` clears them once the
+  directories are gone.
