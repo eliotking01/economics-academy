@@ -71,6 +71,17 @@ def at_ref(ref: str, path: str) -> str | None:
     return r.stdout if r.returncode == 0 else None
 
 
+def viewbox(path: str) -> tuple[int, int]:
+    """The SVG's intrinsic size. `verify_image_dimensions.py` enumerates through
+    `git ls-files`, so an <img> on this page is checked exactly like one on a
+    published page and must declare the file's true size."""
+    m = re.search(r'viewBox="([\d.\s-]+)"', (REPO / path).read_text(encoding="utf-8")[:2000])
+    if not m:
+        raise SystemExit(f"no viewBox: {path}")
+    parts = [float(x) for x in m.group(1).split()]
+    return int(parts[2]), int(parts[3])
+
+
 def inline(svg_text: str, uid: str) -> str:
     """Make an SVG safe to inline beside others: scope its ids and drop the XML
     declaration. Two SVGs on one page sharing `id="t"` would otherwise make
@@ -124,6 +135,7 @@ def main() -> int:
             '<div class="box"><em>New file — nothing at this ref.</em></div>'
         )
         ask = NOTES.get(stem, "")
+        w, h = viewbox(path)
         parts.append(f"""
 <section class="row">
   <div class="rowhead"><span class="n">{i} / {len(paths)}</span><h2>{html.escape(stem)}</h2></div>
@@ -131,7 +143,7 @@ def main() -> int:
   <div class="pair">
     <div class="pane"><h3>Before</h3>{before_html}</div>
     <div class="pane"><h3>After</h3>
-      <div class="box"><img src="/{SVG_DIR}/{stem}.svg" alt=""></div></div>
+      <div class="box"><img src="/{SVG_DIR}/{stem}.svg" alt="" width="{w}" height="{h}"></div></div>
   </div>
 </section>""")
 

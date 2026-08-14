@@ -192,6 +192,10 @@ def build_rows() -> list[dict]:
                 "png_wrong": KNOWN_PNG_WRONG.get(png_stem, ""),
                 "title": svg_title(svg_path),
                 "png_dims": f"{pw}x{ph}",
+                "png_w": pw,
+                "png_h": ph,
+                "svg_w": int(vw),
+                "svg_h": int(vh),
                 "png_ar": round(pw / ph, 3),
                 "svg_ar": round(vw / vh, 3),
                 "wide": pw / ph >= 1.9,
@@ -406,12 +410,14 @@ def render(rows: list[dict]) -> str:
     <div class="pane">
       <h3>SVG &mdash; the candidate</h3>
       <p class="meta">viewBox 800&times;600 &middot; aspect {r['svg_ar']}</p>
-      <div class="imgwrap"><img src="{e(r['svg'])}" alt=""></div>
+      <div class="imgwrap"><img src="{e(r['svg'])}" alt=""
+           width="{r['svg_w']}" height="{r['svg_h']}"></div>
     </div>
     <div class="pane">
       <h3>PNG &mdash; ground truth ({e(r['png_stem'])})</h3>
       <p class="meta">{e(r['png_dims'])} &middot; aspect {r['png_ar']}</p>
-      <div class="imgwrap"><img src="{e(r['png'])}" alt=""></div>
+      <div class="imgwrap"><img src="{e(r['png'])}" alt=""
+           width="{r['png_w']}" height="{r['png_h']}"></div>
     </div>
   </div>
   <div class="caps">
