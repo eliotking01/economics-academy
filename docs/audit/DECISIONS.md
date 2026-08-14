@@ -1634,10 +1634,26 @@ material under the section's own `<h2>`. On 1-6-3 the loose block is headed
 `<h3>` — a **sub**-heading of the section's existing `<h2>`. So in neither case
 was there a second section to invent.
 
-**Not cosmetic, and measured — because nothing else could have seen it.** None
-of `compare_trees.py`'s ten assertions looks at CSS, and
-`verify_text_integrity.py` **does not cover these pages at all**: it excludes
-all four generated families, notes included. `computed_style_diff.py` over 591
+**Not cosmetic, and measured — because nothing else could have seen the
+SPACING.** None of `compare_trees.py`'s ten assertions looks at CSS.
+
+> **CORRECTION, made the same day and before the push.** This entry first said
+> `verify_text_integrity.py` "does not cover these pages at all: it excludes all
+> four generated families, notes included." **That is wrong, and it was taken
+> from the script's docstring rather than from its code.** `GENERATED` names
+> four prefixes — `revision-notes/glossary/`, `practice-questions/`,
+> `past-paper-questions/`, `flashcards/` — and **`revision-notes/` topic pages
+> are not among them.** All 173 notes pages are inside its 192, because they
+> became generated in later waves and that tuple was never updated. The check
+> duly went red on 1-1-2 when run across the boundary where the heading moves,
+> and the move is now **declared** with a `Text-Change:` trailer on the merge.
+> The claim survived into DO-NOT-BREAK and PROGRESS and is corrected in both.
+> It is the same error the register already records for
+> `page_shell.preconnectEarly` — calling the notes pages hand-written — and it
+> was made by reading a docstring instead of measuring, in a session whose own
+> headline is that a number written the previous day did not survive.
+
+`computed_style_diff.py` over 591
 elements at 485 properties each found that on 2-1-2 and 1-6-3 the **only**
 elements changed are the `<section>`, growing to hold its content (782.9 →
 1173.7 px on 1-6-3), and the height cascade above it. Not one `<p>`, `<ul>`,

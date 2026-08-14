@@ -2330,6 +2330,22 @@ Items 1–7 of the 2026-08-13 list still hold. Four more:
     **the previous day** had read the wrong element — **and it was restated as
     fact at the start of the session that then disproved it.** Re-derive.
 
+## One thing this session got wrong, recorded because it is the session's own theme
+
+**I asserted that `verify_text_integrity.py` does not cover the notes pages,
+from its docstring, and never tested it.** It covers all 173. `GENERATED` names
+four prefixes and `revision-notes/` is not one of them; the docstring calls its
+192 files "hand-written", which stopped being true when Phases 3 and 5 made the
+notes pages generated. The check went red on the merge, which is exactly what it
+is for, and Wave 5.4's approved heading move is now **declared** with a
+`Text-Change:` trailer rather than having slipped through.
+
+The claim reached `DECISIONS.md` D49 and `DO-NOT-BREAK.md` before it was caught,
+and both are corrected in place. **The wave whose headline is that a measurement
+written the previous day did not survive, itself shipped a claim read off a
+docstring instead of measured.** Item 11 above is not advice about other
+people's numbers.
+
 ## Two loose ends that are nobody's task yet
 
 - **`DO-NOT-BREAK.md`'s `verify_liquid.py` note is stale** — it says the script

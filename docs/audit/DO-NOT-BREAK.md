@@ -902,13 +902,22 @@ the tables for reseeding.
 > what catches an accidental one. Proved able to fail in both directions by
 > putting the `<h2>` back on `1-1-2`.
 >
-> **`verify_text_integrity.py` is NOT the net on a notes page.** It excludes all
-> four generated families, so all 173 notes pages are outside it. What covers
-> them is `verify_generated.py`, `verify_markup_integrity.py` (which does walk
-> `revision-notes/`), and `compare_trees.py` assertion 2 — and assertion 2
-> cannot tell a REORDERING from a rewrite, because it diffs the text sequence.
-> A word-multiset comparison is what proves a move; 1-1-2 measured 361 words
-> before and 361 after, 0 added and 0 lost.
+> **`verify_text_integrity.py` DOES cover the notes pages, and its own
+> docstring says otherwise.** `GENERATED` is four prefixes —
+> `revision-notes/glossary/`, `practice-questions/`, `past-paper-questions/`,
+> `flashcards/` — and `revision-notes/` topic pages are **not** among them, so
+> all 173 sit inside its 192. The docstring calls those 192 "hand-written",
+> which was true when it was written and stopped being true when Phases 3 and 5
+> made the notes pages generated. **Same staleness the register already records
+> for `page_shell.preconnectEarly`.** Do not "fix" it by adding
+> `revision-notes/` to `GENERATED`: the coverage is correct and is what caught
+> Wave 5.4's approved heading move. Only the sentence was wrong.
+>
+> **So a deliberate reordering inside a notes page needs a `Text-Change:`
+> trailer**, and Wave 5.4's merge carries one. Neither that check nor
+> `compare_trees.py` assertion 2 can tell a REORDERING from a rewrite — both
+> diff the text sequence. **A word-multiset comparison is what proves a move:**
+> 1-1-2 measured 361 words before and 361 after, 0 added and 0 lost.
 
 **`boards-data/boards.json` records names per consumer, not one canonical name.**
 Theme 2 reaches published output as three different strings — em dash in
