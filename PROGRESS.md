@@ -57,25 +57,40 @@ harming its revision-notes ranking, and never risk marking.html's #1.
 
 ## In progress / next
 
-- [ ] Rebuild tutoring.html: new pricing (3 cards: free call / 1-to-1 £65 /
-      group £35), how-it-works strip, group-lessons section, exam-board
-      section (Edexcel A, AQA, Edexcel B, OCR with internal links), full
-      credentials (hedge fund + FinTech, DBS), 6 testimonials, expanded FAQ
-      (8 Q&As) + FAQPage JSON-LD, fixed Service JSON-LD (it currently has a
-      duplicate "provider" key and stale £85/£80 prices). New CSS classes in
-      css/pages/tutoring.css: how-it-works/step-card/board-grid/board-card/
-      pricing-note (collision-checked, all free).
-- [ ] index.html (minimal, ranking-protective): tutoring card copy gains
-      "online A-Level Economics tutor" anchor phrase + group mention; meta/og
-      description "1-on-1" → "1-on-1 and small-group"; trust bar "3" → "4"
-      exam boards. Title and H1 UNTOUCHED (they hold the notes ranking).
-- [ ] faq.html: update tutoring-price answer (£65 flat, no minimum), group
-      answer ("coming soon" → real offer), payment answer (group billing) —
-      both visible text and the FAQPage JSON-LD near the top of the file.
-- [ ] Prettier over edited pages; full verification suite (the list in
-      CLAUDE.md ## Tooling); commit with Text-Change trailers.
-- [ ] Rebuild sitemap; commit.
-- [ ] Update this file + OWNER-TODO.md; final summary to Eliot.
+- [x] Rebuild tutoring.html — DONE. New head (title/description/og around
+      "A-Level Economics Tutor", one description for both fields), fixed
+      Service JSON-LD (the old block declared "provider" twice and priced a
+      "Single Lesson" at £85 the page sold at £80), new FAQPage JSON-LD.
+      Body: hero, credentials (adds hedge fund/FinTech + DBS), how-it-works,
+      3-card pricing (free call / 1-to-1 £65 MOST POPULAR / group £35),
+      group-lessons section (id="group-lessons"), exam-board section with
+      internal links to each board's notes and papers, 6 testimonials
+      verbatim from js/data/reviews.js, 8-question FAQ mirroring the JSON-LD.
+      New CSS appended to css/pages/tutoring.css.
+- [x] index.html — DONE, minimal: tutoring card is now "1-on-1 & Group
+      Tutoring" with prices and the phrase "online A-Level Economics tutor";
+      meta/og descriptions say "1-on-1 and small-group"; trust bar 3 → 4
+      boards. Title, H1, hero untouched.
+- [x] faq.html — DONE: prices, group answer, payment answer updated in both
+      the visible accordions and the FAQPage JSON-LD.
+- [x] Prettier + full verification suite — all green. Two traps hit and
+      solved, recorded here for the next session:
+      1. Prettier reformats the BAKED HEADER inside root pages so it stops
+         being byte-identical to templates/header.html (verify_page_shell
+         check 9). Fix: run `python3 scripts/bake_templates.py --apply`
+         AFTER Prettier, never before.
+      2. tutoring.html was removed from KNOWN_SELF_DISAGREEMENT in
+         scripts/verify_page_shell.py (its og:description now equals its
+         meta description; 17 entries remain).
+- [ ] Rebuild sitemap after the content commit; commit separately.
+- [ ] Final summary to Eliot.
+
+## Merge instructions (for Eliot)
+
+Merge with a **merge commit** (or plain fast-forward), not a squash. The
+commits carry `Text-Change:` trailers that CI's text-integrity check reads
+across the merged range; a squash merge would need those three trailer lines
+copied into the squash commit message or CI goes red on main.
 
 ## Decisions made
 

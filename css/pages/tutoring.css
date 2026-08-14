@@ -359,3 +359,79 @@
 .tutoring-faq {
   margin-top: 3em;
 }
+
+/* 2026-08-14 tutoring rework: how-it-works steps, group section, exam-board
+   cards and the pricing small print. Bare selectors like the rest of this
+   file - it relies on main.css loading first, which
+   verify_css_load_order.py holds in place. */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5em;
+  margin: 1em 0 2em;
+}
+.step-card {
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 1.5em;
+  text-align: center;
+}
+.step-icon {
+  font-size: 1.8em;
+  color: #d52349;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.step-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+.step-card p {
+  font-size: 0.92em;
+  margin: 0;
+  color: #444;
+  line-height: 1.55;
+}
+.pricing-note {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.group-lessons {
+  margin-top: 3em;
+}
+.exam-boards {
+  margin-top: 3em;
+}
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2em;
+  margin-top: 1em;
+}
+.board-card {
+  background: white;
+  border: 1px solid #e4e4e4;
+  border-top: 3px solid #d52349;
+  border-radius: 4px;
+  padding: 1.2em 1.2em 1em;
+}
+.board-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.4em;
+}
+.board-card p {
+  font-size: 0.92em;
+  line-height: 1.55;
+  color: #444;
+}
+.board-links {
+  margin: 0;
+}
+.board-links a {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 0.9em;
+}

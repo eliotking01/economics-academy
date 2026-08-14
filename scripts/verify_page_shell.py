@@ -191,19 +191,22 @@ EXPECTED_EXTRA_SCRIPTS = {
 # Fields a page writes twice must agree with themselves. PH06-029 found 18 that
 # do not, all hand-written, none generated - a generator cannot disagree with
 # itself. Each is a deliberately shortened social variant, so each is named
-# rather than counted, and the field is named too: seventeen are og:description
-# and exactly one is twitter:description.
+# rather than counted, and the field is named too: all but one are
+# og:description and exactly one is twitter:description.
 #
 # PH06 section 1.1's prose enumerates only 15 of these 18 - contact.html,
 # faq.html and marking.html are missing from its list. The count 18 was right;
 # the list was short. This is the list.
+#
+# tutoring.html left the list on 2026-08-14: the tutoring rework gave it one
+# description used for both fields, so it no longer disagrees with itself.
+# 17 remain.
 KNOWN_SELF_DISAGREEMENT = {
     "about.html": ("og:description", "shortened social variant"),
     "contact.html": ("og:description", "shortened social variant"),
     "faq.html": ("og:description", "shortened social variant"),
     "index.html": ("og:description", "shortened social variant"),
     "marking.html": ("og:description", "shortened social variant"),
-    "tutoring.html": ("og:description", "shortened social variant"),
     "past-papers/index.html": ("og:description", "shortened social variant"),
     "past-papers/aqa/index.html": ("og:description", "shortened social variant"),
     "past-papers/edexcel/index.html": ("og:description", "shortened social variant"),
