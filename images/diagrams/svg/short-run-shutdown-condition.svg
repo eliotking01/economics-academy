@@ -1,34 +1,71 @@
 <svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
   <title id="t">The short-run shut-down condition</title>
-  <desc id="d">A firm diagram with downward-sloping D=AR and MR curves, a rising MC=S curve, and ATC and AVC curves both sitting above the demand curve. At the output Q where MC crosses MR, the price P read off AR lies below average variable cost, so the firm cannot cover its variable costs and shuts down in the short run.</desc>
+  <desc id="d">Two panels with identical cost curves, differing only in the height of the demand curve. In the left panel the price P at the output Q where MC crosses MR lies below average total cost but above average variable cost, so the firm makes a loss yet covers its variable costs and keeps operating in the short run. In the right panel the demand curve is lower, so the price lies below average variable cost as well, the firm cannot cover its variable costs, and it shuts down.</desc>
   <!-- geometry
-       intersections: 393.1,479.6 505,300 530,150
-       on-curve: 393.1,102.5 393.1,268.8 393.1,304.8
+       intersections: 220,409.41 242.5,350 255,275 586.55,439.8 642.5,350 655,275
+       on-curve: 220,269.07 220,325 220,347.59 586.55,251.25 586.55,334.4 586.55,352.4
   -->
-  <!-- guides -->
-  <line x1="100" y1="102.5" x2="393.1" y2="102.5" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <line x1="100" y1="268.8" x2="393.1" y2="268.8" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <line x1="100" y1="304.8" x2="393.1" y2="304.8" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <line x1="393.1" y1="102.5" x2="393.1" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
-  <!-- axes -->
-  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
-  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
-  <text x="32" y="40" font-size="26" fill="#333333">Cost, revenue</text>
-  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
-  <!-- curves -->
-  <line x1="160" y1="130" x2="620" y2="475" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <line x1="160" y1="130" x2="420" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M 260,440 Q 320,512 380,485 Q 425,470 470,405 Q 488,379 505,300 Q 513,265 530,150 Q 540,82 549,60" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M 335,225 Q 415,300 505,300 Q 595,300 655,225" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M 360,75 Q 440,150 530,150 Q 620,150 680,75" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- labels -->
-  <text x="558" y="72" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
-  <text x="688" y="80" font-size="26" font-weight="700" fill="#1d70b8">ATC</text>
-  <text x="665" y="230" font-size="26" font-weight="700" fill="#1d70b8">AVC</text>
-  <text x="632" y="483" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
-  <text x="428" y="510" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
-  <text x="92" y="110" font-size="24" fill="#333333" text-anchor="end">ATC</text>
-  <text x="92" y="277" font-size="24" fill="#333333" text-anchor="end">AVC</text>
-  <text x="92" y="313" font-size="24" fill="#333333" text-anchor="end">P</text>
-  <text x="393" y="552" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+  <!-- Both panels are the previous single-panel drawing at a UNIFORM half scale:
+       left  x' = 70  + (x-160)/2,  right x' = 470 + (x-160)/2,  both y' = 200 + y/2.
+       MC, AVC and ATC are therefore IDENTICAL in the two panels, which is the
+       whole point - only the demand curve moves. The left panel's AR and MR were
+       solved rather than drawn by eye: AR and MR share an intercept at x=160 with
+       MR at twice AR's slope, and the intercept and slope are the pair that puts
+       MR through MC at Q=460 with AR at P=250, i.e. 45.2 above AVC and 111.9
+       below ATC in the original scale. -->
+  <!-- guides: keep-operating panel -->
+  <line x1="60" y1="269.07" x2="220" y2="269.07" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="60" y1="325" x2="220" y2="325" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="60" y1="347.59" x2="220" y2="347.59" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="220" y1="269.07" x2="220" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- guides: shutdown panel -->
+  <line x1="460" y1="251.25" x2="586.55" y2="251.25" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="334.4" x2="586.55" y2="334.4" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="352.4" x2="586.55" y2="352.4" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="586.55" y1="251.25" x2="586.55" y2="460" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes: keep-operating panel -->
+  <line x1="60" y1="120" x2="60" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="60" y1="460" x2="330" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="24" y="84" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="330" y="524" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- axes: shutdown panel -->
+  <line x1="460" y1="120" x2="460" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <line x1="460" y1="460" x2="760" y2="460" stroke="#333333" stroke-width="2.5"/>
+  <text x="424" y="84" font-size="26" fill="#333333">Cost, revenue</text>
+  <text x="760" y="524" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- panel titles -->
+  <text x="195" y="112" font-size="24" fill="#333333" text-anchor="middle">Short run, keep operating</text>
+  <text x="610" y="112" font-size="24" fill="#333333" text-anchor="middle">Short run, shut down</text>
+  <!-- curves: keep-operating panel -->
+  <line x1="70" y1="240.59" x2="300" y2="370.02" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="70" y1="240.59" x2="264.95" y2="460" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 120,420 Q 150,456 180,442.5 Q 202.5,435 225,402.5 Q 234,389.5 242.5,350 Q 246.5,332.5 255,275 Q 260,241 264.5,230" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 157.5,312.5 Q 197.5,350 242.5,350 Q 287.5,350 317.5,312.5" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 170,237.5 Q 210,275 255,275 Q 300,275 330,237.5" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- curves: shutdown panel -->
+  <line x1="470" y1="265" x2="700" y2="437.5" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="470" y1="265" x2="600" y2="460" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 520,420 Q 550,456 580,442.5 Q 602.5,435 625,402.5 Q 634,389.5 642.5,350 Q 646.5,332.5 655,275 Q 660,241 664.5,230" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 557.5,312.5 Q 597.5,350 642.5,350 Q 687.5,350 717.5,312.5" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 570,237.5 Q 610,275 655,275 Q 700,275 730,237.5" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels: keep-operating panel -->
+  <text x="258" y="222" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="end">MC=S</text>
+  <text x="336" y="240" font-size="26" font-weight="700" fill="#1d70b8">ATC</text>
+  <text x="323" y="318" font-size="26" font-weight="700" fill="#1d70b8">AVC</text>
+  <text x="306" y="378" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="272" y="455" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="52" y="277" font-size="24" fill="#333333" text-anchor="end">ATC</text>
+  <text x="52" y="333" font-size="24" fill="#333333" text-anchor="end">P</text>
+  <text x="52" y="355" font-size="24" fill="#333333" text-anchor="end">AVC</text>
+  <text x="220" y="492" font-size="24" fill="#333333" text-anchor="middle">Q</text>
+  <!-- labels: shutdown panel -->
+  <text x="658" y="222" font-size="26" font-weight="700" fill="#1d70b8" text-anchor="end">MC=S</text>
+  <text x="736" y="240" font-size="26" font-weight="700" fill="#1d70b8">ATC</text>
+  <text x="723" y="318" font-size="26" font-weight="700" fill="#1d70b8">AVC</text>
+  <text x="706" y="445" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="607" y="455" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="452" y="259" font-size="24" fill="#333333" text-anchor="end">ATC</text>
+  <text x="452" y="342" font-size="24" fill="#333333" text-anchor="end">AVC</text>
+  <text x="452" y="360" font-size="24" fill="#333333" text-anchor="end">P</text>
+  <text x="586.55" y="492" font-size="24" fill="#333333" text-anchor="middle">Q</text>
 </svg>
