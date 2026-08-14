@@ -23,11 +23,21 @@
   <path d="M 300,330 Q 380,405 470,405 Q 560,405 620,330" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
   <circle cx="470" cy="405" r="7" fill="#0f7b6c"/>
   <circle cx="485" cy="373.7" r="7" fill="#d52349"/>
-  <!-- in-diagram key -->
-  <circle cx="552" cy="203" r="7" fill="#0f7b6c"/>
-  <text x="566" y="210" font-size="24" fill="#333333">Productive: MC=AC</text>
-  <circle cx="552" cy="239" r="7" fill="#d52349"/>
-  <text x="566" y="246" font-size="24" fill="#333333">Allocative: AR=MC</text>
+  <!-- in-diagram key. Two lines per entry: "Productive efficiency: MC=AC" measures
+       321px at 24px and would run 112px past the 800px canvas edge on one line. -->
+  <circle cx="540" cy="183" r="7" fill="#0f7b6c"/>
+  <text x="554" y="190" font-size="24" fill="#333333">Productive efficiency</text>
+  <text x="554" y="220" font-size="24" fill="#333333">MC=AC</text>
+  <circle cx="540" cy="247" r="7" fill="#d52349"/>
+  <text x="554" y="254" font-size="24" fill="#333333">Allocative efficiency</text>
+  <text x="554" y="284" font-size="24" fill="#333333">AR=MC</text>
+  <!-- the shaded supernormal profit named, with the dynamic-efficiency link stated.
+       Sits BELOW the rectangle with a leader: "Supernormal profit" is 200px at 24px
+       and MR crosses the box at x=288..304 over those rows, leaving under 180px
+       clear inside it. -->
+  <line x1="210" y1="412" x2="235" y2="362" stroke="#333333" stroke-width="1.5"/>
+  <text x="110" y="428" font-size="24" fill="#333333">Supernormal profit</text>
+  <text x="110" y="458" font-size="24" fill="#333333">&#8594; dynamic efficiency</text>
   <!-- labels -->
   <text x="542" y="144" font-size="26" font-weight="700" fill="#1d70b8">MC=S</text>
   <text x="630" y="324" font-size="26" font-weight="700" fill="#1d70b8">AC</text>
