@@ -1604,3 +1604,73 @@ measured. That is the failure this project keeps recording about roadmap
 numbers, reproduced once more by the person warning about it, and it is the
 argument for `measure_diagram_render.py` existing rather than the figure being
 written down again.
+
+---
+
+## 2026-08-14 · Wave 5.4
+
+### D49 — PH06-031 is CLOSED: the three malformed notes pages, approved per page
+
+Eliot, 2026-08-14, approving **all three individually** — which is what D18
+required, having explicitly excluded them because the fixes sit inside prose
+regions and the standing rule is that economics content is never touched
+without approval, every time.
+
+**PH06-031 was smaller than the finding says, and two of its five sub-items
+were already done.** Re-derived before starting: **0** `<style>` blocks remain
+in `revision-notes/`, and MathJax `id` is **126/126**. Three pages remained.
+
+- **`aqa-a2-macro/2-1-2`** — `</section>` closed after the Balance of Payments
+  definition, leaving **42 lines** of Current Account material outside any
+  section.
+- **`aqa-a2-micro/1-6-3`** — `</section>` closed after the figure, leaving **34
+  lines**, including the sentence that interprets that figure.
+- **`aqa-a2-micro/1-1-2`** — an `<h2>` sat between the `<h1>` and the
+  spec-alert, which is meant to open every topic page.
+
+**Both `</section>` pages had exactly one sensible fix, and it was checked
+rather than assumed.** On 2-1-2 the loose content is all Current Account
+material under the section's own `<h2>`. On 1-6-3 the loose block is headed
+`<h3>` — a **sub**-heading of the section's existing `<h2>`. So in neither case
+was there a second section to invent.
+
+**Not cosmetic, and measured — because nothing else could have seen it.** None
+of `compare_trees.py`'s ten assertions looks at CSS, and
+`verify_text_integrity.py` **does not cover these pages at all**: it excludes
+all four generated families, notes included. `computed_style_diff.py` over 591
+elements at 485 properties each found that on 2-1-2 and 1-6-3 the **only**
+elements changed are the `<section>`, growing to hold its content (782.9 →
+1173.7 px on 1-6-3), and the height cascade above it. Not one `<p>`, `<ul>`,
+`<h3>`, margin, font or colour moved. All three pages get **shorter**: −36.65,
+−7.33 and −10.27 px.
+
+**1-1-2 could not be index-aligned and the probe said so.** The `<h2>`
+deliberately moves in document order, so element indices shift and
+`computed_style_diff.py` reports tag mismatches past index 131 rather than
+style differences — the same limitation its `--body-only` note records. Two
+things were measured instead: the heading is **identical in all 18 computed
+properties** checked (26.4 px, weight 700, `rgb(26,62,114)`, margins 52.8/26.4,
+box 1050×84.48), its only changed property being its parent; and the page's
+text is **361 words before and 361 after, 0 added and 0 lost**, with the
+sequence diverging at one index where six words relocate.
+
+**`compare_trees.py` failed on assertion 2 and that was predicted in advance.**
+1 of 465 files differs — 1-1-2 — and the other nine assertions pass, including
+markup integrity at 0 losses, idempotence over 1,986 files and all 14 verifiers
+in NEW. Assertion 2 cannot distinguish a reordering from a rewrite; the
+word-multiset comparison above is what does.
+
+**`verify_page_shell.py` check 6 went red on the improvement, which is what it
+is for.** DO-NOT-BREAK: these tables fail on a count going **down** as well as
+up, and an improvement is declared by changing the page and the number in the
+same commit. **9 shapes (95, 29, 15, 11, 7, 6, 1, 1, 1) → 6 shapes (97, 29, 16,
+11, 7, 6).** Every notes page is now one of six shapes and **none has a shape of
+its own**.
+
+**`MALFORMED_NOTES_PAGES` is emptied rather than deleted, and does more work
+empty than it did full.** The check asserts that the set of one-page spines
+**equals** it, so at zero it asserts that no notes page has a shape of its own,
+and any new one fails — where before, a fourth could only be told apart from
+the three. Same argument as `KNOWN_BREADCRUMB_DISAGREEMENT` staying as an empty
+dict in check 8. Proved able to fail by putting the `<h2>` back: 6 shapes → 7,
+with the singleton named.

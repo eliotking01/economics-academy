@@ -886,6 +886,30 @@ up.** An improvement is welcome and must be declared: change the page and the
 number in the same commit, so the diff records what improved. `--show` reprints
 the tables for reseeding.
 
+> **Exercised 2026-08-14, Wave 5.4, D49 — and it fired on an IMPROVEMENT, which
+> is the case this entry exists for.** Repairing PH06-031's three malformed
+> notes pages took check 6 from **9 spine shapes (95, 29, 15, 11, 7, 6, 1, 1, 1)
+> to 6 (97, 29, 16, 11, 7, 6)** and turned the step red until the table was
+> reseeded in the same commit. Nothing was wrong; the check was doing its job.
+>
+> **`MALFORMED_NOTES_PAGES` is now EMPTY and must not be deleted.** Check 6
+> asserts that the set of notes pages with a one-page spine **equals** that
+> dict, so at zero it asserts something stronger than it ever did full — *no
+> notes page has a shape of its own*, and any new one fails. Full, it could only
+> tell a fourth malformed page apart from the three. Same argument as
+> `KNOWN_BREADCRUMB_DISAGREEMENT` being kept as an empty dict in check 8: the
+> structure is where a deliberate exception gets declared, and the comparison is
+> what catches an accidental one. Proved able to fail in both directions by
+> putting the `<h2>` back on `1-1-2`.
+>
+> **`verify_text_integrity.py` is NOT the net on a notes page.** It excludes all
+> four generated families, so all 173 notes pages are outside it. What covers
+> them is `verify_generated.py`, `verify_markup_integrity.py` (which does walk
+> `revision-notes/`), and `compare_trees.py` assertion 2 — and assertion 2
+> cannot tell a REORDERING from a rewrite, because it diffs the text sequence.
+> A word-multiset comparison is what proves a move; 1-1-2 measured 361 words
+> before and 361 after, 0 added and 0 lost.
+
 **`boards-data/boards.json` records names per consumer, not one canonical name.**
 Theme 2 reaches published output as three different strings — em dash in
 `taxonomy.json` and the notes hub `<h1>`, hyphen in the flashcards decks, and the
