@@ -82,8 +82,16 @@ harming its revision-notes ranking, and never risk marking.html's #1.
       2. tutoring.html was removed from KNOWN_SELF_DISAGREEMENT in
          scripts/verify_page_shell.py (its og:description now equals its
          meta description; 17 entries remain).
-- [ ] Rebuild sitemap after the content commit; commit separately.
-- [ ] Final summary to Eliot.
+- [x] Sitemap rebuilt after the content commit and committed separately
+      (`build_sitemap.py --check` exits 0).
+- [x] Full CI suite verified locally, including verify_generated (8
+      generators, 0 files would change) and both integrity checks against
+      HEAD~1 with the Text-Change trailers recognised.
+
+**STATE: work complete, branch ready for Eliot's review. Not pushed —
+nothing publishes until Eliot merges to main.** Remaining work is Eliot's:
+see OWNER-TODO.md (re-indexing requests, Tutorful price update, tutoring
+agreement document, optional Google Business Profile).
 
 ## Merge instructions (for Eliot)
 
