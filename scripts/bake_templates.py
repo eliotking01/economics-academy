@@ -69,8 +69,10 @@ EXPECTED = 17
 
 # Scripts that used to be in the tail and are not any more. Declared, because
 # the sync below has to be able to tell "a stale tail entry, delete it" from
-# "this page's own script, leave it alone" - index.html carries reviews.js and
-# reviews-render.js inside its tail and always has.
+# "this page's own script, leave it alone" - index.html carried reviews.js and
+# reviews-render.js inside its tail until the 2026-08-14 home-page revamp made
+# the testimonials static HTML. No page has own-tail scripts today; the
+# distinction stays because the next one might.
 #
 # Wave 4.10 emptied this of jQuery, dropotron and util.js and renamed
 # inject-templates.js to nav.js. Anything removed from page_shell.SCRIPT_TAIL
@@ -115,7 +117,8 @@ def sync_script_tail(text: str) -> str:
     indent = SCRIPT_RE.match(lines[first]).group(1)
 
     # Everything in the region that is neither a current nor a former tail
-    # entry: index.html's two review scripts, and nothing else today.
+    # entry: nothing today - the home-page revamp deleted index.html's two
+    # review scripts. Kept for the next page that carries its own.
     theirs = [ln for ln in lines[first:last + 1]
               if not ((m := SCRIPT_RE.match(ln)) and m.group(2) in known)]
 

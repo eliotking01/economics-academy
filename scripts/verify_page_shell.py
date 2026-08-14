@@ -102,11 +102,13 @@ HAND_WRITTEN = ("root", "notes-other", "past-papers")
 # in words.
 #
 # notes-topic's 4 and root's 9/9/3/9 are PH06 section 1.2's table, re-derived
-# here and unchanged. root SHOULD be 9 different pages - they are nine
-# different pages, not a family.
+# here. root SHOULD be 9 different pages - they are nine different pages, not
+# a family. Its script tails went 3 -> 2 on 2026-08-14, when the home-page
+# revamp deleted index.html's two review scripts and its tail became the
+# standard two-script one.
 EXPECTED_FAMILIES = {
     # family:        (pages, heads, shells, tails, css sets)
-    "root":          (9, 9, 9, 3, 9),
+    "root":          (9, 9, 9, 2, 9),
     # 4 head shapes until 2026-08-13, then 3 when PH08-039's MathJax
     # convergence removed the "without id" markup, then 2 when PH08-042's
     # <style> block left 1-5-1-market-structures. 166 pages, one <head>
@@ -175,6 +177,10 @@ REMOVED_SCRIPTS = (
 # Nothing depends on the old position: reviews-render.js waits for
 # DOMContentLoaded and reads `reviews` from js/data/reviews.js, which still
 # precedes it. This check is what noticed.
+#
+# Both review scripts were deleted outright in the 2026-08-14 home-page
+# revamp - the testimonials are static HTML now - so index.html's tail is
+# the plain two-script tail like everything else's.
 EXPECTED_INTERLEAVED = []
 
 EXPECTED_EXTRA_SCRIPTS = {
@@ -182,8 +188,6 @@ EXPECTED_EXTRA_SCRIPTS = {
     "/js/components/question-search.js": 90,
     "/js/components/flashcards.js": 7,
     "/js/components/glossary-filter.js": 3,
-    "/js/data/reviews.js": 1,
-    "/js/components/reviews-render.js": 1,
     "https://assets.calendly.com/assets/external/widget.js": 1,
 }
 
@@ -200,12 +204,12 @@ EXPECTED_EXTRA_SCRIPTS = {
 #
 # tutoring.html left the list on 2026-08-14: the tutoring rework gave it one
 # description used for both fields, so it no longer disagrees with itself.
-# 17 remain.
+# index.html left the same day, in the home-page revamp, for the same reason.
+# 16 remain.
 KNOWN_SELF_DISAGREEMENT = {
     "about.html": ("og:description", "shortened social variant"),
     "contact.html": ("og:description", "shortened social variant"),
     "faq.html": ("og:description", "shortened social variant"),
-    "index.html": ("og:description", "shortened social variant"),
     "marking.html": ("og:description", "shortened social variant"),
     "past-papers/index.html": ("og:description", "shortened social variant"),
     "past-papers/aqa/index.html": ("og:description", "shortened social variant"),
@@ -359,12 +363,14 @@ MALFORMED_NOTES_PAGES: dict[str, str] = {}
 # candidate. "Adding loading=lazy to the 94 images lacking it" would reverse it
 # on 96 pages.
 #
-# The 8 pages where every image is lazy are the two diagram galleries and the
-# six flashcard decks, where the first image is not a plausible LCP element.
-EXPECTED_IMAGE_PAGES = 104
-EXPECTED_IMAGES = 309
+# The 9 pages where every image is lazy are the two diagram galleries, the six
+# flashcard decks, and - from the 2026-08-14 home-page revamp - index.html,
+# whose one image is the below-the-fold tutor photo. On none of them is the
+# first image a plausible LCP element.
+EXPECTED_IMAGE_PAGES = 105
+EXPECTED_IMAGES = 310
 EXPECTED_FIRST_EAGER = 96
-EXPECTED_ALL_LAZY = 8
+EXPECTED_ALL_LAZY = 9
 
 # ---- check 8 -------------------------------------------------------------
 # Every page with a breadcrumb writes it twice, visible <nav> and JSON-LD

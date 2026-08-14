@@ -1,118 +1,117 @@
-# Tutoring Page SEO & Rework — Progress
+# Site Work — Progress
 
-Branch: `tutoring-seo-rework`. Never merged to main by Claude — Eliot reviews
-and merges. This file is the live state; a fresh session should read it first,
-then CLAUDE.md, then `seo/03-diagnosis.md` for the prior technical-SEO audit.
+Live state of in-flight work. A fresh session should read this first, then
+CLAUDE.md. Excluded from publishing via `_config.yml`.
 
-## The brief (approved 2026-08-14)
+---
 
-Tutoring page earns 80%+ of income but ranks ~page 5 (GSC: position 26.27,
-440 impressions, 17 clicks — `seo/performance-pages.csv`). Rework it around
-the NEW offer, optimise home page for "A Level Economics Tutor" WITHOUT
-harming its revision-notes ranking, and never risk marking.html's #1.
+## 1. Home page revamp — branch `home-page-revamp`
 
-**The new offer (replaces everything previously on the page):**
+**STATE: BUILT, VERIFIED AND CONNECTED — awaiting Eliot's review/merge
+only.** The newsletter form posts to Kit form **9803307** (ID supplied by
+Eliot 2026-08-14; endpoint sanity-checked live, GET returns 200). Nothing is
+live until the merge, which must be a **merge commit, not a squash** — the
+first commit carries Text-Change trailers CI reads.
 
-- 1-to-1 lessons: **£65/hour flat** — no minimum number of lessons
-  (supersedes the old £80 single / £65-with-3-minimum structure, Eliot
-  confirmed 2026-08-14).
-- Group lessons (2–4 students): **£35/hour per student**. Ready-made groups
-  welcome, or individuals are matched into a group. First group lesson is
-  pay-as-you-go to try it; after that billed per half-term or term (by number
-  of lessons). Only a brief mention of billing on the page — the tutoring
-  agreement document carries the detail.
-- Online only. Free 15-minute Calendly intro call stays the primary CTA;
-  Formspree modal + email are secondary.
+### The brief (approved 2026-08-14, all four plan questions answered yes)
 
-## Key repo facts a fresh session needs
+Revamp the home page for SEO and users. Priority ranking to PRESERVE at all
+costs: "A Level Economics Revision (Notes)" — the page's title was therefore
+left completely unchanged and the phrase kept verbatim at the front of the H1.
+Secondary: support "A Level Economics Tutor" without competing with
+tutoring.html (home mentions the phrase in body text and links to the tutoring
+page; only tutoring.html headlines it). Revision notes outrank tutoring in
+page hierarchy. Approved specifics: H1 drops "Past Papers"; Kit for the
+newsletter; all four exam-board tiles including OCR/Edexcel B (Eliot
+knowingly front-ran the PH03-049-step-2 hold — the board section creates the
+honest anchor context that seo/07b §5 said was missing).
 
-- Root pages (tutoring, index, faq…) are HAND-WRITTEN — not generated, out of
-  page_shell scope (D34). Edit directly, format with `npx prettier@3.9.6`.
-- CI (`.github/workflows/verify.yml`) diffs visible wording against HEAD~1:
-  any commit changing words on a published page MUST carry one
-  `Text-Change: <path>` trailer per page in the commit message, or CI fails.
-  (`verify_markup_integrity.py` only covers revision-notes/ — not relevant.)
-- New root `.md` files publish by default — both this file and OWNER-TODO.md
-  are in `_config.yml`'s exclude list; anything else added at root must be too.
-- Icon subset: only icons already in `css/fontawesome-all.min.css` may be
-  used (fa-users, fa-calendar-check, fa-chalkboard-teacher, fa-graduation-cap,
-  fa-bolt, fa-check-double, fa-star, fa-clipboard-list, fa-file-alt, fa-clock,
-  fa-envelope, fa-search, fa-plus, fa-minus, fa-bars). A new icon needs the
-  subsetter re-run — avoid.
-- `seo/tools/verify_seo.py` (in CI) requires og:title == <title>, self
-  canonical, one h1, unique titles/descriptions, parseable JSON-LD.
-- After any commit that changes published pages, run
-  `python3 scripts/build_sitemap.py` (it derives lastmod from git, so run it
-  AFTER committing the page edits) and commit the sitemap separately.
+### What was built (top to bottom of the page)
 
-## Done
+1. **Hero** — H1 now "A-Level Economics Revision Notes & Expert Tutoring";
+   subhead names all six free resources; both CTAs and the trust line kept.
+2. **Free resources** — 2 cards → 6 (notes / flashcards / practice questions /
+   past papers / question finder / glossary), grid variant
+   `resource-grid--three`, real measured numbers (provenance below).
+3. **Revise by Exam Board** — 4 tiles with pill links into each board's notes
+   and papers. verify_seo check 13 exempts the homepage (no board of its own).
+4. **Meet Your Tutor** — solo portrait `/images/eliot_shirt.JPG` (the same
+   photo tutoring.html uses; `eliot_grad.jpg` was tried first and is a group
+   shot — swap back only if Eliot prefers it), credential bullets reused
+   verbatim from tutoring.html, two links with FRESH anchor texts ("Explore
+   1-to-1 & Group Tutoring", "More About Eliot"), then the two existing paid
+   action cards untouched.
+5. **Trust bar** — untouched.
+6. **Testimonials** — now static HTML: the three reviews tutoring.html does
+   NOT use (William E., Alex B., Ebrahim D.), markup mirroring what
+   reviews-render.js used to emit so home.css applies unchanged.
+   `js/data/reviews.js` and `js/components/reviews-render.js` are DELETED
+   (only index.html referenced them; the fourth unused review, Harry G., now
+   exists only in git history).
+7. **Quick Answers** — four always-visible Q&As (no accordion, no JS, no
+   FAQPage JSON-LD — Google removed FAQ rich results May 2026), plus a link
+   to faq.html (one of GSC's "crawled, not indexed" pages).
+8. **Newsletter** — plain HTML form POSTing to Kit, zero scripts.
+   Connected: `action="https://app.kit.com/forms/9803307/subscriptions"`.
+9. Head: meta description and og:description rewritten (identical strings, so
+   index.html LEFT `KNOWN_SELF_DISAGREEMENT` — 16 remain). `<title>`, JSON-LD,
+   canonical, GA all untouched.
 
-- [x] Investigation: prior SEO audit read (`seo/`), GSC exports, testimonials
-      found (`js/data/reviews.js` — 10 five-star reviews), competitor research.
-- [x] Plan approved by Eliot 2026-08-14, including permission to edit
-      existing wording on tutoring.html, faq.html, index.html (visible-text
-      changes are otherwise forbidden by standing rule).
-- [x] Branch `tutoring-seo-rework`; PROGRESS.md + OWNER-TODO.md created and
-      excluded from publishing in `_config.yml`.
+privacy.html gained newsletter coverage: collection li, "subscribe" li, use
+li, a Kit entry under sharing, and retention ("until you unsubscribe").
 
-## In progress / next
+### Numbers on the page and where each came from (re-derive before changing)
 
-- [x] Rebuild tutoring.html — DONE. New head (title/description/og around
-      "A-Level Economics Tutor", one description for both fields), fixed
-      Service JSON-LD (the old block declared "provider" twice and priced a
-      "Single Lesson" at £85 the page sold at £80), new FAQPage JSON-LD.
-      Body: hero, credentials (adds hedge fund/FinTech + DBS), how-it-works,
-      3-card pricing (free call / 1-to-1 £65 MOST POPULAR / group £35),
-      group-lessons section (id="group-lessons"), exam-board section with
-      internal links to each board's notes and papers, 6 testimonials
-      verbatim from js/data/reviews.js, 8-question FAQ mirroring the JSON-LD.
-      New CSS appended to css/pages/tutoring.css.
-- [x] index.html — DONE, minimal: tutoring card is now "1-on-1 & Group
-      Tutoring" with prices and the phrase "online A-Level Economics tutor";
-      meta/og descriptions say "1-on-1 and small-group"; trust bar 3 → 4
-      boards. Title, H1, hero untouched.
-- [x] faq.html — DONE: prices, group answer, payment answer updated in both
-      the visible accordions and the FAQPage JSON-LD.
-- [x] Prettier + full verification suite — all green. Two traps hit and
-      solved, recorded here for the next session:
-      1. Prettier reformats the BAKED HEADER inside root pages so it stops
-         being byte-identical to templates/header.html (verify_page_shell
-         check 9). Fix: run `python3 scripts/bake_templates.py --apply`
-         AFTER Prettier, never before.
-      2. tutoring.html was removed from KNOWN_SELF_DISAGREEMENT in
-         scripts/verify_page_shell.py (its og:description now equals its
-         meta description; 17 entries remain).
-- [x] Sitemap rebuilt after the content commit and committed separately
-      (`build_sitemap.py --check` exits 0).
-- [x] Full CI suite verified locally, including verify_generated (8
-      generators, 0 files would change) and both integrity checks against
-      HEAD~1 with the Text-Change trailers recognised.
+| Claim | Measured | How |
+| --- | --- | --- |
+| 166 topic pages | 166 | notes topic pages, `verify_page_shell.py` families |
+| 670+ flashcards | 671 | sum of `flashcards/data/*.json` cards |
+| 1,267 practice questions | 1,267 | sum of `questions-data/*/*.json` |
+| 280+ past papers | 281 | `find past-papers -name '*.pdf' \| wc -l` |
+| 300+ definitions | 325 | entries in `glossary-data/terms.json` |
 
-**STATE: MERGED AND LIVE.** Eliot approved in chat and the branch was
-merged to main (merge commit e09cdef) and pushed on 2026-08-14. Both
-workflows succeeded — verify CI (the Text-Change trailers were accepted)
-and the Pages deployment — and the live site was spot-checked: new title,
-£65/£35 prices, group section, updated FAQ and home card all serving.
+Floors ("+") were used where the count naturally grows; exact numbers where
+the corpus is complete. If content grows, update the copy by hand.
 
-Remaining work is Eliot's: see OWNER-TODO.md — request re-indexing of
-tutoring.html, /, and faq.html in Search Console NOW (day-0 item), update
-the Tutorful profile price, put group billing detail in the tutoring
-agreement document, optional Google Business Profile. Measure against the
-baseline (position 26.27, 440 impressions) at the ~2026-09-22 GSC check.
+### Verifier expectations updated in the same commit (the declared pattern)
 
-## Merge instructions (for Eliot)
+- `verify_page_shell.py`: root script tails 3 → 2; images 309 → 310; pages
+  with images 104 → 105; all-lazy pages 8 → 9 (index.html's one image is the
+  below-fold tutor photo, so lazy is correct); index.html removed from
+  `KNOWN_SELF_DISAGREEMENT` and from `EXPECTED_EXTRA_SCRIPTS`.
+- `bake_templates.py`: comments about index.html's own-tail scripts updated.
 
-Merge with a **merge commit** (or plain fast-forward), not a squash. The
-commits carry `Text-Change:` trailers that CI's text-integrity check reads
-across the merged range; a squash merge would need those three trailer lines
-copied into the squash commit message or CI goes red on main.
+### Verification state (all green before commit)
 
-## Decisions made
+verify_generated (8 generators, 0 files would change), verify_seo 14/14,
+verify_page_shell 9/9, verify_image_dimensions, verify_css_load_order,
+verify_inline_styles, verify_icons (no new icons — every new section uses the
+existing 15-icon subset), verify_liquid, verify_published_surface,
+verify_boards. Rendered in headless Chrome at 1280px and 390px and visually
+checked.
 
-- No aggregateRating/review stars in structured data — Google treats
-  self-serving review markup as a violation; Tutorful link does that job.
-- Old £80 single-lesson tier dropped entirely (Eliot, 2026-08-14).
-- Marking page untouched. Home title/H1 untouched.
-- FAQ rich results are gov/health-only since 2023, so FAQPage JSON-LD is a
-  correctness/consistency play, not a rich-result play — set expectations
-  accordingly.
+### Traps a fresh session must know (inherited from the tutoring rework)
+
+1. Prettier reformats the BAKED HEADER inside root pages — always run
+   `python3 scripts/bake_templates.py --apply` AFTER Prettier.
+2. Any commit changing visible wording on a published page needs one
+   `Text-Change: <path>` trailer per page, in the final trailer block of the
+   commit message, or CI fails. Merge with a merge commit, NOT a squash.
+3. Root pages are hand-written (out of page_shell scope, D34) — edit
+   directly.
+4. Run `python3 scripts/build_sitemap.py` AFTER committing page edits (it
+   takes lastmod from git) and commit the sitemap separately.
+5. Only icons already in `css/fontawesome-all.min.css` may be used.
+
+## 2. Tutoring page SEO rework — MERGED AND LIVE (2026-08-14)
+
+Rebuilt tutoring.html around the new offer (1-to-1 £65/hr flat, groups of
+2–4 at £35/hr per student), new head + Service/FAQPage JSON-LD, credentials,
+pricing cards, group section, exam-board section, 6 testimonials, 8-question
+FAQ; faq.html prices updated; home card updated (superseded by the revamp
+above, which keeps its copy verbatim). Merge commit `e09cdef`, both workflows
+green, live site spot-checked. Full detail in git history of this file.
+
+Baseline to beat at the ~2026-09-22 GSC check: tutoring.html at position
+26.27 / 440 impressions / 17 clicks (`seo/performance-pages.csv`,
+exported 2026-08-08). Eliot's follow-ups live in OWNER-TODO.md.
