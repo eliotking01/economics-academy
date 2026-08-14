@@ -2,42 +2,27 @@
 
 Kept out of the published site via `_config.yml`. Items are grouped by when.
 
-## Before merging `home-page-revamp`
+## Now
 
-- [x] ~~Kit account, form, and form ID~~ — DONE 2026-08-14: form ID 9803307
-      is pasted into index.html and the endpoint checked live. Nothing else
-      blocks the merge.
 - [ ] **One 30-second check in Kit**: confirm "double opt-in" (the
       confirmation email) is ON for the form — it's Kit's default, and the
       page already promises "You will get a confirmation email first".
-
-## After merging `home-page-revamp` (day 0)
-
-- [ ] **Request re-indexing in Search Console** (URL Inspection → Test Live
-      URL → Request Indexing) for:
-      1. `https://economicsacademy.co.uk/`
-      2. `https://economicsacademy.co.uk/privacy.html`
+- [ ] **Send yourself a test signup** on the live site (your own email) and
+      confirm the confirmation email arrives and you appear as a subscriber
+      in Kit. This is the only thing that proves the form works end to end.
 - [ ] Skim the live home page on your phone once — you're checking the photo,
       the wording and the form, not the code.
-- [ ] **Send yourself a test signup** (your own email) and confirm the
-      confirmation email arrives and you appear as a subscriber in Kit.
 
-## Newsletter, ongoing (only once it's live)
+## Newsletter, ongoing
 
 - [ ] Decide a realistic sending rhythm — even one email per half-term is
       fine; the page promises "occasional", so anything beats silence.
 - [ ] First email idea: new-resource roundup (flashcards, question finder,
       glossary) — the six home-page cards are effectively the draft.
-
-## From the tutoring rework (2026-08-14) — still open
-
-- [ ] **Request re-indexing** for `tutoring.html`, `/`, and `faq.html` if you
-      haven't already (the home-page item above supersedes `/`).
-- [ ] **Update your Tutorful profile prices** to £65/hour so the site and
-      profile agree.
-- [ ] **Update the tutoring agreement document** to spell out group billing
-      (per half-term/term, by number of lessons).
-- [ ] If any other profile lists the old £80 single-lesson price, update it.
+- [ ] Optional, ~5 minutes: a one-email welcome automation in Kit
+      (Automate → Visual Automations → trigger "Joins a form" → Send email).
+      The free plan includes exactly one automation, which is this. Not
+      required — the confirmation email already greets every subscriber.
 
 ## Worth doing over the next few weeks
 
@@ -59,3 +44,20 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       check the home page's clicks/position held or improved after the revamp
       (baseline: 223 clicks, 2,463 impressions, position 17.35, CTR 9.05%).
       The five audit items held by D45 also unlock on this date.
+
+## Done — kept only where the DATE matters to a later measurement
+
+- **2026-08-14 — re-indexing requested** in Search Console for `/`,
+  `/privacy.html`, `/tutoring.html` and `/faq.html`. This is the clock the
+  ~22 September check reads from: a recrawl typically lands within days to a
+  few weeks, so any ranking movement before roughly late August is noise
+  rather than a result.
+- **2026-08-14 — Tutorful profile updated** to £65/hour, so the site and the
+  profile agree for anyone searching Eliot by name.
+- **2026-08-14 — tutoring agreement updated** with the group billing detail
+  (per half-term/term, by number of lessons). The site deliberately keeps
+  only a brief mention and points at the agreement, so the two now match.
+- **2026-08-14 — other profiles checked** for the old £80 single-lesson
+  price; nothing stale left public.
+- **2026-08-14 — Kit account, form and form ID** (9803307), wired into
+  index.html and verified live.

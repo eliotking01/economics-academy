@@ -14,10 +14,15 @@ across the merge range) and the Pages deployment — and the live site was
 spot-checked: new H1, Kit form 9803307, board tiles, static testimonials and
 the privacy additions all serving, `<title>` byte-identical, old review
 scripts gone. The newsletter form posts to Kit form **9803307** (endpoint
-sanity-checked, GET 200). Remaining work is Eliot's — see OWNER-TODO.md:
-GSC re-indexing of `/` and `/privacy.html`, a live test signup, the Kit
-double-opt-in glance. Measure the page against its baseline (223 clicks,
-2,463 impressions, position 17.35) at the ~2026-09-22 GSC check.
+sanity-checked, GET 200).
+
+**Eliot re-indexed `/`, `/privacy.html`, `/tutoring.html` and `/faq.html` on
+2026-08-14**, which is the clock the ~2026-09-22 GSC check reads from — the
+tutoring rework's own follow-ups (Tutorful price, agreement document, other
+profiles) are all closed the same day. What is left is the newsletter's
+end-to-end proof: a live test signup and the Kit double-opt-in glance, both
+in OWNER-TODO.md. Measure the page against its baseline (223 clicks, 2,463
+impressions, position 17.35) at the ~2026-09-22 check.
 
 ### The brief (approved 2026-08-14, all four plan questions answered yes)
 
