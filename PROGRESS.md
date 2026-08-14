@@ -7,10 +7,11 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ## 1. Home page revamp — branch `home-page-revamp`
 
-**STATE: BUILT AND VERIFIED, on the branch, NOT merged.** Two things remain
-and both are Eliot's: paste the real Kit form ID into the newsletter form
-(see OWNER-TODO.md — the form is inert until then), and review/merge. Nothing
-is live until the merge.
+**STATE: BUILT, VERIFIED AND CONNECTED — awaiting Eliot's review/merge
+only.** The newsletter form posts to Kit form **9803307** (ID supplied by
+Eliot 2026-08-14; endpoint sanity-checked live, GET returns 200). Nothing is
+live until the merge, which must be a **merge commit, not a squash** — the
+first commit carries Text-Change trailers CI reads.
 
 ### The brief (approved 2026-08-14, all four plan questions answered yes)
 
@@ -51,8 +52,7 @@ honest anchor context that seo/07b §5 said was missing).
    FAQPage JSON-LD — Google removed FAQ rich results May 2026), plus a link
    to faq.html (one of GSC's "crawled, not indexed" pages).
 8. **Newsletter** — plain HTML form POSTing to Kit, zero scripts.
-   `action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions"` — the
-   KIT_FORM_ID placeholder is the one thing to replace before merge.
+   Connected: `action="https://app.kit.com/forms/9803307/subscriptions"`.
 9. Head: meta description and og:description rewritten (identical strings, so
    index.html LEFT `KNOWN_SELF_DISAGREEMENT` — 16 remain). `<title>`, JSON-LD,
    canonical, GA all untouched.

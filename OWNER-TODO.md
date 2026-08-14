@@ -2,28 +2,14 @@
 
 Kept out of the published site via `_config.yml`. Items are grouped by when.
 
-## BEFORE merging `home-page-revamp` (the newsletter needs ~10 minutes)
+## Before merging `home-page-revamp`
 
-- [ ] **Create your free Kit account** at kit.com (choose the free Newsletter
-      plan — free to 10,000 subscribers, no card needed).
-- [ ] **Create the signup form**: in Kit go to Grow → Landing Pages & Forms →
-      Create new → Form → **Inline**, name it e.g. "Homepage signup". Design
-      doesn't matter — the site never loads Kit's design, only posts to it.
-- [ ] **Get the form ID**: on the form, choose Embed → **HTML**. In that code
-      you'll see a line like
-      `action="https://app.kit.com/forms/1234567/subscriptions"`.
-      Copy the number (or the whole URL if it looks different).
-- [ ] **Send the number to Claude to paste in** — or do it yourself: in
-      `index.html` there is exactly one `KIT_FORM_ID` to replace, next to an
-      `OWNER-TODO` comment. Until then the Subscribe button does nothing.
-- [ ] **Leave "double opt-in" ON in Kit** (subscribers confirm by email —
-      it's the default and good UK GDPR practice; the page already says
-      "You will get a confirmation email first").
-- [ ] Optional: in Kit, set the form's "incentive/thank-you" email content —
-      the default confirmation is fine to start.
-
-If you'd rather launch without the newsletter, say so and Claude will remove
-the section before merge — do not merge it with the placeholder in place.
+- [x] ~~Kit account, form, and form ID~~ — DONE 2026-08-14: form ID 9803307
+      is pasted into index.html and the endpoint checked live. Nothing else
+      blocks the merge.
+- [ ] **One 30-second check in Kit**: confirm "double opt-in" (the
+      confirmation email) is ON for the form — it's Kit's default, and the
+      page already promises "You will get a confirmation email first".
 
 ## After merging `home-page-revamp` (day 0)
 
