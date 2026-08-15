@@ -7,3 +7,8 @@
 .year-section {
   margin: 2em 0;
 }
+/* The "Diagrams, Data & Definitions" section: same rhythm as the board
+   sections above it. */
+.notes-resources-section {
+  margin-bottom: 3em;
+}
