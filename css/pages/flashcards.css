@@ -75,11 +75,7 @@
   font-size: 1.05em;
 }
 
-.flashcards-page .fc-deck-stats {
-  color: var(--fc-muted);
-  font-size: 0.95em;
-  margin-bottom: 1.5em;
-}
+/* The deck stat line is the shared .resource-stats in css/main.css. */
 
 /* ------------------------------------------------------- player panel */
 
@@ -537,93 +533,18 @@
   white-space: nowrap;
 }
 
-.flashcards-page .fc-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin-top: 2em;
-}
-
-/* The paid services. Deliberately its own block rather than two more buttons
-   in .fc-cta: those are free resources and this is not, and mixing them puts
-   a paid button in a row a student reads as free. Matches the notes pages'
-   .notes-cta, which is the pattern every other family already converts
-   through. PH07-058, Wave 4.9. */
-/* White, not the notes CTA's #f8f8f8. That value works there because a topic
-   page's .notes-container is white; here the block sits directly on #main,
-   which css/main.css paints #f7f7f7, so #f8f8f8 renders as no panel at all -
-   just a red bar floating in the page. Checked by rendering it. */
-.flashcards-page .fc-services-cta {
-  margin-top: 2.5em;
-  padding: 1.5em;
-  background: #ffffff;
-  border: 1px solid var(--fc-border);
-  /* The brand accent. --fc-wrong is the same hex but means "wrong answer",
-     so it is not the token to reuse here. */
-  border-left: 4px solid #d52349;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.flashcards-page .fc-services-cta p {
-  margin: 0 0 1em;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-}
-
-.flashcards-page .fc-services-cta .button {
-  margin: 0.3em;
-}
+/* The free cross-links row and the paid-services panel are the shared
+   .resource-cross and .resource-services in css/main.css — one component
+   across all four resource sections. The free/paid split (PH07-058, Wave
+   4.9) is preserved there: paid buttons never join the free row. */
 
 /* ------------------------------------------------------------ hub */
 
+/* Deck cards are the shared .resource-cards grid of .resource-card in
+   css/main.css; the board heading is a plain header.major, as on the notes
+   and practice hubs. Only the section spacing is this page's own. */
 .flashcards-page .fc-board {
-  margin-top: 1.5em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25em;
-  align-items: stretch;
-}
-
-.flashcards-page .fc-board h2 {
-  grid-column: 1 / -1;
-  justify-self: start;
-  color: var(--fc-primary);
-  border-bottom: 3px solid var(--fc-teal);
-  padding-bottom: 0.2em;
-  margin-bottom: 0;
-}
-
-.flashcards-page .fc-deck-card {
-  border: 1px solid var(--fc-border);
-  border-top: 4px solid var(--fc-teal);
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(26, 62, 114, 0.06);
-  padding: 1.25em 1.5em;
-  margin: 0;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.flashcards-page .fc-deck-card:hover {
-  box-shadow: 0 6px 18px rgba(26, 62, 114, 0.14);
-  transform: translateY(-2px);
-}
-
-.flashcards-page .fc-deck-card h3 {
-  margin-bottom: 0.25em;
-}
-
-.flashcards-page .fc-deck-card h3 a {
-  color: var(--fc-secondary);
-  text-decoration: none;
-  border-bottom: none;
-}
-
-.flashcards-page .fc-deck-card p {
-  margin-bottom: 0;
-  color: var(--fc-muted);
-  font-size: 0.95em;
+  margin-top: 2.5em;
 }
 
 /* ------------------------------------------------------------ mobile */
@@ -631,10 +552,6 @@
 @media screen and (max-width: 736px) {
   .flashcards-page header.major h1 {
     font-size: 1.6em;
-  }
-
-  .flashcards-page .fc-board {
-    grid-template-columns: 1fr;
   }
 
   .flashcards-page .fc-player {
@@ -697,14 +614,6 @@
   .flashcards-page .fc-bar-fill {
     transition: none;
   }
-
-  .flashcards-page .fc-deck-card {
-    transition: none;
-  }
-
-  .flashcards-page .fc-deck-card:hover {
-    transform: none;
-  }
 }
 
 /* -------------------------------------------------------------- print */
@@ -726,11 +635,11 @@
 
   .flashcards-page .fc-player.is-printing .fc-mount,
   .flashcards-page .fc-player.is-printing ~ .fc-topics,
-  .flashcards-page .fc-player.is-printing ~ .fc-cta {
+  .flashcards-page .fc-player.is-printing ~ .resource-cross {
     display: none;
   }
 
-  .flashcards-page .fc-services-cta {
+  .flashcards-page .resource-services {
     display: none;
   }
 

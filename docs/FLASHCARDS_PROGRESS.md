@@ -3,7 +3,17 @@
 The live state of the flashcards feature. A fresh session resumes from this
 file. Full plan context: CLAUDE.md ("Flashcards" section).
 
-_Last updated: 2026-08-06._
+_Last updated: 2026-08-15._
+
+> **2026-08-15 — resource unification Phase 1** (branch
+> `resources-phase-1-flashcards`, see the top section of the repo-root
+> `PROGRESS.md`): the hub and six deck pages were restyled onto the shared
+> `.resource-*` components in `css/main.css`; `build_flashcards.py` now takes
+> hub board/deck order from `boards.json` (Edexcel A first, micro before
+> macro), adds a hero stat strip, `hasPart` structured data and
+> question-finder cross-links, and the hub title/H1 gained "Free". Card
+> content, deck data, the player and all card wording are untouched. Nothing
+> below this note changes.
 
 ## FULL PROJECT SCOPE
 

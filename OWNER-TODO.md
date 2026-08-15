@@ -2,6 +2,29 @@
 
 Kept out of the published site via `_config.yml`. Items are grouped by when.
 
+## Resource-pages unification — added 2026-08-15
+
+- [ ] **Check each exam board's licensing terms for hosting past papers.**
+      Important context: the site does not link out to the boards' websites —
+      it already hosts all 281 paper PDFs itself, live, in `past-papers/`.
+      So this is not a question about a future decision; it is due diligence
+      on something already published. Look for the "copyright" or
+      "using our materials" page on each of: Pearson/Edexcel, AQA and OCR.
+      What to check: whether hosting complete past papers for free
+      educational use is permitted, whether attribution wording is required,
+      and whether any embargo applies to recent series. Nothing needs taking
+      down unless a term says so — this is a check, not an alarm.
+- [ ] **Google Search Console → request indexing for the new sections' hubs**
+      (they went live mid-August and Google barely knows them yet):
+      `https://economicsacademy.co.uk/flashcards/`,
+      `https://economicsacademy.co.uk/practice-questions/`,
+      `https://economicsacademy.co.uk/past-paper-questions/`,
+      `https://economicsacademy.co.uk/revision-notes/glossary/`.
+      In GSC: paste each URL into the top search bar → "Request indexing".
+      ~2 minutes for all four.
+- [ ] **After each resource phase merges**: request indexing for the pages
+      that phase changed (the phase's review summary will list them).
+
 ## Marking page relaunch — live since 2026-08-15
 
 - [ ] **One glance in the Stripe dashboard**: confirm each of the 8 payment

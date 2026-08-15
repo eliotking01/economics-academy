@@ -32,6 +32,7 @@ from __future__ import annotations
 
 import datetime as dt
 import html
+import itertools
 import json
 import re
 import subprocess
@@ -73,6 +74,24 @@ ORIGINS = {"notes-verbatim", "card-authored"}
 NOTES_DIRS = {
     (board["slugs"]["flashcards"], group["flashcardsSlug"]): group["notesDir"]
     for _key, board, group in board_data.groups()
+}
+
+# The hub's board and deck order, from the record's own order - resource
+# unification Phase 1. The hub used to sort board names alphabetically,
+# which put AQA above Edexcel A and Macroeconomics above Microeconomics:
+# the only board index on the site disagreeing with boards.json's group
+# order, which CLAUDE.md records as published output.
+GROUP_ORDER = {
+    (board["slugs"]["flashcards"], group["flashcardsSlug"]): i
+    for i, (_key, board, group) in enumerate(board_data.groups())
+}
+
+# Question-bank hub per board, for the cross-resource links. The bank's
+# slugs differ from the flashcards slugs ("edexcel" vs "edexcel-a"), which
+# is exactly why this is read from the record rather than derived.
+QB_SLUGS = {
+    board["slugs"]["flashcards"]: board["slugs"]["questionBank"]
+    for _key, board, _group in board_data.groups()
 }
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)
@@ -403,8 +422,10 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
 # service, and the injected footer needs JavaScript. The anchor text is new on
 # purpose - 444 of 455 links to tutoring.html already read "Book a Free Intro
 # Call", and seo/07b-link-decisions.md §5 declines deepening exactly that.
+# The class is the shared .resource-services in css/main.css since resource
+# unification Phase 1; the free/paid split it encodes is unchanged.
 SERVICES_CTA = """
-          <section class="fc-services-cta">
+          <section class="resource-services">
             <p>Recall is the easy half — the marks are in the application.</p>
             <a href="/marking.html" class="button alt"
               >Have a practice paper marked</a
@@ -498,7 +519,7 @@ def deck_page(deck, cards, topics):
             <h1>{e(deck["deckTitle"])}</h1>
           </header>
           <p class="fc-intro">{deck["intro"]}</p>
-          <p class="fc-deck-stats">
+          <p class="resource-stats">
             {len(cards)} cards &middot; {len(topics)} topics &middot;
             {e(deck["boardName"])} {e(deck["themeName"])}
           </p>
@@ -539,12 +560,15 @@ def deck_page(deck, cards, topics):
             </ul>
           </section>
 
-          <section class="fc-cta">
+          <section class="resource-cross">
             <a href="/revision-notes/{notes_dir}/" class="button">
               Read the {e(deck["themeName"].split(":")[0])} notes
             </a>
             <a href="/practice-questions/{notes_dir}/" class="button">
               Try the practice questions
+            </a>
+            <a href="/past-paper-questions/{QB_SLUGS[deck["board"]]}/" class="button">
+              Search {e(deck["boardName"])} past paper questions
             </a>
           </section>
 {SERVICES_CTA}"""
@@ -562,57 +586,89 @@ def deck_page(deck, cards, topics):
 def hub_page(decks):
     path = "/flashcards/"
     crumbs = [("Home", "/"), ("Flashcards", None)]
+    # Board and deck order from boards.json, not the alphabet: Edexcel A
+    # before AQA, Microeconomics before Macroeconomics within AQA, matching
+    # the notes and practice-questions hubs.
+    ordered = sorted(
+        decks,
+        key=lambda d: GROUP_ORDER[(d["deck"]["board"], d["deck"]["theme"])])
     ld = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "A-Level Economics Flashcards",
+        "name": "Free A-Level Economics Flashcards",
         "description": "Free interactive A-Level Economics flashcards for "
                        "Edexcel A and AQA, with spaced repetition.",
         "url": f"{SITE}{path}",
         "inLanguage": "en-GB",
+        # hasPart names each deck page, as the revision-notes hub does for
+        # its six theme pages - the winner's pattern, applied here.
+        "hasPart": [
+            {"@type": "WebPage",
+             "name": d["deck"]["deckTitle"],
+             "url": (f"{SITE}/flashcards/{d['deck']['board']}"
+                     f"/{d['deck']['theme']}/")}
+            for d in ordered
+        ],
         "publisher": shell.ORGANISATION_REF,
     }
+    total_cards = sum(len(d["cards"]) for d in decks)
+    total_topics = sum(len(d["topics"]) for d in decks)
     sections = []
-    for board_name in sorted({d["deck"]["boardName"] for d in decks}):
+    for board_name, board_decks in itertools.groupby(
+            ordered, key=lambda d: d["deck"]["boardName"]):
         deck_cards = "\n".join(
-            f"""            <article class="fc-deck-card">
-              <h3>
-                <a href="/flashcards/{d["deck"]["board"]}/{d["deck"]["theme"]}/">
-                  {e(d["deck"]["themeName"])}
-                </a>
-              </h3>
-              <p>{len(d["cards"])} cards &middot; {len(d["topics"])} topics</p>
-            </article>"""
-            for d in decks if d["deck"]["boardName"] == board_name)
+            f"""              <article class="resource-card">
+                <h3>
+                  <a href="/flashcards/{d["deck"]["board"]}/{d["deck"]["theme"]}/">
+                    {e(d["deck"]["themeName"])}
+                  </a>
+                </h3>
+                <p class="resource-card-meta">
+                  {len(d["cards"])} cards &middot; {len(d["topics"])} topics
+                </p>
+              </article>"""
+            for d in board_decks)
         sections.append(f"""          <section class="fc-board">
-            <h2>{e(board_name)}</h2>
+            <header class="major">
+              <h2>{e(board_name)}</h2>
+            </header>
+            <div class="resource-cards">
 {deck_cards}
+            </div>
           </section>""")
     body = f"""{breadcrumb_html(crumbs)}
-          <header class="major">
-            <h1>A-Level Economics Flashcards</h1>
-          </header>
-          <p class="fc-intro">
-            Interactive flashcards for A-Level Economics — precise
-            definitions, formulae, exam-standard diagrams, chains of
-            reasoning and evaluation points, written to each board's own
-            specification. Flip a card to check yourself and rate how well
-            you knew it; the deck remembers and brings the hard ones back.
-            More decks are added as they are written, and every card links
-            to the revision notes page that teaches it.
-          </p>
+          <section class="resource-hero">
+            <h1>Free A-Level Economics Flashcards</h1>
+            <p class="resource-intro">
+              Interactive flashcards for A-Level Economics — precise
+              definitions, formulae, exam-standard diagrams, chains of
+              reasoning and evaluation points, written to each board's own
+              specification. Flip a card to check yourself and rate how well
+              you knew it; the deck remembers and brings the hard ones back.
+              More decks are added as they are written, and every card links
+              to the revision notes page that teaches it.
+            </p>
+            <p class="resource-stats">
+              {total_cards} cards &middot; {total_topics} topics &middot;
+              {len(decks)} decks &middot; free, no sign-up
+            </p>
+          </section>
 {chr(10).join(sections)}
-          <section class="fc-cta">
+          <section class="resource-cross">
             <a href="/revision-notes/" class="button">
               Browse the revision notes
             </a>
             <a href="/practice-questions/" class="button">
               Try the practice questions
             </a>
+            <a href="/past-paper-questions/" class="button">
+              Search real past paper questions
+            </a>
           </section>
 {SERVICES_CTA}"""
     return page_shell(
-        title="A-Level Economics Flashcards | Economics Academy",
+        title="A-Level Economics Flashcards | Free Edexcel A & AQA "
+              "Revision Cards",
         desc="Free interactive A-Level Economics flashcards for Edexcel A "
              "and AQA: definitions, formulae, diagrams and evaluation "
              "points with spaced repetition.",
