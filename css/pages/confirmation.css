@@ -12,18 +12,22 @@
   margin-bottom: 0.25em;
 }
 
-.ref-box {
-  background: #f8f8f8;
-  border-left: 4px solid #d52349;
-  border-radius: 4px;
-  padding: 1em 1.5em;
-  margin: 1.5em 0;
-  font-size: 1.15em;
-  font-weight: 700;
+/* header.major styles an h2 inline over its rule line; this page's heading is
+   an h1, which that rule ignores, so size and set it against the line here. */
+.confirmation-header h1 {
+  background: #f7f7f7;
+  position: relative;
+  top: -0.68em;
+  display: inline;
+  margin: 0;
+  padding: 0 0.75em;
+  font-size: 1.75em;
 }
 
-.ref-box span {
-  color: #d52349;
+/* Single centred column: the page has one job, so no grid. */
+.confirmation-narrow {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .confirmation-section {
@@ -38,19 +42,13 @@
   margin-top: 0;
 }
 
-.confirmation-success {
-  display: none;
-  background: #f0f9f0;
-  border: 1px solid #4caf50;
-  border-left: 4px solid #4caf50;
-  border-radius: 4px;
-  padding: 1.5em;
-  margin-top: 1.5em;
-  text-align: center;
+.confirmation-cta {
+  margin: 1em 0;
 }
 
-.confirmation-success.visible {
-  display: block;
+.confirmation-note {
+  font-size: 0.9em;
+  color: #5d5d5d;
 }
 
 .next-steps {
@@ -73,13 +71,7 @@
   margin: 0.5em 0 1em;
 }
 
-.form-error-msg {
-  color: #d52349;
-  font-size: 0.9em;
-  margin-top: 0.25em;
-  display: none;
-}
-
-.form-error-msg.visible {
-  display: block;
+.confirmation-help {
+  text-align: center;
+  margin-top: 2em;
 }
