@@ -32,8 +32,11 @@ first one, so what Google reads is unchanged) and UX only.
    plain link, and the page's only scripts are the standard two-script tail.
    New: custom-enquiry box (custom + regular marking, quote by email), "What
    You Actually Get" section (mark+grade / annotated PDF / follow-up email)
-   with two placeholder example panels, and a six-box FAQ. Trust strip
-   updated (next-day; all four boards named).
+   with two placeholder example panels, and a six-box FAQ. The trust strip
+   was REMOVED at Eliot's request (2026-08-15 review): it kept mis-wrapping,
+   contributes nothing to SEO, and every fact in it appears elsewhere on the
+   page (boards + turnarounds in the packages intro and FAQ, credentials in
+   "Who does the marking?").
 2. **confirmation.html** — rebuilt around one job: email the work. Big mailto
    CTA, include-checklist, what-happens-next timeline. The Formspree form and
    client-side reference number are REMOVED (approved): Stripe now collects
