@@ -96,13 +96,6 @@
   display: flex;
   gap: 1em;
 }
-.breadcrumb {
-  margin-bottom: 2em;
-  font-size: 0.9em;
-}
-.breadcrumb a {
-  color: #4caf50;
-}
 .exam-board-tag {
   display: inline-block;
   padding: 0.3em 0.6em;

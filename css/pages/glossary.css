@@ -30,28 +30,6 @@
   display: none !important;
 }
 
-/* ---------------------------------------------------------------- breadcrumb
- * Restated because the inherited #7f888f fails AA on #main's #f7f7f7.
- */
-.glossary-page .breadcrumb {
-  margin-bottom: 2em;
-  font-size: 0.9em;
-  color: var(--gl-muted);
-}
-
-.glossary-page .breadcrumb a {
-  color: #b91d3c;
-  text-decoration: underline;
-}
-
-.glossary-page .breadcrumb a:hover {
-  color: var(--gl-accent);
-}
-
-.glossary-page .breadcrumb .separator {
-  color: #9aa3aa;
-}
-
 /* Long words in a definition, and the KaTeX boxes, must never widen the page.
  * The body scrolling sideways on a phone is the failure this prevents. */
 .glossary-page .gl-entry,

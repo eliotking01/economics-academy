@@ -33,25 +33,8 @@
 /* The hub and board-index heroes are the shared .resource-hero /
    .resource-intro / .resource-stats in css/main.css. */
 
-/* ------------------------------------------------------------ breadcrumb */
-
-/* main.css leaves breadcrumb text at #7f888f, which is 3.36:1 on this page's
-   #f7f7f7 background - under the 4.5:1 AA floor. Restated at 4.97:1. Link
-   colour stays the brand red the notes breadcrumbs use. */
-.practice-questions-page .breadcrumb {
-  margin-bottom: 2em;
-  font-size: 0.9em;
-  color: var(--pq-muted);
-}
-
-.practice-questions-page .breadcrumb a {
-  color: var(--pq-brand);
-}
-
-.practice-questions-page .breadcrumb .separator {
-  margin: 0 0.4em;
-  color: var(--pq-muted);
-}
+/* The breadcrumb is the canonical nav.breadcrumb in css/main.css, which
+   this page's styling was the source of. */
 
 /* -------------------------------------------------------- board sections
 

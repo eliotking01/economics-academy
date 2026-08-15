@@ -31,20 +31,6 @@
   --fc-muted: #5b6b7f;
 }
 
-.flashcards-page .breadcrumb {
-  margin: 0 0 1.5em 0;
-  font-size: 0.9em;
-}
-
-.flashcards-page .breadcrumb a {
-  color: var(--fc-muted);
-}
-
-.flashcards-page .breadcrumb .separator {
-  margin: 0 0.4em;
-  color: #999999;
-}
-
 .flashcards-page header.major {
   margin: 0 0 1em 0;
   padding: 0;
