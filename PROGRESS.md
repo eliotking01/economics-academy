@@ -5,21 +5,83 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASE 1 MERGED AND LIVE
+## Unifying the four resource sections — PHASE 2 BUILT, AWAITING REVIEW
 
-**STATE (2026-08-15): Phase 1 (flashcards) is MERGED AND LIVE. Eliot
-reviewed and approved in chat with one change — centre the cross-resource
-strip (`3dd1a52`, applied to the shared component so every later phase
-inherits it) — and the branch was merged to main (`d0fdcaf`, --no-ff) and
-pushed the same day. Both workflows succeeded (verify CI and the Pages
-deployment, checked via the API), and the live site was spot-checked: new
-H1 and title serving, stat line, Edexcel A section first, the finder
-button on hub and deck pages, and the `.resource-*` block in the served
-main.css. Eliot's follow-up (GSC indexing for the 7 pages) is in
-OWNER-TODO.md. NEXT: Phase 2 (practice questions) on
-`resources-phase-2-practice-questions`, applying the same components to
-the practice hub + 6 theme pages — see the Phase 0 plan below and the
-D45 cross-linking line, which still holds until ≈2026-09-22.**
+**STATE (2026-08-15): Phase 2 (practice questions) is BUILT and COMMITTED
+on `resources-phase-2-practice-questions` (not pushed, not merged —
+Eliot's branch review is next, and his review is the approval for the
+wording changes listed below). Phase 1 (flashcards) is merged and live
+(`d0fdcaf`). NEXT after Phase 2 merges: nothing until the ≈2026-09-22
+GSC re-measure — Phases 3 (past papers) and 4 (revision notes) are
+gated on it by D45, see the phase table below.**
+
+### What Phase 2 changed (commits 9f3cd77, d6a020d, 5ac786e)
+
+Seven pages: the practice hub + 6 board indexes, all via
+`scripts/build_questions.py` (generated family — no Text-Change
+trailers; `verify_text_integrity` excludes it and `verify_generated` is
+the guard). The 166 topic pages are byte-identical.
+
+- **Hub** — hero/stat line move to the shared `.resource-*` classes (same
+  shape, no visual change); theme buttons become the `resource-card` grid
+  under the existing Year 1/Year 2 h3s (cards use **h4** headings — the
+  shared block in main.css now styles h3 and h4 identically);
+  CollectionPage JSON-LD gains `hasPart` naming the six board pages; the
+  old conversion strip splits into `resource-cross` (notes restyled,
+  flashcards + finder new) and `resource-services` (marking, tutoring —
+  sentence kept verbatim).
+- **Board pages ×6** — grey `pq-header` panel becomes the shared hero
+  plus a new stat line; `pq-note` keeps only the click instruction (the
+  stats moved up); cross strip = notes (restyled, now "Read the
+  {Theme 1|…} notes"), flashcards deck (new), board question-finder page
+  (new), past-papers board page (kept verbatim); services panel adds the
+  marking button. Accordion + its DO-NOT-BREAK noscript block untouched.
+- **CSS** — superseded `pq-*` rules removed from practice-questions.css;
+  main.css `.resource-card` heading rules grouped to h3+h4 with an
+  explicit 1.35em (what the theme already gave h3, so flashcards render
+  identically).
+- **Wording changes for Eliot's review (the complete list; everything
+  else is verbatim):**
+  1. Hub `<title>`/meta/og/twitter/JSON-LD description: "AQA and
+     Edexcel" → "Edexcel and AQA" (matches boards.json order and the
+     page's own intro; hub has no GSC presence, so no frozen head).
+  2. Hub cross strip: "Free Revision Notes" → "Browse the revision
+     notes"; new "Revise with the flashcards"; new "Search real past
+     paper questions".
+  3. Board intro drops its trailing "Click any unit to expand its
+     topics." (the instruction already sits above the accordion).
+  4. Board `pq-note`: "Click any unit below to see its topics · N
+     questions across M topics, free and with no sign-up." → "Click any
+     unit below to see its topics." (stats now in the hero stat line:
+     "N questions · M topics · free, no sign-up").
+  5. Board buttons: "Read the Notes" → "Read the {Theme 1–4 |
+     Microeconomics | Macroeconomics} notes"; new "Revise with the
+     flashcards"; new "Search {Edexcel|AQA} past paper questions"; new
+     "Get Your Essays Marked". ("{Edexcel|AQA} Past Papers" and "Book a
+     Free Intro Call" unchanged.)
+- **Housekeeping:** `docs/audit/scripts/lib.py`'s exclude mirror was two
+  files behind `_config.yml` (OWNER-TODO.md, PROGRESS.md), so every
+  audit-harness module refused to run — pre-existing on main, synced in
+  `9f3cd77` because DO-NOT-BREAK requires `structured_data.py 2` after
+  any change to build_questions.py's JSON-LD.
+
+### Phase 2 verification (all on 2026-08-15, before commit)
+
+Every `scripts/verify_*.py` green; double rebuild idempotent and
+`verify_generated` reports 0 files would change; markup/text integrity 0
+losses / 0 visible-text diffs; `seo/tools/verify_seo.py` 14/14;
+`structured_data.py 2` keeps the Quiz markup at 0 omissions (the 179
+`Course.description` rows are DO-NOT-BREAK's recorded false positive);
+`build_sitemap.py --check` exit 0 after the sitemap commit. Rendered in
+headless Chrome at 1280px and 390px (iframe wrapper), hub + a board page,
+all four shots visually checked.
+
+### Phase 2 D45 compliance
+
+Zero new edges into `/revision-notes/` or `/past-papers/` — both existing
+edges restyled in place (notes anchor text changed, papers kept verbatim).
+New edges point only at `/flashcards/` and `/past-paper-questions/`,
+which have no GSC presence and are on no held list.
 
 Eliot approved the Phase 0 plan in chat on 2026-08-15: the plan itself, the
 phase-order swap with the ≈2026-09-22 gate on Phases 3–4,
