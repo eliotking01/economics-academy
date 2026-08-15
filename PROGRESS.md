@@ -7,13 +7,19 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ## 0. Marking page update & payment journey — branch `marking-page-update`
 
-**STATE: READY FOR ELIOT'S REVIEW AND MERGE.** All five Stripe links were
-created by Eliot and wired in on 2026-08-15 — `grep STRIPE-LINK-NEEDED
-marking.html` returns nothing, and all eight checkout pages were rendered in
-headless Chrome and show the right product, price, Exam Board dropdown and
-"What should we mark?" field. The one thing unverifiable from outside is each
-link's after-payment redirect to confirmation.html (Eliot configured it;
-worth a dashboard glance). Merge must be a merge commit, not a squash.
+**STATE: MERGED AND LIVE.** Eliot approved in chat and the branch was merged
+to main (merge commit `d4be06b`, --no-ff) and pushed on 2026-08-15; the
+branch is deleted. Both workflows succeeded — verify CI (the branch commits'
+Text-Change trailers accepted across the merge range) and the Pages
+deployment — and the live site was spot-checked: 8 Stripe links serving with
+0 placeholders, all four package cards, no trust strip, no coursework
+mention, confirmation.html on the one-job version with Formspree gone,
+faq.html carrying the next-day prices, and the `<title>` byte-identical.
+All five Stripe links were created by Eliot; every one of the 8 checkout
+pages was rendered headless and shows the right product, price, Exam Board
+dropdown and "What should we mark?" field. The one thing unverifiable from
+outside remains each link's after-payment redirect to confirmation.html
+(Eliot configured it; worth a dashboard glance before the first real order).
 
 **The #1 guardrail: marking.html ranks #1 for "Economics paper marking".** Its
 URL, `<title>`, H1, meta description, canonical, og/twitter tags and
@@ -58,7 +64,7 @@ first one, so what Google reads is unchanged) and UX only.
 - [x] Eliot: five Stripe links + custom fields + redirects — done 2026-08-15.
 - [x] Paste the five URLs over the placeholders; re-run verifiers — done
       2026-08-15; the placeholder comments were removed with the hrefs.
-- [ ] Eliot: review the branch and merge (merge commit, not squash).
+- [x] Review and merge — merged 2026-08-15, live and spot-checked.
 - [ ] Eliot: two anonymised example PDFs into `marking-examples/` (can come
       after merge — placeholders show until then). Then a session generates
       one PNG preview per PDF (first page), adds width/height from the real

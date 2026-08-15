@@ -2,18 +2,15 @@
 
 Kept out of the published site via `_config.yml`. Items are grouped by when.
 
-## Marking page relaunch — one step left: review and merge
+## Marking page relaunch — live since 2026-08-15
 
-- [ ] **Review the `marking-page-update` branch and merge it** (merge commit,
-      NOT a squash — CI's wording check needs the branch commits' trailers).
-      Everything else is done and verified as of 2026-08-15: all five new
-      Stripe links are created, wired in and checked (zero placeholders left),
-      and all eight checkout pages were rendered and confirmed to show the
-      right product, the right price, the Exam Board dropdown and the
-      "What should we mark?" question. One thing only you can see: the
-      after-payment redirect to `confirmation.html` on each link — worth one
-      glance in the Stripe dashboard, since that setting isn't visible from
-      the outside.
+- [ ] **One glance in the Stripe dashboard**: confirm each of the 8 payment
+      links redirects to `https://economicsacademy.co.uk/confirmation.html`
+      after payment — that setting isn't visible from outside, and it's the
+      only part of the new journey nobody has been able to verify. A £0 test
+      isn't possible, so the first real order is the true end-to-end proof.
+- [ ] Skim the live marking page on your phone once — the packages, the
+      enquiry box and the "coming soon" example panels.
 
 ## Marking page examples — any time (placeholders show until done)
 
