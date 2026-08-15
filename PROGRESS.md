@@ -5,15 +5,66 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — APPROVED; PHASE 1 IN PROGRESS
+## Unifying the four resource sections — PHASE 1 BUILT, AWAITING ELIOT'S REVIEW
 
-**STATE (2026-08-15): Eliot approved the plan in chat, same day it was
-presented: (1) the plan including the phase-order swap and the ≈2026-09-22
-gate on Phases 3–4, (2) wording changes approved via his branch review, per
-phase, (3) he will do the GSC indexing requests. He also approved both
-housekeeping finds: the stray CSS duplicate (delete, Phase 1) and the
-"Behavior"→"Behaviour" fix on the notes hub (apply in Phase 4, approval
-already given). Phase 1 is under way on `resources-phase-1-flashcards`.**
+**STATE (2026-08-15): Phase 1 (flashcards) is built and verified on branch
+`resources-phase-1-flashcards`, three commits, NOT pushed and NOT merged.
+Eliot reviews the branch; his review approves the wording changes listed
+below. After merge: he requests GSC indexing for the 7 changed pages, and
+Phase 2 (practice questions) can start on `resources-phase-2-practice-questions`.**
+
+Eliot approved the Phase 0 plan in chat on 2026-08-15: the plan itself, the
+phase-order swap with the ≈2026-09-22 gate on Phases 3–4,
+review-as-wording-approval, and both housekeeping finds (stray CSS
+duplicate — deleted; "Behavior"→"Behaviour" on the notes hub — approved now,
+apply in Phase 4).
+
+### What Phase 1 changed (commits f8a59d7, 978c2b7, ce52387)
+
+- **`css/main.css`** — new additive `.resource-*` component block at the end
+  of the file: hero (copied from the notes hub's winner shape), stat strip,
+  card grid + card, cross-resource strip, services panel. Used by flashcards
+  now; Phases 2–4 reuse it. Nothing above the block changed.
+- **`scripts/build_flashcards.py`** — hub board/deck order from boards.json
+  via `GROUP_ORDER` (was alphabetical: AQA above Edexcel A, macro above
+  micro); hub hero + measured stat strip; CollectionPage `hasPart` naming
+  the six decks; cross strip gains the question finder (master on the hub,
+  board-filtered `QB_SLUGS` link per deck). Deck data payloads unchanged.
+- **`css/pages/flashcards.css`** — rules superseded by the shared block
+  removed; print + reduced-motion selectors retargeted.
+- **Wording changes for Eliot's review (the complete list; everything else
+  is verbatim):**
+  1. Hub `<title>`: "A-Level Economics Flashcards | Economics Academy" →
+     "A-Level Economics Flashcards | Free Edexcel A &amp; AQA Revision Cards"
+  2. Hub H1: "A-Level Economics Flashcards" → "Free A-Level Economics
+     Flashcards" (JSON-LD name matches)
+  3. Hub, new stat line: "671 cards · 166 topics · 6 decks · free, no sign-up"
+  4. Hub, new button: "Search real past paper questions"
+  5. Deck pages ×6, new button: "Search Edexcel A past paper questions" /
+     "Search AQA past paper questions"
+- **Housekeeping:** both untracked Finder duplicates deleted —
+  `css/pages/revision-notes-diagrams 2.css` (byte-identical to its sibling,
+  explicitly approved) and `scripts/verify_boards 2.py` (found during Phase
+  1; an older copy byte-identical to the committed version at `647b836`, so
+  nothing was lost — flagged to Eliot in the review summary).
+
+### Verification (all on 2026-08-15, before commit)
+
+Every `scripts/verify_*.py` passes; two generator runs byte-identical;
+`verify_text_integrity.py HEAD` reports 0 visible-text diffs in its 192
+covered files (flashcards pages are outside its set, so no `Text-Change:`
+trailers apply — its guard for this family is `verify_generated`);
+`build_sitemap.py --check` exit 0 after the sitemap commit. Rendered in
+headless Chrome at 1280px and at 390px via the iframe wrapper, all four
+shots visually checked: board order, cards, stat strip, cross strip,
+services panel, player still initialises.
+
+### D45 compliance
+
+No new link edges into `/revision-notes/` or `/past-papers/`. The only new
+edges point at `/past-paper-questions/` (hub + its two board pages), which
+has no GSC presence and is on no held list. Board display labels untouched
+(hub already said "Edexcel A"; deck wording unchanged).
 
 The brief (pasted 2026-08-15): unify Revision Notes, Flashcards, Practice
 Questions and Past Papers — hubs and board/theme pages only (~26 pages, plus
