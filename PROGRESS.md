@@ -5,15 +5,22 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASE 2 BUILT, AWAITING REVIEW
+## Unifying the four resource sections — PHASE 2 MERGED AND LIVE
 
-**STATE (2026-08-15): Phase 2 (practice questions) is BUILT and COMMITTED
-on `resources-phase-2-practice-questions` (not pushed, not merged —
-Eliot's branch review is next, and his review is the approval for the
-wording changes listed below). Phase 1 (flashcards) is merged and live
-(`d0fdcaf`). NEXT after Phase 2 merges: nothing until the ≈2026-09-22
-GSC re-measure — Phases 3 (past papers) and 4 (revision notes) are
-gated on it by D45, see the phase table below.**
+**STATE (2026-08-15): Phase 2 (practice questions) is MERGED AND LIVE.
+Eliot approved in chat, all wording changes included; merged to main
+(`2295213`, --no-ff) and pushed the same day, branch deleted. Both
+workflows succeeded (verify CI and the Pages deployment, checked via
+the API), and the live site was spot-checked: new hub title ("Edexcel
+and AQA") serving in title/og/twitter, `hasPart` in the JSON-LD, the
+resource-card grid, the Theme 1 board page's stat line and its four
+cross-strip links (notes, flashcards deck, finder, past papers), and
+the h4 card-heading rules in the served main.css. Eliot's follow-up
+(GSC indexing for the 7 pages) is in OWNER-TODO.md. NEXT: nothing
+until the ≈2026-09-22 GSC re-measure — Phases 3 (past papers) and 4
+(revision notes) are gated on it by D45, see the phase table below.
+Phase 1 (flashcards) merged and live earlier the same day
+(`d0fdcaf`).**
 
 ### What Phase 2 changed (commits 9f3cd77, d6a020d, 5ac786e)
 
