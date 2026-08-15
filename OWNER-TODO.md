@@ -33,6 +33,12 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       `/practice-questions/aqa-a2-micro/` and
       `/practice-questions/aqa-a2-macro/`. Not before the merge — the live
       pages haven't changed yet.
+- [ ] **After Phase 3 merges — request indexing for the 5 past-papers
+      pages** (same GSC routine as above): `/past-papers/`, then
+      `/past-papers/edexcel/`, `/past-papers/aqa/`, `/past-papers/ocr/`
+      and `/past-papers/edexcel-b/`. Not before the merge — the live
+      pages haven't changed yet. These four board pages already rank
+      well; re-indexing just tells Google about the redesign sooner.
 - [ ] **After each later resource phase merges**: request indexing for the
       pages that phase changed (the phase's review summary will list them).
 
