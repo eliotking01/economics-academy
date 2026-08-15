@@ -21,7 +21,7 @@ description, canonical, the whole head and baked header/footer), and
 all six theme-page heads diffed byte-identical too. Phases 1–3 LIVE
 (merges `d0fdcaf`, `2295213`, `1e8dfed`).**
 
-### What Phase 4 changed (commits b51f670, cb88de7, 2c4a4a1)
+### What Phase 4 changed (commits b51f670, cb88de7, 2c4a4a1, e2bcb65)
 
 Seven notes pages + 166 practice topic pages. The hub is HAND-WRITTEN
 (7 Text-Change trailers on `b51f670`; merge needs --no-ff so CI sees
@@ -40,7 +40,13 @@ output (generated family, no trailers).
   links must live on THIS page: DO-NOT-BREAK, only depth-1 page in the
   section); the conversion strip and "More Free Resources" merge into
   the unified order cross-strip-then-services, services sentence and
-  both buttons kept verbatim.
+  both buttons kept verbatim. At review (2026-08-15) Eliot asked for
+  the four notes-family resources to be more upfront than a button
+  row: they now sit in their own "Diagrams, Data &amp; Definitions"
+  card section directly under the AQA block (`e2bcb65`), original link
+  titles kept as card titles, each with a one-line description written
+  from its own page's framing; the bottom strip keeps only the four
+  cross-section buttons.
 - **Theme pages ×6** — grey `notes-header` panel becomes the shared
   hero plus a stat line (H1s and intros verbatim, re-wrapped only);
   the closing "Ready to Put These Notes to Work?" block splits into
@@ -77,12 +83,18 @@ output (generated family, no trailers).
   4. Hub cards, new links (**Wave 4.7, per-item approval**): "Practise
      Theme 1 questions" … "Practise Theme 4 questions", "Practise
      Microeconomics questions", "Practise Macroeconomics questions".
-  5. Hub, removed heading: "More Free Resources".
-  6. Hub cross strip, reworded anchors: "Flashcards" → "Revise with
-     the flashcards"; "Glossary &amp; Formulae" → "Browse the glossary
-     &amp; formulae"; "Macro Application" → "Explore the macro
-     application data"; "Micro Diagrams" → "Browse the micro
-     diagrams"; "Macro Diagrams" → "Browse the macro diagrams".
+  5. Hub: "More Free Resources" heading → "Diagrams, Data &amp;
+     Definitions" (Eliot's review change). The four links keep their
+     original titles as card titles — "Glossary &amp; Formulae",
+     "Macro Application", "Micro Diagrams", "Macro Diagrams" — and
+     each gains a NEW one-line description: "Every key definition and
+     formula in one place, with a page for each exam board." /
+     "Real-world UK and South Africa examples, ready to adapt for
+     application marks in essays." / "Every
+     {microeconomics|macroeconomics} diagram from the notes, each with
+     a short explanation and an exam prompt."
+  6. Hub cross strip, reworded anchor: "Flashcards" → "Revise with the
+     flashcards".
   7. Hub cross strip, new buttons: "Try the practice questions",
      "Search real past paper questions", "Practise with the past
      papers".
