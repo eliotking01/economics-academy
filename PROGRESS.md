@@ -7,10 +7,13 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ## 0. Marking page update & payment journey — branch `marking-page-update`
 
-**STATE: BUILT, AWAITING ELIOT'S STRIPE LINKS.** The branch must NOT merge
-until the five `STRIPE-LINK-NEEDED` placeholders in marking.html are replaced
-— `grep STRIPE-LINK-NEEDED marking.html` must return nothing first. Eliot's
-steps are at the top of OWNER-TODO.md.
+**STATE: READY FOR ELIOT'S REVIEW AND MERGE.** All five Stripe links were
+created by Eliot and wired in on 2026-08-15 — `grep STRIPE-LINK-NEEDED
+marking.html` returns nothing, and all eight checkout pages were rendered in
+headless Chrome and show the right product, price, Exam Board dropdown and
+"What should we mark?" field. The one thing unverifiable from outside is each
+link's after-payment redirect to confirmation.html (Eliot configured it;
+worth a dashboard glance). Merge must be a merge commit, not a squash.
 
 **The #1 guardrail: marking.html ranks #1 for "Economics paper marking".** Its
 URL, `<title>`, H1, meta description, canonical, og/twitter tags and
@@ -49,9 +52,10 @@ first one, so what Google reads is unchanged) and UX only.
 
 ### Still to do (in order)
 
-- [ ] Eliot: five Stripe links + custom fields + redirects (OWNER-TODO top).
-- [ ] Paste the five URLs over the placeholders; re-run verifiers; merge
-      (merge commit, not squash).
+- [x] Eliot: five Stripe links + custom fields + redirects — done 2026-08-15.
+- [x] Paste the five URLs over the placeholders; re-run verifiers — done
+      2026-08-15; the placeholder comments were removed with the hrefs.
+- [ ] Eliot: review the branch and merge (merge commit, not squash).
 - [ ] Eliot: two anonymised example PDFs into `marking-examples/` (can come
       after merge — placeholders show until then). Then a session generates
       one PNG preview per PDF (first page), adds width/height from the real

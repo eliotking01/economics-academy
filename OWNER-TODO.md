@@ -2,53 +2,18 @@
 
 Kept out of the published site via `_config.yml`. Items are grouped by when.
 
-## Marking page relaunch — before the `marking-page-update` branch merges
+## Marking page relaunch — one step left: review and merge
 
-The new marking page has 8 buy buttons (4 packages × 48-hour/next-day). Three
-reuse existing Stripe links; five are placeholders until you create the links.
-
-- [ ] **1. Create five new Stripe payment links** (~10 minutes). In the Stripe
-      dashboard go to **Payment Links → + New**, create a product with exactly
-      this name and price, and copy each link URL:
-
-      | Product name | Price |
-      | --- | --- |
-      | Single 25-Mark Question — Next-Day | £30 |
-      | Bundle of Three 25-Mark Questions — Next-Day | £75 |
-      | Single Full Exam Paper — Next-Day | £70 |
-      | Bundle of Three Full Exam Papers | £150 |
-      | Bundle of Three Full Exam Papers — Next-Day | £180 |
-
-- [ ] **2. Configure ALL EIGHT links the same way** (the 5 new ones plus the 3
-      already on the page — editing a link in Stripe keeps its URL, so the
-      existing three stay valid). For each link, under its edit screen:
-      - **After payment**: redirect to
-        `https://economicsacademy.co.uk/confirmation.html` (the existing three
-        should already do this — check while you're there).
-      - **Custom fields** (the "collect additional information" option — Stripe
-        allows up to three): add two:
-        1. Dropdown — label `Exam board`, options `Edexcel A`, `Edexcel B`,
-           `AQA`, `OCR`
-        2. Text — label `What should we mark? (e.g. Paper 2 June 2023)`
-      These answers then arrive attached to the payment in Stripe, so students
-      don't have to repeat them by email.
-
-- [ ] **3. Paste the five new link URLs into marking.html.** Each placeholder
-      reads `href="#STRIPE-LINK-NEEDED-…"` with a comment above it naming the
-      product and price:
-      - `#STRIPE-LINK-NEEDED-single-question-next-day` → Single 25-Mark
-        Question — Next-Day (£30)
-      - `#STRIPE-LINK-NEEDED-three-questions-next-day` → Bundle of Three
-        25-Mark Questions — Next-Day (£75)
-      - `#STRIPE-LINK-NEEDED-single-paper-next-day` → Single Full Exam Paper —
-        Next-Day (£70)
-      - `#STRIPE-LINK-NEEDED-three-papers-standard` → Bundle of Three Full
-        Exam Papers (£150)
-      - `#STRIPE-LINK-NEEDED-three-papers-next-day` → Bundle of Three Full
-        Exam Papers — Next-Day (£180)
-      Easiest: paste the five URLs into a Claude chat and ask it to wire them
-      in. **Before merging, search marking.html for `STRIPE-LINK-NEEDED` — it
-      must find nothing.**
+- [ ] **Review the `marking-page-update` branch and merge it** (merge commit,
+      NOT a squash — CI's wording check needs the branch commits' trailers).
+      Everything else is done and verified as of 2026-08-15: all five new
+      Stripe links are created, wired in and checked (zero placeholders left),
+      and all eight checkout pages were rendered and confirmed to show the
+      right product, the right price, the Exam Board dropdown and the
+      "What should we mark?" question. One thing only you can see: the
+      after-payment redirect to `confirmation.html` on each link — worth one
+      glance in the Stripe dashboard, since that setting isn't visible from
+      the outside.
 
 ## Marking page examples — any time (placeholders show until done)
 
