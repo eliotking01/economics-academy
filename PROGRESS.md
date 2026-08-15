@@ -5,22 +5,28 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASE 3 BUILT, AWAITING REVIEW
+## Unifying the four resource sections — PHASES 1–3 LIVE; PHASE 4 NEXT
 
-**STATE (2026-08-15): Phase 3 (past papers) is BUILT AND VERIFIED on
-branch `resources-phase-3-past-papers` (commits `063e388` pages+CSS,
-`111b673` sitemap, `524e710` the 2016 year fix) — NOT merged, awaiting
-Eliot's review. It proceeds under D50 (Eliot overrode D45's date gate
-in chat, 2026-08-15). Two fold-ins need his PER-ITEM approval in this
-review: the hub board card saying "Edexcel A" (Wave 3.4's label) and
-the two finder board-hub links on the hub (Wave 4.7's past-papers
-half). The four board-page heads were diffed byte-identical against
-main — the freeze held. NEXT after merge: Phase 4 (revision notes,
-`resources-phase-4-revision-notes`), crown-jewel care on the notes
-hub, the approved "Behavior"→"Behaviour" hub-button fix, 4.7's other
-half (/revision-notes/ → 6 practice hubs) and 4.8's back-link anchors
-— both still per-item approvals. Phases 1–2 are LIVE (merges
-`d0fdcaf`, `2295213`).**
+**STATE (2026-08-15): Phase 3 (past papers) is MERGED AND LIVE (merge
+`1e8dfed`, --no-ff, pushed same day). Eliot approved everything in
+chat: the full wording list AND both per-item fold-ins — the "Edexcel
+A" hub card label (Wave 3.4) and the two finder board-hub links (Wave
+4.7's past-papers half). Verify CI succeeded on the merge commit (the
+five Text-Change trailers accepted across the range) and the live site
+was spot-checked: hub serving the new hero/cards/search-boards row,
+"281 papers" stat line, "Edexcel A" card and the 2016 meta; all four
+board pages serving resource-hero + stat line + services panel. Branch
+deleted. Eliot's follow-up (GSC indexing for the 5 pages) is in
+OWNER-TODO.md. NEXT: Phase 4 (revision notes,
+`resources-phase-4-revision-notes`) — the LAST phase, crown-jewel care:
+notes hub head frozen (title/H1/meta/canonical byte-identical, the
+site's best performer, 361 clicks pos ≈9.5); hub is hand-written
+(Text-Change trailers), the 6 theme pages are notes-data slices via
+`build_notes_pages.py`. Already approved for Phase 4: the
+"Behavior"→"Behaviour" hub button fix. Still per-item approvals at its
+review: 4.7's other half (/revision-notes/ → 6 practice hubs), 4.8
+notes back-link anchors, any 3.4 labels on notes pages. Phases 1–2
+LIVE (merges `d0fdcaf`, `2295213`).**
 
 ### What Phase 3 changed (commits 063e388, 111b673, 524e710)
 
