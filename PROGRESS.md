@@ -5,6 +5,117 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
+## Unifying the four resource sections — APPROVED; PHASE 1 IN PROGRESS
+
+**STATE (2026-08-15): Eliot approved the plan in chat, same day it was
+presented: (1) the plan including the phase-order swap and the ≈2026-09-22
+gate on Phases 3–4, (2) wording changes approved via his branch review, per
+phase, (3) he will do the GSC indexing requests. He also approved both
+housekeeping finds: the stray CSS duplicate (delete, Phase 1) and the
+"Behavior"→"Behaviour" fix on the notes hub (apply in Phase 4, approval
+already given). Phase 1 is under way on `resources-phase-1-flashcards`.**
+
+The brief (pasted 2026-08-15): unify Revision Notes, Flashcards, Practice
+Questions and Past Papers — hubs and board/theme pages only (~26 pages, plus
+the 3 question-finder pages as integration surfaces) — one design language,
+better cross-linking, no URL changes, no economics content changes, notes hub
+`<head>` frozen. Phased, one branch per phase, Eliot reviews each.
+
+### Facts established in Phase 0 (all measured 2026-08-15, baseline green)
+
+1. **The brief's past-papers premise is outdated: the site already hosts all
+   281 paper PDFs** (`past-papers/**`, local hrefs, GSC clicks on the PDFs
+   themselves). The licensing check is therefore about papers already live —
+   OWNER-TODO item added. Do not add more PDFs until Eliot rules.
+2. **Who owns each in-scope page** (decides where every edit lands):
+   - notes hub `revision-notes/index.html` + past-papers 5 pages: hand-written,
+     header/footer baked by `bake_templates.py`.
+   - notes theme pages ×6 (+ macro-application): body slice in
+     `notes-data/hubs/*.html` + head JSON, built by `build_notes_pages.py`.
+   - practice hub + 6 theme pages: `build_questions.py`. Flashcards hub + 6
+     decks: `build_flashcards.py`. Question-finder ×3 in scope:
+     `build_past_paper_questions.py`. Never hand-edit generated output.
+3. **GSC (seo/performance-pages.csv, 2026-08-08):** notes hub is the winner —
+   361 clicks over its two URL forms, position ≈9.5, beating even home (223).
+   Second tier: past-papers BOARD pages (edexcel-b 158 clicks pos 6.5–10.3,
+   ocr 133, aqa 51) — their heads get the same frozen treatment. The
+   past-papers hub itself is weak (3 clicks, pos 33.5). Flashcards, practice
+   questions, glossary, question finder: zero GSC rows (live only since
+   ~2026-08-13) — they are the indexing upside and carry near-zero ranking
+   risk to redesign.
+4. **Collision with the audit roadmap: D45 blocks five items until the
+   ≈2026-09-22 GSC re-measure** — board display labels (3.4), the 8 hub
+   cross-links (4.7), notes back-link anchors (4.8), PH05-019/020/021,
+   PH03-049 step 2. Exactly the internal-linking / labelling work this
+   project would do on the notes and past-papers sections. Eliot's recorded
+   reason: acting early destroys the measurement. Hence the phase order below.
+5. Board order disagrees across hubs: notes/practice hubs are Edexcel-first,
+   flashcards hub AQA-first. `boards-data/boards.json` records edexcel-a
+   first — that order wins; Phase 1 flips the flashcards hub.
+6. Cross-links already good at page level (flashcards decks → notes topics;
+   practice topics → notes + finder deep links). The gap is hub/theme level.
+7. Housekeeping found: `css/pages/revision-notes-diagrams 2.css` is an
+   untracked Finder duplicate, byte-identical to its sibling — delete in
+   Phase 1. `revision-notes/index.html` button says US "Behavior" (Theme 3)
+   where JSON-LD and practice hub say "Behaviour" — wording change, needs
+   Eliot's explicit approval, earmarked Phase 4.
+
+### The frozen list (beyond "all URLs frozen")
+
+`<title>`, H1, meta description, canonical untouched on: `/revision-notes/`
+(crown jewel) **and the four past-papers board pages** (second-tier winners).
+The new sections' hubs (flashcards, practice, finder) MAY have heads tuned —
+nothing ranks on them yet.
+
+### The unified design (one component set, per-section stylesheets stay)
+
+Derived from what the winner does + the flashcards' newer patterns: hero
+(H1 + boards-naming intro + one-line stat strip of measured counts) →
+board sections in boards.json order → one **resource-card** component
+(descriptive title + counts meta line) for theme/deck/board links → one
+**cross-resource strip** ("same topic, other tools") → one **services CTA**
+(tutoring/marking, notes-cta-strip pattern). JSON-LD: add `hasPart` to the
+three hubs lacking it. Shared component CSS goes into `css/main.css` as one
+clearly-marked additive block (no new requests, no load-order change);
+page-specific rules stay in each page's own sheet. New breakpoints use the
+theme set (736 etc.). Board display labels: each section keeps its current
+strings until Wave 3.4 unlocks (D45) — labelling unifies in Phases 3–4.
+
+### Cross-linking policy (the D45-safe line)
+
+Phases 1–2 add/restyle links freely **between the new sections** (flashcards ↔
+practice ↔ finder) and may restyle links to notes/past-papers **that already
+exist on those pages today**, but add **zero new edges into the measured
+sections** before the re-measure. New edges into notes/past-papers (including
+audit items 4.7/4.8 if Eliot approves them then) land in Phases 3–4.
+
+### Phases (each its own branch, merged after Eliot's review)
+
+| Phase | Branch | Pages | Gate |
+| --- | --- | --- | --- |
+| 1 Flashcards | `resources-phase-1-flashcards` | hub + 6 decks | on approval |
+| 2 Practice Questions | `resources-phase-2-practice-questions` | hub + 6 themes | after Phase 1 review |
+| 3 Past Papers | `resources-phase-3-past-papers` | hub + 4 board pages, finder integration | **≈2026-09-22 re-measure taken** |
+| 4 Revision Notes | `resources-phase-4-revision-notes` | hub + 6 themes, held links 4.7/4.8 if approved | after Phase 3, crown-jewel care |
+
+Deviation from the brief, flagged for approval: the brief's order was
+flashcards → past papers → practice → notes. Past papers and practice are
+swapped so both D45-touching sections land after the re-measure. Notes stays
+last. Wording changes on redesigned pages (intros, CTA copy, tuned heads of
+new-section hubs) are listed per phase in the review summary — Eliot's branch
+review is the approval.
+
+### Also recommended (decisions, not yet actions)
+
+- **Do NOT expose all 166 topic links on the notes hub** — link dump, dilutes
+  the winner; theme pages already list every topic. Declined in plan.
+- Self-hosting PDFs: keep (already earning clicks, powers the finder's
+  page-anchored mark-scheme links); the real question is licensing
+  (OWNER-TODO). Reversal would orphan finder deep links.
+- GSC "Request indexing" for new-section hubs now, and per phase after merge
+  (OWNER-TODO).
+- Optional, separate decision: self-host Google Fonts later (perf/CLS).
+
 ## 0. Marking page update & payment journey — branch `marking-page-update`
 
 **STATE: MERGED AND LIVE.** Eliot approved in chat and the branch was merged
