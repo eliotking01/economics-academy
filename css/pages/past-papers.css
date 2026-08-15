@@ -1,57 +1,10 @@
-/* Hub hero */
-.papers-hero {
-  text-align: center;
-  padding: 2em 0 0;
-  margin-bottom: 2.5em;
-}
-.papers-h1 {
-  font-size: 2.4em;
-  line-height: 1.2;
-  margin-bottom: 0.4em;
-}
-.papers-intro {
-  font-size: 1em;
-  color: #5d5d5d;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-.papers-resources-intro {
-  text-align: center;
-  color: #5d5d5d;
-  margin-bottom: 1.5em;
-  font-size: 0.95em;
-}
-
-@media (max-width: 767px) {
-  .papers-h1 {
-    font-size: 1.9em;
-  }
-}
-
-.exam-board-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin: 3rem 0;
-}
-.exam-board-button {
-  padding: 1.5rem 0.5rem;
-  font-size: 1.2rem;
-  text-align: center;
-  white-space: nowrap;
-}
-@media (max-width: 767px) {
-  .exam-board-buttons {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Past paper questions CTA.
-   Sits between the board buttons and the resources row. Deliberately quieter
-   than the board buttons above it: a tinted panel with one filled button rather
-   than a second grid competing with the first. This page's #main carries no
-   wrapper class, so the papers- prefix is the namespace, as elsewhere here. */
+   Sits between the board cards and the cross-resource strip. Deliberately
+   quieter than the board cards above it: a tinted panel with one filled button
+   rather than a second grid competing with the first. This page's #main
+   carries no wrapper class, so the papers- prefix is the namespace, as
+   elsewhere here. The hero, board cards, cross strip and services panel use
+   the shared .resource-* block in css/main.css. */
 .papers-search-cta {
   background: #f7f7f7;
   border: 1px solid #e0e0e0;
@@ -71,6 +24,15 @@
   margin: 0 auto 1.4em;
   line-height: 1.7;
   font-size: 0.98em;
+}
+
+/* The two board-specific finder links, one row under the master button. */
+.papers-search-boards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75em;
+  margin: 1em 0 0;
 }
 
 @media (max-width: 767px) {

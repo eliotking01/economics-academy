@@ -5,22 +5,100 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASES 1–2 LIVE; D45 GATE OVERRIDDEN
+## Unifying the four resource sections — PHASE 3 BUILT, AWAITING REVIEW
 
-**STATE (2026-08-15): Phase 2 (practice questions) is MERGED AND LIVE
-(merge `2295213`; CI + Pages green; live spot-checked; Phase 1 merged
-earlier the same day, `d0fdcaf`). Eliot then OVERRODE the D45 date gate
-in chat — recorded as D50 in docs/audit/DECISIONS.md: August is low
-season so the ≈2026-09-22 numbers were going to be weak, and he wants
-the site unified for the new academic year. NEXT: Phase 3 (past papers)
-on `resources-phase-3-past-papers`, then Phase 4 (revision notes) —
-starting now, in a fresh chat. What the override does NOT change: the
-frozen-head list below stands in full (notes hub AND the four
-past-papers board pages), Phase 4 keeps crown-jewel care, held audit
-items 3.4/4.7/4.8 still need Eliot's per-item approval inside a phase
-review, and the "Behavior"→"Behaviour" fix is already approved for
-Phase 4. Eliot's follow-up (GSC indexing for the 7 Phase 2 pages) is in
-OWNER-TODO.md.**
+**STATE (2026-08-15): Phase 3 (past papers) is BUILT AND VERIFIED on
+branch `resources-phase-3-past-papers` (commits `063e388` pages+CSS,
+`111b673` sitemap, `524e710` the 2016 year fix) — NOT merged, awaiting
+Eliot's review. It proceeds under D50 (Eliot overrode D45's date gate
+in chat, 2026-08-15). Two fold-ins need his PER-ITEM approval in this
+review: the hub board card saying "Edexcel A" (Wave 3.4's label) and
+the two finder board-hub links on the hub (Wave 4.7's past-papers
+half). The four board-page heads were diffed byte-identical against
+main — the freeze held. NEXT after merge: Phase 4 (revision notes,
+`resources-phase-4-revision-notes`), crown-jewel care on the notes
+hub, the approved "Behavior"→"Behaviour" hub-button fix, 4.7's other
+half (/revision-notes/ → 6 practice hubs) and 4.8's back-link anchors
+— both still per-item approvals. Phases 1–2 are LIVE (merges
+`d0fdcaf`, `2295213`).**
+
+### What Phase 3 changed (commits 063e388, 111b673, 524e710)
+
+Five pages, all HAND-WRITTEN (baked by `bake_templates.py`, not a
+generator) — so unlike Phases 1–2 every visible-text change is declared
+with a `Text-Change:` trailer, and merging needs a MERGE COMMIT, not a
+squash, so CI can see the trailers across the range.
+
+- **Hub `past-papers/index.html`** — hero/intro move to the shared
+  `.resource-*` classes with a new measured stat line; the four board
+  buttons become `resource-card`s with per-board paper counts and year
+  ranges (order unchanged: Edexcel A, AQA, OCR, Edexcel B); the finder
+  CTA keeps its `ppq-count` markers and gains the two Wave 4.7 links;
+  the closing mixed section splits into `resource-cross` (notes NEW
+  edge, flashcards NEW, practice NEW, macro-application kept) and
+  `resource-services` (marking, tutoring kept verbatim). Head tuned
+  (allowed — 3 clicks, pos 33.5, on no frozen list): "from 2017" →
+  "from 2016" in meta description, og:description and the JSON-LD
+  description; title/H1/canonical untouched.
+- **Board pages ×4** — grey `papers-header` panel becomes the shared
+  hero plus a measured stat line; the closing "Need Help With These
+  Papers?" block splits the same way. Edexcel and AQA cross strips:
+  notes (existing edge, reworded anchor), flashcards (new), practice
+  questions (new), their finder board hub (new). Edexcel B and OCR
+  keep ONLY their existing notes edge — no other resource covers those
+  boards. Accordion, toggle script, breadcrumbs and heads untouched.
+- **CSS** — `past-papers.css` keeps only the finder CTA + new
+  `.papers-search-boards` row; `past-papers-list.css` drops the
+  `papers-header`/`papers-cta` rules. No page references the removed
+  classes (grepped).
+- **Wording changes for Eliot's review (the complete list; everything
+  else is verbatim):**
+  1. Hub head: meta description, og:description, JSON-LD description
+     "from 2017 to 2024" → "from 2016 to 2024" (June 2016 AS papers
+     exist for three boards; measured from the PDFs).
+  2. Hub intro: "from 2017 through to June 2024" → "from 2016 …"; same
+     one-word fix on the Edexcel and AQA board intros (`524e710`),
+     whose stat lines would otherwise contradict them on screen.
+  3. New stat lines: hub "281 papers · 4 exam boards · 2016 to 2024 ·
+     free, no sign-up"; boards "{80|90|46|65} papers · A-Level &amp; AS ·
+     {2016|2020} to 2024 · free, no sign-up".
+  4. Hub board cards: "Edexcel" → "Edexcel A" (**Wave 3.4, per-item
+     approval**); AQA/OCR/Edexcel B labels unchanged; each card gains
+     a count/years meta line.
+  5. Hub finder CTA, new buttons: "Search Edexcel questions", "Search
+     AQA questions" (**Wave 4.7, per-item approval**).
+  6. Removed headings + sentences: hub "Make the Most of Your
+     Practice" + its intro sentence; board pages "Need Help With These
+     Papers?" + per-board sentence (OCR's second half survives in its
+     services panel).
+  7. Cross-strip anchors: hub "Browse the revision notes" (new link) /
+     "Revise with the flashcards" (new) / "Try the practice questions"
+     (new) / "Macro Application" → "Explore the macro application
+     data" (link kept). Boards: "Edexcel Revision Notes" → "Browse the
+     Edexcel revision notes"; "AQA Revision Notes" → "Browse the AQA
+     revision notes"; "Revision Notes" → "Browse the revision notes"
+     (Edexcel B, OCR); new on Edexcel/AQA only: "Revise with the
+     flashcards", "Try the practice questions", "Search {Edexcel|AQA}
+     past paper questions".
+  8. New services sentence (hub + Edexcel + AQA + Edexcel B):
+     "Practising the paper is step one — feedback is what moves the
+     grade. Send a completed paper for examiner-style marking, or work
+     through it with a specialist tutor." OCR keeps its any-board
+     second sentence verbatim. "Get Expert Marking" and "1-on-1
+     Tutoring" kept verbatim on all five pages.
+
+### Phase 3 verification (all on 2026-08-15, before commit)
+
+All nine `scripts/verify_*.py` green; `verify_text_integrity.py` over
+the branch range: 5 differing files, 5 declared; `seo/tools/verify_seo.py`
+14/14; `verify_links.py` green; `structured_data.py 2` keeps Quiz at 0
+omissions (179 Course.description rows = recorded false positive);
+`build_sitemap.py --check` exit 0 after the sitemap commit; the four
+board-page `<head>`s diffed byte-identical against main (only change
+above the fold: H1 loses its `papers-list-h1` class — a styling hook,
+not text); `link_depth.py 1` CONTENT graph: 0 pages at depth ≥ 4.
+Rendered in headless Chrome at 1280px and 390px (iframe wrapper), hub +
+two board pages, visually checked.
 
 ### What Phase 2 changed (commits 9f3cd77, d6a020d, 5ac786e)
 
