@@ -1,28 +1,7 @@
-.papers-header {
-  text-align: center;
-  padding: 2em 1em;
-  margin-bottom: 2em;
-  background: #f9f9f9;
-  border-radius: 4px;
-}
-.papers-list-h1 {
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 0 0 0.4em;
-}
-.papers-list-intro {
-  color: #5d5d5d;
-  max-width: 680px;
-  margin: 0 auto;
-  font-size: 0.95em;
-  line-height: 1.7;
-}
-
-@media (max-width: 767px) {
-  .papers-list-h1 {
-    font-size: 1.6em;
-  }
-}
+/* The header panel, hero heading and closing CTA block that used to open
+   this file are gone: the four board pages now use the shared .resource-*
+   components in css/main.css (hero + stat line, cross-resource strip,
+   services panel) — resource unification Phase 3, 2026-08-15. */
 .papers-container {
   background: white;
   border-radius: 4px;
@@ -250,13 +229,6 @@
 .year-toggle-btn:focus-visible {
   outline: 2px solid #4caf50;
   outline-offset: 2px;
-}
-
-/* The closing "Need Help With These Papers?" block, on all four board hubs.
-   Wave-norm item (f): was style="margin-top: 3em; text-align: center". */
-.papers-cta {
-  margin-top: 3em;
-  text-align: center;
 }
 
 @media screen and (max-width: 736px) {
