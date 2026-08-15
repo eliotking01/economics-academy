@@ -18,29 +18,6 @@
   line-height: 1.6;
 }
 
-/* Trust strip */
-.marking-trust-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em 2em;
-  background: #f9f9f9;
-  border-radius: 4px;
-  padding: 1.2em 2em;
-  margin: 0 0 2.5em;
-}
-.marking-trust-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  font-size: 0.9em;
-  color: #444;
-}
-.marking-trust-item .icon {
-  color: #d52349;
-  font-size: 1em;
-}
-
 /* Service cards */
 .price {
   font-size: 1.75em;
@@ -65,18 +42,23 @@
   margin: 0 0 0.8em;
   font-style: italic;
 }
-.service-option {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.marking-package {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.service-option:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.marking-buy-options {
+  display: flex;
+  gap: 0.75em;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.75em;
 }
-.selected-service {
-  border: 2px solid #4caf50 !important;
-  transform: scale(1.02);
+.marking-buy {
+  flex: 1 1 10em;
+  text-align: center;
+  padding: 0 1em;
 }
 .service-popular {
   border: 2px solid #d52349;
@@ -94,30 +76,93 @@
   letter-spacing: 0.03em;
 }
 
-/* Email capture in payment selection */
-.marking-email-capture {
-  margin: 1em 0 1.25em;
+/* Custom marking enquiry box */
+.marking-custom-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25em;
+  background: #fdecea;
+  border: 2px solid #d52349;
+  border-radius: 6px;
+  padding: 1.75em 2em;
+  margin: 2em 0 0;
 }
-.marking-email-capture label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.4em;
-  font-size: 0.9em;
+.marking-custom-box > .icon {
+  color: #d52349;
+  font-size: 1.8em;
+  flex-shrink: 0;
+  margin-top: 0.1em;
 }
-.marking-email-capture input[type="email"] {
-  width: 100%;
-  max-width: 380px;
-  padding: 0.6em 0.9em;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+.marking-custom-box h3 {
+  margin-bottom: 0.5em;
+}
+.marking-custom-box p {
   font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 0.9em;
 }
-.marking-email-error {
+.marking-custom-actions {
+  text-align: left;
+}
+
+/* What you actually get */
+.marking-deliverables {
+  margin-top: 3em;
+}
+.marking-deliverable {
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 1.5em;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.marking-deliverable-icon {
   display: block;
   color: #d52349;
-  font-size: 0.85em;
-  margin-top: 0.35em;
-  min-height: 1.2em;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+.marking-deliverable h3 {
+  font-size: 1em;
+  margin-bottom: 0.6em;
+}
+.marking-deliverable-number {
+  color: #d52349;
+}
+.marking-deliverable p {
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #5d5d5d;
+  margin: 0;
+}
+.marking-examples-heading {
+  text-align: center;
+  margin: 1.5em 0 1em;
+}
+.marking-example h4 {
+  text-align: center;
+  margin-bottom: 0.75em;
+}
+.marking-example-placeholder {
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  padding: 2.5em 1.5em;
+  text-align: center;
+  color: #888;
+}
+.marking-example-placeholder .icon {
+  display: block;
+  font-size: 2em;
+  color: #ccc;
+  margin-bottom: 0.5em;
+}
+.marking-example-placeholder p {
+  font-size: 0.9em;
+  margin: 0;
+  max-width: 26em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Testimonials */
@@ -160,68 +205,19 @@
   text-align: center;
 }
 
-/* 24-hour fast-track callout */
-.marking-fast-track {
-  display: flex;
-  align-items: flex-start;
-  gap: 1em;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-left: 4px solid #d52349;
-  border-radius: 0 4px 4px 0;
-  padding: 1.25em 1.5em;
-  margin: 1.5em 0 0;
-}
-
-.marking-fast-track .icon {
-  color: #d52349;
-  font-size: 1.2em;
-  flex-shrink: 0;
-  margin-top: 0.15em;
-}
-
-.marking-fast-track strong {
-  display: block;
-  margin-bottom: 0.35em;
-  color: #252122;
-}
-
-.marking-fast-track p {
-  margin: 0;
-  font-size: 0.92em;
-  color: #5d5d5d;
-  line-height: 1.55;
-}
-
 /* Responsive */
 @media (max-width: 767px) {
-  .marking-trust-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8em;
-    padding: 1em 1.5em;
-  }
   .marking-h1 {
     font-size: 1.9em;
   }
   .marking-testimonial {
     margin-bottom: 1em;
   }
-}
-
-/* Wave-norm item (f): five inline styles from marking.html.
-
-   THE PANEL'S `display: none` IS THE ONE THAT NEEDED CHECKING. The inline
-   script at the foot of the page does `paymentSelection.style.display =
-   "block"` when a service is picked. It only ever WRITES that property and
-   never reads it back - grepped, and #payment-selection appears in exactly
-   two places in the repo, this element and that one assignment - so a class
-   here is safe: the style attribute JavaScript sets outranks any selector.
-   Do NOT add !important to this rule; that is the one change that would
-   break the panel, silently, and only for a buyer mid-purchase. */
-.marking-payment-panel {
-  display: none;
-  margin-top: 2em;
+  .marking-custom-box {
+    flex-direction: column;
+    gap: 0.75em;
+    padding: 1.5em;
+  }
 }
 
 .marking-faq {

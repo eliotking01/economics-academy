@@ -2,6 +2,43 @@
 
 Kept out of the published site via `_config.yml`. Items are grouped by when.
 
+## Marking page relaunch — one step left: review and merge
+
+- [ ] **Review the `marking-page-update` branch and merge it** (merge commit,
+      NOT a squash — CI's wording check needs the branch commits' trailers).
+      Everything else is done and verified as of 2026-08-15: all five new
+      Stripe links are created, wired in and checked (zero placeholders left),
+      and all eight checkout pages were rendered and confirmed to show the
+      right product, the right price, the Exam Board dropdown and the
+      "What should we mark?" question. One thing only you can see: the
+      after-payment redirect to `confirmation.html` on each link — worth one
+      glance in the Stripe dashboard, since that setting isn't visible from
+      the outside.
+
+## Marking page examples — any time (placeholders show until done)
+
+- [ ] **Prepare two real examples, fully anonymised**, and save them into a
+      new `marking-examples/` folder in the repo with exactly these names:
+      - `marking-examples/annotated-paper-example.pdf` — a real annotated
+        paper
+      - `marking-examples/feedback-email-example.pdf` — a real follow-up
+        email, exported to PDF (in Gmail: open the email → the printer icon →
+        destination "Save as PDF")
+      Then tell Claude the files are in place: it will generate the preview
+      images from them and swap the "coming soon" boxes on the marking page
+      for the real previews and links.
+- [ ] **Anonymisation checklist** — check every page before saving:
+      - Student name, school/centre name, candidate/centre numbers — including
+        the script's front page and any page headers
+      - Any date + class combination that could identify the student
+      - In the email: the greeting, the student's email address, and anything
+        in the thread below your reply
+      - Metadata: export via Print → "Save as PDF" (this drops the original
+        author fields), then check the PDF's Get Info / properties shows no
+        student name
+      - The two PDFs will be publicly visible on the site (that's the point),
+        so check them as carefully as anything else you publish
+
 ## Now
 
 - [ ] **One 30-second check in Kit**: confirm "double opt-in" (the

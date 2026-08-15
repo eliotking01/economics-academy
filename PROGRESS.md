@@ -5,6 +5,80 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
+## 0. Marking page update & payment journey — branch `marking-page-update`
+
+**STATE: READY FOR ELIOT'S REVIEW AND MERGE.** All five Stripe links were
+created by Eliot and wired in on 2026-08-15 — `grep STRIPE-LINK-NEEDED
+marking.html` returns nothing, and all eight checkout pages were rendered in
+headless Chrome and show the right product, price, Exam Board dropdown and
+"What should we mark?" field. The one thing unverifiable from outside is each
+link's after-payment redirect to confirmation.html (Eliot configured it;
+worth a dashboard glance). Merge must be a merge commit, not a squash.
+
+**The #1 guardrail: marking.html ranks #1 for "Economics paper marking".** Its
+URL, `<title>`, H1, meta description, canonical, og/twitter tags and
+breadcrumb were left byte-identical. Changes are body copy, JSON-LD (offers
+updated to the new prices; a duplicate `"provider"` key removed — the ignored
+first one, so what Google reads is unchanged) and UX only.
+
+### What changed (approved plan, 2026-08-15)
+
+1. **marking.html** — four packages replace the old three, each card with two
+   direct Stripe buttons (48-hour / next-day): Single 25-mark £25/£30, bundle
+   of three 25-mark £60/£75 (Save £15), single full paper £60/£70, bundle of
+   three full papers £150/£180 (Save £30). Three 48-hour links reused from the
+   old page; five placeholders for Eliot. The old click-to-select flow, email
+   capture panel and its inline script are deleted — a buy button is now a
+   plain link, and the page's only scripts are the standard two-script tail.
+   New: custom-enquiry box (custom + regular marking, quote by email), "What
+   You Actually Get" section (mark+grade / annotated PDF / follow-up email)
+   with two placeholder example panels, and a six-box FAQ. The trust strip
+   was REMOVED at Eliot's request (2026-08-15 review): it kept mis-wrapping,
+   contributes nothing to SEO, and every fact in it appears elsewhere on the
+   page (boards + turnarounds in the packages intro and FAQ, credentials in
+   "Who does the marking?").
+2. **confirmation.html** — rebuilt around one job: email the work. Big mailto
+   CTA, include-checklist, what-happens-next timeline. The Formspree form and
+   client-side reference number are REMOVED (approved): Stripe now collects
+   exam board + what's-being-marked at checkout via custom fields (Eliot
+   configures — OWNER-TODO), and matching is by email address. Page is now
+   JS-free beyond the tail. Still noindex, still not in the sitemap, still
+   linked from nowhere.
+3. **faq.html** — marking accordions + FAQPage JSON-LD updated in lockstep:
+   four packages with both prices, next-day replaces the 24-hour £10 add-on
+   (accordion id `marking-24-hour` renamed `marking-next-day`, internal link
+   updated), three-deliverable feedback answer, regular-marking mention.
+4. **CSS** — marking.css: selection-panel/fast-track/email-capture styles
+   removed; new `marking-package`, `marking-buy-options`, `marking-custom-box`,
+   `marking-deliverable*`, `marking-example*`. confirmation.css rewritten
+   (single centred column, form styles gone).
+
+### Still to do (in order)
+
+- [x] Eliot: five Stripe links + custom fields + redirects — done 2026-08-15.
+- [x] Paste the five URLs over the placeholders; re-run verifiers — done
+      2026-08-15; the placeholder comments were removed with the hrefs.
+- [ ] Eliot: review the branch and merge (merge commit, not squash).
+- [ ] Eliot: two anonymised example PDFs into `marking-examples/` (can come
+      after merge — placeholders show until then). Then a session generates
+      one PNG preview per PDF (first page), adds width/height from the real
+      files, swaps the placeholder divs in marking.html for preview + "view
+      full example" links, and updates `verify_page_shell.py`'s image
+      expectations (`EXPECTED_IMAGES` +2 etc.) in the same commit. Note:
+      `build_sitemap.py` auto-lists published PDFs in sitemaps/pdfs.xml —
+      expected, harmless.
+
+### Traps hit / to know (beyond §1's inherited five)
+
+- The `.row` grid in main.css has a built-in 50px gutter (`.row > *` padding)
+  — package cards use `height: 100%` like the testimonials, no extra margins.
+- The example panels are styled divs, NOT `<img>`/`<a>` to the future files:
+  verify_links and verify_image_dimensions fail on references to files that
+  do not exist yet. Do not add the links before the files land.
+- Baseline for the ~2026-09-22 GSC check: marking.html had no recorded
+  baseline in this file; its ranking claim ("#1 for Economics paper marking")
+  is Eliot's report on 2026-08-15.
+
 ## 1. Home page revamp — branch `home-page-revamp`
 
 **STATE: MERGED AND LIVE.** Eliot approved in chat and the branch was merged
