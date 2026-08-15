@@ -111,7 +111,12 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       2026-08-08 baseline (position 26.27, 440 impressions, 17 clicks) and
       check the home page's clicks/position held or improved after the revamp
       (baseline: 223 clicks, 2,463 impressions, position 17.35, CTR 9.05%).
-      The five audit items held by D45 also unlock on this date.
+      These two comparisons are still clean. What changed: you overrode the
+      D45 wait on 2026-08-15 (D50) so resource phases 3–4 could ship before
+      the new academic year — so treat any movement on the revision-notes and
+      past-papers pages as directional only, not as a verdict on the earlier
+      SEO work (their baselines: notes hub 361 clicks pos ≈9.5, edexcel-b 158,
+      ocr 133, aqa 51).
 
 ## Done — kept only where the DATE matters to a later measurement
 

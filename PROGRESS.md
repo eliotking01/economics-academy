@@ -5,22 +5,22 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASE 2 MERGED AND LIVE
+## Unifying the four resource sections — PHASES 1–2 LIVE; D45 GATE OVERRIDDEN
 
-**STATE (2026-08-15): Phase 2 (practice questions) is MERGED AND LIVE.
-Eliot approved in chat, all wording changes included; merged to main
-(`2295213`, --no-ff) and pushed the same day, branch deleted. Both
-workflows succeeded (verify CI and the Pages deployment, checked via
-the API), and the live site was spot-checked: new hub title ("Edexcel
-and AQA") serving in title/og/twitter, `hasPart` in the JSON-LD, the
-resource-card grid, the Theme 1 board page's stat line and its four
-cross-strip links (notes, flashcards deck, finder, past papers), and
-the h4 card-heading rules in the served main.css. Eliot's follow-up
-(GSC indexing for the 7 pages) is in OWNER-TODO.md. NEXT: nothing
-until the ≈2026-09-22 GSC re-measure — Phases 3 (past papers) and 4
-(revision notes) are gated on it by D45, see the phase table below.
-Phase 1 (flashcards) merged and live earlier the same day
-(`d0fdcaf`).**
+**STATE (2026-08-15): Phase 2 (practice questions) is MERGED AND LIVE
+(merge `2295213`; CI + Pages green; live spot-checked; Phase 1 merged
+earlier the same day, `d0fdcaf`). Eliot then OVERRODE the D45 date gate
+in chat — recorded as D50 in docs/audit/DECISIONS.md: August is low
+season so the ≈2026-09-22 numbers were going to be weak, and he wants
+the site unified for the new academic year. NEXT: Phase 3 (past papers)
+on `resources-phase-3-past-papers`, then Phase 4 (revision notes) —
+starting now, in a fresh chat. What the override does NOT change: the
+frozen-head list below stands in full (notes hub AND the four
+past-papers board pages), Phase 4 keeps crown-jewel care, held audit
+items 3.4/4.7/4.8 still need Eliot's per-item approval inside a phase
+review, and the "Behavior"→"Behaviour" fix is already approved for
+Phase 4. Eliot's follow-up (GSC indexing for the 7 Phase 2 pages) is in
+OWNER-TODO.md.**
 
 ### What Phase 2 changed (commits 9f3cd77, d6a020d, 5ac786e)
 
@@ -223,7 +223,7 @@ audit items 4.7/4.8 if Eliot approves them then) land in Phases 3–4.
 | --- | --- | --- | --- |
 | 1 Flashcards | `resources-phase-1-flashcards` | hub + 6 decks | on approval |
 | 2 Practice Questions | `resources-phase-2-practice-questions` | hub + 6 themes | after Phase 1 review |
-| 3 Past Papers | `resources-phase-3-past-papers` | hub + 4 board pages, finder integration | **≈2026-09-22 re-measure taken** |
+| 3 Past Papers | `resources-phase-3-past-papers` | hub + 4 board pages, finder integration | ~~≈2026-09-22 re-measure~~ **date gate overridden by Eliot, D50 (2026-08-15)** |
 | 4 Revision Notes | `resources-phase-4-revision-notes` | hub + 6 themes, held links 4.7/4.8 if approved | after Phase 3, crown-jewel care |
 
 Deviation from the brief, flagged for approval: the brief's order was

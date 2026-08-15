@@ -1690,3 +1690,40 @@ and any new one fails — where before, a fourth could only be told apart from
 the three. Same argument as `KNOWN_BREADCRUMB_DISAGREEMENT` staying as an empty
 dict in check 8. Proved able to fail by putting the `<h2>` back: 6 shapes → 7,
 with the singleton named.
+
+---
+
+## 2026-08-15 · Resource unification
+
+### D50 — Eliot overrides D45's date gate: Phases 3–4 proceed now
+
+Eliot, 2026-08-15, in chat, after the measurement-integrity case was put to
+him in full and explicitly declined: it is currently August, the low season,
+so the ≈2026-09-22 numbers "may not be that useful anyway", and he would
+rather have the site unified ready for the new academic year than wait for a
+clean read. Resource-unification Phases 3 (past papers) and 4 (revision
+notes) start now instead of after the re-measure.
+
+**What this dissolves.** D45's hold was a measurement-integrity hold and
+nothing else — its own entry says "the date is the only gate". This entry is
+that gate being removed by the person the measurement was for. The
+consequence D45 predicted is accepted, not avoided: the notes and
+past-papers side of the ≈2026-09-22 GSC check becomes directional at best,
+because the thing being measured changes mid-window. The five held items
+(3.4, 4.7, 4.8, PH05-019/020/021, PH03-049 step 2) lose their date gate with
+it; the ones the phases fold in (3.4 board labels, 4.7 hub cross-links, 4.8
+notes back-link anchors) still land only with Eliot's per-item approval
+inside a phase review, as the Phase 0 plan already required.
+
+**What this does NOT touch.**
+
+- **The frozen-head list stands in full**: `/revision-notes/` (crown jewel)
+  and the four past-papers board pages keep their `<title>`, H1, meta
+  description and canonical byte-identical. That freeze protects live
+  rankings and was never part of the date gate.
+- **The home/tutoring/marking side of the ≈2026-09-22 check stays clean.**
+  Phases 3–4 do not touch those pages, so their baselines (recorded in
+  PROGRESS.md and OWNER-TODO.md) remain readable as planned.
+- **PH05-019/020's second, independent reason** — the contaminated noindex
+  window recorded in D45's last paragraph — is unaffected by this override
+  and still stands on its own.
