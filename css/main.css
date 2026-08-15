@@ -3925,6 +3925,14 @@ ul.social li a.fa-google-plus:hover {
   font-size: 0.95em;
 }
 
+/* Optional second line in a card: a small cross-resource link under the meta
+   line ("Practise Theme 1 questions"). Notes hub first (Phase 4, the Wave 4.7
+   links); any section's cards may use it. Inherits the theme's link styling. */
+.resource-card .resource-card-links {
+  margin: 0.4em 0 0;
+  font-size: 0.9em;
+}
+
 /* Cross-resource strip: the free "same topics, other tools" button row.
    Free links only — paid services stay in .resource-services below, so a
    paid button never sits in a row a student reads as free (PH07-058). */

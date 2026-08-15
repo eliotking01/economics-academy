@@ -5,28 +5,138 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASES 1–3 LIVE; PHASE 4 NEXT
+## Unifying the four resource sections — PHASE 4 BUILT, AWAITING ELIOT'S REVIEW
 
-**STATE (2026-08-15): Phase 3 (past papers) is MERGED AND LIVE (merge
-`1e8dfed`, --no-ff, pushed same day). Eliot approved everything in
-chat: the full wording list AND both per-item fold-ins — the "Edexcel
-A" hub card label (Wave 3.4) and the two finder board-hub links (Wave
-4.7's past-papers half). Verify CI succeeded on the merge commit (the
-five Text-Change trailers accepted across the range) and the live site
-was spot-checked: hub serving the new hero/cards/search-boards row,
-"281 papers" stat line, "Edexcel A" card and the 2016 meta; all four
-board pages serving resource-hero + stat line + services panel. Branch
-deleted. Eliot's follow-up (GSC indexing for the 5 pages) is in
-OWNER-TODO.md. NEXT: Phase 4 (revision notes,
-`resources-phase-4-revision-notes`) — the LAST phase, crown-jewel care:
-notes hub head frozen (title/H1/meta/canonical byte-identical, the
-site's best performer, 361 clicks pos ≈9.5); hub is hand-written
-(Text-Change trailers), the 6 theme pages are notes-data slices via
-`build_notes_pages.py`. Already approved for Phase 4: the
-"Behavior"→"Behaviour" hub button fix. Still per-item approvals at its
-review: 4.7's other half (/revision-notes/ → 6 practice hubs), 4.8
-notes back-link anchors, any 3.4 labels on notes pages. Phases 1–2
-LIVE (merges `d0fdcaf`, `2295213`).**
+**STATE (2026-08-15): Phase 4 (revision notes — the LAST phase) is
+BUILT on branch `resources-phase-4-revision-notes`, all verification
+green, NOT pushed and NOT merged. Eliot reviews the wording list below
+(chat review = approval, the Phases 1–3 pattern), including the two
+per-item audit fold-ins it carries: Wave 4.7's other half (six
+"Practise … questions" links on the hub's theme cards) and Wave 4.8
+(the 166 practice-page back-link anchors). Wave 3.4 on notes pages was
+considered and deliberately NOT applied — recommendation recorded
+below. The crown-jewel freeze is proven: on the hub, everything
+outside `<main>…</main>` is byte-identical to main (title, H1, meta
+description, canonical, the whole head and baked header/footer), and
+all six theme-page heads diffed byte-identical too. Phases 1–3 LIVE
+(merges `d0fdcaf`, `2295213`, `1e8dfed`).**
+
+### What Phase 4 changed (commits b51f670, cb88de7, 2c4a4a1, e2bcb65)
+
+Seven notes pages + 166 practice topic pages. The hub is HAND-WRITTEN
+(7 Text-Change trailers on `b51f670`; merge needs --no-ff so CI sees
+them); the 6 theme pages are notes-data slices rebuilt by
+`build_notes_pages.py`; the 166 practice pages are `build_questions.py`
+output (generated family, no trailers).
+
+- **Hub `revision-notes/index.html`** — head and everything else
+  outside `<main>` byte-identical to main (Prettier reformatted the
+  frozen head mid-build; it was spliced back to main's exact bytes —
+  do NOT run Prettier over this file without re-splicing). Body: hero
+  moves to the shared `.resource-*` classes with a new measured stat
+  line; the six subject buttons become `resource-card`s (titles
+  verbatim except the approved Behaviour fix) with topic-count meta
+  lines and a per-card "Practise … questions" link (Wave 4.7 — the six
+  links must live on THIS page: DO-NOT-BREAK, only depth-1 page in the
+  section); the conversion strip and "More Free Resources" merge into
+  the unified order cross-strip-then-services, services sentence and
+  both buttons kept verbatim. At review (2026-08-15) Eliot asked for
+  the four notes-family resources to be more upfront than a button
+  row: they now sit in their own "Diagrams, Data &amp; Definitions"
+  card section directly under the AQA block (`e2bcb65`), original link
+  titles kept as card titles, each with a one-line description written
+  from its own page's framing; the bottom strip keeps only the four
+  cross-section buttons.
+- **Theme pages ×6** — grey `notes-header` panel becomes the shared
+  hero plus a stat line (H1s and intros verbatim, re-wrapped only);
+  the closing "Ready to Put These Notes to Work?" block splits into
+  `resource-cross` (theme practice questions NEW, theme flashcards
+  NEW, board past papers kept + reworded, board question finder NEW)
+  and `resource-services` ("Paper Marking" / "Book a Free Intro Call"
+  verbatim, new lead sentence). Accordions, breadcrumbs, update-info,
+  heads untouched.
+- **Practice topic pages ×166 (Wave 4.8)** — the one generic notes
+  anchor "Back to the notes" (76% of all anchor text into notes topic
+  pages, PH03-050) becomes "Back to the {spec} {shortTitle} notes",
+  e.g. "Back to the 1.2.2 Demand notes". One line in
+  `build_questions.py` + rebuild.
+- **CSS** — `.resource-card-links` added to main.css's shared block;
+  `revision-notes.css` shrinks to the two section-spacing rules
+  (hero/buttons/CTA rules superseded; `free-badge` and
+  `notes-description` were dead on every page — removed);
+  `revision-notes-topics.css` drops `notes-header` and
+  `notes-hub-cta`.
+- **Wave 3.4 (board labels) deliberately NOT applied to notes pages:**
+  the disambiguation payoff exists where Edexcel B sits alongside
+  (past papers — done in Phase 3); on notes pages "Edexcel" is
+  unambiguous, and the cost is touching ranked theme-page H1s and the
+  frozen hub. Eliot can override at review.
+- **Wording changes for Eliot's review (the complete list; everything
+  else is verbatim):**
+  1. Hub, new stat line: "166 topics · Edexcel &amp; AQA · free, no
+     sign-up".
+  2. Hub cards, new meta lines: "22 topics" / "24 topics" / "20
+     topics" / "21 topics" / "54 topics" / "25 topics" (measured:
+     files per theme directory).
+  3. Hub Theme 3 card: "Business Behavior" → "Business Behaviour"
+     (approved at Phase 0).
+  4. Hub cards, new links (**Wave 4.7, per-item approval**): "Practise
+     Theme 1 questions" … "Practise Theme 4 questions", "Practise
+     Microeconomics questions", "Practise Macroeconomics questions".
+  5. Hub: "More Free Resources" heading → "Diagrams, Data &amp;
+     Definitions" (Eliot's review change). The four links keep their
+     original titles as card titles — "Glossary &amp; Formulae",
+     "Macro Application", "Micro Diagrams", "Macro Diagrams" — and
+     each gains a NEW one-line description: "Every key definition and
+     formula in one place, with a page for each exam board." /
+     "Real-world UK and South Africa examples, ready to adapt for
+     application marks in essays." / "Every
+     {microeconomics|macroeconomics} diagram from the notes, each with
+     a short explanation and an exam prompt."
+  6. Hub cross strip, reworded anchor: "Flashcards" → "Revise with the
+     flashcards".
+  7. Hub cross strip, new buttons: "Try the practice questions",
+     "Search real past paper questions", "Practise with the past
+     papers".
+  8. Theme pages, new stat lines: "{22|24|20|21|54|25} topics · free,
+     no sign-up".
+  9. Theme pages, removed heading + sentences: "Ready to Put These
+     Notes to Work?" and each page's own sentence — T1 "Studied these
+     notes? Practise with Edexcel past papers, get your essays marked,
+     or book a session to work through any tricky topics."; T2 "…Test
+     yourself with Edexcel past papers, get your macro essays
+     marked…"; T3 "…Practise market structure and labour market
+     questions with Edexcel past papers…"; T4 "…Apply your global
+     economics knowledge with Edexcel past papers…"; AQA micro "…Test
+     your micro knowledge with AQA past papers…"; AQA macro "…Test
+     your macro knowledge with AQA past papers…".
+  10. Theme pages, new cross-strip buttons: "Try the {Theme 1–4 |
+      Microeconomics | Macroeconomics} practice questions", "Revise
+      with the {…} flashcards", "Search {Edexcel|AQA} past paper
+      questions"; reworded: "Edexcel Past Papers" / "AQA Past Papers"
+      → "Browse the {Edexcel|AQA} past papers".
+  11. Theme pages, new services sentence: "Understanding the content
+      is step one — exam technique wins the marks. Send an essay for
+      examiner-style marking, or work through any tricky topics with a
+      specialist tutor."
+  12. Practice pages ×166 (**Wave 4.8, per-item approval**): "Back to
+      the notes" → "Back to the {spec} {shortTitle} notes".
+
+### Phase 4 verification (all on 2026-08-15, before commit)
+
+All nine `scripts/verify_*.py` green plus `verify_glossary.py` (the
+notes are its source; insurance) and `verify_links.py`;
+`verify_text_integrity.py main HEAD`: 7 differing files, 7 declared;
+`seo/tools/verify_seo.py` 14/14; `structured_data.py 2` unchanged
+(Quiz at 0 omissions); `build_sitemap.py --check` exit 0 after the
+sitemap commit; hub + all six theme `<head>`s diffed byte-identical
+against main; `link_depth.py 1` CONTENT graph identical to baseline
+(0 pages at depth ≥ 4 — **already true before Phase 4**: the home
+revamp put `/practice-questions/` at depth 1, so its six theme hubs
+were already at depth 2, and 4.7's links buy crawl equity from the
+winner and topical anchors, NOT depth — the roadmap's "4 → 3" claim
+was stale). Rendered in headless Chrome at 1280px and 390px (iframe
+wrapper), hub + Theme 1 + AQA macro, visually checked.
 
 ### What Phase 3 changed (commits 063e388, 111b673, 524e710)
 

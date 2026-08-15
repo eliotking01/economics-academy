@@ -837,7 +837,9 @@ def render_page(topic, siblings=(), ppq=None):
                 <button type="button" class="button primary" data-quiz-retry>
                   Try again
                 </button>
-                <a href="{notes}" class="button alt">Back to the notes</a>
+                <a href="{notes}" class="button alt"
+                  >Back to the {topic['spec']} {topic['shortTitle']} notes</a
+                >
               </div>
             </div>
 

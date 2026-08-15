@@ -39,8 +39,15 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       and `/past-papers/edexcel-b/`. Not before the merge — the live
       pages haven't changed yet. These four board pages already rank
       well; re-indexing just tells Google about the redesign sooner.
-- [ ] **After each later resource phase merges**: request indexing for the
-      pages that phase changed (the phase's review summary will list them).
+- [ ] **After Phase 4 merges — request indexing for the 7 revision-notes
+      pages** (same GSC routine as above): `/revision-notes/`, then
+      `/revision-notes/edexcel-theme-1/` … `edexcel-theme-4/`,
+      `/revision-notes/aqa-a2-micro/` and `/revision-notes/aqa-a2-macro/`.
+      Not before the merge — the live pages haven't changed yet. These pages
+      already rank well (the hub is the site's best page); re-indexing just
+      tells Google about the redesign sooner. The 166 practice pages also
+      changed (one link's wording) — the updated sitemap covers those, no
+      manual requests needed.
 
 ## Marking page relaunch — live since 2026-08-15
 
