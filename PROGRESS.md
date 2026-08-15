@@ -5,21 +5,37 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASE 4 BUILT, AWAITING ELIOT'S REVIEW
+## Unifying the four resource sections — ALL FOUR PHASES MERGED AND LIVE
 
 **STATE (2026-08-15): Phase 4 (revision notes — the LAST phase) is
-BUILT on branch `resources-phase-4-revision-notes`, all verification
-green, NOT pushed and NOT merged. Eliot reviews the wording list below
-(chat review = approval, the Phases 1–3 pattern), including the two
-per-item audit fold-ins it carries: Wave 4.7's other half (six
-"Practise … questions" links on the hub's theme cards) and Wave 4.8
-(the 166 practice-page back-link anchors). Wave 3.4 on notes pages was
-considered and deliberately NOT applied — recommendation recorded
-below. The crown-jewel freeze is proven: on the hub, everything
-outside `<main>…</main>` is byte-identical to main (title, H1, meta
-description, canonical, the whole head and baked header/footer), and
-all six theme-page heads diffed byte-identical too. Phases 1–3 LIVE
-(merges `d0fdcaf`, `2295213`, `1e8dfed`).**
+MERGED AND LIVE (merge `f537312`, --no-ff, pushed same day). Eliot
+approved in chat: the full wording list, both per-item audit fold-ins
+— Wave 4.7's six "Practise … questions" hub card links and Wave 4.8's
+166 back-link anchors — and one review change, the "Diagrams, Data
+&amp; Definitions" card section (`e2bcb65`). Wave 3.4 on notes pages
+deliberately NOT applied (rationale below; Eliot did not override).
+Pages deployment succeeded and the live site was spot-checked: hub
+serving the new hero/stat line/cards/companion section with the
+`<title>` byte-identical, theme pages serving cross strips + stat
+lines, practice pages serving the topical back-links. The crown-jewel
+freeze held: everything outside the hub's `<main>` byte-identical to
+the pre-merge main, all six theme heads too. **One CI wrinkle,
+resolved:** the merge's verify run failed on ONE step —
+`verify_markup_integrity.py HEAD~1 --strict`, which guards
+`revision-notes/` only, so Phase 4 was the first phase ever to face
+it. It counts tags per page and wants deliberate reductions declared
+with `Markup-Change:` trailers (the `Text-Change:` sibling); the
+branch commits declared only Text-Change. The reductions are exactly
+the approved redesign removals (`header.major` wrappers, the removed
+h2 headings, the old button-row divs) and the script's href/src check
+reported **zero** lost links — nothing was damaged. Declared
+retroactively in the commit that carries this paragraph; the next
+run on main is green. **Lesson for any future notes-touching commit:
+run `python3 scripts/verify_markup_integrity.py <base> --strict`
+locally and declare Markup-Change per page alongside Text-Change.**
+Phases 1–3 LIVE (merges `d0fdcaf`, `2295213`, `1e8dfed`). The
+unification project is COMPLETE; Eliot's follow-up (GSC indexing for
+the 7 notes pages) is in OWNER-TODO.md.**
 
 ### What Phase 4 changed (commits b51f670, cb88de7, 2c4a4a1, e2bcb65)
 
