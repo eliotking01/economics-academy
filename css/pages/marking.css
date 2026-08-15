@@ -18,7 +18,7 @@
   line-height: 1.6;
 }
 
-/* Trust strip */
+/* Trust strip: a deliberate 2x2 - four items wrapped 3+1 when left to fit. */
 .marking-trust-strip {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +30,9 @@
   margin: 0 0 2.5em;
 }
 .marking-trust-item {
+  /* Two per row: a hair under half, because 2 x (50% - half the 2em gap)
+     sums to exactly 100% and subpixel rounding wraps the second item. */
+  flex: 0 0 calc(50% - 1.25em);
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -235,6 +238,11 @@
     align-items: flex-start;
     gap: 0.8em;
     padding: 1em 1.5em;
+  }
+  /* The 2x2 basis is a share of the MAIN axis, which is vertical once the
+     strip is a column - left in place it squashes the items' height. */
+  .marking-trust-item {
+    flex: 0 0 auto;
   }
   .marking-h1 {
     font-size: 1.9em;
