@@ -3821,3 +3821,152 @@ ul.social li a.fa-google-plus:hover {
   font-size: 0.8em;
   color: #999;
 }
+
+/* ==========================================================================
+   Resource-section components — resource unification, 2026-08-15.
+   One component set shared by the four resource sections' hub and
+   board/theme pages (flashcards first, the rest as their phases land) so
+   the sections read as one system. Additive block: nothing above it
+   changed. All names are .resource-* and collide with nothing (checked
+   against css/, js/, scripts/, templates/ and notes-data/ before adding;
+   home.css's .resource-grid and .resource-badge are the near-misses and
+   are untouched). Breakpoint is the theme's 736px set, per PH07-059.
+   ========================================================================== */
+
+/* Hub hero: centred H1, constrained intro, one-line stat strip. Copied from
+   the notes hub's .notes-hero/.notes-h1/.notes-intro (the site's
+   best-performing page) and practice-questions' identical .pq-hero set, so
+   the other sections adopt the winner's shape rather than a new one. */
+.resource-hero {
+  text-align: center;
+  padding: 2em 0 0;
+  margin-bottom: 2.5em;
+}
+
+.resource-hero h1 {
+  font-size: 2.4em;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+}
+
+.resource-hero .resource-intro {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #5d5d5d;
+}
+
+/* One-line stat strip: "671 cards · 166 topics · …". Works inside the hero
+   (centred, tucked under the intro) or in normal page flow. */
+.resource-stats {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+}
+
+.resource-hero .resource-stats {
+  margin: 1.25em 0 0;
+}
+
+/* Card grid for theme/deck/board links. */
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25em;
+  align-items: stretch;
+}
+
+/* The card: white, brand-accent top edge, lift on hover. Generalised from
+   the flashcards hub's fc-deck-card, recoloured from that page's teal to
+   the site accent so all four sections match. */
+.resource-card {
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid #d52349;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 1.25em 1.5em;
+  margin: 0;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.resource-card h3 {
+  margin-bottom: 0.25em;
+}
+
+.resource-card h3 a {
+  color: #252122;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.resource-card h3 a:hover {
+  color: #d52349;
+}
+
+.resource-card .resource-card-meta {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Cross-resource strip: the free "same topics, other tools" button row.
+   Free links only — paid services stay in .resource-services below, so a
+   paid button never sits in a row a student reads as free (PH07-058). */
+.resource-cross {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+/* Paid-services panel. White, not #f8f8f8: these sections sit directly on
+   #main, which main.css paints #f7f7f7, so #f8f8f8 renders as no panel at
+   all — verified by rendering when this was fc-services-cta. */
+.resource-services {
+  margin-top: 2.5em;
+  padding: 1.5em;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #d52349;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.resource-services p {
+  margin: 0 0 1em;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.resource-services .button {
+  margin: 0.3em;
+}
+
+@media screen and (max-width: 736px) {
+  .resource-hero h1 {
+    font-size: 1.9em;
+  }
+
+  .resource-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resource-card {
+    transition: none;
+  }
+
+  .resource-card:hover {
+    transform: none;
+  }
+}
