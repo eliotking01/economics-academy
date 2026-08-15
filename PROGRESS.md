@@ -5,13 +5,21 @@ CLAUDE.md. Excluded from publishing via `_config.yml`.
 
 ---
 
-## Unifying the four resource sections — PHASE 1 BUILT, AWAITING ELIOT'S REVIEW
+## Unifying the four resource sections — PHASE 1 MERGED AND LIVE
 
-**STATE (2026-08-15): Phase 1 (flashcards) is built and verified on branch
-`resources-phase-1-flashcards`, three commits, NOT pushed and NOT merged.
-Eliot reviews the branch; his review approves the wording changes listed
-below. After merge: he requests GSC indexing for the 7 changed pages, and
-Phase 2 (practice questions) can start on `resources-phase-2-practice-questions`.**
+**STATE (2026-08-15): Phase 1 (flashcards) is MERGED AND LIVE. Eliot
+reviewed and approved in chat with one change — centre the cross-resource
+strip (`3dd1a52`, applied to the shared component so every later phase
+inherits it) — and the branch was merged to main (`d0fdcaf`, --no-ff) and
+pushed the same day. Both workflows succeeded (verify CI and the Pages
+deployment, checked via the API), and the live site was spot-checked: new
+H1 and title serving, stat line, Edexcel A section first, the finder
+button on hub and deck pages, and the `.resource-*` block in the served
+main.css. Eliot's follow-up (GSC indexing for the 7 pages) is in
+OWNER-TODO.md. NEXT: Phase 2 (practice questions) on
+`resources-phase-2-practice-questions`, applying the same components to
+the practice hub + 6 theme pages — see the Phase 0 plan below and the
+D45 cross-linking line, which still holds until ≈2026-09-22.**
 
 Eliot approved the Phase 0 plan in chat on 2026-08-15: the plan itself, the
 phase-order swap with the ≈2026-09-22 gate on Phases 3–4,

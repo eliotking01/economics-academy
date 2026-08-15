@@ -22,8 +22,13 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       `https://economicsacademy.co.uk/revision-notes/glossary/`.
       In GSC: paste each URL into the top search bar → "Request indexing".
       ~2 minutes for all four.
-- [ ] **After each resource phase merges**: request indexing for the pages
-      that phase changed (the phase's review summary will list them).
+- [ ] **Phase 1 merged 2026-08-15 — request indexing for the 7 flashcards
+      pages** (same GSC routine as above): `/flashcards/`, then
+      `/flashcards/edexcel-a/theme-1/` … `theme-4/`, `/flashcards/aqa/micro/`
+      and `/flashcards/aqa/macro/`. If you already did the hub in the item
+      above, no harm in requesting it again.
+- [ ] **After each later resource phase merges**: request indexing for the
+      pages that phase changed (the phase's review summary will list them).
 
 ## Marking page relaunch — live since 2026-08-15
 
