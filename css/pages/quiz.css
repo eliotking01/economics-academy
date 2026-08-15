@@ -34,32 +34,6 @@
 
 /* ------------------------------------------------------------- page shell */
 
-.quiz-page .breadcrumb {
-  margin-bottom: 1.5em;
-  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
-  font-size: 0.9em;
-  color: var(--quiz-muted);
-}
-
-/* Underlined, unlike the site's other breadcrumbs. Link colour against the
-   surrounding text reaches only 1.9:1, so colour alone does not distinguish
-   them (WCAG 1.4.1) - the underline is what does. */
-.quiz-page .breadcrumb a {
-  color: var(--quiz-secondary);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  border-bottom: none;
-}
-
-.quiz-page .breadcrumb a:hover {
-  text-decoration: none;
-}
-
-.quiz-page .breadcrumb .separator {
-  margin: 0 0.5em;
-  color: #64727f;
-}
-
 .quiz-page .quiz-container {
   max-width: 1000px;
   margin: 0 auto 3em;

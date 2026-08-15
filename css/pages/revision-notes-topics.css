@@ -46,13 +46,6 @@
   text-decoration: none;
   display: block;
 }
-.breadcrumb {
-  margin-bottom: 2em;
-  font-size: 0.9em;
-}
-.breadcrumb a {
-  color: #d52349;
-}
 .update-info {
   font-size: 0.9em;
   color: #666;

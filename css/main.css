@@ -3459,29 +3459,36 @@ ul.social li a.fa-google-plus:hover {
   color: #999;
 }
 
-/* Breadcrumb - Pure Dopetrope Style */
-.breadcrumb {
+/* Breadcrumb - the one canonical style, site-wide. Taken from the
+   practice-questions hub: #6b6b6b clears AA on #main's #f7f7f7 where the
+   old #7f888f did not, and links are the brand red. Selectors are
+   nav.breadcrumb, not .breadcrumb, so this shared rule outranks per-page
+   content-link rules (e.g. .revision-notes-content a) without any page
+   stylesheet having to restate it. */
+nav.breadcrumb {
   font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
-  margin: 0 0 1.5rem 0;
+  font-size: 0.9em;
+  margin: 0 0 2em 0;
   padding: 0;
-  color: #7f888f;
+  color: #6b6b6b;
 }
 
-.breadcrumb a {
-  color: #3c78d8;
+nav.breadcrumb a {
+  color: #d52349;
   text-decoration: none;
+  border-bottom: none;
   transition: color 0.2s ease;
 }
 
-.breadcrumb a:hover {
-  color: #2e5cad;
+nav.breadcrumb a:hover {
+  color: #d52349;
   text-decoration: underline;
+  border-bottom: none;
 }
 
-.breadcrumb .separator {
-  margin: 0 0.5rem;
-  color: #d3d9df;
+nav.breadcrumb .separator {
+  margin: 0 0.4em;
+  color: #6b6b6b;
 }
 
 /* About Page Mobile Responsive Styles */
