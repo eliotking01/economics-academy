@@ -3898,17 +3898,24 @@ ul.social li a.fa-google-plus:hover {
   transform: translateY(-2px);
 }
 
-.resource-card h3 {
+/* h3 on the flashcards hub; h4 on the practice-questions hub, whose cards
+   sit under year-group h3s (Phase 2). The explicit size keeps the two
+   levels rendering identically - the theme gives h3 1.35em and h4 nothing. */
+.resource-card h3,
+.resource-card h4 {
   margin-bottom: 0.25em;
+  font-size: 1.35em;
 }
 
-.resource-card h3 a {
+.resource-card h3 a,
+.resource-card h4 a {
   color: #252122;
   text-decoration: none;
   border-bottom: none;
 }
 
-.resource-card h3 a:hover {
+.resource-card h3 a:hover,
+.resource-card h4 a:hover {
   color: #d52349;
 }
 

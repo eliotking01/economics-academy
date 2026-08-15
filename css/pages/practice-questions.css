@@ -3,7 +3,12 @@
    These are section landing pages, so they follow the same idiom as
    revision-notes/index.html, past-papers/index.html and the notes board
    index pages: a centred hero, header.major section headings, a grid of
-   board buttons, and the green-bordered topic accordion.
+   theme cards, and the green-bordered topic accordion.
+
+   The hero, stat line, card grid, cross-resource strip and services panel
+   are the shared .resource-* components in css/main.css (resource
+   unification Phase 2) - this file keeps only what is specific to these
+   pages.
 
    Deliberately WITHOUT the white .notes-container card the notes board
    indexes wrap their list in - the content sits directly on the page
@@ -25,68 +30,8 @@
   --pq-muted: #6b6b6b;
 }
 
-/* ------------------------------------------------------------------ hero
-
-   Matches .notes-hero / .papers-hero. */
-
-.practice-questions-page .pq-hero {
-  padding: 2em 0 0;
-  margin-bottom: 2.5em;
-  text-align: center;
-}
-
-.practice-questions-page .pq-h1 {
-  margin-bottom: 0.4em;
-  font-size: 2.4em;
-  line-height: 1.2;
-}
-
-.practice-questions-page .pq-intro {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1em;
-  line-height: 1.7;
-  color: var(--pq-body);
-}
-
-.practice-questions-page .pq-hero-meta {
-  margin: 1.25em 0 0;
-  font-size: 0.9em;
-  color: var(--pq-muted);
-}
-
-/* Board index header, matching .notes-header on the notes board indexes. */
-
-.practice-questions-page .pq-header {
-  padding: 2em;
-  margin-bottom: 2em;
-  text-align: center;
-  background: #f9f9f9;
-  border-radius: 4px;
-}
-
-.practice-questions-page .pq-header header.major {
-  margin-bottom: 0;
-  padding: 0;
-  border: none;
-}
-
-/* main.css renders header.major's h1 at body size and italicises its <p>,
-   which on the notes board indexes leaves the h1 smaller than the h2s below
-   it. Restored here so the heading hierarchy reads correctly. */
-.practice-questions-page .pq-header h1 {
-  margin-bottom: 0.4em;
-  font-size: 2em;
-  line-height: 1.2;
-}
-
-.practice-questions-page .pq-header p {
-  max-width: 760px;
-  margin: 0 auto;
-  font-style: normal;
-  line-height: 1.7;
-  color: var(--pq-body);
-}
+/* The hub and board-index heroes are the shared .resource-hero /
+   .resource-intro / .resource-stats in css/main.css. */
 
 /* ------------------------------------------------------------ breadcrumb */
 
@@ -121,30 +66,8 @@
   margin: 2em 0;
 }
 
-.practice-questions-page .pq-board-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.practice-questions-page .pq-board-button {
-  transition: transform 0.3s ease;
-}
-
-.practice-questions-page .pq-board-button:hover {
-  transform: translateY(-3px);
-}
-
-.practice-questions-page .pq-board-count {
-  display: block;
-  margin-top: 0.35em;
-  font-size: 0.8em;
-  font-weight: 400;
-  opacity: 0.85;
-  text-transform: none;
-  letter-spacing: 0;
-}
+/* The theme cards inside each group are the shared .resource-cards grid of
+   .resource-card in css/main.css. */
 
 .practice-questions-page .pq-note {
   margin: 0 0 1.5em;
@@ -275,50 +198,10 @@
   color: var(--pq-green-text);
 }
 
-/* -------------------------------------------------- conversion strip
-
-   Matches .notes-cta-strip on revision-notes/index.html. */
-
-.practice-questions-page .pq-cta-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5em 2em;
-  margin: 1em 0 3em;
-  background: #f9f9f9;
-  border-radius: 4px;
-}
-
-.practice-questions-page .pq-cta-strip p {
-  flex: 1 1 300px;
-  margin: 0;
-}
-
-.practice-questions-page .pq-cta-actions {
-  display: flex;
-  flex-shrink: 0;
-  flex-wrap: wrap;
-  gap: 0.8em;
-}
+/* The cross-resource strip and services panel are the shared
+   .resource-cross / .resource-services in css/main.css. */
 
 /* ------------------------------------------------------------ responsive */
-
-@media (max-width: 767px) {
-  .practice-questions-page .pq-h1 {
-    font-size: 1.9em;
-  }
-
-  .practice-questions-page .pq-board-buttons {
-    grid-template-columns: 1fr;
-  }
-
-  .practice-questions-page .pq-cta-strip {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 
 @media screen and (max-width: 736px) {
   .practice-questions-page .topic-header h2 {
@@ -327,13 +210,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .practice-questions-page .topic-item,
-  .practice-questions-page .pq-board-button {
+  .practice-questions-page .topic-item {
     transition: none;
   }
 
-  .practice-questions-page .topic-item:hover,
-  .practice-questions-page .pq-board-button:hover {
+  .practice-questions-page .topic-item:hover {
     transform: none;
   }
 }

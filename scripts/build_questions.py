@@ -71,6 +71,24 @@ PAST_PAPERS = {
 BOARD_LABELS = {b["slugs"]["pastPapers"]: b["names"]["short"]
                 for b in board_data.load().values()}
 
+# Cross-resource links per group - resource unification Phase 2. Each group's
+# flashcards deck and question-finder board page, from the record: the slugs
+# differ per family ("edexcel-theme-1" here, "edexcel-a/theme-1" in
+# flashcards, "edexcel" in the question bank), which is exactly why they are
+# read rather than derived. GROUP_LABELS is the short display label
+# ("Theme 1", "Microeconomics") for the notes button on each board index.
+FLASHCARDS_URLS = {
+    group["notesDir"]:
+        f"/flashcards/{board['slugs']['flashcards']}/{group['flashcardsSlug']}/"
+    for _key, board, group in board_data.groups()
+}
+QB_URLS = {
+    group["notesDir"]: f"/past-paper-questions/{board['slugs']['questionBank']}/"
+    for _key, board, group in board_data.groups()
+}
+GROUP_LABELS = {group["notesDir"]: group["label"]
+                for _key, _board, group in board_data.groups()}
+
 # Display order and copy for the hub and the board index pages. Mirrors the
 # order the notes use in templates/header.html.
 #
@@ -96,14 +114,14 @@ HUB_SECTIONS = [
     (
         "Edexcel Economics",
         [
-            ("Year 1 (AS Level)", ["edexcel-theme-1", "edexcel-theme-2"], ""),
-            ("Year 2 (A Level)", ["edexcel-theme-3", "edexcel-theme-4"], "alt "),
+            ("Year 1 (AS Level)", ["edexcel-theme-1", "edexcel-theme-2"]),
+            ("Year 2 (A Level)", ["edexcel-theme-3", "edexcel-theme-4"]),
         ],
     ),
     (
         "AQA Economics",
         [
-            ("Year 1 &amp; 2 (A Level)", ["aqa-a2-micro", "aqa-a2-macro"], "alt "),
+            ("Year 1 &amp; 2 (A Level)", ["aqa-a2-micro", "aqa-a2-macro"]),
         ],
     ),
 ]
@@ -121,7 +139,7 @@ BOARD_BLURB = {d: b for d, _, b in BOARDS}
 # one. But a board added to the record now reaches four structures on this page
 # automatically and this one not at all, which would drop it off the hub with no
 # error. So the two are reconciled here instead.
-_hub_dirs = [d for _h, gs in HUB_SECTIONS for _label, ds, _cls in gs for d in ds]
+_hub_dirs = [d for _h, gs in HUB_SECTIONS for _label, ds in gs for d in ds]
 _recorded = [g["notesDir"] for _k, _b, g in board_data.groups()]
 if sorted(_hub_dirs) != sorted(_recorded):
     sys.exit(
@@ -1055,17 +1073,32 @@ def render_related(topic, siblings, ppq):
     return "\n".join(parts) + "\n\n"
 
 
-def render_cta_strip(text, actions):
-    """The conversion strip from revision-notes/index.html."""
+def render_cross_strip(links):
+    """The free cross-resource strip - resource unification Phase 2.
+
+    The component is .resource-cross in css/main.css, shared with the
+    flashcards pages since Phase 1. Free links only: the paid services sit
+    in .resource-services below, so a paid button never lands in a row a
+    student reads as free (PH07-058).
+    """
     buttons = "\n".join(
-        f'              <a href="{href}" class="button{cls}">{label}</a>'
+        f'            <a href="{href}" class="button">{label}</a>'
+        for href, label in links
+    )
+    return f"""          <section class="resource-cross">
+{buttons}
+          </section>"""
+
+
+def render_services(text, actions):
+    """The paid-services panel, .resource-services in css/main.css."""
+    buttons = "\n".join(
+        f'            <a href="{href}" class="button{cls}">{label}</a>'
         for href, cls, label in actions
     )
-    return f"""          <section class="pq-cta-strip">
+    return f"""          <section class="resource-services">
             <p>{text}</p>
-            <div class="pq-cta-actions">
 {buttons}
-            </div>
           </section>"""
 
 
@@ -1148,34 +1181,42 @@ def render_board_index(board_dir, topics):
             <span>{name}</span>
           </nav>
 
-          <section class="pq-header">
-            <header class="major">
-              <h1>{name} Practice Questions</h1>
-              <p>
-                Free exam-style multiple-choice questions covering
-                {blurb.lower()}, written to the style and difficulty of the real
-                {label} papers. Every question carries a full worked answer.
-                Click any unit to expand its topics.
-              </p>
-            </header>
+          <section class="resource-hero">
+            <h1>{name} Practice Questions</h1>
+            <p class="resource-intro">
+              Free exam-style multiple-choice questions covering
+              {blurb.lower()}, written to the style and difficulty of the real
+              {label} papers. Every question carries a full worked answer.
+            </p>
+            <p class="resource-stats">
+              {count} questions &middot; {len(topics)} {topic_word} &middot; free, no sign-up
+            </p>
           </section>
 
           <h2>Available Topics</h2>
-          <p class="pq-note">
-            Click any unit below to see its topics &middot; {count} questions across
-            {len(topics)} {topic_word}, free and with no sign-up.
-          </p>
+          <p class="pq-note">Click any unit below to see its topics.</p>
 
           <ul class="topic-list">
 {units}
           </ul>
 
-{render_cta_strip(
+{render_cross_strip(
+    # D45 line: the notes and past-papers buttons restyle links this page
+    # already carried; the flashcards and question-finder buttons are new
+    # edges into the NEW sections only, which Phases 1-2 may add freely.
+    [
+        (f"/revision-notes/{board_dir}/",
+         f"Read the {GROUP_LABELS[board_dir]} notes"),
+        (FLASHCARDS_URLS[board_dir], "Revise with the flashcards"),
+        (QB_URLS[board_dir], f"Search {label} past paper questions"),
+        (papers_href, papers_label),
+    ],
+)}
+{render_services(
     "<strong>Getting these wrong?</strong> Work through the topic with an expert "
     "tutor, or send an essay for detailed examiner-style marking.",
     [
-        (f"/revision-notes/{board_dir}/", " alt", "Read the Notes"),
-        (papers_href, " alt", papers_label),
+        ("/marking.html", " alt", "Get Your Essays Marked"),
         ("/tutoring.html", "", "Book a Free Intro Call"),
     ],
 )}
@@ -1223,43 +1264,50 @@ def render_hub(by_board):
     topic_word = "topic" if topic_count == 1 else "topics"
     url = f"{SITE}/practice-questions/"
 
+    # "Edexcel and AQA", not "AQA and Edexcel": boards.json's group order is
+    # the display order everywhere else on the page, and the intro already
+    # names Edexcel first - resource unification Phase 2.
     title = (
-        "A-Level Economics Practice Questions — AQA and Edexcel "
+        "A-Level Economics Practice Questions — Edexcel and AQA "
         "| Economics Academy"
     )
     desc = (
-        f"Free A-Level Economics multiple-choice practice questions for AQA and "
-        f"Edexcel. {total} questions across {topic_count} {topic_word}, each with a "
+        f"Free A-Level Economics multiple-choice practice questions for Edexcel "
+        f"and AQA. {total} questions across {topic_count} {topic_word}, each with a "
         f"full worked answer."
     )[:164]
 
     sections = []
     for heading, groups in HUB_SECTIONS:
         rows = []
-        for group_name, dirs, cls in groups:
+        for group_name, dirs in groups:
             live = [d for d in dirs if by_board.get(d)]
             if not live:
                 continue
-            buttons = []
+            cards = []
             for d in live:
                 n = sum(len(t["questions"]) for t in by_board[d])
                 topics_n = len(by_board[d])
-                buttons.append(
-                    f"""                <a
-                  href="/practice-questions/{d}/"
-                  class="button {cls}pq-board-button"
-                >
-                  {HUB_LABELS[d]}
-                  <span class="pq-board-count"
-                    >{topics_n} {'topic' if topics_n == 1 else 'topics'} &middot; {n} questions</span
-                  >
-                </a>"""
+                # The card heading is an h4, not the h3 the flashcards hub
+                # uses, because the year-group label above it is already an
+                # h3 - the shared .resource-card rules cover both levels.
+                cards.append(
+                    f"""                <article class="resource-card">
+                  <h4>
+                    <a href="/practice-questions/{d}/"
+                      >{HUB_LABELS[d]}</a
+                    >
+                  </h4>
+                  <p class="resource-card-meta">
+                    {topics_n} {'topic' if topics_n == 1 else 'topics'} &middot; {n} questions
+                  </p>
+                </article>"""
                 )
             rows.append(
                 f"""            <div class="pq-board-group">
               <h3>{group_name}</h3>
-              <div class="pq-board-buttons">
-{chr(10).join(buttons)}
+              <div class="resource-cards">
+{chr(10).join(cards)}
               </div>
             </div>"""
             )
@@ -1283,28 +1331,37 @@ def render_hub(by_board):
             <span>Practice Questions</span>
           </nav>
 
-          <section class="pq-hero">
-            <h1 class="pq-h1">Free A-Level Economics Practice Questions</h1>
-            <p class="pq-intro">
+          <section class="resource-hero">
+            <h1>Free A-Level Economics Practice Questions</h1>
+            <p class="resource-intro">
               Exam-style multiple-choice questions for
               <strong>Edexcel</strong> and <strong>AQA</strong>, written to the
               style and difficulty of the real papers. Answer one at a time for
               instant feedback, then read a full worked answer that explains the
               correct option and names the mistake behind each wrong one.
             </p>
-            <p class="pq-hero-meta">
+            <p class="resource-stats">
               {total} questions &middot; {topic_count} {topic_word} &middot; free, no sign-up
             </p>
           </section>
 
 {chr(10).join(sections)}
 
-{render_cta_strip(
+{render_cross_strip(
+    # D45 line: the revision-notes button restyles a link this page already
+    # carried; the flashcards and question-finder buttons are new edges into
+    # the NEW sections only, which Phases 1-2 may add freely.
+    [
+        ("/revision-notes/", "Browse the revision notes"),
+        ("/flashcards/", "Revise with the flashcards"),
+        ("/past-paper-questions/", "Search real past paper questions"),
+    ],
+)}
+{render_services(
     "<strong>Questions show you the gaps &mdash; essays are where the marks are.</strong> "
     "Send yours for examiner-style marking, or work through the tricky topics "
     "with a specialist tutor.",
     [
-        ("/revision-notes/", " alt", "Free Revision Notes"),
         ("/marking.html", " alt", "Get Your Essays Marked"),
         ("/tutoring.html", "", "Book a Free Intro Call"),
     ],
@@ -1330,6 +1387,19 @@ def render_hub(by_board):
                     "name": "Economics Academy",
                     "url": SITE,
                 },
+                # hasPart names each board index, as the revision-notes hub
+                # does for its theme pages and the flashcards hub for its
+                # decks - the winner's pattern (resource unification Phase 2).
+                # Names match each board page's own CollectionPage name.
+                "hasPart": [
+                    {
+                        "@type": "WebPage",
+                        "name": f"{n} practice questions",
+                        "url": f"{SITE}/practice-questions/{d}/",
+                    }
+                    for d, n, _ in BOARDS
+                    if by_board.get(d)
+                ],
                 "publisher": page_shell_mod.ORGANISATION_REF,
             },
             4,
