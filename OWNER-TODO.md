@@ -27,6 +27,12 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       `/flashcards/edexcel-a/theme-1/` … `theme-4/`, `/flashcards/aqa/micro/`
       and `/flashcards/aqa/macro/`. If you already did the hub in the item
       above, no harm in requesting it again.
+- [ ] **After Phase 2 merges — request indexing for the 7 practice-questions
+      pages** (same GSC routine as above): `/practice-questions/`, then
+      `/practice-questions/edexcel-theme-1/` … `edexcel-theme-4/`,
+      `/practice-questions/aqa-a2-micro/` and
+      `/practice-questions/aqa-a2-macro/`. Not before the merge — the live
+      pages haven't changed yet.
 - [ ] **After each later resource phase merges**: request indexing for the
       pages that phase changed (the phase's review summary will list them).
 
