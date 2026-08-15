@@ -14,40 +14,27 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
       educational use is permitted, whether attribution wording is required,
       and whether any embargo applies to recent series. Nothing needs taking
       down unless a term says so — this is a check, not an alarm.
-- [ ] **Google Search Console → request indexing for the new sections' hubs**
-      (they went live mid-August and Google barely knows them yet):
-      `https://economicsacademy.co.uk/flashcards/`,
-      `https://economicsacademy.co.uk/practice-questions/`,
-      `https://economicsacademy.co.uk/past-paper-questions/`,
-      `https://economicsacademy.co.uk/revision-notes/glossary/`.
-      In GSC: paste each URL into the top search bar → "Request indexing".
-      ~2 minutes for all four.
-- [ ] **Phase 1 merged 2026-08-15 — request indexing for the 7 flashcards
-      pages** (same GSC routine as above): `/flashcards/`, then
-      `/flashcards/edexcel-a/theme-1/` … `theme-4/`, `/flashcards/aqa/micro/`
-      and `/flashcards/aqa/macro/`. If you already did the hub in the item
-      above, no harm in requesting it again.
-- [ ] **After Phase 2 merges — request indexing for the 7 practice-questions
-      pages** (same GSC routine as above): `/practice-questions/`, then
-      `/practice-questions/edexcel-theme-1/` … `edexcel-theme-4/`,
-      `/practice-questions/aqa-a2-micro/` and
-      `/practice-questions/aqa-a2-macro/`. Not before the merge — the live
-      pages haven't changed yet.
-- [ ] **After Phase 3 merges — request indexing for the 5 past-papers
-      pages** (same GSC routine as above): `/past-papers/`, then
-      `/past-papers/edexcel/`, `/past-papers/aqa/`, `/past-papers/ocr/`
-      and `/past-papers/edexcel-b/`. Not before the merge — the live
-      pages haven't changed yet. These four board pages already rank
-      well; re-indexing just tells Google about the redesign sooner.
-- [ ] **After Phase 4 merges — request indexing for the 7 revision-notes
-      pages** (same GSC routine as above): `/revision-notes/`, then
-      `/revision-notes/edexcel-theme-1/` … `edexcel-theme-4/`,
-      `/revision-notes/aqa-a2-micro/` and `/revision-notes/aqa-a2-macro/`.
-      Not before the merge — the live pages haven't changed yet. These pages
-      already rank well (the hub is the site's best page); re-indexing just
-      tells Google about the redesign sooner. The 166 practice pages also
-      changed (one link's wording) — the updated sitemap covers those, no
-      manual requests needed.
+- [ ] **Request indexing for the remaining redesigned pages** — 21 URLs
+      left, and GSC's request-indexing quota is roughly 10 a day (yours ran
+      out on 2026-08-15 after 7 requests — see the Done section for what is
+      already in). Routine: paste the URL into GSC's top search bar →
+      "Request indexing". Highest value first:
+      1. **Next quota day (9 URLs, the ones that already rank):**
+         `/revision-notes/` (the site's best page — do this one first),
+         `/revision-notes/edexcel-theme-4/`,
+         `/revision-notes/aqa-a2-micro/`, `/revision-notes/aqa-a2-macro/`,
+         then `/past-papers/`, `/past-papers/edexcel/`, `/past-papers/aqa/`,
+         `/past-papers/ocr/` and `/past-papers/edexcel-b/`.
+      2. **After that, as quota allows (12 URLs, new pages Google barely
+         knows):** the six flashcards decks —
+         `/flashcards/edexcel-a/theme-1/` … `theme-4/`,
+         `/flashcards/aqa/micro/`, `/flashcards/aqa/macro/` — and the six
+         practice-questions theme pages —
+         `/practice-questions/edexcel-theme-1/` … `edexcel-theme-4/`,
+         `/practice-questions/aqa-a2-micro/` and
+         `/practice-questions/aqa-a2-macro/`.
+      The 166 individual practice pages also changed (one link's wording) —
+      the updated sitemap covers those, no manual requests needed.
 
 ## Marking page relaunch — live since 2026-08-15
 
@@ -133,6 +120,12 @@ Kept out of the published site via `_config.yml`. Items are grouped by when.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-15 — indexing requested** for 7 of the redesigned/new pages:
+  `/flashcards/`, `/practice-questions/`, `/past-paper-questions/`,
+  `/revision-notes/glossary/`, and `/revision-notes/edexcel-theme-1/`,
+  `-2/`, `-3/` (the daily quota ran out before Theme 4 — the remaining 21
+  URLs are the open item above). Same ~22 September clock as the line
+  below.
 - **2026-08-14 — re-indexing requested** in Search Console for `/`,
   `/privacy.html`, `/tutoring.html` and `/faq.html`. This is the clock the
   ~22 September check reads from: a recrawl typically lands within days to a
