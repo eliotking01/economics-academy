@@ -180,7 +180,17 @@ the Stripe dashboard on 2026-08-16 that all 8 links redirect to
 confirmation.html after payment — the one part nobody could check from
 outside.
 
-**The example panels are REAL now — nothing is open on this project.**
+**Bundles are pay-once, submit-over-time (merge `91e4109`, 2026-08-16,
+live and spot-checked):** most bundle buyers send one paper a week or ad
+hoc, so every place the turnaround promise appears now says papers can be
+sent together or spread out, with each returned within the chosen
+turnaround of when it is sent — the packages intro, a bullet on both
+bundle cards, the four bundle offers in the Service JSON-LD, the
+"What happens after I pay?" box, confirmation.html's timeline, and
+faq.html's three marking answers plus their FAQPage JSON-LD twins. Change
+any of these and the other five must move in lockstep.
+
+**The example panels are REAL now — nothing else is open on this project.**
 Merge `fca6d93` (2026-08-16, both workflows green, live site spot-checked)
 replaced the two "coming soon" placeholders with page-1 previews linking to
 the full PDFs in `marking-examples/`: a matched pair from the same AQA
