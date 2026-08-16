@@ -12,7 +12,7 @@ carried for review live in this file's own git history, not here.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| About + Contact + finishing pass | **IN REVIEW** — branch `about-contact-finishing` | — | — |
+| About + Contact + finishing pass | live | 2026-08-16 | `437dc7e` |
 | Resource unification, Phases 1–4 | live | 2026-08-15 | `d0fdcaf`, `2295213`, `1e8dfed`, `f537312` |
 | Marking page + payment journey | live | 2026-08-15 | `d4be06b` |
 | Home page revamp | live | 2026-08-14 | `f53b7fe` |
@@ -52,14 +52,22 @@ there.
    (`KNOWN_SELF_DISAGREEMENT` in verify_page_shell.py) or leave that list in
    the same commit.
 
-## 0. About + Contact + site finishing pass — branch `about-contact-finishing`
+## 0. About + Contact + site finishing pass — MERGED AND LIVE (2026-08-16)
 
-**STATE (2026-08-16): built and verified, awaiting Eliot's review and
-merge.** The brief: revamp About and Contact (the last two unrevamped
-pages), then a whole-site finishing pass — the closing session of the
-overhaul. Approved decisions: soften the "100%" stat, Harry G. + Alex B.
-testimonials, one Name field on the form, plain "within 24 hours"
-everywhere, LinkedIn into structured data sitewide.
+**STATE: MERGED AND LIVE** (merge `437dc7e`, --no-ff, pushed 2026-08-16;
+branch deleted). Both workflows succeeded — verify CI accepted the four
+Text-Change trailers across the merge range, and the Pages deployment went
+out. Live site spot-checked: About serving My Story / the softened stat /
+testimonials / the LinkedIn button with its `<title>` byte-identical,
+Contact serving the new form with the honeypot hidden, faq carrying zero
+"on weekdays" remnants, the tutoring modal honeypot and all five `sameAs`
+additions live. The brief: revamp About and Contact (the last two
+unrevamped pages), then a whole-site finishing pass — the closing session
+of the overhaul. Approved decisions: soften the "100%" stat, Harry G. +
+Alex B. testimonials, one Name field on the form, plain "within 24 hours"
+everywhere, LinkedIn into structured data sitewide. Eliot's follow-ups
+(the About paragraph, Formspree dashboard, LinkedIn click) are the top of
+OWNER-TODO.md.
 
 ### About page (about.html + css/pages/about.css)
 
