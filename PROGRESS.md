@@ -65,9 +65,9 @@ additions live. The brief: revamp About and Contact (the last two
 unrevamped pages), then a whole-site finishing pass — the closing session
 of the overhaul. Approved decisions: soften the "100%" stat, Harry G. +
 Alex B. testimonials, one Name field on the form, plain "within 24 hours"
-everywhere, LinkedIn into structured data sitewide. Eliot's follow-ups
-(the About paragraph, Formspree dashboard, LinkedIn click) are the top of
-OWNER-TODO.md.
+everywhere, LinkedIn into structured data sitewide. Eliot closed the
+Formspree-dashboard and LinkedIn-link follow-ups on 2026-08-16; the only
+one still open is his own My Story paragraph, at the top of OWNER-TODO.md.
 
 ### About page (about.html + css/pages/about.css)
 
@@ -176,7 +176,10 @@ removed at Eliot's request.
 marking"** — URL, `<title>`, H1, meta description, canonical, og/twitter,
 breadcrumb all byte-identical; body copy, JSON-LD offers and UX only.
 
-Still open (OWNER-TODO): the Stripe-dashboard redirect glance, and the two
+**The payment journey is now fully verified end to end**: Eliot confirmed in
+the Stripe dashboard on 2026-08-16 that all 8 links redirect to
+confirmation.html after payment — the one part nobody could check from
+outside. Still open (OWNER-TODO): the two
 anonymised example PDFs → `marking-examples/` (then a session generates
 previews, swaps the placeholder divs and bumps verify_page_shell's
 `EXPECTED_IMAGES` +2 in the same commit). Do NOT link the example files

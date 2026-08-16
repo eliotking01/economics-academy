@@ -12,21 +12,6 @@ priority order within each group.
       story), so this is the "why", not the CV. Where it goes: about.html has
       an HTML comment marked `OWNER COPY NEEDED` in the My Story section —
       paste the text to Claude and it will insert it properly.
-- [ ] **Formspree dashboard, 5 minutes** — the honeypot spam trap is now live
-      in the code on both forms and needs no setup, but two things live only
-      in the dashboard: log in at formspree.io and for BOTH forms (`xblapyky`
-      = contact page, `mqadgbbw` = tutoring enquiry pop-up) open Settings and
-      (1) check the notification email is the address you actually read,
-      (2) look at the "Spam" section and make sure Formspree's own filtering
-      is on. Leave reCAPTCHA off — no puzzles for real users unless bot
-      submissions continue after this.
-- [ ] **Click the LinkedIn link once** on the new About page and check it
-      lands on your profile. (LinkedIn blocks automated checks, so this is
-      the one link that couldn't be verified by machine.)
-- [ ] **One glance in the Stripe dashboard**: confirm each of the 8 payment
-      links redirects to `https://economicsacademy.co.uk/confirmation.html`
-      after payment — the only part of the marking journey nobody has been
-      able to verify from outside.
 - [ ] **One 30-second check in Kit**: confirm "double opt-in" (the
       confirmation email) is ON for form 9803307 — it's Kit's default, and
       the home page already promises "You will get a confirmation email
@@ -37,25 +22,21 @@ priority order within each group.
 
 ## Soon
 
-- [ ] **Request indexing in Search Console** — quota is roughly 10/day.
+- [ ] **Request indexing in Search Console — 14 URLs left** (quota is roughly
+      10/day; the 9 that already rank are done, see the Done section).
       Priority order:
-      1. The 9 that already rank: `/revision-notes/` first, then
-         `/revision-notes/edexcel-theme-4/`, `/revision-notes/aqa-a2-micro/`,
-         `/revision-notes/aqa-a2-macro/`, `/past-papers/`,
-         `/past-papers/edexcel/`, `/past-papers/aqa/`, `/past-papers/ocr/`,
-         `/past-papers/edexcel-b/`.
-      2. The 12 new-section pages: six flashcards decks
+      1. The 12 new-section pages Google barely knows: six flashcards decks
          (`/flashcards/edexcel-a/theme-1/` … `theme-4/`,
          `/flashcards/aqa/micro/`, `/flashcards/aqa/macro/`) and six
          practice-questions theme pages
          (`/practice-questions/edexcel-theme-1/` … `-4/`,
          `/practice-questions/aqa-a2-micro/`,
          `/practice-questions/aqa-a2-macro/`).
-      3. After the About/Contact branch merges: `/about.html` and
-         `/contact.html`.
+      2. `/about.html` and `/contact.html` — both live since 2026-08-16 and
+         substantially changed, so worth a nudge even though neither ranks.
 - [ ] **Phone skim** of the live pages changed recently, once each: marking
       (packages, enquiry box, example panels), home (photo, wording, form),
-      and after the merge, About and Contact.
+      About and Contact (all live now).
 - [ ] **Marking examples** — prepare two real, fully-anonymised examples and
       save them as `marking-examples/annotated-paper-example.pdf` and
       `marking-examples/feedback-email-example.pdf`, then tell Claude —
@@ -129,6 +110,20 @@ priority order within each group.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-16 — indexing requested** for the 9 pages that already rank:
+  `/revision-notes/`, `/revision-notes/edexcel-theme-4/`,
+  `/revision-notes/aqa-a2-micro/`, `/revision-notes/aqa-a2-macro/`,
+  `/past-papers/` and the four board pages (`edexcel`, `aqa`, `ocr`,
+  `edexcel-b`). Same ~22 September clock as the entries below — and these
+  are the pages whose baselines that check compares against, so a recrawl
+  landing this week is what makes the comparison meaningful.
+- **2026-08-16 — three verification loops closed**, all previously
+  unverifiable from outside: **Formspree dashboard** checked on both forms
+  (`xblapyky` contact, `mqadgbbw` tutoring pop-up) — notification address
+  and spam filtering confirmed; **Stripe dashboard** checked — all 8 payment
+  links confirmed redirecting to `confirmation.html` after payment, which
+  closes the last open question on the marking journey; **LinkedIn link**
+  on the About page clicked and confirmed landing on the right profile.
 - **2026-08-15 — indexing requested** for 7 redesigned/new pages:
   `/flashcards/`, `/practice-questions/`, `/past-paper-questions/`,
   `/revision-notes/glossary/`, `/revision-notes/edexcel-theme-1/`, `-2/`,
