@@ -286,29 +286,33 @@
           <section class="contact-hero">
             <h1 class="contact-h1">Get in Touch</h1>
             <p class="contact-intro">
-              Have a question about tutoring, marking, or the free resources? Send a message below or get in touch directly — Eliot typically responds within 24 hours.
+              Have a question about tutoring, marking, or the free resources?
+              Email Eliot directly or send a message below — you'll get a
+              reply within 24 hours.
             </p>
           </section>
 
           <!-- Contact Options -->
           <section class="contact-options-section">
             <div class="contact-options">
-              <div class="contact-card">
+              <div class="contact-card contact-card-primary">
                 <span class="icon solid fa-envelope contact-icon"></span>
-                <h2>Email Us</h2>
-                <p>For general inquiries and support</p>
-                <a href="mailto:eliotkingtuition@gmail.com" class="button alt"
+                <h2>Email Eliot</h2>
+                <p>The fastest way to get an answer</p>
+                <a
+                  href="mailto:eliotkingtuition@gmail.com"
+                  class="button primary"
                   >eliotkingtuition@gmail.com</a
                 >
-                <p class="response-time">Typically responds within 24 hours</p>
+                <p class="response-time">Replies within 24 hours</p>
               </div>
 
               <div class="contact-card">
                 <span class="icon solid fa-calendar-check contact-icon"></span>
-                <h2>Book a Call</h2>
-                <p>Schedule a free consultation</p>
-                <a href="/tutoring.html" class="button">Book Now</a>
-                <p class="response-time">15-minute discovery calls</p>
+                <h2>Book a Free Intro Call</h2>
+                <p>Ready to talk tutoring? Pick a time that suits you</p>
+                <a href="/tutoring.html#booking" class="button">Book a Call</a>
+                <p class="response-time">15 minutes — no commitment</p>
               </div>
             </div>
           </section>
@@ -316,7 +320,10 @@
           <!-- Contact Form Section -->
           <header class="major">
             <h2>Send a Message</h2>
-            <p>Fill out the form below and we'll get back to you promptly</p>
+            <p>
+              Fill out the form below and Eliot will get back to you within 24
+              hours
+            </p>
           </header>
 
           <section class="contact-form-section">
@@ -330,28 +337,16 @@
                     method="POST"
                   >
                     <div class="row gtr-uniform">
-                      <div class="col-6 col-12-xsmall">
-                        <label for="first-name" class="sr-only">First Name</label>
+                      <div class="col-12">
+                        <label for="name" class="sr-only">Name</label>
                         <input
                           type="text"
-                          name="first-name"
-                          id="first-name"
+                          name="name"
+                          id="name"
                           value=""
-                          placeholder="First Name"
+                          placeholder="Name"
                           required
-                          autocomplete="given-name"
-                        />
-                      </div>
-                      <div class="col-6 col-12-xsmall">
-                        <label for="last-name" class="sr-only">Last Name</label>
-                        <input
-                          type="text"
-                          name="last-name"
-                          id="last-name"
-                          value=""
-                          placeholder="Last Name"
-                          required
-                          autocomplete="family-name"
+                          autocomplete="name"
                         />
                       </div>
                       <div class="col-12">
@@ -367,14 +362,41 @@
                         />
                       </div>
                       <div class="col-12">
-                        <label for="subject" class="sr-only">Subject</label>
-                        <select name="subject" id="subject">
-                          <option value="">Select Subject</option>
-                          <option value="tutoring">Tutoring Inquiry</option>
-                          <option value="marking">Paper Marking</option>
-                          <option value="resources">Study Resources</option>
-                          <option value="other">Other Question</option>
+                        <label for="subject" class="sr-only"
+                          >What's this about?</label
+                        >
+                        <select name="_subject" id="subject" required>
+                          <option value="">What's this about?</option>
+                          <option value="Enquiry: one-to-one tutoring">
+                            One-to-one tutoring
+                          </option>
+                          <option value="Enquiry: group lessons">
+                            Group lessons
+                          </option>
+                          <option value="Enquiry: marking quote">
+                            Marking quote
+                          </option>
+                          <option value="Enquiry: free resources">
+                            Free resources
+                          </option>
+                          <option value="Enquiry: something else">
+                            Something else
+                          </option>
                         </select>
+                      </div>
+                      <!-- Honeypot: invisible to people (hidden by CSS), so a
+                           submission that fills it is a bot and Formspree
+                           silently discards it. The name _gotcha is Formspree's
+                           reserved honeypot field. -->
+                      <div class="col-12 hp-wrap" aria-hidden="true">
+                        <label for="hp-website">Website</label>
+                        <input
+                          type="text"
+                          name="_gotcha"
+                          id="hp-website"
+                          tabindex="-1"
+                          autocomplete="off"
+                        />
                       </div>
                       <div class="col-12">
                         <label for="message" class="sr-only">Message</label>
@@ -405,34 +427,32 @@
               <div class="col-4 col-12-medium">
                 <section class="box">
                   <header>
-                    <h3>Why Contact Us?</h3>
+                    <h3>What Can Eliot Help With?</h3>
                   </header>
                   <ul class="alt">
                     <li>
-                      <strong>Tutoring Inquiries:</strong> Have a specific
-                      tuition request? Fill out the contact form and we'll get
-                      back to you promptly. You can also book a free 15-minute
-                      call to speak directly with an expert tutor.
+                      <strong>Tutoring:</strong> Ask about one-to-one lessons
+                      or small groups — or book a free 15-minute intro call to
+                      talk it through directly.
                     </li>
                     <li>
-                      <strong>Paper Marking:</strong> Need help with a question
-                      that isn’t a 25-marker? Submit your request via the
-                      contact form and we’ll be happy to assist.
+                      <strong>Marking:</strong> Want something marked that the
+                      standard packages don’t cover? Send the details and
+                      you’ll get a quote by email.
                     </li>
                     <li>
-                      <strong>Study Resources:</strong> We welcome all feedback
-                      on Economics Academy materials. Please share your thoughts
-                      using the contact form.
+                      <strong>Free resources:</strong> Spotted an error in the
+                      notes or have a suggestion? All feedback on the free
+                      materials is welcome.
                     </li>
                     <li>
-                      <strong>Other Questions:</strong> For any other requests
-                      or queries, just let us know through the contact form —
-                      we’re here to help.
+                      <strong>Anything else:</strong> For any other question,
+                      just ask — every message gets a reply.
                     </li>
                   </ul>
                   <footer>
                     <a href="/about.html" class="button alt"
-                      >Learn About Our Approach</a
+                      >More About Eliot</a
                     >
                   </footer>
                 </section>
@@ -499,19 +519,19 @@
               if (response.ok) {
                 // Success message
                 formStatus.textContent =
-                  "Thank you for your message! We will get back to you soon.";
+                  "Thanks for your message! Eliot will get back to you within 24 hours.";
                 formStatus.className = "form-status form-success";
                 contactForm.reset();
               } else {
                 // Error message
                 formStatus.textContent =
-                  "Oops! There was a problem submitting your form. Please try again or email us directly.";
+                  "Sorry — something went wrong. Please try again, or email eliotkingtuition@gmail.com directly.";
                 formStatus.className = "form-status form-error";
               }
             })
             .catch((error) => {
               formStatus.textContent =
-                "Oops! There was a problem submitting your form. Please try again or email us directly.";
+                "Sorry — something went wrong. Please try again, or email eliotkingtuition@gmail.com directly.";
               formStatus.className = "form-status form-error";
             })
             .finally(() => {

@@ -46,11 +46,27 @@
   align-items: center;
 }
 
+/* The email card is the preferred contact route and reads as the primary
+   option: same card, brand-coloured top edge. */
+.contact-card-primary {
+  border-top: 3px solid #d52349;
+}
+
 .contact-icon {
   font-size: 2.5rem;
   color: #d52349;
   margin-bottom: 15px;
   display: block;
+}
+
+/* Honeypot wrapper: hides the _gotcha field from people. Bots that auto-fill
+   every field still see it in the markup and give themselves away.
+   The selector matches main.css's `#main .row > div[class*="col-"]`
+   specificity (1,2,1), which sets display: flex on every column; this sheet
+   loads after main.css, so the tie resolves to none. A bare .hp-wrap loses
+   to it and the field renders - caught in a headless render. */
+#main .row > div.hp-wrap {
+  display: none;
 }
 
 /* These card headings were h3s and are now h2s so the page has no skipped

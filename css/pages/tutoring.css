@@ -171,6 +171,11 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
 }
+/* Honeypot wrapper: hides the _gotcha field from people. Bots that auto-fill
+   every field still see it in the markup and give themselves away. */
+.hp-wrap {
+  display: none;
+}
 .close-button {
   appearance: none;
   background: none;
