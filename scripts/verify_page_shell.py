@@ -363,14 +363,16 @@ MALFORMED_NOTES_PAGES: dict[str, str] = {}
 # candidate. "Adding loading=lazy to the 94 images lacking it" would reverse it
 # on 96 pages.
 #
-# The 9 pages where every image is lazy are the two diagram galleries, the six
-# flashcard decks, and - from the 2026-08-14 home-page revamp - index.html,
-# whose one image is the below-the-fold tutor photo. On none of them is the
+# The 10 pages where every image is lazy are the two diagram galleries, the six
+# flashcard decks, index.html - from the 2026-08-14 home-page revamp, whose one
+# image is the below-the-fold tutor photo - and marking.html, which gained its
+# two marked-work preview images on 2026-08-16. Both of marking.html's sit deep
+# in the page, well below "What You Actually Get". On none of these pages is the
 # first image a plausible LCP element.
-EXPECTED_IMAGE_PAGES = 105
-EXPECTED_IMAGES = 310
+EXPECTED_IMAGE_PAGES = 106
+EXPECTED_IMAGES = 312
 EXPECTED_FIRST_EAGER = 96
-EXPECTED_ALL_LAZY = 9
+EXPECTED_ALL_LAZY = 10
 
 # ---- check 8 -------------------------------------------------------------
 # Every page with a breadcrumb writes it twice, visible <nav> and JSON-LD

@@ -144,25 +144,34 @@
   text-align: center;
   margin-bottom: 0.75em;
 }
-.marking-example-placeholder {
-  border: 2px dashed #ccc;
-  border-radius: 6px;
-  padding: 2.5em 1.5em;
-  text-align: center;
-  color: #888;
-}
-.marking-example-placeholder .icon {
+/* The two preview panels. Both images are page-1 renders at 800px wide but
+   different aspect ratios (a landscape scan and a portrait email), so the
+   link is a fixed-height window and the image fills it from the top - the
+   top of a marked page is the part worth showing. The width/height
+   attributes stay the real file dimensions, which is what
+   verify_image_dimensions checks and what reserves the space before load. */
+.marking-example-preview {
   display: block;
-  font-size: 2em;
-  color: #ccc;
-  margin-bottom: 0.5em;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 340px;
+  background: #fff;
 }
-.marking-example-placeholder p {
+.marking-example-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.marking-example-preview:hover {
+  border-color: #d52349;
+}
+.marking-example-caption {
+  text-align: center;
   font-size: 0.9em;
-  margin: 0;
-  max-width: 26em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0.75em 0 0;
 }
 
 /* Testimonials */
