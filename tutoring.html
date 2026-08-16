@@ -112,7 +112,10 @@
           "height": 512
         },
         "description": "Free A-Level Economics revision notes and past papers for Edexcel, AQA, and OCR, plus expert 1-on-1 tutoring and paper marking.",
-        "sameAs": ["https://tutorful.co.uk/tutors/qlorq3vr"],
+        "sameAs": [
+          "https://tutorful.co.uk/tutors/qlorq3vr",
+          "https://www.linkedin.com/in/eliotking"
+        ],
         "founder": {
           "@type": "Person",
           "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
@@ -994,6 +997,19 @@
                 placeholder="Tell me about your tutoring needs and preferred schedule"
                 required
               ></textarea>
+            </div>
+            <!-- Honeypot: invisible to people (hidden by CSS), so a submission
+                 that fills it is a bot and Formspree silently discards it. The
+                 name _gotcha is Formspree's reserved honeypot field. -->
+            <div class="hp-wrap" aria-hidden="true">
+              <label for="enquiry-website">Website</label>
+              <input
+                type="text"
+                name="_gotcha"
+                id="enquiry-website"
+                tabindex="-1"
+                autocomplete="off"
+              />
             </div>
             <button
               type="submit"
