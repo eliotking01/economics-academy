@@ -166,11 +166,10 @@ What a future session needs:
 marking.html rebuilt around four packages with direct 48-hour/next-day
 Stripe buttons (8 links, all verified rendering the right product and
 price); old click-to-select flow and email-capture panel deleted; new
-custom-enquiry box, "What You Actually Get" section with two placeholder
-example panels, six-box FAQ. confirmation.html rebuilt around one job
-(email the work) — Formspree form and reference numbers removed; matching is
-by email address. faq.html prices updated in lockstep. The trust strip was
-removed at Eliot's request.
+custom-enquiry box, "What You Actually Get" section, six-box FAQ.
+confirmation.html rebuilt around one job (email the work) — Formspree form
+and reference numbers removed; matching is by email address. faq.html
+prices updated in lockstep. The trust strip was removed at Eliot's request.
 
 **The #1 guardrail held: marking.html ranks #1 for "Economics paper
 marking"** — URL, `<title>`, H1, meta description, canonical, og/twitter,
@@ -179,13 +178,23 @@ breadcrumb all byte-identical; body copy, JSON-LD offers and UX only.
 **The payment journey is now fully verified end to end**: Eliot confirmed in
 the Stripe dashboard on 2026-08-16 that all 8 links redirect to
 confirmation.html after payment — the one part nobody could check from
-outside. Still open (OWNER-TODO): the two
-anonymised example PDFs → `marking-examples/` (then a session generates
-previews, swaps the placeholder divs and bumps verify_page_shell's
-`EXPECTED_IMAGES` +2 in the same commit). Do NOT link the example files
-before they exist — verify_links and verify_image_dimensions fail on
-references to missing files. `build_sitemap.py` will auto-list the PDFs in
-sitemaps/pdfs.xml — expected, harmless.
+outside.
+
+**The example panels are REAL now — nothing is open on this project.**
+Merge `fca6d93` (2026-08-16, both workflows green, live site spot-checked)
+replaced the two "coming soon" placeholders with page-1 previews linking to
+the full PDFs in `marking-examples/`: a matched pair from the same AQA
+Paper 1 2019 (52/80, B — the annotated 8-page scan and the 2-page feedback
+email describing it, cross-checked mark by mark). Eliot's first upload was
+two different papers whose numbers contradicted side by side; he
+re-exported and the pair now agree on everything. Anonymisation was
+verified page by page before publishing. Previews are 800px JPEGs
+generated with PDFKit via Swift; verify_page_shell's image expectations
+moved to 106 pages / 312 images / 10 all-lazy in the same commit
+(marking.html's two images are below the fold, so it joined the all-lazy
+list). The 8.6 MB scan was deliberately NOT compressed: it downloads only
+on click, so page metrics never see it, and compression would soften the
+handwriting the panel exists to show.
 
 ## 3. Home page revamp — LIVE (2026-08-14, merge `f53b7fe`)
 

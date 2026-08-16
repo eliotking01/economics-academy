@@ -35,18 +35,8 @@ priority order within each group.
       2. `/about.html` and `/contact.html` — both live since 2026-08-16 and
          substantially changed, so worth a nudge even though neither ranks.
 - [ ] **Phone skim** of the live pages changed recently, once each: marking
-      (packages, enquiry box, example panels), home (photo, wording, form),
-      About and Contact (all live now).
-- [ ] **Marking examples** — prepare two real, fully-anonymised examples and
-      save them as `marking-examples/annotated-paper-example.pdf` and
-      `marking-examples/feedback-email-example.pdf`, then tell Claude —
-      it generates the previews and swaps the "coming soon" boxes.
-      Anonymisation checklist: student name, school/centre name,
-      candidate/centre numbers (front page AND page headers), any date+class
-      combination, the email greeting/address/thread, and PDF metadata
-      (export via Print → "Save as PDF", then check Get Info shows no student
-      name). Both PDFs will be publicly visible — that's the point, so check
-      them like anything else you publish.
+      (packages, enquiry box, the two real example panels), home (photo,
+      wording, form), About and Contact (all live now).
 - [ ] **Check each exam board's licensing terms for hosting past papers.**
       The site already hosts all 281 paper PDFs itself, so this is due
       diligence on something already published, not a future decision. Look
@@ -110,6 +100,10 @@ priority order within each group.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-16 — marking examples live** (merge `fca6d93`): the two real
+  anonymised PDFs replaced the "coming soon" panels — the marking page's
+  journey is now complete end to end, from example to payment to
+  confirmation.
 - **2026-08-16 — indexing requested** for the 9 pages that already rank:
   `/revision-notes/`, `/revision-notes/edexcel-theme-4/`,
   `/revision-notes/aqa-a2-micro/`, `/revision-notes/aqa-a2-macro/`,
