@@ -118,7 +118,7 @@ short, and the batch records describe what they do.
   with the elasticity template and stock scaffolding filtered out first.
 - **`pagetext.py`** — extracts the visible text of a notes page, keeping
   headings, list items, table cells and figure captions. Needed because the
-  published pages differ from `raw-notes/edexcel/`, sometimes substantially.
+  published pages differ from `_archive/raw-notes/edexcel/`, sometimes substantially.
 
 **The past-paper corpora are worth locating rather than re-extracting.** They
 were built once with a four-line Swift/PDFKit script (§7) and take a couple of
@@ -514,11 +514,11 @@ share back towards its ~15% target from the current 8%. Plan the calculation
 items deliberately, and note that AQA's 1.4.4 and 1.4.6 already use most of the
 standard schedule archetypes, so the numbers and the framings both have to be new.
 
-**`raw-notes/edexcel/` has markdown for all twenty Theme 3 topics** (3.2 is a
+**`_archive/raw-notes/edexcel/` has markdown for all twenty Theme 3 topics** (3.2 is a
 single file covering 3.2.1). Read it for speed, then diff against the published
 page.
 
-**Reading the notes.** `raw-notes/edexcel/` has markdown for most of Themes 2–4,
+**Reading the notes.** `_archive/raw-notes/edexcel/` has markdown for most of Themes 2–4,
 which is far quicker than scraping the HTML — but **the published pages are what
 counts**, and they differ. In Theme 1 the conversion dropped whole sections that
 the raw notes contain (see the 1.3.4 case in `REVIEW-NOTES.md` N-Q8). Read the
@@ -1072,7 +1072,7 @@ Points where that changed what could be asked:
   figures throughout: the 1.2.3 latte, the 1.2.5 t-shirts, the 1.2.8 £14/50
   surplus market and the 1.2.9 £2 tax all have fresh contexts and numbers.
 
-**The Edexcel notes for units 1.1 and 1.2 have no `raw-notes/` markdown** — only
+**The Edexcel notes for units 1.1 and 1.2 have no `_archive/raw-notes/` markdown** — only
 1.2.9, 1.2.10 and the 1.3/1.4 topics do. The 16 pages had to be read by
 extracting visible text from the HTML. A throwaway extractor that strips
 `<script>`, `<nav>` and tags while keeping headings, list items and table cells
@@ -1160,7 +1160,7 @@ first, every time.**
 **Two content defects found and logged, not fixed** — `REVIEW-NOTES.md` N-Q8.
 `1-3-4-information-gaps.html` promises adverse selection and moral hazard in its
 spec alert, meta description, OG and Twitter cards and JSON-LD, and never
-mentions either in the body; `raw-notes/edexcel/1.3.4.md` defines both, so the
+mentions either in the body; `_archive/raw-notes/edexcel/1.3.4.md` defines both, so the
 content was dropped in conversion. `1-4-2-government-failure.html` promises
 regulatory capture the same way and never delivers it. **The question sets were
 written to what the bodies actually teach, so neither term is tested.** If the
@@ -2257,7 +2257,7 @@ page asks students to be able to draw, and no AQA question uses it.
 `3-1-1-sizes-types-of-firms` promises "sole traders, partnerships, and private
 and public limited companies" in its spec alert and metadata, and the body never
 mentions limited companies at all. Unlike the Theme 2 cases this is not a
-conversion loss: `raw-notes/edexcel/3.1.1.md` does not contain the material
+conversion loss: `_archive/raw-notes/edexcel/3.1.1.md` does not contain the material
 either. The other three pages in this batch check out clean.
 
 | | |

@@ -53,7 +53,6 @@ EXCLUDED_PREFIXES = (
     "questions-data/",
     "past-paper-questions-data/",
     "flashcards-data/",
-    "raw-notes/",
     "docs/",
     "seo/",
     "_",  # Jekyll skips any path starting with underscore

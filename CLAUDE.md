@@ -74,7 +74,7 @@ one-off that created them and defaults to a dry run.
 is no markdown-to-page path any more. `scripts/convert_raw_notes.py` was
 deleted on 2026-08-13 (D44): it wrote a whole page into a path
 `build_notes_pages.py` now generates, and its 73 markdown sources in
-`raw-notes/` measured **0 of 73** still in sync with their live pages, worst
+`_archive/raw-notes/` measured **0 of 73** still in sync with their live pages, worst
 case 38% word overlap. Those files stay as historical drafts and are not a
 build input. Do not restore the script to "fix" its `<head>`; the `<head>` was
 never the problem, and `page_shell.py` owns it now anyway.
@@ -162,7 +162,7 @@ list. Two consequences that are not obvious:
 
 - **`_config.yml` decides what is published.** It exists only to hold an
   `exclude` list, which keeps the repo's working files off the site: `scripts/`,
-  `raw-notes/`, `docs/`, the seven `*-data/` directories (including
+  `_archive/raw-notes/`, `docs/`, the seven `*-data/` directories (including
   `boards-data/` and `notes-data/`) and the root markdown.
   Before it, `/REVIEW-NOTES.html`, `/CLAUDE.md` and `/scripts/build_glossary.py`
   were all live. **`exclude` replaces Jekyll's defaults rather than adding to
@@ -199,7 +199,7 @@ css/main.css                                                    site-wide
 css/pages/<page>.css                                            one per page
 js/components/, js/data/                                        hand-written; the rest is vendor
 images/diagrams/                                                112 note diagram PNGs (+83 SVGs in svg/)
-raw-notes/edexcel/<spec-code>.md                                HISTORICAL drafts, 0 of 73 in sync - see below
+_archive/raw-notes/edexcel/<spec-code>.md                                HISTORICAL drafts, 0 of 73 in sync - see below
 revision-notes/glossary/{,edexcel-a/,aqa/}                      generated glossary pages
 glossary-data/                                                  glossary source of truth
 boards-data/boards.json                                         canonical board identity, read by 5 generators via scripts/board_data.py

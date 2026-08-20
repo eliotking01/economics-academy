@@ -147,7 +147,7 @@ page is touched, per `CLAUDE.md`.
 
 | Item | Where | What it needs |
 | --- | --- | --- |
-| **N-Q8, three pages** | `1-4-2` regulatory capture; `2-2-2` the role of expectations; `2-5-4` sustainable development | New prose. None survives in `raw-notes/`, and **each is tested by a live question**, so cutting the claims would strand them. The only substantive item on this list |
+| **N-Q8, three pages** | `1-4-2` regulatory capture; `2-2-2` the role of expectations; `2-5-4` sustainable development | New prose. None survives in `_archive/raw-notes/`, and **each is tested by a live question**, so cutting the claims would strand them. The only substantive item on this list |
 | **N-Q7** | `2-6-5` HDI figures | Dated. Left by choice |
 | **N-Q11** | `2.4.1` and `2.4.2` | The two pages share 55 ten-word runs; roughly a third of 2.4.2 repeats 2.4.1. Restructuring. Left by choice |
 | **N1** | Two multiplier formulas | A leading space inside `\text{ Injection}`. Cosmetic; confirmed as authored, left deliberately |

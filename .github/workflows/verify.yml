@@ -8,7 +8,7 @@
 #
 # DO NOT add a build step, a deploy step, or `actions/deploy-pages`. Switching
 # Pages to Actions-based deployment disables _config.yml's `exclude`, which is
-# the only thing keeping scripts/, raw-notes/, docs/, seo/ and the root markdown
+# the only thing keeping scripts/, _archive/raw-notes/, docs/, seo/ and the root markdown
 # off the live site. DO-NOT-BREAK.md says so in as many words.
 #
 # Every check below was run locally and exits 0 before being added. A workflow

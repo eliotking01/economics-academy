@@ -438,7 +438,7 @@ Numbering matches the list the author triaged. **12 of 15 fixed, 3 left.**
 | 9 | `.notes-container` defined in two stylesheets | **Left** |
 | 10 | 3 relative asset paths | **Fixed** |
 | 11 | `confirmation.html` had no description or canonical | **Partly** — see below |
-| 12 | Stale `codex-promts/`, empty `raw-notes/aqa/` | **Deleted** |
+| 12 | Stale `codex-promts/`, empty `_archive/raw-notes/aqa/` | **Deleted** |
 | 13 | Filename outliers (`eliot_shirt.JPG` etc.) | **Left** |
 | 14 | 284 `target="_blank"` without `rel` | **Fixed** |
 | 15 | Dead `.coming-soon` CSS | **Removed** |
@@ -651,7 +651,7 @@ one-line revert if the other reading was intended.
 
 ### N-Q8 — six of nine pages fixed
 
-**Restored from `raw-notes/`, where the content had been written and lost in
+**Restored from `_archive/raw-notes/`, where the content had been written and lost in
 conversion:**
 
 - `1-3-4-information-gaps` — **adverse selection** and **moral hazard** now have
@@ -681,7 +681,7 @@ conversion:**
   `2-5-1-causes-of-growth`, which teaches both in full.
 
 **Still open — the three that need writing from scratch.** None survives in
-`raw-notes/`, so each needs new prose and a separate decision:
+`_archive/raw-notes/`, so each needs new prose and a separate decision:
 
 | Page | Promised and still missing |
 | --- | --- |
@@ -922,7 +922,7 @@ exactly that. A cross-reference would settle it.
 
 `2-5-3` is the worst of them. The heading *The Stages of the Trade Cycle* has
 nothing beneath it but a figure caption, so the page names none of the four
-phases. `raw-notes/edexcel/` still holds several of the missing sections,
+phases. `_archive/raw-notes/edexcel/` still holds several of the missing sections,
 including the accelerator in `2.2.3.md` and adverse selection and moral hazard in
 `1.3.4.md`, so some of this was written and lost in the conversion.
 
@@ -944,7 +944,7 @@ than usual and to stand alone for that reason, but it is a workaround: a student
 who gets one wrong and returns to the notes will find nothing there.
 
 **Two possible fixes, and they are different jobs.** Restore the missing sections
-from `raw-notes/`, or cut the over-claim from each spec alert and its metadata so
+from `_archive/raw-notes/`, or cut the over-claim from each spec alert and its metadata so
 the page describes itself accurately. The first is an economics content change;
 the second is a metadata correction. **Both need an explicit instruction.**
 
@@ -1097,7 +1097,7 @@ how they differ.
 
 As with the nine pages in N-Q8, the promise is repeated in the page's
 `metaDescription`, its OG and Twitter cards and its JSON-LD `description`, so the
-page is indexed for terms it does not explain. `raw-notes/edexcel/3.1.1.md` does
+page is indexed for terms it does not explain. `_archive/raw-notes/edexcel/3.1.1.md` does
 **not** contain the missing material either, so this is not a conversion loss —
 the alert claims more than was ever written.
 

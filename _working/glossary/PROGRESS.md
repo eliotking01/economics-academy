@@ -217,7 +217,7 @@ Per-board chip split: Edexcel 267, AQA 293.
     JSON-LD `isPartOf` names have ~20 inconsistent variants. 161 of 166
     `spec-alert`s match `(AQA|Edexcel) unit ([\d.]+) - <Title>`; the 5 that don't
     are AQA micro pages missing the ` - ` separator.
-12. `raw-notes/edexcel/*.md` is **not** a usable source: it covers only 73 of 166
+12. `_archive/raw-notes/edexcel/*.md` is **not** a usable source: it covers only 73 of 166
     pages, nothing for AQA, and its wording is a superseded April draft that
     differs from the live pages.
 

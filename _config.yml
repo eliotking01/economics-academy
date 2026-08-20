@@ -39,7 +39,6 @@ exclude:
   - questions-data/
   - past-paper-questions-data/
   - flashcards-data/
-  - raw-notes/
 
   # Internal documentation and working notes.
   - docs/

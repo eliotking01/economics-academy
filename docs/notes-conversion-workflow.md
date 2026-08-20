@@ -2,7 +2,7 @@
 
 When converting notes pages for this repository:
 
-- Read the source notes from `raw-notes/{topic}.md` e.g. 1.1.1.md
+- Read the source notes from `_archive/raw-notes/{topic}.md` e.g. 1.1.1.md
 - Update only the matching HTML page in `revision-notes/edexcel-theme-{1,2,3,4}/{topic}.html` e.g. 1-1-1-economics-as-a-social-science.html
 - Match the structure, classes, and layout used by existing notes pages in this repo, specifically within /revision-notes/edexcel-theme-1
 - Preserve all economics content accurately

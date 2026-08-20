@@ -61,7 +61,7 @@ ALLOWED_NAMES = {
 # that nobody sees is how PH10-060 lasted eleven phases in the first place.
 #
 # Currently empty, and worth keeping that way. Its one entry - PH10-060's
-# macro-application-uk-sa.md - was resolved by moving the file to raw-notes/
+# macro-application-uk-sa.md - was resolved by moving the file to _archive/raw-notes/
 # rather than by leaving it listed here, which is what the RESOLVED branch below
 # exists to push for.
 KNOWN: dict[str, str] = {}
