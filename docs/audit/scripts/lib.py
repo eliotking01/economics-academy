@@ -60,6 +60,10 @@ EXCLUDED_PREFIXES = (
 
 EXCLUDED_FILES = {
     "CLAUDE.md",
+    # Nested CLAUDE.md in PUBLISHED directories. The other six live in
+    # directories already covered by EXCLUDED_PREFIXES.
+    "revision-notes/CLAUDE.md",
+    "css/CLAUDE.md",
     "OWNER-TODO.md",
     "PROGRESS.md",
     "README.md",

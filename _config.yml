@@ -48,6 +48,14 @@ exclude:
   # site's own defects.
   - seo/
   - CLAUDE.md
+  # The nested CLAUDE.md files. Six of the eight sit in directories already
+  # excluded above; these two do NOT - revision-notes/ and css/ are published,
+  # so without these lines they would be served at /revision-notes/CLAUDE.md
+  # and /css/CLAUDE.md. scripts/verify_published_surface.py is the backstop
+  # (.md is not in its suffix whitelist) but it verifies AFTER the fact; Pages
+  # publishes whatever is on main. Add the line in the same commit as the file.
+  - revision-notes/CLAUDE.md
+  - css/CLAUDE.md
   - OWNER-TODO.md
   - PROGRESS.md
   - README.md
