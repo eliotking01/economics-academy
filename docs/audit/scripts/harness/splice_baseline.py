@@ -108,7 +108,7 @@ def main(argv) -> int:
         capture_output=True, text=True, check=True,
     ).stdout.split()
 
-    # Published pages only. 14 tracked .html under _working/flashcards/qa/
+    # Published pages only. 14 tracked .html under _archive/working/flashcards-qa/qa/
     # carry the placeholders too, and they are working files that the build
     # must not touch - splicing them here would make assertion 8 report 14
     # differing files outside every migrating family.

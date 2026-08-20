@@ -335,7 +335,7 @@ with no dependency, tested by `node scripts/test_question_search.js`.
 
 Live state: `docs/PAST-PAPERS-PROGRESS.md`. Phase 1 extraction QA:
 `_archive/extraction-qa-report.md`. AS extraction QA:
-`_working/question-bank/as-extraction-qa.md`.
+`_archive/working/question-bank/as-extraction-qa.md`.
 
 ## 8. Free practice questions — LIVE
 

@@ -1020,7 +1020,7 @@ the bootstrap; the fetch and the nav highlight were already vanilla and used
 none. What Phase 7 actually leaves for 4.10 is a 121-line file that is nothing
 but nav plumbing, with no async injection sequence to preserve.
 
-**`_working/flashcards/qa/`'s QA pages still carry placeholders** and now show
+**`_archive/working/flashcards-qa/qa/`'s QA pages still carry placeholders** and now show
 an empty div where the header was. They are unpublished frozen records of the
 flashcards work. Baking them would create copies of the nav that check 9 does
 not cover, which is the drift this phase removed. Left alone deliberately.

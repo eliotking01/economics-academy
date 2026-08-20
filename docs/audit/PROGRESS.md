@@ -1495,7 +1495,7 @@ desktop nav and the mobile panel, the nav's visible text, which item carries
 tested, covering every page type. The comparison was then proved capable of
 failing by retyping one nav label.
 
-**Left alone deliberately:** `_working/flashcards/qa/`'s QA pages keep their
+**Left alone deliberately:** `_archive/working/flashcards-qa/qa/`'s QA pages keep their
 placeholders and now show an empty div where the header was. They are
 unpublished frozen records; baking them would create copies of the nav that
 check 9 does not cover.
@@ -1827,7 +1827,7 @@ unmoved. It can only be generated **after** the pages are committed, because
 the date comes from `git log`, so it is folded in by amend.
 
 **Three more numbers were wrong, two of them in 4.10's own writing.** The
-`breakpoints({…})` call named **four** widths, not five. `_working/flashcards/qa/`
+`breakpoints({…})` call named **four** widths, not five. `_archive/working/flashcards-qa/qa/`
 holds **15** HTML files of which **14** carry the old tail, not 12 — they now
 request five deleted files, not three. CLAUDE.md's written-out four-script
 list is replaced by a pointer to `page_shell.SCRIPT_TAIL`, because a list
@@ -2257,7 +2257,7 @@ and PH03-048's 8 prescribed links do not exist.
 **The roadmap's "28 missing diagrams" is 21.** Six were already drawn under
 other filenames as panel splits, and one (`ppf-long-run-growth`) is drawn as
 part of a larger figure. The 21 carry **43 panels**, and the review sheet that
-settles each row is `_working/diagram-review/gaps.py` → `gaps.html`.
+settles each row is `_archive/working/diagram-review/gaps.py` → `gaps.html`.
 
 **Of the 21: 18 fit the locked 800×600 canvas (38 panels) and 3 do not.** The
 three are `price-elasticity-demand-ranges` (**five** panels),

@@ -99,7 +99,7 @@ once.
 ### Task 3b — AS extraction and integration: DONE
 
 **112 questions from 16 papers, all high confidence, all page mappings
-verified.** Full QA in `_working/question-bank/as-extraction-qa.md`.
+verified.** Full QA in `_archive/working/question-bank/as-extraction-qa.md`.
 
 The bank is now **552 questions from 64 papers**: Edexcel A Level 192, Edexcel
 AS 112, AQA 248. 90 generated pages, up from 75. **15 topics reach the volume

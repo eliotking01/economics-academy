@@ -1604,7 +1604,7 @@ ever want that chip to stand alone.
 Surfaced by `scripts/check_glossary_capitalisation.py`, which classifies every
 glossary definition by how it opens and has been reporting these two as
 **"Unclassified — needs a look"** since the glossary was built. It wrote them to
-`_working/glossary/capitalisation-report.md` and exited **0**, so nothing ever
+`_archive/working/glossary/capitalisation-report.md` and exited **0**, so nothing ever
 came of it. That silence is the governance half of the finding and is being fixed
 separately; this entry is the content half. PH10-063.
 
@@ -1730,7 +1730,7 @@ config call named FOUR widths, not five** — `xlarge`, `large`, `medium`,
 deleted lines and 0 added**, every one of them a `<script src>` for one of the
 two files; the tail is two scripts now.
 
-### 3. `_working/flashcards/qa/` requests five files that no longer exist
+### 3. `_archive/working/flashcards-qa/qa/` requests five files that no longer exist
 
 **Was three until 2026-08-12; `browser.min.js` and `breakpoints.min.js` joined
 the list when item 2 was fixed. And the page count was wrong: it is 14, not

@@ -91,7 +91,7 @@ unit. Both scoped to `.fc-face`, `.fc-sample-back` and `.fc-print-back`.
 
 ## TOOLING
 
-All three tools live in `_working/flashcards/qa/` (Jekyll-excluded, never
+All three tools live in `_archive/working/flashcards-qa/qa/` (Jekyll-excluded, never
 published). Every one of them needs the local server running first:
 
 ```
@@ -100,9 +100,9 @@ python3 -m http.server 8899          # from the repo root
 
 | Tool | What it does |
 | --- | --- |
-| `_working/flashcards/qa/audit.py` | Scans `flashcards-data/*/*.json` for issues A–D. `--issue A --show` lists every hit with context; `--deck <id>` narrows. No args = summary counts. |
-| `_working/flashcards/qa/measure.py` | Loads every card into the real page at both widths and records `scrollHeight` vs `clientHeight` per face. `--tag before` writes `measure-before.json`. This is what produced the overflow table above. |
-| `_working/flashcards/qa/shoot.py` | Screenshots real card faces. `shoot.py <card-id> [...] --side back --tag x`, or `--deck <id> --long 6` for the six longest backs in a deck. Images land in `_working/flashcards/qa/shots/<tag>/<card>-<side>-<width>.png`. |
+| `_archive/working/flashcards-qa/qa/audit.py` | Scans `flashcards-data/*/*.json` for issues A–D. `--issue A --show` lists every hit with context; `--deck <id>` narrows. No args = summary counts. |
+| `_archive/working/flashcards-qa/qa/measure.py` | Loads every card into the real page at both widths and records `scrollHeight` vs `clientHeight` per face. `--tag before` writes `measure-before.json`. This is what produced the overflow table above. |
+| `_archive/working/flashcards-qa/qa/shoot.py` | Screenshots real card faces. `shoot.py <card-id> [...] --side back --tag x`, or `--deck <id> --long 6` for the six longest backs in a deck. Images land in `_archive/working/flashcards-qa/qa/shots/<tag>/<card>-<side>-<width>.png`. |
 
 `frame.html` is the shared harness both `measure.py` and `shoot.py` load.
 
@@ -608,8 +608,8 @@ For Eliot, when reviewing:
 
 ```bash
 python3 -m http.server 8899 &                        # tools need this
-python3 _working/flashcards/qa/audit.py              # where things stand
-python3 _working/flashcards/qa/audit.py --issue A --show --deck aqa-macro
+python3 _archive/working/flashcards-qa/qa/audit.py              # where things stand
+python3 _archive/working/flashcards-qa/qa/audit.py --issue A --show --deck aqa-macro
 ```
 
 To dump the full text of a deck's outstanding A/D cards, ready to edit:
@@ -620,7 +620,7 @@ import json, subprocess
 DECK = "aqa-macro"
 ids = set()
 for issue in ("A", "D"):
-    out = subprocess.run(["python3", "_working/flashcards/qa/audit.py",
+    out = subprocess.run(["python3", "_archive/working/flashcards-qa/qa/audit.py",
                           "--issue", issue, "--deck", DECK],
                          capture_output=True, text=True).stdout
     for line in out.splitlines():
@@ -647,15 +647,15 @@ PY
 Then the loop for every batch:
 
 ```bash
-python3 _working/flashcards/qa/apply.py _working/flashcards/qa/edits/batch-NN.json
-python3 _working/flashcards/qa/touch.py <every id edited>
+python3 _archive/working/flashcards-qa/qa/apply.py _archive/working/flashcards-qa/qa/edits/batch-NN.json
+python3 _archive/working/flashcards-qa/qa/touch.py <every id edited>
 python3 scripts/build_flashcards.py
-python3 _working/flashcards/qa/audit.py
-python3 _working/flashcards/qa/shoot.py <a few ids> --side back --tag batch-NN
+python3 _archive/working/flashcards-qa/qa/audit.py
+python3 _archive/working/flashcards-qa/qa/shoot.py <a few ids> --side back --tag batch-NN
 python3 scripts/verify_html.py flashcards revision-notes
 ```
 
-Edit files live in `_working/flashcards/qa/edits/`. `apply.py` refuses to run
+Edit files live in `_archive/working/flashcards-qa/qa/edits/`. `apply.py` refuses to run
 unless every `old` matches byte for byte, and proves afterwards that nothing
 outside the named fields moved — so a stale or mistyped `old` costs nothing.
 
@@ -676,8 +676,8 @@ were removed at Eliot's request:
 flashcards/data 2/            flashcards-data/aqa 2/
 flashcards/aqa 2/             flashcards-data/edexcel-a 2/
 flashcards/edexcel-a 2/       past-paper-questions/aqa 2/
-_working/flashcards/print-qa 2/   _working/flashcards/player-qa 2/
-_working/flashcards/diagram-qa 2/
+_archive/working/flashcards-qa/print-qa 2/   _archive/working/flashcards-qa/player-qa 2/
+_archive/working/flashcards-qa/diagram-qa 2/
 ```
 
 Checked before deleting, all nine: **recursively empty** including hidden files;

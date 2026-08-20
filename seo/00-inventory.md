@@ -28,13 +28,13 @@ apex domain via `CNAME`, stock Jekyll build — there is no `.github/workflows/`
 | — deliberate `noindex` (`404.html`, `confirmation.html`) | 2 |
 | **Indexable pages** | **461** |
 
-A further 14 HTML files exist in `_working/flashcards/qa/` on disk but are
+A further 14 HTML files exist in `_archive/working/flashcards-qa/qa/` on disk but are
 untracked; they are excluded twice over (untracked *and* under `_`), so they
 cannot reach the site.
 
 PDFs: **284 tracked, 283 published** — 281 past papers plus
 `specificiations/aqa-spec.pdf` and `specificiations/edexcel-a-spec.pdf`. The one
-unpublished PDF is `_working/flashcards/qa/print-qa/deck.pdf`.
+unpublished PDF is `_archive/working/flashcards-qa/qa/print-qa/deck.pdf`.
 
 ### Breakdown by section
 

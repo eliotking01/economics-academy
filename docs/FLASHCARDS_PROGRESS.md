@@ -377,7 +377,7 @@ Useful QA techniques:
 - Print: stub `window.print`, click "Print this deck", render with Chrome
   `--print-to-pdf`, extract text via Swift PDFKit. PDF text sees CSS
   `text-transform: uppercase` output, so probe for "ANSWER" not "Answer".
-  Proof renders in `_working/flashcards/print-qa/`.
+  Proof renders in `_archive/working/flashcards-qa/print-qa/`.
 
 ## Completed work
 

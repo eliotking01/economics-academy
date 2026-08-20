@@ -19,3 +19,24 @@ here arrived by `git mv`, so its full history came with it.
 | `PROJECT-LOG.md` | Superseded by `PROGRESS.md`, which absorbed everything in it that was still true on 2026-08-20. Most of its "what remains flagged" list had been fixed without the file being updated. | 2026-08-20 |
 | `ROADMAP.md` | Folded into `OWNER-TODO.md`. Its two "Now" items had both shipped. | 2026-08-20 |
 | `raw-notes/` | 75 markdown drafts the Edexcel notes were originally written from. **0 of 73 are still in sync with their live page** (median word overlap 0.63, worst 0.40, re-measured 2026-08-20). The script that consumed them, `convert_raw_notes.py`, was deleted on 2026-08-13 under D44. Historical only — never a build input. | 2026-08-20 |
+
+## `working/`
+
+Finished working material moved out of `_working/` on 2026-08-20, once the work
+it belonged to was live. Reference, not input — nothing reads any of it.
+
+| Path | What it is |
+| --- | --- |
+| `working/flashcards-qa/` | 61 files: QA screenshots, measurement JSON and the scripts that produced them, from the flashcard build. The decisions they informed are in `docs/FLASHCARDS_PROGRESS.md`. |
+| `working/glossary/` | Seven decision and gap reports from the glossary build. The two files still consulted — `PROGRESS.md` and `authored-review.md` — stayed in `_working/glossary/`. |
+| `working/diagram-review/` | The review tooling for the diagram pass. |
+| `working/question-bank/` | The Edexcel AS extraction QA and a dry-run log. |
+| `audit-2026-08-20/` | The repo audit, the restructure plan and the CLAUDE.md migration mapping. Dated records of the tree as it stood that day; paths inside them are **not** rewritten when files move later. |
+
+**What deliberately stayed in `_working/`:**
+
+- `_working/fontawesome/fa-solid-900.woff2` — the **full** Font Awesome font that
+  `scripts/subset_fontawesome.py` trims to the 15 icons the site uses. Load-bearing:
+  without it no new icon can ever be added.
+- `_working/glossary/PROGRESS.md` and `authored-review.md` — still cited by
+  `glossary-data/CLAUDE.md` and several docs.
