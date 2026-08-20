@@ -11,8 +11,8 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 
 | Phase | State |
 | --- | --- |
-| Phase 0 — reconnaissance | Complete — plan retired, see `PROJECT-LOG.md` |
-| Phase 1A — mechanical plan | Complete — plan retired, see `PROJECT-LOG.md` |
+| Phase 0 — reconnaissance | Complete — plan retired, see `_archive/PROJECT-LOG.md` |
+| Phase 1A — mechanical plan | Complete — plan retired, see `_archive/PROJECT-LOG.md` |
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |

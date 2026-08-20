@@ -62,7 +62,6 @@ EXCLUDED_FILES = {
     "CLAUDE.md",
     "OWNER-TODO.md",
     "PROGRESS.md",
-    "PROJECT-LOG.md",
     "README.md",
     "ROADMAP.md",
     "requirements.txt",

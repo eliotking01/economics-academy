@@ -1,12 +1,18 @@
 # Site Work — Progress
 
-The record of the 2026 site-wide overhaul. A fresh session should read this
-first, then CLAUDE.md. Excluded from publishing via `_config.yml`.
+**The single record of what has been built on this site, and the entry point
+for a fresh session — read this first, then CLAUDE.md.** Excluded from
+publishing via `_config.yml`.
 
-Reorganised 2026-08-16 into its final state: the overhaul is complete, so
-this file is now a map — one section per project with what changed and the
-traps, newest first. The exhaustive per-item wording lists each branch
-carried for review live in this file's own git history, not here.
+One section per project, newest first. The exhaustive per-item wording lists
+each branch carried for review live in this file's own git history, not here.
+
+Reorganised 2026-08-16 when the site-wide overhaul finished. **On 2026-08-20 it
+absorbed `PROJECT-LOG.md`**, which covered the five older projects and is now at
+`_archive/PROJECT-LOG.md`. Everything of its that was still true is in §5–§9 and
+in "What remains flagged" below; most of its flagged list had quietly been
+fixed without the file being updated, which is why that list is now dated and
+says how each line was checked.
 
 ## The overhaul at a glance
 
@@ -17,6 +23,11 @@ carried for review live in this file's own git history, not here.
 | Marking page + payment journey | live | 2026-08-15 | `d4be06b` |
 | Home page revamp | live | 2026-08-14 | `f53b7fe` |
 | Tutoring page SEO rework | live | 2026-08-14 | `e09cdef` |
+| Flashcards | live | 2026-08-15 | §5 |
+| Glossary & formulae | live | 2026-08-09 | §6 |
+| Past paper question bank | live | 2026-08-13 | §7 |
+| Free practice questions | live | 2026-08-01 | §8 |
+| Notes consistency & enrichment | live | 2026-08-01 | §9 |
 
 Everything Eliot still has to do himself is in OWNER-TODO.md (consolidated
 2026-08-16). The ~22 September 2026 GSC check and its baselines are recorded
@@ -202,9 +213,19 @@ verified page by page before publishing. Previews are 800px JPEGs
 generated with PDFKit via Swift; verify_page_shell's image expectations
 moved to 106 pages / 312 images / 10 all-lazy in the same commit
 (marking.html's two images are below the fold, so it joined the all-lazy
-list). The 8.6 MB scan was deliberately NOT compressed: it downloads only
-on click, so page metrics never see it, and compression would soften the
-handwriting the panel exists to show.
+list).
+
+**The 8.6 MB scan WAS compressed on 2026-08-20 (`6cc2d65`), reversing the
+decision recorded here.** The original reasoning was that it downloads only on
+click, so page metrics never see it, and that compression would soften the
+handwriting the panel exists to show. Eliot asked for it to be reduced if
+appearance held up, and the second half of that reasoning was tested rather
+than assumed: the PDF has **no text layer at all** — eight pages, one scanned
+image each, embedded at roughly 445 DPI — so it was re-rendered at 150 DPI,
+JPEG quality 80, page dimensions preserved exactly. Compared at 200 DPI
+magnification the handwriting and blue annotation are indistinguishable from
+the original. **8.6 MB → 1.77 MB, 79% smaller.** If it is ever re-exported from
+the scanner, re-run that step; the source PDF is in git history at `fca6d93`.
 
 ## 3. Home page revamp — LIVE (2026-08-14, merge `f53b7fe`)
 
@@ -234,3 +255,223 @@ use). faq.html prices updated in lockstep.
 
 Baseline for ~22 Sept: position 26.27 / 440 impressions / 17 clicks
 (2026-08-08 export).
+
+## 5. Flashcards — LIVE
+
+Interactive revision flashcards at `/flashcards/`, one deck per board per
+theme, with Leitner spaced repetition in localStorage. Six decks: Edexcel A
+Themes 1–4, AQA micro and macro.
+
+`flashcards-data/<board>/<theme>.json` is hand-authored source and is not
+published; `scripts/build_flashcards.py` writes the pages and the runtime
+payloads in `flashcards/data/`. Cards marked `premium: true` never enter the
+public payloads — that flag exists so premium content can later be excluded
+without restructuring, because **the repo is public and client-side paywalling
+is not sufficient**. Diagram cards reference the hand-authored SVGs in
+`images/diagrams/svg/`, which is why those 84 files look unreferenced to any
+tool that only greps HTML.
+
+Live state and the full decision record: `docs/FLASHCARDS_PROGRESS.md`.
+Suspected notes errors found while writing cards: `docs/CONTENT_ISSUES.md` —
+logged, never fixed unilaterally.
+
+## 6. Glossary & formulae — LIVE (merged 2026-08-09)
+
+Every definition and formula a student needs, one page per exam board, at
+`/revision-notes/glossary/`.
+
+| | |
+| --- | ---: |
+| Terms | **325** |
+| …Edexcel A / AQA | 269 / 290 |
+| Formulae | **34** |
+| Extracted verbatim from the notes | 251 |
+| Written for the glossary | 74 |
+
+**How it works.** `scripts/extract_glossary.py` reads the topic pages and writes
+`glossary-data/terms.json`; `scripts/build_glossary.py` renders the three pages
+and runs Prettier over its own output, so regenerating is byte-identical.
+Formulae are pre-rendered with KaTeX at build time, so the pages carry no maths
+JavaScript and work with JavaScript off.
+
+**The rule, and its two exceptions.** Definitions are the notes' own words,
+lifted verbatim, and `verify_glossary.py` check 1 re-reads each notes page and
+fails if a shipped definition is no longer in it. The exceptions are
+`glossary-data/authored.json` (definitions written to fill gaps the notes never
+covered, tagged `origin="authored"` and exempt from that check) and the
+`rewrite` block in `curation.json`, which edits lead-ins at render time. Both
+are counted on every verify run so neither goes quiet.
+
+**Judgement is kept out of the extractor** and in `glossary-data/curation.json`,
+which the scripts only read — the same split as `tags.json` against
+`taxonomy.json`.
+
+What it found in the notes: two AQA formulae wrote `%` unescaped, so they
+rendered broken on the live pages too (fixed); allocative, productive and
+dynamic efficiency had no definition anywhere; the four marginal propensities
+were undefined while four multiplier formulae depended on them.
+
+Live state: `_working/glossary/PROGRESS.md`. The authored definitions:
+`_working/glossary/authored-review.md`.
+
+## 7. Past paper question bank — LIVE
+
+A searchable bank of **real** exam questions at `/past-paper-questions/`,
+Edexcel A (9EC0 A Level, 8EC0 AS) and AQA A Level.
+
+**It reproduces real exam question text verbatim, which is the one decisive
+difference from §8's practice bank, where every question must be 100% original.
+The two never share a data path.** Section A is permanently out of scope for
+every board. Mark scheme content is never extracted; each question deep-links
+to the site's own hosted PDF at the right page.
+
+Source attributions are stripped at extraction, not afterwards, and
+`scripts/strip_source_attributions.py` is the re-runnable safety net that must
+report 0 changes — that agreement is the test.
+
+PDF work uses **Swift + PDFKit**, not Python. Search is
+`js/components/question-search.js`, a small bounded-edit-distance token index
+with no dependency, tested by `node scripts/test_question_search.js`.
+
+Live state: `docs/PAST-PAPERS-PROGRESS.md`. Phase 1 extraction QA:
+`_archive/extraction-qa-report.md`. AS extraction QA:
+`_working/question-bank/as-extraction-qa.md`.
+
+## 8. Free practice questions — LIVE
+
+A bank of **original** multiple-choice questions, one set per topic page, built
+over thirty batches.
+
+| | |
+| --- | ---: |
+| Topics | **166 of 166** |
+| Questions | **1,267** |
+| Answer letters | A 320, B 358, C 331, D 258 |
+| Skills | applied-reasoning 790, definition-in-context 247, data-table 127, calculation 103 |
+| Difficulty | foundation 155, standard 950, stretch 162 |
+
+| Board / theme | Topics | Questions |
+| --- | ---: | ---: |
+| AQA Microeconomics | 54 | 401 |
+| AQA Macroeconomics | 25 | 209 |
+| Edexcel Theme 1 | 22 | 166 |
+| Edexcel Theme 2 | 24 | 198 |
+| Edexcel Theme 3 | 20 | 148 |
+| Edexcel Theme 4 | 21 | 145 |
+
+**How it works.** `questions-data/<board>/<spec>.json` is the single source of
+truth — despite the name, it feeds `/practice-questions/`, not the past-paper
+bank. `scripts/build_questions.py` validates it and writes the pages, the five
+board indexes and the hub, so the visible HTML and the JSON-LD cannot drift.
+
+**Every one of the 1,267 questions was re-solved cold from the stem alone**, in
+the batch it was written in, and diffed against the recorded key. That step
+found real defects and should be the last thing anyone drops.
+
+**Originality was checked mechanically every batch** — shingled against the AQA
+and Edexcel past-paper corpora, against the rest of the bank, and by comparing
+numeric option sets against option blocks extracted from the papers. Re-measured
+2026-08-20 across the two banks: **0 exact and 0 near-duplicate stems**, best
+difflib ratio 0.000.
+
+The authoring standard is `docs/QUESTIONS_GUIDE.md`. The batch record, the twin
+maps and the nine recurring failure modes are in `docs/QUESTIONS_PROGRESS.md`;
+read §8 (cross-board duplication) and §9 (concept-grep) before extending the
+bank — they decided the shape of every batch after the twelfth.
+
+**A written-response extension was piloted and reverted on review** — an
+optional `written` array, generator support, a stylesheet block and ten
+questions across five topics. Recoverable in one command from `be4d7b8`.
+
+## 9. Notes consistency & enrichment pass — LIVE
+
+Two jobs in one branch: make the 166 topic pages structurally consistent, then
+add a small number of teaching components where a page genuinely needed one.
+
+| | Before | After |
+| --- | ---: | ---: |
+| Generic "Exam Preparation" sections | 87 | **0** |
+| Topic pages with exactly one `.notes-cta` | — | **166 / 166** |
+| Inline-styled CTA blocks | 89 | **0** |
+| Dead `chart-container` wrappers | 211 | **0** |
+| `formula-box` divs without `prettier-ignore` | 28 | **0** |
+| Unescaped `<` in note text | 32 | **0** |
+
+The removed Exam Preparation text is archived verbatim in
+`docs/removed-exam-preparation-sections.md`, in case any of it is worth
+re-siting as an in-context exam tip.
+
+**31 components across 34 of 166 pages.** 132 pages received nothing, by design
+— the house rule is a maximum of two components per page and roughly 80% of
+pages carrying none. Worked examples and exam tips only; every figure verified
+by recomputation. The per-component inventory is `_archive/NEW-CONTENT-LOG.md`.
+
+**One wording change was made in the whole pass** — a single word on
+`3-4-4-oligopoly`, on explicit instruction, correcting "five" to "three" in a
+concentration-ratio sentence.
+
+Two related sweeps sit under this heading:
+
+- **Site-wide scan, 31 July 2026.** 12 of 15 findings fixed, including 55
+  keyboard-inaccessible accordions, heading-level skips on 12 pages, `lang="en"`
+  on 22 pages, and 284 `target="_blank"` links without `rel`.
+- **Notes corrections, 1 August 2026.** Twenty findings raised while writing the
+  question sets, logged N-Q1 to N-Q20 in `docs/REVIEW-NOTES.md`; **16 applied.**
+  Two corrections to the findings themselves are worth carrying forward: the
+  N-Q10 figure-number scan reported one page that was not broken (`1-5-11`,
+  whose `2a`/`2b` captions defeated the regex) and missed one that was
+  (`2-5-1`). Any re-run must allow for the lettered caption form. One question
+  was removed from the bank — `4.1.9` Q8, with the over-claim it depended on,
+  which is why the total is 1,267 and not 1,268.
+
+## What remains flagged
+
+Absorbed from `PROJECT-LOG.md` (now `_archive/PROJECT-LOG.md`) on 2026-08-20 and **re-checked line by line
+before being written down here**, because most of the list it arrived with had
+already been fixed without the file being updated. How each was checked is
+stated. Nothing here blocks anything, and everything needs an explicit
+instruction before a page is touched, per CLAUDE.md.
+
+### Still open — economics content
+
+The evidence for each is in `docs/REVIEW-NOTES.md` under the given ID. These
+are **carried over and not independently re-verified**, except where stated.
+
+| Item | Where | What it needs |
+| --- | --- | --- |
+| **N-Q8** | AQA `2-2-2` the role of expectations | New prose, and it is tested by a live question, so cutting the claim would strand it. Checked 2026-08-20: the phrase appears 0 times on the page, so this one is still open. The other two N-Q8 pages are now fixed — `1-4-2` covers regulatory capture and `2-5-4` covers sustainable development |
+| **N-Q11** | Edexcel `2.4.1` and `2.4.2` | Still duplicating. Re-measured 2026-08-20: **90 shared ten-word runs**, about 17% of 2.4.2's body. Restructuring. Left by choice |
+| **N-Q7** | `2-6-5` HDI figures | Dated. Left by choice |
+| **N1** | Two multiplier formulas | A leading space inside `\text{ Injection}`. Cosmetic; confirmed as authored, left deliberately |
+| **N6** | `1-2-3` elasticities | The midpoint formula went with an Exam Preparation section. **Decided: leave it out** — Edexcel uses the original-value method and the page's worked example agrees |
+| **C4** | AQA `2-2-3`, `1-5-6` | Both were reported as cross-referencing Edexcel theme numbers that do not exist in the AQA specification. **Not re-verified** — a grep for "Theme N" now matches the baked nav on every page, so it needs reading, not grepping |
+| **C5** | `2-1-2` | Confirm the unemployment-rate denominator matches the ONS/ILO definition given a few lines above |
+| **G4** | `Regulation` | Defined twice, from two notes pages, and neither reads as a definition |
+
+### Still open — housekeeping
+
+| Item | Status on 2026-08-20 | Fix |
+| --- | --- | --- |
+| **`.notes-container` defined in more than one stylesheet** | **Worse than recorded.** PROJECT-LOG said two; it is now **five**: `revision-notes-topics`, `revision-notes-textbook`, `glossary`, `macro-application`, `practice-questions` | Scope each under its page wrapper, per the CSS convention in CLAUDE.md |
+| **Prettier fails on three files** | Confirmed with `npx prettier@3.9.6 --check`: `css/main.css`, `revision-notes/index.html`, `revision-notes/macro-application/index.html` | main.css is a `box-shadow` list and pre-existing. The two HTML files must NOT simply be formatted — trap 1 |
+| **`404.html` has no canonical and no Open Graph tags** | Confirmed: 0 matches | Defensible for a 404. Listed so it stays a decision |
+| **`.year-header h4` in `css/pages/past-papers-list.css`** | Still present at line 45 while line 196 styles `.year-header h2` | Likely dead. Read the markup before deleting |
+| **Web-font layout shift** | Not re-measured. CLS was 0.078 on a notes page and 0.154 on a questions page | Self-host with `size-adjust`, or preload the woff2 the fold needs |
+| **OCR A Level Paper 3, June 2023** | **The question paper is missing.** Both PDFs at that path are the mark scheme, byte-identical, md5 `35b8975c…`. Confirmed by Eliot and verified independently; a sweep of all 281 PDFs found no other case | Download H460/03 June 2023 from OCR and save it over the existing filename. No URL, link or sitemap change |
+
+### Closed since PROJECT-LOG was written — do not re-raise
+
+Each was on its "still flagged" list and each is now done. Checked 2026-08-20.
+
+- **`navPanel` `aria-hidden`** — the accessibility failure that held every page
+  at 96. `js/components/nav.js` now uses `inert`, which takes the panel out of
+  the tab order *and* the accessibility tree from one attribute.
+- **Breadcrumb contrast** — `css/main.css` now carries the reasoning at line
+  3464; the old `#7f888f` is gone.
+- **Dead Edexcel B mark-scheme links** — 65 PDF links on that hub, 0 missing.
+- **N-Q8 on `1-4-2` and `2-5-4`** — both now cover what they promised.
+- **Merging `feature/topic-questions`** — live, §8.
+- **Merging `feature/glossary`** — live, §6.
+- **`inject-templates.js`** — replaced by `js/components/nav.js` at Wave 4.10.
+  Nothing is fetched at page load any more. `_config.yml` still described it as
+  a runtime fetch until 2026-08-20.

@@ -576,8 +576,10 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
   pages. **Cite `python3 scripts/verify_glossary.py` check 1 for the second** —
   the pair was written here as 76 and 137 and re-derived on 2026-08-12 as 77
   and 138.
-- `PROJECT-LOG.md` — what the two large pieces of work did, and the single
-  consolidated list of what is still flagged. **Start here.**
+- `PROGRESS.md` — **START HERE.** The single record of every project built on
+  this site and the one consolidated list of what is still flagged, re-checked
+  2026-08-20. It absorbed `PROJECT-LOG.md`, now at `_archive/PROJECT-LOG.md`.
+- `OWNER-TODO.md` — the things only Eliot can do. It absorbed `ROADMAP.md`.
 - `docs/PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
 - `docs/FLASHCARDS_PROGRESS.md` — live state of the flashcards build.
 - `docs/DIAGRAM_STYLE.md` — the locked SVG diagram style guide.

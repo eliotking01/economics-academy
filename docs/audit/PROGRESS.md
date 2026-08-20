@@ -154,7 +154,7 @@ on copyright grounds and recorded in `DECISIONS.md` D12 and `DO-NOT-BREAK.md`.
   `/.codex/notes-workflow.html`), 10 unreferenced diagram PNGs.
 - **Governance:** 12 progress documents, 9,336 lines, with known-defect logging
   split three ways between `docs/REVIEW-NOTES.md`, `docs/CONTENT_ISSUES.md` and
-  `PROJECT-LOG.md` — the last of which claims to be the only one.
+  `_archive/PROJECT-LOG.md` — the last of which claims to be the only one.
 
 ---
 
@@ -597,7 +597,7 @@ hooks; the quality of `CLAUDE.md`; the overlapping progress documents.
   nothing about breakpoints, and there are two systems.
 - P1 measured the governance surface: **12 progress documents, 9,336 lines**, with
   known-defect logging split three ways between `docs/REVIEW-NOTES.md`,
-  `docs/CONTENT_ISSUES.md` and `PROJECT-LOG.md` — the last of which claims to be
+  `docs/CONTENT_ISSUES.md` and `_archive/PROJECT-LOG.md` — the last of which claims to be
   the only one. The audit has since added its own `_audit/` tree, which P10 should
   say what happens to.
 
