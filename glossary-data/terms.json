@@ -5,7 +5,7 @@
     "pages": 166,
     "authoredTerms": 77,
     "authoredFormulae": 4,
-    "termsExtracted": 598,
+    "termsExtracted": 596,
     "uniqueTerms": 325,
     "termsOnBothBoards": 234,
     "termsWithVariantDefinitions": 43,
@@ -5852,19 +5852,6 @@
           "termAsWritten": "Information provision (positive advertising)",
           "origin": "chip",
           "definitionHtml": "the government can provide information about the benefits of certain goods, such as public health campaigns about the importance of vaccination. This can shift the D=MPB curve up, increasing demand for the merit good.",
-          "definitionListHtml": "",
-          "listIsDefinition": false
-        },
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Information provision (negative advertising)",
-          "origin": "chip",
-          "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good.",
           "definitionListHtml": "",
           "listIsDefinition": false
         },
@@ -12075,19 +12062,6 @@
       "definitionVariants": 1,
       "review": [],
       "sources": [
-        {
-          "board": "aqa",
-          "group": "microeconomics",
-          "groupLabel": "Microeconomics",
-          "spec": "1.8.4",
-          "topic": "Positive and Negative Externalities in Consumption and Production",
-          "notesUrl": "/revision-notes/aqa-a2-micro/1-8-4-positive-and-negative-externalities-in-consumption-and-production.html",
-          "termAsWritten": "Subsidising alternatives",
-          "origin": "chip",
-          "definitionHtml": "provide financial incentives for consumers to choose goods or services that have positive externalities, such as subsidies for public transport or renewable energy. This reduces demand for the demerit good as consumers switch to the subsidised alternatives.",
-          "definitionListHtml": "",
-          "listIsDefinition": false
-        },
         {
           "board": "aqa",
           "group": "microeconomics",

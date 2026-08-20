@@ -10,7 +10,7 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | pages | 166 |
 | authoredTerms | 77 |
 | authoredFormulae | 4 |
-| termsExtracted | 598 |
+| termsExtracted | 596 |
 | uniqueTerms | 325 |
 | termsOnBothBoards | 234 |
 | termsWithVariantDefinitions | 43 |
@@ -171,7 +171,7 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **T139** | Indirect Taxes | AE | 2 | Theme 1 1.2.9, Macroeconomics 2.5.1, Theme 4 4.5.2 |
 | **T140** | Inflation | AE | 2 | Macroeconomics 2.3.3, Macroeconomics 2.1.3, Theme 2 2.1.2 |
 | **T141** | Information gaps | AE | 1 | Microeconomics 1.2.2, Microeconomics 1.8.6, Theme 1 1.3.4 |
-| **T142** | Information Provision | AE | 3 | Microeconomics 1.8.9, Theme 1 1.4.1, Microeconomics 1.8.4, Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.3.2 |
+| **T142** | Information Provision | AE | 3 | Microeconomics 1.8.9, Theme 1 1.4.1, Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2, Theme 1 1.3.2 |
 | **T143** | Innovation | A | 1 | Microeconomics 1.4.8 |
 | **T144** | Inorganic Growth | E | 1 | Theme 3 3.1.2 |
 | **T145** | Interest rates | AE | 1 | Macroeconomics 2.4.3, Theme 2 2.6.2 |
@@ -322,7 +322,7 @@ Judgement belongs in `glossary-data/curation.json`, which this never touches.
 | **T290** | Structural deficit | AE | 1 | Macroeconomics 2.5.1, Theme 4 4.5.3 |
 | **T291** | Structural Unemployment | AE | 1 | Macroeconomics 2.3.2, Theme 2 2.1.3 |
 | **T292** | Subsidies | AE | 2 | Theme 1 1.2.9, Microeconomics 1.8.4 |
-| **T293** | Subsidising alternatives | AE | 1 | Microeconomics 1.8.4, Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2 |
+| **T293** | Subsidising alternatives | AE | 1 | Microeconomics 1.8.4, Theme 1 1.3.2, Theme 1 1.3.2 |
 | **T294** | Subsidy | AE | 1 | Microeconomics 1.3.3, Theme 1 1.2.9 |
 | **T295** | Sunk costs | AE | 1 | Microeconomics 1.5.9, Theme 3 3.4.7 |
 | **T296** | Supernormal Profit | AE | 1 | Microeconomics 1.4.7, Theme 3 3.3.4 |
