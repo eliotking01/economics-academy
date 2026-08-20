@@ -22,18 +22,10 @@ priority order within each group.
 
 ## Soon
 
-- [ ] **Request indexing in Search Console — 14 URLs left** (quota is roughly
+- [ ] **Request indexing in Search Console — 3 URLs left** (quota is roughly
       10/day; the 9 that already rank are done, see the Done section).
-      Priority order:
-      1. The 12 new-section pages Google barely knows: six flashcards decks
-         (`/flashcards/edexcel-a/theme-1/` … `theme-4/`,
-         `/flashcards/aqa/micro/`, `/flashcards/aqa/macro/`) and six
-         practice-questions theme pages
-         (`/practice-questions/edexcel-theme-1/` … `-4/`,
-         `/practice-questions/aqa-a2-micro/`,
-         `/practice-questions/aqa-a2-macro/`).
-      2. `/about.html` and `/contact.html` — both live since 2026-08-16 and
-         substantially changed, so worth a nudge even though neither ranks.
+      Priority order: 1.`/practice-questions/aqa-a2-macro/`, `/about.html` and `/contact.html` — both live since 2026-08-16 and
+      substantially changed, so worth a nudge even though neither ranks.
 - [ ] **Phone skim** of the live pages changed recently, once each: marking
       (packages, enquiry box, the two real example panels), home (photo,
       wording, form), About and Contact (all live now).
