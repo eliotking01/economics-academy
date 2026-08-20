@@ -75,7 +75,7 @@ priority order within each group.
 - **Never edit generated pages by hand** (Claude knows which are which — if
   in doubt, ask before editing anything under revision-notes/, flashcards/,
   practice-questions/ or the glossary).
-- **Content mistakes you spot** go in REVIEW-NOTES.md (site) or
+- **Content mistakes you spot** go in docs/REVIEW-NOTES.md (site) or
   docs/CONTENT_ISSUES.md (flashcards) rather than being fixed on the spot,
   so every wording change stays deliberate.
 

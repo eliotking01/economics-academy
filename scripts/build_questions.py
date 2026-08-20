@@ -3,7 +3,7 @@
 
 One JSON file per topic under questions-data/ is the single source of truth
 for both the visible HTML and the schema.org JSON-LD, so the two cannot
-drift. The authoring standard the JSON is written to is QUESTIONS_GUIDE.md.
+drift. The authoring standard the JSON is written to is docs/QUESTIONS_GUIDE.md.
 
 The script validates every set before writing anything. A set that fails
 validation stops the whole run - no page is written from a bad source.

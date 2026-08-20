@@ -18,7 +18,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
 | Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `_archive/NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
-| Practice questions (separate project) | **Complete — 166 of 166 topics, 1,267 questions** — state in `QUESTIONS_PROGRESS.md` |
+| Practice questions (separate project) | **Complete — 166 of 166 topics, 1,267 questions** — state in `docs/QUESTIONS_PROGRESS.md` |
 
 **If you are resuming, read the last section of this file first** — *State of
 play for a new session*. It indexes everything still outstanding and says what
@@ -761,7 +761,7 @@ is self-contained. Needs a decision.
 # Found while writing the AQA macro questions — units 2.1 to 2.6 (2026-08-01)
 
 Everything below was found by reading all 25 AQA macro notes pages closely while
-writing the question sets for them (batches 6 to 11, `QUESTIONS_PROGRESS.md`).
+writing the question sets for them (batches 6 to 11, `docs/QUESTIONS_PROGRESS.md`).
 
 **Nothing here has been changed.** Content and wording are the author's call, per
 `CLAUDE.md`. None of it blocks the question sets — each set was written around
@@ -783,7 +783,7 @@ page cited from an **AQA** page, using Edexcel's real theme numbering.
 
 Two problems follow. A student working through AQA macro has never seen a
 "4.5.2" and has no way to place it, which is exactly the two-numbering-systems
-confusion `CLAUDE.md` and `QUESTIONS_GUIDE.md` both take pains to avoid. And it
+confusion `CLAUDE.md` and `docs/QUESTIONS_GUIDE.md` both take pains to avoid. And it
 is plain text rather than a link, so even a student who guesses what it means
 cannot follow it.
 
@@ -819,7 +819,7 @@ narrow money:
 > Narrow money (M1) includes the most liquid forms of money, such as cash and
 > demand deposits (checking accounts).
 
-The UK term is **current accounts**. `QUESTIONS_GUIDE.md` enforces UK English in
+The UK term is **current accounts**. `docs/QUESTIONS_GUIDE.md` enforces UK English in
 the question sets through a spelling blocklist, and the notes follow the same
 house rule elsewhere. The parenthesis is the only US-ism I found across the 25
 macro pages.
@@ -882,7 +882,7 @@ Confirm it rather than assuming, by comparing URL sets and the entries with
 `lastmod` stripped out — zero URLs removed and zero entries lost means it is a
 date change only. And run the guard against `revision-notes/ templates/ js/ css/`
 **separately**, since that is the check that actually protects the notes. Fuller
-notes in `QUESTIONS_PROGRESS.md`, batch 11.
+notes in `docs/QUESTIONS_PROGRESS.md`, batch 11.
 
 ---
 # Found while writing the Edexcel practice questions — Themes 1 and 2 (2026-08-01)
@@ -1041,7 +1041,7 @@ page carries.
 
 **The practice-questions project is at 121 topics and 940 questions**, on branch
 `feature/topic-questions`, nothing pushed. Batch state, the authoring standard
-and the per-unit records are in `QUESTIONS_PROGRESS.md`, which is the file to
+and the per-unit records are in `docs/QUESTIONS_PROGRESS.md`, which is the file to
 read first — this one holds only the site problems found along the way.
 
 Outstanding here, all needing an explicit instruction before anything is touched:

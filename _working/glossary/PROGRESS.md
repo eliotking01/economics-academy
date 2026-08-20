@@ -47,7 +47,7 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 ### Phase 1 — Setup — COMPLETE
 
 - [x] 1.1 Branch `feature/glossary`, create `_working/glossary/`, write `PROGRESS.md`
-- [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `REVIEW-NOTES.md`; `ROADMAP.md` updated
+- [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `docs/REVIEW-NOTES.md`; `ROADMAP.md` updated
 
 ### Phase 2 — Extraction & gap analysis — COMPLETE
 
@@ -245,7 +245,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | --- | --- |
 | `_working/glossary/PROGRESS.md` | Created (this file) |
 | `CLAUDE.md` | Modified — new "How publishing works" and "Glossary & formulae" sections; 3 lines added to Layout; 1 line to See also |
-| `REVIEW-NOTES.md` | Appended — G1 (MathJax missing on `2-1-3`), G2 (`.formula-box` unstyled) |
+| `docs/REVIEW-NOTES.md` | Appended — G1 (MathJax missing on `2-1-3`), G2 (`.formula-box` unstyled) |
 | `ROADMAP.md` | Modified — glossary under Now; flashcards, KaTeX migration and PDF export under Someday |
 | `scripts/extract_glossary.py` | Created — the extractor and the review-file generator |
 | `glossary-data/curation.json` | Created — hand-written judgement, no definition text |

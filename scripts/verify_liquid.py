@@ -8,7 +8,7 @@ markdown file before Markdown**. A stray `{%` therefore opens a Liquid tag that
 is never closed, and the whole deploy fails - not the one page, the deploy.
 
 Backticks do not help. Liquid runs first and has no idea what a code span is.
-This is how it failed once, in REVIEW-NOTES.md, on a line documenting a LaTeX
+This is how it failed once, in docs/REVIEW-NOTES.md, on a line documenting a LaTeX
 bug:
 
     `\\text{% Change in Real GDP} = ...`

@@ -98,8 +98,8 @@ defects and should be the last thing anyone drops.
 Edexcel past-paper corpora, against the rest of the bank, and by comparing numeric
 option sets against option blocks extracted from the papers.
 
-The authoring standard is `QUESTIONS_GUIDE.md`. The batch-by-batch record, the
-twin maps and the nine recurring failure modes are in `QUESTIONS_PROGRESS.md` —
+The authoring standard is `docs/QUESTIONS_GUIDE.md`. The batch-by-batch record, the
+twin maps and the nine recurring failure modes are in `docs/QUESTIONS_PROGRESS.md` —
 that file is worth keeping for anyone extending the bank, because §8 (cross-board
 duplication) and §9 (concept-grep) decided the shape of every batch after the
 twelfth.
@@ -121,7 +121,7 @@ Three were left: dead Edexcel B mark-scheme links (the site owner was fixing the
 ## 4. Notes corrections, 1 August 2026
 
 Twenty findings were raised while writing the question sets, logged as N-Q1 to
-N-Q20 in `REVIEW-NOTES.md`, and the site owner decided each one. **Sixteen were
+N-Q20 in `docs/REVIEW-NOTES.md`, and the site owner decided each one. **Sixteen were
 applied**: a reversed sentence about the Claimant Count, an Edexcel spec code cited
 on an AQA page, the IMF's role in fixed exchange rates, a US term, NAFTA→USMCA,
 twelve typos, figure renumbering on twelve pages, six over-claiming spec alerts cut
@@ -191,9 +191,9 @@ page is touched, per `CLAUDE.md`.
 | File | Purpose | Still live? |
 | --- | --- | --- |
 | `CLAUDE.md` | House rules, layout, conventions. Read first | **Yes** |
-| `QUESTIONS_GUIDE.md` | The authoring standard for the question bank | **Yes** — needed to extend it |
-| `QUESTIONS_PROGRESS.md` | Batch record, twin maps, the nine recurring failure modes | Historical, but the methodology is worth keeping |
-| `REVIEW-NOTES.md` | The findings log — every problem found and what was decided | **Yes** — the evidence behind the flags above |
+| `docs/QUESTIONS_GUIDE.md` | The authoring standard for the question bank | **Yes** — needed to extend it |
+| `docs/QUESTIONS_PROGRESS.md` | Batch record, twin maps, the nine recurring failure modes | Historical, but the methodology is worth keeping |
+| `docs/REVIEW-NOTES.md` | The findings log — every problem found and what was decided | **Yes** — the evidence behind the flags above |
 | `ROADMAP.md` | Intended work, as opposed to findings | **Yes** — currently empty |
 | `_archive/NEW-CONTENT-LOG.md` | Inventory of the 31 enrichment components | Historical |
 | `docs/revision-notes-audit.md` | The SEO and accessibility audit already applied | Historical |

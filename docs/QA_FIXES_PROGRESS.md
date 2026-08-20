@@ -698,7 +698,7 @@ loaded by 173 pages, `quiz 2.js` by none.
 The reason it was left alone: **it is tracked in git**, so deleting it is a
 content change to the repository rather than the cleanup of a stray empty
 directory, and it sits outside this pass's scope. Note that
-`PAST-PAPERS-PROGRESS.md` line 223 describes it as "untracked in the working
+`docs/PAST-PAPERS-PROGRESS.md` line 223 describes it as "untracked in the working
 tree" — that is now out of date; it has since been committed.
 
 It is dead weight and safe to delete, but that is Eliot's decision, on a branch

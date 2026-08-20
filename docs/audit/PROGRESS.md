@@ -153,7 +153,7 @@ on copyright grounds and recorded in `DECISIONS.md` D12 and `DO-NOT-BREAK.md`.
   `old-logos-archive/` (13), `.codex/notes-workflow.md` (live at
   `/.codex/notes-workflow.html`), 10 unreferenced diagram PNGs.
 - **Governance:** 12 progress documents, 9,336 lines, with known-defect logging
-  split three ways between `REVIEW-NOTES.md`, `docs/CONTENT_ISSUES.md` and
+  split three ways between `docs/REVIEW-NOTES.md`, `docs/CONTENT_ISSUES.md` and
   `PROJECT-LOG.md` — the last of which claims to be the only one.
 
 ---
@@ -596,7 +596,7 @@ hooks; the quality of `CLAUDE.md`; the overlapping progress documents.
 - **PH07-059 hands over one concrete gap:** CLAUDE.md's CSS conventions say
   nothing about breakpoints, and there are two systems.
 - P1 measured the governance surface: **12 progress documents, 9,336 lines**, with
-  known-defect logging split three ways between `REVIEW-NOTES.md`,
+  known-defect logging split three ways between `docs/REVIEW-NOTES.md`,
   `docs/CONTENT_ISSUES.md` and `PROJECT-LOG.md` — the last of which claims to be
   the only one. The audit has since added its own `_audit/` tree, which P10 should
   say what happens to.
@@ -1535,7 +1535,7 @@ css/main.css                  +8,180 B   +2,846           the CSS replacement
    Deleting the file was cheaper than porting it, and Eliot chose that.
 3. **`breakpoints.min.js` has one call site and `browser.min.js` has zero.**
    Both are jQuery-free, so neither was in 4.10's scope; both are dead weight
-   (2,141 B gzipped per page) and are logged in `REVIEW-NOTES.md`.
+   (2,141 B gzipped per page) and are logged in `docs/REVIEW-NOTES.md`.
 
 **And one nobody had measured at all: dropotron was duplicating the navigation
 into every page.** It built 11 `.dropotron` menus at page load, and the
@@ -1748,7 +1748,7 @@ published files.
 
 ### Wave 4.11 done, 2026-08-12. The two things 4.10 logged and left
 
-Two commits, both small, both from `REVIEW-NOTES.md`'s "Three found by Wave
+Two commits, both small, both from `docs/REVIEW-NOTES.md`'s "Three found by Wave
 4.10". They are unrelated to each other and were kept apart on purpose.
 
 | Commit | What |

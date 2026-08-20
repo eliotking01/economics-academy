@@ -53,7 +53,7 @@ was that they are Pearson and AQA copyright. If the concern was that the site
 
 **Recommended default.** Leave history alone. `git filter-repo` rewrites every
 commit SHA, which breaks every commit reference in `PROJECT-LOG.md`,
-`PAST-PAPERS-PROGRESS.md`, the `seo/` reports and this audit — all of which cite
+`docs/PAST-PAPERS-PROGRESS.md`, the `seo/` reports and this audit — all of which cite
 hashes — and requires a force-push to a branch that auto-publishes. That is a
 large, irreversible operation against a low residual risk: two PDFs, in history
 only, at unguessable URLs, that no one has ever linked to.

@@ -9,7 +9,7 @@
 # /scripts/build_glossary.py, /raw-notes/... were all live and crawlable. This
 # file stops that, for two reasons:
 #
-#   1. They are internal. REVIEW-NOTES.md in particular is a public list of
+#   1. They are internal. docs/REVIEW-NOTES.md in particular is a public list of
 #      known content errors on this very site.
 #   2. Jekyll runs Liquid over every markdown file BEFORE Markdown, so a stray
 #      "{%" anywhere in them fails the whole deploy - not the page, the deploy.
@@ -49,13 +49,9 @@ exclude:
   - seo/
   - CLAUDE.md
   - OWNER-TODO.md
-  - PAST-PAPERS-PROGRESS.md
   - PROGRESS.md
   - PROJECT-LOG.md
-  - QUESTIONS_GUIDE.md
-  - QUESTIONS_PROGRESS.md
   - README.md
-  - REVIEW-NOTES.md
   - ROADMAP.md
   - requirements.txt
 

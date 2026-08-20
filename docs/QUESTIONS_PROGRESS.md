@@ -1,7 +1,7 @@
 # QUESTIONS_PROGRESS
 
 Batch state and working notes for the free practice questions. The authoring
-standard is `QUESTIONS_GUIDE.md`; this file records what is done, what is next,
+standard is `docs/QUESTIONS_GUIDE.md`; this file records what is done, what is next,
 and everything learned along the way, so work can resume cleanly in a new
 session.
 
@@ -31,12 +31,12 @@ for the end of the run have all been taken:
 2. **The nav sub-menu — restored.** The two-level board dropdown is back in
    `templates/header.html`.
 3. **Monopsonistic exploitation — added** to `3-5-3-wage-determination`, closing
-   `REVIEW-NOTES.md` N-Q15.
+   `docs/REVIEW-NOTES.md` N-Q15.
 4. **The written-response extension — a pilot is approved and not yet built.**
    This is the only outstanding piece of work on the project. See **Open items**
    for what it needs first.
 
-Beyond those, `REVIEW-NOTES.md` carries **twelve open notes-page findings** turned
+Beyond those, `docs/REVIEW-NOTES.md` carries **twelve open notes-page findings** turned
 up while writing the questions (N-Q8, N-Q10 to N-Q14 and N-Q16 to N-Q20; N-Q15 is
 now closed). None of them blocks anything and all need an explicit instruction
 before any page is touched.
@@ -45,7 +45,7 @@ before any page is touched.
 
 Read these four things, in this order, before writing anything:
 
-1. `QUESTIONS_GUIDE.md` — the authoring standard. Non-negotiable.
+1. `docs/QUESTIONS_GUIDE.md` — the authoring standard. Non-negotiable.
 2. This file's **Recurring problems** section. Nine numbered failure modes, every
    one of which recurred across multiple batches. §8 (cross-board duplication)
    and §9 (concept-grep) are the two that decide how a batch turns out.
@@ -184,7 +184,7 @@ early, because the right answer is often the most specific term.
 **Fix:** for option lists that name things, order them by a *domain* sequence
 instead of alphabetically — the competitive spectrum, the order the notes list
 them, or a consistent grid (demand-up / demand-down / supply-up / supply-down).
-`QUESTIONS_GUIDE.md` permits this; the rule is that ordering must carry no
+`docs/QUESTIONS_GUIDE.md` permits this; the rule is that ordering must carry no
 signal, not that it must be alphabetical.
 
 ### 2. The correct option is the longest
@@ -426,7 +426,7 @@ more than expected:
 **The Edexcel themes will test this hardest.** Several Edexcel topics cover the
 same economics as AQA topics already written — Edexcel 1.2.3 elasticities against
 AQA 1.3.2, Edexcel 3.3.2 costs against AQA 1.4.4, Edexcel 3.4.x market
-structures against AQA 1.5.x. `QUESTIONS_GUIDE.md` requires **fully separate
+structures against AQA 1.5.x. `docs/QUESTIONS_GUIDE.md` requires **fully separate
 sets**: new contexts, new numbers, and each board's own terminology and spec
 boundaries. Do not port an AQA set across and relabel it.
 
@@ -521,7 +521,7 @@ page.
 **Reading the notes.** `_archive/raw-notes/edexcel/` has markdown for most of Themes 2–4,
 which is far quicker than scraping the HTML — but **the published pages are what
 counts**, and they differ. In Theme 1 the conversion dropped whole sections that
-the raw notes contain (see the 1.3.4 case in `REVIEW-NOTES.md` N-Q8). Read the
+the raw notes contain (see the 1.3.4 case in `docs/REVIEW-NOTES.md` N-Q8). Read the
 raw markdown for speed, then diff it against the page before writing anything
 that depends on a section only the markdown has.
 
@@ -542,8 +542,8 @@ Three are done; the fourth is scoped below.**
   the pages themselves.
 - **Monopsonistic exploitation — DECIDED: add it, and DONE.** A paragraph naming
   the concept was added to `3-5-3-wage-determination` on 2026-08-01, using the
-  page's own notation and altering no existing wording. `REVIEW-NOTES.md` N-Q15
-  is now closed. Original finding: `REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
+  page's own notation and altering no existing wording. `docs/REVIEW-NOTES.md` N-Q15
+  is now closed. Original finding: `docs/REVIEW-NOTES.md` N-Q15 was fixed on 2026-08-01: the 3.4.6 spec
   alert and its four metadata copies no longer promise the monopsony labour
   market diagram, minimum wages or trade unions, since those are taught on 3.5.3.
   **One part of that finding is still open.** *Monopsonistic exploitation* — the
@@ -608,14 +608,14 @@ Scoped but not built. Doing it properly means four things, in this order:
 The marking call to action is the commercial point of the exercise, so it should
 sit directly beneath the model answer, where a student has just discovered how
 their attempt compares.
-- **Site-wide issues found but not fixed** are logged in `REVIEW-NOTES.md`, per
+- **Site-wide issues found but not fixed** are logged in `docs/REVIEW-NOTES.md`, per
   `CLAUDE.md`: the `navPanel` `aria-hidden` bug (the only remaining
   accessibility failure on any page), breadcrumb contrast in `css/main.css`, and
   web-font layout shift.
 
 ### Notes-page findings raised while writing the questions
 
-All are in `REVIEW-NOTES.md` with the evidence. **None blocks any batch.** They
+All are in `docs/REVIEW-NOTES.md` with the evidence. **None blocks any batch.** They
 are listed here so a new session knows they exist without reading that file end
 to end.
 
@@ -646,7 +646,7 @@ below the spec alert, so its teaser can match a concept the body never teaches.
 Print the matching context and discard hits inside `notes-questions-cta`. The N-Q10 figure-number check is
 **finished site-wide**: it was re-run over the whole of Theme 4 during batch 28
 and units 4.2 to 4.5 are clean, so nothing beyond the thirteen pages already
-listed needs renumbering. Both scripts are in `REVIEW-NOTES.md`, along with the
+listed needs renumbering. Both scripts are in `docs/REVIEW-NOTES.md`, along with the
 warning that the automated pass produces false positives at roughly one in three
 and every hit must be read before it is recorded.
 
@@ -1157,7 +1157,7 @@ first, every time.**
   demerit good below its optimal consumption, because such goods still yield some
   value. That became the stretch item (1.4.2 Q3) and has no AQA counterpart.
 
-**Two content defects found and logged, not fixed** — `REVIEW-NOTES.md` N-Q8.
+**Two content defects found and logged, not fixed** — `docs/REVIEW-NOTES.md` N-Q8.
 `1-3-4-information-gaps.html` promises adverse selection and moral hazard in its
 spec alert, meta description, OG and Twitter cards and JSON-LD, and never
 mentions either in the body; `_archive/raw-notes/edexcel/1.3.4.md` defines both, so the
@@ -1360,7 +1360,7 @@ copies, but the end-of-notes block sits *below* it, and its teaser is prose abou
 the topic. On 4.4.1 the phrase `channelling savings into investment` matched —
 and the only occurrence on the page was in the block this project appended.
 **Print the matching context rather than a boolean, and discard hits inside
-`notes-questions-cta`.** Recorded in `REVIEW-NOTES.md` alongside N-Q19.
+`notes-questions-cta`.** Recorded in `docs/REVIEW-NOTES.md` alongside N-Q19.
 
 ### Batch 28 — Edexcel Theme 4, units 4.2 and 4.3 (2026-08-01)
 
@@ -1527,7 +1527,7 @@ instead, which is the part Edexcel sets out in detail and AQA does not.
 
 The set is now **seven questions, not eight**. Q8 asked what a falling share of
 world exports indicates, and it was written under the batch 16 policy of testing
-a concept the page advertised but did not deliver (`REVIEW-NOTES.md` N-Q17).
+a concept the page advertised but did not deliver (`docs/REVIEW-NOTES.md` N-Q17).
 
 When that policy was revisited at the end of the project the site owner chose to
 **cut the over-claim from the notes page and remove the question with it**, rather
@@ -1958,7 +1958,7 @@ Those questions belong in the 3.5.3 set if anywhere.
   demand constraint.
 
 **A new N-Q finding, and the largest over-promise on the site** —
-`REVIEW-NOTES.md` N-Q15. `3-4-6-monopsony` promises the monopsony labour market
+`docs/REVIEW-NOTES.md` N-Q15. `3-4-6-monopsony` promises the monopsony labour market
 diagram, monopsonistic exploitation, minimum wages and trade unions, and the body
 contains none of the four. Unlike the earlier cases most of the material exists,
 on `3-5-3-wage-determination`, so it is mainly a **cross-reference problem**: the
@@ -2154,7 +2154,7 @@ search the whole bank for each.
   is a large share of the supplier's own revenue. AQA asks students to classify
   the discount; Edexcel explains the bargaining behind it.
 
-**Two content findings logged, not fixed** — `REVIEW-NOTES.md` N-Q13 and N-Q14.
+**Two content findings logged, not fixed** — `docs/REVIEW-NOTES.md` N-Q13 and N-Q14.
 `3-3-4` promises explicit and implicit costs in its spec alert and never names
 either, though it does teach the underlying idea inside its treatment of normal
 profit. And `3-3-2` states the LRAC envelope as touching "the lowest points of the
@@ -2253,7 +2253,7 @@ it rests entirely on unit 3.3 and on the concentration ratios in 3.4.
 diagram with all three objective outputs marked on it is exactly what the Edexcel
 page asks students to be able to draw, and no AQA question uses it.
 
-**A new N-Q8-type finding, logged not fixed** — `REVIEW-NOTES.md` N-Q12.
+**A new N-Q8-type finding, logged not fixed** — `docs/REVIEW-NOTES.md` N-Q12.
 `3-1-1-sizes-types-of-firms` promises "sole traders, partnerships, and private
 and public limited companies" in its spec alert and metadata, and the body never
 mentions limited companies at all. Unlike the Theme 2 cases this is not a
@@ -2439,7 +2439,7 @@ a third time.
 for the wrong word. Only sustainable development was genuinely missing.
 `2-5-3` is worse than recorded: it names none of the four phases, not just slump
 and recovery. Questions were written for both gaps per the site owner's
-instruction. See `REVIEW-NOTES.md`; the corrected list is 8 pages.
+instruction. See `docs/REVIEW-NOTES.md`; the corrected list is 8 pages.
 
 | | |
 | --- | --- |
@@ -2538,7 +2538,7 @@ alone with **0 mismatches**.
 
 Until now, every Edexcel set was written strictly to what its notes page body
 actually teaches, and concepts the page merely *advertised* were left out. Ten
-questions were skipped that way across six sets, all recorded in `REVIEW-NOTES.md`
+questions were skipped that way across six sets, all recorded in `docs/REVIEW-NOTES.md`
 under N-Q8 and N-Q9.
 
 **The site owner has now asked for those concepts to be covered anyway**, and

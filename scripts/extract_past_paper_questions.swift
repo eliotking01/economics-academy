@@ -7,7 +7,7 @@
 // one-line summary per paper to stderr.
 //
 // Why Swift: this repo has no Python PDF library, no requirements.txt and no
-// venv, but macOS ships PDFKit. QUESTIONS_PROGRESS.md section 7 already
+// venv, but macOS ships PDFKit. docs/QUESTIONS_PROGRESS.md section 7 already
 // established Swift + PDFKit as the working method for these PDFs. Zero new
 // dependencies.
 //

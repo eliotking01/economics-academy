@@ -4,7 +4,7 @@ The authoring standard for the free end-of-topic practice questions under
 `/practice-questions/`. Every question set is written to this document. Referenced
 from `CLAUDE.md`.
 
-Progress and batch state live in `QUESTIONS_PROGRESS.md`.
+Progress and batch state live in `docs/QUESTIONS_PROGRESS.md`.
 
 ---
 
@@ -400,4 +400,4 @@ Before a batch is committed:
 - [ ] `python3 scripts/verify_text_integrity.py <base-ref>` clean.
 - [ ] `python3 scripts/verify_markup_integrity.py <base-ref> --strict` clean.
 - [ ] `git diff <base-ref> -- revision-notes/` contains no removed line.
-- [ ] `QUESTIONS_PROGRESS.md` updated.
+- [ ] `docs/QUESTIONS_PROGRESS.md` updated.

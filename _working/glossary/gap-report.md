@@ -65,7 +65,7 @@ a decision that it is out of scope.
 | **command economy** | defined | **absent** | |
 | **free market economy** | defined | **absent** | |
 | **mixed economy** | defined | **absent** | |
-| **sustainable development** | in notes | **absent** | Already open as N-Q8 in `REVIEW-NOTES.md` for Edexcel `2-5-4` |
+| **sustainable development** | in notes | **absent** | Already open as N-Q8 in `docs/REVIEW-NOTES.md` for Edexcel `2-5-4` |
 | **complementary goods** | **absent** | **absent** | Borderline — the notes discuss complements, just never with this phrase. See (c) |
 
 The three economic-systems entries are worth one decision rather than three: AQA
@@ -241,7 +241,7 @@ page, or accept the short form.
 
 ## Two pre-existing bugs, already logged
 
-Found while scanning; logged as **G1** and **G2** in `REVIEW-NOTES.md`, not
+Found while scanning; logged as **G1** and **G2** in `docs/REVIEW-NOTES.md`, not
 fixed:
 
 - `edexcel-theme-2/2-1-3-employment-unemployment.html` contains LaTeX but never

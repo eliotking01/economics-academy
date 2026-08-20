@@ -335,7 +335,7 @@ def unclassified_exit(rows) -> int:
           "glossary's conventions prefer them: fix the wording in the notes page "
           "and re-extract; exclude the source in curation.json and add a "
           "`rewrite` rule; or author a definition in authored.json. Logged as G4 "
-          "in REVIEW-NOTES.md. PH10-063.", file=sys.stderr)
+          "in docs/REVIEW-NOTES.md. PH10-063.", file=sys.stderr)
     return 1
 
 

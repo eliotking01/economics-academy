@@ -341,7 +341,7 @@ House rules:
 
 ## Past paper question bank
 
-In progress on `feature/question-bank`. **Read `PAST-PAPERS-PROGRESS.md` first.**
+In progress on `feature/question-bank`. **Read `docs/PAST-PAPERS-PROGRESS.md` first.**
 
 A searchable bank of real exam questions, at `/past-paper-questions/`. Distinct
 from `/practice-questions/` in one decisive way: **it reproduces real exam
@@ -567,7 +567,7 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
   next, `docs/audit/PROGRESS.md` for what is already done, and
   `docs/audit/DO-NOT-BREAK.md` before touching anything. `DECISIONS.md` is
   append-only, D1–D39.** Excluded from publishing; readable in the public repo,
-  on the same judgement as `REVIEW-NOTES.md`.
+  on the same judgement as `docs/REVIEW-NOTES.md`.
 - `_working/glossary/PROGRESS.md` — live state of the glossary build.
 - `_working/glossary/authored-review.md` — the authored **terms**, the only
   entries on the site that are not the notes' own words. Two units are in play
@@ -578,7 +578,7 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
   and 138.
 - `PROJECT-LOG.md` — what the two large pieces of work did, and the single
   consolidated list of what is still flagged. **Start here.**
-- `PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
+- `docs/PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
 - `docs/FLASHCARDS_PROGRESS.md` — live state of the flashcards build.
 - `docs/DIAGRAM_STYLE.md` — the locked SVG diagram style guide.
 - `docs/CONTENT_ISSUES.md` — suspected notes errors found while writing cards;
@@ -587,10 +587,10 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 - `_working/question-bank/as-extraction-qa.md` — QA for the Edexcel AS (8EC0)
   extraction, including the duplicate analysis that found none.
 - `ROADMAP.md` — planned work.
-- `QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
-- `REVIEW-NOTES.md` — problems found but not fixed, including open economics
+- `docs/QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
+- `docs/REVIEW-NOTES.md` — problems found but not fixed, including open economics
   content errors. Log new ones there rather than fixing them.
-- `QUESTIONS_PROGRESS.md` — the question bank's batch record and the recurring
+- `docs/QUESTIONS_PROGRESS.md` — the question bank's batch record and the recurring
   failure modes. Historical, but read §8 and §9 before extending the bank.
 - `docs/revision-notes-audit.md` — the SEO and accessibility audit already applied.
 - Third-party services: Formspree, Calendly, Stripe payment links, GA4. All IDs
