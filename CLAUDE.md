@@ -107,6 +107,7 @@ to be documented here as "in progress" on branches that no longer existed.
 
 | Need | Read |
 | --- | --- |
+| A plain-English tour of every file and folder | `docs/REPO-MAP.md` |
 | What has been built, what is still open | `PROGRESS.md` |
 | Things only Eliot can do; ideas and someday | `OWNER-TODO.md` |
 | Known content problems, logged not fixed | `docs/REVIEW-NOTES.md`, `docs/CONTENT_ISSUES.md` |
