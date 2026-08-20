@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/verify_*.py:*)",
+      "Bash(python3 scripts/build_sitemap.py --check)",
+      "Bash(python3 scripts/check_glossary_capitalisation.py --check)",
+      "Bash(python3 scripts/strip_source_attributions.py)",
+      "Bash(python3 scripts/bake_templates.py)",
+      "Bash(python3 scripts/test_compare_trees.py)",
+      "Bash(python3 seo/tools/verify_seo.py)",
+      "Bash(node scripts/test_question_search.js)",
+      "Bash(node scripts/test_glossary_filter.js)",
+      "Bash(npx prettier@3.9.6 --check:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git branch:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-generated.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
