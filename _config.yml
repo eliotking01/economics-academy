@@ -60,17 +60,32 @@ exclude:
   - .github/
 
 # Deliberately NOT excluded, so the change is a decision rather than a habit:
-#   templates/                 fetched at runtime by inject-templates.js
-#   past-paper-questions/      questions.json is fetched by question-search.js
-#   LICENSE.txt, old-logos-archive/, webfonts/, images/
-#   logo/                      UNDECIDED, kept published for now. The current
-#                              brand kit - 8 files - and NOTHING on the site
-#                              references any of them: the header is text, not
-#                              an image. So it is served purely so the URLs
-#                              exist. That may be worth keeping (a stable link
-#                              to hand someone) or may be an oversight; Eliot
-#                              was not sure on 2026-08-09 and chose to leave it.
-#                              Revisit rather than assume it is deliberate.
+#   past-paper-questions/      questions.json IS still fetched at runtime, by
+#                              js/components/question-search.js, on the master
+#                              page and on every topic page. Must stay.
+#   flashcards/                flashcards/data/*.json is fetched at runtime by
+#                              js/components/flashcards.js. Must stay.
+#   LICENSE.txt, webfonts/, images/, marking-examples/, sitemaps/
+#
+#   templates/                 NO LONGER FETCHED. Wave 2 Phase 7 bakes the
+#                              header and footer into all 463 pages at build
+#                              time, and Wave 4.10 replaced the script that
+#                              used to fetch them. Verified 2026-08-20: zero
+#                              inbound links from any published page, in no
+#                              sitemap, and in none of the eight Search Console
+#                              exports in seo/ - so Google does not have either
+#                              URL and unpublishing would cost nothing. Left
+#                              published anyway, because that is a decision
+#                              nobody has needed to make and removing two live
+#                              URLs is not a thing to do by habit. To close it
+#                              out, add "- templates/" to the list above.
+#
+# CORRECTED 2026-08-20. Until then this block claimed templates/ was "fetched at
+# runtime by inject-templates.js" - a script deleted at Wave 4.10 - and listed
+# two directories that no longer exist, logo/ and old-logos-archive/, one of
+# them with nine lines agonising over whether to keep publishing it. The exclude
+# list itself was correct throughout; only its explanation had gone stale. This
+# is the file that decides what is public, so a wrong comment here is expensive.
 #
 # specificiations/ used to be listed here, as the separate call this file said
 # it was. Eliot made that call on 2026-08-08: the two exam-board specification
