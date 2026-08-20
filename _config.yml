@@ -47,6 +47,22 @@ exclude:
   # exports list every URL Google has judged, and 00-inventory.md names the
   # site's own defects.
   - seo/
+  # Closed out 2026-08-20. Neither is fetched, neither is linked, and neither
+  # appears in any Search Console export - so removing the three URLs they
+  # served costs nothing measurable.
+  #
+  #   templates/   the header and footer are the SOURCE the generators read at
+  #                build time and must stay in the repo. Nothing fetches them at
+  #                page load - that stopped at Wave 4.10 - so there is no reason
+  #                to serve them. Ten scripts read them from the filesystem,
+  #                which `exclude` does not affect.
+  #   LICENSE.txt  the Creative Commons Attribution 3.0 text inherited from the
+  #                HTML5 UP "Dopetrope" template. CCA 3.0 asks for a CREDIT, not
+  #                for the licence text to be hosted; that credit is in
+  #                _archive/README.txt and _archive/README.md.
+  - templates/
+  - LICENSE.txt
+
   - CLAUDE.md
   # The nested CLAUDE.md files. Six of the eight sit in directories already
   # excluded above; these two do NOT - revision-notes/ and css/ are published,

@@ -55,11 +55,13 @@ EXCLUDED_PREFIXES = (
     "flashcards-data/",
     "docs/",
     "seo/",
+    "templates/",
     "_",  # Jekyll skips any path starting with underscore
 )
 
 EXCLUDED_FILES = {
     "CLAUDE.md",
+    "LICENSE.txt",
     # Nested CLAUDE.md in PUBLISHED directories. The other six live in
     # directories already covered by EXCLUDED_PREFIXES.
     "revision-notes/CLAUDE.md",
