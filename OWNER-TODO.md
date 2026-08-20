@@ -4,6 +4,12 @@ Kept out of the published site via `_config.yml`. One prioritised list,
 consolidated 2026-08-16 at the end of the site-wide overhaul. Items are in
 priority order within each group.
 
+**On 2026-08-20 this absorbed `ROADMAP.md`** (now `_archive/ROADMAP.md`), which
+held intended work as opposed to findings. Both its "Now" items had shipped;
+what survived is the "Ideas and someday" section at the bottom. **Things that
+are already *wrong* still go in `docs/REVIEW-NOTES.md`, not here** — that
+distinction was ROADMAP's and it is worth keeping.
+
 ## Do next
 
 - [ ] **Write the missing About-page paragraph** — 2–3 sentences on why you
@@ -121,3 +127,26 @@ priority order within each group.
   updated** with group billing detail; **other profiles checked** for the old
   £80 price; **Kit account, form and form ID** (9803307) wired into
   index.html and verified live.
+
+## Ideas and someday — not scheduled, not promised
+
+Absorbed from `ROADMAP.md` on 2026-08-20. These are things worth building, not
+things that are wrong; anything already broken belongs in `docs/REVIEW-NOTES.md`
+or `docs/CONTENT_ISSUES.md` instead.
+
+- [ ] **Migrate the revision notes from MathJax to KaTeX.** The glossary
+      pre-renders KaTeX at build time; the LaTeX-bearing notes pages still load
+      MathJax 3 from a CDN, so the same formula looks slightly different in the
+      two places. Converging would also drop a CDN dependency and make formulae
+      render with JavaScript off site-wide. The biggest single item on this
+      list, and entirely optional.
+- [ ] **A downloadable PDF glossary per board.** Deliberately not in v1 — it
+      needs a headless browser or a PDF library in a repo with no build
+      dependencies, and becomes a second artefact that drifts from the page.
+      The print stylesheet already covers Cmd+P. Revisit if students ask.
+
+**Shipped, from ROADMAP's "Now" list** — both were the reason that file existed
+and both are live, so it had nothing left to say:
+
+- Glossary and formulae merged 2026-08-09 — 325 terms, 34 formulae, three pages.
+- Interactive flashcards live — six decks with Leitner spaced repetition.

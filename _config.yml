@@ -51,7 +51,6 @@ exclude:
   - OWNER-TODO.md
   - PROGRESS.md
   - README.md
-  - ROADMAP.md
   - requirements.txt
 
   # Already excluded by Jekyll's rule that anything starting with "_" or "."

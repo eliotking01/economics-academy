@@ -47,7 +47,7 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 ### Phase 1 — Setup — COMPLETE
 
 - [x] 1.1 Branch `feature/glossary`, create `_working/glossary/`, write `PROGRESS.md`
-- [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `docs/REVIEW-NOTES.md`; `ROADMAP.md` updated
+- [x] 1.2 `CLAUDE.md` additions; two bugs logged as G1/G2 in `docs/REVIEW-NOTES.md`; `_archive/ROADMAP.md` updated
 
 ### Phase 2 — Extraction & gap analysis — COMPLETE
 
@@ -133,7 +133,7 @@ Five fixes, one commit each, on `fix/glossary-polish`.
 | D7 | Definition text stored **per source**, not per term | Makes "verbatim from my notes" enforceable per board; the 12 known cross-board divergences render honestly instead of one board inheriting the other's wording |
 | D8 | **A–Z is the primary order**, theme is a filter + per-entry metadata | Listing every term twice under two orderings would double the page and confuse the anchors. Flagged in the plan as reversible to a view toggle if Eliot prefers |
 | D9 | **No downloadable PDF in v1** — print stylesheet only | Would need a headless browser or PDF library on a repo with zero build deps, and becomes a second artefact that drifts. Cmd+P covers it |
-| D10 | Flashcards / self-test **out of scope for v1** | Set in the brief. To be recorded in `ROADMAP.md` |
+| D10 | Flashcards / self-test **out of scope for v1** | Set in the brief. To be recorded in `_archive/ROADMAP.md` |
 | D11 | Capitalisation applied **at render time from `curation.json`**, never in `terms.json` | `terms.json` is generated and must stay byte-identical to the notes, or check 1 stops meaning anything. Keyed on term id + a hash of the wording, so rewording a notes chip lapses the approval instead of silently carrying it to text nobody approved |
 | D12 | Fragments are **not** capitalised and **not** reworded | "Globalisation is the increasing integration" would become "Is the increasing integration". Rewording is a wording change, which is Eliot's alone. **Superseded by D16 on 2026-08-07** |
 | D13 | Theme tags take **one accent for all themes**, `#d52349` | A colour per theme would imply a meaning the tag does not carry. Green lost twice: `#4caf50` is 2.78:1 with white text, and already means "correct" as the tick glyph in `main.css` |
@@ -246,7 +246,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `_working/glossary/PROGRESS.md` | Created (this file) |
 | `CLAUDE.md` | Modified — new "How publishing works" and "Glossary & formulae" sections; 3 lines added to Layout; 1 line to See also |
 | `docs/REVIEW-NOTES.md` | Appended — G1 (MathJax missing on `2-1-3`), G2 (`.formula-box` unstyled) |
-| `ROADMAP.md` | Modified — glossary under Now; flashcards, KaTeX migration and PDF export under Someday |
+| `_archive/ROADMAP.md` | Modified — glossary under Now; flashcards, KaTeX migration and PDF export under Someday |
 | `scripts/extract_glossary.py` | Created — the extractor and the review-file generator |
 | `glossary-data/curation.json` | Created — hand-written judgement, no definition text |
 | `glossary-data/terms.json` | Generated — 255 terms, 49 formulae |

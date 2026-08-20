@@ -22,7 +22,7 @@ and give each term two anchors.
 
 Formulae are pre-rendered with KaTeX at build time, so the published pages carry
 no maths JavaScript. The notes pages still use MathJax, so the same formula
-looks slightly different in the two places - recorded in ROADMAP.md.
+looks slightly different in the two places - recorded in _archive/ROADMAP.md.
 
 Standard library only, plus node for KaTeX and npx for Prettier. Neither is
 needed to view the site.

@@ -579,7 +579,8 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 - `PROGRESS.md` — **START HERE.** The single record of every project built on
   this site and the one consolidated list of what is still flagged, re-checked
   2026-08-20. It absorbed `PROJECT-LOG.md`, now at `_archive/PROJECT-LOG.md`.
-- `OWNER-TODO.md` — the things only Eliot can do. It absorbed `ROADMAP.md`.
+- `OWNER-TODO.md` — the things only Eliot can do, plus the ideas-and-someday
+  list it absorbed from `ROADMAP.md` (now `_archive/ROADMAP.md`).
 - `docs/PAST-PAPERS-PROGRESS.md` — live state of the past paper question bank.
 - `docs/FLASHCARDS_PROGRESS.md` — live state of the flashcards build.
 - `docs/DIAGRAM_STYLE.md` — the locked SVG diagram style guide.
@@ -588,7 +589,6 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 - `_archive/extraction-qa-report.md` — Phase 1 extraction QA for that bank.
 - `_working/question-bank/as-extraction-qa.md` — QA for the Edexcel AS (8EC0)
   extraction, including the duplicate analysis that found none.
-- `ROADMAP.md` — planned work.
 - `docs/QUESTIONS_GUIDE.md` — the authoring standard for the free practice questions.
 - `docs/REVIEW-NOTES.md` — problems found but not fixed, including open economics
   content errors. Log new ones there rather than fixing them.
