@@ -28,7 +28,7 @@ it belonged to was live. Reference, not input — nothing reads any of it.
 | Path | What it is |
 | --- | --- |
 | `working/flashcards-qa/` | 61 files: QA screenshots, measurement JSON and the scripts that produced them, from the flashcard build. The decisions they informed are in `docs/FLASHCARDS_PROGRESS.md`. |
-| `working/glossary/` | Seven decision and gap reports from the glossary build. The two files still consulted — `PROGRESS.md` and `authored-review.md` — stayed in `_working/glossary/`. |
+| `working/glossary/` | Four hand-written decision and gap reports from the glossary build. **Three others were moved here by mistake on 2026-08-20 and moved straight back**: `inventory.md`, `review-decisions.md` and `capitalisation-report.md` are written by `extract_glossary.py` and `check_glossary_capitalisation.py` on every run, so they belong in `_working/glossary/` alongside `PROGRESS.md` and `authored-review.md`. |
 | `working/diagram-review/` | The review tooling for the diagram pass. |
 | `working/question-bank/` | The Edexcel AS extraction QA and a dry-run log. |
 | `audit-2026-08-20/` | The repo audit, the restructure plan and the CLAUDE.md migration mapping. Dated records of the tree as it stood that day; paths inside them are **not** rewritten when files move later. |

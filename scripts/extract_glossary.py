@@ -5,7 +5,7 @@
     python3 scripts/extract_glossary.py --check    # validate, write nothing
 
 Reads the 166 topic pages under revision-notes/ and writes
-glossary-data/terms.json plus the human-readable _archive/working/glossary/inventory.md.
+glossary-data/terms.json plus the human-readable _working/glossary/inventory.md.
 
 The one rule this script exists to enforce: **a definition is whatever the notes
 page already says.** Nothing here paraphrases, tidies or completes a definition.

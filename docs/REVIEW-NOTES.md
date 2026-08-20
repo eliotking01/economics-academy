@@ -1604,7 +1604,7 @@ ever want that chip to stand alone.
 Surfaced by `scripts/check_glossary_capitalisation.py`, which classifies every
 glossary definition by how it opens and has been reporting these two as
 **"Unclassified — needs a look"** since the glossary was built. It wrote them to
-`_archive/working/glossary/capitalisation-report.md` and exited **0**, so nothing ever
+`_working/glossary/capitalisation-report.md` and exited **0**, so nothing ever
 came of it. That silence is the governance half of the finding and is being fixed
 separately; this entry is the content half. PH10-063.
 

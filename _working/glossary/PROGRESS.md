@@ -28,7 +28,7 @@ the future would immediately expose `_working/` on the live site.** Recorded in
 | File | Purpose |
 | --- | --- |
 | `_working/glossary/PROGRESS.md` | This file |
-| `_archive/working/glossary/inventory.md` | Every extracted term, appended incrementally |
+| `_working/glossary/inventory.md` | Every extracted term, appended incrementally |
 | `_archive/working/glossary/gap-report.md` | For Eliot's manual review |
 | `_archive/working/glossary/spec-checklist.md` | Per-board required terms, from the spec PDFs |
 
@@ -250,8 +250,8 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `scripts/extract_glossary.py` | Created — the extractor and the review-file generator |
 | `glossary-data/curation.json` | Created — hand-written judgement, no definition text |
 | `glossary-data/terms.json` | Generated — 255 terms, 49 formulae |
-| `_archive/working/glossary/inventory.md` | Generated |
-| `_archive/working/glossary/review-decisions.md` | Generated — the decisions needed |
+| `_working/glossary/inventory.md` | Generated |
+| `_working/glossary/review-decisions.md` | Generated — the decisions needed |
 | `_archive/working/glossary/spec-checklist.md` | Generated — per-board spec coverage |
 | `_archive/working/glossary/gap-report.md` | Written — the summary and judgement calls |
 | `_archive/working/glossary/e-decisions.md` | Written — every section E judgement and its reason |
@@ -260,7 +260,7 @@ Per-board chip split: Edexcel 267, AQA 293.
 | `scripts/build_glossary.py` | Created — generator |
 | `scripts/verify_glossary.py` | Created — the anti-drift check; check 6 added 2026-08-07 |
 | `scripts/check_glossary_capitalisation.py` | Created 2026-08-07 — classifies, reports, `--approve`, `--check` |
-| `_archive/working/glossary/capitalisation-report.md` | Generated 2026-08-07 — the 206 lower-case starts |
+| `_working/glossary/capitalisation-report.md` | Generated 2026-08-07 — the 206 lower-case starts |
 | `scripts/vendor/katex.min.js` + `README.md` | Created — build-time only, not served |
 | `css/vendor/katex/katex.min.css` + `fonts/*.woff2` | Created — 20 woff2, 296KB |
 | `css/pages/glossary.css` | Created — scoped under `.glossary-page` |

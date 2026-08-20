@@ -309,7 +309,7 @@ def unclassified_exit(rows) -> int:
     """Non-zero while anything sits in the `unknown` bucket.
 
     This script used to exit 0 while reporting "2 Unclassified - needs a look",
-    writing them into _archive/working/glossary/capitalisation-report.md, which is
+    writing them into _working/glossary/capitalisation-report.md, which is
     unpublished and in nobody's path. They sat there from the day the glossary
     was built. A check that identifies work and then reports success cannot
     cause the work to happen - it is a queue nobody is subscribed to.
