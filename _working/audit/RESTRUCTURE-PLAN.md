@@ -538,3 +538,57 @@ Tell me which and I will do it. Until then it stays exactly as it is.
 
 Nothing executed. Say which steps you want and I will run them one commit at a
 time, verifying between each.
+
+---
+
+## 10. Execution record — 2026-08-20
+
+Executed with Eliot's answers to §9: delete the duplicates (yes), skip Step 5
+(no), fold ROADMAP into OWNER-TODO, merge PROJECT-LOG into PROGRESS, leave the
+two published source comments alone.
+
+| Commit | Step |
+| --- | --- |
+| `5259bf0` | 1 — 68 untracked Finder duplicates deleted; `.gitignore` hardened |
+| `418b985` | 2 — `_archive/` created; three finished records retired |
+| `ca0da8a` | 3 — `raw-notes/` → `_archive/raw-notes/` |
+| `9f9b165` | — the audit deliverables, committed separately |
+| `cc931ce` | 4a — four project records → `docs/` |
+| `d4bbe55` | 4b — `PROGRESS.md` absorbs `PROJECT-LOG.md`, becomes the entry point |
+| `0646a37` | 4c — `ROADMAP.md` folded into `OWNER-TODO.md` |
+| `7e9c0a5` | 6 — `_config.yml`'s three stale comments corrected |
+
+**Step 5 skipped**, as instructed: the two known-incorrect diagram PNGs stay
+published.
+
+### Proof that no URL changed
+
+The published surface was enumerated at `63437c6` (before) and at `HEAD`
+(after) by applying `_config.yml`'s exclude list plus Jekyll's underscore rule
+to `git ls-tree`:
+
+```
+published before : 1099
+published after  : 1099
+removed from the site: NOTHING
+added to the site   : NOTHING
+```
+
+All 24 checks green, including `verify_generated.py` (8 generators, 0 files
+would change) and `verify_published_surface.py`.
+
+### Two deviations from the plan as written
+
+1. **`ca0da8a` was committed twice.** The first attempt used `git add -A` and
+   swept the audit deliverables into the `raw-notes` commit, breaking the
+   one-category-per-commit rule. Nothing was pushed, so it was uncommitted and
+   split into `ca0da8a` and `9f9b165`.
+2. **`verify_links.py` reports 11,284 internal refs, not the 11,286 quoted in
+   §1.** The two are the duplicate glossary cross-references removed by
+   `6cc2d65`, before this sequence began. 0 broken throughout.
+
+### Not done, still open
+
+- The OCR June 2023 Paper 3 question paper (§8). Recorded in `PROGRESS.md`
+  under "What remains flagged".
+- Nothing is pushed. `main` auto-publishes, so that is Eliot's call.
