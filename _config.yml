@@ -49,7 +49,6 @@ exclude:
   # site's own defects.
   - seo/
   - CLAUDE.md
-  - NEW-CONTENT-LOG.md
   - OWNER-TODO.md
   - PAST-PAPERS-PROGRESS.md
   - PROGRESS.md
@@ -57,15 +56,14 @@ exclude:
   - QUESTIONS_GUIDE.md
   - QUESTIONS_PROGRESS.md
   - README.md
-  - README.txt
   - REVIEW-NOTES.md
   - ROADMAP.md
-  - extraction-qa-report.md
   - requirements.txt
 
   # Already excluded by Jekyll's rule that anything starting with "_" or "."
   # is skipped. Listed so the intent survives if that ever changes.
   - _working/
+  - _archive/
   - .github/
 
 # Deliberately NOT excluded, so the change is a decision rather than a habit:

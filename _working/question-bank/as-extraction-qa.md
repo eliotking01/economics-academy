@@ -1,7 +1,7 @@
 # Edexcel AS (8EC0) extraction — QA report
 
 7 August 2026. Branch `feature/question-bank-as-level`.
-Companion to `extraction-qa-report.md`, which covered the original 9EC0 phase.
+Companion to `_archive/extraction-qa-report.md`, which covered the original 9EC0 phase.
 
 ---
 

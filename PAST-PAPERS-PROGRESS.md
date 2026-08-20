@@ -291,7 +291,7 @@ pages, and `verify_markup_integrity.py --strict` confirms 0 losses.
 | `past-paper-questions-data/taxonomy.json`    | data (generated)    | 4 themes, 21 units, 87 topics                                                                                        |
 | `past-paper-questions-data/edexcel-a/*.json` | data (generated)    | 16 files, 7 questions each                                                                                           |
 | `past-paper-questions-data/tags.json`        | data (hand-written) | 112 entries: topics + keywords                                                                                       |
-| `extraction-qa-report.md`                    | report              | Phase 1 QA. Reviewed and signed off 2 August 2026                                                                    |
+| `_archive/extraction-qa-report.md`                    | report              | Phase 1 QA. Reviewed and signed off 2 August 2026                                                                    |
 
 Phase 2:
 
@@ -367,7 +367,7 @@ foundation material that Edexcel tests in Section A, not Section B or C.
 
 ## Settled
 
-- **Boundary tagging calls** (`extraction-qa-report.md` §6(a)) — reviewed
+- **Boundary tagging calls** (`_archive/extraction-qa-report.md` §6(a)) — reviewed
   2 August 2026. Price discrimination, subjective happiness and streaming market
   structure approved as tagged; labour immobility changed to 3.5.2 only.
 - **Coverage and the volume gate** (§6(b)) — approved.

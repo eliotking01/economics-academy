@@ -583,7 +583,7 @@ ultimately cannot live in this repo at all. (The repo **is** public.)
 - `docs/DIAGRAM_STYLE.md` — the locked SVG diagram style guide.
 - `docs/CONTENT_ISSUES.md` — suspected notes errors found while writing cards;
   logged for approval, never fixed unilaterally.
-- `extraction-qa-report.md` — Phase 1 extraction QA for that bank.
+- `_archive/extraction-qa-report.md` — Phase 1 extraction QA for that bank.
 - `_working/question-bank/as-extraction-qa.md` — QA for the Edexcel AS (8EC0)
   extraction, including the duplicate analysis that found none.
 - `ROADMAP.md` — planned work.

@@ -16,7 +16,7 @@ Safety net: `backup-pre-enrichment` points at `main` as it was before any of thi
 | Phase 2 commits 1–5 — mechanical work | **Complete** |
 | Phase 2 commits 6–7 — emphasis | **Complete** |
 | Phase 1B — enrichment plans | **All 6 batches delivered and applied** |
-| Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `NEW-CONTENT-LOG.md` |
+| Phase 2 — enrichment | **Complete** — 31 components on 34 pages, `_archive/NEW-CONTENT-LOG.md` |
 | Phase 3 — final verification | **Complete** — see "Phase 3" below |
 | Practice questions (separate project) | **Complete — 166 of 166 topics, 1,267 questions** — state in `QUESTIONS_PROGRESS.md` |
 

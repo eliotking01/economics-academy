@@ -61,7 +61,6 @@ EXCLUDED_PREFIXES = (
 
 EXCLUDED_FILES = {
     "CLAUDE.md",
-    "NEW-CONTENT-LOG.md",
     "OWNER-TODO.md",
     "PAST-PAPERS-PROGRESS.md",
     "PROGRESS.md",
@@ -69,10 +68,8 @@ EXCLUDED_FILES = {
     "QUESTIONS_GUIDE.md",
     "QUESTIONS_PROGRESS.md",
     "README.md",
-    "README.txt",
     "REVIEW-NOTES.md",
     "ROADMAP.md",
-    "extraction-qa-report.md",
     "requirements.txt",
 }
 

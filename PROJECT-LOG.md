@@ -47,7 +47,7 @@ as an in-context exam tip.
 the house rule is a maximum of two components per page and 80% of pages carrying
 none. Worked examples and exam tips only; every figure verified by recomputation.
 
-The per-component inventory is `NEW-CONTENT-LOG.md`.
+The per-component inventory is `_archive/NEW-CONTENT-LOG.md`.
 
 ### Verification at the end
 
@@ -195,7 +195,7 @@ page is touched, per `CLAUDE.md`.
 | `QUESTIONS_PROGRESS.md` | Batch record, twin maps, the nine recurring failure modes | Historical, but the methodology is worth keeping |
 | `REVIEW-NOTES.md` | The findings log — every problem found and what was decided | **Yes** — the evidence behind the flags above |
 | `ROADMAP.md` | Intended work, as opposed to findings | **Yes** — currently empty |
-| `NEW-CONTENT-LOG.md` | Inventory of the 31 enrichment components | Historical |
+| `_archive/NEW-CONTENT-LOG.md` | Inventory of the 31 enrichment components | Historical |
 | `docs/revision-notes-audit.md` | The SEO and accessibility audit already applied | Historical |
 | `docs/removed-exam-preparation-sections.md` | The 87 removed sections, verbatim | Archive |
 
