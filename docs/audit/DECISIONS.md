@@ -1792,3 +1792,37 @@ link still fails, wherever it appears.
 
 New assertion 18 is the other half — it proves the 109 declared links actually
 shipped, so 13 cannot pass by the block having silently disappeared.
+
+### D53 — the AQA `<h1>` spec-code prefix is removed, lifting PH05-021
+
+Eliot, 2026-08-21, in chat, on being shown both sides: "strip them".
+
+`seo/14-notes-keyword-brief.md` §6 asked for it; `docs/audit/DO-NOT-BREAK.md`
+said the prefix "stays until the day-45 read" because on the near-identical
+Edexcel/AQA pairs it was the last textual differentiator. Two of the repo's own
+documents disagreed and the audit put both to him rather than picking one.
+
+**The hold was re-measured before it was lifted.** At 5-word-shingle Jaccard
+over the current prose, no cross-board pair reaches 0.95 similarity and only
+six reach 0.80. PH05's figure was taken before the AQA pages were rewritten.
+All six of those pairs are now separated four further ways that did not exist
+when PH05-021 was written — a board-first title, a board-first description, a
+`topic-meta` sub-label naming the board and unit, and a twin link naming the
+other board in a sentence.
+
+**The code stays visible.** It moved to the sub-label under the heading, on all
+166 pages. That change landed first, in the same audit, which is the only
+reason this one is cheap: a student checking they are on the right AQA unit
+still sees `AQA · Microeconomics · 1.5.3`.
+
+**What the 79 slices were edited with, and why that is not hard rule 6.** Not a
+paragraph rebuild. All 79 were measured first: one `<h1>` each, inner content
+plain text with no markup at all, every one matching `<code> <name>` exactly.
+The edit deletes the code and the single space after it **by byte offset**, so
+nothing else in the file can move — a string replace would have hit the
+breadcrumb's own copy of the code first, which is exactly the class of silent
+error hard rule 6 exists for. The breadcrumb and its JSON-LD twin still carry
+the code and still agree with each other; `verify_page_shell.py` check 8 holds
+that.
+
+`verify_seo.py` assertion 19 now holds the line, scoped per board.

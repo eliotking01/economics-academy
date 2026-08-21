@@ -204,44 +204,49 @@ DESC_MIN, DESC_MAX = 145, 158
 COVERS_RE = re.compile(r"\bCovers\b")
 
 
+# The tails this module can append, as a pattern, so a description it has
+# already written can be taken apart again.
+TAIL_RE = re.compile(r",\s+with\s+(?:a\s+)?(?:diagrams?|key definitions|"
+                     r"evaluation points)(?:\s+for the exam)?\.$")
+
+
 def covers_clause(existing: str) -> str:
-    """The page's own sub-concept sentence, lifted whole.
+    """The page's own sub-concept sentence, as "Covers <items>."
 
     §5 requires the sub-concepts to come from the page's H2s or its
-    key-definition chips and never from memory. Every one of the 166 existing
-    descriptions already carries exactly that, written against the page, as a
-    sentence beginning "Covers". Lifting it keeps Eliot's wording and keeps
-    the claim true; assembling a fresh list from lowercased H2 text would read
-    like a machine wrote it and would risk asserting coverage the sentence
-    does not.
+    key-definition chips and never from memory. Every one of the 166 original
+    descriptions carried exactly that, written against the page, as a sentence
+    beginning "Covers". Lifting it keeps Eliot's wording and keeps the claim
+    true; assembling a fresh list from lowercased H2 text would read like a
+    machine wrote it and would risk asserting coverage the sentence does not.
 
-    Any trailing feature sentence ("With diagrams.") is dropped: those are
-    re-derived from the page below and re-added only where still true.
+    IT ALSO HAS TO READ BACK WHAT THIS MODULE ITSELF WROTE, which is what
+    makes rewrite_notes_meta.py re-runnable. Two of the four lead forms drop
+    the word "Covers" for a colon to save seven characters, so a second run
+    over an already-rewritten description would have found no clause and
+    stopped. Both shapes are accepted, and any feature tail this module
+    appended is stripped so a re-run cannot stack a second one.
     """
     m = COVERS_RE.search(existing)
-    if not m:
-        raise ValueError(f"no 'Covers' clause in {existing!r}")
-    clause = existing[m.start():].strip()
-    return re.split(r"(?<=\.)\s+", clause)[0].rstrip()
+    if m:
+        clause = existing[m.start():].strip()
+    else:
+        # A description this module wrote in form C or D: the lead ends at a
+        # ": " and the items run to the end.
+        #
+        # NOT the FIRST ": " in the string. One display name contains a colon
+        # of its own - "Wage Determination: Monopsony" - and taking the first
+        # one made that page's description swallow its own lead on a re-run.
+        # Every lead this module writes contains "A-Level Economics", so the
+        # separator is the first ": " after that.
+        anchor = existing.find("A-Level Economics")
+        colon = existing.find(": ", anchor if anchor != -1 else 0)
+        if colon == -1:
+            raise ValueError(f"no 'Covers' clause and no ': ' in {existing!r}")
+        clause = "Covers " + existing[colon + 2:].strip()
+    clause = re.split(r"(?<=\.)\s+", clause)[0].rstrip()
+    return TAIL_RE.sub(".", clause)
 
-
-# WHY THERE IS NO LIST-SHORTENING HERE
-#
-# 20 of the 166 descriptions cannot be brought under 158 characters without
-# dropping an item from the page's own sub-concept list, and the brief asks
-# for "two or three sub-concepts" while several of these lists carry five.
-# Shortening them looked like the obvious fix and it was attempted, splitting
-# each list on ", " and " and " and re-joining a shorter one.
-#
-# It mangled 25 of them. " and " occurs INSIDE items as often as between them,
-# so "how demand and supply set price and quantity" came back as "how demand,
-# supply set price, quantity", and several rejoins produced a literal "and
-# and". Every one of those would have shipped as a page's SERP snippet.
-#
-# That is hard rule 6 - never bulk-rewrite prose with a script - arriving in
-# a field nobody thinks of as prose. The 20 pages keep their full list and
-# run 159 to 168 characters, which Google truncates and nothing else. They
-# are named in the audit report; shortening any of them is a hand edit.
 
 def description_for(topic: str, board: str, module: str, code: str,
                     existing: str, *, images: int, key_definitions: int,
