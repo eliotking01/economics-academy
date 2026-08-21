@@ -120,6 +120,19 @@ jobs:
       - name: boards.json still matches the generators
         run: python3 scripts/verify_boards.py
 
+      # The previous/next chain through the 166 topic pages is DERIVED, not
+      # stored - from boards.json's group order, each hub's own link order and
+      # each hub link's own anchor text. That removes the risk of a stored copy
+      # drifting and creates a different one: nothing was holding those three
+      # sources together. This does. It fails if a topic page exists with no
+      # place in the sequence, if the sequence names a page that does not
+      # exist, if a hub's order stops being spec-code order (1-2-10 sorts
+      # before 1-2-2 as a string), or if navigation appears on a page outside
+      # the 166 - which is the leak verify_generated.py cannot see, since a
+      # consistently wrong tree is still a tree that matches its generator.
+      - name: The previous/next topic chain is complete
+        run: python3 scripts/verify_notes_sequence.py
+
       - name: SEO assertions
         run: python3 seo/tools/verify_seo.py
 

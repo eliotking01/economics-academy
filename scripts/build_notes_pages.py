@@ -14,6 +14,15 @@ being listed, so adding a board directory is an extraction and a rebuild, with
 no edit here. Each record carries its own `path`, so this file needs no
 knowledge of where a family lives.
 
+THE ONE EXCEPTION TO "EMITTED UNCHANGED", ADDED 2026-08-21
+----------------------------------------------------------
+The 166 TOPIC slices - not the hubs, not macro-application - are spliced with
+a previous/next navigation row at each end of .notes-container. See
+with_topic_nav() for why that happens here rather than in the 166 source
+files, and scripts/notes_sequence.py for where the chain comes from. The
+slices on disk are still verbatim byte slices and are still never written to;
+what changes is only what this generator wraps around them.
+
 WHAT THIS DELIBERATELY DOES NOT DO
 ----------------------------------
 **It does not run Prettier**, and that is a departure from PH06 section 3
@@ -44,6 +53,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import notes_sequence  # noqa: E402
 import page_shell  # noqa: E402
 
 DATA = ROOT / "notes-data"
@@ -52,6 +62,69 @@ DATA = ROOT / "notes-data"
 # five generators. The name is kept because it is what the f-string below
 # interpolates and renaming it would touch this generator for no gain.
 SEVEN_SCRIPTS = page_shell.script_tail()
+
+# The two anchors the previous/next rows are spliced against. Both were
+# measured across all 166 topic slices before being relied on: every one opens
+# its content with this exact line, at this exact indent, once, and every one
+# ends with this exact string.
+CONTAINER_OPEN = '          <div class="notes-container">\n'
+CONTAINER_CLOSE = "\n          </div>"
+
+
+def topic_key(meta: pathlib.Path) -> tuple[str, str] | None:
+    """(notes_dir, slug) for a topic record, or None for a hub.
+
+    Keyed on where the record LIVES, not on its `path`. A hub's path is
+    revision-notes/<dir>/index.html and a topic's is
+    revision-notes/<dir>/<slug>.html, so a path test would work today and
+    would quietly start injecting navigation into a hub the day one is named
+    differently. notes-data/topics/ versus notes-data/hubs/ is the actual
+    distinction and it cannot drift.
+    """
+    try:
+        rel = meta.relative_to(DATA / "topics")
+    except ValueError:
+        return None
+    if len(rel.parts) != 2:
+        return None
+    return rel.parts[0], meta.stem
+
+
+def with_topic_nav(slice_html: str, key: tuple[str, str]) -> str:
+    """Splice the previous/next rows into a topic slice.
+
+    THE SLICE ON DISK IS NEVER TOUCHED. notes-data/topics/*.html is a verbatim
+    byte slice of the page's content and stays one - the rows are chrome this
+    generator wraps around it, in the same way it already wraps the <head>,
+    the <main> and the script tail. Editing 166 source files instead would be
+    exactly the scripted bulk edit CLAUDE.md hard rule 6 forbids, and which
+    has silently destroyed <a> tags in this repo before.
+
+    Both rows go INSIDE .notes-container, which is `max-width: 1200px` with
+    `padding: 3em` while the breadcrumb's .container is 70em - so inside is
+    the only placement that lines the row up with the notes body rather than
+    the page. It also puts both rows inside the region
+    verify_markup_integrity.py profiles, which cuts at this same anchor.
+
+    A slice that does not match both anchors fails the build rather than
+    being silently mangled.
+    """
+    notes_dir, slug = key
+    where = f"notes-data/topics/{notes_dir}/{slug}.html"
+    if slice_html.count(CONTAINER_OPEN) != 1:
+        sys.exit(f"{where}: expected exactly one {CONTAINER_OPEN.strip()!r} "
+                 f"line at ten spaces of indent, found "
+                 f"{slice_html.count(CONTAINER_OPEN)}")
+    if not slice_html.endswith(CONTAINER_CLOSE):
+        sys.exit(f"{where}: expected the slice to end with "
+                 f"{CONTAINER_CLOSE!r}")
+
+    top, bottom = notes_sequence.rows(notes_dir, slug)
+    cut = slice_html.index(CONTAINER_OPEN) + len(CONTAINER_OPEN)
+    body = slice_html[cut:-len(CONTAINER_CLOSE)]
+    return (slice_html[:cut] + top + "\n"
+            + body + "\n\n" + bottom
+            + CONTAINER_CLOSE.lstrip("\n"))
 
 
 def render(rec: dict, slice_html: str) -> str:
@@ -88,6 +161,9 @@ def build() -> dict[str, str]:
     for meta in sorted(DATA.rglob("*.json")):
         rec = json.loads(meta.read_text(encoding="utf-8"))
         slice_html = meta.with_suffix(".html").read_text(encoding="utf-8")
+        key = topic_key(meta)
+        if key is not None:
+            slice_html = with_topic_nav(slice_html, key)
         pages[rec["path"]] = render(rec, slice_html)
     return pages
 

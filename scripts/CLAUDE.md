@@ -20,6 +20,13 @@ diffs against the committed tree, so drift cannot ship.
 | `extract_glossary.py` | the notes pages → `glossary-data/terms.json` |
 | `build_sitemap.py` | the filesystem → `sitemap.xml` + `sitemaps/*.xml` |
 
+`build_notes_pages.py` also splices a previous/next topic row into each end of
+the 166 TOPIC pages - not the hubs. The chain comes from `notes_sequence.py`,
+which derives it rather than storing it: directory order from
+`boards-data/boards.json` via `board_data.py`, topic order and every label from
+each hub's own links. `verify_notes_sequence.py` is what holds those three
+sources together.
+
 `bake_templates.py --apply` owns the baked header, footer and script tail on the
 17 hand-written pages; the other 446 take theirs from `page_shell.py`, which all
 five page generators import. `page_shell.SCRIPT_TAIL` is the one place the tail
@@ -40,6 +47,7 @@ All of these run in `.github/workflows/verify.yml` on every push, plus
 verify_generated  verify_published_surface  verify_liquid  verify_icons
 verify_image_dimensions  verify_css_load_order  verify_inline_styles
 verify_page_shell  verify_boards  verify_glossary  verify_links  verify_html
+verify_notes_sequence
 verify_past_paper_tags  verify_diagram_geometry  check_glossary_capitalisation
 verify_text_integrity <base>  verify_markup_integrity <base> --strict
 build_sitemap.py --check  strip_source_attributions  test_compare_trees

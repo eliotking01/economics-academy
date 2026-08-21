@@ -1109,3 +1109,97 @@
     display: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Previous / next topic navigation
+   ---------------------------------------------------------------------------
+   One row at the top of the notes body and an identical one at the bottom,
+   emitted by scripts/build_notes_pages.py from the chain in
+   scripts/notes_sequence.py. Both slots are always filled; at the two ends of
+   a chain the spare slot points back at that page's own hub.
+
+   The rows sit INSIDE .notes-container, which is what lines them up with the
+   notes body: .notes-container is max-width 1200px with 3em of padding, while
+   the breadcrumb's .container is 70em.
+
+   SPECIFICITY. `.revision-notes-content a:hover` is (0,2,1) and beats the
+   two-class base rule below, so the hover state has to be restated at three
+   classes or the dashed pink underline reappears on hover. That is why the
+   :hover block sets `border` in full rather than just `border-color`. */
+
+.revision-notes-content .topic-nav {
+  display: flex;
+  gap: 1em;
+  align-items: stretch;
+}
+
+.revision-notes-content .topic-nav--top {
+  margin: 0 0 2.5em;
+}
+
+.revision-notes-content .topic-nav--bottom {
+  margin: 1.5em 0 0;
+}
+
+.revision-notes-content .topic-nav__link {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 0.9em 1.1em;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  color: var(--primary-blue);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.revision-notes-content .topic-nav__link--next {
+  text-align: right;
+}
+
+.revision-notes-content .topic-nav__caption {
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+}
+
+.revision-notes-content .topic-nav__title {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--primary-blue);
+}
+
+.revision-notes-content .topic-nav__link:hover,
+.revision-notes-content .topic-nav__link:focus-visible {
+  border: 1px solid var(--accent-teal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  color: var(--primary-blue);
+}
+
+/* Stacked below 600px, the breakpoint this stylesheet already uses. The next
+   slot loses its right alignment when stacked: right-aligned text on a
+   full-width block reads badly. */
+@media (max-width: 600px) {
+  .revision-notes-content .topic-nav {
+    flex-direction: column;
+  }
+
+  .revision-notes-content .topic-nav__link--next {
+    text-align: left;
+  }
+}
+
+@media print {
+  .revision-notes-content .topic-nav {
+    display: none;
+  }
+}
