@@ -348,3 +348,128 @@ wrote down when the site was being searched by the people building it.
 A line in `OWNER-TODO.md` — "rank-checked heavily 18–21 Aug" — is enough to
 explain a spike later. Ten seconds now saves an hour of second-guessing an
 export in October.
+
+---
+
+*Tasks 18 to 21 were added later on 21 August 2026, when Eliot took the four
+decisions in `seo/18-notes-content-approval-2026-08-21.md` items 1, 7, 8 and 9.
+Items 1 is done. The other three are yours, and 18 is the one that unblocks
+work already scoped and waiting.*
+
+---
+
+## 18. Write four definitions — 15 minutes
+
+You said yes to adding key terms and to ask if the definitions needed writing.
+**Four of them do.** The audit report overstated this and has been corrected:
+it counted pages carrying a `key-definition` chip, which is how the glossary
+finds a definition — not whether the page answers "what is X", which is what a
+searching student needs. Eight of the twelve already answer it.
+
+These four do not define their own subject anywhere on the page. One or two
+sentences each, in your words, and Claude Code puts them in as chips in one
+pass:
+
+| Page | What it needs a definition of |
+| --- | --- |
+| `aqa-a2-micro/1-3-6-the-interrelationship-between-markets.html` | what it means for two markets to be interrelated — the page defines joint, competitive and composite demand in a table but never the idea itself |
+| `aqa-a2-micro/1-6-3-wage-determination-perfectly-competitive-labour-markets.html` | what a perfectly competitive labour market is |
+| `edexcel-theme-2/2-4-2-injections-withdrawals.html` | what an injection and a withdrawal are — the page defines each *example* (Investment, Savings, Exports) beautifully but not the two categories |
+| `edexcel-theme-4/4-4-1-role-of-financial-markets.html` | what a financial market is — the page opens straight into its six functions |
+
+Three more pages have topics that are not really definable terms, and forcing a
+definition onto them would make them worse. I have not asked for those:
+`1-7-3` (a list of policies), `2-5-4` (a discussion of trade-offs) and `1-6-4`
+(a set of causes — though see task 19, which covers it another way).
+
+---
+
+## 19. Fourteen definitions you have already written are invisible to the glossary
+
+**Not a writing job — a markup one, and it changes no words.** Flagging it
+because it is your call whether it is worth doing, and it wants an hour.
+
+Five pages carry a definition under a plain `<strong>Term:</strong>` instead of
+a `key-definition` chip, which is the one thing `extract_glossary.py` looks
+for. `glossary-data/CLAUDE.md` names this exact situation — "three cases here
+turned out to have the real definition already in the notes, just somewhere the
+extractor could not reach".
+
+| Page | Definitions the glossary cannot see |
+| --- | --- |
+| `aqa-a2-micro/1-1-2-…` | Needs, Wants |
+| `aqa-a2-micro/1-1-3-economic-resources.html` | Goods, Services, Renewable resources, Non-renewable resources |
+| `aqa-a2-micro/1-6-4-…` | Monopsony power, Trade unions |
+| `edexcel-theme-2/2-4-2-injections-withdrawals.html` | Investment (I), Government Spending (G), Exports (X), Savings (S) |
+| `edexcel-theme-2/2-4-3-…` | Short-run equilibrium, Long-run equilibrium |
+
+Converting them would add fourteen glossary entries in your own words and let
+**`Monopsony` come out of `authored.json`**, which that file says is meant to
+shrink exactly this way.
+
+**Why it is an hour and not ten minutes.** Several open with "These are…" or
+"This occurs where…", which reads wrong as a glossary lead-in, so each needs a
+`rewrite` rule in `curation.json` — the mechanism you instructed on 2026-08-07.
+That is judgement, not typing.
+
+**My recommendation: worth doing, but after the four in task 18.** It improves
+the glossary rather than the notes' search performance, so it is the smaller
+prize.
+
+---
+
+## 20. Expand the seventeen thin pages — your judgement, at your pace
+
+`seo/18-notes-content-approval-2026-08-21.md` item 8 has the full list with
+word counts, thinnest first. You said you can expand these.
+
+**Take the AQA micro twelve as one project.** Twelve of the seventeen are AQA
+micro, which makes this a section at half the site's median depth rather than a
+scatter of short pages. The thinnest is 300 words against a site median of 741
+and competitor pages of 1,200–2,000.
+
+**Four of them will visibly improve the moment you do.** These have only one
+section, so the new "On this page" list has a single entry, which looks like a
+fault and is really the thinness showing:
+
+- `aqa-a2-micro/1-6-3-wage-determination-perfectly-competitive-labour-markets.html`
+- `aqa-a2-micro/1-6-6-the-national-minimum-wage.html`
+- `edexcel-theme-4/4-4-1-role-of-financial-markets.html`
+- `edexcel-theme-4/4-4-3-role-of-central-banks.html`
+
+**Do not pad for word count.** A longer bad page ranks worse than a short good
+one. If a specification point genuinely is that small, say so and it stays.
+
+When a page is expanded, re-run:
+
+```bash
+python3 scripts/build_notes_pages.py
+python3 seo/tools/rewrite_notes_meta.py --apply   # refreshes its dateModified
+python3 scripts/extract_glossary.py && python3 scripts/build_glossary.py
+```
+
+---
+
+## 21. Place the diagrams — your judgement, at your pace
+
+`seo/17-notes-seo-audit-2026-08-21.md` §7 is the 72-row table: the page, the
+matching diagram already on disk, and a suggested action. You said you will add
+these.
+
+**Start with the 43 that need no drawing.** Each already has a matching PNG in
+`images/diagrams/`; placing one is a `<figure>`, an `<img>` with `width` and
+`height`, and a caption opening `Figure N:`. Nine want a diagram drawn and
+twenty need none.
+
+**`comparative-advantage.png` first.** It exists, it is drawn, and it is
+currently on **no page at all**. Three pages in the table would use it —
+Edexcel 1.1.5 and 4.1.3, and AQA 1.4.2.
+
+Diagram and graph queries are 7.3–9.2% of your impressions depending on the
+filter, and 43% of your topic pages currently carry no diagram at all.
+
+**The convention** is in `revision-notes/CLAUDE.md`: `diagram-figure` /
+`-image` / `-caption`, real alt text describing what the diagram shows rather
+than "diagram", and the first image on a page is never `loading="lazy"`.
+`verify_image_dimensions.py` and `verify_diagram_geometry.py` will both fail if
+a dimension is wrong, which is the safety net.

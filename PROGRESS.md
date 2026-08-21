@@ -128,15 +128,33 @@ top of `scripts/notes_extras.py`.
    fail a correct commit. `seo/tools/rewrite_notes_meta.py` does the git
    reading, once; re-run it to refresh a `dateModified`.
 
+### Eliot's four decisions, 21 August 2026
+
+Taken after the audit was delivered, on items 1, 7, 8 and 9 of the approval
+document.
+
+| Item | Decision | State |
+| --- | --- | --- |
+| 1. Strip the spec code from the 79 AQA `<h1>`s | **"strip them"** | **DONE**, commit `94a0726`. Lifts DO-NOT-BREAK PH05-021; DECISIONS.md D53 |
+| 7. Add key terms to the pages that define none | **yes; ask if the definitions need writing** | four need writing — manual list task 18 |
+| 8. The 17 pages under 500 words | **"I can expand these"** | Eliot's; manual list task 20 |
+| 9. Diagrams on the 72 diagram-less pages | **"I'll add diagrams"** | Eliot's; manual list task 21 |
+
+**Item 7 corrected a mistake in the audit's own reporting.** "Twelve pages
+define no term" counted pages carrying a `key-definition` chip, which is a
+GLOSSARY signal — Google does not read `class="key-definition"`. Read one by
+one, eight of the twelve already answer "what is X" in their opening or have a
+topic that is not a definable term. **The real gap is four pages.** Looking
+properly also found a better item: five pages carry fourteen definitions Eliot
+has already written, sitting under a plain `<strong>Term:</strong>` where the
+extractor cannot reach them. Converting them adds fourteen glossary entries and
+changes not one word — manual list task 19.
+
 ### What is still open
 
 **Everything that changes a word a student reads** —
-`seo/18-notes-content-approval-2026-08-21.md`, twelve numbered items. The four
-that matter: the 79 AQA `<h1>` code prefixes (item 1, and the brief and
-DO-NOT-BREAK disagree about it), 12 pages that define no term (item 7), the 17
-pages under 500 words of which 12 are AQA micro (item 8), and placing a diagram
-on the 43 of 72 diagram-less pages that already have a matching one on disk
-(item 9).
+`seo/18-notes-content-approval-2026-08-21.md`. Items 1, 8 and 9 are decided
+(above); items 2 to 6 and 10 to 12 are read-and-confirm rather than blocking.
 
 **Five things only Eliot can do**, appended to
 `seo/15-notes-seo-manual-todo-2026-08-21.md` as tasks 13–17: a live web-vitals

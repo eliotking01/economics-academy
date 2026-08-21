@@ -192,6 +192,7 @@ singly. Six of the 36 lead with an abbreviation and are a separate proposal.
 | --- | --- | --- |
 | Pages with exactly one `<h1>` | 166 | 166 |
 | Heading-level skips (h2 → h4 and similar) | **0** | 0 |
+| `<h1>`s carrying a spec-code prefix | **79 of 166** | **0** |
 | `<h2>` elements carrying a stable `id` | **0 of 1,159** | **1,159 of 1,159** |
 | Pages with a table of contents | 0 | 166 |
 
@@ -204,9 +205,15 @@ is what made adding ids a safe attribute insertion rather than a rewrite.
 topic name. Two conventions in one folder. `docs/audit/DO-NOT-BREAK.md` says
 the prefix "stays until the day-45 read" (PH05-021) because on the
 near-identical Edexcel/AQA pairs it is the last textual differentiator. The
-brief recommends stripping it. **This is item 1 of the approval document and
-the two documents disagree** — the tension is set out there rather than
-resolved here.
+brief recommended stripping it.
+
+> **RESOLVED 21 August 2026: Eliot said strip them, and they are stripped.**
+> All 166 `<h1>`s are now the bare topic name, and the table above is the
+> before-state. `DO-NOT-BREAK.md`'s PH05-021 is lifted and `DECISIONS.md` D53
+> records why: re-measured on the current prose, no cross-board pair reaches
+> 0.95 similarity and only six reach 0.80, and each of those six is now
+> separated four further ways that did not exist when PH05-021 was written.
+> `verify_seo.py` assertion 19 holds the line, scoped per board.
 
 The spec sub-label added under every H1 in this pass is what makes that
 decision cheap either way: the code is now visible as markup on all 166 pages,
@@ -549,8 +556,14 @@ Three commits on `seo/notes-onpage-audit`. Nothing pushed.
 | Twin-board links added | 109 |
 | New internal links, total | 508 |
 | New assertions in `seo/tools/verify_seo.py` | 5 (15–19) |
+| AQA `<h1>`s losing their spec-code prefix | 79 |
 | Published URLs moved, added or removed | **0** |
 | Words of economics wording changed | **0** |
+
+The 79 headings are the one exception to that last row and it is not really an
+exception: **no word was changed, a spec code was deleted.** Eliot approved it
+on 21 August 2026 and the code is still on every page, in the sub-label
+directly beneath the heading.
 
 `verify_text_integrity.py` reports **0 removals** across all 166 pages: every
 difference is an addition. `verify_markup_integrity.py --strict` reports 0

@@ -12,9 +12,12 @@ only the changes that touch metadata, markup and structure.
 
 ---
 
-## 1. Strip the spec code from the 79 AQA headings
+## 1. Strip the spec code from the 79 AQA headings — DONE
 
-**Pages:** all 79 AQA topic pages.
+**Pages:** all 79 AQA topic pages. **Eliot said "strip them", 21 August 2026.
+Applied in commit `94a0726`.** `DO-NOT-BREAK.md` PH05-021 is lifted;
+`DECISIONS.md` D53 records the reasoning, including the re-measurement that
+justified overriding it. The rest of this item is the case as it was put.
 
 **Before:** `2.6.5 Economic Growth and Development`
 **After:** `Economic Growth and Development`
@@ -232,9 +235,25 @@ say no to, and the only way to say yes is 20 hand edits.
 
 ---
 
-## 7. Twelve pages define no term
+## 7. Four pages define no term — WAS TWELVE, AND THE TWELVE WAS WRONG
 
-**Pages:**
+**Eliot said yes on 21 August 2026, and asked to be asked if the definitions
+needed writing. Four of them do — task 18 of the manual list has the ask.**
+
+**The twelve was a bad measurement and this item now says so.** It counted
+pages carrying a `key-definition` chip, which is what the glossary extractor
+looks for — not whether the page answers "what is X", which is what a searching
+student needs and what Google reads. Read one by one, **eight of the twelve
+already answer it or have a topic that is not a definable term**. The four that
+genuinely do not are AQA 1.3.6, AQA 1.6.3, Edexcel 2.4.2 and Edexcel 4.4.1;
+§3 of the audit report has the page-by-page verdict.
+
+**A better finding came out of looking properly.** Five pages carry **fourteen
+definitions you have already written**, under a plain `<strong>Term:</strong>`
+instead of a chip, so the glossary cannot see them. Converting them adds
+fourteen glossary entries and changes not one word. Task 19.
+
+**The original twelve:**
 
 `aqa-a2-micro/1-1-2-the-nature-and-purpose-of-economic-activity.html`,
 `aqa-a2-micro/1-1-3-economic-resources.html`,
@@ -269,7 +288,10 @@ would need a definition of; the sentence has to be yours. Budget ten minutes.
 
 ---
 
-## 8. Seventeen pages under 500 words
+## 8. Seventeen pages under 500 words — ELIOT WILL EXPAND THEM
+
+**Eliot said "I can expand these", 21 August 2026. Task 20 of the manual list
+carries it, with the rebuild commands.**
 
 **Pages:** listed with word counts in §8 of the audit report, thinnest first.
 **Twelve of the seventeen are AQA micro**, which makes this a section-level
@@ -296,7 +318,11 @@ seventeen separate decisions. This is task 7 of the manual list.
 
 ---
 
-## 9. Placing a diagram on 43 pages, and drawing 9
+## 9. Placing a diagram on 43 pages, and drawing 9 — ELIOT WILL ADD THEM
+
+**Eliot said "I'll add diagrams", 21 August 2026. Task 21 of the manual list
+carries it, with the markup convention and the two verifiers that catch a
+mistake.**
 
 **Pages:** the full 72-row table is §7 of the audit report, with three columns:
 the page, the diagram already on disk that matches it, and what I suggest.
