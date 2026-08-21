@@ -65,6 +65,12 @@ distinction was ROADMAP's and it is worth keeping.
   up.
 - **Glance at Search Console monthly**: Performance for clicks/position
   trends, and Pages → "Why pages aren't indexed" for anything unexpected.
+  When something there looks wrong, **check the `Last crawled` date on the row
+  before believing the verdict** — the report lags by days and routinely
+  describes a version of a page that no longer exists. Exporting the CSVs into
+  a dated folder under `seo/gsc-exports/` and running
+  `python3 seo/tools/gsc_reconcile.py <folder>` does that check for you, and
+  will say plainly which verdicts contradict the repo.
 - **Never edit generated pages by hand** (Claude knows which are which — if
   in doubt, ask before editing anything under revision-notes/, flashcards/,
   practice-questions/ or the glossary).
@@ -74,6 +80,26 @@ distinction was ROADMAP's and it is worth keeping.
 
 ## Already scheduled
 
+- [ ] **~20 September 2026 — validate "Alternate page with proper canonical
+      tag"** in Search Console (Indexing → Pages → that issue → Validate Fix).
+      **Not before.** The count is meant to rise before it falls — it went
+      9 → 15 between 8 and 21 August as Google re-crawled each old
+      `…/index.html` twin and learned it is now unlinked. Validating while it
+      is still climbing would fail and cost a fortnight. Step-by-step in
+      `seo/13-gsc-manual-todo-2026-08-21.md`, task 8a.
+- [ ] **1 October 2026 — re-export the Search Console CSVs** into
+      `seo/gsc-exports/01-10-2026/` and re-run the audit. One command:
+      `python3 seo/tools/gsc_reconcile.py seo/gsc-exports/01-10-2026 --diff seo/gsc-exports/21-08-2026`.
+      What to expect, stated in advance so it can be checked rather than
+      rationalised, is in `13-…` task 8b. The two things to look at hardest:
+      whether "Excluded by 'noindex' tag" has cleared to zero, and whether
+      `/revision-notes/` has recovered the 22 clicks and three ranking
+      positions it lost in August.
+- [ ] **1 October 2026 — decide on `sitemaps/pdfs.xml`.** If Google has still
+      indexed only 11 of the 283 PDFs, stop submitting them. Not because they
+      cost crawl budget — that was measured and they do not, beyond one burst
+      on 8–9 August — but because a sitemap should list URLs you expect to be
+      indexed. The change is scoped and ready as Action 3 in `seo/12-…`.
 - [ ] **~22 September 2026 GSC check**: compare tutoring.html against its
       2026-08-08 baseline (position 26.27, 440 impressions, 17 clicks) and
       check the home page held or improved (baseline: 223 clicks, 2,463
@@ -85,6 +111,26 @@ distinction was ROADMAP's and it is worth keeping.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-21 — Search Console index audit.** Full reconciliation in
+  `seo/11-gsc-index-audit-2026-08-21.md`. Dates that matter to a later reading:
+  - **Two validations confirmed *Started*** — "Excluded by 'noindex' tag" (26
+    URLs) and "Redirect error" (1). Both were begun around 8 August, so they
+    are due to finish between now and early September. **Do not restart
+    either** — Google's own guidance is to let a cycle complete.
+  - **Indexing requested for 6 pages whose Search Console verdict was older
+    than the page**: `/about.html`, `/contact.html` and four Edexcel Theme 1
+    notes pages (`1-1-6`, `1-2-3`, `1-2-4`, `1-3-2`). All six had been edited
+    since Google last crawled them; `/about.html` and `/contact.html` were
+    last crawled in **April**, before the August rewrite of both.
+  - **Crawl stats read**: PDF 15% of requests, HTML 57%, JS 12%, CSS 9%,
+    other 3%. **Average response time 108 ms** — which means Googlebot is not
+    being held back by the hosting, so the low crawl rate is Google's choice,
+    not a capacity limit. PDF detail: 491 requests / 379 MB / 211 ms over
+    90 days, with a spike to ~128 a day on 8–9 August and nothing since.
+  - **Performance exported** to
+    `seo/gsc-exports/21-08-2026/performance-28d-compare/`. Site clicks
+    206 → 248 (+20%), impressions 13,612 → 25,851 (+90%). This is the
+    pre-October baseline.
 - **2026-08-21 — indexing requested for the last 3 URLs** (`/practice-questions/aqa-a2-macro/`,
   `/about.html`, `/contact.html`), closing out the 2026-08-16 indexing round.
 - **2026-08-21 — phone skim done**, all looks fine: marking (packages, enquiry

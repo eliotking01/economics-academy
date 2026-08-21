@@ -62,6 +62,80 @@ there.
    tunable but their og:description must stay a shortened variant
    (`KNOWN_SELF_DISAGREEMENT` in verify_page_shell.py) or leave that list in
    the same commit.
+9. **Search Console's Pages report LAGS its own Crawl stats by days.** Every
+   verdict in a page-indexing export is only as fresh as the `Last crawled`
+   date on that row, so **read that column before believing the verdict**. On
+   2026-08-21 the export implied no PDF had been crawled since 6 August while
+   Crawl stats showed a spike of ~128 PDF requests a day on 8–9 August — and
+   the audit reached a wrong conclusion before the graph was checked.
+   `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
+   last commit automatically.
+
+## SEO / indexing — Search Console index audit (2026-08-21) — REPORT ONLY
+
+**Unnumbered deliberately.** The numbered sections below are the site-overhaul
+projects and the "at a glance" table cross-references them by number, so
+renumbering to squeeze this in would break those links. This is also not a
+build project — **no published page was changed**, and
+`verify_text_integrity.py` confirms 0 visible-text differences.
+
+**State: committed `bb020d8`, pushed 2026-08-21.** Everything it produced lives
+in `seo/` and `docs/`, both excluded from publishing.
+
+### What it found
+
+Reconciled the 21 August Search Console export against the real published
+surface — **746 URLs, 463 HTML pages and 283 PDFs** — derived by running the
+scripts, not from any recorded count.
+
+| | published | indexed | |
+| --- | ---: | ---: | ---: |
+| HTML pages | 463 | 308 | **66.5%** |
+| PDFs | 283 | 11 | 3.9% |
+
+The sitemap submission of 8 August worked: published-and-indexed went
+**64 → 319** in a fortnight, and the newly-indexed pages earned 50 clicks and
+3,316 impressions from a standing start.
+
+**Two findings that matter beyond this audit:**
+
+1. **The 26 URLs Search Console reports as "Excluded by 'noindex' tag" carry no
+   noindex tag** and have not since 30 July. They were stub placeholders removed
+   as each AQA page was finished; Google's last crawl of every one predates its
+   own removal. Nothing to fix — it needs a recrawl.
+2. **"Discovered — currently not indexed" (316 URLs) is a queue, not a defect.**
+   Thin content, templating, link depth, orphans, sitemap structure and robots
+   directives were each tested against repo evidence and eliminated. What
+   remains is crawl demand: about **3,270 crawl requests to the whole site in
+   90 days, four fetches per page**, at a 108 ms average response time.
+   Capacity is not the constraint.
+
+### Where it lives
+
+| File | What it is |
+| --- | --- |
+| `seo/11-gsc-index-audit-2026-08-21.md` | the analysis, with full URL lists in appendices |
+| `seo/12-index-fix-actions-2026-08-21.md` | repo actions, and an explicit "not worth doing" list |
+| `seo/13-gsc-manual-todo-2026-08-21.md` | Search Console tasks, with what is already done |
+| `seo/tools/gsc_reconcile.py` | **reproduces the whole audit from one command** |
+| `seo/gsc-exports/<date>/` | the raw exports, one folder per date |
+
+```
+python3 seo/tools/gsc_reconcile.py seo/gsc-exports/21-08-2026 \
+        --diff seo/gsc-exports/08-08-2026
+```
+
+`seo/00-inventory.md` through `seo/10-architecture-verification.md` are the
+earlier eleven-phase audit and are still the reference for anything structural.
+**`seo/06-gsc-checklist.md` is superseded by `13-…`** for the Search Console
+side and says so at its head.
+
+### Deliberately not done
+
+`sitemaps/pdfs.xml` stays. Submitting it caused one crawl burst on 8–9 August
+and indexed nothing, but there is no ongoing cost, so removing it now would
+recover nothing. Re-decide 1 October on the indexing outcome; the change is
+scoped and ready as Action 3 in `seo/12-…`.
 
 ## 0. About + Contact + site finishing pass — MERGED AND LIVE (2026-08-16)
 

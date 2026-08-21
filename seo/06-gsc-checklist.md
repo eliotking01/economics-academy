@@ -1,5 +1,29 @@
 # What to do in Search Console, in what order
 
+> ## ⚠️ SUPERSEDED — 2026-08-21
+>
+> **For what to do now, read `seo/13-gsc-manual-todo-2026-08-21.md`.**
+>
+> This file is the plan written on 8 August, before the sitemap was submitted.
+> It is kept because it is the record of what was predicted, and because its
+> predictions turned out to be accurate — Steps 1–4 were all carried out and
+> Step 3's warning that "Alternate page with proper canonical tag" would climb
+> before it fell is exactly what happened (9 → 15).
+>
+> **What has changed since:** Steps 0–4 are done. Step 5's "first real read"
+> happened on 21 August and became `seo/11-gsc-index-audit-2026-08-21.md`.
+> Step 6's day-45 items are now scheduled in `13-…` as tasks 8a (~20 September)
+> and 8b (1 October).
+>
+> **One thing here is now wrong.** Step 5 says of the PDFs: "expect a low
+> indexed rate and do not chase it". Still true. But the reasoning that
+> followed — treating the PDFs as costing nothing to submit — was not
+> established until the Crawl stats time series was read on 21 August. See
+> `11-…` §7.
+>
+> Do not follow the steps below. Read them as history.
+
+
 ## Step 0 — Deploy ✅ done
 
 Verified live on 2026-08-08:
