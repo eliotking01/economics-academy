@@ -1727,3 +1727,68 @@ inside a phase review, as the Phase 0 plan already required.
 - **PH05-019/020's second, independent reason** — the contaminated noindex
   window recorded in D45's last paragraph — is unaffected by this override
   and still stands on its own.
+
+---
+
+## 2026-08-21 · Revision notes on-page SEO
+
+### D51 — `scripts/intentional-changes.json` stays empty across the title rewrite
+
+Eliot, 2026-08-21, in chat, after the trade-off was put to him in plain terms
+and he asked for it to be put again more simply.
+
+**What was at stake.** The notes on-page pass rewrote the `<title>` and meta
+description — and their `og:` and `twitter:` mirrors — on all 166 topic pages
+and 7 hubs. `compare_trees.py` assertion 5 holds `<head>` fields fixed between
+two trees unless the page AND the field appear in
+`scripts/intentional-changes.json` with a written reason, and that file's own
+header forbids globs: "The eighteen pages of PH06-029 are eighteen entries with
+eighteen reasons." Applied literally, this commit needed roughly **996 entries
+with 996 reasons**, all of them the same reason.
+
+**The decision: add nothing, and record why here instead.**
+
+**Why that is not a rule being quietly dropped.** `compare_trees.py` is
+deliberately not a CI step and `.github/workflows/verify.yml` says so in its
+own DELIBERATELY ABSENT block: assertion 8 asserts everything outside
+`--family` is byte-identical, so with no declaration the script is red on any
+commit that changes any file — measured, including a docs-only one — and "a
+check that is always red protects nothing". What runs instead is
+`scripts/test_compare_trees.py`, its 39-case suite, which passes.
+
+So nothing was suppressed and no check went from green to absent. The question
+was only whether ~30,000 lines of generated JSON should be added to the repo as
+a record, for a script nothing runs automatically. The file's value is that it
+is a short list of exceptions a person can read; 996 identical entries would
+end that.
+
+**What replaces it.** This entry, plus the "Deliberately not done" paragraph in
+the commit message and in `seo/17-notes-seo-audit-2026-08-21.md`. A future
+session that runs `compare_trees.py` by hand across 2026-08-21 will see 173
+changed heads and should read this rather than conclude something broke.
+
+**What this does NOT change.** The no-globs rule stands for every future use.
+A pattern was never added; the file is untouched and still empty. The next
+deliberate normalisation of a handful of pages declares itself there, entry by
+entry, exactly as before.
+
+### D52 — `verify_seo.py` assertion 13 gains a twin-board exemption keyed on a table
+
+Same pass. Assertion 13 — "no link crosses an exam board" — existed because
+Edexcel and AQA share the X.Y.Z code format and 37 codes collide outright, so
+a cross-board link resolves to a real page, 404s nothing, passes every other
+assertion, and the only symptom is a student reading the wrong board's content.
+
+The brief's §8 requires every topic page to link to its counterpart on the
+other board, which is exactly what that assertion forbade.
+
+**The exemption is the exact `(source, target)` pair in
+`scripts/notes_twins.TWINS`, not "anything inside the twin block."** That
+distinction is the whole decision. A block-scoped exemption would have made the
+assertion blind to the failure it was written for the moment the generator
+started deriving a target instead of reading one. A table-scoped exemption
+keeps it at full strength: 109 named pairs pass and every other cross-board
+link still fails, wherever it appears.
+
+New assertion 18 is the other half — it proves the 109 declared links actually
+shipped, so 13 cannot pass by the block having silently disappeared.

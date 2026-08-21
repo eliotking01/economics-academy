@@ -235,3 +235,116 @@ the terms you already know about. Fix those first.
 URLs are frozen because GitHub Pages cannot issue a 301, the gain from renaming
 is small, and you are mid-way through an indexing recovery. Revisit after a
 full term of data on the new titles.
+
+---
+
+*Tasks 13 to 17 were added on 21 August 2026 by the on-page audit
+(`seo/17-notes-seo-audit-2026-08-21.md`), which found five things it could not
+do itself and one it could not check.*
+
+---
+
+## 13. Re-run the web vitals against the live site — 20 minutes, after the push
+
+The audit measured Core Web Vitals as a local before/after A/B, because nothing
+is pushed and a live run would have measured the old pages. It was too noisy to
+trust: the LCP spread *within* one configuration reached 3.4 seconds, and
+`seo/09-web-vitals-baseline.md` hit exactly the same wall in 2026-08
+(7-run spread of 1.7 to 8.0 seconds on a notes page).
+
+Once the changes are live:
+
+```bash
+python3 seo/tools/run_lighthouse.py --out seo/lh-live-notes-seo
+```
+
+Compare it to `seo/lh-live-after/`. Same URLs, same run count, same flags, same
+Lighthouse major version — which is the whole reason that script exists rather
+than a hand-run CLI.
+
+**What to look for.** The one figure the local run could trust was +75 ms of
+LCP on Edexcel 1.2.2, alongside −93 ms of total blocking time and a +3
+performance score, so the expected answer is "no change worth seeing". **CLS
+is the number that would matter if it moved** — a contents list now sits above
+the fold on all 166 pages. Locally it did not move at all, on any of the six.
+
+If LCP is genuinely up by more than about 200 ms on the live site, say so and
+the contents block gets a second look.
+
+---
+
+## 14. Look at a topic page — 10 minutes
+
+Not optional, and not something this session could do. Every automated check is
+green and the markup was read line by line, but nobody has opened one of these
+pages and looked at it.
+
+Open two in Live Server — one Edexcel, one AQA — and check:
+
+- The **board · module · code** line under the heading is not crowding it.
+- The **"On this page"** box reads as helpful rather than as clutter, at
+  desktop width and on a phone.
+- The **Related topics** pills at the foot wrap sensibly and do not look like
+  buttons you are meant to press.
+- The **"Studying AQA instead?"** sentence reads naturally where it sits.
+- Nothing jumps as the page loads.
+
+Then look at one of the four pages whose contents list has a single entry —
+`aqa-a2-micro/1-6-6-the-national-minimum-wage.html` is the clearest — and
+decide whether a one-item list is acceptable until that page is expanded.
+It is item 8 of `seo/18-notes-content-approval-2026-08-21.md`.
+
+---
+
+## 15. Read the twin-board map — 20 minutes
+
+```bash
+python3 scripts/notes_twins.py
+python3 scripts/notes_twins.py --unpaired
+```
+
+109 links now say "Studying AQA instead? *[topic]* covers this on AQA", and
+the reverse. The map was built by measuring how similar each pair of pages
+actually is and then reading every row, but it is economics judgement in the
+end and **a wrong row sends a student to the wrong board's content** — the one
+failure `docs/audit/DO-NOT-BREAK.md` is most emphatic about.
+
+The four I am least confident in are item 10 of the approval document. Start
+there, then skim the rest. 57 pages have no twin on purpose; `--unpaired`
+shows them with the best score found, so you can see what was considered.
+
+This is the highest-value twenty minutes of review in the whole audit.
+
+---
+
+## 16. Decide the AQA heading question — 10 minutes
+
+Item 1 of `seo/18-notes-content-approval-2026-08-21.md`, and it is the one
+decision the audit could not make for you because two of your own documents
+disagree.
+
+`seo/14-notes-keyword-brief.md` §6 says strip the spec code from the 79 AQA
+`<h1>`s. `docs/audit/DO-NOT-BREAK.md` says it "stays until the day-45 read"
+because on near-identical cross-board pairs it is the last textual
+differentiator.
+
+The audit re-measured that: **no cross-board pair is above 0.95 similarity and
+only six are above 0.80**, and all six are now differentiated four other ways
+as well. The code is also now visible in a sub-label on all 166 pages, so
+nothing is lost from the page.
+
+Read item 1, then say yes or "wait for day 45". Either is defensible; leaving
+it undecided is the only bad answer, because the AQA half of the site keeps a
+convention the Edexcel half does not.
+
+---
+
+## 17. Note the date whenever you rank-check — ongoing, 10 seconds
+
+Repeating task 2's closing suggestion because it now has teeth. Every Search
+Console figure in this audit carries a caveat, and the reason is that nobody
+wrote down when the site was being searched by the people building it.
+
+A line in `OWNER-TODO.md` — "rank-checked heavily 18–21 Aug" — is enough to
+explain a spike later. Ten seconds now saves an hour of second-guessing an
+export in October.

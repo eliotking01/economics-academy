@@ -71,6 +71,102 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
+## Revision notes on-page SEO (2026-08-21) — branch `seo/notes-onpage-audit`
+
+**Unnumbered, for the same reason the two sections below it are.**
+
+**STATE: committed on `seo/notes-onpage-audit`, NOT pushed, awaiting Eliot.**
+Three commits plus the reports. Full verification suite green including five
+new `verify_seo.py` assertions; `verify_generated.py` proves the committed tree
+is what the generators produce.
+
+The 166 topic pages, their 7 hubs and the 2 diagram galleries — 176 pages,
+counted by `python3 seo/tools/notes_baseline.py`. Every one of the 166 titles
+put the topic name LAST, behind a board and a spec code earning 4 impressions
+in 28 days. They now put it first.
+
+### What was applied
+
+| | |
+| --- | ---: |
+| Titles rewritten to the brief's formula | 166 topics + 7 hubs |
+| Descriptions rewritten and front-loaded | 166 topics + 7 hubs |
+| `LearningResource` nodes gaining dates, author, audience, alignment | 173 |
+| `<h2>` elements gaining a stable `id` | 1,159 |
+| Pages gaining a contents list, a spec sub-label and an update date | 166 |
+| Twin-board links, where none existed at all before | 109 |
+| New internal links | 508 |
+| New `verify_seo.py` assertions | 5 (15–19) |
+| **Published URLs moved** | **0** |
+| **Words of economics wording changed** | **0** |
+
+`verify_text_integrity.py` reports 0 removals across the 166: every difference
+is an addition. The seven new visible strings are chrome and are listed at the
+top of `scripts/notes_extras.py`.
+
+### Three things a future session needs to know
+
+1. **`scripts/notes_twins.py` is a written-down table, not a derivation, and
+   that is deliberate.** Nothing in this repo owns the mapping between an
+   Edexcel topic and its AQA counterpart, and the spec code is the trap — 37
+   codes are claimed by both boards with different meanings. Each row carries
+   the measured prose similarity that seeded it; the eight hand corrections say
+   which and why. `verify_seo.py` assertion 13 was AMENDED to permit exactly
+   those pairs and nothing else, so a cross-board link the table does not name
+   still fails.
+
+2. **The contents list is on all 166 and not on the 95 that want one, because
+   of `verify_page_shell.py` check 6.** Gating it on "four or more sections"
+   takes the content spine from 6 shapes to 12 and gives two pages a shape of
+   their own. That check exists to catch a malformed page and its declared
+   singleton set is empty. The block goes everywhere and the spine stays at
+   (97, 29, 16, 11, 7, 6).
+
+3. **The dates are STORED in `notes-data/`, not read from git at build time.**
+   `verify_generated.py` re-runs every generator in a throwaway worktree, so a
+   generator that shelled out to `git log` would answer differently there and
+   fail a correct commit. `seo/tools/rewrite_notes_meta.py` does the git
+   reading, once; re-run it to refresh a `dateModified`.
+
+### What is still open
+
+**Everything that changes a word a student reads** —
+`seo/18-notes-content-approval-2026-08-21.md`, twelve numbered items. The four
+that matter: the 79 AQA `<h1>` code prefixes (item 1, and the brief and
+DO-NOT-BREAK disagree about it), 12 pages that define no term (item 7), the 17
+pages under 500 words of which 12 are AQA micro (item 8), and placing a diagram
+on the 43 of 72 diagram-less pages that already have a matching one on disk
+(item 9).
+
+**Five things only Eliot can do**, appended to
+`seo/15-notes-seo-manual-todo-2026-08-21.md` as tasks 13–17: a live web-vitals
+re-run after the push, looking at a page in a browser, reading the twin map,
+deciding the AQA heading question, and noting the date when rank-checking.
+
+**The author byline** is task 4 of that list and remains the highest-value
+item on it. Every competitor that outranks this site on these queries has a
+named author with credentials; these pages do not.
+
+### Where it lives
+
+| File | What it is |
+| --- | --- |
+| `seo/17-notes-seo-audit-2026-08-21.md` | the audit, with the 72-row diagram table and the SERP comparison |
+| `seo/17-notes-baseline-2026-08-21.csv` / `-after-` | before and after, one row per page |
+| `seo/18-notes-content-approval-2026-08-21.md` | the twelve decisions needing Eliot |
+| `seo/19-notes-url-rename-proposal-2026-08-21.md` | 176 rows, and why not to do it |
+| `seo/tools/notes_baseline.py` | regenerates either CSV |
+| `seo/tools/notes_titles.py` | the formulas, imported by the rewriter AND the verifier |
+| `seo/tools/rewrite_notes_meta.py` | re-runnable; refreshes `dateModified` |
+| `scripts/notes_extras.py`, `scripts/notes_twins.py` | the four blocks and the twin map |
+
+### Deliberately not done
+
+`scripts/intentional-changes.json` is not extended. `compare_trees.py`
+assertion 5 governs `<head>` field equality and 166 pages × six fields is ~996
+entries — for a script `verify.yml` states outright is not a step. Eliot chose
+the written record over the ritual; `docs/audit/DECISIONS.md` D51 carries it.
+
 ## Previous / next topic navigation (2026-08-21) — branch `feature/topic-prev-next-nav`
 
 **Unnumbered, for the same reason the section below it is.**
