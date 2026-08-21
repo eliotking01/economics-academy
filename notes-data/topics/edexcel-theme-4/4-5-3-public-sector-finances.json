@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html",
   "head": {
-    "title": "Edexcel A-Level Economics 4.5.3 Public Sector Finances",
-    "description": "Free Edexcel A-Level Economics revision notes for unit 4.5.3. Covers fiscal deficits versus national debt, automatic stabilisers, and structural deficits.",
+    "title": "Public Sector Finances – Edexcel A-Level Economics Notes",
+    "description": "Public Sector Finances for Edexcel A-Level Economics (4.5.3). Covers fiscal deficits versus national debt, automatic stabilisers, and structural deficits.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-3-public-sector-finances.html",
-      "title": "Edexcel A-Level Economics 4.5.3 Public Sector Finances",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 4.5.3. Covers fiscal deficits versus national debt, automatic stabilisers, and structural deficits.",
+      "title": "Public Sector Finances – Edexcel A-Level Economics Notes",
+      "description": "Public Sector Finances for Edexcel A-Level Economics (4.5.3). Covers fiscal deficits versus national debt, automatic stabilisers, and structural deficits.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 4.5.3 Public Sector Finances",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 4.5.3. Covers fiscal deficits versus national debt, automatic stabilisers, and structural deficits.",
+      "title": "Public Sector Finances – Edexcel A-Level Economics Notes",
+      "description": "Public Sector Finances for Edexcel A-Level Economics (4.5.3). Covers fiscal deficits versus national debt, automatic stabilisers, and structural deficits.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Public Sector Finances"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 4, unit 4.5.3"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

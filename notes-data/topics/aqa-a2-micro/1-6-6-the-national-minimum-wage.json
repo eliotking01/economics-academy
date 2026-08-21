@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-6-6-the-national-minimum-wage.html",
   "head": {
-    "title": "AQA A-Level Economics 1.6.6 The National Minimum Wage",
-    "description": "AQA A-Level Economics 1.6.6 revision notes. Covers how the minimum wage is set and its effects on workers and employers in different markets. With diagrams.",
+    "title": "The National Minimum Wage – AQA A-Level Economics Notes",
+    "description": "The National Minimum Wage for AQA A-Level Economics micro. Covers how the minimum wage is set and its effects on workers and employers in different markets.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-6-6-the-national-minimum-wage.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-6-6-the-national-minimum-wage.html",
-      "title": "AQA A-Level Economics 1.6.6 The National Minimum Wage",
-      "description": "AQA A-Level Economics 1.6.6 revision notes. Covers how the minimum wage is set and its effects on workers and employers in different markets. With diagrams.",
+      "title": "The National Minimum Wage – AQA A-Level Economics Notes",
+      "description": "The National Minimum Wage for AQA A-Level Economics micro. Covers how the minimum wage is set and its effects on workers and employers in different markets.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.6.6 The National Minimum Wage",
-      "description": "AQA A-Level Economics 1.6.6 revision notes. Covers how the minimum wage is set and its effects on workers and employers in different markets. With diagrams.",
+      "title": "The National Minimum Wage – AQA A-Level Economics Notes",
+      "description": "The National Minimum Wage for AQA A-Level Economics micro. Covers how the minimum wage is set and its effects on workers and employers in different markets.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "The National Minimum Wage"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT2M"
       }
     ],
     "jsonldAfterStyles": [

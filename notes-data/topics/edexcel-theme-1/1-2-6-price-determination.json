@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
   "head": {
-    "title": "Edexcel A-Level Economics 1.2.6 Price Determination",
-    "description": "Free Edexcel A-Level Economics revision notes (1.2.6). Covers equilibrium price and quantity, excess demand and supply, and how shifts move the equilibrium.",
+    "title": "Price Determination – Edexcel A-Level Economics Notes",
+    "description": "Price Determination — Edexcel A-Level Economics (1.2.6). Covers equilibrium price and quantity, excess demand and supply, and how shifts move the equilibrium.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-6-price-determination.html",
-      "title": "Edexcel A-Level Economics 1.2.6 Price Determination",
-      "description": "Free Edexcel A-Level Economics revision notes (1.2.6). Covers equilibrium price and quantity, excess demand and supply, and how shifts move the equilibrium.",
+      "title": "Price Determination – Edexcel A-Level Economics Notes",
+      "description": "Price Determination — Edexcel A-Level Economics (1.2.6). Covers equilibrium price and quantity, excess demand and supply, and how shifts move the equilibrium.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 1.2.6 Price Determination",
-      "description": "Free Edexcel A-Level Economics revision notes (1.2.6). Covers equilibrium price and quantity, excess demand and supply, and how shifts move the equilibrium.",
+      "title": "Price Determination – Edexcel A-Level Economics Notes",
+      "description": "Price Determination — Edexcel A-Level Economics (1.2.6). Covers equilibrium price and quantity, excess demand and supply, and how shifts move the equilibrium.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-06-26",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Price Determination"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 1, unit 1.2.6"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-8-7-competition-policy.html",
   "head": {
-    "title": "AQA A-Level Economics 1.8.7 Competition Policy",
-    "description": "Free AQA A-Level Economics revision notes for unit 1.8.7. Covers the aims of competition policy, control of monopolies and mergers, and policy evaluation.",
+    "title": "Competition Policy – AQA A-Level Economics Revision Notes",
+    "description": "Competition Policy for AQA A-Level Economics micro. Covers the aims of competition policy, control of monopolies and mergers, and policy evaluation.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-7-competition-policy.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-7-competition-policy.html",
-      "title": "AQA A-Level Economics 1.8.7 Competition Policy",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.8.7. Covers the aims of competition policy, control of monopolies and mergers, and policy evaluation.",
+      "title": "Competition Policy – AQA A-Level Economics Revision Notes",
+      "description": "Competition Policy for AQA A-Level Economics micro. Covers the aims of competition policy, control of monopolies and mergers, and policy evaluation.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.8.7 Competition Policy",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.8.7. Covers the aims of competition policy, control of monopolies and mergers, and policy evaluation.",
+      "title": "Competition Policy – AQA A-Level Economics Revision Notes",
+      "description": "Competition Policy for AQA A-Level Economics micro. Covers the aims of competition policy, control of monopolies and mergers, and policy evaluation.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Competition Policy"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT7M"
       }
     ],
     "jsonldAfterStyles": [

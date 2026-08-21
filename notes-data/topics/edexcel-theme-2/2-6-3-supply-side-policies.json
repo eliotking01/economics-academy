@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
   "head": {
-    "title": "Edexcel A-Level Economics 2.6.3 Supply-Side Policies",
-    "description": "Edexcel A-Level Economics 2.6.3 revision notes. Covers market-based and interventionist policies and their effect on the productive potential of the economy.",
+    "title": "Supply-Side Policies – Edexcel A-Level Economics Notes",
+    "description": "Supply-Side Policies — Edexcel A-Level Economics (2.6.3): market-based and interventionist policies and their effect on the productive potential of the economy.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-6-3-supply-side-policies.html",
-      "title": "Edexcel A-Level Economics 2.6.3 Supply-Side Policies",
-      "description": "Edexcel A-Level Economics 2.6.3 revision notes. Covers market-based and interventionist policies and their effect on the productive potential of the economy.",
+      "title": "Supply-Side Policies – Edexcel A-Level Economics Notes",
+      "description": "Supply-Side Policies — Edexcel A-Level Economics (2.6.3): market-based and interventionist policies and their effect on the productive potential of the economy.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 2.6.3 Supply-Side Policies",
-      "description": "Edexcel A-Level Economics 2.6.3 revision notes. Covers market-based and interventionist policies and their effect on the productive potential of the economy.",
+      "title": "Supply-Side Policies – Edexcel A-Level Economics Notes",
+      "description": "Supply-Side Policies — Edexcel A-Level Economics (2.6.3): market-based and interventionist policies and their effect on the productive potential of the economy.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Supply-Side Policies"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 2, unit 2.6.3"
+        },
+        "timeRequired": "PT7M"
       }
     ],
     "jsonldAfterStyles": [

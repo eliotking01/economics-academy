@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-1/index.html",
   "head": {
-    "title": "Edexcel Theme 1 Revision Notes | Markets &amp; Market Failure | Economics Academy",
-    "description": "Free Edexcel A-Level Economics Theme 1 revision notes — markets, market failure, and government intervention. Every topic covered, with links to detailed notes on each subtopic.",
+    "title": "Edexcel Theme 1 Revision Notes | Markets &amp; Market Failure",
+    "description": "Theme 1 revision notes for Edexcel A-Level Economics: markets, market failure and government intervention. Free notes on every topic in the theme.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/",
     "og": {
       "type": "website",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/",
-      "title": "Edexcel Theme 1 Revision Notes | Markets &amp; Market Failure | Economics Academy",
-      "description": "Free Edexcel A-Level Economics Theme 1 revision notes — markets, market failure, and government intervention. Every topic covered, with links to detailed notes on each subtopic.",
+      "title": "Edexcel Theme 1 Revision Notes | Markets &amp; Market Failure",
+      "description": "Theme 1 revision notes for Edexcel A-Level Economics: markets, market failure and government intervention. Free notes on every topic in the theme.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
       "image:width": "1200",
       "image:height": "1200",
@@ -48,6 +48,23 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
+        },
+        "datePublished": "2025-06-15",
+        "dateModified": "2026-08-15",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 1"
         }
       },
       {

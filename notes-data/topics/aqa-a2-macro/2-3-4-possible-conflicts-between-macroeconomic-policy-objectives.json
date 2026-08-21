@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
   "head": {
-    "title": "AQA A-Level Economics 2.3.4 Macroeconomic Policy Conflicts",
-    "description": "AQA A-Level Economics 2.3.4 revision notes. Covers the key trade-offs, the short-run and long-run Phillips curves, and reconciling conflicts. With diagrams.",
+    "title": "Macroeconomic Policy Conflicts – AQA A-Level Economics Notes",
+    "description": "Macroeconomic Policy Conflicts for AQA A-Level Economics macro: the key trade-offs, the short-run and long-run Phillips curves, and reconciling conflicts.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-3-4-possible-conflicts-between-macroeconomic-policy-objectives.html",
-      "title": "AQA A-Level Economics 2.3.4 Macroeconomic Policy Conflicts",
-      "description": "AQA A-Level Economics 2.3.4 revision notes. Covers the key trade-offs, the short-run and long-run Phillips curves, and reconciling conflicts. With diagrams.",
+      "title": "Macroeconomic Policy Conflicts – AQA A-Level Economics Notes",
+      "description": "Macroeconomic Policy Conflicts for AQA A-Level Economics macro: the key trade-offs, the short-run and long-run Phillips curves, and reconciling conflicts.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.3.4 Macroeconomic Policy Conflicts",
-      "description": "AQA A-Level Economics 2.3.4 revision notes. Covers the key trade-offs, the short-run and long-run Phillips curves, and reconciling conflicts. With diagrams.",
+      "title": "Macroeconomic Policy Conflicts – AQA A-Level Economics Notes",
+      "description": "Macroeconomic Policy Conflicts for AQA A-Level Economics macro: the key trade-offs, the short-run and long-run Phillips curves, and reconciling conflicts.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Macroeconomic Policy Conflicts"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [

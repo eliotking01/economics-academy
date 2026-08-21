@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
   "head": {
-    "title": "AQA A-Level Economics 2.6.5 Economic Growth and Development",
-    "description": "Free AQA A-Level Economics revision notes (2.6.5). Covers growth versus development, HDI and other indicators, and market-led versus state-led strategies.",
+    "title": "Economic Growth and Development – AQA A-Level Economics",
+    "description": "Economic Growth and Development — AQA A-Level Economics macro: growth versus development, HDI and other indicators, and market-led versus state-led strategies.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-5-economic-growth-and-development.html",
-      "title": "AQA A-Level Economics 2.6.5 Economic Growth and Development",
-      "description": "Free AQA A-Level Economics revision notes (2.6.5). Covers growth versus development, HDI and other indicators, and market-led versus state-led strategies.",
+      "title": "Economic Growth and Development – AQA A-Level Economics",
+      "description": "Economic Growth and Development — AQA A-Level Economics macro: growth versus development, HDI and other indicators, and market-led versus state-led strategies.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.6.5 Economic Growth and Development",
-      "description": "Free AQA A-Level Economics revision notes (2.6.5). Covers growth versus development, HDI and other indicators, and market-led versus state-led strategies.",
+      "title": "Economic Growth and Development – AQA A-Level Economics",
+      "description": "Economic Growth and Development — AQA A-Level Economics macro: growth versus development, HDI and other indicators, and market-led versus state-led strategies.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Economic Growth and Development"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT11M"
       }
     ],
     "jsonldAfterStyles": [

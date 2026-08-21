@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
   "head": {
-    "title": "Edexcel A-Level Economics 4.3.3 Strategies for Development",
-    "description": "Edexcel A-Level Economics 4.3.3 revision notes. Covers market-orientated and interventionist strategies, aid, and international institutions. With diagrams.",
+    "title": "Strategies for Development – Edexcel A-Level Economics Notes",
+    "description": "Strategies for Development — Edexcel A-Level Economics (4.3.3). Covers market-orientated and interventionist strategies, aid, and international institutions.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html",
-      "title": "Edexcel A-Level Economics 4.3.3 Strategies for Development",
-      "description": "Edexcel A-Level Economics 4.3.3 revision notes. Covers market-orientated and interventionist strategies, aid, and international institutions. With diagrams.",
+      "title": "Strategies for Development – Edexcel A-Level Economics Notes",
+      "description": "Strategies for Development — Edexcel A-Level Economics (4.3.3). Covers market-orientated and interventionist strategies, aid, and international institutions.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 4.3.3 Strategies for Development",
-      "description": "Edexcel A-Level Economics 4.3.3 revision notes. Covers market-orientated and interventionist strategies, aid, and international institutions. With diagrams.",
+      "title": "Strategies for Development – Edexcel A-Level Economics Notes",
+      "description": "Strategies for Development — Edexcel A-Level Economics (4.3.3). Covers market-orientated and interventionist strategies, aid, and international institutions.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Strategies for Development"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 4, unit 4.3.3"
+        },
+        "timeRequired": "PT7M"
       }
     ],
     "jsonldAfterStyles": [

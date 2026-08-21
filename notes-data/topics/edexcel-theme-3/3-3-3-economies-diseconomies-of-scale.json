@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
   "head": {
-    "title": "Edexcel A-Level Economics 3.3.3 Economies of Scale",
-    "description": "Free Edexcel A-Level Economics revision notes for unit 3.3.3. Covers the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
+    "title": "Economies and Diseconomies of Scale – Edexcel A-Level Economics",
+    "description": "Economies and Diseconomies of Scale — Edexcel A-Level Economics (3.3.3): the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-3-3-economies-diseconomies-of-scale.html",
-      "title": "Edexcel A-Level Economics 3.3.3 Economies of Scale",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 3.3.3. Covers the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
+      "title": "Economies and Diseconomies of Scale – Edexcel A-Level Economics",
+      "description": "Economies and Diseconomies of Scale — Edexcel A-Level Economics (3.3.3): the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 3.3.3 Economies of Scale",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 3.3.3. Covers the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
+      "title": "Economies and Diseconomies of Scale – Edexcel A-Level Economics",
+      "description": "Economies and Diseconomies of Scale — Edexcel A-Level Economics (3.3.3): the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Economies and Diseconomies of Scale"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 3, unit 3.3.3"
+        },
+        "timeRequired": "PT6M"
       }
     ],
     "jsonldAfterStyles": [

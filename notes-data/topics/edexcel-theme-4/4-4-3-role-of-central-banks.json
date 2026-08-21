@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html",
   "head": {
-    "title": "Edexcel A-Level Economics 4.4.3 Role of Central Banks",
-    "description": "Free Edexcel A-Level Economics revision notes for unit 4.4.3. Covers the functions of a central bank, financial stability, and the limits of its policy tools.",
+    "title": "Role of Central Banks – Edexcel A-Level Economics Notes",
+    "description": "Role of Central Banks for Edexcel A-Level Economics (4.4.3). Covers the functions of a central bank, financial stability, and the limits of its policy tools.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-4-3-role-of-central-banks.html",
-      "title": "Edexcel A-Level Economics 4.4.3 Role of Central Banks",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 4.4.3. Covers the functions of a central bank, financial stability, and the limits of its policy tools.",
+      "title": "Role of Central Banks – Edexcel A-Level Economics Notes",
+      "description": "Role of Central Banks for Edexcel A-Level Economics (4.4.3). Covers the functions of a central bank, financial stability, and the limits of its policy tools.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 4.4.3 Role of Central Banks",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 4.4.3. Covers the functions of a central bank, financial stability, and the limits of its policy tools.",
+      "title": "Role of Central Banks – Edexcel A-Level Economics Notes",
+      "description": "Role of Central Banks for Edexcel A-Level Economics (4.4.3). Covers the functions of a central bank, financial stability, and the limits of its policy tools.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Role of Central Banks"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 4, unit 4.4.3"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

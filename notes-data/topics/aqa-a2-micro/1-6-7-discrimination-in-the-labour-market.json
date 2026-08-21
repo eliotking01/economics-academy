@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-6-7-discrimination-in-the-labour-market.html",
   "head": {
-    "title": "AQA A-Level Economics 1.6.7 Labour Market Discrimination",
-    "description": "Free AQA A-Level Economics revision notes for unit 1.6.7. Covers wage discrimination, the conditions that allow it, and its impact on wages and employment.",
+    "title": "Discrimination in the Labour Market – AQA A-Level Economics",
+    "description": "Discrimination in the Labour Market — AQA A-Level Economics micro: wage discrimination, the conditions that allow it, and its impact on wages and employment.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-6-7-discrimination-in-the-labour-market.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-6-7-discrimination-in-the-labour-market.html",
-      "title": "AQA A-Level Economics 1.6.7 Labour Market Discrimination",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.6.7. Covers wage discrimination, the conditions that allow it, and its impact on wages and employment.",
+      "title": "Discrimination in the Labour Market – AQA A-Level Economics",
+      "description": "Discrimination in the Labour Market — AQA A-Level Economics micro: wage discrimination, the conditions that allow it, and its impact on wages and employment.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.6.7 Labour Market Discrimination",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.6.7. Covers wage discrimination, the conditions that allow it, and its impact on wages and employment.",
+      "title": "Discrimination in the Labour Market – AQA A-Level Economics",
+      "description": "Discrimination in the Labour Market — AQA A-Level Economics micro: wage discrimination, the conditions that allow it, and its impact on wages and employment.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Discrimination in the Labour Market"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

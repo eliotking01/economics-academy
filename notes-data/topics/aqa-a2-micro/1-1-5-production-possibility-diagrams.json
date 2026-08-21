@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
   "head": {
-    "title": "AQA A-Level Economics 1.1.5 Production Possibility Diagrams",
-    "description": "AQA A-Level Economics 1.1.5 revision notes. Covers what a PPF shows, points on and inside the curve, and shifts showing growth and decline. With diagrams.",
+    "title": "Production Possibility Diagrams – AQA A-Level Economics",
+    "description": "Production Possibility Diagrams — AQA A-Level Economics micro. Covers what a PPF shows, points on and inside the curve, and shifts showing growth and decline.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-1-5-production-possibility-diagrams.html",
-      "title": "AQA A-Level Economics 1.1.5 Production Possibility Diagrams",
-      "description": "AQA A-Level Economics 1.1.5 revision notes. Covers what a PPF shows, points on and inside the curve, and shifts showing growth and decline. With diagrams.",
+      "title": "Production Possibility Diagrams – AQA A-Level Economics",
+      "description": "Production Possibility Diagrams — AQA A-Level Economics micro. Covers what a PPF shows, points on and inside the curve, and shifts showing growth and decline.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.1.5 Production Possibility Diagrams",
-      "description": "AQA A-Level Economics 1.1.5 revision notes. Covers what a PPF shows, points on and inside the curve, and shifts showing growth and decline. With diagrams.",
+      "title": "Production Possibility Diagrams – AQA A-Level Economics",
+      "description": "Production Possibility Diagrams — AQA A-Level Economics micro. Covers what a PPF shows, points on and inside the curve, and shifts showing growth and decline.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-06-22",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Production Possibility Diagrams"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

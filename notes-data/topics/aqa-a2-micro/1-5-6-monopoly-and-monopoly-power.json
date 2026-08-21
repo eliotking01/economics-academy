@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
   "head": {
-    "title": "AQA A-Level Economics 1.5.6 Monopoly and Monopoly Power",
-    "description": "AQA A-Level Economics 1.5.6 revision notes. Covers the characteristics of monopoly, profit maximisation, monopoly power and natural monopoly. With diagrams.",
+    "title": "Monopoly and Monopoly Power – AQA A-Level Economics Notes",
+    "description": "Monopoly and Monopoly Power for AQA A-Level Economics micro. Covers the characteristics of monopoly, profit maximisation, monopoly power and natural monopoly.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-6-monopoly-and-monopoly-power.html",
-      "title": "AQA A-Level Economics 1.5.6 Monopoly and Monopoly Power",
-      "description": "AQA A-Level Economics 1.5.6 revision notes. Covers the characteristics of monopoly, profit maximisation, monopoly power and natural monopoly. With diagrams.",
+      "title": "Monopoly and Monopoly Power – AQA A-Level Economics Notes",
+      "description": "Monopoly and Monopoly Power for AQA A-Level Economics micro. Covers the characteristics of monopoly, profit maximisation, monopoly power and natural monopoly.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.5.6 Monopoly and Monopoly Power",
-      "description": "AQA A-Level Economics 1.5.6 revision notes. Covers the characteristics of monopoly, profit maximisation, monopoly power and natural monopoly. With diagrams.",
+      "title": "Monopoly and Monopoly Power – AQA A-Level Economics Notes",
+      "description": "Monopoly and Monopoly Power for AQA A-Level Economics micro. Covers the characteristics of monopoly, profit maximisation, monopoly power and natural monopoly.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Monopoly and Monopoly Power"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [

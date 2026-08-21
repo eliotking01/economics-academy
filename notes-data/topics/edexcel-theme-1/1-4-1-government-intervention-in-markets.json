@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
   "head": {
-    "title": "Edexcel A-Level Economics 1.4.1 Government Intervention",
-    "description": "Free Edexcel A-Level Economics revision notes (1.4.1). Covers indirect taxes, subsidies, maximum and minimum prices, regulation and information provision.",
+    "title": "Government Intervention in Markets – Edexcel A-Level Economics",
+    "description": "Government Intervention in Markets — Edexcel A-Level Economics (1.4.1): indirect taxes, subsidies, maximum and minimum prices, regulation and information provision.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-4-1-government-intervention-in-markets.html",
-      "title": "Edexcel A-Level Economics 1.4.1 Government Intervention",
-      "description": "Free Edexcel A-Level Economics revision notes (1.4.1). Covers indirect taxes, subsidies, maximum and minimum prices, regulation and information provision.",
+      "title": "Government Intervention in Markets – Edexcel A-Level Economics",
+      "description": "Government Intervention in Markets — Edexcel A-Level Economics (1.4.1): indirect taxes, subsidies, maximum and minimum prices, regulation and information provision.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 1.4.1 Government Intervention",
-      "description": "Free Edexcel A-Level Economics revision notes (1.4.1). Covers indirect taxes, subsidies, maximum and minimum prices, regulation and information provision.",
+      "title": "Government Intervention in Markets – Edexcel A-Level Economics",
+      "description": "Government Intervention in Markets — Edexcel A-Level Economics (1.4.1): indirect taxes, subsidies, maximum and minimum prices, regulation and information provision.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-09-01",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Government Intervention in Markets"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 1, unit 1.4.1"
+        },
+        "timeRequired": "PT6M"
       }
     ],
     "jsonldAfterStyles": [

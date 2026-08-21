@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
   "head": {
-    "title": "Edexcel A-Level Economics 2.2.1 Aggregate Demand",
-    "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.1. Covers the AD formula, the relative weight of each component, and movements versus shifts of AD.",
+    "title": "Aggregate Demand (2.2.1) – Edexcel A-Level Economics Notes",
+    "description": "Aggregate Demand — Edexcel A-Level Economics (2.2.1): the AD formula, the relative weight of each component, and movements versus shifts of AD, with diagrams.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-1-aggregate-demand.html",
-      "title": "Edexcel A-Level Economics 2.2.1 Aggregate Demand",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.1. Covers the AD formula, the relative weight of each component, and movements versus shifts of AD.",
+      "title": "Aggregate Demand (2.2.1) – Edexcel A-Level Economics Notes",
+      "description": "Aggregate Demand — Edexcel A-Level Economics (2.2.1): the AD formula, the relative weight of each component, and movements versus shifts of AD, with diagrams.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 2.2.1 Aggregate Demand",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.1. Covers the AD formula, the relative weight of each component, and movements versus shifts of AD.",
+      "title": "Aggregate Demand (2.2.1) – Edexcel A-Level Economics Notes",
+      "description": "Aggregate Demand — Edexcel A-Level Economics (2.2.1): the AD formula, the relative weight of each component, and movements versus shifts of AD, with diagrams.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Aggregate Demand"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 2, unit 2.2.1"
+        },
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [

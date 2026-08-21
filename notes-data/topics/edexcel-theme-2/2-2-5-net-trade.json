@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-2/2-2-5-net-trade.html",
   "head": {
-    "title": "Edexcel A-Level Economics 2.2.5 Net Trade",
-    "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.5. Covers exports and imports, exchange rates, protectionism, and the Marshall-Lerner condition.",
+    "title": "Net Trade (2.2.5) – Edexcel A-Level Economics Revision Notes",
+    "description": "Net Trade for Edexcel A-Level Economics (2.2.5). Covers exports and imports, exchange rates, protectionism, and the Marshall-Lerner condition.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-5-net-trade.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-2-5-net-trade.html",
-      "title": "Edexcel A-Level Economics 2.2.5 Net Trade",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.5. Covers exports and imports, exchange rates, protectionism, and the Marshall-Lerner condition.",
+      "title": "Net Trade (2.2.5) – Edexcel A-Level Economics Revision Notes",
+      "description": "Net Trade for Edexcel A-Level Economics (2.2.5). Covers exports and imports, exchange rates, protectionism, and the Marshall-Lerner condition.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 2.2.5 Net Trade",
-      "description": "Free Edexcel A-Level Economics revision notes for unit 2.2.5. Covers exports and imports, exchange rates, protectionism, and the Marshall-Lerner condition.",
+      "title": "Net Trade (2.2.5) – Edexcel A-Level Economics Revision Notes",
+      "description": "Net Trade for Edexcel A-Level Economics (2.2.5). Covers exports and imports, exchange rates, protectionism, and the Marshall-Lerner condition.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Net Trade"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 2, unit 2.2.5"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

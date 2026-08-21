@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-6-2-trade.html",
   "head": {
-    "title": "AQA A-Level Economics 2.6.2 Trade",
-    "description": "AQA A-Level Economics 2.6.2 revision notes. Covers absolute and comparative advantage, protectionism, trading blocs and the role of the WTO. With diagrams.",
+    "title": "Trade – AQA A-Level Economics Revision Notes",
+    "description": "Trade for AQA A-Level Economics macro. Covers absolute and comparative advantage, protectionism, trading blocs and the role of the WTO, with key definitions.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-2-trade.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-2-trade.html",
-      "title": "AQA A-Level Economics 2.6.2 Trade",
-      "description": "AQA A-Level Economics 2.6.2 revision notes. Covers absolute and comparative advantage, protectionism, trading blocs and the role of the WTO. With diagrams.",
+      "title": "Trade – AQA A-Level Economics Revision Notes",
+      "description": "Trade for AQA A-Level Economics macro. Covers absolute and comparative advantage, protectionism, trading blocs and the role of the WTO, with key definitions.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.6.2 Trade",
-      "description": "AQA A-Level Economics 2.6.2 revision notes. Covers absolute and comparative advantage, protectionism, trading blocs and the role of the WTO. With diagrams.",
+      "title": "Trade – AQA A-Level Economics Revision Notes",
+      "description": "Trade for AQA A-Level Economics macro. Covers absolute and comparative advantage, protectionism, trading blocs and the role of the WTO, with key definitions.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Trade"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT10M"
       }
     ],
     "jsonldAfterStyles": [

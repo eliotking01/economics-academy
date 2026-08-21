@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html",
   "head": {
-    "title": "AQA A-Level Economics 2.1.1 Government Policy Objectives",
-    "description": "Free AQA A-Level Economics revision notes for unit 2.1.1. Covers growth, unemployment, inflation, the current account, the budget balance and income equality.",
+    "title": "Government Policy Objectives – AQA A-Level Economics Notes",
+    "description": "Government Policy Objectives for AQA A-Level Economics macro: growth, unemployment, inflation, the current account, the budget balance and income equality.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html",
-      "title": "AQA A-Level Economics 2.1.1 Government Policy Objectives",
-      "description": "Free AQA A-Level Economics revision notes for unit 2.1.1. Covers growth, unemployment, inflation, the current account, the budget balance and income equality.",
+      "title": "Government Policy Objectives – AQA A-Level Economics Notes",
+      "description": "Government Policy Objectives for AQA A-Level Economics macro: growth, unemployment, inflation, the current account, the budget balance and income equality.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.1.1 Government Policy Objectives",
-      "description": "Free AQA A-Level Economics revision notes for unit 2.1.1. Covers growth, unemployment, inflation, the current account, the budget balance and income equality.",
+      "title": "Government Policy Objectives – AQA A-Level Economics Notes",
+      "description": "Government Policy Objectives for AQA A-Level Economics macro: growth, unemployment, inflation, the current account, the budget balance and income equality.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Government Policy Objectives"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

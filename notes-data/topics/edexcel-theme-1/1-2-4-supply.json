@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-1/1-2-4-supply.html",
   "head": {
-    "title": "Edexcel A-Level Economics 1.2.4 Supply",
-    "description": "Revision notes for Edexcel A-Level Economics 1.2.4. Covers the law of supply, movements versus shifts, and how costs, technology and taxation change supply.",
+    "title": "Supply (1.2.4) – Edexcel A-Level Economics Revision Notes",
+    "description": "Supply for Edexcel A-Level Economics (1.2.4): the law of supply, movements versus shifts, and how costs, technology and taxation change supply, with diagrams.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-4-supply.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-4-supply.html",
-      "title": "Edexcel A-Level Economics 1.2.4 Supply",
-      "description": "Revision notes for Edexcel A-Level Economics 1.2.4. Covers the law of supply, movements versus shifts, and how costs, technology and taxation change supply.",
+      "title": "Supply (1.2.4) – Edexcel A-Level Economics Revision Notes",
+      "description": "Supply for Edexcel A-Level Economics (1.2.4): the law of supply, movements versus shifts, and how costs, technology and taxation change supply, with diagrams.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 1.2.4 Supply",
-      "description": "Revision notes for Edexcel A-Level Economics 1.2.4. Covers the law of supply, movements versus shifts, and how costs, technology and taxation change supply.",
+      "title": "Supply (1.2.4) – Edexcel A-Level Economics Revision Notes",
+      "description": "Supply for Edexcel A-Level Economics (1.2.4): the law of supply, movements versus shifts, and how costs, technology and taxation change supply, with diagrams.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-06-26",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Supply"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 1, unit 1.2.4"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

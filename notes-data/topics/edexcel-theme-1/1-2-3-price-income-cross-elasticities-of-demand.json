@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
   "head": {
-    "title": "Edexcel A-Level Economics 1.2.3 PED, YED and XED",
-    "description": "Free Edexcel A-Level Economics revision notes (1.2.3). Covers the three elasticity formulas with worked calculations and what the values mean for pricing.",
+    "title": "PED, YED and XED (1.2.3) – Edexcel A-Level Economics Notes",
+    "description": "PED, YED and XED for Edexcel A-Level Economics (1.2.3). Covers the three elasticity formulas with worked calculations and what the values mean for pricing.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html",
-      "title": "Edexcel A-Level Economics 1.2.3 PED, YED and XED",
-      "description": "Free Edexcel A-Level Economics revision notes (1.2.3). Covers the three elasticity formulas with worked calculations and what the values mean for pricing.",
+      "title": "PED, YED and XED (1.2.3) – Edexcel A-Level Economics Notes",
+      "description": "PED, YED and XED for Edexcel A-Level Economics (1.2.3). Covers the three elasticity formulas with worked calculations and what the values mean for pricing.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 1.2.3 PED, YED and XED",
-      "description": "Free Edexcel A-Level Economics revision notes (1.2.3). Covers the three elasticity formulas with worked calculations and what the values mean for pricing.",
+      "title": "PED, YED and XED (1.2.3) – Edexcel A-Level Economics Notes",
+      "description": "PED, YED and XED for Edexcel A-Level Economics (1.2.3). Covers the three elasticity formulas with worked calculations and what the values mean for pricing.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-06-22",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "PED, YED and XED"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 1, unit 1.2.3"
+        },
+        "timeRequired": "PT5M"
       }
     ],
     "jsonldAfterStyles": [

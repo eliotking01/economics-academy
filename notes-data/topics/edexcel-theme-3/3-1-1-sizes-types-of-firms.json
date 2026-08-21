@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html",
   "head": {
-    "title": "Edexcel A-Level Economics 3.1.1 Sizes and Types of Firms",
-    "description": "Revision notes for Edexcel A-Level Economics 3.1.1. Covers why firms grow or stay small, the divorce of ownership and control, and not-for-profit organisations.",
+    "title": "Sizes and Types of Firms – Edexcel A-Level Economics Notes",
+    "description": "Sizes and Types of Firms — Edexcel A-Level Economics (3.1.1): why firms grow or stay small, the divorce of ownership and control, and not-for-profit organisations.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-1-1-sizes-types-of-firms.html",
-      "title": "Edexcel A-Level Economics 3.1.1 Sizes and Types of Firms",
-      "description": "Revision notes for Edexcel A-Level Economics 3.1.1. Covers why firms grow or stay small, the divorce of ownership and control, and not-for-profit organisations.",
+      "title": "Sizes and Types of Firms – Edexcel A-Level Economics Notes",
+      "description": "Sizes and Types of Firms — Edexcel A-Level Economics (3.1.1): why firms grow or stay small, the divorce of ownership and control, and not-for-profit organisations.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 3.1.1 Sizes and Types of Firms",
-      "description": "Revision notes for Edexcel A-Level Economics 3.1.1. Covers why firms grow or stay small, the divorce of ownership and control, and not-for-profit organisations.",
+      "title": "Sizes and Types of Firms – Edexcel A-Level Economics Notes",
+      "description": "Sizes and Types of Firms — Edexcel A-Level Economics (3.1.1): why firms grow or stay small, the divorce of ownership and control, and not-for-profit organisations.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Sizes and Types of Firms"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 3, unit 3.1.1"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

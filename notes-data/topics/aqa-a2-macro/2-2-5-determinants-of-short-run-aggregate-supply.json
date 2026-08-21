@@ -1,15 +1,15 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html",
   "head": {
-    "title": "AQA A-Level Economics 2.2.5 Determinants of SRAS",
-    "description": "AQA A-Level Economics 2.2.5 revision notes. Covers why SRAS slopes upward and how production costs, wages and exchange rates shift it. With comparison tables.",
+    "title": "Determinants of SRAS – AQA A-Level Economics Revision Notes",
+    "description": "Determinants of SRAS — AQA A-Level Economics macro. Covers why SRAS slopes upward and how production costs, wages and exchange rates shift it, with diagrams.",
     "dividerAfterDescription": "    <!-- ============================================================ -->",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-2-5-determinants-of-short-run-aggregate-supply.html",
-      "title": "AQA A-Level Economics 2.2.5 Determinants of SRAS",
-      "description": "AQA A-Level Economics 2.2.5 revision notes. Covers why SRAS slopes upward and how production costs, wages and exchange rates shift it. With comparison tables.",
+      "title": "Determinants of SRAS – AQA A-Level Economics Revision Notes",
+      "description": "Determinants of SRAS — AQA A-Level Economics macro. Covers why SRAS slopes upward and how production costs, wages and exchange rates shift it, with diagrams.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -22,8 +22,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.2.5 Determinants of SRAS",
-      "description": "AQA A-Level Economics 2.2.5 revision notes. Covers why SRAS slopes upward and how production costs, wages and exchange rates shift it. With comparison tables.",
+      "title": "Determinants of SRAS – AQA A-Level Economics Revision Notes",
+      "description": "Determinants of SRAS — AQA A-Level Economics macro. Covers why SRAS slopes upward and how production costs, wages and exchange rates shift it, with diagrams.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -53,7 +53,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Determinants of SRAS"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

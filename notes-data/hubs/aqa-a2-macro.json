@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/index.html",
   "head": {
-    "title": "AQA A-Level Macroeconomics Revision Notes | National &amp; International Economy | Economics Academy",
-    "description": "Free AQA A-Level Economics macroeconomics revision notes — macroeconomic performance, AD and AS, financial markets, fiscal and supply-side policies, and the international economy. Every topic covered, with links to detailed notes on each subtopic.",
+    "title": "AQA A-Level Macroeconomics Revision Notes",
+    "description": "Macroeconomics revision notes for AQA A-Level Economics: macroeconomic performance, AD and AS, financial markets, policy and the international economy.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/",
     "og": {
       "type": "website",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/",
-      "title": "AQA A-Level Macroeconomics Revision Notes | National &amp; International Economy | Economics Academy",
-      "description": "Free AQA A-Level Economics macroeconomics revision notes — macroeconomic performance, AD and AS, financial markets, fiscal and supply-side policies, and the international economy. Every topic covered.",
+      "title": "AQA A-Level Macroeconomics Revision Notes",
+      "description": "Macroeconomics revision notes for AQA A-Level Economics: macroeconomic performance, AD and AS, financial markets, policy and the international economy.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
       "image:width": "1200",
       "image:height": "1200",
@@ -48,6 +48,23 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
+        },
+        "datePublished": "2025-06-15",
+        "dateModified": "2026-08-15",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
         }
       },
       {

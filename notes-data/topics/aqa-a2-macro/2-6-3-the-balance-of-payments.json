@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
   "head": {
-    "title": "AQA A-Level Economics 2.6.3 The Balance of Payments",
-    "description": "Free AQA A-Level Economics revision notes for unit 2.6.3. Covers the structure of the accounts, deficits and surpluses, their causes and corrective policies.",
+    "title": "The Balance of Payments – AQA A-Level Economics Notes",
+    "description": "The Balance of Payments for AQA A-Level Economics macro. Covers the structure of the accounts, deficits and surpluses, their causes and corrective policies.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-6-3-the-balance-of-payments.html",
-      "title": "AQA A-Level Economics 2.6.3 The Balance of Payments",
-      "description": "Free AQA A-Level Economics revision notes for unit 2.6.3. Covers the structure of the accounts, deficits and surpluses, their causes and corrective policies.",
+      "title": "The Balance of Payments – AQA A-Level Economics Notes",
+      "description": "The Balance of Payments for AQA A-Level Economics macro. Covers the structure of the accounts, deficits and surpluses, their causes and corrective policies.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.6.3 The Balance of Payments",
-      "description": "Free AQA A-Level Economics revision notes for unit 2.6.3. Covers the structure of the accounts, deficits and surpluses, their causes and corrective policies.",
+      "title": "The Balance of Payments – AQA A-Level Economics Notes",
+      "description": "The Balance of Payments for AQA A-Level Economics macro. Covers the structure of the accounts, deficits and surpluses, their causes and corrective policies.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "The Balance of Payments"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT5M"
       }
     ],
     "jsonldAfterStyles": [

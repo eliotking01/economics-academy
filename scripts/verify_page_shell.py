@@ -205,7 +205,17 @@ EXPECTED_EXTRA_SCRIPTS = {
 # tutoring.html left the list on 2026-08-14: the tutoring rework gave it one
 # description used for both fields, so it no longer disagrees with itself.
 # index.html left the same day, in the home-page revamp, for the same reason.
-# 16 remain.
+#
+# SIX MORE LEFT ON 2026-08-21, in the notes on-page SEO pass, and for the same
+# reason again. The five board hubs and macro-application had a shortened
+# social variant because their meta descriptions ran 211 to 247 characters and
+# a social card cannot show that much. Rewriting them to the 145-158 band -
+# seo/14-notes-keyword-brief.md §5 - removed the thing the shortening existed
+# for, so og:description is now the description on all six and a second string
+# is no longer written. 10 remain.
+#
+# revision-notes/index.html STAYS. Its head is frozen - DECISIONS.md D50 -
+# and was not touched by that pass.
 KNOWN_SELF_DISAGREEMENT = {
     "about.html": ("og:description", "shortened social variant"),
     "contact.html": ("og:description", "shortened social variant"),
@@ -217,15 +227,6 @@ KNOWN_SELF_DISAGREEMENT = {
     "past-papers/edexcel-b/index.html": ("og:description", "shortened social variant"),
     "past-papers/ocr/index.html": ("og:description", "shortened social variant"),
     "revision-notes/index.html": ("og:description", "shortened social variant"),
-    "revision-notes/aqa-a2-macro/index.html": ("og:description", "shortened social variant"),
-    "revision-notes/aqa-a2-micro/index.html": ("og:description", "shortened social variant"),
-    "revision-notes/edexcel-theme-2/index.html": ("og:description", "shortened social variant"),
-    "revision-notes/edexcel-theme-3/index.html": ("og:description", "shortened social variant"),
-    "revision-notes/edexcel-theme-4/index.html": ("og:description", "shortened social variant"),
-    "revision-notes/macro-application/index.html": (
-        "twitter:description",
-        "the only one of the 18 that is twitter: rather than og:",
-    ),
 }
 
 # ---- check 4 -------------------------------------------------------------

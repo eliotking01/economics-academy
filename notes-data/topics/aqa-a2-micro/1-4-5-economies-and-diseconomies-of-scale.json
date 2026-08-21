@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html",
   "head": {
-    "title": "AQA A-Level Economics 1.4.5 Economies of Scale",
-    "description": "AQA A-Level Economics 1.4.5 revision notes. Covers the LRAC curve, internal and external economies, diseconomies and minimum efficient scale. With diagrams.",
+    "title": "Economies and Diseconomies of Scale – AQA A-Level Economics",
+    "description": "Economies and Diseconomies of Scale — AQA A-Level Economics micro: the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-4-5-economies-and-diseconomies-of-scale.html",
-      "title": "AQA A-Level Economics 1.4.5 Economies of Scale",
-      "description": "AQA A-Level Economics 1.4.5 revision notes. Covers the LRAC curve, internal and external economies, diseconomies and minimum efficient scale. With diagrams.",
+      "title": "Economies and Diseconomies of Scale – AQA A-Level Economics",
+      "description": "Economies and Diseconomies of Scale — AQA A-Level Economics micro: the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.4.5 Economies of Scale",
-      "description": "AQA A-Level Economics 1.4.5 revision notes. Covers the LRAC curve, internal and external economies, diseconomies and minimum efficient scale. With diagrams.",
+      "title": "Economies and Diseconomies of Scale – AQA A-Level Economics",
+      "description": "Economies and Diseconomies of Scale — AQA A-Level Economics micro: the LRAC curve, internal and external economies, diseconomies and minimum efficient scale.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Economies and Diseconomies of Scale"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT6M"
       }
     ],
     "jsonldAfterStyles": [

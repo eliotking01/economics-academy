@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html",
   "head": {
-    "title": "Edexcel A-Level Economics 4.1.4 Terms of Trade",
-    "description": "Free Edexcel A-Level Economics revision notes (4.1.4). Covers how the terms of trade are calculated and their effect on export revenue and living standards.",
+    "title": "Terms of Trade (4.1.4) – Edexcel A-Level Economics Notes",
+    "description": "Terms of Trade for Edexcel A-Level Economics (4.1.4). Covers how the terms of trade are calculated and their effect on export revenue and living standards.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-1-4-terms-of-trade.html",
-      "title": "Edexcel A-Level Economics 4.1.4 Terms of Trade",
-      "description": "Free Edexcel A-Level Economics revision notes (4.1.4). Covers how the terms of trade are calculated and their effect on export revenue and living standards.",
+      "title": "Terms of Trade (4.1.4) – Edexcel A-Level Economics Notes",
+      "description": "Terms of Trade for Edexcel A-Level Economics (4.1.4). Covers how the terms of trade are calculated and their effect on export revenue and living standards.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 4.1.4 Terms of Trade",
-      "description": "Free Edexcel A-Level Economics revision notes (4.1.4). Covers how the terms of trade are calculated and their effect on export revenue and living standards.",
+      "title": "Terms of Trade (4.1.4) – Edexcel A-Level Economics Notes",
+      "description": "Terms of Trade for Edexcel A-Level Economics (4.1.4). Covers how the terms of trade are calculated and their effect on export revenue and living standards.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Terms of Trade"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 4, unit 4.1.4"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

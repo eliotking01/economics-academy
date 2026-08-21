@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
   "head": {
-    "title": "AQA A-Level Economics 1.8.3 Public and Quasi-Public Goods",
-    "description": "Free AQA A-Level Economics revision notes for unit 1.8.3. Covers non-excludability and non-rivalry, the free rider problem and the tragedy of the commons.",
+    "title": "Public and Quasi-Public Goods – AQA A-Level Economics Notes",
+    "description": "Public and Quasi-Public Goods — AQA A-Level Economics micro. Covers non-excludability and non-rivalry, the free rider problem and the tragedy of the commons.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-8-3-public-goods-private-goods-and-quasi-public-goods.html",
-      "title": "AQA A-Level Economics 1.8.3 Public and Quasi-Public Goods",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.8.3. Covers non-excludability and non-rivalry, the free rider problem and the tragedy of the commons.",
+      "title": "Public and Quasi-Public Goods – AQA A-Level Economics Notes",
+      "description": "Public and Quasi-Public Goods — AQA A-Level Economics micro. Covers non-excludability and non-rivalry, the free rider problem and the tragedy of the commons.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.8.3 Public and Quasi-Public Goods",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.8.3. Covers non-excludability and non-rivalry, the free rider problem and the tragedy of the commons.",
+      "title": "Public and Quasi-Public Goods – AQA A-Level Economics Notes",
+      "description": "Public and Quasi-Public Goods — AQA A-Level Economics micro. Covers non-excludability and non-rivalry, the free rider problem and the tragedy of the commons.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Public and Quasi-Public Goods"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [

@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-2/2-4-1-national-income.html",
   "head": {
-    "title": "Edexcel A-Level Economics 2.4.1 National Income",
-    "description": "Free Edexcel A-Level Economics revision notes (2.4.1). Covers the circular flow, the equilibrium condition, and income as a flow versus wealth as a stock.",
+    "title": "National Income (2.4.1) – Edexcel A-Level Economics Notes",
+    "description": "National Income for Edexcel A-Level Economics (2.4.1). Covers the circular flow, the equilibrium condition, and income as a flow versus wealth as a stock.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-4-1-national-income.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-4-1-national-income.html",
-      "title": "Edexcel A-Level Economics 2.4.1 National Income",
-      "description": "Free Edexcel A-Level Economics revision notes (2.4.1). Covers the circular flow, the equilibrium condition, and income as a flow versus wealth as a stock.",
+      "title": "National Income (2.4.1) – Edexcel A-Level Economics Notes",
+      "description": "National Income for Edexcel A-Level Economics (2.4.1). Covers the circular flow, the equilibrium condition, and income as a flow versus wealth as a stock.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 2.4.1 National Income",
-      "description": "Free Edexcel A-Level Economics revision notes (2.4.1). Covers the circular flow, the equilibrium condition, and income as a flow versus wealth as a stock.",
+      "title": "National Income (2.4.1) – Edexcel A-Level Economics Notes",
+      "description": "National Income for Edexcel A-Level Economics (2.4.1). Covers the circular flow, the equilibrium condition, and income as a flow versus wealth as a stock.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,29 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-15",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "National Income"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 2, unit 2.4.1"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [
