@@ -1109,3 +1109,150 @@
     display: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Previous / next topic navigation
+   ---------------------------------------------------------------------------
+   One row at the top of the notes body and an identical one at the bottom,
+   emitted by scripts/build_notes_pages.py from the chain in
+   scripts/notes_sequence.py. Both slots are always filled; at the two ends of
+   a chain the spare slot points back at that page's own hub.
+
+   The rows sit INSIDE .notes-container, which is what lines them up with the
+   notes body: .notes-container is max-width 1200px with 3em of padding, while
+   the breadcrumb's .container is 70em.
+
+   SPECIFICITY. `.revision-notes-content a:hover` is (0,2,1) and beats the
+   two-class base rule below, so the hover state has to be restated at three
+   classes or the dashed pink underline reappears on hover. That is why the
+   :hover block sets `border` in full rather than just `border-color`. */
+
+.revision-notes-content .topic-nav {
+  display: flex;
+  gap: 1em;
+  align-items: stretch;
+}
+
+.revision-notes-content .topic-nav--top {
+  margin: 0 0 1.5em;
+}
+
+.revision-notes-content .topic-nav--bottom {
+  margin: 1.5em 0 0;
+}
+
+.revision-notes-content .topic-nav__link {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 0.9em 1.1em;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  color: var(--primary-blue);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.revision-notes-content .topic-nav__link--next {
+  text-align: right;
+}
+
+.revision-notes-content .topic-nav__caption {
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+}
+
+.revision-notes-content .topic-nav__title {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--primary-blue);
+}
+
+/* The top row is deliberately tighter than the bottom one. It is the only
+   thing between the breadcrumb and the <h1>, and measured in Chrome it was
+   putting the heading 111-131px further down the page than before it existed.
+   Nothing is removed here, only compressed; the bottom row, which has no
+   heading below it to push down, keeps the roomier treatment. */
+.revision-notes-content .topic-nav--top .topic-nav__link {
+  padding: 0.6em 1em;
+  gap: 0.15em;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__title {
+  font-size: 0.95em;
+}
+
+.revision-notes-content .topic-nav__link:hover,
+.revision-notes-content .topic-nav__link:focus-visible {
+  border: 1px solid var(--accent-teal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  color: var(--primary-blue);
+}
+
+/* Below 768px the two slots are too narrow to carry a topic title well, and
+   the TOP row is the only thing between the breadcrumb and the <h1>. So above
+   the notes it drops to its captions alone and stays one side-by-side line.
+   Measured in Chrome: stacked and captioned in full it ran 182-242px tall and
+   put the <h1> 219-279px lower than on a page without it - most of a phone
+   screen, and below the fold on the longest AQA titles. Captions only, it is
+   a flat 50px at every width and on every page.
+
+   THE TITLES ARE HIDDEN, NOT SHORTENED. A truncated topic title with no way
+   to see the rest is worse than none. And nothing is actually lost: each
+   link's accessible name comes from its aria-label, which still reads
+   "Previous topic: 1.1.1 Economics as a social science" in full, and the
+   identical bottom row on the same page shows both titles - which is where a
+   student who has read the notes ends up anyway.
+
+   `.topic-nav.topic-nav--top` carries three classes on purpose. The stacking
+   rule below is a two-class selector in a different media block, and both
+   apply on a phone; matching its specificity would leave the outcome decided
+   by which block came last in the file. */
+@media (max-width: 767px) {
+  .revision-notes-content .topic-nav.topic-nav--top {
+    flex-direction: row;
+  }
+
+  .revision-notes-content .topic-nav--top .topic-nav__link {
+    padding: 0.6em 0.7em;
+  }
+
+  .revision-notes-content .topic-nav--top .topic-nav__title {
+    display: none;
+  }
+
+  .revision-notes-content .topic-nav--top .topic-nav__link--next {
+    text-align: right;
+  }
+}
+
+/* The bottom row has no heading below it to push down, so it keeps its titles
+   at every width and simply stacks below 600px - the breakpoint this
+   stylesheet already uses. The next slot loses its right alignment when
+   stacked: right-aligned text on a full-width block reads badly. */
+@media (max-width: 600px) {
+  .revision-notes-content .topic-nav {
+    flex-direction: column;
+  }
+
+  .revision-notes-content .topic-nav__link--next {
+    text-align: left;
+  }
+}
+
+@media print {
+  .revision-notes-content .topic-nav {
+    display: none;
+  }
+}

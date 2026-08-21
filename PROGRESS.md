@@ -71,6 +71,53 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
+## Previous / next topic navigation (2026-08-21) — branch `feature/topic-prev-next-nav`
+
+**Unnumbered, for the same reason the section below it is.**
+
+A previous/next row at each end of the notes body on all **166 topic pages**,
+so a student who finishes one set of notes moves straight to the next instead
+of going back to a hub. Two chains, never joined: Edexcel A runs theme 1 → 2 →
+3 → 4 (87 pages) and AQA runs micro → macro (79). At the two ends of a chain
+the spare slot points back at that page's own hub. Out of scope and untouched:
+the seven hubs, `revision-notes/index.html`, the glossary, both diagram
+galleries and `macro-application/`.
+
+**The chain is derived, not stored.** `scripts/notes_sequence.py` takes the
+directory order from `boards-data/boards.json`, the topic order and every
+label from each hub's own links, and the chain lengths from the board's own
+`expectedTopics`. Nothing is written down twice, so nothing can drift apart —
+and `scripts/verify_notes_sequence.py`, now in CI, is what holds those three
+sources together. It fails if a topic page has no place in the sequence, if
+the sequence names a page that does not exist, if a hub's order stops being
+spec-code order, or if navigation appears on a page outside the 166.
+
+**The markup lives in the generator, not in the 166 slices.**
+`build_notes_pages.py` splices it against two anchors that were measured
+across all 166 first. `notes-data/topics/*.html` is still a verbatim byte
+slice and is still never written to.
+
+**No new economics wording.** Every topic label is the hub's own anchor text,
+reused verbatim. The only new visible strings are three captions — "Previous
+topic", "Next topic", "Topic list" — approved 2026-08-21. The same approval
+fixed one typo carried by a hub label since it was written: Theme 2's 2.6.4
+read "Polciies".
+
+**The two rows are not styled alike, and that is deliberate.** The top row is
+the only thing between the breadcrumb and the `<h1>`, so it is compressed, and
+**below 768px it shows its captions only** — one side-by-side line, a flat
+50px, instead of two stacked cards at 182–242px. Measured in Chrome, not
+estimated: the row was pushing the heading down by 111–131px on desktop and
+219–279px on a phone, and is now 57–97px on both. The titles there are hidden
+rather than truncated; each link's `aria-label` still names its topic in full
+and the bottom row shows both titles. Do not "restore" the titles at the top
+on mobile without re-measuring.
+
+No published URL moved; no file was added, removed or renamed under a
+published path. 332 new internal links, all notes → notes, every anchor string
+distinct, so `seo/07b-link-decisions.md` §5 is untouched. It takes lateral
+linking inside the notes section from 53.6% to 100% on these 166 pages.
+
 ## SEO / indexing — Search Console index audit (2026-08-21) — REPORT ONLY
 
 **Unnumbered deliberately.** The numbered sections below are the site-overhaul

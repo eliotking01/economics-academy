@@ -35,6 +35,11 @@ Defined in `css/pages/revision-notes-textbook.css`.
 | `diagram-figure` / `-image` / `-caption` | `<figure>` + `<figcaption>`. Images need `width`, `height`, real alt text. Captions open `Figure N:`. |
 | `notes-cta` | Closes every topic page. Three buttons; the past-papers link must match the page's board. |
 
+The previous/next topic row at each end of `.notes-container` is **generated
+chrome, not a component** - `scripts/build_notes_pages.py` splices it in and
+`scripts/notes_sequence.py` decides where it points. It does not count against
+the two-component limit, and it is not in `notes-data/`.
+
 House rules:
 
 - **Max two components per page, total**, counting any already there.

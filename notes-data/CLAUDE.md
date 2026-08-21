@@ -9,6 +9,13 @@ Excluded from publishing.
 - `topics/<board-dir>/<slug>.json` — its lifted metadata (`path`, `head`, `body`).
 - `hubs/` — the same pair for the seven hub pages.
 
+**One thing on a topic page is NOT in its slice.** The previous/next topic row
+at each end of `.notes-container` is spliced in by `build_notes_pages.py` at
+build time, from the chain in `scripts/notes_sequence.py`. Do not paste it into
+a slice: a slice is a record of the page's *content*, and 166 hand-inserted
+copies is the scripted bulk edit hard rule 6 forbids. A new topic gets its row
+automatically as soon as its hub links to it.
+
 **Edit here, then run `python3 scripts/build_notes_pages.py`.** Never edit the
 rendered page in `revision-notes/`; the next build overwrites it.
 
