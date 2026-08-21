@@ -1746,3 +1746,90 @@ left carrying header placeholders after Wave 2 Phase 7 for the same reason:
 they are a record of what the flashcards work looked like, and rebuilding them
 would make them a record of something else. Noted so that nobody opens one,
 finds a broken nav, and goes looking for a bug in the live site.
+
+---
+
+# Found during the GSC index audit (2026-08-21)
+
+Two observations from `seo/11-gsc-index-audit-2026-08-21.md`. Neither is an
+economics error and neither has been changed. Logged here because both are
+decisions rather than defects, and because the audit that found them is a
+report, not a change.
+
+The audit's own conclusion was that **there is no markup or configuration
+defect standing between the site and Google's index** — `verify_seo.py` passes
+14/14 and `build_sitemap.py --check` exits 0. These two are the only things it
+turned up that anyone might want to act on, and my recommendation on both is to
+leave them alone.
+
+## G1 — `/contact.html` is 343 words, and Google has declined to index it
+
+**Status: open. A content decision, and not one I would rush.**
+
+`/contact.html` is the thinnest page in `sitemaps/core.xml` at 343 words of body
+text, and Search Console reports it as **"Crawled — currently not indexed"**:
+Google fetched it, read it, and chose not to store it.
+
+Two things are worth separating before deciding anything.
+
+**It is probably normal.** Search engines routinely decline to index contact
+pages. They are short by design, largely navigational, and rarely the best
+answer to any search. A contact page that is not indexed is not a broken page.
+
+**But Google's verdict is stale, so we do not actually know yet.** Google last
+crawled it on **2026-04-08**; you rewrote it on **2026-08-16**. The judgement
+describes a version of the page that no longer exists. Indexing was requested
+manually on 21 August (`seo/13-…` task 3), so a fresh verdict is due within a
+week or two.
+
+**What I would do:** nothing until the recrawl lands. If it is still declined in
+October, that is the point to decide whether the page should say more — and that
+is a decision about what you want the page to *do*, not an SEO fix. The audit
+does not recommend expanding it, and expanding it purely to be indexed would be
+the wrong reason.
+
+Word count measured over `<body>` with script, style and tags stripped. For
+scale, the seven `core.xml` pages run: contact 343, about 826, home 982,
+marking 1,084, privacy 1,373, tutoring 1,418, faq 1,811. So contact is less than
+half the next-shortest page, and `/about.html` is the second-shortest — it is
+also "Crawled — currently not indexed", on a verdict from 2026-04-03 that
+predates its 2026-08-21 rewrite. Same recommendation: wait for the recrawl.
+
+## G2 — one `?topic=` parameter URL has been indexed as a duplicate
+
+**Status: open, and I recommend leaving it. Logged as evidence, not as a task.**
+
+`seo/04-decisions.md` decision **B3** chose to leave the 239 `?topic=` /
+`?board=` parameter URLs alone, on the stated grounds that:
+
+> every target's canonical names the clean URL and Google consolidates
+> correctly.
+
+**That is still true for 238 of them. One has not consolidated.** As of the
+21 August export, Google has indexed **both**:
+
+```
+https://economicsacademy.co.uk/flashcards/aqa/macro/?topic=2-6-2-trade   indexed
+https://economicsacademy.co.uk/flashcards/aqa/macro/                     indexed
+```
+
+The parameter URL's canonical correctly names the clean URL — verified live on
+21 August, HTTP 200, `<link rel="canonical">` pointing at
+`/flashcards/aqa/macro/`. Google has simply not acted on it yet. A second
+parameter URL, `?topic=2-6-1-globalisation`, *has* consolidated correctly and
+sits under "Alternate page with proper canonical tag", which is what B3
+predicted for all of them.
+
+**Why I am not proposing a change.** B3's alternative was moving `?topic=` to
+`#topic=` in `js/components/flashcards.js`, `question-search.js` and
+`glossary-filter.js` — a functional change to three working features that alters
+how deep links behave. One unconsolidated URL out of 239 does not justify that,
+and the same audit found a second live duplicate pair (`/` and `/index.html`)
+that is expected to merge on recrawl for exactly the same reason.
+
+**What would change my mind:** if the October export shows several parameter
+URLs indexed alongside their clean twins rather than one, B3's premise is wrong
+rather than merely imperfect, and it should be reopened properly.
+
+`python3 seo/tools/gsc_reconcile.py <export>` reports this automatically now,
+under "Indexed, but not a URL this site publishes".
