@@ -235,10 +235,19 @@ say no to, and the only way to say yes is 20 hand edits.
 
 ---
 
-## 7. Four pages define no term — WAS TWELVE, AND THE TWELVE WAS WRONG
+## 7. Four pages define no term — DONE, AND THE ORIGINAL TWELVE WAS WRONG
 
-**Eliot said yes on 21 August 2026, and asked to be asked if the definitions
-needed writing. Four of them do — task 18 of the manual list has the ask.**
+**Eliot said yes on 21 August 2026, wrote three definitions and approved a
+fourth. Applied in commit `60da40a`:** *perfectly competitive labour market*
+(AQA 1.6.3), *injection* and *withdrawal* (Edexcel 2.4.2) and *financial
+markets* (Edexcel 4.4.1), each opening the section it sits in so the page says
+what the thing IS before it says what it does. AQA 1.3.6 was asked about and
+deliberately left — it defines all five relationships in its own table already.
+
+Two things were agreed rather than assumed: "infinate" was corrected to
+"infinite" twice rather than shipped into the page and the glossary, and the
+*withdrawal* sentence mirrors Eliot's own *injection* one because he had
+written only half of a page called "Injections and Withdrawals".
 
 **The twelve was a bad measurement and this item now says so.** It counted
 pages carrying a `key-definition` chip, which is what the glossary extractor

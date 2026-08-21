@@ -358,7 +358,29 @@ work already scoped and waiting.*
 
 ---
 
-## 18. Write four definitions — 15 minutes
+## 18. Write four definitions — DONE, 21 August 2026
+
+Eliot supplied three and approved a fourth. In and live on the branch:
+*perfectly competitive labour market* (AQA 1.6.3), *injection* and *withdrawal*
+(Edexcel 2.4.2), *financial markets* (Edexcel 4.4.1). All four are extracted
+into the glossary as `origin=chip`.
+
+**1.3.6 was asked about and deliberately left.** It already defines all five
+relationships in its own table; the umbrella phrase is not one anyone searches.
+
+**Worth knowing for task 19**: those five table definitions cannot currently be
+harvested into the glossary. `curation.json`'s `tables` list is the approved
+mechanism, but `extract_glossary.tables_on()` only offers a table as a
+candidate when a column header contains "definition", "meaning", "what it
+means" or "description" — and 1.3.6's column is headed **"Explanation"**.
+Adding that word would newly expose 34 tables as *candidates* for review, not
+harvests, since the curation list is opt-in; most of the 34 are
+"Limitation | Explanation" and would rightly never be approved. It is a
+one-line generator change and it belongs with task 19, not on its own.
+
+*The original ask is kept below for the record.*
+
+## 18a. The original ask — 15 minutes
 
 You said yes to adding key terms and to ask if the definitions needed writing.
 **Four of them do.** The audit report overstated this and has been corrected:

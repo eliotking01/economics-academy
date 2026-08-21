@@ -136,7 +136,7 @@ document.
 | Item | Decision | State |
 | --- | --- | --- |
 | 1. Strip the spec code from the 79 AQA `<h1>`s | **"strip them"** | **DONE**, commit `94a0726`. Lifts DO-NOT-BREAK PH05-021; DECISIONS.md D53 |
-| 7. Add key terms to the pages that define none | **yes; ask if the definitions need writing** | four need writing — manual list task 18 |
+| 7. Add key terms to the pages that define none | **yes; wrote three, approved a fourth** | **DONE**, commit `60da40a`. Four chips on three pages; 1.3.6 deliberately left |
 | 8. The 17 pages under 500 words | **"I can expand these"** | Eliot's; manual list task 20 |
 | 9. Diagrams on the 72 diagram-less pages | **"I'll add diagrams"** | Eliot's; manual list task 21 |
 
