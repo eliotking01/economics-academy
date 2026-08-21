@@ -12,12 +12,6 @@ distinction was ROADMAP's and it is worth keeping.
 
 ## Do next
 
-- [ ] **Write the missing About-page paragraph** — 2–3 sentences on why you
-      moved from finance to tutoring. Aim for warm and direct; the paragraphs
-      either side already cover the facts (Bath, the London jobs, the 11+
-      story), so this is the "why", not the CV. Where it goes: about.html has
-      an HTML comment marked `OWNER COPY NEEDED` in the My Story section —
-      paste the text to Claude and it will insert it properly.
 - [ ] **One 30-second check in Kit**: confirm "double opt-in" (the
       confirmation email) is ON for form 9803307 — it's Kit's default, and
       the home page already promises "You will get a confirmation email
@@ -28,13 +22,6 @@ distinction was ROADMAP's and it is worth keeping.
 
 ## Soon
 
-- [ ] **Request indexing in Search Console — 3 URLs left** (quota is roughly
-      10/day; the 9 that already rank are done, see the Done section).
-      Priority order: 1.`/practice-questions/aqa-a2-macro/`, `/about.html` and `/contact.html` — both live since 2026-08-16 and
-      substantially changed, so worth a nudge even though neither ranks.
-- [ ] **Phone skim** of the live pages changed recently, once each: marking
-      (packages, enquiry box, the two real example panels), home (photo,
-      wording, form), About and Contact (all live now).
 - [ ] **Check each exam board's licensing terms for hosting past papers.**
       The site already hosts all 281 paper PDFs itself, so this is due
       diligence on something already published, not a future decision. Look
@@ -98,6 +85,11 @@ distinction was ROADMAP's and it is worth keeping.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-21 — indexing requested for the last 3 URLs** (`/practice-questions/aqa-a2-macro/`,
+  `/about.html`, `/contact.html`), closing out the 2026-08-16 indexing round.
+- **2026-08-21 — phone skim done**, all looks fine: marking (packages, enquiry
+  box, the two real example panels), home (photo, wording, form), About and
+  Contact.
 - **2026-08-16 — marking examples live** (merge `fca6d93`): the two real
   anonymised PDFs replaced the "coming soon" panels — the marking page's
   journey is now complete end to end, from example to payment to
