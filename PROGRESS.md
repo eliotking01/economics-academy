@@ -103,6 +103,16 @@ topic", "Next topic", "Topic list" — approved 2026-08-21. The same approval
 fixed one typo carried by a hub label since it was written: Theme 2's 2.6.4
 read "Polciies".
 
+**The two rows are not styled alike, and that is deliberate.** The top row is
+the only thing between the breadcrumb and the `<h1>`, so it is compressed, and
+**below 768px it shows its captions only** — one side-by-side line, a flat
+50px, instead of two stacked cards at 182–242px. Measured in Chrome, not
+estimated: the row was pushing the heading down by 111–131px on desktop and
+219–279px on a phone, and is now 57–97px on both. The titles there are hidden
+rather than truncated; each link's `aria-label` still names its topic in full
+and the bottom row shows both titles. Do not "restore" the titles at the top
+on mobile without re-measuring.
+
 No published URL moved; no file was added, removed or renamed under a
 published path. 332 new internal links, all notes → notes, every anchor string
 distinct, so `seo/07b-link-decisions.md` §5 is untouched. It takes lateral
