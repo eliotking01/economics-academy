@@ -5,8 +5,8 @@
     "pages": 166,
     "authoredTerms": 77,
     "authoredFormulae": 4,
-    "termsExtracted": 596,
-    "uniqueTerms": 325,
+    "termsExtracted": 600,
+    "uniqueTerms": 329,
     "termsOnBothBoards": 234,
     "termsWithVariantDefinitions": 43,
     "termsNeedingReview": 87,
@@ -4448,6 +4448,35 @@
       ]
     },
     {
+      "id": "financial-markets",
+      "term": "Financial markets",
+      "key": "financial markets",
+      "letter": "F",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "chip"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-4",
+          "groupLabel": "Theme 4",
+          "spec": "4.4.1",
+          "topic": "Role of Financial Markets",
+          "notesUrl": "/revision-notes/edexcel-theme-4/4-4-1-role-of-financial-markets.html",
+          "termAsWritten": "Financial markets",
+          "origin": "chip",
+          "definitionHtml": "Markets where buyers and sellers can meet and engage in the trade of financial goods/services e.g. stocks, bonds and currencies.",
+          "definitionListHtml": "",
+          "listIsDefinition": false
+        }
+      ]
+    },
+    {
       "id": "first-degree-price-discrimination",
       "term": "First-degree price discrimination",
       "key": "first-degree price discrimination",
@@ -5891,6 +5920,35 @@
           "termAsWritten": "Information provision (negative advertising)",
           "origin": "chip",
           "definitionHtml": "educate consumers about the negative externalities associated with certain goods, such as public health campaigns about the dangers of smoking. This can shift the D=MPB curve down, reducing demand for the demerit good.",
+          "definitionListHtml": "",
+          "listIsDefinition": false
+        }
+      ]
+    },
+    {
+      "id": "injection",
+      "term": "Injection",
+      "key": "injection",
+      "letter": "I",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "chip"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.2",
+          "topic": "Injections and Withdrawals",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html",
+          "termAsWritten": "Injection",
+          "origin": "chip",
+          "definitionHtml": "Income from outside of the closed economy that enters the circular flow of income (Government Spending, Investment, and Exports).",
           "definitionListHtml": "",
           "listIsDefinition": false
         }
@@ -9160,6 +9218,35 @@
           "termAsWritten": "Perfect Competition",
           "origin": "authored",
           "definitionHtml": "A market structure with many buyers and sellers, an identical product, perfect information and no barriers to entry, in which firms are <strong>price takers</strong> and earn only normal profit in the long run.",
+          "definitionListHtml": "",
+          "listIsDefinition": false
+        }
+      ]
+    },
+    {
+      "id": "perfectly-competitive-labour-market",
+      "term": "Perfectly competitive labour market",
+      "key": "perfectly competitive labour market",
+      "letter": "P",
+      "boards": [
+        "aqa"
+      ],
+      "origin": [
+        "chip"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "aqa",
+          "group": "microeconomics",
+          "groupLabel": "Microeconomics",
+          "spec": "1.6.3",
+          "topic": "The Determination of Relative Wage rates and Levels of Employment in Perfectly Competitive Labour Markets",
+          "notesUrl": "/revision-notes/aqa-a2-micro/1-6-3-wage-determination-perfectly-competitive-labour-markets.html",
+          "termAsWritten": "Perfectly competitive labour market",
+          "origin": "chip",
+          "definitionHtml": "A labour market where there are an infinite number of identical buyers of labour (businesses) and an infinite number of identical workers.",
           "definitionListHtml": "",
           "listIsDefinition": false
         }
@@ -13345,6 +13432,35 @@
           "termAsWritten": "Welfare Loss",
           "origin": "authored",
           "definitionHtml": "The loss of social welfare that arises when output is not at the socially optimal level, shown as the shaded triangle between the marginal social cost and marginal social benefit curves. Also called <strong>deadweight loss</strong>.",
+          "definitionListHtml": "",
+          "listIsDefinition": false
+        }
+      ]
+    },
+    {
+      "id": "withdrawal",
+      "term": "Withdrawal",
+      "key": "withdrawal",
+      "letter": "W",
+      "boards": [
+        "edexcel-a"
+      ],
+      "origin": [
+        "chip"
+      ],
+      "definitionVariants": 1,
+      "review": [],
+      "sources": [
+        {
+          "board": "edexcel-a",
+          "group": "theme-2",
+          "groupLabel": "Theme 2",
+          "spec": "2.4.2",
+          "topic": "Injections and Withdrawals",
+          "notesUrl": "/revision-notes/edexcel-theme-2/2-4-2-injections-withdrawals.html",
+          "termAsWritten": "Withdrawal",
+          "origin": "chip",
+          "definitionHtml": "Income that leaves the circular flow of income and is not passed on as spending (Savings, Taxation, and Imports).",
           "definitionListHtml": "",
           "listIsDefinition": false
         }
