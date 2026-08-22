@@ -8,9 +8,21 @@ words, your Google account or your money.
 Ordered by return per minute spent. Tasks 1–5 are worth doing this week;
 6–9 are worth doing before term starts; 10–12 are optional.
 
+**Status, 22 August 2026.** Tasks 1, 3, 16 and 18 are done. Task 2 is parked
+(no usable term-time window exists yet). Task 4 has its wording from Eliot and
+a draft waiting for approval — see the task.
+
 ---
 
-## 1. Check the SERPs from a UK IP — 20 minutes
+## 1. Check the SERPs from a UK IP — DONE, 22 August 2026
+
+Eliot checked the six queries from a UK IP. Three sites dominate the top
+results across all six: Economics Help, tutor2u and Save My Exams. Only tutor2u
+puts the unit code in its titles; the other two lead with the topic name. That
+is the pattern the US-routed sample found, so the title formula stands.
+Recorded as a dated note in `seo/14-notes-keyword-brief.md` §2.
+
+*The original ask is kept below for the record.*
 
 The competitor SERP evidence behind the title formula was sampled through a
 US-routed search tool. UK results for UK exam queries can differ. Before the
@@ -33,7 +45,20 @@ Write what you find into `seo/14-notes-keyword-brief.md` §2 as a dated note.
 
 ---
 
-## 2. Re-export Search Console over a term-time window — 15 minutes
+## 2. Re-export Search Console over a term-time window — PARKED, 22 August 2026
+
+Not worth doing yet. The revision notes were not complete until after the
+1 May – 30 June 2026 window, so a term-time export from then would measure a
+site that no longer exists. The first usable term-time window is the autumn
+term 2026: export a 28-day slice once a few clean weeks of it have accrued
+(early November at the earliest). Two consequences:
+
+- There will never be a clean *pre-change* term-time baseline, because the
+  notes were not complete before the titles changed. Task 10 therefore tracks
+  the autumn trend rather than comparing against a baseline.
+- The brief stays directional until then, which it already says about itself.
+
+*The original ask is kept below for the record.*
 
 The strategy in `seo/14-notes-keyword-brief.md` is built partly on the 28 days
 to 21 August 2026. That window has two problems you already spotted:
@@ -64,7 +89,13 @@ a spike later.
 
 ---
 
-## 3. Decide the two content questions Claude Code will ask — 10 minutes
+## 3. Decide the two content questions Claude Code will ask — DONE, 22 August 2026
+
+**a.** Yes — the code was stripped from the 79 AQA headings in commit
+`94a0726` (21 August 2026) and now sits in the sub-label under every heading.
+**b.** Confirmed: the site-local AQA codes stay, and stay off the AQA titles.
+
+*The original ask is kept below for the record.*
 
 The audit produces `seo/18-notes-content-approval-<date>.md`. Two decisions in
 it are worth pre-empting, because the whole run's value depends on them:
@@ -85,7 +116,45 @@ this reason. Confirm you're happy with that.
 
 ---
 
-## 4. Write your author byline and credentials — 30 minutes
+## 4. Write your author byline and credentials — WORDING SUPPLIED, DRAFT AWAITING APPROVAL, 22 August 2026
+
+Eliot supplied the byline and asked for the bio to be drawn from the about
+page. Publish under **Eliot King**.
+
+**Byline, as supplied:** Eliot King, First-Class BSc Economics (Hons),
+University of Bath, 6 years teaching, Edexcel A, Edexcel B, AQA and OCR.
+
+**Byline, tidied for the page (draft):**
+
+> Written by **Eliot King** — First-Class BSc (Hons) Economics, University of
+> Bath · 6 years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR
+
+Two tidies: "BSc (Hons) Economics" is the order the about page's credentials
+list and its `Person` schema already use, and "teaching" is qualified with
+"A-Level Economics" so the line makes sense away from the about page.
+
+**Bio (draft, adapted from the about page's opening paragraph):**
+
+> Eliot King is a First-Class BSc (Hons) Economics graduate from the University
+> of Bath and the founder of Economics Academy. Eliot has taught A-Level
+> Economics for six years across Edexcel A, Edexcel B, AQA and OCR, supporting
+> over 100 students with a particular focus on the exam technique and essay
+> structure that mark schemes reward.
+
+Two things changed from the about page: it is in the third person (the about
+page says "I"), and the four boards are named. Every claim in it is already on
+the about page. One inconsistency to settle: the byline says "6 years"; the
+about page says "over 6 years" and "6+ years".
+
+**Once approved, the single pass is:** a byline under the H1 on all 166 topic
+pages; an "About the author" box at the foot of each carrying the bio and
+linking to `/about.html#eliot-king`; that `id` added to the about page's
+profile section (the JSON-LD already uses `about.html#eliot-king` as the
+`Person` `@id`, but no element on the page carries it); and `author` in the
+`LearningResource` schema switched from the `#organization` node to that
+`Person`. Visible text on 167 pages, so it needs an explicit yes.
+
+*The original ask is kept below for the record.*
 
 Every site outranking you on these queries has a named author with visible
 credentials. Save My Exams puts a byline and an author page on each note.
@@ -198,6 +267,9 @@ lost.
 Around 21 September, export Search Console performance for the previous 28 days
 filtered to `/revision-notes/`, and compare it to the term-time baseline from
 task 2 — **not** to the 21 August export, whose clicks are half your own.
+*(22 August 2026: task 2 is parked and there will be no clean pre-change
+term-time baseline — see task 2. Watch positions and shares across the autumn
+exports instead.)*
 Titles usually show a CTR effect within two to four weeks of Google recrawling;
 position moves take longer.
 
@@ -317,7 +389,12 @@ This is the highest-value twenty minutes of review in the whole audit.
 
 ---
 
-## 16. Decide the AQA heading question — 10 minutes
+## 16. Decide the AQA heading question — DONE, 21 August 2026
+
+Eliot said yes; the code came off the 79 AQA headings in commit `94a0726`.
+Item 1 of `seo/18-notes-content-approval-2026-08-21.md` records it.
+
+*The original ask is kept below for the record.*
 
 Item 1 of `seo/18-notes-content-approval-2026-08-21.md`, and it is the one
 decision the audit could not make for you because two of your own documents

@@ -96,7 +96,9 @@ and on general search behaviour. The Search Console figures are used to confirm
 that nothing about this site's audience contradicts it, and to kill the one
 assumption that would otherwise be tempting (that spec codes are worth title
 space). A term-time re-export, task 2 of the manual to-do list, is what turns
-this from directional into reliable.
+this from directional into reliable. *Parked 22 August 2026: the notes were not
+complete until after the 2026 summer exams, so no clean term-time window exists
+yet — the first is the autumn term 2026.*
 
 ### The three conclusions that matter
 
@@ -152,6 +154,13 @@ level economics", "elasticity of supply a level":
 
 Caveat: those SERPs were sampled from a US IP. Task 1 of the manual to-do list
 is to re-check a handful from a UK IP before treating them as settled.
+
+**UK check, 22 August 2026 — Eliot, UK IP, incognito.** Across the six queries
+in task 1 the top results are dominated by three sites: Economics Help, tutor2u
+and Save My Exams. Of the three, only tutor2u puts the unit code in its titles;
+Economics Help and Save My Exams lead with the topic name and carry no code.
+That is the same pattern the US sample found, so the formula in §4 stands:
+topic name first, no code in the title.
 
 ---
 

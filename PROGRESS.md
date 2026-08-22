@@ -166,7 +166,13 @@ deciding the AQA heading question, and noting the date when rank-checking.
 
 **The author byline** is task 4 of that list and remains the highest-value
 item on it. Every competitor that outranks this site on these queries has a
-named author with credentials; these pages do not.
+named author with credentials; these pages do not yet. Eliot supplied the
+wording on 2026-08-22; the byline and a bio adapted from the about page are
+drafted in the task, waiting for approval before they go onto the 166 pages
+and into the `LearningResource` schema as a `Person` author. The same day:
+task 1 (UK SERP check) confirmed the title formula, task 3 closed, and task 2
+(term-time re-export) was parked because the notes were not complete before
+the 2026 summer exams.
 
 ### Where it lives
 
