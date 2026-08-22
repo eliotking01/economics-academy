@@ -127,7 +127,7 @@ immediately.
 
 ## `seo/tools/verify_seo.py` — the check that protects the traffic
 
-It runs on every push and makes 14 assertions across all 461 pages, not a
+It runs on every push and makes 20 assertions across all 461 pages, not a
 sample. In plain terms it proves:
 
 - **Every internal link points at the real address** — 34,399 links checked. No

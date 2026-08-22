@@ -1,5 +1,17 @@
 # Revision notes SEO — things only you can do
 
+> ## ⚠️ SUPERSEDED — 2026-08-22
+>
+> **For what to do now, read `OWNER-TODO.md`** — the one list of everything
+> only Eliot can do. Every open item here is there: tasks 5, 13, 14, 15 and 17
+> under "Do next" and "Soon", 6 and 9 under "Soon", 19, 20 and 21 under
+> "Content work", 10, 11, 12 and the parked 2 under "Already scheduled".
+>
+> This file is kept as the record of what was asked and decided on 21 and
+> 22 August: tasks 1, 3, 4, 16 and 18 done, task 2 parked, and the reasoning
+> behind each. The work it describes merged to `main` on 2026-08-22 (merge
+> `ee24918`) and is live.
+
 21 August 2026. Companion to `seo/14-notes-keyword-brief.md` (the strategy) and
 `seo/16-url-structure-and-redirect-options.md` (the URL question). Nothing here
 can be done by Claude Code in the repo — each item needs your judgement, your
@@ -9,8 +21,9 @@ Ordered by return per minute spent. Tasks 1–5 are worth doing this week;
 6–9 are worth doing before term starts; 10–12 are optional.
 
 **Status, 22 August 2026.** Tasks 1, 3, 4, 16 and 18 are done. Task 2 is
-parked (no usable term-time window exists yet). Task 4 — the byline — is on
-the branch and waits only for the push.
+parked (no usable term-time window exists yet). Task 4 — the byline — merged
+to `main` and went live the same day (merge `ee24918`). Everything still open
+is in `OWNER-TODO.md`.
 
 ---
 
