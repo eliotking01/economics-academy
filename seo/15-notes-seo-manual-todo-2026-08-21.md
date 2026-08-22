@@ -8,9 +8,9 @@ words, your Google account or your money.
 Ordered by return per minute spent. Tasks 1–5 are worth doing this week;
 6–9 are worth doing before term starts; 10–12 are optional.
 
-**Status, 22 August 2026.** Tasks 1, 3, 16 and 18 are done. Task 2 is parked
-(no usable term-time window exists yet). Task 4 has its wording from Eliot and
-a draft waiting for approval — see the task.
+**Status, 22 August 2026.** Tasks 1, 3, 4, 16 and 18 are done. Task 2 is
+parked (no usable term-time window exists yet). Task 4 — the byline — is on
+the branch and waits only for the push.
 
 ---
 
@@ -116,7 +116,48 @@ this reason. Confirm you're happy with that.
 
 ---
 
-## 4. Write your author byline and credentials — WORDING SUPPLIED, DRAFT AWAITING APPROVAL, 22 August 2026
+## 4. Write your author byline and credentials — DONE, 22 August 2026
+
+Eliot supplied the byline, asked for the bio to be drawn from the about page,
+approved both drafts and the placement the same day, and chose "6+ years"
+over "6 years". Published under **Eliot King**. On the branch, in one pass:
+
+- a byline under the heading on all 166 topic pages, and an "About the
+  author" box between the related topics and the three buttons — both from
+  `scripts/notes_extras.py`, which is the one place the wording lives;
+- `id="eliot-king"` on the about page's profile section, so the byline link
+  lands on the photo and the intro, and the `Person` `@id` every root page
+  already uses is now a real fragment;
+- `author` in the `LearningResource` schema switched from the organisation to
+  that `Person` (`seo/tools/rewrite_notes_meta.py`);
+- `verify_seo.py` assertion 20: the byline, the box and the schema must all
+  name the same person, by the same `@id`. Proved able to fail three ways on
+  1-2-2-demand before it shipped.
+
+The shipped wording is below. The only change from the approved draft is
+"6 years" → "6+ years" in the byline and "for six years" → "for over six
+years" in the bio, which is the prose form about.html also uses.
+
+**Byline, as shipped:**
+
+> Written by **Eliot King** — First-Class BSc (Hons) Economics, University of
+> Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR
+
+**Bio, as shipped:**
+
+> **Eliot King** is a First-Class BSc (Hons) Economics graduate from the
+> University of Bath and the founder of Economics Academy. Eliot has taught
+> A-Level Economics for over six years across Edexcel A, Edexcel B, AQA and
+> OCR, supporting over 100 students with a particular focus on the exam
+> technique and essay structure that mark schemes reward.
+
+Not done, and worth a thought later: a small photo in the author box (Save My
+Exams has one; it is an `<img>` on 166 pages, so it wants a decision on
+weight), and whether the credentials half of the byline should hide on a
+phone, where the heading group is now three lines of small text. Task 14 —
+look at a page — is where that gets judged.
+
+*The drafts as approved, and the original ask, are kept below for the record.*
 
 Eliot supplied the byline and asked for the bio to be drawn from the about
 page. Publish under **Eliot King**.

@@ -25,7 +25,9 @@ Later the same day the notes SEO pass added four more, all of them from
 scripts/notes_extras.py and all for the same reason: a spec sub-label and an
 update date under the <h1>, a stable id on every <h2>, a table of contents
 where a page has four or more sections, and a related-topics block carrying
-the twin on the other board.
+the twin on the other board. On 2026-08-22 two more joined them from the same
+module, once Eliot had supplied the wording: an author byline under the
+sub-label and an "About the author" box above the notes-cta.
 
 The slices on disk are still verbatim byte slices and are still never written
 to; what changes is only what this generator wraps around them. Every one of

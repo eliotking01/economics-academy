@@ -25,6 +25,7 @@ non-zero if any assertion fails, so this can gate a future change.
    17  every notes topic carries dateModified and a visible update date
    18  every notes topic with a declared twin links to it, once, both ways
    19  no two notes pages share an <h1>
+   20  every notes topic names its author on the page, and the schema agrees
 
 Usage:
     python3 seo/tools/verify_seo.py
@@ -490,6 +491,56 @@ def main() -> int:
     check("19 no two same-board notes pages share an <h1>", bad,
           f"{len(seen)} board/heading pairs over {len(topics)} pages, "
           f"{len(KNOWN_H1_COLLISION)} declared collision")
+
+    # 20 --------------------------------------------------------------------
+    # Added 2026-08-22, when Eliot supplied the byline and bio (manual to-do
+    # task 4). Like 17 this asserts AGREEMENT, not presence: the byline under
+    # the <h1>, the author box above the notes-cta and the LearningResource
+    # `author` must all name the person scripts/notes_extras.py names, by the
+    # @id about.html gives its Person node - and that @id must be a real
+    # fragment on about.html, because the byline links to it. A schema author
+    # the page does not show, or a byline the schema contradicts, is worse
+    # than neither.
+    import notes_extras  # noqa: E402  (scripts/ went on sys.path for 13)
+    person_id = SITE + notes_extras.AUTHOR_URL
+    # The byline and the box are pinned SEPARATELY, each as the exact anchor
+    # the generator writes. Asking only that the name appear somewhere let a
+    # byline naming someone else pass on the strength of the box below it -
+    # found by breaking 1-2-2-demand on 2026-08-22, before this shipped.
+    byline = (f'class="topic-byline__name" href="{notes_extras.AUTHOR_URL}"'
+              f' rel="author">{notes_extras.AUTHOR_NAME}</a>')
+    box = (f'class="topic-author__name" href="{notes_extras.AUTHOR_URL}"'
+           f' rel="author">{notes_extras.AUTHOR_NAME}</a>')
+    bad = []
+    for p in topics:
+        src = (REPO / p).read_text(encoding="utf-8", errors="replace")
+        if src.count('class="topic-byline"') != 1:
+            bad.append(f"{p}: no byline under the <h1>")
+        if src.count('class="topic-author"') != 1:
+            bad.append(f"{p}: no author box")
+        if src.count(byline) != 1:
+            bad.append(f"{p}: the byline does not link {notes_extras.AUTHOR_NAME} "
+                       f"to {notes_extras.AUTHOR_URL}, exactly once")
+        if src.count(box) != 1:
+            bad.append(f"{p}: the author box does not link {notes_extras.AUTHOR_NAME} "
+                       f"to {notes_extras.AUTHOR_URL}, exactly once")
+        author = None
+        for b in parsed[p].jsonld:
+            data = json.loads(b)
+            for node in (data if isinstance(data, list) else [data]):
+                if node.get("@type") == "LearningResource":
+                    author = node.get("author")
+        if (not isinstance(author, dict)
+                or author.get("@type") != "Person"
+                or author.get("@id") != person_id
+                or author.get("name") != notes_extras.AUTHOR_NAME):
+            bad.append(f"{p}: LearningResource author is not the Person the "
+                       f"byline names ({author!r})")
+    about = (REPO / "about.html").read_text(encoding="utf-8", errors="replace")
+    if f'id="{notes_extras.AUTHOR_URL.split("#", 1)[1]}"' not in about:
+        bad.append(f"about.html: no id for {notes_extras.AUTHOR_URL} to land on")
+    check("20 every notes topic names its author, and the schema agrees", bad,
+          f"{len(topics)} pages, author {notes_extras.AUTHOR_NAME!r}")
 
     # ---------------------------------------------------------------- report
     width = max(len(n) for n, _, _, _ in results)

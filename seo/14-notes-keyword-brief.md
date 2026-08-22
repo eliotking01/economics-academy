@@ -303,6 +303,9 @@ Keep the existing `LearningResource` and `BreadcrumbList`. Add to
   A named `Person` author with credentials is a real ranking and trust signal
   and every competitor that outranks this site has one; it needs Eliot's own
   wording, so it is on the manual to-do list, not applied here.
+  *Done 22 August 2026: `author` is the `Person` node from about.html on all
+  166 topic pages, with a visible byline and bio from
+  `scripts/notes_extras.py`; `publisher` stays the organisation.*
 - `audience` as `EducationalAudience` with `educationalRole: student`.
 - `educationalLevel` — already present, keep.
 - `about` — the topic as a `DefinedTerm` or `Thing` with the topic name.

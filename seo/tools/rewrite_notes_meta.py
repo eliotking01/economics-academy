@@ -55,10 +55,19 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+sys.path.insert(0, str(ROOT / "scripts"))
+import notes_extras  # noqa: E402
 import notes_titles as nt  # noqa: E402
 
 DATA = ROOT / "notes-data"
-ORG = "https://economicsacademy.co.uk/#organization"
+SITE = "https://economicsacademy.co.uk"
+ORG = f"{SITE}/#organization"
+# The Person node about.html defines, by the @id every root page already uses
+# for it. Name and URL come from scripts/notes_extras.py, which is where the
+# visible byline is written, so the schema cannot name a different person
+# from the page.
+PERSON = f"{SITE}{notes_extras.AUTHOR_URL}"
+ABOUT = f"{SITE}/about.html"
 
 BOARD_OF_DIR = {
     "edexcel-theme-1": ("Edexcel", "Theme 1"),
@@ -198,12 +207,23 @@ def enrich(lr: dict, *, name: str, board: str, module: str, code: str,
     """The §7 additions. Everything already present is left as it is."""
     lr["datePublished"] = published
     lr["dateModified"] = modified
-    # A named Person author with credentials is the stronger signal and every
-    # competitor that outranks this site has one - but it needs Eliot's own
-    # words, so it is task 4 of the manual to-do list. The organisation is a
-    # true author of these pages in the meantime, and an @id reference is the
-    # correct linked-data form for a node defined elsewhere.
-    lr["author"] = {"@id": ORG}
+    # A named Person author is the stronger signal and every competitor that
+    # outranks this site has one. It needed Eliot's own words, which he
+    # supplied on 2026-08-22 (task 4 of the manual to-do list); the byline and
+    # bio are scripts/notes_extras.py's, and this node names the same person
+    # by the same @id the Person node on about.html already carries, so the
+    # page and its schema cannot disagree on who wrote it - verify_seo.py
+    # assertion 20 fails if they do. The organisation stays as publisher,
+    # which is what it is. The hubs keep the organisation as author too: they
+    # carry no byline, and a schema claim the page does not make is the thing
+    # 17 and 20 exist to stop.
+    lr["author"] = {
+        "@type": "Person",
+        "@id": PERSON,
+        "name": notes_extras.AUTHOR_NAME,
+        "jobTitle": notes_extras.AUTHOR_JOB_TITLE,
+        "url": ABOUT,
+    }
     lr["publisher"] = {"@id": ORG}
     lr["audience"] = {"@type": "EducationalAudience", "educationalRole": "student"}
     lr["about"] = {"@type": "Thing", "name": name}

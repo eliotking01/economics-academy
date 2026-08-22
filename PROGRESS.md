@@ -95,14 +95,16 @@ in 28 days. They now put it first.
 | `<h2>` elements gaining a stable `id` | 1,159 |
 | Pages gaining a contents list, a spec sub-label and an update date | 166 |
 | Twin-board links, where none existed at all before | 109 |
+| Author byline and bio, and a `Person` author in the schema (2026-08-22) | 166 |
 | New internal links | 508 |
 | New `verify_seo.py` assertions | 5 (15–19) |
 | **Published URLs moved** | **0** |
 | **Words of economics wording changed** | **0** |
 
 `verify_text_integrity.py` reports 0 removals across the 166: every difference
-is an addition. The seven new visible strings are chrome and are listed at the
-top of `scripts/notes_extras.py`.
+is an addition. The nine new visible strings are chrome and are listed at the
+top of `scripts/notes_extras.py`; the byline and bio are Eliot's own words
+about himself, also there.
 
 ### Three things a future session needs to know
 
@@ -164,15 +166,16 @@ read-and-confirm rather than blocking.
 re-run after the push, looking at a page in a browser, reading the twin map,
 deciding the AQA heading question, and noting the date when rank-checking.
 
-**The author byline** is task 4 of that list and remains the highest-value
-item on it. Every competitor that outranks this site on these queries has a
-named author with credentials; these pages do not yet. Eliot supplied the
-wording on 2026-08-22; the byline and a bio adapted from the about page are
-drafted in the task, waiting for approval before they go onto the 166 pages
-and into the `LearningResource` schema as a `Person` author. The same day:
-task 1 (UK SERP check) confirmed the title formula, task 3 closed, and task 2
-(term-time re-export) was parked because the notes were not complete before
-the 2026 summer exams.
+**The author byline** was task 4 of that list and the highest-value item on
+it — every competitor that outranks this site on these queries has a named
+author with credentials. Done 2026-08-22: Eliot supplied and approved the
+wording, and the byline, an "About the author" box and a `Person` author in
+the `LearningResource` schema went onto all 166 topic pages in one pass
+(`scripts/notes_extras.py`, `seo/tools/rewrite_notes_meta.py`,
+`verify_seo.py` assertion 20, DECISIONS.md D55). The same day: task 1 (UK
+SERP check) confirmed the title formula, task 3 closed, and task 2 (term-time
+re-export) was parked because the notes were not complete before the 2026
+summer exams.
 
 ### Where it lives
 
@@ -185,7 +188,7 @@ the 2026 summer exams.
 | `seo/tools/notes_baseline.py` | regenerates either CSV |
 | `seo/tools/notes_titles.py` | the formulas, imported by the rewriter AND the verifier |
 | `seo/tools/rewrite_notes_meta.py` | re-runnable; refreshes `dateModified` |
-| `scripts/notes_extras.py`, `scripts/notes_twins.py` | the four blocks and the twin map |
+| `scripts/notes_extras.py`, `scripts/notes_twins.py` | the six blocks (incl. the byline and author box) and the twin map |
 
 ### Deliberately not done
 

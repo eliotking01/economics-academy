@@ -1859,3 +1859,40 @@ the two descriptions keep their codes and stay distinct, and the JSON-LD
 **Where the code still lives**: the meta description (brief §5, unchanged)
 and the on-page sub-label on all 166 pages. Assertion 15 now rejects a spec
 code in any notes title on either board.
+
+### D55 — every topic page names Eliot as its author, on the page and in the schema
+
+Eliot, 2026-08-22, in chat. He supplied the byline ("Eliot King, First-Class
+BSc Economics (Hons), University of Bath, 6 years teaching, Edexcel A, Edexcel
+B, AQA and OCR"), asked for the bio to come from the about page, approved the
+tidied byline, the adapted bio and the placement as drafted, and chose "6+
+years": "Yes and 6+".
+
+**What ships.** A byline under the heading on all 166 topic pages, an "About
+the author" box between the related topics and the notes-cta, `id="eliot-king"`
+on the about page's profile section, and the `LearningResource` `author`
+switched from the `#organization` node to the `Person` node about.html already
+defines at that `@id`. The publisher stays the organisation; the seven hubs
+keep the organisation as author because they carry no byline.
+
+**Where the wording lives, and why only there.** `scripts/notes_extras.py`,
+as `AUTHOR_*` constants. `seo/tools/rewrite_notes_meta.py` imports the name,
+URL and job title from it for the schema, and `verify_seo.py` assertion 20
+fails if the byline, the box and the schema stop naming the same person by
+the same `@id`, or if about.html loses the fragment. Like assertion 17 it
+asserts agreement, not presence: a schema author the page does not show is
+the thing it exists to stop. Proved able to fail three ways on 1-2-2-demand
+before it shipped — and the first version did NOT fail when the byline alone
+named someone else, because the box below it still carried the name; it was
+tightened to pin each anchor separately.
+
+**Why the generator and not the slices.** The byline and bio are chrome in
+exactly the sense the sub-label and contents list are: 166 hand-inserted
+copies is the scripted bulk edit hard rule 6 forbids, and the wording has to
+change in one place when Eliot's credentials do. The slices stay byte slices;
+`verify_text_integrity.py` reports 166 pages changed, 0 words removed.
+
+**The two adaptations from the about page**, shown to Eliot before approval:
+the bio is third person where the about page says "I", and the four boards
+are named. "6+ years" in the byline is "over six years" in the bio, which is
+the form about.html itself uses. No other claim is new.

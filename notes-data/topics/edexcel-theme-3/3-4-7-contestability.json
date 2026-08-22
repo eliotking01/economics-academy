@@ -56,7 +56,11 @@
         "datePublished": "2026-04-22",
         "dateModified": "2026-08-13",
         "author": {
-          "@id": "https://economicsacademy.co.uk/#organization"
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
         },
         "publisher": {
           "@id": "https://economicsacademy.co.uk/#organization"
