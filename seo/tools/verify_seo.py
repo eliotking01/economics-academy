@@ -16,6 +16,16 @@ non-zero if any assertion fails, so this can gate a future change.
     9  sitemap: valid index, every URL 200-able, self-canonicalising, no
        redirects, no duplicates, matches the filesystem exactly
    10  robots.txt does not block anything crawlable, and names the sitemap
+   11  every page is within 3 clicks of the homepage on the rendered graph
+   12  every page has 3 or more inbound internal links
+   13  no link crosses an exam board except a declared twin-board pair
+   14  every indexable page below the homepage has a BreadcrumbList
+   15  every notes topic title matches the brief's formula and fits 65 chars
+   16  every notes topic description is page-specific and 145-158 characters
+   17  every notes topic carries dateModified and a visible update date
+   18  every notes topic with a declared twin links to it, once, both ways
+   19  no two notes pages share an <h1>
+   20  every notes topic names its author on the page, and the schema agrees
 
 Usage:
     python3 seo/tools/verify_seo.py
@@ -270,6 +280,30 @@ def main() -> int:
         ("revision-notes/glossary/edexcel-a/index.html",
          "revision-notes/glossary/aqa/index.html"),
     }
+
+    # AMENDED 2026-08-21 by the notes on-page SEO pass, and deliberately not
+    # weakened. The 166 topic pages now each carry a link to the page covering
+    # the same topic on the other board, because a student searching "monopoly
+    # a level economics" without naming a board should not land on the wrong
+    # one with no way across - seo/14-notes-keyword-brief.md §8.
+    #
+    # The exemption is NOT "anything inside the twin block". It is the exact
+    # (source, target) pair appearing in scripts/notes_twins.TWINS, which is
+    # a written-down, hand-verified table with its evidence recorded per row.
+    # So this assertion still fails on a cross-board link that the table does
+    # not name - including one inside the twin block, if the generator ever
+    # started deriving the target instead of reading it - which is the failure
+    # it was written to catch: a student sent to the wrong board's content.
+    sys.path.insert(0, str(REPO / "scripts"))
+    import notes_twins  # noqa: E402
+
+    def twin_pair(page: str, target: str) -> bool:
+        def key(p: str):
+            parts = Path(p).parts
+            return (parts[1], Path(p).stem) if len(parts) == 3 else None
+        a, b = key(page), key(target)
+        return bool(a and b and notes_twins.TWINS.get(a) == b)
+
     bad = []
     for page in g.pages:
         src = board_of(page)
@@ -280,11 +314,14 @@ def main() -> int:
             if (target, anchor) in chrome:
                 continue
             dst = board_of(target)
-            if dst and dst != src and (page, target) not in BOARD_SWITCHER:
-                bad.append(f"{page} -> {target} ({src} -> {dst}) {anchor!r}")
-    check("13 no link crosses an exam board", bad,
-          f"{len(BOARD_SWITCHER)} allowed: the glossary board selector, "
-          f"plus the site nav")
+            if not dst or dst == src:
+                continue
+            if (page, target) in BOARD_SWITCHER or twin_pair(page, target):
+                continue
+            bad.append(f"{page} -> {target} ({src} -> {dst}) {anchor!r}")
+    check("13 no link crosses an exam board except a declared twin", bad,
+          f"{len(notes_twins.TWINS)} declared twin pairs, "
+          f"{len(BOARD_SWITCHER)} glossary, plus the site nav")
 
     # 14 --------------------------------------------------------------------
     # Assertion 8 already proves every JSON-LD block parses. This proves the
@@ -299,6 +336,211 @@ def main() -> int:
             bad.append(page)
     check("14 every indexable page below the homepage has a BreadcrumbList",
           bad, f"{len(pages) - 1} pages")
+
+    # ------------------------------------------- 15-19: the notes on-page pass
+    # Added 2026-08-21 by the revision-notes on-page SEO audit. Each locks in
+    # one thing that pass established, so a later edit cannot quietly undo it
+    # - which is the only reason any of this is in CI rather than in a report.
+    #
+    # The formulas are imported from seo/tools/notes_titles.py rather than
+    # restated. A check that restates the rule it is checking passes when both
+    # copies are wrong together, and the whole point of putting these here is
+    # to catch the case where the generator and the intention drift apart.
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import notes_titles as formulas  # noqa: E402
+
+    NOTES_DIRS = ("edexcel-theme-1", "edexcel-theme-2", "edexcel-theme-3",
+                  "edexcel-theme-4", "aqa-a2-micro", "aqa-a2-macro")
+    topics = [p for p in pages
+              if len(Path(p).parts) == 3
+              and Path(p).parts[0] == "revision-notes"
+              and Path(p).parts[1] in NOTES_DIRS
+              and Path(p).name != "index.html"]
+
+    def board_label(page: str) -> str:
+        return "AQA" if Path(page).parts[1].startswith("aqa") else "Edexcel"
+
+    # 15 --------------------------------------------------------------------
+    # The title formula, §4. Two things are asserted and the second matters
+    # more than the first: that every title is one of the three shapes for
+    # its board, and that the topic name comes FIRST in it. 166 of 166 titles
+    # used to end with the topic name, behind a board and a spec code, and
+    # the code was earning 4 impressions in 28 days.
+    #
+    # No title on EITHER board may carry a spec code. AQA's are site-local
+    # and misleading (settled 2026-08-21); Edexcel's are real but earn
+    # nothing, and Eliot removed them on 2026-08-22 - DECISIONS.md D54. The
+    # two Balance of Payments pages carry "(Theme 2)" / "(Theme 4)" labels
+    # instead, which this regex deliberately does not match.
+    SPEC_IN_TITLE = re.compile(r"\d+\.\d+(\.\d+)?")
+    bad = []
+    for p in topics:
+        title = parsed[p].title
+        board = board_label(p)
+        shapes = (formulas.EDEXCEL_VARIANTS if board == "Edexcel"
+                  else formulas.AQA_VARIANTS)
+        tails = [v.split("{topic}", 1)[1].replace("({code})", "") .strip()
+                 for v in shapes]
+        if len(title) > formulas.HARD_MAX:
+            bad.append(f"{p}: title is {len(title)} chars, over "
+                       f"{formulas.HARD_MAX}")
+        if not any(title.endswith(t) for t in tails):
+            bad.append(f"{p}: title is not one of the §4 shapes: {title!r}")
+        elif title.startswith(board) or title.startswith("A-Level"):
+            bad.append(f"{p}: title does not lead with the topic: {title!r}")
+        if SPEC_IN_TITLE.search(title):
+            bad.append(f"{p}: title carries a spec code: {title!r}")
+    lengths = sorted(len(parsed[p].title) for p in topics)
+    check("15 notes titles match the §4 formula, topic name first", bad,
+          f"{len(topics)} pages, {lengths[0]}-{lengths[-1]} chars")
+
+    # 16 --------------------------------------------------------------------
+    # The description band, §5. 145-158 is where Google shows the whole thing;
+    # a hard floor and ceiling either side of it catches a description that
+    # has drifted far enough to be truncated or to be wasting the space.
+    #
+    # The tolerance is not symmetric and is not a fudge. 20 descriptions run
+    # 159-168 because their sub-concept list cannot be shortened by a script
+    # without mangling it - seo/tools/notes_titles.py records the 25 that a
+    # scripted attempt broke - so the ceiling here is 170, and the count of
+    # pages outside the target band is asserted so it cannot silently grow.
+    OUT_OF_BAND_ALLOWED = 21
+    bad, out_of_band = [], []
+    for p in topics:
+        d = parsed[p].description
+        if not (formulas.DESC_MIN <= len(d) <= formulas.DESC_MAX):
+            out_of_band.append(p)
+        if len(d) < 130 or len(d) > 170:
+            bad.append(f"{p}: description is {len(d)} chars")
+        topic_first = d.split(" for ")[0].split(" — ")[0]
+        if len(topic_first) > 80:
+            bad.append(f"{p}: description does not front-load a topic name")
+    if len(out_of_band) > OUT_OF_BAND_ALLOWED:
+        bad.append(f"{len(out_of_band)} descriptions outside "
+                   f"{formulas.DESC_MIN}-{formulas.DESC_MAX}, "
+                   f"was {OUT_OF_BAND_ALLOWED}")
+    check("16 notes descriptions are front-loaded and in band", bad,
+          f"{len(topics) - len(out_of_band)}/{len(topics)} in "
+          f"{formulas.DESC_MIN}-{formulas.DESC_MAX}")
+
+    # 17 --------------------------------------------------------------------
+    # dateModified in the LearningResource and the same date visible on the
+    # page. Freshness is a signal Google can only read if it is stated, and a
+    # schema date that disagrees with the page is worse than no date at all -
+    # so this asserts the two agree rather than merely that both exist.
+    bad = []
+    for p in topics:
+        src = (REPO / p).read_text(encoding="utf-8", errors="replace")
+        schema = re.search(r'"dateModified":\s*"(\d{4}-\d{2}-\d{2})"', src)
+        visible = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})">', src)
+        if not schema:
+            bad.append(f"{p}: no dateModified in its LearningResource")
+        elif not visible:
+            bad.append(f"{p}: no visible <time> update date")
+        elif schema.group(1) != visible.group(1):
+            bad.append(f"{p}: schema says {schema.group(1)}, page shows "
+                       f"{visible.group(1)}")
+    check("17 every notes topic states when it was last updated", bad,
+          f"{len(topics)} pages")
+
+    # 18 --------------------------------------------------------------------
+    # The twin link exists where the table says it should, exactly once, and
+    # the reverse direction resolves too. Assertion 13 proves no UNDECLARED
+    # cross-board link ships; this proves the declared ones actually did.
+    # Without it, a generator change that dropped the block would leave 13
+    # passing on an empty set and nobody any the wiser.
+    bad = []
+    for p in topics:
+        key = (Path(p).parts[1], Path(p).stem)
+        pair = notes_twins.TWINS.get(key)
+        if not pair:
+            continue
+        want = f"/revision-notes/{pair[0]}/{pair[1]}.html"
+        src = (REPO / p).read_text(encoding="utf-8", errors="replace")
+        n = src.count(f'class="topic-related__twin-link" href="{want}"')
+        if n != 1:
+            bad.append(f"{p}: {n} twin links to {want}, expected 1")
+    check("18 every notes topic with a declared twin links to it", bad,
+          f"{len(notes_twins.TWINS)} pairs")
+
+    # 19 --------------------------------------------------------------------
+    # One <h1> per page is assertion 5; this is that no two notes pages ON THE
+    # SAME BOARD share the same one. Two pages under one board answering to
+    # the same heading is the shape of a duplicate.
+    #
+    # ACROSS boards it is not, and scoping this per board is the whole point.
+    # Eleven topics are called the same thing on Edexcel and AQA - "Perfect
+    # Competition", "Globalisation", "Supply-Side Policies" - and both are
+    # meant to rank, for board-specific queries, which DECISIONS.md D4 settles
+    # by refusing a cross-board canonical. A site-wide version of this check
+    # would report all eleven as duplicates and would report more, not fewer,
+    # if the AQA code prefixes are ever stripped from the AQA <h1>s.
+    #
+    # The one real collision is Edexcel's, and it is named so that a SECOND
+    # one fails here rather than joining a tolerated set: "Balance of
+    # Payments" is Theme 2's 2.1.4, as a measure of macroeconomic performance,
+    # and Theme 4's 4.1.7, as international economics.
+    KNOWN_H1_COLLISION = {("Edexcel", "Balance of Payments")}
+    seen = defaultdict(list)
+    for p in topics:
+        h1 = parsed[p].h1[0] if parsed[p].h1 else ""
+        seen[(board_label(p), h1)].append(p)
+    bad = [f"{len(v)} {k[0]} pages share the <h1> {k[1]!r}: {', '.join(v)}"
+           for k, v in seen.items()
+           if len(v) > 1 and k not in KNOWN_H1_COLLISION]
+    check("19 no two same-board notes pages share an <h1>", bad,
+          f"{len(seen)} board/heading pairs over {len(topics)} pages, "
+          f"{len(KNOWN_H1_COLLISION)} declared collision")
+
+    # 20 --------------------------------------------------------------------
+    # Added 2026-08-22, when Eliot supplied the byline and bio (manual to-do
+    # task 4). Like 17 this asserts AGREEMENT, not presence: the byline under
+    # the <h1>, the author box above the notes-cta and the LearningResource
+    # `author` must all name the person scripts/notes_extras.py names, by the
+    # @id about.html gives its Person node - and that @id must be a real
+    # fragment on about.html, because the byline links to it. A schema author
+    # the page does not show, or a byline the schema contradicts, is worse
+    # than neither.
+    import notes_extras  # noqa: E402  (scripts/ went on sys.path for 13)
+    person_id = SITE + notes_extras.AUTHOR_URL
+    # The byline and the box are pinned SEPARATELY, each as the exact anchor
+    # the generator writes. Asking only that the name appear somewhere let a
+    # byline naming someone else pass on the strength of the box below it -
+    # found by breaking 1-2-2-demand on 2026-08-22, before this shipped.
+    byline = (f'class="topic-byline__name" href="{notes_extras.AUTHOR_URL}"'
+              f' rel="author">{notes_extras.AUTHOR_NAME}</a>')
+    box = (f'class="topic-author__name" href="{notes_extras.AUTHOR_URL}"'
+           f' rel="author">{notes_extras.AUTHOR_NAME}</a>')
+    bad = []
+    for p in topics:
+        src = (REPO / p).read_text(encoding="utf-8", errors="replace")
+        if src.count('class="topic-byline"') != 1:
+            bad.append(f"{p}: no byline under the <h1>")
+        if src.count('class="topic-author"') != 1:
+            bad.append(f"{p}: no author box")
+        if src.count(byline) != 1:
+            bad.append(f"{p}: the byline does not link {notes_extras.AUTHOR_NAME} "
+                       f"to {notes_extras.AUTHOR_URL}, exactly once")
+        if src.count(box) != 1:
+            bad.append(f"{p}: the author box does not link {notes_extras.AUTHOR_NAME} "
+                       f"to {notes_extras.AUTHOR_URL}, exactly once")
+        author = None
+        for b in parsed[p].jsonld:
+            data = json.loads(b)
+            for node in (data if isinstance(data, list) else [data]):
+                if node.get("@type") == "LearningResource":
+                    author = node.get("author")
+        if (not isinstance(author, dict)
+                or author.get("@type") != "Person"
+                or author.get("@id") != person_id
+                or author.get("name") != notes_extras.AUTHOR_NAME):
+            bad.append(f"{p}: LearningResource author is not the Person the "
+                       f"byline names ({author!r})")
+    about = (REPO / "about.html").read_text(encoding="utf-8", errors="replace")
+    if f'id="{notes_extras.AUTHOR_URL.split("#", 1)[1]}"' not in about:
+        bad.append(f"about.html: no id for {notes_extras.AUTHOR_URL} to land on")
+    check("20 every notes topic names its author, and the schema agrees", bad,
+          f"{len(topics)} pages, author {notes_extras.AUTHOR_NAME!r}")
 
     # ---------------------------------------------------------------- report
     width = max(len(n) for n, _, _, _ in results)

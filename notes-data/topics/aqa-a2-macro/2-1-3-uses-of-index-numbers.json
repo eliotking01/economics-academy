@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
   "head": {
-    "title": "AQA A-Level Economics 2.1.3 Uses of Index Numbers",
-    "description": "Free AQA A-Level Economics revision notes for unit 2.1.3. Covers base years and weighting, and how CPI and the inflation rate are calculated step by step.",
+    "title": "Uses of Index Numbers – AQA A-Level Economics Revision Notes",
+    "description": "Uses of Index Numbers for AQA A-Level Economics macro. Covers base years and weighting, and how CPI and the inflation rate are calculated step by step.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
-      "title": "AQA A-Level Economics 2.1.3 Uses of Index Numbers",
-      "description": "Free AQA A-Level Economics revision notes for unit 2.1.3. Covers base years and weighting, and how CPI and the inflation rate are calculated step by step.",
+      "title": "Uses of Index Numbers – AQA A-Level Economics Revision Notes",
+      "description": "Uses of Index Numbers for AQA A-Level Economics macro. Covers base years and weighting, and how CPI and the inflation rate are calculated step by step.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 2.1.3 Uses of Index Numbers",
-      "description": "Free AQA A-Level Economics revision notes for unit 2.1.3. Covers base years and weighting, and how CPI and the inflation rate are calculated step by step.",
+      "title": "Uses of Index Numbers – AQA A-Level Economics Revision Notes",
+      "description": "Uses of Index Numbers for AQA A-Level Economics macro. Covers base years and weighting, and how CPI and the inflation rate are calculated step by step.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-21",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Uses of Index Numbers"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Macroeconomics"
+        },
+        "timeRequired": "PT6M"
       }
     ],
     "jsonldAfterStyles": [

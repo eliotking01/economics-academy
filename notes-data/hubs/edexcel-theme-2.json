@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-2/index.html",
   "head": {
-    "title": "Edexcel Theme 2 Revision Notes | The UK Economy | Economics Academy",
-    "description": "Free Edexcel A-Level Economics Theme 2 revision notes — the UK economy, aggregate demand and supply, national income, economic growth, and macroeconomic policies. Every topic covered, with links to detailed notes on each subtopic.",
+    "title": "Edexcel Theme 2 Revision Notes | The UK Economy",
+    "description": "Theme 2 revision notes for Edexcel A-Level Economics: aggregate demand and supply, national income, economic growth and macroeconomic policy. Free.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/",
     "og": {
       "type": "website",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/",
-      "title": "Edexcel Theme 2 Revision Notes | The UK Economy | Economics Academy",
-      "description": "Free Edexcel A-Level Economics Theme 2 revision notes — the UK economy, aggregate demand and supply, national income, economic growth, and macroeconomic policies. Every topic covered.",
+      "title": "Edexcel Theme 2 Revision Notes | The UK Economy",
+      "description": "Theme 2 revision notes for Edexcel A-Level Economics: aggregate demand and supply, national income, economic growth and macroeconomic policy. Free.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
       "image:width": "1200",
       "image:height": "1200",
@@ -48,6 +48,23 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
+        },
+        "datePublished": "2025-06-15",
+        "dateModified": "2026-08-21",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 2"
         }
       },
       {

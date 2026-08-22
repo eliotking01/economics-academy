@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-3/3-4-7-contestability.html",
   "head": {
-    "title": "Edexcel A-Level Economics 3.4.7 Contestability",
-    "description": "Revision notes for Edexcel A-Level Economics 3.4.7. Covers contestability versus competition, hit-and-run entry, and the role of sunk costs. With diagrams.",
+    "title": "Contestability – Edexcel A-Level Economics Revision Notes",
+    "description": "Contestability for Edexcel A-Level Economics (3.4.7). Covers contestability versus competition, hit-and-run entry, and the role of sunk costs, with a diagram.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-4-7-contestability.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-3/3-4-7-contestability.html",
-      "title": "Edexcel A-Level Economics 3.4.7 Contestability",
-      "description": "Revision notes for Edexcel A-Level Economics 3.4.7. Covers contestability versus competition, hit-and-run entry, and the role of sunk costs. With diagrams.",
+      "title": "Contestability – Edexcel A-Level Economics Revision Notes",
+      "description": "Contestability for Edexcel A-Level Economics (3.4.7). Covers contestability versus competition, hit-and-run entry, and the role of sunk costs, with a diagram.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 3.4.7 Contestability",
-      "description": "Revision notes for Edexcel A-Level Economics 3.4.7. Covers contestability versus competition, hit-and-run entry, and the role of sunk costs. With diagrams.",
+      "title": "Contestability – Edexcel A-Level Economics Revision Notes",
+      "description": "Contestability for Edexcel A-Level Economics (3.4.7). Covers contestability versus competition, hit-and-run entry, and the role of sunk costs, with a diagram.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-22",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Contestability"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 3, unit 3.4.7"
+        },
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [

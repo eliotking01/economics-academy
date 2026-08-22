@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html",
   "head": {
-    "title": "Edexcel A-Level Economics 4.5.4 Global Macroeconomic Policy",
-    "description": "Free Edexcel A-Level Economics revision notes (4.5.4). Covers how globalisation constrains national policy and the difficulty of controlling global firms.",
+    "title": "Global Macroeconomic Policy – Edexcel A-Level Economics",
+    "description": "Global Macroeconomic Policy — Edexcel A-Level Economics (4.5.4): how globalisation constrains national policy and the difficulty of controlling global firms.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html",
-      "title": "Edexcel A-Level Economics 4.5.4 Global Macroeconomic Policy",
-      "description": "Free Edexcel A-Level Economics revision notes (4.5.4). Covers how globalisation constrains national policy and the difficulty of controlling global firms.",
+      "title": "Global Macroeconomic Policy – Edexcel A-Level Economics",
+      "description": "Global Macroeconomic Policy — Edexcel A-Level Economics (4.5.4): how globalisation constrains national policy and the difficulty of controlling global firms.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 4.5.4 Global Macroeconomic Policy",
-      "description": "Free Edexcel A-Level Economics revision notes (4.5.4). Covers how globalisation constrains national policy and the difficulty of controlling global firms.",
+      "title": "Global Macroeconomic Policy – Edexcel A-Level Economics",
+      "description": "Global Macroeconomic Policy — Edexcel A-Level Economics (4.5.4): how globalisation constrains national policy and the difficulty of controlling global firms.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Global Macroeconomic Policy"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 4, unit 4.5.4"
+        },
+        "timeRequired": "PT6M"
       }
     ],
     "jsonldAfterStyles": [

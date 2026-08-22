@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-4/index.html",
   "head": {
-    "title": "Edexcel Theme 4 Revision Notes | A Global Perspective | Economics Academy",
-    "description": "Free Edexcel A-Level Economics Theme 4 revision notes — international economics, poverty and inequality, emerging economies, the financial sector, and the role of the state. Every topic covered, with links to detailed notes on each subtopic.",
+    "title": "Edexcel Theme 4 Revision Notes | A Global Perspective",
+    "description": "Theme 4 revision notes for Edexcel A-Level Economics: international economics, poverty and inequality, emerging economies and the role of the state. Free.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/",
     "og": {
       "type": "website",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-4/",
-      "title": "Edexcel Theme 4 Revision Notes | A Global Perspective | Economics Academy",
-      "description": "Free Edexcel A-Level Economics Theme 4 revision notes — international economics, poverty and inequality, emerging economies, the financial sector, and the role of the state. Every topic covered.",
+      "title": "Edexcel Theme 4 Revision Notes | A Global Perspective",
+      "description": "Theme 4 revision notes for Edexcel A-Level Economics: international economics, poverty and inequality, emerging economies and the role of the state. Free.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
       "image:width": "1200",
       "image:height": "1200",
@@ -48,6 +48,23 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
+        },
+        "datePublished": "2025-06-15",
+        "dateModified": "2026-08-15",
+        "author": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 4"
         }
       },
       {

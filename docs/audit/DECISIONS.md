@@ -1727,3 +1727,172 @@ inside a phase review, as the Phase 0 plan already required.
 - **PH05-019/020's second, independent reason** — the contaminated noindex
   window recorded in D45's last paragraph — is unaffected by this override
   and still stands on its own.
+
+---
+
+## 2026-08-21 · Revision notes on-page SEO
+
+### D51 — `scripts/intentional-changes.json` stays empty across the title rewrite
+
+Eliot, 2026-08-21, in chat, after the trade-off was put to him in plain terms
+and he asked for it to be put again more simply.
+
+**What was at stake.** The notes on-page pass rewrote the `<title>` and meta
+description — and their `og:` and `twitter:` mirrors — on all 166 topic pages
+and 7 hubs. `compare_trees.py` assertion 5 holds `<head>` fields fixed between
+two trees unless the page AND the field appear in
+`scripts/intentional-changes.json` with a written reason, and that file's own
+header forbids globs: "The eighteen pages of PH06-029 are eighteen entries with
+eighteen reasons." Applied literally, this commit needed roughly **996 entries
+with 996 reasons**, all of them the same reason.
+
+**The decision: add nothing, and record why here instead.**
+
+**Why that is not a rule being quietly dropped.** `compare_trees.py` is
+deliberately not a CI step and `.github/workflows/verify.yml` says so in its
+own DELIBERATELY ABSENT block: assertion 8 asserts everything outside
+`--family` is byte-identical, so with no declaration the script is red on any
+commit that changes any file — measured, including a docs-only one — and "a
+check that is always red protects nothing". What runs instead is
+`scripts/test_compare_trees.py`, its 39-case suite, which passes.
+
+So nothing was suppressed and no check went from green to absent. The question
+was only whether ~30,000 lines of generated JSON should be added to the repo as
+a record, for a script nothing runs automatically. The file's value is that it
+is a short list of exceptions a person can read; 996 identical entries would
+end that.
+
+**What replaces it.** This entry, plus the "Deliberately not done" paragraph in
+the commit message and in `seo/17-notes-seo-audit-2026-08-21.md`. A future
+session that runs `compare_trees.py` by hand across 2026-08-21 will see 173
+changed heads and should read this rather than conclude something broke.
+
+**What this does NOT change.** The no-globs rule stands for every future use.
+A pattern was never added; the file is untouched and still empty. The next
+deliberate normalisation of a handful of pages declares itself there, entry by
+entry, exactly as before.
+
+### D52 — `verify_seo.py` assertion 13 gains a twin-board exemption keyed on a table
+
+Same pass. Assertion 13 — "no link crosses an exam board" — existed because
+Edexcel and AQA share the X.Y.Z code format and 37 codes collide outright, so
+a cross-board link resolves to a real page, 404s nothing, passes every other
+assertion, and the only symptom is a student reading the wrong board's content.
+
+The brief's §8 requires every topic page to link to its counterpart on the
+other board, which is exactly what that assertion forbade.
+
+**The exemption is the exact `(source, target)` pair in
+`scripts/notes_twins.TWINS`, not "anything inside the twin block."** That
+distinction is the whole decision. A block-scoped exemption would have made the
+assertion blind to the failure it was written for the moment the generator
+started deriving a target instead of reading one. A table-scoped exemption
+keeps it at full strength: 109 named pairs pass and every other cross-board
+link still fails, wherever it appears.
+
+New assertion 18 is the other half — it proves the 109 declared links actually
+shipped, so 13 cannot pass by the block having silently disappeared.
+
+### D53 — the AQA `<h1>` spec-code prefix is removed, lifting PH05-021
+
+Eliot, 2026-08-21, in chat, on being shown both sides: "strip them".
+
+`seo/14-notes-keyword-brief.md` §6 asked for it; `docs/audit/DO-NOT-BREAK.md`
+said the prefix "stays until the day-45 read" because on the near-identical
+Edexcel/AQA pairs it was the last textual differentiator. Two of the repo's own
+documents disagreed and the audit put both to him rather than picking one.
+
+**The hold was re-measured before it was lifted.** At 5-word-shingle Jaccard
+over the current prose, no cross-board pair reaches 0.95 similarity and only
+six reach 0.80. PH05's figure was taken before the AQA pages were rewritten.
+All six of those pairs are now separated four further ways that did not exist
+when PH05-021 was written — a board-first title, a board-first description, a
+`topic-meta` sub-label naming the board and unit, and a twin link naming the
+other board in a sentence.
+
+**The code stays visible.** It moved to the sub-label under the heading, on all
+166 pages. That change landed first, in the same audit, which is the only
+reason this one is cheap: a student checking they are on the right AQA unit
+still sees `AQA · Microeconomics · 1.5.3`.
+
+**What the 79 slices were edited with, and why that is not hard rule 6.** Not a
+paragraph rebuild. All 79 were measured first: one `<h1>` each, inner content
+plain text with no markup at all, every one matching `<code> <name>` exactly.
+The edit deletes the code and the single space after it **by byte offset**, so
+nothing else in the file can move — a string replace would have hit the
+breadcrumb's own copy of the code first, which is exactly the class of silent
+error hard rule 6 exists for. The breadcrumb and its JSON-LD twin still carry
+the code and still agree with each other; `verify_page_shell.py` check 8 holds
+that.
+
+`verify_seo.py` assertion 19 now holds the line, scoped per board.
+
+### D54 — Edexcel titles drop their spec codes too
+
+Eliot, 2026-08-22, in chat, after asking for the trade-off himself: "Let's do
+it now."
+
+The day before, the AQA titles lost their codes because the codes are
+site-local and cannot match a search. Edexcel's codes are real — but real and
+unsearched: 4 impressions in 28 days, 0.1% under every filter in the brief,
+including the one that strips the site owner's own searching. The audit had
+kept them on the strength of "real codes stay"; Eliot asked whether removing
+them would help or harm, and the measured answer was: harm none, help
+slightly — 23 of the 87 Edexcel titles newly fit the phrase "Revision Notes"
+in the freed eight characters, and none lose it.
+
+**The recommendation he overrode, knowingly.** The advice was to wait for the
+late-September read of the topic-first titles before changing the formula
+again, so the two effects stay separable. He chose now, which trades that
+measurement for a term of the cleaner titles running. Recorded so the
+September numbers are read as measuring BOTH changes together.
+
+**The collision, and how it resolves.** Edexcel carries "Balance of Payments"
+twice — Theme 2's 2.1.4 as a measure of performance, Theme 4's 4.1.7 as
+international economics. Code-free their titles collide, and verify_seo.py
+assertion 6 refuses to ship that. Offered three resolutions — keep codes on
+just these two, theme labels, content-based names — Eliot chose theme labels:
+`Balance of Payments (Theme 2)` and `(Theme 4)`. The label is title-only;
+the two descriptions keep their codes and stay distinct, and the JSON-LD
+`about` name stays the true topic name.
+
+**Where the code still lives**: the meta description (brief §5, unchanged)
+and the on-page sub-label on all 166 pages. Assertion 15 now rejects a spec
+code in any notes title on either board.
+
+### D55 — every topic page names Eliot as its author, on the page and in the schema
+
+Eliot, 2026-08-22, in chat. He supplied the byline ("Eliot King, First-Class
+BSc Economics (Hons), University of Bath, 6 years teaching, Edexcel A, Edexcel
+B, AQA and OCR"), asked for the bio to come from the about page, approved the
+tidied byline, the adapted bio and the placement as drafted, and chose "6+
+years": "Yes and 6+".
+
+**What ships.** A byline under the heading on all 166 topic pages, an "About
+the author" box between the related topics and the notes-cta, `id="eliot-king"`
+on the about page's profile section, and the `LearningResource` `author`
+switched from the `#organization` node to the `Person` node about.html already
+defines at that `@id`. The publisher stays the organisation; the seven hubs
+keep the organisation as author because they carry no byline.
+
+**Where the wording lives, and why only there.** `scripts/notes_extras.py`,
+as `AUTHOR_*` constants. `seo/tools/rewrite_notes_meta.py` imports the name,
+URL and job title from it for the schema, and `verify_seo.py` assertion 20
+fails if the byline, the box and the schema stop naming the same person by
+the same `@id`, or if about.html loses the fragment. Like assertion 17 it
+asserts agreement, not presence: a schema author the page does not show is
+the thing it exists to stop. Proved able to fail three ways on 1-2-2-demand
+before it shipped — and the first version did NOT fail when the byline alone
+named someone else, because the box below it still carried the name; it was
+tightened to pin each anchor separately.
+
+**Why the generator and not the slices.** The byline and bio are chrome in
+exactly the sense the sub-label and contents list are: 166 hand-inserted
+copies is the scripted bulk edit hard rule 6 forbids, and the wording has to
+change in one place when Eliot's credentials do. The slices stay byte slices;
+`verify_text_integrity.py` reports 166 pages changed, 0 words removed.
+
+**The two adaptations from the about page**, shown to Eliot before approval:
+the bio is third person where the about page says "I", and the four boards
+are named. "6+ years" in the byline is "over six years" in the bio, which is
+the form about.html itself uses. No other claim is new.

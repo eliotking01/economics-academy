@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
   "head": {
-    "title": "AQA A-Level Economics 1.2.4 Behavioural Economics and Policy",
-    "description": "Free AQA A-Level Economics revision notes (1.2.4). Covers choice architecture, framing and nudges, and how they shape policy. Includes evaluation points.",
+    "title": "Behavioural Economics and Economic Policy – AQA A-Level Economics",
+    "description": "Behavioural Economics and Economic Policy for AQA A-Level Economics micro. Covers choice architecture, framing and nudges, and how they shape policy.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-2-4-behavioural-economics-and-economic-policy.html",
-      "title": "AQA A-Level Economics 1.2.4 Behavioural Economics and Policy",
-      "description": "Free AQA A-Level Economics revision notes (1.2.4). Covers choice architecture, framing and nudges, and how they shape policy. Includes evaluation points.",
+      "title": "Behavioural Economics and Economic Policy – AQA A-Level Economics",
+      "description": "Behavioural Economics and Economic Policy for AQA A-Level Economics micro. Covers choice architecture, framing and nudges, and how they shape policy.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.2.4 Behavioural Economics and Policy",
-      "description": "Free AQA A-Level Economics revision notes (1.2.4). Covers choice architecture, framing and nudges, and how they shape policy. Includes evaluation points.",
+      "title": "Behavioural Economics and Economic Policy – AQA A-Level Economics",
+      "description": "Behavioural Economics and Economic Policy for AQA A-Level Economics micro. Covers choice architecture, framing and nudges, and how they shape policy.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-21",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Behavioural Economics and Economic Policy"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT2M"
       }
     ],
     "jsonldAfterStyles": [

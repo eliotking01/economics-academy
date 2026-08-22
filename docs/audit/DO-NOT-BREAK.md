@@ -153,8 +153,35 @@ name, would remove that.
 **Never add a cross-board canonical.** Both boards are meant to rank for
 board-specific queries. `DECISIONS.md` D4.
 
-**The AQA `<h1>` spec-code prefix stays until the day-45 read.** On the identical
-pairs it is the last textual differentiator. PH05-021.
+~~**The AQA `<h1>` spec-code prefix stays until the day-45 read.** On the
+identical pairs it is the last textual differentiator. PH05-021.~~
+
+> **LIFTED 2026-08-21 by Eliot, in the notes on-page SEO pass. DECISIONS.md
+> D53.** The 79 AQA `<h1>`s are now the bare topic name, matching the 87
+> Edexcel ones, and two conventions in one folder became one.
+>
+> **The differentiator argument was re-measured before it was overridden, and
+> it had weakened.** At 5-word-shingle Jaccard over the current prose,
+> **no cross-board pair reaches 0.95 and only six reach 0.80** - down from what
+> PH05 recorded, because the AQA pages have been rewritten since. Each of those
+> six is now separated four further ways that did not exist when PH05-021 was
+> written: a board-first `<title>`, a board-first meta description, a
+> `topic-meta` sub-label reading `AQA · Microeconomics · 1.5.3`, and a twin
+> link that names the other board in a sentence.
+>
+> **The code did not leave the page.** It moved from the `<h1>` to the
+> sub-label directly beneath it, on all 166 pages, which is what made this
+> cheap. A student checking they are on the right unit still sees it.
+>
+> **What still stands from the paragraph above this one**: the `spec-alert` and
+> `notes-cta` are still load-bearing, and stripping them still doubles the
+> ≥0.80 count from 6 to 12 and creates two pairs above 0.95. Re-measured the
+> same day. Do not make them board-generic.
+>
+> `verify_seo.py` assertion 19 is what now holds the line: no two pages **on
+> the same board** may share an `<h1>`. It is scoped per board deliberately -
+> eleven topics are called the same thing on both boards and both are meant to
+> rank, which DECISIONS.md D4 settles by refusing a cross-board canonical.
 
 ## The data model
 

@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-5-8-the-dynamics-of-competition-and-competitive-market-processes.html",
   "head": {
-    "title": "AQA A-Level Economics 1.5.8 The Dynamics of Competition",
-    "description": "Free AQA A-Level Economics revision notes for unit 1.5.8. Covers the short-run and long-run benefits of competition and the process of creative destruction.",
+    "title": "The Dynamics of Competition – AQA A-Level Economics Notes",
+    "description": "The Dynamics of Competition — AQA A-Level Economics micro. Covers the short-run and long-run benefits of competition and the process of creative destruction.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-8-the-dynamics-of-competition-and-competitive-market-processes.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-5-8-the-dynamics-of-competition-and-competitive-market-processes.html",
-      "title": "AQA A-Level Economics 1.5.8 The Dynamics of Competition",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.5.8. Covers the short-run and long-run benefits of competition and the process of creative destruction.",
+      "title": "The Dynamics of Competition – AQA A-Level Economics Notes",
+      "description": "The Dynamics of Competition — AQA A-Level Economics micro. Covers the short-run and long-run benefits of competition and the process of creative destruction.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.5.8 The Dynamics of Competition",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.5.8. Covers the short-run and long-run benefits of competition and the process of creative destruction.",
+      "title": "The Dynamics of Competition – AQA A-Level Economics Notes",
+      "description": "The Dynamics of Competition — AQA A-Level Economics micro. Covers the short-run and long-run benefits of competition and the process of creative destruction.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-21",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "The Dynamics of Competition"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT2M"
       }
     ],
     "jsonldAfterStyles": [

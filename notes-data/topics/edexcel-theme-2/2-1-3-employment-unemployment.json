@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
   "head": {
-    "title": "Edexcel A-Level Economics 2.1.3 Employment and Unemployment",
-    "description": "Revision notes for Edexcel A-Level Economics 2.1.3. Covers how unemployment is measured, its types and causes, and the effect of migration on the labour market.",
+    "title": "Employment and Unemployment – Edexcel A-Level Economics",
+    "description": "Employment and Unemployment — Edexcel A-Level Economics (2.1.3): how unemployment is measured, its types and causes, and the effect of migration on the labour market.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-2/2-1-3-employment-unemployment.html",
-      "title": "Edexcel A-Level Economics 2.1.3 Employment and Unemployment",
-      "description": "Revision notes for Edexcel A-Level Economics 2.1.3. Covers how unemployment is measured, its types and causes, and the effect of migration on the labour market.",
+      "title": "Employment and Unemployment – Edexcel A-Level Economics",
+      "description": "Employment and Unemployment — Edexcel A-Level Economics (2.1.3): how unemployment is measured, its types and causes, and the effect of migration on the labour market.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 2.1.3 Employment and Unemployment",
-      "description": "Revision notes for Edexcel A-Level Economics 2.1.3. Covers how unemployment is measured, its types and causes, and the effect of migration on the labour market.",
+      "title": "Employment and Unemployment – Edexcel A-Level Economics",
+      "description": "Employment and Unemployment — Edexcel A-Level Economics (2.1.3): how unemployment is measured, its types and causes, and the effect of migration on the labour market.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-09-01",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Employment and Unemployment"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 2, unit 2.1.3"
+        },
+        "timeRequired": "PT5M"
       }
     ],
     "jsonldAfterStyles": [

@@ -14,14 +14,25 @@ being listed, so adding a board directory is an extraction and a rebuild, with
 no edit here. Each record carries its own `path`, so this file needs no
 knowledge of where a family lives.
 
-THE ONE EXCEPTION TO "EMITTED UNCHANGED", ADDED 2026-08-21
-----------------------------------------------------------
+THE EXCEPTIONS TO "EMITTED UNCHANGED", ADDED 2026-08-21
+-------------------------------------------------------
 The 166 TOPIC slices - not the hubs, not macro-application - are spliced with
 a previous/next navigation row at each end of .notes-container. See
 with_topic_nav() for why that happens here rather than in the 166 source
-files, and scripts/notes_sequence.py for where the chain comes from. The
-slices on disk are still verbatim byte slices and are still never written to;
-what changes is only what this generator wraps around them.
+files, and scripts/notes_sequence.py for where the chain comes from.
+
+Later the same day the notes SEO pass added four more, all of them from
+scripts/notes_extras.py and all for the same reason: a spec sub-label and an
+update date under the <h1>, a stable id on every <h2>, a table of contents
+where a page has four or more sections, and a related-topics block carrying
+the twin on the other board. On 2026-08-22 two more joined them from the same
+module, once Eliot had supplied the wording: an author byline under the
+sub-label and an "About the author" box above the notes-cta.
+
+The slices on disk are still verbatim byte slices and are still never written
+to; what changes is only what this generator wraps around them. Every one of
+these blocks fails the build rather than degrading if its anchor stops
+matching - notes_extras.fail().
 
 WHAT THIS DELIBERATELY DOES NOT DO
 ----------------------------------
@@ -49,10 +60,12 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import notes_extras  # noqa: E402
 import notes_sequence  # noqa: E402
 import page_shell  # noqa: E402
 
@@ -88,6 +101,27 @@ def topic_key(meta: pathlib.Path) -> tuple[str, str] | None:
     if len(rel.parts) != 2:
         return None
     return rel.parts[0], meta.stem
+
+
+def date_modified(rec: dict) -> str:
+    """The page's own dateModified, from its record.
+
+    Read from the JSON rather than from `git log` on purpose. This generator
+    has to be a pure function of notes-data/: verify_generated.py re-runs all
+    eight generators inside a throwaway worktree and diffs the result against
+    the committed tree, and a generator that shelled out to git would answer
+    differently there and fail a correct commit. The date is put into the
+    record by seo/tools/rewrite_notes_meta.py, which is where the git reading
+    happens, once.
+    """
+    for block in rec["head"].get("jsonldBeforeIcons", []):
+        if block.get("@type") == "LearningResource" and block.get("dateModified"):
+            return block["dateModified"]
+    sys.exit(f"{rec['path']}: no dateModified in its LearningResource - run "
+             f"python3 seo/tools/rewrite_notes_meta.py --apply")
+
+
+SPEC_UNIT_RE = re.compile(r"unit\s+(\d+(?:\.\d+)+)")
 
 
 def with_topic_nav(slice_html: str, key: tuple[str, str]) -> str:
@@ -163,6 +197,13 @@ def build() -> dict[str, str]:
         slice_html = meta.with_suffix(".html").read_text(encoding="utf-8")
         key = topic_key(meta)
         if key is not None:
+            notes_dir, slug = key
+            unit = SPEC_UNIT_RE.search(slice_html)
+            if not unit:
+                sys.exit(f"notes-data/topics/{notes_dir}/{slug}.html: no "
+                         f"'unit X.Y.Z' in its spec-alert")
+            slice_html = notes_extras.apply_all(
+                slice_html, notes_dir, slug, unit.group(1), date_modified(rec))
             slice_html = with_topic_nav(slice_html, key)
         pages[rec["path"]] = render(rec, slice_html)
     return pages

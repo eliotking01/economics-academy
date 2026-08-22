@@ -1,15 +1,15 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html",
   "head": {
-    "title": "AQA A-Level Economics 1.2.3 Behavioural Economic Theory",
-    "description": "Free AQA A-Level Economics revision notes for unit 1.2.3. Covers how behavioural economics challenges rationality and the biases that distort decisions.",
+    "title": "Aspects of Behavioural Economic Theory – AQA A-Level Economics",
+    "description": "Aspects of Behavioural Economic Theory — AQA A-Level Economics micro: how behavioural economics challenges rationality and the biases that distort decisions.",
     "dividerAfterDescription": "    <!-- ============================================================ -->",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-2-3-aspects-of-behavioural-economic-theory.html",
-      "title": "AQA A-Level Economics 1.2.3 Behavioural Economic Theory",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.2.3. Covers how behavioural economics challenges rationality and the biases that distort decisions.",
+      "title": "Aspects of Behavioural Economic Theory – AQA A-Level Economics",
+      "description": "Aspects of Behavioural Economic Theory — AQA A-Level Economics micro: how behavioural economics challenges rationality and the biases that distort decisions.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -22,8 +22,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.2.3 Behavioural Economic Theory",
-      "description": "Free AQA A-Level Economics revision notes for unit 1.2.3. Covers how behavioural economics challenges rationality and the biases that distort decisions.",
+      "title": "Aspects of Behavioural Economic Theory – AQA A-Level Economics",
+      "description": "Aspects of Behavioural Economic Theory — AQA A-Level Economics micro: how behavioural economics challenges rationality and the biases that distort decisions.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -53,7 +53,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-08-21",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Aspects of Behavioural Economic Theory"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [

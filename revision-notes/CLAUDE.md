@@ -38,7 +38,10 @@ Defined in `css/pages/revision-notes-textbook.css`.
 The previous/next topic row at each end of `.notes-container` is **generated
 chrome, not a component** - `scripts/build_notes_pages.py` splices it in and
 `scripts/notes_sequence.py` decides where it points. It does not count against
-the two-component limit, and it is not in `notes-data/`.
+the two-component limit, and it is not in `notes-data/`. So are the spec
+sub-label, the author byline, the contents list, the related-topics block and
+the "About the author" box - all from `scripts/notes_extras.py`, which is also
+where the byline and bio wording lives. None of it is in any slice.
 
 House rules:
 

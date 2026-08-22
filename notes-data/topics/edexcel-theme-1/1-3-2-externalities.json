@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/edexcel-theme-1/1-3-2-externalities.html",
   "head": {
-    "title": "Edexcel A-Level Economics 1.3.2 Externalities",
-    "description": "Free Edexcel A-Level Economics revision notes (1.3.2). Covers external costs and benefits, private versus social costs, welfare loss and the social optimum.",
+    "title": "Externalities – Edexcel A-Level Economics Revision Notes",
+    "description": "Externalities for Edexcel A-Level Economics (1.3.2). Covers external costs and benefits, private versus social costs, welfare loss and the social optimum.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-theme-1/1-3-2-externalities.html",
-      "title": "Edexcel A-Level Economics 1.3.2 Externalities",
-      "description": "Free Edexcel A-Level Economics revision notes (1.3.2). Covers external costs and benefits, private versus social costs, welfare loss and the social optimum.",
+      "title": "Externalities – Edexcel A-Level Economics Revision Notes",
+      "description": "Externalities for Edexcel A-Level Economics (1.3.2). Covers external costs and benefits, private versus social costs, welfare loss and the social optimum.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "Edexcel A-Level Economics 1.3.2 Externalities",
-      "description": "Free Edexcel A-Level Economics revision notes (1.3.2). Covers external costs and benefits, private versus social costs, welfare loss and the social optimum.",
+      "title": "Externalities – Edexcel A-Level Economics Revision Notes",
+      "description": "Externalities for Edexcel A-Level Economics (1.3.2). Covers external costs and benefits, private versus social costs, welfare loss and the social optimum.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-09-01",
+        "dateModified": "2026-08-13",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Externalities"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel A-Level Economics Theme 1, unit 1.3.2"
+        },
+        "timeRequired": "PT8M"
       }
     ],
     "jsonldAfterStyles": [

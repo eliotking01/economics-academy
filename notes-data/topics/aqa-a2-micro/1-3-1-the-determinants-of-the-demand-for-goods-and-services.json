@@ -1,14 +1,14 @@
 {
   "path": "revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html",
   "head": {
-    "title": "AQA A-Level Economics 1.3.1 The Determinants of Demand",
-    "description": "AQA A-Level Economics 1.3.1 revision notes. Covers the law of demand, the demand curve, the conditions of demand and marginal utility. With comparison tables.",
+    "title": "The Determinants of Demand – AQA A-Level Economics Notes",
+    "description": "The Determinants of Demand for AQA A-Level Economics micro: the law of demand, the demand curve, the conditions of demand and marginal utility, with diagrams.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html",
-      "title": "AQA A-Level Economics 1.3.1 The Determinants of Demand",
-      "description": "AQA A-Level Economics 1.3.1 revision notes. Covers the law of demand, the demand curve, the conditions of demand and marginal utility. With comparison tables.",
+      "title": "The Determinants of Demand – AQA A-Level Economics Notes",
+      "description": "The Determinants of Demand for AQA A-Level Economics micro: the law of demand, the demand curve, the conditions of demand and marginal utility, with diagrams.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -21,8 +21,8 @@
     "sdComment": false,
     "twitter": {
       "card": "summary_large_image",
-      "title": "AQA A-Level Economics 1.3.1 The Determinants of Demand",
-      "description": "AQA A-Level Economics 1.3.1 revision notes. Covers the law of demand, the demand curve, the conditions of demand and marginal utility. With comparison tables.",
+      "title": "The Determinants of Demand – AQA A-Level Economics Notes",
+      "description": "The Determinants of Demand for AQA A-Level Economics micro: the law of demand, the demand curve, the conditions of demand and marginal utility, with diagrams.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -52,7 +52,33 @@
             "name": "Economics Academy",
             "url": "https://economicsacademy.co.uk"
           }
-        }
+        },
+        "datePublished": "2025-06-26",
+        "dateModified": "2026-08-21",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "The Determinants of Demand"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "AQA A-Level Economics Microeconomics"
+        },
+        "timeRequired": "PT3M"
       }
     ],
     "jsonldAfterStyles": [

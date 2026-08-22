@@ -1256,3 +1256,236 @@
     display: none;
   }
 }
+
+/* ==========================================================================
+   Notes SEO pass, 2026-08-21 - the four blocks scripts/notes_extras.py adds
+
+   Scoped under .revision-notes-content like everything else in this sheet;
+   css/CLAUDE.md, "a bare class name in a sheet 179 pages load". Existing
+   :root tokens only, no new colours.
+   ========================================================================== */
+
+/* Spec sub-label under the <h1>. Reserves its own line height so the block
+   below it cannot shift when the web font arrives - the notes body already
+   uses metric-matched fallbacks for the same reason. */
+.revision-notes-content .topic-meta {
+  margin: 0.35em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em 1.2em;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #5a6b80;
+}
+
+.revision-notes-content .topic-meta__spec {
+  font-weight: 600;
+  color: var(--secondary-blue);
+}
+
+/* Table of contents. An <ol> because the sections are in a deliberate
+   teaching order and a student skipping to section 4 should know it is the
+   fourth thing, not one of an unordered set. */
+.revision-notes-content .topic-contents {
+  margin: 1.5em 0;
+  padding: 1em 1.4em 1.1em;
+  background: var(--light-bg);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent-teal);
+  border-radius: 4px;
+}
+
+.revision-notes-content .topic-contents__label {
+  margin: 0 0 0.5em;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+}
+
+.revision-notes-content .topic-contents__list {
+  margin: 0;
+  padding-left: 1.3em;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.revision-notes-content .topic-contents__list li {
+  margin: 0.15em 0;
+}
+
+.revision-notes-content .topic-contents__list a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-contents__list a:hover,
+.revision-notes-content .topic-contents__list a:focus {
+  border-bottom-color: var(--primary-blue);
+}
+
+/* Related topics and the twin on the other board. Sits between the last
+   section and the notes-cta. */
+.revision-notes-content .topic-related {
+  margin: 2em 0 1.5em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--border-light);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-related__label {
+  margin: 0 0 0.6em;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+}
+
+.revision-notes-content .topic-related__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.6em;
+}
+
+.revision-notes-content .topic-related__list a {
+  display: inline-block;
+  padding: 0.4em 0.85em;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  font-size: 0.92em;
+  line-height: 1.4;
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.revision-notes-content .topic-related__list a:hover,
+.revision-notes-content .topic-related__list a:focus {
+  background: var(--light-bg);
+  border-color: var(--accent-teal);
+}
+
+/* The twin link names the other board in its own sentence rather than in the
+   anchor, so the anchor text stays the topic name. */
+.revision-notes-content .topic-related__twin {
+  margin: 0.9em 0 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #5a6b80;
+}
+
+.revision-notes-content .topic-related__twin-link {
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+@media screen and (max-width: 600px) {
+  .revision-notes-content .topic-meta {
+    gap: 0.15em 1em;
+  }
+
+  .revision-notes-content .topic-contents {
+    padding: 0.9em 1.1em 1em;
+  }
+}
+
+/* Printed, an anchor list and a set of links to other pages are dead weight -
+   the same reason .topic-nav is already hidden here. The sub-label stays: a
+   printed page should still say which board and unit it is. */
+@media print {
+  .revision-notes-content .topic-contents,
+  .revision-notes-content .topic-related {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Author byline and bio, 2026-08-22 - the two blocks scripts/notes_extras.py
+   added once Eliot supplied the wording (seo/15-notes-seo-manual-todo-
+   2026-08-21.md task 4). Same scoping, same :root tokens, no new colours.
+   ========================================================================== */
+
+/* Byline: the third line of the heading group, after .topic-meta. Same
+   family, size and colour as the sub-label so the two read as one block. */
+.revision-notes-content .topic-byline {
+  margin: 0.35em 0 0;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #5a6b80;
+}
+
+.revision-notes-content .topic-byline__name {
+  font-weight: 600;
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-byline__name:hover,
+.revision-notes-content .topic-byline__name:focus {
+  border-bottom-color: var(--primary-blue);
+}
+
+/* The author box. Sits between the related topics and the notes-cta, so the
+   credentials are the last thing read before the booking buttons. Same card
+   as .topic-contents, keyed blue rather than teal because it is about the
+   author, not the page. */
+.revision-notes-content .topic-author {
+  margin: 1.5em 0;
+  padding: 1em 1.4em 1.1em;
+  background: var(--light-bg);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--secondary-blue);
+  border-radius: 4px;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-author__label {
+  margin: 0 0 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-blue);
+}
+
+.revision-notes-content .topic-author__bio {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.revision-notes-content .topic-author__name {
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+@media screen and (max-width: 600px) {
+  .revision-notes-content .topic-author {
+    padding: 0.9em 1.1em 1em;
+  }
+}
+
+/* Printed, the byline stays - a printed page should say who wrote it - and
+   the bio goes, for the same reason the related block does. */
+@media print {
+  .revision-notes-content .topic-author {
+    display: none;
+  }
+}
