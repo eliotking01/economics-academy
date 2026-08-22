@@ -19,7 +19,11 @@ number written down.
 
 `page_shell.SCRIPT_TAIL` is the single place the script tail is declared.
 `verify_page_shell.py` check 2 restates it as an independent literal, so changing
-the tail has to change two files in the same commit.
+the tail has to change two files in the same commit. The tail is `nav.js`,
+`track.js`, `main.js`: `js/components/track.js` is the GA4 conversion tracking
+(`begin_checkout`, `purchase`, `generate_lead`, `intro_call_booked`, `sign_up`,
+`cta_click`) — its header comment lists every event and its parameters, and
+it is on every page because the CTA events are delegated on `document`.
 
 ## The header and footer are baked in at build time
 

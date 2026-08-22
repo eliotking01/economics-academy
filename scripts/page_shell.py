@@ -441,9 +441,17 @@ MATHJAX_CONFIG_BODY = '''    <script>
 # or inserts a node - browser.js's only DOM call is a detached <div> inside
 # canUse(), which nothing calls - so removing them changes no rendered page.
 # 8,236 B raw, 2,141 gzipped, on every one of 463 pages.
+#
+# 2026-08-22 takes it from two to three: js/components/track.js, the GA4
+# conversion events (begin_checkout, purchase, generate_lead, cta_click and
+# the rest - the file's header lists them). Event delegation on document, so
+# it has to be on every page to see a CTA click on any of them. It goes after
+# nav.js and before main.js; nothing depends on the order, track.js has no
+# globals and no-ops without gtag.
 
 SCRIPT_TAIL = (
     "/js/components/nav.js",
+    "/js/components/track.js",
     "/js/main.js",
 )
 

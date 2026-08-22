@@ -488,6 +488,7 @@
 
     <!-- Scripts -->
     <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
     <script src="/js/main.js"></script>
 
     <!-- Form Submission Script -->
@@ -522,6 +523,12 @@
                   "Thanks for your message! Eliot will get back to you within 24 hours.";
                 formStatus.className = "form-status form-success";
                 contactForm.reset();
+                // Tell js/components/track.js (generate_lead). Only on response.ok.
+                document.dispatchEvent(
+                  new CustomEvent("ea:lead", {
+                    detail: { type: "contact_form" },
+                  }),
+                );
               } else {
                 // Error message
                 formStatus.textContent =
