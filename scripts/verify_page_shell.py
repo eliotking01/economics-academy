@@ -144,6 +144,9 @@ EXPECTED_FAMILIES = {
 # anywhere on the site and breakpoints.min.js had one, js/main.js's config
 # call, which named four widths no listener ever read back.
 #
+# 2026-08-22 took it from two to three: js/components/track.js, the GA4
+# conversion events, added after nav.js. 463 of 463 carry it.
+#
 # Restated here as a literal ON PURPOSE. It is not imported from
 # page_shell.SCRIPT_TAIL, though that is now where the generators get it: a
 # check that reads the value it is checking agrees with any value, including a
@@ -151,6 +154,7 @@ EXPECTED_FAMILIES = {
 # build_past_paper_taxonomy.py EXPECTED pattern.
 SCRIPT_TAIL = (
     "/js/components/nav.js",
+    "/js/components/track.js",
     "/js/main.js",
 )
 
@@ -167,7 +171,7 @@ REMOVED_SCRIPTS = (
 )
 
 #
-# What a page may load after the four, and how many pages may do so.
+# What a page may load after the tail, and how many pages may do so.
 #
 # EXPECTED_INTERLEAVED was ["index.html"] until Wave 4.10 and is now empty,
 # which is an improvement declared rather than absorbed. index.html put
