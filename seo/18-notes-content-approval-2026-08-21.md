@@ -1,5 +1,16 @@
 # Revision notes SEO — what needs your yes
 
+> ## ⚠️ SUPERSEDED — 2026-08-22
+>
+> **For what still needs deciding, read `OWNER-TODO.md`** — the one list of
+> everything only Eliot can do. Items 8 and 9 (the thin pages and the
+> diagrams) are there under "Content work" with the page lists; the
+> read-and-confirm items 2, 4–6 and 10–12 are one bullet there, pointing back
+> here for the detail. Items 1, 3 and 7 are done.
+>
+> This file is kept as the record of each decision and its evidence. Every
+> change it describes merged to `main` on 2026-08-22 (merge `ee24918`).
+
 21 August 2026. Everything the on-page audit found that would change what a
 student reads, and therefore could not be applied. Companion to
 `seo/17-notes-seo-audit-2026-08-21.md`.
@@ -7,8 +18,10 @@ student reads, and therefore could not be applied. Companion to
 Each item is one decision, not one per page — where 79 pages need the same
 change, that is one item. Ordered by what costs the most while it waits.
 
-**Nothing here has been done.** The branch `seo/notes-onpage-audit` contains
-only the changes that touch metadata, markup and structure.
+**Nothing here had been done when this was written.** The branch
+`seo/notes-onpage-audit` contained only the changes that touch metadata,
+markup and structure; it merged to `main` on 2026-08-22. Per-item status is in
+each heading below.
 
 ---
 

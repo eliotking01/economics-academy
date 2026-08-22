@@ -1,5 +1,16 @@
 # Search Console — things only you can do
 
+> ## ⚠️ SUPERSEDED — 2026-08-22
+>
+> **For what to do now, read `OWNER-TODO.md`** — the one list of everything
+> only Eliot can do. Every open item here (8a, 8b, the optional 7a) is there,
+> dated, under "Already scheduled".
+>
+> This file is kept as the record of what was asked and found on 21 August:
+> tasks 1–7 and their outcomes, the October expectations stated in advance,
+> and the click-by-click instructions, which `OWNER-TODO.md` points back to
+> rather than repeats.
+
 21 August 2026. Companion to `seo/11-gsc-index-audit-2026-08-21.md` (the
 analysis) and `seo/12-index-fix-actions-2026-08-21.md` (the repo work).
 

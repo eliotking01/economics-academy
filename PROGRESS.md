@@ -30,7 +30,8 @@ says how each line was checked.
 | Notes consistency & enrichment | live | 2026-08-01 | §9 |
 
 Everything Eliot still has to do himself is in OWNER-TODO.md (consolidated
-2026-08-16). The ~22 September 2026 GSC check and its baselines are recorded
+2026-08-16, re-consolidated 2026-08-22 when it absorbed the three 21 August
+audit lists). The dated Search Console reads and their baselines are recorded
 there.
 
 ## Traps every future session must know
@@ -71,14 +72,15 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Revision notes on-page SEO (2026-08-21) — branch `seo/notes-onpage-audit`
+## Revision notes on-page SEO (2026-08-21) — LIVE (merged 2026-08-22, `ee24918`)
 
 **Unnumbered, for the same reason the two sections below it are.**
 
-**STATE: committed on `seo/notes-onpage-audit`, NOT pushed, awaiting Eliot.**
-Three commits plus the reports. Full verification suite green including five
-new `verify_seo.py` assertions; `verify_generated.py` proves the committed tree
-is what the generators produce.
+**STATE: merged to `main` on 2026-08-22 (merge `ee24918`, twenty commits) and
+live.** Full verification suite green including six new `verify_seo.py`
+assertions (15–20); `verify_generated.py` proves the committed tree is what
+the generators produce. Everything that still needs Eliot is in
+`OWNER-TODO.md`, re-consolidated the same day.
 
 The 166 topic pages, their 7 hubs and the 2 diagram galleries — 176 pages,
 counted by `python3 seo/tools/notes_baseline.py`. Every one of the 166 titles
@@ -161,10 +163,13 @@ changes not one word — manual list task 19.
 abbreviated titles, WTO deliberately kept. Items 2, 4 to 6 and 10 to 12 are
 read-and-confirm rather than blocking.
 
-**Five things only Eliot can do**, appended to
-`seo/15-notes-seo-manual-todo-2026-08-21.md` as tasks 13–17: a live web-vitals
-re-run after the push, looking at a page in a browser, reading the twin map,
-deciding the AQA heading question, and noting the date when rank-checking.
+**Things only Eliot can do** were listed in
+`seo/15-notes-seo-manual-todo-2026-08-21.md` (tasks 1–21). **On 2026-08-22
+that file, `seo/13-…` and `seo/18-…` were superseded by `OWNER-TODO.md`**, the
+one list of everything open — a live web-vitals re-run, looking at a page in
+a browser, reading the twin map, the thin pages, the diagrams, the dated
+Search Console reads. The three files carry a banner and are kept as the
+record.
 
 **The author byline** was task 4 of that list and the highest-value item on
 it — every competitor that outranks this site on these queries has a named

@@ -8,7 +8,10 @@ never batched.
   merged to `main` on 2026-08-04 and is live.
 - **Current phase:** Phase 7 — post-launch fixes
 - **Current step:** all five fixes applied; manual QA is Eliot's
-- **Last updated:** 2026-08-07
+- **Last updated:** 2026-08-07. **2026-08-22:** `fix/glossary-polish` has
+  long since merged (PR #12) and the spec PDFs are off the site; the one
+  owner item still open here — checking the economics of
+  `authored-review.md` — is now in `OWNER-TODO.md` with everything else.
 
 ---
 
