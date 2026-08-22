@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| GA4 conversion tracking | live | 2026-08-22 | `bb18d6d` |
 | About + Contact + finishing pass | live | 2026-08-16 | `437dc7e` |
 | Resource unification, Phases 1–4 | live | 2026-08-15 | `d0fdcaf`, `2295213`, `1e8dfed`, `f537312` |
 | Marking page + payment journey | live | 2026-08-15 | `d4be06b` |
@@ -71,6 +72,51 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## GA4 conversion tracking (2026-08-22) — LIVE (merged 2026-08-22, `bb18d6d`)
+
+**STATE: live, and the GA4 admin side is done.** Eliot marked the key events,
+confirmed Enhanced Measurement outbound clicks, registered the custom
+dimensions and tested events arriving, all on 2026-08-22. Nothing remains open.
+
+Until this the only custom GA4 events were the flashcard player's. Nothing
+fired when a visitor did anything that makes money. `js/components/track.js`
+— hand-written, IIFE, no globals, the same `track()` no-op-without-gtag helper
+as `flashcards.js` — now fires, on every page:
+
+| Event | When | Params beyond `page_path` |
+| --- | --- | --- |
+| `begin_checkout` | click on a `buy.stripe.com` link | `currency`, `value`, `items[{item_name, item_category "marking", item_variant, price}]` from `data-package` / `data-turnaround` / `data-price` on the 8 `marking.html` buttons |
+| `purchase` | `confirmation.html` load | attributed via `sessionStorage["ea-checkout"]` written at `begin_checkout`; `transaction_id "ea-"+ts`; cold open → `value 0`, `item_name "unknown"`; a refresh sends nothing |
+| `generate_lead` | Formspree `response.ok` on `#enquiryForm` / `#contact-form` | `lead_type "tutoring_enquiry"` / `"contact_form"`; the inline scripts dispatch `CustomEvent("ea:lead")` |
+| `intro_call_booked` | Calendly `calendly.event_scheduled` postMessage, origin-checked | once per page |
+| `sign_up` | submit of the Kit form on `index.html` (it posts natively) | `method "newsletter"` |
+| `cta_click` | in-content link to `/tutoring.html`, `/marking.html`, `/contact.html` — not `#header`/`#nav`/`#navPanel`/`#titleBar`/`#footer`, and not a link to the page already open | `cta_text` (≤60), `cta_target` |
+
+Outbound Tutorful/LinkedIn clicks are Enhanced Measurement's own `click`
+event, deliberately not duplicated. No personal data is ever sent.
+
+### Three things a future session needs to know
+
+1. `track.js` is the third entry of `page_shell.SCRIPT_TAIL` (`nav.js`,
+   `track.js`, `main.js`), restated in `verify_page_shell.py`'s literal. It is
+   on all 463 pages because the CTA events are delegated on `document`. The
+   file's header comment is the authoritative list of events and params; a new
+   event goes there first.
+2. Nothing blocks or delays the visitor: capture-phase listeners, no
+   `preventDefault`, no `event_callback`. GA4 sends with `sendBeacon`, which
+   survives the Stripe navigation and the native Kit post. With JS off the
+   forms post natively and nothing fires — accepted.
+3. In GA4, `lead_type`, `cta_text` and `cta_target` are registered custom
+   dimensions from 2026-08-22; data exists only from that date. A new event
+   parameter needs registering the same way or it will not show in reports.
+
+Tested before shipping with headless Chrome over the DevTools protocol
+(`googletagmanager.com` blocked so the page's own `gtag()` fills
+`window.dataLayer`): 47 checks across `marking`, `confirmation`, `contact`,
+`tutoring`, `index` and one notes page, including the blocked-`track.js` case.
+The Calendly path was a synthetic `MessageEvent` from `https://calendly.com`;
+Formspree and Stripe were mocked.
 
 ## Revision notes on-page SEO (2026-08-21) — LIVE (merged 2026-08-22, `ee24918`)
 
