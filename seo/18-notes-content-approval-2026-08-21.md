@@ -119,9 +119,16 @@ to type. Those are item 3.
 
 ---
 
-## 3. Six titles lead with an abbreviation — spell them out?
+## 3. Six titles lead with an abbreviation — DONE, FIVE SPELLED OUT
 
-**Pages:** 6, all from the list above. **Not applied.**
+**Eliot said yes on 22 August 2026: spell out the five, leave the WTO.**
+Applied. One small deviation from the preview below, forced by the formula:
+"Elasticities of Demand" plus the code does not fit any code-bearing variant
+inside the 60-character ceiling, so its Edexcel title reads `Elasticities of
+Demand – Edexcel A-Level Economics Notes` and the code lives in the
+description and the sub-label instead — same rule every other title follows.
+
+**Pages:** 6, all from the list above. *The original proposal:*
 
 | Page | Title now | Proposed |
 | --- | --- | --- |

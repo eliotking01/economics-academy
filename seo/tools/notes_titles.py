@@ -14,18 +14,13 @@ THE DISPLAY NAME
 H1 is 104 characters - and the brief says to propose a shorter display name
 rather than truncate silently.
 
-Every one of those 36 already HAS a short display name, in its own current
-<title>: 1.6.3 reads "Competitive Wage Determination" today. DISPLAY_NAME
-records them. They are Eliot's own published wording, lifted from the field
-this module is rewriting, not names invented here - approved 2026-08-21, and
-listed page by page in seo/18-notes-content-approval-2026-08-21.md so any one
-of them can be vetoed.
-
-Six of the 36 use an abbreviation that cannot match a search - "AD and AS
-Analysis", "Determinants of SRAS", "PED, YED and XED". Spelling those out
-would be a name neither the H1 nor the current title uses, so they are a
-proposal in the approval document and NOT applied here. ABBREVIATED names
-them so the report can count them without a second list going stale.
+Every one of those 36 already HAD a short display name, in its own current
+<title>: 1.6.3 reads "Competitive Wage Determination". DISPLAY_NAME records
+them. 31 are Eliot's own published wording, lifted from the field this module
+is rewriting; the other five led with an abbreviation ("AD and AS Analysis",
+"PED, YED and XED") and carry the spelled-out names Eliot approved on
+2026-08-22 - approval document item 3. All 36 are listed page by page in
+seo/18-notes-content-approval-2026-08-21.md.
 """
 
 from __future__ import annotations
@@ -64,9 +59,9 @@ AQA_VARIANTS = [
 DISPLAY_NAME = {
     # AQA macro
     "2-1-1-the-objectives-of-government-economic-policy": "Government Policy Objectives",
-    "2-2-2-aggregate-demand-and-aggregate-supply-analysis": "AD and AS Analysis",
-    "2-2-4-aggregate-demand-and-the-level-of-economic-activity": "AD and the Multiplier",
-    "2-2-5-determinants-of-short-run-aggregate-supply": "Determinants of SRAS",
+    "2-2-2-aggregate-demand-and-aggregate-supply-analysis": "Aggregate Demand and Supply",
+    "2-2-4-aggregate-demand-and-the-level-of-economic-activity": "The Multiplier",
+    "2-2-5-determinants-of-short-run-aggregate-supply": "Short-Run Aggregate Supply",
     "2-3-4-possible-conflicts-between-macroeconomic-policy-objectives": "Macroeconomic Policy Conflicts",
     "2-4-1-the-structure-of-financial-markets-and-financial-assets": "Financial Markets and Assets",
     # AQA micro
@@ -80,7 +75,7 @@ DISPLAY_NAME = {
     "1-4-3-the-law-of-diminishing-returns-and-returns-to-scale": "Diminishing Returns and Scale",
     "1-5-10-market-structure-efficiency-resource-allocation": "Efficiency and Market Structure",
     "1-5-8-the-dynamics-of-competition-and-competitive-market-processes": "The Dynamics of Competition",
-    "1-6-1-the-demand-for-labour-marginal-productivity-theory": "The Demand for Labour and MRP",
+    "1-6-1-the-demand-for-labour-marginal-productivity-theory": "Demand for Labour",
     "1-6-2-influence-upon-the-supply-of-labour-to-different-markets": "The Supply of Labour",
     "1-6-3-wage-determination-perfectly-competitive-labour-markets": "Competitive Wage Determination",
     "1-6-4-wage-determination-imperfectly-competitive-labour-markets": "Wage Determination: Monopsony",
@@ -92,7 +87,7 @@ DISPLAY_NAME = {
     # Edexcel
     "1-1-5-specialisation-division-of-labour": "Division of Labour",
     "1-2-10-alternative-views-of-consumer-behaviour": "Consumer Behaviour",
-    "1-2-3-price-income-cross-elasticities-of-demand": "PED, YED and XED",
+    "1-2-3-price-income-cross-elasticities-of-demand": "Elasticities of Demand",
     "2-4-3-equilibrium-levels-of-real-national-output": "Equilibrium National Output",
     "2-6-4-conflicts-between-objectives-and-policies": "Conflicts Between Objectives",
     "3-3-4-normal-profits-supernormal-profits-losses": "Profits and Losses",
@@ -103,15 +98,13 @@ DISPLAY_NAME = {
     "4-5-4-macroeconomic-policies-in-a-global-context": "Global Macroeconomic Policy",
 }
 
-# The six display names above that lead with an abbreviation a student is
-# unlikely to type. Named here so the audit can count them; a spelled-out
-# replacement is proposed in the approval document, not applied.
+# WAS six names leading with an abbreviation ("AD and AS Analysis",
+# "Determinants of SRAS", "PED, YED and XED"). On 2026-08-22 Eliot approved
+# spelling five of them out - approval document item 3 - so those five rows
+# above now carry his approved names rather than the old titles' short forms.
+# The one survivor is deliberate: "Trading Blocs and the WTO" stays, because
+# WTO is what students actually type and the full name overflows the ceiling.
 ABBREVIATED = {
-    "2-2-2-aggregate-demand-and-aggregate-supply-analysis",
-    "2-2-4-aggregate-demand-and-the-level-of-economic-activity",
-    "2-2-5-determinants-of-short-run-aggregate-supply",
-    "1-6-1-the-demand-for-labour-marginal-productivity-theory",
-    "1-2-3-price-income-cross-elasticities-of-demand",
     "4-1-5-trading-blocs-and-the-world-trade-organisation",
 }
 

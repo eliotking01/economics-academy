@@ -154,7 +154,9 @@ changes not one word — manual list task 19.
 
 **Everything that changes a word a student reads** —
 `seo/18-notes-content-approval-2026-08-21.md`. Items 1, 8 and 9 are decided
-(above); items 2 to 6 and 10 to 12 are read-and-confirm rather than blocking.
+(above); item 3 closed 2026-08-22 — Eliot approved spelling out the five
+abbreviated titles, WTO deliberately kept. Items 2, 4 to 6 and 10 to 12 are
+read-and-confirm rather than blocking.
 
 **Five things only Eliot can do**, appended to
 `seo/15-notes-seo-manual-todo-2026-08-21.md` as tasks 13–17: a live web-vitals
