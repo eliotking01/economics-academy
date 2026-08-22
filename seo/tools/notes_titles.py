@@ -33,9 +33,18 @@ import re
 PREFERRED_MAX = 60
 HARD_MAX = 65
 
+# No spec code on Edexcel either, from 2026-08-22 - Eliot's decision, made on
+# the same evidence that settled AQA the day before: spec-code queries are
+# 0.1% of impressions under every filter, so the eight characters " (1.2.2)"
+# were buying confirmation, not clicks. Measured before deciding: dropping
+# them lets 23 of the 87 Edexcel titles newly fit the phrase "Revision
+# Notes", loses that phrase on none, and creates exactly one collision -
+# COLLIDING, below. The code stays visible in the meta description (brief §5
+# keeps it there) and in the on-page sub-label. DECISIONS.md D54.
+#
+# This supersedes seo/14-notes-keyword-brief.md §4's first two Edexcel
+# variants; the brief carries a dated note saying so.
 EDEXCEL_VARIANTS = [
-    "{topic} ({code}) – Edexcel A-Level Economics Revision Notes",
-    "{topic} ({code}) – Edexcel A-Level Economics Notes",
     "{topic} – Edexcel A-Level Economics Revision Notes",
     "{topic} – Edexcel A-Level Economics Notes",
     "{topic} – Edexcel A-Level Economics",
@@ -121,15 +130,17 @@ def display_name(slug: str, h1: str) -> str:
 
 # Two Edexcel pages share the display name "Balance of Payments": Theme 2's
 # 2.1.4, where it is a measure of macroeconomic performance, and Theme 4's
-# 4.1.7, where it is international economics. The brief says a same-board
-# display-name collision is to be logged rather than disambiguated by
-# reinstating the code - but verify_seo.py assertion 6 requires unique titles
-# across every page on the site and runs in CI, so two identical titles cannot
-# ship. These two therefore keep a code-bearing variant, which is unique, and
-# the collision is logged for a decision on a distinct display name.
+# 4.1.7, where it is international economics. Code-free, their titles would
+# be identical, which verify_seo.py assertion 6 refuses to ship. Until
+# 2026-08-22 both kept a code-bearing variant; with the codes gone from every
+# Edexcel title they carry a theme label instead - Eliot's choice from three
+# options, because "(Theme 2)" tells a student scanning a results page which
+# page they want, where a bare code told them only that the two differ.
+# The label is title-only: the descriptions were already distinct (they keep
+# their codes), and the JSON-LD `about` name stays the true topic name.
 COLLIDING = {
-    "2-1-4-balance-of-payments",
-    "4-1-7-balance-of-payments",
+    "2-1-4-balance-of-payments": "Theme 2",
+    "4-1-7-balance-of-payments": "Theme 4",
 }
 
 
@@ -137,15 +148,9 @@ def title_for(board: str, slug: str, h1: str, code: str) -> tuple[str, int]:
     """(title, variant number). Raises if even the last variant overflows."""
     variants = EDEXCEL_VARIANTS if board == "Edexcel" else AQA_VARIANTS
     topic = display_name(slug, h1)
-    rendered = [v.format(topic=topic, code=code) for v in variants]
-
     if slug in COLLIDING:
-        # The longest code-bearing variant inside the hard ceiling. Only the
-        # first two Edexcel variants carry the code, so this is a choice
-        # between them, not a licence to overflow.
-        for i, s in enumerate(rendered[:2], 1):
-            if len(s) <= HARD_MAX:
-                return s, i
+        topic = f"{topic} ({COLLIDING[slug]})"
+    rendered = [v.format(topic=topic, code=code) for v in variants]
 
     for i, s in enumerate(rendered, 1):
         if len(s) <= PREFERRED_MAX:

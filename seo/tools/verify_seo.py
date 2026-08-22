@@ -361,15 +361,16 @@ def main() -> int:
 
     # 15 --------------------------------------------------------------------
     # The title formula, §4. Two things are asserted and the second matters
-    # more than the first: that every title is one of the five (Edexcel) or
-    # three (AQA) shapes, and that the topic name comes FIRST in it. 166 of
-    # 166 titles used to end with the topic name, behind a board and a spec
-    # code, and the code was earning 4 impressions in 28 days.
+    # more than the first: that every title is one of the three shapes for
+    # its board, and that the topic name comes FIRST in it. 166 of 166 titles
+    # used to end with the topic name, behind a board and a spec code, and
+    # the code was earning 4 impressions in 28 days.
     #
-    # No AQA title may carry a spec code at all. The AQA codes here are
-    # site-local and deliberately not the real 7136 ones, so a code in an AQA
-    # title cannot match a search and can mislead a student comparing it
-    # against their own specification.
+    # No title on EITHER board may carry a spec code. AQA's are site-local
+    # and misleading (settled 2026-08-21); Edexcel's are real but earn
+    # nothing, and Eliot removed them on 2026-08-22 - DECISIONS.md D54. The
+    # two Balance of Payments pages carry "(Theme 2)" / "(Theme 4)" labels
+    # instead, which this regex deliberately does not match.
     SPEC_IN_TITLE = re.compile(r"\d+\.\d+(\.\d+)?")
     bad = []
     for p in topics:
@@ -386,8 +387,8 @@ def main() -> int:
             bad.append(f"{p}: title is not one of the §4 shapes: {title!r}")
         elif title.startswith(board) or title.startswith("A-Level"):
             bad.append(f"{p}: title does not lead with the topic: {title!r}")
-        if board == "AQA" and SPEC_IN_TITLE.search(title):
-            bad.append(f"{p}: AQA title carries a spec code: {title!r}")
+        if SPEC_IN_TITLE.search(title):
+            bad.append(f"{p}: title carries a spec code: {title!r}")
     lengths = sorted(len(parsed[p].title) for p in topics)
     check("15 notes titles match the §4 formula, topic name first", bad,
           f"{len(topics)} pages, {lengths[0]}-{lengths[-1]} chars")

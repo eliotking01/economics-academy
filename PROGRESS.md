@@ -139,6 +139,7 @@ document.
 | 7. Add key terms to the pages that define none | **yes; wrote three, approved a fourth** | **DONE**, commit `60da40a`. Four chips on three pages; 1.3.6 deliberately left |
 | 8. The 17 pages under 500 words | **"I can expand these"** | Eliot's; manual list task 20 |
 | 9. Diagrams on the 72 diagram-less pages | **"I'll add diagrams"** | Eliot's; manual list task 21 |
+| (new, 2026-08-22) Drop spec codes from Edexcel titles too | **"Let's do it now"** | **DONE**, D54. 42 retitled; Balance of Payments pair carries Theme labels |
 
 **Item 7 corrected a mistake in the audit's own reporting.** "Twelve pages
 define no term" counted pages carrying a `key-definition` chip, which is a

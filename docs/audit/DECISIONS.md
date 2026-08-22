@@ -1826,3 +1826,36 @@ the code and still agree with each other; `verify_page_shell.py` check 8 holds
 that.
 
 `verify_seo.py` assertion 19 now holds the line, scoped per board.
+
+### D54 — Edexcel titles drop their spec codes too
+
+Eliot, 2026-08-22, in chat, after asking for the trade-off himself: "Let's do
+it now."
+
+The day before, the AQA titles lost their codes because the codes are
+site-local and cannot match a search. Edexcel's codes are real — but real and
+unsearched: 4 impressions in 28 days, 0.1% under every filter in the brief,
+including the one that strips the site owner's own searching. The audit had
+kept them on the strength of "real codes stay"; Eliot asked whether removing
+them would help or harm, and the measured answer was: harm none, help
+slightly — 23 of the 87 Edexcel titles newly fit the phrase "Revision Notes"
+in the freed eight characters, and none lose it.
+
+**The recommendation he overrode, knowingly.** The advice was to wait for the
+late-September read of the topic-first titles before changing the formula
+again, so the two effects stay separable. He chose now, which trades that
+measurement for a term of the cleaner titles running. Recorded so the
+September numbers are read as measuring BOTH changes together.
+
+**The collision, and how it resolves.** Edexcel carries "Balance of Payments"
+twice — Theme 2's 2.1.4 as a measure of performance, Theme 4's 4.1.7 as
+international economics. Code-free their titles collide, and verify_seo.py
+assertion 6 refuses to ship that. Offered three resolutions — keep codes on
+just these two, theme labels, content-based names — Eliot chose theme labels:
+`Balance of Payments (Theme 2)` and `(Theme 4)`. The label is title-only;
+the two descriptions keep their codes and stay distinct, and the JSON-LD
+`about` name stays the true topic name.
+
+**Where the code still lives**: the meta description (brief §5, unchanged)
+and the on-page sub-label on all 166 pages. Assertion 15 now rejects a spec
+code in any notes title on either board.

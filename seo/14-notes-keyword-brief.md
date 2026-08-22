@@ -185,8 +185,18 @@ rendered string, not the template.
 
 **Edexcel topic pages** (`revision-notes/edexcel-theme-*`)
 
-1. `{Topic} ({code}) – Edexcel A-Level Economics Revision Notes`
-2. `{Topic} ({code}) – Edexcel A-Level Economics Notes`
+> **Amended 22 August 2026, by Eliot.** Variants 1 and 2 are retired: no
+> Edexcel title carries a spec code either, on the same evidence that settled
+> AQA — 0.1% of impressions under every filter. Measured before deciding:
+> dropping the codes let 23 of the 87 titles newly fit "Revision Notes" and
+> lost it on none. The code stays in the description (§5 below, unchanged)
+> and in the on-page sub-label. The one collision this created — Edexcel
+> carries "Balance of Payments" twice — is resolved with "(Theme 2)" /
+> "(Theme 4)" labels in those two titles. `verify_seo.py` assertion 15 now
+> rejects a spec code in any title, either board. DECISIONS.md D54.
+
+1. ~~`{Topic} ({code}) – Edexcel A-Level Economics Revision Notes`~~
+2. ~~`{Topic} ({code}) – Edexcel A-Level Economics Notes`~~
 3. `{Topic} – Edexcel A-Level Economics Revision Notes`
 4. `{Topic} – Edexcel A-Level Economics Notes`
 5. `{Topic} – Edexcel A-Level Economics`
