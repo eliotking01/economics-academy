@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bake the header, footer and script tail into the pages no generator owns.
+"""Bake the header, footer, script tail and analytics loader into the pages no generator owns.
 
     python3 scripts/bake_templates.py            # dry run, writes nothing
     python3 scripts/bake_templates.py --apply
@@ -18,6 +18,12 @@ went from seven scripts to four; the other 446 pages take it from
 page_shell.SCRIPT_TAIL on a rebuild, and without this these 17 would have
 gone on requesting a jQuery that is no longer in the repo. Same two pages,
 same argument, same answer. Wave 4.11 took it from four to two the same way.
+
+**2026-08-23 added the analytics block in the <head>** (page_shell.GTAG), for
+the third time the same reason: the unconditional gtag snippet became a
+consent-gated loader on the 446 generated pages, and without sync_gtag() these
+17 - index.html among them - would have gone on setting GA4 cookies before
+anyone was asked.
 
     root         9   index, tutoring, marking, about, faq, contact, privacy,
                      confirmation, 404. Permanently out of scope for the
@@ -134,6 +140,47 @@ def sync_script_tail(text: str) -> str:
     return "\n".join(lines[:first] + rebuilt + lines[last + 1:])
 
 
+# The <head> analytics block, the one region this script rewrites ABOVE the
+# header. Both the block it replaces and the block it writes begin with a
+# `<!-- Google ...` comment line and contain the single `gtag("config", ...)`
+# call followed, some lines later, by the `</script>` that closes the block:
+# the old pair (an external <script async src=gtag.js> then an inline
+# snippet) and the new loader (one inline <script>) alike. The region is
+# located by those two anchors, which is what makes the sync re-runnable -
+# an already-current page matches itself and is rewritten to itself.
+#
+# The old pair had one byte-level variant - four root pages carried it without
+# the blank line before gtag("config") - which is why this is anchored on
+# lines rather than on a literal of the old block.
+GTAG_START = re.compile(r'^[ \t]*<!-- Google (?:tag \(gtag\.js\)|Analytics) ', re.M)
+GTAG_CONFIG = re.compile(r'gtag\("config", "' + re.escape(page_shell.GA_ID) + r'"\);')
+GTAG_END = re.compile(r'[ \t]*</script>[ \t]*\n')
+
+
+def sync_gtag(text: str) -> str:
+    """Rewrite the page's <head> analytics block from page_shell.GTAG.
+
+    Anchored on exact markers, never parsed, and it touches nothing outside
+    the region - the same property sync_script_tail() has. A page with no
+    recognisable block is returned unchanged rather than given one: a missing
+    block is verify_page_shell.py check 4's job to report, not this script's
+    job to guess at.
+    """
+    head_end = text.find("</head>")
+    if head_end < 0:
+        return text
+    start = GTAG_START.search(text, 0, head_end)
+    if not start:
+        return text
+    config = GTAG_CONFIG.search(text, start.start(), head_end)
+    if not config:
+        return text
+    end = GTAG_END.search(text, config.end(), head_end)
+    if not end:
+        return text
+    return text[:start.start()] + page_shell.GTAG + "\n" + text[end.end():]
+
+
 def targets() -> list[str]:
     return [p for p in shell_check.pages()
             if shell_check.family_of(p) in UNGENERATED]
@@ -233,7 +280,7 @@ def main() -> int:
     for rel in paths:
         path = ROOT / rel
         before = path.read_text(encoding="utf-8")
-        after = sync_script_tail(page_shell.bake(before, rel))
+        after = sync_gtag(sync_script_tail(page_shell.bake(before, rel)))
         if after == before:
             already += 1
             continue

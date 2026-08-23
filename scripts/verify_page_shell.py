@@ -190,6 +190,10 @@ def expected_page_counts() -> dict[str, int]:
 # 2026-08-22 took it from two to three: js/components/track.js, the GA4
 # conversion events, added after nav.js. 463 of 463 carry it.
 #
+# 2026-08-23 took it from three to four: js/components/consent.js, the
+# analytics consent bar, after track.js and before main.js. It is the only
+# thing that turns analytics on, so it is on every page.
+#
 # Restated here as a literal ON PURPOSE. It is not imported from
 # page_shell.SCRIPT_TAIL, though that is now where the generators get it: a
 # check that reads the value it is checking agrees with any value, including a
@@ -198,6 +202,7 @@ def expected_page_counts() -> dict[str, int]:
 SCRIPT_TAIL = (
     "/js/components/nav.js",
     "/js/components/track.js",
+    "/js/components/consent.js",
     "/js/main.js",
 )
 
@@ -291,7 +296,14 @@ KNOWN_SELF_DISAGREEMENT = {
 # check. 404.html and confirmation.html are noindex utility pages and carry
 # almost none of the social furniture, correctly.
 HEAD_REQUIREMENTS = {
-    "gtag": r"googletagmanager\.com/gtag/js\?id=G-YVCNRW4QH6",
+    # WAS the external gtag.js tag until 2026-08-23. Analytics is now behind
+    # a hard consent gate: the head carries an inline loader that reads
+    # localStorage["ea-consent"] and injects gtag.js only on "yes"
+    # (page_shell.GTAG). Asserted by the read and the measurement ID
+    # together; the tripwire that no page still loads gtag.js UNCONDITIONALLY
+    # is UNGATED_GTAG below.
+    "consent-gated gtag": r"googletagmanager\.com/gtag/js\?id=G-YVCNRW4QH6"
+                          r'.{0,300}localStorage\.getItem\("ea-consent"\)',
     "lang=en-GB": r'<html[^>]+lang="en-GB"',
     "title": r"<title[^>]*>.+?</title>",
     "meta description": r'<meta[^>]+name="description"[^>]+content="[^"]+"',
@@ -349,6 +361,14 @@ HEAD_EXEMPT = {
     },
 }
 HEAD_EXEMPT["twitter:description"] = HEAD_EXEMPT["twitter:title"]
+
+# Zero tripwire, 2026-08-23. A `<script ... src="https://www.googletagmanager
+# .com/gtag/js...">` TAG in the markup is gtag.js loading before anyone has
+# been asked - the thing the consent gate exists to stop. The loader builds
+# its tag in JS, so the only way this matches is a page that kept, or
+# regained, the old unconditional snippet. Must be 0 of 463.
+UNGATED_GTAG = re.compile(
+    r'<script[^>]+src="https://www\.googletagmanager\.com/gtag/js', re.I)
 
 # ---- checks 5 and 6 ------------------------------------------------------
 # The <head> shapes among the 166 notes pages, and what tells them apart.
@@ -906,6 +926,15 @@ def main() -> int:
         else:
             r.ok(f"{name:22} {len(paths) - len(missing):4}/{len(paths)}"
                  + (f"   ({len(exempt)} declared exempt)" if exempt else ""))
+    ungated = sorted(p for p in paths if UNGATED_GTAG.search(src[p]))
+    if ungated:
+        r.bad(f"{len(ungated)} page(s) load gtag.js unconditionally, before "
+              f"consent", *ungated[:8],
+              "Rebuild (python3 scripts/build.py) - the head comes from "
+              "page_shell.GTAG and bake_templates.sync_gtag().")
+    else:
+        r.ok(f"{'ungated gtag.js tag':22} {0:4}/{len(paths)}   (analytics "
+             f"loads only after consent)")
 
     # ---------------------------------------------------------- check 5
     r.section("\n=== 5. notes-topic: the four <head> shapes ===")

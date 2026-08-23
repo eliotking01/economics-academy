@@ -157,20 +157,54 @@ def ldjson(obj, indent: int = INDENT + 2, ascii_escape: bool = False) -> str:
 # section 1 measured these as identical wherever they appear: the gtag pair on
 # 463, the favicon trio on 463, the hoist comment on 463, the preconnect pair
 # on 463.
-GTAG = '''    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6"
-    ></script>
+#
+# 2026-08-23: the gtag pair became the consent loader below. Until then every
+# page loaded gtag.js unconditionally and GA4 set its cookies on first paint.
+# Now the <head> only DEFINES the loader, window.eaLoadAnalytics(), and calls
+# it if localStorage["ea-consent"] is "yes"; js/components/consent.js asks
+# the question, stores the answer and calls the same function on "That's
+# fine". A visitor who has not answered, or answered "No thanks", never has
+# gtag.js requested and never gets a GA4 cookie. (Google Fonts still load -
+# they are not analytics and set nothing.) Nothing is gated by Google's
+# Consent Mode - the script simply is not there. The localStorage read is wrapped in
+# try/catch like every other component's: Safari private mode and a blocked
+# storage policy both throw, and the right answer then is "no analytics".
+#
+# The function body is the standard snippet, verbatim except that gtag is
+# assigned to window rather than declared, so an inline <script> and an
+# external file can share it. track.js and flashcards.js test
+# `typeof window.gtag === "function"` before every event and so carry on
+# no-oping until consent is given, exactly as they do under an ad blocker.
+#
+# bake_templates.sync_gtag() writes this same block into the 17 hand-written
+# pages; the five generators take it from render_head(). One literal, 463
+# pages.
+GA_ID = "G-YVCNRW4QH6"
+CONSENT_KEY = "ea-consent"
+GTAG = '''    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-YVCNRW4QH6");
-    </script>'''
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "{GA_ID}");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id={GA_ID}";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("{KEY}") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>'''.replace("{GA_ID}", GA_ID).replace("{KEY}", CONSENT_KEY)
 
 FAVICONS = '''    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -450,10 +484,18 @@ MATHJAX_CONFIG_BODY = '''    <script>
 # it has to be on every page to see a CTA click on any of them. It goes after
 # nav.js and before main.js; nothing depends on the order, track.js has no
 # globals and no-ops without gtag.
+#
+# 2026-08-23 takes it from three to four: js/components/consent.js, the
+# analytics consent bar. On every page because the question has to be askable
+# wherever a visitor lands, and because it is what turns analytics ON - it
+# calls window.eaLoadAnalytics() (defined in the GTAG block above) on "That's
+# fine". After track.js so that, on the page where consent is given, gtag is
+# defined before any later event fires; before main.js like the others.
 
 SCRIPT_TAIL = (
     "/js/components/nav.js",
     "/js/components/track.js",
+    "/js/components/consent.js",
     "/js/main.js",
 )
 
