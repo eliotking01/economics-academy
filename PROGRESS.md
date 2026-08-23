@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Performance pass — MathJax, fonts, hubs, images | on `feature/performance`, PR open | — | — |
 | Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
 | Maintainability — one build, derived counts, tests | live | 2026-08-23 | `95cf271` |
 | Hub redesign (notes + practice board hubs) | live | 2026-08-23 | `dedd5d1` |
@@ -76,6 +77,48 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## Performance pass — MathJax, fonts, hubs, images (2026-08-23) — ON BRANCH `feature/performance`, PR open
+
+**STATE: four commits, one per phase, plus this record; PR open for Eliot's
+review. Nothing pushed to `main`.** Every phase ran the full suite green
+before its commit and `verify_generated.py` after it. No URL moved or went
+away (new files only: `/webfonts/*.woff2`, `/images/**/*.webp`,
+`/past-paper-questions/<board>/questions.json`). No economics wording
+changed. The GSC-frozen heads are byte-identical to `main` (checked by
+script after every phase). Lighthouse before/after, byte counts and every
+pin that moved are in `seo/20-performance-pass-2026-08-23.md`.
+
+| Phase | What | Commit |
+| --- | --- | --- |
+| 1 | MathJax loaded **iff the body has maths** — `build_notes_pages.py` scans the rendered body for `\( \[ $$`; the stored `head.mathjax` field is gone from all 173 records (no page needed an override); 67 pages dropped the ~300 KB script, the 59 that keep it gained a `cdn.jsdelivr.net` preconnect; `verify_page_shell.py` check 5 asserts the iff both ways (break-tested). Docs that claimed "only if they use \( \)" corrected | `9b6b61c` |
+| 2 | **Fonts self-hosted**: 11 static latin woff2 files under `/webfonts/` (the files Google serves; Source Sans Pro byte-for-byte, Open Sans and Merriweather static instances checked glyph-by-glyph against the variable files — 0 advance-width mismatches, so the `size-adjust` fallbacks still hold), OFL texts beside them. `@font-face` in `main.css` (Source Sans Pro ×5, Open Sans ×3) and only in `revision-notes-textbook.css` + `quiz.css` for Merriweather. Every head lost the Google preconnect pair + stylesheet and gained a preload of the body face; `page_shell.stylesheet_block()` for the 446, `bake_templates.sync_fonts()` for the 17; `verify_css_load_order.py` holds the Google origins at 0/463 and the preload at 463/463. **Open Sans kept** (the breadcrumb and consent bar use it on every page — 7 rules, not 4 — and Source Sans Pro is visibly narrower); Source Sans Pro not swapped for Source Sans 3. One wanted knock-on: MathJax now scales its formulae against the real Merriweather (125.7 %) rather than the Georgia fallback (118 %) on first visits, because the font arrives before it measures | `5331fc7` |
+| 3 | **Board hubs** bake the 20 most recent cards + a static note (section and topic pages still bake every card — the no-JS list); `edexcel/` 799 → 88 KB, ~5,600 → 762 DOM nodes; `aqa/` 620 → 82 KB. **Per-board payloads** `past-paper-questions/<board>/questions.json` (221 / 193 KB vs the 414 KB master, which is byte-unchanged) for the hub and section pages; `test_question_search.js` holds `HUB_CARDS == PAGE_SIZE`, the note, the payloads and the `data-src`s. **tutoring.html**: Calendly `widget.css` out of the head, widget loaded lazily (IntersectionObserver, one screen early, immediate at `#booking`), a real fallback link in the div (Calendly only appends, so the loader removes it), the three `.enquire-button`s get `href="/contact.html"` under the modal. Two pins: `EXTRA_SCRIPT_PAGES` emptied, root tails 2 → 1 | `b6a299e` |
+| 4 | **Images**: five photos get `.webp` + `-400.webp` via `<picture>`/`srcset` (JPEG fallback at its URL; `eliot_grad` gets 400w + 900w, never its 1395 px original); 106 diagram PNGs get lossless `.webp` twins (`scripts/build_diagram_webp.py`, 32 % smaller) wrapped in `<picture>` by `build_notes_pages.py` (img bytes untouched) and once by hand-equivalent splice on the two galleries; `verify_image_dimensions.py` now checks `<source>` candidates and the PNG/WebP twins; 130 image boxes measured identical before/after. **Dead CSS, safe part**: `ul.social` block, `.footer-dark`, 27 dead `-moz-`/`-ms-` prefixes — 16 pages × 485 properties, 0 differences. **Head**: `theme-color #d52349` on 463 pages; manifest gains `id`, `start_url`, `scope`, `lang`, `description`, `theme_color` aligned | `df68d2a` |
+
+**Deliberately left alone, with the reason written down:**
+
+- **The Dopetrope `.row`/`.col-*` grid (~15.9 KB) and the `#main .row >
+  div[class*="col-"]` trap.** Five hand-written pages use ~30 rows,
+  `contact.css` carries a rival bare grid that `main.css` is currently
+  beating, and `.profile-highlight`/`.teaching-methods` restyle the same
+  classes — a page-by-page conversion with `computed_style_diff.py` on
+  each, not a deletion. Plan in OWNER-TODO; trap 7 above still stands.
+- **Open Sans** (see Phase 2) and **Source Sans 3**.
+- **The 6 section pages** still bake every card (61–126): they are where
+  the full list lives for a reader without JavaScript.
+- **Merriweather latin-ext**: one glyph on one page (the rupee sign on
+  AQA `2-1-4`) now falls back to Georgia. Not worth a 50 KB file.
+- **The maskable icon** needs artwork — OWNER-TODO.
+
+**New visible strings, for Eliot's approval (Text-Change trailers on the
+commits):** the Calendly fallback link "Book a free 15-minute intro call on
+Calendly" (tutoring.html); on the two board hubs the note "Showing the 20
+most recent of N questions. Every question is listed on its section and
+topic pages below, and the filters above search all N." and the
+`<noscript>` variant "These filters need JavaScript. The most recent
+questions are listed below, and every question is listed on its section and
+topic pages, linked further down. All the paper and mark scheme links work."
 
 ## Analytics consent — hard gate + cookie bar (2026-08-23) — LIVE (merged 2026-08-23, `83ae353`, PR #17)
 

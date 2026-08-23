@@ -1,0 +1,255 @@
+{
+  "homepage": {
+    "url": "/",
+    "runs": 3,
+    "score": 0.91,
+    "LCP": 2823.446,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 2819.9755,
+    "SI": 2964.356999984645,
+    "bytes": 351215,
+    "blocking_ms": 1818,
+    "chain_len": 3,
+    "chain_ms": 1996.3939999639988,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        806
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18719,
+        332
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/consent.js",
+        2742,
+        166
+      ]
+    ]
+  },
+  "section-hub": {
+    "url": "/revision-notes/",
+    "runs": 3,
+    "score": 0.9,
+    "LCP": 2920.5029999999997,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 2920.5029999999997,
+    "SI": 3015.0240500182736,
+    "bytes": 219489,
+    "blocking_ms": 1987,
+    "chain_len": 3,
+    "chain_ms": 1898.7759999930859,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/js/components/track.js",
+        4015,
+        166
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18566,
+        331
+      ],
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2986,
+        804
+      ]
+    ]
+  },
+  "notes-topic": {
+    "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+    "runs": 3,
+    "score": 0.7,
+    "LCP": 5049.210499999999,
+    "CLS": 0,
+    "TBT": 76,
+    "FCP": 3999.2105,
+    "SI": 5043.104849039772,
+    "bytes": 695548,
+    "blocking_ms": 1681,
+    "chain_len": 3,
+    "chain_ms": 2354.091000020504,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        821
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18541,
+        327
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/nav.js",
+        4020,
+        163
+      ]
+    ]
+  },
+  "practice-questions": {
+    "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+    "runs": 3,
+    "score": 0.86,
+    "LCP": 3293.203,
+    "CLS": 0.0011210157777866107,
+    "TBT": 0,
+    "FCP": 3293.203,
+    "SI": 3293.203,
+    "bytes": 315332,
+    "blocking_ms": 2284,
+    "chain_len": 3,
+    "chain_ms": 1888.1340000033379,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        815
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/consent.js",
+        2800,
+        163
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18554,
+        326
+      ]
+    ]
+  },
+  "past-paper-questions": {
+    "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+    "runs": 3,
+    "score": 0.89,
+    "LCP": 2841.86,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 2841.86,
+    "SI": 4351.814963984549,
+    "bytes": 235931,
+    "blocking_ms": 1870,
+    "chain_len": 3,
+    "chain_ms": 2350.0530000030994,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2984,
+        816
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/track.js",
+        4016,
+        170
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18545,
+        341
+      ]
+    ]
+  },
+  "flashcards": {
+    "url": "/flashcards/edexcel-a/theme-1/",
+    "runs": 3,
+    "score": 0.9,
+    "LCP": 2859.023,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 2859.023,
+    "SI": 2980.160840016556,
+    "bytes": 278118,
+    "blocking_ms": 1997,
+    "chain_len": 3,
+    "chain_ms": 1917.096000045538,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2974,
+        812
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/nav.js",
+        4179,
+        164
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18535,
+        327
+      ]
+    ]
+  },
+  "ppq-board-hub": {
+    "url": "/past-paper-questions/edexcel/",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 1946.1988,
+    "CLS": 0.0006597474045217044,
+    "TBT": 0,
+    "FCP": 1946.1988,
+    "SI": 1946.1988,
+    "bytes": 359645,
+    "blocking_ms": 696,
+    "chain_len": 3,
+    "chain_ms": 1981.3240000009537,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/past-paper-questions.css",
+        3430,
+        163
+      ],
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        813
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/consent.js",
+        2778,
+        163
+      ]
+    ]
+  },
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 0.56,
+    "LCP": 11404.087,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 9713.847499999998,
+    "SI": 9713.847499999998,
+    "bytes": 3463150,
+    "blocking_ms": 985,
+    "chain_len": 3,
+    "chain_ms": 1897.9760000109673,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/tutoring.css",
+        3188,
+        163
+      ],
+      [
+        "https://assets.calendly.com/assets/external/widget.css",
+        1152,
+        823
+      ],
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2974,
+        815
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        18510,
+        327
+      ]
+    ]
+  }
+}

@@ -17,6 +17,7 @@ anything. Same URLs, same run count, same flags, same Lighthouse major version.
     python3 seo/tools/run_lighthouse.py --out <dir>
     python3 seo/tools/run_lighthouse.py --out <dir> --runs 3
     python3 seo/tools/run_lighthouse.py --out <dir> --only homepage
+    python3 seo/tools/run_lighthouse.py --out <dir> --base https://127.0.0.1:8121 --insecure
 
 Writes <dir>/<label>-<n>.json raw reports and prints a markdown table of
 medians. Requires Node and Chrome; installs Lighthouse on demand via npx.
@@ -78,8 +79,15 @@ METRICS = [
 ]
 
 
-def run_one(url: str, out: Path) -> dict | None:
-    cmd = ["npx", "--yes", LH_VERSION, url, *LH_FLAGS, f"--output-path={out}"]
+def run_one(url: str, out: Path, insecure: bool = False) -> dict | None:
+    flags = list(LH_FLAGS)
+    if insecure:
+        # A local HTTPS origin with a self-signed certificate (serve_h2.js).
+        # The only change is certificate validation; every other flag is
+        # identical, so the run stays comparable.
+        flags = [f + " --ignore-certificate-errors" if f.startswith("--chrome-flags=")
+                 else f for f in flags]
+    cmd = ["npx", "--yes", LH_VERSION, url, *flags, f"--output-path={out}"]
     proc = subprocess.run(cmd, capture_output=True, text=True)
     if proc.returncode != 0 or not out.exists():
         print(f"    FAILED: {proc.stderr.strip().splitlines()[-1:] or proc.stdout[-300:]}",
@@ -121,6 +129,14 @@ def main() -> int:
     # origins, so the thing being measured survives.
     ap.add_argument("--base", default=SITE,
                     help=f"origin to measure (default {SITE})")
+    # 2026-08-23: the local A/B needs HTTP/2 to be fair to anything the change
+    # moves onto the site's own origin (Lighthouse models six connections per
+    # origin over HTTP/1.1, one multiplexed over h2, which is what Pages
+    # serves). seo/tools/serve_h2.js is that server; it needs TLS, hence a
+    # self-signed certificate, hence this flag.
+    ap.add_argument("--insecure", action="store_true",
+                    help="accept a self-signed certificate on --base "
+                         "(for seo/tools/serve_h2.js)")
     args = ap.parse_args()
     site = args.base.rstrip("/")
 
@@ -135,7 +151,7 @@ def main() -> int:
         rows = []
         for n in range(1, args.runs + 1):
             print(f"  run {n}/{args.runs}", file=sys.stderr)
-            rep = run_one(url, outdir / f"{label}-{n}.json")
+            rep = run_one(url, outdir / f"{label}-{n}.json", args.insecure)
             if rep:
                 rows.append(summarise(rep))
         if not rows:
