@@ -36,6 +36,13 @@ Standard library only, in keeping with the rest of scripts/.
 Usage:
     python3 scripts/build_sitemap.py
     python3 scripts/build_sitemap.py --check     # verify, write nothing
+
+--check ends with exactly one of two lines, matching its exit code:
+    SITEMAP OK                                   exit 0
+    SITEMAP STALE - ... run: python3 scripts/build.py --sitemap   exit 1
+
+Run it AFTER committing page changes: every <lastmod> comes from `git log`,
+so a sitemap built before the commit carries stale dates.
 """
 
 from __future__ import annotations
@@ -44,6 +51,7 @@ import argparse
 import re
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,8 +69,10 @@ SECTIONS = [
     ("flashcards", "flashcards/"),
 ]
 
-# Served, but fetched at runtime by js/components/inject-templates.js rather
-# than being pages anyone can land on.
+# Not pages. They were fetched at runtime by inject-templates.js until Wave
+# 4.10 and published until 2026-08-20; now they are read at build time only
+# and excluded by _config.yml. Kept as a belt-and-braces filter so that a
+# future un-excluding could not put them in the sitemap by accident.
 RUNTIME_PARTIALS = {"templates/header.html", "templates/footer.html"}
 
 PRIORITY = [
@@ -133,13 +143,31 @@ def lastmod(paths: list[str]) -> str:
     """
     best = ""
     for p in paths:
-        out = subprocess.run(
-            ["git", "-C", str(ROOT), "log", "-1", "--format=%cs", "--", p],
-            capture_output=True, text=True,
-        ).stdout.strip()
+        out = _git_lastmod(p)
         if out > best:
             best = out
     return best
+
+
+def _git_lastmod(path: str) -> str:
+    return subprocess.run(
+        ["git", "-C", str(ROOT), "log", "-1", "--format=%cs", "--", path],
+        capture_output=True, text=True,
+    ).stdout.strip()
+
+
+def lastmods(paths: list[str]) -> dict[str, str]:
+    """lastmod() for many paths at once, the git calls run concurrently.
+
+    One `git log -1 -- <path>` per path is the right question - it is exactly
+    what a reader of the sitemap is told - but 746 of them in series took
+    ~20 s, which made the post-commit hook that runs --check after every
+    commit (.githooks/post-commit) too slow to live with. The calls are
+    independent and read-only, so a thread pool runs them eight at a time:
+    same answers, ~3 s. Nothing about WHICH commit is chosen changes.
+    """
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        return dict(zip(paths, pool.map(_git_lastmod, paths)))
 
 
 def priority_for(url_path: str) -> str:
@@ -196,11 +224,12 @@ def collect() -> tuple[dict[str, list], list, list[str]]:
     pdfs = []
     skipped_noindex = []
 
+    wanted: list[tuple[str, str]] = []      # (kind, path), in sorted order
     for path in sorted(tracked):
         if not published(path, ex):
             continue
         if path.lower().endswith(".pdf"):
-            pdfs.append((f"{SITE}/{path}", lastmod([path]), "0.4"))
+            wanted.append(("pdf", path))
             continue
         if not path.endswith(".html") or path in RUNTIME_PARTIALS:
             continue
@@ -208,10 +237,17 @@ def collect() -> tuple[dict[str, list], list, list[str]]:
         if NOINDEX_RE.search(text):
             skipped_noindex.append(path)
             continue
-        loc = url_for(path)
-        by_section[section_of(path)].append(
-            (loc, lastmod([path]), priority_for(loc[len(SITE) + 1:]))
-        )
+        wanted.append(("page", path))
+
+    dates = lastmods([p for _, p in wanted])
+    for kind, path in wanted:
+        if kind == "pdf":
+            pdfs.append((f"{SITE}/{path}", dates[path], "0.4"))
+        else:
+            loc = url_for(path)
+            by_section[section_of(path)].append(
+                (loc, dates[path], priority_for(loc[len(SITE) + 1:]))
+            )
     return by_section, pdfs, skipped_noindex
 
 
@@ -252,8 +288,18 @@ def main() -> int:
                    if not p.exists() or p.read_text(encoding="utf-8") != body]
         for p in changed:
             print(f"  WOULD CHANGE {p.relative_to(ROOT)}")
-        print("nothing written")
-        return 1 if changed else 0
+        # The last line is the verdict, and it is unambiguous on purpose. Until
+        # 2026-08-23 this printed "nothing written" on BOTH paths and the pass
+        # signal was the exit code alone; misreading it once shipped a stale
+        # sitemap. Exit code and last line now agree: 0 / SITEMAP OK,
+        # 1 / SITEMAP STALE.
+        sys.stdout.flush()
+        if changed:
+            print(f"SITEMAP STALE - {len(changed)} file(s) would change; "
+                  f"run: python3 scripts/build.py --sitemap")
+            return 1
+        print("SITEMAP OK")
+        return 0
 
     SITEMAP_DIR.mkdir(exist_ok=True)
     for p, body in files.items():

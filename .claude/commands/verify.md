@@ -41,9 +41,9 @@ python3 -c "import sys;sys.path.insert(0,'docs/audit/scripts');import lib"
 
 Two traps when reading the output:
 
-- **`build_sitemap.py --check` prints "nothing written" whether it passes or
-  fails.** The pass signal is **exit 0 with no `WOULD CHANGE` lines**. Misreading
-  it once already shipped a stale sitemap.
+- **`build_sitemap.py --check` ends with `SITEMAP OK` (exit 0) or
+  `SITEMAP STALE` (exit 1).** Stale means: commit the page changes, then
+  `python3 scripts/build.py --sitemap`, then commit the sitemap.
 - **`verify_generated.py` checks HEAD, not the working tree.** If there are
   uncommitted changes it says so and still reports on the last commit. Commit
   first if you want it to mean anything.

@@ -1,0 +1,21 @@
+# The settings the generated HTML actually conforms to - written down so that
+# "Prettier, no config" stops being a trap. These ARE Prettier's defaults; the
+# generators have always run `npx --yes prettier@<version> --write` with no
+# config file, so the committed output of build_glossary.py, build_flashcards.py
+# and build_past_paper_questions.py conforms to exactly this. Declaring them
+# means a future Prettier whose defaults move, or a stray project-level config,
+# cannot silently reflow 100 pages.
+#
+# The version is pinned in scripts/prettier_util.py (and mirrored in
+# package.json). page_shell.py's PRINT_WIDTH = 80 is the same number as
+# printWidth below and must move with it.
+#
+# YAML rather than JSON so that this comment can exist.
+printWidth: 80
+tabWidth: 2
+useTabs: false
+endOfLine: lf
+htmlWhitespaceSensitivity: css
+bracketSameLine: false
+singleAttributePerLine: false
+embeddedLanguageFormatting: auto

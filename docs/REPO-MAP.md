@@ -112,6 +112,7 @@ inside it.
 | `docs/` | 52 | Project records, the known-errors log, reference guides and the eleven-phase audit | Yes, as reference |
 | `.github/` | 1 | Tells GitHub to run every check automatically on each push | Yes, quietly |
 | `.claude/` | 4 | Claude's settings, the generated-file hook, and the `/verify` and `/rebuild-nav` shortcuts | Yes |
+| `.githooks/` | 2 | Opt-in git hooks (`git config core.hooksPath .githooks`, once): suggested trailers in the commit template; the sitemap rebuilt and committed automatically after a commit that made it stale | Yes, once enabled |
 | `boards-data/` | 1 | One file naming the four exam boards, so they are spelled consistently everywhere — and, since it lists each board's themes in order, the file that decides the order the revision notes read in | Small but load-bearing |
 | `seo/` | 42 | The SEO audit and Search Console exports — **plus `seo/tools/verify_seo.py`, which runs on every push** | See below |
 | `_working/` | 20 | Scratch space. Holds the **full** Font Awesome font that the subsetter trims — do not delete that file | Partly |

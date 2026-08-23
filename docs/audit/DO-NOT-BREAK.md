@@ -1033,6 +1033,15 @@ block stops being byte-comparable with its template, which is check 9's whole
 basis. `build_notes_pages.py` bakes inside `render()` instead, because it
 deliberately runs no Prettier at all.
 
+> **Mechanised 2026-08-23.** `.prettierignore` lists the 17 hand-written pages
+> and the generated notes pages, generated from `bake_templates.py`'s own list
+> by `--prettierignore` so the two cannot drift, and `.prettierrc` writes down
+> the defaults the three formatting generators have always produced. Every
+> pattern in `.prettierignore` is anchored with a leading slash: an unanchored
+> `index.html` matches at any depth in gitignore syntax and made the
+> generators skip their own `flashcards/index.html` and 90 past-paper pages
+> when first tried. Measured, then fixed, before commit.
+
 **`scripts/bake_templates.py` carries `EXPECTED = 17` and refuses to run if the
 page set has moved.** Same property as `build_past_paper_taxonomy.py`'s
 `EXPECTED` dict: a new hand-written page must be declared rather than silently

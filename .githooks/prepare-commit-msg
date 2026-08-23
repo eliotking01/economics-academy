@@ -1,0 +1,32 @@
+#!/bin/sh
+# Append the Text-Change:/Markup-Change: trailers this commit would need, as
+# COMMENTED suggestions, to the commit-message template.
+#
+# Enable once with:   git config core.hooksPath .githooks
+#
+# Only when an editor is about to open ($2 empty, or "template"). With -m/-F
+# git's default --cleanup is "whitespace", which keeps # lines, so appending
+# there would put the comments INTO the message; with an editor the default is
+# "strip", which removes them. Merge, squash and amend are left alone.
+#
+# Advisory only: scripts/suggest_trailers.py always exits 0, and so does this.
+MSG_FILE="$1"
+SOURCE="$2"
+case "$SOURCE" in
+  ""|template) ;;
+  *) exit 0 ;;
+esac
+cd "$(git rev-parse --show-toplevel)" || exit 0
+command -v python3 >/dev/null 2>&1 || exit 0
+SUGGEST=$(python3 scripts/suggest_trailers.py --comment 2>/dev/null) || exit 0
+[ -z "$SUGGEST" ] && exit 0
+{
+  echo "#"
+  echo "# Trailers this commit needs (from verify_text_integrity.py --staged and"
+  echo "# verify_markup_integrity.py --staged --strict - the checks CI runs)."
+  echo "# Uncomment the ones that are DELIBERATE and put them in the final"
+  echo "# trailer block, one per line. Leave the rest: CI fails on an undeclared"
+  echo "# change, which is the accident the checks exist to catch."
+  echo "$SUGGEST"
+} >> "$MSG_FILE"
+exit 0

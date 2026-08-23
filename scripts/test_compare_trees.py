@@ -336,9 +336,10 @@ def case_list():
         dict(name="a10-sitemap-stale", only="10", expect="FAIL",
              mutate=lambda o, n, t: edit(
                  n, "sitemap.xml", "<sitemapindex", "<sitemapindex "),
-             why="build_sitemap.py --check prints 'nothing written' on BOTH "
-                 "paths. The pass signal is the exit code, and this is the "
-                 "case that proves the harness reads it"),
+             why="build_sitemap.py --check printed 'nothing written' on BOTH "
+                 "paths until 2026-08-23 (now SITEMAP OK / SITEMAP STALE). "
+                 "The pass signal is the exit code, and this is the case "
+                 "that proves the harness reads it"),
 
         # ---- the verdict must not depend on the display cap ---------------
         # Found on 2026-08-13: `--max-report 0` made six of the ten assertions

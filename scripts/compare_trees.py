@@ -745,9 +745,9 @@ def a9_idempotent(new: Tree, cfg) -> Result:
 # build tree should be a `git worktree` regardless, which is what
 # verify_generated.py already does.
 #
-# build_sitemap.py --check is the one that has bitten repeatedly: it prints
-# "nothing written" on BOTH paths, so the pass signal is the exit code, never
-# the line.
+# build_sitemap.py --check is the one that has bitten repeatedly: until
+# 2026-08-23 it printed "nothing written" on BOTH paths (now SITEMAP OK /
+# SITEMAP STALE), so the pass signal is the exit code, never the line.
 VERIFIERS = [
     ("scripts/verify_html.py", []),
     ("scripts/verify_links.py", []),

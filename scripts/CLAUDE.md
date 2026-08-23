@@ -45,9 +45,17 @@ is declared, and `verify_page_shell.py` check 2 restates it independently — so
 changing the tail must change two files in the same commit.
 
 `build_sitemap.py` takes each `<lastmod>` from `git log -1 -- <path>`, so **run
-it after committing the page edits**, and commit the sitemap separately.
-`--check` prints "nothing written" on both paths: the pass signal is exit 0 with
-no `WOULD CHANGE` lines.
+it after committing the page edits** (`python3 scripts/build.py --sitemap`),
+and commit the sitemap separately. `--check` ends with `SITEMAP OK` (exit 0)
+or `SITEMAP STALE` (exit 1). `.githooks/post-commit`, once enabled, does the
+rebuild-and-commit automatically.
+
+`verify_text_integrity.py --staged` and `verify_markup_integrity.py --staged
+--strict` compare HEAD against the index over the staged files;
+`suggest_trailers.py` runs both with `--trailers` and prints the
+`Text-Change:`/`Markup-Change:` lines the pending commit needs.
+`.githooks/prepare-commit-msg` appends them to the commit template as
+comments. CI's invocations are unchanged.
 
 ## The verifiers
 
