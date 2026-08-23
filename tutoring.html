@@ -994,7 +994,6 @@
             id="enquiryForm"
             action="https://formspree.io/f/mqadgbbw"
             method="POST"
-            novalidate
           >
             <input type="hidden" id="selectedPackage" name="package" value="" />
             <div>
@@ -1019,12 +1018,80 @@
                 autocomplete="email"
               />
             </div>
+            <!-- Board, year, who is asking and preferred days: enough for the
+                 reply to be a concrete offer rather than a round of questions.
+                 Plain inputs inside the form, so the native POST carries them
+                 with JavaScript off. The names are the labels Formspree puts
+                 in the email. -->
+            <div class="enquiry-selects">
+              <div>
+                <label for="enquiry-board">Exam board</label>
+                <select id="enquiry-board" name="exam_board" required>
+                  <option value="" disabled selected>Choose a board…</option>
+                  <option>Edexcel A</option>
+                  <option>AQA</option>
+                  <option>Edexcel B</option>
+                  <option>OCR</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div>
+                <label for="enquiry-year">School year</label>
+                <select id="enquiry-year" name="school_year" required>
+                  <option value="" disabled selected>Choose a year…</option>
+                  <option>Year 12</option>
+                  <option>Year 13</option>
+                  <option>Resitting / other</option>
+                </select>
+              </div>
+              <div>
+                <label for="enquiry-enquirer">I am…</label>
+                <select id="enquiry-enquirer" name="enquirer" required>
+                  <option value="" disabled selected>Choose one…</option>
+                  <option>A student</option>
+                  <option>A parent</option>
+                </select>
+              </div>
+            </div>
+            <fieldset class="day-chips">
+              <legend>Preferred days (optional)</legend>
+              <div class="day-chips-row">
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Mon" />
+                  <span>Mon</span>
+                </label>
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Tue" />
+                  <span>Tue</span>
+                </label>
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Wed" />
+                  <span>Wed</span>
+                </label>
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Thu" />
+                  <span>Thu</span>
+                </label>
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Fri" />
+                  <span>Fri</span>
+                </label>
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Sat" />
+                  <span>Sat</span>
+                </label>
+                <label class="day-chip">
+                  <input type="checkbox" name="preferred_days" value="Sun" />
+                  <span>Sun</span>
+                </label>
+              </div>
+            </fieldset>
             <div>
               <label for="enquiry-message" class="sr-only">Message</label>
               <textarea
                 id="enquiry-message"
                 name="message"
-                placeholder="Tell me about your tutoring needs and preferred schedule"
+                placeholder="Anything else — target grade, topics that are proving hard, how soon you'd like to start"
                 required
               ></textarea>
             </div>
@@ -1239,7 +1306,7 @@
           }
         } catch {
           formMessage.textContent =
-            "Oops! There was a problem submitting your form. Please try again or email me directly at eliotkingtuition@gmail.com";
+            "Sorry — that didn't send. Please try again, or email eliotkingtuition@gmail.com.";
           formMessage.className = "form-message form-error";
         } finally {
           submitBtn.disabled = false;
