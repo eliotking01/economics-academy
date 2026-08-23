@@ -1,0 +1,294 @@
+/* ==========================================================================
+   Topic-page tail redesign — MOCK stylesheet. The real rules go into
+   css/pages/revision-notes-textbook.css, replacing the .notes-cta,
+   .notes-questions-link, .topic-related and .topic-author blocks there.
+   Scoped under .revision-notes-content; :root tokens only; the one new hex,
+   #1f6b77, is the small-caps label teal: --accent-teal #2a8998 is 4.09:1 on
+   white and fails AA at this size, #1f6b77 is 6.1:1.
+   ========================================================================== */
+
+/* ---- shared: the small uppercase label every tail block opens with ------ */
+.revision-notes-content .topic-related__label,
+.revision-notes-content .topic-next__label,
+.revision-notes-content .topic-author__label {
+  margin: 0 0 0.55em;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1f6b77;
+}
+
+/* ---- 1. Related topics: a hairline, a label, an inline run of plain links,
+        the twin sentence. No pills. ---------------------------------------- */
+.revision-notes-content .topic-related {
+  margin: 2.5em 0 0;
+  padding-top: 1.1em;
+  border-top: 1px solid var(--border-light);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-related__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.revision-notes-content .topic-related__list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.revision-notes-content .topic-related__list > li:before {
+  content: none;
+}
+
+/* The separator is decorative and generated, so a screen reader never hears it. */
+.revision-notes-content .topic-related__list > li:not(:last-child):after {
+  content: "·";
+  margin: 0 0.6em;
+  color: #5a6b80;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.revision-notes-content .topic-related__list a,
+.revision-notes-content .topic-related__twin-link {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+  transition: border-color 0.2s ease;
+}
+
+.revision-notes-content .topic-related__list a:hover,
+.revision-notes-content .topic-related__list a:focus-visible,
+.revision-notes-content .topic-related__twin-link:hover,
+.revision-notes-content .topic-related__twin-link:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+.revision-notes-content .topic-related__twin {
+  margin: 0.5em 0 0;
+  font-size: 0.92em;
+  line-height: 1.6;
+  color: #5a6b80;
+}
+
+/* ---- 2. Carry on with this topic: the three free next steps as one unit.
+        One column on a phone, three across from 768px. Each item is a quiet
+        panel in the hub index's idiom: flat light ground, 3px left rule,
+        a bold link and one line of context. ------------------------------- */
+.revision-notes-content .topic-next {
+  margin: 1.6em 0 0;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-next__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6em;
+}
+
+.revision-notes-content .topic-next__item {
+  margin: 0;
+  padding: 0.75em 0.95em 0.8em;
+  background: var(--light-bg);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: 4px;
+}
+
+.revision-notes-content .topic-next__item:before {
+  content: none;
+}
+
+.revision-notes-content .topic-next__link {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+  transition: border-color 0.2s ease;
+}
+
+.revision-notes-content .topic-next__link:hover,
+.revision-notes-content .topic-next__link:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+.revision-notes-content .topic-next__note {
+  margin: 0.3em 0 0;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-next__note a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-next__note a:hover,
+.revision-notes-content .topic-next__note a:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* The diagram-gallery line (47 Edexcel pages) joins the unit as its last
+   line instead of floating centred on its own. */
+.revision-notes-content .topic-next .notes-diagrams-link {
+  margin: 0.7em 0 0;
+  font-size: 0.92em;
+  line-height: 1.6;
+  text-align: left;
+  color: #5a6b80;
+}
+
+.revision-notes-content .topic-next .notes-diagrams-link a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-next .notes-diagrams-link a:hover,
+.revision-notes-content .topic-next .notes-diagrams-link a:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+@media screen and (min-width: 768px) {
+  .revision-notes-content .topic-next__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75em;
+  }
+}
+
+/* ---- 3. About the author: a rule, not a box. ---------------------------- */
+.revision-notes-content .topic-author {
+  margin: 1.6em 0 0;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid var(--secondary-blue);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-author__label {
+  color: var(--secondary-blue);
+  margin-bottom: 0.35em;
+}
+
+.revision-notes-content .topic-author__bio {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.55;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-author__name {
+  font-weight: 600;
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-author__name:hover,
+.revision-notes-content .topic-author__name:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* ---- 4. The services line: one sentence, two real-text links, a brand-red
+        rule so it reads as "the paid thing" without shouting. -------------- */
+.revision-notes-content .topic-services {
+  margin: 1.4em 0 0;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid #d52349;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-services a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.35);
+}
+
+.revision-notes-content .topic-services a:hover,
+.revision-notes-content .topic-services a:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* ---- 5. The bottom prev/next row: unchanged, a touch more room above. --- */
+.revision-notes-content .topic-nav--bottom {
+  margin: 1.8em 0 0;
+}
+
+/* Small-caps captions in the prev/next rows share the label teal fix. */
+.revision-notes-content .topic-nav__caption {
+  color: #1f6b77;
+}
+
+@media screen and (max-width: 600px) {
+  .revision-notes-content .topic-next__item {
+    padding: 0.7em 0.85em 0.75em;
+  }
+}
+
+@media print {
+  .revision-notes-content .topic-next,
+  .revision-notes-content .topic-services {
+    display: none;
+  }
+}
+
+/* ---- MOCK ONLY: neutralise the rules the real change DELETES from
+        revision-notes-textbook.css (the pill anchors and the author box). -- */
+.revision-notes-content .topic-related__list a {
+  display: inline;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  font-size: 1em;
+}
+.revision-notes-content .topic-related__list a:hover,
+.revision-notes-content .topic-related__list a:focus {
+  background: none;
+  border-color: var(--primary-blue);
+}
+.revision-notes-content .topic-author {
+  background: none;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+@media screen and (max-width: 600px) {
+  .revision-notes-content .topic-author {
+    padding: 0.1em 0 0.1em 1em;
+  }
+}

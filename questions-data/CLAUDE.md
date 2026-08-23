@@ -46,9 +46,11 @@ Question pages use `css/pages/quiz.css`; the hub and indexes use
 4. Originality: shingle against both past-paper corpora (see the note above)
    before committing. 0 exact, 0 near-duplicate stems is the bar.
 5. `python3 scripts/build_questions.py --check` validates the inputs;
-   `python3 scripts/build.py` writes the page (and everything else). Then
-   `python3 scripts/append_questions_link.py <board-dir>/<spec>.json` adds the
-   "Test yourself on this topic" block to the notes slice — additive, idempotent.
+   `python3 scripts/build.py` writes the page (and everything else). The
+   "Practice questions" panel at the foot of the topic's notes page is
+   generated from this record - `notesTeaser` is its line of context and the
+   question count is `len(questions)` - so there is nothing to append; the
+   notes page needs this record to build at all (`scripts/notes_extras.py`).
 6. Suite (`/verify`), commit, then `python3 scripts/build.py --sitemap` and
    commit the sitemap. No verifier literal needs bumping: counts come from
    `boards.json`.

@@ -417,8 +417,14 @@ MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 # The content spine is the ordered list of direct children of
 # div.notes-container, with runs of identical siblings collapsed - because
 # "six sections here and four there" is content length, not structural drift.
-# 6 shapes across 166 pages, and every one of them is the same page with a
-# different set of optional trailing blocks. There are no singletons.
+# ONE shape across 166 pages since the topic-tail redesign of 2026-08-23:
+# top nav, header, spec-alert, contents, sections, related topics, the
+# next-steps unit, author, services, bottom nav. Until then it was 6 shapes,
+# every one the same page with a different set of optional trailing blocks
+# (a past-paper block on 139, a diagram-gallery line on 47, in two orders);
+# the redesign makes the tail a fixed set of generated blocks and re-homes
+# the gallery line INSIDE the next-steps unit, so the optional-ness is gone
+# from the spine. There are no singletons.
 #
 # Reseeded 2026-08-14, Wave 5.4, from 9 shapes (95, 29, 15, 11, 7, 6, 1, 1, 1).
 # The three ones were PH06-031's three malformed pages; each has been repaired
@@ -428,6 +434,7 @@ MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 # going DOWN as well as up, and an improvement is DECLARED by changing the page
 # and the number in the same commit, so the diff records what improved.
 # The NUMBER of spine shapes is the invariant and stays pinned (reseedable).
+# Reseeded 6 -> 1 on 2026-08-23 for the tail redesign, see above.
 # The per-shape COUNTS - (97, 29, 16, 11, 7, 6) until 2026-08-23 - were a
 # cardinality that moved with every added topic and had already shaped a
 # product decision (PROGRESS.md, "contents list on all 166"): DELETED, not
@@ -435,7 +442,7 @@ MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 # addition is noise that trains people to skip the output. The counts are
 # still printed. What check 6 actually protects - no notes page has a shape
 # of its own - is the singleton assertion below, which is untouched.
-EXPECTED_NOTES_SPINES = 6
+EXPECTED_NOTES_SPINES = 1
 
 # PH06-031, CLOSED 2026-08-14 by Wave 5.4, approved per page by Eliot - D18 had
 # explicitly excluded these three because the fixes sit inside prose regions.

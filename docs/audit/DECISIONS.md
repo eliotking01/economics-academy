@@ -1998,3 +1998,59 @@ sheet.
 check 4's `"consent-gated gtag"` requirement, and the `UNGATED_GTAG` zero
 tripwire. `asset_census.py 9` now reports 0 unconditional gtag snippets,
 and DO-NOT-BREAK says so.
+
+### D58 — the topic-page tail is generated from data, and the paid ask comes last
+
+**Date:** 2026-08-23. **Eliot decided** from a static mock
+(`_working/topic-tail/`, kept on the branch) with before/after screenshots
+at 1280 px and 360 px and a wording list; he approved the wording as
+proposed and chose the cleaner of the two implementations offered.
+
+**What changed.** The tail of every one of the 166 topic pages — everything
+from "Related topics" to the bottom previous/next row — is now four
+generated blocks in a fixed order: related topics (plain links, no pills,
+the twin sentence), the three free next steps as one "Carry on with this
+topic" unit (practice questions, flashcards, past-paper questions; one
+panel each), a slimmer "About the author", then one services sentence whose
+two links carry real anchor text ("online A-Level Economics tutor",
+"A-Level Economics essay marking"). Before, a three-button "Ready to apply
+these notes?" box sat ABOVE the free next steps and above the author; six
+full-width boxes in a row; every internal link to the money pages was
+button copy. On a 360 px phone the tail was ~2,100 px and is ~1,250 px.
+
+**The slices were stripped, deliberately.** Until this change the button
+box and the resource blocks were INSIDE the 166 `notes-data/` slices,
+placed there by two one-off scripts that then tried to keep them fresh by
+writing into rendered pages the next build overwrote — which is why 24 of
+139 past-paper sentences under-reported their page and 12 tagged topics had
+no line at all. Option (a) was to leave the slices alone and have the
+generator skip the legacy tail; Eliot chose (b): strip it once
+(`git log -- notes-data/topics` shows the commit — 5,567 deletions, 0
+insertions, verified block-for-block against a fixed pattern) so a slice is
+content and nothing else, and `notes_extras.with_tail()` fails the build on
+anything after the last `</section>` except the one diagram-gallery line.
+The trap this leaves is recorded in `notes-data/CLAUDE.md`:
+`rewrite_notes_meta.py` dates a page from its slice's last commit, and that
+commit is now this one for all 166 — it must not be read as a content edit,
+and Eliot's second decision was that `dateModified` is NOT refreshed for
+this change, matching the three previous chrome passes.
+
+**Every count is derived.** The quiz line is `questions-data/`'s own
+`notesTeaser` (identical to the slice copy on 166/166 before the strip);
+the past-paper line is computed from the bank's SOURCE files through
+`build_past_paper_questions.load_bank()` — not from `questions.json`, which
+a later generator writes — and `scripts/tests/test_notes_extras.py` pins
+that the two agree. A side effect Eliot accepted: 36 topics whose questions
+include Edexcel AS papers now say "A-Level and AS papers"; the old sentence
+called them all A-Level.
+
+**What is still load-bearing.** The board's past-papers hub link — the
+first button of the old box, P5's board differentiation — is on every page,
+per page, naming the board, as the last sentence of the past-paper panel
+(or the panel itself on the 15 pages with no tagged questions). `.notes-cta`
+stays in the stylesheet for the two diagram galleries and macro-application.
+`verify_page_shell.py` check 6 reseeded 6 → 1 spine shape. `verify_seo.py`
+18 and 20 unchanged and green. The small teal labels (`.topic-related__label`,
+`.topic-contents__label`, `.topic-nav__caption`) moved `#2a8998` → `#1f6b77`
+for AA (4.09:1 → 6.1:1). A comment in `notes_extras.tail_blocks()` marks
+where a newsletter form would go; nothing is built there.

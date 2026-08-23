@@ -36,7 +36,15 @@ the 166 TOPIC pages - not the hubs. The chain comes from `notes_sequence.py`,
 which derives it rather than storing it: directory order from
 `boards-data/boards.json` via `board_data.py`, topic order and every label from
 each hub's own links. `verify_notes_sequence.py` is what holds those three
-sources together.
+sources together. Everything else it wraps around a topic slice - the
+sub-label, byline, contents list and the whole tail after the last section -
+is `notes_extras.py`, which derives the tail's practice / flashcards /
+past-paper panels from `questions-data/` and the past-paper bank's SOURCE
+files (`build_past_paper_questions.load_bank()`, never the generated
+`questions.json`, which is written later in the same build). The two
+append-a-block scripts that used to write those panels into the rendered
+pages were retired on 2026-08-23; `scripts/tests/test_notes_extras.py` pins
+that the derived counts agree with the committed index.
 
 `bake_templates.py --apply` owns the baked header, footer, script tail and (since
 2026-08-23) the `<head>` analytics loader (`sync_gtag()`, from `page_shell.GTAG`)
@@ -57,8 +65,8 @@ asserts it).
 
 `scripts/tests/` is stdlib `unittest`, run first in CI:
 `python3 -m unittest discover scripts/tests`. It covers
-`build_questions.validate()`, `notes_sequence`, the `page_shell` helpers,
-`verify_liquid`'s tokeniser and `site_layout`. Add a test beside any pure
+`build_questions.validate()`, `notes_sequence`, `notes_extras`' tail, the
+`page_shell` helpers, `verify_liquid`'s tokeniser and `site_layout`. Add a test beside any pure
 function you change. `page_shell.SCRIPT_TAIL` is the one place the tail
 is declared, and `verify_page_shell.py` check 2 restates it independently — so
 changing the tail must change two files in the same commit.

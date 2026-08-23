@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 """Link the Edexcel notes pages back to the diagram gallery that features them.
 
+RETIRED 2026-08-23 - kept as a record, do not run. Its two anchors (the
+notes-questions-link and notes-cta blocks) no longer exist in any topic slice:
+the topic-tail redesign (docs/audit/DECISIONS.md D58) stripped the legacy tail
+and a slice now ends at its last </section>, followed only by this script's
+own <p class="notes-diagrams-link"> where it placed one. A new gallery link
+is written into the slice by hand, immediately before the container close;
+scripts/notes_extras.py lifts it into the "Carry on with this topic" unit.
+The text below describes the world before that.
+
+
 The two galleries earn 4,083 impressions between them on ONE inbound link each,
 and that link is the runtime-injected header - so a crawler that does not
 execute JavaScript sees none at all. Meanwhile they link OUT to 47 notes pages

@@ -20,10 +20,12 @@ WHAT IT WRITES (with --apply; the dry run prints every file and the diff)
                                         the LearningResource and BreadcrumbList
                                         nodes, today's dates
   notes-data/topics/<dir>/<slug>.html   a stub slice: breadcrumb, <h1>,
-                                        spec-alert, ONE placeholder section,
-                                        the board's notes-cta. Enough for
-                                        build_notes_pages.py and the verifiers
-                                        to accept the page; the prose is yours
+                                        spec-alert, ONE placeholder section.
+                                        Enough for build_notes_pages.py and
+                                        the verifiers to accept the page once
+                                        its questions-data record exists (the
+                                        generated tail needs it); the prose
+                                        is yours
   notes-data/hubs/<dir>.html            one <li> in the unit's topic list, in
                                         spec order, and the unit's "N topics"
                                         count bumped - so notes_sequence.py
@@ -181,12 +183,15 @@ def make_record(sib: dict, *, board, group, spec, title, slug, notes_dir,
 def make_slice(sib_html: str, *, board, spec, title, slug, notes_dir) -> str:
     """A stub slice built from the sibling's own skeleton.
 
-    Keeps, byte for byte where it can: the breadcrumb (last crumb rewritten),
-    the notes-container opening, the board's notes-cta and any theme-level
-    diagrams link. Replaces the sibling's sections with one placeholder
-    section and its spec-alert text with a TODO. Drops the per-topic
-    practice-question, flashcard and past-paper link blocks - those are added
-    once the matching data exists (see the checklist).
+    Keeps, byte for byte where it can: the breadcrumb (last crumb rewritten)
+    and the notes-container opening and close. Replaces the sibling's
+    sections with one placeholder section and its spec-alert text with a
+    TODO. Nothing after the last section is copied: since the 2026-08-23 tail
+    redesign a slice ENDS at its last </section> (plus, on the Edexcel pages
+    that carry diagrams, one diagram-gallery paragraph - add that by hand
+    when the page has a diagram), and everything below it - related topics,
+    quiz, flashcards, past-paper questions, author, services - is generated
+    by scripts/notes_extras.py from data.
     """
     short = board["names"]["short"]
     # 1. up to and including the breadcrumb, with the last crumb rewritten
@@ -202,17 +207,7 @@ def make_slice(sib_html: str, *, board, spec, title, slug, notes_dir) -> str:
     line_start = sib_html.rfind("\n", 0, cont) + 1
     pad = sib_html[line_start:cont]
     p2 = pad + "  "
-    # 3. the board-level tail: notes-cta (+ optional diagrams link) to the end
-    cta = sib_html.find('<div class="notes-cta">', cont)
-    if cta == -1:
-        raise SystemExit("sibling slice has no div.notes-cta")
-    cta_start = sib_html.rfind("\n", 0, cta) + 1
-    cta_end = sib_html.find("</div>", cta) + len("</div>")
-    cta_block = sib_html[cta_start:cta_end]
-    diagrams = ""
-    dm = re.search(r"\n[ \t]*<p class=\"notes-diagrams-link\">.*?</p>", sib_html, re.S)
-    if dm:
-        diagrams = dm.group(0)
+    # 3. the container close, exactly as the sibling ends
     close_at = sib_html.rfind("</div>")
     closing = sib_html[sib_html.rfind("\n", 0, close_at) + 1:]
     body = (
@@ -233,9 +228,6 @@ def make_slice(sib_html: str, *, board, spec, title, slug, notes_dir) -> str:
         f'{p2}  <p>TODO. Write the notes here; see revision-notes/CLAUDE.md for\n'
         f'{p2}  the component library.</p>\n'
         f'{p2}</section>\n'
-        f'\n'
-        f'{cta_block}'
-        f'{diagrams}\n'
         f'{closing}'
     )
     return head + body
@@ -416,12 +408,16 @@ def main() -> int:
     leave it unpaired on purpose (verify_seo.py assertion 13 permits only
     the pairs the table names).
  4. questions-data/{notes_dir}/{args.spec.replace('.', '-')}.json - the practice
-    questions. build_past_paper_taxonomy.py asserts questions-data has
-    exactly expectedTopics records per board, so build.py FAILS at step 2
-    until this exists. questions-data/CLAUDE.md "Adding one" has the steps;
-    then scripts/append_questions_link.py adds the "Test yourself" block.
- 5. Optional: flashcards (flashcards-data/CLAUDE.md "Adding one"), and
-    scripts/append_past_papers_link.py once past-paper questions are tagged.
+    questions. build_notes_pages.py needs it for the page's generated tail
+    (the "Practice questions" panel is derived from it) and
+    build_past_paper_taxonomy.py asserts questions-data has exactly
+    expectedTopics records per board, so build.py FAILS at step 1 until
+    this exists. questions-data/CLAUDE.md "Adding one" has the steps. The
+    "Carry on with this topic" panels - quiz, flashcards, past-paper
+    questions - then appear on the page by themselves; nothing to append.
+ 5. Optional: flashcards (flashcards-data/CLAUDE.md "Adding one"); tag
+    past-paper questions to the slug in past-paper-questions-data/tags.json
+    and the page's past-paper line updates itself on the next build.
  6. python3 scripts/build.py, then the suite (/verify). verify_page_shell.py
     and verify_notes_sequence.py derive their counts from boards.json, so
     nothing in a verifier needs editing; verify_boards.py --reseed if it
