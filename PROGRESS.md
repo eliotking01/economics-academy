@@ -79,7 +79,7 @@ there.
 
 ## Analytics consent — hard gate + cookie bar (2026-08-23) — branch `feature/analytics-consent`, AWAITING REVIEW
 
-**STATE: two commits on `feature/analytics-consent`, PR open, not merged.**
+**STATE: four commits on `feature/analytics-consent`, pushed; Eliot opens the PR (no `gh` on the Mac); not merged.**
 Eliot reviews the bar copy and the privacy wording before it ships. The
 decision (hard gate, not Google's Consent Mode) was his; the build follows
 his spec. **From the day it merges GA4 counts only visitors who said yes** —
@@ -124,10 +124,13 @@ button (control un-hidden, bar re-shown at once with focus on its first
 button, value cleared), JS off (no bar, no Google analytics request),
 `prefers-reduced-motion` (transition none), keyboard (Tab reaches both
 buttons and the link; focus ring the brand red), and 360 px (buttons on one
-row, footer link still clickable under the bar via `elementFromPoint`). The
-one miss: at 360 px Eliot's copy runs to **three** short lines at 14.7 px,
-not two — two would need a ≤ 90-character sentence or a 12 px font, and
-the font was kept legible. His call.
+row, footer link still clickable under the bar via `elementFromPoint`).
+The first copy ("We'd like to use one analytics cookie to see which pages
+students find useful. Nothing personal is collected either way.") ran to
+three lines at 360 px at a legible 14.7 px; Eliot chose a trim, and the
+shipped sentence — "Can we use one cookie to see which pages help students?
+Nothing personal is collected." — measures two lines at 360 px and one at
+1280 px (49/49 checks).
 
 ## Maintainability — one build, derived counts, tests (2026-08-23) — LIVE (merged 2026-08-23, `95cf271`)
 

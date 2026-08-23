@@ -40,9 +40,12 @@
 
   var KEY = "ea-consent";
   var SHOW_DELAY_MS = 1500;
+  // Two lines at 360px at the mobile font size (measured, 2026-08-23); the
+  // longer first draft wrapped to three. The privacy page names the
+  // provider and the purpose in full.
   var COPY =
-    "We'd like to use one analytics cookie to see which pages students " +
-    "find useful. Nothing personal is collected either way.";
+    "Can we use one cookie to see which pages help students? " +
+    "Nothing personal is collected.";
 
   var bar = null;
 

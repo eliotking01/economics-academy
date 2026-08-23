@@ -16,12 +16,14 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Do next — this week
 
-- [ ] **Review PR `feature/analytics-consent` — the cookie bar and the
-      privacy wording (15 minutes).** Read the bar copy ("We'd like to use
-      one analytics cookie…", "That's fine" / "No thanks") and the new
-      Cookies section of privacy.html in the PR; open a page in Live Server
-      at phone width and say whether three short lines of copy at 360px is
-      acceptable (two needs a shorter sentence — your call, see the PR).
+- [ ] **Open and review the PR for `feature/analytics-consent` — the cookie
+      bar (15 minutes).** The branch is pushed; open the PR at
+      github.com/eliotking01/economics-academy/pull/new/feature/analytics-consent
+      (the body is in the session notes). Bar copy, approved 2026-08-23 as a
+      two-line trim: "Can we use one cookie to see which pages help
+      students? Nothing personal is collected." / "That's fine" / "No
+      thanks". The privacy wording was approved the same day. Look at one
+      page in Live Server at phone width before merging.
       **On the day it merges, add that date to the "Done" list below and to
       the Rank-check log**: from that day GA4 counts only visitors who said
       yes, so every later Search Console / GA comparison (the September and
