@@ -1,10 +1,16 @@
 ---
-description: Run the full verification suite, exactly as CI does
+description: Run the full verification suite — every CI check, plus one local-only import check
 ---
 
 Run every check `.github/workflows/verify.yml` runs, in this order, and report a
 one-line PASS/FAIL per check. Do not stop at the first failure — run them all,
 then summarise.
+
+The last line below is NOT a CI step: it imports `docs/audit/scripts/lib.py`,
+which restates `_config.yml`'s exclude list and raises on import if the two
+have drifted. CI does not run it because `docs/audit/` is a record, not a
+dependency (see `verify_page_shell.py`'s docstring). It is kept here because
+it is cheap and catches an edit to `_config.yml` that forgot `lib.py`.
 
 ```bash
 python3 scripts/verify_html.py

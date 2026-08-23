@@ -19,6 +19,7 @@ says how each line was checked.
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
 | Hub redesign (notes + practice board hubs) | live | 2026-08-23 | `dedd5d1` |
+| Previous / next topic navigation | live | 2026-08-21 | `c0a80f6` |
 | GA4 conversion tracking | live | 2026-08-22 | `bb18d6d` |
 | About + Contact + finishing pass | live | 2026-08-16 | `437dc7e` |
 | Resource unification, Phases 1–4 | live | 2026-08-15 | `d0fdcaf`, `2295213`, `1e8dfed`, `f537312` |
@@ -322,9 +323,15 @@ assertion 5 governs `<head>` field equality and 166 pages × six fields is ~996
 entries — for a script `verify.yml` states outright is not a step. Eliot chose
 the written record over the ritual; `docs/audit/DECISIONS.md` D51 carries it.
 
-## Previous / next topic navigation (2026-08-21) — branch `feature/topic-prev-next-nav`
+## Previous / next topic navigation (2026-08-21) — LIVE (merged 2026-08-21, `c0a80f6`)
 
 **Unnumbered, for the same reason the section below it is.**
+
+**STATE: live.** Merged to `main` on 2026-08-21 (merge `c0a80f6`, branch
+`feature/topic-prev-next-nav`) and pushed; the topic-nav markup is on every
+one of the 166 topic pages and `verify_notes_sequence.py` runs in CI. This
+heading read as an open branch until 2026-08-23, two days after the merge —
+the same staleness CLAUDE.md records for three earlier features.
 
 A previous/next row at each end of the notes body on all **166 topic pages**,
 so a student who finishes one set of notes moves straight to the next instead

@@ -31,13 +31,15 @@ Every script in `docs/audit/scripts/` breaks immediately if they drift.
   `js/components/question-search.js`. Must stay.
 - **`flashcards/`** — `flashcards/data/*.json` is fetched at runtime by
   `js/components/flashcards.js`. Must stay.
-- **`templates/`** — **no longer fetched.** Wave 2 Phase 7 bakes the header and
-  footer in at build time and Wave 4.10 deleted the script that fetched them.
-  Verified 2026-08-20: zero inbound links, in no sitemap, and in none of the
-  eight Search Console exports in `seo/gsc-exports/` — so Google does not have
-  either URL and unpublishing would cost nothing. Left published anyway, because
-  removing two live URLs is not something to do by habit. To close it out, add
-  `- templates/` to `exclude:`.
+- ~~**`templates/`** — no longer fetched, left published anyway.~~
+  **Closed out 2026-08-20, commit `1038b68`: `templates/` and `LICENSE.txt`
+  are now in `exclude:`.** Wave 2 Phase 7 bakes the header and footer in at
+  build time and Wave 4.10 deleted the script that fetched them; zero inbound
+  links, in no sitemap, and in none of the Search Console exports, so the
+  three URLs went without measurable loss. `templates/` stays in the repo —
+  it is the source ten scripts read at build time and `verify_page_shell.py`
+  check 9 compares every baked copy against it byte for byte. `exclude`
+  affects only what Jekyll serves, never the filesystem.
 
 ## Directories beginning with `_` are excluded by Jekyll's own rule
 
