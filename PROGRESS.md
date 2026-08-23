@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Tutoring enquiry form — board, year, enquirer, days | on branch `feature/enquiry-form`, PR open | — | — |
 | Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
 | Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
 | Maintainability — one build, derived counts, tests | live | 2026-08-23 | `95cf271` |
@@ -77,6 +78,48 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## Tutoring enquiry form — board, year, enquirer, days (2026-08-23) — ON BRANCH, awaiting wording sign-off
+
+**STATE: PR open on `feature/enquiry-form`; not merged.** Eliot reviews every
+new visible string (listed in the PR) before it goes anywhere near
+`main`. Update this heading to LIVE with the merge commit when it lands.
+
+The modal on `tutoring.html` collected name, email and message, so a reply
+had to open with questions. It now also asks, between email and message:
+exam board (`exam_board`, required, with "Not sure yet" as a real choice),
+school year (`school_year`, required), who is asking (`enquirer`, required)
+and preferred days (`preferred_days`, optional, Mon–Sun as checkbox chips
+that post as repeated values Formspree lists). The field names are what
+Formspree prints in the email, so they were chosen to read as labels. The
+message placeholder now asks for target grade, hard topics and start date,
+and the error copy lost "Oops!".
+
+Three things a future session needs to know:
+
+1. **`novalidate` is gone from `#enquiryForm`.** It had been there since
+   May with no custom validation behind it, so every `required` on the form
+   was decorative and an empty form could be posted. The browser now blocks
+   a submit with no board, year or enquirer — with JavaScript on (the submit
+   event does not fire) and off (the native POST does not leave the page).
+   Do not put it back without writing the validation it implies.
+2. **The dialog now stacks above the cookie bar and the mobile nav bar**
+   (`.modal` is `z-index: 10003` in `css/pages/tutoring.css`; `#consent` is
+   10000, `#titleBar` 10001). At 1000 the cookie bar covered the submit
+   button at 360px until the visitor had answered it. The bar is untouched
+   and reappears the moment the dialog closes.
+3. **`ea:lead` still carries only `{type: "tutoring_enquiry"}`.** None of
+   the new field values reach GA4; `js/components/track.js` is unchanged.
+
+Tested in headless Chrome with Formspree mocked (no real submission, no
+email): JS on and off, the honeypot filled (the `_gotcha` value survives
+the POST, so Formspree can drop it), a board-less submit (blocked, no
+request), keyboard to the chips (Tab, Space, visible focus ring), and a
+360×640 walkthrough: every input and select renders at 16px, nothing is
+clipped, the chips wrap to two lines, the overlay scrolls and the submit
+button reaches the viewport. Screenshots are in
+`05-website/enquiry-form-2026-08-23/` (outside the repo). No new page, so
+no sitemap change: `build_sitemap.py --check` says SITEMAP OK.
 
 ## Performance pass — MathJax, fonts, hubs, images (2026-08-23) — LIVE (merged 2026-08-23, `367297b`, PR #19)
 

@@ -153,7 +153,11 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  /* Above the cookie bar (#consent, 10000) and the mobile nav bar (#titleBar,
+     10001): at 1000 the bar sat on top of the open dialog and covered its
+     submit button on a phone until the visitor had answered it. A dialog is
+     topmost while it is open; the bar is back the moment it closes. */
+  z-index: 10003;
   left: 0;
   top: 0;
   width: 100%;
@@ -192,6 +196,7 @@
   color: #000;
 }
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
@@ -204,6 +209,102 @@
 .contact-form textarea {
   min-height: 120px;
   resize: vertical;
+}
+/* main.css strips the native arrow from every select (appearance: none), so
+   draw one: without it the three selects look like empty text boxes. The
+   placeholder option is disabled, so a select showing it is still unanswered
+   and takes the placeholder colour. */
+.contact-form select {
+  padding-right: 2.5em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23252122' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  color: #252122;
+  cursor: pointer;
+}
+.contact-form select:invalid {
+  color: #555;
+}
+.contact-form select option {
+  color: #252122;
+}
+/* Visible labels for the new fields. main.css's form label (display block,
+   0.5em below) does most of it; this tightens the gap under the modal h2. */
+.contact-form .enquiry-selects label {
+  font-size: 0.9em;
+  margin-bottom: 0.25em;
+}
+/* Three selects side by side where there is room, one per line on a phone
+   (the mobile rule is in the 767px block below). */
+.enquiry-selects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 12px;
+}
+/* Preferred-days chips: real checkboxes, visually hidden but still focusable,
+   with the <span> drawn as the chip. Unchecked: dark text on white (13:1).
+   Checked: white on the brand accent (5:1) - the same pairing as the submit
+   button. The fieldset/legend reset in main.css zeroes their margins. */
+.day-chips {
+  border: 0;
+  padding: 0;
+  margin: 0 0 15px;
+  min-width: 0;
+}
+.day-chips legend {
+  display: block;
+  color: #252122;
+  font-weight: 400;
+  font-size: 0.9em;
+  margin: 0 0 0.4em;
+  padding: 0;
+}
+.day-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.day-chip {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+.contact-form .day-chip input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.day-chip span {
+  display: inline-block;
+  min-width: 3.2em;
+  padding: 0.35em 0.8em;
+  border: 1px solid #767676;
+  border-radius: 999px;
+  background: #fff;
+  color: #252122;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+  user-select: none;
+}
+.day-chip:hover span {
+  border-color: #252122;
+}
+.day-chip input:checked + span {
+  background: #d52349;
+  border-color: #d52349;
+  color: #fff;
+  font-weight: 600;
+}
+.day-chip input:focus-visible + span {
+  outline: 2px solid #252122;
+  outline-offset: 2px;
 }
 .form-submit-button {
   background-color: #d52349;
@@ -247,10 +348,21 @@
     padding: 1.5rem;
     margin: 1.5rem 0;
   }
+  /* The modal is taller now (was 20% auto); starting it nearer the top means
+     less scrolling to reach the message box and the submit button on a phone.
+     The .modal overlay scrolls (overflow: auto), so nothing is clipped. */
   .modal-content {
-    margin: 20% auto;
+    margin: 1.5em auto;
     width: 95%;
     padding: 15px;
+  }
+  .enquiry-selects {
+    grid-template-columns: 1fr;
+  }
+  /* Seven chips in one row do not fit 360px; let them wrap to two lines. */
+  .day-chip span {
+    min-width: 2.9em;
+    padding: 0.3em 0.6em;
   }
   .popular-badge {
     right: 10px;
