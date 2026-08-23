@@ -107,6 +107,27 @@ FontAwesome and the font stylesheet into every `<head>`, in that order, to remov
 a render-blocking chain. Putting them back reverses a measured CWV improvement
 (`seo/09-web-vitals-baseline.md`, `seo/lh-live-after-7run.json`).
 
+> **Amended 2026-08-23, performance pass Phase 2: the font stylesheet is
+> gone, not moved back.** The fonts are self-hosted under `/webfonts/` — the
+> static latin woff2 files Google itself serves, with the OFL texts beside
+> them — and declared as `@font-face` in `css/main.css` (Source Sans Pro)
+> and in the two sheets that set text in Merriweather. Every `<head>` lost
+> the `fonts.googleapis.com` / `fonts.gstatic.com` preconnect pair and the
+> Google Fonts `<link>`, and gained a preload of the body face
+> (`page_shell.BODY_FONT`). `4db232c`'s point stands: nothing is `@import`ed
+> from `main.css`, and FontAwesome stays a direct `<link>` before it.
+> `verify_css_load_order.py` now holds the Google origins at 0/463 and the
+> preload at 463/463. Source Sans Pro stays Source Sans Pro — not Source
+> Sans 3, which is a visual change needing approval.
+>
+> **Open Sans is gone, on Eliot's instruction the same day.** Its seven rules
+> (breadcrumb, consent bar, hub index count and code, three CTA straps) are
+> Source Sans Pro at the same weights, which added the 600 cut. The
+> breadcrumb is pinned at `font-weight: 400` because it used to inherit 300
+> from `body` and Open Sans had no 300, so it rendered at 400; Source Sans
+> Pro has 300, and without the pin it would have come out lighter. Two text
+> families, nine files; do not add a third.
+
 **`sitemap.xml` is a `<sitemapindex>`, not a `<urlset>`.** Seven children under
 `sitemaps/`, 744 URLs. Per-section indexation reporting in GSC comes from the
 index structure. Do not flatten it. `lastmod` is taken from git, not build date —
@@ -465,6 +486,12 @@ way. PH08-041.
 >   Both uses are now `em`: `60ch → 28.73em` and `72ch → 34.48em`, from Source
 >   Sans Pro's own ch/em ratio of 0.4789, so the rendered measure is unchanged.
 >   `grep -rn '[0-9]ch\b' css/` must stay empty outside `css/vendor/katex/`.
+>
+> **2026-08-23: the fonts are self-hosted and both `size-adjust` ratios still
+> hold** — the Source Sans Pro files are the bytes Google served, and the
+> Merriweather static instances were checked glyph by glyph against the
+> variable files modern browsers were getting: 0 advance-width mismatches,
+> same x-height. Re-measure only if a font FILE changes.
 
 **`past-paper-questions/questions.json` stays published at its current path.**
 Already recorded above as fetched at runtime. P8 proposes *adding* per-topic
@@ -866,6 +893,11 @@ Everything that varies per page is passed in as a value.
 >   cited** — in three configurations it could not distinguish *no preconnect*
 >   from *preconnect*, so it cannot speak to where one sits. The script says so
 >   itself and is kept for what it records about driving Chrome.
+>
+>   **Retired 2026-08-23.** Both lineages are gone: the fonts are self-hosted,
+>   there is no pair to place, and `preconnectEarly` /
+>   `earlyPreconnectComment` no longer exist as values. The paragraph stays
+>   as the record of why nobody aligned them.
 > - **Two explanatory comments.** The `4db232c` note is universal, 463/463.
 >   `build_questions.py` writes a second one above its early preconnect on 173
 >   pages. Both are correct; rewording either is a change nobody asked for.

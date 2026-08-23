@@ -243,12 +243,15 @@ body.is-preload *:after {
    live in /webfonts/ as the static latin-subset woff2 files Google itself
    serves (Source Sans Pro v23, Open Sans v44), so the glyphs are unchanged;
    the licence texts sit beside them. Source Sans Pro stays Source Sans Pro -
-   not Source Sans 3, which is a visual change. The five Source Sans Pro cuts
-   are the five the site always loaded: body text is 300, <strong> is 400,
-   headings 700 and 900, and the one italic is 300, which is what every <em>
-   in body text already resolved to. Open Sans 400 is the breadcrumb and the
-   consent bar on every page, 600 and 700 the hub index and the CTA straps.
-   Merriweather is declared in the two sheets that use it
+   not Source Sans 3, which is a visual change. Five of the six Source Sans
+   Pro cuts are the five the site always loaded: body text is 300, <strong>
+   is 400, headings 700 and 900, and the one italic is 300, which is what
+   every <em> in body text already resolved to. The sixth, 600, arrived when
+   Open Sans was retired (Eliot's call, 2026-08-23): the breadcrumb, the
+   consent bar, the hub index counts and codes and the three CTA straps had
+   been the only things set in Open Sans, and now use Source Sans Pro at the
+   same weights - 400, 600 and 700. Merriweather is declared in the two
+   sheets that use it
    (revision-notes-textbook.css, quiz.css) so it downloads only there.
    The body face is preloaded from every <head>; the rest arrive as the
    cascade asks for them. font-display: swap matches the old display=swap. */
@@ -280,6 +283,14 @@ body.is-preload *:after {
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/webfonts/source-sans-pro-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url("/webfonts/source-sans-pro-700.woff2") format("woff2");
@@ -291,30 +302,6 @@ body.is-preload *:after {
   font-weight: 900;
   font-display: swap;
   src: url("/webfonts/source-sans-pro-900.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/webfonts/open-sans-400.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("/webfonts/open-sans-600.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/webfonts/open-sans-700.woff2") format("woff2");
 }
 
 /* Metric-matched fallback fonts.
@@ -3398,7 +3385,12 @@ ul.divided li:first-child {
    content-link rules (e.g. .revision-notes-content a) without any page
    stylesheet having to restate it. */
 nav.breadcrumb {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  /* 400 on purpose: this was Open Sans with no weight of its own, inherited
+     300 from body, and Open Sans had no 300 cut so it rendered at 400. Source
+     Sans Pro does have 300, so the swap (2026-08-23) pins the weight it
+     always showed. */
+  font-weight: 400;
   font-size: 0.9em;
   margin: 0 0 2em 0;
   padding: 0;
@@ -3899,7 +3891,7 @@ nav.breadcrumb .separator {
 .resource-services p {
   margin: 0 0 1em;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
 }
 
 .resource-services .button {
@@ -4006,7 +3998,7 @@ nav.breadcrumb .separator {
 }
 
 .resource-index-count {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.82em;
   font-weight: 600;
   color: #357a38;
@@ -4061,7 +4053,7 @@ nav.breadcrumb .separator {
 .resource-index-code {
   flex: 0 0 auto;
   min-width: 3.4em;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.82em;
   font-weight: 700;
   color: #357a38;
@@ -4141,7 +4133,7 @@ nav.breadcrumb .separator {
   color: #252122;
   border-top: solid 1px #ccc;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
   font-size: 0.95em;
   font-weight: 400;
   line-height: 1.5;

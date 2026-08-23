@@ -218,7 +218,7 @@ FAVICONS = '''    <link rel="icon" href="/favicon.ico" sizes="any" />
 # this block also carried a preconnect pair (fonts.googleapis.com,
 # fonts.gstatic.com) and a render-blocking Google Fonts stylesheet asking for
 # three families in eleven cuts, on all 463 pages. The faces are now
-# @font-face rules in css/main.css (Source Sans Pro, Open Sans) and in the two
+# @font-face rules in css/main.css (Source Sans Pro) and in the two
 # sheets that use Merriweather, pointing at /webfonts/; the head preloads the
 # one face body text is set in so it is requested alongside main.css rather
 # than after main.css has parsed. Both Google origins are gone from every

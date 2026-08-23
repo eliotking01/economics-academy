@@ -16,7 +16,7 @@ branch head).
 | Pages with a `cdn.jsdelivr.net` preconnect | 0 | 59 |
 | External `<head>` origins on every page | `fonts.googleapis.com`, `fonts.gstatic.com` (463/463) | **none** (463/463); + `cdn.jsdelivr.net` on the 59 MathJax pages, + Calendly's two on tutoring.html |
 | Render-blocking Google Fonts stylesheet | 1 per page (~38 KB raw, ~3 KB gz) | 0 |
-| Font files | 3 families, 11 cuts, from Google | the same 11 faces, self-hosted, 263 KB total; a page still fetches only the cuts it renders (typically 5–6 files, ~75 KB; the Open Sans 400 cut is 13.6 KB static against the 43 KB variable file Google served) |
+| Font files | 3 families, 11 cuts, from Google | 2 families, 9 cuts (Source Sans Pro ×6, Merriweather ×3), self-hosted, 238 KB total; a page still fetches only the cuts it renders (typically 5–6 files, ~75 KB). Open Sans went in the follow-up commit |
 | `past-paper-questions/edexcel/index.html` | 799,267 B, ~5,600 DOM nodes (304 cards) | **87,857 B, 762 nodes** (20 cards + note) |
 | `past-paper-questions/aqa/index.html` | 619,740 B (248 cards) | **82,478 B** (20 cards + note) |
 | JSON fetched by a board hub / section page | `questions.json` 423,625 B | `<board>/questions.json` 226,154 B (Edexcel), 197,861 B (AQA) |
@@ -111,11 +111,10 @@ same way in Phases 2 and 4.
 
 ## 4. Deliberately left alone
 
-- **Open Sans** is still loaded — self-hosted, three static cuts. The
-  review counted four rules; there are seven, and two of them
-  (`nav.breadcrumb`, `#consent`) are on every page. Source Sans Pro is
-  visibly narrower at those sizes, so the swap is a visual change for
-  Eliot to approve, not a silent substitution.
+- ~~Open Sans~~ — kept at first (seven rules, not four; two on every
+  page), then swapped for Source Sans Pro at the same weights on Eliot's
+  instruction the same day. Two families, nine font files. The breadcrumb
+  had to be pinned at 400 (see DO-NOT-BREAK).
 - **Source Sans Pro stays Source Sans Pro**, not Source Sans 3.
 - **The Dopetrope `.row`/`.col-*` grid and `#main .row > div[class*="col-"]`**
   — audit done (five pages, ~30 rows; `contact.css` has a rival bare grid

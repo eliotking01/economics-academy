@@ -956,7 +956,7 @@
 .revision-notes-content .notes-cta p {
   margin: 0 0 1em;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
 }
 
 .revision-notes-content .notes-cta .button {

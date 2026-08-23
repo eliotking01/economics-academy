@@ -35,10 +35,13 @@ galleries, which share `revision-notes-diagrams.css`.
 
 **The web fonts are self-hosted under `/webfonts/`** (since 2026-08-23): the
 static latin woff2 files Google Fonts itself serves, byte-for-byte for Source
-Sans Pro, metric-identical instances for Open Sans and Merriweather, licences
-alongside. Source Sans Pro (5 cuts) and Open Sans (3) are `@font-face` in
-`main.css`; Merriweather (3) only in `revision-notes-textbook.css` and
-`quiz.css`, so it downloads only where a stack names it. The two `… Fallback`
+Sans Pro, metric-identical instances for Merriweather, licences alongside.
+Source Sans Pro (6 cuts: 300, 300 italic, 400, 600, 700, 900) is `@font-face`
+in `main.css`; Merriweather (3) only in `revision-notes-textbook.css` and
+`quiz.css`, so it downloads only where a stack names it. **Open Sans is gone**
+(Eliot's call, 2026-08-23): the breadcrumb, consent bar, hub index counts and
+codes and the CTA straps now use Source Sans Pro at the same weights — do not
+reintroduce a third family. The two `… Fallback`
 `size-adjust` faces in `main.css` still match — same files, same metrics. No
 page may link `fonts.googleapis.com` or `fonts.gstatic.com`
 (`verify_css_load_order.py` holds it at 0/463) and every head preloads the
