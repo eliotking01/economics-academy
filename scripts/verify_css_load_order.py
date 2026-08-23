@@ -62,7 +62,7 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 # sitemap agree on what Jekyll actually builds. Without it the _working/
 # flashcard QA harnesses are checked, and they are not pages.
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import build_sitemap  # noqa: E402
+import site_layout  # noqa: E402  - the publish rules
 
 LINK = re.compile(r"<link\b[^>]*>", re.I)
 HREF = re.compile(r'href="([^"]+)"', re.I)
@@ -123,11 +123,11 @@ def main() -> int:
     problems: list[str] = []
     checked = 0
     two_sheet: set[str] = set()
-    ex = build_sitemap.excludes()
+    ex = site_layout.excludes()
 
     for path in tracked("*.html"):
         rel = path.relative_to(REPO).as_posix()
-        if not build_sitemap.published(rel, ex):
+        if not site_layout.published(rel, ex):
             continue
         sheets = stylesheets(path.read_text(encoding="utf-8", errors="ignore"))
         page_idx = [i for i, s in enumerate(sheets) if PAGE_DIR in s]

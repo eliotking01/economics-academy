@@ -1,0 +1,54 @@
+# The comparison harness's own test suite, moved out of verify.yml on
+# 2026-08-23 (Eliot's decision).
+#
+# test_compare_trees.py runs 39 cases that break each of compare_trees.py's
+# ten assertions on purpose - twelve expecting a PASS to pin what each is
+# deliberately blind to. DO-NOT-BREAK: "the suite is what makes it evidence".
+# It had silently rotted to 31 of 32 once, so it must keep running - but it
+# takes ~2m30s and tests a tool CI deliberately does not run, so it no longer
+# runs on every push. It runs:
+#
+#   - weekly (Monday 06:00 UTC), which catches the slow rot the suite exists
+#     to catch;
+#   - on demand, from the Actions tab;
+#   - on any push that touches the harness or its suite, which are the only
+#     commits that can break it directly. build_sitemap.py is listed because
+#     the harness imports its publish rules via site_layout.
+#
+# Verification only, like verify.yml: it NEVER builds and NEVER deploys.
+
+name: compare-trees-suite
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/compare_trees.py"
+      - "scripts/test_compare_trees.py"
+      - "scripts/intentional-changes.json"
+      - "scripts/site_layout.py"
+      - "scripts/build_sitemap.py"
+      - ".github/workflows/compare-trees-suite.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  suite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Seven of the fourteen verifiers the harness runs enumerate through
+          # git, and assertion 10 needs a real git tree.
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: The comparison harness still detects what it claims to
+        run: python3 scripts/test_compare_trees.py

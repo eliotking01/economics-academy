@@ -48,7 +48,7 @@ from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import build_sitemap  # noqa: E402  - for its _config.yml exclude parser
+import site_layout  # noqa: E402  - the publish rules
 
 # The seven pages KaTeX writes into, and how many offsets it emits on each.
 # Named paths with counts rather than a total, in the spirit of
@@ -125,10 +125,10 @@ class Census(HTMLParser):
 
 
 def published_pages() -> list[str]:
-    ex = build_sitemap.excludes()
+    ex = site_layout.excludes()
     out = subprocess.run(["git", "ls-files", "*.html"], cwd=ROOT,
                          capture_output=True, text=True, check=True).stdout.split()
-    return sorted(f for f in out if build_sitemap.published(f, ex))
+    return sorted(f for f in out if site_layout.published(f, ex))
 
 
 def main() -> int:

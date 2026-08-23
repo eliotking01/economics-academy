@@ -33,6 +33,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 # Wave 2 Phase 6. page_shell.py owns the <head> for every family now.
 import page_shell as shell  # noqa: E402
+import prettier_util  # noqa: E402
 DATA = ROOT / "past-paper-questions-data"
 PAGE_DIR = ROOT / "past-paper-questions"
 OUT = PAGE_DIR / "questions.json"
@@ -533,6 +534,11 @@ def visible_href(path):
 
 
 def breadcrumb_html(crumbs):
+    """The crumbs joined inline, for the <nav> page_shell() writes. This
+    family's trail is laid out differently from the flashcards/glossary one
+    (page_shell.breadcrumb_html): the separator sits on its own line between
+    crumbs at a fixed indent, and the href is run through visible_href() and
+    e() - kept as it was, byte for byte."""
     sep = '\n            <span class="separator">&rsaquo;</span>\n            '
     parts = []
     for name, path in crumbs:
@@ -544,19 +550,7 @@ def breadcrumb_html(crumbs):
 
 
 def breadcrumb_ld(crumbs):
-    items = []
-    for i, (name, path) in enumerate(crumbs, start=1):
-        item = {"@type": "ListItem", "position": i, "name": name}
-        if path:
-            item["item"] = SITE + path
-        items.append(item)
-    return (
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": items,
-        }
-    )
+    return shell.breadcrumb_ld(crumbs)
 
 
 def page_shell(title, desc, path, crumbs, body):
@@ -567,6 +561,10 @@ def page_shell(title, desc, path, crumbs, body):
     acceptedAnswer or suggestedAnswer, and this bank does not host answers by
     design - it links to Pearson's mark schemes. Declaring Question without an
     answer earns no rich result and misrepresents the page.
+
+    2026-08-23: the skeleton and the og/twitter block come from page_shell.py;
+    e() stays this family's own (it must match question-search.js's
+    escapeHtml), which is why it is passed in.
     """
     url = SITE + path
     collection = {
@@ -583,60 +581,29 @@ def page_shell(title, desc, path, crumbs, body):
         },
         "publisher": shell.ORGANISATION_REF,
     }
-    head = shell.render_head({
-        "title": e(title),
-        "description": e(desc),
-        "canonical": url,
+    values = shell.head_values(title, desc, url,
+                               ["/css/pages/past-paper-questions.css"], esc=e)
+    values.update({
         "preconnectEarly": True,
-        "og": {
-            "type": "website", "siteName": "Economics Academy",
-            "locale": "en_GB", "url": url,
-            "title": e(title), "description": e(desc),
-            "image": f"{SITE}/og-image.png?v=1",
-            "image:width": "1200", "image:height": "1200",
-            "image:type": "image/png", "image:alt": "Economics Academy logo",
-        },
-        "twitter": {
-            "card": "summary_large_image", "title": e(title),
-            "description": e(desc), "image": f"{SITE}/og-image.png?v=1",
-        },
         "jsonldBeforeIcons": [collection, breadcrumb_ld(crumbs)],
         # This family escapes non-ASCII in its JSON-LD where the notes pages
         # carry literal characters - 87 pages emit \u2014 for an em dash. Both
         # are valid and parse identically; the flag records which, so the swap
         # rewrites nothing.
         "jsonldAsciiEscaped": True,
-        "pageStylesheets": ["/css/pages/past-paper-questions.css"],
     })
-    return f"""<!doctype html>
-<html lang="en-GB">
-  <head>
-{head}
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <div id="header-placeholder"></div>
-
-      <main id="main" class="past-paper-questions-page">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            {breadcrumb_html(crumbs)}
-          </nav>
-
-{body}
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <div id="footer-placeholder"></div>
-    </div>
-
-    <!-- Scripts -->
-{shell.script_tail(("/js/components/question-search.js",))}
-  </body>
-</html>
-"""
+    inner = (
+        f'          <nav class="breadcrumb" aria-label="Breadcrumb">\n'
+        f"            {breadcrumb_html(crumbs)}\n"
+        f"          </nav>\n"
+        f"\n"
+        f"{body}"
+    )
+    return shell.page(
+        shell.render_head(values),
+        shell.container(inner, "past-paper-questions-page"),
+        ("/js/components/question-search.js",),
+    )
 
 
 CTA = """          <section class="ppq-cta">
@@ -1166,32 +1133,6 @@ def update_sitemap(index, paths):
     return False
 
 
-def prettify(paths):
-    """Run the repo's Prettier over generated HTML.
-
-    Prettier is not installed here; the repo convention is `npx prettier@3.9.6`.
-    The generator calls it so that generating and formatting are one step and
-    re-running the generator is idempotent. Without this, every run would undo
-    the formatting and the file would churn in `git diff` forever.
-
-    If npx is unavailable or offline, the page is still valid HTML - it is just
-    formatted differently from the rest of the repo, and the caller is told.
-    """
-    import subprocess
-
-    try:
-        subprocess.run(
-            ["npx", "--yes", "prettier@3.9.6", "--write", "--log-level", "warn"]
-            + [str(p) for p in paths],
-            check=True,
-            cwd=ROOT,
-            capture_output=True,
-        )
-        return True
-    except (OSError, subprocess.CalledProcessError):
-        return False
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -1318,10 +1259,11 @@ def main():
     if removed:
         print(f"removed {removed} stale page(s)")
 
-    if prettify(written):
-        print(f"formatted {len(written)} pages")
-    else:
-        print("WARNING: prettier unavailable, formatting differs from the repo")
+    # scripts/prettier_util.py: one call site, one pinned version, and it
+    # STOPS the build if npx is missing rather than writing unformatted pages
+    # and warning. Generating and formatting are one step so that re-running
+    # is idempotent.
+    print(f"formatted {prettier_util.format_files(written)} pages")
 
     # Wave 2 Phase 7. After Prettier, never before - see shell.bake_files().
     print(f"baked the header and footer into "

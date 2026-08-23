@@ -1,0 +1,52 @@
+#!/bin/sh
+# Keep the sitemap current: after every commit, check it, and if it is stale
+# rebuild it and commit the result as its own follow-up commit.
+#
+# Enable once with:   git config core.hooksPath .githooks
+#
+# WHY. build_sitemap.py takes every <lastmod> from `git log -1 -- <path>`, so
+# it can only be right AFTER the page commit, and the ritual "commit, rebuild
+# the sitemap, commit again" has been forgotten more than once - the CI step
+# "Sitemap is current" exists because of it. This does the second half
+# automatically.
+#
+# GUARDS
+#   - EA_SITEMAP_HOOK is set on the commit this hook makes, so the hook that
+#     fires for THAT commit exits at once. (Even without it, the second run
+#     would find the sitemap current and do nothing - belt and braces.)
+#   - Skipped when HEAD is detached (a `git worktree` such as the one
+#     verify_generated.py makes; a bisect) or a rebase/cherry-pick/merge is in
+#     progress, where an automatic extra commit would be wrong.
+#   - Commits ONLY sitemap.xml and sitemaps/ (`git commit --only`), so anything
+#     else you have staged is untouched.
+#   - Never fails the commit it follows: a post-commit hook cannot, and this
+#     one exits 0 on every path.
+[ -n "$EA_SITEMAP_HOOK" ] && exit 0
+cd "$(git rev-parse --show-toplevel)" || exit 0
+git symbolic-ref -q HEAD >/dev/null 2>&1 || exit 0          # detached HEAD
+GIT_DIR=$(git rev-parse --git-dir)
+for f in rebase-merge rebase-apply CHERRY_PICK_HEAD MERGE_HEAD REVERT_HEAD BISECT_LOG; do
+  [ -e "$GIT_DIR/$f" ] && exit 0
+done
+command -v python3 >/dev/null 2>&1 || exit 0
+
+if python3 scripts/build_sitemap.py --check >/dev/null 2>&1; then
+  exit 0                                                    # SITEMAP OK
+fi
+
+echo "post-commit: SITEMAP STALE - rebuilding (python3 scripts/build.py --sitemap)"
+if ! python3 scripts/build_sitemap.py >/dev/null 2>&1; then
+  echo "post-commit: build_sitemap.py FAILED; run it by hand: python3 scripts/build.py --sitemap"
+  exit 0
+fi
+SUBJECT=$(git log -1 --format=%s)
+SHORT=$(git log -1 --format=%h)
+EA_SITEMAP_HOOK=1 git commit --quiet --only sitemap.xml sitemaps \
+  -m "Refresh the sitemap lastmod after ${SHORT}" \
+  -m "Automatic follow-up by .githooks/post-commit: build_sitemap.py --check
+reported SITEMAP STALE after \"${SUBJECT}\", so the sitemap was rebuilt
+(lastmod comes from git, which is why it cannot be part of that commit)
+and committed on its own." \
+  && echo "post-commit: sitemap refreshed and committed ($(git log -1 --format=%h))" \
+  || echo "post-commit: sitemap rebuilt but the follow-up commit failed; commit sitemap.xml and sitemaps/ by hand"
+exit 0

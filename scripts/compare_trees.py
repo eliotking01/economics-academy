@@ -128,6 +128,7 @@ if not (REPO / "scripts" / "build_sitemap.py").exists():  # pragma: no cover
 # workflow step cannot drift apart on what counts as a word.
 sys.path.insert(0, str(REPO / "scripts"))
 import build_sitemap  # noqa: E402
+import prettier_util  # noqa: E402
 import verify_text_integrity  # noqa: E402
 
 SITE = "https://economicsacademy.co.uk"
@@ -744,9 +745,9 @@ def a9_idempotent(new: Tree, cfg) -> Result:
 # build tree should be a `git worktree` regardless, which is what
 # verify_generated.py already does.
 #
-# build_sitemap.py --check is the one that has bitten repeatedly: it prints
-# "nothing written" on BOTH paths, so the pass signal is the exit code, never
-# the line.
+# build_sitemap.py --check is the one that has bitten repeatedly: until
+# 2026-08-23 it printed "nothing written" on BOTH paths (now SITEMAP OK /
+# SITEMAP STALE), so the pass signal is the exit code, never the line.
 VERIFIERS = [
     ("scripts/verify_html.py", []),
     ("scripts/verify_links.py", []),
@@ -813,7 +814,7 @@ _PRETTIER_CACHE: dict[pathlib.Path, str] = {}
 
 
 def prettier(path: pathlib.Path) -> str:
-    """Prettier 3.9.6's rendering of one file, for --prettier only.
+    """The pinned Prettier's rendering of one file, for --prettier only.
 
     PH06 section 3 asks for this so that assertion 8 or 9 cannot fail on
     formatting where a generator runs Prettier over its own output. It is off
@@ -822,11 +823,15 @@ def prettier(path: pathlib.Path) -> str:
     are put through it, so the cost is paid per difference, not per file.
     """
     if path not in _PRETTIER_CACHE:
-        proc = subprocess.run(
-            ["npx", "prettier@3.9.6", "--parser", "html", str(path)],
-            capture_output=True, text=True,
-        )
-        _PRETTIER_CACHE[path] = proc.stdout if proc.returncode == 0 else f"ERR{path}"
+        # The version is prettier_util's, the one place it is declared.
+        # Kept soft here (ERR<path> rather than an exit) because this is an
+        # optional column of a comparison tool, not a generator.
+        try:
+            _PRETTIER_CACHE[path] = prettier_util.format_text(
+                path.read_text(encoding="utf-8"), parser="html",
+                tmp=path.parent / f".{path.name}.prettier.tmp")
+        except SystemExit:
+            _PRETTIER_CACHE[path] = f"ERR{path}"
     return _PRETTIER_CACHE[path]
 
 
@@ -880,7 +885,7 @@ def main(argv=None) -> int:
                     help="orphan pages permitted in NEW (default 2, today's "
                          "value: 461 of 463 are reachable without JavaScript)")
     ap.add_argument("--prettier", action="store_true",
-                    help="re-compare differing HTML through Prettier 3.9.6. "
+                    help="re-compare differing HTML through the pinned Prettier. "
                          "Needs the network. Nothing in CI uses it.")
     ap.add_argument("--no-verifiers", action="store_true",
                     help="skip assertion 10, which runs NEW's own suite")

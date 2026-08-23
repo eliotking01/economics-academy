@@ -18,6 +18,12 @@ too.
 
 Usage:
     python3 scripts/verify_markup_integrity.py <before-ref> [<after-ref>] [--strict]
+    python3 scripts/verify_markup_integrity.py --staged [--strict] [--trailers]
+
+--staged compares HEAD against the index (the next commit), over the staged
+files only. With --trailers it prints nothing but the `Markup-Change: <path>`
+lines that commit would need and exits 0 - what scripts/suggest_trailers.py
+and .githooks/prepare-commit-msg read. CI behaviour is unchanged.
 """
 
 import collections
@@ -40,12 +46,24 @@ def body_of(source):
     return source.split('<div class="notes-container">', 1)[-1]
 
 
+# ":" is the index: `git show :path` reads the staged copy. See --staged.
+STAGED = ":"
+
+
 def read_at(ref, path):
     if ref is None:
         return pathlib.Path(path).read_text(encoding="utf-8")
-    r = subprocess.run(["git", "show", f"{ref}:{path}"],
+    r = subprocess.run(["git", "show", f":{path}" if ref == STAGED else f"{ref}:{path}"],
                        capture_output=True, text=True)
     return r.stdout if r.returncode == 0 else None
+
+
+def staged_files():
+    out = subprocess.run(
+        ["git", "diff", "--cached", "--name-only", "--diff-filter=AMRC"],
+        capture_output=True, text=True, check=True,
+    ).stdout.split("\n")
+    return [f for f in out if f]
 
 
 def list_files(ref):
@@ -99,7 +117,7 @@ def resolve(source, templates):
 # makes a strictly stronger statement about the same bytes: the exact tuple
 # page_shell.SCRIPT_TAIL, in that order, as the FIRST scripts on 463 of 463
 # pages, with each family's own extra script counted to the page in
-# EXPECTED_EXTRA_SCRIPTS. "No <script> count went down" is the weaker claim of
+# FAMILY_SCRIPT. "No <script> count went down" is the weaker claim of
 # the two. What this check exists for is an <a> or a key-definition span
 # vanishing out of the prose, and it still sees every one of those.
 SCRIPT_SRC = re.compile(r'[ \t]*<script src="[^"]*"( defer)?></script>\n?')
@@ -165,10 +183,15 @@ def declared(before, after):
 def main(argv):
     args = [a for a in argv[1:] if not a.startswith("--")]
     strict = "--strict" in argv
-    if not args:
+    staged = "--staged" in argv
+    trailers_only = "--trailers" in argv
+    if staged:
+        before, after = "HEAD", STAGED
+    elif args:
+        before, after = args[0], (args[1] if len(args) > 1 else None)
+    else:
         print(__doc__)
         return 2
-    before, after = args[0], (args[1] if len(args) > 1 else None)
 
     problems = 0
     gains = 0
@@ -176,7 +199,18 @@ def main(argv):
     allowed_hit, undeclared_paths = set(), set()
     old_templates = {p: read_at(before, p) for _, p in PLACEHOLDERS}
     new_templates = {p: read_at(after, p) for _, p in PLACEHOLDERS}
-    for path in list_files(before):
+    files = list_files(before)
+    if staged:
+        touched = set(staged_files())
+        if not any(p in touched for _, p in PLACEHOLDERS):
+            files = [f for f in files if f in touched]
+    out = sys.stdout
+    if trailers_only:
+        # Everything below prints per-tag detail; under --trailers only the
+        # trailer lines may reach stdout.
+        import io
+        sys.stdout = io.StringIO()
+    for path in files:
         old, new = read_at(before, path), read_at(after, path)
         if new is None:
             continue
@@ -215,7 +249,14 @@ def main(argv):
                     undeclared_paths.add(path)
                 print(f"{note}  {path}: lost {ref!r}")
 
-    print(f"\ncompared {before} -> {after or 'working tree'}: "
+    if trailers_only:
+        sys.stdout = out
+        for path in sorted(undeclared_paths):
+            print(f"Markup-Change: {path}")
+        return 0
+
+    print(f"\ncompared {before} -> "
+          f"{'the index (staged)' if after == STAGED else (after or 'working tree')}: "
           f"{problems} losses, {gains} additions (additions are not problems)")
     if allowed:
         print(f"  declared by a Markup-Change: trailer: {len(allowed)}")

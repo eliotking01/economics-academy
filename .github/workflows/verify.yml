@@ -54,6 +54,14 @@ jobs:
         with:
           node-version: '20'
 
+      # Unit tests for the pure logic most likely to be edited and least
+      # likely to be noticed when wrong: build_questions.validate()'s
+      # authoring rules, notes_sequence's derived chain, the shared page-shell
+      # helpers the four generators call, verify_liquid's tokeniser, and the
+      # import direction (a generator never imports a verifier). Stdlib
+      # unittest, ~0.3 s. Added 2026-08-23.
+      - name: Unit tests
+        run: python3 -m unittest discover scripts/tests
       - name: HTML well-formedness
         run: python3 scripts/verify_html.py
       - name: Internal links and fragments
@@ -104,11 +112,13 @@ jobs:
       # Wave 2 Phase 1. 463 pages carry the same ~2.5 KB of <head>, wrapper and
       # script tail and nothing compared them, which is how 18 pages came to
       # disagree with themselves on a field they write twice and 28 came to
-      # load the identical MathJax asset with different markup. This writes
-      # today's shape down as literals - the build_past_paper_taxonomy.py
-      # EXPECTED pattern - so drift has to change a number in the same commit.
-      # A count going DOWN fails too: an improvement is welcome and must be
-      # declared. PH06 section 3 Phase 1.
+      # load the identical MathJax asset with different markup. This pins the
+      # SHAPE invariants as literals - the build_past_paper_taxonomy.py
+      # EXPECTED pattern - so drift has to change them in the same commit (a
+      # count going DOWN fails too: an improvement must be declared), and
+      # since 2026-08-23 DERIVES the cardinalities (page counts, breadcrumbs,
+      # extra scripts) from boards.json and the tree, so adding a topic bumps
+      # nothing here. `--reseed` rewrites the pinned tables. PH06 section 3.
       - name: Page shell has not drifted
         run: python3 scripts/verify_page_shell.py
       # Wave 3.1. boards-data/boards.json is a transcription of the four
@@ -203,24 +213,11 @@ jobs:
       - name: Committed generated output is current
         run: python3 scripts/verify_generated.py
 
-      # The harness's own suite: 39 cases that break each of compare_trees.py's
-      # ten assertions on purpose, twelve of which expect a PASS to pin what
-      # each assertion is deliberately blind to. ~2m30s, which is why it is in
-      # this job rather than the fast one.
-      #
-      # DO-NOT-BREAK: the suite "is what makes it evidence". It had silently
-      # rotted to 31 of 32 - a7-link-lost replaced the page's only
-      # /tutoring.html link when it was written, and Phase 7's baked nav gave
-      # every page a second one two waves later, so the case had proved nothing
-      # since. Nothing noticed until it was run deliberately. THAT is the
-      # failure this step exists to catch.
-      #
-      # compare_trees.py ITSELF is deliberately not a step. Assertion 8 asserts
-      # that everything outside --family is byte-identical, so with no --family
-      # it fails on any commit that changes any file - measured, including a
-      # docs-only one. A check that is always red protects nothing.
-      - name: The comparison harness still detects what it claims to
-        run: python3 scripts/test_compare_trees.py
+      # test_compare_trees.py used to run here on every push (~2m30s). Since
+      # 2026-08-23 it runs in .github/workflows/compare-trees-suite.yml: weekly,
+      # on demand, and whenever compare_trees.py or its suite changes - the
+      # only events that can rot it. It still runs; it no longer taxes a
+      # docs-only commit.
 
 # DELIBERATELY ABSENT:
 #
@@ -229,7 +226,8 @@ jobs:
 #     step. It compares two TREES; assertion 8 is red on every commit without
 #     a --family declaration, and assertions 1, 3, 5, 6 and 7 have no
 #     declaration mechanism for a deliberate change the way Text-Change: and
-#     Markup-Change: do for 2 and 4. Its test suite runs instead, above.
+#     Markup-Change: do for 2 and 4. Its test suite runs in
+#     compare-trees-suite.yml (weekly + on change), not here.
 #
 #   scripts/convert_raw_notes.py
 #     DELETED on 2026-08-13, D44, rather than repaired. It wrote a whole page

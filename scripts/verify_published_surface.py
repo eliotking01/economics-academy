@@ -37,7 +37,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import build_sitemap  # noqa: E402  - for its _config.yml exclude parser
+import site_layout  # noqa: E402  - the publish rules
 
 # Everything a browser is meant to fetch. Deliberately a whitelist: the point is
 # that an unrecognised type is a question, not something to quietly permit.
@@ -70,19 +70,19 @@ KNOWN: dict[str, str] = {}
 def published_files():
     """Every tracked file GitHub Pages actually serves.
 
-    build_sitemap.published() applies _config.yml's exclude list and Jekyll's
+    site_layout.published() applies _config.yml's exclude list and Jekyll's
     underscore rule. Jekyll ALSO skips any path segment beginning with a dot,
     which that function does not model - it never needs to, because it is only
     ever handed .html and .pdf paths. Verified live: /.gitignore returns 404
     while /CNAME, /robots.txt and /LICENSE.txt all return 200.
     """
-    ex = build_sitemap.excludes()
+    ex = site_layout.excludes()
     out = subprocess.run(["git", "ls-files"], cwd=ROOT,
                          capture_output=True, text=True, check=True).stdout
     files = [f for f in out.splitlines() if f]
     return [
         f for f in files
-        if build_sitemap.published(f, ex)
+        if site_layout.published(f, ex)
         and not any(seg.startswith(".") for seg in f.split("/"))
     ]
 

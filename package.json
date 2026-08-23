@@ -1,0 +1,8 @@
+{
+  "name": "economics-academy-tooling",
+  "private": true,
+  "description": "Tooling pins only. The site itself is static HTML/CSS/JS with no runtime dependency and no build step; the generators in scripts/ run Prettier through `npx --yes prettier@<version>` and this file records that version. No `npm install` is required - see scripts/prettier_util.py, the one place the version is used.",
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
+}

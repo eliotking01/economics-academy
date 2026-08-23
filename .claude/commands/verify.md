@@ -1,12 +1,23 @@
 ---
-description: Run the full verification suite, exactly as CI does
+description: Run the full verification suite — every CI check, plus one local-only import check
 ---
 
 Run every check `.github/workflows/verify.yml` runs, in this order, and report a
 one-line PASS/FAIL per check. Do not stop at the first failure — run them all,
 then summarise.
 
+`scripts/test_compare_trees.py` is no longer in this list: it runs weekly and on
+change in `.github/workflows/compare-trees-suite.yml` (~2m30s). Run it by hand
+if you touch `compare_trees.py`.
+
+The last line below is NOT a CI step: it imports `docs/audit/scripts/lib.py`,
+which restates `_config.yml`'s exclude list and raises on import if the two
+have drifted. CI does not run it because `docs/audit/` is a record, not a
+dependency (see `verify_page_shell.py`'s docstring). It is kept here because
+it is cheap and catches an edit to `_config.yml` that forgot `lib.py`.
+
 ```bash
+python3 -m unittest discover scripts/tests
 python3 scripts/verify_html.py
 python3 scripts/verify_links.py
 python3 scripts/verify_glossary.py
@@ -29,15 +40,14 @@ node scripts/test_glossary_filter.js
 python3 scripts/verify_text_integrity.py HEAD~1
 python3 scripts/verify_markup_integrity.py HEAD~1 --strict
 python3 scripts/verify_generated.py
-python3 scripts/test_compare_trees.py
 python3 -c "import sys;sys.path.insert(0,'docs/audit/scripts');import lib"
 ```
 
 Two traps when reading the output:
 
-- **`build_sitemap.py --check` prints "nothing written" whether it passes or
-  fails.** The pass signal is **exit 0 with no `WOULD CHANGE` lines**. Misreading
-  it once already shipped a stale sitemap.
+- **`build_sitemap.py --check` ends with `SITEMAP OK` (exit 0) or
+  `SITEMAP STALE` (exit 1).** Stale means: commit the page changes, then
+  `python3 scripts/build.py --sitemap`, then commit the sitemap.
 - **`verify_generated.py` checks HEAD, not the working tree.** If there are
   uncommitted changes it says so and still reports on the last commit. Commit
   first if you want it to mean anything.

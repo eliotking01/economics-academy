@@ -46,6 +46,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # edit rather than five. What stays local is everything below </head>.
 import board_data  # noqa: E402
 import page_shell as shell  # noqa: E402
+import prettier_util  # noqa: E402
 
 DATA_DIR = ROOT / "flashcards-data"
 OUT_DIR = ROOT / "flashcards"
@@ -345,29 +346,19 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
     Wave 2 Phase 6. Everything above </head> used to be a 65-line f-string
     here, duplicating what four other generators and 190 hand-written pages
     also carried. It is now one call, and the values below are the whole of
-    what this family contributes to its own <head>.
+    what this family contributes to its own <head>. 2026-08-23: the skeleton,
+    the og/twitter block and the BreadcrumbList builder moved into
+    page_shell.py as well.
     """
     url = f"{SITE}{path}"
-    crumb_ld = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {k: v for k, v in
-             {"@type": "ListItem", "position": i, "name": name,
-              "item": f"{SITE}{href}" if href else None}.items() if v is not None}
-            for i, (name, href) in enumerate(crumbs, 1)
-        ],
-    }
     sheets = ["/css/pages/flashcards.css"]
     if katex_css:
         # Self-hosted KaTeX, for the formula cards. page_shell keeps every
         # stylesheet after main.css in order; an earlier version of it filtered
         # to /css/pages/ and would have dropped this one silently.
         sheets.append("/css/vendor/katex/katex.min.css")
-    head = shell.render_head({
-        "title": e(title),
-        "description": e(desc),
-        "canonical": url,
+    values = shell.head_values(title, desc, url, sheets, esc=e)
+    values.update({
         # This family puts the font preconnect before <title> and the favicon
         # trio straight after the canonical. Both are recorded rather than
         # chosen: reconciling them with the hand-written pages is a separate
@@ -376,45 +367,13 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
         "faviconsAfterCanonical": True,
         "ogComment": True,
         "sdComment": True,
-        "og": {
-            "type": "website", "siteName": "Economics Academy",
-            "locale": "en_GB", "url": url,
-            "title": e(title), "description": e(desc),
-            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
-            "image:type": "image/png", "image:alt": "Economics Academy logo",
-        },
-        "twitter": {
-            "card": "summary_large_image", "title": e(title),
-            "description": e(desc), "image": OG_IMAGE,
-        },
-        "jsonldBeforeIcons": [jsonld, crumb_ld],
-        "pageStylesheets": sheets,
+        "jsonldBeforeIcons": [jsonld, shell.breadcrumb_ld(crumbs)],
     })
-    return f"""<!doctype html>
-<html lang="en-GB">
-  <head>
-{head}
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <div id="header-placeholder"></div>
-
-      <main id="main" class="flashcards-page">
-        <div class="container">
-{body}
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <div id="footer-placeholder"></div>
-    </div>
-
-    <!-- Scripts -->
-{shell.script_tail(("/js/components/flashcards.js",))}
-  </body>
-</html>
-"""
+    return shell.page(
+        shell.render_head(values),
+        shell.container(body, "flashcards-page"),
+        ("/js/components/flashcards.js",),
+    )
 
 
 # PH07-058, Wave 4.9. See the matching note in build_glossary.py: flashcards
@@ -435,18 +394,7 @@ SERVICES_CTA = """
 
 
 def breadcrumb_html(crumbs, indent=10):
-    pad = " " * indent
-    parts = []
-    for name, href in crumbs:
-        if href:
-            parts.append(f'{pad}  <a href="{href}">{e(name)}</a>')
-        else:
-            parts.append(f"{pad}  <span>{e(name)}</span>")
-        parts.append(f'{pad}  <span class="separator">&rsaquo;</span>')
-    parts.pop()
-    inner = "\n".join(parts)
-    return (f'{pad}<nav class="breadcrumb" aria-label="Breadcrumb">\n'
-            f"{inner}\n{pad}</nav>")
+    return shell.breadcrumb_html(crumbs, indent, esc=e)
 
 
 def sample_card_html(card):
@@ -681,20 +629,6 @@ def hub_page(decks):
 
 # ------------------------------------------------------------------ output
 
-def run_prettier(paths):
-    """Prettier is not installed here; the repo convention is
-    `npx prettier@3.9.6` (see CLAUDE.md)."""
-    try:
-        subprocess.run(
-            ["npx", "--yes", "prettier@3.9.6", "--write", "--log-level",
-             "warn"] + [str(p) for p in paths],
-            check=True, cwd=ROOT,
-        )
-        return True
-    except (OSError, subprocess.CalledProcessError):
-        return False
-
-
 def main():
     deck_files = sorted(DATA_DIR.glob("*/*.json"))
     if not deck_files:
@@ -763,9 +697,10 @@ def main():
     html_paths.append(hub_path)
     print(f"built /flashcards/ hub with {len(built)} deck(s)")
 
-    if not run_prettier(html_paths):
-        print("  WARNING: prettier unavailable, formatting differs from "
-              "the repo")
+    # scripts/prettier_util.py: one call site, one pinned version, and it
+    # STOPS the build if npx is missing rather than writing unformatted pages
+    # and warning.
+    print(f"  formatted {prettier_util.format_files(html_paths)} page(s)")
     # Wave 2 Phase 7. After Prettier, never before - see shell.bake_files().
     print(f"  baked the header and footer into "
           f"{shell.bake_files(html_paths)} page(s)")

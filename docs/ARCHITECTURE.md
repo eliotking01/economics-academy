@@ -10,7 +10,12 @@ number written down.
 463 published pages, 17 of them hand-written.
 
 - **446 pages** get their `<head>`, wrapper and script tail from
-  `scripts/page_shell.py`, which all five page generators import.
+  `scripts/page_shell.py`, which all five page generators import. Since
+  2026-08-23 it also owns the whole page skeleton, the og/twitter values and
+  the breadcrumb builders; each generator passes in only what its family does
+  differently. `scripts/site_layout.py` holds what the site is made of (the
+  generator list, the publish rules, the families, the page list) and is the
+  one module both generators and verifiers import.
 - **17 pages** are hand-written and get theirs from
   `scripts/bake_templates.py --apply`. Run `bake_templates.py` with no flag to
   list them. They are the 9 root pages (permanently out of `page_shell` scope,
@@ -33,8 +38,9 @@ truth. `js/components/nav.js` builds the mobile `#navPanel` and `#titleBar` from
 `#nav` and adds the two things CSS cannot do for the desktop dropdowns; the
 dropdowns themselves are CSS, so they work with scripting off.
 
-**Editing the nav is a rebuild, not a one-file edit** — see the command block in
-the root `CLAUDE.md`.
+**Editing the nav is a rebuild, not a one-file edit** — `python3 scripts/build.py`,
+then commit, then `python3 scripts/build.py --sitemap`. The generator order is
+declared once in `scripts/site_layout.py`; `build.py` runs it.
 
 `verify_page_shell.py` **check 9** is what makes the 463 copies safe: it lifts
 the block back out of every page and requires it to equal the template byte for

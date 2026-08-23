@@ -55,7 +55,10 @@ change two files in the same commit, so it cannot happen by accident. Do not
 
 It was seeded from boards.json on 2026-08-12, when the 28 code comparisons
 below were green on all four structures, so it is anchored to what the
-generators said before any of them was touched. `--show` reprints it.
+generators said before any of them was touched. `--show` reprints it;
+`--reseed` rewrites it in place from boards.json and prints the diff, so a
+deliberate change to the record is one command plus a read of the diff,
+not a hand-paste. The duplication stays; only the typing goes.
 
 Standard library only.
 """
@@ -69,6 +72,8 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import reseed_util  # noqa: E402
 BOARDS_JSON = ROOT / "boards-data" / "boards.json"
 
 # Every leaf of boards-data/boards.json, restated. See the docstring: this is
@@ -79,6 +84,11 @@ BOARDS_JSON = ROOT / "boards-data" / "boards.json"
 # A slug is a live URL and GitHub Pages issues no 301. A name is visible text.
 # Changing either here without changing boards-data/boards.json - or the other
 # way round - is meant to fail.
+#
+# Theme 2 (edexcel-a.groups.1.names.*) is the em-dash/hyphen/short-form case
+# the docstring describes. Its three names differ on purpose and must not be
+# collapsed. (That note lived inside the literal until --reseed existed; a
+# reseed rewrites the literal wholesale, so commentary stays up here.)
 PINNED = {
     "edexcel-a.names.short": "Edexcel",
     "edexcel-a.names.display": "Edexcel A",
@@ -98,43 +108,29 @@ PINNED = {
     "edexcel-a.groups.0.taxonomySlug": "theme-1",
     "edexcel-a.groups.0.flashcardsSlug": "theme-1",
     "edexcel-a.groups.0.label": "Theme 1",
-    "edexcel-a.groups.0.names.taxonomy":
-        "Introduction to Markets and Market Failure",
-    "edexcel-a.groups.0.names.flashcards":
-        "Introduction to Markets and Market Failure",
-    "edexcel-a.groups.0.names.practiceQuestions":
-        "Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.taxonomy": "Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.flashcards": "Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.practiceQuestions": "Introduction to Markets and Market Failure",
     "edexcel-a.groups.0.names.practiceQuestionsLabel": "Edexcel Theme 1",
-    "edexcel-a.groups.0.names.practiceQuestionsButton":
-        "Theme 1: Introduction to Markets and Market Failure",
+    "edexcel-a.groups.0.names.practiceQuestionsButton": "Theme 1: Introduction to Markets and Market Failure",
     "edexcel-a.groups.1.notesDir": "edexcel-theme-2",
     "edexcel-a.groups.1.taxonomySlug": "theme-2",
     "edexcel-a.groups.1.flashcardsSlug": "theme-2",
     "edexcel-a.groups.1.label": "Theme 2",
-    # Theme 2 is the em-dash/hyphen/short-form case the docstring describes.
-    # These three differ on purpose and must not be collapsed.
-    "edexcel-a.groups.1.names.taxonomy":
-        "The UK Economy — Performance and Policies",
-    "edexcel-a.groups.1.names.flashcards":
-        "The UK Economy - Performance and Policies",
-    "edexcel-a.groups.1.names.practiceQuestions":
-        "The UK Economy - Performance and Policies",
+    "edexcel-a.groups.1.names.taxonomy": "The UK Economy — Performance and Policies",
+    "edexcel-a.groups.1.names.flashcards": "The UK Economy - Performance and Policies",
+    "edexcel-a.groups.1.names.practiceQuestions": "The UK Economy - Performance and Policies",
     "edexcel-a.groups.1.names.practiceQuestionsLabel": "Edexcel Theme 2",
-    "edexcel-a.groups.1.names.practiceQuestionsButton":
-        "Theme 2: The UK Economy",
+    "edexcel-a.groups.1.names.practiceQuestionsButton": "Theme 2: The UK Economy",
     "edexcel-a.groups.2.notesDir": "edexcel-theme-3",
     "edexcel-a.groups.2.taxonomySlug": "theme-3",
     "edexcel-a.groups.2.flashcardsSlug": "theme-3",
     "edexcel-a.groups.2.label": "Theme 3",
-    "edexcel-a.groups.2.names.taxonomy":
-        "Business Behaviour and the Labour Market",
-    "edexcel-a.groups.2.names.flashcards":
-        "Business Behaviour and the Labour Market",
-    "edexcel-a.groups.2.names.practiceQuestions":
-        "Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.taxonomy": "Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.flashcards": "Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.practiceQuestions": "Business Behaviour and the Labour Market",
     "edexcel-a.groups.2.names.practiceQuestionsLabel": "Edexcel Theme 3",
-    "edexcel-a.groups.2.names.practiceQuestionsButton":
-        "Theme 3: Business Behaviour and the Labour Market",
+    "edexcel-a.groups.2.names.practiceQuestionsButton": "Theme 3: Business Behaviour and the Labour Market",
     "edexcel-a.groups.3.notesDir": "edexcel-theme-4",
     "edexcel-a.groups.3.taxonomySlug": "theme-4",
     "edexcel-a.groups.3.flashcardsSlug": "theme-4",
@@ -143,8 +139,7 @@ PINNED = {
     "edexcel-a.groups.3.names.flashcards": "A Global Perspective",
     "edexcel-a.groups.3.names.practiceQuestions": "A Global Perspective",
     "edexcel-a.groups.3.names.practiceQuestionsLabel": "Edexcel Theme 4",
-    "edexcel-a.groups.3.names.practiceQuestionsButton":
-        "Theme 4: A Global Perspective",
+    "edexcel-a.groups.3.names.practiceQuestionsButton": "Theme 4: A Global Perspective",
     "aqa.names.short": "AQA",
     "aqa.names.display": "AQA",
     "aqa.names.long": "AQA A-Level Economics",
@@ -163,26 +158,20 @@ PINNED = {
     "aqa.groups.0.taxonomySlug": "microeconomics",
     "aqa.groups.0.flashcardsSlug": "micro",
     "aqa.groups.0.label": "Microeconomics",
-    "aqa.groups.0.names.taxonomy":
-        "Individuals, Firms, Markets and Market Failure",
-    "aqa.groups.0.names.flashcards":
-        "Individuals, Firms, Markets and Market Failure",
-    "aqa.groups.0.names.practiceQuestions":
-        "Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.taxonomy": "Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.flashcards": "Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.practiceQuestions": "Individuals, Firms, Markets and Market Failure",
     "aqa.groups.0.names.practiceQuestionsLabel": "AQA Microeconomics",
-    "aqa.groups.0.names.practiceQuestionsButton":
-        "Micro: Individuals, Firms, Markets and Market Failure",
+    "aqa.groups.0.names.practiceQuestionsButton": "Micro: Individuals, Firms, Markets and Market Failure",
     "aqa.groups.1.notesDir": "aqa-a2-macro",
     "aqa.groups.1.taxonomySlug": "macroeconomics",
     "aqa.groups.1.flashcardsSlug": "macro",
     "aqa.groups.1.label": "Macroeconomics",
     "aqa.groups.1.names.taxonomy": "The National and International Economy",
     "aqa.groups.1.names.flashcards": "The National and International Economy",
-    "aqa.groups.1.names.practiceQuestions":
-        "The National and International Economy",
+    "aqa.groups.1.names.practiceQuestions": "The National and International Economy",
     "aqa.groups.1.names.practiceQuestionsLabel": "AQA Macroeconomics",
-    "aqa.groups.1.names.practiceQuestionsButton":
-        "Macro: The National and International Economy",
+    "aqa.groups.1.names.practiceQuestionsButton": "Macro: The National and International Economy",
 }
 
 
@@ -247,12 +236,20 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--show", action="store_true",
                     help="reprint PINNED from boards.json and exit")
+    ap.add_argument("--reseed", action="store_true",
+                    help="rewrite PINNED in this file from boards.json, print "
+                         "the diff and exit. For a DELIBERATE change to the "
+                         "record, in the same commit. Read the diff: it is the "
+                         "list of values that moved.")
     args = ap.parse_args()
 
     data = json.loads(BOARDS_JSON.read_text(encoding="utf-8"))["boards"]
     flat = flatten(data)
     if args.show:
         show(flat)
+        return 0
+    if args.reseed:
+        reseed_util.rewrite(__file__, "PINNED", reseed_util.format_dict(flat))
         return 0
 
     c = Check()

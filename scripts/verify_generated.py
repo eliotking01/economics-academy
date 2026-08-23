@@ -58,27 +58,14 @@ import sys
 import tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import site_layout  # noqa: E402
 
-# Order matters. The taxonomy feeds the question bank, and the sitemap
-# enumerates the filesystem, so it can only be right once every page exists.
-GENERATORS = [
-    # Wave 2 Phases 3 and 5. The migrated notes pages are generated from
-    # notes-data/ by page_shell.py; it runs first because nothing else depends
-    # on it and the sitemap at the end has to see whatever it wrote. It globs
-    # notes-data/, so a new board directory needs no edit here.
-    "build_notes_pages.py",
-    "build_past_paper_taxonomy.py",
-    "build_past_paper_questions.py",
-    "build_questions.py",
-    # extract_glossary.py writes glossary-data/terms.json from the notes HTML,
-    # and build_glossary.py renders that. Both are generated and committed, so
-    # both belong here - and the extractor has to run first or the build would
-    # be checked against a stale extraction.
-    "extract_glossary.py",
-    "build_glossary.py",
-    "build_flashcards.py",
-    "build_sitemap.py",
-]
+# The generator list lives in scripts/site_layout.py - the ONE place it is
+# declared - and scripts/build.py runs the same list in place. Until 2026-08-23
+# this file held the only complete copy (eight) while three docs carried
+# hand-copied five- and three-entry versions.
+GENERATORS = list(site_layout.GENERATORS)
 
 
 def git(*args, cwd=ROOT):

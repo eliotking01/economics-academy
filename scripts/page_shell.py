@@ -18,7 +18,7 @@ compare. It reports four progressively weaker equalities, because "can it
 reproduce the head" turns out to have four different answers:
 
   L1  byte-identical                    the committed bytes, exactly
-  L2  identical after Prettier 3.9.6    same content, formatted canonically
+  L2  identical after the pinned Prettier  same content, formatted canonically
   L3  identical ignoring whitespace     same tags, same order, same values
   L4  same tags and values, any order   same information, different sequence
 
@@ -55,23 +55,24 @@ exists to remove - so the honest reading is that the shell reproduces the head
 at L3 and the residue is the improvement, not a failure.
 
 Standard library only. Prettier is used only by --selftest's L2 column, and
-only when `npx` is available; without it L2 reports as not run.
+only when `npx` is available; without it the selftest stops with
+prettier_util's message.
 """
 
 from __future__ import annotations
 
 import argparse
 import collections
+import html
 import json
 import pathlib
 import re
-import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import build_sitemap  # noqa: E402
-import verify_page_shell as shell_check  # noqa: E402  - family_of(), pages()
+import prettier_util  # noqa: E402
+import site_layout  # noqa: E402  - family_of(), pages(), HAND_WRITTEN
 
 SITE = "https://economicsacademy.co.uk"
 BOARDS = json.loads(
@@ -104,7 +105,7 @@ ORGANISATION_REF = {
     "url": SITE,
 }
 
-PRINT_WIDTH = 80   # Prettier's default, and CLAUDE.md pins Prettier 3.9.6
+PRINT_WIDTH = 80   # Prettier's default; the pinned version is prettier_util.PRETTIER_VERSION
 INDENT = 4         # inside <head>
 
 
@@ -114,7 +115,7 @@ INDENT = 4         # inside <head>
 
 def tag(name: str, attrs: list[tuple[str, str | None]], indent: int = INDENT,
         void: bool = True) -> str:
-    """One element, wrapped the way Prettier 3.9.6 wraps it.
+    """One element, wrapped the way the pinned Prettier (prettier_util) wraps it.
 
     Prettier keeps a tag on one line if it fits inside printWidth, and
     otherwise puts every attribute on its own line indented by two with the
@@ -468,6 +469,143 @@ def script_tail(extra: "tuple[str, ...]" = (), indent: int = 4) -> str:
     lines = [f'{pad}<script src="{s}"></script>' for s in SCRIPT_TAIL]
     lines += [f'{pad}<script src="{s}" defer></script>' for s in extra]
     return "\n".join(lines)
+
+
+# --------------------------------------------------------------------------
+# The page skeleton and the shared head/breadcrumb helpers. 2026-08-23.
+# --------------------------------------------------------------------------
+#
+# Four generators - build_questions.py, build_flashcards.py, build_glossary.py
+# and build_past_paper_questions.py - each carried their own copy of the same
+# skeleton (doctype, <head> wrapper, page-wrapper, the two placeholders, the
+# script tail), the same og/twitter dict, and their own BreadcrumbList
+# builder. The copies were byte-equal and had to stay so by vigilance. They
+# now call these. Everything a family does differently is still a VALUE it
+# passes in (the questions family's early preconnect comment, the ppq family's
+# ASCII-escaped JSON-LD, the flashcards/glossary favicon position); nothing
+# here normalises a family's quirk away. Migration was one generator per
+# commit step, each proved byte-identical by verify_generated.py.
+
+def esc(s: str) -> str:
+    """html.escape(quote=True) - the escaping three of the four generators
+    use for <head> values and breadcrumb text. build_past_paper_questions.py
+    keeps its own e(): it must match escapeHtml() in question-search.js
+    character for character, which html.escape does not (&#x27;). That is
+    why every helper below takes `esc` as a parameter."""
+    return html.escape(s, quote=True)
+
+
+def social(title: str, description: str, url: str, *, og_type: str = "website",
+           esc=esc) -> dict:
+    """The og: and twitter: values, identical across the four generators.
+
+    Returned as the two sub-dicts render_head() expects, so a caller writes
+    `**social(...)` into its values.
+    """
+    return {
+        "og": {
+            "type": og_type, "siteName": "Economics Academy",
+            "locale": "en_GB", "url": url,
+            "title": esc(title), "description": esc(description),
+            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
+            "image:type": "image/png", "image:alt": "Economics Academy logo",
+        },
+        "twitter": {
+            "card": "summary_large_image", "title": esc(title),
+            "description": esc(description), "image": OG_IMAGE,
+        },
+    }
+
+
+def head_values(title: str, description: str, url: str, stylesheets, *,
+                og_type: str = "website", esc=esc) -> dict:
+    """The values every generated <head> shares. The family adds its own
+    flags and JSON-LD on top before calling render_head()."""
+    v = {
+        "title": esc(title),
+        "description": esc(description),
+        "canonical": url,
+        "pageStylesheets": list(stylesheets),
+    }
+    v.update(social(title, description, url, og_type=og_type, esc=esc))
+    return v
+
+
+def breadcrumb_ld(crumbs, site: str = SITE) -> dict:
+    """A BreadcrumbList node from [(name, href-or-None), ...]. Key order is
+    @type, position, name, item - item only when there is an href - because
+    the order is serialised and four generators agreed on it."""
+    items = []
+    for position, (name, href) in enumerate(crumbs, start=1):
+        item = {"@type": "ListItem", "position": position, "name": name}
+        if href:
+            item["item"] = site + href
+        items.append(item)
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items,
+    }
+
+
+def breadcrumb_html(crumbs, indent: int = 10, *, esc=esc, href=lambda h: h) -> str:
+    """The visible trail as a whole <nav>, one crumb per line, the form the
+    flashcards and glossary pages carry. `href` maps a path to what the link
+    should show (build_past_paper_questions.py drops a trailing index.html).
+    Must agree with breadcrumb_ld() name for name - verify_page_shell.py
+    check 8 compares the two on every page."""
+    pad = " " * indent
+    parts = []
+    for name, h in crumbs:
+        if h:
+            parts.append(f'{pad}  <a href="{href(h)}">{esc(name)}</a>')
+        else:
+            parts.append(f"{pad}  <span>{esc(name)}</span>")
+        parts.append(f'{pad}  <span class="separator">&rsaquo;</span>')
+    parts.pop()
+    inner = "\n".join(parts)
+    return (f'{pad}<nav class="breadcrumb" aria-label="Breadcrumb">\n'
+            f"{inner}\n{pad}</nav>")
+
+
+def container(inner: str, main_class: str) -> str:
+    """<main id="main" class=...><div class="container">...</div></main>, at
+    the indent the generated families use. `inner` is emitted as-is between
+    the container's open and close lines."""
+    return (f'      <main id="main" class="{main_class}">\n'
+            f'        <div class="container">\n'
+            f"{inner}\n"
+            f"        </div>\n"
+            f"      </main>")
+
+
+def page(head: str, body: str, extra_scripts=()) -> str:
+    """The whole document: doctype, <head> from render_head(), the page
+    wrapper with its two placeholders (page_shell.bake() fills them after
+    Prettier), `body` verbatim between them, and the script tail plus the
+    family's own deferred script. Ends with a newline, as every page does."""
+    return (
+        "<!doctype html>\n"
+        '<html lang="en-GB">\n'
+        "  <head>\n"
+        f"{head}\n"
+        "  </head>\n"
+        '  <body class="is-preload">\n'
+        '    <div id="page-wrapper">\n'
+        "      <!-- Header -->\n"
+        f"      {HEADER_PLACEHOLDER}\n"
+        "\n"
+        f"{body}\n"
+        "\n"
+        "      <!-- Footer -->\n"
+        f"      {FOOTER_PLACEHOLDER}\n"
+        "    </div>\n"
+        "\n"
+        "    <!-- Scripts -->\n"
+        f"{script_tail(tuple(extra_scripts))}\n"
+        "  </body>\n"
+        "</html>\n"
+    )
 
 
 # --------------------------------------------------------------------------
@@ -835,12 +973,13 @@ def token_multiset(s: str):
         t for t in squeeze(s).splitlines() if t.startswith("<"))
 
 
-def prettier(text: str, tmp: pathlib.Path) -> str | None:
-    tmp.write_text(f"<!doctype html>\n<html><head>\n{text}\n</head><body></body></html>",
-                   encoding="utf-8")
-    p = subprocess.run(["npx", "prettier@3.9.6", "--parser", "html", str(tmp)],
-                       capture_output=True, text=True)
-    return p.stdout if p.returncode == 0 else None
+def prettier(text: str, tmp: pathlib.Path) -> str:
+    """One <head> through Prettier, for the L2 column. The version is
+    prettier_util's; a missing npx stops the selftest with its message rather
+    than silently reporting L2 as 0/190."""
+    return prettier_util.format_text(
+        f"<!doctype html>\n<html><head>\n{text}\n</head><body></body></html>",
+        parser="html", tmp=tmp)
 
 
 def main() -> int:
@@ -862,17 +1001,17 @@ def main() -> int:
         ap.print_help()
         return 2
 
-    hand = set(shell_check.HAND_WRITTEN)
-    paths = [p for p in shell_check.pages()
-             if shell_check.family_of(p) in hand
-             and (not args.family or shell_check.family_of(p) in args.family)]
+    hand = set(site_layout.HAND_WRITTEN)
+    paths = [p for p in site_layout.pages()
+             if site_layout.family_of(p) in hand
+             and (not args.family or site_layout.family_of(p) in args.family)]
 
     tmp = ROOT / ".page_shell_selftest.tmp.html"
     stats: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
     worst: dict[str, list] = collections.defaultdict(list)
     try:
         for p in paths:
-            fam = shell_check.family_of(p)
+            fam = site_layout.family_of(p)
             src = (ROOT / p).read_text(encoding="utf-8")
             committed = HEAD.search(src).group(1)
             rendered = render_head(extract(src))
@@ -898,8 +1037,7 @@ def main() -> int:
             if committed == "\n" + rendered + "\n  ":
                 stats[fam]["L1"] += 1
             if args.prettier:
-                a, b = prettier(committed, tmp), prettier(rendered, tmp)
-                if a is not None and a == b:
+                if prettier(committed, tmp) == prettier(rendered, tmp):
                     stats[fam]["L2"] += 1
             if squeeze(committed) == squeeze(rendered):
                 stats[fam]["L3"] += 1
@@ -926,7 +1064,7 @@ def main() -> int:
     print()
     print("  L0  every extracted value survives a render/re-extract round trip")
     print("  L1  byte-identical to the committed <head>")
-    print("  L2  identical after Prettier 3.9.6 on both sides"
+    print(f"  L2  identical after Prettier {prettier_util.PRETTIER_VERSION} on both sides"
           + ("" if args.prettier else "   (NOT RUN - pass --prettier)"))
     print("  L3  identical ignoring whitespace: same tags, order and values")
     print("  L3c as L3, and also ignoring decorative HTML comments")

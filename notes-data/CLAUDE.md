@@ -16,17 +16,21 @@ a slice: a slice is a record of the page's *content*, and 166 hand-inserted
 copies is the scripted bulk edit hard rule 6 forbids. A new topic gets its row
 automatically as soon as its hub links to it.
 
-**Edit here, then run `python3 scripts/build_notes_pages.py`.** Never edit the
-rendered page in `revision-notes/`; the next build overwrites it.
+**Edit here, then run `python3 scripts/build.py`.** Never edit the rendered
+page in `revision-notes/`; the next build overwrites it. (`build_notes_pages.py`
+on its own is fine for a quick look, but the glossary is extracted from these
+pages too, so the full build is what keeps the tree consistent.)
 
 `scripts/extract_notes_pages.py` is the one-off that created these from the
 live pages. It defaults to a dry run and should not be needed again.
 
-After any content edit, the glossary may need re-extracting too — definitions
-are lifted from `key-definition` chips on these pages:
+After any content edit, the glossary needs re-extracting too — definitions
+are lifted from `key-definition` chips on these pages. `build.py` runs every
+generator in the right order (the list is `scripts/site_layout.py`, declared
+once), so do not chain them by hand:
 
 ```bash
-python3 scripts/build_notes_pages.py
-python3 scripts/extract_glossary.py && python3 scripts/build_glossary.py
-python3 scripts/build_sitemap.py     # AFTER committing: lastmod comes from git
+python3 scripts/build.py
+# commit, then:
+python3 scripts/build.py --sitemap   # AFTER committing: lastmod comes from git
 ```

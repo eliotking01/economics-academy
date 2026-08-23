@@ -905,6 +905,10 @@ Do not delete the passing cases as redundant.
 > page a second `/tutoring.html` link and disarmed `a7-link-lost`. ~2m30s, so
 > it sits in the second job beside `verify_generated.py`.
 >
+> **Moved again 2026-08-23, Eliot's decision:** out of `verify.yml` into
+> `.github/workflows/compare-trees-suite.yml` — weekly, on demand, and on any
+> push touching the harness or its suite. Still runs; no longer on every push.
+>
 > Making the comparison a per-commit gate needs a declaration mechanism for
 > assertions 1, 3, 5, 6 and 7 — the `Text-Change:`/`Markup-Change:` trailer
 > pattern extended — which is a design decision and is recorded as one rather
@@ -924,6 +928,24 @@ this harness exists to prevent.
 up.** An improvement is welcome and must be declared: change the page and the
 number in the same commit, so the diff records what improved. `--show` reprints
 the tables for reseeding.
+
+> **Split 2026-08-23 into invariants and cardinalities.** The SHAPE tables
+> (`EXPECTED_SHAPES`: distinct heads / shells / tails / css sets per family;
+> `EXPECTED_NOTES_SPINES`; the zero tripwires; every declared exception set)
+> are still pinned and still fail in both directions - and `--reseed` now
+> rewrites them from the tree and prints the diff, so a declared change is one
+> command. The CARDINALITIES are derived: topic page counts from
+> `boards.json`'s `expectedTopics` (the one place a count is declared), hubs
+> / decks / glossary from the data directories, breadcrumbs and the baked
+> header as "every page except the declared set", extra scripts as "every page
+> of the family and none outside it". The image counts and the per-shape spine
+> counts `(97, 29, 16, 11, 7, 6)` are printed and no longer judged - the
+> latter had already shaped a product decision (PROGRESS.md, "contents list on
+> all 166") and would move on every legitimate addition. The three
+> hand-written families and `ppq` keep a pinned page count
+> (`PINNED_PAGE_COUNTS`, reseedable) because nothing in `boards.json` declares
+> them. `MALFORMED_NOTES_PAGES`, `KNOWN_BREADCRUMB_DISAGREEMENT` and the
+> singleton-spine assertion are untouched.
 
 > **Exercised 2026-08-14, Wave 5.4, D49 — and it fired on an IMPROVEMENT, which
 > is the case this entry exists for.** Repairing PH06-031's three malformed
@@ -1032,6 +1054,15 @@ parse-and-re-serialise; run over the block it rewraps the nav's markup and the
 block stops being byte-comparable with its template, which is check 9's whole
 basis. `build_notes_pages.py` bakes inside `render()` instead, because it
 deliberately runs no Prettier at all.
+
+> **Mechanised 2026-08-23.** `.prettierignore` lists the 17 hand-written pages
+> and the generated notes pages, generated from `bake_templates.py`'s own list
+> by `--prettierignore` so the two cannot drift, and `.prettierrc` writes down
+> the defaults the three formatting generators have always produced. Every
+> pattern in `.prettierignore` is anchored with a leading slash: an unanchored
+> `index.html` matches at any depth in gitignore syntax and made the
+> generators skip their own `flashcards/index.html` and 90 past-paper pages
+> when first tried. Measured, then fixed, before commit.
 
 **`scripts/bake_templates.py` carries `EXPECTED = 17` and refuses to run if the
 page set has moved.** Same property as `build_past_paper_taxonomy.py`'s
@@ -1329,7 +1360,7 @@ python3 scripts/verify_markup_integrity.py <before-ref> --strict
 python3 scripts/verify_liquid.py          # 1 file checked, 0 problems, exit 0 (D31)
 python3 scripts/verify_glossary.py
 python3 scripts/verify_inline_styles.py   # 0 authored; 1,187 KaTeX on 7 pages
-python3 scripts/test_compare_trees.py     # 39 cases, ~2m30s; the harness's own suite
+python3 scripts/test_compare_trees.py     # 39 cases, ~2m30s; weekly workflow, not verify.yml
 python3 seo/tools/verify_seo.py           # 14/14
 python3 scripts/build_sitemap.py --check  # "nothing written"
 node scripts/test_question_search.js

@@ -811,7 +811,8 @@ Recorded because the same habit will be needed for Waves 2–5.
 
 - **`build_sitemap.py --check` prints "nothing written" on both paths.** It is
   not a pass signal. Read the exit code and look for `WOULD CHANGE`. Misreading
-  it shipped a stale sitemap for one commit.
+  it shipped a stale sitemap for one commit. *(Fixed 2026-08-23: the last line
+  is now `SITEMAP OK` or `SITEMAP STALE`, matching the exit code.)*
 - **Local green does not imply CI green.** The workflow failed on its first run
   while all 15 steps passed locally, because `actions/checkout` clones shallowly
   and `build_sitemap.py` reads `lastmod` from `git log`. Fixed with

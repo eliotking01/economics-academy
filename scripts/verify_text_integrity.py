@@ -82,11 +82,18 @@ because it remains the correct description of any page that has one.
 
 Usage:
     python3 scripts/verify_text_integrity.py <before-ref> [<after-ref>]
+    python3 scripts/verify_text_integrity.py --staged [--trailers]
 
 <after-ref> defaults to the working tree. Exit status is non-zero if any
 file's visible text differs without being declared. Note that a run against
 uncommitted work has no commit message to read, so declare-then-commit is
 the order; a red run before committing is expected.
+
+--staged compares HEAD against the index - what the next commit will contain -
+and looks only at the staged files, so it is fast enough for a hook. With
+--trailers it prints nothing but the `Text-Change: <path>` lines that commit
+would need, one per line, and exits 0; scripts/suggest_trailers.py and
+.githooks/prepare-commit-msg use that. CI behaviour is unchanged.
 """
 
 import difflib
@@ -102,7 +109,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # the same import verify_liquid.py and verify_css_load_order.py use, so all
 # three agree with the sitemap about what Jekyll actually builds.
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import build_sitemap  # noqa: E402
+import site_layout  # noqa: E402  - the publish rules
 
 SKIP = {"script", "style"}
 
@@ -166,15 +173,31 @@ def visible(source, templates):
     return extract(source)
 
 
+# The index, as a ref. `git show :path` reads the staged copy of a file, so
+# passing ":" as <after-ref> compares HEAD against what the next commit will
+# contain. Used by --staged; harmless if someone passes it by hand.
+STAGED = ":"
+
+
 def read_at(ref, path):
-    """File contents at a git ref, or from the working tree if ref is None."""
+    """File contents at a git ref, from the index if ref is STAGED, or from
+    the working tree if ref is None."""
     if ref is None:
         return pathlib.Path(path).read_text(encoding="utf-8")
     result = subprocess.run(
-        ["git", "show", f"{ref}:{path}"],
+        ["git", "show", f":{path}" if ref == STAGED else f"{ref}:{path}"],
         capture_output=True, text=True,
     )
     return result.stdout if result.returncode == 0 else None
+
+
+def staged_files():
+    """Paths staged for the next commit (added, modified, renamed-to)."""
+    out = subprocess.run(
+        ["git", "diff", "--cached", "--name-only", "--diff-filter=AMRC"],
+        cwd=ROOT, capture_output=True, text=True, check=True,
+    ).stdout.split("\n")
+    return [f for f in out if f]
 
 
 def list_files(ref):
@@ -194,11 +217,11 @@ def list_files(ref):
             ["git", "ls-tree", "-r", "--name-only", ref],
             capture_output=True, text=True, check=True,
         ).stdout.split()
-    ex = build_sitemap.excludes()
+    ex = site_layout.excludes()
     return sorted(
         f for f in out
         if f.endswith(".html")
-        and build_sitemap.published(f, ex)
+        and site_layout.published(f, ex)
         and not f.startswith(GENERATED)
     )
 
@@ -246,14 +269,32 @@ def declared(before, after):
 
 
 def main(argv):
-    if len(argv) < 2:
+    flags = {a for a in argv[1:] if a.startswith("--")}
+    args = [a for a in argv[1:] if not a.startswith("--")]
+    staged = "--staged" in flags
+    trailers_only = "--trailers" in flags
+    if staged:
+        before, after = "HEAD", STAGED
+    elif args:
+        before = args[0]
+        after = args[1] if len(args) > 1 else None
+    else:
         print(__doc__)
         return 2
-    before = argv[1]
-    after = argv[2] if len(argv) > 2 else None
 
     allowed = declared(before, after)
     files = list_files(before)
+    if staged:
+        # Only what the next commit touches - HEAD is the same tree for
+        # everything else, so comparing it would be 190 git calls to learn
+        # nothing.
+        touched = set(staged_files())
+        files = [f for f in files if f in touched]
+        # A staged template edit changes the visible text of every page that
+        # still carries a placeholder; none do today, but keep the comparison
+        # honest if one ever does.
+        if any(p in touched for _, p in PLACEHOLDERS):
+            files = list_files(before)
     differing = []
     missing = []
 
@@ -274,6 +315,11 @@ def main(argv):
 
     undeclared = [d for d in differing if d[0] not in allowed]
 
+    if trailers_only:
+        for path, _, _ in undeclared:
+            print(f"Text-Change: {path}")
+        return 0
+
     for path, a, b in differing:
         state = "DECLARED" if path in allowed else "UNDECLARED"
         print(f"\n=== {path}  [{state}]")
@@ -284,7 +330,7 @@ def main(argv):
 
     print(
         f"\n{len(files)} files compared between {before} and "
-        f"{after or 'working tree'}"
+        f"{'the index (staged)' if after == STAGED else (after or 'working tree')}"
     )
     print(f"  visible text differs: {len(differing)}")
     if allowed:

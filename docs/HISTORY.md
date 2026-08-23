@@ -116,6 +116,11 @@ Always run `python3 scripts/bake_templates.py --apply` **after** Prettier. And
 never run Prettier over `revision-notes/index.html` at all without re-splicing
 its frozen head back to `main`'s exact bytes.
 
+*Mechanised 2026-08-23:* `.prettierignore` now lists those pages (generated
+by `bake_templates.py --prettierignore`, so it cannot drift from the
+hand-written set) and `.prettierrc` pins the settings the generated output
+conforms to. The rule above is the why; those two files are the how.
+
 ## GSC-frozen heads
 
 These pages' `<title>`, H1, meta description and canonical must not change —

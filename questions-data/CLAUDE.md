@@ -26,3 +26,29 @@ extending the bank — they decided the shape of every batch after the twelfth.
 One file per topic: `<board-dir>/<spec>.json`, keyed by spec code with dots.
 Question pages use `css/pages/quiz.css`; the hub and indexes use
 `css/pages/practice-questions.css`.
+
+## Adding one (the workflow; the authoring standard is `docs/QUESTIONS_GUIDE.md`)
+
+1. **The notes topic must exist first** — `notes-data/topics/<dir>/<spec>-*.json`
+   and a hub link (`python3 scripts/new_topic.py` scaffolds both). Every
+   practice set belongs to a notes page; `build_past_paper_taxonomy.py` asserts
+   that this directory has exactly `boards.json`'s `expectedTopics` records per
+   board, so a set without its topic — or a topic without its set — fails the
+   build.
+2. Copy the nearest sibling `<board-dir>/<spec>.json` (same board, adjacent
+   spec code) and rewrite every field: `spec`, `slug` (must match the notes
+   slug), `title`, `shortTitle`, `pageTitle`, `metaDescription`, `intro`,
+   `notesTeaser`. Write 4–10 questions to the guide; `validate()` in
+   `build_questions.py` rejects anything outside that range, a duplicated `id`,
+   or an uneven answer spread. Question `id`s are `<board>-<spec-with-dashes>-qN`.
+3. **Re-solve every question cold from the stem alone**, then diff against
+   your recorded key. This step finds real defects; do not skip it.
+4. Originality: shingle against both past-paper corpora (see the note above)
+   before committing. 0 exact, 0 near-duplicate stems is the bar.
+5. `python3 scripts/build_questions.py --check` validates the inputs;
+   `python3 scripts/build.py` writes the page (and everything else). Then
+   `python3 scripts/append_questions_link.py <board-dir>/<spec>.json` adds the
+   "Test yourself on this topic" block to the notes slice — additive, idempotent.
+6. Suite (`/verify`), commit, then `python3 scripts/build.py --sitemap` and
+   commit the sitemap. No verifier literal needs bumping: counts come from
+   `boards.json`.
