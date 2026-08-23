@@ -481,6 +481,17 @@ index. PH08-046.
 >   Their Topic filter is live and lists every topic on the board, which a
 >   per-topic payload cannot supply. Only pages with `data-prefilter-topic`
 >   carry `data-src`.
+>
+>   **Amended 2026-08-23, performance pass Phase 3: the board and section
+>   pages now fetch a PER-BOARD payload,**
+>   `past-paper-questions/<board>/questions.json` (`board_payload()`), which
+>   carries every topic on the board — exactly what their Topic filter lists
+>   — so the reason above is honoured, not overturned; only the master page
+>   still fetches the full index, and the master `questions.json` is
+>   byte-unchanged. The same commit cut the two board hubs to their 20 most
+>   recent cards plus a static note (the section and topic pages still bake
+>   every card and are the no-JS list): `edexcel/` went 799 KB → 88 KB.
+>   `scripts/test_question_search.js` holds all of it.
 > - **`papers` in a per-topic payload is a sparse list, and the nulls are
 >   load-bearing.** `question-search.js` reads `data.papers[q.p]` where `q.p`
 >   is an index into it (`:136`, `:393`). Re-packing the list to drop the nulls

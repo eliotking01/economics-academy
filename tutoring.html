@@ -244,11 +244,9 @@
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/tutoring.css" />
-    <!-- Calendly link widget -->
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
+    <!-- Calendly's widget.css used to be linked here, render-blocking. Since
+         2026-08-23 it is added alongside widget.js by the booking script at
+         the foot of the page, when the booking section nears the viewport. -->
   </head>
 
   <body class="is-preload">
@@ -585,7 +583,7 @@
                     <li>No minimum commitment — pay per lesson</li>
                   </ul>
                   <a
-                    href="#"
+                    href="/contact.html"
                     class="button alt small enquire-button fit"
                     data-package="One-to-One Lessons"
                     >Enquire Now</a
@@ -610,7 +608,7 @@
                     <li>Then book per half-term or term — details below</li>
                   </ul>
                   <a
-                    href="#"
+                    href="/contact.html"
                     class="button alt small enquire-button fit"
                     data-package="Group Lessons"
                     >Enquire Now</a
@@ -661,7 +659,7 @@
             <div class="tutoring-actions tutoring-actions-spaced">
               <a href="#booking" class="button">Book a Free Intro Call</a>
               <a
-                href="#"
+                href="/contact.html"
                 class="button alt enquire-button"
                 data-package="Group Lessons"
                 >Ask About Group Availability</a
@@ -824,11 +822,24 @@
                 is the right fit.
               </p>
             </header>
-            <!-- Calendly inline widget begin -->
+            <!-- Calendly inline widget begin. The link inside is the real
+                 fallback: it is what a reader sees with scripting off, before
+                 the widget has loaded, and if Calendly's script fails. The
+                 booking script at the foot of the page removes it when the
+                 widget is injected (Calendly only APPENDS its iframe; it does
+                 not clear the div). data-auto-load="false" stops widget.js
+                 initialising on its own so that the lazy path below owns it. -->
             <div
               class="calendly-inline-widget"
               data-url="https://calendly.com/kingtuition/freeintroduction"
-            ></div>
+              data-auto-load="false"
+            >
+              <a
+                class="calendly-fallback button"
+                href="https://calendly.com/kingtuition/freeintroduction"
+                >Book a free 15-minute intro call on Calendly</a
+              >
+            </div>
             <div class="tutoring-actions tutoring-actions-spaced">
               <p>
                 Need help choosing a package?
@@ -1062,11 +1073,58 @@
     <script src="/js/components/track.js"></script>
     <script src="/js/components/consent.js"></script>
     <script src="/js/main.js"></script>
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
+    <!-- Calendly, loaded lazily (2026-08-23). widget.js (and its widget.css,
+         which used to be a render-blocking link in the <head>) are requested
+         only when the booking section comes within a screen of the viewport,
+         or straight away when the page opens at #booking. Until then the div
+         holds a plain link to the same booking page, which also stays if the
+         script never arrives. Browsers without IntersectionObserver load it
+         immediately, as before. -->
+    <script>
+      (function () {
+        var host = document.querySelector(".calendly-inline-widget[data-url]");
+        if (!host) return;
+        var loaded = false;
+        function loadCalendly() {
+          if (loaded) return;
+          loaded = true;
+          var css = document.createElement("link");
+          css.rel = "stylesheet";
+          css.href = "https://assets.calendly.com/assets/external/widget.css";
+          document.head.appendChild(css);
+          var js = document.createElement("script");
+          js.src = "https://assets.calendly.com/assets/external/widget.js";
+          js.async = true;
+          js.onload = function () {
+            if (!window.Calendly || !window.Calendly.initInlineWidget) return;
+            // Calendly appends its iframe and leaves whatever is in the div,
+            // so the fallback link is removed here, once the widget is about
+            // to replace it. On any failure before this point it stays.
+            var link = host.querySelector(".calendly-fallback");
+            if (link) link.parentNode.removeChild(link);
+            window.Calendly.initInlineWidget({
+              url: host.getAttribute("data-url"),
+              parentElement: host,
+            });
+          };
+          document.body.appendChild(js);
+        }
+        if (!("IntersectionObserver" in window)) {
+          loadCalendly();
+          return;
+        }
+        var io = new IntersectionObserver(
+          function (entries) {
+            if (entries.some(function (en) { return en.isIntersecting; })) {
+              io.disconnect();
+              loadCalendly();
+            }
+          },
+          { rootMargin: "100% 0px" }
+        );
+        io.observe(host);
+      })();
+    </script>
 
     <!-- Form Submission Script -->
     <script>

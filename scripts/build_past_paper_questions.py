@@ -17,6 +17,28 @@ Run:  python3 scripts/build_past_paper_questions.py [--check]
 In Phase 3 this script also grows the theme and topic page generation. For now
 it produces the index and reports which topics clear the volume gate.
 
+PERFORMANCE PASS, 2026-08-23 (Phase 3)
+--------------------------------------
+The two board hubs were the heaviest pages on the site - edexcel/ 799 KB of
+HTML with every one of its 304 questions baked in as a card, aqa/ 620 KB -
+and then question-search.js fetched the full 424 KB index before a single
+filter worked. Two changes, both below:
+
+- A board hub bakes only the HUB_CARDS most recent questions as HTML (the
+  same set, in the same order, the component renders first), followed by a
+  static note inside the results container saying so and pointing at the
+  section and topic lists further down the page, which between them list
+  every question with no script at all. The component replaces the
+  container's contents when it initialises, so the note is gone the moment
+  the live list takes over, and the error path leaves the page as served.
+  Section and topic pages still bake every card: they ARE the no-JS list.
+- Every board and section page fetches a per-board payload,
+  past-paper-questions/<board>/questions.json - board_payload() - instead of
+  the master index. It carries every topic on the board, which is what their
+  live Topic filter lists (DO-NOT-BREAK, PH08-046), and roughly half the
+  bytes. The master index is unchanged and still what the master page and
+  build_questions.py read.
+
 Standard library only, in keeping with the rest of scripts/.
 """
 
@@ -46,6 +68,13 @@ GTAG = "G-YVCNRW4QH6"
 # every run, so topics rise above the gate as the bank grows and pages appear
 # without anyone having to remember to add them.
 GATE = 4
+
+# How many cards a BOARD hub bakes as HTML. Equal to question-search.js's
+# PAGE_SIZE on purpose: the component's first render is the same 20 in the
+# same order (newest first, question number within a year), so enabling the
+# script swaps like for like. scripts/test_question_search.js holds the two
+# numbers together.
+HUB_CARDS = 20
 
 
 def load():
@@ -289,7 +318,7 @@ def e(s):
     )
 
 
-def search_component(topic="", board="", group="", src=""):
+def search_component(topic="", board="", group="", src="", hub=False):
     """The search UI skeleton.
 
     Rendered identically on the master page, the board and section pages and the
@@ -297,9 +326,14 @@ def search_component(topic="", board="", group="", src=""):
 
     `src` overrides the payload the component fetches. A topic page has no use
     for the other 537 questions and fetching them cost it 413.7 KB, so it
-    points at its own payload instead - a median of 9.6 KB. The master page and
-    the board and section pages leave it empty and get the full index, which is
-    what they need: their Topic filter lists every topic on the board.
+    points at its own payload instead - a median of 9.6 KB. Since 2026-08-23
+    the board and section pages point at their board's payload, which carries
+    every topic on the board - what their Topic filter lists. Only the master
+    page leaves it empty and gets the full index.
+
+    `hub` marks a board hub, which bakes HUB_CARDS cards rather than all of
+    them, so its <noscript> note says where the rest are instead of claiming
+    they are all below.
 
     The controls ship VISIBLE and disabled, and question-search.js enables them
     once questions.json has loaded. They used to ship `hidden` and be revealed
@@ -364,13 +398,25 @@ def search_component(topic="", board="", group="", src=""):
         for k, lbl, all_ in fields
     )
 
+    if hub:
+        noscript_note = (
+            "                  These filters need JavaScript. The most recent\n"
+            "                  questions are listed below, and every question is\n"
+            "                  listed on its section and topic pages, linked further\n"
+            "                  down. All the paper and mark scheme links work."
+        )
+    else:
+        noscript_note = (
+            "                  These filters need JavaScript. Every question is still listed\n"
+            "                  below, grouped by topic, and all the paper and mark scheme\n"
+            "                  links work."
+        )
+
     return f"""          <div class="ppq-search" data-question-search{attr}>
             <form class="ppq-controls" data-ppq-controls aria-busy="true">
               <noscript>
                 <p class="ppq-noscript">
-                  These filters need JavaScript. Every question is still listed
-                  below, grouped by topic, and all the paper and mark scheme
-                  links work.
+{noscript_note}
                 </p>
               </noscript>
               <div class="ppq-search-field">
@@ -639,6 +685,57 @@ def static_cards(index, questions):
     return "\n".join("            " + render_card(q, index) for q in questions)
 
 
+def newest_first(index, questions):
+    """The component's default order: year descending, then question number.
+
+    question-search.js run() sorts by paper year descending and then by
+    questionNumber as a STRING ("10" before "2"), so this sorts the same way -
+    the hub's baked cards are the ones the live list shows first, in that
+    order. Ties on both keys are left in index order.
+    """
+    return sorted(
+        questions,
+        key=lambda q: (-index["papers"][q["p"]]["year"], q["questionNumber"]),
+    )
+
+
+def hub_static_note(shown, total):
+    """The sentence a board hub carries after its baked cards, inside the
+    results container so the component's first render removes it."""
+    return (
+        f'            <p class="ppq-static-note">\n'
+        f"              Showing the {shown} most recent of {total} questions. Every\n"
+        f"              question is listed on its section and topic pages below, and\n"
+        f"              the filters above search all {total}.\n"
+        f"            </p>"
+    )
+
+
+def board_payload(index, board_slug):
+    """The search payload for one board's hub and section pages.
+
+    topic_payload()'s shape, narrowed to a board: its own board record, the
+    papers it references (sparse, nulls kept - see topic_payload for why),
+    every topic on the board (which is every topic any of its questions is
+    tagged with, and is what the live Topic filter lists on these pages), and
+    its questions. About half the master index; nobody filtering Edexcel
+    downloads AQA.
+    """
+    questions = questions_for(index, board=board_slug)
+    used_papers = {q["p"] for q in questions}
+    used_topics = sorted({t for q in questions for t in q["topics"]})
+    return {
+        "count": len(questions),
+        "gate": index["gate"],
+        "boards": [b for b in index["boards"] if b["board"] == board_slug],
+        "papers": [p if i in used_papers else None
+                   for i, p in enumerate(index["papers"])],
+        "topics": {t: index["topics"][t] for t in used_topics
+                   if t in index["topics"]},
+        "questions": questions,
+    }
+
+
 # ---------------------------------------------------------------- master page
 
 
@@ -817,7 +914,7 @@ def render_board_page(index, board):
             </p>
           </section>
 
-{search_component(board=board["board"])}
+{search_component(board=board["board"], src=path + "questions.json", hub=True)}
 
           <header class="major">
             <h2>Browse by section</h2>
@@ -839,10 +936,13 @@ def render_board_page(index, board):
 
 {CTA}"""
 
+    shown = newest_first(index, qs)[:HUB_CARDS]
     body = body.replace(
         '<div class="ppq-results" data-ppq-results></div>',
         '<div class="ppq-results" data-ppq-results>\n'
-        + static_cards(index, qs)
+        + static_cards(index, shown)
+        + "\n"
+        + hub_static_note(len(shown), len(qs))
         + "\n          </div>",
     )
 
@@ -897,7 +997,7 @@ def render_group_page(index, board, group):
             </p>
           </section>
 
-{search_component(board=board["board"], group=group["slug"])}
+{search_component(board=board["board"], group=group["slug"], src=board["url"] + "questions.json")}
 
           <header class="major">
             <h2>Topics in {e(group["label"])}</h2>
@@ -1178,6 +1278,7 @@ def main():
 
     written = [INDEX]
     payloads = []
+    board_payloads = []
     paths = ["/past-paper-questions/"]
 
     INDEX.write_text(render_index(index), encoding="utf-8")
@@ -1195,6 +1296,17 @@ def main():
         if not questions_for(index, board=board["board"]):
             continue
         emit(*render_board_page(index, board))
+        # The board's payload, beside its hub, fetched by the hub and by its
+        # section pages. Minified like the others.
+        rel = board["url"].strip("/").split("/")[1:]
+        dest = PAGE_DIR.joinpath(*rel, "questions.json")
+        dest.write_text(
+            json.dumps(board_payload(index, board["board"]), ensure_ascii=False,
+                       separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        board_payloads.append(dest)
+        print(f"wrote {dest.relative_to(ROOT)} ({dest.stat().st_size / 1024:.0f} KB)")
         for group in board["groups"]:
             if not questions_for(index, board=board["board"], group=group["slug"]):
                 continue
@@ -1232,7 +1344,7 @@ def main():
     # PAGE_DIR is what keeps the master past-paper-questions/questions.json,
     # which is not one of these and must stay published - it is what the
     # master, board and section pages fetch.
-    kept_payloads = set(payloads)
+    kept_payloads = set(payloads) | set(board_payloads)
     for child in sorted(PAGE_DIR.rglob("questions.json"), reverse=True):
         if child in kept_payloads or child.parent == PAGE_DIR:
             continue

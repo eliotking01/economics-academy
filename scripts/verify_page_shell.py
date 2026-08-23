@@ -110,7 +110,9 @@ pages = site_layout.pages
 # History the numbers carry (the comments used to sit inside the literal; a
 # reseed rewrites the literal wholesale, so they live here now):
 #   root: nine one-off pages, so 9 heads / 9 shells / 9 css sets is correct.
-#     Script tails 3 -> 2 on 2026-08-14, the home-page revamp.
+#     Script tails 3 -> 2 on 2026-08-14, the home-page revamp; 2 -> 1 on
+#     2026-08-23 when tutoring.html's Calendly <script src> became an inline
+#     lazy loader, so every root page now ends in the plain two-script tail.
 #   notes-topic: 4 head shapes until 2026-08-13, 3 after PH08-039's MathJax
 #     convergence, 2 after PH08-042 moved 1-5-1's <style> block out. Declared
 #     here AND at check 5 on purpose - measured by different code.
@@ -120,7 +122,7 @@ pages = site_layout.pages
 # family: (heads, shells, tails, css sets). No comments inside the literal -
 # --reseed rewrites it wholesale.
 EXPECTED_SHAPES = {
-    "root":          (9, 9, 2, 9),
+    "root":          (9, 9, 1, 9),
     "notes-topic":   (2, 1, 1, 1),
     "notes-hub":     (2, 2, 1, 2),
     "notes-other":   (2, 3, 1, 2),
@@ -248,9 +250,13 @@ FAMILY_SCRIPT = {
     "flashcards": "/js/components/flashcards.js",
     "glossary": "/js/components/glossary-filter.js",
 }
-EXTRA_SCRIPT_PAGES = {
-    "https://assets.calendly.com/assets/external/widget.js": {"tutoring.html"},
-}
+# tutoring.html's Calendly widget.js was the one entry here until 2026-08-23,
+# when the performance pass made it lazy: an inline script at the foot of the
+# page injects widget.js (and its widget.css, formerly a render-blocking
+# <link> in the <head>) when the booking section nears the viewport. Nothing
+# third-party is a <script src> on any page now; the table stays so the next
+# one has somewhere to be declared.
+EXTRA_SCRIPT_PAGES = {}
 
 # ---- check 3 -------------------------------------------------------------
 # Fields a page writes twice must agree with themselves. PH06-029 found 18 that
