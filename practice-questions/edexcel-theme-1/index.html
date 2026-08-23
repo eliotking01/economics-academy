@@ -105,24 +105,6 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/practice-questions.css" />
-
-    <noscript>
-      <!-- The accordion collapses its panels in CSS and quiz.js reopens them.
-           With scripting off nothing could open them, so the topic links would
-           be unreachable. Show every panel instead, and drop the +/- affordance
-           that would then be lying. -->
-      <style>
-        .practice-questions-page .subtopic-list {
-          display: block;
-        }
-        .practice-questions-page .toggle-icon {
-          display: none;
-        }
-        .practice-questions-page .topic-item {
-          cursor: auto;
-        }
-      </style>
-    </noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -315,395 +297,344 @@
             </p>
           </section>
 
-          <h2>Available Topics</h2>
-          <p class="pq-note">Click any unit below to see its topics.</p>
+          <div class="resource-index-head">
+            <h2>Available Topics</h2>
+            <nav class="resource-index-jump" aria-label="Jump to a unit">
+              <a href="#unit-1-1"
+                >1.1 Nature of Economics</a
+              >
+              <a href="#unit-1-2"
+                >1.2 How Markets Work</a
+              >
+              <a href="#unit-1-3"
+                >1.3 Market Failure</a
+              >
+              <a href="#unit-1-4"
+                >1.4 Government Intervention</a
+              >
+            </nav>
+          </div>
 
-          <ul class="topic-list">
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-1"
+          <div class="resource-index">
+            <section class="resource-index-unit" id="unit-1-1">
+              <div class="resource-index-unit-head">
+                <h3>1.1 Nature of Economics</h3>
+              </div>
+              <p>Economics as a social science, positive and normative statements, the economic problem, production possibility frontiers &middot; 43 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html"
+                    ><span class="resource-index-code">1.1.1</span>
+                    <span class="resource-index-title">Economics as a Social Science</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
                     >
-                      1.1 Nature of Economics
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Economics as a social science, positive and normative statements, the economic problem, production possibility frontiers &middot; 43 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-1">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html">
-                      <span class="subtopic-name"
-                        >1.1.1 Economics as a Social Science</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.1.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-1-2-positive-normative-statements.html">
-                      <span class="subtopic-name"
-                        >1.1.2 Positive and Normative Statements</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.1.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-1-3-the-economic-problem.html">
-                      <span class="subtopic-name"
-                        >1.1.3 The Economic Problem</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.1.3"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-1-4-production-possibility-frontiers.html">
-                      <span class="subtopic-name"
-                        >1.1.4 Production Possibility Frontiers</span
-                      >
-                      <span class="subtopic-meta"
-                        >9 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.1.4"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html">
-                      <span class="subtopic-name"
-                        >1.1.5 Specialisation and the Division of Labour</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.1.5"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-1-6-types-of-economies.html">
-                      <span class="subtopic-name"
-                        >1.1.6 Types of Economies</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.1.6"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-2"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.1.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-1-2-positive-normative-statements.html"
+                    ><span class="resource-index-code">1.1.2</span>
+                    <span class="resource-index-title">Positive and Normative Statements</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
                     >
-                      1.2 How Markets Work
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Rational decision making, demand, price elasticity, supply, price determination, consumer surplus &middot; 79 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-2">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-1-rational-decision-making.html">
-                      <span class="subtopic-name"
-                        >1.2.1 Rational Decision Making</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-2-demand.html">
-                      <span class="subtopic-name"
-                        >1.2.2 Demand</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html">
-                      <span class="subtopic-name"
-                        >1.2.3 Elasticities of Demand</span
-                      >
-                      <span class="subtopic-meta"
-                        >10 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.3"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-4-supply.html">
-                      <span class="subtopic-name"
-                        >1.2.4 Supply</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.4"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html">
-                      <span class="subtopic-name"
-                        >1.2.5 Price Elasticity of Supply</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.5"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-6-price-determination.html">
-                      <span class="subtopic-name"
-                        >1.2.6 Price Determination</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.6"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-7-price-mechanism.html">
-                      <span class="subtopic-name"
-                        >1.2.7 The Price Mechanism</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.7"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-8-producer-consumer-surplus.html">
-                      <span class="subtopic-name"
-                        >1.2.8 Producer and Consumer Surplus</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.8"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html">
-                      <span class="subtopic-name"
-                        >1.2.9 Indirect Taxes and Subsidies</span
-                      >
-                      <span class="subtopic-meta"
-                        >10 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.9"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html">
-                      <span class="subtopic-name"
-                        >1.2.10 Alternative Views of Consumer Behaviour</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.2.10"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-3"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.1.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-1-3-the-economic-problem.html"
+                    ><span class="resource-index-code">1.1.3</span>
+                    <span class="resource-index-title">The Economic Problem</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
                     >
-                      1.3 Market Failure
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Types of market failure, externalities, public goods, information gaps &middot; 28 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-3">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-3-1-types-of-market-failure.html">
-                      <span class="subtopic-name"
-                        >1.3.1 Types of Market Failure</span
-                      >
-                      <span class="subtopic-meta"
-                        >5 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.3.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-3-2-externalities.html">
-                      <span class="subtopic-name"
-                        >1.3.2 Externalities</span
-                      >
-                      <span class="subtopic-meta"
-                        >10 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.3.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-3-3-public-goods.html">
-                      <span class="subtopic-name"
-                        >1.3.3 Public Goods</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.3.3"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-3-4-information-gaps.html">
-                      <span class="subtopic-name"
-                        >1.3.4 Information Gaps</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.3.4"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-4"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.1.3"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-1-4-production-possibility-frontiers.html"
+                    ><span class="resource-index-code">1.1.4</span>
+                    <span class="resource-index-title">Production Possibility Frontiers</span>
+                    <span class="resource-index-meta"
+                      >9 questions</span
                     >
-                      1.4 Government Intervention
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Government intervention in markets, government failure &middot; 16 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-4">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-4-1-government-intervention-in-markets.html">
-                      <span class="subtopic-name"
-                        >1.4.1 Government Intervention in Markets</span
-                      >
-                      <span class="subtopic-meta"
-                        >9 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.4.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-1/1-4-2-government-failure.html">
-                      <span class="subtopic-name"
-                        >1.4.2 Government Failure</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:1.4.2"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-          </ul>
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.1.4"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html"
+                    ><span class="resource-index-code">1.1.5</span>
+                    <span class="resource-index-title">Specialisation and the Division of Labour</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.1.5"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-1-6-types-of-economies.html"
+                    ><span class="resource-index-code">1.1.6</span>
+                    <span class="resource-index-title">Types of Economies</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.1.6"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-1-2">
+              <div class="resource-index-unit-head">
+                <h3>1.2 How Markets Work</h3>
+              </div>
+              <p>Rational decision making, demand, price elasticity, supply, price determination, consumer surplus &middot; 79 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-1-rational-decision-making.html"
+                    ><span class="resource-index-code">1.2.1</span>
+                    <span class="resource-index-title">Rational Decision Making</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-2-demand.html"
+                    ><span class="resource-index-code">1.2.2</span>
+                    <span class="resource-index-title">Demand</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+                    ><span class="resource-index-code">1.2.3</span>
+                    <span class="resource-index-title">Elasticities of Demand</span>
+                    <span class="resource-index-meta"
+                      >10 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.3"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-4-supply.html"
+                    ><span class="resource-index-code">1.2.4</span>
+                    <span class="resource-index-title">Supply</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.4"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html"
+                    ><span class="resource-index-code">1.2.5</span>
+                    <span class="resource-index-title">Price Elasticity of Supply</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.5"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-6-price-determination.html"
+                    ><span class="resource-index-code">1.2.6</span>
+                    <span class="resource-index-title">Price Determination</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.6"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-7-price-mechanism.html"
+                    ><span class="resource-index-code">1.2.7</span>
+                    <span class="resource-index-title">The Price Mechanism</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.7"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-8-producer-consumer-surplus.html"
+                    ><span class="resource-index-code">1.2.8</span>
+                    <span class="resource-index-title">Producer and Consumer Surplus</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.8"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-9-indirect-taxes-subsidies.html"
+                    ><span class="resource-index-code">1.2.9</span>
+                    <span class="resource-index-title">Indirect Taxes and Subsidies</span>
+                    <span class="resource-index-meta"
+                      >10 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.9"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-2-10-alternative-views-of-consumer-behaviour.html"
+                    ><span class="resource-index-code">1.2.10</span>
+                    <span class="resource-index-title">Alternative Views of Consumer Behaviour</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.2.10"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-1-3">
+              <div class="resource-index-unit-head">
+                <h3>1.3 Market Failure</h3>
+              </div>
+              <p>Types of market failure, externalities, public goods, information gaps &middot; 28 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-3-1-types-of-market-failure.html"
+                    ><span class="resource-index-code">1.3.1</span>
+                    <span class="resource-index-title">Types of Market Failure</span>
+                    <span class="resource-index-meta"
+                      >5 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.3.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-3-2-externalities.html"
+                    ><span class="resource-index-code">1.3.2</span>
+                    <span class="resource-index-title">Externalities</span>
+                    <span class="resource-index-meta"
+                      >10 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.3.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-3-3-public-goods.html"
+                    ><span class="resource-index-code">1.3.3</span>
+                    <span class="resource-index-title">Public Goods</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.3.3"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-3-4-information-gaps.html"
+                    ><span class="resource-index-code">1.3.4</span>
+                    <span class="resource-index-title">Information Gaps</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.3.4"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-1-4">
+              <div class="resource-index-unit-head">
+                <h3>1.4 Government Intervention</h3>
+              </div>
+              <p>Government intervention in markets, government failure &middot; 16 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-4-1-government-intervention-in-markets.html"
+                    ><span class="resource-index-code">1.4.1</span>
+                    <span class="resource-index-title">Government Intervention in Markets</span>
+                    <span class="resource-index-meta"
+                      >9 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.4.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-1/1-4-2-government-failure.html"
+                    ><span class="resource-index-code">1.4.2</span>
+                    <span class="resource-index-title">Government Failure</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:1.4.2"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
 
           <section class="resource-cross">
             <a href="/revision-notes/edexcel-theme-1/" class="button">Read the Theme 1 notes</a>

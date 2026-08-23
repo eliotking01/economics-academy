@@ -338,24 +338,14 @@ ID_RE = re.compile(
 )
 
 
-NOSCRIPT_ACCORDION = """
-    <noscript>
-      <!-- The accordion collapses its panels in CSS and quiz.js reopens them.
-           With scripting off nothing could open them, so the topic links would
-           be unreachable. Show every panel instead, and drop the +/- affordance
-           that would then be lying. -->
-      <style>
-        .practice-questions-page .subtopic-list {
-          display: block;
-        }
-        .practice-questions-page .toggle-icon {
-          display: none;
-        }
-        .practice-questions-page .topic-item {
-          cursor: auto;
-        }
-      </style>
-    </noscript>"""
+# Until the hub redesign of 2026-08-23 the six board index pages carried a
+# <noscript><style> block here that re-opened the unit accordion with scripting
+# off, because the accordion was collapsed in CSS and reopened by quiz.js. The
+# accordion is gone: the topic index is always open (render_unit below), so the
+# links are reachable with scripting off by construction and the block would
+# have been dead weight. DO-NOT-BREAK's entry on the six blocks is amended to
+# say so - the outcome it protects (topic links reachable without JS) is now
+# met by the default markup rather than by a fallback.
 
 SITEMAP_OPEN = "  <!-- Practice Questions -->"
 SITEMAP_CLOSE = "  <!-- /Practice Questions -->"
@@ -891,12 +881,12 @@ def shell(
 ):
     """The common page skeleton. The <head> comes from scripts/page_shell.py.
 
-    Wave 2 Phase 6. Two things about this family's <head> are its own and are
-    passed as values rather than reworded: it puts the font preconnect before
-    <title> under its own explanatory comment, and its six hub pages carry a
-    <noscript> block that DO-NOT-BREAK protects - the accordion collapses in
-    CSS and quiz.js reopens it, so with scripting off the topic links would be
-    unreachable without it.
+    Wave 2 Phase 6. One thing about this family's <head> is its own and is
+    passed as a value rather than reworded: it puts the font preconnect before
+    <title> under its own explanatory comment. (Its six board index pages also
+    carried a <noscript> block until 2026-08-23 - see the note above
+    SITEMAP_OPEN for why it went; head_extra is kept so a future page can pass
+    one.)
     """
     head = page_shell_mod.render_head({
         "title": attr(title),
@@ -1104,49 +1094,68 @@ def render_services(text, actions):
           </section>"""
 
 
-def render_unit(board_dir, unit, topics, index):
-    """One collapsible unit on a board index, matching the notes accordion."""
+def render_unit(board_dir, unit, topics):
+    """One unit of the topic index on a board index page.
+
+    Always open: a heading, the unit blurb with its question total, then every
+    topic as a link in the shared .resource-index-* grid (css/main.css). The
+    same markup the six notes board hubs use, so a student moving from notes
+    to practice sees one pattern. Until 2026-08-23 this was a collapsible
+    accordion matching the notes hubs' old one; it hid every topic link until
+    quiz.js ran, and needed a <noscript> fallback to be reachable without it.
+    The per-topic question count and the empty span quiz.js fills with the
+    student's last score are unchanged.
+    """
     title, blurb = UNITS.get(
         (board_dir, unit), (f"Unit {unit}", "")
     )
     count = sum(len(t["questions"]) for t in topics)
     items = "\n".join(
-        f"""                  <li class="subtopic-item">
-                    <a href="{page_url(t)}">
-                      <span class="subtopic-name"
-                        >{t['spec']} {t['shortTitle']}</span
-                      >
-                      <span class="subtopic-meta"
-                        >{len(t['questions'])} questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="{t['board']}:{t['spec']}"
-                      ></span>
-                    </a>
-                  </li>"""
+        f"""                <li>
+                  <a href="{page_url(t)}"
+                    ><span class="resource-index-code">{t['spec']}</span>
+                    <span class="resource-index-title">{t['shortTitle']}</span>
+                    <span class="resource-index-meta"
+                      >{len(t['questions'])} questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="{t['board']}:{t['spec']}"
+                    ></span></a
+                  >
+                </li>"""
         for t in sorted(topics, key=lambda t: spec_key(t["spec"]))
     )
-    return f"""              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-{index}"
-                    >
-                      {unit} {title}
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>{blurb} &middot; {count} questions</p>
-
-                <ul class="subtopic-list" id="subtopic-{index}">
+    return f"""            <section class="resource-index-unit" id="{unit_id(unit)}">
+              <div class="resource-index-unit-head">
+                <h3>{unit} {title}</h3>
+              </div>
+              <p>{blurb} &middot; {count} questions</p>
+              <ul class="resource-index-topics">
 {items}
-                </ul>
-              </li>"""
+              </ul>
+            </section>"""
+
+
+def unit_id(unit):
+    """Fragment id of a unit's panel, matching the notes hubs: 1.3 -> unit-1-3."""
+    return "unit-" + unit.replace(".", "-")
+
+
+def render_jump(board_dir, units):
+    """The row of unit anchors under the index heading."""
+    links = "\n".join(
+        f"""              <a href="#{unit_id(u)}"
+                >{u} {UNITS.get((board_dir, u), (f"Unit {u}", ""))[0]}</a
+              >"""
+        for u in units
+    )
+    return f"""          <div class="resource-index-head">
+            <h2>Available Topics</h2>
+            <nav class="resource-index-jump" aria-label="Jump to a unit">
+{links}
+            </nav>
+          </div>"""
 
 
 def render_board_index(board_dir, topics):
@@ -1169,8 +1178,8 @@ def render_board_index(board_dir, topics):
     for t in topics:
         by_unit.setdefault(unit_of(t["spec"]), []).append(t)
     units = "\n".join(
-        render_unit(board_dir, u, by_unit[u], i)
-        for i, u in enumerate(sorted(by_unit, key=spec_key), start=1)
+        render_unit(board_dir, u, by_unit[u])
+        for u in sorted(by_unit, key=spec_key)
     )
 
     body = f"""      <main id="main" class="practice-questions-page">
@@ -1195,12 +1204,11 @@ def render_board_index(board_dir, topics):
             </p>
           </section>
 
-          <h2>Available Topics</h2>
-          <p class="pq-note">Click any unit below to see its topics.</p>
+{render_jump(board_dir, sorted(by_unit, key=spec_key))}
 
-          <ul class="topic-list">
+          <div class="resource-index">
 {units}
-          </ul>
+          </div>
 
 {render_cross_strip(
     # D45 line: the notes and past-papers buttons restyle links this page
@@ -1256,7 +1264,6 @@ def render_board_index(board_dir, topics):
         ),
         body=body,
         scripts=("/js/components/quiz.js",),
-        head_extra=NOSCRIPT_ACCORDION,
     )
 
 

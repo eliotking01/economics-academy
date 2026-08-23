@@ -428,6 +428,18 @@ generator writes them deliberately and explains why in a comment. Three of the
 site's nine `<style>` blocks are genuine violations; these six are not.
 PH08-042.
 
+> **AMENDED 2026-08-23, hub redesign (D56).** The six blocks are gone, and
+> what this entry protects is intact: the OUTCOME was always "topic links
+> reachable with scripting off", and the `<noscript>` was the mechanism. The
+> accordion it re-opened no longer exists - the topic index on the six
+> practice board hubs AND the six notes board hubs (which never had a
+> fallback, and so were unreachable with JS off) is now always open in the
+> default markup, `.resource-index-*` in `css/main.css`, with no script and no
+> `display: none` anywhere in it. The site now carries **0** `<style>` blocks.
+> `scripts/verify_page_shell.py`'s `mcq-hub` head-shape count went 2 → 1 in
+> the same commit. Reintroducing a collapsed-by-default index on any hub is
+> what this entry now forbids.
+
 **The `size-adjust` fallback `@font-face` rules in `css/pages/quiz.css` are
 deliberate CLS work.** `"Merriweather Fallback"` and `"Source Sans Pro Fallback"`
 use `src: local(...)` with metric adjustment so text does not reflow when the web
@@ -1194,7 +1206,8 @@ every loss; it is not silenced, only not counted. A commit that means to drop
 one `<section>` and also drops an `<a>` from the same page still fails.
 
 **The three real `<style>` blocks are gone and the six protected ones are all
-that remain.** 0 real, 6 inside `<noscript>`. The two diagram galleries share
+that remain.** 0 real, 6 inside `<noscript>` (and since 2026-08-23, 0 of
+those too - see the amendment above). The two diagram galleries share
 `css/pages/revision-notes-diagrams.css` — they were the same file twice, 3,502
 bytes each, differing only in `.macro-` against `.micro-`, so each rule carries
 both scopes rather than being duplicated. **The `.comp-spectrum` rules were

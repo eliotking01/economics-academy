@@ -1833,3 +1833,24 @@ rather than merely imperfect, and it should be reopened properly.
 
 `python3 seo/tools/gsc_reconcile.py <export>` reports this automatically now,
 under "Indexed, but not a URL this site publishes".
+
+## H1 — five AQA hub unit blurbs describe a different unit (found 2026-08-23, not fixed)
+
+Seen while rebuilding the topic index on the notes hubs (D56). The one-line
+blurb under five unit headings does not describe that unit. The same blurbs
+are copied verbatim into `scripts/build_questions.py`'s `UNITS` table, so the
+practice-questions hubs carry the same five. Logged, not fixed — hard rule 2.
+
+| Hub | Unit heading | Blurb on the page | What the unit is actually about |
+| --- | --- | --- | --- |
+| `revision-notes/aqa-a2-micro/` | 1.7 The Distribution of Income and Wealth: Poverty and Inequality | "Regulation, competition policy, public ownership" (the same line as 1.8's) | income and wealth distribution, poverty, redistribution policy |
+| `revision-notes/aqa-a2-macro/` | 2.3 Economic Performance | "Fiscal, monetary, supply-side policies" | growth and the cycle, unemployment, inflation, policy conflicts |
+| `revision-notes/aqa-a2-macro/` | 2.4 Financial Markets and Monetary Policy | "Globalisation, trade, development" | financial markets, banks, central banks, regulation |
+| `revision-notes/aqa-a2-macro/` | 2.5 Fiscal Policy and Supply-Side Policies | "Money, banking, financial sector" | fiscal policy, supply-side policy |
+| `revision-notes/aqa-a2-macro/` | 2.6 The International Economy | "Taxation, public spending, fiscal policy" | globalisation, trade, balance of payments, exchange rates, development |
+
+On the AQA macro hub the blurbs for 2.3–2.6 read as though the list was
+shifted down by one row when it was written (2.5's is 2.4's subject, 2.6's is
+2.5's, and 2.6 has no blurb of its own anywhere). Fixing it is five short
+lines on two hub slices plus the matching `UNITS` rows, and needs Eliot's
+wording and a `Text-Change:` trailer for each affected hub on each family.

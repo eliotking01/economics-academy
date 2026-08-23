@@ -21,8 +21,9 @@ galleries, which share `revision-notes-diagrams.css`.
 - **`:root` colour tokens live in `revision-notes-textbook.css` and are for the
   notes only.** Elsewhere use hex. The brand accent is `#d52349`.
 - **Reuse the `.resource-*` block at the END of `main.css`** — the shared hero,
-  stat strip, card grid, cross strip and services panel used by all four
-  resource sections. Don't fork it.
+  stat strip, card grid, cross strip, services panel and (since 2026-08-23)
+  the `.resource-index-*` topic index used by the notes and practice board
+  hubs. Don't fork it.
 - Watch `#main .row > div[class*="col-"]` (specificity 1,2,1) — a bare class
   selector loses to it. The contact form's honeypot rendered visibly until its
   selector was raised. Check computed style in a real render for anything that

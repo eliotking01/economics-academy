@@ -325,10 +325,11 @@ def render_head(v: dict) -> str:
     out.append(tag("link", [("rel", "stylesheet"), ("href", "/css/main.css")]))
     for href in v.get("pageStylesheets", []):
         out.append(tag("link", [("rel", "stylesheet"), ("href", href)]))
-    # DO-NOT-BREAK: the six <noscript> blocks on the practice-questions hubs
-    # re-open an accordion that CSS collapses and quiz.js re-opens, so with
-    # scripting off the topic links would be unreachable. Lifted verbatim,
-    # never rebuilt.
+    # A page's own <noscript> block, lifted verbatim and never rebuilt. Until
+    # the hub redesign of 2026-08-23 the six practice-questions board hubs
+    # carried one that re-opened an accordion CSS collapsed and quiz.js
+    # re-opened; the accordion is gone and no page passes one today, but the
+    # value stays so a future page can.
     if v.get("headNoscript"):
         out.append(v["headNoscript"])
 
@@ -758,9 +759,10 @@ def extract(source: str) -> dict:
     # script, and emitting it before would reorder the head. PH08-042 records
     # the block itself as a violation to move into a stylesheet later; that is
     # a normalisation with its own commit, not something to do while migrating.
-    # Search with the <noscript> blocks removed: DO-NOT-BREAK's six
-    # practice-questions hubs carry a <style> INSIDE their <noscript>, and
-    # matching it here emitted the block a second time outside the noscript.
+    # Search with the <noscript> blocks removed: the six practice-questions
+    # board hubs carried a <style> INSIDE their <noscript> until 2026-08-23,
+    # and matching it here emitted the block a second time outside the
+    # noscript. Kept so the trap cannot come back with the next such page.
     h_no_ns = re.sub(r"<noscript>.*?</noscript>", "", h, flags=re.S)
     st = re.search(r"[ \t]*(?:<!--[^>]*-->\n[ \t]*)?<style>.*?</style>",
                    h_no_ns, re.S)
