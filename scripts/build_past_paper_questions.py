@@ -584,7 +584,6 @@ def page_shell(title, desc, path, crumbs, body):
     values = shell.head_values(title, desc, url,
                                ["/css/pages/past-paper-questions.css"], esc=e)
     values.update({
-        "preconnectEarly": True,
         "jsonldBeforeIcons": [collection, breadcrumb_ld(crumbs)],
         # This family escapes non-ASCII in its JSON-LD where the notes pages
         # carry literal characters - 87 pages emit \u2014 for an em dash. Both

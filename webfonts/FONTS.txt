@@ -1,0 +1,23 @@
+Self-hosted web fonts - economicsacademy.co.uk
+==============================================
+
+Added 2026-08-23 (performance pass, Phase 2). Until then every page linked a
+Google Fonts stylesheet; these are the same faces, served from this origin.
+
+Every .woff2 here is the static latin-subset file Google Fonts itself serves
+(fetched 2026-08-23 from fonts.gstatic.com, as delivered to a browser without
+variable-font support), unmodified:
+
+  source-sans-pro-300 / -300-italic / -400 / -700 / -900   Source Sans Pro v23
+  open-sans-400 / -600 / -700                             Open Sans v44
+  merriweather-400 / -400-italic / -700                    Merriweather v33
+
+All three families are licensed under the SIL Open Font License 1.1 - see
+OFL-sourcesanspro.txt (Adobe), OFL-opensans.txt, OFL-merriweather.txt.
+
+fa-solid-900.woff2 is a subset of Font Awesome Free 5.15.4 (its fonts are
+SIL OFL 1.1); scripts/subset_fontawesome.py regenerates it.
+
+The @font-face rules are in css/main.css (Source Sans Pro, Open Sans) and in
+css/pages/revision-notes-textbook.css and css/pages/quiz.css (Merriweather).
+Do not swap Source Sans Pro for Source Sans 3 - the glyphs differ.

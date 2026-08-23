@@ -33,11 +33,17 @@ THE THREE CHECKS
 1. Every page that loads a `css/pages/*.css` loads `css/main.css` first.
    462 of 462 today. This is the one the 4.6 decline rests on.
 
-2. The order is fontawesome -> the Google Fonts stylesheet -> `css/main.css`.
-   `4db232c` hoisted the first two out of two `@import` rules in main.css and
-   into every `<head>` in exactly that order, to remove a render-blocking
-   chain; DO-NOT-BREAK.md records that it must not be reversed, and until now
-   only the *presence* of those links was checked, never their order.
+2. The order is fontawesome -> `css/main.css`, and NO page links
+   fonts.googleapis.com or fonts.gstatic.com anywhere in its <head>.
+   `4db232c` hoisted fontawesome and the Google Fonts stylesheet out of two
+   `@import` rules in main.css and into every `<head>` in that order, to
+   remove a render-blocking chain; DO-NOT-BREAK.md records that it must not
+   be reversed. On 2026-08-23 the performance pass self-hosted the fonts
+   (`/webfonts/`, @font-face in the stylesheets, the body face preloaded),
+   so the Google Fonts link and its preconnect pair are gone from all 463
+   pages and this check holds them at zero - one coming back is the old
+   render-blocking third-party chain coming back. The fontawesome link stays
+   a direct `<link>` before main.css, as 4db232c left it.
 
 3. Only named pages load two `css/pages/*.css` sheets - three of them since
    2026-08-13, see TWO_SHEET_PAGES below. PH08-038's finding that
@@ -69,7 +75,8 @@ HREF = re.compile(r'href="([^"]+)"', re.I)
 REL = re.compile(r'rel="([^"]+)"', re.I)
 
 FONTAWESOME = "fontawesome-all.min.css"
-GOOGLE_FONTS = "fonts.googleapis.com"
+GOOGLE_ORIGINS = ("fonts.googleapis.com", "fonts.gstatic.com")
+BODY_FONT_PRELOAD = re.compile(r'rel="preload"\s+href="/webfonts/[^"]+\.woff2"\s+as="font"')
 MAIN = "/css/main.css"
 PAGE_DIR = "/css/pages/"
 
@@ -129,7 +136,16 @@ def main() -> int:
         rel = path.relative_to(REPO).as_posix()
         if not site_layout.published(rel, ex):
             continue
-        sheets = stylesheets(path.read_text(encoding="utf-8", errors="ignore"))
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        head = text.split("</head>", 1)[0]
+        for origin in GOOGLE_ORIGINS:
+            if origin in head:
+                problems.append(f"{rel}: <head> references {origin} - the fonts "
+                                "are self-hosted under /webfonts/ (2026-08-23)")
+        if not BODY_FONT_PRELOAD.search(head):
+            problems.append(f"{rel}: <head> does not preload the body face "
+                            "(page_shell.BODY_FONT)")
+        sheets = stylesheets(text)
         page_idx = [i for i, s in enumerate(sheets) if PAGE_DIR in s]
         if not page_idx:
             continue
@@ -139,7 +155,6 @@ def main() -> int:
 
         i_main = first(sheets, lambda s: s.endswith(MAIN))
         i_fa = first(sheets, lambda s: s.endswith(FONTAWESOME))
-        i_gf = first(sheets, lambda s: GOOGLE_FONTS in s)
 
         # 1. main.css first, then the page sheet
         if i_main is None:
@@ -153,12 +168,10 @@ def main() -> int:
         # 2. the 4db232c order
         if i_fa is None:
             problems.append(f"{rel}: no direct <link> to {FONTAWESOME} (4db232c)")
-        if i_gf is None:
-            problems.append(f"{rel}: no direct <link> to the Google Fonts stylesheet")
-        if None not in (i_fa, i_gf, i_main) and not i_fa < i_gf < i_main:
+        if None not in (i_fa, i_main) and not i_fa < i_main:
             problems.append(
-                f"{rel}: stylesheet order is not fontawesome < fonts.googleapis "
-                f"< main.css (indices {i_fa}, {i_gf}, {i_main}) — 4db232c reversed"
+                f"{rel}: stylesheet order is not fontawesome < main.css "
+                f"(indices {i_fa}, {i_main}) — 4db232c reversed"
             )
 
     # 3. the page-sheet pairing
@@ -182,7 +195,8 @@ def main() -> int:
             print(f"  {p}")
         return 1
 
-    print("main.css precedes every page stylesheet, and 4db232c's order holds")
+    print("main.css precedes every page stylesheet, 4db232c's order holds, "
+          "no page links a Google Fonts origin, every page preloads the body face")
     return 0
 
 

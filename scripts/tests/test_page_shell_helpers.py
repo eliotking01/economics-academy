@@ -97,12 +97,19 @@ class HeadValueTests(unittest.TestCase):
         v = ps.head_values("It's", "x", "u", [], esc=lambda s: s)
         self.assertEqual(v["title"], "It's")
 
-    def test_render_head_orders_the_preconnect_by_value(self):
+    def test_render_head_self_hosts_the_fonts(self):
+        # Performance pass, 2026-08-23: no Google Fonts origin anywhere, the
+        # body face preloaded before the stylesheets, FontAwesome before
+        # main.css (4db232c), and a page's extra preconnect still honoured.
         base = ps.head_values("T", "D", "https://economicsacademy.co.uk/p/", ["/css/p.css"])
-        early = ps.render_head({**base, "preconnectEarly": True})
-        late = ps.render_head({**base})
-        self.assertLess(early.index("preconnect"), early.index("<title>"))
-        self.assertGreater(late.index("preconnect"), late.index("<title>"))
+        head = ps.render_head({**base, "extraPreconnects": ["https://cdn.example"]})
+        self.assertNotIn("fonts.googleapis.com", head)
+        self.assertNotIn("fonts.gstatic.com", head)
+        self.assertIn('rel="preload"', head)
+        self.assertIn(ps.BODY_FONT, head)
+        self.assertLess(head.index(ps.BODY_FONT), head.index("fontawesome-all"))
+        self.assertLess(head.index("fontawesome-all"), head.index("/css/main.css"))
+        self.assertLess(head.index("https://cdn.example"), head.index(ps.BODY_FONT))
 
     def test_tag_wraps_at_print_width(self):
         short = ps.tag("meta", [("name", "x"), ("content", "y")])

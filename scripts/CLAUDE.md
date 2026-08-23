@@ -40,13 +40,16 @@ sources together.
 
 `bake_templates.py --apply` owns the baked header, footer, script tail and (since
 2026-08-23) the `<head>` analytics loader (`sync_gtag()`, from `page_shell.GTAG`)
+and the stylesheet block (`sync_fonts()`, from `page_shell.stylesheet_block()` -
+the hoist comment, the body-face preload, fontawesome, main.css)
 on the 17 hand-written pages; the other 446 take theirs from `page_shell.py`, which all
 five page generators import. Since 2026-08-23 `page_shell.py` also owns the
 page skeleton (`page()`, `container()`), the shared head values
 (`head_values()`, `social()`) and the breadcrumb builders (`breadcrumb_ld()`,
 `breadcrumb_html()`); the four generators that used to carry their own copies
 pass their family's quirks in as values (the ppq family's `e()` and
-`jsonldAsciiEscaped`, the questions family's early preconnect comment). What
+`jsonldAsciiEscaped`; the questions family's early preconnect comment went
+with the Google Fonts link on 2026-08-23). What
 the site is made of - the generator list, the publish rules, `family_of()`,
 `pages()` - is `site_layout.py`, imported by generators and verifiers alike;
 **a generator never imports a verifier** (`scripts/tests/test_site_layout.py`

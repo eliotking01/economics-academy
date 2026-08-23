@@ -94,7 +94,7 @@ literal on all 463 pages, written into the 17 hand-written pages by
 `bake_templates.sync_gtag()`) only defines `window.eaLoadAnalytics()` — the
 standard snippet, gtag assigned to `window`, the script tag built in JS —
 and calls it if `localStorage["ea-consent"]` is `"yes"`. Otherwise gtag.js
-is never requested and no analytics cookie is set (Google Fonts still load;
+is never requested and no analytics cookie is set (Google Fonts still loaded then — self-hosted since the performance pass;
 they are not analytics). `js/components/consent.js`, now fourth in
 `page_shell.SCRIPT_TAIL`, asks once: one compact bar at the bottom of the
 viewport, on first scroll or after 1.5 s, no overlay, nothing blocked; two

@@ -857,31 +857,25 @@ def render_page(topic, siblings=(), ppq=None):
 
 
 
-EARLY_PRECONNECT_COMMENT = """    <!-- The font stylesheet is linked in <head> below, so the preload scanner
-         finds it immediately. gstatic is still a second origin, discovered only
-         once that stylesheet parses, so warming both here still pays. -->"""
-
-
 def shell(
     *, title, desc, url, css, jsonld, breadcrumb, body, scripts=(),
     og_type="website", head_extra="",
 ):
     """The common page skeleton. The <head> comes from scripts/page_shell.py.
 
-    Wave 2 Phase 6. One thing about this family's <head> is its own and is
-    passed as a value rather than reworded: it puts the font preconnect before
-    <title> under its own explanatory comment. (Its six board index pages also
-    carried a <noscript> block until 2026-08-23 - see the note above
-    validate() ("Until the hub redesign") for why it went; head_extra is kept so a future page can pass
+    Wave 2 Phase 6. Until 2026-08-23 one thing about this family's <head> was
+    its own and passed as a value: it put the font preconnect before <title>
+    under its own comment - gone with the Google Fonts link when the fonts
+    were self-hosted. (Its six board index pages also carried a <noscript>
+    block until 2026-08-23 - see the note above validate() ("Until the hub
+    redesign") for why it went; head_extra is kept so a future page can pass
     one.) Its BreadcrumbList sits AFTER the stylesheets where the other three
-    families put it before the favicons - also a value, jsonldAfterStyles.
+    families put it before the favicons - a value, jsonldAfterStyles.
     2026-08-23: the skeleton and the og/twitter block come from page_shell.py.
     """
     values = page_shell_mod.head_values(title, desc, url, [css],
                                         og_type=og_type, esc=attr)
     values.update({
-        "preconnectEarly": True,
-        "earlyPreconnectComment": EARLY_PRECONNECT_COMMENT,
         "jsonldBeforeIcons": [jsonld],
         "jsonldAfterStyles": [breadcrumb],
         "headNoscript": head_extra or None,

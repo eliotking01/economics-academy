@@ -508,7 +508,8 @@ specificity is unchanged.
 > and it must stay there.** Load order is now an invariant, not an accident. It
 > asserts `css/main.css` precedes every `css/pages/*.css` (462/462), that
 > `4db232c`'s order fontawesome → Google Fonts → main.css holds (462/462, which
-> nothing checked before), and that
+> nothing checked before; since 2026-08-23 fontawesome → main.css, with the
+> Google origins held at 0/463 and the body-face preload at 463/463), and that
 > `revision-notes/macro-application/index.html` is the **only** page loading two
 > page sheets. **Wave 2's `page_shell.py` is the thing this exists for** — a
 > generated `<head>` that emits the same links in a different order breaks two
