@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Topic-page tail redesign — the 166 notes pages | on branch `feature/topic-tail`, PR open | — | — |
 | Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
 | Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
 | Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
@@ -78,6 +79,83 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## Topic-page tail redesign — the 166 notes pages (2026-08-23) — ON BRANCH, PR open
+
+**STATE: PR open on `feature/topic-tail`; not merged.** Eliot approved the
+design from a static mock (`_working/topic-tail/`, on the branch: the mock
+page, before/after screenshots at 1280 and 360 px, `PROPOSAL.md` with every
+string) and the wording as proposed, and chose to strip the legacy tail out
+of the slices rather than have the generator skip it. `docs/audit/DECISIONS.md`
+D58. Update this heading to LIVE with the merge commit when it lands.
+
+**What it fixes.** Every topic page ended in a stack of six full-width boxes:
+related-topic pills, an author box, a three-button "Ready to apply these
+notes?" box, then "Test yourself", "Revise with flashcards" and "Past paper
+questions" cards. The paid ask sat above the free next steps; every link to
+the money pages was button copy; and 24 of the 139 past-paper sentences
+under-reported their page (12 tagged topics had none) because the scripts
+that placed them wrote into rendered pages the next build overwrote. Now,
+after the last section: related topics (plain links, the twin sentence) →
+"Carry on with this topic" (practice questions, flashcards, past-paper
+questions as three quiet panels, the diagram-gallery line under them where
+a page has one) → a slimmer "About the author" → one sentence with two
+real-text links ("online A-Level Economics tutor", "A-Level Economics essay
+marking") → prev/next. ~1,150 px → ~530 px at 1280; ~2,100 px → ~1,250 px at
+360. Every destination kept, exactly once per page.
+
+| Changed | Where |
+| --- | --- |
+| The tail builder: `with_tail()`, `next_steps_block()`, `past_paper_note()`, the `FLASHCARDS_OF_DIR` / `PAST_PAPERS_HUB` / `SERVICES` constants, the full chrome-string list; `CTA_RE` and the two insert-above-the-cta functions gone | `scripts/notes_extras.py` |
+| The 166 slices end at their last `</section>` (+ the optional diagram-gallery line): 5,567 lines deleted, 0 added, verified block-for-block | `notes-data/topics/` |
+| `CONTAINER_CLOSE` imported from notes_extras; docstring | `scripts/build_notes_pages.py` |
+| `load_bank()` and `PAPER_DIRS` split out of `load()` so the notes tail counts from the bank's source files | `scripts/build_past_paper_questions.py` |
+| `.notes-questions-link` rules and the related-pill / author-box rules replaced by the `.topic-related` / `.topic-next` / `.topic-author` / `.topic-services` block at the end; `.notes-cta` kept (galleries, macro-application); label teal `#2a8998` → `#1f6b77` | `css/pages/revision-notes-textbook.css` |
+| Check 6 reseeded: 6 spine shapes → 1 | `scripts/verify_page_shell.py` |
+| Stub slice no longer copies a tail; checklist steps 4–5 | `scripts/new_topic.py` |
+| **Retired** (deleted): `append_questions_link.py`, `append_past_papers_link.py` | `scripts/` |
+| New: derived sentence, count agreement with the index, tail shape | `scripts/tests/test_notes_extras.py` |
+| D58; the `notes-cta` board-differentiation entry amended | `docs/audit/DECISIONS.md`, `docs/audit/DO-NOT-BREAK.md` |
+| `revision-notes/`, `notes-data/`, `questions-data/`, `scripts/` CLAUDE.md | docs |
+
+### Three things a future session needs to know
+
+1. **The tail is a pure function of source data, and the order of
+   `site_layout.GENERATORS` is why it reads SOURCE.** `build_notes_pages.py`
+   runs first; `questions.json` is written later in the same build. So the
+   past-paper line counts from `past-paper-questions-data/` through
+   `build_past_paper_questions.load_bank()` under the same two conditions
+   the index publishes a question (tagged, has a mark scheme), and
+   `test_notes_extras.py` fails if the two ever disagree. The quiz line is
+   `questions-data/`'s `notesTeaser`; a topic page cannot build without its
+   `questions-data/` record.
+2. **The strip commit touched every slice without changing a word, and
+   `rewrite_notes_meta.py` dates a page from its slice's last commit.** Do
+   not run `rewrite_notes_meta.py --apply` expecting it to leave the dates
+   alone — it would bump all 166 "Updated" dates to the strip. Eliot's call:
+   `dateModified` is not refreshed for this change (the three previous chrome
+   passes did not either). If a real content edit needs a refresh on one
+   page, that page's date moves and the other 165 must not; check the diff.
+3. **The board past-papers link is still DO-NOT-BREAK and still per page** —
+   now the last sentence of the past-paper panel, or the panel itself on the
+   15 pages with no tagged questions. The 36 topics whose questions include
+   Edexcel AS papers now say so ("A-Level and AS papers"); the old sentence
+   called them all A-Level.
+
+**Wording that changed** (all chrome, all declared with `Text-Change:` on
+166 pages; the full list is `_working/topic-tail/PROPOSAL.md`): new "Carry
+on with this topic", the services sentence, "Whole papers and mark schemes:
+<Board> past papers."; the three button labels became sentence-case links
+("Practice questions: 1.2.2 Demand", "Flashcards: 1.2.2 Demand", "Past paper
+questions: 1.2.2 Demand"); "Flip through the Theme 1 deck …" → "The Theme 1
+deck …"; the past-paper sentence is derived and drops the topic name;
+removed: "Ready to apply these notes?", the three buttons, the three `<h2>`s.
+
+### Still open from this work
+
+Nothing on the site. A newsletter form has an insertion point (a comment in
+`notes_extras.tail_blocks()`, after the author and before the paid sentence)
+for when Eliot settles a sending rhythm — OWNER-TODO "Newsletter, ongoing".
 
 ## Tutoring enquiry form — board, year, enquirer, days (2026-08-23) — LIVE (merged 2026-08-23, `ab255c6`, PR #21)
 

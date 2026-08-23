@@ -9,12 +9,24 @@ Excluded from publishing.
 - `topics/<board-dir>/<slug>.json` — its lifted metadata (`path`, `head`, `body`).
 - `hubs/` — the same pair for the seven hub pages.
 
-**One thing on a topic page is NOT in its slice.** The previous/next topic row
-at each end of `.notes-container` is spliced in by `build_notes_pages.py` at
-build time, from the chain in `scripts/notes_sequence.py`. Do not paste it into
+**The chrome on a topic page is NOT in its slice.** The previous/next topic
+row at each end of `.notes-container` is spliced in by `build_notes_pages.py`
+at build time, from the chain in `scripts/notes_sequence.py`; the sub-label,
+byline, contents list and the whole tail after the last section (related
+topics, the practice / flashcards / past-paper panels, author, services) come
+from `scripts/notes_extras.py`, derived from data. Do not paste any of it into
 a slice: a slice is a record of the page's *content*, and 166 hand-inserted
-copies is the scripted bulk edit hard rule 6 forbids. A new topic gets its row
-automatically as soon as its hub links to it.
+copies is the scripted bulk edit hard rule 6 forbids. **A topic slice ends at
+its last `</section>`** - plus, on the Edexcel pages that carry diagrams, one
+`<p class="notes-diagrams-link">` - and then the container close; the build
+fails on anything else there. (Until 2026-08-23 every slice ended in a
+`notes-cta` button box and two or three resource blocks; they were stripped
+in the topic-tail redesign - `git log -- notes-data/topics` shows the one
+commit, and it is the one commit that touched every slice without changing
+a word of content. `seo/tools/rewrite_notes_meta.py` takes `dateModified`
+from the slice's last commit, so do not take that commit as a content edit.)
+A new topic gets its row and its tail automatically as soon as its hub links
+to it and its `questions-data/` record exists.
 
 **Edit here, then run `python3 scripts/build.py`.** Never edit the rendered
 page in `revision-notes/`; the next build overwrites it. (`build_notes_pages.py`

@@ -27,12 +27,20 @@ update date under the <h1>, a stable id on every <h2>, a table of contents
 where a page has four or more sections, and a related-topics block carrying
 the twin on the other board. On 2026-08-22 two more joined them from the same
 module, once Eliot had supplied the wording: an author byline under the
-sub-label and an "About the author" box above the notes-cta.
+sub-label and an "About the author" box.
+
+On 2026-08-23 the topic-tail redesign made the WHOLE tail generated: the
+three free next steps (quiz, flashcards, past-paper questions - counts and
+labels derived from questions-data/ and the past-paper bank's source files)
+and the one services sentence now come from notes_extras.with_tail(), and
+the legacy button box and resource blocks were stripped out of the 166
+slices in the same change. A slice ends at its last </section> (plus, on 47
+Edexcel pages, one diagram-gallery paragraph that the tail re-homes).
 
 The slices on disk are still verbatim byte slices and are still never written
-to; what changes is only what this generator wraps around them. Every one of
-these blocks fails the build rather than degrading if its anchor stops
-matching - notes_extras.fail().
+to by any generator; what changes is only what this generator wraps around
+them. Every one of these blocks fails the build rather than degrading if its
+anchor stops matching - notes_extras.fail().
 
 DIAGRAMS ARE OFFERED AS WEBP FIRST (2026-08-23)
 -----------------------------------------------
@@ -105,7 +113,9 @@ SEVEN_SCRIPTS = page_shell.script_tail()
 # its content with this exact line, at this exact indent, once, and every one
 # ends with this exact string.
 CONTAINER_OPEN = '          <div class="notes-container">\n'
-CONTAINER_CLOSE = "\n          </div>"
+# The close is declared in notes_extras, which splices the tail against it
+# first; restating it here would be a second copy of the same anchor.
+CONTAINER_CLOSE = notes_extras.CONTAINER_CLOSE
 
 # The three delimiters page_shell.MATHJAX_CONFIG_BODY tells MathJax to typeset.
 # Anything else - a lone `$`, a `\frac` outside delimiters - is not maths to

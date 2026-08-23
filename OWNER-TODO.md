@@ -220,7 +220,10 @@ rebuild and the checks.
 ## Newsletter, ongoing
 
 - [ ] Decide a realistic sending rhythm — even one email per half-term is
-      fine; the page promises "occasional", so anything beats silence.
+      fine; the page promises "occasional", so anything beats silence. When
+      you do, the 166 topic pages have a ready slot for a one-field signup
+      (a comment in `scripts/notes_extras.py`, `tail_blocks()`, between the
+      author and the services sentence) — say the word and it can be built.
 - [ ] First email idea: new-resource roundup (flashcards, question finder,
       glossary) — the six home-page cards are effectively the draft.
 - [ ] Optional, ~5 minutes: a one-email welcome automation in Kit (Automate →

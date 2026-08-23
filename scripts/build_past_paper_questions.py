@@ -77,23 +77,40 @@ GATE = 4
 HUB_CARDS = 20
 
 
-def load():
-    taxonomy = json.loads((DATA / "taxonomy.json").read_text(encoding="utf-8"))
+# The extraction directories. Two extractors write here: the Swift/PDFKit one
+# for Edexcel and the pdfplumber one for AQA. Both emit the same record shape,
+# so from this point on the board is just a field.
+#
+# Edexcel spans two qualifications in two directories - 9EC0 and 8EC0 each
+# have a Paper 1 in the same series, so one directory would mean colliding
+# filenames. They share a board, and their questions mix freely from here on:
+# the qualification is a field and a badge, not a separate namespace.
+PAPER_DIRS = ("edexcel-a", "edexcel-a-as", "aqa")
+
+
+def load_bank():
+    """(tags, papers): the hand-written tags and every extracted paper.
+
+    Split out of load() on 2026-08-23 so that scripts/notes_extras.py can
+    count a topic's tagged questions from the SAME source files this index is
+    built from - without reading taxonomy.json, which is itself generated,
+    or questions.json, which this script writes AFTER the notes pages are
+    built (site_layout.GENERATORS). A question counts there under exactly
+    the two conditions it is published here: it carries a tag, and it has a
+    mark scheme - see the loop in build().
+    """
     tags = json.loads((DATA / "tags.json").read_text(encoding="utf-8"))
     tags.pop("_comment", None)
-
-    # Two extractors write here: the Swift/PDFKit one for Edexcel and the
-    # pdfplumber one for AQA. Both emit the same record shape, so from this
-    # point on the board is just a field.
-    #
-    # Edexcel spans two qualifications in two directories - 9EC0 and 8EC0 each
-    # have a Paper 1 in the same series, so one directory would mean colliding
-    # filenames. They share a board, and their questions mix freely from here on:
-    # the qualification is a field and a badge, not a separate namespace.
     papers = []
-    for board_dir in ("edexcel-a", "edexcel-a-as", "aqa"):
+    for board_dir in PAPER_DIRS:
         for path in sorted((DATA / board_dir).glob("*.json")):
             papers.append(json.loads(path.read_text(encoding="utf-8")))
+    return tags, papers
+
+
+def load():
+    taxonomy = json.loads((DATA / "taxonomy.json").read_text(encoding="utf-8"))
+    tags, papers = load_bank()
     return taxonomy, tags, papers
 
 

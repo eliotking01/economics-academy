@@ -39,15 +39,24 @@ Defined in `css/pages/revision-notes-textbook.css`.
 | `formula-box` | Centred MathJax display. Must be preceded by `<!-- prettier-ignore -->`. |
 | `flow-chain` / `flow-node` | Chained pill diagram. |
 | `diagram-figure` / `-image` / `-caption` | `<figure>` + `<figcaption>`. Images need `width`, `height`, real alt text. Captions open `Figure N:`. |
-| `notes-cta` | Closes every topic page. Three buttons; the past-papers link must match the page's board. |
+| `notes-cta` | The two diagram galleries and macro-application only (since 2026-08-23). Three buttons; the past-papers link must match the page's board. Topic pages end in the generated tail instead - see below. |
 
 The previous/next topic row at each end of `.notes-container` is **generated
 chrome, not a component** - `scripts/build_notes_pages.py` splices it in and
 `scripts/notes_sequence.py` decides where it points. It does not count against
 the two-component limit, and it is not in `notes-data/`. So are the spec
-sub-label, the author byline, the contents list, the related-topics block and
-the "About the author" box - all from `scripts/notes_extras.py`, which is also
-where the byline and bio wording lives. None of it is in any slice.
+sub-label, the author byline, the contents list, and **the whole tail** after
+the last section - the related-topics block, the "Carry on with this topic"
+unit (practice questions, flashcards, past-paper questions, with every count
+and label derived from `questions-data/` and the past-paper bank), the "About
+the author" block and the one services sentence - all from
+`scripts/notes_extras.py`, which is also where the byline, bio and every
+chrome string lives. None of it is in any slice: a topic slice ENDS at its
+last `</section>` (plus, on the Edexcel pages with diagrams, one
+`<p class="notes-diagrams-link">` that the tail re-homes). Until 2026-08-23
+the slices carried a button box and resource blocks there, placed by two
+one-off scripts; 24 past-paper counts had gone stale that way. A slice
+carrying anything after its last section now fails the build.
 
 House rules:
 

@@ -942,8 +942,11 @@
   }
 }
 
-/* Bottom-of-page conversion CTA.
-   Replaces the inline styles that were duplicated across every note page. */
+/* Bottom-of-page conversion CTA. Replaces the inline styles that were
+   duplicated across every note page. SINCE 2026-08-23 only the two diagram
+   galleries and macro-application carry this block: the 166 topic pages
+   closed with it until the topic-tail redesign replaced it with the one
+   .topic-services sentence below. */
 .revision-notes-content .notes-cta {
   margin-top: 2.5em;
   padding: 1.5em;
@@ -961,55 +964,6 @@
 
 .revision-notes-content .notes-cta .button {
   margin: 0.3em;
-}
-
-/* Link out to the topic's practice questions. Sits directly below the CTA
-   above, so it is deliberately quieter than it: teal rather than the brand
-   red, and no filled background competing for the same attention. */
-.revision-notes-content .notes-questions-link {
-  margin-top: 1.5em;
-  padding: 1.5em;
-  background: #fff;
-  border: 1px solid var(--border-light);
-  border-left: 4px solid var(--accent-teal);
-  border-radius: 4px;
-  text-align: center;
-}
-
-.revision-notes-content .notes-questions-link h2 {
-  margin: 0 0 0.5em;
-  padding: 0;
-  font-size: 1.3em;
-  color: var(--primary-blue);
-  background: none;
-  border: none;
-  border-radius: 0;
-}
-
-.revision-notes-content .notes-questions-link h2:before {
-  content: none;
-}
-
-.revision-notes-content .notes-questions-link p {
-  margin: 0 0 1.2em;
-  font-size: 0.95em;
-}
-
-.revision-notes-content .notes-questions-link .button {
-  margin: 0;
-}
-
-/* One quiet line back to the diagram gallery that features this page. The
-   galleries link out to 47 notes pages and, before this, none linked back;
-   they were earning 4,083 impressions on a single inbound link each, and that
-   link was the runtime-injected header. See seo/07-link-graph.md.
-
-   Deliberately a plain sentence, not another boxed block - the page already
-   carries four of those and a fifth would swamp the end of it. */
-.revision-notes-content .notes-diagrams-link {
-  margin-top: 1.5em;
-  font-size: 0.95em;
-  text-align: center;
 }
 
 /* ---------------------------------------------------------------------------
@@ -1169,7 +1123,9 @@
 }
 
 .revision-notes-content .topic-nav--bottom {
-  margin: 1.5em 0 0;
+  margin: 1.8em 0 0; /* 1.5em until the 2026-08-23 tail redesign: the tail
+                        now ends in a sentence, not a box, so a touch more
+                        room above the row */
 }
 
 .revision-notes-content .topic-nav__link {
@@ -1200,7 +1156,7 @@
   line-height: 1.3;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent-teal);
+  color: #1f6b77; /* not --accent-teal: see the tail block's note on AA */
 }
 
 .revision-notes-content .topic-nav__title {
@@ -1335,7 +1291,7 @@
   line-height: 1.3;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent-teal);
+  color: #1f6b77; /* not --accent-teal: see the tail block's note on AA */
 }
 
 .revision-notes-content .topic-contents__list {
@@ -1359,69 +1315,6 @@
 .revision-notes-content .topic-contents__list a:hover,
 .revision-notes-content .topic-contents__list a:focus {
   border-bottom-color: var(--primary-blue);
-}
-
-/* Related topics and the twin on the other board. Sits between the last
-   section and the notes-cta. */
-.revision-notes-content .topic-related {
-  margin: 2em 0 1.5em;
-  padding-top: 1.2em;
-  border-top: 1px solid var(--border-light);
-  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
-}
-
-.revision-notes-content .topic-related__label {
-  margin: 0 0 0.6em;
-  font-size: 0.8em;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent-teal);
-}
-
-.revision-notes-content .topic-related__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em 0.6em;
-}
-
-.revision-notes-content .topic-related__list a {
-  display: inline-block;
-  padding: 0.4em 0.85em;
-  background: #fff;
-  border: 1px solid var(--border-light);
-  border-radius: 999px;
-  font-size: 0.92em;
-  line-height: 1.4;
-  color: var(--primary-blue);
-  text-decoration: none;
-  transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease;
-}
-
-.revision-notes-content .topic-related__list a:hover,
-.revision-notes-content .topic-related__list a:focus {
-  background: var(--light-bg);
-  border-color: var(--accent-teal);
-}
-
-/* The twin link names the other board in its own sentence rather than in the
-   anchor, so the anchor text stays the topic name. */
-.revision-notes-content .topic-related__twin {
-  margin: 0.9em 0 0;
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: #5a6b80;
-}
-
-.revision-notes-content .topic-related__twin-link {
-  font-weight: 600;
-  color: var(--primary-blue);
 }
 
 @media screen and (max-width: 600px) {
@@ -1472,51 +1365,276 @@
   border-bottom-color: var(--primary-blue);
 }
 
-/* The author box. Sits between the related topics and the notes-cta, so the
-   credentials are the last thing read before the booking buttons. Same card
-   as .topic-contents, keyed blue rather than teal because it is about the
-   author, not the page. */
-.revision-notes-content .topic-author {
-  margin: 1.5em 0;
-  padding: 1em 1.4em 1.1em;
+/* Printed, the byline stays - a printed page should say who wrote it - and
+   the bio goes, for the same reason the related block does. */
+@media print {
+  .revision-notes-content .topic-author {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   The topic-page tail, 2026-08-23 - everything scripts/notes_extras.py emits
+   between the last section and the bottom prev/next row: .topic-related,
+   .topic-next, .topic-author, .topic-services. One visual system: a small
+   uppercase label, then plain text and links, a 3px left rule where a block
+   needs a key (teal = free, blue = the author, brand red = the one paid
+   line). Three flat panels for the next steps, in the hub index's idiom
+   (.resource-index-topics in main.css) but in the notes palette.
+
+   Scoped under .revision-notes-content like everything else in this sheet;
+   :root tokens only, plus ONE hex: #1f6b77 for the small-caps labels, which
+   is --accent-teal (#2a8998) darkened. The teal itself is 4.09:1 on white and
+   fails AA for text this size; #1f6b77 is 6.1:1 (5.9:1 on --light-bg). The
+   "On this page" label and the prev/next captions above use the same value
+   for the same reason.
+
+   SPECIFICITY. The base rules `.revision-notes-content ul > li:before` (the
+   teal bullet), `.revision-notes-content p` (1.05em, 1.5em margin) and
+   `.revision-notes-content a:hover` (pink, solid underline) all reach in
+   here; every rule below that undoes one is at two or three classes so it
+   wins. Do not reduce them to a bare class.
+   ========================================================================== */
+
+.revision-notes-content .topic-related__label,
+.revision-notes-content .topic-next__label,
+.revision-notes-content .topic-author__label {
+  margin: 0 0 0.55em;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1f6b77;
+}
+
+/* 1. Related topics: a hairline, the label, an inline run of plain links
+   separated by a generated middle dot (decorative, so never read out), and
+   the twin sentence. The pills went with the redesign. */
+.revision-notes-content .topic-related {
+  margin: 2.5em 0 0;
+  padding-top: 1.1em;
+  border-top: 1px solid var(--border-light);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-related__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.revision-notes-content .topic-related__list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.revision-notes-content .topic-related__list > li:before {
+  content: none;
+}
+
+.revision-notes-content .topic-related__list > li:not(:last-child):after {
+  content: "\00B7";
+  margin: 0 0.6em;
+  color: #5a6b80;
+}
+
+.revision-notes-content .topic-related__list a,
+.revision-notes-content .topic-related__twin-link {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+  transition: border-color 0.2s ease;
+}
+
+.revision-notes-content .topic-related__list a:hover,
+.revision-notes-content .topic-related__list a:focus-visible,
+.revision-notes-content .topic-related__twin-link:hover,
+.revision-notes-content .topic-related__twin-link:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* The twin link names the other board in its own sentence rather than in the
+   anchor, so the anchor text stays the topic name. */
+.revision-notes-content .topic-related__twin {
+  margin: 0.5em 0 0;
+  font-size: 0.92em;
+  line-height: 1.6;
+  color: #5a6b80;
+}
+
+/* 2. Carry on with this topic: the three free next steps as one unit. One
+   column on a phone, three across from 768px. Each panel is a bold link and
+   one line of context; the 47 diagram-gallery sentences close the unit. */
+.revision-notes-content .topic-next {
+  margin: 1.6em 0 0;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+}
+
+.revision-notes-content .topic-next__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6em;
+}
+
+.revision-notes-content .topic-next__item {
+  margin: 0;
+  padding: 0.75em 0.95em 0.8em;
   background: var(--light-bg);
   border: 1px solid var(--border-light);
-  border-left: 4px solid var(--secondary-blue);
+  border-left: 3px solid var(--accent-teal);
   border-radius: 4px;
+}
+
+.revision-notes-content .topic-next__item:before {
+  content: none;
+}
+
+.revision-notes-content .topic-next__link {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+  transition: border-color 0.2s ease;
+}
+
+.revision-notes-content .topic-next__link:hover,
+.revision-notes-content .topic-next__link:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+.revision-notes-content .topic-next__note {
+  margin: 0.3em 0 0;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-next__note a,
+.revision-notes-content .topic-next .notes-diagrams-link a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-next__note a:hover,
+.revision-notes-content .topic-next__note a:focus-visible,
+.revision-notes-content .topic-next .notes-diagrams-link a:hover,
+.revision-notes-content .topic-next .notes-diagrams-link a:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* One quiet line back to the diagram gallery that features this page. The
+   galleries link out to 47 notes pages and, before this, none linked back;
+   they were earning 4,083 impressions on a single inbound link each, and that
+   link was the runtime-injected header. See seo/07-link-graph.md. Since
+   2026-08-23 it is the last line of the next-steps unit, left-aligned under
+   the three panels, rather than a centred sentence of its own. */
+.revision-notes-content .topic-next .notes-diagrams-link {
+  margin: 0.7em 0 0;
+  font-size: 0.92em;
+  line-height: 1.6;
+  text-align: left;
+  color: #5a6b80;
+}
+
+@media screen and (min-width: 768px) {
+  .revision-notes-content .topic-next__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75em;
+  }
+}
+
+/* 3. About the author: a blue rule, not a box. Sits after the free next
+   steps and before the paid sentence, so the credentials are still the last
+   thing read before it. Keyed blue rather than teal because it is about the
+   author, not the page. */
+.revision-notes-content .topic-author {
+  margin: 1.6em 0 0;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid var(--secondary-blue);
   font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
 }
 
 .revision-notes-content .topic-author__label {
-  margin: 0 0 0.5em;
-  font-size: 0.8em;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  margin-bottom: 0.35em;
   color: var(--secondary-blue);
 }
 
 .revision-notes-content .topic-author__bio {
   margin: 0;
-  font-size: 0.95em;
-  line-height: 1.6;
+  font-size: 0.9em;
+  line-height: 1.55;
+  color: #3d4a5c;
 }
 
 .revision-notes-content .topic-author__name {
   font-weight: 600;
   color: var(--primary-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-author__name:hover,
+.revision-notes-content .topic-author__name:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+}
+
+/* 4. The services line: one sentence, two real-text links, a brand-red rule
+   so it reads as "the paid thing" without being a box. Last-but-one, once,
+   quietly - the paid ask no longer sits above the free next steps. */
+.revision-notes-content .topic-services {
+  margin: 1.4em 0 0;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid #d52349;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-services a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.35);
+}
+
+.revision-notes-content .topic-services a:hover,
+.revision-notes-content .topic-services a:focus-visible {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
 }
 
 @media screen and (max-width: 600px) {
-  .revision-notes-content .topic-author {
-    padding: 0.9em 1.1em 1em;
+  .revision-notes-content .topic-next__item {
+    padding: 0.7em 0.85em 0.75em;
   }
 }
 
-/* Printed, the byline stays - a printed page should say who wrote it - and
-   the bio goes, for the same reason the related block does. */
+/* Printed, a set of links to other pages is dead weight - the same reason
+   .topic-related and .topic-nav are already hidden. */
 @media print {
-  .revision-notes-content .topic-author {
+  .revision-notes-content .topic-next,
+  .revision-notes-content .topic-services {
     display: none;
   }
 }

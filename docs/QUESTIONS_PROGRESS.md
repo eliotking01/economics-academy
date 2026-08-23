@@ -89,7 +89,7 @@ BASE=$(git rev-parse HEAD)        # capture BEFORE touching anything
 # 1. author questions-data/<board-dir>/<code>.json for each topic in the batch
 python3 scripts/build_questions.py --check          # validate, write nothing
 python3 scripts/build_questions.py --sitemap        # build pages + sitemap block
-python3 scripts/append_questions_link.py            # add the end-of-notes block
+# (append_questions_link.py was retired 2026-08-23: the notes tail is generated)
 
 # 2. verification, against the commit before the batch
 python3 scripts/verify_html.py practice-questions revision-notes
