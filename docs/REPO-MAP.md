@@ -107,7 +107,7 @@ inside it.
 
 | Folder | Files | What it is | Matters? |
 | --- | ---: | --- | --- |
-| `scripts/` | 47 | The 8 builders and ~17 checkers. The machinery. | **Yes** — without it nothing can be rebuilt |
+| `scripts/` | ~50 | The 8 builders (`build.py` runs them all), ~17 checkers and the shared helpers. The machinery. | **Yes** — without it nothing can be rebuilt |
 | `templates/` | 2 | The menu and footer, written once and stamped into all 463 pages at build time. **Not fetched by the browser** and no longer published — but ten scripts read it, so **deleting it means the navigation can never be changed again.** | **Yes** |
 | `docs/` | 52 | Project records, the known-errors log, reference guides and the eleven-phase audit | Yes, as reference |
 | `.github/` | 1 | Tells GitHub to run every check automatically on each push | Yes, quietly |

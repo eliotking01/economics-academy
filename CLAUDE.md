@@ -48,9 +48,14 @@ what exists, not about keeping you cautious.
 - **Reuse before inventing.** The `.resource-*` blocks at the end of
   `css/main.css` and the component library in `revision-notes/CLAUDE.md` already
   cover most of what a new page needs.
-- **No dependencies, no build step.** Everything ships as static HTML, CSS and
-  hand-written JS. If a feature genuinely needs a dependency, say why first.
-  Tooling in `scripts/` is Python standard library only.
+- **The site has no runtime dependencies and no build step.** Everything
+  ships as static HTML, CSS and hand-written JS; GitHub Pages serves `main`
+  as-is. If a feature genuinely needs a dependency, say why first. **The
+  tooling is a different matter:** the generators in `scripts/` are Python 3
+  standard library only, plus Node for the two things Python cannot do —
+  KaTeX pre-rendering and Prettier (`npx --yes prettier@<version>`, pinned in
+  `scripts/prettier_util.py` and recorded in `package.json`; no `npm install`).
+  Without Node the build stops loudly rather than writing unformatted pages.
 - **Progressive enhancement.** Every page must work with JavaScript off. JS
   enhances; it never delivers content.
 - **Verify twice: run the suite, then open the page.** Green checks do not prove
@@ -72,20 +77,24 @@ already shipped a stale sitemap.
 Run the whole suite before any push — every check in `.github/workflows/verify.yml`
 runs locally and all are stdlib-only. `scripts/CLAUDE.md` maps them.
 
-**After editing `templates/header.html` or `templates/footer.html`**, the header
-is baked into all 463 pages and must be rebuilt, not hand-edited:
+**Rebuilding is one command.** After editing `templates/header.html` or
+`templates/footer.html` (baked into all 463 pages), any `*-data/` source, or a
+generator:
 
 ```bash
-python3 scripts/build_notes_pages.py && python3 scripts/build_past_paper_questions.py \
-  && python3 scripts/build_questions.py && python3 scripts/build_glossary.py \
-  && python3 scripts/build_flashcards.py    # the 446 generated pages
-python3 scripts/bake_templates.py --apply   # the other 17; dry run without --apply
-python3 scripts/build_sitemap.py            # run AFTER committing: lastmod comes from git
+python3 scripts/build.py              # every generator in order, bake the 17, verify the shell
+# commit the page changes, then:
+python3 scripts/build.py --sitemap    # AFTER committing: lastmod comes from git
 ```
 
-**Prettier** is `npx prettier@3.9.6`, not installed, no config. It reformats the
-baked header inside root pages, so always run `bake_templates.py --apply` after
-it — and never run it over `revision-notes/index.html` at all.
+The generator list lives in `scripts/site_layout.py` and nowhere else;
+`build.py` runs it and `verify_generated.py` proves it. Do not write the
+sequence out by hand anywhere.
+
+**Prettier** is `npx prettier@<version>`, not installed; the version and the
+one call site are `scripts/prettier_util.py`. It reformats the baked header
+inside root pages, so always run `bake_templates.py --apply` after it — and
+never run it over `revision-notes/index.html` at all.
 
 **Commit style.** Imperative subject, body explaining *why*. Two trailers are
 enforced by CI, one line per file:

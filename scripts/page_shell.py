@@ -18,7 +18,7 @@ compare. It reports four progressively weaker equalities, because "can it
 reproduce the head" turns out to have four different answers:
 
   L1  byte-identical                    the committed bytes, exactly
-  L2  identical after Prettier 3.9.6    same content, formatted canonically
+  L2  identical after the pinned Prettier  same content, formatted canonically
   L3  identical ignoring whitespace     same tags, same order, same values
   L4  same tags and values, any order   same information, different sequence
 
@@ -55,7 +55,8 @@ exists to remove - so the honest reading is that the shell reproduces the head
 at L3 and the residue is the improvement, not a failure.
 
 Standard library only. Prettier is used only by --selftest's L2 column, and
-only when `npx` is available; without it L2 reports as not run.
+only when `npx` is available; without it the selftest stops with
+prettier_util's message.
 """
 
 from __future__ import annotations
@@ -65,12 +66,12 @@ import collections
 import json
 import pathlib
 import re
-import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import build_sitemap  # noqa: E402
+import prettier_util  # noqa: E402
 import verify_page_shell as shell_check  # noqa: E402  - family_of(), pages()
 
 SITE = "https://economicsacademy.co.uk"
@@ -104,7 +105,7 @@ ORGANISATION_REF = {
     "url": SITE,
 }
 
-PRINT_WIDTH = 80   # Prettier's default, and CLAUDE.md pins Prettier 3.9.6
+PRINT_WIDTH = 80   # Prettier's default; the pinned version is prettier_util.PRETTIER_VERSION
 INDENT = 4         # inside <head>
 
 
@@ -114,7 +115,7 @@ INDENT = 4         # inside <head>
 
 def tag(name: str, attrs: list[tuple[str, str | None]], indent: int = INDENT,
         void: bool = True) -> str:
-    """One element, wrapped the way Prettier 3.9.6 wraps it.
+    """One element, wrapped the way the pinned Prettier (prettier_util) wraps it.
 
     Prettier keeps a tag on one line if it fits inside printWidth, and
     otherwise puts every attribute on its own line indented by two with the
@@ -835,12 +836,13 @@ def token_multiset(s: str):
         t for t in squeeze(s).splitlines() if t.startswith("<"))
 
 
-def prettier(text: str, tmp: pathlib.Path) -> str | None:
-    tmp.write_text(f"<!doctype html>\n<html><head>\n{text}\n</head><body></body></html>",
-                   encoding="utf-8")
-    p = subprocess.run(["npx", "prettier@3.9.6", "--parser", "html", str(tmp)],
-                       capture_output=True, text=True)
-    return p.stdout if p.returncode == 0 else None
+def prettier(text: str, tmp: pathlib.Path) -> str:
+    """One <head> through Prettier, for the L2 column. The version is
+    prettier_util's; a missing npx stops the selftest with its message rather
+    than silently reporting L2 as 0/190."""
+    return prettier_util.format_text(
+        f"<!doctype html>\n<html><head>\n{text}\n</head><body></body></html>",
+        parser="html", tmp=tmp)
 
 
 def main() -> int:
@@ -898,8 +900,7 @@ def main() -> int:
             if committed == "\n" + rendered + "\n  ":
                 stats[fam]["L1"] += 1
             if args.prettier:
-                a, b = prettier(committed, tmp), prettier(rendered, tmp)
-                if a is not None and a == b:
+                if prettier(committed, tmp) == prettier(rendered, tmp):
                     stats[fam]["L2"] += 1
             if squeeze(committed) == squeeze(rendered):
                 stats[fam]["L3"] += 1
@@ -926,7 +927,7 @@ def main() -> int:
     print()
     print("  L0  every extracted value survives a render/re-extract round trip")
     print("  L1  byte-identical to the committed <head>")
-    print("  L2  identical after Prettier 3.9.6 on both sides"
+    print(f"  L2  identical after Prettier {prettier_util.PRETTIER_VERSION} on both sides"
           + ("" if args.prettier else "   (NOT RUN - pass --prettier)"))
     print("  L3  identical ignoring whitespace: same tags, order and values")
     print("  L3c as L3, and also ignoring decorative HTML comments")

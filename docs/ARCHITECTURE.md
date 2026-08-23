@@ -33,8 +33,9 @@ truth. `js/components/nav.js` builds the mobile `#navPanel` and `#titleBar` from
 `#nav` and adds the two things CSS cannot do for the desktop dropdowns; the
 dropdowns themselves are CSS, so they work with scripting off.
 
-**Editing the nav is a rebuild, not a one-file edit** — see the command block in
-the root `CLAUDE.md`.
+**Editing the nav is a rebuild, not a one-file edit** — `python3 scripts/build.py`,
+then commit, then `python3 scripts/build.py --sitemap`. The generator order is
+declared once in `scripts/site_layout.py`; `build.py` runs it.
 
 `verify_page_shell.py` **check 9** is what makes the 463 copies safe: it lifts
 the block back out of every page and requires it to equal the template byte for

@@ -33,6 +33,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 # Wave 2 Phase 6. page_shell.py owns the <head> for every family now.
 import page_shell as shell  # noqa: E402
+import prettier_util  # noqa: E402
 DATA = ROOT / "past-paper-questions-data"
 PAGE_DIR = ROOT / "past-paper-questions"
 OUT = PAGE_DIR / "questions.json"
@@ -1166,32 +1167,6 @@ def update_sitemap(index, paths):
     return False
 
 
-def prettify(paths):
-    """Run the repo's Prettier over generated HTML.
-
-    Prettier is not installed here; the repo convention is `npx prettier@3.9.6`.
-    The generator calls it so that generating and formatting are one step and
-    re-running the generator is idempotent. Without this, every run would undo
-    the formatting and the file would churn in `git diff` forever.
-
-    If npx is unavailable or offline, the page is still valid HTML - it is just
-    formatted differently from the rest of the repo, and the caller is told.
-    """
-    import subprocess
-
-    try:
-        subprocess.run(
-            ["npx", "--yes", "prettier@3.9.6", "--write", "--log-level", "warn"]
-            + [str(p) for p in paths],
-            check=True,
-            cwd=ROOT,
-            capture_output=True,
-        )
-        return True
-    except (OSError, subprocess.CalledProcessError):
-        return False
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -1318,10 +1293,11 @@ def main():
     if removed:
         print(f"removed {removed} stale page(s)")
 
-    if prettify(written):
-        print(f"formatted {len(written)} pages")
-    else:
-        print("WARNING: prettier unavailable, formatting differs from the repo")
+    # scripts/prettier_util.py: one call site, one pinned version, and it
+    # STOPS the build if npx is missing rather than writing unformatted pages
+    # and warning. Generating and formatting are one step so that re-running
+    # is idempotent.
+    print(f"formatted {prettier_util.format_files(written)} pages")
 
     # Wave 2 Phase 7. After Prettier, never before - see shell.bake_files().
     print(f"baked the header and footer into "

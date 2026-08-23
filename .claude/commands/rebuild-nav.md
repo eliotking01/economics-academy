@@ -6,41 +6,33 @@ The header and footer are baked into all 463 pages at build time. Editing
 `templates/header.html` or `templates/footer.html` changes nothing on its own —
 it is a rebuild, not a one-file edit.
 
-Run in this order:
-
 ```bash
-# 1. the 446 generated pages
-python3 scripts/build_notes_pages.py \
-  && python3 scripts/build_past_paper_questions.py \
-  && python3 scripts/build_questions.py \
-  && python3 scripts/build_glossary.py \
-  && python3 scripts/build_flashcards.py
-
-# 2. the other 17, hand-written. Dry run first, without --apply.
-python3 scripts/bake_templates.py
-python3 scripts/bake_templates.py --apply
-
-# 3. check it reached every page BEFORE committing
-python3 scripts/verify_page_shell.py     # check 9 is the one that matters
+# 1. every generator in order (scripts/site_layout.GENERATORS), then
+#    bake_templates.py --apply for the 17 hand-written pages, then
+#    verify_page_shell.py (check 9 is the one that matters). One command:
+python3 scripts/build.py
 ```
 
 **Then commit the page changes.**
 
 ```bash
-# 4. ONLY AFTER COMMITTING - build_sitemap takes every <lastmod> from
+# 2. ONLY AFTER COMMITTING - build_sitemap takes every <lastmod> from
 #    `git log -1 -- <path>`, so running it before the commit bakes in stale
 #    dates and needs a second commit to fix. This has happened.
-python3 scripts/build_sitemap.py
+python3 scripts/build.py --sitemap
 ```
 
-Commit the sitemap separately.
+Commit the sitemap separately. (If `.githooks/` is enabled, the post-commit
+hook does step 2 for you.)
 
 Notes:
 
+- Do not write the generator sequence out by hand — it is `scripts/site_layout.py`
+  and `build.py` runs it. The hand-copied lists this file used to carry were
+  one of four that disagreed with each other.
 - **If you ran Prettier at any point, re-run `bake_templates.py --apply` after
-  it.** Prettier reformats the baked header inside root pages.
-- **Never run Prettier over `revision-notes/index.html`** without re-splicing its
-  frozen head back to `main`'s exact bytes.
+  it.** Prettier reformats the baked header inside root pages, and `.prettierignore`
+  lists what must never be formatted.
 - `verify_page_shell.py` check 9 lifts the block back out of every page and
   requires it to equal the template byte for byte. A nav edit that reaches 462
   pages fails there rather than shipping.

@@ -70,6 +70,7 @@ EXCLUDED_FILES = {
     "PROGRESS.md",
     "README.md",
     "requirements.txt",
+    "package.json",
 }
 
 

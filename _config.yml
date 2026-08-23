@@ -77,6 +77,13 @@ exclude:
   - PROGRESS.md
   - README.md
   - requirements.txt
+  # Tooling pins, not site content. package.json records the Prettier version
+  # the generators use (scripts/prettier_util.py); nothing on the site reads
+  # it, and .json is on verify_published_surface.py's allow-list, so without
+  # this line it would be served at /package.json. Added 2026-08-23 with the
+  # file. .prettierrc and .prettierignore start with a dot and Jekyll skips
+  # them on its own.
+  - package.json
 
   # Already excluded by Jekyll's rule that anything starting with "_" or "."
   # is skipped. Listed so the intent survives if that ever changes.

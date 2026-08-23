@@ -46,6 +46,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # edit rather than five. What stays local is everything below </head>.
 import board_data  # noqa: E402
 import page_shell as shell  # noqa: E402
+import prettier_util  # noqa: E402
 
 DATA_DIR = ROOT / "flashcards-data"
 OUT_DIR = ROOT / "flashcards"
@@ -681,20 +682,6 @@ def hub_page(decks):
 
 # ------------------------------------------------------------------ output
 
-def run_prettier(paths):
-    """Prettier is not installed here; the repo convention is
-    `npx prettier@3.9.6` (see CLAUDE.md)."""
-    try:
-        subprocess.run(
-            ["npx", "--yes", "prettier@3.9.6", "--write", "--log-level",
-             "warn"] + [str(p) for p in paths],
-            check=True, cwd=ROOT,
-        )
-        return True
-    except (OSError, subprocess.CalledProcessError):
-        return False
-
-
 def main():
     deck_files = sorted(DATA_DIR.glob("*/*.json"))
     if not deck_files:
@@ -763,9 +750,10 @@ def main():
     html_paths.append(hub_path)
     print(f"built /flashcards/ hub with {len(built)} deck(s)")
 
-    if not run_prettier(html_paths):
-        print("  WARNING: prettier unavailable, formatting differs from "
-              "the repo")
+    # scripts/prettier_util.py: one call site, one pinned version, and it
+    # STOPS the build if npx is missing rather than writing unformatted pages
+    # and warning.
+    print(f"  formatted {prettier_util.format_files(html_paths)} page(s)")
     # Wave 2 Phase 7. After Prettier, never before - see shell.bake_files().
     print(f"  baked the header and footer into "
           f"{shell.bake_files(html_paths)} page(s)")

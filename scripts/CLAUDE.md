@@ -6,8 +6,19 @@ must stay that way.
 ## The eight generators
 
 Each owns its output. Never hand-edit what a generator writes; edit the source
-and re-run. `verify_generated.py` re-runs all eight in a throwaway worktree and
-diffs against the committed tree, so drift cannot ship.
+and re-run. **`python3 scripts/build.py` runs them all, in order, then bakes
+the 17 hand-written pages and runs `verify_page_shell.py`**; `build.py
+--sitemap` runs the sitemap afterwards, once the content is committed. The
+list and its order are declared once, in `site_layout.py`, which both
+`build.py` and `verify_generated.py` import — never restate it. The table
+below is a description, not a recipe. `verify_generated.py` re-runs all
+eight in a throwaway worktree and diffs against the committed tree, so drift
+cannot ship.
+
+Three generators format their output with Prettier. The call and the pinned
+version live in `prettier_util.py` only (mirrored as a devDependency in the
+root `package.json` for the record); a missing `npx` stops the build with a
+message instead of writing unformatted pages and warning.
 
 | Script | Source → Output |
 | --- | --- |
