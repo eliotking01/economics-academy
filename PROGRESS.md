@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Hub redesign (notes + practice board hubs) | on branch `feature/hub-redesign`, awaiting merge | — | — |
+| Hub redesign (notes + practice board hubs) | live | 2026-08-23 | `dedd5d1` |
 | GA4 conversion tracking | live | 2026-08-22 | `bb18d6d` |
 | About + Contact + finishing pass | live | 2026-08-16 | `437dc7e` |
 | Resource unification, Phases 1–4 | live | 2026-08-15 | `d0fdcaf`, `2295213`, `1e8dfed`, `f537312` |
@@ -74,10 +74,11 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Hub redesign — the 12 board hubs (2026-08-23) — branch `feature/hub-redesign`
+## Hub redesign — the 12 board hubs (2026-08-23) — LIVE (merged 2026-08-23, `dedd5d1`)
 
-**STATE: built, suite green, not yet merged.** Eliot approved the design from
-a written proposal and a static mock (`_working/hub-redesign/`, untracked),
+**STATE: live.** Merged and pushed 2026-08-23 after Eliot reviewed the
+branch; the mock folder was deleted at his request. He approved the design from
+a written proposal and a static mock (`_working/hub-redesign/`, since removed),
 dropped the "start here" strip, approved the wording list, chose shared CSS in
 `main.css`. `docs/audit/DECISIONS.md` D56 has the reasoning in full.
 
