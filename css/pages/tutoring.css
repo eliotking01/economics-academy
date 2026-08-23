@@ -153,7 +153,11 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  /* Above the cookie bar (#consent, 10000) and the mobile nav bar (#titleBar,
+     10001): at 1000 the bar sat on top of the open dialog and covered its
+     submit button on a phone until the visitor had answered it. A dialog is
+     topmost while it is open; the bar is back the moment it closes. */
+  z-index: 10003;
   left: 0;
   top: 0;
   width: 100%;
