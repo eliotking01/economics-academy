@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Performance pass — MathJax, fonts, hubs, images | on `feature/performance`, PR open | — | — |
+| Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
 | Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
 | Maintainability — one build, derived counts, tests | live | 2026-08-23 | `95cf271` |
 | Hub redesign (notes + practice board hubs) | live | 2026-08-23 | `dedd5d1` |
@@ -78,10 +78,17 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Performance pass — MathJax, fonts, hubs, images (2026-08-23) — ON BRANCH `feature/performance`, PR open
+## Performance pass — MathJax, fonts, hubs, images (2026-08-23) — LIVE (merged 2026-08-23, `367297b`, PR #19)
 
-**STATE: four commits, one per phase, plus this record; PR open for Eliot's
-review. Nothing pushed to `main`.** Every phase ran the full suite green
+**STATE: live.** Eliot merged PR #19 on 2026-08-23 and signed off the three
+new wording strings (the Calendly fallback link and the two hub notes) the
+same day; the Open Sans swap was his call, made before the merge. Live
+Lighthouse after the deploy: homepage 91 → 100, tutoring 56 → 98,
+practice-questions 86 → 98, every page's weight down — the table is in
+`seo/20-performance-pass-2026-08-23.md`, with the one page that did not
+move (the MathJax notes sample, bimodal as before) explained there.
+
+Four commits, one per phase, plus the record. Every phase ran the full suite green
 before its commit and `verify_generated.py` after it. No URL moved or went
 away (new files only: `/webfonts/*.woff2`, `/images/**/*.webp`,
 `/past-paper-questions/<board>/questions.json`). No economics wording
