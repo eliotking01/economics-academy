@@ -1959,3 +1959,42 @@ on the six notes hubs and no `<a>`; declared by `Markup-Change:`.
 wrong for their unit (logged in `docs/REVIEW-NOTES.md`, not fixed: hard rule
 2), and `build_questions.py` lower-cases the group name into the practice
 hero, so Theme 2's reads "the uk economy" (a Text-Change on one page).
+
+### D57 — Google Analytics is behind a hard consent gate, not Consent Mode
+
+**Date:** 2026-08-23. **Eliot decided**, and specified the mechanism and the
+bar before the build: no Google script on the page until the visitor says
+yes. Built on `feature/analytics-consent`; the copy and the privacy wording
+are his to approve at review.
+
+**Why a hard gate.** Consent Mode keeps gtag.js loading and sends cookieless
+pings for modelling; the audience here is mostly under 18 and the honest
+sentence he wanted on the privacy page is "nothing is sent unless you
+agree". A script that is not there is the only way to make that sentence
+true. The cost — no modelled data from non-consenters, a permanent drop in
+reported GA4 numbers from the merge date — is accepted and is recorded in
+OWNER-TODO's Rank-check log when it merges.
+
+**The mechanism.** `page_shell.GTAG` (one literal, 463 pages; the 17
+hand-written pages via `bake_templates.sync_gtag()`) defines
+`window.eaLoadAnalytics()` and calls it only when
+`localStorage["ea-consent"] === "yes"`. `js/components/consent.js` (fourth
+in the tail) asks once, stores `"yes"` or `"no"`, and calls the same function
+on yes — one loader, not two. One way to change the answer, a `<button>` on
+`privacy.html`. `track.js`/`flashcards.js` unchanged: they already no-op
+without `window.gtag`.
+
+**The bar, as specified and built.** Bottom of the viewport, no overlay, no
+dimming, nothing blocked, body padded by the bar's height so the footer
+stays reachable. Two real `<button>`s of identical weight, no "X", no
+settings panel, no category toggles (one purpose, so a preferences UI would
+be theatre). `role="region" aria-label="Cookies"`, focus-visible ring,
+transition removed under `prefers-reduced-motion`. Shown on first scroll or
+after 1.5 s rather than at first paint. With JavaScript off: no bar and no
+analytics — correct, not a bug. CSS in `main.css` (all pages), not a page
+sheet.
+
+**What is pinned.** `verify_page_shell.py` check 2's tail literal,
+check 4's `"consent-gated gtag"` requirement, and the `UNGATED_GTAG` zero
+tripwire. `asset_census.py 9` now reports 0 unconditional gtag snippets,
+and DO-NOT-BREAK says so.

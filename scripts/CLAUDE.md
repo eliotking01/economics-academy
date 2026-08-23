@@ -38,8 +38,9 @@ which derives it rather than storing it: directory order from
 each hub's own links. `verify_notes_sequence.py` is what holds those three
 sources together.
 
-`bake_templates.py --apply` owns the baked header, footer and script tail on the
-17 hand-written pages; the other 446 take theirs from `page_shell.py`, which all
+`bake_templates.py --apply` owns the baked header, footer, script tail and (since
+2026-08-23) the `<head>` analytics loader (`sync_gtag()`, from `page_shell.GTAG`)
+on the 17 hand-written pages; the other 446 take theirs from `page_shell.py`, which all
 five page generators import. Since 2026-08-23 `page_shell.py` also owns the
 page skeleton (`page()`, `container()`), the shared head values
 (`head_values()`, `social()`) and the breadcrumb builders (`breadcrumb_ld()`,
