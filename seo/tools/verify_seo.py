@@ -281,6 +281,28 @@ def main() -> int:
          "revision-notes/glossary/aqa/index.html"),
     }
 
+    # AMENDED 2026-08-23 by the hub redesign. Each of the six notes board hubs
+    # now carries one "Studying AQA instead?" / "Studying Edexcel instead?"
+    # line in its hero, linking the hub that covers the same ground on the
+    # other board - the hub-level counterpart of the topic-level twin link
+    # below, and for the same reason: a student who searched without naming a
+    # board should not land on the wrong one with no way across. Hub-level
+    # pairs are many-to-one, so they are written down here as explicit
+    # (source, target) pairs rather than derived, exactly as the twin table
+    # is. Eight pairs, no more: a ninth fails this assertion.
+    HUB_TWINS = {
+        "edexcel-theme-1": ["aqa-a2-micro"],
+        "edexcel-theme-3": ["aqa-a2-micro"],
+        "edexcel-theme-2": ["aqa-a2-macro"],
+        "edexcel-theme-4": ["aqa-a2-macro"],
+        "aqa-a2-micro": ["edexcel-theme-1", "edexcel-theme-3"],
+        "aqa-a2-macro": ["edexcel-theme-2", "edexcel-theme-4"],
+    }
+    BOARD_SWITCHER |= {
+        (f"revision-notes/{src}/index.html", f"revision-notes/{dst}/index.html")
+        for src, dsts in HUB_TWINS.items() for dst in dsts
+    }
+
     # AMENDED 2026-08-21 by the notes on-page SEO pass, and deliberately not
     # weakened. The 166 topic pages now each carry a link to the page covering
     # the same topic on the other board, because a student searching "monopoly
@@ -321,7 +343,7 @@ def main() -> int:
             bad.append(f"{page} -> {target} ({src} -> {dst}) {anchor!r}")
     check("13 no link crosses an exam board except a declared twin", bad,
           f"{len(notes_twins.TWINS)} declared twin pairs, "
-          f"{len(BOARD_SWITCHER)} glossary, plus the site nav")
+          f"{len(BOARD_SWITCHER)} glossary and hub switchers, plus the site nav")
 
     # 14 --------------------------------------------------------------------
     # Assertion 8 already proves every JSON-LD block parses. This proves the

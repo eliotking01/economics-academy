@@ -1896,3 +1896,66 @@ change in one place when Eliot's credentials do. The slices stay byte slices;
 the bio is third person where the about page says "I", and the four boards
 are named. "6+ years" in the byline is "over six years" in the bio, which is
 the form about.html itself uses. No other claim is new.
+
+### D56 — the hub accordions go; the topic index is always open, on both families
+
+**Date:** 2026-08-23. **Eliot approved** the design, from a written
+description and a static mock of one hub (`_working/hub-redesign/`, not
+committed), and the new navigational wording, before any production code
+was written; he asked for the "start here" strip to be dropped, and it was.
+
+**What was wrong.** On the six notes board hubs
+`css/pages/revision-notes-topics.css` set `.subtopic-list { display: none }`
+and an inline script in each hub slice re-opened the panel on click. With
+scripting off there was no fallback: 166 topic links on six of the site's
+ranking pages were unreachable, against the progressive-enhancement rule in
+CLAUDE.md. The six practice-questions board hubs collapsed the same way but
+carried a `<noscript><style>` fallback (DO-NOT-BREAK, PH08-042). Both
+families showed a student landing from Google four to eight unit headings
+and no topic names on first paint.
+
+**The decision.** No accordion on any hub. Each unit is an always-open
+panel - heading, the existing blurb, the topics as a two-column grid (one
+column under 737px), a jump row of unit anchors under the index heading, and
+a one-line board-switch link in the hero. One shared component,
+`.resource-index-*`, appended to the `.resource-*` library at the end of
+`css/main.css` and used by both families, so notes and practice read as one
+site. No JavaScript touches the index; `quiz.js` loses its accordion block
+and keeps the "Last attempt" fill. `<details open>` was considered and
+declined: on a phone every unit is open anyway, and headings inside
+`<summary>` are flattened by Chrome and Safari for assistive technology.
+Per-row badges (diagrams, flashcards, questions) were declined: 94 of 166
+topics carry a diagram and every topic has a deck and a question set, so a
+marker true on most rows is clutter.
+
+**What did not change.** Every topic link, its href and its anchor text -
+`scripts/notes_sequence.py` reads the hubs' link order and text to build the
+previous/next rows on all 166 topic pages, and its output was diffed before
+and after: identical on all six hubs. Every unit heading and blurb. Every
+`<head>` field. Every URL. The spec code stays inside the anchor text, in a
+`<span>`.
+
+**The wording that did change**, declared by `Text-Change:` trailer on all
+twelve hubs: the hero sentence "Click any topic to expand the subtopics."
+became "Every topic is listed below — pick one to start revising."; the AQA
+hubs' "Click on any unit below to view its subtopics:" and the practice
+hubs' "Click any unit below to see its topics." were deleted; each notes hub
+gained "Studying AQA instead? …" / "Studying Edexcel instead? …" with a link
+to the hub covering the same ground on the other board, and "N topics" after
+each unit heading. The `+` toggle glyphs went with the buttons.
+
+**Verifier changes, the smallest that record the change.**
+`seo/tools/verify_seo.py` assertion 13: `BOARD_SWITCHER` gains eight explicit
+hub pairs (`HUB_TWINS`), written down the way `notes_twins.TWINS` is - the
+AQA→Edexcel direction had passed by coincidence because "Theme 1" is also
+the nav's anchor text, and the declaration is not left leaning on that.
+`scripts/verify_page_shell.py`: `mcq-hub` head shapes 2 → 1, the six
+`<noscript>` blocks being the only thing that told the board heads from the
+hub's. `verify_markup_integrity.py --strict` reports the intended losses
+(`<button>`, `<h2>` → `<h3>`, the old `<li>` wrappers, the inline `<script>`)
+on the six notes hubs and no `<a>`; declared by `Markup-Change:`.
+
+**Left for a separate commit, noticed on the way.** Three unit blurbs are
+wrong for their unit (logged in `docs/REVIEW-NOTES.md`, not fixed: hard rule
+2), and `build_questions.py` lower-cases the group name into the practice
+hero, so Theme 2's reads "the uk economy" (a Text-Change on one page).

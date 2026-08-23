@@ -3993,3 +3993,194 @@ nav.breadcrumb .separator {
     transform: none;
   }
 }
+
+/* Topic index — hub redesign, 2026-08-23. The always-open contents list on
+   the six notes board hubs and the six practice-questions board hubs:
+   a jump row of unit anchors, then one white panel per unit holding a
+   two-column grid of topic links (one column under 737px). It replaced
+   the JS-only accordion that hid every topic link until a script ran, so
+   with scripting off the notes hubs had no reachable topic links at all.
+   Additive, same discipline as the block above: every name is
+   .resource-index-* and was grepped against css/, js/, templates/,
+   scripts/ and every published page before adding — zero prior uses. The
+   green is the accordion's own #4caf50, kept so the hubs stay recognisable;
+   the text green is practice-questions.css's --pq-green-text, 4.9:1 on
+   the page. */
+
+/* One muted line in the hero for the student who landed on the wrong board. */
+.resource-hero .resource-index-switch {
+  margin: 0.6em 0 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* The family's existing h2 plus the row of unit anchors under it. */
+.resource-index-head {
+  margin-bottom: 1.5em;
+}
+
+.resource-index-head h2 {
+  font-size: 1.35em;
+  margin-bottom: 0.5em;
+}
+
+.resource-index-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em 0.5em;
+}
+
+.resource-index-jump a {
+  display: inline-block;
+  padding: 0.35em 0.75em;
+  border: 1px solid #d9d9d9;
+  border-left: 3px solid #4caf50;
+  border-radius: 4px;
+  background: #fff;
+  color: #252122;
+  font-size: 0.88em;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.resource-index-jump a:hover,
+.resource-index-jump a:focus-visible {
+  border-color: #4caf50;
+  background: #f0faf0;
+}
+
+/* One white panel per unit. Always open: no button, no toggle, no script. */
+.resource-index-unit {
+  padding: 1.5em;
+  margin-bottom: 1.25em;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-left: 4px solid #4caf50;
+  border-radius: 0 4px 4px 0;
+  scroll-margin-top: 1em;
+}
+
+.resource-index-unit-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25em 0.9em;
+}
+
+.resource-index-unit-head h3 {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.3;
+}
+
+.resource-index-count {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #357a38;
+  white-space: nowrap;
+}
+
+.resource-index-unit > p {
+  margin: 0.5em 0 0;
+  font-size: 0.95em;
+  color: #5d5d5d;
+}
+
+/* The topic grid. Each row is one link and the whole row is the target;
+   the spec code is set small and muted so the title carries the eye. */
+.resource-index-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5em 1em;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+.resource-index-topics li {
+  margin: 0;
+  padding: 0;
+}
+
+.resource-index-topics a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15em 0.6em;
+  min-height: 2.75em;
+  padding: 0.6em 0.9em;
+  background: #f7f7f7;
+  border-left: 2px solid #a5d6a7;
+  border-radius: 4px;
+  color: #252122;
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.resource-index-topics a:hover,
+.resource-index-topics a:focus-visible {
+  background: #e8f5e9;
+  border-left-color: #4caf50;
+}
+
+.resource-index-code {
+  flex: 0 0 auto;
+  min-width: 3.4em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.82em;
+  font-weight: 700;
+  color: #357a38;
+  letter-spacing: 0.01em;
+}
+
+.resource-index-title {
+  flex: 1 1 12em;
+}
+
+/* Practice hubs only: the "8 questions" count and the span quiz.js fills
+   with the student's last score. Empty until then, and collapses when
+   empty, so filling it moves nothing. */
+.resource-index-meta {
+  flex: 0 0 auto;
+  font-size: 0.82em;
+  color: #6b6b6b;
+}
+
+.resource-index-last:empty {
+  display: none;
+}
+
+.resource-index-last {
+  flex: 0 0 auto;
+  font-size: 0.82em;
+  font-weight: 700;
+  color: #357a38;
+}
+
+@media screen and (max-width: 736px) {
+  .resource-index-unit {
+    padding: 1.1em 1em;
+  }
+
+  .resource-index-unit-head h3 {
+    font-size: 1.15em;
+  }
+
+  .resource-index-topics {
+    grid-template-columns: 1fr;
+    gap: 0.4em;
+  }
+
+  .resource-index-topics a {
+    padding: 0.55em 0.8em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resource-index-topics a {
+    transition: none;
+  }
+}

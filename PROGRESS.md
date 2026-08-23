@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Hub redesign (notes + practice board hubs) | on branch `feature/hub-redesign`, awaiting merge | — | — |
 | GA4 conversion tracking | live | 2026-08-22 | `bb18d6d` |
 | About + Contact + finishing pass | live | 2026-08-16 | `437dc7e` |
 | Resource unification, Phases 1–4 | live | 2026-08-15 | `d0fdcaf`, `2295213`, `1e8dfed`, `f537312` |
@@ -72,6 +73,78 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## Hub redesign — the 12 board hubs (2026-08-23) — branch `feature/hub-redesign`
+
+**STATE: built, suite green, not yet merged.** Eliot approved the design from
+a written proposal and a static mock (`_working/hub-redesign/`, untracked),
+dropped the "start here" strip, approved the wording list, chose shared CSS in
+`main.css`. `docs/audit/DECISIONS.md` D56 has the reasoning in full.
+
+**What it fixes.** The six notes board hubs hid every topic link behind a
+JS-only accordion (`.subtopic-list { display: none }` plus an inline script)
+with no fallback, so with scripting off 166 topic links on ranking pages were
+unreachable, and a student from Google saw unit headings and no topic names.
+The six practice board hubs collapsed the same way behind a `<noscript>`
+fallback. Both families now render an always-open topic index: a jump row of
+unit anchors, one white panel per unit with the existing blurb, the topics as a
+two-column grid (one column under 737px), spec code in a muted span. One
+shared component, `.resource-index-*` at the end of `css/main.css`, used by
+both families. No JavaScript touches the index on either.
+
+| Changed | Where |
+| --- | --- |
+| The six notes hub slices — markup of the index only; every link, href, anchor text, unit heading and blurb carried over; `notes_sequence.py` output diffed identical before and after | `notes-data/hubs/<dir>.html` |
+| The six hub records: `mainAttrs` gains `class="notes-hub-page"`, `afterScripts` loses the inline accordion script | `notes-data/hubs/<dir>.json` |
+| `render_unit()` rewritten, `render_jump()` and `unit_id()` added, the `<noscript>` block and the "Click any unit…" line removed | `scripts/build_questions.py` |
+| Accordion block removed; "Last attempt" fill kept | `js/components/quiz.js` |
+| `.resource-index-*` block appended; the two page stylesheets reduced to their page-specific leftovers and scoped | `css/main.css`, `css/pages/revision-notes-topics.css`, `css/pages/practice-questions.css` |
+| Assertion 13 `BOARD_SWITCHER` gains eight explicit hub pairs (`HUB_TWINS`) | `seo/tools/verify_seo.py` |
+| `mcq-hub` head shapes 2 → 1 | `scripts/verify_page_shell.py` |
+| Comments only | `scripts/page_shell.py` |
+| The `<noscript>` entry amended; D56; REVIEW-NOTES H1 | `docs/audit/DO-NOT-BREAK.md`, `docs/audit/DECISIONS.md`, `docs/REVIEW-NOTES.md` |
+
+**Wording that changed** (all navigational, all declared with `Text-Change:`):
+"Click any topic to expand the subtopics." → "Every topic is listed below —
+pick one to start revising." on the six notes hubs; the AQA hubs' "Click on
+any unit below to view its subtopics:" and the practice hubs' "Click any unit
+below to see its topics." deleted; "Studying AQA instead? …" / "Studying
+Edexcel instead? …" board-switch line added to each notes hub; "N topics" after
+each notes unit heading; the `+` toggle glyphs gone with the buttons.
+
+**Not in scope, deliberately:** `macro-application` (a content page that only
+classifies as a hub — no topic list, no accordion), `revision-notes/index.html`
+(GSC-frozen head, D50), the flashcards hub, the glossary.
+
+### Three things a future session needs to know
+
+1. **`notes_sequence.py` reads the hubs' link order and anchor text** for the
+   previous/next rows on all 166 topic pages. The spec code is still inside
+   each anchor (in a `<span class="resource-index-code">`), so the concatenated
+   anchor text is unchanged. Moving the code outside the `<a>` would rename
+   every prev/next label on the site.
+2. **The `.resource-index-*` names were grepped against every published page,
+   `css/`, `js/`, `templates/` and `scripts/` before being added** — zero prior
+   uses — and the only other class introduced is `.notes-hub-page` on the six
+   notes hubs' `<main>`. Nothing else on the site can pick them up.
+3. **Headless Chrome will not open a window narrower than 500px**, so a
+   `--window-size=360,…` screenshot is a 500px layout cropped to 360 and lies
+   about mobile. Render the page inside a 360px `<iframe>` on a wrapper page
+   instead; that is how the 360 checks for this work were done.
+
+### Closed the same day, on the same branch
+
+- REVIEW-NOTES H1: five AQA unit blurbs described the wrong unit. Eliot gave
+  permission for the wording; rewritten from each unit's own topic titles on
+  both hub slices and in `build_questions.py`'s `UNITS`, `Text-Change:` on the
+  four pages. The table of new lines is in REVIEW-NOTES H1.
+- `build_questions.py` lower-cased the group name into the practice hero and
+  meta description ("the uk economy"). Now `mid_sentence()`, which keeps
+  acronyms; only `practice-questions/edexcel-theme-2/index.html` changed.
+
+### Still open from this work
+
+Nothing.
 
 ## GA4 conversion tracking (2026-08-22) — LIVE (merged 2026-08-22, `bb18d6d`)
 
@@ -750,7 +823,7 @@ are **carried over and not independently re-verified**, except where stated.
 
 | Item | Status on 2026-08-20 | Fix |
 | --- | --- | --- |
-| **`.notes-container` defined in more than one stylesheet** | **Worse than recorded.** PROJECT-LOG said two; it is now **five**: `revision-notes-topics`, `revision-notes-textbook`, `glossary`, `macro-application`, `practice-questions` | Scope each under its page wrapper, per the CSS convention in CLAUDE.md |
+| **`.notes-container` defined in more than one stylesheet** | **Worse than recorded.** PROJECT-LOG said two; it is now **five**: `revision-notes-topics`, `revision-notes-textbook`, `glossary`, `macro-application`, `practice-questions`. *2026-08-23: `revision-notes-topics` is now scoped under `.notes-hub-page` and `practice-questions` no longer defines it, so three remain* | Scope each under its page wrapper, per the CSS convention in CLAUDE.md |
 | **Prettier fails on three files** | Confirmed with `npx prettier@3.9.6 --check`: `css/main.css`, `revision-notes/index.html`, `revision-notes/macro-application/index.html` | main.css is a `box-shadow` list and pre-existing. The two HTML files must NOT simply be formatted — trap 1 |
 | **`404.html` has no canonical and no Open Graph tags** | Confirmed: 0 matches | Defensible for a 404. Listed so it stays a decision |
 | **`.year-header h4` in `css/pages/past-papers-list.css`** | Still present at line 45 while line 196 styles `.year-header h2` | Likely dead. Read the markup before deleting |

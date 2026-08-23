@@ -94,11 +94,11 @@
     "jsonldAfterStyles": []
   },
   "body": {
-    "mainAttrs": "",
+    "mainAttrs": " class=\"notes-hub-page\"",
     "endContainerComment": null,
     "endMainComment": null,
     "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
     "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
-    "afterScripts": "\n    <script>\n      // Each topic heading is a <button>, so the panel can be opened from the\n      // keyboard. The whole card stays clickable as well, via the delegated\n      // handler below; clicks that originate on the button are ignored there\n      // so a single tap does not toggle twice.\n      document.addEventListener(\"DOMContentLoaded\", function () {\n        document.querySelectorAll(\".topic-item\").forEach(function (item) {\n          const button = item.querySelector(\".topic-toggle\");\n          const panel = item.querySelector(\".subtopic-list\");\n          const icon = item.querySelector(\".toggle-icon\");\n          if (!button || !panel) return;\n\n          function toggle() {\n            const isOpen = panel.style.display === \"block\";\n            panel.style.display = isOpen ? \"none\" : \"block\";\n            button.setAttribute(\"aria-expanded\", isOpen ? \"false\" : \"true\");\n            if (icon) icon.textContent = isOpen ? \"+\" : \"-\";\n          }\n\n          button.addEventListener(\"click\", function (event) {\n            event.stopPropagation();\n            toggle();\n          });\n\n          item.addEventListener(\"click\", function (event) {\n            // Let subtopic links navigate without toggling the panel shut.\n            if (event.target.closest(\"a\")) return;\n            toggle();\n          });\n        });\n      });\n    </script>\n  </body>\n</html>\n"
+    "afterScripts": "  </body>\n</html>\n"
   }
 }

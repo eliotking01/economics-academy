@@ -105,24 +105,6 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/practice-questions.css" />
-
-    <noscript>
-      <!-- The accordion collapses its panels in CSS and quiz.js reopens them.
-           With scripting off nothing could open them, so the topic links would
-           be unreachable. Show every panel instead, and drop the +/- affordance
-           that would then be lying. -->
-      <style>
-        .practice-questions-page .subtopic-list {
-          display: block;
-        }
-        .practice-questions-page .toggle-icon {
-          display: none;
-        }
-        .practice-questions-page .topic-item {
-          cursor: auto;
-        }
-      </style>
-    </noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -315,400 +297,342 @@
             </p>
           </section>
 
-          <h2>Available Topics</h2>
-          <p class="pq-note">Click any unit below to see its topics.</p>
+          <div class="resource-index-head">
+            <h2>Available Topics</h2>
+            <nav class="resource-index-jump" aria-label="Jump to a unit">
+              <a href="#unit-4-1"
+                >4.1 International Economics</a
+              >
+              <a href="#unit-4-2"
+                >4.2 Poverty and Inequality</a
+              >
+              <a href="#unit-4-3"
+                >4.3 Emerging and Developing Economies</a
+              >
+              <a href="#unit-4-4"
+                >4.4 The Financial Sector</a
+              >
+              <a href="#unit-4-5"
+                >4.5 Role of the State in the Macroeconomy</a
+              >
+            </nav>
+          </div>
 
-          <ul class="topic-list">
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-1"
+          <div class="resource-index">
+            <section class="resource-index-unit" id="unit-4-1">
+              <div class="resource-index-unit-head">
+                <h3>4.1 International Economics</h3>
+              </div>
+              <p>Globalisation, trade, terms of trade, trading blocs, WTO &middot; 58 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-1-globalisation.html"
+                    ><span class="resource-index-code">4.1.1</span>
+                    <span class="resource-index-title">Globalisation</span>
+                    <span class="resource-index-meta"
+                      >5 questions</span
                     >
-                      4.1 International Economics
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Globalisation, trade, terms of trade, trading blocs, WTO &middot; 58 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-1">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-1-globalisation.html">
-                      <span class="subtopic-name"
-                        >4.1.1 Globalisation</span
-                      >
-                      <span class="subtopic-meta"
-                        >5 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-2-specialisation-trade.html">
-                      <span class="subtopic-name"
-                        >4.1.2 Specialisation and Trade</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-3-pattern-of-trade.html">
-                      <span class="subtopic-name"
-                        >4.1.3 Pattern of Trade</span
-                      >
-                      <span class="subtopic-meta"
-                        >5 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.3"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-4-terms-of-trade.html">
-                      <span class="subtopic-name"
-                        >4.1.4 Terms of Trade</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.4"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html">
-                      <span class="subtopic-name"
-                        >4.1.5 Trading Blocs and the WTO</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.5"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html">
-                      <span class="subtopic-name"
-                        >4.1.6 Restrictions on Free Trade</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.6"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-7-balance-of-payments.html">
-                      <span class="subtopic-name"
-                        >4.1.7 Balance of Payments</span
-                      >
-                      <span class="subtopic-meta"
-                        >5 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.7"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-8-exchange-rates.html">
-                      <span class="subtopic-name"
-                        >4.1.8 Exchange Rates</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.8"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-1-9-international-competitiveness.html">
-                      <span class="subtopic-name"
-                        >4.1.9 International Competitiveness</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.1.9"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-2"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-2-specialisation-trade.html"
+                    ><span class="resource-index-code">4.1.2</span>
+                    <span class="resource-index-title">Specialisation and Trade</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
                     >
-                      4.2 Poverty and Inequality
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Absolute/relative poverty, inequality measures, policies &middot; 13 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-2">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-2-1-absolute-relative-poverty.html">
-                      <span class="subtopic-name"
-                        >4.2.1 Absolute and Relative Poverty</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.2.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-2-2-inequality.html">
-                      <span class="subtopic-name"
-                        >4.2.2 Inequality</span
-                      >
-                      <span class="subtopic-meta"
-                        >7 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.2.2"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-3"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-3-pattern-of-trade.html"
+                    ><span class="resource-index-code">4.1.3</span>
+                    <span class="resource-index-title">Pattern of Trade</span>
+                    <span class="resource-index-meta"
+                      >5 questions</span
                     >
-                      4.3 Emerging and Developing Economies
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Characteristics, growth strategies, role of financial sector &middot; 25 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-3">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-3-1-measures-of-development.html">
-                      <span class="subtopic-name"
-                        >4.3.1 Measures of Development</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.3.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html">
-                      <span class="subtopic-name"
-                        >4.3.2 Factors Influencing Growth</span
-                      >
-                      <span class="subtopic-meta"
-                        >9 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.3.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html">
-                      <span class="subtopic-name"
-                        >4.3.3 Development Strategies</span
-                      >
-                      <span class="subtopic-meta"
-                        >10 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.3.3"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-4"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.3"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-4-terms-of-trade.html"
+                    ><span class="resource-index-code">4.1.4</span>
+                    <span class="resource-index-title">Terms of Trade</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
                     >
-                      4.4 The Financial Sector
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Role of financial markets, market failure, regulation &middot; 21 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-4">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-4-1-role-of-financial-markets.html">
-                      <span class="subtopic-name"
-                        >4.4.1 Role of Financial Markets</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.4.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html">
-                      <span class="subtopic-name"
-                        >4.4.2 Market Failure in Finance</span
-                      >
-                      <span class="subtopic-meta"
-                        >9 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.4.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-4-3-role-of-central-banks.html">
-                      <span class="subtopic-name"
-                        >4.4.3 Role of Central Banks</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.4.3"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="topic-item">
-                <div class="topic-header">
-                  <h2>
-                    <button
-                      type="button"
-                      class="topic-toggle"
-                      aria-expanded="false"
-                      aria-controls="subtopic-5"
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.4"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-5-trading-blocs-and-the-world-trade-organisation.html"
+                    ><span class="resource-index-code">4.1.5</span>
+                    <span class="resource-index-title">Trading Blocs and the WTO</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
                     >
-                      4.5 Role of the State in the Macroeconomy
-                    </button>
-                  </h2>
-                  <span class="toggle-icon" aria-hidden="true">+</span>
-                </div>
-                <p>Public expenditure, taxation, macroeconomic policies &middot; 28 questions</p>
-
-                <ul class="subtopic-list" id="subtopic-5">
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-5-1-public-expenditure.html">
-                      <span class="subtopic-name"
-                        >4.5.1 Public Expenditure</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.5.1"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-5-2-taxation.html">
-                      <span class="subtopic-name"
-                        >4.5.2 Taxation</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.5.2"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-5-3-public-sector-finances.html">
-                      <span class="subtopic-name"
-                        >4.5.3 Public Sector Finances</span
-                      >
-                      <span class="subtopic-meta"
-                        >6 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.5.3"
-                      ></span>
-                    </a>
-                  </li>
-                  <li class="subtopic-item">
-                    <a href="/practice-questions/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html">
-                      <span class="subtopic-name"
-                        >4.5.4 Policies in a Global Context</span
-                      >
-                      <span class="subtopic-meta"
-                        >8 questions</span
-                      >
-                      <span
-                        class="subtopic-last"
-                        data-quiz-last="edexcel:4.5.4"
-                      ></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-          </ul>
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.5"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-6-restrictions-on-free-trade.html"
+                    ><span class="resource-index-code">4.1.6</span>
+                    <span class="resource-index-title">Restrictions on Free Trade</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.6"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-7-balance-of-payments.html"
+                    ><span class="resource-index-code">4.1.7</span>
+                    <span class="resource-index-title">Balance of Payments</span>
+                    <span class="resource-index-meta"
+                      >5 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.7"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-8-exchange-rates.html"
+                    ><span class="resource-index-code">4.1.8</span>
+                    <span class="resource-index-title">Exchange Rates</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.8"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-1-9-international-competitiveness.html"
+                    ><span class="resource-index-code">4.1.9</span>
+                    <span class="resource-index-title">International Competitiveness</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.1.9"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-4-2">
+              <div class="resource-index-unit-head">
+                <h3>4.2 Poverty and Inequality</h3>
+              </div>
+              <p>Absolute/relative poverty, inequality measures, policies &middot; 13 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-2-1-absolute-relative-poverty.html"
+                    ><span class="resource-index-code">4.2.1</span>
+                    <span class="resource-index-title">Absolute and Relative Poverty</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.2.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-2-2-inequality.html"
+                    ><span class="resource-index-code">4.2.2</span>
+                    <span class="resource-index-title">Inequality</span>
+                    <span class="resource-index-meta"
+                      >7 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.2.2"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-4-3">
+              <div class="resource-index-unit-head">
+                <h3>4.3 Emerging and Developing Economies</h3>
+              </div>
+              <p>Characteristics, growth strategies, role of financial sector &middot; 25 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-3-1-measures-of-development.html"
+                    ><span class="resource-index-code">4.3.1</span>
+                    <span class="resource-index-title">Measures of Development</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.3.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-3-2-factors-influencing-growth-development.html"
+                    ><span class="resource-index-code">4.3.2</span>
+                    <span class="resource-index-title">Factors Influencing Growth</span>
+                    <span class="resource-index-meta"
+                      >9 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.3.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-3-3-strategies-influencing-growth-development.html"
+                    ><span class="resource-index-code">4.3.3</span>
+                    <span class="resource-index-title">Development Strategies</span>
+                    <span class="resource-index-meta"
+                      >10 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.3.3"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-4-4">
+              <div class="resource-index-unit-head">
+                <h3>4.4 The Financial Sector</h3>
+              </div>
+              <p>Role of financial markets, market failure, regulation &middot; 21 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-4-1-role-of-financial-markets.html"
+                    ><span class="resource-index-code">4.4.1</span>
+                    <span class="resource-index-title">Role of Financial Markets</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.4.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-4-2-market-failure-in-the-financial-sector.html"
+                    ><span class="resource-index-code">4.4.2</span>
+                    <span class="resource-index-title">Market Failure in Finance</span>
+                    <span class="resource-index-meta"
+                      >9 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.4.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-4-3-role-of-central-banks.html"
+                    ><span class="resource-index-code">4.4.3</span>
+                    <span class="resource-index-title">Role of Central Banks</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.4.3"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section class="resource-index-unit" id="unit-4-5">
+              <div class="resource-index-unit-head">
+                <h3>4.5 Role of the State in the Macroeconomy</h3>
+              </div>
+              <p>Public expenditure, taxation, macroeconomic policies &middot; 28 questions</p>
+              <ul class="resource-index-topics">
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-5-1-public-expenditure.html"
+                    ><span class="resource-index-code">4.5.1</span>
+                    <span class="resource-index-title">Public Expenditure</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.5.1"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-5-2-taxation.html"
+                    ><span class="resource-index-code">4.5.2</span>
+                    <span class="resource-index-title">Taxation</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.5.2"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-5-3-public-sector-finances.html"
+                    ><span class="resource-index-code">4.5.3</span>
+                    <span class="resource-index-title">Public Sector Finances</span>
+                    <span class="resource-index-meta"
+                      >6 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.5.3"
+                    ></span></a
+                  >
+                </li>
+                <li>
+                  <a href="/practice-questions/edexcel-theme-4/4-5-4-macroeconomic-policies-in-a-global-context.html"
+                    ><span class="resource-index-code">4.5.4</span>
+                    <span class="resource-index-title">Policies in a Global Context</span>
+                    <span class="resource-index-meta"
+                      >8 questions</span
+                    >
+                    <span
+                      class="resource-index-last"
+                      data-quiz-last="edexcel:4.5.4"
+                    ></span></a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
 
           <section class="resource-cross">
             <a href="/revision-notes/edexcel-theme-4/" class="button">Read the Theme 4 notes</a>

@@ -122,7 +122,11 @@ EXPECTED_FAMILIES = {
     "notes-other":   (3, 2, 3, 1, 2),
     "past-papers":   (5, 2, 2, 1, 2),
     "mcq-topic":     (166, 1, 1, 1, 1),
-    "mcq-hub":       (7, 2, 2, 1, 1),
+    # 2 head shapes until 2026-08-23, when the hub redesign removed the
+    # <noscript><style> block from the six board index pages: their heads
+    # now match the hub's, which never had one. The topic links those blocks
+    # re-opened are always visible now, so the fallback had nothing to do.
+    "mcq-hub":       (7, 1, 2, 1, 1),
     "ppq":           (90, 1, 3, 1, 1),
     "flashcards":    (7, 2, 2, 1, 2),
     "glossary":      (3, 2, 2, 1, 2),
