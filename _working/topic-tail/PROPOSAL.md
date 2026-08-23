@@ -1,5 +1,11 @@
 # Topic-page tail redesign — proposal for approval
 
+> **Approved 2026-08-23** (Eliot: option (b), strip the slices; `dateModified`
+> not refreshed; wording as proposed) and built in the next commit. The
+> `after-live-*.png` files are the rebuilt pages themselves - Edexcel 1.2.2
+> and AQA 2.1.3 at 1280, Edexcel 1.2.2 and the single-section AQA 1.6.6 at
+> 360. The rest of this file is the proposal as it was approved.
+
 Branch `feature/topic-tail`. Nothing in the generator is touched yet: this
 folder holds one static mock of `1-2-2-demand`'s new tail, before/after
 screenshots at 1280px and 360px, and the wording list below. Open the mock in
