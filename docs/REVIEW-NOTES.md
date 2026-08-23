@@ -1834,7 +1834,7 @@ rather than merely imperfect, and it should be reopened properly.
 `python3 seo/tools/gsc_reconcile.py <export>` reports this automatically now,
 under "Indexed, but not a URL this site publishes".
 
-## H1 — five AQA hub unit blurbs describe a different unit (found 2026-08-23, not fixed)
+## H1 — five AQA hub unit blurbs describe a different unit (found 2026-08-23) — FIXED 2026-08-23
 
 Seen while rebuilding the topic index on the notes hubs (D56). The one-line
 blurb under five unit headings does not describe that unit. The same blurbs
@@ -1851,6 +1851,21 @@ practice-questions hubs carry the same five. Logged, not fixed — hard rule 2.
 
 On the AQA macro hub the blurbs for 2.3–2.6 read as though the list was
 shifted down by one row when it was written (2.5's is 2.4's subject, 2.6's is
-2.5's, and 2.6 has no blurb of its own anywhere). Fixing it is five short
-lines on two hub slices plus the matching `UNITS` rows, and needs Eliot's
-wording and a `Text-Change:` trailer for each affected hub on each family.
+2.5's, and 2.6 has no blurb of its own anywhere).
+
+**Fixed the same day, with Eliot's permission to write the wording** (he
+approved the fix in chat; the lines are written from each unit's own topic
+titles, in the existing blurb style). The five new blurbs, on both families:
+
+| Unit | Now reads |
+| --- | --- |
+| AQA micro 1.7 | Income and wealth distribution, poverty, policies to reduce inequality |
+| AQA macro 2.3 | Growth and the economic cycle, unemployment, inflation, policy conflicts |
+| AQA macro 2.4 | Financial markets, banks, central banks and monetary policy, regulation |
+| AQA macro 2.5 | Fiscal policy, taxation and public spending, supply-side policies |
+| AQA macro 2.6 | Globalisation, trade, balance of payments, exchange rates, development |
+
+Edited in `notes-data/hubs/aqa-a2-micro.html`, `notes-data/hubs/aqa-a2-macro.html`
+and `scripts/build_questions.py`'s `UNITS`, declared with `Text-Change:` on the
+four pages. AQA macro 2.1's "Growth, inflation, unemployment, balance of
+payments" was left: those are the things 2.1 measures, so it reads correctly.

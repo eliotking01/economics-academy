@@ -268,7 +268,7 @@ UNITS = {
     ),
     ("aqa-a2-micro", "1.7"): (
         "The Distribution of Income and Wealth: Poverty and Inequality",
-        "Regulation, competition policy, public ownership",
+        "Income and wealth distribution, poverty, policies to reduce inequality",
     ),
     ("aqa-a2-micro", "1.8"): (
         "The Market Mechanism, Market Failure and Government Intervention in Markets",
@@ -285,19 +285,19 @@ UNITS = {
     ),
     ("aqa-a2-macro", "2.3"): (
         "Economic Performance",
-        "Fiscal, monetary, supply-side policies",
+        "Growth and the economic cycle, unemployment, inflation, policy conflicts",
     ),
     ("aqa-a2-macro", "2.4"): (
         "Financial Markets and Monetary Policy",
-        "Globalisation, trade, development",
+        "Financial markets, banks, central banks and monetary policy, regulation",
     ),
     ("aqa-a2-macro", "2.5"): (
         "Fiscal Policy and Supply-Side Policies",
-        "Money, banking, financial sector",
+        "Fiscal policy, taxation and public spending, supply-side policies",
     ),
     ("aqa-a2-macro", "2.6"): (
         "The International Economy",
-        "Taxation, public spending, fiscal policy",
+        "Globalisation, trade, balance of payments, exchange rates, development",
     ),
 }
 
@@ -1158,9 +1158,21 @@ def render_jump(board_dir, units):
           </div>"""
 
 
+def mid_sentence(text):
+    """A group name lower-cased for use mid-sentence, acronyms kept.
+
+    "The UK Economy - Performance and Policies" -> "the UK economy -
+    performance and policies". A plain .lower() shipped "the uk economy" in
+    Theme 2's hero and meta description until 2026-08-23.
+    """
+    return " ".join(
+        w if (len(w) > 1 and w.isupper()) else w.lower() for w in text.split()
+    )
+
+
 def render_board_index(board_dir, topics):
     name = next(n for d, n, _ in BOARDS if d == board_dir)
-    blurb = BOARD_BLURB[board_dir]
+    blurb = mid_sentence(BOARD_BLURB[board_dir])
     board = topics[0]["board"]
     label = BOARD_LABELS[board]
     papers_href, papers_label = PAST_PAPERS[board]
@@ -1170,7 +1182,7 @@ def render_board_index(board_dir, topics):
 
     title = f"{name} Practice Questions — {label} A-Level Economics | Economics Academy"
     desc = (
-        f"Free {label} A-Level Economics multiple-choice questions on {blurb.lower()}. "
+        f"Free {label} A-Level Economics multiple-choice questions on {blurb}. "
         f"{count} questions across {len(topics)} {topic_word}, each with a worked answer."
     )[:164]
 
@@ -1196,7 +1208,7 @@ def render_board_index(board_dir, topics):
             <h1>{name} Practice Questions</h1>
             <p class="resource-intro">
               Free exam-style multiple-choice questions covering
-              {blurb.lower()}, written to the style and difficulty of the real
+              {blurb}, written to the style and difficulty of the real
               {label} papers. Every question carries a full worked answer.
             </p>
             <p class="resource-stats">

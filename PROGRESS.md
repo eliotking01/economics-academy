@@ -132,14 +132,19 @@ classifies as a hub — no topic list, no accordion), `revision-notes/index.html
    about mobile. Render the page inside a 360px `<iframe>` on a wrapper page
    instead; that is how the 360 checks for this work were done.
 
+### Closed the same day, on the same branch
+
+- REVIEW-NOTES H1: five AQA unit blurbs described the wrong unit. Eliot gave
+  permission for the wording; rewritten from each unit's own topic titles on
+  both hub slices and in `build_questions.py`'s `UNITS`, `Text-Change:` on the
+  four pages. The table of new lines is in REVIEW-NOTES H1.
+- `build_questions.py` lower-cased the group name into the practice hero and
+  meta description ("the uk economy"). Now `mid_sentence()`, which keeps
+  acronyms; only `practice-questions/edexcel-theme-2/index.html` changed.
+
 ### Still open from this work
 
-- REVIEW-NOTES H1: five AQA unit blurbs describe the wrong unit (shifted by
-  one row on the AQA macro hub; one on AQA micro). Eliot's wording, then one
-  slice edit + the matching `UNITS` rows in `build_questions.py`.
-- `build_questions.py` lower-cases the group name into the practice hero
-  ("covering the uk economy - performance and policies"). One-line generator
-  fix, a `Text-Change:` on `practice-questions/edexcel-theme-2/index.html`.
+Nothing.
 
 ## GA4 conversion tracking (2026-08-22) — LIVE (merged 2026-08-22, `bb18d6d`)
 
