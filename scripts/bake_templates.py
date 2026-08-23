@@ -25,6 +25,9 @@ consent-gated loader on the 446 generated pages, and without sync_gtag() these
 17 - index.html among them - would have gone on setting GA4 cookies before
 anyone was asked.
 
+**And the theme-colour meta** (page_shell.THEME_COLOR, sync_theme_color()),
+one line after the viewport meta, for the same reason again.
+
 **Later the same day, the stylesheet block** (page_shell.stylesheet_block()):
 the performance pass self-hosted the fonts, so the 446 generated heads lost
 the Google Fonts preconnect pair and stylesheet and gained a preload of the
@@ -162,6 +165,29 @@ def sync_script_tail(text: str) -> str:
 GTAG_START = re.compile(r'^[ \t]*<!-- Google (?:tag \(gtag\.js\)|Analytics) ', re.M)
 GTAG_CONFIG = re.compile(r'gtag\("config", "' + re.escape(page_shell.GA_ID) + r'"\);')
 GTAG_END = re.compile(r'[ \t]*</script>[ \t]*\n')
+
+
+VIEWPORT = re.compile(r'[ \t]*<meta\s+name="viewport"\s+content="[^"]*"\s*/>[ \t]*\n')
+THEME_COLOR_TAG = re.compile(r'[ \t]*<meta\s+name="theme-color"\s+content="[^"]*"\s*/>[ \t]*\n')
+
+
+def sync_theme_color(text: str) -> str:
+    """Put page_shell's <meta name="theme-color"> straight after the viewport
+    meta, once, on the 17 hand-written pages - as render_head() does on the
+    other 446. Rewrites a stale value in place; a page with no viewport meta
+    is returned unchanged for verify_page_shell.py to report."""
+    head_end = text.find("</head>")
+    if head_end < 0:
+        return text
+    want = page_shell.tag("meta", [("name", "theme-color"),
+                                   ("content", page_shell.THEME_COLOR)]) + "\n"
+    existing = THEME_COLOR_TAG.search(text, 0, head_end)
+    if existing:
+        return text[:existing.start()] + want + text[existing.end():]
+    vp = VIEWPORT.search(text, 0, head_end)
+    if not vp:
+        return text
+    return text[:vp.end()] + want + text[vp.end():]
 
 
 FONTS_START = "    <!-- Linked here rather than @imported from main.css"
@@ -323,7 +349,8 @@ def main() -> int:
     for rel in paths:
         path = ROOT / rel
         before = path.read_text(encoding="utf-8")
-        after = sync_fonts(sync_gtag(sync_script_tail(page_shell.bake(before, rel))))
+        after = sync_theme_color(
+            sync_fonts(sync_gtag(sync_script_tail(page_shell.bake(before, rel)))))
         if after == before:
             already += 1
             continue

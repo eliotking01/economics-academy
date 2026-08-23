@@ -231,6 +231,12 @@ HOIST_COMMENT = '''    <!-- Linked here rather than @imported from main.css: an 
 
 BODY_FONT = "/webfonts/source-sans-pro-300.woff2"
 
+# The brand accent, css/main.css's most-used colour (23 rules) and the nav's
+# current-item background. <meta name="theme-color"> paints the browser UI
+# around the page with it on mobile; site.webmanifest carries the same value.
+# Added to every head on 2026-08-23 (performance pass, Phase 4).
+THEME_COLOR = "#d52349"
+
 OG_IMAGE = f"{SITE}/og-image.png?v=1"
 
 
@@ -262,6 +268,7 @@ def render_head(v: dict) -> str:
     out.append(tag("meta", [("charset", "utf-8")]))
     out.append(tag("meta", [("name", "viewport"),
                             ("content", "width=device-width, initial-scale=1")]))
+    out.append(tag("meta", [("name", "theme-color"), ("content", THEME_COLOR)]))
     # Until 2026-08-23 a font preconnect pair sat here on 273 pages and after
     # the favicons on the other 190 - two lineages, measured and deliberately
     # not aligned (DO-NOT-BREAK). The fonts are self-hosted now, so there is

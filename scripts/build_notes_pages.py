@@ -34,6 +34,17 @@ to; what changes is only what this generator wraps around them. Every one of
 these blocks fails the build rather than degrading if its anchor stops
 matching - notes_extras.fail().
 
+DIAGRAMS ARE OFFERED AS WEBP FIRST (2026-08-23)
+-----------------------------------------------
+Every `<img src="/images/diagrams/X.png">` in a slice is emitted inside a
+`<picture>` whose `<source type="image/webp">` points at the lossless twin
+`images/diagrams/X.webp` that scripts/build_diagram_webp.py writes (32%
+smaller across the set). The `<img>` bytes are untouched - the wrapper goes
+around them at render time, exactly as the previous/next rows go around the
+container - so the PNG stays the fallback at its URL and the slice on disk
+stays a verbatim slice. A PNG with no twin is emitted bare; verify_image_
+dimensions.py is what insists every PNG has one of the same size.
+
 MATHJAX IS DECIDED FROM THE BODY, NOT FROM THE RECORD (2026-08-23)
 ------------------------------------------------------------------
 Until the performance pass every record carried a stored `head.mathjax`
@@ -102,6 +113,33 @@ CONTAINER_CLOSE = "\n          </div>"
 # restates the pattern rather than importing it, on purpose.
 MATHS_DELIMITER = re.compile(r"\\\(|\\\[|\$\$")
 MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
+
+
+# A diagram <img> in a slice: its own line, indented, self-closing, src under
+# /images/diagrams/. The lookahead pins the src; the tag body never contains
+# a ">" (alt text is entity-escaped), which is what lets [^>] span the lines.
+DIAGRAM_IMG = re.compile(
+    r'^([ \t]*)<img\b(?=[^>]*\bsrc="(/images/diagrams/[\w\-]+)\.png")[^>]*?/>',
+    re.M | re.S)
+
+
+def with_webp_pictures(html: str) -> str:
+    """Wrap each diagram <img> in a <picture> offering its WebP twin first.
+
+    The <img> is re-emitted byte for byte; only the wrapper lines are new,
+    at the tag's own indent. A PNG whose .webp is not in the tree is left
+    bare rather than pointed at a 404 - and verify_image_dimensions.py fails
+    the build for the missing twin, so that cannot ship quietly.
+    """
+    def wrap(m: re.Match) -> str:
+        indent, stem = m.group(1), m.group(2)
+        if not (ROOT / stem.lstrip("/")).with_suffix(".webp").exists():
+            return m.group(0)
+        return (f"{indent}<picture>\n"
+                f'{indent}<source type="image/webp" srcset="{stem}.webp" />\n'
+                f"{m.group(0)}\n"
+                f"{indent}</picture>")
+    return DIAGRAM_IMG.sub(wrap, html)
 
 
 def head_for(rec: dict, body_html: str) -> dict:
@@ -244,6 +282,7 @@ def build() -> dict[str, str]:
             slice_html = notes_extras.apply_all(
                 slice_html, notes_dir, slug, unit.group(1), date_modified(rec))
             slice_html = with_topic_nav(slice_html, key)
+        slice_html = with_webp_pictures(slice_html)
         pages[rec["path"]] = render(rec, slice_html)
     return pages
 

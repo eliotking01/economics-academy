@@ -438,6 +438,26 @@ or `docs/CONTENT_ISSUES.md` instead.
       decision on weight first.
 - [ ] **Per-topic Open Graph images** with the topic name on them — a
       generator job once the 1200×630 site image above exists.
+- [ ] **A maskable icon for `site.webmanifest`.** The performance pass
+      (2026-08-23) gave the manifest `id`, `start_url`, `scope`, `lang` and a
+      description and set its `theme_color` to the brand red, but left
+      `"purpose": "maskable"` out on purpose: it needs artwork with the logo
+      inside the safe zone (the middle 80% of a 512×512 square), which only
+      you can supply. Android crops a non-maskable icon into a circle with
+      the edges lost. Ten minutes in any image editor from the existing
+      `android-chrome-512x512.png`; then add a third entry to `icons` with
+      `"purpose": "maskable"`.
+- [ ] **Retire the Dopetrope 12-column grid in `css/main.css`** (the `.row`
+      / `.col-*` block, lines ~480–1693, ~15.9 KB raw, plus
+      `#main .row > div[class*="col-"]` — the (1,2,1) specificity trap in
+      PROGRESS trap 7). Deliberately NOT done in the performance pass: five
+      hand-written pages (404, contact, about, marking, tutoring — ~30 rows)
+      use it, `contact.css` carries its own bare `.row`/`.col-*` that
+      main.css is currently beating, and `.profile-highlight`/
+      `.teaching-methods` in main.css re-style the same classes, so the
+      conversion to `.resource-grid`/flex is a page-by-page job with
+      `computed_style_diff.py` before/after on each, not a deletion. Worth
+      ~2 KB gzipped and the trap; a session on its own.
 
 **Shipped, from ROADMAP's "Now" list** — both were the reason that file existed
 and both are live, so it had nothing left to say:

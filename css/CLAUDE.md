@@ -25,7 +25,11 @@ galleries, which share `revision-notes-diagrams.css`.
   the `.resource-index-*` topic index used by the notes and practice board
   hubs. Don't fork it.
 - Watch `#main .row > div[class*="col-"]` (specificity 1,2,1) — a bare class
-  selector loses to it. The contact form's honeypot rendered visibly until its
+  selector loses to it. (Still live: the 2026-08-23 performance pass removed
+  the dead `ul.social` brand-icon block, `.footer-dark` and 27 dead `-moz-`/
+  `-ms-` prefixes — proved cascade-neutral across 16 pages with
+  `computed_style_diff.py` — but left the `.row`/`.col-*` grid; OWNER-TODO
+  has the plan.) The contact form's honeypot rendered visibly until its
   selector was raised. Check computed style in a real render for anything that
   must be hidden.
 
