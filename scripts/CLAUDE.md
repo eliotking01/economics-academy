@@ -40,7 +40,22 @@ sources together.
 
 `bake_templates.py --apply` owns the baked header, footer and script tail on the
 17 hand-written pages; the other 446 take theirs from `page_shell.py`, which all
-five page generators import. `page_shell.SCRIPT_TAIL` is the one place the tail
+five page generators import. Since 2026-08-23 `page_shell.py` also owns the
+page skeleton (`page()`, `container()`), the shared head values
+(`head_values()`, `social()`) and the breadcrumb builders (`breadcrumb_ld()`,
+`breadcrumb_html()`); the four generators that used to carry their own copies
+pass their family's quirks in as values (the ppq family's `e()` and
+`jsonldAsciiEscaped`, the questions family's early preconnect comment). What
+the site is made of - the generator list, the publish rules, `family_of()`,
+`pages()` - is `site_layout.py`, imported by generators and verifiers alike;
+**a generator never imports a verifier** (`scripts/tests/test_site_layout.py`
+asserts it).
+
+`scripts/tests/` is stdlib `unittest`, run first in CI:
+`python3 -m unittest discover scripts/tests`. It covers
+`build_questions.validate()`, `notes_sequence`, the `page_shell` helpers,
+`verify_liquid`'s tokeniser and `site_layout`. Add a test beside any pure
+function you change. `page_shell.SCRIPT_TAIL` is the one place the tail
 is declared, and `verify_page_shell.py` check 2 restates it independently — so
 changing the tail must change two files in the same commit.
 
@@ -63,6 +78,7 @@ All of these run in `.github/workflows/verify.yml` on every push, plus
 `seo/tools/verify_seo.py`. Run the lot before a push.
 
 ```
+python3 -m unittest discover scripts/tests      # the unit tests, first
 verify_generated  verify_published_surface  verify_liquid  verify_icons
 verify_image_dimensions  verify_css_load_order  verify_inline_styles
 verify_page_shell  verify_boards  verify_glossary  verify_links  verify_html

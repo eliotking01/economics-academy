@@ -29,7 +29,7 @@ risk for months while being excluded from the build, on a line that was itself
 documenting this checker. A guard that cries wolf gets ignored, and then it is
 not a guard.
 
-The exclude list is parsed by `build_sitemap.py` and imported here rather than
+The exclude list is parsed by `site_layout.py` and imported here rather than
 restated. Two copies of the list would drift; two callers of one parser cannot.
 
 Standard library only. This reimplements enough of Liquid 4's tokeniser to
@@ -49,7 +49,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # Sibling in scripts/. Imported for its _config.yml `exclude` parser and its
 # publish rule, so this checker and the sitemap agree on what Jekyll builds.
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import build_sitemap  # noqa: E402
+import site_layout  # noqa: E402  - the publish rules
 
 # Liquid::TemplateParser - non-greedy, so each opener takes the nearest closer.
 TOKEN = re.compile(r"(\{%-?.*?-?%\}|\{\{-?.*?-?\}\})", re.S)
@@ -68,7 +68,7 @@ RAW_CLOSE = re.compile(r"\A(.*)\{%-?\s*(\w+)\s*(.*?)-?%\}\Z", re.S)
 def rendered_files():
     """Every markdown file GitHub Pages will run Liquid over.
 
-    Returns (rendered, skipped). `build_sitemap.published()` applies both rules
+    Returns (rendered, skipped). `site_layout.published()` applies both rules
     that matter - Jekyll's `_`-prefix rule and `_config.yml`'s `exclude` - so
     there is one definition of "published" in the repo rather than two.
 
@@ -76,11 +76,11 @@ def rendered_files():
     "notes 2.md" appear on disk, and a whitespace split would tear one filename
     into two nonexistent ones.
     """
-    ex = build_sitemap.excludes()
+    ex = site_layout.excludes()
     out = subprocess.run(["git", "ls-files", "*.md"], cwd=ROOT,
                          capture_output=True, text=True, check=True).stdout
     tracked = [f for f in out.splitlines() if f]
-    rendered = [f for f in tracked if build_sitemap.published(f, ex)]
+    rendered = [f for f in tracked if site_layout.published(f, ex)]
     return [ROOT / f for f in rendered], len(tracked) - len(rendered)
 
 

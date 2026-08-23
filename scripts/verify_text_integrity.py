@@ -109,7 +109,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # the same import verify_liquid.py and verify_css_load_order.py use, so all
 # three agree with the sitemap about what Jekyll actually builds.
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-import build_sitemap  # noqa: E402
+import site_layout  # noqa: E402  - the publish rules
 
 SKIP = {"script", "style"}
 
@@ -217,11 +217,11 @@ def list_files(ref):
             ["git", "ls-tree", "-r", "--name-only", ref],
             capture_output=True, text=True, check=True,
         ).stdout.split()
-    ex = build_sitemap.excludes()
+    ex = site_layout.excludes()
     return sorted(
         f for f in out
         if f.endswith(".html")
-        and build_sitemap.published(f, ex)
+        and site_layout.published(f, ex)
         and not f.startswith(GENERATED)
     )
 

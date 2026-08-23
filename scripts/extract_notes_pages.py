@@ -48,7 +48,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import page_shell  # noqa: E402
-import verify_page_shell as shell_check  # noqa: E402
+import site_layout as shell_check  # noqa: E402  - family_of(), pages()
 
 DATA = ROOT / "notes-data"
 

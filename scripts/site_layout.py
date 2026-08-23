@@ -17,11 +17,14 @@ notes-data/CLAUDE.md (a three-step variant) and scripts/verify_generated.py
 `scripts/verify_generated.py` re-runs it in a throwaway worktree; both import
 it from here, and nothing restates it.
 
-Import direction: generators and verifiers may import this module. It imports
-neither. (Phase 5 of the maintainability work moves the shared page
-enumeration - `family_of`, `pages`, the publish rules - in here as well, for
-the same reason: so a generator never has to import a verifier to find out
-what the site contains.)
+It also holds the shared ENUMERATION of the site - the publish rules that
+mirror GitHub Pages' default Jekyll build (`excludes()`, `published()`), the
+page families (`family_of()`, `HAND_WRITTEN`) and the published page list
+(`pages()`). Until 2026-08-23 those lived in build_sitemap.py and
+verify_page_shell.py, and page_shell.py - a generator - imported a VERIFIER to
+get at them. The rule now: generators and verifiers may both import this
+module; verifiers may import generators; a generator never imports a
+verifier. This module imports neither.
 
 Standard library only.
 """
@@ -29,6 +32,8 @@ Standard library only.
 from __future__ import annotations
 
 import pathlib
+import re
+import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -61,6 +66,90 @@ SITEMAP_GENERATOR = "build_sitemap.py"
 # committed tree against. If you are adding a generator, add it here and
 # nowhere else; build.py, verify_generated.py and the docs all read this.
 GENERATORS = CONTENT_GENERATORS + (SITEMAP_GENERATOR,)
+
+
+# --------------------------------------------------------------------------
+# What is published. Mirrors the GitHub Pages default Jekyll build: anything
+# under a path segment starting with "_" is skipped, as is anything in
+# _config.yml's `exclude` list. The list is PARSED from _config.yml rather
+# than restated - DO-NOT-BREAK's rule, after a restated copy in
+# docs/audit/scripts/lib.py went stale for two waves.
+# --------------------------------------------------------------------------
+
+def excludes() -> list[str]:
+    """The entries of _config.yml's `exclude:` list, in order."""
+    cfg = (ROOT / "_config.yml").read_text(encoding="utf-8")
+    out, inside = [], False
+    for line in cfg.splitlines():
+        if re.match(r"^exclude:\s*$", line):
+            inside = True
+            continue
+        if inside:
+            if re.match(r"^\S", line):
+                break
+            m = re.match(r"^\s+-\s+(\S+)", line)
+            if m:
+                out.append(m.group(1))
+    return out
+
+
+def published(path: str, ex: list[str]) -> bool:
+    """Does GitHub Pages serve this repo-relative path? `ex` is excludes()."""
+    if any(seg.startswith("_") for seg in path.split("/")):
+        return False
+    for e in ex:
+        if e.endswith("/") and path.startswith(e):
+            return False
+        if path == e:
+            return False
+    return True
+
+
+# Not pages: read at build time, excluded since 2026-08-20. Kept as a filter so
+# that a future un-excluding could not put them in a page list by accident.
+RUNTIME_PARTIALS = {"templates/header.html", "templates/footer.html"}
+
+
+# --------------------------------------------------------------------------
+# Page families, as Phase 0 defined them in 00-INVENTORY.md section 4.
+# --------------------------------------------------------------------------
+
+def family_of(path: str) -> str:
+    if path.startswith("revision-notes/glossary/"):
+        return "glossary"
+    if path.startswith("revision-notes/"):
+        rest = path[len("revision-notes/"):]
+        if rest.endswith("/index.html") and rest.count("/") == 1:
+            return "notes-hub"
+        if "/" not in rest:
+            return "notes-other"
+        return "notes-topic"
+    if path.startswith("practice-questions/"):
+        return "mcq-hub" if path.endswith("/index.html") else "mcq-topic"
+    if path.startswith("past-paper-questions/"):
+        return "ppq"
+    if path.startswith("past-papers/"):
+        return "past-papers"
+    if path.startswith("flashcards/"):
+        return "flashcards"
+    return "root"
+
+
+# Families no generator writes: the 9 root pages, the 5 past-papers/ hubs and
+# the 3 revision-notes/ non-topic pages. scripts/bake_templates.py owns
+# exactly this set (and prints it); notes-topic and notes-hub left this list in
+# Wave 2 Phases 5 and 3 when build_notes_pages.py took them over.
+HAND_WRITTEN = ("root", "notes-other", "past-papers")
+
+
+def pages() -> list[str]:
+    """Every published .html page, repo-relative, sorted. Tracked files only
+    (`git ls-files`), so a new page is listed once it is added."""
+    ex = excludes()
+    out = subprocess.run(["git", "ls-files", "*.html"], cwd=ROOT,
+                         capture_output=True, text=True, check=True).stdout.split()
+    return sorted(f for f in out
+                  if published(f, ex) and f not in RUNTIME_PARTIALS)
 
 
 def main() -> int:

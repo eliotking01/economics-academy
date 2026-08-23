@@ -83,44 +83,17 @@ from html.parser import HTMLParser
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import board_data  # noqa: E402  - expectedTopics, groups: the declared counts
-import build_sitemap  # noqa: E402  - for its _config.yml exclude parser
 import reseed_util  # noqa: E402
+import site_layout  # noqa: E402
 
-RUNTIME_PARTIALS = {"templates/header.html", "templates/footer.html"}
-
-
-# --------------------------------------------------------------------------
-# Families, as Phase 0 defined them in 00-INVENTORY.md section 4
-# --------------------------------------------------------------------------
-
-def family_of(path: str) -> str:
-    if path.startswith("revision-notes/glossary/"):
-        return "glossary"
-    if path.startswith("revision-notes/"):
-        rest = path[len("revision-notes/"):]
-        if rest.endswith("/index.html") and rest.count("/") == 1:
-            return "notes-hub"
-        if "/" not in rest:
-            return "notes-other"
-        return "notes-topic"
-    if path.startswith("practice-questions/"):
-        return "mcq-hub" if path.endswith("/index.html") else "mcq-topic"
-    if path.startswith("past-paper-questions/"):
-        return "ppq"
-    if path.startswith("past-papers/"):
-        return "past-papers"
-    if path.startswith("flashcards/"):
-        return "flashcards"
-    return "root"
-
-
-# Families no generator writes. notes-topic and notes-hub left this list in
-# Wave 2 Phases 5 and 3 - build_notes_pages.py renders all 173 of them from
-# notes-data/ - and the header line below went on printing "190 of them
-# hand-written" for every run afterwards. It is 17: the 9 root pages, the 5
-# past-papers/ hubs and the 3 revision-notes/ non-topic pages. scripts/
-# bake_templates.py owns exactly this set.
-HAND_WRITTEN = ("root", "notes-other", "past-papers")
+# The families, the hand-written set and the page list are site_layout's
+# since 2026-08-23 (they were defined here and page_shell.py - a generator -
+# imported this verifier to reach them). Re-exported under their old names
+# so nothing that still says verify_page_shell.family_of() breaks.
+family_of = site_layout.family_of
+HAND_WRITTEN = site_layout.HAND_WRITTEN
+RUNTIME_PARTIALS = site_layout.RUNTIME_PARTIALS
+pages = site_layout.pages
 
 # ---- check 1 -------------------------------------------------------------
 # Per family: distinct <head> skeletons, body shells, script tails, stylesheet
@@ -720,14 +693,6 @@ class Report:
         self.lines = []
         if heading:
             print(heading)
-
-def pages() -> list[str]:
-    ex = build_sitemap.excludes()
-    out = subprocess.run(["git", "ls-files", "*.html"], cwd=ROOT,
-                         capture_output=True, text=True, check=True).stdout.split()
-    return sorted(f for f in out
-                  if build_sitemap.published(f, ex) and f not in RUNTIME_PARTIALS)
-
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])

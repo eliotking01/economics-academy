@@ -55,6 +55,9 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import site_layout  # noqa: E402
+
 SITE = "https://economicsacademy.co.uk"
 SITEMAP_DIR = ROOT / "sitemaps"
 
@@ -69,11 +72,8 @@ SECTIONS = [
     ("flashcards", "flashcards/"),
 ]
 
-# Not pages. They were fetched at runtime by inject-templates.js until Wave
-# 4.10 and published until 2026-08-20; now they are read at build time only
-# and excluded by _config.yml. Kept as a belt-and-braces filter so that a
-# future un-excluding could not put them in the sitemap by accident.
-RUNTIME_PARTIALS = {"templates/header.html", "templates/footer.html"}
+# Not pages - see site_layout.RUNTIME_PARTIALS.
+RUNTIME_PARTIALS = site_layout.RUNTIME_PARTIALS
 
 PRIORITY = [
     ("", 1.0),                                  # the homepage
@@ -99,31 +99,13 @@ def git_files() -> list[str]:
     return [p for p in out.splitlines() if p]
 
 
-def excludes() -> list[str]:
-    cfg = (ROOT / "_config.yml").read_text(encoding="utf-8")
-    out, inside = [], False
-    for line in cfg.splitlines():
-        if re.match(r"^exclude:\s*$", line):
-            inside = True
-            continue
-        if inside:
-            if re.match(r"^\S", line):
-                break
-            m = re.match(r"^\s+-\s+(\S+)", line)
-            if m:
-                out.append(m.group(1))
-    return out
-
-
-def published(path: str, ex: list[str]) -> bool:
-    if any(seg.startswith("_") for seg in path.split("/")):
-        return False
-    for e in ex:
-        if e.endswith("/") and path.startswith(e):
-            return False
-        if path == e:
-            return False
-    return True
+# The publish rules live in site_layout.py since 2026-08-23, so that generators
+# and verifiers share one definition without a generator importing a verifier
+# or every verifier importing this generator. Re-exported here because six
+# scripts call build_sitemap.excludes()/published() by name; they work
+# unchanged and may migrate to site_layout at leisure.
+excludes = site_layout.excludes
+published = site_layout.published
 
 
 def url_for(path: str) -> str:

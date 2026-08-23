@@ -63,6 +63,7 @@ from __future__ import annotations
 
 import argparse
 import collections
+import html
 import json
 import pathlib
 import re
@@ -70,9 +71,8 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import build_sitemap  # noqa: E402
 import prettier_util  # noqa: E402
-import verify_page_shell as shell_check  # noqa: E402  - family_of(), pages()
+import site_layout  # noqa: E402  - family_of(), pages(), HAND_WRITTEN
 
 SITE = "https://economicsacademy.co.uk"
 BOARDS = json.loads(
@@ -472,6 +472,143 @@ def script_tail(extra: "tuple[str, ...]" = (), indent: int = 4) -> str:
 
 
 # --------------------------------------------------------------------------
+# The page skeleton and the shared head/breadcrumb helpers. 2026-08-23.
+# --------------------------------------------------------------------------
+#
+# Four generators - build_questions.py, build_flashcards.py, build_glossary.py
+# and build_past_paper_questions.py - each carried their own copy of the same
+# skeleton (doctype, <head> wrapper, page-wrapper, the two placeholders, the
+# script tail), the same og/twitter dict, and their own BreadcrumbList
+# builder. The copies were byte-equal and had to stay so by vigilance. They
+# now call these. Everything a family does differently is still a VALUE it
+# passes in (the questions family's early preconnect comment, the ppq family's
+# ASCII-escaped JSON-LD, the flashcards/glossary favicon position); nothing
+# here normalises a family's quirk away. Migration was one generator per
+# commit step, each proved byte-identical by verify_generated.py.
+
+def esc(s: str) -> str:
+    """html.escape(quote=True) - the escaping three of the four generators
+    use for <head> values and breadcrumb text. build_past_paper_questions.py
+    keeps its own e(): it must match escapeHtml() in question-search.js
+    character for character, which html.escape does not (&#x27;). That is
+    why every helper below takes `esc` as a parameter."""
+    return html.escape(s, quote=True)
+
+
+def social(title: str, description: str, url: str, *, og_type: str = "website",
+           esc=esc) -> dict:
+    """The og: and twitter: values, identical across the four generators.
+
+    Returned as the two sub-dicts render_head() expects, so a caller writes
+    `**social(...)` into its values.
+    """
+    return {
+        "og": {
+            "type": og_type, "siteName": "Economics Academy",
+            "locale": "en_GB", "url": url,
+            "title": esc(title), "description": esc(description),
+            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
+            "image:type": "image/png", "image:alt": "Economics Academy logo",
+        },
+        "twitter": {
+            "card": "summary_large_image", "title": esc(title),
+            "description": esc(description), "image": OG_IMAGE,
+        },
+    }
+
+
+def head_values(title: str, description: str, url: str, stylesheets, *,
+                og_type: str = "website", esc=esc) -> dict:
+    """The values every generated <head> shares. The family adds its own
+    flags and JSON-LD on top before calling render_head()."""
+    v = {
+        "title": esc(title),
+        "description": esc(description),
+        "canonical": url,
+        "pageStylesheets": list(stylesheets),
+    }
+    v.update(social(title, description, url, og_type=og_type, esc=esc))
+    return v
+
+
+def breadcrumb_ld(crumbs, site: str = SITE) -> dict:
+    """A BreadcrumbList node from [(name, href-or-None), ...]. Key order is
+    @type, position, name, item - item only when there is an href - because
+    the order is serialised and four generators agreed on it."""
+    items = []
+    for position, (name, href) in enumerate(crumbs, start=1):
+        item = {"@type": "ListItem", "position": position, "name": name}
+        if href:
+            item["item"] = site + href
+        items.append(item)
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items,
+    }
+
+
+def breadcrumb_html(crumbs, indent: int = 10, *, esc=esc, href=lambda h: h) -> str:
+    """The visible trail as a whole <nav>, one crumb per line, the form the
+    flashcards and glossary pages carry. `href` maps a path to what the link
+    should show (build_past_paper_questions.py drops a trailing index.html).
+    Must agree with breadcrumb_ld() name for name - verify_page_shell.py
+    check 8 compares the two on every page."""
+    pad = " " * indent
+    parts = []
+    for name, h in crumbs:
+        if h:
+            parts.append(f'{pad}  <a href="{href(h)}">{esc(name)}</a>')
+        else:
+            parts.append(f"{pad}  <span>{esc(name)}</span>")
+        parts.append(f'{pad}  <span class="separator">&rsaquo;</span>')
+    parts.pop()
+    inner = "\n".join(parts)
+    return (f'{pad}<nav class="breadcrumb" aria-label="Breadcrumb">\n'
+            f"{inner}\n{pad}</nav>")
+
+
+def container(inner: str, main_class: str) -> str:
+    """<main id="main" class=...><div class="container">...</div></main>, at
+    the indent the generated families use. `inner` is emitted as-is between
+    the container's open and close lines."""
+    return (f'      <main id="main" class="{main_class}">\n'
+            f'        <div class="container">\n'
+            f"{inner}\n"
+            f"        </div>\n"
+            f"      </main>")
+
+
+def page(head: str, body: str, extra_scripts=()) -> str:
+    """The whole document: doctype, <head> from render_head(), the page
+    wrapper with its two placeholders (page_shell.bake() fills them after
+    Prettier), `body` verbatim between them, and the script tail plus the
+    family's own deferred script. Ends with a newline, as every page does."""
+    return (
+        "<!doctype html>\n"
+        '<html lang="en-GB">\n'
+        "  <head>\n"
+        f"{head}\n"
+        "  </head>\n"
+        '  <body class="is-preload">\n'
+        '    <div id="page-wrapper">\n'
+        "      <!-- Header -->\n"
+        f"      {HEADER_PLACEHOLDER}\n"
+        "\n"
+        f"{body}\n"
+        "\n"
+        "      <!-- Footer -->\n"
+        f"      {FOOTER_PLACEHOLDER}\n"
+        "    </div>\n"
+        "\n"
+        "    <!-- Scripts -->\n"
+        f"{script_tail(tuple(extra_scripts))}\n"
+        "  </body>\n"
+        "</html>\n"
+    )
+
+
+# --------------------------------------------------------------------------
 # The header and footer, baked in. Wave 2 Phase 7.
 # --------------------------------------------------------------------------
 #
@@ -864,17 +1001,17 @@ def main() -> int:
         ap.print_help()
         return 2
 
-    hand = set(shell_check.HAND_WRITTEN)
-    paths = [p for p in shell_check.pages()
-             if shell_check.family_of(p) in hand
-             and (not args.family or shell_check.family_of(p) in args.family)]
+    hand = set(site_layout.HAND_WRITTEN)
+    paths = [p for p in site_layout.pages()
+             if site_layout.family_of(p) in hand
+             and (not args.family or site_layout.family_of(p) in args.family)]
 
     tmp = ROOT / ".page_shell_selftest.tmp.html"
     stats: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
     worst: dict[str, list] = collections.defaultdict(list)
     try:
         for p in paths:
-            fam = shell_check.family_of(p)
+            fam = site_layout.family_of(p)
             src = (ROOT / p).read_text(encoding="utf-8")
             committed = HEAD.search(src).group(1)
             rendered = render_head(extract(src))

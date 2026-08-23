@@ -13,6 +13,7 @@ dependency (see `verify_page_shell.py`'s docstring). It is kept here because
 it is cheap and catches an edit to `_config.yml` that forgot `lib.py`.
 
 ```bash
+python3 -m unittest discover scripts/tests
 python3 scripts/verify_html.py
 python3 scripts/verify_links.py
 python3 scripts/verify_glossary.py

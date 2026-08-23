@@ -54,6 +54,14 @@ jobs:
         with:
           node-version: '20'
 
+      # Unit tests for the pure logic most likely to be edited and least
+      # likely to be noticed when wrong: build_questions.validate()'s
+      # authoring rules, notes_sequence's derived chain, the shared page-shell
+      # helpers the four generators call, verify_liquid's tokeniser, and the
+      # import direction (a generator never imports a verifier). Stdlib
+      # unittest, ~0.3 s. Added 2026-08-23.
+      - name: Unit tests
+        run: python3 -m unittest discover scripts/tests
       - name: HTML well-formedness
         run: python3 scripts/verify_html.py
       - name: Internal links and fragments

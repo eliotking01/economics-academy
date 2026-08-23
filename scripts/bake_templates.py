@@ -57,10 +57,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import page_shell  # noqa: E402
 import reseed_util  # noqa: E402
-import verify_page_shell as shell_check  # noqa: E402  - family_of(), pages()
+import site_layout as shell_check  # noqa: E402  - family_of(), pages()
 
 # The families no generator writes. Everything else is rebuilt from source and
-# picks the header up on the next run; see verify_page_shell.family_of().
+# picks the header up on the next run; see site_layout.family_of().
 UNGENERATED = ("root", "past-papers", "notes-other")
 
 # Measured, and asserted rather than assumed: if a generator ever takes one of

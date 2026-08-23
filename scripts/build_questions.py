@@ -30,7 +30,6 @@ duplicate URL that competes with the canonical one.
 from __future__ import annotations
 
 import argparse
-import datetime
 import html
 import json
 import re
@@ -45,7 +44,6 @@ import page_shell as page_shell_mod  # noqa: E402
 DATA_DIR = ROOT / "questions-data"
 OUT_DIR = ROOT / "practice-questions"
 NOTES_DIR = ROOT / "revision-notes"
-SITEMAP = ROOT / "sitemap.xml"
 
 SITE = "https://economicsacademy.co.uk"
 GA_ID = "G-YVCNRW4QH6"
@@ -346,9 +344,11 @@ ID_RE = re.compile(
 # have been dead weight. DO-NOT-BREAK's entry on the six blocks is amended to
 # say so - the outcome it protects (topic links reachable without JS) is now
 # met by the default markup rather than by a fallback.
-
-SITEMAP_OPEN = "  <!-- Practice Questions -->"
-SITEMAP_CLOSE = "  <!-- /Practice Questions -->"
+#
+# The sitemap block this generator used to splice into sitemap.xml (and the
+# SITEMAP_OPEN/SITEMAP_CLOSE markers) went on 2026-08-23 with the dead
+# update_sitemap(); scripts/build_sitemap.py has owned the sitemap since it
+# was written. --sitemap on this script prints that and does nothing.
 
 
 class SetError(Exception):
@@ -736,19 +736,6 @@ def render_jsonld_quiz(topic):
     }
 
 
-def jsonld_block(data, indent):
-    """Kept as the identity on `data`.
-
-    Wave 2 Phase 6: page_shell.ldjson() does the serialising now, and it
-    produced byte-identical output to what this used to - json.dumps(indent=2)
-    re-indented by six, inside script tags at four. The function survives so
-    the three call sites read unchanged and the `indent` argument stays
-    documented as having only ever been 4.
-    """
-    assert indent == 4, f"only indent=4 was ever used, got {indent}"
-    return data
-
-
 def render_page(topic, siblings=(), ppq=None):
     url = SITE + page_url(topic)
     board_label = BOARD_LABELS[topic["board"]]
@@ -850,7 +837,7 @@ def render_page(topic, siblings=(), ppq=None):
         desc=topic["metaDescription"],
         url=url,
         css="/css/pages/quiz.css",
-        jsonld=jsonld_block(render_jsonld_quiz(topic), 4),
+        jsonld=render_jsonld_quiz(topic),
         breadcrumb=breadcrumb_jsonld(
             [
                 ("Home", "/"),
@@ -885,69 +872,25 @@ def shell(
     passed as a value rather than reworded: it puts the font preconnect before
     <title> under its own explanatory comment. (Its six board index pages also
     carried a <noscript> block until 2026-08-23 - see the note above
-    SITEMAP_OPEN for why it went; head_extra is kept so a future page can pass
-    one.)
+    validate() ("Until the hub redesign") for why it went; head_extra is kept so a future page can pass
+    one.) Its BreadcrumbList sits AFTER the stylesheets where the other three
+    families put it before the favicons - also a value, jsonldAfterStyles.
+    2026-08-23: the skeleton and the og/twitter block come from page_shell.py.
     """
-    head = page_shell_mod.render_head({
-        "title": attr(title),
-        "description": attr(desc),
-        "canonical": url,
+    values = page_shell_mod.head_values(title, desc, url, [css],
+                                        og_type=og_type, esc=attr)
+    values.update({
         "preconnectEarly": True,
         "earlyPreconnectComment": EARLY_PRECONNECT_COMMENT,
-        "og": {
-            "type": og_type, "siteName": "Economics Academy",
-            "locale": "en_GB", "url": url,
-            "title": attr(title), "description": attr(desc),
-            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
-            "image:type": "image/png", "image:alt": "Economics Academy logo",
-        },
-        "twitter": {
-            "card": "summary_large_image", "title": attr(title),
-            "description": attr(desc), "image": OG_IMAGE,
-        },
         "jsonldBeforeIcons": [jsonld],
         "jsonldAfterStyles": [breadcrumb],
-        "pageStylesheets": [css],
         "headNoscript": head_extra or None,
     })
-    return f"""<!doctype html>
-<html lang="en-GB">
-  <head>
-{head}
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <div id="header-placeholder"></div>
-
-{body}
-
-      <!-- Footer -->
-      <div id="footer-placeholder"></div>
-    </div>
-
-    <!-- Scripts -->
-{page_shell_mod.script_tail(scripts)}
-  </body>
-</html>
-"""
+    return page_shell_mod.page(page_shell_mod.render_head(values), body, scripts)
 
 
 def breadcrumb_jsonld(trail):
-    items = []
-    for position, (name, href) in enumerate(trail, start=1):
-        item = {"@type": "ListItem", "position": position, "name": name}
-        if href:
-            item["item"] = SITE + href
-        items.append(item)
-    return jsonld_block(
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": items,
-        },
-        4,
-    )
+    return page_shell_mod.breadcrumb_ld(trail)
 
 
 def unit_of(spec):
@@ -1250,8 +1193,7 @@ def render_board_index(board_dir, topics):
         desc=desc,
         url=url,
         css="/css/pages/practice-questions.css",
-        jsonld=jsonld_block(
-            {
+        jsonld={
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": f"{name} practice questions",
@@ -1264,9 +1206,7 @@ def render_board_index(board_dir, topics):
                     "url": SITE,
                 },
                 "publisher": page_shell_mod.ORGANISATION_REF,
-            },
-            4,
-        ),
+        },
         breadcrumb=breadcrumb_jsonld(
             [
                 ("Home", "/"),
@@ -1395,8 +1335,7 @@ def render_hub(by_board):
         desc=desc,
         url=url,
         css="/css/pages/practice-questions.css",
-        jsonld=jsonld_block(
-            {
+        jsonld={
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": "A-Level Economics practice questions",
@@ -1422,9 +1361,7 @@ def render_hub(by_board):
                     if by_board.get(d)
                 ],
                 "publisher": page_shell_mod.ORGANISATION_REF,
-            },
-            4,
-        ),
+        },
         breadcrumb=breadcrumb_jsonld([("Home", "/"), ("Practice Questions", None)]),
         body=body,
         scripts=("/js/components/quiz.js",),
@@ -1433,44 +1370,6 @@ def render_hub(by_board):
 
 def spec_key(spec):
     return tuple(int(part) for part in spec.split("."))
-
-
-# ------------------------------------------------------------------ sitemap
-
-
-def update_sitemap(topics):
-    """UNUSED. scripts/build_sitemap.py owns the sitemap now: it enumerates pages from the filesystem and takes lastmod from git, so a generator stamping today's date into its own block would undo that."""
-    """Insert or refresh the practice-questions block. Purely additive to
-    every line outside the block's own markers."""
-    today = datetime.date.today().isoformat()
-    lines = [SITEMAP_OPEN]
-    lines.append(
-        f"  <url><loc>{SITE}/practice-questions/</loc>"
-        f"<lastmod>{today}</lastmod><priority>0.9</priority></url>"
-    )
-    for board_dir in sorted({t["boardDir"] for t in topics}, key=BOARD_ORDER.get):
-        lines.append(
-            f"  <url><loc>{SITE}/practice-questions/{board_dir}/</loc>"
-            f"<lastmod>{today}</lastmod><priority>0.8</priority></url>"
-        )
-    for topic in sorted(
-        topics, key=lambda t: (BOARD_ORDER[t["boardDir"]], spec_key(t["spec"]))
-    ):
-        lines.append(
-            f"  <url><loc>{SITE}{page_url(topic)}</loc>"
-            f"<lastmod>{today}</lastmod><priority>0.7</priority></url>"
-        )
-    lines.append(SITEMAP_CLOSE)
-    block = "\n".join(lines)
-
-    text = SITEMAP.read_text(encoding="utf-8")
-    if SITEMAP_OPEN in text and SITEMAP_CLOSE in text:
-        start = text.index(SITEMAP_OPEN)
-        end = text.index(SITEMAP_CLOSE) + len(SITEMAP_CLOSE)
-        text = text[:start] + block + text[end:]
-    else:
-        text = text.replace("</urlset>", block + "\n\n</urlset>")
-    SITEMAP.write_text(text, encoding="utf-8")
 
 
 # --------------------------------------------------------------------- main

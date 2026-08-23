@@ -31,7 +31,6 @@ needed to view the site.
 from __future__ import annotations
 
 import argparse
-import datetime
 import hashlib
 import html
 import json
@@ -49,7 +48,6 @@ import prettier_util  # noqa: E402
 DATA = ROOT / "glossary-data" / "terms.json"
 TAXONOMY = ROOT / "past-paper-questions-data" / "taxonomy.json"
 OUT_DIR = ROOT / "revision-notes" / "glossary"
-SITEMAP = ROOT / "sitemap.xml"
 KATEX_JS = ROOT / "scripts" / "vendor" / "katex.min.js"
 
 SITE = "https://economicsacademy.co.uk"
@@ -398,69 +396,31 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
 
     Wave 2 Phase 6. This function's <head> was byte-identical to
     build_flashcards.py's bar the stylesheet name, which is the duplication
-    the whole wave exists to remove.
+    the whole wave exists to remove. 2026-08-23: the skeleton, the og/twitter
+    block and the BreadcrumbList builder moved into page_shell.py too; what is
+    left here is the list of values this family contributes.
     """
     url = f"{SITE}{path}"
-    crumb_ld = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {k: v for k, v in
-             {"@type": "ListItem", "position": i, "name": name,
-              "item": f"{SITE}{href}" if href else None}.items() if v is not None}
-            for i, (name, href) in enumerate(crumbs, 1)
-        ],
-    }
     sheets = ["/css/pages/glossary.css"]
     if katex_css:
         sheets.append("/css/vendor/katex/katex.min.css")
-    head = shell.render_head({
-        "title": e(title),
-        "description": e(desc),
-        "canonical": url,
+    values = shell.head_values(title, desc, url, sheets, esc=e)
+    values.update({
+        # This family puts the font preconnect before <title> and the favicon
+        # trio straight after the canonical. Both are recorded rather than
+        # chosen: reconciling them with the hand-written pages is a separate
+        # normalisation.
         "preconnectEarly": True,
         "faviconsAfterCanonical": True,
         "ogComment": True,
         "sdComment": True,
-        "og": {
-            "type": "website", "siteName": "Economics Academy",
-            "locale": "en_GB", "url": url,
-            "title": e(title), "description": e(desc),
-            "image": OG_IMAGE, "image:width": "1200", "image:height": "1200",
-            "image:type": "image/png", "image:alt": "Economics Academy logo",
-        },
-        "twitter": {
-            "card": "summary_large_image", "title": e(title),
-            "description": e(desc), "image": OG_IMAGE,
-        },
-        "jsonldBeforeIcons": [jsonld, crumb_ld],
-        "pageStylesheets": sheets,
+        "jsonldBeforeIcons": [jsonld, shell.breadcrumb_ld(crumbs)],
     })
-    return f"""<!doctype html>
-<html lang="en-GB">
-  <head>
-{head}
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <div id="header-placeholder"></div>
-
-      <main id="main" class="glossary-page">
-        <div class="container">
-{body}
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <div id="footer-placeholder"></div>
-    </div>
-
-    <!-- Scripts -->
-{shell.script_tail(("/js/components/glossary-filter.js",))}
-  </body>
-</html>
-"""
+    return shell.page(
+        shell.render_head(values),
+        shell.container(body, "glossary-page"),
+        ("/js/components/glossary-filter.js",),
+    )
 
 
 # PH07-058, Wave 4.9. The glossary was one of two families with no body link
@@ -486,18 +446,7 @@ SERVICES_CTA = """
 
 
 def breadcrumb_html(crumbs, indent=10):
-    pad = " " * indent
-    parts = []
-    for name, href in crumbs:
-        if href:
-            parts.append(f'{pad}  <a href="{href}">{e(name)}</a>')
-        else:
-            parts.append(f"{pad}  <span>{e(name)}</span>")
-        parts.append(f'{pad}  <span class="separator">&rsaquo;</span>')
-    parts.pop()
-    inner = "\n".join(parts)
-    return (f'{pad}<nav class="breadcrumb" aria-label="Breadcrumb">\n'
-            f"{inner}\n{pad}</nav>")
+    return shell.breadcrumb_html(crumbs, indent, esc=e)
 
 
 # ---------------------------------------------------------------- board page
@@ -901,37 +850,6 @@ def render_landing(data):
         path="/revision-notes/glossary/",
         crumbs=crumbs, body=body, jsonld=ld,
     )
-
-
-# ---------------------------------------------------------------- sitemap
-
-SITEMAP_OPEN = "  <!-- Glossary -->"
-SITEMAP_CLOSE = "  <!-- /Glossary -->"
-
-
-def update_sitemap(paths):
-    """UNUSED. scripts/build_sitemap.py owns the sitemap now: it enumerates pages from the filesystem and takes lastmod from git, so a generator stamping today's date into its own block would undo that."""
-    today = datetime.date.today().isoformat()
-    lines = [SITEMAP_OPEN]
-    for p in paths:
-        priority = "0.8" if p.count("/") == 3 else "0.75"
-        lines.append(f"  <url><loc>{SITE}{p}</loc><lastmod>{today}</lastmod>"
-                     f"<priority>{priority}</priority></url>")
-    lines.append(SITEMAP_CLOSE)
-    block = "\n".join(lines)
-
-    text = SITEMAP.read_text(encoding="utf-8")
-    if SITEMAP_OPEN in text and SITEMAP_CLOSE in text:
-        start = text.index(SITEMAP_OPEN)
-        end = text.index(SITEMAP_CLOSE) + len(SITEMAP_CLOSE)
-        new = text[:start] + block + text[end:]
-    else:
-        i = text.rindex("</urlset>")
-        new = text[:i] + block + "\n\n" + text[i:]
-    if new == text:
-        return False
-    SITEMAP.write_text(new, encoding="utf-8")
-    return True
 
 
 # ---------------------------------------------------------------- main
