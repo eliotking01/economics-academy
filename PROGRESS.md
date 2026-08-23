@@ -97,14 +97,11 @@ served at `/package.json`.
 (enables the hooks, once per clone) and the deletion of the ten local
 branches already merged into `main` (`git branch --merged main`).
 
-**Still open from this work:** the `test_compare_trees.py` step (~2m30s of
-every CI run, testing a tool CI deliberately does not run) — proposal in the
-review summary, not acted on. `.claude/hooks/block-generated.py`'s
+**Closed at review (2026-08-23):** `test_compare_trees.py` moved out of
+`verify.yml` into the weekly `compare-trees-suite.yml` (also on demand and on
+any change to the harness). **Still open:** `.claude/hooks/block-generated.py`'s
 `HAND_WRITTEN` is still a hand-copied list of the 17 (bake_templates.py
-prints the authoritative one). Something outside the repo's own scripts
-reformatted `OWNER-TODO.md` with Prettier's markdown style once during this
-work (reverted, in no commit) — check for an editor format-on-save.
-
+prints the authoritative one). 
 ## Hub redesign — the 12 board hubs (2026-08-23) — LIVE (merged 2026-08-23, `dedd5d1`)
 
 **STATE: live.** Merged and pushed 2026-08-23 after Eliot reviewed the

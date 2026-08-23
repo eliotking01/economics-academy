@@ -6,6 +6,10 @@ Run every check `.github/workflows/verify.yml` runs, in this order, and report a
 one-line PASS/FAIL per check. Do not stop at the first failure — run them all,
 then summarise.
 
+`scripts/test_compare_trees.py` is no longer in this list: it runs weekly and on
+change in `.github/workflows/compare-trees-suite.yml` (~2m30s). Run it by hand
+if you touch `compare_trees.py`.
+
 The last line below is NOT a CI step: it imports `docs/audit/scripts/lib.py`,
 which restates `_config.yml`'s exclude list and raises on import if the two
 have drifted. CI does not run it because `docs/audit/` is a record, not a
@@ -36,7 +40,6 @@ node scripts/test_glossary_filter.js
 python3 scripts/verify_text_integrity.py HEAD~1
 python3 scripts/verify_markup_integrity.py HEAD~1 --strict
 python3 scripts/verify_generated.py
-python3 scripts/test_compare_trees.py
 python3 -c "import sys;sys.path.insert(0,'docs/audit/scripts');import lib"
 ```
 

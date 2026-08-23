@@ -905,6 +905,10 @@ Do not delete the passing cases as redundant.
 > page a second `/tutoring.html` link and disarmed `a7-link-lost`. ~2m30s, so
 > it sits in the second job beside `verify_generated.py`.
 >
+> **Moved again 2026-08-23, Eliot's decision:** out of `verify.yml` into
+> `.github/workflows/compare-trees-suite.yml` — weekly, on demand, and on any
+> push touching the harness or its suite. Still runs; no longer on every push.
+>
 > Making the comparison a per-commit gate needs a declaration mechanism for
 > assertions 1, 3, 5, 6 and 7 — the `Text-Change:`/`Markup-Change:` trailer
 > pattern extended — which is a design decision and is recorded as one rather
@@ -1356,7 +1360,7 @@ python3 scripts/verify_markup_integrity.py <before-ref> --strict
 python3 scripts/verify_liquid.py          # 1 file checked, 0 problems, exit 0 (D31)
 python3 scripts/verify_glossary.py
 python3 scripts/verify_inline_styles.py   # 0 authored; 1,187 KaTeX on 7 pages
-python3 scripts/test_compare_trees.py     # 39 cases, ~2m30s; the harness's own suite
+python3 scripts/test_compare_trees.py     # 39 cases, ~2m30s; weekly workflow, not verify.yml
 python3 seo/tools/verify_seo.py           # 14/14
 python3 scripts/build_sitemap.py --check  # "nothing written"
 node scripts/test_question_search.js
