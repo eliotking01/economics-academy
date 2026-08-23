@@ -56,6 +56,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import page_shell  # noqa: E402
+import reseed_util  # noqa: E402
 import verify_page_shell as shell_check  # noqa: E402  - family_of(), pages()
 
 # The families no generator writes. Everything else is rebuilt from source and
@@ -64,7 +65,12 @@ UNGENERATED = ("root", "past-papers", "notes-other")
 
 # Measured, and asserted rather than assumed: if a generator ever takes one of
 # these over - or a new hand-written page appears - the count moves and this
-# script says so instead of quietly doing different work.
+# script says so instead of quietly doing different work. It is a pin against
+# an UNDECLARED change, not a count anyone should remember: a deliberate change
+# is `--reseed`, which rewrites this line from the measured set and prints the
+# diff. Two other things are derived from this set and must move with it -
+# .prettierignore (`--prettierignore`) and HAND_WRITTEN in
+# .claude/hooks/block-generated.py - which is why the change must be declared.
 EXPECTED = 17
 
 
@@ -191,6 +197,12 @@ def main() -> int:
     ap.add_argument("--prettierignore", action="store_true",
                     help="print the body of .prettierignore - these pages "
                          "plus what must never be formatted - and stop")
+    ap.add_argument("--reseed", action="store_true",
+                    help="rewrite EXPECTED in this file from the measured page "
+                         "set, print the diff and stop. For a DELIBERATE new "
+                         "or removed hand-written page, in the same commit - "
+                         "then regenerate .prettierignore and update "
+                         ".claude/hooks/block-generated.py's HAND_WRITTEN.")
     args = ap.parse_args()
 
     paths = targets()
@@ -201,6 +213,12 @@ def main() -> int:
         return 0
     if args.prettierignore:
         print(prettierignore(paths), end="")
+        return 0
+    if args.reseed:
+        reseed_util.rewrite(__file__, "EXPECTED", repr(len(paths)))
+        print("Now: python3 scripts/bake_templates.py --prettierignore > "
+              ".prettierignore, and update HAND_WRITTEN in "
+              ".claude/hooks/block-generated.py.")
         return 0
 
     if len(paths) != EXPECTED:

@@ -6,6 +6,34 @@ Hand-authored source of truth for `/flashcards/`. Excluded from publishing.
 
 One file per board per theme: `<board>/<theme>.json`.
 
+## Adding one (the workflow; the rules below are the authoring standard)
+
+1. **A card belongs to an existing deck and an existing notes topic.** Open
+   `<board>/<theme>.json` for the topic's board and theme; the topic must have
+   a notes page (`notes-data/topics/<dir>/<slug>.*`) because `subtopic` is that
+   slug and every card links to the page that teaches it.
+2. Append a card object to `cards`, copying the nearest sibling for the
+   shape: `id` (`<board>-<spec-with-dashes>-<type>-NN`, unique across the
+   deck), `specCode` (dotted), `topic` (the unit heading string the siblings
+   use), `subtopic` (the notes slug), `cardType`, `front`/`back` (HTML, card
+   prose), `svgRef`, `difficulty`, `tags`, `premium`, `acceptableAnswers`.
+   Authored order does not matter — the build sorts by `specCode`.
+3. A diagram card needs its SVG verified against the ground-truth PNG in
+   `images/diagrams/` and `docs/DIAGRAM_STYLE.md` (rule 4 below) before it is
+   presented for approval.
+4. `python3 scripts/build.py` runs `build_flashcards.py` (`validate_deck()`
+   rejects an unknown board/theme pair, a missing field or a duplicate id)
+   and writes the deck page and `flashcards/data/<deckId>.json`. There is no
+   `--check` for this generator; the build is the check.
+5. Suite (`/verify`), commit, then `python3 scripts/build.py --sitemap` and
+   commit. No verifier literal needs bumping: the deck count is derived from
+   this directory.
+
+A new **deck** (a new board/theme pair) is bigger than a card: the pair must
+be a group in `boards-data/boards.json` (`build_flashcards.NOTES_DIRS` is
+derived from it), and the deck file needs every deck-level field — follow an
+existing deck file and say so in the commit.
+
 ## Rules
 
 1. **Never edit existing written content on the site without explicit approval

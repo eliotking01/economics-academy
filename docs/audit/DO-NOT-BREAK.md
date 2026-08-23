@@ -925,6 +925,24 @@ up.** An improvement is welcome and must be declared: change the page and the
 number in the same commit, so the diff records what improved. `--show` reprints
 the tables for reseeding.
 
+> **Split 2026-08-23 into invariants and cardinalities.** The SHAPE tables
+> (`EXPECTED_SHAPES`: distinct heads / shells / tails / css sets per family;
+> `EXPECTED_NOTES_SPINES`; the zero tripwires; every declared exception set)
+> are still pinned and still fail in both directions - and `--reseed` now
+> rewrites them from the tree and prints the diff, so a declared change is one
+> command. The CARDINALITIES are derived: topic page counts from
+> `boards.json`'s `expectedTopics` (the one place a count is declared), hubs
+> / decks / glossary from the data directories, breadcrumbs and the baked
+> header as "every page except the declared set", extra scripts as "every page
+> of the family and none outside it". The image counts and the per-shape spine
+> counts `(97, 29, 16, 11, 7, 6)` are printed and no longer judged - the
+> latter had already shaped a product decision (PROGRESS.md, "contents list on
+> all 166") and would move on every legitimate addition. The three
+> hand-written families and `ppq` keep a pinned page count
+> (`PINNED_PAGE_COUNTS`, reseedable) because nothing in `boards.json` declares
+> them. `MALFORMED_NOTES_PAGES`, `KNOWN_BREADCRUMB_DISAGREEMENT` and the
+> singleton-spine assertion are untouched.
+
 > **Exercised 2026-08-14, Wave 5.4, D49 — and it fired on an IMPROVEMENT, which
 > is the case this entry exists for.** Repairing PH06-031's three malformed
 > notes pages took check 6 from **9 spine shapes (95, 29, 15, 11, 7, 6, 1, 1, 1)

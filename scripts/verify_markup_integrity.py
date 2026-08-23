@@ -117,7 +117,7 @@ def resolve(source, templates):
 # makes a strictly stronger statement about the same bytes: the exact tuple
 # page_shell.SCRIPT_TAIL, in that order, as the FIRST scripts on 463 of 463
 # pages, with each family's own extra script counted to the page in
-# EXPECTED_EXTRA_SCRIPTS. "No <script> count went down" is the weaker claim of
+# FAMILY_SCRIPT. "No <script> count went down" is the weaker claim of
 # the two. What this check exists for is an <a> or a key-definition span
 # vanishing out of the prose, and it still sees every one of those.
 SCRIPT_SRC = re.compile(r'[ \t]*<script src="[^"]*"( defer)?></script>\n?')

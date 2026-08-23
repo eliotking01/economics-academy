@@ -99,3 +99,16 @@ PDFKit. `extract_aqa_questions.py` is the exception and needs `pdfplumber` from
 **If a number is one a script computes, cite the script, not the value.** Counts
 in this repo have drifted invisibly before — see `docs/HISTORY.md`. A number that
 cannot go stale beats a number that is right today.
+
+**Counts are declared once, in `boards-data/boards.json` (`expectedTopics`),
+and derived everywhere else.** `verify_page_shell.py` splits its checks into
+INVARIANTS (shape counts, the script tail, the exception sets, the zero
+tripwires — pinned literals, and a change to one has to change the file in
+the same commit) and CARDINALITIES (how many pages, breadcrumbs, extra
+scripts — derived from `boards.json` and the tree). The verifiers that still
+pin a literal on purpose each have `--reseed`, which rewrites the literal from
+the measured state and prints the diff: `verify_page_shell.py --reseed`,
+`verify_boards.py --reseed` (`PINNED`), `bake_templates.py --reseed`
+(`EXPECTED`). Adding a topic is `python3 scripts/new_topic.py` — it bumps
+`boards.json` and scaffolds the data — then `build.py`; nothing in a verifier
+needs editing for it.

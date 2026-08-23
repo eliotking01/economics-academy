@@ -3,6 +3,8 @@
 
     python3 scripts/verify_page_shell.py
     python3 scripts/verify_page_shell.py --show    # print the shapes, don't judge
+    python3 scripts/verify_page_shell.py --reseed  # rewrite the pinned shape
+                                                   # tables from the tree, show diff
 
 WHY THIS EXISTS
 ---------------
@@ -19,17 +21,40 @@ is rejected**. It does not template anything. It writes down what the shell
 looks like today and fails if that changes without the table below changing in
 the same commit.
 
-THE EXPECTED TABLES ARE THE POINT
----------------------------------
-Every count here is a literal, in the spirit of
-`build_past_paper_taxonomy.py`'s `EXPECTED = {"edexcel": 87, "aqa": 79}`, which
-DO-NOT-BREAK keeps precisely because it "makes adding a board fail loudly
-rather than silently emit a short taxonomy".
+INVARIANTS ARE PINNED; CARDINALITIES ARE DERIVED
+------------------------------------------------
+Until 2026-08-23 every number here was a literal, including the ones that
+change whenever a topic is added - page counts per family, how many pages
+load quiz.js, how many carry a breadcrumb, how many images there are. Adding
+one notes topic meant bumping literals in this file, boards.json,
+verify_boards.py and bake_templates.py by hand, and the image-count and
+spine-count pins had already steered a product decision (PROGRESS.md: the
+contents list went on all 166 pages partly so that check 6's tuple would not
+move). So the checks are now split in two:
 
-So a count going DOWN fails too. An improvement is welcome and must be
-declared: change the page and the number together, and the diff then says what
-was improved. A verifier that quietly congratulates you is one that cannot tell
-an improvement from an accident.
+  INVARIANTS - the point of this file, still pinned as literals, and a change
+  to one still has to change this file in the same commit: how many distinct
+  <head> / body-shell / script-tail / stylesheet-set SHAPES each family has;
+  the script tail and its order; the declared exception sets (which pages
+  disagree with themselves, which are exempt from which head field, which
+  carry no breadcrumb); that no notes page has a spine of its own; that the
+  baked header is byte-identical on EVERY page; the image-loading convention;
+  the zero-tripwires (no <style> in a notes head, no MathJax-without-id).
+  `--reseed` rewrites the pinned shape tables from the measured tree and
+  prints the diff, so a deliberate change is one command plus a read.
+
+  CARDINALITIES - how many pages, breadcrumbs, images, extra scripts - are
+  DERIVED: topic counts from boards.json's expectedTopics (the one place a
+  count is declared), hub/deck/glossary counts from the data directories, and
+  "every page" from the page list itself. They are printed, and where a
+  relation holds (every mcq page loads quiz.js and nothing else does; every
+  page but the three declared carries a breadcrumb) the RELATION is asserted,
+  count-free. The three hand-written families and ppq keep a pinned page
+  count because nothing in boards.json declares them; reseedable.
+
+A count going DOWN on a pinned invariant still fails: an improvement is
+welcome and must be declared. A verifier that quietly congratulates you is one
+that cannot tell an improvement from an accident.
 
 EVERY NUMBER BELOW WAS MEASURED ON 2026-08-11, NOT COPIED
 ---------------------------------------------------------
@@ -57,7 +82,9 @@ from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import board_data  # noqa: E402  - expectedTopics, groups: the declared counts
 import build_sitemap  # noqa: E402  - for its _config.yml exclude parser
+import reseed_util  # noqa: E402
 
 RUNTIME_PARTIALS = {"templates/header.html", "templates/footer.html"}
 
@@ -96,41 +123,80 @@ def family_of(path: str) -> str:
 HAND_WRITTEN = ("root", "notes-other", "past-papers")
 
 # ---- check 1 -------------------------------------------------------------
-# pages, distinct <head> skeletons, body shells, script tails, stylesheet sets.
-# "Distinct" means: strip every word of text, keep tag + id + class, and count
-# how many different strings come out. Two pages with one skeleton differ only
-# in words.
+# Per family: distinct <head> skeletons, body shells, script tails, stylesheet
+# sets. "Distinct" means: strip every word of text, keep tag + id + class, and
+# count how many different strings come out. Two pages with one skeleton
+# differ only in words.
 #
-# notes-topic's 4 and root's 9/9/3/9 are PH06 section 1.2's table, re-derived
-# here. root SHOULD be 9 different pages - they are nine different pages, not
-# a family. Its script tails went 3 -> 2 on 2026-08-14, when the home-page
-# revamp deleted index.html's two review scripts and its tail became the
-# standard two-script one.
-EXPECTED_FAMILIES = {
-    # family:        (pages, heads, shells, tails, css sets)
-    "root":          (9, 9, 9, 2, 9),
-    # 4 head shapes until 2026-08-13, then 3 when PH08-039's MathJax
-    # convergence removed the "without id" markup, then 2 when PH08-042's
-    # <style> block left 1-5-1-market-structures. 166 pages, one <head>
-    # shape between them except for which of the two MathJax states they are
-    # in. Declared here as well as at check 5 ON PURPOSE - the two counts are
-    # measured by different code (this one tokenises the whole <head>, check
-    # 5 classifies by MathJax markup), so a change moving only one of them
-    # would be a real disagreement rather than a missed edit.
-    "notes-topic":   (166, 2, 1, 1, 1),
-    "notes-hub":     (7, 2, 2, 1, 2),
-    "notes-other":   (3, 2, 3, 1, 2),
-    "past-papers":   (5, 2, 2, 1, 2),
-    "mcq-topic":     (166, 1, 1, 1, 1),
-    # 2 head shapes until 2026-08-23, when the hub redesign removed the
-    # <noscript><style> block from the six board index pages: their heads
-    # now match the hub's, which never had one. The topic links those blocks
-    # re-opened are always visible now, so the fallback had nothing to do.
-    "mcq-hub":       (7, 1, 2, 1, 1),
-    "ppq":           (90, 1, 3, 1, 1),
-    "flashcards":    (7, 2, 2, 1, 2),
-    "glossary":      (3, 2, 2, 1, 2),
+# THE SHAPE COUNTS ARE THE INVARIANT and stay pinned. The PAGE count per family
+# is a cardinality and is derived - see expected_page_counts() - except for
+# the three hand-written families and ppq, which nothing in boards.json
+# declares; those four keep a pinned page count as a shrink guard, in
+# PINNED_PAGE_COUNTS below, and `--reseed` rewrites both tables.
+#
+# History the numbers carry (the comments used to sit inside the literal; a
+# reseed rewrites the literal wholesale, so they live here now):
+#   root: nine one-off pages, so 9 heads / 9 shells / 9 css sets is correct.
+#     Script tails 3 -> 2 on 2026-08-14, the home-page revamp.
+#   notes-topic: 4 head shapes until 2026-08-13, 3 after PH08-039's MathJax
+#     convergence, 2 after PH08-042 moved 1-5-1's <style> block out. Declared
+#     here AND at check 5 on purpose - measured by different code.
+#   mcq-hub: 2 head shapes until 2026-08-23, 1 after the hub redesign removed
+#     the <noscript><style> block from the six board index pages.
+#
+# family: (heads, shells, tails, css sets). No comments inside the literal -
+# --reseed rewrites it wholesale.
+EXPECTED_SHAPES = {
+    "root":          (9, 9, 2, 9),
+    "notes-topic":   (2, 1, 1, 1),
+    "notes-hub":     (2, 2, 1, 2),
+    "notes-other":   (2, 3, 1, 2),
+    "past-papers":   (2, 2, 1, 2),
+    "mcq-topic":     (1, 1, 1, 1),
+    "mcq-hub":       (1, 2, 1, 1),
+    "ppq":           (1, 3, 1, 1),
+    "flashcards":    (2, 2, 1, 2),
+    "glossary":      (2, 2, 1, 2),
 }
+
+# The families whose page count is not a function of boards.json: the 17
+# hand-written pages (bake_templates.EXPECTED is the same set, counted once)
+# and the past-paper question bank, whose page set follows which topics have
+# questions. A pin against an undeclared page appearing or vanishing; a
+# deliberate change is `--reseed` in the same commit. No comments inside.
+PINNED_PAGE_COUNTS = {
+    "root":          9,
+    "past-papers":   5,
+    "notes-other":   3,
+    "ppq":           90,
+}
+
+
+def expected_page_counts() -> dict[str, int]:
+    """How many pages each family SHOULD have, derived from the declarations.
+
+    boards.json's expectedTopics is the one place a topic count is declared
+    (build_past_paper_taxonomy.py and verify_notes_sequence.py hold the data
+    to it); hubs, decks and glossary pages follow the group and board lists
+    and the data directories. Adding a topic is a boards.json bump and new
+    data, and this table moves with it - no literal here to chase.
+    """
+    boards = board_data.load()
+    topics = sum(b["expectedTopics"] for b in boards.values())
+    groups = sum(len(b["groups"]) for b in boards.values())
+    out = {
+        "notes-topic": topics,
+        "mcq-topic": topics,
+        # one hub per group plus macro-application, which is a content page
+        # that classifies as a hub - so count the hub RECORDS, not the groups
+        "notes-hub": len(list((ROOT / "notes-data" / "hubs").glob("*.json"))),
+        "mcq-hub": groups + 1,            # one per group plus /practice-questions/
+        "flashcards": len(list((ROOT / "flashcards-data").glob("*/*.json"))) + 1,
+        "glossary": len(boards) + 1,      # one per board plus the combined page
+    }
+    out.update(PINNED_PAGE_COUNTS)
+    return out
+
 
 # ---- check 2 -------------------------------------------------------------
 # Measured: it is not merely one tail per family, it is the same scripts in the
@@ -191,12 +257,21 @@ REMOVED_SCRIPTS = (
 # the plain two-script tail like everything else's.
 EXPECTED_INTERLEAVED = []
 
-EXPECTED_EXTRA_SCRIPTS = {
-    "/js/components/quiz.js": 173,
-    "/js/components/question-search.js": 90,
-    "/js/components/flashcards.js": 7,
-    "/js/components/glossary-filter.js": 3,
-    "https://assets.calendly.com/assets/external/widget.js": 1,
+# Which families load which component script after the tail, as a RELATION
+# rather than a count: every page of the family carries it, and no page
+# outside the family does. (Until 2026-08-23 this was a dict of counts -
+# quiz.js 173 and so on - that had to be bumped by hand for every new topic
+# and asserted nothing about WHICH pages.) Pages loading something else are
+# named one by one in EXTRA_SCRIPT_PAGES.
+FAMILY_SCRIPT = {
+    "mcq-topic": "/js/components/quiz.js",
+    "mcq-hub": "/js/components/quiz.js",
+    "ppq": "/js/components/question-search.js",
+    "flashcards": "/js/components/flashcards.js",
+    "glossary": "/js/components/glossary-filter.js",
+}
+EXTRA_SCRIPT_PAGES = {
+    "https://assets.calendly.com/assets/external/widget.js": {"tutoring.html"},
 }
 
 # ---- check 3 -------------------------------------------------------------
@@ -317,11 +392,15 @@ HEAD_EXEMPT["twitter:description"] = HEAD_EXEMPT["twitter:title"]
 # page stopped being a shape of its own and joined the 125. The label is kept
 # in the table with a 0 rather than deleted, because a <style> block coming
 # BACK to a notes page is exactly what this check should catch.
-EXPECTED_NOTES_HEAD_SHAPES = {
-    "mathjax with id": 126,
-    "no mathjax": 40,
-    "mathjax with id + a <style> block": 0,
-}
+# The two live labels are a cardinality - a new topic lands in one or the
+# other - so they are not pinned: the check asserts that the two together
+# account for every notes-topic page (their total is derived from boards.json)
+# and prints the split. The ZERO labels are invariants, tripwires for a shape
+# coming back: the <style> block (the live example above) and MathJax without
+# an id (PH08-039). Either going above 0 fails.
+NOTES_HEAD_LABELS_LIVE = ("mathjax with id", "no mathjax")
+NOTES_HEAD_LABELS_ZERO = ("mathjax with id + a <style> block",
+                          "mathjax without id")
 
 # The content spine is the ordered list of direct children of
 # div.notes-container, with runs of identical siblings collapsed - because
@@ -336,8 +415,15 @@ EXPECTED_NOTES_HEAD_SHAPES = {
 # <h2> sat above the spec-alert. DO-NOT-BREAK: these tables fail on a count
 # going DOWN as well as up, and an improvement is DECLARED by changing the page
 # and the number in the same commit, so the diff records what improved.
+# The NUMBER of spine shapes is the invariant and stays pinned (reseedable).
+# The per-shape COUNTS - (97, 29, 16, 11, 7, 6) until 2026-08-23 - were a
+# cardinality that moved with every added topic and had already shaped a
+# product decision (PROGRESS.md, "contents list on all 166"): DELETED, not
+# demoted to a warning, because a warning that fires on every legitimate
+# addition is noise that trains people to skip the output. The counts are
+# still printed. What check 6 actually protects - no notes page has a shape
+# of its own - is the singleton assertion below, which is untouched.
 EXPECTED_NOTES_SPINES = 6
-EXPECTED_SPINE_COUNTS = (97, 29, 16, 11, 7, 6)
 
 # PH06-031, CLOSED 2026-08-14 by Wave 5.4, approved per page by Eliot - D18 had
 # explicitly excluded these three because the fixes sit inside prose regions.
@@ -378,10 +464,11 @@ MALFORMED_NOTES_PAGES: dict[str, str] = {}
 # two marked-work preview images on 2026-08-16. Both of marking.html's sit deep
 # in the page, well below "What You Actually Get". On none of these pages is the
 # first image a plausible LCP element.
-EXPECTED_IMAGE_PAGES = 106
-EXPECTED_IMAGES = 312
-EXPECTED_FIRST_EAGER = 96
-EXPECTED_ALL_LAZY = 10
+# The CONVENTION - every page is all-lazy or first-eager-rest-lazy, 0
+# exceptions - is the invariant and is asserted. The four counts that sat here
+# until 2026-08-23 (106 pages, 312 images, 96 first-eager, 10 all-lazy) were
+# cardinalities that moved with every diagram Eliot adds; they are measured
+# and printed, not pinned.
 
 # ---- check 8 -------------------------------------------------------------
 # Every page with a breadcrumb writes it twice, visible <nav> and JSON-LD
@@ -414,7 +501,12 @@ EXPECTED_ALL_LAZY = 10
 # JSON-LD opened at "Home" - PH06-030's other half, found by P6 comparing
 # extracted names and again by P4 parsing the JSON-LD, and carried here as a
 # declared exception ever since. One line in its notes-data slice closed it.
-EXPECTED_BREADCRUMB = {"visible": 460, "with aria-label": 460, "agree": 460}
+# The relation, not the number: every published page carries a breadcrumb
+# except the three named here, every breadcrumb has its aria-label, and every
+# one agrees with its JSON-LD. (Was a census of three literals, all 460, that
+# moved with every new page.) 404 and confirmation are noindex utility pages;
+# the home page is the root of every trail and has nothing to climb to.
+NO_BREADCRUMB = {"404.html", "confirmation.html", "index.html"}
 
 # EMPTY, AND KEPT. The loop below still runs over it, so re-declaring a page
 # here is how a future deliberate mismatch would be recorded - and the
@@ -440,7 +532,8 @@ KNOWN_BREADCRUMB_DISAGREEMENT: dict[str, str] = {}
 # reason for a single byte to differ, and a check that forgave whitespace
 # would forgive a Prettier run that had quietly rewrapped a nav label.
 BAKED_TEMPLATES = ("templates/header.html", "templates/footer.html")
-EXPECTED_BAKED = 463
+# Baked into EVERY published page - the relation is the invariant. The literal
+# 463 that sat here until 2026-08-23 restated len(pages()) and moved with it.
 
 # The one thing a page is allowed to add: setActivePage() used to do this at
 # runtime and the build does it now. Ten variants across 463 pages - nine nav
@@ -639,9 +732,16 @@ def pages() -> list[str]:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--show", action="store_true",
-                    help="print the measured shapes and exit 0, for reseeding "
+                    help="print the measured shapes and exit 0, for reading "
                          "the tables after a deliberate change")
+    ap.add_argument("--reseed", action="store_true",
+                    help="rewrite the pinned tables (EXPECTED_SHAPES, "
+                         "PINNED_PAGE_COUNTS, EXPECTED_NOTES_SPINES) from the "
+                         "measured tree, print the diff and exit 0. For a "
+                         "DELIBERATE change, in the same commit; read the diff.")
     args = ap.parse_args()
+    if args.reseed:
+        args.show = True
 
     paths = pages()
     src = {p: (ROOT / p).read_text(encoding="utf-8", errors="replace")
@@ -663,41 +763,58 @@ def main() -> int:
 
     # ---------------------------------------------------------- check 1
     r.section("=== 1. One shell per family ===")
-    measured = {}
+    shapes, counts = {}, {}
     for f, ps in sorted(fam.items()):
         heads = {parsed[p].head_shape() for p in ps}
         shells = {parsed[p].body_shell() for p in ps}
         tails = {parsed[p].script_tail() for p in ps}
         csss = {parsed[p].css_set() for p in ps}
-        measured[f] = (len(ps), len(heads), len(shells), len(tails), len(csss))
+        shapes[f] = (len(heads), len(shells), len(tails), len(csss))
+        counts[f] = len(ps)
+    want_counts = expected_page_counts()
     if args.show:
-        for f, v in sorted(measured.items()):
-            print(f'    "{f}": {v},')
-    unknown = sorted(set(measured) - set(EXPECTED_FAMILIES))
+        print("    EXPECTED_SHAPES (heads, shells, tails, css sets):")
+        for f, v in shapes.items():
+            print(f'      "{f}": {v},')
+        print("    page counts, measured (derived expectation in brackets):")
+        for f, n in counts.items():
+            print(f'      "{f}": {n}   [{want_counts.get(f, "?")}]')
+    unknown = sorted(set(shapes) - set(EXPECTED_SHAPES))
     if unknown:
         r.bad(f"{len(unknown)} unknown page family/families: {', '.join(unknown)}",
-              "Add it to EXPECTED_FAMILIES with its measured shape counts.")
-    for f, want in sorted(EXPECTED_FAMILIES.items()):
-        got = measured.get(f)
+              "Add it to EXPECTED_SHAPES with its measured shape counts (and "
+              "to expected_page_counts() or PINNED_PAGE_COUNTS).")
+    names = ("head shapes", "body shells", "script tails", "stylesheet sets")
+    for f, want in EXPECTED_SHAPES.items():
+        got = shapes.get(f)
         if got is None:
             r.bad(f"{f}: family has vanished")
-        elif got != want:
-            names = ("pages", "head shapes", "body shells", "script tails",
-                     "stylesheet sets")
-            diff = ", ".join(f"{n} {a}->{b}" for n, a, b in zip(names, want, got)
-                             if a != b)
-            r.bad(f"{f}: {diff}",
-                  "If that is an improvement, change EXPECTED_FAMILIES in the "
-                  "same commit so the diff records it.")
+            continue
+        problems = []
+        if got != want:
+            problems.append(", ".join(f"{n} {a}->{b}"
+                                      for n, a, b in zip(names, want, got) if a != b))
+        n_want = want_counts.get(f)
+        if n_want is not None and counts[f] != n_want:
+            source = ("PINNED_PAGE_COUNTS (--reseed)" if f in PINNED_PAGE_COUNTS
+                      else "boards.json / the data directories")
+            problems.append(f"pages {n_want}->{counts[f]} (expected from {source})")
+        if problems:
+            r.bad(f"{f}: {'; '.join(problems)}",
+                  "A deliberate shape change: `--reseed` rewrites the pinned "
+                  "tables, commit the diff with the pages. A page-count "
+                  "disagreement: the declaration and the tree differ - note "
+                  "pages() lists TRACKED files, so `git add` a new page first.")
         else:
-            r.ok(f"{f:12} {got[0]:4} pages, {got[1]} head / {got[2]} shell / "
-                 f"{got[3]} tail / {got[4]} css")
+            r.ok(f"{f:12} {counts[f]:4} pages, {got[0]} head / {got[1]} shell / "
+                 f"{got[2]} tail / {got[3]} css")
 
     # ---------------------------------------------------------- check 2
     n = len(SCRIPT_TAIL)
     r.section(f"\n=== 2. The {n}-script tail ===")
     wrong_order, interleaved, kept_removed = [], [], collections.Counter()
     extra = collections.Counter()
+    extra_pages: dict[str, set] = collections.defaultdict(set)
     for p in paths:
         seq = parsed[p].scripts
         if tuple(s for s in seq if s in SCRIPT_TAIL) != SCRIPT_TAIL:
@@ -707,6 +824,7 @@ def main() -> int:
         for s in seq:
             if s not in SCRIPT_TAIL:
                 extra[s] += 1
+                extra_pages[s].add(p)
             if s in REMOVED_SCRIPTS:
                 kept_removed[s] += 1
     if args.show:
@@ -738,14 +856,40 @@ def main() -> int:
               f"{EXPECTED_INTERLEAVED} -> {interleaved}")
     else:
         r.ok(f"{len(interleaved)} pages insert a script inside the tail")
-    if dict(extra) != EXPECTED_EXTRA_SCRIPTS:
-        for k in sorted(set(extra) | set(EXPECTED_EXTRA_SCRIPTS)):
-            a, b = EXPECTED_EXTRA_SCRIPTS.get(k, 0), extra.get(k, 0)
-            if a != b:
-                r.bad(f"page-specific script {k}: {a} -> {b} pages")
-    else:
-        r.ok(f"{len(extra)} page-specific scripts beyond the tail, all "
-             f"expected")
+    # The relation: every page of a family carries its script, no page
+    # outside the family does, and every other extra script is on exactly
+    # the pages declared for it.
+    script_ok = True
+    for f, script in FAMILY_SCRIPT.items():
+        missing = [p for p in fam[f] if script not in parsed[p].scripts]
+        if missing:
+            script_ok = False
+            r.bad(f"{len(missing)} {f} page(s) do not load {script}",
+                  *missing[:6])
+    allowed_for: dict[str, set] = collections.defaultdict(set)
+    for f, script in FAMILY_SCRIPT.items():
+        allowed_for[script].update(fam[f])
+    for script, ps in EXTRA_SCRIPT_PAGES.items():
+        allowed_for[script].update(ps)
+    for script, ps in sorted(extra_pages.items()):
+        stray = sorted(ps - allowed_for.get(script, set()))
+        if stray:
+            script_ok = False
+            r.bad(f"{script} is loaded by {len(stray)} page(s) outside its "
+                  f"family/declared set", *stray[:6],
+                  "Name the page in EXTRA_SCRIPT_PAGES or the family in "
+                  "FAMILY_SCRIPT if it is deliberate.")
+    for script, ps in EXTRA_SCRIPT_PAGES.items():
+        gone = sorted(ps - extra_pages.get(script, set()))
+        if gone:
+            script_ok = False
+            r.bad(f"{script} is declared on {gone} but no longer loaded there",
+                  "Delete the entry from EXTRA_SCRIPT_PAGES in the same commit.")
+    if script_ok:
+        r.ok(f"{len(extra)} page-specific scripts beyond the tail, each on "
+             f"exactly its family's pages: "
+             + ", ".join(f"{k.rsplit('/', 1)[-1]} x{v}"
+                         for k, v in sorted(extra.items())))
 
     # ---------------------------------------------------------- check 3
     r.section("\n=== 3. A <head> field written twice agrees with itself ===")
@@ -817,21 +961,26 @@ def main() -> int:
             labels["mathjax with id"] += 1
     if args.show:
         print("   ", dict(labels))
-    shapes = {parsed[p].head_shape() for p in nt}
-    # Against the labels EXPECTED still gives pages to, not the number of
-    # labels. A label held at 0 is a tripwire for a shape coming BACK - the
-    # <style> block is the live example - and counting it here would demand a
-    # shape that is meant not to exist.
-    want_shapes = sum(1 for n in EXPECTED_NOTES_HEAD_SHAPES.values() if n)
-    if len(shapes) != want_shapes:
-        r.bad(f"notes-topic has {len(shapes)} <head> shapes, expected "
-              f"{want_shapes}")
-    for label, want in EXPECTED_NOTES_HEAD_SHAPES.items():
+    # The zero labels are tripwires for a shape coming BACK - the <style>
+    # block is the live example. The live labels are a cardinality: a new
+    # topic lands in one or the other, so the check is that the two together
+    # are every notes-topic page (the total comes from boards.json) and the
+    # split is printed, not pinned.
+    for label in NOTES_HEAD_LABELS_ZERO:
         got = labels.get(label, 0)
-        if got != want:
-            r.bad(f"notes-topic '{label}': {want} -> {got} pages")
+        if got:
+            r.bad(f"notes-topic '{label}': 0 -> {got} pages",
+                  "A shape that was deliberately removed has come back.")
         else:
             r.ok(f"{label:36} {got:4} pages")
+    live_total = sum(labels.get(l, 0) for l in NOTES_HEAD_LABELS_LIVE)
+    want_total = want_counts["notes-topic"]
+    if live_total != len(nt) or len(nt) != want_total:
+        r.bad(f"notes-topic live <head> labels account for {live_total} of "
+              f"{len(nt)} pages (boards.json declares {want_total})")
+    else:
+        split = ", ".join(f"{labels.get(l, 0)} {l}" for l in NOTES_HEAD_LABELS_LIVE)
+        r.ok(f"{'live labels':36} {live_total:4} pages = all of them ({split})")
 
     # ---------------------------------------------------------- check 6
     r.section("\n=== 6. notes-topic: the content spine ===")
@@ -847,16 +996,19 @@ def main() -> int:
         k = collapse(sp)
         spines[k] += 1
         by_spine[k].append(p)
-    counts = tuple(n for _, n in spines.most_common())
+    spine_counts = tuple(n for _, n in spines.most_common())
     if args.show:
         for k, n in spines.most_common():
             print(f"    {n:4}  {k}")
-    if len(spines) != EXPECTED_NOTES_SPINES or counts != EXPECTED_SPINE_COUNTS:
-        r.bad(f"notes-topic spines: {EXPECTED_NOTES_SPINES} shapes "
-              f"{EXPECTED_SPINE_COUNTS} -> {len(spines)} shapes {counts}")
+    if len(spines) != EXPECTED_NOTES_SPINES:
+        r.bad(f"notes-topic spines: {EXPECTED_NOTES_SPINES} shapes -> "
+              f"{len(spines)} shapes {spine_counts}",
+              "A deliberate change: `--reseed`, commit the diff with the pages.")
     else:
+        # The per-shape counts are printed, not judged - see the note above
+        # EXPECTED_NOTES_SPINES.
         r.ok(f"{EXPECTED_NOTES_SPINES} spine shapes over {len(nt)} pages, "
-             f"{counts}")
+             f"{spine_counts}")
     # The three singletons must be exactly the three known malformed pages.
     singles = {by_spine[k][0] for k, n in spines.items() if n == 1}
     if singles != set(MALFORMED_NOTES_PAGES):
@@ -892,14 +1044,9 @@ def main() -> int:
               "first image delays the LCP candidate, which is why d7bba50 "
               "left it off.")
     else:
+        # Measured, printed, not pinned - the convention is the invariant.
         r.ok(f"{len(with_imgs)} pages, {total} images: {first_eager} "
              f"first-eager-rest-lazy, {all_lazy} all-lazy, 0 exceptions")
-    for label, got, want in (("pages with images", len(with_imgs), EXPECTED_IMAGE_PAGES),
-                             ("images", total, EXPECTED_IMAGES),
-                             ("first-eager pages", first_eager, EXPECTED_FIRST_EAGER),
-                             ("all-lazy pages", all_lazy, EXPECTED_ALL_LAZY)):
-        if got != want:
-            r.bad(f"{label}: {want} -> {got}")
 
     # ---------------------------------------------------------- check 8
     r.section("\n=== 8. Both breadcrumb copies stay in step ===")
@@ -914,9 +1061,11 @@ def main() -> int:
     SEPARATOR = re.compile(r'<span class="separator">[^<]*</span>')
     visible = aria = agree = 0
     mismatched = {}
+    without = []
     for p in paths:
         m = NAV.search(src[p])
         if not m:
+            without.append(p)
             continue
         visible += 1
         if 'aria-label="Breadcrumb"' in m.group(1):
@@ -952,12 +1101,26 @@ def main() -> int:
             r.bad(f"{p} breadcrumbs now agree",
                   "Good - delete its entry from "
                   "KNOWN_BREADCRUMB_DISAGREEMENT in the same commit.")
-    got = {"visible": visible, "with aria-label": aria, "agree": agree}
-    if got != EXPECTED_BREADCRUMB:
-        r.bad(f"breadcrumb census {EXPECTED_BREADCRUMB} -> {got}")
-    else:
-        r.ok(f"{visible} visible breadcrumbs, {aria} with aria-label, "
-             f"{agree} agree with their JSON-LD, "
+    # The relation: breadcrumbs on every page but the declared three, every
+    # one with its aria-label, every one in agreement. No census literal.
+    undeclared = sorted(set(without) - NO_BREADCRUMB)
+    regained = sorted(NO_BREADCRUMB - set(without))
+    if undeclared:
+        r.bad(f"{len(undeclared)} page(s) carry no breadcrumb and are not "
+              f"declared in NO_BREADCRUMB", *undeclared[:6])
+    if regained:
+        r.bad(f"{len(regained)} page(s) in NO_BREADCRUMB now carry one",
+              *regained, "Delete them from NO_BREADCRUMB in the same commit.")
+    if aria != visible:
+        r.bad(f"{visible - aria} breadcrumb(s) lack aria-label=\"Breadcrumb\"")
+    if agree + len(mismatched) != visible:
+        r.bad(f"{visible - agree - len(mismatched)} breadcrumb(s) have no "
+              f"BreadcrumbList JSON-LD to agree with")
+    if not (undeclared or regained or aria != visible
+            or agree + len(mismatched) != visible):
+        r.ok(f"{visible} of {len(paths)} pages carry a breadcrumb "
+             f"({len(NO_BREADCRUMB)} declared without), all {aria} with "
+             f"aria-label, all {agree} agree with their JSON-LD, "
              f"{len(KNOWN_BREADCRUMB_DISAGREEMENT)} known exception")
 
     # ---------------------------------------------------------- check 9
@@ -991,9 +1154,8 @@ def main() -> int:
         if wrong:
             r.bad(f"{len(wrong)} page(s) carry a {name} that is not the "
                   f"template", *wrong[:6])
-        if baked != EXPECTED_BAKED:
-            r.bad(f"{name} baked into {baked} pages, expected "
-                  f"{EXPECTED_BAKED}")
+        if baked != len(paths):
+            r.bad(f"{name} baked into {baked} of {len(paths)} pages")
         elif not wrong and not missing:
             r.ok(f"{name} is byte-identical on all {baked} pages")
 
@@ -1010,6 +1172,19 @@ def main() -> int:
     r.section(None)
     print()
     sys.stdout.flush()
+    if args.reseed:
+        print("--reseed: rewriting the pinned tables from the measured tree")
+        reseed_util.rewrite(__file__, "EXPECTED_SHAPES",
+                            reseed_util.format_tuple_dict(
+                                {f: shapes[f] for f in EXPECTED_SHAPES if f in shapes}
+                                | {f: shapes[f] for f in shapes if f not in EXPECTED_SHAPES}))
+        reseed_util.rewrite(__file__, "PINNED_PAGE_COUNTS",
+                            reseed_util.format_tuple_dict(
+                                {f: counts[f] for f in PINNED_PAGE_COUNTS if f in counts}))
+        reseed_util.rewrite(__file__, "EXPECTED_NOTES_SPINES", repr(len(spines)))
+        print("Now re-run without --reseed, read the diff, and commit it with "
+              "the pages that moved.")
+        return 0
     if args.show:
         print("--show: tables printed, nothing judged")
         return 0
@@ -1020,7 +1195,7 @@ def main() -> int:
             print(f"  {p}", file=sys.stderr)
         return 1
     print(f"page shell is as recorded: {len(paths)} pages, "
-          f"{len(EXPECTED_FAMILIES)} families, 9 checks")
+          f"{len(EXPECTED_SHAPES)} families, 9 checks")
     return 0
 
 
