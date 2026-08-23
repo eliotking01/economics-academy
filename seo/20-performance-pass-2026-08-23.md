@@ -88,13 +88,38 @@ both sides, weight −30 %); the rest moved the right way or not at all.
 Weight is down on all eight pages; tutoring.html's 3.4 MB was Calendly's
 booking iframe, now loaded only when the booking section is near.
 
-**Live before** (the real CDN, for reference; not comparable to the local
-rows): homepage 91 / LCP 2.82 s / 343 KB; section-hub 90 / 2.92 s / 214 KB;
-notes-topic 70 / 5.05 s / 679 KB; practice-questions 86 / 3.29 s / 308 KB;
-past-paper-questions 89 / 2.84 s / 230 KB; flashcards 90 / 2.86 s / 272 KB;
-ppq-board-hub 98 / 1.95 s / 351 KB; tutoring **56 / 11.40 s / 3,382 KB**.
-Re-run against the live site after the merge:
-`python3 seo/tools/run_lighthouse.py --out seo/lh-perf-live-after`.
+### Live, before → after (the real CDN; PR #19 merged 2026-08-23 as `367297b`)
+
+`seo/lh-perf-before/` was taken against the live site before Phase 1;
+`seo/lh-perf-live-after/` about 40 minutes after the merge deployed. Same
+tool, same flags, same 8 URLs, 3 runs, medians.
+
+| Page | Perf | LCP | CLS | TBT | FCP | Weight | Render-blocking |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| homepage | 91 → **100** | 2.82 → **1.16 s** | 0.000 → 0.002 | 0 → 0 ms | 2.82 → 1.16 s | 343 → **176 KB** | 1818 → 249 ms |
+| section-hub | 90 → **99** | 2.92 → **1.61 s** | 0.000 → 0.000 | 0 → 0 ms | 2.92 → 1.48 s | 214 → **124 KB** | 1987 → 583 ms |
+| notes-topic | 70 → **70** | 5.05 → **4.69 s** | 0.000 → 0.000 | 76 → 104 ms | 4.00 → 4.54 s | 679 → **592 KB** | 1681 → 1038 ms |
+| practice-questions | 86 → **98** | 3.29 → **1.95 s** | 0.001 → 0.000 | 0 → 0 ms | 3.29 → 1.82 s | 308 → **233 KB** | 2284 → 885 ms |
+| past-paper-questions | 89 → **98** | 2.84 → **1.55 s** | 0.000 → 0.000 | 0 → 0 ms | 2.84 → 1.40 s | 230 → **140 KB** | 1870 → 486 ms |
+| flashcards | 90 → **99** | 2.86 → **1.83 s** | 0.000 → 0.000 | 0 → 0 ms | 2.86 → 1.53 s | 272 → **181 KB** | 1997 → 741 ms |
+| ppq-board-hub | 98 → **98** | 1.95 → **1.70 s** | 0.001 → 0.000 | 0 → 16 ms | 1.95 → 1.40 s | 351 → **187 KB** | 696 → 419 ms |
+| tutoring | 56 → **98** | 11.40 → **1.77 s** | 0.000 → 0.000 | 0 → 55 ms | 9.71 → 1.47 s | 3382 → **182 KB** | 985 → 390 ms |
+
+The render-blocking column is the one to read: every page is down to
+`main.css` plus at most one other file, because the Google Fonts
+stylesheet — the largest render-blocking item on every page since `seo/09`
+— is gone. Weight is down on all eight; tutoring's 3.4 MB was Calendly's
+booking iframe, now fetched only when the booking section is near.
+
+**notes-topic is the one page that did not move, and it is bimodal as it
+always was:** after-runs of 4.69 / 4.84 / 1.15 s (before: 5.05 s median).
+The sample is deliberately the densest MathJax page; in the slow runs the
+document arrives in ~190 ms and then nothing paints for ~4 s ("render
+delay" in the LCP breakdown), in the fast run it paints at 1.15 s. That is
+the MathJax page's own problem — the same page over the same CDN did this
+before any of these changes — and the fix is the OWNER-TODO item about
+moving the notes from MathJax to pre-rendered KaTeX, not anything in this
+pass.
 
 ## 3. Pins changed, and why
 
