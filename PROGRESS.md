@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Analytics consent — hard gate + cookie bar | awaiting review | — | branch `feature/analytics-consent` |
+| Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
 | Maintainability — one build, derived counts, tests | live | 2026-08-23 | `95cf271` |
 | Hub redesign (notes + practice board hubs) | live | 2026-08-23 | `dedd5d1` |
 | Previous / next topic navigation | live | 2026-08-21 | `c0a80f6` |
@@ -77,15 +77,16 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Analytics consent — hard gate + cookie bar (2026-08-23) — branch `feature/analytics-consent`, AWAITING REVIEW
+## Analytics consent — hard gate + cookie bar (2026-08-23) — LIVE (merged 2026-08-23, `83ae353`, PR #17)
 
-**STATE: four commits on `feature/analytics-consent`, pushed; Eliot opens the PR (no `gh` on the Mac); not merged.**
-Eliot reviews the bar copy and the privacy wording before it ships. The
-decision (hard gate, not Google's Consent Mode) was his; the build follows
-his spec. **From the day it merges GA4 counts only visitors who said yes** —
-the drop is expected and permanent, and the date belongs in OWNER-TODO's
-Rank-check log so the September/October reads are read against it. No GA4
-admin change is needed.
+**STATE: live.** Eliot approved the bar copy (as a two-line trim) and the
+privacy wording on 2026-08-23 and merged the same day. The decision (hard
+gate, not Google's Consent Mode) was his; the build follows his spec; D57
+records it. **From 2026-08-23 GA4 counts only visitors who said yes** — the
+drop is expected and permanent; the date is in OWNER-TODO's Rank-check log
+so the September/October reads are read against it. No GA4 admin change was
+needed. `gh` was installed and logged in on Eliot's Mac during this work, so
+future sessions can open PRs and watch CI directly.
 
 **What it is.** Until this every page loaded gtag.js in its `<head>` and GA4
 set its cookies on first paint. Now the head block (`page_shell.GTAG`, one

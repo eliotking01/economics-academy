@@ -16,19 +16,6 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Do next — this week
 
-- [ ] **Open and review the PR for `feature/analytics-consent` — the cookie
-      bar (15 minutes).** The branch is pushed; open the PR at
-      github.com/eliotking01/economics-academy/pull/new/feature/analytics-consent
-      (the body is in the session notes). Bar copy, approved 2026-08-23 as a
-      two-line trim: "Can we use one cookie to see which pages help
-      students? Nothing personal is collected." / "That's fine" / "No
-      thanks". The privacy wording was approved the same day. Look at one
-      page in Live Server at phone width before merging.
-      **On the day it merges, add that date to the "Done" list below and to
-      the Rank-check log**: from that day GA4 counts only visitors who said
-      yes, so every later Search Console / GA comparison (the September and
-      October reads) is read against it. The drop is expected and permanent.
-      No GA4 admin change is needed.
 - [ ] **Search Console, after the notes push (live since 2026-08-22, merge
       `ee24918`) — 15 minutes.** Load one Edexcel and one AQA topic page on
       the live site and check the tab shows the new title and the page shows
@@ -352,9 +339,21 @@ Console is then explainable rather than alarming.
   the 28 days to 21 August: treat that window's click and CTR figures as junk.
 - **22 August 2026** — the six UK-IP SERP checks for the title formula
   (`seo/14-notes-keyword-brief.md` §2).
+- **23 August 2026 — analytics consent went live (merge `83ae353`, PR #17).**
+  From this day GA4 counts ONLY visitors who clicked "That's fine" on the
+  cookie bar. Every GA4 figure after it is a different population from every
+  figure before it: the drop is expected and permanent, not a traffic fall.
+  Read the September/October Search Console and GA comparisons against this
+  line; Search Console itself is unaffected (it measures Google, not the
+  page). No GA4 admin change was needed.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-23 — Google Analytics is consent-gated (merge `83ae353`, PR #17,
+  D57).** gtag.js is not loaded and no analytics cookie is set until a
+  visitor says yes on the bottom-of-page bar; "No thanks" is never asked
+  again; the only way to change the answer is the button on privacy.html.
+  GA4 numbers drop from this date — see the Rank-check log entry.
 - **2026-08-22 — the revision-notes on-page SEO pass is live** (merge
   `ee24918`): topic-first titles and descriptions on 166 topics and 7 hubs,
   spec codes off both boards' titles and the AQA headings, a spec sub-label,
