@@ -25,10 +25,18 @@ number written down.
 `page_shell.SCRIPT_TAIL` is the single place the script tail is declared.
 `verify_page_shell.py` check 2 restates it as an independent literal, so changing
 the tail has to change two files in the same commit. The tail is `nav.js`,
-`track.js`, `main.js`: `js/components/track.js` is the GA4 conversion tracking
-(`begin_checkout`, `purchase`, `generate_lead`, `intro_call_booked`, `sign_up`,
-`cta_click`) — its header comment lists every event and its parameters, and
-it is on every page because the CTA events are delegated on `document`.
+`track.js`, `consent.js`, `main.js`: `js/components/track.js` is the GA4
+conversion tracking (`begin_checkout`, `purchase`, `generate_lead`,
+`intro_call_booked`, `sign_up`, `cta_click`) — its header comment lists every
+event and its parameters, and it is on every page because the CTA events are
+delegated on `document`. `js/components/consent.js` is the analytics consent
+bar (since 2026-08-23): GA4 is behind a hard gate, not Consent Mode. The
+`<head>` block `page_shell.GTAG` only defines `window.eaLoadAnalytics()` and
+calls it when `localStorage["ea-consent"]` is `"yes"`; the bar stores the
+answer and calls the same function on "That's fine". Until then gtag.js is
+never requested. `track.js` and `flashcards.js` already no-op without
+`window.gtag`. The 17 hand-written pages get the block from
+`bake_templates.sync_gtag()`.
 
 ## The header and footer are baked in at build time
 
@@ -49,7 +57,7 @@ reaches 462 pages fails there rather than shipping.
 
 ## What a new page needs
 
-The gtag block, `<html lang="en-GB">`, title, meta description, canonical, OG and
+The consent-gated analytics block (`page_shell.GTAG`), `<html lang="en-GB">`, title, meta description, canonical, OG and
 Twitter cards, JSON-LD, the favicon/manifest set, `/css/main.css`, its own
 `/css/pages/<page>.css`, the script tail (**cite `page_shell.SCRIPT_TAIL`**), and
 the baked header and footer blocks. Add it to the sitemap by running

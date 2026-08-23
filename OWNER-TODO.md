@@ -16,6 +16,19 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Do next — this week
 
+- [ ] **Open and review the PR for `feature/analytics-consent` — the cookie
+      bar (15 minutes).** The branch is pushed; open the PR at
+      github.com/eliotking01/economics-academy/pull/new/feature/analytics-consent
+      (the body is in the session notes). Bar copy, approved 2026-08-23 as a
+      two-line trim: "Can we use one cookie to see which pages help
+      students? Nothing personal is collected." / "That's fine" / "No
+      thanks". The privacy wording was approved the same day. Look at one
+      page in Live Server at phone width before merging.
+      **On the day it merges, add that date to the "Done" list below and to
+      the Rank-check log**: from that day GA4 counts only visitors who said
+      yes, so every later Search Console / GA comparison (the September and
+      October reads) is read against it. The drop is expected and permanent.
+      No GA4 admin change is needed.
 - [ ] **Search Console, after the notes push (live since 2026-08-22, merge
       `ee24918`) — 15 minutes.** Load one Edexcel and one AQA topic page on
       the live site and check the tab shows the new title and the page shows

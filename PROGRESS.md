@@ -18,7 +18,8 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Maintainability — one build, derived counts, tests | awaiting review | — | branch `chore/maintainability` |
+| Analytics consent — hard gate + cookie bar | awaiting review | — | branch `feature/analytics-consent` |
+| Maintainability — one build, derived counts, tests | live | 2026-08-23 | `95cf271` |
 | Hub redesign (notes + practice board hubs) | live | 2026-08-23 | `dedd5d1` |
 | Previous / next topic navigation | live | 2026-08-21 | `c0a80f6` |
 | GA4 conversion tracking | live | 2026-08-22 | `bb18d6d` |
@@ -76,7 +77,62 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Maintainability — one build, derived counts, tests (2026-08-23) — branch `chore/maintainability`, AWAITING REVIEW
+## Analytics consent — hard gate + cookie bar (2026-08-23) — branch `feature/analytics-consent`, AWAITING REVIEW
+
+**STATE: four commits on `feature/analytics-consent`, pushed; Eliot opens the PR (no `gh` on the Mac); not merged.**
+Eliot reviews the bar copy and the privacy wording before it ships. The
+decision (hard gate, not Google's Consent Mode) was his; the build follows
+his spec. **From the day it merges GA4 counts only visitors who said yes** —
+the drop is expected and permanent, and the date belongs in OWNER-TODO's
+Rank-check log so the September/October reads are read against it. No GA4
+admin change is needed.
+
+**What it is.** Until this every page loaded gtag.js in its `<head>` and GA4
+set its cookies on first paint. Now the head block (`page_shell.GTAG`, one
+literal on all 463 pages, written into the 17 hand-written pages by
+`bake_templates.sync_gtag()`) only defines `window.eaLoadAnalytics()` — the
+standard snippet, gtag assigned to `window`, the script tag built in JS —
+and calls it if `localStorage["ea-consent"]` is `"yes"`. Otherwise gtag.js
+is never requested and no analytics cookie is set (Google Fonts still load;
+they are not analytics). `js/components/consent.js`, now fourth in
+`page_shell.SCRIPT_TAIL`, asks once: one compact bar at the bottom of the
+viewport, on first scroll or after 1.5 s, no overlay, nothing blocked; two
+buttons of identical weight, "That's fine" / "No thanks"; "More in our
+privacy policy →". Both answers are permanent until `privacy.html`'s
+"Change your analytics choice" button (hidden until JS un-hides it — with
+scripting off there is no bar, no analytics and nothing to change) clears
+the value and re-shows the bar. `track.js` and `flashcards.js` needed no
+change: both test for `window.gtag` before every event.
+
+**Where things went and why.** The bar CSS is the last block of
+`css/main.css` — it is on all 463 pages, so not a page sheet. The change
+button's inline-link styling is in `css/pages/privacy.css`.
+`verify_page_shell.py`: `SCRIPT_TAIL` restated with `consent.js`; check 4's
+`"gtag"` requirement became `"consent-gated gtag"` (gtag.js URL followed by
+the `localStorage` read); new zero tripwire `UNGATED_GTAG` (no page may
+carry a `<script src=".../gtag/js">`). The four glossary/notes hub pages
+declared `Markup-Change:` for the lost external script tag.
+
+**Tested** with headless Chrome over the DevTools protocol (a stdlib CDP
+client in the session scratchpad, not committed): 48 of 49 checks across
+first visit (no bar at first paint, bar after the delay or on first scroll,
+no googletagmanager request), "No thanks" (stored, bar gone, no bar and no
+Google analytics request on later pages, `track.js` no-ops), "That's fine"
+(stored, gtag.js requested, `dataLayer` js/config, a `generate_lead`
+reaches it, the head loads it directly on the next page), the privacy
+button (control un-hidden, bar re-shown at once with focus on its first
+button, value cleared), JS off (no bar, no Google analytics request),
+`prefers-reduced-motion` (transition none), keyboard (Tab reaches both
+buttons and the link; focus ring the brand red), and 360 px (buttons on one
+row, footer link still clickable under the bar via `elementFromPoint`).
+The first copy ("We'd like to use one analytics cookie to see which pages
+students find useful. Nothing personal is collected either way.") ran to
+three lines at 360 px at a legible 14.7 px; Eliot chose a trim, and the
+shipped sentence — "Can we use one cookie to see which pages help students?
+Nothing personal is collected." — measures two lines at 360 px and one at
+1280 px (49/49 checks).
+
+## Maintainability — one build, derived counts, tests (2026-08-23) — LIVE (merged 2026-08-23, `95cf271`)
 
 **STATE: five commits on `chore/maintainability`, not pushed.** Eliot reviews
 before anything is pushed. **No published page changed in any commit** —

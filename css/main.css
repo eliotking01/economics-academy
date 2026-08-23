@@ -4184,3 +4184,128 @@ nav.breadcrumb .separator {
     transition: none;
   }
 }
+
+/* Cookie consent bar — 2026-08-23. Built by js/components/consent.js on every
+   page that has no stored analytics choice, so it lives here rather than in a
+   page sheet: css/pages/ is one sheet per page and this belongs to all 463.
+   One compact bar fixed to the bottom of the viewport. No overlay, no dimming,
+   nothing behind it is blocked - the page scrolls and clicks as normal, and
+   consent.js pads the body by the bar's height so the footer stays reachable.
+   Two buttons of identical weight on purpose: "That's fine" and "No thanks"
+   are the same size, colour and style, and neither is the default. White on
+   the site's dark text colour (#252122), with the brand accent only for the
+   link and the focus ring, so it reads as site chrome rather than an alert.
+   The slide-in is a transform so it never reflows the page, and is removed
+   under prefers-reduced-motion. */
+
+#consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Below #titleBar (10001) and #navPanel (10002), above everything else. */
+  z-index: 10000;
+  background: #fff;
+  color: #252122;
+  border-top: solid 1px #ccc;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.85em 1.25em;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+#consent.is-visible {
+  transform: none;
+}
+
+.consent-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em 1.5em;
+  /* px, not em: the bar's em is smaller than the body's, and 70em of it
+     squeezed the sentence onto two lines at 1280px. */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.consent-text {
+  flex: 1 1 22em;
+  margin: 0;
+}
+
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em 1em;
+}
+
+/* Both buttons, one rule. The theme's base button is solid brand red with
+   `color: #fff !important`, so the text colour has to be declared !important
+   here too or it stays white on white. */
+.consent-button {
+  background: #fff;
+  color: #252122 !important;
+  border: solid 2px #252122;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.5em 1.1em;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.consent-button:hover,
+.consent-button:active {
+  background: #252122;
+  color: #fff !important;
+}
+
+.consent-button:focus-visible {
+  outline: 3px solid #d52349;
+  outline-offset: 2px;
+}
+
+.consent-more {
+  color: #d52349;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.consent-more:focus-visible {
+  outline: 3px solid #d52349;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 736px) {
+  /* The body is 11pt here; 1em is 14.7px and the copy is two lines at
+     360px (measured). The buttons take a row of their own, the link a third. */
+  #consent {
+    font-size: 1em;
+    padding: 0.75em 1em;
+  }
+
+  .consent-inner {
+    gap: 0.5em 1em;
+  }
+
+  .consent-text {
+    flex-basis: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #consent {
+    transition: none;
+  }
+
+  .consent-button {
+    transition: none;
+  }
+}

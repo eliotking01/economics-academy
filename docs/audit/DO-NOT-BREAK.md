@@ -590,7 +590,7 @@ there is none today. PH08-034.
 | Unreferenced stylesheets | 0 | `python3 docs/audit/scripts/asset_census.py 1` |
 | Unreferenced JS files | 0 | `python3 docs/audit/scripts/asset_census.py 4` |
 | Stylesheet/script hrefs not resolving to a file | 0 | sections 1 and 4 |
-| Distinct GA4 IDs / distinct gtag snippets | 1 / 1 | `python3 docs/audit/scripts/asset_census.py 9` |
+| Distinct GA4 IDs / distinct gtag snippets | 1 / 0 since 2026-08-23 — the unconditional snippet is gone by design; the ID lives in the consent loader (`page_shell.GTAG`), held by `verify_page_shell.py` check 4 ("consent-gated gtag" 463/463, `UNGATED_GTAG` 0/463) | `python3 docs/audit/scripts/asset_census.py 9` |
 | Dangling `aria-controls` targets | 0 | `python3 docs/audit/scripts/asset_census.py 8` |
 | Duplicate `id=` within a page | 0 | same |
 | `target="_blank"` without `noopener` | 0 | same |

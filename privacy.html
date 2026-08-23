@@ -1,19 +1,29 @@
 <!doctype html>
 <html lang="en-GB">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6"
-    ></script>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-YVCNRW4QH6");
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -254,7 +264,7 @@
               <p>How Economics Academy handles personal information</p>
             </header>
 
-            <p class="privacy-meta">Last updated: 3 May 2026</p>
+            <p class="privacy-meta">Last updated: 23 August 2026</p>
 
             <section>
               <h2>Who We Are</h2>
@@ -304,9 +314,10 @@
                   email for marking; and
                 </li>
                 <li>
-                  basic website usage and technical data collected by tools such
-                  as Google Analytics, including pages visited, device/browser
-                  information, and approximate location information.
+                  basic website usage and technical data collected by Google
+                  Analytics, including pages visited, device/browser
+                  information, and approximate location information &mdash;
+                  only if you have agreed to analytics (see Cookies below).
                 </li>
               </ul>
               <p>
@@ -326,8 +337,8 @@
                 <li>make a payment through Stripe;</li>
                 <li>send work for paper marking; or</li>
                 <li>
-                  browse pages that use analytics, embedded widgets, fonts, or
-                  third-party scripts.
+                  browse pages that use embedded widgets, fonts, or third-party
+                  scripts &mdash; and analytics, if you have agreed to it.
                 </li>
               </ul>
               <p>
@@ -473,9 +484,29 @@
             <section>
               <h2>Cookies, Analytics, and Third-Party Scripts</h2>
               <p>
-                The website includes Google Analytics scripts. Google Analytics
-                may use cookies or similar technologies to collect information
-                about how visitors use the site.
+                We use Google Analytics to see, in aggregate, which pages people
+                visit and which ones students find useful. It runs only if you
+                agree. The first time you visit, a small bar at the bottom of
+                the page asks whether that is fine; until you say yes, the
+                analytics script is not loaded and no analytics cookie is set.
+                If you say no thanks, it is never loaded and we will not ask
+                again. Either way, nothing personal is collected &mdash; we
+                never see names, email addresses or anything typed into a form.
+              </p>
+              <p id="consent-change-wrap" hidden>
+                Changed your mind?
+                <button type="button" id="consent-change" class="consent-change">
+                  Change your analytics choice
+                </button>
+                and the bar will ask again.
+              </p>
+              <p>
+                The practice quizzes and flashcards save your progress &mdash;
+                quiz scores, and which box each flashcard has reached &mdash;
+                in your own browser's local storage, so you can pick up where
+                you left off. That information stays on your device: it is
+                never sent to us or to anyone else. Your analytics choice is
+                stored in the same way.
               </p>
               <p>
                 The site also loads external resources such as Google Fonts,
@@ -485,10 +516,10 @@
                 address, browser details, and the page you visited.
               </p>
               <p>
-                You can control or block cookies through your browser settings.
-                Blocking cookies or scripts may affect how some parts of the
-                website, forms, bookings, payments, or revision-note features
-                work.
+                You can also control or block cookies through your browser
+                settings. Blocking cookies or scripts may affect how some parts
+                of the website, forms, bookings, payments, or revision-note
+                features work.
               </p>
             </section>
 
@@ -602,6 +633,7 @@
     <!-- Scripts -->
     <script src="/js/components/nav.js"></script>
     <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>

@@ -48,3 +48,30 @@
     font-size: 1.25em;
   }
 }
+
+/* "Change your analytics choice" (2026-08-23). A real <button>, wired by
+   js/components/consent.js, which also un-hides its paragraph - with
+   scripting off there is no analytics and no stored choice, so the control
+   would have nothing to do and stays hidden. Styled as an inline link rather
+   than the theme's solid red button so it reads as part of the sentence. */
+.privacy-notice .consent-change {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font: inherit;
+  color: #d52349 !important;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: none;
+}
+
+.privacy-notice .consent-change:hover {
+  background: none;
+  text-decoration: none;
+}
+
+.privacy-notice .consent-change:focus-visible {
+  outline: 3px solid #d52349;
+  outline-offset: 2px;
+}
