@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Tutoring enquiry form — board, year, enquirer, days | on branch `feature/enquiry-form`, PR open | — | — |
+| Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
 | Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
 | Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
 | Maintainability — one build, derived counts, tests | live | 2026-08-23 | `95cf271` |
@@ -79,11 +79,12 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Tutoring enquiry form — board, year, enquirer, days (2026-08-23) — ON BRANCH, awaiting wording sign-off
+## Tutoring enquiry form — board, year, enquirer, days (2026-08-23) — LIVE (merged 2026-08-23, `ab255c6`, PR #21)
 
-**STATE: PR open on `feature/enquiry-form`; not merged.** Eliot reviews every
-new visible string (listed in the PR) before it goes anywhere near
-`main`. Update this heading to LIVE with the merge commit when it lands.
+**STATE: live.** Eliot merged PR #21 on 2026-08-23, signing off every new
+visible string as written (including the two placeholder options and the
+neutral message placeholder) and the two unrequested changes below, and
+checked the form on his own phone after the deploy.
 
 The modal on `tutoring.html` collected name, email and message, so a reply
 had to open with questions. It now also asks, between email and message:
