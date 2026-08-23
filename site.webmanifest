@@ -1,6 +1,11 @@
 {
+  "id": "/",
   "name": "Economics Academy",
   "short_name": "Economics Academy",
+  "description": "Free A-Level Economics revision notes, past papers, flashcards and practice questions, plus one-to-one tutoring and paper marking.",
+  "lang": "en-GB",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +18,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#d52349",
   "background_color": "#ffffff",
   "display": "standalone"
 }

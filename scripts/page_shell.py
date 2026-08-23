@@ -164,8 +164,7 @@ def ldjson(obj, indent: int = INDENT + 2, ascii_escape: bool = False) -> str:
 # it if localStorage["ea-consent"] is "yes"; js/components/consent.js asks
 # the question, stores the answer and calls the same function on "That's
 # fine". A visitor who has not answered, or answered "No thanks", never has
-# gtag.js requested and never gets a GA4 cookie. (Google Fonts still load -
-# they are not analytics and set nothing.) Nothing is gated by Google's
+# gtag.js requested and never gets a GA4 cookie. Nothing is gated by Google's
 # Consent Mode - the script simply is not there. The localStorage read is wrapped in
 # try/catch like every other component's: Safari private mode and a blocked
 # storage policy both throw, and the right answer then is "no analytics".
@@ -210,23 +209,33 @@ FAVICONS = '''    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />'''
 
-# 4db232c. DO-NOT-BREAK: the two @import rules stay out of css/main.css, the
-# stylesheet stays a direct <link> in every <head>, in this order.
-# verify_css_load_order.py holds it at 462/462 and exists for this module.
+# 4db232c. DO-NOT-BREAK: the @import rule stays out of css/main.css, the
+# FontAwesome stylesheet stays a direct <link> in every <head>, before
+# main.css. verify_css_load_order.py holds it at 463/463 and exists for this
+# module.
+#
+# 2026-08-23, performance pass Phase 2: the fonts are self-hosted. Until then
+# this block also carried a preconnect pair (fonts.googleapis.com,
+# fonts.gstatic.com) and a render-blocking Google Fonts stylesheet asking for
+# three families in eleven cuts, on all 463 pages. The faces are now
+# @font-face rules in css/main.css (Source Sans Pro) and in the two
+# sheets that use Merriweather, pointing at /webfonts/; the head preloads the
+# one face body text is set in so it is requested alongside main.css rather
+# than after main.css has parsed. Both Google origins are gone from every
+# page, and verify_css_load_order.py holds that at zero.
 HOIST_COMMENT = '''    <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->'''
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->'''
 
-PRECONNECT = '''    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />'''
+BODY_FONT = "/webfonts/source-sans-pro-300.woff2"
 
-GOOGLE_FONTS = (
-    "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;"
-    "0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans"
-    "+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
-)
+# The brand accent, css/main.css's most-used colour (23 rules) and the nav's
+# current-item background. <meta name="theme-color"> paints the browser UI
+# around the page with it on mobile; site.webmanifest carries the same value.
+# Added to every head on 2026-08-23 (performance pass, Phase 4).
+THEME_COLOR = "#d52349"
 
 OG_IMAGE = f"{SITE}/og-image.png?v=1"
 
@@ -235,6 +244,23 @@ OG_IMAGE = f"{SITE}/og-image.png?v=1"
 # The shell
 # --------------------------------------------------------------------------
 
+def stylesheet_block(extra_preconnects=()) -> str:
+    """The hoist comment, any extra preconnect, the body-face preload,
+    FontAwesome, main.css - in that order, on all 463 pages. render_head()
+    emits it for the 446 generated pages and bake_templates.sync_fonts()
+    writes the same bytes into the 17 hand-written ones. One literal."""
+    out = [HOIST_COMMENT]
+    for href in extra_preconnects:
+        out.append(tag("link", [("rel", "preconnect"), ("href", href)]))
+    out.append(tag("link", [("rel", "preload"), ("href", BODY_FONT),
+                            ("as", "font"), ("type", "font/woff2"),
+                            ("crossorigin", None)]))
+    out.append(tag("link", [("rel", "stylesheet"),
+                            ("href", "/css/fontawesome-all.min.css")]))
+    out.append(tag("link", [("rel", "stylesheet"), ("href", "/css/main.css")]))
+    return "\n".join(out)
+
+
 def render_head(v: dict) -> str:
     """The <head> for one page, from its values. Returns the inner HTML."""
     esc = v.get("jsonldAsciiEscaped", False)
@@ -242,22 +268,13 @@ def render_head(v: dict) -> str:
     out.append(tag("meta", [("charset", "utf-8")]))
     out.append(tag("meta", [("name", "viewport"),
                             ("content", "width=device-width, initial-scale=1")]))
-    # Two lineages, measured on 2026-08-11 and split perfectly: all 273
-    # generated pages put the font preconnect pair BEFORE <title>, all 190
-    # hand-written pages put it after the favicons. Earlier is better - the
-    # preload scanner finds it sooner - so this is the generated families
-    # being right rather than drift, and reconciling the two is a
-    # normalisation with its own commit. The shell emits whichever the page
-    # already has.
-    #
-    # The "Linked here rather than @imported" note recording 4db232c is
-    # separate and universal: it sits before the stylesheet links on 463/463.
-    # build_questions.py additionally writes its own note above the early
-    # preconnect on its 173 pages, which is lifted rather than reworded.
-    if v.get("preconnectEarly"):
-        if v.get("earlyPreconnectComment"):
-            out.append(v["earlyPreconnectComment"])
-        out.append(PRECONNECT)
+    out.append(tag("meta", [("name", "theme-color"), ("content", THEME_COLOR)]))
+    # Until 2026-08-23 a font preconnect pair sat here on 273 pages and after
+    # the favicons on the other 190 - two lineages, measured and deliberately
+    # not aligned (DO-NOT-BREAK). The fonts are self-hosted now, so there is
+    # no pair to place and the `preconnectEarly` / `earlyPreconnectComment`
+    # values are retired. The "Linked here rather than @imported" note
+    # recording 4db232c is universal and sits before the stylesheet links.
 
     title = v["title"]
     one = f'{" " * INDENT}<title>{title}</title>'
@@ -349,15 +366,7 @@ def render_head(v: dict) -> str:
     else:
         out += _jsonld_before()
         out.append(FAVICONS)
-    out.append(HOIST_COMMENT)
-    if not v.get("preconnectEarly"):
-        out.append(PRECONNECT)
-    for href in v.get("extraPreconnects", []):
-        out.append(tag("link", [("rel", "preconnect"), ("href", href)]))
-    out.append(tag("link", [("rel", "stylesheet"),
-                            ("href", "/css/fontawesome-all.min.css")]))
-    out.append(tag("link", [("rel", "stylesheet"), ("href", GOOGLE_FONTS)]))
-    out.append(tag("link", [("rel", "stylesheet"), ("href", "/css/main.css")]))
+    out.append(stylesheet_block(v.get("extraPreconnects", [])))
     for href in v.get("pageStylesheets", []):
         out.append(tag("link", [("rel", "stylesheet"), ("href", href)]))
     # A page's own <noscript> block, lifted verbatim and never rebuilt. Until
@@ -917,11 +926,6 @@ def extract(source: str) -> dict:
     v["pageStylesheets"] = sheets[sheets.index("/css/main.css") + 1:] \
         if "/css/main.css" in sheets else []
 
-    t, pc = h.find("<title"), h.find('rel="preconnect"')
-    v["preconnectEarly"] = 0 <= pc < t
-    ec = re.search(r"[ \t]*<!--(?:(?!-->).)*?The font stylesheet"
-                   r"(?:(?!-->).)*?-->", h, re.S)
-    v["earlyPreconnectComment"] = ec.group(0) if ec else None
     ns = re.search(r"[ \t]*<noscript>.*?</noscript>", h, re.S)
     v["headNoscript"] = ns.group(0) if ns else None
     v["mathjaxComment"] = "<!-- MathJax Configuration -->" in h
@@ -929,8 +933,6 @@ def extract(source: str) -> dict:
         a["href"] for a in
         ({k.lower(): v2 for k, v2 in ATTR.findall(raw)} for raw in LINK.findall(h))
         if a.get("rel") == "preconnect"
-        and a.get("href", "") not in ("https://fonts.googleapis.com",
-                                      "https://fonts.gstatic.com")
     ]
     mc = re.search(r"[ \t]*<script>\s*window\.MathJax\s*=.*?</script>", h, re.S)
     v["mathjaxConfig"] = mc.group(0) if mc else None

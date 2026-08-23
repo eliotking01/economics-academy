@@ -27,6 +27,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
     <title>The Interrelationship between Markets – AQA A-Level Economics</title>
     <meta
       name="description"
@@ -124,46 +125,20 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
-    <!-- MathJax Configuration -->
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["\\(", "\\)"],
-          ], // \(...\) only - the $...$ delimiter was removed, D23
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true, // Allows \_ in text
-          autoload: {
-            color: [],
-            ams: ["boldsymbol"], // For \mathbf{}
-          },
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-        },
-      };
-    </script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -479,6 +454,8 @@
               <h2 id="diagram-analysis">Diagram Analysis</h2>
               <h3>Joint Demand</h3>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/joint-demand.webp" />
                 <img
                   src="/images/diagrams/joint-demand.png"
                   alt="Two panels showing a rise in the price of cars contracting quantity demanded, which shifts demand for petrol, its complement, to the left"
@@ -486,6 +463,7 @@
                   width="3074"
                   height="1558"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 1: Joint Demand - when two goods are demanded/consumed
                   together, a change in the price of one good will affect the
@@ -501,6 +479,8 @@
               </p>
               <h3>Competitive Demand</h3>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/competitive-demand.webp" />
                 <img
                   src="/images/diagrams/competitive-demand.png"
                   alt="Two panels showing a price rise for one substitute good shifting demand for the competing good to the right"
@@ -509,6 +489,7 @@
                   height="1534"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 2: Competitive Demand - when two goods are demanded as
                   alternatives, a change in the price for one good will affect
@@ -524,6 +505,8 @@
               </p>
               <h3>Composite Demand</h3>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/composite-demand.webp" />
                 <img
                   src="/images/diagrams/composite-demand.png"
                   alt="Two panels showing a good demanded for two uses, where more going to one use reduces the quantity available to the other"
@@ -532,6 +515,7 @@
                   height="1506"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 3: Composite Demand - when a good is demanded for
                   multiple purposes, a change in the demand for one use will
@@ -547,6 +531,8 @@
               </p>
               <h3>Derived Demand</h3>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/derived-demand.webp" />
                 <img
                   src="/images/diagrams/derived-demand.png"
                   alt="Two panels showing a fall in demand for houses shifting demand for bricklayers left, lowering the wage and employment"
@@ -555,6 +541,7 @@
                   height="1550"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 4: Derived Demand - when the demand for a good depends
                   on the demand for another good, a change in the demand for the
@@ -570,6 +557,8 @@
               </p>
               <h3>Joint Supply</h3>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/joint-supply.webp" />
                 <img
                   src="/images/diagrams/joint-supply.png"
                   alt="Two panels showing higher output of one good raising the supply of its by-product and lowering that by-product's price"
@@ -578,6 +567,7 @@
                   height="1510"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 5: Joint Supply - when two goods are produced together,
                   a change in the supply of one good will affect the supply of

@@ -330,6 +330,17 @@
   min-width: 320px;
   height: 700px;
   max-width: 100%;
+  text-align: center;
+}
+
+/* The link inside the widget div (since 2026-08-23): what the box shows with
+   scripting off, before the lazily loaded widget arrives, and if it never
+   does. The box keeps its 700px so the iframe appearing moves nothing. */
+.calendly-inline-widget .calendly-fallback {
+  margin: 2em auto 0;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.5;
 }
 
 /* .row.tutoring-intro-row, NOT .tutoring-intro-row, and the compound is

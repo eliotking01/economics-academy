@@ -450,6 +450,80 @@ if (pythonCards) {
   );
 }
 
+// ---- the board hubs bake PAGE_SIZE cards and fetch their board's payload
+//
+// Performance pass, 2026-08-23. scripts/build_past_paper_questions.py bakes
+// HUB_CARDS cards into each board hub - the same number this component shows
+// first - and points the hub and its section pages at a per-board payload.
+// Hold the two numbers together, and check each payload is a real file the
+// component can index.
+
+const pyHub = /^HUB_CARDS\s*=\s*(\d+)/m.exec(
+  fs.readFileSync(path.join(ROOT, "scripts", "build_past_paper_questions.py"), "utf8"),
+);
+const jsPage = /var PAGE_SIZE\s*=\s*(\d+)/.exec(source);
+check(
+  "hub: HUB_CARDS in the generator equals PAGE_SIZE in the component",
+  pyHub && jsPage && pyHub[1] === jsPage[1],
+  (pyHub && pyHub[1]) + " vs " + (jsPage && jsPage[1]),
+);
+
+data.boards.forEach((b) => {
+  const hubPath = path.join(ROOT, b.url.replace(/^\//, ""), "index.html");
+  if (!fs.existsSync(hubPath)) return; // a board with no questions has no hub
+  const hub = fs.readFileSync(hubPath, "utf8");
+  const cards = (hub.match(/class="ppq-card/g) || []).length;
+  const boardQs = data.questions.filter((q) => q.board === b.board).length;
+  check(
+    "hub: " + b.board + " bakes min(PAGE_SIZE, its questions) cards",
+    cards === Math.min(Number(jsPage[1]), boardQs),
+    cards + " cards, " + boardQs + " questions",
+  );
+  check(
+    "hub: " + b.board + " carries the static note inside the results container",
+    /data-ppq-results>[\s\S]*ppq-static-note[\s\S]*<\/div>/.test(hub),
+  );
+  const src = /data-src="([^"]+)"/.exec(hub);
+  check("hub: " + b.board + " fetches a per-board payload", !!src);
+  if (src) {
+    const payloadPath = path.join(ROOT, src[1].replace(/^\//, ""));
+    check("hub: " + b.board + " payload exists at " + src[1], fs.existsSync(payloadPath));
+    if (fs.existsSync(payloadPath)) {
+      const pd = JSON.parse(fs.readFileSync(payloadPath, "utf8"));
+      check(
+        "hub: " + b.board + " payload carries exactly the board's questions",
+        pd.questions.length === boardQs && pd.questions.every((q) => q.board === b.board),
+        pd.questions.length + " of " + boardQs,
+      );
+      const boardTopics = Object.keys(data.topics).filter((s) => data.topics[s].board === b.board);
+      check(
+        "hub: " + b.board + " payload carries every topic on the board (the Topic filter lists them)",
+        boardTopics.every((s) => pd.topics[s]) && Object.keys(pd.topics).length === boardTopics.length,
+        Object.keys(pd.topics).length + " of " + boardTopics.length,
+      );
+      check(
+        "hub: " + b.board + " payload indexes and renders",
+        M.buildIndex(pd).length === pd.questions.length,
+      );
+      check(
+        "hub: " + b.board + " payload keeps papers sparse (same length as the master)",
+        pd.papers.length === data.papers.length,
+      );
+    }
+  }
+  // Every section page of the board points at the same payload.
+  b.groups.forEach((g) => {
+    const gp = path.join(ROOT, g.url.replace(/^\//, ""), "index.html");
+    if (!fs.existsSync(gp)) return;
+    const m = /data-src="([^"]+)"/.exec(fs.readFileSync(gp, "utf8"));
+    check(
+      "section: " + g.slug + " fetches the " + b.board + " payload",
+      m && src && m[1] === src[1],
+      m && m[1],
+    );
+  });
+});
+
 console.log(
   failures === 0
     ? "all " + index.length + " records indexed; every check passed"

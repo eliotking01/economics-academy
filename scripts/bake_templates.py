@@ -25,6 +25,16 @@ consent-gated loader on the 446 generated pages, and without sync_gtag() these
 17 - index.html among them - would have gone on setting GA4 cookies before
 anyone was asked.
 
+**And the theme-colour meta** (page_shell.THEME_COLOR, sync_theme_color()),
+one line after the viewport meta, for the same reason again.
+
+**Later the same day, the stylesheet block** (page_shell.stylesheet_block()):
+the performance pass self-hosted the fonts, so the 446 generated heads lost
+the Google Fonts preconnect pair and stylesheet and gained a preload of the
+body face. sync_fonts() does the same to these 17, anchored on the 4db232c
+hoist comment at one end and the main.css link at the other. A page's own
+stylesheets after main.css are outside the region and untouched.
+
     root         9   index, tutoring, marking, about, faq, contact, privacy,
                      confirmation, 404. Permanently out of scope for the
                      <head> migration by D34, which is about nine one-off
@@ -157,6 +167,65 @@ GTAG_CONFIG = re.compile(r'gtag\("config", "' + re.escape(page_shell.GA_ID) + r'
 GTAG_END = re.compile(r'[ \t]*</script>[ \t]*\n')
 
 
+VIEWPORT = re.compile(r'[ \t]*<meta\s+name="viewport"\s+content="[^"]*"\s*/>[ \t]*\n')
+THEME_COLOR_TAG = re.compile(r'[ \t]*<meta\s+name="theme-color"\s+content="[^"]*"\s*/>[ \t]*\n')
+
+
+def sync_theme_color(text: str) -> str:
+    """Put page_shell's <meta name="theme-color"> straight after the viewport
+    meta, once, on the 17 hand-written pages - as render_head() does on the
+    other 446. Rewrites a stale value in place; a page with no viewport meta
+    is returned unchanged for verify_page_shell.py to report."""
+    head_end = text.find("</head>")
+    if head_end < 0:
+        return text
+    want = page_shell.tag("meta", [("name", "theme-color"),
+                                   ("content", page_shell.THEME_COLOR)]) + "\n"
+    existing = THEME_COLOR_TAG.search(text, 0, head_end)
+    if existing:
+        return text[:existing.start()] + want + text[existing.end():]
+    vp = VIEWPORT.search(text, 0, head_end)
+    if not vp:
+        return text
+    return text[:vp.end()] + want + text[vp.end():]
+
+
+FONTS_START = "    <!-- Linked here rather than @imported from main.css"
+FONTS_END = '<link rel="stylesheet" href="/css/main.css" />'
+
+
+def sync_fonts(text: str) -> str:
+    """Rewrite the page's stylesheet block from page_shell.stylesheet_block().
+
+    The region runs from the 4db232c hoist comment to the main.css link,
+    inclusive - exactly the lines page_shell.render_head() emits between the
+    favicons and a page's own stylesheets: the comment, any extra preconnect,
+    the body-face preload, fontawesome, main.css. Same anchoring discipline
+    as sync_gtag(): exact markers, no parsing, nothing outside touched, and a
+    page without both markers is returned unchanged for verify_page_shell.py
+    and verify_css_load_order.py to report.
+
+    Extra preconnects inside the region are kept: tutoring.html's Calendly
+    pair sits elsewhere in its head today, but the shell honours
+    `extraPreconnects` on generated pages and this keeps the same promise.
+    """
+    head_end = text.find("</head>")
+    if head_end < 0:
+        return text
+    a = text.find(FONTS_START, 0, head_end)
+    if a < 0:
+        return text
+    b = text.find(FONTS_END, a, head_end)
+    if b < 0:
+        return text
+    b += len(FONTS_END)
+    region = text[a:b]
+    extra = re.findall(r'<link rel="preconnect" href="([^"]+)"', region)
+    extra = [h for h in extra
+             if h not in ("https://fonts.googleapis.com", "https://fonts.gstatic.com")]
+    return text[:a] + page_shell.stylesheet_block(extra) + text[b:]
+
+
 def sync_gtag(text: str) -> str:
     """Rewrite the page's <head> analytics block from page_shell.GTAG.
 
@@ -280,7 +349,8 @@ def main() -> int:
     for rel in paths:
         path = ROOT / rel
         before = path.read_text(encoding="utf-8")
-        after = sync_gtag(sync_script_tail(page_shell.bake(before, rel)))
+        after = sync_theme_color(
+            sync_fonts(sync_gtag(sync_script_tail(page_shell.bake(before, rel)))))
         if after == before:
             already += 1
             continue

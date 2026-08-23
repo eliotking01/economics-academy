@@ -48,6 +48,16 @@ report **0 changes** — that agreement is the test. It edits JSON as text on
 purpose: a `json.dumps` round-trip would reformat all 64 files and break build
 idempotence.
 
-In a per-topic payload, `papers` is a **sparse list with nulls**: the search
-component indexes into it with `q.p`, so re-packing it would silently re-point
-every question at the wrong paper.
+In a per-topic payload — and, since 2026-08-23, in the per-board payload at
+`past-paper-questions/<board>/questions.json` that the board hub and section
+pages fetch instead of the 414 KB master — `papers` is a **sparse list with
+nulls**: the search component indexes into it with `q.p`, so re-packing it
+would silently re-point every question at the wrong paper. The master
+`questions.json` is unchanged by either; the master page and
+`build_questions.py` still read it.
+
+**The two board hubs bake only the 20 most recent cards** (`HUB_CARDS`, held
+equal to the component's `PAGE_SIZE` by `scripts/test_question_search.js`),
+followed by a static note inside the results container; the 6 section pages
+and 81 topic pages still bake every card and are the no-JS list. Do not add
+the rest back to the hubs: `edexcel/` was 799 KB and ~5,600 DOM nodes.

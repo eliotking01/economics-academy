@@ -406,11 +406,10 @@ def page_shell(*, title, desc, path, crumbs, body, jsonld, katex_css=False):
         sheets.append("/css/vendor/katex/katex.min.css")
     values = shell.head_values(title, desc, url, sheets, esc=e)
     values.update({
-        # This family puts the font preconnect before <title> and the favicon
-        # trio straight after the canonical. Both are recorded rather than
-        # chosen: reconciling them with the hand-written pages is a separate
-        # normalisation.
-        "preconnectEarly": True,
+        # This family puts the favicon trio straight after the canonical.
+        # Recorded rather than chosen: reconciling it with the hand-written
+        # pages is a separate normalisation. (It also put the font preconnect
+        # before <title> until the fonts were self-hosted on 2026-08-23.)
         "faviconsAfterCanonical": True,
         "ogComment": True,
         "sdComment": True,

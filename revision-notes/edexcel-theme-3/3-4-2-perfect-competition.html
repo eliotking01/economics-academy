@@ -27,6 +27,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
     <title>Perfect Competition – Edexcel A-Level Economics Notes</title>
     <meta
       name="description"
@@ -124,17 +125,19 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
     <!-- MathJax Configuration -->
@@ -463,6 +466,8 @@
                 <strong>market supply and demand</strong>.
               </p>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/perfect-competition-market-price.webp" />
                 <img
                   src="/images/diagrams/perfect-competition-market-price.png"
                   alt="Two panels showing industry supply and demand setting the price the individual perfectly competitive firm must accept"
@@ -470,6 +475,7 @@
                   width="3514"
                   height="1246"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 1: The market price in perfect competition is
                   determined by industry supply and demand. The firm's demand
@@ -487,6 +493,8 @@
               <h3>Short run, Supernormal Profit</h3>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/perfect-competition-short-run-supernormal-profit.webp" />
                 <img
                   src="/images/diagrams/perfect-competition-short-run-supernormal-profit.png"
                   alt="Perfect competition firm earning short-run supernormal profit, shaded where average revenue is above average cost"
@@ -495,6 +503,7 @@
                   height="1204"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 2: In the short run, a firm in perfect competition can
                   earn supernormal profit if the price is above the average
@@ -505,6 +514,8 @@
               <h3>Short run, Loss</h3>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/perfect-competition-short-run-loss.webp" />
                 <img
                   src="/images/diagrams/perfect-competition-short-run-loss.png"
                   alt="Perfect competition firm making a short-run loss, shaded where average cost is above average revenue"
@@ -513,6 +524,7 @@
                   height="1288"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 3: In the short run, a firm in perfect competition can
                   incur a loss if the price is below the average cost. The
@@ -550,6 +562,8 @@
               </ul>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/perfect-competition-profit-to-longrun.webp" />
                 <img
                   src="/images/diagrams/perfect-competition-profit-to-longrun.png"
                   alt="Perfect competition diagram showing entry competing supernormal profit away until only normal profit remains"
@@ -558,6 +572,7 @@
                   height="1324"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 4: The adjustment process from short-run supernormal
                   profit to long-run equilibrium in perfect competition. The
@@ -584,6 +599,8 @@
               </ul>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/perfect-competition-loss-to-longrun.webp" />
                 <img
                   src="/images/diagrams/perfect-competition-loss-to-longrun.png"
                   alt="Perfect competition diagram showing firms leaving until losses are removed and normal profit is restored"
@@ -592,6 +609,7 @@
                   height="1240"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 5: The adjustment process from short-run loss to
                   long-run equilibrium in perfect competition. The firm's demand

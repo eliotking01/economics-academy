@@ -107,6 +107,27 @@ FontAwesome and the font stylesheet into every `<head>`, in that order, to remov
 a render-blocking chain. Putting them back reverses a measured CWV improvement
 (`seo/09-web-vitals-baseline.md`, `seo/lh-live-after-7run.json`).
 
+> **Amended 2026-08-23, performance pass Phase 2: the font stylesheet is
+> gone, not moved back.** The fonts are self-hosted under `/webfonts/` — the
+> static latin woff2 files Google itself serves, with the OFL texts beside
+> them — and declared as `@font-face` in `css/main.css` (Source Sans Pro)
+> and in the two sheets that set text in Merriweather. Every `<head>` lost
+> the `fonts.googleapis.com` / `fonts.gstatic.com` preconnect pair and the
+> Google Fonts `<link>`, and gained a preload of the body face
+> (`page_shell.BODY_FONT`). `4db232c`'s point stands: nothing is `@import`ed
+> from `main.css`, and FontAwesome stays a direct `<link>` before it.
+> `verify_css_load_order.py` now holds the Google origins at 0/463 and the
+> preload at 463/463. Source Sans Pro stays Source Sans Pro — not Source
+> Sans 3, which is a visual change needing approval.
+>
+> **Open Sans is gone, on Eliot's instruction the same day.** Its seven rules
+> (breadcrumb, consent bar, hub index count and code, three CTA straps) are
+> Source Sans Pro at the same weights, which added the 600 cut. The
+> breadcrumb is pinned at `font-weight: 400` because it used to inherit 300
+> from `body` and Open Sans had no 300, so it rendered at 400; Source Sans
+> Pro has 300, and without the pin it would have come out lighter. Two text
+> families, nine files; do not add a third.
+
 **`sitemap.xml` is a `<sitemapindex>`, not a `<urlset>`.** Seven children under
 `sitemaps/`, 744 URLs. Per-section indexation reporting in GSC comes from the
 index structure. Do not flatten it. `lastmod` is taken from git, not build date —
@@ -465,6 +486,12 @@ way. PH08-041.
 >   Both uses are now `em`: `60ch → 28.73em` and `72ch → 34.48em`, from Source
 >   Sans Pro's own ch/em ratio of 0.4789, so the rendered measure is unchanged.
 >   `grep -rn '[0-9]ch\b' css/` must stay empty outside `css/vendor/katex/`.
+>
+> **2026-08-23: the fonts are self-hosted and both `size-adjust` ratios still
+> hold** — the Source Sans Pro files are the bytes Google served, and the
+> Merriweather static instances were checked glyph by glyph against the
+> variable files modern browsers were getting: 0 advance-width mismatches,
+> same x-height. Re-measure only if a font FILE changes.
 
 **`past-paper-questions/questions.json` stays published at its current path.**
 Already recorded above as fetched at runtime. P8 proposes *adding* per-topic
@@ -481,6 +508,17 @@ index. PH08-046.
 >   Their Topic filter is live and lists every topic on the board, which a
 >   per-topic payload cannot supply. Only pages with `data-prefilter-topic`
 >   carry `data-src`.
+>
+>   **Amended 2026-08-23, performance pass Phase 3: the board and section
+>   pages now fetch a PER-BOARD payload,**
+>   `past-paper-questions/<board>/questions.json` (`board_payload()`), which
+>   carries every topic on the board — exactly what their Topic filter lists
+>   — so the reason above is honoured, not overturned; only the master page
+>   still fetches the full index, and the master `questions.json` is
+>   byte-unchanged. The same commit cut the two board hubs to their 20 most
+>   recent cards plus a static note (the section and topic pages still bake
+>   every card and are the no-JS list): `edexcel/` went 799 KB → 88 KB.
+>   `scripts/test_question_search.js` holds all of it.
 > - **`papers` in a per-topic payload is a sparse list, and the nulls are
 >   load-bearing.** `question-search.js` reads `data.papers[q.p]` where `q.p`
 >   is an index into it (`:136`, `:393`). Re-packing the list to drop the nulls
@@ -508,7 +546,8 @@ specificity is unchanged.
 > and it must stay there.** Load order is now an invariant, not an accident. It
 > asserts `css/main.css` precedes every `css/pages/*.css` (462/462), that
 > `4db232c`'s order fontawesome → Google Fonts → main.css holds (462/462, which
-> nothing checked before), and that
+> nothing checked before; since 2026-08-23 fontawesome → main.css, with the
+> Google origins held at 0/463 and the body-face preload at 463/463), and that
 > `revision-notes/macro-application/index.html` is the **only** page loading two
 > page sheets. **Wave 2's `page_shell.py` is the thing this exists for** — a
 > generated `<head>` that emits the same links in a different order breaks two
@@ -854,6 +893,11 @@ Everything that varies per page is passed in as a value.
 >   cited** — in three configurations it could not distinguish *no preconnect*
 >   from *preconnect*, so it cannot speak to where one sits. The script says so
 >   itself and is kept for what it records about driving Chrome.
+>
+>   **Retired 2026-08-23.** Both lineages are gone: the fonts are self-hosted,
+>   there is no pair to place, and `preconnectEarly` /
+>   `earlyPreconnectComment` no longer exist as values. The paragraph stays
+>   as the record of why nobody aligned them.
 > - **Two explanatory comments.** The `4db232c` note is universal, 463/463.
 >   `build_questions.py` writes a second one above its early preconnect on 173
 >   pages. Both are correct; rewording either is a change nobody asked for.
@@ -1251,6 +1295,16 @@ D23. `page_shell.MATHJAX_CONFIG_BODY` is the only config and every
 `notes-data` record has `mathjaxConfig: null`. `displayMath`'s `["$$","$$"]`
 deliberately stays: pairing needs two ADJACENT dollars and there are none
 among the 8 literal `$` on the site, all of which are currency.
+
+> **Amended 2026-08-23, performance pass Phase 1: 59 pages, not 126, and the
+> number is derived.** `build_notes_pages.py` now loads MathJax if and only if
+> the rendered body contains one of the three delimiters, and the stored
+> `head.mathjax` / `mathjaxComment` fields are gone from every record. The 67
+> pages that carried the script with no maths dropped it; the 59 that keep it
+> gained `<link rel="preconnect" href="https://cdn.jsdelivr.net">`.
+> `verify_page_shell.py` check 5 holds the iff in both directions, so cite
+> the script for the count. The one config and the `$$` sentence above are
+> unchanged.
 
 **`verify_page_shell.py` check 5 counts POPULATED labels, not labels.** The
 `<style>` label is held at 0 as a tripwire for a block coming back, and

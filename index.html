@@ -28,6 +28,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
     <title>
       Free A-Level Economics Revision Notes &amp; Tutoring | Edexcel, AQA &amp;
       OCR | Economics Academy
@@ -70,17 +71,18 @@
 
     <!-- Styles -->
     <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/home.css" />
 
@@ -460,14 +462,21 @@
               <p>Expert support for when revising alone is not enough</p>
             </header>
             <div class="tutor-intro">
-              <img
-                src="/images/eliot_shirt.JPG"
-                alt="Eliot King, founder of Economics Academy and specialist A-Level Economics tutor"
-                width="800"
-                height="800"
-                loading="lazy"
-                class="tutor-photo"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="/images/eliot_shirt-400.webp 400w, /images/eliot_shirt.webp 800w"
+                  sizes="(max-width: 736px) 320px, 300px"
+                />
+                <img
+                  src="/images/eliot_shirt.JPG"
+                  alt="Eliot King, founder of Economics Academy and specialist A-Level Economics tutor"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  class="tutor-photo"
+                />
+              </picture>
               <div class="tutor-bio">
                 <h3>Eliot King — Founder &amp; A-Level Economics Tutor</h3>
                 <p>

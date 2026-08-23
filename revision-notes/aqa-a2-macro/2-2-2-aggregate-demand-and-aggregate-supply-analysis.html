@@ -27,6 +27,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
     <title>Aggregate Demand and Supply – AQA A-Level Economics Notes</title>
     <meta
       name="description"
@@ -124,17 +125,19 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
     <!-- MathJax Configuration -->
@@ -499,6 +502,8 @@
             <section>
               <h2 id="the-aggregate-demand-curve">The Aggregate Demand Curve</h2>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/ad-movements.webp" />
                 <img
                   src="/images/diagrams/ad-movements.png"
                   alt="Aggregate demand curve sloping down, showing a lower price level raising the real output demanded"
@@ -506,6 +511,7 @@
                   width="2066"
                   height="1386"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 1: The aggregate demand curve, showing the inverse
                   relationship between the average price level and the quantity
@@ -564,6 +570,8 @@
                 </li>
               </ul>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/ad-shift.webp" />
                 <img
                   src="/images/diagrams/ad-shift.png"
                   alt="Aggregate demand shifting right to raise real output and the price level, and left to reduce both"
@@ -572,6 +580,7 @@
                   height="1416"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 2: Shifts of the aggregate demand curve, showing how
                   changes in determinants of AD (other than price level) can
@@ -658,6 +667,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/sras-movements.webp" />
                 <img
                   src="/images/diagrams/sras-movements.png"
                   alt="Short-run aggregate supply sloping upward, as a higher price level draws out more output while costs are fixed"
@@ -666,6 +677,7 @@
                   height="1494"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 3: Movements along the SRAS curve, showing how a higher
                   price level leads to a higher quantity of real GDP supplied in
@@ -704,6 +716,8 @@
                 </li>
               </ul>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/sras-shift.webp" />
                 <img
                   src="/images/diagrams/sras-shift.png"
                   alt="Short-run aggregate supply shifting right as production costs fall, raising real output and lowering the price level"
@@ -712,6 +726,7 @@
                   height="1538"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 4: A shift of the SRAS curve to the right (SRAS1 to
                   SRAS2) due to a decrease in production costs.
@@ -832,6 +847,8 @@
                 <strong>Yfe</strong>.
               </p>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/lras-classical.webp" />
                 <img
                   src="/images/diagrams/lras-classical.png"
                   alt="Classical long-run aggregate supply drawn vertical at full employment, so demand changes affect only the price level"
@@ -840,6 +857,7 @@
                   height="1536"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 5: The Classical LRAS curve is vertical, reflecting the
                   belief that the economy will always adjust to full employment
@@ -885,6 +903,8 @@
                 </li>
               </ul>
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/lras-keynesian.webp" />
                 <img
                   src="/images/diagrams/lras-keynesian.png"
                   alt="Keynesian long-run aggregate supply, flat with spare capacity and vertical at full capacity where extra demand is purely inflationary"
@@ -893,6 +913,7 @@
                   height="1780"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 6: The Keynesian LRAS curve is L-shaped, reflecting the
                   idea that the economy can be below full employment for a long
@@ -912,6 +933,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/lras-shift.webp" />
                 <img
                   src="/images/diagrams/lras-shift.png"
                   alt="Long-run aggregate supply shifting right as productive capacity grows, raising potential output and easing the price level"
@@ -920,6 +943,7 @@
                   height="1248"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 7: Factors that increase the quantity or quality of
                   factors of production, such as technological advances or

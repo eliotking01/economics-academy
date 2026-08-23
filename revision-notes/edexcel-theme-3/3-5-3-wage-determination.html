@@ -27,6 +27,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
     <title>Wage Determination – Edexcel A-Level Economics Notes</title>
     <meta
       name="description"
@@ -124,17 +125,19 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
     <!-- MathJax Configuration -->
@@ -433,6 +436,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/wage-determination.webp" />
                 <img
                   src="/images/diagrams/wage-determination.png"
                   alt="Competitive labour market diagram where labour demand and supply intersect to set the equilibrium wage and employment"
@@ -440,6 +445,7 @@
                   width="2316"
                   height="1476"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 1: In a competitive labour market, the equilibrium wage
                   (W1) is determined at the intersection of the labour supply
@@ -463,6 +469,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/monopsony.webp" />
                 <img
                   src="/images/diagrams/monopsony.png"
                   alt="Monopsony diagram showing a sole employer hiring fewer workers at a lower wage than a competitive labour market would"
@@ -471,6 +479,7 @@
                   height="1542"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 2: In a monopsony, the firm faces the entire labour
                   supply curve (SL) and must pay a higher wage to attract more
@@ -574,6 +583,8 @@
               </ul>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/trade-union.webp" />
                 <img
                   src="/images/diagrams/trade-union.png"
                   alt="Labour market diagram showing a trade union raising the wage above the competitive level and reducing employment"
@@ -582,6 +593,7 @@
                   height="1436"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 3: Trade Unions have different impacts on labour
                   markets depending on whether the market is competitive or a
@@ -618,6 +630,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/min-wage.webp" />
                 <img
                   src="/images/diagrams/min-wage.png"
                   alt="Labour market diagram showing a minimum wage above equilibrium creating excess supply of labour and unemployment"
@@ -626,6 +640,7 @@
                   height="1590"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 4: The introduction of a national minimum wage (Wmin)
                   above the equilibrium wage (W1) creates a surplus of labour

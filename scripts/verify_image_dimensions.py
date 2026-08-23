@@ -32,6 +32,18 @@ WHAT IT CHECKS
 
 SVG is measured from `width`/`height` when both are absolute, and otherwise
 from `viewBox`, which is what a browser does.
+
+SINCE THE PERFORMANCE PASS (2026-08-23) it also checks the `<picture>`
+variants, which are new files a browser may pick instead of the `<img>`:
+
+  * every local candidate in a `<source srcset>` is a tracked file;
+  * a candidate with a `Nw` descriptor really is N pixels wide, and every
+    candidate has the SAME aspect ratio (to 1%) as its sibling `<img>`'s
+    declared box - the box is reserved from the <img>, whichever file lands;
+  * every `images/diagrams/*.png` has a `.webp` twin of identical pixel size
+    (scripts/build_diagram_webp.py writes them, lossless), so the
+    `<picture>` wrapper build_notes_pages.py puts around each diagram never
+    points at a 404 and never changes the box.
 """
 
 from __future__ import annotations
@@ -46,6 +58,8 @@ import xml.etree.ElementTree as ET
 REPO = pathlib.Path(__file__).resolve().parent.parent
 
 IMG_TAG = re.compile(r"<img\b[^>]*?>", re.S)
+PICTURE = re.compile(r"<picture\b[^>]*>(.*?)</picture>", re.S)
+SOURCE_TAG = re.compile(r"<source\b[^>]*?>", re.S)
 ATTR = lambda tag, name: (  # noqa: E731
     m.group(1) if (m := re.search(rf'\s{name}="([^"]*)"', tag)) else None)
 LENGTH = re.compile(r"^\s*([0-9.]+)\s*(px)?\s*$")
@@ -191,7 +205,66 @@ def main() -> int:
                        " — the reserved box is the wrong SHAPE, so the page "
                        "will move when the image loads"))
 
-    print(f"{checked} <img> tags checked against {len(cache)} image files")
+    # ---- <picture> variants -------------------------------------------
+    candidates = 0
+    for page in sorted(pages):
+        text = (REPO / page).read_text(encoding="utf-8", errors="ignore")
+        for pic in PICTURE.findall(text):
+            imgs = IMG_TAG.findall(pic)
+            if len(imgs) != 1:
+                problems.append(f"{page}: a <picture> holds {len(imgs)} <img> tags, not 1")
+                continue
+            w, h = ATTR(imgs[0], "width"), ATTR(imgs[0], "height")
+            if not (w and h and w.isdigit() and h.isdigit()):
+                continue  # already reported above
+            ratio = int(w) / int(h)
+            for src_tag in SOURCE_TAG.findall(pic):
+                srcset = ATTR(src_tag, "srcset") or ""
+                for cand in srcset.split(","):
+                    parts = cand.split()
+                    if not parts:
+                        continue
+                    url, desc = parts[0], (parts[1] if len(parts) > 1 else None)
+                    if url.startswith(("http://", "https://", "data:")):
+                        continue
+                    rel = url.split("?")[0].split("#")[0].lstrip("/")
+                    if rel not in tracked:
+                        problems.append(f"{page}: <source srcset> {url} is not a tracked file")
+                        continue
+                    if rel not in cache:
+                        cache[rel] = intrinsic(REPO / rel)
+                    size = cache[rel]
+                    if size is None:
+                        problems.append(f"{page}: cannot read the intrinsic size of {rel}")
+                        continue
+                    candidates += 1
+                    if desc and desc.endswith("w") and desc[:-1].isdigit() \
+                            and int(desc[:-1]) != size[0]:
+                        problems.append(f"{page}: {url} is declared {desc} but is "
+                                        f"{size[0]:g} px wide")
+                    if abs(size[0] / size[1] - ratio) / ratio > 0.01:
+                        problems.append(
+                            f"{page}: {url} ({size[0]:g}x{size[1]:g}) does not have the "
+                            f"shape of its <img> ({w}x{h}) - the reserved box is wrong "
+                            "when this candidate is chosen")
+
+    # ---- every diagram PNG has a same-size lossless WebP twin ------------
+    twins = 0
+    for rel in sorted(tracked):
+        if not (rel.startswith("images/diagrams/") and rel.endswith(".png")):
+            continue
+        webp = rel[:-4] + ".webp"
+        if webp not in tracked:
+            problems.append(f"{rel}: no .webp twin - run "
+                            "python3 scripts/build_diagram_webp.py --apply and commit it")
+            continue
+        a, b = intrinsic(REPO / rel), intrinsic(REPO / webp)
+        if a != b:
+            problems.append(f"{webp}: {b} but its PNG is {a} - re-run build_diagram_webp.py")
+        twins += 1
+
+    print(f"{checked} <img> tags checked against {len(cache)} image files; "
+          f"{candidates} <picture> candidates; {twins} diagram PNG/WebP twins")
     if problems:
         print(f"\n{len(problems)} problem(s):")
         for p in problems:

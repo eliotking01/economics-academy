@@ -1,0 +1,190 @@
+{
+  "homepage": {
+    "url": "/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1358.8029999999999,
+    "CLS": 0.001923928414554732,
+    "TBT": 0,
+    "FCP": 1358.8029999999999,
+    "SI": 1358.8029999999999,
+    "bytes": 174899,
+    "blocking_ms": 561,
+    "chain_len": 3,
+    "chain_ms": 1616.6610000133514,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/js/components/nav.js",
+        3869,
+        150
+      ],
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "section-hub": {
+    "url": "/revision-notes/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1502.3265000000001,
+    "CLS": 0.002365965453366247,
+    "TBT": 0,
+    "FCP": 1352.3265000000001,
+    "SI": 1352.3265000000001,
+    "bytes": 135303,
+    "blocking_ms": 572,
+    "chain_len": 3,
+    "chain_ms": 80.32700002193451,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "notes-topic": {
+    "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+    "runs": 3,
+    "score": 0.96,
+    "LCP": 2254.741,
+    "CLS": 0.006138920090363653,
+    "TBT": 90,
+    "FCP": 2104.741,
+    "SI": 2104.741,
+    "bytes": 611936,
+    "blocking_ms": 1136,
+    "chain_len": 2,
+    "chain_ms": 373.277999997139,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/css/pages/revision-notes-textbook.css",
+        9033,
+        150
+      ],
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "practice-questions": {
+    "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1802.848,
+    "CLS": 0.001175476264298973,
+    "TBT": 0,
+    "FCP": 1652.848,
+    "SI": 1652.848,
+    "bytes": 217761,
+    "blocking_ms": 712,
+    "chain_len": 3,
+    "chain_ms": 77.68900001049042,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "past-paper-questions": {
+    "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1508.931,
+    "CLS": 0.003372371060208268,
+    "TBT": 0,
+    "FCP": 1352.9389999999999,
+    "SI": 1352.9389999999999,
+    "bytes": 137518,
+    "blocking_ms": 561,
+    "chain_len": 3,
+    "chain_ms": 88.07599997520447,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/js/components/track.js",
+        3791,
+        150
+      ],
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "flashcards": {
+    "url": "/flashcards/edexcel-a/theme-1/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1212.075,
+    "CLS": 0.005115366093834567,
+    "TBT": 0,
+    "FCP": 1054.592,
+    "SI": 1054.592,
+    "bytes": 193461,
+    "blocking_ms": 260,
+    "chain_len": 3,
+    "chain_ms": 84.75599998235703,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/css/pages/flashcards.css",
+        3933,
+        150
+      ],
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "ppq-board-hub": {
+    "url": "/past-paper-questions/edexcel/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1509.1280000000002,
+    "CLS": 0.0006332832947898274,
+    "TBT": 0,
+    "FCP": 1353.1280000000002,
+    "SI": 1353.1280000000002,
+    "bytes": 183526,
+    "blocking_ms": 408,
+    "chain_len": 3,
+    "chain_ms": 80.38200002908707,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  },
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1653.519,
+    "CLS": 0.02977236163677152,
+    "TBT": 0,
+    "FCP": 1353.519,
+    "SI": 1353.519,
+    "bytes": 180513,
+    "blocking_ms": 368,
+    "chain_len": 3,
+    "chain_ms": 97.22200003266335,
+    "blocking": [
+      [
+        "https://127.0.0.1:8122/css/main.css",
+        18368,
+        150
+      ]
+    ]
+  }
+}

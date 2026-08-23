@@ -27,6 +27,7 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
     <title>Causes of Growth – Edexcel A-Level Economics Revision Notes</title>
     <meta
       name="description"
@@ -124,46 +125,20 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Linked here rather than @imported from main.css: an @import inside a
-         render-blocking stylesheet is invisible to the preload scanner, so
-         neither request could start until main.css had parsed. The order below
-         matches the old @import order, so the cascade is unchanged.
-         See seo/09-web-vitals-baseline.md. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
-    <!-- MathJax Configuration -->
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["\\(", "\\)"],
-          ], // \(...\) only - the $...$ delimiter was removed, D23
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true, // Allows \_ in text
-          autoload: {
-            color: [],
-            ams: ["boldsymbol"], // For \mathbf{}
-          },
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-        },
-      };
-    </script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -452,6 +427,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/sras-ad-shift-right.webp" />
                 <img
                   src="/images/diagrams/sras-ad-shift-right.png"
                   alt="AD/AS diagram showing aggregate demand shifting right along SRAS, raising both real GDP and the price level"
@@ -459,6 +436,7 @@
                   width="2458"
                   height="1638"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 1: Short-Run Growth on AD/AS Diagram. An increase in
                   aggregate demand (AD) from AD1 to AD2 leads to a higher real
@@ -470,6 +448,8 @@
               </figure>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/ppf-short-run-growth.webp" />
                 <img
                   src="/images/diagrams/ppf-short-run-growth.png"
                   alt="Production possibility frontier showing actual growth as the economy moves from inside the curve towards the frontier"
@@ -478,6 +458,7 @@
                   height="1486"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 2: Short-Run Growth on PPF Diagram. The economy moves
                   from point X, which is inside the PPF, to point Y, which is
@@ -508,6 +489,8 @@
               </p>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/lras-shift.webp" />
                 <img
                   src="/images/diagrams/lras-shift.png"
                   alt="Long-run aggregate supply shifting right as productive capacity grows, raising potential output and easing the price level"
@@ -516,6 +499,7 @@
                   height="1248"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 3: Long-Run Growth on AD/AS Diagram. An outward shift
                   in the LRAS curve from LRAS1 to LRAS2 represents an increase
@@ -527,6 +511,8 @@
               </figure>
 
               <figure class="diagram-figure">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/ppf-long-run-growth.webp" />
                 <img
                   src="/images/diagrams/ppf-long-run-growth.png"
                   alt="Production possibility frontier shifting outwards to show long-run growth in the economy's productive potential"
@@ -535,6 +521,7 @@
                   height="1680"
                   loading="lazy"
                 />
+                </picture>
                 <figcaption class="diagram-caption">
                   Figure 4: Long-Run Growth on PPF Diagram. The production
                   possibility frontier shifts outward from PPF1 to PPF2,

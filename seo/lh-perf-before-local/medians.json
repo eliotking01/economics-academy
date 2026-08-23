@@ -1,0 +1,255 @@
+{
+  "homepage": {
+    "url": "/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1571.583,
+    "CLS": 0.001878820098640739,
+    "TBT": 0,
+    "FCP": 1571.583,
+    "SI": 1571.583,
+    "bytes": 347297,
+    "blocking_ms": 767,
+    "chain_len": 3,
+    "chain_ms": 1753.0090000331402,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2985,
+        807
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/track.js",
+        3791,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        300
+      ]
+    ]
+  },
+  "section-hub": {
+    "url": "/revision-notes/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1566.717,
+    "CLS": 0.001269992157731152,
+    "TBT": 0,
+    "FCP": 1566.717,
+    "SI": 1566.717,
+    "bytes": 216805,
+    "blocking_ms": 775,
+    "chain_len": 3,
+    "chain_ms": 1751.2430000007153,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2986,
+        807
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/track.js",
+        3791,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        301
+      ]
+    ]
+  },
+  "notes-topic": {
+    "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+    "runs": 3,
+    "score": 0.68,
+    "LCP": 5074.721,
+    "CLS": 0,
+    "TBT": 87,
+    "FCP": 5074.721,
+    "SI": 5080.0839539816625,
+    "bytes": 692646,
+    "blocking_ms": 1689,
+    "chain_len": 3,
+    "chain_ms": 2321.451999992132,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2984,
+        814
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        300
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/nav.js",
+        3869,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/pages/revision-notes-textbook.css",
+        8779,
+        150
+      ]
+    ]
+  },
+  "practice-questions": {
+    "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1563.863,
+    "CLS": 0.0009195838597502495,
+    "TBT": 0,
+    "FCP": 1563.863,
+    "SI": 1563.863,
+    "bytes": 311094,
+    "blocking_ms": 616,
+    "chain_len": 3,
+    "chain_ms": 1754.7379999756813,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        811
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/track.js",
+        3791,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        300
+      ]
+    ]
+  },
+  "past-paper-questions": {
+    "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1561.217,
+    "CLS": 0.05411114048765677,
+    "TBT": 0,
+    "FCP": 1561.217,
+    "SI": 1561.217,
+    "bytes": 232466,
+    "blocking_ms": 771,
+    "chain_len": 3,
+    "chain_ms": 1743.8980000019073,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        808
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/track.js",
+        3791,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        301
+      ]
+    ]
+  },
+  "flashcards": {
+    "url": "/flashcards/edexcel-a/theme-1/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1811.499,
+    "CLS": 0.0026481556724946747,
+    "TBT": 0,
+    "FCP": 1568.1135,
+    "SI": 1568.1135,
+    "bytes": 274117,
+    "blocking_ms": 774,
+    "chain_len": 3,
+    "chain_ms": 1749.6379999816418,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        805
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/nav.js",
+        3869,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        300
+      ]
+    ]
+  },
+  "ppq-board-hub": {
+    "url": "/past-paper-questions/edexcel/",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 1868.6370000000002,
+    "CLS": 0.0007297183574596774,
+    "TBT": 0,
+    "FCP": 1868.6370000000002,
+    "SI": 1868.6370000000002,
+    "bytes": 348078,
+    "blocking_ms": 681,
+    "chain_len": 3,
+    "chain_ms": 1783.3510000109673,
+    "blocking": [
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2984,
+        813
+      ],
+      [
+        "https://127.0.0.1:8121/js/components/nav.js",
+        3869,
+        150
+      ]
+    ]
+  },
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 2255.888000000001,
+    "CLS": 0.028616778416053333,
+    "TBT": 0,
+    "FCP": 1586.183,
+    "SI": 1586.183,
+    "bytes": 3461407,
+    "blocking_ms": 613,
+    "chain_len": 3,
+    "chain_ms": 1771.7680000066757,
+    "blocking": [
+      [
+        "https://assets.calendly.com/assets/external/widget.css",
+        1710,
+        818
+      ],
+      [
+        "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap",
+        2983,
+        805
+      ],
+      [
+        "https://127.0.0.1:8121/css/pages/tutoring.css",
+        2981,
+        150
+      ],
+      [
+        "https://127.0.0.1:8121/css/main.css",
+        18116,
+        301
+      ]
+    ]
+  }
+}
