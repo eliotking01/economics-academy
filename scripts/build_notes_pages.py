@@ -34,6 +34,19 @@ to; what changes is only what this generator wraps around them. Every one of
 these blocks fails the build rather than degrading if its anchor stops
 matching - notes_extras.fail().
 
+MATHJAX IS DECIDED FROM THE BODY, NOT FROM THE RECORD (2026-08-23)
+------------------------------------------------------------------
+Until the performance pass every record carried a stored `head.mathjax`
+value inherited from the hand-written page it was lifted from, and 126 of
+166 topic pages loaded MathJax 3 from jsDelivr - 67 of them with no maths
+anywhere in the body. The flag is now derived: a page loads MathJax if and
+only if its rendered body contains one of the three delimiters the config
+declares (backslash-paren, backslash-bracket, double dollar - see
+page_shell.MATHJAX_CONFIG_BODY), and the
+same page gets a preconnect to cdn.jsdelivr.net so the script's connection
+opens early. The stored fields were removed from the records; no page needs
+an override. verify_page_shell.py check 5 asserts the iff independently.
+
 WHAT THIS DELIBERATELY DOES NOT DO
 ----------------------------------
 **It does not run Prettier**, and that is a departure from PH06 section 3
@@ -82,6 +95,32 @@ SEVEN_SCRIPTS = page_shell.script_tail()
 # ends with this exact string.
 CONTAINER_OPEN = '          <div class="notes-container">\n'
 CONTAINER_CLOSE = "\n          </div>"
+
+# The three delimiters page_shell.MATHJAX_CONFIG_BODY tells MathJax to typeset.
+# Anything else - a lone `$`, a `\frac` outside delimiters - is not maths to
+# MathJax either, so it is not maths to this test. verify_page_shell.py
+# restates the pattern rather than importing it, on purpose.
+MATHS_DELIMITER = re.compile(r"\\\(|\\\[|\$\$")
+MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
+
+
+def head_for(rec: dict, body_html: str) -> dict:
+    """The page's head values, with MathJax decided by the body it will carry.
+
+    `body_html` is the final body - slice, extras and previous/next rows - so
+    the decision is about what the page actually contains. A page with maths
+    loads MathJax (the one canonical form, `id="MathJax-script" async`, the
+    `<!-- MathJax Configuration -->` comment above the config) and preconnects
+    to its CDN; a page without does neither. The record's own `extraPreconnects`
+    are kept and the CDN appended, so a future record can still name one.
+    """
+    head = dict(rec["head"])
+    has_maths = bool(MATHS_DELIMITER.search(body_html))
+    head["mathjax"] = "with-id" if has_maths else None
+    head["mathjaxComment"] = has_maths
+    extra = [h for h in head.get("extraPreconnects", []) if h != MATHJAX_ORIGIN]
+    head["extraPreconnects"] = extra + [MATHJAX_ORIGIN] if has_maths else extra
+    return head
 
 
 def topic_key(meta: pathlib.Path) -> tuple[str, str] | None:
@@ -173,7 +212,7 @@ def render(rec: dict, slice_html: str) -> str:
         "<!doctype html>\n"
         '<html lang="en-GB">\n'
         "  <head>\n"
-        f"{page_shell.render_head(rec['head'])}\n"
+        f"{page_shell.render_head(head_for(rec, slice_html))}\n"
         "  </head>\n"
         '  <body class="is-preload">\n'
         f"{b['beforeMain']}"

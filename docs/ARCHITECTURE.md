@@ -66,7 +66,11 @@ the baked header and footer blocks. Add it to the sitemap by running
 to run.
 
 Topic pages carry two JSON-LD blocks — `LearningResource` and `BreadcrumbList` —
-and load MathJax 3 from jsDelivr only if they use `\( … \)`.
+and load MathJax 3 from jsDelivr if and only if the body contains one of
+`\( … \)`, `\[ … \]` or `$$ … $$` — decided by `build_notes_pages.py` from a
+body scan (since 2026-08-23; the record used to carry the flag), asserted by
+`verify_page_shell.py` check 5, with a `cdn.jsdelivr.net` preconnect on
+exactly those pages.
 
 ## Board identity is recorded once
 

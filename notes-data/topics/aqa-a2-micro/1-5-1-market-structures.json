@@ -28,12 +28,10 @@
     "pageStylesheets": [
       "/css/pages/revision-notes-textbook.css"
     ],
-    "mathjaxComment": true,
     "extraPreconnects": [],
     "mathjaxConfig": null,
     "headStyle": null,
     "headStyleAfterMathjax": null,
-    "mathjax": "with-id",
     "jsonldBeforeIcons": [
       {
         "@context": "https://schema.org",

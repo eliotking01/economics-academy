@@ -395,6 +395,19 @@ NOTES_HEAD_LABELS_LIVE = ("mathjax with id", "no mathjax")
 NOTES_HEAD_LABELS_ZERO = ("mathjax with id + a <style> block",
                           "mathjax without id")
 
+# Since the performance pass of 2026-08-23 the split between the two live
+# labels is not a free cardinality either: build_notes_pages.py loads MathJax
+# if and only if the body contains one of the three delimiters the config
+# typesets, and this is the independent restatement of that rule. The
+# pattern is written out here rather than imported from the generator for the
+# same reason check 2 restates the script tail - a check that imports the
+# thing it is checking agrees with any value. A page loading MathJax with no
+# maths wastes ~300 KB of third-party script; a page with maths and no
+# MathJax shows raw TeX. Both fail. The preconnect to the CDN goes with the
+# script: present on exactly the pages that load it.
+MATHS_DELIMITER = re.compile(r"\\\(|\\\[|\$\$")
+MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
+
 # The content spine is the ordered list of direct children of
 # div.notes-container, with runs of identical siblings collapsed - because
 # "six sections here and four there" is content length, not structural drift.
@@ -975,6 +988,37 @@ def main() -> int:
     else:
         split = ", ".join(f"{labels.get(l, 0)} {l}" for l in NOTES_HEAD_LABELS_LIVE)
         r.ok(f"{'live labels':36} {live_total:4} pages = all of them ({split})")
+
+    # MathJax if and only if the body has maths, and the CDN preconnect if and
+    # only if MathJax. Decided from the SOURCE, head against body, not from the
+    # parsed token lists: the delimiters are text, which the tokens drop.
+    unneeded, missing, pc_bad = [], [], []
+    for p in nt:
+        head_src, body_src = src[p].split("</head>", 1)
+        has_mj = "mathjax" in head_src.lower()
+        has_maths = bool(MATHS_DELIMITER.search(body_src))
+        has_pc = f'rel="preconnect" href="{MATHJAX_ORIGIN}"' in head_src
+        if has_mj and not has_maths:
+            unneeded.append(p)
+        elif has_maths and not has_mj:
+            missing.append(p)
+        if has_pc != has_mj:
+            pc_bad.append(p)
+    if unneeded:
+        r.bad(f"{len(unneeded)} notes-topic page(s) load MathJax with no maths "
+              f"in the body", *unneeded[:8],
+              "build_notes_pages.py decides from the body; rebuild.")
+    if missing:
+        r.bad(f"{len(missing)} notes-topic page(s) contain maths and do not "
+              f"load MathJax", *missing[:8],
+              "build_notes_pages.py decides from the body; rebuild.")
+    if pc_bad:
+        r.bad(f"{len(pc_bad)} notes-topic page(s) have the cdn.jsdelivr.net "
+              f"preconnect without MathJax, or MathJax without it", *pc_bad[:8])
+    if not (unneeded or missing or pc_bad):
+        n_mj = sum(1 for p in nt if "mathjax" in src[p].split("</head>", 1)[0].lower())
+        r.ok(f"{'mathjax iff maths in body':36} {n_mj:4} pages load it, "
+             f"{len(nt) - n_mj} do not, 0 mismatches; CDN preconnect on the {n_mj}")
 
     # ---------------------------------------------------------- check 6
     r.section("\n=== 6. notes-topic: the content spine ===")

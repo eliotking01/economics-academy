@@ -46,6 +46,12 @@ PAGES = [
     ("past-paper-questions",
      "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/"),
     ("flashcards", "/flashcards/edexcel-a/theme-1/"),
+    # Added 2026-08-23 for the performance pass: the heaviest page on the
+    # site (the Edexcel past-paper-questions board hub, ~800 KB of HTML) and
+    # the one page that loads Calendly. The six above are unchanged, so a
+    # before/after across them stays comparable with every earlier run.
+    ("ppq-board-hub", "/past-paper-questions/edexcel/"),
+    ("tutoring", "/tutoring.html"),
 ]
 
 # Lighthouse 12 defaults to mobile form factor and simulated throttling, but

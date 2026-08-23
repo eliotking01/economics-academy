@@ -24,11 +24,9 @@
     "pageStylesheets": [
       "/css/pages/revision-notes-topics.css"
     ],
-    "mathjaxComment": false,
     "extraPreconnects": [],
     "mathjaxConfig": null,
     "headStyle": null,
-    "mathjax": null,
     "jsonldBeforeIcons": [
       {
         "@context": "https://schema.org",

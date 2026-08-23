@@ -1252,6 +1252,16 @@ D23. `page_shell.MATHJAX_CONFIG_BODY` is the only config and every
 deliberately stays: pairing needs two ADJACENT dollars and there are none
 among the 8 literal `$` on the site, all of which are currency.
 
+> **Amended 2026-08-23, performance pass Phase 1: 59 pages, not 126, and the
+> number is derived.** `build_notes_pages.py` now loads MathJax if and only if
+> the rendered body contains one of the three delimiters, and the stored
+> `head.mathjax` / `mathjaxComment` fields are gone from every record. The 67
+> pages that carried the script with no maths dropped it; the 59 that keep it
+> gained `<link rel="preconnect" href="https://cdn.jsdelivr.net">`.
+> `verify_page_shell.py` check 5 holds the iff in both directions, so cite
+> the script for the count. The one config and the `$$` sentence above are
+> unchanged.
+
 **`verify_page_shell.py` check 5 counts POPULATED labels, not labels.** The
 `<style>` label is held at 0 as a tripwire for a block coming back, and
 counting it would demand a shape that is meant not to exist. Proved live in
