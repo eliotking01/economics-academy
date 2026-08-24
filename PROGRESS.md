@@ -83,18 +83,18 @@ there.
 
 ## Accessibility & progressive enhancement pass (2026-08-24) — IN REVIEW (PR #26, branch `feature/a11y-pe`)
 
-**STATE: PR #26 open, CI green, waiting on Eliot.** Four of five phases are
-complete, one commit each; **Phase 2 (the mobile-nav redesign) is a mock
-only** — `_working/mobile-nav/` (mock page, 360/390 screenshots,
-`PROPOSAL.md` with the mechanism and the six new strings) and nothing has
-touched `templates/header.html`, `nav.js` or the panel. Fixes the remaining
-findings of the August site review; the hub accordions were already done
-(D56) and were not touched.
+**STATE: PR #26 open, CI green, all five phases complete — waiting on
+Eliot's merge.** One commit per phase. Eliot approved the Phase 2 mock
+(`_working/mobile-nav/`, kept as the design record) on 2026-08-24 and the
+implementation landed the same day; he chose to leave the EXAM
+TIP/EVALUATION chip contrast until his notes-page overhaul. Fixes the
+remaining findings of the August site review; the hub accordions were
+already done (D56) and were not touched.
 
 | Phase | What | Commit |
 | --- | --- | --- |
 | 1 | FAQ accordion → native `<details>`/`<summary>`: answers exist with JS off, closed panels out of the tab order, plus-rotates-to-× (no new glyph), fragment-open kept as a JS nudge; `build_search_index.py` FAQ regex re-pointed, index byte-identical; 0 wording changes | `47f73d63` |
-| 2 | Mock + proposal only, pending approval | `559a3fd6` |
+| 2 | Mobile nav redesigned (approved from the `559a3fd6` mock): the baked `#mobileNav` block in the header — a "Menu" details row, complete with JS off, no dead `href="#"` rows — enhanced by `nav.js` into a white drawer moved to body level (the focus trap inerts everything else, so it cannot stay inside `#page-wrapper`); current page baked as `data-mnav-current` by `page_shell._block()`, normalised by `verify_page_shell.py`'s new `MNAV_CURRENT`; `track.js` excludes `#mobileNav` instead of the deleted `#navPanel`; desktop `#nav` untouched; 190 Text-Change trailers | `6c7a902f` |
 | 3 | Flashcards: question is the accessible name (aria-label removed, describedby hint), answer announced at flip time via role=status, shortcut keys scoped to the player, keyboard hint hidden on touch-only, failed fetch shows a message (string pending approval); GA4 + Leitner untouched | `a9b5f632` |
 | 4 | Contrast: #4caf50→#2e7d32 (text and the four white-text badges), #888/#999/#777→#6b6b6b, notes `--exam-green-text #1c7a42` / `--evaluation-orange-text #c25e00`; teal labels were already #1f6b77 (D58); NEW `scripts/verify_contrast.py` in CI pinning 24 declared pairs; EXAM TIP/EVALUATION chips flagged, not changed — Eliot's call | `d70900b6` |
 | 5 | Reduced motion (smooth scroll gated; global near-zero reduce block; nav still functions) and site-wide print (chrome hidden, black on white, external URLs printed; quiz model answers forced open in print via ::details-content + quiz.js beforeprint; DO-NOT-BREAK's "print deliberately partial" entry overridden on Eliot's instruction, amended in the commit) | `6394d5c2` |
