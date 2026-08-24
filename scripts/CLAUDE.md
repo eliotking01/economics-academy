@@ -99,7 +99,7 @@ verify_notes_sequence
 verify_past_paper_tags  verify_diagram_geometry  check_glossary_capitalisation
 verify_text_integrity <base>  verify_markup_integrity <base> --strict
 build_sitemap.py --check  strip_source_attributions
-node test_question_search.js  node test_glossary_filter.js
+node test_question_search.js  node test_glossary_filter.js  node test_site_search.js
 ```
 
 `test_compare_trees.py` (~2m30s) runs in its own workflow,

@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Site-wide search — header box + overlay, all 463 pages | on branch `feature/site-search`, PR open | — | — |
 | Topic-page tail redesign — the 166 notes pages | on branch `feature/topic-tail`, PR open | — | — |
 | Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
 | Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
@@ -79,6 +80,54 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## Site-wide search — header box + overlay (2026-08-24) — ON BRANCH, PR open
+
+**STATE: PR open on `feature/site-search`; not merged.** Eliot approved the
+design and every string from a working mock (`_working/site-search/`, on the
+branch, with `PROPOSAL.md` as the wording record) after two revisions of his:
+the visible pink "Search…" box (top-right on desktop, above the title on
+mobile) and the visible Cancel in the overlay. `docs/audit/DECISIONS.md` D59.
+Update this heading to LIVE with the merge commit when it lands.
+
+**What it is.** Every page's baked header carries a search box that opens a
+full overlay: results on every keystroke (80 ms debounce), grouped Revision
+notes → Glossary → Practice & flashcards → Pages, matched substrings
+highlighted, a floated definition card when the query IS a glossary term,
+quick links whenever there is nothing to show, `/` to open, arrows/Enter/Esc,
+focus trapped and returned. The payload is `/search-index.json` — generated,
+112.9 KB raw / 31.3 KB gzipped, fetched once on first open, never on page
+load. With scripting off the box is a real link to `/revision-notes/`.
+
+| Changed | Where |
+| --- | --- |
+| The 9th generator: topics + headings, glossary defs (`ld_description`), decks, pages + FAQ anchors, curated synonyms | `scripts/build_search_index.py`, wired last in `scripts/site_layout.py` |
+| The overlay component (matcher follows `question-search.js`; stopwords; fuzzy only as a second pass) | `js/components/site-search.js` |
+| The baked control (an `<a>`, no dead control without JS) | `templates/header.html`, all 463 pages |
+| `SCRIPT_TAIL` four → five, in both declarations | `scripts/page_shell.py`, `scripts/verify_page_shell.py` |
+| The `.site-search` block at the end (Cancel counter-declares `!important` against the global button rule — the `.consent-button` precedent) | `css/main.css` |
+| `search` GA4 event on result choice (consent-gated no-op); pointer in track.js's header | `js/components/site-search.js`, `js/components/track.js` |
+| No-dangling-results + size-budget tests; the sliced-component node test, in CI | `scripts/tests/test_build_search_index.py`, `scripts/test_site_search.js`, `.github/workflows/verify.yml` |
+| `search-index.json` noted beside the other runtime-fetched JSON | `_config.yml` |
+| D59; generator counts | `docs/audit/DECISIONS.md`, `CLAUDE.md`, `scripts/CLAUDE.md` |
+
+### Three things a future session needs to know
+
+1. **The index schema is declared twice on purpose** — built in
+   `build_search_index.py`, expanded in `site-search.js` — and
+   `scripts/test_site_search.js` is what holds them together: it slices the
+   DOM-free half out of the shipped component and runs the real committed
+   `search-index.json` through it, so a schema change that edits only one
+   side fails CI.
+2. **The generator runs LAST of the content generators** because it reads
+   `<h1>`s from pages the other generators write earlier in the same build
+   (the sitemap's own contract). Moving it earlier in
+   `site_layout.CONTENT_GENERATORS` would silently index the previous
+   build's titles.
+3. **"Search…" is visible baked text on all 463 pages**, declared with 190
+   `Text-Change:` trailers on the implementation commit. Any future header
+   wording change repeats that, and the mobile header is ~3em taller to fit
+   the in-flow box — baked from first paint, so no CLS.
 
 ## Topic-page tail redesign — the 166 notes pages (2026-08-23) — ON BRANCH, PR open
 

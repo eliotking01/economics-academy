@@ -2054,3 +2054,35 @@ stays in the stylesheet for the two diagram galleries and macro-application.
 `.topic-contents__label`, `.topic-nav__caption`) moved `#2a8998` → `#1f6b77`
 for AA (4.09:1 → 6.1:1). A comment in `notes_extras.tail_blocks()` marks
 where a newsletter form would go; nothing is built there.
+
+
+### D59 — the site gains one search, and the exam-question bank keeps its own
+
+**2026-08-24, Eliot, from a working mock** (`_working/site-search/`, on the
+branch: the mock page, both-width screenshots of every state, and
+`PROPOSAL.md` with each string and synonym). Approved as mocked after two
+revisions of his: the header control is a visible pink search box — magnifier
+plus "Search…", top-right on desktop, centred above the site title on mobile
+— and the overlay closes from a visible Cancel button, because Esc and a
+clickable backdrop do not exist on a phone.
+
+What is ratified with it:
+
+- **`/search-index.json` lives at the repo root**, the `sitemap.xml` profile:
+  generated (`scripts/build_search_index.py`, ninth generator, last of the
+  content generators because it reads the pages the others write), fetched at
+  runtime, not a page, permanently published.
+- **The individual past-paper exam questions are not in the site search.**
+  The bank keeps its purpose-built finder; a topic that has a bank page gets
+  that page as a result row like any other.
+- **Glossary text in the index is the glossary page's own wording** —
+  `build_glossary.ld_description()`, curation applied — and a term on both
+  boards shows the Edexcel wording with links to both anchors.
+- **Typo tolerance is a second pass**, run only when the strict pass finds
+  nothing. Measured on the mock: with fuzzy always on, "marking" ranked
+  fuzzy "Making" notes above `marking.html` itself.
+- **The script tail is five** (`site-search.js` after `consent.js`), moved in
+  `page_shell.SCRIPT_TAIL` and `verify_page_shell.py`'s independent literal
+  in the same commit, per the standing two-file rule.
+- **"Search…" is baked visible text on all 463 pages** — the implementation
+  commit carries the 190 `Text-Change:` trailers.
