@@ -54,17 +54,24 @@ a published file, so it will be listed with the runtime-fetched JSON in
 
 ## Decisions taken in this mock (flag anything you'd change)
 
-1. **No dead control without JavaScript**: the baked header control is an
-   `<a href="/revision-notes/">` with the magnifier icon — a real
-   destination with scripting off — and the script upgrades it to open the
-   overlay. (The alternative was an icon that only exists when JS runs.)
-2. **The magnifier is already in the Font Awesome subset** (`fa-search`,
+1. **The header control is a visible search box, not a bare icon** —
+   Eliot's call, 2026-08-24: a pink pill (magnifier + "Search…") centred
+   above the site title, in the brand palette (`#fdf6f8` fill, `#f3c6d1`
+   border, `#b01d3c` text, `#d52349` icon). On desktop it floats in the
+   header's existing 5em top padding, so nothing moves; below 768px it
+   sits in normal flow above the title and the header grows ~3em to fit —
+   baked markup, there from first paint, so no layout shift.
+2. **No dead control without JavaScript**: that control is an
+   `<a href="/revision-notes/">` — a real destination with scripting
+   off — and the script upgrades it to open the overlay. (The alternative
+   was a box that only exists when JS runs.)
+3. **The magnifier is already in the Font Awesome subset** (`fa-search`,
    used by the FAQ's own search box), so no subsetter re-run is needed.
-3. **On phones** the overlay is full-screen, the input is over 16px (no iOS
+4. **On phones** the overlay is full-screen, the input is over 16px (no iOS
    zoom), and the search bar stays pinned while results scroll. The fixed
    mobile title bar (the hamburger bar) gains a search button too, added by
    the script beside the existing toggle.
-4. **Ranking**: groups in a fixed order — Revision notes → Glossary →
+5. **Ranking**: groups in a fixed order — Revision notes → Glossary →
    Practice & flashcards → Pages — capped at 6/5/5/4 rows. Within a group:
    title word-match beats title substring beats everything else; exact
    title match gets a large bonus; ties break by shorter title. Typo
@@ -72,16 +79,16 @@ a published file, so it will be listed with the runtime-fetched JSON in
    and only runs when an exact pass finds nothing (otherwise "marking"
    would surface fuzzy "Making" pages above the marking page — caught in
    this mock, screenshot on file).
-5. **Stopwords**: how/much/is/the/… are dropped from a query unless the
+6. **Stopwords**: how/much/is/the/… are dropped from a query unless the
    whole query is stopwords, so "how much is marking" searches "marking".
-6. **A query that IS a glossary term** floats that one definition card to
+7. **A query that IS a glossary term** floats that one definition card to
    the very top with the definition shown whole — the group itself is not
    promoted. Keyboard Enter on the card goes to the first board's glossary
    anchor; the card also carries a link per board.
-7. **GA4**: one standard `search` event with `search_term`, fired when a
+8. **GA4**: one standard `search` event with `search_term`, fired when a
    result is chosen (not per keystroke), only if `gtag` exists — the same
    consent-gated no-op pattern as `track.js`.
-8. **Accessibility**: `role="dialog"` + `aria-modal`, labelled input
+9. **Accessibility**: `role="dialog"` + `aria-modal`, labelled input
    (combobox pattern, `aria-activedescendant`), arrow keys move, Enter
    opens, Esc closes, backdrop click closes, focus trapped inside and
    returned to the opener on close, `prefers-reduced-motion` honoured (the
@@ -89,12 +96,14 @@ a published file, so it will be listed with the runtime-fetched JSON in
 
 ## Every new string (the approval list)
 
-None of these is baked into a page — all are rendered by the script, so no
-`Text-Change:` trailers are expected (the header gains an icon with an
-aria-label, no visible text; `verify_text_integrity.py` will be the judge).
+One string is baked into every page's header — the visible "Search…" on
+the new control — so the rebuild commit will carry the `Text-Change:`
+trailers `verify_text_integrity.py` asks for. Everything else is rendered
+by the script.
 
 | Where | String |
 | --- | --- |
+| The header search box (visible, on all 463 pages) | "Search…" |
 | Header link, title-bar button, dialog, input (aria-labels) | "Search this site" |
 | Input placeholder | "Search topics, definitions, resources…" |
 | Close button (aria-label; shows ×) | "Close search" |

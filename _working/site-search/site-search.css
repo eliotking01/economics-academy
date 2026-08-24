@@ -8,28 +8,46 @@
 
 /* The baked <a> in templates/header.html. With scripting off it is a real
    link to /revision-notes/; site-search.js upgrades it to open the overlay.
-   Positioned against #header, which is already position: relative. */
+   Drawn as a search box, centred above the site title, in the brand pink -
+   Eliot's call, 2026-08-24. Positioned against #header, which is already
+   position: relative; the header's existing 5em top padding is the space
+   it sits in, so no page content moves. */
 .site-search-open {
   position: absolute;
-  right: 1.1em;
-  bottom: 1.05em;
-  display: inline-block;
-  padding: 0.55em 0.8em;
-  border-radius: 4px;
-  border: 0;
-  background: transparent;
-  color: #4a4a4a;
-  font-size: 1em;
+  top: 1.15em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  width: 16em;
+  max-width: calc(100% - 2em);
+  padding: 0.55em 1.1em;
+  border-radius: 999px;
+  border: solid 1px #f3c6d1;
+  background: #fdf6f8;
+  color: #b01d3c;
+  font-size: 0.95em;
+  font-weight: 600;
   line-height: 1;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.site-search-open .icon {
+  color: #d52349;
+}
+
+.site-search-open__label {
+  flex: 1;
+  text-align: left;
 }
 
 .site-search-open:hover,
 .site-search-open:active {
   background: #fbe9ed;
-  color: #b01d3c;
+  border-color: #d52349;
 }
 
 .site-search-open:focus-visible {
@@ -38,12 +56,16 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* The nav is the mobile panel below 768px; the header is a compact
-     centred banner, and the magnifier sits in its top-right corner. */
+  /* The header is a compact centred banner below 768px with only 2em of
+     top padding - no room to float in. The control is first in the header
+     markup, so in normal flow it sits centred above the site title and the
+     header grows to fit it. Baked markup, so it is there from first paint:
+     no layout shift. */
   .site-search-open {
-    top: 0.85em;
-    right: 0.85em;
-    bottom: auto;
+    position: static;
+    transform: none;
+    margin: 0 auto 1.3em;
+    width: 13em;
   }
 }
 

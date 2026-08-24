@@ -17,6 +17,21 @@
     <div id="page-wrapper">
       <a href="#main" class="skip-to-content">Skip to main content</a>
       <header id="header">
+        <!-- THE NEW CONTROL. In templates/header.html this is baked into all
+             463 pages: an <a> to /revision-notes/ (a real destination with
+             scripting off) that site-search.js upgrades into the overlay
+             opener. Icon fa-search is already in the shipped subset.
+             First in the header so that on mobile, where it sits in normal
+             flow, it renders above the site title. On desktop it is lifted
+             into the header's top padding. -->
+        <a
+          class="site-search-open"
+          href="/revision-notes/"
+          aria-label="Search this site"
+        >
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
         <p class="site-title"><a href="/">Economics Academy</a></p>
         <p>The Home of A-Level Economics.</p>
 
@@ -40,17 +55,6 @@
           </ul>
         </nav>
 
-        <!-- THE NEW CONTROL. In templates/header.html this is baked into all
-             463 pages: an <a> to /revision-notes/ (a real destination with
-             scripting off) that site-search.js upgrades into the overlay
-             opener. Icon fa-search is already in the shipped subset. -->
-        <a
-          class="site-search-open"
-          href="/revision-notes/"
-          aria-label="Search this site"
-        >
-          <span class="icon solid fa-search" aria-hidden="true"></span>
-        </a>
       </header>
 
       <main id="main">
