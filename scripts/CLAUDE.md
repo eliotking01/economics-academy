@@ -3,7 +3,7 @@
 Excluded from publishing. **Python standard library only** — everything CI runs
 must stay that way.
 
-## The eight generators
+## The nine generators
 
 Each owns its output. Never hand-edit what a generator writes; edit the source
 and re-run. **`python3 scripts/build.py` runs them all, in order, then bakes
@@ -11,8 +11,8 @@ the 17 hand-written pages and runs `verify_page_shell.py`**; `build.py
 --sitemap` runs the sitemap afterwards, once the content is committed. The
 list and its order are declared once, in `site_layout.py`, which both
 `build.py` and `verify_generated.py` import — never restate it. The table
-below is a description, not a recipe. `verify_generated.py` re-runs all
-eight in a throwaway worktree and diffs against the committed tree, so drift
+below is a description, not a recipe. `verify_generated.py` re-runs the
+lot in a throwaway worktree and diffs against the committed tree, so drift
 cannot ship.
 
 Three generators format their output with Prettier. The call and the pinned
@@ -27,6 +27,7 @@ message instead of writing unformatted pages and warning.
 | `build_past_paper_questions.py` | `past-paper-questions-data/` → `past-paper-questions/` + every `questions.json` |
 | `build_glossary.py` | `glossary-data/` → the 3 glossary pages |
 | `build_flashcards.py` | `flashcards-data/` → `flashcards/` + `flashcards/data/*.json` |
+| `build_search_index.py` | the data dirs + the built pages' own `<h1>`/`<h2>`s → `search-index.json` (the site-search payload; runs last of the content generators) |
 | `build_past_paper_taxonomy.py` | the Edexcel topic records → `taxonomy.json` |
 | `extract_glossary.py` | the notes pages → `glossary-data/terms.json` |
 | `build_sitemap.py` | the filesystem → `sitemap.xml` + `sitemaps/*.xml` |
@@ -98,7 +99,7 @@ verify_notes_sequence
 verify_past_paper_tags  verify_diagram_geometry  check_glossary_capitalisation
 verify_text_integrity <base>  verify_markup_integrity <base> --strict
 build_sitemap.py --check  strip_source_attributions
-node test_question_search.js  node test_glossary_filter.js
+node test_question_search.js  node test_glossary_filter.js  node test_site_search.js
 ```
 
 `test_compare_trees.py` (~2m30s) runs in its own workflow,

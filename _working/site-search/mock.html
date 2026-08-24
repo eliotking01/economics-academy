@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Site search — mock (not published)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <!-- The real stylesheets, root-absolute, so the mock is pixel-honest.
+         Serve the repo root (Live Server or python3 -m http.server) and open
+         /_working/site-search/mock.html. ?q=<query> auto-opens the overlay
+         with that query typed, for screenshots. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/_working/site-search/site-search.css" />
+  </head>
+  <body data-search-index="/_working/site-search/search-index.json">
+    <div id="page-wrapper">
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <header id="header">
+        <!-- THE NEW CONTROL. In templates/header.html this is baked into all
+             463 pages: an <a> to /revision-notes/ (a real destination with
+             scripting off) that site-search.js upgrades into the overlay
+             opener. Icon fa-search is already in the shipped subset.
+             First in the header so that on mobile, where it sits in normal
+             flow, it renders above the site title. On desktop it is lifted
+             into the header's top padding. -->
+        <a
+          class="site-search-open"
+          href="/revision-notes/"
+          aria-label="Search this site"
+        >
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+            </li>
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+      </header>
+
+      <main id="main">
+        <div class="container">
+          <header class="major">
+            <h1>Free A-Level Economics Revision Notes</h1>
+          </header>
+          <p>
+            Mock body: stands in for any of the 463 pages so the dimmed
+            backdrop reads correctly. The overlay above is the feature being
+            proposed. Press <strong>/</strong> anywhere, or click the
+            magnifier in the header, then type — results refresh on every
+            keystroke.
+          </p>
+          <p>
+            Try: <em>monopsony</em> (glossary definition floats to the top),
+            <em>theme 2 flashcards</em>, <em>how much is marking</em>,
+            <em>elasticity</em>, <em>monetry policy</em> (typo), or clear the
+            box to see the quick links.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script src="/_working/site-search/site-search.js"></script>
+    <script>
+      // Mock-only driver: ?q= opens the overlay pre-filled (screenshots).
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var q = params.get("q");
+        if (q === null) return;
+        var style = document.createElement("style");
+        style.textContent =
+          "* { animation: none !important; transition: none !important; }";
+        document.head.appendChild(style);
+        window.__siteSearch.open(null);
+        var input = document.querySelector(".site-search__input");
+        input.value = q;
+        window.__siteSearch.run();
+      })();
+    </script>
+  </body>
+</html>

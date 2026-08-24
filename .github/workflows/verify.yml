@@ -180,6 +180,8 @@ jobs:
         run: node scripts/test_question_search.js
       - name: Glossary filter component
         run: node scripts/test_glossary_filter.js
+      - name: Site search component
+        run: node scripts/test_site_search.js
 
       # Economics prose is never altered by a formatting or structural change.
       # These two are what make that claim checkable rather than asserted.

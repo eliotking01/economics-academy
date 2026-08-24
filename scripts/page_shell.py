@@ -501,10 +501,15 @@ MATHJAX_CONFIG_BODY = '''    <script>
 # fine". After track.js so that, on the page where consent is given, gtag is
 # defined before any later event fires; before main.js like the others.
 
+# 2026-08-24, four to five: js/components/site-search.js, the site-wide
+# search overlay behind the header's baked search box. On every page because
+# the box is. After nav.js, which builds the mobile #titleBar it adds its
+# search button to; before main.js like the others.
 SCRIPT_TAIL = (
     "/js/components/nav.js",
     "/js/components/track.js",
     "/js/components/consent.js",
+    "/js/components/site-search.js",
     "/js/main.js",
 )
 

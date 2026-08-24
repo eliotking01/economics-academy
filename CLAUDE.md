@@ -23,8 +23,8 @@ computes it rather than trusting a number written down.
    bank reproduces real questions verbatim and is a separate thing; the two
    never share a data path. Never copy or paraphrase a real exam question into
    `questions-data/`.
-5. **Never hand-edit a generated file.** Eight generators own 446 of the 463
-   published pages plus every sitemap. Edit the source and re-run.
+5. **Never hand-edit a generated file.** Nine generators own 446 of the 463
+   published pages, every sitemap and `/search-index.json`. Edit the source and re-run.
    `python3 scripts/verify_generated.py` names them and proves the tree matches.
    The 17 hand-written pages are listed by `python3 scripts/bake_templates.py`.
 6. **Never bulk-rewrite prose with a script.** Scripted paragraph rebuilds have

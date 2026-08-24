@@ -50,6 +50,11 @@
  *                      event that says which free resource sends people to
  *                      the paid pages.
  *
+ * One custom event lives elsewhere: `search` (standard GA4 name, with
+ * search_term and page_path) is fired by js/components/site-search.js when a
+ * search result is chosen - never per keystroke - through the same
+ * no-op-without-gtag guard. 2026-08-24.
+ *
  * Every event also carries page_path (location.pathname). Nothing personal is
  * ever sent: no names, emails, messages or form fields.
  *

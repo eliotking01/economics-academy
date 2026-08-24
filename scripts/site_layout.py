@@ -45,6 +45,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # build_notes_pages.py goes first because nothing depends on it and everything
 # that enumerates the filesystem afterwards has to see what it wrote. It globs
 # notes-data/, so a new board directory needs no edit here.
+# build_search_index.py is LAST of the content generators for the mirror
+# reason: it reads titles from pages the generators before it write.
 CONTENT_GENERATORS = (
     "build_notes_pages.py",
     "build_past_paper_taxonomy.py",
@@ -53,6 +55,7 @@ CONTENT_GENERATORS = (
     "extract_glossary.py",
     "build_glossary.py",
     "build_flashcards.py",
+    "build_search_index.py",
 )
 
 # The sitemap is a generator too, and it is LAST - it enumerates the filesystem
