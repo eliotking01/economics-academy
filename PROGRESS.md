@@ -81,6 +81,30 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
+## Accessibility & progressive enhancement pass (2026-08-24) — IN REVIEW (PR #26, branch `feature/a11y-pe`)
+
+**STATE: PR #26 open, CI green, waiting on Eliot.** Four of five phases are
+complete, one commit each; **Phase 2 (the mobile-nav redesign) is a mock
+only** — `_working/mobile-nav/` (mock page, 360/390 screenshots,
+`PROPOSAL.md` with the mechanism and the six new strings) and nothing has
+touched `templates/header.html`, `nav.js` or the panel. Fixes the remaining
+findings of the August site review; the hub accordions were already done
+(D56) and were not touched.
+
+| Phase | What | Commit |
+| --- | --- | --- |
+| 1 | FAQ accordion → native `<details>`/`<summary>`: answers exist with JS off, closed panels out of the tab order, plus-rotates-to-× (no new glyph), fragment-open kept as a JS nudge; `build_search_index.py` FAQ regex re-pointed, index byte-identical; 0 wording changes | `47f73d63` |
+| 2 | Mock + proposal only, pending approval | `559a3fd6` |
+| 3 | Flashcards: question is the accessible name (aria-label removed, describedby hint), answer announced at flip time via role=status, shortcut keys scoped to the player, keyboard hint hidden on touch-only, failed fetch shows a message (string pending approval); GA4 + Leitner untouched | `a9b5f632` |
+| 4 | Contrast: #4caf50→#2e7d32 (text and the four white-text badges), #888/#999/#777→#6b6b6b, notes `--exam-green-text #1c7a42` / `--evaluation-orange-text #c25e00`; teal labels were already #1f6b77 (D58); NEW `scripts/verify_contrast.py` in CI pinning 24 declared pairs; EXAM TIP/EVALUATION chips flagged, not changed — Eliot's call | `d70900b6` |
+| 5 | Reduced motion (smooth scroll gated; global near-zero reduce block; nav still functions) and site-wide print (chrome hidden, black on white, external URLs printed; quiz model answers forced open in print via ::details-content + quiz.js beforeprint; DO-NOT-BREAK's "print deliberately partial" entry overridden on Eliot's instruction, amended in the commit) | `6394d5c2` |
+
+Evidence (screenshots, print PDFs) in `05-website/a11y-pe-2026-08-24/`,
+outside the repo. Merge with a merge commit. After Phase 2 is approved the
+implementation lands on the same branch: template edit → `build.py` →
+`bake_templates.py --apply` → reseeded `verify_page_shell.py` pins →
+trailers → sitemap.
+
 ## Site-wide search — header box + overlay (2026-08-24) — LIVE (merged 2026-08-24, `8b329f1e`, PR #24)
 
 **STATE: live.** Eliot merged PR #24 on 2026-08-24; the deploy succeeded and
