@@ -163,10 +163,14 @@ def case_list():
                  "to the published surface - which is the rule DO-NOT-BREAK sets"),
 
         # ---- 2  visible text ----------------------------------------------
+        # Re-pointed 2026-08-24: the topic-tail redesign (D58) removed the
+        # "Ready to apply these notes?" strap this used to edit. Now one word
+        # of the page's own prose - the mutation class is unchanged.
         dict(name="a2-word-changed", only="2", expect="FAIL",
              mutate=lambda o, n, t: edit(
-                 n, NOTES, "Ready to apply these notes?",
-                 "Ready to apply these note?"),
+                 n, NOTES,
+                 "scientific methods to study human behaviour and societies,",
+                 "scientific method to study human behaviour and societies,"),
              why="one word of prose is the thing this whole wave may not touch"),
         dict(name="a2-alt-invisible", only="2", expect="PASS",
              mutate=lambda o, n, t: edit(
@@ -193,18 +197,21 @@ def case_list():
              why="proves the hole assertion 3 fills is a real one"),
 
         # ---- 4  markup -----------------------------------------------------
+        # The a4 trio re-pointed 2026-08-24, same reason as a2 above: the
+        # old tail's marking BUTTON is gone, and the new tail's services
+        # sentence carries a marking ANCHOR - the identical failure mode.
         dict(name="a4-anchor-stripped", only="4", expect="FAIL",
              mutate=lambda o, n, t: edit(
                  n, NOTES,
-                 '<a href="/marking.html" class="button alt">Get Essays Marked</a>',
-                 "Get Essays Marked"),
+                 '<a href="/marking.html">A-Level Economics essay marking</a>',
+                 "A-Level Economics essay marking"),
              why="CLAUDE.md's recorded failure mode: a scripted rewrite that "
                  "destroys an <a> and changes not one character of visible text"),
         dict(name="a4-anchor-invisible-to-2", only="2", expect="PASS",
              mutate=lambda o, n, t: edit(
                  n, NOTES,
-                 '<a href="/marking.html" class="button alt">Get Essays Marked</a>',
-                 "Get Essays Marked"),
+                 '<a href="/marking.html">A-Level Economics essay marking</a>',
+                 "A-Level Economics essay marking"),
              why="the same edit, and assertion 2 sees nothing at all"),
         dict(name="a4-spec-alert-factored-out", only="4", expect="FAIL",
              mutate=lambda o, n, t: edit(
@@ -275,9 +282,11 @@ def case_list():
                  "that target, so removing this one cannot trip the orphan "
                  "limit instead and pass for the wrong reason"),
         dict(name="a7-broken-target", only="7", expect="FAIL",
+             # Splice point re-pointed 2026-08-24 (D58): the notes-cta div
+             # left the topic pages; the services paragraph is its heir.
              mutate=lambda o, n, t: edit(
-                 n, NOTES, '<div class="notes-cta">',
-                 '<div class="notes-cta"><a href="/no-such-page.html">x</a>'),
+                 n, NOTES, '<p class="topic-services">',
+                 '<p class="topic-services"><a href="/no-such-page.html">x</a>'),
              why="an added link is allowed; an added link to nothing is not"),
         dict(name="a7-orphan-limit", only="7", expect="FAIL",
              mutate=lambda o, n, t: copy_page(
@@ -357,8 +366,8 @@ def case_list():
              args=["--max-report", "0"],
              mutate=lambda o, n, t: edit(
                  n, NOTES,
-                 '<a href="/marking.html" class="button alt">Get Essays Marked</a>',
-                 "Get Essays Marked"),
+                 '<a href="/marking.html">A-Level Economics essay marking</a>',
+                 "A-Level Economics essay marking"),
              why="a4 at cap 0"),
         dict(name="cap0-a6-still-fails", only="6", expect="FAIL",
              args=["--max-report", "0"],
