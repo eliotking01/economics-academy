@@ -55,12 +55,17 @@ a published file, so it will be listed with the runtime-fetched JSON in
 ## Decisions taken in this mock (flag anything you'd change)
 
 1. **The header control is a visible search box, not a bare icon** —
-   Eliot's call, 2026-08-24: a pink pill (magnifier + "Search…") centred
-   above the site title, in the brand palette (`#fdf6f8` fill, `#f3c6d1`
-   border, `#b01d3c` text, `#d52349` icon). On desktop it floats in the
+   Eliot's calls, 2026-08-24: a pink pill (magnifier + "Search…") in the
+   brand palette (`#fdf6f8` fill, `#f3c6d1` border, `#b01d3c` text,
+   `#d52349` icon). On desktop it sits top-right, floating in the
    header's existing 5em top padding, so nothing moves; below 768px it
-   sits in normal flow above the title and the header grows ~3em to fit —
-   baked markup, there from first paint, so no layout shift.
+   sits in normal flow centred above the site title and the header grows
+   ~3em to fit — baked markup, there from first paint, so no layout
+   shift. Closing the overlay is a visible "Cancel" button in the search
+   bar (Esc and the clickable backdrop do not exist on a phone; the
+   first cut's small × also rendered invisible, because main.css's
+   global `button` rule paints button text white — countered the same
+   way `.consent-button` does).
 2. **No dead control without JavaScript**: that control is an
    `<a href="/revision-notes/">` — a real destination with scripting
    off — and the script upgrades it to open the overlay. (The alternative
@@ -106,7 +111,7 @@ by the script.
 | The header search box (visible, on all 463 pages) | "Search…" |
 | Header link, title-bar button, dialog, input (aria-labels) | "Search this site" |
 | Input placeholder | "Search topics, definitions, resources…" |
-| Close button (aria-label; shows ×) | "Close search" |
+| Close button (visible, in the overlay bar) | "Cancel" |
 | Group headings | "Revision notes" · "Glossary" · "Practice & flashcards" · "Pages" |
 | Result meta labels | "Practice questions" · "Past paper questions" · "Flashcards" · "Glossary" · "Formula" · "FAQ" · "Tutoring" · "Marking" · "Contact" · "About" · "Privacy" · "Revision notes" · "Diagram gallery" · "Past papers" · "Economics Academy" |
 | Empty state | "Try a topic, a term, or a page — or jump straight in:" |

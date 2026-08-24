@@ -358,8 +358,7 @@
       ' autocomplete="off" autocorrect="off" autocapitalize="off"' +
       ' spellcheck="false" enterkeyhint="go"' +
       ' placeholder="Search topics, definitions, resources…">' +
-      '<button type="button" class="site-search__close"' +
-      ' aria-label="Close search">&#215;</button>' +
+      '<button type="button" class="site-search__close">Cancel</button>' +
       "</div>" +
       '<div class="site-search__status" role="status"></div>' +
       '<div class="site-search__results" id="site-search-results"' +

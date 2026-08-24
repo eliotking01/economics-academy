@@ -8,15 +8,14 @@
 
 /* The baked <a> in templates/header.html. With scripting off it is a real
    link to /revision-notes/; site-search.js upgrades it to open the overlay.
-   Drawn as a search box, centred above the site title, in the brand pink -
-   Eliot's call, 2026-08-24. Positioned against #header, which is already
-   position: relative; the header's existing 5em top padding is the space
-   it sits in, so no page content moves. */
+   Drawn as a search box in the brand pink, top-right of the header on
+   desktop - Eliot's calls, 2026-08-24. Positioned against #header, which
+   is already position: relative; the header's existing 5em top padding is
+   the space it sits in, so no page content moves. */
 .site-search-open {
   position: absolute;
   top: 1.15em;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 1.25em;
   display: inline-flex;
   align-items: center;
   gap: 0.55em;
@@ -63,7 +62,6 @@
      no layout shift. */
   .site-search-open {
     position: static;
-    transform: none;
     margin: 0 auto 1.3em;
     width: 13em;
   }
@@ -163,21 +161,30 @@
   border-radius: 4px;
 }
 
+/* A visible "Cancel", not an x: Esc and the clickable backdrop do not
+   exist on a phone, and a small glyph was too easy to miss. 44px tall,
+   so it is a comfortable tap target.
+
+   color needs !important because main.css's global `button` rule declares
+   `color: #fff !important` - without it the label renders white on white
+   and the button disappears, which is exactly how the mock's first close
+   button vanished. Same counter-declaration the .consent-button block
+   already uses. */
 .site-search__close {
   border: 0;
   background: transparent;
-  color: #4a4a4a;
-  font-size: 1.5em;
+  color: #b01d3c !important;
+  font-size: 0.95em;
+  font-weight: 600;
   line-height: 1;
-  width: 1.8em;
-  height: 1.8em;
+  min-height: 44px;
+  padding: 0 0.9em;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .site-search__close:hover {
   background: #fbe9ed;
-  color: #b01d3c;
 }
 
 .site-search__close:focus-visible {
