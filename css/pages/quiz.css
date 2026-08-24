@@ -637,3 +637,45 @@
     transition: none;
   }
 }
+
+/* --------------------------------------------------------------- print
+   2026-08-24 accessibility pass. The site-wide block at the end of
+   css/main.css already strips the chrome and every button; this adds the
+   one thing that makes a printed question set worth having: the model
+   answers, which live in closed <details> and would otherwise not print.
+
+   ::details-content is how Chrome and Firefox render a closed details'
+   hidden contents (content-visibility on the pseudo); overriding it here
+   prints the answers even with JavaScript off. quiz.js also opens every
+   .quiz-model on beforeprint (and restores after) for engines without
+   the pseudo. */
+
+@media print {
+  .quiz-page .quiz-dashboard,
+  .quiz-page .quiz-summary {
+    display: none !important;
+  }
+
+  .quiz-page .quiz-model {
+    display: block;
+  }
+
+  .quiz-page .quiz-model summary {
+    display: none;
+  }
+
+  .quiz-page .quiz-model::details-content {
+    content-visibility: visible !important;
+    display: block !important;
+  }
+
+  .quiz-page .quiz-model-body {
+    display: block !important;
+  }
+
+  /* Keep a question, its options and its answer together where a page
+     break allows. */
+  .quiz-page .quiz-item {
+    break-inside: avoid;
+  }
+}

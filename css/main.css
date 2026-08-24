@@ -167,7 +167,15 @@ textarea {
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+}
+
+/* Smooth scrolling is motion: only for visitors who have not asked the OS
+   for reduced motion. The site-wide reduce block at the end of this file
+   is the other half. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Skip-to-content link (accessibility) */
@@ -4625,5 +4633,70 @@ nav.breadcrumb .separator {
   .site-search-open,
   .site-search__option {
     transition: none;
+  }
+}
+
+/* ==========================================================================
+   Reduced motion, site-wide — 2026-08-24 accessibility pass.
+
+   Every transition and animation on the site is decorative: nothing in js/
+   listens for transitionend or animationend, so collapsing durations to
+   near-zero (not zero - a 0s transition never fires events at all, and
+   near-zero keeps that contract if a listener is ever added) changes no
+   behaviour. The nav panel, the consent bar and the flashcard flip still
+   open, close and flip - they just do it at once. scroll-behavior: auto
+   undoes the smooth scrolling declared (gated) near the top of this file.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Print, site-wide — 2026-08-24 accessibility pass.
+
+   Until this block only the notes, glossary and flashcards sheets had print
+   styles, so ~290 pages printed with the full navigation, hero buttons and
+   footer. This hides the chrome everywhere and prints black on white; the
+   three page sheets above keep their own, more specific print rules on top
+   of it, and quiz.css adds the practice-question rules (model answers
+   forced open).
+
+   External links in the content area print their URL after the anchor
+   text; internal links stay clean - a printed page full of relative paths
+   is noise, and the site name is on the page.
+   ========================================================================== */
+
+@media print {
+  #header,
+  #titleBar,
+  #navPanel,
+  #footer,
+  #consent,
+  .skip-to-content,
+  .breadcrumb,
+  button,
+  .button {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  #main a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
   }
 }
