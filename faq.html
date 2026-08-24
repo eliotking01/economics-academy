@@ -510,6 +510,99 @@
             <li data-page="contact"><a href="/contact.html">Contact</a></li>
           </ul>
         </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes">
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
       </header>
       <!-- END templates/header.html -->
 
@@ -608,25 +701,15 @@
                   <h2>About Economics Academy</h2>
                 </header>
                 <div class="accordion">
-                  <div class="accordion-item" id="about-what-is">
-                    <button
-                      class="accordion-button"
-                      id="about-what-is-btn"
-                      aria-expanded="false"
-                      aria-controls="about-what-is-panel"
-                    >
+                  <details class="accordion-item" id="about-what-is">
+                    <summary class="accordion-button" id="about-what-is-btn">
                       What is Economics Academy?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="about-what-is-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="about-what-is-btn"
-                    >
+                    </summary>
+                    <div id="about-what-is-panel" class="accordion-content">
                       <p>
                         Economics Academy is a specialist A-Level Economics site
                         run by Eliot King. It offers free revision notes and
@@ -635,27 +718,17 @@
                         marking service with expert KAEA feedback.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="about-who-is-eliot">
-                    <button
-                      class="accordion-button"
-                      id="about-who-is-eliot-btn"
-                      aria-expanded="false"
-                      aria-controls="about-who-is-eliot-panel"
-                    >
+                  <details class="accordion-item" id="about-who-is-eliot">
+                    <summary class="accordion-button" id="about-who-is-eliot-btn">
                       Who is the tutor?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="about-who-is-eliot-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="about-who-is-eliot-btn"
-                    >
+                    </summary>
+                    <div id="about-who-is-eliot-panel" class="accordion-content">
                       <p>
                         Eliot King holds a First-Class BSc in Economics from the
                         University of Bath and has 6 years of tutoring
@@ -675,54 +748,34 @@
                         >.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="about-exam-boards">
-                    <button
-                      class="accordion-button"
-                      id="about-exam-boards-btn"
-                      aria-expanded="false"
-                      aria-controls="about-exam-boards-panel"
-                    >
+                  <details class="accordion-item" id="about-exam-boards">
+                    <summary class="accordion-button" id="about-exam-boards-btn">
                       Which exam boards do you cover?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="about-exam-boards-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="about-exam-boards-btn"
-                    >
+                    </summary>
+                    <div id="about-exam-boards-panel" class="accordion-content">
                       <p>
                         Edexcel A, Edexcel B, AQA, and OCR. Please specify your
                         board when booking so sessions and feedback can be
                         tailored to your exact specification.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="about-levels">
-                    <button
-                      class="accordion-button"
-                      id="about-levels-btn"
-                      aria-expanded="false"
-                      aria-controls="about-levels-panel"
-                    >
+                  <details class="accordion-item" id="about-levels">
+                    <summary class="accordion-button" id="about-levels-btn">
                       Do you cover AS as well as A2?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="about-levels-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="about-levels-btn"
-                    >
+                    </summary>
+                    <div id="about-levels-panel" class="accordion-content">
                       <p>
                         Yes — both AS and A2 are covered, though the primary
                         focus is A2. If you're studying AS, just let Eliot know
@@ -730,7 +783,7 @@
                         specification and past papers.
                       </p>
                     </div>
-                  </div>
+                  </details>
                 </div>
               </section>
 
@@ -740,25 +793,15 @@
                   <h2>Free Revision Notes &amp; Past Papers</h2>
                 </header>
                 <div class="accordion">
-                  <div class="accordion-item" id="resources-what-is-free">
-                    <button
-                      class="accordion-button"
-                      id="resources-what-is-free-btn"
-                      aria-expanded="false"
-                      aria-controls="resources-what-is-free-panel"
-                    >
+                  <details class="accordion-item" id="resources-what-is-free">
+                    <summary class="accordion-button" id="resources-what-is-free-btn">
                       What free resources are available?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="resources-what-is-free-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="resources-what-is-free-btn"
-                    >
+                    </summary>
+                    <div id="resources-what-is-free-panel" class="accordion-content">
                       <p>
                         The site offers free revision notes and free past
                         papers:
@@ -776,54 +819,34 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="resources-as-or-a2">
-                    <button
-                      class="accordion-button"
-                      id="resources-as-or-a2-btn"
-                      aria-expanded="false"
-                      aria-controls="resources-as-or-a2-panel"
-                    >
+                  <details class="accordion-item" id="resources-as-or-a2">
+                    <summary class="accordion-button" id="resources-as-or-a2-btn">
                       Are the revision notes for AS or A2?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="resources-as-or-a2-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="resources-as-or-a2-btn"
-                    >
+                    </summary>
+                    <div id="resources-as-or-a2-panel" class="accordion-content">
                       <p>
                         Both are included, though the majority of the content
                         focuses on A2 material. AS content is covered where
                         relevant to the specification.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="resources-organisation">
-                    <button
-                      class="accordion-button"
-                      id="resources-organisation-btn"
-                      aria-expanded="false"
-                      aria-controls="resources-organisation-panel"
-                    >
+                  <details class="accordion-item" id="resources-organisation">
+                    <summary class="accordion-button" id="resources-organisation-btn">
                       How are the revision notes organised?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="resources-organisation-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="resources-organisation-btn"
-                    >
+                    </summary>
+                    <div id="resources-organisation-panel" class="accordion-content">
                       <p>
                         Notes are organised by exam board and topic area. Visit
                         the
@@ -831,34 +854,24 @@
                         page and select your board to browse by theme or topic.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="resources-past-papers">
-                    <button
-                      class="accordion-button"
-                      id="resources-past-papers-btn"
-                      aria-expanded="false"
-                      aria-controls="resources-past-papers-panel"
-                    >
+                  <details class="accordion-item" id="resources-past-papers">
+                    <summary class="accordion-button" id="resources-past-papers-btn">
                       Where can I find past papers?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="resources-past-papers-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="resources-past-papers-btn"
-                    >
+                    </summary>
+                    <div id="resources-past-papers-panel" class="accordion-content">
                       <p>
                         Past papers are on the
                         <a href="/past-papers/">Past Papers</a> page, organised
                         by exam board — Edexcel A, Edexcel B, AQA, and OCR.
                       </p>
                     </div>
-                  </div>
+                  </details>
                 </div>
               </section>
 
@@ -868,25 +881,15 @@
                   <h2>Tutoring</h2>
                 </header>
                 <div class="accordion">
-                  <div class="accordion-item" id="tutoring-prices">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-prices-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-prices-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-prices">
+                    <summary class="accordion-button" id="tutoring-prices-btn">
                       What are the tutoring prices?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-prices-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-prices-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-prices-panel" class="accordion-content">
                       <ul>
                         <li>
                           <strong>Free intro call</strong> — 15 minutes via
@@ -907,27 +910,17 @@
                         <a href="/contact.html">enquire for a custom quote</a>.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-get-started">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-get-started-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-get-started-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-get-started">
+                    <summary class="accordion-button" id="tutoring-get-started-btn">
                       How do I get started with tutoring?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-get-started-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-get-started-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-get-started-panel" class="accordion-content">
                       <p>
                         Start with the free 15-minute intro call, booked via
                         Calendly on the
@@ -938,27 +931,17 @@
                         lesson.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-intro-call">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-intro-call-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-intro-call-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-intro-call">
+                    <summary class="accordion-button" id="tutoring-intro-call-btn">
                       What is the Calendly booking for?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-intro-call-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-intro-call-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-intro-call-panel" class="accordion-content">
                       <p>
                         The Calendly booking on the tutoring page is
                         <strong>for the free 15-minute intro call only</strong>
@@ -971,27 +954,17 @@
                         intro call.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-lesson-platform">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-lesson-platform-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-lesson-platform-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-lesson-platform">
+                    <summary class="accordion-button" id="tutoring-lesson-platform-btn">
                       Where do paid lessons take place?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-lesson-platform-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-lesson-platform-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-lesson-platform-panel" class="accordion-content">
                       <p>
                         All paid lessons take place on
                         <strong>thelessonspace.com</strong>. You don't need to
@@ -1000,27 +973,17 @@
                         used for every lesson.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-session-structure">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-session-structure-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-session-structure-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-session-structure">
+                    <summary class="accordion-button" id="tutoring-session-structure-btn">
                       What happens in a typical session?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-session-structure-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-session-structure-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-session-structure-panel" class="accordion-content">
                       <p>
                         Sessions are built around what you need most. Depending
                         on where you are, a session might focus on:
@@ -1041,27 +1004,17 @@
                         stage of preparation.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-book-lesson">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-book-lesson-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-book-lesson-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-book-lesson">
+                    <summary class="accordion-button" id="tutoring-book-lesson-btn">
                       How do I book a paid lesson?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-book-lesson-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-book-lesson-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-book-lesson-panel" class="accordion-content">
                       <p>
                         Paid lessons are arranged by email. Contact Eliot at
                         <a href="mailto:eliotkingtuition@gmail.com"
@@ -1072,27 +1025,17 @@
                         the lesson link.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-cancel-reschedule">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-cancel-reschedule-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-cancel-reschedule-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-cancel-reschedule">
+                    <summary class="accordion-button" id="tutoring-cancel-reschedule-btn">
                       Can I reschedule or cancel a lesson?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-cancel-reschedule-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-cancel-reschedule-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-cancel-reschedule-panel" class="accordion-content">
                       <p>
                         Rescheduling is possible if Eliot has availability — he
                         will do his best to accommodate requests. Lessons
@@ -1102,27 +1045,17 @@
                         refund is issued for the cancelled session.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-group">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-group-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-group-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-group">
+                    <summary class="accordion-button" id="tutoring-group-btn">
                       Do you offer group tuition?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-group-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-group-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-group-panel" class="accordion-content">
                       <p>
                         Yes — group lessons run with 2–4 students on the same
                         exam board and level, at £35 per hour per student. Join
@@ -1135,27 +1068,17 @@
                         for details.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-other-options">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-other-options-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-other-options-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-other-options">
+                    <summary class="accordion-button" id="tutoring-other-options-btn">
                       What if I need something outside the standard packages?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-other-options-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-other-options-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-other-options-panel" class="accordion-content">
                       <p>
                         If you're looking for a different format, frequency, or
                         focus, get in touch via the
@@ -1166,27 +1089,17 @@
                         and Eliot will let you know whether he can help.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="tutoring-payment">
-                    <button
-                      class="accordion-button"
-                      id="tutoring-payment-btn"
-                      aria-expanded="false"
-                      aria-controls="tutoring-payment-panel"
-                    >
+                  <details class="accordion-item" id="tutoring-payment">
+                    <summary class="accordion-button" id="tutoring-payment-btn">
                       How do I pay for tutoring?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="tutoring-payment-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="tutoring-payment-btn"
-                    >
+                    </summary>
+                    <div id="tutoring-payment-panel" class="accordion-content">
                       <p>
                         Tutoring is paid by bank transfer. Bank details are
                         shared once your lessons are confirmed by email. Group
@@ -1194,7 +1107,7 @@
                         or term, based on the number of lessons.
                       </p>
                     </div>
-                  </div>
+                  </details>
                 </div>
               </section>
 
@@ -1204,25 +1117,15 @@
                   <h2>Marking Service</h2>
                 </header>
                 <div class="accordion">
-                  <div class="accordion-item" id="marking-packages">
-                    <button
-                      class="accordion-button"
-                      id="marking-packages-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-packages-panel"
-                    >
+                  <details class="accordion-item" id="marking-packages">
+                    <summary class="accordion-button" id="marking-packages-btn">
                       What marking packages are available?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-packages-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-packages-btn"
-                    >
+                    </summary>
+                    <div id="marking-packages-panel" class="accordion-content">
                       <ul>
                         <li>
                           <strong>Single 25-mark question</strong> — £25 (£30
@@ -1253,27 +1156,17 @@
                         cover? Email your enquiry for a personal quote.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="marking-who-marks">
-                    <button
-                      class="accordion-button"
-                      id="marking-who-marks-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-who-marks-panel"
-                    >
+                  <details class="accordion-item" id="marking-who-marks">
+                    <summary class="accordion-button" id="marking-who-marks-btn">
                       Who marks my work?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-who-marks-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-who-marks-btn"
-                    >
+                    </summary>
+                    <div id="marking-who-marks-panel" class="accordion-content">
                       <p>
                         All marking is done by Eliot King — the same tutor who
                         runs every session on the site. First-Class BSc
@@ -1281,27 +1174,17 @@
                         tutoring experience, 100+ students taught.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="marking-what-receive">
-                    <button
-                      class="accordion-button"
-                      id="marking-what-receive-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-what-receive-panel"
-                    >
+                  <details class="accordion-item" id="marking-what-receive">
+                    <summary class="accordion-button" id="marking-what-receive-btn">
                       What feedback will I receive?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-what-receive-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-what-receive-btn"
-                    >
+                    </summary>
+                    <div id="marking-what-receive-panel" class="accordion-content">
                       <p>Every submission comes back with three things:</p>
                       <ul>
                         <li>
@@ -1323,27 +1206,17 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="marking-submit">
-                    <button
-                      class="accordion-button"
-                      id="marking-submit-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-submit-panel"
-                    >
+                  <details class="accordion-item" id="marking-submit">
+                    <summary class="accordion-button" id="marking-submit-btn">
                       How do I submit my work?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-submit-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-submit-btn"
-                    >
+                    </summary>
+                    <div id="marking-submit-panel" class="accordion-content">
                       <p>
                         After payment you'll land on a confirmation page with
                         one simple step: email your work to
@@ -1357,27 +1230,17 @@
                         <li>Clear photos of handwritten work</li>
                       </ul>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="marking-turnaround">
-                    <button
-                      class="accordion-button"
-                      id="marking-turnaround-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-turnaround-panel"
-                    >
+                  <details class="accordion-item" id="marking-turnaround">
+                    <summary class="accordion-button" id="marking-turnaround-btn">
                       How quickly will I receive my feedback?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-turnaround-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-turnaround-btn"
-                    >
+                    </summary>
+                    <div id="marking-turnaround-panel" class="accordion-content">
                       <p>
                         Standard turnaround is <strong>48 hours</strong> from
                         when payment is received or work is received — whichever
@@ -1392,27 +1255,17 @@
                         <a href="#marking-next-day">next-day option below</a>.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="marking-next-day">
-                    <button
-                      class="accordion-button"
-                      id="marking-next-day-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-next-day-panel"
-                    >
+                  <details class="accordion-item" id="marking-next-day">
+                    <summary class="accordion-button" id="marking-next-day-btn">
                       Is there a faster turnaround option?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-next-day-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-next-day-btn"
-                    >
+                    </summary>
+                    <div id="marking-next-day-panel" class="accordion-content">
                       <p>
                         Yes. Every package can be bought with a guaranteed
                         <strong>next-day turnaround</strong> instead of the
@@ -1429,27 +1282,17 @@
                         <a href="/marking.html">Marking page</a>.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="marking-other-types">
-                    <button
-                      class="accordion-button"
-                      id="marking-other-types-btn"
-                      aria-expanded="false"
-                      aria-controls="marking-other-types-panel"
-                    >
+                  <details class="accordion-item" id="marking-other-types">
+                    <summary class="accordion-button" id="marking-other-types-btn">
                       Can you mark other question types besides essays?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="marking-other-types-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="marking-other-types-btn"
-                    >
+                    </summary>
+                    <div id="marking-other-types-panel" class="accordion-content">
                       <p>
                         The standard packages focus on 25-mark essays and full
                         exam papers. If you need marking for data response
@@ -1466,7 +1309,7 @@
                         your enquiry.
                       </p>
                     </div>
-                  </div>
+                  </details>
                 </div>
               </section>
 
@@ -1476,25 +1319,15 @@
                   <h2>Payments, Policies &amp; Practical Info</h2>
                 </header>
                 <div class="accordion">
-                  <div class="accordion-item" id="policies-refunds">
-                    <button
-                      class="accordion-button"
-                      id="policies-refunds-btn"
-                      aria-expanded="false"
-                      aria-controls="policies-refunds-panel"
-                    >
+                  <details class="accordion-item" id="policies-refunds">
+                    <summary class="accordion-button" id="policies-refunds-btn">
                       What is the refund policy for marking?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="policies-refunds-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="policies-refunds-btn"
-                    >
+                    </summary>
+                    <div id="policies-refunds-panel" class="accordion-content">
                       <p>
                         No refunds are issued once payment has been made. If you
                         have any issues with your submission or the feedback you
@@ -1502,27 +1335,17 @@
                         resolve it.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="policies-payment-methods">
-                    <button
-                      class="accordion-button"
-                      id="policies-payment-methods-btn"
-                      aria-expanded="false"
-                      aria-controls="policies-payment-methods-panel"
-                    >
+                  <details class="accordion-item" id="policies-payment-methods">
+                    <summary class="accordion-button" id="policies-payment-methods-btn">
                       What payment methods do you accept?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="policies-payment-methods-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="policies-payment-methods-btn"
-                    >
+                    </summary>
+                    <div id="policies-payment-methods-panel" class="accordion-content">
                       <ul>
                         <li>
                           <strong>Marking</strong> — paid via Stripe (all major
@@ -1535,27 +1358,17 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="policies-international">
-                    <button
-                      class="accordion-button"
-                      id="policies-international-btn"
-                      aria-expanded="false"
-                      aria-controls="policies-international-panel"
-                    >
+                  <details class="accordion-item" id="policies-international">
+                    <summary class="accordion-button" id="policies-international-btn">
                       Do you work with international students?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="policies-international-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="policies-international-btn"
-                    >
+                    </summary>
+                    <div id="policies-international-panel" class="accordion-content">
                       <p>
                         Yes — lessons are fully online, so students anywhere in
                         the world can book. There are no restrictions on
@@ -1563,27 +1376,17 @@
                         discussed when arranging lessons by email.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="policies-privacy">
-                    <button
-                      class="accordion-button"
-                      id="policies-privacy-btn"
-                      aria-expanded="false"
-                      aria-controls="policies-privacy-panel"
-                    >
+                  <details class="accordion-item" id="policies-privacy">
+                    <summary class="accordion-button" id="policies-privacy-btn">
                       How is my data handled?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="policies-privacy-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="policies-privacy-btn"
-                    >
+                    </summary>
+                    <div id="policies-privacy-panel" class="accordion-content">
                       <p>
                         Your work and personal details are used only to provide
                         marking or tutoring services and are never shared with
@@ -1597,27 +1400,17 @@
                         details.
                       </p>
                     </div>
-                  </div>
+                  </details>
 
-                  <div class="accordion-item" id="policies-contact">
-                    <button
-                      class="accordion-button"
-                      id="policies-contact-btn"
-                      aria-expanded="false"
-                      aria-controls="policies-contact-panel"
-                    >
+                  <details class="accordion-item" id="policies-contact">
+                    <summary class="accordion-button" id="policies-contact-btn">
                       How do I get in touch?
                       <span
                         class="icon solid fa-plus"
                         aria-hidden="true"
                       ></span>
-                    </button>
-                    <div
-                      id="policies-contact-panel"
-                      class="accordion-content"
-                      role="region"
-                      aria-labelledby="policies-contact-btn"
-                    >
+                    </summary>
+                    <div id="policies-contact-panel" class="accordion-content">
                       <p>
                         Use the form on the
                         <a href="/contact.html">Contact page</a> or email
@@ -1627,7 +1420,7 @@
                         directly. Eliot replies within 24 hours.
                       </p>
                     </div>
-                  </div>
+                  </details>
                 </div>
               </section>
             </div>
@@ -1690,47 +1483,9 @@
       (function () {
         "use strict";
 
-        // ── Accordion ─────────────────────────────────────────
-        function openItem(item) {
-          var btn = item.querySelector(".accordion-button");
-          var panel = document.getElementById(
-            btn.getAttribute("aria-controls"),
-          );
-          var icon = btn.querySelector(".icon");
-          btn.setAttribute("aria-expanded", "true");
-          btn.classList.add("active");
-          if (icon) {
-            icon.classList.remove("fa-plus");
-            icon.classList.add("fa-minus");
-          }
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-
-        function closeItem(item) {
-          var btn = item.querySelector(".accordion-button");
-          var panel = document.getElementById(
-            btn.getAttribute("aria-controls"),
-          );
-          var icon = btn.querySelector(".icon");
-          btn.setAttribute("aria-expanded", "false");
-          btn.classList.remove("active");
-          if (icon) {
-            icon.classList.remove("fa-minus");
-            icon.classList.add("fa-plus");
-          }
-          panel.style.maxHeight = null;
-        }
-
-        document.querySelectorAll(".accordion-button").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            var item = btn.closest(".accordion-item");
-            if (btn.getAttribute("aria-expanded") === "true") {
-              closeItem(item);
-            } else {
-              openItem(item);
-            }
-          });
-        });
+        // The accordion itself is native <details>/<summary> since 2026-08-24:
+        // every answer exists and opens with JavaScript off, and closed panels
+        // are genuinely out of the tab order. Nothing here toggles it.
 
         // ── Search / filter ───────────────────────────────────
         var searchInput = document.getElementById("faq-search");
@@ -1761,14 +1516,24 @@
         }
 
         // ── Anchor / hash handling ────────────────────────────
+        // Enhancement only: browsers scroll to a fragment-targeted <details>
+        // but do not open it, so a shared link like faq.html#marking-next-day
+        // would land on a closed panel. With JS off the visitor still lands
+        // on the right question and opens it with one tap.
         function openFromHash(hash) {
           if (!hash || hash.length < 2) return;
           var id = hash.slice(1);
           var item = document.getElementById(id);
           if (!item || !item.classList.contains("accordion-item")) return;
-          openItem(item);
+          item.open = true;
           setTimeout(function () {
-            item.scrollIntoView({ behavior: "smooth", block: "start" });
+            var smooth = window.matchMedia(
+              "(prefers-reduced-motion: no-preference)",
+            ).matches;
+            item.scrollIntoView({
+              behavior: smooth ? "smooth" : "auto",
+              block: "start",
+            });
           }, 60);
         }
 

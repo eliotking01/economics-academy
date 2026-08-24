@@ -7,7 +7,7 @@
 
 .confirmation-header .checkmark {
   font-size: 3em;
-  color: #4caf50;
+  color: #2e7d32; /* #4caf50 was 2.78:1 - under even the 3:1 large-text line */
   display: block;
   margin-bottom: 0.25em;
 }

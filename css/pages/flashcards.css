@@ -369,6 +369,26 @@
   margin: 0.75em 0;
 }
 
+/* The hint lists keyboard shortcuts, which mean nothing on a phone. Hidden
+   only where there is no hover AND no fine pointer, so a tablet with a
+   keyboard attached still shows it. */
+@media (hover: none) and (pointer: coarse) {
+  .flashcards-page .fc-hint {
+    display: none;
+  }
+}
+
+/* The deck-failed-to-load message (flashcards.js boot()). */
+.flashcards-page .fc-error {
+  text-align: center;
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  border: 1px solid #ddd;
+  border-left: 3px solid #d52349;
+  border-radius: 4px;
+  background: #fff;
+}
+
 /* --------------------------------------------------- nav and ratings */
 
 .flashcards-page .fc-nav {

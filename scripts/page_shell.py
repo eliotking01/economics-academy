@@ -764,6 +764,18 @@ def _block(name: str, template: str, pad: str, active: str) -> str:
             )
         body = body.replace(
             marker, f'<li data-page="{active}" class="current">', 1)
+        # The mobile nav (2026-08-24) carries its own marker set - one
+        # data-mpage element per PAGE_MAP key - so both navigations are
+        # marked from the same single truth. Gated on the attribute being
+        # present at all so the footer template passes through untouched.
+        mmarker = f'data-mpage="{active}"'
+        if "data-mpage=" in body:
+            if mmarker not in body:
+                raise SystemExit(
+                    f"page_shell.bake: no {mmarker} in {name}. Every "
+                    f"PAGE_MAP key needs its mobile-nav row."
+                )
+            body = body.replace(mmarker, f"{mmarker} data-mnav-current", 1)
     return (f"{pad}{BEGIN.format(name=name)}\n"
             f"{_indent_block(body, pad)}\n"
             f"{pad}{END.format(name=name)}")

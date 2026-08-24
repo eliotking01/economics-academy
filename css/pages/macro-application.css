@@ -125,7 +125,7 @@
 
 .section-placeholder {
   grid-column: 1 / -1;
-  color: #888;
+  color: #6b6b6b; /* #888 was 3.54:1 on white; this is 4.98:1 */
   font-style: italic;
   padding: 0.5em 0;
   margin: 0;

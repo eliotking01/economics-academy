@@ -144,7 +144,8 @@ BOARD_HUBS = (
 H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.S)
 H2_RE = re.compile(r"<h2>(.*?)</h2>", re.S)
 FAQ_ITEM_RE = re.compile(
-    r'<div class="accordion-item" id="([^"]+)">\s*<button.*?>(.*?)</button>',
+    r'<details class="accordion-item" id="([^"]+)">\s*'
+    r"<summary.*?>(.*?)</summary>",
     re.S)
 ICON_SPAN_RE = re.compile(r"<span[^>]*class=\"icon[^\"]*\".*?</span>", re.S)
 

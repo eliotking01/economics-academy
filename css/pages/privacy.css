@@ -4,7 +4,7 @@
 }
 
 .privacy-notice .privacy-meta {
-  color: #777;
+  color: #6b6b6b; /* #777 was 4.48:1 on white - just under AA; this is 4.98:1 */
   font-style: italic;
   text-align: center;
 }

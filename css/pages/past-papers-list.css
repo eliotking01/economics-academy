@@ -99,7 +99,7 @@
 .exam-board-tag {
   display: inline-block;
   padding: 0.3em 0.6em;
-  background: #4caf50;
+  background: #2e7d32; /* white on #4caf50 was 2.78:1; on this, 5.13:1 */
   color: white;
   border-radius: 4px;
   font-size: 0.8em;

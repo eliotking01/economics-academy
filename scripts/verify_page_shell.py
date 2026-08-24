@@ -558,10 +558,13 @@ BAKED_TEMPLATES = ("templates/header.html", "templates/footer.html")
 # Baked into EVERY published page - the relation is the invariant. The literal
 # 463 that sat here until 2026-08-23 restated len(pages()) and moved with it.
 
-# The one thing a page is allowed to add: setActivePage() used to do this at
-# runtime and the build does it now. Ten variants across 463 pages - nine nav
-# items plus the four pages that highlight nothing.
+# The two things a page is allowed to add: setActivePage() used to add the
+# class at runtime and the build does it now, and since 2026-08-24 (PR #26)
+# the same bake marks the mobile nav's matching row with data-mnav-current.
+# Ten variants across 463 pages - nine nav items plus the four pages that
+# highlight nothing - and the two markers always appear together.
 CURRENT_CLASS = re.compile(r'(<li data-page="[^"]+") class="current">')
+MNAV_CURRENT = re.compile(r'( data-mpage="[^"]+") data-mnav-current')
 
 
 # --------------------------------------------------------------------------
@@ -1201,6 +1204,7 @@ def main() -> int:
                 ln[len(pad):] if ln.startswith(pad) else ln
                 for ln in inner.rstrip("\n").split("\n")) + "\n"
             got = CURRENT_CLASS.sub(r"\1>", got)
+            got = MNAV_CURRENT.sub(r"\1", got)
             baked += 1
             if got != want:
                 wrong.append(p)

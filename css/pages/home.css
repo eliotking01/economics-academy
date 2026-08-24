@@ -39,7 +39,7 @@
 }
 
 .hero-trust {
-  color: #888;
+  color: #6b6b6b; /* #888 was 3.54:1 on white; this is 4.98:1 */
   font-size: 0.9em;
   margin: 0;
 }
@@ -100,7 +100,9 @@
 }
 
 .action-card--free .action-icon {
-  color: #4caf50;
+  /* A meaningful icon, so WCAG 1.4.11's 3:1 applies; #4caf50 was 2.78:1.
+     The hover border below keeps the lighter green - it is decorative. */
+  color: #2e7d32;
 }
 
 .action-card--free:hover {
@@ -112,7 +114,7 @@
 
 .resource-badge {
   display: inline-block;
-  background: #4caf50;
+  background: #2e7d32; /* white on #4caf50 was 2.78:1; on this, 5.13:1 */
   color: #fff;
   font-size: 0.68em;
   font-weight: 700;
@@ -241,7 +243,7 @@
 }
 
 .review-role {
-  color: #999;
+  color: #6b6b6b; /* #999 was 2.85:1 on white; this is 4.98:1 */
   font-size: 0.82em;
   margin-top: 0.15em;
 }
@@ -506,7 +508,7 @@
 }
 
 .newsletter-privacy {
-  color: #888;
+  color: #6b6b6b; /* #888 was 3.54:1 on white; this is 4.98:1 */
   font-size: 0.85em;
   margin: 0;
 }

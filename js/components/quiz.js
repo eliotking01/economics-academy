@@ -344,4 +344,25 @@
   items.forEach(reset);
   renderDashboard();
   renderBest();
+
+  /* Print: the model answers live in closed <details>, which do not print.
+   * quiz.css's print block forces them open via ::details-content where the
+   * engine supports it; this covers the rest, and restores the reader's
+   * open/closed state afterwards. */
+  var printOpened = [];
+  window.addEventListener("beforeprint", function () {
+    printOpened = [];
+    document.querySelectorAll("details.quiz-model").forEach(function (d) {
+      if (!d.open) {
+        printOpened.push(d);
+        d.open = true;
+      }
+    });
+  });
+  window.addEventListener("afterprint", function () {
+    printOpened.forEach(function (d) {
+      d.open = false;
+    });
+    printOpened = [];
+  });
 })();

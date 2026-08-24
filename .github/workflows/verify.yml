@@ -96,6 +96,14 @@ jobs:
       # change it - silently, with no error and no failed request.
       - name: Stylesheet load order
         run: python3 scripts/verify_css_load_order.py
+      # The colour pairs darkened in the 2026-08 accessibility pass (marking
+      # prices, muted greys, the notes accent-as-text tokens) measured as low
+      # as 2.70:1. This holds each declared pair at its WCAG threshold. It
+      # checks a maintained list of declared (selector, colour, background)
+      # pairs - it does not compute the cascade, so it catches regressions of
+      # known pairs, not new combinations.
+      - name: Declared colour pairs meet WCAG contrast
+        run: python3 scripts/verify_contrast.py
       # Wave-norm item (f), D18 Q20 item 6. 322 authored inline style=
       # attributes across 44 files went into CSS classes; this holds the count
       # at 0, because a zero nothing asserts drifts back - and those 322

@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Mobile nav redesign — static mock (not published)</title>
+    <!-- Mock only. Fonts and icons come from the real site files so the mock
+         renders in the site's own faces; open from the repo root (Live
+         Server) so the absolute paths resolve. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <style>
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url("/webfonts/source-sans-pro-300.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/webfonts/source-sans-pro-400.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("/webfonts/source-sans-pro-600.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/webfonts/source-sans-pro-700.woff2") format("woff2");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      /* main.css owns this on the real site; restated for the mock. */
+      .icon.solid:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-style: normal;
+      }
+      body {
+        margin: 0;
+        font-family: "Source Sans Pro", Arial, sans-serif;
+        font-weight: 300;
+        color: #252122;
+        background: #f5f5f5;
+      }
+
+      /* ── The mobile title bar, lightened to match the panel ─── */
+      .m-titlebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        display: flex;
+        align-items: center;
+        z-index: 20;
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+      .m-titlebar .m-burger {
+        width: 48px;
+        height: 48px;
+        border: 0;
+        background: none;
+        color: #d52349;
+        font-size: 1.15em;
+        cursor: pointer;
+      }
+      .m-titlebar .m-wordmark {
+        font-weight: 700;
+        font-size: 1em;
+        color: #252122;
+        text-decoration: none;
+        margin: 0 auto;
+        transform: translateX(-24px); /* optically centred against the burger */
+      }
+
+      /* ── Fake page behind, so the overlay reads in context ──── */
+      .m-page {
+        padding: 72px 20px 40px;
+        max-width: 34em;
+        margin: 0 auto;
+      }
+      .m-page h1 {
+        font-size: 1.6em;
+        font-weight: 700;
+        margin: 0 0 0.5em;
+      }
+      .m-page p {
+        line-height: 1.65;
+        color: #5d5d5d;
+      }
+
+      /* ── Backdrop ─────────────────────────────────────────────── */
+      .m-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(37, 33, 34, 0.45);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+        z-index: 30;
+      }
+      body.m-open .m-backdrop {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* ── The drawer ───────────────────────────────────────────── */
+      .m-drawer {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: min(320px, 88vw);
+        background: #fff;
+        z-index: 40;
+        transform: translateX(-105%);
+        transition: transform 0.28s ease;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 0 18px rgba(0, 0, 0, 0.18);
+        padding-left: env(safe-area-inset-left);
+      }
+      body.m-open .m-drawer {
+        transform: translateX(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .m-drawer,
+        .m-backdrop {
+          transition: none;
+        }
+      }
+
+      .m-drawer-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6em 0.4em 0.6em 1.1em;
+        border-bottom: 1px solid #eee;
+        flex-shrink: 0;
+      }
+      .m-drawer-head .m-label {
+        font-weight: 700;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: #6b6b6b;
+      }
+      .m-close {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        background: none;
+        color: #d52349;
+        font-size: 1.05em;
+        cursor: pointer;
+      }
+      /* The close glyph is the subset's fa-plus rotated 45deg - the same
+         one-glyph open/close language as the FAQ accordion. No new icon. */
+      .m-close .icon {
+        display: inline-block;
+        transform: rotate(45deg);
+      }
+
+      .m-scroll {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        flex: 1;
+        padding-bottom: max(1em, env(safe-area-inset-bottom));
+      }
+
+      /* Rows: every tappable row is >= 48px and either navigates or
+         visibly opens a group. */
+      .m-row,
+      .m-group > summary {
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 1.1em;
+        color: #252122;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.98em;
+        border-left: 3px solid transparent;
+      }
+      .m-row:active,
+      .m-group > summary:active {
+        background: #faf3f4;
+      }
+
+      /* Current page */
+      .m-row[aria-current="page"] {
+        border-left-color: #d52349;
+        background: #fdf3f5;
+        font-weight: 600;
+        color: #d52349;
+      }
+
+      /* Section labels - small caps, the notes' darkened teal */
+      .m-section {
+        margin: 1.1em 1.1em 0.25em;
+        font-size: 0.72em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: #1f6b77;
+      }
+
+      /* Collapsible groups: native details, plus-rotates-open like the FAQ */
+      .m-group > summary {
+        list-style: none;
+        cursor: pointer;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+      .m-group > summary::-webkit-details-marker {
+        display: none;
+      }
+      .m-group > summary .icon {
+        color: #d52349;
+        transition: transform 0.2s ease;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .m-group > summary .icon {
+          transition: none;
+        }
+      }
+      .m-group[open] > summary .icon {
+        transform: rotate(45deg);
+      }
+      .m-group[open] > summary {
+        color: #1f6b77;
+      }
+      .m-group[open] {
+        background: #fafcfc;
+        border-bottom: 1px solid #eef4f5;
+      }
+
+      /* Inside a group: board labels are NON-tappable small caps (this is
+         what replaces the four dead href="#" board rows), links indent. */
+      .m-sub-label {
+        margin: 0.35em 1.1em 0;
+        padding-left: 1em;
+        font-size: 0.7em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: #6b6b6b;
+      }
+      .m-group .m-row {
+        padding-left: 2.4em;
+        min-height: 44px;
+        font-size: 0.94em;
+      }
+      .m-group .m-row.m-row-plain {
+        padding-left: 2.1em;
+      }
+
+      /* The money pages - visually distinct, brand red */
+      .m-money {
+        margin: 0.35em 0.8em;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid #f6cdd7;
+      }
+      .m-money .m-row {
+        background: #fdf3f5;
+        font-weight: 600;
+        color: #b01c3a;
+        gap: 0.7em;
+        border-left: 0;
+      }
+      .m-money .m-row + .m-row {
+        border-top: 1px solid #f6cdd7;
+      }
+      .m-money .icon {
+        width: 1.3em;
+        text-align: center;
+        color: #d52349;
+      }
+
+      .m-foot {
+        border-top: 1px solid #eee;
+        margin-top: 0.75em;
+        padding-top: 0.35em;
+      }
+    </style>
+  </head>
+  <body class="m-open">
+    <header class="m-titlebar">
+      <button class="m-burger" type="button" aria-expanded="true" aria-controls="m-drawer" aria-label="Menu">
+        <span class="icon solid fa-bars" aria-hidden="true"></span>
+      </button>
+      <a class="m-wordmark" href="#">Economics Academy</a>
+    </header>
+
+    <main class="m-page">
+      <h1>1.2.2 Demand</h1>
+      <p>
+        (A stand-in for any page on the site — the drawer overlays whatever
+        the visitor was reading. This mock opens with the drawer visible;
+        tap the backdrop, the ×, or press Esc to close it, and the hamburger
+        to reopen.)
+      </p>
+    </main>
+
+    <div class="m-backdrop"></div>
+
+    <nav class="m-drawer" id="m-drawer" aria-label="Site menu">
+      <div class="m-drawer-head">
+        <span class="m-label">Menu</span>
+        <button class="m-close" type="button" aria-label="Close menu">
+          <span class="icon solid fa-plus" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="m-scroll">
+        <a class="m-row" href="#">Home</a>
+
+        <p class="m-section">Free resources</p>
+
+        <details class="m-group">
+          <summary>
+            Revision Notes
+            <span class="icon solid fa-plus" aria-hidden="true"></span>
+          </summary>
+          <p class="m-sub-label">Edexcel</p>
+          <a class="m-row" href="#">Theme 1</a>
+          <a class="m-row" href="#">Theme 2</a>
+          <a class="m-row" href="#">Theme 3</a>
+          <a class="m-row" href="#">Theme 4</a>
+          <p class="m-sub-label">AQA</p>
+          <a class="m-row" href="#">Microeconomics</a>
+          <a class="m-row" href="#">Macroeconomics</a>
+          <a class="m-row m-row-plain" href="#">Macro Application</a>
+          <a class="m-row m-row-plain" href="#">Glossary &amp; Formulae</a>
+          <a class="m-row m-row-plain" href="#">All revision notes</a>
+        </details>
+
+        <details class="m-group" open>
+          <summary>
+            Practice Questions
+            <span class="icon solid fa-plus" aria-hidden="true"></span>
+          </summary>
+          <p class="m-sub-label">Edexcel</p>
+          <a class="m-row" href="#">Theme 1</a>
+          <a class="m-row" href="#">Theme 2</a>
+          <a class="m-row" href="#">Theme 3</a>
+          <a class="m-row" href="#">Theme 4</a>
+          <p class="m-sub-label">AQA</p>
+          <a class="m-row" href="#">Microeconomics</a>
+          <a class="m-row" href="#">Macroeconomics</a>
+          <a class="m-row m-row-plain" href="#">All practice questions</a>
+        </details>
+
+        <a class="m-row" href="#" aria-current="page">Flashcards</a>
+
+        <details class="m-group">
+          <summary>
+            Past Papers
+            <span class="icon solid fa-plus" aria-hidden="true"></span>
+          </summary>
+          <a class="m-row m-row-plain" href="#">Search Past Paper Questions</a>
+          <a class="m-row m-row-plain" href="#">AQA Papers</a>
+          <a class="m-row m-row-plain" href="#">Edexcel Papers</a>
+          <a class="m-row m-row-plain" href="#">OCR Papers</a>
+          <a class="m-row m-row-plain" href="#">Edexcel B Papers</a>
+        </details>
+
+        <p class="m-section">Work with Eliot</p>
+        <div class="m-money">
+          <a class="m-row" href="#">
+            <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+            Tutoring
+          </a>
+          <a class="m-row" href="#">
+            <span class="icon solid fa-check-double" aria-hidden="true"></span>
+            Marking
+          </a>
+        </div>
+
+        <div class="m-foot">
+          <a class="m-row" href="#">About</a>
+          <a class="m-row" href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      /* Mock-grade behaviour only - enough to feel the design. The real
+         implementation lives in js/components/nav.js and adds the focus
+         trap, inert on the page behind, and scroll lock. */
+      var burger = document.querySelector(".m-burger");
+      var close = document.querySelector(".m-close");
+      var backdrop = document.querySelector(".m-backdrop");
+      function setOpen(open) {
+        document.body.classList.toggle("m-open", open);
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.style.overflow = open ? "hidden" : "";
+        if (!open) burger.focus();
+      }
+      burger.addEventListener("click", function () {
+        setOpen(!document.body.classList.contains("m-open"));
+      });
+      close.addEventListener("click", function () {
+        setOpen(false);
+      });
+      backdrop.addEventListener("click", function () {
+        setOpen(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setOpen(false);
+      });
+      setOpen(true);
+    </script>
+  </body>
+</html>

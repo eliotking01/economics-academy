@@ -14,7 +14,7 @@
 }
 .about-hero-trust {
   font-size: 0.85em;
-  color: #888;
+  color: #6b6b6b; /* #888 was 3.54:1 on white; this is 4.98:1 */
   margin-bottom: 1.2em;
 }
 
@@ -128,7 +128,7 @@
 .about-testimonial-card .outcome {
   display: block;
   font-size: 0.78em;
-  color: #4caf50;
+  color: #2e7d32; /* #4caf50 was 2.78:1 on white; this is 5.13:1 */
   margin-top: 0.25em;
   font-weight: 600;
 }

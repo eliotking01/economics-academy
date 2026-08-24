@@ -165,7 +165,14 @@
   scroll-margin-top: 1.5em;
 }
 
+/* The accordion is native <details>/<summary> since 2026-08-24, so the
+   answers exist without JavaScript and closed panels are out of the tab
+   order. .accordion-button is the <summary>. */
 .accordion-button {
+  /* A summary is content-box by default, where the old button was
+     border-box from the UA sheet - without this the 1.5em side padding
+     overflowed the row and pushed the icon out of view. */
+  box-sizing: border-box;
   width: 100%;
   text-align: left;
   padding: 1em 1.5em;
@@ -181,6 +188,13 @@
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.25s ease, color 0.25s ease;
+  /* The disclosure triangle is drawn only for display: list-item; the plus
+     icon is the affordance here. Older Safari needs the vendor rule below. */
+  list-style: none;
+}
+
+.accordion-button::-webkit-details-marker {
+  display: none;
 }
 
 .accordion-button:hover {
@@ -188,13 +202,13 @@
   color: #252122 !important;
 }
 
-.accordion-button.active {
+.accordion-item[open] > .accordion-button {
   background-color: #fff;
   color: #d52349 !important;
 }
 
 .accordion-button:hover .icon,
-.accordion-button.active .icon {
+.accordion-item[open] > .accordion-button .icon {
   color: #b01c3a;
 }
 
@@ -207,12 +221,16 @@
   margin-left: 1em;
   color: #d52349;
   flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+/* The plus rotates into a multiplication sign while open — one glyph, two
+   states, nothing swapped by script. */
+.accordion-item[open] > .accordion-button .icon {
+  transform: rotate(45deg);
 }
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease-out;
   background-color: white;
 }
 

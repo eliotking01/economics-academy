@@ -222,7 +222,7 @@
 }
 
 .past-paper-questions-page .ppq-badge-theme {
-  background: #4caf50;
+  background: #2e7d32; /* white on #4caf50 was 2.78:1; on this, 5.13:1 */
   color: #fff;
 }
 

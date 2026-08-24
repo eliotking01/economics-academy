@@ -775,11 +775,24 @@ than by eye. PH07-059.
 > changing the inherited theme's own breakpoints on all 463 pages, and nothing
 > measured says it is broken.
 
-**Print styles are deliberately partial.** Only `revision-notes-textbook.css`,
+~~**Print styles are deliberately partial.** Only `revision-notes-textbook.css`,
 `glossary.css` and `flashcards.css` have `@media print`, covering 179 pages. The
 practice-question and past-paper-question families are interactive surfaces whose
 printed form is pointless, and the actual printable content is the PDFs.
-Considered and declined by P7 §6; do not raise it as a gap.
+Considered and declined by P7 §6; do not raise it as a gap.~~
+
+> **OVERRIDDEN 2026-08-24 by Eliot, in the accessibility/progressive-
+> enhancement pass — this is explicitly undoing the decision above.** The
+> August site review found ~290 pages printing with full navigation, hero
+> buttons and footer, and Eliot instructed a site-wide print block.
+> `css/main.css` now ends with one (chrome hidden, black on white, external
+> links print their URL), and the three sheets named above keep their own
+> print rules layered on top of it — nothing they declared was removed.
+> One part of P7 §6's reasoning was also wrong by 2026: a printed
+> practice-question set is not pointless, it is a worksheet — except that
+> the model answers lived in closed `<details>` and did not print at all.
+> `quiz.css`'s print block forces them open (`::details-content`, with a
+> `beforeprint` fallback in `quiz.js`) and hides the dashboard and summary.
 
 ~~**`logo/` and `old-logos-archive/` are repo storage, not published assets** —
 Eliot, 2026-08-09, D28. 30 files, 2.4 MB, **0** references anywhere on the site and
