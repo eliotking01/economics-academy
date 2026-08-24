@@ -209,6 +209,17 @@
            there was none anywhere on the site. The id is unchanged because every rule
            in css/main.css targets #header. PH08-037. -->
       <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
         <!-- Deliberately a paragraph, not a top-level heading. This template is
              injected above every page's own heading, so a heading here made the
              document outline open with the site name on all 463 pages and put
@@ -910,6 +921,7 @@
     <script src="/js/components/nav.js"></script>
     <script src="/js/components/track.js"></script>
     <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>

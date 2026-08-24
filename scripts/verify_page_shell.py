@@ -201,10 +201,14 @@ def expected_page_counts() -> dict[str, int]:
 # check that reads the value it is checking agrees with any value, including a
 # wrong one. Changing the tail has to change both, in the same commit - the
 # build_past_paper_taxonomy.py EXPECTED pattern.
+# 2026-08-24 took it from four to five: js/components/site-search.js, the
+# search overlay behind the header's baked search box, after consent.js and
+# before main.js.
 SCRIPT_TAIL = (
     "/js/components/nav.js",
     "/js/components/track.js",
     "/js/components/consent.js",
+    "/js/components/site-search.js",
     "/js/main.js",
 )
 
