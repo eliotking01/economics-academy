@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Site-wide search — header box + overlay, all 463 pages | on branch `feature/site-search`, PR open | — | — |
+| Site-wide search — header box + overlay, all 463 pages | live | 2026-08-24 | `8b329f1e` |
 | Topic-page tail redesign — the 166 notes pages | live | 2026-08-24 | `32c0bacb` |
 | Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
 | Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
@@ -81,14 +81,21 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Site-wide search — header box + overlay (2026-08-24) — ON BRANCH, PR open
+## Site-wide search — header box + overlay (2026-08-24) — LIVE (merged 2026-08-24, `8b329f1e`, PR #24)
 
-**STATE: PR open on `feature/site-search`; not merged.** Eliot approved the
-design and every string from a working mock (`_working/site-search/`, on the
-branch, with `PROPOSAL.md` as the wording record) after two revisions of his:
-the visible pink "Search…" box (top-right on desktop, above the title on
-mobile) and the visible Cancel in the overlay. `docs/audit/DECISIONS.md` D59.
-Update this heading to LIVE with the merge commit when it lands.
+**STATE: live.** Eliot merged PR #24 on 2026-08-24; the deploy succeeded and
+the live site serves the header box, the script and the 112.9 KB index
+(checked by request, not assumed). He approved the design and every string
+from a working mock (`_working/site-search/`, on the branch, with
+`PROPOSAL.md` as the wording record) after two revisions of his: the visible
+pink "Search…" box (top-right on desktop, above the title on mobile) and the
+visible Cancel in the overlay. `docs/audit/DECISIONS.md` D59.
+
+**One timing note:** the merge landed nine minutes before the branch's last
+commit, so the compare-trees fixture repair (five cases gripping the pre-D58
+tail; the suite's own scheduled run had already failed on `main` at 07:11
+that morning, before this branch pushed anything) reached `main` in the
+follow-up PR, not the merge.
 
 **What it is.** Every page's baked header carries a search box that opens a
 full overlay: results on every keystroke (80 ms debounce), grouped Revision
