@@ -259,6 +259,99 @@
             <li data-page="contact"><a href="/contact.html">Contact</a></li>
           </ul>
         </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes">
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
       </header>
       <!-- END templates/header.html -->
 

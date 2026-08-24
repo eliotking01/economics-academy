@@ -10,92 +10,42 @@
 //
 // What lives here:
 //
-//   1. The mobile #navPanel and #titleBar, built from #nav at DOMContentLoaded.
-//      This is util.js's navList() plugin, inlined - it was the only one of
-//      that file's four exports with a caller anywhere on the site.
-//   2. The panel's behaviour: toggle, click or tap outside, Escape (which
-//      returns focus to the button), and swipe left.
-//   3. A progressive enhancement for the desktop dropdowns. The dropdowns
-//      themselves are CSS now (css/main.css, "Desktop dropdowns"), so they
-//      work with scripting off, which they never did under dropotron. What
-//      this adds is the case CSS cannot serve: a touch device wide enough to
-//      get the desktop nav, where :hover is not a thing a finger can do.
-//
-// The panel markup is byte-for-byte what navList() produced - same classes,
-// same indent spans, same order, same hrefs, including the href="#" openers.
-// docs/audit/scripts/harness/render_nav.py compares the rendered result
-// against the jQuery version and it is identical on 10 pages at 2 viewports.
+//   1. The mobile drawer (2026-08-24, PR #26). The menu itself is the baked
+//      #mobileNav block in every header - grouped links in native <details>,
+//      complete with scripting off. This file only ENHANCES it: builds the
+//      fixed title bar, burger and backdrop, turns the in-flow block into
+//      the sliding drawer, opens the current page's group, traps focus while
+//      open (inert on everything else) and returns it to the burger on
+//      close. If this file never runs, the phone visitor still has the whole
+//      menu - which the old panel, generated from #nav at runtime, did not
+//      give them.
+//   2. A progressive enhancement for the desktop dropdowns. The dropdowns
+//      themselves are CSS (css/main.css, "Desktop dropdowns"), so they
+//      work with scripting off. What this adds is the case CSS cannot serve:
+//      a touch device wide enough to get the desktop nav, where :hover is
+//      not a thing a finger can do.
 
 (function () {
   "use strict";
 
   var DESKTOP = "(min-width: 768px)";
 
-  // --- the mobile panel's link list ------------------------------------
-  //
-  // util.js's navList(), inlined and unchanged in what it emits. Depth is
-  // the number of <li> ancestors minus one, so the top level is 0. jQuery
-  // counted with .parents("li"), which walks to the document root; #nav has
-  // no <li> above it, so counting to the root and counting to #nav give the
-  // same number.
+  // --- the mobile drawer --------------------------------------------------
 
-  function depthOf(a) {
-    var n = 0;
-    var li = a.closest("li");
-    while (li) {
-      n++;
-      li = li.parentElement ? li.parentElement.closest("li") : null;
-    }
-    return Math.max(0, n - 1);
-  }
-
-  function navList(nav) {
-    var frag = document.createDocumentFragment();
-    var links = nav.querySelectorAll("a");
-    for (var i = 0; i < links.length; i++) {
-      var src = links[i];
-      var d = depthOf(src);
-      var a = document.createElement("a");
-      a.className = "link depth-" + d;
-      // Wave 4.10: the panel had no "you are here" at all - the desktop bar
-      // has carried a highlight since the beginning and the mobile one never
-      // did. Read off the SAME truth, the class page_shell.PAGE_MAP writes
-      // into the page at build time, rather than re-deriving it from the URL
-      // and risking a second, disagreeing rule. Direct parent only: the
-      // current <li> contains its whole submenu, so `closest` would mark
-      // eleven links instead of one.
-      if (src.parentElement && src.parentElement.matches("li.current")) {
-        a.className += " current";
-      }
-      // Copied only when present and non-empty, as navList() did: an <a>
-      // with no href must not gain href="".
-      var target = src.getAttribute("target");
-      if (target) a.setAttribute("target", target);
-      var href = src.getAttribute("href");
-      if (href) a.setAttribute("href", href);
-      var indent = document.createElement("span");
-      indent.className = "indent-" + d;
-      a.appendChild(indent);
-      // textContent, not innerHTML: navList() interpolated jQuery's .text()
-      // into an HTML string, so "Glossary & Formulae" was re-parsed on the
-      // way in. Building the node avoids the round trip and cannot change
-      // what a reader sees.
-      a.appendChild(document.createTextNode(src.textContent));
-      frag.appendChild(a);
-    }
-    return frag;
-  }
-
-  // --- the mobile panel -------------------------------------------------
-
-  function initPanel(nav) {
+  function initDrawer() {
     var body = document.body;
+    var mnav = document.getElementById("mobileNav");
+    if (!mnav) return;
+    var root = mnav.querySelector(".mnav-root");
 
     // Remove anything an earlier run left, so this is safe to call twice.
-    var old = document.getElementById("navPanel");
+    var old = document.getElementById("titleBar");
     if (old) old.remove();
-    old = document.getElementById("titleBar");
+    old = document.getElementById("navBackdrop");
     if (old) old.remove();
+    old = mnav.querySelector(".mnav-head");
+    if (old) old.remove();
+    body.classList.remove("navPanel-visible");
 
     // A <button>, not <a href="#navPanel">. The anchor form used to collide
     // with util.js's panel() plugin, whose own anchor handler fired on the
@@ -109,86 +59,132 @@
     btn.type = "button";
     btn.setAttribute("aria-label", "Open navigation menu");
     btn.setAttribute("aria-expanded", "false");
-    btn.setAttribute("aria-controls", "navPanel");
+    btn.setAttribute("aria-controls", "mobileNav");
     titleBar.appendChild(btn);
+    var wordmark = document.createElement("a");
+    wordmark.className = "titleBar-wordmark";
+    wordmark.href = "/";
+    wordmark.textContent = "Economics Academy";
+    titleBar.appendChild(wordmark);
     body.appendChild(titleBar);
 
-    // A <nav>, so the panel carries its landmark standalone.
-    var panel = document.createElement("nav");
-    panel.id = "navPanel";
-    panel.setAttribute("role", "navigation");
-    panel.setAttribute("aria-label", "Mobile navigation");
-    // `inert`, not aria-hidden="true". The panel is moved off-canvas by
+    var backdrop = document.createElement("div");
+    backdrop.id = "navBackdrop";
+    body.appendChild(backdrop);
+
+    // The drawer head: "Menu" and a close control (fa-plus rotated by CSS -
+    // no new glyph in the subset).
+    var head = document.createElement("div");
+    head.className = "mnav-head";
+    var label = document.createElement("span");
+    label.className = "mnav-head-label";
+    label.textContent = "Menu";
+    var closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "mnav-close";
+    closeBtn.setAttribute("aria-label", "Close menu");
+    var glyph = document.createElement("span");
+    glyph.className = "icon solid fa-plus";
+    glyph.setAttribute("aria-hidden", "true");
+    closeBtn.appendChild(glyph);
+    head.appendChild(label);
+    head.appendChild(closeBtn);
+    mnav.insertBefore(head, mnav.firstChild);
+
+    // The drawer must live at body level: the focus trap below makes
+    // #page-wrapper inert while the drawer is open, and the baked block
+    // starts INSIDE the wrapper - left there, the trap would inert the
+    // drawer itself and every link in it would be dead. The old panel was
+    // a body child for the same reason. track.js excludes #mobileNav from
+    // cta_click alongside the other chrome.
+    body.appendChild(mnav);
+
+    // The static block's own "Menu" summary hands over to the burger; the
+    // root details stays open so the sheet is the drawer's content.
+    if (root) root.open = true;
+
+    // Current page, from the baked data-mnav-current marker
+    // (page_shell._block(), the same single truth as the desktop bar's
+    // li.current): open its group, and say so to assistive tech.
+    var currentGroup = mnav.querySelector("details[data-mnav-current]");
+    if (currentGroup) currentGroup.open = true;
+    var currentLink = mnav.querySelector("a[data-mnav-current]");
+    if (currentLink) currentLink.setAttribute("aria-current", "page");
+
+    // `inert`, not aria-hidden="true". The drawer is moved off-canvas by
     // transform, never display:none - the slide has to be animatable - so
-    // when it was merely aria-hidden its 32 links stayed in the tab order the
-    // whole time, and a keyboard user on a phone tabbed through all 32 before
-    // reaching the page. aria-hidden was also the wrong half of the answer on
-    // its own: ARIA 1.2 makes aria-hidden="true" on an element containing
-    // focusable descendants a conformance failure, and Chrome logs it, so a
-    // screen reader could reach a link the accessibility tree said was not
-    // there. `inert` does both jobs from one attribute - out of the tab order
-    // AND out of the accessibility tree - which is why aria-hidden goes
-    // rather than being kept alongside it. REVIEW-NOTES.md item 1.
-    panel.setAttribute("inert", "");
-    panel.appendChild(navList(nav));
-    body.appendChild(panel);
+    // without inert its links would stay in the tab order the whole time,
+    // and ARIA 1.2 makes aria-hidden="true" over focusable descendants a
+    // conformance failure. inert does both jobs. REVIEW-NOTES.md item 1.
+    mnav.setAttribute("inert", "");
+    body.classList.add("mnav-enhanced");
+
+    // Focus trap: while the drawer is open, everything else at body level
+    // goes inert, so Tab can only reach the drawer and the title bar.
+    function setPageInert(on) {
+      var children = body.children;
+      for (var i = 0; i < children.length; i++) {
+        var el = children[i];
+        if (el === mnav || el === titleBar || el === backdrop) continue;
+        if (el.tagName === "SCRIPT" || el.tagName === "STYLE") continue;
+        if (on) el.setAttribute("inert", "");
+        else el.removeAttribute("inert");
+      }
+    }
 
     function open() {
       body.classList.add("navPanel-visible");
-      panel.removeAttribute("inert");
+      mnav.removeAttribute("inert");
+      setPageInert(true);
       btn.setAttribute("aria-expanded", "true");
       btn.setAttribute("aria-label", "Close navigation menu");
+      closeBtn.focus();
     }
 
     function close() {
       body.classList.remove("navPanel-visible");
-      panel.setAttribute("inert", "");
+      mnav.setAttribute("inert", "");
+      setPageInert(false);
       btn.setAttribute("aria-expanded", "false");
       btn.setAttribute("aria-label", "Open navigation menu");
+      btn.focus();
     }
 
     function isOpen() {
       return body.classList.contains("navPanel-visible");
     }
 
-    // stopPropagation, or the body handler below closes the panel on the very
-    // click that opened it.
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
       if (isOpen()) close();
       else open();
     });
 
-    // Anywhere outside the panel and the bar.
-    function outside(e) {
-      if (isOpen() && !e.target.closest("#navPanel, #titleBar")) close();
-    }
-    body.addEventListener("click", outside);
-    body.addEventListener("touchend", outside);
+    closeBtn.addEventListener("click", function () {
+      close();
+    });
 
-    panel.addEventListener("click", function (e) { e.stopPropagation(); });
-    panel.addEventListener("touchend", function (e) { e.stopPropagation(); });
+    backdrop.addEventListener("click", function () {
+      close();
+    });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && isOpen()) {
-        close();
-        btn.focus();
-      }
+      if (e.key === "Escape" && isOpen()) close();
     });
 
     // Swipe left to close, 50px.
     var startX = null;
-    panel.addEventListener("touchstart", function (e) {
+    mnav.addEventListener("touchstart", function (e) {
       startX = e.touches[0].pageX;
     }, { passive: true });
-    panel.addEventListener("touchmove", function (e) {
+    mnav.addEventListener("touchmove", function (e) {
       if (startX === null) return;
       if (e.touches[0].pageX - startX < -50) {
         startX = null;
         close();
       }
     }, { passive: true });
-    panel.addEventListener("touchend", function () { startX = null; });
+    mnav.addEventListener("touchend", function () { startX = null; });
 
     return { close: close };
   }
@@ -246,10 +242,9 @@
   }
 
   function init() {
+    initDrawer();
     var nav = document.getElementById("nav");
-    if (!nav) return;
-    initPanel(nav);
-    initDropdowns(nav);
+    if (nav) initDropdowns(nav);
   }
 
   // The header is in the page already - Wave 2 Phase 7 bakes it in - so there

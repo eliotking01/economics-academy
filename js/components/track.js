@@ -43,7 +43,7 @@
  *   cta_click          click on an in-content link to /tutoring.html,
  *                      /marking.html or /contact.html (any fragment), EXCLUDING
  *                      the header nav, mobile nav and footer (#header, #nav,
- *                      #navPanel, #titleBar, #footer). cta_text (trimmed, max
+ *                      #mobileNav, #titleBar, #footer). cta_text (trimmed, max
  *                      60 chars), cta_target (the path). Links to the page
  *                      the visitor is already on do not count - href="#" on
  *                      tutoring.html resolves to /tutoring.html#. This is the
@@ -76,7 +76,10 @@
   var CHECKOUT_KEY = "ea-checkout";
   var PURCHASE_SENT_KEY = "ea-purchase-sent";
   var CTA_TARGETS = { "/tutoring.html": 1, "/marking.html": 1, "/contact.html": 1 };
-  var EXCLUDED_CHROME = "#header, #nav, #navPanel, #titleBar, #footer";
+  /* #mobileNav replaced #navPanel on 2026-08-24 (PR #26): the drawer is the
+   * baked mobile nav, moved to body level by nav.js, and its Tutoring and
+   * Marking rows are navigation, not in-content CTAs. */
+  var EXCLUDED_CHROME = "#header, #nav, #mobileNav, #titleBar, #footer";
   var MAX_CTA_TEXT = 60;
 
   /* ----------------------------------------------------------- analytics */

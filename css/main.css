@@ -2869,7 +2869,9 @@ ul.divided li:first-child {
 
 /* Medium */
 
-#navPanel,
+/* nav.js builds the title bar on every page; only the mobile media block
+   below shows it. (#navPanel is gone - PR #26 replaced the generated panel
+   with the baked #mobileNav drawer.) */
 #titleBar {
   display: none;
 }
@@ -2960,31 +2962,34 @@ ul.divided li:first-child {
     font-size: 16px;
   }
 
-  /* Nav */
+  /* Nav — the mobile drawer, redesigned 2026-08-24 (PR #26).
+
+     The baked #mobileNav block in the header is the whole menu and is
+     complete WITHOUT JavaScript: a "Menu" details row in the page flow whose
+     groups are native details. nav.js enhances it into the fixed drawer
+     below (body.mnav-enhanced), builds the title bar, burger and backdrop,
+     and the old panel that was generated from #nav is gone. The page no
+     longer slides sideways; the drawer overlays it behind a backdrop.
+     Current page comes baked as data-mnav-current (page_shell._block()),
+     the same single truth as the desktop bar's li.current. */
 
   #page-wrapper {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
     padding-bottom: 1px;
     /* Push content below the fixed 44px titleBar so it isn't hidden under it */
     padding-top: 44px;
   }
 
   #titleBar {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
     display: block;
     height: 44px;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10001;
-    background: none;
+    z-index: 10002;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: env(safe-area-inset-left);
   }
 
   #titleBar .toggle {
@@ -2998,154 +3003,338 @@ ul.divided li:first-child {
     /* Layout */
     display: block;
     position: relative;
-    width: 80px;
-    height: 60px;
+    width: 56px;
+    height: 44px;
     text-decoration: none;
     /* Ensure minimum 44px tap target height (WCAG 2.5.5) */
     min-height: 44px;
   }
 
   #titleBar .toggle:focus-visible {
-    outline: 3px solid rgba(255, 255, 255, 0.85);
-    outline-offset: 2px;
+    outline: 3px solid #d52349;
+    outline-offset: -3px;
     border-radius: 3px;
   }
 
   #titleBar .toggle:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    line-height: 1;
     text-transform: none !important;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-  }
-
-  #titleBar .toggle:before {
     content: "\f0c9";
     display: block;
     position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 50px;
-    height: 40px;
-    line-height: 40px;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 44px;
+    line-height: 44px;
     font-size: 18px;
-    color: #fff;
+    color: #d52349;
     text-align: center;
-    background: rgba(150, 150, 150, 0.75);
-    border-radius: 5px;
   }
 
   #titleBar .toggle:active:before {
-    background-color: #969696;
+    color: #b01c3a;
   }
 
-  #navPanel {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateX(-275px);
-    transform: translateX(-275px);
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    display: block;
-    height: 100%;
-    left: 0;
-    overflow-y: auto;
-    position: fixed;
+  #titleBar .titleBar-wordmark {
+    position: absolute;
+    left: 50%;
     top: 0;
-    width: 275px;
-    z-index: 10002;
-    color: #858484;
-    background: #252122;
-    box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
-  }
-
-  /* Upright, for the same reason the bar is: these are UI labels, not the
-     theme's editorial voice. The left border is transparent so that the
-     current item's accent bar below costs no reflow when it appears. */
-  #navPanel .link {
-    display: block;
-    color: #999;
-    text-decoration: none;
-    height: 44px;
+    transform: translateX(-50%);
     line-height: 44px;
-    border-top: solid 1px rgba(255, 255, 255, 0.05);
-    border-left: solid 3px transparent;
-    padding: 0 1em 0 calc(1em - 3px);
-    font-style: normal;
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    font-weight: 700;
+    font-size: 0.95em;
+    color: #252122;
+    text-decoration: none;
   }
 
-  /* Wave 4.10. The panel had no "you are here" indicator at all: the desktop
-     bar has had one since the beginning, and on a phone - which is most of
-     this site's traffic - there was nothing. js/components/nav.js copies the
-     class off the baked <li class="current">, so both navigations are marked
-     from one source rather than from two rules that can disagree. */
-  #navPanel .link.current {
-    color: #fff;
-    background: rgba(213, 35, 73, 0.16);
-    border-left-color: #d52349;
+  /* ---- the static, no-JS state: a Menu row in the page flow ---- */
+
+  #mobileNav {
+    display: block;
+    text-align: left;
+    margin: 0.75em 0 0;
   }
 
-  #navPanel .link:active {
-    background: rgba(255, 255, 255, 0.06);
+  .mnav-root > summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    min-height: 48px;
+    padding: 0 1em;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #252122;
+    cursor: pointer;
   }
 
-  #navPanel .link:focus-visible {
-    outline: 3px solid rgba(255, 255, 255, 0.85);
+  .mnav-root > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mnav-root > summary .icon {
+    color: #d52349;
+  }
+
+  .mnav-root[open] > summary {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .mnav-root[open] .mnav-sheet {
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+    background: #fff;
+  }
+
+  /* ---- rows, groups and labels (both states) ---- */
+
+  .mnav-row,
+  .mnav-group > summary {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 1.1em;
+    color: #252122;
+    text-decoration: none;
+    font-size: 0.98em;
+    border-left: 3px solid transparent;
+  }
+
+  .mnav-row:active,
+  .mnav-group > summary:active {
+    background: #faf3f4;
+  }
+
+  .mnav-row:focus-visible,
+  .mnav-group > summary:focus-visible,
+  .mnav-root > summary:focus-visible,
+  .mnav-close:focus-visible {
+    outline: 3px solid #d52349;
     outline-offset: -3px;
   }
 
-  #navPanel .link:first-child {
-    border-top: 0;
+  .mnav-group > summary {
+    list-style: none;
+    cursor: pointer;
+    justify-content: space-between;
+    font-weight: 600;
   }
 
-  #navPanel .indent-1 {
+  .mnav-group > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* One glyph, two states: the plus rotates into a multiplication sign
+     while the group is open - the FAQ accordion's language. */
+  .mnav-group > summary .icon {
+    color: #d52349;
+    transition: transform 0.2s ease;
+  }
+
+  .mnav-group[open] > summary .icon {
+    transform: rotate(45deg);
+  }
+
+  .mnav-group[open] > summary {
+    color: #1f6b77;
+  }
+
+  .mnav-group[open] {
+    background: #fafcfc;
+    border-bottom: 1px solid #eef4f5;
+  }
+
+  .mnav-section {
+    margin: 1.1em 1.1em 0.25em;
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #1f6b77;
+  }
+
+  .mnav-sub-label {
+    margin: 0.35em 1.1em 0;
+    padding-left: 1em;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #6b6b6b;
+  }
+
+  .mnav-row-sub {
+    padding-left: 2.4em;
+    min-height: 44px;
+    font-size: 0.94em;
+  }
+
+  .mnav-row-plain {
+    padding-left: 2.1em;
+    min-height: 44px;
+    font-size: 0.94em;
+  }
+
+  /* Current page: baked as data-mnav-current by page_shell._block(). */
+  a.mnav-row[data-mnav-current] {
+    border-left-color: #d52349;
+    background: #fdf3f5;
+    font-weight: 600;
+    color: #d52349;
+  }
+
+  .mnav-group[data-mnav-current] > summary {
+    border-left-color: #d52349;
+  }
+
+  .mnav-money {
+    margin: 0.35em 0.8em;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #f6cdd7;
+  }
+
+  .mnav-money .mnav-row {
+    background: #fdf3f5;
+    font-weight: 600;
+    color: #b01c3a;
+    gap: 0.7em;
+    border-left: 0;
+  }
+
+  .mnav-money .mnav-row + .mnav-row {
+    border-top: 1px solid #f6cdd7;
+  }
+
+  .mnav-money .icon {
+    width: 1.3em;
+    text-align: center;
+    color: #d52349;
+  }
+
+  .mnav-foot {
+    border-top: 1px solid #eee;
+    margin-top: 0.75em;
+    padding-top: 0.35em;
+  }
+
+  /* ---- the enhanced state: the drawer ---- */
+
+  body.mnav-enhanced #mobileNav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(320px, 88vw);
+    margin: 0;
+    background: #fff;
+    z-index: 10003;
+    transform: translateX(-105%);
+    transition: transform 0.28s ease;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: env(safe-area-inset-left);
+  }
+
+  body.mnav-enhanced .mnav-root > summary {
+    display: none;
+  }
+
+  body.mnav-enhanced .mnav-root {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.mnav-enhanced .mnav-root[open] .mnav-sheet {
+    border: 0;
+    border-radius: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    min-height: 0;
+    padding-bottom: max(1em, env(safe-area-inset-bottom));
+  }
+
+  /* The drawer head nav.js builds: "Menu" and the close control. */
+  .mnav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.25em 0 1.1em;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+  }
+
+  .mnav-head-label {
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #6b6b6b;
+  }
+
+  .mnav-close {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: none;
+    color: #d52349;
+    font-size: 1.05em;
+    cursor: pointer;
+  }
+
+  /* The close glyph is fa-plus rotated 45deg - no new icon in the subset. */
+  .mnav-close .icon {
     display: inline-block;
-    width: 1em;
+    transform: rotate(45deg);
   }
 
-  #navPanel .indent-2 {
-    display: inline-block;
-    width: 2em;
+  #navBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(37, 33, 34, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 10001;
   }
 
-  #navPanel .indent-3 {
-    display: inline-block;
-    width: 3em;
-  }
-
-  #navPanel .indent-4 {
-    display: inline-block;
-    width: 4em;
-  }
-
-  #navPanel .indent-5 {
-    display: inline-block;
-    width: 5em;
-  }
-
-  #navPanel .depth-0 {
-    color: #fff;
-  }
-
-  body.navPanel-visible #page-wrapper {
-    -webkit-transform: translateX(275px);
-    transform: translateX(275px);
-  }
-
-  body.navPanel-visible #titleBar {
-    -webkit-transform: translateX(275px);
-    transform: translateX(275px);
-  }
-
-  body.navPanel-visible #navPanel {
-    -webkit-transform: translateX(0);
+  body.navPanel-visible #mobileNav {
     transform: translateX(0);
+  }
+
+  body.navPanel-visible #navBackdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Background scroll locked while the drawer is open. */
+  body.mnav-enhanced.navPanel-visible {
+    overflow: hidden;
+  }
+}
+
+/* The mobile nav block exists in every page's markup; at desktop widths the
+   #nav bar above it is the navigation and this must not render. */
+@media screen and (min-width: 768px) {
+  #mobileNav {
+    display: none;
   }
 }
 
