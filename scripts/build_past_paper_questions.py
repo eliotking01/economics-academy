@@ -324,11 +324,12 @@ def build(taxonomy, tags, papers):
 # one. Naming Edexcel here made it byte-identical to the Edexcel board page's
 # generated title and gave the site its only pair of duplicate titles.
 TITLE = "A-Level Economics Past Paper Questions | Edexcel & AQA | Economics Academy"
-DESC = (
-    "Search every Edexcel A-Level Economics (9EC0) Section B and Section C past "
-    "paper question from 2017 to 2024. Filter by topic, paper, year and marks, "
-    "with a direct link to the right page of each mark scheme."
-)
+
+# The description is derived, not written down. The hard-coded one it replaced
+# was authored before AQA and the Edexcel AS papers joined the bank and still
+# claimed "every Edexcel (9EC0) question from 2017 to 2024" long after both had
+# stopped being true. render_index() now builds it from the same values the hero
+# prose uses, so adding a paper cannot make it stale again.
 
 
 def e(s):
@@ -846,6 +847,11 @@ def render_index(index):
         f'{index["count"]} questions &middot; {years[0]}&ndash;{years[-1]} '
         f'&middot; {len(index["topics"])} topics &middot; free, no sign-up'
     )
+    desc = (
+        f'{index["count"]} real {names} A-Level Economics past paper questions, '
+        f"{years[0]} to {years[-1]}. Search by topic, paper, year or marks; "
+        "each opens its mark scheme at the right page."
+    )
 
     blocks = []
     for b in boards_with:
@@ -906,7 +912,7 @@ def render_index(index):
 
     return page_shell(
         TITLE,
-        DESC,
+        desc,
         "/past-paper-questions/",
         [("Home", "/"), ("Past Paper Questions", None)],
         body,
