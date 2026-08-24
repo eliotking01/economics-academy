@@ -3531,7 +3531,7 @@ nav.breadcrumb .separator {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #4caf50;
+  color: #2e7d32; /* #4caf50 was 2.78:1 on white; this is 5.13:1 */
   font-weight: bold;
 }
 

@@ -38,6 +38,17 @@
   --content-example-green: #388e3c;
   --spec-purple: #5e35b1;
   --evaluation-orange: #f57c00;
+  /* Text-safe darkenings of the two accents above, following the
+     --quiz-correct-text / --fc-correct-text convention: the originals stay
+     for borders, chips and background washes, and anything set AS TEXT
+     uses these. #27ae60 was 2.87:1 on white and #f57c00 2.70:1. The green
+     is one step darker than quiz.css's #1e8449 because .exam-tip text sits
+     on the block's 8% green wash, not white: #1c7a42 is 4.95:1 there. The
+     orange is 4.29:1 on white - fine for the .evaluation-point h3 (1.4em
+     Source Sans 600, comfortably past the 18.7px-bold large-text line),
+     not for body-size text; scripts/verify_contrast.py holds both. */
+  --exam-green-text: #1c7a42;
+  --evaluation-orange-text: #c25e00;
   --light-bg: #f8fafc;
   --border-light: #e2e8f0;
 }
@@ -236,7 +247,7 @@
 }
 
 .revision-notes-content .exam-tip strong {
-  color: var(--exam-green);
+  color: var(--exam-green-text);
 }
 
 /* Specification alerts */
@@ -304,7 +315,7 @@
 }
 
 .revision-notes-content .evaluation-point h3 {
-  color: var(--evaluation-orange);
+  color: var(--evaluation-orange-text);
   margin-top: 0;
   padding-top: 0;
 }
