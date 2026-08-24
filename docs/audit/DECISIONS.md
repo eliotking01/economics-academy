@@ -2086,3 +2086,38 @@ What is ratified with it:
   in the same commit, per the standing two-file rule.
 - **"Search…" is baked visible text on all 463 pages** — the implementation
   commit carries the 190 `Text-Change:` trailers.
+
+### D60 — the question bank publishes a topic page at two questions, not four
+
+**2026-08-24, proposed on `feature/question-bank-gate`, PENDING Eliot's merge
+of PR #27.** Not ratified until that merge; recorded here because the URLs it
+mints are permanent and the reasoning has to outlive the PR thread.
+
+`build_past_paper_questions.GATE` falls 4 → 2, taking the bank from 81 topic
+pages to 127. What is decided with it:
+
+- **The gate may fall and never rise.** GitHub Pages cannot issue a 301, so
+  every page this publishes is a permanent URL. Raising the gate later would
+  strand each page it removed. The constant carries that warning.
+- **One question is not enough.** The 24 one-question topics stay pageless.
+  Two real questions with mark-scheme deep links, a notes link and a practice
+  link is a page worth landing on; one is a stub, and a stub is what the gate
+  exists to prevent.
+- **No slug is minted by the bank, then or now.** `taxonomy.json` reuses the
+  `questions-data/` slugs verbatim, so all 46 new URLs were already published
+  as notes URLs — checked page by page before the build, along with a
+  collision and near-collision sweep over all 127.
+- **A title collision disambiguates itself.** Edexcel's two "Balance of
+  Payments" topics (2.1.4, 4.1.7) both cleared the gate.
+  `title_collisions()` finds the clash in the data and `display_title()`
+  appends the section, reusing the `(Theme 2)` / `(Theme 4)` spelling
+  `revision-notes/` already uses for the same pair (verify_seo.py's
+  `KNOWN_H1_COLLISION`). Computed, not listed, so the next one cannot ship
+  undisambiguated.
+- **A short page is short.** No filler was added to make a two-question page
+  look bigger. It gets the same intro, breadcrumbs, schema, related topics,
+  notes link and practice link as a 23-question page, and the notes link is
+  where the depth is.
+- **`GATE` is declared once.** `notes_extras.py`, `build_search_index.py` and
+  `verify_past_paper_tags.py` import it; the last of those had kept its own
+  copy and would have gone on reporting 4.

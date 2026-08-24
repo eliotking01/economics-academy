@@ -18,6 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Question-bank page gate 4 → 2 — 46 new topic pages | in review | — | PR #27 |
 | Site-wide search — header box + overlay, all 463 pages | live | 2026-08-24 | `8b329f1e` |
 | Topic-page tail redesign — the 166 notes pages | live | 2026-08-24 | `32c0bacb` |
 | Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
@@ -80,6 +81,54 @@ there.
    the audit reached a wrong conclusion before the graph was checked.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
+
+## Past-paper question bank — page gate 4 → 2 (2026-08-24) — IN REVIEW (PR #27, branch `feature/question-bank-gate`)
+
+**STATE: PR #27 open, full suite green including `verify_seo.py` 20/20 —
+waiting on Eliot's review of the new-URL list, then merge.** One content
+commit plus the hook's sitemap commit. `docs/audit/DECISIONS.md` D60, marked
+pending until the merge.
+
+**What it does.** `build_past_paper_questions.GATE` falls from 4 to 2. The bank
+goes from 81 topic pages to **127 — 46 new, AQA 26 and Edexcel 20**. The 24
+one-question topics stay pageless. Counts verified from `questions.json`, not
+assumed: 151 of the 166 taxonomy topics have at least one tagged question; 15
+have three, 31 have two, 24 have one.
+
+**Why it matters more than the page count suggests.** Below the gate, a topic
+was linked only as `/past-paper-questions/?board=edexcel&topic=<slug>` — a
+query-string filter that needs JavaScript and is not a page Google can index.
+46 notes pages and 46 practice-question pages now point at a real URL instead.
+
+| Changed | Where |
+| --- | --- |
+| `GATE` 4 → 2, with the may-fall-never-rise warning on the constant | `scripts/build_past_paper_questions.py` |
+| `year_span()`: a single year is "all set in 2018", not a bare ", 2018." Ranges byte-identical | same |
+| `title_collisions()` + `display_title()`: Edexcel's two "Balance of Payments" topics take `(Theme 2)` / `(Theme 4)`, the spelling `revision-notes/` already uses | same |
+| Its own `GATE = 4` replaced by an import — it would have gone on reporting 4 | `scripts/verify_past_paper_tags.py` |
+| `PINNED_PAGE_COUNTS["ppq"]` 90 → 136 via `--reseed`. `EXPECTED_SHAPES` unchanged: no new skeleton | `scripts/verify_page_shell.py` |
+| 46 new pages + payloads; 8 hub/section pages relink; 76 topic pages re-rank Related topics | `past-paper-questions/` |
+| 46 notes + 46 practice pages swap the query-string link for the real page — derived, not edited | `revision-notes/`, `practice-questions/` |
+| 16 tests: the gate, `year_span` at n=1/2/3, the collision pair, and that the smallest pages carry the full furniture | `scripts/tests/test_ppq_topic_copy.py` |
+| D60; this section | `docs/audit/DECISIONS.md`, `PROGRESS.md` |
+
+### Three things a future session needs to know
+
+1. **The gate may fall and never rise.** Every page it publishes is a
+   permanent URL and GitHub Pages cannot 301. Raising it strands them.
+2. **Nothing here mints a slug.** `taxonomy.json` reuses `questions-data/`
+   slugs verbatim, so a bank URL is a pure function of a notes URL that has
+   been published for months. That is why 46 new URLs could ship at once.
+3. **`GATE` is declared once and imported three times** — `notes_extras.py`,
+   `build_search_index.py`, `verify_past_paper_tags.py`. Changing it is a
+   one-line edit plus `build.py`; the notes tails, the practice links and
+   `search-index.json` all follow on their own.
+
+**Flagged, not changed** (Eliot's call, both pre-existing on all 127 pages):
+the topic-page `<noscript>` note says questions are listed "grouped by topic"
+on a page that has one topic; and `related_topics()` caps at six with same-unit
+first, so on 76 existing pages a newly-linkable neighbour displaces a
+larger-count one.
 
 ## Accessibility & progressive enhancement pass (2026-08-24) — IN REVIEW (PR #26, branch `feature/a11y-pe`)
 
