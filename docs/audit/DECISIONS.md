@@ -2089,9 +2089,11 @@ What is ratified with it:
 
 ### D60 — the question bank publishes a topic page at two questions, not four
 
-**2026-08-24, proposed on `feature/question-bank-gate`, PENDING Eliot's merge
-of PR #27.** Not ratified until that merge; recorded here because the URLs it
-mints are permanent and the reasoning has to outlive the PR thread.
+**2026-08-24, Eliot, merged as `fc2400a6` (PR #27).** Ratified. He read the
+46-URL list before approving, including the two Balance of Payments pages, and
+re-submitted the past-paper sitemap in Search Console the same day. Recorded
+in full because the URLs it mints are permanent and the reasoning has to
+outlive the PR thread.
 
 `build_past_paper_questions.GATE` falls 4 → 2, taking the bank from 81 topic
 pages to 127. What is decided with it:

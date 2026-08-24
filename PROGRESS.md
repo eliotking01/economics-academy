@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Question-bank page gate 4 → 2 — 46 new topic pages | in review | — | PR #27 |
+| Question-bank page gate 4 → 2 — 46 new topic pages | live | 2026-08-24 | `fc2400a6` |
 | Site-wide search — header box + overlay, all 463 pages | live | 2026-08-24 | `8b329f1e` |
 | Topic-page tail redesign — the 166 notes pages | live | 2026-08-24 | `32c0bacb` |
 | Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
@@ -82,12 +82,16 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Past-paper question bank — page gate 4 → 2 (2026-08-24) — IN REVIEW (PR #27, branch `feature/question-bank-gate`)
+## Past-paper question bank — page gate 4 → 2 (2026-08-24) — LIVE (merged 2026-08-24, `fc2400a6`, PR #27)
 
-**STATE: PR #27 open, full suite green including `verify_seo.py` 20/20 —
-waiting on Eliot's review of the new-URL list, then merge.** One content
-commit plus the hook's sitemap commit. `docs/audit/DECISIONS.md` D60, marked
-pending until the merge.
+**STATE: live.** Eliot merged PR #27 on 2026-08-24 and re-submitted
+`sitemaps/past-paper-questions.xml` in Search Console the same day. He
+approved the new-URL list, including the two Balance of Payments pages, as
+proposed. **The deploy was checked by request, not assumed:** all six spot-
+checked new URLs return 200, the live sitemap carries 136 URLs, both copy
+fixes are on the live pages, both Balance of Payments titles carry their
+theme, and no notes page still emits a `?board=…&topic=…` past-paper link.
+`docs/audit/DECISIONS.md` D60.
 
 **What it does.** `build_past_paper_questions.GATE` falls from 4 to 2. The bank
 goes from 81 topic pages to **127 — 46 new, AQA 26 and Edexcel 20**. The 24

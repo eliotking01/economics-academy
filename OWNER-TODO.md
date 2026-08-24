@@ -16,6 +16,31 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Do next — this week
 
+- [ ] **Request indexing for the best of the 46 new question-bank pages —
+      20 minutes.** The sitemap is re-submitted (24 August), but 46 pages will
+      take weeks to index on their own, and Search Console's manual quota is
+      about 10 URLs a day. Spend it on these, in this order — ranked by what
+      the site actually gets impressions for in the 28 days to 21 August
+      (`seo/gsc-exports/21-08-2026/performance-28d-compare/Queries.csv`), not
+      by guesswork:
+
+      1. `/past-paper-questions/edexcel/4-1-2-specialisation-trade/` — 181 impressions over 42 queries
+      2. `/past-paper-questions/edexcel/1-4-2-government-failure/` — 102, "government failure definition" at position 13
+      3. `/past-paper-questions/aqa/1-3-4-price-elasticity-of-supply/` — 80, but position 35, so the most upside
+      4. `/past-paper-questions/aqa/1-2-2-imperfect-information/` — 58
+      5. `/past-paper-questions/edexcel/1-1-2-positive-normative-statements/` — 11
+      6. `/past-paper-questions/edexcel/3-4-6-monopsony/` — 4
+      7. `/past-paper-questions/aqa/1-8-5-merit-and-demerit-goods/` — 2
+
+      **Two caveats, so this is not read as more than it is.** Those
+      impressions are the *notes* pages ranking on those queries, not the new
+      bank pages — they say a topic has visible demand, not that the bank page
+      will rank. And **zero impressions does not mean nobody searches it**: it
+      means the site is not currently visible for it. Public goods, the trade
+      cycle and balance of payments all scored zero, which is why they are not
+      on this list despite being obvious revision topics — they are candidates
+      for the *next* read, once the pages have had a chance to be seen.
+
 - [ ] **Search Console, after the notes push (live since 2026-08-22, merge
       `ee24918`) — 15 minutes.** Load one Edexcel and one AQA topic page on
       the live site and check the tab shows the new title and the page shows
@@ -349,6 +374,20 @@ Console is then explainable rather than alarming.
   Read the September/October Search Console and GA comparisons against this
   line; Search Console itself is unaffected (it measures Google, not the
   page). No GA4 admin change was needed.
+
+- **24 August 2026 — the question bank's page gate fell 4 → 2 (merge
+  `fc2400a6`, PR #27, D60).** 46 new topic pages went live at once, taking the
+  bank from 81 to 127, and the sitemap was re-submitted the same day. Two
+  things follow for the **October Search Console read**, and both are easy to
+  misread:
+  - **Impressions on `/past-paper-questions/` should RISE from around this
+    date** as the 46 index. That is new inventory, not improved ranking on the
+    pages that already existed — count the two separately.
+  - **Average position for the family may FALL while clicks rise.** 46 pages
+    entering at low positions drag the mean down; it is arithmetic, not a
+    demotion. Compare like for like by filtering to the 81 pre-existing URLs.
+  - The 24 one-question topics are still pageless by design, so a topic
+    missing from the family is not a bug.
 
 ## Done — kept only where the DATE matters to a later measurement
 
