@@ -19,7 +19,7 @@ says how each line was checked.
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
 | Site-wide search — header box + overlay, all 463 pages | on branch `feature/site-search`, PR open | — | — |
-| Topic-page tail redesign — the 166 notes pages | on branch `feature/topic-tail`, PR open | — | — |
+| Topic-page tail redesign — the 166 notes pages | live | 2026-08-24 | `32c0bacb` |
 | Tutoring enquiry form — board, year, enquirer, days | live | 2026-08-23 | `ab255c6` |
 | Performance pass — MathJax, fonts, hubs, images | live | 2026-08-23 | `367297b` |
 | Analytics consent — hard gate + cookie bar | live | 2026-08-23 | `83ae353` |
@@ -129,14 +129,14 @@ load. With scripting off the box is a real link to `/revision-notes/`.
    wording change repeats that, and the mobile header is ~3em taller to fit
    the in-flow box — baked from first paint, so no CLS.
 
-## Topic-page tail redesign — the 166 notes pages (2026-08-23) — ON BRANCH, PR open
+## Topic-page tail redesign — the 166 notes pages (2026-08-23) — LIVE (merged 2026-08-24, `32c0bacb`, PR #23)
 
-**STATE: PR open on `feature/topic-tail`; not merged.** Eliot approved the
+**STATE: live.** Eliot merged PR #23 on 2026-08-24. He had approved the
 design from a static mock (`_working/topic-tail/`, on the branch: the mock
 page, before/after screenshots at 1280 and 360 px, `PROPOSAL.md` with every
 string) and the wording as proposed, and chose to strip the legacy tail out
 of the slices rather than have the generator skip it. `docs/audit/DECISIONS.md`
-D58. Update this heading to LIVE with the merge commit when it lands.
+D58.
 
 **What it fixes.** Every topic page ended in a stack of six full-width boxes:
 related-topic pills, an author box, a three-button "Ready to apply these
