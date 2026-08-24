@@ -67,7 +67,20 @@ GTAG = "G-YVCNRW4QH6"
 # A topic earns its own generated page at this many questions. Re-evaluated on
 # every run, so topics rise above the gate as the bank grows and pages appear
 # without anyone having to remember to add them.
-GATE = 4
+#
+# 4 -> 2 on 2026-08-24. At 4, 70 of the 151 topics that have a question had no
+# page - monopsony, public goods and the trade cycle among them - while the 81
+# that did were the best-built pages on the site: server-rendered, breadcrumbed,
+# schema'd and in the sitemap. Dropping to 2 published 46 more (aqa 26, edexcel
+# 20) and left the 24 one-question topics out, on the judgement that two real
+# questions with mark-scheme links plus a notes link is a page worth landing on
+# and one is not.
+#
+# THIS NUMBER IS DECLARED HERE AND NOWHERE ELSE. notes_extras.py,
+# build_search_index.py and verify_past_paper_tags.py all import it; nothing
+# restates it. A published URL is permanent, so raising it again would strand
+# every page it removes - the gate may fall, never rise.
+GATE = 2
 
 # How many cards a BOARD hub bakes as HTML. Equal to question-search.js's
 # PAGE_SIZE on purpose: the component's first render is the same 20 in the
@@ -691,10 +704,25 @@ def question_count_phrase(n):
 
 
 def year_span(index, questions):
+    """The years phrase that follows a comma in every hero and description.
+
+    A range keeps the en dash it has always had, so nothing that spans two or
+    more years changes. A single year cannot use the same shape: ", 2018."
+    lands as a stray date stamp in a slot the reader is expecting a span in.
+
+    The gate change of 2026-08-24 made that reachable for the first time - no
+    page with four or more questions has ever drawn them all from one year, but
+    two of the 46 new two-question pages do (2.4.4 The Multiplier and 4.2.1
+    Absolute and Relative Poverty, both 2018). "all set in 2018" says the same
+    thing and reads correctly in all three slots that use this: the hub and
+    section heroes, the topic hero, and the meta description of each.
+    """
     years = sorted({index["papers"][q["p"]]["year"] for q in questions})
     if not years:
         return ""
-    return str(years[0]) if years[0] == years[-1] else f"{years[0]}&ndash;{years[-1]}"
+    if years[0] != years[-1]:
+        return f"{years[0]}&ndash;{years[-1]}"
+    return f"set in {years[0]}" if len(questions) == 1 else f"all set in {years[0]}"
 
 
 def static_cards(index, questions):
@@ -1046,6 +1074,38 @@ def render_group_page(index, board, group):
 # ---------------------------------------------------------------- topic pages
 
 
+def title_collisions(index):
+    """(board, title) pairs that more than one PUBLISHED topic page shares.
+
+    Edexcel has exactly one: "Balance of Payments" is both 2.1.4, the account
+    itself in Theme 2, and 4.1.7, the global-economy treatment in Theme 4. Both
+    cleared the gate on 2026-08-24 and would otherwise have shipped with an
+    identical <title>, meta description and <h1> - which is a duplicate-title
+    fault Google acts on, and which seo/tools/verify_seo.py check 6 catches.
+
+    Computed rather than listed, so a second collision disambiguates itself the
+    moment it appears instead of shipping and being spotted later. Nothing is
+    appended when there is no clash, so the other 125 pages are untouched.
+    """
+    seen = collections.Counter(
+        (t["board"], t["title"]) for t in index["topics"].values() if t["hasPage"]
+    )
+    return {pair for pair, n in seen.items() if n > 1}
+
+
+def display_title(index, slug, collisions):
+    """The topic's title, with its section appended only where it has to be.
+
+    "Balance of Payments (Theme 2)" is the spelling revision-notes/ already
+    uses for this pair - see verify_seo.py's KNOWN_H1_COLLISION - so the two
+    families read as twins rather than as two different fixes for one problem.
+    """
+    t = index["topics"][slug]
+    if (t["board"], t["title"]) not in collisions:
+        return t["title"]
+    return f'{t["title"]} ({t["groupLabel"]})'
+
+
 def related_topics(index, slug):
     """Same unit first, then the rest of the group. Same board only."""
     me = index["topics"][slug]
@@ -1100,22 +1160,23 @@ def topic_payload(index, slug):
     }
 
 
-def render_topic_page(index, slug):
+def render_topic_page(index, slug, collisions=frozenset()):
     t = index["topics"][slug]
     board = board_of(index, t["board"])
     group = group_of(index, t["board"], t["group"])
     qs = questions_for(index, topic=slug)
     path = t["url"]
     span = year_span(index, qs)
+    name = display_title(index, slug, collisions)
 
     title = (
-        f'{t["title"]} Past Paper Questions &mdash; {board["name"]} A-Level '
+        f'{name} Past Paper Questions &mdash; {board["name"]} A-Level '
         f"Economics | Economics Academy"
     )
     title = html.unescape(title)
     desc = (
         f'{len(qs)} {board["name"]} A-Level Economics past paper questions on '
-        f'{t["title"]} (spec {t["spec"]}), {span.replace("&ndash;", " to ")}. '
+        f'{name} (spec {t["spec"]}), {span.replace("&ndash;", " to ")}. '
         "Each links straight to the right page of the official mark scheme."
     )
     if len(desc) > 300:
@@ -1137,10 +1198,10 @@ def render_topic_page(index, slug):
 
     body = f"""          <section class="ppq-hero">
             <h1 class="ppq-h1">
-              {e(t["title"])} &mdash; {e(board["name"])} Past Paper Questions
+              {e(name)} &mdash; {e(board["name"])} Past Paper Questions
             </h1>
             <p class="ppq-intro">
-              {question_count_phrase(len(qs))} on <strong>{e(t["title"])}</strong>
+              {question_count_phrase(len(qs))} on <strong>{e(name)}</strong>
               ({e(board["name"])} specification {e(t["spec"])}) from the A-Level
               Economics papers, {span}. Every question links to the official mark
               scheme at the page its answer begins on.
@@ -1330,10 +1391,11 @@ def main():
             emit(*render_group_page(index, board, group))
 
     payload_bytes = 0
+    collisions = title_collisions(index)
     for slug in sorted(
         gated, key=lambda s: [int(p) for p in index["topics"][s]["spec"].split(".")]
     ):
-        path, page = render_topic_page(index, slug)
+        path, page = render_topic_page(index, slug, collisions)
         emit(path, page)
         # Written beside the page it serves, minified for the same reason the
         # master payload is: nobody reads it, the browser fetches it.

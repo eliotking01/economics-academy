@@ -15,7 +15,7 @@ Checks:
   5. No duplicate topics within a question.
 
 Also prints the topic coverage histogram, which is what decides how many topic
-pages clear the volume gate in Phase 3.
+pages clear the volume gate (build_past_paper_questions.GATE).
 
 Standard library only. Exit status is non-zero if any check fails.
 """
@@ -27,7 +27,15 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "past-paper-questions-data"
-GATE = 4  # questions a topic needs before it earns its own page in Phase 3
+
+# Imported, not restated. This file carried its own `GATE = 4` until
+# 2026-08-24, when the gate moved to 2 and the copy here would have gone on
+# reporting the old number - a verifier printing a stale figure is worse than
+# one that prints none. The generator is the single declaration; a verifier
+# importing a generator is the verify_boards.py pattern (the ban in
+# scripts/CLAUDE.md runs the other way).
+sys.path.insert(0, str(ROOT / "scripts"))
+from build_past_paper_questions import GATE  # noqa: E402
 
 
 def main():
@@ -81,7 +89,7 @@ def main():
     print(f"{len(questions)} questions, {len(tags)} tagged")
     print(f"{len(counts)} of {len(valid)} topics have at least one question")
     print(f"{sum(1 for n in counts.values() if n >= GATE)} topics reach the "
-          f"gate of {GATE} and would get a page in Phase 3")
+          f"gate of {GATE} and have their own page")
     print()
     print("Topic coverage, most-tagged first:")
     for slug, n in counts.most_common():
