@@ -95,6 +95,16 @@
     return node;
   }
 
+  // For the screen-reader announcement: card text is stored as HTML.
+  function stripHTML(html) {
+    var node = document.createElement("div");
+    node.innerHTML = html;
+    return (node.textContent || "").replace(/\s+/g, " ").trim();
+  }
+
+  // Ids for aria-describedby must be unique if two players share a page.
+  var uid = 0;
+
   function shuffle(list) {
     for (var i = list.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -217,18 +227,27 @@
     var card = el("button", "fc-card");
     card.type = "button";
     card.setAttribute("aria-expanded", "false");
-    card.setAttribute(
-      "aria-label",
-      "Flashcard. Activate to flip between question and answer."
-    );
+    /* No aria-label: it would REPLACE the card text as the accessible name,
+     * so a screen-reader user would never hear the question. The visible
+     * face is the name; the flip instruction rides along as a description. */
+    var cardHint = el("span", "sr-only");
+    cardHint.id = "fc-card-hint-" + ++uid;
+    cardHint.textContent =
+      "Flashcard. Activate to flip between question and answer.";
+    card.setAttribute("aria-describedby", cardHint.id);
     var cardInner = el("span", "fc-card-inner");
     var front = el("span", "fc-face fc-front");
     var back = el("span", "fc-face fc-back");
-    back.setAttribute("aria-live", "polite");
     back.setAttribute("aria-hidden", "true");
     cardInner.appendChild(front);
     cardInner.appendChild(back);
     card.appendChild(cardInner);
+    /* The answer is announced through this node at flip time. The back face
+     * used to carry aria-live, but its text was written by renderCard while
+     * the card still showed the question, so the flip itself announced
+     * nothing - a live region only speaks when its CONTENT changes. */
+    var announcer = el("span", "sr-only");
+    announcer.setAttribute("role", "status");
 
     var hint = el(
       "p",
@@ -256,6 +275,8 @@
 
     var meta = el("p", "fc-meta");
     stage.appendChild(card);
+    stage.appendChild(cardHint);
+    stage.appendChild(announcer);
     stage.appendChild(hint);
     stage.appendChild(nav);
     stage.appendChild(meta);
@@ -316,6 +337,7 @@
       card.setAttribute("aria-expanded", "false");
       back.setAttribute("aria-hidden", "true");
       front.setAttribute("aria-hidden", "false");
+      announcer.textContent = "";
       front.innerHTML = faceHTML(item, "front");
       back.innerHTML = faceHTML(item, "back");
       rate.hidden = true;
@@ -345,6 +367,17 @@
       card.setAttribute("aria-expanded", flipped ? "true" : "false");
       back.setAttribute("aria-hidden", flipped ? "false" : "true");
       front.setAttribute("aria-hidden", flipped ? "true" : "false");
+      /* Announce at flip time, from the card data rather than the face's
+       * markup: the pre-rendered KaTeX carries its formula twice (MathML +
+       * aria-hidden HTML) and reading the DOM would speak it twice over. */
+      if (flipped) {
+        announcer.textContent =
+          "Answer: " +
+          (item.svgRef && item.svgAlt ? item.svgAlt + ". " : "") +
+          stripHTML(item.back);
+      } else {
+        announcer.textContent = "";
+      }
       rate.hidden = !flipped;
       if (flipped && !flippedIds[item.id]) {
         flippedIds[item.id] = true;
@@ -508,7 +541,12 @@
       restart();
     });
 
-    document.addEventListener("keydown", function (event) {
+    /* Scoped to the player, not the document: bound to document, Space
+     * stopped scrolling every deck page and a stray 1/2/arrow press rated
+     * or moved a card while the visitor was elsewhere on the page. A
+     * keydown listener on the stage (and the summary, so ArrowLeft can
+     * step back out of it) only ever fires while focus is inside. */
+    function onKeydown(event) {
       var target = event.target;
       var name = target && target.tagName;
       if (name === "INPUT" || name === "SELECT" || name === "TEXTAREA") return;
@@ -526,7 +564,9 @@
       } else if (event.key === "2") {
         rateCard(true);
       }
-    });
+    }
+    stage.addEventListener("keydown", onKeydown);
+    summary.addEventListener("keydown", onKeydown);
 
     var touchX = null;
     var touchY = null;
@@ -577,7 +617,21 @@
         });
       })
       .catch(function () {
-        // The static page stands on its own: samples stay visible.
+        /* The static page stands on its own: samples stay visible. But the
+         * page promises the full deck "loads right here", so a failed fetch
+         * needs saying - silence reads as a broken page. The link is a plain
+         * reload, which re-attempts the fetch. */
+        Array.prototype.forEach.call(roots, function (root) {
+          var mount = root.querySelector("[data-fc-mount]");
+          if (!mount || mount.childNodes.length) return;
+          var message = el("p", "fc-error");
+          message.setAttribute("role", "status");
+          message.innerHTML =
+            "The full deck didn&rsquo;t load. Check your connection and " +
+            '<a href="">try again</a> &mdash; the sample cards above still ' +
+            "work.";
+          mount.appendChild(message);
+        });
       });
   }
 
