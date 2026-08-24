@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Site search — implementation walkthrough</title>
+    <!-- QA driver for the SHIPPED search, not the mock: it loads a real
+         generated topic page in a same-origin iframe and drives the real
+         component - the keyboard shortcut, the overlay, the fetch of the
+         real /search-index.json, the GA4 guard - then renders a PASS/FAIL
+         report. Serve the repo root and open
+         /_working/site-search/walkthrough.html?width=1280 (or 360).
+         The overlay is left open on "monopsony" for the screenshot. -->
+    <style>
+      body { margin: 0; font: 14px/1.5 -apple-system, sans-serif; background: #444; color: #eee; display: flex; gap: 16px; padding: 12px; }
+      #report { width: 420px; flex: none; }
+      #report li { margin: 2px 0; list-style: none; }
+      .pass::before { content: "PASS  "; color: #7fdc9a; font-weight: 700; }
+      .fail::before { content: "FAIL  "; color: #ff8a8a; font-weight: 700; }
+      iframe { border: 0; background: #fff; height: 900px; }
+    </style>
+  </head>
+  <body>
+    <ul id="report"></ul>
+    <iframe id="page" src="/revision-notes/edexcel-theme-1/1-2-2-demand.html"></iframe>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const frame = document.getElementById("page");
+      frame.style.width = (params.get("width") || "1280") + "px";
+      const report = document.getElementById("report");
+      const captured = [];
+      let failures = 0;
+
+      function note(name, ok, detail) {
+        const li = document.createElement("li");
+        li.className = ok ? "pass" : "fail";
+        li.textContent = name + (detail ? " — " + detail : "");
+        report.appendChild(li);
+        if (!ok) failures++;
+      }
+      const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+      async function type(doc, q) {
+        const input = doc.querySelector(".site-search__input");
+        input.value = q;
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+        // 80ms debounce + the first call awaits the index fetch.
+        for (let i = 0; i < 40; i++) {
+          await sleep(100);
+          if (doc.querySelector(".site-search__option") ||
+              doc.querySelector(".site-search__quick") ||
+              (doc.querySelector(".site-search__status") || {}).textContent
+                ?.indexOf("Nothing") >= 0) break;
+        }
+        return doc;
+      }
+      const groupTitles = (doc, label) => Array.from(
+        doc.querySelectorAll('.site-search__group[aria-label="' + label +
+          '"] .site-search__option-title'),
+        (el) => el.textContent);
+
+      frame.addEventListener("load", async () => {
+        const win = frame.contentWindow;
+        const doc = frame.contentDocument;
+        win.gtag = function () { captured.push(arguments); };
+
+        // 1. the baked control: a real link with scripting off
+        const control = doc.querySelector(".site-search-open");
+        note("baked control is an <a> to /revision-notes/",
+          !!control && control.tagName === "A" &&
+          control.getAttribute("href") === "/revision-notes/");
+
+        // 2. "/" opens the overlay
+        doc.dispatchEvent(new KeyboardEvent("keydown",
+          { key: "/", bubbles: true }));
+        await sleep(50);
+        let overlay = doc.querySelector(".site-search");
+        note('"/" opens the overlay', !!overlay && !overlay.hidden);
+        note("dialog semantics",
+          overlay?.getAttribute("role") === "dialog" &&
+          overlay?.getAttribute("aria-modal") === "true");
+        note("focus lands in the input",
+          doc.activeElement === doc.querySelector(".site-search__input"));
+
+        // 3. Escape closes and returns focus
+        overlay.dispatchEvent(new KeyboardEvent("keydown",
+          { key: "Escape", bubbles: true }));
+        await sleep(50);
+        note("Escape closes", overlay.hidden);
+        note("focus returns to the page", doc.activeElement !== null);
+
+        // 4. click opens; the empty state is quick links
+        control.click();
+        await sleep(300);
+        note("clicking the box opens the overlay", !overlay.hidden);
+        await type(doc, "");
+        note("empty state offers quick links",
+          doc.querySelectorAll(".site-search__quick-link").length >= 5);
+
+        // 5. monopsony: the float and the groups (real index, real fetch)
+        await type(doc, "monopsony");
+        const float_ = doc.querySelector(".site-search__definition");
+        note("monopsony floats the glossary definition",
+          !!float_ && float_.textContent.indexOf("dominant buyer") !== -1);
+        note("...with a link per board",
+          doc.querySelectorAll(".site-search__def-link").length === 2);
+        note("...and the Edexcel notes page below",
+          groupTitles(doc, "Revision notes").indexOf("Monopsony") !== -1);
+
+        // 6. the brief's other queries
+        await type(doc, "theme 2 flashcards");
+        note("theme 2 flashcards resolves to the deck",
+          groupTitles(doc, "Practice & flashcards")[0] ===
+            "Edexcel A-Level Economics Theme 2 Flashcards");
+
+        await type(doc, "how much is marking");
+        note("how much is marking finds the marking page + FAQs",
+          groupTitles(doc, "Pages").some((t) => t.indexOf("Marking") !== -1) &&
+          groupTitles(doc, "Revision notes").length === 0);
+
+        await type(doc, "monetry policy");
+        note("the typo still finds Monetary Policy",
+          groupTitles(doc, "Revision notes")
+            .some((t) => t.indexOf("Monetary Policy") !== -1));
+
+        await type(doc, "zzzz qqqq");
+        note("no-results message plus quick links",
+          (doc.querySelector(".site-search__status")?.textContent || "")
+            .indexOf("Nothing for") !== -1 &&
+          doc.querySelectorAll(".site-search__quick-link").length >= 5);
+
+        // 7. keyboard navigation and the GA4 guard
+        await type(doc, "demand");
+        const input = doc.querySelector(".site-search__input");
+        input.dispatchEvent(new KeyboardEvent("keydown",
+          { key: "ArrowDown", bubbles: true }));
+        await sleep(50);
+        note("ArrowDown selects the first result",
+          doc.querySelector('[aria-selected="true"]')?.id === "ss-opt-0" &&
+          input.getAttribute("aria-activedescendant") === "ss-opt-0");
+
+        const before = captured.length;
+        const first = doc.querySelector(".site-search__option");
+        first.addEventListener("click", (e) => e.preventDefault());
+        first.click();
+        note("choosing a result fires one gtag search event",
+          captured.length === before + 1 &&
+          captured[before][0] === "event" && captured[before][1] === "search" &&
+          captured[before][2].search_term === "demand");
+
+        // Leave the overlay showing monopsony for the screenshot.
+        await type(doc, "monopsony");
+        const done = document.createElement("li");
+        done.textContent = failures === 0
+          ? "ALL CHECKS PASSED" : failures + " FAILURE(S)";
+        done.style.fontWeight = "700";
+        report.appendChild(done);
+        document.title = failures === 0 ? "WALKTHROUGH-PASS" : "WALKTHROUGH-FAIL";
+      });
+    </script>
+  </body>
+</html>
