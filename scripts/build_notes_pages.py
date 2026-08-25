@@ -121,16 +121,6 @@ DATA = ROOT / "notes-data"
 # verify_page_shell.py's FAMILY_SCRIPT holds the relation.
 NOTES_JS = ("/js/components/notes.js",)
 
-# The one hub that loads the family script too. macro-application is a hub
-# by location (notes-data/hubs/, so topic_key() rightly gives it no topic
-# chrome) and a notes-family content page by design: since the family
-# consistency pass (2026-08-25, D62) its contents-rail scrollspy and the
-# no-JS filter upgrade live in notes.js, which replaced the inline filter
-# script its record used to carry in afterScripts. The six board hubs are
-# index pages and keep the plain tail. verify_page_shell.py names the same
-# page in EXTRA_SCRIPT_PAGES.
-EXTRA_SCRIPT_PAGES = {"revision-notes/macro-application/index.html": NOTES_JS}
-
 # The two anchors the previous/next rows are spliced against. Both were
 # measured across all 166 topic slices before being relied on: every one opens
 # its content with this exact line, at this exact indent, once, and every one
@@ -348,9 +338,7 @@ def build() -> dict[str, str]:
             slice_html = with_topic_nav(slice_html, key)
         slice_html = with_webp_pictures(slice_html, zoom=key is not None)
         pages[rec["path"]] = render(
-            rec, slice_html,
-            NOTES_JS if key is not None
-            else EXTRA_SCRIPT_PAGES.get(rec["path"], ()))
+            rec, slice_html, NOTES_JS if key is not None else ())
     return pages
 
 

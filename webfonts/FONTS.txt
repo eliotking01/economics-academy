@@ -21,5 +21,6 @@ fa-solid-900.woff2 is a subset of Font Awesome Free 5.15.4 (its fonts are
 SIL OFL 1.1); scripts/subset_fontawesome.py regenerates it.
 
 The @font-face rules are in css/main.css (Source Sans Pro) and in
-css/pages/revision-notes-topic.css and css/pages/quiz.css (Merriweather).
+css/pages/revision-notes-topic.css, css/pages/revision-notes-textbook.css
+and css/pages/quiz.css (Merriweather).
 Do not swap Source Sans Pro for Source Sans 3 - the glyphs differ.

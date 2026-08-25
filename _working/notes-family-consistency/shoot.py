@@ -28,7 +28,6 @@ PORT = 8931
 PAGES = {
     "micro": "/revision-notes/microeconomics-diagrams.html",
     "macro": "/revision-notes/macroeconomics-diagrams.html",
-    "macro-app": "/revision-notes/macro-application/index.html",
     "topic-1-2-2": "/revision-notes/edexcel-theme-1/1-2-2-demand.html",
     "hub-theme-1": "/revision-notes/edexcel-theme-1/",
 }
@@ -130,12 +129,12 @@ def main():
     only = sys.argv[1:] or list(PAGES)
     for key in only:
         path = PAGES[key]
-        full = FULL_H if key in ("micro", "macro", "macro-app") else 8000
+        full = FULL_H if key in ("micro", "macro") else 8000
         shot(key, path, 1280, TOP_H, True, OUT / f"{key}-1280-top.png")
         shot(key, path, 1280, full, True, OUT / f"{key}-1280-full.png")
         shot(key, path, 360, TOP_H, True, OUT / f"{key}-360-top.png")
         shot(key, path, 360, full, True, OUT / f"{key}-360-full.png")
-        if key in ("micro", "macro", "macro-app"):
+        if key in ("micro", "macro"):
             shot(key, path, 1280, TOP_H, False, OUT / f"{key}-1280-nojs.png")
             shot(key, path, 360, TOP_H, False, OUT / f"{key}-360-nojs.png")
     pdf(PAGES["micro"], OUT / "micro-print.pdf")

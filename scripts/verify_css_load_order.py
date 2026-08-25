@@ -89,15 +89,15 @@ PAGE_DIR = "/css/pages/"
 # commit that moved it.
 #
 # The collision this check exists to catch cannot happen on these three:
-# BOTH their sheets are scoped - the shared notes sheet
-# (revision-notes-topic.css since 2026-08-25, D62; revision-notes-textbook.css
-# before it) under .revision-notes-content, and each page's own sheet under
-# its page class - and their <main id="main"> carries both classes. Where a
-# page-sheet rule must beat the shared sheet it adds a class, so specificity
-# decides, not load order. PH08-038's concern is two UNSCOPED sheets, where
-# load order silently decides. Named paths rather than a count, in the
-# spirit of EXPECTED = {"edexcel": 87, "aqa": 79} in
-# build_past_paper_taxonomy.py.
+# BOTH their sheets are scoped - the galleries load revision-notes-topic.css
+# (since 2026-08-25, D62) plus revision-notes-diagrams.css under their page
+# classes, and macro-application keeps revision-notes-textbook.css plus its
+# own sheet (its D62 move was reverted on Eliot's instruction) - and their
+# <main id="main"> carries the wrapper class. Where a gallery-sheet rule
+# must beat the shared sheet it adds a class, so specificity decides, not
+# load order. PH08-038's concern is two UNSCOPED sheets, where load order
+# silently decides. Named paths rather than a count, in the spirit of
+# EXPECTED = {"edexcel": 87, "aqa": 79} in build_past_paper_taxonomy.py.
 TWO_SHEET_PAGES = {
     "revision-notes/macro-application/index.html",
     "revision-notes/macroeconomics-diagrams.html",

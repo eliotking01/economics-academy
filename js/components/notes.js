@@ -1,7 +1,7 @@
 /* Notes - the notes family's enhancements, loaded (defer) by the 166
  * generated revision-notes topic pages as their family's extra script,
  * and - since the family consistency pass (2026-08-25, D62) - by the two
- * diagram galleries and macro-application, which share the design.
+ * diagram galleries, which share the design.
  *
  * Progressive enhancement throughout: every element this file shows is also
  * CREATED by it, so a page with JavaScript off carries no dead control -
@@ -21,17 +21,11 @@
  *     quiz.js and consent.js: Safari private mode and a blocked storage
  *     policy throw, and the right answer then is a button that still
  *     toggles for the session and simply forgets. Topic pages only - the
- *     presence of the .topic-meta sub-label is the gate, so the three
- *     reference pages (galleries, macro-application) never grow a toggle
- *     that would mean nothing there.
+ *     presence of the .topic-meta sub-label is the gate, so the gallery
+ *     reference pages never grow a toggle that would mean nothing there.
  *   - Diagram lightbox: upgrades each <a class="diagram-zoom"> (a working
  *     open-the-PNG link without JS) to a native <dialog>, which brings
  *     Esc, backdrop click and focus handling for free.
- *   - Fact-bank filters (macro-application only, keyed on #filter-bar):
- *     the controls are baked <a> jump links to their sections, so with JS
- *     off they navigate; this upgrades them in place to filters. It only
- *     toggles the bank sections below the bar and styles the active link -
- *     it never shows, hides or resizes anything inside the bar itself.
  */
 (function () {
   "use strict";
@@ -71,11 +65,11 @@
   window.addEventListener("scroll", toggleTop, { passive: true });
   toggleTop();
 
-  /* Contents rail scrollspy. The galleries and macro-application anchor
-     the rail on tall sections rather than bare headings, and a tall target
-     never re-fires on the way back up (it never stopped intersecting), so
-     when the CURRENT target scrolls out below the band the highlight steps
-     back to the previous link instead of sticking. */
+  /* Contents rail scrollspy. The galleries anchor the rail on tall
+     sections rather than bare headings, and a tall target never re-fires
+     on the way back up (it never stopped intersecting), so when the
+     CURRENT target scrolls out below the band the highlight steps back to
+     the previous link instead of sticking. */
   var links = main.querySelectorAll(".topic-contents__list a[href^='#']");
   if ("IntersectionObserver" in window && links.length) {
     var byId = {};
@@ -186,89 +180,4 @@
     });
   }
 
-  /* Fact-bank filters - macro-application only. Every control is a baked
-     link that jumps to its section with JS off; here the links become
-     filters instead. Nothing inside #filter-bar is ever shown, hidden or
-     resized - this only toggles the BANK sections below the bar and styles
-     the active link - so the control surface cannot render a half-state. */
-  var bar = document.getElementById("filter-bar");
-  if (bar) {
-    var countryChips = Array.prototype.slice.call(
-      bar.querySelectorAll(".filter-country-btn")
-    );
-    var topicChips = Array.prototype.slice.call(
-      bar.querySelectorAll(".filter-topic-btn")
-    );
-    var appSections = Array.prototype.slice.call(
-      main.querySelectorAll(".application-section")
-    );
-    var activeCountry = "all";
-    var activeTopic = null;
-
-    var applyFilter = function () {
-      var uk = document.getElementById("uk-section");
-      var sa = document.getElementById("sa-section");
-      if (uk) {
-        uk.style.display =
-          activeCountry === "all" || activeCountry === "uk" ? "" : "none";
-      }
-      if (sa) {
-        sa.style.display =
-          activeCountry === "all" || activeCountry === "sa" ? "" : "none";
-      }
-      appSections.forEach(function (s) {
-        s.style.display =
-          !activeTopic || s.dataset.topic === activeTopic ? "" : "none";
-      });
-    };
-
-    var setCountry = function (code) {
-      activeCountry = code;
-      countryChips.forEach(function (c) {
-        var on = c.dataset.country === code;
-        c.classList.toggle("is-active", on);
-        c.setAttribute("aria-pressed", on ? "true" : "false");
-      });
-    };
-
-    var setTopic = function (t) {
-      activeTopic = t;
-      topicChips.forEach(function (c) {
-        var on = t !== null && c.dataset.topic === t;
-        c.classList.toggle("is-active", on);
-        c.setAttribute("aria-pressed", on ? "true" : "false");
-      });
-    };
-
-    countryChips.forEach(function (chip) {
-      chip.setAttribute("role", "button");
-      chip.setAttribute(
-        "aria-pressed",
-        chip.classList.contains("is-active") ? "true" : "false"
-      );
-      chip.addEventListener("click", function (ev) {
-        ev.preventDefault();
-        setCountry(chip.dataset.country);
-        setTopic(null);
-        applyFilter();
-      });
-    });
-
-    topicChips.forEach(function (chip) {
-      chip.setAttribute("role", "button");
-      chip.setAttribute("aria-pressed", "false");
-      chip.addEventListener("click", function (ev) {
-        ev.preventDefault();
-        if (activeTopic === chip.dataset.topic) {
-          setTopic(null);
-        } else {
-          setCountry(chip.dataset.forCountry);
-          setTopic(chip.dataset.topic);
-        }
-        applyFilter();
-      });
-    });
-
-    applyFilter();
-  }
 })();

@@ -69,30 +69,30 @@ PAIRS: list[tuple] = [
     ("css/pages/past-paper-questions.css",
      ".past-paper-questions-page .ppq-badge-theme", WHITE, 4.5, "bg"),
     ("css/pages/past-papers-list.css", ".exam-board-tag", WHITE, 4.5, "bg"),
-    # revision-notes-textbook.css carried four pairs here until 2026-08-25
-    # (D62): the notes family consistency pass moved its last three pages
-    # onto revision-notes-topic.css and the sheet is deleted. The galleries'
-    # and macro-application's own pairs are below.
+    ("css/pages/macro-application.css", ".section-placeholder", WHITE, 4.5),
+    # revision-notes-textbook.css serves macro-application only since the
+    # family consistency pass (2026-08-25, D62) moved the two diagram
+    # galleries onto revision-notes-topic.css; the galleries' redesign kept
+    # its own pairs below, and macro-application's revert (Eliot's call the
+    # same day) kept these four textbook pairs live.
+    ("css/pages/revision-notes-textbook.css",
+     ".revision-notes-content .exam-tip strong", "#eef8f2", 4.5),
+    # An h3 in the notes: 1.4em Merriweather bold >= 18.7px bold, so 3:1.
+    ("css/pages/revision-notes-textbook.css",
+     ".revision-notes-content .evaluation-point h3", "#fef4ea", 3.0),
+    # The small-caps labels the topic-tail redesign already darkened - held
+    # here against regression.
+    ("css/pages/revision-notes-textbook.css",
+     ".revision-notes-content .topic-contents__label", "#f8fafc", 4.5),
+    ("css/pages/revision-notes-textbook.css",
+     ".revision-notes-content .topic-related__label", WHITE, 4.5),
+    # The galleries' own sheet, on the D61 tokens.
     ("css/pages/revision-notes-diagrams.css",
      ".revision-notes-content.micro-diagrams-page .diagram-card__meta",
      WHITE, 4.5),
     ("css/pages/revision-notes-diagrams.css",
      ".revision-notes-content.micro-diagrams-page .exam-note strong",
      "#f2faf5", 4.5),
-    # The filter links: navy at rest, teal when active, both on the panel's
-    # wash ground (the shared sheet's --nt-wash).
-    ("css/pages/macro-application.css",
-     ".revision-notes-content #filter-bar a", "#f8fafc", 4.5),
-    ("css/pages/macro-application.css",
-     ".revision-notes-content #filter-bar a.is-active", "#f8fafc", 4.5),
-    # The sample sentence sits on the fact card's navy tint (the shared
-    # sheet's --nt-navy-tint), and the closing section's evaluation h4 on
-    # the evaluation tint.
-    ("css/pages/macro-application.css",
-     ".revision-notes-content .exam-sentence", "#f4f5f8", 4.5),
-    ("css/pages/macro-application.css",
-     ".revision-notes-content #using-application .evaluation-point h4",
-     "#fef8f2", 4.5),
     # The notes-redesign sheet (2026-08-25, D61), the 166 topic pages. The
     # tints are declared as hex tokens in the sheet precisely so these pairs
     # stay computable. The exam-tip and evaluation labels are the two pairs

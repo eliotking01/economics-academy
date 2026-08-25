@@ -124,7 +124,7 @@ pages = site_layout.pages
 EXPECTED_SHAPES = {
     "root":          (9, 9, 1, 9),
     "notes-topic":   (2, 1, 1, 1),
-    "notes-hub":     (2, 2, 2, 2),
+    "notes-hub":     (2, 2, 1, 2),
     "notes-other":   (2, 3, 2, 2),
     "past-papers":   (2, 2, 1, 2),
     "mcq-topic":     (1, 1, 1, 1),
@@ -260,18 +260,18 @@ FAMILY_SCRIPT = {
 # page injects widget.js (and its widget.css, formerly a render-blocking
 # <link> in the <head>) when the booking section nears the viewport. Nothing
 # third-party was a <script src> on any page from then until 2026-08-25
-# (D62, the notes family consistency pass), when the three notes reference
-# pages - the two hand-written diagram galleries (notes-other, via
-# bake_templates.EXTRA_COMPONENT_SCRIPTS) and macro-application (a notes-hub
-# record, via build_notes_pages.EXTRA_SCRIPT_PAGES) - joined the notes
-# design and its notes.js enhancements without their whole families
-# following: revision-notes/index.html and the six board hubs are index
-# pages and stay on the plain tail.
+# (D62, the notes family consistency pass), when the two hand-written
+# diagram galleries (notes-other, via
+# bake_templates.EXTRA_COMPONENT_SCRIPTS) joined the notes design and its
+# notes.js enhancements without their whole family following:
+# revision-notes/index.html stays on the plain tail, as do the notes-hub
+# pages including macro-application, whose redesign was reverted on
+# Eliot's instruction the same day (its filter panel painted glitchily in
+# his browsers however it was built).
 EXTRA_SCRIPT_PAGES = {
     "/js/components/notes.js": {
         "revision-notes/microeconomics-diagrams.html",
         "revision-notes/macroeconomics-diagrams.html",
-        "revision-notes/macro-application/index.html",
     },
 }
 

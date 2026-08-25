@@ -1,287 +1,254 @@
-/* /revision-notes/macro-application/ - the filterable fact bank.
-
-   Rewritten 2026-08-25 for the notes family consistency pass (D62): the
-   page left revision-notes-textbook.css for the shared notes sheet,
-   css/pages/revision-notes-topic.css, and this file now holds only what
-   the fact bank needs that a topic page does not: the card internals
-   (h4-led fact cards), the filter bar, the country/section hierarchy and
-   the grouped contents sub-lists. The design system is the shared sheet's
-   (D61); D62 extends it here.
-
-   TOKENS. The --nt-* custom properties come from revision-notes-topic.css,
-   which verify_css_load_order.py guarantees loads first on this page.
-   Colours pinned in scripts/verify_contrast.py are literal hex, because
-   that checker resolves var() only against this file's own tokens.
-
-   SCOPE. css/CLAUDE.md names this file the scoping exemplar: every rule
-   sits under .revision-notes-content (the page's <main> wrapper class).
-   Overrides of the shared sheet add a second hook (an id or extra class)
-   so they win on specificity, not load order.
-
-   FILTERS DEGRADE TO JUMP LINKS. The chips in #filter-bar are <a> elements
-   pointing at the section ids, so with JavaScript off they navigate;
-   js/components/notes.js upgrades them in place to show/hide filters.
-   Nothing here hides content without JS. */
-
-/* The shared sheet parks the rail at `grid-row: 3 / span 90` - generic
-   headroom for a topic page's unknown section count, leaving ~84 empty
-   implicit rows. This page's direct children are known and few, so the
-   rail spans exactly the content rows instead: one less oddity for the
-   compositor on a 19,000px page (see the #filter-bar paint note below). */
-@media screen and (min-width: 1024px) {
-  .revision-notes-content.revision-notes-content .topic-contents {
-    grid-row: 3 / 10;
-  }
+.revision-notes-content .quick-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5em 0 2em 0;
 }
 
-/* ── The contents rail's grouped sub-lists ──────────────────
-   The shared sheet's .topic-contents__list is the flat top level (Before
-   you start / UK / South Africa / How to use); each country entry carries
-   a sub-list of its topic sections. */
-.revision-notes-content .topic-contents__sublist {
-  list-style: none;
-  margin: 0.25em 0 0.4em;
-  padding-left: 1.1em;
-  font-size: 0.95em;
+.revision-notes-content .quick-links a {
+  display: block;
+  padding: 1em 1.2em;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  border-bottom-style: solid;
 }
 
-.revision-notes-content .topic-contents__sublist li {
-  margin: 0.2em 0;
-  padding-left: 0;
-}
-
-.revision-notes-content .topic-contents__sublist a {
-  color: var(--nt-muted);
-  text-decoration: none;
-  border-bottom: 1px solid var(--nt-line);
-}
-
-.revision-notes-content .topic-contents__sublist a:hover,
-.revision-notes-content .topic-contents__sublist a:focus-visible {
-  color: var(--nt-navy);
-  border-bottom-color: var(--nt-navy);
-}
-
-@media screen and (min-width: 1024px) {
-  .revision-notes-content .topic-contents__sublist a {
-    border-bottom: none;
-    display: inline-block;
-    padding: 0.05em 0;
-  }
-}
-
-/* ── The filter ─────────────────────────────────────────────
-   Rebuilt from the ground up (D62 review): plain inline text-link lists in
-   a grammar panel, the .topic-related idiom the topic pages already ship.
-   No flex, no grid, no pills, and notes.js never shows, hides or resizes
-   anything inside this panel - it only styles the active link and toggles
-   the bank sections below. `display: inline` list items are the most
-   robust layout primitive available; there is nothing here to squash.
-   Colours the contrast pins check are literal hex. */
-.revision-notes-content #filter-bar {
-  width: 100%;
-  margin: 1.6em 0 2em;
-  padding: 0.9em 1.2em 1em;
-  background: var(--nt-wash);
-  border: 1px solid var(--nt-line);
-  border-left: 3px solid var(--nt-teal-border);
-  border-radius: 0 8px 8px 0;
-  font-family: var(--nt-heading);
-  /* Paint isolation. On this page - ~19,000px tall, a sticky rail beside a
-     ~17,000px grid item - the panel was intermittently PAINTED squeezed to
-     a sliver while its measured geometry stayed correct, and its painted
-     size changed with scroll: a compositor reusing a stale texture at the
-     wrong horizontal scale, across three markup designs of the same panel.
-     Promoting the panel to its own composited layer and containing its
-     paint stops neighbouring invalidations smearing it. Layout-neutral. */
-  transform: translateZ(0);
-  contain: paint;
-}
-
-.revision-notes-content #filter-bar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 2;
-}
-
-.revision-notes-content #filter-bar li {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-
-.revision-notes-content #filter-bar li:not(:last-child)::after {
-  content: "\00B7";
-  margin: 0 0.6em;
-  color: var(--nt-muted);
-}
-
-.revision-notes-content #filter-bar a {
-  font-size: 0.92em;
-  font-weight: 600;
-  /* Lines break between links, never inside a topic name. */
-  white-space: nowrap;
-  color: #1a3e72;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
-}
-
-.revision-notes-content #filter-bar a:hover,
-.revision-notes-content #filter-bar a:focus-visible {
-  border-bottom-color: #1a3e72;
-}
-
-.revision-notes-content #filter-bar a:focus-visible {
-  outline: 2px solid var(--nt-teal);
-  outline-offset: 2px;
-}
-
-/* The chosen filter, set by notes.js; without it every link stays a plain
-   navy jump link, which is the whole no-JS page. */
-.revision-notes-content #filter-bar a.is-active {
-  color: #1f6b77;
-  border-bottom: 2px solid #1f6b77;
-}
-
-.revision-notes-content .app-filter__countries a {
-  font-size: 1em;
-}
-
-.revision-notes-content .app-filter__group-label {
-  margin: 0.7em 0 0;
-  font-size: 0.75em;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--nt-muted);
-}
-
-/* ── The section hierarchy: country > topic > fact card ──── */
-
-.revision-notes-content .country-section {
-  margin-top: 2.4em;
-}
-
-/* Country headings take the shared h2 treatment plus a hairline that marks
-   the super-group. */
-.revision-notes-content h2.country-heading {
-  margin: 0 0 0.25em;
-  padding-bottom: 0.35em;
-  border-bottom: 1px solid var(--nt-line);
-  scroll-margin-top: 1.2em;
-}
-
-/* Topic sections mirror the shared sheet's section rhythm. */
-.revision-notes-content .application-section {
-  margin-top: 1.8em;
-  scroll-margin-top: 1.2em;
-}
-
-.revision-notes-content .application-section + .application-section {
-  margin-top: 2.2em;
-  padding-top: 2em;
-  border-top: 1px solid var(--nt-line);
-}
-
-.revision-notes-content .application-section h3,
-.revision-notes-content #using-application h3 {
-  margin: 0 0 0.8em;
-  font-size: 1.25em;
-  color: var(--nt-navy);
-}
-
-/* The closing how-to section sits after the fact bank. */
-.revision-notes-content #using-application {
-  margin-top: 2.4em;
-  padding-top: 2em;
-  border-top: 1px solid var(--nt-line);
-  scroll-margin-top: 1.2em;
-}
-
-.revision-notes-content #before-you-start {
-  scroll-margin-top: 1.2em;
-}
-
-/* ── Fact cards ─────────────────────────────────────────────
-   Each card is an .application (the shared component: navy tint, 3px rule)
-   whose own h4 does the labelling - so the generated "Application" label
-   is suppressed, the worked-example-h3 precedent. Same for the two h4-led
-   blocks in the closing section. */
 .revision-notes-content .application-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
-  margin-top: 1em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5em;
 }
 
-.revision-notes-content .application.macro-card::before,
-.revision-notes-content #using-application .application::before,
-.revision-notes-content #using-application .evaluation-point::before {
-  content: none;
-}
-
-.revision-notes-content .application.macro-card {
+.revision-notes-content .macro-card {
+  height: 100%;
   margin: 0;
 }
 
-.revision-notes-content .macro-card h4,
-.revision-notes-content #using-application h4 {
-  margin: 0 0 0.5em;
-  font-family: var(--nt-heading);
-  font-weight: 600;
-  font-size: 1.02em;
-  line-height: 1.3;
-  color: var(--nt-navy);
+.revision-notes-content .macro-card h4 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
-.revision-notes-content #using-application .evaluation-point h4 {
-  color: #a04d00;
-}
-
-.revision-notes-content .macro-card p {
-  font-size: 0.95em;
-  margin-bottom: 0.8em;
+.revision-notes-content .macro-card p:last-child {
+  margin-bottom: 0;
 }
 
 .revision-notes-content .fact-line {
-  margin-top: 0;
+  margin-top: 0.5em;
 }
 
-/* The adaptable sentence, set apart in navy. Hex for the contrast pin
-   (the card ground is the shared sheet's navy tint). */
 .revision-notes-content .exam-sentence {
   color: #1a3e72;
 }
 
-/* Two next-step panels, not three, so the row splits evenly. One class
-   deeper than the shared sheet's rule so specificity, not load order,
-   decides. */
-@media screen and (min-width: 768px) {
-  .revision-notes-content .topic-next .topic-next__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 980px) {
+  .revision-notes-content .quick-links,
+  .revision-notes-content .application-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+/* ── Filter bar ─────────────────────────────────────────── */
+
+#filter-bar {
+  margin: 1.5em 0 2em 0;
+  padding: 1.2em 1.5em;
+  background: var(--light-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+}
+
+.filter-country-group {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 0.75em;
+  flex-wrap: wrap;
+}
+
+.filter-topic-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+#filter-bar .filter-country-btn,
+#filter-bar .filter-topic-btn {
+  padding: 0.4em 1em;
+  border: 1.5px solid var(--border-light);
+  border-radius: 20px;
+  background: #fff;
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: 600;
+  cursor: pointer;
+  color: #444 !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+#filter-bar .filter-country-btn:hover,
+#filter-bar .filter-topic-btn:hover {
+  background: var(--border-light);
+  color: #333 !important;
+}
+
+#filter-bar .filter-country-btn.is-active {
+  background: var(--primary-blue);
+  color: #fff !important;
+  border-color: var(--primary-blue);
+}
+
+#filter-bar .filter-topic-btn.is-active {
+  background: var(--accent-teal);
+  color: #fff !important;
+  border-color: var(--accent-teal);
+}
+
+/* ── Country section headings ───────────────────────────── */
+
+.country-heading {
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--primary-blue);
+  margin-top: 2em;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--accent-teal);
+}
+
+/* ── Empty-section placeholder ──────────────────────────── */
+
+.section-placeholder {
+  grid-column: 1 / -1;
+  color: #6b6b6b; /* #888 was 3.54:1 on white; this is 4.98:1 */
+  font-style: italic;
+  padding: 0.5em 0;
+  margin: 0;
 }
 
 @media (max-width: 600px) {
-  .revision-notes-content #filter-bar {
-    padding: 0.8em 1em 0.9em;
+  #filter-bar {
+    padding: 1em;
   }
-
-  .revision-notes-content #filter-bar a {
-    font-size: 0.88em;
+  #filter-bar .filter-country-btn,
+  #filter-bar .filter-topic-btn {
+    font-size: 0.8em;
+    padding: 0.35em 0.8em;
   }
 }
 
-@media print {
-  /* The filter bar is a control surface; printed, the whole bank shows. */
-  .revision-notes-content #filter-bar {
-    display: none !important;
+/* ── Heading-level compatibility ─────────────────────────────
+   The revision notes gained a proper <h1> page title, so
+   revision-notes-textbook.css moved its body-heading styles up one
+   level (section h3 -> h2, sub-heading h4 -> h3). The page title and
+   "Before You Start" have since been raised to h1 and h2, but the
+   country sections below them still use the older h3/h4 structure, so
+   their previous appearance is restored here. This stylesheet is loaded
+   only by this page, and after revision-notes-textbook.css, so nothing
+   else is affected.
+   ──────────────────────────────────────────────────────────── */
+
+/* Section headings here are h3: restore the former h3 treatment. */
+.revision-notes-content h3 {
+  color: var(--primary-blue);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin: 2em 0 1em 0;
+  padding: 0.75em 1em;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 137, 152, 0.08) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-left: 5px solid var(--accent-teal);
+  border-bottom: none;
+  border-radius: 0 6px 6px 0;
+  position: relative;
+}
+
+.revision-notes-content h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-teal), transparent);
+}
+
+/* Sub-headings here are h4: restore the former h4 treatment. */
+.revision-notes-content h4 {
+  color: var(--secondary-blue);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.4em;
+  margin: 1.8em 0 0.8em 0;
+  padding-bottom: 0.4em;
+  border-bottom: 2px dashed var(--border-light);
+}
+
+/* The page title is an h1 inside header.major. main.css and the textbook
+   stylesheet size it, but this page has always carried extra horizontal
+   padding on it, which is preserved here. */
+.revision-notes-content .notes-container > header.major h1 {
+  margin: 0 0 0.5em 0;
+  padding: 0 1em 0.5em 1em;
+  border-left: none;
+  border-radius: 0;
+  /* main.css lifts header.major headings with "top: -0.65em" but only
+     matches h2, so the title keeps its original position here. */
+  position: relative;
+  top: -0.65em;
+}
+
+.revision-notes-content .notes-container > header.major h1:before {
+  content: none;
+}
+
+/* Country headings are plain h2s, not note-page section headings, so
+   they must opt out of the section styling now attached to h2. */
+.revision-notes-content h2.country-heading {
+  font-size: 1.5em;
+  margin: 2em 0 0.25em 0;
+  padding: 0 0 0.4em 0;
+  background: none;
+  border-left: none;
+  border-radius: 0;
+  position: static;
+}
+
+.revision-notes-content h2.country-heading:before {
+  content: none;
+}
+
+@media (max-width: 767px) {
+  /* Matches the tighter title spacing the textbook CSS applies here. */
+  .revision-notes-content .notes-container > header.major h1 {
+    margin: 0 0 0.3em 0;
+    padding: 0 1em 0.3em 1em;
   }
 
-  .revision-notes-content .application.macro-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  .revision-notes-content h3 {
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    margin: 1.5em 0 0.8em 0;
+  }
+
+  .revision-notes-content h4 {
+    font-size: 1.2em;
+    margin: 1.5em 0 0.6em 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .revision-notes-content h3 {
+    font-size: 1.3em;
+    padding: 0.5em;
   }
 }
