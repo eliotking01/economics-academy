@@ -1,15 +1,20 @@
 /* ==========================================================================
    Revision-notes topic pages - the reading layout
    ==========================================================================
-   Loaded by the 166 generated topic pages only, via each record's
-   pageStylesheets in notes-data/topics/; the two diagram galleries and
-   macro-application keep revision-notes-textbook.css, which this sheet
-   replaces on the topic pages. The design was approved at Gates 1 and 2 of
-   the notes topic-page redesign - _working/notes-redesign/ holds the mocks,
-   PROPOSAL.md and PLAN.md, and docs/audit/DECISIONS.md D61 records the
-   roll-out. Every rule is scoped under .revision-notes-content, per
-   css/CLAUDE.md, and the sheet keeps the wrapper class the pages already
-   carry so no record changes for the scoping.
+   The notes family's shared sheet: the 166 generated topic pages load it
+   via each record's pageStylesheets in notes-data/topics/, and - since the
+   family consistency pass (2026-08-25, D62) - so do the two hand-written
+   diagram galleries and macro-application, each with its own second sheet
+   on top for what only it needs (revision-notes-diagrams.css,
+   macro-application.css). revision-notes-textbook.css, which this sheet
+   replaced, is deleted. The design was approved at Gates 1 and 2 of the
+   notes topic-page redesign - _working/notes-redesign/ holds the mocks,
+   PROPOSAL.md and PLAN.md; docs/audit/DECISIONS.md D61 records the
+   roll-out and D62 the extension to the last three pages. Every rule is
+   scoped under .revision-notes-content, per css/CLAUDE.md, and the sheet
+   keeps the wrapper class the pages already carry so no record changes for
+   the scoping. A satellite sheet's override adds one more class so it wins
+   on specificity, not load order.
 
    THE SYSTEM IN ONE PARAGRAPH. A reading page, not a card: white ground, a
    38em (~72-character) reading column, Merriweather for prose and Source

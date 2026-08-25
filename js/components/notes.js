@@ -1,5 +1,7 @@
-/* Notes - the topic pages' enhancements, loaded (defer) only by the 166
- * generated revision-notes topic pages, as their family's extra script.
+/* Notes - the notes family's enhancements, loaded (defer) by the 166
+ * generated revision-notes topic pages as their family's extra script,
+ * and - since the family consistency pass (2026-08-25, D62) - by the two
+ * diagram galleries and macro-application, which share the design.
  *
  * Progressive enhancement throughout: every element this file shows is also
  * CREATED by it, so a page with JavaScript off carries no dead control -
@@ -18,10 +20,18 @@
  *     on this device" idiom. Reads and writes are inside try/catch, like
  *     quiz.js and consent.js: Safari private mode and a blocked storage
  *     policy throw, and the right answer then is a button that still
- *     toggles for the session and simply forgets.
- *   - Diagram lightbox: upgrades each generated <a class="diagram-zoom">
- *     (a working open-the-PNG link without JS) to a native <dialog>, which
- *     brings Esc, backdrop click and focus handling for free.
+ *     toggles for the session and simply forgets. Topic pages only - the
+ *     presence of the .topic-meta sub-label is the gate, so the three
+ *     reference pages (galleries, macro-application) never grow a toggle
+ *     that would mean nothing there.
+ *   - Diagram lightbox: upgrades each <a class="diagram-zoom"> (a working
+ *     open-the-PNG link without JS) to a native <dialog>, which brings
+ *     Esc, backdrop click and focus handling for free.
+ *   - Fact-bank filters (macro-application only, keyed on #filter-bar):
+ *     the chips are baked <a> jump links to their sections, so with JS off
+ *     they navigate; this upgrades them in place to show/hide filters,
+ *     restoring the behaviour the page's retired inline script gave the
+ *     old <button> chips.
  */
 (function () {
   "use strict";
@@ -61,36 +71,53 @@
   window.addEventListener("scroll", toggleTop, { passive: true });
   toggleTop();
 
-  /* Contents rail scrollspy */
+  /* Contents rail scrollspy. The galleries and macro-application anchor
+     the rail on tall sections rather than bare headings, and a tall target
+     never re-fires on the way back up (it never stopped intersecting), so
+     when the CURRENT target scrolls out below the band the highlight steps
+     back to the previous link instead of sticking. */
   var links = main.querySelectorAll(".topic-contents__list a[href^='#']");
   if ("IntersectionObserver" in window && links.length) {
     var byId = {};
+    var order = [];
     Array.prototype.forEach.call(links, function (a) {
-      byId[a.hash.slice(1)] = a;
+      var id = a.hash.slice(1);
+      if (!(id in byId)) order.push(id);
+      byId[id] = a;
     });
     var current = null;
+    var setCurrent = function (link) {
+      if (current === link) return;
+      if (current) current.classList.remove("is-current");
+      current = link;
+      if (current) current.classList.add("is-current");
+    };
     var spy = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (e) {
+          var link = byId[e.target.id];
           if (e.isIntersecting) {
-            if (current) current.classList.remove("is-current");
-            current = byId[e.target.id];
-            if (current) current.classList.add("is-current");
+            setCurrent(link);
+          } else if (link === current && e.boundingClientRect.top > 0) {
+            var i = order.indexOf(e.target.id);
+            if (i > 0) setCurrent(byId[order[i - 1]]);
           }
         });
       },
       { rootMargin: "0px 0px -70% 0px" }
     );
-    Object.keys(byId).forEach(function (id) {
+    order.forEach(function (id) {
       var h = document.getElementById(id);
       if (h) spy.observe(h);
     });
   }
 
-  /* Mark as revised */
+  /* Mark as revised - topic pages only (see the header comment) */
   var lastSection = null;
   var sections = main.querySelectorAll(".notes-container > section");
-  if (sections.length) lastSection = sections[sections.length - 1];
+  if (sections.length && main.querySelector(".topic-meta")) {
+    lastSection = sections[sections.length - 1];
+  }
   if (lastSection) {
     var key = "ea-revised:" + location.pathname;
     var wrap = document.createElement("div");
@@ -157,5 +184,96 @@
         dlg.showModal();
       });
     });
+  }
+
+  /* Fact-bank filters - macro-application only. The chips are baked links
+     that jump to their sections with JS off; here they become show/hide
+     filters, the behaviour the page has always had with JS on. */
+  var bar = document.getElementById("filter-bar");
+  if (bar) {
+    var countryChips = Array.prototype.slice.call(
+      bar.querySelectorAll(".filter-country-btn")
+    );
+    var topicChips = Array.prototype.slice.call(
+      bar.querySelectorAll(".filter-topic-btn")
+    );
+    var appSections = Array.prototype.slice.call(
+      main.querySelectorAll(".application-section")
+    );
+    var activeCountry = "all";
+    var activeTopic = null;
+
+    var applyFilter = function () {
+      var uk = document.getElementById("uk-section");
+      var sa = document.getElementById("sa-section");
+      if (uk) {
+        uk.style.display =
+          activeCountry === "all" || activeCountry === "uk" ? "" : "none";
+      }
+      if (sa) {
+        sa.style.display =
+          activeCountry === "all" || activeCountry === "sa" ? "" : "none";
+      }
+      appSections.forEach(function (s) {
+        s.style.display =
+          !activeTopic || s.dataset.topic === activeTopic ? "" : "none";
+      });
+      /* Topic chips only make sense within one country's bank. */
+      topicChips.forEach(function (c) {
+        c.style.display =
+          activeCountry !== "all" && c.dataset.forCountry === activeCountry
+            ? ""
+            : "none";
+      });
+    };
+
+    countryChips.forEach(function (chip) {
+      chip.setAttribute("role", "button");
+      chip.setAttribute(
+        "aria-pressed",
+        chip.classList.contains("is-active") ? "true" : "false"
+      );
+      chip.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        activeCountry = chip.dataset.country;
+        activeTopic = null;
+        countryChips.forEach(function (c) {
+          c.classList.remove("is-active");
+          c.setAttribute("aria-pressed", "false");
+        });
+        chip.classList.add("is-active");
+        chip.setAttribute("aria-pressed", "true");
+        topicChips.forEach(function (c) {
+          c.classList.remove("is-active");
+          c.setAttribute("aria-pressed", "false");
+        });
+        applyFilter();
+      });
+    });
+
+    topicChips.forEach(function (chip) {
+      chip.setAttribute("role", "button");
+      chip.setAttribute("aria-pressed", "false");
+      chip.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var t = chip.dataset.topic;
+        if (activeTopic === t) {
+          activeTopic = null;
+          chip.classList.remove("is-active");
+          chip.setAttribute("aria-pressed", "false");
+        } else {
+          activeTopic = t;
+          topicChips.forEach(function (c) {
+            c.classList.remove("is-active");
+            c.setAttribute("aria-pressed", "false");
+          });
+          chip.classList.add("is-active");
+          chip.setAttribute("aria-pressed", "true");
+        }
+        applyFilter();
+      });
+    });
+
+    applyFilter();
   }
 })();

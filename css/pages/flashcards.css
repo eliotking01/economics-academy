@@ -8,7 +8,7 @@
  *
  * Colours are the practice-questions palette, restated locally exactly as
  * quiz.css restates the notes palette: the :root tokens in
- * revision-notes-textbook.css belong to the notes pages and are not loaded
+ * revision-notes-topic.css belong to the notes pages and are not loaded
  * here. Question face and structure carry the navy; the answer face carries
  * the green; brand red is kept for "Again" and the CTA buttons.
  *

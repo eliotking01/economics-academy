@@ -260,7 +260,7 @@ body.is-preload *:after {
    been the only things set in Open Sans, and now use Source Sans Pro at the
    same weights - 400, 600 and 700. Merriweather is declared in the two
    sheets that use it
-   (revision-notes-textbook.css, quiz.css) so it downloads only there.
+   (revision-notes-topic.css, quiz.css) so it downloads only there.
    The body face is preloaded from every <head>; the rest arrive as the
    cascade asks for them. font-display: swap matches the old display=swap. */
 

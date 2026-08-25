@@ -1,5 +1,5 @@
 /* Merriweather, self-hosted (performance pass, 2026-08-23). Declared here
-   and in css/pages/revision-notes-textbook.css rather than in css/main.css, so that
+   and in css/pages/revision-notes-topic.css rather than in css/main.css, so that
    only the pages whose text is set in it download the files - the static
    latin woff2 Google itself serves (Merriweather v33), glyphs unchanged,
    licence in /webfonts/. The "Merriweather Fallback" metric match stays in
@@ -39,7 +39,7 @@
    so nothing here can collide with another page's stylesheet.
 
    Colours are the notes palette, restated locally because the :root tokens in
-   revision-notes-textbook.css belong to the notes pages and are not loaded here. */
+   revision-notes-topic.css belong to the notes pages and are not loaded here. */
 
 .quiz-page {
   --quiz-primary: #1a3e72;

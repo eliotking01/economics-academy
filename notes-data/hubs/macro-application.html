@@ -21,7 +21,45 @@
               then link them directly to the argument in the question.
             </div>
 
-            <section>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">
+                On this page
+              </p>
+              <ol class="topic-contents__list">
+                <li><a href="#before-you-start">Before You Start</a></li>
+                <li>
+                  <a href="#uk-section">United Kingdom</a>
+                  <ol class="topic-contents__sublist">
+                    <li><a href="#uk-macroeconomic-performance">Macroeconomic Performance</a></li>
+                    <li><a href="#uk-inflation-monetary-policy">Inflation and Monetary Policy</a></li>
+                    <li><a href="#uk-labour-market">Labour Market</a></li>
+                    <li><a href="#uk-inequality-living-standards">Inequality and Living Standards</a></li>
+                    <li><a href="#uk-public-finances">Public Finances</a></li>
+                    <li><a href="#uk-government-spending">Government Spending</a></li>
+                    <li><a href="#uk-supply-side-policy">Supply-Side and Structural Policy</a></li>
+                    <li><a href="#uk-financial-sector">Financial Sector</a></li>
+                    <li><a href="#uk-external-trade">External Position and Trade</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#sa-section">South Africa</a>
+                  <ol class="topic-contents__sublist">
+                    <li><a href="#sa-growth-development">Growth and Development</a></li>
+                    <li><a href="#sa-labour-market">Labour Market</a></li>
+                    <li><a href="#sa-inflation-monetary-policy">Inflation and Monetary Policy</a></li>
+                    <li><a href="#sa-inequality-living-standards">Inequality and Living Standards</a></li>
+                    <li><a href="#sa-healthcare-education">Healthcare and Education</a></li>
+                    <li><a href="#sa-public-finances">Public Finances</a></li>
+                    <li><a href="#sa-infrastructure">Infrastructure</a></li>
+                    <li><a href="#sa-external-trade">External Position and Trade</a></li>
+                    <li><a href="#sa-governance">Governance and Institutions</a></li>
+                  </ol>
+                </li>
+                <li><a href="#using-application">How to Use Application Well</a></li>
+              </ol>
+            </nav>
+
+            <section id="before-you-start">
               <h2>Before You Start</h2>
               <p>
                 This page turns current UK and South Africa macroeconomic data
@@ -47,35 +85,39 @@
               </p>
             </div>
 
-            <!-- Filter bar -->
+            <!-- Filter bar. Every chip is a real link to its section, so with
+                 JavaScript off it navigates; js/components/notes.js upgrades
+                 the chips in place to show/hide filters (D62). -->
             <div id="filter-bar">
               <div class="filter-country-group" role="group" aria-label="Filter by country">
-                <button class="filter-country-btn is-active" data-country="all">All</button>
-                <button class="filter-country-btn" data-country="uk">UK</button>
-                <button class="filter-country-btn" data-country="sa">South Africa</button>
+                <a class="filter-country-btn is-active" data-country="all" href="#application-bank">All</a>
+                <a class="filter-country-btn" data-country="uk" href="#uk-section">UK</a>
+                <a class="filter-country-btn" data-country="sa" href="#sa-section">South Africa</a>
               </div>
               <div class="filter-topic-group" id="filter-topics">
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="macroeconomic-performance">Macroeconomic Performance</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="inflation-monetary-policy">Inflation &amp; Monetary Policy</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="labour-market">Labour Market</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="inequality-living-standards">Inequality &amp; Living Standards</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="public-finances">Public Finances</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="government-spending">Government Spending</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="supply-side-policy">Supply-Side Policy</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="financial-sector">Financial Sector</button>
-                <button class="filter-topic-btn" data-for-country="uk" data-topic="external-trade">External Position &amp; Trade</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-growth-development">Growth &amp; Development</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-labour-market">Labour Market</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-inflation-monetary-policy">Inflation &amp; Monetary Policy</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-inequality-living-standards">Inequality &amp; Living Standards</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-healthcare-education">Healthcare &amp; Education</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-public-finances">Public Finances</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-infrastructure">Infrastructure</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-external-trade">External Position &amp; Trade</button>
-                <button class="filter-topic-btn" data-for-country="sa" data-topic="sa-governance">Governance &amp; Institutions</button>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="macroeconomic-performance" href="#uk-macroeconomic-performance">Macroeconomic Performance</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="inflation-monetary-policy" href="#uk-inflation-monetary-policy">Inflation &amp; Monetary Policy</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="labour-market" href="#uk-labour-market">Labour Market</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="inequality-living-standards" href="#uk-inequality-living-standards">Inequality &amp; Living Standards</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="public-finances" href="#uk-public-finances">Public Finances</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="government-spending" href="#uk-government-spending">Government Spending</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="supply-side-policy" href="#uk-supply-side-policy">Supply-Side Policy</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="financial-sector" href="#uk-financial-sector">Financial Sector</a>
+                <a class="filter-topic-btn" data-for-country="uk" data-topic="external-trade" href="#uk-external-trade">External Position &amp; Trade</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-growth-development" href="#sa-growth-development">Growth &amp; Development</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-labour-market" href="#sa-labour-market">Labour Market</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inflation-monetary-policy" href="#sa-inflation-monetary-policy">Inflation &amp; Monetary Policy</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inequality-living-standards" href="#sa-inequality-living-standards">Inequality &amp; Living Standards</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-healthcare-education" href="#sa-healthcare-education">Healthcare &amp; Education</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-public-finances" href="#sa-public-finances">Public Finances</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-infrastructure" href="#sa-infrastructure">Infrastructure</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-external-trade" href="#sa-external-trade">External Position &amp; Trade</a>
+                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-governance" href="#sa-governance">Governance &amp; Institutions</a>
               </div>
             </div>
 
+            <!-- The whole fact bank - the "All" chip's no-JS jump target. -->
+            <div id="application-bank">
             <!-- ========== UK SECTION ========== -->
             <div class="country-section" id="uk-section">
               <h2 class="country-heading">United Kingdom</h2>
@@ -2024,6 +2066,7 @@
               </section>
 
             </div><!-- end #sa-section -->
+            </div><!-- end #application-bank -->
 
             <section id="using-application">
               <h3>How to Use Application Well</h3>
@@ -2060,14 +2103,37 @@
               </div>
             </section>
 
-            <div class="notes-cta">
-              <p>Ready to apply these notes?</p>
-              <a href="/revision-notes/glossary/" class="button alt"
-                >Glossary &amp; Formulae</a
-              >
-              <a href="/past-papers/" class="button alt">Past Papers</a>
-              <a href="/marking.html" class="button alt">Get Essays Marked</a>
-              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
-            </div>
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">
+                Carry on revising
+              </p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/revision-notes/glossary/"
+                    >Glossary &amp; Formulae</a
+                  >
+                  <p class="topic-next__note">
+                    Definitions and formulae from the revision notes, in one
+                    place.
+                  </p>
+                </li>
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/"
+                    >Past papers</a
+                  >
+                  <p class="topic-next__note">
+                    Question papers and mark schemes for every board, by paper
+                    and year.
+                  </p>
+                </li>
+              </ul>
+            </nav>
+
+            <p class="topic-services">
+              Not sure how to work these into an essay? Practise with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a
+              free 15-minute intro call, or send an essay for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
 
           </div><!-- end .notes-container -->
