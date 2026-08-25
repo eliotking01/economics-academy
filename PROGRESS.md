@@ -82,10 +82,56 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Notes topic-page redesign — the 166 pages (2026-08-25) — IN REVIEW (PR open, branch `feature/notes-redesign`)
+## Notes family consistency — the two diagram galleries (2026-08-25) — IN REVIEW (PR open, branch `feature/notes-family-consistency`)
 
 **STATE: implemented, verified, PR open — waiting on Eliot's merge (a merge
-commit, never a squash).** The three-gate project from the 2026-08-25 brief:
+commit, never a squash).** The follow-on from the notes redesign: the two
+hand-written diagram galleries (`microeconomics-diagrams.html`,
+`macroeconomics-diagrams.html`) join the D61 reading design —
+`revision-notes-topic.css` plus a rewritten `revision-notes-diagrams.css`,
+the "On this page" rail replacing the Contents jump-list, cards on
+hairlines, `exam-note` in the exam-tip clothes, the framed no-JS
+tap-to-enlarge on all 87 raster diagrams, first diagram promoted
+`fetchpriority="high"`, and the notes-cta replaced by the D58-style close
+with every destination surviving exactly once. Content byte-identical,
+proved by `_working/notes-family-consistency/check_content_identity.py`.
+`docs/audit/DECISIONS.md` D62.
+
+| Changed | Where |
+| --- | --- |
+| Both galleries rebuilt on the shared sheet; head swaps textbook → topic sheet | `revision-notes/*-diagrams.html` |
+| The gallery sheet, rewritten on the D61 tokens, scoped one class deeper than the shared sheet | `css/pages/revision-notes-diagrams.css` |
+| Per-page component-script hook for hand-written pages (`EXTRA_COMPONENT_SCRIPTS`); tail sync understands `defer` | `scripts/bake_templates.py` |
+| `EXTRA_SCRIPT_PAGES` names the two galleries; notes-other tails reseeded 1 → 2 | `scripts/verify_page_shell.py` |
+| Mark-as-revised gated on `.topic-meta`; scrollspy steps back on upward scroll | `js/components/notes.js` |
+| The four textbook pairs stay (one page still loads that sheet); two gallery pairs added | `scripts/verify_contrast.py` |
+| Gate 1 record: PROPOSAL, content-identity proof, screenshot harness, evidence | `_working/notes-family-consistency/` |
+
+### Three things a future session needs to know
+
+1. **`revision-notes-textbook.css` now serves exactly ONE page,
+   macro-application — because that page's move onto the design was built
+   and then REVERTED, byte for byte, on Eliot's instruction.** Its filter
+   panel painted intermittently squashed in his Chrome and Safari through
+   three filter designs and two paint-isolation attempts, while headless
+   Chromium/WebKit/Firefox rendered the same files correctly — a
+   compositing fault, not layout (measured geometry stayed right while the
+   paint was wrong). The full record: this branch's git history and
+   `_working/notes-family-consistency/PROPOSAL.md`. Do not re-attempt by
+   iterating markup; start from why that page's paint misbehaves.
+2. **The galleries get notes.js through the bake**, never a hand-edited
+   tail: `bake_templates.EXTRA_COMPONENT_SCRIPTS` +
+   `verify_page_shell.EXTRA_SCRIPT_PAGES`, the standing two-file rule.
+3. **The galleries' CTA destinations were pinned deliberately** — the
+   past-papers panel still points at `/past-papers/` (all boards), not
+   `/past-papers/edexcel/`; upgrading it is a one-line change per gallery
+   awaiting Eliot's say-so.
+
+## Notes topic-page redesign — the 166 pages (2026-08-25) — LIVE (merged 2026-08-25, `53532083`, PR #30)
+
+**STATE: live.** Eliot merged PR #30 on 2026-08-25 with a merge commit
+(`53532083`); this heading said "IN REVIEW" until the family-consistency
+docs pass the same day corrected it. The three-gate project from the 2026-08-25 brief:
 Gate 1 mock and Gate 2 plan approved by Eliot (both in
 `_working/notes-redesign/`, the design record), Gate 3 implemented the plan
 as written. `docs/audit/DECISIONS.md` D61.
@@ -130,9 +176,9 @@ the fix.
 ### Three things a future session needs to know
 
 1. **The old sheet still ships.** `revision-notes-textbook.css` is loaded by
-   the two diagram galleries and `macro-application/` only. Do not delete it,
-   and do not "fix" the topic pages by editing it — their sheet is
-   `revision-notes-topic.css`.
+   `macro-application/` only since the family-consistency pass moved the two
+   galleries off it (D62, same day). Do not delete it, and do not "fix" any
+   other page by editing it — the notes sheet is `revision-notes-topic.css`.
 2. **`notes.js` is a family extra, not a tail change.**
    `page_shell.SCRIPT_TAIL` is untouched and still five; the relation lives
    in `verify_page_shell.py`'s `FAMILY_SCRIPT`. A new topic gets the sheet

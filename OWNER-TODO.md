@@ -465,6 +465,17 @@ Absorbed from `ROADMAP.md` on 2026-08-20. These are things worth building, not
 things that are wrong; anything already broken belongs in `docs/REVIEW-NOTES.md`
 or `docs/CONTENT_ISSUES.md` instead.
 
+- [ ] **Macro-application onto the notes reading design — blocked on a
+      rendering fault, not on design work.** The family-consistency pass
+      (D62, 2026-08-25) built the move three ways and reverted it on your
+      instruction: whatever the filter's markup, the panel intermittently
+      painted squashed in your Chrome AND Safari, its painted size varying
+      with scroll while its measured geometry stayed correct — and no
+      headless engine (Chromium, WebKit, Firefox) could reproduce it. The
+      full record is `_working/notes-family-consistency/PROPOSAL.md` and
+      that branch's git history. A future attempt should start by
+      reproducing the paint fault on your machine (is it this page, this
+      machine, or an extension?), not by iterating the markup again.
 - [ ] **Migrate the revision notes from MathJax to KaTeX.** The glossary
       pre-renders KaTeX at build time; the LaTeX-bearing notes pages still load
       MathJax 3 from a CDN, so the same formula looks slightly different in the

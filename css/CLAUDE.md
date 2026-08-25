@@ -1,8 +1,10 @@
 # css/
 
 `main.css` is site-wide. **One stylesheet per page in `css/pages/`, named after
-the page.** Three pages load two: `macro-application` and the two diagram
-galleries, which share `revision-notes-diagrams.css`.
+the page.** Three pages load two: the two diagram galleries load the shared
+notes sheet `revision-notes-topic.css` plus `revision-notes-diagrams.css`
+(D62, 2026-08-25), and `macro-application` loads
+`revision-notes-textbook.css` plus its own sheet.
 `scripts/verify_css_load_order.py` names them, and a fourth fails there.
 
 - **Scope everything.** Put a wrapper class on the page's `<main id="main">` and
@@ -19,13 +21,15 @@ galleries, which share `revision-notes-diagrams.css`.
   `#main .row > div[class*="col-"]`, and every harness assertion passed both.
   Prove it with `python3 docs/audit/scripts/harness/computed_style_diff.py OLD NEW`.
 - **`:root` colour tokens are a notes-only idiom, in two sheets.** The 166
-  topic pages load `revision-notes-topic.css` (the 2026-08-25 reading-layout
-  redesign, D61) whose `--nt-*` tokens are declared as hex precisely so
-  `scripts/verify_contrast.py` can compute its pinned pairs; the two diagram
-  galleries and macro-application still load `revision-notes-textbook.css`
-  with its older tokens — that sheet is frozen for those three pages, so do
-  not restyle the topic pages by editing it. Elsewhere use hex. The brand
-  accent is `#d52349`.
+  topic pages and the two diagram galleries load `revision-notes-topic.css`
+  (the 2026-08-25 reading-layout redesign, D61; the galleries joined it in
+  D62) whose `--nt-*` tokens are declared as hex precisely so
+  `scripts/verify_contrast.py` can compute its pinned pairs — a satellite
+  sheet may use them (the shared sheet always loads first there) but any
+  contrast-pinned colour is literal hex. `macro-application` alone still
+  loads `revision-notes-textbook.css` with its older tokens — frozen, its
+  D62 move was reverted (see D62 for why), so do not restyle anything else
+  by editing it. Elsewhere use hex. The brand accent is `#d52349`.
 - **Reuse the `.resource-*` block at the END of `main.css`** — the shared hero,
   stat strip, card grid, cross strip, services panel and (since 2026-08-23)
   the `.resource-index-*` topic index used by the notes and practice board
@@ -43,7 +47,8 @@ galleries, which share `revision-notes-diagrams.css`.
 static latin woff2 files Google Fonts itself serves, byte-for-byte for Source
 Sans Pro, metric-identical instances for Merriweather, licences alongside.
 Source Sans Pro (6 cuts: 300, 300 italic, 400, 600, 700, 900) is `@font-face`
-in `main.css`; Merriweather (3) only in `revision-notes-textbook.css` and
+in `main.css`; Merriweather (3) only in `revision-notes-topic.css`,
+`revision-notes-textbook.css` and
 `quiz.css`, so it downloads only where a stack names it. **Open Sans is gone**
 (Eliot's call, 2026-08-23): the breadcrumb, consent bar, hub index counts and
 codes and the CTA straps now use Source Sans Pro at the same weights — do not
