@@ -108,7 +108,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <link rel="stylesheet" href="/css/pages/revision-notes-diagrams.css" />
     <script type="application/ld+json">
       {
@@ -416,9 +416,11 @@
               revision notes, with exact duplicate image files included once.
             </div>
 
-            <section>
-              <h2>Contents</h2>
-              <ul class="topic-jump-list">
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">
+                On this page
+              </p>
+              <ol class="topic-contents__list">
                 <li>
                   <a href="#measures-performance">Measures of Performance</a>
                 </li>
@@ -450,8 +452,8 @@
                     >Development, Inequality and State</a
                   >
                 </li>
-              </ul>
-            </section>
+              </ol>
+            </nav>
 
             <section class="diagram-topic" id="measures-performance">
               <h2>Measures of Economic Performance</h2>
@@ -463,18 +465,20 @@
                   </div>
                   <h3>Demand-Pull Inflation</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ad-shift-right.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ad-shift-right.webp" />
                     <img
                       src="/images/diagrams/ad-shift-right.png"
                       alt="AD/AS diagram showing aggregate demand shifting right and pulling the price level up, causing demand-pull inflation"
                       class="diagram-image"
-                      loading="lazy"
                       decoding="async"
                       width="2444"
                       height="1666"
+                      fetchpriority="high"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows aggregate demand increasing from AD1 to AD2, raising
                       the price level and real output.
@@ -505,6 +509,7 @@
                   </div>
                   <h3>Cost-Push Inflation</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/sras-shift-left.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/sras-shift-left.webp" />
                     <img
@@ -517,6 +522,7 @@
                       height="1366"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows SRAS shifting left, raising the price level and
                       reducing real output.
@@ -552,6 +558,7 @@
                   </div>
                   <h3>Movements Along Aggregate Demand</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ad-movements.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ad-movements.webp" />
                     <img
@@ -564,6 +571,7 @@
                       height="1386"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the inverse relationship between the average price
                       level and real GDP demanded.
@@ -593,6 +601,7 @@
                   </div>
                   <h3>Shifts of Aggregate Demand</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ad-shift.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ad-shift.webp" />
                     <img
@@ -605,6 +614,7 @@
                       height="1416"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows AD shifting when a determinant other than the price
                       level changes.
@@ -635,6 +645,7 @@
                   </div>
                   <h3>Short-Run Aggregate Supply Curve</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/sras-movements.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/sras-movements.webp" />
                     <img
@@ -647,6 +658,7 @@
                       height="1494"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the positive relationship between the price level
                       and real GDP supplied in the short run.
@@ -676,6 +688,7 @@
                   </div>
                   <h3>Shifts of Short-Run Aggregate Supply</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/sras-shift.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/sras-shift.webp" />
                     <img
@@ -688,6 +701,7 @@
                       height="1538"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows SRAS shifting right when production costs fall.
                     </figcaption>
@@ -717,6 +731,7 @@
                   </div>
                   <h3>Classical LRAS</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/lras-classical.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/lras-classical.webp" />
                     <img
@@ -729,6 +744,7 @@
                       height="1536"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows long-run output fixed at full employment, regardless
                       of the price level.
@@ -759,6 +775,7 @@
                   </div>
                   <h3>Keynesian LRAS</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/lras-keynesian.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/lras-keynesian.webp" />
                     <img
@@ -771,6 +788,7 @@
                       height="1780"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows spare capacity at low output and inflationary
                       pressure near full capacity.
@@ -801,6 +819,7 @@
                   </div>
                   <h3>Shifts of LRAS</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/lras-shift.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/lras-shift.webp" />
                     <img
@@ -813,6 +832,7 @@
                       height="1248"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the economy's productive potential increasing as
                       LRAS shifts right.
@@ -843,6 +863,7 @@
                   </div>
                   <h3>AD-LRAS Equilibrium</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ad-lras-equilibrium.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ad-lras-equilibrium.webp" />
                     <img
@@ -855,6 +876,7 @@
                       height="1300"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows equilibrium where AD intersects LRAS in Classical
                       and Keynesian models.
@@ -885,6 +907,7 @@
                   </div>
                   <h3>AD Increase in the Classical Model</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/classical-ad-shift-right.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/classical-ad-shift-right.webp" />
                     <img
@@ -897,6 +920,7 @@
                       height="1724"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows AD shifting right in the Classical model, raising
                       the price level but not long-run output.
@@ -928,6 +952,7 @@
                   </div>
                   <h3>AD Increase in the Keynesian Model</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/keynesian-ad-shift-right.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/keynesian-ad-shift-right.webp" />
                     <img
@@ -940,6 +965,7 @@
                       height="1676"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows AD shifting right on the horizontal section of
                       Keynesian LRAS, increasing output with little inflation.
@@ -976,6 +1002,7 @@
                   </div>
                   <h3>Circular Flow of Income</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/circular-flow-of-income.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/circular-flow-of-income.webp" />
                     <img
@@ -988,6 +1015,7 @@
                       height="1616"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the flow of money and resources between households
                       and firms.
@@ -1021,6 +1049,7 @@
                   </div>
                   <h3>Injections and Withdrawals</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/circular-flow-of-income-injections-withdrawals.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/circular-flow-of-income-injections-withdrawals.webp" />
                     <img
@@ -1033,6 +1062,7 @@
                       height="1662"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows injections of investment, government spending and
                       exports, and withdrawals of saving, tax and imports.
@@ -1063,6 +1093,7 @@
                   </div>
                   <h3>The Multiplier Effect</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/multiplier.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/multiplier.webp" />
                     <img
@@ -1075,6 +1106,7 @@
                       height="645"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows an initial increase in AD leading to a larger final
                       increase in real GDP.
@@ -1111,6 +1143,7 @@
                   </div>
                   <h3>Short-Run Growth in the AD/SRAS Model</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/sras-ad-shift-right.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/sras-ad-shift-right.webp" />
                     <img
@@ -1123,6 +1156,7 @@
                       height="1638"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows AD increasing, raising real GDP and the price level
                       in the short run.
@@ -1153,6 +1187,7 @@
                   </div>
                   <h3>Short-Run Growth on a PPF</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ppf-short-run-growth.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ppf-short-run-growth.webp" />
                     <img
@@ -1165,6 +1200,7 @@
                       height="1486"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows actual growth as output moves closer to the existing
                       PPF.
@@ -1198,6 +1234,7 @@
                   </div>
                   <h3>Long-Run Growth in AD/AS</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/long-run-growth-ad-lras.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/long-run-growth-ad-lras.webp" />
                     <img
@@ -1210,6 +1247,7 @@
                       height="1454"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows LRAS shifting right, increasing the economy's
                       productive potential.
@@ -1240,6 +1278,7 @@
                   </div>
                   <h3>Long-Run Growth on a PPF</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ppf-long-run-growth.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ppf-long-run-growth.webp" />
                     <img
@@ -1252,6 +1291,7 @@
                       height="1680"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the PPF shifting outward as productive potential
                       increases.
@@ -1285,6 +1325,7 @@
                   </div>
                   <h3>Negative Output Gap: Classical View</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/negative-output-gap-classical.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/negative-output-gap-classical.webp" />
                     <img
@@ -1297,6 +1338,7 @@
                       height="1564"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows real output below full employment output.
                     </figcaption>
@@ -1329,6 +1371,7 @@
                   </div>
                   <h3>Negative Output Gap: Keynesian View</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/negative-output-gap-keynesian.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/negative-output-gap-keynesian.webp" />
                     <img
@@ -1341,6 +1384,7 @@
                       height="1616"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows output below full employment on the Keynesian LRAS
                       curve.
@@ -1373,6 +1417,7 @@
                   </div>
                   <h3>Positive Output Gap</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/positive-output-gap-classical.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/positive-output-gap-classical.webp" />
                     <img
@@ -1385,6 +1430,7 @@
                       height="1582"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows real output above full employment output.
                     </figcaption>
@@ -1414,6 +1460,7 @@
                   </div>
                   <h3>The Trade Cycle</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/trade-cycle.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/trade-cycle.webp" />
                     <img
@@ -1426,6 +1473,7 @@
                       height="1504"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows boom and recession phases around a long-term trend
                       growth line.
@@ -1464,6 +1512,7 @@
                   </div>
                   <h3>Expansionary Demand-Side Policy</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/ad-shift-right-classical-keynesian.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/ad-shift-right-classical-keynesian.webp" />
                     <img
@@ -1476,6 +1525,7 @@
                       height="1312"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows AD shifting right under expansionary fiscal or
                       monetary policy.
@@ -1505,6 +1555,7 @@
                   </div>
                   <h3>Supply-Side Policy: Classical LRAS Shift</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/classical-lras-shift-right.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/classical-lras-shift-right.webp" />
                     <img
@@ -1517,6 +1568,7 @@
                       height="1510"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows supply-side policy increasing full employment output
                       and lowering the price level.
@@ -1547,6 +1599,7 @@
                   </div>
                   <h3>Supply-Side Policy: Keynesian LRAS Shift</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/keynesian-lras-shift-right.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/keynesian-lras-shift-right.webp" />
                     <img
@@ -1559,6 +1612,7 @@
                       height="1534"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the Keynesian LRAS curve shifting right after
                       supply-side improvements.
@@ -1589,6 +1643,7 @@
                   </div>
                   <h3>Short-Run Phillips Curve</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/short-run-phillips-curve.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/short-run-phillips-curve.webp" />
                     <img
@@ -1601,6 +1656,7 @@
                       height="1248"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the short-run trade-off between unemployment and
                       inflation.
@@ -1676,6 +1732,7 @@
                   </div>
                   <h3>Impact of a Tariff</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/tariff.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/tariff.webp" />
                     <img
@@ -1688,6 +1745,7 @@
                       height="1546"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows a tariff raising the domestic price and reducing
                       imports.
@@ -1718,6 +1776,7 @@
                   </div>
                   <h3>Exchange Rate Changes</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/exchange-rates.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/exchange-rates.webp" />
                     <img
@@ -1730,6 +1789,7 @@
                       height="1302"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows appreciation after demand for the currency rises and
                       depreciation after supply of the currency rises.
@@ -1765,6 +1825,7 @@
                   </div>
                   <h3>Lorenz Curve and Gini Coefficient</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/lorenz-curve.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/lorenz-curve.webp" />
                     <img
@@ -1777,6 +1838,7 @@
                       height="1622"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows inequality as the gap between the Lorenz curve and
                       the line of perfect equality.
@@ -1807,6 +1869,7 @@
                   </div>
                   <h3>Kuznets Curve</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/kuznets-curve.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/kuznets-curve.webp" />
                     <img
@@ -1819,6 +1882,7 @@
                       height="1548"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows the hypothesis that inequality may rise then fall as
                       an economy develops.
@@ -1850,6 +1914,7 @@
                   </div>
                   <h3>Buffer Stock Scheme</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/buffer-stocks.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/buffer-stocks.webp" />
                     <img
@@ -1862,6 +1927,7 @@
                       height="1728"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows stocks being bought when supply is high and released
                       when supply is low.
@@ -1891,6 +1957,7 @@
                   </div>
                   <h3>Laffer Curve</h3>
                   <figure class="diagram-figure">
+                    <a class="diagram-zoom" href="/images/diagrams/laffer-curve.png">
                     <picture>
                     <source type="image/webp" srcset="/images/diagrams/laffer-curve.webp" />
                     <img
@@ -1903,6 +1970,7 @@
                       height="1508"
                     />
                     </picture>
+                    </a>
                     <figcaption class="diagram-caption">
                       Shows tax revenue rising then falling as tax rates
                       increase.
@@ -1926,17 +1994,38 @@
                 </article>
               </div>
             </section>
-            <div class="notes-cta">
-              <p>Ready to apply these notes?</p>
-              <a href="/revision-notes/glossary/" class="button alt"
-                >Glossary &amp; Formulae</a
-              >
-              <a href="/past-papers/" class="button alt"
-                >Past Papers</a
-              >
-              <a href="/marking.html" class="button alt">Get Essays Marked</a>
-              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
-            </div>
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">
+                Carry on revising
+              </p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/revision-notes/glossary/"
+                    >Glossary &amp; Formulae</a
+                  >
+                  <p class="topic-next__note">
+                    Definitions and formulae from the revision notes, in one
+                    place.
+                  </p>
+                </li>
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/"
+                    >Past papers</a
+                  >
+                  <p class="topic-next__note">
+                    Question papers and mark schemes for every board, by paper
+                    and year.
+                  </p>
+                </li>
+              </ul>
+            </nav>
+
+            <p class="topic-services">
+              Stuck on a diagram? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a
+              free 15-minute intro call, or send an essay for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
           </div>
         </div>
       </main>
@@ -1971,5 +2060,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>
