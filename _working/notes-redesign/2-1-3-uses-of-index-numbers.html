@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOCK — Uses of Index Numbers — notes topic-page redesign (Gate 1, rev 2)</title>
+    <!-- Gate 1 second mock (Eliot's review, point 5): the densest page on
+         the site - three worked examples, six formula boxes, two exam tips,
+         concept and calculation tables, h3s and an ordered list - so the
+         formula-heavy components can be reviewed on a real page. Built the
+         same way as the Demand mock; check_content_identity.py proves the
+         content region matches the live page. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/_working/notes-redesign/notes-redesign.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/aqa-a2-macro/"
+              >AQA Macroeconomics</a
+            >
+            <span class="separator">›</span>
+            <span>2.1.3 Uses of Index Numbers</span>
+          </nav>
+
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+                rel="prev"
+                aria-label="Previous topic: 2.1.2 Macroeconomic Indicators"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">2.1.2 Macroeconomic Indicators</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
+                rel="next"
+                aria-label="Next topic: 2.1.4 Uses of National Income Data"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">2.1.4 Uses of National Income Data</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Uses of Index Numbers</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="AQA Macroeconomics, unit 2.1.3"
+                  >AQA<span aria-hidden="true"> · </span>Macroeconomics<span aria-hidden="true"> · </span>2.1.3</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-08-21">21 August 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> AQA unit 2.1.3 - Uses of
+              Index Numbers. Students should be able to explain how index
+              numbers are calculated and interpreted, including the base year
+              and the use of weights. Students should also understand how index
+              numbers are used to measure changes in the price level and other
+              economic variables.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#what-are-index-numbers">What Are Index Numbers?</a></li>
+                <li><a href="#how-cpi-and-inflation-are-calculated">How CPI and Inflation Are Calculated</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="what-are-index-numbers">What Are Index Numbers?</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Index number:</span> A number used
+                to express the value of a variable relative to a chosen
+                <strong>base value</strong>, which is set equal to
+                <strong>100</strong>. Index numbers make it easy to compare how
+                a variable has changed over time and to express those changes in
+                percentage terms.
+              </p>
+              <p>
+                Economists use index numbers because they turn awkward raw
+                figures - such as thousands of individual prices, or GDP
+                measured in billions of pounds - into a single, easy-to-read
+                series. Instead of comparing £200,000 with £230,000, we can
+                simply compare an index of 100 with an index of 115.
+              </p>
+              <p>
+                Index numbers are not only used for prices. They are also used
+                to track changes in <strong>real GDP</strong>,
+                <strong>wages</strong>, <strong>productivity</strong> and share
+                prices (such as the FTSE 100), among many other economic
+                variables.
+              </p>
+
+              <h3>The Base Year</h3>
+              <p class="topic-definition">
+                <span class="key-definition">Base year:</span> The reference
+                year against which all other years are compared. The value of
+                the variable in the base year is set to <strong>100</strong>,
+                and every other year is expressed relative to it.
+              </p>
+
+              <h3>Calculating an Index Number</h3>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100 \]
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: Building a House Price Index</h3>
+                <p>
+                  Suppose the average house price in a town is recorded over
+                  three years, with
+                  <strong>2022 chosen as the base year</strong>:
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Average House Price</th>
+                        <th>Index Number (2022 = 100)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>2022 (base)</strong></td>
+                        <td>£200,000</td>
+                        <td>
+                          \( \frac{200{,}000}{200{,}000} \times 100 = 100 \)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2023</strong></td>
+                        <td>£210,000</td>
+                        <td>
+                          \( \frac{210{,}000}{200{,}000} \times 100 = 105 \)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2024</strong></td>
+                        <td>£230,000</td>
+                        <td>
+                          \( \frac{230{,}000}{200{,}000} \times 100 = 115 \)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  An index of <strong>115</strong> in 2024 tells us that house
+                  prices are <strong>15% higher</strong> than in the base year
+                  of 2022.
+                </p>
+              </div>
+
+              <h3>Interpreting Index Numbers</h3>
+              <ul>
+                <li>
+                  An index of <strong>100</strong> represents the base year
+                  value.
+                </li>
+                <li>
+                  An index <strong>above 100</strong> means the variable has
+                  risen since the base year (e.g. 115 = 15% higher).
+                </li>
+                <li>
+                  An index <strong>below 100</strong> means the variable has
+                  fallen since the base year (e.g. 92 = 8% lower).
+                </li>
+              </ul>
+
+              <div class="exam-tip">
+                <p>
+                  <strong
+                    >Only read a percentage change straight off the
+                    base.</strong
+                  >
+                  You can read a percentage change directly from an index number
+                  <em>only</em> when comparing with the base year (100). To find
+                  the percentage change between two <em>non-base</em> years, you
+                  must use the standard percentage change formula.
+                </p>
+              </div>
+
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{\% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100 \]
+              </div>
+              <p>
+                For example, the percentage change in house prices between 2023
+                and 2024 is <strong>not</strong> simply \( 115 - 105 = 10\% \).
+                It is:
+              </p>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \frac{115 - 105}{105} \times 100 = 9.5\% \]
+              </div>
+            </section>
+
+            <section>
+              <h2 id="how-cpi-and-inflation-are-calculated">How CPI and Inflation Are Calculated</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Consumer Prices Index (CPI):</span>
+                The main measure of the price level in the UK. It is a
+                <strong>weighted price index</strong> that tracks the average
+                change in the prices of a representative "basket" of goods and
+                services bought by households. The annual percentage change in
+                the CPI is the headline <strong>rate of inflation</strong>.
+              </p>
+
+              <h3>The Full Process</h3>
+              <p>
+                The Office for National Statistics (ONS) calculates the CPI
+                through the following steps:
+              </p>
+              <ol>
+                <li>
+                  <strong>Survey household spending.</strong> The
+                  <em>Living Costs and Food Survey</em> asks thousands of
+                  households to record what they buy, revealing the spending
+                  patterns of a typical household.
+                </li>
+                <li>
+                  <strong>Create the basket of goods and services.</strong> A
+                  representative basket of around 700 items is chosen. It is
+                  <strong>updated each year</strong> so that it reflects
+                  changing tastes and technology, with items added and removed
+                  over time.
+                </li>
+                <li>
+                  <strong>Assign weights.</strong> Each item is given a
+                  <strong>weight</strong> based on the proportion of household
+                  spending it accounts for. Items that households spend more on
+                  (such as housing and transport) are given a larger weight.
+                </li>
+                <li>
+                  <strong>Collect prices.</strong> The ONS collects around
+                  180,000 prices for these items every month, from retailers
+                  across the country and online.
+                </li>
+                <li>
+                  <strong>Convert prices to a price index.</strong> Each item's
+                  price is expressed as an index number relative to the base
+                  year (base = 100).
+                </li>
+                <li>
+                  <strong>Calculate the weighted index.</strong> Each price
+                  index is multiplied by its weight; the results are added
+                  together and divided by the total weight to give the CPI.
+                </li>
+                <li>
+                  <strong>Calculate inflation.</strong> The percentage change in
+                  the CPI over 12 months gives the rate of inflation.
+                </li>
+              </ol>
+
+              <h3>Why Weighting Matters</h3>
+              <p>
+                Weighting ensures that the CPI reflects the
+                <strong>importance</strong> of each item in a typical
+                household's budget. A large price rise in a heavily-weighted
+                item (such as petrol or rent) has a much bigger effect on the
+                CPI than the same rise in a lightly-weighted item (such as tea
+                bags), because households spend far more on the former.
+              </p>
+
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Weighted Price Index (CPI)} = \frac{\sum (\text{Weight} \times \text{Price Index})}{\sum \text{Weights}} \]
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: Calculating a Weighted CPI</h3>
+                <p>
+                  Consider a simplified basket with three spending categories.
+                  Weights are given out of 1,000 (a common convention), and each
+                  category's price index is measured relative to the base year:
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Category</th>
+                        <th>Weight</th>
+                        <th>Price Index (base = 100)</th>
+                        <th>Weight × Index</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Housing</strong></td>
+                        <td>500</td>
+                        <td>106</td>
+                        <td>53,000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Transport</strong></td>
+                        <td>300</td>
+                        <td>110</td>
+                        <td>33,000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Food</strong></td>
+                        <td>200</td>
+                        <td>104</td>
+                        <td>20,800</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Total</strong></td>
+                        <td>1,000</td>
+                        <td>—</td>
+                        <td>106,800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  Dividing the total weighted value by the total weight gives
+                  the CPI:
+                </p>
+                <!-- prettier-ignore -->
+                <div class="formula-box">
+                  \[ \text{CPI} = \frac{106{,}800}{1{,}000} = 106.8 \]
+                </div>
+                <p>
+                  A CPI of <strong>106.8</strong> means that, on average, prices
+                  across the basket are <strong>6.8% higher</strong> than in the
+                  base year. Notice how the heavily-weighted housing category
+                  pulls the overall index towards its own value.
+                </p>
+              </div>
+
+              <h3>From CPI to the Inflation Rate</h3>
+              <p class="topic-definition">
+                <span class="key-definition">Inflation:</span> A sustained rise
+                in the general price level. It is measured as the
+                <strong>annual percentage change</strong> in the CPI.
+              </p>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100 \]
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: Calculating the Inflation Rate</h3>
+                <p>
+                  Suppose the CPI was <strong>103.2</strong> last year and
+                  <strong>106.8</strong> this year:
+                </p>
+                <table class="calculation-table">
+                  <tr>
+                    <td>CPI last year</td>
+                    <td>103.2</td>
+                  </tr>
+                  <tr>
+                    <td>CPI this year</td>
+                    <td>106.8</td>
+                  </tr>
+                  <tr>
+                    <td>Change in CPI</td>
+                    <td>106.8 − 103.2 = 3.6</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Inflation Rate</strong></td>
+                    <td>\( \frac{3.6}{103.2} \times 100 = 3.5\% \)</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="exam-tip">
+                <p>
+                  <strong>Falling inflation is not falling prices.</strong> If
+                  the inflation rate falls from 3.5% to 2%, prices are still
+                  <em>rising</em> - just more slowly. This is
+                  <strong>disinflation</strong>. Prices only fall when the
+                  inflation rate turns negative, which is
+                  <strong>deflation</strong>.
+                </p>
+              </div>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html">The Objectives of Government Economic Policy</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/practice-questions/aqa-a2-macro/2-1-3-uses-of-index-numbers.html">Practice questions: 2.1.3 Uses of Index Numbers</a>
+                  <p class="topic-next__note">Ten original multiple-choice questions on base years, weighted price indices and calculating the rate of inflation, written to AQA Paper 3 Section A style.</p>
+                </li>
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/flashcards/aqa/macro/?topic=2-1-3-uses-of-index-numbers">Flashcards: 2.1.3 Uses of Index Numbers</a>
+                  <p class="topic-next__note">The AQA macroeconomics deck filtered to this topic — definitions, diagrams and chains of reasoning, with your progress saved on this device.</p>
+                </li>
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-paper-questions/?board=aqa&amp;topic=2-1-3-uses-of-index-numbers">Past paper questions: 2.1.3 Uses of Index Numbers</a>
+                  <p class="topic-next__note">One question from the AQA A-Level papers, 2022, worth 2 marks, linked to the page of the official mark scheme where its answer begins. Whole papers and mark schemes: <a href="/past-papers/aqa/">AQA past papers</a>.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
+                rel="prev"
+                aria-label="Previous topic: 2.1.2 Macroeconomic Indicators"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">2.1.2 Macroeconomic Indicators</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
+                rel="next"
+                aria-label="Next topic: 2.1.4 Uses of National Income Data"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">2.1.4 Uses of National Income Data</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- MOCK ONLY: the prototype of js/components/notes.js. Every element it
+         creates is injected here, so with JavaScript off the page carries no
+         dead control. In Gate 3 this becomes a real file loaded as the notes
+         family's extra script; nothing below delivers content. -->
+    <script>
+      (function () {
+        "use strict";
+        var main = document.querySelector("main.revision-notes-content");
+        if (!main) return;
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* Reading progress bar */
+        if (!reduced) {
+          var bar = document.createElement("div");
+          bar.className = "topic-progress";
+          bar.setAttribute("aria-hidden", "true");
+          document.body.appendChild(bar);
+          var onScroll = function () {
+            var doc = document.documentElement;
+            var max = doc.scrollHeight - window.innerHeight;
+            bar.style.transform =
+              "scaleX(" + (max > 0 ? Math.min(1, doc.scrollTop / max) : 0) + ")";
+          };
+          window.addEventListener("scroll", onScroll, { passive: true });
+          onScroll();
+        }
+
+        /* Back to top */
+        var top = document.createElement("button");
+        top.type = "button";
+        top.className = "topic-top";
+        top.setAttribute("aria-label", "Back to top");
+        top.textContent = "↑";
+        document.body.appendChild(top);
+        top.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+        });
+        var toggleTop = function () {
+          top.classList.toggle("is-visible", window.scrollY > window.innerHeight * 2);
+        };
+        window.addEventListener("scroll", toggleTop, { passive: true });
+        toggleTop();
+
+        /* Contents rail scrollspy */
+        var links = main.querySelectorAll(".topic-contents__list a[href^='#']");
+        if ("IntersectionObserver" in window && links.length) {
+          var byId = {};
+          links.forEach
+            ? links.forEach(function (a) { byId[a.hash.slice(1)] = a; })
+            : Array.prototype.forEach.call(links, function (a) { byId[a.hash.slice(1)] = a; });
+          var current = null;
+          var spy = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  if (current) current.classList.remove("is-current");
+                  current = byId[e.target.id];
+                  if (current) current.classList.add("is-current");
+                }
+              });
+            },
+            { rootMargin: "0px 0px -70% 0px" }
+          );
+          Object.keys(byId).forEach(function (id) {
+            var h = document.getElementById(id);
+            if (h) spy.observe(h);
+          });
+        }
+
+        /* Mark as revised - same "saved on this device" idiom as the
+           flashcards. Key: ea-revised:<path>. */
+        var lastSection = null;
+        var sections = main.querySelectorAll(".notes-container > section");
+        if (sections.length) lastSection = sections[sections.length - 1];
+        if (lastSection) {
+          var key = "ea-revised:/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html";
+          var wrap = document.createElement("div");
+          wrap.className = "topic-revised";
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "topic-revised__button";
+          var note = document.createElement("p");
+          note.className = "topic-revised__note";
+          note.textContent = "Saved on this device, like your flashcard progress.";
+          var render = function (done) {
+            btn.setAttribute("aria-pressed", done ? "true" : "false");
+            btn.textContent = done ? "✓ Revised" : "Mark as revised";
+          };
+          var read = function () {
+            try { return localStorage.getItem(key) !== null; } catch (e) { return false; }
+          };
+          btn.addEventListener("click", function () {
+            var done = read();
+            try {
+              if (done) localStorage.removeItem(key);
+              else localStorage.setItem(key, new Date().toISOString().slice(0, 10));
+            } catch (e) {}
+            render(!done);
+          });
+          render(read());
+          wrap.appendChild(btn);
+          wrap.appendChild(note);
+          lastSection.parentNode.insertBefore(wrap, lastSection.nextSibling);
+        }
+
+        /* Diagram lightbox on the .diagram-zoom links */
+        if (window.HTMLDialogElement) {
+          var zooms = main.querySelectorAll("a.diagram-zoom");
+          Array.prototype.forEach.call(zooms, function (a) {
+            a.addEventListener("click", function (ev) {
+              ev.preventDefault();
+              var dlg = document.createElement("dialog");
+              dlg.className = "diagram-dialog";
+              var img = a.querySelector("img");
+              var big = document.createElement("img");
+              big.src = a.getAttribute("href");
+              big.alt = img ? img.alt : "";
+              var close = document.createElement("button");
+              close.type = "button";
+              close.className = "diagram-dialog__close";
+              close.textContent = "Close";
+              close.addEventListener("click", function () { dlg.close(); });
+              dlg.addEventListener("close", function () { dlg.remove(); });
+              dlg.addEventListener("click", function (e) {
+                if (e.target === dlg) dlg.close();
+              });
+              dlg.appendChild(big);
+              dlg.appendChild(close);
+              main.appendChild(dlg);
+              dlg.showModal();
+            });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

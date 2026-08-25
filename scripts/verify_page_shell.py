@@ -253,6 +253,7 @@ FAMILY_SCRIPT = {
     "ppq": "/js/components/question-search.js",
     "flashcards": "/js/components/flashcards.js",
     "glossary": "/js/components/glossary-filter.js",
+    "notes-topic": "/js/components/notes.js",
 }
 # tutoring.html's Calendly widget.js was the one entry here until 2026-08-23,
 # when the performance pass made it lazy: an inline script at the foot of the

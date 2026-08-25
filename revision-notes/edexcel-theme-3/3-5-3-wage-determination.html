@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -540,6 +540,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/wage-determination.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/wage-determination.webp" />
                 <img
@@ -548,8 +549,10 @@
                   class="diagram-image"
                   width="2316"
                   height="1476"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: In a competitive labour market, the equilibrium wage
                   (W1) is determined at the intersection of the labour supply
@@ -573,6 +576,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/monopsony.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/monopsony.webp" />
                 <img
@@ -584,6 +588,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: In a monopsony, the firm faces the entire labour
                   supply curve (SL) and must pay a higher wage to attract more
@@ -634,7 +639,7 @@
               </p>
 
               <h3>Trade Union</h3>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Trade Union:</span> an organisation
                 formed by workers to protect their rights, improve pay and
                 secure better working conditions.
@@ -687,6 +692,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/trade-union.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/trade-union.webp" />
                 <img
@@ -698,6 +704,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: Trade Unions have different impacts on labour
                   markets depending on whether the market is competitive or a
@@ -734,6 +741,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/min-wage.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/min-wage.webp" />
                 <img
@@ -745,6 +753,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 4: The introduction of a national minimum wage (Wmin)
                   above the equilibrium wage (W1) creates a surplus of labour
@@ -992,5 +1001,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -528,17 +528,17 @@
 
             <section>
               <h2 id="definitions-inflation-deflation-disinflation">Definitions: Inflation, Deflation, Disinflation</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Inflation:</span> A
                 <strong>sustained increase</strong> in the general/average price
                 level of goods and services in an economy.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Deflation:</span> A
                 <strong>sustained decrease</strong> in the general/average price
                 level, giving a negative inflation rate.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Disinflation:</span> A
                 <strong>decrease in the rate of inflation</strong>. Prices are
                 still rising, but at a slower pace.
@@ -587,6 +587,7 @@
                 (X-M) can cause demand-pull inflation.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ad-shift-right.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ad-shift-right.webp" />
                 <img
@@ -595,8 +596,10 @@
                   class="diagram-image"
                   width="2444"
                   height="1666"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: A rightward shift of the aggregate demand curve (AD1
                   to AD2) leads to a higher price level (PL1 to PL2) and
@@ -623,6 +626,7 @@
                 depreciation of the currency which increases import costs.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/sras-shift-left.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/sras-shift-left.webp" />
                 <img
@@ -634,6 +638,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: A leftward shift of the short-run aggregate supply
                   curve (SRAS1 to SRAS2) leads to a higher price level (PL1 to
@@ -680,7 +685,7 @@
 
             <section>
               <h2 id="effects-of-inflation">Effects of Inflation</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -756,7 +761,7 @@
 
             <section>
               <h2 id="effects-of-deflation">Effects of Deflation</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -964,5 +969,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

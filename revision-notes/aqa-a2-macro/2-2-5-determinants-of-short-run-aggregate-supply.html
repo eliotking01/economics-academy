@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -497,7 +497,7 @@
 
             <section>
               <h2 id="the-sras-curve-a-recap">The SRAS Curve: A Recap</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> Short-run
                 aggregate supply is the total planned output of goods and
                 services in an economy at a given price level, assuming that at
@@ -512,6 +512,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/sras-movements.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/sras-movements.webp" />
                 <img
@@ -520,8 +521,10 @@
                   class="diagram-image"
                   width="2272"
                   height="1494"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Movements along the SRAS curve, showing how a higher
                   price level leads to a higher quantity of real GDP supplied in
@@ -548,6 +551,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/sras-shift.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/sras-shift.webp" />
                 <img
@@ -559,6 +563,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: A shift of the SRAS curve to the right (SRAS1 to
                   SRAS2) due to a decrease in production costs.
@@ -568,7 +573,7 @@
 
             <section>
               <h2 id="key-factors-influencing-sras">Key Factors Influencing SRAS</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -754,5 +759,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

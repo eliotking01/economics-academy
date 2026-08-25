@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -497,14 +497,14 @@
 
             <section>
               <h2 id="definitions">Definitions</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Consumer Surplus:</span> The
                 difference between what a consumer is
                 <strong>willing to pay</strong> (their valuation) and what they
                 <strong>actually pay</strong>. It is a measure of consumer
                 welfare/benefit.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Producer Surplus:</span> The
                 difference between the price a producer is
                 <strong>willing to accept</strong> (their cost of supply) and
@@ -516,6 +516,7 @@
             <section>
               <h2 id="consumer-producer-surplus-at-market-equilibrium">Consumer &amp; Producer Surplus at Market Equilibrium</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/consumer-producer-surplus-equilibrium.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/consumer-producer-surplus-equilibrium.webp" />
                 <img
@@ -524,8 +525,10 @@
                   class="diagram-image"
                   width="1602"
                   height="1236"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Consumer and producer surplus at the market
                   equilibrium.
@@ -539,7 +542,7 @@
                 <strong>Producer Surplus: </strong>represented by the green area
                 above the supply curve and above the equilibrium price line.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Social/Community Surplus:</span>
                 The sum of consumer and producer surplus (Triangle A + Triangle
                 B). It represents the <strong>total welfare</strong> in the
@@ -562,6 +565,7 @@
 
               <h3>Example 1: An Increase in Supply</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/surplus-supply-increase.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/surplus-supply-increase.webp" />
                 <img
@@ -573,6 +577,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2a &amp; 2b: An outward shift of the supply curve from
                   S1 to S2. In 2a, the new, larger consumer surplus area is
@@ -613,6 +618,7 @@
 
               <h3>Example 2: An Increase in Demand</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/surplus-demand-increase.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/surplus-demand-increase.webp" />
                 <img
@@ -624,6 +630,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3a &amp; 3b: An outward shift of the demand curve from
                   D1 to D2. In 3a, the new consumer surplus area is shaded. In
@@ -660,6 +667,7 @@
             <section>
               <h2 id="monopoly-power">Monopoly Power</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/consumer-producer-surplus-competitive-monopoly.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/consumer-producer-surplus-competitive-monopoly.webp" />
                 <img
@@ -671,6 +679,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 4: Consumer and producer surplus in a perfectly
                   competitive market (left) and in a monopoly (right).
@@ -688,6 +697,7 @@
                 of producer surplus has increased.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/net-welfare-loss-monopoly.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/net-welfare-loss-monopoly.webp" />
                 <img
@@ -699,6 +709,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 5: Net welfare loss in a monopoly compared to a
                   perfectly competitive market.
@@ -715,6 +726,7 @@
             <section>
               <h2 id="price-discrimination">Price Discrimination</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/consumer-producer-surplus-price-discrimination-before.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/consumer-producer-surplus-price-discrimination-before.webp" />
                 <img
@@ -726,6 +738,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 6: Consumer and producer surplus before price
                   discrimination.
@@ -741,6 +754,7 @@
                 and producer surplus represented by the blue area.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/consumer-producer-surplus-price-discrimination-after.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/consumer-producer-surplus-price-discrimination-after.webp" />
                 <img
@@ -752,6 +766,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 7: Consumer and producer surplus after price
                   discrimination.
@@ -901,5 +916,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

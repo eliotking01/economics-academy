@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -541,6 +541,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/monopsony.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/monopsony.webp" />
                 <img
@@ -549,8 +550,10 @@
                   class="diagram-image"
                   width="2312"
                   height="1542"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: In a monopsony, the firm faces the entire labour
                   supply curve (SL) and must pay a higher wage to attract more
@@ -706,5 +709,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

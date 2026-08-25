@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -496,7 +496,7 @@
             <section>
               <h2 id="the-interrelationship-between-markets">The Interrelationship between Markets</h2>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -558,6 +558,7 @@
               <h2 id="diagram-analysis">Diagram Analysis</h2>
               <h3>Joint Demand</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/joint-demand.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/joint-demand.webp" />
                 <img
@@ -566,8 +567,10 @@
                   class="diagram-image"
                   width="3074"
                   height="1558"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Joint Demand - when two goods are demanded/consumed
                   together, a change in the price of one good will affect the
@@ -583,6 +586,7 @@
               </p>
               <h3>Competitive Demand</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/competitive-demand.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/competitive-demand.webp" />
                 <img
@@ -594,6 +598,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Competitive Demand - when two goods are demanded as
                   alternatives, a change in the price for one good will affect
@@ -609,6 +614,7 @@
               </p>
               <h3>Composite Demand</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/composite-demand.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/composite-demand.webp" />
                 <img
@@ -620,6 +626,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: Composite Demand - when a good is demanded for
                   multiple purposes, a change in the demand for one use will
@@ -635,6 +642,7 @@
               </p>
               <h3>Derived Demand</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/derived-demand.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/derived-demand.webp" />
                 <img
@@ -646,6 +654,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 4: Derived Demand - when the demand for a good depends
                   on the demand for another good, a change in the demand for the
@@ -661,6 +670,7 @@
               </p>
               <h3>Joint Supply</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/joint-supply.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/joint-supply.webp" />
                 <img
@@ -672,6 +682,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 5: Joint Supply - when two goods are produced together,
                   a change in the supply of one good will affect the supply of
@@ -798,5 +809,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -494,7 +494,7 @@
 
             <section>
               <h2 id="what-a-ppf-shows">What a PPF Shows</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >Production Possibility Frontier:</span
                 >A curve that shows the
@@ -519,6 +519,7 @@
             <section>
               <h2 id="key-points-on-the-diagram">Key Points on the Diagram</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ppf-basic.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ppf-basic.webp" />
                 <img
@@ -527,8 +528,10 @@
                   class="diagram-image"
                   width="2257"
                   height="1143"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Standard PPF curve showing opportunity cost through
                   movement from C to D
@@ -614,6 +617,7 @@
                 <strong>productive potential.</strong>
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ppf-growth-decline.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ppf-growth-decline.webp" />
                 <img
@@ -625,6 +629,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: PPF shifting outwards to show economic growth and
                   inwards to show economic decline.
@@ -778,5 +783,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

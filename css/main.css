@@ -4869,6 +4869,13 @@ nav.breadcrumb .separator {
   #header,
   #titleBar,
   #navPanel,
+  /* #mobileNav is baked inside #header, but nav.js moves it to body level
+     at runtime (the a11y pass's focus trap needs it there), which took it
+     out from under the #header rule above - so every JS-on print ended
+     with the menu text. Named here directly so both positions are hidden.
+     Found at the notes-redesign Gate 3, fixed 2026-08-25 on Eliot's
+     instruction. */
+  #mobileNav,
   #footer,
   #consent,
   .skip-to-content,

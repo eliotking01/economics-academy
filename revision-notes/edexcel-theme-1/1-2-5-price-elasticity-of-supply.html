@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -526,7 +526,7 @@
 
             <section>
               <h2 id="definition-and-calculation">Definition and Calculation</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >Price Elasticity of Supply (PES):</span
                 >
@@ -548,6 +548,7 @@
             <section>
               <h2 id="interpreting-pes-values">Interpreting PES Values</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/price-elasticity-supply-ranges.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/price-elasticity-supply-ranges.webp" />
                 <img
@@ -556,8 +557,10 @@
                   class="diagram-image"
                   width="1476"
                   height="1288"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Price Elasticity of Supply ranges. Shows how the
                   slope of the supply curve varies from vertical (perfectly
@@ -565,7 +568,7 @@
                 </figcaption>
               </figure>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -624,7 +627,7 @@
                   increase of <strong>25%</strong>. How much more it can supply
                   depends on how long it has to respond:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -672,7 +675,7 @@
                 run but improves in the long run.
               </p>
               <h3>Other Determinants:</h3>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -738,14 +741,14 @@
 
             <section>
               <h2 id="short-run-vs-long-run-supply">Short-Run vs. Long-Run Supply</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Short Run:</span> A period where
                 <strong>at least one factor of production is fixed</strong>
                 (e.g., factory size, number of machines). Supply is typically
                 <strong>more price inelastic</strong> in the short run as firms
                 cannot instantly expand all inputs.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Long Run:</span> A period where
                 <strong>all factors of production are variable</strong>. Firms
                 can build new factories, hire more workers, etc. Supply is
@@ -870,5 +873,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

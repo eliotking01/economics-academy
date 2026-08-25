@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -530,7 +530,7 @@
 
             <section>
               <h2 id="trade-unions">Trade Unions</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Trade Union:</span> an organisation
                 formed by workers to protect their rights, improve pay and
                 secure better working conditions.
@@ -587,6 +587,7 @@
                 Markets
               </h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/trade-union.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/trade-union.webp" />
                 <img
@@ -595,8 +596,10 @@
                   class="diagram-image"
                   width="3544"
                   height="1436"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Trade Unions have different impacts on labour
                   markets depending on whether the market is competitive or a
@@ -741,5 +744,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

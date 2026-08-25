@@ -2123,3 +2123,54 @@ pages to 127. What is decided with it:
 - **`GATE` is declared once.** `notes_extras.py`, `build_search_index.py` and
   `verify_past_paper_tags.py` import it; the last of those had kept its own
   copy and would have gone on reporting 4.
+
+### D61 — the notes topic pages move to the reading layout
+
+**2026-08-25, Eliot, branch `feature/notes-redesign` (three-gate approval:
+mock revised once and approved, plan approved as written — both in
+`_working/notes-redesign/`, the design record).** Ratified.
+
+The 166 generated topic pages leave `revision-notes-textbook.css` for a new
+`css/pages/revision-notes-topic.css`: a 38em reading column on a white
+ground, one component grammar (3px left rule, near-white tint, small-caps
+text-safe label), the contents list doubling as a sticky rail from 1024px,
+derived definition cards, framed diagrams with a no-JS tap-to-enlarge, and
+`js/components/notes.js` as the family's extra script. What is ratified
+with it:
+
+- **The economics content is byte-identical.** Every transform is generated
+  chrome in `notes_extras.py` / `build_notes_pages.py`; the slices are
+  untouched and `suggest_trailers.py` ran silent over the roll-out — zero
+  visible-text changes, zero markup losses, additions and attributes only.
+- **The old sheet survives, frozen, for exactly three pages** — the two
+  diagram galleries and `macro-application/` — and did not change by one
+  byte. The topic pages' records repoint `pageStylesheets`; a scripted
+  metadata edit, declared in the plan, not a prose edit.
+- **The chip-opens-the-block rule is shared.** A definition card is a
+  build-time class on a paragraph whose first content is a `key-definition`
+  chip — the same reading `extract_glossary.py` uses — so the cards and the
+  glossary agree by construction; mid-sentence and list-item chips stay
+  inline (22 and 79 today, the plan's open point, accepted).
+- **The two chip contrasts the a11y pass deferred are closed**: EXAM TIP
+  white-on-#27ae60 (2.9:1) → #1c7a42 on tint (5.4:1); EVALUATION
+  white-on-#f57c00 (2.7:1) → #a04d00 on tint (5.6:1). The bright hues
+  survive as borders only. Pinned in `verify_contrast.py`.
+- **The floating pill labels are gone**; the spec panel and worked examples
+  are labelled by their own visible text, the other callouts by CSS
+  small-caps labels. `"Scrollable table"` is the one new baked string, an
+  aria-label added by `with_table_regions()`.
+- **The first diagram is promoted** (`fetchpriority="high"`) at build time
+  unless it carries `loading="lazy"` — one page today, `2-6-2-trade`,
+  logged in `docs/REVIEW-NOTES.md` as an authoring slip; the one SVG
+  diagram page (`4-1-2`) keeps today's rendering, no zoom.
+- **`dateModified` was not refreshed** (D58 precedent);
+  `rewrite_notes_meta.py --apply` was not run.
+- **Every enhancement is JS-injected** — progress bar, scrollspy,
+  back-to-top, mark-as-revised (`ea-revised:<pathname>`, the flashcards'
+  saved-on-this-device idiom), `<dialog>` lightbox — so the no-JS page
+  carries no dead control. The script tail stays five; `notes.js` rides the
+  per-family extra hook, declared in `FAMILY_SCRIPT`.
+- **`docs/EDITING-NOTES.md` is the editing contract**: hand-written HTML
+  slices, every derived thing derived at build time, strict anchors fail
+  naming the file and the fix. Proven at Gate 3 on a scratch slice, both
+  ways.

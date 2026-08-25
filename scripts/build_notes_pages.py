@@ -53,6 +53,17 @@ container - so the PNG stays the fallback at its URL and the slice on disk
 stays a verbatim slice. A PNG with no twin is emitted bare; verify_image_
 dimensions.py is what insists every PNG has one of the same size.
 
+Since the notes redesign (2026-08-25, D61) the TOPIC pages - not the hubs -
+get two more things from the same transform: each diagram is wrapped in an
+`<a class="diagram-zoom">` pointing at the PNG (tap-to-enlarge that works
+with JavaScript off; js/components/notes.js upgrades it to a <dialog>
+lightbox), and the FIRST diagram on a page gains `fetchpriority="high"` -
+unless it already carries `loading="lazy"`, because promoting a lazy image
+is a contradiction the browser resolves unpredictably (one page today:
+aqa-a2-macro/2-6-2-trade, logged in docs/REVIEW-NOTES.md). The topic pages
+also load notes.js as their family's extra script, the same per-family
+mechanism as quiz.js and flashcards.js.
+
 MATHJAX IS DECIDED FROM THE BODY, NOT FROM THE RECORD (2026-08-23)
 ------------------------------------------------------------------
 Until the performance pass every record carried a stored `head.mathjax`
@@ -104,9 +115,11 @@ import page_shell  # noqa: E402
 DATA = ROOT / "notes-data"
 
 # Wave 4.10: the tail is page_shell.SCRIPT_TAIL now, declared once for all
-# five generators. The name is kept because it is what the f-string below
-# interpolates and renaming it would touch this generator for no gain.
-SEVEN_SCRIPTS = page_shell.script_tail()
+# five generators. Since 2026-08-25 the topic pages append their own
+# component script after it (defer), through the same `extra` mechanism
+# quiz.js and flashcards.js use; the hubs keep the plain tail.
+# verify_page_shell.py's FAMILY_SCRIPT holds the relation.
+NOTES_JS = ("/js/components/notes.js",)
 
 # The two anchors the previous/next rows are spliced against. Both were
 # measured across all 166 topic slices before being relied on: every one opens
@@ -133,22 +146,53 @@ DIAGRAM_IMG = re.compile(
     re.M | re.S)
 
 
-def with_webp_pictures(html: str) -> str:
+# How every diagram <img> tag closes, measured 208/208 across the 93 topic
+# slices that carry one (2026-08-25): the `/>` on its own line at the tag's
+# indent, attributes two spaces further in. That is where the promoted
+# attribute goes, as its own line, so the tag keeps its one-attribute-per-
+# line shape.
+IMG_CLOSE_RE = re.compile(r"\n([ \t]*)/>$")
+
+
+def with_webp_pictures(html: str, zoom: bool = False) -> str:
     """Wrap each diagram <img> in a <picture> offering its WebP twin first.
 
     The <img> is re-emitted byte for byte; only the wrapper lines are new,
     at the tag's own indent. A PNG whose .webp is not in the tree is left
     bare rather than pointed at a 404 - and verify_image_dimensions.py fails
     the build for the missing twin, so that cannot ship quietly.
+
+    With `zoom` (the topic pages; hubs never pass it) each diagram is also
+    wrapped in an `<a class="diagram-zoom">` to its PNG - a working
+    open-full-size link with JavaScript off, upgraded to a lightbox by
+    notes.js - and the first diagram on the page gains
+    `fetchpriority="high"`, the one attribute this transform writes INTO the
+    <img> tag, unless that first diagram carries `loading="lazy"` (a lazy
+    image must not be promoted; it is left exactly as written).
     """
+    state = {"first": zoom}
+
     def wrap(m: re.Match) -> str:
         indent, stem = m.group(1), m.group(2)
-        if not (ROOT / stem.lstrip("/")).with_suffix(".webp").exists():
-            return m.group(0)
-        return (f"{indent}<picture>\n"
-                f'{indent}<source type="image/webp" srcset="{stem}.webp" />\n'
-                f"{m.group(0)}\n"
-                f"{indent}</picture>")
+        img = m.group(0)
+        if state["first"]:
+            state["first"] = False
+            if 'loading="lazy"' not in img:
+                img = IMG_CLOSE_RE.sub(
+                    lambda c: (f'\n{c.group(1)}  fetchpriority="high"'
+                               f'\n{c.group(1)}/>'), img)
+        if (ROOT / stem.lstrip("/")).with_suffix(".webp").exists():
+            body = (f"{indent}<picture>\n"
+                    f'{indent}<source type="image/webp" srcset="{stem}.webp" />\n'
+                    f"{img}\n"
+                    f"{indent}</picture>")
+        else:
+            body = img
+        if zoom:
+            body = (f'{indent}<a class="diagram-zoom" href="{stem}.png">\n'
+                    f"{body}\n"
+                    f"{indent}</a>")
+        return body
     return DIAGRAM_IMG.sub(wrap, html)
 
 
@@ -248,7 +292,7 @@ def with_topic_nav(slice_html: str, key: tuple[str, str]) -> str:
             + CONTAINER_CLOSE.lstrip("\n"))
 
 
-def render(rec: dict, slice_html: str) -> str:
+def render(rec: dict, slice_html: str, extra_scripts: tuple = ()) -> str:
     b = rec["body"]
     end_container = b.get("endContainerComment") or ""
     end_main = b.get("endMainComment") or ""
@@ -270,7 +314,7 @@ def render(rec: dict, slice_html: str) -> str:
         f"\n        </div>{end_container}\n"
         f"      </main>{end_main}"
         f"{b['afterMain']}"
-        f"{SEVEN_SCRIPTS}\n"
+        f"{page_shell.script_tail(extra_scripts)}\n"
         f"{b['afterScripts']}",
         rec["path"],
     )
@@ -292,8 +336,9 @@ def build() -> dict[str, str]:
             slice_html = notes_extras.apply_all(
                 slice_html, notes_dir, slug, unit.group(1), date_modified(rec))
             slice_html = with_topic_nav(slice_html, key)
-        slice_html = with_webp_pictures(slice_html)
-        pages[rec["path"]] = render(rec, slice_html)
+        slice_html = with_webp_pictures(slice_html, zoom=key is not None)
+        pages[rec["path"]] = render(
+            rec, slice_html, NOTES_JS if key is not None else ())
     return pages
 
 

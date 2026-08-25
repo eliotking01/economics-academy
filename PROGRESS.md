@@ -82,6 +82,68 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
+## Notes topic-page redesign — the 166 pages (2026-08-25) — IN REVIEW (PR open, branch `feature/notes-redesign`)
+
+**STATE: implemented, verified, PR open — waiting on Eliot's merge (a merge
+commit, never a squash).** The three-gate project from the 2026-08-25 brief:
+Gate 1 mock and Gate 2 plan approved by Eliot (both in
+`_working/notes-redesign/`, the design record), Gate 3 implemented the plan
+as written. `docs/audit/DECISIONS.md` D61.
+
+**What it is.** The 166 generated topic pages leave the 2025 "textbook" card
+for a reading layout: a 38em column, one component grammar (3px left rule,
+near-white tint, small-caps label — no gradients, pills or shadows), the
+contents list doubling as a sticky "On this page" rail from 1024px (same
+element, CSS grid), definition cards derived from the `key-definition` chips,
+framed full-column diagrams with a no-JS tap-to-enlarge, honest table scroll
+cues, and `js/components/notes.js` (progress bar, scrollspy, back-to-top,
+mark-as-revised in localStorage, `<dialog>` lightbox — all JS-injected, so
+no dead controls with JS off). The two failing chip contrasts the a11y pass
+deferred close at 5.4:1 and 5.6:1.
+
+| Changed | Where |
+| --- | --- |
+| The new sheet — the approved mock's CSS verbatim, only the header comment rewritten | `css/pages/revision-notes-topic.css` (new) |
+| 166 records repoint `pageStylesheets` (scripted metadata edit, declared in PLAN.md §2) | `notes-data/topics/**/*.json` |
+| `with_definition_cards()` (540 cards) + `with_table_regions()` (122 regions), wired into `apply_all()` | `scripts/notes_extras.py` |
+| `with_webp_pictures()` grows the `<a class="diagram-zoom">` wrapper + first-diagram `fetchpriority="high"` (92 promoted; the lazy-first `2-6-2-trade` deliberately not); topic pages load `notes.js` via the family extra-script hook | `scripts/build_notes_pages.py` |
+| The enhancements, one file, defer, topic pages only | `js/components/notes.js` (new) |
+| `FAMILY_SCRIPT["notes-topic"]` — one line; every pinned shape/spine count held without reseeding | `scripts/verify_page_shell.py` |
+| Eight new pairs for the new sheet's tokens; the four textbook.css pairs stay (that sheet still ships for 3 pages) | `scripts/verify_contrast.py` |
+| Transform classification tests + totals against an independent scan (not a pinned literal, so adding content cannot fail CI) | `scripts/tests/test_notes_extras.py` |
+| The editing guide, written for Eliot | `docs/EDITING-NOTES.md` (new) |
+
+**Verified:** the full `verify.yml` suite green locally including
+`verify_generated.py` (0 files would change) and `test_compare_trees.py`
+(all 39 cases); `suggest_trailers.py` silent — zero `Text-Change:` and zero
+`Markup-Change:`, the rebuild is additions and attributes only. Eyeballed in
+a real browser at 1280 and 360, JS on and off, and print: Demand, 2-1-3
+(densest, live MathJax), 1-6-6 (single section), 1-1-1 (plain shell),
+2-1-2-inflation (`\( … \)` maths), 3-1-2, 4-1-2 (the SVG diagram keeps
+today's rendering, no zoom). The three pages still on
+`revision-notes-textbook.css` (both diagram galleries, macro-application)
+serve byte-identical HTML and CSS and render pixel-identical. The editing
+story proven on a scratch slice: the guide's snippets rendered correctly;
+two plausible hand-edit breaks each stopped the build naming the file and
+the fix.
+
+### Three things a future session needs to know
+
+1. **The old sheet still ships.** `revision-notes-textbook.css` is loaded by
+   the two diagram galleries and `macro-application/` only. Do not delete it,
+   and do not "fix" the topic pages by editing it — their sheet is
+   `revision-notes-topic.css`.
+2. **`notes.js` is a family extra, not a tail change.**
+   `page_shell.SCRIPT_TAIL` is untouched and still five; the relation lives
+   in `verify_page_shell.py`'s `FAMILY_SCRIPT`. A new topic gets the sheet
+   and the script automatically (`new_topic.py` copies a sibling record).
+3. **Printing any page with JS on appended the mobile-nav menu text** — the
+   a11y pass's `nav.js` moves `#mobileNav` to body level, out from under the
+   print block's `#header { display: none }`. Pre-existing and site-wide
+   (proved identical on `main`), not from this redesign. **Fixed on this
+   branch on Eliot's instruction, 2026-08-25**: `#mobileNav` named directly
+   in `css/main.css`'s print block, so both positions are hidden.
+
 ## Past-paper question bank — page gate 4 → 2 (2026-08-24) — LIVE (merged 2026-08-24, `fc2400a6`, PR #27)
 
 **STATE: live.** Eliot merged PR #27 on 2026-08-24 and re-submitted
@@ -134,10 +196,11 @@ on a page that has one topic; and `related_topics()` caps at six with same-unit
 first, so on 76 existing pages a newly-linkable neighbour displaces a
 larger-count one.
 
-## Accessibility & progressive enhancement pass (2026-08-24) — IN REVIEW (PR #26, branch `feature/a11y-pe`)
+## Accessibility & progressive enhancement pass (2026-08-24) — LIVE (merged 2026-08-24, `745f9cb2`, PR #26)
 
-**STATE: PR #26 open, CI green, all five phases complete — waiting on
-Eliot's merge.** One commit per phase. Eliot approved the Phase 2 mock
+**STATE: live.** Eliot merged PR #26 on 2026-08-24 (`745f9cb2`); this
+heading was stale ("IN REVIEW") until the notes-redesign docs pass of
+2026-08-25 corrected it. One commit per phase. Eliot approved the Phase 2 mock
 (`_working/mobile-nav/`, kept as the design record) on 2026-08-24 and the
 implementation landed the same day; he chose to leave the EXAM
 TIP/EVALUATION chip contrast until his notes-page overhaul. Fixes the

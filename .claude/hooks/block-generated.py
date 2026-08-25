@@ -40,6 +40,10 @@ HAND_WRITTEN = {
     "revision-notes/index.html",
     "revision-notes/macroeconomics-diagrams.html",
     "revision-notes/microeconomics-diagrams.html",
+    # Not a page: the directory's hand-written instructions file. No
+    # generator writes it; without this line the prefix rule below blocks
+    # legitimate edits to it. Added 2026-08-25 on Eliot's instruction.
+    "revision-notes/CLAUDE.md",
 }
 
 # path prefix -> (what owns it, what to edit instead)

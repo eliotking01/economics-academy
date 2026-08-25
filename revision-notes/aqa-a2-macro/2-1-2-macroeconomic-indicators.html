@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -536,7 +536,7 @@
               </p>
               <!-- prettier-ignore -->
               <div class="formula-box">
-                \[ \text{\% Change in Real GDP} = \text{\% Change in Nominal GDP} - \text{Inflation Rate} \]
+                \[ \%\text{ Change in Real GDP} = \%\text{ Change in Nominal GDP} - \text{Inflation Rate} \]
               </div>
               <p>
                 <strong>Real GDP per capita:</strong> Real GDP divided by the
@@ -639,7 +639,7 @@
                   <strong>working-age population of 40 million</strong>, made up
                   as follows:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -706,7 +706,7 @@
                 is the
                 <strong>Current Account.</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Current Account:</span> The part of
                 the Balance of Payments that records trade in goods and services,
                 income flows, and current transfers.
@@ -845,5 +845,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

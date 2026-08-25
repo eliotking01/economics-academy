@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -535,7 +535,7 @@
               <p>
                 <strong>\[ \text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100 \]</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Interpretation:</span> A rise in
                 the terms of trade index indicates that a country can buy more
                 imports for each unit of exports, which is generally considered
@@ -551,7 +551,7 @@
                   A country's average export and import prices are recorded as
                   index numbers, with <strong>Year 1 as the base year</strong>:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -642,12 +642,12 @@
 
               <h3>Improvement in the Terms of Trade</h3>
               <p>This happens when export prices rise or import prices fall.</p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Potential benefit:</span> Each unit
                 of exports buys more imports, which may improve
                 <strong>living standards</strong>.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Potential cost:</span> If export
                 demand is <strong>elastic</strong>, the rise in export prices
                 may cause a large fall in export volumes, reducing export
@@ -657,12 +657,12 @@
 
               <h3>Deterioration in the Terms of Trade</h3>
               <p>This happens when export prices fall or import prices rise.</p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Potential cost:</span> More exports
                 are needed to buy the same volume of imports, which may reduce
                 living standards.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Potential benefit:</span> If export
                 demand is <strong>elastic</strong>, lower export prices may
                 cause a large rise in export sales, increasing export revenue,
@@ -780,5 +780,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

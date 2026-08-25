@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -563,13 +563,13 @@
                 ability to set its own prices. Therefore, monopolies are price
                 makers.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Pure Monopoly:</span>
                 a market structure where there is a single seller of a product
                 with no close substitutes. For example, a local water company
                 like Thames Water.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Legal/Working Monopoly:</span>
                 Defined by the Competition and Markets Authority (CMA) as a firm
                 with a market share of 25% or more. For example, Google has a
@@ -586,6 +586,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/supernormal-profit.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/supernormal-profit.webp" />
                 <img
@@ -594,8 +595,10 @@
                   class="diagram-image"
                   width="2350"
                   height="1566"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: A monopoly maximises profit where MC = MR, charging
                   a price above MC, leading to supernormal profit (shaded area)
@@ -675,6 +678,7 @@
               </ol>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/price-discrimination.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/price-discrimination.webp" />
                 <img
@@ -686,6 +690,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Third-degree price discrimination allows a monopoly
                   to charge a higher price in the market with more inelastic
@@ -745,7 +750,7 @@
 
             <section>
               <h2 id="costs-and-benefits-of-monopoly">Costs and Benefits of Monopoly</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -826,6 +831,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/nationalisation-privatisation.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/nationalisation-privatisation.webp" />
                 <img
@@ -837,6 +843,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: A natural monopoly exists when LRAC falls over the
                   entire range of market demand, making competition inefficient.
@@ -977,5 +984,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -18,8 +18,14 @@ galleries, which share `revision-notes-diagrams.css`.
   real cases here were a `(0,1,1)` `section > :last-child` reset and a `(1,2,1)`
   `#main .row > div[class*="col-"]`, and every harness assertion passed both.
   Prove it with `python3 docs/audit/scripts/harness/computed_style_diff.py OLD NEW`.
-- **`:root` colour tokens live in `revision-notes-textbook.css` and are for the
-  notes only.** Elsewhere use hex. The brand accent is `#d52349`.
+- **`:root` colour tokens are a notes-only idiom, in two sheets.** The 166
+  topic pages load `revision-notes-topic.css` (the 2026-08-25 reading-layout
+  redesign, D61) whose `--nt-*` tokens are declared as hex precisely so
+  `scripts/verify_contrast.py` can compute its pinned pairs; the two diagram
+  galleries and macro-application still load `revision-notes-textbook.css`
+  with its older tokens — that sheet is frozen for those three pages, so do
+  not restyle the topic pages by editing it. Elsewhere use hex. The brand
+  accent is `#d52349`.
 - **Reuse the `.resource-*` block at the END of `main.css`** — the shared hero,
   stat strip, card grid, cross strip, services panel and (since 2026-08-23)
   the `.resource-index-*` topic index used by the notes and practice board

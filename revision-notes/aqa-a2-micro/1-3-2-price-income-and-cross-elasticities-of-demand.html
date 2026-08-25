@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -526,7 +526,7 @@
 
             <section>
               <h2 id="price-elasticity-of-demand-ped">Price Elasticity of Demand (PED)</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> PED measures the
                 <strong>responsiveness of quantity demanded</strong> to a change
                 in the good's own price.
@@ -538,6 +538,7 @@
               </div>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/price-elasticity-demand-ranges.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/price-elasticity-demand-ranges.webp" />
                 <img
@@ -546,8 +547,10 @@
                   class="diagram-image"
                   width="1885"
                   height="1209"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Price Elasticity of Demand ranges. Shows how the
                   slope of the demand curve varies from vertical (perfectly
@@ -555,7 +558,7 @@
                 </figcaption>
               </figure>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -687,7 +690,7 @@
 
             <section>
               <h2 id="income-elasticity-of-demand-yed">Income Elasticity of Demand (YED)</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> YED measures the
                 <strong>responsiveness of quantity demanded</strong> to a change
                 in consumer income.
@@ -698,7 +701,7 @@
                 \[ \text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y} \]
               </div>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -740,7 +743,7 @@
 
             <section>
               <h2 id="cross-elasticity-of-demand-xed">Cross Elasticity of Demand (XED)</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> XED measures the
                 <strong>responsiveness of quantity demanded for Good A</strong>
                 to a change in the <strong>price of Good B</strong>.
@@ -751,7 +754,7 @@
                 \[ \text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B} \]
               </div>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -939,5 +942,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -80,10 +80,38 @@ PAIRS: list[tuple] = [
      ".revision-notes-content .evaluation-point h3", EVAL_WASH, 3.0),
     # The small-caps labels the topic-tail redesign already darkened (the
     # "#1f6b77, not --accent-teal" comments) - held here against regression.
+    # These four textbook.css entries STAY although the topic pages left the
+    # sheet on 2026-08-25 (D61): it still ships for the two diagram galleries
+    # and macro-application, unchanged by one byte.
     ("css/pages/revision-notes-textbook.css",
      ".revision-notes-content .topic-contents__label", NOTES_BG, 4.5),
     ("css/pages/revision-notes-textbook.css",
      ".revision-notes-content .topic-related__label", WHITE, 4.5),
+    # The notes-redesign sheet (2026-08-25, D61), the 166 topic pages. The
+    # tints are declared as hex tokens in the sheet precisely so these pairs
+    # stay computable. The exam-tip and evaluation labels are the two pairs
+    # the a11y pass left for this overhaul - white-on-#27ae60 at 2.9:1 and
+    # white-on-#f57c00 at 2.7:1, both closed here for good.
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .topic-contents__label", "#f8fafc", 4.5),
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .exam-tip::before", "#f2faf5", 4.5),
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .evaluation-point::before", "#fef8f2", 4.5),
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .application::before", "#f4f5f8", 4.5),
+    # The definition chip, inline on white and opening its card's tint.
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .key-definition", WHITE, 4.5),
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .key-definition", "#fdf6f8", 4.5),
+    # The muted meta line under the h1.
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .topic-meta", WHITE, 4.5),
+    # The flow chain's end node: white text, so the checked colour is the
+    # node's own background.
+    ("css/pages/revision-notes-topic.css",
+     ".revision-notes-content .flow-node--end", WHITE, 4.5, "bg"),
 ]
 
 HEX = re.compile(r"^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")

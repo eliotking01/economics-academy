@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -527,7 +527,7 @@
 
             <section>
               <h2 id="what-is-aggregate-demand">What Is Aggregate Demand?</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> Aggregate demand
                 is the total demand for all goods and services in an economy at
                 a given average price level and in a given time period.
@@ -640,6 +640,7 @@
             <section>
               <h2 id="the-aggregate-demand-curve">The Aggregate Demand Curve</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ad-movements.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ad-movements.webp" />
                 <img
@@ -648,8 +649,10 @@
                   class="diagram-image"
                   width="2066"
                   height="1386"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The aggregate demand curve, showing the inverse
                   relationship between the average price level and the quantity
@@ -708,6 +711,7 @@
                 </li>
               </ul>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ad-shift.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ad-shift.webp" />
                 <img
@@ -719,6 +723,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Shifts of the aggregate demand curve, showing how
                   changes in determinants of AD (other than price level) can
@@ -730,7 +735,7 @@
 
             <section>
               <h2 id="determinants-of-ad">Determinants of AD</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -908,5 +913,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -497,13 +497,13 @@
 
             <section>
               <h2 id="types-of-tax-systems">Types of Tax Systems</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Progressive Tax:</span> A tax where
                 the <strong>percentage of income paid in tax rises</strong> as
                 income rises. Examples include income tax and inheritance tax.
               </p>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Proportional Tax:</span> A tax
                 where the
                 <strong
@@ -514,7 +514,7 @@
                 proportional.
               </p>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Regressive Tax:</span> A tax where
                 the
                 <strong>percentage of income paid in tax falls</strong>
@@ -525,21 +525,21 @@
 
             <section>
               <h2 id="effects-of-changes-to-direct-and-indirect-taxes">Effects of changes to Direct and Indirect Taxes</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Direct taxes</span> are levied on
                 <strong>income or profits</strong>, such as income tax,
                 corporation tax, and National Insurance.
               </p>
               <p>These often tend to be <strong>progressive</strong>.</p>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Indirect taxes</span> are levied on
                 <strong>spending</strong>, such as VAT and excise duties.
               </p>
               <p>These often tend to be <strong>regressive</strong>.</p>
 
               <h3>Economic Effects of Changes in Tax Rates</h3>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -627,6 +627,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/laffer-curve.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/laffer-curve.webp" />
                 <img
@@ -635,8 +636,10 @@
                   class="diagram-image"
                   width="2460"
                   height="1508"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The Laffer Curve illustrates that at a 0% tax rate,
                   revenue is zero, and at a 100% tax rate, revenue is also zero.
@@ -785,5 +788,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>
