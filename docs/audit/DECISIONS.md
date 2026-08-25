@@ -2228,3 +2228,39 @@ What is ratified with it:
   the record branch `record/macro-application-attempts` (pushed, kept unmerged); a future attempt starts from why that page's
   paint misbehaves when the 166 topic pages' identical rail construct
   never has.
+
+---
+
+## 2026-08-25 · Tutoring page SEO pass
+
+### D63 — Eliot lifts the tutoring-page freeze; the ~22 September tutoring comparison becomes directional
+
+**2026-08-25, Eliot, in the brief for the tutoring-page SEO pass (branch
+`seo/tutoring-page`).** Ratified in his own words:
+
+> The tutoring page freeze is lifted. tutoring.html is on the GSC-frozen
+> list (its title byte-identical) and D50 kept it as a clean comparison for
+> the ~22 September Search Console check. I am overriding that: September
+> is when parents look for tutors, and I would rather the page be as good
+> as it can be before then than have a clean read on a 17-click baseline.
+
+**What this dissolves.** The tutoring half of the frozen-head list in
+PROGRESS.md trap 8 ("tutoring.html's title"). Like D50 before it, this is
+the measurement's owner choosing the site over the measurement: the
+tutoring side of the ~22 September GSC check (baseline: position 26.27,
+440 impressions, 17 clicks, 2026-08-08) is **directional only** from the
+first head or body change this pass ships. OWNER-TODO's ~22 September item
+is amended in the same commit.
+
+**What this does NOT touch.**
+
+- **The home and marking sides of that check stay clean.** `index.html`'s
+  title and `marking.html`'s head are not part of this lift and are not
+  edited by this pass. The home-page cannibalisation question
+  (`seo/22-tutoring-seo-proposals-2026-08-25.md`, group D2) waits for that
+  clean September read by design.
+- **The `/revision-notes/` and past-papers freezes stand in full** (D50's
+  list, `.prettierignore`, `bake_templates.py`'s warning).
+- Nothing on tutoring.html changes on the strength of this entry alone:
+  every visible change still needs Eliot's item-by-item yes on the
+  proposals file, and `Text-Change:` trailers as always.

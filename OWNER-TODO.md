@@ -310,14 +310,17 @@ rebuild and the checks.
       21 Aug, Edexcel codes off 22 Aug, D54). If average position on topic
       queries is flat after six weeks, titles aren't the constraint and the
       next lever is content depth and diagrams.
-- [ ] **~22 September 2026 GSC check**: compare tutoring.html against its
-      2026-08-08 baseline (position 26.27, 440 impressions, 17 clicks) and
-      check the home page held or improved (baseline: 223 clicks, 2,463
-      impressions, position 17.35, CTR 9.05%). These two comparisons are
-      clean. The D45 wait was overridden on 2026-08-15 (D50), so treat any
-      movement on revision-notes and past-papers pages as directional only
-      (their baselines: notes hub 361 clicks pos ≈9.5, edexcel-b 158, ocr
-      133, aqa 51).
+- [ ] **~22 September 2026 GSC check**: check the home page held or
+      improved (baseline: 223 clicks, 2,463 impressions, position 17.35,
+      CTR 9.05%) — this comparison is clean. **The tutoring comparison is
+      directional only** (D63, 2026-08-25: the tutoring-page freeze was
+      lifted for the SEO pass, so the page changes mid-window; its
+      2026-08-08 baseline — position 26.27, 440 impressions, 17 clicks —
+      still gives the direction of travel, not a clean read). The D45 wait
+      was overridden on 2026-08-15 (D50), so treat any movement on
+      revision-notes and past-papers pages as directional only (their
+      baselines: notes hub 361 clicks pos ≈9.5, edexcel-b 158, ocr 133,
+      aqa 51).
 - [ ] **1 October 2026 — re-export the Search Console CSVs** into
       `seo/gsc-exports/01-10-2026/` (Indexing → Pages → each row under "Why
       pages aren't indexed" → Export, plus the indexed list, same filenames as
@@ -388,6 +391,14 @@ Console is then explainable rather than alarming.
     demotion. Compare like for like by filtering to the 81 pre-existing URLs.
   - The 24 one-question topics are still pageless by design, so a topic
     missing from the family is not a bug.
+
+- **25 August 2026 — the tutoring-page SEO pass tried to fetch the two
+  tutor SERPs by machine** (curl and headless Chrome against google.co.uk,
+  from this household's IP). Google blocked every attempt at the consent
+  wall, JS shell or CAPTCHA **before any results rendered**, so no
+  impressions should have registered; noted here so a blip is explainable.
+  The pass's SERP evidence came from the autocomplete API and a non-Google
+  index instead — `seo/21-tutoring-baseline-2026-08-25.md` Part 3.
 
 ## Done — kept only where the DATE matters to a later measurement
 

@@ -69,7 +69,9 @@ there.
    computed style in a real render for anything that must be hidden.
 8. The GSC-frozen heads (`<title>`, H1, meta description, canonical):
    `/revision-notes/`, the four past-papers board pages, marking.html,
-   index.html's title, tutoring.html's title. about/contact/faq heads are
+   index.html's title. **tutoring.html left this list on 2026-08-25 —
+   Eliot lifted its freeze for the tutoring SEO pass (D63); its September
+   GSC comparison is directional only.** about/contact/faq heads are
    tunable but their og:description must stay a shortened variant
    (`KNOWN_SELF_DISAGREEMENT` in verify_page_shell.py) or leave that list in
    the same commit.
