@@ -23,6 +23,17 @@
    js/components/notes.js upgrades them in place to show/hide filters.
    Nothing here hides content without JS. */
 
+/* The shared sheet parks the rail at `grid-row: 3 / span 90` - generic
+   headroom for a topic page's unknown section count, leaving ~84 empty
+   implicit rows. This page's direct children are known and few, so the
+   rail spans exactly the content rows instead: one less oddity for the
+   compositor on a 19,000px page (see the #filter-bar paint note below). */
+@media screen and (min-width: 1024px) {
+  .revision-notes-content.revision-notes-content .topic-contents {
+    grid-row: 3 / 10;
+  }
+}
+
 /* ── The contents rail's grouped sub-lists ──────────────────
    The shared sheet's .topic-contents__list is the flat top level (Before
    you start / UK / South Africa / How to use); each country entry carries
@@ -76,6 +87,15 @@
   border-left: 3px solid var(--nt-teal-border);
   border-radius: 0 8px 8px 0;
   font-family: var(--nt-heading);
+  /* Paint isolation. On this page - ~19,000px tall, a sticky rail beside a
+     ~17,000px grid item - the panel was intermittently PAINTED squeezed to
+     a sliver while its measured geometry stayed correct, and its painted
+     size changed with scroll: a compositor reusing a stale texture at the
+     wrong horizontal scale, across three markup designs of the same panel.
+     Promoting the panel to its own composited layer and containing its
+     paint stops neighbouring invalidations smearing it. Layout-neutral. */
+  transform: translateZ(0);
+  contain: paint;
 }
 
 .revision-notes-content #filter-bar ul {
