@@ -2174,3 +2174,57 @@ with it:
   slices, every derived thing derived at build time, strict anchors fail
   naming the file and the fix. Proven at Gate 3 on a scratch slice, both
   ways.
+
+### D62 — the diagram galleries join the reading design; macro-application does not
+
+**2026-08-25, Eliot, branch `feature/notes-family-consistency` (Gate 1
+built pages reviewed in Live Server; the macro-application revert was his
+explicit instruction mid-review).** Ratified.
+
+The two hand-written diagram galleries — `microeconomics-diagrams.html`
+and `macroeconomics-diagrams.html` — leave `revision-notes-textbook.css`
+for the shared notes sheet, `css/pages/revision-notes-topic.css`, plus a
+rewritten `revision-notes-diagrams.css` for what only a gallery needs.
+What is ratified with it:
+
+- **The card grid survives on a wider track.** A gallery is a visual
+  index, not a reading column: 50em of content beside the same 14em
+  sticky rail from 1024px, cards on hairlines with no shadows, the
+  Theme/spec tags as quiet small-caps text, `exam-note` in the exam-tip
+  clothes with its own bold lead as the label.
+- **The economics content is byte-identical** — every caption, exam note
+  and (src, alt) image pair, proved by
+  `_working/notes-family-consistency/check_content_identity.py`. The
+  declared chrome changes: "Contents" became the shared "On this page"
+  rail (same anchors, same anchor text), and the notes-cta became the
+  D58-style close — a two-panel "Carry on revising" unit and one services
+  sentence reusing D58's approved anchors — **with every destination
+  surviving exactly once, unchanged**, the generic `/past-papers/` link
+  included.
+- **Every raster diagram gets the framed no-JS tap-to-enlarge**; the one
+  SVG diagram per gallery keeps today's rendering with no zoom (the 4-1-2
+  precedent). The first diagram per page is promoted
+  `fetchpriority="high"` and loses `loading="lazy"`, per the topic rule.
+- **notes.js reaches hand-written pages through a declared hook**:
+  `bake_templates.EXTRA_COMPONENT_SCRIPTS`, restated independently in
+  `verify_page_shell.py`'s `EXTRA_SCRIPT_PAGES` per the two-file rule;
+  the notes-other script-tail shape reseeded 1 → 2. Mark-as-revised is
+  gated on the `.topic-meta` sub-label, so reference pages get the
+  progress bar, back-to-top, scrollspy and lightbox but no toggle; the
+  scrollspy steps back on upward scroll past a tall target.
+- **`revision-notes-textbook.css` now serves exactly ONE page** —
+  `macro-application/` — superseding D61's "frozen for exactly three
+  pages". Still frozen, still not to be edited to restyle anything else.
+- **Macro-application was moved onto the design and then REVERTED, byte
+  for byte, on Eliot's instruction.** Three filter designs (chips as
+  no-JS jump links, labelled always-visible groups, plain text-link
+  lists) and two paint-isolation attempts all painted intermittently
+  squashed in his Chrome and Safari — the panel's painted width a
+  fraction of its measured geometry, varying with scroll — while
+  Chromium (real clock), WebKit and Firefox rendered the same files
+  correctly. `git diff` against the merge base proves the revert exact
+  across the slice, record, both sheets and the rendered page. The full
+  account is in `_working/notes-family-consistency/PROPOSAL.md` and
+  the record branch `record/macro-application-attempts` (pushed, kept unmerged); a future attempt starts from why that page's
+  paint misbehaves when the 166 topic pages' identical rail construct
+  never has.
