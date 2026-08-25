@@ -42,6 +42,9 @@ CHROME = [
     # new: the Carry on revising unit and the services sentence (all three)
     re.compile(r'<nav class="topic-next".*?</nav>', re.S),
     re.compile(r'<p class="topic-services">.*?</p>', re.S),
+    # new: the filter bar's two country group labels (macro-application) -
+    # the chips themselves are NOT stripped, so their text is still compared
+    re.compile(r'<span class="filter-topic-group__label">.*?</span>', re.S),
 ]
 
 TAG = re.compile(r"<[^>]+>")

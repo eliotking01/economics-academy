@@ -87,14 +87,19 @@
 
             <!-- Filter bar. Every chip is a real link to its section, so with
                  JavaScript off it navigates; js/components/notes.js upgrades
-                 the chips in place to show/hide filters (D62). -->
+                 the chips in place to filters (D62). With JS on, a country
+                 chip narrows the bank and the topic lists to that country,
+                 and a topic chip picks its own country. Only the two
+                 labelled groups are ever shown or hidden, never single
+                 chips, so the bar can never render a half-state. -->
             <div id="filter-bar">
               <div class="filter-country-group" role="group" aria-label="Filter by country">
                 <a class="filter-country-btn is-active" data-country="all" href="#application-bank">All</a>
                 <a class="filter-country-btn" data-country="uk" href="#uk-section">UK</a>
                 <a class="filter-country-btn" data-country="sa" href="#sa-section">South Africa</a>
               </div>
-              <div class="filter-topic-group" id="filter-topics">
+              <div class="filter-topic-group" id="filter-topics-uk" role="group" aria-label="United Kingdom topics">
+                <span class="filter-topic-group__label">United Kingdom</span>
                 <a class="filter-topic-btn" data-for-country="uk" data-topic="macroeconomic-performance" href="#uk-macroeconomic-performance">Macroeconomic Performance</a>
                 <a class="filter-topic-btn" data-for-country="uk" data-topic="inflation-monetary-policy" href="#uk-inflation-monetary-policy">Inflation &amp; Monetary Policy</a>
                 <a class="filter-topic-btn" data-for-country="uk" data-topic="labour-market" href="#uk-labour-market">Labour Market</a>
@@ -104,6 +109,9 @@
                 <a class="filter-topic-btn" data-for-country="uk" data-topic="supply-side-policy" href="#uk-supply-side-policy">Supply-Side Policy</a>
                 <a class="filter-topic-btn" data-for-country="uk" data-topic="financial-sector" href="#uk-financial-sector">Financial Sector</a>
                 <a class="filter-topic-btn" data-for-country="uk" data-topic="external-trade" href="#uk-external-trade">External Position &amp; Trade</a>
+              </div>
+              <div class="filter-topic-group" id="filter-topics-sa" role="group" aria-label="South Africa topics">
+                <span class="filter-topic-group__label">South Africa</span>
                 <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-growth-development" href="#sa-growth-development">Growth &amp; Development</a>
                 <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-labour-market" href="#sa-labour-market">Labour Market</a>
                 <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inflation-monetary-policy" href="#sa-inflation-monetary-policy">Inflation &amp; Monetary Policy</a>

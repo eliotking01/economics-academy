@@ -72,13 +72,28 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  margin-bottom: 0.75em;
 }
 
+/* A labelled topic group per country. Only these two groups are ever shown
+   or hidden by notes.js - never a single chip - so the bar has exactly
+   three states: both groups (All, and the no-JS page), or one. */
 .revision-notes-content .filter-topic-group {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.5em;
+  margin-top: 0.9em;
+}
+
+.revision-notes-content .filter-topic-group__label {
+  flex: 0 0 100%;
+  font-family: var(--nt-heading);
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--nt-muted);
 }
 
 /* The chips. Interactive pills (the mark-as-revised precedent), not the
@@ -94,6 +109,9 @@
   font-size: 0.875em;
   font-weight: 600;
   line-height: 1.4;
+  /* A pill never squashes: the text cannot wrap inside it, and as a flex
+     item it wraps to the next row whole instead of being squeezed. */
+  white-space: nowrap;
   color: #1f6b77;
   text-decoration: none;
   transition:

@@ -97,21 +97,25 @@ def shot(name, path, width, height, js, out):
     if not js:
         path = nojs_copy(path, name)
     url = f"http://127.0.0.1:{PORT}{path}"
+    # Real clock (--timeout), not --virtual-time-budget: under virtual time
+    # Chrome painted one committed shot with the filter bar at a fraction of
+    # its measured geometry, and freezes colour transitions at their FROM
+    # value - the same class of lie docs/audit's render_nav.py records.
     if width == 360:
         url = wrapper_for(url, height)
         chrome([f"--window-size=600,{height}",
-                f"--screenshot={out}", "--virtual-time-budget=8000", url])
+                f"--screenshot={out}", "--timeout=5000", url])
         crop_center(out, 360)
     else:
         chrome([f"--window-size={width},{height}",
-                f"--screenshot={out}", "--virtual-time-budget=8000", url])
+                f"--screenshot={out}", "--timeout=5000", url])
     print("wrote", pathlib.Path(out).name)
 
 
 def pdf(path, out):
     url = f"http://127.0.0.1:{PORT}{path}"
     chrome([f"--print-to-pdf={out}", "--no-pdf-header-footer",
-            "--virtual-time-budget=8000", url])
+            "--timeout=5000", url])
     print("wrote", pathlib.Path(out).name)
 
 

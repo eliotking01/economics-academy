@@ -187,8 +187,11 @@
   }
 
   /* Fact-bank filters - macro-application only. The chips are baked links
-     that jump to their sections with JS off; here they become show/hide
-     filters, the behaviour the page has always had with JS on. */
+     that jump to their sections with JS off; here they become filters. All
+     chips stay visible at "All"; picking a country hides the OTHER
+     country's bank and its labelled topic group - whole groups only, never
+     single chips, so the bar cannot render a half-state - and a topic chip
+     picks its own country. */
   var bar = document.getElementById("filter-bar");
   if (bar) {
     var countryChips = Array.prototype.slice.call(
@@ -200,6 +203,10 @@
     var appSections = Array.prototype.slice.call(
       main.querySelectorAll(".application-section")
     );
+    var topicGroups = {
+      uk: document.getElementById("filter-topics-uk"),
+      sa: document.getElementById("filter-topics-sa"),
+    };
     var activeCountry = "all";
     var activeTopic = null;
 
@@ -218,12 +225,29 @@
         s.style.display =
           !activeTopic || s.dataset.topic === activeTopic ? "" : "none";
       });
-      /* Topic chips only make sense within one country's bank. */
+      Object.keys(topicGroups).forEach(function (k) {
+        if (topicGroups[k]) {
+          topicGroups[k].style.display =
+            activeCountry === "all" || activeCountry === k ? "" : "none";
+        }
+      });
+    };
+
+    var setCountry = function (code) {
+      activeCountry = code;
+      countryChips.forEach(function (c) {
+        var on = c.dataset.country === code;
+        c.classList.toggle("is-active", on);
+        c.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    };
+
+    var setTopic = function (t) {
+      activeTopic = t;
       topicChips.forEach(function (c) {
-        c.style.display =
-          activeCountry !== "all" && c.dataset.forCountry === activeCountry
-            ? ""
-            : "none";
+        var on = t !== null && c.dataset.topic === t;
+        c.classList.toggle("is-active", on);
+        c.setAttribute("aria-pressed", on ? "true" : "false");
       });
     };
 
@@ -235,18 +259,8 @@
       );
       chip.addEventListener("click", function (ev) {
         ev.preventDefault();
-        activeCountry = chip.dataset.country;
-        activeTopic = null;
-        countryChips.forEach(function (c) {
-          c.classList.remove("is-active");
-          c.setAttribute("aria-pressed", "false");
-        });
-        chip.classList.add("is-active");
-        chip.setAttribute("aria-pressed", "true");
-        topicChips.forEach(function (c) {
-          c.classList.remove("is-active");
-          c.setAttribute("aria-pressed", "false");
-        });
+        setCountry(chip.dataset.country);
+        setTopic(null);
         applyFilter();
       });
     });
@@ -256,19 +270,11 @@
       chip.setAttribute("aria-pressed", "false");
       chip.addEventListener("click", function (ev) {
         ev.preventDefault();
-        var t = chip.dataset.topic;
-        if (activeTopic === t) {
-          activeTopic = null;
-          chip.classList.remove("is-active");
-          chip.setAttribute("aria-pressed", "false");
+        if (activeTopic === chip.dataset.topic) {
+          setTopic(null);
         } else {
-          activeTopic = t;
-          topicChips.forEach(function (c) {
-            c.classList.remove("is-active");
-            c.setAttribute("aria-pressed", "false");
-          });
-          chip.classList.add("is-active");
-          chip.setAttribute("aria-pressed", "true");
+          setCountry(chip.dataset.forCountry);
+          setTopic(chip.dataset.topic);
         }
         applyFilter();
       });

@@ -107,10 +107,25 @@ section, UK/South Africa jump to their country blocks, and All jumps to the
 top of the fact bank (a new `#application-bank` wrapper around the two
 country blocks). Every fact is visible, every control does something. With
 JS, `notes.js` upgrades the chips in place (role="button",
-`aria-pressed`, preventDefault) to exactly the show/hide filtering the old
-inline script gave — which is retired from the record's `afterScripts`, so
-the page has no inline script left ("progressive enhancement via notes.js,
-not a second script").
+`aria-pressed`, preventDefault) to filters — which retires the inline
+script from the record's `afterScripts`, so the page has no inline script
+left ("progressive enhancement via notes.js, not a second script").
+
+**The filter bar itself is redesigned after your Gate 1 review** (the
+"squashed / not displayed" report). The old behaviour — inherited from the
+inline script — hid all 18 topic chips until a country was picked, leaving
+a near-empty bar that read as broken, and showed/hid chips one by one. Now
+every chip is always in the bar, in two labelled groups (a small-caps
+"United Kingdom" and "South Africa" label over each country's nine topics);
+picking a country hides only the *other country's whole labelled group*;
+picking a topic selects its country by itself; All restores everything.
+Single chips are never hidden, so no half-state can render, and
+`white-space: nowrap` on the pills means a chip can wrap to the next row
+whole but never be squeezed or break mid-label. The JS-on "All" view and
+the no-JS view are now the same bar. Evidence:
+`shots/macro-app-1280-filter-uk.png` (UK picked),
+`macro-app-1280-filter-topic.png` (topic picked — country follows),
+`macro-app-360-filter-sa.png` (South Africa at 360).
 
 **Generated component labels are suppressed where a card labels itself.**
 The 50 fact cards carry `class="application"`, so the shared sheet would
