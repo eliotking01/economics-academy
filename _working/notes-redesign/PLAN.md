@@ -1,5 +1,7 @@
 # Notes topic-page redesign — Gate 2 roll-out plan, for approval
 
+> **Approved by Eliot, 2026-08-25, as written.**
+
 The approved design (PROPOSAL.md revision 2) applied to all 166 topic
 pages. Nothing under the published tree changes until Gate 3; every number
 below was measured on this branch today, not assumed. The companion
