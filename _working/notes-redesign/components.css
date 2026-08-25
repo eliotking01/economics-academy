@@ -1,0 +1,113 @@
+/* Catalogue-only styles for components.html. NOT part of the proposed page
+   sheet - this file lays out the specimen sheet (labels, dividers) and
+   neutralises the >=1024px contents-rail placement so the "On this page" box
+   can be shown in its in-flow form at any width. Nothing here ships. */
+
+.components-catalogue {
+  display: block !important;
+  max-width: 44em;
+  margin: 0 auto;
+}
+
+.demo-kicker {
+  margin: 3em 0 0.2em;
+  padding-top: 1.6em;
+  border-top: 2px solid #1a3e72;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a3e72;
+}
+
+.demo-kicker:first-of-type {
+  margin-top: 1em;
+}
+
+.demo-note {
+  margin: 0 0 1.4em;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 0.88em;
+  line-height: 1.55;
+  color: #5a6b80;
+}
+
+.demo-note code {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.92em;
+  background: #f4f5f8;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 0.05em 0.35em;
+  color: #1a3e72;
+}
+
+/* Restore the in-flow "On this page" box on wide screens for the specimen -
+   on a real page the >=1024 media query restyles it into the rail. */
+@media screen and (min-width: 1024px) {
+  .components-catalogue .topic-contents {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    margin: 0 0 2em;
+    padding: 0.9em 1.2em 1em;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+  }
+
+  .components-catalogue .topic-contents__list {
+    font-size: 0.92em;
+    list-style: decimal;
+    padding-left: 1.5em;
+  }
+
+  .components-catalogue .topic-contents__list a {
+    color: #1a3e72;
+    border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+    padding: 0;
+  }
+}
+
+/* The rail form, demonstrated statically inside a specimen box. */
+.demo-rail {
+  padding: 0 0 0 1.1em;
+  border-left: 1px solid #e2e8f0;
+  max-width: 14em;
+}
+
+.demo-rail .topic-contents__label {
+  margin: 0 0 0.45em;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1f6b77;
+}
+
+.demo-rail ol {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 0.85em;
+  line-height: 1.55;
+}
+
+.demo-rail ol li {
+  margin: 0.25em 0 !important;
+  padding: 0 !important;
+}
+
+.demo-rail ol a {
+  color: #5a6b80 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.demo-rail ol a.is-current {
+  color: #1f6b77 !important;
+  font-weight: 600;
+}

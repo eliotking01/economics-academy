@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOCK — Component sheet — notes topic-page redesign (Gate 1)</title>
+    <!-- Gate 1 component sheet. Every component in the library rendered in
+         the proposed design, using real instances copied verbatim from the
+         pages that carry them: aqa-a2-macro/2-1-3 (worked examples,
+         calculation table, formula boxes, exam tips, concept tables, h3s,
+         ordered list), edexcel-theme-1/1-1-1 (evaluation point, content
+         example), aqa-a2-micro/1-7-2 (flow chain), aqa-a2-micro/1-5-1
+         (competition spectrum), aqa-a2-micro/1-6-6 (the single-section
+         page), edexcel-theme-1/1-2-2 (definition paragraphs, diagram,
+         chrome). components.css is catalogue layout only and ships
+         nowhere. -->
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/_working/notes-redesign/notes-redesign.css" />
+    <link rel="stylesheet" href="/_working/notes-redesign/components.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true,
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"],
+          },
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <header id="header">
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+      </header>
+
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <div class="notes-container components-catalogue">
+            <header class="major">
+              <h1>Component sheet</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec">Notes redesign · Gate 1</span>
+                <span class="topic-meta__updated">Every component, real content, new clothes</span>
+              </p>
+            </header>
+
+            <p class="demo-note">
+              One grammar for every component: a 3px left rule, a near-white
+              tint, a small-caps label in the component's text-safe colour. No
+              gradients, no floating pills, no drop shadows. Resize to 360px
+              to see the phone treatment of each. Every economics sentence on
+              this sheet is copied byte-for-byte from the page named above it.
+            </p>
+
+            <p class="demo-kicker">The heading group</p>
+            <p class="demo-note">
+              From <code>edexcel-theme-1/1-2-2-demand</code>. Left-aligned,
+              spec line in teal, one new derived item: the read time (from the
+              <code>timeRequired</code> already in each page's schema).
+            </p>
+            <header class="major">
+              <h1>Demand</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel Theme 1, unit 1.2.2"
+                  >Edexcel<span aria-hidden="true"> · </span>Theme 1<span aria-hidden="true"> · </span>1.2.2</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-08-13">13 August 2026</time></span
+                >
+                <span class="topic-meta__read">3 min read</span>
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <p class="demo-kicker">Specification panel</p>
+            <p class="demo-note">
+              From <code>aqa-a2-macro/2-1-3-uses-of-index-numbers</code>. The
+              floating SPECIFICATION pill is gone — the content's own bold
+              lead does the labelling. Purple key kept so the board line
+              stays instantly findable.
+            </p>
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> AQA unit 2.1.3 - Uses of
+              Index Numbers. Students should be able to explain how index
+              numbers are calculated and interpreted, including the base year
+              and the use of weights. Students should also understand how index
+              numbers are used to measure changes in the price level and other
+              economic variables.
+            </div>
+
+            <p class="demo-kicker">On this page — in-flow box and rail form</p>
+            <p class="demo-note">
+              The in-flow box every width below 1024px sees (and the no-JS
+              form everywhere). From 1024px the same element moves into a
+              sticky right rail — shown statically underneath; the teal entry
+              is the scrollspy highlight JS adds.
+            </p>
+            <nav class="topic-contents" aria-labelledby="demo-contents-label">
+              <p class="topic-contents__label" id="demo-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#demo-what-are-index-numbers">What Are Index Numbers?</a></li>
+                <li><a href="#demo-how-cpi">How CPI and Inflation Are Calculated</a></li>
+              </ol>
+            </nav>
+            <div class="demo-rail" aria-hidden="true">
+              <p class="topic-contents__label">On this page</p>
+              <ol>
+                <li><a href="#demo-what-are-index-numbers">What Are Index Numbers?</a></li>
+                <li><a class="is-current" href="#demo-how-cpi">How CPI and Inflation Are Calculated</a></li>
+              </ol>
+            </div>
+
+            <p class="demo-kicker">Definitions</p>
+            <p class="demo-note">
+              The component 157 pages carry. A paragraph that opens with a
+              <code>key-definition</code> chip becomes a definition card at
+              build time (<code>extract_glossary.py</code>'s own
+              chip-opens-the-block test); a mid-sentence chip stays inline and
+              takes only the colour. First card and inline example below are
+              from <code>2-1-3</code> and <code>1-6-6</code> verbatim.
+            </p>
+            <section>
+              <h2 id="demo-what-are-index-numbers">What Are Index Numbers?</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Index number:</span> A number used
+                to express the value of a variable relative to a chosen
+                <strong>base value</strong>, which is set equal to
+                <strong>100</strong>. Index numbers make it easy to compare how
+                a variable has changed over time and to express those changes in
+                percentage terms.
+              </p>
+              <p>
+                The
+                <span class="key-definition">national minimum wage (NMW)</span>
+                is a legally enforced <strong>price floor</strong> set above the
+                market equilibrium wage.
+              </p>
+
+              <p class="demo-kicker">h3 and formula box</p>
+              <p class="demo-note">
+                From <code>2-1-3</code>: an h3 losing its dashed rule, and the
+                centred MathJax display box.
+              </p>
+              <h3>Calculating an Index Number</h3>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100 \]
+              </div>
+
+              <p class="demo-kicker">Worked example with concept table</p>
+              <p class="demo-note">
+                From <code>2-1-3</code>. Its own visible heading is the label,
+                so the WORKED EXAMPLE pill is gone; the navy key marks the
+                do-along boxes. The table inside scrolls sideways in its
+                container when it must.
+              </p>
+              <div class="worked-example">
+                <h3>Worked Example: Building a House Price Index</h3>
+                <p>
+                  Suppose the average house price in a town is recorded over
+                  three years, with
+                  <strong>2022 chosen as the base year</strong>:
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Average House Price</th>
+                        <th>Index Number (2022 = 100)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>2022 (base)</strong></td>
+                        <td>£200,000</td>
+                        <td>
+                          \( \frac{200{,}000}{200{,}000} \times 100 = 100 \)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2023</strong></td>
+                        <td>£210,000</td>
+                        <td>
+                          \( \frac{210{,}000}{200{,}000} \times 100 = 105 \)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2024</strong></td>
+                        <td>£230,000</td>
+                        <td>
+                          \( \frac{230{,}000}{200{,}000} \times 100 = 115 \)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  An index of <strong>115</strong> in 2024 tells us that house
+                  prices are <strong>15% higher</strong> than in the base year
+                  of 2022.
+                </p>
+              </div>
+
+              <p class="demo-kicker">Exam tip</p>
+              <p class="demo-note">
+                From <code>2-1-3</code>. The white-on-green pill (2.9:1) is now
+                a #1c7a42 label on the tint — 5.1:1, AA. Green key = "what the
+                examiner wants".
+              </p>
+              <div class="exam-tip">
+                <p>
+                  <strong
+                    >Only read a percentage change straight off the
+                    base.</strong
+                  >
+                  You can read a percentage change directly from an index number
+                  <em>only</em> when comparing with the base year (100). To find
+                  the percentage change between two <em>non-base</em> years, you
+                  must use the standard percentage change formula.
+                </p>
+              </div>
+
+              <p class="demo-kicker">Worked example with calculation table</p>
+              <p class="demo-note">
+                From <code>2-1-3</code>. The two-column running calculation —
+                never wrapped in a scroll container — with the answer row keyed
+                navy above a rule.
+              </p>
+              <div class="worked-example">
+                <h3>Worked Example: Calculating the Inflation Rate</h3>
+                <p>
+                  Suppose the CPI was <strong>103.2</strong> last year and
+                  <strong>106.8</strong> this year:
+                </p>
+                <table class="calculation-table">
+                  <tr>
+                    <td>CPI last year</td>
+                    <td>103.2</td>
+                  </tr>
+                  <tr>
+                    <td>CPI this year</td>
+                    <td>106.8</td>
+                  </tr>
+                  <tr>
+                    <td>Change in CPI</td>
+                    <td>106.8 − 103.2 = 3.6</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Inflation Rate</strong></td>
+                    <td>\( \frac{3.6}{103.2} \times 100 = 3.5\% \)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <h2 id="demo-how-cpi">How CPI and Inflation Are Calculated</h2>
+              <p class="demo-note">
+                The ordered list, from <code>2-1-3</code>: native numbering at
+                a hanging indent, teal markers, no absolute positioning.
+              </p>
+              <ol>
+                <li>
+                  <strong>Survey household spending.</strong> The
+                  <em>Living Costs and Food Survey</em> asks thousands of
+                  households to record what they buy, revealing the spending
+                  patterns of a typical household.
+                </li>
+                <li>
+                  <strong>Create the basket of goods and services.</strong> A
+                  representative basket of around 700 items is chosen. It is
+                  <strong>updated each year</strong> so that it reflects
+                  changing tastes and technology, with items added and removed
+                  over time.
+                </li>
+                <li>
+                  <strong>Assign weights.</strong> Each item is given a
+                  <strong>weight</strong> based on the proportion of household
+                  spending it accounts for. Items that households spend more on
+                  (such as housing and transport) are given a larger weight.
+                </li>
+                <li>
+                  <strong>Collect prices.</strong> The ONS collects around
+                  180,000 prices for these items every month, from retailers
+                  across the country and online.
+                </li>
+              </ol>
+            </section>
+
+            <p class="demo-kicker">Evaluation point and content example</p>
+            <p class="demo-note">
+              From <code>edexcel-theme-1/1-1-1-economics-as-a-social-science</code>.
+              The white-on-orange pill (2.7:1) is now an #a04d00 label on the
+              tint — 5.6:1, AA. The inline example chip takes the green, like
+              the definition chip takes the pink.
+            </p>
+            <div class="evaluation-point">
+              <p>
+                The usefulness of a model depends on its
+                <strong>assumptions</strong>. Different economists may make
+                different assumptions, leading to
+                <strong>different interpretations of the same data</strong>.
+              </p>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  <span class="content-example">Example:</span>The Circular
+                  Flow of Income model simplifies the entire economy into a
+                  few key agents (households, firms, government) and their
+                  interactions.
+                </p>
+              </li>
+            </ul>
+
+            <p class="demo-kicker">Application</p>
+            <p class="demo-note">
+              In the library, on zero pages today. Kept, restyled to the same
+              grammar, so it works the day a page uses it. Sample text only —
+              no page carries a real instance to copy.
+            </p>
+            <div class="application">
+              <p>
+                Sample text. This box takes real-world application content when
+                a page uses it; none does yet.
+              </p>
+            </div>
+
+            <p class="demo-kicker">Flow chain</p>
+            <p class="demo-note">
+              From <code>aqa-a2-micro/1-7-2-the-problem-of-poverty</code>. The
+              long second chain tests wrapping at 360px; the end node is the
+              AA-safe dark teal.
+            </p>
+            <div class="flow-chain">
+              <span class="flow-node">Low Economic Growth</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Fewer Job Opportunities</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lower Incomes</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Unable to Save</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lower Investment</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lower Economic Growth</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node flow-node--end">Poverty Trap</span>
+            </div>
+            <div class="flow-chain">
+              <span class="flow-node">Lack of Human Capital Development</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lower Skills and Poor Health</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lower Productivity</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lower Incomes</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Unable to Save</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node"
+                >Lower Investment in Human Capital of Next Generation</span
+              >
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node">Lack of Human Capital Development</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-node flow-node--end">Poverty Trap</span>
+            </div>
+
+            <p class="demo-kicker">Competition spectrum</p>
+            <p class="demo-note">
+              From <code>aqa-a2-micro/1-5-1-market-structures</code>. Built
+              recently, kept — ported with the palette aligned.
+            </p>
+            <div
+              class="comp-spectrum"
+              role="img"
+              aria-label="Spectrum of competition from perfect competition (most competitive, very many firms) through monopolistic competition and oligopoly to monopoly (least competitive, one firm)."
+            >
+              <ol class="comp-spectrum__track">
+                <li class="comp-spectrum__step comp-spectrum__step--1">
+                  <span class="comp-spectrum__name">Perfect competition</span>
+                  <span class="comp-spectrum__firms"
+                    >Infinite number of firms</span
+                  >
+                </li>
+                <li class="comp-spectrum__step comp-spectrum__step--2">
+                  <span class="comp-spectrum__name"
+                    ><a
+                      href="/revision-notes/aqa-a2-micro/1-5-4-monopolistic-competition.html"
+                      >Monopolistic competition</a
+                    ></span
+                  >
+                  <span class="comp-spectrum__firms">Many firms</span>
+                </li>
+                <li class="comp-spectrum__step comp-spectrum__step--3">
+                  <span class="comp-spectrum__name">Oligopoly</span>
+                  <span class="comp-spectrum__firms">3-8 firms</span>
+                </li>
+                <li class="comp-spectrum__step comp-spectrum__step--4">
+                  <span class="comp-spectrum__name">Monopoly</span>
+                  <span class="comp-spectrum__firms">One firm</span>
+                </li>
+              </ol>
+              <div class="comp-spectrum__axis">
+                <span class="comp-spectrum__axis-label"
+                  >Most competitive</span
+                >
+                <span class="comp-spectrum__rail" aria-hidden="true"></span>
+                <span class="comp-spectrum__axis-label"
+                  >Least competitive</span
+                >
+              </div>
+            </div>
+
+            <p class="demo-kicker">The single-section page</p>
+            <p class="demo-note">
+              <code>aqa-a2-micro/1-6-6-the-national-minimum-wage</code> whole,
+              chrome and all — the shortest shape on the site, where the
+              furniture must not swamp one section. Also the diagram
+              specimen: full column width, hairline frame, tap or click opens
+              the full-size PNG (a real link — no JavaScript needed; a
+              lightbox when there is).
+            </p>
+            <header class="major">
+              <h1>The National Minimum Wage</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="AQA Microeconomics, unit 1.6.6"
+                  >AQA<span aria-hidden="true"> · </span>Microeconomics<span aria-hidden="true"> · </span>1.6.6</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-08-21">21 August 2026</time></span
+                >
+                <span class="topic-meta__read">2 min read</span>
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> AQA unit 1.6.6 - The
+              National Minimum Wage. Students should be able to explain how the
+              government sets the national minimum wage, and the impact it has
+              on workers and employers in different labour markets.
+            </div>
+            <nav class="topic-contents" aria-labelledby="demo-nmw-contents">
+              <p class="topic-contents__label" id="demo-nmw-contents">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#demo-national-minimum-wage">National Minimum Wage</a></li>
+              </ol>
+            </nav>
+            <section>
+              <h2 id="demo-national-minimum-wage">National Minimum Wage</h2>
+              <p>
+                The
+                <span class="key-definition">national minimum wage (NMW)</span>
+                is a legally enforced <strong>price floor</strong> set above the
+                market equilibrium wage.
+              </p>
+
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/min-wage.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/min-wage.webp" />
+                <img
+                  src="/images/diagrams/min-wage.png"
+                  alt="Labour market diagram showing a minimum wage above equilibrium creating excess supply of labour and unemployment"
+                  class="diagram-image"
+                  width="2348"
+                  height="1590"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 1: The introduction of a national minimum wage (Wmin)
+                  above the equilibrium wage (W1) creates a surplus of labour
+                  (unemployment) equal to the difference between the quantity of
+                  labour supplied (Qs) and the quantity of labour demanded (Qd).
+                </figcaption>
+              </figure>
+
+              <p>
+                The minimum wage creates a rigid wage floor at Wmin,
+                <strong>increasing the wages of lower income earners</strong>
+                from W1 to Wmin. This helps to
+                <strong>reduce income inequality.</strong>
+              </p>
+              <p>
+                However, minimum wages increase the costs of employing labour
+                for businesses, and as a result the demand for labour contracts
+                from Q1 to Qd, resulting in a
+                <strong
+                  >lower level of employment for lower income workers.</strong
+                >
+                This is known as <strong>Real Wage Unemployment.</strong>
+              </p>
+              <p>
+                <strong>Evaluations</strong> for the impact of a minimum wage
+                include:
+              </p>
+              <ul>
+                <li>
+                  Depends on the <strong>size of the minimum wage:</strong> if
+                  the minimum wage is significantly above the equilibrium, this
+                  significantly increases incomes but creates a substantial
+                  level of real wage unemployment.
+                </li>
+                <li>
+                  Depends on the
+                  <strong>Wage Elasticity of Demand for Labour:</strong> if the
+                  demand for labour is wage elastic, then the unemployment
+                  created will be more significant. Minimum wages are more
+                  effective in markets with wage inelastic demand.
+                </li>
+                <li>
+                  Depends on
+                  <strong>improvements to worker motivation:</strong> if the
+                  higher wages cause workers to become more motivated, this may
+                  increase their productivity. As a result this offsets the rise
+                  in ATC for firms, reducing the size of the unemployment
+                  created.
+                </li>
+              </ul>
+            </section>
+
+            <p class="demo-kicker">Mark as revised</p>
+            <p class="demo-note">
+              Injected by JavaScript after the last section (never in the
+              markup, so no dead control without it). State lives in
+              localStorage, the flashcards' "saved on this device" idiom.
+              Shown static here in both states.
+            </p>
+            <div class="topic-revised">
+              <button type="button" class="topic-revised__button" aria-pressed="false">Mark as revised</button>
+              <button type="button" class="topic-revised__button" aria-pressed="true">✓ Revised</button>
+              <p class="topic-revised__note">Saved on this device, like your flashcard progress.</p>
+            </div>
+
+            <p class="demo-kicker">The tail and previous / next</p>
+            <p class="demo-note">
+              From <code>1-2-2-demand</code>, wording and order exactly as D58
+              approved them — only the clothes change: same label grammar as
+              the rest of the page, hairline cards for prev/next.
+            </p>
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-theme-1/1-2-4-supply.html">Supply</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html">Elasticity of supply</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-theme-1/1-2-6-price-determination.html">Price determination</a>
+                </li>
+              </ul>
+              <p class="topic-related__twin">
+                Studying AQA instead?
+                <a class="topic-related__twin-link" href="/revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html">The Determinants of the Demand for Goods and Services</a>
+                covers this on AQA.
+              </p>
+            </nav>
+            <nav class="topic-next" aria-labelledby="demo-next-label">
+              <p class="topic-next__label" id="demo-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/practice-questions/edexcel-theme-1/1-2-2-demand.html">Practice questions: 1.2.2 Demand</a>
+                  <p class="topic-next__note">Eight original multiple-choice questions on the law of demand, movements along and shifts of the curve, and diminishing marginal utility.</p>
+                </li>
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/flashcards/edexcel-a/theme-1/?topic=1-2-2-demand">Flashcards: 1.2.2 Demand</a>
+                  <p class="topic-next__note">The Theme 1 deck filtered to this topic — definitions, diagrams and chains of reasoning, with your progress saved on this device.</p>
+                </li>
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-paper-questions/edexcel/1-2-2-demand/">Past paper questions: 1.2.2 Demand</a>
+                  <p class="topic-next__note">Five questions from the Edexcel A-Level and AS papers, 2017&ndash;2024, 4 to 25 marks, each linked to the page of the official mark scheme where its answer begins. Whole papers and mark schemes: <a href="/past-papers/edexcel/">Edexcel past papers</a>.</p>
+                </li>
+              </ul>
+              <p class="notes-diagrams-link">
+                Every Theme 1 and Theme 3 diagram in one place: <a href="/revision-notes/microeconomics-diagrams.html">Microeconomics Diagrams</a>.
+              </p>
+            </nav>
+            <aside class="topic-author" aria-labelledby="demo-author-label">
+              <p class="topic-author__label" id="demo-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html"
+                rel="prev"
+                aria-label="Previous topic: 1.2.1 Rational decision making"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">1.2.1 Rational decision making</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+                rel="next"
+                aria-label="Next topic: 1.2.3 Price, income and cross elasticities of demand"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">1.2.3 Price, income and cross elasticities of demand</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
