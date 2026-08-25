@@ -1,12 +1,33 @@
-# Notes topic-page redesign — Gate 1 proposal, for approval
+# Notes topic-page redesign — Gate 1 proposal, revision 2
+
+> **Revision 2, 2026-08-25, answering Eliot's five review points:**
+> 1. **Previous/next is back at the top** — restored in its lightest
+>    workable form: one boxless line between the breadcrumb and the heading
+>    (caption over title on desktop; captions only below 768px, per the
+>    2026-08-21 titles-hidden-never-truncated rule). ~30px on a phone
+>    against the old card row's 50px.
+> 2. **"N min read" removed.** It carries no SEO weight (`timeRequired`
+>    already sits in the schema, where it stays) — dropped as requested.
+> 3. **"Mark as revised" kept, contrast fixed.** The unreadable text was
+>    the theme's base button rule (`color: #fff !important` in main.css);
+>    the button now counter-declares its colour — the `.consent-button`
+>    precedent — and renders dark teal on white.
+> 4. **Byline kept in full at every width.**
+> 5. **Second mock added:** `2-1-3-uses-of-index-numbers.html` — the
+>    densest page on the site (three worked examples, six formula boxes,
+>    two exam tips, concept and calculation tables, h3s, an ordered list,
+>    live MathJax) — so the formula-heavy components can be reviewed on a
+>    real page. Its content region is proven identical the same way.
 
 Branch `feature/notes-redesign`. Nothing under the published tree has changed:
-this folder holds a full mock of the redesigned Demand page, a component
-sheet showing every library component in the new design, screenshots at both
-widths with JS on and off, a print PDF, and the proof that the economics
+this folder holds full mocks of two redesigned pages, a component sheet
+showing every library component in the new design, screenshots at both
+widths with JS on and off, print PDFs, and the proof that the economics
 content is byte-identical. Open in Live Server:
 
-- `/_working/notes-redesign/1-2-2-demand.html` — the redesigned page
+- `/_working/notes-redesign/1-2-2-demand.html` — the redesigned Demand page
+- `/_working/notes-redesign/2-1-3-uses-of-index-numbers.html` — the
+  formula-heavy page (worked examples, formulae, exam tips, both tables)
 - `/_working/notes-redesign/components.html` — the component sheet
 
 `notes-redesign.css` beside them is the proposed page sheet (it would ship as
@@ -15,13 +36,15 @@ content is byte-identical. Open in Live Server:
 
 | Evidence | File |
 | --- | --- |
-| 1280, JS on, top / full page | `mock-1280-top.png`, `mock-1280-full.png` |
+| Demand, 1280, JS on, top / full page | `mock-1280-top.png`, `mock-1280-full.png` |
 | 1024 — the width the contents rail appears | `mock-1024-top.png` |
-| 360, JS on, top / full page | `mock-360-top.png`, `mock-360-full.png` |
+| Demand, 360, JS on, top / full page | `mock-360-top.png`, `mock-360-full.png` |
 | JS off, both widths (identical page minus enhancements) | `mock-1280-nojs.png`, `mock-360-nojs.png` |
-| Print preview | `mock-print.pdf` |
+| Demand print preview | `mock-print.pdf` |
+| Index numbers, 1280, top / full | `index-1280-top.png`, `index-1280-full.png` |
+| Index numbers, 360 full / print | `index-360-full.png`, `index-print.pdf` |
 | Component sheet, both widths | `components-1280-full.png`, `components-360-full.png` |
-| Content-identity proof | `python3 _working/notes-redesign/check_content_identity.py` |
+| Content-identity proof, both pages | `python3 _working/notes-redesign/check_content_identity.py` |
 
 ---
 
@@ -67,25 +90,26 @@ tomorrow or doesn't. Everything below serves reading stamina, scanability of
 definitions/tips/examples, and a reason to return — and the ranking case
 follows from that, not the other way round.
 
-**What the page carries, in order** (top prev/next row is the one removal —
-flagged in §3):
+**What the page carries, in order:**
 
 1. Breadcrumb (unchanged, site-wide component)
-2. **h1**, left-aligned, no underline — then one quiet meta line (board ·
-   module · code, updated date, **"N min read"** derived from the schema's
-   existing `timeRequired`), then the byline
-3. **Specification panel** — same position, same words, restyled from a
+2. **Previous / next, light** — one boxless line: teal caption over navy
+   title each side on desktop, captions only below 768px (restored on your
+   review; the markup is today's, only the clothes changed)
+3. **h1**, left-aligned, no underline — then one quiet meta line (board ·
+   module · code, updated date), then the byline
+4. **Specification panel** — same position, same words, restyled from a
    shouting purple box to a quiet reference panel; its own bold
    "Specification Coverage:" lead replaces the redundant floating pill
-4. **"On this page"** — below 1024px the in-flow box it is today; from
+5. **"On this page"** — below 1024px the in-flow box it is today; from
    1024px **the same element** becomes a sticky right rail that tracks the
    current section (CSS grid moves it — one element, no duplicate markup,
    works with JS off; the highlight is the JS enhancement)
-5. **The teaching sections** in a 38em (~72-character) reading column,
+6. **The teaching sections** in a 38em (~72-character) reading column,
    hairline rules between sections, calm typographic headings
-6. "Mark as revised" (JS-injected, §5)
-7. The D58 tail, wording and order untouched, restyled to the same grammar
-8. Previous / next — the bottom row, as cards
+7. "Mark as revised" (JS-injected, §5)
+8. The D58 tail, wording and order untouched, restyled to the same grammar
+9. Previous / next — the bottom row, as cards
 
 **The component system.** One grammar for everything: a 3px left rule, a
 near-white tint, a small-caps label in the component's text-safe colour.
@@ -123,16 +147,15 @@ positioned custom bullets.
 
 ## 3. Changes that need a flag, and what I rejected
 
-**The top prev/next row is removed** (my recommendation — say if you want it
-back, it is one generator function and one CSS block). The 2026-08-21 pass
-compressed it because it was pushing the h1 down 219–279px on a phone; this
-completes that direction rather than reversing it: the measured problem was
-the row's cost above the heading, and its benefit ("finished one topic, move
-to the next") lives at the bottom, where the identical row remains with both
-destinations. Nothing is lost from the page's link set; `rel=prev/next`
-survive on the bottom row. It needs `verify_notes_sequence.py` amended (it
-asserts a row at each end) and is the main `Markup-Change:`/`Text-Change:`
-on all 166.
+**The top prev/next row stays, lighter** (revision 2 — you asked for it
+back). Same markup, same captions, same aria-labels, same
+titles-hidden-below-768px rule as the 2026-08-21 pass; the boxes are gone,
+so it costs ~30px above the heading on a phone against the old row's 50px.
+No generator or `verify_notes_sequence.py` change needed.
+
+**"N min read" is out** (revision 2 — no SEO value, your call). The
+`timeRequired` field stays in the schema untouched; nothing on the visible
+page derives from it.
 
 **Rejected, and why:**
 
@@ -169,8 +192,9 @@ is kept in the library and the sheet.
 
 | String | Where |
 | --- | --- |
-| `N min read` (e.g. "3 min read") | meta line; derived from the record's existing `timeRequired` (PT3M → 3), never hand-typed |
-| `Scrollable table` | `aria-label` on each `.table-container`, added at build time |
+| `Scrollable table` | `aria-label` on each `.table-container`, added at build time — an attribute, not visible text |
+
+(The "N min read" line was in revision 1 and is withdrawn.)
 
 **New (JS-injected only — never in the baked page):**
 
@@ -196,11 +220,13 @@ is kept in the library and the sheet.
 | `SPECIFICATION` pill | the content's own bold "Specification Coverage:" lead already labels it |
 | `WORKED EXAMPLE` pill | every worked example carries its own visible "Worked Example: …" h3 |
 | `↔ Scroll to view full table` | replaced by the clipped-column + edge-fade cue and the keyboard-accessible region |
-| One `Previous topic` / `Next topic` instance per page | the top row goes; both strings remain in the bottom row |
 
 **Unchanged:** every D58 tail string, "On this page", "Updated", the byline
-and bio, the breadcrumb, "Topic list", all `notesTeaser` and derived
-past-paper sentences.
+and bio, the breadcrumb, both prev/next rows' captions and titles, "Topic
+list", all `notesTeaser` and derived past-paper sentences. **No baked
+visible text changes on any page** — every string above is either CSS
+content, an attribute, or JS-injected, so the roll-out is expected to need
+zero `Text-Change:` trailers (confirmed, not assumed, at Gate 3).
 
 ## 5. Reasons to come back (all JS-injected, all optional to approve)
 
@@ -212,6 +238,11 @@ past-paper sentences.
   "saved on this device" idiom; injected after the last section so a no-JS
   page shows no dead control. (A theme-wide "what have I covered" view on
   the hubs is a natural follow-up, deliberately not in this scope.)
+  Revision 2 fixed its unreadable text: the theme's base button rule sets
+  `color: #fff !important` on every `<button>`, so the pill rendered white
+  on white; it now counter-declares its colour the way `.consent-button`
+  and the search overlay's Cancel already do. The back-to-top and lightbox
+  Close buttons carry the same counter-declaration for the same reason.
 - **Diagram lightbox** — native `<dialog>` over the no-JS `<a>`-to-PNG.
 
 In production all of this is one new file, `js/components/notes.js`
@@ -266,8 +297,8 @@ work: an axe pass and a VoiceOver walk of the finished pages.
 
 | | Today | Mock | Notes |
 | --- | --- | --- | --- |
-| Page stylesheet | 46,601 B (10.4 KB gz) | 39,003 B (8.5 KB gz) | new sheet, comments included; the 166 stop paying for the galleries' rules |
-| Page HTML (Demand) | 37,938 B | ~36.9 KB estimated shipped | head unchanged; top nav row −1.5 KB; zoom/definition/aria additions +0.4 KB |
+| Page stylesheet | 46,601 B (10.4 KB gz) | 41,373 B (9.1 KB gz) | new sheet, comments included; the 166 stop paying for the galleries' rules |
+| Page HTML (2-1-3, like-for-like) | 43,072 B | 43,073 B | head unchanged; the additions (definition classes, table attributes) are a few hundred bytes; Demand adds the two zoom anchors on top |
 | Requests | 3 CSS + 3 Merriweather + FA + images | same **+ notes.js (~3 KB, one file, cached across all 166)** | no new font, no new origin, nothing render-blocking added |
 | LCP element | h1 / first diagram | same, first diagram now `fetchpriority="high"` | |
 | CLS | fallback-matched fonts | same mechanism, same faces; rail is CSS-placed at first paint; JS injects only fixed-position overlays and one below-content block before first paint | |
@@ -275,12 +306,16 @@ work: an axe pass and a VoiceOver walk of the finished pages.
 ## 9. Content identity — proven, not asserted
 
 `python3 _working/notes-redesign/check_content_identity.py` strips tags from
-the content region (h1, spec-alert, every section) of the live generated page
-and of the mock and diffs:
+the content region (h1, spec-alert, every section) of each live generated
+page and its mock and diffs:
 
 ```
-text identical: 3052 characters, 523 words
-images identical: 2 (src, alt) pairs, same order
+1-2-2-demand.html:
+  text identical: 3052 characters, 523 words
+  images identical: 2 (src, alt) pairs, same order
+2-1-3-uses-of-index-numbers.html:
+  text identical: 6144 characters, 1041 words
+  images identical: 0 (src, alt) pairs, same order
 CONTENT IDENTITY OK
 ```
 
@@ -376,34 +411,33 @@ which is how the current sheet got its duplicated blocks in the first place.
 
 | Check | Why |
 | --- | --- |
-| `verify_page_shell.py` | `EXPECTED_NOTES_SPINES` reseed (top row gone); notes family gains an extra script (`notes.js`); per-family CSS set changes with the new sheet name |
-| `verify_notes_sequence.py` | asserts a nav row at each end; becomes bottom-only |
+| `verify_page_shell.py` | notes family gains an extra script (`notes.js`); per-family CSS set changes with the new sheet name. The content spine keeps its one shape (both rows stay, no top-level block added or removed) — confirmed at Gate 3, reseeded only if the profiler counts the new in-section wrappers |
 | `verify_contrast.py` | the four notes pairs re-pointed at the new tokens; new pairs added for every label/tint above |
 | `verify_css_load_order.py` | the 166 load the new sheet; the three others keep the old one |
 | `verify_image_dimensions.py` | must tolerate the `<a>` wrapper around `<picture>` |
-| `scripts/tests/test_notes_extras.py` | chrome-string and structure changes |
+| `scripts/tests/test_notes_extras.py` | new transforms (definition class, table attributes, zoom anchor) get tests beside them |
 | `compare_trees.py` fixtures | checked on the branch (they gripped the pre-D58 tail last time) |
-| `verify_text_integrity.py` / `verify_markup_integrity.py --strict` | 166 `Text-Change:` (read time added, one Previous/Next caption pair removed) and 166 `Markup-Change:` (top row) trailers, generated by `suggest_trailers.py` |
+| `verify_text_integrity.py` / `verify_markup_integrity.py --strict` | expected ZERO `Text-Change:` (no visible baked text changes — revision 2 removed the two that existed) and zero markup losses (the changes are additions); `suggest_trailers.py` is the arbiter at Gate 3 |
 | `seo/tools/verify_seo.py` | expected green unchanged (byline, twins, titles untouched) — verified, not assumed |
+
+(`verify_notes_sequence.py` needs no change now the top row stays.)
 
 `page_shell.SCRIPT_TAIL` is untouched — `notes.js` is a family extra, not a
 tail change.
 
-## 13. Questions for you (everything else I have taken a position on)
+## 13. Where this round stands
 
-1. **The top prev/next row** — removed in the mock, one flag away from
-   staying. Approve the removal?
-2. **"N min read"** — happy with the wording and with it sitting between the
-   updated date and nothing else?
-3. **"Mark as revised"** — worth having at all? (Cheap, but it is a feature
-   promise; the localStorage idiom matches the flashcards.)
-4. **The byline credentials at 360px** run to three small lines. Keep in
-   full (as mocked), or hide the credentials half below 600px in one CSS
-   rule (name stays)?
-5. Anything on the component sheet you want treated differently before I
-   plan the roll-out?
+Your five review points are all in (the changelog at the top of this file).
+What to look at in this revision:
 
-Reply with approvals, edits or rejections and Gate 2 (the roll-out plan
-across all 166, every anchor measured, every verifier amendment written
-down) follows. Expecting at least one round of revisions — say what to
-change and the mock comes back updated.
+1. **The restored top row** — `mock-1280-top.png` / `mock-360-top.png`, or
+   live in the mocks. Happy with the boxless treatment?
+2. **The formula-heavy page** — `2-1-3-uses-of-index-numbers.html` and its
+   screenshots: worked examples, all six formula boxes (MathJax live),
+   both exam tips, the concept and calculation tables, h3s and the ordered
+   list, on a real page end to end.
+3. **"Mark as revised"** now renders dark teal on white in both states.
+
+Approve this revision (or send the next round of changes) and Gate 2 — the
+roll-out plan across all 166, every anchor measured, every verifier
+amendment written down — follows.

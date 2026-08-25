@@ -940,6 +940,9 @@
   margin: 0 auto;
 }
 
+/* The theme's base button rule (css/main.css, `button { color: #fff
+   !important }`) turns any quiet button's text white - the .consent-button
+   precedent - so every button below counter-declares its colour. */
 .revision-notes-content .diagram-dialog__close {
   display: block;
   margin: 0.6em auto 0;
@@ -947,7 +950,7 @@
   font-family: var(--nt-heading);
   font-size: 0.9em;
   font-weight: 600;
-  color: var(--nt-navy);
+  color: var(--nt-navy) !important;
   background: var(--nt-wash);
   border: 1px solid var(--nt-line);
   border-radius: 6px;
@@ -1157,8 +1160,16 @@
 }
 
 /* ==========================================================================
-   12. Previous / next - the bottom row (the top row is gone; PROPOSAL.md)
-   ========================================================================== */
+   12. Previous / next - both rows
+   ==========================================================================
+   The bottom row is two cards, as before. The TOP row (restored on Eliot's
+   Gate 1 review - "needed for user experience") is deliberately the lightest
+   thing that still works: no boxes, one line, caption + title as a single
+   inline link each side. Below 768px it drops to its captions alone - the
+   2026-08-21 rule: titles are HIDDEN, never truncated; each link's
+   aria-label still names its topic in full and the bottom row shows both
+   titles. Measured cost above the h1: ~30px on a phone, against the old
+   card row's 50px. */
 
 .revision-notes-content .topic-nav {
   display: flex;
@@ -1166,6 +1177,64 @@
   align-items: stretch;
   margin: 1.8em 0 0;
   font-family: var(--nt-heading);
+}
+
+.revision-notes-content .topic-nav--top {
+  margin: 0 0 1.2em;
+  gap: 1.5em;
+  justify-content: space-between;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__link {
+  flex: 0 1 48%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__caption {
+  font-size: 0.72em;
+  white-space: nowrap;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__title {
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__link:hover,
+.revision-notes-content .topic-nav--top .topic-nav__link:focus-visible {
+  background: none;
+  border: none;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__link:hover .topic-nav__title,
+.revision-notes-content
+  .topic-nav--top
+  .topic-nav__link:focus-visible
+  .topic-nav__title {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* Captions only below 768px - one quiet line, ~30px, between the
+   breadcrumb and the heading. Three classes on the row selector so the
+   600px stacking rule for the bottom row cannot win by file order. */
+@media (max-width: 767px) {
+  .revision-notes-content .topic-nav.topic-nav--top {
+    flex-direction: row;
+  }
+
+  .revision-notes-content .topic-nav--top .topic-nav__title {
+    display: none;
+  }
 }
 
 .revision-notes-content .topic-nav__link {
@@ -1249,7 +1318,7 @@
   border-radius: 50%;
   border: 1px solid var(--nt-line);
   background: var(--nt-paper);
-  color: var(--nt-navy);
+  color: var(--nt-navy) !important; /* the theme button rule again */
   font-family: var(--nt-heading);
   font-size: 1em;
   font-weight: 700;
@@ -1272,7 +1341,7 @@
 .topic-top:hover,
 .topic-top:focus-visible {
   border-color: var(--nt-teal-border);
-  color: var(--nt-teal);
+  color: var(--nt-teal) !important;
 }
 
 /* "Mark as revised" - injected after the last section, state in
@@ -1290,7 +1359,9 @@
   font-family: var(--nt-heading);
   font-size: 0.9em;
   font-weight: 600;
-  color: var(--nt-teal);
+  /* !important against the theme's white-text button rule - without it
+     this rendered white on white (Eliot's Gate 1 review, point 3). */
+  color: var(--nt-teal) !important;
   background: var(--nt-paper);
   border: 1px solid var(--nt-teal-border);
   border-radius: 999px;
@@ -1303,7 +1374,7 @@
 .revision-notes-content .topic-revised__button[aria-pressed="true"] {
   background: var(--nt-teal);
   border-color: var(--nt-teal);
-  color: #fff;
+  color: #fff !important;
 }
 
 .revision-notes-content .topic-revised__button:focus-visible {

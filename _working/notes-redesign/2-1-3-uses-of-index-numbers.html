@@ -3,16 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MOCK — Demand — notes topic-page redesign (Gate 1)</title>
-    <!-- Gate 1 mock. Not published (_working/ is excluded). Loads the real
-         site chrome plus the scratch sheet beside this file; the Demand
-         content below is byte-identical to the live page's content region
-         (check_content_identity.py proves it). The inline script at the foot
-         is the prototype of js/components/notes.js - in production it would
-         be a file, never inline. -->
+    <title>MOCK — Uses of Index Numbers — notes topic-page redesign (Gate 1, rev 2)</title>
+    <!-- Gate 1 second mock (Eliot's review, point 5): the densest page on
+         the site - three worked examples, six formula boxes, two exam tips,
+         concept and calculation tables, h3s and an ordered list - so the
+         formula-heavy components can be reviewed on a real page. Built the
+         same way as the Demand mock; check_content_identity.py proves the
+         content region matches the live page. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/_working/notes-redesign/notes-redesign.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
   </head>
   <body class="is-preload">
     <div id="page-wrapper">
@@ -20,11 +48,28 @@
       <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
       <!-- templates/header.html -->
       <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
       <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
         <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
           <span class="icon solid fa-search" aria-hidden="true"></span>
           <span class="site-search-open__label">Search&hellip;</span>
         </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
         <p class="site-title"><a href="/">Economics Academy</a></p>
         <p>The Home of A-Level Economics.</p>
 
@@ -78,6 +123,11 @@
                 </li>
               </ul>
             </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
             <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
             <li data-page="practice-questions">
               <a href="/practice-questions/">Practice Questions</a>
@@ -145,6 +195,19 @@
           </ul>
         </nav>
 
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
         <nav id="mobileNav" aria-label="Site menu">
           <details class="mnav-root">
             <summary class="mnav-menu-row">
@@ -227,7 +290,6 @@
       </header>
       <!-- END templates/header.html -->
 
-      <!-- Main Content -->
       <main id="main" class="revision-notes-content">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -235,12 +297,13 @@
             <span class="separator">›</span>
             <a href="/revision-notes/">Revision Notes</a>
             <span class="separator">›</span>
-            <a href="/revision-notes/edexcel-theme-1/"
-              >Edexcel Theme 1: Introduction to Markets and Market Failure</a
+            <a href="/revision-notes/aqa-a2-macro/"
+              >AQA Macroeconomics</a
             >
             <span class="separator">›</span>
-            <span>1.2.2 Demand</span>
+            <span>2.1.3 Uses of Index Numbers</span>
           </nav>
+
           <div class="notes-container">
             <nav
               class="topic-nav topic-nav--top"
@@ -248,32 +311,32 @@
             >
               <a
                 class="topic-nav__link topic-nav__link--prev"
-                href="/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html"
+                href="/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
                 rel="prev"
-                aria-label="Previous topic: 1.2.1 Rational decision making"
+                aria-label="Previous topic: 2.1.2 Macroeconomic Indicators"
               >
                 <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
-                <span class="topic-nav__title">1.2.1 Rational decision making</span>
+                <span class="topic-nav__title">2.1.2 Macroeconomic Indicators</span>
               </a>
               <a
                 class="topic-nav__link topic-nav__link--next"
-                href="/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+                href="/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
                 rel="next"
-                aria-label="Next topic: 1.2.3 Price, income and cross elasticities of demand"
+                aria-label="Next topic: 2.1.4 Uses of National Income Data"
               >
                 <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
-                <span class="topic-nav__title">1.2.3 Price, income and cross elasticities of demand</span>
+                <span class="topic-nav__title">2.1.4 Uses of National Income Data</span>
               </a>
             </nav>
 
             <header class="major">
-              <h1>Demand</h1>
+              <h1>Uses of Index Numbers</h1>
               <p class="topic-meta">
-                <span class="topic-meta__spec" aria-label="Edexcel Theme 1, unit 1.2.2"
-                  >Edexcel<span aria-hidden="true"> · </span>Theme 1<span aria-hidden="true"> · </span>1.2.2</span
+                <span class="topic-meta__spec" aria-label="AQA Macroeconomics, unit 2.1.3"
+                  >AQA<span aria-hidden="true"> · </span>Macroeconomics<span aria-hidden="true"> · </span>2.1.3</span
                 >
                 <span class="topic-meta__updated"
-                  >Updated <time datetime="2026-08-13">13 August 2026</time></span
+                  >Updated <time datetime="2026-08-21">21 August 2026</time></span
                 >
               </p>
               <p class="topic-byline">
@@ -286,253 +349,359 @@
             </header>
 
             <div class="spec-alert">
-              <strong>Specification Coverage:</strong> Edexcel unit 1.2.2 -
-              Demand. Students should be able to understand and explain the law
-              of demand, the demand curve, conditions of demand (shifts of the
-              curve), and the concept of diminishing marginal utility and its
-              relationship to demand.
+              <strong>Specification Coverage:</strong> AQA unit 2.1.3 - Uses of
+              Index Numbers. Students should be able to explain how index
+              numbers are calculated and interpreted, including the base year
+              and the use of weights. Students should also understand how index
+              numbers are used to measure changes in the price level and other
+              economic variables.
             </div>
             <nav class="topic-contents" aria-labelledby="topic-contents-label">
               <p class="topic-contents__label" id="topic-contents-label">On this page</p>
               <ol class="topic-contents__list">
-                <li><a href="#the-basics-of-demand">The Basics of Demand</a></li>
-                <li><a href="#the-demand-curve">The Demand Curve</a></li>
-                <li><a href="#conditions-of-demand-shifts-of-the-curve">Conditions of Demand (Shifts of the Curve)</a></li>
-                <li><a href="#diminishing-marginal-utility-demand">Diminishing Marginal Utility &amp; Demand</a></li>
+                <li><a href="#what-are-index-numbers">What Are Index Numbers?</a></li>
+                <li><a href="#how-cpi-and-inflation-are-calculated">How CPI and Inflation Are Calculated</a></li>
               </ol>
             </nav>
 
             <section>
-              <h2 id="the-basics-of-demand">The Basics of Demand</h2>
+              <h2 id="what-are-index-numbers">What Are Index Numbers?</h2>
               <p class="topic-definition">
-                <span class="key-definition">Definition:</span> The
-                <strong>quantity of a good/service</strong> consumers are
-                <strong>willing and able to buy</strong> at a given price in a
-                given time period.
+                <span class="key-definition">Index number:</span> A number used
+                to express the value of a variable relative to a chosen
+                <strong>base value</strong>, which is set equal to
+                <strong>100</strong>. Index numbers make it easy to compare how
+                a variable has changed over time and to express those changes in
+                percentage terms.
               </p>
               <p>
-                <strong>Effective Demand:</strong> Must be both a
-                <strong>willingness</strong> and an <strong>ability</strong> to
-                pay. Desire alone is not demand.
+                Economists use index numbers because they turn awkward raw
+                figures - such as thousands of individual prices, or GDP
+                measured in billions of pounds - into a single, easy-to-read
+                series. Instead of comparing £200,000 with £230,000, we can
+                simply compare an index of 100 with an index of 115.
               </p>
-              <p class="topic-definition">
-                <span class="key-definition">The Law of Demand:</span> There is
-                an <strong>inverse relationship</strong> between price and
-                quantity demanded (QD). As price rises, QD falls (<em
-                  >ceteris paribus</em
-                >).
+              <p>
+                Index numbers are not only used for prices. They are also used
+                to track changes in <strong>real GDP</strong>,
+                <strong>wages</strong>, <strong>productivity</strong> and share
+                prices (such as the FTSE 100), among many other economic
+                variables.
               </p>
-            </section>
 
-            <section>
-              <h2 id="the-demand-curve">The Demand Curve</h2>
-              <figure class="diagram-figure">
-                <a class="diagram-zoom" href="/images/diagrams/demand-curve-movement.png">
-                <picture>
-                <source type="image/webp" srcset="/images/diagrams/demand-curve-movement.webp" />
-                <img
-                  src="/images/diagrams/demand-curve-movement.png"
-                  alt="Demand curve showing a price fall causing an extension in quantity demanded and a price rise causing a contraction"
-                  class="diagram-image"
-                  width="1731"
-                  height="1280"
-                  fetchpriority="high"
-                />
-                </picture>
-                </a>
-                <figcaption class="diagram-caption">
-                  Figure 1: Standard downward-sloping demand curve (D1) showing
-                  movements along the curve. A movement from point B to A shows
-                  a 'Contraction in QD' due to price rise. A movement from point
-                  A to B shows an 'Extension in QD' due to price fall.
-                </figcaption>
-              </figure>
-              <p>
-                It is <strong>downward sloping</strong> due to the law of
-                demand.
+              <h3>The Base Year</h3>
+              <p class="topic-definition">
+                <span class="key-definition">Base year:</span> The reference
+                year against which all other years are compared. The value of
+                the variable in the base year is set to <strong>100</strong>,
+                and every other year is expressed relative to it.
               </p>
-              <p>
-                <strong>A Movement Along the Curve:</strong> Caused
-                <em>only</em> by a <strong>change in the price</strong> of the
-                good itself (<em>ceteris paribus</em>).
-              </p>
+
+              <h3>Calculating an Index Number</h3>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100 \]
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: Building a House Price Index</h3>
+                <p>
+                  Suppose the average house price in a town is recorded over
+                  three years, with
+                  <strong>2022 chosen as the base year</strong>:
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Average House Price</th>
+                        <th>Index Number (2022 = 100)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>2022 (base)</strong></td>
+                        <td>£200,000</td>
+                        <td>
+                          \( \frac{200{,}000}{200{,}000} \times 100 = 100 \)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2023</strong></td>
+                        <td>£210,000</td>
+                        <td>
+                          \( \frac{210{,}000}{200{,}000} \times 100 = 105 \)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>2024</strong></td>
+                        <td>£230,000</td>
+                        <td>
+                          \( \frac{230{,}000}{200{,}000} \times 100 = 115 \)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  An index of <strong>115</strong> in 2024 tells us that house
+                  prices are <strong>15% higher</strong> than in the base year
+                  of 2022.
+                </p>
+              </div>
+
+              <h3>Interpreting Index Numbers</h3>
               <ul>
                 <li>
-                  <strong>Extension in QD:</strong> A
-                  <strong>fall in price</strong> leads to a movement down the
-                  curve (A → B).
+                  An index of <strong>100</strong> represents the base year
+                  value.
                 </li>
                 <li>
-                  <strong>Contraction in QD:</strong> A
-                  <strong>rise in price</strong> leads to a movement up the
-                  curve (B → A).
+                  An index <strong>above 100</strong> means the variable has
+                  risen since the base year (e.g. 115 = 15% higher).
+                </li>
+                <li>
+                  An index <strong>below 100</strong> means the variable has
+                  fallen since the base year (e.g. 92 = 8% lower).
                 </li>
               </ul>
-            </section>
 
-            <section>
-              <h2 id="conditions-of-demand-shifts-of-the-curve">Conditions of Demand (Shifts of the Curve)</h2>
+              <div class="exam-tip">
+                <p>
+                  <strong
+                    >Only read a percentage change straight off the
+                    base.</strong
+                  >
+                  You can read a percentage change directly from an index number
+                  <em>only</em> when comparing with the base year (100). To find
+                  the percentage change between two <em>non-base</em> years, you
+                  must use the standard percentage change formula.
+                </p>
+              </div>
+
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{\% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100 \]
+              </div>
               <p>
-                A <strong>shift</strong> of the entire demand curve is caused by
-                a change in a <strong>non-price factor</strong> influencing
-                demand.
+                For example, the percentage change in house prices between 2023
+                and 2024 is <strong>not</strong> simply \( 115 - 105 = 10\% \).
+                It is:
               </p>
-              <figure class="diagram-figure">
-                <a class="diagram-zoom" href="/images/diagrams/demand-curve-shift.png">
-                <picture>
-                <source type="image/webp" srcset="/images/diagrams/demand-curve-shift.webp" />
-                <img
-                  src="/images/diagrams/demand-curve-shift.png"
-                  alt="Demand curve shifting right to raise equilibrium price and quantity, and left to lower both"
-                  class="diagram-image"
-                  width="1761"
-                  height="1263"
-                  loading="lazy"
-                />
-                </picture>
-                </a>
-                <figcaption class="diagram-caption">
-                  Figure 2: Shifts of the demand curve. D1 to D2 shows an
-                  increase in demand (shift right). D2 to D1 shows a decrease in
-                  demand (shift left).
-                </figcaption>
-              </figure>
-
-              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
-                <table class="concept-table">
-                  <thead>
-                    <tr>
-                      <th class="width-25">Condition of Demand</th>
-                      <th class="width-35">Effect on Demand for Good X</th>
-                      <th class="width-40">Reason &amp; Example</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Change in Real Incomes</strong></td>
-                      <td>
-                        <strong>Normal Good:</strong> D ↑ if incomes rise.<br />
-                        <strong>Inferior Good:</strong> D ↓ if incomes rise.
-                      </td>
-                      <td>
-                        Direct relationship for normal goods (e.g., restaurant
-                        meals). Inverse for inferior goods (e.g., own-brand
-                        value products).
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Change in Tastes/Fashion</strong></td>
-                      <td>D ↑ if the good becomes more popular.</td>
-                      <td>
-                        Direct relationship (e.g., surge in demand for a
-                        trending product).
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Advertising &amp; Branding</strong></td>
-                      <td>D ↑ with successful marketing.</td>
-                      <td>Increases consumer awareness and perceived value.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Price of Substitutes</strong></td>
-                      <td>D for Good X ↑ if price of Substitute Y rises.</td>
-                      <td>
-                        Direct relationship (e.g., price of Coke rises → demand
-                        for Pepsi increases).
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Price of Complements</strong></td>
-                      <td>D for Good X ↓ if price of Complement Z rises.</td>
-                      <td>
-                        Inverse relationship (e.g., price of petrol rises →
-                        demand for cars decreases).
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Changes in Population</strong></td>
-                      <td>
-                        D ↑ if population size or a key demographic grows.
-                      </td>
-                      <td>
-                        More potential consumers (e.g., ageing population
-                        increases demand for healthcare).
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \frac{115 - 105}{105} \times 100 = 9.5\% \]
               </div>
             </section>
 
             <section>
-              <h2 id="diminishing-marginal-utility-demand">Diminishing Marginal Utility &amp; Demand</h2>
+              <h2 id="how-cpi-and-inflation-are-calculated">How CPI and Inflation Are Calculated</h2>
               <p class="topic-definition">
-                <span class="key-definition">Marginal Utility (MU):</span> The
-                extra satisfaction from consuming
-                <strong>one more unit</strong>.
+                <span class="key-definition">Consumer Prices Index (CPI):</span>
+                The main measure of the price level in the UK. It is a
+                <strong>weighted price index</strong> that tracks the average
+                change in the prices of a representative "basket" of goods and
+                services bought by households. The annual percentage change in
+                the CPI is the headline <strong>rate of inflation</strong>.
               </p>
+
+              <h3>The Full Process</h3>
+              <p>
+                The Office for National Statistics (ONS) calculates the CPI
+                through the following steps:
+              </p>
+              <ol>
+                <li>
+                  <strong>Survey household spending.</strong> The
+                  <em>Living Costs and Food Survey</em> asks thousands of
+                  households to record what they buy, revealing the spending
+                  patterns of a typical household.
+                </li>
+                <li>
+                  <strong>Create the basket of goods and services.</strong> A
+                  representative basket of around 700 items is chosen. It is
+                  <strong>updated each year</strong> so that it reflects
+                  changing tastes and technology, with items added and removed
+                  over time.
+                </li>
+                <li>
+                  <strong>Assign weights.</strong> Each item is given a
+                  <strong>weight</strong> based on the proportion of household
+                  spending it accounts for. Items that households spend more on
+                  (such as housing and transport) are given a larger weight.
+                </li>
+                <li>
+                  <strong>Collect prices.</strong> The ONS collects around
+                  180,000 prices for these items every month, from retailers
+                  across the country and online.
+                </li>
+                <li>
+                  <strong>Convert prices to a price index.</strong> Each item's
+                  price is expressed as an index number relative to the base
+                  year (base = 100).
+                </li>
+                <li>
+                  <strong>Calculate the weighted index.</strong> Each price
+                  index is multiplied by its weight; the results are added
+                  together and divided by the total weight to give the CPI.
+                </li>
+                <li>
+                  <strong>Calculate inflation.</strong> The percentage change in
+                  the CPI over 12 months gives the rate of inflation.
+                </li>
+              </ol>
+
+              <h3>Why Weighting Matters</h3>
+              <p>
+                Weighting ensures that the CPI reflects the
+                <strong>importance</strong> of each item in a typical
+                household's budget. A large price rise in a heavily-weighted
+                item (such as petrol or rent) has a much bigger effect on the
+                CPI than the same rise in a lightly-weighted item (such as tea
+                bags), because households spend far more on the former.
+              </p>
+
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Weighted Price Index (CPI)} = \frac{\sum (\text{Weight} \times \text{Price Index})}{\sum \text{Weights}} \]
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: Calculating a Weighted CPI</h3>
+                <p>
+                  Consider a simplified basket with three spending categories.
+                  Weights are given out of 1,000 (a common convention), and each
+                  category's price index is measured relative to the base year:
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Category</th>
+                        <th>Weight</th>
+                        <th>Price Index (base = 100)</th>
+                        <th>Weight × Index</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Housing</strong></td>
+                        <td>500</td>
+                        <td>106</td>
+                        <td>53,000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Transport</strong></td>
+                        <td>300</td>
+                        <td>110</td>
+                        <td>33,000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Food</strong></td>
+                        <td>200</td>
+                        <td>104</td>
+                        <td>20,800</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Total</strong></td>
+                        <td>1,000</td>
+                        <td>—</td>
+                        <td>106,800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  Dividing the total weighted value by the total weight gives
+                  the CPI:
+                </p>
+                <!-- prettier-ignore -->
+                <div class="formula-box">
+                  \[ \text{CPI} = \frac{106{,}800}{1{,}000} = 106.8 \]
+                </div>
+                <p>
+                  A CPI of <strong>106.8</strong> means that, on average, prices
+                  across the basket are <strong>6.8% higher</strong> than in the
+                  base year. Notice how the heavily-weighted housing category
+                  pulls the overall index towards its own value.
+                </p>
+              </div>
+
+              <h3>From CPI to the Inflation Rate</h3>
               <p class="topic-definition">
-                <span class="key-definition"
-                  >The Law of Diminishing Marginal Utility:</span
-                >
-                As more units are consumed, the
-                <strong>extra utility gained from the next unit falls</strong>.
+                <span class="key-definition">Inflation:</span> A sustained rise
+                in the general price level. It is measured as the
+                <strong>annual percentage change</strong> in the CPI.
               </p>
-              <p>
-                <strong>Example:</strong> The first slice of pizza gives high
-                satisfaction, the fourth gives much less.
-              </p>
-              <p>
-                <strong>Link to the Demand Curve:</strong> This law helps
-                <strong>explain</strong> why the demand curve slopes down.
-              </p>
-              <p>
-                Because each additional unit gives less satisfaction, a consumer
-                is only willing to buy more if the
-                <strong>price is lower</strong>. This rationalises the inverse
-                price-QD relationship.
-              </p>
+              <!-- prettier-ignore -->
+              <div class="formula-box">
+                \[ \text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100 \]
+              </div>
+
+              <div class="worked-example">
+                <h3>Worked Example: Calculating the Inflation Rate</h3>
+                <p>
+                  Suppose the CPI was <strong>103.2</strong> last year and
+                  <strong>106.8</strong> this year:
+                </p>
+                <table class="calculation-table">
+                  <tr>
+                    <td>CPI last year</td>
+                    <td>103.2</td>
+                  </tr>
+                  <tr>
+                    <td>CPI this year</td>
+                    <td>106.8</td>
+                  </tr>
+                  <tr>
+                    <td>Change in CPI</td>
+                    <td>106.8 − 103.2 = 3.6</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Inflation Rate</strong></td>
+                    <td>\( \frac{3.6}{103.2} \times 100 = 3.5\% \)</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="exam-tip">
+                <p>
+                  <strong>Falling inflation is not falling prices.</strong> If
+                  the inflation rate falls from 3.5% to 2%, prices are still
+                  <em>rising</em> - just more slowly. This is
+                  <strong>disinflation</strong>. Prices only fall when the
+                  inflation rate turns negative, which is
+                  <strong>deflation</strong>.
+                </p>
+              </div>
             </section>
 
             <nav class="topic-related" aria-label="Related topics">
               <p class="topic-related__label">Related topics</p>
               <ul class="topic-related__list">
                 <li>
-                  <a href="/revision-notes/edexcel-theme-1/1-2-4-supply.html">Supply</a>
-                </li>
-                <li>
-                  <a href="/revision-notes/edexcel-theme-1/1-2-5-price-elasticity-of-supply.html">Elasticity of supply</a>
-                </li>
-                <li>
-                  <a href="/revision-notes/edexcel-theme-1/1-2-6-price-determination.html">Price determination</a>
+                  <a href="/revision-notes/aqa-a2-macro/2-1-1-the-objectives-of-government-economic-policy.html">The Objectives of Government Economic Policy</a>
                 </li>
               </ul>
-              <p class="topic-related__twin">
-                Studying AQA instead?
-                <a class="topic-related__twin-link" href="/revision-notes/aqa-a2-micro/1-3-1-the-determinants-of-the-demand-for-goods-and-services.html">The Determinants of the Demand for Goods and Services</a>
-                covers this on AQA.
-              </p>
             </nav>
 
             <nav class="topic-next" aria-labelledby="topic-next-label">
               <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
               <ul class="topic-next__list">
                 <li class="topic-next__item">
-                  <a class="topic-next__link" href="/practice-questions/edexcel-theme-1/1-2-2-demand.html">Practice questions: 1.2.2 Demand</a>
-                  <p class="topic-next__note">Eight original multiple-choice questions on the law of demand, movements along and shifts of the curve, and diminishing marginal utility.</p>
+                  <a class="topic-next__link" href="/practice-questions/aqa-a2-macro/2-1-3-uses-of-index-numbers.html">Practice questions: 2.1.3 Uses of Index Numbers</a>
+                  <p class="topic-next__note">Ten original multiple-choice questions on base years, weighted price indices and calculating the rate of inflation, written to AQA Paper 3 Section A style.</p>
                 </li>
                 <li class="topic-next__item">
-                  <a class="topic-next__link" href="/flashcards/edexcel-a/theme-1/?topic=1-2-2-demand">Flashcards: 1.2.2 Demand</a>
-                  <p class="topic-next__note">The Theme 1 deck filtered to this topic — definitions, diagrams and chains of reasoning, with your progress saved on this device.</p>
+                  <a class="topic-next__link" href="/flashcards/aqa/macro/?topic=2-1-3-uses-of-index-numbers">Flashcards: 2.1.3 Uses of Index Numbers</a>
+                  <p class="topic-next__note">The AQA macroeconomics deck filtered to this topic — definitions, diagrams and chains of reasoning, with your progress saved on this device.</p>
                 </li>
                 <li class="topic-next__item">
-                  <a class="topic-next__link" href="/past-paper-questions/edexcel/1-2-2-demand/">Past paper questions: 1.2.2 Demand</a>
-                  <p class="topic-next__note">Five questions from the Edexcel A-Level and AS papers, 2017&ndash;2024, 4 to 25 marks, each linked to the page of the official mark scheme where its answer begins. Whole papers and mark schemes: <a href="/past-papers/edexcel/">Edexcel past papers</a>.</p>
+                  <a class="topic-next__link" href="/past-paper-questions/?board=aqa&amp;topic=2-1-3-uses-of-index-numbers">Past paper questions: 2.1.3 Uses of Index Numbers</a>
+                  <p class="topic-next__note">One question from the AQA A-Level papers, 2022, worth 2 marks, linked to the page of the official mark scheme where its answer begins. Whole papers and mark schemes: <a href="/past-papers/aqa/">AQA past papers</a>.</p>
                 </li>
               </ul>
-              <p class="notes-diagrams-link">
-                Every Theme 1 and Theme 3 diagram in one place: <a href="/revision-notes/microeconomics-diagrams.html">Microeconomics Diagrams</a>.
-              </p>
             </nav>
 
             <aside class="topic-author" aria-labelledby="topic-author-label">
@@ -561,28 +730,35 @@
             >
               <a
                 class="topic-nav__link topic-nav__link--prev"
-                href="/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html"
+                href="/revision-notes/aqa-a2-macro/2-1-2-macroeconomic-indicators.html"
                 rel="prev"
-                aria-label="Previous topic: 1.2.1 Rational decision making"
+                aria-label="Previous topic: 2.1.2 Macroeconomic Indicators"
               >
                 <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
-                <span class="topic-nav__title">1.2.1 Rational decision making</span>
+                <span class="topic-nav__title">2.1.2 Macroeconomic Indicators</span>
               </a>
               <a
                 class="topic-nav__link topic-nav__link--next"
-                href="/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+                href="/revision-notes/aqa-a2-macro/2-1-4-uses-of-national-income-data.html"
                 rel="next"
-                aria-label="Next topic: 1.2.3 Price, income and cross elasticities of demand"
+                aria-label="Next topic: 2.1.4 Uses of National Income Data"
               >
                 <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
-                <span class="topic-nav__title">1.2.3 Price, income and cross elasticities of demand</span>
+                <span class="topic-nav__title">2.1.4 Uses of National Income Data</span>
               </a>
             </nav>
           </div>
         </div>
       </main>
+
       <!-- Footer -->
       <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
       <footer id="footer">
         <div class="container">
           <ul class="footer-links">
@@ -678,7 +854,7 @@
         var sections = main.querySelectorAll(".notes-container > section");
         if (sections.length) lastSection = sections[sections.length - 1];
         if (lastSection) {
-          var key = "ea-revised:/revision-notes/edexcel-theme-1/1-2-2-demand.html";
+          var key = "ea-revised:/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html";
           var wrap = document.createElement("div");
           wrap.className = "topic-revised";
           var btn = document.createElement("button");

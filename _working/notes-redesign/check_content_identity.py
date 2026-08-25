@@ -25,8 +25,12 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-LIVE = ROOT / "revision-notes/edexcel-theme-1/1-2-2-demand.html"
-MOCK = ROOT / "_working/notes-redesign/1-2-2-demand.html"
+PAIRS = [
+    (ROOT / "revision-notes/edexcel-theme-1/1-2-2-demand.html",
+     ROOT / "_working/notes-redesign/1-2-2-demand.html"),
+    (ROOT / "revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+     ROOT / "_working/notes-redesign/2-1-3-uses-of-index-numbers.html"),
+]
 
 TAG = re.compile(r"<[^>]+>")
 SECTION = re.compile(r"<section>.*?</section>", re.S)
@@ -61,28 +65,29 @@ def content(page: str) -> tuple[str, list[tuple[str, str]]]:
     return text, images
 
 
-live_text, live_imgs = content(LIVE.read_text(encoding="utf-8"))
-mock_text, mock_imgs = content(MOCK.read_text(encoding="utf-8"))
-
 ok = True
-if live_text != mock_text:
-    ok = False
-    print("TEXT DIFFERS:")
-    for line in difflib.unified_diff(
-            live_text.split(". "), mock_text.split(". "),
-            "live", "mock", lineterm=""):
-        print("  " + line)
-else:
-    print(f"text identical: {len(live_text)} characters, "
-          f"{len(live_text.split())} words")
-
-if live_imgs != mock_imgs:
-    ok = False
-    print("IMAGES DIFFER:")
-    print(f"  live: {live_imgs}")
-    print(f"  mock: {mock_imgs}")
-else:
-    print(f"images identical: {len(live_imgs)} (src, alt) pairs, same order")
+for live_path, mock_path in PAIRS:
+    print(mock_path.name + ":")
+    live_text, live_imgs = content(live_path.read_text(encoding="utf-8"))
+    mock_text, mock_imgs = content(mock_path.read_text(encoding="utf-8"))
+    if live_text != mock_text:
+        ok = False
+        print("  TEXT DIFFERS:")
+        for line in difflib.unified_diff(
+                live_text.split(". "), mock_text.split(". "),
+                "live", "mock", lineterm=""):
+            print("    " + line)
+    else:
+        print(f"  text identical: {len(live_text)} characters, "
+              f"{len(live_text.split())} words")
+    if live_imgs != mock_imgs:
+        ok = False
+        print("  IMAGES DIFFER:")
+        print(f"    live: {live_imgs}")
+        print(f"    mock: {mock_imgs}")
+    else:
+        print(f"  images identical: {len(live_imgs)} (src, alt) pairs, "
+              f"same order")
 
 print("CONTENT IDENTITY " + ("OK" if ok else "FAILED"))
 sys.exit(0 if ok else 1)

@@ -77,8 +77,8 @@
             <p class="demo-kicker">The heading group</p>
             <p class="demo-note">
               From <code>edexcel-theme-1/1-2-2-demand</code>. Left-aligned,
-              spec line in teal, one new derived item: the read time (from the
-              <code>timeRequired</code> already in each page's schema).
+              spec line in teal, updated date beside it. (A derived read-time was
+              mocked and dropped on Eliot's Gate 1 review - no SEO value.)
             </p>
             <header class="major">
               <h1>Demand</h1>
@@ -89,7 +89,6 @@
                 <span class="topic-meta__updated"
                   >Updated <time datetime="2026-08-13">13 August 2026</time></span
                 >
-                <span class="topic-meta__read">3 min read</span>
               </p>
               <p class="topic-byline">
                 Written by
@@ -460,7 +459,6 @@
                 <span class="topic-meta__updated"
                   >Updated <time datetime="2026-08-21">21 August 2026</time></span
                 >
-                <span class="topic-meta__read">2 min read</span>
               </p>
               <p class="topic-byline">
                 Written by
@@ -568,6 +566,39 @@
               <button type="button" class="topic-revised__button" aria-pressed="true">✓ Revised</button>
               <p class="topic-revised__note">Saved on this device, like your flashcard progress.</p>
             </div>
+
+            <p class="demo-kicker">Previous / next — the top row</p>
+            <p class="demo-note">
+              Restored on Eliot's Gate 1 review, in its lightest workable
+              form: one line, no boxes, caption and title as a single inline
+              link each side; below 768px the captions alone (titles hidden,
+              never truncated — the 2026-08-21 rule; the aria-labels and the
+              bottom row carry them in full). It sits between the breadcrumb
+              and the heading, ~30px on a phone.
+            </p>
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-theme-1/1-2-1-rational-decision-making.html"
+                rel="prev"
+                aria-label="Previous topic: 1.2.1 Rational decision making"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">1.2.1 Rational decision making</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-theme-1/1-2-3-price-income-cross-elasticities-of-demand.html"
+                rel="next"
+                aria-label="Next topic: 1.2.3 Price, income and cross elasticities of demand"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">1.2.3 Price, income and cross elasticities of demand</span>
+              </a>
+            </nav>
 
             <p class="demo-kicker">The tail and previous / next</p>
             <p class="demo-note">
