@@ -189,32 +189,32 @@ Every display formula in the notes. Some are worked arithmetic from an example r
 | **B4** | The Multiplier, from the MPW | `M = \frac{1}{MPW}` | AE | yes | `f-calculating-the-multiplier-5f62` |
 | **B5** | The Quantity Theory of Money | `M \times V = P \times Q` | A | yes | `f-the-quantity-theory-of-money` |
 | **B6** | Marginal Revenue Product | `MRP = MPP \times MR` | AE | no | `f-the-marginal-revenue-product-theory` |
-| **B7** | Concentration Ratio | `\frac{\text{Total revenue of top } n \text{ firms}}{\text{Total market revenue}} \times 100` | AE | no | `f-concentration-ratios` |
-| **B8** | Bond Yield | `\text{Bond Yield} \, (\%) = \frac{\text{Annual Coupon Payment}}{\text{Market Price of Bond}} \times 100` | A | yes | `f-calculating-bond-yield` |
-| **B9** | Consumer Prices Index (CPI) | `\text{CPI} = \frac{\text{Cost of Basket in Current Year}}{\text{Cost of Basket in Base Year}} \times 100` | A | yes | `f-inflation-indicators-51c0` |
-| **B10** | Consumer Prices Index (CPI) | `\text{CPI} = \frac{\text{Price of basket in current year}} {\text{Price of basket in base year}} \times 100` | E | yes | `f-how-it-s-calculated-b6a4` |
-| **B11** | Employment Rate | `\text{Employment Rate} = \frac{\text{Number of Employed People}}{\text{Working-Age Population}} \times 100` | A | yes | `f-unemployment-indicators-2bb1` |
-| **B12** | Fiscal Deficit | `\text{Fiscal Deficit} : \text{Government Spending} > \text{Tax Revenue}` | AE | no | `f-the-government-budget-and-national-debt-8c71` |
-| **B13** | Gross National Income (GNI) | `\text{GNI} = \text{GDP} + \text{Net Income from Abroad}` | A | yes | `f-key-measures-of-national-income` |
-| **B14** | Gini Coefficient | `\text{Gini Coefficient} = \frac{A}{A + B}` | AE | no | `f-measuring-inequality-lorenz-curve-and-gini-coefficient` |
-| **B15** | Government Budget | `\text{Government Budget} = \text{Taxation Revenue} - \text{Government Spending}` | AE | no | `f-the-government-budget-and-national-debt-9950` |
-| **B16** | Index Number | `\text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100` | AE | yes | `f-calculating-an-index-number` |
-| **B17** | Inflation Rate | `\text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100` | A | yes | `f-from-cpi-to-the-inflation-rate` |
-| **B18** | Labour Productivity | `\text{Labour Productivity} = \frac{\text{Output}}{\text{Number of Workers}}` | A | yes | `f-productivity` |
-| **B19** | Mean | `\text{Mean} = \frac{\text{Sum of the Values}}{\text{Number of Values}}` | AE | yes | `f-mean` |
-| **B20** | Price Elasticity of Demand (PED) | `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` | AE | yes | `f-price-elasticity-of-demand-ped` |
-| **B21** | Marshall-Lerner Condition | `\text{PED}_{X} + \text{PED}_{M} > 1` | AE | yes | `f-j-curve-and-marshall-lerner-condition` |
-| **B22** | Price Elasticity of Supply (PES) | `\text{PES} = \frac{\%\Delta Q_S}{\%\Delta P}` | AE | yes | `f-definition-and-calculation-ce0b` |
-| **B23** | Profit | `\text{Profit} = \text{Total Revenue} - \text{Total Costs}` | A | yes | `f-key-definitions` |
-| **B24** | Real GDP per Capita | `\text{Real GDP per capita} = \frac{\text{Real GDP}}{\text{Population}}` | A | yes | `f-economic-growth-indicators-6cfc` |
-| **B25** | Converting to Real Terms | `\text{Real Value} = \text{Nominal Value} \times \frac{\text{Base Year Index}}{\text{Current Year Index}}` | AE | yes | `f-converting-to-real-terms` |
-| **B26** | Terms of Trade Index | `\text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100` | E | no | `f-definition-and-calculation-01b0` |
-| **B27** | Unemployment Rate | `\text{Unemployment Rate} = \frac{\text{Number of Unemployed People}}{\text{Labour Force}} \times 100` | A | yes | `f-unemployment-indicators-49bb` |
-| **B28** | Union Density | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes | `f-trade-unions` |
-| **B29** | Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes | `f-cross-elasticity-of-demand-xed` |
-| **B30** | Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes | `f-income-elasticity-of-demand-yed` |
-| **B31** | Real GDP Growth | `\text{\% Change in Real GDP} = \text{\% Change in Nominal GDP} - \text{Inflation Rate}` | A | yes | `f-economic-growth-indicators-7213` |
-| **B32** | Percentage Change | `\text{\% Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes | `f-interpreting-index-numbers-8399` |
+| **B7** | Economic Growth Indicators | `\%\text{ Change in Real GDP} = \%\text{ Change in Nominal GDP} - \text{Inflation Rate}` | A | yes | `f-economic-growth-indicators-8b02` |
+| **B8** | Interpreting Index Numbers | `\%\text{ Change} = \frac{\text{New Index} - \text{Old Index}}{\text{Old Index}} \times 100` | A | yes | `f-interpreting-index-numbers-c248` |
+| **B9** | Concentration Ratio | `\frac{\text{Total revenue of top } n \text{ firms}}{\text{Total market revenue}} \times 100` | AE | no | `f-concentration-ratios` |
+| **B10** | Bond Yield | `\text{Bond Yield} \, (\%) = \frac{\text{Annual Coupon Payment}}{\text{Market Price of Bond}} \times 100` | A | yes | `f-calculating-bond-yield` |
+| **B11** | Consumer Prices Index (CPI) | `\text{CPI} = \frac{\text{Cost of Basket in Current Year}}{\text{Cost of Basket in Base Year}} \times 100` | A | yes | `f-inflation-indicators-51c0` |
+| **B12** | Consumer Prices Index (CPI) | `\text{CPI} = \frac{\text{Price of basket in current year}} {\text{Price of basket in base year}} \times 100` | E | yes | `f-how-it-s-calculated-b6a4` |
+| **B13** | Employment Rate | `\text{Employment Rate} = \frac{\text{Number of Employed People}}{\text{Working-Age Population}} \times 100` | A | yes | `f-unemployment-indicators-2bb1` |
+| **B14** | Fiscal Deficit | `\text{Fiscal Deficit} : \text{Government Spending} > \text{Tax Revenue}` | AE | no | `f-the-government-budget-and-national-debt-8c71` |
+| **B15** | Gross National Income (GNI) | `\text{GNI} = \text{GDP} + \text{Net Income from Abroad}` | A | yes | `f-key-measures-of-national-income` |
+| **B16** | Gini Coefficient | `\text{Gini Coefficient} = \frac{A}{A + B}` | AE | no | `f-measuring-inequality-lorenz-curve-and-gini-coefficient` |
+| **B17** | Government Budget | `\text{Government Budget} = \text{Taxation Revenue} - \text{Government Spending}` | AE | no | `f-the-government-budget-and-national-debt-9950` |
+| **B18** | Index Number | `\text{Index Number} = \frac{\text{Value in Current Year}}{\text{Value in Base Year}} \times 100` | AE | yes | `f-calculating-an-index-number` |
+| **B19** | Inflation Rate | `\text{Inflation Rate} = \frac{\text{CPI this year} - \text{CPI last year}}{\text{CPI last year}} \times 100` | A | yes | `f-from-cpi-to-the-inflation-rate` |
+| **B20** | Labour Productivity | `\text{Labour Productivity} = \frac{\text{Output}}{\text{Number of Workers}}` | A | yes | `f-productivity` |
+| **B21** | Mean | `\text{Mean} = \frac{\text{Sum of the Values}}{\text{Number of Values}}` | AE | yes | `f-mean` |
+| **B22** | Price Elasticity of Demand (PED) | `\text{PED} = \frac{\%\Delta Q_D}{\%\Delta P}` | AE | yes | `f-price-elasticity-of-demand-ped` |
+| **B23** | Marshall-Lerner Condition | `\text{PED}_{X} + \text{PED}_{M} > 1` | AE | yes | `f-j-curve-and-marshall-lerner-condition` |
+| **B24** | Price Elasticity of Supply (PES) | `\text{PES} = \frac{\%\Delta Q_S}{\%\Delta P}` | AE | yes | `f-definition-and-calculation-ce0b` |
+| **B25** | Profit | `\text{Profit} = \text{Total Revenue} - \text{Total Costs}` | A | yes | `f-key-definitions` |
+| **B26** | Real GDP per Capita | `\text{Real GDP per capita} = \frac{\text{Real GDP}}{\text{Population}}` | A | yes | `f-economic-growth-indicators-6cfc` |
+| **B27** | Converting to Real Terms | `\text{Real Value} = \text{Nominal Value} \times \frac{\text{Base Year Index}}{\text{Current Year Index}}` | AE | yes | `f-converting-to-real-terms` |
+| **B28** | Terms of Trade Index | `\text{Terms of Trade Index} = \left( \frac{\text{Index of Average Export Prices}}{\text{Index of Average Import Prices}} \right) \times 100` | E | no | `f-definition-and-calculation-01b0` |
+| **B29** | Unemployment Rate | `\text{Unemployment Rate} = \frac{\text{Number of Unemployed People}}{\text{Labour Force}} \times 100` | A | yes | `f-unemployment-indicators-49bb` |
+| **B30** | Union Density | `\text{Union Density} = \frac{\text{Number of Union Members}}{\text{Total Workforce}} \times 100` | AE | yes | `f-trade-unions` |
+| **B31** | Cross Elasticity of Demand (XED) | `\text{XED} = \frac{\%\Delta Q_{D_A}}{\%\Delta P_B}` | AE | yes | `f-cross-elasticity-of-demand-xed` |
+| **B32** | Income Elasticity of Demand (YED) | `\text{YED} = \frac{\%\Delta Q_D}{\%\Delta Y}` | AE | yes | `f-income-elasticity-of-demand-yed` |
 | **B33** | Percentage Change | `\text{\% Change} = \frac{\text{New Value} - \text{Old Value}}{\text{Old Value}} \times 100` | E | yes | `f-percentage-change` |
 | **B34** | The Multiplier | `k = \frac{\text{Final Change in Real GDP/NI}} {\text{ Injection}}` | AE | yes | `f-what-is-the-multiplier` |
 

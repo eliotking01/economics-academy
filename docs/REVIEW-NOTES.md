@@ -1872,24 +1872,32 @@ payments" was left: those are the things 2.1 measures, so it reads correctly.
 
 ---
 
-## N-R1 — `2-6-2-trade`'s first diagram carries `loading="lazy"` (notes redesign, 2026-08-25)
+## N-R1 — `2-6-2-trade`'s "lazy first diagram" is correct: it is the page's SECOND image (RESOLVED 2026-08-25)
 
-The site convention is first-eager-rest-lazy (`verify_page_shell.py` check
-7's history), and `aqa-a2-macro/2-6-2-trade.html` is the one slice whose
-FIRST diagram is marked lazy — it looks like an authoring accident. Found at
-Gate 2 of the notes redesign and logged as planned (PLAN.md §8): the
-redesign's build-time `fetchpriority="high"` promotion deliberately skips a
-lazy first diagram rather than contradicting it, so this page is the one of
-93 not promoted. The fix is deleting one `loading="lazy"` line in the slice
-— a content-file edit, Eliot's call.
+Logged at Gate 2 of the notes redesign as a suspected authoring accident —
+the one page of 93 whose "first diagram" carries `loading="lazy"` — and
+**disproved at the follow-up on Eliot's fix instruction**: the tariff PNG is
+the second image on the page. The first is the comparative-advantage SVG,
+which the diagram-PNG measurement (and the build's promotion transform) does
+not see, so the page has always followed the first-eager-rest-lazy
+convention exactly. Removing the attribute was attempted and
+`verify_page_shell.py` check 7 failed the build — the safety net working as
+designed. The slice is unchanged; the build's skip of this page for
+`fetchpriority="high"` remains the right outcome, since the LCP candidate
+here is the SVG, not the tariff PNG. Nothing to fix.
 
-## N-R2 — `2-1-3-uses-of-index-numbers`: `\%` inside `\text{}` prints a stray backslash
+## N-R2 — `\%` inside `\text{}` printed a stray backslash on two pages (FIXED 2026-08-25, with Eliot's permission)
 
-The percentage-change formula box reads `\[ \text{\% Change} = … \]`, and
-MathJax renders the `\%` inside `\text{}` literally, so the page shows
-"\% Change" with a visible backslash. Pre-existing — the before/after
-renders at the redesign's Gate 3 are identical on this — and nothing to do
-with the stylesheet. The fix is `\text{% Change}` (a `%` needs no escape
-inside `\text{}`) or `\% \text{ Change}`; a one-character slice edit,
-Eliot's call. The sweep is already done: exactly two slices carry the
-pattern, this page and `aqa-a2-macro/2-1-2-macroeconomic-indicators.html`.
+`2-1-3-uses-of-index-numbers` and `2-1-2-macroeconomic-indicators` wrote
+percentage-change formulas as `\text{\% Change …}`, and MathJax renders a
+`\%` inside `\text{}` literally, so both pages showed "\% Change" with a
+visible backslash. Pre-existing — the before/after renders at the
+redesign's Gate 3 were identical on this — and nothing to do with the
+stylesheet. **Fixed on Eliot's instruction** by moving the escape outside
+the text group: `\%\text{ Change …}`. The obvious alternative — a bare `%`
+inside `\text{}` — renders fine in MathJax but was rejected by
+`build_glossary.py`'s validator, correctly: the glossary re-renders these
+formulas with KaTeX, where an unescaped `%` is a comment. `\%` in math
+mode renders "%" in both engines; proved in a side-by-side render under
+the site's own MathJax config before the edit, and on the rebuilt pages
+after it. These were the only two slices with the pattern.

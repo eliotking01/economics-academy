@@ -137,12 +137,12 @@ the fix.
    `page_shell.SCRIPT_TAIL` is untouched and still five; the relation lives
    in `verify_page_shell.py`'s `FAMILY_SCRIPT`. A new topic gets the sheet
    and the script automatically (`new_topic.py` copies a sibling record).
-3. **Printing any page with JS on appends the mobile-nav menu text** — the
+3. **Printing any page with JS on appended the mobile-nav menu text** — the
    a11y pass's `nav.js` moves `#mobileNav` to body level, out from under the
    print block's `#header { display: none }`. Pre-existing and site-wide
-   (proved identical on `main`), not from this redesign; the fix is one
-   `#mobileNav` line in `css/main.css`'s print block, waiting on Eliot's
-   go-ahead.
+   (proved identical on `main`), not from this redesign. **Fixed on this
+   branch on Eliot's instruction, 2026-08-25**: `#mobileNav` named directly
+   in `css/main.css`'s print block, so both positions are hidden.
 
 ## Past-paper question bank — page gate 4 → 2 (2026-08-24) — LIVE (merged 2026-08-24, `fc2400a6`, PR #27)
 
