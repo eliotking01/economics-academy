@@ -14,7 +14,17 @@ row at each end of `.notes-container` is spliced in by `build_notes_pages.py`
 at build time, from the chain in `scripts/notes_sequence.py`; the sub-label,
 byline, contents list and the whole tail after the last section (related
 topics, the practice / flashcards / past-paper panels, author, services) come
-from `scripts/notes_extras.py`, derived from data. Do not paste any of it into
+from `scripts/notes_extras.py`, derived from data. Since the notes redesign
+(2026-08-25, D61) three more derivations join them, all per-instance and
+tolerant of hand-written variants: a `<p>` opening with a `key-definition`
+chip gains `class="topic-definition"`, each `<div class="table-container">`
+gains its scrollable-region attributes, and each diagram `<img>` is wrapped
+in `<picture>` plus an `<a class="diagram-zoom">`, the first per page
+promoted `fetchpriority="high"` unless it is `loading="lazy"`. Do not paste
+any of those into a slice either - `docs/EDITING-NOTES.md` shows exactly
+what an editor writes. The records' `pageStylesheets` name
+`/css/pages/revision-notes-topic.css` on all 166 topics (the hubs differ);
+`new_topic.py` copies a sibling record, so a new topic inherits it. Do not paste any of it into
 a slice: a slice is a record of the page's *content*, and 166 hand-inserted
 copies is the scripted bulk edit hard rule 6 forbids. **A topic slice ends at
 its last `</section>`** - plus, on the Edexcel pages that carry diagrams, one

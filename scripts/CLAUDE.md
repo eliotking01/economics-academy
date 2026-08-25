@@ -33,7 +33,13 @@ message instead of writing unformatted pages and warning.
 | `build_sitemap.py` | the filesystem → `sitemap.xml` + `sitemaps/*.xml` |
 
 `build_notes_pages.py` also splices a previous/next topic row into each end of
-the 166 TOPIC pages - not the hubs. The chain comes from `notes_sequence.py`,
+the 166 TOPIC pages - not the hubs - and, since the notes redesign
+(2026-08-25, D61), gives those pages their derived attributes: the
+definition-card class and table-region attributes (`notes_extras.py`), the
+diagram zoom wrapper and first-diagram `fetchpriority` promotion
+(`with_webp_pictures(zoom=True)`), and `js/components/notes.js` as the
+family's extra script (the per-family hook; the five-script tail is
+untouched). The chain comes from `notes_sequence.py`,
 which derives it rather than storing it: directory order from
 `boards-data/boards.json` via `board_data.py`, topic order and every label from
 each hub's own links. `verify_notes_sequence.py` is what holds those three

@@ -22,11 +22,30 @@ one of `\( … \)`, `\[ … \]` or `$$ … $$`. That is decided by
 the record (the stored `mathjax` flag was removed on 2026-08-23; until then
 67 pages with no maths loaded it anyway), and `verify_page_shell.py` check 5
 fails either way round. A page that loads it also preconnects to
-`cdn.jsdelivr.net`. Write the maths and the script follows.
+`cdn.jsdelivr.net`. Write the maths and the script follows. Every topic page also loads
+`js/components/notes.js` (defer, after the five-script tail) as the notes
+family's extra script - `verify_page_shell.py`'s `FAMILY_SCRIPT` holds the
+relation. It injects every element it shows (progress bar, back-to-top,
+scrollspy, mark-as-revised, diagram lightbox), so the no-JS page carries no
+dead control.
 
 ## Component library
 
-Defined in `css/pages/revision-notes-textbook.css`.
+Styled by `css/pages/revision-notes-topic.css` on the 166 topic pages (the
+reading-layout redesign, 2026-08-25, D61 - one grammar: a 3px left rule, a
+near-white tint, a small-caps label; tokens in its `:root`) and by
+`css/pages/revision-notes-textbook.css` on the three pages that still load
+it (the two diagram galleries and macro-application). **The markup
+contracts below are unchanged by the redesign** - an editor pastes the same
+snippets as before (`docs/EDITING-NOTES.md` is the plain-English guide) and
+the build derives the rest: a `<p>` whose FIRST content is a
+`key-definition` chip gains `class="topic-definition"` (the definition
+card; mid-sentence and list-item chips stay inline highlights), every
+`table-container` gains `tabindex="0" role="region"
+aria-label="Scrollable table"`, and every diagram `<img>` is wrapped in
+`<picture>` plus an `<a class="diagram-zoom">` to its PNG, the first on the
+page promoted `fetchpriority="high"` unless it carries `loading="lazy"`.
+None of that is ever written into a slice.
 
 | Class | Contract |
 | --- | --- |
@@ -44,7 +63,9 @@ Defined in `css/pages/revision-notes-textbook.css`.
 The previous/next topic row at each end of `.notes-container` is **generated
 chrome, not a component** - `scripts/build_notes_pages.py` splices it in and
 `scripts/notes_sequence.py` decides where it points. It does not count against
-the two-component limit, and it is not in `notes-data/`. So are the spec
+the two-component limit, and it is not in `notes-data/`. So are the
+definition-card class, the table-region attributes and the diagram zoom
+wrappers above, the spec
 sub-label, the author byline, the contents list, and **the whole tail** after
 the last section - the related-topics block, the "Carry on with this topic"
 unit (practice questions, flashcards, past-paper questions, with every count
