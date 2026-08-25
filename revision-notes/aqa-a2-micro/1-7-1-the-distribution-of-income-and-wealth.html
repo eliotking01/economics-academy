@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -529,13 +529,13 @@
 
             <section>
               <h2 id="key-definitions">Key Definitions</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Income inequality</span> is the
                 unequal distribution of <strong>earnings</strong>, such as
                 wages, rent, interest, and profit. Income is a
                 <strong>flow</strong> of money over a period of time.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Wealth inequality</span> is the
                 unequal distribution of <strong>assets</strong>, such as
                 property, shares, and savings. Wealth is a
@@ -546,6 +546,7 @@
             <section>
               <h2 id="measuring-inequality-lorenz-curve-and-gini-coefficient">Measuring Inequality: Lorenz Curve and Gini Coefficient</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/lorenz-curve.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/lorenz-curve.webp" />
                 <img
@@ -554,8 +555,10 @@
                   class="diagram-image"
                   width="2458"
                   height="1622"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The Lorenz curve illustrates income or wealth
                   distribution. The diagonal line represents perfect equality,
@@ -603,7 +606,7 @@
 
             <section>
               <h2 id="causes-of-income-and-wealth-inequality">Causes of Income and Wealth Inequality</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -673,12 +676,12 @@
 
             <section>
               <h2 id="equality-vs-equity-in-income-wealth-distribution">Equality vs Equity in Income &amp; Wealth Distribution</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Equality:</span> Everyone receives
                 an equal share of resources or opportunities. This is objective
                 and measurable.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Equity:</span> Everyone receives a
                 "fair" share of resources. This is subjective and open to
                 debate.
@@ -711,6 +714,7 @@
             <section>
               <h2 id="the-impact-of-economic-development-the-kuznets-curve">The Impact of Economic Development: The Kuznets Curve</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/kuznets-curve.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/kuznets-curve.webp" />
                 <img
@@ -722,6 +726,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: The Kuznets curve illustrates the hypothesis that as
                   an economy develops, inequality first increases and then
@@ -757,7 +762,7 @@
 
             <section>
               <h2 id="benefits-and-costs-of-inequality">Benefits and Costs of Inequality</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -925,5 +930,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

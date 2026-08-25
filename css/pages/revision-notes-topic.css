@@ -1,0 +1,1512 @@
+/* ==========================================================================
+   Revision-notes topic pages - the reading layout
+   ==========================================================================
+   Loaded by the 166 generated topic pages only, via each record's
+   pageStylesheets in notes-data/topics/; the two diagram galleries and
+   macro-application keep revision-notes-textbook.css, which this sheet
+   replaces on the topic pages. The design was approved at Gates 1 and 2 of
+   the notes topic-page redesign - _working/notes-redesign/ holds the mocks,
+   PROPOSAL.md and PLAN.md, and docs/audit/DECISIONS.md D61 records the
+   roll-out. Every rule is scoped under .revision-notes-content, per
+   css/CLAUDE.md, and the sheet keeps the wrapper class the pages already
+   carry so no record changes for the scoping.
+
+   THE SYSTEM IN ONE PARAGRAPH. A reading page, not a card: white ground, a
+   38em (~72-character) reading column, Merriweather for prose and Source
+   Sans Pro for headings and interface. One accent grammar for every
+   component: a 3px left rule, a near-white tint, and a small-caps label in
+   the component's text-safe colour - no gradients, no floating pills, no
+   drop shadows. On screens 1024px and up the "On this page" list moves into
+   a sticky right rail via CSS grid (one element, two placements - no
+   duplicate markup, works with JavaScript off).
+
+   CONTRAST. Every colour used AS TEXT here was checked against the ground
+   it sits on (the ratios are in _working/notes-redesign/PROPOSAL.md and the
+   pairs are pinned in scripts/verify_contrast.py): the old white-on-#27ae60
+   and white-on-#f57c00 pill labels are gone, replaced by #1c7a42 (5.4:1)
+   and #a04d00 (5.9:1) text on white/tints. The bright hues survive as
+   borders only, which WCAG does not rate.
+
+   Merriweather is self-hosted (performance pass, 2026-08-23). Declared here
+   because only pages whose text is set in it should download it; the
+   "Merriweather Fallback" metric match stays in css/main.css and is named
+   in every stack so nothing re-wraps when the font arrives. */
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/webfonts/merriweather-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/webfonts/merriweather-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/webfonts/merriweather-700.woff2") format("woff2");
+}
+
+:root {
+  /* Ink and ground */
+  --nt-ink: #333333; /* body text, 12.6:1 on white */
+  --nt-paper: #ffffff;
+  --nt-wash: #f8fafc; /* panel ground */
+  --nt-line: #e2e8f0; /* hairlines */
+  --nt-muted: #5a6b80; /* meta text, 5.5:1 on white */
+  /* The families. Each accent has a TEXT value (AA on white and on its own
+     tint) and, where needed, a BORDER value (the brighter original hue,
+     never used as text). */
+  --nt-navy: #1a3e72; /* headings, worked examples; 10.6:1 */
+  --nt-navy-2: #2a5c8d; /* h3, secondary; 7.0:1 */
+  --nt-teal: #1f6b77; /* links, labels, nav accents; 6.1:1 */
+  --nt-teal-border: #2a8998; /* borders only */
+  --nt-pink: #c2185b; /* definitions; 5.9:1 */
+  --nt-green: #1c7a42; /* exam tips; 5.4:1 */
+  --nt-green-border: #27ae60; /* borders only */
+  --nt-orange: #a04d00; /* evaluation; 5.9:1 (was #f57c00 white-on, 2.7:1) */
+  --nt-orange-border: #f57c00; /* borders only */
+  --nt-purple: #5e35b1; /* specification; 8.0:1 */
+  --nt-brand: #d52349; /* the services line only */
+  /* Solid tints (each accent over white at 4-6%), declared as hex so the
+     contrast pairs in scripts/verify_contrast.py stay computable. */
+  --nt-pink-tint: #fdf6f8;
+  --nt-green-tint: #f2faf5;
+  --nt-orange-tint: #fef8f2;
+  --nt-purple-tint: #f7f5fb;
+  --nt-navy-tint: #f4f5f8;
+  --nt-heading: "Source Sans Pro", "Source Sans Pro Fallback", Arial,
+    sans-serif;
+  --nt-serif: "Merriweather", "Merriweather Fallback", Georgia, serif;
+}
+
+/* ==========================================================================
+   1. Ground and the reading column
+   ========================================================================== */
+
+/* main.css sets `#main { background: #f7f7f7 }` at (1,0,0), so the override
+   needs the id: css/CLAUDE.md's specificity trap, hit deliberately here. */
+#main.revision-notes-content {
+  background: var(--nt-paper);
+  padding-bottom: 3em;
+}
+
+.revision-notes-content {
+  font-family: var(--nt-serif);
+  color: var(--nt-ink);
+  line-height: 1.75;
+}
+
+/* The column. 38em at the inherited 18.7px is ~709px, ~72 characters of
+   Merriweather - the measure the whole design hangs off. Below 1024px it is
+   simply a centred column; from 1024px it becomes column one of a grid whose
+   column two is the contents rail (section 4). */
+.revision-notes-content .notes-container {
+  max-width: 38em;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .revision-notes-content .notes-container {
+    display: grid;
+    grid-template-columns: minmax(0, 38em) 14em;
+    column-gap: 3.5em;
+    justify-content: center;
+    max-width: none;
+  }
+
+  .revision-notes-content .notes-container > * {
+    grid-column: 1;
+  }
+}
+
+/* ==========================================================================
+   2. The heading group: h1, meta line, byline
+   ========================================================================== */
+
+/* main.css's theme rule `header.major` draws a centred label on a rule line
+   (border-top #ccc, top: 1em); every declaration it makes is undone here. */
+.revision-notes-content .notes-container > header.major {
+  margin: 0.4em 0 1.4em;
+  text-align: left;
+  border-top: none;
+  top: 0;
+}
+
+.revision-notes-content .notes-container > header.major h1 {
+  font-family: var(--nt-heading);
+  font-weight: 700;
+  font-size: 2.15em;
+  line-height: 1.15;
+  color: var(--nt-navy);
+  margin: 0 0 0.25em;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
+.revision-notes-content .topic-meta {
+  margin: 0.5em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em 1.1em;
+  font-family: var(--nt-heading);
+  font-size: 0.82em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--nt-muted);
+}
+
+.revision-notes-content .topic-meta__spec {
+  font-weight: 600;
+  color: var(--nt-teal);
+}
+
+.revision-notes-content .topic-byline {
+  margin: 0.3em 0 0;
+  font-family: var(--nt-heading);
+  font-size: 0.82em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--nt-muted);
+}
+
+.revision-notes-content .topic-byline__name {
+  font-weight: 600;
+  color: var(--nt-navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.3);
+}
+
+.revision-notes-content .topic-byline__name:hover,
+.revision-notes-content .topic-byline__name:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+/* ==========================================================================
+   3. Body typography
+   ========================================================================== */
+
+.revision-notes-content p {
+  margin: 0 0 1.25em;
+  font-size: 1em;
+}
+
+/* Merriweather 700 is the loaded bold cut; the old sheet asked for 800,
+   which browsers resolved to 700 anyway. Colour stays inherited: the notes
+   bold heavily, and a second colour on every bolded phrase is noise. */
+.revision-notes-content strong,
+.revision-notes-content b {
+  font-weight: 700;
+  color: inherit;
+}
+
+.revision-notes-content a {
+  color: var(--nt-teal);
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 107, 119, 0.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.revision-notes-content a:hover,
+.revision-notes-content a:focus-visible {
+  color: var(--nt-teal);
+  text-decoration-color: var(--nt-teal);
+}
+
+/* Sections: a hairline between teaching sections gives the page its spine
+   without heading furniture. Child selector on purpose: worked examples and
+   spec panels must never pick it up. */
+.revision-notes-content .notes-container > section {
+  margin: 0;
+}
+
+.revision-notes-content .notes-container > section + section {
+  margin-top: 2.2em;
+  padding-top: 2em;
+  border-top: 1px solid var(--nt-line);
+}
+
+.revision-notes-content h2 {
+  font-family: var(--nt-heading);
+  font-weight: 700;
+  font-size: 1.45em;
+  line-height: 1.25;
+  color: var(--nt-navy);
+  margin: 0 0 0.7em;
+  padding: 0;
+  background: none;
+  border: none;
+  scroll-margin-top: 1.2em;
+}
+
+.revision-notes-content h3 {
+  font-family: var(--nt-heading);
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.3;
+  color: var(--nt-navy-2);
+  margin: 1.6em 0 0.6em;
+  padding: 0;
+  border: none;
+}
+
+/* Lists: native markers, teal, at a hanging indent that keeps wrapped lines
+   aligned. The old sheet re-drew both markers with absolute positioning and
+   2.5em of padding; ::marker does the same in four rules. */
+.revision-notes-content ul,
+.revision-notes-content ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.5em;
+  list-style: revert;
+}
+
+.revision-notes-content li {
+  margin-bottom: 0.55em;
+  padding-left: 0.25em;
+}
+
+.revision-notes-content li::marker {
+  color: var(--nt-teal);
+  font-weight: 700;
+}
+
+.revision-notes-content ol > li::marker {
+  font-family: var(--nt-heading);
+}
+
+.revision-notes-content li > ul,
+.revision-notes-content li > ol {
+  margin-top: 0.55em;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   4. Specification panel and the contents list / rail
+   ========================================================================== */
+
+/* The spec-alert is load-bearing board differentiation (DO-NOT-BREAK): it
+   stays at the top and stays visible, but reads as reference, not alarm.
+   Its own bold "Specification Coverage:" lead does the labelling, so the
+   floating SPECIFICATION pill is gone. */
+.revision-notes-content .spec-alert {
+  margin: 0 0 1.6em;
+  padding: 0.9em 1.2em;
+  background: var(--nt-purple-tint);
+  border: 1px solid var(--nt-line);
+  border-left: 3px solid var(--nt-purple);
+  border-radius: 0 6px 6px 0;
+  font-family: var(--nt-heading);
+  font-size: 0.92em;
+  line-height: 1.6;
+  color: var(--nt-ink);
+}
+
+.revision-notes-content .spec-alert strong {
+  color: var(--nt-purple);
+}
+
+/* The contents list. Below 1024px: the in-flow box it is today, tightened.
+   From 1024px: the same element is placed into the grid's second column and
+   pinned - one element, no duplication, nothing for a crawler or a no-JS
+   visitor to miss. `grid-row: 3 / span 90` starts its area level with the
+   first section (rows 1 and 2 are the heading group and the spec panel) and
+   lets it run the length of the page so the sticky box has room to travel;
+   the surplus implicit rows are auto-sized and collapse to nothing. */
+.revision-notes-content .topic-contents {
+  margin: 0 0 2em;
+  padding: 0.9em 1.2em 1em;
+  background: var(--nt-wash);
+  border: 1px solid var(--nt-line);
+  border-radius: 6px;
+}
+
+.revision-notes-content .topic-contents__label {
+  margin: 0 0 0.45em;
+  font-family: var(--nt-heading);
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--nt-teal);
+}
+
+.revision-notes-content .topic-contents__list {
+  margin: 0;
+  padding-left: 1.5em;
+  font-family: var(--nt-heading);
+  font-size: 0.92em;
+  line-height: 1.55;
+  list-style: decimal;
+}
+
+.revision-notes-content .topic-contents__list li {
+  margin: 0.25em 0;
+  padding-left: 0.2em;
+}
+
+.revision-notes-content .topic-contents__list li::marker {
+  color: var(--nt-muted);
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.revision-notes-content .topic-contents__list a {
+  color: var(--nt-navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-contents__list a:hover,
+.revision-notes-content .topic-contents__list a:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+@media screen and (min-width: 1024px) {
+  .revision-notes-content .topic-contents {
+    grid-column: 2;
+    grid-row: 3 / span 90;
+    align-self: start;
+    position: sticky;
+    top: 1.5em;
+    max-height: calc(100vh - 3em);
+    overflow-y: auto;
+    margin: 0;
+    padding: 0 0 0 1.1em;
+    background: none;
+    border: none;
+    border-left: 1px solid var(--nt-line);
+    border-radius: 0;
+  }
+
+  .revision-notes-content .topic-contents__list {
+    font-size: 0.85em;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .revision-notes-content .topic-contents__list a {
+    border-bottom: none;
+    display: inline-block;
+    padding: 0.1em 0;
+    color: var(--nt-muted);
+  }
+
+  .revision-notes-content .topic-contents__list a:hover,
+  .revision-notes-content .topic-contents__list a:focus-visible {
+    color: var(--nt-navy);
+  }
+
+  /* Scrollspy highlight - set by JS, absent without it, purely additive. */
+  .revision-notes-content .topic-contents__list a.is-current {
+    color: var(--nt-teal);
+    font-weight: 600;
+  }
+}
+
+/* ==========================================================================
+   5. Definitions - the thing 157 pages carry and students scan for
+   ========================================================================== */
+
+/* The inline chip. The old treatment gave an inline span padding, a border
+   and a shadow, which broke apart when the term wrapped. The term is now
+   simply set in the definition colour and semibold - scannable without
+   pretending to be a block. Class name and text untouched: the glossary is
+   extracted from these (glossary-data/CLAUDE.md). */
+.revision-notes-content .key-definition {
+  font-weight: 600;
+  color: var(--nt-pink);
+  background: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* The definition paragraph. Added at build time as a class on the <p> whose
+   FIRST content is a key-definition chip - the same "chip opens the block"
+   test scripts/extract_glossary.py already uses to tell a definition from a
+   mid-sentence highlight. Mid-sentence chips (the minority) stay inline in
+   plain prose and get the colour treatment above only. */
+.revision-notes-content .topic-definition {
+  padding: 0.85em 1.1em;
+  background: var(--nt-pink-tint);
+  border: 1px solid var(--nt-line);
+  border-left: 3px solid var(--nt-pink);
+  border-radius: 0 6px 6px 0;
+}
+
+/* ==========================================================================
+   6. Callouts: one grammar - tint, 3px rule, small-caps label
+   ========================================================================== */
+
+.revision-notes-content .exam-tip,
+.revision-notes-content .evaluation-point,
+.revision-notes-content .application,
+.revision-notes-content .worked-example {
+  margin: 1.6em 0;
+  padding: 1em 1.2em;
+  border: 1px solid var(--nt-line);
+  border-radius: 0 6px 6px 0;
+  background: var(--nt-wash);
+  box-shadow: none;
+  position: static;
+}
+
+.revision-notes-content .exam-tip::before,
+.revision-notes-content .evaluation-point::before,
+.revision-notes-content .application::before {
+  position: static;
+  display: block;
+  margin: 0 0 0.45em;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-family: var(--nt-heading);
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.revision-notes-content .exam-tip {
+  background: var(--nt-green-tint);
+  border-left: 3px solid var(--nt-green-border);
+}
+
+.revision-notes-content .exam-tip::before {
+  content: "Exam tip";
+  color: var(--nt-green);
+}
+
+.revision-notes-content .exam-tip strong {
+  color: var(--nt-green);
+}
+
+.revision-notes-content .evaluation-point {
+  background: var(--nt-orange-tint);
+  border-left: 3px solid var(--nt-orange-border);
+}
+
+.revision-notes-content .evaluation-point::before {
+  content: "Evaluation";
+  color: var(--nt-orange);
+}
+
+.revision-notes-content .evaluation-point h3 {
+  color: var(--nt-orange);
+  margin-top: 0;
+}
+
+.revision-notes-content .application {
+  background: var(--nt-navy-tint);
+  border-left: 3px solid var(--nt-navy-2);
+}
+
+.revision-notes-content .application::before {
+  content: "Application";
+  color: var(--nt-navy-2);
+}
+
+/* Worked examples carry their own visible <h3> ("Worked Example: ..."), so
+   no generated label - the heading is the label. */
+.revision-notes-content .worked-example {
+  background: var(--nt-navy-tint);
+  border-left: 3px solid var(--nt-navy);
+}
+
+.revision-notes-content .worked-example h3 {
+  color: var(--nt-navy);
+  margin-top: 0;
+  border: none;
+}
+
+/* Trailing space inside any callout is dead space. */
+.revision-notes-content .exam-tip > :last-child,
+.revision-notes-content .evaluation-point > :last-child,
+.revision-notes-content .application > :last-child,
+.revision-notes-content .worked-example > :last-child,
+.revision-notes-content .spec-alert > :last-child,
+.revision-notes-content .topic-definition > :last-child {
+  margin-bottom: 0;
+}
+
+/* The inline example chip, same logic as the definition chip. */
+.revision-notes-content .content-example {
+  font-weight: 600;
+  color: var(--nt-green);
+  background: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   7. Formulae
+   ========================================================================== */
+
+.revision-notes-content .formula-box {
+  margin: 1.4em 0;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  background: var(--nt-wash);
+  border: 1px solid var(--nt-line);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.revision-notes-content .formula-box p {
+  margin: 0 0 0.6em;
+}
+
+.revision-notes-content .formula-box p:last-child {
+  margin-bottom: 0;
+}
+
+.revision-notes-content .formula-box strong {
+  color: var(--nt-navy);
+}
+
+/* ==========================================================================
+   8. Tables
+   ========================================================================== */
+
+/* The scroll container. Horizontal scroll stays the phone answer - a
+   79-page markup rewrite it is not - but the "<-> Scroll to view full
+   table" strip goes: the cue is the clipped column itself plus edge fades
+   that appear only while there is more table to see (background-attachment:
+   local). The generator adds tabindex="0" and a label so keyboard users can
+   scroll it too. Active at every width: a four-column table is wider than
+   38em on desktop as well. */
+.revision-notes-content .table-container {
+  margin: 1.5em 0;
+  overflow-x: auto;
+  border: 1px solid var(--nt-line);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, #fff 40%, rgba(255, 255, 255, 0)) left/36px 100%
+      no-repeat local,
+    linear-gradient(270deg, #fff 40%, rgba(255, 255, 255, 0)) right/36px 100%
+      no-repeat local,
+    radial-gradient(
+        farthest-side at 0 50%,
+        rgba(26, 62, 114, 0.18),
+        transparent
+      )
+      left/12px 100% no-repeat scroll,
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(26, 62, 114, 0.18),
+        transparent
+      )
+      right/12px 100% no-repeat scroll;
+  background-color: var(--nt-paper);
+}
+
+.revision-notes-content .table-container:focus-visible {
+  outline: 2px solid var(--nt-teal);
+  outline-offset: 2px;
+}
+
+.revision-notes-content .table-container .concept-table {
+  margin: 0;
+  min-width: 34em;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.revision-notes-content .concept-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5em 0;
+  font-family: var(--nt-heading);
+  font-size: 0.95em;
+  line-height: 1.55;
+  box-shadow: none;
+}
+
+.revision-notes-content .concept-table th {
+  background: transparent;
+  color: var(--nt-navy);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.8em 1em;
+  border-bottom: 2px solid var(--nt-navy);
+  font-size: 1em;
+  letter-spacing: 0;
+}
+
+.revision-notes-content .concept-table td {
+  padding: 0.8em 1em;
+  border-bottom: 1px solid var(--nt-line);
+  vertical-align: top;
+}
+
+.revision-notes-content .concept-table tr:last-child td {
+  border-bottom: none;
+}
+
+.revision-notes-content .concept-table tr:nth-child(even) td {
+  background-color: var(--nt-wash);
+}
+
+.revision-notes-content .concept-table strong {
+  color: var(--nt-navy);
+}
+
+/* The two-column running calculation, always narrow, never wrapped. */
+.revision-notes-content .calculation-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1em 0 0.5em;
+  font-family: var(--nt-heading);
+  font-size: 0.95em;
+  background: var(--nt-paper);
+  border: 1px solid var(--nt-line);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.revision-notes-content .calculation-table tr td {
+  padding: 0.7em 1em;
+  border-bottom: 1px solid var(--nt-line);
+  vertical-align: top;
+}
+
+.revision-notes-content .calculation-table tr td:first-child {
+  font-weight: 600;
+  color: var(--nt-navy);
+  width: 40%;
+}
+
+.revision-notes-content .calculation-table tr:last-child td {
+  border-bottom: none;
+  border-top: 2px solid var(--nt-navy);
+  background: var(--nt-navy-tint);
+  font-weight: 700;
+}
+
+.revision-notes-content .calculation-table strong {
+  color: var(--nt-navy);
+}
+
+/* ==========================================================================
+   9. Flow chains and the competition spectrum
+   ========================================================================== */
+
+.revision-notes-content .flow-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em 0.6em;
+  margin: 1.4em 0 1.8em;
+}
+
+.revision-notes-content .flow-node {
+  display: inline-block;
+  padding: 0.45em 0.85em;
+  background: var(--nt-wash);
+  border: 1px solid var(--nt-line);
+  border-left: 3px solid var(--nt-teal-border);
+  border-radius: 6px;
+  font-family: var(--nt-heading);
+  font-weight: 600;
+  font-size: 0.92em;
+  line-height: 1.35;
+  color: var(--nt-navy);
+}
+
+.revision-notes-content .flow-arrow {
+  color: var(--nt-teal);
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1;
+  user-select: none;
+}
+
+.revision-notes-content .flow-node--end {
+  background: var(--nt-teal);
+  border-color: var(--nt-teal);
+  color: #fff;
+}
+
+/* Competition spectrum - aqa-a2-micro/1-5-1 only. Ported from the old sheet
+   with the palette aligned; the shape was built recently and works. */
+.revision-notes-content .comp-spectrum {
+  margin: 1.75rem 0 2rem;
+}
+
+.revision-notes-content .comp-spectrum__track {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.revision-notes-content .comp-spectrum__step {
+  position: relative;
+  background: var(--nt-wash);
+  border: 1px solid var(--nt-line);
+  border-top: 4px solid var(--step-color);
+  border-radius: 8px;
+  padding: 1rem 0.85rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.revision-notes-content .comp-spectrum__step::after {
+  content: "\203A";
+  position: absolute;
+  right: -1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.revision-notes-content .comp-spectrum__step:last-child::after {
+  display: none;
+}
+
+.revision-notes-content .comp-spectrum__step::marker {
+  content: "";
+}
+
+.revision-notes-content .comp-spectrum__name {
+  display: block;
+  font-family: var(--nt-heading);
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.25;
+  color: var(--nt-navy);
+}
+
+.revision-notes-content .comp-spectrum__firms {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--nt-heading);
+  font-size: 0.82rem;
+  color: var(--nt-muted);
+}
+
+.revision-notes-content .comp-spectrum__step--1 {
+  --step-color: #27ae60;
+}
+.revision-notes-content .comp-spectrum__step--2 {
+  --step-color: #9acd32;
+}
+.revision-notes-content .comp-spectrum__step--3 {
+  --step-color: #f57c00;
+}
+.revision-notes-content .comp-spectrum__step--4 {
+  --step-color: #c2185b;
+}
+
+.revision-notes-content .comp-spectrum__axis {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.revision-notes-content .comp-spectrum__axis-label {
+  font-family: var(--nt-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nt-muted);
+  white-space: nowrap;
+}
+
+.revision-notes-content .comp-spectrum__rail {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #27ae60, #9acd32, #f57c00, #c2185b);
+}
+
+@media (max-width: 600px) {
+  .revision-notes-content .comp-spectrum__track {
+    grid-template-columns: 1fr;
+  }
+  .revision-notes-content .comp-spectrum__step {
+    border-top: 1px solid var(--nt-line);
+    border-left: 4px solid var(--step-color);
+  }
+  .revision-notes-content .comp-spectrum__step::after {
+    top: auto;
+    right: 50%;
+    bottom: -1.3rem;
+    transform: translateX(50%) rotate(90deg);
+  }
+  .revision-notes-content .comp-spectrum__axis {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   10. Diagrams
+   ========================================================================== */
+
+/* Full column width - on a phone that is meaningfully larger than the old
+   95%-with-padding treatment - inside a hairline frame. The generator wraps
+   each <picture> in an <a class="diagram-zoom"> to the PNG: with JavaScript
+   off that is a working "open full size"; notes.js upgrades it to a
+   lightbox <dialog>. */
+.revision-notes-content .diagram-figure {
+  margin: 1.8em 0;
+  max-width: none;
+  width: 100%;
+  text-align: left;
+}
+
+.revision-notes-content .diagram-zoom {
+  display: block;
+  border: 1px solid var(--nt-line);
+  border-radius: 8px;
+  padding: 0.5em;
+  background: var(--nt-paper);
+  transition: border-color 0.15s ease;
+}
+
+.revision-notes-content .diagram-zoom:hover,
+.revision-notes-content .diagram-zoom:focus-visible {
+  border-color: var(--nt-teal-border);
+}
+
+.revision-notes-content .diagram-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 0;
+  background: var(--nt-paper);
+}
+
+.revision-notes-content .diagram-caption {
+  margin-top: 0.6em;
+  font-family: var(--nt-heading);
+  font-size: 0.85em;
+  font-style: normal;
+  line-height: 1.5;
+  color: var(--nt-muted);
+  text-align: left;
+  padding: 0;
+}
+
+/* The lightbox, opened by notes.js from a .diagram-zoom click. */
+.revision-notes-content .diagram-dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em;
+  max-width: min(96vw, 1400px);
+  max-height: 96vh;
+}
+
+.revision-notes-content .diagram-dialog::backdrop {
+  background: rgba(20, 28, 40, 0.72);
+}
+
+.revision-notes-content .diagram-dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(96vh - 5em);
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* The theme's base button rule (css/main.css, `button { color: #fff
+   !important }`) turns any quiet button's text white - the .consent-button
+   precedent - so every button below counter-declares its colour. */
+.revision-notes-content .diagram-dialog__close {
+  display: block;
+  margin: 0.6em auto 0;
+  padding: 0.35em 1.4em;
+  font-family: var(--nt-heading);
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--nt-navy) !important;
+  background: var(--nt-wash);
+  border: 1px solid var(--nt-line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   11. The tail - same blocks, same wording, quieter clothes
+   ========================================================================== */
+
+.revision-notes-content .topic-related__label,
+.revision-notes-content .topic-next__label,
+.revision-notes-content .topic-author__label {
+  margin: 0 0 0.55em;
+  font-family: var(--nt-heading);
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--nt-teal);
+}
+
+.revision-notes-content .topic-related {
+  margin: 2.6em 0 0;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--nt-line);
+  font-family: var(--nt-heading);
+}
+
+.revision-notes-content .topic-related__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.revision-notes-content .topic-related__list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.revision-notes-content .topic-related__list > li:not(:last-child)::after {
+  content: "\00B7";
+  margin: 0 0.6em;
+  color: var(--nt-muted);
+}
+
+.revision-notes-content .topic-related__list a,
+.revision-notes-content .topic-related__twin-link {
+  color: var(--nt-navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+  transition: border-color 0.15s ease;
+}
+
+.revision-notes-content .topic-related__list a:hover,
+.revision-notes-content .topic-related__list a:focus-visible,
+.revision-notes-content .topic-related__twin-link:hover,
+.revision-notes-content .topic-related__twin-link:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-related__twin {
+  margin: 0.5em 0 0;
+  font-size: 0.92em;
+  line-height: 1.6;
+  color: var(--nt-muted);
+}
+
+.revision-notes-content .topic-next {
+  margin: 1.6em 0 0;
+  font-family: var(--nt-heading);
+}
+
+.revision-notes-content .topic-next__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6em;
+}
+
+.revision-notes-content .topic-next__item {
+  margin: 0;
+  padding: 0.75em 0.95em 0.8em;
+  background: var(--nt-wash);
+  border: 1px solid var(--nt-line);
+  border-left: 3px solid var(--nt-teal-border);
+  border-radius: 6px;
+}
+
+.revision-notes-content .topic-next__item::marker {
+  content: "";
+}
+
+.revision-notes-content .topic-next__link {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--nt-navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+  transition: border-color 0.15s ease;
+}
+
+.revision-notes-content .topic-next__link:hover,
+.revision-notes-content .topic-next__link:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-next__note {
+  margin: 0.3em 0 0;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-next__note a,
+.revision-notes-content .topic-next .notes-diagrams-link a {
+  color: var(--nt-navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-next__note a:hover,
+.revision-notes-content .topic-next__note a:focus-visible,
+.revision-notes-content .topic-next .notes-diagrams-link a:hover,
+.revision-notes-content .topic-next .notes-diagrams-link a:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-next .notes-diagrams-link {
+  margin: 0.7em 0 0;
+  font-size: 0.92em;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--nt-muted);
+}
+
+@media screen and (min-width: 768px) {
+  .revision-notes-content .topic-next__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75em;
+  }
+}
+
+.revision-notes-content .topic-author {
+  margin: 1.6em 0 0;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid var(--nt-navy-2);
+  font-family: var(--nt-heading);
+}
+
+.revision-notes-content .topic-author__label {
+  margin-bottom: 0.35em;
+  color: var(--nt-navy-2);
+}
+
+.revision-notes-content .topic-author__bio {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.55;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-author__name {
+  font-weight: 600;
+  color: var(--nt-navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content .topic-author__name:hover,
+.revision-notes-content .topic-author__name:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-services {
+  margin: 1.4em 0 0;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid var(--nt-brand);
+  font-family: var(--nt-heading);
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #3d4a5c;
+}
+
+.revision-notes-content .topic-services a {
+  color: var(--nt-navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.35);
+}
+
+.revision-notes-content .topic-services a:hover,
+.revision-notes-content .topic-services a:focus-visible {
+  border-bottom-color: var(--nt-navy);
+}
+
+/* ==========================================================================
+   12. Previous / next - both rows
+   ==========================================================================
+   The bottom row is two cards, as before. The TOP row (restored on Eliot's
+   Gate 1 review - "needed for user experience") is deliberately the lightest
+   thing that still works: no boxes, one line, caption + title as a single
+   inline link each side. Below 768px it drops to its captions alone - the
+   2026-08-21 rule: titles are HIDDEN, never truncated; each link's
+   aria-label still names its topic in full and the bottom row shows both
+   titles. Measured cost above the h1: ~30px on a phone, against the old
+   card row's 50px. */
+
+.revision-notes-content .topic-nav {
+  display: flex;
+  gap: 0.75em;
+  align-items: stretch;
+  margin: 1.8em 0 0;
+  font-family: var(--nt-heading);
+}
+
+.revision-notes-content .topic-nav--top {
+  margin: 0 0 1.2em;
+  gap: 1.5em;
+  justify-content: space-between;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__link {
+  flex: 0 1 48%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__caption {
+  font-size: 0.72em;
+  white-space: nowrap;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__title {
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__link:hover,
+.revision-notes-content .topic-nav--top .topic-nav__link:focus-visible {
+  background: none;
+  border: none;
+}
+
+.revision-notes-content .topic-nav--top .topic-nav__link:hover .topic-nav__title,
+.revision-notes-content
+  .topic-nav--top
+  .topic-nav__link:focus-visible
+  .topic-nav__title {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* Captions only below 768px - one quiet line, ~30px, between the
+   breadcrumb and the heading. Three classes on the row selector so the
+   600px stacking rule for the bottom row cannot win by file order. */
+@media (max-width: 767px) {
+  .revision-notes-content .topic-nav.topic-nav--top {
+    flex-direction: row;
+  }
+
+  .revision-notes-content .topic-nav--top .topic-nav__title {
+    display: none;
+  }
+}
+
+.revision-notes-content .topic-nav__link {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 0.85em 1.05em;
+  background: var(--nt-paper);
+  border: 1px solid var(--nt-line);
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.revision-notes-content .topic-nav__link--next {
+  text-align: right;
+}
+
+.revision-notes-content .topic-nav__caption {
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--nt-teal);
+}
+
+.revision-notes-content .topic-nav__title {
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--nt-navy);
+}
+
+.revision-notes-content .topic-nav__link:hover,
+.revision-notes-content .topic-nav__link:focus-visible {
+  border-color: var(--nt-teal-border);
+  background: var(--nt-wash);
+}
+
+@media (max-width: 600px) {
+  .revision-notes-content .topic-nav {
+    flex-direction: column;
+  }
+
+  .revision-notes-content .topic-nav__link--next {
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
+   13. Enhancements - every element here is injected by notes.js, so a
+       page with JavaScript off never shows a dead control
+   ========================================================================== */
+
+/* Reading progress: a 3px bar across the very top of the viewport. */
+.topic-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--nt-teal-border);
+  z-index: 10002;
+  pointer-events: none;
+}
+
+/* Back to top, after two screens of scroll. */
+.topic-top {
+  position: fixed;
+  right: 1.1em;
+  bottom: 1.1em;
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 50%;
+  border: 1px solid var(--nt-line);
+  background: var(--nt-paper);
+  color: var(--nt-navy) !important; /* the theme button rule again */
+  font-family: var(--nt-heading);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(20, 28, 40, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  z-index: 10001;
+}
+
+.topic-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.topic-top:hover,
+.topic-top:focus-visible {
+  border-color: var(--nt-teal-border);
+  color: var(--nt-teal) !important;
+}
+
+/* "Mark as revised" - injected after the last section, state in
+   localStorage in the flashcards' "saved on this device" idiom. */
+.revision-notes-content .topic-revised {
+  margin: 2.2em 0 0;
+  font-family: var(--nt-heading);
+}
+
+.revision-notes-content .topic-revised__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1.1em;
+  font-family: var(--nt-heading);
+  font-size: 0.9em;
+  font-weight: 600;
+  /* !important against the theme's white-text button rule - without it
+     this rendered white on white (Eliot's Gate 1 review, point 3). */
+  color: var(--nt-teal) !important;
+  background: var(--nt-paper);
+  border: 1px solid var(--nt-teal-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.revision-notes-content .topic-revised__button[aria-pressed="true"] {
+  background: var(--nt-teal);
+  border-color: var(--nt-teal);
+  color: #fff !important;
+}
+
+.revision-notes-content .topic-revised__button:focus-visible {
+  outline: 2px solid var(--nt-teal);
+  outline-offset: 2px;
+}
+
+.revision-notes-content .topic-revised__note {
+  margin: 0.45em 0 0;
+  font-size: 0.8em;
+  color: var(--nt-muted);
+}
+
+/* ==========================================================================
+   14. Small screens
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .revision-notes-content .notes-container > header.major h1 {
+    font-size: 1.7em;
+  }
+
+  .revision-notes-content h2 {
+    font-size: 1.3em;
+  }
+
+  .revision-notes-content h3 {
+    font-size: 1.08em;
+  }
+
+  .revision-notes-content .spec-alert,
+  .revision-notes-content .topic-contents {
+    margin-bottom: 1.4em;
+  }
+
+  .revision-notes-content .exam-tip,
+  .revision-notes-content .evaluation-point,
+  .revision-notes-content .application,
+  .revision-notes-content .worked-example {
+    padding: 0.9em 1em;
+    margin: 1.4em 0;
+  }
+
+  .revision-notes-content .topic-definition {
+    padding: 0.75em 0.9em;
+  }
+
+  .revision-notes-content .diagram-zoom {
+    padding: 0.35em;
+  }
+
+  .revision-notes-content .concept-table,
+  .revision-notes-content .calculation-table {
+    font-size: 0.9em;
+  }
+}
+
+/* On touch screens with no hover, links keep their visible underline and
+   table row hover styling is inert (there is none to disable now). */
+
+/* ==========================================================================
+   15. Print - layered on the site-wide block at the end of css/main.css
+   ========================================================================== */
+
+@media print {
+  .revision-notes-content .topic-contents,
+  .revision-notes-content .topic-related,
+  .revision-notes-content .topic-next,
+  .revision-notes-content .topic-services,
+  .revision-notes-content .topic-author,
+  .revision-notes-content .topic-nav,
+  .topic-progress,
+  .topic-top,
+  .revision-notes-content .topic-revised {
+    display: none !important;
+  }
+
+  .revision-notes-content .notes-container {
+    max-width: none;
+    display: block;
+  }
+
+  .revision-notes-content .spec-alert,
+  .revision-notes-content .exam-tip,
+  .revision-notes-content .evaluation-point,
+  .revision-notes-content .worked-example,
+  .revision-notes-content .application,
+  .revision-notes-content .topic-definition,
+  .revision-notes-content .formula-box,
+  .revision-notes-content .diagram-figure,
+  .revision-notes-content .calculation-table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .revision-notes-content .concept-table {
+    page-break-inside: avoid;
+  }
+
+  /* A heading must not be orphaned at the foot of a printed page. */
+  .revision-notes-content h2,
+  .revision-notes-content h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .revision-notes-content .diagram-zoom {
+    border: none;
+    padding: 0;
+  }
+
+  .revision-notes-content .notes-container > section + section {
+    border-top: none;
+  }
+}
+
+/* ==========================================================================
+   16. Reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .topic-progress {
+    display: none;
+  }
+
+  .topic-top,
+  .revision-notes-content a,
+  .revision-notes-content .topic-nav__link,
+  .revision-notes-content .diagram-zoom {
+    transition: none;
+  }
+}

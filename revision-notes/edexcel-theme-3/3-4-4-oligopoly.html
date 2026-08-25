@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -589,7 +589,7 @@
                 A <strong>high ratio</strong> means the market is more
                 concentrated and generally less competitive.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Calculation:</span>
                 <strong
                   >\[ \frac{\text{Total revenue of top } n \text{
@@ -600,7 +600,7 @@
               <div class="worked-example">
                 <h3>Worked Example: Calculating a Concentration Ratio</h3>
                 <p>Six firms supply a market. Their annual sales are:</p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -691,6 +691,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/collusion.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/collusion.webp" />
                 <img
@@ -699,8 +700,10 @@
                   class="diagram-image"
                   width="2616"
                   height="1610"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Collusion allows firms to restrict output and raise
                   price, leading to supernormal profit. The collusive price is
@@ -727,6 +730,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/kinked-demand-curve.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/kinked-demand-curve.webp" />
                 <img
@@ -738,6 +742,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: The kinked demand curve model explains price
                   stickiness in non-collusive oligopoly. The demand curve is
@@ -843,7 +848,7 @@
 
             <section>
               <h2 id="game-theory-and-the-prisoner-s-dilemma">Game Theory and the Prisoner's Dilemma</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Game theory:</span> A framework for
                 analysing strategic decision-making, where the outcome for each
                 participant depends on the actions of others. In oligopoly,
@@ -1014,5 +1019,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

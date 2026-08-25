@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -496,7 +496,7 @@
 
             <section>
               <h2 id="market-equilibrium">Market Equilibrium</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Market Equilibrium:</span> The
                 point where market demand equals market supply.
               </p>
@@ -510,6 +510,7 @@
                 sold at the equilibrium price.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/market-equilibrium.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/market-equilibrium.webp" />
                 <img
@@ -518,8 +519,10 @@
                   class="diagram-image"
                   width="1483"
                   height="1193"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Standard supply and demand axes. Intersecting supply
                   (S) and demand (D) curves. The equilibrium point is labelled P
@@ -545,6 +548,7 @@
                 Supplied (QS).
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/excess-demand.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/excess-demand.webp" />
                 <img
@@ -556,6 +560,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Price (P1) set below equilibrium (Pe). At P1, the
                   horizontal gap between the Demand curve (QD) and Supply curve
@@ -590,6 +595,7 @@
                 Demanded (QD).
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/excess-supply.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/excess-supply.webp" />
                 <img
@@ -601,6 +607,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: Price (P1) set above equilibrium (Pe). At P1, the
                   horizontal gap between the Supply curve (QS) and Demand curve
@@ -634,6 +641,7 @@
                 <strong>new equilibrium</strong> price and quantity.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/shifts-in-equilibrium.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/shifts-in-equilibrium.webp" />
                 <img
@@ -645,6 +653,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 4: A single set of axes to model the four scenarios
                   below. Practise drawing the shift, identifying the initial
@@ -652,7 +661,7 @@
                 </figcaption>
               </figure>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -835,5 +844,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

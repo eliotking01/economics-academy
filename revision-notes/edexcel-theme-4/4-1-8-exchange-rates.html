@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -530,7 +530,7 @@
             <section>
               <h2 id="exchange-rate-systems">Exchange Rate Systems</h2>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Floating exchange rate:</span> an
                 exchange rate system determined by market forces of demand and
                 supply for a currency, with no government intervention.
@@ -546,7 +546,7 @@
                 </li>
               </ul>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Fixed exchange rate:</span> an
                 exchange rate system where the central bank fixes the currency
                 at a certain value, often by pegging it to another currency.
@@ -562,7 +562,7 @@
                 </li>
               </ul>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Managed exchange rate:</span>
                 an exchange rate system where the central bank fixes the
                 currency within a certain range, but allows it to fluctuate
@@ -596,6 +596,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/exchange-rates.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/exchange-rates.webp" />
                 <img
@@ -604,8 +605,10 @@
                   class="diagram-image"
                   width="3540"
                   height="1302"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: In the left panel, an increase in the supply of the
                   currency (S1 to S2) lowers the exchange rate from P1 to P2 — a
@@ -666,7 +669,7 @@
 
             <section>
               <h2 id="competitive-devaluation">Competitive Devaluation</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Competitive devaluation</span> is
                 when a government deliberately pushes down the value of its
                 currency to make exports cheaper and gain a trade advantage.
@@ -791,6 +794,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/j-curve.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/j-curve.webp" />
                 <img
@@ -802,6 +806,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: J-Curve effect.
                 </figcaption>
@@ -943,5 +948,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

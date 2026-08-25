@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -500,7 +500,7 @@
             </nav>
             <section>
               <h2 id="public-ownership-vs-privatisation">Public Ownership vs Privatisation</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Public Ownership:</span> Refers to
                 the ownership of enterprises by the government. It aims to
                 provide essential goods and services, ensure equitable
@@ -508,13 +508,14 @@
                 a form of public ownership where private enterprises are taken
                 over by the government.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Privatisation:</span> Refers to the
                 transfer of ownership of enterprises from the government to the
                 private sector. It aims to increase efficiency, promote
                 competition, and reduce the financial burden on the government.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/nationalisation-privatisation.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/nationalisation-privatisation.webp" />
                 <img
@@ -523,8 +524,10 @@
                   class="diagram-image"
                   width="2516"
                   height="1612"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Nationalisation vs Privatisation
                 </figcaption>
@@ -563,7 +566,7 @@
                 <li><strong>Higher</strong> profits for the firm</li>
               </ul>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -621,7 +624,7 @@
 
             <section>
               <h2 id="regulation-and-deregulation-of-markets">Regulation and Deregulation of Markets</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Regulation:</span> Refers to the
                 imposition of rules and standards by the government or
                 regulatory bodies to control the behaviour of firms and protect
@@ -648,7 +651,7 @@
                 </li>
               </ul>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Deregulation:</span> Refers to the
                 removal or reduction of government regulations and restrictions
                 on businesses and industries. Deregulation aims to promote
@@ -670,7 +673,7 @@
                   consumers.
                 </li>
               </ul>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -717,7 +720,7 @@
 
             <section>
               <h2 id="regulatory-capture">Regulatory Capture</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Regulatory Capture:</span> Refers
                 to a situation where regulatory agencies are dominated or
                 influenced by the industries they are supposed to regulate. This
@@ -889,5 +892,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

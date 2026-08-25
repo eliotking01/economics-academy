@@ -7,9 +7,12 @@ A spec sub-label and an author byline under the H1, stable ids on every <h2>,
 a table of contents, and - after the last section - THE TAIL: a related-topics
 block carrying the twin on the other board, the three free next steps as one
 "Carry on with this topic" unit, an "About the author" rule and one services
-sentence. All of them are GENERATED CHROME, in the same sense as the
-previous/next rows: they live here, never in notes-data/, and the byte slices
-stay byte slices. notes-data/CLAUDE.md and CLAUDE.md hard rule 6.
+sentence. Since the notes redesign (2026-08-25, D61) also two per-instance
+attribute transforms: a class on each definition paragraph and the scrollable-
+region attributes on each table container - see with_definition_cards() and
+with_table_regions(). All of them are GENERATED CHROME, in the same sense as
+the previous/next rows: they live here, never in notes-data/, and the byte
+slices stay byte slices. notes-data/CLAUDE.md and CLAUDE.md hard rule 6.
 
 THE TAIL IS DERIVED, NOT STORED (2026-08-23)
 --------------------------------------------
@@ -65,6 +68,8 @@ on 2026-08-21, the rest on 2026-08-23 with the tail redesign:
     "<Board> past papers" / "Question papers and mark schemes for every
      <Board> A-Level and AS paper, by paper and year."  (no tagged questions)
     SERVICES - the one paid sentence, two links
+    "Scrollable table" - an aria-label on each table container, added by
+     with_table_regions() (2026-08-25, D61); an attribute, not visible text
 
 plus the byline and the bio themselves, the AUTHOR_* constants below. Those
 are Eliot's own words about himself - supplied and approved on 2026-08-22,
@@ -374,6 +379,50 @@ def with_contents(slice_html: str, notes_dir: str, slug: str,
     # the same one-blank-line rhythm it had before.
     return (slice_html[:m.end(1)] + contents_block(contents, m.group(3))
             + slice_html[m.start(2):])
+
+
+# -------------------------------------------- definition cards and tables
+
+# A paragraph whose FIRST content is a key-definition chip - the same "chip
+# opens the block" reading extract_glossary.py uses to tell a definition from
+# a mid-sentence highlight, so the card set and the glossary agree by
+# construction. Measured across all 166 slices on 2026-08-25 (PLAN.md §2):
+# 641 chips; 540 open a bare <p> and become cards; 0 chip-first paragraphs
+# carry any attribute on the <p>; 22 open an <li> and 79 sit mid-sentence,
+# and both of those stay inline highlights - a card inside a bullet list
+# breaks the list's rhythm. Every chip is spelled exactly
+# <span class="key-definition" (0 variants), so the lookahead is the anchor.
+DEFINITION_P_RE = re.compile(r'<p>(?=\s*<span class="key-definition")')
+
+# The scroll container every comparison table sits in, spelled exactly this
+# way in all 122 instances (measured 2026-08-25, 0 with extra classes). The
+# added attributes make the scrollable region reachable and named for
+# keyboard users; the CSS edge fades are the visual cue.
+TABLE_CONTAINER_OPEN = '<div class="table-container">'
+TABLE_CONTAINER_REGION = ('<div class="table-container" tabindex="0" '
+                          'role="region" aria-label="Scrollable table">')
+
+
+def with_definition_cards(slice_html: str) -> str:
+    """Class each chip-opening paragraph so the sheet can render it as a card.
+
+    Tolerant by construction, not strict: a chip anywhere else - mid-sentence,
+    in a list item, in a paragraph that already carries an attribute - simply
+    keeps its inline colour treatment. There is nothing to fail; a hand edit
+    cannot break this, only opt out of the card look.
+    """
+    return DEFINITION_P_RE.sub('<p class="topic-definition">', slice_html)
+
+
+def with_table_regions(slice_html: str) -> str:
+    """Make each table container a labelled, keyboard-focusable region.
+
+    A container with an unexpected class list is left alone - it still
+    renders and still scrolls, losing only the keyboard focus stop. A
+    degradation, not a trap: the pattern here is exactly the snippet
+    revision-notes/CLAUDE.md and docs/EDITING-NOTES.md say to paste.
+    """
+    return slice_html.replace(TABLE_CONTAINER_OPEN, TABLE_CONTAINER_REGION)
 
 
 # ---------------------------------------------------------------- related
@@ -688,6 +737,8 @@ def apply_all(slice_html: str, notes_dir: str, slug: str, code: str,
     out = sub_label(slice_html, notes_dir, slug, code, modified)
     out, contents = with_h2_ids(out, notes_dir, slug)
     out = with_contents(out, notes_dir, slug, contents)
+    out = with_definition_cards(out)
+    out = with_table_regions(out)
     return with_tail(out, notes_dir, slug)
 
 

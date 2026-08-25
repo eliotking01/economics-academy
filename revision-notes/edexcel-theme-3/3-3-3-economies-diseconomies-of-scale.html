@@ -140,7 +140,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -509,6 +509,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/economies-of-scale.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/economies-of-scale.webp" />
                 <img
@@ -517,8 +518,10 @@
                   class="diagram-image"
                   width="2502"
                   height="1672"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The LRAC curve illustrating economies of scale
                   (downward sloping section) and diseconomies of scale (upward
@@ -526,7 +529,7 @@
                   lowest point on the curve where average costs are minimised.
                 </figcaption>
               </figure>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >Minimum Efficient Scale (MES)</span
                 >
@@ -537,14 +540,14 @@
 
             <section>
               <h2 id="economies-of-scale">Economies of Scale</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Internal Economies of scale</span>
                 the reasons within a business why Average Total Costs fall as
                 <strong>size/output of the business increase</strong>. These are
                 <strong>internal</strong> to the firm and cause LRAC to fall.
               </p>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -644,14 +647,14 @@
 
             <section>
               <h2 id="diseconomies-of-scale">Diseconomies of Scale</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Diseconomies of scale</span> are
                 the reasons why ATC starts to increase as the size/output of a
                 business <strong>becomes too large</strong>. These are
                 <strong>internal</strong> to the firm and cause LRAC to rise.
               </p>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -721,7 +724,7 @@
 
             <section>
               <h2 id="external-economies-of-scale">External Economies of Scale</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">External economies of scale</span>
                 are the reasons outside of the business why as size/output of
                 <strong>all firms in an entire industry</strong> increases. They
@@ -729,7 +732,7 @@
                 shift downwards for all firms in the industry, reducing costs.
               </p>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -913,5 +916,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

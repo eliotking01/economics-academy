@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -543,7 +543,7 @@
 
             <section>
               <h2 id="injections-j">Injections (J)</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Injection:</span> Income from
                 outside of the closed economy that enters the circular flow of
                 income (Government Spending, Investment, and Exports).
@@ -574,7 +574,7 @@
 
             <section>
               <h2 id="withdrawals-or-leakages-w">Withdrawals or Leakages (W)</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Withdrawal:</span> Income that
                 leaves the circular flow of income and is not passed on as
                 spending (Savings, Taxation, and Imports).
@@ -600,6 +600,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/circular-flow-of-income-injections-withdrawals.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/circular-flow-of-income-injections-withdrawals.webp" />
                 <img
@@ -608,8 +609,10 @@
                   class="diagram-image"
                   width="3078"
                   height="1662"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The extended circular flow of income, showing
                   injections (I, G, X) and withdrawals (S, T, M).
@@ -779,5 +782,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -512,7 +512,7 @@
 
             <section>
               <h2 id="key-trade-offs-between-objectives">Key Trade-Offs Between Objectives</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -591,6 +591,7 @@
             <section>
               <h2 id="the-short-run-phillips-curve">The Short-Run Phillips Curve</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/short-run-phillips-curve.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/short-run-phillips-curve.webp" />
                 <img
@@ -599,24 +600,26 @@
                   class="diagram-image"
                   width="2392"
                   height="1248"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Short-Run Phillips Curve - Trade-Off Between
                   Unemployment and Inflation
                 </figcaption>
               </figure>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">What it shows:</span> A
                 <strong>short-run inverse relationship</strong> between
                 unemployment and inflation.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Reason:</span> Lower unemployment
                 leads to higher average incomes, which increases consumer
                 spending and demand-pull inflation.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Limitation:</span> This trade-off
                 only applies in the <strong>short run</strong>. In the long run,
                 the Phillips Curve is <strong>vertical</strong> at the
@@ -630,7 +633,7 @@
                 Policy tools can also create conflicts between short-run and
                 long-run goals.
               </p>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -799,5 +802,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

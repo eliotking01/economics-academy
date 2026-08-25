@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -526,17 +526,17 @@
 
             <section>
               <h2 id="key-definitions">Key Definitions</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Total Revenue (TR):</span>
                 <strong>\( P \times Q \)</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Average Revenue (AR):</span>
                 <strong>\( \frac{TR}{Q} \)</strong>. This is the
                 <strong>price per unit</strong> and also the firm's
                 <strong>demand curve</strong>.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Marginal Revenue (MR):</span>
                 <strong>\( \frac{\Delta TR}{\Delta Q} \)</strong>. This is the
                 <strong>additional revenue</strong> from selling one more unit.
@@ -561,6 +561,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/revenue-perfect-competition.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/revenue-perfect-competition.webp" />
                 <img
@@ -569,8 +570,10 @@
                   class="diagram-image"
                   width="3060"
                   height="1052"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Revenue in Perfect Competition - AR and MR are
                   horizontal at the market price. TR increases at a constant
@@ -594,6 +597,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/revenue-imperfect-competition.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/revenue-imperfect-competition.webp" />
                 <img
@@ -605,6 +609,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Revenue in Imperfect Competition - AR is downward
                   sloping, and MR lies below AR. TR increases at a decreasing
@@ -624,7 +629,7 @@
                   A firm with market power must lower its price to sell more.
                   This schedule is read off its demand curve:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -681,7 +686,7 @@
                 pricing decisions.
               </p>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -840,5 +845,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

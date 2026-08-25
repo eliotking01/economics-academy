@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -527,7 +527,7 @@
 
             <section>
               <h2 id="demand-for-labour">Demand for Labour</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Demand for labour</span> refers to
                 the quantity of workers that firms are willing and able to
                 employ at a given wage rate.
@@ -543,13 +543,13 @@
               <p>
                 <strong>\[ MRP = MPP \times MR \]</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >Marginal Physical Product (MPP):</span
                 >
                 The <strong>extra output</strong> produced by one more worker.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Marginal Revenue (MR):</span>
                 The <strong>extra revenue</strong> gained from selling that
                 extra output.
@@ -561,6 +561,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/demand-for-labour.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/demand-for-labour.webp" />
                 <img
@@ -569,8 +570,10 @@
                   class="diagram-image"
                   width="2384"
                   height="1596"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The demand for labour curve (D(L)) is derived from
                   the marginal revenue product of labour. As more workers are
@@ -586,7 +589,7 @@
                   <strong>£5 per unit</strong>, so MR is £5. Adding workers
                   changes total output as follows:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -644,7 +647,7 @@
                 shifts the demand curve for labour.
               </p>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -837,5 +840,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

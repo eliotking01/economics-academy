@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -498,14 +498,14 @@
 
             <section>
               <h2 id="indirect-taxes">Indirect Taxes</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> A tax levied on
                 <strong>goods and services</strong> when they are purchased,
                 such as VAT or sugar tax. It is paid
                 <strong>indirectly</strong> by the consumer via the producer, so
                 affects the supply curve rather than the demand curve.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Types of Indirect Tax:</span>
               </p>
 
@@ -535,6 +535,7 @@
             <section>
               <h2 id="analysing-a-specific-per-unit-tax">Analysing a Specific (Per-Unit) Tax</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/indirect-tax-incidence.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/indirect-tax-incidence.webp" />
                 <img
@@ -543,8 +544,10 @@
                   class="diagram-image"
                   width="1622"
                   height="1245"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The impact of a specific tax on supply, price,
                   quantity, and tax incidence.
@@ -593,7 +596,7 @@
                   <strong>specific tax of £2</strong> per unit on a good. The
                   market moves as follows:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -653,6 +656,7 @@
                 depends on the <strong>PED</strong> of the product.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/Indirect-tax-incidence-elastic-inelastic.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/Indirect-tax-incidence-elastic-inelastic.webp" />
                 <img
@@ -664,12 +668,13 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: The impact of an indirect tax when demand is price
                   inelastic vs. price elastic.
                 </figcaption>
               </figure>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -733,7 +738,7 @@
 
             <section>
               <h2 id="subsidies">Subsidies</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> A
                 <strong>per-unit payment</strong> from the government to
                 producers to <strong>lower their costs of production</strong>.
@@ -754,6 +759,7 @@
             <section>
               <h2 id="analysing-a-subsidy">Analysing a Subsidy</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/subsidy-incidence.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/subsidy-incidence.webp" />
                 <img
@@ -765,6 +771,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: The impact of a subsidy on supply, price, quantity,
                   and subsidy incidence.
@@ -918,5 +925,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

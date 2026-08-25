@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -497,7 +497,7 @@
 
             <section>
               <h2 id="the-basics-of-demand">The Basics of Demand</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> The
                 <strong>quantity of a good/service</strong> consumers are
                 <strong>willing and able to buy</strong> at a given price in a
@@ -508,7 +508,7 @@
                 <strong>willingness</strong> and an <strong>ability</strong> to
                 pay. Desire alone is not demand.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">The Law of Demand:</span> There is
                 an <strong>inverse relationship</strong> between price and
                 quantity demanded (QD). As price rises, QD falls (<em
@@ -520,6 +520,7 @@
             <section>
               <h2 id="the-demand-curve">The Demand Curve</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/demand-curve-movement.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/demand-curve-movement.webp" />
                 <img
@@ -528,8 +529,10 @@
                   class="diagram-image"
                   width="1731"
                   height="1280"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Standard downward-sloping demand curve (D1) showing
                   movements along the curve. A movement from point B to A shows
@@ -568,6 +571,7 @@
                 demand.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/demand-curve-shift.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/demand-curve-shift.webp" />
                 <img
@@ -579,6 +583,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Shifts of the demand curve. D1 to D2 shows an
                   increase in demand (shift right). D2 to D1 shows a decrease in
@@ -586,7 +591,7 @@
                 </figcaption>
               </figure>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -654,12 +659,12 @@
 
             <section>
               <h2 id="diminishing-marginal-utility-demand">Diminishing Marginal Utility &amp; Demand</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Marginal Utility (MU):</span> The
                 extra satisfaction from consuming
                 <strong>one more unit</strong>.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >The Law of Diminishing Marginal Utility:</span
                 >
@@ -799,5 +804,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -523,7 +523,7 @@
 
             <section>
               <h2 id="what-are-index-numbers">What Are Index Numbers?</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Index number:</span> A number used
                 to express the value of a variable relative to a chosen
                 <strong>base value</strong>, which is set equal to
@@ -547,7 +547,7 @@
               </p>
 
               <h3>The Base Year</h3>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Base year:</span> The reference
                 year against which all other years are compared. The value of
                 the variable in the base year is set to <strong>100</strong>,
@@ -567,7 +567,7 @@
                   three years, with
                   <strong>2022 chosen as the base year</strong>:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -654,7 +654,7 @@
 
             <section>
               <h2 id="how-cpi-and-inflation-are-calculated">How CPI and Inflation Are Calculated</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Consumer Prices Index (CPI):</span>
                 The main measure of the price level in the UK. It is a
                 <strong>weighted price index</strong> that tracks the average
@@ -731,7 +731,7 @@
                   Weights are given out of 1,000 (a common convention), and each
                   category's price index is measured relative to the base year:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -786,7 +786,7 @@
               </div>
 
               <h3>From CPI to the Inflation Rate</h3>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Inflation:</span> A sustained rise
                 in the general price level. It is measured as the
                 <strong>annual percentage change</strong> in the CPI.
@@ -938,5 +938,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -506,7 +506,7 @@
                 These strategies rely on <strong>free market forces</strong>
                 and private sector activity to drive development.
               </p>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -608,7 +608,7 @@
                 These are government-led actions designed to
                 <strong>correct market failure</strong> and direct development.
               </p>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -715,6 +715,7 @@
               </div>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/buffer-stocks.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/buffer-stocks.webp" />
                 <img
@@ -723,8 +724,10 @@
                   class="diagram-image"
                   width="2600"
                   height="1728"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: A buffer stock scheme stabilises prices by buying
                   when supply is high and releasing when supply is low, helping
@@ -857,7 +860,7 @@
               </p>
 
               <h3>Non-Governmental Organisations (NGOs)</h3>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">NGOs</span> are non-profit
                 organisations that operate independently of governments. They
                 often focus on specific development issues such as education,
@@ -979,5 +982,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

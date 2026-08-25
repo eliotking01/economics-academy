@@ -140,7 +140,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -511,7 +511,7 @@
 
             <section>
               <h2 id="the-three-functions-of-the-price-mechanism">The Three Functions of the Price Mechanism</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -577,6 +577,7 @@
 
               <h3>Example 1: Increased Demand in a Local Market</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/demand-increase.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/demand-increase.webp" />
                 <img
@@ -585,8 +586,10 @@
                   class="diagram-image"
                   width="1563"
                   height="1219"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Increase in demand for a product (D1 to D2), leading
                   to a higher equilibrium price (P1 to P2) and quantity (Q1 to
@@ -620,6 +623,7 @@
 
               <h3>Example 2: Increased Supply in a National Market</h3>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/supply-increase.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/supply-increase.webp" />
                 <img
@@ -631,6 +635,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Increase in supply for a product (S1 to S2), leading
                   to a lower equilibrium price (P1 to P2) and a higher quantity
@@ -680,7 +685,7 @@
 
             <section>
               <h2 id="the-advantages-and-disadvantages-of-the-price-mechanism">The Advantages and Disadvantages of the Price Mechanism</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -851,5 +856,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -531,18 +531,18 @@
                 \[ \text{Profit} = \text{Total Revenue} - \text{Total Costs} \]
               </div>
 
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Normal profit:</span> The minimum
                 profit required to keep a firm in the industry, so
                 <strong>\( TR = TC \)</strong>. Also known as the
                 <strong>break-even point</strong>.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Abnormal/Supernormal profit:</span>
                 Any profit above normal profit, so
                 <strong>\( TR > TC \)</strong>.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Loss:</span> When
                 <strong>\( TR &lt; TC \)</strong>.
               </p>
@@ -572,6 +572,7 @@
               <h2 id="diagrammatic-representation-of-profits-and-losses">Diagrammatic Representation of Profits and Losses</h2>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/supernormal-profit.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/supernormal-profit.webp" />
                 <img
@@ -580,8 +581,10 @@
                   class="diagram-image"
                   width="2350"
                   height="1566"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: A firm making supernormal profit, where AR (price)
                   is above AC at the profit-maximising output Qpm. The shaded
@@ -590,6 +593,7 @@
               </figure>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/loss.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/loss.webp" />
                 <img
@@ -601,6 +605,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: A firm making a loss, where AR (price) is below AC
                   at the profit-maximising output Qpm. The shaded area
@@ -755,5 +760,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -529,13 +529,13 @@
 
             <section>
               <h2 id="actual-growth-vs-trend-rate-growth">Actual Growth vs. Trend Rate Growth</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Actual Growth:</span> The
                 <strong>actual growth rate</strong> of an economy is the
                 <strong>percentage change in real GDP</strong> over a period of
                 time, usually a year.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Trend Rate Growth:</span> The
                 <strong>trend rate of growth</strong> is the
                 <strong>long-term average growth rate</strong> of an economy,
@@ -553,7 +553,7 @@
 
             <section>
               <h2 id="what-is-an-output-gap">What Is an Output Gap?</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> An output gap is
                 the difference between the
                 <strong>actual level of real GDP</strong> and the
@@ -590,6 +590,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/negative-output-gap-classical.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/negative-output-gap-classical.webp" />
                 <img
@@ -598,8 +599,10 @@
                   class="diagram-image"
                   width="2298"
                   height="1564"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Negative Output Gap - Classical View. The economy is
                   producing at Y1, which is less than the full employment level
@@ -608,6 +611,7 @@
               </figure>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/negative-output-gap-keynesian.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/negative-output-gap-keynesian.webp" />
                 <img
@@ -619,6 +623,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Negative Output Gap - Keynesian View. The economy is
                   producing at Y1, which is less than the full employment level
@@ -652,6 +657,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/positive-output-gap-classical.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/positive-output-gap-classical.webp" />
                 <img
@@ -663,6 +669,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: Positive Output Gap - Classical View. The economy is
                   producing at Y1, which is greater than the full employment
@@ -809,5 +816,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

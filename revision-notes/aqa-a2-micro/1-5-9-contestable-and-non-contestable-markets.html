@@ -141,7 +141,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -602,6 +602,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/sales-max.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/sales-max.webp" />
                 <img
@@ -610,8 +611,10 @@
                   class="diagram-image"
                   width="2490"
                   height="1688"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Limit Pricing - Price is set below the
                   profit-maximising level to deter entry.
@@ -644,7 +647,7 @@
 
             <section>
               <h2 id="types-of-barriers-to-entry">Types of Barriers to Entry</h2>
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -710,7 +713,7 @@
 
             <section>
               <h2 id="sunk-costs-the-main-barrier-to-exit">Sunk Costs - The Main Barrier to Exit</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Sunk costs</span> are costs that
                 <strong>cannot be recovered</strong> if a firm leaves the
                 market.
@@ -843,5 +846,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

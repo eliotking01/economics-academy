@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -498,7 +498,7 @@
 
             <section>
               <h2 id="what-is-lras">What Is LRAS?</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Definition:</span> Long-run
                 aggregate supply is the total potential output of an economy
                 when all factors of production are fully and efficiently
@@ -537,6 +537,7 @@
                 <strong>Yfe</strong>.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/lras-classical.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/lras-classical.webp" />
                 <img
@@ -545,8 +546,10 @@
                   class="diagram-image"
                   width="2270"
                   height="1536"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The Classical LRAS curve is vertical, reflecting the
                   belief that the economy will always adjust to full employment
@@ -592,6 +595,7 @@
                 </li>
               </ul>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/lras-keynesian.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/lras-keynesian.webp" />
                 <img
@@ -603,6 +607,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: The Keynesian LRAS curve is L-shaped, reflecting the
                   idea that the economy can be below full employment for a long
@@ -622,6 +627,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/lras-shift.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/lras-shift.webp" />
                 <img
@@ -633,6 +639,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: Factors that increase the quantity or quality of
                   factors of production, such as technological advances or
@@ -641,7 +648,7 @@
                 </figcaption>
               </figure>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -845,5 +852,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -498,7 +498,7 @@
 
             <section>
               <h2 id="the-basics-of-supply">The Basics of Supply</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Supply:</span> The quantity of a
                 good/service producers are willing and able to produce/sell at a
                 given price in a given time period.
@@ -517,6 +517,7 @@
             <section>
               <h2 id="the-supply-curve">The Supply Curve</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/supply-curve-movement.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/supply-curve-movement.webp" />
                 <img
@@ -525,8 +526,10 @@
                   class="diagram-image"
                   width="1536"
                   height="1223"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Standard upward-sloping supply curve (S1) showing
                   movements along the curve. A movement from point A to B shows
@@ -561,6 +564,7 @@
                 production capacity.
               </p>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/supply-curve-shift.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/supply-curve-shift.webp" />
                 <img
@@ -572,6 +576,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Supply curve shifting right from S1 to S2 due to a
                   non-price factor (e.g., technological advance). A shift left
@@ -580,7 +585,7 @@
                 </figcaption>
               </figure>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -789,5 +794,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

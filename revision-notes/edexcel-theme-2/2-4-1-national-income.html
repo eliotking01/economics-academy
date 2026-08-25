@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -555,6 +555,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/circular-flow-of-income.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/circular-flow-of-income.webp" />
                 <img
@@ -563,8 +564,10 @@
                   class="diagram-image"
                   width="2226"
                   height="1616"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: The circular flow of income illustrates the
                   continuous movement of money and resources between households
@@ -651,7 +654,7 @@
 
             <section>
               <h2 id="national-income-key-concepts">National Income: Key Concepts</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">National Income:</span> The
                 <strong>total value of output, expenditure, and income</strong>
                 generated in an economy over a period of time, usually a year.
@@ -803,5 +806,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

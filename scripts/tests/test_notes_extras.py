@@ -69,6 +69,65 @@ class BankAgreesWithIndexTests(unittest.TestCase):
         self.assertEqual(ne.ppq.GATE, index["gate"])
 
 
+class TransformTests(unittest.TestCase):
+    """The two per-instance transforms the notes redesign added (D61).
+
+    Both are tolerant by design - inert on no match, never a failure - so
+    the tests pin the classification rule itself: a chip that OPENS a bare
+    <p> becomes a card, a chip anywhere else does not, and every container
+    gains its three attributes exactly once.
+    """
+
+    def test_chip_first_paragraph_becomes_a_card(self):
+        out = ne.with_definition_cards(
+            '<p>\n  <span class="key-definition">Term:</span> The definition.\n</p>')
+        self.assertTrue(out.startswith('<p class="topic-definition">'))
+
+    def test_mid_sentence_and_list_chips_stay_inline(self):
+        mid = ('<p>\n  Text first, then a '
+               '<span class="key-definition">chip</span>.\n</p>')
+        li = '<li>\n  <span class="key-definition">Term:</span> text\n</li>'
+        attr = ('<p class="something">\n'
+                '  <span class="key-definition">Term:</span> text\n</p>')
+        for html in (mid, li, attr):
+            self.assertEqual(ne.with_definition_cards(html), html)
+
+    def test_table_container_gains_the_region_attributes_once(self):
+        out = ne.with_table_regions(
+            '<div class="table-container">\n<table></table>\n</div>')
+        self.assertEqual(out.count('tabindex="0"'), 1)
+        self.assertEqual(out.count('role="region"'), 1)
+        self.assertEqual(out.count('aria-label="Scrollable table"'), 1)
+        # a hand-edited container with an extra class is left alone
+        odd = '<div class="table-container wide">\n</div>'
+        self.assertEqual(ne.with_table_regions(odd), odd)
+
+    def test_totals_across_the_real_slices(self):
+        """The transforms hit exactly the instances a direct scan finds.
+
+        The scan is restated here rather than imported (the check-2 rule:
+        a test that reads the value it is checking agrees with anything).
+        Not pinned to a literal on purpose - a pinned 540/122 would fail
+        the moment Eliot adds a definition or a table, which is the noise
+        verify_page_shell.py deleted its per-shape counts to avoid. The
+        measured values on 2026-08-25 were 540 cards and 122 containers
+        (PLAN.md §2).
+        """
+        cards = containers = expect_cards = expect_containers = 0
+        for src in sorted((ROOT / "notes-data" / "topics").glob("*/*.html")):
+            body = src.read_text(encoding="utf-8")
+            expect_cards += len(re.findall(
+                r'<p>\s*<span class="key-definition"', body))
+            expect_containers += body.count('<div class="table-container">')
+            out = ne.with_table_regions(ne.with_definition_cards(body))
+            cards += out.count('<p class="topic-definition">')
+            containers += out.count('aria-label="Scrollable table"')
+        self.assertEqual(cards, expect_cards)
+        self.assertEqual(containers, expect_containers)
+        self.assertGreater(cards, 0)
+        self.assertGreater(containers, 0)
+
+
 class TailShapeTests(unittest.TestCase):
     """One Edexcel page with a diagram-gallery line, one AQA page without."""
 

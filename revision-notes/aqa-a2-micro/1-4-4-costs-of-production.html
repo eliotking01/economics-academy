@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -526,33 +526,33 @@
 
             <section>
               <h2 id="key-definitions">Key Definitions</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Fixed Costs (FC):</span> Costs that
                 do <strong>not vary</strong> with output, such as rent and
                 salaries.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Variable Costs (VC):</span> Costs
                 that <strong>vary directly</strong> with output, such as raw
                 materials and hourly wages.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Total Cost (TC):</span>
                 <strong>\( TC = TFC + TVC \)</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Average Cost (AC):</span>
                 <strong>\( AC = \frac{TC}{Q} \)</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Average Fixed Cost (AFC):</span>
                 <strong>\( AFC = \frac{TFC}{Q} \)</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Average Variable Cost (AVC):</span>
                 <strong>\( AVC = \frac{TVC}{Q} \)</strong>
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Marginal Cost (MC):</span>
                 <strong>\( \frac{\Delta TC}{\Delta Q} \)</strong>, which is the
                 additional cost incurred when producing
@@ -564,7 +564,7 @@
                   A bakery has <strong>fixed costs of £100 a day</strong> for
                   rent and insurance. Its variable costs rise with output:
                 </p>
-                <div class="table-container">
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                   <table class="concept-table">
                     <thead>
                       <tr>
@@ -636,7 +636,7 @@
                 increase productivity, but eventually
                 <strong>diminishing marginal returns</strong> set in.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >Diminishing Marginal Returns:</span
                 >
@@ -659,6 +659,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/short-run-costs.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/short-run-costs.webp" />
                 <img
@@ -667,8 +668,10 @@
                   class="diagram-image"
                   width="1820"
                   height="1208"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Short-run cost curves showing the U-shaped nature of
                   MC, AVC, and AC due to diminishing returns.
@@ -721,6 +724,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/long-run-costs.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/long-run-costs.webp" />
                 <img
@@ -732,6 +736,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Long-run average cost (LRAC) curve showing economies
                   and diseconomies of scale.
@@ -902,5 +907,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

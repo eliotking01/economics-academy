@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -501,7 +501,7 @@
                 As mentioned in Unit 1.8.4, merit and demerit goods can be
                 defined as:
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Merit goods:</span> goods that
                 exhibit
                 <a
@@ -512,7 +512,7 @@
                 under-provided by the market. Examples include education,
                 healthcare, and public libraries.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Demerit goods:</span> goods that
                 exhibit negative externalities in their consumption or
                 production, and are therefore over-provided by the market.
@@ -576,6 +576,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/overproduction.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/overproduction.webp" />
                 <img
@@ -584,8 +585,10 @@
                   class="diagram-image"
                   width="1592"
                   height="1144"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Negative Externality of Production - Market produces
                   at Q1, but the social optimum is at Q2. The shaded triangle
@@ -631,6 +634,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/underproduction.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/underproduction.webp" />
                 <img
@@ -642,6 +646,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: Positive Externality of Production - Market produces
                   at Q1, but the social optimum is at Q2. The shaded triangle
@@ -688,6 +693,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/underconsumption.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/underconsumption.webp" />
                 <img
@@ -699,6 +705,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 3: Positive Externality of Consumption - Market
                   consumes at Q1, but the social optimum is at Q2. The shaded
@@ -744,6 +751,7 @@
               </ul>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/overconsumption.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/overconsumption.webp" />
                 <img
@@ -755,6 +763,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 4: Overconsumption of a Demerit Good - Market consumes
                   at Q1, but the social optimum is at Q2. The shaded triangle
@@ -909,5 +918,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

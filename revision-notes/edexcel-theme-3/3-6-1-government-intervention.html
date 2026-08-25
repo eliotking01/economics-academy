@@ -138,7 +138,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -498,7 +498,7 @@
 
             <section>
               <h2 id="intervention-to-control-monopoly-power">Intervention to control Monopoly Power</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition"
                   >Competition and Markets Authority (CMA):</span
                 >
@@ -532,7 +532,7 @@
                 <strong>natural monopolies</strong> e.g. Water companies.
               </p>
 
-              <div class="table-container">
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
                 <table class="concept-table">
                   <thead>
                     <tr>
@@ -634,6 +634,7 @@
               </p>
 
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/nationalisation-privatisation.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/nationalisation-privatisation.webp" />
                 <img
@@ -642,8 +643,10 @@
                   class="diagram-image"
                   width="2516"
                   height="1612"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: Nationalisation vs. Privatisation of a Natural
                   Monopoly.
@@ -864,5 +867,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>

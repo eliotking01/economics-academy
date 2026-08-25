@@ -139,7 +139,7 @@
     />
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/pages/revision-notes-textbook.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
     <!-- MathJax Configuration -->
     <script>
       window.MathJax = {
@@ -534,7 +534,7 @@
 
             <section>
               <h2 id="what-are-demand-side-policies">What Are Demand-Side Policies?</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Demand-side policies</span> are
                 policies used by the government or central bank to
                 <strong>shift the aggregate demand (AD) curve</strong> in order
@@ -589,7 +589,7 @@
               </ul>
 
               <h3>How Interest Rates Affect AD</h3>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Interest rates:</span> the cost of
                 borrowing and the reward for saving.
               </p>
@@ -630,6 +630,7 @@
             <section>
               <h2 id="impacts-of-monetary-policy">Impacts of Monetary Policy</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ad-shift-right-classical-keynesian.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ad-shift-right-classical-keynesian.webp" />
                 <img
@@ -638,8 +639,10 @@
                   class="diagram-image"
                   width="3574"
                   height="1312"
+                  fetchpriority="high"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 1: AD/AS Diagram - Expansionary Policy
                 </figcaption>
@@ -797,7 +800,7 @@
 
             <section>
               <h2 id="the-government-budget">The Government Budget</h2>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Budget deficit:</span>
                 \( G > T \). This means government spending is greater than tax
                 revenue, so the government must borrow and
@@ -807,12 +810,12 @@
                 >
                 rises.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Budget surplus:</span>
                 \( T > G \). This means tax revenue is greater than government
                 spending, so the surplus can be used to repay debt.
               </p>
-              <p>
+              <p class="topic-definition">
                 <span class="key-definition">Balanced budget:</span>
                 \( G = T \).
               </p>
@@ -896,6 +899,7 @@
             <section>
               <h2 id="impacts-of-fiscal-policy">Impacts of Fiscal Policy</h2>
               <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/ad-shift-right-classical-keynesian.png">
                 <picture>
                 <source type="image/webp" srcset="/images/diagrams/ad-shift-right-classical-keynesian.webp" />
                 <img
@@ -907,6 +911,7 @@
                   loading="lazy"
                 />
                 </picture>
+                </a>
                 <figcaption class="diagram-caption">
                   Figure 2: AD/AS Diagram - Expansionary Policy
                 </figcaption>
@@ -1145,5 +1150,6 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
   </body>
 </html>
