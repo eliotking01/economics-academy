@@ -5,7 +5,7 @@
  * <section id="main">, per the house convention. Bare class names have already
  * collided across two stylesheets here.
  *
- * Colours are hex, not the :root tokens in revision-notes-textbook.css - those
+ * Colours are hex, not the :root tokens in revision-notes-topic.css - those
  * are for the notes pages only. The brand accent is #d52349. Body and muted
  * greys are borrowed from css/pages/practice-questions.css so the section reads
  * as part of the site.

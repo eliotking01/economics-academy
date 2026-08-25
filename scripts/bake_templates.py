@@ -115,22 +115,36 @@ LEGACY_TAIL = (
     "/js/breakpoints.min.js",
 )
 
-SCRIPT_RE = re.compile(r'^([ \t]*)<script src="([^"]+)"></script>$')
+SCRIPT_RE = re.compile(r'^([ \t]*)<script src="([^"]+)"( defer)?></script>$')
+
+# The per-page component script on a hand-written page, mirroring the
+# `extra` argument the five generators pass to page_shell.script_tail():
+# emitted after the tail, with defer. Added 2026-08-25 (D62, the notes
+# family consistency pass) when the two diagram galleries joined the notes
+# design and its enhancements. verify_page_shell.py's EXTRA_SCRIPT_PAGES
+# restates the same relation independently, per the standing two-file rule.
+EXTRA_COMPONENT_SCRIPTS = {
+    "revision-notes/microeconomics-diagrams.html": ("/js/components/notes.js",),
+    "revision-notes/macroeconomics-diagrams.html": ("/js/components/notes.js",),
+}
 
 
-def sync_script_tail(text: str) -> str:
+def sync_script_tail(text: str, rel: str = "") -> str:
     """Rewrite the page's script tail from page_shell.SCRIPT_TAIL.
 
     The region runs from the first `<script src>` naming a current or former
     tail entry to the last. Inside it, current entries are re-emitted in
-    SCRIPT_TAIL's order, former entries are dropped, and anything else is the
-    page's own and is kept, in its original order, after them.
+    SCRIPT_TAIL's order, then the page's declared component script (with
+    defer, as page_shell.script_tail() emits it); former entries are
+    dropped, and anything else is the page's own and is kept, in its
+    original order, after them.
 
     Line-based and anchored on exact tags, so it cannot touch anything else on
     the page - the same property the header bake has, and for the same reason.
     """
     lines = text.split("\n")
-    known = set(page_shell.SCRIPT_TAIL) | set(LEGACY_TAIL)
+    extras = EXTRA_COMPONENT_SCRIPTS.get(rel, ())
+    known = set(page_shell.SCRIPT_TAIL) | set(LEGACY_TAIL) | set(extras)
 
     hits = [i for i, ln in enumerate(lines)
             if (m := SCRIPT_RE.match(ln)) and m.group(2) in known]
@@ -140,13 +154,17 @@ def sync_script_tail(text: str) -> str:
     indent = SCRIPT_RE.match(lines[first]).group(1)
 
     # Everything in the region that is neither a current nor a former tail
-    # entry: nothing today - the home-page revamp deleted index.html's two
-    # review scripts. Kept for the next page that carries its own.
+    # entry nor the declared component script: nothing today - the home-page
+    # revamp deleted index.html's two review scripts. Kept for the next page
+    # that carries its own.
     theirs = [ln for ln in lines[first:last + 1]
               if not ((m := SCRIPT_RE.match(ln)) and m.group(2) in known)]
 
-    rebuilt = [f'{indent}<script src="{s}"></script>'
-               for s in page_shell.SCRIPT_TAIL] + theirs
+    rebuilt = ([f'{indent}<script src="{s}"></script>'
+                for s in page_shell.SCRIPT_TAIL]
+               + [f'{indent}<script src="{s}" defer></script>'
+                  for s in extras]
+               + theirs)
     return "\n".join(lines[:first] + rebuilt + lines[last + 1:])
 
 
@@ -350,7 +368,8 @@ def main() -> int:
         path = ROOT / rel
         before = path.read_text(encoding="utf-8")
         after = sync_theme_color(
-            sync_fonts(sync_gtag(sync_script_tail(page_shell.bake(before, rel)))))
+            sync_fonts(sync_gtag(sync_script_tail(page_shell.bake(before, rel),
+                                                  rel))))
         if after == before:
             already += 1
             continue

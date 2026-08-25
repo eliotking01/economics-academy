@@ -25,17 +25,22 @@ fails either way round. A page that loads it also preconnects to
 `cdn.jsdelivr.net`. Write the maths and the script follows. Every topic page also loads
 `js/components/notes.js` (defer, after the five-script tail) as the notes
 family's extra script - `verify_page_shell.py`'s `FAMILY_SCRIPT` holds the
-relation. It injects every element it shows (progress bar, back-to-top,
-scrollspy, mark-as-revised, diagram lightbox), so the no-JS page carries no
-dead control.
+relation - and since D62 the two diagram galleries load it too, through
+`bake_templates.EXTRA_COMPONENT_SCRIPTS` and the verifier's
+`EXTRA_SCRIPT_PAGES`, never a hand-edited tail. It injects every element it
+shows (progress bar, back-to-top, scrollspy, mark-as-revised - topic pages
+only, gated on `.topic-meta` - and the diagram lightbox), so the no-JS page
+carries no dead control.
 
 ## Component library
 
-Styled by `css/pages/revision-notes-topic.css` on the 166 topic pages (the
-reading-layout redesign, 2026-08-25, D61 - one grammar: a 3px left rule, a
-near-white tint, a small-caps label; tokens in its `:root`) and by
-`css/pages/revision-notes-textbook.css` on the three pages that still load
-it (the two diagram galleries and macro-application). **The markup
+Styled by `css/pages/revision-notes-topic.css` on the 166 topic pages AND
+the two diagram galleries (the reading-layout redesign, 2026-08-25, D61;
+the galleries joined in D62, each with `revision-notes-diagrams.css` on
+top - one grammar: a 3px left rule, a near-white tint, a small-caps label;
+tokens in its `:root`) and by `css/pages/revision-notes-textbook.css` on
+the ONE page that still loads it, macro-application, whose D62 move was
+built and reverted on Eliot's instruction (see D62). **The markup
 contracts below are unchanged by the redesign** - an editor pastes the same
 snippets as before (`docs/EDITING-NOTES.md` is the plain-English guide) and
 the build derives the rest: a `<p>` whose FIRST content is a
@@ -58,7 +63,7 @@ None of that is ever written into a slice.
 | `formula-box` | Centred MathJax display. Must be preceded by `<!-- prettier-ignore -->`. |
 | `flow-chain` / `flow-node` | Chained pill diagram. |
 | `diagram-figure` / `-image` / `-caption` | `<figure>` + `<figcaption>`. Images need `width`, `height`, real alt text. Captions open `Figure N:`. |
-| `notes-cta` | The two diagram galleries and macro-application only (since 2026-08-23). Three buttons; the past-papers link must match the page's board. Topic pages end in the generated tail instead - see below. |
+| `notes-cta` | Macro-application only (since 2026-08-25, D62; the galleries swapped theirs for the D58-style `topic-next` + `topic-services` close, destinations unchanged). Topic pages end in the generated tail instead - see below. |
 
 The previous/next topic row at each end of `.notes-container` is **generated
 chrome, not a component** - `scripts/build_notes_pages.py` splices it in and

@@ -1,5 +1,7 @@
-/* Notes - the topic pages' enhancements, loaded (defer) only by the 166
- * generated revision-notes topic pages, as their family's extra script.
+/* Notes - the notes family's enhancements, loaded (defer) by the 166
+ * generated revision-notes topic pages as their family's extra script,
+ * and - since the family consistency pass (2026-08-25, D62) - by the two
+ * diagram galleries, which share the design.
  *
  * Progressive enhancement throughout: every element this file shows is also
  * CREATED by it, so a page with JavaScript off carries no dead control -
@@ -18,10 +20,12 @@
  *     on this device" idiom. Reads and writes are inside try/catch, like
  *     quiz.js and consent.js: Safari private mode and a blocked storage
  *     policy throw, and the right answer then is a button that still
- *     toggles for the session and simply forgets.
- *   - Diagram lightbox: upgrades each generated <a class="diagram-zoom">
- *     (a working open-the-PNG link without JS) to a native <dialog>, which
- *     brings Esc, backdrop click and focus handling for free.
+ *     toggles for the session and simply forgets. Topic pages only - the
+ *     presence of the .topic-meta sub-label is the gate, so the gallery
+ *     reference pages never grow a toggle that would mean nothing there.
+ *   - Diagram lightbox: upgrades each <a class="diagram-zoom"> (a working
+ *     open-the-PNG link without JS) to a native <dialog>, which brings
+ *     Esc, backdrop click and focus handling for free.
  */
 (function () {
   "use strict";
@@ -61,36 +65,53 @@
   window.addEventListener("scroll", toggleTop, { passive: true });
   toggleTop();
 
-  /* Contents rail scrollspy */
+  /* Contents rail scrollspy. The galleries anchor the rail on tall
+     sections rather than bare headings, and a tall target never re-fires
+     on the way back up (it never stopped intersecting), so when the
+     CURRENT target scrolls out below the band the highlight steps back to
+     the previous link instead of sticking. */
   var links = main.querySelectorAll(".topic-contents__list a[href^='#']");
   if ("IntersectionObserver" in window && links.length) {
     var byId = {};
+    var order = [];
     Array.prototype.forEach.call(links, function (a) {
-      byId[a.hash.slice(1)] = a;
+      var id = a.hash.slice(1);
+      if (!(id in byId)) order.push(id);
+      byId[id] = a;
     });
     var current = null;
+    var setCurrent = function (link) {
+      if (current === link) return;
+      if (current) current.classList.remove("is-current");
+      current = link;
+      if (current) current.classList.add("is-current");
+    };
     var spy = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (e) {
+          var link = byId[e.target.id];
           if (e.isIntersecting) {
-            if (current) current.classList.remove("is-current");
-            current = byId[e.target.id];
-            if (current) current.classList.add("is-current");
+            setCurrent(link);
+          } else if (link === current && e.boundingClientRect.top > 0) {
+            var i = order.indexOf(e.target.id);
+            if (i > 0) setCurrent(byId[order[i - 1]]);
           }
         });
       },
       { rootMargin: "0px 0px -70% 0px" }
     );
-    Object.keys(byId).forEach(function (id) {
+    order.forEach(function (id) {
       var h = document.getElementById(id);
       if (h) spy.observe(h);
     });
   }
 
-  /* Mark as revised */
+  /* Mark as revised - topic pages only (see the header comment) */
   var lastSection = null;
   var sections = main.querySelectorAll(".notes-container > section");
-  if (sections.length) lastSection = sections[sections.length - 1];
+  if (sections.length && main.querySelector(".topic-meta")) {
+    lastSection = sections[sections.length - 1];
+  }
   if (lastSection) {
     var key = "ea-revised:" + location.pathname;
     var wrap = document.createElement("div");
@@ -158,4 +179,5 @@
       });
     });
   }
+
 })();
