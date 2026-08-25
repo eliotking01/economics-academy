@@ -111,21 +111,25 @@ JS, `notes.js` upgrades the chips in place (role="button",
 script from the record's `afterScripts`, so the page has no inline script
 left ("progressive enhancement via notes.js, not a second script").
 
-**The filter bar itself is redesigned after your Gate 1 review** (the
-"squashed / not displayed" report). The old behaviour — inherited from the
-inline script — hid all 18 topic chips until a country was picked, leaving
-a near-empty bar that read as broken, and showed/hid chips one by one. Now
-every chip is always in the bar, in two labelled groups (a small-caps
-"United Kingdom" and "South Africa" label over each country's nine topics);
-picking a country hides only the *other country's whole labelled group*;
-picking a topic selects its country by itself; All restores everything.
-Single chips are never hidden, so no half-state can render, and
-`white-space: nowrap` on the pills means a chip can wrap to the next row
-whole but never be squeezed or break mid-label. The JS-on "All" view and
-the no-JS view are now the same bar. Evidence:
-`shots/macro-app-1280-filter-uk.png` (UK picked),
-`macro-app-1280-filter-topic.png` (topic picked — country follows),
-`macro-app-360-filter-sa.png` (South Africa at 360).
+**The filter system is rebuilt from the ground up after your Gate 1 review**
+(the "squashed / not displayed" report — your instruction was to redesign
+rather than chase the rendering fault, and the chip-cloud construct is
+gone entirely). The controls are now the most robust primitives this site
+ships: plain dot-separated text links — the `topic-related` idiom already
+live on 166 topic pages — inside one quiet grammar panel (wash ground,
+3px teal rule): a country line (All · UK · South Africa), then each
+country's nine topic links under a small-caps "United Kingdom" / "South
+Africa" label. No flex, no grid, no pills, and **nothing inside the panel
+is ever shown, hidden or resized**: with JavaScript, clicking only toggles
+the bank sections below and styles the active link (teal, heavier
+underline); a topic link picks its own country; All restores everything.
+With JavaScript off the same links jump to their sections. The separators
+are CSS content, the link names cannot break mid-name, and the panel is
+byte-identical in every state — there is nothing left that can squash.
+Verified in Chromium, WebKit *and* Firefox at 1280 and 360, every state:
+`shots/macro-app-1280-filter-uk.png`, `macro-app-1280-filter-topic.png`
+(topic picked — country follows), `macro-app-360-filter-sa.png`,
+`macro-app-firefox-default.png`, `macro-app-webkit-default.png`.
 
 **Generated component labels are suppressed where a card labels itself.**
 The 50 fact cards carry `class="application"`, so the shared sheet would

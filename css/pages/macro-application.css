@@ -59,88 +59,83 @@
   }
 }
 
-/* ── Filter bar ─────────────────────────────────────────── */
+/* ── The filter ─────────────────────────────────────────────
+   Rebuilt from the ground up (D62 review): plain inline text-link lists in
+   a grammar panel, the .topic-related idiom the topic pages already ship.
+   No flex, no grid, no pills, and notes.js never shows, hides or resizes
+   anything inside this panel - it only styles the active link and toggles
+   the bank sections below. `display: inline` list items are the most
+   robust layout primitive available; there is nothing here to squash.
+   Colours the contrast pins check are literal hex. */
 .revision-notes-content #filter-bar {
+  width: 100%;
   margin: 1.6em 0 2em;
-  padding: 1em 1.2em;
+  padding: 0.9em 1.2em 1em;
   background: var(--nt-wash);
   border: 1px solid var(--nt-line);
-  border-radius: 8px;
-}
-
-.revision-notes-content .filter-country-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-}
-
-/* A labelled topic group per country. Only these two groups are ever shown
-   or hidden by notes.js - never a single chip - so the bar has exactly
-   three states: both groups (All, and the no-JS page), or one. */
-.revision-notes-content .filter-topic-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5em;
-  margin-top: 0.9em;
-}
-
-.revision-notes-content .filter-topic-group__label {
-  flex: 0 0 100%;
+  border-left: 3px solid var(--nt-teal-border);
+  border-radius: 0 8px 8px 0;
   font-family: var(--nt-heading);
+}
+
+.revision-notes-content #filter-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+.revision-notes-content #filter-bar li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.revision-notes-content #filter-bar li:not(:last-child)::after {
+  content: "\00B7";
+  margin: 0 0.6em;
+  color: var(--nt-muted);
+}
+
+.revision-notes-content #filter-bar a {
+  font-size: 0.92em;
+  font-weight: 600;
+  /* Lines break between links, never inside a topic name. */
+  white-space: nowrap;
+  color: #1a3e72;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 62, 114, 0.25);
+}
+
+.revision-notes-content #filter-bar a:hover,
+.revision-notes-content #filter-bar a:focus-visible {
+  border-bottom-color: #1a3e72;
+}
+
+.revision-notes-content #filter-bar a:focus-visible {
+  outline: 2px solid var(--nt-teal);
+  outline-offset: 2px;
+}
+
+/* The chosen filter, set by notes.js; without it every link stays a plain
+   navy jump link, which is the whole no-JS page. */
+.revision-notes-content #filter-bar a.is-active {
+  color: #1f6b77;
+  border-bottom: 2px solid #1f6b77;
+}
+
+.revision-notes-content .app-filter__countries a {
+  font-size: 1em;
+}
+
+.revision-notes-content .app-filter__group-label {
+  margin: 0.7em 0 0;
   font-size: 0.75em;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--nt-muted);
-}
-
-/* The chips. Interactive pills (the mark-as-revised precedent), not the
-   floating pill labels the grammar retired. Hex for the contrast pins. */
-.revision-notes-content #filter-bar .filter-country-btn,
-.revision-notes-content #filter-bar .filter-topic-btn {
-  display: inline-block;
-  padding: 0.35em 1em;
-  background: var(--nt-paper);
-  border: 1px solid var(--nt-line);
-  border-radius: 999px;
-  font-family: var(--nt-heading);
-  font-size: 0.875em;
-  font-weight: 600;
-  line-height: 1.4;
-  /* A pill never squashes: the text cannot wrap inside it, and as a flex
-     item it wraps to the next row whole instead of being squeezed. */
-  white-space: nowrap;
-  color: #1f6b77;
-  text-decoration: none;
-  transition:
-    border-color 0.15s ease,
-    background-color 0.15s ease,
-    color 0.15s ease;
-}
-
-.revision-notes-content #filter-bar .filter-country-btn:hover,
-.revision-notes-content #filter-bar .filter-topic-btn:hover {
-  border-color: var(--nt-teal-border);
-}
-
-.revision-notes-content #filter-bar .filter-country-btn:focus-visible,
-.revision-notes-content #filter-bar .filter-topic-btn:focus-visible {
-  outline: 2px solid var(--nt-teal);
-  outline-offset: 2px;
-}
-
-.revision-notes-content #filter-bar .filter-country-btn.is-active {
-  background: #1a3e72;
-  border-color: #1a3e72;
-  color: #ffffff;
-}
-
-.revision-notes-content #filter-bar .filter-topic-btn.is-active {
-  background: #1f6b77;
-  border-color: #1f6b77;
-  color: #ffffff;
 }
 
 /* ── The section hierarchy: country > topic > fact card ──── */
@@ -251,13 +246,11 @@
 
 @media (max-width: 600px) {
   .revision-notes-content #filter-bar {
-    padding: 0.8em 1em;
+    padding: 0.8em 1em 0.9em;
   }
 
-  .revision-notes-content #filter-bar .filter-country-btn,
-  .revision-notes-content #filter-bar .filter-topic-btn {
-    font-size: 0.8em;
-    padding: 0.3em 0.8em;
+  .revision-notes-content #filter-bar a {
+    font-size: 0.88em;
   }
 }
 

@@ -28,10 +28,10 @@
  *     open-the-PNG link without JS) to a native <dialog>, which brings
  *     Esc, backdrop click and focus handling for free.
  *   - Fact-bank filters (macro-application only, keyed on #filter-bar):
- *     the chips are baked <a> jump links to their sections, so with JS off
- *     they navigate; this upgrades them in place to show/hide filters,
- *     restoring the behaviour the page's retired inline script gave the
- *     old <button> chips.
+ *     the controls are baked <a> jump links to their sections, so with JS
+ *     off they navigate; this upgrades them in place to filters. It only
+ *     toggles the bank sections below the bar and styles the active link -
+ *     it never shows, hides or resizes anything inside the bar itself.
  */
 (function () {
   "use strict";
@@ -186,12 +186,11 @@
     });
   }
 
-  /* Fact-bank filters - macro-application only. The chips are baked links
-     that jump to their sections with JS off; here they become filters. All
-     chips stay visible at "All"; picking a country hides the OTHER
-     country's bank and its labelled topic group - whole groups only, never
-     single chips, so the bar cannot render a half-state - and a topic chip
-     picks its own country. */
+  /* Fact-bank filters - macro-application only. Every control is a baked
+     link that jumps to its section with JS off; here the links become
+     filters instead. Nothing inside #filter-bar is ever shown, hidden or
+     resized - this only toggles the BANK sections below the bar and styles
+     the active link - so the control surface cannot render a half-state. */
   var bar = document.getElementById("filter-bar");
   if (bar) {
     var countryChips = Array.prototype.slice.call(
@@ -203,10 +202,6 @@
     var appSections = Array.prototype.slice.call(
       main.querySelectorAll(".application-section")
     );
-    var topicGroups = {
-      uk: document.getElementById("filter-topics-uk"),
-      sa: document.getElementById("filter-topics-sa"),
-    };
     var activeCountry = "all";
     var activeTopic = null;
 
@@ -224,12 +219,6 @@
       appSections.forEach(function (s) {
         s.style.display =
           !activeTopic || s.dataset.topic === activeTopic ? "" : "none";
-      });
-      Object.keys(topicGroups).forEach(function (k) {
-        if (topicGroups[k]) {
-          topicGroups[k].style.display =
-            activeCountry === "all" || activeCountry === k ? "" : "none";
-        }
       });
     };
 

@@ -79,16 +79,12 @@ PAIRS: list[tuple] = [
     ("css/pages/revision-notes-diagrams.css",
      ".revision-notes-content.micro-diagrams-page .exam-note strong",
      "#f2faf5", 4.5),
-    # The filter chips: teal text on white at rest; active chips are white
-    # text, so the checked colour is the chip's own background.
+    # The filter links: navy at rest, teal when active, both on the panel's
+    # wash ground (the shared sheet's --nt-wash).
     ("css/pages/macro-application.css",
-     ".revision-notes-content #filter-bar .filter-country-btn", WHITE, 4.5),
+     ".revision-notes-content #filter-bar a", "#f8fafc", 4.5),
     ("css/pages/macro-application.css",
-     ".revision-notes-content #filter-bar .filter-country-btn.is-active",
-     WHITE, 4.5, "bg"),
-    ("css/pages/macro-application.css",
-     ".revision-notes-content #filter-bar .filter-topic-btn.is-active",
-     WHITE, 4.5, "bg"),
+     ".revision-notes-content #filter-bar a.is-active", "#f8fafc", 4.5),
     # The sample sentence sits on the fact card's navy tint (the shared
     # sheet's --nt-navy-tint), and the closing section's evaluation h4 on
     # the evaluation tint.

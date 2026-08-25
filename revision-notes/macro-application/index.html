@@ -478,44 +478,46 @@
               </p>
             </div>
 
-            <!-- Filter bar. Every chip is a real link to its section, so with
-                 JavaScript off it navigates; js/components/notes.js upgrades
-                 the chips in place to filters (D62). With JS on, a country
-                 chip narrows the bank and the topic lists to that country,
-                 and a topic chip picks its own country. Only the two
-                 labelled groups are ever shown or hidden, never single
-                 chips, so the bar can never render a half-state. -->
-            <div id="filter-bar">
-              <div class="filter-country-group" role="group" aria-label="Filter by country">
-                <a class="filter-country-btn is-active" data-country="all" href="#application-bank">All</a>
-                <a class="filter-country-btn" data-country="uk" href="#uk-section">UK</a>
-                <a class="filter-country-btn" data-country="sa" href="#sa-section">South Africa</a>
-              </div>
-              <div class="filter-topic-group" id="filter-topics-uk" role="group" aria-label="United Kingdom topics">
-                <span class="filter-topic-group__label">United Kingdom</span>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="macroeconomic-performance" href="#uk-macroeconomic-performance">Macroeconomic Performance</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="inflation-monetary-policy" href="#uk-inflation-monetary-policy">Inflation &amp; Monetary Policy</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="labour-market" href="#uk-labour-market">Labour Market</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="inequality-living-standards" href="#uk-inequality-living-standards">Inequality &amp; Living Standards</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="public-finances" href="#uk-public-finances">Public Finances</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="government-spending" href="#uk-government-spending">Government Spending</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="supply-side-policy" href="#uk-supply-side-policy">Supply-Side Policy</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="financial-sector" href="#uk-financial-sector">Financial Sector</a>
-                <a class="filter-topic-btn" data-for-country="uk" data-topic="external-trade" href="#uk-external-trade">External Position &amp; Trade</a>
-              </div>
-              <div class="filter-topic-group" id="filter-topics-sa" role="group" aria-label="South Africa topics">
-                <span class="filter-topic-group__label">South Africa</span>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-growth-development" href="#sa-growth-development">Growth &amp; Development</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-labour-market" href="#sa-labour-market">Labour Market</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inflation-monetary-policy" href="#sa-inflation-monetary-policy">Inflation &amp; Monetary Policy</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inequality-living-standards" href="#sa-inequality-living-standards">Inequality &amp; Living Standards</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-healthcare-education" href="#sa-healthcare-education">Healthcare &amp; Education</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-public-finances" href="#sa-public-finances">Public Finances</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-infrastructure" href="#sa-infrastructure">Infrastructure</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-external-trade" href="#sa-external-trade">External Position &amp; Trade</a>
-                <a class="filter-topic-btn" data-for-country="sa" data-topic="sa-governance" href="#sa-governance">Governance &amp; Institutions</a>
-              </div>
-            </div>
+            <!-- The filter, rebuilt from the ground up (D62 review): plain
+                 inline text-link lists, the .topic-related idiom the 166
+                 topic pages already ship - no flex, no chips, and nothing in
+                 the control surface is ever shown, hidden or resized. Every
+                 link is a real jump to its section, so with JavaScript off it
+                 navigates; js/components/notes.js upgrades the links to
+                 filters that show and hide only the BANK sections, plus an
+                 active style on the chosen link. The separators are CSS
+                 content, not text. -->
+            <nav id="filter-bar" aria-label="Filter the facts by country and topic">
+              <ul class="app-filter__countries">
+                <li><a class="filter-country-btn is-active" data-country="all" href="#application-bank">All</a></li>
+                <li><a class="filter-country-btn" data-country="uk" href="#uk-section">UK</a></li>
+                <li><a class="filter-country-btn" data-country="sa" href="#sa-section">South Africa</a></li>
+              </ul>
+              <p class="app-filter__group-label">United Kingdom</p>
+              <ul class="app-filter__topics">
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="macroeconomic-performance" href="#uk-macroeconomic-performance">Macroeconomic Performance</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="inflation-monetary-policy" href="#uk-inflation-monetary-policy">Inflation &amp; Monetary Policy</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="labour-market" href="#uk-labour-market">Labour Market</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="inequality-living-standards" href="#uk-inequality-living-standards">Inequality &amp; Living Standards</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="public-finances" href="#uk-public-finances">Public Finances</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="government-spending" href="#uk-government-spending">Government Spending</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="supply-side-policy" href="#uk-supply-side-policy">Supply-Side Policy</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="financial-sector" href="#uk-financial-sector">Financial Sector</a></li>
+                <li><a class="filter-topic-btn" data-for-country="uk" data-topic="external-trade" href="#uk-external-trade">External Position &amp; Trade</a></li>
+              </ul>
+              <p class="app-filter__group-label">South Africa</p>
+              <ul class="app-filter__topics">
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-growth-development" href="#sa-growth-development">Growth &amp; Development</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-labour-market" href="#sa-labour-market">Labour Market</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inflation-monetary-policy" href="#sa-inflation-monetary-policy">Inflation &amp; Monetary Policy</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-inequality-living-standards" href="#sa-inequality-living-standards">Inequality &amp; Living Standards</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-healthcare-education" href="#sa-healthcare-education">Healthcare &amp; Education</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-public-finances" href="#sa-public-finances">Public Finances</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-infrastructure" href="#sa-infrastructure">Infrastructure</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-external-trade" href="#sa-external-trade">External Position &amp; Trade</a></li>
+                <li><a class="filter-topic-btn" data-for-country="sa" data-topic="sa-governance" href="#sa-governance">Governance &amp; Institutions</a></li>
+              </ul>
+            </nav>
 
             <!-- The whole fact bank - the "All" chip's no-JS jump target. -->
             <div id="application-bank">

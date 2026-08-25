@@ -45,7 +45,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         pass
 
 
-def chrome(args, timeout=60):
+def chrome(args, timeout=15):
+    # Chrome writes the shot ~1-2s after its --timeout=5000 stop but does
+    # not exit; 15s covers the write, then the process group is killed.
     proc = subprocess.Popen(
         [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
          "--force-device-scale-factor=1",
