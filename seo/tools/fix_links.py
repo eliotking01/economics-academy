@@ -111,7 +111,8 @@ def targets(include_scripts: bool) -> list[Path]:
     out = subprocess.run(["git", "-C", str(REPO), "ls-files"],
                          capture_output=True, text=True, check=True).stdout.splitlines()
     files = [REPO / p for p in out
-             if p.endswith(".html") and not p.startswith("_working/")]
+             if p.endswith(".html")
+             and not p.startswith(("_working/", "_archive/"))]
     if include_scripts:
         files += [REPO / p for p in out if p.startswith("scripts/") and p.endswith(".py")]
     return files

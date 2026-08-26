@@ -10,7 +10,7 @@
    Eliot's instruction the same day (its filter panel painted glitchily in
    his browsers however it was built), so that page still renders exactly
    as before D61. The design was approved at Gates 1 and 2 of the notes
-   topic-page redesign - _working/notes-redesign/ holds the mocks,
+   topic-page redesign - _archive/working/notes-redesign/ holds the mocks,
    PROPOSAL.md and PLAN.md; docs/audit/DECISIONS.md D61 records the
    roll-out and D62 the extension to the galleries. Every rule is scoped
    under .revision-notes-content, per css/CLAUDE.md, and the sheet keeps
@@ -28,7 +28,7 @@
    duplicate markup, works with JavaScript off).
 
    CONTRAST. Every colour used AS TEXT here was checked against the ground
-   it sits on (the ratios are in _working/notes-redesign/PROPOSAL.md and the
+   it sits on (the ratios are in _archive/working/notes-redesign/PROPOSAL.md and the
    pairs are pinned in scripts/verify_contrast.py): the old white-on-#27ae60
    and white-on-#f57c00 pill labels are gone, replaced by #1c7a42 (5.4:1)
    and #a04d00 (5.9:1) text on white/tints. The bright hues survive as

@@ -139,7 +139,7 @@ def tracked_pages() -> list[Path]:
         ["git", "-C", str(REPO), "ls-files", "*.html"],
         capture_output=True, text=True, check=True,
     ).stdout.split("\n")
-    skip = ("templates/", "_working/", "old-logos-archive/")
+    skip = ("templates/", "_working/", "_archive/", "old-logos-archive/")
     return [REPO / p for p in out if p and not p.startswith(skip)]
 
 

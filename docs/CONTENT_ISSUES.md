@@ -477,6 +477,10 @@ Format per entry:
   proposed — the sentence now reads "…can increase total welfare
   when countries specialise where their opportunity cost is
   lowest.").
+  **Note added 2026-08-26:** Eliot's later Wave 5.1 verdict (D46,
+  2026-08-14) reverses the position this fix rests on — see
+  `docs/REVIEW-NOTES.md` N-Q21. Do not treat this entry as the
+  current ruling on the comparative-advantage example.
 
 ## 27. Theme 4 balance-of-payments page: "may be require"
 
@@ -657,3 +661,24 @@ Format per entry:
 - **Confidence** — high (punctuation only).
 - **Status** — fixed (approved by Eliot 2026-08-06; full stop added,
   no glossary coupling).
+
+## 37. Five diagram cards' alt text still describes the old single-panel SVGs
+
+- **Location** — the deck sources: `flashcards-data/aqa/micro.json`
+  (`aqa-1-5-3-diagram-02`, `aqa-1-5-3-diagram-03`) and
+  `flashcards-data/edexcel-a/theme-3.json` (`edexcel-a-3-4-2-diagram-02`,
+  `edexcel-a-3-4-2-diagram-03`, `edexcel-a-3-3-4-diagram-03`).
+- **Issue** — `perfect-competition-short-run-supernormal-profit.svg`,
+  `perfect-competition-short-run-loss.svg` and
+  `short-run-shutdown-condition.svg` each gained a second panel in the
+  QA remediation (Market/Firm; keep-operating/shut-down), but these
+  cards' alt text still describes the single-panel versions — a
+  screen-reader user is told about half the diagram. Carried from
+  `_archive/FLASHCARDS_PROGRESS.md` ("should be revisited when those
+  cards are next edited") during the 2026-08-26 clean-up; verified
+  still live in the payloads the same day.
+- **Proposed correction** — reword each alt to describe both panels;
+  the wording is card text, so it is Eliot's.
+- **Confidence** — high (the SVGs and the deck JSON visibly disagree
+  today).
+- **Status** — open.

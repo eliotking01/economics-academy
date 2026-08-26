@@ -1901,3 +1901,21 @@ formulas with KaTeX, where an unescaped `%` is a comment. `\%` in math
 mode renders "%" in both engines; proved in a side-by-side render under
 the site's own MathJax config before the edit, and on the rebuilt pages
 after it. These were the only two slices with the pattern.
+
+## N-Q21 — comparative-advantage worked example: Eliot's 2026-08-14 verdict reverses CONTENT_ISSUES #26 (carried from the audit, logged 2026-08-26)
+
+Carried out of `docs/audit/PROGRESS.md`'s final handover during the
+September clean-up so it lives in the content log, not only in the audit
+record. At Wave 5.1 (D46) Eliot ruled that the comparative-advantage
+example should have **Germany hold the absolute advantage in both goods**
+— which reverses `docs/CONTENT_ISSUES.md` #26 (recorded there as fixed
+under the earlier ruling; a note now sits on that entry). The change
+touches **every figure** in the worked example on
+`4-1-2-specialisation-trade.html` and its AQA twin `2-6-2-trade.html` —
+Germany 10m chips / 75mn T-shirts, Vietnam 5m / 100mn, opportunity costs
+7.5, 20, 0.13, 0.05 and the 15m / 175mn global total — plus three
+figcaptions and the macro gallery blurb. The redrawn
+`comparative-advantage.svg` is **already live on 3 pages**, so prose and
+diagram currently disagree: a live defect, not a pending preference.
+Needs its own session and an explicit instruction before any page is
+touched (hard rule 2); nothing has been changed.

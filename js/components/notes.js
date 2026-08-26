@@ -5,7 +5,7 @@
  *
  * Progressive enhancement throughout: every element this file shows is also
  * CREATED by it, so a page with JavaScript off carries no dead control -
- * the mock this was promoted from (_working/notes-redesign/) proved the
+ * the mock this was promoted from (_archive/working/notes-redesign/) proved the
  * no-JS page identical minus these. Nothing here delivers content.
  *
  *   - Reading progress: a 3px bar across the top of the viewport, skipped

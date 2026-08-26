@@ -20,11 +20,19 @@ here arrived by `git mv`, so its full history came with it.
 | `ROADMAP.md` | Folded into `OWNER-TODO.md`. Its two "Now" items had both shipped. | 2026-08-20 |
 | `notes-conversion-workflow.md` | The original recipe for turning a `raw-notes/` draft into an Edexcel notes page by editing `revision-notes/**.html` directly. Those pages have been generated from `notes-data/` since Wave 2, and `.claude/hooks/block-generated.py` now refuses exactly that edit. A one-line pointer stays at `docs/notes-conversion-workflow.md`. | 2026-08-23 |
 | `raw-notes/` | 75 markdown drafts the Edexcel notes were originally written from. **0 of 73 are still in sync with their live page** (median word overlap 0.63, worst 0.40, re-measured 2026-08-20). The script that consumed them, `convert_raw_notes.py`, was deleted on 2026-08-13 under D44. Historical only — never a build input. | 2026-08-20 |
+| `FLASHCARDS_PROGRESS.md` | The flashcards build log — the two-board coverage matrix, every batch and approval, the diagram QA method. Its open leftovers were extracted first: the alt-text defect is `docs/CONTENT_ISSUES.md` #37; the ten candidate notes topics and the combined-market card are in `OWNER-TODO.md`. | 2026-08-26 |
+| `PAST-PAPERS-PROGRESS.md` | The question-bank build record — Phases 1–4, the AS extension, the extractor architecture and 23 decisions. Extracted first: the verbatim-question-text licensing question (OWNER-TODO "Soon") and the Edexcel Papers 1–2 Section A extension (OWNER-TODO "Ideas"). | 2026-08-26 |
+| `QA_FIXES_PROGRESS.md` | The flashcards content-quality remediation record — 265 cards edited and 6 split across 13 batches, and the card-face overflow fix. Pure record; nothing in it was still open. | 2026-08-26 |
+| `PROGRESS-detail-2026-08.md` | The full per-project write-ups, moved verbatim out of `PROGRESS.md` when it was collapsed to summary blocks plus an index in the September clean-up. Same headings, same order. | 2026-08-26 |
 
 ## `working/`
 
-Finished working material moved out of `_working/` on 2026-08-20, once the work
-it belonged to was live. Reference, not input — nothing reads any of it.
+Finished working material moved out of `_working/` (2026-08-20, and the five
+design records on 2026-08-26), once the work it belonged to was live.
+Reference, not input — nothing reads any of it. Paths *inside* these records
+are not rewritten when files move (the `audit-2026-08-20/` rule), so the mocks
+and screenshot harnesses still name their original `_working/` locations; a
+re-run would need those paths tweaked.
 
 | Path | What it is |
 | --- | --- |
@@ -32,6 +40,11 @@ it belonged to was live. Reference, not input — nothing reads any of it.
 | `working/glossary/` | Four hand-written decision and gap reports from the glossary build. **Three others were moved here by mistake on 2026-08-20 and moved straight back**: `inventory.md`, `review-decisions.md` and `capitalisation-report.md` are written by `extract_glossary.py` and `check_glossary_capitalisation.py` on every run, so they belong in `_working/glossary/` alongside `PROGRESS.md` and `authored-review.md`. |
 | `working/diagram-review/` | The review tooling for the diagram pass. |
 | `working/question-bank/` | The Edexcel AS extraction QA and a dry-run log. |
+| `working/mobile-nav/` | The approved drawer mock and its screenshots — the Phase 2 design record. PROGRESS.md: "Accessibility & progressive enhancement pass (2026-08-24)". |
+| `working/topic-tail/` | The static mock, before/after screenshots and the full wording list. PROGRESS.md: "Topic-page tail redesign (2026-08-23)". |
+| `working/site-search/` | The working mock, screenshots of every state, and PROPOSAL.md, the wording record. PROGRESS.md: "Site-wide search (2026-08-24)". |
+| `working/notes-redesign/` | BRIEF, PROPOSAL, PLAN, the mocks and the content-identity proof for the D61 reading layout. PROGRESS.md: "Notes topic-page redesign (2026-08-25)". |
+| `working/notes-family-consistency/` | The Gate 1 evidence pack: PROPOSAL.md (including the macro-application paint-fault record), content-identity proof and screenshot harness. PROGRESS.md: "Notes family consistency (2026-08-25)". |
 | `audit-2026-08-20/` | The repo audit, the restructure plan and the CLAUDE.md migration mapping. Dated records of the tree as it stood that day; paths inside them are **not** rewritten when files move later. |
 
 **What deliberately stayed in `_working/`:**
