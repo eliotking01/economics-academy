@@ -146,6 +146,41 @@ Each was on its "still flagged" list and each is now done. Checked 2026-08-20.
   Nothing is fetched at page load any more. `_config.yml` still described it as
   a runtime fetch until 2026-08-20.
 
+## September 2026 clean-up (2026-08-26) — branch `chore/september-cleanup`
+
+The pre-term tidy-up: everything finished recorded and filed, everything
+unfinished done, parked or handed to `OWNER-TODO.md`. One commit per phase,
+each approved by Eliot at a phase gate; merged with a merge commit (the PR
+number is in the merge commit itself).
+
+- **Git**: the 14 merged local and 22 merged remote branches deleted with
+  Eliot's approval; `record/macro-application-attempts` kept on origin,
+  unmerged, as the paint-fault record (local copy deleted, re-fetchable).
+- **Disk**: 182 gitignored Finder/iCloud duplicates (byte-checked against
+  their originals and git history first), six `__pycache__/` and twelve
+  `.DS_Store` removed with approval; `node_modules/` now in `.gitignore`
+  by rule, not luck.
+- **Moves, all `git mv`**: the five finished design-record folders
+  (`mobile-nav`, `notes-family-consistency`, `notes-redesign`,
+  `site-search`, `topic-tail`) → `_archive/working/`; the three finished
+  build logs (`FLASHCARDS_PROGRESS`, `PAST-PAPERS-PROGRESS`,
+  `QA_FIXES_PROGRESS`) → `_archive/`; this file's 26 project write-ups →
+  `_archive/PROGRESS-detail-2026-08.md`, verbatim (D64), leaving the
+  summary-plus-index shape above. `_working/` keeps only what scripts
+  read or write on every run (`fontawesome/`, `glossary/`).
+- **Extractions, so nothing was lost**: `docs/CONTENT_ISSUES.md` #37 (the
+  flashcard alt texts), `docs/REVIEW-NOTES.md` N-Q21 (the
+  comparative-advantage reversal — a live defect), the ten uncovered spec
+  topics, the bank's verbatim-text licensing question, the deferred SVG
+  cluster, Edexcel Section A, the written-response pilot and the
+  galleries' past-papers panel — all into OWNER-TODO or the logs.
+  `docs/audit/OPEN-QUESTIONS.md` Q14–Q17 gained their overdue ANSWERED
+  banners; nothing there was actually open.
+- **Also**: `README.md` became the half-page front door; the live web
+  vitals were re-measured (CLS 0.000 on all eight samples,
+  `seo/lh-live-2026-08-26/`); the tutoring SEO pass was marked LIVE
+  (merge `0bcac57c`, PR #33).
+
 ## Project index
 
 One block per project, newest first. **The full write-up of every project —

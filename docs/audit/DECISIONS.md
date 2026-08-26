@@ -2264,3 +2264,32 @@ is amended in the same commit.
 - Nothing on tutoring.html changes on the strength of this entry alone:
   every visible change still needs Eliot's item-by-item yes on the
   proposals file, and `Text-Change:` trailers as always.
+
+---
+
+## 2026-08-26 · September clean-up
+
+### D64 — PROGRESS.md becomes summary + index; the full write-ups move to the archive
+
+**2026-08-26, Eliot, in the September clean-up (branch
+`chore/september-cleanup`), approved at the Phase 4 gate.** Ratified.
+
+`PROGRESS.md` (1,409 lines) kept "The overhaul at a glance", "Traps every
+future session must know" and "What remains flagged" in full, gained a
+Project index of one short block per project, and its 26 full project
+sections moved **verbatim** to `_archive/PROGRESS-detail-2026-08.md` —
+same headings, same order, so section references and the at-a-glance
+table's `§N` cells still resolve. What is decided with it:
+
+- **The archive file is the write-up of record** for the projects it
+  lists. A future project's full section is written in `PROGRESS.md` as
+  before and moves to a detail file only at the next consolidation, not
+  continuously.
+- **CLAUDE.md's claim that PROGRESS.md is the single record stands**: the
+  summary blocks, the traps, the flagged list and the pointer to every
+  open item live there; the detail file is reference, never a second open
+  list.
+- In the same clean-up the finished build logs and design-record folders
+  moved to `_archive/` with their open items extracted first; the
+  branch's commit messages carry the item-by-item list, and
+  `_archive/README.md` indexes every arrival.
