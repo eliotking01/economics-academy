@@ -13,6 +13,11 @@ Thumbs.db
 # Python virtualenv for scripts/ (see requirements.txt)
 .venv/
 
+# npx cache droppings from the pinned Prettier (prettier_util.py). Nothing is
+# ever npm-installed here — _config.yml already excludes this from Jekyll, and
+# this line stops it ever being tracked by accident.
+node_modules/
+
 # Raw Lighthouse output. run_lighthouse.py writes one JSON report per page per
 # run, and a 6-page 7-run pass is 42 files and 23 MB. Only the medians are
 # worth keeping, and those are committed alongside as seo/lh-*.json - the
