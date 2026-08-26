@@ -18,6 +18,8 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | in review | — | branch `seo/tutoring-page` |
+| Notes family consistency — the two diagram galleries | live | 2026-08-25 | `0bad0c88` |
 | Question-bank page gate 4 → 2 — 46 new topic pages | live | 2026-08-24 | `fc2400a6` |
 | Site-wide search — header box + overlay, all 463 pages | live | 2026-08-24 | `8b329f1e` |
 | Topic-page tail redesign — the 166 notes pages | live | 2026-08-24 | `32c0bacb` |
@@ -84,10 +86,58 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Notes family consistency — the two diagram galleries (2026-08-25) — IN REVIEW (PR open, branch `feature/notes-family-consistency`)
+## Tutoring page SEO pass (2026-08-26) — IN REVIEW (branch `seo/tutoring-page`, awaiting Eliot's go-ahead to push and open the PR)
 
-**STATE: implemented, verified, PR open — waiting on Eliot's merge (a merge
-commit, never a squash).** The follow-on from the notes redesign: the two
+**STATE: implemented and verified on the branch; nothing pushed.** The
+2026-08-25 brief: find everything left that could help `tutoring.html`
+rank for "a level economics tutor" and its variants, plan first, change
+nothing without item-by-item approval. Phases 0–3 delivered 2026-08-25
+(`seo/21-tutoring-baseline-2026-08-25.md` — baseline, nine-area audit,
+live-search comparison; `seo/22-tutoring-seo-proposals-2026-08-25.md` —
+the plan, with the verdict that the head query's constraint is authority,
+not on-page, so the owner-side items lead). Eliot approved items on
+2026-08-26 and they were applied exactly (the decisions block at the top
+of seo/22 lists every yes and no). **D63**: he lifted the tutoring-page
+freeze; the ~22 September tutoring GSC comparison is directional only
+(home and marking stay clean).
+
+| Changed | Where |
+| --- | --- |
+| Meta description 195 → 159 chars (og: mirror identical); title deliberately kept | `tutoring.html` head |
+| Two FAQ boxes — "Where are you based?" (Somerset, teaches UK-wide online) and "When do lessons happen?" — visible + FAQPage JSON-LD twins | `tutoring.html` |
+| Em dashes → Eliot's spaced hyphen in his own copy, 30 swaps; the two testimonial quotes keep theirs | `tutoring.html` |
+| The founder stub becomes the full Person node (image, description, sameAs, alumniOf, hasCredential, knowsAbout), same `@id` as about.html; about.html gains knowsAbout | `tutoring.html`, `about.html` |
+| Three descriptive in-body anchors, one each: "specialist A-Level Economics tutor", "1-on-1 tutoring" (markup-only), "expert A-Level Economics tutor" (D1 — Eliot's explicit body-freeze exception; head proved byte-identical) | `past-papers/index.html`, `marking.html`, `revision-notes/index.html` |
+| Assertions 21–23: snippet ceilings, FAQ/schema sync, Person completeness — each break-tested | `seo/tools/verify_seo.py` |
+| Search index rebuilt for the new FAQ text (generator re-run, caught by verify_generated) | `search-index.json` |
+
+**Verified:** full suite green including 23/23 verify_seo; Lighthouse
+local HTTP/2 A/B main vs branch identical (0.99 both, LCP 1803 ms both,
++516 bytes); live before-run in `seo/lh-tutoring-before/` (97, LCP
+1.90 s); rendered checks at 1280 and 360 (device-metrics emulation) and
+with JavaScript off; all seven JSON-LD blocks on the two edited pages
+parse with required fields. Rich Results Test on the live URL is an
+after-deploy step. Declined by Eliot: A5a (book-direct line), A5b
+(after-lesson note), A8 (marked-examples link), A9 (price in the hero).
+
+### Three things a future session needs to know
+
+1. **The title is 75 chars on purpose** (A2: page 1 for "online a level
+   economics tutor" with it; only the brand truncates). Assertion 21
+   holds the ceiling — lengthening it is a decision, not a tweak.
+2. **The FAQPage block earns nothing** (Google removed FAQ rich results
+   for all sites, May 2026) and is kept because it is accurate and
+   removal gains nothing. Assertion 22 keeps it byte-synced with the
+   visible FAQ; edit both or neither.
+3. **The em-dash rule stops at quotation marks.** The two testimonial
+   blockquotes keep their em dashes — they are the reviewers' words. Do
+   not "finish the job".
+
+## Notes family consistency — the two diagram galleries (2026-08-25) — LIVE (merged 2026-08-25, `0bad0c88`, PR #32)
+
+**STATE: live.** Eliot merged PR #32 on 2026-08-25 with a merge commit
+(`0bad0c88`); this heading said "IN REVIEW — waiting on Eliot's merge"
+until the tutoring-pass records commit of 2026-08-26 corrected it. The follow-on from the notes redesign: the two
 hand-written diagram galleries (`microeconomics-diagrams.html`,
 `macroeconomics-diagrams.html`) join the D61 reading design —
 `revision-notes-topic.css` plus a rewritten `revision-notes-diagrams.css`,

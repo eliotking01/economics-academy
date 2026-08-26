@@ -6,6 +6,16 @@ The plan from the 2026-08-25 tutoring-page pass, on branch
 [live search] or [Google docs] below. **Nothing here has been applied.**
 Each item waits on Eliot's yes, item by item.
 
+> **Decided 2026-08-26, Eliot, item by item.** Applied on
+> `seo/tutoring-page` exactly as approved: A1 option 1, A2 keep, A3 yes
+> (Somerset confirmed), A4 yes, A5c yes with his availability facts
+> (weekday evenings, morning and daytime slots for free or study
+> periods, weekends kept deliberately vague), A6 yes, A7a and A7b yes,
+> **D1 yes - the revision-notes/index.html body-anchor exception
+> granted**, its head byte-identical and proved so. Declined: A5a, A5b,
+> A8, A9. The verifier assertions (A10) are 21-23 in
+> `seo/tools/verify_seo.py`.
+
 ## The verdict
 
 The page is close to saturated on-page, and the constraint on

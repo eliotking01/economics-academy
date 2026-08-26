@@ -1,0 +1,23 @@
+{
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1803.512,
+    "CLS": 0.05219410733081242,
+    "TBT": 0,
+    "FCP": 1353.512,
+    "SI": 1353.512,
+    "bytes": 197089,
+    "blocking_ms": 327,
+    "chain_len": 3,
+    "chain_ms": 146.1570000052452,
+    "blocking": [
+      [
+        "https://127.0.0.1:8472/css/fontawesome-all.min.css",
+        1599,
+        150
+      ]
+    ]
+  }
+}

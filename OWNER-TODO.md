@@ -130,7 +130,27 @@ decisions waiting in those logs; it does not repeat them.
       what has to convert. A separate piece of work — flagged so it is not
       lost.
 - [ ] **Collect Google reviews** (once the profile exists): ask 3–5 recent
-      parents/students. Tutorful reviews cannot be imported.
+      parents/students. Tutorful reviews cannot be imported. **When five or
+      more real ones exist, tell Claude Code** — the tutoring page's trust
+      line then gains the real Google count (never before, and never a
+      rounded-up number). Context from the 2026-08-25 tutoring pass: the
+      one individual tutor site ranking for both board queries leads with
+      "87+ five-star Google reviews"
+      (`seo/21-tutoring-baseline-2026-08-25.md` Part 3).
+- [ ] **A Lessonspace screenshot for the tutoring page — 10 minutes.** One
+      image of a lesson whiteboard, no student name visible. It shows a
+      parent what "online lesson" actually means; no ranking claim. Claude
+      Code places it in How It Works with proper sizing and a WebP twin.
+- [ ] **Search the two tutor queries yourself — 2 minutes.** "a level
+      economics tutor" and "online a level economics tutor" in a clean
+      browser profile, note what you see, log the date in the Rank-check
+      log below. Google blocked every automated SERP route during the
+      2026-08-25 pass, so the competitor ordering in seo/21 Part 3 is
+      approximate until a human looks.
+- [ ] **Optional, alongside the backlinks line above: The Tutors'
+      Association.** Membership has a fee and gives a directory listing
+      and a badge — your call whether the badge earns it. First Tutors
+      and Tutor Hunt free listings are already named above.
 - [ ] **Backlinks** — realistic, white-hat only: tutor directories (First
       Tutors, Tutor Hunt), university alumni pages; when emailing schools or
       teachers, link the notes hub, not the tutoring page.
