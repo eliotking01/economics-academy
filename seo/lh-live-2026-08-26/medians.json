@@ -1,0 +1,210 @@
+{
+  "homepage": {
+    "url": "/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1748.7735,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 1652.7735,
+    "SI": 2524.405760003805,
+    "bytes": 193172,
+    "blocking_ms": 567,
+    "chain_len": 3,
+    "chain_ms": 466.18399995565414,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/home.css",
+        2439,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23240,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/site-search.js",
+        7385,
+        150
+      ]
+    ]
+  },
+  "section-hub": {
+    "url": "/revision-notes/",
+    "runs": 3,
+    "score": 1,
+    "LCP": 1522.029,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 1372.029,
+    "SI": 2416.99198063022,
+    "bytes": 139496,
+    "blocking_ms": 591,
+    "chain_len": 3,
+    "chain_ms": 313.9040000140667,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23072,
+        300
+      ]
+    ]
+  },
+  "notes-topic": {
+    "url": "/revision-notes/aqa-a2-macro/2-1-3-uses-of-index-numbers.html",
+    "runs": 3,
+    "score": 0.7,
+    "LCP": 4774.345,
+    "CLS": 0,
+    "TBT": 106.00800000000072,
+    "FCP": 4609.1810000000005,
+    "SI": 5104.784001237407,
+    "bytes": 620564,
+    "blocking_ms": 1098,
+    "chain_len": 3,
+    "chain_ms": 791.1070000231266,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/revision-notes-topic.css",
+        9938,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/site-search.js",
+        7395,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23061,
+        300
+      ]
+    ]
+  },
+  "practice-questions": {
+    "url": "/practice-questions/edexcel-theme-1/1-1-1-economics-as-a-social-science.html",
+    "runs": 3,
+    "score": 0.96,
+    "LCP": 1982.435,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 1832.435,
+    "SI": 3987.503133771671,
+    "bytes": 253216,
+    "blocking_ms": 875,
+    "chain_len": 3,
+    "chain_ms": 379.07499998807907,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/quiz.css",
+        4196,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        1755,
+        150
+      ]
+    ]
+  },
+  "past-paper-questions": {
+    "url": "/past-paper-questions/edexcel/1-2-3-price-income-cross-elasticities-of-demand/",
+    "runs": 3,
+    "score": 0.98,
+    "LCP": 1565.7935,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 1415.7935,
+    "SI": 3790.1773143623864,
+    "bytes": 155869,
+    "blocking_ms": 458,
+    "chain_len": 3,
+    "chain_ms": 411.7409999668598,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/past-paper-questions.css",
+        3586,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23081,
+        150
+      ]
+    ]
+  },
+  "flashcards": {
+    "url": "/flashcards/edexcel-a/theme-1/",
+    "runs": 3,
+    "score": 0.99,
+    "LCP": 1877.1644999999999,
+    "CLS": 0,
+    "TBT": 0,
+    "FCP": 1549.1644999999999,
+    "SI": 2483.1218608092686,
+    "bytes": 199292,
+    "blocking_ms": 609,
+    "chain_len": 3,
+    "chain_ms": 434.9219999611378,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/flashcards.css",
+        4484,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23083,
+        150
+      ]
+    ]
+  },
+  "ppq-board-hub": {
+    "url": "/past-paper-questions/edexcel/",
+    "runs": 3,
+    "score": 0.97,
+    "LCP": 1862.47,
+    "CLS": 0,
+    "TBT": 19,
+    "FCP": 1562.47,
+    "SI": 3830.2384812982446,
+    "bytes": 204105,
+    "blocking_ms": 592,
+    "chain_len": 3,
+    "chain_ms": 380.7820000052452,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/main.css",
+        23103,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/js/components/nav.js",
+        3797,
+        150
+      ]
+    ]
+  },
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 0.97,
+    "LCP": 1928.5810000000001,
+    "CLS": 0,
+    "TBT": 65,
+    "FCP": 1628.5810000000001,
+    "SI": 3952.2312648918723,
+    "bytes": 201598,
+    "blocking_ms": 554,
+    "chain_len": 3,
+    "chain_ms": 392.6850000321865,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/tutoring.css",
+        4584,
+        150
+      ]
+    ]
+  }
+}

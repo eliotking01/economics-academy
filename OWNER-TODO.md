@@ -1,14 +1,20 @@
 # Owner To-Do — things only Eliot can do
 
+**Do next: 6 items. Soon, before term: 11 items.**
+**The most important: create the Google Business Profile and start collecting
+reviews — the head tutoring query is constrained by authority, not the page.**
+
 Kept out of the published site via `_config.yml`. **One prioritised list**,
-consolidated 2026-08-16 at the end of the site-wide overhaul and
+consolidated 2026-08-16 at the end of the site-wide overhaul,
 **re-consolidated 2026-08-22**, when it absorbed the three lists the 21 August
 audits left behind — `seo/13-gsc-manual-todo-2026-08-21.md`,
 `seo/15-notes-seo-manual-todo-2026-08-21.md` and
-`seo/18-notes-content-approval-2026-08-21.md`. Those three now carry a
-SUPERSEDED banner and are kept as the record of what was asked and decided;
-nothing still open lives only there. Items are in priority order within each
-group.
+`seo/18-notes-content-approval-2026-08-21.md` (SUPERSEDED banners; nothing
+still open lives only there) — and **again 2026-08-26** in the September
+clean-up, when the finished build logs (now `_archive/FLASHCARDS_PROGRESS.md`,
+`_archive/PAST-PAPERS-PROGRESS.md`, `_archive/QA_FIXES_PROGRESS.md`) and the
+audit handover in `docs/audit/PROGRESS.md` gave up their open items to this
+file. Items are in priority order within each group.
 
 **Things that are already *wrong* still go in `docs/REVIEW-NOTES.md` (site) or
 `docs/CONTENT_ISSUES.md` (flashcards), not here.** This file points at the
@@ -16,6 +22,13 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Do next — this week
 
+- [ ] **The tutoring SEO pass went live this morning — 10 minutes, today if
+      you can (merge `0bcac57c`, PR #33, 2026-08-26).** Request indexing for
+      `/tutoring.html` and `/about.html` (both changed), and run Google's
+      Rich Results Test on the live tutoring URL — the after-deploy step the
+      pass left open. Expect the FAQPage and Person nodes to parse; FAQ rich
+      results earn nothing since May 2026, which is known and fine. (Source:
+      PROGRESS.md "Tutoring page SEO pass".)
 - [ ] **Request indexing for the best of the 46 new question-bank pages —
       20 minutes.** The sitemap is re-submitted (24 August), but 46 pages will
       take weeks to index on their own, and Search Console's manual quota is
@@ -42,23 +55,13 @@ decisions waiting in those logs; it does not repeat them.
       for the *next* read, once the pages have had a chance to be seen.
 
 - [ ] **Search Console, after the notes push (live since 2026-08-22, merge
-      `ee24918`) — 15 minutes.** Load one Edexcel and one AQA topic page on
-      the live site and check the tab shows the new title and the page shows
-      the byline. URL-inspect both and **Request indexing**. Re-submit
+      `ee24918`) — 10 minutes.** The live spot-check is done (2026-08-26,
+      Claude: both sample topic pages serve the new title, the byline and the
+      contents list). What needs your account: URL-inspect one Edexcel and
+      one AQA topic page and **Request indexing**; re-submit
       `sitemaps/revision-notes.xml` so the new `lastmod` dates are picked up.
       Do **not** request a validation on any error type — see "Already
       scheduled" for when.
-- [ ] **Look at a topic page in a browser — 10 minutes.** Nobody has. One
-      Edexcel, one AQA, desktop and phone (Live Server is fine). Check: the
-      board · module · code line and the byline under the heading are not
-      crowding it — the heading group is now three lines of small text and if
-      it feels crowded on a phone the credentials half can hide below 600px in
-      one CSS rule; the "On this page" box reads as helpful; the Related
-      topics pills wrap sensibly and do not look like buttons; the "Studying
-      AQA instead?" sentence reads naturally; nothing jumps as the page loads.
-      Then open `aqa-a2-micro/1-6-6-the-national-minimum-wage.html`, one of
-      four pages whose contents list has a single entry, and decide whether
-      that is acceptable until the page is expanded (see "Content work").
 - [ ] **Read the twin-board map — 20 minutes, the highest-value review on this
       list.** 109 links say "Studying AQA instead? *[topic]* covers this on
       AQA" (and the reverse). A wrong row sends a student to the wrong board's
@@ -84,16 +87,24 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Soon — before term starts
 
-- [ ] **Re-run the web vitals against the live site — 20 minutes.** The notes
-      SEO changes were measured only as a local A/B, which was too noisy to
-      trust. Now they are live:
-      `python3 seo/tools/run_lighthouse.py --out seo/lh-live-notes-seo` and
-      compare with `seo/lh-live-after/` (same URLs, runs, flags and Lighthouse
-      version — which is why the script exists). Expected answer: no change
-      worth seeing. **CLS is the number that would matter** — a contents list
-      and a byline now sit above the fold on all 166 pages. If LCP is
-      genuinely up by more than ~200 ms, say so and the blocks get a second
-      look.
+- [ ] **Google Business Profile**: as an online-only service you can create a
+      profile without a public address ("service area" business). It enables
+      Google reviews, which show for brand searches — the single cheapest
+      trust signal available. Context from the notes audit: you have
+      impressions and no clicks on `a level economics tutor online` (56
+      impressions, position 35), `online a level economics tutor` (47,
+      position 23) and `a level economics tuition` (50, position 52). Those
+      are the queries that pay; 23rd–52nd is nowhere, and the tutoring page is
+      what has to convert. A separate piece of work — flagged so it is not
+      lost.
+- [ ] **Collect Google reviews** (once the profile exists): ask 3–5 recent
+      parents/students. Tutorful reviews cannot be imported. **When five or
+      more real ones exist, tell Claude Code** — the tutoring page's trust
+      line then gains the real Google count (never before, and never a
+      rounded-up number). Context from the 2026-08-25 tutoring pass: the
+      one individual tutor site ranking for both board queries leads with
+      "87+ five-star Google reviews"
+      (`seo/21-tutoring-baseline-2026-08-25.md` Part 3).
 - [ ] **Fix the Open Graph image — 30 minutes.** `og-image.png` is the logo at
       1200×1200, but every page declares `twitter:card = summary_large_image`,
       which wants ~2:1, so shared links render as a cropped logo. Make a
@@ -102,6 +113,13 @@ decisions waiting in those logs; it does not repeat them.
       `og-image-wide.png` and Claude Code wires it in and bumps the
       cache-busting `?v=`. Per-topic OG images are a generator job for later
       and need your design call first.
+- [ ] **Backlinks** — realistic, white-hat only: tutor directories (First
+      Tutors, Tutor Hunt), university alumni pages; when emailing schools or
+      teachers, link the notes hub, not the tutoring page.
+- [ ] **Optional, alongside the backlinks line above: The Tutors'
+      Association.** Membership has a fee and gives a directory listing
+      and a badge — your call whether the badge earns it. First Tutors
+      and Tutor Hunt free listings are already named above.
 - [ ] **Check each exam board's licensing terms for hosting past papers.**
       The site already hosts all 281 paper PDFs itself, so this is due
       diligence on something already published, not a future decision. Look
@@ -124,24 +142,6 @@ decisions waiting in those logs; it does not repeat them.
       on the site that is not the notes' own. Correct anything wrong in
       `glossary-data/authored.json`; Claude Code re-runs the extractor and
       builder.
-- [ ] **Google Business Profile**: as an online-only service you can create a
-      profile without a public address ("service area" business). It enables
-      Google reviews, which show for brand searches — the single cheapest
-      trust signal available. Context from the notes audit: you have
-      impressions and no clicks on `a level economics tutor online` (56
-      impressions, position 35), `online a level economics tutor` (47,
-      position 23) and `a level economics tuition` (50, position 52). Those
-      are the queries that pay; 23rd–52nd is nowhere, and the tutoring page is
-      what has to convert. A separate piece of work — flagged so it is not
-      lost.
-- [ ] **Collect Google reviews** (once the profile exists): ask 3–5 recent
-      parents/students. Tutorful reviews cannot be imported. **When five or
-      more real ones exist, tell Claude Code** — the tutoring page's trust
-      line then gains the real Google count (never before, and never a
-      rounded-up number). Context from the 2026-08-25 tutoring pass: the
-      one individual tutor site ranking for both board queries leads with
-      "87+ five-star Google reviews"
-      (`seo/21-tutoring-baseline-2026-08-25.md` Part 3).
 - [ ] **A Lessonspace screenshot for the tutoring page — 10 minutes.** One
       image of a lesson whiteboard, no student name visible. It shows a
       parent what "online lesson" actually means; no ranking claim. Claude
@@ -152,19 +152,10 @@ decisions waiting in those logs; it does not repeat them.
       log below. Google blocked every automated SERP route during the
       2026-08-25 pass, so the competitor ordering in seo/21 Part 3 is
       approximate until a human looks.
-- [ ] **Optional, alongside the backlinks line above: The Tutors'
-      Association.** Membership has a fee and gives a directory listing
-      and a badge — your call whether the badge earns it. First Tutors
-      and Tutor Hunt free listings are already named above.
-- [ ] **Backlinks** — realistic, white-hat only: tutor directories (First
-      Tutors, Tutor Hunt), university alumni pages; when emailing schools or
-      teachers, link the notes hub, not the tutoring page.
 - [ ] Optional writing task: 1–2 sentences for the About page on who you are
       outside economics (a hobby, what you're like to work with) — humanises
       the page for parents. No placeholder waits on it; tell Claude where you
       want it if you write it.
-- [ ] **Consider a short "meet the tutor" video** on the tutoring page later.
-
 ## Content work — your judgement, at your pace
 
 Everything here changes a word a student reads, so each page needs your
@@ -375,6 +366,7 @@ rebuild and the checks.
       September reads above are done, tell Claude Code and each can be
       picked up. The list and its reasoning: `docs/audit/PROGRESS.md`, the
       2026-08-14 handover ("What is left, and there is nothing else").
+- [ ] **1 October 2026 — re-export the Search Console CSVs** into
       `seo/gsc-exports/01-10-2026/` (Indexing → Pages → each row under "Why
       pages aren't indexed" → Export, plus the indexed list, same filenames as
       21 August) and re-run the audit. One command:
@@ -455,6 +447,15 @@ Console is then explainable rather than alarming.
 
 ## Done — kept only where the DATE matters to a later measurement
 
+- **2026-08-26 — live web vitals re-measured after the notes redesign**
+  (Claude, `seo/lh-live-2026-08-26/medians.json`, the same script and flags
+  as the performance pass, so the comparison holds). The answer the old
+  "Soon" item predicted: **no change worth seeing** against the 2026-08-23
+  live after-run, and **CLS is 0.000 on all eight samples** — the
+  contents-list/byline worry is closed. The MathJax notes sample is still
+  bimodal at 0.70 / ~4.8 s LCP, exactly as `seo/20` recorded; the homepage's
+  +0.6 s LCP wobble at score 0.99 is three-run noise — an eye at the next
+  read, not an action. This file is the baseline for the next live read.
 - **2026-08-23 — Google Analytics is consent-gated (merge `83ae353`, PR #17,
   D57).** gtag.js is not loaded and no analytics cookie is set until a
   visitor says yes on the bottom-of-page bar; "No thanks" is never asked
@@ -575,6 +576,16 @@ or `docs/CONTENT_ISSUES.md` instead.
       review; recoverable in one command from commit `be4d7b8`. If the
       marking service ever wants a feeder, this is the shelved prototype.
       (PROGRESS.md §8.)
+- [ ] **Consider a short "meet the tutor" video** on the tutoring page.
+      Both strong individual-site competitors lead with video
+      (`seo/22-tutoring-seo-proposals-2026-08-25.md` Group B); once a file
+      exists Claude Code adds a lazy-loaded, poster-first embed that does
+      not touch the Lighthouse score. An afternoon, whenever.
+- [ ] **Two sentences on how you run a first lesson — never decided.** The
+      tutoring pass found the page doesn't describe the first-lesson shape
+      (Part 2 gap 5) and asked for two sentences from you; every other item
+      in that pass was decided yes or no, this one was left. (Source:
+      `seo/22-tutoring-seo-proposals-2026-08-25.md`, Group B item 6.)
 - [ ] **Migrate the revision notes from MathJax to KaTeX.** The glossary
       pre-renders KaTeX at build time; the LaTeX-bearing notes pages still load
       MathJax 3 from a CDN, so the same formula looks slightly different in the

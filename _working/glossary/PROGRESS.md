@@ -348,6 +348,12 @@ publishes it.
 
 Waiting on Eliot:
 
+> **2026-08-26, September clean-up:** items 0, 3 and 4 below are done — the
+> glossary merged and went live on 2026-08-09, and `/specificiations/` was
+> removed under D12. Item 1 (the authored-definitions economics check) is the
+> one still open, and it lives in `OWNER-TODO.md` "Soon — before term
+> starts". The list below is kept as the 2026-08-09 record.
+
 0. Review and merge `fix/glossary-polish`, then check the four fixes on the live
    site. The 79 fragments above are the only content decision outstanding.
 
