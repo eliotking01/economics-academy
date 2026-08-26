@@ -1,0 +1,28 @@
+{
+  "tutoring": {
+    "url": "/tutoring.html",
+    "runs": 3,
+    "score": 0.97,
+    "LCP": 1899.248,
+    "CLS": 0,
+    "TBT": 40,
+    "FCP": 1539.248,
+    "SI": 3905.6338276580304,
+    "bytes": 200994,
+    "blocking_ms": 403,
+    "chain_len": 3,
+    "chain_ms": 474.96299996972084,
+    "blocking": [
+      [
+        "https://economicsacademy.co.uk/css/pages/tutoring.css",
+        4589,
+        150
+      ],
+      [
+        "https://economicsacademy.co.uk/css/fontawesome-all.min.css",
+        1716,
+        150
+      ]
+    ]
+  }
+}
