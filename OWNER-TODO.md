@@ -503,10 +503,16 @@ or `docs/CONTENT_ISSUES.md` instead.
       painted squashed in your Chrome AND Safari, its painted size varying
       with scroll while its measured geometry stayed correct — and no
       headless engine (Chromium, WebKit, Firefox) could reproduce it. The
-      full record is `_working/notes-family-consistency/PROPOSAL.md` and
+      full record is `_archive/working/notes-family-consistency/PROPOSAL.md` and
       the record branch `record/macro-application-attempts` (pushed, kept unmerged). A future attempt should start by
       reproducing the paint fault on your machine (is it this page, this
       machine, or an extension?), not by iterating the markup again.
+- [ ] **The diagram galleries' past-papers panel — your say-so needed.** Both
+      galleries' closing panel deliberately kept the all-boards `/past-papers/`
+      link rather than pointing at a board page; D62 pinned every destination
+      unchanged and left the upgrade — a one-line change per gallery — waiting
+      on you. Record: PROGRESS.md "Notes family consistency" and
+      `_archive/working/notes-family-consistency/PROPOSAL.md` §2.
 - [ ] **Migrate the revision notes from MathJax to KaTeX.** The glossary
       pre-renders KaTeX at build time; the LaTeX-bearing notes pages still load
       MathJax 3 from a CDN, so the same formula looks slightly different in the

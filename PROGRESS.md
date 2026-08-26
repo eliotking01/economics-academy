@@ -148,7 +148,7 @@ hairlines, `exam-note` in the exam-tip clothes, the framed no-JS
 tap-to-enlarge on all 87 raster diagrams, first diagram promoted
 `fetchpriority="high"`, and the notes-cta replaced by the D58-style close
 with every destination surviving exactly once. Content byte-identical,
-proved by `_working/notes-family-consistency/check_content_identity.py`.
+proved by `_archive/working/notes-family-consistency/check_content_identity.py`.
 `docs/audit/DECISIONS.md` D62.
 
 | Changed | Where |
@@ -159,7 +159,7 @@ proved by `_working/notes-family-consistency/check_content_identity.py`.
 | `EXTRA_SCRIPT_PAGES` names the two galleries; notes-other tails reseeded 1 → 2 | `scripts/verify_page_shell.py` |
 | Mark-as-revised gated on `.topic-meta`; scrollspy steps back on upward scroll | `js/components/notes.js` |
 | The four textbook pairs stay (one page still loads that sheet); two gallery pairs added | `scripts/verify_contrast.py` |
-| Gate 1 record: PROPOSAL, content-identity proof, screenshot harness, evidence | `_working/notes-family-consistency/` |
+| Gate 1 record: PROPOSAL, content-identity proof, screenshot harness, evidence | `_archive/working/notes-family-consistency/` |
 
 ### Three things a future session needs to know
 
@@ -171,7 +171,7 @@ proved by `_working/notes-family-consistency/check_content_identity.py`.
    Chromium/WebKit/Firefox rendered the same files correctly — a
    compositing fault, not layout (measured geometry stayed right while the
    paint was wrong). The full record:
-   `_working/notes-family-consistency/PROPOSAL.md` and
+   `_archive/working/notes-family-consistency/PROPOSAL.md` and
    the record branch `record/macro-application-attempts` (pushed, kept unmerged). Do not re-attempt by
    iterating markup; start from why that page's paint misbehaves.
 2. **The galleries get notes.js through the bake**, never a hand-edited
@@ -188,7 +188,7 @@ proved by `_working/notes-family-consistency/check_content_identity.py`.
 (`53532083`); this heading said "IN REVIEW" until the family-consistency
 docs pass the same day corrected it. The three-gate project from the 2026-08-25 brief:
 Gate 1 mock and Gate 2 plan approved by Eliot (both in
-`_working/notes-redesign/`, the design record), Gate 3 implemented the plan
+`_archive/working/notes-redesign/`, the design record), Gate 3 implemented the plan
 as written. `docs/audit/DECISIONS.md` D61.
 
 **What it is.** The 166 generated topic pages leave the 2025 "textbook" card
@@ -302,7 +302,7 @@ larger-count one.
 **STATE: live.** Eliot merged PR #26 on 2026-08-24 (`745f9cb2`); this
 heading was stale ("IN REVIEW") until the notes-redesign docs pass of
 2026-08-25 corrected it. One commit per phase. Eliot approved the Phase 2 mock
-(`_working/mobile-nav/`, kept as the design record) on 2026-08-24 and the
+(`_archive/working/mobile-nav/`, kept as the design record) on 2026-08-24 and the
 implementation landed the same day; he chose to leave the EXAM
 TIP/EVALUATION chip contrast until his notes-page overhaul. Fixes the
 remaining findings of the August site review; the hub accordions were
@@ -327,7 +327,7 @@ trailers → sitemap.
 **STATE: live.** Eliot merged PR #24 on 2026-08-24; the deploy succeeded and
 the live site serves the header box, the script and the 112.9 KB index
 (checked by request, not assumed). He approved the design and every string
-from a working mock (`_working/site-search/`, on the branch, with
+from a working mock (`_archive/working/site-search/`, on the branch, with
 `PROPOSAL.md` as the wording record) after two revisions of his: the visible
 pink "Search…" box (top-right on desktop, above the title on mobile) and the
 visible Cancel in the overlay. `docs/audit/DECISIONS.md` D59.
@@ -380,7 +380,7 @@ load. With scripting off the box is a real link to `/revision-notes/`.
 ## Topic-page tail redesign — the 166 notes pages (2026-08-23) — LIVE (merged 2026-08-24, `32c0bacb`, PR #23)
 
 **STATE: live.** Eliot merged PR #23 on 2026-08-24. He had approved the
-design from a static mock (`_working/topic-tail/`, on the branch: the mock
+design from a static mock (`_archive/working/topic-tail/`, on the branch: the mock
 page, before/after screenshots at 1280 and 360 px, `PROPOSAL.md` with every
 string) and the wording as proposed, and chose to strip the legacy tail out
 of the slices rather than have the generator skip it. `docs/audit/DECISIONS.md`
@@ -440,7 +440,7 @@ marking") → prev/next. ~1,150 px → ~530 px at 1280; ~2,100 px → ~1,250 px 
    called them all A-Level.
 
 **Wording that changed** (all chrome, all declared with `Text-Change:` on
-166 pages; the full list is `_working/topic-tail/PROPOSAL.md`): new "Carry
+166 pages; the full list is `_archive/working/topic-tail/PROPOSAL.md`): new "Carry
 on with this topic", the services sentence, "Whole papers and mark schemes:
 <Board> past papers."; the three button labels became sentence-case links
 ("Practice questions: 1.2.2 Demand", "Flashcards: 1.2.2 Demand", "Past paper

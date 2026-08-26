@@ -23,8 +23,12 @@ here arrived by `git mv`, so its full history came with it.
 
 ## `working/`
 
-Finished working material moved out of `_working/` on 2026-08-20, once the work
-it belonged to was live. Reference, not input — nothing reads any of it.
+Finished working material moved out of `_working/` (2026-08-20, and the five
+design records on 2026-08-26), once the work it belonged to was live.
+Reference, not input — nothing reads any of it. Paths *inside* these records
+are not rewritten when files move (the `audit-2026-08-20/` rule), so the mocks
+and screenshot harnesses still name their original `_working/` locations; a
+re-run would need those paths tweaked.
 
 | Path | What it is |
 | --- | --- |
@@ -32,6 +36,11 @@ it belonged to was live. Reference, not input — nothing reads any of it.
 | `working/glossary/` | Four hand-written decision and gap reports from the glossary build. **Three others were moved here by mistake on 2026-08-20 and moved straight back**: `inventory.md`, `review-decisions.md` and `capitalisation-report.md` are written by `extract_glossary.py` and `check_glossary_capitalisation.py` on every run, so they belong in `_working/glossary/` alongside `PROGRESS.md` and `authored-review.md`. |
 | `working/diagram-review/` | The review tooling for the diagram pass. |
 | `working/question-bank/` | The Edexcel AS extraction QA and a dry-run log. |
+| `working/mobile-nav/` | The approved drawer mock and its screenshots — the Phase 2 design record. PROGRESS.md: "Accessibility & progressive enhancement pass (2026-08-24)". |
+| `working/topic-tail/` | The static mock, before/after screenshots and the full wording list. PROGRESS.md: "Topic-page tail redesign (2026-08-23)". |
+| `working/site-search/` | The working mock, screenshots of every state, and PROPOSAL.md, the wording record. PROGRESS.md: "Site-wide search (2026-08-24)". |
+| `working/notes-redesign/` | BRIEF, PROPOSAL, PLAN, the mocks and the content-identity proof for the D61 reading layout. PROGRESS.md: "Notes topic-page redesign (2026-08-25)". |
+| `working/notes-family-consistency/` | The Gate 1 evidence pack: PROPOSAL.md (including the macro-application paint-fault record), content-identity proof and screenshot harness. PROGRESS.md: "Notes family consistency (2026-08-25)". |
 | `audit-2026-08-20/` | The repo audit, the restructure plan and the CLAUDE.md migration mapping. Dated records of the tree as it stood that day; paths inside them are **not** rewritten when files move later. |
 
 **What deliberately stayed in `_working/`:**

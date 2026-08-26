@@ -115,8 +115,8 @@ inside it.
 | `.githooks/` | 2 | Opt-in git hooks (`git config core.hooksPath .githooks`, once): suggested trailers in the commit template; the sitemap rebuilt and committed automatically after a commit that made it stale | Yes, once enabled |
 | `boards-data/` | 1 | One file naming the four exam boards, so they are spelled consistently everywhere — and, since it lists each board's themes in order, the file that decides the order the revision notes read in | Small but load-bearing |
 | `seo/` | 42 | The SEO audit and Search Console exports — **plus `seo/tools/verify_seo.py`, which runs on every push** | See below |
-| `_working/` | 20 | Scratch space. Holds the **full** Font Awesome font that the subsetter trims — do not delete that file | Partly |
-| `_archive/` | 157 | Finished records and the old note drafts | No |
+| `_working/` | 7 | Live machinery outputs only (since 2026-08-26): the **full** Font Awesome font the subsetter reads — do not delete that file — and the glossary reports two scripts rewrite on every run | **Yes** |
+| `_archive/` | 262 | Finished records, the old note drafts and (since 2026-08-26) the design records of the finished passes | No |
 | `.venv/` | 0 | A Python folder on the Mac only. Not in the repo at all. | No |
 
 **The underscore trick:** GitHub ignores any folder starting with `_`. That is

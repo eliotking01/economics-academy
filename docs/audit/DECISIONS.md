@@ -2002,7 +2002,7 @@ and DO-NOT-BREAK says so.
 ### D58 — the topic-page tail is generated from data, and the paid ask comes last
 
 **Date:** 2026-08-23. **Eliot decided** from a static mock
-(`_working/topic-tail/`, kept on the branch) with before/after screenshots
+(`_archive/working/topic-tail/`, kept on the branch) with before/after screenshots
 at 1280 px and 360 px and a wording list; he approved the wording as
 proposed and chose the cleaner of the two implementations offered.
 
@@ -2058,7 +2058,7 @@ where a newsletter form would go; nothing is built there.
 
 ### D59 — the site gains one search, and the exam-question bank keeps its own
 
-**2026-08-24, Eliot, from a working mock** (`_working/site-search/`, on the
+**2026-08-24, Eliot, from a working mock** (`_archive/working/site-search/`, on the
 branch: the mock page, both-width screenshots of every state, and
 `PROPOSAL.md` with each string and synonym). Approved as mocked after two
 revisions of his: the header control is a visible pink search box — magnifier
@@ -2128,7 +2128,7 @@ pages to 127. What is decided with it:
 
 **2026-08-25, Eliot, branch `feature/notes-redesign` (three-gate approval:
 mock revised once and approved, plan approved as written — both in
-`_working/notes-redesign/`, the design record).** Ratified.
+`_archive/working/notes-redesign/`, the design record).** Ratified.
 
 The 166 generated topic pages leave `revision-notes-textbook.css` for a new
 `css/pages/revision-notes-topic.css`: a 38em reading column on a white
@@ -2194,7 +2194,7 @@ What is ratified with it:
   clothes with its own bold lead as the label.
 - **The economics content is byte-identical** — every caption, exam note
   and (src, alt) image pair, proved by
-  `_working/notes-family-consistency/check_content_identity.py`. The
+  `_archive/working/notes-family-consistency/check_content_identity.py`. The
   declared chrome changes: "Contents" became the shared "On this page"
   rail (same anchors, same anchor text), and the notes-cta became the
   D58-style close — a two-panel "Carry on revising" unit and one services
@@ -2224,7 +2224,7 @@ What is ratified with it:
   Chromium (real clock), WebKit and Firefox rendered the same files
   correctly. `git diff` against the merge base proves the revert exact
   across the slice, record, both sheets and the rendered page. The full
-  account is in `_working/notes-family-consistency/PROPOSAL.md` and
+  account is in `_archive/working/notes-family-consistency/PROPOSAL.md` and
   the record branch `record/macro-application-attempts` (pushed, kept unmerged); a future attempt starts from why that page's
   paint misbehaves when the 166 topic pages' identical rail construct
   never has.

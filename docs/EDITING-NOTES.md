@@ -2,7 +2,7 @@
 
 Written for Eliot, in plain English. How to add content to the 166 topic
 pages by hand. The design behind it is recorded in
-`_working/notes-redesign/` and `docs/audit/DECISIONS.md` D61.
+`_archive/working/notes-redesign/` and `docs/audit/DECISIONS.md` D61.
 
 ## Which file to open
 
