@@ -40,7 +40,14 @@ reason, and it should be written down rather than left implicit.
 
 **Phase:** P4.
 
-### Q16 — Do the specification PDFs need removing from git history too?
+### Q16 — Do the specification PDFs need removing from git history too? · **ANSWERED**
+
+**Answered 2026-08-09: no, not for now — history stays.** `DECISIONS.md` D27,
+in Eliot's words; the recommended default stands, and it is reconsidered only
+if a rights-holder actually asks. (Banner added 2026-08-26 — the decision was
+taken on time but this file was never stamped, so the question read as open.)
+
+### Q16 (original text, retained)
 
 **NEW, raised by P1.** `d220ad0` removed them from `HEAD`. They remain in git
 history, and this repo is **public** — GitHub serves blobs from history, so
@@ -63,7 +70,16 @@ properly, and the cost is justified.
 
 **Phase:** none — yours to decide. Not blocking.
 
-### Q17 — Is `logo/` published deliberately?
+### Q17 — Is `logo/` published deliberately? · **ANSWERED, then SUPERSEDED**
+
+**Answered 2026-08-09 (`DECISIONS.md` D28): keep it as repo storage, not a
+published asset — the opposite of the recommended default. Superseded
+2026-08-12 (D38): `logo/` and `old-logos-archive/` were deleted outright —
+31 files, 2.47 MB.** Neither directory exists in the tree today. (Banner
+added 2026-08-26 — both decisions were taken but this file was never
+stamped, so the question read as open.)
+
+### Q17 (original text, retained)
 
 **NEW, raised by P1.** The current brand kit — 8 files, `logo/` — is served
 publicly and referenced by **nothing**. The site header is text, not an image.
@@ -122,7 +138,13 @@ this decision on evidence.
 
 **Phase:** P6. Answer at the P6 kickoff, not before.
 
-### Q14 — Should the audit propose anything for the 283 exam-board PDFs?
+### Q14 — Should the audit propose anything for the 283 exam-board PDFs? · **ANSWERED**
+
+**Answered in Phase 1, as the default recommended: out of scope for
+organisation.** The repo-size consequence is one paragraph in
+`findings/PH01-structure.md`. (Banner added 2026-08-26.)
+
+### Q14 (original text, retained)
 
 They are 176 MB of the repo, the bulk of `.git`, and GSC treats most as
 duplicates of other sites' copies. `seo/07b-link-decisions.md` already declined
@@ -135,7 +157,14 @@ not need.
 
 **Phase:** P1, one paragraph.
 
-### Q15 — Is `backup-pre-enrichment` safe to delete?
+### Q15 — Is `backup-pre-enrichment` safe to delete? · **ANSWERED**
+
+**Answered in Phase 1 and overtaken by events:** the diff held nothing
+unique, and the branch is gone from local and origin — verified during the
+2026-08-26 branch clean-up, which removed the last of the merged branches.
+(Banner added 2026-08-26.)
+
+### Q15 (original text, retained)
 
 Fully merged into `main`, like all 13 others, but its name claims a purpose
 beyond a merged feature branch. Finding PH00-010.

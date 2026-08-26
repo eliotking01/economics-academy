@@ -108,7 +108,12 @@ decisions waiting in those logs; it does not repeat them.
       for the "copyright" or "using our materials" page on Pearson/Edexcel,
       AQA and OCR: is hosting complete past papers for free educational use
       permitted, is attribution wording required, does any embargo apply to
-      recent series. Nothing needs taking down unless a term says so.
+      recent series. **While you are there, cover the question bank too**
+      (raised during the bank build, never answered):
+      `/past-paper-questions/` reproduces Pearson and AQA question text
+      verbatim on the site's own pages — a wider use than hosting the
+      PDFs. Nothing needs taking down unless a term says so. (Source:
+      `_archive/PAST-PAPERS-PROGRESS.md`, open question 2.)
 - [ ] **OCR A Level Paper 3, June 2023 — the question paper is missing.** Both
       PDFs at that path are the mark scheme, byte-identical. Download H460/03
       June 2023 from OCR and save it over the existing question-paper
@@ -222,6 +227,23 @@ rebuild and the checks.
       the first image on a page never `loading="lazy"`;
       `verify_image_dimensions.py` and `verify_diagram_geometry.py` catch a
       wrong dimension.
+      The audit kept its own gap list for the flashcard SVG set:
+      `docs/audit/findings/PH08-047b-missing-diagrams.md` — 21 diagrams /
+      43 panels, reviewed via `_archive/working/diagram-review/`; six of
+      the panel counts are inferred rather than viewed (flagged red on
+      the sheet), so confirm those before pricing any drawing work.
+- [ ] **Ten spec-required topics the notes never cover** — found while
+      writing the flashcards, where the cards had to stay notes-grounded
+      (full context: `_archive/FLASHCARDS_PROGRESS.md`, "Candidate notes
+      additions"): national happiness (2.1.1); the Bank of England MPC and
+      the Great Depression/2008 responses (Edexcel 2.6.2); maximum wages,
+      public-sector wage setting and current labour-market issues (Edexcel
+      3.5.3); advantages of wage discrimination (AQA 1.6.7); the L-shaped
+      LRAC (AQA 4.1.4.5); saving determinants (AQA 2.2.3); UK income/wealth
+      distribution data (AQA 1.7.1); cooperation vs collusion (AQA 4.1.5.5);
+      exchange rates and FDI (Edexcel 4.1.8g); the Single European Market
+      (AQA 2.6.2). New economics prose, so each is yours to write or
+      commission; several overlap the thin-pages list above.
 - [ ] **Decide the open economics findings in `docs/REVIEW-NOTES.md`.** Each
       needs an explicit instruction before a page is touched. Open as of
       2026-08-22 (evidence under each ID): **N-Q8** on AQA `2-2-2` (the role of
@@ -235,8 +257,13 @@ rebuild and the checks.
       **C5** (`2-1-2` unemployment-rate denominator v the ILO definition);
       **G4** (`Regulation` defined twice, neither reads as a definition);
       **G1** (`/contact.html` at 343 words is not indexed — a content decision,
-      not to be rushed). `docs/CONTENT_ISSUES.md` has nothing open: 35 fixed,
-      1 rejected.
+      not to be rushed); **N-Q21** (added 2026-08-26: the comparative-advantage
+      worked example on `4-1-2` and `2-6-2` — your 2026-08-14 verdict reverses
+      CONTENT_ISSUES #26, and the redrawn SVG is already live, so prose and
+      diagram disagree today; needs its own session). `docs/CONTENT_ISSUES.md`
+      has one open item — **#37**, five flashcard alt texts still describing
+      single-panel versions of two-panel SVGs (added 2026-08-26); the other
+      36 are 35 fixed, 1 rejected.
 - [ ] **Fourteen definitions you have already written are invisible to the
       glossary — optional, about an hour.** Five pages carry a definition
       under a plain `<strong>Term:</strong>` rather than a `key-definition`
@@ -341,7 +368,13 @@ rebuild and the checks.
       revision-notes and past-papers pages as directional only (their
       baselines: notes hub 361 clicks pos ≈9.5, edexcel-b 158, ocr 133,
       aqa 51).
-- [ ] **1 October 2026 — re-export the Search Console CSVs** into
+- [ ] **~22 September 2026 — the audit's five held items unblock.** Wave 3.4,
+      4.7, 4.8, PH05-019/020/021 and PH03-049 step 2 have been held since
+      2026-08-14 on the day-45 GSC re-measure (D45 — a measurement-integrity
+      hold, not a risk hold; the date is the only gate). Once the ~22
+      September reads above are done, tell Claude Code and each can be
+      picked up. The list and its reasoning: `docs/audit/PROGRESS.md`, the
+      2026-08-14 handover ("What is left, and there is nothing else").
       `seo/gsc-exports/01-10-2026/` (Indexing → Pages → each row under "Why
       pages aren't indexed" → Export, plus the indexed list, same filenames as
       21 August) and re-run the audit. One command:
@@ -513,6 +546,35 @@ or `docs/CONTENT_ISSUES.md` instead.
       unchanged and left the upgrade — a one-line change per gallery — waiting
       on you. Record: PROGRESS.md "Notes family consistency" and
       `_archive/working/notes-family-consistency/PROPOSAL.md` §2.
+- [ ] **The combined-market price-discrimination card.**
+      `images/diagrams/svg/price-discrimination-combined-market.svg` is
+      drawn and stored but on no card and no page — your own call, 2026-08-14:
+      "Leave the combined-market flash card for now, but keep the diagram
+      stored so I can implement this into flashcards and notes in my own
+      time." Its single price of 272.5 deliberately sits between the two
+      sub-market prices of `price-discrimination.svg`, so the pair read
+      together. (Source: `_archive/FLASHCARDS_PROGRESS.md`; D46.)
+- [ ] **The deferred SVG-diagram cluster from the audit** — three linked
+      decisions, all yours, parked 2026-08-14 (`docs/audit/PROGRESS.md`,
+      the final handover): the **grid-canvas question** (three diagrams
+      need 4–5 panels, which the locked 800×600 canvas cannot hold — a
+      second canvas size in `DIAGRAM_STYLE.md` means re-checking all 84
+      shipped SVGs); whether **`ppf-long-run-growth`'s superset SVG** is
+      acceptable coverage; and **Wave 5.3, the PNG→SVG swap** on 231 img
+      tags across 85 pages — gated on the first two, and the honest case
+      is consistency with the flashcards, not weight. Five SVGs also have
+      no ground-truth PNG at all, so the verification method needs
+      deciding first.
+- [ ] **Edexcel Papers 1–2 Section A into the question bank.** You
+      confirmed it wanted "at a later date"; no new mechanism needed —
+      extract, tag, re-run, and the volume gate mints the pages itself.
+      (Source: `_archive/PAST-PAPERS-PROGRESS.md`, "deliberately left
+      out".)
+- [ ] **Revisit the written-response pilot.** Built on five topics
+      (schema, generator, stylesheet, ten questions) and reverted on your
+      review; recoverable in one command from commit `be4d7b8`. If the
+      marking service ever wants a feeder, this is the shelved prototype.
+      (PROGRESS.md §8.)
 - [ ] **Migrate the revision notes from MathJax to KaTeX.** The glossary
       pre-renders KaTeX at build time; the LaTeX-bearing notes pages still load
       MathJax 3 from a CDN, so the same formula looks slightly different in the

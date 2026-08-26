@@ -72,4 +72,5 @@ Hand-authored SVGs for diagram cards live in `images/diagrams/svg/`. They are
 referenced only from `flashcards/data/*.json`, which is why a tool that greps
 HTML reports them as unused.
 
-Live state and the full decision record: `docs/FLASHCARDS_PROGRESS.md`.
+The full build and decision record: `_archive/FLASHCARDS_PROGRESS.md`
+(archived 2026-08-26; its one live leftover is `docs/CONTENT_ISSUES.md` #37).

@@ -20,6 +20,10 @@ here arrived by `git mv`, so its full history came with it.
 | `ROADMAP.md` | Folded into `OWNER-TODO.md`. Its two "Now" items had both shipped. | 2026-08-20 |
 | `notes-conversion-workflow.md` | The original recipe for turning a `raw-notes/` draft into an Edexcel notes page by editing `revision-notes/**.html` directly. Those pages have been generated from `notes-data/` since Wave 2, and `.claude/hooks/block-generated.py` now refuses exactly that edit. A one-line pointer stays at `docs/notes-conversion-workflow.md`. | 2026-08-23 |
 | `raw-notes/` | 75 markdown drafts the Edexcel notes were originally written from. **0 of 73 are still in sync with their live page** (median word overlap 0.63, worst 0.40, re-measured 2026-08-20). The script that consumed them, `convert_raw_notes.py`, was deleted on 2026-08-13 under D44. Historical only — never a build input. | 2026-08-20 |
+| `FLASHCARDS_PROGRESS.md` | The flashcards build log — the two-board coverage matrix, every batch and approval, the diagram QA method. Its open leftovers were extracted first: the alt-text defect is `docs/CONTENT_ISSUES.md` #37; the ten candidate notes topics and the combined-market card are in `OWNER-TODO.md`. | 2026-08-26 |
+| `PAST-PAPERS-PROGRESS.md` | The question-bank build record — Phases 1–4, the AS extension, the extractor architecture and 23 decisions. Extracted first: the verbatim-question-text licensing question (OWNER-TODO "Soon") and the Edexcel Papers 1–2 Section A extension (OWNER-TODO "Ideas"). | 2026-08-26 |
+| `QA_FIXES_PROGRESS.md` | The flashcards content-quality remediation record — 265 cards edited and 6 split across 13 batches, and the card-face overflow fix. Pure record; nothing in it was still open. | 2026-08-26 |
+| `PROGRESS-detail-2026-08.md` | The full per-project write-ups, moved verbatim out of `PROGRESS.md` when it was collapsed to summary blocks plus an index in the September clean-up. Same headings, same order. | 2026-08-26 |
 
 ## `working/`
 

@@ -1,0 +1,1280 @@
+# Site Work — Progress: the full project write-ups (August 2026)
+
+Moved here **verbatim** from `PROGRESS.md` on 2026-08-26 (the September
+clean-up), one section per project, newest first — the same headings, so a
+`§N` or a section-title reference from anywhere in the repo resolves here.
+`PROGRESS.md` keeps the at-a-glance table, the traps, "What remains
+flagged" and a short block per project. Excluded from publishing by the
+underscore rule, like everything in `_archive/`.
+
+---
+
+## Tutoring page SEO pass (2026-08-26) — LIVE (merged 2026-08-26, `0bcac57c`, PR #33)
+
+**STATE: live.** Eliot merged PR #33 on 2026-08-26 with a merge commit
+(`0bcac57c`); this heading said "IN REVIEW" until the September clean-up
+pass of the same day corrected it. The
+2026-08-25 brief: find everything left that could help `tutoring.html`
+rank for "a level economics tutor" and its variants, plan first, change
+nothing without item-by-item approval. Phases 0–3 delivered 2026-08-25
+(`seo/21-tutoring-baseline-2026-08-25.md` — baseline, nine-area audit,
+live-search comparison; `seo/22-tutoring-seo-proposals-2026-08-25.md` —
+the plan, with the verdict that the head query's constraint is authority,
+not on-page, so the owner-side items lead). Eliot approved items on
+2026-08-26 and they were applied exactly (the decisions block at the top
+of seo/22 lists every yes and no). **D63**: he lifted the tutoring-page
+freeze; the ~22 September tutoring GSC comparison is directional only
+(home and marking stay clean).
+
+| Changed | Where |
+| --- | --- |
+| Meta description 195 → 159 chars (og: mirror identical); title deliberately kept | `tutoring.html` head |
+| Two FAQ boxes — "Where are you based?" (Somerset, teaches UK-wide online) and "When do lessons happen?" — visible + FAQPage JSON-LD twins | `tutoring.html` |
+| Em dashes → Eliot's spaced hyphen in his own copy, 30 swaps; the two testimonial quotes keep theirs | `tutoring.html` |
+| The founder stub becomes the full Person node (image, description, sameAs, alumniOf, hasCredential, knowsAbout), same `@id` as about.html; about.html gains knowsAbout | `tutoring.html`, `about.html` |
+| Three descriptive in-body anchors, one each: "specialist A-Level Economics tutor", "1-on-1 tutoring" (markup-only), "expert A-Level Economics tutor" (D1 — Eliot's explicit body-freeze exception; head proved byte-identical) | `past-papers/index.html`, `marking.html`, `revision-notes/index.html` |
+| Assertions 21–23: snippet ceilings, FAQ/schema sync, Person completeness — each break-tested | `seo/tools/verify_seo.py` |
+| Search index rebuilt for the new FAQ text (generator re-run, caught by verify_generated) | `search-index.json` |
+
+**Verified:** full suite green including 23/23 verify_seo; Lighthouse
+local HTTP/2 A/B main vs branch identical (0.99 both, LCP 1803 ms both,
++516 bytes); live before-run in `seo/lh-tutoring-before/` (97, LCP
+1.90 s); rendered checks at 1280 and 360 (device-metrics emulation) and
+with JavaScript off; all seven JSON-LD blocks on the two edited pages
+parse with required fields. Rich Results Test on the live URL is an
+after-deploy step. Declined by Eliot: A5a (book-direct line), A5b
+(after-lesson note), A8 (marked-examples link), A9 (price in the hero).
+
+### Three things a future session needs to know
+
+1. **The title is 75 chars on purpose** (A2: page 1 for "online a level
+   economics tutor" with it; only the brand truncates). Assertion 21
+   holds the ceiling — lengthening it is a decision, not a tweak.
+2. **The FAQPage block earns nothing** (Google removed FAQ rich results
+   for all sites, May 2026) and is kept because it is accurate and
+   removal gains nothing. Assertion 22 keeps it byte-synced with the
+   visible FAQ; edit both or neither.
+3. **The em-dash rule stops at quotation marks.** The two testimonial
+   blockquotes keep their em dashes — they are the reviewers' words. Do
+   not "finish the job".
+
+## Notes family consistency — the two diagram galleries (2026-08-25) — LIVE (merged 2026-08-25, `0bad0c88`, PR #32)
+
+**STATE: live.** Eliot merged PR #32 on 2026-08-25 with a merge commit
+(`0bad0c88`); this heading said "IN REVIEW — waiting on Eliot's merge"
+until the tutoring-pass records commit of 2026-08-26 corrected it. The follow-on from the notes redesign: the two
+hand-written diagram galleries (`microeconomics-diagrams.html`,
+`macroeconomics-diagrams.html`) join the D61 reading design —
+`revision-notes-topic.css` plus a rewritten `revision-notes-diagrams.css`,
+the "On this page" rail replacing the Contents jump-list, cards on
+hairlines, `exam-note` in the exam-tip clothes, the framed no-JS
+tap-to-enlarge on all 87 raster diagrams, first diagram promoted
+`fetchpriority="high"`, and the notes-cta replaced by the D58-style close
+with every destination surviving exactly once. Content byte-identical,
+proved by `_archive/working/notes-family-consistency/check_content_identity.py`.
+`docs/audit/DECISIONS.md` D62.
+
+| Changed | Where |
+| --- | --- |
+| Both galleries rebuilt on the shared sheet; head swaps textbook → topic sheet | `revision-notes/*-diagrams.html` |
+| The gallery sheet, rewritten on the D61 tokens, scoped one class deeper than the shared sheet | `css/pages/revision-notes-diagrams.css` |
+| Per-page component-script hook for hand-written pages (`EXTRA_COMPONENT_SCRIPTS`); tail sync understands `defer` | `scripts/bake_templates.py` |
+| `EXTRA_SCRIPT_PAGES` names the two galleries; notes-other tails reseeded 1 → 2 | `scripts/verify_page_shell.py` |
+| Mark-as-revised gated on `.topic-meta`; scrollspy steps back on upward scroll | `js/components/notes.js` |
+| The four textbook pairs stay (one page still loads that sheet); two gallery pairs added | `scripts/verify_contrast.py` |
+| Gate 1 record: PROPOSAL, content-identity proof, screenshot harness, evidence | `_archive/working/notes-family-consistency/` |
+
+### Three things a future session needs to know
+
+1. **`revision-notes-textbook.css` now serves exactly ONE page,
+   macro-application — because that page's move onto the design was built
+   and then REVERTED, byte for byte, on Eliot's instruction.** Its filter
+   panel painted intermittently squashed in his Chrome and Safari through
+   three filter designs and two paint-isolation attempts, while headless
+   Chromium/WebKit/Firefox rendered the same files correctly — a
+   compositing fault, not layout (measured geometry stayed right while the
+   paint was wrong). The full record:
+   `_archive/working/notes-family-consistency/PROPOSAL.md` and
+   the record branch `record/macro-application-attempts` (pushed, kept unmerged). Do not re-attempt by
+   iterating markup; start from why that page's paint misbehaves.
+2. **The galleries get notes.js through the bake**, never a hand-edited
+   tail: `bake_templates.EXTRA_COMPONENT_SCRIPTS` +
+   `verify_page_shell.EXTRA_SCRIPT_PAGES`, the standing two-file rule.
+3. **The galleries' CTA destinations were pinned deliberately** — the
+   past-papers panel still points at `/past-papers/` (all boards), not
+   `/past-papers/edexcel/`; upgrading it is a one-line change per gallery
+   awaiting Eliot's say-so.
+
+## Notes topic-page redesign — the 166 pages (2026-08-25) — LIVE (merged 2026-08-25, `53532083`, PR #30)
+
+**STATE: live.** Eliot merged PR #30 on 2026-08-25 with a merge commit
+(`53532083`); this heading said "IN REVIEW" until the family-consistency
+docs pass the same day corrected it. The three-gate project from the 2026-08-25 brief:
+Gate 1 mock and Gate 2 plan approved by Eliot (both in
+`_archive/working/notes-redesign/`, the design record), Gate 3 implemented the plan
+as written. `docs/audit/DECISIONS.md` D61.
+
+**What it is.** The 166 generated topic pages leave the 2025 "textbook" card
+for a reading layout: a 38em column, one component grammar (3px left rule,
+near-white tint, small-caps label — no gradients, pills or shadows), the
+contents list doubling as a sticky "On this page" rail from 1024px (same
+element, CSS grid), definition cards derived from the `key-definition` chips,
+framed full-column diagrams with a no-JS tap-to-enlarge, honest table scroll
+cues, and `js/components/notes.js` (progress bar, scrollspy, back-to-top,
+mark-as-revised in localStorage, `<dialog>` lightbox — all JS-injected, so
+no dead controls with JS off). The two failing chip contrasts the a11y pass
+deferred close at 5.4:1 and 5.6:1.
+
+| Changed | Where |
+| --- | --- |
+| The new sheet — the approved mock's CSS verbatim, only the header comment rewritten | `css/pages/revision-notes-topic.css` (new) |
+| 166 records repoint `pageStylesheets` (scripted metadata edit, declared in PLAN.md §2) | `notes-data/topics/**/*.json` |
+| `with_definition_cards()` (540 cards) + `with_table_regions()` (122 regions), wired into `apply_all()` | `scripts/notes_extras.py` |
+| `with_webp_pictures()` grows the `<a class="diagram-zoom">` wrapper + first-diagram `fetchpriority="high"` (92 promoted; the lazy-first `2-6-2-trade` deliberately not); topic pages load `notes.js` via the family extra-script hook | `scripts/build_notes_pages.py` |
+| The enhancements, one file, defer, topic pages only | `js/components/notes.js` (new) |
+| `FAMILY_SCRIPT["notes-topic"]` — one line; every pinned shape/spine count held without reseeding | `scripts/verify_page_shell.py` |
+| Eight new pairs for the new sheet's tokens; the four textbook.css pairs stay (that sheet still ships for 3 pages) | `scripts/verify_contrast.py` |
+| Transform classification tests + totals against an independent scan (not a pinned literal, so adding content cannot fail CI) | `scripts/tests/test_notes_extras.py` |
+| The editing guide, written for Eliot | `docs/EDITING-NOTES.md` (new) |
+
+**Verified:** the full `verify.yml` suite green locally including
+`verify_generated.py` (0 files would change) and `test_compare_trees.py`
+(all 39 cases); `suggest_trailers.py` silent — zero `Text-Change:` and zero
+`Markup-Change:`, the rebuild is additions and attributes only. Eyeballed in
+a real browser at 1280 and 360, JS on and off, and print: Demand, 2-1-3
+(densest, live MathJax), 1-6-6 (single section), 1-1-1 (plain shell),
+2-1-2-inflation (`\( … \)` maths), 3-1-2, 4-1-2 (the SVG diagram keeps
+today's rendering, no zoom). The three pages still on
+`revision-notes-textbook.css` (both diagram galleries, macro-application)
+serve byte-identical HTML and CSS and render pixel-identical. The editing
+story proven on a scratch slice: the guide's snippets rendered correctly;
+two plausible hand-edit breaks each stopped the build naming the file and
+the fix.
+
+### Three things a future session needs to know
+
+1. **The old sheet still ships.** `revision-notes-textbook.css` is loaded by
+   `macro-application/` only since the family-consistency pass moved the two
+   galleries off it (D62, same day). Do not delete it, and do not "fix" any
+   other page by editing it — the notes sheet is `revision-notes-topic.css`.
+2. **`notes.js` is a family extra, not a tail change.**
+   `page_shell.SCRIPT_TAIL` is untouched and still five; the relation lives
+   in `verify_page_shell.py`'s `FAMILY_SCRIPT`. A new topic gets the sheet
+   and the script automatically (`new_topic.py` copies a sibling record).
+3. **Printing any page with JS on appended the mobile-nav menu text** — the
+   a11y pass's `nav.js` moves `#mobileNav` to body level, out from under the
+   print block's `#header { display: none }`. Pre-existing and site-wide
+   (proved identical on `main`), not from this redesign. **Fixed on this
+   branch on Eliot's instruction, 2026-08-25**: `#mobileNav` named directly
+   in `css/main.css`'s print block, so both positions are hidden.
+
+## Past-paper question bank — page gate 4 → 2 (2026-08-24) — LIVE (merged 2026-08-24, `fc2400a6`, PR #27)
+
+**STATE: live.** Eliot merged PR #27 on 2026-08-24 and re-submitted
+`sitemaps/past-paper-questions.xml` in Search Console the same day. He
+approved the new-URL list, including the two Balance of Payments pages, as
+proposed. **The deploy was checked by request, not assumed:** all six spot-
+checked new URLs return 200, the live sitemap carries 136 URLs, both copy
+fixes are on the live pages, both Balance of Payments titles carry their
+theme, and no notes page still emits a `?board=…&topic=…` past-paper link.
+`docs/audit/DECISIONS.md` D60.
+
+**What it does.** `build_past_paper_questions.GATE` falls from 4 to 2. The bank
+goes from 81 topic pages to **127 — 46 new, AQA 26 and Edexcel 20**. The 24
+one-question topics stay pageless. Counts verified from `questions.json`, not
+assumed: 151 of the 166 taxonomy topics have at least one tagged question; 15
+have three, 31 have two, 24 have one.
+
+**Why it matters more than the page count suggests.** Below the gate, a topic
+was linked only as `/past-paper-questions/?board=edexcel&topic=<slug>` — a
+query-string filter that needs JavaScript and is not a page Google can index.
+46 notes pages and 46 practice-question pages now point at a real URL instead.
+
+| Changed | Where |
+| --- | --- |
+| `GATE` 4 → 2, with the may-fall-never-rise warning on the constant | `scripts/build_past_paper_questions.py` |
+| `year_span()`: a single year is "all set in 2018", not a bare ", 2018." Ranges byte-identical | same |
+| `title_collisions()` + `display_title()`: Edexcel's two "Balance of Payments" topics take `(Theme 2)` / `(Theme 4)`, the spelling `revision-notes/` already uses | same |
+| Its own `GATE = 4` replaced by an import — it would have gone on reporting 4 | `scripts/verify_past_paper_tags.py` |
+| `PINNED_PAGE_COUNTS["ppq"]` 90 → 136 via `--reseed`. `EXPECTED_SHAPES` unchanged: no new skeleton | `scripts/verify_page_shell.py` |
+| 46 new pages + payloads; 8 hub/section pages relink; 76 topic pages re-rank Related topics | `past-paper-questions/` |
+| 46 notes + 46 practice pages swap the query-string link for the real page — derived, not edited | `revision-notes/`, `practice-questions/` |
+| 16 tests: the gate, `year_span` at n=1/2/3, the collision pair, and that the smallest pages carry the full furniture | `scripts/tests/test_ppq_topic_copy.py` |
+| D60; this section | `docs/audit/DECISIONS.md`, `PROGRESS.md` |
+
+### Three things a future session needs to know
+
+1. **The gate may fall and never rise.** Every page it publishes is a
+   permanent URL and GitHub Pages cannot 301. Raising it strands them.
+2. **Nothing here mints a slug.** `taxonomy.json` reuses `questions-data/`
+   slugs verbatim, so a bank URL is a pure function of a notes URL that has
+   been published for months. That is why 46 new URLs could ship at once.
+3. **`GATE` is declared once and imported three times** — `notes_extras.py`,
+   `build_search_index.py`, `verify_past_paper_tags.py`. Changing it is a
+   one-line edit plus `build.py`; the notes tails, the practice links and
+   `search-index.json` all follow on their own.
+
+**Flagged, not changed** (Eliot's call, both pre-existing on all 127 pages):
+the topic-page `<noscript>` note says questions are listed "grouped by topic"
+on a page that has one topic; and `related_topics()` caps at six with same-unit
+first, so on 76 existing pages a newly-linkable neighbour displaces a
+larger-count one.
+
+## Accessibility & progressive enhancement pass (2026-08-24) — LIVE (merged 2026-08-24, `745f9cb2`, PR #26)
+
+**STATE: live.** Eliot merged PR #26 on 2026-08-24 (`745f9cb2`); this
+heading was stale ("IN REVIEW") until the notes-redesign docs pass of
+2026-08-25 corrected it. One commit per phase. Eliot approved the Phase 2 mock
+(`_archive/working/mobile-nav/`, kept as the design record) on 2026-08-24 and the
+implementation landed the same day; he chose to leave the EXAM
+TIP/EVALUATION chip contrast until his notes-page overhaul. Fixes the
+remaining findings of the August site review; the hub accordions were
+already done (D56) and were not touched.
+
+| Phase | What | Commit |
+| --- | --- | --- |
+| 1 | FAQ accordion → native `<details>`/`<summary>`: answers exist with JS off, closed panels out of the tab order, plus-rotates-to-× (no new glyph), fragment-open kept as a JS nudge; `build_search_index.py` FAQ regex re-pointed, index byte-identical; 0 wording changes | `47f73d63` |
+| 2 | Mobile nav redesigned (approved from the `559a3fd6` mock): the baked `#mobileNav` block in the header — a "Menu" details row, complete with JS off, no dead `href="#"` rows — enhanced by `nav.js` into a white drawer moved to body level (the focus trap inerts everything else, so it cannot stay inside `#page-wrapper`); current page baked as `data-mnav-current` by `page_shell._block()`, normalised by `verify_page_shell.py`'s new `MNAV_CURRENT`; `track.js` excludes `#mobileNav` instead of the deleted `#navPanel`; desktop `#nav` untouched; 190 Text-Change trailers | `6c7a902f` |
+| 3 | Flashcards: question is the accessible name (aria-label removed, describedby hint), answer announced at flip time via role=status, shortcut keys scoped to the player, keyboard hint hidden on touch-only, failed fetch shows a message (string pending approval); GA4 + Leitner untouched | `a9b5f632` |
+| 4 | Contrast: #4caf50→#2e7d32 (text and the four white-text badges), #888/#999/#777→#6b6b6b, notes `--exam-green-text #1c7a42` / `--evaluation-orange-text #c25e00`; teal labels were already #1f6b77 (D58); NEW `scripts/verify_contrast.py` in CI pinning 24 declared pairs; EXAM TIP/EVALUATION chips flagged, not changed — Eliot's call | `d70900b6` |
+| 5 | Reduced motion (smooth scroll gated; global near-zero reduce block; nav still functions) and site-wide print (chrome hidden, black on white, external URLs printed; quiz model answers forced open in print via ::details-content + quiz.js beforeprint; DO-NOT-BREAK's "print deliberately partial" entry overridden on Eliot's instruction, amended in the commit) | `6394d5c2` |
+
+Evidence (screenshots, print PDFs) in `05-website/a11y-pe-2026-08-24/`,
+outside the repo. Merge with a merge commit. After Phase 2 is approved the
+implementation lands on the same branch: template edit → `build.py` →
+`bake_templates.py --apply` → reseeded `verify_page_shell.py` pins →
+trailers → sitemap.
+
+## Site-wide search — header box + overlay (2026-08-24) — LIVE (merged 2026-08-24, `8b329f1e`, PR #24)
+
+**STATE: live.** Eliot merged PR #24 on 2026-08-24; the deploy succeeded and
+the live site serves the header box, the script and the 112.9 KB index
+(checked by request, not assumed). He approved the design and every string
+from a working mock (`_archive/working/site-search/`, on the branch, with
+`PROPOSAL.md` as the wording record) after two revisions of his: the visible
+pink "Search…" box (top-right on desktop, above the title on mobile) and the
+visible Cancel in the overlay. `docs/audit/DECISIONS.md` D59.
+
+**One timing note:** the merge landed nine minutes before the branch's last
+commit, so the compare-trees fixture repair (five cases gripping the pre-D58
+tail; the suite's own scheduled run had already failed on `main` at 07:11
+that morning, before this branch pushed anything) reached `main` in the
+follow-up PR, not the merge.
+
+**What it is.** Every page's baked header carries a search box that opens a
+full overlay: results on every keystroke (80 ms debounce), grouped Revision
+notes → Glossary → Practice & flashcards → Pages, matched substrings
+highlighted, a floated definition card when the query IS a glossary term,
+quick links whenever there is nothing to show, `/` to open, arrows/Enter/Esc,
+focus trapped and returned. The payload is `/search-index.json` — generated,
+112.9 KB raw / 31.3 KB gzipped, fetched once on first open, never on page
+load. With scripting off the box is a real link to `/revision-notes/`.
+
+| Changed | Where |
+| --- | --- |
+| The 9th generator: topics + headings, glossary defs (`ld_description`), decks, pages + FAQ anchors, curated synonyms | `scripts/build_search_index.py`, wired last in `scripts/site_layout.py` |
+| The overlay component (matcher follows `question-search.js`; stopwords; fuzzy only as a second pass) | `js/components/site-search.js` |
+| The baked control (an `<a>`, no dead control without JS) | `templates/header.html`, all 463 pages |
+| `SCRIPT_TAIL` four → five, in both declarations | `scripts/page_shell.py`, `scripts/verify_page_shell.py` |
+| The `.site-search` block at the end (Cancel counter-declares `!important` against the global button rule — the `.consent-button` precedent) | `css/main.css` |
+| `search` GA4 event on result choice (consent-gated no-op); pointer in track.js's header | `js/components/site-search.js`, `js/components/track.js` |
+| No-dangling-results + size-budget tests; the sliced-component node test, in CI | `scripts/tests/test_build_search_index.py`, `scripts/test_site_search.js`, `.github/workflows/verify.yml` |
+| `search-index.json` noted beside the other runtime-fetched JSON | `_config.yml` |
+| D59; generator counts | `docs/audit/DECISIONS.md`, `CLAUDE.md`, `scripts/CLAUDE.md` |
+
+### Three things a future session needs to know
+
+1. **The index schema is declared twice on purpose** — built in
+   `build_search_index.py`, expanded in `site-search.js` — and
+   `scripts/test_site_search.js` is what holds them together: it slices the
+   DOM-free half out of the shipped component and runs the real committed
+   `search-index.json` through it, so a schema change that edits only one
+   side fails CI.
+2. **The generator runs LAST of the content generators** because it reads
+   `<h1>`s from pages the other generators write earlier in the same build
+   (the sitemap's own contract). Moving it earlier in
+   `site_layout.CONTENT_GENERATORS` would silently index the previous
+   build's titles.
+3. **"Search…" is visible baked text on all 463 pages**, declared with 190
+   `Text-Change:` trailers on the implementation commit. Any future header
+   wording change repeats that, and the mobile header is ~3em taller to fit
+   the in-flow box — baked from first paint, so no CLS.
+
+## Topic-page tail redesign — the 166 notes pages (2026-08-23) — LIVE (merged 2026-08-24, `32c0bacb`, PR #23)
+
+**STATE: live.** Eliot merged PR #23 on 2026-08-24. He had approved the
+design from a static mock (`_archive/working/topic-tail/`, on the branch: the mock
+page, before/after screenshots at 1280 and 360 px, `PROPOSAL.md` with every
+string) and the wording as proposed, and chose to strip the legacy tail out
+of the slices rather than have the generator skip it. `docs/audit/DECISIONS.md`
+D58.
+
+**What it fixes.** Every topic page ended in a stack of six full-width boxes:
+related-topic pills, an author box, a three-button "Ready to apply these
+notes?" box, then "Test yourself", "Revise with flashcards" and "Past paper
+questions" cards. The paid ask sat above the free next steps; every link to
+the money pages was button copy; and 24 of the 139 past-paper sentences
+under-reported their page (12 tagged topics had none) because the scripts
+that placed them wrote into rendered pages the next build overwrote. Now,
+after the last section: related topics (plain links, the twin sentence) →
+"Carry on with this topic" (practice questions, flashcards, past-paper
+questions as three quiet panels, the diagram-gallery line under them where
+a page has one) → a slimmer "About the author" → one sentence with two
+real-text links ("online A-Level Economics tutor", "A-Level Economics essay
+marking") → prev/next. ~1,150 px → ~530 px at 1280; ~2,100 px → ~1,250 px at
+360. Every destination kept, exactly once per page.
+
+| Changed | Where |
+| --- | --- |
+| The tail builder: `with_tail()`, `next_steps_block()`, `past_paper_note()`, the `FLASHCARDS_OF_DIR` / `PAST_PAPERS_HUB` / `SERVICES` constants, the full chrome-string list; `CTA_RE` and the two insert-above-the-cta functions gone | `scripts/notes_extras.py` |
+| The 166 slices end at their last `</section>` (+ the optional diagram-gallery line): 5,567 lines deleted, 0 added, verified block-for-block | `notes-data/topics/` |
+| `CONTAINER_CLOSE` imported from notes_extras; docstring | `scripts/build_notes_pages.py` |
+| `load_bank()` and `PAPER_DIRS` split out of `load()` so the notes tail counts from the bank's source files | `scripts/build_past_paper_questions.py` |
+| `.notes-questions-link` rules and the related-pill / author-box rules replaced by the `.topic-related` / `.topic-next` / `.topic-author` / `.topic-services` block at the end; `.notes-cta` kept (galleries, macro-application); label teal `#2a8998` → `#1f6b77` | `css/pages/revision-notes-textbook.css` |
+| Check 6 reseeded: 6 spine shapes → 1 | `scripts/verify_page_shell.py` |
+| Stub slice no longer copies a tail; checklist steps 4–5 | `scripts/new_topic.py` |
+| **Retired** (deleted): `append_questions_link.py`, `append_past_papers_link.py` | `scripts/` |
+| New: derived sentence, count agreement with the index, tail shape | `scripts/tests/test_notes_extras.py` |
+| D58; the `notes-cta` board-differentiation entry amended | `docs/audit/DECISIONS.md`, `docs/audit/DO-NOT-BREAK.md` |
+| `revision-notes/`, `notes-data/`, `questions-data/`, `scripts/` CLAUDE.md | docs |
+
+### Three things a future session needs to know
+
+1. **The tail is a pure function of source data, and the order of
+   `site_layout.GENERATORS` is why it reads SOURCE.** `build_notes_pages.py`
+   runs first; `questions.json` is written later in the same build. So the
+   past-paper line counts from `past-paper-questions-data/` through
+   `build_past_paper_questions.load_bank()` under the same two conditions
+   the index publishes a question (tagged, has a mark scheme), and
+   `test_notes_extras.py` fails if the two ever disagree. The quiz line is
+   `questions-data/`'s `notesTeaser`; a topic page cannot build without its
+   `questions-data/` record.
+2. **The strip commit touched every slice without changing a word, and
+   `rewrite_notes_meta.py` dates a page from its slice's last commit.** Do
+   not run `rewrite_notes_meta.py --apply` expecting it to leave the dates
+   alone — it would bump all 166 "Updated" dates to the strip. Eliot's call:
+   `dateModified` is not refreshed for this change (the three previous chrome
+   passes did not either). If a real content edit needs a refresh on one
+   page, that page's date moves and the other 165 must not; check the diff.
+3. **The board past-papers link is still DO-NOT-BREAK and still per page** —
+   now the last sentence of the past-paper panel, or the panel itself on the
+   15 pages with no tagged questions. The 36 topics whose questions include
+   Edexcel AS papers now say so ("A-Level and AS papers"); the old sentence
+   called them all A-Level.
+
+**Wording that changed** (all chrome, all declared with `Text-Change:` on
+166 pages; the full list is `_archive/working/topic-tail/PROPOSAL.md`): new "Carry
+on with this topic", the services sentence, "Whole papers and mark schemes:
+<Board> past papers."; the three button labels became sentence-case links
+("Practice questions: 1.2.2 Demand", "Flashcards: 1.2.2 Demand", "Past paper
+questions: 1.2.2 Demand"); "Flip through the Theme 1 deck …" → "The Theme 1
+deck …"; the past-paper sentence is derived and drops the topic name;
+removed: "Ready to apply these notes?", the three buttons, the three `<h2>`s.
+
+### Still open from this work
+
+Nothing on the site. A newsletter form has an insertion point (a comment in
+`notes_extras.tail_blocks()`, after the author and before the paid sentence)
+for when Eliot settles a sending rhythm — OWNER-TODO "Newsletter, ongoing".
+
+## Tutoring enquiry form — board, year, enquirer, days (2026-08-23) — LIVE (merged 2026-08-23, `ab255c6`, PR #21)
+
+**STATE: live.** Eliot merged PR #21 on 2026-08-23, signing off every new
+visible string as written (including the two placeholder options and the
+neutral message placeholder) and the two unrequested changes below, and
+checked the form on his own phone after the deploy.
+
+The modal on `tutoring.html` collected name, email and message, so a reply
+had to open with questions. It now also asks, between email and message:
+exam board (`exam_board`, required, with "Not sure yet" as a real choice),
+school year (`school_year`, required), who is asking (`enquirer`, required)
+and preferred days (`preferred_days`, optional, Mon–Sun as checkbox chips
+that post as repeated values Formspree lists). The field names are what
+Formspree prints in the email, so they were chosen to read as labels. The
+message placeholder now asks for target grade, hard topics and start date,
+and the error copy lost "Oops!".
+
+Three things a future session needs to know:
+
+1. **`novalidate` is gone from `#enquiryForm`.** It had been there since
+   May with no custom validation behind it, so every `required` on the form
+   was decorative and an empty form could be posted. The browser now blocks
+   a submit with no board, year or enquirer — with JavaScript on (the submit
+   event does not fire) and off (the native POST does not leave the page).
+   Do not put it back without writing the validation it implies.
+2. **The dialog now stacks above the cookie bar and the mobile nav bar**
+   (`.modal` is `z-index: 10003` in `css/pages/tutoring.css`; `#consent` is
+   10000, `#titleBar` 10001). At 1000 the cookie bar covered the submit
+   button at 360px until the visitor had answered it. The bar is untouched
+   and reappears the moment the dialog closes.
+3. **`ea:lead` still carries only `{type: "tutoring_enquiry"}`.** None of
+   the new field values reach GA4; `js/components/track.js` is unchanged.
+
+Tested in headless Chrome with Formspree mocked (no real submission, no
+email): JS on and off, the honeypot filled (the `_gotcha` value survives
+the POST, so Formspree can drop it), a board-less submit (blocked, no
+request), keyboard to the chips (Tab, Space, visible focus ring), and a
+360×640 walkthrough: every input and select renders at 16px, nothing is
+clipped, the chips wrap to two lines, the overlay scrolls and the submit
+button reaches the viewport. Screenshots are in
+`05-website/enquiry-form-2026-08-23/` (outside the repo). No new page, so
+no sitemap change: `build_sitemap.py --check` says SITEMAP OK.
+
+## Performance pass — MathJax, fonts, hubs, images (2026-08-23) — LIVE (merged 2026-08-23, `367297b`, PR #19)
+
+**STATE: live.** Eliot merged PR #19 on 2026-08-23 and signed off the three
+new wording strings (the Calendly fallback link and the two hub notes) the
+same day; the Open Sans swap was his call, made before the merge. Live
+Lighthouse after the deploy: homepage 91 → 100, tutoring 56 → 98,
+practice-questions 86 → 98, every page's weight down — the table is in
+`seo/20-performance-pass-2026-08-23.md`, with the one page that did not
+move (the MathJax notes sample, bimodal as before) explained there.
+
+Four commits, one per phase, plus the record. Every phase ran the full suite green
+before its commit and `verify_generated.py` after it. No URL moved or went
+away (new files only: `/webfonts/*.woff2`, `/images/**/*.webp`,
+`/past-paper-questions/<board>/questions.json`). No economics wording
+changed. The GSC-frozen heads are byte-identical to `main` (checked by
+script after every phase). Lighthouse before/after, byte counts and every
+pin that moved are in `seo/20-performance-pass-2026-08-23.md`.
+
+| Phase | What | Commit |
+| --- | --- | --- |
+| 1 | MathJax loaded **iff the body has maths** — `build_notes_pages.py` scans the rendered body for `\( \[ $$`; the stored `head.mathjax` field is gone from all 173 records (no page needed an override); 67 pages dropped the ~300 KB script, the 59 that keep it gained a `cdn.jsdelivr.net` preconnect; `verify_page_shell.py` check 5 asserts the iff both ways (break-tested). Docs that claimed "only if they use \( \)" corrected | `9b6b61c` |
+| 2 | **Fonts self-hosted**: 11 static latin woff2 files under `/webfonts/` (the files Google serves; Source Sans Pro byte-for-byte, Open Sans and Merriweather static instances checked glyph-by-glyph against the variable files — 0 advance-width mismatches, so the `size-adjust` fallbacks still hold), OFL texts beside them. `@font-face` in `main.css` (Source Sans Pro ×5, Open Sans ×3) and only in `revision-notes-textbook.css` + `quiz.css` for Merriweather. Every head lost the Google preconnect pair + stylesheet and gained a preload of the body face; `page_shell.stylesheet_block()` for the 446, `bake_templates.sync_fonts()` for the 17; `verify_css_load_order.py` holds the Google origins at 0/463 and the preload at 463/463. Open Sans was first kept (7 rules, two on every page), then **swapped for Source Sans Pro at the same weights on Eliot's instruction** (follow-up commit) — 600 cut added, three Open Sans files removed, breadcrumb pinned at 400 to keep the weight it always rendered at; Source Sans Pro not swapped for Source Sans 3. One wanted knock-on: MathJax now scales its formulae against the real Merriweather (125.7 %) rather than the Georgia fallback (118 %) on first visits, because the font arrives before it measures | `5331fc7` |
+| 3 | **Board hubs** bake the 20 most recent cards + a static note (section and topic pages still bake every card — the no-JS list); `edexcel/` 799 → 88 KB, ~5,600 → 762 DOM nodes; `aqa/` 620 → 82 KB. **Per-board payloads** `past-paper-questions/<board>/questions.json` (221 / 193 KB vs the 414 KB master, which is byte-unchanged) for the hub and section pages; `test_question_search.js` holds `HUB_CARDS == PAGE_SIZE`, the note, the payloads and the `data-src`s. **tutoring.html**: Calendly `widget.css` out of the head, widget loaded lazily (IntersectionObserver, one screen early, immediate at `#booking`), a real fallback link in the div (Calendly only appends, so the loader removes it), the three `.enquire-button`s get `href="/contact.html"` under the modal. Two pins: `EXTRA_SCRIPT_PAGES` emptied, root tails 2 → 1 | `b6a299e` |
+| 4 | **Images**: five photos get `.webp` + `-400.webp` via `<picture>`/`srcset` (JPEG fallback at its URL; `eliot_grad` gets 400w + 900w, never its 1395 px original); 106 diagram PNGs get lossless `.webp` twins (`scripts/build_diagram_webp.py`, 32 % smaller) wrapped in `<picture>` by `build_notes_pages.py` (img bytes untouched) and once by hand-equivalent splice on the two galleries; `verify_image_dimensions.py` now checks `<source>` candidates and the PNG/WebP twins; 130 image boxes measured identical before/after. **Dead CSS, safe part**: `ul.social` block, `.footer-dark`, 27 dead `-moz-`/`-ms-` prefixes — 16 pages × 485 properties, 0 differences. **Head**: `theme-color #d52349` on 463 pages; manifest gains `id`, `start_url`, `scope`, `lang`, `description`, `theme_color` aligned | `df68d2a` |
+
+**Deliberately left alone, with the reason written down:**
+
+- **The Dopetrope `.row`/`.col-*` grid (~15.9 KB) and the `#main .row >
+  div[class*="col-"]` trap.** Five hand-written pages use ~30 rows,
+  `contact.css` carries a rival bare grid that `main.css` is currently
+  beating, and `.profile-highlight`/`.teaching-methods` restyle the same
+  classes — a page-by-page conversion with `computed_style_diff.py` on
+  each, not a deletion. Plan in OWNER-TODO; trap 7 above still stands.
+- **Source Sans 3** (Open Sans went, see Phase 2).
+- **The 6 section pages** still bake every card (61–126): they are where
+  the full list lives for a reader without JavaScript.
+- **Merriweather latin-ext**: one glyph on one page (the rupee sign on
+  AQA `2-1-4`) now falls back to Georgia. Not worth a 50 KB file.
+- **The maskable icon** needs artwork — OWNER-TODO.
+
+**New visible strings, for Eliot's approval (Text-Change trailers on the
+commits):** the Calendly fallback link "Book a free 15-minute intro call on
+Calendly" (tutoring.html); on the two board hubs the note "Showing the 20
+most recent of N questions. Every question is listed on its section and
+topic pages below, and the filters above search all N." and the
+`<noscript>` variant "These filters need JavaScript. The most recent
+questions are listed below, and every question is listed on its section and
+topic pages, linked further down. All the paper and mark scheme links work."
+
+## Analytics consent — hard gate + cookie bar (2026-08-23) — LIVE (merged 2026-08-23, `83ae353`, PR #17)
+
+**STATE: live.** Eliot approved the bar copy (as a two-line trim) and the
+privacy wording on 2026-08-23 and merged the same day. The decision (hard
+gate, not Google's Consent Mode) was his; the build follows his spec; D57
+records it. **From 2026-08-23 GA4 counts only visitors who said yes** — the
+drop is expected and permanent; the date is in OWNER-TODO's Rank-check log
+so the September/October reads are read against it. No GA4 admin change was
+needed. `gh` was installed and logged in on Eliot's Mac during this work, so
+future sessions can open PRs and watch CI directly.
+
+**What it is.** Until this every page loaded gtag.js in its `<head>` and GA4
+set its cookies on first paint. Now the head block (`page_shell.GTAG`, one
+literal on all 463 pages, written into the 17 hand-written pages by
+`bake_templates.sync_gtag()`) only defines `window.eaLoadAnalytics()` — the
+standard snippet, gtag assigned to `window`, the script tag built in JS —
+and calls it if `localStorage["ea-consent"]` is `"yes"`. Otherwise gtag.js
+is never requested and no analytics cookie is set (Google Fonts still loaded then — self-hosted since the performance pass;
+they are not analytics). `js/components/consent.js`, now fourth in
+`page_shell.SCRIPT_TAIL`, asks once: one compact bar at the bottom of the
+viewport, on first scroll or after 1.5 s, no overlay, nothing blocked; two
+buttons of identical weight, "That's fine" / "No thanks"; "More in our
+privacy policy →". Both answers are permanent until `privacy.html`'s
+"Change your analytics choice" button (hidden until JS un-hides it — with
+scripting off there is no bar, no analytics and nothing to change) clears
+the value and re-shows the bar. `track.js` and `flashcards.js` needed no
+change: both test for `window.gtag` before every event.
+
+**Where things went and why.** The bar CSS is the last block of
+`css/main.css` — it is on all 463 pages, so not a page sheet. The change
+button's inline-link styling is in `css/pages/privacy.css`.
+`verify_page_shell.py`: `SCRIPT_TAIL` restated with `consent.js`; check 4's
+`"gtag"` requirement became `"consent-gated gtag"` (gtag.js URL followed by
+the `localStorage` read); new zero tripwire `UNGATED_GTAG` (no page may
+carry a `<script src=".../gtag/js">`). The four glossary/notes hub pages
+declared `Markup-Change:` for the lost external script tag.
+
+**Tested** with headless Chrome over the DevTools protocol (a stdlib CDP
+client in the session scratchpad, not committed): 48 of 49 checks across
+first visit (no bar at first paint, bar after the delay or on first scroll,
+no googletagmanager request), "No thanks" (stored, bar gone, no bar and no
+Google analytics request on later pages, `track.js` no-ops), "That's fine"
+(stored, gtag.js requested, `dataLayer` js/config, a `generate_lead`
+reaches it, the head loads it directly on the next page), the privacy
+button (control un-hidden, bar re-shown at once with focus on its first
+button, value cleared), JS off (no bar, no Google analytics request),
+`prefers-reduced-motion` (transition none), keyboard (Tab reaches both
+buttons and the link; focus ring the brand red), and 360 px (buttons on one
+row, footer link still clickable under the bar via `elementFromPoint`).
+The first copy ("We'd like to use one analytics cookie to see which pages
+students find useful. Nothing personal is collected either way.") ran to
+three lines at 360 px at a legible 14.7 px; Eliot chose a trim, and the
+shipped sentence — "Can we use one cookie to see which pages help students?
+Nothing personal is collected." — measures two lines at 360 px and one at
+1280 px (49/49 checks).
+
+## Maintainability — one build, derived counts, tests (2026-08-23) — LIVE (merged 2026-08-23, `95cf271`)
+
+**STATE: five commits on `chore/maintainability`, not pushed.** Eliot reviews
+before anything is pushed. **No published page changed in any commit** —
+`verify_generated.py` passed after every phase and `python3 scripts/build.py`
+run in place reports 0 files changed. The one `_config.yml` edit is an
+`exclude` line for the new `package.json`, which would otherwise have been
+served at `/package.json`.
+
+| Phase | What | Where |
+| --- | --- | --- |
+| 1 | Four doc contradictions corrected (templates/ "left published"; the archived notes-conversion recipe; prev/next marked live; `/verify` wording) | `_config.yml`, `docs/DEPLOYMENT.md`, `_archive/`, this file, `.claude/commands/verify.md` |
+| 2 | `scripts/build.py` (generators in order → bake → shell check → one line; `--sitemap`, `--check`); the generator list declared ONCE in `scripts/site_layout.py`; `scripts/prettier_util.py` (one call site, one version, fails loudly without npx); `package.json` pin | `scripts/`, root `CLAUDE.md`, `.claude/commands/rebuild-nav.md`, `notes-data/CLAUDE.md` |
+| 3 | `.prettierignore` (generated by `bake_templates.py --prettierignore`) + `.prettierrc`; `build_sitemap.py --check` ends `SITEMAP OK` / `SITEMAP STALE`, lastmod lookups parallelised (20 s → 3 s); `.githooks/post-commit` (auto sitemap commit) and `prepare-commit-msg` (suggested trailers), opt-in; `--staged --trailers` on both integrity verifiers; `scripts/suggest_trailers.py` | `.prettierignore`, `.prettierrc`, `.githooks/`, `scripts/` |
+| 4 | `verify_page_shell.py` split into pinned INVARIANTS and derived CARDINALITIES (topic counts from `boards.json`); `--reseed` on `verify_page_shell.py`, `verify_boards.py`, `bake_templates.py` (`scripts/reseed_util.py`); `EXPECTED_SPINE_COUNTS` deleted; `scripts/new_topic.py` scaffolder; "Adding one" blocks in `questions-data/CLAUDE.md` and `flashcards-data/CLAUDE.md` | `scripts/`, data `CLAUDE.md`s, `docs/audit/DO-NOT-BREAK.md` |
+| 5 | The page skeleton, head values and breadcrumb builders moved into `page_shell.py`; four generators migrated one at a time, each byte-identical; `build_questions.update_sitemap()` (dead) deleted; `site_layout.py` takes `family_of`/`pages`/publish rules so no generator imports a verifier; `scripts/tests/` (62 stdlib unittest cases) wired into the fast CI job | `scripts/`, `.github/workflows/verify.yml` |
+
+**Two commands only Eliot runs:** `git config core.hooksPath .githooks`
+(enables the hooks, once per clone) and the deletion of the ten local
+branches already merged into `main` (`git branch --merged main`).
+
+**Closed at review (2026-08-23):** `test_compare_trees.py` moved out of
+`verify.yml` into the weekly `compare-trees-suite.yml` (also on demand and on
+any change to the harness). **Still open:** `.claude/hooks/block-generated.py`'s
+`HAND_WRITTEN` is still a hand-copied list of the 17 (bake_templates.py
+prints the authoritative one). 
+## Hub redesign — the 12 board hubs (2026-08-23) — LIVE (merged 2026-08-23, `dedd5d1`)
+
+**STATE: live.** Merged and pushed 2026-08-23 after Eliot reviewed the
+branch; the mock folder was deleted at his request. He approved the design from
+a written proposal and a static mock (`_working/hub-redesign/`, since removed),
+dropped the "start here" strip, approved the wording list, chose shared CSS in
+`main.css`. `docs/audit/DECISIONS.md` D56 has the reasoning in full.
+
+**What it fixes.** The six notes board hubs hid every topic link behind a
+JS-only accordion (`.subtopic-list { display: none }` plus an inline script)
+with no fallback, so with scripting off 166 topic links on ranking pages were
+unreachable, and a student from Google saw unit headings and no topic names.
+The six practice board hubs collapsed the same way behind a `<noscript>`
+fallback. Both families now render an always-open topic index: a jump row of
+unit anchors, one white panel per unit with the existing blurb, the topics as a
+two-column grid (one column under 737px), spec code in a muted span. One
+shared component, `.resource-index-*` at the end of `css/main.css`, used by
+both families. No JavaScript touches the index on either.
+
+| Changed | Where |
+| --- | --- |
+| The six notes hub slices — markup of the index only; every link, href, anchor text, unit heading and blurb carried over; `notes_sequence.py` output diffed identical before and after | `notes-data/hubs/<dir>.html` |
+| The six hub records: `mainAttrs` gains `class="notes-hub-page"`, `afterScripts` loses the inline accordion script | `notes-data/hubs/<dir>.json` |
+| `render_unit()` rewritten, `render_jump()` and `unit_id()` added, the `<noscript>` block and the "Click any unit…" line removed | `scripts/build_questions.py` |
+| Accordion block removed; "Last attempt" fill kept | `js/components/quiz.js` |
+| `.resource-index-*` block appended; the two page stylesheets reduced to their page-specific leftovers and scoped | `css/main.css`, `css/pages/revision-notes-topics.css`, `css/pages/practice-questions.css` |
+| Assertion 13 `BOARD_SWITCHER` gains eight explicit hub pairs (`HUB_TWINS`) | `seo/tools/verify_seo.py` |
+| `mcq-hub` head shapes 2 → 1 | `scripts/verify_page_shell.py` |
+| Comments only | `scripts/page_shell.py` |
+| The `<noscript>` entry amended; D56; REVIEW-NOTES H1 | `docs/audit/DO-NOT-BREAK.md`, `docs/audit/DECISIONS.md`, `docs/REVIEW-NOTES.md` |
+
+**Wording that changed** (all navigational, all declared with `Text-Change:`):
+"Click any topic to expand the subtopics." → "Every topic is listed below —
+pick one to start revising." on the six notes hubs; the AQA hubs' "Click on
+any unit below to view its subtopics:" and the practice hubs' "Click any unit
+below to see its topics." deleted; "Studying AQA instead? …" / "Studying
+Edexcel instead? …" board-switch line added to each notes hub; "N topics" after
+each notes unit heading; the `+` toggle glyphs gone with the buttons.
+
+**Not in scope, deliberately:** `macro-application` (a content page that only
+classifies as a hub — no topic list, no accordion), `revision-notes/index.html`
+(GSC-frozen head, D50), the flashcards hub, the glossary.
+
+### Three things a future session needs to know
+
+1. **`notes_sequence.py` reads the hubs' link order and anchor text** for the
+   previous/next rows on all 166 topic pages. The spec code is still inside
+   each anchor (in a `<span class="resource-index-code">`), so the concatenated
+   anchor text is unchanged. Moving the code outside the `<a>` would rename
+   every prev/next label on the site.
+2. **The `.resource-index-*` names were grepped against every published page,
+   `css/`, `js/`, `templates/` and `scripts/` before being added** — zero prior
+   uses — and the only other class introduced is `.notes-hub-page` on the six
+   notes hubs' `<main>`. Nothing else on the site can pick them up.
+3. **Headless Chrome will not open a window narrower than 500px**, so a
+   `--window-size=360,…` screenshot is a 500px layout cropped to 360 and lies
+   about mobile. Render the page inside a 360px `<iframe>` on a wrapper page
+   instead; that is how the 360 checks for this work were done.
+
+### Closed the same day, on the same branch
+
+- REVIEW-NOTES H1: five AQA unit blurbs described the wrong unit. Eliot gave
+  permission for the wording; rewritten from each unit's own topic titles on
+  both hub slices and in `build_questions.py`'s `UNITS`, `Text-Change:` on the
+  four pages. The table of new lines is in REVIEW-NOTES H1.
+- `build_questions.py` lower-cased the group name into the practice hero and
+  meta description ("the uk economy"). Now `mid_sentence()`, which keeps
+  acronyms; only `practice-questions/edexcel-theme-2/index.html` changed.
+
+### Still open from this work
+
+Nothing.
+
+## GA4 conversion tracking (2026-08-22) — LIVE (merged 2026-08-22, `bb18d6d`)
+
+**STATE: live, and the GA4 admin side is done.** Eliot marked the key events,
+confirmed Enhanced Measurement outbound clicks, registered the custom
+dimensions and tested events arriving, all on 2026-08-22. Nothing remains open.
+
+Until this the only custom GA4 events were the flashcard player's. Nothing
+fired when a visitor did anything that makes money. `js/components/track.js`
+— hand-written, IIFE, no globals, the same `track()` no-op-without-gtag helper
+as `flashcards.js` — now fires, on every page:
+
+| Event | When | Params beyond `page_path` |
+| --- | --- | --- |
+| `begin_checkout` | click on a `buy.stripe.com` link | `currency`, `value`, `items[{item_name, item_category "marking", item_variant, price}]` from `data-package` / `data-turnaround` / `data-price` on the 8 `marking.html` buttons |
+| `purchase` | `confirmation.html` load | attributed via `sessionStorage["ea-checkout"]` written at `begin_checkout`; `transaction_id "ea-"+ts`; cold open → `value 0`, `item_name "unknown"`; a refresh sends nothing |
+| `generate_lead` | Formspree `response.ok` on `#enquiryForm` / `#contact-form` | `lead_type "tutoring_enquiry"` / `"contact_form"`; the inline scripts dispatch `CustomEvent("ea:lead")` |
+| `intro_call_booked` | Calendly `calendly.event_scheduled` postMessage, origin-checked | once per page |
+| `sign_up` | submit of the Kit form on `index.html` (it posts natively) | `method "newsletter"` |
+| `cta_click` | in-content link to `/tutoring.html`, `/marking.html`, `/contact.html` — not `#header`/`#nav`/`#navPanel`/`#titleBar`/`#footer`, and not a link to the page already open | `cta_text` (≤60), `cta_target` |
+
+Outbound Tutorful/LinkedIn clicks are Enhanced Measurement's own `click`
+event, deliberately not duplicated. No personal data is ever sent.
+
+### Three things a future session needs to know
+
+1. `track.js` is the third entry of `page_shell.SCRIPT_TAIL` (`nav.js`,
+   `track.js`, `main.js`), restated in `verify_page_shell.py`'s literal. It is
+   on all 463 pages because the CTA events are delegated on `document`. The
+   file's header comment is the authoritative list of events and params; a new
+   event goes there first.
+2. Nothing blocks or delays the visitor: capture-phase listeners, no
+   `preventDefault`, no `event_callback`. GA4 sends with `sendBeacon`, which
+   survives the Stripe navigation and the native Kit post. With JS off the
+   forms post natively and nothing fires — accepted.
+3. In GA4, `lead_type`, `cta_text` and `cta_target` are registered custom
+   dimensions from 2026-08-22; data exists only from that date. A new event
+   parameter needs registering the same way or it will not show in reports.
+
+Tested before shipping with headless Chrome over the DevTools protocol
+(`googletagmanager.com` blocked so the page's own `gtag()` fills
+`window.dataLayer`): 47 checks across `marking`, `confirmation`, `contact`,
+`tutoring`, `index` and one notes page, including the blocked-`track.js` case.
+The Calendly path was a synthetic `MessageEvent` from `https://calendly.com`;
+Formspree and Stripe were mocked.
+
+## Revision notes on-page SEO (2026-08-21) — LIVE (merged 2026-08-22, `ee24918`)
+
+**Unnumbered, for the same reason the two sections below it are.**
+
+**STATE: merged to `main` on 2026-08-22 (merge `ee24918`, twenty commits) and
+live.** Full verification suite green including six new `verify_seo.py`
+assertions (15–20); `verify_generated.py` proves the committed tree is what
+the generators produce. Everything that still needs Eliot is in
+`OWNER-TODO.md`, re-consolidated the same day.
+
+The 166 topic pages, their 7 hubs and the 2 diagram galleries — 176 pages,
+counted by `python3 seo/tools/notes_baseline.py`. Every one of the 166 titles
+put the topic name LAST, behind a board and a spec code earning 4 impressions
+in 28 days. They now put it first.
+
+### What was applied
+
+| | |
+| --- | ---: |
+| Titles rewritten to the brief's formula | 166 topics + 7 hubs |
+| Descriptions rewritten and front-loaded | 166 topics + 7 hubs |
+| `LearningResource` nodes gaining dates, author, audience, alignment | 173 |
+| `<h2>` elements gaining a stable `id` | 1,159 |
+| Pages gaining a contents list, a spec sub-label and an update date | 166 |
+| Twin-board links, where none existed at all before | 109 |
+| Author byline and bio, and a `Person` author in the schema (2026-08-22) | 166 |
+| New internal links | 508 |
+| New `verify_seo.py` assertions | 5 (15–19) |
+| **Published URLs moved** | **0** |
+| **Words of economics wording changed** | **0** |
+
+`verify_text_integrity.py` reports 0 removals across the 166: every difference
+is an addition. The nine new visible strings are chrome and are listed at the
+top of `scripts/notes_extras.py`; the byline and bio are Eliot's own words
+about himself, also there.
+
+### Three things a future session needs to know
+
+1. **`scripts/notes_twins.py` is a written-down table, not a derivation, and
+   that is deliberate.** Nothing in this repo owns the mapping between an
+   Edexcel topic and its AQA counterpart, and the spec code is the trap — 37
+   codes are claimed by both boards with different meanings. Each row carries
+   the measured prose similarity that seeded it; the eight hand corrections say
+   which and why. `verify_seo.py` assertion 13 was AMENDED to permit exactly
+   those pairs and nothing else, so a cross-board link the table does not name
+   still fails.
+
+2. **The contents list is on all 166 and not on the 95 that want one, because
+   of `verify_page_shell.py` check 6.** Gating it on "four or more sections"
+   takes the content spine from 6 shapes to 12 and gives two pages a shape of
+   their own. That check exists to catch a malformed page and its declared
+   singleton set is empty. The block goes everywhere and the spine stays at
+   (97, 29, 16, 11, 7, 6).
+
+3. **The dates are STORED in `notes-data/`, not read from git at build time.**
+   `verify_generated.py` re-runs every generator in a throwaway worktree, so a
+   generator that shelled out to `git log` would answer differently there and
+   fail a correct commit. `seo/tools/rewrite_notes_meta.py` does the git
+   reading, once; re-run it to refresh a `dateModified`.
+
+### Eliot's four decisions, 21 August 2026
+
+Taken after the audit was delivered, on items 1, 7, 8 and 9 of the approval
+document.
+
+| Item | Decision | State |
+| --- | --- | --- |
+| 1. Strip the spec code from the 79 AQA `<h1>`s | **"strip them"** | **DONE**, commit `94a0726`. Lifts DO-NOT-BREAK PH05-021; DECISIONS.md D53 |
+| 7. Add key terms to the pages that define none | **yes; wrote three, approved a fourth** | **DONE**, commit `60da40a`. Four chips on three pages; 1.3.6 deliberately left |
+| 8. The 17 pages under 500 words | **"I can expand these"** | Eliot's; manual list task 20 |
+| 9. Diagrams on the 72 diagram-less pages | **"I'll add diagrams"** | Eliot's; manual list task 21 |
+| (new, 2026-08-22) Drop spec codes from Edexcel titles too | **"Let's do it now"** | **DONE**, D54. 42 retitled; Balance of Payments pair carries Theme labels |
+
+**Item 7 corrected a mistake in the audit's own reporting.** "Twelve pages
+define no term" counted pages carrying a `key-definition` chip, which is a
+GLOSSARY signal — Google does not read `class="key-definition"`. Read one by
+one, eight of the twelve already answer "what is X" in their opening or have a
+topic that is not a definable term. **The real gap is four pages.** Looking
+properly also found a better item: five pages carry fourteen definitions Eliot
+has already written, sitting under a plain `<strong>Term:</strong>` where the
+extractor cannot reach them. Converting them adds fourteen glossary entries and
+changes not one word — manual list task 19.
+
+### What is still open
+
+**Everything that changes a word a student reads** —
+`seo/18-notes-content-approval-2026-08-21.md`. Items 1, 8 and 9 are decided
+(above); item 3 closed 2026-08-22 — Eliot approved spelling out the five
+abbreviated titles, WTO deliberately kept. Items 2, 4 to 6 and 10 to 12 are
+read-and-confirm rather than blocking.
+
+**Things only Eliot can do** were listed in
+`seo/15-notes-seo-manual-todo-2026-08-21.md` (tasks 1–21). **On 2026-08-22
+that file, `seo/13-…` and `seo/18-…` were superseded by `OWNER-TODO.md`**, the
+one list of everything open — a live web-vitals re-run, looking at a page in
+a browser, reading the twin map, the thin pages, the diagrams, the dated
+Search Console reads. The three files carry a banner and are kept as the
+record.
+
+**The author byline** was task 4 of that list and the highest-value item on
+it — every competitor that outranks this site on these queries has a named
+author with credentials. Done 2026-08-22: Eliot supplied and approved the
+wording, and the byline, an "About the author" box and a `Person` author in
+the `LearningResource` schema went onto all 166 topic pages in one pass
+(`scripts/notes_extras.py`, `seo/tools/rewrite_notes_meta.py`,
+`verify_seo.py` assertion 20, DECISIONS.md D55). The same day: task 1 (UK
+SERP check) confirmed the title formula, task 3 closed, and task 2 (term-time
+re-export) was parked because the notes were not complete before the 2026
+summer exams.
+
+### Where it lives
+
+| File | What it is |
+| --- | --- |
+| `seo/17-notes-seo-audit-2026-08-21.md` | the audit, with the 72-row diagram table and the SERP comparison |
+| `seo/17-notes-baseline-2026-08-21.csv` / `-after-` | before and after, one row per page |
+| `seo/18-notes-content-approval-2026-08-21.md` | the twelve decisions needing Eliot |
+| `seo/19-notes-url-rename-proposal-2026-08-21.md` | 176 rows, and why not to do it |
+| `seo/tools/notes_baseline.py` | regenerates either CSV |
+| `seo/tools/notes_titles.py` | the formulas, imported by the rewriter AND the verifier |
+| `seo/tools/rewrite_notes_meta.py` | re-runnable; refreshes `dateModified` |
+| `scripts/notes_extras.py`, `scripts/notes_twins.py` | the six blocks (incl. the byline and author box) and the twin map |
+
+### Deliberately not done
+
+`scripts/intentional-changes.json` is not extended. `compare_trees.py`
+assertion 5 governs `<head>` field equality and 166 pages × six fields is ~996
+entries — for a script `verify.yml` states outright is not a step. Eliot chose
+the written record over the ritual; `docs/audit/DECISIONS.md` D51 carries it.
+
+## Previous / next topic navigation (2026-08-21) — LIVE (merged 2026-08-21, `c0a80f6`)
+
+**Unnumbered, for the same reason the section below it is.**
+
+**STATE: live.** Merged to `main` on 2026-08-21 (merge `c0a80f6`, branch
+`feature/topic-prev-next-nav`) and pushed; the topic-nav markup is on every
+one of the 166 topic pages and `verify_notes_sequence.py` runs in CI. This
+heading read as an open branch until 2026-08-23, two days after the merge —
+the same staleness CLAUDE.md records for three earlier features.
+
+A previous/next row at each end of the notes body on all **166 topic pages**,
+so a student who finishes one set of notes moves straight to the next instead
+of going back to a hub. Two chains, never joined: Edexcel A runs theme 1 → 2 →
+3 → 4 (87 pages) and AQA runs micro → macro (79). At the two ends of a chain
+the spare slot points back at that page's own hub. Out of scope and untouched:
+the seven hubs, `revision-notes/index.html`, the glossary, both diagram
+galleries and `macro-application/`.
+
+**The chain is derived, not stored.** `scripts/notes_sequence.py` takes the
+directory order from `boards-data/boards.json`, the topic order and every
+label from each hub's own links, and the chain lengths from the board's own
+`expectedTopics`. Nothing is written down twice, so nothing can drift apart —
+and `scripts/verify_notes_sequence.py`, now in CI, is what holds those three
+sources together. It fails if a topic page has no place in the sequence, if
+the sequence names a page that does not exist, if a hub's order stops being
+spec-code order, or if navigation appears on a page outside the 166.
+
+**The markup lives in the generator, not in the 166 slices.**
+`build_notes_pages.py` splices it against two anchors that were measured
+across all 166 first. `notes-data/topics/*.html` is still a verbatim byte
+slice and is still never written to.
+
+**No new economics wording.** Every topic label is the hub's own anchor text,
+reused verbatim. The only new visible strings are three captions — "Previous
+topic", "Next topic", "Topic list" — approved 2026-08-21. The same approval
+fixed one typo carried by a hub label since it was written: Theme 2's 2.6.4
+read "Polciies".
+
+**The two rows are not styled alike, and that is deliberate.** The top row is
+the only thing between the breadcrumb and the `<h1>`, so it is compressed, and
+**below 768px it shows its captions only** — one side-by-side line, a flat
+50px, instead of two stacked cards at 182–242px. Measured in Chrome, not
+estimated: the row was pushing the heading down by 111–131px on desktop and
+219–279px on a phone, and is now 57–97px on both. The titles there are hidden
+rather than truncated; each link's `aria-label` still names its topic in full
+and the bottom row shows both titles. Do not "restore" the titles at the top
+on mobile without re-measuring.
+
+No published URL moved; no file was added, removed or renamed under a
+published path. 332 new internal links, all notes → notes, every anchor string
+distinct, so `seo/07b-link-decisions.md` §5 is untouched. It takes lateral
+linking inside the notes section from 53.6% to 100% on these 166 pages.
+
+## SEO / indexing — Search Console index audit (2026-08-21) — REPORT ONLY
+
+**Unnumbered deliberately.** The numbered sections below are the site-overhaul
+projects and the "at a glance" table cross-references them by number, so
+renumbering to squeeze this in would break those links. This is also not a
+build project — **no published page was changed**, and
+`verify_text_integrity.py` confirms 0 visible-text differences.
+
+**State: committed `bb020d8`, pushed 2026-08-21.** Everything it produced lives
+in `seo/` and `docs/`, both excluded from publishing.
+
+### What it found
+
+Reconciled the 21 August Search Console export against the real published
+surface — **746 URLs, 463 HTML pages and 283 PDFs** — derived by running the
+scripts, not from any recorded count.
+
+| | published | indexed | |
+| --- | ---: | ---: | ---: |
+| HTML pages | 463 | 308 | **66.5%** |
+| PDFs | 283 | 11 | 3.9% |
+
+The sitemap submission of 8 August worked: published-and-indexed went
+**64 → 319** in a fortnight, and the newly-indexed pages earned 50 clicks and
+3,316 impressions from a standing start.
+
+**Two findings that matter beyond this audit:**
+
+1. **The 26 URLs Search Console reports as "Excluded by 'noindex' tag" carry no
+   noindex tag** and have not since 30 July. They were stub placeholders removed
+   as each AQA page was finished; Google's last crawl of every one predates its
+   own removal. Nothing to fix — it needs a recrawl.
+2. **"Discovered — currently not indexed" (316 URLs) is a queue, not a defect.**
+   Thin content, templating, link depth, orphans, sitemap structure and robots
+   directives were each tested against repo evidence and eliminated. What
+   remains is crawl demand: about **3,270 crawl requests to the whole site in
+   90 days, four fetches per page**, at a 108 ms average response time.
+   Capacity is not the constraint.
+
+### Where it lives
+
+| File | What it is |
+| --- | --- |
+| `seo/11-gsc-index-audit-2026-08-21.md` | the analysis, with full URL lists in appendices |
+| `seo/12-index-fix-actions-2026-08-21.md` | repo actions, and an explicit "not worth doing" list |
+| `seo/13-gsc-manual-todo-2026-08-21.md` | Search Console tasks, with what is already done |
+| `seo/tools/gsc_reconcile.py` | **reproduces the whole audit from one command** |
+| `seo/gsc-exports/<date>/` | the raw exports, one folder per date |
+
+```
+python3 seo/tools/gsc_reconcile.py seo/gsc-exports/21-08-2026 \
+        --diff seo/gsc-exports/08-08-2026
+```
+
+`seo/00-inventory.md` through `seo/10-architecture-verification.md` are the
+earlier eleven-phase audit and are still the reference for anything structural.
+**`seo/06-gsc-checklist.md` is superseded by `13-…`** for the Search Console
+side and says so at its head.
+
+### Deliberately not done
+
+`sitemaps/pdfs.xml` stays. Submitting it caused one crawl burst on 8–9 August
+and indexed nothing, but there is no ongoing cost, so removing it now would
+recover nothing. Re-decide 1 October on the indexing outcome; the change is
+scoped and ready as Action 3 in `seo/12-…`.
+
+## 0. About + Contact + site finishing pass — MERGED AND LIVE (2026-08-16)
+
+**STATE: MERGED AND LIVE** (merge `437dc7e`, --no-ff, pushed 2026-08-16;
+branch deleted). Both workflows succeeded — verify CI accepted the four
+Text-Change trailers across the merge range, and the Pages deployment went
+out. Live site spot-checked: About serving My Story / the softened stat /
+testimonials / the LinkedIn button with its `<title>` byte-identical,
+Contact serving the new form with the honeypot hidden, faq carrying zero
+"on weekdays" remnants, the tutoring modal honeypot and all five `sameAs`
+additions live. The brief: revamp About and Contact (the last two
+unrevamped pages), then a whole-site finishing pass — the closing session
+of the overhaul. Approved decisions: soften the "100%" stat, Harry G. +
+Alex B. testimonials, one Name field on the form, plain "within 24 hours"
+everywhere, LinkedIn into structured data sitewide. Eliot closed the
+Formspree-dashboard and LinkedIn-link follow-ups on 2026-08-16; the only
+one still open is his own My Story paragraph, at the top of OWNER-TODO.md.
+
+### About page (about.html + css/pages/about.css)
+
+Restructured around trust, keeping Eliot's own words (no new personal copy
+written): hero (boat photo, existing intro, tutoring's trust line verbatim,
+intro-call + tutoring buttons) → NEW quick-facts strip (online lessons /
+four boards / DBS / 24-hour replies — all facts already on the site) → "My
+Story" (existing bio paragraphs; an `OWNER COPY NEEDED` comment marks where
+the finance→tutoring paragraph goes — writing brief in OWNER-TODO) + LinkedIn
+button → Proven Results restyled to brand colours, "100% improve by 1+
+grade" softened to "1+ grades / Typical improvement after a year of tuition"
+→ the four method cards (one typo fixed: "revision note" → "notes") → NEW
+testimonials (Alex B., Harry G. — Harry was the one review used nowhere on
+the site; quotes verbatim from the deleted reviews.js in git history) →
+credentials unchanged → closing CTA (intro call deep-linked to
+`/tutoring.html#booking`, tutoring, marking, plus a low-key free-resources
+line). Mid-page CTA removed (duplicated the closing one). The one other
+wording change: "Hedge Funds and FinTech startups" (plural) → "a hedge fund
+and a FinTech startup", matching home and tutoring. Head untouched except
+Person/Organization JSON-LD gaining LinkedIn in `sameAs`.
+
+### Contact page (contact.html + css/pages/contact.css)
+
+Email promoted to the clear first route (primary styling, "Replies within
+24 hours" stated confidently); Book-a-call card deep-links to
+`/tutoring.html#booking`. Form: First/Last Name merged into one Name field;
+the dropdown reworded to "What's this about?" (One-to-one tutoring / Group
+lessons / Marking quote / Free resources / Something else), now required and
+named `_subject` so the chosen option becomes the notification email's
+subject line — enquiries arrive pre-sorted. Honeypot added (Formspree's
+`_gotcha`, hidden by CSS — see trap 7). Side box rewritten: heading "What
+Can Eliot Help With?", stale "25-marker" line replaced with the
+current-offer wording, "we" voice → Eliot throughout, footer button now
+"More About Eliot". Status messages updated to match. Head untouched.
+
+### Finishing pass
+
+- faq.html: all three "within 24 hours on weekdays" → "within 24 hours"
+  (visible answer + its FAQPage JSON-LD copy + the bottom CTA box), so the
+  promise reads identically sitewide.
+- LinkedIn (`https://www.linkedin.com/in/eliotking`) added to the
+  Organization `sameAs` on the five pages that declare the full record
+  (index, tutoring, marking, about, contact) and to the Person record on
+  about. faq/privacy only reference the org by `@id` — correctly left alone.
+- tutoring.html enquiry pop-up: same hidden honeypot added (its Formspree
+  form `mqadgbbw` had no spam protection either). No visible change; the
+  modal focus-trap and submit handler were checked against the new field.
+- External links all verified live: Kit, all 8 Stripe links, Calendly,
+  Tutorful, ICO all 200; both Formspree endpoints 405-on-GET (expected —
+  POST-only); LinkedIn 999 (blocks robots — Eliot clicks it once,
+  OWNER-TODO). Internal links: verify_links green.
+- OWNER-TODO.md consolidated into one prioritised list; this file
+  reorganised into its final state.
+
+### Verification (2026-08-16, before commit)
+
+All nine `scripts/verify_*.py` green, `verify_generated.py` green (8
+generators, 0 would change), `seo/tools/verify_seo.py` 14/14,
+`verify_links.py` green. Headless-Chrome renders at 1280px and 390px (iframe
+wrapper), both pages, visually checked — which is what caught the honeypot
+rendering visibly (trap 7). `verify_text_integrity.py` run against the
+branch after committing; every differing file declared with a Text-Change
+trailer. Sitemap rebuilt after the page commits.
+
+## 1. Resource unification, Phases 1–4 — ALL LIVE (2026-08-15)
+
+One design language and full cross-linking across the four resource
+sections. Phase 1 flashcards (hub + 6 decks), Phase 2 practice questions
+(hub + 6 themes), Phase 3 past papers (hub + 4 board pages), Phase 4
+revision notes (hub + 6 theme pages + 166 practice back-links). All four
+phases merged --no-ff and spot-checked live. Full per-phase detail —
+including every approved wording change — is in this file's git history at
+merge `f537312` and earlier.
+
+What a future session needs:
+
+- The shared component set is the `.resource-*` block at the END of
+  css/main.css (hero, stat strip, card grid, cross strip, services panel).
+  Reuse it; don't fork it.
+- Page ownership: notes hub + past-papers 5 pages are hand-written (baked by
+  bake_templates.py); notes theme pages are notes-data slices via
+  build_notes_pages.py; practice pages via build_questions.py; flashcards
+  via build_flashcards.py; finder via build_past_paper_questions.py.
+- The notes hub's `<head>` is FROZEN and Prettier mangles it (trap 1). The
+  six per-card "Practise … questions" links must stay on the hub
+  (DO-NOT-BREAK: only depth-1 page in the section).
+- Wave 3.4 board labels were deliberately NOT applied to notes pages
+  ("Edexcel" is unambiguous there); Eliot did not override.
+- Phase 4 was the first branch to face `verify_markup_integrity.py` (trap
+  3); the retroactive declaration is recorded in this file's history.
+- boards.json group order wins wherever boards are listed (Phase 1 flipped
+  the flashcards hub to Edexcel-first).
+
+## 2. Marking page + payment journey — LIVE (2026-08-15, merge `d4be06b`)
+
+marking.html rebuilt around four packages with direct 48-hour/next-day
+Stripe buttons (8 links, all verified rendering the right product and
+price); old click-to-select flow and email-capture panel deleted; new
+custom-enquiry box, "What You Actually Get" section, six-box FAQ.
+confirmation.html rebuilt around one job (email the work) — Formspree form
+and reference numbers removed; matching is by email address. faq.html
+prices updated in lockstep. The trust strip was removed at Eliot's request.
+
+**The #1 guardrail held: marking.html ranks #1 for "Economics paper
+marking"** — URL, `<title>`, H1, meta description, canonical, og/twitter,
+breadcrumb all byte-identical; body copy, JSON-LD offers and UX only.
+
+**The payment journey is now fully verified end to end**: Eliot confirmed in
+the Stripe dashboard on 2026-08-16 that all 8 links redirect to
+confirmation.html after payment — the one part nobody could check from
+outside.
+
+**Bundles are pay-once, submit-over-time (merge `91e4109`, 2026-08-16,
+live and spot-checked):** most bundle buyers send one paper a week or ad
+hoc, so every place the turnaround promise appears now says papers can be
+sent together or spread out, with each returned within the chosen
+turnaround of when it is sent — the packages intro, a bullet on both
+bundle cards, the four bundle offers in the Service JSON-LD, the
+"What happens after I pay?" box, confirmation.html's timeline, and
+faq.html's three marking answers plus their FAQPage JSON-LD twins. Change
+any of these and the other five must move in lockstep.
+
+**The example panels are REAL now — nothing else is open on this project.**
+Merge `fca6d93` (2026-08-16, both workflows green, live site spot-checked)
+replaced the two "coming soon" placeholders with page-1 previews linking to
+the full PDFs in `marking-examples/`: a matched pair from the same AQA
+Paper 1 2019 (52/80, B — the annotated 8-page scan and the 2-page feedback
+email describing it, cross-checked mark by mark). Eliot's first upload was
+two different papers whose numbers contradicted side by side; he
+re-exported and the pair now agree on everything. Anonymisation was
+verified page by page before publishing. Previews are 800px JPEGs
+generated with PDFKit via Swift; verify_page_shell's image expectations
+moved to 106 pages / 312 images / 10 all-lazy in the same commit
+(marking.html's two images are below the fold, so it joined the all-lazy
+list).
+
+**The 8.6 MB scan WAS compressed on 2026-08-20 (`6cc2d65`), reversing the
+decision recorded here.** The original reasoning was that it downloads only on
+click, so page metrics never see it, and that compression would soften the
+handwriting the panel exists to show. Eliot asked for it to be reduced if
+appearance held up, and the second half of that reasoning was tested rather
+than assumed: the PDF has **no text layer at all** — eight pages, one scanned
+image each, embedded at roughly 445 DPI — so it was re-rendered at 150 DPI,
+JPEG quality 80, page dimensions preserved exactly. Compared at 200 DPI
+magnification the handwriting and blue annotation are indistinguishable from
+the original. **8.6 MB → 1.77 MB, 79% smaller.** If it is ever re-exported from
+the scanner, re-run that step; the source PDF is in git history at `fca6d93`.
+
+## 3. Home page revamp — LIVE (2026-08-14, merge `f53b7fe`)
+
+Hero H1 "A-Level Economics Revision Notes & Expert Tutoring" (title
+deliberately unchanged — the "A Level Economics Revision" ranking is the
+crown); six free-resource cards with measured numbers; four exam-board
+tiles; Meet Your Tutor (eliot_shirt.JPG + credentials verbatim from
+tutoring); static testimonials (William E., Alex B., Ebrahim D. — the three
+tutoring does NOT use; reviews.js and reviews-render.js deleted, Harry G.
+now used on the About page); Quick Answers; Kit newsletter form 9803307
+(plain HTML POST, verified live). privacy.html gained newsletter coverage.
+
+The measured numbers on the cards (166 topics, 671 cards, 1,267 questions,
+281 papers, 325 definitions) were derived by script on 2026-08-14 — if
+content grows, update the copy by hand; the provenance table is in this
+file's git history.
+
+Baseline for ~22 Sept: 223 clicks / 2,463 impressions / position 17.35.
+
+## 4. Tutoring page SEO rework — LIVE (2026-08-14, merge `e09cdef`)
+
+Rebuilt around the current offer: 1-to-1 £65/hr flat, groups of 2–4 at
+£35/hr per student; new head + Service/FAQPage JSON-LD; credentials, pricing
+cards, group section, exam-board section, 6 testimonials, 8-question FAQ,
+Calendly booking section (`id="booking"` — the deep-link target other pages
+use). faq.html prices updated in lockstep.
+
+Baseline for ~22 Sept: position 26.27 / 440 impressions / 17 clicks
+(2026-08-08 export).
+
+## 5. Flashcards — LIVE
+
+Interactive revision flashcards at `/flashcards/`, one deck per board per
+theme, with Leitner spaced repetition in localStorage. Six decks: Edexcel A
+Themes 1–4, AQA micro and macro.
+
+`flashcards-data/<board>/<theme>.json` is hand-authored source and is not
+published; `scripts/build_flashcards.py` writes the pages and the runtime
+payloads in `flashcards/data/`. Cards marked `premium: true` never enter the
+public payloads — that flag exists so premium content can later be excluded
+without restructuring, because **the repo is public and client-side paywalling
+is not sufficient**. Diagram cards reference the hand-authored SVGs in
+`images/diagrams/svg/`, which is why those 84 files look unreferenced to any
+tool that only greps HTML.
+
+The full build and decision record: `_archive/FLASHCARDS_PROGRESS.md`
+(archived 2026-08-26). Suspected notes errors found while writing cards:
+`docs/CONTENT_ISSUES.md` — logged, never fixed unilaterally.
+
+## 6. Glossary & formulae — LIVE (merged 2026-08-09)
+
+Every definition and formula a student needs, one page per exam board, at
+`/revision-notes/glossary/`.
+
+| | |
+| --- | ---: |
+| Terms | **325** |
+| …Edexcel A / AQA | 269 / 290 |
+| Formulae | **34** |
+| Extracted verbatim from the notes | 251 |
+| Written for the glossary | 74 |
+
+**How it works.** `scripts/extract_glossary.py` reads the topic pages and writes
+`glossary-data/terms.json`; `scripts/build_glossary.py` renders the three pages
+and runs Prettier over its own output, so regenerating is byte-identical.
+Formulae are pre-rendered with KaTeX at build time, so the pages carry no maths
+JavaScript and work with JavaScript off.
+
+**The rule, and its two exceptions.** Definitions are the notes' own words,
+lifted verbatim, and `verify_glossary.py` check 1 re-reads each notes page and
+fails if a shipped definition is no longer in it. The exceptions are
+`glossary-data/authored.json` (definitions written to fill gaps the notes never
+covered, tagged `origin="authored"` and exempt from that check) and the
+`rewrite` block in `curation.json`, which edits lead-ins at render time. Both
+are counted on every verify run so neither goes quiet.
+
+**Judgement is kept out of the extractor** and in `glossary-data/curation.json`,
+which the scripts only read — the same split as `tags.json` against
+`taxonomy.json`.
+
+What it found in the notes: two AQA formulae wrote `%` unescaped, so they
+rendered broken on the live pages too (fixed); allocative, productive and
+dynamic efficiency had no definition anywhere; the four marginal propensities
+were undefined while four multiplier formulae depended on them.
+
+Live state: `_working/glossary/PROGRESS.md`. The authored definitions:
+`_working/glossary/authored-review.md`.
+
+## 7. Past paper question bank — LIVE
+
+A searchable bank of **real** exam questions at `/past-paper-questions/`,
+Edexcel A (9EC0 A Level, 8EC0 AS) and AQA A Level.
+
+**It reproduces real exam question text verbatim, which is the one decisive
+difference from §8's practice bank, where every question must be 100% original.
+The two never share a data path.** Section A is permanently out of scope for
+every board. Mark scheme content is never extracted; each question deep-links
+to the site's own hosted PDF at the right page.
+
+Source attributions are stripped at extraction, not afterwards, and
+`scripts/strip_source_attributions.py` is the re-runnable safety net that must
+report 0 changes — that agreement is the test.
+
+PDF work uses **Swift + PDFKit**, not Python. Search is
+`js/components/question-search.js`, a small bounded-edit-distance token index
+with no dependency, tested by `node scripts/test_question_search.js`.
+
+The full build record: `_archive/PAST-PAPERS-PROGRESS.md` (archived
+2026-08-26). Phase 1 extraction QA: `_archive/extraction-qa-report.md`.
+AS extraction QA: `_archive/working/question-bank/as-extraction-qa.md`.
+
+## 8. Free practice questions — LIVE
+
+A bank of **original** multiple-choice questions, one set per topic page, built
+over thirty batches.
+
+| | |
+| --- | ---: |
+| Topics | **166 of 166** |
+| Questions | **1,267** |
+| Answer letters | A 320, B 358, C 331, D 258 |
+| Skills | applied-reasoning 790, definition-in-context 247, data-table 127, calculation 103 |
+| Difficulty | foundation 155, standard 950, stretch 162 |
+
+| Board / theme | Topics | Questions |
+| --- | ---: | ---: |
+| AQA Microeconomics | 54 | 401 |
+| AQA Macroeconomics | 25 | 209 |
+| Edexcel Theme 1 | 22 | 166 |
+| Edexcel Theme 2 | 24 | 198 |
+| Edexcel Theme 3 | 20 | 148 |
+| Edexcel Theme 4 | 21 | 145 |
+
+**How it works.** `questions-data/<board>/<spec>.json` is the single source of
+truth — despite the name, it feeds `/practice-questions/`, not the past-paper
+bank. `scripts/build_questions.py` validates it and writes the pages, the five
+board indexes and the hub, so the visible HTML and the JSON-LD cannot drift.
+
+**Every one of the 1,267 questions was re-solved cold from the stem alone**, in
+the batch it was written in, and diffed against the recorded key. That step
+found real defects and should be the last thing anyone drops.
+
+**Originality was checked mechanically every batch** — shingled against the AQA
+and Edexcel past-paper corpora, against the rest of the bank, and by comparing
+numeric option sets against option blocks extracted from the papers. Re-measured
+2026-08-20 across the two banks: **0 exact and 0 near-duplicate stems**, best
+difflib ratio 0.000.
+
+The authoring standard is `docs/QUESTIONS_GUIDE.md`. The batch record, the twin
+maps and the nine recurring failure modes are in `docs/QUESTIONS_PROGRESS.md`;
+read §8 (cross-board duplication) and §9 (concept-grep) before extending the
+bank — they decided the shape of every batch after the twelfth.
+
+**A written-response extension was piloted and reverted on review** — an
+optional `written` array, generator support, a stylesheet block and ten
+questions across five topics. Recoverable in one command from `be4d7b8`.
+
+## 9. Notes consistency & enrichment pass — LIVE
+
+Two jobs in one branch: make the 166 topic pages structurally consistent, then
+add a small number of teaching components where a page genuinely needed one.
+
+| | Before | After |
+| --- | ---: | ---: |
+| Generic "Exam Preparation" sections | 87 | **0** |
+| Topic pages with exactly one `.notes-cta` | — | **166 / 166** |
+| Inline-styled CTA blocks | 89 | **0** |
+| Dead `chart-container` wrappers | 211 | **0** |
+| `formula-box` divs without `prettier-ignore` | 28 | **0** |
+| Unescaped `<` in note text | 32 | **0** |
+
+The removed Exam Preparation text is archived verbatim in
+`docs/removed-exam-preparation-sections.md`, in case any of it is worth
+re-siting as an in-context exam tip.
+
+**31 components across 34 of 166 pages.** 132 pages received nothing, by design
+— the house rule is a maximum of two components per page and roughly 80% of
+pages carrying none. Worked examples and exam tips only; every figure verified
+by recomputation. The per-component inventory is `_archive/NEW-CONTENT-LOG.md`.
+
+**One wording change was made in the whole pass** — a single word on
+`3-4-4-oligopoly`, on explicit instruction, correcting "five" to "three" in a
+concentration-ratio sentence.
+
+Two related sweeps sit under this heading:
+
+- **Site-wide scan, 31 July 2026.** 12 of 15 findings fixed, including 55
+  keyboard-inaccessible accordions, heading-level skips on 12 pages, `lang="en"`
+  on 22 pages, and 284 `target="_blank"` links without `rel`.
+- **Notes corrections, 1 August 2026.** Twenty findings raised while writing the
+  question sets, logged N-Q1 to N-Q20 in `docs/REVIEW-NOTES.md`; **16 applied.**
+  Two corrections to the findings themselves are worth carrying forward: the
+  N-Q10 figure-number scan reported one page that was not broken (`1-5-11`,
+  whose `2a`/`2b` captions defeated the regex) and missed one that was
+  (`2-5-1`). Any re-run must allow for the lettered caption form. One question
+  was removed from the bank — `4.1.9` Q8, with the over-claim it depended on,
+  which is why the total is 1,267 and not 1,268.

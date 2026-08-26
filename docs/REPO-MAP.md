@@ -56,7 +56,7 @@ only HTML in the repo that may be edited by hand, along with the five
 | `PROGRESS.md` | **Start here.** Every project on the site and one list of what is still open. |
 | `OWNER-TODO.md` | Things only Eliot can do — Claude cannot log into Kit or Search Console. Plus the ideas-and-someday list. |
 | `CLAUDE.md` | The rules Claude loads at the start of every session. 144 lines; it was 599 until 2026-08-20. |
-| `README.md` | One line, shown on the GitHub page. |
+| `README.md` | Half a page, shown on the GitHub page: what the site is, that `main` publishes, the two commands, the four files to read first. |
 | `requirements.txt` | Names one Python package, `pdfplumber`, needed by `scripts/extract_aqa_questions.py`. **Still needed** the next time an AQA series is added — AQA prints question numbers in boxed margin cells that PDFKit returns detached from their questions, so that one extractor reads by coordinates instead. |
 | `LICENSE.txt` | The Creative Commons Attribution 3.0 text inherited from the HTML5 UP "Dopetrope" template the CSS descended from. No longer published, kept for the record; the credit CCA 3.0 actually asks for is in `_archive/README.txt`. |
 
@@ -109,14 +109,14 @@ inside it.
 | --- | ---: | --- | --- |
 | `scripts/` | ~50 | The 8 builders (`build.py` runs them all), ~17 checkers and the shared helpers. The machinery. | **Yes** — without it nothing can be rebuilt |
 | `templates/` | 2 | The menu and footer, written once and stamped into all 463 pages at build time. **Not fetched by the browser** and no longer published — but ten scripts read it, so **deleting it means the navigation can never be changed again.** | **Yes** |
-| `docs/` | 52 | Project records, the known-errors log, reference guides and the eleven-phase audit | Yes, as reference |
+| `docs/` | 51 | The known-errors logs, reference guides and the eleven-phase audit; the finished build logs moved to `_archive/` on 2026-08-26 | Yes, as reference |
 | `.github/` | 1 | Tells GitHub to run every check automatically on each push | Yes, quietly |
 | `.claude/` | 4 | Claude's settings, the generated-file hook, and the `/verify` and `/rebuild-nav` shortcuts | Yes |
 | `.githooks/` | 2 | Opt-in git hooks (`git config core.hooksPath .githooks`, once): suggested trailers in the commit template; the sitemap rebuilt and committed automatically after a commit that made it stale | Yes, once enabled |
 | `boards-data/` | 1 | One file naming the four exam boards, so they are spelled consistently everywhere — and, since it lists each board's themes in order, the file that decides the order the revision notes read in | Small but load-bearing |
 | `seo/` | 42 | The SEO audit and Search Console exports — **plus `seo/tools/verify_seo.py`, which runs on every push** | See below |
 | `_working/` | 7 | Live machinery outputs only (since 2026-08-26): the **full** Font Awesome font the subsetter reads — do not delete that file — and the glossary reports two scripts rewrite on every run | **Yes** |
-| `_archive/` | 262 | Finished records, the old note drafts and (since 2026-08-26) the design records of the finished passes | No |
+| `_archive/` | 266 | Finished records, the old note drafts and (since 2026-08-26) the design records and build logs of the finished passes | No |
 | `.venv/` | 0 | A Python folder on the Mac only. Not in the repo at all. | No |
 
 **The underscore trick:** GitHub ignores any folder starting with `_`. That is
