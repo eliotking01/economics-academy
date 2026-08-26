@@ -26,6 +26,9 @@ non-zero if any assertion fails, so this can gate a future change.
    18  every notes topic with a declared twin links to it, once, both ways
    19  no two notes pages share an <h1>
    20  every notes topic names its author on the page, and the schema agrees
+   21  the tutoring head stays inside its measured snippet ceilings
+   22  the tutoring FAQPage matches the visible FAQ, question for question
+   23  the full Person node is on tutoring.html and about.html agrees
 
 Usage:
     python3 seo/tools/verify_seo.py
@@ -563,6 +566,102 @@ def main() -> int:
         bad.append(f"about.html: no id for {notes_extras.AUTHOR_URL} to land on")
     check("20 every notes topic names its author, and the schema agrees", bad,
           f"{len(topics)} pages, author {notes_extras.AUTHOR_NAME!r}")
+
+    # 21 --------------------------------------------------------------------
+    # Added 2026-08-26, the tutoring-page SEO pass (D63, seo/22-tutoring-
+    # seo-proposals-2026-08-25.md A1/A2). The title was measured at 75 chars
+    # (~720 px - the brand truncates, the keywords survive) and KEPT at that
+    # length deliberately; the description was rewritten to 159 chars so the
+    # prices and boards survive desktop truncation (~155-160 chars). Both are
+    # ceilings, not equalities: a shorter head is fine, a longer one silently
+    # undoes the pass. The ceilings are the measured values plus nothing.
+    tut = parsed["tutoring.html"]
+    bad = []
+    if len(tut.title) > 75:
+        bad.append(f"tutoring.html: title is {len(tut.title)} chars (max 75)")
+    if len(tut.description) > 165:
+        bad.append(f"tutoring.html: description is {len(tut.description)} "
+                   f"chars (max 165)")
+    check("21 the tutoring head stays inside its measured snippet ceilings",
+          bad, f"title {len(tut.title)}/75, "
+               f"description {len(tut.description)}/165 chars")
+
+    # 22 --------------------------------------------------------------------
+    # Added 2026-08-26. tutoring.html's FAQPage block and its visible Common
+    # Questions section are maintained BY HAND as twins (the 2026-08-26 pass
+    # added "Where are you based?" and "When do lessons happen?" to both).
+    # Google removed FAQ rich results in May 2026, so the block earns
+    # nothing - but markup describing text that is not on the page is a
+    # guideline violation whatever the feature status, so if the two ever
+    # drift the fix is to re-sync or delete the block, never to ship the
+    # drift. Question names must match an <h3> and answer texts must appear
+    # in the visible body, whitespace-normalised.
+    src = (REPO / "tutoring.html").read_text(encoding="utf-8", errors="replace")
+    body = re.sub(r"<script\b.*?</script>", " ", src, flags=re.S)
+    # Tags are stripped with "" not " ": an inline </a> before a full stop
+    # must not grow a space the JSON-LD twin does not have. Block boundaries
+    # survive because the hand-written source keeps them on their own lines.
+    h3s = [norm_space(re.sub(r"<[^>]+>", "", h))
+           for h in re.findall(r"<h3[^>]*>(.*?)</h3>", body, flags=re.S)]
+    visible = norm_space(re.sub(r"<[^>]+>", "", body)
+                         .replace("&amp;", "&").replace("&rsaquo;", "›"))
+    bad = []
+    faq_n = 0
+    for b in tut.jsonld:
+        data = json.loads(b)
+        if data.get("@type") != "FAQPage":
+            continue
+        for q in data.get("mainEntity", []):
+            faq_n += 1
+            name = norm_space(q.get("name", ""))
+            text = norm_space(q.get("acceptedAnswer", {}).get("text", ""))
+            if name not in h3s:
+                bad.append(f"tutoring.html: FAQPage question {name!r} has no "
+                           f"matching <h3>")
+            if text not in visible:
+                bad.append(f"tutoring.html: FAQPage answer for {name!r} is "
+                           f"not the visible answer text")
+    check("22 the tutoring FAQPage matches the visible FAQ, question for question",
+          bad, f"{faq_n} question/answer pairs")
+
+    # 23 --------------------------------------------------------------------
+    # Added 2026-08-26 (proposal A6). Search engines do not resolve @id
+    # across pages (DO-NOT-BREAK, PH04-055), so tutoring.html restates the
+    # full Person node from about.html inside its EducationalOrganization's
+    # `founder` - credentials on the page where the tutor is the product. A
+    # future tidy-up that "deduplicates" the founder back to a name-and-url
+    # stub would remove exactly what the restatement is for; this pins the
+    # load-bearing fields on both pages.
+    PERSON_FIELDS = ("alumniOf", "hasCredential", "sameAs", "knowsAbout")
+    bad = []
+    founder = None
+    for b in tut.jsonld:
+        data = json.loads(b)
+        if data.get("@type") == "EducationalOrganization":
+            founder = data.get("founder")
+    if not isinstance(founder, dict):
+        bad.append("tutoring.html: EducationalOrganization has no founder node")
+    else:
+        for f in PERSON_FIELDS:
+            if not founder.get(f):
+                bad.append(f"tutoring.html: founder Person lacks {f}")
+    about_person = None
+    for b in parsed["about.html"].jsonld:
+        data = json.loads(b)
+        if data.get("@type") == "Person":
+            about_person = data
+    if not isinstance(about_person, dict):
+        bad.append("about.html: no top-level Person block")
+    else:
+        for f in PERSON_FIELDS:
+            if not about_person.get(f):
+                bad.append(f"about.html: Person lacks {f}")
+        if (isinstance(founder, dict)
+                and founder.get("@id") != about_person.get("@id")):
+            bad.append("the founder Person and about.html's Person carry "
+                       "different @ids - they must stay one entity")
+    check("23 the full Person node is on tutoring.html and about.html agrees",
+          bad, f"fields: {', '.join(PERSON_FIELDS)}")
 
     # ---------------------------------------------------------------- report
     width = max(len(n) for n, _, _, _ in results)
