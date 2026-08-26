@@ -18,7 +18,7 @@ says how each line was checked.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | in review | — | branch `seo/tutoring-page` |
+| Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | live | 2026-08-26 | `0bcac57c` |
 | Notes family consistency — the two diagram galleries | live | 2026-08-25 | `0bad0c88` |
 | Question-bank page gate 4 → 2 — 46 new topic pages | live | 2026-08-24 | `fc2400a6` |
 | Site-wide search — header box + overlay, all 463 pages | live | 2026-08-24 | `8b329f1e` |
@@ -86,9 +86,11 @@ there.
    `seo/tools/gsc_reconcile.py` now flags any verdict older than the file's
    last commit automatically.
 
-## Tutoring page SEO pass (2026-08-26) — IN REVIEW (branch `seo/tutoring-page`, awaiting Eliot's go-ahead to push and open the PR)
+## Tutoring page SEO pass (2026-08-26) — LIVE (merged 2026-08-26, `0bcac57c`, PR #33)
 
-**STATE: implemented and verified on the branch; nothing pushed.** The
+**STATE: live.** Eliot merged PR #33 on 2026-08-26 with a merge commit
+(`0bcac57c`); this heading said "IN REVIEW" until the September clean-up
+pass of the same day corrected it. The
 2026-08-25 brief: find everything left that could help `tutoring.html`
 rank for "a level economics tutor" and its variants, plan first, change
 nothing without item-by-item approval. Phases 0–3 delivered 2026-08-25
