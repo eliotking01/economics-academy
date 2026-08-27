@@ -21,29 +21,47 @@ const DATA = path.join(ROOT, "past-paper-questions", "questions.json");
 
 const source = fs.readFileSync(SRC, "utf8");
 
-// Everything from the text helpers down to the component is DOM-free, so it can
-// be lifted out and exercised directly.
+// Everything from the text helpers down to the boot section is DOM-free at
+// definition time - init() only touches the DOM through the root it is handed,
+// and window only for location.search - so it can all be lifted out and
+// exercised directly. The factory takes a window per call, so query-string
+// behaviour is testable with a fresh module each time.
 const START =
   "// ---------------------------------------------------------------- text";
 const END =
-  "// ---------------------------------------------------------------- component";
+  "// ---------------------------------------------------------------- boot";
 const from = source.indexOf(START);
 const to = source.indexOf(END);
 if (from === -1 || to === -1 || to <= from) {
   console.error(
-    "FATAL: could not find the text/component section markers in question-search.js.\n" +
+    "FATAL: could not find the text/boot section markers in question-search.js.\n" +
       "The file was restructured; update this test rather than deleting it.",
+  );
+  process.exit(2);
+}
+
+// The two tuning constants sit above the sliced section; carry the shipped
+// values in rather than inventing test-local ones.
+const constants = (
+  source.match(/var (?:PAGE_SIZE|DEBOUNCE_MS)\s*=\s*\d+;/g) || []
+).join("\n");
+if (!/PAGE_SIZE/.test(constants) || !/DEBOUNCE_MS/.test(constants)) {
+  console.error(
+    "FATAL: PAGE_SIZE/DEBOUNCE_MS not found in question-search.js.",
   );
   process.exit(2);
 }
 
 const slice = source.slice(from, to);
 const factory = new Function(
-  slice +
+  "window",
+  constants +
+    "\n" +
+    slice +
     "\nreturn { normalise, tokenise, withinDistance, allowedEdits, buildIndex," +
-    " score, cardHtml, escapeHtml };",
+    " score, cardHtml, escapeHtml, init };",
 );
-const M = factory();
+const M = factory({ location: { search: "" } });
 
 const data = JSON.parse(fs.readFileSync(DATA, "utf8"));
 const index = M.buildIndex(data);
@@ -459,7 +477,10 @@ if (pythonCards) {
 // component can index.
 
 const pyHub = /^HUB_CARDS\s*=\s*(\d+)/m.exec(
-  fs.readFileSync(path.join(ROOT, "scripts", "build_past_paper_questions.py"), "utf8"),
+  fs.readFileSync(
+    path.join(ROOT, "scripts", "build_past_paper_questions.py"),
+    "utf8",
+  ),
 );
 const jsPage = /var PAGE_SIZE\s*=\s*(\d+)/.exec(source);
 check(
@@ -487,18 +508,27 @@ data.boards.forEach((b) => {
   check("hub: " + b.board + " fetches a per-board payload", !!src);
   if (src) {
     const payloadPath = path.join(ROOT, src[1].replace(/^\//, ""));
-    check("hub: " + b.board + " payload exists at " + src[1], fs.existsSync(payloadPath));
+    check(
+      "hub: " + b.board + " payload exists at " + src[1],
+      fs.existsSync(payloadPath),
+    );
     if (fs.existsSync(payloadPath)) {
       const pd = JSON.parse(fs.readFileSync(payloadPath, "utf8"));
       check(
         "hub: " + b.board + " payload carries exactly the board's questions",
-        pd.questions.length === boardQs && pd.questions.every((q) => q.board === b.board),
+        pd.questions.length === boardQs &&
+          pd.questions.every((q) => q.board === b.board),
         pd.questions.length + " of " + boardQs,
       );
-      const boardTopics = Object.keys(data.topics).filter((s) => data.topics[s].board === b.board);
+      const boardTopics = Object.keys(data.topics).filter(
+        (s) => data.topics[s].board === b.board,
+      );
       check(
-        "hub: " + b.board + " payload carries every topic on the board (the Topic filter lists them)",
-        boardTopics.every((s) => pd.topics[s]) && Object.keys(pd.topics).length === boardTopics.length,
+        "hub: " +
+          b.board +
+          " payload carries every topic on the board (the Topic filter lists them)",
+        boardTopics.every((s) => pd.topics[s]) &&
+          Object.keys(pd.topics).length === boardTopics.length,
         Object.keys(pd.topics).length + " of " + boardTopics.length,
       );
       check(
@@ -506,7 +536,9 @@ data.boards.forEach((b) => {
         M.buildIndex(pd).length === pd.questions.length,
       );
       check(
-        "hub: " + b.board + " payload keeps papers sparse (same length as the master)",
+        "hub: " +
+          b.board +
+          " payload keeps papers sparse (same length as the master)",
         pd.papers.length === data.papers.length,
       );
     }
@@ -523,6 +555,451 @@ data.boards.forEach((b) => {
     );
   });
 });
+
+// ---- the board cascade (2026-08-27)
+//
+// The Board select drives the board-shaped dropdowns: Qualification,
+// Theme / area, Paper section and Topic. With no board chosen the mixed lists
+// are grouped under <optgroup>s labelled with the board names, so the two
+// numbering systems never interleave; picking a topic or theme adopts its
+// board. Pre-filtered pages keep exactly the flat lists they always had.
+//
+// init() needs a DOM, so these run it against a minimal fake: enough of
+// <select> semantics (innerHTML replacement selects the first option; setting
+// a value no option offers reads back "") for the component's real code paths.
+
+function unescapeHtml(s) {
+  return s
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+}
+
+function parseOptions(html) {
+  const out = [];
+  let group = null;
+  const re =
+    /<optgroup label="([^"]*)">|<\/optgroup>|<option value="([^"]*)">([\s\S]*?)<\/option>/g;
+  let m;
+  while ((m = re.exec(html))) {
+    if (m[0].indexOf("<optgroup") === 0) group = unescapeHtml(m[1]);
+    else if (m[0] === "</optgroup>") group = null;
+    else
+      out.push({ value: unescapeHtml(m[2]), label: unescapeHtml(m[3]), group });
+  }
+  return out;
+}
+
+function FakeSelect(name, all) {
+  this._attrs = { "data-ppq-filter": name, "data-ppq-all": all };
+  this._options = [];
+  this._value = "";
+  this._html = "";
+  this._handlers = {};
+  this.disabled = false;
+}
+FakeSelect.prototype.getAttribute = function (n) {
+  return n in this._attrs ? this._attrs[n] : null;
+};
+FakeSelect.prototype.addEventListener = function (type, fn) {
+  (this._handlers[type] = this._handlers[type] || []).push(fn);
+};
+FakeSelect.prototype.change = function (value) {
+  this.value = value;
+  (this._handlers.change || []).forEach((fn) => fn());
+};
+Object.defineProperties(FakeSelect.prototype, {
+  innerHTML: {
+    get() {
+      return this._html;
+    },
+    set(html) {
+      this._html = html;
+      this._options = parseOptions(html);
+      // Replacing the options selects the first one, as a real select does.
+      this._value = this._options.length ? this._options[0].value : "";
+    },
+  },
+  value: {
+    get() {
+      return this._value;
+    },
+    set(v) {
+      // A value no option offers leaves a real select with no selection,
+      // which reads back as the empty string.
+      this._value = this._options.some((o) => o.value === String(v))
+        ? String(v)
+        : "";
+    },
+  },
+  options: {
+    get() {
+      return this._options.map((o) => ({ value: o.value }));
+    },
+  },
+});
+
+// The filter names and their "All ..." labels, from the served master page, so
+// the harness cannot drift from the markup the component really meets.
+const pageHtml = fs.readFileSync(
+  path.join(ROOT, "past-paper-questions", "index.html"),
+  "utf8",
+);
+const FILTERS = [];
+const fre = /data-ppq-filter="([^"]+)"[^>]*data-ppq-all="([^"]+)"/g;
+for (let m; (m = fre.exec(pageHtml));) FILTERS.push({ name: m[1], all: m[2] });
+check(
+  "harness: the master page carries the eight filter selects",
+  FILTERS.length === 8,
+  FILTERS.map((f) => f.name).join(","),
+);
+
+function makeStub() {
+  return {
+    hidden: false,
+    textContent: "",
+    innerHTML: "",
+    value: "",
+    addEventListener() {},
+    focus() {},
+  };
+}
+
+function makeRoot(prefilters) {
+  const selects = FILTERS.map((f) => new FakeSelect(f.name, f.all));
+  const byName = {};
+  selects.forEach((s) => (byName[s.getAttribute("data-ppq-filter")] = s));
+  const clear = {
+    _handlers: [],
+    disabled: false,
+    addEventListener(type, fn) {
+      if (type === "click") this._handlers.push(fn);
+    },
+    click() {
+      this._handlers.forEach((fn) => fn());
+    },
+  };
+  const parts = {
+    "[data-ppq-controls]": {
+      addEventListener() {},
+      querySelectorAll() {
+        return [];
+      },
+      removeAttribute() {},
+      setAttribute() {},
+    },
+    "[data-ppq-query]": makeStub(),
+    "[data-ppq-count]": makeStub(),
+    "[data-ppq-results]": makeStub(),
+    "[data-ppq-empty]": makeStub(),
+    "[data-ppq-more]": makeStub(),
+    "[data-ppq-clear]": clear,
+    "[data-ppq-sort]": { value: "relevance", addEventListener() {} },
+  };
+  return {
+    sel: byName,
+    clear,
+    count: parts["[data-ppq-count]"],
+    root: {
+      getAttribute(n) {
+        return (prefilters && prefilters[n]) || null;
+      },
+      querySelector(s) {
+        return parts[s] || null;
+      },
+      querySelectorAll(s) {
+        return s === "[data-ppq-filter]" ? selects : [];
+      },
+      classList: { add() {} },
+    },
+  };
+}
+
+const boardNames = data.boards.map((b) => b.name);
+const opts = (sel) => sel._options.slice(1); // drop the "All ..." option
+const hasOptgroup = (sel) => sel.innerHTML.indexOf("<optgroup") !== -1;
+const boardShaped = ["level", "group", "section", "topic"];
+
+// -- the "Both boards" state
+
+{
+  const h = makeRoot();
+  M.init(h.root, data);
+
+  ["topic", "group"].forEach((name) => {
+    const groups = opts(h.sel[name]).map((o) => o.group);
+    check(
+      "both boards: every " + name + " option sits under a board optgroup",
+      groups.every((g) => g !== null),
+    );
+    check(
+      "both boards: " + name + " optgroups are labelled from data.boards",
+      groups.every((g) => boardNames.indexOf(g) !== -1),
+    );
+  });
+  check(
+    "both boards: the grouped Topic list still offers every topic",
+    opts(h.sel.topic).length === Object.keys(data.topics).length,
+    opts(h.sel.topic).length,
+  );
+  boardNames.forEach((name) => {
+    const specs = opts(h.sel.topic)
+      .filter((o) => o.group === name)
+      .map((o) => o.label.split(" ")[0]);
+    check(
+      "both boards: no spec code repeats inside the " + name + " optgroup",
+      new Set(specs).size === specs.length,
+    );
+  });
+  check(
+    "both boards: Sections A and B stay shared, outside any optgroup",
+    opts(h.sel.section)
+      .filter((o) => ["A", "B"].indexOf(o.value) !== -1)
+      .every((o) => o.group === null),
+  );
+  check(
+    "both boards: Section C sits under Edexcel's name",
+    opts(h.sel.section)
+      .filter((o) => o.value === "C")
+      .every((o) => o.group === "Edexcel") &&
+      opts(h.sel.section).some((o) => o.value === "C"),
+  );
+  check(
+    "both boards: AS Level sits under Edexcel's name",
+    opts(h.sel.level)
+      .filter((o) => o.value === "as-level")
+      .every((o) => o.group === "Edexcel") &&
+      opts(h.sel.level).some((o) => o.value === "as-level"),
+  );
+
+  // -- the cascade: Board narrows the four board-shaped selects
+
+  const before = {
+    paper: h.sel.paper.innerHTML,
+    marks: h.sel.marks.innerHTML,
+    year: h.sel.year.innerHTML,
+  };
+  h.sel.board.change("edexcel");
+  boardShaped.forEach((name) => {
+    check(
+      "cascade: with Edexcel chosen, " + name + " has no optgroups",
+      !hasOptgroup(h.sel[name]),
+    );
+  });
+  check(
+    "cascade: every Topic option belongs to Edexcel",
+    opts(h.sel.topic).every((o) => data.topics[o.value].board === "edexcel"),
+  );
+  const edexcelGroups = data.boards
+    .filter((b) => b.board === "edexcel")[0]
+    .groups.map((g) => g.slug);
+  check(
+    "cascade: every Theme / area option belongs to Edexcel",
+    opts(h.sel.group).every((o) => edexcelGroups.indexOf(o.value) !== -1),
+  );
+  const sectionsOf = (board) =>
+    [
+      ...new Set(
+        data.questions.filter((q) => q.board === board).map((q) => q.section),
+      ),
+    ].sort();
+  check(
+    "cascade: every Section option belongs to Edexcel",
+    opts(h.sel.section)
+      .map((o) => o.value)
+      .join(",") === sectionsOf("edexcel").join(","),
+  );
+  const levelsOf = (board) =>
+    [
+      ...new Set(
+        data.questions
+          .filter((q) => q.board === board)
+          .map((q) => data.papers[q.p].level),
+      ),
+    ].sort();
+  check(
+    "cascade: every Qualification option belongs to Edexcel",
+    opts(h.sel.level)
+      .map((o) => o.value)
+      .join(",") === levelsOf("edexcel").join(","),
+  );
+  check(
+    "cascade: Paper, Marks and Year are left alone",
+    h.sel.paper.innerHTML === before.paper &&
+      h.sel.marks.innerHTML === before.marks &&
+      h.sel.year.innerHTML === before.year,
+  );
+
+  // -- a theme narrows Topic; a still-valid choice survives, an invalid one resets
+
+  h.sel.group.change(edexcelGroups[2]); // theme-3
+  check(
+    "cascade: a chosen theme narrows Topic to its own topics",
+    opts(h.sel.topic).length > 0 &&
+      opts(h.sel.topic).every(
+        (o) => data.topics[o.value].group === edexcelGroups[2],
+      ),
+  );
+  const kept = opts(h.sel.topic)[0].value;
+  h.sel.topic.change(kept);
+  h.sel.section.change("C");
+  h.sel.board.change("aqa");
+  check(
+    "cascade: switching to AQA resets an Edexcel topic to All topics",
+    h.sel.topic.value === "",
+  );
+  check(
+    "cascade: switching to AQA resets the Edexcel theme and Section C",
+    h.sel.group.value === "" && h.sel.section.value === "",
+  );
+  check(
+    "cascade: AQA offers only its own areas and only A Level",
+    opts(h.sel.group).every((o) => edexcelGroups.indexOf(o.value) === -1) &&
+      opts(h.sel.level)
+        .map((o) => o.value)
+        .join(",") === levelsOf("aqa").join(","),
+  );
+
+  // -- Clear all restores the full grouped lists
+
+  h.clear.click();
+  check(
+    "clear all: every select is back on All ...",
+    FILTERS.every((f) => h.sel[f.name].value === ""),
+  );
+  check(
+    "clear all: the grouped Topic list is back in full",
+    hasOptgroup(h.sel.topic) &&
+      opts(h.sel.topic).length === Object.keys(data.topics).length,
+  );
+  check("clear all: Theme / area is grouped again", hasOptgroup(h.sel.group));
+}
+
+// -- picking a topic or theme while "Both boards" adopts its board
+
+{
+  const aqaSlug = Object.keys(data.topics).filter(
+    (s) => data.topics[s].board === "aqa",
+  )[0];
+  const h = makeRoot();
+  M.init(h.root, data);
+  h.sel.topic.change(aqaSlug);
+  check(
+    "adopt: picking an AQA topic sets Board to AQA",
+    h.sel.board.value === "aqa",
+  );
+  check(
+    "adopt: the picked topic stays selected through the cascade",
+    h.sel.topic.value === aqaSlug,
+  );
+  check(
+    "adopt: the other dropdowns narrow to AQA",
+    opts(h.sel.topic).every((o) => data.topics[o.value].board === "aqa") &&
+      !hasOptgroup(h.sel.group),
+  );
+
+  const h2 = makeRoot();
+  M.init(h2.root, data);
+  h2.sel.group.change("microeconomics");
+  check(
+    "adopt: picking an AQA area sets Board to AQA",
+    h2.sel.board.value === "aqa" && h2.sel.group.value === "microeconomics",
+  );
+}
+
+// -- query-string arrivals from the revision notes
+
+{
+  const aqaSlug = Object.keys(data.topics).filter(
+    (s) => data.topics[s].board === "aqa",
+  )[0];
+  const F = factory({ location: { search: "?topic=" + aqaSlug } });
+  const h = makeRoot();
+  F.init(h.root, data);
+  check(
+    "url: a bare ?topic= for an AQA topic ends with Board showing AQA",
+    h.sel.board.value === "aqa",
+    h.sel.board.value,
+  );
+  check(
+    "url: ... and the topic selected, in an AQA-only list",
+    h.sel.topic.value === aqaSlug &&
+      opts(h.sel.topic).every((o) => data.topics[o.value].board === "aqa"),
+  );
+
+  // The shape the notes pages actually link with.
+  const edexcelSlug = Object.keys(data.topics).filter(
+    (s) => data.topics[s].board === "edexcel",
+  )[0];
+  const F2 = factory({
+    location: { search: "?board=edexcel&topic=" + edexcelSlug },
+  });
+  const h2 = makeRoot();
+  F2.init(h2.root, data);
+  const expected = data.questions.filter(
+    (q) => q.topics.indexOf(edexcelSlug) !== -1,
+  ).length;
+  check(
+    "url: ?board=edexcel&topic= lands filtered with both controls set",
+    h2.sel.board.value === "edexcel" && h2.sel.topic.value === edexcelSlug,
+  );
+  check(
+    "url: ... and the count shows that topic's questions",
+    h2.count.textContent.indexOf(String(expected)) === 0 ||
+      (expected === 1 && h2.count.textContent === "1 question"),
+    h2.count.textContent + " for " + expected,
+  );
+}
+
+// -- pre-filtered pages keep exactly the behaviour they shipped with
+
+{
+  const boardData = JSON.parse(
+    fs.readFileSync(
+      path.join(ROOT, "past-paper-questions", "edexcel", "questions.json"),
+      "utf8",
+    ),
+  );
+  const h = makeRoot({ "data-prefilter-board": "edexcel" });
+  M.init(h.root, boardData);
+  check(
+    "prefiltered hub: no select carries an optgroup",
+    FILTERS.every((f) => !hasOptgroup(h.sel[f.name])),
+  );
+  check(
+    "prefiltered hub: the Topic list still offers the whole board",
+    opts(h.sel.topic).length === Object.keys(boardData.topics).length,
+  );
+  const topicHtml = h.sel.topic.innerHTML;
+  h.sel.group.change("theme-1");
+  check(
+    "prefiltered hub: choosing a theme does not reshape the Topic list",
+    h.sel.topic.innerHTML === topicHtml,
+  );
+
+  const topicSlug = Object.keys(data.topics).filter(
+    (s) => data.topics[s].board === "aqa" && data.topics[s].hasPage,
+  )[0];
+  const topicData = JSON.parse(
+    fs.readFileSync(
+      path.join(
+        ROOT,
+        "past-paper-questions",
+        "aqa",
+        topicSlug,
+        "questions.json",
+      ),
+      "utf8",
+    ),
+  );
+  const h2 = makeRoot({ "data-prefilter-topic": topicSlug });
+  M.init(h2.root, topicData);
+  check(
+    "prefiltered topic page: no select carries an optgroup",
+    FILTERS.every((f) => !hasOptgroup(h2.sel[f.name])),
+  );
+}
 
 console.log(
   failures === 0
