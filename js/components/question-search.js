@@ -337,6 +337,70 @@
     );
   }
 
+  // ---------------------------------------------------------------- options
+
+  /* The board-shaped filters - Qualification, Theme / area, Paper section and
+   * Topic - mean different things on each board, so their option lists are
+   * built per board. With a board in play the list is that board's values,
+   * flat, exactly as the pre-filtered pages have always shown it. With no
+   * board the values sit under <optgroup>s labelled with the board names from
+   * data.boards - never hard-coded - so the two numbering systems share one
+   * dropdown without interleaving: before this, the master page's Topic list
+   * held 151 topics with 28 spec codes appearing twice and nothing saying
+   * which board each belonged to.
+   *
+   * Pure functions of the data, so scripts/test_question_search.js can
+   * exercise them without a DOM. Each returns a list whose entries are either
+   * plain values or {label, values} groups; optionList() renders both.
+   */
+
+  /* One {name, values} entry per board that has any values, in
+   * data.boards order. */
+  function valuesByBoard(data, valuesFor) {
+    var lists = [];
+    data.boards.forEach(function (b) {
+      var values = valuesFor(b.board);
+      if (values.length) lists.push({ name: b.name, values: values });
+    });
+    return lists;
+  }
+
+  /* Topic and Theme / area: every value belongs to exactly one board, so with
+   * no board in play the whole list is grouped, one <optgroup> per board. A
+   * list only one board populates comes back flat - a lone group label would
+   * be noise. */
+  function groupedByBoard(data, board, valuesFor) {
+    if (board) return valuesFor(board);
+    var lists = valuesByBoard(data, valuesFor);
+    if (lists.length === 1) return lists[0].values;
+    return lists.map(function (l) {
+      return { label: l.name, values: l.values };
+    });
+  }
+
+  /* Paper section and Qualification: most values exist on every board and
+   * stay flat; one that only some boards have (Edexcel's Section C, AS Level)
+   * is listed under its board's name, so nothing implies the other board
+   * offers it. */
+  function sharedThenBoardSpecific(data, board, valuesFor) {
+    if (board) return valuesFor(board);
+    var lists = valuesByBoard(data, valuesFor);
+    if (lists.length === 1) return lists[0].values;
+    var shared = lists[0].values.filter(function (v) {
+      return lists.every(function (l) {
+        return l.values.indexOf(v) !== -1;
+      });
+    });
+    var out = shared.slice();
+    lists.forEach(function (l) {
+      var own = l.values.filter(function (v) {
+        return shared.indexOf(v) === -1;
+      });
+      if (own.length) out.push({ label: l.name, values: own });
+    });
+    return out;
+  }
+
   // ---------------------------------------------------------------- component
 
   function init(root, data) {
@@ -366,47 +430,194 @@
     var preBoard = root.getAttribute("data-prefilter-board") || "";
     var preGroup = root.getAttribute("data-prefilter-group") || "";
 
+    // Group slug -> record (for labels) and -> board (for adopting a board
+    // from a chosen theme or area).
+    var groupsBySlug = {};
+    var groupBoard = {};
+    data.boards.forEach(function (b) {
+      b.groups.forEach(function (g) {
+        groupsBySlug[g.slug] = g;
+        groupBoard[g.slug] = b.board;
+      });
+    });
+
+    // Only the master page lets the Board select drive the other dropdowns.
+    // A pre-filtered page fixed its board at build time and keeps exactly the
+    // behaviour it shipped with: flat lists, no optgroups, no narrowing.
+    var cascades = !!filters.board && !preBoard && !preTopic;
+
+    /* The board narrowing the board-shaped selects. A pre-filtered page fixes
+     * it (a topic implies its board); the master page reads the Board select,
+     * which starts empty - "Both boards". */
+    function effectiveBoard() {
+      if (preBoard) return preBoard;
+      if (preTopic && topics[preTopic]) return topics[preTopic].board;
+      return filters.board && filters.board.value ? filters.board.value : "";
+    }
+
     var shown = PAGE_SIZE;
     var matches = [];
 
     function optionList(sel, values, labeller) {
-      var html =
-        '<option value="">' + sel.getAttribute("data-ppq-all") + "</option>";
-      values.forEach(function (v) {
-        html +=
+      var prev = sel.value;
+      function option(v) {
+        return (
           '<option value="' +
           escapeHtml(v) +
           '">' +
           escapeHtml(labeller(v)) +
-          "</option>";
+          "</option>"
+        );
+      }
+      var html =
+        '<option value="">' + sel.getAttribute("data-ppq-all") + "</option>";
+      values.forEach(function (v) {
+        if (v && v.values) {
+          html += '<optgroup label="' + escapeHtml(v.label) + '">';
+          v.values.forEach(function (w) {
+            html += option(w);
+          });
+          html += "</optgroup>";
+        } else {
+          html += option(v);
+        }
       });
       sel.innerHTML = html;
+      // The cascade rebuilds lists the reader may already have chosen from:
+      // keep their choice when the new list still offers it, otherwise fall
+      // back to "All ..." rather than leaving the select pointing at nothing.
+      if (prev) {
+        sel.value = prev;
+        if (sel.value !== prev) sel.value = "";
+      }
+    }
+
+    // ---- the board-shaped lists, one small derivation each
+
+    function levelsFor(board) {
+      var levels = [];
+      data.questions.forEach(function (q) {
+        if (board && q.board !== board) return;
+        var level = data.papers[q.p].level;
+        if (levels.indexOf(level) === -1) levels.push(level);
+      });
+      // "a-level" before "as-level" happens to be alphabetical, and is also the
+      // order a student expects: the qualification most of them are sitting
+      // comes first.
+      return levels.sort();
+    }
+
+    function sectionsFor(board) {
+      var sections = [];
+      data.questions.forEach(function (q) {
+        if (board && q.board !== board) return;
+        if (sections.indexOf(q.section) === -1) sections.push(q.section);
+      });
+      return sections.sort();
+    }
+
+    // Only the sections of the board in play, so an Edexcel page never
+    // offers "Microeconomics" and vice versa.
+    function groupSlugsFor(board) {
+      var slugs = [];
+      data.boards.forEach(function (b) {
+        if (board && b.board !== board) return;
+        b.groups.forEach(function (g) {
+          slugs.push(g.slug);
+        });
+      });
+      return slugs;
+    }
+
+    function topicSlugsFor(board) {
+      // A chosen Theme / area narrows Topic to its own topics; each topic
+      // sits under exactly one group. Only the visible control narrows -
+      // never data-prefilter-group, so a theme page's Topic list keeps
+      // offering the whole board, as it always has.
+      var group = filters.group && cascades ? filters.group.value : "";
+      return Object.keys(topics)
+        .filter(function (s) {
+          if (board && topics[s].board !== board) return false;
+          if (group && topics[s].group !== group) return false;
+          return true;
+        })
+        .sort(function (a, b) {
+          return topics[a].spec.localeCompare(topics[b].spec, "en", {
+            numeric: true,
+          });
+        });
+    }
+
+    /* The four selects the Board choice reshapes. Runs once on every page,
+     * and again on the master page whenever the board in play changes -
+     * optionList() keeps any still-valid choice. Paper, Marks, Year and Sort
+     * are deliberately not here: they are the same shape on both boards, and
+     * a dropdown that reshuffles when you touch a different one is its own
+     * kind of confusing. */
+    function populateBoardShaped() {
+      var board = effectiveBoard();
+      if (filters.level)
+        optionList(
+          filters.level,
+          sharedThenBoardSpecific(data, board, levelsFor),
+          function (v) {
+            return v === "as-level" ? "AS Level only" : "A Level only";
+          },
+        );
+      if (filters.group)
+        optionList(
+          filters.group,
+          groupedByBoard(data, board, groupSlugsFor),
+          function (v) {
+            var g = groupsBySlug[v];
+            return g ? g.label + ": " + g.name : v;
+          },
+        );
+      if (filters.section)
+        optionList(
+          filters.section,
+          sharedThenBoardSpecific(data, board, sectionsFor),
+          function (v) {
+            return "Section " + v;
+          },
+        );
+      if (filters.topic)
+        optionList(
+          filters.topic,
+          groupedByBoard(data, board, topicSlugsFor),
+          function (s) {
+            return topics[s].spec + " " + topics[s].shortTitle;
+          },
+        );
+    }
+
+    /* A topic or theme belongs to exactly one board (an invariant
+     * scripts/test_question_search.js pins), so choosing one while the Board
+     * select still says "Both boards" decides the board, and the other
+     * dropdowns narrow to match. */
+    function adoptBoard(name, value) {
+      if (!cascades || !value || filters.board.value) return;
+      var board = "";
+      if (name === "topic" && topics[value]) board = topics[value].board;
+      else if (name === "group") board = groupBoard[value] || "";
+      if (board) filters.board.value = board;
     }
 
     function populate() {
       var papers = [];
       var years = [];
       var marks = [];
-      var sections = [];
-      var levels = [];
       data.questions.forEach(function (q) {
         var p = data.papers[q.p];
         if (papers.indexOf(p.paper) === -1) papers.push(p.paper);
         if (years.indexOf(p.year) === -1) years.push(p.year);
         if (marks.indexOf(q.marks) === -1) marks.push(q.marks);
-        if (sections.indexOf(q.section) === -1) sections.push(q.section);
-        if (levels.indexOf(p.level) === -1) levels.push(p.level);
       });
       papers.sort();
       years.sort().reverse();
       marks.sort(function (a, b) {
         return a - b;
       });
-      sections.sort();
-      // "a-level" before "as-level" happens to be alphabetical, and is also the
-      // order a student expects: the qualification most of them are sitting
-      // comes first.
-      levels.sort();
 
       if (filters.paper)
         optionList(filters.paper, papers, function (v) {
@@ -419,14 +630,6 @@
       if (filters.marks)
         optionList(filters.marks, marks, function (v) {
           return v + " marks";
-        });
-      if (filters.section)
-        optionList(filters.section, sections, function (v) {
-          return "Section " + v;
-        });
-      if (filters.level)
-        optionList(filters.level, levels, function (v) {
-          return v === "as-level" ? "AS Level only" : "A Level only";
         });
       if (filters.board)
         optionList(
@@ -441,43 +644,7 @@
             return b ? b.name : v;
           },
         );
-      if (filters.group) {
-        // Only the sections of the board in play, so an Edexcel page never
-        // offers "Microeconomics" and vice versa.
-        var groupList = [];
-        data.boards.forEach(function (b) {
-          if (preBoard && b.board !== preBoard) return;
-          b.groups.forEach(function (g) {
-            groupList.push(g);
-          });
-        });
-        optionList(
-          filters.group,
-          groupList.map(function (g) {
-            return g.slug;
-          }),
-          function (v) {
-            var g = groupList.filter(function (x) {
-              return x.slug === v;
-            })[0];
-            return g ? g.label + ": " + g.name : v;
-          },
-        );
-      }
-      if (filters.topic) {
-        var slugs = Object.keys(topics)
-          .filter(function (s) {
-            return !preBoard || topics[s].board === preBoard;
-          })
-          .sort(function (a, b) {
-            return topics[a].spec.localeCompare(topics[b].spec, "en", {
-              numeric: true,
-            });
-          });
-        optionList(filters.topic, slugs, function (s) {
-          return topics[s].spec + " " + topics[s].shortTitle;
-        });
-      }
+      populateBoardShaped();
     }
 
     function passesFilters(record) {
@@ -608,7 +775,15 @@
       });
     }
     Array.prototype.forEach.call(selects, function (sel) {
-      sel.addEventListener("change", run);
+      sel.addEventListener("change", function () {
+        if (cascades) {
+          var name = sel.getAttribute("data-ppq-filter");
+          adoptBoard(name, sel.value);
+          if (name === "board" || name === "group" || name === "topic")
+            populateBoardShaped();
+        }
+        run();
+      });
     });
     if (els.sort) els.sort.addEventListener("change", run);
     if (els.more)
@@ -623,6 +798,9 @@
           sel.value = "";
         });
         if (els.sort) els.sort.value = "relevance";
+        // With no board in play any more, the grouped "Both boards" lists
+        // come back in full.
+        if (cascades) populateBoardShaped();
         run();
         if (els.query) els.query.focus();
       });
@@ -666,6 +844,16 @@
 
     populate();
     applyQueryString();
+    // A ?topic= or ?theme= link decides the board just as a click on the
+    // control would, and the lists narrow to that board before first paint.
+    // Order matters: the cascade runs AFTER the query string is applied, so
+    // it can never empty a select the URL just set - and optionList() keeps
+    // any value still valid on the adopted board.
+    if (cascades) {
+      if (filters.topic) adoptBoard("topic", filters.topic.value);
+      if (filters.group) adoptBoard("group", filters.group.value);
+      populateBoardShaped();
+    }
     // The panel is already on screen and already the right height - the page
     // shipped it that way, with the fields this page fixes marked hidden in the
     // HTML. All that is left is to make it usable.
