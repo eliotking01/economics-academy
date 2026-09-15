@@ -1160,7 +1160,7 @@
           <form
             class="contact-form"
             id="enquiryForm"
-            action="https://formspree.io/f/mqadgbbw"
+            action="https://formspree.io/f/xkjgwnrb"
             method="POST"
           >
             <input type="hidden" id="selectedPackage" name="package" value="" />
@@ -1276,6 +1276,34 @@
                 autocomplete="off"
               />
             </div>
+            <!-- Cloudflare Turnstile. Rendered by js/components/turnstile-form.js
+                 when this modal OPENS, not on page load - the modal is
+                 display:none until then and a widget rendered into a
+                 zero-layout box comes up blank. The widget drops a
+                 cf-turnstile-response input into this form, which
+                 new FormData(this) below picks up by itself; do not rename
+                 it. Formspree verifies it with the Secret Key, which lives
+                 in the Formspree dashboard and never in this repo.
+
+                 No <noscript> here, deliberately. This modal is opened by
+                 script and by nothing else, so with JavaScript off it never
+                 appears and a fallback inside it could never be read. The
+                 JS-off route off this page is the Enquire buttons themselves,
+                 which are plain <a href="/contact.html"> links - and THAT
+                 form carries the noscript with the email address. -->
+            <div class="turnstile-wrap">
+              <div
+                class="cf-turnstile"
+                data-sitekey="0x4AAAAAAE2A8l0xAKdULabI"
+                data-ea-note="enquiry-turnstile-note"
+                data-ea-mount="manual"
+              ></div>
+              <p
+                id="enquiry-turnstile-note"
+                class="turnstile-note"
+                role="status"
+              ></p>
+            </div>
             <button
               type="submit"
               id="enquiry-submit"
@@ -1317,6 +1345,15 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <!-- Turnstile. This file first: it defines window.eaTurnstileReady, which
+         api.js looks up by name on load. api.js is async defer and is on this
+         page and contact.html only - not in the shared header template. -->
+    <script src="/js/components/turnstile-form.js"></script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=eaTurnstileReady&amp;render=explicit"
+      async
+      defer
+    ></script>
     <!-- Calendly, loaded lazily (2026-08-23). widget.js (and its widget.css,
          which used to be a render-blocking link in the <head>) are requested
          only when the booking section comes within a screen of the viewport,
@@ -1389,6 +1426,9 @@
         modal.style.display = "block";
         modal.setAttribute("aria-hidden", "false");
         modalOpener = triggerEl || null;
+        // Render Turnstile now the modal has layout. Idempotent: reopening
+        // the modal reuses the widget that is already there.
+        if (window.eaTurnstile) window.eaTurnstile.mount();
         document.getElementById("enquiry-name").focus();
       }
 
@@ -1458,28 +1498,41 @@
             body: new FormData(this),
             headers: { Accept: "application/json" },
           });
-          if (res.ok) {
-            formMessage.textContent =
-              "Thank you for your enquiry! I will get back to you soon.";
-            formMessage.className = "form-message form-success";
-            enquiryForm.reset();
-            // Tell js/components/track.js (generate_lead). Only on res.ok.
-            document.dispatchEvent(
-              new CustomEvent("ea:lead", {
-                detail: { type: "tutoring_enquiry" },
-              }),
+          if (!res.ok) {
+            // Read the body once and ask whether Formspree rejected the
+            // token rather than anything the visitor typed, so the message
+            // can say what to do about it.
+            const body = await res.json().catch(() => null);
+            throw new Error(
+              window.eaTurnstile && window.eaTurnstile.isTokenError(body)
+                ? "token"
+                : "failed",
             );
-            setTimeout(closeModal, 3000);
-          } else {
-            throw new Error("failed");
           }
-        } catch {
           formMessage.textContent =
-            "Sorry - that didn't send. Please try again, or email eliotkingtuition@gmail.com.";
+            "Thank you for your enquiry! I will get back to you soon.";
+          formMessage.className = "form-message form-success";
+          enquiryForm.reset();
+          // Tell js/components/track.js (generate_lead). Only on res.ok.
+          document.dispatchEvent(
+            new CustomEvent("ea:lead", {
+              detail: { type: "tutoring_enquiry" },
+            }),
+          );
+          setTimeout(closeModal, 3000);
+        } catch (err) {
+          formMessage.textContent =
+            err && err.message === "token"
+              ? "Sorry - the bot check didn't come through. Please reload the page and try again, or email eliotkingtuition@gmail.com."
+              : "Sorry - that didn't send. Please try again, or email eliotkingtuition@gmail.com.";
           formMessage.className = "form-message form-error";
         } finally {
           submitBtn.disabled = false;
           submitBtn.textContent = "Send Enquiry";
+          // Last, and on every path: a Turnstile token is single-use, so
+          // without this a second enquiry in the same visit is rejected.
+          // reset() disables the button again until the new token lands.
+          if (window.eaTurnstile) window.eaTurnstile.reset();
         }
       });
     </script>

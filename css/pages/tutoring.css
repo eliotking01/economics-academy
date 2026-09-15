@@ -563,3 +563,44 @@
   margin-right: 1em;
   font-size: 0.9em;
 }
+
+/* Cloudflare Turnstile, in the enquiry modal (2026-09-15). The widget itself
+   is a Cloudflare iframe and is not styled from here - only the box it sits
+   in, the status line js/components/turnstile-form.js writes into, and the
+   JS-off fallback. The widget's own box is 300x65 at the default size and
+   fits the modal at 360px without scaling. */
+.turnstile-wrap {
+  margin: 0 0 12px;
+  /* Cloudflare's widget has a 300px floor and the modal gives it 312px at
+     360px wide (95% of the viewport less 15px of padding each side, measured
+     in headless Chrome). That fits, but only just, so overflow-x is the
+     backstop: if the widget ever grows, this box scrolls and the page does
+     not. */
+  overflow-x: auto;
+}
+.turnstile-note {
+  margin: 8px 0 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+  /* #595959 on #fff is 7.0:1 - the same muted grey the rest of the site
+     uses for secondary text, and AAA for small text. */
+  color: #595959;
+}
+.turnstile-note:empty {
+  display: none;
+}
+.turnstile-note-error {
+  color: #721c24;
+}
+/* The submit button is disabled until a token arrives, so it has to LOOK
+   disabled - an unstyled disabled button reads as a live button that does
+   nothing. */
+.form-submit-button:disabled {
+  /* #767676 carries white text at 4.54:1. A disabled control is exempt from
+     1.4.3, but the label still has to be readable while it is waiting. */
+  background-color: #767676;
+  cursor: not-allowed;
+}
+.form-submit-button:disabled:hover {
+  background-color: #767676;
+}

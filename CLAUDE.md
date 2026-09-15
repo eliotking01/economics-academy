@@ -57,7 +57,17 @@ what exists, not about keeping you cautious.
   `scripts/prettier_util.py` and recorded in `package.json`; no `npm install`).
   Without Node the build stops loudly rather than writing unformatted pages.
 - **Progressive enhancement.** Every page must work with JavaScript off. JS
-  enhances; it never delivers content.
+  enhances; it never delivers content. **One exception, scoped to two forms:
+  `contact.html` and `tutoring.html` need JavaScript to submit.** Eliot's
+  decision, 2026-09-15. Both carry Cloudflare Turnstile and Formspree rejects
+  a submission with no token, so a JS-off native POST is refused. The
+  trade-off was a scanner burning the free plan's 50 submissions a month
+  against the handful of visitors who browse with JavaScript off, and the
+  spam won it — an exhausted quota drops a real enquiry silently. The JS-off
+  route is the email address: a `<noscript>` block beside the contact form,
+  and on tutoring the Enquire buttons, which are plain links to that form.
+  **Do not extend this to any other page**, and do not read it as permission
+  to put content behind JS anywhere.
 - **Verify twice: run the suite, then open the page.** Green checks do not prove
   a layout is right. Live Server in VSCode is the second half.
 - **Say when you are unsure.** A stated uncertainty is worth more than a
@@ -162,5 +172,6 @@ so their detail is not in this file:
   codes `1.x.y`/`2.x.y`, deliberately not the real 7136 codes — ratified, do
   not "fix" them.
 - **Twin** = the page covering the same content on the other board.
-- Third-party: Formspree, Calendly, Stripe payment links, Kit, GA4. All IDs are
-  public by design.
+- Third-party: Formspree, Cloudflare Turnstile, Calendly, Stripe payment links,
+  Kit, GA4. All IDs are public by design — the Turnstile **Site** Key included.
+  Its **Secret** Key lives in the Formspree dashboard and never in this repo.

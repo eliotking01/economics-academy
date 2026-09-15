@@ -150,6 +150,18 @@ booking section nears the viewport — performance pass Phase 3),
 analytics consent), `tutorful.co.uk` (outbound links). LinkedIn appears only
 inside JSON-LD `sameAs`.
 
+> **Amended 2026-09-15 — the form spam hardening.** The list above is the
+> measurement as taken on 2026-08-25 and is left as it was. Since then this
+> page has gained a third-party request that the baseline could not have
+> recorded: **`challenges.cloudflare.com`**, Cloudflare Turnstile's
+> `api.js`, `async defer` at the foot of the page. It is not lazy like
+> Calendly — the token has to exist before the visitor presses Send — so it
+> is requested on every load of this page and of `contact.html`, and on no
+> other page on the site. The Formspree endpoint also changed: `mqadgbbw`
+> here and `xblapyky` on contact were rotated, the host `formspree.io` did
+> not. A re-measurement against this baseline should expect four connected
+> domains on this page, not three.
+
 ### Lighthouse (live URL, 2026-08-25)
 
 `python3 seo/tools/run_lighthouse.py --out seo/lh-tutoring-before --only

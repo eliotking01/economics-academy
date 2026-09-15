@@ -449,7 +449,7 @@
                   <div id="form-status" class="form-status"></div>
                   <form
                     id="contact-form"
-                    action="https://formspree.io/f/xblapyky"
+                    action="https://formspree.io/f/xgavweka"
                     method="POST"
                   >
                     <div class="row gtr-uniform">
@@ -523,6 +523,33 @@
                           rows="6"
                           required
                         ></textarea>
+                      </div>
+                      <!-- Cloudflare Turnstile. Rendered on load by
+                           js/components/turnstile-form.js - this form is
+                           visible from first paint, unlike the tutoring
+                           modal. The widget drops a cf-turnstile-response
+                           input into this form, which new FormData(this)
+                           below picks up by itself; do not rename it.
+                           Formspree verifies it with the Secret Key, which
+                           lives in the Formspree dashboard, never here. -->
+                      <div class="col-12 turnstile-wrap">
+                        <div
+                          class="cf-turnstile"
+                          data-sitekey="0x4AAAAAAE2A8l0xAKdULabI"
+                          data-ea-note="contact-turnstile-note"
+                        ></div>
+                        <p
+                          id="contact-turnstile-note"
+                          class="turnstile-note"
+                          role="status"
+                        ></p>
+                        <noscript>
+                          <p class="turnstile-noscript">
+                            This form needs JavaScript switched on. If yours is
+                            off, email eliotkingtuition@gmail.com instead and
+                            I'll reply the same way.
+                          </p>
+                        </noscript>
                       </div>
                       <div class="col-12">
                         <ul class="actions">
@@ -608,6 +635,15 @@
     <script src="/js/components/consent.js"></script>
     <script src="/js/components/site-search.js"></script>
     <script src="/js/main.js"></script>
+    <!-- Turnstile. This file first: it defines window.eaTurnstileReady, which
+         api.js looks up by name on load. api.js is async defer and is on this
+         page and tutoring.html only - not in the shared header template. -->
+    <script src="/js/components/turnstile-form.js"></script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=eaTurnstileReady&amp;render=explicit"
+      async
+      defer
+    ></script>
 
     <!-- Form Submission Script -->
     <script>
@@ -647,12 +683,21 @@
                     detail: { type: "contact_form" },
                   }),
                 );
-              } else {
-                // Error message
-                formStatus.textContent =
-                  "Sorry — something went wrong. Please try again, or email eliotkingtuition@gmail.com directly.";
-                formStatus.className = "form-status form-error";
+                return;
               }
+              // Read the body once and ask whether Formspree rejected the
+              // token rather than anything the visitor typed, so the message
+              // can say what to do about it.
+              return response
+                .json()
+                .catch(() => null)
+                .then((body) => {
+                  formStatus.textContent =
+                    window.eaTurnstile && window.eaTurnstile.isTokenError(body)
+                      ? "Sorry — the bot check didn't come through. Please reload the page and try again, or email eliotkingtuition@gmail.com directly."
+                      : "Sorry — something went wrong. Please try again, or email eliotkingtuition@gmail.com directly.";
+                  formStatus.className = "form-status form-error";
+                });
             })
             .catch((error) => {
               formStatus.textContent =
@@ -662,6 +707,10 @@
             .finally(() => {
               submitButton.disabled = false;
               submitButton.value = "Send Message";
+              // Last, and on every path: a Turnstile token is single-use, so
+              // without this a second message in the same visit is rejected.
+              // reset() disables the button again until the new token lands.
+              if (window.eaTurnstile) window.eaTurnstile.reset();
 
               // Scroll to form status message
               formStatus.scrollIntoView({

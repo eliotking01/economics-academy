@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Form spam hardening — endpoints rotated, Turnstile on both forms | in review | — | — |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
 | Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | live | 2026-08-26 | `0bcac57c` |
 | Notes family consistency — the two diagram galleries | live | 2026-08-25 | `0bad0c88` |
@@ -189,6 +190,30 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### Form spam hardening — Turnstile on both Formspree forms (2026-09-15) — IN REVIEW (branch `feature/form-spam-hardening`)
+
+An automated scanner found both forms from ~13 September and began fuzzing
+them with SQL-injection probes — one poisoned parameter per request, every
+other field empty, all seven `preferred_days` boxes ticked, which is a direct
+POST to the endpoint rather than a browser. Nothing could be breached (no
+database; Pages serves static files and Formspree relays email); the risk was
+the free plan's 50 submissions a month being eaten, which drops a real enquiry
+silently.
+
+Both endpoint IDs rotated — `xblapyky` and `mqadgbbw` are hardcoded in the bot
+and are burned — and Cloudflare Turnstile added to both new forms, verified
+server-side by Formspree with the Secret Key, which is the only defence a
+direct POST cannot walk past. Explicit rendering via the new shared
+`js/components/turnstile-form.js`, because the tutoring form sits in a
+`display:none` modal and a widget rendered into a zero-layout box comes up
+blank; the widget is reset in each page's `finally` block because tokens are
+single-use. `ea:lead` still fires only on `response.ok`, so GA4 is untouched.
+
+**This is the site's one progressive-enhancement exception** — both forms now
+need JavaScript, recorded in CLAUDE.md with the reasoning. `verify_page_shell`
+carries it: the two scripts in `EXTRA_SCRIPT_PAGES`, the root family's tail
+count reseeded 1 → 2.
 
 ### Past-paper search — board cascade in the filters (2026-08-27) — LIVE (merged 2026-08-27, `8fbb6ba5`, PR #35)
 
