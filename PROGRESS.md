@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
 | Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | live | 2026-08-26 | `0bcac57c` |
 | Notes family consistency — the two diagram galleries | live | 2026-08-25 | `0bad0c88` |
 | Notes topic-page redesign — the 166 pages | live | 2026-08-25 | `53532083` |
@@ -188,6 +189,22 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### Past-paper search — board cascade in the filters (2026-08-27) — LIVE (merged 2026-08-27, `8fbb6ba5`, PR #35)
+
+The master page's Board select now drives Qualification, Theme / area,
+Paper section and Topic (still-valid choices kept, the rest reset); with
+no board chosen, Topic and Theme / area group under `<optgroup>`s
+labelled from `data.boards`, Section C and AS Level sit under Edexcel's
+name, and picking a topic or theme adopts its board. The cascade is
+gated to pages with a live Board control: the pre-filtered hub, theme
+and topic pages keep their flat lists byte-for-byte (a hub's visible
+Theme / area select deliberately still does not narrow Topic — pinned by
+test; lift the gate in `question-search.js` if ever wanted).
+`optionList()` stays the single option builder. One file plus its tests;
+`scripts/test_question_search.js` now runs the component's real `init()`
+against the real payloads through a minimal fake-select harness, slicing
+the component file down to its `boot` marker.
 
 ### Tutoring page SEO pass (2026-08-26) — LIVE (merged 2026-08-26, `0bcac57c`, PR #33)
 
