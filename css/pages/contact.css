@@ -311,3 +311,59 @@ input[type="reset"] {
     font-size: 1.25em;
   }
 }
+
+/* Cloudflare Turnstile (2026-09-15). The widget itself is a Cloudflare iframe
+   and is not styled from here - only the column it sits in, the status line
+   js/components/turnstile-form.js writes into, and the JS-off fallback. The
+   wrapper is a .col-12 so main.css's grid rule owns its padding and spacing,
+   exactly like every other field in this form. */
+/* Cloudflare's widget has a 300px floor. Measured in headless Chrome: this
+   column is exactly as wide as the textarea beside it - 390px at a 500px
+   viewport, container 460 less ~29px of grid padding - which extrapolates to
+   ~290px at 360px, ten short. So the grid padding comes off this one column
+   on a phone, and overflow-x is the backstop if Cloudflare ever grows the
+   widget: the box scrolls, the page does not. */
+#main .row > div.turnstile-wrap {
+  overflow-x: auto;
+}
+@media screen and (max-width: 480px) {
+  #main .row > div.turnstile-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.turnstile-note {
+  margin: 8px 0 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+  /* #595959 on #fff is 7.0:1 - the same muted grey the rest of the site uses
+     for secondary text, and AAA for small text. */
+  color: #595959;
+}
+.turnstile-note:empty {
+  display: none;
+}
+.turnstile-note-error {
+  color: #721c24;
+}
+.turnstile-noscript {
+  margin: 8px 0 0;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  line-height: 1.5;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+/* The submit button is disabled until a token arrives, so it has to LOOK
+   disabled - main.css styles no disabled state at all, so without this an
+   unusable button is indistinguishable from a live one. Scoped to this form
+   and to (1,2,1) so it beats main.css's own (0,2,1) :hover rule. */
+#contact-form input[type="submit"]:disabled,
+#contact-form input[type="submit"]:disabled:hover {
+  /* #767676 carries white text at 4.54:1. A disabled control is exempt from
+     1.4.3, but the label still has to be readable while it is waiting. */
+  background: #767676;
+  cursor: not-allowed;
+}

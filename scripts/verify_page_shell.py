@@ -113,6 +113,9 @@ pages = site_layout.pages
 #     Script tails 3 -> 2 on 2026-08-14, the home-page revamp; 2 -> 1 on
 #     2026-08-23 when tutoring.html's Calendly <script src> became an inline
 #     lazy loader, so every root page now ends in the plain two-script tail.
+#     Script tails 1 -> 2 on 2026-09-15, the form spam hardening: contact.html
+#     and tutoring.html append the same two Turnstile scripts and the other
+#     seven root pages do not, so the family now has two tails, not nine.
 #   notes-topic: 4 head shapes until 2026-08-13, 3 after PH08-039's MathJax
 #     convergence, 2 after PH08-042 moved 1-5-1's <style> block out. Declared
 #     here AND at check 5 on purpose - measured by different code.
@@ -122,7 +125,7 @@ pages = site_layout.pages
 # family: (heads, shells, tails, css sets). No comments inside the literal -
 # --reseed rewrites it wholesale.
 EXPECTED_SHAPES = {
-    "root":          (9, 9, 1, 9),
+    "root":          (9, 9, 2, 9),
     "notes-topic":   (2, 1, 1, 1),
     "notes-hub":     (2, 2, 1, 2),
     "notes-other":   (2, 3, 2, 2),
@@ -268,10 +271,30 @@ FAMILY_SCRIPT = {
 # pages including macro-application, whose redesign was reverted on
 # Eliot's instruction the same day (its filter panel painted glitchily in
 # his browsers however it was built).
+#
+# 2026-09-15, the form spam hardening: the two Formspree forms gained
+# Cloudflare Turnstile, so contact.html and tutoring.html each load two more
+# scripts after the tail - the shared component and Cloudflare's api.js. That
+# api.js is the SECOND third-party <script src> ever to sit in this repo's
+# markup (Calendly's was the first and became a lazy inline loader in 2026-08).
+# It is here rather than lazy because the token has to exist before the
+# visitor presses Send. The src is written with &amp; in the HTML and arrives
+# here decoded, because html.parser has convert_charrefs=True - so the key
+# below carries a bare & and a change to the query string has to change this
+# line in the same commit.
 EXTRA_SCRIPT_PAGES = {
     "/js/components/notes.js": {
         "revision-notes/microeconomics-diagrams.html",
         "revision-notes/macroeconomics-diagrams.html",
+    },
+    "/js/components/turnstile-form.js": {
+        "contact.html",
+        "tutoring.html",
+    },
+    "https://challenges.cloudflare.com/turnstile/v0/api.js"
+    "?onload=eaTurnstileReady&render=explicit": {
+        "contact.html",
+        "tutoring.html",
     },
 }
 
