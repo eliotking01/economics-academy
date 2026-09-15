@@ -437,6 +437,11 @@
               <p>We collect personal data when you:</p>
               <ul>
                 <li>send a message through a Formspree-powered form;</li>
+                <li>
+                  submit either of those forms, at which point Cloudflare
+                  Turnstile checks that you are not an automated script before
+                  the message is sent;
+                </li>
                 <li>subscribe to the email newsletter;</li>
                 <li>email us directly or use a mailto email link;</li>
                 <li>book or manage an appointment through Calendly;</li>
@@ -521,6 +526,10 @@
                 <li>
                   <strong>Formspree:</strong> for contact and enquiry form
                   submissions.
+                </li>
+                <li>
+                  <strong>Cloudflare:</strong> for the Turnstile bot check on
+                  the contact and tutoring enquiry forms.
                 </li>
                 <li>
                   <strong>Kit:</strong> for managing email newsletter
@@ -622,6 +631,22 @@
                 address, browser details, and the page you visited.
               </p>
               <p>
+                The contact and tutoring enquiry forms also load Cloudflare
+                Turnstile, which checks that a submission comes from a person
+                rather than an automated script. To do that Cloudflare receives
+                technical information including your IP address, browser
+                details, and the address of the page you are on. Cloudflare
+                states that these signals are used only to detect and block
+                bots, not to identify, profile or target individuals.
+                Cloudflare's own explanation is in its
+                <a
+                  href="https://www.cloudflare.com/turnstile-privacy-policy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Turnstile Privacy Addendum</a
+                >.
+              </p>
+              <p>
                 You can also control or block cookies through your browser
                 settings. Blocking cookies or scripts may affect how some parts
                 of the website, forms, bookings, payments, or revision-note
@@ -649,9 +674,9 @@
                 ask for them to be deleted.
               </p>
               <p>
-                Third-party services such as Formspree, Kit, Calendly, Stripe,
-                Google, and email providers keep data in line with their own
-                retention policies and account settings.
+                Third-party services such as Formspree, Cloudflare, Kit,
+                Calendly, Stripe, Google, and email providers keep data in line
+                with their own retention policies and account settings.
               </p>
             </section>
 

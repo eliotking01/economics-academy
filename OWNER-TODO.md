@@ -87,6 +87,25 @@ decisions waiting in those logs; it does not repeat them.
 
 ## Soon — before term starts
 
+- [ ] **Two Google Fonts leftovers, both harmless, both stale.** Found
+      2026-09-15 while writing the Turnstile privacy wording; logged rather
+      than fixed, because neither is in that branch's scope.
+      **(a)** 14 pages still carry `<link rel="preconnect">` to
+      `fonts.googleapis.com` and `fonts.gstatic.com`, left behind when the
+      fonts were self-hosted on 2026-08-23. Nothing is fetched from either
+      host any more, so they are dead markup opening two TLS connections for
+      nothing. `verify_css_load_order.py` does not catch them — it holds the
+      *stylesheet* link count at 0/463, and a preconnect is not a stylesheet
+      link. Count them with
+      `grep -rl "fonts.googleapis\|fonts.gstatic" --include='*.html' . | grep -v _archive`
+      rather than trusting the 14.
+      **(b)** `privacy.html` still lists "Google Fonts" twice as something the
+      site loads (the sharing list and the external-resources paragraph). The
+      MathJax-from-jsDelivr half of both sentences is still true — 61 pages —
+      so it is the Google Fonts half alone that needs to go. That is visible
+      wording on a published page, so it needs an explicit instruction and a
+      `Text-Change:` trailer.
+
 - [ ] **Google Business Profile**: as an online-only service you can create a
       profile without a public address ("service area" business). It enables
       Google reviews, which show for brand searches — the single cheapest
