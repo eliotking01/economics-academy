@@ -2401,6 +2401,28 @@ ul.divided li:first-child {
   }
 }
 
+/* The tier above stopped reaching 768px the next day: the Wave 4.10 bar
+   redesign added the submenu chevrons, letter-spacing and the bold current
+   item, and the bar grew to 781px. It wrapped again at 768-781px, and at
+   768-796px wherever the scrollbar is permanent and takes 15px of the width.
+   Measured in Chrome, WebKit and Firefox with Practice Questions current, the
+   widest case.
+
+   So a second step, only where it is needed: less side padding and a tighter
+   chevron gap. Text size and vertical padding are untouched, so legibility
+   and tap-target height are the same as the tier above; 860-1099px, which has
+   room to spare, looks exactly as it did. */
+@media screen and (max-width: 859px) {
+  #nav > ul > li > a {
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+  }
+
+  #nav > ul > li:has(> ul) > a:after {
+    margin-left: 0.3em;
+  }
+}
+
 /* Mobile-first: hide nav by default, show button */
 #nav {
   display: none;
