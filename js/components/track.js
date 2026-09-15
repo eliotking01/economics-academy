@@ -64,8 +64,13 @@
  * Nothing here blocks or delays the visitor. Listeners are delegated on
  * document in the capture phase, the event is fired, and the default action
  * (navigation, form post) proceeds untouched - no preventDefault, no
- * event_callback. With JavaScript off the forms post natively to Formspree
- * and Kit and the Stripe links still work; no event fires, which is accepted.
+ * event_callback. With JavaScript off the Kit newsletter form still posts
+ * natively and the Stripe links still work; no event fires, which is
+ * accepted. The two FORMSPREE forms no longer work with JavaScript off:
+ * since 2026-09-15 they carry Cloudflare Turnstile, and Formspree rejects a
+ * submission with no token, so a native JS-off post is refused rather than
+ * relayed. That is the site's one documented exception to the JS-off rule
+ * (CLAUDE.md); generate_lead was already unreachable in that case anyway.
  *
  * Vanilla, no jQuery, part of the page_shell.SCRIPT_TAIL on all 463 pages.
  */

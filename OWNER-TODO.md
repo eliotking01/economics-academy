@@ -507,7 +507,8 @@ Console is then explainable rather than alarming.
   landing this week is what makes the comparison meaningful.
 - **2026-08-16 — three verification loops closed**, all previously
   unverifiable from outside: **Formspree dashboard** checked on both forms
-  (`xblapyky` contact, `mqadgbbw` tutoring pop-up) — notification address
+  (`xblapyky` contact, `mqadgbbw` tutoring pop-up — **both retired
+  2026-09-15**, see the form spam hardening below) — notification address
   and spam filtering confirmed; **Stripe dashboard** checked — all 8 payment
   links confirmed redirecting to `confirmation.html` after payment, which
   closes the last open question on the marking journey; **LinkedIn link**

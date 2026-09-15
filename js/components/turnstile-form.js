@@ -38,9 +38,12 @@
  * reset() disables the button again while the next token is fetched.
  *
  * PROGRESSIVE ENHANCEMENT. This is the site's one documented exception to the
- * JS-off rule (CLAUDE.md, 2026-09-15). Both forms now need JavaScript; the
- * JS-off route is the <noscript> block beside each form, which gives the
- * email address. Do not extend the exception to any other page.
+ * JS-off rule (CLAUDE.md, 2026-09-15). Both forms now need JavaScript.
+ * contact.html carries a <noscript> block beside the form giving the email
+ * address; tutoring.html does not, because its modal is opened by script and
+ * a fallback inside it could never be read - that page's JS-off route is the
+ * Enquire buttons, which are plain links to contact.html. Do not extend the
+ * exception to any other page.
  *
  * Vanilla, no dependencies, one widget per page by design.
  */

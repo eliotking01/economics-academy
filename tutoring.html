@@ -1283,11 +1283,18 @@
                  cf-turnstile-response input into this form, which
                  new FormData(this) below picks up by itself; do not rename
                  it. Formspree verifies it with the Secret Key, which lives
-                 in the Formspree dashboard and never in this repo. -->
+                 in the Formspree dashboard and never in this repo.
+
+                 No <noscript> here, deliberately. This modal is opened by
+                 script and by nothing else, so with JavaScript off it never
+                 appears and a fallback inside it could never be read. The
+                 JS-off route off this page is the Enquire buttons themselves,
+                 which are plain <a href="/contact.html"> links - and THAT
+                 form carries the noscript with the email address. -->
             <div class="turnstile-wrap">
               <div
                 class="cf-turnstile"
-                data-sitekey="1x00000000000000000000AA"
+                data-sitekey="0x4AAAAAAE2A8l0xAKdULabI"
                 data-ea-note="enquiry-turnstile-note"
                 data-ea-mount="manual"
               ></div>
@@ -1297,12 +1304,6 @@
                 role="status"
               ></p>
             </div>
-            <noscript>
-              <p class="turnstile-noscript">
-                This form needs JavaScript switched on. If yours is off, email
-                eliotkingtuition@gmail.com instead and I'll reply the same way.
-              </p>
-            </noscript>
             <button
               type="submit"
               id="enquiry-submit"
