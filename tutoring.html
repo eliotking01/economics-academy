@@ -37,8 +37,6 @@
       content="Online A-Level Economics tutor for Edexcel, AQA, Edexcel B and OCR. 1-to-1 lessons £65/hour, small groups £35/hour. First-Class graduate, 6+ years' experience."
     />
     <link rel="canonical" href="https://economicsacademy.co.uk/tutoring.html" />
-    <link rel="preconnect" href="https://assets.calendly.com" />
-    <link rel="preconnect" href="https://calendly.com" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -90,7 +88,7 @@
             "name": "Free Introductory Call",
             "price": "0",
             "priceCurrency": "GBP",
-            "description": "Free 15-minute introductory call - no commitment required"
+            "description": "Free 15-minute introductory call, arranged by email after an enquiry - no commitment required"
           },
           {
             "@type": "Offer",
@@ -287,9 +285,6 @@
     <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/pages/tutoring.css" />
-    <!-- Calendly's widget.css used to be linked here, render-blocking. Since
-         2026-08-23 it is added alongside widget.js by the booking script at
-         the foot of the page, when the booking section nears the viewport. -->
   </head>
 
   <body class="is-preload">
@@ -562,7 +557,7 @@
             <ul class="tutoring-hero-actions">
               <li>
                 <a href="#booking" class="button large"
-                  >Book a Free Intro Call</a
+                  >Enquire About Tutoring</a
                 >
               </li>
               <li>
@@ -648,19 +643,20 @@
           <section class="how-it-works">
             <header class="major">
               <h2>How It Works</h2>
-              <p>From first call to better grades, in three steps</p>
+              <p>From first enquiry to better grades, in three steps</p>
             </header>
             <div class="steps-grid">
               <div class="step-card">
                 <span
-                  class="icon solid fa-calendar-check step-icon"
+                  class="icon solid fa-envelope step-icon"
                   aria-hidden="true"
                 ></span>
-                <h3>1. Book a free intro call</h3>
+                <h3>1. Enquire</h3>
                 <p>
-                  Fifteen minutes on Calendly, no commitment. We discuss your
-                  exam board, your goals, and whether 1-to-1 or a small group is
-                  the better fit.
+                  Tell me your exam board, your year and the days that suit you.
+                  I'll reply within 24 hours with the slots I have left, and if
+                  there's a fit I'll offer a free 15-minute call to talk it
+                  through.
                 </p>
               </div>
               <div class="step-card">
@@ -714,8 +710,9 @@
                     <li>Clarify the support you're looking for</li>
                     <li>Discuss whether 1-to-1 or a group suits you best</li>
                     <li>Ask any questions before booking lessons</li>
+                    <li>Arranged by email once you've enquired</li>
                   </ul>
-                  <a href="#booking" class="button small fit">Book Now</a>
+                  <a href="#booking" class="button small fit">Enquire</a>
                 </div>
               </div>
 
@@ -811,7 +808,7 @@
               </div>
             </div>
             <div class="tutoring-actions tutoring-actions-spaced">
-              <a href="#booking" class="button">Book a Free Intro Call</a>
+              <a href="#booking" class="button">Check Availability</a>
               <a
                 href="/contact.html"
                 class="button alt enquire-button"
@@ -966,32 +963,41 @@
             </div>
           </section>
 
-          <!-- Booking Section -->
+          <!-- Enquiry Section. id="booking" is unchanged on purpose: about.html,
+               contact.html, faq.html and four buttons on this page deep-link to
+               /tutoring.html#booking, and a published URL is permanent.
+               Self-booking was retired on 2026-09-25 - see docs/audit/DECISIONS.md.
+
+               The primary button is an .enquire-button, the same mechanism the
+               pricing cards use, so it opens the modal at the foot of this page
+               with the package already filled in. It is a real <a> to
+               /contact.html, so with JavaScript off it goes to that form
+               instead; the mailto beside it needs no script at all. -->
           <section id="booking" class="booking-container">
             <header class="major">
-              <h2>Book Your Free 15-Minute Intro Call</h2>
+              <h2>Enquire About Tutoring</h2>
               <p>
-                No commitment - choose a time that suits you and we'll discuss
-                your goals, your exam board, and whether 1-to-1 or a small group
-                is the right fit.
+                I have only a few weekly slots left for the 2026-27 academic
+                year. Send a quick enquiry with your exam board, your year and
+                the days that suit you, and I'll reply within 24 hours with
+                what's actually free. If nothing fits, I'll put you on the
+                waiting list and let you know as soon as a space opens. Parents
+                are welcome to a free 15-minute call before committing to
+                anything - I'll arrange that with you by email.
               </p>
             </header>
-            <!-- Calendly inline widget begin. The link inside is the real
-                 fallback: it is what a reader sees with scripting off, before
-                 the widget has loaded, and if Calendly's script fails. The
-                 booking script at the foot of the page removes it when the
-                 widget is injected (Calendly only APPENDS its iframe; it does
-                 not clear the div). data-auto-load="false" stops widget.js
-                 initialising on its own so that the lazy path below owns it. -->
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/kingtuition/freeintroduction"
-              data-auto-load="false"
-            >
+            <div class="tutoring-actions">
               <a
-                class="calendly-fallback button"
-                href="https://calendly.com/kingtuition/freeintroduction"
-                >Book a free 15-minute intro call on Calendly</a
+                href="/contact.html"
+                class="button primary enquire-button"
+                data-package="General enquiry"
+                data-modal-title="Tutoring"
+                >Send an Enquiry</a
+              >
+              <a
+                href="mailto:eliotkingtuition@gmail.com?subject=Tutoring%20enquiry"
+                class="button alt"
+                >Email me directly</a
               >
             </div>
             <div class="tutoring-actions tutoring-actions-spaced">
@@ -1129,7 +1135,7 @@
               </div>
             </div>
             <div class="tutoring-actions tutoring-actions-spaced">
-              <a href="#booking" class="button">Book a Free Intro Call</a>
+              <a href="#booking" class="button">Enquire About Tutoring</a>
               <a href="/faq.html" class="button alt">View Full FAQ</a>
             </div>
           </section>
@@ -1354,59 +1360,6 @@
       async
       defer
     ></script>
-    <!-- Calendly, loaded lazily (2026-08-23). widget.js (and its widget.css,
-         which used to be a render-blocking link in the <head>) are requested
-         only when the booking section comes within a screen of the viewport,
-         or straight away when the page opens at #booking. Until then the div
-         holds a plain link to the same booking page, which also stays if the
-         script never arrives. Browsers without IntersectionObserver load it
-         immediately, as before. -->
-    <script>
-      (function () {
-        var host = document.querySelector(".calendly-inline-widget[data-url]");
-        if (!host) return;
-        var loaded = false;
-        function loadCalendly() {
-          if (loaded) return;
-          loaded = true;
-          var css = document.createElement("link");
-          css.rel = "stylesheet";
-          css.href = "https://assets.calendly.com/assets/external/widget.css";
-          document.head.appendChild(css);
-          var js = document.createElement("script");
-          js.src = "https://assets.calendly.com/assets/external/widget.js";
-          js.async = true;
-          js.onload = function () {
-            if (!window.Calendly || !window.Calendly.initInlineWidget) return;
-            // Calendly appends its iframe and leaves whatever is in the div,
-            // so the fallback link is removed here, once the widget is about
-            // to replace it. On any failure before this point it stays.
-            var link = host.querySelector(".calendly-fallback");
-            if (link) link.parentNode.removeChild(link);
-            window.Calendly.initInlineWidget({
-              url: host.getAttribute("data-url"),
-              parentElement: host,
-            });
-          };
-          document.body.appendChild(js);
-        }
-        if (!("IntersectionObserver" in window)) {
-          loadCalendly();
-          return;
-        }
-        var io = new IntersectionObserver(
-          function (entries) {
-            if (entries.some(function (en) { return en.isIntersecting; })) {
-              io.disconnect();
-              loadCalendly();
-            }
-          },
-          { rootMargin: "100% 0px" }
-        );
-        io.observe(host);
-      })();
-    </script>
-
     <!-- Form Submission Script -->
     <script>
       const modal = document.getElementById("contactModal");
@@ -1419,8 +1372,12 @@
 
       let modalOpener = null;
 
-      function openModal(packageName, triggerEl) {
-        packageNameSpan.textContent = packageName;
+      // heading is what the modal shows; packageName is what Formspree is
+      // sent. They are the same for every pricing card, and differ for the
+      // #booking button, whose package is "General enquiry" (useful in the
+      // inbox) but whose heading should read "Enquire About Tutoring".
+      function openModal(packageName, heading, triggerEl) {
+        packageNameSpan.textContent = heading || packageName;
         selectedPackageInput.value = packageName;
         formMessage.style.display = "none";
         modal.style.display = "block";
@@ -1472,7 +1429,11 @@
       document.querySelectorAll(".enquire-button").forEach(function (button) {
         button.addEventListener("click", function (e) {
           e.preventDefault();
-          openModal(this.getAttribute("data-package"), this);
+          openModal(
+            this.getAttribute("data-package"),
+            this.getAttribute("data-modal-title"),
+            this,
+          );
         });
       });
 

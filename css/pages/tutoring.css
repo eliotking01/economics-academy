@@ -429,31 +429,13 @@
 
 /* Wave-norm item (f): ten inline styles from tutoring.html.
 
-   THE CALENDLY BLOCK IS THE ONE TO BE CAREFUL WITH. `min-width: 320px;
-   height: 700px; max-width: 100%` is Calendly's own documented embed
-   snippet, copied inline as they publish it. The <div> is ours and the
-   class is only their hook, so CSS applies to it identically - but if that
-   embed is ever re-pasted from Calendly's site it will arrive carrying the
-   style attribute again, and the inline would then win over this rule. If
-   the widget ever looks wrong, check for a re-pasted style attribute first.
+   The Calendly embed rules that used to open this block went with the widget
+   on 2026-09-25, when self-booking was retired. #booking is now an enquiry
+   block built from .booking-container, .tutoring-actions and .button, all of
+   which already existed - it needs no rules of its own.
 
-   `.enquire-button` is untouched: tutoring.js binds to it. */
-.calendly-inline-widget {
-  min-width: 320px;
-  height: 700px;
-  max-width: 100%;
-  text-align: center;
-}
-
-/* The link inside the widget div (since 2026-08-23): what the box shows with
-   scripting off, before the lazily loaded widget arrives, and if it never
-   does. The box keeps its 700px so the iframe appearing moves nothing. */
-.calendly-inline-widget .calendly-fallback {
-  margin: 2em auto 0;
-  max-width: 100%;
-  white-space: normal;
-  line-height: 1.5;
-}
+   `.enquire-button` is untouched: the inline script in tutoring.html binds
+   to it, and the #booking button is now one of them. */
 
 /* .row.tutoring-intro-row, NOT .tutoring-intro-row, and the compound is
    load-bearing. This div is the last child of its <section>, and main.css

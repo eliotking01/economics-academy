@@ -32,9 +32,6 @@
  *                      after response.ok and nowhere else, so spam and
  *                      failures never count. lead_type "tutoring_enquiry" |
  *                      "contact_form".
- *   intro_call_booked  Calendly's postMessage "calendly.event_scheduled" from
- *                      origin https://calendly.com, once per page. Custom
- *                      name: GA4 has no recommended event for this.
  *   sign_up            submit of the Kit newsletter form on index.html
  *                      (action app.kit.com). The form posts natively and
  *                      leaves the page, so this fires on submit; gtag sends
@@ -49,6 +46,11 @@
  *                      tutoring.html resolves to /tutoring.html#. This is the
  *                      event that says which free resource sends people to
  *                      the paid pages.
+ *
+ * One event has been RETIRED: `intro_call_booked` fired on Calendly's
+ * postMessage until 2026-09-25, when self-booking was retired and the widget
+ * left tutoring.html. Its GA4 history is still in the property; it simply
+ * stops receiving hits. The tutoring funnel now ends at generate_lead.
  *
  * One custom event lives elsewhere: `search` (standard GA4 name, with
  * search_term and page_path) is fired by js/components/site-search.js when a
@@ -236,20 +238,7 @@
     track("generate_lead", withPage({ lead_type: type }));
   }
 
-  /* ---------------------------------------------- 4. intro_call_booked */
-
-  var callBooked = false;
-
-  function onMessage(e) {
-    if (e.origin !== "https://calendly.com") return;
-    var data = e.data;
-    if (!data || data.event !== "calendly.event_scheduled") return;
-    if (callBooked) return;
-    callBooked = true;
-    track("intro_call_booked", withPage({ method: "calendly" }));
-  }
-
-  /* ------------------------------------------------------- 5. sign_up */
+  /* ------------------------------------------------------- 4. sign_up */
 
   function onSubmit(e) {
     var form = closest(e.target, "form");
@@ -259,7 +248,7 @@
     track("sign_up", withPage({ method: "newsletter" }));
   }
 
-  /* ----------------------------------------------------- 6. cta_click */
+  /* ----------------------------------------------------- 5. cta_click */
 
   function onCtaClick(link) {
     if (closest(link, EXCLUDED_CHROME)) return;
@@ -296,7 +285,6 @@
   document.addEventListener("click", onClick, true);
   document.addEventListener("submit", onSubmit, true);
   document.addEventListener("ea:lead", onLead);
-  window.addEventListener("message", onMessage);
 
   if (isConfirmationPage()) sendPurchase();
 })();
