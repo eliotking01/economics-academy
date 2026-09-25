@@ -2293,3 +2293,47 @@ table's `§N` cells still resolve. What is decided with it:
   moved to `_archive/` with their open items extracted first; the
   branch's commit messages carry the item-by-item list, and
   `_archive/README.md` indexes every arrival.
+
+### D65 — Calendly self-booking is retired; `#booking` becomes an enquiry block
+
+**2026-09-25, Eliot, in the branch `feature/retire-calendly`.** Ratified by
+the instruction that opened the work.
+
+Eliot is close to full for the 2026-27 academic year with only a few weekly
+slots left. Visitors kept self-booking free intro calls he then had to
+cancel, which reads as unprofessional. The flow is now enquiry-first:
+enquire by form or email, Eliot replies within 24 hours with real
+availability, and offers the free 15-minute call by email only where there
+is a fit; where there is not, the enquirer goes on a waiting list. What is
+decided with it:
+
+- **`id="booking"` stays on the section, and the fragment keeps its name
+  even though it no longer means booking.** `about.html`, `contact.html`,
+  `faq.html` and four buttons on `tutoring.html` deep-link to
+  `/tutoring.html#booking`. Renaming it to `#enquire` would be cosmetic and
+  would break an indexed URL for nothing.
+- **No second form.** The primary button is an existing `.enquire-button`
+  and opens the modal that was already on the page, so there remains exactly
+  one Formspree endpoint and one Turnstile widget on `tutoring.html`.
+- **The free 15-minute call is not withdrawn**, only taken off self-service.
+  It is still priced at Free in the pricing grid and still an `Offer` in the
+  Service JSON-LD; the ~170 revision-notes tails that mention it stay
+  correct and were not touched.
+- **Calendly stays in `privacy.html` as a named processor.** Eliot may still
+  send a booking link privately, so the notice says a link may be sent by
+  email rather than that bookings are taken through the website. Removing
+  Calendly from the notice would be wrong, not tidy.
+- **`intro_call_booked` is retired, not replaced.** The GA4 event stops
+  receiving hits and its history stays in the property. The tutoring funnel
+  ends at `generate_lead`, which the enquiry form already fired on
+  `response.ok`.
+- **The 330-page "Book a Free Intro Call" CTA sweep is part of this
+  decision**, not a separate opinion about anchor text. A button that says
+  Book, on a site that no longer takes bookings, is the problem this change
+  exists to fix. It also reduces the anchor monoculture
+  `seo/07b-link-decisions.md` §5 warns about: 444 of 455 tutoring links
+  carried that one string.
+- **`faq.html` lost the `#tutoring-intro-call` question**, merged into
+  "How do I get started with tutoring?" because the two answered the same
+  thing once booking was gone. That fragment now lands at the top of
+  `faq.html`. Accepted: it is a fragment, not a URL, so nothing 404s.

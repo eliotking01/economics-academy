@@ -223,9 +223,10 @@ def sync_fonts(text: str) -> str:
     page without both markers is returned unchanged for verify_page_shell.py
     and verify_css_load_order.py to report.
 
-    Extra preconnects inside the region are kept: tutoring.html's Calendly
-    pair sits elsewhere in its head today, but the shell honours
-    `extraPreconnects` on generated pages and this keeps the same promise.
+    Extra preconnects inside the region are kept. No hand-written page has
+    one today - tutoring.html's Calendly pair went with the widget on
+    2026-09-25 - but the shell honours `extraPreconnects` on generated pages
+    and this keeps the same promise.
     """
     head_end = text.find("</head>")
     if head_end < 0:

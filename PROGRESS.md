@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Calendly retired — #booking becomes an enquiry block | in review | — | — |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | in review | — | — |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
 | Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | live | 2026-08-26 | `0bcac57c` |
@@ -190,6 +191,60 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### Calendly retired — self-booking replaced by enquiry-first (2026-09-25) — IN REVIEW (branch `feature/retire-calendly`)
+
+Eliot is close to full for 2026-27 with only a few weekly slots left, and
+prospects kept self-booking intro calls he then had to cancel. The flow is now
+enquire first: the visitor sends the Formspree enquiry (or emails), Eliot
+replies within 24 hours with real availability, and offers the free 15-minute
+call by email only if there is a fit. No fit means the waiting list.
+
+`tutoring.html`'s `#booking` section is now an enquiry block. **The id is
+unchanged and must stay** — `about.html`, `contact.html`, `faq.html` and four
+buttons on the page itself deep-link to `/tutoring.html#booking`, and a
+published URL is permanent. The primary button is an ordinary
+`.enquire-button`, so it opens the modal that already existed rather than
+adding a second form; beside it is a `mailto` with a `Tutoring enquiry`
+subject, which is the JS-off route and needs no script.
+
+`openModal()` gained a second argument. The modal heading is literally
+"Enquire About &lt;package&gt;", so `data-package="General enquiry"` would have
+read "Enquire About General enquiry". The optional `data-modal-title` splits
+the two: Formspree still receives `General enquiry` (useful in the inbox), the
+heading reads "Enquire About Tutoring", and the three pricing cards, which
+carry no such attribute, fall back to the package name exactly as before.
+
+**Everything Calendly is gone from the live site except the privacy notice.**
+The two preconnects, the `widget.css` head comment, the inline lazy loader,
+the widget div and its fallback link, the `.calendly-inline-widget` /
+`.calendly-fallback` CSS, and `track.js`'s `intro_call_booked` postMessage
+listener. That GA4 event is retired, not renamed — its history stays in the
+property and the tutoring funnel now ends at `generate_lead`, which the
+enquiry form already fired. `privacy.html` deliberately keeps Calendly as a
+processor: Eliot may still send a booking link privately, so the wording moved
+from "bookings are handled here" to "a link may be sent to you by email".
+
+**The CTA sweep was the bulk of the diff.** 330 generated pages plus
+`index.html` (×2) and `marking.html` carried a "Book a Free Intro Call" button
+pointing at `/tutoring.html` — a button promising something the page can no
+longer do. The four sources (`build_questions.py` ×3,
+`build_past_paper_questions.py`, the seven `notes-data/hubs/*.html`) now say
+"Enquire About Tutoring". This *helps* `seo/07b-link-decisions.md` §5 rather
+than breaching it: 444 of 455 tutoring links used to read the one anchor
+string, which that decision names as a monoculture to avoid deepening.
+
+`faq.html` lost one question. "How do I get started with tutoring?" and "What
+is the Calendly booking for?" answered nearly the same thing once booking was
+gone, so they were merged into the first, in both the visible accordion and
+the FAQPage JSON-LD. **`#tutoring-intro-call` no longer resolves** — it lands
+at the top of `faq.html` rather than 404ing, since it was only ever a
+fragment. Nothing internal linked to it; `search-index.json` regenerated
+itself.
+
+Deliberately untouched: the ~170 revision-notes pages whose tail reads "in a
+free 15-minute intro call" (no Calendly link, still true) and
+`scripts/notes_extras.py` that writes it.
 
 ### Form spam hardening — Turnstile on both Formspree forms (2026-09-15) — IN REVIEW (branch `feature/form-spam-hardening`)
 

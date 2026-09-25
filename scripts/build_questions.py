@@ -826,7 +826,7 @@ def render_page(topic, siblings=(), ppq=None):
                 >Revision Notes: {topic['shortTitle']}</a
               >
               <a href="{papers_href}" class="button alt">{papers_label}</a>
-              <a href="/tutoring.html" class="button">Book a Free Intro Call</a>
+              <a href="/tutoring.html" class="button">Enquire About Tutoring</a>
             </div>
           </div>
         </div>
@@ -1176,7 +1176,7 @@ def render_board_index(board_dir, topics):
     "tutor, or send an essay for detailed examiner-style marking.",
     [
         ("/marking.html", " alt", "Get Your Essays Marked"),
-        ("/tutoring.html", "", "Book a Free Intro Call"),
+        ("/tutoring.html", "", "Enquire About Tutoring"),
     ],
 )}
         </div>
@@ -1318,7 +1318,7 @@ def render_hub(by_board):
     "with a specialist tutor.",
     [
         ("/marking.html", " alt", "Get Your Essays Marked"),
-        ("/tutoring.html", "", "Book a Free Intro Call"),
+        ("/tutoring.html", "", "Enquire About Tutoring"),
     ],
 )}
         </div>

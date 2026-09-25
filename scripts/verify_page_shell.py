@@ -113,6 +113,8 @@ pages = site_layout.pages
 #     Script tails 3 -> 2 on 2026-08-14, the home-page revamp; 2 -> 1 on
 #     2026-08-23 when tutoring.html's Calendly <script src> became an inline
 #     lazy loader, so every root page now ends in the plain two-script tail.
+#     That lazy loader was deleted on 2026-09-25 when self-booking was
+#     retired; tutoring.html keeps its Turnstile tail and nothing else.
 #     Script tails 1 -> 2 on 2026-09-15, the form spam hardening: contact.html
 #     and tutoring.html append the same two Turnstile scripts and the other
 #     seven root pages do not, so the family now has two tails, not nine.
@@ -260,9 +262,12 @@ FAMILY_SCRIPT = {
 }
 # tutoring.html's Calendly widget.js was the one entry here until 2026-08-23,
 # when the performance pass made it lazy: an inline script at the foot of the
-# page injects widget.js (and its widget.css, formerly a render-blocking
-# <link> in the <head>) when the booking section nears the viewport. Nothing
-# third-party was a <script src> on any page from then until 2026-08-25
+# page injected widget.js (and its widget.css, formerly a render-blocking
+# <link> in the <head>) when the booking section neared the viewport. That
+# loader, the widget and the two Calendly preconnects were all deleted on
+# 2026-09-25 when self-booking was retired - #booking is now an enquiry block
+# that opens the existing modal. Nothing third-party was a <script src> on
+# any page from 2026-08-23 until 2026-08-25
 # (D62, the notes family consistency pass), when the two hand-written
 # diagram galleries (notes-other, via
 # bake_templates.EXTRA_COMPONENT_SCRIPTS) joined the notes design and its
@@ -276,7 +281,8 @@ FAMILY_SCRIPT = {
 # Cloudflare Turnstile, so contact.html and tutoring.html each load two more
 # scripts after the tail - the shared component and Cloudflare's api.js. That
 # api.js is the SECOND third-party <script src> ever to sit in this repo's
-# markup (Calendly's was the first and became a lazy inline loader in 2026-08).
+# markup (Calendly's was the first, became a lazy inline loader in 2026-08 and
+# was removed outright in 2026-09), and today it is the only one.
 # It is here rather than lazy because the token has to exist before the
 # visitor presses Send. The src is written with &amp; in the HTML and arrives
 # here decoded, because html.parser has convert_charrefs=True - so the key
