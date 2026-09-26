@@ -252,6 +252,18 @@ prefix is what is keeping the namespace unique.
 > reading. Seven of the eight topic-keyed structures were already keyed
 > correctly before this wave.
 
+**A notes-only board is invisible to `board_data.load()` and `groups()`, on
+purpose.** Edexcel B (D66) has notes and nothing else. Every generator that
+iterates `load()` is a flashcards, glossary, taxonomy or practice-questions
+generator, and a notes-only board reaching one would mint pages the board
+does not have. The notes family - `notes_sequence`, `new_topic`,
+`verify_page_shell`'s notes count, `verify_seo`'s notes scope - reads
+`load_notes()`. **A new caller must choose on purpose; do not "simplify" the
+two into one.** `scripts/tests/test_new_topic.py` pins that `load()` never
+returns one. `notes-data/hubs/drafts/` holds the hubs of themes not opened
+yet and must stay unbuilt (`build_notes_pages.py` and `rewrite_notes_meta.py`
+skip it): building one would publish an empty hub.
+
 **Flashcard IDs are effectively immutable.** Leitner spaced-repetition state is
 keyed on card ID in `localStorage`. Renaming an ID resets a student's progress
 silently. PH09-024.

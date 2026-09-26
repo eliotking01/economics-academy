@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Edexcel B notes — setup: notes-only board, hubs, 1.1.1 placeholder | in progress | — | — |
 | Calendly retired — #booking becomes an enquiry block | in review | — | — |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | in review | — | — |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
@@ -191,6 +192,42 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### Edexcel B revision notes — setup (2026-09-26) — IN PROGRESS (branch `feature/edexcel-b-notes`, not pushed)
+
+85 Edexcel B (9EB0) topic pages across Themes 1-4 are coming, one unit per
+session, from the project pack in `05-website/drafts/edexcel-b-notes/`. This
+first session did the plumbing and no content. DECISIONS.md D66 has the reasons.
+
+- **Edexcel B is a notes-only board** (`"notesOnly": true` in `boards.json`):
+  notes and nothing else. `board_data.load()`/`groups()` leave it out, so the
+  flashcards, glossary, taxonomy and practice-question generators never see
+  it; the notes family reads `load_notes()`. Its topic pages' tail has the
+  Edexcel B past-papers panel only, and it needs no `questions-data/` record.
+- **Themes open one at a time, in publishing order** (1, 4, 2, 3), each
+  finished and pushed before the next starts. Theme 1's hub is built; the
+  other three are written and wait in `notes-data/hubs/drafts/`, which
+  nothing builds. `new_topic.py` refuses an unopened theme and prints the
+  three steps that open it.
+- **`new_topic.py edexcel-b …`** scaffolds a page: `--slug` for the agreed
+  shorter slugs, empty unit panels, the first topic in an empty directory,
+  and the hub's stats line now bumped too (for every board).
+- **The menu** has Edexcel B → Theme 1, and the old "Edexcel" group heading
+  reads "Edexcel A" (Revision Notes and Practice Questions, desktop and
+  mobile). 192 `Text-Change:` trailers.
+- **1.1.1 The Economic Problem is a placeholder**, left for the first content
+  session. While it is alone, it is a declared one-page spine in
+  `verify_page_shell.py` (the declaration fails, and must be deleted, once
+  1.1.2 exists), and `verify_seo.py` 12 and 16 fail on it. That is known and
+  cleared by real content and siblings.
+
+**Before Theme 1 can publish:** all 23 pages written and approved; the hub
+wording approved (`05-website/drafts/edexcel-b-notes/setup-approval-list.md`);
+an Edexcel B section on `revision-notes/index.html` (a separate reviewed
+change); B topics added to site search (`build_search_index.py` builds its
+rows from quiz records, which B has none of). **After launch:** twin links
+(`notes_twins.board_of_dir` treats any `edexcel*` directory as Edexcel A and
+needs fixing first) and a B glossary, both deferred on purpose.
 
 ### Calendly retired — self-booking replaced by enquiry-first (2026-09-25) — IN REVIEW (branch `feature/retire-calendly`)
 

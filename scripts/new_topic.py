@@ -548,11 +548,23 @@ def main() -> int:
  2. Finish the head in {slug}.json: the description's "Covers ..." clause
     (seo/tools/rewrite_notes_meta.py re-runs the title/description formula
     once the page has its H2s) and the LearningResource description.
- 3. Twin row: scripts/notes_twins.py is a written-down table - add the
+{NOTES_ONLY_STEPS if board.get("notesOnly") else FULL_STEPS.format(
+    notes_dir=notes_dir, code=args.spec.replace('.', '-'))}
+ 6. python3 scripts/build.py, then the suite (/verify). verify_page_shell.py
+    and verify_notes_sequence.py derive their counts from boards.json, so
+    nothing in a verifier needs editing; verify_boards.py --reseed if it
+    complains about expectedTopics (PINNED restates boards.json on purpose).
+ 7. Commit, then python3 scripts/build.py --sitemap and commit that.
+""")
+    return 0
+
+
+# Steps 3-5 of the checklist, which differ for a notes-only board.
+FULL_STEPS = """ 3. Twin row: scripts/notes_twins.py is a written-down table - add the
     (board, slug) pair for this topic's counterpart on the other board, or
     leave it unpaired on purpose (verify_seo.py assertion 13 permits only
     the pairs the table names).
- 4. questions-data/{notes_dir}/{args.spec.replace('.', '-')}.json - the practice
+ 4. questions-data/{notes_dir}/{code}.json - the practice
     questions. build_notes_pages.py needs it for the page's generated tail
     (the "Practice questions" panel is derived from it) and
     build_past_paper_taxonomy.py asserts questions-data has exactly
@@ -562,14 +574,13 @@ def main() -> int:
     questions - then appear on the page by themselves; nothing to append.
  5. Optional: flashcards (flashcards-data/CLAUDE.md "Adding one"); tag
     past-paper questions to the slug in past-paper-questions-data/tags.json
-    and the page's past-paper line updates itself on the next build.
- 6. python3 scripts/build.py, then the suite (/verify). verify_page_shell.py
-    and verify_notes_sequence.py derive their counts from boards.json, so
-    nothing in a verifier needs editing; verify_boards.py --reseed if it
-    complains about expectedTopics (PINNED restates boards.json on purpose).
- 7. Commit, then python3 scripts/build.py --sitemap and commit that.
-""")
-    return 0
+    and the page's past-paper line updates itself on the next build."""
+
+NOTES_ONLY_STEPS = """ 3. No twin row yet: twin links for a notes-only board are deferred until
+    after launch (D66), and notes_twins.board_of_dir needs fixing first.
+ 4. No questions-data record: this board is notes-only (boards.json
+    notesOnly, D66). The page's tail is the board's past-papers panel.
+ 5. No flashcards or past-paper tags: the board has neither."""
 
 
 if __name__ == "__main__":
