@@ -112,6 +112,7 @@ from datetime import date
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import board_data  # noqa: E402
 import build_past_paper_questions as ppq  # noqa: E402
 import notes_sequence  # noqa: E402
 import notes_twins  # noqa: E402
@@ -623,25 +624,35 @@ def next_steps_block(notes_dir: str, slug: str, pad: str, diagrams: str) -> str:
     gate, the master search filtered to it if not) and closes with the
     board's past-papers hub; a topic with no tagged questions gets the hub as
     the panel itself, so the board link is on every page either way.
+
+    A NOTES-ONLY board (boards.json `notesOnly`, Edexcel B since D66) has no
+    practice questions, no flashcards and no tagged past-paper questions, so
+    its pages get the past-papers hub panel alone - never a link to a page
+    that does not exist, and no questions-data record is needed. The bank is
+    not consulted for it at all: it is keyed on bare slug, and a notes-only
+    slug that happened to match another board's would borrow its questions.
     """
     board, _ = BOARD_OF_DIR[notes_dir]
     hub = PAST_PAPERS_HUB[board]
-    quiz = quiz_record(notes_dir, slug)
-    name = html.escape(f'{quiz["spec"]} {quiz["shortTitle"]}', quote=False)
+    items = ""
+    qs: list = []
+    if not board_data.is_notes_only(notes_dir):
+        quiz = quiz_record(notes_dir, slug)
+        name = html.escape(f'{quiz["spec"]} {quiz["shortTitle"]}', quote=False)
 
-    items = next_item(
-        pad, f"/practice-questions/{notes_dir}/{slug}.html",
-        f"Practice questions: {name}", html.escape(quiz["notesTeaser"], quote=False))
+        items += next_item(
+            pad, f"/practice-questions/{notes_dir}/{slug}.html",
+            f"Practice questions: {name}", html.escape(quiz["notesTeaser"], quote=False))
 
-    deck_url, deck = FLASHCARDS_OF_DIR[notes_dir]
-    if not (ROOT / deck_url.lstrip("/") / "index.html").is_file():
-        fail(f"{notes_dir}/{slug}", f"flashcard deck {deck_url} is not in the tree")
-    items += next_item(
-        pad, f"{deck_url}?topic={slug}", f"Flashcards: {name}",
-        f"The {deck} deck filtered to this topic \u2014 definitions, diagrams and "
-        f"chains of reasoning, with your progress saved on this device.")
+        deck_url, deck = FLASHCARDS_OF_DIR[notes_dir]
+        if not (ROOT / deck_url.lstrip("/") / "index.html").is_file():
+            fail(f"{notes_dir}/{slug}", f"flashcard deck {deck_url} is not in the tree")
+        items += next_item(
+            pad, f"{deck_url}?topic={slug}", f"Flashcards: {name}",
+            f"The {deck} deck filtered to this topic \u2014 definitions, diagrams and "
+            f"chains of reasoning, with your progress saved on this device.")
 
-    qs = past_paper_bank().get(slug, [])
+        qs = past_paper_bank().get(slug, [])
     if qs:
         if len(qs) >= ppq.GATE:
             href = f"/past-paper-questions/{BOARD_SLUG[board]}/{slug}/"

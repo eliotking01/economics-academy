@@ -42,6 +42,18 @@ it rather than trusting it.
 `_`-prefixed keys in the record are commentary for a human reader and are left
 in place; every caller accesses fields by name, so they are never iterated.
 
+NOTES-ONLY BOARDS ARE FILTERED OUT OF `load()` AND `groups()`
+-------------------------------------------------------------
+A board whose record says `"notesOnly": true` has revision notes and nothing
+else: no practice questions, no flashcards, no glossary, no past-paper
+question bank, no taxonomy. Edexcel B is the first (2026-09-26, D66).
+`load()` and `groups()` DO NOT RETURN IT, because their callers are the
+practice-questions, flashcards, glossary and taxonomy generators, and a board
+reaching them would mint pages the board does not have. The notes family -
+notes_sequence.py, new_topic.py and the verifiers that count notes pages -
+asks for `load_notes()` / `notes_groups()` instead, which return every
+board. A new caller picks one on purpose: which family is it?
+
 Standard library only, like everything the workflow runs.
 """
 
@@ -70,7 +82,16 @@ EXPECTED_NOTES_DIRS = (
 
 
 def load() -> dict:
-    """{board key: record}, in the order boards.json lists them.
+    """{board key: record} for the FULL boards, in the order boards.json
+    lists them. Notes-only boards are left out - see the module docstring;
+    the notes family uses load_notes().
+    """
+    return {k: b for k, b in load_notes().items() if not b.get("notesOnly")}
+
+
+def load_notes() -> dict:
+    """{board key: record} for every board with revision notes, notes-only
+    boards included, in the order boards.json lists them.
 
     A deep copy every time: a generator that edited the record in place would
     otherwise change what the next generator in verify_generated.py's run sees,
@@ -91,10 +112,27 @@ def load() -> dict:
 
 
 def groups() -> list[tuple[str, dict, dict]]:
-    """(board key, board record, group record) for all 6 groups, in file order."""
+    """(board key, board record, group record) for the full boards' groups,
+    in file order. Notes-only boards are left out, as in load()."""
     return [(key, board, group)
             for key, board in load().items()
             for group in board["groups"]]
+
+
+def notes_groups() -> list[tuple[str, dict, dict]]:
+    """As groups(), but for every board with notes, notes-only included."""
+    return [(key, board, group)
+            for key, board in load_notes().items()
+            for group in board["groups"]]
+
+
+def is_notes_only(notes_dir: str) -> bool:
+    """True if the notes directory belongs to a notes-only board."""
+    for _key, board, group in notes_groups():
+        if group["notesDir"] == notes_dir:
+            return bool(board.get("notesOnly"))
+    sys.exit(f"board_data: {notes_dir!r} is not a notes directory in "
+             f"boards-data/boards.json")
 
 
 def _ordering_is_significant(data: dict) -> None:
@@ -119,10 +157,11 @@ def _ordering_is_significant(data: dict) -> None:
 
 
 if __name__ == "__main__":
-    for _key, _board in load().items():
+    for _key, _board in load_notes().items():
         _names = _board["names"]
         print(f"{_key}: {_names['display']} ({_names['qualification']}), "
               f"{len(_board['groups'])} groups, "
-              f"{_board['expectedTopics']} topics")
+              f"{_board['expectedTopics']} topics"
+              + (", notes only" if _board.get("notesOnly") else ""))
         for _group in _board["groups"]:
             print(f"    {_group['notesDir']:<16} {_group['label']}")

@@ -96,7 +96,7 @@ def slug_spec(slug: str) -> str:
 
 def resolve(board_arg: str, spec: str):
     """(board_key, board, group) for the argument and spec code."""
-    boards = board_data.load()
+    boards = board_data.load_notes()
     if board_arg in boards:
         board_key, board = board_arg, boards[board_arg]
         idx = spec_key(spec)[0] - 1

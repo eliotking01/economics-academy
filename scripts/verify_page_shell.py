@@ -161,11 +161,16 @@ def expected_page_counts() -> dict[str, int]:
     and the data directories. Adding a topic is a boards.json bump and new
     data, and this table moves with it - no literal here to chase.
     """
+    # Notes pages come from every board with notes; practice-question pages,
+    # decks and glossaries only from the full boards (a notes-only board -
+    # Edexcel B - has none of them). board_data's docstring has the split.
+    notes_topics = sum(b["expectedTopics"]
+                       for b in board_data.load_notes().values())
     boards = board_data.load()
     topics = sum(b["expectedTopics"] for b in boards.values())
     groups = sum(len(b["groups"]) for b in boards.values())
     out = {
-        "notes-topic": topics,
+        "notes-topic": notes_topics,
         "mcq-topic": topics,
         # one hub per group plus macro-application, which is a content page
         # that classifies as a hub - so count the hub RECORDS, not the groups
