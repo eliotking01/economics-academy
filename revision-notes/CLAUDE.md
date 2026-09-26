@@ -101,7 +101,8 @@ House rules:
 - Escape `<` as `&lt;` and `&` as `&amp;` in body text, LaTeX included.
 - Expand/collapse is a `<button>` with `aria-expanded` and `aria-controls`, wired
   in JS. No `onclick` attributes remain; don't reintroduce one.
-- Em-dash `—` in new prose. Existing notes use hyphens; leave them alone.
+- Spaced hyphen ` - ` as the dash in new prose, never an em dash `—`. That
+  matches `00-context/writing-style.md` and the existing notes.
 
 ## Exemplars
 
