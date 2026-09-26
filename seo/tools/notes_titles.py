@@ -61,6 +61,23 @@ AQA_VARIANTS = [
     "{topic} – AQA A-Level Economics",
 ]
 
+# Edexcel B (notes-only, D66). Same shapes as Edexcel A, the board named in
+# full: a B student searches "edexcel b", and "Edexcel" alone would tell
+# them nothing about which of the two boards the page is for.
+EDEXCEL_B_VARIANTS = [
+    "{topic} – Edexcel B A-Level Economics Revision Notes",
+    "{topic} – Edexcel B A-Level Economics Notes",
+    "{topic} – Edexcel B A-Level Economics",
+]
+
+VARIANTS = {"Edexcel": EDEXCEL_VARIANTS, "Edexcel B": EDEXCEL_B_VARIANTS,
+            "AQA": AQA_VARIANTS}
+
+# Boards whose spec codes are the exam board's own and so go in a meta
+# description; AQA's are site-local and never do (boards.json
+# specCodesAreReal).
+REAL_CODES = {"Edexcel", "Edexcel B"}
+
 # slug -> the display name already published in that page's own <title>.
 # Keyed on slug rather than on (board, code) because 37 spec codes collide
 # across the two boards and a bare code would silently rename the wrong page -
@@ -146,7 +163,7 @@ COLLIDING = {
 
 def title_for(board: str, slug: str, h1: str, code: str) -> tuple[str, int]:
     """(title, variant number). Raises if even the last variant overflows."""
-    variants = EDEXCEL_VARIANTS if board == "Edexcel" else AQA_VARIANTS
+    variants = VARIANTS[board]
     topic = display_name(slug, h1)
     if slug in COLLIDING:
         topic = f"{topic} ({COLLIDING[slug]})"
@@ -257,7 +274,7 @@ def description_for(topic: str, board: str, module: str, code: str,
     used wherever it fits, and the tighter joins exist only for the pages
     where it does not.
     """
-    where = f"({code})" if board == "Edexcel" else module
+    where = f"({code})" if board in REAL_CODES else module
     clause = covers_clause(existing)
     items = clause[len("Covers "):].rstrip(".")
 

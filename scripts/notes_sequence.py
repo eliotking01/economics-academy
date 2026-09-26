@@ -22,6 +22,7 @@ owns it:
                                      notes-data/hubs/<dir>.html
   the label for a topic              that hub link's own anchor text
   the label for a theme hub          the group's `practiceQuestionsLabel`
+                                     (`notesLabel` on a notes-only board)
   how many topics a chain has        the board's `expectedTopics` (87 / 79)
 
 Reusing the hub's anchor text is deliberate and is the reason this feature
@@ -171,7 +172,10 @@ class Chain:
         # notes_dir -> the name to show when linking back to that hub. The
         # group already carries one, and it is the same string the hub's own
         # breadcrumb ends on ("Edexcel Theme 1", "AQA Microeconomics").
-        self.hub_label = {g["notesDir"]: g["names"]["practiceQuestionsLabel"]
+        # A notes-only board has no practiceQuestionsLabel and records the
+        # same string as names.notesLabel ("Edexcel B Theme 1") instead.
+        self.hub_label = {g["notesDir"]: (g["names"].get("notesLabel")
+                                          or g["names"]["practiceQuestionsLabel"])
                           for g in board["groups"]}
         self.entries: list[tuple[str, str, str]] = [
             (notes_dir, slug, label)

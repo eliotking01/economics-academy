@@ -51,7 +51,10 @@ class ChainTests(unittest.TestCase):
         self.chains = ns.chains()
 
     def test_one_chain_per_board_in_boards_json_order(self):
-        self.assertEqual([c.board_key for c in self.chains], list(board_data.load()))
+        # Every board with notes, notes-only boards included (Edexcel B, D66):
+        # load_notes(), not load(), which leaves notes-only boards out.
+        self.assertEqual([c.board_key for c in self.chains],
+                         list(board_data.load_notes()))
 
     def test_each_chain_is_its_declared_length(self):
         for c in self.chains:

@@ -5,7 +5,7 @@
 
   "_why_slugs_and_names_are_maps": "PH09's design made `slugs` a map because one board is spelled three ways across three families and all three are correct - the URLs are frozen. Measured on 2026-08-11, the same is true of GROUP NAMES, which PH09 did not anticipate: Theme 2 reaches published output as three different strings. `The UK Economy — Performance and Policies` (em dash) in taxonomy.json and the notes hub <h1>, `The UK Economy - Performance and Policies` (hyphen) in the flashcards decks, and `The UK Economy` in practice-questions. Collapsing those to one canonical name would silently rewrite visible text on a whole page family. So names are recorded per consumer too, and the differences are data rather than a bug to tidy.",
 
-  "_adding_a_board": "Add an entry here, create the notes pages and source data, re-run the generators, add the nav entries in templates/header.html. `expectedTopics` keeps build_past_paper_taxonomy.py's loud-failure guard: a board whose data does not match its declaration fails rather than emitting a short taxonomy.",
+  "_adding_a_board": "Add an entry here (with \"notesOnly\": true if it has notes and nothing else), create the notes pages and source data, re-run the generators, add the nav entries in templates/header.html. `expectedTopics` keeps build_past_paper_taxonomy.py's loud-failure guard: a board whose data does not match its declaration fails rather than emitting a short taxonomy.",
 
   "boards": {
     "edexcel-a": {
@@ -131,10 +131,39 @@
           }
         }
       ]
+    },
+
+    "edexcel-b": {
+      "notesOnly": true,
+      "_notesOnly_why": "Edexcel B (9EB0) has revision notes and nothing else: no practice questions, flashcards, glossary, past-paper question bank or taxonomy. board_data.load() and groups() leave a notes-only board out, so the generators for those families never see it; the notes family reads load_notes(). D66, 2026-09-26. The fields below are only the ones something reads - no slugs for families the board does not have.",
+      "names": {
+        "short": "Edexcel B",
+        "display": "Edexcel B",
+        "long": "Edexcel A-Level Economics B",
+        "qualification": "A Level Economics B (9EB0)"
+      },
+      "slugs": {
+        "pastPapers": "edexcel-b"
+      },
+      "papersUrl": "/past-papers/edexcel-b/",
+      "notesUrl": "/revision-notes/",
+      "specCodesAreReal": true,
+      "expectedTopics": 1,
+      "_groups_why": "Themes open one at a time, in publishing order (Theme 1, then 4, 2, 3), each finished and pushed before the next starts. An unopened theme's hub waits in notes-data/hubs/drafts/, which nothing builds. Groups are matched to spec codes by the -theme-N in notesDir, not by position. notesLabel and notesTitle are the two names the notes family shows (a full board's are its practiceQuestionsLabel and taxonomy name).",
+      "groups": [
+        {
+          "notesDir": "edexcel-b-theme-1",
+          "label": "Theme 1",
+          "names": {
+            "notesLabel": "Edexcel B Theme 1",
+            "notesTitle": "Markets, Consumers and Firms"
+          }
+        }
+      ]
     }
   },
 
-  "_pastPapersOnly": "Edexcel B and OCR have past papers on the site and no notes, no glossary, no flashcards and no question bank. They are not boards in this file's sense - nothing generates anything for them - and past-papers/edexcel-b/ and past-papers/ocr/ are hand-written pages. Recorded here so that their absence reads as a decision.",
+  "_pastPapersOnly": "OCR has past papers on the site and no notes, no glossary, no flashcards and no question bank. It is not a board in this file's sense - nothing generates anything for it - and past-papers/ocr/ is a hand-written page. Recorded here so that its absence reads as a decision. Edexcel B was listed here too until 2026-09-26, when it became a notes-only board above (D66); past-papers/edexcel-b/ is still hand-written.",
 
-  "_whoReadsThis": "Five generators, through scripts/board_data.py: build_past_paper_taxonomy, build_flashcards, extract_glossary, build_glossary and build_questions. Wave 3.2 repointed them one commit at a time, each with its output proved byte-identical. EDITING A NAME OR SLUG HERE IS A TWO-FILE COMMIT: scripts/verify_boards.py keeps an independent copy of all 82 leaves in PINNED, because its comparison against the generators became circular the moment they started reading this file. Run `python3 scripts/verify_boards.py --show` to reprint that copy. Five fields are recorded and read by nothing: slugs.questionBank, slugs.dataDir, specCodesAreReal and each group's names.flashcards, plus notesUrl which build_glossary copies into its BOARDS and never renders. slugs.dataDir is also incomplete - Edexcel A has two past-paper data directories, edexcel-a and edexcel-a-as, and this records one."
+  "_whoReadsThis": "Five generators, through scripts/board_data.py's load() and groups(), which leave notes-only boards out; the notes family (notes_sequence, new_topic, verify_page_shell's notes count) reads load_notes() and sees every board: build_past_paper_taxonomy, build_flashcards, extract_glossary, build_glossary and build_questions. Wave 3.2 repointed them one commit at a time, each with its output proved byte-identical. EDITING A NAME OR SLUG HERE IS A TWO-FILE COMMIT: scripts/verify_boards.py keeps an independent copy of all 82 leaves in PINNED, because its comparison against the generators became circular the moment they started reading this file. Run `python3 scripts/verify_boards.py --show` to reprint that copy. Five fields are recorded and read by nothing: slugs.questionBank, slugs.dataDir, specCodesAreReal and each group's names.flashcards, plus notesUrl which build_glossary copies into its BOARDS and never renders. slugs.dataDir is also incomplete - Edexcel A has two past-paper data directories, edexcel-a and edexcel-a-as, and this records one."
 }

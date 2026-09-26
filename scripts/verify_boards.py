@@ -172,6 +172,20 @@ PINNED = {
     "aqa.groups.1.names.practiceQuestions": "The National and International Economy",
     "aqa.groups.1.names.practiceQuestionsLabel": "AQA Macroeconomics",
     "aqa.groups.1.names.practiceQuestionsButton": "Macro: The National and International Economy",
+    "edexcel-b.notesOnly": True,
+    "edexcel-b.names.short": "Edexcel B",
+    "edexcel-b.names.display": "Edexcel B",
+    "edexcel-b.names.long": "Edexcel A-Level Economics B",
+    "edexcel-b.names.qualification": "A Level Economics B (9EB0)",
+    "edexcel-b.slugs.pastPapers": "edexcel-b",
+    "edexcel-b.papersUrl": "/past-papers/edexcel-b/",
+    "edexcel-b.notesUrl": "/revision-notes/",
+    "edexcel-b.specCodesAreReal": True,
+    "edexcel-b.expectedTopics": 1,
+    "edexcel-b.groups.0.notesDir": "edexcel-b-theme-1",
+    "edexcel-b.groups.0.label": "Theme 1",
+    "edexcel-b.groups.0.names.notesLabel": "Edexcel B Theme 1",
+    "edexcel-b.groups.0.names.notesTitle": "Markets, Consumers and Firms",
 }
 
 
@@ -274,6 +288,18 @@ def main() -> int:
             c.eq(f"pinned {k}", flat[k], PINNED[k], right="PINNED")
 
     print(f"\n{BOARDS_JSON.relative_to(ROOT)} vs the four hardcoded structures\n")
+
+    # A notes-only board (Edexcel B, D66) is pinned above like any other, but
+    # it belongs to none of the four structures below - they are the
+    # glossary, taxonomy, flashcards and practice-questions families, and
+    # board_data.load() keeps it out of all of them. Comparing the FULL
+    # boards' key sets against each structure is therefore also the proof
+    # that no notes-only board has leaked into one.
+    notes_only = sorted(k for k, b in data.items() if b.get("notesOnly"))
+    data = {k: b for k, b in data.items() if not b.get("notesOnly")}
+    if notes_only:
+        print(f"  (notes-only, pinned but not in these structures: "
+              f"{', '.join(notes_only)})\n")
 
     # ---------------------------------------------------- build_glossary.py
     print("=== build_glossary.py BOARDS ===")

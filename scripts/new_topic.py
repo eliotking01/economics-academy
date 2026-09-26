@@ -496,7 +496,10 @@ def main() -> int:
     print(f"  group     {group['label']}  ({notes_dir}/)")
     print(f"  slug      {slug}")
     print(f"  page      /revision-notes/{notes_dir}/{slug}.html")
-    print(f"  template  {sib_json.relative_to(ROOT)} (nearest sibling)")
+    print(f"  template  {sib_json.relative_to(ROOT)} "
+          + ("(nearest sibling)" if sib_json.parent.name == notes_dir else
+             "(empty directory: the Edexcel A skeleton, board and hub "
+             "fields rewritten)"))
     print(f"  title     {record['head']['title']}")
     print()
     print(f"  {verb}  {rec_path.relative_to(ROOT)}   ({len(record_text)} bytes, new)")
@@ -519,6 +522,7 @@ def main() -> int:
         print(f"    BreadcrumbList[-1]: {h['jsonldAfterStyles'][0]['itemListElement'][-1]}")
 
     if args.apply:
+        rec_path.parent.mkdir(exist_ok=True)   # a new board's first topic
         rec_path.write_text(record_text, encoding="utf-8")
         html_path.write_text(slice_text, encoding="utf-8")
         hub_path.write_text(hub_after, encoding="utf-8")

@@ -374,8 +374,14 @@ def main() -> int:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import notes_titles as formulas  # noqa: E402
 
-    NOTES_DIRS = ("edexcel-theme-1", "edexcel-theme-2", "edexcel-theme-3",
-                  "edexcel-theme-4", "aqa-a2-micro", "aqa-a2-macro")
+    # Every notes directory and its board's short name ("Edexcel", "AQA",
+    # "Edexcel B"), from boards.json - derived rather than listed, so a
+    # theme opened later (Edexcel B opens one at a time, D66) is in scope
+    # the moment it is recorded and cannot slip past these checks.
+    import board_data  # noqa: E402  (scripts/ is on sys.path, assertion 13)
+    BOARD_OF_NOTES_DIR = {g["notesDir"]: b["names"]["short"]
+                          for _k, b, g in board_data.notes_groups()}
+    NOTES_DIRS = tuple(BOARD_OF_NOTES_DIR)
     topics = [p for p in pages
               if len(Path(p).parts) == 3
               and Path(p).parts[0] == "revision-notes"
@@ -383,7 +389,7 @@ def main() -> int:
               and Path(p).name != "index.html"]
 
     def board_label(page: str) -> str:
-        return "AQA" if Path(page).parts[1].startswith("aqa") else "Edexcel"
+        return BOARD_OF_NOTES_DIR[Path(page).parts[1]]
 
     # 15 --------------------------------------------------------------------
     # The title formula, §4. Two things are asserted and the second matters
@@ -402,8 +408,7 @@ def main() -> int:
     for p in topics:
         title = parsed[p].title
         board = board_label(p)
-        shapes = (formulas.EDEXCEL_VARIANTS if board == "Edexcel"
-                  else formulas.AQA_VARIANTS)
+        shapes = formulas.VARIANTS[board]
         tails = [v.split("{topic}", 1)[1].replace("({code})", "") .strip()
                  for v in shapes]
         if len(title) > formulas.HARD_MAX:

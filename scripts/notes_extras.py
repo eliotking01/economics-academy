@@ -124,6 +124,8 @@ BOARD_OF_DIR = {
     "edexcel-theme-4": ("Edexcel", "Theme 4"),
     "aqa-a2-micro": ("AQA", "Microeconomics"),
     "aqa-a2-macro": ("AQA", "Macroeconomics"),
+    # Edexcel B, notes-only (D66): one row per open theme.
+    "edexcel-b-theme-1": ("Edexcel B", "Theme 1"),
 }
 
 # The flashcard deck each notes directory's topics belong to: the URL the
@@ -146,8 +148,9 @@ FLASHCARDS_OF_DIR = {
 # It is still on every page, per page, naming the board - now as the last
 # sentence of the past-paper panel (or the panel itself where the topic has
 # no tagged questions yet).
-PAST_PAPERS_HUB = {"Edexcel": "/past-papers/edexcel/", "AQA": "/past-papers/aqa/"}
-BOARD_SLUG = {"Edexcel": "edexcel", "AQA": "aqa"}
+PAST_PAPERS_HUB = {"Edexcel": "/past-papers/edexcel/", "AQA": "/past-papers/aqa/",
+                   "Edexcel B": "/past-papers/edexcel-b/"}
+BOARD_SLUG = {"Edexcel": "edexcel", "AQA": "aqa", "Edexcel B": "edexcel-b"}
 
 # The one paid sentence, approved by Eliot on 2026-08-23. The two anchor
 # phrases are the SEO point of the tail redesign - the money pages used to

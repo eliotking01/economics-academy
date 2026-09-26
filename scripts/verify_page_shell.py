@@ -129,7 +129,9 @@ pages = site_layout.pages
 EXPECTED_SHAPES = {
     "root":          (9, 9, 2, 9),
     "notes-topic":   (2, 1, 1, 1),
-    "notes-hub":     (2, 2, 1, 2),
+    # notes-hub heads 2 -> 3, 2026-09-26: the Edexcel B hubs carry twitter:
+    # title/description, which the older hubs never gained (HEAD_EXEMPT).
+    "notes-hub":     (3, 2, 1, 2),
     "notes-other":   (2, 3, 2, 2),
     "past-papers":   (2, 2, 1, 2),
     "mcq-topic":     (1, 1, 1, 1),
@@ -493,7 +495,9 @@ MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 # addition is noise that trains people to skip the output. The counts are
 # still printed. What check 6 actually protects - no notes page has a shape
 # of its own - is the singleton assertion below, which is untouched.
-EXPECTED_NOTES_SPINES = 1
+# 1 -> 2 on 2026-09-26, TEMPORARILY, for Edexcel B's placeholder 1.1.1 (D66):
+# see MALFORMED_NOTES_PAGES below. Back to 1 when that entry is removed.
+EXPECTED_NOTES_SPINES = 2
 
 # PH06-031, CLOSED 2026-08-14 by Wave 5.4, approved per page by Eliot - D18 had
 # explicitly excluded these three because the fixes sit inside prose regions.
@@ -505,7 +509,18 @@ EXPECTED_NOTES_SPINES = 1
 # three. Same argument as KNOWN_BREADCRUMB_DISAGREEMENT being kept empty in
 # check 8: the structure is where a future deliberate exception gets declared,
 # and the comparison is what catches an accidental one.
-MALFORMED_NOTES_PAGES: dict[str, str] = {}
+MALFORMED_NOTES_PAGES: dict[str, str] = {
+    # TEMPORARY, and it clears itself. Edexcel B's first page is the only
+    # page in its directory, so the generated tail has no related topic to
+    # list and emits no .topic-related block (notes_extras.related_block
+    # falls back to the directory, which is empty). The page is otherwise
+    # the standard shape. The moment 1.1.2 is scaffolded both pages carry
+    # the block, this page stops being a singleton, and the check fails
+    # until this entry is deleted and EXPECTED_NOTES_SPINES goes back to 1.
+    # Theme 1 does not publish until all 23 pages exist, so this never ships.
+    "revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html":
+        "only page in a new directory: no related topics yet (D66)",
+}
 
 # ---- check 7 -------------------------------------------------------------
 # THE ONE NUMBER PH06 AND PH11 GET WRONG, and the reason this check asserts a

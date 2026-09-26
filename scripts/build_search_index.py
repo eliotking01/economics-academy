@@ -74,6 +74,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import board_data  # noqa: E402
 import build_glossary  # noqa: E402
 import build_past_paper_questions as ppq  # noqa: E402
 import notes_extras  # noqa: E402
@@ -201,8 +202,13 @@ def pages_rows() -> list[list]:
 # [notesDir, boardName, moduleName, boardSlug]. Order = notes_extras's, which
 # is boards.json group order (Edexcel first).
 def dirs_table() -> list[list[str]]:
+    # A notes-only board (Edexcel B, D66) has no questions-data records, so
+    # topic_rows() would give it no rows; its directory is left out too
+    # rather than shipped as an empty entry. Indexing its topics needs rows
+    # from the notes records instead - on the list before Theme 1 goes live.
     return [[d, board, module, notes_extras.BOARD_SLUG[board]]
-            for d, (board, module) in notes_extras.BOARD_OF_DIR.items()]
+            for d, (board, module) in notes_extras.BOARD_OF_DIR.items()
+            if not board_data.is_notes_only(d)]
 
 
 def headings_of(notes_dir: str, slug: str) -> list[str]:

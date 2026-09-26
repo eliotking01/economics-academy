@@ -74,10 +74,13 @@ _cache: dict | None = None
 # adding a board must be a declared change that fails loudly here first, rather
 # than a silent short build somewhere downstream. Update it in the same commit
 # that adds the board.
-EXPECTED_KEYS = ("edexcel-a", "aqa")
+EXPECTED_KEYS = ("edexcel-a", "aqa", "edexcel-b")
 EXPECTED_NOTES_DIRS = (
     "edexcel-theme-1", "edexcel-theme-2", "edexcel-theme-3", "edexcel-theme-4",
     "aqa-a2-micro", "aqa-a2-macro",
+    # Edexcel B, notes-only (D66): one entry per OPEN theme, added as each
+    # theme's hub leaves notes-data/hubs/drafts/.
+    "edexcel-b-theme-1",
 )
 
 
