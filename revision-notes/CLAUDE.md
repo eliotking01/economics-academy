@@ -59,7 +59,7 @@ None of that is ever written into a slice.
 | `exam-tip` | One `<p>`, no heading. Bolded lead sentence, then 2–3 sentences. Corrects a specific confusion; never restates theory. |
 | `concept-table` | Multi-column comparison. **Always** inside `<div class="table-container">`. |
 | `calculation-table` | Two-column running calculation. **Never** wrapped. Last row is the answer. |
-| `key-definition` | Inline term chip. The glossary extracts from these — see `glossary-data/CLAUDE.md`. |
+| `key-definition` | Inline term chip. The glossary extracts from these — see `glossary-data/CLAUDE.md`. Leave a space after the closing tag: `<span class="key-definition">Term:</span> the definition`. The stylesheet adds the gap on screen if it is missing, but the page text (search snippets, screen readers) only has it if the slice does. |
 | `formula-box` | Centred MathJax display. Must be preceded by `<!-- prettier-ignore -->`. |
 | `flow-chain` / `flow-node` | Chained pill diagram. |
 | `diagram-figure` / `-image` / `-caption` | `<figure>` + `<figcaption>`. Images need `width`, `height`, real alt text. Captions open `Figure N:`. |

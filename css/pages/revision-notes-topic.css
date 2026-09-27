@@ -455,6 +455,16 @@
   border-radius: 0 6px 6px 0;
 }
 
+/* The gap between the term and its definition. A chip written hard against
+   its text ("Scarcity:</span>the situation...") rendered with no space - 26
+   cards on 16 pages did in September 2026. This space fills it. Where the
+   source already has a space or line break after the chip, the two collapse
+   into one (same inline formatting context), so it never doubles, and a
+   chip alone in its card gets a trailing space that takes no room. */
+.revision-notes-content .topic-definition > .key-definition:first-child::after {
+  content: " ";
+}
+
 /* ==========================================================================
    6. Callouts: one grammar - tint, 3px rule, small-caps label
    ========================================================================== */
