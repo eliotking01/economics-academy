@@ -495,8 +495,10 @@ MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 # addition is noise that trains people to skip the output. The counts are
 # still printed. What check 6 actually protects - no notes page has a shape
 # of its own - is the singleton assertion below, which is untouched.
-# 1 -> 2 on 2026-09-26, TEMPORARILY, for Edexcel B's placeholder 1.1.1 (D66):
-# see MALFORMED_NOTES_PAGES below. Back to 1 when that entry is removed.
+# 1 -> 2 on 2026-09-26, TEMPORARILY, for Edexcel B's placeholder 1.1.1 (D66).
+# 1.1.1's entry went on 2026-09-27 when 1.1.2 gave it siblings, and 1.1.2
+# took its place the same day: see MALFORMED_NOTES_PAGES below. Back to 1
+# when that entry is removed.
 EXPECTED_NOTES_SPINES = 2
 
 # PH06-031, CLOSED 2026-08-14 by Wave 5.4, approved per page by Eliot - D18 had
@@ -510,16 +512,16 @@ EXPECTED_NOTES_SPINES = 2
 # check 8: the structure is where a future deliberate exception gets declared,
 # and the comparison is what catches an accidental one.
 MALFORMED_NOTES_PAGES: dict[str, str] = {
-    # TEMPORARY, and it clears itself. Edexcel B's first page is the only
-    # page in its directory, so the generated tail has no related topic to
-    # list and emits no .topic-related block (notes_extras.related_block
-    # falls back to the directory, which is empty). The page is otherwise
-    # the standard shape. The moment 1.1.2 is scaffolded both pages carry
-    # the block, this page stops being a singleton, and the check fails
-    # until this entry is deleted and EXPECTED_NOTES_SPINES goes back to 1.
-    # Theme 1 does not publish until all 23 pages exist, so this never ships.
-    "revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html":
-        "only page in a new directory: no related topics yet (D66)",
+    # TEMPORARY, and it clears itself. Edexcel B Theme 1 has three pages
+    # (unit 1.1) and 1.1.2 is the middle one. notes_extras.related_slugs
+    # skips the previous/next neighbours, which here are the whole
+    # directory, so the page gets no .topic-related block. The moment
+    # 1.2.1 is scaffolded the directory fallback finds it, this page
+    # rejoins the standard shape, and the check fails until this entry is
+    # deleted and EXPECTED_NOTES_SPINES goes back to 1. Theme 1 does not
+    # publish until all 23 pages exist, so this never ships.
+    "revision-notes/edexcel-b-theme-1/1-1-2-business-objectives.html":
+        "middle of a three-page directory: no related topics yet (D66)",
 }
 
 # ---- check 7 -------------------------------------------------------------

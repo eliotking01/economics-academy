@@ -2,13 +2,13 @@
   "path": "revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html",
   "head": {
     "title": "The Economic Problem – Edexcel B A-Level Economics Notes",
-    "description": "The Economic Problem for Edexcel B A-Level Economics (1.1.1). Covers TODO, TODO and TODO.",
+    "description": "The Economic Problem for Edexcel B A-Level Economics (1.1.1). Covers scarcity, choices and trade-offs, and opportunity cost, shown on a PPF diagram.",
     "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html",
     "og": {
       "type": "article",
       "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html",
       "title": "The Economic Problem – Edexcel B A-Level Economics Notes",
-      "description": "The Economic Problem for Edexcel B A-Level Economics (1.1.1). Covers TODO, TODO and TODO.",
+      "description": "The Economic Problem for Edexcel B A-Level Economics (1.1.1). Covers scarcity, choices and trade-offs, and opportunity cost, shown on a PPF diagram.",
       "siteName": "Economics Academy",
       "locale": "en_GB",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1",
@@ -22,7 +22,7 @@
     "twitter": {
       "card": "summary_large_image",
       "title": "The Economic Problem – Edexcel B A-Level Economics Notes",
-      "description": "The Economic Problem for Edexcel B A-Level Economics (1.1.1). Covers TODO, TODO and TODO.",
+      "description": "The Economic Problem for Edexcel B A-Level Economics (1.1.1). Covers scarcity, choices and trade-offs, and opportunity cost, shown on a PPF diagram.",
       "image": "https://economicsacademy.co.uk/og-image.png?v=1"
     },
     "pageStylesheets": [
@@ -36,7 +36,7 @@
         "@context": "https://schema.org",
         "@type": "LearningResource",
         "name": "The Economic Problem",
-        "description": "Free Edexcel B A-Level Economics revision notes on The Economic Problem - TODO.",
+        "description": "Free Edexcel B A-Level Economics revision notes on the economic problem - scarcity, choices and trade-offs, and opportunity cost for consumers, producers and government, for Theme 1.1.1.",
         "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-1-1-the-economic-problem.html",
         "educationalLevel": "A-Level",
         "learningResourceType": "Revision Notes",
@@ -52,7 +52,7 @@
           }
         },
         "datePublished": "2026-09-26",
-        "dateModified": "2026-09-26",
+        "dateModified": "2026-09-27",
         "author": {
           "@type": "Person",
           "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
@@ -76,7 +76,7 @@
           "alignmentType": "educationalSubject",
           "targetName": "Edexcel B A-Level Economics Theme 1, unit 1.1.1"
         },
-        "timeRequired": "PT3M"
+        "timeRequired": "PT4M"
       }
     ],
     "jsonldAfterStyles": [
