@@ -215,12 +215,11 @@ first session did the plumbing and no content. DECISIONS.md D66 has the reasons.
 - **The menu** has Edexcel B → Theme 1, and the old "Edexcel" group heading
   reads "Edexcel A" (Revision Notes and Practice Questions, desktop and
   mobile). 192 `Text-Change:` trailers.
-- **Unit 1.1 is written (2026-09-27)**: 1.1.1-1.1.3, awaiting Eliot's
-  review (`05-website/drafts/edexcel-b-notes/review/unit-1-1.md`). 1.1.1's
-  one-page-spine declaration is gone, but **1.1.2 now carries one** in
-  `verify_page_shell.py`: as the middle of three pages it has no related
-  topic to list. Scaffolding 1.2.1 clears it - the check then fails until
-  the entry is deleted and `EXPECTED_NOTES_SPINES` goes back to 1.
+- **Units 1.1 and 1.2 are written (2026-09-27)**: 1.1.1-1.2.5, eight
+  pages, awaiting Eliot's review (`05-website/drafts/edexcel-b-notes/review/`,
+  `unit-1-1.md` and `unit-1-2.md`). The temporary one-page-spine
+  declarations are all gone: `MALFORMED_NOTES_PAGES` is empty again and
+  `EXPECTED_NOTES_SPINES` is back to 1.
 
 **Hub wording approved by Eliot on 2026-09-27**: every line of
 `05-website/drafts/edexcel-b-notes/setup-approval-list.md`, all four hubs,

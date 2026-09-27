@@ -1919,3 +1919,23 @@ figcaptions and the macro gallery blurb. The redrawn
 diagram currently disagree: a live defect, not a pending preference.
 Needs its own session and an explicit instruction before any page is
 touched (hard rule 2); nothing has been changed.
+
+## N-Q22 — Adam Smith's pin factory: "24,000% productivity increase" overstates Smith's figures (logged 2026-09-27)
+
+Found while fact-checking the Edexcel B specialisation page (unit 1.2.4)
+against the primary source. Two published twins say ten specialised workers
+made "48,000 pins daily (4,800 per worker) versus 20 pins by a single
+unspecialised worker – a 24,000% productivity increase":
+
+- `revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html`
+- `revision-notes/aqa-a2-micro/1-4-2-specialisation-division-of-labour-and-exchange.html`
+
+Two problems. The arithmetic: 4,800 ÷ 20 is 240 times as much, which is a
+**23,900%** increase, not 24,000%. And the source: Smith (The Wealth of
+Nations, 1776, Book I ch. 1, Project Gutenberg #3300, read 2026-09-27) says
+each man working alone "certainly could not each of them have made twenty,
+perhaps not one pin in a day", so 20 is an upper bound, not a measured
+output. "At least 240 times as productive" is what the numbers support; the
+Edexcel B page words it that way. Both lines also use an en dash where the
+house dash is a spaced hyphen. Wording change, so it needs Eliot's explicit
+instruction (hard rule 2); nothing has been changed.
