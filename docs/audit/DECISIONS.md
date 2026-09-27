@@ -2368,6 +2368,8 @@ setup session.
   change before Theme 1 goes live).
 - **Hub names** follow Edexcel A's pattern:
   `Edexcel B Theme N: <theme name>`, Title Case, with the spec's own unit
-  titles. The hub wording is on Eliot's approval list and is not approved
-  until he says so.
+  titles. **The hub wording was approved by Eliot on 2026-09-27**: every
+  line of `05-website/drafts/edexcel-b-notes/setup-approval-list.md`, for
+  all four hubs (Themes 2-4 still drafts), including the hubs' closing box
+  keeping its em dash as reused Edexcel A copy.
 

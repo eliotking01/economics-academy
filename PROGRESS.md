@@ -221,8 +221,13 @@ first session did the plumbing and no content. DECISIONS.md D66 has the reasons.
   1.1.2 exists), and `verify_seo.py` 12 and 16 fail on it. That is known and
   cleared by real content and siblings.
 
-**Before Theme 1 can publish:** all 23 pages written and approved; the hub
-wording approved (`05-website/drafts/edexcel-b-notes/setup-approval-list.md`);
+**Hub wording approved by Eliot on 2026-09-27**: every line of
+`05-website/drafts/edexcel-b-notes/setup-approval-list.md`, all four hubs,
+including the closing box keeping its em dash as reused Edexcel A copy.
+Pages are written one unit per session with `/edexcel-b-unit X.Y`
+(`.claude/commands/edexcel-b-unit.md`).
+
+**Before Theme 1 can publish:** all 23 pages written and approved;
 an Edexcel B section on `revision-notes/index.html` (a separate reviewed
 change); B topics added to site search (`build_search_index.py` builds its
 rows from quiz records, which B has none of). **After launch:** twin links
