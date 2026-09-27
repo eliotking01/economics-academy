@@ -24,8 +24,8 @@ remains flagged" moved up beside the traps.
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
 | Edexcel B notes — setup: notes-only board, hubs, 1.1.1 placeholder | in progress | — | — |
-| Calendly retired — #booking becomes an enquiry block | in review | — | — |
-| Form spam hardening — endpoints rotated, Turnstile on both forms | in review | — | — |
+| Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
+| Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
 | Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | live | 2026-08-26 | `0bcac57c` |
 | Notes family consistency — the two diagram galleries | live | 2026-08-25 | `0bad0c88` |
@@ -229,7 +229,7 @@ rows from quiz records, which B has none of). **After launch:** twin links
 (`notes_twins.board_of_dir` treats any `edexcel*` directory as Edexcel A and
 needs fixing first) and a B glossary, both deferred on purpose.
 
-### Calendly retired — self-booking replaced by enquiry-first (2026-09-25) — IN REVIEW (branch `feature/retire-calendly`)
+### Calendly retired — self-booking replaced by enquiry-first (2026-09-25) — LIVE (merged 2026-09-25, `7aec6877`, PR #39)
 
 Eliot is close to full for 2026-27 with only a few weekly slots left, and
 prospects kept self-booking intro calls he then had to cancel. The flow is now
@@ -283,7 +283,7 @@ Deliberately untouched: the ~170 revision-notes pages whose tail reads "in a
 free 15-minute intro call" (no Calendly link, still true) and
 `scripts/notes_extras.py` that writes it.
 
-### Form spam hardening — Turnstile on both Formspree forms (2026-09-15) — IN REVIEW (branch `feature/form-spam-hardening`)
+### Form spam hardening — Turnstile on both Formspree forms (2026-09-15) — LIVE (merged 2026-09-15, `a7a303bc`, PR #37)
 
 An automated scanner found both forms from ~13 September and began fuzzing
 them with SQL-injection probes — one poisoned parameter per request, every
