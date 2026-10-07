@@ -1939,3 +1939,12 @@ output. "At least 240 times as productive" is what the numbers support; the
 Edexcel B page words it that way. Both lines also use an en dash where the
 house dash is a spaced hyphen. Wording change, so it needs Eliot's explicit
 instruction (hard rule 2); nothing has been changed.
+
+**Resolved 2026-10-07.** Eliot said to correct it. Fixed on its own branch,
+`fix/pin-factory-figure` (`40ba2930`), so it can ship before Theme 1: both
+pages now say "fewer than 20" and "at least 240 times as productive", with a
+spaced hyphen. **Still open, same slip, not approved:** the AQA flashcard in
+`flashcards-data/aqa/micro.json` (division of labour card) and the worked
+answer in `questions-data/aqa-a2-micro/1-4-2.json` both say a lone worker
+made "20" pins, where Smith gives 20 as an upper bound. Neither carries the
+24,000% figure.
