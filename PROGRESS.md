@@ -220,6 +220,10 @@ first session did the plumbing and no content. DECISIONS.md D66 has the reasons.
   `unit-1-1.md` and `unit-1-2.md`). The temporary one-page-spine
   declarations are all gone: `MALFORMED_NOTES_PAGES` is empty again and
   `EXPECTED_NOTES_SPINES` is back to 1.
+- **Unit 1.3 is written (2026-10-07)**: 1.3.1-1.3.6, six pages, awaiting
+  Eliot's review (`review/unit-1-3.md`). 1.3.6 carries a
+  `<!-- DIAGRAM PENDING: market-map -->` comment until that diagram is
+  drafted and approved; Theme 1 cannot publish with it still there.
 
 **Hub wording approved by Eliot on 2026-09-27**: every line of
 `05-website/drafts/edexcel-b-notes/setup-approval-list.md`, all four hubs,
