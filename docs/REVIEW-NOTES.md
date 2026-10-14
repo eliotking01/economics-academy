@@ -1980,3 +1980,12 @@ Eliot asked for this to be logged, not fixed (2026-10-14). The caption is
 visible wording, so changing it needs his explicit instruction (hard rule 2)
 and a `Text-Change:` trailer on each page. Edit the two slices and rebuild,
 never the pages. Nothing has been changed.
+
+**Resolved 2026-10-14.** Eliot said to fix it. Fixed on its own branch,
+`fix/shifts-in-equilibrium-caption` (`1bf6e77a`, sitemap `d0beff34`, not
+pushed), so it can ship before Theme 1. Both captions now read "Figure 4:
+The four basic shifts. Top: demand rises (left) and falls (right). Bottom:
+supply rises (left) and falls (right). Practise drawing the shift,
+identifying the initial disequilibrium, and showing the new equilibrium P
+and Q." The two slices were edited and the pages rebuilt; `/verify` passes
+27/27 on that branch.
