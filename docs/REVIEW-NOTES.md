@@ -1948,3 +1948,35 @@ spaced hyphen. **Still open, same slip, not approved:** the AQA flashcard in
 answer in `questions-data/aqa-a2-micro/1-4-2.json` both say a lone worker
 made "20" pins, where Smith gives 20 as an upper bound. Neither carries the
 24,000% figure.
+
+## N-Q23 — `shifts-in-equilibrium` caption says "a single set of axes"; the image has four panels (logged 2026-10-14)
+
+Found while writing the Edexcel B price determination page (unit 1.3.3),
+which reuses the same diagram. Two published twins caption Figure 4:
+
+> Figure 4: A single set of axes to model the four scenarios below. Practise
+> drawing the shift, identifying the initial disequilibrium, and showing the
+> new equilibrium P and Q.
+
+- `revision-notes/edexcel-theme-1/1-2-6-price-determination.html`, from its
+  slice `notes-data/topics/edexcel-theme-1/1-2-6-price-determination.html`
+  (line 165)
+- `revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html`,
+  from its slice
+  `notes-data/topics/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html`
+  (line 167)
+
+`images/diagrams/shifts-in-equilibrium.png` is four separate diagrams in a
+2×2 grid, not one: demand shifting right (top left), demand shifting left
+(top right), supply shifting right (bottom left) and supply shifting left
+(bottom right), each with P1/Q1 and P2/Q2 marked. The alt text on both pages
+already says "Four demand and supply panels", so only the caption is wrong.
+The Edexcel B page captions it "Figure 4: The four basic shifts. Top: demand
+rises (left) and falls (right). Bottom: supply rises (left) and falls
+(right)", which would also fit the twins, and they keep their Practise
+sentence.
+
+Eliot asked for this to be logged, not fixed (2026-10-14). The caption is
+visible wording, so changing it needs his explicit instruction (hard rule 2)
+and a `Text-Change:` trailer on each page. Edit the two slices and rebuild,
+never the pages. Nothing has been changed.
