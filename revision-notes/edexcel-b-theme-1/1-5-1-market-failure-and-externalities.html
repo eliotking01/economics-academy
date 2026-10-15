@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
+    <script>
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
+    <title>
+      Market Failure and Externalities – Edexcel B A-Level Economics
+    </title>
+    <meta
+      name="description"
+      content="Market Failure and Externalities for Edexcel B A-Level Economics (1.5.1). Covers private, external and social costs and benefits, and why markets fail."
+    />
+    <link
+      rel="canonical"
+      href="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Economics Academy" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="og:url"
+      content="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html"
+    />
+    <meta
+      property="og:title"
+      content="Market Failure and Externalities – Edexcel B A-Level Economics"
+    />
+    <meta
+      property="og:description"
+      content="Market Failure and Externalities for Edexcel B A-Level Economics (1.5.1). Covers private, external and social costs and benefits, and why markets fail."
+    />
+    <meta
+      property="og:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Economics Academy logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Market Failure and Externalities – Edexcel B A-Level Economics"
+    />
+    <meta
+      name="twitter:description"
+      content="Market Failure and Externalities for Edexcel B A-Level Economics (1.5.1). Covers private, external and social costs and benefits, and why markets fail."
+    />
+    <meta
+      name="twitter:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Market Failure and Externalities",
+        "description": "Free Edexcel B A-Level Economics revision notes on market failure and externalities - private, external and social costs and benefits, the social optimum, and overproduction and underconsumption, for Theme 1.5.1.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 1: Markets, Consumers and Firms",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-15",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Market Failure and Externalities"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 1, unit 1.5.1"
+        },
+        "timeRequired": "PT6M"
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 1: Markets, Consumers and Firms",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "1.5.1 Market Failure and Externalities",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-5-1-market-failure-and-externalities.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Edexcel B, notes only (D66). One entry per OPEN theme: a
+                     theme joins here when its hub leaves notes-data/hubs/drafts/.
+                     No Practice Questions entry - the board has none. -->
+                <li>
+                  <a href="#" role="button">Edexcel B</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <p class="mnav-sub-label">Edexcel B</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <!-- Simple Breadcrumb using Dopetrope's native styling -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/edexcel-b-theme-1/"
+              >Edexcel B Theme 1: Markets, Consumers and Firms</a
+            >
+            <span class="separator">›</span>
+            <span>1.5.1 Market Failure and Externalities</span>
+          </nav>
+          <!-- Main Content -->
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html"
+                rel="prev"
+                aria-label="Previous topic: 1.4.3 Types and Sources of Credit"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">1.4.3 Types and Sources of Credit</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html"
+                rel="next"
+                aria-label="Next topic: 1.5.2 Government Intervention and Failure"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">1.5.2 Government Intervention and Failure</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Market Failure and Externalities</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel B Theme 1, unit 1.5.1"
+                  >Edexcel B<span aria-hidden="true"> · </span>Theme 1<span aria-hidden="true"> · </span>1.5.1</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-10-15">15 October 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> Edexcel B unit 1.5.1 -
+              Market Failure and Externalities. Students need to tell private,
+              external and social costs and benefits apart, give examples from
+              both production and consumption, and explain when markets work
+              well and why external costs and benefits make some of them
+              produce or consume the wrong amount.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#private-external-and-social-costs">Private, External and Social Costs</a></li>
+                <li><a href="#private-external-and-social-benefits">Private, External and Social Benefits</a></li>
+                <li><a href="#costs-and-benefits-from-production-and-consumption">Costs and Benefits from Production and Consumption</a></li>
+                <li><a href="#when-markets-fail">When Markets Fail</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="private-external-and-social-costs">Private, External and Social Costs</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Private costs:</span> the costs
+                paid by the firm or person carrying out an activity, such as a
+                firm's wages, materials and energy, or the price a consumer pays
+                for a good.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">External costs:</span> costs that
+                fall on a <strong>third party</strong>, someone outside the
+                transaction, who is not compensated for them. Noise, pollution
+                and congestion are the usual examples.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Social costs:</span> the full cost
+                of an activity to society, which is the private cost plus any
+                external cost.
+              </p>
+              <p>
+                <strong>Social cost = private cost + external cost</strong>
+              </p>
+              <p>
+                Take a quarry that spends £40 to dig each tonne of stone, while
+                its dust and lorries cause £15 of damage per tonne to people
+                nearby. The social cost is £55 a tonne. The quarry prices from
+                its own £40 &rarr; stone sells for less than its cost to society
+                &rarr; more is bought &rarr; the neighbours bear the £15.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="private-external-and-social-benefits">Private, External and Social Benefits</h2>
+              <p>
+                The same split works for benefits.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Private benefits:</span> the
+                benefits that go to the person or firm who buys, uses or makes
+                something, such as the enjoyment a consumer gets from a good or
+                the revenue a firm earns from selling it.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">External benefits:</span> gains
+                that go to third parties, who do not pay for them.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Social benefits:</span> the full
+                benefit of an activity to society, which is the private benefit
+                plus any external benefit.
+              </p>
+              <p>
+                <strong>Social benefit = private benefit + external
+                benefit</strong>
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Externality:</span> an external
+                cost or external benefit. A <strong>negative externality</strong>
+                is an external cost and a <strong>positive externality</strong>
+                is an external benefit.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="costs-and-benefits-from-production-and-consumption">Costs and Benefits from Production and Consumption</h2>
+              <p>
+                Externalities can come from making a good or from using it, so
+                there are four cases to know.
+              </p>
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                <table class="concept-table">
+                  <thead>
+                    <tr>
+                      <th class="width-20">Type</th>
+                      <th class="width-25">Who causes it</th>
+                      <th class="width-55">Examples</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>External cost of production</strong></td>
+                      <td>A firm, while making a good</td>
+                      <td>
+                        Water companies releasing sewage into rivers and the
+                        sea; a factory's fumes harming the health of people
+                        nearby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>External cost of consumption</strong></td>
+                      <td>A consumer, while using a good</td>
+                      <td>
+                        Drivers adding to congestion and air pollution for
+                        everyone else on the road; loud music keeping the
+                        neighbours awake
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>External benefit of production</strong></td>
+                      <td>A firm, while making a good</td>
+                      <td>
+                        A firm trains its staff, some of whom later take those
+                        skills to other employers; a beekeeper's bees pollinate
+                        the crops on nearby farms
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>External benefit of consumption</strong></td>
+                      <td>A consumer, while using a good</td>
+                      <td>
+                        A vaccinated person is less likely to pass a disease on;
+                        an educated worker makes the people around them more
+                        productive
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                The people causing an externality do not have to think about
+                it: the quarry does not pay for the dust, and someone having a
+                flu jab is not paid for protecting others. Decisions are made on
+                private costs and benefits alone.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="when-markets-fail">When Markets Fail</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Market failure:</span> when the
+                free market leads to too much or too little of a good being
+                produced or consumed, so resources are not allocated in the
+                best way for society.
+              </p>
+              <p>
+                Diagrams for this use the letters MPC, MSC, MPB and
+                MSB. The M stands for <strong>marginal</strong>, the cost or
+                benefit of one more unit. The supply curve is the marginal
+                private cost (MPC) and the demand curve is the marginal private
+                benefit (MPB).
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Social optimum:</span> the output
+                where the social cost of one more unit equals its social
+                benefit, written MSC = MSB on a diagram. The last unit made
+                costs society exactly what it is worth to society.
+              </p>
+              <p>
+                In most markets there is no externality, so private and social
+                costs and benefits are the same. The market equilibrium is then
+                the social optimum, and the market works well on its own. When
+                there is an externality, the two points split apart, and the
+                market ends up at Q1 when society would be better off at Q2.
+              </p>
+
+              <h3>Overproduction</h3>
+              <p>
+                An external cost of production puts the marginal social cost
+                (MSC) above the supply curve. The gap between the two is the
+                external cost of each unit. The market settles where supply
+                meets demand, at Q1, but the social optimum is where MSC meets
+                demand, at Q2.
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/overproduction.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/overproduction.webp" />
+                <img
+                  src="/images/diagrams/overproduction.png"
+                  alt="Diagram with Costs, Benefits on the vertical axis and Quantity on the horizontal axis. Demand is labelled D=MPB=MSB. The MSC curve lies above S=MPC. The market equilibrium is at P1 and Q1, where S=MPC crosses demand. The social optimum is at P2 and Q2, where MSC crosses demand, with Q2 less than Q1. A shaded triangle between Q2 and Q1 shows the welfare loss."
+                  class="diagram-image"
+                  width="1592"
+                  height="1144"
+                  fetchpriority="high"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 1: Overproduction from an external cost of production.
+                  The market produces Q1 at price P1, more than the social
+                  optimum Q2. The shaded triangle is the welfare loss.
+                </figcaption>
+              </figure>
+              <p>
+                Between Q2 and Q1, each extra unit costs society more than it
+                is worth to buyers, and the price P1 is too low because it
+                leaves out the external cost. The shaded triangle is the
+                <strong>welfare loss</strong>: the cost to society of those
+                extra units, over and above what they are worth.
+              </p>
+
+              <h3>Overconsumption</h3>
+              <p>
+                An external cost of consumption puts the marginal social
+                benefit (MSB) below the demand curve, because using the good
+                harms other people. Each driver weighs up their own fuel and
+                time, not the delay and pollution they add for everyone else.
+                Consumers buy Q1, more than the social optimum Q2.
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/overconsumption.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/overconsumption.webp" />
+                <img
+                  src="/images/diagrams/overconsumption.png"
+                  alt="Diagram with Costs, Benefits on the vertical axis and Quantity on the horizontal axis. Supply is labelled S=MPC=MSC. The MSB curve lies below D=MPB. The market equilibrium is at P1 and Q1, where D=MPB crosses supply. The social optimum is at P2 and Q2, where MSB crosses supply, with Q2 less than Q1. A shaded triangle between Q2 and Q1 shows the welfare loss."
+                  class="diagram-image"
+                  width="1629"
+                  height="1201"
+                  loading="lazy"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 2: Overconsumption from an external cost of
+                  consumption. The market consumes Q1, more than the social
+                  optimum Q2. The shaded triangle is the welfare loss.
+                </figcaption>
+              </figure>
+
+              <h3>Underproduction</h3>
+              <p>
+                An external benefit of production puts the marginal social cost
+                (MSC) below the supply curve, because making the good helps
+                other people. A firm that trains its staff counts the cost of
+                the training but not the gain to the employers they move on to.
+                The market produces Q1, less than the social optimum Q2.
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/underproduction.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/underproduction.webp" />
+                <img
+                  src="/images/diagrams/underproduction.png"
+                  alt="Diagram with Costs, Benefits on the vertical axis and Quantity on the horizontal axis. Demand is labelled D=MPB=MSB. The MSC curve lies below S=MPC. The market equilibrium is at P1 and Q1, where S=MPC crosses demand. The social optimum is at P2 and Q2, where MSC crosses demand, with Q2 greater than Q1. A shaded triangle between Q1 and Q2 shows the welfare loss."
+                  class="diagram-image"
+                  width="1795"
+                  height="1208"
+                  loading="lazy"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 3: Underproduction from an external benefit of
+                  production. The market produces Q1, less than the social
+                  optimum Q2. The shaded triangle is the welfare loss.
+                </figcaption>
+              </figure>
+
+              <h3>Underconsumption</h3>
+              <p>
+                An external benefit of consumption puts the marginal social
+                benefit (MSB) above the demand curve. Someone deciding whether
+                to have a vaccine thinks about their own health, not the people
+                they would no longer infect. Consumers buy Q1, less than the
+                social optimum Q2.
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/underconsumption.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/underconsumption.webp" />
+                <img
+                  src="/images/diagrams/underconsumption.png"
+                  alt="Diagram with Costs, Benefits on the vertical axis and Quantity on the horizontal axis. Supply is labelled S=MPC=MSC. The MSB curve lies above D=MPB. The market equilibrium is at P1 and Q1, where D=MPB crosses supply. The social optimum is at P2 and Q2, where MSB crosses supply, with Q2 greater than Q1. A shaded triangle between Q1 and Q2 shows the welfare loss."
+                  class="diagram-image"
+                  width="1623"
+                  height="1193"
+                  loading="lazy"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 4: Underconsumption from an external benefit of
+                  consumption. The market consumes Q1, less than the social
+                  optimum Q2. The shaded triangle is the welfare loss.
+                </figcaption>
+              </figure>
+              <p>
+                With under-provision, the shaded triangle is the benefit
+                society misses out on: units between Q1 and Q2 that would have
+                been worth more to society than they cost to make.
+              </p>
+              <div class="exam-tip">
+                <p>
+                  <strong>The market stays at Q1.</strong> An externality does
+                  not shift supply or demand. MSC and MSB are extra lines that
+                  show what the market leaves out, so the market outcome is
+                  still where S=MPC meets D=MPB. Say which way Q1 is from Q2,
+                  shade the triangle between them and name it as the welfare
+                  loss. Moving the market towards Q2 takes government
+                  intervention, covered in
+                  <a
+                    href="/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html"
+                    >1.5.2</a
+                  >.
+                </p>
+              </div>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-1/1-4-2-risk-and-liability.html">Risk and Liability</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html">Revenue and Costs</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-1/1-4-1-role-of-banks-in-the-economy.html">Role of Banks in the Economy</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/edexcel-b/">Edexcel B past papers</a>
+                  <p class="topic-next__note">Question papers and mark schemes for every Edexcel B A-Level and AS paper, by paper and year.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html"
+                rel="prev"
+                aria-label="Previous topic: 1.4.3 Types and Sources of Credit"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">1.4.3 Types and Sources of Credit</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-1/1-5-2-government-intervention-and-failure.html"
+                rel="next"
+                aria-label="Next topic: 1.5.2 Government Intervention and Failure"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">1.5.2 Government Intervention and Failure</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
+  </body>
+</html>

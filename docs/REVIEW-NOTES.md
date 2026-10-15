@@ -1919,3 +1919,73 @@ figcaptions and the macro gallery blurb. The redrawn
 diagram currently disagree: a live defect, not a pending preference.
 Needs its own session and an explicit instruction before any page is
 touched (hard rule 2); nothing has been changed.
+
+## N-Q22 — Adam Smith's pin factory: "24,000% productivity increase" overstates Smith's figures (logged 2026-09-27)
+
+Found while fact-checking the Edexcel B specialisation page (unit 1.2.4)
+against the primary source. Two published twins say ten specialised workers
+made "48,000 pins daily (4,800 per worker) versus 20 pins by a single
+unspecialised worker – a 24,000% productivity increase":
+
+- `revision-notes/edexcel-theme-1/1-1-5-specialisation-division-of-labour.html`
+- `revision-notes/aqa-a2-micro/1-4-2-specialisation-division-of-labour-and-exchange.html`
+
+Two problems. The arithmetic: 4,800 ÷ 20 is 240 times as much, which is a
+**23,900%** increase, not 24,000%. And the source: Smith (The Wealth of
+Nations, 1776, Book I ch. 1, Project Gutenberg #3300, read 2026-09-27) says
+each man working alone "certainly could not each of them have made twenty,
+perhaps not one pin in a day", so 20 is an upper bound, not a measured
+output. "At least 240 times as productive" is what the numbers support; the
+Edexcel B page words it that way. Both lines also use an en dash where the
+house dash is a spaced hyphen. Wording change, so it needs Eliot's explicit
+instruction (hard rule 2); nothing has been changed.
+
+**Resolved 2026-10-07.** Eliot said to correct it. Fixed on its own branch,
+`fix/pin-factory-figure` (`40ba2930`), so it can ship before Theme 1: both
+pages now say "fewer than 20" and "at least 240 times as productive", with a
+spaced hyphen. **Still open, same slip, not approved:** the AQA flashcard in
+`flashcards-data/aqa/micro.json` (division of labour card) and the worked
+answer in `questions-data/aqa-a2-micro/1-4-2.json` both say a lone worker
+made "20" pins, where Smith gives 20 as an upper bound. Neither carries the
+24,000% figure.
+
+## N-Q23 — `shifts-in-equilibrium` caption says "a single set of axes"; the image has four panels (logged 2026-10-14)
+
+Found while writing the Edexcel B price determination page (unit 1.3.3),
+which reuses the same diagram. Two published twins caption Figure 4:
+
+> Figure 4: A single set of axes to model the four scenarios below. Practise
+> drawing the shift, identifying the initial disequilibrium, and showing the
+> new equilibrium P and Q.
+
+- `revision-notes/edexcel-theme-1/1-2-6-price-determination.html`, from its
+  slice `notes-data/topics/edexcel-theme-1/1-2-6-price-determination.html`
+  (line 165)
+- `revision-notes/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html`,
+  from its slice
+  `notes-data/topics/aqa-a2-micro/1-3-5-the-determination-of-equilibrium-market-prices.html`
+  (line 167)
+
+`images/diagrams/shifts-in-equilibrium.png` is four separate diagrams in a
+2×2 grid, not one: demand shifting right (top left), demand shifting left
+(top right), supply shifting right (bottom left) and supply shifting left
+(bottom right), each with P1/Q1 and P2/Q2 marked. The alt text on both pages
+already says "Four demand and supply panels", so only the caption is wrong.
+The Edexcel B page captions it "Figure 4: The four basic shifts. Top: demand
+rises (left) and falls (right). Bottom: supply rises (left) and falls
+(right)", which would also fit the twins, and they keep their Practise
+sentence.
+
+Eliot asked for this to be logged, not fixed (2026-10-14). The caption is
+visible wording, so changing it needs his explicit instruction (hard rule 2)
+and a `Text-Change:` trailer on each page. Edit the two slices and rebuild,
+never the pages. Nothing has been changed.
+
+**Resolved 2026-10-14.** Eliot said to fix it. Fixed on its own branch,
+`fix/shifts-in-equilibrium-caption` (`1bf6e77a`, sitemap `d0beff34`, not
+pushed), so it can ship before Theme 1. Both captions now read "Figure 4:
+The four basic shifts. Top: demand rises (left) and falls (right). Bottom:
+supply rises (left) and falls (right). Practise drawing the shift,
+identifying the initial disequilibrium, and showing the new equilibrium P
+and Q." The two slices were edited and the pages rebuilt; `/verify` passes
+27/27 on that branch.

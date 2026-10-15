@@ -100,6 +100,12 @@ BOARD_OF_DIR = {
     "edexcel-theme-4": ("edexcel", "Edexcel Theme 4"),
     "aqa-a2-micro": ("aqa", "AQA Microeconomics"),
     "aqa-a2-macro": ("aqa", "AQA Macroeconomics"),
+    # Edexcel B notes (D66), the same board as past-papers/edexcel-b/ below.
+    # All four themes, open or not: this only classifies a path.
+    "edexcel-b-theme-1": ("edexcel-b", "Edexcel B Theme 1"),
+    "edexcel-b-theme-2": ("edexcel-b", "Edexcel B Theme 2"),
+    "edexcel-b-theme-3": ("edexcel-b", "Edexcel B Theme 3"),
+    "edexcel-b-theme-4": ("edexcel-b", "Edexcel B Theme 4"),
     "edexcel-a": ("edexcel", "Edexcel A"),
     "edexcel": ("edexcel", "Edexcel"),
     "edexcel-b": ("edexcel-b", "Edexcel B"),

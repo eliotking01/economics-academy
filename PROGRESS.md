@@ -23,8 +23,9 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Calendly retired — #booking becomes an enquiry block | in review | — | — |
-| Form spam hardening — endpoints rotated, Turnstile on both forms | in review | — | — |
+| Edexcel B notes — Theme 1: 23 pages, index section, site search | approved, PR open | — | — |
+| Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
+| Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
 | Tutoring page SEO pass — snippet, FAQs, anchors, Person schema | live | 2026-08-26 | `0bcac57c` |
 | Notes family consistency — the two diagram galleries | live | 2026-08-25 | `0bad0c88` |
@@ -192,7 +193,67 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### Calendly retired — self-booking replaced by enquiry-first (2026-09-25) — IN REVIEW (branch `feature/retire-calendly`)
+### Edexcel B revision notes — Theme 1 (2026-09-26 to 2026-10-15) — COMPLETE AND APPROVED, PR into main opened 2026-10-15 (branch `feature/edexcel-b-notes`)
+
+85 Edexcel B (9EB0) topic pages across Themes 1-4 are coming, one unit per
+session, from the project pack in `05-website/drafts/edexcel-b-notes/`. This
+first session did the plumbing and no content. DECISIONS.md D66 has the reasons.
+
+- **Edexcel B is a notes-only board** (`"notesOnly": true` in `boards.json`):
+  notes and nothing else. `board_data.load()`/`groups()` leave it out, so the
+  flashcards, glossary, taxonomy and practice-question generators never see
+  it; the notes family reads `load_notes()`. Its topic pages' tail has the
+  Edexcel B past-papers panel only, and it needs no `questions-data/` record.
+- **Themes open one at a time, in publishing order** (1, 4, 2, 3), each
+  finished and pushed before the next starts. Theme 1's hub is built; the
+  other three are written and wait in `notes-data/hubs/drafts/`, which
+  nothing builds. `new_topic.py` refuses an unopened theme and prints the
+  three steps that open it.
+- **`new_topic.py edexcel-b …`** scaffolds a page: `--slug` for the agreed
+  shorter slugs, empty unit panels, the first topic in an empty directory,
+  and the hub's stats line now bumped too (for every board).
+- **The menu** has Edexcel B → Theme 1, and the old "Edexcel" group heading
+  reads "Edexcel A" (Revision Notes and Practice Questions, desktop and
+  mobile). 192 `Text-Change:` trailers.
+- **Units 1.1 and 1.2 are written (2026-09-27)**: 1.1.1-1.2.5, eight
+  pages, awaiting Eliot's review (`05-website/drafts/edexcel-b-notes/review/`,
+  `unit-1-1.md` and `unit-1-2.md`). The temporary one-page-spine
+  declarations are all gone: `MALFORMED_NOTES_PAGES` is empty again and
+  `EXPECTED_NOTES_SPINES` is back to 1.
+- **Theme 1 is complete and approved (2026-10-15)**: all 23 pages,
+  units 1.1-1.6, each reviewed by Eliot (`05-website/drafts/edexcel-b-notes/
+  review/unit-1-1.md` to `unit-1-6.md`). Two revision passes followed:
+  conciseness and point &rarr; chain of analysis &rarr; evaluation for
+  impact topics, then simpler examples and a maths formatting fix on
+  1.6.1-1.6.3 (log: `review/theme-1-revision-pass.md`). The two new
+  diagrams, `market-map` (1.3.6) and `break-even-chart` (1.6.2), are
+  placed; no `DIAGRAM PENDING` comment remains.
+- **Publish dates**: `datePublished` and `dateModified` on all 23 topic
+  records and the Theme 1 hub were set to 2026-10-15, the publish day, as
+  Eliot asked. Earlier dates were writing dates for pages that were never
+  live.
+- `/edexcel-b-unit` now writes to the Theme 1 house style (`d141bf07`).
+
+**Hub wording approved by Eliot on 2026-09-27**: every line of
+`05-website/drafts/edexcel-b-notes/setup-approval-list.md`, all four hubs,
+including the closing box keeping its em dash as reused Edexcel A copy.
+Pages are written one unit per session with `/edexcel-b-unit X.Y`
+(`.claude/commands/edexcel-b-unit.md`).
+
+**Pre-launch jobs, all done 2026-10-15:** every page written and approved;
+the Edexcel B section on `revision-notes/index.html` (`76bbe145`, wording
+approved by Eliot; the D50-frozen title, H1, meta and canonical are
+byte-identical, and "Edexcel Economics" became "Edexcel A Economics" to
+match the menu); B topics in site search (`e25b9c84`: notes-only rows come
+from the hub, and a `quiz` flag on each `dirs` row stops practice links);
+origin/main merged in (PR #40's corrections). **When the next theme
+opens:** add its card to the index (Themes 1-2 Year 1, 3-4 Year 2) and
+update the topics line (189 today); search picks it up automatically.
+**After launch:** twin links
+(`notes_twins.board_of_dir` treats any `edexcel*` directory as Edexcel A and
+needs fixing first) and a B glossary, both deferred on purpose.
+
+### Calendly retired — self-booking replaced by enquiry-first (2026-09-25) — LIVE (merged 2026-09-25, `7aec6877`, PR #39)
 
 Eliot is close to full for 2026-27 with only a few weekly slots left, and
 prospects kept self-booking intro calls he then had to cancel. The flow is now
@@ -246,7 +307,7 @@ Deliberately untouched: the ~170 revision-notes pages whose tail reads "in a
 free 15-minute intro call" (no Calendly link, still true) and
 `scripts/notes_extras.py` that writes it.
 
-### Form spam hardening — Turnstile on both Formspree forms (2026-09-15) — IN REVIEW (branch `feature/form-spam-hardening`)
+### Form spam hardening — Turnstile on both Formspree forms (2026-09-15) — LIVE (merged 2026-09-15, `a7a303bc`, PR #37)
 
 An automated scanner found both forms from ~13 September and began fuzzing
 them with SQL-injection probes — one poisoned parameter per request, every

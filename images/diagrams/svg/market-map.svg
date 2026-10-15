@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Market map</title>
+  <desc id="d">A market map with price running from low to high across the page and quality from low to high up the page, the two axes crossing in the middle. Six brands, A to F, are plotted as dots, mostly along a line from low price and low quality to high price and high quality. An empty space at below-average price and above-average quality is circled and labelled as a gap in the market.</desc>
+  <!-- geometry
+       schematic market map: no axis geometry to declare.
+       Axes cross at (400,300); price runs left to right, quality bottom to top.
+       Brands (dot centres): A 200,460  B 270,390  C 480,360  D 540,225  E 620,110  F 470,150
+       Gap: circle r=60 at 285,180, inside the low-price/high-quality quadrant,
+       clear of both axes and every brand.
+  -->
+  <!-- axes -->
+  <line x1="150" y1="300" x2="650" y2="300" stroke="#333333" stroke-width="2.5"/>
+  <line x1="400" y1="70" x2="400" y2="530" stroke="#333333" stroke-width="2.5"/>
+  <text x="140" y="308" font-size="24" fill="#333333" text-anchor="end">Low price</text>
+  <text x="660" y="308" font-size="24" fill="#333333">High price</text>
+  <text x="400" y="55" font-size="24" fill="#333333" text-anchor="middle">High quality</text>
+  <text x="400" y="560" font-size="24" fill="#333333" text-anchor="middle">Low quality</text>
+  <!-- gap in the market -->
+  <circle cx="285" cy="180" r="60" fill="#d52349" fill-opacity="0.15" stroke="#d52349" stroke-width="2.5"/>
+  <text x="285" y="272" font-size="24" fill="#d52349" text-anchor="middle">Gap in the market</text>
+  <!-- brands -->
+  <circle cx="200" cy="460" r="9" fill="#1d70b8"/>
+  <circle cx="270" cy="390" r="9" fill="#1d70b8"/>
+  <circle cx="480" cy="360" r="9" fill="#1d70b8"/>
+  <circle cx="540" cy="225" r="9" fill="#1d70b8"/>
+  <circle cx="620" cy="110" r="9" fill="#1d70b8"/>
+  <circle cx="470" cy="150" r="9" fill="#1d70b8"/>
+  <text x="214" y="468" font-size="24" fill="#333333">Brand A</text>
+  <text x="284" y="398" font-size="24" fill="#333333">Brand B</text>
+  <text x="494" y="368" font-size="24" fill="#333333">Brand C</text>
+  <text x="554" y="233" font-size="24" fill="#333333">Brand D</text>
+  <text x="634" y="118" font-size="24" fill="#333333">Brand E</text>
+  <text x="484" y="158" font-size="24" fill="#333333">Brand F</text>
+</svg>

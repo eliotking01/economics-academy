@@ -324,6 +324,10 @@ def build() -> dict[str, str]:
     """Every page this generator owns, path -> rendered bytes."""
     pages: dict[str, str] = {}
     for meta in sorted(DATA.rglob("*.json")):
+        # notes-data/hubs/drafts/ holds the hubs of themes not opened yet
+        # (Edexcel B, D66). Written and awaiting approval, never built.
+        if "drafts" in meta.relative_to(DATA).parts:
+            continue
         rec = json.loads(meta.read_text(encoding="utf-8"))
         slice_html = meta.with_suffix(".html").read_text(encoding="utf-8")
         key = topic_key(meta)

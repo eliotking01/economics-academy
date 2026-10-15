@@ -69,14 +69,10 @@ ORG = f"{SITE}/#organization"
 PERSON = f"{SITE}{notes_extras.AUTHOR_URL}"
 ABOUT = f"{SITE}/about.html"
 
-BOARD_OF_DIR = {
-    "edexcel-theme-1": ("Edexcel", "Theme 1"),
-    "edexcel-theme-2": ("Edexcel", "Theme 2"),
-    "edexcel-theme-3": ("Edexcel", "Theme 3"),
-    "edexcel-theme-4": ("Edexcel", "Theme 4"),
-    "aqa-a2-micro": ("AQA", "Microeconomics"),
-    "aqa-a2-macro": ("AQA", "Macroeconomics"),
-}
+# The same table the page's visible sub-label is built from, so the schema
+# and the page cannot name a different board or module. Was a copy of it
+# until Edexcel B (D66) would have made it a third place to add a row.
+BOARD_OF_DIR = notes_extras.BOARD_OF_DIR
 
 H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.I | re.S)
 SPEC_RE = re.compile(r"Specification Coverage:\s*</strong>\s*"
@@ -102,6 +98,12 @@ HUB_TITLES = {
     "edexcel-theme-4": "Edexcel Theme 4 Revision Notes | A Global Perspective",
     "aqa-a2-micro": "AQA A-Level Microeconomics Revision Notes",
     "aqa-a2-macro": "AQA A-Level Macroeconomics Revision Notes",
+    # Edexcel B (D66). On Eliot's approval list with the hub wording; all
+    # within 65. Theme 2 drops "The" from its theme name to fit.
+    "edexcel-b-theme-1": "Edexcel B Theme 1 Revision Notes | Markets, Consumers & Firms",
+    "edexcel-b-theme-2": "Edexcel B Theme 2 Revision Notes | Wider Economic Environment",
+    "edexcel-b-theme-3": "Edexcel B Theme 3 Revision Notes | The Global Economy",
+    "edexcel-b-theme-4": "Edexcel B Theme 4 Revision Notes | Making Markets Work",
     "macro-application": "Macroeconomic Application | A-Level Economics Revision Notes",
 }
 
@@ -136,6 +138,22 @@ HUB_DESCRIPTIONS = {
         "Macroeconomics revision notes for AQA A-Level Economics: "
         "macroeconomic performance, AD and AS, financial markets, policy and "
         "the international economy.",
+    "edexcel-b-theme-1":
+        "Theme 1 revision notes for Edexcel B A-Level Economics: scarcity, "
+        "enterprise, markets, credit, market failure, and revenue, costs and "
+        "cash flow. Free.",
+    "edexcel-b-theme-2":
+        "Theme 2 revision notes for Edexcel B A-Level Economics: business "
+        "growth, elasticity, productivity, globalisation, the economic cycle "
+        "and macro policy. Free.",
+    "edexcel-b-theme-3":
+        "Theme 3 revision notes for Edexcel B A-Level Economics: "
+        "globalisation, trading blocs, multinationals, global labour markets, "
+        "poverty and inequality. Free.",
+    "edexcel-b-theme-4":
+        "Theme 4 revision notes for Edexcel B A-Level Economics: market "
+        "power, regulation, market failure, macroeconomic policy and the "
+        "financial sector. Free.",
     "macro-application":
         "Real-world UK and South Africa macroeconomic data for A-Level "
         "Economics. Application points on growth, inflation, unemployment, "
@@ -232,7 +250,7 @@ def enrich(lr: dict, *, name: str, board: str, module: str, code: str,
     # one inside an educationalAlignment would assert it as a specification
     # reference, which is the one thing it is not.
     target = (f"{board} A-Level Economics {module}, unit {code}"
-              if board == "Edexcel" else
+              if board in nt.REAL_CODES else
               f"{board} A-Level Economics {module}")
     lr["educationalAlignment"] = {
         "@type": "AlignmentObject",
@@ -301,8 +319,10 @@ def rewrite_hub(meta: pathlib.Path) -> dict:
                                 git_first(rec["path"], True)) if x)
     modified = git_last(str(slice_path.relative_to(ROOT))) or published
     board, module = ({"aqa-a2-micro": ("AQA", "Microeconomics"),
-                      "aqa-a2-macro": ("AQA", "Macroeconomics")}
-                     .get(key, ("Edexcel", key.replace("edexcel-theme-", "Theme "))))
+                      "aqa-a2-macro": ("AQA", "Macroeconomics")}.get(key)
+                     or (("Edexcel B", key.replace("edexcel-b-theme-", "Theme "))
+                         if key.startswith("edexcel-b-theme-") else
+                         ("Edexcel", key.replace("edexcel-theme-", "Theme "))))
     for block in head.get("jsonldBeforeIcons", []):
         if block.get("@type") == "LearningResource":
             block["datePublished"] = published
@@ -327,6 +347,8 @@ def main() -> int:
 
     changed = 0
     for meta in sorted(DATA.rglob("*.json")):
+        if "drafts" in meta.relative_to(DATA).parts:   # unopened hubs, D66
+            continue
         if meta.parent.name == "hubs":
             if meta.stem not in HUB_TITLES:
                 continue

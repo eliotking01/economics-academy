@@ -1,0 +1,123 @@
+{
+  "path": "revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+  "head": {
+    "title": "Role of an Entrepreneur – Edexcel B A-Level Economics Notes",
+    "description": "Role of an Entrepreneur for Edexcel B A-Level Economics (1.2.1). Covers creative destruction, running and growing a business, and how firms add value.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+      "title": "Role of an Entrepreneur – Edexcel B A-Level Economics Notes",
+      "description": "Role of an Entrepreneur for Edexcel B A-Level Economics (1.2.1). Covers creative destruction, running and growing a business, and how firms add value.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Role of an Entrepreneur – Edexcel B A-Level Economics Notes",
+      "description": "Role of an Entrepreneur for Edexcel B A-Level Economics (1.2.1). Covers creative destruction, running and growing a business, and how firms add value.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-topic.css"
+    ],
+    "extraPreconnects": [],
+    "mathjaxConfig": null,
+    "headStyle": null,
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Role of an Entrepreneur",
+        "description": "Free Edexcel B A-Level Economics revision notes on the role of an entrepreneur - creative destruction, the decisions to operate, expand and develop a business, and adding value, for Theme 1.2.1.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 1: Markets, Consumers and Firms",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-15",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Role of an Entrepreneur"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 1, unit 1.2.1"
+        },
+        "timeRequired": "PT4M"
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 1: Markets, Consumers and Firms",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "1.2.1 Role of an Entrepreneur",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-1/1-2-1-role-of-an-entrepreneur.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

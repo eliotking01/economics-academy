@@ -37,9 +37,12 @@ python3 scripts/build_sitemap.py --check
 python3 scripts/check_glossary_capitalisation.py --check
 node scripts/test_question_search.js
 node scripts/test_glossary_filter.js
+node scripts/test_site_search.js
 python3 scripts/verify_text_integrity.py HEAD~1
 python3 scripts/verify_markup_integrity.py HEAD~1 --strict
 python3 scripts/verify_generated.py
+python3 scripts/verify_notes_sequence.py
+python3 scripts/verify_contrast.py
 python3 -c "import sys;sys.path.insert(0,'docs/audit/scripts');import lib"
 ```
 

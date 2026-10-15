@@ -129,7 +129,9 @@ pages = site_layout.pages
 EXPECTED_SHAPES = {
     "root":          (9, 9, 2, 9),
     "notes-topic":   (2, 1, 1, 1),
-    "notes-hub":     (2, 2, 1, 2),
+    # notes-hub heads 2 -> 3, 2026-09-26: the Edexcel B hubs carry twitter:
+    # title/description, which the older hubs never gained (HEAD_EXEMPT).
+    "notes-hub":     (3, 2, 1, 2),
     "notes-other":   (2, 3, 2, 2),
     "past-papers":   (2, 2, 1, 2),
     "mcq-topic":     (1, 1, 1, 1),
@@ -161,11 +163,16 @@ def expected_page_counts() -> dict[str, int]:
     and the data directories. Adding a topic is a boards.json bump and new
     data, and this table moves with it - no literal here to chase.
     """
+    # Notes pages come from every board with notes; practice-question pages,
+    # decks and glossaries only from the full boards (a notes-only board -
+    # Edexcel B - has none of them). board_data's docstring has the split.
+    notes_topics = sum(b["expectedTopics"]
+                       for b in board_data.load_notes().values())
     boards = board_data.load()
     topics = sum(b["expectedTopics"] for b in boards.values())
     groups = sum(len(b["groups"]) for b in boards.values())
     out = {
-        "notes-topic": topics,
+        "notes-topic": notes_topics,
         "mcq-topic": topics,
         # one hub per group plus macro-application, which is a content page
         # that classifies as a hub - so count the hub RECORDS, not the groups
@@ -488,6 +495,10 @@ MATHJAX_ORIGIN = "https://cdn.jsdelivr.net"
 # addition is noise that trains people to skip the output. The counts are
 # still printed. What check 6 actually protects - no notes page has a shape
 # of its own - is the singleton assertion below, which is untouched.
+# 1 -> 2 on 2026-09-26, TEMPORARILY, for Edexcel B's placeholder 1.1.1 (D66).
+# 1.1.1's entry went on 2026-09-27 when 1.1.2 gave it siblings, and 1.1.2
+# took its place the same day. Back to 1 on 2026-09-27 when unit 1.2 was
+# scaffolded and gave 1.1.2 a related topic.
 EXPECTED_NOTES_SPINES = 1
 
 # PH06-031, CLOSED 2026-08-14 by Wave 5.4, approved per page by Eliot - D18 had

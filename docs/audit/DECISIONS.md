@@ -2337,3 +2337,39 @@ decided with it:
   "How do I get started with tutoring?" because the two answered the same
   thing once booking was gone. That fragment now lands at the top of
   `faq.html`. Accepted: it is a fragment, not a URL, so nothing 404s.
+
+### D66 — Edexcel B becomes a notes-only board; its themes open one at a time
+
+**2026-09-26, Eliot, in the branch `feature/edexcel-b-notes`.** Each point
+below was put to Eliot as options with a recommendation and approved in the
+setup session.
+
+- **Notes only.** `boards.json` marks Edexcel B `"notesOnly": true`. It has
+  no practice questions, flashcards, glossary, past-paper question bank or
+  taxonomy, and `board_data.load()`/`groups()` leave it out so no generator
+  for those families can mint a page for it. Stub `questions-data/` records
+  were rejected: `validate()` refuses fewer than four questions and they
+  would have published 85 empty quiz pages. B topic pages carry the Edexcel B
+  past-papers panel and no quiz or flashcard links. If B ever gets a
+  question bank, the flag is what changes.
+- **Addresses** are `/revision-notes/edexcel-b-theme-N/<slug>.html` with the
+  project pack's slugs, 1.6.2 as `1-6-2-break-even-analysis`. Permanent once
+  published.
+- **Themes open one at a time**, in publishing order (1, 4, 2, 3), and each
+  is finished and pushed before the next opens. An unopened theme's hub
+  waits in `notes-data/hubs/drafts/`. The alternative, a "not live yet" flag
+  every consumer honours, was declined as ten places to forget it.
+- **Menu:** Edexcel B joins the Revision Notes menu, and "Edexcel" becomes
+  "Edexcel A" there and under Practice Questions, which adds specificity
+  (DO-NOT-BREAK, "Labels and layout").
+- **Deferred:** the glossary (B is left out for launch, automatically,
+  because the glossary reads `taxonomy.json`); twin links (after launch);
+  an Edexcel B section on `revision-notes/index.html` (a separate reviewed
+  change before Theme 1 goes live).
+- **Hub names** follow Edexcel A's pattern:
+  `Edexcel B Theme N: <theme name>`, Title Case, with the spec's own unit
+  titles. **The hub wording was approved by Eliot on 2026-09-27**: every
+  line of `05-website/drafts/edexcel-b-notes/setup-approval-list.md`, for
+  all four hubs (Themes 2-4 still drafts), including the hubs' closing box
+  keeping its em dash as reused Edexcel A copy.
+

@@ -62,13 +62,16 @@ function titles(result, group) {
 
 // ---------------------------------------------------------------- schema
 
-// One row per topic for notes and practice, one per gated topic for the
-// bank, one per deck, one per glossary record, one per page.
+// One row per topic for notes, one per topic on a board with a quiz for
+// practice, one per gated topic for the bank, one per deck, one per
+// glossary record, one per page.
 const ppqCount = data.topics.filter((t) => t[6]).length;
+const quizCount = data.topics.filter((t) => data.dirs[t[0]][4]).length;
 check(
   "row expansion matches the payload",
   rows.length ===
-    data.topics.length * 2 +
+    data.topics.length +
+      quizCount +
       ppqCount +
       data.decks.length +
       data.glossary.length +
@@ -84,6 +87,15 @@ check(
   rows
     .filter((r) => r.group === "glossary")
     .every((r) => r.def && r.links.length >= 1),
+);
+
+check(
+  "a notes-only board (Edexcel B) gets no practice-question rows",
+  !rows.some(
+    (r) =>
+      r.group === "practice" &&
+      r.url.indexOf("/practice-questions/edexcel-b-") === 0,
+  ),
 );
 
 // ------------------------------------------------------------- matching
@@ -156,6 +168,14 @@ check(
 check(
   "escapeHtml escapes quotes and angles",
   M.escapeHtml('a<b>"c"') === "a&lt;b&gt;&quot;c&quot;",
+);
+
+res = M.search(rows, "break-even");
+check(
+  "break-even reaches the Edexcel B notes page",
+  (res.groups.notes || []).some(
+    (x) => x.row.url.indexOf("/revision-notes/edexcel-b-theme-1/") === 0,
+  ),
 );
 
 // ---------------------------------------------------------------- done

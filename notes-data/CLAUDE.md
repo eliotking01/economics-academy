@@ -7,7 +7,11 @@ Excluded from publishing.
   content, from `<main>` inwards. Not a template, not markdown: the exact bytes
   the page will carry.
 - `topics/<board-dir>/<slug>.json` — its lifted metadata (`path`, `head`, `body`).
-- `hubs/` — the same pair for the seven hub pages.
+- `hubs/` — the same pair for the hub pages.
+- `hubs/drafts/` — hubs of Edexcel B themes not opened yet (D66). Written
+  and awaiting approval, **never built**: `build_notes_pages.py` skips the
+  folder. A theme opens by moving its pair up into `hubs/`
+  (`new_topic.py` prints the steps).
 
 **The chrome on a topic page is NOT in its slice.** The previous/next topic
 row at each end of `.notes-container` is spliced in by `build_notes_pages.py`
