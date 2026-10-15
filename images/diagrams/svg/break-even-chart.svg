@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Break-even chart</title>
+  <desc id="d">A break-even chart for Rosa's candles, with output on the horizontal axis and costs and revenue in pounds on the vertical axis. Fixed costs FC are a horizontal line at £2,000. Total costs TC start at £2,000 and rise with output. Total revenue TR starts at zero and rises more steeply, crossing TC at the break-even point of 250 candles and £3,000. The area between the lines is a loss to the left of break-even and a profit to the right. A bracket from 250 to the actual output of 500 candles shows the margin of safety.</desc>
+  <!-- geometry
+       Scale: x = 100 + 0.9 * output (units); y = 520 - 0.06 * £.
+       Rosa (1.6.2): FC £2,000, price £12, variable cost £4, contribution £8.
+         FC: £2,000 for all output                -> y = 400
+         TC: 2000 + 4q -> (0, 2000)..(600, 4400)  -> (100,400)..(640,256)
+         TR: 12q       -> (0, 0)..(600, 7200)     -> (100,520)..(640,88)
+       BEP: 2000 / 8 = 250 units, TR = TC = £3,000 -> (325, 340)
+       Actual output 500: TR £6,000 -> (550,160); TC £4,000 -> (550,280)
+       intersections: 325,340 100,400
+       on-curve: 550,160 550,280 640,88 640,256
+  -->
+  <defs>
+    <marker id="tick" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <!-- shading: loss left of BEP (TC above TR), profit right of it (TR above TC) -->
+  <path d="M100 400 L325 340 L100 520 Z" fill="#767676" fill-opacity="0.25"/>
+  <path d="M325 340 L640 88 L640 256 Z" fill="#1d70b8" fill-opacity="0.15"/>
+  <!-- guides: BEP to both axes, actual output up to TR -->
+  <line x1="100" y1="340" x2="325" y2="340" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="325" y1="340" x2="325" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="550" y1="160" x2="550" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Costs and revenue (£)</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Output</text>
+  <!-- curves: costs teal, revenue blue -->
+  <line x1="100" y1="400" x2="640" y2="400" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="400" x2="640" y2="256" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="520" x2="640" y2="88" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- margin of safety: 250 to 500 units, between the two vertical guides -->
+  <line x1="327" y1="480" x2="548" y2="480" stroke="#333333" stroke-width="2" marker-start="url(#tick)" marker-end="url(#tick)"/>
+  <text x="437.5" y="465" font-size="24" fill="#333333" text-anchor="middle">Margin of safety</text>
+  <!-- labels -->
+  <text x="650" y="96" font-size="26" font-weight="700" fill="#1d70b8">TR</text>
+  <text x="650" y="264" font-size="26" font-weight="700" fill="#0f7b6c">TC</text>
+  <text x="650" y="408" font-size="26" font-weight="700" fill="#0f7b6c">FC</text>
+  <text x="315" y="318" font-size="24" fill="#333333" text-anchor="end">Break-even point</text>
+  <text x="165" y="432" font-size="24" fill="#333333" text-anchor="middle">Loss</text>
+  <text x="607" y="200" font-size="24" fill="#333333" text-anchor="middle">Profit</text>
+  <text x="92" y="348" font-size="24" fill="#333333" text-anchor="end">£3,000</text>
+  <text x="92" y="408" font-size="24" fill="#333333" text-anchor="end">£2,000</text>
+  <text x="325" y="552" font-size="24" fill="#333333" text-anchor="middle">250</text>
+  <text x="550" y="552" font-size="24" fill="#333333" text-anchor="middle">500</text>
+</svg>
