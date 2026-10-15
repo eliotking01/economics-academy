@@ -233,7 +233,11 @@ Pages are written one unit per session with `/edexcel-b-unit X.Y`
 
 **Before Theme 1 can publish:** all 23 pages written and approved;
 an Edexcel B section on `revision-notes/index.html` (a separate reviewed
-change). *B topics in site search: done 2026-10-15 - notes-only rows come
+change). *Index section: done 2026-10-15, wording approved by Eliot; the
+D50-frozen title, H1, meta and canonical are byte-identical, and "Edexcel
+Economics" became "Edexcel A Economics" to match the menu. Add a card per
+theme as each opens (Themes 1-2 Year 1, 3-4 Year 2) and update the 189
+topics line. B topics in site search: done 2026-10-15 - notes-only rows come
 from the hub, and a `quiz` flag on each `dirs` row stops practice links.* **After launch:** twin links
 (`notes_twins.board_of_dir` treats any `edexcel*` directory as Edexcel A and
 needs fixing first) and a B glossary, both deferred on purpose.
