@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Edexcel B notes — setup: notes-only board, hubs, 1.1.1 placeholder | in progress | — | — |
+| Edexcel B notes — Theme 1: 23 pages, index section, site search | approved, PR open | — | — |
 | Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
@@ -193,7 +193,7 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### Edexcel B revision notes — setup (2026-09-26) — IN PROGRESS (branch `feature/edexcel-b-notes`, not pushed)
+### Edexcel B revision notes — Theme 1 (2026-09-26 to 2026-10-15) — COMPLETE AND APPROVED, PR into main opened 2026-10-15 (branch `feature/edexcel-b-notes`)
 
 85 Edexcel B (9EB0) topic pages across Themes 1-4 are coming, one unit per
 session, from the project pack in `05-website/drafts/edexcel-b-notes/`. This
@@ -220,10 +220,19 @@ first session did the plumbing and no content. DECISIONS.md D66 has the reasons.
   `unit-1-1.md` and `unit-1-2.md`). The temporary one-page-spine
   declarations are all gone: `MALFORMED_NOTES_PAGES` is empty again and
   `EXPECTED_NOTES_SPINES` is back to 1.
-- **Unit 1.3 is written (2026-10-07)**: 1.3.1-1.3.6, six pages, awaiting
-  Eliot's review (`review/unit-1-3.md`). 1.3.6 carries a
-  `<!-- DIAGRAM PENDING: market-map -->` comment until that diagram is
-  drafted and approved; Theme 1 cannot publish with it still there.
+- **Theme 1 is complete and approved (2026-10-15)**: all 23 pages,
+  units 1.1-1.6, each reviewed by Eliot (`05-website/drafts/edexcel-b-notes/
+  review/unit-1-1.md` to `unit-1-6.md`). Two revision passes followed:
+  conciseness and point &rarr; chain of analysis &rarr; evaluation for
+  impact topics, then simpler examples and a maths formatting fix on
+  1.6.1-1.6.3 (log: `review/theme-1-revision-pass.md`). The two new
+  diagrams, `market-map` (1.3.6) and `break-even-chart` (1.6.2), are
+  placed; no `DIAGRAM PENDING` comment remains.
+- **Publish dates**: `datePublished` and `dateModified` on all 23 topic
+  records and the Theme 1 hub were set to 2026-10-15, the publish day, as
+  Eliot asked. Earlier dates were writing dates for pages that were never
+  live.
+- `/edexcel-b-unit` now writes to the Theme 1 house style (`d141bf07`).
 
 **Hub wording approved by Eliot on 2026-09-27**: every line of
 `05-website/drafts/edexcel-b-notes/setup-approval-list.md`, all four hubs,
@@ -231,14 +240,16 @@ including the closing box keeping its em dash as reused Edexcel A copy.
 Pages are written one unit per session with `/edexcel-b-unit X.Y`
 (`.claude/commands/edexcel-b-unit.md`).
 
-**Before Theme 1 can publish:** all 23 pages written and approved;
-an Edexcel B section on `revision-notes/index.html` (a separate reviewed
-change). *Index section: done 2026-10-15, wording approved by Eliot; the
-D50-frozen title, H1, meta and canonical are byte-identical, and "Edexcel
-Economics" became "Edexcel A Economics" to match the menu. Add a card per
-theme as each opens (Themes 1-2 Year 1, 3-4 Year 2) and update the 189
-topics line. B topics in site search: done 2026-10-15 - notes-only rows come
-from the hub, and a `quiz` flag on each `dirs` row stops practice links.* **After launch:** twin links
+**Pre-launch jobs, all done 2026-10-15:** every page written and approved;
+the Edexcel B section on `revision-notes/index.html` (`76bbe145`, wording
+approved by Eliot; the D50-frozen title, H1, meta and canonical are
+byte-identical, and "Edexcel Economics" became "Edexcel A Economics" to
+match the menu); B topics in site search (`e25b9c84`: notes-only rows come
+from the hub, and a `quiz` flag on each `dirs` row stops practice links);
+origin/main merged in (PR #40's corrections). **When the next theme
+opens:** add its card to the index (Themes 1-2 Year 1, 3-4 Year 2) and
+update the topics line (189 today); search picks it up automatically.
+**After launch:** twin links
 (`notes_twins.board_of_dir` treats any `edexcel*` directory as Edexcel A and
 needs fixing first) and a B glossary, both deferred on purpose.
 
