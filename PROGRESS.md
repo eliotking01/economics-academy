@@ -233,8 +233,8 @@ Pages are written one unit per session with `/edexcel-b-unit X.Y`
 
 **Before Theme 1 can publish:** all 23 pages written and approved;
 an Edexcel B section on `revision-notes/index.html` (a separate reviewed
-change); B topics added to site search (`build_search_index.py` builds its
-rows from quiz records, which B has none of). **After launch:** twin links
+change). *B topics in site search: done 2026-10-15 - notes-only rows come
+from the hub, and a `quiz` flag on each `dirs` row stops practice links.* **After launch:** twin links
 (`notes_twins.board_of_dir` treats any `edexcel*` directory as Edexcel A and
 needs fixing first) and a B glossary, both deferred on purpose.
 

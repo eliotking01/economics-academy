@@ -10,17 +10,23 @@ GENERATED - never hand-edit it; edit this script or the sources and re-run.
 
 WHAT IS IN IT, AND WHERE EACH PIECE COMES FROM
 ----------------------------------------------
-    topics     the 166 topics. Title, board, unit and spec from the topic's
+    topics     every topic on every open notes board. For a board with a
+               question bank, title, unit and spec come from the topic's
                questions-data record (the same record notes_extras builds the
-               tail from - a topic page cannot build without it); the extra
-               match text is the page's own <h2> headings, read from the
-               slice in notes-data/topics/. One record drives up to three
-               result rows client-side: the notes page, the practice-question
-               page, and - where the topic clears the past-paper bank's
-               volume GATE, the same rule the tail applies - its
-               question-bank page. Individual past-paper exam questions are
-               deliberately NOT indexed: the bank has its own purpose-built
-               finder (Eliot's call).
+               tail from - a topic page cannot build without it). A
+               NOTES-ONLY board (Edexcel B, D66) has no such records, so its
+               rows come from its hub instead: the spec code and order from
+               the hub link (notes_sequence.hub_topics, the same source as the
+               page's related-topics block), the title from the page's own
+               <h1>. Either way the extra match text is the page's own <h2>
+               headings, read from the slice in notes-data/topics/. One record
+               drives up to three result rows client-side: the notes page,
+               the practice-question page (only where the board has a quiz -
+               the dirs row says so), and - where the topic clears the
+               past-paper bank's volume GATE, the same rule the tail applies -
+               its question-bank page. Individual past-paper exam questions
+               are deliberately NOT indexed: the bank has its own
+               purpose-built finder (Eliot's call).
     glossary   every term and formula in glossary-data/terms.json. The
                definition text is build_glossary.ld_description() - the SAME
                words the glossary page shows (curation rewrites and approved
@@ -40,7 +46,9 @@ arrays, and everything derivable is derived client-side by site-search.js
 (URLs from dir + slug, board metas from the dirs table, static group match
 words). The two files state the same schema and must move together:
 
-    dirs      [notesDir, boardName, moduleName, boardSlug] x6
+    dirs      [notesDir, boardName, moduleName, boardSlug, quiz]
+              one per open notes directory; quiz is 1 if the board has
+              practice questions, 0 for a notes-only board
     topics    [di, slug, spec, title, short, headings, ppq]
               di indexes dirs; short is "" when it equals title; ppq is 0/1
     glossary  [title, anchorId, boards, kind, definition]
@@ -78,6 +86,7 @@ import board_data  # noqa: E402
 import build_glossary  # noqa: E402
 import build_past_paper_questions as ppq  # noqa: E402
 import notes_extras  # noqa: E402
+import notes_sequence  # noqa: E402
 
 OUT = ROOT / "search-index.json"
 
@@ -132,6 +141,8 @@ PAGES: dict[str, tuple[str, str]] = {
 }
 
 # The board hub pages join the "pages" group too, titles from their own <h1>s.
+# A notes-only board's hubs are added from its directories in pages_rows(),
+# so opening a new Edexcel B theme needs no edit here.
 BOARD_HUBS = (
     "/revision-notes/edexcel-theme-1/", "/revision-notes/edexcel-theme-2/",
     "/revision-notes/edexcel-theme-3/", "/revision-notes/edexcel-theme-4/",
@@ -188,7 +199,10 @@ def faq_rows() -> list[list]:
 def pages_rows() -> list[list]:
     out = [[h1_of(url), url, meta, synonyms]
            for url, (meta, synonyms) in PAGES.items()]
-    for url in BOARD_HUBS:
+    notes_only_hubs = tuple(f"/revision-notes/{d}/"
+                            for d in notes_extras.BOARD_OF_DIR
+                            if board_data.is_notes_only(d))
+    for url in BOARD_HUBS + notes_only_hubs:
         family = ("Practice questions" if url.startswith("/practice-questions/")
                   else "Glossary" if "/glossary/" in url
                   else "Revision notes")
@@ -199,30 +213,61 @@ def pages_rows() -> list[list]:
 # ---------------------------------------------------------------- topics
 
 # One row per notes directory, indexed into by every topic row:
-# [notesDir, boardName, moduleName, boardSlug]. Order = notes_extras's, which
-# is boards.json group order (Edexcel first).
-def dirs_table() -> list[list[str]]:
-    # A notes-only board (Edexcel B, D66) has no questions-data records, so
-    # topic_rows() would give it no rows; its directory is left out too
-    # rather than shipped as an empty entry. Indexing its topics needs rows
-    # from the notes records instead - on the list before Theme 1 goes live.
-    return [[d, board, module, notes_extras.BOARD_SLUG[board]]
-            for d, (board, module) in notes_extras.BOARD_OF_DIR.items()
-            if not board_data.is_notes_only(d)]
+# [notesDir, boardName, moduleName, boardSlug, quiz]. Order = notes_extras's,
+# which is boards.json group order (Edexcel first, notes-only boards last, so
+# adding one never renumbers the others). quiz is 0 for a notes-only board
+# (Edexcel B, D66): the client then builds no practice-question row for its
+# topics, because those pages do not exist.
+def dirs_table() -> list[list]:
+    return [[d, board, module, notes_extras.BOARD_SLUG[board],
+             0 if board_data.is_notes_only(d) else 1]
+            for d, (board, module) in notes_extras.BOARD_OF_DIR.items()]
 
 
-def headings_of(notes_dir: str, slug: str) -> list[str]:
+def slice_text(notes_dir: str, slug: str) -> str:
     path = ROOT / "notes-data" / "topics" / notes_dir / f"{slug}.html"
     if not path.is_file():
         fail(f"no slice at {path.relative_to(ROOT)}")
+    return path.read_text(encoding="utf-8")
+
+
+def headings_of(notes_dir: str, slug: str) -> list[str]:
     return [notes_extras.plain(h)
-            for h in H2_RE.findall(path.read_text(encoding="utf-8"))]
+            for h in H2_RE.findall(slice_text(notes_dir, slug))]
 
 
-def topic_rows(dirs: list[list[str]]) -> list[list]:
+def notes_only_rows(di: int, notes_dir: str) -> list[list]:
+    """Topic rows for a notes-only board, from its hub and its slices.
+
+    The hub label is "1.2.5 The Wider Economic Environment": the code is the
+    spec, the rest is the short title when it differs from the page's <h1>.
+    The past-paper bank is never consulted, for the reason next_steps_block
+    gives: it is keyed on bare slug, and a notes-only slug that matched
+    another board's would borrow its questions.
+    """
+    out = []
+    for slug, label in sorted(notes_sequence.hub_topics(notes_dir)):
+        m = notes_extras.CODE_PREFIX_RE.match(label)
+        if not m:
+            fail(f"{notes_dir}/{slug}: hub label {label!r} has no spec code")
+        h1 = H1_RE.search(slice_text(notes_dir, slug))
+        if not h1:
+            fail(f"{notes_dir}/{slug}: no <h1> in the slice")
+        title = notes_extras.plain(h1.group(1))
+        name = notes_extras.topic_name(label)
+        out.append([di, slug, m.group(0).strip(), title,
+                    name if name != title else "",
+                    " ".join(headings_of(notes_dir, slug)), 0])
+    return out
+
+
+def topic_rows(dirs: list[list]) -> list[list]:
     bank = notes_extras.past_paper_bank()
     out = []
-    for di, (notes_dir, *_rest) in enumerate(dirs):
+    for di, (notes_dir, *_rest, quiz) in enumerate(dirs):
+        if not quiz:
+            out += notes_only_rows(di, notes_dir)
+            continue
         recs = notes_extras.quiz_records(notes_dir)
         for slug in sorted(recs):
             rec = recs[slug]
@@ -231,8 +276,12 @@ def topic_rows(dirs: list[list[str]]) -> list[list]:
             out.append([di, slug, rec["spec"], rec["title"], short,
                         " ".join(headings_of(notes_dir, slug)),
                         1 if has_page else 0])
-    if len(out) != 166:
-        fail(f"expected 166 topic records, found {len(out)}")
+    # Every topic page the hubs link, and nothing else - the count is the
+    # hubs', so a new topic or a newly opened theme cannot be missed.
+    expected = sum(len(notes_sequence.hub_topics(row[0])) for row in dirs)
+    if len(out) != expected:
+        fail(f"expected {expected} topic records (one per hub link), "
+             f"found {len(out)}")
     return out
 
 

@@ -27,8 +27,12 @@ class TestSearchIndex(unittest.TestCase):
 
     def test_shape_and_counts(self):
         idx = self.index
-        self.assertEqual(len(idx["dirs"]), 6)
-        self.assertEqual(len(idx["topics"]), 166)
+        import notes_extras
+        import notes_sequence
+        self.assertEqual(len(idx["dirs"]), len(notes_extras.BOARD_OF_DIR))
+        self.assertEqual(len(idx["topics"]),
+                         sum(len(notes_sequence.hub_topics(d))
+                             for d in notes_extras.BOARD_OF_DIR))
         self.assertEqual(len(idx["decks"]), 6)
         data = json.loads((ROOT / "glossary-data" / "terms.json")
                           .read_text(encoding="utf-8"))
@@ -49,13 +53,38 @@ class TestSearchIndex(unittest.TestCase):
     def test_topic_rows_resolve(self):
         """Every URL the client can build from a topic row is a real page."""
         for di, slug, spec, title, short, headings, ppq in self.index["topics"]:
-            notes_dir, board, module, board_slug = self.index["dirs"][di]
+            notes_dir, board, module, board_slug, quiz = self.index["dirs"][di]
             self.assertTrue(spec and title and headings, msg=slug)
-            for rel in ([f"revision-notes/{notes_dir}/{slug}.html",
-                         f"practice-questions/{notes_dir}/{slug}.html"]
+            for rel in ([f"revision-notes/{notes_dir}/{slug}.html"]
+                        + ([f"practice-questions/{notes_dir}/{slug}.html"]
+                           if quiz else [])
                         + ([f"past-paper-questions/{board_slug}/{slug}/index.html"]
                            if ppq else [])):
                 self.assertTrue((ROOT / rel).is_file(), msg=rel)
+
+    def test_quiz_flag_matches_the_board(self):
+        """A notes-only board (Edexcel B) is flagged quiz 0, so the client
+        builds no practice row that would dangle; every other board is 1."""
+        import board_data
+        for notes_dir, *_rest, quiz in self.index["dirs"]:
+            self.assertEqual(quiz, 0 if board_data.is_notes_only(notes_dir)
+                             else 1, msg=notes_dir)
+
+    def test_notes_only_rows_match_their_pages(self):
+        """A notes-only topic's spec is the code its own page shows, and its
+        title is its own <h1> - nothing minted here."""
+        import re
+        for di, slug, spec, title, short, headings, ppq in self.index["topics"]:
+            notes_dir, *_rest, quiz = self.index["dirs"][di]
+            if quiz:
+                continue
+            self.assertEqual(ppq, 0, msg=slug)
+            self.assertTrue(slug.startswith(spec.replace(".", "-") + "-"),
+                            msg=slug)
+            page = (ROOT / f"revision-notes/{notes_dir}/{slug}.html"
+                    ).read_text(encoding="utf-8")
+            h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S).group(1)
+            self.assertEqual(" ".join(h1.split()), title, msg=slug)
 
     def test_deck_rows_resolve(self):
         for title, url, di in self.index["decks"]:
@@ -94,9 +123,11 @@ class TestSearchIndex(unittest.TestCase):
         import notes_extras
         import build_past_paper_questions as ppq_mod
         bank = notes_extras.past_paper_bank()
+        quiz = {i: d[4] for i, d in enumerate(self.index["dirs"])}
         for row in self.index["topics"]:
             slug, flag = row[1], row[6]
-            expected = 1 if len(bank.get(slug, [])) >= ppq_mod.GATE else 0
+            expected = (1 if quiz[row[0]]
+                        and len(bank.get(slug, [])) >= ppq_mod.GATE else 0)
             self.assertEqual(flag, expected, msg=slug)
 
 

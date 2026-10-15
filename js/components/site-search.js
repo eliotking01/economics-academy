@@ -5,7 +5,7 @@
  * upgrades every .site-search-open control to open the overlay instead. The
  * overlay DOM is built here at first open, so no page carries hidden markup.
  *
- * The index (/search-index.json, ~113 KB raw / ~31 KB gzipped) is fetched
+ * The index (/search-index.json, ~118 KB raw / ~33 KB gzipped) is fetched
  * ONCE, lazily, the first time the overlay opens - never on page load. Its
  * compact schema is documented in scripts/build_search_index.py; the two
  * files must move together.
@@ -137,7 +137,7 @@
 
     for (i = 0; i < data.topics.length; i++) {
       var t = data.topics[i]; // [di, slug, spec, title, short, headings, ppq]
-      var dir = data.dirs[t[0]]; // [notesDir, board, module, boardSlug]
+      var dir = data.dirs[t[0]]; // [notesDir, board, module, boardSlug, quiz]
       var short = t[4] || t[3];
       var boardMeta = dir[1] + dot + dir[2];
 
@@ -147,11 +147,14 @@
         boardMeta + dot + t[2],
         t[4] + " " + t[5] + " revision notes"));
 
-      rows.push(makeRow(
-        "practice", t[2] + " " + short,
-        "/practice-questions/" + dir[0] + "/" + t[1] + ".html",
-        "Practice questions" + dot + boardMeta,
-        t[3] + " quiz mcq multiple choice test"));
+      // A notes-only board (quiz 0, Edexcel B) has no practice pages.
+      if (dir[4]) {
+        rows.push(makeRow(
+          "practice", t[2] + " " + short,
+          "/practice-questions/" + dir[0] + "/" + t[1] + ".html",
+          "Practice questions" + dot + boardMeta,
+          t[3] + " quiz mcq multiple choice test"));
+      }
 
       if (t[6]) {
         rows.push(makeRow(
