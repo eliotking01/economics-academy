@@ -181,11 +181,15 @@ PINNED = {
     "edexcel-b.papersUrl": "/past-papers/edexcel-b/",
     "edexcel-b.notesUrl": "/revision-notes/",
     "edexcel-b.specCodesAreReal": True,
-    "edexcel-b.expectedTopics": 23,
+    "edexcel-b.expectedTopics": 28,
     "edexcel-b.groups.0.notesDir": "edexcel-b-theme-1",
     "edexcel-b.groups.0.label": "Theme 1",
     "edexcel-b.groups.0.names.notesLabel": "Edexcel B Theme 1",
     "edexcel-b.groups.0.names.notesTitle": "Markets, Consumers and Firms",
+    "edexcel-b.groups.1.notesDir": "edexcel-b-theme-4",
+    "edexcel-b.groups.1.label": "Theme 4",
+    "edexcel-b.groups.1.names.notesLabel": "Edexcel B Theme 4",
+    "edexcel-b.groups.1.names.notesTitle": "Making Markets Work",
 }
 
 

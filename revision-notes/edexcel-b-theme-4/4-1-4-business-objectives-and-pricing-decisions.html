@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
+    <script>
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
+    <title>
+      Objectives and Pricing Decisions – Edexcel B A-Level Economics
+    </title>
+    <meta
+      name="description"
+      content="Business Objectives and Pricing Decisions for Edexcel B (4.1.4). Covers AC, AR, MC, MR and profit, the link to contribution, and objectives and price."
+    />
+    <link
+      rel="canonical"
+      href="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Economics Academy" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="og:url"
+      content="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html"
+    />
+    <meta
+      property="og:title"
+      content="Objectives and Pricing Decisions – Edexcel B A-Level Economics"
+    />
+    <meta
+      property="og:description"
+      content="Business Objectives and Pricing Decisions for Edexcel B (4.1.4). Covers AC, AR, MC, MR and profit, the link to contribution, and objectives and price."
+    />
+    <meta
+      property="og:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Economics Academy logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Objectives and Pricing Decisions – Edexcel B A-Level Economics"
+    />
+    <meta
+      name="twitter:description"
+      content="Business Objectives and Pricing Decisions for Edexcel B (4.1.4). Covers AC, AR, MC, MR and profit, the link to contribution, and objectives and price."
+    />
+    <meta
+      name="twitter:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Business Objectives and Pricing Decisions",
+        "description": "Free Edexcel B A-Level Economics revision notes on business objectives and pricing decisions - average and marginal cost and revenue, profit, contribution and how objectives set price, for Theme 4.1.4.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 4: Making Markets Work",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-16",
+        "dateModified": "2026-10-16",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Business Objectives and Pricing Decisions"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 4, unit 4.1.4"
+        },
+        "timeRequired": "PT5M"
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 4: Making Markets Work",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "4.1.4 Business Objectives and Pricing Decisions",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Edexcel B, notes only (D66). One entry per OPEN theme: a
+                     theme joins here when its hub leaves notes-data/hubs/drafts/.
+                     No Practice Questions entry - the board has none. -->
+                <li>
+                  <a href="#" role="button">Edexcel B</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <p class="mnav-sub-label">Edexcel B</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <!-- Main Content -->
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/edexcel-b-theme-4/"
+              >Edexcel B Theme 4: Making Markets Work</a
+            >
+            <span class="separator">›</span>
+            <span>4.1.4 Business Objectives and Pricing Decisions</span>
+          </nav>
+
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html"
+                rel="prev"
+                aria-label="Previous topic: 4.1.3 Oligopoly"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">4.1.3 Oligopoly</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html"
+                rel="next"
+                aria-label="Next topic: 4.1.5 Productive and Allocative Efficiency"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">4.1.5 Productive and Allocative Efficiency</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Business Objectives and Pricing Decisions</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel B Theme 4, unit 4.1.4"
+                  >Edexcel B<span aria-hidden="true"> · </span>Theme 4<span aria-hidden="true"> · </span>4.1.4</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-10-16">16 October 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> Edexcel B unit 4.1.4 -
+              Business Objectives and Pricing Decisions. Students need to
+              calculate average cost, average revenue, profit, marginal cost
+              and marginal revenue, link marginal cost and revenue to
+              contribution, and explain how a firm's objective affects the
+              price it charges.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#average-cost-average-revenue-and-profit">Average Cost, Average Revenue and Profit</a></li>
+                <li><a href="#marginal-cost-and-marginal-revenue">Marginal Cost and Marginal Revenue</a></li>
+                <li><a href="#marginal-cost-marginal-revenue-and-contribution">Marginal Cost, Marginal Revenue and Contribution</a></li>
+                <li><a href="#the-impact-of-objectives-on-pricing-strategies">The Impact of Objectives on Pricing Strategies</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="average-cost-average-revenue-and-profit">Average Cost, Average Revenue and Profit</h2>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Average cost (AC):</span> the cost
+                of producing each unit, found by dividing total cost by output:
+                \[ \text{AC} = \frac{\text{Total cost}}{\text{Quantity}} \]
+              </p>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Average revenue (AR):</span> the
+                revenue from each unit sold, found by dividing total revenue by
+                output:
+                \[ \text{AR} = \frac{\text{Total revenue}}{\text{Quantity}} \]
+              </p>
+              <p>
+                If every unit sells for the same price, AR is simply the price.
+                That is why a firm's demand curve is also its AR curve.
+              </p>
+              <!-- prettier-ignore -->
+              <p>
+                <strong>Profit</strong> is total revenue minus total cost. It
+                can also be found from the averages, as profit per unit times
+                the number sold:
+                \[ \text{Profit} = (\text{AR} - \text{AC}) \times \text{Quantity} \]
+              </p>
+            </section>
+
+            <section>
+              <h2 id="marginal-cost-and-marginal-revenue">Marginal Cost and Marginal Revenue</h2>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Marginal cost (MC):</span> the
+                extra cost of producing one more unit:
+                \[ \text{MC} = \frac{\text{Change in total cost}}{\text{Change in quantity}} \]
+              </p>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Marginal revenue (MR):</span> the
+                extra revenue from selling one more unit:
+                \[ \text{MR} = \frac{\text{Change in total revenue}}{\text{Change in quantity}} \]
+              </p>
+              <p>
+                For most firms, selling more means cutting the price, and the
+                lower price applies to every unit, not just the extra one. So MR
+                is below the price and falls faster than AR.
+              </p>
+              <div class="worked-example">
+                <h3>Worked Example: A Furniture Maker</h3>
+                <p>
+                  A workshop makes oak tables. To sell more each week it has to
+                  lower its price. Its fixed costs are <strong>£400</strong> a
+                  week.
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Tables (Q)</th>
+                        <th>Price = AR</th>
+                        <th>TR</th>
+                        <th>MR</th>
+                        <th>TC</th>
+                        <th>AC</th>
+                        <th>MC</th>
+                        <th>Profit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>£500</td>
+                        <td>£500</td>
+                        <td>£500</td>
+                        <td>£600</td>
+                        <td>£600</td>
+                        <td>£200</td>
+                        <td>−£100</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>£460</td>
+                        <td>£920</td>
+                        <td>£420</td>
+                        <td>£760</td>
+                        <td>£380</td>
+                        <td>£160</td>
+                        <td>£160</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>£420</td>
+                        <td>£1,260</td>
+                        <td>£340</td>
+                        <td>£900</td>
+                        <td>£300</td>
+                        <td>£140</td>
+                        <td>£360</td>
+                      </tr>
+                      <tr>
+                        <td><strong>4</strong></td>
+                        <td><strong>£380</strong></td>
+                        <td>£1,520</td>
+                        <td>£260</td>
+                        <td>£1,060</td>
+                        <td>£265</td>
+                        <td>£160</td>
+                        <td><strong>£460</strong></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>£340</td>
+                        <td>£1,700</td>
+                        <td>£180</td>
+                        <td>£1,260</td>
+                        <td>£252</td>
+                        <td>£200</td>
+                        <td>£440</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>£300</td>
+                        <td>£1,800</td>
+                        <td>£100</td>
+                        <td>£1,560</td>
+                        <td>£260</td>
+                        <td>£300</td>
+                        <td>£240</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  Take the fourth table. TR rises from £1,260 to £1,520, so MR
+                  is £260. TC rises from £900 to £1,060, so MC is £160. Profit
+                  at 4 tables is £1,520 − £1,060 = £460, the same as (£380 −
+                  £265) × 4. That is the most the workshop can make, so its
+                  profit-maximising price is £380.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 id="marginal-cost-marginal-revenue-and-contribution">Marginal Cost, Marginal Revenue and Contribution</h2>
+              <p>
+                In
+                <a
+                  href="/revision-notes/edexcel-b-theme-1/1-6-2-break-even-analysis.html"
+                  >unit 1.6.2</a
+                >, contribution per unit is the selling price minus variable
+                cost per unit. Each unit's contribution goes towards fixed costs
+                and then profit.
+              </p>
+              <p>
+                Marginal analysis is the same idea with a price that changes.
+                Fixed costs don't change when one more unit is made, so MC is
+                all variable cost. MR minus MC is therefore the
+                <strong>contribution of the extra unit</strong>: what it adds to
+                paying off fixed costs, and once they are covered, to profit.
+              </p>
+              <ul>
+                <li>
+                  <strong>MR above MC:</strong> the extra unit makes a positive
+                  contribution &rarr; total contribution rises &rarr; profit
+                  rises, so the firm should produce it. The fourth table adds
+                  £260 − £160 = £100.
+                </li>
+                <li>
+                  <strong>MR below MC:</strong> the extra unit makes a negative
+                  contribution &rarr; total contribution falls &rarr; profit
+                  falls. The fifth table adds £180 − £200 = −£20, which is why
+                  profit drops from £460 to £440.
+                </li>
+              </ul>
+              <p>
+                So total contribution, and profit, is at its highest where
+                <strong>MC = MR</strong>. In unit 1.6.2 the price never
+                changes, so every unit makes the same contribution. Here
+                contribution shrinks with each unit because the price has to
+                fall to sell more.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="the-impact-of-objectives-on-pricing-strategies">The Impact of Objectives on Pricing Strategies</h2>
+              <p>
+                A firm's price depends on what it is trying to achieve. The
+                objectives themselves are in
+                <a
+                  href="/revision-notes/edexcel-b-theme-1/1-1-2-business-objectives.html"
+                  >unit 1.1.2</a
+                >; here is what each means for price and output.
+              </p>
+              <ul>
+                <li>
+                  <strong>Profit maximisation:</strong> produce where MC = MR
+                  &rarr; the highest price and the lowest output of the three
+                  &rarr; the most profit for the owners.
+                </li>
+                <li>
+                  <strong>Revenue maximisation:</strong> keep selling while
+                  each unit still adds revenue, so produce where MR = 0 &rarr; a
+                  lower price and more output &rarr; less profit, but a bigger
+                  business, which may suit managers paid on sales.
+                </li>
+                <li>
+                  <strong>Sales maximisation:</strong> sell as much as possible
+                  without making a loss, so produce where AR = AC &rarr; the
+                  lowest price and highest output &rarr; only normal profit,
+                  but more market share.
+                </li>
+              </ul>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/profit-max.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/profit-max.webp" />
+                <img
+                  src="/images/diagrams/profit-max.png"
+                  alt="Firm diagram with cost and revenue on the vertical axis and quantity on the horizontal axis, showing a downward-sloping D=AR curve, a steeper MR curve, an MC=S curve and a U-shaped AC curve. A dot marks where MC crosses MR, at output Q. Dashed lines from Q go up to price P on the demand curve and to average cost C on the AC curve"
+                  class="diagram-image"
+                  width="2512"
+                  height="1662"
+                  loading="lazy"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 1: Profit maximisation. The firm produces Q, where MC =
+                  MR, and charges price P from the demand curve. Profit per unit
+                  is P minus C
+                </figcaption>
+              </figure>
+              <p>Other objectives lead to other pricing strategies:</p>
+              <ul>
+                <li>
+                  <strong>Satisficing:</strong> aiming for enough profit to keep
+                  the owners content &rarr; managers have room to pursue their
+                  own aims &rarr; price and output usually sit between the profit-
+                  and sales-maximising levels.
+                </li>
+                <li>
+                  <strong>Growth or market share:</strong> a low starting price
+                  wins customers from rivals &rarr; sales and market share rise
+                  &rarr; profit is lower now, in the hope of more later.
+                </li>
+                <li>
+                  <strong>Survival:</strong> in a downturn a firm may cut prices
+                  to keep cash coming in &rarr; as long as price covers variable
+                  cost, each sale still makes a contribution to fixed costs.
+                </li>
+                <li>
+                  <strong>Ethical or social aims:</strong> paying suppliers a
+                  fair price raises costs &rarr; the firm charges more, relying
+                  on customers who value its stance.
+                </li>
+              </ul>
+              <p>Which objective a firm follows, and so its price, depends on:</p>
+              <ul>
+                <li>
+                  <strong>Who runs it:</strong> owners usually want profit, while
+                  managers may prefer growth in sales, which brings them status
+                  and pay.
+                </li>
+                <li>
+                  <strong>Competition:</strong> a firm with close rivals has
+                  little room to price for anything but survival or market
+                  share.
+                </li>
+                <li>
+                  <strong>Its stage:</strong> a new firm may chase sales to get
+                  known, then switch to profit once it is established.
+                </li>
+              </ul>
+              <div class="exam-tip">
+                <p>
+                  <strong>Profit is maximised where MC = MR, not where profit
+                  per unit is highest.</strong> In the worked example, profit
+                  per table (AR − AC) is highest at 3 tables (£120), but total
+                  profit is higher at 4 tables (£460 against £360). The fourth
+                  table lowers profit per unit but still adds £100. Always
+                  compare MR with MC for the next unit.
+                </p>
+              </div>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html">Barriers to Entry</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html">Spectrum of Competition</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/edexcel-b/">Edexcel B past papers</a>
+                  <p class="topic-next__note">Question papers and mark schemes for every Edexcel B A-Level and AS paper, by paper and year.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html"
+                rel="prev"
+                aria-label="Previous topic: 4.1.3 Oligopoly"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">4.1.3 Oligopoly</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html"
+                rel="next"
+                aria-label="Next topic: 4.1.5 Productive and Allocative Efficiency"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">4.1.5 Productive and Allocative Efficiency</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
+  </body>
+</html>

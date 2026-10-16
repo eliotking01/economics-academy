@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| Edexcel B notes — Theme 4: opened, unit 4.1 written | in progress | — | — |
 | Edexcel B notes — Theme 1: 23 pages, index section, site search | approved, PR open | — | — |
 | Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
@@ -192,6 +193,40 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### Edexcel B revision notes — Theme 4 (from 2026-10-16) — IN PROGRESS (branch `feature/edexcel-b-theme-4`)
+
+The second theme in publishing order (1, 4, 2, 3; D66). Opened 2026-10-16
+by `new_topic.py`'s three steps: the hub out of `notes-data/hubs/drafts/`,
+the group in `boards.json` and `EXPECTED_NOTES_DIRS`, `verify_boards.py
+--reseed`, the menu entry (desktop and mobile). Theme 4 also has a Year 2
+card in the Edexcel B section of `revision-notes/index.html`, and a
+`hasPart` entry in that page's JSON-LD.
+
+- **A theme cannot open empty.** `notes_sequence.hub_topics()` stops the
+  build when a hub links to no topic, so the opening changes are committed
+  together with unit 4.1 (`/edexcel-b-unit 4.1`), not on their own. 4.1.1
+  is Spectrum of Competition, `4-1-1-spectrum-of-competition`
+  (`05-website/drafts/edexcel-b-notes/theme-4-coverage.md`).
+- **Opening also needs a row in `scripts/notes_extras.py` `BOARD_OF_DIR`**
+  (the sub-label's board and module); the build fails without it.
+  `new_topic.py` now prints it as part of step 3.
+- **Unit 4.1 is written (2026-10-16)**: 4.1.1-4.1.5, five pages, awaiting
+  Eliot's review (`05-website/drafts/edexcel-b-notes/review/unit-4-1.md`,
+  12 questions). 4.1.4 and 4.1.5 carry proposed title-only display names in
+  `seo/tools/notes_titles.py` (their full names overflow the 65-character
+  ceiling), on the approval list in that sheet. Theme 1's 1.6.4 now links
+  forward to 4.1.1, B's chain running in open-theme order.
+
+**Before Theme 4 publishes:**
+- [ ] The Theme 4 card's topic count on `revision-notes/index.html`
+  (hand-written, "0 topics" today) set to the real total.
+- [ ] `datePublished` and `dateModified` on the Theme 4 hub record
+  (`notes-data/hubs/edexcel-b-theme-4.json`, 2026-09-26 today) and on every
+  Theme 4 topic record set to the publish day, as was done for Theme 1.
+- [ ] The index page's topics line and its intro sentence ("plus Edexcel B
+  Theme 1") updated to match. That is visible wording, so it needs Eliot's
+  approval.
 
 ### Edexcel B revision notes — Theme 1 (2026-09-26 to 2026-10-15) — COMPLETE AND APPROVED, PR into main opened 2026-10-15 (branch `feature/edexcel-b-notes`)
 

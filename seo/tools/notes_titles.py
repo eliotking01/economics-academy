@@ -122,6 +122,11 @@ DISPLAY_NAME = {
     "4-3-3-strategies-influencing-growth-development": "Strategies for Development",
     "4-4-2-market-failure-in-the-financial-sector": "Financial Market Failure",
     "4-5-4-macroeconomic-policies-in-a-global-context": "Global Macroeconomic Policy",
+    # Edexcel B. Proposed 2026-10-16, on Eliot's approval list in
+    # 05-website/drafts/edexcel-b-notes/review/unit-4-1.md. The full names
+    # overflow HARD_MAX by 6 and 1 characters.
+    "4-1-4-business-objectives-and-pricing-decisions": "Objectives and Pricing Decisions",
+    "4-1-5-productive-and-allocative-efficiency": "Productive & Allocative Efficiency",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
