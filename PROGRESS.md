@@ -23,7 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Edexcel B notes — Theme 4: opened, unit 4.1 written | in progress | — | — |
+| Edexcel B notes — Theme 4: opened, units 4.1-4.2 written | in progress | — | — |
 | Edexcel B notes — Theme 1: 23 pages, index section, site search | approved, PR open | — | — |
 | Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
@@ -216,7 +216,12 @@ card in the Edexcel B section of `revision-notes/index.html`, and a
   12 questions). 4.1.4 and 4.1.5 carry proposed title-only display names in
   `seo/tools/notes_titles.py` (their full names overflow the 65-character
   ceiling), on the approval list in that sheet. Theme 1's 1.6.4 now links
-  forward to 4.1.1, B's chain running in open-theme order.
+  forward to 4.1.1, B's chain running in open-theme order. Eliot's answers
+  applied the same day (`931147a8`).
+- **Unit 4.2 is written (2026-10-16)**: 4.2.1-4.2.3, three pages, awaiting
+  review (`review/unit-4-2.md`, 9 questions). 4.2.1 carries a
+  `DIAGRAM PENDING: natural-monopoly` marker (optional diagram). 4.2.3 has a
+  proposed title-only display name in `notes_titles.py`.
 
 **Before Theme 4 publishes:**
 - [ ] The Theme 4 card's topic count on `revision-notes/index.html`

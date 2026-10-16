@@ -127,6 +127,9 @@ DISPLAY_NAME = {
     # overflow HARD_MAX by 6 and 1 characters.
     "4-1-4-business-objectives-and-pricing-decisions": "Objectives and Pricing Decisions",
     "4-1-5-productive-and-allocative-efficiency": "Productive & Allocative Efficiency",
+    # Proposed 2026-10-16 (review/unit-4-2.md), the same "&" form Eliot
+    # approved for 4.1.5; the full name overflows HARD_MAX by 1.
+    "4-2-3-arguments-for-and-against-regulation": "Arguments For & Against Regulation",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
