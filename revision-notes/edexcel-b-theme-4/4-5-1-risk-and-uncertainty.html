@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
+    <script>
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
+    <title>Risks and Uncertainty – Edexcel B A-Level Economics Notes</title>
+    <meta
+      name="description"
+      content="Risks and Uncertainty for Edexcel B A-Level Economics (4.5.1). Covers risk vs uncertainty, economic shocks, forward contracts and business insurance."
+    />
+    <link
+      rel="canonical"
+      href="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-5-1-risk-and-uncertainty.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Economics Academy" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="og:url"
+      content="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-5-1-risk-and-uncertainty.html"
+    />
+    <meta
+      property="og:title"
+      content="Risks and Uncertainty – Edexcel B A-Level Economics Notes"
+    />
+    <meta
+      property="og:description"
+      content="Risks and Uncertainty for Edexcel B A-Level Economics (4.5.1). Covers risk vs uncertainty, economic shocks, forward contracts and business insurance."
+    />
+    <meta
+      property="og:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Economics Academy logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Risks and Uncertainty – Edexcel B A-Level Economics Notes"
+    />
+    <meta
+      name="twitter:description"
+      content="Risks and Uncertainty for Edexcel B A-Level Economics (4.5.1). Covers risk vs uncertainty, economic shocks, forward contracts and business insurance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Risks and Uncertainty",
+        "description": "Free Edexcel B A-Level Economics revision notes on risks and uncertainty - the difference between them, the impact of shocks, exchange rate risk and forward markets, and insurance, for Theme 4.5.1.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-5-1-risk-and-uncertainty.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 4: Making Markets Work",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-16",
+        "dateModified": "2026-10-16",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Risks and Uncertainty"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 4, unit 4.5.1"
+        },
+        "timeRequired": "PT6M"
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 4: Making Markets Work",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "4.5.1 Risks and Uncertainty",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-5-1-risk-and-uncertainty.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Edexcel B, notes only (D66). One entry per OPEN theme: a
+                     theme joins here when its hub leaves notes-data/hubs/drafts/.
+                     No Practice Questions entry - the board has none. -->
+                <li>
+                  <a href="#" role="button">Edexcel B</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <p class="mnav-sub-label">Edexcel B</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <!-- Main Content -->
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/edexcel-b-theme-4/"
+              >Edexcel B Theme 4: Making Markets Work</a
+            >
+            <span class="separator">›</span>
+            <span>4.5.1 Risks and Uncertainty</span>
+          </nav>
+
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html"
+                rel="prev"
+                aria-label="Previous topic: 4.4.4 The Impact of Macroeconomic Policies"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">4.4.4 The Impact of Macroeconomic Policies</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html"
+                rel="next"
+                aria-label="Next topic: 4.5.2 The Role of the Financial Sector"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">4.5.2 The Role of the Financial Sector</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Risks and Uncertainty</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel B Theme 4, unit 4.5.1"
+                  >Edexcel B<span aria-hidden="true"> · </span>Theme 4<span aria-hidden="true"> · </span>4.5.1</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-10-16">16 October 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> Edexcel B unit 4.5.1 -
+              Risks and Uncertainty. Students need to distinguish risk from
+              uncertainty, analyse how shocks affect firms, and explain how
+              forward markets and insurance help a business manage exchange
+              rate risk and other risks.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#the-difference-between-risk-and-uncertainty">The Difference Between Risk and Uncertainty</a></li>
+                <li><a href="#the-impact-of-shocks">The Impact of Shocks</a></li>
+                <li><a href="#exchange-rate-risk-and-forward-markets">Exchange Rate Risk and Forward Markets</a></li>
+                <li><a href="#the-role-of-insurance-in-business">The Role of Insurance in Business</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="the-difference-between-risk-and-uncertainty">The Difference Between Risk and Uncertainty</h2>
+              <p>
+                No firm knows for sure how a decision will turn out. The
+                economist Frank Knight split that unknown into two kinds.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Risk:</span> an unknown outcome
+                whose chances can be measured, usually from past data, so a
+                probability can be put on it.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Uncertainty:</span> an unknown
+                outcome whose chances cannot be measured, because there is no
+                past record to go on.
+              </p>
+              <p>
+                A haulage firm cannot know which lorry will crash next year, but
+                records across thousands of lorries show roughly how many will.
+                That is a risk. Whether a new rival will open next door, or a
+                new product will sell, has no such record. That is uncertainty.
+              </p>
+              <p>The difference matters because of what a firm can do about it:</p>
+              <ul>
+                <li>
+                  <strong>Risk can be priced:</strong> it can be measured
+                  &rarr; an insurer or a bank can work out a fair charge for
+                  taking it on &rarr; the firm swaps an unknown loss for a known
+                  cost, such as an insurance premium.
+                </li>
+                <li>
+                  <strong>Uncertainty cannot:</strong> no one can put a number
+                  on it &rarr; no one will sell cover against it &rarr; the owners
+                  carry it themselves. Profit is their reward for doing so.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="the-impact-of-shocks">The Impact of Shocks</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Economic shock:</span> an
+                unexpected event that suddenly changes demand or costs across
+                the economy.
+              </p>
+              <p>
+                A <strong>demand shock</strong> changes how much customers buy,
+                as when lockdowns closed restaurants and shops in 2020. A
+                <strong>supply shock</strong> changes what it costs to produce,
+                as when gas prices jumped after Russia invaded Ukraine in 2022.
+                Shocks are a source of uncertainty: few firms see them coming.
+              </p>
+              <p>When a negative shock hits:</p>
+              <ul>
+                <li>
+                  <strong>Firms facing a demand shock:</strong> sales fall
+                  suddenly &rarr; revenue drops while rent and loan repayments
+                  stay the same &rarr; cash runs short &rarr; firms cut staff,
+                  delay investment or close.
+                </li>
+                <li>
+                  <strong>Firms facing a supply shock:</strong> energy or
+                  materials cost more &rarr; unit costs rise &rarr; the firm
+                  raises prices and loses sales, or holds prices and accepts a
+                  lower profit margin.
+                </li>
+                <li>
+                  <strong>Workers and consumers:</strong> job losses and higher
+                  prices &rarr; lower real incomes &rarr; less spending, which
+                  passes the shock on to other firms.
+                </li>
+              </ul>
+              <p>
+                Shocks also create winners. In 2020 online retailers and
+                delivery firms gained as shoppers moved online, and in 2022
+                energy producers earned far more from higher prices.
+              </p>
+              <p>How badly a firm is hurt depends on:</p>
+              <ul>
+                <li>
+                  <strong>Size and duration:</strong> a business can ride out a
+                  short shock on its savings. One that lasts years can change
+                  what customers buy for good.
+                </li>
+                <li>
+                  <strong>Cash reserves and debt:</strong> a firm with cash in
+                  the bank and little borrowing can wait for demand to recover.
+                  A heavily borrowed firm may run out of cash first.
+                </li>
+                <li>
+                  <strong>Fixed or variable costs:</strong> a firm whose costs
+                  are mostly variable can scale down quickly. One with high fixed
+                  costs, such as a hotel, keeps paying them with no customers.
+                </li>
+                <li>
+                  <strong>Ability to pass costs on:</strong> with price
+                  inelastic demand or a strong brand, a firm can raise prices
+                  after a supply shock and keep most of its sales.
+                </li>
+                <li>
+                  <strong>Government support:</strong> help such as the 2020
+                  furlough scheme, which paid part of workers' wages, can keep
+                  firms alive until demand returns.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="exchange-rate-risk-and-forward-markets">Exchange Rate Risk and Forward Markets</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Exchange rate risk:</span> the
+                risk that a change in the exchange rate alters the value of a
+                payment a firm has agreed to make or receive in a foreign
+                currency.
+              </p>
+              <p>
+                An importer that must pay in dollars in three months does not
+                know what that will cost in pounds. If the pound weakens, it
+                pays more. An exporter waiting to be paid in euros faces the
+                reverse: a stronger pound means fewer pounds when the euros
+                arrive.
+              </p>
+              <!-- prettier-ignore -->
+              <p>
+                To turn a foreign-currency amount into pounds, divide by the
+                exchange rate:
+                \[ \text{Amount in pounds} = \frac{\text{Amount in dollars}}{\text{Dollars per £1}} \]
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Forward contract:</span> an
+                agreement made today to buy or sell a currency on a set future
+                date at an exchange rate fixed now.
+              </p>
+              <p>
+                Banks sell forward contracts in the
+                <strong>forward market</strong>. Using one to remove exchange
+                rate risk is called <strong>hedging</strong>.
+              </p>
+              <div class="worked-example">
+                <h3>Worked Example: Fixing the Cost of an Import</h3>
+                <p>
+                  A UK bike shop orders <strong>$240,000</strong> of bikes from
+                  a US maker, to be paid in three months. Its bank offers a
+                  forward contract at <strong>£1 = $1.25</strong>, which fixes
+                  the cost at 240,000 ÷ 1.25 = £192,000.
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Exchange rate in three months</th>
+                        <th>Cost without the contract</th>
+                        <th>Cost with the contract</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>£1 = $1.20 (pound weaker)</strong></td>
+                        <td>£200,000</td>
+                        <td>£192,000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>£1 = $1.28 (pound stronger)</strong></td>
+                        <td>£187,500</td>
+                        <td>£192,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  If the pound weakens, the contract saves the shop £8,000. If
+                  it strengthens, the shop pays £4,500 more than it needed to.
+                  Either way it knows its cost from the day it orders, so it can
+                  set its prices with confidence.
+                </p>
+              </div>
+              <p>
+                Hedging fixes the pound value of a deal &rarr; the firm can set
+                prices and budget, and a sudden currency move cannot wipe out
+                its margin &rarr; it is more willing to sign overseas deals.
+              </p>
+              <p>Whether hedging is worth it depends on:</p>
+              <ul>
+                <li>
+                  <strong>Lost gains:</strong> the firm gives up any benefit
+                  from a favourable move, as the bike shop's second row shows.
+                </li>
+                <li>
+                  <strong>Cost and scale:</strong> banks charge for the service,
+                  and small firms with few overseas deals may find it not worth
+                  arranging.
+                </li>
+                <li>
+                  <strong>Known amounts and dates:</strong> a contract fixes
+                  one sum on one date. It cannot protect sales a firm has not
+                  yet won, or a fall in the pound that lasts for years.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="the-role-of-insurance-in-business">The Role of Insurance in Business</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Insurance:</span> a contract in
+                which a firm pays a regular sum, the
+                <strong>premium</strong>, and the insurer agrees to pay
+                compensation if a specified loss happens.
+              </p>
+              <p>
+                Insurance works by <strong>pooling risk</strong>. An insurer
+                collects premiums from thousands of firms, knowing from past
+                data that only a few will claim in a year. The premiums from
+                the many pay for the losses of the few.
+              </p>
+              <p>
+                Firms commonly insure their buildings and stock against fire,
+                flood and theft, and themselves against claims from customers
+                or the public who are injured. Employers' liability insurance,
+                which covers claims from injured staff, is required by law as
+                soon as a firm takes on employees.
+              </p>
+              <p>Insurance helps a business in three ways:</p>
+              <ul>
+                <li>
+                  <strong>Survival:</strong> a fire destroys a bakery's ovens
+                  &rarr; the insurer pays for new ones &rarr; the bakery reopens
+                  instead of closing, and its staff keep their jobs.
+                </li>
+                <li>
+                  <strong>Steady costs:</strong> a fixed premium replaces a
+                  large, unpredictable loss &rarr; cash flow is easier to
+                  forecast.
+                </li>
+                <li>
+                  <strong>Access to finance:</strong> banks lending against
+                  property usually insist it is insured &rarr; insurance
+                  protects their collateral &rarr; the firm can borrow.
+                </li>
+              </ul>
+              <p>Its limits:</p>
+              <ul>
+                <li>
+                  <strong>Only risks are covered:</strong> no insurer will pay
+                  out because sales fell, a rival undercut the firm or a product
+                  flopped. Those are uncertainties.
+                </li>
+                <li>
+                  <strong>Premiums are a cost:</strong> they rise after a claim
+                  or in high-risk areas, such as flood plains, and some firms
+                  insure for less than their assets are worth to save money.
+                </li>
+              </ul>
+              <div class="exam-tip">
+                <p>
+                  <strong>Use the risk-uncertainty split to evaluate.</strong>
+                  If an extract describes something a firm can insure or hedge,
+                  such as a fire or a currency payment, say how that limits the
+                  damage. If it describes a shock or a change in tastes, explain
+                  why neither tool helps and what the firm must rely on instead,
+                  such as cash reserves.
+                </p>
+              </div>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-4/4-5-3-the-role-of-the-central-bank.html">The Role of the Central Bank</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-4/4-5-4-the-global-financial-crisis.html">The Global Financial Crisis</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/edexcel-b/">Edexcel B past papers</a>
+                  <p class="topic-next__note">Question papers and mark schemes for every Edexcel B A-Level and AS paper, by paper and year.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-4/4-4-4-the-impact-of-macroeconomic-policies.html"
+                rel="prev"
+                aria-label="Previous topic: 4.4.4 The Impact of Macroeconomic Policies"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">4.4.4 The Impact of Macroeconomic Policies</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-4/4-5-2-the-role-of-the-financial-sector.html"
+                rel="next"
+                aria-label="Next topic: 4.5.2 The Role of the Financial Sector"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">4.5.2 The Role of the Financial Sector</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
+  </body>
+</html>
