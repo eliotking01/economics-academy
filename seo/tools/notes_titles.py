@@ -133,6 +133,9 @@ DISPLAY_NAME = {
     # Proposed 2026-10-16 (review/unit-4-3.md); the full name overflows
     # HARD_MAX by 1.
     "4-3-3-policies-to-deal-with-market-failure": "Policies for Market Failure",
+    # Proposed 2026-10-16 (review/unit-4-4.md); the full name overflows
+    # HARD_MAX by 1.
+    "4-4-4-the-impact-of-macroeconomic-policies": "Impact of Macroeconomic Policies",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
