@@ -231,7 +231,8 @@ card in the Edexcel B section of `revision-notes/index.html`, and a
 - **Unit 4.4 is written (2026-10-16)**: 4.4.1-4.4.4, four pages, awaiting
   review (`review/unit-4-4.md`, 9 questions). No diagrams pending. 4.4.4
   has a proposed title-only display name. The pages don't link to B's
-  Theme 2, which isn't open yet.
+  Theme 2, which isn't open yet. Eliot's answers the same day keep
+  everything as written, so no page changed.
 
 **Before Theme 4 publishes:**
 - [ ] The Theme 4 card's topic count on `revision-notes/index.html`
