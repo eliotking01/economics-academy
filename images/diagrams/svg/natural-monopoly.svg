@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Natural monopoly</title>
+  <desc id="d">A natural monopoly, with quantity on the horizontal axis and costs and revenue on the vertical axis. The long-run average cost curve LRAC falls across the whole range of output the market demands, and the long-run marginal cost curve LRMC has a similar shape and sits below it. The demand curve D=AR cuts LRAC while LRAC is still falling. The marginal revenue curve MR is twice as steep as D=AR and ends just below the quantity axis, showing that MR can be negative. A privatised natural monopoly maximises profit at quantity Qp, where MR equals LRMC; at that output the price on D=AR is Pp and the average cost on LRAC is Cp. A nationalised natural monopoly produces where LRMC cuts D=AR, at the larger quantity Qn and lower price Pn; its average cost on LRAC at Qn is Cn, above Pn.</desc>
+  <!-- geometry
+       LRAC: quadratic Bezier (130,175) ctrl (250,420) to (660,445). Its
+         y rises (cost falls) on every one of the checker's 48 flattened
+         steps and the end tangent is (410, 25), so LRAC is still falling
+         at x = 660, past the end of market demand.
+       LRMC: quadratic Bezier (130,250) ctrl (230,470) to (660,490). Falls
+         on every flattened step; at least 45px below LRAC at every x from
+         131 to 659, so LRMC < LRAC throughout, as it must be while LRAC
+         falls.
+       D=AR: exact 45 degrees, y = x - 20, from (100,80) to (540,520).
+       MR: same intercept, twice as steep, y = 2x - 120, from (100,80) to
+         (330,540): it crosses the quantity axis at x = 320 (half of D's
+         540 - 100 run, measured from the axis) and ends 20px below it.
+       Profit maximum, MR = LRMC, solved against LRMC's flattened polyline:
+         (254.37, 388.74), so Qp = 254.37.
+         Pp: D at Qp -> y = 254.37 - 20 = 234.37.
+         Cp: LRAC at Qp (flattened) -> y = 323.13. Pp above Cp: supernormal
+         profit.
+       MR also crosses LRAC, at (195.13, 270.27): unmarked, and kept 36px
+         clear of the P guide and 53px clear of the C guide so it cannot be
+         mistaken for a marked point.
+       Nationalised output, D=AR = LRMC, solved against LRMC's flattened
+         polyline: (492.52, 472.52), so Qn = 492.52 and Pn = 472.52.
+         Cn: LRAC at Qn (flattened) -> y = 423.09. Cn above Pn: a loss
+         at Qn (not shaded).
+       D cuts LRAC once, at (426.07, 406.07), while LRAC is still falling.
+       intersections: 254.37,388.74 492.52,472.52 426.07,406.07
+       on-curve: 254.37,234.37 254.37,323.13 492.52,423.09 320,520
+  -->
+  <!-- guides, privatised: up from Qp (MR = LRMC) to D=AR; across from D=AR (Pp) and LRAC (Cp) -->
+  <line x1="254.37" y1="520" x2="254.37" y2="234.37" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="234.37" x2="254.37" y2="234.37" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="323.13" x2="254.37" y2="323.13" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- guides, nationalised: up from Qn (LRMC = D=AR) to LRAC; across from D=AR (Pn) and LRAC (Cn) -->
+  <line x1="100" y1="472.52" x2="492.52" y2="472.52" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="100" y1="423.09" x2="492.52" y2="423.09" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="492.52" y1="520" x2="492.52" y2="423.09" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Costs and revenue (£)</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves: costs teal, revenue blue, as on break-even-chart -->
+  <path d="M 130,175 Q 250,420 660,445" fill="none" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 130,250 Q 230,470 660,490" fill="none" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="80" x2="540" y2="520" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="80" x2="330" y2="540" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="670" y="453" font-size="26" font-weight="700" fill="#0f7b6c">LRAC</text>
+  <text x="670" y="498" font-size="26" font-weight="700" fill="#0f7b6c">LRMC</text>
+  <text x="556" y="510" font-size="26" font-weight="700" fill="#1d70b8">D=AR</text>
+  <text x="340" y="556" font-size="26" font-weight="700" fill="#1d70b8">MR</text>
+  <text x="92" y="242.37" font-size="24" fill="#333333" text-anchor="end">Pp</text>
+  <text x="92" y="331.13" font-size="24" fill="#333333" text-anchor="end">Cp</text>
+  <text x="254.37" y="552" font-size="24" fill="#333333" text-anchor="middle">Qp</text>
+  <text x="92" y="431.09" font-size="24" fill="#333333" text-anchor="end">Cn</text>
+  <text x="92" y="480.52" font-size="24" fill="#333333" text-anchor="end">Pn</text>
+  <text x="492.52" y="552" font-size="24" fill="#333333" text-anchor="middle">Qn</text>
+</svg>
