@@ -1989,3 +1989,25 @@ supply rises (left) and falls (right). Practise drawing the shift,
 identifying the initial disequilibrium, and showing the new equilibrium P
 and Q." The two slices were edited and the pages rebuilt; `/verify` passes
 27/27 on that branch.
+
+---
+
+## N-Q24 — 4.1.2 "Competition law bans these" is broader than the CMA guidance (logged 2026-10-16)
+
+Found while recording sources for the Edexcel B Theme 4 audit. The
+Anti-Competitive Practices paragraph in
+`notes-data/topics/edexcel-b-theme-4/4-1-2-barriers-to-entry.html` (line 135)
+says predatory pricing, exclusive dealing and refusal to supply are banned
+"when a dominant firm uses them". The Competition Act 1998, s.18, prohibits
+*abuse* of a dominant position. The guideline that names these practices,
+*Abuse of a dominant position* (OFT402, December 2004, inherited by the CMA from the OFT
+and published on GOV.UK), says in para 5.6 that they are abusive where they are likely to
+foreclose markets or dampen competition, assessed case by case. Para 5.3 of the
+same guideline gives poor creditworthiness as an example of a justified refusal to
+supply. So the page's line holds as an A-Level simplification, but strictly
+it is "bans these when a dominant firm uses them to shut rivals out".
+
+Not published yet (Theme 4 is on `feature/edexcel-b-theme-4`). This is a
+wording change, so it needs Eliot's explicit instruction (hard rule 2).
+Nothing has been changed. The source is recorded in the Desktop review sheet
+`drafts/edexcel-b-notes/review/unit-4-1.md`.

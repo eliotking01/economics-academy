@@ -1,0 +1,123 @@
+{
+  "path": "revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+  "head": {
+    "title": "Policies for Market Failure – Edexcel B A-Level Economics",
+    "description": "Policies for Market Failure for Edexcel B (4.3.3). Covers provision, indirect taxes, tradable permits, information, regulation and impacts over time.",
+    "canonical": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+    "og": {
+      "type": "article",
+      "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+      "title": "Policies for Market Failure – Edexcel B A-Level Economics",
+      "description": "Policies for Market Failure for Edexcel B (4.3.3). Covers provision, indirect taxes, tradable permits, information, regulation and impacts over time.",
+      "siteName": "Economics Academy",
+      "locale": "en_GB",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1",
+      "image:width": "1200",
+      "image:height": "1200",
+      "image:type": "image/png",
+      "image:alt": "Economics Academy logo"
+    },
+    "ogComment": false,
+    "sdComment": false,
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Policies for Market Failure – Edexcel B A-Level Economics",
+      "description": "Policies for Market Failure for Edexcel B (4.3.3). Covers provision, indirect taxes, tradable permits, information, regulation and impacts over time.",
+      "image": "https://economicsacademy.co.uk/og-image.png?v=1"
+    },
+    "pageStylesheets": [
+      "/css/pages/revision-notes-topic.css"
+    ],
+    "extraPreconnects": [],
+    "mathjaxConfig": null,
+    "headStyle": null,
+    "jsonldBeforeIcons": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Policies to Deal with Market Failure",
+        "description": "Free Edexcel B A-Level Economics revision notes on policies to deal with market failure - provision, indirect taxes, tradable pollution permits, information, regulation and their impacts, for Theme 4.3.3.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 4: Making Markets Work",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-17",
+        "dateModified": "2026-10-17",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Policies to Deal with Market Failure"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 4, unit 4.3.3"
+        },
+        "timeRequired": "PT4M"
+      }
+    ],
+    "jsonldAfterStyles": [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 4: Making Markets Work",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "4.3.3 Policies to Deal with Market Failure",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-3-3-policies-to-deal-with-market-failure.html"
+          }
+        ]
+      }
+    ]
+  },
+  "body": {
+    "mainAttrs": " class=\"revision-notes-content\"",
+    "endContainerComment": null,
+    "endMainComment": null,
+    "beforeMain": "    <div id=\"page-wrapper\">\n      <!-- Header -->\n      <div id=\"header-placeholder\"></div>\n\n      <!-- Main Content -->\n",
+    "afterMain": "\n\n      <!-- Footer -->\n      <div id=\"footer-placeholder\"></div>\n    </div>\n\n    <!-- Scripts -->\n",
+    "afterScripts": "  </body>\n</html>\n"
+  }
+}

@@ -23,7 +23,8 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Edexcel B notes — Theme 1: 23 pages, index section, site search | approved, PR open | — | — |
+| Edexcel B notes — Theme 4: 19 pages, index card, site search | approved, PR open | — | — |
+| Edexcel B notes — Theme 1: 23 pages, index section, site search | live | 2026-10-15 | `782bafd7` |
 | Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
 | Past-paper search — Board drives the board-shaped dropdowns | live | 2026-08-27 | `8fbb6ba5` |
@@ -193,7 +194,76 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### Edexcel B revision notes — Theme 1 (2026-09-26 to 2026-10-15) — COMPLETE AND APPROVED, PR into main opened 2026-10-15 (branch `feature/edexcel-b-notes`)
+### Edexcel B revision notes — Theme 4 (2026-10-16 to 2026-10-17) — COMPLETE AND APPROVED, PR into main opened 2026-10-17 (branch `feature/edexcel-b-theme-4`)
+
+The second theme in publishing order (1, 4, 2, 3; D66). Opened 2026-10-16
+by `new_topic.py`'s three steps: the hub out of `notes-data/hubs/drafts/`,
+the group in `boards.json` and `EXPECTED_NOTES_DIRS`, `verify_boards.py
+--reseed`, the menu entry (desktop and mobile). Theme 4 also has a Year 2
+card in the Edexcel B section of `revision-notes/index.html`, and a
+`hasPart` entry in that page's JSON-LD.
+
+- **A theme cannot open empty.** `notes_sequence.hub_topics()` stops the
+  build when a hub links to no topic, so the opening changes are committed
+  together with unit 4.1 (`/edexcel-b-unit 4.1`), not on their own. 4.1.1
+  is Spectrum of Competition, `4-1-1-spectrum-of-competition`
+  (`05-website/drafts/edexcel-b-notes/theme-4-coverage.md`).
+- **Opening also needs a row in `scripts/notes_extras.py` `BOARD_OF_DIR`**
+  (the sub-label's board and module); the build fails without it.
+  `new_topic.py` now prints it as part of step 3.
+- **Unit 4.1 is written (2026-10-16)**: 4.1.1-4.1.5, five pages, awaiting
+  Eliot's review (`05-website/drafts/edexcel-b-notes/review/unit-4-1.md`,
+  12 questions). 4.1.4 and 4.1.5 carry proposed title-only display names in
+  `seo/tools/notes_titles.py` (their full names overflow the 65-character
+  ceiling), on the approval list in that sheet. Theme 1's 1.6.4 now links
+  forward to 4.1.1, B's chain running in open-theme order. Eliot's answers
+  applied the same day (`931147a8`).
+- **Unit 4.2 is written (2026-10-16)**: 4.2.1-4.2.3, three pages, awaiting
+  review (`review/unit-4-2.md`, 9 questions). 4.2.1 carries a
+  `DIAGRAM PENDING: natural-monopoly` marker (optional diagram). 4.2.3 has a
+  proposed title-only display name in `notes_titles.py`. Eliot's answers
+  applied the same day (`73fbc38d`).
+- **Unit 4.3 is written (2026-10-16)**: 4.3.1-4.3.3, three pages, awaiting
+  review (`review/unit-4-3.md`, 8 questions). They are shorter than
+  planned because Theme 1's 1.5.1 and 1.5.2 already carry the externality
+  and tax diagrams; these pages link back. 4.3.3 has a proposed title-only
+  display name. Eliot's answers applied the same day (`148b735e`).
+- **Unit 4.4 is written (2026-10-16)**: 4.4.1-4.4.4, four pages, awaiting
+  review (`review/unit-4-4.md`, 9 questions). No diagrams pending. 4.4.4
+  has a proposed title-only display name. The pages don't link to B's
+  Theme 2, which isn't open yet. Eliot's answers the same day keep
+  everything as written, so no page changed.
+
+- **Unit 4.5 is written (2026-10-16)**: 4.5.1-4.5.4, four pages
+  (`037952df`), completing Theme 4's 19 topics; `expectedTopics` 38 -> 42.
+  Eliot's answers applied the same day (`85fc60e8`): 4.5.1's slug became
+  `4-5-1-risks-and-uncertainty` before it was ever published.
+- **Final review pass (2026-10-17)**: the natural-monopoly diagram drawn
+  and placed on 4.2.1 (`306ac3b4`), so no `DIAGRAM PENDING` comment
+  remains; definitions tightened across nine pages and the two
+  scene-setting ones (Market structure, Regulation) removed, on Eliot's
+  instructions (`4cb9124c`).
+- **Theme 4 is complete and approved (2026-10-17)**: all 19 pages, units
+  4.1-4.5, each reviewed by Eliot (`review/unit-4-1.md` to `unit-4-5.md`).
+
+**Pre-launch jobs, all done 2026-10-17:**
+- [x] `datePublished` and `dateModified` on the Theme 4 hub record and all
+  19 topic records set to 2026-10-17, the publish day (`6359e988`), as was
+  done for Theme 1.
+- [x] `revision-notes/index.html` (`29844cb2`, wording approved by Eliot):
+  the Theme 4 card's "0 topics" is now 19, the intro says "plus Edexcel B
+  Themes 1 and 4", and the hero topics line is 208 (was 189). The D50-frozen
+  head is untouched.
+- [x] Site search: the Theme 4 hub and all 19 topics are in
+  `/search-index.json` (checked 2026-10-17; picked up from the hub, no
+  change needed).
+- [x] origin/main checked 2026-10-17: it had not moved since the branch
+  was cut, so there was nothing to merge.
+
+**When the next theme opens (Theme 2):** add its card to the index (Year 1)
+and update the topics line (208 today) and the intro sentence.
+
+### Edexcel B revision notes — Theme 1 (2026-09-26 to 2026-10-15) — LIVE (merged 2026-10-15, `782bafd7`, PR #41)
 
 85 Edexcel B (9EB0) topic pages across Themes 1-4 are coming, one unit per
 session, from the project pack in `05-website/drafts/edexcel-b-notes/`. This

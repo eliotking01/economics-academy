@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
+    <script>
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
+    <title>Oligopoly – Edexcel B A-Level Economics Revision Notes</title>
+    <meta
+      name="description"
+      content="Oligopoly for Edexcel B A-Level Economics (4.1.3). Covers concentration ratios, interdependence, kinked demand, tacit agreement and price discrimination."
+    />
+    <link
+      rel="canonical"
+      href="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Economics Academy" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="og:url"
+      content="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html"
+    />
+    <meta
+      property="og:title"
+      content="Oligopoly – Edexcel B A-Level Economics Revision Notes"
+    />
+    <meta
+      property="og:description"
+      content="Oligopoly for Edexcel B A-Level Economics (4.1.3). Covers concentration ratios, interdependence, kinked demand, tacit agreement and price discrimination."
+    />
+    <meta
+      property="og:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Economics Academy logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Oligopoly – Edexcel B A-Level Economics Revision Notes"
+    />
+    <meta
+      name="twitter:description"
+      content="Oligopoly for Edexcel B A-Level Economics (4.1.3). Covers concentration ratios, interdependence, kinked demand, tacit agreement and price discrimination."
+    />
+    <meta
+      name="twitter:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Oligopoly",
+        "description": "Free Edexcel B A-Level Economics revision notes on oligopoly - concentration ratios, interdependence and price stability, a payoff matrix, tacit agreement and price discrimination, for Theme 4.1.3.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 4: Making Markets Work",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-17",
+        "dateModified": "2026-10-17",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Oligopoly"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 4, unit 4.1.3"
+        },
+        "timeRequired": "PT7M"
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 4: Making Markets Work",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "4.1.3 Oligopoly",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-4/4-1-3-oligopoly.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Edexcel B, notes only (D66). One entry per OPEN theme: a
+                     theme joins here when its hub leaves notes-data/hubs/drafts/.
+                     No Practice Questions entry - the board has none. -->
+                <li>
+                  <a href="#" role="button">Edexcel B</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <p class="mnav-sub-label">Edexcel B</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <!-- Main Content -->
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/edexcel-b-theme-4/"
+              >Edexcel B Theme 4: Making Markets Work</a
+            >
+            <span class="separator">›</span>
+            <span>4.1.3 Oligopoly</span>
+          </nav>
+
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html"
+                rel="prev"
+                aria-label="Previous topic: 4.1.2 Barriers to Entry"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">4.1.2 Barriers to Entry</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html"
+                rel="next"
+                aria-label="Next topic: 4.1.4 Business Objectives and Pricing Decisions"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">4.1.4 Business Objectives and Pricing Decisions</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Oligopoly</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel B Theme 4, unit 4.1.3"
+                  >Edexcel B<span aria-hidden="true"> · </span>Theme 4<span aria-hidden="true"> · </span>4.1.3</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-10-17">17 October 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> Edexcel B unit 4.1.3 -
+              Oligopoly. Students need to calculate and interpret
+              concentration ratios, explain why interdependence keeps prices
+              stable, explain tacit agreement, and analyse price
+              discrimination and who gains or loses from it.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#what-is-an-oligopoly">What Is an Oligopoly?</a></li>
+                <li><a href="#concentration-ratios">Concentration Ratios</a></li>
+                <li><a href="#interdependence-and-price-stability">Interdependence and Price Stability</a></li>
+                <li><a href="#tacit-agreement">Tacit Agreement</a></li>
+                <li><a href="#price-discrimination">Price Discrimination</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="what-is-an-oligopoly">What Is an Oligopoly?</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Oligopoly:</span> a market
+                dominated by a few large, interdependent firms, protected by
+                high barriers to entry.
+              </p>
+              <p>
+                UK supermarkets, mobile networks and airlines are all
+                oligopolies. Products may be identical, like petrol, or
+                heavily branded, like soft drinks. What sets oligopoly apart is
+                that each firm is big enough for its decisions to affect its
+                rivals.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="concentration-ratios">Concentration Ratios</h2>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Concentration ratio:</span> the
+                share of a market's total sales taken by its largest firms:
+                \[ \text{n-firm concentration ratio} = \frac{\text{Sales of the largest n firms}}{\text{Total market sales}} \times 100 \]
+              </p>
+              <p>
+                A 4-firm ratio of 75% means the four biggest firms make three
+                quarters of all sales. The higher the ratio, the more
+                concentrated the market. A market is usually called an
+                oligopoly when the top few firms hold most of it.
+              </p>
+              <div class="worked-example">
+                <h3>Worked Example: Coffee Shops in a City</h3>
+                <p>
+                  Total coffee shop sales in a city are
+                  <strong>£50m</strong> a year. The four largest chains sell
+                  £15m, £12m, £8m and £5m.
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Ratio</th>
+                        <th>Working</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>2-firm</strong></td>
+                        <td>(£15m + £12m) ÷ £50m × 100</td>
+                        <td>54%</td>
+                      </tr>
+                      <tr>
+                        <td><strong>4-firm</strong></td>
+                        <td>(£15m + £12m + £8m + £5m) ÷ £50m × 100</td>
+                        <td>80%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  Four chains share 80% of the market, leaving 20% for every
+                  independent café in the city. That is a concentrated market,
+                  and each chain will watch what the other three charge.
+                </p>
+              </div>
+              <p>
+                A concentration ratio has limits. A 4-firm ratio of 80% could be
+                one giant and three small firms, or four equals. It also depends
+                on how the market is drawn: a chain with a small share of UK
+                coffee sales might dominate one town.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="interdependence-and-price-stability">Interdependence and Price Stability</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Interdependence:</span> when each
+                firm's sales and profit depend on what its rivals do, so it has
+                to predict their reaction before it acts.
+              </p>
+              <p>
+                Interdependence explains why prices in an oligopoly tend to stay
+                put. The <strong>kinked demand curve</strong> shows the
+                reasoning from one firm's point of view:
+              </p>
+              <ul>
+                <li>
+                  <strong>If it raises its price:</strong> rivals don't follow
+                  &rarr; customers switch to them &rarr; demand above the
+                  current price is price elastic &rarr; revenue falls.
+                </li>
+                <li>
+                  <strong>If it cuts its price:</strong> rivals match the cut
+                  so as not to lose customers &rarr; the firm gains few sales
+                  &rarr; demand below the current price is price inelastic
+                  &rarr; revenue falls.
+                </li>
+              </ul>
+              <p>
+                Either way the firm loses, so it leaves its price where it is
+                and competes in other ways, such as advertising, loyalty
+                schemes and new products (non-price competition, unit 4.1.1).
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/kinked-demand-curve.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/kinked-demand-curve.webp" />
+                <img
+                  src="/images/diagrams/kinked-demand-curve.png"
+                  alt="Kinked demand curve with cost and revenue on the vertical axis and quantity on the horizontal axis. The demand curve D=AR is flatter above the kink, labelled price elastic demand, and steeper below it, labelled price inelastic demand. The kink sits at price Pcompetitive and quantity Q. The MR curve has a vertical gap at Q, and the MC=S curve passes through that gap. An AC curve gives average cost C at Q"
+                  class="diagram-image"
+                  width="2584"
+                  height="1630"
+                  fetchpriority="high"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 1: The kinked demand curve. Demand is elastic above the
+                  current price and inelastic below it, so the MR curve has a
+                  gap at Q. MC can rise or fall within the gap without changing
+                  the profit-maximising price
+                </figcaption>
+              </figure>
+              <p>
+                The gap in the MR curve adds a second reason for stable prices.
+                A firm maximises profit where MC = MR, and MC can move up or
+                down inside the gap with no change in the best price. So even a
+                change in costs may leave prices unchanged.
+              </p>
+              <p>
+                Stability can break down. A firm with much lower costs, or a
+                new entrant, may cut prices to win market share, and rivals
+                follow in a <strong>price war</strong>: consumers gain from
+                lower prices for a while &rarr; every firm's revenue and profit
+                fall &rarr; weaker firms may leave the market.
+              </p>
+              <h3>A Simple Payoff Matrix</h3>
+              <p>
+                Interdependence can also be shown with a payoff matrix. Two
+                bus companies on the same route each choose a high or a low
+                fare. Each cell shows yearly profit as (Company A, Company B):
+              </p>
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                <table class="concept-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>B: high fare</th>
+                      <th>B: low fare</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>A: high fare</strong></td>
+                      <td>£10m, £10m</td>
+                      <td>£3m, £13m</td>
+                    </tr>
+                    <tr>
+                      <td><strong>A: low fare</strong></td>
+                      <td>£13m, £3m</td>
+                      <td>£6m, £6m</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Whatever B does, A earns more by charging the low fare (£13m
+                beats £10m, and £6m beats £3m), and the same is true for B. So
+                both choose low fares and earn £6m each, though both would earn
+                £10m if they kept fares high. That is the pull towards an
+                agreement, covered next.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="tacit-agreement">Tacit Agreement</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Tacit agreement:</span> firms
+                coordinating their prices or output without any formal or
+                spoken agreement, for example by following a price leader.
+              </p>
+              <p>
+                An open agreement to fix prices, a <strong>cartel</strong>, is
+                illegal in the UK (unit 4.2.1). A tacit agreement has no
+                meeting or contract: the largest firm raises its price and the
+                others follow, or firms learn that price cuts only start price
+                wars. The result can match a cartel's, but it is much harder to
+                prove.
+              </p>
+              <ul>
+                <li>
+                  <strong>Firms:</strong> prices stay above the competitive
+                  level &rarr; higher margins &rarr; supernormal profit.
+                </li>
+                <li>
+                  <strong>Consumers:</strong> prices are higher than with real
+                  competition &rarr; consumers pay more and buy less &rarr;
+                  lower real incomes.
+                </li>
+              </ul>
+              <p>A tacit agreement is more likely to hold when:</p>
+              <ul>
+                <li>
+                  <strong>There are very few firms:</strong> it is easier to
+                  watch each other and spot a rival cutting prices.
+                </li>
+                <li>
+                  <strong>Products and costs are similar:</strong> firms want
+                  roughly the same price, so there is less to disagree about.
+                </li>
+                <li>
+                  <strong>Barriers to entry are high:</strong> no newcomer can
+                  undercut the high prices.
+                </li>
+                <li>
+                  <strong>Demand is stable:</strong> in a downturn, the pull to
+                  cut prices and win sales grows stronger.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="price-discrimination">Price Discrimination</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Price discrimination:</span>
+                charging different customers different prices for the same
+                product, where the difference is not caused by a difference in
+                cost.
+              </p>
+              <p>There are three degrees:</p>
+              <ul>
+                <li>
+                  <strong>First-degree:</strong> each customer pays the most
+                  they are willing to pay, as when a price is haggled over or
+                  set by auction.
+                </li>
+                <li>
+                  <strong>Second-degree:</strong> the price depends on how much
+                  is bought, such as a lower price per unit for bulk orders.
+                </li>
+                <li>
+                  <strong>Third-degree:</strong> different groups of customers
+                  pay different prices, such as peak and off-peak rail fares.
+                </li>
+              </ul>
+              <p>
+                The rest of this section is about third-degree price
+                discrimination. Student cinema tickets and cheaper children's
+                haircuts are other everyday examples. A firm needs three
+                conditions:
+              </p>
+              <ul>
+                <li>
+                  <strong>Market power:</strong> it must be able to set prices,
+                  which a price taker cannot.
+                </li>
+                <li>
+                  <strong>Groups with different PED:</strong> it must be able to
+                  tell apart customers who will pay more from those who will
+                  not.
+                </li>
+                <li>
+                  <strong>Separate markets:</strong> it must stop customers who
+                  pay the low price reselling to those charged the high one,
+                  for example by checking a student card or tying the ticket to
+                  a time.
+                </li>
+              </ul>
+              <p>
+                The firm charges a higher price where demand is price inelastic
+                and a lower one where it is price elastic. Commuters have to
+                travel at peak times, so their demand is inelastic and they
+                pay more. Leisure travellers can choose another time or not go,
+                so they get a lower fare.
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/price-discrimination.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/price-discrimination.webp" />
+                <img
+                  src="/images/diagrams/price-discrimination.png"
+                  alt="Three diagrams with cost and revenue on the vertical axis and quantity on the horizontal axis, sharing a flat AC=MC line at C. Left, price inelastic demand such as peak tickets: a steep D=AR and MR, a high price P and a large shaded profit area. Middle, price elastic demand such as off-peak tickets: a flatter D=AR and MR, a lower price P and a smaller shaded profit area. Right, separated by a dotted line, the combined market with no price discrimination: one D=AR and MR, a single price P and its shaded profit area"
+                  class="diagram-image"
+                  width="3642"
+                  height="1080"
+                  loading="lazy"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 2: The firm sets MC = MR in each market. It charges a
+                  high price where demand is inelastic (left) and a low price
+                  where it is elastic (middle). The two shaded areas together
+                  are larger than the profit from one price (right)
+                </figcaption>
+              </figure>
+              <ul>
+                <li>
+                  <strong>The firm:</strong> each group pays closer to the most
+                  it is willing to pay &rarr; more consumer surplus becomes
+                  revenue &rarr; higher profit than one single price.
+                </li>
+                <li>
+                  <strong>Customers with inelastic demand:</strong> charged
+                  more than a single price &rarr; they lose consumer surplus.
+                </li>
+                <li>
+                  <strong>Customers with elastic demand:</strong> charged less
+                  &rarr; some can now afford the product, such as students
+                  going to the cinema.
+                </li>
+              </ul>
+              <p>Whether price discrimination is good or bad depends on:</p>
+              <ul>
+                <li>
+                  <strong>Use of the extra profit:</strong> it may pay for
+                  investment, or keep a service running that would otherwise
+                  close, such as a lightly used rail route.
+                </li>
+                <li>
+                  <strong>Who pays more:</strong> it is harder to defend if
+                  the high price falls on people on low incomes with no
+                  choice.
+                </li>
+                <li>
+                  <strong>Use of capacity:</strong> cheap off-peak fares fill
+                  seats that would otherwise be empty, at very little extra
+                  cost.
+                </li>
+              </ul>
+              <div class="exam-tip">
+                <p>
+                  <strong>Use a payoff matrix to explain behaviour, not just to
+                  read numbers.</strong> Find each firm's best choice for every
+                  move its rival could make, then explain the outcome: both end
+                  up worse off than if they had trusted each other. That is why
+                  firms are tempted into tacit agreements, and why those
+                  agreements break down.
+                </p>
+              </div>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-4/4-1-1-spectrum-of-competition.html">Spectrum of Competition</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-4/4-1-5-productive-and-allocative-efficiency.html">Productive and Allocative Efficiency</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/edexcel-b/">Edexcel B past papers</a>
+                  <p class="topic-next__note">Question papers and mark schemes for every Edexcel B A-Level and AS paper, by paper and year.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-4/4-1-2-barriers-to-entry.html"
+                rel="prev"
+                aria-label="Previous topic: 4.1.2 Barriers to Entry"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">4.1.2 Barriers to Entry</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-4/4-1-4-business-objectives-and-pricing-decisions.html"
+                rel="next"
+                aria-label="Next topic: 4.1.4 Business Objectives and Pricing Decisions"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">4.1.4 Business Objectives and Pricing Decisions</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
+  </body>
+</html>

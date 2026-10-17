@@ -8,7 +8,7 @@ Write every Edexcel B topic page in spec unit **$ARGUMENTS**, to the standard th
 
 - Work on the current theme branch (`feature/edexcel-b-theme-N`). Never on `main`, never push.
 - The unit's theme must already be open (its hub out of `notes-data/hubs/drafts/`). If `new_topic.py` refuses because it isn't, stop and tell me.
-- Read: the project pack's `README.md` (writing brief) and this unit's entries in the matching `theme-N-coverage.md`, both in `../../05-website/drafts/edexcel-b-notes/`; `revision-notes/CLAUDE.md`; `../../00-context/writing-style.md` ("Website resources" and the AI-writing rules).
+- Read: the project pack's `README.md` (writing brief) and this unit's entries in the matching `theme-N-coverage.md`, both in `/Users/eliotking/Desktop/Economics Academy/05-website/drafts/edexcel-b-notes/`; `revision-notes/CLAUDE.md`; `/Users/eliotking/Desktop/Economics Academy/00-context/writing-style.md` ("Website resources" and the AI-writing rules).
 - Study the Theme 1 exemplars in `notes-data/topics/edexcel-b-theme-1/`. These are the house style for B, more than any Edexcel A page:
   - `1-2-5-the-wider-economic-environment` - points, chains of analysis and evaluation
   - `1-6-2-break-even-analysis` - maths
@@ -43,7 +43,7 @@ Write every Edexcel B topic page in spec unit **$ARGUMENTS**, to the standard th
 2. **Write the slice** following "How a B page is written" above. The spec alert reads `Edexcel B unit X.Y.Z - <page title>. ...`.
 3. **Diagrams.** Use the `reuse:` files with full `diagram-figure` markup, `width`/`height`, alt text written from the image's actual labels, and `Figure N:` captions. For a `draft:` diagram, leave `<!-- DIAGRAM PENDING: <name> -->` where it will go and note it in the review sheet. Diagrams are drafted in a separate batch per theme.
 4. **Fact-check** anything marked FACT CHECK, and any figure or named example that could have changed, against its primary source. Record source and date in the review sheet. If you can't verify it, leave it out.
-5. **Overlap check:** `python3 ../../05-website/drafts/edexcel-b-notes/check_overlap.py <slice> --pmt ../../05-website/drafts/edexcel-b-notes/pmt-text/<file>.txt --twin <twin slice> ...`. A PMT FAIL means rewrite and re-run. Reword near-matches unless they're a standard definition. A twin WARN means reword more of the adapted text.
+5. **Overlap check:** `python3 "/Users/eliotking/Desktop/Economics Academy/05-website/drafts/edexcel-b-notes/check_overlap.py" <slice> --pmt "/Users/eliotking/Desktop/Economics Academy/05-website/drafts/edexcel-b-notes/pmt-text/<file>.txt" --twin <twin slice> ...`. A PMT FAIL means rewrite and re-run. Reword near-matches unless they're a standard definition. A twin WARN means reword more of the adapted text.
 6. **Self-edit pass** before building. Reread the page as Eliot would:
    - cut any paragraph over about 60 words down to its point
    - shorten any example that tells a story
@@ -54,7 +54,7 @@ Write every Edexcel B topic page in spec unit **$ARGUMENTS**, to the standard th
 
 ## When the unit is done
 
-Write `../../05-website/drafts/edexcel-b-notes/review/unit-<X-Y>.md` with, per page:
+Write `/Users/eliotking/Desktop/Economics Academy/05-website/drafts/edexcel-b-notes/review/unit-<X-Y>.md` with, per page:
 - word count and components
 - each spec point and the H2 that covers it
 - the twin(s) adapted

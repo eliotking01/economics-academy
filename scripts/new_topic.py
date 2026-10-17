@@ -165,8 +165,10 @@ Finish and push the theme in progress first (one theme at a time, D66), then:
  2. boards-data/boards.json: add the group to {board_key}.groups (theme
     order), add {notes_dir} to EXPECTED_NOTES_DIRS in scripts/board_data.py,
     and run python3 scripts/verify_boards.py --reseed
- 3. templates/header.html: add its Revision Notes entry, desktop and mobile
-Then re-run this command.""")
+ 3. templates/header.html: add its Revision Notes entry, desktop and mobile,
+    and scripts/notes_extras.py: add its row to BOARD_OF_DIR
+An open theme with no topic fails the build, so commit the opening with the
+theme's first unit, not on its own. Then re-run this command.""")
 
 
 def template_dir(notes_dir: str) -> str:
