@@ -136,6 +136,12 @@ DISPLAY_NAME = {
     # Proposed 2026-10-16 (review/unit-4-4.md); the full name overflows
     # HARD_MAX by 1.
     "4-4-4-the-impact-of-macroeconomic-policies": "Impact of Macroeconomic Policies",
+    # Proposed 2026-10-17 (review/unit-2-1.md); the full name, "Research and
+    # Development (R&D) and Innovation", overflows HARD_MAX by 15.
+    "2-1-3-research-and-development-and-innovation": "R&D and Innovation",
+    # Proposed 2026-10-17 (review/unit-2-1.md); the full name, "How the
+    # Digital Economy Affects Markets and Firms", overflows HARD_MAX by 14.
+    "2-1-4-the-digital-economy": "The Digital Economy",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
