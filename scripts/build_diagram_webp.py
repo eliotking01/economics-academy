@@ -57,7 +57,11 @@ def encode(png: pathlib.Path) -> bytes:
 def same_pixels(png: pathlib.Path, webp: pathlib.Path) -> bool:
     a = Image.open(png).convert("RGBA")
     b = Image.open(webp).convert("RGBA")
-    return a.size == b.size and ImageChops.difference(a, b).getbbox() is None
+    # alpha_only=False: getbbox() on an RGBA image looks only at alpha by
+    # default (Pillow 9.2+), so two opaque images with different colours
+    # compared as "same" and a changed PNG kept its stale twin.
+    diff = ImageChops.difference(a, b)
+    return a.size == b.size and diff.getbbox(alpha_only=False) is None
 
 
 def main() -> int:
