@@ -481,6 +481,11 @@ Format per entry:
   2026-08-14) reverses the position this fix rests on — see
   `docs/REVIEW-NOTES.md` N-Q21. Do not treat this entry as the
   current ruling on the comparative-advantage example.
+  **Note added 2026-10-19:** N-Q21 is resolved. The figure shows
+  Germany with the absolute advantage in both goods again, and the
+  gallery sentence now reads "…can increase total welfare even if one
+  country has an absolute advantage in both goods, as long as each
+  specialises where its opportunity cost is lowest."
 
 ## 27. Theme 4 balance-of-payments page: "may be require"
 

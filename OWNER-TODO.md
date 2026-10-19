@@ -267,10 +267,9 @@ rebuild and the checks.
       **C5** (`2-1-2` unemployment-rate denominator v the ILO definition);
       **G4** (`Regulation` defined twice, neither reads as a definition);
       **G1** (`/contact.html` at 343 words is not indexed — a content decision,
-      not to be rushed); **N-Q21** (added 2026-08-26: the comparative-advantage
-      worked example on `4-1-2` and `2-6-2` — your 2026-08-14 verdict reverses
-      CONTENT_ISSUES #26, and the redrawn SVG is already live, so prose and
-      diagram disagree today; needs its own session). `docs/CONTENT_ISSUES.md`
+      not to be rushed); ~~**N-Q21**~~ (the comparative-advantage example:
+      resolved 2026-10-19, Germany now has the absolute advantage in both
+      goods on every page that uses it). `docs/CONTENT_ISSUES.md`
       has one open item — **#37**, five flashcard alt texts still describing
       single-panel versions of two-panel SVGs (added 2026-08-26); the other
       36 are 35 fixed, 1 rejected.
