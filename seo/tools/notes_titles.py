@@ -156,7 +156,7 @@ DISPLAY_NAME = {
     # the full name, "Circular Flow of Income, Expenditure and Output",
     # overflows HARD_MAX by 12.
     "2-5-2-circular-flow-of-income": "The Circular Flow of Income",
-    # Proposed 2026-10-19, on Eliot's approval list in review/unit-2-6.md;
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-6.md);
     # the full name, "Potential Policy Conflicts and Trade-Offs",
     # overflows HARD_MAX by 6.
     "2-6-3-policy-conflicts-and-trade-offs": "Policy Conflicts and Trade-Offs",
