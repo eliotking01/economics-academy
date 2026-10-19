@@ -136,6 +136,30 @@ DISPLAY_NAME = {
     # Proposed 2026-10-16 (review/unit-4-4.md); the full name overflows
     # HARD_MAX by 1.
     "4-4-4-the-impact-of-macroeconomic-policies": "Impact of Macroeconomic Policies",
+    # Proposed 2026-10-17, approved by Eliot 2026-10-18 (review/unit-2-1.md);
+    # the full name, "Research and Development (R&D) and Innovation",
+    # overflows HARD_MAX by 15.
+    "2-1-3-research-and-development-and-innovation": "R&D and Innovation",
+    # Proposed 2026-10-17, approved by Eliot 2026-10-18 (review/unit-2-1.md);
+    # the full name, "How the Digital Economy Affects Markets and Firms",
+    # overflows HARD_MAX by 14.
+    "2-1-4-the-digital-economy": "The Digital Economy",
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-3.md);
+    # the full name, "Efficiency and Competitiveness Using Lean
+    # Production", overflows HARD_MAX by 17.
+    "2-3-3-lean-production": "Lean Production",
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-4.md);
+    # the full name, "Developed, Emerging and Developing Economies",
+    # overflows HARD_MAX by 9.
+    "2-4-2-developed-emerging-and-developing-economies": "Emerging & Developing Economies",
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-5.md);
+    # the full name, "Circular Flow of Income, Expenditure and Output",
+    # overflows HARD_MAX by 12.
+    "2-5-2-circular-flow-of-income": "The Circular Flow of Income",
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-6.md);
+    # the full name, "Potential Policy Conflicts and Trade-Offs",
+    # overflows HARD_MAX by 6.
+    "2-6-3-policy-conflicts-and-trade-offs": "Policy Conflicts and Trade-Offs",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",

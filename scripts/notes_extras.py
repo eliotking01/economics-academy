@@ -126,6 +126,7 @@ BOARD_OF_DIR = {
     "aqa-a2-macro": ("AQA", "Macroeconomics"),
     # Edexcel B, notes-only (D66): one row per open theme.
     "edexcel-b-theme-1": ("Edexcel B", "Theme 1"),
+    "edexcel-b-theme-2": ("Edexcel B", "Theme 2"),
     "edexcel-b-theme-4": ("Edexcel B", "Theme 4"),
 }
 

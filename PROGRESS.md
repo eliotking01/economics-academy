@@ -23,7 +23,8 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Edexcel B notes — Theme 4: 19 pages, index card, site search | approved, PR open | — | — |
+| Edexcel B notes — Theme 2: 24 pages, index card, site search | approved, PR open | — | — |
+| Edexcel B notes — Theme 4: 19 pages, index card, site search | live | 2026-10-17 | `fec344d2` |
 | Edexcel B notes — Theme 1: 23 pages, index section, site search | live | 2026-10-15 | `782bafd7` |
 | Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
 | Form spam hardening — endpoints rotated, Turnstile on both forms | live | 2026-09-15 | `a7a303bc` |
@@ -194,7 +195,55 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### Edexcel B revision notes — Theme 4 (2026-10-16 to 2026-10-17) — COMPLETE AND APPROVED, PR into main opened 2026-10-17 (branch `feature/edexcel-b-theme-4`)
+### Edexcel B revision notes — Theme 2 (2026-10-17 to 2026-10-19) — COMPLETE AND APPROVED, PR into main opened 2026-10-19 (branch `feature/edexcel-b-theme-2`)
+
+The third theme in publishing order (1, 4, 2, 3; D66). Opened 2026-10-17
+together with unit 2.1 (`f6fcf691`), as a theme cannot open empty: the hub
+out of `notes-data/hubs/drafts/`, the group in `boards.json` between
+Themes 1 and 4, `EXPECTED_NOTES_DIRS` and `notes_extras.BOARD_OF_DIR`, the
+menu entry (desktop and mobile), and a Year 1 card plus a `hasPart` entry
+on `revision-notes/index.html`. B's chain now runs Theme 1 -> 2 -> 4.
+
+- **Units 2.1-2.6 written 2026-10-17 to 2026-10-19**, one commit each,
+  every page passing `check_overlap.py` against PMT with no copied runs;
+  Eliot's answers to each `05-website/drafts/edexcel-b-notes/review/
+  unit-2-1.md` to `unit-2-6.md` applied in the commit after it.
+  `expectedTopics` 42 -> 66. Six title-only display names in
+  `seo/tools/notes_titles.py` (2.1.3, 2.1.4, 2.3.3, 2.4.2, 2.5.2, 2.6.3).
+- **Diagrams** (`4acd8855`): `product-life-cycle` (2.1.3) and `long-tail`
+  (2.1.4) drawn and approved; Eliot decided against
+  `non-price-competition-demand` (2.2.3). 2.4.3 and 2.4.4 reuse
+  `comparative-advantage` and `exchange-rates`. No `DIAGRAM PENDING`
+  comment remains (checked 2026-10-19).
+- **Revision pass** (`2f149324`, answers `ce6c0c1a`): every page trimmed
+  by hand, 23,766 -> 22,453 words; log in `review/theme-2-revision-pass.md`.
+- **Changes to pages that were already live**, made on this branch:
+  N-Q21 resolved on Eliot's instruction (`f1134459`, `6e435b36`) -
+  `comparative-advantage.svg` redrawn and the example rewritten
+  identically on Edexcel A 4.1.2 and AQA 2.6.2, both diagram flashcards
+  and the macro gallery blurb; display maths outside a formula-box now
+  scrolls sideways on a phone (`0a842399`, `revision-notes-topic.css`);
+  plain-text pointers to Theme 2 units became links on B 1.2.5, 1.5.2,
+  1.6.1, 4.1.1 and 4.1.5.
+
+**Pre-launch jobs, all done 2026-10-19:**
+- [x] origin/main checked: it had not moved since Theme 4's merge
+  (`fec344d2`), so there was nothing to merge.
+- [x] `datePublished` and `dateModified` on the Theme 2 hub record and all
+  24 topic records set to 2026-10-19, the publish day (`2ad20bdd`).
+- [x] `revision-notes/index.html` (`0571837f`, wording approved by Eliot):
+  the Theme 2 card's "0 topics" is now 24, the intro says "plus Edexcel B
+  Themes 1, 2 and 4", and the hero topics line is 232 (was 208). The
+  D50-frozen head is untouched.
+- [x] Site search: the Theme 2 hub and all 24 topics are in
+  `/search-index.json` (picked up from the hub, no change needed).
+- [x] Previous/next: 1.6.4 -> 2.1.1 and 2.6.3 -> 4.1.1, and every link
+  between, top and bottom rows agreeing on all 26 pages.
+
+**When the last theme opens (Theme 3):** add its card to the index (Year 2)
+and update the topics line (232 today) and the intro sentence.
+
+### Edexcel B revision notes — Theme 4 (2026-10-16 to 2026-10-17) — LIVE (merged 2026-10-17, `fec344d2`, PR #42)
 
 The second theme in publishing order (1, 4, 2, 3; D66). Opened 2026-10-16
 by `new_topic.py`'s three steps: the hub out of `notes-data/hubs/drafts/`,

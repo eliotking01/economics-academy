@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The long tail</title>
+  <desc id="d">The long tail, with sales on the vertical axis and products ranked by sales on the horizontal axis, best-seller first. Sales fall steeply across the few best-selling products on the left, labelled the head. To the right the curve flattens into a long, low tail of niche products that each sell little; the tail is shaded to show that together they add up to a large share of sales.</desc>
+  <!-- geometry
+       Sales: one cubic (112,80) ctrl (150,370) (230,430) to (682,452).
+         Sampled at the checker's 64 steps, x rises and y never falls back
+         on any step: each lower-ranked product sells no more than the one
+         before it.
+       Head | tail split at x = 230: the dashed divider runs from the
+         axis to the curve at (230, 358.14).
+       Tail shading: the divider, then the curve's own sampled vertices
+         (so every shaded vertex is on the flattened curve), then x = 682
+         down to the axis. Shaded area is everything under the curve right
+         of the split.
+       on-curve: 230,358.14 682,452 112,80
+  -->
+  <!-- tail shading -->
+  <path d="M 230.00 520.00 L 230.00 358.14 L 234.28 361.34 L 241.75 366.50 L 249.52 371.47 L 257.60 376.24 L 266.00 380.82 L 274.73 385.23 L 283.78 389.45 L 293.18 393.50 L 302.93 397.38 L 313.04 401.09 L 323.50 404.65 L 334.34 408.04 L 345.56 411.29 L 357.16 414.38 L 369.16 417.34 L 381.56 420.15 L 394.37 422.83 L 407.59 425.38 L 421.24 427.80 L 435.32 430.10 L 449.84 432.28 L 464.81 434.35 L 480.23 436.31 L 496.11 438.17 L 512.46 439.93 L 529.29 441.59 L 546.61 443.17 L 564.41 444.65 L 582.72 446.06 L 601.53 447.38 L 620.86 448.64 L 640.70 449.82 L 661.08 450.94 L 682.00 452.00 L 682.00 520.00 Z" fill="#1d70b8" fill-opacity="0.15"/>
+  <!-- head | tail divider -->
+  <line x1="230" y1="520" x2="230" y2="358.14" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Sales</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Products, ranked by sales</text>
+  <!-- curve -->
+  <path d="M 112,80 C 150,370 230,430 682,452" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- labels -->
+  <text x="160" y="150" font-size="24" fill="#333333">Head: a few best-sellers</text>
+  <text x="456" y="496" font-size="24" fill="#333333" text-anchor="middle">Long tail: many niche products</text>
+</svg>

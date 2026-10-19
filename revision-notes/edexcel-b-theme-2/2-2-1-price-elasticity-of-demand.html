@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
+    <script>
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
+    <title>
+      Price Elasticity of Demand (PED) – Edexcel B A-Level Economics
+    </title>
+    <meta
+      name="description"
+      content="Price Elasticity of Demand (PED) for Edexcel B A-Level Economics (2.2.1). Covers calculating PED, total revenue, its factors and niche and mass markets."
+    />
+    <link
+      rel="canonical"
+      href="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Economics Academy" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="og:url"
+      content="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html"
+    />
+    <meta
+      property="og:title"
+      content="Price Elasticity of Demand (PED) – Edexcel B A-Level Economics"
+    />
+    <meta
+      property="og:description"
+      content="Price Elasticity of Demand (PED) for Edexcel B A-Level Economics (2.2.1). Covers calculating PED, total revenue, its factors and niche and mass markets."
+    />
+    <meta
+      property="og:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Economics Academy logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Price Elasticity of Demand (PED) – Edexcel B A-Level Economics"
+    />
+    <meta
+      name="twitter:description"
+      content="Price Elasticity of Demand (PED) for Edexcel B A-Level Economics (2.2.1). Covers calculating PED, total revenue, its factors and niche and mass markets."
+    />
+    <meta
+      name="twitter:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Price Elasticity of Demand (PED)",
+        "description": "Free Edexcel B A-Level Economics revision notes on price elasticity of demand - calculating and interpreting PED, total revenue, the factors that affect it and pricing in niche and mass markets, for Theme 2.2.1.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 2: The Wider Economic Environment",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-19",
+        "dateModified": "2026-10-19",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Price Elasticity of Demand (PED)"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 2, unit 2.2.1"
+        },
+        "timeRequired": "PT5M"
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 2: The Wider Economic Environment",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "2.2.1 Price Elasticity of Demand (PED)",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-2-1-price-elasticity-of-demand.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Edexcel B, notes only (D66). One entry per OPEN theme: a
+                     theme joins here when its hub leaves notes-data/hubs/drafts/.
+                     No Practice Questions entry - the board has none. -->
+                <li>
+                  <a href="#" role="button">Edexcel B</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <p class="mnav-sub-label">Edexcel B</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <!-- Main Content -->
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/edexcel-b-theme-2/"
+              >Edexcel B Theme 2: The Wider Economic Environment</a
+            >
+            <span class="separator">›</span>
+            <span>2.2.1 Price Elasticity of Demand (PED)</span>
+          </nav>
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html"
+                rel="prev"
+                aria-label="Previous topic: 2.1.5 How Small Firms Compete"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">2.1.5 How Small Firms Compete</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html"
+                rel="next"
+                aria-label="Next topic: 2.2.2 Competing on Price"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">2.2.2 Competing on Price</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Price Elasticity of Demand (PED)</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel B Theme 2, unit 2.2.1"
+                  >Edexcel B<span aria-hidden="true"> · </span>Theme 2<span aria-hidden="true"> · </span>2.2.1</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-10-19">19 October 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> Edexcel B unit 2.2.1 -
+              Price Elasticity of Demand (PED). Students need to calculate and
+              interpret PED, explain what affects it and how it links to total
+              revenue, and use it to explain pricing in niche and mass markets.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#ped-and-the-firm-s-pricing-decision">PED and the Firm's Pricing Decision</a></li>
+                <li><a href="#calculating-ped">Calculating PED</a></li>
+                <li><a href="#interpreting-the-value-of-ped">Interpreting the Value of PED</a></li>
+                <li><a href="#ped-and-total-revenue">PED and Total Revenue</a></li>
+                <li><a href="#pricing-in-niche-and-mass-markets">Pricing in Niche and Mass Markets</a></li>
+                <li><a href="#factors-influencing-ped">Factors Influencing PED</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="ped-and-the-firm-s-pricing-decision">PED and the Firm's Pricing Decision</h2>
+              <p>
+                Every firm that sets its own price faces the same question: if
+                we raise the price, how many customers will we lose? Price
+                elasticity of demand answers it.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Price elasticity of demand (PED):</span>
+                how much the quantity demanded of a product responds to a change
+                in its own price.
+              </p>
+              <p>
+                If demand is <strong>price inelastic</strong>, customers keep
+                buying when the price rises, so the firm can charge more. If it
+                is <strong>price elastic</strong>, a small rise sends many of
+                them to rivals.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="calculating-ped">Calculating PED</h2>
+              <!-- prettier-ignore -->
+              <p>
+                PED compares two percentage changes:
+                \[ \text{PED} = \frac{\%\text{ change in quantity demanded}}{\%\text{ change in price}} \]
+              </p>
+              <p>
+                Work out each percentage change from the original figure (see
+                <a
+                  href="/revision-notes/edexcel-b-theme-1/1-6-1-revenue-and-costs.html"
+                  >unit 1.6.1</a
+                >), then divide. Because price and quantity demanded move in
+                opposite directions, the answer is negative.
+              </p>
+
+              <div class="worked-example">
+                <h3>Worked Example: A Pizza Takeaway</h3>
+                <p>
+                  A takeaway cuts the price of a large pizza from
+                  <strong>£12</strong> to <strong>£10.80</strong>. Weekly sales
+                  rise from <strong>300</strong> to <strong>360</strong>.
+                </p>
+                <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                  <table class="concept-table">
+                    <thead>
+                      <tr>
+                        <th>Step</th>
+                        <th>Working</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>% change in quantity demanded</strong></td>
+                        <td>(360 − 300) ÷ 300 × 100</td>
+                        <td>+20%</td>
+                      </tr>
+                      <tr>
+                        <td><strong>% change in price</strong></td>
+                        <td>(10.80 − 12) ÷ 12 × 100</td>
+                        <td>−10%</td>
+                      </tr>
+                      <tr>
+                        <td><strong>PED</strong></td>
+                        <td>+20 ÷ −10</td>
+                        <td>−2</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Total revenue before</strong></td>
+                        <td>£12 × 300</td>
+                        <td>£3,600</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Total revenue after</strong></td>
+                        <td>£10.80 × 360</td>
+                        <td>£3,888</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  A PED of −2 means sales rose by twice the percentage the price
+                  fell, so demand is price elastic. The extra pizzas more than
+                  make up for the lower price, and weekly revenue rises by £288.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 id="interpreting-the-value-of-ped">Interpreting the Value of PED</h2>
+              <p>
+                Ignore the minus sign when you classify. What matters is the
+                size of the number: −2 is more elastic than −0.5.
+              </p>
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                <table class="concept-table">
+                  <thead>
+                    <tr>
+                      <th class="width-25">PED (ignoring the sign)</th>
+                      <th class="width-25">Demand is</th>
+                      <th class="width-50">What it means</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>0</strong></td>
+                      <td>Perfectly inelastic</td>
+                      <td>Quantity demanded does not change at all</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Between 0 and 1</strong></td>
+                      <td>Price inelastic</td>
+                      <td>
+                        Quantity changes by a smaller percentage than price
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>1</strong></td>
+                      <td>Unitary elastic</td>
+                      <td>Quantity changes by the same percentage as price</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Greater than 1</strong></td>
+                      <td>Price elastic</td>
+                      <td>
+                        Quantity changes by a larger percentage than price
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Infinite</strong></td>
+                      <td>Perfectly elastic</td>
+                      <td>Any rise in price and sales fall to zero</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                The number also tells you the size of the response. A PED of
+                −0.4 means a 10% price rise cuts quantity demanded by 4%.
+              </p>
+              <figure class="diagram-figure">
+                <a class="diagram-zoom" href="/images/diagrams/price-elasticity-demand-ranges.png">
+                <picture>
+                <source type="image/webp" srcset="/images/diagrams/price-elasticity-demand-ranges.webp" />
+                <img
+                  src="/images/diagrams/price-elasticity-demand-ranges.png"
+                  alt="Five demand diagrams with P on the vertical axis and Q on the horizontal axis. Perfectly price inelastic: a vertical demand curve D at Q1, so a fall in price from P1 to P2 leaves quantity unchanged. Relatively price inelastic: a steep D, where the fall from P1 to P2 raises quantity only a little, from Q1 to Q2. Unitary price elastic: a curved D bowed in towards the origin. Perfectly price elastic: a horizontal D at P1, with quantity anywhere from Q1 to Q2 at that price. Relatively price elastic: a shallow D, where a small fall from P1 to P2 raises quantity a lot, from Q1 to Q2"
+                  class="diagram-image"
+                  width="1885"
+                  height="1209"
+                  fetchpriority="high"
+                />
+                </picture>
+                </a>
+                <figcaption class="diagram-caption">
+                  Figure 1: The PED ranges. The steeper the demand curve through
+                  a given price, the less quantity responds to a change in price
+                </figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h2 id="ped-and-total-revenue">PED and Total Revenue</h2>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Total revenue:</span> the money a
+                firm receives from selling its product (also called sales
+                revenue):
+                \[ \text{Total revenue} = \text{Price} \times \text{Quantity sold} \]
+              </p>
+              <p>
+                A price change pulls total revenue two ways: more money on each
+                unit, but fewer units sold, or the reverse. PED tells you which
+                effect wins.
+              </p>
+              <ul>
+                <li>
+                  <strong>Inelastic demand:</strong> price rises 10% &rarr;
+                  sales fall by less than 10% &rarr; the higher price outweighs
+                  the lost sales &rarr; total revenue rises. A price cut makes
+                  revenue fall.
+                </li>
+                <li>
+                  <strong>Elastic demand:</strong> price rises 10% &rarr; sales
+                  fall by more than 10% &rarr; the lost sales outweigh the
+                  higher price &rarr; total revenue falls. A price cut makes
+                  revenue rise, as it did for the takeaway.
+                </li>
+                <li>
+                  <strong>Unitary elastic demand:</strong> the two effects
+                  cancel out, so total revenue stays the same.
+                </li>
+              </ul>
+              <div class="exam-tip">
+                <p>
+                  <strong>Higher revenue is not the same as higher profit.</strong>
+                  The takeaway's revenue rose by £288, but it made 60 more
+                  pizzas. If each costs £4 in ingredients and packaging, costs
+                  rise by £240 and profit by only £48. Before you recommend a
+                  price cut, check what the extra units cost to make.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 id="pricing-in-niche-and-mass-markets">Pricing in Niche and Mass Markets</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Mass market:</span> a large market
+                in which many firms sell similar products to customers with
+                broadly the same needs.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Niche market:</span> a small,
+                clearly defined part of a larger market, with its own
+                particular needs (<a
+                  href="/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html"
+                  >unit 2.1.5</a
+                >).
+              </p>
+              <p>PED usually differs between the two, and so does the right price:</p>
+              <ul>
+                <li>
+                  <strong>A firm in a mass market:</strong> many rivals sell
+                  near-identical products &rarr; customers have plenty of close
+                  substitutes &rarr; demand for one firm's product is price
+                  elastic &rarr; a price rise loses so many sales that revenue
+                  falls. Firms price close to their rivals and rely on high
+                  volume at a low margin.
+                </li>
+                <li>
+                  <strong>A firm in a niche market:</strong> a specialist
+                  product with few substitutes and loyal buyers &rarr; demand is
+                  price inelastic &rarr; the firm can charge a premium and lose
+                  few sales &rarr; a high margin on a low volume.
+                </li>
+              </ul>
+              <p>
+                This is why firms work to make demand less price elastic,
+                through branding and other non-price competition (<a
+                  href="/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html"
+                  >unit 2.2.3</a
+                >).
+              </p>
+              <p>How useful PED is for setting a price depends on:</p>
+              <ul>
+                <li>
+                  <strong>How rivals react:</strong> in a mass market, a price
+                  cut that rivals match wins few extra sales, so revenue falls
+                  for everyone.
+                </li>
+                <li>
+                  <strong>How reliable the estimate is:</strong> PED is worked
+                  out from past sales, while tastes, incomes and rivals' prices
+                  keep changing. It also holds only for small price changes.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="factors-influencing-ped">Factors Influencing PED</h2>
+              <p>Demand is more price elastic when:</p>
+              <ul>
+                <li>
+                  <strong>There are more, and closer, substitutes:</strong>
+                  customers can switch easily when the price rises. This is the
+                  most important factor.
+                </li>
+                <li>
+                  <strong>The product is a luxury, not a necessity:</strong>
+                  people can go without a meal out, but not without heating
+                  their home.
+                </li>
+                <li>
+                  <strong>It takes a large share of income:</strong> a 10% rise
+                  in the price of a car is noticed far more than a 10% rise in
+                  the price of salt.
+                </li>
+                <li>
+                  <strong>Customers have more time to respond:</strong> in the
+                  short run people are stuck with their habits. Over time they
+                  find alternatives, so demand becomes more elastic.
+                </li>
+                <li>
+                  <strong>The market is defined narrowly:</strong> demand for
+                  petrol is inelastic, but demand for petrol from one filling
+                  station is elastic, because the next one is a short drive
+                  away.
+                </li>
+              </ul>
+              <p>
+                Demand is less elastic where buyers are loyal to a brand or
+                the product is habit-forming, such as cigarettes.
+              </p>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-2/2-2-3-non-price-competition.html">Types of Non-Price Competition</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html">Income Elasticity of Demand (YED)</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/edexcel-b/">Edexcel B past papers</a>
+                  <p class="topic-next__note">Question papers and mark schemes for every Edexcel B A-Level and AS paper, by paper and year.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-2/2-1-5-how-small-firms-compete.html"
+                rel="prev"
+                aria-label="Previous topic: 2.1.5 How Small Firms Compete"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">2.1.5 How Small Firms Compete</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-2/2-2-2-competing-on-price.html"
+                rel="next"
+                aria-label="Next topic: 2.2.2 Competing on Price"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">2.2.2 Competing on Price</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
+  </body>
+</html>

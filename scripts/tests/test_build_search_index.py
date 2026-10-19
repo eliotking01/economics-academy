@@ -72,7 +72,10 @@ class TestSearchIndex(unittest.TestCase):
 
     def test_notes_only_rows_match_their_pages(self):
         """A notes-only topic's spec is the code its own page shows, and its
-        title is its own <h1> - nothing minted here."""
+        title is its own <h1> - nothing minted here. The <h1> is HTML and the
+        index row is plain text, so entities are decoded before comparing
+        (2.1.3's "R&amp;D" is the index's "R&D")."""
+        import html
         import re
         for di, slug, spec, title, short, headings, ppq in self.index["topics"]:
             notes_dir, *_rest, quiz = self.index["dirs"][di]
@@ -84,7 +87,8 @@ class TestSearchIndex(unittest.TestCase):
             page = (ROOT / f"revision-notes/{notes_dir}/{slug}.html"
                     ).read_text(encoding="utf-8")
             h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S).group(1)
-            self.assertEqual(" ".join(h1.split()), title, msg=slug)
+            self.assertEqual(" ".join(html.unescape(h1).split()), title,
+                             msg=slug)
 
     def test_deck_rows_resolve(self):
         for title, url, di in self.index["decks"]:

@@ -1902,7 +1902,7 @@ mode renders "%" in both engines; proved in a side-by-side render under
 the site's own MathJax config before the edit, and on the rebuilt pages
 after it. These were the only two slices with the pattern.
 
-## N-Q21 — comparative-advantage worked example: Eliot's 2026-08-14 verdict reverses CONTENT_ISSUES #26 (carried from the audit, logged 2026-08-26)
+## N-Q21 — comparative-advantage worked example: Eliot's 2026-08-14 verdict reverses CONTENT_ISSUES #26 (carried from the audit, logged 2026-08-26; RESOLVED 2026-10-19)
 
 Carried out of `docs/audit/PROGRESS.md`'s final handover during the
 September clean-up so it lives in the content log, not only in the audit
@@ -1919,6 +1919,25 @@ figcaptions and the macro gallery blurb. The redrawn
 diagram currently disagree: a live defect, not a pending preference.
 Needs its own session and an explicit instruction before any page is
 touched (hard rule 2); nothing has been changed.
+
+**Resolved 2026-10-19, on Eliot's instruction** (his answer to question 2
+of the Edexcel B unit 2.4 review sheet: "fix the SVG or draft a new one that
+fits with the example for all of the pages"). The SVG is redrawn with
+Germany holding the absolute advantage in both goods, using the original
+PNG's numbers: Germany 20mn chips or 200mn T-shirts, Vietnam 10mn or 150mn.
+Opportunity costs are now 10 and 15 T-shirts per chip, 0.1 and 0.07 chips
+per T-shirt. Full specialisation from the half-and-half baseline cannot
+raise output of both goods when one country is better at both (#23), and
+Eliot ruled out partial specialisation on 2026-08-06, so the gain is shown
+through trade instead. Each country specialises fully, they swap 5m chips
+for 60mn T-shirts, and both consume beyond their own PPF: Germany 15m chips
+and 60mn T-shirts against 50mn alone, Vietnam 5m chips and 90mn T-shirts
+against 75mn alone. Applied identically to `4-1-2` and `2-6-2` (caption,
+absolute-advantage paragraph, midpoint outputs, the four opportunity-cost
+bullets, closing paragraph), to Edexcel B `2-4-3`, to both diagram
+flashcards (back, alt text, version 3) and to the macro gallery blurb, which
+again says trade pays "even if one country has an absolute advantage in both
+goods". `comparative-advantage.png` now agrees with the SVG again.
 
 ## N-Q22 — Adam Smith's pin factory: "24,000% productivity increase" overstates Smith's figures (logged 2026-09-27)
 
