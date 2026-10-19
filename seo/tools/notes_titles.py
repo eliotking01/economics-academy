@@ -152,6 +152,10 @@ DISPLAY_NAME = {
     # the full name, "Developed, Emerging and Developing Economies",
     # overflows HARD_MAX by 9.
     "2-4-2-developed-emerging-and-developing-economies": "Emerging & Developing Economies",
+    # Proposed 2026-10-19, on Eliot's approval list in review/unit-2-5.md;
+    # the full name, "Circular Flow of Income, Expenditure and Output",
+    # overflows HARD_MAX by 12.
+    "2-5-2-circular-flow-of-income": "The Circular Flow of Income",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
