@@ -144,11 +144,11 @@ DISPLAY_NAME = {
     # the full name, "How the Digital Economy Affects Markets and Firms",
     # overflows HARD_MAX by 14.
     "2-1-4-the-digital-economy": "The Digital Economy",
-    # Proposed 2026-10-19, on Eliot's approval list in review/unit-2-3.md;
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-3.md);
     # the full name, "Efficiency and Competitiveness Using Lean
     # Production", overflows HARD_MAX by 17.
     "2-3-3-lean-production": "Lean Production",
-    # Proposed 2026-10-19, on Eliot's approval list in review/unit-2-4.md;
+    # Proposed and approved by Eliot 2026-10-19 (review/unit-2-4.md);
     # the full name, "Developed, Emerging and Developing Economies",
     # overflows HARD_MAX by 9.
     "2-4-2-developed-emerging-and-developing-economies": "Emerging & Developing Economies",
