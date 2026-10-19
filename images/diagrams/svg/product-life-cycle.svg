@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">Product life cycle</title>
+  <desc id="d">The product life cycle, with sales on the vertical axis and time on the horizontal axis. Sales start at zero and rise slowly in the introduction stage, rise steeply in the growth stage, level off and peak in the maturity stage, and fall in the decline stage. Dashed lines mark where each stage ends. Near the start of decline, a second curve labelled extension strategy branches off and lifts sales again.</desc>
+  <!-- geometry
+       Sales: Catmull-Rom spline through 100,520 175,506 250,452 325,322 400,205 470,165 545,188 615,262 682,345,
+         written as cubic Beziers. Sampled at the checker's 64 steps per
+         cubic, x rises on every step, so time only moves forward. Peak
+         (lowest y) at (478.01, 164.51), inside maturity.
+       Stage boundaries at x = 250, 400, 545 (bands 150, 150, 145 wide):
+         introduction | growth | maturity | decline. Each dashed divider
+         runs from the time axis up to the sales curve, at
+         (250, 452.00), (400, 205.00), (545, 188.00).
+       Extension strategy: Catmull-Rom spline that leaves the sales curve at
+         its sampled vertex (559.59, 199.59), just after decline starts, and
+         is one cubic: first control point on the blue curve's tangent at the
+         branch (587.59,225.07), second 612,150, ending 682,150, so it leaves
+         smoothly, dips at most to y = 204.87, then rises above the old
+         maturity level. The original curve falls on to 682,345.
+       intersections: 559.59,199.59
+       on-curve: 250,452.00 400,205.00 545,188.00 100,520
+  -->
+  <!-- stage dividers: time axis up to the sales curve -->
+  <line x1="250" y1="520" x2="250" y2="452.00" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="400" y1="520" x2="400" y2="205.00" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="545" y1="520" x2="545" y2="188.00" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="50" font-size="26" fill="#333333">Sales</text>
+  <text x="700" y="552" font-size="26" fill="#333333" text-anchor="end">Time</text>
+  <!-- curves: sales blue, the extended path accent red -->
+  <path d="M 100.00,520.00 C 112.50,517.67 150.00,517.33 175.00,506.00 C 200.00,494.67 225.00,482.67 250.00,452.00 C 275.00,421.33 300.00,363.17 325.00,322.00 C 350.00,280.83 375.83,231.17 400.00,205.00 C 424.17,178.83 445.83,167.83 470.00,165.00 C 494.17,162.17 520.83,171.83 545.00,188.00 C 569.17,204.17 592.17,235.83 615.00,262.00 C 637.83,288.17 670.83,331.17 682.00,345.00" fill="none" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 559.59,199.59 C 587.59,225.07 612.00,150.00 682.00,150.00" fill="none" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- stage names, centred in each band -->
+  <text x="175" y="92" font-size="24" fill="#333333" text-anchor="middle">Introduction</text>
+  <text x="325" y="92" font-size="24" fill="#333333" text-anchor="middle">Growth</text>
+  <text x="472.5" y="92" font-size="24" fill="#333333" text-anchor="middle">Maturity</text>
+  <text x="617.5" y="92" font-size="24" fill="#333333" text-anchor="middle">Decline</text>
+  <!-- labels -->
+  <text x="622" y="126" font-size="26" font-weight="700" fill="#d52349" text-anchor="middle">Extension strategy</text>
+  <text x="690" y="353" font-size="26" font-weight="700" fill="#1d70b8">Sales</text>
+</svg>
