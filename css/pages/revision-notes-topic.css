@@ -600,6 +600,17 @@
   color: var(--nt-navy);
 }
 
+/* Display maths written inside a <p>, outside any formula-box, had no
+   scroll container: on a 390px phone a long formula ran off the screen
+   (1.6.2's contribution formula was the case found, 2026-10-18). It now
+   scrolls sideways like a table. The small vertical padding keeps
+   overflow-y: hidden from clipping a fraction's descenders. */
+.revision-notes-content mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.1em 0;
+}
+
 /* ==========================================================================
    8. Tables
    ========================================================================== */
