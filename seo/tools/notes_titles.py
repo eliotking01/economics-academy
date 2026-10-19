@@ -148,6 +148,10 @@ DISPLAY_NAME = {
     # the full name, "Efficiency and Competitiveness Using Lean
     # Production", overflows HARD_MAX by 17.
     "2-3-3-lean-production": "Lean Production",
+    # Proposed 2026-10-19, on Eliot's approval list in review/unit-2-4.md;
+    # the full name, "Developed, Emerging and Developing Economies",
+    # overflows HARD_MAX by 9.
+    "2-4-2-developed-emerging-and-developing-economies": "Emerging & Developing Economies",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
