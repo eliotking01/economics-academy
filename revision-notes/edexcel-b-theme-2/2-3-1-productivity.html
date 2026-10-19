@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <!-- Google Analytics (gtag.js) is loaded by the function below ONLY once
+         the visitor has agreed - js/components/consent.js asks, once, and
+         stores the answer in localStorage. Until then the analytics script
+         is not requested and no analytics cookie is set. -->
+    <script>
+      window.eaLoadAnalytics = function () {
+        if (window.gtag) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", "G-YVCNRW4QH6");
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-YVCNRW4QH6";
+        document.head.appendChild(s);
+      };
+      try {
+        if (localStorage.getItem("ea-consent") === "yes") {
+          window.eaLoadAnalytics();
+        }
+      } catch (e) {}
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d52349" />
+    <title>Productivity – Edexcel B A-Level Economics Revision Notes</title>
+    <meta
+      name="description"
+      content="Productivity for Edexcel B A-Level Economics (2.3.1). Covers labour productivity, its links to competitiveness, wages and growth, and capital intensity."
+    />
+    <link
+      rel="canonical"
+      href="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Economics Academy" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="og:url"
+      content="https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html"
+    />
+    <meta
+      property="og:title"
+      content="Productivity – Edexcel B A-Level Economics Revision Notes"
+    />
+    <meta
+      property="og:description"
+      content="Productivity for Edexcel B A-Level Economics (2.3.1). Covers labour productivity, its links to competitiveness, wages and growth, and capital intensity."
+    />
+    <meta
+      property="og:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Economics Academy logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Productivity – Edexcel B A-Level Economics Revision Notes"
+    />
+    <meta
+      name="twitter:description"
+      content="Productivity for Edexcel B A-Level Economics (2.3.1). Covers labour productivity, its links to competitiveness, wages and growth, and capital intensity."
+    />
+    <meta
+      name="twitter:image"
+      content="https://economicsacademy.co.uk/og-image.png?v=1"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "Productivity",
+        "description": "Free Edexcel B A-Level Economics revision notes on productivity - calculating labour productivity, its factors, its links to competitiveness, wages and economic growth, and labour- vs capital-intensive production, for Theme 2.3.1.",
+        "url": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html",
+        "educationalLevel": "A-Level",
+        "learningResourceType": "Revision Notes",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@type": "Course",
+          "name": "Edexcel B A-Level Economics Theme 2: The Wider Economic Environment",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "@id": "https://economicsacademy.co.uk/#organization",
+            "name": "Economics Academy",
+            "url": "https://economicsacademy.co.uk"
+          }
+        },
+        "datePublished": "2026-10-19",
+        "dateModified": "2026-10-19",
+        "author": {
+          "@type": "Person",
+          "@id": "https://economicsacademy.co.uk/about.html#eliot-king",
+          "name": "Eliot King",
+          "jobTitle": "A-Level Economics Tutor",
+          "url": "https://economicsacademy.co.uk/about.html"
+        },
+        "publisher": {
+          "@id": "https://economicsacademy.co.uk/#organization"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Productivity"
+        },
+        "educationalAlignment": {
+          "@type": "AlignmentObject",
+          "alignmentType": "educationalSubject",
+          "targetName": "Edexcel B A-Level Economics Theme 2, unit 2.3.1"
+        },
+        "timeRequired": "PT5M"
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Linked here rather than @imported from main.css: an @import inside a
+         render-blocking stylesheet is invisible to the preload scanner, so the
+         request could not start until main.css had parsed. The fonts are
+         self-hosted under /webfonts/ and declared in the stylesheets; the body
+         face is preloaded here. See seo/09-web-vitals-baseline.md. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preload"
+      href="/webfonts/source-sans-pro-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/revision-notes-topic.css" />
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["\\(", "\\)"],
+          ], // \(...\) only - the $...$ delimiter was removed, D23
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true, // Allows \_ in text
+          autoload: {
+            color: [],
+            ams: ["boldsymbol"], // For \mathbf{}
+          },
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://economicsacademy.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Revision Notes",
+            "item": "https://economicsacademy.co.uk/revision-notes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Edexcel B Theme 2: The Wider Economic Environment",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "2.3.1 Productivity",
+            "item": "https://economicsacademy.co.uk/revision-notes/edexcel-b-theme-2/2-3-1-productivity.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <!-- BEGIN templates/header.html - baked at build time; edit the template, not this -->
+      <!-- templates/header.html -->
+      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <!-- A <header> element, not a <section>: this is the site's banner landmark and
+           there was none anywhere on the site. The id is unchanged because every rule
+           in css/main.css targets #header. PH08-037. -->
+      <header id="header">
+        <!-- Site search, 2026-08-24. A real link to /revision-notes/ with scripting
+             off; js/components/site-search.js upgrades it to open the search
+             overlay. First in the header so that below 768px, where it sits in
+             normal flow, it renders above the site title; on desktop
+             css/main.css floats it top-right in the header's own padding.
+             fa-search is in the shipped Font Awesome subset. Styled by the
+             .site-search block at the end of css/main.css. -->
+        <a class="site-search-open" href="/revision-notes/" aria-label="Search this site">
+          <span class="icon solid fa-search" aria-hidden="true"></span>
+          <span class="site-search-open__label">Search&hellip;</span>
+        </a>
+        <!-- Deliberately a paragraph, not a top-level heading. This template is
+             injected above every page's own heading, so a heading here made the
+             document outline open with the site name on all 463 pages and put
+             "Economics Academy" ahead of the page title for anyone navigating by
+             heading. Styled by #header .site-title. PH08-036.
+             No literal tag names in this comment: several tools in this repo count
+             headings by grepping the raw source. -->
+        <p class="site-title"><a href="/">Economics Academy</a></p>
+        <p>The Home of A-Level Economics.</p>
+
+        <nav id="nav">
+          <ul>
+            <li data-page="home"><a href="/">Home</a></li>
+            <li data-page="tutoring"><a href="/tutoring.html">Tutoring</a></li>
+            <li data-page="marking"><a href="/marking.html">Marking</a></li>
+            <li data-page="revision-notes" class="current">
+              <a href="/revision-notes/">Revision Notes</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/revision-notes/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Edexcel B, notes only (D66). One entry per OPEN theme: a
+                     theme joins here when its hub leaves notes-data/hubs/drafts/.
+                     No Practice Questions entry - the board has none. -->
+                <li>
+                  <a href="#" role="button">Edexcel B</a>
+                  <ul>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-2/">Theme 2</a>
+                    </li>
+                    <li>
+                      <a href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/revision-notes/macro-application/"
+                    >Macro Application</a
+                  >
+                </li>
+                <li>
+                  <a href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Top-level, because /flashcards/ is a root URL. CLAUDE.md's rule is
+                 that a feature nests under the section it belongs to and only a
+                 standalone tool sits at root; the URL had already declared it
+                 standalone while the nav presented it as a Revision Notes sub-item.
+                 PH07-057. -->
+            <li data-page="flashcards"><a href="/flashcards/">Flashcards</a></li>
+            <li data-page="practice-questions">
+              <a href="/practice-questions/">Practice Questions</a>
+              <ul>
+                <li>
+                  <a href="#" role="button">Edexcel A</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-1/"
+                        >Theme 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-2/"
+                        >Theme 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-3/"
+                        >Theme 3</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/edexcel-theme-4/"
+                        >Theme 4</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" role="button">AQA</a>
+                  <ul>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-micro/"
+                        >Microeconomics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/practice-questions/aqa-a2-macro/"
+                        >Macroeconomics</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-page="past-papers">
+              <a href="/past-papers/">Past Papers</a>
+              <ul>
+                <li>
+                  <a href="/past-paper-questions/">Search Past Paper Questions</a>
+                </li>
+                <li><a href="/past-papers/aqa/">AQA Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel/">Edexcel Papers</a>
+                </li>
+                <li><a href="/past-papers/ocr/">OCR Papers</a></li>
+                <li>
+                  <a href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                </li>
+              </ul>
+            </li>
+            <li data-page="about"><a href="/about.html">About</a></li>
+            <li data-page="contact"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile navigation, 2026-08-24 (PR #26). Complete WITHOUT JavaScript:
+             below 768px this renders in the page flow as a single "Menu" row whose
+             native details opens the full grouped list, so a phone visitor whose
+             scripts fail still has every link - the old panel existed only after
+             nav.js ran, and a script failure left no navigation at all.
+             js/components/nav.js enhances this block into the sliding drawer
+             (body.mnav-enhanced); at 768px and up it is display: none and the
+             desktop nav above is untouched. Board names inside a group are
+             deliberately labels, not links - the old panel's four href="#" rows
+             did nothing when tapped. One data-mpage element per PAGE_MAP key:
+             page_shell._block() marks the current page's with data-mnav-current
+             at bake time, the same single source as li.current above. Styled by
+             the mobile-navigation block in css/main.css. -->
+        <nav id="mobileNav" aria-label="Site menu">
+          <details class="mnav-root">
+            <summary class="mnav-menu-row">
+              <span class="icon solid fa-bars" aria-hidden="true"></span>
+              Menu
+            </summary>
+            <div class="mnav-sheet">
+              <a class="mnav-row" data-mpage="home" href="/">Home</a>
+
+              <p class="mnav-section">Free resources</p>
+
+              <details class="mnav-group" data-mpage="revision-notes" data-mnav-current>
+                <summary>
+                  Revision Notes
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/aqa-a2-macro/">Macroeconomics</a>
+                <p class="mnav-sub-label">Edexcel B</p>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/revision-notes/edexcel-b-theme-4/">Theme 4</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/macro-application/">Macro Application</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/glossary/">Glossary &amp; Formulae</a>
+                <a class="mnav-row mnav-row-plain" href="/revision-notes/">All revision notes</a>
+              </details>
+
+              <details class="mnav-group" data-mpage="practice-questions">
+                <summary>
+                  Practice Questions
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <p class="mnav-sub-label">Edexcel A</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-1/">Theme 1</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-2/">Theme 2</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-3/">Theme 3</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/edexcel-theme-4/">Theme 4</a>
+                <p class="mnav-sub-label">AQA</p>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-micro/">Microeconomics</a>
+                <a class="mnav-row mnav-row-sub" href="/practice-questions/aqa-a2-macro/">Macroeconomics</a>
+                <a class="mnav-row mnav-row-plain" href="/practice-questions/">All practice questions</a>
+              </details>
+
+              <a class="mnav-row" data-mpage="flashcards" href="/flashcards/">Flashcards</a>
+
+              <details class="mnav-group" data-mpage="past-papers">
+                <summary>
+                  Past Papers
+                  <span class="icon solid fa-plus" aria-hidden="true"></span>
+                </summary>
+                <a class="mnav-row mnav-row-plain" href="/past-paper-questions/">Search Past Paper Questions</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/aqa/">AQA Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel/">Edexcel Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/ocr/">OCR Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/edexcel-b/">Edexcel B Papers</a>
+                <a class="mnav-row mnav-row-plain" href="/past-papers/">All past papers</a>
+              </details>
+
+              <p class="mnav-section">Work with Eliot</p>
+              <div class="mnav-money">
+                <a class="mnav-row" data-mpage="tutoring" href="/tutoring.html">
+                  <span class="icon solid fa-chalkboard-teacher" aria-hidden="true"></span>
+                  Tutoring
+                </a>
+                <a class="mnav-row" data-mpage="marking" href="/marking.html">
+                  <span class="icon solid fa-check-double" aria-hidden="true"></span>
+                  Marking
+                </a>
+              </div>
+
+              <div class="mnav-foot">
+                <a class="mnav-row" data-mpage="about" href="/about.html">About</a>
+                <a class="mnav-row" data-mpage="contact" href="/contact.html">Contact</a>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </header>
+      <!-- END templates/header.html -->
+
+      <!-- Main Content -->
+      <main id="main" class="revision-notes-content">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/">Revision Notes</a>
+            <span class="separator">›</span>
+            <a href="/revision-notes/edexcel-b-theme-2/"
+              >Edexcel B Theme 2: The Wider Economic Environment</a
+            >
+            <span class="separator">›</span>
+            <span>2.3.1 Productivity</span>
+          </nav>
+          <div class="notes-container">
+            <nav
+              class="topic-nav topic-nav--top"
+              aria-label="Topic navigation, before the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html"
+                rel="prev"
+                aria-label="Previous topic: 2.2.4 Income Elasticity of Demand (YED)"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">2.2.4 Income Elasticity of Demand (YED)</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html"
+                rel="next"
+                aria-label="Next topic: 2.3.2 Capacity Utilisation"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">2.3.2 Capacity Utilisation</span>
+              </a>
+            </nav>
+
+            <header class="major">
+              <h1>Productivity</h1>
+              <p class="topic-meta">
+                <span class="topic-meta__spec" aria-label="Edexcel B Theme 2, unit 2.3.1"
+                  >Edexcel B<span aria-hidden="true"> · </span>Theme 2<span aria-hidden="true"> · </span>2.3.1</span
+                >
+                <span class="topic-meta__updated"
+                  >Updated <time datetime="2026-10-19">19 October 2026</time></span
+                >
+              </p>
+              <p class="topic-byline">
+                Written by
+                <a class="topic-byline__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                <span class="topic-byline__credentials"
+                  >— First-Class BSc (Hons) Economics, University of Bath · 6+ years teaching A-Level Economics · Edexcel A, Edexcel B, AQA and OCR</span
+                >
+              </p>
+            </header>
+
+            <div class="spec-alert">
+              <strong>Specification Coverage:</strong> Edexcel B unit 2.3.1 -
+              Productivity. Students need to calculate productivity, explain
+              what influences it and how it links to competitiveness, wages and
+              economic growth, and distinguish labour-intensive from
+              capital-intensive production.
+            </div>
+            <nav class="topic-contents" aria-labelledby="topic-contents-label">
+              <p class="topic-contents__label" id="topic-contents-label">On this page</p>
+              <ol class="topic-contents__list">
+                <li><a href="#what-productivity-measures">What Productivity Measures</a></li>
+                <li><a href="#factors-influencing-productivity">Factors Influencing Productivity</a></li>
+                <li><a href="#productivity-and-competitiveness">Productivity and Competitiveness</a></li>
+                <li><a href="#productivity-and-wages">Productivity and Wages</a></li>
+                <li><a href="#productivity-and-economic-growth">Productivity and Economic Growth</a></li>
+                <li><a href="#labour-intensive-and-capital-intensive-production">Labour-Intensive and Capital-Intensive Production</a></li>
+              </ol>
+            </nav>
+
+            <section>
+              <h2 id="what-productivity-measures">What Productivity Measures</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Productivity:</span> output per
+                unit of input in a given time period.
+              </p>
+              <!-- prettier-ignore -->
+              <p class="topic-definition">
+                <span class="key-definition">Labour productivity:</span> output
+                per worker, or per hour worked, in a given period:
+                \[ \text{Labour productivity} = \frac{\text{Output}}{\text{Workers}} \]
+              </p>
+              <p>
+                A bakery where 5 bakers make 2,000 loaves a day has labour
+                productivity of 2,000 ÷ 5 = 400 loaves per baker per day. If a
+                faster mixer lets the same 5 bakers make 2,500 loaves,
+                productivity rises to 500.
+              </p>
+              <p>
+                Output per hour is fairer when staff work different hours, and
+                it is the measure usually quoted for the UK economy.
+              </p>
+              <div class="exam-tip">
+                <p>
+                  <strong>Productivity is not the same as output.</strong> If
+                  the bakery hires a sixth baker and makes 2,400 loaves, output
+                  has risen but productivity is still 400 loaves per baker.
+                  Productivity only rises when each worker, or each hour,
+                  produces more.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 id="factors-influencing-productivity">Factors Influencing Productivity</h2>
+              <p>
+                Productivity rises when workers have better tools, better
+                skills or a better-organised job. The main influences are:
+              </p>
+              <ul>
+                <li>
+                  <strong>Capital and technology:</strong> more and better
+                  machinery, software and equipment. A warehouse picker with a
+                  handheld scanner fills more orders an hour than one working
+                  from a paper list.
+                </li>
+                <li>
+                  <strong>Skills and training:</strong> trained staff work
+                  faster and make fewer mistakes, so less time goes on putting
+                  them right.
+                </li>
+                <li>
+                  <strong>Management and organisation:</strong> clear roles,
+                  good planning and the division of labour (<a
+                    href="/revision-notes/edexcel-b-theme-1/1-2-4-specialisation.html"
+                    >unit 1.2.4</a
+                  >) cut the time spent waiting or switching tasks. Lean
+                  production (<a
+                    href="/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html"
+                    >unit 2.3.3</a
+                  >) has the same aim.
+                </li>
+                <li>
+                  <strong>Motivation:</strong> staff who are fairly paid,
+                  secure and involved in decisions tend to work harder and stay
+                  longer, so less time is lost training replacements.
+                </li>
+                <li>
+                  <strong>Infrastructure:</strong> fast broadband and reliable
+                  transport cut the time firms lose to delays. These are mostly
+                  outside one firm's control.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="productivity-and-competitiveness">Productivity and Competitiveness</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Competitiveness:</span> a firm's
+                ability to win sales from its rivals, on price or on quality.
+              </p>
+              <p>
+                Productivity matters because of <strong>unit labour
+                cost</strong>, the labour cost of making one unit. A worker
+                paid £12 an hour who makes 20 units an hour costs 60p a unit.
+                If productivity rises to 30 units an hour at the same wage, the
+                cost falls to 40p.
+              </p>
+              <p>When productivity rises:</p>
+              <ul>
+                <li>
+                  <strong>The firm:</strong> more output per worker &rarr; lower
+                  unit labour cost &rarr; lower average cost &rarr; it can cut
+                  prices to win sales, or keep them and earn a wider margin.
+                </li>
+                <li>
+                  <strong>Exporters:</strong> lower unit costs &rarr; UK goods
+                  can be priced below overseas rivals' &rarr; more export
+                  sales.
+                </li>
+                <li>
+                  <strong>Rivals:</strong> one firm cuts its prices &rarr;
+                  rivals lose sales &rarr; they must raise their own
+                  productivity or accept lower profit.
+                </li>
+              </ul>
+              <p>
+                A firm whose productivity falls behind its rivals' faces the
+                reverse: higher unit costs, thinner margins and lost sales.
+              </p>
+              <p>The gain in competitiveness depends on:</p>
+              <ul>
+                <li>
+                  <strong>Wages:</strong> if pay rises as fast as productivity,
+                  unit labour cost does not fall.
+                </li>
+                <li>
+                  <strong>The cost of the gain:</strong> machinery and training
+                  are paid for up front, so average cost can rise before it
+                  falls.
+                </li>
+                <li>
+                  <strong>Demand:</strong> the extra output only lowers unit
+                  costs for good if the firm can sell it.
+                </li>
+                <li>
+                  <strong>Rivals' productivity:</strong> competitiveness is
+                  relative. A firm that improves by 2% a year still falls behind
+                  rivals improving by 5%.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="productivity-and-wages">Productivity and Wages</h2>
+              <p>
+                Higher productivity is what lets a firm pay more without raising
+                its prices.
+              </p>
+              <ul>
+                <li>
+                  <strong>Workers:</strong> each worker produces more &rarr;
+                  their work is worth more to the firm &rarr; it can raise pay
+                  and keep unit labour cost the same &rarr; higher real wages.
+                </li>
+                <li>
+                  <strong>Firms, when pay outruns productivity:</strong> wages
+                  rise faster than output per worker &rarr; unit labour cost
+                  rises &rarr; the firm raises prices or accepts lower profit,
+                  and may cut jobs.
+                </li>
+              </ul>
+              <p>
+                The link also runs the other way: better pay can raise
+                productivity, because motivated staff work harder and fewer
+                leave.
+              </p>
+              <p>Whether workers share in a productivity gain depends on:</p>
+              <ul>
+                <li>
+                  <strong>Bargaining power:</strong> when staff are hard to
+                  find, or a trade union is strong, workers can push for a
+                  share. Otherwise the firm may keep the gain as profit.
+                </li>
+                <li>
+                  <strong>Where the gain came from:</strong> if a machine now
+                  does work people used to do, output per worker rises but some
+                  jobs go.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="productivity-and-economic-growth">Productivity and Economic Growth</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Economic growth:</span> an
+                increase in real GDP, the value of an economy's output adjusted
+                for inflation (unit 2.5.1).
+              </p>
+              <p>
+                An economy can produce more by putting more people to work, or
+                by getting more from each worker. The workforce grows slowly, so
+                lasting rises in output per person, and in living standards,
+                depend on productivity.
+              </p>
+              <p>
+                Productivity rises across the economy &rarr; more output from
+                the same workers &rarr; the economy's productive potential grows
+                &rarr; higher real incomes, and more tax revenue for the
+                government.
+              </p>
+              <p>
+                Before the 2008 financial crisis, UK output per hour grew by
+                about 2% a year. In the decade after, it grew by just 0.3% a
+                year. This slowdown is known as the UK
+                <strong>productivity puzzle</strong>, and it has held back both
+                pay and economic growth.
+              </p>
+            </section>
+
+            <section>
+              <h2 id="labour-intensive-and-capital-intensive-production">Labour-Intensive and Capital-Intensive Production</h2>
+              <p class="topic-definition">
+                <span class="key-definition">Labour-intensive production:</span>
+                production that uses a high proportion of labour compared with
+                capital, so wages are a large share of costs.
+              </p>
+              <p class="topic-definition">
+                <span class="key-definition">Capital-intensive production:</span>
+                production that uses a high proportion of machinery and
+                equipment compared with labour.
+              </p>
+              <p>
+                A workshop making hand-built furniture is labour intensive. A
+                flat-pack furniture factory, where machines cut and drill the
+                boards, is capital intensive.
+              </p>
+              <div class="table-container" tabindex="0" role="region" aria-label="Scrollable table">
+                <table class="concept-table">
+                  <thead>
+                    <tr>
+                      <th class="width-20"></th>
+                      <th class="width-40">Labour intensive</th>
+                      <th class="width-40">Capital intensive</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Biggest cost</strong></td>
+                      <td>Wages</td>
+                      <td>
+                        Machinery and its upkeep, mostly fixed costs, so it
+                        needs high output to keep average cost down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Labour productivity</strong></td>
+                      <td>Lower</td>
+                      <td>Higher, as each worker has more capital to use</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Flexibility</strong></td>
+                      <td>Easy to change the product or cut hours</td>
+                      <td>Machines suit long runs of one standard product</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Product</strong></td>
+                      <td>Made to order, personal service</td>
+                      <td>Identical units of consistent quality</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Main risk</strong></td>
+                      <td>Rising wages and staff shortages</td>
+                      <td>Breakdowns, and high fixed costs if demand falls</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Which method a firm chooses depends on:</p>
+              <ul>
+                <li>
+                  <strong>The cost of labour against capital:</strong> where
+                  wages are low, people are cheaper than machines. As wages
+                  rise, firms switch to machines, such as self-service tills.
+                </li>
+                <li>
+                  <strong>The scale of output:</strong> expensive machinery
+                  only pays for itself over a large, steady volume.
+                </li>
+                <li>
+                  <strong>The product:</strong> hairdressing and care work need
+                  people, and some customers pay more for hand-made goods.
+                </li>
+                <li>
+                  <strong>Access to finance:</strong> machinery costs a lot up
+                  front, which a small firm may not be able to borrow (<a
+                    href="/revision-notes/edexcel-b-theme-1/1-4-3-types-and-sources-of-credit.html"
+                    >unit 1.4.3</a
+                  >).
+                </li>
+              </ul>
+            </section>
+
+            <nav class="topic-related" aria-label="Related topics">
+              <p class="topic-related__label">Related topics</p>
+              <ul class="topic-related__list">
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-2/2-3-3-lean-production.html">Efficiency and Competitiveness Using Lean Production</a>
+                </li>
+                <li>
+                  <a href="/revision-notes/edexcel-b-theme-2/2-3-4-impact-on-costs-and-sales-revenue.html">Impact on Costs and Sales Revenue</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="topic-next" aria-labelledby="topic-next-label">
+              <p class="topic-next__label" id="topic-next-label">Carry on with this topic</p>
+              <ul class="topic-next__list">
+                <li class="topic-next__item">
+                  <a class="topic-next__link" href="/past-papers/edexcel-b/">Edexcel B past papers</a>
+                  <p class="topic-next__note">Question papers and mark schemes for every Edexcel B A-Level and AS paper, by paper and year.</p>
+                </li>
+              </ul>
+            </nav>
+
+            <aside class="topic-author" aria-labelledby="topic-author-label">
+              <p class="topic-author__label" id="topic-author-label">About the author</p>
+              <p class="topic-author__bio">
+                <a class="topic-author__name" href="/about.html#eliot-king" rel="author">Eliot King</a>
+                is a First-Class BSc (Hons) Economics graduate from the
+                University of Bath and the founder of Economics Academy.
+                Eliot has taught A-Level Economics for over six years across
+                Edexcel A, Edexcel B, AQA and OCR, supporting over 100
+                students with a particular focus on the exam technique and
+                essay structure that mark schemes reward.
+              </p>
+            </aside>
+
+            <p class="topic-services">
+              Stuck on this topic? Work through it with an
+              <a href="/tutoring.html">online A-Level Economics tutor</a> in a free
+              15-minute intro call, or send an essay on it for
+              <a href="/marking.html">A-Level Economics essay marking</a>.
+            </p>
+
+            <nav
+              class="topic-nav topic-nav--bottom"
+              aria-label="Topic navigation, after the notes"
+            >
+              <a
+                class="topic-nav__link topic-nav__link--prev"
+                href="/revision-notes/edexcel-b-theme-2/2-2-4-income-elasticity-of-demand.html"
+                rel="prev"
+                aria-label="Previous topic: 2.2.4 Income Elasticity of Demand (YED)"
+              >
+                <span class="topic-nav__caption"><span aria-hidden="true">&larr;</span> Previous topic</span>
+                <span class="topic-nav__title">2.2.4 Income Elasticity of Demand (YED)</span>
+              </a>
+              <a
+                class="topic-nav__link topic-nav__link--next"
+                href="/revision-notes/edexcel-b-theme-2/2-3-2-capacity-utilisation.html"
+                rel="next"
+                aria-label="Next topic: 2.3.2 Capacity Utilisation"
+              >
+                <span class="topic-nav__caption">Next topic <span aria-hidden="true">&rarr;</span></span>
+                <span class="topic-nav__title">2.3.2 Capacity Utilisation</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <!-- BEGIN templates/footer.html - baked at build time; edit the template, not this -->
+      <!-- templates/footer.html
+           A <footer> element, not a <section>: this is the site's contentinfo
+           landmark and there was none anywhere on the site. The id is unchanged
+           because every rule in css/main.css targets #footer. PH08-037.
+           The 11 inline style attributes that used to be here are now in
+           css/main.css, under the classes below. -->
+      <footer id="footer">
+        <div class="container">
+          <ul class="footer-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+          <p class="footer-copyright">
+            &copy; 2026 Economics Academy. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- END templates/footer.html -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/components/nav.js"></script>
+    <script src="/js/components/track.js"></script>
+    <script src="/js/components/consent.js"></script>
+    <script src="/js/components/site-search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/notes.js" defer></script>
+  </body>
+</html>
