@@ -168,6 +168,10 @@ DISPLAY_NAME = {
     # the full name, "Demand-Side Factors in Global Markets",
     # overflows HARD_MAX by 2.
     "3-3-2-demand-side-factors-in-global-markets": "Demand Factors in Global Markets",
+    # Proposed 2026-10-20, awaiting Eliot's approval (review/unit-3-4.md);
+    # the full name, "The Impact of Multinational Corporations (MNCs)",
+    # overflows HARD_MAX by 12.
+    "3-4-1-the-impact-of-multinational-corporations": "The Impact of Multinationals (MNCs)",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
