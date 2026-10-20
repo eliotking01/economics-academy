@@ -181,7 +181,7 @@ PINNED = {
     "edexcel-b.papersUrl": "/past-papers/edexcel-b/",
     "edexcel-b.notesUrl": "/revision-notes/",
     "edexcel-b.specCodesAreReal": True,
-    "edexcel-b.expectedTopics": 73,
+    "edexcel-b.expectedTopics": 75,
     "edexcel-b.groups.0.notesDir": "edexcel-b-theme-1",
     "edexcel-b.groups.0.label": "Theme 1",
     "edexcel-b.groups.0.names.notesLabel": "Edexcel B Theme 1",

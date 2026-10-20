@@ -164,6 +164,10 @@ DISPLAY_NAME = {
     # the full name, "Assessing the Potential of Different Economies",
     # overflows HARD_MAX by 11.
     "3-2-2-assessing-the-potential-of-different-economies": "Potential of Different Economies",
+    # Proposed 2026-10-20, awaiting Eliot's approval (review/unit-3-3.md);
+    # the full name, "Demand-Side Factors in Global Markets",
+    # overflows HARD_MAX by 2.
+    "3-3-2-demand-side-factors-in-global-markets": "Demand Factors in Global Markets",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
