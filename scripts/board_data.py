@@ -80,7 +80,8 @@ EXPECTED_NOTES_DIRS = (
     "aqa-a2-micro", "aqa-a2-macro",
     # Edexcel B, notes-only (D66): one entry per OPEN theme, added as each
     # theme's hub leaves notes-data/hubs/drafts/.
-    "edexcel-b-theme-1", "edexcel-b-theme-2", "edexcel-b-theme-4",
+    "edexcel-b-theme-1", "edexcel-b-theme-2", "edexcel-b-theme-3",
+    "edexcel-b-theme-4",
 )
 
 
