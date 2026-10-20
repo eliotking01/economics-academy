@@ -172,14 +172,10 @@ DISPLAY_NAME = {
     # the full name, "The Impact of Multinational Corporations (MNCs)",
     # overflows HARD_MAX by 12.
     "3-4-1-the-impact-of-multinational-corporations": "The Impact of Multinationals (MNCs)",
-    # Proposed 2026-10-20, on Eliot's approval list in review/unit-3-6.md;
+    # Proposed 2026-10-20, approved by Eliot 2026-10-20 (review/unit-3-6.md);
     # the full name, "The Impact of Inequality on Economic Agents",
     # overflows HARD_MAX by 8.
     "3-6-3-the-impact-of-inequality": "The Impact of Inequality",
-    # Proposed 2026-10-20 (review/unit-3-6.md); the spec's spelling,
-    # "Re-distribution of Income and Wealth", overflows HARD_MAX by 1, and
-    # the unhyphenated form is the one students search for.
-    "3-6-4-redistribution-of-income-and-wealth": "Redistribution of Income and Wealth",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
