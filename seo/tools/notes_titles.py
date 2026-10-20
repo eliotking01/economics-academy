@@ -160,7 +160,7 @@ DISPLAY_NAME = {
     # the full name, "Potential Policy Conflicts and Trade-Offs",
     # overflows HARD_MAX by 6.
     "2-6-3-policy-conflicts-and-trade-offs": "Policy Conflicts and Trade-Offs",
-    # Proposed 2026-10-20, on Eliot's approval list in review/unit-3-2.md;
+    # Proposed and approved by Eliot 2026-10-20 (review/unit-3-2.md);
     # the full name, "Assessing the Potential of Different Economies",
     # overflows HARD_MAX by 11.
     "3-2-2-assessing-the-potential-of-different-economies": "Potential of Different Economies",
