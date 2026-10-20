@@ -148,7 +148,7 @@
       "papersUrl": "/past-papers/edexcel-b/",
       "notesUrl": "/revision-notes/",
       "specCodesAreReal": true,
-      "expectedTopics": 71,
+      "expectedTopics": 73,
       "_groups_why": "Themes open one at a time, in publishing order (Theme 1, then 4, 2, 3), each finished and pushed before the next starts. An unopened theme's hub waits in notes-data/hubs/drafts/, which nothing builds. Groups are matched to spec codes by the -theme-N in notesDir, not by position. notesLabel and notesTitle are the two names the notes family shows (a full board's are its practiceQuestionsLabel and taxonomy name).",
       "groups": [
         {
