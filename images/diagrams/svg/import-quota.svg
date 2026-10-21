@@ -1,0 +1,73 @@
+<svg viewBox="0 0 800 600" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title id="t">The impact of an import quota</title>
+  <desc id="d">An import quota diagram with domestic supply and demand curves and a horizontal world supply line Sworld at the world price Pw. With free trade, domestic output is Q1, demand is Q4 and imports are Q4 minus Q1. The quota adds a fixed quantity of imports to domestic supply above the world price, so a new curve Sdomestic+quota lies to the right of Sdomestic by the quota amount, starting at Pw. It cuts demand at the higher price Pq: domestic output rises to Q2, demand falls to Q3 and quota imports are Q3 minus Q2. The shaded area between Pw and Pq, from Q1 to Q4 between the supply and demand curves, is the welfare loss to the home economy. It includes the extra paid on quota imports, which goes to the foreign firms allowed to sell within the quota.</desc>
+  <!-- geometry
+       All four curves are straight and at exact 45 degrees (|dx| = |dy|).
+       Sdomestic:       x + y = 550, drawn (110,440) to (450,100).
+       Ddomestic:       y = x - 140, drawn (200,60) to (630,490).
+       Sworld (Pw):     y = 420, drawn x = 100 to 610.
+       Sdomestic+quota: Sdomestic moved right by the quota, 230px, so
+                        x + y = 780. Drawn only above Pw, from (360,420),
+                        which is Q1 + 230 on Pw, to (560,220).
+       Free trade: Q1 = Sdomestic at Pw -> (130,420); Q4 = Ddomestic at Pw
+         -> (560,420). Imports Q4 - Q1 = 430.
+       Quota: Pq = Ddomestic meets Sdomestic+quota -> x - 140 = 780 - x,
+         x = 460, y = 320, so Q3 = 460 and Pq = 320. Q2 = Sdomestic at Pq
+         -> 550 - 320 = 230. Quota imports Q3 - Q2 = 230, equal to the
+         shift, as they must be.
+       Pq sits between Pw (420) and the no-trade price, where Sdomestic
+         meets Ddomestic at (345,205): the quota raises the price but
+         does not remove all imports. (345,205) is unmarked.
+       Welfare loss (Eliot, 20 Oct 2026): one trapezium,
+         (130,420)-(230,320)-(460,320)-(560,420), i.e. the two triangles
+         plus the quota rectangle Q2-Q3 by Pq-Pw, since the rectangle goes
+         to foreign firms. Sdomestic+quota crosses it from (360,420) to
+         (460,320), as on every version of this diagram; the label sits
+         left of the line, 15px or more clear of it.
+       intersections: 130,420 560,420 460,320 360,420 345,205
+       on-curve: 230,320
+  -->
+  <defs>
+    <marker id="tick" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <!-- shaded areas -->
+  <path d="M 130,420 L 230,320 L 460,320 L 560,420 Z" fill="#d52349" fill-opacity="0.25" stroke="none"/>
+  <!-- guides: Pq across to Ddomestic; Q1-Q4 down from their curves -->
+  <line x1="100" y1="320" x2="460" y2="320" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="130" y1="420" x2="130" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="230" y1="320" x2="230" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="460" y1="320" x2="460" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="560" y1="420" x2="560" y2="520" stroke="#767676" stroke-width="2" stroke-dasharray="6 5"/>
+  <!-- axes -->
+  <line x1="100" y1="60" x2="100" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#333333" stroke-width="2.5"/>
+  <text x="32" y="40" font-size="26" fill="#333333">Price</text>
+  <text x="708" y="552" font-size="26" fill="#333333" text-anchor="end">Quantity</text>
+  <!-- curves -->
+  <line x1="110" y1="440" x2="450" y2="100" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="200" y1="60" x2="630" y2="490" stroke="#1d70b8" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="100" y1="420" x2="610" y2="420" stroke="#0f7b6c" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="360" y1="420" x2="560" y2="220" stroke="#d52349" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- domestic output at Pq: price axis to Q2, just above the Pq guide -->
+  <line x1="102" y1="302" x2="228" y2="302" stroke="#333333" stroke-width="2" marker-start="url(#tick)" marker-end="url(#tick)"/>
+  <text x="165" y="261" font-size="24" fill="#333333" text-anchor="middle">Domestic</text>
+  <text x="165" y="287" font-size="24" fill="#333333" text-anchor="middle">output</text>
+  <!-- quota imports: Q2 to Q3, between the two guides -->
+  <line x1="232" y1="470" x2="458" y2="470" stroke="#333333" stroke-width="2" marker-start="url(#tick)" marker-end="url(#tick)"/>
+  <text x="345" y="455" font-size="24" fill="#333333" text-anchor="middle">Quota imports</text>
+  <!-- area label -->
+  <text x="313" y="378" font-size="24" fill="#333333" text-anchor="middle">Welfare loss</text>
+  <!-- labels -->
+  <text x="460" y="108" font-size="26" font-weight="700" fill="#1d70b8">Sdomestic</text>
+  <text x="640" y="498" font-size="26" font-weight="700" fill="#1d70b8">Ddomestic</text>
+  <text x="618" y="428" font-size="26" font-weight="700" fill="#0f7b6c">Sworld</text>
+  <text x="570" y="228" font-size="26" font-weight="700" fill="#d52349">Sdomestic+quota</text>
+  <text x="92" y="328" font-size="24" fill="#333333" text-anchor="end">Pq</text>
+  <text x="92" y="428" font-size="24" fill="#333333" text-anchor="end">Pw</text>
+  <text x="130" y="552" font-size="24" fill="#333333" text-anchor="middle">Q1</text>
+  <text x="230" y="552" font-size="24" fill="#333333" text-anchor="middle">Q2</text>
+  <text x="460" y="552" font-size="24" fill="#333333" text-anchor="middle">Q3</text>
+  <text x="560" y="552" font-size="24" fill="#333333" text-anchor="middle">Q4</text>
+</svg>

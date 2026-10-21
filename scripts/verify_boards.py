@@ -181,7 +181,7 @@ PINNED = {
     "edexcel-b.papersUrl": "/past-papers/edexcel-b/",
     "edexcel-b.notesUrl": "/revision-notes/",
     "edexcel-b.specCodesAreReal": True,
-    "edexcel-b.expectedTopics": 66,
+    "edexcel-b.expectedTopics": 85,
     "edexcel-b.groups.0.notesDir": "edexcel-b-theme-1",
     "edexcel-b.groups.0.label": "Theme 1",
     "edexcel-b.groups.0.names.notesLabel": "Edexcel B Theme 1",
@@ -190,10 +190,14 @@ PINNED = {
     "edexcel-b.groups.1.label": "Theme 2",
     "edexcel-b.groups.1.names.notesLabel": "Edexcel B Theme 2",
     "edexcel-b.groups.1.names.notesTitle": "The Wider Economic Environment",
-    "edexcel-b.groups.2.notesDir": "edexcel-b-theme-4",
-    "edexcel-b.groups.2.label": "Theme 4",
-    "edexcel-b.groups.2.names.notesLabel": "Edexcel B Theme 4",
-    "edexcel-b.groups.2.names.notesTitle": "Making Markets Work",
+    "edexcel-b.groups.2.notesDir": "edexcel-b-theme-3",
+    "edexcel-b.groups.2.label": "Theme 3",
+    "edexcel-b.groups.2.names.notesLabel": "Edexcel B Theme 3",
+    "edexcel-b.groups.2.names.notesTitle": "The Global Economy",
+    "edexcel-b.groups.3.notesDir": "edexcel-b-theme-4",
+    "edexcel-b.groups.3.label": "Theme 4",
+    "edexcel-b.groups.3.names.notesLabel": "Edexcel B Theme 4",
+    "edexcel-b.groups.3.names.notesTitle": "Making Markets Work",
 }
 
 

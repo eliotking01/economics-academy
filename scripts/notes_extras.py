@@ -127,6 +127,7 @@ BOARD_OF_DIR = {
     # Edexcel B, notes-only (D66): one row per open theme.
     "edexcel-b-theme-1": ("Edexcel B", "Theme 1"),
     "edexcel-b-theme-2": ("Edexcel B", "Theme 2"),
+    "edexcel-b-theme-3": ("Edexcel B", "Theme 3"),
     "edexcel-b-theme-4": ("Edexcel B", "Theme 4"),
 }
 

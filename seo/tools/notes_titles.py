@@ -160,6 +160,22 @@ DISPLAY_NAME = {
     # the full name, "Potential Policy Conflicts and Trade-Offs",
     # overflows HARD_MAX by 6.
     "2-6-3-policy-conflicts-and-trade-offs": "Policy Conflicts and Trade-Offs",
+    # Proposed and approved by Eliot 2026-10-20 (review/unit-3-2.md);
+    # the full name, "Assessing the Potential of Different Economies",
+    # overflows HARD_MAX by 11.
+    "3-2-2-assessing-the-potential-of-different-economies": "Potential of Different Economies",
+    # Proposed and approved by Eliot 2026-10-20 (review/unit-3-3.md);
+    # the full name, "Demand-Side Factors in Global Markets",
+    # overflows HARD_MAX by 2.
+    "3-3-2-demand-side-factors-in-global-markets": "Demand Factors in Global Markets",
+    # Proposed and approved by Eliot 2026-10-20 (review/unit-3-4.md);
+    # the full name, "The Impact of Multinational Corporations (MNCs)",
+    # overflows HARD_MAX by 12.
+    "3-4-1-the-impact-of-multinational-corporations": "The Impact of Multinationals (MNCs)",
+    # Proposed 2026-10-20, approved by Eliot 2026-10-20 (review/unit-3-6.md);
+    # the full name, "The Impact of Inequality on Economic Agents",
+    # overflows HARD_MAX by 8.
+    "3-6-3-the-impact-of-inequality": "The Impact of Inequality",
 }
 
 # WAS six names leading with an abbreviation ("AD and AS Analysis",
