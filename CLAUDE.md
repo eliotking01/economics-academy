@@ -166,8 +166,8 @@ so their detail is not in this file:
 
 ## Vocabulary
 
-- **Boards**: Edexcel (A), Edexcel B, AQA, OCR. Notes cover Edexcel and AQA
-  only; past papers cover all four.
+- **Boards**: Edexcel (A), Edexcel B, AQA, OCR. Notes cover Edexcel A,
+  Edexcel B and AQA; past papers cover all four.
 - **Theme 1–4** = Edexcel, real spec codes. **AQA micro/macro** use site-local
   codes `1.x.y`/`2.x.y`, deliberately not the real 7136 codes — ratified, do
   not "fix" them.
