@@ -23,7 +23,8 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
-| Edexcel B notes — Theme 2: 24 pages, index card, site search | approved, PR open | — | — |
+| Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
+| Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
 | Edexcel B notes — Theme 4: 19 pages, index card, site search | live | 2026-10-17 | `fec344d2` |
 | Edexcel B notes — Theme 1: 23 pages, index section, site search | live | 2026-10-15 | `782bafd7` |
 | Calendly retired — #booking becomes an enquiry block | live | 2026-09-25 | `7aec6877` |
@@ -135,6 +136,20 @@ are **carried over and not independently re-verified**, except where stated.
 | **Web-font layout shift** | Not re-measured. CLS was 0.078 on a notes page and 0.154 on a questions page | Self-host with `size-adjust`, or preload the woff2 the fold needs |
 | **OCR A Level Paper 3, June 2023** | **The question paper is missing.** Both PDFs at that path are the mark scheme, byte-identical, md5 `35b8975c…`. Confirmed by Eliot and verified independently; a sweep of all 281 PDFs found no other case | Download H460/03 June 2023 from OCR and save it over the existing filename. No URL, link or sitemap change |
 
+### Still open — Edexcel B follow-ups
+
+From the Theme 3 pre-launch checklist
+(`05-website/drafts/edexcel-b-notes/review/theme-3-prelaunch.md`, "After
+launch"), recorded 2026-10-20 when Edexcel B was completed. None blocks
+anything.
+
+| Item | What it needs |
+| --- | --- |
+| **Twin links** between the B pages and their Edexcel A / AQA counterparts | `notes_twins.board_of_dir` returns `"edexcel"` for every directory that is not AQA, so it treats `edexcel-b-*` as Edexcel A. Fix that first (checked 2026-10-20) |
+| **An Edexcel B glossary** | Deferred in D66. Until it exists, the index's glossary line ("with a page for Edexcel A and AQA") stays true and is left alone |
+| **National Living Wage on 3.5.3** | Dates every April. Next change: April 2027 |
+| **The other dated figures** | Re-check once a year: the poverty line, aid, the CMA thresholds, Bank Rate history, PPP shares. Sources are in the unit review sheets |
+
 ### Closed since PROJECT-LOG was written — do not re-raise
 
 Each was on its "still flagged" list and each is now done. Checked 2026-08-20.
@@ -195,7 +210,56 @@ session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
 
-### Edexcel B revision notes — Theme 2 (2026-10-17 to 2026-10-19) — COMPLETE AND APPROVED, PR into main opened 2026-10-19 (branch `feature/edexcel-b-theme-2`)
+### Edexcel B revision notes — Theme 3 (2026-10-20) — COMPLETE, PR into main opened 2026-10-20 (branch `feature/edexcel-b-theme-3`)
+
+The fourth and last theme in publishing order (1, 4, 2, 3; D66). **With it,
+Edexcel B is complete: all 85 topic pages across Themes 1-4**, and the
+site has 251 notes topic pages (`verify_notes_sequence.py`: Edexcel A 87,
+AQA 79, Edexcel B 85). Opened 2026-10-20 together with unit 3.1
+(`36e103d3`): the hub out of `notes-data/hubs/drafts/`, the group in
+`boards.json` between Themes 2 and 4, `EXPECTED_NOTES_DIRS` and
+`notes_extras.BOARD_OF_DIR`, the menu entry (desktop and mobile), and a
+Year 2 card plus a `hasPart` entry on `revision-notes/index.html`. B's
+chain now runs Theme 1 -> 2 -> 3 -> 4.
+
+- **Units 3.1-3.6 written 2026-10-20**, one commit each, every page passing
+  `check_overlap.py` against PMT (0.0-0.7%, no copied runs); Eliot's
+  answers to each `review/unit-3-1.md` to `unit-3-6.md` applied in the
+  commit after it. `expectedTopics` 66 -> 85. Four title-only display
+  names in `seo/tools/notes_titles.py` (3.2.2, 3.3.2, 3.4.1, 3.6.3).
+- **Diagrams**: `import-quota` drawn and approved for 3.1.4 (`5c195c75`);
+  five more are reused: `tariff` (3.1.4), `j-curve` (3.1.5),
+  `wage-determination` (3.5.2), `min-wage` (3.5.3) and `lorenz-curve`
+  (3.6.1). 3.2.1
+  links to 2.1.3 for `product-life-cycle` rather than repeating it. No
+  `DIAGRAM PENDING` comment remains anywhere in Edexcel B (checked
+  2026-10-20).
+- **Revision pass** (`119799fe` to `d6da83a5`, answers `ef94f0c1`): a
+  lighter trim than Theme 2's, 18,047 -> 17,669 words; log in
+  `review/theme-3-revision-pass.md`.
+
+**Pre-launch jobs, all done 2026-10-20:**
+- [x] origin/main checked: it had not moved since Theme 2's merge
+  (`ada29e8b`), so there was nothing to merge.
+- [x] `datePublished` and `dateModified`: the 19 topic records already
+  carried 2026-10-20; the hub record moved from 2026-09-26 (`f5747f7d`).
+- [x] Site-wide copy, wording approved by Eliot: the homepage Revision
+  Notes card (251 pages, Edexcel A, Edexcel B and AQA) and the "Which exam
+  boards are covered?" FAQ answer; on `revision-notes/index.html` the
+  intro ("plus all four Edexcel B themes"), the hero topics line (251, was
+  232), the Theme 3 card (19 topics, was 0), the JSON-LD description and
+  `og:description`.
+  The D50-frozen head (title, H1, meta description, canonical) is
+  untouched. CLAUDE.md's vocabulary line now says notes cover Edexcel A,
+  Edexcel B and AQA.
+- [x] Site search: the Theme 3 hub and all 19 topics are in
+  `/search-index.json`.
+- [x] Previous/next: 2.6.3 -> 3.1.1 and 3.6.4 -> 4.1.1, in both
+  directions.
+
+**Open follow-ups** are in "Still open — Edexcel B follow-ups" above.
+
+### Edexcel B revision notes — Theme 2 (2026-10-17 to 2026-10-19) — LIVE (merged 2026-10-19, `ada29e8b`, PR #43)
 
 The third theme in publishing order (1, 4, 2, 3; D66). Opened 2026-10-17
 together with unit 2.1 (`f6fcf691`), as a theme cannot open empty: the hub
@@ -241,7 +305,8 @@ on `revision-notes/index.html`. B's chain now runs Theme 1 -> 2 -> 4.
   between, top and bottom rows agreeing on all 26 pages.
 
 **When the last theme opens (Theme 3):** add its card to the index (Year 2)
-and update the topics line (232 today) and the intro sentence.
+and update the topics line (232 today) and the intro sentence. *Done
+2026-10-20, see Theme 3 above.*
 
 ### Edexcel B revision notes — Theme 4 (2026-10-16 to 2026-10-17) — LIVE (merged 2026-10-17, `fec344d2`, PR #42)
 
