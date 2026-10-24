@@ -60,20 +60,20 @@
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Tea and coffee are substitutes. All other things being equal, a sharp rise in the price of coffee will",
+      "stem": "A train company raises the price of its peak-time tickets between two cities by 25%. Coach travel on the same route is a close substitute. All other things being equal, this will",
       "options": {
-        "A": "Cause a movement along the demand curve for tea.",
-        "B": "Shift the demand curve for tea to the left.",
-        "C": "Shift the demand curve for tea to the right.",
-        "D": "Shift the supply curve of tea to the right."
+        "A": "Cause a movement along the demand curve for coach travel.",
+        "B": "Shift the demand curve for coach travel to the left.",
+        "C": "Shift the demand curve for coach travel to the right.",
+        "D": "Shift the supply curve of coach travel to the right."
       },
       "answer": "C",
       "model": {
-        "working": "Coffee has become dearer, so some drinkers switch to tea. More tea is now wanted <strong>at every price of tea</strong>, which is an increase in demand and therefore a <strong>rightward shift</strong> of the tea demand curve. The price of a substitute is one of the conditions of demand, so a change in it moves the curve rather than moving you along it.",
+        "working": "Rail travel has become dearer, so some travellers switch to the coach. More coach journeys are now wanted <strong>at every coach fare</strong>, which is an increase in demand and therefore a <strong>rightward shift</strong> of the demand curve for coach travel. The price of a substitute is one of the conditions of demand, so a change in it moves the curve rather than moving you along it.",
         "distractors": {
-          "A": "A movement along the tea demand curve would require the price of <strong>tea</strong> to change. It is the price of coffee that has moved.",
-          "B": "A leftward shift would follow if coffee became <em>cheaper</em>, drawing drinkers away from tea. The change here runs the other way.",
-          "D": "Nothing has happened to the cost or ease of producing tea. Consumers switching between drinks is a demand-side change."
+          "A": "A movement along the demand curve for coach travel would require the <strong>coach fare</strong> to change. It is the train fare that has moved.",
+          "B": "A leftward shift would follow if train tickets became <em>cheaper</em>, drawing travellers away from the coach. The change here runs the other way.",
+          "D": "Nothing has happened to the cost or ease of running coaches. Travellers switching between rail and coach is a demand-side change."
         }
       }
     },

@@ -2031,7 +2031,16 @@ wording change, so it needs Eliot's explicit instruction (hard rule 2).
 Nothing has been changed. The source is recorded in the Desktop review sheet
 `drafts/edexcel-b-notes/review/unit-4-1.md`.
 
-## N-Q25 — two live AQA practice questions are too close to real papers (logged 2026-10-24, open)
+## N-Q25 — two live AQA practice questions are too close to real papers (logged 2026-10-24, RESOLVED 2026-10-24)
+
+**Resolved:** Eliot chose to rewrite both (D68, Q11). `aqa-2-2-1-q1` is now a
+household's month of spending, where the student picks the one use of income
+that is not a withdrawal. `aqa-1-3-1-q3` is now a rail fare rise with coach
+travel as the substitute. Each keeps its id, skill, difficulty and key (D
+and C), so saved scores and the answer spread are unchanged. Both were
+re-solved cold by the `cold-solver` agent (2 of 2 matched, both high
+confidence) and come back 0 exact and 0 near from `check_originality.py`.
+The record below is as logged.
 
 Found by `scripts/check_originality.py check questions-data/*/*.json`, the
 originality check rebuilt and committed in the all-boards groundwork (D67

@@ -16,20 +16,20 @@
       "skill": "definition-in-context",
       "difficulty": "foundation",
       "sketch": false,
-      "stem": "Which one of the following is a withdrawal from the circular flow of income?",
+      "stem": "In one month a UK household receives £2,000 of income. It spends £1,300 on UK-produced goods and services, pays £300 in income tax, puts £200 into a savings account and spends £200 on a holiday abroad. The part of its income that is <strong>not</strong> a withdrawal from the UK circular flow of income is the",
       "options": {
-        "A": "Exports sold to overseas buyers.",
-        "B": "Government spending on public services.",
-        "C": "Investment by firms in capital goods.",
-        "D": "Taxation paid to the government."
+        "A": "£200 put into savings.",
+        "B": "£300 paid in income tax.",
+        "C": "£200 spent on the holiday abroad.",
+        "D": "£1,300 spent on UK-produced goods and services."
       },
       "answer": "D",
       "model": {
-        "working": "A withdrawal is money that leaves the circular flow rather than being passed on as domestic spending. The three withdrawals are <strong>saving, taxation and imports</strong>. Tax paid to the government is income households neither spend on domestic output nor save, so it leaves the flow.",
+        "working": "A withdrawal is income that leaves the circular flow rather than being passed on as spending on domestic output. The three withdrawals are <strong>saving, taxation and imports</strong>. The £1,300 spent on UK-produced goods and services becomes income for UK firms, so it stays in the flow.",
         "distractors": {
-          "A": "Exports are an <strong>injection</strong>. They are spending by overseas buyers entering the domestic flow.",
-          "B": "Government spending is an <strong>injection</strong>. It is the counterpart of taxation, not another withdrawal.",
-          "C": "Investment is an <strong>injection</strong>. Firms are adding new spending on capital goods to the flow."
+          "A": "Saving is a <strong>withdrawal</strong>. Income put aside is not spent on domestic output.",
+          "B": "Taxation is a <strong>withdrawal</strong>. Income paid to the government is not spent by the household on domestic output.",
+          "C": "A holiday abroad is an <strong>import</strong> of services, so the spending goes to producers overseas. Imports are a withdrawal."
         }
       }
     },
