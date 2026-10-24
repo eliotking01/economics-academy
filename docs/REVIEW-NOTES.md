@@ -2030,3 +2030,34 @@ Not published yet (Theme 4 is on `feature/edexcel-b-theme-4`). This is a
 wording change, so it needs Eliot's explicit instruction (hard rule 2).
 Nothing has been changed. The source is recorded in the Desktop review sheet
 `drafts/edexcel-b-notes/review/unit-4-1.md`.
+
+## N-Q25 — two live AQA practice questions are too close to real papers (logged 2026-10-24, open)
+
+Found by `scripts/check_originality.py check questions-data/*/*.json`, the
+originality check rebuilt and committed in the all-boards groundwork (D67
+Phase 0). It is the first run to shingle every board's sets against **every**
+board's papers. The batch-time `orig.py` checked AQA sets against the AQA
+papers, which is why both passed when they were written. Not fixed: these
+are live, sold questions, and rewording one is Eliot's decision.
+
+- **`questions-data/aqa-a2-macro/2-2-1.json` Q1 (`aqa-2-2-1-q1`) — exact.**
+  "Which one of the following is a withdrawal from the circular flow of
+  income?" with Exports / Government spending / Investment / Taxation, key D.
+  Edexcel A Paper 2, November 2021, Q(a) prints the same stem, the same four
+  options in the same order and the same answer. Ours adds a few words to
+  each option ("Exports sold to overseas buyers."); nothing else differs.
+  Needs a new question on a scenario, per QUESTIONS_PROGRESS section 7.
+- **`questions-data/aqa-a2-micro/1-3-1.json` Q3 (`aqa-1-3-1-q3`) — near.**
+  It opens "Tea and coffee are substitutes. All other things being equal,"
+  word for word as AQA Paper 3, June 2021, Q24 does. The questions differ
+  (ours: a coffee price rise shifts tea demand; theirs: explain a move
+  between two equilibria on a figure), but section 5's rule is that the
+  same commodity pair on the same idea is too close. A different pair
+  fixes it.
+
+The other eight NEAR lines in that run are stock phrasing printed by one
+paper ("which one of the following is the best example of"), and were read
+and judged harmless. It also flags three numeric option sets sharing three
+values with a real AQA option block (`edexcel-1-2-5-q1`, `edexcel-1-2-8-q1`,
+`edexcel-3-6-1-q1`). Those are prompts to compare archetypes, and the
+comparison has not been done yet.

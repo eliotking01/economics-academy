@@ -49,8 +49,9 @@ being written, is put to Eliot in
    or an uneven answer spread. Question `id`s are `<board>-<spec-with-dashes>-qN`.
 3. **Re-solve every question cold from the stem alone**, then diff against
    your recorded key. This step finds real defects; do not skip it.
-4. Originality: shingle against both past-paper corpora (see the note above)
-   before committing. 0 exact, 0 near-duplicate stems is the bar.
+4. Originality: `python3 scripts/check_originality.py check <the sets>`
+   (`corpus` first, once, to extract the papers) before committing. 0 exact,
+   0 near is the bar, and every READ line against the bank is read by hand.
 5. `python3 scripts/build_questions.py --check` validates the inputs;
    `python3 scripts/build.py` writes the page (and everything else). The
    "Practice questions" panel at the foot of the topic's notes page is

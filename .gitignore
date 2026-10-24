@@ -39,3 +39,9 @@ seo/lh-*/
 # rather than run with `swift`.
 .build/
 *.o
+
+# Plain text of every exam question paper, for originality checks on the
+# practice questions only (scripts/check_originality.py corpus). Reproduces
+# exam-board text, is regenerable in minutes, and must never share a data
+# path with questions-data/ (CLAUDE.md rule 4).
+_working/originality-corpus/
