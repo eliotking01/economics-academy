@@ -74,7 +74,7 @@ ORIGINS = {"notes-verbatim", "card-authored"}
 # both, per consumer, and nothing here may reconcile them.
 NOTES_DIRS = {
     (board["slugs"]["flashcards"], group["flashcardsSlug"]): group["notesDir"]
-    for _key, board, group in board_data.groups()
+    for _key, board, group in board_data.groups("flashcards")
 }
 
 # The hub's board and deck order, from the record's own order - resource
@@ -84,7 +84,7 @@ NOTES_DIRS = {
 # order, which CLAUDE.md records as published output.
 GROUP_ORDER = {
     (board["slugs"]["flashcards"], group["flashcardsSlug"]): i
-    for i, (_key, board, group) in enumerate(board_data.groups())
+    for i, (_key, board, group) in enumerate(board_data.groups("flashcards"))
 }
 
 # Question-bank hub per board, for the cross-resource links. The bank's
@@ -92,7 +92,7 @@ GROUP_ORDER = {
 # is exactly why this is read from the record rather than derived.
 QB_SLUGS = {
     board["slugs"]["flashcards"]: board["slugs"]["questionBank"]
-    for _key, board, _group in board_data.groups()
+    for _key, board, _group in board_data.groups("flashcards")
 }
 
 INLINE_TEX = re.compile(r"\\\((.+?)\\\)", re.S)

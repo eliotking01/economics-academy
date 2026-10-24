@@ -29,8 +29,11 @@ Question pages use `css/pages/quiz.css`; the hub and indexes use
 
 ## Adding one (the workflow; the authoring standard is `docs/QUESTIONS_GUIDE.md`)
 
-**Not for a notes-only board.** Edexcel B (`"notesOnly": true` in
-`boards.json`, D66) has no question bank, and its topics need no record here.
+**Not yet for Edexcel B.** It has no `practiceQuestions` in `boards.json`'s
+`features` until D67's Phase 1 launches, and until then its topics need no
+record here. Where its sets live, and how they stay unbuilt while they are
+being written, is put to Eliot in
+`05-website/drafts/all-boards-parity/review/phase-0-groundwork.md`.
 
 1. **The notes topic must exist first** — `notes-data/topics/<dir>/<spec>-*.json`
    and a hub link (`python3 scripts/new_topic.py` scaffolds both). Every

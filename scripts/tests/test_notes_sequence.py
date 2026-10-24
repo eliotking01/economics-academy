@@ -39,7 +39,7 @@ class HubParsingTests(unittest.TestCase):
         self.assertEqual(p.result(), [("1-2-2-demand", "1.2.2 Demand")])
 
     def test_every_hub_is_in_spec_order_with_no_duplicates(self):
-        for _key, _board, group in board_data.groups():
+        for _key, _board, group in board_data.groups("notes"):
             links = ns.hub_topics(group["notesDir"])
             slugs = [s for s, _ in links]
             self.assertEqual(len(slugs), len(set(slugs)), group["notesDir"])
@@ -51,10 +51,9 @@ class ChainTests(unittest.TestCase):
         self.chains = ns.chains()
 
     def test_one_chain_per_board_in_boards_json_order(self):
-        # Every board with notes, notes-only boards included (Edexcel B, D66):
-        # load_notes(), not load(), which leaves notes-only boards out.
+        # Every board with notes, Edexcel B included (D66): load("notes").
         self.assertEqual([c.board_key for c in self.chains],
-                         list(board_data.load_notes()))
+                         list(board_data.load("notes")))
 
     def test_each_chain_is_its_declared_length(self):
         for c in self.chains:

@@ -74,8 +74,14 @@ exactly those pages.
 
 ## Board identity is recorded once
 
-In `boards-data/boards.json`, read by five generators through
-`scripts/board_data.py`. **Editing a board name or slug is a two-file commit:**
+In `boards-data/boards.json`, read by every generator through
+`scripts/board_data.py`. **Each board lists the resource families it has**
+(`features`: notes, practiceQuestions, flashcards, glossary, pastPaperBank),
+and `board_data.load(family)` / `groups(family)` return only the boards with
+that family, so a generator never sees a board it has nothing to build for.
+`taxonomy` is derived: a board is in `taxonomy.json` when it has the glossary
+or the bank, and both require practiceQuestions (D67).
+**Editing a board name or slug is a two-file commit:**
 `verify_boards.py` keeps an independent restatement of the whole record in
 `PINNED`, because its comparison against the generators is circular now that they
 read it. `--show` reprints the table.

@@ -45,7 +45,7 @@ ask whether boards.json agrees with a structure boards.json just produced, and
 the answer is yes for every value, including a wrong one. A check that cannot
 fail protects nothing, and it protects nothing while still printing green.
 
-So `PINNED` restates all 82 leaves of the record as an independent literal, in
+So `PINNED` restates every leaf of the record as an independent literal, in
 a deliberately different shape - a flat dotted-path map against the file's
 nested objects and arrays - and check 0 compares the two. This is
 `verify_page_shell.SCRIPT_TAIL` and `build_past_paper_taxonomy.EXPECTED`, the
@@ -90,6 +90,11 @@ BOARDS_JSON = ROOT / "boards-data" / "boards.json"
 # collapsed. (That note lived inside the literal until --reseed existed; a
 # reseed rewrites the literal wholesale, so commentary stays up here.)
 PINNED = {
+    "edexcel-a.features.0": "notes",
+    "edexcel-a.features.1": "practiceQuestions",
+    "edexcel-a.features.2": "flashcards",
+    "edexcel-a.features.3": "glossary",
+    "edexcel-a.features.4": "pastPaperBank",
     "edexcel-a.names.short": "Edexcel",
     "edexcel-a.names.display": "Edexcel A",
     "edexcel-a.names.long": "Edexcel A-Level Economics A",
@@ -140,6 +145,11 @@ PINNED = {
     "edexcel-a.groups.3.names.practiceQuestions": "A Global Perspective",
     "edexcel-a.groups.3.names.practiceQuestionsLabel": "Edexcel Theme 4",
     "edexcel-a.groups.3.names.practiceQuestionsButton": "Theme 4: A Global Perspective",
+    "aqa.features.0": "notes",
+    "aqa.features.1": "practiceQuestions",
+    "aqa.features.2": "flashcards",
+    "aqa.features.3": "glossary",
+    "aqa.features.4": "pastPaperBank",
     "aqa.names.short": "AQA",
     "aqa.names.display": "AQA",
     "aqa.names.long": "AQA A-Level Economics",
@@ -172,7 +182,7 @@ PINNED = {
     "aqa.groups.1.names.practiceQuestions": "The National and International Economy",
     "aqa.groups.1.names.practiceQuestionsLabel": "AQA Macroeconomics",
     "aqa.groups.1.names.practiceQuestionsButton": "Macro: The National and International Economy",
-    "edexcel-b.notesOnly": True,
+    "edexcel-b.features.0": "notes",
     "edexcel-b.names.short": "Edexcel B",
     "edexcel-b.names.display": "Edexcel B",
     "edexcel-b.names.long": "Edexcel A-Level Economics B",
@@ -301,20 +311,34 @@ def main() -> int:
 
     print(f"\n{BOARDS_JSON.relative_to(ROOT)} vs the four hardcoded structures\n")
 
-    # A notes-only board (Edexcel B, D66) is pinned above like any other, but
-    # it belongs to none of the four structures below - they are the
-    # glossary, taxonomy, flashcards and practice-questions families, and
-    # board_data.load() keeps it out of all of them. Comparing the FULL
-    # boards' key sets against each structure is therefore also the proof
-    # that no notes-only board has leaked into one.
-    notes_only = sorted(k for k, b in data.items() if b.get("notesOnly"))
-    data = {k: b for k, b in data.items() if not b.get("notesOnly")}
-    if notes_only:
-        print(f"  (notes-only, pinned but not in these structures: "
-              f"{', '.join(notes_only)})\n")
+    # Each structure below belongs to one family - the glossary, taxonomy,
+    # flashcards and practice-questions generators - and board_data.load()
+    # hands each only the boards with that family (boards.json `features`).
+    # So each comparison is over THOSE boards, and comparing their key sets
+    # against the structure is also the proof that no board without the
+    # family has leaked into it. The rule is restated here rather than
+    # imported from board_data, for the reason PINNED exists: taxonomy is
+    # derived, and a board is in it when it has the glossary or the bank.
+    record = data
+
+    def having(family: str) -> dict:
+        def has(b):
+            have = b["features"]
+            if family == "taxonomy":
+                return "glossary" in have or "pastPaperBank" in have
+            return family in have
+        return {k: b for k, b in record.items() if has(b)}
+
+    for family in ("glossary", "taxonomy", "flashcards", "practiceQuestions"):
+        left_out = sorted(set(record) - set(having(family)))
+        if left_out:
+            print(f"  ({family}: pinned but not in its structure: "
+                  f"{', '.join(left_out)})")
+    print()
 
     # ---------------------------------------------------- build_glossary.py
     print("=== build_glossary.py BOARDS ===")
+    data = having("glossary")
     gl = load_module("build_glossary").BOARDS
     c.eq("glossary board keys",
          sorted(b["slugs"]["glossary"] for b in data.values()), sorted(gl))
@@ -332,6 +356,7 @@ def main() -> int:
 
     # -------------------------------------------- build_past_paper_taxonomy.py
     print("\n=== build_past_paper_taxonomy.py BOARDS + EXPECTED ===")
+    data = having("taxonomy")
     tx = load_module("build_past_paper_taxonomy")
     by_slug = {b["board"]: b for b in tx.BOARDS}
     c.eq("taxonomy board slugs",
@@ -355,6 +380,7 @@ def main() -> int:
 
     # --------------------------------------------------- build_flashcards.py
     print("\n=== build_flashcards.py NOTES_DIRS ===")
+    data = having("flashcards")
     fc = load_module("build_flashcards").NOTES_DIRS
     c.eq("flashcards (board, theme) -> notes dir",
          {(b["slugs"]["flashcards"], g["flashcardsSlug"]): g["notesDir"]
@@ -363,6 +389,7 @@ def main() -> int:
 
     # ---------------------------------------------------- build_questions.py
     print("\n=== build_questions.py: five structures ===")
+    data = having("practiceQuestions")
     q = load_module("build_questions")
     c.eq("PAST_PAPERS",
          {b["slugs"]["pastPapers"]:

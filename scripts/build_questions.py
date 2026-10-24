@@ -64,10 +64,10 @@ SKILL_LABELS = {
 PAST_PAPERS = {
     b["slugs"]["pastPapers"]:
         (b["papersUrl"], f"{b['names']['short']} Past Papers")
-    for b in board_data.load().values()
+    for b in board_data.load("practiceQuestions").values()
 }
 BOARD_LABELS = {b["slugs"]["pastPapers"]: b["names"]["short"]
-                for b in board_data.load().values()}
+                for b in board_data.load("practiceQuestions").values()}
 
 # Cross-resource links per group - resource unification Phase 2. Each group's
 # flashcards deck and question-finder board page, from the record: the slugs
@@ -75,17 +75,21 @@ BOARD_LABELS = {b["slugs"]["pastPapers"]: b["names"]["short"]
 # flashcards, "edexcel" in the question bank), which is exactly why they are
 # read rather than derived. GROUP_LABELS is the short display label
 # ("Theme 1", "Microeconomics") for the notes button on each board index.
+#
+# Each from its OWN family: a board with practice questions need not have a
+# deck or a bank yet (D67 adds them one at a time), and a board index links
+# only the ones that exist - render_board_index leaves a missing one out.
 FLASHCARDS_URLS = {
     group["notesDir"]:
         f"/flashcards/{board['slugs']['flashcards']}/{group['flashcardsSlug']}/"
-    for _key, board, group in board_data.groups()
+    for _key, board, group in board_data.groups("flashcards")
 }
 QB_URLS = {
     group["notesDir"]: f"/past-paper-questions/{board['slugs']['questionBank']}/"
-    for _key, board, group in board_data.groups()
+    for _key, board, group in board_data.groups("pastPaperBank")
 }
 GROUP_LABELS = {group["notesDir"]: group["label"]
-                for _key, _board, group in board_data.groups()}
+                for _key, _board, group in board_data.groups("practiceQuestions")}
 
 # Display order and copy for the hub and the board index pages. Mirrors the
 # order the notes use in templates/header.html.
@@ -102,7 +106,7 @@ BOARDS = [
     (group["notesDir"],
      group["names"]["practiceQuestionsLabel"],
      group["names"]["practiceQuestions"])
-    for _key, _board, group in board_data.groups()
+    for _key, _board, group in board_data.groups("practiceQuestions")
 ]
 BOARD_ORDER = {d: i for i, (d, _, _) in enumerate(BOARDS)}
 
@@ -128,7 +132,7 @@ HUB_SECTIONS = [
 # Theme 2's is "Theme 2: The UK Economy" - the SHORT form, and the reason
 # boards.json records a group's name five times over rather than once.
 HUB_LABELS = {group["notesDir"]: group["names"]["practiceQuestionsButton"]
-              for _key, _board, group in board_data.groups()}
+              for _key, _board, group in board_data.groups("practiceQuestions")}
 BOARD_BLURB = {d: b for d, _, b in BOARDS}
 
 # HUB_SECTIONS is NOT in the record and is not meant to be: which themes are
@@ -138,7 +142,7 @@ BOARD_BLURB = {d: b for d, _, b in BOARDS}
 # automatically and this one not at all, which would drop it off the hub with no
 # error. So the two are reconciled here instead.
 _hub_dirs = [d for _h, gs in HUB_SECTIONS for _label, ds in gs for d in ds]
-_recorded = [g["notesDir"] for _k, _b, g in board_data.groups()]
+_recorded = [g["notesDir"] for _k, _b, g in board_data.groups("practiceQuestions")]
 if sorted(_hub_dirs) != sorted(_recorded):
     sys.exit(
         f"HUB_SECTIONS lists {sorted(_hub_dirs)} and boards.json records "
@@ -1163,13 +1167,13 @@ def render_board_index(board_dir, topics):
     # D45 line: the notes and past-papers buttons restyle links this page
     # already carried; the flashcards and question-finder buttons are new
     # edges into the NEW sections only, which Phases 1-2 may add freely.
-    [
+    [link for link in (
         (f"/revision-notes/{board_dir}/",
          f"Read the {GROUP_LABELS[board_dir]} notes"),
-        (FLASHCARDS_URLS[board_dir], "Revise with the flashcards"),
-        (QB_URLS[board_dir], f"Search {label} past paper questions"),
+        (FLASHCARDS_URLS.get(board_dir), "Revise with the flashcards"),
+        (QB_URLS.get(board_dir), f"Search {label} past paper questions"),
         (papers_href, papers_label),
-    ],
+    ) if link[0]],
 )}
 {render_services(
     "<strong>Getting these wrong?</strong> Work through the topic with an expert "

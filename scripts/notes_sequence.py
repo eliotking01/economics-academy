@@ -189,12 +189,12 @@ class Chain:
 def chains() -> list[Chain]:
     """Both chains, in the order boards.json lists the boards.
 
-    board_data.load_notes() fails first if boards.json's board order or group
+    board_data.load("notes") fails first if boards.json's board order or group
     order has moved, so the sequence cannot be reordered by an undeclared
-    edit. load_notes(), not load(): a notes-only board (Edexcel B) has notes
-    and so has a chain of its own, never joined to the others.
+    edit. load("notes"): every board has notes, Edexcel B included, and so
+    each has a chain of its own, never joined to the others.
     """
-    return [Chain(key, board) for key, board in board_data.load_notes().items()]
+    return [Chain(key, board) for key, board in board_data.load("notes").items()]
 
 
 def _slot(kind: str, href: str, title: str, rel: str | None) -> str:

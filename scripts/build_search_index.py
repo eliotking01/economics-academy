@@ -48,7 +48,7 @@ words). The two files state the same schema and must move together:
 
     dirs      [notesDir, boardName, moduleName, boardSlug, quiz]
               one per open notes directory; quiz is 1 if the board has
-              practice questions, 0 for a notes-only board
+              practice questions, 0 if it has not
     topics    [di, slug, spec, title, short, headings, ppq]
               di indexes dirs; short is "" when it equals title; ppq is 0/1
     glossary  [title, anchorId, boards, kind, definition]
@@ -141,8 +141,8 @@ PAGES: dict[str, tuple[str, str]] = {
 }
 
 # The board hub pages join the "pages" group too, titles from their own <h1>s.
-# A notes-only board's hubs are added from its directories in pages_rows(),
-# so opening a new Edexcel B theme needs no edit here.
+# Any other notes hub (Edexcel B's) is added from its directory in
+# pages_rows(), so opening a theme needs no edit here.
 BOARD_HUBS = (
     "/revision-notes/edexcel-theme-1/", "/revision-notes/edexcel-theme-2/",
     "/revision-notes/edexcel-theme-3/", "/revision-notes/edexcel-theme-4/",
@@ -199,10 +199,14 @@ def faq_rows() -> list[list]:
 def pages_rows() -> list[list]:
     out = [[h1_of(url), url, meta, synonyms]
            for url, (meta, synonyms) in PAGES.items()]
-    notes_only_hubs = tuple(f"/revision-notes/{d}/"
-                            for d in notes_extras.BOARD_OF_DIR
-                            if board_data.is_notes_only(d))
-    for url in BOARD_HUBS + notes_only_hubs:
+    # Every notes hub BOARD_HUBS does not list (Edexcel B's), whatever its
+    # board's families - so a board gaining practice questions (D67) cannot
+    # drop its notes hubs out of search. Its practice and glossary hubs
+    # join BOARD_HUBS by hand when they launch (/launch-feature).
+    other_hubs = tuple(f"/revision-notes/{d}/"
+                       for d in notes_extras.BOARD_OF_DIR
+                       if f"/revision-notes/{d}/" not in BOARD_HUBS)
+    for url in BOARD_HUBS + other_hubs:
         family = ("Practice questions" if url.startswith("/practice-questions/")
                   else "Glossary" if "/glossary/" in url
                   else "Revision notes")
@@ -214,13 +218,13 @@ def pages_rows() -> list[list]:
 
 # One row per notes directory, indexed into by every topic row:
 # [notesDir, boardName, moduleName, boardSlug, quiz]. Order = notes_extras's,
-# which is boards.json group order (Edexcel first, notes-only boards last, so
-# adding one never renumbers the others). quiz is 0 for a notes-only board
-# (Edexcel B, D66): the client then builds no practice-question row for its
-# topics, because those pages do not exist.
+# which is boards.json group order (Edexcel first, Edexcel B last, so adding
+# a board never renumbers the others). quiz is 0 for a board without practice
+# questions (Edexcel B until D67's launch): the client then builds no
+# practice-question row for its topics, because those pages do not exist.
 def dirs_table() -> list[list]:
     return [[d, board, module, notes_extras.BOARD_SLUG[board],
-             0 if board_data.is_notes_only(d) else 1]
+             1 if board_data.has_feature(d, "practiceQuestions") else 0]
             for d, (board, module) in notes_extras.BOARD_OF_DIR.items()]
 
 
@@ -237,12 +241,13 @@ def headings_of(notes_dir: str, slug: str) -> list[str]:
 
 
 def notes_only_rows(di: int, notes_dir: str) -> list[list]:
-    """Topic rows for a notes-only board, from its hub and its slices.
+    """Topic rows for a board without practice questions, from its hub and
+    its slices.
 
     The hub label is "1.2.5 The Wider Economic Environment": the code is the
     spec, the rest is the short title when it differs from the page's <h1>.
     The past-paper bank is never consulted, for the reason next_steps_block
-    gives: it is keyed on bare slug, and a notes-only slug that matched
+    gives: it is keyed on bare slug, and a slug of this board's that matched
     another board's would borrow its questions.
     """
     out = []
@@ -269,10 +274,11 @@ def topic_rows(dirs: list[list]) -> list[list]:
             out += notes_only_rows(di, notes_dir)
             continue
         recs = notes_extras.quiz_records(notes_dir)
+        in_bank = board_data.has_feature(notes_dir, "pastPaperBank")
         for slug in sorted(recs):
             rec = recs[slug]
             short = rec["shortTitle"] if rec["shortTitle"] != rec["title"] else ""
-            has_page = len(bank.get(slug, [])) >= ppq.GATE
+            has_page = in_bank and len(bank.get(slug, [])) >= ppq.GATE
             out.append([di, slug, rec["spec"], rec["title"], short,
                         " ".join(headings_of(notes_dir, slug)),
                         1 if has_page else 0])

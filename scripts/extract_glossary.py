@@ -79,9 +79,13 @@ VOID = {"br", "img", "hr", "input", "meta", "link", "source", "area", "base",
 # GLOSSARY_OF_SHORTNAME the word a spec-alert actually prints - "Specification
 #                       Coverage: Edexcel unit 1.1.1" - mapped to the same key.
 GLOSSARY_OF_TAXONOMY = {b["slugs"]["taxonomy"]: b["slugs"]["glossary"]
-                        for b in board_data.load().values()}
+                        for b in board_data.load("glossary").values()}
 GLOSSARY_OF_SHORTNAME = {b["names"]["short"]: b["slugs"]["glossary"]
-                         for b in board_data.load().values()}
+                         for b in board_data.load("glossary").values()}
+# Every board taxonomy.json may hold, glossary or not: a board can be there for
+# the past-paper bank alone (board_data.TAXONOMY_READERS), and is skipped.
+TAXONOMY_SLUGS = {b["slugs"]["taxonomy"]
+                  for b in board_data.load("taxonomy").values()}
 
 # Longest name first. Alternation in `re` is ordered and the first branch that
 # matches wins, so a board whose short name is a prefix of another's would
@@ -311,11 +315,13 @@ def board_index():
     tax = json.loads(TAXONOMY.read_text(encoding="utf-8"))
     out = {}
     for b in tax["boards"]:
-        if b["slug"] not in GLOSSARY_OF_TAXONOMY:
+        if b["slug"] not in TAXONOMY_SLUGS:
             sys.exit(f"taxonomy.json has board {b['slug']!r}, which "
                      f"boards-data/boards.json does not record as a "
                      f"slugs.taxonomy. Re-run build_past_paper_taxonomy.py, or "
                      f"declare the board in the record.")
+        if b["slug"] not in GLOSSARY_OF_TAXONOMY:
+            continue  # in the taxonomy for the bank, not for the glossary
         for g in b["groups"]:
             out[g["notesDir"]] = {
                 "board": GLOSSARY_OF_TAXONOMY[b["slug"]],

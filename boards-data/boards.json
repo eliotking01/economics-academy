@@ -5,10 +5,13 @@
 
   "_why_slugs_and_names_are_maps": "PH09's design made `slugs` a map because one board is spelled three ways across three families and all three are correct - the URLs are frozen. Measured on 2026-08-11, the same is true of GROUP NAMES, which PH09 did not anticipate: Theme 2 reaches published output as three different strings. `The UK Economy — Performance and Policies` (em dash) in taxonomy.json and the notes hub <h1>, `The UK Economy - Performance and Policies` (hyphen) in the flashcards decks, and `The UK Economy` in practice-questions. Collapsing those to one canonical name would silently rewrite visible text on a whole page family. So names are recorded per consumer too, and the differences are data rather than a bug to tidy.",
 
-  "_adding_a_board": "Add an entry here (with \"notesOnly\": true if it has notes and nothing else), create the notes pages and source data, re-run the generators, add the nav entries in templates/header.html. `expectedTopics` keeps build_past_paper_taxonomy.py's loud-failure guard: a board whose data does not match its declaration fails rather than emitting a short taxonomy.",
+  "_adding_a_board": "Add an entry here with a `features` list naming only what is finished (`[\"notes\"]` to start), create the notes pages and source data, re-run the generators, add the nav entries in templates/header.html. `expectedTopics` keeps build_past_paper_taxonomy.py's loud-failure guard: a board in the taxonomy whose data does not match its declaration fails rather than emitting a short taxonomy.",
+
+  "_features": "Which resource families a board has, one list per board. The five names are scripts/board_data.py's FEATURES: notes, practiceQuestions, flashcards, glossary, pastPaperBank. board_data.load(family) and groups(family) return only the boards that have that family, so a generator never sees a board it has nothing to build for. A feature is added here when it is complete for all of the board's groups at once - one feature at a time, never half a board (D67). `taxonomy` is not a feature: it is the shared spine the glossary and the past-paper bank read, and board_data derives it - a board is in taxonomy.json when it has glossary or pastPaperBank. Both of those need practiceQuestions too, because taxonomy.json is built from the questions-data/ topic records and links each topic's practice page; board_data refuses the record otherwise. Edexcel A and AQA have all five; Edexcel B has notes (D66, superseded in part by D67).",
 
   "boards": {
     "edexcel-a": {
+      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank"],
       "names": {
         "short": "Edexcel",
         "display": "Edexcel A",
@@ -84,6 +87,7 @@
     },
 
     "aqa": {
+      "features": ["notes", "practiceQuestions", "flashcards", "glossary", "pastPaperBank"],
       "names": {
         "short": "AQA",
         "display": "AQA",
@@ -134,8 +138,8 @@
     },
 
     "edexcel-b": {
-      "notesOnly": true,
-      "_notesOnly_why": "Edexcel B (9EB0) has revision notes and nothing else: no practice questions, flashcards, glossary, past-paper question bank or taxonomy. board_data.load() and groups() leave a notes-only board out, so the generators for those families never see it; the notes family reads load_notes(). D66, 2026-09-26. The fields below are only the ones something reads - no slugs for families the board does not have.",
+      "features": ["notes"],
+      "_features_why": "Edexcel B (9EB0) opened with revision notes and nothing else (D66, 2026-09-26). D67 (2026-10-24) gives it the full set, each family added to this list only when it is complete for all four themes, so until then board_data.load(family) and groups(family) leave it out and the generators for those families never see it. The fields below are only the ones something reads - no slugs or group names for families the board does not have yet; each arrives with its feature, as visible wording Eliot approves.",
       "names": {
         "short": "Edexcel B",
         "display": "Edexcel B",
@@ -187,7 +191,7 @@
     }
   },
 
-  "_pastPapersOnly": "OCR has past papers on the site and no notes, no glossary, no flashcards and no question bank. It is not a board in this file's sense - nothing generates anything for it - and past-papers/ocr/ is a hand-written page. Recorded here so that its absence reads as a decision. Edexcel B was listed here too until 2026-09-26, when it became a notes-only board above (D66); past-papers/edexcel-b/ is still hand-written.",
+  "_pastPapersOnly": "OCR has past papers on the site and no notes, no glossary, no flashcards and no question bank. It is not a board in this file's sense - nothing generates anything for it - and past-papers/ocr/ is a hand-written page. Recorded here so that its absence reads as a decision. Edexcel B was listed here too until 2026-09-26, when it became a board with notes above (D66); past-papers/edexcel-b/ is still hand-written.",
 
-  "_whoReadsThis": "Five generators, through scripts/board_data.py's load() and groups(), which leave notes-only boards out; the notes family (notes_sequence, new_topic, verify_page_shell's notes count) reads load_notes() and sees every board: build_past_paper_taxonomy, build_flashcards, extract_glossary, build_glossary and build_questions. Wave 3.2 repointed them one commit at a time, each with its output proved byte-identical. EDITING A NAME OR SLUG HERE IS A TWO-FILE COMMIT: scripts/verify_boards.py keeps an independent copy of all 82 leaves in PINNED, because its comparison against the generators became circular the moment they started reading this file. Run `python3 scripts/verify_boards.py --show` to reprint that copy. Five fields are recorded and read by nothing: slugs.questionBank, slugs.dataDir, specCodesAreReal and each group's names.flashcards, plus notesUrl which build_glossary copies into its BOARDS and never renders. slugs.dataDir is also incomplete - Edexcel A has two past-paper data directories, edexcel-a and edexcel-a-as, and this records one."
+  "_whoReadsThis": "Every generator, through scripts/board_data.py's load(family) and groups(family), each naming the family it builds: build_past_paper_taxonomy (taxonomy), build_flashcards (flashcards), extract_glossary and build_glossary (glossary), build_questions (practiceQuestions), build_past_paper_questions (pastPaperBank, filtering taxonomy.json), and the notes family - notes_sequence, new_topic, notes_extras, build_search_index, verify_page_shell's notes count - (notes). Wave 3.2 repointed them one commit at a time, each with its output proved byte-identical. EDITING A NAME OR SLUG HERE IS A TWO-FILE COMMIT: scripts/verify_boards.py keeps an independent copy of every leaf in PINNED, because its comparison against the generators became circular the moment they started reading this file. Run `python3 scripts/verify_boards.py --show` to reprint that copy. Five fields are recorded and read by nothing: slugs.questionBank, slugs.dataDir, specCodesAreReal and each group's names.flashcards, plus notesUrl which build_glossary copies into its BOARDS and never renders. slugs.dataDir is also incomplete - Edexcel A has two past-paper data directories, edexcel-a and edexcel-a-as, and this records one."
 }

@@ -61,14 +61,14 @@ BOARDS = [
             for g in b["groups"]
         ],
     }
-    for b in board_data.load().values()
+    for b in board_data.load("taxonomy").values()
 ]
 
 # The loud-failure guard PH09-022 singled out as worth preserving: a board whose
 # data does not match its declaration fails here rather than silently emitting a
 # short taxonomy. The declaration moved into the record; the property did not.
 EXPECTED = {b["slugs"]["taxonomy"]: b["expectedTopics"]
-            for b in board_data.load().values()}
+            for b in board_data.load("taxonomy").values()}
 
 
 def load_topics(board_dir):

@@ -380,7 +380,7 @@ def main() -> int:
     # the moment it is recorded and cannot slip past these checks.
     import board_data  # noqa: E402  (scripts/ is on sys.path, assertion 13)
     BOARD_OF_NOTES_DIR = {g["notesDir"]: b["names"]["short"]
-                          for _k, b, g in board_data.notes_groups()}
+                          for _k, b, g in board_data.groups("notes")}
     NOTES_DIRS = tuple(BOARD_OF_NOTES_DIR)
     topics = [p for p in pages
               if len(Path(p).parts) == 3
