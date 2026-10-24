@@ -102,7 +102,7 @@ BOARD_COPY = {
 }
 
 BOARDS = {}
-for _b in board_data.load().values():
+for _b in board_data.load("glossary").values():
     _slug = _b["slugs"]["glossary"]
     if _slug not in BOARD_COPY:
         sys.exit(f"boards.json records glossary board {_slug!r} and BOARD_COPY "
@@ -867,7 +867,12 @@ def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     tax = json.loads(TAXONOMY.read_text(encoding="utf-8"))
     groups, order = {}, 0
+    # Glossary boards only: taxonomy.json can hold a board for the past-paper
+    # bank alone (board_data.TAXONOMY_READERS).
+    glossary_tax = {b["taxonomy"] for b in BOARDS.values()}
     for b in tax["boards"]:
+        if b["board"] not in glossary_tax:
+            continue
         for g in b["groups"]:
             groups[g["slug"]] = {"label": g["label"], "name": g["name"],
                                  "order": order}

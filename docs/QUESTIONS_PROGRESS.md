@@ -108,6 +108,13 @@ commit.
 
 ### The two originality scripts, which are not committed
 
+**Superseded 2026-10-24 for `orig.py`:** the check is now committed as
+`scripts/check_originality.py` (`corpus` rebuilds the AQA, Edexcel A and
+Edexcel B corpora into the gitignored `_working/originality-corpus/` with
+`scripts/pdf_text.swift`; `check <sets>` runs the three comparisons below).
+Its docstring records the thresholds and why. `pagetext.py` is still
+scratch. The original description follows.
+
 Both live in the session scratchpad and have to be rebuilt each time. They are
 short, and the batch records describe what they do.
 

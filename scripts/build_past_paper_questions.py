@@ -53,6 +53,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import board_data  # noqa: E402
 # Wave 2 Phase 6. page_shell.py owns the <head> for every family now.
 import page_shell as shell  # noqa: E402
 import prettier_util  # noqa: E402
@@ -123,6 +124,11 @@ def load_bank():
 
 def load():
     taxonomy = json.loads((DATA / "taxonomy.json").read_text(encoding="utf-8"))
+    # The bank's boards only. taxonomy.json can hold a board for its glossary
+    # alone (board_data.TAXONOMY_READERS); reaching this index it would join the
+    # master search's board list with no questions behind it.
+    bank = {b["slugs"]["taxonomy"] for b in board_data.load("pastPaperBank").values()}
+    taxonomy["boards"] = [b for b in taxonomy["boards"] if b["board"] in bank]
     tags, papers = load_bank()
     return taxonomy, tags, papers
 

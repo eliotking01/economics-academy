@@ -86,17 +86,107 @@ class HubEditTests(unittest.TestCase):
             add(HUB, "1.1.1", "One")
 
 
-class NotesOnlyFilterTests(unittest.TestCase):
-    def test_load_never_returns_a_notes_only_board(self):
-        self.assertFalse(any(b.get("notesOnly") for b in board_data.load().values()))
-        self.assertFalse(any(b.get("notesOnly") for _k, b, _g in board_data.groups()))
+class FeatureFilterTests(unittest.TestCase):
+    """board_data.load(family) returns only the boards with that family."""
 
-    def test_load_notes_is_load_plus_the_notes_only_boards(self):
-        full = board_data.load()
-        notes = board_data.load_notes()
-        self.assertEqual({k for k, b in notes.items() if not b.get("notesOnly")},
-                         set(full))
-        self.assertEqual(tuple(notes), board_data.EXPECTED_KEYS)
+    def test_load_never_returns_a_board_without_the_family(self):
+        for family in board_data.FAMILIES:
+            for b in board_data.load(family).values():
+                self.assertIn(family, board_data.features(b), family)
+            for _k, b, _g in board_data.groups(family):
+                self.assertIn(family, board_data.features(b), family)
+
+    def test_every_board_has_notes_in_record_order(self):
+        self.assertEqual(tuple(board_data.load("notes")), board_data.EXPECTED_KEYS)
+
+    def test_taxonomy_is_the_glossary_and_bank_boards(self):
+        self.assertEqual(
+            set(board_data.load("taxonomy")),
+            set(board_data.load("glossary")) | set(board_data.load("pastPaperBank")))
+
+    def test_there_is_no_default_family(self):
+        with self.assertRaises(TypeError):
+            board_data.load()
+        with self.assertRaises(SystemExit):
+            board_data.load("notesOnly")
+
+    def test_has_feature_agrees_with_groups(self):
+        for family in board_data.FAMILIES:
+            on = {g["notesDir"] for _k, _b, g in board_data.groups(family)}
+            for _k, _b, g in board_data.groups("notes"):
+                self.assertEqual(board_data.has_feature(g["notesDir"], family),
+                                 g["notesDir"] in on, (family, g["notesDir"]))
+
+
+class FeatureCoherenceTests(unittest.TestCase):
+    """_features_are_coherent refuses a record no generator could honour."""
+
+    def check(self, features):
+        board_data._features_are_coherent({"x": {"features": features}})
+
+    def test_the_record_as_committed_is_coherent(self):
+        board_data._features_are_coherent(board_data._load_all())
+
+    def test_refused(self):
+        for bad in ([], ["practiceQuestions"], ["notes", "notesOnly"],
+                    ["notes", "notes"], ["notes", "glossary"],
+                    ["notes", "flashcards", "pastPaperBank"]):
+            with self.assertRaises(SystemExit, msg=bad):
+                self.check(bad)
+
+    def test_accepted(self):
+        for ok in (["notes"], ["notes", "flashcards"],
+                   ["notes", "practiceQuestions", "glossary"],
+                   list(board_data.FEATURES)):
+            self.check(ok)
+
+
+
+class StagedTests(unittest.TestCase):
+    """A staged family validates and publishes nothing; EA_PREVIEW promotes it."""
+
+    def record(self, features, staged):
+        return {"x": {"features": list(features), "staged": list(staged)}}
+
+    def test_staged_refusals(self):
+        for features, staged in ((["notes"], ["glossary"]),
+                                 (["notes"], ["pastPaperBank"]),
+                                 (["notes", "flashcards"], ["flashcards"]),
+                                 (["notes"], ["flashcards", "flashcards"]),
+                                 (["notes"], ["notesOnly"])):
+            with self.assertRaises(SystemExit, msg=(features, staged)):
+                board_data._features_are_coherent(self.record(features, staged))
+
+    def test_staged_accepted(self):
+        board_data._features_are_coherent(
+            self.record(["notes"], ["practiceQuestions", "flashcards"]))
+
+    def test_staged_counts_only_when_asked(self):
+        b = {"features": ["notes"], "staged": ["flashcards"]}
+        self.assertNotIn("flashcards", board_data.features(b))
+        self.assertIn("flashcards", board_data.features(b, staged=True))
+
+    def test_live_is_a_subset_of_staged(self):
+        for family in board_data.FAMILIES:
+            self.assertLessEqual(set(board_data.load(family)),
+                                 set(board_data.load(family, staged=True)))
+
+    def test_preview_promotes_only_a_staged_family(self):
+        import os
+        from unittest import mock
+        rec = {"x": {"features": ["notes"], "staged": ["flashcards"]}}
+        with mock.patch.dict(os.environ, {"EA_PREVIEW": "x:flashcards"}):
+            board_data._apply_preview(rec)
+        self.assertEqual(rec["x"], {"features": ["notes", "flashcards"],
+                                    "staged": []})
+        with mock.patch.dict(os.environ, {"EA_PREVIEW": "x:glossary"}):
+            with self.assertRaises(SystemExit):
+                board_data._apply_preview(rec)
+
+    def test_no_preview_in_the_committed_environment(self):
+        import os
+        self.assertFalse(os.environ.get("EA_PREVIEW"),
+                         "EA_PREVIEW is set while the tests run")
 
 
 if __name__ == "__main__":

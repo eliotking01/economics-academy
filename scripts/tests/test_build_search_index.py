@@ -63,12 +63,14 @@ class TestSearchIndex(unittest.TestCase):
                 self.assertTrue((ROOT / rel).is_file(), msg=rel)
 
     def test_quiz_flag_matches_the_board(self):
-        """A notes-only board (Edexcel B) is flagged quiz 0, so the client
-        builds no practice row that would dangle; every other board is 1."""
+        """A board without practice questions (Edexcel B until D67's launch)
+        is flagged quiz 0, so the client builds no practice row that would
+        dangle; a board with them is 1."""
         import board_data
         for notes_dir, *_rest, quiz in self.index["dirs"]:
-            self.assertEqual(quiz, 0 if board_data.is_notes_only(notes_dir)
-                             else 1, msg=notes_dir)
+            self.assertEqual(
+                quiz, 1 if board_data.has_feature(notes_dir, "practiceQuestions")
+                else 0, msg=notes_dir)
 
     def test_notes_only_rows_match_their_pages(self):
         """A notes-only topic's spec is the code its own page shows, and its

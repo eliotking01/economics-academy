@@ -163,14 +163,15 @@ def expected_page_counts() -> dict[str, int]:
     and the data directories. Adding a topic is a boards.json bump and new
     data, and this table moves with it - no literal here to chase.
     """
-    # Notes pages come from every board with notes; practice-question pages,
-    # decks and glossaries only from the full boards (a notes-only board -
-    # Edexcel B - has none of them). board_data's docstring has the split.
+    # Each family counts the boards that have it (boards.json `features`):
+    # notes pages from every board, practice-question pages and glossaries
+    # only from the boards with those - Edexcel B has notes alone until D67's
+    # launches. board_data's docstring has the split.
     notes_topics = sum(b["expectedTopics"]
-                       for b in board_data.load_notes().values())
-    boards = board_data.load()
-    topics = sum(b["expectedTopics"] for b in boards.values())
-    groups = sum(len(b["groups"]) for b in boards.values())
+                       for b in board_data.load("notes").values())
+    practice = board_data.load("practiceQuestions")
+    topics = sum(b["expectedTopics"] for b in practice.values())
+    groups = sum(len(b["groups"]) for b in practice.values())
     out = {
         "notes-topic": notes_topics,
         "mcq-topic": topics,
@@ -179,7 +180,7 @@ def expected_page_counts() -> dict[str, int]:
         "notes-hub": len(list((ROOT / "notes-data" / "hubs").glob("*.json"))),
         "mcq-hub": groups + 1,            # one per group plus /practice-questions/
         "flashcards": len(list((ROOT / "flashcards-data").glob("*/*.json"))) + 1,
-        "glossary": len(boards) + 1,      # one per board plus the combined page
+        "glossary": len(board_data.load("glossary")) + 1,  # one per board plus the combined page
     }
     out.update(PINNED_PAGE_COUNTS)
     return out

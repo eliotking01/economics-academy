@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | committed, not pushed; URL list awaiting Eliot | — | — |
 | Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
 | Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
 | Edexcel B notes — Theme 4: 19 pages, index card, site search | live | 2026-10-17 | `fec344d2` |
@@ -209,6 +210,54 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 0 groundwork (2026-10-24) — COMMITTED, NOT PUSHED (branch `feature/all-boards-groundwork`)
+
+D67 (2026-10-24) gives Edexcel B practice questions, flashcards, a glossary
+and a past-paper bank, and widens the bank to Edexcel A Section A short
+answers and search-only real MCQs. Nine phases. The plan is the Claude Doc
+"All-Boards Parity Plan", and the technical brief is
+`05-website/claude-code-prompts/all-boards-parity/BRIEF.md`. Review sheets
+go in `05-website/drafts/all-boards-parity/review/`. This branch is Phase 0
+and mints no URL.
+
+- **Per-board feature flags** (`15cd34ff`). `notesOnly` became a `features`
+  list per board in `boards.json`. `board_data.load(family)` and
+  `groups(family)` take the family and have no default.
+  `has_feature(notes_dir, family)` replaced `is_notes_only`. The taxonomy is
+  a derived family (glossary or bank), and `board_data` refuses either
+  without practiceQuestions. The bank and the glossary each filter
+  `taxonomy.json` to their own boards. `verify_boards.py` PINNED was
+  reseeded. **Byte-identical**: `build.py` over the edited tree reported 0
+  files changed, and `verify_generated.py` on the commit said 0 files would
+  change. A throwaway worktree with AQA's `pastPaperBank` removed moved the
+  73 AQA notes tails, which proves the flag is read.
+- **Originality check committed** (`47ea497e`):
+  `scripts/check_originality.py` and `scripts/pdf_text.swift`. Corpora for
+  AQA, Edexcel A and Edexcel B (45, 40 and 34 question papers) go in the
+  gitignored `_working/originality-corpus/`. Its first whole-bank run found
+  two live AQA questions too close to real papers, logged as REVIEW-NOTES
+  **N-Q25** and not fixed.
+- **`.claude/agents/cold-solver.md`** (solve, verify and tag modes, Read
+  only, and barred from the data directories and the review sheets), and
+  `/edexcel-b-questions`, `/edexcel-b-flashcards` and `/launch-feature`.
+- **D67** appended to `docs/audit/DECISIONS.md`.
+
+**Eliot's answers, 2026-10-24 (D68): every recommendation taken.**
+- **Staged families** are built. A family in a board's `staged` list is
+  validated by its generator and written to no page; practice questions
+  and flashcards so far.
+- **`EA_PREVIEW=<board>:<family>`** forces a staged family live for one local
+  run, and `verify_generated.py` refuses to run under it.
+- **B's slugs** are in `boards.json`, and the B URL list is approved.
+- **Phase 7 MCQs** mint no URLs and don't count toward the gate.
+- **N-Q25:** both AQA questions were rewritten and re-solved cold.
+
+A worktree run proved staging on AQA's flashcards: the decks were validated
+and nothing was written. The preview of the same state reproduced the
+committed tree exactly, with 0 differences.
+
+Phase 1 (`/edexcel-b-questions`) can start.
 
 ### Edexcel B revision notes — Theme 3 (2026-10-20) — COMPLETE, PR into main opened 2026-10-20 (branch `feature/edexcel-b-theme-3`)
 

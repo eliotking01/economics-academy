@@ -116,14 +116,14 @@ def slug_spec(slug: str) -> str:
 
 def resolve(board_arg: str, spec: str):
     """(board_key, board, group) for the argument and spec code."""
-    boards = board_data.load_notes()
+    boards = board_data.load("notes")
     if board_arg in boards:
         board_key, board = board_arg, boards[board_arg]
         digit = spec_key(spec)[0]
         themed = [g for g in board["groups"] if "-theme-" in g["notesDir"]]
         if themed:
-            # By theme NUMBER, not list position: a notes-only board opens its
-            # themes one at a time (D66), so Theme 4 can be its second group.
+            # By theme NUMBER, not list position: Edexcel B opened its themes
+            # one at a time (D66), so Theme 4 could be its second group.
             hit = [g for g in themed if g["notesDir"].endswith(f"-theme-{digit}")]
             if not hit:
                 not_open(board_key, themed[0]["notesDir"].rsplit("-", 1)[0]
@@ -550,7 +550,7 @@ def main() -> int:
  2. Finish the head in {slug}.json: the description's "Covers ..." clause
     (seo/tools/rewrite_notes_meta.py re-runs the title/description formula
     once the page has its H2s) and the LearningResource description.
-{NOTES_ONLY_STEPS if board.get("notesOnly") else FULL_STEPS.format(
+{NOTES_ONLY_STEPS if "practiceQuestions" not in board["features"] else FULL_STEPS.format(
     notes_dir=notes_dir, code=args.spec.replace('.', '-'))}
  6. python3 scripts/build.py, then the suite (/verify). verify_page_shell.py
     and verify_notes_sequence.py derive their counts from boards.json, so
@@ -561,7 +561,8 @@ def main() -> int:
     return 0
 
 
-# Steps 3-5 of the checklist, which differ for a notes-only board.
+# Steps 3-5 of the checklist, which differ for a board without practice
+# questions (Edexcel B until D67's launch).
 FULL_STEPS = """ 3. Twin row: scripts/notes_twins.py is a written-down table - add the
     (board, slug) pair for this topic's counterpart on the other board, or
     leave it unpaired on purpose (verify_seo.py assertion 13 permits only
@@ -578,11 +579,12 @@ FULL_STEPS = """ 3. Twin row: scripts/notes_twins.py is a written-down table - a
     past-paper questions to the slug in past-paper-questions-data/tags.json
     and the page's past-paper line updates itself on the next build."""
 
-NOTES_ONLY_STEPS = """ 3. No twin row yet: twin links for a notes-only board are deferred until
-    after launch (D66), and notes_twins.board_of_dir needs fixing first.
- 4. No questions-data record: this board is notes-only (boards.json
-    notesOnly, D66). The page's tail is the board's past-papers panel.
- 5. No flashcards or past-paper tags: the board has neither."""
+NOTES_ONLY_STEPS = """ 3. No twin row yet: twin links for Edexcel B are D67 Phase 5, and
+    notes_twins.board_of_dir needs fixing first.
+ 4. No questions-data record: this board has no practiceQuestions in
+    boards.json's features yet. The page's tail is the board's past-papers
+    panel.
+ 5. No flashcards or past-paper tags until those features are on."""
 
 
 if __name__ == "__main__":

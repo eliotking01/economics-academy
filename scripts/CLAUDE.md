@@ -129,6 +129,11 @@ python3 scripts/build_diagram_webp.py --apply    # Pillow - a lossless .webp twi
 python3 scripts/subset_fontawesome.py --apply    # fonttools + brotli
 ```
 
+`check_originality.py` is not in CI either, because its corpora are local:
+`corpus` extracts every AQA, Edexcel A and Edexcel B question paper with
+`pdf_text.swift` into the gitignored `_working/originality-corpus/`, and
+`check <sets>` shingles practice sets against those and the rest of the bank.
+
 `build_diagram_webp.py` is idempotent (it compares pixels, so a re-run is a
 no-op) and **must be re-run whenever a diagram PNG is added or changed** -
 `verify_image_dimensions.py` (stdlib, in CI) fails if any PNG lacks a

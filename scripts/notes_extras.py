@@ -124,7 +124,7 @@ BOARD_OF_DIR = {
     "edexcel-theme-4": ("Edexcel", "Theme 4"),
     "aqa-a2-micro": ("AQA", "Microeconomics"),
     "aqa-a2-macro": ("AQA", "Macroeconomics"),
-    # Edexcel B, notes-only (D66): one row per open theme.
+    # Edexcel B (D66): one row per open theme.
     "edexcel-b-theme-1": ("Edexcel B", "Theme 1"),
     "edexcel-b-theme-2": ("Edexcel B", "Theme 2"),
     "edexcel-b-theme-3": ("Edexcel B", "Theme 3"),
@@ -631,25 +631,34 @@ def next_steps_block(notes_dir: str, slug: str, pad: str, diagrams: str) -> str:
     board's past-papers hub; a topic with no tagged questions gets the hub as
     the panel itself, so the board link is on every page either way.
 
-    A NOTES-ONLY board (boards.json `notesOnly`, Edexcel B since D66) has no
-    practice questions, no flashcards and no tagged past-paper questions, so
-    its pages get the past-papers hub panel alone - never a link to a page
-    that does not exist, and no questions-data record is needed. The bank is
-    not consulted for it at all: it is keyed on bare slug, and a notes-only
-    slug that happened to match another board's would borrow its questions.
+    Each panel is there only if the board has that family (boards.json
+    `features`): a board without one - Edexcel B, notes alone since D66, its
+    families added one at a time under D67 - never links a page that does
+    not exist. With no practice questions there is no questions-data record
+    to name the topic, so the flashcards and past-paper panels need one: the
+    record check in board_data makes the bank need practice questions, and
+    the flashcards panel fails here if it ever arrives first. The bank is
+    not consulted for a board without it at all: it is keyed on bare slug,
+    and a slug that happened to match another board's would borrow its
+    questions.
     """
     board, _ = BOARD_OF_DIR[notes_dir]
     hub = PAST_PAPERS_HUB[board]
     items = ""
     qs: list = []
-    if not board_data.is_notes_only(notes_dir):
+    if board_data.has_feature(notes_dir, "practiceQuestions"):
         quiz = quiz_record(notes_dir, slug)
         name = html.escape(f'{quiz["spec"]} {quiz["shortTitle"]}', quote=False)
 
         items += next_item(
             pad, f"/practice-questions/{notes_dir}/{slug}.html",
             f"Practice questions: {name}", html.escape(quiz["notesTeaser"], quote=False))
+    elif board_data.has_feature(notes_dir, "flashcards"):
+        fail(f"{notes_dir}/{slug}", "the flashcards panel is named from the "
+             "practice-questions record, and this board has flashcards "
+             "without practice questions - give the panel a name first")
 
+    if board_data.has_feature(notes_dir, "flashcards"):
         deck_url, deck = FLASHCARDS_OF_DIR[notes_dir]
         if not (ROOT / deck_url.lstrip("/") / "index.html").is_file():
             fail(f"{notes_dir}/{slug}", f"flashcard deck {deck_url} is not in the tree")
@@ -658,6 +667,7 @@ def next_steps_block(notes_dir: str, slug: str, pad: str, diagrams: str) -> str:
             f"The {deck} deck filtered to this topic \u2014 definitions, diagrams and "
             f"chains of reasoning, with your progress saved on this device.")
 
+    if board_data.has_feature(notes_dir, "pastPaperBank"):
         qs = past_paper_bank().get(slug, [])
     if qs:
         if len(qs) >= ppq.GATE:
