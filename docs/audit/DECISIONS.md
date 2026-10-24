@@ -2373,3 +2373,26 @@ setup session.
   all four hubs (Themes 2-4 still drafts), including the hubs' closing box
   keeping its em dash as reused Edexcel A copy.
 
+### D67 — Edexcel B gets the full resource set; the bank's scope widens
+
+**2026-10-24, Eliot, in Cowork (interview recorded in the All-Boards Parity Plan).**
+
+- **Supersedes D66's "notes only".** Edexcel B gets practice questions,
+  flashcards, a glossary and a past-paper question bank, to the Edexcel A /
+  AQA standard. `notesOnly` is replaced by a per-board feature list so each
+  feature goes live for B only when complete (one feature at a time, all
+  four themes at once).
+- **B practice questions are four-option MCQs** in the existing format,
+  although 9EB0 sets no MCQs: retrieval practice, written in B's terms and
+  contexts and within B's spec.
+- **The bank's scope widens.** Edexcel B A Level Papers 1–3, all sections
+  (on B, Section A is a data response, not MCQs), and Edexcel B AS Papers
+  1–2. Edexcel A Papers 1–2 Section A short-answer items. Real exam MCQs
+  (AQA A Level Paper 3 Section A; Edexcel A Section A) as **search-only**
+  cards: stem and options as printed, a diagram/table flag, deep links to
+  the question-paper page and the mark-scheme page. **Mark-scheme content is
+  still never extracted**, MCQ keys included.
+- **Still out of scope:** AQA AS papers; OCR in the bank.
+- **Licensing:** Eliot has checked the boards' terms for hosting papers and
+  reproducing question text; the OWNER-TODO item is closed.
+- Twin links between B and A/AQA notes go ahead (D66 deferred them).
