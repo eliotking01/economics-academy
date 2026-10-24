@@ -22,7 +22,7 @@ Build into a throwaway worktree with the feature on, and list every new path the
 
 ## 3. Switch it on
 
-- Add the feature to the board's `features` in `boards-data/boards.json`, along with the board and group fields that family reads (slugs, names), using the values approved in Phase 0. If Phase 0 adopted a staged list, move the feature out of it.
+- Move the feature from the board's `staged` list to its `features` in `boards-data/boards.json` (drop `staged` if it empties). The slugs were approved in Phase 0 (D68) and are already in the record; the group names must be the ones Eliot approved.
 - `python3 scripts/verify_boards.py --reseed`, and read the diff: it is the list of leaves that moved.
 
 ## 4. Everything that names the board's resources

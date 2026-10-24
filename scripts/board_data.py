@@ -60,6 +60,14 @@ in it when it has either of those (TAXONOMY_READERS). Both readers also filter
 taxonomy.json down to their own family, so a board in the taxonomy for its
 glossary does not reach the bank, or the other way round.
 
+STAGED: a family whose data is being written sits in the record's `staged`
+list instead (D68). `load(family)` leaves it out, so nothing is published;
+`load(family, staged=True)` includes it, and the generator validates that
+data with its normal rules and writes no page from it. Only STAGEABLE
+families can be staged - those whose generators honour it. `EA_PREVIEW`
+promotes a staged family to live for one local run (`_apply_preview`), with
+a banner, and verify_generated.py refuses to run under it.
+
 `has_feature(notes_dir, family)` answers the same question per notes
 directory, for the code that walks every notes page and decides what each
 one links to (notes_extras' tail, build_search_index's quiz flag).
@@ -71,6 +79,7 @@ from __future__ import annotations
 
 import copy
 import json
+import os
 import pathlib
 import sys
 
@@ -106,29 +115,60 @@ TAXONOMY_READERS = ("glossary", "pastPaperBank")
 FAMILIES = FEATURES + ("taxonomy",)
 
 
-def features(board: dict) -> tuple[str, ...]:
-    """The families a board record has, the derived taxonomy included."""
+# A family can be STAGED - its data being written, validated by its
+# generator, no page written - only where the generator honours that. The
+# glossary and the bank join when Phases 3 and 4 teach their generators to.
+STAGEABLE = ("practiceQuestions", "flashcards")
+
+# EA_PREVIEW="edexcel-b:practiceQuestions[,board:feature...]" promotes a
+# staged family to live for one local run, so its pages can be opened in
+# Live Server. Read here and nowhere else; verify_generated.py refuses to run
+# under it. Never set it for a build whose output is committed.
+PREVIEW_ENV = "EA_PREVIEW"
+
+
+def features(board: dict, *, staged: bool = False) -> tuple[str, ...]:
+    """The families a board record has, the derived taxonomy included.
+    With staged=True, the families being written are counted too."""
     have = tuple(board["features"])
+    if staged:
+        have += tuple(board.get("staged", ()))
     if any(f in have for f in TAXONOMY_READERS):
         have += ("taxonomy",)
     return have
 
 
-def load(family: str) -> dict:
+def load(family: str, *, staged: bool = False) -> dict:
     """{board key: record} for the boards that have `family`, in the order
     boards.json lists them. See the module docstring: the caller names the
     family it builds, and gets no board it has nothing to build for.
+
+    staged=False (the default) is what a generator PUBLISHES. staged=True
+    adds the boards whose data for the family is still being written, and
+    is only for VALIDATING it: a generator checks that data with its normal
+    rules and writes no page from it.
     """
     _known(family)
-    return {k: b for k, b in _load_all().items() if family in features(b)}
+    return {k: b for k, b in _load_all().items()
+            if family in features(b, staged=staged)}
 
 
-def groups(family: str) -> list[tuple[str, dict, dict]]:
+def groups(family: str, *, staged: bool = False) -> list[tuple[str, dict, dict]]:
     """(board key, board record, group record) for every group of the boards
-    that have `family`, in file order."""
+    that have `family`, in file order. staged as for load()."""
     return [(key, board, group)
-            for key, board in load(family).items()
+            for key, board in load(family, staged=staged).items()
             for group in board["groups"]]
+
+
+def preview() -> list[tuple[str, str]]:
+    """The (board key, family) pairs EA_PREVIEW promotes, [] when unset."""
+    raw = os.environ.get(PREVIEW_ENV, "").strip()
+    out = []
+    for item in filter(None, (x.strip() for x in raw.split(","))):
+        board, _, family = item.partition(":")
+        out.append((board, family))
+    return out
 
 
 def has_feature(notes_dir: str, family: str) -> bool:
@@ -166,7 +206,26 @@ def _load_all() -> dict:
         _cache = raw["boards"]
         _ordering_is_significant(_cache)
         _features_are_coherent(_cache)
+        _apply_preview(_cache)
     return copy.deepcopy(_cache)
+
+
+def _apply_preview(data: dict) -> None:
+    """Promote EA_PREVIEW's staged families to live, loudly. Only a family
+    the record stages can be previewed: previewing one with no data behind
+    it would build nothing, and previewing a live one means nothing."""
+    pairs = preview()
+    for board, family in pairs:
+        if family not in data.get(board, {}).get("staged", ()):
+            sys.exit(f"{PREVIEW_ENV}: {board}:{family} is not staged in "
+                     f"boards.json - only a staged family can be previewed")
+        data[board]["features"].append(family)
+        data[board]["staged"].remove(family)
+    if pairs:
+        print(f"*** {PREVIEW_ENV} PREVIEW: "
+              + ", ".join(f"{b}:{f}" for b, f in pairs)
+              + " forced live. Do not commit what this run writes; rebuild "
+              "without it first. ***", file=sys.stderr)
 
 
 def _features_are_coherent(data: dict) -> None:
@@ -194,6 +253,19 @@ def _features_are_coherent(data: dict) -> None:
         if "notes" not in have:
             sys.exit(f"boards.json: {key} has no notes. Every board in this "
                      f"file has notes; a past-papers-only board has no record")
+        staged = board.get("staged", [])
+        if not isinstance(staged, list):
+            sys.exit(f"boards.json: {key} staged must be a list")
+        for f in staged:
+            if f not in STAGEABLE:
+                sys.exit(f"boards.json: {key} stages {f!r}. Only "
+                         f"{', '.join(STAGEABLE)} can be staged: no other "
+                         f"generator yet validates data without publishing it")
+            if f in have:
+                sys.exit(f"boards.json: {key} lists {f!r} as both live and "
+                         f"staged - /launch-feature moves it, not copies it")
+        if len(set(staged)) != len(staged):
+            sys.exit(f"boards.json: {key} stages a feature twice: {staged}")
         for reader in TAXONOMY_READERS:
             if reader in have and "practiceQuestions" not in have:
                 sys.exit(f"boards.json: {key} has {reader} without "

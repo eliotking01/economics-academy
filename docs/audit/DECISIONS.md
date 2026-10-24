@@ -2396,3 +2396,39 @@ setup session.
 - **Licensing:** Eliot has checked the boards' terms for hosting papers and
   reproducing question text; the OWNER-TODO item is closed.
 - Twin links between B and A/AQA notes go ahead (D66 deferred them).
+
+### D68 — Phase 0 of D67: staged families, the preview, and Edexcel B's URLs
+
+**2026-10-24, Eliot, answering `05-website/drafts/all-boards-parity/review/phase-0-groundwork.md`
+Q1-Q12 (every recommendation taken).** Recorded in full because the URLs it
+approves are permanent.
+
+- **Families are named by the caller** (Q1): `board_data.load(family)` has
+  no default.
+- **A family being written is `staged`** (Q2): validated by its generator,
+  no page written. Built for practice questions and flashcards; the glossary
+  and the bank become stageable when Phases 3 and 4 teach their generators.
+  `/launch-feature` moves a family from `staged` to `features`.
+- **Preview is `EA_PREVIEW=<board>:<family>`** (Q3), read by `board_data`
+  only, refused by `verify_generated.py`. Its output is never committed.
+- **Edexcel B's identifiers** (Q4): practice `board` `edexcel-b` (quiz scores
+  are keyed `<board>:<spec>`, so `edexcel` would overwrite Edexcel A's);
+  question ids `edexcel-b-<spec>-qN`; every slug `edexcel-b` (flashcards,
+  glossary, taxonomy and question bank); group slugs `theme-1`..`theme-4`;
+  deck ids `edexcel-b-theme-N`; card ids `edexcel-b-<spec>-<type>-NN`; bank
+  data directories `edexcel-b/` and `edexcel-b-as/`.
+- **URLs approved** (Q5-Q8): `/practice-questions/edexcel-b-theme-N/` and
+  its 85 `<notes-slug>.html` pages, listed one by one in the sheet;
+  `/flashcards/edexcel-b/theme-N/` and `/flashcards/data/edexcel-b-theme-N.json`;
+  `/revision-notes/glossary/edexcel-b/`; `/past-paper-questions/edexcel-b/`
+  with its `questions.json`, `/theme-N/` section pages for themes with
+  questions, and `/<notes-slug>/` topic pages at the D60 gate. The topic
+  pages are listed again for approval before Phase 4 builds.
+- **Phase 6** (Q9): no new family; topics newly over the gate are listed for
+  approval then.
+- **Phase 7** (Q10): real MCQs mint **no new URLs**. They sit on existing
+  bank pages, and **do not count toward the D60 gate**.
+- **The two AQA questions in REVIEW-NOTES N-Q25 are rewritten** (Q11).
+- **The originality bar** (Q12): `scripts/check_originality.py` EXACT or
+  NEAR fails; READ and REVIEW lines are judged by hand in each unit's review
+  sheet. The thresholds are in its docstring.

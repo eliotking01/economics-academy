@@ -139,7 +139,7 @@
 
     "edexcel-b": {
       "features": ["notes"],
-      "_features_why": "Edexcel B (9EB0) opened with revision notes and nothing else (D66, 2026-09-26). D67 (2026-10-24) gives it the full set, each family added to this list only when it is complete for all four themes, so until then board_data.load(family) and groups(family) leave it out and the generators for those families never see it. The fields below are only the ones something reads - no slugs or group names for families the board does not have yet; each arrives with its feature, as visible wording Eliot approves.",
+      "_features_why": "Edexcel B (9EB0) opened with revision notes and nothing else (D66, 2026-09-26). D67 (2026-10-24) gives it the full set, each family added to `features` only when it is complete for all four themes; until then board_data.load(family) and groups(family) leave it out. While a family's data is being written it is listed in `staged` instead: its generator validates the data and writes no page, and /launch-feature moves it to `features` (D68). The slugs and group slugs below were approved on 2026-10-24 (D68) ahead of their families; nothing reads them until a family is staged or live. Group names for those families are visible wording and arrive at launch, approved by Eliot.",
       "names": {
         "short": "Edexcel B",
         "display": "Edexcel B",
@@ -147,7 +147,12 @@
         "qualification": "A Level Economics B (9EB0)"
       },
       "slugs": {
-        "pastPapers": "edexcel-b"
+        "pastPapers": "edexcel-b",
+        "questionBank": "edexcel-b",
+        "taxonomy": "edexcel-b",
+        "glossary": "edexcel-b",
+        "flashcards": "edexcel-b",
+        "dataDir": "edexcel-b"
       },
       "papersUrl": "/past-papers/edexcel-b/",
       "notesUrl": "/revision-notes/",
@@ -157,6 +162,8 @@
       "groups": [
         {
           "notesDir": "edexcel-b-theme-1",
+          "taxonomySlug": "theme-1",
+          "flashcardsSlug": "theme-1",
           "label": "Theme 1",
           "names": {
             "notesLabel": "Edexcel B Theme 1",
@@ -165,6 +172,8 @@
         },
         {
           "notesDir": "edexcel-b-theme-2",
+          "taxonomySlug": "theme-2",
+          "flashcardsSlug": "theme-2",
           "label": "Theme 2",
           "names": {
             "notesLabel": "Edexcel B Theme 2",
@@ -173,6 +182,8 @@
         },
         {
           "notesDir": "edexcel-b-theme-3",
+          "taxonomySlug": "theme-3",
+          "flashcardsSlug": "theme-3",
           "label": "Theme 3",
           "names": {
             "notesLabel": "Edexcel B Theme 3",
@@ -181,6 +192,8 @@
         },
         {
           "notesDir": "edexcel-b-theme-4",
+          "taxonomySlug": "theme-4",
+          "flashcardsSlug": "theme-4",
           "label": "Theme 4",
           "names": {
             "notesLabel": "Edexcel B Theme 4",

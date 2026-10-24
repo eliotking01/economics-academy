@@ -69,6 +69,15 @@ PAST_PAPERS = {
 BOARD_LABELS = {b["slugs"]["pastPapers"]: b["names"]["short"]
                 for b in board_data.load("practiceQuestions").values()}
 
+# What validate() accepts: the live boards AND those whose sets are still
+# being written ("staged" in boards.json, D68). A staged set is checked by
+# every rule below and written to no page - main() drops it after load().
+# Everything that renders a page reads the live structures only.
+VALID_BOARDS = {b["slugs"]["pastPapers"]
+                for b in board_data.load("practiceQuestions", staged=True).values()}
+VALID_DIRS = {g["notesDir"]
+              for _k, _b, g in board_data.groups("practiceQuestions", staged=True)}
+
 # Cross-resource links per group - resource unification Phase 2. Each group's
 # flashcards deck and question-finder board page, from the record: the slugs
 # differ per family ("edexcel-theme-1" here, "edexcel-a/theme-1" in
@@ -335,7 +344,7 @@ US_SPELLING_RE = re.compile(r"\b(" + "|".join(US_SPELLINGS) + r")\b", re.IGNOREC
 # alternation is ordered, so a slug that is a prefix of another would shadow it.
 ID_RE = re.compile(
     r"^("
-    + "|".join(re.escape(s) for s in sorted(BOARD_LABELS, key=len, reverse=True))
+    + "|".join(re.escape(s) for s in sorted(VALID_BOARDS, key=len, reverse=True))
     + r")-\d+(?:-\d+)*-q\d+$"
 )
 
@@ -407,10 +416,10 @@ def validate(topic, path, seen_ids):
     if errors:
         raise SetError(f"{path.relative_to(ROOT)}:\n  " + "\n  ".join(errors))
 
-    if topic["board"] not in BOARD_LABELS:
-        errors.append(f"board must be one of {sorted(BOARD_LABELS)}")
-    if topic["boardDir"] not in BOARD_ORDER:
-        errors.append(f"boardDir must be one of {sorted(BOARD_ORDER)}")
+    if topic["board"] not in VALID_BOARDS:
+        errors.append(f"board must be one of {sorted(VALID_BOARDS)}")
+    if topic["boardDir"] not in VALID_DIRS:
+        errors.append(f"boardDir must be one of {sorted(VALID_DIRS)}")
     elif not topic["boardDir"].startswith(topic["board"].split("-")[0]):
         errors.append(f"boardDir {topic['boardDir']!r} does not match board "
                       f"{topic['board']!r}")
@@ -1433,11 +1442,21 @@ def main(argv=None):
         print(f"OK - {len(topics)} set(s), {total} questions, nothing written")
         return 0
 
+    # Staged sets passed validation above and are written to no page.
+    staged = [t for t in topics if t["boardDir"] not in BOARD_ORDER]
+    if staged:
+        topics = [t for t in topics if t["boardDir"] in BOARD_ORDER]
+        total = sum(len(t["questions"]) for t in topics)
+        print(f"validated {len(staged)} staged set(s) "
+              f"({', '.join(sorted({t['boardDir'] for t in staged}))}); "
+              f"no page written for them")
+
     # Siblings are built from EVERY set on disk, not from `topics`, so a
     # partial run (`build_questions.py aqa-a2-micro/1-3-2.json`) still emits
     # the same related-topics list a full run would. Without this a partial
     # rebuild would silently drop links to sets it was not asked to write.
     all_topics, _ = load(sorted(DATA_DIR.glob("*/*.json")))
+    all_topics = [t for t in all_topics if t["boardDir"] in BOARD_ORDER]
     by_unit = {}
     for t in all_topics:
         by_unit.setdefault((t["boardDir"], unit_of(t["spec"])), []).append(t)

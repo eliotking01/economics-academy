@@ -80,7 +80,10 @@ In `boards-data/boards.json`, read by every generator through
 and `board_data.load(family)` / `groups(family)` return only the boards with
 that family, so a generator never sees a board it has nothing to build for.
 `taxonomy` is derived: a board is in `taxonomy.json` when it has the glossary
-or the bank, and both require practiceQuestions (D67).
+or the bank, and both require practiceQuestions (D67). A family being
+written is listed in the board's `staged` instead: its generator validates the
+data and writes nothing, and `EA_PREVIEW=<board>:<family>` forces it live for
+one local preview run (D68).
 **Editing a board name or slug is a two-file commit:**
 `verify_boards.py` keeps an independent restatement of the whole record in
 `PINNED`, because its comparison against the generators is circular now that they

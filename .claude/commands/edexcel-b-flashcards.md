@@ -7,7 +7,8 @@ Write the flashcards for every Edexcel B topic in spec unit **$ARGUMENTS**, into
 ## Before you start
 
 - Work on `feature/edexcel-b-flashcards`. Never on `main`, never push. One unit per run, then stop.
-- **Phase 0 must be answered.** Open `/Users/eliotking/Desktop/Economics Academy/05-website/drafts/all-boards-parity/review/phase-0-groundwork.md`. If Eliot's answers to the feature-flag design (Q1-Q3) and the flashcard URLs and deck ids (Q6) are not recorded there, stop and say so. Where his answer differs from what is written here, his answer wins.
+- Phase 0 is answered (D68, `review/phase-0-groundwork.md`): decks are `flashcards-data/edexcel-b/theme-N.json`, the 8 URLs in that sheet's Q6 are approved, and B's `flashcards` is **staged** in `boards-data/boards.json` while they are written (first unit: add it to the `edexcel-b` record's `staged` list and `verify_boards.py --reseed`). Staged means `build_flashcards.py` validates every B deck and writes nothing.
+- The flashcards panel on a notes page is named from the practice-questions record, so **flashcards launch after practice questions** (`notes_extras.py` refuses the other order).
 - Read: `flashcards-data/CLAUDE.md` in full; `_archive/FLASHCARDS_PROGRESS.md`; the Edexcel A deck for the nearest theme (`flashcards-data/edexcel-a/theme-N.json`), for **shape and mix only**; every B notes page in the unit (`revision-notes/edexcel-b-theme-N/<slug>.html`); `docs/DIAGRAM_STYLE.md` if the unit has a diagram.
 - **Card ids are permanent.** Spaced-repetition progress is keyed on them in students' browsers (DO-NOT-BREAK). Pattern: `edexcel-b-<spec-with-dashes>-<type>-NN`, e.g. `edexcel-b-1-6-2-def-01`.
 
@@ -26,7 +27,7 @@ Write the flashcards for every Edexcel B topic in spec unit **$ARGUMENTS**, into
 ## Checks
 
 1. **Independent check.** Write a temp file to the scratchpad holding each card's `id`, `type`, `front`, `back`, `origin` and its notes page path. Give it to the `cold-solver` agent in **verify** mode. A DISAGREE is fixed in the card. A `NOTES?` is a suspected notes error: log it in `docs/CONTENT_ISSUES.md` in that file's format, and never fix it.
-2. **Build.** For this generator the build is the check. Use the preview mechanism Phase 0 agreed (recommended: `EA_PREVIEW=edexcel-b:flashcards python3 scripts/build.py`). Then rebuild without it and confirm `git status` shows no generated page.
+2. **Build.** For this generator the build is the check: `python3 scripts/build_flashcards.py` must report the staged deck validated. Preview with `EA_PREVIEW=edexcel-b:flashcards python3 scripts/build_flashcards.py` (that generator alone), name the deck page to open, then `python3 scripts/build.py`, delete the untracked `flashcards/edexcel-b/` and `flashcards/data/edexcel-b-*.json` after `git status` shows they are the only untracked paths, and confirm `git status` is clean apart from your source edits.
 
 ## When the unit is done
 

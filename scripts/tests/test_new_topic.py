@@ -141,5 +141,53 @@ class FeatureCoherenceTests(unittest.TestCase):
             self.check(ok)
 
 
+
+class StagedTests(unittest.TestCase):
+    """A staged family validates and publishes nothing; EA_PREVIEW promotes it."""
+
+    def record(self, features, staged):
+        return {"x": {"features": list(features), "staged": list(staged)}}
+
+    def test_staged_refusals(self):
+        for features, staged in ((["notes"], ["glossary"]),
+                                 (["notes"], ["pastPaperBank"]),
+                                 (["notes", "flashcards"], ["flashcards"]),
+                                 (["notes"], ["flashcards", "flashcards"]),
+                                 (["notes"], ["notesOnly"])):
+            with self.assertRaises(SystemExit, msg=(features, staged)):
+                board_data._features_are_coherent(self.record(features, staged))
+
+    def test_staged_accepted(self):
+        board_data._features_are_coherent(
+            self.record(["notes"], ["practiceQuestions", "flashcards"]))
+
+    def test_staged_counts_only_when_asked(self):
+        b = {"features": ["notes"], "staged": ["flashcards"]}
+        self.assertNotIn("flashcards", board_data.features(b))
+        self.assertIn("flashcards", board_data.features(b, staged=True))
+
+    def test_live_is_a_subset_of_staged(self):
+        for family in board_data.FAMILIES:
+            self.assertLessEqual(set(board_data.load(family)),
+                                 set(board_data.load(family, staged=True)))
+
+    def test_preview_promotes_only_a_staged_family(self):
+        import os
+        from unittest import mock
+        rec = {"x": {"features": ["notes"], "staged": ["flashcards"]}}
+        with mock.patch.dict(os.environ, {"EA_PREVIEW": "x:flashcards"}):
+            board_data._apply_preview(rec)
+        self.assertEqual(rec["x"], {"features": ["notes", "flashcards"],
+                                    "staged": []})
+        with mock.patch.dict(os.environ, {"EA_PREVIEW": "x:glossary"}):
+            with self.assertRaises(SystemExit):
+                board_data._apply_preview(rec)
+
+    def test_no_preview_in_the_committed_environment(self):
+        import os
+        self.assertFalse(os.environ.get("EA_PREVIEW"),
+                         "EA_PREVIEW is set while the tests run")
+
+
 if __name__ == "__main__":
     unittest.main()

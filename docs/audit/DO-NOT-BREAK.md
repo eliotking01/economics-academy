@@ -261,7 +261,11 @@ caller names the one it builds; do not add one.** The taxonomy is the
 derived family (glossary or bank), and the bank and glossary each filter
 `taxonomy.json` to their own boards. `scripts/tests/test_new_topic.py` pins
 that `load(family)` never returns a board without the family, and that
-`board_data` refuses a glossary or bank without practice questions. `notes-data/hubs/drafts/` holds the hubs of themes not opened
+`board_data` refuses a glossary or bank without practice questions.
+**A `staged` family is validated and never published** (D68): generators
+validate against `load(family, staged=True)` and write from `load(family)`
+only. **`EA_PREVIEW` output must never be committed**: rebuild without it
+and check `git status` first; `verify_generated.py` refuses to run under it. `notes-data/hubs/drafts/` holds the hubs of themes not opened
 yet and must stay unbuilt (`build_notes_pages.py` and `rewrite_notes_meta.py`
 skip it): building one would publish an empty hub.
 

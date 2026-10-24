@@ -77,6 +77,14 @@ NOTES_DIRS = {
     for _key, board, group in board_data.groups("flashcards")
 }
 
+# What validate_deck() accepts: the live decks AND those still being written
+# ("staged" in boards.json, D68). A staged deck is checked by every rule and
+# written to no page or data file - main() drops it after validation.
+VALID_NOTES_DIRS = {
+    (board["slugs"]["flashcards"], group["flashcardsSlug"]): group["notesDir"]
+    for _key, board, group in board_data.groups("flashcards", staged=True)
+}
+
 # The hub's board and deck order, from the record's own order - resource
 # unification Phase 1. The hub used to sort board names alphabetically,
 # which put AQA above Edexcel A and Macroeconomics above Microeconomics:
@@ -191,11 +199,11 @@ def validate_deck(deck, path, errors):
             errors.append(f"{path.name}: missing deck field '{key}'")
     if errors:
         return
-    if (deck["board"], deck["theme"]) not in NOTES_DIRS:
+    if (deck["board"], deck["theme"]) not in VALID_NOTES_DIRS:
         errors.append(f"{path.name}: unknown board/theme "
                       f"{deck['board']}/{deck['theme']}")
         return
-    notes_dir = ROOT / "revision-notes" / NOTES_DIRS[(deck["board"],
+    notes_dir = ROOT / "revision-notes" / VALID_NOTES_DIRS[(deck["board"],
                                                       deck["theme"])]
     seen_ids = set()
     page_cache = {}
@@ -238,7 +246,7 @@ def validate_deck(deck, path, errors):
                 errors.append(f"{where}: empty {field}")
 
         notes_page = notes_dir / f"{card['subtopic']}.html"
-        expected = (f"/revision-notes/{NOTES_DIRS[(deck['board'], deck['theme'])]}"
+        expected = (f"/revision-notes/{VALID_NOTES_DIRS[(deck['board'], deck['theme'])]}"
                     f"/{card['subtopic']}.html")
         if not notes_page.is_file():
             errors.append(f"{where}: no notes page {notes_page.name}")
@@ -653,6 +661,13 @@ def main():
             print(f"ERROR: {err}", file=sys.stderr)
         print(f"{len(errors)} error(s); nothing written", file=sys.stderr)
         return 1
+
+    staged = [(p, d) for p, d in decks if (d["board"], d["theme"]) not in NOTES_DIRS]
+    if staged:
+        decks = [(p, d) for p, d in decks if (d["board"], d["theme"]) in NOTES_DIRS]
+        print(f"validated {len(staged)} staged deck(s) "
+              f"({', '.join(str(p.relative_to(DATA_DIR)) for p, _ in staged)}); "
+              f"nothing written for them")
 
     html_paths = []
     built = []

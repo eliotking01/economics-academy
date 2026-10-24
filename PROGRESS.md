@@ -243,11 +243,21 @@ and mints no URL.
   `/edexcel-b-questions`, `/edexcel-b-flashcards` and `/launch-feature`.
 - **D67** appended to `docs/audit/DECISIONS.md`.
 
-**Waiting on Eliot** (`review/phase-0-groundwork.md`): the staged-data and
-preview design (how half-written B sets sit on a branch without breaking
-the build or minting pages, which is not built yet), the URL list for every
-B family, the Phase 6-7 URL questions, the originality bar's calibration,
-and N-Q25. Nothing in Phases 1-8 starts until those are answered.
+**Eliot's answers, 2026-10-24 (D68): every recommendation taken.**
+- **Staged families** are built. A family in a board's `staged` list is
+  validated by its generator and written to no page; practice questions
+  and flashcards so far.
+- **`EA_PREVIEW=<board>:<family>`** forces a staged family live for one local
+  run, and `verify_generated.py` refuses to run under it.
+- **B's slugs** are in `boards.json`, and the B URL list is approved.
+- **Phase 7 MCQs** mint no URLs and don't count toward the gate.
+- **N-Q25:** both AQA questions were rewritten and re-solved cold.
+
+A worktree run proved staging on AQA's flashcards: the decks were validated
+and nothing was written. The preview of the same state reproduced the
+committed tree exactly, with 0 differences.
+
+Phase 1 (`/edexcel-b-questions`) can start.
 
 ### Edexcel B revision notes — Theme 3 (2026-10-20) — COMPLETE, PR into main opened 2026-10-20 (branch `feature/edexcel-b-theme-3`)
 

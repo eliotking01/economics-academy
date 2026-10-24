@@ -51,6 +51,7 @@ Standard library only. Needs `node` for the glossary's KaTeX pre-render and
 from __future__ import annotations
 
 import argparse
+import os
 import pathlib
 import shutil
 import subprocess
@@ -79,6 +80,15 @@ def main() -> int:
     ap.add_argument("--keep", action="store_true",
                     help="do not delete the worktree, so you can inspect it")
     args = ap.parse_args()
+
+    # A preview forces staged families live (board_data.PREVIEW_ENV), so a
+    # run under it compares preview output with the committed tree and its
+    # verdict means nothing - either way round.
+    if os.environ.get("EA_PREVIEW"):
+        print("EA_PREVIEW is set: unset it first. A preview build is never "
+              "what is committed, so this check cannot run under one.",
+              file=sys.stderr)
+        return 2
 
     dirty = git("status", "--porcelain").strip()
     if dirty:
