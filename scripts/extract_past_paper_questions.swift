@@ -108,12 +108,16 @@ let dotLeader = rx("\\.{6,}[\\s\\.]*")
 /// The URL is required, which is what keeps ordinary prose safe - these
 /// questions use the word freely ("a source of market failure"), and none of
 /// those sit in brackets around a link. `[^()]` rather than `.` so a citation
-/// can never swallow a later bracket.
+/// can never swallow a later bracket - but one balanced pair is allowed inside
+/// it, because a URL can carry one: Paper 2 June 2025 Q8 cites
+/// ".../PIIS0140-6736(23)00858-9/fulltext". Kept identical to ATTRIBUTION in
+/// strip_source_attributions.py, so the safety net sees what this sees.
 ///
 /// Run after repairURLs, so a citation whose URL wrapped across a line is one
 /// span by the time this sees it. Mirrors `clean()` in extract_aqa_questions.py,
 /// which drops AQA's equivalent `Sources:` line.
-let attribution = rx("\\(\\s*Sources?\\b[^()]*https?://[^()]*\\)")
+let attribution = rx(
+    "\\(\\s*Sources?\\b(?:[^()]|\\([^()]*\\))*https?://(?:[^()]|\\([^()]*\\))*\\)")
 
 /// Returns the text without its citation, and the citation itself.
 func stripAttribution(_ s: String) -> (text: String, attribution: String?) {
@@ -390,6 +394,47 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
     return (out, problems)
 }
 
+// ------------------------------------------------------------- source booklet
+
+/// June 2025 moved every 9EC0 extract out of its section and into a Source
+/// Booklet bound at the back of the paper, one block per section, each headed
+/// "Sources for use with SECTION X". Returns the first page index of each
+/// block, keyed by section letter. Empty for every earlier paper, whose
+/// extracts sit inside their section, and every branch below that depends on
+/// it is skipped when it is empty - which is what keeps the output for those
+/// papers byte-identical.
+func sourceBooklet(_ pages: [String]) -> [(section: String, page: Int)] {
+    let heading = rx("Sources for use with SECTION ([A-C])")
+    var out: [(section: String, page: Int)] = []
+    for (i, page) in pages.enumerated() {
+        guard let m = heading.firstMatch(page), let s = m[1] else { continue }
+        if !out.contains(where: { $0.section == s }) { out.append((s, i)) }
+    }
+    return out
+}
+
+/// The pages a section's sources occupy in the booklet: from its heading to the
+/// next block's heading, or to the end of the paper.
+func bookletRange(_ booklet: [(section: String, page: Int)], section: String, pageCount: Int)
+    -> Range<Int>?
+{
+    guard let i = booklet.firstIndex(where: { $0.section == section }) else { return nil }
+    let end = i + 1 < booklet.count ? booklet[i + 1].page : pageCount
+    return booklet[i].page..<end
+}
+
+/// "before answering Question 6", allowing for the 2025 papers, which wrap the
+/// instruction mid-phrase ("... in the Source Booklet before\nanswering Question 6").
+let beforeAnswering = rx("before\\s+answering\\s+Question\\s+(\\d+)")
+
+/// A booklet paper's section preamble: the heading, the instruction to read the
+/// sources, and the timing advice. The 2025 papers set the first part's number
+/// ahead of the heading ("6 (a) SECTION B Read Figures 1 and 2 ..."), so left in
+/// place it would be read as the opening of part (a). It is instructions to the
+/// candidate, not question text, so it is removed, never rewritten.
+let bookletPreamble = rx(
+    "SECTION [A-C]\\s+Read\\b.*?You are advised to spend[^\\n]*", [.dotMatchesLineSeparators])
+
 // ------------------------------------------------------------- parted questions
 
 /// Extract one lettered data-response question, parts (a) onwards, from a run of
@@ -416,19 +461,22 @@ func extractSectionC(pages: [String], meta: PaperMeta, msPages: [String])
 func extractParts(
     pages: [String], from startIdx: Int, to endIdx: Int, question qnum: String,
     section: String, choiceLetters: [String], letters: [String] = ["a", "b", "c", "d", "e"],
-    meta: PaperMeta, msPages: [String]
+    sources: Range<Int>? = nil, meta: PaperMeta, msPages: [String]
 ) -> ([QuestionOut], [String]) {
     var problems: [String] = []
 
     // The extract block a student must read. "Extract A" is normally its first
     // page; some Paper 3 sections label theirs C or D, so fall back to the first
-    // page carrying any "Extract <letter>" and then to the section opener.
+    // page carrying any "Extract <letter>" and then to the section opener. On a
+    // booklet paper the same search runs over the section's block in the
+    // booklet instead, falling back to the block's heading page.
+    let searchRange = sources ?? (startIdx..<endIdx)
     let extractPage =
-        (startIdx..<endIdx).first(where: { pages[$0].contains("Extract A") }).map { $0 + 1 }
-        ?? (startIdx..<endIdx).first(where: {
+        searchRange.first(where: { pages[$0].contains("Extract A") }).map { $0 + 1 }
+        ?? searchRange.first(where: {
             rx("Extract [A-H]\\b").matches(pages[$0])
         }).map { $0 + 1 }
-        ?? (startIdx + 1)
+        ?? ((sources?.lowerBound ?? startIdx) + 1)
 
     // "(a) <text> (5)" — text is non-greedy up to the tariff in its own brackets.
     // The class is built from `letters` so an AS paper's (f) and (g) are seen
@@ -440,7 +488,12 @@ func extractParts(
     var seen: [String: QuestionOut] = [:]
 
     for i in startIdx..<endIdx {
-        let cleaned = stripFurniture(pages[i])
+        var cleaned = stripFurniture(pages[i])
+        if sources != nil {
+            cleaned = bookletPreamble.stringByReplacingMatches(
+                in: cleaned, range: NSRange(location: 0, length: (cleaned as NSString).length),
+                withTemplate: " ")
+        }
         for m in partRe.allMatches(cleaned) {
             guard let letter = m[1], let rawBody = m[2], let marksStr = m[3],
                 let marks = Int(marksStr), seen[letter] == nil
@@ -503,15 +556,20 @@ func extractParts(
 func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
     -> ([QuestionOut], [String])
 {
+    // On a booklet paper the booklet repeats "before answering Question 6", so
+    // the search stops where the booklet starts.
+    let booklet = sourceBooklet(pages)
+    let questionPages = booklet.first?.page ?? pages.count
+
     guard
-        let startIdx = pages.firstIndex(where: {
-            $0.contains("SECTION B") && $0.contains("before answering Question")
+        let startIdx = (0..<questionPages).first(where: {
+            pages[$0].contains("SECTION B") && beforeAnswering.matches(pages[$0])
         })
     else {
         return ([], ["Section B page not found"])
     }
 
-    guard let qm = rx("before answering Question\\s+(\\d+)").firstMatch(pages[startIdx]),
+    guard let qm = beforeAnswering.firstMatch(pages[startIdx]),
         let qnum = qm[1]
     else {
         return ([], ["Section B question number not found"])
@@ -522,14 +580,16 @@ func extractSectionB(pages: [String], meta: PaperMeta, msPages: [String])
     // 20-mark either/or, which the A Level prints as Section C instead.
     let endIdx =
         meta.isAS
-        ? pages.count
-        : (pages.firstIndex(where: { $0.contains("SECTION C") }) ?? pages.count)
+        ? questionPages
+        : ((0..<questionPages).first(where: { pages[$0].contains("SECTION C") })
+            ?? questionPages)
 
     return extractParts(
         pages: pages, from: startIdx, to: endIdx, question: qnum, section: "B",
         choiceLetters: meta.isAS ? ["f", "g"] : [],
         letters: meta.isAS
             ? ["a", "b", "c", "d", "e", "f", "g"] : ["a", "b", "c", "d", "e"],
+        sources: bookletRange(booklet, section: "B", pageCount: pages.count),
         meta: meta, msPages: msPages)
 }
 
@@ -548,10 +608,13 @@ func extractPaper3(pages: [String], meta: PaperMeta, msPages: [String])
     // heading. Paper 3 June 2024 prints no "SECTION B" heading above its second
     // case study at all — the words appear only in the "TOTAL FOR SECTION B"
     // line on the last page — so keying off the heading loses half that paper.
-    let opener = rx("before answering Question\\s+(\\d+)")
+    // On a booklet paper the booklet repeats each instruction line, so the
+    // search stops where the booklet starts.
+    let booklet = sourceBooklet(pages)
+    let questionPages = booklet.first?.page ?? pages.count
     var starts: [(page: Int, question: String)] = []
-    for (i, page) in pages.enumerated() {
-        guard let m = opener.firstMatch(page), let n = m[1] else { continue }
+    for (i, page) in pages[0..<questionPages].enumerated() {
+        guard let m = beforeAnswering.firstMatch(page), let n = m[1] else { continue }
         if starts.contains(where: { $0.question == n }) { continue }
         starts.append((i, n))
     }
@@ -566,13 +629,15 @@ func extractPaper3(pages: [String], meta: PaperMeta, msPages: [String])
     }
 
     for (idx, start) in starts.enumerated() {
-        let end = idx + 1 < starts.count ? starts[idx + 1].page : pages.count
+        let end = idx + 1 < starts.count ? starts[idx + 1].page : questionPages
         // Section A carries Q1 and Section B carries Q2 in all eight papers, but
         // the label is derived from position rather than assumed from the number.
         let section = idx == 0 ? "A" : "B"
         let (qs, ps) = extractParts(
             pages: pages, from: start.page, to: end, question: start.question,
-            section: section, choiceLetters: ["d", "e"], meta: meta, msPages: msPages)
+            section: section, choiceLetters: ["d", "e"],
+            sources: bookletRange(booklet, section: section, pageCount: pages.count),
+            meta: meta, msPages: msPages)
         out += qs
         problems += ps
     }

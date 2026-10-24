@@ -129,8 +129,6 @@ pages = site_layout.pages
 EXPECTED_SHAPES = {
     "root":          (9, 9, 2, 9),
     "notes-topic":   (2, 1, 1, 1),
-    # notes-hub heads 2 -> 3, 2026-09-26: the Edexcel B hubs carry twitter:
-    # title/description, which the older hubs never gained (HEAD_EXEMPT).
     "notes-hub":     (3, 2, 1, 2),
     "notes-other":   (2, 3, 2, 2),
     "past-papers":   (2, 2, 1, 2),
@@ -150,7 +148,7 @@ PINNED_PAGE_COUNTS = {
     "root":          9,
     "past-papers":   5,
     "notes-other":   3,
-    "ppq":           136,
+    "ppq":           141,
 }
 
 

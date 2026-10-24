@@ -13,7 +13,9 @@
 //   3. The mark scheme page really mentions the question label, tested with a
 //      plain whitespace-insensitive substring scan rather than the extractor's
 //      regexes.
-//   4. The Section B context page really is part of the extract block.
+//   4. The Section B context page really is part of the extract block: before
+//      the question, or - on a Source Booklet paper, June 2025 onwards - in the
+//      booklet block for the question's own section.
 //
 // Exit status is non-zero if any check fails. Nothing is written.
 
@@ -64,6 +66,18 @@ func pages(_ url: String) -> [String]? {
     let p = (0..<doc.pageCount).map { doc.page(at: $0)?.string ?? "" }
     pdfCache[path] = p
     return p
+}
+
+/// The section whose Source Booklet block holds this page, or nil when the page
+/// is not in a booklet. Walks back to the nearest "Sources for use with SECTION"
+/// heading - plain substring search, not the extractor's regex.
+func bookletBlock(_ pages: [String], page: Int) -> String? {
+    let marker = "Sources for use with SECTION "
+    for i in stride(from: page - 1, through: 0, by: -1) {
+        guard let r = pages[i].range(of: marker) else { continue }
+        return pages[i][r.upperBound...].first.map(String.init)
+    }
+    return nil
 }
 
 for (dir, file) in files {
@@ -147,6 +161,26 @@ for (dir, file) in files {
                     Failure(
                         id: id, check: "context-page-range",
                         detail: "p\(ctxPage) of \(qpPages.count)"))
+            } else if let block = bookletBlock(qpPages, page: ctxPage) {
+                // A Source Booklet paper (June 2025 onwards) binds the extracts
+                // at the back, so the context page is meant to follow the
+                // question. It must then sit in the block for the question's
+                // own section, and that page must actually carry source material.
+                let section = q["section"] as? String ?? "?"
+                if block != section {
+                    failures.append(
+                        Failure(
+                            id: id, check: "context-wrong-booklet-block",
+                            detail: "p\(ctxPage) is in the SECTION \(block) sources, "
+                                + "question is in Section \(section)"))
+                } else if !qpPages[ctxPage - 1].contains("Extract")
+                    && !qpPages[ctxPage - 1].contains("Figure")
+                {
+                    failures.append(
+                        Failure(
+                            id: id, check: "context-not-source",
+                            detail: "booklet p\(ctxPage) has no extract or figure"))
+                }
             } else if ctxPage >= qpPage {
                 failures.append(
                     Failure(
