@@ -1,0 +1,97 @@
+{
+  "qualification": "A-level Economics (7136)",
+  "board": "aqa",
+  "boardName": "AQA",
+  "level": "a-level",
+  "paper": 3,
+  "paperName": "Economic Principles and Issues",
+  "year": 2025,
+  "series": "June",
+  "seriesSlug": "june-2025",
+  "questionPaperUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+  "markSchemeUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-mark-scheme.pdf",
+  "problems": [],
+  "questions": [
+    {
+      "id": "aqa-p3-2025-jun-q31",
+      "section": "B",
+      "questionNumber": "31",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 10,
+      "questionText": "To what extent, if at all, do the data suggest that the contribution the automotive industry makes to the UK economy has declined significantly since 2015? You must use the data in Extract B to support your assessment.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 31",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+        "page": 26
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+        "page": 26
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-mark-scheme.pdf",
+        "page": 5,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2025-jun-q32",
+      "section": "B",
+      "questionNumber": "32",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 15,
+      "questionText": "Explain factors that affect the UK’s balance of trade in motor vehicles.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 32",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+        "page": 26
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+        "page": 30
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-mark-scheme.pdf",
+        "page": 8,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    },
+    {
+      "id": "aqa-p3-2025-jun-q33",
+      "section": "B",
+      "questionNumber": "33",
+      "parentQuestion": null,
+      "choiceGroup": null,
+      "marks": 25,
+      "questionText": "After considering Extract D, and the original evidence in Extracts A, B and C, would you recommend that the Government continue to subsidise firms to encourage them to set up gigafactories to produce batteries in the UK? Justify your recommendation.",
+      "context": {
+        "type": "extracts",
+        "label": "Extracts for Question 33",
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+        "page": 26
+      },
+      "questionPaper": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-question-paper.pdf",
+        "page": 34
+      },
+      "markScheme": {
+        "pdfUrl": "/past-papers/aqa/a-level/paper-3/aqa-a-level-economics-paper-3-june-2025-mark-scheme.pdf",
+        "page": 10,
+        "verified": true
+      },
+      "modelAnswer": null,
+      "extractionConfidence": "high",
+      "extractionNotes": []
+    }
+  ]
+}

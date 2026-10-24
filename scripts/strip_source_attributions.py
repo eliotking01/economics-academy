@@ -46,9 +46,13 @@ DATA = ROOT / "past-paper-questions-data"
 # A citation is a bracketed run that opens with Source/Sources and carries a
 # URL. Requiring the URL is what keeps ordinary prose safe: the questions use
 # the word freely ("a source of market failure", "sources in a market economy"),
-# and none of those sit in brackets around a link. [^()]* rather than .* so a
-# citation can never swallow a later bracket.
-ATTRIBUTION = re.compile(r"\(\s*Sources?\b[^()]*https?://[^()]*\)")
+# and none of those sit in brackets around a link. [^()] rather than . so a
+# citation can never swallow a later bracket - but one balanced pair is allowed
+# inside it, because a URL can carry one: Paper 2 June 2025 Q8 cites
+# ".../PIIS0140-6736(23)00858-9/fulltext", which [^()]* alone could not reach.
+ATTRIBUTION = re.compile(
+    r"\(\s*Sources?\b(?:[^()]|\([^()]*\))*https?://(?:[^()]|\([^()]*\))*\)"
+)
 
 # The extractors write one field per line. Capturing the indent keeps the
 # inserted field aligned with whatever wrote the file.
