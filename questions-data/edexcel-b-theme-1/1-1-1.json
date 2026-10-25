@@ -1,0 +1,234 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.1.1",
+  "slug": "1-1-1-the-economic-problem",
+  "title": "The Economic Problem",
+  "shortTitle": "The Economic Problem",
+  "pageTitle": "The Economic Problem Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on the economic problem for Edexcel B A-Level Economics: scarcity, trade-offs, opportunity cost and the PPF.",
+  "intro": "Seven original multiple-choice questions on the economic problem, covering scarcity, trade-offs and opportunity cost for consumers, firms and the government. Two involve a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on scarcity, trade-offs, opportunity cost and the production possibility frontier.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-1-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The owner of a successful chain of gyms can afford almost anything she wants to buy. She has one free weekend this month and must choose between a trade fair that could win her new suppliers and a short break with her family. Her position is best described by saying that she",
+      "options": {
+        "A": "Faces no economic problem, because her income is high.",
+        "B": "Faces scarcity, because her time is a finite resource.",
+        "C": "Faces a trade-off only if the trade fair charges for entry.",
+        "D": "Faces an opportunity cost only if she chooses the break."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Scarcity is the gap between unlimited wants and <strong>finite resources</strong>, and time is one of those resources. However much she can afford, she has only one weekend, so choosing the trade fair rules out the break and choosing the break rules out the trade fair.<br />That is why scarcity is not the same as poverty. A high income removes some limits, but not the limit on her time, so she still has to choose.",
+        "distractors": {
+          "A": "This treats scarcity as a shortage of money. Scarcity applies to every finite resource, including time, so even a very wealthy person faces the economic problem.",
+          "C": "A trade-off exists whenever having more of one thing means giving up another. Her weekend can go on one plan or the other, so there is a trade-off whether or not the fair charges anything.",
+          "D": "Every choice carries an opportunity cost. If she goes to the trade fair, the cost is the family break she gives up, so it does not depend on which option she picks."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-1-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bakery has one large oven, and next Saturday it can take only one of the four orders in Table 1. Each order uses the oven and the same staff all day; the only cost that differs between them is ingredients. The bakery takes the order that adds most to its profit.<br />Using Table 1, the opportunity cost of that choice, measured as the profit given up, is",
+      "table": {
+        "caption": "Table 1: Four orders a bakery could take next Saturday",
+        "head": [
+          "",
+          "Revenue",
+          "Cost of ingredients"
+        ],
+        "rows": [
+          [
+            "Wedding cake",
+            "£640",
+            "£240"
+          ],
+          [
+            "Café bread order",
+            "£520",
+            "£160"
+          ],
+          [
+            "Birthday party cupcakes",
+            "£450",
+            "£150"
+          ],
+          [
+            "Farmers' market stall",
+            "£700",
+            "£380"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£320",
+        "B": "£360",
+        "C": "£520",
+        "D": "£980"
+      },
+      "answer": "B",
+      "model": {
+        "working": "First work out what each order adds to profit, revenue minus ingredients:<br />Wedding cake: £640 − £240 = <strong>£400</strong><br />Café bread order: £520 − £160 = £360<br />Birthday party cupcakes: £450 − £150 = £300<br />Farmers' market stall: £700 − £380 = £320<br />The bakery takes the wedding cake, which adds most. Opportunity cost is the benefit of the <strong>next best alternative</strong> only, and the next best is the café bread order, so the opportunity cost is <strong>£360</strong>.<br />The staff and the oven cost the same whichever order is taken, so they make no difference to the comparison.",
+        "distractors": {
+          "A": "This is the profit from the market stall, the alternative with the highest revenue. Ranking the alternatives by revenue ignores their ingredient costs; ranked by what they add to profit, the stall comes third.",
+          "C": "This is the café order's revenue. It is the right alternative, but the £160 of ingredients it would have needed has been left in. The profit given up is £520 − £160 = £360.",
+          "D": "This adds up the profit from all three orders turned down: £360 + £300 + £320. The bakery could only ever have taken one of them, so only the next best alternative counts."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government plans to spend an extra £2 billion a year on repairing school buildings. It has ruled out borrowing more and will not cut any other spending. The group most likely to bear the opportunity cost of the plan is",
+      "options": {
+        "A": "Future taxpayers, who must repay the debt.",
+        "B": "Nobody, since no other spending is cut.",
+        "C": "Pupils, who will use the repaired buildings.",
+        "D": "Taxpayers, who will give up some income."
+      },
+      "answer": "D",
+      "model": {
+        "working": "With extra borrowing and spending cuts both ruled out, the £2 billion must come from <strong>higher taxes</strong>. Each pound taxed is a pound households and firms can no longer spend on what they would otherwise have chosen.<br />Public services may be free to use, but they are not free to provide. Here the opportunity cost is the spending taxpayers give up.",
+        "distractors": {
+          "A": "This would be true if the plan were paid for by borrowing, but the stem rules that out. Without new debt, there is nothing for future taxpayers to repay.",
+          "B": "Avoiding cuts elsewhere does not remove the opportunity cost; it moves it. The money still has to come from somewhere, and with borrowing ruled out that means tax.",
+          "C": "Pupils are the ones who <em>benefit</em> from the repairs. The opportunity cost is what is given up to pay for them, not who gains."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A furniture workshop makes desks and dining tables. In a quiet month two of its six joiners have no orders to work on, and the workshop accepts an extra order for 20 desks that those two joiners can make on their own. Sketching the workshop's production possibility frontier, the opportunity cost of the 20 desks, in dining tables given up, is",
+      "options": {
+        "A": "Equal to the wages paid to the two joiners.",
+        "B": "Positive, because every extra desk means fewer tables.",
+        "C": "Rising, because the frontier bows outwards.",
+        "D": "Zero, because the workshop starts inside its frontier."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Idle joiners mean the workshop is producing at a point <strong>inside</strong> its frontier: it could make more of both goods with the resources it already has.<br />The extra desks use labour that was otherwise doing nothing, so no tables are given up. The workshop moves out towards its frontier, and the opportunity cost of the 20 desks is <strong>zero</strong>.<br />Opportunity cost appears only once every resource is in use. On the frontier, more desks would mean fewer tables.",
+        "distractors": {
+          "A": "The joiners are paid whether or not they have work, so their wages are not given up by taking the order. Opportunity cost is the next best use of the resources, and here that use was nothing.",
+          "B": "That holds on the frontier, where every resource is already in use. Inside it, idle resources can make more of one good without taking anything from the other.",
+          "C": "The bowed shape describes moving <em>along</em> the frontier, where each extra desk costs more tables than the last. The workshop starts inside the frontier, so it gives up no tables at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-1-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A garden centre uses its greenhouse each week to grow trays of tomato plants, trays of bedding flowers or a mix of the two. Table 1 shows what it can grow when the whole greenhouse is in use.<br />Using Table 1, when it moves from Combination 3 to Combination 4, the opportunity cost of each extra tray of tomato plants, to two decimal places, is",
+      "table": {
+        "caption": "Table 1: Weekly growing combinations for a garden centre's greenhouse",
+        "head": [
+          "",
+          "Trays of tomato plants",
+          "Trays of bedding flowers"
+        ],
+        "rows": [
+          [
+            "Combination 1",
+            "0",
+            "120"
+          ],
+          [
+            "Combination 2",
+            "40",
+            "110"
+          ],
+          [
+            "Combination 3",
+            "80",
+            "90"
+          ],
+          [
+            "Combination 4",
+            "120",
+            "60"
+          ],
+          [
+            "Combination 5",
+            "160",
+            "0"
+          ]
+        ]
+      },
+      "options": {
+        "A": "0.75 trays of flowers",
+        "B": "1.33 trays of flowers",
+        "C": "2.25 trays of flowers",
+        "D": "30.00 trays of flowers"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Moving from Combination 3 to Combination 4, tomato trays rise from 80 to 120, a gain of <strong>40</strong>. Flower trays fall from 90 to 60, a loss of <strong>30</strong>.<br />Opportunity cost of each extra tomato tray = 30 ÷ 40 = <strong>0.75 trays of flowers</strong>.<br />The table also shows the cost rising as the garden centre grows more tomatoes: 0.25, then 0.5, then 0.75, then 1.5 trays of flowers each. The greenhouse space switched last is the least suited to tomatoes, which is why a frontier drawn from these figures bows outwards.",
+        "distractors": {
+          "B": "The ratio is upside down: 40 ÷ 30 gives the extra tomato trays gained per tray of flowers given up. The cost of a tomato tray is measured in what is given up, so the flowers go on top.",
+          "C": "This divides the flower trays grown at Combination 3, 90, by the 40 extra tomato trays. Opportunity cost depends on the flowers <em>given up</em>, the fall from 90 to 60, not on how many were being grown.",
+          "D": "This is the total cost of all 40 extra trays. The stem asks for the cost of <strong>each</strong> extra tray, so the 30 must be divided by 40."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A music fan is given a free ticket to a concert on Friday night. To go, she turns down a restaurant shift that would have paid her £70, which was her best alternative. The opportunity cost of going to the concert is",
+      "options": {
+        "A": "Nothing, since she paid nothing for the ticket.",
+        "B": "The enjoyment she gets from the concert.",
+        "C": "The face value printed on the ticket.",
+        "D": "The £70 she would have earned from the shift."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Opportunity cost is the benefit of the <strong>next best alternative</strong> given up. Her next best use of Friday night was the shift, so the cost of the concert is the <strong>£70</strong> she would have earned.<br />A free ticket removes the money price but not the opportunity cost. Her evening is still scarce, and spending it at the concert means not spending it at work.",
+        "distractors": {
+          "A": "This confuses price with cost. She pays nothing for the ticket but still gives up something real, the wages from the shift.",
+          "B": "That is the <em>benefit</em> of going. She weighs it against the opportunity cost to decide whether the concert is worth it, but the two are opposite sides of the decision, not the same thing.",
+          "C": "The face value is what someone else paid, or would pay. She did not pay it, and the stem says the shift was her best alternative, so it is not what she gives up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A small brewery makes two beers in its only brewhouse, and a litre of either takes the same brewing time. Each litre of pale ale earns £1.00 profit and each litre of stout earns £0.40. The brewery could sell more pale ale than it has the capacity to brew. Each litre of stout the brewery makes",
+      "options": {
+        "A": "Adds £0.40 to profit, so making it is worthwhile.",
+        "B": "Has no opportunity cost, because it is profitable.",
+        "C": "Leaves the brewery worse off than brewing pale ale.",
+        "D": "Uses capacity that would otherwise stand idle."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Because the brewery cannot brew all the pale ale it could sell, every litre of stout takes up brewing time that could have made a litre of pale ale. The next best use of that time earns <strong>£1.00</strong>.<br />So each litre of stout earns £0.40 but costs £1.00 in profit given up, leaving the brewery <strong>£0.60 a litre</strong> worse off than if it brewed pale ale instead. A product earning a thin profit can be blocking a better one, which is why opportunity cost, not the product's own profit, is the right test.",
+        "distractors": {
+          "A": "£0.40 is the stout's own profit, which is only half the comparison. Making stout means not making pale ale, so the profit it earns has to be set against the £1.00 the pale ale would have earned.",
+          "B": "Earning a profit does not remove opportunity cost. Every use of the brewhouse rules out another use, and here the alternative earns more.",
+          "D": "That would be true only if the brewhouse had spare capacity. The stem says the brewery could sell more pale ale than it can brew, so the time is not idle."
+        }
+      }
+    }
+  ]
+}

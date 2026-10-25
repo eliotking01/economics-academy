@@ -1,0 +1,280 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.1.2",
+  "slug": "1-1-2-business-objectives",
+  "title": "Business Objectives",
+  "shortTitle": "Business Objectives",
+  "pageTitle": "Business Objectives Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on business objectives for Edexcel B A-Level Economics: profit and sales maximisation, satisficing, market share and ROI.",
+  "intro": "Eight original multiple-choice questions on the objectives businesses set themselves, from profit and sales maximisation to survival, market share and return on investment.",
+  "notesTeaser": "Eight original multiple-choice questions on profit and sales maximisation, satisficing, market share, return on investment and the other objectives a business can hold.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-1-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A dog-grooming business spends £24,000 on a mobile grooming van. In its first year the van brings in £9,000 of extra revenue, and after fuel, insurance and wages this adds £3,000 to the business's profit. The van's return on investment in its first year is",
+      "options": {
+        "A": "12.5%",
+        "B": "25.0%",
+        "C": "33.3%",
+        "D": "37.5%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Return on investment is the profit an investment earns as a percentage of what it cost:<br />ROI = profit ÷ cost of the investment × 100<br />= £3,000 ÷ £24,000 × 100 = <strong>12.5%</strong>.<br />The £9,000 is revenue, not profit, so it does not belong in the calculation. The owner would compare the 12.5% with what the £24,000 could have earned elsewhere, such as interest in a savings account.",
+        "distractors": {
+          "B": "This divides the van's running costs, £9,000 − £3,000 = £6,000, by the £24,000. ROI measures the profit the investment earns, not what it costs to run.",
+          "C": "This is £3,000 ÷ £9,000, profit as a share of the extra revenue. That is a profit margin. ROI divides by the amount invested, £24,000.",
+          "D": "This uses revenue, £9,000 ÷ £24,000, instead of profit. Revenue counts the money coming in before the van's running costs are paid."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the annual sales of four coffee-shop chains in a city, and the sales of every coffee shop in the city combined.<br />Using Table 1, the chain whose market share rose even though its sales fell is",
+      "table": {
+        "caption": "Table 1: Coffee-shop sales in a city (£ million)",
+        "head": [
+          "",
+          "Last year",
+          "This year"
+        ],
+        "rows": [
+          [
+            "Chain 1",
+            "10.0",
+            "8.0"
+          ],
+          [
+            "Chain 2",
+            "6.0",
+            "6.4"
+          ],
+          [
+            "Chain 3",
+            "8.0",
+            "7.2"
+          ],
+          [
+            "Chain 4",
+            "12.0",
+            "9.0"
+          ],
+          [
+            "All coffee shops in the city",
+            "40.0",
+            "32.0"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Chain 1.",
+        "B": "Chain 2.",
+        "C": "Chain 3.",
+        "D": "Chain 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Market share is a firm's sales as a percentage of total sales in the market.<br />Chain 3: last year 8.0 ÷ 40.0 × 100 = 20%; this year 7.2 ÷ 32.0 × 100 = <strong>22.5%</strong>.<br />Its sales fell by 10%, but the whole market fell by 20%, so it took a bigger slice of a smaller market. A firm with a market-share objective can be meeting it while its sales fall.",
+        "distractors": {
+          "A": "Its sales fell from £10.0m to £8.0m, the same 20% as the market, so its share stayed at 25%.",
+          "B": "Its share did rise, from 15% to 20%, but its sales rose too, from £6.0m to £6.4m. The stem asks for a chain whose sales fell.",
+          "D": "Its sales fell, and its share fell with them, from 30% to about 28.1%. Its sales fell by 25%, faster than the market's 20%."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A new phone-repair business wants to sell as many repairs as possible without making a loss. Table 1 shows its expected profit at different numbers of repairs a month.<br />Using Table 1, the number of repairs a month it will aim for is",
+      "table": {
+        "caption": "Table 1: Expected profit at different numbers of repairs",
+        "head": [
+          "Repairs a month",
+          "Profit"
+        ],
+        "rows": [
+          [
+            "200",
+            "£1,800"
+          ],
+          [
+            "300",
+            "£3,100"
+          ],
+          [
+            "400",
+            "£2,200"
+          ],
+          [
+            "500",
+            "£0"
+          ],
+          [
+            "600",
+            "−£1,500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "300",
+        "B": "400",
+        "C": "500",
+        "D": "600"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Sales maximisation means selling as many units as possible <strong>without making a loss</strong>, so the business must at least break even.<br />Profit is still positive at 400 repairs and falls to exactly £0 at 500, which is break-even. At 600 it makes a loss of £1,500. So 500 repairs is the most it can sell without a loss.<br />It gives up the £3,100 it could make at 300 repairs. That is the trade-off of sales maximisation: more customers, less profit.",
+        "distractors": {
+          "A": "This is where profit is highest, £3,100. That is the profit-maximising level, which this business is not aiming for.",
+          "B": "Profit is still £2,200 here, so the business could sell more repairs and still avoid a loss. A sales maximiser keeps going until profit reaches zero.",
+          "D": "This sells the most repairs, but at a loss of £1,500. Sales maximisation is limited by the need to break even, not just by how much customers would buy."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q4",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The owner of a busy hair salon could raise her yearly profit by about £4,000 by opening on Sundays. She decides not to, because her current profit gives her a comfortable income and she wants her weekends free. Her approach is best described as",
+      "options": {
+        "A": "Market share.",
+        "B": "Profit maximisation.",
+        "C": "Sales maximisation.",
+        "D": "Satisficing."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Satisficing means aiming for a <strong>satisfactory</strong> level of profit rather than the most possible. She turns down an extra £4,000 because what she earns already is enough, and her free time matters more to her.<br />Satisficing is often linked to large companies run by managers, but small business owners do it too, trading some profit for time away from work.",
+        "distractors": {
+          "A": "Nothing in the scenario is about her share of local hairdressing sales. Turning down extra trade would, if anything, leave some of it to rivals.",
+          "B": "A profit maximiser would take the extra £4,000. Choosing not to is exactly what rules this out.",
+          "C": "A sales maximiser wants as many customers as possible without making a loss, so it would open on Sundays too."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two clothing retailers have similar sales. One is owned and run by a single family. The other is a public limited company owned by thousands of shareholders and run by salaried managers. The second is more likely to satisfice, mainly because",
+      "options": {
+        "A": "Decisions are taken by its managers, not its owners.",
+        "B": "It can raise finance more easily by selling shares.",
+        "C": "It faces less competition because it is larger.",
+        "D": "Its shareholders want the largest possible dividends."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is the <strong>divorce of ownership and control</strong>. The shareholders own the company but salaried managers run it, and as long as profit is high enough to keep shareholders content, the managers can pursue goals of their own, such as a higher salary.<br />This is the principal-agent problem: the shareholders are the principals and the managers their agents. In the family firm the owners take the decisions themselves, so this gap does not arise.",
+        "distractors": {
+          "B": "Selling shares is a way of raising finance, not an objective. It explains how the company is funded, not why the people running it would accept less than the most profit possible.",
+          "C": "The stem says the two retailers have similar sales, so nothing suggests the company is larger or faces fewer rivals. It is not what distinguishes these two businesses.",
+          "D": "That is a reason to <em>maximise</em> profit, not to satisfice. The point is that shareholders do not take the day-to-day decisions themselves."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q6",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 describes four businesses.<br />Using Table 1, the business most likely to make cost efficiency its main objective is",
+      "table": {
+        "caption": "Table 1: Four businesses",
+        "head": [
+          "",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Business 1",
+            "A café that opened six weeks ago and has not yet covered its costs in any month"
+          ],
+          [
+            "Business 2",
+            "A coach company whose passengers choose almost entirely on the lowest fare"
+          ],
+          [
+            "Business 3",
+            "A charity shop set up to give work to people recovering from long-term illness"
+          ],
+          [
+            "Business 4",
+            "A boutique hotel whose bookings depend heavily on its online reviews"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Business 1.",
+        "B": "Business 2.",
+        "C": "Business 3.",
+        "D": "Business 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Cost efficiency means producing the same output with fewer resources, so each unit costs less. It matters most where customers <strong>shop on price</strong>.<br />Business 2's passengers choose the cheapest fare, so the coach company can only win them by charging less than its rivals, and it can only do that profitably if its costs are lower too.",
+        "distractors": {
+          "A": "A new business that is not yet covering its costs is most likely to put <strong>survival</strong> first: staying open and having the cash to pay its bills.",
+          "C": "A business set up to give people work has a <strong>social objective</strong> at its centre.",
+          "D": "A hotel that depends on its reviews is most likely to focus on <strong>customer satisfaction</strong>, because a good reputation brings bookings and a bad one loses them quickly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A family-owned joinery wants to buy a £60,000 machine in two years' time without borrowing or bringing in new owners. The objective that best supports this plan is",
+      "options": {
+        "A": "Customer satisfaction.",
+        "B": "Market share.",
+        "C": "Profit maximisation.",
+        "D": "Sales maximisation."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Without loans or new owners, the machine must be paid for from <strong>retained profit</strong>, the profit kept in the business rather than paid out to the owners. Retained profit is the cheapest way to pay for new equipment.<br />Aiming for the most profit possible builds up retained profit fastest, so profit maximisation fits the plan best.",
+        "distractors": {
+          "A": "Satisfied customers help sales in the long run, but this objective does not directly build up the £60,000 the joinery needs, and it may even raise costs.",
+          "B": "Winning market share usually means cutting prices, which lowers profit per unit. That works against saving up for the machine.",
+          "D": "Sales maximisation only requires the business to break even, so it may leave no profit at all to set aside."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-1-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A chain of gyms has been maximising profit. It switches to sales maximisation and cuts its membership fee. All other things being equal, the most likely result in the short run is",
+      "options": {
+        "A": "Fewer members and higher profit.",
+        "B": "More members and a loss.",
+        "C": "More members and higher profit.",
+        "D": "More members and lower profit."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Before the switch, the chain was making the <strong>most profit possible</strong>, so any change of objective must lower profit, not raise it.<br />Sales maximisation means selling as much as possible without making a loss. Lower fees attract more members, so membership rises. The chain cuts its fee only as far as the point where it just breaks even, so profit falls but does not turn into a loss.",
+        "distractors": {
+          "A": "Cutting the fee makes membership cheaper, so more people join, not fewer. Fewer members would not fit an objective of selling as much as possible.",
+          "B": "Sales maximisation sells as much as possible <em>without making a loss</em>. The chain stops cutting its fee at the point where it breaks even.",
+          "C": "Profit was already at its maximum. Moving away from that point can only lower profit, however many new members join."
+        }
+      }
+    }
+  ]
+}

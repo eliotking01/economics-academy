@@ -135,6 +135,13 @@ HUB_SECTIONS = [
             ("Year 1 &amp; 2 (A Level)", ["aqa-a2-micro", "aqa-a2-macro"]),
         ],
     ),
+    (
+        "Edexcel B Economics",
+        [
+            ("Year 1 (AS Level)", ["edexcel-b-theme-1", "edexcel-b-theme-2"]),
+            ("Year 2 (A Level)", ["edexcel-b-theme-3", "edexcel-b-theme-4"]),
+        ],
+    ),
 ]
 
 # Button labels on the hub, matching the wording on revision-notes/index.html.
@@ -150,14 +157,22 @@ BOARD_BLURB = {d: b for d, _, b in BOARDS}
 # one. But a board added to the record now reaches four structures on this page
 # automatically and this one not at all, which would drop it off the hub with no
 # error. So the two are reconciled here instead.
+#
+# A STAGED group may be listed ahead of its launch (D68): the hub renders only
+# groups with live sets, so its row stays off the page until /launch-feature,
+# and the entry is ready for approval while the sets are written.
 _hub_dirs = [d for _h, gs in HUB_SECTIONS for _label, ds in gs for d in ds]
 _recorded = [g["notesDir"] for _k, _b, g in board_data.groups("practiceQuestions")]
-if sorted(_hub_dirs) != sorted(_recorded):
+_staged = {g["notesDir"]
+           for _k, _b, g in board_data.groups("practiceQuestions", staged=True)}
+if (len(set(_hub_dirs)) != len(_hub_dirs)
+        or not set(_recorded) <= set(_hub_dirs) <= _staged):
     sys.exit(
         f"HUB_SECTIONS lists {sorted(_hub_dirs)} and boards.json records "
-        f"{sorted(_recorded)}. Every board reaches the practice-questions hub "
-        f"through HUB_SECTIONS, so a group missing here is a group missing "
-        f"from the page - add it to the right year group."
+        f"{sorted(_recorded)} (staged too: {sorted(_staged - set(_recorded))}). "
+        f"Every board reaches the practice-questions hub through HUB_SECTIONS, "
+        f"so a group missing here is a group missing from the page - add it "
+        f"to the right year group. Only a live or staged group may be listed."
     )
 
 # Unit groupings, lifted verbatim from the notes board index pages so the
@@ -309,6 +324,101 @@ UNITS = {
     ("aqa-a2-macro", "2.6"): (
         "The International Economy",
         "Globalisation, trade, balance of payments, exchange rates, development",
+    ),    # edexcel-b-theme-1
+    ("edexcel-b-theme-1", "1.1"): (
+        "Scarcity, Choice and Potential Conflicts",
+        "The economic problem, business objectives, stakeholders and CSR",
+    ),
+    ("edexcel-b-theme-1", "1.2"): (
+        "Enterprise, Business and the Economy",
+        "Entrepreneurs, factors of production, specialisation and the wider economy",
+    ),
+    ("edexcel-b-theme-1", "1.3"): (
+        "Introducing the Market",
+        "Demand, supply, price determination, market research and competition",
+    ),
+    ("edexcel-b-theme-1", "1.4"): (
+        "The Role of Credit in the Economy",
+        "Banks, risk and liability, and sources of finance",
+    ),
+    ("edexcel-b-theme-1", "1.5"): (
+        "Market Failure and Government Intervention",
+        "Externalities, intervention methods and government failure",
+    ),
+    ("edexcel-b-theme-1", "1.6"): (
+        "Revenue, Costs, Profits and Cash",
+        "Revenue and costs, break-even, profit margins and cash flow",
+    ),
+    # edexcel-b-theme-2
+    ("edexcel-b-theme-2", "2.1"): (
+        "Business Growth and Competitive Advantage",
+        "Growth and its methods, R&amp;D, the digital economy and small firms",
+    ),
+    ("edexcel-b-theme-2", "2.2"): (
+        "Firms, Consumers and Elasticities of Demand",
+        "PED, pricing strategies, non-price competition and YED",
+    ),
+    ("edexcel-b-theme-2", "2.3"): (
+        "Productive Efficiency",
+        "Productivity, capacity utilisation, lean production and costs",
+    ),
+    ("edexcel-b-theme-2", "2.4"): (
+        "Life in a Global Economy",
+        "Globalisation, types of economy, trade and exchange rates",
+    ),
+    ("edexcel-b-theme-2", "2.5"): (
+        "The Economic Cycle",
+        "The cycle, the circular flow, inflation and unemployment",
+    ),
+    ("edexcel-b-theme-2", "2.6"): (
+        "Introduction to Macroeconomic Policy",
+        "Objectives, policy instruments and the trade-offs between them",
+    ),
+    # edexcel-b-theme-3
+    ("edexcel-b-theme-3", "3.1"): (
+        "Globalisation",
+        "Growing economies, trade, trading blocs, protectionism and exchange rates",
+    ),
+    ("edexcel-b-theme-3", "3.2"): (
+        "Economic Factors in Business Expansion",
+        "Why firms trade abroad and how they judge new markets",
+    ),
+    ("edexcel-b-theme-3", "3.3"): (
+        "Impact of Globalisation on Global Companies",
+        "Global demand, glocalisation and cultural factors in global markets",
+    ),
+    ("edexcel-b-theme-3", "3.4"): (
+        "Impact of Globalisation on Local and National Economies",
+        "Multinationals, ethical issues and how MNCs are controlled",
+    ),
+    ("edexcel-b-theme-3", "3.5"): (
+        "Global Labour Markets",
+        "Employment patterns, wage rates and minimum wage laws",
+    ),
+    ("edexcel-b-theme-3", "3.6"): (
+        "Inequality and Redistribution",
+        "Poverty, inequality and redistributing income and wealth",
+    ),
+    # edexcel-b-theme-4
+    ("edexcel-b-theme-4", "4.1"): (
+        "Competition and Market Power",
+        "Market structures, barriers to entry, oligopoly, pricing and efficiency",
+    ),
+    ("edexcel-b-theme-4", "4.2"): (
+        "Market Power and Market Failure",
+        "Market power, business regulation and the case for and against it",
+    ),
+    ("edexcel-b-theme-4", "4.3"): (
+        "Market Failure Across the Economy",
+        "Public and merit goods, externalities and policies to correct them",
+    ),
+    ("edexcel-b-theme-4", "4.4"): (
+        "Macroeconomic Policies and Impact on Firms and Individuals",
+        "The AD/AS model, demand-side and supply-side policies and their effects",
+    ),
+    ("edexcel-b-theme-4", "4.5"): (
+        "Risk and the Financial Sector",
+        "Risk, the financial sector, the central bank and the 2008 crisis",
     ),
 }
 
