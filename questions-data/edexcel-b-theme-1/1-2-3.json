@@ -1,0 +1,176 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.2.3",
+  "slug": "1-2-3-factors-of-production",
+  "title": "Factors of Production",
+  "shortTitle": "Factors of Production",
+  "pageTitle": "Factors of Production Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the factors of production for Edexcel B A-Level Economics: land, labour, capital and enterprise as a business uses them.",
+  "intro": "Six original multiple-choice questions on land, labour, capital and enterprise, seen through what a business actually uses: premises, equipment, raw materials, managers and employees.",
+  "notesTeaser": "Six original multiple-choice questions on land, labour, capital and enterprise in a business, and why owners and managers are different factors.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-2-3-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 lists five resources used by a small brewery.<br />Using Table 1, the resources classified as the factor of production <strong>capital</strong> are",
+      "table": {
+        "caption": "Table 1: Resources used by a small brewery",
+        "head": [
+          "",
+          "Resource"
+        ],
+        "rows": [
+          [
+            "Resource 1",
+            "Brewing vessels and a bottling machine"
+          ],
+          [
+            "Resource 2",
+            "Water drawn from its own borehole"
+          ],
+          [
+            "Resource 3",
+            "Its head brewer, who is paid a salary"
+          ],
+          [
+            "Resource 4",
+            "A van for delivering to pubs"
+          ],
+          [
+            "Resource 5",
+            "A £50,000 loan from a bank"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Resource 1 only.",
+        "B": "Resources 1 and 4.",
+        "C": "Resources 1, 2 and 4.",
+        "D": "Resources 1, 4 and 5."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Capital is the <strong>man-made</strong> resources used in production, such as machinery, tools and vehicles. The brewing vessels and bottling machine (Resource 1) and the delivery van (Resource 4) are both equipment made to produce or deliver other goods, so both are capital. Capital is rewarded with interest.<br />The water is land, the head brewer is labour, and the bank loan is money, not a resource used in production.",
+        "distractors": {
+          "A": "This leaves out the delivery van. Vehicles are man-made and used in the business, so they are capital just as the brewing equipment is.",
+          "C": "The water is pumped up by machinery, but the water itself is a natural resource, so it is <strong>land</strong>. The pump would be capital; what it pumps is not.",
+          "D": "A loan is money, not a man-made resource used in production. The brewery may use it to <strong>buy</strong> capital, such as the van, but the money itself is not a factor of production."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The founder of a chain of three gyms steps back from running them and appoints a general manager on a fixed annual salary. The manager now decides staffing, prices and opening hours. In terms of the factors of production, the manager supplies",
+      "options": {
+        "A": "Enterprise, rewarded with profit.",
+        "B": "Enterprise, rewarded with a salary.",
+        "C": "Labour, rewarded with profit.",
+        "D": "Labour, rewarded with a salary."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Managers and employees are <strong>labour</strong>: the physical and mental effort people put into production. The manager is paid a salary whether the gyms do well or badly, and has none of their own money at risk. The founder still owns the business and takes the risk, so the founder supplies enterprise and is rewarded with whatever profit is left.",
+        "distractors": {
+          "A": "Making big decisions does not turn a manager into an entrepreneur. Enterprise means taking the risk of running the business, and the manager risks nothing: their pay is fixed.",
+          "B": "A salary is the reward for labour, and enterprise's reward is profit. This option pairs the right reward with the wrong factor.",
+          "C": "The manager is labour, but labour is rewarded with wages or salaries. Profit goes to the founder, who takes the risk."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A florist has a poor year, and its revenue falls by a third. The reward to a factor of production that absorbs the fall directly is",
+      "options": {
+        "A": "Profit for the owner.",
+        "B": "Rent paid for the shop.",
+        "C": "The interest on its van loan.",
+        "D": "Wages paid to its two assistants."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Rent, interest and wages are agreed in advance. The florist owes them whether its sales are good or bad. <strong>Profit</strong> is whatever is left after they have been paid, so it is the reward that falls when revenue falls, and it may be nothing at all. That is the risk the owner takes in supplying enterprise.",
+        "distractors": {
+          "B": "Rent is the reward for land, and it is set by the lease, not by how well the shop trades. The landlord is paid the same either way.",
+          "C": "Interest is the reward for capital, and it is set by the loan agreement. The lender is owed it whatever the florist's sales.",
+          "D": "Wages are the reward for labour, and are agreed in advance. The assistants are paid for their hours whether or not customers come in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A warehouse pays its order pickers £15 an hour. Each picker packs 50 orders an hour. After a training course, each packs 60 orders an hour at the same hourly pay. Ignoring the cost of the course, the labour cost of packing one order is now",
+      "options": {
+        "A": "£0.05",
+        "B": "£0.24",
+        "C": "£0.25",
+        "D": "£0.30"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Labour cost per order = hourly pay ÷ orders packed per hour.<br />Before: £15 ÷ 50 = <strong>£0.30</strong>.<br />After: £15 ÷ 60 = <strong>£0.25</strong>.<br />The quality of a factor matters as well as the amount. Training gets more output from the same workers for the same pay, so the labour cost of each order falls.",
+        "distractors": {
+          "A": "This is the <strong>fall</strong> in cost per order, £0.30 − £0.25. The stem asks for the new cost.",
+          "B": "This cuts the old cost by 20%, the rise in output: £0.30 × 0.8. A 20% rise in output does not cut cost per unit by 20%: dividing by 1.2 cuts it by about 16.7%.",
+          "D": "This is the cost before the training. Pay per hour is unchanged, but each hour now produces more orders."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two friends set up a juice bar, each putting £10,000 of their own savings into it and sharing any profit or loss. One of them also works shifts behind the counter and draws a wage for those hours. The factors of production this person supplies are",
+      "options": {
+        "A": "Capital and labour.",
+        "B": "Enterprise and labour.",
+        "C": "Enterprise only.",
+        "D": "Labour only."
+      },
+      "answer": "B",
+      "model": {
+        "working": "By putting savings at risk and setting up the business, the friend supplies <strong>enterprise</strong>, rewarded with a share of any profit. By working shifts for a wage, the same person also supplies <strong>labour</strong>. One person can supply more than one factor.",
+        "distractors": {
+          "A": "Money is not capital in this sense. Capital is man-made resources used in production, such as the juicers and fridges. Risking savings to set up the business is enterprise.",
+          "C": "This misses the shifts. Working behind the counter for a wage is labour, even when the worker is also an owner.",
+          "D": "This misses the risk. The friend has put £10,000 of savings into the business, which is what makes them an entrepreneur."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-3-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A supermarket replaces eight of its checkout staff with twelve self-service tills. In terms of the factors of production, the supermarket has",
+      "options": {
+        "A": "Replaced capital with labour.",
+        "B": "Replaced labour with capital.",
+        "C": "Replaced labour with enterprise.",
+        "D": "Replaced land with capital."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The checkout staff are <strong>labour</strong>. The self-service tills are equipment: man-made resources used in production, so they are <strong>capital</strong>. The supermarket has changed its mix of factors, using more capital and less labour to do the same job.",
+        "distractors": {
+          "A": "This is the right pair the wrong way round. The tills are capital, and they have replaced the staff.",
+          "C": "Enterprise is the owners taking the risk of running the business. Buying tills does not change who takes that risk.",
+          "D": "Land is natural resources and premises. The shop building is unchanged; the tills replace people."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.2.2",
+  "slug": "1-2-2-entrepreneurial-motives",
+  "title": "Entrepreneurial Motives",
+  "shortTitle": "Entrepreneurial Motives",
+  "pageTitle": "Entrepreneurial Motives Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on entrepreneurial motives for Edexcel B A-Level Economics: profit, ethics, social enterprise, independence and home working.",
+  "intro": "Six original multiple-choice questions on why people start businesses: profit as an incentive, and the non-financial motives of ethics, social aims, independence and home working.",
+  "notesTeaser": "Six original multiple-choice questions on profit as an incentive, ethical stance, social entrepreneurship, independence and home working.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-2-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A nurse earning £32,000 a year leaves the job to run a dog-walking business. In its first year the business has revenue of £58,000 and costs of £34,000, not counting any pay for the owner. In money terms, compared with staying in the job, the owner's first year in business leaves them",
+      "options": {
+        "A": "£8,000 worse off.",
+        "B": "£8,000 better off.",
+        "C": "£24,000 better off.",
+        "D": "£26,000 better off."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Profit is total revenue minus total costs: £58,000 − £34,000 = <strong>£24,000</strong>.<br />The opportunity cost of running the business is the £32,000 salary given up.<br />£24,000 − £32,000 = <strong>−£8,000</strong>, so the owner is £8,000 a year worse off in money terms.<br />Profit only works as an incentive if it beats what the entrepreneur gives up. If the owner stays in business anyway, something other than money is keeping them there.",
+        "distractors": {
+          "B": "The arithmetic is right but the sign is wrong. The profit, £24,000, is <strong>less</strong> than the £32,000 salary given up, so the owner is worse off.",
+          "C": "This is the profit, £58,000 − £34,000. It ignores the opportunity cost: the owner could have earned £32,000 by staying in the job.",
+          "D": "This takes the salary from revenue, £58,000 − £32,000, and forgets the £34,000 of business costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The first indoor climbing centre in a large town reports high profits. Within two years three more climbing centres, run by different owners, open nearby. The role of profit this best illustrates is that it",
+      "options": {
+        "A": "Covers the opportunity cost of the owner's time.",
+        "B": "Pays for growth without the need to borrow.",
+        "C": "Rewards the owner for the risk taken.",
+        "D": "Signals where new firms can make money."
+      },
+      "answer": "D",
+      "model": {
+        "working": "High profits in a market tell <strong>other</strong> entrepreneurs there is money to be made, so new firms enter. The new centres are run by different owners, so it is the first centre's profit acting as a <strong>signal</strong>, drawing resources to where consumers want them. This is the price mechanism at work.",
+        "distractors": {
+          "A": "Profit does need to beat the owner's opportunity cost, but that explains why the first owner stays in business, not why new firms arrive.",
+          "B": "Retained profit can fund growth, but that would be the first centre opening a second site. The new centres have different owners.",
+          "C": "Profit is the reward for enterprise, but a reward to the first owner does not explain why others enter. It is the signal those profits send that brings them in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four small businesses.<br />Using Table 1, the business that is best described as a <strong>social enterprise</strong> is",
+      "table": {
+        "caption": "Table 1: Four small businesses",
+        "head": [
+          "",
+          "What it does",
+          "What happens to its profit"
+        ],
+        "rows": [
+          [
+            "Business 1",
+            "Sells clothing made only from organic, fairly traded cotton",
+            "Paid to its two owners"
+          ],
+          [
+            "Business 2",
+            "A graphic designer who left an agency to work for themselves",
+            "Kept by the designer"
+          ],
+          [
+            "Business 3",
+            "Sells handmade jewellery online from the owner's spare room",
+            "Kept by the owner"
+          ],
+          [
+            "Business 4",
+            "A café that trains young people leaving care to work as baristas",
+            "Mostly spent on its training programme"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Business 1.",
+        "B": "Business 2.",
+        "C": "Business 3.",
+        "D": "Business 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A social enterprise trades to tackle a social or environmental problem and <strong>reinvests most of its profit in that aim</strong>. Business 4 sells meals like any café, but it exists to train young people leaving care and puts its surplus back into the programme. It still needs revenue above its costs: the surplus is what pays for the mission.",
+        "distractors": {
+          "A": "This is an <strong>ethical stance</strong>: the business follows moral principles in what it buys. But its profit goes to the owners, so it is not a social enterprise.",
+          "B": "This owner's motive is <strong>independence</strong>: being their own boss. Nothing about the business tackles a social problem.",
+          "C": "This is <strong>home working</strong>: the owner runs it from a spare room, so there is no shop to rent. The profit is the owner's own."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sole trader makes handmade soap at home and sells it online. Demand grows strongly after the soap is featured in a magazine. The constraint most likely to hold the business back is",
+      "options": {
+        "A": "A lack of space for stock, equipment and staff.",
+        "B": "Customers' reluctance to buy from a website.",
+        "C": "High rent on its premises, which cuts into profit.",
+        "D": "The owner's lack of any profit motive."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Home working cuts costs: there is no shop or office to rent and no commute. Its limits are <strong>space</strong> and the difficulty of <strong>taking on staff</strong>. A sudden rise in orders needs more room for stock and equipment, and more people to make and pack the soap, which a home cannot easily provide. That is why home-based businesses often stay small.",
+        "distractors": {
+          "B": "Selling online is what makes home working easier, and demand is already growing strongly. Customers are clearly willing to buy from the website.",
+          "C": "The business is run from home, so it pays no rent on premises. Avoiding rent is one of the main advantages of home working.",
+          "D": "Nothing suggests the owner does not care about profit. A non-financial motive, such as working from home, can sit alongside a profit motive, and the business still has to cover its costs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-q5",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "An ethical clothing brand switches its T-shirts to organic cotton. The fabric in each T-shirt now costs £9 instead of £6. The brand raises its price from £20 to £25, and weekly sales fall from 400 to 360. All its other costs are fixed and unchanged. The change in the brand's weekly profit is",
+      "options": {
+        "A": "−£1,200",
+        "B": "+£160",
+        "C": "+£800",
+        "D": "+£1,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Change in revenue: 360 × £25 − 400 × £20 = £9,000 − £8,000 = <strong>+£1,000</strong>.<br />Change in fabric costs: 360 × £9 − 400 × £6 = £3,240 − £2,400 = <strong>+£840</strong>.<br />Change in profit: £1,000 − £840 = <strong>+£160</strong>.<br />An ethical stance often raises costs, but some customers will pay a premium for it. Here enough of them do that profit rises slightly, so the ethics have become a selling point.",
+        "distractors": {
+          "A": "This counts only the extra fabric cost on the original 400 shirts, 400 × £3, and ignores the higher price. An ethical stance does not have to cut profit if customers will pay more.",
+          "C": "This uses the £5 price rise minus the £3 cost rise on all 400 shirts, 400 × £2, and forgets that sales fell to 360.",
+          "D": "This is the change in revenue only. The fabric bill rose too, by £840."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A chef who has worked in hotel kitchens for fifteen years opens a small restaurant, saying: \"I want to decide the menu myself and answer to no one.\" The motive the chef is describing is",
+      "options": {
+        "A": "Ethical stance.",
+        "B": "Home working.",
+        "C": "Independence.",
+        "D": "Social entrepreneurship."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Wanting to be your own boss, with no manager above you, is the motive of <strong>independence</strong>. The price of it is that every decision, and every loss, is the chef's own.",
+        "distractors": {
+          "A": "An ethical stance means running the business by moral principles, such as how it sources its food. The chef says nothing about principles.",
+          "B": "A restaurant cannot be run from home, and the chef's reason is about control, not where the work is done.",
+          "D": "A social enterprise trades to tackle a social or environmental problem. The chef's aim is personal control, not a social mission."
+        }
+      }
+    }
+  ]
+}

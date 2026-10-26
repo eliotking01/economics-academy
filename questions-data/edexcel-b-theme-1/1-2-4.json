@@ -1,0 +1,172 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.2.4",
+  "slug": "1-2-4-specialisation",
+  "title": "Specialisation",
+  "shortTitle": "Specialisation",
+  "pageTitle": "Specialisation and Division of Labour Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on specialisation for Edexcel B A-Level Economics: the division of labour for employers and employees, and specialising firms.",
+  "intro": "Six original multiple-choice questions on specialisation: what the division of labour means for employers and employees, and when it pays a firm to specialise.",
+  "notesTeaser": "Six original multiple-choice questions on the division of labour for employers and employees, and the advantages and disadvantages of specialisation to a firm.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-2-4-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A sandwich factory's production line has four stations: buttering, filling, sealing and packing. Only one worker is trained to run the sealing machine, and one morning that worker is off sick. The most likely result is that",
+      "options": {
+        "A": "Every later stage waits, so the line's output falls.",
+        "B": "Only the sealing station slows, and the rest carry on.",
+        "C": "Output per worker rises, as fewer staff share the work.",
+        "D": "Unit costs fall, because that day's wage bill is lower."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is a <strong>bottleneck</strong>, one of the disadvantages of the division of labour to employers. Each stage depends on the one before it. If sealing stops, packing has nothing to pack, and the filled sandwiches pile up. Because nobody else knows the task, nobody can cover. The output of the whole line falls.",
+        "distractors": {
+          "B": "The stations are linked in sequence. Packing cannot carry on without sealed sandwiches, so a stoppage at one stage holds up every later one.",
+          "C": "The workers who are present can do less, not more, because the line is held up. Output falls by more than the number of workers does.",
+          "D": "Even if the wage bill is a little lower, output falls far more, so cost per unit rises. Workers at the later stations are still being paid while they wait."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A call centre reorganises so that each adviser handles only one type of customer query. Of the following effects, the one that is an advantage to the <strong>employer</strong> but not to the advisers is that",
+      "options": {
+        "A": "Advisers find a single type of query all day monotonous.",
+        "B": "Advisers with skills in short supply can earn higher pay.",
+        "C": "Some advisers leave, and replacing them costs money.",
+        "D": "The cost per call falls as more calls are handled each hour."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Workers get faster with practice and waste no time switching between tasks, so <strong>productivity rises</strong>. More calls from the same wage bill means a <strong>lower cost per call</strong>. That benefit goes to the employer: the advisers are paid the same, whether they handle more calls or fewer.",
+        "distractors": {
+          "A": "Monotony is a <strong>disadvantage</strong>, and it falls on the employees. It gives little job satisfaction.",
+          "B": "Higher pay is an advantage to the <strong>employees</strong>, not the employer, for whom it is a higher cost.",
+          "C": "Staff turnover is a <strong>disadvantage</strong> to the employer, not an advantage. Bored workers leave, and recruiting and training replacements costs money."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm makes nothing but the cardboard cores that sit inside rolls of paper till receipts. Over a few years most shops switch to sending receipts by email. The most likely consequence for the firm is",
+      "options": {
+        "A": "A fall in sales, with no other product to make up for it.",
+        "B": "A rise in sales, as rival core makers leave the market.",
+        "C": "Lower unit costs, because it can now buy in bulk.",
+        "D": "Little effect, since its machinery can switch to other products."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Specialisation puts all a firm's eggs in one basket. Demand for its one product falls, its sales collapse and it has <strong>nothing else to fall back on</strong>, which leads to losses and job cuts. A firm that made several products could lean on the others.",
+        "distractors": {
+          "B": "Rivals may leave, but only because the whole market is shrinking. The firm's share might rise while its sales still fall, because there are far fewer receipt rolls to supply.",
+          "C": "Bulk buying comes from producing <strong>more</strong>. With orders falling, the firm will buy less, not more, and its unit costs are likely to rise.",
+          "D": "Specialist machinery is hard to switch to other uses. That is one of the disadvantages of specialising: the firm is slow to adapt when its market changes."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A joinery workshop stops making general furniture and buys specialist machinery so that it can make only staircases, expecting its average cost to fall. A year later its average cost per staircase is higher than before. The most likely explanation is that",
+      "options": {
+        "A": "Bulk buying has raised the price it pays for timber.",
+        "B": "Its joiners now waste time switching between tasks.",
+        "C": "Its sales are too low to spread the cost of the machinery.",
+        "D": "Specialising in one product has raised its marketing costs."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Specialisation cuts average cost only if the firm can <strong>sell a large volume</strong> of its one product. The new machinery is a big cost. Spread across many staircases it adds little to each one, but spread across a few it adds a lot. If the local market for staircases is small, average cost rises instead of falling. Whether specialising pays depends on the size of the market.",
+        "distractors": {
+          "A": "Bulk buying lowers the price per unit of what a firm buys, not raises it. This reverses the cost advantage of specialisation.",
+          "B": "Switching between tasks is what specialisation <strong>removes</strong>. Joiners who make one product do less of it, not more.",
+          "D": "Specialising normally <strong>lowers</strong> marketing costs, because the firm sends one clear message to one type of customer."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A furniture factory changes from each worker building whole chairs to each worker doing one task. Table 1 shows the training each new starter needs before and after the change.<br />Using Table 1, the factory's yearly saving on training is",
+      "table": {
+        "caption": "Table 1: Training for new starters at a furniture factory",
+        "head": [
+          "",
+          "Each worker builds whole chairs",
+          "Each worker does one task"
+        ],
+        "rows": [
+          [
+            "Days of training per new starter",
+            "12",
+            "3"
+          ],
+          [
+            "Cost per day of training",
+            "£90",
+            "£90"
+          ],
+          [
+            "New starters per year",
+            "20",
+            "20"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£5,400",
+        "B": "£16,200",
+        "C": "£21,600",
+        "D": "£27,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Cheaper training is one of the advantages of the division of labour to employers: a new starter only has to learn one task.<br />Training days saved per starter: 12 − 3 = <strong>9</strong>.<br />Saving per starter: 9 × £90 = <strong>£810</strong>.<br />Yearly saving: £810 × 20 = <strong>£16,200</strong>.",
+        "distractors": {
+          "A": "This is what training now <strong>costs</strong> each year, 3 × £90 × 20. The saving is the difference between the old cost and the new one.",
+          "C": "This is what training <strong>used to cost</strong> each year, 12 × £90 × 20. The factory still has to pay for three days per starter.",
+          "D": "This adds the two training periods together, 15 × £90 × 20. The saving comes from the difference between them, 12 − 3."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-2-4-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Which one of the following is an example of a <strong>firm</strong> specialising, rather than of the division of labour inside a workplace?",
+      "options": {
+        "A": "A café where the owner takes orders, cooks and washes up.",
+        "B": "A firm that makes only saddles, for other firms' bicycles.",
+        "C": "A restaurant kitchen where each chef prepares one course.",
+        "D": "A warehouse where each worker only loads the lorries."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A firm specialises when it concentrates on one product, one type of customer or one stage of production and leaves the rest to other businesses. A saddle maker does one stage of making a bicycle and relies on <strong>other firms</strong> for the rest. The division of labour, by contrast, splits tasks between workers <strong>inside</strong> one workplace.",
+        "distractors": {
+          "A": "This is neither. One person doing every task is the opposite of the division of labour, and the café is not concentrating on a narrow range.",
+          "C": "Splitting the cooking between chefs, one course each, is the <strong>division of labour</strong> inside the kitchen.",
+          "D": "Giving each worker one task inside the warehouse is the <strong>division of labour</strong>, not the firm specialising."
+        }
+      }
+    }
+  ]
+}
