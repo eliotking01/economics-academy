@@ -1,0 +1,238 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.5.1",
+  "slug": "1-5-1-market-failure-and-externalities",
+  "title": "Market Failure and Externalities",
+  "shortTitle": "Market Failure and Externalities",
+  "pageTitle": "Market Failure and Externalities Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on market failure and externalities for Edexcel B A-Level Economics: social costs, third parties and over-production.",
+  "intro": "Seven original multiple-choice questions on market failure and externalities: private, external and social costs and benefits, third parties, and why some markets produce or consume the wrong amount.",
+  "notesTeaser": "Seven original multiple-choice questions on private, external and social costs and benefits, third parties and market failure.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-5-1-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A coffee roastery on an industrial estate roasts beans every morning. The smoke and smell drift over a row of houses nearby, and the people living there keep their windows shut. For those residents, this is",
+      "options": {
+        "A": "An external cost of production.",
+        "B": "An external cost of consumption.",
+        "C": "An external benefit of production.",
+        "D": "An external benefit of consumption."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The residents are <strong>third parties</strong>: they are not part of the roastery's sales, and nobody pays them for the smoke. That makes it an <strong>external cost</strong>. It comes from a <strong>firm while making a good</strong>, roasting the beans, so it is an external cost of <strong>production</strong>.",
+        "distractors": {
+          "B": "An external cost of consumption comes from someone <strong>using</strong> a good, such as a driver adding to congestion. Here the harm comes from the roastery making its coffee, not from anyone drinking it.",
+          "C": "The residents lose out, so this is a cost to them, not a benefit. An external benefit of production would be something like a firm training staff who later take those skills to other employers.",
+          "D": "This is wrong on both counts. The residents are harmed, not helped, and the harm comes from making the coffee, not from drinking it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows figures for every 1,000 bricks a brickworks makes and sells.<br />Using Table 1, the social cost of making 1,000 bricks is",
+      "table": {
+        "caption": "Table 1: A brickworks, per 1,000 bricks",
+        "head": [
+          "Item",
+          "Amount"
+        ],
+        "rows": [
+          [
+            "Wages",
+            "£150"
+          ],
+          [
+            "Clay and sand",
+            "£60"
+          ],
+          [
+            "Fuel for the kilns",
+            "£110"
+          ],
+          [
+            "Smoke damage to crops on nearby farms",
+            "£45"
+          ],
+          [
+            "Price the brickworks charges",
+            "£380"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£45",
+        "B": "£320",
+        "C": "£365",
+        "D": "£425"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Social cost = private cost + external cost.<br />The <strong>private cost</strong> is what the brickworks itself pays: wages, materials and energy. £150 + £60 + £110 = <strong>£320</strong>.<br />The <strong>external cost</strong> is the smoke damage that falls on the farms: <strong>£45</strong>.<br />Social cost = £320 + £45 = <strong>£365</strong>.<br />The price of £380 is the firm's revenue, not one of its costs, so it plays no part in the sum.",
+        "distractors": {
+          "A": "This is the external cost alone. The social cost is the <strong>full</strong> cost to society, so the brickworks' own costs have to be added to it.",
+          "B": "This is the private cost alone: the costs the brickworks pays itself. It leaves out the £45 of damage to the farms, which is exactly the part the firm ignores.",
+          "D": "This adds the external cost to the <strong>price</strong>, £380 + £45. The price is what the brickworks earns from a sale, not what making the bricks costs it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "An apple grower's orchard sits next to a honey farm. The honey farm's bees feed on the apple blossom, so it makes more honey, but it pays the grower nothing for this. Compared with the social optimum, the free market's output of apples is most likely to be",
+      "options": {
+        "A": "Too high, since the grower ignores a cost to the honey farm.",
+        "B": "Too high, since the honey farm pays nothing for the blossom.",
+        "C": "Too low, since the grower ignores a gain to the honey farm.",
+        "D": "Too low, since the honey farm adds to the grower's costs."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Growing apples helps a third party, the honey farm, which does not pay for it. That is an <strong>external benefit of production</strong>. The grower decides how many apples to grow on its <strong>own</strong> costs and benefits, so the gain to the honey farm plays no part in the decision. The social benefit of each extra tree is higher than the benefit the grower counts, so the market grows <strong>fewer apples</strong> than is best for society: <strong>under-production</strong>.",
+        "distractors": {
+          "A": "The honey farm gains from the orchard; it bears no cost. Over-production comes from an external <strong>cost</strong>, such as pollution, and there is none here.",
+          "B": "It is true that the honey farm pays nothing, but that is why output is too <strong>low</strong>. Because the grower is not paid for the blossom, it has no reason to grow more for the honey farm's sake.",
+          "D": "Output is too low, but the reason given is wrong. The honey farm adds nothing to the grower's costs; the problem is a benefit the grower is not paid for."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 compares four free markets, giving the figures for the last unit each one sells.<br />Using Table 1, the market that reaches the social optimum without any government intervention is the market for",
+      "table": {
+        "caption": "Table 1: The last unit sold in four markets",
+        "head": [
+          "Market",
+          "Private cost",
+          "Social cost",
+          "Private benefit",
+          "Social benefit"
+        ],
+        "rows": [
+          [
+            "Bus travel (one journey)",
+            "£3.00",
+            "£3.00",
+            "£3.00",
+            "£4.50"
+          ],
+          [
+            "Cut flowers (one bunch)",
+            "£5.00",
+            "£5.00",
+            "£5.00",
+            "£5.00"
+          ],
+          [
+            "Disposable cups (one cup)",
+            "£0.20",
+            "£0.35",
+            "£0.20",
+            "£0.20"
+          ],
+          [
+            "Patio heaters (one heater)",
+            "£90",
+            "£115",
+            "£90",
+            "£90"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Bus travel.",
+        "B": "Cut flowers.",
+        "C": "Disposable cups.",
+        "D": "Patio heaters."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The social optimum is where the social cost of one more unit equals its social benefit. Only <strong>cut flowers</strong> meet that: £5.00 = £5.00.<br />Cut flowers are also the only market where private and social figures are the same, so there is no externality. With no externality, the market equilibrium is the social optimum and the market works well on its own.",
+        "distractors": {
+          "A": "Social benefit (£4.50) is above social cost (£3.00), because travellers do not count the £1.50 external benefit of each journey. The last journey was worth more to society than it cost, so the market provides too <strong>few</strong> journeys.",
+          "C": "Social cost (£0.35) is above social benefit (£0.20), because there is a £0.15 external cost on each cup. The market sells too <strong>many</strong> cups.",
+          "D": "Social cost (£115) is above social benefit (£90), because there is a £25 external cost on each heater. The market sells too <strong>many</strong> heaters."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A three-day music festival is held on a farm. The organiser pays the farmer £20,000 to use the field, sells tickets at £150 each, and pays the parish council to repair the verges that parked cars damage. People in the next village, who did not buy tickets, are kept awake by the music each night. The group bearing an external cost of the festival is",
+      "options": {
+        "A": "The farmer who rents out the field.",
+        "B": "The parish council that repairs the verges.",
+        "C": "The ticket holders who pay £150 each.",
+        "D": "The residents of the next village."
+      },
+      "answer": "D",
+      "model": {
+        "working": "An external cost falls on a <strong>third party</strong>, someone outside the transaction, who is <strong>not compensated</strong> for it. The villagers did not buy tickets or rent anything to the festival, and nobody pays them for the lost sleep. They are the only group that meets both parts of the definition.",
+        "distractors": {
+          "A": "The farmer is part of the deal: they chose to rent out the field and are paid £20,000 for it. That is a transaction, not an externality.",
+          "B": "The verges are damaged, but the organiser pays for the repairs. A cost that is paid for by the person causing it is a private cost to the organiser, not an external cost to the council.",
+          "C": "The £150 is a <strong>private cost</strong>: the price a consumer pays for the good they chose to buy. The ticket holders are inside the transaction, not third parties to it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A council estimates that each car journey into its town centre at rush hour causes £1.20 of congestion and pollution costs to other road users and residents. The cost arises from drivers using the roads, so it is an externality of consumption. Sketching the market for these journeys, with no government intervention,",
+      "options": {
+        "A": "Demand shifts left by £1.20, and fewer journeys are made.",
+        "B": "MSB lies £1.20 below demand, and too many journeys are made.",
+        "C": "MSB lies £1.20 above demand, and too few journeys are made.",
+        "D": "MSC lies £1.20 above supply, and too few journeys are made."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The harm comes from drivers <strong>using</strong> the roads, so it is an <strong>external cost of consumption</strong>. Each journey is worth £1.20 less to society than it is to the driver, so <strong>MSB</strong> is drawn £1.20 <strong>below</strong> the demand curve (MPB).<br />Drivers weigh up only their own fuel and time, so the market stays where demand meets supply, at Q1. The social optimum is where MSB meets supply, at a lower Q2. The market makes <strong>too many</strong> journeys: over-consumption.",
+        "distractors": {
+          "A": "An externality does <strong>not</strong> shift demand or supply. Drivers ignore the cost to others, which is the whole problem, so their demand is unchanged and the market stays at Q1. MSB is an extra line showing what the market leaves out.",
+          "C": "MSB lies above demand only when using a good helps other people, as with a vaccine. Congestion and pollution harm other people, so MSB lies below demand.",
+          "D": "The harm comes from using the roads, not from producing anything, so it belongs on the benefit side as MSB. Even drawn as MSC, a cost the market ignores leads to too many journeys, not too few."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-1-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A paper mill produces 2,000 tonnes of paper a month, and its own costs for that output are £600,000. Once the noise and dust from its lorries on village roads are counted, the social cost of the month's output is £740,000. The external cost per tonne of paper is",
+      "options": {
+        "A": "£70",
+        "B": "£300",
+        "C": "£370",
+        "D": "£140,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Social cost = private cost + external cost, so external cost = social cost − private cost.<br />For the month: £740,000 − £600,000 = <strong>£140,000</strong>.<br />Per tonne: £140,000 ÷ 2,000 = <strong>£70</strong>.",
+        "distractors": {
+          "B": "This is the mill's <strong>private</strong> cost per tonne: £600,000 ÷ 2,000. It is the cost the mill pays, not the cost that falls on the villages.",
+          "C": "This is the <strong>social</strong> cost per tonne: £740,000 ÷ 2,000. It includes the mill's own £300, so the external part is only £370 − £300 = £70.",
+          "D": "This is the external cost of the whole month's output. The question asks for the cost per tonne, so it still has to be divided by the 2,000 tonnes."
+        }
+      }
+    }
+  ]
+}

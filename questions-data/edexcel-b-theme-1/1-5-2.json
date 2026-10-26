@@ -1,0 +1,212 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.5.2",
+  "slug": "1-5-2-government-intervention-and-failure",
+  "title": "Government Intervention and Failure",
+  "shortTitle": "Government Intervention and Failure",
+  "pageTitle": "Government Intervention and Failure Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on government intervention and failure for Edexcel B A-Level Economics: taxes, subsidies, regulation and their limits.",
+  "intro": "Seven original multiple-choice questions on government intervention and failure: regulation, indirect taxes, subsidies, voluntary agreements and the four causes of government failure.",
+  "notesTeaser": "Seven original multiple-choice questions on methods of intervention, indirect taxes and subsidies, and the causes of government failure.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-5-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An environment agency sets a limit on how much dust a cement works may release, and tightens it as cleaner kilns become available. Its inspectors visit the site twice a year to check, and can fine the works if it goes over the limit. This method of intervention is best described as",
+      "options": {
+        "A": "Grants and subsidies.",
+        "B": "Indirect taxation.",
+        "C": "Regulation.",
+        "D": "Voluntary agreement."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Regulation</strong> is a set of rules controlling how firms operate, set and enforced by a government body. A dust limit, checked by inspectors, backed by fines and updated as technology changes, is exactly that.",
+        "distractors": {
+          "A": "A grant or subsidy is a payment from the government to producers. Nothing is paid to the cement works here; it must keep within a limit or be fined.",
+          "B": "An indirect tax is a charge added to the cost of each unit sold. The cement works pays nothing per unit; a fine is charged only if it breaks the limit.",
+          "D": "A voluntary agreement is a promise firms make with no law forcing them, and nothing happens if they break it. This limit is compulsory and backed by fines."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government places a tax of £0.60 on each disposable barbecue sold. Table 1 shows the weekly market before and after the tax.<br />Using Table 1, the government's weekly revenue from the tax is",
+      "table": {
+        "caption": "Table 1: The weekly market for disposable barbecues",
+        "head": [
+          "",
+          "Price paid by buyers",
+          "Quantity sold per week"
+        ],
+        "rows": [
+          [
+            "Before the tax",
+            "£4.00",
+            "50,000"
+          ],
+          [
+            "After the tax",
+            "£4.40",
+            "42,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£16,800",
+        "B": "£25,200",
+        "C": "£30,000",
+        "D": "£184,800"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Tax revenue = tax per unit × the quantity sold <strong>after</strong> the tax.<br />£0.60 × 42,000 = <strong>£25,200</strong> a week.<br />Buyers pay £0.40 of each £0.60 through the higher price (£4.00 to £4.40). Producers pay the other £0.20 through the lower amount they keep: £4.40 − £0.60 = £3.80, down from £4.00.",
+        "distractors": {
+          "A": "This uses the £0.40 rise in price as the tax: £0.40 × 42,000. That is only the part of the tax that buyers pay. The tax per unit is the full £0.60.",
+          "C": "This multiplies the tax by the quantity sold <strong>before</strong> the tax: £0.60 × 50,000. The tax cuts sales to 42,000, and revenue is collected only on barbecues that are actually sold.",
+          "D": "This is buyers' total spending after the tax: £4.40 × 42,000. Most of that goes to the sellers. The government receives only the £0.60 tax on each unit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "To get more people cycling to work, a government pays bicycle makers a subsidy of £40 for every bike they sell. Demand for bikes slopes downwards and supply slopes upwards. Sketching the market, the price that buyers pay for a bike",
+      "options": {
+        "A": "Falls by exactly £40.",
+        "B": "Falls by less than £40.",
+        "C": "Does not change.",
+        "D": "Rises by less than £40."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The subsidy lowers the cost of each bike by £40, so supply shifts <strong>down</strong> by £40, to S + Subsidy. The new equilibrium is where S + Subsidy meets demand. Because demand slopes downwards, the extra bikes are sold only at a lower price, but the price does not fall all the way. Buyers pay P2, below the old price P1, and producers receive P3, above it. The £40 subsidy is the whole gap from P2 to P3, so the fall in the price buyers pay, P1 to P2, is <strong>less than £40</strong>. Part of the subsidy goes to buyers and part to producers.",
+        "distractors": {
+          "A": "This assumes buyers get the whole subsidy. With supply sloping upwards, producers keep part of it, receiving P3, which is above the old price. The fall from P1 to P2 is only part of the £40 gap from P2 to P3.",
+          "C": "A subsidy shifts supply to the right, and with downward-sloping demand that lowers the equilibrium price. The price would stay the same only if the subsidy had no effect on supply.",
+          "D": "This treats the subsidy like an indirect tax. A tax shifts supply up and raises the price; a subsidy is a payment to producers and works the other way."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government taxes a garden weedkiller at £3 a litre, believing each litre does £3 of harm to wildlife and water supplies. A later study finds the harm is only £1 a litre. Compared with the social optimum, output of the weedkiller is now",
+      "options": {
+        "A": "Above the social optimum, so the tax should be raised.",
+        "B": "At the social optimum, so the tax should be kept.",
+        "C": "Below the social optimum, so the tax should be cut.",
+        "D": "Below the social optimum, so the tax should be raised."
+      },
+      "answer": "C",
+      "model": {
+        "working": "A tax corrects over-production when it <strong>equals</strong> the external cost of each unit. Here the tax is £3 but the external cost is only £1, so the tax is £2 too high. It cuts output by more than the harm justifies, and some litres that were worth more to buyers than their full cost to society are no longer made. Output is <strong>below</strong> the social optimum, and the fix is to cut the tax to £1.<br />This is government failure caused by an <strong>information gap</strong>: the government did not know the true size of the external cost.",
+        "distractors": {
+          "A": "Output would still be too high if the tax were <strong>less</strong> than the £1 of harm. At £3 the tax is more than the harm, so it has pushed output too far down.",
+          "B": "Output is at the social optimum only when the tax equals the external cost per unit. A £3 tax on £1 of harm is not equal to it.",
+          "D": "Output is below the optimum, but raising the tax would cut it further still. The tax is already too high, so it needs to come down."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "For twenty years a government has paid steelmakers £30 for every tonne of steel they produce, however much of it is sold. Steelmakers keep expanding output, and unsold steel piles up at the works. This is government failure through a distortion of price signals, because the payment",
+      "options": {
+        "A": "Costs the government more to run than it achieves.",
+        "B": "Lowers the demand for steel from building firms.",
+        "C": "Rewards making steel that buyers do not want.",
+        "D": "Raises the price that buyers pay for each tonne."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Prices tell firms what buyers want. The £30 a tonne pays steelmakers for output <strong>whether or not anyone buys it</strong>, so they respond to the subsidy as well as to demand. The signal points the wrong way: firms are encouraged to make more steel than buyers want, and the surplus piles up unsold. That is a <strong>distortion of price signals</strong>.",
+        "distractors": {
+          "A": "This describes a different cause of government failure, <strong>excessive administrative costs</strong>. Nothing in the stem suggests the scheme is costly to run; the problem is what the payment does to steelmakers' decisions.",
+          "B": "A subsidy to producers does not change what building firms want to buy, so demand does not shift. The surplus comes from supply growing beyond demand, not from demand falling.",
+          "D": "A subsidy lowers producers' costs, so if anything it pushes the price down. Raising the price is how an indirect tax works, and here the government is paying firms, not taxing them."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The government asks the five largest crisp makers to cut the salt in their crisps by 15% within three years, and passes no law to make them. After three years, two of the firms have met the target and three have cut salt by about 2%. The main weakness of a voluntary agreement that this shows is that it",
+      "options": {
+        "A": "Costs the government a large sum to run.",
+        "B": "Leaves firms to choose how to cut the salt.",
+        "C": "Raises the price that buyers pay for crisps.",
+        "D": "Has no penalty for missing the target."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A voluntary agreement is a promise firms make with no law forcing them. Three of the five firms barely changed their recipes, and nothing happened to them for it. That is the main drawback of the method: <strong>nothing happens to firms that ignore the target</strong>, so it works only as far as firms choose to take part.",
+        "distractors": {
+          "A": "Voluntary agreements are <strong>cheap</strong> to run, because there is nothing to inspect or enforce. Low cost is one of their strengths.",
+          "B": "Letting firms choose how to meet the target is a <strong>strength</strong>: each firm can pick the cheapest way to do it. It does not explain why three firms missed the target.",
+          "C": "Raising the price is how an indirect tax works. A voluntary agreement adds no charge to each packet, and the stem says nothing about prices."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-5-2-q7",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 shows two government grant schemes that help households insulate their homes.<br />Using Table 1, the running cost per home upgraded is higher for Scheme X than for Scheme Y by",
+      "table": {
+        "caption": "Table 1: Two home insulation grant schemes",
+        "head": [
+          "",
+          "Total cost to the government",
+          "Of which: cost of running the scheme",
+          "Homes upgraded"
+        ],
+        "rows": [
+          [
+            "Scheme X",
+            "£48 million",
+            "£18 million",
+            "8,000"
+          ],
+          [
+            "Scheme Y",
+            "£36 million",
+            "£3.6 million",
+            "12,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£1,950",
+        "B": "£2,250",
+        "C": "£3,000",
+        "D": "£6,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Running cost per home upgraded:<br />Scheme X: £18 million ÷ 8,000 = <strong>£2,250</strong>.<br />Scheme Y: £3.6 million ÷ 12,000 = <strong>£300</strong>.<br />Difference: £2,250 − £300 = <strong>£1,950</strong>.<br />Scheme X spends more than a third of its budget (£18m of £48m) on running itself. When running costs are this high compared with what a scheme achieves, it is a case of government failure through <strong>excessive administrative costs</strong>.",
+        "distractors": {
+          "B": "This is Scheme X's running cost per home on its own. The question asks how much higher it is than Scheme Y's, so Y's £300 has to be taken away.",
+          "C": "This compares the <strong>total</strong> cost per home: £6,000 for X and £3,000 for Y. The question asks about the running cost only, which is the part that pays for administration rather than insulation.",
+          "D": "This is Scheme X's total cost per home: £48 million ÷ 8,000. It includes the grants themselves, not just the running cost, and it is not compared with Scheme Y."
+        }
+      }
+    }
+  ]
+}
