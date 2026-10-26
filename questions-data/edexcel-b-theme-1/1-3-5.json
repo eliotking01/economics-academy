@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.3.5",
+  "slug": "1-3-5-understanding-the-consumer",
+  "title": "Understanding the Consumer",
+  "shortTitle": "Understanding the Consumer",
+  "pageTitle": "Market Research Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on understanding the consumer for Edexcel B A-Level Economics: market research, sampling, bias and segmentation.",
+  "intro": "Seven original multiple-choice questions on understanding the consumer: primary and secondary research, quantitative and qualitative data, sampling, bias and segmentation.",
+  "notesTeaser": "Seven original multiple-choice questions on market research, estimating demand, sample size, bias and market segmentation.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-3-5-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bakery owner looks back through the till records the shop keeps for its accounts, and counts how many of each type of loaf sold last month. This is",
+      "options": {
+        "A": "Primary research giving qualitative data.",
+        "B": "Primary research giving quantitative data.",
+        "C": "Secondary research giving qualitative data.",
+        "D": "Secondary research giving quantitative data."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Two separate questions.<br /><strong>Who collected it, and why?</strong> The till records were kept for the accounts, not for this research. Using information already collected for another purpose is <strong>secondary</strong> research, and a firm's own sales records are one of its sources.<br /><strong>What kind of data?</strong> Numbers of loaves sold can be counted, so it is <strong>quantitative</strong>.",
+        "distractors": {
+          "A": "Both halves are wrong. The till records were collected for another purpose, and counts of loaves are quantitative.",
+          "B": "The data belongs to the bakery, but it was kept for the accounts, not for this research. That makes it secondary, even though it is the firm's own.",
+          "C": "It is secondary, but sales counts are numbers, so the data is quantitative. Qualitative data is about opinions and reasons."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A business owner carries out the four pieces of research in Table 1 before opening a dog day-care centre.<br />Using Table 1, the research that is both primary and qualitative is",
+      "table": {
+        "caption": "Table 1: Research for a planned dog day-care centre",
+        "head": [
+          "",
+          "What the owner does"
+        ],
+        "rows": [
+          [
+            "Activity 1",
+            "Reads official figures on how many households in the town own a dog"
+          ],
+          [
+            "Activity 2",
+            "Holds long one-to-one interviews with six dog owners about what worries them when they leave their dog"
+          ],
+          [
+            "Activity 3",
+            "Runs an online poll asking 300 local dog owners how many days a week they would use day care"
+          ],
+          [
+            "Activity 4",
+            "Reads reviews that customers have posted online about rival day-care centres"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Activity 1.",
+        "B": "Activity 2.",
+        "C": "Activity 3.",
+        "D": "Activity 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Primary research is new information the business collects first-hand for its own purpose. Qualitative data is about opinions, feelings and reasons. The interviews are carried out by the owner for this decision, so they are <strong>primary</strong>, and they explore what worries owners, so the data is <strong>qualitative</strong>.",
+        "distractors": {
+          "A": "Official figures were collected by someone else, so this is secondary. They are also counts, so the data is quantitative.",
+          "C": "The poll is primary, but it asks how many days, which gives numbers. That is quantitative data.",
+          "D": "Reviews give opinions, so the data is qualitative. But they were written by other people for another purpose, which makes this secondary research."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A vegan café posts a survey on its own social media page asking: \"Would you buy a vegan sausage roll from us for £3?\" Of the 400 people who reply, 85% say yes. The main reason these results may overstate demand is that",
+      "options": {
+        "A": "The data is qualitative, so it cannot be counted.",
+        "B": "The question pushes people towards answering yes.",
+        "C": "The sample is made up of the café's own followers.",
+        "D": "The survey is secondary research, so it is out of date."
+      },
+      "answer": "C",
+      "model": {
+        "working": "This is bias in <strong>who is asked</strong>. People who follow a vegan café's page already like it, so they are far more likely to want its vegan food than the market as a whole. The sample does not stand for everyone who might buy, so the 85% is likely to be much too high.",
+        "distractors": {
+          "A": "A yes-or-no answer can be counted, so the data is quantitative. 85% is a count.",
+          "B": "The question is plainly worded and gives a price. It does not lead people towards yes.",
+          "D": "The café ran the survey itself, for its own purpose, so this is primary research, and it is new."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-q4",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm planning a padel tennis club surveys 400 of the 20,000 adults in a town, chosen to stand for the whole town. 30 of them say they would definitely join at £40 a month. From past launches, the firm expects only half of those who say \"definitely\" to actually join. Its estimate of the number of members is",
+      "options": {
+        "A": "15",
+        "B": "750",
+        "C": "1,500",
+        "D": "3,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Scale the sample up to the town, then allow for the gap between saying and buying.<br />Share of the sample who would definitely join: 30 ÷ 400 = <strong>7.5%</strong>.<br />Across the town: 7.5% × 20,000 = <strong>1,500</strong>.<br />Only half are expected to join: 1,500 ÷ 2 = <strong>750</strong>.<br />Saying you would buy something is not the same as buying it, which is why the firm adjusts the survey figure down.",
+        "distractors": {
+          "A": "This halves the 30 in the sample but never scales up to the town. The sample is there to stand for all 20,000 adults.",
+          "C": "This scales up correctly but forgets that only half of those who say \"definitely\" are expected to join.",
+          "D": "This reads 30 people as 30% of the sample, giving 6,000 across the town, and then halves it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two snack makers test a new crisp flavour. Firm X asks 12 people who work in its own office. Firm Y asks 1,200 shoppers in ten different towns. Comparing the two pieces of research, the best conclusion is that",
+      "options": {
+        "A": "Firm X's results are more likely to be down to chance.",
+        "B": "Firm X's research cost more and took longer than Y's.",
+        "C": "Firm Y's results are certain to be free of bias.",
+        "D": "Firm Y's results will stay accurate as tastes change."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The smaller the sample, the more likely it is that the results are <strong>down to chance</strong>. Twelve people tell Firm X very little; 1,200 shoppers across ten towns give Firm Y results it can rely on more. Firm X's sample is also only its own staff, which adds bias.",
+        "distractors": {
+          "B": "The reverse. A bigger sample costs more and takes longer, so Firm Y's research is the expensive one.",
+          "C": "A large sample reduces the role of chance, but bias can still creep in, for example through how a question is worded or what people say.",
+          "D": "Even good research goes out of date as tastes change. A large sample does not protect against that."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A car-wash firm offers an £8 basic wash, a £15 wash and wax, and a £60 full valet, each priced for drivers on a different budget. The basis it is using to segment its market is",
+      "options": {
+        "A": "Drivers' age and family size.",
+        "B": "Where drivers live.",
+        "C": "How much drivers can spend.",
+        "D": "Drivers' interests and habits."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The three services are the same kind of product at three very different prices: a basic, a standard and a premium version. That is segmentation by <strong>income</strong>, designing a product for each level of spending, as supermarkets do with value, standard and premium ranges.",
+        "distractors": {
+          "A": "That is demographic segmentation. Nothing about the three services is aimed at drivers of a particular age or family size.",
+          "B": "That is geographic segmentation. All three services are offered at the same car wash.",
+          "D": "That is lifestyle segmentation. The services differ in price and level, not in the interests or values they appeal to."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-3-5-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A street survey of 500 people chosen at random across a town asks: \"Given how few places in town stay open after 6pm, would you welcome a café that does?\" 92% say yes. The bias in this research comes mainly from",
+      "options": {
+        "A": "Who was asked.",
+        "B": "How the question was worded.",
+        "C": "What people said.",
+        "D": "Who read the results."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The question opens by telling people there is a problem, then asks whether they would \"welcome\" a fix. That pushes them towards yes. Bias from <strong>how the question is worded</strong> makes the 92% far higher than a neutral question would give, and \"welcome\" is not the same as \"would pay to use\".",
+        "distractors": {
+          "A": "The 500 people were chosen at random across the town, which is a sound way to pick a sample.",
+          "C": "People do sometimes give the answer they think is wanted, but here the question itself tells them what that answer is. The wording is the main source.",
+          "D": "Nothing in the stem describes how the results were read or used."
+        }
+      }
+    }
+  ]
+}
