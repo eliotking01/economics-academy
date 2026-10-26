@@ -7,34 +7,12 @@
   "title": "Understanding the Consumer",
   "shortTitle": "Understanding the Consumer",
   "pageTitle": "Market Research Questions — Edexcel B A-Level Economics | Economics Academy",
-  "metaDescription": "Seven free multiple-choice questions on understanding the consumer for Edexcel B A-Level Economics: market research, sampling, bias and segmentation.",
-  "intro": "Seven original multiple-choice questions on understanding the consumer: primary and secondary research, quantitative and qualitative data, sampling, bias and segmentation.",
-  "notesTeaser": "Seven original multiple-choice questions on market research, estimating demand, sample size, bias and market segmentation.",
+  "metaDescription": "Six free multiple-choice questions on understanding the consumer for Edexcel B A-Level Economics: market research, sampling, bias and segmentation.",
+  "intro": "Six original multiple-choice questions on understanding the consumer: primary and secondary research, quantitative and qualitative data, sampling, bias and segmentation.",
+  "notesTeaser": "Six original multiple-choice questions on market research, estimating demand, sample size, bias and market segmentation.",
   "questions": [
     {
       "id": "edexcel-b-1-3-5-q1",
-      "skill": "definition-in-context",
-      "difficulty": "standard",
-      "sketch": false,
-      "stem": "A bakery owner looks back through the till records the shop keeps for its accounts, and counts how many of each type of loaf sold last month. This is",
-      "options": {
-        "A": "Primary research giving qualitative data.",
-        "B": "Primary research giving quantitative data.",
-        "C": "Secondary research giving qualitative data.",
-        "D": "Secondary research giving quantitative data."
-      },
-      "answer": "D",
-      "model": {
-        "working": "Two separate questions.<br /><strong>Who collected it, and why?</strong> The till records were kept for the accounts, not for this research. Using information already collected for another purpose is <strong>secondary</strong> research, and a firm's own sales records are one of its sources.<br /><strong>What kind of data?</strong> Numbers of loaves sold can be counted, so it is <strong>quantitative</strong>.",
-        "distractors": {
-          "A": "Both halves are wrong. The till records were collected for another purpose, and counts of loaves are quantitative.",
-          "B": "The data belongs to the bakery, but it was kept for the accounts, not for this research. That makes it secondary, even though it is the firm's own.",
-          "C": "It is secondary, but sales counts are numbers, so the data is quantitative. Qualitative data is about opinions and reasons."
-        }
-      }
-    },
-    {
-      "id": "edexcel-b-1-3-5-q2",
       "skill": "data-table",
       "difficulty": "standard",
       "sketch": false,
@@ -81,7 +59,7 @@
       }
     },
     {
-      "id": "edexcel-b-1-3-5-q3",
+      "id": "edexcel-b-1-3-5-q2",
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": false,
@@ -103,7 +81,7 @@
       }
     },
     {
-      "id": "edexcel-b-1-3-5-q4",
+      "id": "edexcel-b-1-3-5-q3",
       "skill": "calculation",
       "difficulty": "stretch",
       "sketch": false,
@@ -125,7 +103,7 @@
       }
     },
     {
-      "id": "edexcel-b-1-3-5-q5",
+      "id": "edexcel-b-1-3-5-q4",
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": false,
@@ -147,7 +125,7 @@
       }
     },
     {
-      "id": "edexcel-b-1-3-5-q6",
+      "id": "edexcel-b-1-3-5-q5",
       "skill": "definition-in-context",
       "difficulty": "foundation",
       "sketch": false,
@@ -169,7 +147,7 @@
       }
     },
     {
-      "id": "edexcel-b-1-3-5-q7",
+      "id": "edexcel-b-1-3-5-q6",
       "skill": "definition-in-context",
       "difficulty": "standard",
       "sketch": false,
