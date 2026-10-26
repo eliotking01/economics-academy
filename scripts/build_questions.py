@@ -144,6 +144,25 @@ HUB_SECTIONS = [
     ),
 ]
 
+# How the hub's <title> and meta description name the boards, keyed by the
+# set of boards whose practice questions are live. Visible wording, so each
+# phrase is approved rather than derived: "Edexcel and AQA" is the original
+# (Edexcel first, as in boards.json's group order - resource unification Phase
+# 2), and "Edexcel A, Edexcel B and AQA" was approved by Eliot on 2026-10-26
+# for when B's practice questions launch (review/questions-unit-1-1.md, Q2).
+# A live set with no phrase here stops the build rather than guess one.
+HUB_BOARDS_PHRASE = {
+    frozenset({"edexcel-a", "aqa"}): "Edexcel and AQA",
+    frozenset({"edexcel-a", "aqa", "edexcel-b"}): "Edexcel A, Edexcel B and AQA",
+}
+LIVE_BOARD_KEYS = frozenset(board_data.load("practiceQuestions"))
+if LIVE_BOARD_KEYS not in HUB_BOARDS_PHRASE:
+    sys.exit(
+        f"HUB_BOARDS_PHRASE has no wording for the live boards "
+        f"{sorted(LIVE_BOARD_KEYS)}. The practice hub's title and description "
+        f"name them, so add an approved phrase for this set."
+    )
+
 # Button labels on the hub, matching the wording on revision-notes/index.html.
 # Theme 2's is "Theme 2: The UK Economy" - the SHORT form, and the reason
 # boards.json records a group's name five times over rather than once.
@@ -1342,16 +1361,14 @@ def render_hub(by_board):
     topic_word = "topic" if topic_count == 1 else "topics"
     url = f"{SITE}/practice-questions/"
 
-    # "Edexcel and AQA", not "AQA and Edexcel": boards.json's group order is
-    # the display order everywhere else on the page, and the intro already
-    # names Edexcel first - resource unification Phase 2.
+    boards = HUB_BOARDS_PHRASE[LIVE_BOARD_KEYS]
     title = (
-        "A-Level Economics Practice Questions — Edexcel and AQA "
-        "| Economics Academy"
+        f"A-Level Economics Practice Questions — {boards} "
+        f"| Economics Academy"
     )
     desc = (
-        f"Free A-Level Economics multiple-choice practice questions for Edexcel "
-        f"and AQA. {total} questions across {topic_count} {topic_word}, each with a "
+        f"Free A-Level Economics multiple-choice practice questions for {boards}. "
+        f"{total} questions across {topic_count} {topic_word}, each with a "
         f"full worked answer."
     )[:164]
 

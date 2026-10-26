@@ -23,6 +23,7 @@ remains flagged" moved up beside the traps.
 
 | Project | State | Merged | Merge commit |
 | --- | --- | --- | --- |
+| All-boards parity (D67) — Phase 1: Edexcel B practice questions, staged; unit 1.1 of 23 done (3 of 85 sets) | in progress on `feature/edexcel-b-questions`, not pushed | — | — |
 | All-boards parity (D67) — Phase 0 groundwork: per-board feature flags, originality corpus, cold-solver, three commands | committed, not pushed; URL list awaiting Eliot | — | — |
 | Edexcel B notes — Theme 3: 19 pages, index card, site search; Edexcel B complete, 85 pages | complete, PR open | — | — |
 | Edexcel B notes — Theme 2: 24 pages, index card, site search | live | 2026-10-19 | `ada29e8b` |
@@ -210,6 +211,25 @@ what changed file by file, how it was verified, and its "things a future
 session needs to know" — is in `_archive/PROGRESS-detail-2026-08.md`,
 verbatim, under the same headings and in the same order.** The blocks here
 are the summary: what shipped, when, which merge.
+
+### All-boards parity — Phase 1, Edexcel B practice questions (from 2026-10-25) — IN PROGRESS (branch `feature/edexcel-b-questions`)
+
+`/edexcel-b-questions <unit>`, one unit per run. Each unit gets a review
+sheet, `review/questions-unit-X-Y.md`. B's `practiceQuestions` is **staged**
+in `boards.json`, so its sets are validated and no page is written until
+`/launch-feature edexcel-b practiceQuestions`. Count what is done with
+`ls questions-data/edexcel-b-theme-*/`, not from this list.
+
+- **Unit 1.1** (`f8506b72`, answered 2026-10-26): 22 questions across
+  1.1.1-1.1.3, 22/22 cold, 0 exact / 0 near. The first unit also staged the
+  family and added the wording B's pages will print, all approved: each
+  group's three practice names, B's `HUB_SECTIONS` entry, and 23 `UNITS`
+  rows copied verbatim from the B notes hubs.
+- **Hub wording is already approved and wired** for launch (unit 1.1 Q2):
+  `build_questions.HUB_BOARDS_PHRASE` switches the hub's title and
+  description to "Edexcel A, Edexcel B and AQA" when B goes live. Step 4 of
+  `/launch-feature` needs no new wording for those two lines or for
+  `HUB_SECTIONS`.
 
 ### All-boards parity — Phase 0 groundwork (2026-10-24) — COMMITTED, NOT PUSHED (branch `feature/all-boards-groundwork`)
 
