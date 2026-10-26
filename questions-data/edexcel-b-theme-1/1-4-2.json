@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.4.2",
+  "slug": "1-4-2-risk-and-liability",
+  "title": "Risk and Liability",
+  "shortTitle": "Risk and Liability",
+  "pageTitle": "Risk and Liability Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on risk and liability for Edexcel B A-Level Economics: risk and reward, limited and unlimited liability, and ownership.",
+  "intro": "Seven original multiple-choice questions on risk and liability: risk and reward, limited and unlimited liability, types of business ownership and personal guarantees.",
+  "notesTeaser": "Seven original multiple-choice questions on risk and reward, limited and unlimited liability, business ownership and personal guarantees.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-4-2-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "An entrepreneur can either open a branch of an established sandwich franchise or launch an untested meal-kit delivery business, which is much more likely to fail. Taking the risk into account, the meal-kit business is worth choosing only if the profit it aims to make is",
+      "options": {
+        "A": "Above zero in its first year.",
+        "B": "Equal to the franchise's.",
+        "C": "Higher than the franchise's.",
+        "D": "Lower than the franchise's."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Profit is the reward for taking risk. The riskier the venture, the <strong>higher the profit</strong> needed to make it worth trying. The meal-kit business has a greater chance of failing, so it is only worth choosing if it aims to earn more than the safer franchise.",
+        "distractors": {
+          "A": "Making a profit in the first year says nothing about the extra risk. The comparison that matters is with the safer option the entrepreneur gives up.",
+          "B": "With equal profit in prospect, the entrepreneur would be taking more risk for no extra reward. The safer franchise would be the better choice.",
+          "D": "This has the trade-off the wrong way round. Taking on more risk calls for a higher reward, not a lower one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four business owners. Each business fails owing more than it owns, and none of the owners has given a personal guarantee.<br />Using Table 1, the owners who could lose personal assets, such as their home, are",
+      "table": {
+        "caption": "Table 1: Four business owners",
+        "head": [
+          "",
+          "The owner's position"
+        ],
+        "rows": [
+          [
+            "Owner 1",
+            "Runs a mobile coffee van as a sole trader"
+          ],
+          [
+            "Owner 2",
+            "Holds shares in a private limited company, owned by one family, that makes candles"
+          ],
+          [
+            "Owner 3",
+            "Is one of two partners in an ordinary partnership that does accountancy"
+          ],
+          [
+            "Owner 4",
+            "Holds shares in a public limited company listed on a stock exchange"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Owner 1 only.",
+        "B": "Owners 1 and 3.",
+        "C": "Owners 2 and 4.",
+        "D": "Owners 1, 2 and 3."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Sole traders and partners have <strong>unlimited liability</strong>: the law treats owner and business as the same thing, so creditors can take the owner's own savings, car or house. That is Owner 1 and Owner 3.<br />Shareholders in a private or public limited company have <strong>limited liability</strong>: they lose the value of their shares, and the company's debts are not theirs to pay. That is Owners 2 and 4.",
+        "distractors": {
+          "A": "This misses Owner 3. A partnership has unlimited liability just as a sole trader does, so each partner can be made to pay the business's debts from their own assets.",
+          "C": "This is the wrong way round. Owners 2 and 4 are shareholders in limited companies, the two owners whose personal assets are protected.",
+          "D": "A private limited company is often small and owned by family, but it is still a company and a separate legal entity, so Owner 2 has limited liability."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two partners run a software business. To grow, they want to raise £2 million from outside investors who will take no part in running it. Forming a limited company would help most, because these investors",
+      "options": {
+        "A": "Could lose no more than they paid for their shares.",
+        "B": "Would be guaranteed a share of the profit each year.",
+        "C": "Would earn a fixed rate of interest on their money.",
+        "D": "Would share responsibility for all the firm's debts."
+      },
+      "answer": "A",
+      "model": {
+        "working": "With limited liability, the most an investor can lose is <strong>what they paid for their shares</strong>. That makes people willing to buy shares in a business they do not run, so a company can raise far more outside finance than a partnership. This is why a business that wants large amounts of outside finance becomes a company.",
+        "distractors": {
+          "B": "Shareholders expect a share of the profit as dividends, but nothing guarantees one. A company that makes a loss may pay no dividend at all.",
+          "C": "A fixed rate of interest is what a lender earns. Share capital carries no interest; shareholders are part owners, not lenders.",
+          "D": "This describes unlimited liability, which is what the investors would be avoiding. If they had to share responsibility for all the debts, few would invest in a business they do not run."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-q4",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A private limited company closes owing a supplier £12,000 that it cannot pay. Its two shareholders each paid £5,000 for their shares, and neither gave a personal guarantee. The most that either shareholder loses is",
+      "options": {
+        "A": "£0",
+        "B": "£5,000",
+        "C": "£6,000",
+        "D": "£11,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "A company is a separate legal entity, so the £12,000 is the <strong>company's</strong> debt, not the shareholders'. With limited liability, each shareholder can lose no more than the money they put in: the <strong>£5,000</strong> paid for their shares, which are now worthless. The supplier bears the rest of the loss.",
+        "distractors": {
+          "A": "Limited liability caps the owners' losses; it does not remove them. Each shareholder still loses the £5,000 they paid for shares in a company that has failed.",
+          "C": "This splits the £12,000 debt between the two shareholders, as if they had to pay it. The debt belongs to the company, and limited liability means they do not.",
+          "D": "This adds half the debt (£6,000) to the £5,000 of shares, which is how a partnership's debts might fall. Shareholders in a limited company lose their shares and nothing more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A packaging supplier normally gives its customers 60 days to pay. A newly formed private limited company asks for the same terms, and the supplier offers it only 14 days. The best explanation is that limited liability",
+      "options": {
+        "A": "Caps the company's debts at the value of its shares.",
+        "B": "Lets the company stop trading without paying any debts.",
+        "C": "Moves risk from the company's owners to its creditors.",
+        "D": "Requires the company to keep its accounts private."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Limited liability caps what the <strong>owners</strong> can lose. If the company fails, the people it owes may get back only part of what they are owed, because they cannot claim from the owners. So the risk moves to <strong>lenders and suppliers</strong>, and a supplier may give a new company less time to pay to limit how much it could lose.",
+        "distractors": {
+          "A": "Limited liability caps what the owners can lose, not what the company can owe. A company can run up debts far larger than its share capital.",
+          "B": "A company must still pay its debts while it trades, and if it fails its assets go to the people it owes. What limited liability protects is the owners' personal assets.",
+          "D": "This is the wrong way round. A limited company must file its accounts at Companies House, where anyone can read them. That actually helps a supplier judge how safe it is."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-q6",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bank will lend £60,000 to a new private limited company only if its sole director signs a personal guarantee. The company later fails without repaying the loan. Because of the guarantee, the director",
+      "options": {
+        "A": "Can be asked to repay the loan from personal assets.",
+        "B": "Has lost limited liability for all the company's debts.",
+        "C": "Loses only the money paid for the company's shares.",
+        "D": "Owes nothing, as the debt belongs to the company."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>personal guarantee</strong> is a promise to repay from the owner's own money. It gets round limited liability for <strong>this one loan</strong>: if the company cannot repay, the bank can turn to the director, whose savings or home may be at risk. Banks often ask for one from a small company with few assets.",
+        "distractors": {
+          "B": "The guarantee covers only the loan it was signed for. The company's other debts, such as those to suppliers, are still covered by limited liability.",
+          "C": "Without the guarantee, this would be right. The guarantee adds a personal promise to repay the £60,000, so the director can lose more than the share capital.",
+          "D": "The debt does belong to the company, but the director has promised to pay it if the company cannot. That promise is the whole point of the guarantee."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Someone starting a weekend dog-walking business, with almost no equipment and no borrowing, chooses to be a sole trader rather than form a company. The most likely reason is that being a sole trader",
+      "options": {
+        "A": "Gives the owner limited liability for any debts.",
+        "B": "Lets the owner sell shares to raise finance.",
+        "C": "Makes banks more willing to lend to the business.",
+        "D": "Starts at once and keeps its accounts private."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A sole trader can <strong>start straight away</strong>, with no forms to file, and keeps the accounts <strong>private</strong>. The cost is unlimited liability, but a business with almost no equipment and no borrowing has few debts to put the owner's own assets at risk, so the simpler set-up wins.",
+        "distractors": {
+          "A": "A sole trader has <strong>unlimited</strong> liability. Limited liability comes only from forming a company.",
+          "B": "Only a company can raise share capital. A sole trader has no shares to sell.",
+          "C": "Banks lend more readily to an established company. Being a sole trader does not make a bank more willing to lend."
+        }
+      }
+    }
+  ]
+}

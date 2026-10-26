@@ -1,0 +1,221 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.4.3",
+  "slug": "1-4-3-types-and-sources-of-credit",
+  "title": "Types and Sources of Credit",
+  "shortTitle": "Types and Sources of Credit",
+  "pageTitle": "Types and Sources of Credit Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on types and sources of credit for Edexcel B A-Level Economics: loans, overdrafts, trade credit and other finance.",
+  "intro": "Eight original multiple-choice questions on types and sources of credit: loans, overdrafts, trade credit, venture capital, owner's capital, online funding and the impact of credit.",
+  "notesTeaser": "Eight original multiple-choice questions on loans, overdrafts, trade credit, other sources of finance and the impact of credit.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-4-3-q1",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A gift shop's main supplier lets it pay for each delivery 60 days after it arrives. The shop usually sells a delivery within three weeks. Compared with paying on delivery, the main benefit to the shop is that it",
+      "options": {
+        "A": "Can pay the supplier out of its sales revenue.",
+        "B": "Must pay interest to the supplier on the goods.",
+        "C": "Needs a larger overdraft to pay for the stock.",
+        "D": "Pays less for the goods than it would on delivery."
+      },
+      "answer": "A",
+      "model": {
+        "working": "This is <strong>trade credit</strong>: the shop takes the goods now and pays for them later. Because it sells a delivery within three weeks but has 60 days to pay, it can pay the supplier with the money from selling those goods, rather than finding the cash up front.",
+        "distractors": {
+          "B": "Trade credit costs nothing if the bill is paid on time. A business that pays late may be charged extra, but the shop here sells the goods well before the bill is due.",
+          "C": "This is the wrong way round. Trade credit means the shop does not need to borrow to pay for the stock up front, so it needs less overdraft, not more.",
+          "D": "The benefit of trade credit is time to pay, not a lower price. The shop pays the same amount; it just pays it later."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A garden centre must pay its staff through February and March, before its spring sales start in April. The source of finance best matched to this need is",
+      "options": {
+        "A": "A five-year bank loan.",
+        "B": "An overdraft.",
+        "C": "Share capital.",
+        "D": "Venture capital."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is a <strong>short-term</strong> gap between paying bills and being paid. An <strong>overdraft</strong> suits it: the garden centre pays interest only on what it is overdrawn by, and only while it is overdrawn, and the April sales clear it.",
+        "distractors": {
+          "A": "A loan suits a one-off purchase that earns money over several years. Here the firm would be paying back a five-year loan, with interest, long after the two-month gap had closed.",
+          "C": "Share capital is long-term finance. Giving up part of the business to cover two months' wages is a poor match, and only a company can raise it.",
+          "D": "Venture capital backs small firms that could grow very large, in return for a large stake. A seasonal cash gap at a garden centre is nothing like that."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A florist has an overdraft limit of £8,000 at 15% a year. Last year it was overdrawn by the full £8,000 for two months and by £4,000 for three months, and was in credit for the rest of the year. The overdraft interest it paid for the year was",
+      "options": {
+        "A": "£200",
+        "B": "£350",
+        "C": "£500",
+        "D": "£1,200"
+      },
+      "answer": "B",
+      "model": {
+        "working": "On an overdraft, interest is paid only on <strong>what is overdrawn</strong>, and only <strong>while</strong> it is overdrawn.<br />£8,000 × 15% = £1,200 a year, or £100 a month. Two months: <strong>£200</strong>.<br />£4,000 × 15% = £600 a year, or £50 a month. Three months: <strong>£150</strong>.<br />Total: £200 + £150 = <strong>£350</strong>.",
+        "distractors": {
+          "A": "This is the interest for the two months at £8,000 only. The three months at £4,000 cost a further £150.",
+          "C": "This charges interest on the full £8,000 limit for all five months. In the three months the florist was overdrawn by only £4,000, so it paid interest on £4,000.",
+          "D": "This is 15% of the full limit for the whole year. An overdraft charges interest only on what is used, and only while it is used, not on the limit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A two-year-old company is developing software for electric-car batteries. It has no profits and few physical assets, and it could either grow very large or fail completely. Its bank has turned down a loan. The source of finance most likely to back it is",
+      "options": {
+        "A": "Leasing.",
+        "B": "Retained profit.",
+        "C": "Trade credit.",
+        "D": "Venture capital."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Venture capital</strong> is money that specialist investment firms put into a small, fast-growing business, in exchange for part ownership. Venture capitalists back firms that are too risky for a bank but could grow very large, often in technology. In return they take a large stake and often a say in how the business is run.",
+        "distractors": {
+          "A": "Leasing lets a firm use an asset, such as a vehicle, without buying it. It does not provide money to pay for developing software.",
+          "B": "Retained profit is profit kept in the business. The company has no profits, so it has none to retain.",
+          "C": "Trade credit lets a business take goods from a supplier and pay later. It does not fund years of development work by a business with nothing yet to sell."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A furniture maker pays for a new production line by selling a warehouse it no longer uses. Short-term finance is repaid within a year, and long-term finance is for longer or never repaid. This finance is",
+      "options": {
+        "A": "External and long-term.",
+        "B": "External and short-term.",
+        "C": "Internal and long-term.",
+        "D": "Internal and short-term."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Sale of assets</strong> raises money from things the business already owns, so it is <strong>internal</strong> finance. The money is never repaid, so by the definition in the stem it is <strong>long-term</strong>. Its drawback is that it can be done only once: the warehouse is gone.",
+        "distractors": {
+          "A": "The buyer of the warehouse is an outsider, but the finance comes from the firm's own asset, not from a lender or investor. Sale of assets is internal.",
+          "B": "This gets both parts wrong. The finance comes from the firm's own asset, so it is internal, and it is never repaid, so it is long-term.",
+          "D": "It is internal, but a one-off sale is not short-term finance. Short-term finance is repaid within a year, and this is never repaid at all."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A small brewery raises £40,000 through a website from about 900 members of the public. Each backer receives a case of the first beer brewed with the money, and none of them is repaid or given a share of the business. This finance is",
+      "options": {
+        "A": "Business angels.",
+        "B": "Crowdfunding.",
+        "C": "Peer-to-peer lending.",
+        "D": "Venture capital."
+      },
+      "answer": "B",
+      "model": {
+        "working": "In <strong>crowdfunding</strong>, a business raises money online from many people, each putting in a small amount, and backers receive a reward, such as the first products made, or a small share of the business. Here the reward is a case of the first beer, and nothing is repaid.",
+        "distractors": {
+          "A": "A business angel is a wealthy individual who invests their own money in a small firm for a share of the business. Here 900 people each put in a small amount, and none of them takes a share.",
+          "C": "Peer-to-peer lending also raises money online from individuals, but they are <strong>lending</strong>: they are paid interest and get their money back. These backers are not repaid at all.",
+          "D": "Venture capital comes from specialist investment firms, which take part ownership. The backers here are members of the public and take no ownership."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q7",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Banks across an economy become cautious and cut back their lending to businesses. Table 1 shows how four businesses plan to pay for their next investment.<br />Using Table 1, the business least likely to have to delay its plans is",
+      "table": {
+        "caption": "Table 1: Four businesses and their next investment",
+        "head": [
+          "",
+          "The business",
+          "How it plans to pay"
+        ],
+        "rows": [
+          [
+            "Business 1",
+            "Engineering firm, profitable for twenty years",
+            "Its own retained profit"
+          ],
+          [
+            "Business 2",
+            "Builders' merchant",
+            "A higher overdraft limit from its bank"
+          ],
+          [
+            "Business 3",
+            "Start-up café, not yet trading",
+            "A bank loan for its kitchen"
+          ],
+          [
+            "Business 4",
+            "Haulage firm, trading for eight years",
+            "A bank loan for two new lorries"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Business 1.",
+        "B": "Business 2.",
+        "C": "Business 3.",
+        "D": "Business 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "How much a change in credit matters depends on <strong>how much a firm relies on borrowing</strong>. Business 1 is paying out of its own retained profit, so it barely notices when banks become cautious. The other three all need a bank to say yes.",
+        "distractors": {
+          "B": "Business 2 needs its bank to raise its overdraft limit. A cautious bank can refuse, or cut the limit at short notice.",
+          "C": "Business 3 is a start-up with no profit and no trading record, the kind of borrower a cautious bank turns down first. It has no cushion of its own.",
+          "D": "Business 4 has an established record, but it still needs a bank loan. When banks cut lending, even firms like this may be refused or offered less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-4-3-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "For several years, households and firms borrow heavily at low, variable rates of interest, often more than they can comfortably repay. Interest rates then rise sharply. The most likely result is that",
+      "options": {
+        "A": "Banks gain, as every borrower pays more interest.",
+        "B": "Firms invest more, to borrow before rates rise further.",
+        "C": "Households spend more, as savers earn more interest.",
+        "D": "Spending falls, and banks make losses on bad loans."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is the danger of <strong>too much credit</strong>. Borrowers who took on more than they could comfortably repay cannot keep up the higher payments → they cut spending sharply → other businesses lose sales. Some cannot repay at all, so the banks that lent to them make losses.",
+        "distractors": {
+          "A": "The higher rate only earns the banks more if borrowers can pay it. Those who borrowed more than they could comfortably repay fall behind, and the banks lose money on those loans.",
+          "B": "A higher rate makes borrowing dearer, so fewer projects are worth borrowing for. Firms already struggling with their debts are more likely to cut investment than add to it.",
+          "C": "Savers do earn more, but borrowers with large variable-rate debts face much higher payments. With heavy borrowing across the economy, the fall in borrowers' spending dominates."
+        }
+      }
+    }
+  ]
+}
