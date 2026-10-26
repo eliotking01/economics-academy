@@ -193,9 +193,9 @@
     {
       "id": "edexcel-b-1-5-1-q6",
       "skill": "applied-reasoning",
-      "difficulty": "standard",
+      "difficulty": "stretch",
       "sketch": true,
-      "stem": "A council estimates that each car journey into its town centre at rush hour causes £1.20 of congestion and pollution costs to other road users and residents. The cost arises from drivers using the roads, so it is an externality of consumption. Sketching the market for these journeys, with no government intervention,",
+      "stem": "A council estimates that each car journey into its town centre at rush hour causes £1.20 of congestion costs to other road users. Sketching the market for these journeys, with no government intervention,",
       "options": {
         "A": "Demand shifts left by £1.20, and fewer journeys are made.",
         "B": "MSB lies £1.20 below demand, and too many journeys are made.",
@@ -207,7 +207,7 @@
         "working": "The harm comes from drivers <strong>using</strong> the roads, so it is an <strong>external cost of consumption</strong>. Each journey is worth £1.20 less to society than it is to the driver, so <strong>MSB</strong> is drawn £1.20 <strong>below</strong> the demand curve (MPB).<br />Drivers weigh up only their own fuel and time, so the market stays where demand meets supply, at Q1. The social optimum is where MSB meets supply, at a lower Q2. The market makes <strong>too many</strong> journeys: over-consumption.",
         "distractors": {
           "A": "An externality does <strong>not</strong> shift demand or supply. Drivers ignore the cost to others, which is the whole problem, so their demand is unchanged and the market stays at Q1. MSB is an extra line showing what the market leaves out.",
-          "C": "MSB lies above demand only when using a good helps other people, as with a vaccine. Congestion and pollution harm other people, so MSB lies below demand.",
+          "C": "MSB lies above demand only when using a good helps other people, as with a vaccine. Congestion harms other road users, so MSB lies below demand.",
           "D": "The harm comes from using the roads, not from producing anything, so it belongs on the benefit side as MSB. Even drawn as MSC, a cost the market ignores leads to too many journeys, not too few."
         }
       }
