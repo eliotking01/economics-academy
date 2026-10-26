@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-1",
+  "boardName": "Edexcel B Theme 1",
+  "spec": "1.6.2",
+  "slug": "1-6-2-break-even-analysis",
+  "title": "Break-Even Analysis",
+  "shortTitle": "Break-Even Analysis",
+  "pageTitle": "Break-Even Analysis Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on break-even analysis for Edexcel B A-Level Economics: contribution, break-even output, margin of safety and limitations.",
+  "intro": "Seven original multiple-choice questions on break-even analysis: contribution, finding the break-even point, the margin of safety, what moves the break-even point and the limits of the method.",
+  "notesTeaser": "Seven original multiple-choice questions on contribution, break-even output, the margin of safety and the limitations of break-even analysis.",
+  "questions": [
+    {
+      "id": "edexcel-b-1-6-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A food truck sells loaded fries at £7.50 a portion. Each portion uses £2.70 of potatoes, toppings and packaging, and the truck's pitch fee and insurance come to £1,800 a month. The £4.80 left from each portion's price is the truck's",
+      "options": {
+        "A": "Average cost per portion.",
+        "B": "Contribution per portion.",
+        "C": "Margin of safety per portion.",
+        "D": "Profit per portion."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Contribution per unit</strong> = selling price − variable cost per unit = £7.50 − £2.70 = £4.80.<br />It is what each portion leaves over once its own costs are paid. It goes towards the £1,800 of fixed costs first, and only once those are covered does it become profit.",
+        "distractors": {
+          "A": "Average cost is total costs divided by output, so it would include a share of the £1,800 of fixed costs. £4.80 is not a cost at all; it is what is left after the variable cost is paid.",
+          "C": "The margin of safety is how far sales are above the break-even point, in units or as a percentage of sales. It is not an amount per portion.",
+          "D": "£4.80 is not profit yet, because the £1,800 of fixed costs still has to be paid. Until the truck sells 1,800 ÷ 4.80 = 375 portions in a month, it is making a loss."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A cider maker sells kegs to pubs at £42 each. Each keg costs £18 in apples, the keg itself and delivery, and the firm's fixed costs are £5,000 a month. The number of kegs it must sell each month to break even is",
+      "options": {
+        "A": "120",
+        "B": "208",
+        "C": "209",
+        "D": "278"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Contribution per keg = £42 − £18 = £24.<br />Break-even output = fixed costs ÷ contribution per unit = £5,000 ÷ £24 = 208.33.<br />Round <strong>up</strong> to <strong>209</strong> kegs. A firm cannot sell a third of a keg, and at 208 its total contribution is 208 × £24 = £4,992, just short of the £5,000 of fixed costs.",
+        "distractors": {
+          "A": "This divides fixed costs by the selling price: £5,000 ÷ £42 = 119.05, rounded up to 120. It ignores the £18 each keg costs, so it understates break-even.",
+          "B": "The division is right, but 208.33 has been rounded down. At 208 kegs the firm is £8 short of covering its fixed costs, so it has not yet broken even.",
+          "D": "This divides fixed costs by the variable cost per keg: £5,000 ÷ £18 = 277.8, rounded up to 278. The divisor should be contribution, the price minus the variable cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-q3",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A phone-repair shop charges £60 a repair. Parts for each repair cost £20 on average, and its fixed costs are £6,000 a month. It carries out 210 repairs a month. To one decimal place, its margin of safety as a percentage of actual sales is",
+      "options": {
+        "A": "28.6%",
+        "B": "40.0%",
+        "C": "52.4%",
+        "D": "71.4%"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Contribution per repair = £60 − £20 = £40.<br />Break-even output = £6,000 ÷ £40 = 150 repairs.<br />Margin of safety = 210 − 150 = 60 repairs.<br />As a percentage of actual sales: 60 ÷ 210 × 100 = <strong>28.6%</strong>.<br />Sales could fall by just over a quarter before the shop made a loss.",
+        "distractors": {
+          "B": "This divides the margin of safety by break-even output: 60 ÷ 150 × 100. The question asks for it as a percentage of <strong>actual</strong> sales, so the divisor is 210.",
+          "C": "This finds break-even by dividing fixed costs by the price: £6,000 ÷ £60 = 100, which gives a margin of 110 repairs and 110 ÷ 210 × 100 = 52.4%. Break-even uses contribution, £40, not the price.",
+          "D": "This is break-even output as a percentage of actual sales: 150 ÷ 210 × 100. The margin of safety is the part of sales <strong>above</strong> break-even, which is the remaining 28.6%."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-q4",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A maker of yoga mats is choosing between four plans for next year. Table 1 shows the selling price, the variable cost of each mat and the annual fixed costs under each plan.<br />Using Table 1, the plan with the lowest break-even output is",
+      "table": {
+        "caption": "Table 1: Four plans for a yoga mat maker",
+        "head": [
+          "",
+          "Selling price per mat",
+          "Variable cost per mat",
+          "Fixed costs per year"
+        ],
+        "rows": [
+          [
+            "Plan 1",
+            "£25",
+            "£14",
+            "£12,000"
+          ],
+          [
+            "Plan 2",
+            "£28",
+            "£15",
+            "£13,500"
+          ],
+          [
+            "Plan 3",
+            "£27",
+            "£15",
+            "£12,000"
+          ],
+          [
+            "Plan 4",
+            "£25",
+            "£15",
+            "£10,500"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Plan 1.",
+        "B": "Plan 2.",
+        "C": "Plan 3.",
+        "D": "Plan 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Break-even output = fixed costs ÷ (price − variable cost per unit).<br />Plan 1: £12,000 ÷ £11 = 1,090.9, so 1,091 mats.<br />Plan 2: £13,500 ÷ £13 = 1,038.5, so 1,039 mats.<br />Plan 3: £12,000 ÷ £12 = <strong>1,000 mats</strong>.<br />Plan 4: £10,500 ÷ £10 = 1,050 mats.<br />Plan 3 breaks even soonest. No single column tells you this: contribution has to be worked out and divided into fixed costs for every plan.",
+        "distractors": {
+          "A": "Plan 1 has the lowest variable cost per mat, but its price is also the lowest, so its contribution is only £11 and it needs 1,091 mats, the most of the four.",
+          "B": "Plan 2 has the biggest contribution per mat, £13, but its fixed costs are also the highest. It needs 1,039 mats, 39 more than Plan 3.",
+          "D": "Plan 4 has the lowest fixed costs, but also the smallest contribution, £10 a mat, so it needs 1,050 mats. Dividing fixed costs by the price instead of by contribution would wrongly make Plan 4 the lowest."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A pizza takeaway works out its break-even point using fixed costs of £4,000 a month. To make more than 2,500 pizzas a month, it would have to rent a second oven and hire another salaried manager. The assumption of break-even analysis that this most clearly breaks is that",
+      "options": {
+        "A": "Every unit that is made is sold.",
+        "B": "Each unit sells at the same price.",
+        "C": "Variable cost per unit stays the same.",
+        "D": "Fixed costs stay fixed at all outputs."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Break-even analysis draws fixed costs as a flat line at every output. Here they are only fixed up to 2,500 pizzas: beyond that, the rent on a second oven and another salary make them <strong>jump</strong> to a higher level. A break-even point above 2,500 pizzas worked out with £4,000 of fixed costs would be too low.",
+        "distractors": {
+          "A": "Nothing in the stem says pizzas go unsold or are wasted. The problem is a cost that changes once output passes 2,500.",
+          "B": "Nothing in the stem mentions discounts or different prices. The figure that changes is a fixed cost.",
+          "C": "Oven rent and a manager's salary do not rise with each pizza made; they are fixed costs that step up once. Nothing is said about the cost of dough or toppings per pizza."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-q6",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A kayak-hire firm charges £35 a hire, and each hire costs it £10 in cleaning and repairs. Its break-even point is 600 hires a season, and it expects 840 hires this season. Its expected profit for the season is",
+      "options": {
+        "A": "£6,000",
+        "B": "£8,400",
+        "C": "£15,000",
+        "D": "£21,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Contribution per hire = £35 − £10 = £25.<br />The first 600 hires cover the fixed costs exactly; every hire after that adds its contribution to profit.<br />Margin of safety = 840 − 600 = 240 hires.<br />Profit = 240 × £25 = <strong>£6,000</strong>.<br />Check: fixed costs = 600 × £25 = £15,000. Total contribution = 840 × £25 = £21,000. Profit = £21,000 − £15,000 = £6,000.",
+        "distractors": {
+          "B": "This multiplies the 240 hires beyond break-even by the price, £35. Each of those hires still costs £10, so it adds only £25 to profit.",
+          "C": "This is the firm's fixed costs, 600 × £25: the contribution from the first 600 hires, all of which goes on covering them.",
+          "D": "This is total contribution, 840 × £25: what is left before the fixed costs are paid. Take off the £15,000 of fixed costs to get profit."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-1-6-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Café X and Café Y each sell 5,000 drinks a month. Café X breaks even at 2,500 drinks a month and Café Y at 4,500. Roadworks then cut sales at both cafés by 20%, with prices and costs unchanged. The result is that",
+      "options": {
+        "A": "Both cafés make a loss.",
+        "B": "Both cafés stay in profit.",
+        "C": "Only Café X makes a loss.",
+        "D": "Only Café Y makes a loss."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A 20% fall takes each café from 5,000 drinks to 4,000.<br />Café X: 4,000 is still above its break-even of 2,500, so it stays in profit. Its margin of safety was 2,500 drinks, 50% of sales.<br />Café Y: 4,000 is below its break-even of 4,500, so it now makes a loss. Its margin of safety was only 500 drinks, 10% of sales.<br />A 20% fall is bigger than Café Y's margin of safety but smaller than Café X's.",
+        "distractors": {
+          "A": "Café X could lose half its sales before making a loss. At 4,000 drinks it is still 1,500 above break-even.",
+          "B": "Café Y's margin of safety is only 500 drinks, 10% of its sales. A 20% fall takes it 500 drinks below break-even.",
+          "C": "This mixes the two up. Café X has the lower break-even point, so it has the bigger margin of safety and is the safer of the two."
+        }
+      }
+    }
+  ]
+}
