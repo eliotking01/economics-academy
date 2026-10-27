@@ -89,7 +89,7 @@
       },
       "answer": "B",
       "model": {
-        "working": "The subsidy lowers the cost of each bike by £40, so supply shifts <strong>down</strong> by £40, to S + Subsidy. The new equilibrium is where S + Subsidy meets demand. Because demand slopes downwards, the extra bikes are sold only at a lower price, but the price does not fall all the way. Buyers pay P2, below the old price P1, and producers receive P3, above it. The £40 subsidy is the whole gap from P2 to P3, so the fall in the price buyers pay, P1 to P2, is <strong>less than £40</strong>. Part of the subsidy goes to buyers and part to producers.",
+        "working": "The subsidy lowers the cost of each bike by £40, so supply shifts <strong>down</strong> by £40, to S + Subsidy. The new equilibrium is where S + Subsidy meets demand. Because demand slopes downwards, the extra bikes sell only at a lower price; because supply slopes upwards, producers keep part of the subsidy, so the price buyers pay falls by less than £40. Buyers pay P2, below the old price P1, and producers receive P3, above it. The £40 subsidy is the whole gap from P2 to P3, so the fall in the price buyers pay, P1 to P2, is <strong>less than £40</strong>. Part of the subsidy goes to buyers and part to producers.",
         "distractors": {
           "A": "This assumes buyers get the whole subsidy. With supply sloping upwards, producers keep part of it, receiving P3, which is above the old price. The fall from P1 to P2 is only part of the £40 gap from P2 to P3.",
           "C": "A subsidy shifts supply to the right, and with downward-sloping demand that lowers the equilibrium price. The price would stay the same only if the subsidy had no effect on supply.",
@@ -203,7 +203,7 @@
         "working": "Running cost per home upgraded:<br />Scheme X: £18 million ÷ 8,000 = <strong>£2,250</strong>.<br />Scheme Y: £3.6 million ÷ 12,000 = <strong>£300</strong>.<br />Difference: £2,250 − £300 = <strong>£1,950</strong>.<br />Scheme X spends more than a third of its budget (£18m of £48m) on running itself. When running costs are this high compared with what a scheme achieves, it is a case of government failure through <strong>excessive administrative costs</strong>.",
         "distractors": {
           "B": "This is Scheme X's running cost per home on its own. The question asks how much higher it is than Scheme Y's, so Y's £300 has to be taken away.",
-          "C": "This compares the <strong>total</strong> cost per home: £6,000 for X and £3,000 for Y. The question asks about the running cost only, which is the part that pays for administration rather than insulation.",
+          "C": "This compares the <strong>total</strong> cost per home: £6,000 for X − £3,000 for Y = £3,000. The question asks about the running cost only, which is the part that pays for administration rather than insulation.",
           "D": "This is Scheme X's total cost per home: £48 million ÷ 8,000. It includes the grants themselves, not just the running cost, and it is not compared with Scheme Y."
         }
       }

@@ -40,17 +40,17 @@
       "sketch": false,
       "stem": "In one year, a small bank holds £5 million of savers' deposits and pays them 2% interest. It lends £4 million of this to local firms at 7%. Ignoring all its other costs, the interest the bank receives minus the interest it pays for the year is",
       "options": {
-        "A": "£50,000",
-        "B": "£180,000",
-        "C": "£200,000",
+        "A": "£180,000",
+        "B": "£200,000",
+        "C": "£250,000",
         "D": "£280,000"
       },
-      "answer": "B",
+      "answer": "A",
       "model": {
         "working": "Banks make most of their profit from the gap between the interest they charge borrowers and the interest they pay savers.<br />Interest received from firms: £4 million × 7% = <strong>£280,000</strong>.<br />Interest paid to savers: £5 million × 2% = <strong>£100,000</strong>.<br />£280,000 − £100,000 = <strong>£180,000</strong>.<br />Note that the bank pays interest on all £5 million of deposits, including the £1 million it has not lent out.",
         "distractors": {
-          "A": "This applies the 5-point gap between the two rates to the £1 million difference between deposits and loans: £1 million × 5% = £50,000. Interest is earned on what is lent and paid on what is deposited, so the two must be worked out separately.",
-          "C": "This applies the 5-point gap to the £4 million lent: £4 million × 5% = £200,000. It forgets that the bank also pays 2% on the £1 million of deposits it has not lent, which costs a further £20,000.",
+          "B": "This applies the 5-point gap to the £4 million lent: £4 million × 5% = £200,000. It forgets that the bank also pays 2% on the £1 million of deposits it has not lent, which costs a further £20,000.",
+          "C": "This applies the 5-point gap to all £5 million of deposits. Interest is earned only on the £4 million lent.",
           "D": "This is the interest received from firms only. The bank also pays £100,000 to its savers, which has to come off."
         }
       }
@@ -107,7 +107,7 @@
         "working": "The rate a bank charges rises with the <strong>risk</strong> that it will not be repaid, and depends on the borrower's track record, any collateral, and the type of credit.<br />Business 3 is worst on all three counts: it has <strong>no track record</strong>, offers <strong>no security</strong>, and wants an <strong>overdraft</strong>, which usually costs more than a loan. So it is the riskiest borrower and pays the highest rate.",
         "distractors": {
           "A": "Business 1 is the safest borrower in the table: fifteen years of trading, a loan secured on its own premises. It should be offered the lowest rate, not the highest.",
-          "B": "Business 2 offers no security, which raises its rate, but it has fifteen years of trading behind it and wants a loan rather than an overdraft. Business 3 is riskier on every count.",
+          "B": "Business 2 offers no security, which raises its rate, but it has fifteen years of trading behind it and wants a loan rather than an overdraft. Business 3 offers no security either, and is worse on track record and type of credit.",
           "D": "Business 4 is new, which raises its rate, but it offers its machinery as collateral, so the bank can recover some of its money. Business 3 offers nothing."
         }
       }
@@ -130,7 +130,7 @@
         "distractors": {
           "A": "Saving falls, but investment does not. This treats the lower rate as bad news for firms too, when for a borrower it is a lower cost.",
           "C": "Both directions are reversed. A lower rate makes saving less rewarding and borrowing cheaper, not the other way round.",
-          "D": "This assumes more saving must follow from the bank lending more. But the lower reward for saving pushes households to save less, not more."
+          "D": "Investment rises, but saving does not. A lower rate makes saving less rewarding, so households save less, not more."
         }
       }
     },

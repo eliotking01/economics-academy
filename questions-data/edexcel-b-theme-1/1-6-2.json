@@ -38,7 +38,7 @@
       "skill": "calculation",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "A cider maker sells kegs to pubs at £42 each. Each keg costs £18 in apples, the keg itself and delivery, and the firm's fixed costs are £5,000 a month. The number of kegs it must sell each month to break even is",
+      "stem": "A cider maker sells kegs to pubs at £42 each. Each keg costs £18 in apples, the keg itself and delivery, and the firm's fixed costs are £5,000 a month. The smallest whole number of kegs it must sell each month to cover all its costs is",
       "options": {
         "A": "120",
         "B": "208",
@@ -128,7 +128,7 @@
       "model": {
         "working": "Break-even output = fixed costs ÷ (price − variable cost per unit).<br />Plan 1: £12,000 ÷ £11 = 1,090.9, so 1,091 mats.<br />Plan 2: £13,500 ÷ £13 = 1,038.5, so 1,039 mats.<br />Plan 3: £12,000 ÷ £12 = <strong>1,000 mats</strong>.<br />Plan 4: £10,500 ÷ £10 = 1,050 mats.<br />Plan 3 breaks even soonest. No single column tells you this: contribution has to be worked out and divided into fixed costs for every plan.",
         "distractors": {
-          "A": "Plan 1 has the lowest variable cost per mat, but its price is also the lowest, so its contribution is only £11 and it needs 1,091 mats, the most of the four.",
+          "A": "Plan 1 has the lowest variable cost per mat, but its price is joint lowest, so its contribution is only £11 and it needs 1,091 mats, the most of the four.",
           "B": "Plan 2 has the biggest contribution per mat, £13, but its fixed costs are also the highest. It needs 1,039 mats, 39 more than Plan 3.",
           "D": "Plan 4 has the lowest fixed costs, but also the smallest contribution, £10 a mat, so it needs 1,050 mats. Dividing fixed costs by the price instead of by contribution would wrongly make Plan 4 the lowest."
         }

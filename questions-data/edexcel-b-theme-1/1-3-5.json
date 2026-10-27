@@ -74,7 +74,7 @@
       "model": {
         "working": "This is bias in <strong>who is asked</strong>. People who follow a vegan café's page already like it, so they are far more likely to want its vegan food than the market as a whole. The sample does not stand for everyone who might buy, so the 85% is likely to be much too high.",
         "distractors": {
-          "A": "A yes-or-no answer can be counted, so the data is quantitative. 85% is a count.",
+          "A": "A yes-or-no answer can be counted, so the data is quantitative: the 85% comes from counting the yes answers.",
           "B": "The question is plainly worded and gives a price. It does not lead people towards yes.",
           "D": "The café ran the survey itself, for its own purpose, so this is primary research, and it is new."
         }
@@ -154,7 +154,7 @@
       "stem": "A street survey of 500 people chosen at random across a town asks: \"Given how few places in town stay open after 6pm, would you welcome a café that does?\" 92% say yes. The bias in this research comes mainly from",
       "options": {
         "A": "Who was asked.",
-        "B": "How the question was worded.",
+        "B": "The question's wording.",
         "C": "What people said.",
         "D": "Who read the results."
       },

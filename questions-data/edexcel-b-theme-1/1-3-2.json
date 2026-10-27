@@ -94,7 +94,7 @@
       },
       "answer": "C",
       "model": {
-        "working": "The town's supply at each price is the total of what every workshop would supply.<br />At £10 after the changes: P 150 + Q 110 + new workshop 140 = <strong>400</strong> cushions a week.<br />Before, it was 150 + 110 + 90 = 350. One workshop has been replaced by a bigger one, so the change in the <strong>number of firms</strong> has shifted supply to the right.",
+        "working": "The town's supply at each price is the total of what every workshop would supply.<br />At £10 after the changes: P 150 + Q 110 + new workshop 140 = <strong>400</strong> cushions a week.<br />Before, it was 150 + 110 + 90 = 350. One workshop has been replaced by one that supplies more at every price, so the town's supply curve shifts right.",
         "distractors": {
           "A": "This removes Workshop R but leaves out the new workshop: 150 + 110.",
           "B": "This uses the £8 column: 120 + 80 + 100. The stem asks for supply at £10.",

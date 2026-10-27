@@ -38,7 +38,7 @@
       "skill": "data-table",
       "difficulty": "standard",
       "sketch": false,
-      "stem": "Table 1 shows four business owners. Each business fails owing more than it owns, and none of the owners has given a personal guarantee.<br />Using Table 1, the owners who could lose personal assets, such as their home, are",
+      "stem": "Table 1 shows four business owners. Each business fails owing more than it owns, and none of the owners has given a personal guarantee.<br />Using Table 1, the owners who could lose personal assets beyond what they put into the business, such as their home, are",
       "table": {
         "caption": "Table 1: Four business owners",
         "head": [
@@ -56,7 +56,7 @@
           ],
           [
             "Owner 3",
-            "Is one of two partners in an accountancy partnership"
+            "Is one of two partners in a partnership that runs a garden-design business"
           ],
           [
             "Owner 4",
@@ -120,7 +120,7 @@
         "distractors": {
           "A": "Limited liability caps the owners' losses; it does not remove them. Each shareholder still loses the £5,000 they paid for shares in a company that has failed.",
           "C": "This splits the £12,000 debt between the two shareholders, as if they had to pay it. The debt belongs to the company, and limited liability means they do not.",
-          "D": "This adds half the debt (£6,000) to the £5,000 of shares, which is how a partnership's debts might fall. Shareholders in a limited company lose their shares and nothing more."
+          "D": "This adds an equal share of the debt (£6,000) to the £5,000 paid for shares, as if each shareholder had to cover half the company's debts. The debt belongs to the company; shareholders lose their shares and nothing more."
         }
       }
     },

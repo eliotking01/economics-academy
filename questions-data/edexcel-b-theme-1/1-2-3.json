@@ -93,7 +93,7 @@
       "options": {
         "A": "Profit for the owner.",
         "B": "Rent paid for the shop.",
-        "C": "The interest on its van loan.",
+        "C": "The interest on the loan that paid for its van.",
         "D": "Wages paid to its two assistants."
       },
       "answer": "A",
@@ -101,7 +101,7 @@
         "working": "Rent, interest and wages are agreed in advance. The florist owes them whether its sales are good or bad. <strong>Profit</strong> is whatever is left after they have been paid, so it is the reward that falls when revenue falls, and it may be nothing at all. That is the risk the owner takes in supplying enterprise.",
         "distractors": {
           "B": "Rent is the reward for land, and it is set by the lease, not by how well the shop trades. The landlord is paid the same either way.",
-          "C": "Interest is the reward for capital, and it is set by the loan agreement. The lender is owed it whatever the florist's sales.",
+          "C": "Interest is what capital earns, here paid to the lender who financed the van, and it is set by the loan agreement. The lender is owed it whatever the florist's sales.",
           "D": "Wages are the reward for labour, and are agreed in advance. The assistants are paid for their hours whether or not customers come in."
         }
       }

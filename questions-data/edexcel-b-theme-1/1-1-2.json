@@ -19,7 +19,7 @@
       "stem": "A dog-grooming business spends £24,000 on a mobile grooming van. In its first year the van brings in £9,000 of extra revenue, and after fuel, insurance and wages this adds £3,000 to the business's profit. The van's return on investment in its first year is",
       "options": {
         "A": "12.5%",
-        "B": "25.0%",
+        "B": "14.3%",
         "C": "33.3%",
         "D": "37.5%"
       },
@@ -27,7 +27,7 @@
       "model": {
         "working": "Return on investment is the profit an investment earns as a percentage of what it cost:<br />ROI = profit ÷ cost of the investment × 100<br />= £3,000 ÷ £24,000 × 100 = <strong>12.5%</strong>.<br />The £9,000 is revenue, not profit, so it does not belong in the calculation. The owner would compare the 12.5% with what the £24,000 could have earned elsewhere, such as interest in a savings account.",
         "distractors": {
-          "B": "This divides the van's running costs, £9,000 − £3,000 = £6,000, by the £24,000. ROI measures the profit the investment earns, not what it costs to run.",
+          "B": "This subtracts the year's profit from the cost first: £3,000 ÷ (£24,000 − £3,000) = 14.3%. ROI divides the profit by the full amount invested, £24,000.",
           "C": "This is £3,000 ÷ £9,000, profit as a share of the extra revenue. That is a profit margin. ROI divides by the amount invested, £24,000.",
           "D": "This uses revenue, £9,000 ÷ £24,000, instead of profit. Revenue counts the money coming in before the van's running costs are paid."
         }

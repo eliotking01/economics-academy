@@ -70,16 +70,16 @@
         ]
       },
       "options": {
-        "A": "£320",
-        "B": "£360",
+        "A": "£360",
+        "B": "£400",
         "C": "£520",
         "D": "£980"
       },
-      "answer": "B",
+      "answer": "A",
       "model": {
         "working": "First work out what each order adds to profit, revenue minus ingredients:<br />Wedding cake: £640 − £240 = <strong>£400</strong><br />Café bread order: £520 − £160 = £360<br />Birthday party cupcakes: £450 − £150 = £300<br />Farmers' market stall: £700 − £380 = £320<br />The bakery takes the wedding cake, which adds most. Opportunity cost is the benefit of the <strong>next best alternative</strong> only, and the next best is the café bread order, so the opportunity cost is <strong>£360</strong>.<br />The staff and the oven cost the same whichever order is taken, so they make no difference to the comparison.",
         "distractors": {
-          "A": "This is the profit from the market stall, the alternative with the highest revenue. Ranking the alternatives by revenue ignores their ingredient costs; ranked by what they add to profit, the stall comes third.",
+          "B": "This is the profit from the wedding cake, the order the bakery takes. Opportunity cost is what is given up, not what is gained: the profit from the next best alternative, the café order.",
           "C": "This is the café order's revenue. It is the right alternative, but the £160 of ingredients it would have needed has been left in. The profit given up is £520 − £160 = £360.",
           "D": "This adds up the profit from all three orders turned down: £360 + £300 + £320. The bakery could only ever have taken one of them, so only the next best alternative counts."
         }
@@ -112,7 +112,7 @@
       "skill": "applied-reasoning",
       "difficulty": "standard",
       "sketch": true,
-      "stem": "A furniture workshop makes desks and dining tables. In a quiet month two of its six joiners have no orders to work on, and the workshop accepts an extra order for 20 desks that those two joiners can make on their own. Sketching the workshop's production possibility frontier, the opportunity cost of the 20 desks, in dining tables given up, is",
+      "stem": "A furniture workshop makes desks and dining tables. In a quiet month two of its six joiners have no orders to work on, and the workshop accepts an extra order for 20 desks that those two joiners can make on their own. Sketching the workshop's production possibility frontier, the opportunity cost of the 20 desks is",
       "options": {
         "A": "Equal to the wages paid to the two joiners.",
         "B": "Positive, because every extra desk means fewer tables.",

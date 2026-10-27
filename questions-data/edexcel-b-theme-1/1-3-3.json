@@ -137,17 +137,17 @@
       "stem": "A large employer moves to a town, and demand for homes there rises sharply. Three years later house prices are still rising, because few new homes have yet been finished. The limitation of the supply and demand model this best illustrates is",
       "options": {
         "A": "Ceteris paribus.",
-        "B": "Time lags.",
-        "C": "Imperfect information.",
-        "D": "Non-price factors."
+        "B": "Imperfect information.",
+        "C": "Non-price factors.",
+        "D": "Time lags."
       },
-      "answer": "B",
+      "answer": "D",
       "model": {
         "working": "The model assumes supply responds to a higher price. In reality supply often cannot respond quickly: new homes take years to plan and build. Until they are finished the shortage lasts and prices keep rising. That is a <strong>time lag</strong>.",
         "distractors": {
           "A": "Ceteris paribus fails when several factors change at once. Here there is one change, the rise in demand.",
-          "C": "Imperfect information means buyers and sellers do not know where the equilibrium is. The problem here is that builders cannot respond fast enough.",
-          "D": "Non-price factors are about firms competing on quality, brand and service. They do not explain a slow supply response."
+          "B": "Imperfect information means buyers and sellers do not know where the equilibrium is. The problem here is that builders cannot respond fast enough.",
+          "C": "Non-price factors are about firms competing on quality, brand and service. They do not explain a slow supply response."
         }
       }
     },
