@@ -1,0 +1,204 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.1.2",
+  "slug": "2-1-2-methods-of-growth",
+  "title": "Methods of Growth",
+  "shortTitle": "Methods of Growth",
+  "pageTitle": "Methods of Growth Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on methods of growth for Edexcel B A-Level Economics: organic and inorganic growth, takeovers and integration.",
+  "intro": "Seven original multiple-choice questions on how firms grow: organic and inorganic growth, mergers and takeovers, and horizontal, vertical and conglomerate integration.",
+  "notesTeaser": "Seven original multiple-choice questions on organic and inorganic growth, mergers and takeovers, and horizontal, vertical and conglomerate integration.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-1-2-q1",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A video-game publisher buys 60% of the shares in a rival publisher, which gives it control of the rival's board. The rival's directors had urged its shareholders to reject the offer. This is best described as",
+      "options": {
+        "A": "A horizontal merger.",
+        "B": "A horizontal takeover.",
+        "C": "A vertical merger.",
+        "D": "A vertical takeover."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Two tests. <strong>What do the firms do?</strong> Both are games publishers, at the same stage of the same industry, so this is <strong>horizontal</strong>.<br /><strong>How did they join?</strong> One firm bought more than half the other's shares and so controls it. That is a <strong>takeover</strong>. A merger is when two firms agree to combine, and here the rival's directors opposed the deal.",
+        "distractors": {
+          "A": "The firms are at the same stage, so horizontal is right. But a merger is an agreement to combine, and this deal went ahead over the rival's objections by buying a controlling stake.",
+          "C": "Both parts are wrong. Vertical integration joins firms at different stages of one supply chain, and the deal was a takeover, not an agreed merger.",
+          "D": "It is a takeover, but not a vertical one. A publisher buying another publisher stays at the same stage of production."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that makes ice cream and sells it to shops buys a chain of seaside kiosks, which sell its ice cream to the public. Both businesses sell ice cream. The type of integration, and the main gain it is designed to bring, is",
+      "options": {
+        "A": "Horizontal, giving it more market power over rival ice-cream makers.",
+        "B": "Backward vertical, securing its supply of ingredients.",
+        "C": "Forward vertical, giving it a guaranteed place to sell.",
+        "D": "Conglomerate, spreading its risk across unrelated markets."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Name the type from what the two firms <strong>do</strong>, not from what they both sell. The ice-cream maker produces; the kiosks are its <strong>outlets</strong>, a later stage of the same supply chain, closer to the consumer. Buying a customer or outlet is <strong>forward vertical integration</strong>.<br />Its main gain is a <strong>guaranteed place to sell</strong>, with control over how its ice cream reaches the public, and it keeps the margin the kiosks used to make.",
+        "distractors": {
+          "A": "This is the trap in \"both sell ice cream\". Horizontal integration joins two firms at the same stage, and a manufacturer and a retailer are at different stages.",
+          "B": "Backward vertical integration means buying a supplier, such as a dairy. The kiosks are customers, so the integration runs forward.",
+          "D": "Conglomerate integration joins firms in unrelated markets. Making ice cream and selling it are two stages of the same supply chain."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Four firms are each choosing between growing organically and taking over a rival. Table 1 shows how much finance each could raise, the price of buying a suitable rival, and how fast its market is growing.<br />Using Table 1, the firm for which a takeover is most clearly the better route is",
+      "table": {
+        "caption": "Table 1: Finance available, takeover price and market growth for four firms",
+        "head": [
+          "",
+          "Finance it could raise",
+          "Price of a suitable rival",
+          "Growth of its market each year"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "£9m",
+            "£20m",
+            "2%"
+          ],
+          [
+            "Firm 2",
+            "£18m",
+            "£20m",
+            "26%"
+          ],
+          [
+            "Firm 3",
+            "£4m",
+            "£25m",
+            "30%"
+          ],
+          [
+            "Firm 4",
+            "£35m",
+            "£25m",
+            "28%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A takeover's advantage is <strong>speed</strong>: customers, staff and brands arrive at once. It is worth its high price and risk when two things hold:<br />• the firm <strong>can pay for it</strong>: it can raise more than the price of the rival;<br />• the market is <strong>moving fast</strong>, so growing slowly would hand it to rivals.<br />Firm 4 can raise £35m against a £25m price, and its market grows 28% a year. It meets both, and it is the only firm that can pay for a takeover at all.",
+        "distractors": {
+          "A": "In a market growing only 2% a year, buying a rival can look like the only way to grow. But Firm 1 can raise just £9m towards a £20m price, so a takeover is not open to it.",
+          "B": "Firm 2's market is growing fast and its finance comes close, but £18m does not buy a rival priced at £20m. Close is not enough.",
+          "C": "Firm 3's market is growing fast, but it can raise only £4m towards a £25m price. With modest finance it has no choice but to grow organically."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of kitchen appliances buys the factory that supplies all its electric motors. Two years later, an overseas producer starts selling motors of the same quality for 20% less than the factory's cost of making them. The drawback of the deal that this exposes is that the appliance maker",
+      "options": {
+        "A": "Faces more competition from other appliance makers.",
+        "B": "Has lost control over the quality of its motors.",
+        "C": "Is now running a business in an unrelated market.",
+        "D": "Is tied to motors that cost more than rivals pay."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Buying the motor factory is <strong>backward vertical integration</strong>: it secures supply and gives control over quality and cost. The price is <strong>lost flexibility</strong>. Now that cheaper motors are on offer, a firm that buys from outside can switch, but this one owns a factory whose motors cost more, and leaving it idle would waste the money spent buying it.",
+        "distractors": {
+          "A": "Buying a supplier does not change how many firms make appliances. More competition would come from rivals entering, not from this deal.",
+          "B": "This is the reverse of what vertical integration does. Owning the factory gives the firm more control over the quality of its motors, not less.",
+          "C": "Motors are part of the appliance maker's own supply chain, so this is vertical, not conglomerate, integration."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm that runs holiday parks can afford one takeover. It is choosing between another holiday-park operator and a firm that makes school uniforms. Compared with buying the holiday-park operator, buying the uniform maker is most likely to bring",
+      "options": {
+        "A": "More stable profits and smaller cost savings.",
+        "B": "More stable profits and larger cost savings.",
+        "C": "Less stable profits and smaller cost savings.",
+        "D": "Less stable profits and larger cost savings."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Buying the uniform maker is <strong>conglomerate integration</strong>, joining a firm in an unrelated market.<br /><strong>Profits:</strong> a bad summer for holidays no longer hits the whole business, because uniform sales do not depend on it → <strong>more stable profits</strong>. Buying another holiday-park operator would double the firm's exposure to the same market.<br /><strong>Cost savings:</strong> holiday parks and uniforms share almost nothing, so there are few costs to combine. Buying another park operator (horizontal) offers far more: shared booking, marketing and buying → <strong>smaller cost savings</strong> from the uniform deal.",
+        "distractors": {
+          "B": "Profits are right, savings are not. Two holiday-park firms can share booking, marketing and purchasing; a holiday-park firm and a uniform maker have almost nothing to share.",
+          "C": "Savings are right, profits are not. Spreading the business across two unrelated markets makes profit steadier, not less stable.",
+          "D": "This describes the other deal. Buying a second holiday-park operator brings the larger savings and the less stable profits."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-q6",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm borrows £8 million at an interest rate of 5% a year to take over a rival. The rival makes a profit of £600,000 a year. Nothing else about either business changes. The takeover changes the firm's yearly profit by",
+      "options": {
+        "A": "−£400,000",
+        "B": "+£200,000",
+        "C": "+£600,000",
+        "D": "+£1,000,000"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Inorganic growth is often paid for with borrowed money, and the interest is a cost.<br />Yearly interest: £8,000,000 × 5% = <strong>£400,000</strong>.<br />Profit gained from the rival: <strong>£600,000</strong>.<br />Change in yearly profit: £600,000 − £400,000 = <strong>+£200,000</strong>.<br />The deal still adds to profit, but by a third of what the rival earns, because two-thirds of it goes on interest.",
+        "distractors": {
+          "A": "This counts the interest and leaves out the £600,000 profit the firm now owns. The deal brings in that profit as well as the interest bill.",
+          "C": "This adds the rival's profit but forgets the interest on the £8 million loan used to buy it.",
+          "D": "The interest has been added instead of subtracted. £400,000 a year paid to the lender is a cost, so it comes off the £600,000."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-2-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A family owns 600,000 of the 1,000,000 shares in its company. To pay for a takeover, the company issues 500,000 new shares to the owners of the business it buys.<br />To one decimal place, the family's share of the company after the deal is",
+      "options": {
+        "A": "30.0%",
+        "B": "33.3%",
+        "C": "40.0%",
+        "D": "60.0%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The family still holds 600,000 shares, but the total has risen to 1,000,000 + 500,000 = <strong>1,500,000</strong>.<br />600,000 ÷ 1,500,000 × 100 = <strong>40.0%</strong>.<br />This is how paying for a takeover with shares can <strong>dilute control</strong>. The family has gone from a majority, 60%, to a minority, so it can now be outvoted on how the company is run.",
+        "distractors": {
+          "A": "This cuts the family's 60% by 50% because the number of shares rose by 50%. Their stake falls from 600 of every 1,000 shares to 600 of every 1,500, which is a fall of a third, not a half.",
+          "B": "500,000 ÷ 1,500,000 = 33.3% is the share now held by the sellers who received the new shares, not the family's.",
+          "D": "This is the family's share before the deal. It leaves out the 500,000 new shares, which give the family a smaller share of a bigger total."
+        }
+      }
+    }
+  ]
+}

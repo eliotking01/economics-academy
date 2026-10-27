@@ -1,0 +1,222 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.1.1",
+  "slug": "2-1-1-growth",
+  "title": "Growth",
+  "shortTitle": "Growth",
+  "pageTitle": "Growth Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on growth for Edexcel B A-Level Economics: economies of scale, market power, diseconomies and corporate culture.",
+  "intro": "Seven original multiple-choice questions on why firms grow and what growth can cost them: economies of scale, market power, profit, diseconomies of scale, skills shortages and corporate culture.",
+  "notesTeaser": "Seven original multiple-choice questions on economies of scale, market power, profit, diseconomies of scale, skills shortages and corporate culture.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-1-1-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that makes flat-pack garden sheds is deciding how large a factory to build. Table 1 shows its estimated yearly output and total cost at four factory sizes.<br />Using Table 1, the firm would start to meet diseconomies of scale once it grew beyond",
+      "table": {
+        "caption": "Table 1: Estimated yearly output and total cost at four factory sizes",
+        "head": [
+          "",
+          "Sheds made per year",
+          "Total cost per year"
+        ],
+        "rows": [
+          [
+            "Size 1",
+            "2,000",
+            "£500,000"
+          ],
+          [
+            "Size 2",
+            "5,000",
+            "£1,000,000"
+          ],
+          [
+            "Size 3",
+            "10,000",
+            "£1,600,000"
+          ],
+          [
+            "Size 4",
+            "20,000",
+            "£3,600,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "2,000 sheds a year.",
+        "B": "5,000 sheds a year.",
+        "C": "10,000 sheds a year.",
+        "D": "20,000 sheds a year."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Diseconomies of scale are a <strong>rise in average cost</strong> as the firm grows, so work out the cost of each shed at each size.<br />2,000 sheds: £500,000 ÷ 2,000 = <strong>£250</strong>.<br />5,000 sheds: £1,000,000 ÷ 5,000 = <strong>£200</strong>.<br />10,000 sheds: £1,600,000 ÷ 10,000 = <strong>£160</strong>.<br />20,000 sheds: £3,600,000 ÷ 20,000 = <strong>£180</strong>.<br />Average cost falls up to 10,000 sheds, so that is the lowest-cost size shown. Growing beyond it pushes average cost back up, from £160 to £180: that is where diseconomies of scale start.",
+        "distractors": {
+          "A": "Total cost rises at every step, but that is bound to happen when output rises. What matters is the cost of each shed, and that falls from £250 to £200 here: economies of scale, not diseconomies.",
+          "B": "The fall in average cost slows here, from £50 a shed to £40 a shed, but it is still a fall. Economies of scale that are getting smaller are not diseconomies; average cost has to rise.",
+          "D": "This assumes the biggest factory must be the cheapest per unit. Average cost at 20,000 sheds is £180, above the £160 at 10,000, so diseconomies have already set in before this size."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A national chain of pet shops grows until it buys 60% of everything a small maker of dog treats produces. The chain then tells the maker that it will pay each invoice 90 days after delivery instead of 30. The price per bag is unchanged, and the maker agrees. For the chain, the most direct benefit is",
+      "options": {
+        "A": "A higher price for each bag of treats it sells.",
+        "B": "A lower average cost from hiring specialist managers.",
+        "C": "Higher profit on each bag, as the price it pays falls.",
+        "D": "Stronger cash flow, as it keeps its cash for longer."
+      },
+      "answer": "D",
+      "model": {
+        "working": "This is <strong>market power over suppliers</strong>. The chain has become the maker's biggest customer, and the maker cannot afford to lose 60% of its sales, so it accepts worse terms.<br />The price per bag has not changed, so the chain's costs are the same. What changes is timing: the chain now holds on to its cash for 60 more days before paying, which <strong>improves its cash flow</strong>. The maker's cash flow is squeezed by the same amount.",
+        "distractors": {
+          "A": "Market power over consumers would let the chain raise its selling price, but nothing here changes what its customers pay. The power used is over a supplier.",
+          "B": "Specialist managers are a managerial economy of scale, and nothing in the deal involves them. The gain comes from the chain's buying power over the maker.",
+          "C": "This confuses paying later with paying less. The stem says the price per bag is unchanged, so the cost of each bag, and the profit on it, stay the same."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A coach company runs one of four coach services between two cities. Over two years, two of its three rivals close down and it takes on most of their passengers. Sketching the demand curve for the company's tickets, the change in its slope is best shown as the curve becoming",
+      "options": {
+        "A": "Flatter, as passengers have more close substitutes.",
+        "B": "Flatter, as passengers have fewer close substitutes.",
+        "C": "Steeper, as passengers have more close substitutes.",
+        "D": "Steeper, as passengers have fewer close substitutes."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Growth here gives the company <strong>market power over consumers</strong>. With two rivals gone, passengers have <strong>fewer close substitutes</strong> → a fare rise loses fewer passengers than before → demand becomes <strong>less price elastic</strong>.<br />Less price-elastic demand is drawn as a <strong>steeper</strong> demand curve: a given change in price now brings a smaller change in the quantity demanded. (Taking on the rivals' passengers also shifts the curve to the right, but the question asks only about its slope.)",
+        "distractors": {
+          "A": "Both halves are reversed. The rivals have gone, so there are fewer substitutes, and a flatter curve would mean demand had become more price elastic.",
+          "B": "The reason is right but the drawing is wrong. Fewer substitutes make demand less price elastic, which is a steeper curve, not a flatter one.",
+          "C": "The drawing is right but the reason is reversed. Two rivals have closed, so passengers have fewer substitutes, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm that fits heat pumps wins contracts that will need twice as many qualified engineers within a year. Few engineers with this qualification are looking for work, and other installers are recruiting them too. The most likely effect on the firm is",
+      "options": {
+        "A": "Faster completion of the work, as more staff join.",
+        "B": "Higher labour costs, as it must outbid other employers.",
+        "C": "Lower labour costs, as it can hire engineers in bulk.",
+        "D": "Lower wages, as its larger size gives it power over staff."
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is a <strong>skills shortage</strong>, one of the problems growth can bring. The firm needs scarce engineers faster than it can find them, and rival installers want the same people.<br />To attract them it has to <strong>outbid other employers</strong> → higher pay → <strong>higher labour costs</strong>. If it still cannot fill the posts, the work slows down as well.",
+        "distractors": {
+          "A": "This assumes the engineers can simply be hired. The stem says few are looking for work, so recruiting is slow and the work is more likely to be delayed than sped up.",
+          "C": "Bulk buying is a purchasing economy of scale, which applies to materials bought from suppliers. Hiring scarce workers has the opposite effect: each extra engineer costs more, not less.",
+          "D": "The firm is one of several installers competing for the same engineers, so it has no power to push wages down. The shortage pushes them up."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chain of veterinary practices grows from 6 practices to 30. Rather than writing detailed rules for every practice, it relies on staff sharing the founder's values and lets each practice make most of its own decisions. The main way this corporate culture is expected to keep the chain's costs down is that",
+      "options": {
+        "A": "Customers trust the chain more, so it can charge higher prices.",
+        "B": "Fewer rules and checks are needed, so decisions are faster.",
+        "C": "Lenders see the chain as safer, so it borrows more cheaply.",
+        "D": "Staff need no training, as they already share its values."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Corporate culture is the shared values and habits that shape how people in a business behave. A strong one can <strong>hold a growing firm together</strong>: staff aim at the same goals → fewer rules and checks are needed → decisions can be made lower down, in each practice → <strong>faster, cheaper decisions</strong> and fewer of the communication problems that usually come with growth.",
+        "distractors": {
+          "A": "This may well happen, but it raises revenue rather than cutting costs, and the question asks about costs.",
+          "C": "Cheaper borrowing is a financial economy of scale. It comes from the chain's size, not from its culture.",
+          "D": "Shared values do not teach anyone veterinary skills. Culture can cut how many checks are needed, but staff still need training to do the job."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-q6",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm making reusable water bottles moves to a larger factory and passes some of its cost savings on to customers. Table 1 shows its yearly figures before and after the move.<br />Using Table 1, the move changes the firm's yearly profit by",
+      "table": {
+        "caption": "Table 1: Yearly sales, price and average cost before and after the move",
+        "head": [
+          "",
+          "Bottles sold",
+          "Price per bottle",
+          "Average cost per bottle"
+        ],
+        "rows": [
+          [
+            "Before the move",
+            "5,000",
+            "£40",
+            "£32"
+          ],
+          [
+            "After the move",
+            "12,000",
+            "£36",
+            "£27"
+          ]
+        ]
+      },
+      "options": {
+        "A": "+£68,000",
+        "B": "+£108,000",
+        "C": "+£116,000",
+        "D": "+£232,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "Profit = (price − average cost) × quantity sold.<br />Before the move: (£40 − £32) × 5,000 = £8 × 5,000 = <strong>£40,000</strong>.<br />After the move: (£36 − £27) × 12,000 = £9 × 12,000 = <strong>£108,000</strong>.<br />Change: £108,000 − £40,000 = <strong>+£68,000</strong>.<br />This is the chain from growth to profit. Economies of scale cut average cost by £5, enough to cut the price by £4 and still widen the margin from £8 to £9, and that margin is now earned on far more bottles.",
+        "distractors": {
+          "B": "£108,000 is the profit after the move, not the change in profit. The £40,000 the firm was already making has to be taken off.",
+          "C": "This ignores the price cut. Using the old £40 price gives (£40 − £27) × 12,000 = £156,000, and £156,000 − £40,000 = £116,000. The firm now charges £36.",
+          "D": "This is the change in revenue: £36 × 12,000 = £432,000 against £40 × 5,000 = £200,000. Revenue is not profit; the costs of making the bottles have to come off."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-1-q7",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A chain of 8 dog-grooming salons pays £2,400 a month for adverts on a regional news website. It grows to 20 salons, and the same adverts, at the same price, now promote all of them.<br />The percentage fall in the chain's advertising cost per salon is",
+      "options": {
+        "A": "40%",
+        "B": "60%",
+        "C": "150%",
+        "D": "250%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "This is a <strong>marketing economy of scale</strong>: the advert costs the same however many salons it promotes, so its cost per salon falls as the chain grows.<br />Before: £2,400 ÷ 8 = <strong>£300</strong> per salon.<br />After: £2,400 ÷ 20 = <strong>£120</strong> per salon.<br />Fall: £300 − £120 = £180, measured against the original £300: £180 ÷ £300 × 100 = <strong>60%</strong>.",
+        "distractors": {
+          "A": "£120 ÷ £300 = 40% is what is left of the old cost per salon, not how much it has fallen by.",
+          "C": "Two routes give 150%: dividing the £180 fall by the new £120 rather than the original £300, or working out the rise in the number of salons (12 ÷ 8). Neither is the fall in cost per salon.",
+          "D": "This compares salon numbers, 20 ÷ 8 = 2.5, rather than costs. A cost cannot fall by more than 100%."
+        }
+      }
+    }
+  ]
+}

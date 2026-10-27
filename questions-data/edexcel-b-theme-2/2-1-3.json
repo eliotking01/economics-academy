@@ -1,0 +1,239 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.1.3",
+  "slug": "2-1-3-research-and-development-and-innovation",
+  "title": "Research and Development and Innovation",
+  "shortTitle": "Research and Development and Innovation",
+  "pageTitle": "Research and Development and Innovation Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on research and development and innovation for Edexcel B A-Level Economics: patents, state funding and product life cycles.",
+  "intro": "Seven original multiple-choice questions on R&amp;D and innovation: product and process innovation, competitive advantage, patents, state funding, the product life cycle and extension strategies.",
+  "notesTeaser": "Seven original multiple-choice questions on product and process innovation, competitive advantage, patents, state funding, the product life cycle and extension strategies.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-1-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A printing firm installs software that halves the time needed to set up each print job. It prints the same leaflets and posters as before, for the same customers. This is",
+      "options": {
+        "A": "Product innovation, letting it charge a higher price.",
+        "B": "Product innovation, lowering its average cost.",
+        "C": "Process innovation, letting it charge a higher price.",
+        "D": "Process innovation, lowering its average cost."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Nothing the customers receive has changed: the leaflets and posters are the same. What has changed is <strong>how they are made</strong>, so this is <strong>process innovation</strong>.<br />Each job now takes less set-up time → more jobs per worker and per machine → <strong>lower average cost</strong>. The firm can cut its price to win customers or keep it and take a wider margin.",
+        "distractors": {
+          "A": "Product innovation is a new or improved good or service, and the firm sells exactly what it sold before. A higher price comes from differentiation, which nothing here creates.",
+          "B": "The effect is right but the label is wrong. Lower average cost from a faster way of working is the mark of process innovation, not product innovation.",
+          "C": "The label is right but the effect is wrong. Process innovation works through lower cost; customers see the same product, so they have no new reason to pay more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-q2",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm that makes garden tools has four possible new products. Table 1 shows the R&amp;D cost of each, the extra profit it would earn each year until rivals copy it, and how long rivals would take to do so.<br />Ignoring any profit earned after rivals copy it, the only product whose extra profit would more than cover its R&amp;D cost is",
+      "table": {
+        "caption": "Table 1: R&amp;D cost, extra profit and time before rivals copy, for four products",
+        "head": [
+          "",
+          "R&amp;D cost",
+          "Extra profit per year until copied",
+          "Time before rivals copy it"
+        ],
+        "rows": [
+          [
+            "Product 1",
+            "£120,000",
+            "£300,000",
+            "3 months"
+          ],
+          [
+            "Product 2",
+            "£600,000",
+            "£100,000",
+            "5 years"
+          ],
+          [
+            "Product 3",
+            "£800,000",
+            "£250,000",
+            "4 years"
+          ],
+          [
+            "Product 4",
+            "£2,000,000",
+            "£400,000",
+            "4 years"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Product 1.",
+        "B": "Product 2.",
+        "C": "Product 3.",
+        "D": "Product 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Multiply the extra profit per year by the number of years before rivals copy, then compare with the R&amp;D cost.<br />Product 1: £300,000 × 0.25 = £75,000, against £120,000 → <strong>short by £45,000</strong>.<br />Product 2: £100,000 × 5 = £500,000, against £600,000 → <strong>short by £100,000</strong>.<br />Product 3: £250,000 × 4 = £1,000,000, against £800,000 → <strong>£200,000 more than its cost</strong>.<br />Product 4: £400,000 × 4 = £1,600,000, against £2,000,000 → <strong>short by £400,000</strong>.<br />Whether innovation pays depends on its cost <em>and</em> on how long the lead lasts before rivals copy it.",
+        "distractors": {
+          "A": "Product 1 is the cheapest to develop and earns the most per pound of R&amp;D each year. But rivals copy it within three months, so it earns only £75,000 before its lead is gone.",
+          "B": "Product 2 is the hardest to copy, but a long lead is not enough on its own. Five years at £100,000 a year is £500,000, still £100,000 short of its cost.",
+          "D": "Product 4 earns the most each year, but it is also by far the most expensive. Four years of £400,000 is £1,600,000, which falls £400,000 short."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "For 20 years a firm has been the only seller of a self-heating baby bottle, because its design was protected by a patent. The patent has now run out, and the design is easy to make. Over the next few years, the most likely outcome is that",
+      "options": {
+        "A": "Rivals enter, but the firm's profit rises as the market grows.",
+        "B": "The firm keeps its high price, as customers know its brand.",
+        "C": "The firm raises its price, as the patent no longer limits it.",
+        "D": "The price and the firm's profit both fall as rivals enter."
+      },
+      "answer": "D",
+      "model": {
+        "working": "While the patent lasted, rivals could not sell a copy, so the firm was the only supplier and could set a high price. That was its reward for the R&amp;D.<br />Once the patent ends and the design is easy to make → rivals enter → buyers have close substitutes → the firm must cut its price or lose sales → <strong>the price falls, and so does the firm's profit</strong>. Consumers gain, which is the long-run side of the patent trade-off.",
+        "distractors": {
+          "A": "Rivals entering can grow the market, but they also take sales from the firm and force its price down. Losing its position as the only seller makes higher profit unlikely.",
+          "B": "A known brand may hold some loyal buyers, but it cannot keep the price high against rivals selling the same easy-to-make design for less.",
+          "C": "A patent never limited the firm's price. It limited rivals, by stopping them selling copies. With that protection gone, the firm has less power over price, not more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The government pays half the cost of a firm's R&amp;D project through a grant. It later emerges that the firm had already decided to pay for the whole project from its own profit. The grant's main effect has been to",
+      "options": {
+        "A": "Add to the firm's profit without adding to R&amp;D.",
+        "B": "Correct a positive externality, as more research now happens.",
+        "C": "Raise the amount of R&amp;D, as the project costs the firm less.",
+        "D": "Reduce the firm's profit, as the grant must be paid back."
+      },
+      "answer": "A",
+      "model": {
+        "working": "State funding aims to make R&amp;D cheaper, so that projects go ahead that otherwise would not → more innovation.<br />Here the project was going ahead anyway. The grant has not changed how much research is done; it has only paid for half of something the firm was going to fund itself. That is the risk of <strong>paying for what would have happened anyway</strong>: the money simply <strong>adds to the firm's profit</strong>.",
+        "distractors": {
+          "B": "Correcting the externality needs research that would not otherwise happen. This project was happening already, so no extra research results.",
+          "C": "The project does cost the firm less, but that only raises R&amp;D if it changes the decision. The firm had already decided to go ahead, so the amount of R&amp;D is the same.",
+          "D": "This is a grant, not a loan, so nothing is paid back. The firm keeps the money it would otherwise have spent, so its profit rises."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small firm spends three years developing a coating that makes solar panels last longer. Within a year of its launch, other manufacturers have worked out how to make similar coatings, and buyers are getting longer-lasting panels for less. The firm itself earns little from the discovery. Left to the market, cases like this mean that firms tend to do",
+      "options": {
+        "A": "More R&amp;D than is best for society, as buyers end up better off.",
+        "B": "More R&amp;D than is best for society, as others gain without paying.",
+        "C": "Less R&amp;D than is best for society, as others gain without paying.",
+        "D": "Less R&amp;D than is best for society, as buyers end up worse off."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The new knowledge has <strong>spilled over</strong> to rival manufacturers and to buyers, who gain without paying the firm that did the research. That is a <strong>positive externality</strong>.<br />A firm deciding how much R&amp;D to do counts only the benefit it will receive itself, not the benefit to others → it does <strong>less R&amp;D than is best for society</strong>. This is one of the two reasons the state funds R&amp;D.",
+        "distractors": {
+          "A": "Buyers being better off is the external benefit. But the firm does not receive that benefit, so it gives the firm no reason to do more research.",
+          "B": "The reason is right but the direction is reversed. Because others gain without paying, the firm gets only part of the benefit, and so does less R&amp;D, not more.",
+          "D": "The stem says buyers are getting longer-lasting panels for less, so they are better off. The firm under-invests because it gets too little of the benefit, not because buyers lose."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-q6",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows a toy firm's yearly sales of four products over the last three years.<br />Using Table 1, the product most likely to be earning the cash that now pays for launching the firm's new products is",
+      "table": {
+        "caption": "Table 1: Yearly sales of four products (thousands of units)",
+        "head": [
+          "",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ],
+        "rows": [
+          [
+            "Product 1",
+            "4",
+            "12",
+            "31"
+          ],
+          [
+            "Product 2",
+            "95",
+            "99",
+            "98"
+          ],
+          [
+            "Product 3",
+            "170",
+            "110",
+            "40"
+          ],
+          [
+            "Product 4",
+            "1",
+            "3",
+            "9"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Product 1.",
+        "B": "Product 2.",
+        "C": "Product 3.",
+        "D": "Product 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Read each product's stage of the product life cycle from its sales.<br />Product 1: rising fast → <strong>growth</strong>.<br />Product 2: high and level → <strong>maturity</strong>.<br />Product 3: falling steeply → <strong>decline</strong>.<br />Product 4: low and just starting to rise → <strong>introduction</strong>.<br />Profit is highest in <strong>maturity</strong>: sales are high, and the development and launch costs have already been paid, so costs are spread over many units. That cash pays for launching the next products, which is why a firm keeps a balanced portfolio.",
+        "distractors": {
+          "A": "Product 1 is growing fastest in units, but it is in the growth stage, where profit has only just appeared and cash flow has only just turned positive.",
+          "C": "Product 3 has the highest sales over the three years added together, but it is in decline. Its sales have fallen from 170,000 to 40,000, and its profit falls with them.",
+          "D": "Product 4's sales are trebling each year, the fastest rate of growth, but from a tiny base. A product at introduction usually makes a loss while its launch costs are paid."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-1-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Sales of a firm's portable DVD players for cars have fallen for four years, as passengers now stream films to their own phones and tablets. The firm plans to extend the product's life with a new-look case and a 10% price cut. The strongest reason to doubt that the plan will work is that",
+      "options": {
+        "A": "A price cut always lowers a firm's total revenue.",
+        "B": "Extension strategies can be used only in the growth stage.",
+        "C": "Newer technology, not the design, is why sales fall.",
+        "D": "The product's development costs have not yet been paid."
+      },
+      "answer": "C",
+      "model": {
+        "working": "An extension strategy lifts sales only if it tackles <strong>why</strong> they are falling. Here passengers have switched to a <strong>newer technology</strong>: they no longer want a separate player at all. A new case and a lower price do nothing about that, so the money spent on the relaunch would probably earn more on a new product.",
+        "distractors": {
+          "A": "Not always. A price cut raises revenue when demand is price elastic, and winning back price-sensitive buyers is a recognised extension strategy. The problem here is not the price.",
+          "B": "Extension strategies are used when sales level off or start to fall, in maturity or decline. Using one at this stage is normal; the trouble is the cause of the decline.",
+          "D": "A product that has been on sale long enough to be in decline has usually paid back its development costs already. That is one reason extending a product's life can be worthwhile."
+        }
+      }
+    }
+  ]
+}
