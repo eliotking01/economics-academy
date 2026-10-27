@@ -1,0 +1,199 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.3.3",
+  "slug": "2-3-3-lean-production",
+  "title": "Efficiency and Competitiveness Using Lean Production",
+  "shortTitle": "Lean Production",
+  "pageTitle": "Lean Production Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on lean production for Edexcel B A-Level Economics: quality control, quality assurance, TQM, Kaizen and just-in-time.",
+  "intro": "Seven original multiple-choice questions on lean production: quality control, quality assurance and Total Quality Management, Kaizen, just-in-time stock management, and the competitive advantage lean methods can give.",
+  "notesTeaser": "Seven original multiple-choice questions on quality control, quality assurance and TQM, Kaizen, just-in-time stock management, and competitive advantage from lean production.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-3-3-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A firm that assembles office chairs stops testing finished chairs at the end of the line. Instead, each worker checks their own work against a written standard at every stage, so faults are stopped before a chair is finished. This is best described as",
+      "options": {
+        "A": "Just-in-time stock management.",
+        "B": "Kaizen.",
+        "C": "Quality assurance.",
+        "D": "Quality control."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Quality assurance</strong> sets standards for each stage of production and checks work against them as it is done, so faults are stopped before the product is finished. Workers checking their own work at every stage is exactly that.",
+        "distractors": {
+          "A": "Just-in-time is about stock: materials arrive just as they are needed. It says nothing about how work is checked.",
+          "B": "Kaizen is continuous improvement through many small changes, mostly suggested by workers. Checking work against a fixed standard is not changing how the job is done.",
+          "D": "This is the trap. Quality control checks finished products, which is what the firm has stopped doing. Checking work at each stage, so faults never reach the end, is assurance."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of dishwashers replaces end-of-line inspection with Total Quality Management. In the first year, the number of faulty dishwashers falls, yet its average cost rises. The most likely reason is that",
+      "options": {
+        "A": "Faults are now found later, after more work has been done.",
+        "B": "Inspecting every finished dishwasher now costs it more.",
+        "C": "Preventing faults at source creates more scrap and rework.",
+        "D": "Training staff in every department is paid for up front."
+      },
+      "answer": "D",
+      "model": {
+        "working": "TQM makes quality the job of every employee in every department. That needs <strong>training and a change of culture</strong>, which cost money and are slow.<br />The savings, from less scrap, rework and inspection, build up over time. So in the first year the up-front cost can outweigh them, and average cost rises even though faults fall.",
+        "distractors": {
+          "A": "This is the wrong way round. TQM prevents faults at source. It is end-of-line inspection that finds them late, after materials and time have been used.",
+          "B": "The firm has replaced end-of-line inspection, so it now inspects less, not more.",
+          "C": "Preventing faults at source means less scrap and rework, not more. That is where TQM's savings come from."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Four firms are each thinking of switching to just-in-time stock management. Table 1 describes each firm's main supplier and the demand for its products.<br />Using Table 1, the firm best suited to just-in-time is",
+      "table": {
+        "caption": "Table 1: Suppliers and demand at four firms",
+        "head": [
+          "",
+          "Main supplier",
+          "Demand for its products"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "Overseas, six weeks away by sea",
+            "Steady, with orders placed a month ahead"
+          ],
+          [
+            "Firm 2",
+            "Ten miles away, always delivers on time",
+            "Steady, with orders placed a month ahead"
+          ],
+          [
+            "Firm 3",
+            "Ten miles away, always delivers on time",
+            "Sudden peaks whenever the weather turns hot"
+          ],
+          [
+            "Firm 4",
+            "Overseas, six weeks away by sea",
+            "Sudden peaks whenever the weather turns hot"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Under just-in-time the firm holds little or no buffer stock, so two things must hold:<br /><strong>Reliable suppliers close by</strong>, because one late delivery can stop production.<br /><strong>Predictable demand</strong>, because a sudden rise is hard to meet with little stock.<br />Firm 2 is the only firm with both.",
+        "distractors": {
+          "A": "Its steady demand suits just-in-time, but parts shipped for six weeks by sea are more likely to be delayed, and with no buffer stock a late delivery stops production.",
+          "C": "Its reliable local supplier suits just-in-time, but sudden peaks in demand are hard to meet with little stock. Buffer stock would let it meet them.",
+          "D": "Neither condition holds: a distant supplier and unpredictable demand. This firm has the strongest case for holding buffer stock."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A bicycle maker switches from just-in-case to just-in-time stock management. The value of the stock it holds falls from £250,000 to £50,000, while its output and sales are unchanged. The most likely benefit is",
+      "options": {
+        "A": "A £200,000 rise in its profit for the year.",
+        "B": "Bigger bulk-buying discounts on its parts.",
+        "C": "Less risk of a late delivery halting production.",
+        "D": "More cash free to use, as less is tied up in stock."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Stock has to be paid for before it is used. Cutting it from £250,000 to £50,000 frees <strong>£200,000 of cash</strong> that was sitting on the shelves → more cash for other uses → less need to borrow.<br />Less storage and less stock going to waste also lower average cost.",
+        "distractors": {
+          "A": "Cash is not profit. The £200,000 is money no longer tied up in stock, not extra revenue or a cost saved. Profit rises only by what the firm saves on storage and wasted stock.",
+          "B": "Just-in-time means small, frequent deliveries. It is just-in-case buying, in large orders, that earns bulk-buying discounts.",
+          "C": "This is the main risk of just-in-time, not a benefit. With little buffer stock, one late delivery can stop production."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A parcel-sorting firm asks its staff for small improvements to the way they work. Last year, one suggestion let it cut 15 jobs. This year, staff have offered almost no ideas. The most likely explanation is that",
+      "options": {
+        "A": "Kaizen works only in factories, not in services.",
+        "B": "Small changes cannot be made without large investment.",
+        "C": "Staff fear their ideas will be used to cut more jobs.",
+        "D": "The firm has already made every small change possible."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Kaizen depends on the people closest to a task offering ideas. If staff think their ideas will be used to cut jobs, they <strong>stop offering them</strong>.<br />Last year's suggestion cost 15 colleagues their jobs, so the flow of ideas has dried up. Kaizen works less well when staff do not trust managers.",
+        "distractors": {
+          "A": "Lean methods, Kaizen included, work in services as well as manufacturing. These staff were offering ideas only a year ago.",
+          "B": "Kaizen changes are small and usually cost little, which is why good ideas can be tried straight away.",
+          "D": "Kaizen is <strong>continuous</strong>: there is always another small saving of time or materials to find. And ideas drying up straight after job cuts points to a different cause."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Using Total Quality Management, a maker of electric-scooter batteries cuts the share of its batteries that fail from 5% to 0.5%, and gains a reputation for reliability. All other things being equal, demand for its batteries is most likely to become",
+      "options": {
+        "A": "More price elastic, as lower costs let it cut its price.",
+        "B": "More price elastic, as more buyers now want its batteries.",
+        "C": "More price inelastic, as buyers become loyal to the brand.",
+        "D": "More price inelastic, as its average cost has fallen."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Fewer faults → a reputation for reliability → <strong>loyal customers</strong>, who are less willing to switch to a rival over price → demand becomes <strong>more price inelastic</strong>.<br />The firm can then charge more without losing many sales, which is how better quality gives a competitive advantage.",
+        "distractors": {
+          "A": "Whether the firm can cut its price depends on its costs. Price elasticity measures how buyers respond to a price change, and loyal buyers respond less.",
+          "B": "More buyers wanting the batteries is a rise in demand, not a change in its price elasticity. Loyal buyers are less likely to switch when the price rises, so demand becomes more price inelastic.",
+          "D": "Right direction, wrong reason. Lower costs change what the firm can afford to charge, not how buyers respond to a price change. It is loyalty that makes demand more price inelastic."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-3-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A maker of paper party plates checks a sample of each day's finished packs and throws away any faulty ones. A consultant advises it to adopt Total Quality Management. The strongest reason for the firm to keep its current system is that",
+      "options": {
+        "A": "A faulty plate costs little and harms nobody.",
+        "B": "Quality control involves every one of its employees.",
+        "C": "Quality control stops faults from being made at all.",
+        "D": "TQM would leave it with more scrap and rework than now."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Which quality method suits a firm depends on <strong>the cost of a fault</strong>. A faulty paper plate is cheap and harms nobody, so checking samples at the end and throwing faulty packs away may be enough.<br />TQM needs training and a change of culture, which cost money and are slow, and for a cheap, low-risk product the savings may not cover that. A maker of medicines could not take the same risk.",
+        "distractors": {
+          "B": "This describes TQM, which makes quality everyone's job. Quality control is done by inspectors checking finished products.",
+          "C": "This describes quality assurance. Quality control finds faults after the product is made: the faulty plates have already used up materials and time.",
+          "D": "This is backwards. TQM prevents faults at source, so it leads to less scrap and rework, not more."
+        }
+      }
+    }
+  ]
+}

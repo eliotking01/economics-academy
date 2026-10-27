@@ -1,0 +1,199 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.3.1",
+  "slug": "2-3-1-productivity",
+  "title": "Productivity",
+  "shortTitle": "Productivity",
+  "pageTitle": "Productivity Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on productivity for Edexcel B A-Level Economics: output per hour, unit labour cost, wages, growth and capital intensity.",
+  "intro": "Seven original multiple-choice questions on productivity: measuring it, its link to unit labour cost and competitiveness, productivity and wages, productivity and economic growth, and labour- and capital-intensive production. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on measuring productivity, unit labour cost and competitiveness, wages, economic growth, and labour- and capital-intensive production.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-3-1-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that sells spices online has a packing team of 10 staff, who pack 4,800 orders a week in 400 hours of work between them. After the shelves are rearranged, the same 10 staff pack the same 4,800 orders in 320 hours a week. Measuring against the original value, the change in labour productivity per hour worked is",
+      "options": {
+        "A": "−20%",
+        "B": "0%",
+        "C": "+20%",
+        "D": "+25%"
+      },
+      "answer": "D",
+      "model": {
+        "working": "Before: 4,800 ÷ 400 = <strong>12 orders per hour</strong>.<br />After: 4,800 ÷ 320 = <strong>15 orders per hour</strong>.<br />Change = (15 − 12) ÷ 12 × 100 = <strong>+25%</strong>.<br />Output per worker has not changed: it is 4,800 ÷ 10 = 480 orders a week before and after. That is why output per hour is the fairer measure when the hours staff work change.",
+        "distractors": {
+          "A": "The 20% fall in hours has been read as a fall in productivity. The same output from fewer hours means each hour produces <strong>more</strong>, not less.",
+          "B": "This is output per worker, which is 480 orders a week before and after. It misses the change, because the same staff now work fewer hours. When hours change, measure output per hour.",
+          "C": "This is either the fall in hours, (400 − 320) ÷ 400 = 20%, or the rise in output per hour measured against the new value, 3 ÷ 15 = 20%. Measure the change against the original output per hour, 12."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-q2",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how output per worker and pay per worker changed over one year at four rival manufacturers.<br />Using Table 1, the only firm whose unit labour cost fell is",
+      "table": {
+        "caption": "Table 1: Changes at four firms over one year",
+        "head": [
+          "",
+          "Change in output per worker",
+          "Change in pay per worker"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "+2%",
+            "+4%"
+          ],
+          [
+            "Firm 2",
+            "+7%",
+            "+8%"
+          ],
+          [
+            "Firm 3",
+            "+5%",
+            "+3%"
+          ],
+          [
+            "Firm 4",
+            "−1%",
+            "0%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Unit labour cost is the labour cost of making one unit. It falls only when output per worker rises <strong>faster than pay per worker</strong>, so that each unit carries less pay.<br />Firm 3: output per worker +5%, pay per worker +3% → each worker's pay is spread over relatively more units → <strong>unit labour cost falls</strong>, by about 2%.",
+        "distractors": {
+          "A": "Pay rose faster than output per worker, 4% against 2%, so each unit carries more pay. Unit labour cost rose.",
+          "B": "This is the trap: the biggest rise in output per worker. But pay rose faster still, 8% against 7%, so unit labour cost edged up. What matters is productivity <strong>relative to pay</strong>.",
+          "D": "Pay was frozen, but output per worker fell, so the same pay is spread over fewer units and unit labour cost rose. A pay freeze cuts unit labour cost only if output per worker holds up or rises."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over five years, a maker of kitchen worktops raises its output per worker by 2% a year. Its main rival, which sells similar worktops to the same customers, raises output per worker by 5% a year. Both firms keep pay per worker unchanged. Over the five years, the first firm's ability to compete with its rival on price has most likely",
+      "options": {
+        "A": "Fallen, as its unit labour cost has fallen more slowly.",
+        "B": "Fallen, as its unit labour cost has risen each year.",
+        "C": "Improved, as its output per worker has risen each year.",
+        "D": "Improved, as its unit labour cost has fallen each year."
+      },
+      "answer": "A",
+      "model": {
+        "working": "With pay per worker unchanged, each firm's unit labour cost falls as its output per worker rises. But the rival's falls faster: 5% more output per worker each year, against 2%.<br />Competitiveness is <strong>relative</strong>. The first firm's costs, and so the lowest prices it can afford to charge, are falling behind its rival's. Its ability to compete on price has fallen, even though it has improved on its own terms.",
+        "distractors": {
+          "B": "Its unit labour cost has not risen. With pay unchanged and output per worker up 2% a year, it has fallen, just more slowly than its rival's.",
+          "C": "This looks at the firm on its own. Competitiveness is relative: a firm improving by 2% a year still falls behind a rival improving by 5%.",
+          "D": "Its unit labour cost has fallen, but its rival's has fallen faster, so the gap between them has widened against it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm that makes building supplies raises its output per worker by 10% by reorganising its yard. Demand for its products is rising, skilled staff are hard to recruit in its area, and most of its workers belong to a trade union. The most likely result for its workers is",
+      "options": {
+        "A": "A pay cut, as their labour is now worth less to the firm.",
+        "B": "A pay rise, paid for by the extra each worker produces.",
+        "C": "No change in pay, as the gain belongs to the firm's owners.",
+        "D": "No change in pay, but a 10% cut in the number of staff."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Each worker now produces 10% more → their work is worth more to the firm → it can raise pay by up to 10% and keep unit labour cost the same.<br />Whether workers share in the gain depends on their <strong>bargaining power</strong>. Here it is strong: skilled staff are hard to replace, and most belong to a union. So they are likely to win a pay rise, funded by the extra output. As long as it is no more than 10%, the firm's unit labour cost does not rise.",
+        "distractors": {
+          "A": "This gets the link backwards. Higher productivity makes each worker's work worth <strong>more</strong> to the firm, not less.",
+          "C": "A firm keeps the whole gain as profit only when its workers have little bargaining power. Here staff are scarce and most are in a union, so they can push for a share.",
+          "D": "Jobs are at risk when a machine takes over work people used to do and output does not need to grow. Here demand is rising, so the firm needs its staff to make more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two firms make the same paper cups. Firm X runs automated machines, with a few staff to supervise them. Firm Y runs simple machines that many workers feed by hand. Demand for paper cups falls, and both firms cut their output by 30%. Compared with Firm Y, Firm X is most likely to see",
+      "options": {
+        "A": "A larger rise in average cost, as most of its costs are fixed.",
+        "B": "A larger rise in average cost, as its wage bill is the higher.",
+        "C": "A smaller rise in average cost, as its machines can be switched off.",
+        "D": "A smaller rise in average cost, as its labour productivity is higher."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Firm X is <strong>capital intensive</strong>. Its biggest cost is machinery and its upkeep, which are mostly <strong>fixed costs</strong>. With output down 30% → those fixed costs are spread over far fewer cups → its average cost rises sharply.<br />Firm Y is labour intensive. Its biggest cost is wages, which it can cut along with output by reducing hours, so its average cost rises much less. High fixed costs when demand falls is the main risk of capital-intensive production.",
+        "distractors": {
+          "B": "Firm X is the capital-intensive firm, so its wage bill is the <strong>lower</strong> of the two. It is Firm Y whose costs are mostly wages.",
+          "C": "Switching machines off saves the power to run them, but the machines' cost and upkeep are fixed. Those costs are now shared across fewer cups.",
+          "D": "Firm X does have the higher output per worker, but that is not what drives this. The fall in output spreads its large fixed costs over fewer cups, so its average cost rises more."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Two countries each grow their real GDP by 2% in one year. In Country X, the number of people in work rises by 2% and output per worker is unchanged. In Country Y, the number in work is unchanged and output per worker rises by 2%. Compared with Country X, Country Y is more likely to see",
+      "options": {
+        "A": "A faster rise in prices, as output per worker is higher.",
+        "B": "Higher real wages, as each worker is producing more.",
+        "C": "Lower real wages, as firms need fewer workers.",
+        "D": "Lower unemployment, as more of its people are in work."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Country Y's growth comes from <strong>productivity</strong>: each worker produces more → their work is worth more to firms → firms can pay more without raising prices → <strong>higher real wages</strong>.<br />In Country X, each worker produces no more than before, so there is no productivity gain to fund higher real pay. Its growth came from putting more people to work, and the workforce can only grow slowly, so lasting rises in living standards depend on productivity.",
+        "distractors": {
+          "A": "Higher output per worker lowers unit labour cost, which eases the pressure on firms to raise prices. It does not push prices up.",
+          "C": "Country Y's number in work is unchanged, so no workers have been let go. And each worker producing more supports higher real wages, not lower.",
+          "D": "This describes Country X, where the number in work rose by 2%. In Country Y it is unchanged."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-3-1-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A car-wash chain cleans cars by hand at all 20 of its sites. After a sharp rise in the minimum wage, an automatic machine would cost a site £300 a day to lease and maintain, and would save £2 in wages on every car it washes. Its 5 busiest sites each wash hundreds of cars a day, and the other 15 each wash about 40. The chain is most likely to",
+      "options": {
+        "A": "Install machines at every one of its sites.",
+        "B": "Install machines at its busiest sites only.",
+        "C": "Keep hand washing, as machines lower output per worker.",
+        "D": "Keep hand washing, as wages are now a bigger cost."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A machine's £300 a day is a fixed cost, and it saves £2 a car, so it pays for itself only at a site washing more than £300 ÷ £2 = <strong>150 cars a day</strong>.<br />The busiest sites wash hundreds: there, <strong>capital-intensive</strong> washing now costs less per car than hand washing. The other 15 wash about 40 each, saving only 40 × £2 = £80 a day against £300. Expensive machinery pays for itself only over a <strong>large, steady volume</strong>.",
+        "distractors": {
+          "A": "This ignores the scale of output. At a site washing about 40 cars a day, a machine saves £80 a day in wages but costs £300, so hand washing is still cheaper there.",
+          "C": "This is backwards. Giving each worker more capital to use <strong>raises</strong> output per worker: one attendant can run a machine that washes many cars an hour.",
+          "D": "This is backwards too. Wages becoming a bigger cost is exactly what pushes firms from people towards machines, as with self-service tills."
+        }
+      }
+    }
+  ]
+}
