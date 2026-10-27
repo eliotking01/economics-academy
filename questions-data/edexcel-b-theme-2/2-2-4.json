@@ -1,0 +1,194 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.2.4",
+  "slug": "2-2-4-income-elasticity-of-demand",
+  "title": "Income Elasticity of Demand (YED)",
+  "shortTitle": "Income Elasticity of Demand",
+  "pageTitle": "Income Elasticity of Demand Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on income elasticity of demand for Edexcel B A-Level Economics: calculating YED, normal and inferior goods, and planning.",
+  "intro": "Seven original multiple-choice questions on income elasticity of demand: calculating and interpreting YED, luxuries, necessities and inferior goods, the factors that affect YED, and why it matters to firms. Two are calculations.",
+  "notesTeaser": "Seven original multiple-choice questions on calculating and interpreting YED, normal and inferior goods, the factors that affect YED, and how firms use it.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-2-4-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Average real incomes fall by 4% in a recession. Over the same period a retailer's monthly sales of hot tubs fall from 250 to 220, with its prices unchanged. Measuring each percentage change against its original value, the income elasticity of demand for its hot tubs is",
+      "options": {
+        "A": "−3.0",
+        "B": "−0.33",
+        "C": "+0.33",
+        "D": "+3.0"
+      },
+      "answer": "D",
+      "model": {
+        "working": "% change in quantity demanded = (220 − 250) ÷ 250 × 100 = <strong>−12%</strong>.<br />% change in real income = <strong>−4%</strong>.<br />YED = −12 ÷ −4 = <strong>+3.0</strong>.<br />Two negatives make a positive: sales and income moved in the <strong>same</strong> direction, so hot tubs are a normal good. YED above 1 makes them a <strong>luxury</strong>: sales fell three times as fast as income.",
+        "distractors": {
+          "A": "The size is right but the sign is wrong. Sales fell, but so did income, and dividing a negative by a negative gives a positive. Keep the sign of YED: a negative value would wrongly make hot tubs an inferior good.",
+          "B": "Two errors at once: the formula is inverted (4 ÷ 12) and the sign is wrong. The % change in quantity demanded goes on top, and a fall in sales alongside a fall in income gives a positive YED.",
+          "C": "The formula has been inverted: 4 ÷ 12 = 0.33. The % change in <strong>quantity demanded</strong> goes on top. Read this way, hot tubs would wrongly look like a necessity."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A launderette chain estimates that the income elasticity of demand for its service is −0.8. All other things being equal, this means that",
+      "options": {
+        "A": "A 10% rise in real incomes cuts the number of washes by about 12.5%.",
+        "B": "A 10% rise in real incomes cuts the number of washes by about 8%.",
+        "C": "A 10% rise in real incomes raises the number of washes by about 8%.",
+        "D": "A 10% rise in the price of a wash cuts the number of washes by about 8%."
+      },
+      "answer": "B",
+      "model": {
+        "working": "% change in quantity demanded = YED × % change in real income = −0.8 × +10% = <strong>−8%</strong>.<br />The negative sign means the launderette's service is an <strong>inferior good</strong>: as people earn more, they buy their own washing machines and use launderettes less.",
+        "distractors": {
+          "A": "The formula has been inverted: 10 ÷ 0.8 = 12.5%. A YED of size 0.8 means quantity changes by <strong>less</strong> than income, not more.",
+          "C": "The minus sign has been dropped, as if this were PED. With YED the sign is the answer: −0.8 means demand moves <strong>against</strong> income.",
+          "D": "This describes price elasticity of demand. YED measures the response of quantity demanded to a change in <strong>real income</strong>, not to the product's own price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A department store estimates the income elasticity of demand for four of its product ranges, shown in Table 1. Real incomes are forecast to fall by 2%.<br />Using Table 1, the range whose sales are forecast to change by the smallest percentage, up or down, is",
+      "table": {
+        "caption": "Table 1: Income elasticity of demand for four product ranges",
+        "head": [
+          "Product range",
+          "YED"
+        ],
+        "rows": [
+          [
+            "Range 1",
+            "+2.2"
+          ],
+          [
+            "Range 2",
+            "+1.0"
+          ],
+          [
+            "Range 3",
+            "+0.1"
+          ],
+          [
+            "Range 4",
+            "−0.6"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Range 1.",
+        "B": "Range 2.",
+        "C": "Range 3.",
+        "D": "Range 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "% change in sales = YED × % change in real income. With real incomes down 2%:<br />Range 1: +2.2 × −2 = −4.4%.<br />Range 2: +1.0 × −2 = −2.0%.<br />Range 3: +0.1 × −2 = <strong>−0.2%</strong>.<br />Range 4: −0.6 × −2 = +1.2%.<br />Range 3 is a <strong>necessity</strong> with a YED close to zero, so its sales barely move whatever happens to income.",
+        "distractors": {
+          "A": "Range 1 is a luxury, and its sales change the <strong>most</strong>: a 4.4% fall. Customers cut back on luxuries first when incomes fall.",
+          "B": "A YED of +1.0 does not mean sales are unaffected. It means they change by the same percentage as income, here a 2% fall, which is ten times Range 3's change.",
+          "D": "This is the trap. Range 4 is an inferior good, so its sales rise when incomes fall, but they rise by 1.2%. That is a bigger change than Range 3's 0.2% fall. The question asks for the smallest change, up or down."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A travel firm sells luxury safari holidays, with an income elasticity of demand of +2.5, and budget coach holidays in the UK, with an income elasticity of demand of −0.5. Real incomes are forecast to fall for the next two years. The best way for the firm to plan its holiday places is to",
+      "options": {
+        "A": "Add safari places and cut coach-holiday places.",
+        "B": "Cut both, as all holiday demand falls with incomes.",
+        "C": "Cut coach-holiday places and keep safari places.",
+        "D": "Cut safari places and add coach-holiday places."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Safaris are a <strong>luxury</strong> (YED above 1): real incomes fall → customers cut back on luxuries first → safari bookings fall sharply.<br />Coach holidays are an <strong>inferior good</strong> (YED below 0): real incomes fall → customers trade down from dearer trips → coach-holiday bookings rise.<br />So the firm should move capacity from safaris to coach holidays, much as a car dealer expecting a downturn orders fewer new cars and more used ones.",
+        "distractors": {
+          "A": "This is the plan for a boom, when rising incomes lift demand for luxuries and cut it for inferior goods. Here incomes are forecast to fall.",
+          "B": "Demand for a normal good falls with incomes, but the coach holidays have a negative YED. Demand for them <strong>rises</strong> when incomes fall.",
+          "C": "This gets both the wrong way round. The negative YED means coach-holiday demand rises in a downturn, and safaris, with YED +2.5, are the bookings most likely to fall."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Estimates of the income elasticity of demand for new cars are +2.5 in a low-income country and +0.4 in a high-income country. The best explanation for the difference is that, in the high-income country, cars",
+      "options": {
+        "A": "Are a necessity for most households, not a luxury.",
+        "B": "Are an inferior good that people trade away from.",
+        "C": "Have many more close substitutes to choose from.",
+        "D": "Take up a larger share of a typical household's income."
+      },
+      "answer": "A",
+      "model": {
+        "working": "YED depends on the <strong>customer's income level</strong>. The same product can be a luxury for low-income households and a necessity for high-income ones. In the low-income country, YED of +2.5 shows a luxury: households buy cars as they get richer. In the high-income country most households already have one, so a rise in income changes car buying only a little: YED of +0.4 shows a <strong>necessity</strong>.",
+        "distractors": {
+          "B": "An inferior good has a <strong>negative</strong> YED. At +0.4, demand for cars still rises with income, just by less, so cars are a normal good in both countries.",
+          "C": "The number of close substitutes affects how demand responds to a product's <strong>price</strong>, which is PED. It does not explain how demand responds to income.",
+          "D": "Share of income is also a factor in PED, not YED. And a car takes up a <strong>smaller</strong> share of a typical income in a richer country, not a larger one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A furniture firm sells only hand-made sofas, with an income elasticity of demand of +2.8. It plans to add a range of budget flat-pack sofas, with an income elasticity of demand of −0.4. The main benefit to the firm is most likely that",
+      "options": {
+        "A": "It can charge more for its hand-made sofas than before.",
+        "B": "Its budget range will sell most when incomes are rising.",
+        "C": "Its sales of hand-made sofas will rise faster in a boom.",
+        "D": "Its total sales will be steadier over the cycle."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The two ranges respond to income in opposite directions. In a boom, sales of hand-made sofas rise sharply while sales of the budget range fall. In a recession, hand-made sofa sales fall sharply while the budget range gains as shoppers trade down. Selling both is a <strong>product portfolio</strong>: when one sells less the other sells more, so total sales are <strong>steadier</strong> across the economic cycle.",
+        "distractors": {
+          "A": "YED says nothing about what customers will pay for a product. Adding a budget range does not make demand for the hand-made sofas any more price inelastic.",
+          "B": "This is the wrong way round. A negative YED means the budget range sells <strong>less</strong> when incomes rise, and more when they fall.",
+          "C": "Hand-made sofa sales already rise fast in a boom, because their YED is +2.8. Adding a separate budget range does not change that."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-4-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Over a year, money incomes rise by 7% and prices by 3%, so real incomes rise by about 4%. A garden-design firm's sales rise from 150 makeovers to 159 over the same year, with its prices unchanged. To one decimal place, the income elasticity of demand for its makeovers is",
+      "options": {
+        "A": "0.7",
+        "B": "0.9",
+        "C": "1.5",
+        "D": "2.0"
+      },
+      "answer": "C",
+      "model": {
+        "working": "% change in quantity demanded = (159 − 150) ÷ 150 × 100 = <strong>+6%</strong>.<br />YED measures the response to <strong>real</strong> income, which rose by about 4%.<br />YED = +6 ÷ +4 = <strong>+1.5</strong>.<br />Above 1, so the makeovers are a luxury: sales grew faster than real income.",
+        "distractors": {
+          "A": "The formula has been inverted: 4 ÷ 6 = 0.67, or 0.7 to one decimal place. The % change in quantity demanded goes on top.",
+          "B": "This divides by the 7% rise in <strong>money</strong> income: 6 ÷ 7 = 0.86. YED uses real income, because only a rise in real income lets people buy more. Using money income here would wrongly make the makeovers look like a necessity.",
+          "D": "This divides by the 3% rise in prices: 6 ÷ 3 = 2.0. That is the inflation rate, not the change in income at all."
+        }
+      }
+    }
+  ]
+}

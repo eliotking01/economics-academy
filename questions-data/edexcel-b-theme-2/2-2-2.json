@@ -1,0 +1,226 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.2.2",
+  "slug": "2-2-2-competing-on-price",
+  "title": "Competing on Price",
+  "shortTitle": "Competing on Price",
+  "pageTitle": "Competing on Price Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on competing on price for Edexcel B A-Level Economics: cost-plus and mark-up, six pricing strategies, comparison sites.",
+  "intro": "Eight original multiple-choice questions on pricing strategies: cost-plus pricing and mark-up, skimming, penetration, predatory, competitive and psychological pricing, how a firm chooses between them, and pricing online. Three are calculations.",
+  "notesTeaser": "Eight original multiple-choice questions on cost-plus pricing and mark-up, the six pricing strategies, choosing the right one, and pricing online.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-2-2-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A workshop makes leather wallets. Each wallet uses £7 of leather and £8 of labour, and carries £5 of the workshop's overheads. The owner sets the price by adding a mark-up of 35% to the full unit cost, overheads included. To the nearest penny, the selling price of a wallet is",
+      "options": {
+        "A": "£20.25",
+        "B": "£25.25",
+        "C": "£27.00",
+        "D": "£30.77"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Unit cost = £7 + £8 + £5 = <strong>£20</strong>.<br />Mark-up = 35% × £20 = <strong>£7</strong>.<br />Selling price = £20 + £7 = <strong>£27.00</strong>.<br />Under cost-plus pricing the mark-up is a percentage of the <strong>whole</strong> unit cost, including the share of overheads.",
+        "distractors": {
+          "A": "This leaves the £5 of overheads out of the unit cost altogether: (£7 + £8) × 1.35 = £20.25. The price would not cover the wallet's share of rent and other overheads.",
+          "B": "This marks up only the leather and labour, then adds the overheads at cost: £15 × 1.35 + £5 = £25.25. The mark-up applies to the whole £20 unit cost.",
+          "D": "This treats 35% as a share of the <strong>price</strong>, not of the cost: £20 ÷ 0.65 = £30.77. That is the price that would give a 35% profit margin. A mark-up is a percentage of unit cost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A market stall buys refurbished headphones for £24 a pair and sells them for £36 a pair. To one decimal place, its mark-up is",
+      "options": {
+        "A": "33.3%",
+        "B": "50.0%",
+        "C": "66.7%",
+        "D": "150.0%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Mark-up (%) = (Price − Unit cost) ÷ Unit cost × 100.<br />(£36 − £24) ÷ £24 × 100 = £12 ÷ £24 × 100 = <strong>50.0%</strong>.<br />A mark-up is measured against the <strong>cost</strong> of the item, not against its selling price.",
+        "distractors": {
+          "A": "This divides the £12 by the selling price: £12 ÷ £36 × 100 = 33.3%. That is the profit margin, a different figure from the mark-up.",
+          "C": "This is the unit cost as a share of the price: £24 ÷ £36 × 100 = 66.7%. It shows how much of each £36 goes on buying the headphones, not the mark-up.",
+          "D": "This divides the whole price by the cost: £36 ÷ £24 × 100 = 150%. The mark-up is only the amount added above cost, £12, so the price is 150% of cost but the mark-up is 50%."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A new meal-kit firm sells its first boxes at £2.99, below what each box costs it to make, to get households to try it and leave the supplier they use now. It plans to raise the price once it has many customers and lower unit costs, and expects its rivals to stay in the market. This pricing strategy is best described as",
+      "options": {
+        "A": "Competitive pricing.",
+        "B": "Penetration pricing.",
+        "C": "Predatory pricing.",
+        "D": "Price skimming."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Penetration pricing</strong> means launching at a low price to win market share quickly, then raising it. Low launch price → households try the boxes and switch from rivals → more customers and higher output → economies of scale lower unit cost → the firm can raise its price later. The firm aims to win customers, not to drive its rivals out.",
+        "distractors": {
+          "A": "Competitive pricing means setting a price at or close to rivals' prices. This firm deliberately launches well below cost, and so well below what rivals can charge.",
+          "C": "This is the trap. Predatory pricing also sets a price below cost, but its aim is to force rivals out of the market so the firm can raise prices with less competition. This firm expects its rivals to stay.",
+          "D": "Price skimming is the opposite: a <strong>high</strong> launch price, lowered over time. This firm starts low and plans to raise its price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A firm is about to launch four new products. Table 1 shows what it knows about each.<br />Using Table 1, the product best suited to price skimming is",
+      "table": {
+        "caption": "Table 1: Four new products",
+        "head": [
+          "",
+          "Protected by a patent",
+          "Close rivals at launch",
+          "Expected PED"
+        ],
+        "rows": [
+          [
+            "Product 1",
+            "No",
+            "6",
+            "−2.5"
+          ],
+          [
+            "Product 2",
+            "No",
+            "0",
+            "−0.5"
+          ],
+          [
+            "Product 3",
+            "Yes",
+            "4",
+            "−1.8"
+          ],
+          [
+            "Product 4",
+            "Yes",
+            "0",
+            "−0.4"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Product 1.",
+        "B": "Product 2.",
+        "C": "Product 3.",
+        "D": "Product 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Price skimming means launching at a high price, then lowering it over time. It needs two things:<br />1. <strong>Price inelastic demand</strong>, so early buyers pay the high price rather than switch.<br />2. A product <strong>rivals cannot copy straight away</strong>, often because it is protected by a patent, so the high price does not simply attract copies.<br />Product 4 is the only one with both: a patent, no close rivals, and a PED of −0.4.",
+        "distractors": {
+          "A": "Product 1 has six close rivals, no patent and price elastic demand. A high launch price would send buyers straight to rivals. It suits penetration or competitive pricing.",
+          "B": "Product 2 has inelastic demand and no rivals yet, but no patent. The high profits from skimming would draw in rivals who can copy it straight away, so the high price would not last.",
+          "C": "Product 3 has a patent, but four close rivals already and price elastic demand. Buyers have substitutes, so a high price would lose many sales."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A juice bar changes the price of its smoothies from £4.00 to £3.99, a cut of only 0.25%. Rival juice bars charge £4.50 and leave their prices unchanged, yet the juice bar's weekly smoothie sales rise by 10%. The pricing strategy that best explains this is",
+      "options": {
+        "A": "Competitive pricing.",
+        "B": "Cost-plus pricing.",
+        "C": "Penetration pricing.",
+        "D": "Psychological pricing."
+      },
+      "answer": "D",
+      "model": {
+        "working": "<strong>Psychological pricing</strong> sets a price for its effect on how customers see the product. A price of £3.99 → customers read it as \"£3 and something\" → it feels much cheaper than £4.00 → sales rise by far more than a 1p cut would suggest.",
+        "distractors": {
+          "A": "Competitive pricing means pricing at or close to rivals. The rivals charge £4.50 and nothing changed there, so the switch from £4.00 to £3.99 did not bring the juice bar any closer to them.",
+          "B": "Cost-plus pricing sets the price from unit cost plus a mark-up. A 1p cut is not explained by a change in cost, and it cannot explain why sales rose so sharply.",
+          "C": "Penetration pricing means launching a new product at a low price to win market share. The smoothies are not new, and a 1p cut is not a low launch price."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Most broadband customers now choose a deal on price comparison sites, which rank deals by monthly price. One provider starts selling a package that includes a sports channel available from no other provider. The main aim of this is most likely to",
+      "options": {
+        "A": "Avoid a straight comparison with rivals on price.",
+        "B": "Cut the cost of supplying broadband to each customer.",
+        "C": "Make demand for its deal more price elastic.",
+        "D": "Move its deal to the top of the comparison sites."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Price comparison sites show every seller's price side by side → demand for a standard broadband deal is very price elastic → providers are pushed into competitive pricing and lower margins. Firms respond by making their prices <strong>harder to compare</strong>, for example with bundles and versions sold by only one seller. A package nobody else offers cannot be ranked like-for-like against rivals' deals, so the provider is no longer judged on monthly price alone.",
+        "distractors": {
+          "B": "Adding a sports channel adds to the provider's costs. It does not make the broadband itself any cheaper to supply.",
+          "C": "This is the wrong way round. A package with something rivals do not offer has fewer close substitutes, so demand for it becomes <strong>more price inelastic</strong>.",
+          "D": "The sites rank deals by monthly price, and a package with a sports channel will usually cost more. It is more likely to move <strong>down</strong> the rankings, which is why the provider wants to escape a straight price comparison."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q7",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A firm makes gift hampers and sets its price using cost-plus pricing. Each hamper uses £6 of food and packaging, and is given a £4 share of the firm's £4,000 monthly overheads, based on selling 1,000 hampers a month. With a 50% mark-up, the price is £15. In a quiet month it sells only 500 hampers at that price, and its costs are otherwise as planned. Its profit per hamper that month is",
+      "options": {
+        "A": "−£5",
+        "B": "−£3",
+        "C": "£1",
+        "D": "£5"
+      },
+      "answer": "C",
+      "model": {
+        "working": "The £4 overhead share assumed 1,000 hampers. The overheads are still £4,000, now spread over 500 hampers.<br />Overhead share per hamper = £4,000 ÷ 500 = <strong>£8</strong>.<br />Actual unit cost = £6 + £8 = <strong>£14</strong>.<br />Profit per hamper = £15 − £14 = <strong>£1</strong>.<br />Check: revenue £15 × 500 = £7,500; costs £6 × 500 + £4,000 = £7,000; profit £500 ÷ 500 = £1.<br />This is a weakness of cost-plus pricing: the planned mark-up holds only if the firm sells the number it planned on.",
+        "distractors": {
+          "A": "This doubles the whole £10 unit cost to £20. Only the overhead share doubles. The £6 of food and packaging is the same for every hamper, however many are sold.",
+          "B": "This adds the new £8 overhead share on top of the old £10 unit cost, giving £18. The new £8 share replaces the old £4 one; it is not added to it.",
+          "D": "This is the planned profit: 50% of £10. It assumes the unit cost stays at £10, but the overheads are now spread over half as many hampers."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-2-2-q8",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A small new brewery and a national brewer each launch a lager into a crowded market where demand is price elastic. Penetration pricing is more likely to suit the national brewer, mainly because",
+      "options": {
+        "A": "Demand for its lager is more price inelastic.",
+        "B": "It can afford early losses while sales grow.",
+        "C": "Its lager has more unique selling points.",
+        "D": "Its unit costs at launch are higher."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Penetration pricing means a low launch price, often at a loss, until market share and output grow and economies of scale bring unit cost down. One factor in choosing a strategy is <strong>costs and the need to make a profit</strong>: a large firm has the cash to absorb months of losses, while a small firm cannot afford them and may run out of cash before the price can rise.",
+        "distractors": {
+          "A": "Inelastic demand is a reason for a <strong>higher</strong> price, such as skimming. Penetration pricing works because a low price wins many extra sales, which needs elastic demand.",
+          "C": "A product with more USPs can be priced <strong>above</strong> rivals. Many USPs would point away from penetration pricing, not towards it.",
+          "D": "A national brewer is likely to have <strong>lower</strong> unit costs, from economies of scale. Higher unit costs would make a low launch price harder to sustain, not easier."
+        }
+      }
+    }
+  ]
+}
