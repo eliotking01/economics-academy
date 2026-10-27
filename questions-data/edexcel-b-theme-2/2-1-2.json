@@ -7,9 +7,9 @@
   "title": "Methods of Growth",
   "shortTitle": "Methods of Growth",
   "pageTitle": "Methods of Growth Questions — Edexcel B A-Level Economics | Economics Academy",
-  "metaDescription": "Seven free multiple-choice questions on methods of growth for Edexcel B A-Level Economics: organic and inorganic growth, takeovers and integration.",
-  "intro": "Seven original multiple-choice questions on how firms grow: organic and inorganic growth, mergers and takeovers, and horizontal, vertical and conglomerate integration.",
-  "notesTeaser": "Seven original multiple-choice questions on organic and inorganic growth, mergers and takeovers, and horizontal, vertical and conglomerate integration.",
+  "metaDescription": "Six free multiple-choice questions on methods of growth for Edexcel B A-Level Economics: organic and inorganic growth, takeovers and integration.",
+  "intro": "Six original multiple-choice questions on how firms grow: organic and inorganic growth, mergers and takeovers, and horizontal, vertical and conglomerate integration.",
+  "notesTeaser": "Six original multiple-choice questions on organic and inorganic growth, mergers and takeovers, and horizontal, vertical and conglomerate integration.",
   "questions": [
     {
       "id": "edexcel-b-2-1-2-q1",
@@ -175,28 +175,6 @@
           "A": "This counts the interest and leaves out the £600,000 profit the firm now owns. The deal brings in that profit as well as the interest bill.",
           "C": "This adds the rival's profit but forgets the interest on the £8 million loan used to buy it.",
           "D": "The interest has been added instead of subtracted. £400,000 a year paid to the lender is a cost, so it comes off the £600,000."
-        }
-      }
-    },
-    {
-      "id": "edexcel-b-2-1-2-q7",
-      "skill": "calculation",
-      "difficulty": "stretch",
-      "sketch": false,
-      "stem": "A family owns 600,000 of the 1,000,000 shares in its company. To pay for a takeover, the company issues 500,000 new shares to the owners of the business it buys.<br />To one decimal place, the family's share of the company after the deal is",
-      "options": {
-        "A": "30.0%",
-        "B": "33.3%",
-        "C": "40.0%",
-        "D": "60.0%"
-      },
-      "answer": "C",
-      "model": {
-        "working": "The family still holds 600,000 shares, but the total has risen to 1,000,000 + 500,000 = <strong>1,500,000</strong>.<br />600,000 ÷ 1,500,000 × 100 = <strong>40.0%</strong>.<br />This is how paying for a takeover with shares can <strong>dilute control</strong>. The family has gone from a majority, 60%, to a minority, so it can now be outvoted on how the company is run.",
-        "distractors": {
-          "A": "This cuts the family's 60% by 50% because the number of shares rose by 50%. Their stake falls from 600 of every 1,000 shares to 600 of every 1,500, which is a fall of a third, not a half.",
-          "B": "500,000 ÷ 1,500,000 = 33.3% is the share now held by the sellers who received the new shares, not the family's.",
-          "D": "This is the family's share before the deal. It leaves out the 500,000 new shares, which give the family a smaller share of a bigger total."
         }
       }
     }
