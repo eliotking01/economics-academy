@@ -1,0 +1,224 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.5.4",
+  "slug": "2-5-4-employment-and-unemployment",
+  "title": "Employment and Unemployment",
+  "shortTitle": "Employment and Unemployment",
+  "pageTitle": "Employment and Unemployment Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on unemployment for Edexcel B A-Level Economics: the claimant count and ILO measure, its causes, and its impact on firms.",
+  "intro": "Seven original multiple-choice questions on employment and unemployment: who counts as employed or unemployed, the claimant count and the ILO measure, the causes of unemployment, and its impact on firms and individuals. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on employment, underemployment and unemployment, the claimant count and ILO measure, and the causes and impact of unemployment.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-5-4-q1",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A full-time university student works three hours every Saturday in a café and does not want any more hours. In UK labour market figures, the student is counted as",
+      "options": {
+        "A": "Economically inactive.",
+        "B": "Employed.",
+        "C": "Underemployed.",
+        "D": "Unemployed."
+      },
+      "answer": "B",
+      "model": {
+        "working": "<strong>Employment</strong> covers anyone doing paid work, full-time or part-time. In UK figures, one hour of paid work a week is enough to count.<br />Three hours every Saturday is paid work, so the student is <strong>employed</strong>.",
+        "distractors": {
+          "A": "Full-time students are economically inactive only if they have no job and are not looking for one. This student has a paid job.",
+          "C": "Underemployment means wanting more hours than you can get. This student does not want any more hours.",
+          "D": "Unemployed people have no job. This student has one."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-q2",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A town has 60,000 people of working age. Of these, 42,000 work full-time and 6,000 work part-time, including 2,000 who want more hours than they can get. Another 2,000 have no job and are looking for one, and the other 10,000 are economically inactive. To one decimal place, the town's unemployment rate is",
+      "options": {
+        "A": "3.3%",
+        "B": "4.0%",
+        "C": "4.2%",
+        "D": "8.0%"
+      },
+      "answer": "B",
+      "model": {
+        "working": "The unemployment rate is the unemployed as a percentage of everyone in work or looking for it.<br />In work or looking: 42,000 + 6,000 + 2,000 = <strong>50,000</strong>. The 10,000 inactive people are left out.<br />Unemployment rate = 2,000 ÷ 50,000 × 100 = <strong>4.0%</strong>.<br />The 2,000 part-timers who want more hours are <strong>underemployed</strong>, but they have jobs, so they count as employed.",
+        "distractors": {
+          "A": "This divides by the whole working-age population: 2,000 ÷ 60,000 = 3.3%. The economically inactive are neither working nor looking, so they are left out of the bottom of the fraction.",
+          "C": "This divides by the number in work only: 2,000 ÷ 48,000 = 4.2%. The unemployed must be included in the bottom of the fraction too.",
+          "D": "This counts the underemployed as unemployed: 4,000 ÷ 50,000 = 8.0%. People who want more hours still have jobs."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-q3",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 describes four people of working age.<br />Using Table 1, the person who is in the claimant count but is <strong>not</strong> unemployed on the ILO measure is",
+      "table": {
+        "caption": "Table 1: Four people of working age",
+        "head": [
+          "",
+          "Situation"
+        ],
+        "rows": [
+          [
+            "Person 1",
+            "Has no job, has applied for several this month and can start at once, but has chosen not to claim any benefits"
+          ],
+          [
+            "Person 2",
+            "Has no job, claims Jobseeker's Allowance, is looking for work and can start next week"
+          ],
+          [
+            "Person 3",
+            "Is a full-time carer for a parent and is not looking for paid work"
+          ],
+          [
+            "Person 4",
+            "Works 12 hours a week in a low-paid job and claims Universal Credit, which requires them to look for more work"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Person 1.",
+        "B": "Person 2.",
+        "C": "Person 3.",
+        "D": "Person 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The <strong>claimant count</strong> covers people claiming Jobseeker's Allowance, or Universal Credit with a requirement to look for work. That can include low-paid part-time workers looking for more work.<br />The <strong>ILO measure</strong> counts only people without a job who have looked in the past four weeks and can start within two.<br />Person 4 claims Universal Credit with a requirement to look for work, so is in the claimant count. But Person 4 has a job, so on the ILO measure they are employed.",
+        "distractors": {
+          "A": "This is the opposite case. Person 1 meets the ILO test, with no job, an active search and able to start, but claims nothing, so is missing from the claimant count.",
+          "B": "Person 2 is counted on both measures: a claimant of Jobseeker's Allowance, and without a job, looking and able to start.",
+          "C": "Person 3 is economically inactive: not working and not looking for work. They appear in neither measure."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-q4",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows how jobs and job vacancies in a country changed over one year, by sector.<br />Using Table 1, the rise in unemployment is most likely",
+      "table": {
+        "caption": "Table 1: Changes in jobs and vacancies over one year",
+        "head": [
+          "Sector",
+          "Change in jobs",
+          "Change in vacancies"
+        ],
+        "rows": [
+          [
+            "Manufacturing",
+            "−3,000",
+            "−40%"
+          ],
+          [
+            "Retail",
+            "−2,500",
+            "−35%"
+          ],
+          [
+            "Construction",
+            "−2,000",
+            "−45%"
+          ],
+          [
+            "Hospitality",
+            "−1,500",
+            "−30%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Demand-deficient, as every sector is shedding jobs.",
+        "B": "Structural, as manufacturing has lost the most jobs.",
+        "C": "Structural, as workers lack skills for the vacancies.",
+        "D": "Technological, as factory jobs are lost to machines."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Name the cause the evidence points to. Every sector is losing jobs, and vacancies are falling in every sector too, so no part of the economy is short of workers.<br />That is <strong>demand-deficient</strong> unemployment: households and firms spend less → firms sell less → they need fewer workers → job losses spread across the whole economy.",
+        "distractors": {
+          "B": "Manufacturing has lost the most jobs, but so has every other sector. Structural unemployment is job losses in one declining industry while other sectors are hiring.",
+          "C": "If workers lacked the skills for the jobs on offer, vacancies would go unfilled. Here vacancies are falling in every sector, which points to too little demand, not a mismatch of skills.",
+          "D": "Nothing in the table shows machines replacing workers, and job losses in shops, building sites and hotels are not explained by new factory technology."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A paper mill closes in a small town. A battery factory 200 miles away offers every former mill worker free training and a guaranteed job. Few accept, and most stay in the town without work. Their unemployment is best explained by",
+      "options": {
+        "A": "Demand deficiency.",
+        "B": "Geographical immobility.",
+        "C": "Occupational immobility.",
+        "D": "Technological change."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The mill's closure leaves workers whose skills and location no longer match the jobs available. Two kinds of immobility can keep them out of work.<br />Free training with a guaranteed job removes the skills barrier, so <strong>occupational</strong> immobility is not what is stopping them.<br />What remains is the 200 miles. Workers who cannot or will not move, because of housing costs or family ties, face <strong>geographical immobility</strong>.",
+        "distractors": {
+          "A": "Demand deficiency means too few jobs across the economy. Here there are jobs available, at the battery factory, that the workers do not take.",
+          "C": "Occupational immobility is a lack of the skills the new jobs need. The free training removes that barrier, so it cannot explain why so few accept.",
+          "D": "Nothing in the stem says the mill closed because machines replaced its workers. And the reason they stay unemployed is distance, not technology."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A car plant employing 4,000 people closes in a town where it was by far the largest employer. The firm whose sales are most likely to fall by the largest percentage is",
+      "options": {
+        "A": "A café beside the plant's main gate.",
+        "B": "A discount store in the same town.",
+        "C": "A supermarket chain with stores across the UK.",
+        "D": "An online retailer selling across the UK."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Structural unemployment is concentrated in one town, so <strong>local firms suffer most</strong> while firms elsewhere barely notice.<br />The café relies on the plant's workers for most of its custom → the plant closes → those customers disappear at once, and the town's spending falls too → its sales fall by the largest percentage.",
+        "distractors": {
+          "B": "The discount store is in the same town, but shoppers whose incomes fall tend to trade down to discount stores. It may lose some sales, but far less than the café, and it could even gain.",
+          "C": "The chain's sales in this town will fall, but that town is a small part of its sales across the UK. As a share of its total sales, the fall is small.",
+          "D": "Its customers are spread across the UK, so losing some buyers in one town barely changes its total sales."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two machinists lose their jobs on the same day. One finds similar work three weeks later; the other is still looking two years later. When the second is finally hired, compared with the first, they are most likely to",
+      "options": {
+        "A": "Be paid more, as they held out for a better job.",
+        "B": "Be paid the same, as they have the same skills.",
+        "C": "Earn less, as their skills have faded.",
+        "D": "Need less training, as they have had time to study."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The longer someone is out of work → the more their skills and confidence fade → the harder it is to get hired → <strong>lower pay</strong> even after they find work.<br />A short gap of three weeks does little lasting harm; two years of <strong>long-term unemployment</strong> is what erodes skills and income.",
+        "distractors": {
+          "A": "Two years without work makes a worker less attractive to employers, not more. There is no sign that the second machinist was turning down better offers.",
+          "B": "They had the same skills on the day they lost their jobs, but two years out of work wears skills down. By the time the second is hired, they are no longer equal.",
+          "D": "The reverse is more likely. Firms that hire someone after a long spell out of work usually face higher training costs, as skills have faded."
+        }
+      }
+    }
+  ]
+}

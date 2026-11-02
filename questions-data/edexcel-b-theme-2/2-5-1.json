@@ -1,0 +1,180 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.5.1",
+  "slug": "2-5-1-the-economic-cycle",
+  "title": "The Economic Cycle",
+  "shortTitle": "The Economic Cycle",
+  "pageTitle": "The Economic Cycle Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the economic cycle for Edexcel B A-Level Economics: booms, recessions and what the ups and downs mean for firms.",
+  "intro": "Six original multiple-choice questions on the economic cycle: what counts as a recession, what a boom does to a firm's costs and capacity, and how a recession tests a firm's cash and borrowing. One is a calculation.",
+  "notesTeaser": "Six original multiple-choice questions on the economic cycle, booms and recessions, and what the ups and downs of the economy mean for firms.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-5-1-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows the change in a country's real GDP in each of six quarters.<br />Using Table 1, the only period that meets the definition of a recession is",
+      "table": {
+        "caption": "Table 1: Change in real GDP on the previous quarter",
+        "head": [
+          "Quarter",
+          "Change in real GDP"
+        ],
+        "rows": [
+          [
+            "Quarter 1",
+            "+0.7%"
+          ],
+          [
+            "Quarter 2",
+            "+0.2%"
+          ],
+          [
+            "Quarter 3",
+            "−0.3%"
+          ],
+          [
+            "Quarter 4",
+            "+0.1%"
+          ],
+          [
+            "Quarter 5",
+            "−0.2%"
+          ],
+          [
+            "Quarter 6",
+            "−0.5%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Quarters 2 and 3.",
+        "B": "Quarter 3 only.",
+        "C": "Quarters 3 to 6.",
+        "D": "Quarters 5 and 6."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>recession</strong> is a fall in real GDP for <strong>two consecutive quarters</strong>.<br />Real GDP fell in Quarters 3, 5 and 6, the three negative figures. Only Quarters 5 and 6 come one after the other, so they are the only recession in the table.<br />The fall in Quarter 3 was followed by growth in Quarter 4, so it was a single bad quarter, not a recession.",
+        "distractors": {
+          "A": "Growth slowed in Quarter 2, from 0.7% to 0.2%, but real GDP still rose. Slower growth is not a recession, and only Quarter 3 of this pair saw output fall.",
+          "B": "Real GDP did fall in Quarter 3, but for one quarter only. It rose again in Quarter 4, so the two-quarter test is not met.",
+          "C": "Real GDP fell in three of these four quarters, but it rose by 0.1% in Quarter 4, which breaks the run. A recession needs falls in two quarters in a row, and that happens only in Quarters 5 and 6."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-q2",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Official figures show that UK real GDP grew by 0.6%, 0.4%, 0.2% and 0.1% in the last four quarters. The owner of a chain of garden centres concludes that the UK is now in recession. The owner is",
+      "options": {
+        "A": "Right, as growth below the trend rate is a recession.",
+        "B": "Right, as growth has slowed in every quarter.",
+        "C": "Wrong, as a recession needs unemployment to rise.",
+        "D": "Wrong, as real GDP is still growing."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A recession needs <strong>real GDP itself to fall</strong> for two quarters in a row. Here real GDP grew in all four quarters, so output is still rising.<br />Growth has slowed in every quarter, which is a <strong>downturn</strong>, but slower growth is not a recession.",
+        "distractors": {
+          "A": "Growth below the trend rate describes a downturn, when output grows more slowly than usual. It becomes a recession only when real GDP falls.",
+          "B": "Growth has slowed each quarter, but every figure is still positive, so the level of real GDP has risen each time. A falling growth rate is easy to misread as falling output.",
+          "C": "The conclusion is right, but the reason is wrong. Unemployment usually rises in a recession, but the definition is about output: real GDP falling for two quarters in a row."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "In a boom, a kitchen-fitting firm's sales rise from 40 to 48 kitchens a month. It raises its price from £8,000 to £8,400 a kitchen, but scarce fitters and materials push its cost per kitchen up from £6,500 to £7,150. The change in its monthly profit is",
+      "options": {
+        "A": "−£10,000",
+        "B": "£0",
+        "C": "+£12,000",
+        "D": "+£31,200"
+      },
+      "answer": "B",
+      "model": {
+        "working": "Profit = number of kitchens × (price − cost per kitchen).<br />Before: 40 × (£8,000 − £6,500) = 40 × £1,500 = <strong>£60,000</strong>.<br />After: 48 × (£8,400 − £7,150) = 48 × £1,250 = <strong>£60,000</strong>.<br />Change = £60,000 − £60,000 = <strong>£0</strong>.<br />The boom brings 20% more sales, but costs have risen faster than the price, so the margin on each kitchen has shrunk from £1,500 to £1,250. The two effects cancel out.",
+        "distractors": {
+          "A": "This applies the smaller margin to the old sales only: 40 × (£1,250 − £1,500) = −£10,000. It leaves out the 8 extra kitchens, which earn 8 × £1,250 = £10,000.",
+          "C": "This counts the 8 extra kitchens at the old margin: 8 × £1,500 = £12,000. It ignores the rise in costs, which cuts the margin on every kitchen.",
+          "D": "This includes the higher price but not the higher cost: 48 × (£8,400 − £6,500) − £60,000 = £31,200. In a boom, scarce staff and materials push costs up as well."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In a boom, a maker of electric bikes is running its factory at full capacity, and the wait for a new bike has grown from two weeks to ten. If it cannot raise its output, the most likely effect on the firm is that",
+      "options": {
+        "A": "It cuts its prices to clear the waiting list.",
+        "B": "It loses sales, as some customers buy from rivals.",
+        "C": "Its sales are unaffected, as customers will wait.",
+        "D": "Its sales rise as fast as its orders do."
+      },
+      "answer": "B",
+      "model": {
+        "working": "At full capacity the firm cannot make more bikes, however many are ordered.<br />Orders outgrow output → delivery times lengthen → some customers will not wait ten weeks and go to rivals → the firm <strong>loses sales</strong> unless it invests or hires to raise its capacity.",
+        "distractors": {
+          "A": "Cutting prices would raise orders further, and the firm cannot meet the ones it already has. With demand above what it can supply, it is more likely to raise its prices.",
+          "C": "Some customers will wait, but not all of them. A ten-week wait sends some buyers to rivals who can deliver sooner.",
+          "D": "Sales are limited by what the firm can make. At full capacity, extra orders turn into a longer wait, not extra sales."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A wholesaler of building materials stays profitable through a recession. But its customers now take about 75 days to pay instead of 30, and its bank cuts its overdraft limit. The main risk to the wholesaler is that it",
+      "options": {
+        "A": "Cannot pay its suppliers and staff on time.",
+        "B": "Faces no real risk while it stays profitable.",
+        "C": "Loses the revenue from sales paid for late.",
+        "D": "Makes a loss on each sale it makes."
+      },
+      "answer": "A",
+      "model": {
+        "working": "In a recession <strong>cash gets tight</strong>. Customers paying later → less cash coming in each month. A smaller overdraft → less to fall back on.<br />The wholesaler still has to pay its suppliers and staff on time, so it can run out of cash even while it is <strong>profitable</strong>. That is how profitable firms fail.",
+        "distractors": {
+          "B": "Profit and cash are different. A firm can make a profit on paper and still be unable to pay its bills if the cash from its sales arrives too late.",
+          "C": "Late payment delays the cash, but the revenue is still earned. Unless a customer fails to pay at all, the sale is not lost.",
+          "D": "Nothing in the stem changes the price or cost of each sale, and the firm is still profitable. The problem is when the cash arrives, not the margin on each sale."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-1-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Two rival hotel groups enter a long recession with similar sales. Group X has large bank loans to repay; Group Y has no debt and £30 million in cash. By the end of the recession, the most likely outcome is that",
+      "options": {
+        "A": "Both groups are equally placed, as their sales are similar.",
+        "B": "Group X does better, as its loans let it keep investing.",
+        "C": "Group Y buys hotels cheaply from weaker rivals.",
+        "D": "Group Y does worse, as its cash earns little interest."
+      },
+      "answer": "C",
+      "model": {
+        "working": "How a recession hits a firm depends partly on <strong>how much it borrows</strong>.<br />Group X's sales fall while its loan repayments do not → it struggles to pay and may have to sell hotels.<br />Group Y has <strong>cash reserves</strong> → it can ride out the fall in sales, and can buy hotels cheaply from rivals that need to sell, such as Group X.",
+        "distractors": {
+          "A": "Similar sales do not mean similar risks. Group X must keep up its loan repayments as sales fall; Group Y has nothing to repay.",
+          "B": "The loans have already been spent, and they must be repaid out of falling sales. Debt makes a firm weaker in a recession, not stronger.",
+          "D": "Holding cash earns little, but in a long recession it keeps the firm safe and lets it buy assets cheaply. The lost interest is small next to that."
+        }
+      }
+    }
+  ]
+}

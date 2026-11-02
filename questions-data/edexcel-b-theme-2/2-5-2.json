@@ -1,0 +1,177 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.5.2",
+  "slug": "2-5-2-circular-flow-of-income",
+  "title": "Circular Flow of Income, Expenditure and Output",
+  "shortTitle": "Circular Flow of Income, Expenditure and Output",
+  "pageTitle": "Circular Flow of Income, Expenditure and Output Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on the circular flow for Edexcel B A-Level Economics: income and output, injections and withdrawals, and what changes AD and AS.",
+  "intro": "Six original multiple-choice questions on the circular flow of income: why income, spending and output match, what injections and withdrawals do to the flow, and what changes aggregate demand and aggregate supply.",
+  "notesTeaser": "Six original multiple-choice questions on the circular flow of income, injections and withdrawals, and the factors that change aggregate demand and aggregate supply.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-5-2-q1",
+      "skill": "calculation",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In a simple economy with only households and firms, households receive £560 million in wages, £70 million in rent, £50 million in interest and £220 million in profit in a year. They spend all of it on firms' goods and services. The value of the economy's output for the year is",
+      "options": {
+        "A": "£220 million",
+        "B": "£680 million",
+        "C": "£900 million",
+        "D": "£1,800 million"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Output, income and expenditure measure the same flow at three points, so in theory they are equal.<br />Income = £560m + £70m + £50m + £220m = <strong>£900 million</strong>.<br />All of it is spent on firms' output, so expenditure is £900 million, and output is worth <strong>£900 million</strong> too. Every pound spent on a product is a pound of income for whoever helped to make it.",
+        "distractors": {
+          "A": "This is profit alone. Profit is only the income paid to the owners of enterprise; output is worth the income paid to all four factors.",
+          "B": "This adds wages, rent and interest but leaves out profit: £560m + £70m + £50m = £680m. Profit is income too, paid to the owners of firms for their enterprise.",
+          "D": "This adds income and spending together: £900m + £900m. They are the same £900 million measured at two points in the flow, so adding them counts it twice."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "UK households switch much of their holiday spending from UK hotels to hotels abroad. Their total spending does not change. All other things being equal, the UK's circular flow of income",
+      "options": {
+        "A": "Grows, as spending on holidays is an injection.",
+        "B": "Is unchanged, as total spending has not changed.",
+        "C": "Shrinks, as more income leaves the flow as exports.",
+        "D": "Shrinks, as more income leaves the flow as imports."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Spending by UK households on services from abroad is an <strong>import</strong>, and imports are a <strong>withdrawal</strong>: income that leaves the flow instead of being spent on the UK's own output.<br />Withdrawals rise while injections are unchanged → UK hotels lose sales → they cut staff and pay out less in wages → those workers spend less → the flow <strong>shrinks</strong>.",
+        "distractors": {
+          "A": "Injections are investment, government spending and exports. Holidays bought abroad by UK households are imports, which take money out of the flow.",
+          "B": "Total spending is unchanged, but less of it is now spent on UK output. Only spending on UK goods and services stays in the UK's circular flow.",
+          "C": "The direction is right, but the withdrawal is misnamed. Exports are sales by UK firms to foreign buyers, an injection. UK households buying from abroad are imports."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-q3",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK university takes on more students from overseas, whose fees are paid by their families abroad. In the UK's circular flow of income, these fees are",
+      "options": {
+        "A": "A withdrawal, as the money comes from abroad.",
+        "B": "An injection, as they are investment in education.",
+        "C": "An injection, as they are spending on UK exports.",
+        "D": "Neither, as fees for a service are not trade."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Exports are spending by foreign buyers on UK goods <strong>and services</strong>. Education sold to students from abroad is a service export.<br />Exports are an <strong>injection</strong>: spending that enters the flow from outside the household-firm loop. The fees become income for the university and its staff, who spend it in the UK.",
+        "distractors": {
+          "A": "Money arriving from abroad adds to the flow; it does not leave it. A withdrawal is income that leaves the flow, such as UK spending on imports.",
+          "B": "The right category, but the wrong component. Investment is firms' spending on capital goods such as buildings and machinery. Fees paid for teaching are spending on a service, which makes them exports.",
+          "D": "Trade covers services as well as goods. A UK firm selling a service to a foreign buyer is exporting it, whether the service is education, banking or tourism."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK firm makes industrial ovens, which it sells only to UK bakeries and food factories when they expand. The change most likely to raise its orders is that",
+      "options": {
+        "A": "Bank Rate rises by one percentage point.",
+        "B": "Food firms expect their sales to grow strongly.",
+        "C": "The government raises teachers' pay.",
+        "D": "The state pension rises by 5%."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The firm's ovens are capital goods, so its orders are part of <strong>investment (I)</strong>.<br />Investment depends on expected future sales, interest rates, retained profit, business confidence and technology. Food firms expecting strong sales → they need more capacity → they buy more ovens.",
+        "distractors": {
+          "A": "A higher Bank Rate makes borrowing dearer, so firms invest less. It would cut the firm's orders, not raise them.",
+          "C": "Teachers' pay is government spending (G). It raises AD, but it is not spending on ovens, and any effect on the firm would be small and indirect.",
+          "D": "Pensions are transfers, so they enter AD only as consumption (C) when pensioners spend them. That reaches the bakeries' sales only slightly and slowly."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four UK firms' total costs for a year, and how much of each firm's costs is spent on energy. Energy prices then rise by 50%, and nothing else changes.<br />Using Table 1, the firm whose total costs rise by the largest percentage is",
+      "table": {
+        "caption": "Table 1: Yearly costs of four firms",
+        "head": [
+          "",
+          "Total costs per year",
+          "Of which: energy"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "£400,000",
+            "£80,000"
+          ],
+          [
+            "Firm 2",
+            "£10,000,000",
+            "£300,000"
+          ],
+          [
+            "Firm 3",
+            "£150,000",
+            "£6,000"
+          ],
+          [
+            "Firm 4",
+            "£2,000,000",
+            "£240,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "A",
+      "model": {
+        "working": "How hard a rise in input costs hits a firm depends on how much that input matters to it. Each firm's costs rise by its energy share × 50%.<br />Firm 1: £80,000 ÷ £400,000 = 20% → 20% × 50% = <strong>10%</strong>.<br />Firm 2: 3% → 1.5%. Firm 3: 4% → 2%. Firm 4: 12% → 6%.<br />Firm 1 has the second-smallest energy bill but the largest energy share, so its costs rise most in proportion. Firms like it are the ones most likely to raise prices or supply less, which is how dearer inputs reduce aggregate supply.",
+        "distractors": {
+          "B": "Firm 2 has the largest energy bill, so its costs rise most in pounds (£150,000). But that is only 1.5% of its £10 million costs.",
+          "C": "Firm 3 is the smallest firm, but energy is only 4% of its costs, so they rise by 2%. Size does not decide it; the energy share does.",
+          "D": "Firm 4 has a large energy bill and a sizeable share, 12%, so its costs rise by 6%. That is still less than Firm 1's 10%."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-5-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A UK supermarket chain buys £50 million of new refrigerated lorries, all of them made in Germany. All other things being equal, the effect of this purchase on UK aggregate demand is that it",
+      "options": {
+        "A": "Falls by £50 million, as imports rise.",
+        "B": "Is unchanged, as I and M both rise by £50 million.",
+        "C": "Rises by £50 million, as investment rises.",
+        "D": "Rises by £100 million, as I and M both rise."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Aggregate demand is total spending on the <strong>UK's</strong> goods and services: AD = C + I + G + (X − M).<br />The lorries are capital goods, so investment (I) rises by £50 million.<br />They are made abroad, so imports (M) also rise by £50 million.<br />AD changes by +£50m − £50m = <strong>£0</strong>. None of the spending is on UK output.",
+        "distractors": {
+          "A": "Imports do rise by £50 million, but so does investment. The two cancel, as the spending is counted in I and then taken away again in M.",
+          "C": "Investment does rise by £50 million, but the lorries come from Germany, so imports rise by the same amount. M is subtracted in AD, which cancels the rise in I.",
+          "D": "This adds imports instead of taking them away. In AD = C + I + G + (X − M), a rise in M reduces AD."
+        }
+      }
+    }
+  ]
+}
