@@ -1,0 +1,176 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.1.3",
+  "slug": "3-1-3-trading-blocs",
+  "title": "Trading Blocs",
+  "shortTitle": "Trading Blocs",
+  "pageTitle": "Trading Blocs Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Five free multiple-choice questions on trading blocs for Edexcel B A-Level Economics: trade creation and diversion, the EU, USMCA, firms and interdependence.",
+  "intro": "Five original multiple-choice questions on trading blocs: trade creation and trade diversion, the EU single market and USMCA, the impact of blocs on firms, and growing interdependence. Two use data tables.",
+  "notesTeaser": "Five original multiple-choice questions on trade creation and diversion, the single market, USMCA, the impact on firms and interdependence.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-1-3-q1",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A country charges a 25% tariff on every imported bicycle. Table 1 shows what a standard bicycle costs to make in three places, and each producer sells at that cost before any tariff. The country then joins a trading bloc with Country Q, but not with Country P. Buyers always choose the cheapest bicycle.<br />Using Table 1, the change in where the country buys its bicycles is",
+      "table": {
+        "caption": "Table 1: Cost of making a standard bicycle",
+        "head": [
+          "Producer",
+          "Cost to make"
+        ],
+        "rows": [
+          [
+            "Country P",
+            "£160"
+          ],
+          [
+            "Country Q",
+            "£180"
+          ],
+          [
+            "Home producers",
+            "£215"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Trade creation, as buyers now pay £20 less.",
+        "B": "Trade creation, as a tariff has been removed.",
+        "C": "Trade diversion, as buyers now pay £20 more.",
+        "D": "Trade diversion, as Q makes them for £20 more."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Before joining, with the 25% tariff on all imports:<br />P: £160 × 1.25 = <strong>£200</strong>. Q: £180 × 1.25 = <strong>£225</strong>. Home: <strong>£215</strong>. Buyers choose P.<br />After joining, Q's bicycles enter tariff-free at <strong>£180</strong>, while P's still cost £200. Buyers switch to Q.<br />Trade has moved from a lower-cost producer outside the bloc (£160) to a higher-cost producer inside it (£180). That is <strong>trade diversion</strong>: the tariff, not the cost of making the bicycle, now decides where it is bought. Consumers pay £20 less, but the government loses £40 of tariff revenue on each bicycle.",
+        "distractors": {
+          "A": "Buyers do pay £20 less, but that does not make it trade creation. Creation means switching from a dearer <strong>home</strong> producer to a cheaper member. Here buyers have switched from P, a cheaper producer outside the bloc.",
+          "B": "Joining any bloc removes tariffs on members, so this cannot tell creation from diversion. What decides it is where the goods came from before: here, from a lower-cost outside producer.",
+          "C": "This gets the classification right but the consumers wrong. Buyers paid £200 for P's bicycle and now pay £180 for Q's. In trade diversion consumers usually pay less; the cost is lost efficiency and lost tariff revenue."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A Dutch building firm cannot find enough qualified electricians in the Netherlands. Compared with belonging only to a free trade area, the main extra benefit to the firm of the Netherlands being in the EU single market is that",
+      "options": {
+        "A": "Materials from other members arrive without tariffs.",
+        "B": "Electricians from other members can work for it freely.",
+        "C": "Goods from outside the bloc arrive without tariffs.",
+        "D": "Its prices are protected from rivals in other members."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>free trade area</strong> removes tariffs and quotas on trade between members. A <strong>single market</strong> goes further: services, capital and workers also move freely between members, under one set of product rules.<br />The firm's problem is a shortage of electricians. In a single market, workers can move between members → the firm can fill vacancies from across the bloc → fewer skills shortages and less pressure on wages.",
+        "distractors": {
+          "A": "Tariff-free materials from other members are true of a free trade area too, so this is not an <strong>extra</strong> benefit of the single market. It also does nothing about the shortage of electricians.",
+          "C": "No type of bloc removes tariffs on goods from outside it. A single market sets a common external tariff on them.",
+          "D": "A bloc does the opposite. Rivals from other members sell freely in the firm's home market, which pushes its prices down."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-q3",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 shows two facts about the exports of four countries that belong to the same trading bloc.<br />Using Table 1, the country most exposed to a recession in the rest of the bloc, measured by its exports to other members as a share of its GDP, is",
+      "table": {
+        "caption": "Table 1: Exports of four members of a trading bloc",
+        "head": [
+          "",
+          "Exports as a share of GDP",
+          "Share of exports sold to other members"
+        ],
+        "rows": [
+          [
+            "Country 1",
+            "80%",
+            "25%"
+          ],
+          [
+            "Country 2",
+            "30%",
+            "70%"
+          ],
+          [
+            "Country 3",
+            "50%",
+            "50%"
+          ],
+          [
+            "Country 4",
+            "20%",
+            "90%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Country 1.",
+        "B": "Country 2.",
+        "C": "Country 3.",
+        "D": "Country 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Exports to other members as a share of GDP = exports as a share of GDP × share of exports sold to members.<br />Country 1: 80% × 25% = <strong>20%</strong> of GDP.<br />Country 2: 30% × 70% = <strong>21%</strong>.<br />Country 3: 50% × 50% = <strong>25%</strong>.<br />Country 4: 20% × 90% = <strong>18%</strong>.<br />Country 3 is the most interdependent with the rest of the bloc. A recession in the rest of the bloc spreads: incomes in other members fall → they buy fewer of Country 3's exports → its output falls and its firms cut jobs.",
+        "distractors": {
+          "A": "Country 1 exports the largest share of its GDP, but only a quarter of those exports go to the bloc. Its sales to members are 20% of GDP, less than Country 3's 25%.",
+          "B": "Country 2 comes close, at 21% of GDP. But Country 3's 25% is higher, so it is more exposed.",
+          "D": "Country 4 sends the largest share of its exports to the bloc, and it also comes top if the two percentages are added. But exports are only 20% of its GDP, so sales to members are just 18% of GDP. The two shares must be multiplied."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Under the USMCA, which replaced NAFTA in 2020, a car made in Mexico qualifies for the agreement's tariff-free access to the US only if more of its parts are made in North America than NAFTA required. A Mexican car plant's cars met NAFTA's rule but not the new one, because its engines come from Japan, where they cost less than any made in North America.<br />If the plant keeps selling into the US, the most likely effect on its costs is",
+      "options": {
+        "A": "Higher costs, from dearer engines or the US tariff.",
+        "B": "Lower costs, as engines from Japan now enter tariff-free.",
+        "C": "Lower costs, as it now sells across a bigger market.",
+        "D": "No change in costs, as Mexico is still in the agreement."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The USMCA keeps most North American trade tariff-free but requires more of a car's parts to be made in the region before it qualifies.<br />The plant's cars no longer qualify, so it has two choices. It can switch to engines made in North America, which cost more than Japan's, or keep the Japanese engines and pay the tariff on cars sold into the US. Either way its costs rise.<br />The rule is meant to move parts production into North America. For this plant, it works like a barrier against cheaper suppliers outside the bloc.",
+        "distractors": {
+          "B": "The rule does nothing to the tariff on engines from Japan, which is outside the agreement. It makes using those engines more costly, because the finished cars lose their tariff-free access.",
+          "C": "The plant already sold into the US under NAFTA, so its market has not grown. The new rule makes selling there harder, not easier.",
+          "D": "Being in the agreement is not enough: each car must meet the parts rule to travel tariff-free. These cars no longer do."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-3-q5",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The UK left the EU single market and customs union at the end of 2020. A UK cheese maker has kept exporting to France, and its cheese meets the rules of origin in the UK's trade deal with the EU. Compared with before 2021, the main change the firm faces is",
+      "options": {
+        "A": "A quota limiting how much cheese it can send.",
+        "B": "A tariff on every cheese it sells in France.",
+        "C": "Customs forms and checks, but no tariff.",
+        "D": "No change, as the deal keeps it tariff-free."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The UK's trade deal with the EU keeps goods free of tariffs and quotas if they meet the deal's rules of origin. But outside the single market and customs union, exporters now fill in customs declarations and face border checks.<br />So the cheese still enters France tariff-free, but each shipment carries paperwork and the risk of delay. These costs fall hardest on small exporters.",
+        "distractors": {
+          "A": "The trade deal keeps goods that meet its rules of origin free of quotas as well as tariffs. The firm can send as much cheese as it sells.",
+          "B": "The cheese meets the rules of origin, so it enters France tariff-free under the deal.",
+          "D": "Tariff-free is not the same as no change. Leaving the single market brought customs declarations and border checks, even for goods that pay no tariff."
+        }
+      }
+    }
+  ]
+}

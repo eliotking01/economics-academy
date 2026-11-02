@@ -1,0 +1,207 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.1.1",
+  "slug": "3-1-1-growing-economies",
+  "title": "Growing Economies",
+  "shortTitle": "Growing Economies",
+  "pageTitle": "Growing Economies Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Six free multiple-choice questions on growing economies for Edexcel B A-Level Economics: emerging markets, rising incomes, real values and index numbers.",
+  "intro": "Six original multiple-choice questions on growing economies: the rising economic power of emerging markets, what their growth means for firms and workers, rising incomes, converting nominal values to real ones, and index numbers. Two are calculations.",
+  "notesTeaser": "Six original multiple-choice questions on emerging economies, what their growth means for firms, rising incomes, real values and index numbers.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-1-1-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 shows four economies' shares of world GDP, measured at purchasing power parity (PPP), in 2005 and 2025. World output grew over the period.<br />Using Table 1, the only conclusion that can be drawn is that",
+      "table": {
+        "caption": "Table 1: Share of world GDP (PPP), 2005 and 2025",
+        "head": [
+          "",
+          "2005",
+          "2025"
+        ],
+        "rows": [
+          [
+            "Economy W",
+            "16.0%",
+            "12.0%"
+          ],
+          [
+            "Economy X",
+            "2.5%",
+            "5.0%"
+          ],
+          [
+            "Economy Y",
+            "4.0%",
+            "4.0%"
+          ],
+          [
+            "Economy Z",
+            "1.2%",
+            "0.9%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Economy W produced less in 2025 than in 2005.",
+        "B": "Economy X's output grew faster than world output.",
+        "C": "Economy Y's output was the same in 2025 as in 2005.",
+        "D": "Economy Z's output fell by a quarter."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A share of world GDP is an economy's output divided by world output. It can only rise if the economy grows <strong>faster</strong> than the world as a whole.<br />Economy X's share doubled, from 2.5% to 5.0%, so its output must have grown faster than world output. That is the one conclusion the table supports on its own.<br />The others all forget that world output grew. A falling share means an economy grew more slowly than the world, not that it shrank. This is how the UK's share has fallen since 2000 while its real GDP still rose.",
+        "distractors": {
+          "A": "This reads a falling share as falling output. Economy W's share fell by a quarter, but world output grew, so W may well have grown too, only more slowly than the world. The table cannot say W produced less.",
+          "C": "A steady share means Economy Y grew at the same rate as the world. Since world output grew, Y's output must have <strong>grown</strong>, not stayed the same.",
+          "D": "This applies the fall in the share, from 1.2% to 0.9%, to Z's output. The share fell by a quarter, but world output grew, so Z's own output fell by less than that, or may have risen."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Average incomes in an emerging economy rise quickly for a decade. A UK firm sells branded sportswear there, and also has its sportswear made in the same country's factories.<br />All other things being equal, the most likely effect on the firm is",
+      "options": {
+        "A": "Higher sales there, and higher production costs.",
+        "B": "Higher sales there, and lower production costs.",
+        "C": "Lower sales there, and higher production costs.",
+        "D": "Lower sales there, and lower production costs."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Rising incomes work on both sides of this firm's business.<br /><strong>Sales:</strong> as incomes rise, spending moves away from basics towards branded goods → demand for income-elastic products such as branded sportswear grows fastest → the firm sells more there.<br /><strong>Costs:</strong> wages rise with incomes → making the sportswear in that country costs more → its cost advantage shrinks.<br />So the firm gains a bigger market but loses part of the reason it produced there. That is why some firms move production on to cheaper countries as an economy grows.",
+        "distractors": {
+          "B": "This gets the sales right but assumes growth makes production cheaper. Rising incomes mean rising <strong>wages</strong>, so the cost of making goods in that country goes up, not down.",
+          "C": "This gets the costs right but treats branded sportswear as if demand for it falls as incomes rise. Branded goods are income-elastic: demand for them grows fastest as people get richer.",
+          "D": "Both halves are reversed. Rising incomes raise demand for branded goods and raise wages, so sales and costs both rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-q3",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A UK maker of kitchen knives closes its own factory in Sheffield. It buys the knives from a supplier in Vietnam instead, where they cost less to make, and sells them under its own brand as before. This is an example of",
+      "options": {
+        "A": "Diversification.",
+        "B": "Economies of scale.",
+        "C": "Rationalisation.",
+        "D": "Vertical integration."
+      },
+      "answer": "C",
+      "model": {
+        "working": "<strong>Rationalisation</strong> is reorganising a business to cut its costs, for example by closing sites, cutting jobs or moving production elsewhere.<br />The firm closes its factory and moves production to a lower-cost country → its unit costs fall → it can cut its prices or raise its profit margin. Growing economies give firms these new places to produce.",
+        "distractors": {
+          "A": "Diversification means moving into new products or markets. The firm sells the same knives, under the same brand, to the same customers. Only where they are made has changed.",
+          "B": "Economies of scale are lower unit costs from producing on a larger scale. The firm's costs fall here because the knives are made somewhere cheaper, not because it makes more of them.",
+          "D": "Vertical integration would mean the firm taking over a stage of production, such as buying its supplier. It has done the opposite: it has stopped making the knives itself and buys them in."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Emerging economies grow quickly for many years, building up low-cost manufacturing as they do. Of the following UK firms, the one most likely to lose from that growth is",
+      "options": {
+        "A": "A firm running English courses for students from abroad.",
+        "B": "A firm making machinery it exports to Asian factories.",
+        "C": "A firm making scanners it exports to hospitals worldwide.",
+        "D": "A firm making basic towels in the UK, sold on low price."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The effect of growth abroad on a UK firm depends on what it sells. A firm whose product is wanted in emerging markets gains a bigger market. A firm competing on price with low-cost producers is the one most likely to lose.<br />Basic towels are a simple product that emerging economies can make cheaply → low-cost imports undercut the UK maker → it loses sales, and may close or move production abroad.",
+        "distractors": {
+          "A": "Education is income-elastic. As incomes rise in emerging economies, more families can pay for courses abroad, so this firm gains customers.",
+          "B": "Factories in growing economies need machines, so this firm gains a bigger export market. Growth abroad is an opportunity for firms whose products those economies want to buy.",
+          "C": "Specialist scanners are not something low-cost producers compete on price for. Growing economies are building more hospitals, so this firm gains new export markets."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-q5",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK homeware brand buys cushions from a factory in an emerging economy. The factory's workers earned an average of $250 a month in 2018 and $360 a month in 2024. A price index of the goods the workers buy, measured in dollars and with 2018 = 100, stood at 120 in 2024.<br />Measured in 2018 prices, the average monthly wage in 2024 was",
+      "options": {
+        "A": "$288",
+        "B": "$300",
+        "C": "$360",
+        "D": "$432"
+      },
+      "answer": "B",
+      "model": {
+        "working": "To convert a nominal value into a real one, divide by the price index and multiply by 100:<br />Real wage = $360 ÷ 120 × 100 = <strong>$300</strong>, in 2018 prices.<br />Money wages rose by 44%, from $250 to $360, but prices rose by 20%. In what it will buy, the 2024 wage is worth $300, so real wages rose by 20%. For the UK brand, this is part of how a low-cost country's cost advantage shrinks as it grows.",
+        "distractors": {
+          "A": "This takes 20% off the 2024 wage: $360 × 0.8 = $288. Prices rising by 20% means dividing by 1.2, not taking away 20%. The two are not the same.",
+          "C": "This is the nominal wage, measured in 2024 prices. It has not been adjusted for the 20% rise in prices since 2018.",
+          "D": "This multiplies by the price index instead of dividing by it: $360 × 1.2 = $432. That adds inflation on rather than taking it out."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-1-q6",
+      "skill": "data-table",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "Table 1 shows an index of real GDP for four emerging economies, with 2010 = 100.<br />Using Table 1, the economy whose real GDP grew fastest between 2015 and 2025 is",
+      "table": {
+        "caption": "Table 1: Index of real GDP (2010 = 100)",
+        "head": [
+          "",
+          "2015",
+          "2025"
+        ],
+        "rows": [
+          [
+            "Economy P",
+            "200",
+            "270"
+          ],
+          [
+            "Economy Q",
+            "150",
+            "207"
+          ],
+          [
+            "Economy R",
+            "330",
+            "396"
+          ],
+          [
+            "Economy S",
+            "130",
+            "182"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Economy P.",
+        "B": "Economy Q.",
+        "C": "Economy R.",
+        "D": "Economy S."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Neither year is the base year, so the percentage change has to be worked out from the old index number to the new one: (new − old) ÷ old × 100.<br />P: (270 − 200) ÷ 200 × 100 = <strong>35%</strong>.<br />Q: (207 − 150) ÷ 150 × 100 = <strong>38%</strong>.<br />R: (396 − 330) ÷ 330 × 100 = <strong>20%</strong>.<br />S: (182 − 130) ÷ 130 × 100 = <strong>40%</strong>.<br />Economy S grew fastest, even though its index rose by the fewest points. A change in points is not a change in per cent.",
+        "distractors": {
+          "A": "Economy P's index rose by the most points, 70. But a 70-point rise from 200 is only 35%. Points only equal per cent when measured from the base year's 100.",
+          "B": "Economy Q comes a close second, at 38%. Work each percentage change out fully: S's rise of 52 points from 130 is 40%.",
+          "C": "Economy R has the highest index in both years, so it has grown most <strong>since 2010</strong>. Between 2015 and 2025 it grew by only 20%, the slowest of the four."
+        }
+      }
+    }
+  ]
+}

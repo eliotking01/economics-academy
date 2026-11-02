@@ -1,0 +1,242 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-3",
+  "boardName": "Edexcel B Theme 3",
+  "spec": "3.1.4",
+  "slug": "3-1-4-trade-policy-and-trade-negotiations",
+  "title": "Trade Policy and Trade Negotiations",
+  "shortTitle": "Trade Policy and Trade Negotiations",
+  "pageTitle": "Trade Policy and Negotiations Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on trade policy for Edexcel B A-Level Economics: tariffs, quotas, other trade barriers, subsidies and the WTO and IMF.",
+  "intro": "Seven original multiple-choice questions on trade policy and trade negotiations: tariffs and import quotas, other trade barriers and domestic subsidies, retaliation, the role of the WTO, IMF, World Bank and G20, and bilateral trade agreements. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on tariffs, quotas, other trade barriers, subsidies, international institutions and bilateral agreements.",
+  "questions": [
+    {
+      "id": "edexcel-b-3-1-4-q1",
+      "skill": "calculation",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A country can import as much cement as it wants at the world price of £5 a bag. The government then puts a tariff of £1 on each imported bag. Table 1 shows the home market before and after.<br />Using Table 1, the government's revenue from the tariff is",
+      "table": {
+        "caption": "Table 1: The home market for cement",
+        "head": [
+          "",
+          "Price per bag",
+          "Bags made at home",
+          "Bags bought"
+        ],
+        "rows": [
+          [
+            "Before the tariff",
+            "£5",
+            "30,000",
+            "100,000"
+          ],
+          [
+            "After the tariff",
+            "£6",
+            "40,000",
+            "90,000"
+          ]
+        ]
+      },
+      "options": {
+        "A": "£50,000",
+        "B": "£70,000",
+        "C": "£90,000",
+        "D": "£300,000"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The government collects the tariff on each bag that is still imported after the tariff.<br />Imports after the tariff = bags bought − bags made at home = 90,000 − 40,000 = <strong>50,000</strong>.<br />Revenue = 50,000 × £1 = <strong>£50,000</strong>.<br />The tariff raised home output by 10,000 bags and cut consumption by 10,000, so imports fell from 70,000 to 50,000. Home producers gain, consumers lose, and the government gains this revenue.",
+        "distractors": {
+          "B": "This charges the tariff on the 70,000 bags imported <strong>before</strong> the tariff. The tariff itself cuts imports, so revenue is collected only on the 50,000 still imported.",
+          "C": "This charges the tariff on every bag bought, including the 40,000 made at home. A tariff is a tax on imported goods only.",
+          "D": "This multiplies imports by the new price of £6, which gives total spending on imports. The government receives only the £1 tariff on each bag."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "A government replaces its tariff on imported tyres with an import quota. The quota lets in exactly as many tyres as were imported under the tariff, so the price in the home market does not change. The government gives the right to sell within the quota, free of charge, to foreign tyre makers.<br />Sketching both diagrams, the area that was the government's tariff revenue now goes to",
+      "options": {
+        "A": "Consumers, as part of their surplus is restored.",
+        "B": "Domestic producers, as they sell more tyres.",
+        "C": "Foreign firms allowed to sell within the quota.",
+        "D": "The government, as the quantity imported is unchanged."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Sketch the tariff diagram: the world price rises to the world price plus the tariff, and the government collects the tariff on each unit still imported.<br />Now sketch the quota that lets in the same quantity: the home price rises to the same level, home output and consumption are the same, and imports are the same.<br />The one difference is who gets the gap between the world price and the higher home price on each imported tyre. Under a tariff it is the government's revenue. Under a quota the government collects nothing, and the gain goes to the <strong>foreign firms allowed to sell</strong>, who sell at the higher home price.",
+        "distractors": {
+          "A": "The home price is unchanged, so consumers pay just as much and buy just as many tyres. None of their lost surplus comes back.",
+          "B": "Home producers face the same price under both policies, so they sell the same number of tyres. Their gain was already counted under the tariff.",
+          "D": "The quantity imported is the same, but a quota is not a tax. The government collects no revenue from it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-q3",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Table 1 describes four rules that a country applies to goods sold within it.<br />Using Table 1, the rule most likely to count as protectionism is",
+      "table": {
+        "caption": "Table 1: Four rules on goods sold in a country",
+        "head": [
+          "",
+          "The rule"
+        ],
+        "rows": [
+          [
+            "Rule 1",
+            "Every food label must list allergens, on home and imported food alike"
+          ],
+          [
+            "Rule 2",
+            "Children's toys may not contain lead paint, wherever they were made"
+          ],
+          [
+            "Rule 3",
+            "All new cars must have rear seatbelts, whether built at home or abroad"
+          ],
+          [
+            "Rule 4",
+            "Wine may be sold only in 0.6-litre bottles, a size used by home producers alone"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Rule 1.",
+        "B": "Rule 2.",
+        "C": "Rule 3.",
+        "D": "Rule 4."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Government legislation on products often has a genuine aim, such as safety. A rule counts as protectionism when its <strong>main effect is to keep foreign goods out</strong>.<br />Rule 4 has no safety or health purpose. Its effect is that every foreign winemaker must rebottle in a size only home producers use, which adds cost and keeps imports out.<br />Rules 1 to 3 apply the same standard to every producer, with a clear safety aim.",
+        "distractors": {
+          "A": "Allergen labelling protects consumers' health and applies equally to home and imported food. Foreign producers may have to relabel, but keeping them out is not its main effect.",
+          "B": "A ban on lead paint is a safety rule that applies wherever the toy was made. Its aim is to protect children, and any toymaker can meet it.",
+          "C": "Rear seatbelts are a safety standard for every new car sold, whoever built it. The rule keeps out unsafe cars, not foreign ones."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government wants to protect its steel makers from cheaper imports. It is choosing between a tariff on imported steel and a subsidy paid to home steel makers, each expected to give them the same rise in sales.<br />Compared with the tariff, the subsidy means",
+      "options": {
+        "A": "A higher price for steel users, and revenue for the government.",
+        "B": "A higher price for steel users, and a cost to the government.",
+        "C": "No rise in price for steel users, and revenue for the government.",
+        "D": "No rise in price for steel users, and a cost to the government."
+      },
+      "answer": "D",
+      "model": {
+        "working": "A <strong>subsidy</strong> is a payment from the government to producers that lowers their costs.<br />Price: the subsidy lowers home steel makers' unit costs → they can match the price of imports → they win back sales without the price of steel rising. A tariff wins them sales by raising the price of imports.<br />Budget: the tariff raises revenue, but the subsidy has to be paid for, through taxes or borrowing, or by spending less elsewhere.<br />So with a subsidy, steel users pay no more, and the cost of protection falls on taxpayers instead.",
+        "distractors": {
+          "A": "This describes the tariff, not the subsidy. A tariff raises the price of imported steel and brings in revenue.",
+          "B": "This gets the government's side right but not the price. The subsidy lets home producers match the import price, so steel users do not pay more.",
+          "C": "This gets the price right but not the budget. A subsidy is a payment by the government, so it costs money rather than raising it."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Table 1 describes four international bodies.<br />Using Table 1, the World Bank is",
+      "table": {
+        "caption": "Table 1: Four international bodies",
+        "head": [
+          "",
+          "What it does"
+        ],
+        "rows": [
+          [
+            "Body 1",
+            "Sets the rules of world trade and settles disputes between members"
+          ],
+          [
+            "Body 2",
+            "Lends to countries in a balance of payments crisis, with conditions attached"
+          ],
+          [
+            "Body 3",
+            "Funds long-term projects such as roads and power in developing countries"
+          ],
+          [
+            "Body 4",
+            "Brings leaders of large economies together each year, with no power to enforce"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Body 1.",
+        "B": "Body 2.",
+        "C": "Body 3.",
+        "D": "Body 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>World Bank</strong> lends to and funds developing countries for long-term projects, such as roads, power and schools, to reduce poverty.<br />Body 1 is the WTO, Body 2 the IMF and Body 4 the G20.",
+        "distractors": {
+          "A": "Setting trade rules and settling disputes is the role of the World Trade Organisation (WTO).",
+          "B": "This is the International Monetary Fund (IMF), the body most often confused with the World Bank. The IMF lends to countries in financial crisis, with conditions such as spending cuts. The World Bank funds long-term development projects.",
+          "D": "This is the G20: leaders of 19 large economies, the EU and the African Union. It coordinates policy but cannot enforce what it agrees."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK maker of garden tools exports to twenty countries. Over five years the UK signs a separate bilateral trade agreement with most of them, each cutting tariffs on the firm's tools.<br />For the firm, the main drawback of so many separate deals is that",
+      "options": {
+        "A": "Each agreement has its own rules, adding paperwork.",
+        "B": "It can no longer sell to countries outside them.",
+        "C": "The agreements took longer than WTO talks would.",
+        "D": "Its tools now face higher tariffs in those countries."
+      },
+      "answer": "A",
+      "model": {
+        "working": "A <strong>bilateral trade agreement</strong> is a deal between two countries to reduce barriers to trade between them.<br />Two countries can agree far faster than the WTO's members, and can tailor the deal to the goods they trade. But each deal has its own rules → a firm trading with many countries must meet a different set for each market → more paperwork and cost.",
+        "distractors": {
+          "B": "A bilateral agreement cuts barriers with one partner. It does not stop the firm selling to any other country on the terms it had before.",
+          "C": "Speed is an advantage of bilateral deals, not a drawback. Two countries can agree far faster than all the WTO's members; the Doha round, launched in 2001, was never completed.",
+          "D": "Each agreement <strong>cuts</strong> tariffs on the firm's tools. Higher tariffs would come from retaliation, not from a trade deal."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-3-1-4-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "Country V puts a tariff on imported cars to protect jobs at its own car plants. Its trading partners respond by putting tariffs on wine, Country V's main export.<br />The most likely result is that",
+      "options": {
+        "A": "Car makers and winemakers in V both gain sales.",
+        "B": "Car makers in V gain sales, and winemakers lose them.",
+        "C": "Car makers in V lose sales, and winemakers gain them.",
+        "D": "Car makers and winemakers in V both lose sales."
+      },
+      "answer": "B",
+      "model": {
+        "working": "How well protection works depends on <strong>retaliation</strong>.<br />The tariff on cars raises the price of imported cars → V's car makers win sales at home.<br />The partners' tariff on wine raises the price of V's wine abroad → its winemakers lose export sales.<br />So exporters lose what the protected industry gains. The jobs saved at the car plants may be matched by jobs lost in the vineyards.",
+        "distractors": {
+          "A": "This ignores the retaliation. Tariffs on V's wine make it dearer abroad, so its winemakers sell less, not more.",
+          "C": "Both effects are reversed. V's own tariff protects its car makers, and the partners' tariff hits its winemakers.",
+          "D": "This assumes the retaliation hits V's car makers too. The partners' tariffs are on wine, and V's own tariff helps its car makers at home."
+        }
+      }
+    }
+  ]
+}
