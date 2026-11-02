@@ -1,0 +1,224 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.6.2",
+  "slug": "2-6-2-policy-instruments",
+  "title": "Policy Instruments",
+  "shortTitle": "Policy Instruments",
+  "pageTitle": "Policy Instruments Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Seven free multiple-choice questions on policy instruments for Edexcel B A-Level Economics: fiscal, monetary and supply-side policy, and a floating pound.",
+  "intro": "Seven original multiple-choice questions on policy instruments: how fiscal policy, monetary policy, supply-side policies and a floating exchange rate work, and their impact on firms and other economic agents. One is a calculation.",
+  "notesTeaser": "Seven original multiple-choice questions on fiscal policy, monetary policy, supply-side policies and a floating exchange rate, and their impact on firms.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-6-2-q1",
+      "skill": "data-table",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The government announces a large rise in its spending on upgrading railway lines and stations. Table 1 describes four UK firms.<br />Using Table 1, the firm most likely to see the earliest and largest rise in its orders is",
+      "table": {
+        "caption": "Table 1: Four UK firms",
+        "head": [
+          "",
+          "What it sells",
+          "Its main customers"
+        ],
+        "rows": [
+          [
+            "Firm 1",
+            "Coach travel between cities",
+            "Travellers who could take the train instead"
+          ],
+          [
+            "Firm 2",
+            "Kitchen appliances",
+            "Households across the UK"
+          ],
+          [
+            "Firm 3",
+            "Steel rails and signalling equipment",
+            "Contractors who build and repair railways"
+          ],
+          [
+            "Firm 4",
+            "Accounting software",
+            "Small firms across the UK"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Firm 1.",
+        "B": "Firm 2.",
+        "C": "Firm 3.",
+        "D": "Firm 4."
+      },
+      "answer": "C",
+      "model": {
+        "working": "Higher government spending is <strong>expansionary fiscal policy</strong>. Its first effect falls on the firms the government's money is spent with.<br />Spending on railways → contracts for the builders → orders for their suppliers of rails and signalling equipment → more output and more jobs at Firm 3.<br />Other firms gain only later, and by less, as the extra income is spent across the economy.",
+        "distractors": {
+          "A": "Coach travel competes with rail. Once the upgrades are finished, better trains are more likely to take passengers from the coach firm than to bring it orders.",
+          "B": "Households may spend a little more as the railway workers' pay is spent. But that effect comes later and is spread thinly across every shop and product.",
+          "D": "Small firms may buy a little more as the extra spending works through the economy. That is an indirect effect, smaller and slower than the direct one at Firm 3."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-q2",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "The government offers manufacturers a grant covering 30% of the cost of new, more productive machinery. This counts as a supply-side policy, not only as fiscal policy, because it",
+      "options": {
+        "A": "Lowers interest rates, so firms can borrow cheaply.",
+        "B": "Lowers the cost of investing, so capacity grows.",
+        "C": "Makes imports dearer, so UK firms win more sales.",
+        "D": "Reduces government spending, so taxes can fall."
+      },
+      "answer": "B",
+      "model": {
+        "working": "A <strong>supply-side policy</strong> raises the economy's capacity to produce.<br />The grant pays part of the cost of the machinery → investing costs firms less → more firms buy the machines → output per worker rises and the economy can produce more.<br />That effect on <strong>capacity</strong> is what makes it supply-side.",
+        "distractors": {
+          "A": "Interest rates are set by the Bank of England through monetary policy. A grant from the government leaves them unchanged.",
+          "C": "A grant does not change the price of imports. That would need a tariff, which is a different policy altogether.",
+          "D": "A grant adds to government spending; it does not reduce it. That extra spending is the fiscal side of the policy. What makes it supply-side is its effect on the economy's capacity, not on the size of the budget."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-q3",
+      "skill": "calculation",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "A brewery makes £800,000 a year in profit before tax. The government cuts the rate of corporation tax from 25% to 20%, and the brewery's profit before tax stays the same. To one decimal place, its profit after tax rises by",
+      "options": {
+        "A": "5.0%",
+        "B": "6.3%",
+        "C": "6.7%",
+        "D": "20.0%"
+      },
+      "answer": "C",
+      "model": {
+        "working": "Profit after tax before the cut: £800,000 × (100% − 25%) = <strong>£600,000</strong>.<br />Profit after tax after the cut: £800,000 × (100% − 20%) = <strong>£640,000</strong>.<br />Change: £640,000 − £600,000 = £40,000.<br />Percentage change, measured against the original value: £40,000 ÷ £600,000 × 100 = 6.67% = <strong>6.7%</strong>.<br />This is the profit the brewery keeps, and so has available to invest.",
+        "distractors": {
+          "A": "This is the cut in the tax rate, in percentage points: 25 − 20 = 5. The question asks for the percentage change in profit after tax, which needs the money figures.",
+          "B": "This divides by the new value: £40,000 ÷ £640,000 = 6.25%. A percentage change is measured against the original value, £600,000.",
+          "D": "This is the fall in the brewery's tax bill: from £200,000 to £160,000, which is 20%. The question asks about the profit it keeps after tax, not the tax it pays."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A UK maker of machine tools has no borrowing and £2 million in the bank. It sells most of its output abroad, at prices set in pounds. The Bank of England raises Bank Rate by one percentage point. The most likely effects on the firm are",
+      "options": {
+        "A": "Higher interest income, and more export orders.",
+        "B": "Higher interest income, and fewer export orders.",
+        "C": "Lower interest income, and more export orders.",
+        "D": "Lower interest income, and fewer export orders."
+      },
+      "answer": "B",
+      "model": {
+        "working": "Rates on savings follow Bank Rate, so the firm's £2 million earns more interest. With no borrowing, it pays no extra interest on loans. It <strong>gains</strong> on this side.<br />Higher UK rates attract savings from abroad → the pound tends to rise → each machine priced in pounds costs more in foreign currency → foreign buyers order fewer. It <strong>loses</strong> on this side.<br />The same rate rise helps the firm in one way and hurts it in another.",
+        "distractors": {
+          "A": "This misses the effect through the exchange rate. Higher rates tend to push the pound up, which makes the firm's machines dearer for foreign buyers.",
+          "C": "Both effects are reversed. Savings rates rise with Bank Rate, and a stronger pound makes UK exports dearer abroad.",
+          "D": "The export side is right, but rates on savings rise with Bank Rate, so a firm with cash in the bank earns more interest, not less."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-q5",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A café chain's bank lends to it at 4 percentage points above Bank Rate. Bank Rate then rises from 3% to 5%. Table 1 shows four projects the chain could pay for with a loan, and the yearly return each is expected to earn on its cost. A project is worth borrowing for only if its expected return is higher than the interest rate on the loan.<br />Using Table 1, the number of projects still worth borrowing for is",
+      "table": {
+        "caption": "Table 1: The café chain's possible projects",
+        "head": [
+          "Project",
+          "Expected yearly return"
+        ],
+        "rows": [
+          [
+            "Refitting three cafés",
+            "8%"
+          ],
+          [
+            "A delivery app",
+            "4%"
+          ],
+          [
+            "A new roastery",
+            "10%"
+          ],
+          [
+            "New coffee machines",
+            "6%"
+          ]
+        ]
+      },
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "A",
+      "model": {
+        "working": "The chain pays 4 percentage points above Bank Rate.<br />After the rise, its loan rate is 5% + 4 = <strong>9%</strong>.<br />Only the roastery, at 10%, earns more than 9%. So <strong>1</strong> project is still worth borrowing for.<br />Before the rise the loan rate was 7%, and two projects passed. Higher interest rates mean fewer projects are worth borrowing for, which is how a rise in Bank Rate cuts investment.",
+        "distractors": {
+          "B": "This uses the old loan rate, 3% + 4 = 7%, which the roastery and the refit both beat. After the rise, the loan costs 9%.",
+          "C": "This compares the returns with the new Bank Rate, 5%. The chain does not borrow at Bank Rate; it pays 4 percentage points above it.",
+          "D": "This compares the returns with the old Bank Rate, 3%. That ignores both the rise and the 4 points the bank adds on top."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-q6",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "The UK's spending on imports rises well above its earnings from exports. The pound floats, and neither the government nor the Bank of England acts. Sketching the market for pounds, the most likely result is that the pound",
+      "options": {
+        "A": "Falls, making UK exports cheaper abroad.",
+        "B": "Falls, making imports cheaper in the UK.",
+        "C": "Rises, making UK exports cheaper abroad.",
+        "D": "Rises, making imports dearer in the UK."
+      },
+      "answer": "A",
+      "model": {
+        "working": "To buy imports, UK buyers sell pounds for foreign currency. Spending on imports rising above export earnings means more pounds are being sold than foreign buyers want to buy.<br />On the sketch, the <strong>supply of pounds shifts right</strong> → the price of the pound falls.<br />A cheaper pound makes UK exports cheaper abroad and imports dearer in the UK, so the gap between them narrows. Under a <strong>floating exchange rate</strong>, this adjustment happens with no action from the government or the Bank.",
+        "distractors": {
+          "B": "The pound does fall, but a weaker pound makes imports dearer, not cheaper. Each pound now buys less foreign currency.",
+          "C": "A rising pound would make UK exports dearer abroad, not cheaper. And here more pounds are being sold, which pushes the pound down.",
+          "D": "A rising pound would make imports cheaper, not dearer. And extra spending on imports means more pounds are sold, so the pound falls."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-2-q7",
+      "skill": "applied-reasoning",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "A government cuts every out-of-work benefit, including those paid to people too ill to work, so that firms with unfilled vacancies find it easier to recruit. The group most likely to be made worse off, with nothing to make up for it, is",
+      "options": {
+        "A": "Firms that have struggled to fill their vacancies.",
+        "B": "People who move from benefits into a paid job.",
+        "C": "Taxpayers who pay for the benefit system.",
+        "D": "Those unable to work through long-term illness."
+      },
+      "answer": "D",
+      "model": {
+        "working": "Lower benefits widen the gap between income in work and out of work → more people look for jobs → firms find it easier to recruit.<br />People who <strong>cannot work</strong>, through long-term illness for example, cannot respond by taking a job. They simply receive less, so they are poorer with nothing to make up for it.",
+        "distractors": {
+          "A": "These firms are the ones the policy is meant to help. More people looking for work makes their vacancies easier to fill.",
+          "B": "These people lose their benefits, but they gain a wage, which is usually higher. That is the response the policy is designed to produce.",
+          "C": "Taxpayers gain, if anything. Lower benefits and more people in work both cut the cost of the benefit system."
+        }
+      }
+    }
+  ]
+}

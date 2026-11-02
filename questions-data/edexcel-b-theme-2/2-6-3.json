@@ -1,0 +1,256 @@
+{
+  "board": "edexcel-b",
+  "boardDir": "edexcel-b-theme-2",
+  "boardName": "Edexcel B Theme 2",
+  "spec": "2.6.3",
+  "slug": "2-6-3-policy-conflicts-and-trade-offs",
+  "title": "Potential Policy Conflicts and Trade-Offs",
+  "shortTitle": "Policy Conflicts and Trade-Offs",
+  "pageTitle": "Policy Conflicts and Trade-Offs Questions — Edexcel B A-Level Economics | Economics Academy",
+  "metaDescription": "Eight free multiple-choice questions on policy conflicts for Edexcel B A-Level Economics: inflation and unemployment, growth and externalities, side effects.",
+  "intro": "Eight original multiple-choice questions on policy conflicts and trade-offs: inflation against unemployment, growth against negative externalities, the problems of managing the economy, Keynesian and free-market views, and the unintended consequences of policy.",
+  "notesTeaser": "Eight original multiple-choice questions on the trade-offs between objectives, the issues in managing the economy, Keynesian and free-market views, and unintended consequences.",
+  "questions": [
+    {
+      "id": "edexcel-b-2-6-3-q1",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": true,
+      "stem": "Table 1 shows an economy's inflation and unemployment rates over five years. In one of Years 2 to 5, the prices of imported raw materials rose sharply.<br />Using Table 1, and sketching a short-run Phillips curve, the year in which this most likely happened is",
+      "table": {
+        "caption": "Table 1: Inflation and unemployment over five years",
+        "head": [
+          "",
+          "Inflation (%)",
+          "Unemployment (%)"
+        ],
+        "rows": [
+          [
+            "Year 1",
+            "2.0",
+            "5.2"
+          ],
+          [
+            "Year 2",
+            "3.8",
+            "4.3"
+          ],
+          [
+            "Year 3",
+            "2.9",
+            "4.6"
+          ],
+          [
+            "Year 4",
+            "3.6",
+            "5.3"
+          ],
+          [
+            "Year 5",
+            "2.5",
+            "6.1"
+          ]
+        ]
+      },
+      "options": {
+        "A": "Year 2.",
+        "B": "Year 3.",
+        "C": "Year 4.",
+        "D": "Year 5."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The <strong>short-run Phillips curve</strong> shows inflation and unemployment moving in opposite directions. Changes in spending move the economy along it.<br />Dearer raw materials are different. Firms' costs rise → they raise prices and cut output → inflation <strong>and</strong> unemployment rise together. The curve gives no guide to that.<br />Year 4 is the only year in which both rose: inflation from 2.9% to 3.6%, and unemployment from 4.6% to 5.3%.",
+        "distractors": {
+          "A": "Year 2 has the biggest rise in inflation, but unemployment fell. That is a movement up the curve, which fits rising spending, not a jump in costs.",
+          "B": "In Year 3 inflation fell and unemployment rose. That is a movement down the curve, which fits slowing spending.",
+          "D": "Year 5 has the highest unemployment, but inflation fell. That is another movement down the curve, which fits falling spending, not dearer raw materials."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q2",
+      "skill": "applied-reasoning",
+      "difficulty": "stretch",
+      "sketch": false,
+      "stem": "In a region where several textile mills have closed, unemployment stays at 11%. In the rest of the country, firms report shortages of workers. To bring the region's unemployment down, the government raises its spending across the whole economy. The most likely result is that",
+      "options": {
+        "A": "The region's unemployment falls sharply, and inflation stays steady.",
+        "B": "The region's unemployment falls sharply, and inflation rises.",
+        "C": "The region's unemployment barely falls, and inflation stays steady.",
+        "D": "The region's unemployment barely falls, and inflation rises."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The mill workers' unemployment is <strong>structural</strong>: the jobs they did have gone, and their skills do not match the jobs on offer elsewhere. Extra spending across the economy does little for it.<br />Meanwhile, firms in the rest of the country are already short of workers. Extra demand there → firms compete for scarce staff and raise pay → they pass the cost on in prices → <strong>inflation rises</strong>.<br />The policy does not fit the cause of the problem, so it brings the side effect without the benefit.",
+        "distractors": {
+          "A": "This treats the region's unemployment as a lack of demand. The mills have closed for good, so more spending does not bring the jobs back, and the rest of the country has no spare workers to absorb the extra demand.",
+          "B": "Inflation does rise, but the region's unemployment is structural. Extra spending does not give the mill workers the skills that other jobs need.",
+          "C": "The region's unemployment barely falls, but the extra demand still lands on firms elsewhere that are already short of workers. That pushes up pay and prices."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q3",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government puts a carbon tax on cement made in the UK, but not on imported cement. Several UK cement makers close their kilns and supply their customers from their own plants abroad, where there is no such tax. The most likely result is",
+      "options": {
+        "A": "Fewer UK jobs, and a large fall in global emissions.",
+        "B": "Fewer UK jobs, and little fall in global emissions.",
+        "C": "No change in UK jobs, and a large fall in global emissions.",
+        "D": "No change in UK jobs, and little fall in global emissions."
+      },
+      "answer": "B",
+      "model": {
+        "working": "The tax is meant to cut emissions by making polluting production costlier.<br />Here the firms avoid it by moving production abroad → UK kilns close → <strong>UK jobs are lost</strong>.<br />The same cement is still made, only in another country, and then shipped to the UK. UK emissions fall, but <strong>global emissions barely fall</strong>.<br />This is an <strong>unintended consequence</strong>: production moves to countries with looser rules, and the policy hurts another objective without solving its own problem.",
+        "distractors": {
+          "A": "UK emissions fall, but the cement is still made abroad and shipped in. The emissions have moved, not disappeared.",
+          "C": "Closing UK kilns means fewer jobs in the UK. And the emissions move abroad rather than falling.",
+          "D": "Global emissions barely fall, but the kilns that close were employing UK workers, so UK jobs are lost."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q4",
+      "skill": "applied-reasoning",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Inflation is well above its 2% target, and the Bank of England raises Bank Rate to bring it down. In the same month, the government cuts income tax and raises its own spending. Compared with the rate rise on its own, inflation is most likely to fall",
+      "options": {
+        "A": "Faster, as both policies reduce demand.",
+        "B": "Faster, as lower taxes cut firms' costs.",
+        "C": "More slowly, as fiscal policy adds to demand.",
+        "D": "At the same pace, as fiscal policy has no effect."
+      },
+      "answer": "C",
+      "model": {
+        "working": "The rate rise lowers aggregate demand: borrowing costs more and saving pays more, so households and firms spend less.<br />The tax cut and the extra government spending are <strong>expansionary fiscal policy</strong>, which raises aggregate demand.<br />The two pull against each other, so demand falls by less than the Bank planned, and inflation comes down <strong>more slowly</strong>. The Bank may have to raise rates further to make up for it.",
+        "distractors": {
+          "A": "Only the rate rise reduces demand. Cutting taxes and raising government spending both add to it.",
+          "B": "Income tax is paid by workers on their earnings, not by firms on their costs. A cut leaves people with more to spend, which adds to demand.",
+          "D": "Fiscal policy changes aggregate demand too. Tax cuts and extra spending raise it, and that works against the rate rise."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q5",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "In a recession, two business groups lobby the government. A builders' federation asks it to borrow to pay for flood defences and school repairs until private spending recovers. A small-business federation warns against adding to the national debt, and asks for lower business taxes and fewer regulations instead. In that order, the two requests fit",
+      "options": {
+        "A": "A Keynesian view, then a free-market one.",
+        "B": "A Keynesian view both times.",
+        "C": "A free-market view, then a Keynesian one.",
+        "D": "A free-market view both times."
+      },
+      "answer": "A",
+      "model": {
+        "working": "The <strong>Keynesian</strong> view is that an economy can stay below full capacity for years if spending is weak, so the government should replace the missing demand. Borrowing to pay for public works in a recession is that policy.<br />The <strong>free-market</strong> view is that markets return the economy to full capacity fairly quickly, and its main worries include government debt and high taxes. Cutting taxes and regulation so that firms expand is that policy.",
+        "distractors": {
+          "B": "The builders' request is Keynesian, but the small firms' is not. Worrying about debt and asking for lower taxes and less regulation is the free-market position.",
+          "C": "This swaps the two. Borrowing to spend in a recession is the Keynesian policy, and cutting taxes and red tape is the free-market one.",
+          "D": "The small firms' request is free-market, but the builders' is not. Borrowing to replace missing demand in a recession is the Keynesian position."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q6",
+      "skill": "definition-in-context",
+      "difficulty": "foundation",
+      "sketch": false,
+      "stem": "The first official estimate shows that real GDP fell by 0.4% in a quarter, and the Bank of England cuts Bank Rate to support spending. Two months later, the estimate is revised to growth of 0.3%. The problem in managing the economy that this best illustrates is",
+      "options": {
+        "A": "Conflicting objectives.",
+        "B": "Late and uncertain data.",
+        "C": "Shocks from abroad.",
+        "D": "Time lags."
+      },
+      "answer": "B",
+      "model": {
+        "working": "GDP figures arrive weeks after the quarter ends and are often <strong>revised</strong>.<br />The Bank acted on a first estimate showing a fall. The revised figure shows the economy was growing, so the cut was based on a picture that turned out to be wrong.<br />That is the problem of <strong>late and uncertain data</strong>: policy-makers can misjudge where the economy is.",
+        "distractors": {
+          "A": "Conflicting objectives means that meeting one objective makes another harder, such as lower inflation costing jobs. Here the problem is that the figures were wrong.",
+          "C": "Nothing in the stem comes from abroad. The problem lies in the UK's own GDP figures.",
+          "D": "Time lags are the delay between a policy change and its full effect. The two-month gap here is in the data being corrected, not in the rate cut taking effect."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q7",
+      "skill": "definition-in-context",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "Over five years a city's economy grows fast, with many new offices and homes. A parcel firm there makes the same number of deliveries each day, with the same vans, fuel prices and pay rates, but its cost per delivery rises. The most likely explanation is",
+      "options": {
+        "A": "Congestion, a negative externality.",
+        "B": "Cost-push inflation from dearer fuel.",
+        "C": "Demand-pull inflation as incomes rise.",
+        "D": "Diseconomies of scale as the firm expands."
+      },
+      "answer": "A",
+      "model": {
+        "working": "Growth brings more commuting and more goods moved → busier roads → longer journeys.<br />Each delivery now takes more driver hours and more fuel, so it costs more, even though fuel prices and pay rates are unchanged.<br />The firm did not cause the traffic and is not paid for the cost it bears. That makes <strong>congestion</strong> a <strong>negative externality</strong>: a cost of others' production and consumption that falls on a third party.",
+        "distractors": {
+          "B": "The stem says fuel prices are unchanged. The firm's cost rises because it uses more fuel and more driver hours per delivery, not because fuel is dearer.",
+          "C": "Demand-pull inflation is a rise in prices across the economy caused by spending. The firm's cost per delivery has risen with its input prices unchanged, so something else explains it.",
+          "D": "The firm has not expanded: it makes the same number of deliveries with the same vans. Diseconomies of scale come from a firm growing larger."
+        }
+      }
+    },
+    {
+      "id": "edexcel-b-2-6-3-q8",
+      "skill": "data-table",
+      "difficulty": "standard",
+      "sketch": false,
+      "stem": "A government cuts corporation tax from 25% to 19% to encourage firms to invest. Table 1 shows figures for one listed retailer in the year before and the year after the cut.<br />Using Table 1, the correct statement is",
+      "table": {
+        "caption": "Table 1: A listed retailer before and after the tax cut",
+        "head": [
+          "",
+          "Year before the cut",
+          "Year after the cut"
+        ],
+        "rows": [
+          [
+            "Profit before tax",
+            "£40.0m",
+            "£40.0m"
+          ],
+          [
+            "Profit after tax",
+            "£30.0m",
+            "£32.4m"
+          ],
+          [
+            "Dividends paid to shareholders",
+            "£12.0m",
+            "£14.4m"
+          ],
+          [
+            "Spending on new stores and equipment",
+            "£15.0m",
+            "£15.0m"
+          ]
+        ]
+      },
+      "options": {
+        "A": "The cut left the retailer with less profit after tax.",
+        "B": "The cut raised investment by the full £2.4m saved.",
+        "C": "The cut raised profit before tax by £2.4m.",
+        "D": "The extra £2.4m went to shareholders."
+      },
+      "answer": "D",
+      "model": {
+        "working": "The cut left the retailer with £32.4m − £30.0m = <strong>£2.4m</strong> more profit after tax.<br />Dividends rose by £14.4m − £12.0m = <strong>£2.4m</strong>, while spending on new stores and equipment stayed at £15.0m.<br />So all of the extra profit was paid to shareholders and none of it was invested. Higher dividends instead of investment is an <strong>unintended consequence</strong>: the policy changed behaviour, but not in the way it aimed to.",
+        "distractors": {
+          "A": "Profit after tax rose, from £30.0m to £32.4m. A lower tax rate means the firm keeps more of the same profit.",
+          "B": "This is the cut's aim, not its effect. Spending on new stores and equipment stayed at £15.0m.",
+          "C": "Profit before tax stayed at £40.0m. The tax cut changes how much of that profit the firm keeps, not how much it makes."
+        }
+      }
+    }
+  ]
+}
